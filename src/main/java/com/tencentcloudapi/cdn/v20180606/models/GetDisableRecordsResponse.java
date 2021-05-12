@@ -101,6 +101,29 @@ public class GetDisableRecordsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public GetDisableRecordsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GetDisableRecordsResponse(GetDisableRecordsResponse source) {
+        if (source.UrlRecordList != null) {
+            this.UrlRecordList = new UrlRecord[source.UrlRecordList.length];
+            for (int i = 0; i < source.UrlRecordList.length; i++) {
+                this.UrlRecordList[i] = new UrlRecord(source.UrlRecordList[i]);
+            }
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

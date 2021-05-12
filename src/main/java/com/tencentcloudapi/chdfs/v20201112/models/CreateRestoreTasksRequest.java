@@ -68,6 +68,26 @@ public class CreateRestoreTasksRequest extends AbstractModel{
         this.RestoreTasks = RestoreTasks;
     }
 
+    public CreateRestoreTasksRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateRestoreTasksRequest(CreateRestoreTasksRequest source) {
+        if (source.FileSystemId != null) {
+            this.FileSystemId = new String(source.FileSystemId);
+        }
+        if (source.RestoreTasks != null) {
+            this.RestoreTasks = new RestoreTask[source.RestoreTasks.length];
+            for (int i = 0; i < source.RestoreTasks.length; i++) {
+                this.RestoreTasks[i] = new RestoreTask(source.RestoreTasks[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

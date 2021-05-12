@@ -68,6 +68,23 @@ public class CreateTagRequest extends AbstractModel{
         this.TagValue = TagValue;
     }
 
+    public CreateTagRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateTagRequest(CreateTagRequest source) {
+        if (source.TagKey != null) {
+            this.TagKey = new String(source.TagKey);
+        }
+        if (source.TagValue != null) {
+            this.TagValue = new String(source.TagValue);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -75,6 +75,20 @@ UserCodeException 返回函数调用发生用户代码错误的日志，
         this.RetCode = RetCode;
     }
 
+    public LogFilter() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public LogFilter(LogFilter source) {
+        if (source.RetCode != null) {
+            this.RetCode = new String(source.RetCode);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

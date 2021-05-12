@@ -68,6 +68,26 @@ public class AccountAttribute extends AbstractModel{
         this.AttributeValues = AttributeValues;
     }
 
+    public AccountAttribute() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AccountAttribute(AccountAttribute source) {
+        if (source.AttributeName != null) {
+            this.AttributeName = new String(source.AttributeName);
+        }
+        if (source.AttributeValues != null) {
+            this.AttributeValues = new String[source.AttributeValues.length];
+            for (int i = 0; i < source.AttributeValues.length; i++) {
+                this.AttributeValues[i] = new String(source.AttributeValues[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

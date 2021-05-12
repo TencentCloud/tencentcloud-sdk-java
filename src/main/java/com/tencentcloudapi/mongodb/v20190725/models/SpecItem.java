@@ -505,6 +505,80 @@ public class SpecItem extends AbstractModel{
         this.MachineType = MachineType;
     }
 
+    public SpecItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SpecItem(SpecItem source) {
+        if (source.SpecCode != null) {
+            this.SpecCode = new String(source.SpecCode);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.Cpu != null) {
+            this.Cpu = new Long(source.Cpu);
+        }
+        if (source.Memory != null) {
+            this.Memory = new Long(source.Memory);
+        }
+        if (source.DefaultStorage != null) {
+            this.DefaultStorage = new Long(source.DefaultStorage);
+        }
+        if (source.MaxStorage != null) {
+            this.MaxStorage = new Long(source.MaxStorage);
+        }
+        if (source.MinStorage != null) {
+            this.MinStorage = new Long(source.MinStorage);
+        }
+        if (source.Qps != null) {
+            this.Qps = new Long(source.Qps);
+        }
+        if (source.Conns != null) {
+            this.Conns = new Long(source.Conns);
+        }
+        if (source.MongoVersionCode != null) {
+            this.MongoVersionCode = new String(source.MongoVersionCode);
+        }
+        if (source.MongoVersionValue != null) {
+            this.MongoVersionValue = new Long(source.MongoVersionValue);
+        }
+        if (source.Version != null) {
+            this.Version = new String(source.Version);
+        }
+        if (source.EngineName != null) {
+            this.EngineName = new String(source.EngineName);
+        }
+        if (source.ClusterType != null) {
+            this.ClusterType = new Long(source.ClusterType);
+        }
+        if (source.MinNodeNum != null) {
+            this.MinNodeNum = new Long(source.MinNodeNum);
+        }
+        if (source.MaxNodeNum != null) {
+            this.MaxNodeNum = new Long(source.MaxNodeNum);
+        }
+        if (source.MinReplicateSetNum != null) {
+            this.MinReplicateSetNum = new Long(source.MinReplicateSetNum);
+        }
+        if (source.MaxReplicateSetNum != null) {
+            this.MaxReplicateSetNum = new Long(source.MaxReplicateSetNum);
+        }
+        if (source.MinReplicateSetNodeNum != null) {
+            this.MinReplicateSetNodeNum = new Long(source.MinReplicateSetNodeNum);
+        }
+        if (source.MaxReplicateSetNodeNum != null) {
+            this.MaxReplicateSetNodeNum = new Long(source.MaxReplicateSetNodeNum);
+        }
+        if (source.MachineType != null) {
+            this.MachineType = new String(source.MachineType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -274,6 +274,44 @@ public class Subnet extends AbstractModel{
         this.IsDefault = IsDefault;
     }
 
+    public Subnet() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Subnet(Subnet source) {
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.SubnetId != null) {
+            this.SubnetId = new String(source.SubnetId);
+        }
+        if (source.SubnetName != null) {
+            this.SubnetName = new String(source.SubnetName);
+        }
+        if (source.CidrBlock != null) {
+            this.CidrBlock = new String(source.CidrBlock);
+        }
+        if (source.CreatedTime != null) {
+            this.CreatedTime = new String(source.CreatedTime);
+        }
+        if (source.AvailableIpAddressCount != null) {
+            this.AvailableIpAddressCount = new Long(source.AvailableIpAddressCount);
+        }
+        if (source.Ipv6CidrBlock != null) {
+            this.Ipv6CidrBlock = new String(source.Ipv6CidrBlock);
+        }
+        if (source.TotalIpAddressCount != null) {
+            this.TotalIpAddressCount = new Long(source.TotalIpAddressCount);
+        }
+        if (source.IsDefault != null) {
+            this.IsDefault = new Boolean(source.IsDefault);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

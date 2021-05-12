@@ -68,6 +68,26 @@ public class DescribeDBDiagHistoryResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeDBDiagHistoryResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeDBDiagHistoryResponse(DescribeDBDiagHistoryResponse source) {
+        if (source.Events != null) {
+            this.Events = new DiagHistoryEventItem[source.Events.length];
+            for (int i = 0; i < source.Events.length; i++) {
+                this.Events[i] = new DiagHistoryEventItem(source.Events[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

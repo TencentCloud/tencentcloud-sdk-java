@@ -144,6 +144,29 @@ public class StreamInputInfo extends AbstractModel{
         this.RtmpPushInputInfo = RtmpPushInputInfo;
     }
 
+    public StreamInputInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public StreamInputInfo(StreamInputInfo source) {
+        if (source.InputType != null) {
+            this.InputType = new String(source.InputType);
+        }
+        if (source.VodPullInputInfo != null) {
+            this.VodPullInputInfo = new VodPullInputInfo(source.VodPullInputInfo);
+        }
+        if (source.LivePullInputInfo != null) {
+            this.LivePullInputInfo = new LivePullInputInfo(source.LivePullInputInfo);
+        }
+        if (source.RtmpPushInputInfo != null) {
+            this.RtmpPushInputInfo = new RtmpPushInputInfo(source.RtmpPushInputInfo);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

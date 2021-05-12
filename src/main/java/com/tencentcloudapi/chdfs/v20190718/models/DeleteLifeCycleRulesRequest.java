@@ -45,6 +45,23 @@ public class DeleteLifeCycleRulesRequest extends AbstractModel{
         this.LifeCycleRuleIds = LifeCycleRuleIds;
     }
 
+    public DeleteLifeCycleRulesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteLifeCycleRulesRequest(DeleteLifeCycleRulesRequest source) {
+        if (source.LifeCycleRuleIds != null) {
+            this.LifeCycleRuleIds = new Long[source.LifeCycleRuleIds.length];
+            for (int i = 0; i < source.LifeCycleRuleIds.length; i++) {
+                this.LifeCycleRuleIds[i] = new Long(source.LifeCycleRuleIds[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

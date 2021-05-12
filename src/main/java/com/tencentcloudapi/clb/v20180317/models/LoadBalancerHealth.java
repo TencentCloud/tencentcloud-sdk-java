@@ -101,6 +101,29 @@ public class LoadBalancerHealth extends AbstractModel{
         this.Listeners = Listeners;
     }
 
+    public LoadBalancerHealth() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public LoadBalancerHealth(LoadBalancerHealth source) {
+        if (source.LoadBalancerId != null) {
+            this.LoadBalancerId = new String(source.LoadBalancerId);
+        }
+        if (source.LoadBalancerName != null) {
+            this.LoadBalancerName = new String(source.LoadBalancerName);
+        }
+        if (source.Listeners != null) {
+            this.Listeners = new ListenerHealth[source.Listeners.length];
+            for (int i = 0; i < source.Listeners.length; i++) {
+                this.Listeners[i] = new ListenerHealth(source.Listeners[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

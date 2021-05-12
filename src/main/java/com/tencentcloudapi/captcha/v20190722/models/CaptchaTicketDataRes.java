@@ -91,6 +91,35 @@ public class CaptchaTicketDataRes extends AbstractModel{
         this.TicketInterceptArray = TicketInterceptArray;
     }
 
+    public CaptchaTicketDataRes() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CaptchaTicketDataRes(CaptchaTicketDataRes source) {
+        if (source.TicketAmountArray != null) {
+            this.TicketAmountArray = new TicketAmountUnit[source.TicketAmountArray.length];
+            for (int i = 0; i < source.TicketAmountArray.length; i++) {
+                this.TicketAmountArray[i] = new TicketAmountUnit(source.TicketAmountArray[i]);
+            }
+        }
+        if (source.TicketThroughArray != null) {
+            this.TicketThroughArray = new TicketThroughUnit[source.TicketThroughArray.length];
+            for (int i = 0; i < source.TicketThroughArray.length; i++) {
+                this.TicketThroughArray[i] = new TicketThroughUnit(source.TicketThroughArray[i]);
+            }
+        }
+        if (source.TicketInterceptArray != null) {
+            this.TicketInterceptArray = new TicketInterceptUnit[source.TicketInterceptArray.length];
+            for (int i = 0; i < source.TicketInterceptArray.length; i++) {
+                this.TicketInterceptArray[i] = new TicketInterceptUnit(source.TicketInterceptArray[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

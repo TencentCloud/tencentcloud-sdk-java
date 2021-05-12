@@ -206,6 +206,44 @@ public class TransByDynamicContractHandlerRequest extends AbstractModel{
         this.FuncParam = FuncParam;
     }
 
+    public TransByDynamicContractHandlerRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TransByDynamicContractHandlerRequest(TransByDynamicContractHandlerRequest source) {
+        if (source.Module != null) {
+            this.Module = new String(source.Module);
+        }
+        if (source.Operation != null) {
+            this.Operation = new String(source.Operation);
+        }
+        if (source.GroupPk != null) {
+            this.GroupPk = new String(source.GroupPk);
+        }
+        if (source.ContractAddress != null) {
+            this.ContractAddress = new String(source.ContractAddress);
+        }
+        if (source.ContractName != null) {
+            this.ContractName = new String(source.ContractName);
+        }
+        if (source.AbiInfo != null) {
+            this.AbiInfo = new String(source.AbiInfo);
+        }
+        if (source.FuncName != null) {
+            this.FuncName = new String(source.FuncName);
+        }
+        if (source.FuncParam != null) {
+            this.FuncParam = new String[source.FuncParam.length];
+            for (int i = 0; i < source.FuncParam.length; i++) {
+                this.FuncParam[i] = new String(source.FuncParam[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

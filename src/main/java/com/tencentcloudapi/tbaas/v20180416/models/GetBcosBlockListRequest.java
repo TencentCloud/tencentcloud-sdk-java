@@ -160,6 +160,35 @@ public class GetBcosBlockListRequest extends AbstractModel{
         this.BlockHash = BlockHash;
     }
 
+    public GetBcosBlockListRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GetBcosBlockListRequest(GetBcosBlockListRequest source) {
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
+        if (source.GroupId != null) {
+            this.GroupId = new Long(source.GroupId);
+        }
+        if (source.PageNumber != null) {
+            this.PageNumber = new Long(source.PageNumber);
+        }
+        if (source.PageSize != null) {
+            this.PageSize = new Long(source.PageSize);
+        }
+        if (source.BlockNumber != null) {
+            this.BlockNumber = new Long(source.BlockNumber);
+        }
+        if (source.BlockHash != null) {
+            this.BlockHash = new String(source.BlockHash);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -50,6 +50,23 @@ public class AlarmPolicyEventCondition extends AbstractModel{
         this.Rules = Rules;
     }
 
+    public AlarmPolicyEventCondition() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AlarmPolicyEventCondition(AlarmPolicyEventCondition source) {
+        if (source.Rules != null) {
+            this.Rules = new AlarmPolicyRule[source.Rules.length];
+            for (int i = 0; i < source.Rules.length; i++) {
+                this.Rules[i] = new AlarmPolicyRule(source.Rules[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -103,6 +103,23 @@ public class TableOCRRequest extends AbstractModel{
         this.ImageUrl = ImageUrl;
     }
 
+    public TableOCRRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TableOCRRequest(TableOCRRequest source) {
+        if (source.ImageBase64 != null) {
+            this.ImageBase64 = new String(source.ImageBase64);
+        }
+        if (source.ImageUrl != null) {
+            this.ImageUrl = new String(source.ImageUrl);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

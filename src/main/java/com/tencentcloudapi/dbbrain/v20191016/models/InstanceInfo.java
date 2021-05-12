@@ -666,6 +666,101 @@ public class InstanceInfo extends AbstractModel{
         this.AuditRunningStatus = AuditRunningStatus;
     }
 
+    public InstanceInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public InstanceInfo(InstanceInfo source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.InstanceName != null) {
+            this.InstanceName = new String(source.InstanceName);
+        }
+        if (source.Region != null) {
+            this.Region = new String(source.Region);
+        }
+        if (source.HealthScore != null) {
+            this.HealthScore = new Long(source.HealthScore);
+        }
+        if (source.Product != null) {
+            this.Product = new String(source.Product);
+        }
+        if (source.EventCount != null) {
+            this.EventCount = new Long(source.EventCount);
+        }
+        if (source.InstanceType != null) {
+            this.InstanceType = new Long(source.InstanceType);
+        }
+        if (source.Cpu != null) {
+            this.Cpu = new Long(source.Cpu);
+        }
+        if (source.Memory != null) {
+            this.Memory = new Long(source.Memory);
+        }
+        if (source.Volume != null) {
+            this.Volume = new Long(source.Volume);
+        }
+        if (source.EngineVersion != null) {
+            this.EngineVersion = new String(source.EngineVersion);
+        }
+        if (source.Vip != null) {
+            this.Vip = new String(source.Vip);
+        }
+        if (source.Vport != null) {
+            this.Vport = new Long(source.Vport);
+        }
+        if (source.Source != null) {
+            this.Source = new String(source.Source);
+        }
+        if (source.GroupId != null) {
+            this.GroupId = new String(source.GroupId);
+        }
+        if (source.GroupName != null) {
+            this.GroupName = new String(source.GroupName);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.UniqSubnetId != null) {
+            this.UniqSubnetId = new String(source.UniqSubnetId);
+        }
+        if (source.DeployMode != null) {
+            this.DeployMode = new String(source.DeployMode);
+        }
+        if (source.InitFlag != null) {
+            this.InitFlag = new Long(source.InitFlag);
+        }
+        if (source.TaskStatus != null) {
+            this.TaskStatus = new Long(source.TaskStatus);
+        }
+        if (source.UniqVpcId != null) {
+            this.UniqVpcId = new String(source.UniqVpcId);
+        }
+        if (source.InstanceConf != null) {
+            this.InstanceConf = new InstanceConfs(source.InstanceConf);
+        }
+        if (source.DeadlineTime != null) {
+            this.DeadlineTime = new String(source.DeadlineTime);
+        }
+        if (source.IsSupported != null) {
+            this.IsSupported = new Boolean(source.IsSupported);
+        }
+        if (source.SecAuditStatus != null) {
+            this.SecAuditStatus = new String(source.SecAuditStatus);
+        }
+        if (source.AuditPolicyStatus != null) {
+            this.AuditPolicyStatus = new String(source.AuditPolicyStatus);
+        }
+        if (source.AuditRunningStatus != null) {
+            this.AuditRunningStatus = new String(source.AuditRunningStatus);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -114,6 +114,29 @@ public class DescribePolicyConditionListEventMetric extends AbstractModel{
         this.Type = Type;
     }
 
+    public DescribePolicyConditionListEventMetric() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribePolicyConditionListEventMetric(DescribePolicyConditionListEventMetric source) {
+        if (source.EventId != null) {
+            this.EventId = new Long(source.EventId);
+        }
+        if (source.EventShowName != null) {
+            this.EventShowName = new String(source.EventShowName);
+        }
+        if (source.NeedRecovered != null) {
+            this.NeedRecovered = new Boolean(source.NeedRecovered);
+        }
+        if (source.Type != null) {
+            this.Type = new Long(source.Type);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

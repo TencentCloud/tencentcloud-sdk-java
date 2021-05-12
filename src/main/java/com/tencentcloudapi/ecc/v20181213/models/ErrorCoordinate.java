@@ -45,6 +45,23 @@ public class ErrorCoordinate extends AbstractModel{
         this.Coordinate = Coordinate;
     }
 
+    public ErrorCoordinate() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ErrorCoordinate(ErrorCoordinate source) {
+        if (source.Coordinate != null) {
+            this.Coordinate = new Long[source.Coordinate.length];
+            for (int i = 0; i < source.Coordinate.length; i++) {
+                this.Coordinate[i] = new Long(source.Coordinate[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -374,6 +374,71 @@ true 表示安装kerberos，false表示不安装kerberos。
         this.Instance = Instance;
     }
 
+    public RunJobFlowRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RunJobFlowRequest(RunJobFlowRequest source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.CreateCluster != null) {
+            this.CreateCluster = new Boolean(source.CreateCluster);
+        }
+        if (source.Steps != null) {
+            this.Steps = new Step[source.Steps.length];
+            for (int i = 0; i < source.Steps.length; i++) {
+                this.Steps[i] = new Step(source.Steps[i]);
+            }
+        }
+        if (source.InstancePolicy != null) {
+            this.InstancePolicy = new String(source.InstancePolicy);
+        }
+        if (source.ProductVersion != null) {
+            this.ProductVersion = new String(source.ProductVersion);
+        }
+        if (source.SecurityClusterFlag != null) {
+            this.SecurityClusterFlag = new Boolean(source.SecurityClusterFlag);
+        }
+        if (source.Software != null) {
+            this.Software = new String[source.Software.length];
+            for (int i = 0; i < source.Software.length; i++) {
+                this.Software[i] = new String(source.Software[i]);
+            }
+        }
+        if (source.BootstrapActions != null) {
+            this.BootstrapActions = new BootstrapAction[source.BootstrapActions.length];
+            for (int i = 0; i < source.BootstrapActions.length; i++) {
+                this.BootstrapActions[i] = new BootstrapAction(source.BootstrapActions[i]);
+            }
+        }
+        if (source.Configurations != null) {
+            this.Configurations = new Configuration[source.Configurations.length];
+            for (int i = 0; i < source.Configurations.length; i++) {
+                this.Configurations[i] = new Configuration(source.Configurations[i]);
+            }
+        }
+        if (source.LogUri != null) {
+            this.LogUri = new String(source.LogUri);
+        }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.ApplicationRole != null) {
+            this.ApplicationRole = new String(source.ApplicationRole);
+        }
+        if (source.ClientToken != null) {
+            this.ClientToken = new String(source.ClientToken);
+        }
+        if (source.Instance != null) {
+            this.Instance = new ClusterSetting(source.Instance);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

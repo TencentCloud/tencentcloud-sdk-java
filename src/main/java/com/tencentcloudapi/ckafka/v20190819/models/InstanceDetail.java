@@ -683,6 +683,107 @@ public class InstanceDetail extends AbstractModel{
         this.RebalanceTime = RebalanceTime;
     }
 
+    public InstanceDetail() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public InstanceDetail(InstanceDetail source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.InstanceName != null) {
+            this.InstanceName = new String(source.InstanceName);
+        }
+        if (source.Vip != null) {
+            this.Vip = new String(source.Vip);
+        }
+        if (source.Vport != null) {
+            this.Vport = new String(source.Vport);
+        }
+        if (source.VipList != null) {
+            this.VipList = new VipEntity[source.VipList.length];
+            for (int i = 0; i < source.VipList.length; i++) {
+                this.VipList[i] = new VipEntity(source.VipList[i]);
+            }
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.Bandwidth != null) {
+            this.Bandwidth = new Long(source.Bandwidth);
+        }
+        if (source.DiskSize != null) {
+            this.DiskSize = new Long(source.DiskSize);
+        }
+        if (source.ZoneId != null) {
+            this.ZoneId = new Long(source.ZoneId);
+        }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.SubnetId != null) {
+            this.SubnetId = new String(source.SubnetId);
+        }
+        if (source.RenewFlag != null) {
+            this.RenewFlag = new Long(source.RenewFlag);
+        }
+        if (source.Healthy != null) {
+            this.Healthy = new Long(source.Healthy);
+        }
+        if (source.HealthyMessage != null) {
+            this.HealthyMessage = new String(source.HealthyMessage);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new Long(source.CreateTime);
+        }
+        if (source.ExpireTime != null) {
+            this.ExpireTime = new Long(source.ExpireTime);
+        }
+        if (source.IsInternal != null) {
+            this.IsInternal = new Long(source.IsInternal);
+        }
+        if (source.TopicNum != null) {
+            this.TopicNum = new Long(source.TopicNum);
+        }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
+        if (source.Version != null) {
+            this.Version = new String(source.Version);
+        }
+        if (source.ZoneIds != null) {
+            this.ZoneIds = new Long[source.ZoneIds.length];
+            for (int i = 0; i < source.ZoneIds.length; i++) {
+                this.ZoneIds[i] = new Long(source.ZoneIds[i]);
+            }
+        }
+        if (source.Cvm != null) {
+            this.Cvm = new Long(source.Cvm);
+        }
+        if (source.InstanceType != null) {
+            this.InstanceType = new String(source.InstanceType);
+        }
+        if (source.DiskType != null) {
+            this.DiskType = new String(source.DiskType);
+        }
+        if (source.MaxTopicNumber != null) {
+            this.MaxTopicNumber = new Long(source.MaxTopicNumber);
+        }
+        if (source.MaxPartitionNumber != null) {
+            this.MaxPartitionNumber = new Long(source.MaxPartitionNumber);
+        }
+        if (source.RebalanceTime != null) {
+            this.RebalanceTime = new String(source.RebalanceTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

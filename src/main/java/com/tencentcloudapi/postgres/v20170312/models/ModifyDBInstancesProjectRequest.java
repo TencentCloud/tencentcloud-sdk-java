@@ -68,6 +68,26 @@ public class ModifyDBInstancesProjectRequest extends AbstractModel{
         this.ProjectId = ProjectId;
     }
 
+    public ModifyDBInstancesProjectRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyDBInstancesProjectRequest(ModifyDBInstancesProjectRequest source) {
+        if (source.DBInstanceIdSet != null) {
+            this.DBInstanceIdSet = new String[source.DBInstanceIdSet.length];
+            for (int i = 0; i < source.DBInstanceIdSet.length; i++) {
+                this.DBInstanceIdSet[i] = new String(source.DBInstanceIdSet[i]);
+            }
+        }
+        if (source.ProjectId != null) {
+            this.ProjectId = new String(source.ProjectId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

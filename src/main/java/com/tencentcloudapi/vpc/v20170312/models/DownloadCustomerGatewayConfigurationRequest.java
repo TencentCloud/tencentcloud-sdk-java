@@ -114,6 +114,29 @@ public class DownloadCustomerGatewayConfigurationRequest extends AbstractModel{
         this.InterfaceName = InterfaceName;
     }
 
+    public DownloadCustomerGatewayConfigurationRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DownloadCustomerGatewayConfigurationRequest(DownloadCustomerGatewayConfigurationRequest source) {
+        if (source.VpnGatewayId != null) {
+            this.VpnGatewayId = new String(source.VpnGatewayId);
+        }
+        if (source.VpnConnectionId != null) {
+            this.VpnConnectionId = new String(source.VpnConnectionId);
+        }
+        if (source.CustomerGatewayVendor != null) {
+            this.CustomerGatewayVendor = new CustomerGatewayVendor(source.CustomerGatewayVendor);
+        }
+        if (source.InterfaceName != null) {
+            this.InterfaceName = new String(source.InterfaceName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

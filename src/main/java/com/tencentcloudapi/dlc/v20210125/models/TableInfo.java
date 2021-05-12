@@ -137,6 +137,38 @@ public class TableInfo extends AbstractModel{
         this.Location = Location;
     }
 
+    public TableInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TableInfo(TableInfo source) {
+        if (source.TableBaseInfo != null) {
+            this.TableBaseInfo = new TableBaseInfo(source.TableBaseInfo);
+        }
+        if (source.DataFormat != null) {
+            this.DataFormat = new DataFormat(source.DataFormat);
+        }
+        if (source.Columns != null) {
+            this.Columns = new Column[source.Columns.length];
+            for (int i = 0; i < source.Columns.length; i++) {
+                this.Columns[i] = new Column(source.Columns[i]);
+            }
+        }
+        if (source.Partitions != null) {
+            this.Partitions = new Partition[source.Partitions.length];
+            for (int i = 0; i < source.Partitions.length; i++) {
+                this.Partitions[i] = new Partition(source.Partitions[i]);
+            }
+        }
+        if (source.Location != null) {
+            this.Location = new String(source.Location);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

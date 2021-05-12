@@ -68,6 +68,23 @@ public class DescribeRoMinScaleRequest extends AbstractModel{
         this.MasterInstanceId = MasterInstanceId;
     }
 
+    public DescribeRoMinScaleRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeRoMinScaleRequest(DescribeRoMinScaleRequest source) {
+        if (source.RoInstanceId != null) {
+            this.RoInstanceId = new String(source.RoInstanceId);
+        }
+        if (source.MasterInstanceId != null) {
+            this.MasterInstanceId = new String(source.MasterInstanceId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

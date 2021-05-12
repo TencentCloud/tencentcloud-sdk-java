@@ -68,6 +68,23 @@ public class DeleteUserRequest extends AbstractModel{
         this.Force = Force;
     }
 
+    public DeleteUserRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteUserRequest(DeleteUserRequest source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Force != null) {
+            this.Force = new Long(source.Force);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

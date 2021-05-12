@@ -188,6 +188,50 @@ public class TextDetectionEn extends AbstractModel{
         this.Words = Words;
     }
 
+    public TextDetectionEn() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TextDetectionEn(TextDetectionEn source) {
+        if (source.DetectedText != null) {
+            this.DetectedText = new String(source.DetectedText);
+        }
+        if (source.Confidence != null) {
+            this.Confidence = new Long(source.Confidence);
+        }
+        if (source.Polygon != null) {
+            this.Polygon = new Coord[source.Polygon.length];
+            for (int i = 0; i < source.Polygon.length; i++) {
+                this.Polygon[i] = new Coord(source.Polygon[i]);
+            }
+        }
+        if (source.AdvancedInfo != null) {
+            this.AdvancedInfo = new String(source.AdvancedInfo);
+        }
+        if (source.WordCoordPoint != null) {
+            this.WordCoordPoint = new WordCoordPoint[source.WordCoordPoint.length];
+            for (int i = 0; i < source.WordCoordPoint.length; i++) {
+                this.WordCoordPoint[i] = new WordCoordPoint(source.WordCoordPoint[i]);
+            }
+        }
+        if (source.CandWord != null) {
+            this.CandWord = new CandWord[source.CandWord.length];
+            for (int i = 0; i < source.CandWord.length; i++) {
+                this.CandWord[i] = new CandWord(source.CandWord[i]);
+            }
+        }
+        if (source.Words != null) {
+            this.Words = new Words[source.Words.length];
+            for (int i = 0; i < source.Words.length; i++) {
+                this.Words[i] = new Words(source.Words[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

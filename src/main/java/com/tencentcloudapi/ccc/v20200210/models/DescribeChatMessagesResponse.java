@@ -91,6 +91,29 @@ public class DescribeChatMessagesResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeChatMessagesResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeChatMessagesResponse(DescribeChatMessagesResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.Messages != null) {
+            this.Messages = new MessageBody[source.Messages.length];
+            for (int i = 0; i < source.Messages.length; i++) {
+                this.Messages[i] = new MessageBody(source.Messages[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

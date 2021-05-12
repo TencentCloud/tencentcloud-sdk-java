@@ -91,6 +91,26 @@ public class GatewayPluginBoundParam extends AbstractModel{
         this.ScopeValue = ScopeValue;
     }
 
+    public GatewayPluginBoundParam() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GatewayPluginBoundParam(GatewayPluginBoundParam source) {
+        if (source.PluginId != null) {
+            this.PluginId = new String(source.PluginId);
+        }
+        if (source.ScopeType != null) {
+            this.ScopeType = new String(source.ScopeType);
+        }
+        if (source.ScopeValue != null) {
+            this.ScopeValue = new String(source.ScopeValue);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

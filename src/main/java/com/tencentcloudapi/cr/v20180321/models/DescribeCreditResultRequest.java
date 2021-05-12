@@ -160,6 +160,35 @@ public class DescribeCreditResultRequest extends AbstractModel{
         this.RequestDate = RequestDate;
     }
 
+    public DescribeCreditResultRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeCreditResultRequest(DescribeCreditResultRequest source) {
+        if (source.Module != null) {
+            this.Module = new String(source.Module);
+        }
+        if (source.Operation != null) {
+            this.Operation = new String(source.Operation);
+        }
+        if (source.InstId != null) {
+            this.InstId = new String(source.InstId);
+        }
+        if (source.ProductId != null) {
+            this.ProductId = new String(source.ProductId);
+        }
+        if (source.CaseId != null) {
+            this.CaseId = new String(source.CaseId);
+        }
+        if (source.RequestDate != null) {
+            this.RequestDate = new String(source.RequestDate);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

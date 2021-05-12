@@ -68,6 +68,23 @@ public class DeleteCertificateResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DeleteCertificateResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteCertificateResponse(DeleteCertificateResponse source) {
+        if (source.DeleteResult != null) {
+            this.DeleteResult = new Boolean(source.DeleteResult);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

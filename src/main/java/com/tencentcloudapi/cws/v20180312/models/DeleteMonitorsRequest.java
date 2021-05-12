@@ -45,6 +45,23 @@ public class DeleteMonitorsRequest extends AbstractModel{
         this.MonitorIds = MonitorIds;
     }
 
+    public DeleteMonitorsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteMonitorsRequest(DeleteMonitorsRequest source) {
+        if (source.MonitorIds != null) {
+            this.MonitorIds = new Long[source.MonitorIds.length];
+            for (int i = 0; i < source.MonitorIds.length; i++) {
+                this.MonitorIds[i] = new Long(source.MonitorIds[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

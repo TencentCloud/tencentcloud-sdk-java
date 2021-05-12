@@ -68,6 +68,26 @@ public class DescribeInstanceSecurityGroupResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeInstanceSecurityGroupResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeInstanceSecurityGroupResponse(DescribeInstanceSecurityGroupResponse source) {
+        if (source.InstanceSecurityGroupsDetail != null) {
+            this.InstanceSecurityGroupsDetail = new InstanceSecurityGroupDetail[source.InstanceSecurityGroupsDetail.length];
+            for (int i = 0; i < source.InstanceSecurityGroupsDetail.length; i++) {
+                this.InstanceSecurityGroupsDetail[i] = new InstanceSecurityGroupDetail(source.InstanceSecurityGroupsDetail[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

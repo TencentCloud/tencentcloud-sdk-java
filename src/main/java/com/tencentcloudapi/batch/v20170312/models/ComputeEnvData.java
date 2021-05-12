@@ -45,6 +45,23 @@ public class ComputeEnvData extends AbstractModel{
         this.InstanceTypes = InstanceTypes;
     }
 
+    public ComputeEnvData() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ComputeEnvData(ComputeEnvData source) {
+        if (source.InstanceTypes != null) {
+            this.InstanceTypes = new String[source.InstanceTypes.length];
+            for (int i = 0; i < source.InstanceTypes.length; i++) {
+                this.InstanceTypes[i] = new String(source.InstanceTypes[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

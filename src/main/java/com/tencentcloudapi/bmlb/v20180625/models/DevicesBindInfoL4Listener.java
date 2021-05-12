@@ -114,6 +114,32 @@ public class DevicesBindInfoL4Listener extends AbstractModel{
         this.BackendSet = BackendSet;
     }
 
+    public DevicesBindInfoL4Listener() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DevicesBindInfoL4Listener(DevicesBindInfoL4Listener source) {
+        if (source.ListenerId != null) {
+            this.ListenerId = new String(source.ListenerId);
+        }
+        if (source.Protocol != null) {
+            this.Protocol = new String(source.Protocol);
+        }
+        if (source.LoadBalancerPort != null) {
+            this.LoadBalancerPort = new Long(source.LoadBalancerPort);
+        }
+        if (source.BackendSet != null) {
+            this.BackendSet = new DevicesBindInfoBackend[source.BackendSet.length];
+            for (int i = 0; i < source.BackendSet.length; i++) {
+                this.BackendSet[i] = new DevicesBindInfoBackend(source.BackendSet[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

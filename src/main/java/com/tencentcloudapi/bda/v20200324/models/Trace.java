@@ -151,6 +151,35 @@ Urls、Images必须提供一个，如果都提供，只使用 Urls。
         this.BodyRects = BodyRects;
     }
 
+    public Trace() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Trace(Trace source) {
+        if (source.Images != null) {
+            this.Images = new String[source.Images.length];
+            for (int i = 0; i < source.Images.length; i++) {
+                this.Images[i] = new String(source.Images[i]);
+            }
+        }
+        if (source.Urls != null) {
+            this.Urls = new String[source.Urls.length];
+            for (int i = 0; i < source.Urls.length; i++) {
+                this.Urls[i] = new String(source.Urls[i]);
+            }
+        }
+        if (source.BodyRects != null) {
+            this.BodyRects = new BodyRect[source.BodyRects.length];
+            for (int i = 0; i < source.BodyRects.length; i++) {
+                this.BodyRects[i] = new BodyRect(source.BodyRects[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

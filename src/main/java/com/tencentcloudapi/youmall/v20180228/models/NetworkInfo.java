@@ -229,6 +229,44 @@ public class NetworkInfo extends AbstractModel{
         this.Mac = Mac;
     }
 
+    public NetworkInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public NetworkInfo(NetworkInfo source) {
+        if (source.Upload != null) {
+            this.Upload = new Float(source.Upload);
+        }
+        if (source.Download != null) {
+            this.Download = new Float(source.Download);
+        }
+        if (source.MinRtt != null) {
+            this.MinRtt = new Float(source.MinRtt);
+        }
+        if (source.AvgRtt != null) {
+            this.AvgRtt = new Float(source.AvgRtt);
+        }
+        if (source.MaxRtt != null) {
+            this.MaxRtt = new Float(source.MaxRtt);
+        }
+        if (source.MdevRtt != null) {
+            this.MdevRtt = new Float(source.MdevRtt);
+        }
+        if (source.Loss != null) {
+            this.Loss = new Float(source.Loss);
+        }
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new Long(source.UpdateTime);
+        }
+        if (source.Mac != null) {
+            this.Mac = new String(source.Mac);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

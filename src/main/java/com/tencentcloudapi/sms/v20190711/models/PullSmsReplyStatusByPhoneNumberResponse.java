@@ -68,6 +68,26 @@ public class PullSmsReplyStatusByPhoneNumberResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public PullSmsReplyStatusByPhoneNumberResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PullSmsReplyStatusByPhoneNumberResponse(PullSmsReplyStatusByPhoneNumberResponse source) {
+        if (source.PullSmsReplyStatusSet != null) {
+            this.PullSmsReplyStatusSet = new PullSmsReplyStatus[source.PullSmsReplyStatusSet.length];
+            for (int i = 0; i < source.PullSmsReplyStatusSet.length; i++) {
+                this.PullSmsReplyStatusSet[i] = new PullSmsReplyStatus(source.PullSmsReplyStatusSet[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

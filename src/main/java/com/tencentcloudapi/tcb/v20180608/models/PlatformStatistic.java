@@ -106,6 +106,26 @@ public class PlatformStatistic extends AbstractModel{
         this.UpdateTime = UpdateTime;
     }
 
+    public PlatformStatistic() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PlatformStatistic(PlatformStatistic source) {
+        if (source.Platform != null) {
+            this.Platform = new String(source.Platform);
+        }
+        if (source.Count != null) {
+            this.Count = new Long(source.Count);
+        }
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new String(source.UpdateTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

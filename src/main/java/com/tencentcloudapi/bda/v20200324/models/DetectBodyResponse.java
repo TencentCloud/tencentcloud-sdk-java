@@ -91,6 +91,29 @@ public class DetectBodyResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DetectBodyResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DetectBodyResponse(DetectBodyResponse source) {
+        if (source.BodyDetectResults != null) {
+            this.BodyDetectResults = new BodyDetectResult[source.BodyDetectResults.length];
+            for (int i = 0; i < source.BodyDetectResults.length; i++) {
+                this.BodyDetectResults[i] = new BodyDetectResult(source.BodyDetectResults[i]);
+            }
+        }
+        if (source.BodyModelVersion != null) {
+            this.BodyModelVersion = new String(source.BodyModelVersion);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

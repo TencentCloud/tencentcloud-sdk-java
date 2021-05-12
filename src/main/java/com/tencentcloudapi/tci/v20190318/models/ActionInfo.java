@@ -206,6 +206,41 @@ public class ActionInfo extends AbstractModel{
         this.Width = Width;
     }
 
+    public ActionInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ActionInfo(ActionInfo source) {
+        if (source.BodyPosture != null) {
+            this.BodyPosture = new ActionType(source.BodyPosture);
+        }
+        if (source.Handup != null) {
+            this.Handup = new ActionType(source.Handup);
+        }
+        if (source.LookHead != null) {
+            this.LookHead = new ActionType(source.LookHead);
+        }
+        if (source.Writing != null) {
+            this.Writing = new ActionType(source.Writing);
+        }
+        if (source.Height != null) {
+            this.Height = new Long(source.Height);
+        }
+        if (source.Left != null) {
+            this.Left = new Long(source.Left);
+        }
+        if (source.Top != null) {
+            this.Top = new Long(source.Top);
+        }
+        if (source.Width != null) {
+            this.Width = new Long(source.Width);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

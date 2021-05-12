@@ -68,6 +68,26 @@ public class GetDeviceSignaturesResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public GetDeviceSignaturesResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GetDeviceSignaturesResponse(GetDeviceSignaturesResponse source) {
+        if (source.DeviceSignatures != null) {
+            this.DeviceSignatures = new DeviceSignature[source.DeviceSignatures.length];
+            for (int i = 0; i < source.DeviceSignatures.length; i++) {
+                this.DeviceSignatures[i] = new DeviceSignature(source.DeviceSignatures[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

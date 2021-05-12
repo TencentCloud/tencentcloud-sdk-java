@@ -390,6 +390,68 @@ public class PlanInfo extends AbstractModel{
         this.AntiSSL = AntiSSL;
     }
 
+    public PlanInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PlanInfo(PlanInfo source) {
+        if (source.ApkSizeOpt != null) {
+            this.ApkSizeOpt = new Long(source.ApkSizeOpt);
+        }
+        if (source.Dex != null) {
+            this.Dex = new Long(source.Dex);
+        }
+        if (source.So != null) {
+            this.So = new Long(source.So);
+        }
+        if (source.Bugly != null) {
+            this.Bugly = new Long(source.Bugly);
+        }
+        if (source.AntiRepack != null) {
+            this.AntiRepack = new Long(source.AntiRepack);
+        }
+        if (source.SeperateDex != null) {
+            this.SeperateDex = new Long(source.SeperateDex);
+        }
+        if (source.Db != null) {
+            this.Db = new Long(source.Db);
+        }
+        if (source.DexSig != null) {
+            this.DexSig = new Long(source.DexSig);
+        }
+        if (source.SoInfo != null) {
+            this.SoInfo = new SoInfo(source.SoInfo);
+        }
+        if (source.AntiVMP != null) {
+            this.AntiVMP = new Long(source.AntiVMP);
+        }
+        if (source.SoType != null) {
+            this.SoType = new String[source.SoType.length];
+            for (int i = 0; i < source.SoType.length; i++) {
+                this.SoType[i] = new String(source.SoType[i]);
+            }
+        }
+        if (source.AntiLogLeak != null) {
+            this.AntiLogLeak = new Long(source.AntiLogLeak);
+        }
+        if (source.AntiQemuRoot != null) {
+            this.AntiQemuRoot = new Long(source.AntiQemuRoot);
+        }
+        if (source.AntiAssets != null) {
+            this.AntiAssets = new Long(source.AntiAssets);
+        }
+        if (source.AntiScreenshot != null) {
+            this.AntiScreenshot = new Long(source.AntiScreenshot);
+        }
+        if (source.AntiSSL != null) {
+            this.AntiSSL = new Long(source.AntiSSL);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

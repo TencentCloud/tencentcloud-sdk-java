@@ -172,6 +172,32 @@ public class RewriteTarget extends AbstractModel{
         this.RewriteType = RewriteType;
     }
 
+    public RewriteTarget() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RewriteTarget(RewriteTarget source) {
+        if (source.TargetListenerId != null) {
+            this.TargetListenerId = new String(source.TargetListenerId);
+        }
+        if (source.TargetLocationId != null) {
+            this.TargetLocationId = new String(source.TargetLocationId);
+        }
+        if (source.RewriteCode != null) {
+            this.RewriteCode = new Long(source.RewriteCode);
+        }
+        if (source.TakeUrl != null) {
+            this.TakeUrl = new Boolean(source.TakeUrl);
+        }
+        if (source.RewriteType != null) {
+            this.RewriteType = new String(source.RewriteType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

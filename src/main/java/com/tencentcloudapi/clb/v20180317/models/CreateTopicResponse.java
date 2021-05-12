@@ -68,6 +68,23 @@ public class CreateTopicResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public CreateTopicResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateTopicResponse(CreateTopicResponse source) {
+        if (source.TopicId != null) {
+            this.TopicId = new String(source.TopicId);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

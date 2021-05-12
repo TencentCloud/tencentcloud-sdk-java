@@ -68,6 +68,23 @@ public class DescribeAvailableLibCountResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeAvailableLibCountResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeAvailableLibCountResponse(DescribeAvailableLibCountResponse source) {
+        if (source.Quantity != null) {
+            this.Quantity = new Long(source.Quantity);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -91,6 +91,29 @@ public class AssetFilters extends AbstractModel{
         this.ExactMatch = ExactMatch;
     }
 
+    public AssetFilters() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AssetFilters(AssetFilters source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Values != null) {
+            this.Values = new String[source.Values.length];
+            for (int i = 0; i < source.Values.length; i++) {
+                this.Values[i] = new String(source.Values[i]);
+            }
+        }
+        if (source.ExactMatch != null) {
+            this.ExactMatch = new Boolean(source.ExactMatch);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

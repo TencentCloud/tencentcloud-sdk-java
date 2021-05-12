@@ -96,6 +96,26 @@ public class WatermarkCycleConfigForUpdate extends AbstractModel{
         this.CycleDuration = CycleDuration;
     }
 
+    public WatermarkCycleConfigForUpdate() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public WatermarkCycleConfigForUpdate(WatermarkCycleConfigForUpdate source) {
+        if (source.StartTime != null) {
+            this.StartTime = new Float(source.StartTime);
+        }
+        if (source.DisplayDuration != null) {
+            this.DisplayDuration = new Float(source.DisplayDuration);
+        }
+        if (source.CycleDuration != null) {
+            this.CycleDuration = new Float(source.CycleDuration);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -68,6 +68,26 @@ public class DescribeWxCloudBaseRunSubNetsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeWxCloudBaseRunSubNetsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeWxCloudBaseRunSubNetsResponse(DescribeWxCloudBaseRunSubNetsResponse source) {
+        if (source.SubNetIds != null) {
+            this.SubNetIds = new String[source.SubNetIds.length];
+            for (int i = 0; i < source.SubNetIds.length; i++) {
+                this.SubNetIds[i] = new String(source.SubNetIds[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

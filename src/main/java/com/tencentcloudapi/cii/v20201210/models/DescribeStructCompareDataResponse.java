@@ -275,6 +275,50 @@ public class DescribeStructCompareDataResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeStructCompareDataResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeStructCompareDataResponse(DescribeStructCompareDataResponse source) {
+        if (source.PolicyId != null) {
+            this.PolicyId = new String(source.PolicyId);
+        }
+        if (source.TaskId != null) {
+            this.TaskId = new String(source.TaskId);
+        }
+        if (source.CustomerId != null) {
+            this.CustomerId = new String(source.CustomerId);
+        }
+        if (source.CustomerName != null) {
+            this.CustomerName = new String(source.CustomerName);
+        }
+        if (source.ReviewTime != null) {
+            this.ReviewTime = new String(source.ReviewTime);
+        }
+        if (source.MachineResult != null) {
+            this.MachineResult = new String(source.MachineResult);
+        }
+        if (source.ManualResult != null) {
+            this.ManualResult = new String(source.ManualResult);
+        }
+        if (source.Metrics != null) {
+            this.Metrics = new CompareMetricsData(source.Metrics);
+        }
+        if (source.NewItems != null) {
+            this.NewItems = new String(source.NewItems);
+        }
+        if (source.ModifyItems != null) {
+            this.ModifyItems = new String(source.ModifyItems);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

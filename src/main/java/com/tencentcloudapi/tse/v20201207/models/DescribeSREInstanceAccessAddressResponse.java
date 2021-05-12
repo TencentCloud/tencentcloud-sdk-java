@@ -68,6 +68,23 @@ public class DescribeSREInstanceAccessAddressResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeSREInstanceAccessAddressResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeSREInstanceAccessAddressResponse(DescribeSREInstanceAccessAddressResponse source) {
+        if (source.IntranetAddress != null) {
+            this.IntranetAddress = new String(source.IntranetAddress);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

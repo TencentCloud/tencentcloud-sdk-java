@@ -83,6 +83,26 @@ off：关闭
         this.RefererRules = RefererRules;
     }
 
+    public Referer() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Referer(Referer source) {
+        if (source.Switch != null) {
+            this.Switch = new String(source.Switch);
+        }
+        if (source.RefererRules != null) {
+            this.RefererRules = new RefererRule[source.RefererRules.length];
+            for (int i = 0; i < source.RefererRules.length; i++) {
+                this.RefererRules[i] = new RefererRule(source.RefererRules[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

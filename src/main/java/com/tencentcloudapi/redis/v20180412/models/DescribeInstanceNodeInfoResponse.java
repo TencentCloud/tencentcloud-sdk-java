@@ -198,6 +198,47 @@ public class DescribeInstanceNodeInfoResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeInstanceNodeInfoResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeInstanceNodeInfoResponse(DescribeInstanceNodeInfoResponse source) {
+        if (source.ProxyCount != null) {
+            this.ProxyCount = new Long(source.ProxyCount);
+        }
+        if (source.Proxy != null) {
+            this.Proxy = new ProxyNodes[source.Proxy.length];
+            for (int i = 0; i < source.Proxy.length; i++) {
+                this.Proxy[i] = new ProxyNodes(source.Proxy[i]);
+            }
+        }
+        if (source.RedisCount != null) {
+            this.RedisCount = new Long(source.RedisCount);
+        }
+        if (source.Redis != null) {
+            this.Redis = new RedisNodes[source.Redis.length];
+            for (int i = 0; i < source.Redis.length; i++) {
+                this.Redis[i] = new RedisNodes(source.Redis[i]);
+            }
+        }
+        if (source.TendisCount != null) {
+            this.TendisCount = new Long(source.TendisCount);
+        }
+        if (source.Tendis != null) {
+            this.Tendis = new TendisNodes[source.Tendis.length];
+            for (int i = 0; i < source.Tendis.length; i++) {
+                this.Tendis[i] = new TendisNodes(source.Tendis[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

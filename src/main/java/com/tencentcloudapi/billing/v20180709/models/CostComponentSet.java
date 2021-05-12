@@ -298,6 +298,53 @@ public class CostComponentSet extends AbstractModel{
         this.IncentivePayAmount = IncentivePayAmount;
     }
 
+    public CostComponentSet() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CostComponentSet(CostComponentSet source) {
+        if (source.ComponentCodeName != null) {
+            this.ComponentCodeName = new String(source.ComponentCodeName);
+        }
+        if (source.ItemCodeName != null) {
+            this.ItemCodeName = new String(source.ItemCodeName);
+        }
+        if (source.SinglePrice != null) {
+            this.SinglePrice = new String(source.SinglePrice);
+        }
+        if (source.PriceUnit != null) {
+            this.PriceUnit = new String(source.PriceUnit);
+        }
+        if (source.UsedAmount != null) {
+            this.UsedAmount = new String(source.UsedAmount);
+        }
+        if (source.UsedAmountUnit != null) {
+            this.UsedAmountUnit = new String(source.UsedAmountUnit);
+        }
+        if (source.Cost != null) {
+            this.Cost = new String(source.Cost);
+        }
+        if (source.Discount != null) {
+            this.Discount = new String(source.Discount);
+        }
+        if (source.RealCost != null) {
+            this.RealCost = new String(source.RealCost);
+        }
+        if (source.VoucherPayAmount != null) {
+            this.VoucherPayAmount = new String(source.VoucherPayAmount);
+        }
+        if (source.CashPayAmount != null) {
+            this.CashPayAmount = new String(source.CashPayAmount);
+        }
+        if (source.IncentivePayAmount != null) {
+            this.IncentivePayAmount = new String(source.IncentivePayAmount);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

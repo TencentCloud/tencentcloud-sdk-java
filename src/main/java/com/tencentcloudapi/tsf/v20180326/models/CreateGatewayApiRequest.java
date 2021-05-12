@@ -68,6 +68,26 @@ public class CreateGatewayApiRequest extends AbstractModel{
         this.ApiList = ApiList;
     }
 
+    public CreateGatewayApiRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateGatewayApiRequest(CreateGatewayApiRequest source) {
+        if (source.GroupId != null) {
+            this.GroupId = new String(source.GroupId);
+        }
+        if (source.ApiList != null) {
+            this.ApiList = new ApiInfo[source.ApiList.length];
+            for (int i = 0; i < source.ApiList.length; i++) {
+                this.ApiList[i] = new ApiInfo(source.ApiList[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

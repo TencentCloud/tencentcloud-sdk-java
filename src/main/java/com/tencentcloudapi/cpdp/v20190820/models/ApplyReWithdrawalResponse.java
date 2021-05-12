@@ -68,6 +68,23 @@ public class ApplyReWithdrawalResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public ApplyReWithdrawalResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ApplyReWithdrawalResponse(ApplyReWithdrawalResponse source) {
+        if (source.WithdrawOrderId != null) {
+            this.WithdrawOrderId = new String(source.WithdrawOrderId);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

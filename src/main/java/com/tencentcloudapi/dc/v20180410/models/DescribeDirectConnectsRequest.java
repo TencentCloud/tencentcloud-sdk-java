@@ -114,6 +114,35 @@ public class DescribeDirectConnectsRequest extends AbstractModel{
         this.Limit = Limit;
     }
 
+    public DescribeDirectConnectsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeDirectConnectsRequest(DescribeDirectConnectsRequest source) {
+        if (source.Filters != null) {
+            this.Filters = new Filter[source.Filters.length];
+            for (int i = 0; i < source.Filters.length; i++) {
+                this.Filters[i] = new Filter(source.Filters[i]);
+            }
+        }
+        if (source.DirectConnectIds != null) {
+            this.DirectConnectIds = new String[source.DirectConnectIds.length];
+            for (int i = 0; i < source.DirectConnectIds.length; i++) {
+                this.DirectConnectIds[i] = new String(source.DirectConnectIds[i]);
+            }
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

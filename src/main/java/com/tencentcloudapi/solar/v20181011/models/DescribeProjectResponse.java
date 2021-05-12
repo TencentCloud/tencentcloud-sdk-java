@@ -234,6 +234,47 @@ public class DescribeProjectResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeProjectResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeProjectResponse(DescribeProjectResponse source) {
+        if (source.ProjectId != null) {
+            this.ProjectId = new String(source.ProjectId);
+        }
+        if (source.ProjectName != null) {
+            this.ProjectName = new String(source.ProjectName);
+        }
+        if (source.ProjectBudget != null) {
+            this.ProjectBudget = new Float(source.ProjectBudget);
+        }
+        if (source.ProjectOrg != null) {
+            this.ProjectOrg = new String(source.ProjectOrg);
+        }
+        if (source.ProjectIntroduction != null) {
+            this.ProjectIntroduction = new String(source.ProjectIntroduction);
+        }
+        if (source.SubProjectList != null) {
+            this.SubProjectList = new SubProjectInfo[source.SubProjectList.length];
+            for (int i = 0; i < source.SubProjectList.length; i++) {
+                this.SubProjectList[i] = new SubProjectInfo(source.SubProjectList[i]);
+            }
+        }
+        if (source.ProjectStatus != null) {
+            this.ProjectStatus = new String(source.ProjectStatus);
+        }
+        if (source.ProjectOrgId != null) {
+            this.ProjectOrgId = new String(source.ProjectOrgId);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

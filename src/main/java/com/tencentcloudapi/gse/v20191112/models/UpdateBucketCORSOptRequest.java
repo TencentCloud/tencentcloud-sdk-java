@@ -137,6 +137,44 @@ public class UpdateBucketCORSOptRequest extends AbstractModel{
         this.ExposeHeaders = ExposeHeaders;
     }
 
+    public UpdateBucketCORSOptRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UpdateBucketCORSOptRequest(UpdateBucketCORSOptRequest source) {
+        if (source.AllowedOrigins != null) {
+            this.AllowedOrigins = new String[source.AllowedOrigins.length];
+            for (int i = 0; i < source.AllowedOrigins.length; i++) {
+                this.AllowedOrigins[i] = new String(source.AllowedOrigins[i]);
+            }
+        }
+        if (source.AllowedMethods != null) {
+            this.AllowedMethods = new String[source.AllowedMethods.length];
+            for (int i = 0; i < source.AllowedMethods.length; i++) {
+                this.AllowedMethods[i] = new String(source.AllowedMethods[i]);
+            }
+        }
+        if (source.AllowedHeaders != null) {
+            this.AllowedHeaders = new String[source.AllowedHeaders.length];
+            for (int i = 0; i < source.AllowedHeaders.length; i++) {
+                this.AllowedHeaders[i] = new String(source.AllowedHeaders[i]);
+            }
+        }
+        if (source.MaxAgeSeconds != null) {
+            this.MaxAgeSeconds = new Long(source.MaxAgeSeconds);
+        }
+        if (source.ExposeHeaders != null) {
+            this.ExposeHeaders = new String[source.ExposeHeaders.length];
+            for (int i = 0; i < source.ExposeHeaders.length; i++) {
+                this.ExposeHeaders[i] = new String(source.ExposeHeaders[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

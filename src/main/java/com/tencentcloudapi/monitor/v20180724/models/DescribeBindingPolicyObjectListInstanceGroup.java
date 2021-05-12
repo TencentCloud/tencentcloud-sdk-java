@@ -211,6 +211,44 @@ public class DescribeBindingPolicyObjectListInstanceGroup extends AbstractModel{
         this.Regions = Regions;
     }
 
+    public DescribeBindingPolicyObjectListInstanceGroup() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeBindingPolicyObjectListInstanceGroup(DescribeBindingPolicyObjectListInstanceGroup source) {
+        if (source.InstanceGroupId != null) {
+            this.InstanceGroupId = new Long(source.InstanceGroupId);
+        }
+        if (source.ViewName != null) {
+            this.ViewName = new String(source.ViewName);
+        }
+        if (source.LastEditUin != null) {
+            this.LastEditUin = new String(source.LastEditUin);
+        }
+        if (source.GroupName != null) {
+            this.GroupName = new String(source.GroupName);
+        }
+        if (source.InstanceSum != null) {
+            this.InstanceSum = new Long(source.InstanceSum);
+        }
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new Long(source.UpdateTime);
+        }
+        if (source.InsertTime != null) {
+            this.InsertTime = new Long(source.InsertTime);
+        }
+        if (source.Regions != null) {
+            this.Regions = new String[source.Regions.length];
+            for (int i = 0; i < source.Regions.length; i++) {
+                this.Regions[i] = new String(source.Regions[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

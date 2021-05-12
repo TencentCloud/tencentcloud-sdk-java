@@ -180,6 +180,35 @@ development: 开发环境
         this.MidasEnvironment = MidasEnvironment;
     }
 
+    public QueryRefundRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public QueryRefundRequest(QueryRefundRequest source) {
+        if (source.UserId != null) {
+            this.UserId = new String(source.UserId);
+        }
+        if (source.RefundId != null) {
+            this.RefundId = new String(source.RefundId);
+        }
+        if (source.MidasAppId != null) {
+            this.MidasAppId = new String(source.MidasAppId);
+        }
+        if (source.MidasSecretId != null) {
+            this.MidasSecretId = new String(source.MidasSecretId);
+        }
+        if (source.MidasSignature != null) {
+            this.MidasSignature = new String(source.MidasSignature);
+        }
+        if (source.MidasEnvironment != null) {
+            this.MidasEnvironment = new String(source.MidasEnvironment);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

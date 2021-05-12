@@ -114,6 +114,35 @@ public class DescribleL7RulesResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribleL7RulesResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribleL7RulesResponse(DescribleL7RulesResponse source) {
+        if (source.Rules != null) {
+            this.Rules = new L7RuleEntry[source.Rules.length];
+            for (int i = 0; i < source.Rules.length; i++) {
+                this.Rules[i] = new L7RuleEntry(source.Rules[i]);
+            }
+        }
+        if (source.Total != null) {
+            this.Total = new Long(source.Total);
+        }
+        if (source.Healths != null) {
+            this.Healths = new L7RuleHealth[source.Healths.length];
+            for (int i = 0; i < source.Healths.length; i++) {
+                this.Healths[i] = new L7RuleHealth(source.Healths[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

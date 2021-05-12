@@ -295,6 +295,50 @@ public class DescribePolicyGroupInfoCondition extends AbstractModel{
         this.MetricName = MetricName;
     }
 
+    public DescribePolicyGroupInfoCondition() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribePolicyGroupInfoCondition(DescribePolicyGroupInfoCondition source) {
+        if (source.MetricShowName != null) {
+            this.MetricShowName = new String(source.MetricShowName);
+        }
+        if (source.Period != null) {
+            this.Period = new Long(source.Period);
+        }
+        if (source.MetricId != null) {
+            this.MetricId = new Long(source.MetricId);
+        }
+        if (source.RuleId != null) {
+            this.RuleId = new Long(source.RuleId);
+        }
+        if (source.Unit != null) {
+            this.Unit = new String(source.Unit);
+        }
+        if (source.AlarmNotifyType != null) {
+            this.AlarmNotifyType = new Long(source.AlarmNotifyType);
+        }
+        if (source.AlarmNotifyPeriod != null) {
+            this.AlarmNotifyPeriod = new Long(source.AlarmNotifyPeriod);
+        }
+        if (source.CalcType != null) {
+            this.CalcType = new Long(source.CalcType);
+        }
+        if (source.CalcValue != null) {
+            this.CalcValue = new String(source.CalcValue);
+        }
+        if (source.ContinueTime != null) {
+            this.ContinueTime = new Long(source.ContinueTime);
+        }
+        if (source.MetricName != null) {
+            this.MetricName = new String(source.MetricName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

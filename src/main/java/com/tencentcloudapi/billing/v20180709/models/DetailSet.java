@@ -96,6 +96,29 @@ public class DetailSet extends AbstractModel{
         this.InstanceID = InstanceID;
     }
 
+    public DetailSet() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DetailSet(DetailSet source) {
+        if (source.Domain != null) {
+            this.Domain = new String(source.Domain);
+        }
+        if (source.DetailPoints != null) {
+            this.DetailPoints = new DetailPoint[source.DetailPoints.length];
+            for (int i = 0; i < source.DetailPoints.length; i++) {
+                this.DetailPoints[i] = new DetailPoint(source.DetailPoints[i]);
+            }
+        }
+        if (source.InstanceID != null) {
+            this.InstanceID = new String(source.InstanceID);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -68,6 +68,23 @@ public class DescribeCardRequest extends AbstractModel{
         this.Iccid = Iccid;
     }
 
+    public DescribeCardRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeCardRequest(DescribeCardRequest source) {
+        if (source.Sdkappid != null) {
+            this.Sdkappid = new Long(source.Sdkappid);
+        }
+        if (source.Iccid != null) {
+            this.Iccid = new String(source.Iccid);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

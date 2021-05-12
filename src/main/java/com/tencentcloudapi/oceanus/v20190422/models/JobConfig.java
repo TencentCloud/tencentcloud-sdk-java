@@ -399,6 +399,65 @@ public class JobConfig extends AbstractModel{
         this.MaxParallelism = MaxParallelism;
     }
 
+    public JobConfig() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public JobConfig(JobConfig source) {
+        if (source.JobId != null) {
+            this.JobId = new String(source.JobId);
+        }
+        if (source.EntrypointClass != null) {
+            this.EntrypointClass = new String(source.EntrypointClass);
+        }
+        if (source.ProgramArgs != null) {
+            this.ProgramArgs = new String(source.ProgramArgs);
+        }
+        if (source.Remark != null) {
+            this.Remark = new String(source.Remark);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.Version != null) {
+            this.Version = new Long(source.Version);
+        }
+        if (source.DefaultParallelism != null) {
+            this.DefaultParallelism = new Long(source.DefaultParallelism);
+        }
+        if (source.Properties != null) {
+            this.Properties = new Property[source.Properties.length];
+            for (int i = 0; i < source.Properties.length; i++) {
+                this.Properties[i] = new Property(source.Properties[i]);
+            }
+        }
+        if (source.ResourceRefDetails != null) {
+            this.ResourceRefDetails = new ResourceRefDetail[source.ResourceRefDetails.length];
+            for (int i = 0; i < source.ResourceRefDetails.length; i++) {
+                this.ResourceRefDetails[i] = new ResourceRefDetail(source.ResourceRefDetails[i]);
+            }
+        }
+        if (source.CreatorUin != null) {
+            this.CreatorUin = new String(source.CreatorUin);
+        }
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new String(source.UpdateTime);
+        }
+        if (source.COSBucket != null) {
+            this.COSBucket = new String(source.COSBucket);
+        }
+        if (source.LogCollect != null) {
+            this.LogCollect = new Long(source.LogCollect);
+        }
+        if (source.MaxParallelism != null) {
+            this.MaxParallelism = new Long(source.MaxParallelism);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

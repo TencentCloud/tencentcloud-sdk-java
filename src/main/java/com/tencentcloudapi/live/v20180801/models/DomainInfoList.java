@@ -68,6 +68,26 @@ public class DomainInfoList extends AbstractModel{
         this.DetailInfoList = DetailInfoList;
     }
 
+    public DomainInfoList() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DomainInfoList(DomainInfoList source) {
+        if (source.Domain != null) {
+            this.Domain = new String(source.Domain);
+        }
+        if (source.DetailInfoList != null) {
+            this.DetailInfoList = new DomainDetailInfo[source.DetailInfoList.length];
+            for (int i = 0; i < source.DetailInfoList.length; i++) {
+                this.DetailInfoList[i] = new DomainDetailInfo(source.DetailInfoList[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

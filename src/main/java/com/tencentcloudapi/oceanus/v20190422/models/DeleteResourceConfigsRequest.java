@@ -68,6 +68,26 @@ public class DeleteResourceConfigsRequest extends AbstractModel{
         this.ResourceConfigVersions = ResourceConfigVersions;
     }
 
+    public DeleteResourceConfigsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteResourceConfigsRequest(DeleteResourceConfigsRequest source) {
+        if (source.ResourceId != null) {
+            this.ResourceId = new String(source.ResourceId);
+        }
+        if (source.ResourceConfigVersions != null) {
+            this.ResourceConfigVersions = new Long[source.ResourceConfigVersions.length];
+            for (int i = 0; i < source.ResourceConfigVersions.length; i++) {
+                this.ResourceConfigVersions[i] = new Long(source.ResourceConfigVersions[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

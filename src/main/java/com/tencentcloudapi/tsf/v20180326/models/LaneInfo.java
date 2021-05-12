@@ -246,6 +246,47 @@ public class LaneInfo extends AbstractModel{
         this.NamespaceIdList = NamespaceIdList;
     }
 
+    public LaneInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public LaneInfo(LaneInfo source) {
+        if (source.LaneId != null) {
+            this.LaneId = new String(source.LaneId);
+        }
+        if (source.LaneName != null) {
+            this.LaneName = new String(source.LaneName);
+        }
+        if (source.Remark != null) {
+            this.Remark = new String(source.Remark);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new Long(source.CreateTime);
+        }
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new Long(source.UpdateTime);
+        }
+        if (source.LaneGroupList != null) {
+            this.LaneGroupList = new LaneGroup[source.LaneGroupList.length];
+            for (int i = 0; i < source.LaneGroupList.length; i++) {
+                this.LaneGroupList[i] = new LaneGroup(source.LaneGroupList[i]);
+            }
+        }
+        if (source.Entrance != null) {
+            this.Entrance = new Boolean(source.Entrance);
+        }
+        if (source.NamespaceIdList != null) {
+            this.NamespaceIdList = new String[source.NamespaceIdList.length];
+            for (int i = 0; i < source.NamespaceIdList.length; i++) {
+                this.NamespaceIdList[i] = new String(source.NamespaceIdList[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

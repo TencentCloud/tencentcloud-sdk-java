@@ -73,6 +73,26 @@ public class HttpCodeInfo extends AbstractModel{
         this.ValueList = ValueList;
     }
 
+    public HttpCodeInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public HttpCodeInfo(HttpCodeInfo source) {
+        if (source.HttpCode != null) {
+            this.HttpCode = new String(source.HttpCode);
+        }
+        if (source.ValueList != null) {
+            this.ValueList = new HttpCodeValue[source.ValueList.length];
+            for (int i = 0; i < source.ValueList.length; i++) {
+                this.ValueList[i] = new HttpCodeValue(source.ValueList[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

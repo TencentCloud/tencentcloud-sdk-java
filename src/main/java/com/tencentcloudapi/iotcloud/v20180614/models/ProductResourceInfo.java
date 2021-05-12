@@ -188,6 +188,38 @@ public class ProductResourceInfo extends AbstractModel{
         this.CreateTime = CreateTime;
     }
 
+    public ProductResourceInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ProductResourceInfo(ProductResourceInfo source) {
+        if (source.ProductID != null) {
+            this.ProductID = new String(source.ProductID);
+        }
+        if (source.ProductName != null) {
+            this.ProductName = new String(source.ProductName);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Md5 != null) {
+            this.Md5 = new String(source.Md5);
+        }
+        if (source.Size != null) {
+            this.Size = new Long(source.Size);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

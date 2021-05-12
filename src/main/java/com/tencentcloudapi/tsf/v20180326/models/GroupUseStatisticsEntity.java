@@ -134,6 +134,29 @@ public class GroupUseStatisticsEntity extends AbstractModel{
         this.ApiId = ApiId;
     }
 
+    public GroupUseStatisticsEntity() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GroupUseStatisticsEntity(GroupUseStatisticsEntity source) {
+        if (source.ApiPath != null) {
+            this.ApiPath = new String(source.ApiPath);
+        }
+        if (source.ServiceName != null) {
+            this.ServiceName = new String(source.ServiceName);
+        }
+        if (source.Value != null) {
+            this.Value = new String(source.Value);
+        }
+        if (source.ApiId != null) {
+            this.ApiId = new String(source.ApiId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -349,6 +349,59 @@ public class TagInfo extends AbstractModel{
         this.PushTime = PushTime;
     }
 
+    public TagInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TagInfo(TagInfo source) {
+        if (source.TagName != null) {
+            this.TagName = new String(source.TagName);
+        }
+        if (source.TagId != null) {
+            this.TagId = new String(source.TagId);
+        }
+        if (source.ImageId != null) {
+            this.ImageId = new String(source.ImageId);
+        }
+        if (source.Size != null) {
+            this.Size = new String(source.Size);
+        }
+        if (source.CreationTime != null) {
+            this.CreationTime = new String(source.CreationTime);
+        }
+        if (source.DurationDays != null) {
+            this.DurationDays = new String(source.DurationDays);
+        }
+        if (source.Author != null) {
+            this.Author = new String(source.Author);
+        }
+        if (source.Architecture != null) {
+            this.Architecture = new String(source.Architecture);
+        }
+        if (source.DockerVersion != null) {
+            this.DockerVersion = new String(source.DockerVersion);
+        }
+        if (source.OS != null) {
+            this.OS = new String(source.OS);
+        }
+        if (source.SizeByte != null) {
+            this.SizeByte = new Long(source.SizeByte);
+        }
+        if (source.Id != null) {
+            this.Id = new Long(source.Id);
+        }
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new String(source.UpdateTime);
+        }
+        if (source.PushTime != null) {
+            this.PushTime = new String(source.PushTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

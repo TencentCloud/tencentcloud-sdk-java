@@ -218,6 +218,38 @@ public class LaneRuleTag extends AbstractModel{
         this.UpdateTime = UpdateTime;
     }
 
+    public LaneRuleTag() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public LaneRuleTag(LaneRuleTag source) {
+        if (source.TagId != null) {
+            this.TagId = new String(source.TagId);
+        }
+        if (source.TagName != null) {
+            this.TagName = new String(source.TagName);
+        }
+        if (source.TagOperator != null) {
+            this.TagOperator = new String(source.TagOperator);
+        }
+        if (source.TagValue != null) {
+            this.TagValue = new String(source.TagValue);
+        }
+        if (source.LaneRuleId != null) {
+            this.LaneRuleId = new String(source.LaneRuleId);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new Long(source.CreateTime);
+        }
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new Long(source.UpdateTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

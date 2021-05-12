@@ -91,6 +91,26 @@ public class IntelligenceType extends AbstractModel{
         this.Time = Time;
     }
 
+    public IntelligenceType() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public IntelligenceType(IntelligenceType source) {
+        if (source.Source != null) {
+            this.Source = new String(source.Source);
+        }
+        if (source.Stamp != null) {
+            this.Stamp = new String(source.Stamp);
+        }
+        if (source.Time != null) {
+            this.Time = new Long(source.Time);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

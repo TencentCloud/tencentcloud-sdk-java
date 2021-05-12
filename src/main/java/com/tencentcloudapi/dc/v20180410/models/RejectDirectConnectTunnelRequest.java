@@ -45,6 +45,20 @@ public class RejectDirectConnectTunnelRequest extends AbstractModel{
         this.DirectConnectTunnelId = DirectConnectTunnelId;
     }
 
+    public RejectDirectConnectTunnelRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RejectDirectConnectTunnelRequest(RejectDirectConnectTunnelRequest source) {
+        if (source.DirectConnectTunnelId != null) {
+            this.DirectConnectTunnelId = new String(source.DirectConnectTunnelId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

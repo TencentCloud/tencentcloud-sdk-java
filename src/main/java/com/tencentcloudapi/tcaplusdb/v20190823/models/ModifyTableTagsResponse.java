@@ -91,6 +91,29 @@ public class ModifyTableTagsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public ModifyTableTagsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyTableTagsResponse(ModifyTableTagsResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.TableResults != null) {
+            this.TableResults = new TableResultNew[source.TableResults.length];
+            for (int i = 0; i < source.TableResults.length; i++) {
+                this.TableResults[i] = new TableResultNew(source.TableResults[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

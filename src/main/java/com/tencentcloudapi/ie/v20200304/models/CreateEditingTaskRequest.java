@@ -114,6 +114,29 @@ public class CreateEditingTaskRequest extends AbstractModel{
         this.CallbackInfo = CallbackInfo;
     }
 
+    public CreateEditingTaskRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateEditingTaskRequest(CreateEditingTaskRequest source) {
+        if (source.EditingInfo != null) {
+            this.EditingInfo = new EditingInfo(source.EditingInfo);
+        }
+        if (source.DownInfo != null) {
+            this.DownInfo = new DownInfo(source.DownInfo);
+        }
+        if (source.SaveInfo != null) {
+            this.SaveInfo = new SaveInfo(source.SaveInfo);
+        }
+        if (source.CallbackInfo != null) {
+            this.CallbackInfo = new CallbackInfo(source.CallbackInfo);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

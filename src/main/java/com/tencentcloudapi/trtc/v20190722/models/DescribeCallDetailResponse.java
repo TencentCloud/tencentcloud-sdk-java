@@ -124,6 +124,35 @@ public class DescribeCallDetailResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeCallDetailResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeCallDetailResponse(DescribeCallDetailResponse source) {
+        if (source.Total != null) {
+            this.Total = new Long(source.Total);
+        }
+        if (source.UserList != null) {
+            this.UserList = new UserInformation[source.UserList.length];
+            for (int i = 0; i < source.UserList.length; i++) {
+                this.UserList[i] = new UserInformation(source.UserList[i]);
+            }
+        }
+        if (source.Data != null) {
+            this.Data = new QualityData[source.Data.length];
+            for (int i = 0; i < source.Data.length; i++) {
+                this.Data[i] = new QualityData(source.Data[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

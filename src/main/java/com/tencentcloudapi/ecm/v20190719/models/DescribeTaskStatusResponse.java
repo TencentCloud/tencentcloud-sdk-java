@@ -68,6 +68,26 @@ public class DescribeTaskStatusResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeTaskStatusResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeTaskStatusResponse(DescribeTaskStatusResponse source) {
+        if (source.TaskSet != null) {
+            this.TaskSet = new TaskOutput[source.TaskSet.length];
+            for (int i = 0; i < source.TaskSet.length; i++) {
+                this.TaskSet[i] = new TaskOutput(source.TaskSet[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

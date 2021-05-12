@@ -165,6 +165,44 @@ public class DescribeGroupProIspPlayInfoListRequest extends AbstractModel{
         this.MainlandOrOversea = MainlandOrOversea;
     }
 
+    public DescribeGroupProIspPlayInfoListRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeGroupProIspPlayInfoListRequest(DescribeGroupProIspPlayInfoListRequest source) {
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+        if (source.PlayDomains != null) {
+            this.PlayDomains = new String[source.PlayDomains.length];
+            for (int i = 0; i < source.PlayDomains.length; i++) {
+                this.PlayDomains[i] = new String(source.PlayDomains[i]);
+            }
+        }
+        if (source.ProvinceNames != null) {
+            this.ProvinceNames = new String[source.ProvinceNames.length];
+            for (int i = 0; i < source.ProvinceNames.length; i++) {
+                this.ProvinceNames[i] = new String(source.ProvinceNames[i]);
+            }
+        }
+        if (source.IspNames != null) {
+            this.IspNames = new String[source.IspNames.length];
+            for (int i = 0; i < source.IspNames.length; i++) {
+                this.IspNames[i] = new String(source.IspNames[i]);
+            }
+        }
+        if (source.MainlandOrOversea != null) {
+            this.MainlandOrOversea = new String(source.MainlandOrOversea);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

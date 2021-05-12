@@ -206,6 +206,62 @@ public class DescribeTimeWindowResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeTimeWindowResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeTimeWindowResponse(DescribeTimeWindowResponse source) {
+        if (source.Monday != null) {
+            this.Monday = new String[source.Monday.length];
+            for (int i = 0; i < source.Monday.length; i++) {
+                this.Monday[i] = new String(source.Monday[i]);
+            }
+        }
+        if (source.Tuesday != null) {
+            this.Tuesday = new String[source.Tuesday.length];
+            for (int i = 0; i < source.Tuesday.length; i++) {
+                this.Tuesday[i] = new String(source.Tuesday[i]);
+            }
+        }
+        if (source.Wednesday != null) {
+            this.Wednesday = new String[source.Wednesday.length];
+            for (int i = 0; i < source.Wednesday.length; i++) {
+                this.Wednesday[i] = new String(source.Wednesday[i]);
+            }
+        }
+        if (source.Thursday != null) {
+            this.Thursday = new String[source.Thursday.length];
+            for (int i = 0; i < source.Thursday.length; i++) {
+                this.Thursday[i] = new String(source.Thursday[i]);
+            }
+        }
+        if (source.Friday != null) {
+            this.Friday = new String[source.Friday.length];
+            for (int i = 0; i < source.Friday.length; i++) {
+                this.Friday[i] = new String(source.Friday[i]);
+            }
+        }
+        if (source.Saturday != null) {
+            this.Saturday = new String[source.Saturday.length];
+            for (int i = 0; i < source.Saturday.length; i++) {
+                this.Saturday[i] = new String(source.Saturday[i]);
+            }
+        }
+        if (source.Sunday != null) {
+            this.Sunday = new String[source.Sunday.length];
+            for (int i = 0; i < source.Sunday.length; i++) {
+                this.Sunday[i] = new String(source.Sunday[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

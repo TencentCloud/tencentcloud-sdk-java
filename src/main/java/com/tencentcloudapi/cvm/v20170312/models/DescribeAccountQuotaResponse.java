@@ -91,6 +91,26 @@ public class DescribeAccountQuotaResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeAccountQuotaResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeAccountQuotaResponse(DescribeAccountQuotaResponse source) {
+        if (source.AppId != null) {
+            this.AppId = new String(source.AppId);
+        }
+        if (source.AccountQuotaOverview != null) {
+            this.AccountQuotaOverview = new AccountQuotaOverview(source.AccountQuotaOverview);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

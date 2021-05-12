@@ -101,6 +101,26 @@ string|tinyint|smallint|int|bigint|boolean|float|double|decimal|timestamp|date|b
         this.Comment = Comment;
     }
 
+    public Column() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Column(Column source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.Comment != null) {
+            this.Comment = new String(source.Comment);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

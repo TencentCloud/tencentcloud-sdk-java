@@ -124,6 +124,32 @@ public class QualityControlItem extends AbstractModel{
         this.AreaCoordsSet = AreaCoordsSet;
     }
 
+    public QualityControlItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public QualityControlItem(QualityControlItem source) {
+        if (source.Confidence != null) {
+            this.Confidence = new Long(source.Confidence);
+        }
+        if (source.StartTimeOffset != null) {
+            this.StartTimeOffset = new Float(source.StartTimeOffset);
+        }
+        if (source.EndTimeOffset != null) {
+            this.EndTimeOffset = new Float(source.EndTimeOffset);
+        }
+        if (source.AreaCoordsSet != null) {
+            this.AreaCoordsSet = new Long[source.AreaCoordsSet.length];
+            for (int i = 0; i < source.AreaCoordsSet.length; i++) {
+                this.AreaCoordsSet[i] = new Long(source.AreaCoordsSet[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

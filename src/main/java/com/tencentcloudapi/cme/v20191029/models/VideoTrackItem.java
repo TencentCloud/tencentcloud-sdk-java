@@ -369,6 +369,44 @@ public class VideoTrackItem extends AbstractModel{
         this.Width = Width;
     }
 
+    public VideoTrackItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public VideoTrackItem(VideoTrackItem source) {
+        if (source.SourceType != null) {
+            this.SourceType = new String(source.SourceType);
+        }
+        if (source.SourceMedia != null) {
+            this.SourceMedia = new String(source.SourceMedia);
+        }
+        if (source.SourceMediaStartTime != null) {
+            this.SourceMediaStartTime = new Float(source.SourceMediaStartTime);
+        }
+        if (source.Duration != null) {
+            this.Duration = new Float(source.Duration);
+        }
+        if (source.XPos != null) {
+            this.XPos = new String(source.XPos);
+        }
+        if (source.YPos != null) {
+            this.YPos = new String(source.YPos);
+        }
+        if (source.CoordinateOrigin != null) {
+            this.CoordinateOrigin = new String(source.CoordinateOrigin);
+        }
+        if (source.Height != null) {
+            this.Height = new String(source.Height);
+        }
+        if (source.Width != null) {
+            this.Width = new String(source.Width);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

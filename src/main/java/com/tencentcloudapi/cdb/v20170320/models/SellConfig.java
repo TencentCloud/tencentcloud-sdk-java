@@ -400,6 +400,65 @@ public class SellConfig extends AbstractModel{
         this.DeviceTypeName = DeviceTypeName;
     }
 
+    public SellConfig() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SellConfig(SellConfig source) {
+        if (source.Device != null) {
+            this.Device = new String(source.Device);
+        }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.CdbType != null) {
+            this.CdbType = new String(source.CdbType);
+        }
+        if (source.Memory != null) {
+            this.Memory = new Long(source.Memory);
+        }
+        if (source.Cpu != null) {
+            this.Cpu = new Long(source.Cpu);
+        }
+        if (source.VolumeMin != null) {
+            this.VolumeMin = new Long(source.VolumeMin);
+        }
+        if (source.VolumeMax != null) {
+            this.VolumeMax = new Long(source.VolumeMax);
+        }
+        if (source.VolumeStep != null) {
+            this.VolumeStep = new Long(source.VolumeStep);
+        }
+        if (source.Connection != null) {
+            this.Connection = new Long(source.Connection);
+        }
+        if (source.Qps != null) {
+            this.Qps = new Long(source.Qps);
+        }
+        if (source.Iops != null) {
+            this.Iops = new Long(source.Iops);
+        }
+        if (source.Info != null) {
+            this.Info = new String(source.Info);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.Tag != null) {
+            this.Tag = new Long(source.Tag);
+        }
+        if (source.DeviceType != null) {
+            this.DeviceType = new String(source.DeviceType);
+        }
+        if (source.DeviceTypeName != null) {
+            this.DeviceTypeName = new String(source.DeviceTypeName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

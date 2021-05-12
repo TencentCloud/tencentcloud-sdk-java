@@ -68,6 +68,26 @@ public class IngressTls extends AbstractModel{
         this.SecretName = SecretName;
     }
 
+    public IngressTls() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public IngressTls(IngressTls source) {
+        if (source.Hosts != null) {
+            this.Hosts = new String[source.Hosts.length];
+            for (int i = 0; i < source.Hosts.length; i++) {
+                this.Hosts[i] = new String(source.Hosts[i]);
+            }
+        }
+        if (source.SecretName != null) {
+            this.SecretName = new String(source.SecretName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

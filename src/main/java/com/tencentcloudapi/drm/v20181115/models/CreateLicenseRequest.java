@@ -142,6 +142,35 @@ public class CreateLicenseRequest extends AbstractModel{
         this.PlaybackPolicy = PlaybackPolicy;
     }
 
+    public CreateLicenseRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateLicenseRequest(CreateLicenseRequest source) {
+        if (source.DrmType != null) {
+            this.DrmType = new String(source.DrmType);
+        }
+        if (source.LicenseRequest != null) {
+            this.LicenseRequest = new String(source.LicenseRequest);
+        }
+        if (source.ContentType != null) {
+            this.ContentType = new String(source.ContentType);
+        }
+        if (source.Tracks != null) {
+            this.Tracks = new String[source.Tracks.length];
+            for (int i = 0; i < source.Tracks.length; i++) {
+                this.Tracks[i] = new String(source.Tracks[i]);
+            }
+        }
+        if (source.PlaybackPolicy != null) {
+            this.PlaybackPolicy = new PlaybackPolicy(source.PlaybackPolicy);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -134,6 +134,29 @@ public class InputDataConfig extends AbstractModel{
         this.ContentType = ContentType;
     }
 
+    public InputDataConfig() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public InputDataConfig(InputDataConfig source) {
+        if (source.ChannelName != null) {
+            this.ChannelName = new String(source.ChannelName);
+        }
+        if (source.DataSource != null) {
+            this.DataSource = new DataSource(source.DataSource);
+        }
+        if (source.InputMode != null) {
+            this.InputMode = new String(source.InputMode);
+        }
+        if (source.ContentType != null) {
+            this.ContentType = new String(source.ContentType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

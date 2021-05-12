@@ -91,6 +91,29 @@ public class VODExportInfo extends AbstractModel{
         this.ThirdPartyPublishInfos = ThirdPartyPublishInfos;
     }
 
+    public VODExportInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public VODExportInfo(VODExportInfo source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.ClassId != null) {
+            this.ClassId = new Long(source.ClassId);
+        }
+        if (source.ThirdPartyPublishInfos != null) {
+            this.ThirdPartyPublishInfos = new ThirdPartyPublishInfo[source.ThirdPartyPublishInfos.length];
+            for (int i = 0; i < source.ThirdPartyPublishInfos.length; i++) {
+                this.ThirdPartyPublishInfos[i] = new ThirdPartyPublishInfo(source.ThirdPartyPublishInfos[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

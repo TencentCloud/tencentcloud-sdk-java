@@ -114,6 +114,29 @@ public class CloudStorageEvent extends AbstractModel{
         this.EventId = EventId;
     }
 
+    public CloudStorageEvent() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CloudStorageEvent(CloudStorageEvent source) {
+        if (source.StartTime != null) {
+            this.StartTime = new Long(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new Long(source.EndTime);
+        }
+        if (source.Thumbnail != null) {
+            this.Thumbnail = new String(source.Thumbnail);
+        }
+        if (source.EventId != null) {
+            this.EventId = new String(source.EventId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -137,6 +137,32 @@ public class OrgCodeCertOCRResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public OrgCodeCertOCRResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public OrgCodeCertOCRResponse(OrgCodeCertOCRResponse source) {
+        if (source.OrgCode != null) {
+            this.OrgCode = new String(source.OrgCode);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Address != null) {
+            this.Address = new String(source.Address);
+        }
+        if (source.ValidDate != null) {
+            this.ValidDate = new String(source.ValidDate);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

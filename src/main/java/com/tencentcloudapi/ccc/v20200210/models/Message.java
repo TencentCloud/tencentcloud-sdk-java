@@ -68,6 +68,23 @@ public class Message extends AbstractModel{
         this.Content = Content;
     }
 
+    public Message() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Message(Message source) {
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.Content != null) {
+            this.Content = new String(source.Content);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

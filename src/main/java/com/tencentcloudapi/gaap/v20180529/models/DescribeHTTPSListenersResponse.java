@@ -91,6 +91,29 @@ public class DescribeHTTPSListenersResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeHTTPSListenersResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeHTTPSListenersResponse(DescribeHTTPSListenersResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.ListenerSet != null) {
+            this.ListenerSet = new HTTPSListener[source.ListenerSet.length];
+            for (int i = 0; i < source.ListenerSet.length; i++) {
+                this.ListenerSet[i] = new HTTPSListener(source.ListenerSet[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

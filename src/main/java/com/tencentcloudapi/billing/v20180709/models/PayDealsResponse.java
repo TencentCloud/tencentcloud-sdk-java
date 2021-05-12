@@ -114,6 +114,38 @@ public class PayDealsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public PayDealsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PayDealsResponse(PayDealsResponse source) {
+        if (source.OrderIds != null) {
+            this.OrderIds = new String[source.OrderIds.length];
+            for (int i = 0; i < source.OrderIds.length; i++) {
+                this.OrderIds[i] = new String(source.OrderIds[i]);
+            }
+        }
+        if (source.ResourceIds != null) {
+            this.ResourceIds = new String[source.ResourceIds.length];
+            for (int i = 0; i < source.ResourceIds.length; i++) {
+                this.ResourceIds[i] = new String(source.ResourceIds[i]);
+            }
+        }
+        if (source.BigDealIds != null) {
+            this.BigDealIds = new String[source.BigDealIds.length];
+            for (int i = 0; i < source.BigDealIds.length; i++) {
+                this.BigDealIds[i] = new String(source.BigDealIds[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

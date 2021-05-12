@@ -91,6 +91,26 @@ public class InstallAgentRequest extends AbstractModel{
         this.Update = Update;
     }
 
+    public InstallAgentRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public InstallAgentRequest(InstallAgentRequest source) {
+        if (source.Cluster != null) {
+            this.Cluster = new String(source.Cluster);
+        }
+        if (source.TiaVersion != null) {
+            this.TiaVersion = new String(source.TiaVersion);
+        }
+        if (source.Update != null) {
+            this.Update = new Boolean(source.Update);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

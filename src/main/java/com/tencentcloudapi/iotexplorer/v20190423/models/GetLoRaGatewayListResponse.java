@@ -96,6 +96,29 @@ public class GetLoRaGatewayListResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public GetLoRaGatewayListResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GetLoRaGatewayListResponse(GetLoRaGatewayListResponse source) {
+        if (source.Total != null) {
+            this.Total = new Long(source.Total);
+        }
+        if (source.Gateways != null) {
+            this.Gateways = new LoRaGatewayItem[source.Gateways.length];
+            for (int i = 0; i < source.Gateways.length; i++) {
+                this.Gateways[i] = new LoRaGatewayItem(source.Gateways[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

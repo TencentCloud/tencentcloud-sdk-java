@@ -68,6 +68,23 @@ public class CreateEmailAddressRequest extends AbstractModel{
         this.EmailSenderName = EmailSenderName;
     }
 
+    public CreateEmailAddressRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateEmailAddressRequest(CreateEmailAddressRequest source) {
+        if (source.EmailAddress != null) {
+            this.EmailAddress = new String(source.EmailAddress);
+        }
+        if (source.EmailSenderName != null) {
+            this.EmailSenderName = new String(source.EmailSenderName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

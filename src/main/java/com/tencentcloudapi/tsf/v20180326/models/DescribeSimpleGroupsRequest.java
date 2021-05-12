@@ -229,6 +229,47 @@ public class DescribeSimpleGroupsRequest extends AbstractModel{
         this.AppMicroServiceType = AppMicroServiceType;
     }
 
+    public DescribeSimpleGroupsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeSimpleGroupsRequest(DescribeSimpleGroupsRequest source) {
+        if (source.GroupIdList != null) {
+            this.GroupIdList = new String[source.GroupIdList.length];
+            for (int i = 0; i < source.GroupIdList.length; i++) {
+                this.GroupIdList[i] = new String(source.GroupIdList[i]);
+            }
+        }
+        if (source.ApplicationId != null) {
+            this.ApplicationId = new String(source.ApplicationId);
+        }
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
+        if (source.NamespaceId != null) {
+            this.NamespaceId = new String(source.NamespaceId);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.GroupId != null) {
+            this.GroupId = new String(source.GroupId);
+        }
+        if (source.SearchWord != null) {
+            this.SearchWord = new String(source.SearchWord);
+        }
+        if (source.AppMicroServiceType != null) {
+            this.AppMicroServiceType = new String(source.AppMicroServiceType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

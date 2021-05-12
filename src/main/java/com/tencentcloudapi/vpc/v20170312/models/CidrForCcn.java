@@ -78,6 +78,23 @@ public class CidrForCcn extends AbstractModel{
         this.PublishedToVbc = PublishedToVbc;
     }
 
+    public CidrForCcn() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CidrForCcn(CidrForCcn source) {
+        if (source.Cidr != null) {
+            this.Cidr = new String(source.Cidr);
+        }
+        if (source.PublishedToVbc != null) {
+            this.PublishedToVbc = new Boolean(source.PublishedToVbc);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -45,6 +45,20 @@ public class SearchResultSeg extends AbstractModel{
         this.SegStr = SegStr;
     }
 
+    public SearchResultSeg() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SearchResultSeg(SearchResultSeg source) {
+        if (source.SegStr != null) {
+            this.SegStr = new String(source.SegStr);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

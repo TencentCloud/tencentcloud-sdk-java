@@ -326,6 +326,59 @@ public class EndPoint extends AbstractModel{
         this.ServiceName = ServiceName;
     }
 
+    public EndPoint() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public EndPoint(EndPoint source) {
+        if (source.EndPointId != null) {
+            this.EndPointId = new String(source.EndPointId);
+        }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.SubnetId != null) {
+            this.SubnetId = new String(source.SubnetId);
+        }
+        if (source.EndPointOwner != null) {
+            this.EndPointOwner = new String(source.EndPointOwner);
+        }
+        if (source.EndPointName != null) {
+            this.EndPointName = new String(source.EndPointName);
+        }
+        if (source.ServiceVpcId != null) {
+            this.ServiceVpcId = new String(source.ServiceVpcId);
+        }
+        if (source.ServiceVip != null) {
+            this.ServiceVip = new String(source.ServiceVip);
+        }
+        if (source.EndPointServiceId != null) {
+            this.EndPointServiceId = new String(source.EndPointServiceId);
+        }
+        if (source.EndPointVip != null) {
+            this.EndPointVip = new String(source.EndPointVip);
+        }
+        if (source.State != null) {
+            this.State = new String(source.State);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.GroupSet != null) {
+            this.GroupSet = new String[source.GroupSet.length];
+            for (int i = 0; i < source.GroupSet.length; i++) {
+                this.GroupSet[i] = new String(source.GroupSet[i]);
+            }
+        }
+        if (source.ServiceName != null) {
+            this.ServiceName = new String(source.ServiceName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

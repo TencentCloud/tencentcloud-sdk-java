@@ -111,6 +111,26 @@ public class GetFederationTokenRequest extends AbstractModel{
         this.DurationSeconds = DurationSeconds;
     }
 
+    public GetFederationTokenRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GetFederationTokenRequest(GetFederationTokenRequest source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Policy != null) {
+            this.Policy = new String(source.Policy);
+        }
+        if (source.DurationSeconds != null) {
+            this.DurationSeconds = new Long(source.DurationSeconds);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

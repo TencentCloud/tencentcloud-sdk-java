@@ -78,6 +78,23 @@ DISABLE：不启用该路由
         this.Status = Status;
     }
 
+    public VpngwCcnRoutes() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public VpngwCcnRoutes(VpngwCcnRoutes source) {
+        if (source.RouteId != null) {
+            this.RouteId = new String(source.RouteId);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

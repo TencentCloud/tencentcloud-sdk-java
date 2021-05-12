@@ -68,6 +68,23 @@ public class DeleteJobRequest extends AbstractModel{
         this.Cluster = Cluster;
     }
 
+    public DeleteJobRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteJobRequest(DeleteJobRequest source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Cluster != null) {
+            this.Cluster = new String(source.Cluster);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

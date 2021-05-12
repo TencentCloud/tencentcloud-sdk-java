@@ -275,6 +275,53 @@ public class DBBackup extends AbstractModel{
         this.ExternalAddr = ExternalAddr;
     }
 
+    public DBBackup() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DBBackup(DBBackup source) {
+        if (source.Id != null) {
+            this.Id = new Long(source.Id);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+        if (source.Size != null) {
+            this.Size = new Long(source.Size);
+        }
+        if (source.Strategy != null) {
+            this.Strategy = new Long(source.Strategy);
+        }
+        if (source.Way != null) {
+            this.Way = new Long(source.Way);
+        }
+        if (source.Type != null) {
+            this.Type = new Long(source.Type);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.DbList != null) {
+            this.DbList = new String[source.DbList.length];
+            for (int i = 0; i < source.DbList.length; i++) {
+                this.DbList[i] = new String(source.DbList[i]);
+            }
+        }
+        if (source.InternalAddr != null) {
+            this.InternalAddr = new String(source.InternalAddr);
+        }
+        if (source.ExternalAddr != null) {
+            this.ExternalAddr = new String(source.ExternalAddr);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

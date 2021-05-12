@@ -68,6 +68,23 @@ public class DescribeFilterResultRequest extends AbstractModel{
         this.FileId = FileId;
     }
 
+    public DescribeFilterResultRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeFilterResultRequest(DescribeFilterResultRequest source) {
+        if (source.BizId != null) {
+            this.BizId = new Long(source.BizId);
+        }
+        if (source.FileId != null) {
+            this.FileId = new String(source.FileId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

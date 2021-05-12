@@ -91,6 +91,26 @@ public class SetPasswordRequest extends AbstractModel{
         this.Password = Password;
     }
 
+    public SetPasswordRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SetPasswordRequest(SetPasswordRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.UserName != null) {
+            this.UserName = new String(source.UserName);
+        }
+        if (source.Password != null) {
+            this.Password = new String(source.Password);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

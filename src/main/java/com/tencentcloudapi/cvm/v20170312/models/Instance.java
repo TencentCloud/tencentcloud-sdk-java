@@ -836,6 +836,137 @@ public class Instance extends AbstractModel{
         this.RdmaIpAddresses = RdmaIpAddresses;
     }
 
+    public Instance() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Instance(Instance source) {
+        if (source.Placement != null) {
+            this.Placement = new Placement(source.Placement);
+        }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.InstanceType != null) {
+            this.InstanceType = new String(source.InstanceType);
+        }
+        if (source.CPU != null) {
+            this.CPU = new Long(source.CPU);
+        }
+        if (source.Memory != null) {
+            this.Memory = new Long(source.Memory);
+        }
+        if (source.RestrictState != null) {
+            this.RestrictState = new String(source.RestrictState);
+        }
+        if (source.InstanceName != null) {
+            this.InstanceName = new String(source.InstanceName);
+        }
+        if (source.InstanceChargeType != null) {
+            this.InstanceChargeType = new String(source.InstanceChargeType);
+        }
+        if (source.SystemDisk != null) {
+            this.SystemDisk = new SystemDisk(source.SystemDisk);
+        }
+        if (source.DataDisks != null) {
+            this.DataDisks = new DataDisk[source.DataDisks.length];
+            for (int i = 0; i < source.DataDisks.length; i++) {
+                this.DataDisks[i] = new DataDisk(source.DataDisks[i]);
+            }
+        }
+        if (source.PrivateIpAddresses != null) {
+            this.PrivateIpAddresses = new String[source.PrivateIpAddresses.length];
+            for (int i = 0; i < source.PrivateIpAddresses.length; i++) {
+                this.PrivateIpAddresses[i] = new String(source.PrivateIpAddresses[i]);
+            }
+        }
+        if (source.PublicIpAddresses != null) {
+            this.PublicIpAddresses = new String[source.PublicIpAddresses.length];
+            for (int i = 0; i < source.PublicIpAddresses.length; i++) {
+                this.PublicIpAddresses[i] = new String(source.PublicIpAddresses[i]);
+            }
+        }
+        if (source.InternetAccessible != null) {
+            this.InternetAccessible = new InternetAccessible(source.InternetAccessible);
+        }
+        if (source.VirtualPrivateCloud != null) {
+            this.VirtualPrivateCloud = new VirtualPrivateCloud(source.VirtualPrivateCloud);
+        }
+        if (source.ImageId != null) {
+            this.ImageId = new String(source.ImageId);
+        }
+        if (source.RenewFlag != null) {
+            this.RenewFlag = new String(source.RenewFlag);
+        }
+        if (source.CreatedTime != null) {
+            this.CreatedTime = new String(source.CreatedTime);
+        }
+        if (source.ExpiredTime != null) {
+            this.ExpiredTime = new String(source.ExpiredTime);
+        }
+        if (source.OsName != null) {
+            this.OsName = new String(source.OsName);
+        }
+        if (source.SecurityGroupIds != null) {
+            this.SecurityGroupIds = new String[source.SecurityGroupIds.length];
+            for (int i = 0; i < source.SecurityGroupIds.length; i++) {
+                this.SecurityGroupIds[i] = new String(source.SecurityGroupIds[i]);
+            }
+        }
+        if (source.LoginSettings != null) {
+            this.LoginSettings = new LoginSettings(source.LoginSettings);
+        }
+        if (source.InstanceState != null) {
+            this.InstanceState = new String(source.InstanceState);
+        }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
+        if (source.StopChargingMode != null) {
+            this.StopChargingMode = new String(source.StopChargingMode);
+        }
+        if (source.Uuid != null) {
+            this.Uuid = new String(source.Uuid);
+        }
+        if (source.LatestOperation != null) {
+            this.LatestOperation = new String(source.LatestOperation);
+        }
+        if (source.LatestOperationState != null) {
+            this.LatestOperationState = new String(source.LatestOperationState);
+        }
+        if (source.LatestOperationRequestId != null) {
+            this.LatestOperationRequestId = new String(source.LatestOperationRequestId);
+        }
+        if (source.DisasterRecoverGroupId != null) {
+            this.DisasterRecoverGroupId = new String(source.DisasterRecoverGroupId);
+        }
+        if (source.IPv6Addresses != null) {
+            this.IPv6Addresses = new String[source.IPv6Addresses.length];
+            for (int i = 0; i < source.IPv6Addresses.length; i++) {
+                this.IPv6Addresses[i] = new String(source.IPv6Addresses[i]);
+            }
+        }
+        if (source.CamRoleName != null) {
+            this.CamRoleName = new String(source.CamRoleName);
+        }
+        if (source.HpcClusterId != null) {
+            this.HpcClusterId = new String(source.HpcClusterId);
+        }
+        if (source.RdmaIpAddresses != null) {
+            this.RdmaIpAddresses = new String[source.RdmaIpAddresses.length];
+            for (int i = 0; i < source.RdmaIpAddresses.length; i++) {
+                this.RdmaIpAddresses[i] = new String(source.RdmaIpAddresses[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

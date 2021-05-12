@@ -114,6 +114,29 @@ public class Docker extends AbstractModel{
         this.Server = Server;
     }
 
+    public Docker() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Docker(Docker source) {
+        if (source.User != null) {
+            this.User = new String(source.User);
+        }
+        if (source.Password != null) {
+            this.Password = new String(source.Password);
+        }
+        if (source.Image != null) {
+            this.Image = new String(source.Image);
+        }
+        if (source.Server != null) {
+            this.Server = new String(source.Server);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

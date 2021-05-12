@@ -423,6 +423,68 @@ public class PushDataInfo extends AbstractModel{
         this.MetaFps = MetaFps;
     }
 
+    public PushDataInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PushDataInfo(PushDataInfo source) {
+        if (source.StreamName != null) {
+            this.StreamName = new String(source.StreamName);
+        }
+        if (source.AppName != null) {
+            this.AppName = new String(source.AppName);
+        }
+        if (source.ClientIp != null) {
+            this.ClientIp = new String(source.ClientIp);
+        }
+        if (source.ServerIp != null) {
+            this.ServerIp = new String(source.ServerIp);
+        }
+        if (source.VideoFps != null) {
+            this.VideoFps = new Long(source.VideoFps);
+        }
+        if (source.VideoSpeed != null) {
+            this.VideoSpeed = new Long(source.VideoSpeed);
+        }
+        if (source.AudioFps != null) {
+            this.AudioFps = new Long(source.AudioFps);
+        }
+        if (source.AudioSpeed != null) {
+            this.AudioSpeed = new Long(source.AudioSpeed);
+        }
+        if (source.PushDomain != null) {
+            this.PushDomain = new String(source.PushDomain);
+        }
+        if (source.BeginPushTime != null) {
+            this.BeginPushTime = new String(source.BeginPushTime);
+        }
+        if (source.Acodec != null) {
+            this.Acodec = new String(source.Acodec);
+        }
+        if (source.Vcodec != null) {
+            this.Vcodec = new String(source.Vcodec);
+        }
+        if (source.Resolution != null) {
+            this.Resolution = new String(source.Resolution);
+        }
+        if (source.AsampleRate != null) {
+            this.AsampleRate = new Long(source.AsampleRate);
+        }
+        if (source.MetaAudioSpeed != null) {
+            this.MetaAudioSpeed = new Long(source.MetaAudioSpeed);
+        }
+        if (source.MetaVideoSpeed != null) {
+            this.MetaVideoSpeed = new Long(source.MetaVideoSpeed);
+        }
+        if (source.MetaFps != null) {
+            this.MetaFps = new Long(source.MetaFps);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

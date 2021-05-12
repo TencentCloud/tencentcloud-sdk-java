@@ -114,6 +114,29 @@ public class DescribeDeployGroupListRequest extends AbstractModel{
         this.Offset = Offset;
     }
 
+    public DescribeDeployGroupListRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeDeployGroupListRequest(DescribeDeployGroupListRequest source) {
+        if (source.DeployGroupId != null) {
+            this.DeployGroupId = new String(source.DeployGroupId);
+        }
+        if (source.DeployGroupName != null) {
+            this.DeployGroupName = new String(source.DeployGroupName);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

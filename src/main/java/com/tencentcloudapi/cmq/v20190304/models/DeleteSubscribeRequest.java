@@ -68,6 +68,23 @@ public class DeleteSubscribeRequest extends AbstractModel{
         this.SubscriptionName = SubscriptionName;
     }
 
+    public DeleteSubscribeRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteSubscribeRequest(DeleteSubscribeRequest source) {
+        if (source.TopicName != null) {
+            this.TopicName = new String(source.TopicName);
+        }
+        if (source.SubscriptionName != null) {
+            this.SubscriptionName = new String(source.SubscriptionName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -221,6 +221,41 @@ public class ModifyContentReviewTemplateRequest extends AbstractModel{
         this.UserDefineConfigure = UserDefineConfigure;
     }
 
+    public ModifyContentReviewTemplateRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyContentReviewTemplateRequest(ModifyContentReviewTemplateRequest source) {
+        if (source.Definition != null) {
+            this.Definition = new Long(source.Definition);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Comment != null) {
+            this.Comment = new String(source.Comment);
+        }
+        if (source.PornConfigure != null) {
+            this.PornConfigure = new PornConfigureInfoForUpdate(source.PornConfigure);
+        }
+        if (source.TerrorismConfigure != null) {
+            this.TerrorismConfigure = new TerrorismConfigureInfoForUpdate(source.TerrorismConfigure);
+        }
+        if (source.PoliticalConfigure != null) {
+            this.PoliticalConfigure = new PoliticalConfigureInfoForUpdate(source.PoliticalConfigure);
+        }
+        if (source.ProhibitedConfigure != null) {
+            this.ProhibitedConfigure = new ProhibitedConfigureInfoForUpdate(source.ProhibitedConfigure);
+        }
+        if (source.UserDefineConfigure != null) {
+            this.UserDefineConfigure = new UserDefineConfigureInfoForUpdate(source.UserDefineConfigure);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

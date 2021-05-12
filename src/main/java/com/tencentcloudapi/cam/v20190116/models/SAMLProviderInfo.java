@@ -114,6 +114,29 @@ public class SAMLProviderInfo extends AbstractModel{
         this.ModifyTime = ModifyTime;
     }
 
+    public SAMLProviderInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SAMLProviderInfo(SAMLProviderInfo source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.ModifyTime != null) {
+            this.ModifyTime = new String(source.ModifyTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

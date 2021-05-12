@@ -114,6 +114,32 @@ public class DescribeAmsListResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeAmsListResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeAmsListResponse(DescribeAmsListResponse source) {
+        if (source.AmsDetailSet != null) {
+            this.AmsDetailSet = new AmsDetailInfo[source.AmsDetailSet.length];
+            for (int i = 0; i < source.AmsDetailSet.length; i++) {
+                this.AmsDetailSet[i] = new AmsDetailInfo(source.AmsDetailSet[i]);
+            }
+        }
+        if (source.Total != null) {
+            this.Total = new Long(source.Total);
+        }
+        if (source.PageToken != null) {
+            this.PageToken = new String(source.PageToken);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

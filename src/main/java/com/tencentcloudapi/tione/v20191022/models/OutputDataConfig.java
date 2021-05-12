@@ -106,6 +106,26 @@ public class OutputDataConfig extends AbstractModel{
         this.FileSystemDataSource = FileSystemDataSource;
     }
 
+    public OutputDataConfig() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public OutputDataConfig(OutputDataConfig source) {
+        if (source.CosOutputBucket != null) {
+            this.CosOutputBucket = new String(source.CosOutputBucket);
+        }
+        if (source.CosOutputKeyPrefix != null) {
+            this.CosOutputKeyPrefix = new String(source.CosOutputKeyPrefix);
+        }
+        if (source.FileSystemDataSource != null) {
+            this.FileSystemDataSource = new FileSystemDataSource(source.FileSystemDataSource);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

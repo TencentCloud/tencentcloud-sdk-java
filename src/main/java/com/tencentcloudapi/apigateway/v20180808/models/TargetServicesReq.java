@@ -137,6 +137,32 @@ public class TargetServicesReq extends AbstractModel{
         this.DockerIp = DockerIp;
     }
 
+    public TargetServicesReq() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TargetServicesReq(TargetServicesReq source) {
+        if (source.VmIp != null) {
+            this.VmIp = new String(source.VmIp);
+        }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.VmPort != null) {
+            this.VmPort = new Long(source.VmPort);
+        }
+        if (source.HostIp != null) {
+            this.HostIp = new String(source.HostIp);
+        }
+        if (source.DockerIp != null) {
+            this.DockerIp = new String(source.DockerIp);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

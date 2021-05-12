@@ -134,6 +134,29 @@ public class DescribeLiveStreamPushInfoListRequest extends AbstractModel{
         this.PageSize = PageSize;
     }
 
+    public DescribeLiveStreamPushInfoListRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeLiveStreamPushInfoListRequest(DescribeLiveStreamPushInfoListRequest source) {
+        if (source.PushDomain != null) {
+            this.PushDomain = new String(source.PushDomain);
+        }
+        if (source.AppName != null) {
+            this.AppName = new String(source.AppName);
+        }
+        if (source.PageNum != null) {
+            this.PageNum = new Long(source.PageNum);
+        }
+        if (source.PageSize != null) {
+            this.PageSize = new Long(source.PageSize);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

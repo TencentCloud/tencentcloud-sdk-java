@@ -543,6 +543,86 @@ public class Deal extends AbstractModel{
         this.PayMode = PayMode;
     }
 
+    public Deal() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Deal(Deal source) {
+        if (source.OrderId != null) {
+            this.OrderId = new String(source.OrderId);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.Payer != null) {
+            this.Payer = new String(source.Payer);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.Creator != null) {
+            this.Creator = new String(source.Creator);
+        }
+        if (source.RealTotalCost != null) {
+            this.RealTotalCost = new Long(source.RealTotalCost);
+        }
+        if (source.VoucherDecline != null) {
+            this.VoucherDecline = new Long(source.VoucherDecline);
+        }
+        if (source.ProjectId != null) {
+            this.ProjectId = new Long(source.ProjectId);
+        }
+        if (source.GoodsCategoryId != null) {
+            this.GoodsCategoryId = new Long(source.GoodsCategoryId);
+        }
+        if (source.ProductInfo != null) {
+            this.ProductInfo = new ProductInfo[source.ProductInfo.length];
+            for (int i = 0; i < source.ProductInfo.length; i++) {
+                this.ProductInfo[i] = new ProductInfo(source.ProductInfo[i]);
+            }
+        }
+        if (source.TimeSpan != null) {
+            this.TimeSpan = new Float(source.TimeSpan);
+        }
+        if (source.TimeUnit != null) {
+            this.TimeUnit = new String(source.TimeUnit);
+        }
+        if (source.Currency != null) {
+            this.Currency = new String(source.Currency);
+        }
+        if (source.Policy != null) {
+            this.Policy = new Float(source.Policy);
+        }
+        if (source.Price != null) {
+            this.Price = new Float(source.Price);
+        }
+        if (source.TotalCost != null) {
+            this.TotalCost = new Float(source.TotalCost);
+        }
+        if (source.ProductCode != null) {
+            this.ProductCode = new String(source.ProductCode);
+        }
+        if (source.SubProductCode != null) {
+            this.SubProductCode = new String(source.SubProductCode);
+        }
+        if (source.BigDealId != null) {
+            this.BigDealId = new String(source.BigDealId);
+        }
+        if (source.Formula != null) {
+            this.Formula = new String(source.Formula);
+        }
+        if (source.RefReturnDeals != null) {
+            this.RefReturnDeals = new String(source.RefReturnDeals);
+        }
+        if (source.PayMode != null) {
+            this.PayMode = new String(source.PayMode);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

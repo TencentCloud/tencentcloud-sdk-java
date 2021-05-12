@@ -137,6 +137,32 @@ public class DescribeNotebookSummaryResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeNotebookSummaryResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeNotebookSummaryResponse(DescribeNotebookSummaryResponse source) {
+        if (source.AllInstanceCnt != null) {
+            this.AllInstanceCnt = new Long(source.AllInstanceCnt);
+        }
+        if (source.BillingInstanceCnt != null) {
+            this.BillingInstanceCnt = new Long(source.BillingInstanceCnt);
+        }
+        if (source.StorageOnlyBillingInstanceCnt != null) {
+            this.StorageOnlyBillingInstanceCnt = new Long(source.StorageOnlyBillingInstanceCnt);
+        }
+        if (source.ComputingBillingInstanceCnt != null) {
+            this.ComputingBillingInstanceCnt = new Long(source.ComputingBillingInstanceCnt);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

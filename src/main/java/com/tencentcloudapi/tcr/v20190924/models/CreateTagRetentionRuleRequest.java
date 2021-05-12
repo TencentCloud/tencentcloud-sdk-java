@@ -137,6 +137,32 @@ public class CreateTagRetentionRuleRequest extends AbstractModel{
         this.Disabled = Disabled;
     }
 
+    public CreateTagRetentionRuleRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateTagRetentionRuleRequest(CreateTagRetentionRuleRequest source) {
+        if (source.RegistryId != null) {
+            this.RegistryId = new String(source.RegistryId);
+        }
+        if (source.NamespaceId != null) {
+            this.NamespaceId = new Long(source.NamespaceId);
+        }
+        if (source.RetentionRule != null) {
+            this.RetentionRule = new RetentionRule(source.RetentionRule);
+        }
+        if (source.CronSetting != null) {
+            this.CronSetting = new String(source.CronSetting);
+        }
+        if (source.Disabled != null) {
+            this.Disabled = new Boolean(source.Disabled);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

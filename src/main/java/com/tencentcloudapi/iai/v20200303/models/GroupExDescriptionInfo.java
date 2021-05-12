@@ -73,6 +73,23 @@ public class GroupExDescriptionInfo extends AbstractModel{
         this.GroupExDescription = GroupExDescription;
     }
 
+    public GroupExDescriptionInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GroupExDescriptionInfo(GroupExDescriptionInfo source) {
+        if (source.GroupExDescriptionIndex != null) {
+            this.GroupExDescriptionIndex = new Long(source.GroupExDescriptionIndex);
+        }
+        if (source.GroupExDescription != null) {
+            this.GroupExDescription = new String(source.GroupExDescription);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

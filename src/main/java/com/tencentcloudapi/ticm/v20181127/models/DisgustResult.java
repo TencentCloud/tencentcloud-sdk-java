@@ -144,6 +144,29 @@ BLOCK：违规
         this.Confidence = Confidence;
     }
 
+    public DisgustResult() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DisgustResult(DisgustResult source) {
+        if (source.Code != null) {
+            this.Code = new Long(source.Code);
+        }
+        if (source.Msg != null) {
+            this.Msg = new String(source.Msg);
+        }
+        if (source.Suggestion != null) {
+            this.Suggestion = new String(source.Suggestion);
+        }
+        if (source.Confidence != null) {
+            this.Confidence = new Long(source.Confidence);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

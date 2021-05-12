@@ -96,6 +96,29 @@ public class DescribeBillSummaryByPayModeResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeBillSummaryByPayModeResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeBillSummaryByPayModeResponse(DescribeBillSummaryByPayModeResponse source) {
+        if (source.Ready != null) {
+            this.Ready = new Long(source.Ready);
+        }
+        if (source.SummaryOverview != null) {
+            this.SummaryOverview = new PayModeSummaryOverviewItem[source.SummaryOverview.length];
+            for (int i = 0; i < source.SummaryOverview.length; i++) {
+                this.SummaryOverview[i] = new PayModeSummaryOverviewItem(source.SummaryOverview[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

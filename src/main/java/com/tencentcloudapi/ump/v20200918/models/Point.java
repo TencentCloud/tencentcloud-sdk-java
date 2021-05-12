@@ -68,6 +68,23 @@ public class Point extends AbstractModel{
         this.Y = Y;
     }
 
+    public Point() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Point(Point source) {
+        if (source.X != null) {
+            this.X = new Long(source.X);
+        }
+        if (source.Y != null) {
+            this.Y = new Long(source.Y);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -114,6 +114,32 @@ public class CreateIncrementalMigrationRequest extends AbstractModel{
         this.IsRecovery = IsRecovery;
     }
 
+    public CreateIncrementalMigrationRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateIncrementalMigrationRequest(CreateIncrementalMigrationRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.BackupMigrationId != null) {
+            this.BackupMigrationId = new String(source.BackupMigrationId);
+        }
+        if (source.BackupFiles != null) {
+            this.BackupFiles = new String[source.BackupFiles.length];
+            for (int i = 0; i < source.BackupFiles.length; i++) {
+                this.BackupFiles[i] = new String(source.BackupFiles[i]);
+            }
+        }
+        if (source.IsRecovery != null) {
+            this.IsRecovery = new String(source.IsRecovery);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

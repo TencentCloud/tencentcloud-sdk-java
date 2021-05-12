@@ -45,6 +45,20 @@ public class AppGetUserRequest extends AbstractModel{
         this.AccessToken = AccessToken;
     }
 
+    public AppGetUserRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AppGetUserRequest(AppGetUserRequest source) {
+        if (source.AccessToken != null) {
+            this.AccessToken = new String(source.AccessToken);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

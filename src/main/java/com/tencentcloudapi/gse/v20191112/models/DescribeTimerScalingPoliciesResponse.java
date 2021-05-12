@@ -101,6 +101,29 @@ public class DescribeTimerScalingPoliciesResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeTimerScalingPoliciesResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeTimerScalingPoliciesResponse(DescribeTimerScalingPoliciesResponse source) {
+        if (source.TimerScalingPolicies != null) {
+            this.TimerScalingPolicies = new TimerScalingPolicy[source.TimerScalingPolicies.length];
+            for (int i = 0; i < source.TimerScalingPolicies.length; i++) {
+                this.TimerScalingPolicies[i] = new TimerScalingPolicy(source.TimerScalingPolicies[i]);
+            }
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -50,6 +50,20 @@ public class OriginAuthenticationTypeA extends AbstractModel{
         this.SecretKey = SecretKey;
     }
 
+    public OriginAuthenticationTypeA() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public OriginAuthenticationTypeA(OriginAuthenticationTypeA source) {
+        if (source.SecretKey != null) {
+            this.SecretKey = new String(source.SecretKey);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

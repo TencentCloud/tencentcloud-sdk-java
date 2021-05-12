@@ -68,6 +68,23 @@ public class GroupIdOfUidInfo extends AbstractModel{
         this.GroupId = GroupId;
     }
 
+    public GroupIdOfUidInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GroupIdOfUidInfo(GroupIdOfUidInfo source) {
+        if (source.Uid != null) {
+            this.Uid = new Long(source.Uid);
+        }
+        if (source.GroupId != null) {
+            this.GroupId = new Long(source.GroupId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -68,6 +68,26 @@ public class SnapshotDeniedActions extends AbstractModel{
         this.DeniedActions = DeniedActions;
     }
 
+    public SnapshotDeniedActions() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SnapshotDeniedActions(SnapshotDeniedActions source) {
+        if (source.SnapshotId != null) {
+            this.SnapshotId = new String(source.SnapshotId);
+        }
+        if (source.DeniedActions != null) {
+            this.DeniedActions = new DeniedAction[source.DeniedActions.length];
+            for (int i = 0; i < source.DeniedActions.length; i++) {
+                this.DeniedActions[i] = new DeniedAction(source.DeniedActions[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

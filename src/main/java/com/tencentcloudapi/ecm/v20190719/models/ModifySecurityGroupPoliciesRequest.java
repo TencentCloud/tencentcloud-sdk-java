@@ -91,6 +91,26 @@ public class ModifySecurityGroupPoliciesRequest extends AbstractModel{
         this.SortPolicys = SortPolicys;
     }
 
+    public ModifySecurityGroupPoliciesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifySecurityGroupPoliciesRequest(ModifySecurityGroupPoliciesRequest source) {
+        if (source.SecurityGroupId != null) {
+            this.SecurityGroupId = new String(source.SecurityGroupId);
+        }
+        if (source.SecurityGroupPolicySet != null) {
+            this.SecurityGroupPolicySet = new SecurityGroupPolicySet(source.SecurityGroupPolicySet);
+        }
+        if (source.SortPolicys != null) {
+            this.SortPolicys = new Boolean(source.SortPolicys);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

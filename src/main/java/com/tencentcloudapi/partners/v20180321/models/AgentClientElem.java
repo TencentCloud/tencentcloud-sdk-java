@@ -262,6 +262,47 @@ public class AgentClientElem extends AbstractModel{
         this.SalesName = SalesName;
     }
 
+    public AgentClientElem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AgentClientElem(AgentClientElem source) {
+        if (source.Uin != null) {
+            this.Uin = new String(source.Uin);
+        }
+        if (source.ClientUin != null) {
+            this.ClientUin = new String(source.ClientUin);
+        }
+        if (source.ApplyTime != null) {
+            this.ApplyTime = new Long(source.ApplyTime);
+        }
+        if (source.ClientFlag != null) {
+            this.ClientFlag = new String(source.ClientFlag);
+        }
+        if (source.Mail != null) {
+            this.Mail = new String(source.Mail);
+        }
+        if (source.Phone != null) {
+            this.Phone = new String(source.Phone);
+        }
+        if (source.HasOverdueBill != null) {
+            this.HasOverdueBill = new Long(source.HasOverdueBill);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.SalesUin != null) {
+            this.SalesUin = new String(source.SalesUin);
+        }
+        if (source.SalesName != null) {
+            this.SalesName = new String(source.SalesName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

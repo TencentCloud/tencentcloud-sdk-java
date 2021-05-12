@@ -160,6 +160,41 @@ public class PushMmsContentRequest extends AbstractModel{
         this.DynamicParaValue = DynamicParaValue;
     }
 
+    public PushMmsContentRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PushMmsContentRequest(PushMmsContentRequest source) {
+        if (source.License != null) {
+            this.License = new String(source.License);
+        }
+        if (source.InstanceId != null) {
+            this.InstanceId = new Long(source.InstanceId);
+        }
+        if (source.Tel != null) {
+            this.Tel = new String(source.Tel);
+        }
+        if (source.Session != null) {
+            this.Session = new String(source.Session);
+        }
+        if (source.DynamicParaKey != null) {
+            this.DynamicParaKey = new String[source.DynamicParaKey.length];
+            for (int i = 0; i < source.DynamicParaKey.length; i++) {
+                this.DynamicParaKey[i] = new String(source.DynamicParaKey[i]);
+            }
+        }
+        if (source.DynamicParaValue != null) {
+            this.DynamicParaValue = new String[source.DynamicParaValue.length];
+            for (int i = 0; i < source.DynamicParaValue.length; i++) {
+                this.DynamicParaValue[i] = new String(source.DynamicParaValue[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

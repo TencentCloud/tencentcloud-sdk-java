@@ -137,6 +137,32 @@ public class SimpleHlsClipRequest extends AbstractModel{
         this.SubAppId = SubAppId;
     }
 
+    public SimpleHlsClipRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SimpleHlsClipRequest(SimpleHlsClipRequest source) {
+        if (source.Url != null) {
+            this.Url = new String(source.Url);
+        }
+        if (source.StartTimeOffset != null) {
+            this.StartTimeOffset = new Float(source.StartTimeOffset);
+        }
+        if (source.EndTimeOffset != null) {
+            this.EndTimeOffset = new Float(source.EndTimeOffset);
+        }
+        if (source.IsPersistence != null) {
+            this.IsPersistence = new Long(source.IsPersistence);
+        }
+        if (source.SubAppId != null) {
+            this.SubAppId = new Long(source.SubAppId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

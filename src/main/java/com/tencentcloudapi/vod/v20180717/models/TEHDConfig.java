@@ -83,6 +83,23 @@ public class TEHDConfig extends AbstractModel{
         this.MaxVideoBitrate = MaxVideoBitrate;
     }
 
+    public TEHDConfig() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TEHDConfig(TEHDConfig source) {
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.MaxVideoBitrate != null) {
+            this.MaxVideoBitrate = new Long(source.MaxVideoBitrate);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

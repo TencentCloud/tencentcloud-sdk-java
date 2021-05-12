@@ -73,6 +73,26 @@ public class DescribeEnvFreeQuotaResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeEnvFreeQuotaResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeEnvFreeQuotaResponse(DescribeEnvFreeQuotaResponse source) {
+        if (source.QuotaItems != null) {
+            this.QuotaItems = new PostpayEnvQuota[source.QuotaItems.length];
+            for (int i = 0; i < source.QuotaItems.length; i++) {
+                this.QuotaItems[i] = new PostpayEnvQuota(source.QuotaItems[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

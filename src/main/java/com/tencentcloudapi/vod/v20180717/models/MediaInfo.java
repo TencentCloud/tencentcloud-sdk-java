@@ -353,6 +353,53 @@ public class MediaInfo extends AbstractModel{
         this.FileId = FileId;
     }
 
+    public MediaInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MediaInfo(MediaInfo source) {
+        if (source.BasicInfo != null) {
+            this.BasicInfo = new MediaBasicInfo(source.BasicInfo);
+        }
+        if (source.MetaData != null) {
+            this.MetaData = new MediaMetaData(source.MetaData);
+        }
+        if (source.TranscodeInfo != null) {
+            this.TranscodeInfo = new MediaTranscodeInfo(source.TranscodeInfo);
+        }
+        if (source.AnimatedGraphicsInfo != null) {
+            this.AnimatedGraphicsInfo = new MediaAnimatedGraphicsInfo(source.AnimatedGraphicsInfo);
+        }
+        if (source.SampleSnapshotInfo != null) {
+            this.SampleSnapshotInfo = new MediaSampleSnapshotInfo(source.SampleSnapshotInfo);
+        }
+        if (source.ImageSpriteInfo != null) {
+            this.ImageSpriteInfo = new MediaImageSpriteInfo(source.ImageSpriteInfo);
+        }
+        if (source.SnapshotByTimeOffsetInfo != null) {
+            this.SnapshotByTimeOffsetInfo = new MediaSnapshotByTimeOffsetInfo(source.SnapshotByTimeOffsetInfo);
+        }
+        if (source.KeyFrameDescInfo != null) {
+            this.KeyFrameDescInfo = new MediaKeyFrameDescInfo(source.KeyFrameDescInfo);
+        }
+        if (source.AdaptiveDynamicStreamingInfo != null) {
+            this.AdaptiveDynamicStreamingInfo = new MediaAdaptiveDynamicStreamingInfo(source.AdaptiveDynamicStreamingInfo);
+        }
+        if (source.MiniProgramReviewInfo != null) {
+            this.MiniProgramReviewInfo = new MediaMiniProgramReviewInfo(source.MiniProgramReviewInfo);
+        }
+        if (source.SubtitleInfo != null) {
+            this.SubtitleInfo = new MediaSubtitleInfo(source.SubtitleInfo);
+        }
+        if (source.FileId != null) {
+            this.FileId = new String(source.FileId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

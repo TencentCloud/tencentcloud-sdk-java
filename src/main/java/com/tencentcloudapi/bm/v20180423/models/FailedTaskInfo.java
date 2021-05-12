@@ -68,6 +68,23 @@ public class FailedTaskInfo extends AbstractModel{
         this.ErrorMsg = ErrorMsg;
     }
 
+    public FailedTaskInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public FailedTaskInfo(FailedTaskInfo source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.ErrorMsg != null) {
+            this.ErrorMsg = new String(source.ErrorMsg);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

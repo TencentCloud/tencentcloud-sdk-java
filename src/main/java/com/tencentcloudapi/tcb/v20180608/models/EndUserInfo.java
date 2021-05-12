@@ -344,6 +344,59 @@ public class EndUserInfo extends AbstractModel{
         this.UserName = UserName;
     }
 
+    public EndUserInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public EndUserInfo(EndUserInfo source) {
+        if (source.UUId != null) {
+            this.UUId = new String(source.UUId);
+        }
+        if (source.WXOpenId != null) {
+            this.WXOpenId = new String(source.WXOpenId);
+        }
+        if (source.QQOpenId != null) {
+            this.QQOpenId = new String(source.QQOpenId);
+        }
+        if (source.Phone != null) {
+            this.Phone = new String(source.Phone);
+        }
+        if (source.Email != null) {
+            this.Email = new String(source.Email);
+        }
+        if (source.NickName != null) {
+            this.NickName = new String(source.NickName);
+        }
+        if (source.Gender != null) {
+            this.Gender = new String(source.Gender);
+        }
+        if (source.AvatarUrl != null) {
+            this.AvatarUrl = new String(source.AvatarUrl);
+        }
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new String(source.UpdateTime);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.IsAnonymous != null) {
+            this.IsAnonymous = new Boolean(source.IsAnonymous);
+        }
+        if (source.IsDisabled != null) {
+            this.IsDisabled = new Boolean(source.IsDisabled);
+        }
+        if (source.HasPassword != null) {
+            this.HasPassword = new Boolean(source.HasPassword);
+        }
+        if (source.UserName != null) {
+            this.UserName = new String(source.UserName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

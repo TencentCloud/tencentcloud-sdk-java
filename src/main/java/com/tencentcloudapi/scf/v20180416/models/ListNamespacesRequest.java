@@ -114,6 +114,29 @@ public class ListNamespacesRequest extends AbstractModel{
         this.Order = Order;
     }
 
+    public ListNamespacesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ListNamespacesRequest(ListNamespacesRequest source) {
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Orderby != null) {
+            this.Orderby = new String(source.Orderby);
+        }
+        if (source.Order != null) {
+            this.Order = new String(source.Order);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

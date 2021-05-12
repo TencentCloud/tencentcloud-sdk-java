@@ -114,6 +114,32 @@ public class ImageTagsResult extends AbstractModel{
         this.Content = Content;
     }
 
+    public ImageTagsResult() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ImageTagsResult(ImageTagsResult source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.RepoName != null) {
+            this.RepoName = new String(source.RepoName);
+        }
+        if (source.Server != null) {
+            this.Server = new String(source.Server);
+        }
+        if (source.Content != null) {
+            this.Content = new ImageTag[source.Content.length];
+            for (int i = 0; i < source.Content.length; i++) {
+                this.Content[i] = new ImageTag(source.Content[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

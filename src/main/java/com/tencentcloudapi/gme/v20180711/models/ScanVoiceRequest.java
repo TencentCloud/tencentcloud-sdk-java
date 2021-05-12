@@ -147,6 +147,38 @@ public class ScanVoiceRequest extends AbstractModel{
         this.Callback = Callback;
     }
 
+    public ScanVoiceRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ScanVoiceRequest(ScanVoiceRequest source) {
+        if (source.BizId != null) {
+            this.BizId = new Long(source.BizId);
+        }
+        if (source.Scenes != null) {
+            this.Scenes = new String[source.Scenes.length];
+            for (int i = 0; i < source.Scenes.length; i++) {
+                this.Scenes[i] = new String(source.Scenes[i]);
+            }
+        }
+        if (source.Live != null) {
+            this.Live = new Boolean(source.Live);
+        }
+        if (source.Tasks != null) {
+            this.Tasks = new Task[source.Tasks.length];
+            for (int i = 0; i < source.Tasks.length; i++) {
+                this.Tasks[i] = new Task(source.Tasks[i]);
+            }
+        }
+        if (source.Callback != null) {
+            this.Callback = new String(source.Callback);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

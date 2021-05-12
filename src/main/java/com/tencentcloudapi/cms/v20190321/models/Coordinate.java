@@ -114,6 +114,29 @@ public class Coordinate extends AbstractModel{
         this.Width = Width;
     }
 
+    public Coordinate() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Coordinate(Coordinate source) {
+        if (source.Cx != null) {
+            this.Cx = new Long(source.Cx);
+        }
+        if (source.Cy != null) {
+            this.Cy = new Long(source.Cy);
+        }
+        if (source.Height != null) {
+            this.Height = new Long(source.Height);
+        }
+        if (source.Width != null) {
+            this.Width = new Long(source.Width);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -68,6 +68,23 @@ public class StatInfo extends AbstractModel{
         this.Value = Value;
     }
 
+    public StatInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public StatInfo(StatInfo source) {
+        if (source.Keyword != null) {
+            this.Keyword = new String(source.Keyword);
+        }
+        if (source.Value != null) {
+            this.Value = new Long(source.Value);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -96,6 +96,29 @@ public class DescribeHistoryScaleResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeHistoryScaleResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeHistoryScaleResponse(DescribeHistoryScaleResponse source) {
+        if (source.Total != null) {
+            this.Total = new Long(source.Total);
+        }
+        if (source.ScaleList != null) {
+            this.ScaleList = new ScaleInfomation[source.ScaleList.length];
+            for (int i = 0; i < source.ScaleList.length; i++) {
+                this.ScaleList[i] = new ScaleInfomation(source.ScaleList[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

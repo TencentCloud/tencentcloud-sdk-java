@@ -73,6 +73,23 @@ public class IngressRule extends AbstractModel{
         this.Host = Host;
     }
 
+    public IngressRule() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public IngressRule(IngressRule source) {
+        if (source.Http != null) {
+            this.Http = new IngressRuleValue(source.Http);
+        }
+        if (source.Host != null) {
+            this.Host = new String(source.Host);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

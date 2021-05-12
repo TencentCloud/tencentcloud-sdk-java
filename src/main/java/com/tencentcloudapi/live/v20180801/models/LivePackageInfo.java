@@ -296,6 +296,41 @@ public class LivePackageInfo extends AbstractModel{
         this.Status = Status;
     }
 
+    public LivePackageInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public LivePackageInfo(LivePackageInfo source) {
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
+        if (source.Total != null) {
+            this.Total = new Long(source.Total);
+        }
+        if (source.Used != null) {
+            this.Used = new Long(source.Used);
+        }
+        if (source.Left != null) {
+            this.Left = new Long(source.Left);
+        }
+        if (source.BuyTime != null) {
+            this.BuyTime = new String(source.BuyTime);
+        }
+        if (source.ExpireTime != null) {
+            this.ExpireTime = new String(source.ExpireTime);
+        }
+        if (source.Type != null) {
+            this.Type = new Long(source.Type);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

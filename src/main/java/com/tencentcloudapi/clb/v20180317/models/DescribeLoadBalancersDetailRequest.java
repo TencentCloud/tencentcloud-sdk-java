@@ -187,6 +187,38 @@ public class DescribeLoadBalancersDetailRequest extends AbstractModel{
         this.Filters = Filters;
     }
 
+    public DescribeLoadBalancersDetailRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeLoadBalancersDetailRequest(DescribeLoadBalancersDetailRequest source) {
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Fields != null) {
+            this.Fields = new String[source.Fields.length];
+            for (int i = 0; i < source.Fields.length; i++) {
+                this.Fields[i] = new String(source.Fields[i]);
+            }
+        }
+        if (source.TargetType != null) {
+            this.TargetType = new String(source.TargetType);
+        }
+        if (source.Filters != null) {
+            this.Filters = new Filter[source.Filters.length];
+            for (int i = 0; i < source.Filters.length; i++) {
+                this.Filters[i] = new Filter(source.Filters[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

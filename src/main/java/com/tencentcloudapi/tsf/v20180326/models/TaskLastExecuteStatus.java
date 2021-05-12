@@ -106,6 +106,26 @@ public class TaskLastExecuteStatus extends AbstractModel{
         this.BatchLogId = BatchLogId;
     }
 
+    public TaskLastExecuteStatus() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TaskLastExecuteStatus(TaskLastExecuteStatus source) {
+        if (source.BatchId != null) {
+            this.BatchId = new String(source.BatchId);
+        }
+        if (source.State != null) {
+            this.State = new String(source.State);
+        }
+        if (source.BatchLogId != null) {
+            this.BatchLogId = new String(source.BatchLogId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

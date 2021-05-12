@@ -45,6 +45,20 @@ public class DescribeRuleRequest extends AbstractModel{
         this.RuleCode = RuleCode;
     }
 
+    public DescribeRuleRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeRuleRequest(DescribeRuleRequest source) {
+        if (source.RuleCode != null) {
+            this.RuleCode = new String(source.RuleCode);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

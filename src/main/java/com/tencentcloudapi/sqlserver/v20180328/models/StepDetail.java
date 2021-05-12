@@ -91,6 +91,26 @@ public class StepDetail extends AbstractModel{
         this.Name = Name;
     }
 
+    public StepDetail() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public StepDetail(StepDetail source) {
+        if (source.Msg != null) {
+            this.Msg = new String(source.Msg);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

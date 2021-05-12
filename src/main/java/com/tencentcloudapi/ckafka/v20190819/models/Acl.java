@@ -170,6 +170,35 @@ public class Acl extends AbstractModel{
         this.PermissionType = PermissionType;
     }
 
+    public Acl() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Acl(Acl source) {
+        if (source.ResourceType != null) {
+            this.ResourceType = new Long(source.ResourceType);
+        }
+        if (source.ResourceName != null) {
+            this.ResourceName = new String(source.ResourceName);
+        }
+        if (source.Principal != null) {
+            this.Principal = new String(source.Principal);
+        }
+        if (source.Host != null) {
+            this.Host = new String(source.Host);
+        }
+        if (source.Operation != null) {
+            this.Operation = new Long(source.Operation);
+        }
+        if (source.PermissionType != null) {
+            this.PermissionType = new Long(source.PermissionType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

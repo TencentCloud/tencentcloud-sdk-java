@@ -137,6 +137,35 @@ public class DescribeBrandSocialOpinionResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeBrandSocialOpinionResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeBrandSocialOpinionResponse(DescribeBrandSocialOpinionResponse source) {
+        if (source.ArticleCount != null) {
+            this.ArticleCount = new Long(source.ArticleCount);
+        }
+        if (source.FromCount != null) {
+            this.FromCount = new Long(source.FromCount);
+        }
+        if (source.AdverseCount != null) {
+            this.AdverseCount = new Long(source.AdverseCount);
+        }
+        if (source.ArticleSet != null) {
+            this.ArticleSet = new BrandReportArticle[source.ArticleSet.length];
+            for (int i = 0; i < source.ArticleSet.length; i++) {
+                this.ArticleSet[i] = new BrandReportArticle(source.ArticleSet[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

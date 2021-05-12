@@ -22,6 +22,17 @@ import java.util.HashMap;
 
 public class DescribeDestRegionsRequest extends AbstractModel{
 
+    public DescribeDestRegionsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeDestRegionsRequest(DescribeDestRegionsRequest source) {
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

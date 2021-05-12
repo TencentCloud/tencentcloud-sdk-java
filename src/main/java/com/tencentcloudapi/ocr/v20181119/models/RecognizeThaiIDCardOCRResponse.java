@@ -229,6 +229,44 @@ public class RecognizeThaiIDCardOCRResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public RecognizeThaiIDCardOCRResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RecognizeThaiIDCardOCRResponse(RecognizeThaiIDCardOCRResponse source) {
+        if (source.ID != null) {
+            this.ID = new String(source.ID);
+        }
+        if (source.ThaiName != null) {
+            this.ThaiName = new String(source.ThaiName);
+        }
+        if (source.EnFirstName != null) {
+            this.EnFirstName = new String(source.EnFirstName);
+        }
+        if (source.Address != null) {
+            this.Address = new String(source.Address);
+        }
+        if (source.Birthday != null) {
+            this.Birthday = new String(source.Birthday);
+        }
+        if (source.IssueDate != null) {
+            this.IssueDate = new String(source.IssueDate);
+        }
+        if (source.ExpirationDate != null) {
+            this.ExpirationDate = new String(source.ExpirationDate);
+        }
+        if (source.EnLastName != null) {
+            this.EnLastName = new String(source.EnLastName);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

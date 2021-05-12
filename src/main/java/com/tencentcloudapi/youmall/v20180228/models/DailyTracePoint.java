@@ -68,6 +68,26 @@ public class DailyTracePoint extends AbstractModel{
         this.TracePointSet = TracePointSet;
     }
 
+    public DailyTracePoint() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DailyTracePoint(DailyTracePoint source) {
+        if (source.TraceDate != null) {
+            this.TraceDate = new String(source.TraceDate);
+        }
+        if (source.TracePointSet != null) {
+            this.TracePointSet = new PersonTracePoint[source.TracePointSet.length];
+            for (int i = 0; i < source.TracePointSet.length; i++) {
+                this.TracePointSet[i] = new PersonTracePoint(source.TracePointSet[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

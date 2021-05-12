@@ -119,6 +119,32 @@ public class UpdateTimeTemplateRequest extends AbstractModel{
         this.TimeTemplateSpecs = TimeTemplateSpecs;
     }
 
+    public UpdateTimeTemplateRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UpdateTimeTemplateRequest(UpdateTimeTemplateRequest source) {
+        if (source.TemplateId != null) {
+            this.TemplateId = new String(source.TemplateId);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.IsAllWeek != null) {
+            this.IsAllWeek = new Long(source.IsAllWeek);
+        }
+        if (source.TimeTemplateSpecs != null) {
+            this.TimeTemplateSpecs = new TimeTemplateSpec[source.TimeTemplateSpecs.length];
+            for (int i = 0; i < source.TimeTemplateSpecs.length; i++) {
+                this.TimeTemplateSpecs[i] = new TimeTemplateSpec(source.TimeTemplateSpecs[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

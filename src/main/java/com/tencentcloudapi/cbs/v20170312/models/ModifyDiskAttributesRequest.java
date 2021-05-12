@@ -160,6 +160,38 @@ public class ModifyDiskAttributesRequest extends AbstractModel{
         this.DiskType = DiskType;
     }
 
+    public ModifyDiskAttributesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyDiskAttributesRequest(ModifyDiskAttributesRequest source) {
+        if (source.DiskIds != null) {
+            this.DiskIds = new String[source.DiskIds.length];
+            for (int i = 0; i < source.DiskIds.length; i++) {
+                this.DiskIds[i] = new String(source.DiskIds[i]);
+            }
+        }
+        if (source.ProjectId != null) {
+            this.ProjectId = new Long(source.ProjectId);
+        }
+        if (source.DiskName != null) {
+            this.DiskName = new String(source.DiskName);
+        }
+        if (source.Portable != null) {
+            this.Portable = new Boolean(source.Portable);
+        }
+        if (source.DeleteWithInstance != null) {
+            this.DeleteWithInstance = new Boolean(source.DeleteWithInstance);
+        }
+        if (source.DiskType != null) {
+            this.DiskType = new String(source.DiskType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

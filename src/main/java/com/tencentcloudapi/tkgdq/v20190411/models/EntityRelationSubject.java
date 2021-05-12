@@ -91,6 +91,35 @@ public class EntityRelationSubject extends AbstractModel{
         this.Popular = Popular;
     }
 
+    public EntityRelationSubject() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public EntityRelationSubject(EntityRelationSubject source) {
+        if (source.Id != null) {
+            this.Id = new String[source.Id.length];
+            for (int i = 0; i < source.Id.length; i++) {
+                this.Id[i] = new String(source.Id[i]);
+            }
+        }
+        if (source.Name != null) {
+            this.Name = new String[source.Name.length];
+            for (int i = 0; i < source.Name.length; i++) {
+                this.Name[i] = new String(source.Name[i]);
+            }
+        }
+        if (source.Popular != null) {
+            this.Popular = new Long[source.Popular.length];
+            for (int i = 0; i < source.Popular.length; i++) {
+                this.Popular[i] = new Long(source.Popular[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

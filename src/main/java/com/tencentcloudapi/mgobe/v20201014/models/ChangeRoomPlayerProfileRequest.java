@@ -91,6 +91,26 @@ public class ChangeRoomPlayerProfileRequest extends AbstractModel{
         this.CustomProfile = CustomProfile;
     }
 
+    public ChangeRoomPlayerProfileRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ChangeRoomPlayerProfileRequest(ChangeRoomPlayerProfileRequest source) {
+        if (source.GameId != null) {
+            this.GameId = new String(source.GameId);
+        }
+        if (source.PlayerId != null) {
+            this.PlayerId = new String(source.PlayerId);
+        }
+        if (source.CustomProfile != null) {
+            this.CustomProfile = new String(source.CustomProfile);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

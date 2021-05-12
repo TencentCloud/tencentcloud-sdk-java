@@ -118,6 +118,23 @@ public class VideoSegmentationProjectInput extends AbstractModel{
         this.ProcessModel = ProcessModel;
     }
 
+    public VideoSegmentationProjectInput() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public VideoSegmentationProjectInput(VideoSegmentationProjectInput source) {
+        if (source.AspectRatio != null) {
+            this.AspectRatio = new String(source.AspectRatio);
+        }
+        if (source.ProcessModel != null) {
+            this.ProcessModel = new String(source.ProcessModel);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

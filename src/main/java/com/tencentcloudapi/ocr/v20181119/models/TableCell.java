@@ -257,6 +257,53 @@ public class TableCell extends AbstractModel{
         this.Contents = Contents;
     }
 
+    public TableCell() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TableCell(TableCell source) {
+        if (source.ColTl != null) {
+            this.ColTl = new Long(source.ColTl);
+        }
+        if (source.RowTl != null) {
+            this.RowTl = new Long(source.RowTl);
+        }
+        if (source.ColBr != null) {
+            this.ColBr = new Long(source.ColBr);
+        }
+        if (source.RowBr != null) {
+            this.RowBr = new Long(source.RowBr);
+        }
+        if (source.Text != null) {
+            this.Text = new String(source.Text);
+        }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.Confidence != null) {
+            this.Confidence = new Float(source.Confidence);
+        }
+        if (source.Polygon != null) {
+            this.Polygon = new Coord[source.Polygon.length];
+            for (int i = 0; i < source.Polygon.length; i++) {
+                this.Polygon[i] = new Coord(source.Polygon[i]);
+            }
+        }
+        if (source.AdvancedInfo != null) {
+            this.AdvancedInfo = new String(source.AdvancedInfo);
+        }
+        if (source.Contents != null) {
+            this.Contents = new CellContent[source.Contents.length];
+            for (int i = 0; i < source.Contents.length; i++) {
+                this.Contents[i] = new CellContent(source.Contents[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -137,6 +137,32 @@ public class UpdatePolicyRequest extends AbstractModel{
         this.Alias = Alias;
     }
 
+    public UpdatePolicyRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UpdatePolicyRequest(UpdatePolicyRequest source) {
+        if (source.PolicyId != null) {
+            this.PolicyId = new Long(source.PolicyId);
+        }
+        if (source.PolicyName != null) {
+            this.PolicyName = new String(source.PolicyName);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.PolicyDocument != null) {
+            this.PolicyDocument = new String(source.PolicyDocument);
+        }
+        if (source.Alias != null) {
+            this.Alias = new String(source.Alias);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

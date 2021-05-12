@@ -137,6 +137,32 @@ public class DescribeProductsRequest extends AbstractModel{
         this.EndTime = EndTime;
     }
 
+    public DescribeProductsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeProductsRequest(DescribeProductsRequest source) {
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.ProductModel != null) {
+            this.ProductModel = new String(source.ProductModel);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new Long(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new Long(source.EndTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

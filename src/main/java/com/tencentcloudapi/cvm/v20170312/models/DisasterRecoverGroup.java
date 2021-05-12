@@ -193,6 +193,41 @@ public class DisasterRecoverGroup extends AbstractModel{
         this.CreateTime = CreateTime;
     }
 
+    public DisasterRecoverGroup() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DisasterRecoverGroup(DisasterRecoverGroup source) {
+        if (source.DisasterRecoverGroupId != null) {
+            this.DisasterRecoverGroupId = new String(source.DisasterRecoverGroupId);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.CvmQuotaTotal != null) {
+            this.CvmQuotaTotal = new Long(source.CvmQuotaTotal);
+        }
+        if (source.CurrentNum != null) {
+            this.CurrentNum = new Long(source.CurrentNum);
+        }
+        if (source.InstanceIds != null) {
+            this.InstanceIds = new String[source.InstanceIds.length];
+            for (int i = 0; i < source.InstanceIds.length; i++) {
+                this.InstanceIds[i] = new String(source.InstanceIds[i]);
+            }
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

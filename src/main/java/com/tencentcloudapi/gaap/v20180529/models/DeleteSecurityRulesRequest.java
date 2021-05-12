@@ -68,6 +68,26 @@ public class DeleteSecurityRulesRequest extends AbstractModel{
         this.RuleIdList = RuleIdList;
     }
 
+    public DeleteSecurityRulesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteSecurityRulesRequest(DeleteSecurityRulesRequest source) {
+        if (source.PolicyId != null) {
+            this.PolicyId = new String(source.PolicyId);
+        }
+        if (source.RuleIdList != null) {
+            this.RuleIdList = new String[source.RuleIdList.length];
+            for (int i = 0; i < source.RuleIdList.length; i++) {
+                this.RuleIdList[i] = new String(source.RuleIdList[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

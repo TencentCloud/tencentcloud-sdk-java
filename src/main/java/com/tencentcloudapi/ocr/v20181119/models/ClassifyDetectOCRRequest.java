@@ -216,6 +216,29 @@ BizLicense: 营业执照
         this.DiscernType = DiscernType;
     }
 
+    public ClassifyDetectOCRRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ClassifyDetectOCRRequest(ClassifyDetectOCRRequest source) {
+        if (source.ImageBase64 != null) {
+            this.ImageBase64 = new String(source.ImageBase64);
+        }
+        if (source.ImageUrl != null) {
+            this.ImageUrl = new String(source.ImageUrl);
+        }
+        if (source.DiscernType != null) {
+            this.DiscernType = new String[source.DiscernType.length];
+            for (int i = 0; i < source.DiscernType.length; i++) {
+                this.DiscernType[i] = new String(source.DiscernType[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

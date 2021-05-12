@@ -91,6 +91,29 @@ public class ResetInstancesTypeRequest extends AbstractModel{
         this.ForceStop = ForceStop;
     }
 
+    public ResetInstancesTypeRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ResetInstancesTypeRequest(ResetInstancesTypeRequest source) {
+        if (source.InstanceIds != null) {
+            this.InstanceIds = new String[source.InstanceIds.length];
+            for (int i = 0; i < source.InstanceIds.length; i++) {
+                this.InstanceIds[i] = new String(source.InstanceIds[i]);
+            }
+        }
+        if (source.InstanceType != null) {
+            this.InstanceType = new String(source.InstanceType);
+        }
+        if (source.ForceStop != null) {
+            this.ForceStop = new Boolean(source.ForceStop);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -137,6 +137,32 @@ public class DescribeVideoListRequest extends AbstractModel{
         this.DeviceId = DeviceId;
     }
 
+    public DescribeVideoListRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeVideoListRequest(DescribeVideoListRequest source) {
+        if (source.StartTime != null) {
+            this.StartTime = new Long(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new Long(source.EndTime);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.DeviceId != null) {
+            this.DeviceId = new String(source.DeviceId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

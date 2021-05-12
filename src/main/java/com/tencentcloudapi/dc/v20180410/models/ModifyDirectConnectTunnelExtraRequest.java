@@ -405,6 +405,68 @@ public class ModifyDirectConnectTunnelExtraRequest extends AbstractModel{
         this.JumboEnable = JumboEnable;
     }
 
+    public ModifyDirectConnectTunnelExtraRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyDirectConnectTunnelExtraRequest(ModifyDirectConnectTunnelExtraRequest source) {
+        if (source.DirectConnectTunnelId != null) {
+            this.DirectConnectTunnelId = new String(source.DirectConnectTunnelId);
+        }
+        if (source.Vlan != null) {
+            this.Vlan = new Long(source.Vlan);
+        }
+        if (source.BgpPeer != null) {
+            this.BgpPeer = new BgpPeer(source.BgpPeer);
+        }
+        if (source.RouteFilterPrefixes != null) {
+            this.RouteFilterPrefixes = new RouteFilterPrefix(source.RouteFilterPrefixes);
+        }
+        if (source.TencentAddress != null) {
+            this.TencentAddress = new String(source.TencentAddress);
+        }
+        if (source.TencentBackupAddress != null) {
+            this.TencentBackupAddress = new String(source.TencentBackupAddress);
+        }
+        if (source.CustomerAddress != null) {
+            this.CustomerAddress = new String(source.CustomerAddress);
+        }
+        if (source.Bandwidth != null) {
+            this.Bandwidth = new Long(source.Bandwidth);
+        }
+        if (source.EnableBGPCommunity != null) {
+            this.EnableBGPCommunity = new Boolean(source.EnableBGPCommunity);
+        }
+        if (source.BfdEnable != null) {
+            this.BfdEnable = new Long(source.BfdEnable);
+        }
+        if (source.NqaEnable != null) {
+            this.NqaEnable = new Long(source.NqaEnable);
+        }
+        if (source.BfdInfo != null) {
+            this.BfdInfo = new BFDInfo(source.BfdInfo);
+        }
+        if (source.NqaInfo != null) {
+            this.NqaInfo = new NQAInfo(source.NqaInfo);
+        }
+        if (source.IPv6Enable != null) {
+            this.IPv6Enable = new Long(source.IPv6Enable);
+        }
+        if (source.CustomerIDCRoutes != null) {
+            this.CustomerIDCRoutes = new RouteFilterPrefix[source.CustomerIDCRoutes.length];
+            for (int i = 0; i < source.CustomerIDCRoutes.length; i++) {
+                this.CustomerIDCRoutes[i] = new RouteFilterPrefix(source.CustomerIDCRoutes[i]);
+            }
+        }
+        if (source.JumboEnable != null) {
+            this.JumboEnable = new Long(source.JumboEnable);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -137,6 +137,32 @@ public class AttributeKeyDetail extends AbstractModel{
         this.Label = Label;
     }
 
+    public AttributeKeyDetail() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AttributeKeyDetail(AttributeKeyDetail source) {
+        if (source.LabelType != null) {
+            this.LabelType = new String(source.LabelType);
+        }
+        if (source.Starter != null) {
+            this.Starter = new String(source.Starter);
+        }
+        if (source.Order != null) {
+            this.Order = new Long(source.Order);
+        }
+        if (source.Value != null) {
+            this.Value = new String(source.Value);
+        }
+        if (source.Label != null) {
+            this.Label = new String(source.Label);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

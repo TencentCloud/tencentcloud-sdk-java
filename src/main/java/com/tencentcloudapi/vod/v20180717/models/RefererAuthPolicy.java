@@ -144,6 +144,32 @@ public class RefererAuthPolicy extends AbstractModel{
         this.BlankRefererAllowed = BlankRefererAllowed;
     }
 
+    public RefererAuthPolicy() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RefererAuthPolicy(RefererAuthPolicy source) {
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.AuthType != null) {
+            this.AuthType = new String(source.AuthType);
+        }
+        if (source.Referers != null) {
+            this.Referers = new String[source.Referers.length];
+            for (int i = 0; i < source.Referers.length; i++) {
+                this.Referers[i] = new String(source.Referers[i]);
+            }
+        }
+        if (source.BlankRefererAllowed != null) {
+            this.BlankRefererAllowed = new String(source.BlankRefererAllowed);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

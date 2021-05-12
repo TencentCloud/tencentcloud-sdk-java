@@ -45,6 +45,23 @@ public class BatchDescribeOrderCertificateRequest extends AbstractModel{
         this.OrderIds = OrderIds;
     }
 
+    public BatchDescribeOrderCertificateRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public BatchDescribeOrderCertificateRequest(BatchDescribeOrderCertificateRequest source) {
+        if (source.OrderIds != null) {
+            this.OrderIds = new String[source.OrderIds.length];
+            for (int i = 0; i < source.OrderIds.length; i++) {
+                this.OrderIds[i] = new String(source.OrderIds[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

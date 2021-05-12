@@ -116,6 +116,26 @@ public class FleetRelatedResource extends AbstractModel{
         this.ResourceRegion = ResourceRegion;
     }
 
+    public FleetRelatedResource() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public FleetRelatedResource(FleetRelatedResource source) {
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.ResourceId != null) {
+            this.ResourceId = new String(source.ResourceId);
+        }
+        if (source.ResourceRegion != null) {
+            this.ResourceRegion = new String(source.ResourceRegion);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

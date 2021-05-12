@@ -170,6 +170,35 @@ public class CreateWhiteBoxKeyResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public CreateWhiteBoxKeyResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateWhiteBoxKeyResponse(CreateWhiteBoxKeyResponse source) {
+        if (source.EncryptKey != null) {
+            this.EncryptKey = new String(source.EncryptKey);
+        }
+        if (source.DecryptKey != null) {
+            this.DecryptKey = new String(source.DecryptKey);
+        }
+        if (source.KeyId != null) {
+            this.KeyId = new String(source.KeyId);
+        }
+        if (source.TagCode != null) {
+            this.TagCode = new Long(source.TagCode);
+        }
+        if (source.TagMsg != null) {
+            this.TagMsg = new String(source.TagMsg);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

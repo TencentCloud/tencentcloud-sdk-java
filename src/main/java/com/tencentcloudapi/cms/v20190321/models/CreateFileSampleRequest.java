@@ -159,6 +159,32 @@ public class CreateFileSampleRequest extends AbstractModel{
         this.Label = Label;
     }
 
+    public CreateFileSampleRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateFileSampleRequest(CreateFileSampleRequest source) {
+        if (source.Contents != null) {
+            this.Contents = new FileSample[source.Contents.length];
+            for (int i = 0; i < source.Contents.length; i++) {
+                this.Contents[i] = new FileSample(source.Contents[i]);
+            }
+        }
+        if (source.EvilType != null) {
+            this.EvilType = new Long(source.EvilType);
+        }
+        if (source.FileType != null) {
+            this.FileType = new String(source.FileType);
+        }
+        if (source.Label != null) {
+            this.Label = new Long(source.Label);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

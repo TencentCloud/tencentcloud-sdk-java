@@ -68,6 +68,23 @@ public class UpdateDevicePassWordRequest extends AbstractModel{
         this.DeviceId = DeviceId;
     }
 
+    public UpdateDevicePassWordRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UpdateDevicePassWordRequest(UpdateDevicePassWordRequest source) {
+        if (source.PassWord != null) {
+            this.PassWord = new String(source.PassWord);
+        }
+        if (source.DeviceId != null) {
+            this.DeviceId = new String(source.DeviceId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

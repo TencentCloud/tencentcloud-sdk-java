@@ -68,6 +68,26 @@ public class ModifyCertificateProjectRequest extends AbstractModel{
         this.ProjectId = ProjectId;
     }
 
+    public ModifyCertificateProjectRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyCertificateProjectRequest(ModifyCertificateProjectRequest source) {
+        if (source.CertificateIdList != null) {
+            this.CertificateIdList = new String[source.CertificateIdList.length];
+            for (int i = 0; i < source.CertificateIdList.length; i++) {
+                this.CertificateIdList[i] = new String(source.CertificateIdList[i]);
+            }
+        }
+        if (source.ProjectId != null) {
+            this.ProjectId = new Long(source.ProjectId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

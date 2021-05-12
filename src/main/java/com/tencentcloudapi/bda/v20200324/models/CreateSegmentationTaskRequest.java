@@ -101,6 +101,26 @@ public class CreateSegmentationTaskRequest extends AbstractModel{
         this.Config = Config;
     }
 
+    public CreateSegmentationTaskRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateSegmentationTaskRequest(CreateSegmentationTaskRequest source) {
+        if (source.VideoUrl != null) {
+            this.VideoUrl = new String(source.VideoUrl);
+        }
+        if (source.BackgroundImageUrl != null) {
+            this.BackgroundImageUrl = new String(source.BackgroundImageUrl);
+        }
+        if (source.Config != null) {
+            this.Config = new String(source.Config);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

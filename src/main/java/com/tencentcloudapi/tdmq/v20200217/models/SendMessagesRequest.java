@@ -160,6 +160,35 @@ public class SendMessagesRequest extends AbstractModel{
         this.MaxPendingMessages = MaxPendingMessages;
     }
 
+    public SendMessagesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SendMessagesRequest(SendMessagesRequest source) {
+        if (source.StringToken != null) {
+            this.StringToken = new String(source.StringToken);
+        }
+        if (source.Topic != null) {
+            this.Topic = new String(source.Topic);
+        }
+        if (source.Payload != null) {
+            this.Payload = new String(source.Payload);
+        }
+        if (source.ProducerName != null) {
+            this.ProducerName = new String(source.ProducerName);
+        }
+        if (source.SendTimeout != null) {
+            this.SendTimeout = new Long(source.SendTimeout);
+        }
+        if (source.MaxPendingMessages != null) {
+            this.MaxPendingMessages = new Long(source.MaxPendingMessages);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

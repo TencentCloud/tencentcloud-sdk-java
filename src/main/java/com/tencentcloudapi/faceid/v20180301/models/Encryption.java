@@ -91,6 +91,29 @@ public class Encryption extends AbstractModel{
         this.Iv = Iv;
     }
 
+    public Encryption() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Encryption(Encryption source) {
+        if (source.CiphertextBlob != null) {
+            this.CiphertextBlob = new String(source.CiphertextBlob);
+        }
+        if (source.EncryptList != null) {
+            this.EncryptList = new String[source.EncryptList.length];
+            for (int i = 0; i < source.EncryptList.length; i++) {
+                this.EncryptList[i] = new String(source.EncryptList[i]);
+            }
+        }
+        if (source.Iv != null) {
+            this.Iv = new String(source.Iv);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

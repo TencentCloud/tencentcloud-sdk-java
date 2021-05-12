@@ -45,6 +45,20 @@ public class BandwidthPackageBillBandwidth extends AbstractModel{
         this.BandwidthUsage = BandwidthUsage;
     }
 
+    public BandwidthPackageBillBandwidth() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public BandwidthPackageBillBandwidth(BandwidthPackageBillBandwidth source) {
+        if (source.BandwidthUsage != null) {
+            this.BandwidthUsage = new Long(source.BandwidthUsage);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

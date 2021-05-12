@@ -226,6 +226,41 @@ public class DescribeFirmwareResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeFirmwareResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeFirmwareResponse(DescribeFirmwareResponse source) {
+        if (source.Version != null) {
+            this.Version = new String(source.Version);
+        }
+        if (source.ProductId != null) {
+            this.ProductId = new String(source.ProductId);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.Md5sum != null) {
+            this.Md5sum = new String(source.Md5sum);
+        }
+        if (source.Createtime != null) {
+            this.Createtime = new Long(source.Createtime);
+        }
+        if (source.ProductName != null) {
+            this.ProductName = new String(source.ProductName);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

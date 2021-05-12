@@ -114,6 +114,32 @@ public class DescribeZoneFlowAndStayTimeResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeZoneFlowAndStayTimeResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeZoneFlowAndStayTimeResponse(DescribeZoneFlowAndStayTimeResponse source) {
+        if (source.CompanyId != null) {
+            this.CompanyId = new String(source.CompanyId);
+        }
+        if (source.ShopId != null) {
+            this.ShopId = new Long(source.ShopId);
+        }
+        if (source.Data != null) {
+            this.Data = new ZoneFlowAndAvrStayTime[source.Data.length];
+            for (int i = 0; i < source.Data.length; i++) {
+                this.Data[i] = new ZoneFlowAndAvrStayTime(source.Data[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

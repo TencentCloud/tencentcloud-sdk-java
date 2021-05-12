@@ -350,6 +350,53 @@ key为自定义参数名称，value为该参数的默认取值。kv均为字符�
         this.Parameters = Parameters;
     }
 
+    public RunCommandRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RunCommandRequest(RunCommandRequest source) {
+        if (source.Content != null) {
+            this.Content = new String(source.Content);
+        }
+        if (source.InstanceIds != null) {
+            this.InstanceIds = new String[source.InstanceIds.length];
+            for (int i = 0; i < source.InstanceIds.length; i++) {
+                this.InstanceIds[i] = new String(source.InstanceIds[i]);
+            }
+        }
+        if (source.CommandName != null) {
+            this.CommandName = new String(source.CommandName);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.CommandType != null) {
+            this.CommandType = new String(source.CommandType);
+        }
+        if (source.WorkingDirectory != null) {
+            this.WorkingDirectory = new String(source.WorkingDirectory);
+        }
+        if (source.Timeout != null) {
+            this.Timeout = new Long(source.Timeout);
+        }
+        if (source.SaveCommand != null) {
+            this.SaveCommand = new Boolean(source.SaveCommand);
+        }
+        if (source.EnableParameter != null) {
+            this.EnableParameter = new Boolean(source.EnableParameter);
+        }
+        if (source.DefaultParameters != null) {
+            this.DefaultParameters = new String(source.DefaultParameters);
+        }
+        if (source.Parameters != null) {
+            this.Parameters = new String(source.Parameters);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

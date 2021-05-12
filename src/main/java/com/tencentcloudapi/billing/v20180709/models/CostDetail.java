@@ -395,6 +395,68 @@ public class CostDetail extends AbstractModel{
         this.ProductCode = ProductCode;
     }
 
+    public CostDetail() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CostDetail(CostDetail source) {
+        if (source.PayerUin != null) {
+            this.PayerUin = new String(source.PayerUin);
+        }
+        if (source.BusinessCodeName != null) {
+            this.BusinessCodeName = new String(source.BusinessCodeName);
+        }
+        if (source.ProductCodeName != null) {
+            this.ProductCodeName = new String(source.ProductCodeName);
+        }
+        if (source.PayModeName != null) {
+            this.PayModeName = new String(source.PayModeName);
+        }
+        if (source.ProjectName != null) {
+            this.ProjectName = new String(source.ProjectName);
+        }
+        if (source.RegionName != null) {
+            this.RegionName = new String(source.RegionName);
+        }
+        if (source.ZoneName != null) {
+            this.ZoneName = new String(source.ZoneName);
+        }
+        if (source.ResourceId != null) {
+            this.ResourceId = new String(source.ResourceId);
+        }
+        if (source.ResourceName != null) {
+            this.ResourceName = new String(source.ResourceName);
+        }
+        if (source.ActionTypeName != null) {
+            this.ActionTypeName = new String(source.ActionTypeName);
+        }
+        if (source.OrderId != null) {
+            this.OrderId = new String(source.OrderId);
+        }
+        if (source.BillId != null) {
+            this.BillId = new String(source.BillId);
+        }
+        if (source.FeeBeginTime != null) {
+            this.FeeBeginTime = new String(source.FeeBeginTime);
+        }
+        if (source.FeeEndTime != null) {
+            this.FeeEndTime = new String(source.FeeEndTime);
+        }
+        if (source.ComponentSet != null) {
+            this.ComponentSet = new CostComponentSet[source.ComponentSet.length];
+            for (int i = 0; i < source.ComponentSet.length; i++) {
+                this.ComponentSet[i] = new CostComponentSet(source.ComponentSet[i]);
+            }
+        }
+        if (source.ProductCode != null) {
+            this.ProductCode = new String(source.ProductCode);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

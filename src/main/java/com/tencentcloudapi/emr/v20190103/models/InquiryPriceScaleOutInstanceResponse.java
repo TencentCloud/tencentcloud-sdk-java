@@ -167,6 +167,32 @@ public class InquiryPriceScaleOutInstanceResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public InquiryPriceScaleOutInstanceResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public InquiryPriceScaleOutInstanceResponse(InquiryPriceScaleOutInstanceResponse source) {
+        if (source.OriginalCost != null) {
+            this.OriginalCost = new String(source.OriginalCost);
+        }
+        if (source.DiscountCost != null) {
+            this.DiscountCost = new String(source.DiscountCost);
+        }
+        if (source.Unit != null) {
+            this.Unit = new String(source.Unit);
+        }
+        if (source.PriceSpec != null) {
+            this.PriceSpec = new PriceResource(source.PriceSpec);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -114,6 +114,29 @@ public class ReservedInstancePrice extends AbstractModel{
         this.DiscountUsagePrice = DiscountUsagePrice;
     }
 
+    public ReservedInstancePrice() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ReservedInstancePrice(ReservedInstancePrice source) {
+        if (source.OriginalFixedPrice != null) {
+            this.OriginalFixedPrice = new Float(source.OriginalFixedPrice);
+        }
+        if (source.DiscountFixedPrice != null) {
+            this.DiscountFixedPrice = new Float(source.DiscountFixedPrice);
+        }
+        if (source.OriginalUsagePrice != null) {
+            this.OriginalUsagePrice = new Float(source.OriginalUsagePrice);
+        }
+        if (source.DiscountUsagePrice != null) {
+            this.DiscountUsagePrice = new Float(source.DiscountUsagePrice);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

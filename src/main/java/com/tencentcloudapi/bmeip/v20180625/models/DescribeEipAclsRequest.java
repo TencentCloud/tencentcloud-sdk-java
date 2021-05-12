@@ -252,6 +252,62 @@ public class DescribeEipAclsRequest extends AbstractModel{
         this.AclNames = AclNames;
     }
 
+    public DescribeEipAclsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeEipAclsRequest(DescribeEipAclsRequest source) {
+        if (source.AclName != null) {
+            this.AclName = new String(source.AclName);
+        }
+        if (source.AclIds != null) {
+            this.AclIds = new String[source.AclIds.length];
+            for (int i = 0; i < source.AclIds.length; i++) {
+                this.AclIds[i] = new String(source.AclIds[i]);
+            }
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.EipIds != null) {
+            this.EipIds = new String[source.EipIds.length];
+            for (int i = 0; i < source.EipIds.length; i++) {
+                this.EipIds[i] = new String(source.EipIds[i]);
+            }
+        }
+        if (source.EipIps != null) {
+            this.EipIps = new String[source.EipIps.length];
+            for (int i = 0; i < source.EipIps.length; i++) {
+                this.EipIps[i] = new String(source.EipIps[i]);
+            }
+        }
+        if (source.EipNames != null) {
+            this.EipNames = new String[source.EipNames.length];
+            for (int i = 0; i < source.EipNames.length; i++) {
+                this.EipNames[i] = new String(source.EipNames[i]);
+            }
+        }
+        if (source.OrderField != null) {
+            this.OrderField = new String(source.OrderField);
+        }
+        if (source.Order != null) {
+            this.Order = new Long(source.Order);
+        }
+        if (source.AclNames != null) {
+            this.AclNames = new String[source.AclNames.length];
+            for (int i = 0; i < source.AclNames.length; i++) {
+                this.AclNames[i] = new String(source.AclNames[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -68,6 +68,23 @@ public class PartitionInfo extends AbstractModel{
         this.Size = Size;
     }
 
+    public PartitionInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PartitionInfo(PartitionInfo source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Size != null) {
+            this.Size = new Long(source.Size);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

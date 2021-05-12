@@ -78,6 +78,23 @@ public class InstanceGroup extends AbstractModel{
         this.InstanceGroupName = InstanceGroupName;
     }
 
+    public InstanceGroup() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public InstanceGroup(InstanceGroup source) {
+        if (source.InstanceGroupId != null) {
+            this.InstanceGroupId = new Long(source.InstanceGroupId);
+        }
+        if (source.InstanceGroupName != null) {
+            this.InstanceGroupName = new String(source.InstanceGroupName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

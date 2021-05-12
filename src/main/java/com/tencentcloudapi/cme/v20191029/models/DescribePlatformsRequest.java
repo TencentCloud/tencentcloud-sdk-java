@@ -114,6 +114,35 @@ public class DescribePlatformsRequest extends AbstractModel{
         this.Limit = Limit;
     }
 
+    public DescribePlatformsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribePlatformsRequest(DescribePlatformsRequest source) {
+        if (source.Platforms != null) {
+            this.Platforms = new String[source.Platforms.length];
+            for (int i = 0; i < source.Platforms.length; i++) {
+                this.Platforms[i] = new String(source.Platforms[i]);
+            }
+        }
+        if (source.LicenseIds != null) {
+            this.LicenseIds = new String[source.LicenseIds.length];
+            for (int i = 0; i < source.LicenseIds.length; i++) {
+                this.LicenseIds[i] = new String(source.LicenseIds[i]);
+            }
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

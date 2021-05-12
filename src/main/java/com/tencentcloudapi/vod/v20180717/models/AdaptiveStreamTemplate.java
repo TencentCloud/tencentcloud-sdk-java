@@ -134,6 +134,29 @@ public class AdaptiveStreamTemplate extends AbstractModel{
         this.RemoveVideo = RemoveVideo;
     }
 
+    public AdaptiveStreamTemplate() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AdaptiveStreamTemplate(AdaptiveStreamTemplate source) {
+        if (source.Video != null) {
+            this.Video = new VideoTemplateInfo(source.Video);
+        }
+        if (source.Audio != null) {
+            this.Audio = new AudioTemplateInfo(source.Audio);
+        }
+        if (source.RemoveAudio != null) {
+            this.RemoveAudio = new Long(source.RemoveAudio);
+        }
+        if (source.RemoveVideo != null) {
+            this.RemoveVideo = new Long(source.RemoveVideo);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

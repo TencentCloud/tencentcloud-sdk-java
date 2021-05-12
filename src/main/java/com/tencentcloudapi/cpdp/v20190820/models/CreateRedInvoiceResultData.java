@@ -114,6 +114,29 @@ public class CreateRedInvoiceResultData extends AbstractModel{
         this.OrderSn = OrderSn;
     }
 
+    public CreateRedInvoiceResultData() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateRedInvoiceResultData(CreateRedInvoiceResultData source) {
+        if (source.Code != null) {
+            this.Code = new Long(source.Code);
+        }
+        if (source.Message != null) {
+            this.Message = new String(source.Message);
+        }
+        if (source.InvoiceId != null) {
+            this.InvoiceId = new String(source.InvoiceId);
+        }
+        if (source.OrderSn != null) {
+            this.OrderSn = new String(source.OrderSn);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -68,6 +68,23 @@ public class City extends AbstractModel{
         this.CityName = CityName;
     }
 
+    public City() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public City(City source) {
+        if (source.CityId != null) {
+            this.CityId = new String(source.CityId);
+        }
+        if (source.CityName != null) {
+            this.CityName = new String(source.CityName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

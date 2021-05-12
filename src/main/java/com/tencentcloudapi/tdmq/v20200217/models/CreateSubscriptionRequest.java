@@ -183,6 +183,38 @@ public class CreateSubscriptionRequest extends AbstractModel{
         this.AutoCreatePolicyTopic = AutoCreatePolicyTopic;
     }
 
+    public CreateSubscriptionRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateSubscriptionRequest(CreateSubscriptionRequest source) {
+        if (source.EnvironmentId != null) {
+            this.EnvironmentId = new String(source.EnvironmentId);
+        }
+        if (source.TopicName != null) {
+            this.TopicName = new String(source.TopicName);
+        }
+        if (source.SubscriptionName != null) {
+            this.SubscriptionName = new String(source.SubscriptionName);
+        }
+        if (source.IsIdempotent != null) {
+            this.IsIdempotent = new Boolean(source.IsIdempotent);
+        }
+        if (source.Remark != null) {
+            this.Remark = new String(source.Remark);
+        }
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
+        if (source.AutoCreatePolicyTopic != null) {
+            this.AutoCreatePolicyTopic = new Boolean(source.AutoCreatePolicyTopic);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

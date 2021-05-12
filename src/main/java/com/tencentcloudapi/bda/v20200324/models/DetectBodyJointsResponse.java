@@ -68,6 +68,26 @@ public class DetectBodyJointsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DetectBodyJointsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DetectBodyJointsResponse(DetectBodyJointsResponse source) {
+        if (source.BodyJointsResults != null) {
+            this.BodyJointsResults = new BodyJointsResult[source.BodyJointsResults.length];
+            for (int i = 0; i < source.BodyJointsResults.length; i++) {
+                this.BodyJointsResults[i] = new BodyJointsResult(source.BodyJointsResults[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

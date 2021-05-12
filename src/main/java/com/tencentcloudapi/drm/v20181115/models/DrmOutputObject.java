@@ -91,6 +91,26 @@ public class DrmOutputObject extends AbstractModel{
         this.Para = Para;
     }
 
+    public DrmOutputObject() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DrmOutputObject(DrmOutputObject source) {
+        if (source.BucketName != null) {
+            this.BucketName = new String(source.BucketName);
+        }
+        if (source.ObjectName != null) {
+            this.ObjectName = new String(source.ObjectName);
+        }
+        if (source.Para != null) {
+            this.Para = new DrmOutputPara(source.Para);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

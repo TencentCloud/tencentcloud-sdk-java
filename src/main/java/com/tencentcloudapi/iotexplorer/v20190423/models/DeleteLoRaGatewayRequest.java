@@ -45,6 +45,20 @@ public class DeleteLoRaGatewayRequest extends AbstractModel{
         this.GatewayId = GatewayId;
     }
 
+    public DeleteLoRaGatewayRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteLoRaGatewayRequest(DeleteLoRaGatewayRequest source) {
+        if (source.GatewayId != null) {
+            this.GatewayId = new String(source.GatewayId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

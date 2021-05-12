@@ -137,6 +137,32 @@ public class RoVipInfo extends AbstractModel{
         this.RoVip = RoVip;
     }
 
+    public RoVipInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RoVipInfo(RoVipInfo source) {
+        if (source.RoVipStatus != null) {
+            this.RoVipStatus = new Long(source.RoVipStatus);
+        }
+        if (source.RoSubnetId != null) {
+            this.RoSubnetId = new Long(source.RoSubnetId);
+        }
+        if (source.RoVpcId != null) {
+            this.RoVpcId = new Long(source.RoVpcId);
+        }
+        if (source.RoVport != null) {
+            this.RoVport = new Long(source.RoVport);
+        }
+        if (source.RoVip != null) {
+            this.RoVip = new String(source.RoVip);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

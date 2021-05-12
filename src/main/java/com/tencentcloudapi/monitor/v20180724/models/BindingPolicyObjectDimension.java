@@ -124,6 +124,29 @@ public class BindingPolicyObjectDimension extends AbstractModel{
         this.EventDimensions = EventDimensions;
     }
 
+    public BindingPolicyObjectDimension() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public BindingPolicyObjectDimension(BindingPolicyObjectDimension source) {
+        if (source.Region != null) {
+            this.Region = new String(source.Region);
+        }
+        if (source.RegionId != null) {
+            this.RegionId = new Long(source.RegionId);
+        }
+        if (source.Dimensions != null) {
+            this.Dimensions = new String(source.Dimensions);
+        }
+        if (source.EventDimensions != null) {
+            this.EventDimensions = new String(source.EventDimensions);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

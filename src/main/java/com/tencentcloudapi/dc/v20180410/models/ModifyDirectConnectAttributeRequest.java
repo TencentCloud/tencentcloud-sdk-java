@@ -321,6 +321,56 @@ public class ModifyDirectConnectAttributeRequest extends AbstractModel{
         this.Bandwidth = Bandwidth;
     }
 
+    public ModifyDirectConnectAttributeRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyDirectConnectAttributeRequest(ModifyDirectConnectAttributeRequest source) {
+        if (source.DirectConnectId != null) {
+            this.DirectConnectId = new String(source.DirectConnectId);
+        }
+        if (source.DirectConnectName != null) {
+            this.DirectConnectName = new String(source.DirectConnectName);
+        }
+        if (source.CircuitCode != null) {
+            this.CircuitCode = new String(source.CircuitCode);
+        }
+        if (source.Vlan != null) {
+            this.Vlan = new Long(source.Vlan);
+        }
+        if (source.TencentAddress != null) {
+            this.TencentAddress = new String(source.TencentAddress);
+        }
+        if (source.CustomerAddress != null) {
+            this.CustomerAddress = new String(source.CustomerAddress);
+        }
+        if (source.CustomerName != null) {
+            this.CustomerName = new String(source.CustomerName);
+        }
+        if (source.CustomerContactMail != null) {
+            this.CustomerContactMail = new String(source.CustomerContactMail);
+        }
+        if (source.CustomerContactNumber != null) {
+            this.CustomerContactNumber = new String(source.CustomerContactNumber);
+        }
+        if (source.FaultReportContactPerson != null) {
+            this.FaultReportContactPerson = new String(source.FaultReportContactPerson);
+        }
+        if (source.FaultReportContactNumber != null) {
+            this.FaultReportContactNumber = new String(source.FaultReportContactNumber);
+        }
+        if (source.SignLaw != null) {
+            this.SignLaw = new Boolean(source.SignLaw);
+        }
+        if (source.Bandwidth != null) {
+            this.Bandwidth = new Long(source.Bandwidth);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

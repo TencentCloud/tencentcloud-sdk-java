@@ -190,6 +190,38 @@ public class RecordPlanItem extends AbstractModel{
         this.Devices = Devices;
     }
 
+    public RecordPlanItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RecordPlanItem(RecordPlanItem source) {
+        if (source.PlanId != null) {
+            this.PlanId = new String(source.PlanId);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.TimeTemplateId != null) {
+            this.TimeTemplateId = new String(source.TimeTemplateId);
+        }
+        if (source.TimeTemplateName != null) {
+            this.TimeTemplateName = new String(source.TimeTemplateName);
+        }
+        if (source.EventId != null) {
+            this.EventId = new Long(source.EventId);
+        }
+        if (source.Devices != null) {
+            this.Devices = new DeviceItem[source.Devices.length];
+            for (int i = 0; i < source.Devices.length; i++) {
+                this.Devices[i] = new DeviceItem(source.Devices[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

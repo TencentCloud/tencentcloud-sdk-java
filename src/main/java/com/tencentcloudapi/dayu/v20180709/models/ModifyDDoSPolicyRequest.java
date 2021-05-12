@@ -183,6 +183,53 @@ public class ModifyDDoSPolicyRequest extends AbstractModel{
         this.WaterPrint = WaterPrint;
     }
 
+    public ModifyDDoSPolicyRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyDDoSPolicyRequest(ModifyDDoSPolicyRequest source) {
+        if (source.Business != null) {
+            this.Business = new String(source.Business);
+        }
+        if (source.PolicyId != null) {
+            this.PolicyId = new String(source.PolicyId);
+        }
+        if (source.DropOptions != null) {
+            this.DropOptions = new DDoSPolicyDropOption[source.DropOptions.length];
+            for (int i = 0; i < source.DropOptions.length; i++) {
+                this.DropOptions[i] = new DDoSPolicyDropOption(source.DropOptions[i]);
+            }
+        }
+        if (source.PortLimits != null) {
+            this.PortLimits = new DDoSPolicyPortLimit[source.PortLimits.length];
+            for (int i = 0; i < source.PortLimits.length; i++) {
+                this.PortLimits[i] = new DDoSPolicyPortLimit(source.PortLimits[i]);
+            }
+        }
+        if (source.IpAllowDenys != null) {
+            this.IpAllowDenys = new IpBlackWhite[source.IpAllowDenys.length];
+            for (int i = 0; i < source.IpAllowDenys.length; i++) {
+                this.IpAllowDenys[i] = new IpBlackWhite(source.IpAllowDenys[i]);
+            }
+        }
+        if (source.PacketFilters != null) {
+            this.PacketFilters = new DDoSPolicyPacketFilter[source.PacketFilters.length];
+            for (int i = 0; i < source.PacketFilters.length; i++) {
+                this.PacketFilters[i] = new DDoSPolicyPacketFilter(source.PacketFilters[i]);
+            }
+        }
+        if (source.WaterPrint != null) {
+            this.WaterPrint = new WaterPrintPolicy[source.WaterPrint.length];
+            for (int i = 0; i < source.WaterPrint.length; i++) {
+                this.WaterPrint[i] = new WaterPrintPolicy(source.WaterPrint[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -551,6 +551,89 @@ public class DataSearchRequest extends AbstractModel{
         this.MultiFilter = MultiFilter;
     }
 
+    public DataSearchRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DataSearchRequest(DataSearchRequest source) {
+        if (source.ResourceId != null) {
+            this.ResourceId = new Long(source.ResourceId);
+        }
+        if (source.SearchQuery != null) {
+            this.SearchQuery = new String(source.SearchQuery);
+        }
+        if (source.PageId != null) {
+            this.PageId = new Long(source.PageId);
+        }
+        if (source.NumPerPage != null) {
+            this.NumPerPage = new Long(source.NumPerPage);
+        }
+        if (source.SearchId != null) {
+            this.SearchId = new String(source.SearchId);
+        }
+        if (source.QueryEncode != null) {
+            this.QueryEncode = new Long(source.QueryEncode);
+        }
+        if (source.RankType != null) {
+            this.RankType = new Long(source.RankType);
+        }
+        if (source.NumFilter != null) {
+            this.NumFilter = new String(source.NumFilter);
+        }
+        if (source.ClFilter != null) {
+            this.ClFilter = new String(source.ClFilter);
+        }
+        if (source.Extra != null) {
+            this.Extra = new String(source.Extra);
+        }
+        if (source.SourceId != null) {
+            this.SourceId = new Long(source.SourceId);
+        }
+        if (source.SecondSearch != null) {
+            this.SecondSearch = new Long(source.SecondSearch);
+        }
+        if (source.MaxDocReturn != null) {
+            this.MaxDocReturn = new Long(source.MaxDocReturn);
+        }
+        if (source.IsSmartbox != null) {
+            this.IsSmartbox = new Long(source.IsSmartbox);
+        }
+        if (source.EnableAbsHighlight != null) {
+            this.EnableAbsHighlight = new Long(source.EnableAbsHighlight);
+        }
+        if (source.QcBid != null) {
+            this.QcBid = new Long(source.QcBid);
+        }
+        if (source.GroupBy != null) {
+            this.GroupBy = new String(source.GroupBy);
+        }
+        if (source.Distinct != null) {
+            this.Distinct = new String(source.Distinct);
+        }
+        if (source.L4RankExpression != null) {
+            this.L4RankExpression = new String(source.L4RankExpression);
+        }
+        if (source.MatchValue != null) {
+            this.MatchValue = new String(source.MatchValue);
+        }
+        if (source.Longitude != null) {
+            this.Longitude = new Float(source.Longitude);
+        }
+        if (source.Latitude != null) {
+            this.Latitude = new Float(source.Latitude);
+        }
+        if (source.MultiFilter != null) {
+            this.MultiFilter = new String[source.MultiFilter.length];
+            for (int i = 0; i < source.MultiFilter.length; i++) {
+                this.MultiFilter[i] = new String(source.MultiFilter[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

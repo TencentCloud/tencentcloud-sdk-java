@@ -147,6 +147,35 @@ public class ClusterAsGroup extends AbstractModel{
         this.CreatedTime = CreatedTime;
     }
 
+    public ClusterAsGroup() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ClusterAsGroup(ClusterAsGroup source) {
+        if (source.AutoScalingGroupId != null) {
+            this.AutoScalingGroupId = new String(source.AutoScalingGroupId);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.IsUnschedulable != null) {
+            this.IsUnschedulable = new Boolean(source.IsUnschedulable);
+        }
+        if (source.Labels != null) {
+            this.Labels = new Label[source.Labels.length];
+            for (int i = 0; i < source.Labels.length; i++) {
+                this.Labels[i] = new Label(source.Labels[i]);
+            }
+        }
+        if (source.CreatedTime != null) {
+            this.CreatedTime = new String(source.CreatedTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

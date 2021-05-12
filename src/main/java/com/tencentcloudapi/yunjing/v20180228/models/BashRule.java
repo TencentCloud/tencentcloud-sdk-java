@@ -298,6 +298,53 @@ public class BashRule extends AbstractModel{
         this.Hostip = Hostip;
     }
 
+    public BashRule() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public BashRule(BashRule source) {
+        if (source.Id != null) {
+            this.Id = new Long(source.Id);
+        }
+        if (source.Uuid != null) {
+            this.Uuid = new String(source.Uuid);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Level != null) {
+            this.Level = new Long(source.Level);
+        }
+        if (source.Rule != null) {
+            this.Rule = new String(source.Rule);
+        }
+        if (source.Decription != null) {
+            this.Decription = new String(source.Decription);
+        }
+        if (source.Operator != null) {
+            this.Operator = new String(source.Operator);
+        }
+        if (source.IsGlobal != null) {
+            this.IsGlobal = new Long(source.IsGlobal);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.ModifyTime != null) {
+            this.ModifyTime = new String(source.ModifyTime);
+        }
+        if (source.Hostip != null) {
+            this.Hostip = new String(source.Hostip);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

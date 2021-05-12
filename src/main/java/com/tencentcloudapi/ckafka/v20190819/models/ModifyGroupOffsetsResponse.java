@@ -68,6 +68,23 @@ public class ModifyGroupOffsetsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public ModifyGroupOffsetsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyGroupOffsetsResponse(ModifyGroupOffsetsResponse source) {
+        if (source.Result != null) {
+            this.Result = new JgwOperateResponse(source.Result);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

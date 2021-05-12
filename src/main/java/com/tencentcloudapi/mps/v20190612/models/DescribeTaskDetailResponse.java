@@ -394,6 +394,59 @@ public class DescribeTaskDetailResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeTaskDetailResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeTaskDetailResponse(DescribeTaskDetailResponse source) {
+        if (source.TaskType != null) {
+            this.TaskType = new String(source.TaskType);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.BeginProcessTime != null) {
+            this.BeginProcessTime = new String(source.BeginProcessTime);
+        }
+        if (source.FinishTime != null) {
+            this.FinishTime = new String(source.FinishTime);
+        }
+        if (source.WorkflowTask != null) {
+            this.WorkflowTask = new WorkflowTask(source.WorkflowTask);
+        }
+        if (source.EditMediaTask != null) {
+            this.EditMediaTask = new EditMediaTask(source.EditMediaTask);
+        }
+        if (source.LiveStreamProcessTask != null) {
+            this.LiveStreamProcessTask = new LiveStreamProcessTask(source.LiveStreamProcessTask);
+        }
+        if (source.TaskNotifyConfig != null) {
+            this.TaskNotifyConfig = new TaskNotifyConfig(source.TaskNotifyConfig);
+        }
+        if (source.TasksPriority != null) {
+            this.TasksPriority = new Long(source.TasksPriority);
+        }
+        if (source.SessionId != null) {
+            this.SessionId = new String(source.SessionId);
+        }
+        if (source.SessionContext != null) {
+            this.SessionContext = new String(source.SessionContext);
+        }
+        if (source.ExtInfo != null) {
+            this.ExtInfo = new String(source.ExtInfo);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

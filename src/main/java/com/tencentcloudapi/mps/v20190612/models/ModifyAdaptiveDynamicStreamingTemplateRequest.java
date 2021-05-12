@@ -218,6 +218,41 @@ public class ModifyAdaptiveDynamicStreamingTemplateRequest extends AbstractModel
         this.Comment = Comment;
     }
 
+    public ModifyAdaptiveDynamicStreamingTemplateRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyAdaptiveDynamicStreamingTemplateRequest(ModifyAdaptiveDynamicStreamingTemplateRequest source) {
+        if (source.Definition != null) {
+            this.Definition = new Long(source.Definition);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Format != null) {
+            this.Format = new String(source.Format);
+        }
+        if (source.DisableHigherVideoBitrate != null) {
+            this.DisableHigherVideoBitrate = new Long(source.DisableHigherVideoBitrate);
+        }
+        if (source.DisableHigherVideoResolution != null) {
+            this.DisableHigherVideoResolution = new Long(source.DisableHigherVideoResolution);
+        }
+        if (source.StreamInfos != null) {
+            this.StreamInfos = new AdaptiveStreamTemplate[source.StreamInfos.length];
+            for (int i = 0; i < source.StreamInfos.length; i++) {
+                this.StreamInfos[i] = new AdaptiveStreamTemplate(source.StreamInfos[i]);
+            }
+        }
+        if (source.Comment != null) {
+            this.Comment = new String(source.Comment);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

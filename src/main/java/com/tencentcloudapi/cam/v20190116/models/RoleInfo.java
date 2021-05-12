@@ -267,6 +267,47 @@ public class RoleInfo extends AbstractModel{
         this.DeletionTaskId = DeletionTaskId;
     }
 
+    public RoleInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RoleInfo(RoleInfo source) {
+        if (source.RoleId != null) {
+            this.RoleId = new String(source.RoleId);
+        }
+        if (source.RoleName != null) {
+            this.RoleName = new String(source.RoleName);
+        }
+        if (source.PolicyDocument != null) {
+            this.PolicyDocument = new String(source.PolicyDocument);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.AddTime != null) {
+            this.AddTime = new String(source.AddTime);
+        }
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new String(source.UpdateTime);
+        }
+        if (source.ConsoleLogin != null) {
+            this.ConsoleLogin = new Long(source.ConsoleLogin);
+        }
+        if (source.RoleType != null) {
+            this.RoleType = new String(source.RoleType);
+        }
+        if (source.SessionDuration != null) {
+            this.SessionDuration = new Long(source.SessionDuration);
+        }
+        if (source.DeletionTaskId != null) {
+            this.DeletionTaskId = new String(source.DeletionTaskId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

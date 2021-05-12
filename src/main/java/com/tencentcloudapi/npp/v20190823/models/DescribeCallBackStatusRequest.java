@@ -137,6 +137,32 @@ public class DescribeCallBackStatusRequest extends AbstractModel{
         this.CallStatus = CallStatus;
     }
 
+    public DescribeCallBackStatusRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeCallBackStatusRequest(DescribeCallBackStatusRequest source) {
+        if (source.BizAppId != null) {
+            this.BizAppId = new String(source.BizAppId);
+        }
+        if (source.CallId != null) {
+            this.CallId = new String(source.CallId);
+        }
+        if (source.Src != null) {
+            this.Src = new String(source.Src);
+        }
+        if (source.Dst != null) {
+            this.Dst = new String(source.Dst);
+        }
+        if (source.CallStatus != null) {
+            this.CallStatus = new String(source.CallStatus);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

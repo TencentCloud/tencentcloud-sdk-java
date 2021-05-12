@@ -244,6 +244,44 @@ public class NatGatewayDestinationIpPortTranslationNatRule extends AbstractModel
         this.CreatedTime = CreatedTime;
     }
 
+    public NatGatewayDestinationIpPortTranslationNatRule() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public NatGatewayDestinationIpPortTranslationNatRule(NatGatewayDestinationIpPortTranslationNatRule source) {
+        if (source.IpProtocol != null) {
+            this.IpProtocol = new String(source.IpProtocol);
+        }
+        if (source.PublicIpAddress != null) {
+            this.PublicIpAddress = new String(source.PublicIpAddress);
+        }
+        if (source.PublicPort != null) {
+            this.PublicPort = new Long(source.PublicPort);
+        }
+        if (source.PrivateIpAddress != null) {
+            this.PrivateIpAddress = new String(source.PrivateIpAddress);
+        }
+        if (source.PrivatePort != null) {
+            this.PrivatePort = new Long(source.PrivatePort);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.NatGatewayId != null) {
+            this.NatGatewayId = new String(source.NatGatewayId);
+        }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.CreatedTime != null) {
+            this.CreatedTime = new String(source.CreatedTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

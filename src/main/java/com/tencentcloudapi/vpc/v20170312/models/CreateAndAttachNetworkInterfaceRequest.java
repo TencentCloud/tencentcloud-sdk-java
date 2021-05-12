@@ -229,6 +229,53 @@ public class CreateAndAttachNetworkInterfaceRequest extends AbstractModel{
         this.Tags = Tags;
     }
 
+    public CreateAndAttachNetworkInterfaceRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateAndAttachNetworkInterfaceRequest(CreateAndAttachNetworkInterfaceRequest source) {
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.NetworkInterfaceName != null) {
+            this.NetworkInterfaceName = new String(source.NetworkInterfaceName);
+        }
+        if (source.SubnetId != null) {
+            this.SubnetId = new String(source.SubnetId);
+        }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.PrivateIpAddresses != null) {
+            this.PrivateIpAddresses = new PrivateIpAddressSpecification[source.PrivateIpAddresses.length];
+            for (int i = 0; i < source.PrivateIpAddresses.length; i++) {
+                this.PrivateIpAddresses[i] = new PrivateIpAddressSpecification(source.PrivateIpAddresses[i]);
+            }
+        }
+        if (source.SecondaryPrivateIpAddressCount != null) {
+            this.SecondaryPrivateIpAddressCount = new Long(source.SecondaryPrivateIpAddressCount);
+        }
+        if (source.SecurityGroupIds != null) {
+            this.SecurityGroupIds = new String[source.SecurityGroupIds.length];
+            for (int i = 0; i < source.SecurityGroupIds.length; i++) {
+                this.SecurityGroupIds[i] = new String(source.SecurityGroupIds[i]);
+            }
+        }
+        if (source.NetworkInterfaceDescription != null) {
+            this.NetworkInterfaceDescription = new String(source.NetworkInterfaceDescription);
+        }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

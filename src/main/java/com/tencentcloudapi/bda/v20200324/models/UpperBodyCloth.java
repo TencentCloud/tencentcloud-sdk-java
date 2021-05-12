@@ -91,6 +91,26 @@ public class UpperBodyCloth extends AbstractModel{
         this.Sleeve = Sleeve;
     }
 
+    public UpperBodyCloth() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UpperBodyCloth(UpperBodyCloth source) {
+        if (source.Texture != null) {
+            this.Texture = new UpperBodyClothTexture(source.Texture);
+        }
+        if (source.Color != null) {
+            this.Color = new UpperBodyClothColor(source.Color);
+        }
+        if (source.Sleeve != null) {
+            this.Sleeve = new UpperBodyClothSleeve(source.Sleeve);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

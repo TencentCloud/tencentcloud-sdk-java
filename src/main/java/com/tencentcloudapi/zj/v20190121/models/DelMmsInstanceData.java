@@ -45,6 +45,20 @@ public class DelMmsInstanceData extends AbstractModel{
         this.InstanceId = InstanceId;
     }
 
+    public DelMmsInstanceData() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DelMmsInstanceData(DelMmsInstanceData source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new Long(source.InstanceId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

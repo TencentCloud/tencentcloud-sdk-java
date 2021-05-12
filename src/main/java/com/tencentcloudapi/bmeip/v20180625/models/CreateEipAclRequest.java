@@ -68,6 +68,23 @@ public class CreateEipAclRequest extends AbstractModel{
         this.Status = Status;
     }
 
+    public CreateEipAclRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateEipAclRequest(CreateEipAclRequest source) {
+        if (source.AclName != null) {
+            this.AclName = new String(source.AclName);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

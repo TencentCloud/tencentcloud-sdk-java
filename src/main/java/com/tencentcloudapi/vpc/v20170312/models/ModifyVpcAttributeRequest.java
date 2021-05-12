@@ -137,6 +137,35 @@ public class ModifyVpcAttributeRequest extends AbstractModel{
         this.DomainName = DomainName;
     }
 
+    public ModifyVpcAttributeRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyVpcAttributeRequest(ModifyVpcAttributeRequest source) {
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.VpcName != null) {
+            this.VpcName = new String(source.VpcName);
+        }
+        if (source.EnableMulticast != null) {
+            this.EnableMulticast = new String(source.EnableMulticast);
+        }
+        if (source.DnsServers != null) {
+            this.DnsServers = new String[source.DnsServers.length];
+            for (int i = 0; i < source.DnsServers.length; i++) {
+                this.DnsServers[i] = new String(source.DnsServers[i]);
+            }
+        }
+        if (source.DomainName != null) {
+            this.DomainName = new String(source.DomainName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

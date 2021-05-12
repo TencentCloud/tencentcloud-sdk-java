@@ -162,6 +162,32 @@ public class TimerScalingPolicy extends AbstractModel{
         this.TimerConfiguration = TimerConfiguration;
     }
 
+    public TimerScalingPolicy() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TimerScalingPolicy(TimerScalingPolicy source) {
+        if (source.TimerId != null) {
+            this.TimerId = new String(source.TimerId);
+        }
+        if (source.TimerName != null) {
+            this.TimerName = new String(source.TimerName);
+        }
+        if (source.TimerStatus != null) {
+            this.TimerStatus = new Long(source.TimerStatus);
+        }
+        if (source.TimerFleetCapacity != null) {
+            this.TimerFleetCapacity = new TimerFleetCapacity(source.TimerFleetCapacity);
+        }
+        if (source.TimerConfiguration != null) {
+            this.TimerConfiguration = new TimerConfiguration(source.TimerConfiguration);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -68,6 +68,23 @@ public class DownloadRecordListResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DownloadRecordListResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DownloadRecordListResponse(DownloadRecordListResponse source) {
+        if (source.RecordListUrl != null) {
+            this.RecordListUrl = new String(source.RecordListUrl);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

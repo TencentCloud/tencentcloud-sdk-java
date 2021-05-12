@@ -68,6 +68,23 @@ public class ResetNatGatewayConnectionRequest extends AbstractModel{
         this.MaxConcurrentConnection = MaxConcurrentConnection;
     }
 
+    public ResetNatGatewayConnectionRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ResetNatGatewayConnectionRequest(ResetNatGatewayConnectionRequest source) {
+        if (source.NatGatewayId != null) {
+            this.NatGatewayId = new String(source.NatGatewayId);
+        }
+        if (source.MaxConcurrentConnection != null) {
+            this.MaxConcurrentConnection = new Long(source.MaxConcurrentConnection);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

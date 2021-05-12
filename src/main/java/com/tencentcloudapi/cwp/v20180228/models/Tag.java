@@ -91,6 +91,26 @@ public class Tag extends AbstractModel{
         this.Count = Count;
     }
 
+    public Tag() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Tag(Tag source) {
+        if (source.Id != null) {
+            this.Id = new Long(source.Id);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Count != null) {
+            this.Count = new Long(source.Count);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

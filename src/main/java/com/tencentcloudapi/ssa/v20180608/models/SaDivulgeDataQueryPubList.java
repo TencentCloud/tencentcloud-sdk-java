@@ -68,6 +68,26 @@ public class SaDivulgeDataQueryPubList extends AbstractModel{
         this.List = List;
     }
 
+    public SaDivulgeDataQueryPubList() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SaDivulgeDataQueryPubList(SaDivulgeDataQueryPubList source) {
+        if (source.Count != null) {
+            this.Count = new Long(source.Count);
+        }
+        if (source.List != null) {
+            this.List = new SaDivulgeDataQueryPub[source.List.length];
+            for (int i = 0; i < source.List.length; i++) {
+                this.List[i] = new SaDivulgeDataQueryPub(source.List[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

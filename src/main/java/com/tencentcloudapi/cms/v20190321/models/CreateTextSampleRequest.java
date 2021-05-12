@@ -159,6 +159,32 @@ public class CreateTextSampleRequest extends AbstractModel{
         this.Test = Test;
     }
 
+    public CreateTextSampleRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateTextSampleRequest(CreateTextSampleRequest source) {
+        if (source.Contents != null) {
+            this.Contents = new String[source.Contents.length];
+            for (int i = 0; i < source.Contents.length; i++) {
+                this.Contents[i] = new String(source.Contents[i]);
+            }
+        }
+        if (source.EvilType != null) {
+            this.EvilType = new Long(source.EvilType);
+        }
+        if (source.Label != null) {
+            this.Label = new Long(source.Label);
+        }
+        if (source.Test != null) {
+            this.Test = new String(source.Test);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

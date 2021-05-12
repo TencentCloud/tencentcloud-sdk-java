@@ -183,6 +183,41 @@ public class CreateAssetRequest extends AbstractModel{
         this.Tags = Tags;
     }
 
+    public CreateAssetRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateAssetRequest(CreateAssetRequest source) {
+        if (source.BucketKey != null) {
+            this.BucketKey = new String(source.BucketKey);
+        }
+        if (source.AssetName != null) {
+            this.AssetName = new String(source.AssetName);
+        }
+        if (source.AssetVersion != null) {
+            this.AssetVersion = new String(source.AssetVersion);
+        }
+        if (source.AssetRegion != null) {
+            this.AssetRegion = new String(source.AssetRegion);
+        }
+        if (source.OperateSystem != null) {
+            this.OperateSystem = new String(source.OperateSystem);
+        }
+        if (source.ImageId != null) {
+            this.ImageId = new String(source.ImageId);
+        }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

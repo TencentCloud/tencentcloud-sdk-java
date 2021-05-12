@@ -45,6 +45,20 @@ public class CreateKeyPairRequest extends AbstractModel{
         this.KeyName = KeyName;
     }
 
+    public CreateKeyPairRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateKeyPairRequest(CreateKeyPairRequest source) {
+        if (source.KeyName != null) {
+            this.KeyName = new String(source.KeyName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

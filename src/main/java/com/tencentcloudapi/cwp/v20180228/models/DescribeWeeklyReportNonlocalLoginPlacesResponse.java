@@ -91,6 +91,29 @@ public class DescribeWeeklyReportNonlocalLoginPlacesResponse extends AbstractMod
         this.RequestId = RequestId;
     }
 
+    public DescribeWeeklyReportNonlocalLoginPlacesResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeWeeklyReportNonlocalLoginPlacesResponse(DescribeWeeklyReportNonlocalLoginPlacesResponse source) {
+        if (source.WeeklyReportNonlocalLoginPlaces != null) {
+            this.WeeklyReportNonlocalLoginPlaces = new WeeklyReportNonlocalLoginPlace[source.WeeklyReportNonlocalLoginPlaces.length];
+            for (int i = 0; i < source.WeeklyReportNonlocalLoginPlaces.length; i++) {
+                this.WeeklyReportNonlocalLoginPlaces[i] = new WeeklyReportNonlocalLoginPlace(source.WeeklyReportNonlocalLoginPlaces[i]);
+            }
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -183,6 +183,41 @@ public class SelectedTableWithField extends AbstractModel{
         this.ShardNum = ShardNum;
     }
 
+    public SelectedTableWithField() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SelectedTableWithField(SelectedTableWithField source) {
+        if (source.TableGroupId != null) {
+            this.TableGroupId = new String(source.TableGroupId);
+        }
+        if (source.TableName != null) {
+            this.TableName = new String(source.TableName);
+        }
+        if (source.TableInstanceId != null) {
+            this.TableInstanceId = new String(source.TableInstanceId);
+        }
+        if (source.TableIdlType != null) {
+            this.TableIdlType = new String(source.TableIdlType);
+        }
+        if (source.TableType != null) {
+            this.TableType = new String(source.TableType);
+        }
+        if (source.SelectedFields != null) {
+            this.SelectedFields = new FieldInfo[source.SelectedFields.length];
+            for (int i = 0; i < source.SelectedFields.length; i++) {
+                this.SelectedFields[i] = new FieldInfo(source.SelectedFields[i]);
+            }
+        }
+        if (source.ShardNum != null) {
+            this.ShardNum = new Long(source.ShardNum);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

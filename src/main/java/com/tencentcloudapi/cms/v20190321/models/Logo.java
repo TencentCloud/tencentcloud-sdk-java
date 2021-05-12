@@ -91,6 +91,26 @@ public class Logo extends AbstractModel{
         this.Name = Name;
     }
 
+    public Logo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Logo(Logo source) {
+        if (source.RrectF != null) {
+            this.RrectF = new RrectF(source.RrectF);
+        }
+        if (source.Confidence != null) {
+            this.Confidence = new Float(source.Confidence);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -988,6 +988,143 @@ public class ResourceDashboard extends AbstractModel{
         this.RouteTable = RouteTable;
     }
 
+    public ResourceDashboard() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ResourceDashboard(ResourceDashboard source) {
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.SubnetId != null) {
+            this.SubnetId = new String(source.SubnetId);
+        }
+        if (source.Classiclink != null) {
+            this.Classiclink = new Long(source.Classiclink);
+        }
+        if (source.Dcg != null) {
+            this.Dcg = new Long(source.Dcg);
+        }
+        if (source.Pcx != null) {
+            this.Pcx = new Long(source.Pcx);
+        }
+        if (source.Ip != null) {
+            this.Ip = new Long(source.Ip);
+        }
+        if (source.Nat != null) {
+            this.Nat = new Long(source.Nat);
+        }
+        if (source.Vpngw != null) {
+            this.Vpngw = new Long(source.Vpngw);
+        }
+        if (source.FlowLog != null) {
+            this.FlowLog = new Long(source.FlowLog);
+        }
+        if (source.NetworkDetect != null) {
+            this.NetworkDetect = new Long(source.NetworkDetect);
+        }
+        if (source.NetworkACL != null) {
+            this.NetworkACL = new Long(source.NetworkACL);
+        }
+        if (source.CVM != null) {
+            this.CVM = new Long(source.CVM);
+        }
+        if (source.LB != null) {
+            this.LB = new Long(source.LB);
+        }
+        if (source.CDB != null) {
+            this.CDB = new Long(source.CDB);
+        }
+        if (source.Cmem != null) {
+            this.Cmem = new Long(source.Cmem);
+        }
+        if (source.CTSDB != null) {
+            this.CTSDB = new Long(source.CTSDB);
+        }
+        if (source.MariaDB != null) {
+            this.MariaDB = new Long(source.MariaDB);
+        }
+        if (source.SQLServer != null) {
+            this.SQLServer = new Long(source.SQLServer);
+        }
+        if (source.Postgres != null) {
+            this.Postgres = new Long(source.Postgres);
+        }
+        if (source.NAS != null) {
+            this.NAS = new Long(source.NAS);
+        }
+        if (source.Greenplumn != null) {
+            this.Greenplumn = new Long(source.Greenplumn);
+        }
+        if (source.Ckafka != null) {
+            this.Ckafka = new Long(source.Ckafka);
+        }
+        if (source.Grocery != null) {
+            this.Grocery = new Long(source.Grocery);
+        }
+        if (source.HSM != null) {
+            this.HSM = new Long(source.HSM);
+        }
+        if (source.Tcaplus != null) {
+            this.Tcaplus = new Long(source.Tcaplus);
+        }
+        if (source.Cnas != null) {
+            this.Cnas = new Long(source.Cnas);
+        }
+        if (source.TiDB != null) {
+            this.TiDB = new Long(source.TiDB);
+        }
+        if (source.Emr != null) {
+            this.Emr = new Long(source.Emr);
+        }
+        if (source.SEAL != null) {
+            this.SEAL = new Long(source.SEAL);
+        }
+        if (source.CFS != null) {
+            this.CFS = new Long(source.CFS);
+        }
+        if (source.Oracle != null) {
+            this.Oracle = new Long(source.Oracle);
+        }
+        if (source.ElasticSearch != null) {
+            this.ElasticSearch = new Long(source.ElasticSearch);
+        }
+        if (source.TBaaS != null) {
+            this.TBaaS = new Long(source.TBaaS);
+        }
+        if (source.Itop != null) {
+            this.Itop = new Long(source.Itop);
+        }
+        if (source.DBAudit != null) {
+            this.DBAudit = new Long(source.DBAudit);
+        }
+        if (source.CynosDBPostgres != null) {
+            this.CynosDBPostgres = new Long(source.CynosDBPostgres);
+        }
+        if (source.Redis != null) {
+            this.Redis = new Long(source.Redis);
+        }
+        if (source.MongoDB != null) {
+            this.MongoDB = new Long(source.MongoDB);
+        }
+        if (source.DCDB != null) {
+            this.DCDB = new Long(source.DCDB);
+        }
+        if (source.CynosDBMySQL != null) {
+            this.CynosDBMySQL = new Long(source.CynosDBMySQL);
+        }
+        if (source.Subnet != null) {
+            this.Subnet = new Long(source.Subnet);
+        }
+        if (source.RouteTable != null) {
+            this.RouteTable = new Long(source.RouteTable);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

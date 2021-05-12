@@ -313,6 +313,56 @@ public class RuleInfo extends AbstractModel{
         this.ForwardHost = ForwardHost;
     }
 
+    public RuleInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RuleInfo(RuleInfo source) {
+        if (source.RuleId != null) {
+            this.RuleId = new String(source.RuleId);
+        }
+        if (source.ListenerId != null) {
+            this.ListenerId = new String(source.ListenerId);
+        }
+        if (source.Domain != null) {
+            this.Domain = new String(source.Domain);
+        }
+        if (source.Path != null) {
+            this.Path = new String(source.Path);
+        }
+        if (source.RealServerType != null) {
+            this.RealServerType = new String(source.RealServerType);
+        }
+        if (source.Scheduler != null) {
+            this.Scheduler = new String(source.Scheduler);
+        }
+        if (source.HealthCheck != null) {
+            this.HealthCheck = new Long(source.HealthCheck);
+        }
+        if (source.RuleStatus != null) {
+            this.RuleStatus = new Long(source.RuleStatus);
+        }
+        if (source.CheckParams != null) {
+            this.CheckParams = new RuleCheckParams(source.CheckParams);
+        }
+        if (source.RealServerSet != null) {
+            this.RealServerSet = new BindRealServer[source.RealServerSet.length];
+            for (int i = 0; i < source.RealServerSet.length; i++) {
+                this.RealServerSet[i] = new BindRealServer(source.RealServerSet[i]);
+            }
+        }
+        if (source.BindStatus != null) {
+            this.BindStatus = new Long(source.BindStatus);
+        }
+        if (source.ForwardHost != null) {
+            this.ForwardHost = new String(source.ForwardHost);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

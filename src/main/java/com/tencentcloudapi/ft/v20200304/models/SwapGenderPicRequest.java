@@ -144,6 +144,32 @@ public class SwapGenderPicRequest extends AbstractModel{
         this.RspImgType = RspImgType;
     }
 
+    public SwapGenderPicRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SwapGenderPicRequest(SwapGenderPicRequest source) {
+        if (source.GenderInfos != null) {
+            this.GenderInfos = new GenderInfo[source.GenderInfos.length];
+            for (int i = 0; i < source.GenderInfos.length; i++) {
+                this.GenderInfos[i] = new GenderInfo(source.GenderInfos[i]);
+            }
+        }
+        if (source.Image != null) {
+            this.Image = new String(source.Image);
+        }
+        if (source.Url != null) {
+            this.Url = new String(source.Url);
+        }
+        if (source.RspImgType != null) {
+            this.RspImgType = new String(source.RspImgType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -91,6 +91,29 @@ public class SubmitDoubleVideoHighlightsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public SubmitDoubleVideoHighlightsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SubmitDoubleVideoHighlightsResponse(SubmitDoubleVideoHighlightsResponse source) {
+        if (source.JobId != null) {
+            this.JobId = new Long(source.JobId);
+        }
+        if (source.NotRegistered != null) {
+            this.NotRegistered = new String[source.NotRegistered.length];
+            for (int i = 0; i < source.NotRegistered.length; i++) {
+                this.NotRegistered[i] = new String(source.NotRegistered[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

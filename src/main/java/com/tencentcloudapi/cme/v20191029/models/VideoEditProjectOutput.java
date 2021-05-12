@@ -119,6 +119,29 @@ public class VideoEditProjectOutput extends AbstractModel{
         this.MetaData = MetaData;
     }
 
+    public VideoEditProjectOutput() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public VideoEditProjectOutput(VideoEditProjectOutput source) {
+        if (source.MaterialId != null) {
+            this.MaterialId = new String(source.MaterialId);
+        }
+        if (source.VodFileId != null) {
+            this.VodFileId = new String(source.VodFileId);
+        }
+        if (source.URL != null) {
+            this.URL = new String(source.URL);
+        }
+        if (source.MetaData != null) {
+            this.MetaData = new MediaMetaData(source.MetaData);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

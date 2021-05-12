@@ -68,6 +68,26 @@ public class CreateL4ListenersRequest extends AbstractModel{
         this.ListenerSet = ListenerSet;
     }
 
+    public CreateL4ListenersRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateL4ListenersRequest(CreateL4ListenersRequest source) {
+        if (source.LoadBalancerId != null) {
+            this.LoadBalancerId = new String(source.LoadBalancerId);
+        }
+        if (source.ListenerSet != null) {
+            this.ListenerSet = new CreateL4Listener[source.ListenerSet.length];
+            for (int i = 0; i < source.ListenerSet.length; i++) {
+                this.ListenerSet[i] = new CreateL4Listener(source.ListenerSet[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

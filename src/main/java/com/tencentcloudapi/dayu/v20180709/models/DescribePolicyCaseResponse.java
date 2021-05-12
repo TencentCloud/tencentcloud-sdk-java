@@ -68,6 +68,26 @@ public class DescribePolicyCaseResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribePolicyCaseResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribePolicyCaseResponse(DescribePolicyCaseResponse source) {
+        if (source.CaseList != null) {
+            this.CaseList = new KeyValueRecord[source.CaseList.length];
+            for (int i = 0; i < source.CaseList.length; i++) {
+                this.CaseList[i] = new KeyValueRecord(source.CaseList[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

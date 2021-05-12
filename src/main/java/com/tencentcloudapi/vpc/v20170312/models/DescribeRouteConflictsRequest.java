@@ -68,6 +68,26 @@ public class DescribeRouteConflictsRequest extends AbstractModel{
         this.DestinationCidrBlocks = DestinationCidrBlocks;
     }
 
+    public DescribeRouteConflictsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeRouteConflictsRequest(DescribeRouteConflictsRequest source) {
+        if (source.RouteTableId != null) {
+            this.RouteTableId = new String(source.RouteTableId);
+        }
+        if (source.DestinationCidrBlocks != null) {
+            this.DestinationCidrBlocks = new String[source.DestinationCidrBlocks.length];
+            for (int i = 0; i < source.DestinationCidrBlocks.length; i++) {
+                this.DestinationCidrBlocks[i] = new String(source.DestinationCidrBlocks[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

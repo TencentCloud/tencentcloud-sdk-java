@@ -91,6 +91,26 @@ public class VpcSubnetCreateInfo extends AbstractModel{
         this.Zone = Zone;
     }
 
+    public VpcSubnetCreateInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public VpcSubnetCreateInfo(VpcSubnetCreateInfo source) {
+        if (source.SubnetName != null) {
+            this.SubnetName = new String(source.SubnetName);
+        }
+        if (source.CidrBlock != null) {
+            this.CidrBlock = new String(source.CidrBlock);
+        }
+        if (source.Zone != null) {
+            this.Zone = new String(source.Zone);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

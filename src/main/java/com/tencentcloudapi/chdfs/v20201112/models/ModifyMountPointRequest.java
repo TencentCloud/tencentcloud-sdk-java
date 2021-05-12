@@ -91,6 +91,26 @@ public class ModifyMountPointRequest extends AbstractModel{
         this.MountPointStatus = MountPointStatus;
     }
 
+    public ModifyMountPointRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyMountPointRequest(ModifyMountPointRequest source) {
+        if (source.MountPointId != null) {
+            this.MountPointId = new String(source.MountPointId);
+        }
+        if (source.MountPointName != null) {
+            this.MountPointName = new String(source.MountPointName);
+        }
+        if (source.MountPointStatus != null) {
+            this.MountPointStatus = new Long(source.MountPointStatus);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

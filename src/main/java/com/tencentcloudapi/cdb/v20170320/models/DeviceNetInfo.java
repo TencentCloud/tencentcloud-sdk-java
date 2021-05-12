@@ -137,6 +137,47 @@ public class DeviceNetInfo extends AbstractModel{
         this.FlowOut = FlowOut;
     }
 
+    public DeviceNetInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeviceNetInfo(DeviceNetInfo source) {
+        if (source.Conn != null) {
+            this.Conn = new Long[source.Conn.length];
+            for (int i = 0; i < source.Conn.length; i++) {
+                this.Conn[i] = new Long(source.Conn[i]);
+            }
+        }
+        if (source.PackageIn != null) {
+            this.PackageIn = new Long[source.PackageIn.length];
+            for (int i = 0; i < source.PackageIn.length; i++) {
+                this.PackageIn[i] = new Long(source.PackageIn[i]);
+            }
+        }
+        if (source.PackageOut != null) {
+            this.PackageOut = new Long[source.PackageOut.length];
+            for (int i = 0; i < source.PackageOut.length; i++) {
+                this.PackageOut[i] = new Long(source.PackageOut[i]);
+            }
+        }
+        if (source.FlowIn != null) {
+            this.FlowIn = new Long[source.FlowIn.length];
+            for (int i = 0; i < source.FlowIn.length; i++) {
+                this.FlowIn[i] = new Long(source.FlowIn[i]);
+            }
+        }
+        if (source.FlowOut != null) {
+            this.FlowOut = new Long[source.FlowOut.length];
+            for (int i = 0; i < source.FlowOut.length; i++) {
+                this.FlowOut[i] = new Long(source.FlowOut[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -45,6 +45,20 @@ public class DeleteResourceGroupRequest extends AbstractModel{
         this.ResourceGroupId = ResourceGroupId;
     }
 
+    public DeleteResourceGroupRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteResourceGroupRequest(DeleteResourceGroupRequest source) {
+        if (source.ResourceGroupId != null) {
+            this.ResourceGroupId = new String(source.ResourceGroupId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

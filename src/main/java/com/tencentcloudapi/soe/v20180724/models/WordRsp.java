@@ -206,6 +206,44 @@ public class WordRsp extends AbstractModel{
         this.ReferenceWord = ReferenceWord;
     }
 
+    public WordRsp() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public WordRsp(WordRsp source) {
+        if (source.MemBeginTime != null) {
+            this.MemBeginTime = new Long(source.MemBeginTime);
+        }
+        if (source.MemEndTime != null) {
+            this.MemEndTime = new Long(source.MemEndTime);
+        }
+        if (source.PronAccuracy != null) {
+            this.PronAccuracy = new Float(source.PronAccuracy);
+        }
+        if (source.PronFluency != null) {
+            this.PronFluency = new Float(source.PronFluency);
+        }
+        if (source.Word != null) {
+            this.Word = new String(source.Word);
+        }
+        if (source.MatchTag != null) {
+            this.MatchTag = new Long(source.MatchTag);
+        }
+        if (source.PhoneInfos != null) {
+            this.PhoneInfos = new PhoneInfo[source.PhoneInfos.length];
+            for (int i = 0; i < source.PhoneInfos.length; i++) {
+                this.PhoneInfos[i] = new PhoneInfo(source.PhoneInfos[i]);
+            }
+        }
+        if (source.ReferenceWord != null) {
+            this.ReferenceWord = new String(source.ReferenceWord);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

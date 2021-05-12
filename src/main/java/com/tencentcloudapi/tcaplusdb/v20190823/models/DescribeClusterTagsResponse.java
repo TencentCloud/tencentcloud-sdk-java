@@ -101,6 +101,29 @@ public class DescribeClusterTagsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeClusterTagsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeClusterTagsResponse(DescribeClusterTagsResponse source) {
+        if (source.Rows != null) {
+            this.Rows = new TagsInfoOfCluster[source.Rows.length];
+            for (int i = 0; i < source.Rows.length; i++) {
+                this.Rows[i] = new TagsInfoOfCluster(source.Rows[i]);
+            }
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

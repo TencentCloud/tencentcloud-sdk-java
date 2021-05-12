@@ -218,6 +218,38 @@ public class RecordTaskItem extends AbstractModel{
         this.RecordStatus = RecordStatus;
     }
 
+    public RecordTaskItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RecordTaskItem(RecordTaskItem source) {
+        if (source.RecordTaskId != null) {
+            this.RecordTaskId = new String(source.RecordTaskId);
+        }
+        if (source.RecordPlanId != null) {
+            this.RecordPlanId = new String(source.RecordPlanId);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new Long(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new Long(source.EndTime);
+        }
+        if (source.EventId != null) {
+            this.EventId = new Long(source.EventId);
+        }
+        if (source.VideoUrl != null) {
+            this.VideoUrl = new String(source.VideoUrl);
+        }
+        if (source.RecordStatus != null) {
+            this.RecordStatus = new Long(source.RecordStatus);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

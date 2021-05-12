@@ -309,6 +309,44 @@ TransferFailed：转入失败
         this.BuyStatus = BuyStatus;
     }
 
+    public DomainList() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DomainList(DomainList source) {
+        if (source.IsPremium != null) {
+            this.IsPremium = new Boolean(source.IsPremium);
+        }
+        if (source.DomainId != null) {
+            this.DomainId = new String(source.DomainId);
+        }
+        if (source.DomainName != null) {
+            this.DomainName = new String(source.DomainName);
+        }
+        if (source.AutoRenew != null) {
+            this.AutoRenew = new Long(source.AutoRenew);
+        }
+        if (source.CreationDate != null) {
+            this.CreationDate = new String(source.CreationDate);
+        }
+        if (source.ExpirationDate != null) {
+            this.ExpirationDate = new String(source.ExpirationDate);
+        }
+        if (source.Tld != null) {
+            this.Tld = new String(source.Tld);
+        }
+        if (source.CodeTld != null) {
+            this.CodeTld = new String(source.CodeTld);
+        }
+        if (source.BuyStatus != null) {
+            this.BuyStatus = new String(source.BuyStatus);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

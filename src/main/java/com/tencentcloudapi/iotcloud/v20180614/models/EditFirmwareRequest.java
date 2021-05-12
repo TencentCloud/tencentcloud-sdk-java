@@ -114,6 +114,29 @@ public class EditFirmwareRequest extends AbstractModel{
         this.FirmwareDescription = FirmwareDescription;
     }
 
+    public EditFirmwareRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public EditFirmwareRequest(EditFirmwareRequest source) {
+        if (source.ProductID != null) {
+            this.ProductID = new String(source.ProductID);
+        }
+        if (source.FirmwareVersion != null) {
+            this.FirmwareVersion = new String(source.FirmwareVersion);
+        }
+        if (source.FirmwareName != null) {
+            this.FirmwareName = new String(source.FirmwareName);
+        }
+        if (source.FirmwareDescription != null) {
+            this.FirmwareDescription = new String(source.FirmwareDescription);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

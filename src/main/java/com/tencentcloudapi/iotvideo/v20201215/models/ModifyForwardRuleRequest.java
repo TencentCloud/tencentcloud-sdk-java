@@ -252,6 +252,47 @@ public class ModifyForwardRuleRequest extends AbstractModel{
         this.QueueName = QueueName;
     }
 
+    public ModifyForwardRuleRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyForwardRuleRequest(ModifyForwardRuleRequest source) {
+        if (source.ProductID != null) {
+            this.ProductID = new String(source.ProductID);
+        }
+        if (source.MsgType != null) {
+            this.MsgType = new Long(source.MsgType);
+        }
+        if (source.Skey != null) {
+            this.Skey = new String(source.Skey);
+        }
+        if (source.QueueRegion != null) {
+            this.QueueRegion = new String(source.QueueRegion);
+        }
+        if (source.QueueType != null) {
+            this.QueueType = new Long(source.QueueType);
+        }
+        if (source.Consecretid != null) {
+            this.Consecretid = new String(source.Consecretid);
+        }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.InstanceName != null) {
+            this.InstanceName = new String(source.InstanceName);
+        }
+        if (source.QueueID != null) {
+            this.QueueID = new String(source.QueueID);
+        }
+        if (source.QueueName != null) {
+            this.QueueName = new String(source.QueueName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -183,6 +183,38 @@ public class ProjectStock extends AbstractModel{
         this.PoolName = PoolName;
     }
 
+    public ProjectStock() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ProjectStock(ProjectStock source) {
+        if (source.PrizeId != null) {
+            this.PrizeId = new String(source.PrizeId);
+        }
+        if (source.PrizeBat != null) {
+            this.PrizeBat = new Long(source.PrizeBat);
+        }
+        if (source.PrizeName != null) {
+            this.PrizeName = new String(source.PrizeName);
+        }
+        if (source.UsedStock != null) {
+            this.UsedStock = new Long(source.UsedStock);
+        }
+        if (source.RemainStock != null) {
+            this.RemainStock = new Long(source.RemainStock);
+        }
+        if (source.PoolIdx != null) {
+            this.PoolIdx = new Long(source.PoolIdx);
+        }
+        if (source.PoolName != null) {
+            this.PoolName = new String(source.PoolName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

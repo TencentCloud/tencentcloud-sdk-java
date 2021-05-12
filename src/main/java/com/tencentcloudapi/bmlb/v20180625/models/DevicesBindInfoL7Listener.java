@@ -114,6 +114,32 @@ public class DevicesBindInfoL7Listener extends AbstractModel{
         this.RuleSet = RuleSet;
     }
 
+    public DevicesBindInfoL7Listener() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DevicesBindInfoL7Listener(DevicesBindInfoL7Listener source) {
+        if (source.ListenerId != null) {
+            this.ListenerId = new String(source.ListenerId);
+        }
+        if (source.Protocol != null) {
+            this.Protocol = new String(source.Protocol);
+        }
+        if (source.LoadBalancerPort != null) {
+            this.LoadBalancerPort = new Long(source.LoadBalancerPort);
+        }
+        if (source.RuleSet != null) {
+            this.RuleSet = new DevicesBindInfoRule[source.RuleSet.length];
+            for (int i = 0; i < source.RuleSet.length; i++) {
+                this.RuleSet[i] = new DevicesBindInfoRule(source.RuleSet[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

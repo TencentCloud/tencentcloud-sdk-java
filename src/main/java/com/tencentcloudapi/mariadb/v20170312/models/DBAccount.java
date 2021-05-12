@@ -188,6 +188,38 @@ public class DBAccount extends AbstractModel{
         this.DelayThresh = DelayThresh;
     }
 
+    public DBAccount() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DBAccount(DBAccount source) {
+        if (source.UserName != null) {
+            this.UserName = new String(source.UserName);
+        }
+        if (source.Host != null) {
+            this.Host = new String(source.Host);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new String(source.UpdateTime);
+        }
+        if (source.ReadOnly != null) {
+            this.ReadOnly = new Long(source.ReadOnly);
+        }
+        if (source.DelayThresh != null) {
+            this.DelayThresh = new Long(source.DelayThresh);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -114,6 +114,32 @@ public class DescribePodInstancesRequest extends AbstractModel{
         this.PodNameList = PodNameList;
     }
 
+    public DescribePodInstancesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribePodInstancesRequest(DescribePodInstancesRequest source) {
+        if (source.GroupId != null) {
+            this.GroupId = new String(source.GroupId);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.PodNameList != null) {
+            this.PodNameList = new String[source.PodNameList.length];
+            for (int i = 0; i < source.PodNameList.length; i++) {
+                this.PodNameList[i] = new String(source.PodNameList[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

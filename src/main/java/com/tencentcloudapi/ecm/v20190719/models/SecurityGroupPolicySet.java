@@ -91,6 +91,32 @@ public class SecurityGroupPolicySet extends AbstractModel{
         this.Ingress = Ingress;
     }
 
+    public SecurityGroupPolicySet() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SecurityGroupPolicySet(SecurityGroupPolicySet source) {
+        if (source.Version != null) {
+            this.Version = new String(source.Version);
+        }
+        if (source.Egress != null) {
+            this.Egress = new SecurityGroupPolicy[source.Egress.length];
+            for (int i = 0; i < source.Egress.length; i++) {
+                this.Egress[i] = new SecurityGroupPolicy(source.Egress[i]);
+            }
+        }
+        if (source.Ingress != null) {
+            this.Ingress = new SecurityGroupPolicy[source.Ingress.length];
+            for (int i = 0; i < source.Ingress.length; i++) {
+                this.Ingress[i] = new SecurityGroupPolicy(source.Ingress[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

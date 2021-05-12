@@ -114,6 +114,29 @@ public class MoveResourceRequest extends AbstractModel{
         this.Operator = Operator;
     }
 
+    public MoveResourceRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MoveResourceRequest(MoveResourceRequest source) {
+        if (source.Platform != null) {
+            this.Platform = new String(source.Platform);
+        }
+        if (source.SourceResource != null) {
+            this.SourceResource = new ResourceInfo(source.SourceResource);
+        }
+        if (source.DestinationResource != null) {
+            this.DestinationResource = new ResourceInfo(source.DestinationResource);
+        }
+        if (source.Operator != null) {
+            this.Operator = new String(source.Operator);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

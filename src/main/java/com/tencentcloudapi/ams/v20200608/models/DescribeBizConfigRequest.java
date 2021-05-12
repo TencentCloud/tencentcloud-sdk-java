@@ -45,6 +45,20 @@ public class DescribeBizConfigRequest extends AbstractModel{
         this.BizType = BizType;
     }
 
+    public DescribeBizConfigRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeBizConfigRequest(DescribeBizConfigRequest source) {
+        if (source.BizType != null) {
+            this.BizType = new String(source.BizType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

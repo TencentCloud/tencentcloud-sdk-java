@@ -390,6 +390,68 @@ public class ModifyTaskRequest extends AbstractModel{
         this.TaskArgument = TaskArgument;
     }
 
+    public ModifyTaskRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyTaskRequest(ModifyTaskRequest source) {
+        if (source.TaskId != null) {
+            this.TaskId = new String(source.TaskId);
+        }
+        if (source.TaskName != null) {
+            this.TaskName = new String(source.TaskName);
+        }
+        if (source.TaskType != null) {
+            this.TaskType = new String(source.TaskType);
+        }
+        if (source.TaskContent != null) {
+            this.TaskContent = new String(source.TaskContent);
+        }
+        if (source.ExecuteType != null) {
+            this.ExecuteType = new String(source.ExecuteType);
+        }
+        if (source.TaskRule != null) {
+            this.TaskRule = new TaskRule(source.TaskRule);
+        }
+        if (source.TimeOut != null) {
+            this.TimeOut = new Long(source.TimeOut);
+        }
+        if (source.GroupId != null) {
+            this.GroupId = new String(source.GroupId);
+        }
+        if (source.ShardCount != null) {
+            this.ShardCount = new Long(source.ShardCount);
+        }
+        if (source.ShardArguments != null) {
+            this.ShardArguments = new ShardArgument[source.ShardArguments.length];
+            for (int i = 0; i < source.ShardArguments.length; i++) {
+                this.ShardArguments[i] = new ShardArgument(source.ShardArguments[i]);
+            }
+        }
+        if (source.AdvanceSettings != null) {
+            this.AdvanceSettings = new AdvanceSettings(source.AdvanceSettings);
+        }
+        if (source.SuccessOperator != null) {
+            this.SuccessOperator = new String(source.SuccessOperator);
+        }
+        if (source.SuccessRatio != null) {
+            this.SuccessRatio = new Long(source.SuccessRatio);
+        }
+        if (source.RetryCount != null) {
+            this.RetryCount = new Long(source.RetryCount);
+        }
+        if (source.RetryInterval != null) {
+            this.RetryInterval = new Long(source.RetryInterval);
+        }
+        if (source.TaskArgument != null) {
+            this.TaskArgument = new String(source.TaskArgument);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

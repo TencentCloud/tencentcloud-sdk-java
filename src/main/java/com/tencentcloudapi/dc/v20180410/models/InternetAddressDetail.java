@@ -378,6 +378,53 @@ public class InternetAddressDetail extends AbstractModel{
         this.ReserveTime = ReserveTime;
     }
 
+    public InternetAddressDetail() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public InternetAddressDetail(InternetAddressDetail source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.Subnet != null) {
+            this.Subnet = new String(source.Subnet);
+        }
+        if (source.MaskLen != null) {
+            this.MaskLen = new Long(source.MaskLen);
+        }
+        if (source.AddrType != null) {
+            this.AddrType = new Long(source.AddrType);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.ApplyTime != null) {
+            this.ApplyTime = new String(source.ApplyTime);
+        }
+        if (source.StopTime != null) {
+            this.StopTime = new String(source.StopTime);
+        }
+        if (source.ReleaseTime != null) {
+            this.ReleaseTime = new String(source.ReleaseTime);
+        }
+        if (source.Region != null) {
+            this.Region = new String(source.Region);
+        }
+        if (source.AppId != null) {
+            this.AppId = new Long(source.AppId);
+        }
+        if (source.AddrProto != null) {
+            this.AddrProto = new Long(source.AddrProto);
+        }
+        if (source.ReserveTime != null) {
+            this.ReserveTime = new Long(source.ReserveTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

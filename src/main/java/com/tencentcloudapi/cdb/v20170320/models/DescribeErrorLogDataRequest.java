@@ -183,6 +183,41 @@ public class DescribeErrorLogDataRequest extends AbstractModel{
         this.InstType = InstType;
     }
 
+    public DescribeErrorLogDataRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeErrorLogDataRequest(DescribeErrorLogDataRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new Long(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new Long(source.EndTime);
+        }
+        if (source.KeyWords != null) {
+            this.KeyWords = new String[source.KeyWords.length];
+            for (int i = 0; i < source.KeyWords.length; i++) {
+                this.KeyWords[i] = new String(source.KeyWords[i]);
+            }
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.InstType != null) {
+            this.InstType = new String(source.InstType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

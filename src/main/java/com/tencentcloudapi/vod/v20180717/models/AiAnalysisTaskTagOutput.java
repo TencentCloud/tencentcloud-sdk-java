@@ -45,6 +45,23 @@ public class AiAnalysisTaskTagOutput extends AbstractModel{
         this.TagSet = TagSet;
     }
 
+    public AiAnalysisTaskTagOutput() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AiAnalysisTaskTagOutput(AiAnalysisTaskTagOutput source) {
+        if (source.TagSet != null) {
+            this.TagSet = new MediaAiAnalysisTagItem[source.TagSet.length];
+            for (int i = 0; i < source.TagSet.length; i++) {
+                this.TagSet[i] = new MediaAiAnalysisTagItem(source.TagSet[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

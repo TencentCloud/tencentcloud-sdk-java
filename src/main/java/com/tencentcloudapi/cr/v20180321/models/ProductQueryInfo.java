@@ -152,6 +152,32 @@ public class ProductQueryInfo extends AbstractModel{
         this.SceneType = SceneType;
     }
 
+    public ProductQueryInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ProductQueryInfo(ProductQueryInfo source) {
+        if (source.ProductId != null) {
+            this.ProductId = new String(source.ProductId);
+        }
+        if (source.ProductName != null) {
+            this.ProductName = new String(source.ProductName);
+        }
+        if (source.ProductCode != null) {
+            this.ProductCode = new String(source.ProductCode);
+        }
+        if (source.ProductStatus != null) {
+            this.ProductStatus = new Long(source.ProductStatus);
+        }
+        if (source.SceneType != null) {
+            this.SceneType = new String(source.SceneType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

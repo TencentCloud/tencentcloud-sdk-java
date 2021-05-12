@@ -78,6 +78,23 @@ public class Entity extends AbstractModel{
         this.Id = Id;
     }
 
+    public Entity() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Entity(Entity source) {
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

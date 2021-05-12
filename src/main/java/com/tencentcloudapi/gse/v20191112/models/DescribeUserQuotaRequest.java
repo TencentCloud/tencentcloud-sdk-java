@@ -45,6 +45,20 @@ public class DescribeUserQuotaRequest extends AbstractModel{
         this.ResourceType = ResourceType;
     }
 
+    public DescribeUserQuotaRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeUserQuotaRequest(DescribeUserQuotaRequest source) {
+        if (source.ResourceType != null) {
+            this.ResourceType = new Long(source.ResourceType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

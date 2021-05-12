@@ -114,6 +114,29 @@ public class BindAlarmPolicyRequest extends AbstractModel{
         this.TopicId = TopicId;
     }
 
+    public BindAlarmPolicyRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public BindAlarmPolicyRequest(BindAlarmPolicyRequest source) {
+        if (source.TaskId != null) {
+            this.TaskId = new Long(source.TaskId);
+        }
+        if (source.PolicyGroupId != null) {
+            this.PolicyGroupId = new Long(source.PolicyGroupId);
+        }
+        if (source.IfBind != null) {
+            this.IfBind = new Long(source.IfBind);
+        }
+        if (source.TopicId != null) {
+            this.TopicId = new String(source.TopicId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

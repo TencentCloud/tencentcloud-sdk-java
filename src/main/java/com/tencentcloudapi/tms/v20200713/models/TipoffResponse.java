@@ -68,6 +68,23 @@ public class TipoffResponse extends AbstractModel{
         this.ResultMsg = ResultMsg;
     }
 
+    public TipoffResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TipoffResponse(TipoffResponse source) {
+        if (source.ResultCode != null) {
+            this.ResultCode = new Long(source.ResultCode);
+        }
+        if (source.ResultMsg != null) {
+            this.ResultMsg = new String(source.ResultMsg);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

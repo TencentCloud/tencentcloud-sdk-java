@@ -91,6 +91,26 @@ public class CreateClassRequest extends AbstractModel{
         this.SubAppId = SubAppId;
     }
 
+    public CreateClassRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateClassRequest(CreateClassRequest source) {
+        if (source.ParentId != null) {
+            this.ParentId = new Long(source.ParentId);
+        }
+        if (source.ClassName != null) {
+            this.ClassName = new String(source.ClassName);
+        }
+        if (source.SubAppId != null) {
+            this.SubAppId = new Long(source.SubAppId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

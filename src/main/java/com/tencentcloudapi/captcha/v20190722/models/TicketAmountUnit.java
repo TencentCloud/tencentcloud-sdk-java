@@ -68,6 +68,23 @@ public class TicketAmountUnit extends AbstractModel{
         this.Amount = Amount;
     }
 
+    public TicketAmountUnit() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TicketAmountUnit(TicketAmountUnit source) {
+        if (source.DateKey != null) {
+            this.DateKey = new String(source.DateKey);
+        }
+        if (source.Amount != null) {
+            this.Amount = new Long(source.Amount);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

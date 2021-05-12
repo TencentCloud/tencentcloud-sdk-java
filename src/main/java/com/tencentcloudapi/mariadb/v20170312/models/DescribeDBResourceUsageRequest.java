@@ -114,6 +114,29 @@ public class DescribeDBResourceUsageRequest extends AbstractModel{
         this.MetricName = MetricName;
     }
 
+    public DescribeDBResourceUsageRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeDBResourceUsageRequest(DescribeDBResourceUsageRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+        if (source.MetricName != null) {
+            this.MetricName = new String(source.MetricName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

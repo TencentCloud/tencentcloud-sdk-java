@@ -183,6 +183,41 @@ public class RunOtaVersionRequest extends AbstractModel{
         this.Contents = Contents;
     }
 
+    public RunOtaVersionRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RunOtaVersionRequest(RunOtaVersionRequest source) {
+        if (source.ProductId != null) {
+            this.ProductId = new String(source.ProductId);
+        }
+        if (source.OtaVersion != null) {
+            this.OtaVersion = new String(source.OtaVersion);
+        }
+        if (source.GrayValue != null) {
+            this.GrayValue = new Long(source.GrayValue);
+        }
+        if (source.OldVersions != null) {
+            this.OldVersions = new String[source.OldVersions.length];
+            for (int i = 0; i < source.OldVersions.length; i++) {
+                this.OldVersions[i] = new String(source.OldVersions[i]);
+            }
+        }
+        if (source.Operator != null) {
+            this.Operator = new String(source.Operator);
+        }
+        if (source.Remark != null) {
+            this.Remark = new String(source.Remark);
+        }
+        if (source.Contents != null) {
+            this.Contents = new Contents(source.Contents);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

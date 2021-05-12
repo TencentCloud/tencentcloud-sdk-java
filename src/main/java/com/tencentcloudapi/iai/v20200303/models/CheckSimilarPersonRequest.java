@@ -88,6 +88,26 @@ public class CheckSimilarPersonRequest extends AbstractModel{
         this.UniquePersonControl = UniquePersonControl;
     }
 
+    public CheckSimilarPersonRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CheckSimilarPersonRequest(CheckSimilarPersonRequest source) {
+        if (source.GroupIds != null) {
+            this.GroupIds = new String[source.GroupIds.length];
+            for (int i = 0; i < source.GroupIds.length; i++) {
+                this.GroupIds[i] = new String(source.GroupIds[i]);
+            }
+        }
+        if (source.UniquePersonControl != null) {
+            this.UniquePersonControl = new Long(source.UniquePersonControl);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

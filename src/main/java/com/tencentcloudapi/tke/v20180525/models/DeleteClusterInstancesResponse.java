@@ -129,6 +129,38 @@ public class DeleteClusterInstancesResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DeleteClusterInstancesResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteClusterInstancesResponse(DeleteClusterInstancesResponse source) {
+        if (source.SuccInstanceIds != null) {
+            this.SuccInstanceIds = new String[source.SuccInstanceIds.length];
+            for (int i = 0; i < source.SuccInstanceIds.length; i++) {
+                this.SuccInstanceIds[i] = new String(source.SuccInstanceIds[i]);
+            }
+        }
+        if (source.FailedInstanceIds != null) {
+            this.FailedInstanceIds = new String[source.FailedInstanceIds.length];
+            for (int i = 0; i < source.FailedInstanceIds.length; i++) {
+                this.FailedInstanceIds[i] = new String(source.FailedInstanceIds[i]);
+            }
+        }
+        if (source.NotFoundInstanceIds != null) {
+            this.NotFoundInstanceIds = new String[source.NotFoundInstanceIds.length];
+            for (int i = 0; i < source.NotFoundInstanceIds.length; i++) {
+                this.NotFoundInstanceIds[i] = new String(source.NotFoundInstanceIds[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

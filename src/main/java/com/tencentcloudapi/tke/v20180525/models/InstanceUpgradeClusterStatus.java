@@ -68,6 +68,23 @@ public class InstanceUpgradeClusterStatus extends AbstractModel{
         this.NotReadyPod = NotReadyPod;
     }
 
+    public InstanceUpgradeClusterStatus() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public InstanceUpgradeClusterStatus(InstanceUpgradeClusterStatus source) {
+        if (source.PodTotal != null) {
+            this.PodTotal = new Long(source.PodTotal);
+        }
+        if (source.NotReadyPod != null) {
+            this.NotReadyPod = new Long(source.NotReadyPod);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

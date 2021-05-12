@@ -68,6 +68,23 @@ public class DescribeTrafficMirrorReceiver extends AbstractModel{
         this.Port = Port;
     }
 
+    public DescribeTrafficMirrorReceiver() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeTrafficMirrorReceiver(DescribeTrafficMirrorReceiver source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.Port != null) {
+            this.Port = new Long(source.Port);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

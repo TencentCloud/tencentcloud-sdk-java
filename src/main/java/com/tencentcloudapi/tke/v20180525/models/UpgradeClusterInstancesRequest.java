@@ -213,6 +213,41 @@ major 大版本原地升级
         this.MaxNotReadyPercent = MaxNotReadyPercent;
     }
 
+    public UpgradeClusterInstancesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UpgradeClusterInstancesRequest(UpgradeClusterInstancesRequest source) {
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
+        if (source.Operation != null) {
+            this.Operation = new String(source.Operation);
+        }
+        if (source.UpgradeType != null) {
+            this.UpgradeType = new String(source.UpgradeType);
+        }
+        if (source.InstanceIds != null) {
+            this.InstanceIds = new String[source.InstanceIds.length];
+            for (int i = 0; i < source.InstanceIds.length; i++) {
+                this.InstanceIds[i] = new String(source.InstanceIds[i]);
+            }
+        }
+        if (source.ResetParam != null) {
+            this.ResetParam = new UpgradeNodeResetParam(source.ResetParam);
+        }
+        if (source.SkipPreCheck != null) {
+            this.SkipPreCheck = new Boolean(source.SkipPreCheck);
+        }
+        if (source.MaxNotReadyPercent != null) {
+            this.MaxNotReadyPercent = new Float(source.MaxNotReadyPercent);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

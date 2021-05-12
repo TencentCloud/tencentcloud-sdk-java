@@ -137,6 +137,32 @@ public class CheckVcodeRequest extends AbstractModel{
         this.VerifyCode = VerifyCode;
     }
 
+    public CheckVcodeRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CheckVcodeRequest(CheckVcodeRequest source) {
+        if (source.Module != null) {
+            this.Module = new String(source.Module);
+        }
+        if (source.Operation != null) {
+            this.Operation = new String(source.Operation);
+        }
+        if (source.AccountResId != null) {
+            this.AccountResId = new String(source.AccountResId);
+        }
+        if (source.ContractResId != null) {
+            this.ContractResId = new String(source.ContractResId);
+        }
+        if (source.VerifyCode != null) {
+            this.VerifyCode = new String(source.VerifyCode);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

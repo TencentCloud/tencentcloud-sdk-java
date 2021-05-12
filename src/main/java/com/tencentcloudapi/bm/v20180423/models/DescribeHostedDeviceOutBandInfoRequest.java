@@ -68,6 +68,26 @@ public class DescribeHostedDeviceOutBandInfoRequest extends AbstractModel{
         this.Zone = Zone;
     }
 
+    public DescribeHostedDeviceOutBandInfoRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeHostedDeviceOutBandInfoRequest(DescribeHostedDeviceOutBandInfoRequest source) {
+        if (source.InstanceIds != null) {
+            this.InstanceIds = new String[source.InstanceIds.length];
+            for (int i = 0; i < source.InstanceIds.length; i++) {
+                this.InstanceIds[i] = new String(source.InstanceIds[i]);
+            }
+        }
+        if (source.Zone != null) {
+            this.Zone = new String(source.Zone);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

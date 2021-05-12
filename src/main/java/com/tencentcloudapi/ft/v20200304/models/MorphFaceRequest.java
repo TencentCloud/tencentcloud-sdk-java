@@ -228,6 +228,47 @@ Url、Image必须提供一个，如果都提供，只使用 Url。图片存储�
         this.OutputHeight = OutputHeight;
     }
 
+    public MorphFaceRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MorphFaceRequest(MorphFaceRequest source) {
+        if (source.Images != null) {
+            this.Images = new String[source.Images.length];
+            for (int i = 0; i < source.Images.length; i++) {
+                this.Images[i] = new String(source.Images[i]);
+            }
+        }
+        if (source.Urls != null) {
+            this.Urls = new String[source.Urls.length];
+            for (int i = 0; i < source.Urls.length; i++) {
+                this.Urls[i] = new String(source.Urls[i]);
+            }
+        }
+        if (source.GradientInfos != null) {
+            this.GradientInfos = new GradientInfo[source.GradientInfos.length];
+            for (int i = 0; i < source.GradientInfos.length; i++) {
+                this.GradientInfos[i] = new GradientInfo(source.GradientInfos[i]);
+            }
+        }
+        if (source.Fps != null) {
+            this.Fps = new Long(source.Fps);
+        }
+        if (source.OutputType != null) {
+            this.OutputType = new Long(source.OutputType);
+        }
+        if (source.OutputWidth != null) {
+            this.OutputWidth = new Long(source.OutputWidth);
+        }
+        if (source.OutputHeight != null) {
+            this.OutputHeight = new Long(source.OutputHeight);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

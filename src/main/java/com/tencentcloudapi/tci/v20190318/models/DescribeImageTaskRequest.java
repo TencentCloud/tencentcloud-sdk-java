@@ -91,6 +91,26 @@ public class DescribeImageTaskRequest extends AbstractModel{
         this.Offset = Offset;
     }
 
+    public DescribeImageTaskRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeImageTaskRequest(DescribeImageTaskRequest source) {
+        if (source.JobId != null) {
+            this.JobId = new Long(source.JobId);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

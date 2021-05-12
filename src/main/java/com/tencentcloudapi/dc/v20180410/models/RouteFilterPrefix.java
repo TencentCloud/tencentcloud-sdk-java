@@ -45,6 +45,20 @@ public class RouteFilterPrefix extends AbstractModel{
         this.Cidr = Cidr;
     }
 
+    public RouteFilterPrefix() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RouteFilterPrefix(RouteFilterPrefix source) {
+        if (source.Cidr != null) {
+            this.Cidr = new String(source.Cidr);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

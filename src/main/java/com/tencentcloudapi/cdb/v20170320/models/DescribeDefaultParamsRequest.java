@@ -45,6 +45,20 @@ public class DescribeDefaultParamsRequest extends AbstractModel{
         this.EngineVersion = EngineVersion;
     }
 
+    public DescribeDefaultParamsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeDefaultParamsRequest(DescribeDefaultParamsRequest source) {
+        if (source.EngineVersion != null) {
+            this.EngineVersion = new String(source.EngineVersion);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

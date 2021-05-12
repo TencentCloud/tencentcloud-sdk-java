@@ -190,6 +190,38 @@ aborted 已取消
         this.RequestId = RequestId;
     }
 
+    public GetUpgradeInstanceProgressResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GetUpgradeInstanceProgressResponse(GetUpgradeInstanceProgressResponse source) {
+        if (source.Total != null) {
+            this.Total = new Long(source.Total);
+        }
+        if (source.Done != null) {
+            this.Done = new Long(source.Done);
+        }
+        if (source.LifeState != null) {
+            this.LifeState = new String(source.LifeState);
+        }
+        if (source.Instances != null) {
+            this.Instances = new InstanceUpgradeProgressItem[source.Instances.length];
+            for (int i = 0; i < source.Instances.length; i++) {
+                this.Instances[i] = new InstanceUpgradeProgressItem(source.Instances[i]);
+            }
+        }
+        if (source.ClusterStatus != null) {
+            this.ClusterStatus = new InstanceUpgradeClusterStatus(source.ClusterStatus);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

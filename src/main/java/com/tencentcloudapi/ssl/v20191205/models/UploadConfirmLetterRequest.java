@@ -68,6 +68,23 @@ public class UploadConfirmLetterRequest extends AbstractModel{
         this.ConfirmLetter = ConfirmLetter;
     }
 
+    public UploadConfirmLetterRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UploadConfirmLetterRequest(UploadConfirmLetterRequest source) {
+        if (source.CertificateId != null) {
+            this.CertificateId = new String(source.CertificateId);
+        }
+        if (source.ConfirmLetter != null) {
+            this.ConfirmLetter = new String(source.ConfirmLetter);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

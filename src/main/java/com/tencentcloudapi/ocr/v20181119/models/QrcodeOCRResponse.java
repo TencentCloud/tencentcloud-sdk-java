@@ -91,6 +91,29 @@ public class QrcodeOCRResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public QrcodeOCRResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public QrcodeOCRResponse(QrcodeOCRResponse source) {
+        if (source.CodeResults != null) {
+            this.CodeResults = new QrcodeResultsInfo[source.CodeResults.length];
+            for (int i = 0; i < source.CodeResults.length; i++) {
+                this.CodeResults[i] = new QrcodeResultsInfo(source.CodeResults[i]);
+            }
+        }
+        if (source.ImgSize != null) {
+            this.ImgSize = new QrcodeImgSize(source.ImgSize);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

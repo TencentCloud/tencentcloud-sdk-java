@@ -203,6 +203,38 @@ public class BlackListData extends AbstractModel{
         this.BlackStatus = BlackStatus;
     }
 
+    public BlackListData() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public BlackListData(BlackListData source) {
+        if (source.BlackType != null) {
+            this.BlackType = new String(source.BlackType);
+        }
+        if (source.OperType != null) {
+            this.OperType = new String(source.OperType);
+        }
+        if (source.BlackValue != null) {
+            this.BlackValue = new String(source.BlackValue);
+        }
+        if (source.BlackDescription != null) {
+            this.BlackDescription = new String(source.BlackDescription);
+        }
+        if (source.BlackValidDate != null) {
+            this.BlackValidDate = new String(source.BlackValidDate);
+        }
+        if (source.BlackAddDate != null) {
+            this.BlackAddDate = new String(source.BlackAddDate);
+        }
+        if (source.BlackStatus != null) {
+            this.BlackStatus = new String(source.BlackStatus);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

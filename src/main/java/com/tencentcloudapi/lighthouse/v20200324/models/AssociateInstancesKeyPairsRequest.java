@@ -68,6 +68,29 @@ public class AssociateInstancesKeyPairsRequest extends AbstractModel{
         this.InstanceIds = InstanceIds;
     }
 
+    public AssociateInstancesKeyPairsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AssociateInstancesKeyPairsRequest(AssociateInstancesKeyPairsRequest source) {
+        if (source.KeyIds != null) {
+            this.KeyIds = new String[source.KeyIds.length];
+            for (int i = 0; i < source.KeyIds.length; i++) {
+                this.KeyIds[i] = new String(source.KeyIds[i]);
+            }
+        }
+        if (source.InstanceIds != null) {
+            this.InstanceIds = new String[source.InstanceIds.length];
+            for (int i = 0; i < source.InstanceIds.length; i++) {
+                this.InstanceIds[i] = new String(source.InstanceIds[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

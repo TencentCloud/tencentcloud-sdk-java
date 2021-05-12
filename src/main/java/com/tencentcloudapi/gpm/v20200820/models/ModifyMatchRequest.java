@@ -344,6 +344,65 @@ public class ModifyMatchRequest extends AbstractModel{
         this.Tags = Tags;
     }
 
+    public ModifyMatchRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyMatchRequest(ModifyMatchRequest source) {
+        if (source.MatchName != null) {
+            this.MatchName = new String(source.MatchName);
+        }
+        if (source.RuleCode != null) {
+            this.RuleCode = new String(source.RuleCode);
+        }
+        if (source.Timeout != null) {
+            this.Timeout = new Long(source.Timeout);
+        }
+        if (source.ServerType != null) {
+            this.ServerType = new Long(source.ServerType);
+        }
+        if (source.MatchCode != null) {
+            this.MatchCode = new String(source.MatchCode);
+        }
+        if (source.MatchDesc != null) {
+            this.MatchDesc = new String(source.MatchDesc);
+        }
+        if (source.NotifyUrl != null) {
+            this.NotifyUrl = new String(source.NotifyUrl);
+        }
+        if (source.ServerRegion != null) {
+            this.ServerRegion = new String(source.ServerRegion);
+        }
+        if (source.ServerQueue != null) {
+            this.ServerQueue = new String(source.ServerQueue);
+        }
+        if (source.CustomPushData != null) {
+            this.CustomPushData = new String(source.CustomPushData);
+        }
+        if (source.ServerSessionData != null) {
+            this.ServerSessionData = new String(source.ServerSessionData);
+        }
+        if (source.GameProperties != null) {
+            this.GameProperties = new StringKV[source.GameProperties.length];
+            for (int i = 0; i < source.GameProperties.length; i++) {
+                this.GameProperties[i] = new StringKV(source.GameProperties[i]);
+            }
+        }
+        if (source.LogSwitch != null) {
+            this.LogSwitch = new Long(source.LogSwitch);
+        }
+        if (source.Tags != null) {
+            this.Tags = new StringKV[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new StringKV(source.Tags[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

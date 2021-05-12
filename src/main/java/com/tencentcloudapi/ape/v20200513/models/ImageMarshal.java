@@ -275,6 +275,50 @@ public class ImageMarshal extends AbstractModel{
         this.DimensionsNameId = DimensionsNameId;
     }
 
+    public ImageMarshal() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ImageMarshal(ImageMarshal source) {
+        if (source.MarshalId != null) {
+            this.MarshalId = new Long(source.MarshalId);
+        }
+        if (source.Height != null) {
+            this.Height = new Long(source.Height);
+        }
+        if (source.Width != null) {
+            this.Width = new Long(source.Width);
+        }
+        if (source.Size != null) {
+            this.Size = new Long(source.Size);
+        }
+        if (source.Format != null) {
+            this.Format = new String(source.Format);
+        }
+        if (source.Price != null) {
+            this.Price = new Long(source.Price);
+        }
+        if (source.LicenseScope != null) {
+            this.LicenseScope = new String(source.LicenseScope);
+        }
+        if (source.IsVip != null) {
+            this.IsVip = new Boolean(source.IsVip);
+        }
+        if (source.LicenseScopeId != null) {
+            this.LicenseScopeId = new Long(source.LicenseScopeId);
+        }
+        if (source.DimensionsName != null) {
+            this.DimensionsName = new String(source.DimensionsName);
+        }
+        if (source.DimensionsNameId != null) {
+            this.DimensionsNameId = new Long(source.DimensionsNameId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

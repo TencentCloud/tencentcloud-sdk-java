@@ -91,6 +91,26 @@ public class RecognizeMediaForZhiXueRequest extends AbstractModel{
         this.ActionConfig = ActionConfig;
     }
 
+    public RecognizeMediaForZhiXueRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RecognizeMediaForZhiXueRequest(RecognizeMediaForZhiXueRequest source) {
+        if (source.InputInfo != null) {
+            this.InputInfo = new MediaInputInfo(source.InputInfo);
+        }
+        if (source.ExpressionConfig != null) {
+            this.ExpressionConfig = new ExpressionConfigInfo(source.ExpressionConfig);
+        }
+        if (source.ActionConfig != null) {
+            this.ActionConfig = new ActionConfigInfo(source.ActionConfig);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

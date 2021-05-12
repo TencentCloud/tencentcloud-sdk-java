@@ -213,6 +213,41 @@ public class DescribeCustomImagesRequest extends AbstractModel{
         this.ImageStatus = ImageStatus;
     }
 
+    public DescribeCustomImagesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeCustomImagesRequest(DescribeCustomImagesRequest source) {
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.OrderField != null) {
+            this.OrderField = new String(source.OrderField);
+        }
+        if (source.Order != null) {
+            this.Order = new Long(source.Order);
+        }
+        if (source.ImageId != null) {
+            this.ImageId = new String(source.ImageId);
+        }
+        if (source.SearchKey != null) {
+            this.SearchKey = new String(source.SearchKey);
+        }
+        if (source.ImageStatus != null) {
+            this.ImageStatus = new Long[source.ImageStatus.length];
+            for (int i = 0; i < source.ImageStatus.length; i++) {
+                this.ImageStatus[i] = new Long(source.ImageStatus[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

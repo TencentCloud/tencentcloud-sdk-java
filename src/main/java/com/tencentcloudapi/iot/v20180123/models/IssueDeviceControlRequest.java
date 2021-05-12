@@ -114,6 +114,29 @@ public class IssueDeviceControlRequest extends AbstractModel{
         this.Metadata = Metadata;
     }
 
+    public IssueDeviceControlRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public IssueDeviceControlRequest(IssueDeviceControlRequest source) {
+        if (source.ProductId != null) {
+            this.ProductId = new String(source.ProductId);
+        }
+        if (source.DeviceName != null) {
+            this.DeviceName = new String(source.DeviceName);
+        }
+        if (source.ControlData != null) {
+            this.ControlData = new String(source.ControlData);
+        }
+        if (source.Metadata != null) {
+            this.Metadata = new Boolean(source.Metadata);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -114,6 +114,32 @@ public class CreatePublishSubscribeRequest extends AbstractModel{
         this.PublishSubscribeName = PublishSubscribeName;
     }
 
+    public CreatePublishSubscribeRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreatePublishSubscribeRequest(CreatePublishSubscribeRequest source) {
+        if (source.PublishInstanceId != null) {
+            this.PublishInstanceId = new String(source.PublishInstanceId);
+        }
+        if (source.SubscribeInstanceId != null) {
+            this.SubscribeInstanceId = new String(source.SubscribeInstanceId);
+        }
+        if (source.DatabaseTupleSet != null) {
+            this.DatabaseTupleSet = new DatabaseTuple[source.DatabaseTupleSet.length];
+            for (int i = 0; i < source.DatabaseTupleSet.length; i++) {
+                this.DatabaseTupleSet[i] = new DatabaseTuple(source.DatabaseTupleSet[i]);
+            }
+        }
+        if (source.PublishSubscribeName != null) {
+            this.PublishSubscribeName = new String(source.PublishSubscribeName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -68,6 +68,23 @@ public class Configuration extends AbstractModel{
         this.Properties = Properties;
     }
 
+    public Configuration() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Configuration(Configuration source) {
+        if (source.Classification != null) {
+            this.Classification = new String(source.Classification);
+        }
+        if (source.Properties != null) {
+            this.Properties = new String(source.Properties);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

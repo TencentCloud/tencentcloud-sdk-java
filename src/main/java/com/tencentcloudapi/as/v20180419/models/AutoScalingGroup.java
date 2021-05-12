@@ -630,6 +630,113 @@ public class AutoScalingGroup extends AbstractModel{
         this.MultiZoneSubnetPolicy = MultiZoneSubnetPolicy;
     }
 
+    public AutoScalingGroup() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AutoScalingGroup(AutoScalingGroup source) {
+        if (source.AutoScalingGroupId != null) {
+            this.AutoScalingGroupId = new String(source.AutoScalingGroupId);
+        }
+        if (source.AutoScalingGroupName != null) {
+            this.AutoScalingGroupName = new String(source.AutoScalingGroupName);
+        }
+        if (source.AutoScalingGroupStatus != null) {
+            this.AutoScalingGroupStatus = new String(source.AutoScalingGroupStatus);
+        }
+        if (source.CreatedTime != null) {
+            this.CreatedTime = new String(source.CreatedTime);
+        }
+        if (source.DefaultCooldown != null) {
+            this.DefaultCooldown = new Long(source.DefaultCooldown);
+        }
+        if (source.DesiredCapacity != null) {
+            this.DesiredCapacity = new Long(source.DesiredCapacity);
+        }
+        if (source.EnabledStatus != null) {
+            this.EnabledStatus = new String(source.EnabledStatus);
+        }
+        if (source.ForwardLoadBalancerSet != null) {
+            this.ForwardLoadBalancerSet = new ForwardLoadBalancer[source.ForwardLoadBalancerSet.length];
+            for (int i = 0; i < source.ForwardLoadBalancerSet.length; i++) {
+                this.ForwardLoadBalancerSet[i] = new ForwardLoadBalancer(source.ForwardLoadBalancerSet[i]);
+            }
+        }
+        if (source.InstanceCount != null) {
+            this.InstanceCount = new Long(source.InstanceCount);
+        }
+        if (source.InServiceInstanceCount != null) {
+            this.InServiceInstanceCount = new Long(source.InServiceInstanceCount);
+        }
+        if (source.LaunchConfigurationId != null) {
+            this.LaunchConfigurationId = new String(source.LaunchConfigurationId);
+        }
+        if (source.LaunchConfigurationName != null) {
+            this.LaunchConfigurationName = new String(source.LaunchConfigurationName);
+        }
+        if (source.LoadBalancerIdSet != null) {
+            this.LoadBalancerIdSet = new String[source.LoadBalancerIdSet.length];
+            for (int i = 0; i < source.LoadBalancerIdSet.length; i++) {
+                this.LoadBalancerIdSet[i] = new String(source.LoadBalancerIdSet[i]);
+            }
+        }
+        if (source.MaxSize != null) {
+            this.MaxSize = new Long(source.MaxSize);
+        }
+        if (source.MinSize != null) {
+            this.MinSize = new Long(source.MinSize);
+        }
+        if (source.ProjectId != null) {
+            this.ProjectId = new Long(source.ProjectId);
+        }
+        if (source.SubnetIdSet != null) {
+            this.SubnetIdSet = new String[source.SubnetIdSet.length];
+            for (int i = 0; i < source.SubnetIdSet.length; i++) {
+                this.SubnetIdSet[i] = new String(source.SubnetIdSet[i]);
+            }
+        }
+        if (source.TerminationPolicySet != null) {
+            this.TerminationPolicySet = new String[source.TerminationPolicySet.length];
+            for (int i = 0; i < source.TerminationPolicySet.length; i++) {
+                this.TerminationPolicySet[i] = new String(source.TerminationPolicySet[i]);
+            }
+        }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.ZoneSet != null) {
+            this.ZoneSet = new String[source.ZoneSet.length];
+            for (int i = 0; i < source.ZoneSet.length; i++) {
+                this.ZoneSet[i] = new String(source.ZoneSet[i]);
+            }
+        }
+        if (source.RetryPolicy != null) {
+            this.RetryPolicy = new String(source.RetryPolicy);
+        }
+        if (source.InActivityStatus != null) {
+            this.InActivityStatus = new String(source.InActivityStatus);
+        }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
+        if (source.ServiceSettings != null) {
+            this.ServiceSettings = new ServiceSettings(source.ServiceSettings);
+        }
+        if (source.Ipv6AddressCount != null) {
+            this.Ipv6AddressCount = new Long(source.Ipv6AddressCount);
+        }
+        if (source.MultiZoneSubnetPolicy != null) {
+            this.MultiZoneSubnetPolicy = new String(source.MultiZoneSubnetPolicy);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

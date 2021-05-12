@@ -45,6 +45,20 @@ public class RunTaskRequest extends AbstractModel{
         this.TaskId = TaskId;
     }
 
+    public RunTaskRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RunTaskRequest(RunTaskRequest source) {
+        if (source.TaskId != null) {
+            this.TaskId = new Long(source.TaskId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

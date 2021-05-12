@@ -203,6 +203,47 @@ public class ServiceStatus extends AbstractModel{
         this.ReplicaInfos = ReplicaInfos;
     }
 
+    public ServiceStatus() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ServiceStatus(ServiceStatus source) {
+        if (source.DesiredReplicas != null) {
+            this.DesiredReplicas = new Long(source.DesiredReplicas);
+        }
+        if (source.CurrentReplicas != null) {
+            this.CurrentReplicas = new Long(source.CurrentReplicas);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.Conditions != null) {
+            this.Conditions = new Conditions[source.Conditions.length];
+            for (int i = 0; i < source.Conditions.length; i++) {
+                this.Conditions[i] = new Conditions(source.Conditions[i]);
+            }
+        }
+        if (source.Replicas != null) {
+            this.Replicas = new String[source.Replicas.length];
+            for (int i = 0; i < source.Replicas.length; i++) {
+                this.Replicas[i] = new String(source.Replicas[i]);
+            }
+        }
+        if (source.Message != null) {
+            this.Message = new String(source.Message);
+        }
+        if (source.ReplicaInfos != null) {
+            this.ReplicaInfos = new ReplicaInfo[source.ReplicaInfos.length];
+            for (int i = 0; i < source.ReplicaInfos.length; i++) {
+                this.ReplicaInfos[i] = new ReplicaInfo(source.ReplicaInfos[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

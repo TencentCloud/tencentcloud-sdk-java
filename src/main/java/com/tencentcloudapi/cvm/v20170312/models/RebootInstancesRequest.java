@@ -91,6 +91,29 @@ public class RebootInstancesRequest extends AbstractModel{
         this.StopType = StopType;
     }
 
+    public RebootInstancesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RebootInstancesRequest(RebootInstancesRequest source) {
+        if (source.InstanceIds != null) {
+            this.InstanceIds = new String[source.InstanceIds.length];
+            for (int i = 0; i < source.InstanceIds.length; i++) {
+                this.InstanceIds[i] = new String(source.InstanceIds[i]);
+            }
+        }
+        if (source.ForceReboot != null) {
+            this.ForceReboot = new Boolean(source.ForceReboot);
+        }
+        if (source.StopType != null) {
+            this.StopType = new String(source.StopType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

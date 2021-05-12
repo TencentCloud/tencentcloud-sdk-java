@@ -45,6 +45,23 @@ public class TakeMusicOffShelvesRequest extends AbstractModel{
         this.TakeMusicOffShelves = TakeMusicOffShelves;
     }
 
+    public TakeMusicOffShelvesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TakeMusicOffShelvesRequest(TakeMusicOffShelvesRequest source) {
+        if (source.TakeMusicOffShelves != null) {
+            this.TakeMusicOffShelves = new TakeMusicOffShelves[source.TakeMusicOffShelves.length];
+            for (int i = 0; i < source.TakeMusicOffShelves.length; i++) {
+                this.TakeMusicOffShelves[i] = new TakeMusicOffShelves(source.TakeMusicOffShelves[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

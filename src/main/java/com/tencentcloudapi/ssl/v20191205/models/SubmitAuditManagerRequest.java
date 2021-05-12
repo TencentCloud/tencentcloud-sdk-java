@@ -45,6 +45,20 @@ public class SubmitAuditManagerRequest extends AbstractModel{
         this.ManagerId = ManagerId;
     }
 
+    public SubmitAuditManagerRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SubmitAuditManagerRequest(SubmitAuditManagerRequest source) {
+        if (source.ManagerId != null) {
+            this.ManagerId = new Long(source.ManagerId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

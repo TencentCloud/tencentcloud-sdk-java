@@ -91,6 +91,29 @@ public class DeleteClusterNodePoolRequest extends AbstractModel{
         this.KeepInstance = KeepInstance;
     }
 
+    public DeleteClusterNodePoolRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteClusterNodePoolRequest(DeleteClusterNodePoolRequest source) {
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
+        if (source.NodePoolIds != null) {
+            this.NodePoolIds = new String[source.NodePoolIds.length];
+            for (int i = 0; i < source.NodePoolIds.length; i++) {
+                this.NodePoolIds[i] = new String(source.NodePoolIds[i]);
+            }
+        }
+        if (source.KeepInstance != null) {
+            this.KeepInstance = new Boolean(source.KeepInstance);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

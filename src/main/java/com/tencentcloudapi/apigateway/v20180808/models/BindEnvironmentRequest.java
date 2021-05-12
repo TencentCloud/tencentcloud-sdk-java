@@ -137,6 +137,38 @@ public class BindEnvironmentRequest extends AbstractModel{
         this.ApiIds = ApiIds;
     }
 
+    public BindEnvironmentRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public BindEnvironmentRequest(BindEnvironmentRequest source) {
+        if (source.UsagePlanIds != null) {
+            this.UsagePlanIds = new String[source.UsagePlanIds.length];
+            for (int i = 0; i < source.UsagePlanIds.length; i++) {
+                this.UsagePlanIds[i] = new String(source.UsagePlanIds[i]);
+            }
+        }
+        if (source.BindType != null) {
+            this.BindType = new String(source.BindType);
+        }
+        if (source.Environment != null) {
+            this.Environment = new String(source.Environment);
+        }
+        if (source.ServiceId != null) {
+            this.ServiceId = new String(source.ServiceId);
+        }
+        if (source.ApiIds != null) {
+            this.ApiIds = new String[source.ApiIds.length];
+            for (int i = 0; i < source.ApiIds.length; i++) {
+                this.ApiIds[i] = new String(source.ApiIds[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

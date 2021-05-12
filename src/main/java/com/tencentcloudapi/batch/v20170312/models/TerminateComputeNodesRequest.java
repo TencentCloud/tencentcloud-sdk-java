@@ -68,6 +68,26 @@ public class TerminateComputeNodesRequest extends AbstractModel{
         this.ComputeNodeIds = ComputeNodeIds;
     }
 
+    public TerminateComputeNodesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TerminateComputeNodesRequest(TerminateComputeNodesRequest source) {
+        if (source.EnvId != null) {
+            this.EnvId = new String(source.EnvId);
+        }
+        if (source.ComputeNodeIds != null) {
+            this.ComputeNodeIds = new String[source.ComputeNodeIds.length];
+            for (int i = 0; i < source.ComputeNodeIds.length; i++) {
+                this.ComputeNodeIds[i] = new String(source.ComputeNodeIds[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

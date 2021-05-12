@@ -91,6 +91,29 @@ public class BusInvoiceOCRResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public BusInvoiceOCRResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public BusInvoiceOCRResponse(BusInvoiceOCRResponse source) {
+        if (source.BusInvoiceInfos != null) {
+            this.BusInvoiceInfos = new BusInvoiceInfo[source.BusInvoiceInfos.length];
+            for (int i = 0; i < source.BusInvoiceInfos.length; i++) {
+                this.BusInvoiceInfos[i] = new BusInvoiceInfo(source.BusInvoiceInfos[i]);
+            }
+        }
+        if (source.Angle != null) {
+            this.Angle = new Float(source.Angle);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

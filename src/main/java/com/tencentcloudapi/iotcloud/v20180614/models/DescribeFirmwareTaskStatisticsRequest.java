@@ -68,6 +68,23 @@ public class DescribeFirmwareTaskStatisticsRequest extends AbstractModel{
         this.FirmwareVersion = FirmwareVersion;
     }
 
+    public DescribeFirmwareTaskStatisticsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeFirmwareTaskStatisticsRequest(DescribeFirmwareTaskStatisticsRequest source) {
+        if (source.ProductID != null) {
+            this.ProductID = new String(source.ProductID);
+        }
+        if (source.FirmwareVersion != null) {
+            this.FirmwareVersion = new String(source.FirmwareVersion);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

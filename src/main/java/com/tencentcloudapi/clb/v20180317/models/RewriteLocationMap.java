@@ -137,6 +137,32 @@ public class RewriteLocationMap extends AbstractModel{
         this.SourceDomain = SourceDomain;
     }
 
+    public RewriteLocationMap() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RewriteLocationMap(RewriteLocationMap source) {
+        if (source.SourceLocationId != null) {
+            this.SourceLocationId = new String(source.SourceLocationId);
+        }
+        if (source.TargetLocationId != null) {
+            this.TargetLocationId = new String(source.TargetLocationId);
+        }
+        if (source.RewriteCode != null) {
+            this.RewriteCode = new Long(source.RewriteCode);
+        }
+        if (source.TakeUrl != null) {
+            this.TakeUrl = new Boolean(source.TakeUrl);
+        }
+        if (source.SourceDomain != null) {
+            this.SourceDomain = new String(source.SourceDomain);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

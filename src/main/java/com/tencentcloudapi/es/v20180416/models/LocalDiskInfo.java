@@ -91,6 +91,26 @@ public class LocalDiskInfo extends AbstractModel{
         this.LocalDiskCount = LocalDiskCount;
     }
 
+    public LocalDiskInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public LocalDiskInfo(LocalDiskInfo source) {
+        if (source.LocalDiskType != null) {
+            this.LocalDiskType = new String(source.LocalDiskType);
+        }
+        if (source.LocalDiskSize != null) {
+            this.LocalDiskSize = new Long(source.LocalDiskSize);
+        }
+        if (source.LocalDiskCount != null) {
+            this.LocalDiskCount = new Long(source.LocalDiskCount);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

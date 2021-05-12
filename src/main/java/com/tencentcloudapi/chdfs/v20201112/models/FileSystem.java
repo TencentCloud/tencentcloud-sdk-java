@@ -275,6 +275,53 @@ public class FileSystem extends AbstractModel{
         this.PosixAcl = PosixAcl;
     }
 
+    public FileSystem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public FileSystem(FileSystem source) {
+        if (source.AppId != null) {
+            this.AppId = new Long(source.AppId);
+        }
+        if (source.FileSystemName != null) {
+            this.FileSystemName = new String(source.FileSystemName);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.Region != null) {
+            this.Region = new String(source.Region);
+        }
+        if (source.FileSystemId != null) {
+            this.FileSystemId = new String(source.FileSystemId);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.BlockSize != null) {
+            this.BlockSize = new Long(source.BlockSize);
+        }
+        if (source.CapacityQuota != null) {
+            this.CapacityQuota = new Long(source.CapacityQuota);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.SuperUsers != null) {
+            this.SuperUsers = new String[source.SuperUsers.length];
+            for (int i = 0; i < source.SuperUsers.length; i++) {
+                this.SuperUsers[i] = new String(source.SuperUsers[i]);
+            }
+        }
+        if (source.PosixAcl != null) {
+            this.PosixAcl = new Boolean(source.PosixAcl);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

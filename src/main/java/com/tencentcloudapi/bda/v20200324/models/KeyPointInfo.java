@@ -91,6 +91,26 @@ public class KeyPointInfo extends AbstractModel{
         this.Y = Y;
     }
 
+    public KeyPointInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public KeyPointInfo(KeyPointInfo source) {
+        if (source.KeyPointType != null) {
+            this.KeyPointType = new String(source.KeyPointType);
+        }
+        if (source.X != null) {
+            this.X = new Float(source.X);
+        }
+        if (source.Y != null) {
+            this.Y = new Float(source.Y);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -91,6 +91,26 @@ public class UpdateRoleConsoleLoginRequest extends AbstractModel{
         this.RoleName = RoleName;
     }
 
+    public UpdateRoleConsoleLoginRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UpdateRoleConsoleLoginRequest(UpdateRoleConsoleLoginRequest source) {
+        if (source.ConsoleLogin != null) {
+            this.ConsoleLogin = new Long(source.ConsoleLogin);
+        }
+        if (source.RoleId != null) {
+            this.RoleId = new Long(source.RoleId);
+        }
+        if (source.RoleName != null) {
+            this.RoleName = new String(source.RoleName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

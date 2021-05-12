@@ -68,6 +68,23 @@ public class InternetChargeTypeConfig extends AbstractModel{
         this.Description = Description;
     }
 
+    public InternetChargeTypeConfig() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public InternetChargeTypeConfig(InternetChargeTypeConfig source) {
+        if (source.InternetChargeType != null) {
+            this.InternetChargeType = new String(source.InternetChargeType);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

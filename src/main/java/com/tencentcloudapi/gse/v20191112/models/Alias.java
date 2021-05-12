@@ -216,6 +216,44 @@ public class Alias extends AbstractModel{
         this.Tags = Tags;
     }
 
+    public Alias() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Alias(Alias source) {
+        if (source.AliasId != null) {
+            this.AliasId = new String(source.AliasId);
+        }
+        if (source.AliasArn != null) {
+            this.AliasArn = new String(source.AliasArn);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.RoutingStrategy != null) {
+            this.RoutingStrategy = new RoutingStrategy(source.RoutingStrategy);
+        }
+        if (source.CreationTime != null) {
+            this.CreationTime = new String(source.CreationTime);
+        }
+        if (source.LastUpdatedTime != null) {
+            this.LastUpdatedTime = new String(source.LastUpdatedTime);
+        }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

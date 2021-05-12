@@ -68,6 +68,23 @@ public class ModifyDiskExtraPerformanceRequest extends AbstractModel{
         this.ThroughputPerformance = ThroughputPerformance;
     }
 
+    public ModifyDiskExtraPerformanceRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyDiskExtraPerformanceRequest(ModifyDiskExtraPerformanceRequest source) {
+        if (source.DiskId != null) {
+            this.DiskId = new String(source.DiskId);
+        }
+        if (source.ThroughputPerformance != null) {
+            this.ThroughputPerformance = new Long(source.ThroughputPerformance);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

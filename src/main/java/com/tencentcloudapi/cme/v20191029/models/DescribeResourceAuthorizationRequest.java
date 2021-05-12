@@ -114,6 +114,29 @@ public class DescribeResourceAuthorizationRequest extends AbstractModel{
         this.Operator = Operator;
     }
 
+    public DescribeResourceAuthorizationRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeResourceAuthorizationRequest(DescribeResourceAuthorizationRequest source) {
+        if (source.Platform != null) {
+            this.Platform = new String(source.Platform);
+        }
+        if (source.Owner != null) {
+            this.Owner = new Entity(source.Owner);
+        }
+        if (source.Resource != null) {
+            this.Resource = new Resource(source.Resource);
+        }
+        if (source.Operator != null) {
+            this.Operator = new String(source.Operator);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

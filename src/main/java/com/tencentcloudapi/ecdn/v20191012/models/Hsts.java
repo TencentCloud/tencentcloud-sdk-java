@@ -101,6 +101,26 @@ public class Hsts extends AbstractModel{
         this.IncludeSubDomains = IncludeSubDomains;
     }
 
+    public Hsts() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Hsts(Hsts source) {
+        if (source.Switch != null) {
+            this.Switch = new String(source.Switch);
+        }
+        if (source.MaxAge != null) {
+            this.MaxAge = new Long(source.MaxAge);
+        }
+        if (source.IncludeSubDomains != null) {
+            this.IncludeSubDomains = new String(source.IncludeSubDomains);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

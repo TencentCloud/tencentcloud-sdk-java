@@ -165,6 +165,35 @@ public class DescribeAuditPoliciesRequest extends AbstractModel{
         this.RuleId = RuleId;
     }
 
+    public DescribeAuditPoliciesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeAuditPoliciesRequest(DescribeAuditPoliciesRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.PolicyId != null) {
+            this.PolicyId = new String(source.PolicyId);
+        }
+        if (source.PolicyName != null) {
+            this.PolicyName = new String(source.PolicyName);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.RuleId != null) {
+            this.RuleId = new String(source.RuleId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

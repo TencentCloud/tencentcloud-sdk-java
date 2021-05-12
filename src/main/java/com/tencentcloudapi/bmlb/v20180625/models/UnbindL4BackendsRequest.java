@@ -114,6 +114,32 @@ public class UnbindL4BackendsRequest extends AbstractModel{
         this.BindType = BindType;
     }
 
+    public UnbindL4BackendsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UnbindL4BackendsRequest(UnbindL4BackendsRequest source) {
+        if (source.LoadBalancerId != null) {
+            this.LoadBalancerId = new String(source.LoadBalancerId);
+        }
+        if (source.ListenerId != null) {
+            this.ListenerId = new String(source.ListenerId);
+        }
+        if (source.BackendSet != null) {
+            this.BackendSet = new UnbindL4Backend[source.BackendSet.length];
+            for (int i = 0; i < source.BackendSet.length; i++) {
+                this.BackendSet[i] = new UnbindL4Backend(source.BackendSet[i]);
+            }
+        }
+        if (source.BindType != null) {
+            this.BindType = new Long(source.BindType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

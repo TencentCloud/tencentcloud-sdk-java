@@ -119,6 +119,32 @@ public class DescribeDirectConnectsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeDirectConnectsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeDirectConnectsResponse(DescribeDirectConnectsResponse source) {
+        if (source.DirectConnectSet != null) {
+            this.DirectConnectSet = new DirectConnect[source.DirectConnectSet.length];
+            for (int i = 0; i < source.DirectConnectSet.length; i++) {
+                this.DirectConnectSet[i] = new DirectConnect(source.DirectConnectSet[i]);
+            }
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.AllSignLaw != null) {
+            this.AllSignLaw = new Boolean(source.AllSignLaw);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

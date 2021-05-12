@@ -68,6 +68,23 @@ public class DeleteSuperPlayerConfigRequest extends AbstractModel{
         this.SubAppId = SubAppId;
     }
 
+    public DeleteSuperPlayerConfigRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteSuperPlayerConfigRequest(DeleteSuperPlayerConfigRequest source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.SubAppId != null) {
+            this.SubAppId = new Long(source.SubAppId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

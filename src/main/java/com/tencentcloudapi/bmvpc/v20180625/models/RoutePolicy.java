@@ -238,6 +238,38 @@ CCN：云联网路由，系统默认下发，不可编辑与删除。
         this.Enabled = Enabled;
     }
 
+    public RoutePolicy() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RoutePolicy(RoutePolicy source) {
+        if (source.DestinationCidrBlock != null) {
+            this.DestinationCidrBlock = new String(source.DestinationCidrBlock);
+        }
+        if (source.GatewayType != null) {
+            this.GatewayType = new String(source.GatewayType);
+        }
+        if (source.GatewayId != null) {
+            this.GatewayId = new String(source.GatewayId);
+        }
+        if (source.RouteDescription != null) {
+            this.RouteDescription = new String(source.RouteDescription);
+        }
+        if (source.RoutePolicyId != null) {
+            this.RoutePolicyId = new String(source.RoutePolicyId);
+        }
+        if (source.RoutePolicyType != null) {
+            this.RoutePolicyType = new String(source.RoutePolicyType);
+        }
+        if (source.Enabled != null) {
+            this.Enabled = new Boolean(source.Enabled);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

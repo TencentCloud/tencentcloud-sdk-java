@@ -45,6 +45,20 @@ public class CreatePrometheusTemplateRequest extends AbstractModel{
         this.Template = Template;
     }
 
+    public CreatePrometheusTemplateRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreatePrometheusTemplateRequest(CreatePrometheusTemplateRequest source) {
+        if (source.Template != null) {
+            this.Template = new PrometheusTemplate(source.Template);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

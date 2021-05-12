@@ -218,6 +218,38 @@ public class Acct extends AbstractModel{
         this.MaintenanceDate = MaintenanceDate;
     }
 
+    public Acct() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Acct(Acct source) {
+        if (source.SubAcctNo != null) {
+            this.SubAcctNo = new String(source.SubAcctNo);
+        }
+        if (source.SubAcctProperty != null) {
+            this.SubAcctProperty = new String(source.SubAcctProperty);
+        }
+        if (source.TranNetMemberCode != null) {
+            this.TranNetMemberCode = new String(source.TranNetMemberCode);
+        }
+        if (source.SubAcctName != null) {
+            this.SubAcctName = new String(source.SubAcctName);
+        }
+        if (source.AcctAvailBal != null) {
+            this.AcctAvailBal = new String(source.AcctAvailBal);
+        }
+        if (source.CashAmt != null) {
+            this.CashAmt = new String(source.CashAmt);
+        }
+        if (source.MaintenanceDate != null) {
+            this.MaintenanceDate = new String(source.MaintenanceDate);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -45,6 +45,23 @@ public class AiRecognitionTaskOcrWordsResultOutput extends AbstractModel{
         this.ResultSet = ResultSet;
     }
 
+    public AiRecognitionTaskOcrWordsResultOutput() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AiRecognitionTaskOcrWordsResultOutput(AiRecognitionTaskOcrWordsResultOutput source) {
+        if (source.ResultSet != null) {
+            this.ResultSet = new AiRecognitionTaskOcrWordsResultItem[source.ResultSet.length];
+            for (int i = 0; i < source.ResultSet.length; i++) {
+                this.ResultSet[i] = new AiRecognitionTaskOcrWordsResultItem(source.ResultSet[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

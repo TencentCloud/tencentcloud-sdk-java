@@ -45,6 +45,23 @@ public class InputKolBspData extends AbstractModel{
         this.DataList = DataList;
     }
 
+    public InputKolBspData() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public InputKolBspData(InputKolBspData source) {
+        if (source.DataList != null) {
+            this.DataList = new InputKolDataList[source.DataList.length];
+            for (int i = 0; i < source.DataList.length; i++) {
+                this.DataList[i] = new InputKolDataList(source.DataList[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

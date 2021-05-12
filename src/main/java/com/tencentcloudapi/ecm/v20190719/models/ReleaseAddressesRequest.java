@@ -68,6 +68,26 @@ public class ReleaseAddressesRequest extends AbstractModel{
         this.AddressIds = AddressIds;
     }
 
+    public ReleaseAddressesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ReleaseAddressesRequest(ReleaseAddressesRequest source) {
+        if (source.EcmRegion != null) {
+            this.EcmRegion = new String(source.EcmRegion);
+        }
+        if (source.AddressIds != null) {
+            this.AddressIds = new String[source.AddressIds.length];
+            for (int i = 0; i < source.AddressIds.length; i++) {
+                this.AddressIds[i] = new String(source.AddressIds[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

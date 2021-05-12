@@ -91,6 +91,29 @@ public class ModifyAlarmReceiversRequest extends AbstractModel{
         this.ReceiverInfos = ReceiverInfos;
     }
 
+    public ModifyAlarmReceiversRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyAlarmReceiversRequest(ModifyAlarmReceiversRequest source) {
+        if (source.GroupId != null) {
+            this.GroupId = new Long(source.GroupId);
+        }
+        if (source.Module != null) {
+            this.Module = new String(source.Module);
+        }
+        if (source.ReceiverInfos != null) {
+            this.ReceiverInfos = new ReceiverInfo[source.ReceiverInfos.length];
+            for (int i = 0; i < source.ReceiverInfos.length; i++) {
+                this.ReceiverInfos[i] = new ReceiverInfo(source.ReceiverInfos[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

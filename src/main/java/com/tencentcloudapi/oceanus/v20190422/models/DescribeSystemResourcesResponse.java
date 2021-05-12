@@ -91,6 +91,29 @@ public class DescribeSystemResourcesResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeSystemResourcesResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeSystemResourcesResponse(DescribeSystemResourcesResponse source) {
+        if (source.ResourceSet != null) {
+            this.ResourceSet = new SystemResourceItem[source.ResourceSet.length];
+            for (int i = 0; i < source.ResourceSet.length; i++) {
+                this.ResourceSet[i] = new SystemResourceItem(source.ResourceSet[i]);
+            }
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

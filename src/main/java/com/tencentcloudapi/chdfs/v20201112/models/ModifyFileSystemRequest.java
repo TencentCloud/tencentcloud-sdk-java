@@ -165,6 +165,38 @@ public class ModifyFileSystemRequest extends AbstractModel{
         this.PosixAcl = PosixAcl;
     }
 
+    public ModifyFileSystemRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyFileSystemRequest(ModifyFileSystemRequest source) {
+        if (source.FileSystemId != null) {
+            this.FileSystemId = new String(source.FileSystemId);
+        }
+        if (source.FileSystemName != null) {
+            this.FileSystemName = new String(source.FileSystemName);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.CapacityQuota != null) {
+            this.CapacityQuota = new Long(source.CapacityQuota);
+        }
+        if (source.SuperUsers != null) {
+            this.SuperUsers = new String[source.SuperUsers.length];
+            for (int i = 0; i < source.SuperUsers.length; i++) {
+                this.SuperUsers[i] = new String(source.SuperUsers[i]);
+            }
+        }
+        if (source.PosixAcl != null) {
+            this.PosixAcl = new Boolean(source.PosixAcl);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

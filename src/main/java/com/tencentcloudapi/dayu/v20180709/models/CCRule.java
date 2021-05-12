@@ -91,6 +91,26 @@ public class CCRule extends AbstractModel{
         this.Value = Value;
     }
 
+    public CCRule() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CCRule(CCRule source) {
+        if (source.Skey != null) {
+            this.Skey = new String(source.Skey);
+        }
+        if (source.Operator != null) {
+            this.Operator = new String(source.Operator);
+        }
+        if (source.Value != null) {
+            this.Value = new String(source.Value);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

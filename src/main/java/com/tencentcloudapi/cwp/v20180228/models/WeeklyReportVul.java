@@ -190,6 +190,35 @@ public class WeeklyReportVul extends AbstractModel{
         this.LastScanTime = LastScanTime;
     }
 
+    public WeeklyReportVul() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public WeeklyReportVul(WeeklyReportVul source) {
+        if (source.MachineIp != null) {
+            this.MachineIp = new String(source.MachineIp);
+        }
+        if (source.VulName != null) {
+            this.VulName = new String(source.VulName);
+        }
+        if (source.VulType != null) {
+            this.VulType = new String(source.VulType);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.VulStatus != null) {
+            this.VulStatus = new String(source.VulStatus);
+        }
+        if (source.LastScanTime != null) {
+            this.LastScanTime = new String(source.LastScanTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

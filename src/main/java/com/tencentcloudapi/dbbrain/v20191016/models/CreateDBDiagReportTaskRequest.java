@@ -183,6 +183,44 @@ public class CreateDBDiagReportTaskRequest extends AbstractModel{
         this.Product = Product;
     }
 
+    public CreateDBDiagReportTaskRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateDBDiagReportTaskRequest(CreateDBDiagReportTaskRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+        if (source.SendMailFlag != null) {
+            this.SendMailFlag = new Long(source.SendMailFlag);
+        }
+        if (source.ContactPerson != null) {
+            this.ContactPerson = new Long[source.ContactPerson.length];
+            for (int i = 0; i < source.ContactPerson.length; i++) {
+                this.ContactPerson[i] = new Long(source.ContactPerson[i]);
+            }
+        }
+        if (source.ContactGroup != null) {
+            this.ContactGroup = new Long[source.ContactGroup.length];
+            for (int i = 0; i < source.ContactGroup.length; i++) {
+                this.ContactGroup[i] = new Long(source.ContactGroup[i]);
+            }
+        }
+        if (source.Product != null) {
+            this.Product = new String(source.Product);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

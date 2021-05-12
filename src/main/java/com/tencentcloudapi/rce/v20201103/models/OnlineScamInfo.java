@@ -167,6 +167,32 @@ public class OnlineScamInfo extends AbstractModel{
         this.FraudAccount = FraudAccount;
     }
 
+    public OnlineScamInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public OnlineScamInfo(OnlineScamInfo source) {
+        if (source.ContentLabel != null) {
+            this.ContentLabel = new String(source.ContentLabel);
+        }
+        if (source.ContentRiskLevel != null) {
+            this.ContentRiskLevel = new Long(source.ContentRiskLevel);
+        }
+        if (source.ContentType != null) {
+            this.ContentType = new Long(source.ContentType);
+        }
+        if (source.FraudType != null) {
+            this.FraudType = new Long(source.FraudType);
+        }
+        if (source.FraudAccount != null) {
+            this.FraudAccount = new String(source.FraudAccount);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -119,6 +119,32 @@ public class QualityData extends AbstractModel{
         this.DataType = DataType;
     }
 
+    public QualityData() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public QualityData(QualityData source) {
+        if (source.Content != null) {
+            this.Content = new TimeValue[source.Content.length];
+            for (int i = 0; i < source.Content.length; i++) {
+                this.Content[i] = new TimeValue(source.Content[i]);
+            }
+        }
+        if (source.UserId != null) {
+            this.UserId = new String(source.UserId);
+        }
+        if (source.PeerId != null) {
+            this.PeerId = new String(source.PeerId);
+        }
+        if (source.DataType != null) {
+            this.DataType = new String(source.DataType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -137,6 +137,32 @@ public class ProductQuota extends AbstractModel{
         this.QuotaRegion = QuotaRegion;
     }
 
+    public ProductQuota() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ProductQuota(ProductQuota source) {
+        if (source.QuotaId != null) {
+            this.QuotaId = new String(source.QuotaId);
+        }
+        if (source.QuotaName != null) {
+            this.QuotaName = new String(source.QuotaName);
+        }
+        if (source.QuotaCurrent != null) {
+            this.QuotaCurrent = new Long(source.QuotaCurrent);
+        }
+        if (source.QuotaLimit != null) {
+            this.QuotaLimit = new Long(source.QuotaLimit);
+        }
+        if (source.QuotaRegion != null) {
+            this.QuotaRegion = new Boolean(source.QuotaRegion);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

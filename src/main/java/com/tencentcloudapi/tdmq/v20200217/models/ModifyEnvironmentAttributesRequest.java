@@ -114,6 +114,29 @@ public class ModifyEnvironmentAttributesRequest extends AbstractModel{
         this.ClusterId = ClusterId;
     }
 
+    public ModifyEnvironmentAttributesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyEnvironmentAttributesRequest(ModifyEnvironmentAttributesRequest source) {
+        if (source.EnvironmentId != null) {
+            this.EnvironmentId = new String(source.EnvironmentId);
+        }
+        if (source.MsgTTL != null) {
+            this.MsgTTL = new Long(source.MsgTTL);
+        }
+        if (source.Remark != null) {
+            this.Remark = new String(source.Remark);
+        }
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

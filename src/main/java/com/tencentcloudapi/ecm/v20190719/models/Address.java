@@ -420,6 +420,65 @@ public class Address extends AbstractModel{
         this.PayMode = PayMode;
     }
 
+    public Address() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Address(Address source) {
+        if (source.AddressId != null) {
+            this.AddressId = new String(source.AddressId);
+        }
+        if (source.AddressName != null) {
+            this.AddressName = new String(source.AddressName);
+        }
+        if (source.AddressStatus != null) {
+            this.AddressStatus = new String(source.AddressStatus);
+        }
+        if (source.AddressIp != null) {
+            this.AddressIp = new String(source.AddressIp);
+        }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.CreatedTime != null) {
+            this.CreatedTime = new String(source.CreatedTime);
+        }
+        if (source.NetworkInterfaceId != null) {
+            this.NetworkInterfaceId = new String(source.NetworkInterfaceId);
+        }
+        if (source.PrivateAddressIp != null) {
+            this.PrivateAddressIp = new String(source.PrivateAddressIp);
+        }
+        if (source.IsArrears != null) {
+            this.IsArrears = new Boolean(source.IsArrears);
+        }
+        if (source.IsBlocked != null) {
+            this.IsBlocked = new Boolean(source.IsBlocked);
+        }
+        if (source.IsEipDirectConnection != null) {
+            this.IsEipDirectConnection = new Boolean(source.IsEipDirectConnection);
+        }
+        if (source.AddressType != null) {
+            this.AddressType = new String(source.AddressType);
+        }
+        if (source.CascadeRelease != null) {
+            this.CascadeRelease = new Boolean(source.CascadeRelease);
+        }
+        if (source.InternetServiceProvider != null) {
+            this.InternetServiceProvider = new String(source.InternetServiceProvider);
+        }
+        if (source.Bandwidth != null) {
+            this.Bandwidth = new Long(source.Bandwidth);
+        }
+        if (source.PayMode != null) {
+            this.PayMode = new String(source.PayMode);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

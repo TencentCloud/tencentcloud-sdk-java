@@ -45,6 +45,23 @@ public class DeleteBlueprintsRequest extends AbstractModel{
         this.BlueprintIds = BlueprintIds;
     }
 
+    public DeleteBlueprintsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteBlueprintsRequest(DeleteBlueprintsRequest source) {
+        if (source.BlueprintIds != null) {
+            this.BlueprintIds = new String[source.BlueprintIds.length];
+            for (int i = 0; i < source.BlueprintIds.length; i++) {
+                this.BlueprintIds[i] = new String(source.BlueprintIds[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

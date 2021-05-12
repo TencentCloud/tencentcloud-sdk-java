@@ -73,6 +73,26 @@ public class Assignment extends AbstractModel{
         this.Topics = Topics;
     }
 
+    public Assignment() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Assignment(Assignment source) {
+        if (source.Version != null) {
+            this.Version = new Long(source.Version);
+        }
+        if (source.Topics != null) {
+            this.Topics = new GroupInfoTopics[source.Topics.length];
+            for (int i = 0; i < source.Topics.length; i++) {
+                this.Topics[i] = new GroupInfoTopics(source.Topics[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

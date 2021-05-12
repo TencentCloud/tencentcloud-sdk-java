@@ -129,6 +129,29 @@ public class SearchTraceRequest extends AbstractModel{
         this.TraceMatchThreshold = TraceMatchThreshold;
     }
 
+    public SearchTraceRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SearchTraceRequest(SearchTraceRequest source) {
+        if (source.GroupId != null) {
+            this.GroupId = new String(source.GroupId);
+        }
+        if (source.Trace != null) {
+            this.Trace = new Trace(source.Trace);
+        }
+        if (source.MaxPersonNum != null) {
+            this.MaxPersonNum = new Long(source.MaxPersonNum);
+        }
+        if (source.TraceMatchThreshold != null) {
+            this.TraceMatchThreshold = new Float(source.TraceMatchThreshold);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

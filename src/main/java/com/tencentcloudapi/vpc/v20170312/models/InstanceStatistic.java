@@ -68,6 +68,23 @@ public class InstanceStatistic extends AbstractModel{
         this.InstanceCount = InstanceCount;
     }
 
+    public InstanceStatistic() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public InstanceStatistic(InstanceStatistic source) {
+        if (source.InstanceType != null) {
+            this.InstanceType = new String(source.InstanceType);
+        }
+        if (source.InstanceCount != null) {
+            this.InstanceCount = new Long(source.InstanceCount);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

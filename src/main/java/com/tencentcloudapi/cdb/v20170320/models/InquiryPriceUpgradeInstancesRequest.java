@@ -183,6 +183,38 @@ public class InquiryPriceUpgradeInstancesRequest extends AbstractModel{
         this.InstanceNodes = InstanceNodes;
     }
 
+    public InquiryPriceUpgradeInstancesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public InquiryPriceUpgradeInstancesRequest(InquiryPriceUpgradeInstancesRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.Memory != null) {
+            this.Memory = new Long(source.Memory);
+        }
+        if (source.Volume != null) {
+            this.Volume = new Long(source.Volume);
+        }
+        if (source.Cpu != null) {
+            this.Cpu = new Long(source.Cpu);
+        }
+        if (source.ProtectMode != null) {
+            this.ProtectMode = new Long(source.ProtectMode);
+        }
+        if (source.DeviceType != null) {
+            this.DeviceType = new String(source.DeviceType);
+        }
+        if (source.InstanceNodes != null) {
+            this.InstanceNodes = new Long(source.InstanceNodes);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

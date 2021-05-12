@@ -68,6 +68,23 @@ public class IntervalTime extends AbstractModel{
         this.StartTime = StartTime;
     }
 
+    public IntervalTime() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public IntervalTime(IntervalTime source) {
+        if (source.Interval != null) {
+            this.Interval = new Long(source.Interval);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new Long(source.StartTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

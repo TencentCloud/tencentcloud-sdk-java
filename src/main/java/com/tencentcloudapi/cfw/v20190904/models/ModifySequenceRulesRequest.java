@@ -114,6 +114,32 @@ public class ModifySequenceRulesRequest extends AbstractModel{
         this.Direction = Direction;
     }
 
+    public ModifySequenceRulesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifySequenceRulesRequest(ModifySequenceRulesRequest source) {
+        if (source.EdgeId != null) {
+            this.EdgeId = new String(source.EdgeId);
+        }
+        if (source.Data != null) {
+            this.Data = new SequenceData[source.Data.length];
+            for (int i = 0; i < source.Data.length; i++) {
+                this.Data[i] = new SequenceData(source.Data[i]);
+            }
+        }
+        if (source.Area != null) {
+            this.Area = new String(source.Area);
+        }
+        if (source.Direction != null) {
+            this.Direction = new Long(source.Direction);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -91,6 +91,29 @@ public class DescribeDCDBInstancesResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeDCDBInstancesResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeDCDBInstancesResponse(DescribeDCDBInstancesResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.Instances != null) {
+            this.Instances = new DCDBInstanceInfo[source.Instances.length];
+            for (int i = 0; i < source.Instances.length; i++) {
+                this.Instances[i] = new DCDBInstanceInfo(source.Instances[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

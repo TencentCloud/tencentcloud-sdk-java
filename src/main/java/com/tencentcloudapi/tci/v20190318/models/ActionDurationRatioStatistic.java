@@ -68,6 +68,23 @@ public class ActionDurationRatioStatistic extends AbstractModel{
         this.Ratio = Ratio;
     }
 
+    public ActionDurationRatioStatistic() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ActionDurationRatioStatistic(ActionDurationRatioStatistic source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Ratio != null) {
+            this.Ratio = new Float(source.Ratio);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

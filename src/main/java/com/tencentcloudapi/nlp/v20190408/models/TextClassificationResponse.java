@@ -68,6 +68,26 @@ public class TextClassificationResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public TextClassificationResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TextClassificationResponse(TextClassificationResponse source) {
+        if (source.Classes != null) {
+            this.Classes = new ClassificationResult[source.Classes.length];
+            for (int i = 0; i < source.Classes.length; i++) {
+                this.Classes[i] = new ClassificationResult(source.Classes[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

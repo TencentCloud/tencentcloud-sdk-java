@@ -73,6 +73,26 @@ public class DescribeDictResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeDictResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeDictResponse(DescribeDictResponse source) {
+        if (source.Dicts != null) {
+            this.Dicts = new DictInfo[source.Dicts.length];
+            for (int i = 0; i < source.Dicts.length; i++) {
+                this.Dicts[i] = new DictInfo(source.Dicts[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

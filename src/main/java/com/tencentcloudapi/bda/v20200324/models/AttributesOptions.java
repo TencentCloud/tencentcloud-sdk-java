@@ -160,6 +160,35 @@ public class AttributesOptions extends AbstractModel{
         this.LowerBodyCloth = LowerBodyCloth;
     }
 
+    public AttributesOptions() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AttributesOptions(AttributesOptions source) {
+        if (source.Age != null) {
+            this.Age = new Boolean(source.Age);
+        }
+        if (source.Bag != null) {
+            this.Bag = new Boolean(source.Bag);
+        }
+        if (source.Gender != null) {
+            this.Gender = new Boolean(source.Gender);
+        }
+        if (source.Orientation != null) {
+            this.Orientation = new Boolean(source.Orientation);
+        }
+        if (source.UpperBodyCloth != null) {
+            this.UpperBodyCloth = new Boolean(source.UpperBodyCloth);
+        }
+        if (source.LowerBodyCloth != null) {
+            this.LowerBodyCloth = new Boolean(source.LowerBodyCloth);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

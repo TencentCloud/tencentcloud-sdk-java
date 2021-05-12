@@ -137,6 +137,38 @@ public class VatInvoiceOCRResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public VatInvoiceOCRResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public VatInvoiceOCRResponse(VatInvoiceOCRResponse source) {
+        if (source.VatInvoiceInfos != null) {
+            this.VatInvoiceInfos = new TextVatInvoice[source.VatInvoiceInfos.length];
+            for (int i = 0; i < source.VatInvoiceInfos.length; i++) {
+                this.VatInvoiceInfos[i] = new TextVatInvoice(source.VatInvoiceInfos[i]);
+            }
+        }
+        if (source.Items != null) {
+            this.Items = new VatInvoiceItem[source.Items.length];
+            for (int i = 0; i < source.Items.length; i++) {
+                this.Items[i] = new VatInvoiceItem(source.Items[i]);
+            }
+        }
+        if (source.PdfPageSize != null) {
+            this.PdfPageSize = new Long(source.PdfPageSize);
+        }
+        if (source.Angle != null) {
+            this.Angle = new Float(source.Angle);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

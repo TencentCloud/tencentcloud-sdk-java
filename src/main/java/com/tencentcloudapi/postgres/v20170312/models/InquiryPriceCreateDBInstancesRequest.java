@@ -183,6 +183,38 @@ public class InquiryPriceCreateDBInstancesRequest extends AbstractModel{
         this.InstanceChargeType = InstanceChargeType;
     }
 
+    public InquiryPriceCreateDBInstancesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public InquiryPriceCreateDBInstancesRequest(InquiryPriceCreateDBInstancesRequest source) {
+        if (source.Zone != null) {
+            this.Zone = new String(source.Zone);
+        }
+        if (source.SpecCode != null) {
+            this.SpecCode = new String(source.SpecCode);
+        }
+        if (source.Storage != null) {
+            this.Storage = new Long(source.Storage);
+        }
+        if (source.InstanceCount != null) {
+            this.InstanceCount = new Long(source.InstanceCount);
+        }
+        if (source.Period != null) {
+            this.Period = new Long(source.Period);
+        }
+        if (source.Pid != null) {
+            this.Pid = new Long(source.Pid);
+        }
+        if (source.InstanceChargeType != null) {
+            this.InstanceChargeType = new String(source.InstanceChargeType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

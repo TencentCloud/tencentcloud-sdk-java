@@ -659,6 +659,95 @@ FAILED：表示操作失败
         this.OsName = OsName;
     }
 
+    public Instance() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Instance(Instance source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.BundleId != null) {
+            this.BundleId = new String(source.BundleId);
+        }
+        if (source.BlueprintId != null) {
+            this.BlueprintId = new String(source.BlueprintId);
+        }
+        if (source.CPU != null) {
+            this.CPU = new Long(source.CPU);
+        }
+        if (source.Memory != null) {
+            this.Memory = new Long(source.Memory);
+        }
+        if (source.InstanceName != null) {
+            this.InstanceName = new String(source.InstanceName);
+        }
+        if (source.InstanceChargeType != null) {
+            this.InstanceChargeType = new String(source.InstanceChargeType);
+        }
+        if (source.SystemDisk != null) {
+            this.SystemDisk = new SystemDisk(source.SystemDisk);
+        }
+        if (source.PrivateAddresses != null) {
+            this.PrivateAddresses = new String[source.PrivateAddresses.length];
+            for (int i = 0; i < source.PrivateAddresses.length; i++) {
+                this.PrivateAddresses[i] = new String(source.PrivateAddresses[i]);
+            }
+        }
+        if (source.PublicAddresses != null) {
+            this.PublicAddresses = new String[source.PublicAddresses.length];
+            for (int i = 0; i < source.PublicAddresses.length; i++) {
+                this.PublicAddresses[i] = new String(source.PublicAddresses[i]);
+            }
+        }
+        if (source.InternetAccessible != null) {
+            this.InternetAccessible = new InternetAccessible(source.InternetAccessible);
+        }
+        if (source.RenewFlag != null) {
+            this.RenewFlag = new String(source.RenewFlag);
+        }
+        if (source.LoginSettings != null) {
+            this.LoginSettings = new LoginSettings(source.LoginSettings);
+        }
+        if (source.InstanceState != null) {
+            this.InstanceState = new String(source.InstanceState);
+        }
+        if (source.Uuid != null) {
+            this.Uuid = new String(source.Uuid);
+        }
+        if (source.LatestOperation != null) {
+            this.LatestOperation = new String(source.LatestOperation);
+        }
+        if (source.LatestOperationState != null) {
+            this.LatestOperationState = new String(source.LatestOperationState);
+        }
+        if (source.LatestOperationRequestId != null) {
+            this.LatestOperationRequestId = new String(source.LatestOperationRequestId);
+        }
+        if (source.IsolatedTime != null) {
+            this.IsolatedTime = new String(source.IsolatedTime);
+        }
+        if (source.CreatedTime != null) {
+            this.CreatedTime = new String(source.CreatedTime);
+        }
+        if (source.ExpiredTime != null) {
+            this.ExpiredTime = new String(source.ExpiredTime);
+        }
+        if (source.PlatformType != null) {
+            this.PlatformType = new String(source.PlatformType);
+        }
+        if (source.Platform != null) {
+            this.Platform = new String(source.Platform);
+        }
+        if (source.OsName != null) {
+            this.OsName = new String(source.OsName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

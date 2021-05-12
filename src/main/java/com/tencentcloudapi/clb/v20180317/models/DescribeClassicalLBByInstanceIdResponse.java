@@ -68,6 +68,26 @@ public class DescribeClassicalLBByInstanceIdResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeClassicalLBByInstanceIdResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeClassicalLBByInstanceIdResponse(DescribeClassicalLBByInstanceIdResponse source) {
+        if (source.LoadBalancerInfoList != null) {
+            this.LoadBalancerInfoList = new ClassicalLoadBalancerInfo[source.LoadBalancerInfoList.length];
+            for (int i = 0; i < source.LoadBalancerInfoList.length; i++) {
+                this.LoadBalancerInfoList[i] = new ClassicalLoadBalancerInfo(source.LoadBalancerInfoList[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -114,6 +114,29 @@ public class DescribeWordItemsRequest extends AbstractModel{
         this.Text = Text;
     }
 
+    public DescribeWordItemsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeWordItemsRequest(DescribeWordItemsRequest source) {
+        if (source.DictId != null) {
+            this.DictId = new String(source.DictId);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.Text != null) {
+            this.Text = new String(source.Text);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

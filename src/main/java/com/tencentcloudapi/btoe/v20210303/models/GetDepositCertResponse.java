@@ -91,6 +91,26 @@ public class GetDepositCertResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public GetDepositCertResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GetDepositCertResponse(GetDepositCertResponse source) {
+        if (source.EvidenceId != null) {
+            this.EvidenceId = new String(source.EvidenceId);
+        }
+        if (source.EvidenceCert != null) {
+            this.EvidenceCert = new String(source.EvidenceCert);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

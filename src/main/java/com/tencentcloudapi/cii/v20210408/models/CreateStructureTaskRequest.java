@@ -172,6 +172,38 @@ AccidentInsurance：意外险
         this.InsuranceTypes = InsuranceTypes;
     }
 
+    public CreateStructureTaskRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateStructureTaskRequest(CreateStructureTaskRequest source) {
+        if (source.ServiceType != null) {
+            this.ServiceType = new String(source.ServiceType);
+        }
+        if (source.TaskInfos != null) {
+            this.TaskInfos = new CreateStructureTaskInfo[source.TaskInfos.length];
+            for (int i = 0; i < source.TaskInfos.length; i++) {
+                this.TaskInfos[i] = new CreateStructureTaskInfo(source.TaskInfos[i]);
+            }
+        }
+        if (source.PolicyId != null) {
+            this.PolicyId = new String(source.PolicyId);
+        }
+        if (source.TriggerType != null) {
+            this.TriggerType = new String(source.TriggerType);
+        }
+        if (source.InsuranceTypes != null) {
+            this.InsuranceTypes = new String[source.InsuranceTypes.length];
+            for (int i = 0; i < source.InsuranceTypes.length; i++) {
+                this.InsuranceTypes[i] = new String(source.InsuranceTypes[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

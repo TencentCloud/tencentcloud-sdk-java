@@ -68,6 +68,23 @@ public class Words extends AbstractModel{
         this.Character = Character;
     }
 
+    public Words() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Words(Words source) {
+        if (source.Confidence != null) {
+            this.Confidence = new Long(source.Confidence);
+        }
+        if (source.Character != null) {
+            this.Character = new String(source.Character);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

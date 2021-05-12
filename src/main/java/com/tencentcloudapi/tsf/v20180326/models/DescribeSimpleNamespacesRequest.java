@@ -252,6 +252,56 @@ public class DescribeSimpleNamespacesRequest extends AbstractModel{
         this.IsDefault = IsDefault;
     }
 
+    public DescribeSimpleNamespacesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeSimpleNamespacesRequest(DescribeSimpleNamespacesRequest source) {
+        if (source.NamespaceIdList != null) {
+            this.NamespaceIdList = new String[source.NamespaceIdList.length];
+            for (int i = 0; i < source.NamespaceIdList.length; i++) {
+                this.NamespaceIdList[i] = new String(source.NamespaceIdList[i]);
+            }
+        }
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.NamespaceId != null) {
+            this.NamespaceId = new String(source.NamespaceId);
+        }
+        if (source.NamespaceResourceTypeList != null) {
+            this.NamespaceResourceTypeList = new String[source.NamespaceResourceTypeList.length];
+            for (int i = 0; i < source.NamespaceResourceTypeList.length; i++) {
+                this.NamespaceResourceTypeList[i] = new String(source.NamespaceResourceTypeList[i]);
+            }
+        }
+        if (source.SearchWord != null) {
+            this.SearchWord = new String(source.SearchWord);
+        }
+        if (source.NamespaceTypeList != null) {
+            this.NamespaceTypeList = new String[source.NamespaceTypeList.length];
+            for (int i = 0; i < source.NamespaceTypeList.length; i++) {
+                this.NamespaceTypeList[i] = new String(source.NamespaceTypeList[i]);
+            }
+        }
+        if (source.NamespaceName != null) {
+            this.NamespaceName = new String(source.NamespaceName);
+        }
+        if (source.IsDefault != null) {
+            this.IsDefault = new String(source.IsDefault);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

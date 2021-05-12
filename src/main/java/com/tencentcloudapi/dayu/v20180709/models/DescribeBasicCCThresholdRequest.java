@@ -160,6 +160,35 @@ public class DescribeBasicCCThresholdRequest extends AbstractModel{
         this.BasicIspCode = BasicIspCode;
     }
 
+    public DescribeBasicCCThresholdRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeBasicCCThresholdRequest(DescribeBasicCCThresholdRequest source) {
+        if (source.BasicIp != null) {
+            this.BasicIp = new String(source.BasicIp);
+        }
+        if (source.BasicRegion != null) {
+            this.BasicRegion = new String(source.BasicRegion);
+        }
+        if (source.BasicBizType != null) {
+            this.BasicBizType = new String(source.BasicBizType);
+        }
+        if (source.BasicDeviceType != null) {
+            this.BasicDeviceType = new String(source.BasicDeviceType);
+        }
+        if (source.BasicIpInstance != null) {
+            this.BasicIpInstance = new String(source.BasicIpInstance);
+        }
+        if (source.BasicIspCode != null) {
+            this.BasicIspCode = new Long(source.BasicIspCode);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -114,6 +114,29 @@ public class BindL4Backend extends AbstractModel{
         this.ProbePort = ProbePort;
     }
 
+    public BindL4Backend() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public BindL4Backend(BindL4Backend source) {
+        if (source.Port != null) {
+            this.Port = new Long(source.Port);
+        }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.Weight != null) {
+            this.Weight = new Long(source.Weight);
+        }
+        if (source.ProbePort != null) {
+            this.ProbePort = new Long(source.ProbePort);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

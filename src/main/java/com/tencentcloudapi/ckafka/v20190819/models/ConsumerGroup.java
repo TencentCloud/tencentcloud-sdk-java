@@ -68,6 +68,26 @@ public class ConsumerGroup extends AbstractModel{
         this.SubscribedInfo = SubscribedInfo;
     }
 
+    public ConsumerGroup() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ConsumerGroup(ConsumerGroup source) {
+        if (source.ConsumerGroupName != null) {
+            this.ConsumerGroupName = new String(source.ConsumerGroupName);
+        }
+        if (source.SubscribedInfo != null) {
+            this.SubscribedInfo = new SubscribedInfo[source.SubscribedInfo.length];
+            for (int i = 0; i < source.SubscribedInfo.length; i++) {
+                this.SubscribedInfo[i] = new SubscribedInfo(source.SubscribedInfo[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

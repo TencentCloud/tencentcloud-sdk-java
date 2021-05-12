@@ -436,6 +436,113 @@ public class DenseFaceShape extends AbstractModel{
         this.Forehead = Forehead;
     }
 
+    public DenseFaceShape() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DenseFaceShape(DenseFaceShape source) {
+        if (source.X != null) {
+            this.X = new Long(source.X);
+        }
+        if (source.Y != null) {
+            this.Y = new Long(source.Y);
+        }
+        if (source.Width != null) {
+            this.Width = new Long(source.Width);
+        }
+        if (source.Height != null) {
+            this.Height = new Long(source.Height);
+        }
+        if (source.LeftEye != null) {
+            this.LeftEye = new Point[source.LeftEye.length];
+            for (int i = 0; i < source.LeftEye.length; i++) {
+                this.LeftEye[i] = new Point(source.LeftEye[i]);
+            }
+        }
+        if (source.RightEye != null) {
+            this.RightEye = new Point[source.RightEye.length];
+            for (int i = 0; i < source.RightEye.length; i++) {
+                this.RightEye[i] = new Point(source.RightEye[i]);
+            }
+        }
+        if (source.LeftEyeBrow != null) {
+            this.LeftEyeBrow = new Point[source.LeftEyeBrow.length];
+            for (int i = 0; i < source.LeftEyeBrow.length; i++) {
+                this.LeftEyeBrow[i] = new Point(source.LeftEyeBrow[i]);
+            }
+        }
+        if (source.RightEyeBrow != null) {
+            this.RightEyeBrow = new Point[source.RightEyeBrow.length];
+            for (int i = 0; i < source.RightEyeBrow.length; i++) {
+                this.RightEyeBrow[i] = new Point(source.RightEyeBrow[i]);
+            }
+        }
+        if (source.MouthOutside != null) {
+            this.MouthOutside = new Point[source.MouthOutside.length];
+            for (int i = 0; i < source.MouthOutside.length; i++) {
+                this.MouthOutside[i] = new Point(source.MouthOutside[i]);
+            }
+        }
+        if (source.MouthInside != null) {
+            this.MouthInside = new Point[source.MouthInside.length];
+            for (int i = 0; i < source.MouthInside.length; i++) {
+                this.MouthInside[i] = new Point(source.MouthInside[i]);
+            }
+        }
+        if (source.Nose != null) {
+            this.Nose = new Point[source.Nose.length];
+            for (int i = 0; i < source.Nose.length; i++) {
+                this.Nose[i] = new Point(source.Nose[i]);
+            }
+        }
+        if (source.LeftPupil != null) {
+            this.LeftPupil = new Point[source.LeftPupil.length];
+            for (int i = 0; i < source.LeftPupil.length; i++) {
+                this.LeftPupil[i] = new Point(source.LeftPupil[i]);
+            }
+        }
+        if (source.RightPupil != null) {
+            this.RightPupil = new Point[source.RightPupil.length];
+            for (int i = 0; i < source.RightPupil.length; i++) {
+                this.RightPupil[i] = new Point(source.RightPupil[i]);
+            }
+        }
+        if (source.CentralAxis != null) {
+            this.CentralAxis = new Point[source.CentralAxis.length];
+            for (int i = 0; i < source.CentralAxis.length; i++) {
+                this.CentralAxis[i] = new Point(source.CentralAxis[i]);
+            }
+        }
+        if (source.Chin != null) {
+            this.Chin = new Point[source.Chin.length];
+            for (int i = 0; i < source.Chin.length; i++) {
+                this.Chin[i] = new Point(source.Chin[i]);
+            }
+        }
+        if (source.LeftEyeBags != null) {
+            this.LeftEyeBags = new Point[source.LeftEyeBags.length];
+            for (int i = 0; i < source.LeftEyeBags.length; i++) {
+                this.LeftEyeBags[i] = new Point(source.LeftEyeBags[i]);
+            }
+        }
+        if (source.RightEyeBags != null) {
+            this.RightEyeBags = new Point[source.RightEyeBags.length];
+            for (int i = 0; i < source.RightEyeBags.length; i++) {
+                this.RightEyeBags[i] = new Point(source.RightEyeBags[i]);
+            }
+        }
+        if (source.Forehead != null) {
+            this.Forehead = new Point[source.Forehead.length];
+            for (int i = 0; i < source.Forehead.length; i++) {
+                this.Forehead[i] = new Point(source.Forehead[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

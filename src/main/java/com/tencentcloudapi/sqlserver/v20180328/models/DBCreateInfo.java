@@ -114,6 +114,32 @@ public class DBCreateInfo extends AbstractModel{
         this.Remark = Remark;
     }
 
+    public DBCreateInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DBCreateInfo(DBCreateInfo source) {
+        if (source.DBName != null) {
+            this.DBName = new String(source.DBName);
+        }
+        if (source.Charset != null) {
+            this.Charset = new String(source.Charset);
+        }
+        if (source.Accounts != null) {
+            this.Accounts = new AccountPrivilege[source.Accounts.length];
+            for (int i = 0; i < source.Accounts.length; i++) {
+                this.Accounts[i] = new AccountPrivilege(source.Accounts[i]);
+            }
+        }
+        if (source.Remark != null) {
+            this.Remark = new String(source.Remark);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

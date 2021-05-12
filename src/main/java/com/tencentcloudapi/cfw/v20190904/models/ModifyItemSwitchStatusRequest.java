@@ -91,6 +91,26 @@ public class ModifyItemSwitchStatusRequest extends AbstractModel{
         this.Type = Type;
     }
 
+    public ModifyItemSwitchStatusRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyItemSwitchStatusRequest(ModifyItemSwitchStatusRequest source) {
+        if (source.Id != null) {
+            this.Id = new Long(source.Id);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.Type != null) {
+            this.Type = new Long(source.Type);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

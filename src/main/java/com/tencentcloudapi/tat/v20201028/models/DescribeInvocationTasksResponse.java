@@ -91,6 +91,29 @@ public class DescribeInvocationTasksResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeInvocationTasksResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeInvocationTasksResponse(DescribeInvocationTasksResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.InvocationTaskSet != null) {
+            this.InvocationTaskSet = new InvocationTask[source.InvocationTaskSet.length];
+            for (int i = 0; i < source.InvocationTaskSet.length; i++) {
+                this.InvocationTaskSet[i] = new InvocationTask(source.InvocationTaskSet[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

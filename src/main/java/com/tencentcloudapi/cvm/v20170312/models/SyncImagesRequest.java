@@ -68,6 +68,29 @@ public class SyncImagesRequest extends AbstractModel{
         this.DestinationRegions = DestinationRegions;
     }
 
+    public SyncImagesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SyncImagesRequest(SyncImagesRequest source) {
+        if (source.ImageIds != null) {
+            this.ImageIds = new String[source.ImageIds.length];
+            for (int i = 0; i < source.ImageIds.length; i++) {
+                this.ImageIds[i] = new String(source.ImageIds[i]);
+            }
+        }
+        if (source.DestinationRegions != null) {
+            this.DestinationRegions = new String[source.DestinationRegions.length];
+            for (int i = 0; i < source.DestinationRegions.length; i++) {
+                this.DestinationRegions[i] = new String(source.DestinationRegions[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

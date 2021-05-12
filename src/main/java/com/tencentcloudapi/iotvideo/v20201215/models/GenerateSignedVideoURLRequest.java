@@ -68,6 +68,23 @@ public class GenerateSignedVideoURLRequest extends AbstractModel{
         this.ExpireTime = ExpireTime;
     }
 
+    public GenerateSignedVideoURLRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GenerateSignedVideoURLRequest(GenerateSignedVideoURLRequest source) {
+        if (source.VideoURL != null) {
+            this.VideoURL = new String(source.VideoURL);
+        }
+        if (source.ExpireTime != null) {
+            this.ExpireTime = new Long(source.ExpireTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

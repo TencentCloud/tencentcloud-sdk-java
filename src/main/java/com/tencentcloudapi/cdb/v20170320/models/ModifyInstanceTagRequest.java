@@ -91,6 +91,32 @@ public class ModifyInstanceTagRequest extends AbstractModel{
         this.DeleteTags = DeleteTags;
     }
 
+    public ModifyInstanceTagRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyInstanceTagRequest(ModifyInstanceTagRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.ReplaceTags != null) {
+            this.ReplaceTags = new TagInfo[source.ReplaceTags.length];
+            for (int i = 0; i < source.ReplaceTags.length; i++) {
+                this.ReplaceTags[i] = new TagInfo(source.ReplaceTags[i]);
+            }
+        }
+        if (source.DeleteTags != null) {
+            this.DeleteTags = new TagInfo[source.DeleteTags.length];
+            for (int i = 0; i < source.DeleteTags.length; i++) {
+                this.DeleteTags[i] = new TagInfo(source.DeleteTags[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -526,6 +526,77 @@ public class DataAssetMapping extends AbstractModel{
         this.IsIntranet = IsIntranet;
     }
 
+    public DataAssetMapping() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DataAssetMapping(DataAssetMapping source) {
+        if (source.AssetIp != null) {
+            this.AssetIp = new String(source.AssetIp);
+        }
+        if (source.AssetName != null) {
+            this.AssetName = new String(source.AssetName);
+        }
+        if (source.Instid != null) {
+            this.Instid = new String(source.Instid);
+        }
+        if (source.AssetType != null) {
+            this.AssetType = new String(source.AssetType);
+        }
+        if (source.AssetRegionEn != null) {
+            this.AssetRegionEn = new String(source.AssetRegionEn);
+        }
+        if (source.AssetRegionCn != null) {
+            this.AssetRegionCn = new String(source.AssetRegionCn);
+        }
+        if (source.AssetNetwork != null) {
+            this.AssetNetwork = new String(source.AssetNetwork);
+        }
+        if (source.AssetStatusEn != null) {
+            this.AssetStatusEn = new String(source.AssetStatusEn);
+        }
+        if (source.AssetStatusCn != null) {
+            this.AssetStatusCn = new String(source.AssetStatusCn);
+        }
+        if (source.IsWhite != null) {
+            this.IsWhite = new String(source.IsWhite);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.Time != null) {
+            this.Time = new String(source.Time);
+        }
+        if (source.Tag != null) {
+            this.Tag = new Tag[source.Tag.length];
+            for (int i = 0; i < source.Tag.length; i++) {
+                this.Tag[i] = new Tag(source.Tag[i]);
+            }
+        }
+        if (source.Group != null) {
+            this.Group = new String[source.Group.length];
+            for (int i = 0; i < source.Group.length; i++) {
+                this.Group[i] = new String(source.Group[i]);
+            }
+        }
+        if (source.Port != null) {
+            this.Port = new String(source.Port);
+        }
+        if (source.Component != null) {
+            this.Component = new String(source.Component);
+        }
+        if (source.AssetInstanceType != null) {
+            this.AssetInstanceType = new String(source.AssetInstanceType);
+        }
+        if (source.IsIntranet != null) {
+            this.IsIntranet = new Long(source.IsIntranet);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

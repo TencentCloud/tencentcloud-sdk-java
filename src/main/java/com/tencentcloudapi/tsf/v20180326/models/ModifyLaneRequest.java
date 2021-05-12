@@ -91,6 +91,26 @@ public class ModifyLaneRequest extends AbstractModel{
         this.Remark = Remark;
     }
 
+    public ModifyLaneRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyLaneRequest(ModifyLaneRequest source) {
+        if (source.LaneId != null) {
+            this.LaneId = new String(source.LaneId);
+        }
+        if (source.LaneName != null) {
+            this.LaneName = new String(source.LaneName);
+        }
+        if (source.Remark != null) {
+            this.Remark = new String(source.Remark);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

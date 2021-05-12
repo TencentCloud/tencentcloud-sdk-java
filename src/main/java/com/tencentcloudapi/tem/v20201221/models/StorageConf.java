@@ -96,6 +96,26 @@ public class StorageConf extends AbstractModel{
         this.StorageVolIp = StorageVolIp;
     }
 
+    public StorageConf() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public StorageConf(StorageConf source) {
+        if (source.StorageVolName != null) {
+            this.StorageVolName = new String(source.StorageVolName);
+        }
+        if (source.StorageVolPath != null) {
+            this.StorageVolPath = new String(source.StorageVolPath);
+        }
+        if (source.StorageVolIp != null) {
+            this.StorageVolIp = new String(source.StorageVolIp);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

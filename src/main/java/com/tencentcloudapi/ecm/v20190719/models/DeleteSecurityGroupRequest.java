@@ -45,6 +45,20 @@ public class DeleteSecurityGroupRequest extends AbstractModel{
         this.SecurityGroupId = SecurityGroupId;
     }
 
+    public DeleteSecurityGroupRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteSecurityGroupRequest(DeleteSecurityGroupRequest source) {
+        if (source.SecurityGroupId != null) {
+            this.SecurityGroupId = new String(source.SecurityGroupId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

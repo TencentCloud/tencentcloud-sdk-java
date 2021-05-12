@@ -91,6 +91,26 @@ public class ResourceRefJobInfo extends AbstractModel{
         this.ResourceVersion = ResourceVersion;
     }
 
+    public ResourceRefJobInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ResourceRefJobInfo(ResourceRefJobInfo source) {
+        if (source.JobId != null) {
+            this.JobId = new String(source.JobId);
+        }
+        if (source.JobConfigVersion != null) {
+            this.JobConfigVersion = new Long(source.JobConfigVersion);
+        }
+        if (source.ResourceVersion != null) {
+            this.ResourceVersion = new Long(source.ResourceVersion);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

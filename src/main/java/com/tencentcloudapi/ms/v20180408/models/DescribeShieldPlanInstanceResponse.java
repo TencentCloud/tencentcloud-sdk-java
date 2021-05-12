@@ -114,6 +114,29 @@ public class DescribeShieldPlanInstanceResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeShieldPlanInstanceResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeShieldPlanInstanceResponse(DescribeShieldPlanInstanceResponse source) {
+        if (source.BindInfo != null) {
+            this.BindInfo = new BindInfo(source.BindInfo);
+        }
+        if (source.ShieldPlanInfo != null) {
+            this.ShieldPlanInfo = new ShieldPlanInfo(source.ShieldPlanInfo);
+        }
+        if (source.ResourceServiceInfo != null) {
+            this.ResourceServiceInfo = new ResourceServiceInfo(source.ResourceServiceInfo);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

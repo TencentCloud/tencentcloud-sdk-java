@@ -121,6 +121,26 @@ public class Similar extends AbstractModel{
         this.SeedUrl = SeedUrl;
     }
 
+    public Similar() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Similar(Similar source) {
+        if (source.EvilType != null) {
+            this.EvilType = new Long(source.EvilType);
+        }
+        if (source.HitFlag != null) {
+            this.HitFlag = new Long(source.HitFlag);
+        }
+        if (source.SeedUrl != null) {
+            this.SeedUrl = new String(source.SeedUrl);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

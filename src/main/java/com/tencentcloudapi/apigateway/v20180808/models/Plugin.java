@@ -244,6 +244,47 @@ public class Plugin extends AbstractModel{
         this.AttachedApis = AttachedApis;
     }
 
+    public Plugin() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Plugin(Plugin source) {
+        if (source.PluginId != null) {
+            this.PluginId = new String(source.PluginId);
+        }
+        if (source.PluginName != null) {
+            this.PluginName = new String(source.PluginName);
+        }
+        if (source.PluginType != null) {
+            this.PluginType = new String(source.PluginType);
+        }
+        if (source.PluginData != null) {
+            this.PluginData = new String(source.PluginData);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.CreatedTime != null) {
+            this.CreatedTime = new String(source.CreatedTime);
+        }
+        if (source.ModifiedTime != null) {
+            this.ModifiedTime = new String(source.ModifiedTime);
+        }
+        if (source.AttachedApiTotalCount != null) {
+            this.AttachedApiTotalCount = new Long(source.AttachedApiTotalCount);
+        }
+        if (source.AttachedApis != null) {
+            this.AttachedApis = new AttachedApiInfo[source.AttachedApis.length];
+            for (int i = 0; i < source.AttachedApis.length; i++) {
+                this.AttachedApis[i] = new AttachedApiInfo(source.AttachedApis[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

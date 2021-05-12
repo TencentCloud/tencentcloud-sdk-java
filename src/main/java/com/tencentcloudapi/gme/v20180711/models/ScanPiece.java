@@ -292,6 +292,50 @@ public class ScanPiece extends AbstractModel{
         this.PieceStartTime = PieceStartTime;
     }
 
+    public ScanPiece() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ScanPiece(ScanPiece source) {
+        if (source.DumpUrl != null) {
+            this.DumpUrl = new String(source.DumpUrl);
+        }
+        if (source.HitFlag != null) {
+            this.HitFlag = new Boolean(source.HitFlag);
+        }
+        if (source.MainType != null) {
+            this.MainType = new String(source.MainType);
+        }
+        if (source.ScanDetail != null) {
+            this.ScanDetail = new ScanDetail[source.ScanDetail.length];
+            for (int i = 0; i < source.ScanDetail.length; i++) {
+                this.ScanDetail[i] = new ScanDetail(source.ScanDetail[i]);
+            }
+        }
+        if (source.RoomId != null) {
+            this.RoomId = new String(source.RoomId);
+        }
+        if (source.OpenId != null) {
+            this.OpenId = new String(source.OpenId);
+        }
+        if (source.Info != null) {
+            this.Info = new String(source.Info);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Duration != null) {
+            this.Duration = new Long(source.Duration);
+        }
+        if (source.PieceStartTime != null) {
+            this.PieceStartTime = new Long(source.PieceStartTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

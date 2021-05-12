@@ -206,6 +206,41 @@ public class DescribeUserSqlAdviceResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeUserSqlAdviceResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeUserSqlAdviceResponse(DescribeUserSqlAdviceResponse source) {
+        if (source.Advices != null) {
+            this.Advices = new String(source.Advices);
+        }
+        if (source.Comments != null) {
+            this.Comments = new String(source.Comments);
+        }
+        if (source.SqlText != null) {
+            this.SqlText = new String(source.SqlText);
+        }
+        if (source.Schema != null) {
+            this.Schema = new String(source.Schema);
+        }
+        if (source.Tables != null) {
+            this.Tables = new String(source.Tables);
+        }
+        if (source.SqlPlan != null) {
+            this.SqlPlan = new String(source.SqlPlan);
+        }
+        if (source.Cost != null) {
+            this.Cost = new String(source.Cost);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

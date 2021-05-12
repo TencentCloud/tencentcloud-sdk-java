@@ -327,6 +327,47 @@ WarnInfos，告警信息，Code 告警码列表和释义：
         this.RequestId = RequestId;
     }
 
+    public IDCardOCRResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public IDCardOCRResponse(IDCardOCRResponse source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Sex != null) {
+            this.Sex = new String(source.Sex);
+        }
+        if (source.Nation != null) {
+            this.Nation = new String(source.Nation);
+        }
+        if (source.Birth != null) {
+            this.Birth = new String(source.Birth);
+        }
+        if (source.Address != null) {
+            this.Address = new String(source.Address);
+        }
+        if (source.IdNum != null) {
+            this.IdNum = new String(source.IdNum);
+        }
+        if (source.Authority != null) {
+            this.Authority = new String(source.Authority);
+        }
+        if (source.ValidDate != null) {
+            this.ValidDate = new String(source.ValidDate);
+        }
+        if (source.AdvancedInfo != null) {
+            this.AdvancedInfo = new String(source.AdvancedInfo);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -157,6 +157,35 @@ public class ListEventHistoryResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public ListEventHistoryResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ListEventHistoryResponse(ListEventHistoryResponse source) {
+        if (source.Context != null) {
+            this.Context = new String(source.Context);
+        }
+        if (source.Total != null) {
+            this.Total = new Long(source.Total);
+        }
+        if (source.Listover != null) {
+            this.Listover = new Boolean(source.Listover);
+        }
+        if (source.EventHistory != null) {
+            this.EventHistory = new EventHistoryItem[source.EventHistory.length];
+            for (int i = 0; i < source.EventHistory.length; i++) {
+                this.EventHistory[i] = new EventHistoryItem(source.EventHistory[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

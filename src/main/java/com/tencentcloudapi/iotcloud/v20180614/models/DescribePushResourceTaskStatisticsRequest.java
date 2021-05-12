@@ -68,6 +68,23 @@ public class DescribePushResourceTaskStatisticsRequest extends AbstractModel{
         this.Name = Name;
     }
 
+    public DescribePushResourceTaskStatisticsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribePushResourceTaskStatisticsRequest(DescribePushResourceTaskStatisticsRequest source) {
+        if (source.ProductID != null) {
+            this.ProductID = new String(source.ProductID);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

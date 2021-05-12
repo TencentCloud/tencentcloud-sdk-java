@@ -114,6 +114,32 @@ public class CreateTaskTemplateRequest extends AbstractModel{
         this.Tags = Tags;
     }
 
+    public CreateTaskTemplateRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateTaskTemplateRequest(CreateTaskTemplateRequest source) {
+        if (source.TaskTemplateName != null) {
+            this.TaskTemplateName = new String(source.TaskTemplateName);
+        }
+        if (source.TaskTemplateInfo != null) {
+            this.TaskTemplateInfo = new Task(source.TaskTemplateInfo);
+        }
+        if (source.TaskTemplateDescription != null) {
+            this.TaskTemplateDescription = new String(source.TaskTemplateDescription);
+        }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

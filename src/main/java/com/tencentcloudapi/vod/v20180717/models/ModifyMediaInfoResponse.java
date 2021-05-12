@@ -96,6 +96,29 @@ public class ModifyMediaInfoResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public ModifyMediaInfoResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyMediaInfoResponse(ModifyMediaInfoResponse source) {
+        if (source.CoverUrl != null) {
+            this.CoverUrl = new String(source.CoverUrl);
+        }
+        if (source.AddedSubtitleSet != null) {
+            this.AddedSubtitleSet = new MediaSubtitleItem[source.AddedSubtitleSet.length];
+            for (int i = 0; i < source.AddedSubtitleSet.length; i++) {
+                this.AddedSubtitleSet[i] = new MediaSubtitleItem(source.AddedSubtitleSet[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -188,6 +188,41 @@ public class DescribeRulesResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeRulesResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeRulesResponse(DescribeRulesResponse source) {
+        if (source.RuleInfoList != null) {
+            this.RuleInfoList = new RuleBriefInfo[source.RuleInfoList.length];
+            for (int i = 0; i < source.RuleInfoList.length; i++) {
+                this.RuleInfoList[i] = new RuleBriefInfo(source.RuleInfoList[i]);
+            }
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.PageNumber != null) {
+            this.PageNumber = new Long(source.PageNumber);
+        }
+        if (source.PageSize != null) {
+            this.PageSize = new Long(source.PageSize);
+        }
+        if (source.SearchType != null) {
+            this.SearchType = new String(source.SearchType);
+        }
+        if (source.Keyword != null) {
+            this.Keyword = new String(source.Keyword);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

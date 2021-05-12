@@ -321,6 +321,56 @@ public class ImportRecord extends AbstractModel{
         this.AsyncRequestId = AsyncRequestId;
     }
 
+    public ImportRecord() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ImportRecord(ImportRecord source) {
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.Code != null) {
+            this.Code = new Long(source.Code);
+        }
+        if (source.CostTime != null) {
+            this.CostTime = new Long(source.CostTime);
+        }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.WorkId != null) {
+            this.WorkId = new String(source.WorkId);
+        }
+        if (source.FileName != null) {
+            this.FileName = new String(source.FileName);
+        }
+        if (source.Process != null) {
+            this.Process = new Long(source.Process);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.FileSize != null) {
+            this.FileSize = new String(source.FileSize);
+        }
+        if (source.Message != null) {
+            this.Message = new String(source.Message);
+        }
+        if (source.JobId != null) {
+            this.JobId = new Long(source.JobId);
+        }
+        if (source.DbName != null) {
+            this.DbName = new String(source.DbName);
+        }
+        if (source.AsyncRequestId != null) {
+            this.AsyncRequestId = new String(source.AsyncRequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

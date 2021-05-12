@@ -252,6 +252,50 @@ public class PublicMaterialInfos extends AbstractModel{
         this.MaterialFaceList = MaterialFaceList;
     }
 
+    public PublicMaterialInfos() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PublicMaterialInfos(PublicMaterialInfos source) {
+        if (source.MaterialId != null) {
+            this.MaterialId = new String(source.MaterialId);
+        }
+        if (source.MaterialStatus != null) {
+            this.MaterialStatus = new Long(source.MaterialStatus);
+        }
+        if (source.BlendParamPtu != null) {
+            this.BlendParamPtu = new Long(source.BlendParamPtu);
+        }
+        if (source.PositionParamPtu != null) {
+            this.PositionParamPtu = new Long(source.PositionParamPtu);
+        }
+        if (source.BlendParamYoutu != null) {
+            this.BlendParamYoutu = new Long(source.BlendParamYoutu);
+        }
+        if (source.PositionParamYoutu != null) {
+            this.PositionParamYoutu = new Long(source.PositionParamYoutu);
+        }
+        if (source.Url != null) {
+            this.Url = new String(source.Url);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new String(source.UpdateTime);
+        }
+        if (source.MaterialFaceList != null) {
+            this.MaterialFaceList = new MaterialFaceList[source.MaterialFaceList.length];
+            for (int i = 0; i < source.MaterialFaceList.length; i++) {
+                this.MaterialFaceList[i] = new MaterialFaceList(source.MaterialFaceList[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

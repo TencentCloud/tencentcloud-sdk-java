@@ -462,6 +462,65 @@ E008	        经查，该企业厂商识别代码以及条码尚未通报
         this.CategoryCode = CategoryCode;
     }
 
+    public ProductDataRecord() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ProductDataRecord(ProductDataRecord source) {
+        if (source.ProductName != null) {
+            this.ProductName = new String(source.ProductName);
+        }
+        if (source.EnName != null) {
+            this.EnName = new String(source.EnName);
+        }
+        if (source.BrandName != null) {
+            this.BrandName = new String(source.BrandName);
+        }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.Width != null) {
+            this.Width = new String(source.Width);
+        }
+        if (source.Height != null) {
+            this.Height = new String(source.Height);
+        }
+        if (source.Depth != null) {
+            this.Depth = new String(source.Depth);
+        }
+        if (source.KeyWord != null) {
+            this.KeyWord = new String(source.KeyWord);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.ImageLink != null) {
+            this.ImageLink = new String[source.ImageLink.length];
+            for (int i = 0; i < source.ImageLink.length; i++) {
+                this.ImageLink[i] = new String(source.ImageLink[i]);
+            }
+        }
+        if (source.ManufacturerName != null) {
+            this.ManufacturerName = new String(source.ManufacturerName);
+        }
+        if (source.ManufacturerAddress != null) {
+            this.ManufacturerAddress = new String(source.ManufacturerAddress);
+        }
+        if (source.FirmCode != null) {
+            this.FirmCode = new String(source.FirmCode);
+        }
+        if (source.CheckResult != null) {
+            this.CheckResult = new String(source.CheckResult);
+        }
+        if (source.CategoryCode != null) {
+            this.CategoryCode = new String(source.CategoryCode);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

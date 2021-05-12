@@ -190,6 +190,38 @@ public class VoiceFilterInfo extends AbstractModel{
         this.Data = Data;
     }
 
+    public VoiceFilterInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public VoiceFilterInfo(VoiceFilterInfo source) {
+        if (source.BizId != null) {
+            this.BizId = new Long(source.BizId);
+        }
+        if (source.FileId != null) {
+            this.FileId = new String(source.FileId);
+        }
+        if (source.FileName != null) {
+            this.FileName = new String(source.FileName);
+        }
+        if (source.OpenId != null) {
+            this.OpenId = new String(source.OpenId);
+        }
+        if (source.Timestamp != null) {
+            this.Timestamp = new String(source.Timestamp);
+        }
+        if (source.Data != null) {
+            this.Data = new VoiceFilter[source.Data.length];
+            for (int i = 0; i < source.Data.length; i++) {
+                this.Data[i] = new VoiceFilter(source.Data[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -185,6 +185,41 @@ public class CreateHeadTailTemplateRequest extends AbstractModel{
         this.SubAppId = SubAppId;
     }
 
+    public CreateHeadTailTemplateRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateHeadTailTemplateRequest(CreateHeadTailTemplateRequest source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Comment != null) {
+            this.Comment = new String(source.Comment);
+        }
+        if (source.HeadCandidateSet != null) {
+            this.HeadCandidateSet = new String[source.HeadCandidateSet.length];
+            for (int i = 0; i < source.HeadCandidateSet.length; i++) {
+                this.HeadCandidateSet[i] = new String(source.HeadCandidateSet[i]);
+            }
+        }
+        if (source.TailCandidateSet != null) {
+            this.TailCandidateSet = new String[source.TailCandidateSet.length];
+            for (int i = 0; i < source.TailCandidateSet.length; i++) {
+                this.TailCandidateSet[i] = new String(source.TailCandidateSet[i]);
+            }
+        }
+        if (source.FillType != null) {
+            this.FillType = new String(source.FillType);
+        }
+        if (source.SubAppId != null) {
+            this.SubAppId = new Long(source.SubAppId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

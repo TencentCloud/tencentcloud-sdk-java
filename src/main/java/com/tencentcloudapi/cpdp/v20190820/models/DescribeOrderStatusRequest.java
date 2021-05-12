@@ -390,6 +390,65 @@ public class DescribeOrderStatusRequest extends AbstractModel{
         this.TransDate = TransDate;
     }
 
+    public DescribeOrderStatusRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeOrderStatusRequest(DescribeOrderStatusRequest source) {
+        if (source.RequestType != null) {
+            this.RequestType = new String(source.RequestType);
+        }
+        if (source.MerchantCode != null) {
+            this.MerchantCode = new String(source.MerchantCode);
+        }
+        if (source.PayChannel != null) {
+            this.PayChannel = new String(source.PayChannel);
+        }
+        if (source.PayChannelSubId != null) {
+            this.PayChannelSubId = new Long(source.PayChannelSubId);
+        }
+        if (source.OrderId != null) {
+            this.OrderId = new String(source.OrderId);
+        }
+        if (source.BankAccountNumber != null) {
+            this.BankAccountNumber = new String(source.BankAccountNumber);
+        }
+        if (source.PlatformShortNumber != null) {
+            this.PlatformShortNumber = new String(source.PlatformShortNumber);
+        }
+        if (source.QueryType != null) {
+            this.QueryType = new String(source.QueryType);
+        }
+        if (source.TransSequenceNumber != null) {
+            this.TransSequenceNumber = new String(source.TransSequenceNumber);
+        }
+        if (source.MidasSignature != null) {
+            this.MidasSignature = new String(source.MidasSignature);
+        }
+        if (source.MidasAppId != null) {
+            this.MidasAppId = new String(source.MidasAppId);
+        }
+        if (source.MidasSecretId != null) {
+            this.MidasSecretId = new String(source.MidasSecretId);
+        }
+        if (source.MidasEnvironment != null) {
+            this.MidasEnvironment = new String(source.MidasEnvironment);
+        }
+        if (source.ReservedMessage != null) {
+            this.ReservedMessage = new String(source.ReservedMessage);
+        }
+        if (source.BankSubAccountNumber != null) {
+            this.BankSubAccountNumber = new String(source.BankSubAccountNumber);
+        }
+        if (source.TransDate != null) {
+            this.TransDate = new String(source.TransDate);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

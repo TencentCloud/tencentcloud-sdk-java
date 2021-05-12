@@ -91,6 +91,26 @@ public class OutputMappingConfig extends AbstractModel{
         this.WorkerPartSize = WorkerPartSize;
     }
 
+    public OutputMappingConfig() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public OutputMappingConfig(OutputMappingConfig source) {
+        if (source.Scene != null) {
+            this.Scene = new String(source.Scene);
+        }
+        if (source.WorkerNum != null) {
+            this.WorkerNum = new Long(source.WorkerNum);
+        }
+        if (source.WorkerPartSize != null) {
+            this.WorkerPartSize = new Long(source.WorkerPartSize);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

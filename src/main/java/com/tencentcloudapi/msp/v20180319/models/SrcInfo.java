@@ -114,6 +114,29 @@ public class SrcInfo extends AbstractModel{
         this.InstanceId = InstanceId;
     }
 
+    public SrcInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SrcInfo(SrcInfo source) {
+        if (source.Region != null) {
+            this.Region = new String(source.Region);
+        }
+        if (source.Ip != null) {
+            this.Ip = new String(source.Ip);
+        }
+        if (source.Port != null) {
+            this.Port = new String(source.Port);
+        }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

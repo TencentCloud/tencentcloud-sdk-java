@@ -229,6 +229,44 @@ public class PublishVersionResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public PublishVersionResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PublishVersionResponse(PublishVersionResponse source) {
+        if (source.FunctionVersion != null) {
+            this.FunctionVersion = new String(source.FunctionVersion);
+        }
+        if (source.CodeSize != null) {
+            this.CodeSize = new Long(source.CodeSize);
+        }
+        if (source.MemorySize != null) {
+            this.MemorySize = new Long(source.MemorySize);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.Handler != null) {
+            this.Handler = new String(source.Handler);
+        }
+        if (source.Timeout != null) {
+            this.Timeout = new Long(source.Timeout);
+        }
+        if (source.Runtime != null) {
+            this.Runtime = new String(source.Runtime);
+        }
+        if (source.Namespace != null) {
+            this.Namespace = new String(source.Namespace);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

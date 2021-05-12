@@ -137,6 +137,32 @@ public class RetentionExecution extends AbstractModel{
         this.Status = Status;
     }
 
+    public RetentionExecution() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RetentionExecution(RetentionExecution source) {
+        if (source.ExecutionId != null) {
+            this.ExecutionId = new Long(source.ExecutionId);
+        }
+        if (source.RetentionId != null) {
+            this.RetentionId = new Long(source.RetentionId);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

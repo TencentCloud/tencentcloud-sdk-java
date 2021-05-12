@@ -183,6 +183,44 @@ public class SecurityGroupDetail extends AbstractModel{
         this.OutboundRule = OutboundRule;
     }
 
+    public SecurityGroupDetail() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SecurityGroupDetail(SecurityGroupDetail source) {
+        if (source.ProjectId != null) {
+            this.ProjectId = new Long(source.ProjectId);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.SecurityGroupId != null) {
+            this.SecurityGroupId = new String(source.SecurityGroupId);
+        }
+        if (source.SecurityGroupName != null) {
+            this.SecurityGroupName = new String(source.SecurityGroupName);
+        }
+        if (source.SecurityGroupRemark != null) {
+            this.SecurityGroupRemark = new String(source.SecurityGroupRemark);
+        }
+        if (source.InboundRule != null) {
+            this.InboundRule = new SecurityGroupsInboundAndOutbound[source.InboundRule.length];
+            for (int i = 0; i < source.InboundRule.length; i++) {
+                this.InboundRule[i] = new SecurityGroupsInboundAndOutbound(source.InboundRule[i]);
+            }
+        }
+        if (source.OutboundRule != null) {
+            this.OutboundRule = new SecurityGroupsInboundAndOutbound[source.OutboundRule.length];
+            for (int i = 0; i < source.OutboundRule.length; i++) {
+                this.OutboundRule[i] = new SecurityGroupsInboundAndOutbound(source.OutboundRule[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

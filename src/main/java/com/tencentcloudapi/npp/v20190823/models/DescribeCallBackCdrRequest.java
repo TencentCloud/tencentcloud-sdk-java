@@ -137,6 +137,32 @@ public class DescribeCallBackCdrRequest extends AbstractModel{
         this.EndTimeStamp = EndTimeStamp;
     }
 
+    public DescribeCallBackCdrRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeCallBackCdrRequest(DescribeCallBackCdrRequest source) {
+        if (source.BizAppId != null) {
+            this.BizAppId = new String(source.BizAppId);
+        }
+        if (source.CallId != null) {
+            this.CallId = new String(source.CallId);
+        }
+        if (source.Src != null) {
+            this.Src = new String(source.Src);
+        }
+        if (source.StartTimeStamp != null) {
+            this.StartTimeStamp = new String(source.StartTimeStamp);
+        }
+        if (source.EndTimeStamp != null) {
+            this.EndTimeStamp = new String(source.EndTimeStamp);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

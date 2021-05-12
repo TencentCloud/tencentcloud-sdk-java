@@ -134,6 +134,29 @@ public class ClientInfo extends AbstractModel{
         this.Ip = Ip;
     }
 
+    public ClientInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ClientInfo(ClientInfo source) {
+        if (source.ProvName != null) {
+            this.ProvName = new String(source.ProvName);
+        }
+        if (source.Country != null) {
+            this.Country = new String(source.Country);
+        }
+        if (source.IspName != null) {
+            this.IspName = new String(source.IspName);
+        }
+        if (source.Ip != null) {
+            this.Ip = new String(source.Ip);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

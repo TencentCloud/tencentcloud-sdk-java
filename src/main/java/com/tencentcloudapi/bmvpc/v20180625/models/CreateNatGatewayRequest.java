@@ -229,6 +229,53 @@ public class CreateNatGatewayRequest extends AbstractModel{
         this.Exclusive = Exclusive;
     }
 
+    public CreateNatGatewayRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateNatGatewayRequest(CreateNatGatewayRequest source) {
+        if (source.ForwardMode != null) {
+            this.ForwardMode = new String(source.ForwardMode);
+        }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.NatName != null) {
+            this.NatName = new String(source.NatName);
+        }
+        if (source.MaxConcurrent != null) {
+            this.MaxConcurrent = new Long(source.MaxConcurrent);
+        }
+        if (source.SubnetIds != null) {
+            this.SubnetIds = new String[source.SubnetIds.length];
+            for (int i = 0; i < source.SubnetIds.length; i++) {
+                this.SubnetIds[i] = new String(source.SubnetIds[i]);
+            }
+        }
+        if (source.IpInfoSet != null) {
+            this.IpInfoSet = new IpInfo[source.IpInfoSet.length];
+            for (int i = 0; i < source.IpInfoSet.length; i++) {
+                this.IpInfoSet[i] = new IpInfo(source.IpInfoSet[i]);
+            }
+        }
+        if (source.AssignedEips != null) {
+            this.AssignedEips = new String[source.AssignedEips.length];
+            for (int i = 0; i < source.AssignedEips.length; i++) {
+                this.AssignedEips[i] = new String(source.AssignedEips[i]);
+            }
+        }
+        if (source.AutoAllocEipNum != null) {
+            this.AutoAllocEipNum = new Long(source.AutoAllocEipNum);
+        }
+        if (source.Exclusive != null) {
+            this.Exclusive = new Long(source.Exclusive);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

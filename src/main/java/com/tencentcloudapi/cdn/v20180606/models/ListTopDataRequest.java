@@ -407,6 +407,50 @@ client：指定查询客户端地区（用户请求终端所在地区）数据�
         this.AreaType = AreaType;
     }
 
+    public ListTopDataRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ListTopDataRequest(ListTopDataRequest source) {
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+        if (source.Metric != null) {
+            this.Metric = new String(source.Metric);
+        }
+        if (source.Filter != null) {
+            this.Filter = new String(source.Filter);
+        }
+        if (source.Domains != null) {
+            this.Domains = new String[source.Domains.length];
+            for (int i = 0; i < source.Domains.length; i++) {
+                this.Domains[i] = new String(source.Domains[i]);
+            }
+        }
+        if (source.Project != null) {
+            this.Project = new Long(source.Project);
+        }
+        if (source.Detail != null) {
+            this.Detail = new Boolean(source.Detail);
+        }
+        if (source.Code != null) {
+            this.Code = new String(source.Code);
+        }
+        if (source.Area != null) {
+            this.Area = new String(source.Area);
+        }
+        if (source.AreaType != null) {
+            this.AreaType = new String(source.AreaType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

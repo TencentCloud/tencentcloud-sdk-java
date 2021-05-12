@@ -114,6 +114,29 @@ public class UpdateImageConfigRequest extends AbstractModel{
         this.GuetzliAdapter = GuetzliAdapter;
     }
 
+    public UpdateImageConfigRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UpdateImageConfigRequest(UpdateImageConfigRequest source) {
+        if (source.Domain != null) {
+            this.Domain = new String(source.Domain);
+        }
+        if (source.WebpAdapter != null) {
+            this.WebpAdapter = new WebpAdapter(source.WebpAdapter);
+        }
+        if (source.TpgAdapter != null) {
+            this.TpgAdapter = new TpgAdapter(source.TpgAdapter);
+        }
+        if (source.GuetzliAdapter != null) {
+            this.GuetzliAdapter = new GuetzliAdapter(source.GuetzliAdapter);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

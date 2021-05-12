@@ -436,6 +436,71 @@ public class QueryMemberTransactionRequest extends AbstractModel{
         this.Profile = Profile;
     }
 
+    public QueryMemberTransactionRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public QueryMemberTransactionRequest(QueryMemberTransactionRequest source) {
+        if (source.MrchCode != null) {
+            this.MrchCode = new String(source.MrchCode);
+        }
+        if (source.FunctionFlag != null) {
+            this.FunctionFlag = new String(source.FunctionFlag);
+        }
+        if (source.OutSubAcctNo != null) {
+            this.OutSubAcctNo = new String(source.OutSubAcctNo);
+        }
+        if (source.OutMemberCode != null) {
+            this.OutMemberCode = new String(source.OutMemberCode);
+        }
+        if (source.OutSubAcctName != null) {
+            this.OutSubAcctName = new String(source.OutSubAcctName);
+        }
+        if (source.InSubAcctNo != null) {
+            this.InSubAcctNo = new String(source.InSubAcctNo);
+        }
+        if (source.InMemberCode != null) {
+            this.InMemberCode = new String(source.InMemberCode);
+        }
+        if (source.InSubAcctName != null) {
+            this.InSubAcctName = new String(source.InSubAcctName);
+        }
+        if (source.TranAmt != null) {
+            this.TranAmt = new String(source.TranAmt);
+        }
+        if (source.TranFee != null) {
+            this.TranFee = new String(source.TranFee);
+        }
+        if (source.TranType != null) {
+            this.TranType = new String(source.TranType);
+        }
+        if (source.Ccy != null) {
+            this.Ccy = new String(source.Ccy);
+        }
+        if (source.OrderNo != null) {
+            this.OrderNo = new String(source.OrderNo);
+        }
+        if (source.OrderContent != null) {
+            this.OrderContent = new String(source.OrderContent);
+        }
+        if (source.Remark != null) {
+            this.Remark = new String(source.Remark);
+        }
+        if (source.ReservedMsg != null) {
+            this.ReservedMsg = new String(source.ReservedMsg);
+        }
+        if (source.WebSign != null) {
+            this.WebSign = new String(source.WebSign);
+        }
+        if (source.Profile != null) {
+            this.Profile = new String(source.Profile);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

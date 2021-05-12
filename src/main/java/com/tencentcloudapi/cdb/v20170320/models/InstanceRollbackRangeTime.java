@@ -114,6 +114,32 @@ public class InstanceRollbackRangeTime extends AbstractModel{
         this.Times = Times;
     }
 
+    public InstanceRollbackRangeTime() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public InstanceRollbackRangeTime(InstanceRollbackRangeTime source) {
+        if (source.Code != null) {
+            this.Code = new Long(source.Code);
+        }
+        if (source.Message != null) {
+            this.Message = new String(source.Message);
+        }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.Times != null) {
+            this.Times = new RollbackTimeRange[source.Times.length];
+            for (int i = 0; i < source.Times.length; i++) {
+                this.Times[i] = new RollbackTimeRange(source.Times[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

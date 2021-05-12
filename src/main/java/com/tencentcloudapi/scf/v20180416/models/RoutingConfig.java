@@ -68,6 +68,29 @@ public class RoutingConfig extends AbstractModel{
         this.AddtionVersionMatchs = AddtionVersionMatchs;
     }
 
+    public RoutingConfig() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RoutingConfig(RoutingConfig source) {
+        if (source.AdditionalVersionWeights != null) {
+            this.AdditionalVersionWeights = new VersionWeight[source.AdditionalVersionWeights.length];
+            for (int i = 0; i < source.AdditionalVersionWeights.length; i++) {
+                this.AdditionalVersionWeights[i] = new VersionWeight(source.AdditionalVersionWeights[i]);
+            }
+        }
+        if (source.AddtionVersionMatchs != null) {
+            this.AddtionVersionMatchs = new VersionMatch[source.AddtionVersionMatchs.length];
+            for (int i = 0; i < source.AddtionVersionMatchs.length; i++) {
+                this.AddtionVersionMatchs[i] = new VersionMatch(source.AddtionVersionMatchs[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

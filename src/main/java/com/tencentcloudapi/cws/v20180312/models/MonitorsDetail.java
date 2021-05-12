@@ -298,6 +298,59 @@ public class MonitorsDetail extends AbstractModel{
         this.ContentNumber = ContentNumber;
     }
 
+    public MonitorsDetail() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MonitorsDetail(MonitorsDetail source) {
+        if (source.Basic != null) {
+            this.Basic = new Monitor(source.Basic);
+        }
+        if (source.Sites != null) {
+            this.Sites = new MonitorMiniSite[source.Sites.length];
+            for (int i = 0; i < source.Sites.length; i++) {
+                this.Sites[i] = new MonitorMiniSite(source.Sites[i]);
+            }
+        }
+        if (source.SiteNumber != null) {
+            this.SiteNumber = new Long(source.SiteNumber);
+        }
+        if (source.ImpactSites != null) {
+            this.ImpactSites = new MonitorMiniSite[source.ImpactSites.length];
+            for (int i = 0; i < source.ImpactSites.length; i++) {
+                this.ImpactSites[i] = new MonitorMiniSite(source.ImpactSites[i]);
+            }
+        }
+        if (source.ImpactSiteNumber != null) {
+            this.ImpactSiteNumber = new Long(source.ImpactSiteNumber);
+        }
+        if (source.VulsHighNumber != null) {
+            this.VulsHighNumber = new Long(source.VulsHighNumber);
+        }
+        if (source.VulsMiddleNumber != null) {
+            this.VulsMiddleNumber = new Long(source.VulsMiddleNumber);
+        }
+        if (source.VulsLowNumber != null) {
+            this.VulsLowNumber = new Long(source.VulsLowNumber);
+        }
+        if (source.VulsNoticeNumber != null) {
+            this.VulsNoticeNumber = new Long(source.VulsNoticeNumber);
+        }
+        if (source.Progress != null) {
+            this.Progress = new Long(source.Progress);
+        }
+        if (source.PageCount != null) {
+            this.PageCount = new Long(source.PageCount);
+        }
+        if (source.ContentNumber != null) {
+            this.ContentNumber = new Long(source.ContentNumber);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

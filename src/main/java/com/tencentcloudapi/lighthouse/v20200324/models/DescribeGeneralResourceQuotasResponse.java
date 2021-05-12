@@ -68,6 +68,26 @@ public class DescribeGeneralResourceQuotasResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeGeneralResourceQuotasResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeGeneralResourceQuotasResponse(DescribeGeneralResourceQuotasResponse source) {
+        if (source.GeneralResourceQuotaSet != null) {
+            this.GeneralResourceQuotaSet = new GeneralResourceQuota[source.GeneralResourceQuotaSet.length];
+            for (int i = 0; i < source.GeneralResourceQuotaSet.length; i++) {
+                this.GeneralResourceQuotaSet[i] = new GeneralResourceQuota(source.GeneralResourceQuotaSet[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

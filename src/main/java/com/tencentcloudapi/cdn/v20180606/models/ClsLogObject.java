@@ -160,6 +160,35 @@ public class ClsLogObject extends AbstractModel{
         this.Source = Source;
     }
 
+    public ClsLogObject() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ClsLogObject(ClsLogObject source) {
+        if (source.TopicId != null) {
+            this.TopicId = new String(source.TopicId);
+        }
+        if (source.TopicName != null) {
+            this.TopicName = new String(source.TopicName);
+        }
+        if (source.Timestamp != null) {
+            this.Timestamp = new String(source.Timestamp);
+        }
+        if (source.Content != null) {
+            this.Content = new String(source.Content);
+        }
+        if (source.Filename != null) {
+            this.Filename = new String(source.Filename);
+        }
+        if (source.Source != null) {
+            this.Source = new String(source.Source);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

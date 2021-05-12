@@ -91,6 +91,29 @@ public class DescribeLoginWhiteListResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeLoginWhiteListResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeLoginWhiteListResponse(DescribeLoginWhiteListResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.LoginWhiteLists != null) {
+            this.LoginWhiteLists = new LoginWhiteLists[source.LoginWhiteLists.length];
+            for (int i = 0; i < source.LoginWhiteLists.length; i++) {
+                this.LoginWhiteLists[i] = new LoginWhiteLists(source.LoginWhiteLists[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

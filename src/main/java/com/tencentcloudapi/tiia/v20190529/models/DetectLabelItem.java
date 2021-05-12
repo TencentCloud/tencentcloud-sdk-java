@@ -114,6 +114,29 @@ public class DetectLabelItem extends AbstractModel{
         this.SecondCategory = SecondCategory;
     }
 
+    public DetectLabelItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DetectLabelItem(DetectLabelItem source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Confidence != null) {
+            this.Confidence = new Long(source.Confidence);
+        }
+        if (source.FirstCategory != null) {
+            this.FirstCategory = new String(source.FirstCategory);
+        }
+        if (source.SecondCategory != null) {
+            this.SecondCategory = new String(source.SecondCategory);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

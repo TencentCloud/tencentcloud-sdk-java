@@ -91,6 +91,26 @@ public class CreateLicenseResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public CreateLicenseResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateLicenseResponse(CreateLicenseResponse source) {
+        if (source.License != null) {
+            this.License = new String(source.License);
+        }
+        if (source.ContentId != null) {
+            this.ContentId = new String(source.ContentId);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -91,6 +91,29 @@ public class DeleteFirewallRulesRequest extends AbstractModel{
         this.FirewallVersion = FirewallVersion;
     }
 
+    public DeleteFirewallRulesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteFirewallRulesRequest(DeleteFirewallRulesRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.FirewallRules != null) {
+            this.FirewallRules = new FirewallRule[source.FirewallRules.length];
+            for (int i = 0; i < source.FirewallRules.length; i++) {
+                this.FirewallRules[i] = new FirewallRule(source.FirewallRules[i]);
+            }
+        }
+        if (source.FirewallVersion != null) {
+            this.FirewallVersion = new Long(source.FirewallVersion);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

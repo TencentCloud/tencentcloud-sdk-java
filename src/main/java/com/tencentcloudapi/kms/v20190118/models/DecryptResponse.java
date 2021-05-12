@@ -91,6 +91,26 @@ public class DecryptResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DecryptResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DecryptResponse(DecryptResponse source) {
+        if (source.KeyId != null) {
+            this.KeyId = new String(source.KeyId);
+        }
+        if (source.Plaintext != null) {
+            this.Plaintext = new String(source.Plaintext);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

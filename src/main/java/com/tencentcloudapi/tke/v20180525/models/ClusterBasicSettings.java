@@ -229,6 +229,47 @@ public class ClusterBasicSettings extends AbstractModel{
         this.NeedWorkSecurityGroup = NeedWorkSecurityGroup;
     }
 
+    public ClusterBasicSettings() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ClusterBasicSettings(ClusterBasicSettings source) {
+        if (source.ClusterOs != null) {
+            this.ClusterOs = new String(source.ClusterOs);
+        }
+        if (source.ClusterVersion != null) {
+            this.ClusterVersion = new String(source.ClusterVersion);
+        }
+        if (source.ClusterName != null) {
+            this.ClusterName = new String(source.ClusterName);
+        }
+        if (source.ClusterDescription != null) {
+            this.ClusterDescription = new String(source.ClusterDescription);
+        }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.ProjectId != null) {
+            this.ProjectId = new Long(source.ProjectId);
+        }
+        if (source.TagSpecification != null) {
+            this.TagSpecification = new TagSpecification[source.TagSpecification.length];
+            for (int i = 0; i < source.TagSpecification.length; i++) {
+                this.TagSpecification[i] = new TagSpecification(source.TagSpecification[i]);
+            }
+        }
+        if (source.OsCustomizeType != null) {
+            this.OsCustomizeType = new String(source.OsCustomizeType);
+        }
+        if (source.NeedWorkSecurityGroup != null) {
+            this.NeedWorkSecurityGroup = new Boolean(source.NeedWorkSecurityGroup);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

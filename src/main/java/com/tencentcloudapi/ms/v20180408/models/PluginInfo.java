@@ -91,6 +91,26 @@ public class PluginInfo extends AbstractModel{
         this.PluginDesc = PluginDesc;
     }
 
+    public PluginInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PluginInfo(PluginInfo source) {
+        if (source.PluginType != null) {
+            this.PluginType = new Long(source.PluginType);
+        }
+        if (source.PluginName != null) {
+            this.PluginName = new String(source.PluginName);
+        }
+        if (source.PluginDesc != null) {
+            this.PluginDesc = new String(source.PluginDesc);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

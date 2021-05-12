@@ -96,6 +96,26 @@ public class ModifyTokenResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public ModifyTokenResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyTokenResponse(ModifyTokenResponse source) {
+        if (source.MatchToken != null) {
+            this.MatchToken = new String(source.MatchToken);
+        }
+        if (source.CompatibleSpan != null) {
+            this.CompatibleSpan = new Long(source.CompatibleSpan);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

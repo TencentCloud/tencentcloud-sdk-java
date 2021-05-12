@@ -91,6 +91,32 @@ public class OsVersion extends AbstractModel{
         this.Architecture = Architecture;
     }
 
+    public OsVersion() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public OsVersion(OsVersion source) {
+        if (source.OsName != null) {
+            this.OsName = new String(source.OsName);
+        }
+        if (source.OsVersions != null) {
+            this.OsVersions = new String[source.OsVersions.length];
+            for (int i = 0; i < source.OsVersions.length; i++) {
+                this.OsVersions[i] = new String(source.OsVersions[i]);
+            }
+        }
+        if (source.Architecture != null) {
+            this.Architecture = new String[source.Architecture.length];
+            for (int i = 0; i < source.Architecture.length; i++) {
+                this.Architecture[i] = new String(source.Architecture[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -218,6 +218,41 @@ public class SentenceDetail extends AbstractModel{
         this.SpeechSpeed = SpeechSpeed;
     }
 
+    public SentenceDetail() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SentenceDetail(SentenceDetail source) {
+        if (source.FinalSentence != null) {
+            this.FinalSentence = new String(source.FinalSentence);
+        }
+        if (source.SliceSentence != null) {
+            this.SliceSentence = new String(source.SliceSentence);
+        }
+        if (source.StartMs != null) {
+            this.StartMs = new Long(source.StartMs);
+        }
+        if (source.EndMs != null) {
+            this.EndMs = new Long(source.EndMs);
+        }
+        if (source.WordsNum != null) {
+            this.WordsNum = new Long(source.WordsNum);
+        }
+        if (source.Words != null) {
+            this.Words = new SentenceWords[source.Words.length];
+            for (int i = 0; i < source.Words.length; i++) {
+                this.Words[i] = new SentenceWords(source.Words[i]);
+            }
+        }
+        if (source.SpeechSpeed != null) {
+            this.SpeechSpeed = new Float(source.SpeechSpeed);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

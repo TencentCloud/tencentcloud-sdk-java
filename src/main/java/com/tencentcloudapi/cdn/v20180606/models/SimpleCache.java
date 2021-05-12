@@ -255,6 +255,38 @@ off：关闭
         this.Revalidate = Revalidate;
     }
 
+    public SimpleCache() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SimpleCache(SimpleCache source) {
+        if (source.CacheRules != null) {
+            this.CacheRules = new SimpleCacheRule[source.CacheRules.length];
+            for (int i = 0; i < source.CacheRules.length; i++) {
+                this.CacheRules[i] = new SimpleCacheRule(source.CacheRules[i]);
+            }
+        }
+        if (source.FollowOrigin != null) {
+            this.FollowOrigin = new String(source.FollowOrigin);
+        }
+        if (source.IgnoreCacheControl != null) {
+            this.IgnoreCacheControl = new String(source.IgnoreCacheControl);
+        }
+        if (source.IgnoreSetCookie != null) {
+            this.IgnoreSetCookie = new String(source.IgnoreSetCookie);
+        }
+        if (source.CompareMaxAge != null) {
+            this.CompareMaxAge = new String(source.CompareMaxAge);
+        }
+        if (source.Revalidate != null) {
+            this.Revalidate = new Revalidate(source.Revalidate);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

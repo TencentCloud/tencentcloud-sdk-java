@@ -68,6 +68,29 @@ public class EcdnData extends AbstractModel{
         this.DetailData = DetailData;
     }
 
+    public EcdnData() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public EcdnData(EcdnData source) {
+        if (source.Metrics != null) {
+            this.Metrics = new String[source.Metrics.length];
+            for (int i = 0; i < source.Metrics.length; i++) {
+                this.Metrics[i] = new String(source.Metrics[i]);
+            }
+        }
+        if (source.DetailData != null) {
+            this.DetailData = new TimestampData[source.DetailData.length];
+            for (int i = 0; i < source.DetailData.length; i++) {
+                this.DetailData[i] = new TimestampData(source.DetailData[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

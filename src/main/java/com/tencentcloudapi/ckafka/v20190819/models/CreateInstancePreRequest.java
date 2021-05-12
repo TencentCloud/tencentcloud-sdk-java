@@ -229,6 +229,44 @@ public class CreateInstancePreRequest extends AbstractModel{
         this.RenewFlag = RenewFlag;
     }
 
+    public CreateInstancePreRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateInstancePreRequest(CreateInstancePreRequest source) {
+        if (source.InstanceName != null) {
+            this.InstanceName = new String(source.InstanceName);
+        }
+        if (source.ZoneId != null) {
+            this.ZoneId = new Long(source.ZoneId);
+        }
+        if (source.Period != null) {
+            this.Period = new String(source.Period);
+        }
+        if (source.InstanceType != null) {
+            this.InstanceType = new Long(source.InstanceType);
+        }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.SubnetId != null) {
+            this.SubnetId = new String(source.SubnetId);
+        }
+        if (source.MsgRetentionTime != null) {
+            this.MsgRetentionTime = new Long(source.MsgRetentionTime);
+        }
+        if (source.ClusterId != null) {
+            this.ClusterId = new Long(source.ClusterId);
+        }
+        if (source.RenewFlag != null) {
+            this.RenewFlag = new Long(source.RenewFlag);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

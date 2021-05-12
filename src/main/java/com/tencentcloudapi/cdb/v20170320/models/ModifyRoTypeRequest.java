@@ -114,6 +114,29 @@ public class ModifyRoTypeRequest extends AbstractModel{
         this.ReplicationDelay = ReplicationDelay;
     }
 
+    public ModifyRoTypeRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyRoTypeRequest(ModifyRoTypeRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.SrcRoInstType != null) {
+            this.SrcRoInstType = new String(source.SrcRoInstType);
+        }
+        if (source.DstRoInstType != null) {
+            this.DstRoInstType = new String(source.DstRoInstType);
+        }
+        if (source.ReplicationDelay != null) {
+            this.ReplicationDelay = new Long(source.ReplicationDelay);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

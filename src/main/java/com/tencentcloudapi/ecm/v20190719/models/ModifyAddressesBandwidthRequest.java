@@ -91,6 +91,29 @@ public class ModifyAddressesBandwidthRequest extends AbstractModel{
         this.InternetMaxBandwidthOut = InternetMaxBandwidthOut;
     }
 
+    public ModifyAddressesBandwidthRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyAddressesBandwidthRequest(ModifyAddressesBandwidthRequest source) {
+        if (source.EcmRegion != null) {
+            this.EcmRegion = new String(source.EcmRegion);
+        }
+        if (source.AddressIds != null) {
+            this.AddressIds = new String[source.AddressIds.length];
+            for (int i = 0; i < source.AddressIds.length; i++) {
+                this.AddressIds[i] = new String(source.AddressIds[i]);
+            }
+        }
+        if (source.InternetMaxBandwidthOut != null) {
+            this.InternetMaxBandwidthOut = new Long(source.InternetMaxBandwidthOut);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

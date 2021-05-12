@@ -91,6 +91,26 @@ public class ModifyTargetGroupAttributeRequest extends AbstractModel{
         this.Port = Port;
     }
 
+    public ModifyTargetGroupAttributeRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyTargetGroupAttributeRequest(ModifyTargetGroupAttributeRequest source) {
+        if (source.TargetGroupId != null) {
+            this.TargetGroupId = new String(source.TargetGroupId);
+        }
+        if (source.TargetGroupName != null) {
+            this.TargetGroupName = new String(source.TargetGroupName);
+        }
+        if (source.Port != null) {
+            this.Port = new Long(source.Port);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

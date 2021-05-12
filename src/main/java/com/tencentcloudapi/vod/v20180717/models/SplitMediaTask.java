@@ -216,6 +216,44 @@ public class SplitMediaTask extends AbstractModel{
         this.SessionId = SessionId;
     }
 
+    public SplitMediaTask() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SplitMediaTask(SplitMediaTask source) {
+        if (source.TaskId != null) {
+            this.TaskId = new String(source.TaskId);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.ErrCodeExt != null) {
+            this.ErrCodeExt = new String(source.ErrCodeExt);
+        }
+        if (source.ErrCode != null) {
+            this.ErrCode = new Long(source.ErrCode);
+        }
+        if (source.Message != null) {
+            this.Message = new String(source.Message);
+        }
+        if (source.FileInfoSet != null) {
+            this.FileInfoSet = new SplitMediaTaskSegmentInfo[source.FileInfoSet.length];
+            for (int i = 0; i < source.FileInfoSet.length; i++) {
+                this.FileInfoSet[i] = new SplitMediaTaskSegmentInfo(source.FileInfoSet[i]);
+            }
+        }
+        if (source.SessionContext != null) {
+            this.SessionContext = new String(source.SessionContext);
+        }
+        if (source.SessionId != null) {
+            this.SessionId = new String(source.SessionId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

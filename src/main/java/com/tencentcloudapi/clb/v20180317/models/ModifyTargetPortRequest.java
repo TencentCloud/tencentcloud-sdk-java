@@ -183,6 +183,41 @@ public class ModifyTargetPortRequest extends AbstractModel{
         this.Url = Url;
     }
 
+    public ModifyTargetPortRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyTargetPortRequest(ModifyTargetPortRequest source) {
+        if (source.LoadBalancerId != null) {
+            this.LoadBalancerId = new String(source.LoadBalancerId);
+        }
+        if (source.ListenerId != null) {
+            this.ListenerId = new String(source.ListenerId);
+        }
+        if (source.Targets != null) {
+            this.Targets = new Target[source.Targets.length];
+            for (int i = 0; i < source.Targets.length; i++) {
+                this.Targets[i] = new Target(source.Targets[i]);
+            }
+        }
+        if (source.NewPort != null) {
+            this.NewPort = new Long(source.NewPort);
+        }
+        if (source.LocationId != null) {
+            this.LocationId = new String(source.LocationId);
+        }
+        if (source.Domain != null) {
+            this.Domain = new String(source.Domain);
+        }
+        if (source.Url != null) {
+            this.Url = new String(source.Url);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

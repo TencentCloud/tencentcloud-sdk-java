@@ -137,6 +137,32 @@ public class DayStreamPlayInfo extends AbstractModel{
         this.Online = Online;
     }
 
+    public DayStreamPlayInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DayStreamPlayInfo(DayStreamPlayInfo source) {
+        if (source.Time != null) {
+            this.Time = new String(source.Time);
+        }
+        if (source.Bandwidth != null) {
+            this.Bandwidth = new Float(source.Bandwidth);
+        }
+        if (source.Flux != null) {
+            this.Flux = new Float(source.Flux);
+        }
+        if (source.Request != null) {
+            this.Request = new Long(source.Request);
+        }
+        if (source.Online != null) {
+            this.Online = new Long(source.Online);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

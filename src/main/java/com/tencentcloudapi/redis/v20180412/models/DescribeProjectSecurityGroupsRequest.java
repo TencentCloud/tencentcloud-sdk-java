@@ -137,6 +137,32 @@ public class DescribeProjectSecurityGroupsRequest extends AbstractModel{
         this.SearchKey = SearchKey;
     }
 
+    public DescribeProjectSecurityGroupsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeProjectSecurityGroupsRequest(DescribeProjectSecurityGroupsRequest source) {
+        if (source.Product != null) {
+            this.Product = new String(source.Product);
+        }
+        if (source.ProjectId != null) {
+            this.ProjectId = new Long(source.ProjectId);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.SearchKey != null) {
+            this.SearchKey = new String(source.SearchKey);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

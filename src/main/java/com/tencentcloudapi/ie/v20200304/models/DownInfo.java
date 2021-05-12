@@ -101,6 +101,26 @@ public class DownInfo extends AbstractModel{
         this.CosInfo = CosInfo;
     }
 
+    public DownInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DownInfo(DownInfo source) {
+        if (source.Type != null) {
+            this.Type = new Long(source.Type);
+        }
+        if (source.UrlInfo != null) {
+            this.UrlInfo = new UrlInfo(source.UrlInfo);
+        }
+        if (source.CosInfo != null) {
+            this.CosInfo = new CosInfo(source.CosInfo);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

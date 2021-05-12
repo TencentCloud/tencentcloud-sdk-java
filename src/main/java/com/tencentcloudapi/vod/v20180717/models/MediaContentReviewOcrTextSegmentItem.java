@@ -226,6 +226,47 @@ PicUrlExpireTime 时间点后图片将被删除）。
         this.PicUrlExpireTime = PicUrlExpireTime;
     }
 
+    public MediaContentReviewOcrTextSegmentItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MediaContentReviewOcrTextSegmentItem(MediaContentReviewOcrTextSegmentItem source) {
+        if (source.StartTimeOffset != null) {
+            this.StartTimeOffset = new Float(source.StartTimeOffset);
+        }
+        if (source.EndTimeOffset != null) {
+            this.EndTimeOffset = new Float(source.EndTimeOffset);
+        }
+        if (source.Confidence != null) {
+            this.Confidence = new Float(source.Confidence);
+        }
+        if (source.Suggestion != null) {
+            this.Suggestion = new String(source.Suggestion);
+        }
+        if (source.KeywordSet != null) {
+            this.KeywordSet = new String[source.KeywordSet.length];
+            for (int i = 0; i < source.KeywordSet.length; i++) {
+                this.KeywordSet[i] = new String(source.KeywordSet[i]);
+            }
+        }
+        if (source.AreaCoordSet != null) {
+            this.AreaCoordSet = new Long[source.AreaCoordSet.length];
+            for (int i = 0; i < source.AreaCoordSet.length; i++) {
+                this.AreaCoordSet[i] = new Long(source.AreaCoordSet[i]);
+            }
+        }
+        if (source.Url != null) {
+            this.Url = new String(source.Url);
+        }
+        if (source.PicUrlExpireTime != null) {
+            this.PicUrlExpireTime = new String(source.PicUrlExpireTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -144,6 +144,29 @@ BLOCK：违规
         this.Suggestion = Suggestion;
     }
 
+    public FuseFaceReviewDetail() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public FuseFaceReviewDetail(FuseFaceReviewDetail source) {
+        if (source.Field != null) {
+            this.Field = new String(source.Field);
+        }
+        if (source.Label != null) {
+            this.Label = new String(source.Label);
+        }
+        if (source.Confidence != null) {
+            this.Confidence = new Float(source.Confidence);
+        }
+        if (source.Suggestion != null) {
+            this.Suggestion = new String(source.Suggestion);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

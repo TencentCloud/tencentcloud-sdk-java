@@ -45,6 +45,23 @@ public class FileDeleteTask extends AbstractModel{
         this.FileIdSet = FileIdSet;
     }
 
+    public FileDeleteTask() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public FileDeleteTask(FileDeleteTask source) {
+        if (source.FileIdSet != null) {
+            this.FileIdSet = new String[source.FileIdSet.length];
+            for (int i = 0; i < source.FileIdSet.length; i++) {
+                this.FileIdSet[i] = new String(source.FileIdSet[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

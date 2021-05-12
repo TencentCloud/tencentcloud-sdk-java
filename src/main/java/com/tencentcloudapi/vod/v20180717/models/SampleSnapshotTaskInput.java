@@ -68,6 +68,26 @@ public class SampleSnapshotTaskInput extends AbstractModel{
         this.WatermarkSet = WatermarkSet;
     }
 
+    public SampleSnapshotTaskInput() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SampleSnapshotTaskInput(SampleSnapshotTaskInput source) {
+        if (source.Definition != null) {
+            this.Definition = new Long(source.Definition);
+        }
+        if (source.WatermarkSet != null) {
+            this.WatermarkSet = new WatermarkInput[source.WatermarkSet.length];
+            for (int i = 0; i < source.WatermarkSet.length; i++) {
+                this.WatermarkSet[i] = new WatermarkInput(source.WatermarkSet[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

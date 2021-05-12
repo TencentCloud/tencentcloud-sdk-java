@@ -73,6 +73,23 @@ public class PlayCodeTotalInfo extends AbstractModel{
         this.Num = Num;
     }
 
+    public PlayCodeTotalInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PlayCodeTotalInfo(PlayCodeTotalInfo source) {
+        if (source.Code != null) {
+            this.Code = new String(source.Code);
+        }
+        if (source.Num != null) {
+            this.Num = new Long(source.Num);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

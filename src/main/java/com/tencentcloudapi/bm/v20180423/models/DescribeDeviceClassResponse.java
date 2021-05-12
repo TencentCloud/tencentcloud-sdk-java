@@ -68,6 +68,26 @@ public class DescribeDeviceClassResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeDeviceClassResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeDeviceClassResponse(DescribeDeviceClassResponse source) {
+        if (source.DeviceClassSet != null) {
+            this.DeviceClassSet = new DeviceClass[source.DeviceClassSet.length];
+            for (int i = 0; i < source.DeviceClassSet.length; i++) {
+                this.DeviceClassSet[i] = new DeviceClass(source.DeviceClassSet[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

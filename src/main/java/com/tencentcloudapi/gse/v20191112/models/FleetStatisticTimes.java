@@ -78,6 +78,23 @@ public class FleetStatisticTimes extends AbstractModel{
         this.TotalUsedTimeSeconds = TotalUsedTimeSeconds;
     }
 
+    public FleetStatisticTimes() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public FleetStatisticTimes(FleetStatisticTimes source) {
+        if (source.BeginTime != null) {
+            this.BeginTime = new String(source.BeginTime);
+        }
+        if (source.TotalUsedTimeSeconds != null) {
+            this.TotalUsedTimeSeconds = new String(source.TotalUsedTimeSeconds);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

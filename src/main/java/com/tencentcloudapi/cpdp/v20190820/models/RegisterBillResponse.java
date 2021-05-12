@@ -114,6 +114,29 @@ public class RegisterBillResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public RegisterBillResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RegisterBillResponse(RegisterBillResponse source) {
+        if (source.FrontSeqNo != null) {
+            this.FrontSeqNo = new String(source.FrontSeqNo);
+        }
+        if (source.ReservedMessage != null) {
+            this.ReservedMessage = new String(source.ReservedMessage);
+        }
+        if (source.RequestType != null) {
+            this.RequestType = new String(source.RequestType);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

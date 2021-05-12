@@ -91,6 +91,29 @@ public class DescribeBackupMigrationResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeBackupMigrationResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeBackupMigrationResponse(DescribeBackupMigrationResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.BackupMigrationSet != null) {
+            this.BackupMigrationSet = new Migration[source.BackupMigrationSet.length];
+            for (int i = 0; i < source.BackupMigrationSet.length; i++) {
+                this.BackupMigrationSet[i] = new Migration(source.BackupMigrationSet[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

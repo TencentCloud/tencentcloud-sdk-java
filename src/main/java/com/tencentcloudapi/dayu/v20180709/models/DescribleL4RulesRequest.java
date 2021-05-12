@@ -137,6 +137,35 @@ public class DescribleL4RulesRequest extends AbstractModel{
         this.Offset = Offset;
     }
 
+    public DescribleL4RulesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribleL4RulesRequest(DescribleL4RulesRequest source) {
+        if (source.Business != null) {
+            this.Business = new String(source.Business);
+        }
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
+        if (source.RuleIdList != null) {
+            this.RuleIdList = new String[source.RuleIdList.length];
+            for (int i = 0; i < source.RuleIdList.length; i++) {
+                this.RuleIdList[i] = new String(source.RuleIdList[i]);
+            }
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

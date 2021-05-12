@@ -157,6 +157,32 @@ public class EventMessage extends AbstractModel{
         this.ParamTwo = ParamTwo;
     }
 
+    public EventMessage() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public EventMessage(EventMessage source) {
+        if (source.Type != null) {
+            this.Type = new Long(source.Type);
+        }
+        if (source.Time != null) {
+            this.Time = new Long(source.Time);
+        }
+        if (source.EventId != null) {
+            this.EventId = new Long(source.EventId);
+        }
+        if (source.ParamOne != null) {
+            this.ParamOne = new Long(source.ParamOne);
+        }
+        if (source.ParamTwo != null) {
+            this.ParamTwo = new Long(source.ParamTwo);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

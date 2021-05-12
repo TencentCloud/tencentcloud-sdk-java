@@ -73,6 +73,26 @@ public class DescribeDistrictIspDataResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeDistrictIspDataResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeDistrictIspDataResponse(DescribeDistrictIspDataResponse source) {
+        if (source.Data != null) {
+            this.Data = new DistrictIspInfo[source.Data.length];
+            for (int i = 0; i < source.Data.length; i++) {
+                this.Data[i] = new DistrictIspInfo(source.Data[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

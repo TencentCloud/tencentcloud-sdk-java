@@ -203,6 +203,38 @@ public class DDoSPolicyPortLimit extends AbstractModel{
         this.Kind = Kind;
     }
 
+    public DDoSPolicyPortLimit() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DDoSPolicyPortLimit(DDoSPolicyPortLimit source) {
+        if (source.Protocol != null) {
+            this.Protocol = new String(source.Protocol);
+        }
+        if (source.DPortStart != null) {
+            this.DPortStart = new Long(source.DPortStart);
+        }
+        if (source.DPortEnd != null) {
+            this.DPortEnd = new Long(source.DPortEnd);
+        }
+        if (source.SPortStart != null) {
+            this.SPortStart = new Long(source.SPortStart);
+        }
+        if (source.SPortEnd != null) {
+            this.SPortEnd = new Long(source.SPortEnd);
+        }
+        if (source.Action != null) {
+            this.Action = new String(source.Action);
+        }
+        if (source.Kind != null) {
+            this.Kind = new Long(source.Kind);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

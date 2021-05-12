@@ -275,6 +275,50 @@ public class DescribeCaptchaMiniRiskResultRequest extends AbstractModel{
         this.WeChatOpenId = WeChatOpenId;
     }
 
+    public DescribeCaptchaMiniRiskResultRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeCaptchaMiniRiskResultRequest(DescribeCaptchaMiniRiskResultRequest source) {
+        if (source.CaptchaType != null) {
+            this.CaptchaType = new Long(source.CaptchaType);
+        }
+        if (source.Ticket != null) {
+            this.Ticket = new String(source.Ticket);
+        }
+        if (source.UserIp != null) {
+            this.UserIp = new String(source.UserIp);
+        }
+        if (source.CaptchaAppId != null) {
+            this.CaptchaAppId = new Long(source.CaptchaAppId);
+        }
+        if (source.AppSecretKey != null) {
+            this.AppSecretKey = new String(source.AppSecretKey);
+        }
+        if (source.BusinessId != null) {
+            this.BusinessId = new Long(source.BusinessId);
+        }
+        if (source.SceneId != null) {
+            this.SceneId = new Long(source.SceneId);
+        }
+        if (source.MacAddress != null) {
+            this.MacAddress = new String(source.MacAddress);
+        }
+        if (source.Imei != null) {
+            this.Imei = new String(source.Imei);
+        }
+        if (source.SceneCode != null) {
+            this.SceneCode = new Long(source.SceneCode);
+        }
+        if (source.WeChatOpenId != null) {
+            this.WeChatOpenId = new String(source.WeChatOpenId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

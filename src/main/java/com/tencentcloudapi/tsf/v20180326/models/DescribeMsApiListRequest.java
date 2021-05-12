@@ -114,6 +114,29 @@ public class DescribeMsApiListRequest extends AbstractModel{
         this.Offset = Offset;
     }
 
+    public DescribeMsApiListRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeMsApiListRequest(DescribeMsApiListRequest source) {
+        if (source.MicroserviceId != null) {
+            this.MicroserviceId = new String(source.MicroserviceId);
+        }
+        if (source.SearchWord != null) {
+            this.SearchWord = new String(source.SearchWord);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

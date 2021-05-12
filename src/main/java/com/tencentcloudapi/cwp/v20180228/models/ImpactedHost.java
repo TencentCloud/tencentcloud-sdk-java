@@ -244,6 +244,44 @@ public class ImpactedHost extends AbstractModel{
         this.IsProVersion = IsProVersion;
     }
 
+    public ImpactedHost() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ImpactedHost(ImpactedHost source) {
+        if (source.Id != null) {
+            this.Id = new Long(source.Id);
+        }
+        if (source.MachineIp != null) {
+            this.MachineIp = new String(source.MachineIp);
+        }
+        if (source.MachineName != null) {
+            this.MachineName = new String(source.MachineName);
+        }
+        if (source.LastScanTime != null) {
+            this.LastScanTime = new String(source.LastScanTime);
+        }
+        if (source.VulStatus != null) {
+            this.VulStatus = new String(source.VulStatus);
+        }
+        if (source.Uuid != null) {
+            this.Uuid = new String(source.Uuid);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.VulId != null) {
+            this.VulId = new Long(source.VulId);
+        }
+        if (source.IsProVersion != null) {
+            this.IsProVersion = new Boolean(source.IsProVersion);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

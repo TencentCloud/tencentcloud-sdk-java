@@ -114,6 +114,32 @@ public class CreateBizConfigRequest extends AbstractModel{
         this.ModerationCategories = ModerationCategories;
     }
 
+    public CreateBizConfigRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateBizConfigRequest(CreateBizConfigRequest source) {
+        if (source.BizType != null) {
+            this.BizType = new String(source.BizType);
+        }
+        if (source.MediaModeration != null) {
+            this.MediaModeration = new MediaModerationConfig(source.MediaModeration);
+        }
+        if (source.BizName != null) {
+            this.BizName = new String(source.BizName);
+        }
+        if (source.ModerationCategories != null) {
+            this.ModerationCategories = new String[source.ModerationCategories.length];
+            for (int i = 0; i < source.ModerationCategories.length; i++) {
+                this.ModerationCategories[i] = new String(source.ModerationCategories[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

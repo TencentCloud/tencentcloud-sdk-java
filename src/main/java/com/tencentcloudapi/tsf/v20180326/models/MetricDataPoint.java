@@ -106,6 +106,26 @@ public class MetricDataPoint extends AbstractModel{
         this.Tag = Tag;
     }
 
+    public MetricDataPoint() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MetricDataPoint(MetricDataPoint source) {
+        if (source.Key != null) {
+            this.Key = new String(source.Key);
+        }
+        if (source.Value != null) {
+            this.Value = new String(source.Value);
+        }
+        if (source.Tag != null) {
+            this.Tag = new String(source.Tag);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

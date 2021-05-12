@@ -1080,6 +1080,173 @@ public class CreateApiRequest extends AbstractModel{
         this.IsBase64Encoded = IsBase64Encoded;
     }
 
+    public CreateApiRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateApiRequest(CreateApiRequest source) {
+        if (source.ServiceId != null) {
+            this.ServiceId = new String(source.ServiceId);
+        }
+        if (source.ServiceType != null) {
+            this.ServiceType = new String(source.ServiceType);
+        }
+        if (source.ServiceTimeout != null) {
+            this.ServiceTimeout = new Long(source.ServiceTimeout);
+        }
+        if (source.Protocol != null) {
+            this.Protocol = new String(source.Protocol);
+        }
+        if (source.RequestConfig != null) {
+            this.RequestConfig = new ApiRequestConfig(source.RequestConfig);
+        }
+        if (source.ApiName != null) {
+            this.ApiName = new String(source.ApiName);
+        }
+        if (source.ApiDesc != null) {
+            this.ApiDesc = new String(source.ApiDesc);
+        }
+        if (source.ApiType != null) {
+            this.ApiType = new String(source.ApiType);
+        }
+        if (source.AuthType != null) {
+            this.AuthType = new String(source.AuthType);
+        }
+        if (source.EnableCORS != null) {
+            this.EnableCORS = new Boolean(source.EnableCORS);
+        }
+        if (source.ConstantParameters != null) {
+            this.ConstantParameters = new ConstantParameter[source.ConstantParameters.length];
+            for (int i = 0; i < source.ConstantParameters.length; i++) {
+                this.ConstantParameters[i] = new ConstantParameter(source.ConstantParameters[i]);
+            }
+        }
+        if (source.RequestParameters != null) {
+            this.RequestParameters = new RequestParameter[source.RequestParameters.length];
+            for (int i = 0; i < source.RequestParameters.length; i++) {
+                this.RequestParameters[i] = new RequestParameter(source.RequestParameters[i]);
+            }
+        }
+        if (source.ApiBusinessType != null) {
+            this.ApiBusinessType = new String(source.ApiBusinessType);
+        }
+        if (source.ServiceMockReturnMessage != null) {
+            this.ServiceMockReturnMessage = new String(source.ServiceMockReturnMessage);
+        }
+        if (source.MicroServices != null) {
+            this.MicroServices = new MicroServiceReq[source.MicroServices.length];
+            for (int i = 0; i < source.MicroServices.length; i++) {
+                this.MicroServices[i] = new MicroServiceReq(source.MicroServices[i]);
+            }
+        }
+        if (source.ServiceTsfLoadBalanceConf != null) {
+            this.ServiceTsfLoadBalanceConf = new TsfLoadBalanceConfResp(source.ServiceTsfLoadBalanceConf);
+        }
+        if (source.ServiceTsfHealthCheckConf != null) {
+            this.ServiceTsfHealthCheckConf = new HealthCheckConf(source.ServiceTsfHealthCheckConf);
+        }
+        if (source.TargetServices != null) {
+            this.TargetServices = new TargetServicesReq[source.TargetServices.length];
+            for (int i = 0; i < source.TargetServices.length; i++) {
+                this.TargetServices[i] = new TargetServicesReq(source.TargetServices[i]);
+            }
+        }
+        if (source.TargetServicesLoadBalanceConf != null) {
+            this.TargetServicesLoadBalanceConf = new Long(source.TargetServicesLoadBalanceConf);
+        }
+        if (source.TargetServicesHealthCheckConf != null) {
+            this.TargetServicesHealthCheckConf = new HealthCheckConf(source.TargetServicesHealthCheckConf);
+        }
+        if (source.ServiceScfFunctionName != null) {
+            this.ServiceScfFunctionName = new String(source.ServiceScfFunctionName);
+        }
+        if (source.ServiceWebsocketRegisterFunctionName != null) {
+            this.ServiceWebsocketRegisterFunctionName = new String(source.ServiceWebsocketRegisterFunctionName);
+        }
+        if (source.ServiceWebsocketCleanupFunctionName != null) {
+            this.ServiceWebsocketCleanupFunctionName = new String(source.ServiceWebsocketCleanupFunctionName);
+        }
+        if (source.ServiceWebsocketTransportFunctionName != null) {
+            this.ServiceWebsocketTransportFunctionName = new String(source.ServiceWebsocketTransportFunctionName);
+        }
+        if (source.ServiceScfFunctionNamespace != null) {
+            this.ServiceScfFunctionNamespace = new String(source.ServiceScfFunctionNamespace);
+        }
+        if (source.ServiceScfFunctionQualifier != null) {
+            this.ServiceScfFunctionQualifier = new String(source.ServiceScfFunctionQualifier);
+        }
+        if (source.ServiceWebsocketRegisterFunctionNamespace != null) {
+            this.ServiceWebsocketRegisterFunctionNamespace = new String(source.ServiceWebsocketRegisterFunctionNamespace);
+        }
+        if (source.ServiceWebsocketRegisterFunctionQualifier != null) {
+            this.ServiceWebsocketRegisterFunctionQualifier = new String(source.ServiceWebsocketRegisterFunctionQualifier);
+        }
+        if (source.ServiceWebsocketTransportFunctionNamespace != null) {
+            this.ServiceWebsocketTransportFunctionNamespace = new String(source.ServiceWebsocketTransportFunctionNamespace);
+        }
+        if (source.ServiceWebsocketTransportFunctionQualifier != null) {
+            this.ServiceWebsocketTransportFunctionQualifier = new String(source.ServiceWebsocketTransportFunctionQualifier);
+        }
+        if (source.ServiceWebsocketCleanupFunctionNamespace != null) {
+            this.ServiceWebsocketCleanupFunctionNamespace = new String(source.ServiceWebsocketCleanupFunctionNamespace);
+        }
+        if (source.ServiceWebsocketCleanupFunctionQualifier != null) {
+            this.ServiceWebsocketCleanupFunctionQualifier = new String(source.ServiceWebsocketCleanupFunctionQualifier);
+        }
+        if (source.ServiceScfIsIntegratedResponse != null) {
+            this.ServiceScfIsIntegratedResponse = new Boolean(source.ServiceScfIsIntegratedResponse);
+        }
+        if (source.IsDebugAfterCharge != null) {
+            this.IsDebugAfterCharge = new Boolean(source.IsDebugAfterCharge);
+        }
+        if (source.IsDeleteResponseErrorCodes != null) {
+            this.IsDeleteResponseErrorCodes = new Boolean(source.IsDeleteResponseErrorCodes);
+        }
+        if (source.ResponseType != null) {
+            this.ResponseType = new String(source.ResponseType);
+        }
+        if (source.ResponseSuccessExample != null) {
+            this.ResponseSuccessExample = new String(source.ResponseSuccessExample);
+        }
+        if (source.ResponseFailExample != null) {
+            this.ResponseFailExample = new String(source.ResponseFailExample);
+        }
+        if (source.ServiceConfig != null) {
+            this.ServiceConfig = new ServiceConfig(source.ServiceConfig);
+        }
+        if (source.AuthRelationApiId != null) {
+            this.AuthRelationApiId = new String(source.AuthRelationApiId);
+        }
+        if (source.ServiceParameters != null) {
+            this.ServiceParameters = new ServiceParameter[source.ServiceParameters.length];
+            for (int i = 0; i < source.ServiceParameters.length; i++) {
+                this.ServiceParameters[i] = new ServiceParameter(source.ServiceParameters[i]);
+            }
+        }
+        if (source.OauthConfig != null) {
+            this.OauthConfig = new OauthConfig(source.OauthConfig);
+        }
+        if (source.ResponseErrorCodes != null) {
+            this.ResponseErrorCodes = new ResponseErrorCodeReq[source.ResponseErrorCodes.length];
+            for (int i = 0; i < source.ResponseErrorCodes.length; i++) {
+                this.ResponseErrorCodes[i] = new ResponseErrorCodeReq(source.ResponseErrorCodes[i]);
+            }
+        }
+        if (source.TargetNamespaceId != null) {
+            this.TargetNamespaceId = new String(source.TargetNamespaceId);
+        }
+        if (source.UserType != null) {
+            this.UserType = new String(source.UserType);
+        }
+        if (source.IsBase64Encoded != null) {
+            this.IsBase64Encoded = new Boolean(source.IsBase64Encoded);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -137,6 +137,35 @@ public class PublishLayerVersionRequest extends AbstractModel{
         this.LicenseInfo = LicenseInfo;
     }
 
+    public PublishLayerVersionRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PublishLayerVersionRequest(PublishLayerVersionRequest source) {
+        if (source.LayerName != null) {
+            this.LayerName = new String(source.LayerName);
+        }
+        if (source.CompatibleRuntimes != null) {
+            this.CompatibleRuntimes = new String[source.CompatibleRuntimes.length];
+            for (int i = 0; i < source.CompatibleRuntimes.length; i++) {
+                this.CompatibleRuntimes[i] = new String(source.CompatibleRuntimes[i]);
+            }
+        }
+        if (source.Content != null) {
+            this.Content = new Code(source.Content);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.LicenseInfo != null) {
+            this.LicenseInfo = new String(source.LicenseInfo);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

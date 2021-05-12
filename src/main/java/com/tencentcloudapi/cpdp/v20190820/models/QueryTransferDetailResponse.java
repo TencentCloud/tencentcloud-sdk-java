@@ -587,6 +587,62 @@ TRANSFER_RISK：转账存在风险
         this.RequestId = RequestId;
     }
 
+    public QueryTransferDetailResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public QueryTransferDetailResponse(QueryTransferDetailResponse source) {
+        if (source.MerchantId != null) {
+            this.MerchantId = new String(source.MerchantId);
+        }
+        if (source.MerchantBatchNo != null) {
+            this.MerchantBatchNo = new String(source.MerchantBatchNo);
+        }
+        if (source.BatchId != null) {
+            this.BatchId = new String(source.BatchId);
+        }
+        if (source.MerchantDetailNo != null) {
+            this.MerchantDetailNo = new String(source.MerchantDetailNo);
+        }
+        if (source.DetailId != null) {
+            this.DetailId = new String(source.DetailId);
+        }
+        if (source.DetailStatus != null) {
+            this.DetailStatus = new String(source.DetailStatus);
+        }
+        if (source.TransferAmount != null) {
+            this.TransferAmount = new Long(source.TransferAmount);
+        }
+        if (source.FailReason != null) {
+            this.FailReason = new String(source.FailReason);
+        }
+        if (source.InitiateTime != null) {
+            this.InitiateTime = new String(source.InitiateTime);
+        }
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new String(source.UpdateTime);
+        }
+        if (source.UserName != null) {
+            this.UserName = new String(source.UserName);
+        }
+        if (source.TransferRemark != null) {
+            this.TransferRemark = new String(source.TransferRemark);
+        }
+        if (source.MerchantAppId != null) {
+            this.MerchantAppId = new String(source.MerchantAppId);
+        }
+        if (source.OpenId != null) {
+            this.OpenId = new String(source.OpenId);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

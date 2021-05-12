@@ -274,6 +274,47 @@ public class BankCardOCRResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public BankCardOCRResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public BankCardOCRResponse(BankCardOCRResponse source) {
+        if (source.CardNo != null) {
+            this.CardNo = new String(source.CardNo);
+        }
+        if (source.BankInfo != null) {
+            this.BankInfo = new String(source.BankInfo);
+        }
+        if (source.ValidDate != null) {
+            this.ValidDate = new String(source.ValidDate);
+        }
+        if (source.CardType != null) {
+            this.CardType = new String(source.CardType);
+        }
+        if (source.CardName != null) {
+            this.CardName = new String(source.CardName);
+        }
+        if (source.BorderCutImage != null) {
+            this.BorderCutImage = new String(source.BorderCutImage);
+        }
+        if (source.CardNoImage != null) {
+            this.CardNoImage = new String(source.CardNoImage);
+        }
+        if (source.WarningCode != null) {
+            this.WarningCode = new Long[source.WarningCode.length];
+            for (int i = 0; i < source.WarningCode.length; i++) {
+                this.WarningCode[i] = new Long(source.WarningCode[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

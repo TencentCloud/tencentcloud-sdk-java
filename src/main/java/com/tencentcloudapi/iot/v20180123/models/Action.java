@@ -106,6 +106,26 @@ public class Action extends AbstractModel{
         this.Ckafka = Ckafka;
     }
 
+    public Action() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Action(Action source) {
+        if (source.Topic != null) {
+            this.Topic = new TopicAction(source.Topic);
+        }
+        if (source.Service != null) {
+            this.Service = new ServiceAction(source.Service);
+        }
+        if (source.Ckafka != null) {
+            this.Ckafka = new CkafkaAction(source.Ckafka);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

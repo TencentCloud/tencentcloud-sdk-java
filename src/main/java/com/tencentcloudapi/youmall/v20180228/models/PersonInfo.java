@@ -244,6 +244,44 @@ PersonType=2时(黑名单)，0普通黑名单，1小偷)
         this.VisitDays = VisitDays;
     }
 
+    public PersonInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PersonInfo(PersonInfo source) {
+        if (source.PersonId != null) {
+            this.PersonId = new Long(source.PersonId);
+        }
+        if (source.PersonPicture != null) {
+            this.PersonPicture = new String(source.PersonPicture);
+        }
+        if (source.Gender != null) {
+            this.Gender = new Long(source.Gender);
+        }
+        if (source.Age != null) {
+            this.Age = new Long(source.Age);
+        }
+        if (source.PersonType != null) {
+            this.PersonType = new Long(source.PersonType);
+        }
+        if (source.PersonPictureUrl != null) {
+            this.PersonPictureUrl = new String(source.PersonPictureUrl);
+        }
+        if (source.PersonSubType != null) {
+            this.PersonSubType = new Long(source.PersonSubType);
+        }
+        if (source.VisitTimes != null) {
+            this.VisitTimes = new Long(source.VisitTimes);
+        }
+        if (source.VisitDays != null) {
+            this.VisitDays = new Long(source.VisitDays);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

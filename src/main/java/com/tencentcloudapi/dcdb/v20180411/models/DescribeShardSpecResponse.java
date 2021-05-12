@@ -68,6 +68,26 @@ public class DescribeShardSpecResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeShardSpecResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeShardSpecResponse(DescribeShardSpecResponse source) {
+        if (source.SpecConfig != null) {
+            this.SpecConfig = new SpecConfig[source.SpecConfig.length];
+            for (int i = 0; i < source.SpecConfig.length; i++) {
+                this.SpecConfig[i] = new SpecConfig(source.SpecConfig[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

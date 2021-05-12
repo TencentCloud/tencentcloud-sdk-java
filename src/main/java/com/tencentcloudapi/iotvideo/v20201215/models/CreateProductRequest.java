@@ -229,6 +229,47 @@ public class CreateProductRequest extends AbstractModel{
         this.EncryptionType = EncryptionType;
     }
 
+    public CreateProductRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateProductRequest(CreateProductRequest source) {
+        if (source.ProductName != null) {
+            this.ProductName = new String(source.ProductName);
+        }
+        if (source.DeviceType != null) {
+            this.DeviceType = new Long(source.DeviceType);
+        }
+        if (source.ProductVaildYears != null) {
+            this.ProductVaildYears = new Long(source.ProductVaildYears);
+        }
+        if (source.Features != null) {
+            this.Features = new String[source.Features.length];
+            for (int i = 0; i < source.Features.length; i++) {
+                this.Features[i] = new String(source.Features[i]);
+            }
+        }
+        if (source.ChipOs != null) {
+            this.ChipOs = new String(source.ChipOs);
+        }
+        if (source.ChipManufactureId != null) {
+            this.ChipManufactureId = new String(source.ChipManufactureId);
+        }
+        if (source.ChipId != null) {
+            this.ChipId = new String(source.ChipId);
+        }
+        if (source.ProductDescription != null) {
+            this.ProductDescription = new String(source.ProductDescription);
+        }
+        if (source.EncryptionType != null) {
+            this.EncryptionType = new Long(source.EncryptionType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

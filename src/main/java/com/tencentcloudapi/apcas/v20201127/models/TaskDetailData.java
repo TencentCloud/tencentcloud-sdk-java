@@ -91,6 +91,29 @@ public class TaskDetailData extends AbstractModel{
         this.LabelDetailDataList = LabelDetailDataList;
     }
 
+    public TaskDetailData() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TaskDetailData(TaskDetailData source) {
+        if (source.TagId != null) {
+            this.TagId = new Long(source.TagId);
+        }
+        if (source.TagDesc != null) {
+            this.TagDesc = new String(source.TagDesc);
+        }
+        if (source.LabelDetailDataList != null) {
+            this.LabelDetailDataList = new LabelDetailData[source.LabelDetailDataList.length];
+            for (int i = 0; i < source.LabelDetailDataList.length; i++) {
+                this.LabelDetailDataList[i] = new LabelDetailData(source.LabelDetailDataList[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

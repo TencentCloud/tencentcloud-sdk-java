@@ -598,6 +598,86 @@ public class GameServerSession extends AbstractModel{
         this.AvailabilityStatus = AvailabilityStatus;
     }
 
+    public GameServerSession() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GameServerSession(GameServerSession source) {
+        if (source.CreationTime != null) {
+            this.CreationTime = new String(source.CreationTime);
+        }
+        if (source.CreatorId != null) {
+            this.CreatorId = new String(source.CreatorId);
+        }
+        if (source.CurrentPlayerSessionCount != null) {
+            this.CurrentPlayerSessionCount = new Long(source.CurrentPlayerSessionCount);
+        }
+        if (source.DnsName != null) {
+            this.DnsName = new String(source.DnsName);
+        }
+        if (source.FleetId != null) {
+            this.FleetId = new String(source.FleetId);
+        }
+        if (source.GameProperties != null) {
+            this.GameProperties = new GameProperty[source.GameProperties.length];
+            for (int i = 0; i < source.GameProperties.length; i++) {
+                this.GameProperties[i] = new GameProperty(source.GameProperties[i]);
+            }
+        }
+        if (source.GameServerSessionData != null) {
+            this.GameServerSessionData = new String(source.GameServerSessionData);
+        }
+        if (source.GameServerSessionId != null) {
+            this.GameServerSessionId = new String(source.GameServerSessionId);
+        }
+        if (source.IpAddress != null) {
+            this.IpAddress = new String(source.IpAddress);
+        }
+        if (source.MatchmakerData != null) {
+            this.MatchmakerData = new String(source.MatchmakerData);
+        }
+        if (source.MaximumPlayerSessionCount != null) {
+            this.MaximumPlayerSessionCount = new Long(source.MaximumPlayerSessionCount);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.PlayerSessionCreationPolicy != null) {
+            this.PlayerSessionCreationPolicy = new String(source.PlayerSessionCreationPolicy);
+        }
+        if (source.Port != null) {
+            this.Port = new Long(source.Port);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.StatusReason != null) {
+            this.StatusReason = new String(source.StatusReason);
+        }
+        if (source.TerminationTime != null) {
+            this.TerminationTime = new String(source.TerminationTime);
+        }
+        if (source.InstanceType != null) {
+            this.InstanceType = new String(source.InstanceType);
+        }
+        if (source.CurrentCustomCount != null) {
+            this.CurrentCustomCount = new Long(source.CurrentCustomCount);
+        }
+        if (source.MaxCustomCount != null) {
+            this.MaxCustomCount = new Long(source.MaxCustomCount);
+        }
+        if (source.Weight != null) {
+            this.Weight = new Long(source.Weight);
+        }
+        if (source.AvailabilityStatus != null) {
+            this.AvailabilityStatus = new String(source.AvailabilityStatus);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

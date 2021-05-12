@@ -101,6 +101,32 @@ public class DescribeImportMachineInfoResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeImportMachineInfoResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeImportMachineInfoResponse(DescribeImportMachineInfoResponse source) {
+        if (source.EffectiveMachineInfoList != null) {
+            this.EffectiveMachineInfoList = new EffectiveMachineInfo[source.EffectiveMachineInfoList.length];
+            for (int i = 0; i < source.EffectiveMachineInfoList.length; i++) {
+                this.EffectiveMachineInfoList[i] = new EffectiveMachineInfo(source.EffectiveMachineInfoList[i]);
+            }
+        }
+        if (source.InvalidMachineList != null) {
+            this.InvalidMachineList = new String[source.InvalidMachineList.length];
+            for (int i = 0; i < source.InvalidMachineList.length; i++) {
+                this.InvalidMachineList[i] = new String(source.InvalidMachineList[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

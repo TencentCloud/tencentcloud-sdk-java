@@ -160,6 +160,35 @@ public class GetBlockListHandlerRequest extends AbstractModel{
         this.BlockHash = BlockHash;
     }
 
+    public GetBlockListHandlerRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GetBlockListHandlerRequest(GetBlockListHandlerRequest source) {
+        if (source.Module != null) {
+            this.Module = new String(source.Module);
+        }
+        if (source.Operation != null) {
+            this.Operation = new String(source.Operation);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.GroupPk != null) {
+            this.GroupPk = new String(source.GroupPk);
+        }
+        if (source.BlockHash != null) {
+            this.BlockHash = new String(source.BlockHash);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

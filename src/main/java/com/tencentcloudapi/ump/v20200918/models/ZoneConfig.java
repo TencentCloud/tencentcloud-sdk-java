@@ -284,6 +284,44 @@ public class ZoneConfig extends AbstractModel{
         this.State = State;
     }
 
+    public ZoneConfig() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ZoneConfig(ZoneConfig source) {
+        if (source.ZoneId != null) {
+            this.ZoneId = new Long(source.ZoneId);
+        }
+        if (source.ZoneName != null) {
+            this.ZoneName = new String(source.ZoneName);
+        }
+        if (source.ZoneType != null) {
+            this.ZoneType = new Long(source.ZoneType);
+        }
+        if (source.BunkCodes != null) {
+            this.BunkCodes = new String(source.BunkCodes);
+        }
+        if (source.FloorName != null) {
+            this.FloorName = new String(source.FloorName);
+        }
+        if (source.FloorId != null) {
+            this.FloorId = new Long(source.FloorId);
+        }
+        if (source.BindNum != null) {
+            this.BindNum = new Long(source.BindNum);
+        }
+        if (source.DebugNum != null) {
+            this.DebugNum = new Long(source.DebugNum);
+        }
+        if (source.State != null) {
+            this.State = new Long(source.State);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -154,6 +154,35 @@ path: 根据完整访问路径生效
         this.FilterType = FilterType;
     }
 
+    public UserAgentFilterRule() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UserAgentFilterRule(UserAgentFilterRule source) {
+        if (source.RuleType != null) {
+            this.RuleType = new String(source.RuleType);
+        }
+        if (source.RulePaths != null) {
+            this.RulePaths = new String[source.RulePaths.length];
+            for (int i = 0; i < source.RulePaths.length; i++) {
+                this.RulePaths[i] = new String(source.RulePaths[i]);
+            }
+        }
+        if (source.UserAgents != null) {
+            this.UserAgents = new String[source.UserAgents.length];
+            for (int i = 0; i < source.UserAgents.length; i++) {
+                this.UserAgents[i] = new String(source.UserAgents[i]);
+            }
+        }
+        if (source.FilterType != null) {
+            this.FilterType = new String(source.FilterType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

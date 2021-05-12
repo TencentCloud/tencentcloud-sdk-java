@@ -642,6 +642,98 @@ public class DescribeDeviceResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeDeviceResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeDeviceResponse(DescribeDeviceResponse source) {
+        if (source.DeviceName != null) {
+            this.DeviceName = new String(source.DeviceName);
+        }
+        if (source.Online != null) {
+            this.Online = new Long(source.Online);
+        }
+        if (source.LoginTime != null) {
+            this.LoginTime = new Long(source.LoginTime);
+        }
+        if (source.Version != null) {
+            this.Version = new String(source.Version);
+        }
+        if (source.LastUpdateTime != null) {
+            this.LastUpdateTime = new Long(source.LastUpdateTime);
+        }
+        if (source.DeviceCert != null) {
+            this.DeviceCert = new String(source.DeviceCert);
+        }
+        if (source.DevicePsk != null) {
+            this.DevicePsk = new String(source.DevicePsk);
+        }
+        if (source.Tags != null) {
+            this.Tags = new DeviceTag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new DeviceTag(source.Tags[i]);
+            }
+        }
+        if (source.DeviceType != null) {
+            this.DeviceType = new Long(source.DeviceType);
+        }
+        if (source.Imei != null) {
+            this.Imei = new String(source.Imei);
+        }
+        if (source.Isp != null) {
+            this.Isp = new Long(source.Isp);
+        }
+        if (source.ConnIP != null) {
+            this.ConnIP = new Long(source.ConnIP);
+        }
+        if (source.NbiotDeviceID != null) {
+            this.NbiotDeviceID = new String(source.NbiotDeviceID);
+        }
+        if (source.LoraDevEui != null) {
+            this.LoraDevEui = new String(source.LoraDevEui);
+        }
+        if (source.LoraMoteType != null) {
+            this.LoraMoteType = new Long(source.LoraMoteType);
+        }
+        if (source.LogLevel != null) {
+            this.LogLevel = new Long(source.LogLevel);
+        }
+        if (source.FirstOnlineTime != null) {
+            this.FirstOnlineTime = new Long(source.FirstOnlineTime);
+        }
+        if (source.LastOfflineTime != null) {
+            this.LastOfflineTime = new Long(source.LastOfflineTime);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new Long(source.CreateTime);
+        }
+        if (source.CertState != null) {
+            this.CertState = new Long(source.CertState);
+        }
+        if (source.EnableState != null) {
+            this.EnableState = new Long(source.EnableState);
+        }
+        if (source.Labels != null) {
+            this.Labels = new DeviceLabel[source.Labels.length];
+            for (int i = 0; i < source.Labels.length; i++) {
+                this.Labels[i] = new DeviceLabel(source.Labels[i]);
+            }
+        }
+        if (source.ClientIP != null) {
+            this.ClientIP = new String(source.ClientIP);
+        }
+        if (source.FirmwareUpdateTime != null) {
+            this.FirmwareUpdateTime = new Long(source.FirmwareUpdateTime);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -68,6 +68,23 @@ public class DeleteCfsRuleRequest extends AbstractModel{
         this.RuleId = RuleId;
     }
 
+    public DeleteCfsRuleRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteCfsRuleRequest(DeleteCfsRuleRequest source) {
+        if (source.PGroupId != null) {
+            this.PGroupId = new String(source.PGroupId);
+        }
+        if (source.RuleId != null) {
+            this.RuleId = new String(source.RuleId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

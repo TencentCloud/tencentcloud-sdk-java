@@ -78,6 +78,23 @@ public class CloudBaseCodeRepoName extends AbstractModel{
         this.FullName = FullName;
     }
 
+    public CloudBaseCodeRepoName() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CloudBaseCodeRepoName(CloudBaseCodeRepoName source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.FullName != null) {
+            this.FullName = new String(source.FullName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

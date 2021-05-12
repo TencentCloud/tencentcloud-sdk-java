@@ -234,6 +234,47 @@ public class Face extends AbstractModel{
         this.ID = ID;
     }
 
+    public Face() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Face(Face source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Labels != null) {
+            this.Labels = new Labels[source.Labels.length];
+            for (int i = 0; i < source.Labels.length; i++) {
+                this.Labels[i] = new Labels(source.Labels[i]);
+            }
+        }
+        if (source.BasicInfo != null) {
+            this.BasicInfo = new String(source.BasicInfo);
+        }
+        if (source.Confidence != null) {
+            this.Confidence = new Long(source.Confidence);
+        }
+        if (source.X != null) {
+            this.X = new Long(source.X);
+        }
+        if (source.Y != null) {
+            this.Y = new Long(source.Y);
+        }
+        if (source.Width != null) {
+            this.Width = new Long(source.Width);
+        }
+        if (source.Height != null) {
+            this.Height = new Long(source.Height);
+        }
+        if (source.ID != null) {
+            this.ID = new String(source.ID);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

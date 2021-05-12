@@ -106,6 +106,26 @@ public class StorageBlock extends AbstractModel{
         this.MaxSize = MaxSize;
     }
 
+    public StorageBlock() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public StorageBlock(StorageBlock source) {
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.MinSize != null) {
+            this.MinSize = new Long(source.MinSize);
+        }
+        if (source.MaxSize != null) {
+            this.MaxSize = new Long(source.MaxSize);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

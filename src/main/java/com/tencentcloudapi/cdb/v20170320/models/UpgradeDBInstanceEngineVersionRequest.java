@@ -114,6 +114,29 @@ public class UpgradeDBInstanceEngineVersionRequest extends AbstractModel{
         this.UpgradeSubversion = UpgradeSubversion;
     }
 
+    public UpgradeDBInstanceEngineVersionRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UpgradeDBInstanceEngineVersionRequest(UpgradeDBInstanceEngineVersionRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.EngineVersion != null) {
+            this.EngineVersion = new String(source.EngineVersion);
+        }
+        if (source.WaitSwitch != null) {
+            this.WaitSwitch = new Long(source.WaitSwitch);
+        }
+        if (source.UpgradeSubversion != null) {
+            this.UpgradeSubversion = new Long(source.UpgradeSubversion);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -73,6 +73,26 @@ public class SmsGetCrowdPackListResponse extends AbstractModel{
         this.List = List;
     }
 
+    public SmsGetCrowdPackListResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SmsGetCrowdPackListResponse(SmsGetCrowdPackListResponse source) {
+        if (source.Total != null) {
+            this.Total = new Long(source.Total);
+        }
+        if (source.List != null) {
+            this.List = new SmsGetCrowdPackList[source.List.length];
+            for (int i = 0; i < source.List.length; i++) {
+                this.List[i] = new SmsGetCrowdPackList(source.List[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

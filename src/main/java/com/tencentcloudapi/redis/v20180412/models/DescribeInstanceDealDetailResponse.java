@@ -68,6 +68,26 @@ public class DescribeInstanceDealDetailResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeInstanceDealDetailResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeInstanceDealDetailResponse(DescribeInstanceDealDetailResponse source) {
+        if (source.DealDetails != null) {
+            this.DealDetails = new TradeDealDetail[source.DealDetails.length];
+            for (int i = 0; i < source.DealDetails.length; i++) {
+                this.DealDetails[i] = new TradeDealDetail(source.DealDetails[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

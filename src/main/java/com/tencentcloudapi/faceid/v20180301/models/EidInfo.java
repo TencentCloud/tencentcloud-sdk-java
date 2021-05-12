@@ -68,6 +68,23 @@ public class EidInfo extends AbstractModel{
         this.EidSign = EidSign;
     }
 
+    public EidInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public EidInfo(EidInfo source) {
+        if (source.EidCode != null) {
+            this.EidCode = new String(source.EidCode);
+        }
+        if (source.EidSign != null) {
+            this.EidSign = new String(source.EidSign);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -229,6 +229,44 @@ public class ModifyFlowServiceRequest extends AbstractModel{
         this.EnableCLS = EnableCLS;
     }
 
+    public ModifyFlowServiceRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyFlowServiceRequest(ModifyFlowServiceRequest source) {
+        if (source.FlowServiceResource != null) {
+            this.FlowServiceResource = new String(source.FlowServiceResource);
+        }
+        if (source.Definition != null) {
+            this.Definition = new String(source.Definition);
+        }
+        if (source.FlowServiceName != null) {
+            this.FlowServiceName = new String(source.FlowServiceName);
+        }
+        if (source.FlowServiceChineseName != null) {
+            this.FlowServiceChineseName = new String(source.FlowServiceChineseName);
+        }
+        if (source.IsNewRole != null) {
+            this.IsNewRole = new Boolean(source.IsNewRole);
+        }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.RoleResource != null) {
+            this.RoleResource = new String(source.RoleResource);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.EnableCLS != null) {
+            this.EnableCLS = new Boolean(source.EnableCLS);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

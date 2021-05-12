@@ -91,6 +91,26 @@ public class ListGroupsRequest extends AbstractModel{
         this.Keyword = Keyword;
     }
 
+    public ListGroupsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ListGroupsRequest(ListGroupsRequest source) {
+        if (source.Page != null) {
+            this.Page = new Long(source.Page);
+        }
+        if (source.Rp != null) {
+            this.Rp = new Long(source.Rp);
+        }
+        if (source.Keyword != null) {
+            this.Keyword = new String(source.Keyword);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

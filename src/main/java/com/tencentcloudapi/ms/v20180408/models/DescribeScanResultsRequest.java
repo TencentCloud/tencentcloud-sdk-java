@@ -68,6 +68,26 @@ public class DescribeScanResultsRequest extends AbstractModel{
         this.AppMd5s = AppMd5s;
     }
 
+    public DescribeScanResultsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeScanResultsRequest(DescribeScanResultsRequest source) {
+        if (source.ItemId != null) {
+            this.ItemId = new String(source.ItemId);
+        }
+        if (source.AppMd5s != null) {
+            this.AppMd5s = new String[source.AppMd5s.length];
+            for (int i = 0; i < source.AppMd5s.length; i++) {
+                this.AppMd5s[i] = new String(source.AppMd5s[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

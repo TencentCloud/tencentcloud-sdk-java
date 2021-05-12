@@ -440,6 +440,65 @@ development: 开发环境
         this.WithdrawOrderId = WithdrawOrderId;
     }
 
+    public ApplyWithdrawalRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ApplyWithdrawalRequest(ApplyWithdrawalRequest source) {
+        if (source.MidasAppId != null) {
+            this.MidasAppId = new String(source.MidasAppId);
+        }
+        if (source.SubAppId != null) {
+            this.SubAppId = new String(source.SubAppId);
+        }
+        if (source.SettleAcctNo != null) {
+            this.SettleAcctNo = new String(source.SettleAcctNo);
+        }
+        if (source.SettleAcctName != null) {
+            this.SettleAcctName = new String(source.SettleAcctName);
+        }
+        if (source.CurrencyType != null) {
+            this.CurrencyType = new String(source.CurrencyType);
+        }
+        if (source.CurrencyUnit != null) {
+            this.CurrencyUnit = new Long(source.CurrencyUnit);
+        }
+        if (source.CurrencyAmt != null) {
+            this.CurrencyAmt = new String(source.CurrencyAmt);
+        }
+        if (source.TranWebName != null) {
+            this.TranWebName = new String(source.TranWebName);
+        }
+        if (source.IdType != null) {
+            this.IdType = new String(source.IdType);
+        }
+        if (source.IdCode != null) {
+            this.IdCode = new String(source.IdCode);
+        }
+        if (source.MidasSecretId != null) {
+            this.MidasSecretId = new String(source.MidasSecretId);
+        }
+        if (source.MidasSignature != null) {
+            this.MidasSignature = new String(source.MidasSignature);
+        }
+        if (source.EncryptType != null) {
+            this.EncryptType = new String(source.EncryptType);
+        }
+        if (source.MidasEnvironment != null) {
+            this.MidasEnvironment = new String(source.MidasEnvironment);
+        }
+        if (source.CommissionAmount != null) {
+            this.CommissionAmount = new String(source.CommissionAmount);
+        }
+        if (source.WithdrawOrderId != null) {
+            this.WithdrawOrderId = new String(source.WithdrawOrderId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -157,6 +157,32 @@ public class SentimentAnalysisResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public SentimentAnalysisResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SentimentAnalysisResponse(SentimentAnalysisResponse source) {
+        if (source.Positive != null) {
+            this.Positive = new Float(source.Positive);
+        }
+        if (source.Neutral != null) {
+            this.Neutral = new Float(source.Neutral);
+        }
+        if (source.Negative != null) {
+            this.Negative = new Float(source.Negative);
+        }
+        if (source.Sentiment != null) {
+            this.Sentiment = new String(source.Sentiment);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

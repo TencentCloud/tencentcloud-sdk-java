@@ -384,6 +384,59 @@ public class Bundle extends AbstractModel{
         this.BundleDisplayLabel = BundleDisplayLabel;
     }
 
+    public Bundle() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Bundle(Bundle source) {
+        if (source.BundleId != null) {
+            this.BundleId = new String(source.BundleId);
+        }
+        if (source.Memory != null) {
+            this.Memory = new Long(source.Memory);
+        }
+        if (source.SystemDiskType != null) {
+            this.SystemDiskType = new String(source.SystemDiskType);
+        }
+        if (source.SystemDiskSize != null) {
+            this.SystemDiskSize = new Long(source.SystemDiskSize);
+        }
+        if (source.MonthlyTraffic != null) {
+            this.MonthlyTraffic = new Long(source.MonthlyTraffic);
+        }
+        if (source.SupportLinuxUnixPlatform != null) {
+            this.SupportLinuxUnixPlatform = new Boolean(source.SupportLinuxUnixPlatform);
+        }
+        if (source.SupportWindowsPlatform != null) {
+            this.SupportWindowsPlatform = new Boolean(source.SupportWindowsPlatform);
+        }
+        if (source.Price != null) {
+            this.Price = new Price(source.Price);
+        }
+        if (source.CPU != null) {
+            this.CPU = new Long(source.CPU);
+        }
+        if (source.InternetMaxBandwidthOut != null) {
+            this.InternetMaxBandwidthOut = new Long(source.InternetMaxBandwidthOut);
+        }
+        if (source.InternetChargeType != null) {
+            this.InternetChargeType = new String(source.InternetChargeType);
+        }
+        if (source.BundleSalesState != null) {
+            this.BundleSalesState = new String(source.BundleSalesState);
+        }
+        if (source.BundleType != null) {
+            this.BundleType = new String(source.BundleType);
+        }
+        if (source.BundleDisplayLabel != null) {
+            this.BundleDisplayLabel = new String(source.BundleDisplayLabel);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -68,6 +68,26 @@ public class InstanceDBDetail extends AbstractModel{
         this.DBDetails = DBDetails;
     }
 
+    public InstanceDBDetail() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public InstanceDBDetail(InstanceDBDetail source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.DBDetails != null) {
+            this.DBDetails = new DBDetail[source.DBDetails.length];
+            for (int i = 0; i < source.DBDetails.length; i++) {
+                this.DBDetails[i] = new DBDetail(source.DBDetails[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

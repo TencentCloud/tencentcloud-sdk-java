@@ -206,6 +206,41 @@ public class DescribeCertListRequest extends AbstractModel{
         this.AltDomain = AltDomain;
     }
 
+    public DescribeCertListRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeCertListRequest(DescribeCertListRequest source) {
+        if (source.ModuleType != null) {
+            this.ModuleType = new String(source.ModuleType);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.SearchKey != null) {
+            this.SearchKey = new String(source.SearchKey);
+        }
+        if (source.CertType != null) {
+            this.CertType = new String(source.CertType);
+        }
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
+        if (source.WithCert != null) {
+            this.WithCert = new String(source.WithCert);
+        }
+        if (source.AltDomain != null) {
+            this.AltDomain = new String(source.AltDomain);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

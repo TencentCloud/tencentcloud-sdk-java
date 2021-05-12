@@ -406,6 +406,56 @@ public class DetectDetail extends AbstractModel{
         this.CompareLibType = CompareLibType;
     }
 
+    public DetectDetail() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DetectDetail(DetectDetail source) {
+        if (source.ReqTime != null) {
+            this.ReqTime = new String(source.ReqTime);
+        }
+        if (source.Seq != null) {
+            this.Seq = new String(source.Seq);
+        }
+        if (source.Idcard != null) {
+            this.Idcard = new String(source.Idcard);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Sim != null) {
+            this.Sim = new String(source.Sim);
+        }
+        if (source.IsNeedCharge != null) {
+            this.IsNeedCharge = new Boolean(source.IsNeedCharge);
+        }
+        if (source.Errcode != null) {
+            this.Errcode = new Long(source.Errcode);
+        }
+        if (source.Errmsg != null) {
+            this.Errmsg = new String(source.Errmsg);
+        }
+        if (source.Livestatus != null) {
+            this.Livestatus = new Long(source.Livestatus);
+        }
+        if (source.Livemsg != null) {
+            this.Livemsg = new String(source.Livemsg);
+        }
+        if (source.Comparestatus != null) {
+            this.Comparestatus = new Long(source.Comparestatus);
+        }
+        if (source.Comparemsg != null) {
+            this.Comparemsg = new String(source.Comparemsg);
+        }
+        if (source.CompareLibType != null) {
+            this.CompareLibType = new String(source.CompareLibType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

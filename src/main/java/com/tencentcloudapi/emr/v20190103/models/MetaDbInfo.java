@@ -91,6 +91,26 @@ public class MetaDbInfo extends AbstractModel{
         this.MetaDBInfo = MetaDBInfo;
     }
 
+    public MetaDbInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MetaDbInfo(MetaDbInfo source) {
+        if (source.MetaType != null) {
+            this.MetaType = new String(source.MetaType);
+        }
+        if (source.UnifyMetaInstanceId != null) {
+            this.UnifyMetaInstanceId = new String(source.UnifyMetaInstanceId);
+        }
+        if (source.MetaDBInfo != null) {
+            this.MetaDBInfo = new CustomMetaInfo(source.MetaDBInfo);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

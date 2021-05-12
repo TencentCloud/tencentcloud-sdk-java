@@ -302,6 +302,56 @@ public class AlarmNotice extends AbstractModel{
         this.PolicyIds = PolicyIds;
     }
 
+    public AlarmNotice() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AlarmNotice(AlarmNotice source) {
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.UpdatedAt != null) {
+            this.UpdatedAt = new String(source.UpdatedAt);
+        }
+        if (source.UpdatedBy != null) {
+            this.UpdatedBy = new String(source.UpdatedBy);
+        }
+        if (source.NoticeType != null) {
+            this.NoticeType = new String(source.NoticeType);
+        }
+        if (source.UserNotices != null) {
+            this.UserNotices = new UserNotice[source.UserNotices.length];
+            for (int i = 0; i < source.UserNotices.length; i++) {
+                this.UserNotices[i] = new UserNotice(source.UserNotices[i]);
+            }
+        }
+        if (source.URLNotices != null) {
+            this.URLNotices = new URLNotice[source.URLNotices.length];
+            for (int i = 0; i < source.URLNotices.length; i++) {
+                this.URLNotices[i] = new URLNotice(source.URLNotices[i]);
+            }
+        }
+        if (source.IsPreset != null) {
+            this.IsPreset = new Long(source.IsPreset);
+        }
+        if (source.NoticeLanguage != null) {
+            this.NoticeLanguage = new String(source.NoticeLanguage);
+        }
+        if (source.PolicyIds != null) {
+            this.PolicyIds = new String[source.PolicyIds.length];
+            for (int i = 0; i < source.PolicyIds.length; i++) {
+                this.PolicyIds[i] = new String(source.PolicyIds[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

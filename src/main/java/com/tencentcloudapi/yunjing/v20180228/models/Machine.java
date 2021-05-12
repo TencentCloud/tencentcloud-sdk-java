@@ -463,6 +463,71 @@ public class Machine extends AbstractModel{
         this.RegionInfo = RegionInfo;
     }
 
+    public Machine() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Machine(Machine source) {
+        if (source.MachineName != null) {
+            this.MachineName = new String(source.MachineName);
+        }
+        if (source.MachineOs != null) {
+            this.MachineOs = new String(source.MachineOs);
+        }
+        if (source.MachineStatus != null) {
+            this.MachineStatus = new String(source.MachineStatus);
+        }
+        if (source.Uuid != null) {
+            this.Uuid = new String(source.Uuid);
+        }
+        if (source.Quuid != null) {
+            this.Quuid = new String(source.Quuid);
+        }
+        if (source.VulNum != null) {
+            this.VulNum = new Long(source.VulNum);
+        }
+        if (source.MachineIp != null) {
+            this.MachineIp = new String(source.MachineIp);
+        }
+        if (source.IsProVersion != null) {
+            this.IsProVersion = new Boolean(source.IsProVersion);
+        }
+        if (source.MachineWanIp != null) {
+            this.MachineWanIp = new String(source.MachineWanIp);
+        }
+        if (source.PayMode != null) {
+            this.PayMode = new String(source.PayMode);
+        }
+        if (source.MalwareNum != null) {
+            this.MalwareNum = new Long(source.MalwareNum);
+        }
+        if (source.Tag != null) {
+            this.Tag = new MachineTag[source.Tag.length];
+            for (int i = 0; i < source.Tag.length; i++) {
+                this.Tag[i] = new MachineTag(source.Tag[i]);
+            }
+        }
+        if (source.BaselineNum != null) {
+            this.BaselineNum = new Long(source.BaselineNum);
+        }
+        if (source.CyberAttackNum != null) {
+            this.CyberAttackNum = new Long(source.CyberAttackNum);
+        }
+        if (source.SecurityStatus != null) {
+            this.SecurityStatus = new String(source.SecurityStatus);
+        }
+        if (source.InvasionNum != null) {
+            this.InvasionNum = new Long(source.InvasionNum);
+        }
+        if (source.RegionInfo != null) {
+            this.RegionInfo = new RegionInfo(source.RegionInfo);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

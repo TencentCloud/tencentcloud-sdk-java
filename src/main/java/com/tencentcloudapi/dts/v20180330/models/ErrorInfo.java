@@ -68,6 +68,23 @@ public class ErrorInfo extends AbstractModel{
         this.HelpDoc = HelpDoc;
     }
 
+    public ErrorInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ErrorInfo(ErrorInfo source) {
+        if (source.ErrorLog != null) {
+            this.ErrorLog = new String(source.ErrorLog);
+        }
+        if (source.HelpDoc != null) {
+            this.HelpDoc = new String(source.HelpDoc);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

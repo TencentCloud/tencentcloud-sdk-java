@@ -91,6 +91,29 @@ public class CacheRule extends AbstractModel{
         this.CacheTime = CacheTime;
     }
 
+    public CacheRule() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CacheRule(CacheRule source) {
+        if (source.CacheType != null) {
+            this.CacheType = new String(source.CacheType);
+        }
+        if (source.CacheContents != null) {
+            this.CacheContents = new String[source.CacheContents.length];
+            for (int i = 0; i < source.CacheContents.length; i++) {
+                this.CacheContents[i] = new String(source.CacheContents[i]);
+            }
+        }
+        if (source.CacheTime != null) {
+            this.CacheTime = new Long(source.CacheTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

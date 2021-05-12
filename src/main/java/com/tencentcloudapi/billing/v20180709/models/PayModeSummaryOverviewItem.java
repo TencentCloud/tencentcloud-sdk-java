@@ -206,6 +206,44 @@ public class PayModeSummaryOverviewItem extends AbstractModel{
         this.VoucherPayAmount = VoucherPayAmount;
     }
 
+    public PayModeSummaryOverviewItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PayModeSummaryOverviewItem(PayModeSummaryOverviewItem source) {
+        if (source.PayMode != null) {
+            this.PayMode = new String(source.PayMode);
+        }
+        if (source.PayModeName != null) {
+            this.PayModeName = new String(source.PayModeName);
+        }
+        if (source.RealTotalCost != null) {
+            this.RealTotalCost = new String(source.RealTotalCost);
+        }
+        if (source.RealTotalCostRatio != null) {
+            this.RealTotalCostRatio = new String(source.RealTotalCostRatio);
+        }
+        if (source.Detail != null) {
+            this.Detail = new ActionSummaryOverviewItem[source.Detail.length];
+            for (int i = 0; i < source.Detail.length; i++) {
+                this.Detail[i] = new ActionSummaryOverviewItem(source.Detail[i]);
+            }
+        }
+        if (source.CashPayAmount != null) {
+            this.CashPayAmount = new String(source.CashPayAmount);
+        }
+        if (source.IncentivePayAmount != null) {
+            this.IncentivePayAmount = new String(source.IncentivePayAmount);
+        }
+        if (source.VoucherPayAmount != null) {
+            this.VoucherPayAmount = new String(source.VoucherPayAmount);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

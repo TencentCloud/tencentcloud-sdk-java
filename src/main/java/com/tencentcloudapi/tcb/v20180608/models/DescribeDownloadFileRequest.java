@@ -45,6 +45,20 @@ public class DescribeDownloadFileRequest extends AbstractModel{
         this.CodeUri = CodeUri;
     }
 
+    public DescribeDownloadFileRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeDownloadFileRequest(DescribeDownloadFileRequest source) {
+        if (source.CodeUri != null) {
+            this.CodeUri = new String(source.CodeUri);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

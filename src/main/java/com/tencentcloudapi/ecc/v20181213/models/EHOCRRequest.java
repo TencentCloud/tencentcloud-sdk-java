@@ -275,6 +275,50 @@ public class EHOCRRequest extends AbstractModel{
         this.IsAsync = IsAsync;
     }
 
+    public EHOCRRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public EHOCRRequest(EHOCRRequest source) {
+        if (source.Image != null) {
+            this.Image = new String(source.Image);
+        }
+        if (source.InputType != null) {
+            this.InputType = new Long(source.InputType);
+        }
+        if (source.EccAppid != null) {
+            this.EccAppid = new String(source.EccAppid);
+        }
+        if (source.SessionId != null) {
+            this.SessionId = new String(source.SessionId);
+        }
+        if (source.ServerType != null) {
+            this.ServerType = new Long(source.ServerType);
+        }
+        if (source.Title != null) {
+            this.Title = new String(source.Title);
+        }
+        if (source.Grade != null) {
+            this.Grade = new String(source.Grade);
+        }
+        if (source.Requirement != null) {
+            this.Requirement = new String(source.Requirement);
+        }
+        if (source.ModelTitle != null) {
+            this.ModelTitle = new String(source.ModelTitle);
+        }
+        if (source.ModelContent != null) {
+            this.ModelContent = new String(source.ModelContent);
+        }
+        if (source.IsAsync != null) {
+            this.IsAsync = new Long(source.IsAsync);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

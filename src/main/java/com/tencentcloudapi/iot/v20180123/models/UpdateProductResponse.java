@@ -68,6 +68,23 @@ public class UpdateProductResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public UpdateProductResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UpdateProductResponse(UpdateProductResponse source) {
+        if (source.Product != null) {
+            this.Product = new Product(source.Product);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

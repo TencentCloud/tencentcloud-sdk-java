@@ -91,6 +91,32 @@ public class CreateDBInstanceResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public CreateDBInstanceResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateDBInstanceResponse(CreateDBInstanceResponse source) {
+        if (source.DealIds != null) {
+            this.DealIds = new String[source.DealIds.length];
+            for (int i = 0; i < source.DealIds.length; i++) {
+                this.DealIds[i] = new String(source.DealIds[i]);
+            }
+        }
+        if (source.InstanceIds != null) {
+            this.InstanceIds = new String[source.InstanceIds.length];
+            for (int i = 0; i < source.InstanceIds.length; i++) {
+                this.InstanceIds[i] = new String(source.InstanceIds[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

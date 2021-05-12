@@ -160,6 +160,35 @@ public class L4RuleHealth extends AbstractModel{
         this.AliveNum = AliveNum;
     }
 
+    public L4RuleHealth() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public L4RuleHealth(L4RuleHealth source) {
+        if (source.RuleId != null) {
+            this.RuleId = new String(source.RuleId);
+        }
+        if (source.Enable != null) {
+            this.Enable = new Long(source.Enable);
+        }
+        if (source.TimeOut != null) {
+            this.TimeOut = new Long(source.TimeOut);
+        }
+        if (source.Interval != null) {
+            this.Interval = new Long(source.Interval);
+        }
+        if (source.KickNum != null) {
+            this.KickNum = new Long(source.KickNum);
+        }
+        if (source.AliveNum != null) {
+            this.AliveNum = new Long(source.AliveNum);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

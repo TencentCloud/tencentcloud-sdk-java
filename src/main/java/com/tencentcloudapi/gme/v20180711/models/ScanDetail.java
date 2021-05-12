@@ -137,6 +137,32 @@ public class ScanDetail extends AbstractModel{
         this.EndTime = EndTime;
     }
 
+    public ScanDetail() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ScanDetail(ScanDetail source) {
+        if (source.Label != null) {
+            this.Label = new String(source.Label);
+        }
+        if (source.Rate != null) {
+            this.Rate = new String(source.Rate);
+        }
+        if (source.KeyWord != null) {
+            this.KeyWord = new String(source.KeyWord);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new Long(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new Long(source.EndTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

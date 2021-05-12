@@ -175,6 +175,38 @@ unknown = 未知
         this.Error = Error;
     }
 
+    public PrometheusTarget() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PrometheusTarget(PrometheusTarget source) {
+        if (source.Url != null) {
+            this.Url = new String(source.Url);
+        }
+        if (source.State != null) {
+            this.State = new String(source.State);
+        }
+        if (source.Labels != null) {
+            this.Labels = new Label[source.Labels.length];
+            for (int i = 0; i < source.Labels.length; i++) {
+                this.Labels[i] = new Label(source.Labels[i]);
+            }
+        }
+        if (source.LastScrape != null) {
+            this.LastScrape = new String(source.LastScrape);
+        }
+        if (source.ScrapeDuration != null) {
+            this.ScrapeDuration = new Float(source.ScrapeDuration);
+        }
+        if (source.Error != null) {
+            this.Error = new String(source.Error);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

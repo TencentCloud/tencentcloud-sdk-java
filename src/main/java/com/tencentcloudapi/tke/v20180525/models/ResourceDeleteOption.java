@@ -68,6 +68,23 @@ public class ResourceDeleteOption extends AbstractModel{
         this.DeleteMode = DeleteMode;
     }
 
+    public ResourceDeleteOption() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ResourceDeleteOption(ResourceDeleteOption source) {
+        if (source.ResourceType != null) {
+            this.ResourceType = new String(source.ResourceType);
+        }
+        if (source.DeleteMode != null) {
+            this.DeleteMode = new String(source.DeleteMode);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

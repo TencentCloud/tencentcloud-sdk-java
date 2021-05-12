@@ -68,6 +68,23 @@ public class ResetVpnConnectionRequest extends AbstractModel{
         this.VpnConnectionId = VpnConnectionId;
     }
 
+    public ResetVpnConnectionRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ResetVpnConnectionRequest(ResetVpnConnectionRequest source) {
+        if (source.VpnGatewayId != null) {
+            this.VpnGatewayId = new String(source.VpnGatewayId);
+        }
+        if (source.VpnConnectionId != null) {
+            this.VpnConnectionId = new String(source.VpnConnectionId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -68,6 +68,26 @@ public class UpdateRequestTargetNodeTypesRequest extends AbstractModel{
         this.TargetNodeTypes = TargetNodeTypes;
     }
 
+    public UpdateRequestTargetNodeTypesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UpdateRequestTargetNodeTypesRequest(UpdateRequestTargetNodeTypesRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.TargetNodeTypes != null) {
+            this.TargetNodeTypes = new String[source.TargetNodeTypes.length];
+            for (int i = 0; i < source.TargetNodeTypes.length; i++) {
+                this.TargetNodeTypes[i] = new String(source.TargetNodeTypes[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

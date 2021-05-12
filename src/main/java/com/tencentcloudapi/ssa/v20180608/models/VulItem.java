@@ -810,6 +810,119 @@ public class VulItem extends AbstractModel{
         this.VulRepairPlan = VulRepairPlan;
     }
 
+    public VulItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public VulItem(VulItem source) {
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
+        if (source.VulName != null) {
+            this.VulName = new String(source.VulName);
+        }
+        if (source.Type != null) {
+            this.Type = new Long(source.Type);
+        }
+        if (source.Level != null) {
+            this.Level = new Long(source.Level);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.Time != null) {
+            this.Time = new String(source.Time);
+        }
+        if (source.ImpactAssetNum != null) {
+            this.ImpactAssetNum = new Long(source.ImpactAssetNum);
+        }
+        if (source.ImpactAsset != null) {
+            this.ImpactAsset = new String(source.ImpactAsset);
+        }
+        if (source.ImpactAssetName != null) {
+            this.ImpactAssetName = new String(source.ImpactAssetName);
+        }
+        if (source.VulDetail != null) {
+            this.VulDetail = new String(source.VulDetail);
+        }
+        if (source.VulRefLink != null) {
+            this.VulRefLink = new String(source.VulRefLink);
+        }
+        if (source.OldIdMd5 != null) {
+            this.OldIdMd5 = new String(source.OldIdMd5);
+        }
+        if (source.UniqId != null) {
+            this.UniqId = new String(source.UniqId);
+        }
+        if (source.OperateTime != null) {
+            this.OperateTime = new String(source.OperateTime);
+        }
+        if (source.IsAssetDeleted != null) {
+            this.IsAssetDeleted = new String(source.IsAssetDeleted);
+        }
+        if (source.DiscoverTime != null) {
+            this.DiscoverTime = new String(source.DiscoverTime);
+        }
+        if (source.OriginId != null) {
+            this.OriginId = new Long(source.OriginId);
+        }
+        if (source.Region != null) {
+            this.Region = new String(source.Region);
+        }
+        if (source.Vpcid != null) {
+            this.Vpcid = new String(source.Vpcid);
+        }
+        if (source.AssetType != null) {
+            this.AssetType = new String(source.AssetType);
+        }
+        if (source.AssetSubType != null) {
+            this.AssetSubType = new String(source.AssetSubType);
+        }
+        if (source.AssetIpAll != null) {
+            this.AssetIpAll = new String[source.AssetIpAll.length];
+            for (int i = 0; i < source.AssetIpAll.length; i++) {
+                this.AssetIpAll[i] = new String(source.AssetIpAll[i]);
+            }
+        }
+        if (source.PublicIpAddresses != null) {
+            this.PublicIpAddresses = new String[source.PublicIpAddresses.length];
+            for (int i = 0; i < source.PublicIpAddresses.length; i++) {
+                this.PublicIpAddresses[i] = new String(source.PublicIpAddresses[i]);
+            }
+        }
+        if (source.PrivateIpAddresses != null) {
+            this.PrivateIpAddresses = new String[source.PrivateIpAddresses.length];
+            for (int i = 0; i < source.PrivateIpAddresses.length; i++) {
+                this.PrivateIpAddresses[i] = new String(source.PrivateIpAddresses[i]);
+            }
+        }
+        if (source.VulSource != null) {
+            this.VulSource = new String(source.VulSource);
+        }
+        if (source.AffectedUrl != null) {
+            this.AffectedUrl = new String(source.AffectedUrl);
+        }
+        if (source.SsaAssetCategory != null) {
+            this.SsaAssetCategory = new Long(source.SsaAssetCategory);
+        }
+        if (source.VulUrl != null) {
+            this.VulUrl = new String(source.VulUrl);
+        }
+        if (source.IsOpen != null) {
+            this.IsOpen = new Boolean(source.IsOpen);
+        }
+        if (source.YzHostId != null) {
+            this.YzHostId = new Long(source.YzHostId);
+        }
+        if (source.VulRepairPlan != null) {
+            this.VulRepairPlan = new String(source.VulRepairPlan);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

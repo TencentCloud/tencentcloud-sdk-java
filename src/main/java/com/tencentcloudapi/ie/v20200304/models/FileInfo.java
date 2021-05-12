@@ -220,6 +220,41 @@ public class FileInfo extends AbstractModel{
         this.AudioInfoResult = AudioInfoResult;
     }
 
+    public FileInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public FileInfo(FileInfo source) {
+        if (source.FileSize != null) {
+            this.FileSize = new Long(source.FileSize);
+        }
+        if (source.FileType != null) {
+            this.FileType = new String(source.FileType);
+        }
+        if (source.Bitrate != null) {
+            this.Bitrate = new Long(source.Bitrate);
+        }
+        if (source.Duration != null) {
+            this.Duration = new Long(source.Duration);
+        }
+        if (source.VideoInfoResult != null) {
+            this.VideoInfoResult = new VideoInfoResultItem[source.VideoInfoResult.length];
+            for (int i = 0; i < source.VideoInfoResult.length; i++) {
+                this.VideoInfoResult[i] = new VideoInfoResultItem(source.VideoInfoResult[i]);
+            }
+        }
+        if (source.AudioInfoResult != null) {
+            this.AudioInfoResult = new AudioInfoResultItem[source.AudioInfoResult.length];
+            for (int i = 0; i < source.AudioInfoResult.length; i++) {
+                this.AudioInfoResult[i] = new AudioInfoResultItem(source.AudioInfoResult[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

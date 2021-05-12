@@ -114,6 +114,29 @@ public class DeviceStatData extends AbstractModel{
         this.DeviceTotal = DeviceTotal;
     }
 
+    public DeviceStatData() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeviceStatData(DeviceStatData source) {
+        if (source.Datetime != null) {
+            this.Datetime = new String(source.Datetime);
+        }
+        if (source.DeviceOnline != null) {
+            this.DeviceOnline = new Long(source.DeviceOnline);
+        }
+        if (source.DeviceActive != null) {
+            this.DeviceActive = new Long(source.DeviceActive);
+        }
+        if (source.DeviceTotal != null) {
+            this.DeviceTotal = new Long(source.DeviceTotal);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

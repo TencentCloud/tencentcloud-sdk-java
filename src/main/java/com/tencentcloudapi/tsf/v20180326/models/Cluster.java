@@ -806,6 +806,101 @@ public class Cluster extends AbstractModel{
         this.ClusterVersion = ClusterVersion;
     }
 
+    public Cluster() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Cluster(Cluster source) {
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
+        if (source.ClusterName != null) {
+            this.ClusterName = new String(source.ClusterName);
+        }
+        if (source.ClusterDesc != null) {
+            this.ClusterDesc = new String(source.ClusterDesc);
+        }
+        if (source.ClusterType != null) {
+            this.ClusterType = new String(source.ClusterType);
+        }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.ClusterStatus != null) {
+            this.ClusterStatus = new String(source.ClusterStatus);
+        }
+        if (source.ClusterCIDR != null) {
+            this.ClusterCIDR = new String(source.ClusterCIDR);
+        }
+        if (source.ClusterTotalCpu != null) {
+            this.ClusterTotalCpu = new Float(source.ClusterTotalCpu);
+        }
+        if (source.ClusterTotalMem != null) {
+            this.ClusterTotalMem = new Float(source.ClusterTotalMem);
+        }
+        if (source.ClusterUsedCpu != null) {
+            this.ClusterUsedCpu = new Float(source.ClusterUsedCpu);
+        }
+        if (source.ClusterUsedMem != null) {
+            this.ClusterUsedMem = new Float(source.ClusterUsedMem);
+        }
+        if (source.InstanceCount != null) {
+            this.InstanceCount = new Long(source.InstanceCount);
+        }
+        if (source.RunInstanceCount != null) {
+            this.RunInstanceCount = new Long(source.RunInstanceCount);
+        }
+        if (source.NormalInstanceCount != null) {
+            this.NormalInstanceCount = new Long(source.NormalInstanceCount);
+        }
+        if (source.DeleteFlag != null) {
+            this.DeleteFlag = new Boolean(source.DeleteFlag);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new String(source.UpdateTime);
+        }
+        if (source.TsfRegionId != null) {
+            this.TsfRegionId = new String(source.TsfRegionId);
+        }
+        if (source.TsfRegionName != null) {
+            this.TsfRegionName = new String(source.TsfRegionName);
+        }
+        if (source.TsfZoneId != null) {
+            this.TsfZoneId = new String(source.TsfZoneId);
+        }
+        if (source.TsfZoneName != null) {
+            this.TsfZoneName = new String(source.TsfZoneName);
+        }
+        if (source.DeleteFlagReason != null) {
+            this.DeleteFlagReason = new String(source.DeleteFlagReason);
+        }
+        if (source.ClusterLimitCpu != null) {
+            this.ClusterLimitCpu = new Float(source.ClusterLimitCpu);
+        }
+        if (source.ClusterLimitMem != null) {
+            this.ClusterLimitMem = new Float(source.ClusterLimitMem);
+        }
+        if (source.RunServiceInstanceCount != null) {
+            this.RunServiceInstanceCount = new Long(source.RunServiceInstanceCount);
+        }
+        if (source.SubnetId != null) {
+            this.SubnetId = new String(source.SubnetId);
+        }
+        if (source.OperationInfo != null) {
+            this.OperationInfo = new OperationInfo(source.OperationInfo);
+        }
+        if (source.ClusterVersion != null) {
+            this.ClusterVersion = new String(source.ClusterVersion);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -45,6 +45,23 @@ public class DescribeRegistrationStatusRequest extends AbstractModel{
         this.CunionIds = CunionIds;
     }
 
+    public DescribeRegistrationStatusRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeRegistrationStatusRequest(DescribeRegistrationStatusRequest source) {
+        if (source.CunionIds != null) {
+            this.CunionIds = new String[source.CunionIds.length];
+            for (int i = 0; i < source.CunionIds.length; i++) {
+                this.CunionIds[i] = new String(source.CunionIds[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

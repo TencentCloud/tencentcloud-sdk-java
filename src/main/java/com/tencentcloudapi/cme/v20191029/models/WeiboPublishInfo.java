@@ -111,6 +111,26 @@ public class WeiboPublishInfo extends AbstractModel{
         this.Visible = Visible;
     }
 
+    public WeiboPublishInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public WeiboPublishInfo(WeiboPublishInfo source) {
+        if (source.Title != null) {
+            this.Title = new String(source.Title);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.Visible != null) {
+            this.Visible = new String(source.Visible);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

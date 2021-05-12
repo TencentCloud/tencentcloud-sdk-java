@@ -167,6 +167,35 @@ public class HttpHeaderPathRule extends AbstractModel{
         this.RulePaths = RulePaths;
     }
 
+    public HttpHeaderPathRule() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public HttpHeaderPathRule(HttpHeaderPathRule source) {
+        if (source.HeaderMode != null) {
+            this.HeaderMode = new String(source.HeaderMode);
+        }
+        if (source.HeaderName != null) {
+            this.HeaderName = new String(source.HeaderName);
+        }
+        if (source.HeaderValue != null) {
+            this.HeaderValue = new String(source.HeaderValue);
+        }
+        if (source.RuleType != null) {
+            this.RuleType = new String(source.RuleType);
+        }
+        if (source.RulePaths != null) {
+            this.RulePaths = new String[source.RulePaths.length];
+            for (int i = 0; i < source.RulePaths.length; i++) {
+                this.RulePaths[i] = new String(source.RulePaths[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -45,6 +45,23 @@ public class AiAnalysisTaskFrameTagOutput extends AbstractModel{
         this.SegmentSet = SegmentSet;
     }
 
+    public AiAnalysisTaskFrameTagOutput() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AiAnalysisTaskFrameTagOutput(AiAnalysisTaskFrameTagOutput source) {
+        if (source.SegmentSet != null) {
+            this.SegmentSet = new MediaAiAnalysisFrameTagSegmentItem[source.SegmentSet.length];
+            for (int i = 0; i < source.SegmentSet.length; i++) {
+                this.SegmentSet[i] = new MediaAiAnalysisFrameTagSegmentItem(source.SegmentSet[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

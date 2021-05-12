@@ -68,6 +68,23 @@ public class TextLib extends AbstractModel{
         this.LibName = LibName;
     }
 
+    public TextLib() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TextLib(TextLib source) {
+        if (source.LibId != null) {
+            this.LibId = new Long(source.LibId);
+        }
+        if (source.LibName != null) {
+            this.LibName = new String(source.LibName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

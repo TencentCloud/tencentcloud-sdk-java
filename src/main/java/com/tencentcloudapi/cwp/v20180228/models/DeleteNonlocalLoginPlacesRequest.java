@@ -91,6 +91,32 @@ public class DeleteNonlocalLoginPlacesRequest extends AbstractModel{
         this.Ip = Ip;
     }
 
+    public DeleteNonlocalLoginPlacesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteNonlocalLoginPlacesRequest(DeleteNonlocalLoginPlacesRequest source) {
+        if (source.DelType != null) {
+            this.DelType = new String(source.DelType);
+        }
+        if (source.Ids != null) {
+            this.Ids = new Long[source.Ids.length];
+            for (int i = 0; i < source.Ids.length; i++) {
+                this.Ids[i] = new Long(source.Ids[i]);
+            }
+        }
+        if (source.Ip != null) {
+            this.Ip = new String[source.Ip.length];
+            for (int i = 0; i < source.Ip.length; i++) {
+                this.Ip[i] = new String(source.Ip[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

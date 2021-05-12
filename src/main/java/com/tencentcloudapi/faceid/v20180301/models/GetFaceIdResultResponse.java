@@ -244,6 +244,44 @@ public class GetFaceIdResultResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public GetFaceIdResultResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GetFaceIdResultResponse(GetFaceIdResultResponse source) {
+        if (source.IdCard != null) {
+            this.IdCard = new String(source.IdCard);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Result != null) {
+            this.Result = new String(source.Result);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.Similarity != null) {
+            this.Similarity = new Float(source.Similarity);
+        }
+        if (source.VideoBase64 != null) {
+            this.VideoBase64 = new String(source.VideoBase64);
+        }
+        if (source.BestFrameBase64 != null) {
+            this.BestFrameBase64 = new String(source.BestFrameBase64);
+        }
+        if (source.Extra != null) {
+            this.Extra = new String(source.Extra);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

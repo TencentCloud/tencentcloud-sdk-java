@@ -91,6 +91,26 @@ public class DeleteTimerScalingPolicyRequest extends AbstractModel{
         this.TimerName = TimerName;
     }
 
+    public DeleteTimerScalingPolicyRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteTimerScalingPolicyRequest(DeleteTimerScalingPolicyRequest source) {
+        if (source.TimerId != null) {
+            this.TimerId = new String(source.TimerId);
+        }
+        if (source.FleetId != null) {
+            this.FleetId = new String(source.FleetId);
+        }
+        if (source.TimerName != null) {
+            this.TimerName = new String(source.TimerName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

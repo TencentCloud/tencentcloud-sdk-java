@@ -223,6 +223,38 @@ public class CreateVideoGenerationTaskRequest extends AbstractModel{
         this.ExtraData = ExtraData;
     }
 
+    public CreateVideoGenerationTaskRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateVideoGenerationTaskRequest(CreateVideoGenerationTaskRequest source) {
+        if (source.OnlineRecordTaskId != null) {
+            this.OnlineRecordTaskId = new String(source.OnlineRecordTaskId);
+        }
+        if (source.SdkAppId != null) {
+            this.SdkAppId = new Long(source.SdkAppId);
+        }
+        if (source.Whiteboard != null) {
+            this.Whiteboard = new Whiteboard(source.Whiteboard);
+        }
+        if (source.Concat != null) {
+            this.Concat = new Concat(source.Concat);
+        }
+        if (source.MixStream != null) {
+            this.MixStream = new MixStream(source.MixStream);
+        }
+        if (source.RecordControl != null) {
+            this.RecordControl = new RecordControl(source.RecordControl);
+        }
+        if (source.ExtraData != null) {
+            this.ExtraData = new String(source.ExtraData);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

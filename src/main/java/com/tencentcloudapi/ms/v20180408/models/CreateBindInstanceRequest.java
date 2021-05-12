@@ -114,6 +114,29 @@ public class CreateBindInstanceRequest extends AbstractModel{
         this.AppPkgName = AppPkgName;
     }
 
+    public CreateBindInstanceRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateBindInstanceRequest(CreateBindInstanceRequest source) {
+        if (source.ResourceId != null) {
+            this.ResourceId = new String(source.ResourceId);
+        }
+        if (source.AppIconUrl != null) {
+            this.AppIconUrl = new String(source.AppIconUrl);
+        }
+        if (source.AppName != null) {
+            this.AppName = new String(source.AppName);
+        }
+        if (source.AppPkgName != null) {
+            this.AppPkgName = new String(source.AppPkgName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

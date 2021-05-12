@@ -68,6 +68,26 @@ public class SetBashEventsStatusRequest extends AbstractModel{
         this.Status = Status;
     }
 
+    public SetBashEventsStatusRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SetBashEventsStatusRequest(SetBashEventsStatusRequest source) {
+        if (source.Ids != null) {
+            this.Ids = new Long[source.Ids.length];
+            for (int i = 0; i < source.Ids.length; i++) {
+                this.Ids[i] = new Long(source.Ids[i]);
+            }
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

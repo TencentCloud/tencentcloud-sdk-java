@@ -228,6 +228,41 @@ hex：十六进制
         this.TimeFormat = TimeFormat;
     }
 
+    public AuthenticationTypeD() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AuthenticationTypeD(AuthenticationTypeD source) {
+        if (source.SecretKey != null) {
+            this.SecretKey = new String(source.SecretKey);
+        }
+        if (source.ExpireTime != null) {
+            this.ExpireTime = new Long(source.ExpireTime);
+        }
+        if (source.FileExtensions != null) {
+            this.FileExtensions = new String[source.FileExtensions.length];
+            for (int i = 0; i < source.FileExtensions.length; i++) {
+                this.FileExtensions[i] = new String(source.FileExtensions[i]);
+            }
+        }
+        if (source.FilterType != null) {
+            this.FilterType = new String(source.FilterType);
+        }
+        if (source.SignParam != null) {
+            this.SignParam = new String(source.SignParam);
+        }
+        if (source.TimeParam != null) {
+            this.TimeParam = new String(source.TimeParam);
+        }
+        if (source.TimeFormat != null) {
+            this.TimeFormat = new String(source.TimeFormat);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

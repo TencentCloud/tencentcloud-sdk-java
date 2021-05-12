@@ -160,6 +160,38 @@ public class PhoneVerificationRequest extends AbstractModel{
         this.Iv = Iv;
     }
 
+    public PhoneVerificationRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PhoneVerificationRequest(PhoneVerificationRequest source) {
+        if (source.IdCard != null) {
+            this.IdCard = new String(source.IdCard);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Phone != null) {
+            this.Phone = new String(source.Phone);
+        }
+        if (source.CiphertextBlob != null) {
+            this.CiphertextBlob = new String(source.CiphertextBlob);
+        }
+        if (source.EncryptList != null) {
+            this.EncryptList = new String[source.EncryptList.length];
+            for (int i = 0; i < source.EncryptList.length; i++) {
+                this.EncryptList[i] = new String(source.EncryptList[i]);
+            }
+        }
+        if (source.Iv != null) {
+            this.Iv = new String(source.Iv);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

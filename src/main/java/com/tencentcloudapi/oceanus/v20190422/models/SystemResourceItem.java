@@ -160,6 +160,35 @@ public class SystemResourceItem extends AbstractModel{
         this.LatestResourceConfigVersion = LatestResourceConfigVersion;
     }
 
+    public SystemResourceItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SystemResourceItem(SystemResourceItem source) {
+        if (source.ResourceId != null) {
+            this.ResourceId = new String(source.ResourceId);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.ResourceType != null) {
+            this.ResourceType = new Long(source.ResourceType);
+        }
+        if (source.Remark != null) {
+            this.Remark = new String(source.Remark);
+        }
+        if (source.Region != null) {
+            this.Region = new String(source.Region);
+        }
+        if (source.LatestResourceConfigVersion != null) {
+            this.LatestResourceConfigVersion = new Long(source.LatestResourceConfigVersion);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

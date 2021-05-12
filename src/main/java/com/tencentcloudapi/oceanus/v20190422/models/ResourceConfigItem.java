@@ -308,6 +308,53 @@ public class ResourceConfigItem extends AbstractModel{
         this.RefJobCount = RefJobCount;
     }
 
+    public ResourceConfigItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ResourceConfigItem(ResourceConfigItem source) {
+        if (source.ResourceId != null) {
+            this.ResourceId = new String(source.ResourceId);
+        }
+        if (source.ResourceType != null) {
+            this.ResourceType = new Long(source.ResourceType);
+        }
+        if (source.Region != null) {
+            this.Region = new String(source.Region);
+        }
+        if (source.AppId != null) {
+            this.AppId = new Long(source.AppId);
+        }
+        if (source.OwnerUin != null) {
+            this.OwnerUin = new String(source.OwnerUin);
+        }
+        if (source.CreatorUin != null) {
+            this.CreatorUin = new String(source.CreatorUin);
+        }
+        if (source.ResourceLoc != null) {
+            this.ResourceLoc = new ResourceLoc(source.ResourceLoc);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.Version != null) {
+            this.Version = new Long(source.Version);
+        }
+        if (source.Remark != null) {
+            this.Remark = new String(source.Remark);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.RefJobCount != null) {
+            this.RefJobCount = new Long(source.RefJobCount);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

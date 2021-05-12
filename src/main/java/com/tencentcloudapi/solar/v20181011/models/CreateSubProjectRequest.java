@@ -68,6 +68,23 @@ public class CreateSubProjectRequest extends AbstractModel{
         this.SubProjectName = SubProjectName;
     }
 
+    public CreateSubProjectRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateSubProjectRequest(CreateSubProjectRequest source) {
+        if (source.ProjectId != null) {
+            this.ProjectId = new String(source.ProjectId);
+        }
+        if (source.SubProjectName != null) {
+            this.SubProjectName = new String(source.SubProjectName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

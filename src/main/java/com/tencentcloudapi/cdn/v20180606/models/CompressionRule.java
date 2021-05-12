@@ -182,6 +182,38 @@ brotli：指定Brotli压缩
         this.Algorithms = Algorithms;
     }
 
+    public CompressionRule() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CompressionRule(CompressionRule source) {
+        if (source.Compress != null) {
+            this.Compress = new Boolean(source.Compress);
+        }
+        if (source.FileExtensions != null) {
+            this.FileExtensions = new String[source.FileExtensions.length];
+            for (int i = 0; i < source.FileExtensions.length; i++) {
+                this.FileExtensions[i] = new String(source.FileExtensions[i]);
+            }
+        }
+        if (source.MinLength != null) {
+            this.MinLength = new Long(source.MinLength);
+        }
+        if (source.MaxLength != null) {
+            this.MaxLength = new Long(source.MaxLength);
+        }
+        if (source.Algorithms != null) {
+            this.Algorithms = new String[source.Algorithms.length];
+            for (int i = 0; i < source.Algorithms.length; i++) {
+                this.Algorithms[i] = new String(source.Algorithms[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

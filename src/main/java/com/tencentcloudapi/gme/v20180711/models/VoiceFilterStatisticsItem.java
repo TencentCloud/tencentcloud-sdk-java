@@ -45,6 +45,20 @@ public class VoiceFilterStatisticsItem extends AbstractModel{
         this.Duration = Duration;
     }
 
+    public VoiceFilterStatisticsItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public VoiceFilterStatisticsItem(VoiceFilterStatisticsItem source) {
+        if (source.Duration != null) {
+            this.Duration = new Long(source.Duration);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

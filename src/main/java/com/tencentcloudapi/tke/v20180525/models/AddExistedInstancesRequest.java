@@ -229,6 +229,53 @@ public class AddExistedInstancesRequest extends AbstractModel{
         this.SkipValidateOptions = SkipValidateOptions;
     }
 
+    public AddExistedInstancesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AddExistedInstancesRequest(AddExistedInstancesRequest source) {
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
+        if (source.InstanceIds != null) {
+            this.InstanceIds = new String[source.InstanceIds.length];
+            for (int i = 0; i < source.InstanceIds.length; i++) {
+                this.InstanceIds[i] = new String(source.InstanceIds[i]);
+            }
+        }
+        if (source.InstanceAdvancedSettings != null) {
+            this.InstanceAdvancedSettings = new InstanceAdvancedSettings(source.InstanceAdvancedSettings);
+        }
+        if (source.EnhancedService != null) {
+            this.EnhancedService = new EnhancedService(source.EnhancedService);
+        }
+        if (source.LoginSettings != null) {
+            this.LoginSettings = new LoginSettings(source.LoginSettings);
+        }
+        if (source.HostName != null) {
+            this.HostName = new String(source.HostName);
+        }
+        if (source.SecurityGroupIds != null) {
+            this.SecurityGroupIds = new String[source.SecurityGroupIds.length];
+            for (int i = 0; i < source.SecurityGroupIds.length; i++) {
+                this.SecurityGroupIds[i] = new String(source.SecurityGroupIds[i]);
+            }
+        }
+        if (source.NodePool != null) {
+            this.NodePool = new NodePoolOption(source.NodePool);
+        }
+        if (source.SkipValidateOptions != null) {
+            this.SkipValidateOptions = new String[source.SkipValidateOptions.length];
+            for (int i = 0; i < source.SkipValidateOptions.length; i++) {
+                this.SkipValidateOptions[i] = new String(source.SkipValidateOptions[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

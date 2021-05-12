@@ -137,6 +137,32 @@ public class Keyword extends AbstractModel{
         this.TextMode = TextMode;
     }
 
+    public Keyword() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Keyword(Keyword source) {
+        if (source.RefText != null) {
+            this.RefText = new String(source.RefText);
+        }
+        if (source.EvalMode != null) {
+            this.EvalMode = new Long(source.EvalMode);
+        }
+        if (source.ScoreCoeff != null) {
+            this.ScoreCoeff = new Float(source.ScoreCoeff);
+        }
+        if (source.ServerType != null) {
+            this.ServerType = new Long(source.ServerType);
+        }
+        if (source.TextMode != null) {
+            this.TextMode = new Long(source.TextMode);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

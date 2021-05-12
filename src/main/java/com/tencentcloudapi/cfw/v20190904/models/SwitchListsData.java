@@ -371,6 +371,56 @@ public class SwitchListsData extends AbstractModel{
         this.ScanStatus = ScanStatus;
     }
 
+    public SwitchListsData() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SwitchListsData(SwitchListsData source) {
+        if (source.PublicIp != null) {
+            this.PublicIp = new String(source.PublicIp);
+        }
+        if (source.IntranetIp != null) {
+            this.IntranetIp = new String(source.IntranetIp);
+        }
+        if (source.InstanceName != null) {
+            this.InstanceName = new String(source.InstanceName);
+        }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.AssetType != null) {
+            this.AssetType = new String(source.AssetType);
+        }
+        if (source.Area != null) {
+            this.Area = new String(source.Area);
+        }
+        if (source.Switch != null) {
+            this.Switch = new Long(source.Switch);
+        }
+        if (source.Id != null) {
+            this.Id = new Long(source.Id);
+        }
+        if (source.PublicIpType != null) {
+            this.PublicIpType = new Long(source.PublicIpType);
+        }
+        if (source.PortTimes != null) {
+            this.PortTimes = new Long(source.PortTimes);
+        }
+        if (source.LastTime != null) {
+            this.LastTime = new String(source.LastTime);
+        }
+        if (source.ScanMode != null) {
+            this.ScanMode = new String(source.ScanMode);
+        }
+        if (source.ScanStatus != null) {
+            this.ScanStatus = new Long(source.ScanStatus);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

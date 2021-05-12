@@ -160,6 +160,35 @@ public class CreateDomainRequest extends AbstractModel{
         this.Tags = Tags;
     }
 
+    public CreateDomainRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateDomainRequest(CreateDomainRequest source) {
+        if (source.ServerType != null) {
+            this.ServerType = new Long(source.ServerType);
+        }
+        if (source.Domain != null) {
+            this.Domain = new String(source.Domain);
+        }
+        if (source.Port != null) {
+            this.Port = new String(source.Port);
+        }
+        if (source.IP != null) {
+            this.IP = new String(source.IP);
+        }
+        if (source.Notice != null) {
+            this.Notice = new Boolean(source.Notice);
+        }
+        if (source.Tags != null) {
+            this.Tags = new String(source.Tags);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

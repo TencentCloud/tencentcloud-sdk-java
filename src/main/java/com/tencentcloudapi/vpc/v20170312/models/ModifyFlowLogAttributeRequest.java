@@ -114,6 +114,29 @@ public class ModifyFlowLogAttributeRequest extends AbstractModel{
         this.FlowLogDescription = FlowLogDescription;
     }
 
+    public ModifyFlowLogAttributeRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyFlowLogAttributeRequest(ModifyFlowLogAttributeRequest source) {
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.FlowLogId != null) {
+            this.FlowLogId = new String(source.FlowLogId);
+        }
+        if (source.FlowLogName != null) {
+            this.FlowLogName = new String(source.FlowLogName);
+        }
+        if (source.FlowLogDescription != null) {
+            this.FlowLogDescription = new String(source.FlowLogDescription);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -162,6 +162,32 @@ public class DetectInfoIdCardData extends AbstractModel{
         this.Avatar = Avatar;
     }
 
+    public DetectInfoIdCardData() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DetectInfoIdCardData(DetectInfoIdCardData source) {
+        if (source.OcrFront != null) {
+            this.OcrFront = new String(source.OcrFront);
+        }
+        if (source.OcrBack != null) {
+            this.OcrBack = new String(source.OcrBack);
+        }
+        if (source.ProcessedFrontImage != null) {
+            this.ProcessedFrontImage = new String(source.ProcessedFrontImage);
+        }
+        if (source.ProcessedBackImage != null) {
+            this.ProcessedBackImage = new String(source.ProcessedBackImage);
+        }
+        if (source.Avatar != null) {
+            this.Avatar = new String(source.Avatar);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -78,6 +78,23 @@ public class ImageSegments extends AbstractModel{
         this.OffsetTime = OffsetTime;
     }
 
+    public ImageSegments() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ImageSegments(ImageSegments source) {
+        if (source.Result != null) {
+            this.Result = new ImageResult(source.Result);
+        }
+        if (source.OffsetTime != null) {
+            this.OffsetTime = new String(source.OffsetTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -101,6 +101,26 @@ public class GetDetectInfoRequest extends AbstractModel{
         this.InfoType = InfoType;
     }
 
+    public GetDetectInfoRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GetDetectInfoRequest(GetDetectInfoRequest source) {
+        if (source.BizToken != null) {
+            this.BizToken = new String(source.BizToken);
+        }
+        if (source.RuleId != null) {
+            this.RuleId = new String(source.RuleId);
+        }
+        if (source.InfoType != null) {
+            this.InfoType = new String(source.InfoType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

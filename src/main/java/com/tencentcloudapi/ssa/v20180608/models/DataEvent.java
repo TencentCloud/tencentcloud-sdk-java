@@ -936,6 +936,125 @@ public class DataEvent extends AbstractModel{
         this.SsaEventId = SsaEventId;
     }
 
+    public DataEvent() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DataEvent(DataEvent source) {
+        if (source.OldIdMd5 != null) {
+            this.OldIdMd5 = new String(source.OldIdMd5);
+        }
+        if (source.EventName != null) {
+            this.EventName = new String(source.EventName);
+        }
+        if (source.EventType1 != null) {
+            this.EventType1 = new Long(source.EventType1);
+        }
+        if (source.EventType2 != null) {
+            this.EventType2 = new Long(source.EventType2);
+        }
+        if (source.Level != null) {
+            this.Level = new Long(source.Level);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.SrcIp != null) {
+            this.SrcIp = new String(source.SrcIp);
+        }
+        if (source.DstIp != null) {
+            this.DstIp = new String(source.DstIp);
+        }
+        if (source.Time != null) {
+            this.Time = new String(source.Time);
+        }
+        if (source.Dstport != null) {
+            this.Dstport = new Long(source.Dstport);
+        }
+        if (source.AssetIp != null) {
+            this.AssetIp = new String(source.AssetIp);
+        }
+        if (source.AssetName != null) {
+            this.AssetName = new String(source.AssetName);
+        }
+        if (source.SsaEventUniqid != null) {
+            this.SsaEventUniqid = new String(source.SsaEventUniqid);
+        }
+        if (source.AssetId != null) {
+            this.AssetId = new String(source.AssetId);
+        }
+        if (source.Source != null) {
+            this.Source = new String(source.Source);
+        }
+        if (source.Index != null) {
+            this.Index = new String(source.Index);
+        }
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
+        if (source.IsAssetDeleted != null) {
+            this.IsAssetDeleted = new String(source.IsAssetDeleted);
+        }
+        if (source.SsaSrcCountry != null) {
+            this.SsaSrcCountry = new String(source.SsaSrcCountry);
+        }
+        if (source.SsaDstCountry != null) {
+            this.SsaDstCountry = new String(source.SsaDstCountry);
+        }
+        if (source.SsaDescription != null) {
+            this.SsaDescription = new String(source.SsaDescription);
+        }
+        if (source.SsaAttackChain != null) {
+            this.SsaAttackChain = new String(source.SsaAttackChain);
+        }
+        if (source.RuleComponents != null) {
+            this.RuleComponents = new String(source.RuleComponents);
+        }
+        if (source.AssetIpAll != null) {
+            this.AssetIpAll = new String[source.AssetIpAll.length];
+            for (int i = 0; i < source.AssetIpAll.length; i++) {
+                this.AssetIpAll[i] = new String(source.AssetIpAll[i]);
+            }
+        }
+        if (source.AssetType != null) {
+            this.AssetType = new String(source.AssetType);
+        }
+        if (source.PublicIpAddresses != null) {
+            this.PublicIpAddresses = new String[source.PublicIpAddresses.length];
+            for (int i = 0; i < source.PublicIpAddresses.length; i++) {
+                this.PublicIpAddresses[i] = new String(source.PublicIpAddresses[i]);
+            }
+        }
+        if (source.PrivateIpAddresses != null) {
+            this.PrivateIpAddresses = new String[source.PrivateIpAddresses.length];
+            for (int i = 0; i < source.PrivateIpAddresses.length; i++) {
+                this.PrivateIpAddresses[i] = new String(source.PrivateIpAddresses[i]);
+            }
+        }
+        if (source.SoarResponseStatus != null) {
+            this.SoarResponseStatus = new Long(source.SoarResponseStatus);
+        }
+        if (source.SoarResponseTime != null) {
+            this.SoarResponseTime = new Long(source.SoarResponseTime);
+        }
+        if (source.SoarSuggestStatus != null) {
+            this.SoarSuggestStatus = new Long(source.SoarSuggestStatus);
+        }
+        if (source.SoarPlaybookType != null) {
+            this.SoarPlaybookType = new String(source.SoarPlaybookType);
+        }
+        if (source.SoarRunId != null) {
+            this.SoarRunId = new String(source.SoarRunId);
+        }
+        if (source.SsaEventId != null) {
+            this.SsaEventId = new String(source.SsaEventId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

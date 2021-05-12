@@ -68,6 +68,23 @@ public class ReplaceCertForLoadBalancersRequest extends AbstractModel{
         this.Certificate = Certificate;
     }
 
+    public ReplaceCertForLoadBalancersRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ReplaceCertForLoadBalancersRequest(ReplaceCertForLoadBalancersRequest source) {
+        if (source.OldCertificateId != null) {
+            this.OldCertificateId = new String(source.OldCertificateId);
+        }
+        if (source.Certificate != null) {
+            this.Certificate = new CertificateInput(source.Certificate);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -137,6 +137,32 @@ public class AuditApplyClientResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public AuditApplyClientResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AuditApplyClientResponse(AuditApplyClientResponse source) {
+        if (source.Uin != null) {
+            this.Uin = new String(source.Uin);
+        }
+        if (source.ClientUin != null) {
+            this.ClientUin = new String(source.ClientUin);
+        }
+        if (source.AuditResult != null) {
+            this.AuditResult = new String(source.AuditResult);
+        }
+        if (source.AgentTime != null) {
+            this.AgentTime = new Long(source.AgentTime);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

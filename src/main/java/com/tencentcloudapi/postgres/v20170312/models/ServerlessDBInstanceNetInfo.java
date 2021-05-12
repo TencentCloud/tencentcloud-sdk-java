@@ -162,6 +162,32 @@ public class ServerlessDBInstanceNetInfo extends AbstractModel{
         this.NetType = NetType;
     }
 
+    public ServerlessDBInstanceNetInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ServerlessDBInstanceNetInfo(ServerlessDBInstanceNetInfo source) {
+        if (source.Address != null) {
+            this.Address = new String(source.Address);
+        }
+        if (source.Ip != null) {
+            this.Ip = new String(source.Ip);
+        }
+        if (source.Port != null) {
+            this.Port = new Long(source.Port);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.NetType != null) {
+            this.NetType = new String(source.NetType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

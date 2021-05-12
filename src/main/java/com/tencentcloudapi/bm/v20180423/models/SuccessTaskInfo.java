@@ -91,6 +91,26 @@ public class SuccessTaskInfo extends AbstractModel{
         this.CmdTaskId = CmdTaskId;
     }
 
+    public SuccessTaskInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SuccessTaskInfo(SuccessTaskInfo source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.TaskId != null) {
+            this.TaskId = new Long(source.TaskId);
+        }
+        if (source.CmdTaskId != null) {
+            this.CmdTaskId = new String(source.CmdTaskId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

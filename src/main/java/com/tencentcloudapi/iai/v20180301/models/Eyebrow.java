@@ -106,6 +106,26 @@ AttributeItem对应的Type为 —— 0：短眉毛，1：长眉毛。
         this.EyebrowLength = EyebrowLength;
     }
 
+    public Eyebrow() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Eyebrow(Eyebrow source) {
+        if (source.EyebrowDensity != null) {
+            this.EyebrowDensity = new AttributeItem(source.EyebrowDensity);
+        }
+        if (source.EyebrowCurve != null) {
+            this.EyebrowCurve = new AttributeItem(source.EyebrowCurve);
+        }
+        if (source.EyebrowLength != null) {
+            this.EyebrowLength = new AttributeItem(source.EyebrowLength);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

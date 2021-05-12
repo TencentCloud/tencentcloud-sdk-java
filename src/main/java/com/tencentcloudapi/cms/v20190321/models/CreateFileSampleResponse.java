@@ -78,6 +78,23 @@ public class CreateFileSampleResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public CreateFileSampleResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateFileSampleResponse(CreateFileSampleResponse source) {
+        if (source.Progress != null) {
+            this.Progress = new Long(source.Progress);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

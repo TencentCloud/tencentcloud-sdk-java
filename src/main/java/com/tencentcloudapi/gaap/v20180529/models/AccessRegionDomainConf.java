@@ -68,6 +68,26 @@ public class AccessRegionDomainConf extends AbstractModel{
         this.NationCountryInnerList = NationCountryInnerList;
     }
 
+    public AccessRegionDomainConf() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AccessRegionDomainConf(AccessRegionDomainConf source) {
+        if (source.RegionId != null) {
+            this.RegionId = new String(source.RegionId);
+        }
+        if (source.NationCountryInnerList != null) {
+            this.NationCountryInnerList = new String[source.NationCountryInnerList.length];
+            for (int i = 0; i < source.NationCountryInnerList.length; i++) {
+                this.NationCountryInnerList[i] = new String(source.NationCountryInnerList[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

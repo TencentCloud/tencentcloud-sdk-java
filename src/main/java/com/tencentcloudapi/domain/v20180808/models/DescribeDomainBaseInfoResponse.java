@@ -96,6 +96,26 @@ public class DescribeDomainBaseInfoResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeDomainBaseInfoResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeDomainBaseInfoResponse(DescribeDomainBaseInfoResponse source) {
+        if (source.DomainInfo != null) {
+            this.DomainInfo = new DomainBaseInfo(source.DomainInfo);
+        }
+        if (source.Uin != null) {
+            this.Uin = new String(source.Uin);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

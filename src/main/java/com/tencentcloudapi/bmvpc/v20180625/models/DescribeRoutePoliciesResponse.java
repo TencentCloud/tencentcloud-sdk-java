@@ -91,6 +91,29 @@ public class DescribeRoutePoliciesResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeRoutePoliciesResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeRoutePoliciesResponse(DescribeRoutePoliciesResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.RoutePolicySet != null) {
+            this.RoutePolicySet = new RoutePolicy[source.RoutePolicySet.length];
+            for (int i = 0; i < source.RoutePolicySet.length; i++) {
+                this.RoutePolicySet[i] = new RoutePolicy(source.RoutePolicySet[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

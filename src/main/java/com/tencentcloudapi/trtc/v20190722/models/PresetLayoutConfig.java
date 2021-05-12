@@ -65,7 +65,7 @@ public class PresetLayoutConfig extends AbstractModel{
     private Long LocationY;
 
     /**
-    * 该画面在输出时的层级，单位为像素值，不填默认为0。
+    * 该画面在输出时的层级，不填默认为0。
     */
     @SerializedName("ZOrder")
     @Expose
@@ -189,16 +189,16 @@ public class PresetLayoutConfig extends AbstractModel{
     }
 
     /**
-     * Get 该画面在输出时的层级，单位为像素值，不填默认为0。 
-     * @return ZOrder 该画面在输出时的层级，单位为像素值，不填默认为0。
+     * Get 该画面在输出时的层级，不填默认为0。 
+     * @return ZOrder 该画面在输出时的层级，不填默认为0。
      */
     public Long getZOrder() {
         return this.ZOrder;
     }
 
     /**
-     * Set 该画面在输出时的层级，单位为像素值，不填默认为0。
-     * @param ZOrder 该画面在输出时的层级，单位为像素值，不填默认为0。
+     * Set 该画面在输出时的层级，不填默认为0。
+     * @param ZOrder 该画面在输出时的层级，不填默认为0。
      */
     public void setZOrder(Long ZOrder) {
         this.ZOrder = ZOrder;
@@ -251,6 +251,47 @@ public class PresetLayoutConfig extends AbstractModel{
     public void setPlaceImageId(Long PlaceImageId) {
         this.PlaceImageId = PlaceImageId;
     }
+
+    public PresetLayoutConfig() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PresetLayoutConfig(PresetLayoutConfig source) {
+        if (source.UserId != null) {
+            this.UserId = new String(source.UserId);
+        }
+        if (source.StreamType != null) {
+            this.StreamType = new Long(source.StreamType);
+        }
+        if (source.ImageWidth != null) {
+            this.ImageWidth = new Long(source.ImageWidth);
+        }
+        if (source.ImageHeight != null) {
+            this.ImageHeight = new Long(source.ImageHeight);
+        }
+        if (source.LocationX != null) {
+            this.LocationX = new Long(source.LocationX);
+        }
+        if (source.LocationY != null) {
+            this.LocationY = new Long(source.LocationY);
+        }
+        if (source.ZOrder != null) {
+            this.ZOrder = new Long(source.ZOrder);
+        }
+        if (source.RenderMode != null) {
+            this.RenderMode = new Long(source.RenderMode);
+        }
+        if (source.MixInputType != null) {
+            this.MixInputType = new Long(source.MixInputType);
+        }
+        if (source.PlaceImageId != null) {
+            this.PlaceImageId = new Long(source.PlaceImageId);
+        }
+    }
+
 
     /**
      * Internal implementation, normal users should not use it.

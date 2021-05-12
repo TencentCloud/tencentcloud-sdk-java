@@ -91,6 +91,26 @@ public class MigrateNetworkInterfaceRequest extends AbstractModel{
         this.DestinationInstanceId = DestinationInstanceId;
     }
 
+    public MigrateNetworkInterfaceRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MigrateNetworkInterfaceRequest(MigrateNetworkInterfaceRequest source) {
+        if (source.NetworkInterfaceId != null) {
+            this.NetworkInterfaceId = new String(source.NetworkInterfaceId);
+        }
+        if (source.SourceInstanceId != null) {
+            this.SourceInstanceId = new String(source.SourceInstanceId);
+        }
+        if (source.DestinationInstanceId != null) {
+            this.DestinationInstanceId = new String(source.DestinationInstanceId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

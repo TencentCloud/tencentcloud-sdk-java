@@ -68,6 +68,23 @@ public class LoginSettings extends AbstractModel{
         this.PublicKeyId = PublicKeyId;
     }
 
+    public LoginSettings() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public LoginSettings(LoginSettings source) {
+        if (source.Password != null) {
+            this.Password = new String(source.Password);
+        }
+        if (source.PublicKeyId != null) {
+            this.PublicKeyId = new String(source.PublicKeyId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

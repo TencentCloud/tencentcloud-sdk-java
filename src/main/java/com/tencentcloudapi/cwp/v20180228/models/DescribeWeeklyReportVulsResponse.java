@@ -91,6 +91,29 @@ public class DescribeWeeklyReportVulsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeWeeklyReportVulsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeWeeklyReportVulsResponse(DescribeWeeklyReportVulsResponse source) {
+        if (source.WeeklyReportVuls != null) {
+            this.WeeklyReportVuls = new WeeklyReportVul[source.WeeklyReportVuls.length];
+            for (int i = 0; i < source.WeeklyReportVuls.length; i++) {
+                this.WeeklyReportVuls[i] = new WeeklyReportVul(source.WeeklyReportVuls[i]);
+            }
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

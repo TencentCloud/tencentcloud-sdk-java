@@ -165,6 +165,35 @@ public class PredictInput extends AbstractModel{
         this.SignatureName = SignatureName;
     }
 
+    public PredictInput() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PredictInput(PredictInput source) {
+        if (source.InputPath != null) {
+            this.InputPath = new String(source.InputPath);
+        }
+        if (source.OutputPath != null) {
+            this.OutputPath = new String(source.OutputPath);
+        }
+        if (source.InputDataFormat != null) {
+            this.InputDataFormat = new String(source.InputDataFormat);
+        }
+        if (source.OutputDataFormat != null) {
+            this.OutputDataFormat = new String(source.OutputDataFormat);
+        }
+        if (source.BatchSize != null) {
+            this.BatchSize = new Long(source.BatchSize);
+        }
+        if (source.SignatureName != null) {
+            this.SignatureName = new String(source.SignatureName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

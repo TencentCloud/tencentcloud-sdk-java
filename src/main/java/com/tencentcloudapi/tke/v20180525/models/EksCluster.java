@@ -326,6 +326,65 @@ public class EksCluster extends AbstractModel{
         this.TagSpecification = TagSpecification;
     }
 
+    public EksCluster() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public EksCluster(EksCluster source) {
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
+        if (source.ClusterName != null) {
+            this.ClusterName = new String(source.ClusterName);
+        }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.SubnetIds != null) {
+            this.SubnetIds = new String[source.SubnetIds.length];
+            for (int i = 0; i < source.SubnetIds.length; i++) {
+                this.SubnetIds[i] = new String(source.SubnetIds[i]);
+            }
+        }
+        if (source.K8SVersion != null) {
+            this.K8SVersion = new String(source.K8SVersion);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.ClusterDesc != null) {
+            this.ClusterDesc = new String(source.ClusterDesc);
+        }
+        if (source.CreatedTime != null) {
+            this.CreatedTime = new String(source.CreatedTime);
+        }
+        if (source.ServiceSubnetId != null) {
+            this.ServiceSubnetId = new String(source.ServiceSubnetId);
+        }
+        if (source.DnsServers != null) {
+            this.DnsServers = new DnsServerConf[source.DnsServers.length];
+            for (int i = 0; i < source.DnsServers.length; i++) {
+                this.DnsServers[i] = new DnsServerConf(source.DnsServers[i]);
+            }
+        }
+        if (source.NeedDeleteCbs != null) {
+            this.NeedDeleteCbs = new Boolean(source.NeedDeleteCbs);
+        }
+        if (source.EnableVpcCoreDNS != null) {
+            this.EnableVpcCoreDNS = new Boolean(source.EnableVpcCoreDNS);
+        }
+        if (source.TagSpecification != null) {
+            this.TagSpecification = new TagSpecification[source.TagSpecification.length];
+            for (int i = 0; i < source.TagSpecification.length; i++) {
+                this.TagSpecification[i] = new TagSpecification(source.TagSpecification[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

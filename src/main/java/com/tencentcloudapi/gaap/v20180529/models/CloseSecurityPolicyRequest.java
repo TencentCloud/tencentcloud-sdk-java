@@ -68,6 +68,23 @@ public class CloseSecurityPolicyRequest extends AbstractModel{
         this.PolicyId = PolicyId;
     }
 
+    public CloseSecurityPolicyRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CloseSecurityPolicyRequest(CloseSecurityPolicyRequest source) {
+        if (source.ProxyId != null) {
+            this.ProxyId = new String(source.ProxyId);
+        }
+        if (source.PolicyId != null) {
+            this.PolicyId = new String(source.PolicyId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

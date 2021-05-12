@@ -413,6 +413,68 @@ public class CreateSessionRequest extends AbstractModel{
         this.GameContext = GameContext;
     }
 
+    public CreateSessionRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateSessionRequest(CreateSessionRequest source) {
+        if (source.ClientSession != null) {
+            this.ClientSession = new String(source.ClientSession);
+        }
+        if (source.UserId != null) {
+            this.UserId = new String(source.UserId);
+        }
+        if (source.GameId != null) {
+            this.GameId = new String(source.GameId);
+        }
+        if (source.GameRegion != null) {
+            this.GameRegion = new String(source.GameRegion);
+        }
+        if (source.GameParas != null) {
+            this.GameParas = new String(source.GameParas);
+        }
+        if (source.Resolution != null) {
+            this.Resolution = new String(source.Resolution);
+        }
+        if (source.ImageUrl != null) {
+            this.ImageUrl = new String(source.ImageUrl);
+        }
+        if (source.SetNo != null) {
+            this.SetNo = new Long(source.SetNo);
+        }
+        if (source.Bitrate != null) {
+            this.Bitrate = new Long(source.Bitrate);
+        }
+        if (source.MaxBitrate != null) {
+            this.MaxBitrate = new Long(source.MaxBitrate);
+        }
+        if (source.MinBitrate != null) {
+            this.MinBitrate = new Long(source.MinBitrate);
+        }
+        if (source.Fps != null) {
+            this.Fps = new Long(source.Fps);
+        }
+        if (source.UserIp != null) {
+            this.UserIp = new String(source.UserIp);
+        }
+        if (source.Optimization != null) {
+            this.Optimization = new Long(source.Optimization);
+        }
+        if (source.HostUserId != null) {
+            this.HostUserId = new String(source.HostUserId);
+        }
+        if (source.Role != null) {
+            this.Role = new String(source.Role);
+        }
+        if (source.GameContext != null) {
+            this.GameContext = new String(source.GameContext);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

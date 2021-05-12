@@ -137,6 +137,32 @@ public class FaceIdentifyStatistic extends AbstractModel{
         this.StartTs = StartTs;
     }
 
+    public FaceIdentifyStatistic() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public FaceIdentifyStatistic(FaceIdentifyStatistic source) {
+        if (source.Duration != null) {
+            this.Duration = new Long(source.Duration);
+        }
+        if (source.EndTs != null) {
+            this.EndTs = new Long(source.EndTs);
+        }
+        if (source.PersonId != null) {
+            this.PersonId = new String(source.PersonId);
+        }
+        if (source.Similarity != null) {
+            this.Similarity = new Float(source.Similarity);
+        }
+        if (source.StartTs != null) {
+            this.StartTs = new Long(source.StartTs);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

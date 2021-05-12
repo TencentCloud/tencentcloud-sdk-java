@@ -45,6 +45,20 @@ public class DescribeBandwidthPackageBillUsageRequest extends AbstractModel{
         this.BandwidthPackageId = BandwidthPackageId;
     }
 
+    public DescribeBandwidthPackageBillUsageRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeBandwidthPackageBillUsageRequest(DescribeBandwidthPackageBillUsageRequest source) {
+        if (source.BandwidthPackageId != null) {
+            this.BandwidthPackageId = new String(source.BandwidthPackageId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -330,6 +330,50 @@ public class GroupItem extends AbstractModel{
         this.GroupStatus = GroupStatus;
     }
 
+    public GroupItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GroupItem(GroupItem source) {
+        if (source.GroupName != null) {
+            this.GroupName = new String(source.GroupName);
+        }
+        if (source.ParentId != null) {
+            this.ParentId = new String(source.ParentId);
+        }
+        if (source.GroupId != null) {
+            this.GroupId = new String(source.GroupId);
+        }
+        if (source.GroupPath != null) {
+            this.GroupPath = new String(source.GroupPath);
+        }
+        if (source.GroupDescribe != null) {
+            this.GroupDescribe = new String(source.GroupDescribe);
+        }
+        if (source.DeviceNum != null) {
+            this.DeviceNum = new Long(source.DeviceNum);
+        }
+        if (source.SubGroupNum != null) {
+            this.SubGroupNum = new Long(source.SubGroupNum);
+        }
+        if (source.ExtraInformation != null) {
+            this.ExtraInformation = new String(source.ExtraInformation);
+        }
+        if (source.GroupType != null) {
+            this.GroupType = new String(source.GroupType);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new Long(source.CreateTime);
+        }
+        if (source.GroupStatus != null) {
+            this.GroupStatus = new Long(source.GroupStatus);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -183,6 +183,38 @@ public class AddUserResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public AddUserResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AddUserResponse(AddUserResponse source) {
+        if (source.Uin != null) {
+            this.Uin = new Long(source.Uin);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Password != null) {
+            this.Password = new String(source.Password);
+        }
+        if (source.SecretId != null) {
+            this.SecretId = new String(source.SecretId);
+        }
+        if (source.SecretKey != null) {
+            this.SecretKey = new String(source.SecretKey);
+        }
+        if (source.Uid != null) {
+            this.Uid = new Long(source.Uid);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

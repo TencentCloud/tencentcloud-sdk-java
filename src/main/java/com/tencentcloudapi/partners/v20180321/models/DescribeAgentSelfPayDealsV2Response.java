@@ -91,6 +91,29 @@ public class DescribeAgentSelfPayDealsV2Response extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeAgentSelfPayDealsV2Response() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeAgentSelfPayDealsV2Response(DescribeAgentSelfPayDealsV2Response source) {
+        if (source.AgentPayDealSet != null) {
+            this.AgentPayDealSet = new AgentDealNewElem[source.AgentPayDealSet.length];
+            for (int i = 0; i < source.AgentPayDealSet.length; i++) {
+                this.AgentPayDealSet[i] = new AgentDealNewElem(source.AgentPayDealSet[i]);
+            }
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

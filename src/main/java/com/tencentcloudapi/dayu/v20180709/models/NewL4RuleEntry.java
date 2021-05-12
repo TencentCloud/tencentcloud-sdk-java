@@ -367,6 +367,65 @@ public class NewL4RuleEntry extends AbstractModel{
         this.Id = Id;
     }
 
+    public NewL4RuleEntry() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public NewL4RuleEntry(NewL4RuleEntry source) {
+        if (source.Protocol != null) {
+            this.Protocol = new String(source.Protocol);
+        }
+        if (source.VirtualPort != null) {
+            this.VirtualPort = new Long(source.VirtualPort);
+        }
+        if (source.SourcePort != null) {
+            this.SourcePort = new Long(source.SourcePort);
+        }
+        if (source.KeepTime != null) {
+            this.KeepTime = new Long(source.KeepTime);
+        }
+        if (source.SourceList != null) {
+            this.SourceList = new L4RuleSource[source.SourceList.length];
+            for (int i = 0; i < source.SourceList.length; i++) {
+                this.SourceList[i] = new L4RuleSource(source.SourceList[i]);
+            }
+        }
+        if (source.LbType != null) {
+            this.LbType = new Long(source.LbType);
+        }
+        if (source.KeepEnable != null) {
+            this.KeepEnable = new Long(source.KeepEnable);
+        }
+        if (source.SourceType != null) {
+            this.SourceType = new Long(source.SourceType);
+        }
+        if (source.RuleId != null) {
+            this.RuleId = new String(source.RuleId);
+        }
+        if (source.RuleName != null) {
+            this.RuleName = new String(source.RuleName);
+        }
+        if (source.RemoveSwitch != null) {
+            this.RemoveSwitch = new Long(source.RemoveSwitch);
+        }
+        if (source.ModifyTime != null) {
+            this.ModifyTime = new String(source.ModifyTime);
+        }
+        if (source.Region != null) {
+            this.Region = new Long(source.Region);
+        }
+        if (source.Ip != null) {
+            this.Ip = new String(source.Ip);
+        }
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

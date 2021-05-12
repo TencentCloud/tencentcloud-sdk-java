@@ -68,6 +68,23 @@ public class DescribeBGPIPL7RuleMaxCntRequest extends AbstractModel{
         this.Id = Id;
     }
 
+    public DescribeBGPIPL7RuleMaxCntRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeBGPIPL7RuleMaxCntRequest(DescribeBGPIPL7RuleMaxCntRequest source) {
+        if (source.Business != null) {
+            this.Business = new String(source.Business);
+        }
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

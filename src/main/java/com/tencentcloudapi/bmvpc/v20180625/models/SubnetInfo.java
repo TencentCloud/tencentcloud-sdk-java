@@ -533,6 +533,86 @@ public class SubnetInfo extends AbstractModel{
         this.BroadcastFlag = BroadcastFlag;
     }
 
+    public SubnetInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SubnetInfo(SubnetInfo source) {
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.VpcName != null) {
+            this.VpcName = new String(source.VpcName);
+        }
+        if (source.VpcCidrBlock != null) {
+            this.VpcCidrBlock = new String(source.VpcCidrBlock);
+        }
+        if (source.SubnetId != null) {
+            this.SubnetId = new String(source.SubnetId);
+        }
+        if (source.SubnetName != null) {
+            this.SubnetName = new String(source.SubnetName);
+        }
+        if (source.CidrBlock != null) {
+            this.CidrBlock = new String(source.CidrBlock);
+        }
+        if (source.Type != null) {
+            this.Type = new Long(source.Type);
+        }
+        if (source.ZoneId != null) {
+            this.ZoneId = new Long(source.ZoneId);
+        }
+        if (source.CpmNum != null) {
+            this.CpmNum = new Long(source.CpmNum);
+        }
+        if (source.VlanId != null) {
+            this.VlanId = new Long(source.VlanId);
+        }
+        if (source.DistributedFlag != null) {
+            this.DistributedFlag = new Long(source.DistributedFlag);
+        }
+        if (source.DhcpEnable != null) {
+            this.DhcpEnable = new Long(source.DhcpEnable);
+        }
+        if (source.DhcpServerIp != null) {
+            this.DhcpServerIp = new String[source.DhcpServerIp.length];
+            for (int i = 0; i < source.DhcpServerIp.length; i++) {
+                this.DhcpServerIp[i] = new String(source.DhcpServerIp[i]);
+            }
+        }
+        if (source.IpReserve != null) {
+            this.IpReserve = new Long(source.IpReserve);
+        }
+        if (source.AvailableIpNum != null) {
+            this.AvailableIpNum = new Long(source.AvailableIpNum);
+        }
+        if (source.TotalIpNum != null) {
+            this.TotalIpNum = new Long(source.TotalIpNum);
+        }
+        if (source.SubnetCreateTime != null) {
+            this.SubnetCreateTime = new String(source.SubnetCreateTime);
+        }
+        if (source.IsSmartNic != null) {
+            this.IsSmartNic = new Long(source.IsSmartNic);
+        }
+        if (source.Zone != null) {
+            this.Zone = new String(source.Zone);
+        }
+        if (source.VpcZoneId != null) {
+            this.VpcZoneId = new Long(source.VpcZoneId);
+        }
+        if (source.VpcZone != null) {
+            this.VpcZone = new String(source.VpcZone);
+        }
+        if (source.BroadcastFlag != null) {
+            this.BroadcastFlag = new Long(source.BroadcastFlag);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

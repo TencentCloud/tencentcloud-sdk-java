@@ -68,6 +68,29 @@ public class DeviceMemInfo extends AbstractModel{
         this.Used = Used;
     }
 
+    public DeviceMemInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeviceMemInfo(DeviceMemInfo source) {
+        if (source.Total != null) {
+            this.Total = new Long[source.Total.length];
+            for (int i = 0; i < source.Total.length; i++) {
+                this.Total[i] = new Long(source.Total[i]);
+            }
+        }
+        if (source.Used != null) {
+            this.Used = new Long[source.Used.length];
+            for (int i = 0; i < source.Used.length; i++) {
+                this.Used[i] = new Long(source.Used[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

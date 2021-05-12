@@ -124,6 +124,29 @@ public class CSV extends AbstractModel{
         this.Format = Format;
     }
 
+    public CSV() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CSV(CSV source) {
+        if (source.CodeCompress != null) {
+            this.CodeCompress = new String(source.CodeCompress);
+        }
+        if (source.CSVSerde != null) {
+            this.CSVSerde = new CSVSerde(source.CSVSerde);
+        }
+        if (source.HeadLines != null) {
+            this.HeadLines = new Long(source.HeadLines);
+        }
+        if (source.Format != null) {
+            this.Format = new String(source.Format);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

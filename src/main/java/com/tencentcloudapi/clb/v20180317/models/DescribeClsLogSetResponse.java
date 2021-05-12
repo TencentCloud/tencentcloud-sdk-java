@@ -91,6 +91,26 @@ public class DescribeClsLogSetResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeClsLogSetResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeClsLogSetResponse(DescribeClsLogSetResponse source) {
+        if (source.LogsetId != null) {
+            this.LogsetId = new String(source.LogsetId);
+        }
+        if (source.HealthLogsetId != null) {
+            this.HealthLogsetId = new String(source.HealthLogsetId);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

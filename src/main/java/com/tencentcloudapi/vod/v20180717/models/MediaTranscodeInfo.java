@@ -45,6 +45,23 @@ public class MediaTranscodeInfo extends AbstractModel{
         this.TranscodeSet = TranscodeSet;
     }
 
+    public MediaTranscodeInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MediaTranscodeInfo(MediaTranscodeInfo source) {
+        if (source.TranscodeSet != null) {
+            this.TranscodeSet = new MediaTranscodeItem[source.TranscodeSet.length];
+            for (int i = 0; i < source.TranscodeSet.length; i++) {
+                this.TranscodeSet[i] = new MediaTranscodeItem(source.TranscodeSet[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

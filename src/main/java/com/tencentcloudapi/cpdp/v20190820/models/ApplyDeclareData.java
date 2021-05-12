@@ -165,6 +165,35 @@ public class ApplyDeclareData extends AbstractModel{
         this.PayerId = PayerId;
     }
 
+    public ApplyDeclareData() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ApplyDeclareData(ApplyDeclareData source) {
+        if (source.MerchantId != null) {
+            this.MerchantId = new String(source.MerchantId);
+        }
+        if (source.TransactionId != null) {
+            this.TransactionId = new String(source.TransactionId);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.DeclareId != null) {
+            this.DeclareId = new String(source.DeclareId);
+        }
+        if (source.OriginalDeclareId != null) {
+            this.OriginalDeclareId = new String(source.OriginalDeclareId);
+        }
+        if (source.PayerId != null) {
+            this.PayerId = new String(source.PayerId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -229,6 +229,44 @@ public class CreateCosSecKeyInstanceResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public CreateCosSecKeyInstanceResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateCosSecKeyInstanceResponse(CreateCosSecKeyInstanceResponse source) {
+        if (source.CosAppid != null) {
+            this.CosAppid = new Long(source.CosAppid);
+        }
+        if (source.CosBucket != null) {
+            this.CosBucket = new String(source.CosBucket);
+        }
+        if (source.CosRegion != null) {
+            this.CosRegion = new String(source.CosRegion);
+        }
+        if (source.ExpireTime != null) {
+            this.ExpireTime = new Long(source.ExpireTime);
+        }
+        if (source.CosId != null) {
+            this.CosId = new String(source.CosId);
+        }
+        if (source.CosKey != null) {
+            this.CosKey = new String(source.CosKey);
+        }
+        if (source.CosTocken != null) {
+            this.CosTocken = new String(source.CosTocken);
+        }
+        if (source.CosPrefix != null) {
+            this.CosPrefix = new String(source.CosPrefix);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

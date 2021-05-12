@@ -137,6 +137,32 @@ public class Function extends AbstractModel{
         this.EnableVolume = EnableVolume;
     }
 
+    public Function() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Function(Function source) {
+        if (source.EnableAllText != null) {
+            this.EnableAllText = new Boolean(source.EnableAllText);
+        }
+        if (source.EnableKeyword != null) {
+            this.EnableKeyword = new Boolean(source.EnableKeyword);
+        }
+        if (source.EnableMuteDetect != null) {
+            this.EnableMuteDetect = new Boolean(source.EnableMuteDetect);
+        }
+        if (source.EnableVadInfo != null) {
+            this.EnableVadInfo = new Boolean(source.EnableVadInfo);
+        }
+        if (source.EnableVolume != null) {
+            this.EnableVolume = new Boolean(source.EnableVolume);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

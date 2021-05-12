@@ -68,6 +68,23 @@ public class CreateVulsReportRequest extends AbstractModel{
         this.MonitorId = MonitorId;
     }
 
+    public CreateVulsReportRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateVulsReportRequest(CreateVulsReportRequest source) {
+        if (source.SiteId != null) {
+            this.SiteId = new Long(source.SiteId);
+        }
+        if (source.MonitorId != null) {
+            this.MonitorId = new Long(source.MonitorId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

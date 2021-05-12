@@ -91,6 +91,29 @@ public class DescribeNonlocalLoginPlacesResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeNonlocalLoginPlacesResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeNonlocalLoginPlacesResponse(DescribeNonlocalLoginPlacesResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.NonLocalLoginPlaces != null) {
+            this.NonLocalLoginPlaces = new NonLocalLoginPlace[source.NonLocalLoginPlaces.length];
+            for (int i = 0; i < source.NonLocalLoginPlaces.length; i++) {
+                this.NonLocalLoginPlaces[i] = new NonLocalLoginPlace(source.NonLocalLoginPlaces[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -137,6 +137,32 @@ public class SendSmsPaasDataStruct extends AbstractModel{
         this.Message = Message;
     }
 
+    public SendSmsPaasDataStruct() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SendSmsPaasDataStruct(SendSmsPaasDataStruct source) {
+        if (source.SerialNo != null) {
+            this.SerialNo = new String(source.SerialNo);
+        }
+        if (source.PhoneNumber != null) {
+            this.PhoneNumber = new String(source.PhoneNumber);
+        }
+        if (source.Fee != null) {
+            this.Fee = new Long(source.Fee);
+        }
+        if (source.Code != null) {
+            this.Code = new String(source.Code);
+        }
+        if (source.Message != null) {
+            this.Message = new String(source.Message);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

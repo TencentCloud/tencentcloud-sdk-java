@@ -492,6 +492,80 @@ public class L7RuleEntry extends AbstractModel{
         this.VirtualPort = VirtualPort;
     }
 
+    public L7RuleEntry() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public L7RuleEntry(L7RuleEntry source) {
+        if (source.Protocol != null) {
+            this.Protocol = new String(source.Protocol);
+        }
+        if (source.Domain != null) {
+            this.Domain = new String(source.Domain);
+        }
+        if (source.SourceType != null) {
+            this.SourceType = new Long(source.SourceType);
+        }
+        if (source.KeepTime != null) {
+            this.KeepTime = new Long(source.KeepTime);
+        }
+        if (source.SourceList != null) {
+            this.SourceList = new L4RuleSource[source.SourceList.length];
+            for (int i = 0; i < source.SourceList.length; i++) {
+                this.SourceList[i] = new L4RuleSource(source.SourceList[i]);
+            }
+        }
+        if (source.LbType != null) {
+            this.LbType = new Long(source.LbType);
+        }
+        if (source.KeepEnable != null) {
+            this.KeepEnable = new Long(source.KeepEnable);
+        }
+        if (source.RuleId != null) {
+            this.RuleId = new String(source.RuleId);
+        }
+        if (source.CertType != null) {
+            this.CertType = new Long(source.CertType);
+        }
+        if (source.SSLId != null) {
+            this.SSLId = new String(source.SSLId);
+        }
+        if (source.Cert != null) {
+            this.Cert = new String(source.Cert);
+        }
+        if (source.PrivateKey != null) {
+            this.PrivateKey = new String(source.PrivateKey);
+        }
+        if (source.RuleName != null) {
+            this.RuleName = new String(source.RuleName);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.CCStatus != null) {
+            this.CCStatus = new Long(source.CCStatus);
+        }
+        if (source.CCEnable != null) {
+            this.CCEnable = new Long(source.CCEnable);
+        }
+        if (source.CCThreshold != null) {
+            this.CCThreshold = new Long(source.CCThreshold);
+        }
+        if (source.CCLevel != null) {
+            this.CCLevel = new String(source.CCLevel);
+        }
+        if (source.HttpsToHttpEnable != null) {
+            this.HttpsToHttpEnable = new Long(source.HttpsToHttpEnable);
+        }
+        if (source.VirtualPort != null) {
+            this.VirtualPort = new Long(source.VirtualPort);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

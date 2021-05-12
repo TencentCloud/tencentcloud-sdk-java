@@ -45,6 +45,23 @@ public class PutMusicOnTheShelvesRequest extends AbstractModel{
         this.MusicIds = MusicIds;
     }
 
+    public PutMusicOnTheShelvesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PutMusicOnTheShelvesRequest(PutMusicOnTheShelvesRequest source) {
+        if (source.MusicIds != null) {
+            this.MusicIds = new String[source.MusicIds.length];
+            for (int i = 0; i < source.MusicIds.length; i++) {
+                this.MusicIds[i] = new String(source.MusicIds[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -763,6 +763,110 @@ UNKNOWN表示未知状态。
         this.ClientIPMethod = ClientIPMethod;
     }
 
+    public ProxyInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ProxyInfo(ProxyInfo source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new Long(source.CreateTime);
+        }
+        if (source.ProjectId != null) {
+            this.ProjectId = new Long(source.ProjectId);
+        }
+        if (source.ProxyName != null) {
+            this.ProxyName = new String(source.ProxyName);
+        }
+        if (source.AccessRegion != null) {
+            this.AccessRegion = new String(source.AccessRegion);
+        }
+        if (source.RealServerRegion != null) {
+            this.RealServerRegion = new String(source.RealServerRegion);
+        }
+        if (source.Bandwidth != null) {
+            this.Bandwidth = new Long(source.Bandwidth);
+        }
+        if (source.Concurrent != null) {
+            this.Concurrent = new Long(source.Concurrent);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.Domain != null) {
+            this.Domain = new String(source.Domain);
+        }
+        if (source.IP != null) {
+            this.IP = new String(source.IP);
+        }
+        if (source.Version != null) {
+            this.Version = new String(source.Version);
+        }
+        if (source.ProxyId != null) {
+            this.ProxyId = new String(source.ProxyId);
+        }
+        if (source.Scalarable != null) {
+            this.Scalarable = new Long(source.Scalarable);
+        }
+        if (source.SupportProtocols != null) {
+            this.SupportProtocols = new String[source.SupportProtocols.length];
+            for (int i = 0; i < source.SupportProtocols.length; i++) {
+                this.SupportProtocols[i] = new String(source.SupportProtocols[i]);
+            }
+        }
+        if (source.GroupId != null) {
+            this.GroupId = new String(source.GroupId);
+        }
+        if (source.PolicyId != null) {
+            this.PolicyId = new String(source.PolicyId);
+        }
+        if (source.AccessRegionInfo != null) {
+            this.AccessRegionInfo = new RegionDetail(source.AccessRegionInfo);
+        }
+        if (source.RealServerRegionInfo != null) {
+            this.RealServerRegionInfo = new RegionDetail(source.RealServerRegionInfo);
+        }
+        if (source.ForwardIP != null) {
+            this.ForwardIP = new String(source.ForwardIP);
+        }
+        if (source.TagSet != null) {
+            this.TagSet = new TagPair[source.TagSet.length];
+            for (int i = 0; i < source.TagSet.length; i++) {
+                this.TagSet[i] = new TagPair(source.TagSet[i]);
+            }
+        }
+        if (source.SupportSecurity != null) {
+            this.SupportSecurity = new Long(source.SupportSecurity);
+        }
+        if (source.BillingType != null) {
+            this.BillingType = new Long(source.BillingType);
+        }
+        if (source.RelatedGlobalDomains != null) {
+            this.RelatedGlobalDomains = new String[source.RelatedGlobalDomains.length];
+            for (int i = 0; i < source.RelatedGlobalDomains.length; i++) {
+                this.RelatedGlobalDomains[i] = new String(source.RelatedGlobalDomains[i]);
+            }
+        }
+        if (source.ModifyConfigTime != null) {
+            this.ModifyConfigTime = new Long(source.ModifyConfigTime);
+        }
+        if (source.ProxyType != null) {
+            this.ProxyType = new Long(source.ProxyType);
+        }
+        if (source.ClientIPMethod != null) {
+            this.ClientIPMethod = new Long[source.ClientIPMethod.length];
+            for (int i = 0; i < source.ClientIPMethod.length; i++) {
+                this.ClientIPMethod[i] = new Long(source.ClientIPMethod[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

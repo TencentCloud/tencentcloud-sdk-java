@@ -321,6 +321,56 @@ public class CreateAuditRequest extends AbstractModel{
         this.IsCreateNewQueue = IsCreateNewQueue;
     }
 
+    public CreateAuditRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateAuditRequest(CreateAuditRequest source) {
+        if (source.IsEnableCmqNotify != null) {
+            this.IsEnableCmqNotify = new Long(source.IsEnableCmqNotify);
+        }
+        if (source.ReadWriteAttribute != null) {
+            this.ReadWriteAttribute = new Long(source.ReadWriteAttribute);
+        }
+        if (source.AuditName != null) {
+            this.AuditName = new String(source.AuditName);
+        }
+        if (source.CosRegion != null) {
+            this.CosRegion = new String(source.CosRegion);
+        }
+        if (source.IsCreateNewBucket != null) {
+            this.IsCreateNewBucket = new Long(source.IsCreateNewBucket);
+        }
+        if (source.CosBucketName != null) {
+            this.CosBucketName = new String(source.CosBucketName);
+        }
+        if (source.KeyId != null) {
+            this.KeyId = new String(source.KeyId);
+        }
+        if (source.CmqQueueName != null) {
+            this.CmqQueueName = new String(source.CmqQueueName);
+        }
+        if (source.KmsRegion != null) {
+            this.KmsRegion = new String(source.KmsRegion);
+        }
+        if (source.IsEnableKmsEncry != null) {
+            this.IsEnableKmsEncry = new Long(source.IsEnableKmsEncry);
+        }
+        if (source.CmqRegion != null) {
+            this.CmqRegion = new String(source.CmqRegion);
+        }
+        if (source.LogFilePrefix != null) {
+            this.LogFilePrefix = new String(source.LogFilePrefix);
+        }
+        if (source.IsCreateNewQueue != null) {
+            this.IsCreateNewQueue = new Long(source.IsCreateNewQueue);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

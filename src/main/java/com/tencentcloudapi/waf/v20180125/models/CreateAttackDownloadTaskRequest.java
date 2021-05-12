@@ -229,6 +229,44 @@ public class CreateAttackDownloadTaskRequest extends AbstractModel{
         this.AttackType = AttackType;
     }
 
+    public CreateAttackDownloadTaskRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateAttackDownloadTaskRequest(CreateAttackDownloadTaskRequest source) {
+        if (source.Domain != null) {
+            this.Domain = new String(source.Domain);
+        }
+        if (source.FromTime != null) {
+            this.FromTime = new String(source.FromTime);
+        }
+        if (source.ToTime != null) {
+            this.ToTime = new String(source.ToTime);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.RiskLevel != null) {
+            this.RiskLevel = new Long(source.RiskLevel);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.RuleId != null) {
+            this.RuleId = new Long(source.RuleId);
+        }
+        if (source.AttackIp != null) {
+            this.AttackIp = new String(source.AttackIp);
+        }
+        if (source.AttackType != null) {
+            this.AttackType = new String(source.AttackType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

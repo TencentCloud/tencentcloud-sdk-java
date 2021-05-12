@@ -101,6 +101,26 @@ public class NotificationTarget extends AbstractModel{
         this.TopicName = TopicName;
     }
 
+    public NotificationTarget() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public NotificationTarget(NotificationTarget source) {
+        if (source.TargetType != null) {
+            this.TargetType = new String(source.TargetType);
+        }
+        if (source.QueueName != null) {
+            this.QueueName = new String(source.QueueName);
+        }
+        if (source.TopicName != null) {
+            this.TopicName = new String(source.TopicName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

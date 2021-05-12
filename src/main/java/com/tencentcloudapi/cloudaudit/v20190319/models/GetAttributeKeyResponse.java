@@ -68,6 +68,26 @@ public class GetAttributeKeyResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public GetAttributeKeyResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GetAttributeKeyResponse(GetAttributeKeyResponse source) {
+        if (source.AttributeKeyDetails != null) {
+            this.AttributeKeyDetails = new AttributeKeyDetail[source.AttributeKeyDetails.length];
+            for (int i = 0; i < source.AttributeKeyDetails.length; i++) {
+                this.AttributeKeyDetails[i] = new AttributeKeyDetail(source.AttributeKeyDetails[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

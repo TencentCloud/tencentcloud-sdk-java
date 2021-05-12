@@ -78,6 +78,26 @@ public class UsagePlanEnvironmentStatus extends AbstractModel{
         this.EnvironmentList = EnvironmentList;
     }
 
+    public UsagePlanEnvironmentStatus() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UsagePlanEnvironmentStatus(UsagePlanEnvironmentStatus source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.EnvironmentList != null) {
+            this.EnvironmentList = new UsagePlanEnvironment[source.EnvironmentList.length];
+            for (int i = 0; i < source.EnvironmentList.length; i++) {
+                this.EnvironmentList[i] = new UsagePlanEnvironment(source.EnvironmentList[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

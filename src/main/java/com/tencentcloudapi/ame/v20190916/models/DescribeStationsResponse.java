@@ -165,6 +165,38 @@ public class DescribeStationsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeStationsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeStationsResponse(DescribeStationsResponse source) {
+        if (source.Total != null) {
+            this.Total = new Long(source.Total);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Size != null) {
+            this.Size = new Long(source.Size);
+        }
+        if (source.HaveMore != null) {
+            this.HaveMore = new Long(source.HaveMore);
+        }
+        if (source.Stations != null) {
+            this.Stations = new Station[source.Stations.length];
+            for (int i = 0; i < source.Stations.length; i++) {
+                this.Stations[i] = new Station(source.Stations[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

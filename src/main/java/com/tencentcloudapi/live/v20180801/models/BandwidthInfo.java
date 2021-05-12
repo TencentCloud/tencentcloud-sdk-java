@@ -78,6 +78,23 @@ yyyy-mm-dd HH:MM:SS
         this.Bandwidth = Bandwidth;
     }
 
+    public BandwidthInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public BandwidthInfo(BandwidthInfo source) {
+        if (source.Time != null) {
+            this.Time = new String(source.Time);
+        }
+        if (source.Bandwidth != null) {
+            this.Bandwidth = new Float(source.Bandwidth);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -137,6 +137,32 @@ public class GetDeviceListRequest extends AbstractModel{
         this.DeviceName = DeviceName;
     }
 
+    public GetDeviceListRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GetDeviceListRequest(GetDeviceListRequest source) {
+        if (source.ProductId != null) {
+            this.ProductId = new String(source.ProductId);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.FirmwareVersion != null) {
+            this.FirmwareVersion = new String(source.FirmwareVersion);
+        }
+        if (source.DeviceName != null) {
+            this.DeviceName = new String(source.DeviceName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

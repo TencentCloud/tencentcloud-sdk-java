@@ -896,6 +896,134 @@ public class InputRecognizeTargetAudience extends AbstractModel{
         this.ReqType = ReqType;
     }
 
+    public InputRecognizeTargetAudience() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public InputRecognizeTargetAudience(InputRecognizeTargetAudience source) {
+        if (source.Uid != null) {
+            this.Uid = new String(source.Uid);
+        }
+        if (source.AccountType != null) {
+            this.AccountType = new Long(source.AccountType);
+        }
+        if (source.ModelIdList != null) {
+            this.ModelIdList = new Long[source.ModelIdList.length];
+            for (int i = 0; i < source.ModelIdList.length; i++) {
+                this.ModelIdList[i] = new Long(source.ModelIdList[i]);
+            }
+        }
+        if (source.Ip != null) {
+            this.Ip = new String(source.Ip);
+        }
+        if (source.Os != null) {
+            this.Os = new String(source.Os);
+        }
+        if (source.Osv != null) {
+            this.Osv = new String(source.Osv);
+        }
+        if (source.Lat != null) {
+            this.Lat = new String(source.Lat);
+        }
+        if (source.Lon != null) {
+            this.Lon = new String(source.Lon);
+        }
+        if (source.DeviceModel != null) {
+            this.DeviceModel = new String(source.DeviceModel);
+        }
+        if (source.BidFloor != null) {
+            this.BidFloor = new Long(source.BidFloor);
+        }
+        if (source.Age != null) {
+            this.Age = new Long(source.Age);
+        }
+        if (source.Gender != null) {
+            this.Gender = new Long(source.Gender);
+        }
+        if (source.Location != null) {
+            this.Location = new String(source.Location);
+        }
+        if (source.DeliveryMode != null) {
+            this.DeliveryMode = new Long(source.DeliveryMode);
+        }
+        if (source.AdvertisingType != null) {
+            this.AdvertisingType = new Long(source.AdvertisingType);
+        }
+        if (source.Mac != null) {
+            this.Mac = new String(source.Mac);
+        }
+        if (source.Phone != null) {
+            this.Phone = new String(source.Phone);
+        }
+        if (source.Ua != null) {
+            this.Ua = new String(source.Ua);
+        }
+        if (source.App != null) {
+            this.App = new String(source.App);
+        }
+        if (source.Package != null) {
+            this.Package = new String(source.Package);
+        }
+        if (source.Maker != null) {
+            this.Maker = new String(source.Maker);
+        }
+        if (source.DeviceType != null) {
+            this.DeviceType = new String(source.DeviceType);
+        }
+        if (source.AccessMode != null) {
+            this.AccessMode = new String(source.AccessMode);
+        }
+        if (source.Sp != null) {
+            this.Sp = new Long(source.Sp);
+        }
+        if (source.DeviceW != null) {
+            this.DeviceW = new Long(source.DeviceW);
+        }
+        if (source.DeviceH != null) {
+            this.DeviceH = new Long(source.DeviceH);
+        }
+        if (source.FullScreen != null) {
+            this.FullScreen = new Long(source.FullScreen);
+        }
+        if (source.ImpBannerW != null) {
+            this.ImpBannerW = new Long(source.ImpBannerW);
+        }
+        if (source.ImpBannerH != null) {
+            this.ImpBannerH = new Long(source.ImpBannerH);
+        }
+        if (source.Url != null) {
+            this.Url = new String(source.Url);
+        }
+        if (source.Context != null) {
+            this.Context = new String(source.Context);
+        }
+        if (source.Channel != null) {
+            this.Channel = new String(source.Channel);
+        }
+        if (source.ReqId != null) {
+            this.ReqId = new String(source.ReqId);
+        }
+        if (source.ReqMd5 != null) {
+            this.ReqMd5 = new String(source.ReqMd5);
+        }
+        if (source.AdType != null) {
+            this.AdType = new Long(source.AdType);
+        }
+        if (source.AppName != null) {
+            this.AppName = new String(source.AppName);
+        }
+        if (source.AppVer != null) {
+            this.AppVer = new String(source.AppVer);
+        }
+        if (source.ReqType != null) {
+            this.ReqType = new Long(source.ReqType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -137,6 +137,32 @@ public class QueryCallDetailsRequest extends AbstractModel{
         this.PageSize = PageSize;
     }
 
+    public QueryCallDetailsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public QueryCallDetailsRequest(QueryCallDetailsRequest source) {
+        if (source.Type != null) {
+            this.Type = new Long(source.Type);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new Long(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new Long(source.EndTime);
+        }
+        if (source.PageNumber != null) {
+            this.PageNumber = new Long(source.PageNumber);
+        }
+        if (source.PageSize != null) {
+            this.PageSize = new Long(source.PageSize);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -45,6 +45,23 @@ public class DescribeFleetUtilizationRequest extends AbstractModel{
         this.FleetIds = FleetIds;
     }
 
+    public DescribeFleetUtilizationRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeFleetUtilizationRequest(DescribeFleetUtilizationRequest source) {
+        if (source.FleetIds != null) {
+            this.FleetIds = new String[source.FleetIds.length];
+            for (int i = 0; i < source.FleetIds.length; i++) {
+                this.FleetIds[i] = new String(source.FleetIds[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

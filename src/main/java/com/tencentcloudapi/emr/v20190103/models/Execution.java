@@ -83,6 +83,26 @@ public class Execution extends AbstractModel{
         this.Args = Args;
     }
 
+    public Execution() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Execution(Execution source) {
+        if (source.JobType != null) {
+            this.JobType = new String(source.JobType);
+        }
+        if (source.Args != null) {
+            this.Args = new String[source.Args.length];
+            for (int i = 0; i < source.Args.length; i++) {
+                this.Args[i] = new String(source.Args[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -68,6 +68,23 @@ public class CreateSubnetResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public CreateSubnetResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateSubnetResponse(CreateSubnetResponse source) {
+        if (source.Subnet != null) {
+            this.Subnet = new Subnet(source.Subnet);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

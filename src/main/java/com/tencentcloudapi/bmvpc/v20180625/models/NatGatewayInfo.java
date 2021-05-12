@@ -390,6 +390,68 @@ public class NatGatewayInfo extends AbstractModel{
         this.NatResourceId = NatResourceId;
     }
 
+    public NatGatewayInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public NatGatewayInfo(NatGatewayInfo source) {
+        if (source.NatId != null) {
+            this.NatId = new String(source.NatId);
+        }
+        if (source.NatName != null) {
+            this.NatName = new String(source.NatName);
+        }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.VpcName != null) {
+            this.VpcName = new String(source.VpcName);
+        }
+        if (source.ProductionStatus != null) {
+            this.ProductionStatus = new Long(source.ProductionStatus);
+        }
+        if (source.Eips != null) {
+            this.Eips = new String[source.Eips.length];
+            for (int i = 0; i < source.Eips.length; i++) {
+                this.Eips[i] = new String(source.Eips[i]);
+            }
+        }
+        if (source.MaxConcurrent != null) {
+            this.MaxConcurrent = new Long(source.MaxConcurrent);
+        }
+        if (source.Zone != null) {
+            this.Zone = new String(source.Zone);
+        }
+        if (source.Exclusive != null) {
+            this.Exclusive = new Long(source.Exclusive);
+        }
+        if (source.ForwardMode != null) {
+            this.ForwardMode = new Long(source.ForwardMode);
+        }
+        if (source.VpcCidrBlock != null) {
+            this.VpcCidrBlock = new String(source.VpcCidrBlock);
+        }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.State != null) {
+            this.State = new Long(source.State);
+        }
+        if (source.IntVpcId != null) {
+            this.IntVpcId = new Long(source.IntVpcId);
+        }
+        if (source.NatResourceId != null) {
+            this.NatResourceId = new Long(source.NatResourceId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

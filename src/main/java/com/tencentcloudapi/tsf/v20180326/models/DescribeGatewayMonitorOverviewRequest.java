@@ -45,6 +45,20 @@ public class DescribeGatewayMonitorOverviewRequest extends AbstractModel{
         this.GatewayDeployGroupId = GatewayDeployGroupId;
     }
 
+    public DescribeGatewayMonitorOverviewRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeGatewayMonitorOverviewRequest(DescribeGatewayMonitorOverviewRequest source) {
+        if (source.GatewayDeployGroupId != null) {
+            this.GatewayDeployGroupId = new String(source.GatewayDeployGroupId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -114,6 +114,32 @@ public class QueryMigrationCheckProcessResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public QueryMigrationCheckProcessResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public QueryMigrationCheckProcessResponse(QueryMigrationCheckProcessResponse source) {
+        if (source.TotalStep != null) {
+            this.TotalStep = new Long(source.TotalStep);
+        }
+        if (source.CurrentStep != null) {
+            this.CurrentStep = new Long(source.CurrentStep);
+        }
+        if (source.StepDetails != null) {
+            this.StepDetails = new StepDetail[source.StepDetails.length];
+            for (int i = 0; i < source.StepDetails.length; i++) {
+                this.StepDetails[i] = new StepDetail(source.StepDetails[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

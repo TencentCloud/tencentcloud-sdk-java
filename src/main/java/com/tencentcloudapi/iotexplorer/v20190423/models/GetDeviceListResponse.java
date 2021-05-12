@@ -101,6 +101,29 @@ public class GetDeviceListResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public GetDeviceListResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GetDeviceListResponse(GetDeviceListResponse source) {
+        if (source.Devices != null) {
+            this.Devices = new DeviceInfo[source.Devices.length];
+            for (int i = 0; i < source.Devices.length; i++) {
+                this.Devices[i] = new DeviceInfo(source.Devices[i]);
+            }
+        }
+        if (source.Total != null) {
+            this.Total = new Long(source.Total);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

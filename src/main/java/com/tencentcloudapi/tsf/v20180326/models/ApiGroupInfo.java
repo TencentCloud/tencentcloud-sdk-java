@@ -414,6 +414,62 @@ public class ApiGroupInfo extends AbstractModel{
         this.GatewayInstanceId = GatewayInstanceId;
     }
 
+    public ApiGroupInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ApiGroupInfo(ApiGroupInfo source) {
+        if (source.GroupId != null) {
+            this.GroupId = new String(source.GroupId);
+        }
+        if (source.GroupName != null) {
+            this.GroupName = new String(source.GroupName);
+        }
+        if (source.GroupContext != null) {
+            this.GroupContext = new String(source.GroupContext);
+        }
+        if (source.AuthType != null) {
+            this.AuthType = new String(source.AuthType);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.CreatedTime != null) {
+            this.CreatedTime = new String(source.CreatedTime);
+        }
+        if (source.UpdatedTime != null) {
+            this.UpdatedTime = new String(source.UpdatedTime);
+        }
+        if (source.BindedGatewayDeployGroups != null) {
+            this.BindedGatewayDeployGroups = new GatewayDeployGroup[source.BindedGatewayDeployGroups.length];
+            for (int i = 0; i < source.BindedGatewayDeployGroups.length; i++) {
+                this.BindedGatewayDeployGroups[i] = new GatewayDeployGroup(source.BindedGatewayDeployGroups[i]);
+            }
+        }
+        if (source.ApiCount != null) {
+            this.ApiCount = new Long(source.ApiCount);
+        }
+        if (source.AclMode != null) {
+            this.AclMode = new String(source.AclMode);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.GroupType != null) {
+            this.GroupType = new String(source.GroupType);
+        }
+        if (source.GatewayInstanceType != null) {
+            this.GatewayInstanceType = new String(source.GatewayInstanceType);
+        }
+        if (source.GatewayInstanceId != null) {
+            this.GatewayInstanceId = new String(source.GatewayInstanceId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -211,6 +211,41 @@ public class RegionSummaryOverviewItem extends AbstractModel{
         this.BillMonth = BillMonth;
     }
 
+    public RegionSummaryOverviewItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RegionSummaryOverviewItem(RegionSummaryOverviewItem source) {
+        if (source.RegionId != null) {
+            this.RegionId = new String(source.RegionId);
+        }
+        if (source.RegionName != null) {
+            this.RegionName = new String(source.RegionName);
+        }
+        if (source.RealTotalCost != null) {
+            this.RealTotalCost = new String(source.RealTotalCost);
+        }
+        if (source.RealTotalCostRatio != null) {
+            this.RealTotalCostRatio = new String(source.RealTotalCostRatio);
+        }
+        if (source.CashPayAmount != null) {
+            this.CashPayAmount = new String(source.CashPayAmount);
+        }
+        if (source.IncentivePayAmount != null) {
+            this.IncentivePayAmount = new String(source.IncentivePayAmount);
+        }
+        if (source.VoucherPayAmount != null) {
+            this.VoucherPayAmount = new String(source.VoucherPayAmount);
+        }
+        if (source.BillMonth != null) {
+            this.BillMonth = new String(source.BillMonth);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

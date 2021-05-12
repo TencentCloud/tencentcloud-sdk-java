@@ -180,6 +180,35 @@ public class BodyMovementResult extends AbstractModel{
         this.Width = Width;
     }
 
+    public BodyMovementResult() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public BodyMovementResult(BodyMovementResult source) {
+        if (source.Confidence != null) {
+            this.Confidence = new Float(source.Confidence);
+        }
+        if (source.Height != null) {
+            this.Height = new Long(source.Height);
+        }
+        if (source.Left != null) {
+            this.Left = new Long(source.Left);
+        }
+        if (source.Movements != null) {
+            this.Movements = new String(source.Movements);
+        }
+        if (source.Top != null) {
+            this.Top = new Long(source.Top);
+        }
+        if (source.Width != null) {
+            this.Width = new Long(source.Width);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

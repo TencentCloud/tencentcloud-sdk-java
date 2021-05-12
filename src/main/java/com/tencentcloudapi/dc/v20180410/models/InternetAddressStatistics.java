@@ -78,6 +78,23 @@ public class InternetAddressStatistics extends AbstractModel{
         this.SubnetNum = SubnetNum;
     }
 
+    public InternetAddressStatistics() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public InternetAddressStatistics(InternetAddressStatistics source) {
+        if (source.Region != null) {
+            this.Region = new String(source.Region);
+        }
+        if (source.SubnetNum != null) {
+            this.SubnetNum = new Long(source.SubnetNum);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -137,6 +137,38 @@ public class ServiceTemplateGroup extends AbstractModel{
         this.ServiceTemplateSet = ServiceTemplateSet;
     }
 
+    public ServiceTemplateGroup() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ServiceTemplateGroup(ServiceTemplateGroup source) {
+        if (source.ServiceTemplateGroupId != null) {
+            this.ServiceTemplateGroupId = new String(source.ServiceTemplateGroupId);
+        }
+        if (source.ServiceTemplateGroupName != null) {
+            this.ServiceTemplateGroupName = new String(source.ServiceTemplateGroupName);
+        }
+        if (source.ServiceTemplateIdSet != null) {
+            this.ServiceTemplateIdSet = new String[source.ServiceTemplateIdSet.length];
+            for (int i = 0; i < source.ServiceTemplateIdSet.length; i++) {
+                this.ServiceTemplateIdSet[i] = new String(source.ServiceTemplateIdSet[i]);
+            }
+        }
+        if (source.CreatedTime != null) {
+            this.CreatedTime = new String(source.CreatedTime);
+        }
+        if (source.ServiceTemplateSet != null) {
+            this.ServiceTemplateSet = new ServiceTemplate[source.ServiceTemplateSet.length];
+            for (int i = 0; i < source.ServiceTemplateSet.length; i++) {
+                this.ServiceTemplateSet[i] = new ServiceTemplate(source.ServiceTemplateSet[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

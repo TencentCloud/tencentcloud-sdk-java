@@ -137,6 +137,32 @@ public class WaterPrintKey extends AbstractModel{
         this.CreateTime = CreateTime;
     }
 
+    public WaterPrintKey() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public WaterPrintKey(WaterPrintKey source) {
+        if (source.KeyId != null) {
+            this.KeyId = new String(source.KeyId);
+        }
+        if (source.KeyContent != null) {
+            this.KeyContent = new String(source.KeyContent);
+        }
+        if (source.KeyVersion != null) {
+            this.KeyVersion = new String(source.KeyVersion);
+        }
+        if (source.OpenStatus != null) {
+            this.OpenStatus = new Long(source.OpenStatus);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

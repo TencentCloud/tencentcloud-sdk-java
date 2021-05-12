@@ -91,6 +91,29 @@ public class DescribeLaunchConfigurationsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeLaunchConfigurationsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeLaunchConfigurationsResponse(DescribeLaunchConfigurationsResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.LaunchConfigurationSet != null) {
+            this.LaunchConfigurationSet = new LaunchConfiguration[source.LaunchConfigurationSet.length];
+            for (int i = 0; i < source.LaunchConfigurationSet.length; i++) {
+                this.LaunchConfigurationSet[i] = new LaunchConfiguration(source.LaunchConfigurationSet[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

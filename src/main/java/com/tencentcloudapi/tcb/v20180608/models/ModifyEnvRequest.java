@@ -68,6 +68,23 @@ public class ModifyEnvRequest extends AbstractModel{
         this.Alias = Alias;
     }
 
+    public ModifyEnvRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyEnvRequest(ModifyEnvRequest source) {
+        if (source.EnvId != null) {
+            this.EnvId = new String(source.EnvId);
+        }
+        if (source.Alias != null) {
+            this.Alias = new String(source.Alias);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

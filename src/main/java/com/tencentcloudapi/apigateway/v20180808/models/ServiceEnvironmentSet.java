@@ -78,6 +78,26 @@ public class ServiceEnvironmentSet extends AbstractModel{
         this.EnvironmentList = EnvironmentList;
     }
 
+    public ServiceEnvironmentSet() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ServiceEnvironmentSet(ServiceEnvironmentSet source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.EnvironmentList != null) {
+            this.EnvironmentList = new Environment[source.EnvironmentList.length];
+            for (int i = 0; i < source.EnvironmentList.length; i++) {
+                this.EnvironmentList[i] = new Environment(source.EnvironmentList[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

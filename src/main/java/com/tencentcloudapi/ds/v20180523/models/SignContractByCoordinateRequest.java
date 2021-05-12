@@ -252,6 +252,50 @@ public class SignContractByCoordinateRequest extends AbstractModel{
         this.ImageData = ImageData;
     }
 
+    public SignContractByCoordinateRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SignContractByCoordinateRequest(SignContractByCoordinateRequest source) {
+        if (source.Module != null) {
+            this.Module = new String(source.Module);
+        }
+        if (source.Operation != null) {
+            this.Operation = new String(source.Operation);
+        }
+        if (source.ContractResId != null) {
+            this.ContractResId = new String(source.ContractResId);
+        }
+        if (source.AccountResId != null) {
+            this.AccountResId = new String(source.AccountResId);
+        }
+        if (source.SignLocations != null) {
+            this.SignLocations = new SignLocation[source.SignLocations.length];
+            for (int i = 0; i < source.SignLocations.length; i++) {
+                this.SignLocations[i] = new SignLocation(source.SignLocations[i]);
+            }
+        }
+        if (source.AuthorizationTime != null) {
+            this.AuthorizationTime = new String(source.AuthorizationTime);
+        }
+        if (source.Position != null) {
+            this.Position = new String(source.Position);
+        }
+        if (source.SealResId != null) {
+            this.SealResId = new String(source.SealResId);
+        }
+        if (source.CertType != null) {
+            this.CertType = new Long(source.CertType);
+        }
+        if (source.ImageData != null) {
+            this.ImageData = new String(source.ImageData);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

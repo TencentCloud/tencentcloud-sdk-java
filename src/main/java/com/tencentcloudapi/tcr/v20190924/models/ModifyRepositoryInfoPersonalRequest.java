@@ -68,6 +68,23 @@ public class ModifyRepositoryInfoPersonalRequest extends AbstractModel{
         this.Description = Description;
     }
 
+    public ModifyRepositoryInfoPersonalRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyRepositoryInfoPersonalRequest(ModifyRepositoryInfoPersonalRequest source) {
+        if (source.RepoName != null) {
+            this.RepoName = new String(source.RepoName);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

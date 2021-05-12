@@ -218,6 +218,38 @@ public class CloudBaseRunVpcSubnet extends AbstractModel{
         this.Name = Name;
     }
 
+    public CloudBaseRunVpcSubnet() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CloudBaseRunVpcSubnet(CloudBaseRunVpcSubnet source) {
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
+        if (source.Cidr != null) {
+            this.Cidr = new String(source.Cidr);
+        }
+        if (source.Zone != null) {
+            this.Zone = new String(source.Zone);
+        }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.Target != null) {
+            this.Target = new String(source.Target);
+        }
+        if (source.Region != null) {
+            this.Region = new String(source.Region);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

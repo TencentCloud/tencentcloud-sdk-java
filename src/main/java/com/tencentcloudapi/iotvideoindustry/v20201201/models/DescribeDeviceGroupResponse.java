@@ -73,6 +73,26 @@ public class DescribeDeviceGroupResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeDeviceGroupResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeDeviceGroupResponse(DescribeDeviceGroupResponse source) {
+        if (source.DevGroups != null) {
+            this.DevGroups = new DevGroupInfo[source.DevGroups.length];
+            for (int i = 0; i < source.DevGroups.length; i++) {
+                this.DevGroups[i] = new DevGroupInfo(source.DevGroups[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

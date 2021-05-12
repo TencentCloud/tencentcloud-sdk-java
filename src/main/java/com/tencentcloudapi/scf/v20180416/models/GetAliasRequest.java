@@ -91,6 +91,26 @@ public class GetAliasRequest extends AbstractModel{
         this.Namespace = Namespace;
     }
 
+    public GetAliasRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GetAliasRequest(GetAliasRequest source) {
+        if (source.FunctionName != null) {
+            this.FunctionName = new String(source.FunctionName);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Namespace != null) {
+            this.Namespace = new String(source.Namespace);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

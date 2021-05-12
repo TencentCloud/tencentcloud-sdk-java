@@ -88,6 +88,26 @@ public class AuthorizationInfo extends AbstractModel{
         this.PermissionSet = PermissionSet;
     }
 
+    public AuthorizationInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AuthorizationInfo(AuthorizationInfo source) {
+        if (source.Authorizee != null) {
+            this.Authorizee = new Entity(source.Authorizee);
+        }
+        if (source.PermissionSet != null) {
+            this.PermissionSet = new String[source.PermissionSet.length];
+            for (int i = 0; i < source.PermissionSet.length; i++) {
+                this.PermissionSet[i] = new String(source.PermissionSet[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

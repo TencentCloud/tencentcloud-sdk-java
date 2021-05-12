@@ -229,6 +229,44 @@ public class SearchClsLogRequest extends AbstractModel{
         this.Sort = Sort;
     }
 
+    public SearchClsLogRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SearchClsLogRequest(SearchClsLogRequest source) {
+        if (source.LogsetId != null) {
+            this.LogsetId = new String(source.LogsetId);
+        }
+        if (source.TopicIds != null) {
+            this.TopicIds = new String(source.TopicIds);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.Channel != null) {
+            this.Channel = new String(source.Channel);
+        }
+        if (source.Query != null) {
+            this.Query = new String(source.Query);
+        }
+        if (source.Context != null) {
+            this.Context = new String(source.Context);
+        }
+        if (source.Sort != null) {
+            this.Sort = new String(source.Sort);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -275,6 +275,50 @@ public class ScanSetInfo extends AbstractModel{
         this.SensitiveInfo = SensitiveInfo;
     }
 
+    public ScanSetInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ScanSetInfo(ScanSetInfo source) {
+        if (source.TaskStatus != null) {
+            this.TaskStatus = new Long(source.TaskStatus);
+        }
+        if (source.AppDetailInfo != null) {
+            this.AppDetailInfo = new AppDetailInfo(source.AppDetailInfo);
+        }
+        if (source.VirusInfo != null) {
+            this.VirusInfo = new VirusInfo(source.VirusInfo);
+        }
+        if (source.VulInfo != null) {
+            this.VulInfo = new VulInfo(source.VulInfo);
+        }
+        if (source.AdInfo != null) {
+            this.AdInfo = new AdInfo(source.AdInfo);
+        }
+        if (source.TaskTime != null) {
+            this.TaskTime = new Long(source.TaskTime);
+        }
+        if (source.StatusCode != null) {
+            this.StatusCode = new Long(source.StatusCode);
+        }
+        if (source.StatusDesc != null) {
+            this.StatusDesc = new String(source.StatusDesc);
+        }
+        if (source.StatusRef != null) {
+            this.StatusRef = new String(source.StatusRef);
+        }
+        if (source.PermissionInfo != null) {
+            this.PermissionInfo = new ScanPermissionList(source.PermissionInfo);
+        }
+        if (source.SensitiveInfo != null) {
+            this.SensitiveInfo = new ScanSensitiveList(source.SensitiveInfo);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

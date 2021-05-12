@@ -229,6 +229,44 @@ public class DescribePublishSubscribeRequest extends AbstractModel{
         this.Limit = Limit;
     }
 
+    public DescribePublishSubscribeRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribePublishSubscribeRequest(DescribePublishSubscribeRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.PubOrSubInstanceId != null) {
+            this.PubOrSubInstanceId = new String(source.PubOrSubInstanceId);
+        }
+        if (source.PubOrSubInstanceIp != null) {
+            this.PubOrSubInstanceIp = new String(source.PubOrSubInstanceIp);
+        }
+        if (source.PublishSubscribeId != null) {
+            this.PublishSubscribeId = new Long(source.PublishSubscribeId);
+        }
+        if (source.PublishSubscribeName != null) {
+            this.PublishSubscribeName = new String(source.PublishSubscribeName);
+        }
+        if (source.PublishDBName != null) {
+            this.PublishDBName = new String(source.PublishDBName);
+        }
+        if (source.SubscribeDBName != null) {
+            this.SubscribeDBName = new String(source.SubscribeDBName);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

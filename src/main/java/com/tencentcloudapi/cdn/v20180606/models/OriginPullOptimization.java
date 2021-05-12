@@ -93,6 +93,23 @@ CNToOV：境内回源境外
         this.OptimizationType = OptimizationType;
     }
 
+    public OriginPullOptimization() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public OriginPullOptimization(OriginPullOptimization source) {
+        if (source.Switch != null) {
+            this.Switch = new String(source.Switch);
+        }
+        if (source.OptimizationType != null) {
+            this.OptimizationType = new String(source.OptimizationType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

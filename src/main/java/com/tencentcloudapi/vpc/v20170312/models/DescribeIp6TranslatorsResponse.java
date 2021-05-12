@@ -91,6 +91,29 @@ public class DescribeIp6TranslatorsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeIp6TranslatorsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeIp6TranslatorsResponse(DescribeIp6TranslatorsResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.Ip6TranslatorSet != null) {
+            this.Ip6TranslatorSet = new Ip6Translator[source.Ip6TranslatorSet.length];
+            for (int i = 0; i < source.Ip6TranslatorSet.length; i++) {
+                this.Ip6TranslatorSet[i] = new Ip6Translator(source.Ip6TranslatorSet[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

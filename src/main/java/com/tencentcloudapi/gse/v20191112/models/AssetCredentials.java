@@ -91,6 +91,26 @@ public class AssetCredentials extends AbstractModel{
         this.Token = Token;
     }
 
+    public AssetCredentials() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AssetCredentials(AssetCredentials source) {
+        if (source.TmpSecretId != null) {
+            this.TmpSecretId = new String(source.TmpSecretId);
+        }
+        if (source.TmpSecretKey != null) {
+            this.TmpSecretKey = new String(source.TmpSecretKey);
+        }
+        if (source.Token != null) {
+            this.Token = new String(source.Token);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

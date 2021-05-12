@@ -73,6 +73,23 @@ public class SaveInfo extends AbstractModel{
         this.CosInfo = CosInfo;
     }
 
+    public SaveInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SaveInfo(SaveInfo source) {
+        if (source.Type != null) {
+            this.Type = new Long(source.Type);
+        }
+        if (source.CosInfo != null) {
+            this.CosInfo = new CosInfo(source.CosInfo);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

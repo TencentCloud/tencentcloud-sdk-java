@@ -157,6 +157,32 @@ public class GetEidResultResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public GetEidResultResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GetEidResultResponse(GetEidResultResponse source) {
+        if (source.Text != null) {
+            this.Text = new DetectInfoText(source.Text);
+        }
+        if (source.IdCardData != null) {
+            this.IdCardData = new DetectInfoIdCardData(source.IdCardData);
+        }
+        if (source.BestFrame != null) {
+            this.BestFrame = new DetectInfoBestFrame(source.BestFrame);
+        }
+        if (source.EidInfo != null) {
+            this.EidInfo = new EidInfo(source.EidInfo);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -142,6 +142,32 @@ Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 。
         this.CreationTimestamp = CreationTimestamp;
     }
 
+    public GroupInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GroupInfo(GroupInfo source) {
+        if (source.GroupName != null) {
+            this.GroupName = new String(source.GroupName);
+        }
+        if (source.GroupId != null) {
+            this.GroupId = new String(source.GroupId);
+        }
+        if (source.Tag != null) {
+            this.Tag = new String(source.Tag);
+        }
+        if (source.BodyModelVersion != null) {
+            this.BodyModelVersion = new String(source.BodyModelVersion);
+        }
+        if (source.CreationTimestamp != null) {
+            this.CreationTimestamp = new Long(source.CreationTimestamp);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

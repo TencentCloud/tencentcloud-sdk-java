@@ -144,6 +144,29 @@ public class CreateAuditPolicyRequest extends AbstractModel{
         this.LogExpireDay = LogExpireDay;
     }
 
+    public CreateAuditPolicyRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateAuditPolicyRequest(CreateAuditPolicyRequest source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.RuleId != null) {
+            this.RuleId = new String(source.RuleId);
+        }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.LogExpireDay != null) {
+            this.LogExpireDay = new Long(source.LogExpireDay);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

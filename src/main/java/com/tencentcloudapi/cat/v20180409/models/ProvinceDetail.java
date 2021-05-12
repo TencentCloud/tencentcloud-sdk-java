@@ -183,6 +183,41 @@ public class ProvinceDetail extends AbstractModel{
         this.Province = Province;
     }
 
+    public ProvinceDetail() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ProvinceDetail(ProvinceDetail source) {
+        if (source.AvgAvailRatio != null) {
+            this.AvgAvailRatio = new Float(source.AvgAvailRatio);
+        }
+        if (source.ProvinceName != null) {
+            this.ProvinceName = new String(source.ProvinceName);
+        }
+        if (source.Mapkey != null) {
+            this.Mapkey = new String(source.Mapkey);
+        }
+        if (source.TimeStamp != null) {
+            this.TimeStamp = new String(source.TimeStamp);
+        }
+        if (source.IspDetail != null) {
+            this.IspDetail = new IspDetail[source.IspDetail.length];
+            for (int i = 0; i < source.IspDetail.length; i++) {
+                this.IspDetail[i] = new IspDetail(source.IspDetail[i]);
+            }
+        }
+        if (source.AvgTime != null) {
+            this.AvgTime = new Float(source.AvgTime);
+        }
+        if (source.Province != null) {
+            this.Province = new String(source.Province);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -91,6 +91,26 @@ public class ImportMaterialResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public ImportMaterialResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ImportMaterialResponse(ImportMaterialResponse source) {
+        if (source.MaterialId != null) {
+            this.MaterialId = new String(source.MaterialId);
+        }
+        if (source.PreProcessTaskId != null) {
+            this.PreProcessTaskId = new String(source.PreProcessTaskId);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

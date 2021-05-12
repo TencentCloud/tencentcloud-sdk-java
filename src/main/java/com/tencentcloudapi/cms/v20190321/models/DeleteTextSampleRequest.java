@@ -45,6 +45,23 @@ public class DeleteTextSampleRequest extends AbstractModel{
         this.Ids = Ids;
     }
 
+    public DeleteTextSampleRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteTextSampleRequest(DeleteTextSampleRequest source) {
+        if (source.Ids != null) {
+            this.Ids = new String[source.Ids.length];
+            for (int i = 0; i < source.Ids.length; i++) {
+                this.Ids[i] = new String(source.Ids[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -83,6 +83,26 @@ off：关闭
         this.PathRules = PathRules;
     }
 
+    public UrlRedirect() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UrlRedirect(UrlRedirect source) {
+        if (source.Switch != null) {
+            this.Switch = new String(source.Switch);
+        }
+        if (source.PathRules != null) {
+            this.PathRules = new UrlRedirectRule[source.PathRules.length];
+            for (int i = 0; i < source.PathRules.length; i++) {
+                this.PathRules[i] = new UrlRedirectRule(source.PathRules[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

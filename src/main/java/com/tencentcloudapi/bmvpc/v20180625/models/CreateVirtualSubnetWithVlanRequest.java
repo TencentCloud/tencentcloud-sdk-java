@@ -68,6 +68,26 @@ public class CreateVirtualSubnetWithVlanRequest extends AbstractModel{
         this.SubnetSet = SubnetSet;
     }
 
+    public CreateVirtualSubnetWithVlanRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateVirtualSubnetWithVlanRequest(CreateVirtualSubnetWithVlanRequest source) {
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.SubnetSet != null) {
+            this.SubnetSet = new SubnetCreateInputInfo[source.SubnetSet.length];
+            for (int i = 0; i < source.SubnetSet.length; i++) {
+                this.SubnetSet[i] = new SubnetCreateInputInfo(source.SubnetSet[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -45,6 +45,20 @@ public class StartLoggingRequest extends AbstractModel{
         this.AuditName = AuditName;
     }
 
+    public StartLoggingRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public StartLoggingRequest(StartLoggingRequest source) {
+        if (source.AuditName != null) {
+            this.AuditName = new String(source.AuditName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

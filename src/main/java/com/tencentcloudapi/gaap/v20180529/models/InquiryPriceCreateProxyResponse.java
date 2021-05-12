@@ -198,6 +198,41 @@ public class InquiryPriceCreateProxyResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public InquiryPriceCreateProxyResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public InquiryPriceCreateProxyResponse(InquiryPriceCreateProxyResponse source) {
+        if (source.ProxyDailyPrice != null) {
+            this.ProxyDailyPrice = new Float(source.ProxyDailyPrice);
+        }
+        if (source.BandwidthUnitPrice != null) {
+            this.BandwidthUnitPrice = new BandwidthPriceGradient[source.BandwidthUnitPrice.length];
+            for (int i = 0; i < source.BandwidthUnitPrice.length; i++) {
+                this.BandwidthUnitPrice[i] = new BandwidthPriceGradient(source.BandwidthUnitPrice[i]);
+            }
+        }
+        if (source.DiscountProxyDailyPrice != null) {
+            this.DiscountProxyDailyPrice = new Float(source.DiscountProxyDailyPrice);
+        }
+        if (source.Currency != null) {
+            this.Currency = new String(source.Currency);
+        }
+        if (source.FlowUnitPrice != null) {
+            this.FlowUnitPrice = new Float(source.FlowUnitPrice);
+        }
+        if (source.DiscountFlowUnitPrice != null) {
+            this.DiscountFlowUnitPrice = new Float(source.DiscountFlowUnitPrice);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

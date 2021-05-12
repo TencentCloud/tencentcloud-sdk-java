@@ -78,6 +78,23 @@ public class AlarmPolicyFilter extends AbstractModel{
         this.Dimensions = Dimensions;
     }
 
+    public AlarmPolicyFilter() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AlarmPolicyFilter(AlarmPolicyFilter source) {
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.Dimensions != null) {
+            this.Dimensions = new String(source.Dimensions);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

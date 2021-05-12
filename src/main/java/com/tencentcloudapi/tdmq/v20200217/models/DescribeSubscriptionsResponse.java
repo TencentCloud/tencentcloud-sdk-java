@@ -91,6 +91,29 @@ public class DescribeSubscriptionsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeSubscriptionsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeSubscriptionsResponse(DescribeSubscriptionsResponse source) {
+        if (source.SubscriptionSets != null) {
+            this.SubscriptionSets = new Subscription[source.SubscriptionSets.length];
+            for (int i = 0; i < source.SubscriptionSets.length; i++) {
+                this.SubscriptionSets[i] = new Subscription(source.SubscriptionSets[i]);
+            }
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

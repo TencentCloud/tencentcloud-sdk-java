@@ -91,6 +91,26 @@ public class DescribeVpcRequest extends AbstractModel{
         this.SearchWord = SearchWord;
     }
 
+    public DescribeVpcRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeVpcRequest(DescribeVpcRequest source) {
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.SearchWord != null) {
+            this.SearchWord = new String(source.SearchWord);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -68,6 +68,23 @@ public class GetCustomMFATokenInfoResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public GetCustomMFATokenInfoResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GetCustomMFATokenInfoResponse(GetCustomMFATokenInfoResponse source) {
+        if (source.Uin != null) {
+            this.Uin = new Long(source.Uin);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

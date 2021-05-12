@@ -183,6 +183,38 @@ public class AccountTipoffAccessRequest extends AbstractModel{
         this.EvilContent = EvilContent;
     }
 
+    public AccountTipoffAccessRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AccountTipoffAccessRequest(AccountTipoffAccessRequest source) {
+        if (source.ReportedAccount != null) {
+            this.ReportedAccount = new String(source.ReportedAccount);
+        }
+        if (source.ReportedAccountType != null) {
+            this.ReportedAccountType = new Long(source.ReportedAccountType);
+        }
+        if (source.EvilType != null) {
+            this.EvilType = new Long(source.EvilType);
+        }
+        if (source.SenderAccount != null) {
+            this.SenderAccount = new String(source.SenderAccount);
+        }
+        if (source.SenderAccountType != null) {
+            this.SenderAccountType = new Long(source.SenderAccountType);
+        }
+        if (source.SenderIP != null) {
+            this.SenderIP = new String(source.SenderIP);
+        }
+        if (source.EvilContent != null) {
+            this.EvilContent = new String(source.EvilContent);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

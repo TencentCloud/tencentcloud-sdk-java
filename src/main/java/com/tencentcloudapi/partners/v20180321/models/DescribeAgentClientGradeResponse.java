@@ -137,6 +137,32 @@ public class DescribeAgentClientGradeResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeAgentClientGradeResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeAgentClientGradeResponse(DescribeAgentClientGradeResponse source) {
+        if (source.AuditStatus != null) {
+            this.AuditStatus = new Long(source.AuditStatus);
+        }
+        if (source.AuthState != null) {
+            this.AuthState = new Long(source.AuthState);
+        }
+        if (source.ClientGrade != null) {
+            this.ClientGrade = new String(source.ClientGrade);
+        }
+        if (source.ClientType != null) {
+            this.ClientType = new Long(source.ClientType);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

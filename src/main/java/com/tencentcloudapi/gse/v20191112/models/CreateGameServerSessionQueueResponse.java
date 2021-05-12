@@ -68,6 +68,23 @@ public class CreateGameServerSessionQueueResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public CreateGameServerSessionQueueResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateGameServerSessionQueueResponse(CreateGameServerSessionQueueResponse source) {
+        if (source.GameServerSessionQueue != null) {
+            this.GameServerSessionQueue = new GameServerSessionQueue(source.GameServerSessionQueue);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

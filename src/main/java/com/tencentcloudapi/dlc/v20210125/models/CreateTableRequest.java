@@ -45,6 +45,20 @@ public class CreateTableRequest extends AbstractModel{
         this.TableInfo = TableInfo;
     }
 
+    public CreateTableRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateTableRequest(CreateTableRequest source) {
+        if (source.TableInfo != null) {
+            this.TableInfo = new TableInfo(source.TableInfo);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -45,6 +45,23 @@ public class BatchDescribeOrderImageRequest extends AbstractModel{
         this.OrderIds = OrderIds;
     }
 
+    public BatchDescribeOrderImageRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public BatchDescribeOrderImageRequest(BatchDescribeOrderImageRequest source) {
+        if (source.OrderIds != null) {
+            this.OrderIds = new String[source.OrderIds.length];
+            for (int i = 0; i < source.OrderIds.length; i++) {
+                this.OrderIds[i] = new String(source.OrderIds[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -45,6 +45,20 @@ public class RatingData extends AbstractModel{
         this.Rank = Rank;
     }
 
+    public RatingData() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RatingData(RatingData source) {
+        if (source.Rank != null) {
+            this.Rank = new Long(source.Rank);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

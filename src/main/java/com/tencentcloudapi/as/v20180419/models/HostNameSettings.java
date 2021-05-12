@@ -103,6 +103,23 @@ public class HostNameSettings extends AbstractModel{
         this.HostNameStyle = HostNameStyle;
     }
 
+    public HostNameSettings() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public HostNameSettings(HostNameSettings source) {
+        if (source.HostName != null) {
+            this.HostName = new String(source.HostName);
+        }
+        if (source.HostNameStyle != null) {
+            this.HostNameStyle = new String(source.HostNameStyle);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

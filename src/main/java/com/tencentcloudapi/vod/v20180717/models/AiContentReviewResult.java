@@ -375,6 +375,50 @@ public class AiContentReviewResult extends AbstractModel{
         this.ProhibitedOcrTask = ProhibitedOcrTask;
     }
 
+    public AiContentReviewResult() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AiContentReviewResult(AiContentReviewResult source) {
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.PornTask != null) {
+            this.PornTask = new AiReviewTaskPornResult(source.PornTask);
+        }
+        if (source.TerrorismTask != null) {
+            this.TerrorismTask = new AiReviewTaskTerrorismResult(source.TerrorismTask);
+        }
+        if (source.PoliticalTask != null) {
+            this.PoliticalTask = new AiReviewTaskPoliticalResult(source.PoliticalTask);
+        }
+        if (source.PornAsrTask != null) {
+            this.PornAsrTask = new AiReviewTaskPornAsrResult(source.PornAsrTask);
+        }
+        if (source.PornOcrTask != null) {
+            this.PornOcrTask = new AiReviewTaskPornOcrResult(source.PornOcrTask);
+        }
+        if (source.PoliticalAsrTask != null) {
+            this.PoliticalAsrTask = new AiReviewTaskPoliticalAsrResult(source.PoliticalAsrTask);
+        }
+        if (source.PoliticalOcrTask != null) {
+            this.PoliticalOcrTask = new AiReviewTaskPoliticalOcrResult(source.PoliticalOcrTask);
+        }
+        if (source.TerrorismOcrTask != null) {
+            this.TerrorismOcrTask = new AiReviewTaskTerrorismOcrResult(source.TerrorismOcrTask);
+        }
+        if (source.ProhibitedAsrTask != null) {
+            this.ProhibitedAsrTask = new AiReviewTaskProhibitedAsrResult(source.ProhibitedAsrTask);
+        }
+        if (source.ProhibitedOcrTask != null) {
+            this.ProhibitedOcrTask = new AiReviewTaskProhibitedOcrResult(source.ProhibitedOcrTask);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

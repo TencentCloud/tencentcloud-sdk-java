@@ -147,6 +147,35 @@ public class SampleSnapshotTaskInput extends AbstractModel{
         this.ObjectNumberFormat = ObjectNumberFormat;
     }
 
+    public SampleSnapshotTaskInput() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SampleSnapshotTaskInput(SampleSnapshotTaskInput source) {
+        if (source.Definition != null) {
+            this.Definition = new Long(source.Definition);
+        }
+        if (source.WatermarkSet != null) {
+            this.WatermarkSet = new WatermarkInput[source.WatermarkSet.length];
+            for (int i = 0; i < source.WatermarkSet.length; i++) {
+                this.WatermarkSet[i] = new WatermarkInput(source.WatermarkSet[i]);
+            }
+        }
+        if (source.OutputStorage != null) {
+            this.OutputStorage = new TaskOutputStorage(source.OutputStorage);
+        }
+        if (source.OutputObjectPath != null) {
+            this.OutputObjectPath = new String(source.OutputObjectPath);
+        }
+        if (source.ObjectNumberFormat != null) {
+            this.ObjectNumberFormat = new NumberFormat(source.ObjectNumberFormat);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

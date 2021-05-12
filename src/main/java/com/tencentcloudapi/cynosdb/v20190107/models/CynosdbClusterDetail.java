@@ -551,6 +551,95 @@ public class CynosdbClusterDetail extends AbstractModel{
         this.ResourceTags = ResourceTags;
     }
 
+    public CynosdbClusterDetail() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CynosdbClusterDetail(CynosdbClusterDetail source) {
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
+        if (source.ClusterName != null) {
+            this.ClusterName = new String(source.ClusterName);
+        }
+        if (source.Region != null) {
+            this.Region = new String(source.Region);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.StatusDesc != null) {
+            this.StatusDesc = new String(source.StatusDesc);
+        }
+        if (source.VpcName != null) {
+            this.VpcName = new String(source.VpcName);
+        }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.SubnetName != null) {
+            this.SubnetName = new String(source.SubnetName);
+        }
+        if (source.SubnetId != null) {
+            this.SubnetId = new String(source.SubnetId);
+        }
+        if (source.Charset != null) {
+            this.Charset = new String(source.Charset);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.DbType != null) {
+            this.DbType = new String(source.DbType);
+        }
+        if (source.DbVersion != null) {
+            this.DbVersion = new String(source.DbVersion);
+        }
+        if (source.UsedStorage != null) {
+            this.UsedStorage = new Long(source.UsedStorage);
+        }
+        if (source.RoAddr != null) {
+            this.RoAddr = new Addr[source.RoAddr.length];
+            for (int i = 0; i < source.RoAddr.length; i++) {
+                this.RoAddr[i] = new Addr(source.RoAddr[i]);
+            }
+        }
+        if (source.InstanceSet != null) {
+            this.InstanceSet = new ClusterInstanceDetail[source.InstanceSet.length];
+            for (int i = 0; i < source.InstanceSet.length; i++) {
+                this.InstanceSet[i] = new ClusterInstanceDetail(source.InstanceSet[i]);
+            }
+        }
+        if (source.PayMode != null) {
+            this.PayMode = new Long(source.PayMode);
+        }
+        if (source.PeriodEndTime != null) {
+            this.PeriodEndTime = new String(source.PeriodEndTime);
+        }
+        if (source.Vip != null) {
+            this.Vip = new String(source.Vip);
+        }
+        if (source.Vport != null) {
+            this.Vport = new Long(source.Vport);
+        }
+        if (source.ProjectID != null) {
+            this.ProjectID = new Long(source.ProjectID);
+        }
+        if (source.Zone != null) {
+            this.Zone = new String(source.Zone);
+        }
+        if (source.ResourceTags != null) {
+            this.ResourceTags = new Tag[source.ResourceTags.length];
+            for (int i = 0; i < source.ResourceTags.length; i++) {
+                this.ResourceTags[i] = new Tag(source.ResourceTags[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

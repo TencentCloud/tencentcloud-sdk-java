@@ -229,6 +229,47 @@ public class KeywordEvaluateRequest extends AbstractModel{
         this.IsQuery = IsQuery;
     }
 
+    public KeywordEvaluateRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public KeywordEvaluateRequest(KeywordEvaluateRequest source) {
+        if (source.SeqId != null) {
+            this.SeqId = new Long(source.SeqId);
+        }
+        if (source.IsEnd != null) {
+            this.IsEnd = new Long(source.IsEnd);
+        }
+        if (source.VoiceFileType != null) {
+            this.VoiceFileType = new Long(source.VoiceFileType);
+        }
+        if (source.VoiceEncodeType != null) {
+            this.VoiceEncodeType = new Long(source.VoiceEncodeType);
+        }
+        if (source.UserVoiceData != null) {
+            this.UserVoiceData = new String(source.UserVoiceData);
+        }
+        if (source.SessionId != null) {
+            this.SessionId = new String(source.SessionId);
+        }
+        if (source.Keywords != null) {
+            this.Keywords = new Keyword[source.Keywords.length];
+            for (int i = 0; i < source.Keywords.length; i++) {
+                this.Keywords[i] = new Keyword(source.Keywords[i]);
+            }
+        }
+        if (source.SoeAppId != null) {
+            this.SoeAppId = new String(source.SoeAppId);
+        }
+        if (source.IsQuery != null) {
+            this.IsQuery = new Long(source.IsQuery);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

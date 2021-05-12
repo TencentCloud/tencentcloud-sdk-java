@@ -78,6 +78,26 @@ public class ServiceEnvironmentStrategyStatus extends AbstractModel{
         this.EnvironmentList = EnvironmentList;
     }
 
+    public ServiceEnvironmentStrategyStatus() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ServiceEnvironmentStrategyStatus(ServiceEnvironmentStrategyStatus source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.EnvironmentList != null) {
+            this.EnvironmentList = new ServiceEnvironmentStrategy[source.EnvironmentList.length];
+            for (int i = 0; i < source.EnvironmentList.length; i++) {
+                this.EnvironmentList[i] = new ServiceEnvironmentStrategy(source.EnvironmentList[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -160,6 +160,35 @@ public class GetTokenRequest extends AbstractModel{
         this.OldToken = OldToken;
     }
 
+    public GetTokenRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GetTokenRequest(GetTokenRequest source) {
+        if (source.BusinessId != null) {
+            this.BusinessId = new Long(source.BusinessId);
+        }
+        if (source.Scene != null) {
+            this.Scene = new Long(source.Scene);
+        }
+        if (source.BusinessUserId != null) {
+            this.BusinessUserId = new String(source.BusinessUserId);
+        }
+        if (source.AppClientIp != null) {
+            this.AppClientIp = new String(source.AppClientIp);
+        }
+        if (source.ExpireTime != null) {
+            this.ExpireTime = new Long(source.ExpireTime);
+        }
+        if (source.OldToken != null) {
+            this.OldToken = new String(source.OldToken);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

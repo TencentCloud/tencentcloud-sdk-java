@@ -137,6 +137,35 @@ public class DescribeEventsRequest extends AbstractModel{
         this.LookupAttributes = LookupAttributes;
     }
 
+    public DescribeEventsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeEventsRequest(DescribeEventsRequest source) {
+        if (source.StartTime != null) {
+            this.StartTime = new Long(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new Long(source.EndTime);
+        }
+        if (source.NextToken != null) {
+            this.NextToken = new Long(source.NextToken);
+        }
+        if (source.MaxResults != null) {
+            this.MaxResults = new Long(source.MaxResults);
+        }
+        if (source.LookupAttributes != null) {
+            this.LookupAttributes = new LookupAttribute[source.LookupAttributes.length];
+            for (int i = 0; i < source.LookupAttributes.length; i++) {
+                this.LookupAttributes[i] = new LookupAttribute(source.LookupAttributes[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

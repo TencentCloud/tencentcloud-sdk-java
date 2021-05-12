@@ -91,6 +91,29 @@ public class CreateL7RulesRequest extends AbstractModel{
         this.RuleSet = RuleSet;
     }
 
+    public CreateL7RulesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateL7RulesRequest(CreateL7RulesRequest source) {
+        if (source.LoadBalancerId != null) {
+            this.LoadBalancerId = new String(source.LoadBalancerId);
+        }
+        if (source.ListenerId != null) {
+            this.ListenerId = new String(source.ListenerId);
+        }
+        if (source.RuleSet != null) {
+            this.RuleSet = new CreateL7Rule[source.RuleSet.length];
+            for (int i = 0; i < source.RuleSet.length; i++) {
+                this.RuleSet[i] = new CreateL7Rule(source.RuleSet[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

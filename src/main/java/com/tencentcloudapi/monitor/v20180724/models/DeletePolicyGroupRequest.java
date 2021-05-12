@@ -68,6 +68,26 @@ public class DeletePolicyGroupRequest extends AbstractModel{
         this.GroupId = GroupId;
     }
 
+    public DeletePolicyGroupRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeletePolicyGroupRequest(DeletePolicyGroupRequest source) {
+        if (source.Module != null) {
+            this.Module = new String(source.Module);
+        }
+        if (source.GroupId != null) {
+            this.GroupId = new Long[source.GroupId.length];
+            for (int i = 0; i < source.GroupId.length; i++) {
+                this.GroupId[i] = new Long(source.GroupId[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

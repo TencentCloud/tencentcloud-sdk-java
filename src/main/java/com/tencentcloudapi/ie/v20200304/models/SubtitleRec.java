@@ -88,6 +88,23 @@ en：英文
         this.TransDst = TransDst;
     }
 
+    public SubtitleRec() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SubtitleRec(SubtitleRec source) {
+        if (source.AsrDst != null) {
+            this.AsrDst = new String(source.AsrDst);
+        }
+        if (source.TransDst != null) {
+            this.TransDst = new String(source.TransDst);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

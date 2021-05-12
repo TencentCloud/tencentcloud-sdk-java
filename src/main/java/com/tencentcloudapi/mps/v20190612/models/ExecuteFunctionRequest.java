@@ -68,6 +68,23 @@ public class ExecuteFunctionRequest extends AbstractModel{
         this.FunctionArg = FunctionArg;
     }
 
+    public ExecuteFunctionRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ExecuteFunctionRequest(ExecuteFunctionRequest source) {
+        if (source.FunctionName != null) {
+            this.FunctionName = new String(source.FunctionName);
+        }
+        if (source.FunctionArg != null) {
+            this.FunctionArg = new String(source.FunctionArg);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -68,6 +68,23 @@ public class DescribeProductConfigRequest extends AbstractModel{
         this.InstanceType = InstanceType;
     }
 
+    public DescribeProductConfigRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeProductConfigRequest(DescribeProductConfigRequest source) {
+        if (source.Zone != null) {
+            this.Zone = new String(source.Zone);
+        }
+        if (source.InstanceType != null) {
+            this.InstanceType = new String(source.InstanceType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

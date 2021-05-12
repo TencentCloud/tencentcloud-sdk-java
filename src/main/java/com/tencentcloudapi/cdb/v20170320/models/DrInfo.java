@@ -208,6 +208,38 @@ public class DrInfo extends AbstractModel{
         this.InstanceType = InstanceType;
     }
 
+    public DrInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DrInfo(DrInfo source) {
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.Zone != null) {
+            this.Zone = new String(source.Zone);
+        }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.Region != null) {
+            this.Region = new String(source.Region);
+        }
+        if (source.SyncStatus != null) {
+            this.SyncStatus = new Long(source.SyncStatus);
+        }
+        if (source.InstanceName != null) {
+            this.InstanceName = new String(source.InstanceName);
+        }
+        if (source.InstanceType != null) {
+            this.InstanceType = new Long(source.InstanceType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

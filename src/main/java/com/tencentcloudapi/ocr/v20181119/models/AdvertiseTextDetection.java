@@ -119,6 +119,32 @@ GeneralBasicOcr接口返回段落信息Parag，包含ParagNo。
         this.AdvancedInfo = AdvancedInfo;
     }
 
+    public AdvertiseTextDetection() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AdvertiseTextDetection(AdvertiseTextDetection source) {
+        if (source.DetectedText != null) {
+            this.DetectedText = new String(source.DetectedText);
+        }
+        if (source.Confidence != null) {
+            this.Confidence = new Long(source.Confidence);
+        }
+        if (source.Polygon != null) {
+            this.Polygon = new Coord[source.Polygon.length];
+            for (int i = 0; i < source.Polygon.length; i++) {
+                this.Polygon[i] = new Coord(source.Polygon[i]);
+            }
+        }
+        if (source.AdvancedInfo != null) {
+            this.AdvancedInfo = new String(source.AdvancedInfo);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

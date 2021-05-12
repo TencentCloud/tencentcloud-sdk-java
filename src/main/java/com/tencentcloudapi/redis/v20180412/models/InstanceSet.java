@@ -1229,6 +1229,176 @@ public class InstanceSet extends AbstractModel{
         this.Region = Region;
     }
 
+    public InstanceSet() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public InstanceSet(InstanceSet source) {
+        if (source.InstanceName != null) {
+            this.InstanceName = new String(source.InstanceName);
+        }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.Appid != null) {
+            this.Appid = new Long(source.Appid);
+        }
+        if (source.ProjectId != null) {
+            this.ProjectId = new Long(source.ProjectId);
+        }
+        if (source.RegionId != null) {
+            this.RegionId = new Long(source.RegionId);
+        }
+        if (source.ZoneId != null) {
+            this.ZoneId = new Long(source.ZoneId);
+        }
+        if (source.VpcId != null) {
+            this.VpcId = new Long(source.VpcId);
+        }
+        if (source.SubnetId != null) {
+            this.SubnetId = new Long(source.SubnetId);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.WanIp != null) {
+            this.WanIp = new String(source.WanIp);
+        }
+        if (source.Port != null) {
+            this.Port = new Long(source.Port);
+        }
+        if (source.Createtime != null) {
+            this.Createtime = new String(source.Createtime);
+        }
+        if (source.Size != null) {
+            this.Size = new Float(source.Size);
+        }
+        if (source.SizeUsed != null) {
+            this.SizeUsed = new Float(source.SizeUsed);
+        }
+        if (source.Type != null) {
+            this.Type = new Long(source.Type);
+        }
+        if (source.AutoRenewFlag != null) {
+            this.AutoRenewFlag = new Long(source.AutoRenewFlag);
+        }
+        if (source.DeadlineTime != null) {
+            this.DeadlineTime = new String(source.DeadlineTime);
+        }
+        if (source.Engine != null) {
+            this.Engine = new String(source.Engine);
+        }
+        if (source.ProductType != null) {
+            this.ProductType = new String(source.ProductType);
+        }
+        if (source.UniqVpcId != null) {
+            this.UniqVpcId = new String(source.UniqVpcId);
+        }
+        if (source.UniqSubnetId != null) {
+            this.UniqSubnetId = new String(source.UniqSubnetId);
+        }
+        if (source.BillingMode != null) {
+            this.BillingMode = new Long(source.BillingMode);
+        }
+        if (source.InstanceTitle != null) {
+            this.InstanceTitle = new String(source.InstanceTitle);
+        }
+        if (source.OfflineTime != null) {
+            this.OfflineTime = new String(source.OfflineTime);
+        }
+        if (source.SubStatus != null) {
+            this.SubStatus = new Long(source.SubStatus);
+        }
+        if (source.Tags != null) {
+            this.Tags = new String[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new String(source.Tags[i]);
+            }
+        }
+        if (source.InstanceNode != null) {
+            this.InstanceNode = new InstanceNode[source.InstanceNode.length];
+            for (int i = 0; i < source.InstanceNode.length; i++) {
+                this.InstanceNode[i] = new InstanceNode(source.InstanceNode[i]);
+            }
+        }
+        if (source.RedisShardSize != null) {
+            this.RedisShardSize = new Long(source.RedisShardSize);
+        }
+        if (source.RedisShardNum != null) {
+            this.RedisShardNum = new Long(source.RedisShardNum);
+        }
+        if (source.RedisReplicasNum != null) {
+            this.RedisReplicasNum = new Long(source.RedisReplicasNum);
+        }
+        if (source.PriceId != null) {
+            this.PriceId = new Long(source.PriceId);
+        }
+        if (source.CloseTime != null) {
+            this.CloseTime = new String(source.CloseTime);
+        }
+        if (source.SlaveReadWeight != null) {
+            this.SlaveReadWeight = new Long(source.SlaveReadWeight);
+        }
+        if (source.InstanceTags != null) {
+            this.InstanceTags = new InstanceTagInfo[source.InstanceTags.length];
+            for (int i = 0; i < source.InstanceTags.length; i++) {
+                this.InstanceTags[i] = new InstanceTagInfo(source.InstanceTags[i]);
+            }
+        }
+        if (source.ProjectName != null) {
+            this.ProjectName = new String(source.ProjectName);
+        }
+        if (source.NoAuth != null) {
+            this.NoAuth = new Boolean(source.NoAuth);
+        }
+        if (source.ClientLimit != null) {
+            this.ClientLimit = new Long(source.ClientLimit);
+        }
+        if (source.DtsStatus != null) {
+            this.DtsStatus = new Long(source.DtsStatus);
+        }
+        if (source.NetLimit != null) {
+            this.NetLimit = new Long(source.NetLimit);
+        }
+        if (source.PasswordFree != null) {
+            this.PasswordFree = new Long(source.PasswordFree);
+        }
+        if (source.ReadOnly != null) {
+            this.ReadOnly = new Long(source.ReadOnly);
+        }
+        if (source.Vip6 != null) {
+            this.Vip6 = new String(source.Vip6);
+        }
+        if (source.RemainBandwidthDuration != null) {
+            this.RemainBandwidthDuration = new String(source.RemainBandwidthDuration);
+        }
+        if (source.DiskSize != null) {
+            this.DiskSize = new Long(source.DiskSize);
+        }
+        if (source.MonitorVersion != null) {
+            this.MonitorVersion = new String(source.MonitorVersion);
+        }
+        if (source.ClientLimitMin != null) {
+            this.ClientLimitMin = new Long(source.ClientLimitMin);
+        }
+        if (source.ClientLimitMax != null) {
+            this.ClientLimitMax = new Long(source.ClientLimitMax);
+        }
+        if (source.NodeSet != null) {
+            this.NodeSet = new RedisNodeInfo[source.NodeSet.length];
+            for (int i = 0; i < source.NodeSet.length; i++) {
+                this.NodeSet[i] = new RedisNodeInfo(source.NodeSet[i]);
+            }
+        }
+        if (source.Region != null) {
+            this.Region = new String(source.Region);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -121,6 +121,26 @@ fast-spatial：快速空域降噪。
         this.SpatialStrength = SpatialStrength;
     }
 
+    public Denoising() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Denoising(Denoising source) {
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.TemplStrength != null) {
+            this.TemplStrength = new Float(source.TemplStrength);
+        }
+        if (source.SpatialStrength != null) {
+            this.SpatialStrength = new Float(source.SpatialStrength);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -101,6 +101,29 @@ public class GetProjectListResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public GetProjectListResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GetProjectListResponse(GetProjectListResponse source) {
+        if (source.Projects != null) {
+            this.Projects = new ProjectEntryEx[source.Projects.length];
+            for (int i = 0; i < source.Projects.length; i++) {
+                this.Projects[i] = new ProjectEntryEx(source.Projects[i]);
+            }
+        }
+        if (source.Total != null) {
+            this.Total = new Long(source.Total);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

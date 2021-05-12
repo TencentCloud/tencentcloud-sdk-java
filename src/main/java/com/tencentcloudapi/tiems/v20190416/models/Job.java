@@ -697,6 +697,92 @@ public class Job extends AbstractModel{
         this.LogTopicId = LogTopicId;
     }
 
+    public Job() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Job(Job source) {
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
+        if (source.Cluster != null) {
+            this.Cluster = new String(source.Cluster);
+        }
+        if (source.Region != null) {
+            this.Region = new String(source.Region);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Runtime != null) {
+            this.Runtime = new String(source.Runtime);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.ConfigId != null) {
+            this.ConfigId = new String(source.ConfigId);
+        }
+        if (source.PredictInput != null) {
+            this.PredictInput = new PredictInput(source.PredictInput);
+        }
+        if (source.Status != null) {
+            this.Status = new JobStatus(source.Status);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+        if (source.CancelTime != null) {
+            this.CancelTime = new String(source.CancelTime);
+        }
+        if (source.ResourceGroupId != null) {
+            this.ResourceGroupId = new String(source.ResourceGroupId);
+        }
+        if (source.Cpu != null) {
+            this.Cpu = new Long(source.Cpu);
+        }
+        if (source.Memory != null) {
+            this.Memory = new Long(source.Memory);
+        }
+        if (source.Gpu != null) {
+            this.Gpu = new Long(source.Gpu);
+        }
+        if (source.GpuMemory != null) {
+            this.GpuMemory = new Long(source.GpuMemory);
+        }
+        if (source.ResourceGroupName != null) {
+            this.ResourceGroupName = new String(source.ResourceGroupName);
+        }
+        if (source.GpuType != null) {
+            this.GpuType = new String(source.GpuType);
+        }
+        if (source.ConfigName != null) {
+            this.ConfigName = new String(source.ConfigName);
+        }
+        if (source.ConfigVersion != null) {
+            this.ConfigVersion = new String(source.ConfigVersion);
+        }
+        if (source.JobType != null) {
+            this.JobType = new String(source.JobType);
+        }
+        if (source.QuantizationInput != null) {
+            this.QuantizationInput = new QuantizationInput(source.QuantizationInput);
+        }
+        if (source.LogTopicId != null) {
+            this.LogTopicId = new String(source.LogTopicId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

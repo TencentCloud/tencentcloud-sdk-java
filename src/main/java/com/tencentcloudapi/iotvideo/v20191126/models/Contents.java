@@ -134,6 +134,29 @@ public class Contents extends AbstractModel{
         this.Default = Default;
     }
 
+    public Contents() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Contents(Contents source) {
+        if (source.En != null) {
+            this.En = new String(source.En);
+        }
+        if (source.Cn != null) {
+            this.Cn = new String(source.Cn);
+        }
+        if (source.Tc != null) {
+            this.Tc = new String(source.Tc);
+        }
+        if (source.Default != null) {
+            this.Default = new String(source.Default);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

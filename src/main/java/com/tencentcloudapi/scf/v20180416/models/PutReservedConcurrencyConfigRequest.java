@@ -91,6 +91,26 @@ public class PutReservedConcurrencyConfigRequest extends AbstractModel{
         this.Namespace = Namespace;
     }
 
+    public PutReservedConcurrencyConfigRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PutReservedConcurrencyConfigRequest(PutReservedConcurrencyConfigRequest source) {
+        if (source.FunctionName != null) {
+            this.FunctionName = new String(source.FunctionName);
+        }
+        if (source.ReservedConcurrencyMem != null) {
+            this.ReservedConcurrencyMem = new Long(source.ReservedConcurrencyMem);
+        }
+        if (source.Namespace != null) {
+            this.Namespace = new String(source.Namespace);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

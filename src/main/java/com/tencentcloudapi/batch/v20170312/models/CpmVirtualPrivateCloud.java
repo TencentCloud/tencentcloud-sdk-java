@@ -68,6 +68,23 @@ public class CpmVirtualPrivateCloud extends AbstractModel{
         this.SubnetId = SubnetId;
     }
 
+    public CpmVirtualPrivateCloud() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CpmVirtualPrivateCloud(CpmVirtualPrivateCloud source) {
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.SubnetId != null) {
+            this.SubnetId = new String(source.SubnetId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

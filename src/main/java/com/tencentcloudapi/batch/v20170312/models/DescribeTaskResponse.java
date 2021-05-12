@@ -229,6 +229,47 @@ public class DescribeTaskResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeTaskResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeTaskResponse(DescribeTaskResponse source) {
+        if (source.JobId != null) {
+            this.JobId = new String(source.JobId);
+        }
+        if (source.TaskName != null) {
+            this.TaskName = new String(source.TaskName);
+        }
+        if (source.TaskState != null) {
+            this.TaskState = new String(source.TaskState);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+        if (source.TaskInstanceTotalCount != null) {
+            this.TaskInstanceTotalCount = new Long(source.TaskInstanceTotalCount);
+        }
+        if (source.TaskInstanceSet != null) {
+            this.TaskInstanceSet = new TaskInstanceView[source.TaskInstanceSet.length];
+            for (int i = 0; i < source.TaskInstanceSet.length; i++) {
+                this.TaskInstanceSet[i] = new TaskInstanceView(source.TaskInstanceSet[i]);
+            }
+        }
+        if (source.TaskInstanceMetrics != null) {
+            this.TaskInstanceMetrics = new TaskInstanceMetrics(source.TaskInstanceMetrics);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

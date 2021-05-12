@@ -45,6 +45,23 @@ public class DeleteScriptRequest extends AbstractModel{
         this.ScriptIds = ScriptIds;
     }
 
+    public DeleteScriptRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteScriptRequest(DeleteScriptRequest source) {
+        if (source.ScriptIds != null) {
+            this.ScriptIds = new String[source.ScriptIds.length];
+            for (int i = 0; i < source.ScriptIds.length; i++) {
+                this.ScriptIds[i] = new String(source.ScriptIds[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

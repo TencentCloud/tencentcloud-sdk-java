@@ -114,6 +114,32 @@ public class CorrectData extends AbstractModel{
         this.SentenceComments = SentenceComments;
     }
 
+    public CorrectData() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CorrectData(CorrectData source) {
+        if (source.Score != null) {
+            this.Score = new Float(source.Score);
+        }
+        if (source.ScoreCat != null) {
+            this.ScoreCat = new ScoreCategory(source.ScoreCat);
+        }
+        if (source.Comment != null) {
+            this.Comment = new String(source.Comment);
+        }
+        if (source.SentenceComments != null) {
+            this.SentenceComments = new SentenceCom[source.SentenceComments.length];
+            for (int i = 0; i < source.SentenceComments.length; i++) {
+                this.SentenceComments[i] = new SentenceCom(source.SentenceComments[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -183,6 +183,38 @@ public class HostResource extends AbstractModel{
         this.DiskType = DiskType;
     }
 
+    public HostResource() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public HostResource(HostResource source) {
+        if (source.CpuTotal != null) {
+            this.CpuTotal = new Long(source.CpuTotal);
+        }
+        if (source.CpuAvailable != null) {
+            this.CpuAvailable = new Long(source.CpuAvailable);
+        }
+        if (source.MemTotal != null) {
+            this.MemTotal = new Float(source.MemTotal);
+        }
+        if (source.MemAvailable != null) {
+            this.MemAvailable = new Float(source.MemAvailable);
+        }
+        if (source.DiskTotal != null) {
+            this.DiskTotal = new Long(source.DiskTotal);
+        }
+        if (source.DiskAvailable != null) {
+            this.DiskAvailable = new Long(source.DiskAvailable);
+        }
+        if (source.DiskType != null) {
+            this.DiskType = new String(source.DiskType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

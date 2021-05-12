@@ -206,6 +206,41 @@ public class CreateStudioProductRequest extends AbstractModel{
         this.ProjectId = ProjectId;
     }
 
+    public CreateStudioProductRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateStudioProductRequest(CreateStudioProductRequest source) {
+        if (source.ProductName != null) {
+            this.ProductName = new String(source.ProductName);
+        }
+        if (source.CategoryId != null) {
+            this.CategoryId = new Long(source.CategoryId);
+        }
+        if (source.ProductType != null) {
+            this.ProductType = new Long(source.ProductType);
+        }
+        if (source.EncryptionType != null) {
+            this.EncryptionType = new String(source.EncryptionType);
+        }
+        if (source.NetType != null) {
+            this.NetType = new String(source.NetType);
+        }
+        if (source.DataProtocol != null) {
+            this.DataProtocol = new Long(source.DataProtocol);
+        }
+        if (source.ProductDesc != null) {
+            this.ProductDesc = new String(source.ProductDesc);
+        }
+        if (source.ProjectId != null) {
+            this.ProjectId = new String(source.ProjectId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -91,6 +91,29 @@ public class DescribeFleetAttributesRequest extends AbstractModel{
         this.Offset = Offset;
     }
 
+    public DescribeFleetAttributesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeFleetAttributesRequest(DescribeFleetAttributesRequest source) {
+        if (source.FleetIds != null) {
+            this.FleetIds = new String[source.FleetIds.length];
+            for (int i = 0; i < source.FleetIds.length; i++) {
+                this.FleetIds[i] = new String(source.FleetIds[i]);
+            }
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

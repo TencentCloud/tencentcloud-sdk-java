@@ -257,6 +257,47 @@ secondary
         this.OrderByType = OrderByType;
     }
 
+    public DescribeCurrentOpRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeCurrentOpRequest(DescribeCurrentOpRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.Ns != null) {
+            this.Ns = new String(source.Ns);
+        }
+        if (source.MillisecondRunning != null) {
+            this.MillisecondRunning = new Long(source.MillisecondRunning);
+        }
+        if (source.Op != null) {
+            this.Op = new String(source.Op);
+        }
+        if (source.ReplicaSetName != null) {
+            this.ReplicaSetName = new String(source.ReplicaSetName);
+        }
+        if (source.State != null) {
+            this.State = new String(source.State);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.OrderBy != null) {
+            this.OrderBy = new String(source.OrderBy);
+        }
+        if (source.OrderByType != null) {
+            this.OrderByType = new String(source.OrderByType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

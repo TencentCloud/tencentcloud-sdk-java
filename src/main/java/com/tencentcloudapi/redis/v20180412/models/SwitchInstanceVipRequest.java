@@ -137,6 +137,32 @@ public class SwitchInstanceVipRequest extends AbstractModel{
         this.SwitchTime = SwitchTime;
     }
 
+    public SwitchInstanceVipRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SwitchInstanceVipRequest(SwitchInstanceVipRequest source) {
+        if (source.SrcInstanceId != null) {
+            this.SrcInstanceId = new String(source.SrcInstanceId);
+        }
+        if (source.DstInstanceId != null) {
+            this.DstInstanceId = new String(source.DstInstanceId);
+        }
+        if (source.TimeDelay != null) {
+            this.TimeDelay = new Long(source.TimeDelay);
+        }
+        if (source.ForceSwitch != null) {
+            this.ForceSwitch = new Long(source.ForceSwitch);
+        }
+        if (source.SwitchTime != null) {
+            this.SwitchTime = new String(source.SwitchTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

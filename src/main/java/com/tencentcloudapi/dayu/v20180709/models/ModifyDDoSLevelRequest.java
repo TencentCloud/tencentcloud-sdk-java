@@ -114,6 +114,29 @@ public class ModifyDDoSLevelRequest extends AbstractModel{
         this.DDoSLevel = DDoSLevel;
     }
 
+    public ModifyDDoSLevelRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyDDoSLevelRequest(ModifyDDoSLevelRequest source) {
+        if (source.Business != null) {
+            this.Business = new String(source.Business);
+        }
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
+        if (source.Method != null) {
+            this.Method = new String(source.Method);
+        }
+        if (source.DDoSLevel != null) {
+            this.DDoSLevel = new String(source.DDoSLevel);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -91,6 +91,26 @@ public class CreateMmsInstanceResp extends AbstractModel{
         this.InstanceId = InstanceId;
     }
 
+    public CreateMmsInstanceResp() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateMmsInstanceResp(CreateMmsInstanceResp source) {
+        if (source.ReturnCode != null) {
+            this.ReturnCode = new Long(source.ReturnCode);
+        }
+        if (source.ReturnMsg != null) {
+            this.ReturnMsg = new String(source.ReturnMsg);
+        }
+        if (source.InstanceId != null) {
+            this.InstanceId = new Long(source.InstanceId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

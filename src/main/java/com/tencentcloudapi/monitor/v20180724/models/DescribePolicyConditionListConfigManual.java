@@ -190,6 +190,35 @@ public class DescribePolicyConditionListConfigManual extends AbstractModel{
         this.StatType = StatType;
     }
 
+    public DescribePolicyConditionListConfigManual() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribePolicyConditionListConfigManual(DescribePolicyConditionListConfigManual source) {
+        if (source.CalcType != null) {
+            this.CalcType = new DescribePolicyConditionListConfigManualCalcType(source.CalcType);
+        }
+        if (source.CalcValue != null) {
+            this.CalcValue = new DescribePolicyConditionListConfigManualCalcValue(source.CalcValue);
+        }
+        if (source.ContinueTime != null) {
+            this.ContinueTime = new DescribePolicyConditionListConfigManualContinueTime(source.ContinueTime);
+        }
+        if (source.Period != null) {
+            this.Period = new DescribePolicyConditionListConfigManualPeriod(source.Period);
+        }
+        if (source.PeriodNum != null) {
+            this.PeriodNum = new DescribePolicyConditionListConfigManualPeriodNum(source.PeriodNum);
+        }
+        if (source.StatType != null) {
+            this.StatType = new DescribePolicyConditionListConfigManualStatType(source.StatType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

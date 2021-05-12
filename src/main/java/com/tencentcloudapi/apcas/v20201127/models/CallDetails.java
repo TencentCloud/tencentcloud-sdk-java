@@ -68,6 +68,26 @@ public class CallDetails extends AbstractModel{
         this.CallDetailSet = CallDetailSet;
     }
 
+    public CallDetails() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CallDetails(CallDetails source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.CallDetailSet != null) {
+            this.CallDetailSet = new CallDetailItem[source.CallDetailSet.length];
+            for (int i = 0; i < source.CallDetailSet.length; i++) {
+                this.CallDetailSet[i] = new CallDetailItem(source.CallDetailSet[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

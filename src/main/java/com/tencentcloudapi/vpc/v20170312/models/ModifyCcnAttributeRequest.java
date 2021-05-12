@@ -91,6 +91,26 @@ public class ModifyCcnAttributeRequest extends AbstractModel{
         this.CcnDescription = CcnDescription;
     }
 
+    public ModifyCcnAttributeRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyCcnAttributeRequest(ModifyCcnAttributeRequest source) {
+        if (source.CcnId != null) {
+            this.CcnId = new String(source.CcnId);
+        }
+        if (source.CcnName != null) {
+            this.CcnName = new String(source.CcnName);
+        }
+        if (source.CcnDescription != null) {
+            this.CcnDescription = new String(source.CcnDescription);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -482,6 +482,83 @@ public class CreateDBInstanceRequest extends AbstractModel{
         this.SecurityGroup = SecurityGroup;
     }
 
+    public CreateDBInstanceRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateDBInstanceRequest(CreateDBInstanceRequest source) {
+        if (source.NodeNum != null) {
+            this.NodeNum = new Long(source.NodeNum);
+        }
+        if (source.Memory != null) {
+            this.Memory = new Long(source.Memory);
+        }
+        if (source.Volume != null) {
+            this.Volume = new Long(source.Volume);
+        }
+        if (source.MongoVersion != null) {
+            this.MongoVersion = new String(source.MongoVersion);
+        }
+        if (source.GoodsNum != null) {
+            this.GoodsNum = new Long(source.GoodsNum);
+        }
+        if (source.Zone != null) {
+            this.Zone = new String(source.Zone);
+        }
+        if (source.Period != null) {
+            this.Period = new Long(source.Period);
+        }
+        if (source.MachineCode != null) {
+            this.MachineCode = new String(source.MachineCode);
+        }
+        if (source.ClusterType != null) {
+            this.ClusterType = new String(source.ClusterType);
+        }
+        if (source.ReplicateSetNum != null) {
+            this.ReplicateSetNum = new Long(source.ReplicateSetNum);
+        }
+        if (source.ProjectId != null) {
+            this.ProjectId = new Long(source.ProjectId);
+        }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.SubnetId != null) {
+            this.SubnetId = new String(source.SubnetId);
+        }
+        if (source.Password != null) {
+            this.Password = new String(source.Password);
+        }
+        if (source.Tags != null) {
+            this.Tags = new TagInfo[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new TagInfo(source.Tags[i]);
+            }
+        }
+        if (source.AutoRenewFlag != null) {
+            this.AutoRenewFlag = new Long(source.AutoRenewFlag);
+        }
+        if (source.AutoVoucher != null) {
+            this.AutoVoucher = new Long(source.AutoVoucher);
+        }
+        if (source.Clone != null) {
+            this.Clone = new Long(source.Clone);
+        }
+        if (source.Father != null) {
+            this.Father = new String(source.Father);
+        }
+        if (source.SecurityGroup != null) {
+            this.SecurityGroup = new String[source.SecurityGroup.length];
+            for (int i = 0; i < source.SecurityGroup.length; i++) {
+                this.SecurityGroup[i] = new String(source.SecurityGroup[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -206,6 +206,44 @@ public class Node extends AbstractModel{
         this.ISPNum = ISPNum;
     }
 
+    public Node() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Node(Node source) {
+        if (source.ZoneInfo != null) {
+            this.ZoneInfo = new ZoneInfo(source.ZoneInfo);
+        }
+        if (source.Country != null) {
+            this.Country = new Country(source.Country);
+        }
+        if (source.Area != null) {
+            this.Area = new Area(source.Area);
+        }
+        if (source.Province != null) {
+            this.Province = new Province(source.Province);
+        }
+        if (source.City != null) {
+            this.City = new City(source.City);
+        }
+        if (source.RegionInfo != null) {
+            this.RegionInfo = new RegionInfo(source.RegionInfo);
+        }
+        if (source.ISPSet != null) {
+            this.ISPSet = new ISP[source.ISPSet.length];
+            for (int i = 0; i < source.ISPSet.length; i++) {
+                this.ISPSet[i] = new ISP(source.ISPSet[i]);
+            }
+        }
+        if (source.ISPNum != null) {
+            this.ISPNum = new Long(source.ISPNum);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

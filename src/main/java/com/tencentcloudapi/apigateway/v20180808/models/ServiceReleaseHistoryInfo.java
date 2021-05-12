@@ -106,6 +106,26 @@ public class ServiceReleaseHistoryInfo extends AbstractModel{
         this.ReleaseTime = ReleaseTime;
     }
 
+    public ServiceReleaseHistoryInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ServiceReleaseHistoryInfo(ServiceReleaseHistoryInfo source) {
+        if (source.VersionName != null) {
+            this.VersionName = new String(source.VersionName);
+        }
+        if (source.VersionDesc != null) {
+            this.VersionDesc = new String(source.VersionDesc);
+        }
+        if (source.ReleaseTime != null) {
+            this.ReleaseTime = new String(source.ReleaseTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

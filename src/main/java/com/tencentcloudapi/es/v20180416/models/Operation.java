@@ -183,6 +183,41 @@ public class Operation extends AbstractModel{
         this.Progress = Progress;
     }
 
+    public Operation() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Operation(Operation source) {
+        if (source.Id != null) {
+            this.Id = new Long(source.Id);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.Detail != null) {
+            this.Detail = new OperationDetail(source.Detail);
+        }
+        if (source.Result != null) {
+            this.Result = new String(source.Result);
+        }
+        if (source.Tasks != null) {
+            this.Tasks = new TaskDetail[source.Tasks.length];
+            for (int i = 0; i < source.Tasks.length; i++) {
+                this.Tasks[i] = new TaskDetail(source.Tasks[i]);
+            }
+        }
+        if (source.Progress != null) {
+            this.Progress = new Float(source.Progress);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

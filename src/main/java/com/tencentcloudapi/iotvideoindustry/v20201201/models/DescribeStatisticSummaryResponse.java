@@ -157,6 +157,32 @@ public class DescribeStatisticSummaryResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeStatisticSummaryResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeStatisticSummaryResponse(DescribeStatisticSummaryResponse source) {
+        if (source.RecordingDevice != null) {
+            this.RecordingDevice = new Long(source.RecordingDevice);
+        }
+        if (source.NonRecordingDevice != null) {
+            this.NonRecordingDevice = new Long(source.NonRecordingDevice);
+        }
+        if (source.WatchFlux != null) {
+            this.WatchFlux = new Float(source.WatchFlux);
+        }
+        if (source.StorageUsage != null) {
+            this.StorageUsage = new Float(source.StorageUsage);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

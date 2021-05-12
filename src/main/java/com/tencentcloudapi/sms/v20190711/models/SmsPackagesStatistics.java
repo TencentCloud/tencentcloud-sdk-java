@@ -252,6 +252,47 @@ public class SmsPackagesStatistics extends AbstractModel{
         this.CurrentUsage = CurrentUsage;
     }
 
+    public SmsPackagesStatistics() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SmsPackagesStatistics(SmsPackagesStatistics source) {
+        if (source.PackageCreateTime != null) {
+            this.PackageCreateTime = new String(source.PackageCreateTime);
+        }
+        if (source.PackageCreateUnixTime != null) {
+            this.PackageCreateUnixTime = new Long(source.PackageCreateUnixTime);
+        }
+        if (source.PackageEffectiveTime != null) {
+            this.PackageEffectiveTime = new String(source.PackageEffectiveTime);
+        }
+        if (source.PackageEffectiveUnixTime != null) {
+            this.PackageEffectiveUnixTime = new Long(source.PackageEffectiveUnixTime);
+        }
+        if (source.PackageExpiredTime != null) {
+            this.PackageExpiredTime = new String(source.PackageExpiredTime);
+        }
+        if (source.PackageExpiredUnixTime != null) {
+            this.PackageExpiredUnixTime = new Long(source.PackageExpiredUnixTime);
+        }
+        if (source.AmountOfPackage != null) {
+            this.AmountOfPackage = new Long(source.AmountOfPackage);
+        }
+        if (source.TypeOfPackage != null) {
+            this.TypeOfPackage = new Long(source.TypeOfPackage);
+        }
+        if (source.PackageId != null) {
+            this.PackageId = new Long(source.PackageId);
+        }
+        if (source.CurrentUsage != null) {
+            this.CurrentUsage = new Long(source.CurrentUsage);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

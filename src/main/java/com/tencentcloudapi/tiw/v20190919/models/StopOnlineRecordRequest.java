@@ -68,6 +68,23 @@ public class StopOnlineRecordRequest extends AbstractModel{
         this.TaskId = TaskId;
     }
 
+    public StopOnlineRecordRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public StopOnlineRecordRequest(StopOnlineRecordRequest source) {
+        if (source.SdkAppId != null) {
+            this.SdkAppId = new Long(source.SdkAppId);
+        }
+        if (source.TaskId != null) {
+            this.TaskId = new String(source.TaskId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

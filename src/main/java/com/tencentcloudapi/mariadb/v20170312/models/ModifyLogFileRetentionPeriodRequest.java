@@ -68,6 +68,23 @@ public class ModifyLogFileRetentionPeriodRequest extends AbstractModel{
         this.Days = Days;
     }
 
+    public ModifyLogFileRetentionPeriodRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyLogFileRetentionPeriodRequest(ModifyLogFileRetentionPeriodRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.Days != null) {
+            this.Days = new Long(source.Days);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

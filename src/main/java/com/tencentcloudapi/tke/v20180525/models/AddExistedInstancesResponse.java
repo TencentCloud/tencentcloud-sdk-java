@@ -157,6 +157,44 @@ public class AddExistedInstancesResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public AddExistedInstancesResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AddExistedInstancesResponse(AddExistedInstancesResponse source) {
+        if (source.FailedInstanceIds != null) {
+            this.FailedInstanceIds = new String[source.FailedInstanceIds.length];
+            for (int i = 0; i < source.FailedInstanceIds.length; i++) {
+                this.FailedInstanceIds[i] = new String(source.FailedInstanceIds[i]);
+            }
+        }
+        if (source.SuccInstanceIds != null) {
+            this.SuccInstanceIds = new String[source.SuccInstanceIds.length];
+            for (int i = 0; i < source.SuccInstanceIds.length; i++) {
+                this.SuccInstanceIds[i] = new String(source.SuccInstanceIds[i]);
+            }
+        }
+        if (source.TimeoutInstanceIds != null) {
+            this.TimeoutInstanceIds = new String[source.TimeoutInstanceIds.length];
+            for (int i = 0; i < source.TimeoutInstanceIds.length; i++) {
+                this.TimeoutInstanceIds[i] = new String(source.TimeoutInstanceIds[i]);
+            }
+        }
+        if (source.FailedReasons != null) {
+            this.FailedReasons = new String[source.FailedReasons.length];
+            for (int i = 0; i < source.FailedReasons.length; i++) {
+                this.FailedReasons[i] = new String(source.FailedReasons[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

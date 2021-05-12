@@ -114,6 +114,32 @@ public class CreateServerStateRequest extends AbstractModel{
         this.ReportTime = ReportTime;
     }
 
+    public CreateServerStateRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateServerStateRequest(CreateServerStateRequest source) {
+        if (source.GroupCode != null) {
+            this.GroupCode = new String(source.GroupCode);
+        }
+        if (source.ServerStateItems != null) {
+            this.ServerStateItems = new ServerStateItem[source.ServerStateItems.length];
+            for (int i = 0; i < source.ServerStateItems.length; i++) {
+                this.ServerStateItems[i] = new ServerStateItem(source.ServerStateItems[i]);
+            }
+        }
+        if (source.MallId != null) {
+            this.MallId = new Long(source.MallId);
+        }
+        if (source.ReportTime != null) {
+            this.ReportTime = new Long(source.ReportTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

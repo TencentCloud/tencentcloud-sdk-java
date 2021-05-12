@@ -137,6 +137,35 @@ public class CreateAudioModerationTaskRequest extends AbstractModel{
         this.Tasks = Tasks;
     }
 
+    public CreateAudioModerationTaskRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateAudioModerationTaskRequest(CreateAudioModerationTaskRequest source) {
+        if (source.BizType != null) {
+            this.BizType = new String(source.BizType);
+        }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.Seed != null) {
+            this.Seed = new String(source.Seed);
+        }
+        if (source.CallbackUrl != null) {
+            this.CallbackUrl = new String(source.CallbackUrl);
+        }
+        if (source.Tasks != null) {
+            this.Tasks = new TaskInput[source.Tasks.length];
+            for (int i = 0; i < source.Tasks.length; i++) {
+                this.Tasks[i] = new TaskInput(source.Tasks[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

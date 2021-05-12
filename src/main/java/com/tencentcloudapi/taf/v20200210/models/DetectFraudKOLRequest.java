@@ -45,6 +45,20 @@ public class DetectFraudKOLRequest extends AbstractModel{
         this.BspData = BspData;
     }
 
+    public DetectFraudKOLRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DetectFraudKOLRequest(DetectFraudKOLRequest source) {
+        if (source.BspData != null) {
+            this.BspData = new InputKolBspData(source.BspData);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

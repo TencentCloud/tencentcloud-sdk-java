@@ -134,6 +134,29 @@ public class OutputKolValue extends AbstractModel{
         this.EvilPScore = EvilPScore;
     }
 
+    public OutputKolValue() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public OutputKolValue(OutputKolValue source) {
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
+        if (source.IsCheck != null) {
+            this.IsCheck = new Long(source.IsCheck);
+        }
+        if (source.FraudPScore != null) {
+            this.FraudPScore = new Long(source.FraudPScore);
+        }
+        if (source.EvilPScore != null) {
+            this.EvilPScore = new Long(source.EvilPScore);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

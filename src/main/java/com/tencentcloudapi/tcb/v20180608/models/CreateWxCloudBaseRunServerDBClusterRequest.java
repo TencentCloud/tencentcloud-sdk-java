@@ -91,6 +91,26 @@ public class CreateWxCloudBaseRunServerDBClusterRequest extends AbstractModel{
         this.WxAppId = WxAppId;
     }
 
+    public CreateWxCloudBaseRunServerDBClusterRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateWxCloudBaseRunServerDBClusterRequest(CreateWxCloudBaseRunServerDBClusterRequest source) {
+        if (source.AccountPassword != null) {
+            this.AccountPassword = new String(source.AccountPassword);
+        }
+        if (source.EnvId != null) {
+            this.EnvId = new String(source.EnvId);
+        }
+        if (source.WxAppId != null) {
+            this.WxAppId = new String(source.WxAppId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

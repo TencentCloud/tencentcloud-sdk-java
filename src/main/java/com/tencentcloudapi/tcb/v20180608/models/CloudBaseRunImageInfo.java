@@ -137,6 +137,32 @@ public class CloudBaseRunImageInfo extends AbstractModel{
         this.ImageUrl = ImageUrl;
     }
 
+    public CloudBaseRunImageInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CloudBaseRunImageInfo(CloudBaseRunImageInfo source) {
+        if (source.RepositoryName != null) {
+            this.RepositoryName = new String(source.RepositoryName);
+        }
+        if (source.IsPublic != null) {
+            this.IsPublic = new Boolean(source.IsPublic);
+        }
+        if (source.TagName != null) {
+            this.TagName = new String(source.TagName);
+        }
+        if (source.ServerAddr != null) {
+            this.ServerAddr = new String(source.ServerAddr);
+        }
+        if (source.ImageUrl != null) {
+            this.ImageUrl = new String(source.ImageUrl);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -106,6 +106,26 @@ public class OutputRecognizeTargetAudienceValue extends AbstractModel{
         this.Score = Score;
     }
 
+    public OutputRecognizeTargetAudienceValue() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public OutputRecognizeTargetAudienceValue(OutputRecognizeTargetAudienceValue source) {
+        if (source.ModelId != null) {
+            this.ModelId = new Long(source.ModelId);
+        }
+        if (source.IsFound != null) {
+            this.IsFound = new Long(source.IsFound);
+        }
+        if (source.Score != null) {
+            this.Score = new Float(source.Score);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

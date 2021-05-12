@@ -373,6 +373,53 @@ development: 开发环境
         this.MidasEnvironment = MidasEnvironment;
     }
 
+    public CheckAcctRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CheckAcctRequest(CheckAcctRequest source) {
+        if (source.MidasAppId != null) {
+            this.MidasAppId = new String(source.MidasAppId);
+        }
+        if (source.SubAppId != null) {
+            this.SubAppId = new String(source.SubAppId);
+        }
+        if (source.BindType != null) {
+            this.BindType = new Long(source.BindType);
+        }
+        if (source.SettleAcctNo != null) {
+            this.SettleAcctNo = new String(source.SettleAcctNo);
+        }
+        if (source.MidasSecretId != null) {
+            this.MidasSecretId = new String(source.MidasSecretId);
+        }
+        if (source.MidasSignature != null) {
+            this.MidasSignature = new String(source.MidasSignature);
+        }
+        if (source.CheckCode != null) {
+            this.CheckCode = new String(source.CheckCode);
+        }
+        if (source.CurrencyType != null) {
+            this.CurrencyType = new String(source.CurrencyType);
+        }
+        if (source.CurrencyUnit != null) {
+            this.CurrencyUnit = new Long(source.CurrencyUnit);
+        }
+        if (source.CurrencyAmt != null) {
+            this.CurrencyAmt = new String(source.CurrencyAmt);
+        }
+        if (source.EncryptType != null) {
+            this.EncryptType = new String(source.EncryptType);
+        }
+        if (source.MidasEnvironment != null) {
+            this.MidasEnvironment = new String(source.MidasEnvironment);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

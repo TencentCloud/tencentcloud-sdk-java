@@ -45,6 +45,23 @@ public class ModifyDeviceAliasesRequest extends AbstractModel{
         this.DeviceAliases = DeviceAliases;
     }
 
+    public ModifyDeviceAliasesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyDeviceAliasesRequest(ModifyDeviceAliasesRequest source) {
+        if (source.DeviceAliases != null) {
+            this.DeviceAliases = new DeviceAlias[source.DeviceAliases.length];
+            for (int i = 0; i < source.DeviceAliases.length; i++) {
+                this.DeviceAliases[i] = new DeviceAlias(source.DeviceAliases[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

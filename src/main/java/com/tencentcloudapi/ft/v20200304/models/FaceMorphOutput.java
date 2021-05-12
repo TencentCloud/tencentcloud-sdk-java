@@ -106,6 +106,26 @@ public class FaceMorphOutput extends AbstractModel{
         this.CoverImage = CoverImage;
     }
 
+    public FaceMorphOutput() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public FaceMorphOutput(FaceMorphOutput source) {
+        if (source.MorphUrl != null) {
+            this.MorphUrl = new String(source.MorphUrl);
+        }
+        if (source.MorphMd5 != null) {
+            this.MorphMd5 = new String(source.MorphMd5);
+        }
+        if (source.CoverImage != null) {
+            this.CoverImage = new String(source.CoverImage);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

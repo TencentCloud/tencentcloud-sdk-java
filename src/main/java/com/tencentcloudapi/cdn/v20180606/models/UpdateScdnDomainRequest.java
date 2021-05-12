@@ -160,6 +160,35 @@ public class UpdateScdnDomainRequest extends AbstractModel{
         this.Bot = Bot;
     }
 
+    public UpdateScdnDomainRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UpdateScdnDomainRequest(UpdateScdnDomainRequest source) {
+        if (source.Domain != null) {
+            this.Domain = new String(source.Domain);
+        }
+        if (source.Waf != null) {
+            this.Waf = new ScdnWafConfig(source.Waf);
+        }
+        if (source.Acl != null) {
+            this.Acl = new ScdnAclConfig(source.Acl);
+        }
+        if (source.CC != null) {
+            this.CC = new ScdnConfig(source.CC);
+        }
+        if (source.Ddos != null) {
+            this.Ddos = new ScdnDdosConfig(source.Ddos);
+        }
+        if (source.Bot != null) {
+            this.Bot = new ScdnBotConfig(source.Bot);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

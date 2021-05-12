@@ -91,6 +91,26 @@ public class CreateFlowServiceResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public CreateFlowServiceResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateFlowServiceResponse(CreateFlowServiceResponse source) {
+        if (source.FlowServiceResource != null) {
+            this.FlowServiceResource = new String(source.FlowServiceResource);
+        }
+        if (source.CreateDate != null) {
+            this.CreateDate = new String(source.CreateDate);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

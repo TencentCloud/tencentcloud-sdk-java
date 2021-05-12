@@ -68,6 +68,26 @@ public class DescribePolicyConditionListResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribePolicyConditionListResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribePolicyConditionListResponse(DescribePolicyConditionListResponse source) {
+        if (source.Conditions != null) {
+            this.Conditions = new DescribePolicyConditionListCondition[source.Conditions.length];
+            for (int i = 0; i < source.Conditions.length; i++) {
+                this.Conditions[i] = new DescribePolicyConditionListCondition(source.Conditions[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -134,6 +134,29 @@ public class TextWatermarkTemplateInputForUpdate extends AbstractModel{
         this.FontAlpha = FontAlpha;
     }
 
+    public TextWatermarkTemplateInputForUpdate() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TextWatermarkTemplateInputForUpdate(TextWatermarkTemplateInputForUpdate source) {
+        if (source.FontType != null) {
+            this.FontType = new String(source.FontType);
+        }
+        if (source.FontSize != null) {
+            this.FontSize = new String(source.FontSize);
+        }
+        if (source.FontColor != null) {
+            this.FontColor = new String(source.FontColor);
+        }
+        if (source.FontAlpha != null) {
+            this.FontAlpha = new Float(source.FontAlpha);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

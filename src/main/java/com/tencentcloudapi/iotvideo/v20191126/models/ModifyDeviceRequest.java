@@ -91,6 +91,26 @@ public class ModifyDeviceRequest extends AbstractModel{
         this.Nick = Nick;
     }
 
+    public ModifyDeviceRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyDeviceRequest(ModifyDeviceRequest source) {
+        if (source.Tid != null) {
+            this.Tid = new String(source.Tid);
+        }
+        if (source.AccessId != null) {
+            this.AccessId = new String(source.AccessId);
+        }
+        if (source.Nick != null) {
+            this.Nick = new String(source.Nick);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

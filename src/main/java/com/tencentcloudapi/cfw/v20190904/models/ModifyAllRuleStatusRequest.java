@@ -114,6 +114,29 @@ public class ModifyAllRuleStatusRequest extends AbstractModel{
         this.Area = Area;
     }
 
+    public ModifyAllRuleStatusRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyAllRuleStatusRequest(ModifyAllRuleStatusRequest source) {
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.Direction != null) {
+            this.Direction = new Long(source.Direction);
+        }
+        if (source.EdgeId != null) {
+            this.EdgeId = new String(source.EdgeId);
+        }
+        if (source.Area != null) {
+            this.Area = new String(source.Area);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

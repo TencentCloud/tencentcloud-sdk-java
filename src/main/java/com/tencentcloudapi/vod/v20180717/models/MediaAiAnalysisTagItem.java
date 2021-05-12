@@ -68,6 +68,23 @@ public class MediaAiAnalysisTagItem extends AbstractModel{
         this.Confidence = Confidence;
     }
 
+    public MediaAiAnalysisTagItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MediaAiAnalysisTagItem(MediaAiAnalysisTagItem source) {
+        if (source.Tag != null) {
+            this.Tag = new String(source.Tag);
+        }
+        if (source.Confidence != null) {
+            this.Confidence = new Float(source.Confidence);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

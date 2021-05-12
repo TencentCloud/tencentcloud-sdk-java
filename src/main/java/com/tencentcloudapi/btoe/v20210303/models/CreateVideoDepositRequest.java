@@ -206,6 +206,41 @@ public class CreateVideoDepositRequest extends AbstractModel{
         this.EvidenceDescription = EvidenceDescription;
     }
 
+    public CreateVideoDepositRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateVideoDepositRequest(CreateVideoDepositRequest source) {
+        if (source.EvidenceName != null) {
+            this.EvidenceName = new String(source.EvidenceName);
+        }
+        if (source.FileName != null) {
+            this.FileName = new String(source.FileName);
+        }
+        if (source.EvidenceHash != null) {
+            this.EvidenceHash = new String(source.EvidenceHash);
+        }
+        if (source.BusinessId != null) {
+            this.BusinessId = new String(source.BusinessId);
+        }
+        if (source.FileContent != null) {
+            this.FileContent = new String(source.FileContent);
+        }
+        if (source.FileUrl != null) {
+            this.FileUrl = new String(source.FileUrl);
+        }
+        if (source.HashType != null) {
+            this.HashType = new Long(source.HashType);
+        }
+        if (source.EvidenceDescription != null) {
+            this.EvidenceDescription = new String(source.EvidenceDescription);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

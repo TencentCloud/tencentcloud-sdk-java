@@ -160,6 +160,35 @@ public class DiscountDetail extends AbstractModel{
         this.PolicyDetail = PolicyDetail;
     }
 
+    public DiscountDetail() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DiscountDetail(DiscountDetail source) {
+        if (source.TimeSpan != null) {
+            this.TimeSpan = new Long(source.TimeSpan);
+        }
+        if (source.TimeUnit != null) {
+            this.TimeUnit = new String(source.TimeUnit);
+        }
+        if (source.TotalCost != null) {
+            this.TotalCost = new Float(source.TotalCost);
+        }
+        if (source.RealTotalCost != null) {
+            this.RealTotalCost = new Float(source.RealTotalCost);
+        }
+        if (source.Discount != null) {
+            this.Discount = new Long(source.Discount);
+        }
+        if (source.PolicyDetail != null) {
+            this.PolicyDetail = new PolicyDetail(source.PolicyDetail);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

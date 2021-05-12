@@ -68,6 +68,23 @@ public class QueryMerchantBalanceResult extends AbstractModel{
         this.Data = Data;
     }
 
+    public QueryMerchantBalanceResult() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public QueryMerchantBalanceResult(QueryMerchantBalanceResult source) {
+        if (source.Code != null) {
+            this.Code = new String(source.Code);
+        }
+        if (source.Data != null) {
+            this.Data = new QueryMerchantBalanceData(source.Data);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

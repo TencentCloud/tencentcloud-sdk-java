@@ -160,6 +160,35 @@ public class ModifyInstanceAttributesRequest extends AbstractModel{
         this.RebalanceTime = RebalanceTime;
     }
 
+    public ModifyInstanceAttributesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyInstanceAttributesRequest(ModifyInstanceAttributesRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.MsgRetentionTime != null) {
+            this.MsgRetentionTime = new Long(source.MsgRetentionTime);
+        }
+        if (source.InstanceName != null) {
+            this.InstanceName = new String(source.InstanceName);
+        }
+        if (source.Config != null) {
+            this.Config = new ModifyInstanceAttributesConfig(source.Config);
+        }
+        if (source.DynamicRetentionConfig != null) {
+            this.DynamicRetentionConfig = new DynamicRetentionTime(source.DynamicRetentionConfig);
+        }
+        if (source.RebalanceTime != null) {
+            this.RebalanceTime = new Long(source.RebalanceTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

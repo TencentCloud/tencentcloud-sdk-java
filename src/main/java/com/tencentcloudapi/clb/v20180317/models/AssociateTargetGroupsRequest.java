@@ -45,6 +45,23 @@ public class AssociateTargetGroupsRequest extends AbstractModel{
         this.Associations = Associations;
     }
 
+    public AssociateTargetGroupsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AssociateTargetGroupsRequest(AssociateTargetGroupsRequest source) {
+        if (source.Associations != null) {
+            this.Associations = new TargetGroupAssociation[source.Associations.length];
+            for (int i = 0; i < source.Associations.length; i++) {
+                this.Associations[i] = new TargetGroupAssociation(source.Associations[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

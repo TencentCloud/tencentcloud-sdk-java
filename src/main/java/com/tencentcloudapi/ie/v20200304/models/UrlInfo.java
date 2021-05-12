@@ -111,6 +111,26 @@ public class UrlInfo extends AbstractModel{
         this.Host = Host;
     }
 
+    public UrlInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UrlInfo(UrlInfo source) {
+        if (source.Url != null) {
+            this.Url = new String(source.Url);
+        }
+        if (source.Format != null) {
+            this.Format = new Long(source.Format);
+        }
+        if (source.Host != null) {
+            this.Host = new String(source.Host);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

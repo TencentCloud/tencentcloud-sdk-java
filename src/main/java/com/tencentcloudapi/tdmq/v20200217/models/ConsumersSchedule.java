@@ -180,6 +180,35 @@ public class ConsumersSchedule extends AbstractModel{
         this.MsgRateExpired = MsgRateExpired;
     }
 
+    public ConsumersSchedule() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ConsumersSchedule(ConsumersSchedule source) {
+        if (source.Partitions != null) {
+            this.Partitions = new Long(source.Partitions);
+        }
+        if (source.NumberOfEntries != null) {
+            this.NumberOfEntries = new Long(source.NumberOfEntries);
+        }
+        if (source.MsgBacklog != null) {
+            this.MsgBacklog = new Long(source.MsgBacklog);
+        }
+        if (source.MsgRateOut != null) {
+            this.MsgRateOut = new String(source.MsgRateOut);
+        }
+        if (source.MsgThroughputOut != null) {
+            this.MsgThroughputOut = new String(source.MsgThroughputOut);
+        }
+        if (source.MsgRateExpired != null) {
+            this.MsgRateExpired = new String(source.MsgRateExpired);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

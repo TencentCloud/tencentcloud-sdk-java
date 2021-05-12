@@ -68,6 +68,26 @@ public class DescribeCustomerGatewayVendorsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeCustomerGatewayVendorsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeCustomerGatewayVendorsResponse(DescribeCustomerGatewayVendorsResponse source) {
+        if (source.CustomerGatewayVendorSet != null) {
+            this.CustomerGatewayVendorSet = new CustomerGatewayVendor[source.CustomerGatewayVendorSet.length];
+            for (int i = 0; i < source.CustomerGatewayVendorSet.length; i++) {
+                this.CustomerGatewayVendorSet[i] = new CustomerGatewayVendor(source.CustomerGatewayVendorSet[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -137,6 +137,32 @@ public class CrowdAntiRushInfo extends AbstractModel{
         this.CampaignUrl = CampaignUrl;
     }
 
+    public CrowdAntiRushInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CrowdAntiRushInfo(CrowdAntiRushInfo source) {
+        if (source.SponsorOpenId != null) {
+            this.SponsorOpenId = new String(source.SponsorOpenId);
+        }
+        if (source.SponsorDeviceNumber != null) {
+            this.SponsorDeviceNumber = new String(source.SponsorDeviceNumber);
+        }
+        if (source.SponsorPhone != null) {
+            this.SponsorPhone = new String(source.SponsorPhone);
+        }
+        if (source.SponsorIp != null) {
+            this.SponsorIp = new String(source.SponsorIp);
+        }
+        if (source.CampaignUrl != null) {
+            this.CampaignUrl = new String(source.CampaignUrl);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

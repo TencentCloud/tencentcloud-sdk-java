@@ -96,6 +96,29 @@ public class ConfirmEventsRequest extends AbstractModel{
         this.SubAppId = SubAppId;
     }
 
+    public ConfirmEventsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ConfirmEventsRequest(ConfirmEventsRequest source) {
+        if (source.EventHandles != null) {
+            this.EventHandles = new String[source.EventHandles.length];
+            for (int i = 0; i < source.EventHandles.length; i++) {
+                this.EventHandles[i] = new String(source.EventHandles[i]);
+            }
+        }
+        if (source.ExtInfo != null) {
+            this.ExtInfo = new String(source.ExtInfo);
+        }
+        if (source.SubAppId != null) {
+            this.SubAppId = new Long(source.SubAppId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

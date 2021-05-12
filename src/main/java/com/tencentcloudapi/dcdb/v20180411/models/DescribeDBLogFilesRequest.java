@@ -91,6 +91,26 @@ public class DescribeDBLogFilesRequest extends AbstractModel{
         this.Type = Type;
     }
 
+    public DescribeDBLogFilesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeDBLogFilesRequest(DescribeDBLogFilesRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.ShardId != null) {
+            this.ShardId = new String(source.ShardId);
+        }
+        if (source.Type != null) {
+            this.Type = new Long(source.Type);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

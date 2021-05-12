@@ -280,6 +280,50 @@ public class CertInfo extends AbstractModel{
         this.CertType = CertType;
     }
 
+    public CertInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CertInfo(CertInfo source) {
+        if (source.Hash != null) {
+            this.Hash = new String(source.Hash);
+        }
+        if (source.CN != null) {
+            this.CN = new String(source.CN);
+        }
+        if (source.SANs != null) {
+            this.SANs = new String(source.SANs);
+        }
+        if (source.KeyAlgo != null) {
+            this.KeyAlgo = new String(source.KeyAlgo);
+        }
+        if (source.Issuer != null) {
+            this.Issuer = new String(source.Issuer);
+        }
+        if (source.BeginTime != null) {
+            this.BeginTime = new String(source.BeginTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+        if (source.Days != null) {
+            this.Days = new Long(source.Days);
+        }
+        if (source.Brand != null) {
+            this.Brand = new String(source.Brand);
+        }
+        if (source.TrustStatus != null) {
+            this.TrustStatus = new String(source.TrustStatus);
+        }
+        if (source.CertType != null) {
+            this.CertType = new String(source.CertType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

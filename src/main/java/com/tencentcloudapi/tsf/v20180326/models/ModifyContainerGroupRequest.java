@@ -183,6 +183,41 @@ public class ModifyContainerGroupRequest extends AbstractModel{
         this.Alias = Alias;
     }
 
+    public ModifyContainerGroupRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyContainerGroupRequest(ModifyContainerGroupRequest source) {
+        if (source.GroupId != null) {
+            this.GroupId = new String(source.GroupId);
+        }
+        if (source.AccessType != null) {
+            this.AccessType = new Long(source.AccessType);
+        }
+        if (source.ProtocolPorts != null) {
+            this.ProtocolPorts = new ProtocolPort[source.ProtocolPorts.length];
+            for (int i = 0; i < source.ProtocolPorts.length; i++) {
+                this.ProtocolPorts[i] = new ProtocolPort(source.ProtocolPorts[i]);
+            }
+        }
+        if (source.UpdateType != null) {
+            this.UpdateType = new Long(source.UpdateType);
+        }
+        if (source.UpdateIvl != null) {
+            this.UpdateIvl = new Long(source.UpdateIvl);
+        }
+        if (source.SubnetId != null) {
+            this.SubnetId = new String(source.SubnetId);
+        }
+        if (source.Alias != null) {
+            this.Alias = new String(source.Alias);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

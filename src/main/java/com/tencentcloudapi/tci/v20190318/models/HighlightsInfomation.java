@@ -114,6 +114,35 @@ public class HighlightsInfomation extends AbstractModel{
         this.PersonId = PersonId;
     }
 
+    public HighlightsInfomation() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public HighlightsInfomation(HighlightsInfomation source) {
+        if (source.Concentration != null) {
+            this.Concentration = new TimeType[source.Concentration.length];
+            for (int i = 0; i < source.Concentration.length; i++) {
+                this.Concentration[i] = new TimeType(source.Concentration[i]);
+            }
+        }
+        if (source.Smile != null) {
+            this.Smile = new TimeType[source.Smile.length];
+            for (int i = 0; i < source.Smile.length; i++) {
+                this.Smile[i] = new TimeType(source.Smile[i]);
+            }
+        }
+        if (source.HighlightsUrl != null) {
+            this.HighlightsUrl = new String(source.HighlightsUrl);
+        }
+        if (source.PersonId != null) {
+            this.PersonId = new String(source.PersonId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

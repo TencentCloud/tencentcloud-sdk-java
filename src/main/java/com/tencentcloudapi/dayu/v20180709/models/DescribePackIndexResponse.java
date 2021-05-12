@@ -98,6 +98,26 @@ IsolatePackCount：隔离中的资源数
         this.RequestId = RequestId;
     }
 
+    public DescribePackIndexResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribePackIndexResponse(DescribePackIndexResponse source) {
+        if (source.Data != null) {
+            this.Data = new KeyValue[source.Data.length];
+            for (int i = 0; i < source.Data.length; i++) {
+                this.Data[i] = new KeyValue(source.Data[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

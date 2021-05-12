@@ -96,6 +96,29 @@ public class IsolateInstanceResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public IsolateInstanceResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public IsolateInstanceResponse(IsolateInstanceResponse source) {
+        if (source.FlowId != null) {
+            this.FlowId = new Long(source.FlowId);
+        }
+        if (source.DealNames != null) {
+            this.DealNames = new String[source.DealNames.length];
+            for (int i = 0; i < source.DealNames.length; i++) {
+                this.DealNames[i] = new String(source.DealNames[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -203,6 +203,41 @@ public class DescribeVisitTopSumInfoListRequest extends AbstractModel{
         this.OrderParam = OrderParam;
     }
 
+    public DescribeVisitTopSumInfoListRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeVisitTopSumInfoListRequest(DescribeVisitTopSumInfoListRequest source) {
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+        if (source.TopIndex != null) {
+            this.TopIndex = new String(source.TopIndex);
+        }
+        if (source.PlayDomains != null) {
+            this.PlayDomains = new String[source.PlayDomains.length];
+            for (int i = 0; i < source.PlayDomains.length; i++) {
+                this.PlayDomains[i] = new String(source.PlayDomains[i]);
+            }
+        }
+        if (source.PageNum != null) {
+            this.PageNum = new Long(source.PageNum);
+        }
+        if (source.PageSize != null) {
+            this.PageSize = new Long(source.PageSize);
+        }
+        if (source.OrderParam != null) {
+            this.OrderParam = new String(source.OrderParam);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

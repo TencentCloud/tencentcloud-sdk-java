@@ -706,6 +706,113 @@ public class CreateInstanceRequest extends AbstractModel{
         this.SceneType = SceneType;
     }
 
+    public CreateInstanceRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateInstanceRequest(CreateInstanceRequest source) {
+        if (source.Zone != null) {
+            this.Zone = new String(source.Zone);
+        }
+        if (source.EsVersion != null) {
+            this.EsVersion = new String(source.EsVersion);
+        }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.SubnetId != null) {
+            this.SubnetId = new String(source.SubnetId);
+        }
+        if (source.Password != null) {
+            this.Password = new String(source.Password);
+        }
+        if (source.InstanceName != null) {
+            this.InstanceName = new String(source.InstanceName);
+        }
+        if (source.NodeNum != null) {
+            this.NodeNum = new Long(source.NodeNum);
+        }
+        if (source.ChargeType != null) {
+            this.ChargeType = new String(source.ChargeType);
+        }
+        if (source.ChargePeriod != null) {
+            this.ChargePeriod = new Long(source.ChargePeriod);
+        }
+        if (source.RenewFlag != null) {
+            this.RenewFlag = new String(source.RenewFlag);
+        }
+        if (source.NodeType != null) {
+            this.NodeType = new String(source.NodeType);
+        }
+        if (source.DiskType != null) {
+            this.DiskType = new String(source.DiskType);
+        }
+        if (source.DiskSize != null) {
+            this.DiskSize = new Long(source.DiskSize);
+        }
+        if (source.TimeUnit != null) {
+            this.TimeUnit = new String(source.TimeUnit);
+        }
+        if (source.AutoVoucher != null) {
+            this.AutoVoucher = new Long(source.AutoVoucher);
+        }
+        if (source.VoucherIds != null) {
+            this.VoucherIds = new String[source.VoucherIds.length];
+            for (int i = 0; i < source.VoucherIds.length; i++) {
+                this.VoucherIds[i] = new String(source.VoucherIds[i]);
+            }
+        }
+        if (source.EnableDedicatedMaster != null) {
+            this.EnableDedicatedMaster = new Boolean(source.EnableDedicatedMaster);
+        }
+        if (source.MasterNodeNum != null) {
+            this.MasterNodeNum = new Long(source.MasterNodeNum);
+        }
+        if (source.MasterNodeType != null) {
+            this.MasterNodeType = new String(source.MasterNodeType);
+        }
+        if (source.MasterNodeDiskSize != null) {
+            this.MasterNodeDiskSize = new Long(source.MasterNodeDiskSize);
+        }
+        if (source.ClusterNameInConf != null) {
+            this.ClusterNameInConf = new String(source.ClusterNameInConf);
+        }
+        if (source.DeployMode != null) {
+            this.DeployMode = new Long(source.DeployMode);
+        }
+        if (source.MultiZoneInfo != null) {
+            this.MultiZoneInfo = new ZoneDetail[source.MultiZoneInfo.length];
+            for (int i = 0; i < source.MultiZoneInfo.length; i++) {
+                this.MultiZoneInfo[i] = new ZoneDetail(source.MultiZoneInfo[i]);
+            }
+        }
+        if (source.LicenseType != null) {
+            this.LicenseType = new String(source.LicenseType);
+        }
+        if (source.NodeInfoList != null) {
+            this.NodeInfoList = new NodeInfo[source.NodeInfoList.length];
+            for (int i = 0; i < source.NodeInfoList.length; i++) {
+                this.NodeInfoList[i] = new NodeInfo(source.NodeInfoList[i]);
+            }
+        }
+        if (source.TagList != null) {
+            this.TagList = new TagInfo[source.TagList.length];
+            for (int i = 0; i < source.TagList.length; i++) {
+                this.TagList[i] = new TagInfo(source.TagList[i]);
+            }
+        }
+        if (source.BasicSecurityType != null) {
+            this.BasicSecurityType = new Long(source.BasicSecurityType);
+        }
+        if (source.SceneType != null) {
+            this.SceneType = new Long(source.SceneType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

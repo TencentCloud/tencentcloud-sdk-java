@@ -91,6 +91,26 @@ public class DescribeCrossRegionZoneResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeCrossRegionZoneResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeCrossRegionZoneResponse(DescribeCrossRegionZoneResponse source) {
+        if (source.Region != null) {
+            this.Region = new String(source.Region);
+        }
+        if (source.Zone != null) {
+            this.Zone = new String(source.Zone);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

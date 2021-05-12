@@ -239,6 +239,44 @@ public class OsInfo extends AbstractModel{
         this.OsMinorClass = OsMinorClass;
     }
 
+    public OsInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public OsInfo(OsInfo source) {
+        if (source.OsTypeId != null) {
+            this.OsTypeId = new Long(source.OsTypeId);
+        }
+        if (source.OsName != null) {
+            this.OsName = new String(source.OsName);
+        }
+        if (source.OsDescription != null) {
+            this.OsDescription = new String(source.OsDescription);
+        }
+        if (source.OsEnglishDescription != null) {
+            this.OsEnglishDescription = new String(source.OsEnglishDescription);
+        }
+        if (source.OsClass != null) {
+            this.OsClass = new String(source.OsClass);
+        }
+        if (source.ImageTag != null) {
+            this.ImageTag = new String(source.ImageTag);
+        }
+        if (source.MaxPartitionSize != null) {
+            this.MaxPartitionSize = new Long(source.MaxPartitionSize);
+        }
+        if (source.OsMinorVersion != null) {
+            this.OsMinorVersion = new String(source.OsMinorVersion);
+        }
+        if (source.OsMinorClass != null) {
+            this.OsMinorClass = new String(source.OsMinorClass);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

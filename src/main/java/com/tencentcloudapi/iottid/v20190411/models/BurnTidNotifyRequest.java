@@ -68,6 +68,23 @@ public class BurnTidNotifyRequest extends AbstractModel{
         this.Tid = Tid;
     }
 
+    public BurnTidNotifyRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public BurnTidNotifyRequest(BurnTidNotifyRequest source) {
+        if (source.OrderId != null) {
+            this.OrderId = new String(source.OrderId);
+        }
+        if (source.Tid != null) {
+            this.Tid = new String(source.Tid);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

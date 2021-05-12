@@ -137,6 +137,32 @@ public class FirewallRule extends AbstractModel{
         this.FirewallRuleDescription = FirewallRuleDescription;
     }
 
+    public FirewallRule() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public FirewallRule(FirewallRule source) {
+        if (source.Protocol != null) {
+            this.Protocol = new String(source.Protocol);
+        }
+        if (source.Port != null) {
+            this.Port = new String(source.Port);
+        }
+        if (source.CidrBlock != null) {
+            this.CidrBlock = new String(source.CidrBlock);
+        }
+        if (source.Action != null) {
+            this.Action = new String(source.Action);
+        }
+        if (source.FirewallRuleDescription != null) {
+            this.FirewallRuleDescription = new String(source.FirewallRuleDescription);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -91,6 +91,29 @@ public class RuntimeConfiguration extends AbstractModel{
         this.ServerProcesses = ServerProcesses;
     }
 
+    public RuntimeConfiguration() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RuntimeConfiguration(RuntimeConfiguration source) {
+        if (source.GameServerSessionActivationTimeoutSeconds != null) {
+            this.GameServerSessionActivationTimeoutSeconds = new Long(source.GameServerSessionActivationTimeoutSeconds);
+        }
+        if (source.MaxConcurrentGameServerSessionActivations != null) {
+            this.MaxConcurrentGameServerSessionActivations = new Long(source.MaxConcurrentGameServerSessionActivations);
+        }
+        if (source.ServerProcesses != null) {
+            this.ServerProcesses = new ServerProcesse[source.ServerProcesses.length];
+            for (int i = 0; i < source.ServerProcesses.length; i++) {
+                this.ServerProcesses[i] = new ServerProcesse(source.ServerProcesses[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

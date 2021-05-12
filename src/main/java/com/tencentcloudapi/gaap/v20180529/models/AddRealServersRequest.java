@@ -114,6 +114,35 @@ public class AddRealServersRequest extends AbstractModel{
         this.TagSet = TagSet;
     }
 
+    public AddRealServersRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AddRealServersRequest(AddRealServersRequest source) {
+        if (source.ProjectId != null) {
+            this.ProjectId = new Long(source.ProjectId);
+        }
+        if (source.RealServerIP != null) {
+            this.RealServerIP = new String[source.RealServerIP.length];
+            for (int i = 0; i < source.RealServerIP.length; i++) {
+                this.RealServerIP[i] = new String(source.RealServerIP[i]);
+            }
+        }
+        if (source.RealServerName != null) {
+            this.RealServerName = new String(source.RealServerName);
+        }
+        if (source.TagSet != null) {
+            this.TagSet = new TagPair[source.TagSet.length];
+            for (int i = 0; i < source.TagSet.length; i++) {
+                this.TagSet[i] = new TagPair(source.TagSet[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

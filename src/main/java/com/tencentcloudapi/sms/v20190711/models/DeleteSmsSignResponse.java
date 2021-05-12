@@ -68,6 +68,23 @@ public class DeleteSmsSignResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DeleteSmsSignResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteSmsSignResponse(DeleteSmsSignResponse source) {
+        if (source.DeleteSignStatus != null) {
+            this.DeleteSignStatus = new DeleteSignStatus(source.DeleteSignStatus);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

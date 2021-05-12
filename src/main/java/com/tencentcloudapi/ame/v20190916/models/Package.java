@@ -275,6 +275,53 @@ public class Package extends AbstractModel{
         this.UseRanges = UseRanges;
     }
 
+    public Package() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Package(Package source) {
+        if (source.OrderId != null) {
+            this.OrderId = new String(source.OrderId);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.AuthorizedArea != null) {
+            this.AuthorizedArea = new String(source.AuthorizedArea);
+        }
+        if (source.AuthorizedLimit != null) {
+            this.AuthorizedLimit = new Long(source.AuthorizedLimit);
+        }
+        if (source.TermOfValidity != null) {
+            this.TermOfValidity = new Long(source.TermOfValidity);
+        }
+        if (source.Commercial != null) {
+            this.Commercial = new Long(source.Commercial);
+        }
+        if (source.PackagePrice != null) {
+            this.PackagePrice = new Float(source.PackagePrice);
+        }
+        if (source.EffectTime != null) {
+            this.EffectTime = new String(source.EffectTime);
+        }
+        if (source.ExpireTime != null) {
+            this.ExpireTime = new String(source.ExpireTime);
+        }
+        if (source.UsedCount != null) {
+            this.UsedCount = new Long(source.UsedCount);
+        }
+        if (source.UseRanges != null) {
+            this.UseRanges = new UseRange[source.UseRanges.length];
+            for (int i = 0; i < source.UseRanges.length; i++) {
+                this.UseRanges[i] = new UseRange(source.UseRanges[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

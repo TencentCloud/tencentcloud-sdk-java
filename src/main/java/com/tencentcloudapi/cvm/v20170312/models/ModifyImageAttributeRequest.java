@@ -91,6 +91,26 @@ public class ModifyImageAttributeRequest extends AbstractModel{
         this.ImageDescription = ImageDescription;
     }
 
+    public ModifyImageAttributeRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyImageAttributeRequest(ModifyImageAttributeRequest source) {
+        if (source.ImageId != null) {
+            this.ImageId = new String(source.ImageId);
+        }
+        if (source.ImageName != null) {
+            this.ImageName = new String(source.ImageName);
+        }
+        if (source.ImageDescription != null) {
+            this.ImageDescription = new String(source.ImageDescription);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

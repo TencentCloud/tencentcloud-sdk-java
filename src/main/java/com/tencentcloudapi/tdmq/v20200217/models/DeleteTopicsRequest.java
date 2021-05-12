@@ -91,6 +91,29 @@ public class DeleteTopicsRequest extends AbstractModel{
         this.EnvironmentId = EnvironmentId;
     }
 
+    public DeleteTopicsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteTopicsRequest(DeleteTopicsRequest source) {
+        if (source.TopicSets != null) {
+            this.TopicSets = new TopicRecord[source.TopicSets.length];
+            for (int i = 0; i < source.TopicSets.length; i++) {
+                this.TopicSets[i] = new TopicRecord(source.TopicSets[i]);
+            }
+        }
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
+        if (source.EnvironmentId != null) {
+            this.EnvironmentId = new String(source.EnvironmentId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

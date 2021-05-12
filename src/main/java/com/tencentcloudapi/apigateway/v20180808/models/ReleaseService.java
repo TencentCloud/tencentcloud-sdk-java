@@ -78,6 +78,23 @@ public class ReleaseService extends AbstractModel{
         this.ReleaseVersion = ReleaseVersion;
     }
 
+    public ReleaseService() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ReleaseService(ReleaseService source) {
+        if (source.ReleaseDesc != null) {
+            this.ReleaseDesc = new String(source.ReleaseDesc);
+        }
+        if (source.ReleaseVersion != null) {
+            this.ReleaseVersion = new String(source.ReleaseVersion);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -160,6 +160,35 @@ public class ImageMaterial extends AbstractModel{
         this.VodFileId = VodFileId;
     }
 
+    public ImageMaterial() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ImageMaterial(ImageMaterial source) {
+        if (source.Height != null) {
+            this.Height = new Long(source.Height);
+        }
+        if (source.Width != null) {
+            this.Width = new Long(source.Width);
+        }
+        if (source.MaterialUrl != null) {
+            this.MaterialUrl = new String(source.MaterialUrl);
+        }
+        if (source.Size != null) {
+            this.Size = new Long(source.Size);
+        }
+        if (source.OriginalUrl != null) {
+            this.OriginalUrl = new String(source.OriginalUrl);
+        }
+        if (source.VodFileId != null) {
+            this.VodFileId = new String(source.VodFileId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -91,6 +91,32 @@ public class DescribeRealServerStatisticsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeRealServerStatisticsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeRealServerStatisticsResponse(DescribeRealServerStatisticsResponse source) {
+        if (source.StatisticsData != null) {
+            this.StatisticsData = new StatisticsDataInfo[source.StatisticsData.length];
+            for (int i = 0; i < source.StatisticsData.length; i++) {
+                this.StatisticsData[i] = new StatisticsDataInfo(source.StatisticsData[i]);
+            }
+        }
+        if (source.RsStatisticsData != null) {
+            this.RsStatisticsData = new MetricStatisticsInfo[source.RsStatisticsData.length];
+            for (int i = 0; i < source.RsStatisticsData.length; i++) {
+                this.RsStatisticsData[i] = new MetricStatisticsInfo(source.RsStatisticsData[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

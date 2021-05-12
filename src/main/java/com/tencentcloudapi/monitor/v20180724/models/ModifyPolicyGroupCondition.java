@@ -206,6 +206,41 @@ public class ModifyPolicyGroupCondition extends AbstractModel{
         this.RuleId = RuleId;
     }
 
+    public ModifyPolicyGroupCondition() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyPolicyGroupCondition(ModifyPolicyGroupCondition source) {
+        if (source.MetricId != null) {
+            this.MetricId = new Long(source.MetricId);
+        }
+        if (source.CalcType != null) {
+            this.CalcType = new Long(source.CalcType);
+        }
+        if (source.CalcValue != null) {
+            this.CalcValue = new String(source.CalcValue);
+        }
+        if (source.CalcPeriod != null) {
+            this.CalcPeriod = new Long(source.CalcPeriod);
+        }
+        if (source.ContinuePeriod != null) {
+            this.ContinuePeriod = new Long(source.ContinuePeriod);
+        }
+        if (source.AlarmNotifyType != null) {
+            this.AlarmNotifyType = new Long(source.AlarmNotifyType);
+        }
+        if (source.AlarmNotifyPeriod != null) {
+            this.AlarmNotifyPeriod = new Long(source.AlarmNotifyPeriod);
+        }
+        if (source.RuleId != null) {
+            this.RuleId = new Long(source.RuleId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

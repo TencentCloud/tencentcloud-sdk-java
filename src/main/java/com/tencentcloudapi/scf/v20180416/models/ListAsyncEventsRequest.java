@@ -298,6 +298,59 @@ public class ListAsyncEventsRequest extends AbstractModel{
         this.InvokeRequestId = InvokeRequestId;
     }
 
+    public ListAsyncEventsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ListAsyncEventsRequest(ListAsyncEventsRequest source) {
+        if (source.FunctionName != null) {
+            this.FunctionName = new String(source.FunctionName);
+        }
+        if (source.Namespace != null) {
+            this.Namespace = new String(source.Namespace);
+        }
+        if (source.Qualifier != null) {
+            this.Qualifier = new String(source.Qualifier);
+        }
+        if (source.InvokeType != null) {
+            this.InvokeType = new String[source.InvokeType.length];
+            for (int i = 0; i < source.InvokeType.length; i++) {
+                this.InvokeType[i] = new String(source.InvokeType[i]);
+            }
+        }
+        if (source.Status != null) {
+            this.Status = new String[source.Status.length];
+            for (int i = 0; i < source.Status.length; i++) {
+                this.Status[i] = new String(source.Status[i]);
+            }
+        }
+        if (source.StartTimeInterval != null) {
+            this.StartTimeInterval = new TimeInterval(source.StartTimeInterval);
+        }
+        if (source.EndTimeInterval != null) {
+            this.EndTimeInterval = new TimeInterval(source.EndTimeInterval);
+        }
+        if (source.Order != null) {
+            this.Order = new String(source.Order);
+        }
+        if (source.Orderby != null) {
+            this.Orderby = new String(source.Orderby);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.InvokeRequestId != null) {
+            this.InvokeRequestId = new String(source.InvokeRequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

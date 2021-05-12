@@ -68,6 +68,23 @@ public class DeviceAlias extends AbstractModel{
         this.Alias = Alias;
     }
 
+    public DeviceAlias() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeviceAlias(DeviceAlias source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.Alias != null) {
+            this.Alias = new String(source.Alias);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

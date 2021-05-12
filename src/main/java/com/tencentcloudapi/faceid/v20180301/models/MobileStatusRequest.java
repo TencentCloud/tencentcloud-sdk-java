@@ -68,6 +68,23 @@ public class MobileStatusRequest extends AbstractModel{
         this.Encryption = Encryption;
     }
 
+    public MobileStatusRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MobileStatusRequest(MobileStatusRequest source) {
+        if (source.Mobile != null) {
+            this.Mobile = new String(source.Mobile);
+        }
+        if (source.Encryption != null) {
+            this.Encryption = new Encryption(source.Encryption);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -195,6 +195,35 @@ public class AudioInfo extends AbstractModel{
         this.EnableMuteAudio = EnableMuteAudio;
     }
 
+    public AudioInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AudioInfo(AudioInfo source) {
+        if (source.Bitrate != null) {
+            this.Bitrate = new Long(source.Bitrate);
+        }
+        if (source.Codec != null) {
+            this.Codec = new String(source.Codec);
+        }
+        if (source.Channel != null) {
+            this.Channel = new Long(source.Channel);
+        }
+        if (source.SampleRate != null) {
+            this.SampleRate = new Long(source.SampleRate);
+        }
+        if (source.Denoise != null) {
+            this.Denoise = new Denoise(source.Denoise);
+        }
+        if (source.EnableMuteAudio != null) {
+            this.EnableMuteAudio = new Long(source.EnableMuteAudio);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

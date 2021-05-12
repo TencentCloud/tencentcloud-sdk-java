@@ -229,6 +229,44 @@ public class VatInvoiceItem extends AbstractModel{
         this.TaxAmount = TaxAmount;
     }
 
+    public VatInvoiceItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public VatInvoiceItem(VatInvoiceItem source) {
+        if (source.LineNo != null) {
+            this.LineNo = new String(source.LineNo);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Spec != null) {
+            this.Spec = new String(source.Spec);
+        }
+        if (source.Unit != null) {
+            this.Unit = new String(source.Unit);
+        }
+        if (source.Quantity != null) {
+            this.Quantity = new String(source.Quantity);
+        }
+        if (source.UnitPrice != null) {
+            this.UnitPrice = new String(source.UnitPrice);
+        }
+        if (source.AmountWithoutTax != null) {
+            this.AmountWithoutTax = new String(source.AmountWithoutTax);
+        }
+        if (source.TaxRate != null) {
+            this.TaxRate = new String(source.TaxRate);
+        }
+        if (source.TaxAmount != null) {
+            this.TaxAmount = new String(source.TaxAmount);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

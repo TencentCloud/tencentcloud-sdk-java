@@ -68,6 +68,26 @@ public class InputSendTrafficSecuritySmsMsg extends AbstractModel{
         this.Mobiles = Mobiles;
     }
 
+    public InputSendTrafficSecuritySmsMsg() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public InputSendTrafficSecuritySmsMsg(InputSendTrafficSecuritySmsMsg source) {
+        if (source.TaskId != null) {
+            this.TaskId = new String(source.TaskId);
+        }
+        if (source.Mobiles != null) {
+            this.Mobiles = new String[source.Mobiles.length];
+            for (int i = 0; i < source.Mobiles.length; i++) {
+                this.Mobiles[i] = new String(source.Mobiles[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

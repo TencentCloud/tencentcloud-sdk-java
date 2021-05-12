@@ -160,6 +160,35 @@ public class StartMCUMixTranscodeByStrRoomIdRequest extends AbstractModel{
         this.PublishCdnParams = PublishCdnParams;
     }
 
+    public StartMCUMixTranscodeByStrRoomIdRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public StartMCUMixTranscodeByStrRoomIdRequest(StartMCUMixTranscodeByStrRoomIdRequest source) {
+        if (source.SdkAppId != null) {
+            this.SdkAppId = new Long(source.SdkAppId);
+        }
+        if (source.StrRoomId != null) {
+            this.StrRoomId = new String(source.StrRoomId);
+        }
+        if (source.OutputParams != null) {
+            this.OutputParams = new OutputParams(source.OutputParams);
+        }
+        if (source.EncodeParams != null) {
+            this.EncodeParams = new EncodeParams(source.EncodeParams);
+        }
+        if (source.LayoutParams != null) {
+            this.LayoutParams = new LayoutParams(source.LayoutParams);
+        }
+        if (source.PublishCdnParams != null) {
+            this.PublishCdnParams = new PublishCdnParams(source.PublishCdnParams);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

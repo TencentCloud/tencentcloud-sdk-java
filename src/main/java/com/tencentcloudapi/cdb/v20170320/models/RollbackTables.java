@@ -78,6 +78,26 @@ public class RollbackTables extends AbstractModel{
         this.Table = Table;
     }
 
+    public RollbackTables() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RollbackTables(RollbackTables source) {
+        if (source.Database != null) {
+            this.Database = new String(source.Database);
+        }
+        if (source.Table != null) {
+            this.Table = new RollbackTableName[source.Table.length];
+            for (int i = 0; i < source.Table.length; i++) {
+                this.Table[i] = new RollbackTableName(source.Table[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

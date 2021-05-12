@@ -252,6 +252,53 @@ public class CreateJobConfigRequest extends AbstractModel{
         this.LogCollect = LogCollect;
     }
 
+    public CreateJobConfigRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateJobConfigRequest(CreateJobConfigRequest source) {
+        if (source.JobId != null) {
+            this.JobId = new String(source.JobId);
+        }
+        if (source.EntrypointClass != null) {
+            this.EntrypointClass = new String(source.EntrypointClass);
+        }
+        if (source.ProgramArgs != null) {
+            this.ProgramArgs = new String(source.ProgramArgs);
+        }
+        if (source.Remark != null) {
+            this.Remark = new String(source.Remark);
+        }
+        if (source.ResourceRefs != null) {
+            this.ResourceRefs = new ResourceRef[source.ResourceRefs.length];
+            for (int i = 0; i < source.ResourceRefs.length; i++) {
+                this.ResourceRefs[i] = new ResourceRef(source.ResourceRefs[i]);
+            }
+        }
+        if (source.DefaultParallelism != null) {
+            this.DefaultParallelism = new Long(source.DefaultParallelism);
+        }
+        if (source.Properties != null) {
+            this.Properties = new Property[source.Properties.length];
+            for (int i = 0; i < source.Properties.length; i++) {
+                this.Properties[i] = new Property(source.Properties[i]);
+            }
+        }
+        if (source.AutoDelete != null) {
+            this.AutoDelete = new Long(source.AutoDelete);
+        }
+        if (source.COSBucket != null) {
+            this.COSBucket = new String(source.COSBucket);
+        }
+        if (source.LogCollect != null) {
+            this.LogCollect = new Boolean(source.LogCollect);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

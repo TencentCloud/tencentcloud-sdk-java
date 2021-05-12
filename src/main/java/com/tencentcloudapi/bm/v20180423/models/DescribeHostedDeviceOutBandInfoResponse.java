@@ -68,6 +68,26 @@ public class DescribeHostedDeviceOutBandInfoResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeHostedDeviceOutBandInfoResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeHostedDeviceOutBandInfoResponse(DescribeHostedDeviceOutBandInfoResponse source) {
+        if (source.HostedDeviceOutBandInfoSet != null) {
+            this.HostedDeviceOutBandInfoSet = new HostedDeviceOutBandInfo[source.HostedDeviceOutBandInfoSet.length];
+            for (int i = 0; i < source.HostedDeviceOutBandInfoSet.length; i++) {
+                this.HostedDeviceOutBandInfoSet[i] = new HostedDeviceOutBandInfo(source.HostedDeviceOutBandInfoSet[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

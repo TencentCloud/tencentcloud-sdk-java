@@ -114,6 +114,32 @@ public class FrameTagItem extends AbstractModel{
         this.TagItems = TagItems;
     }
 
+    public FrameTagItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public FrameTagItem(FrameTagItem source) {
+        if (source.StartPts != null) {
+            this.StartPts = new Long(source.StartPts);
+        }
+        if (source.EndPts != null) {
+            this.EndPts = new Long(source.EndPts);
+        }
+        if (source.Period != null) {
+            this.Period = new String(source.Period);
+        }
+        if (source.TagItems != null) {
+            this.TagItems = new TagItem[source.TagItems.length];
+            for (int i = 0; i < source.TagItems.length; i++) {
+                this.TagItems[i] = new TagItem(source.TagItems[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -114,6 +114,29 @@ public class TemplateLimit extends AbstractModel{
         this.ServiceTemplateGroupMemberLimit = ServiceTemplateGroupMemberLimit;
     }
 
+    public TemplateLimit() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TemplateLimit(TemplateLimit source) {
+        if (source.AddressTemplateMemberLimit != null) {
+            this.AddressTemplateMemberLimit = new Long(source.AddressTemplateMemberLimit);
+        }
+        if (source.AddressTemplateGroupMemberLimit != null) {
+            this.AddressTemplateGroupMemberLimit = new Long(source.AddressTemplateGroupMemberLimit);
+        }
+        if (source.ServiceTemplateMemberLimit != null) {
+            this.ServiceTemplateMemberLimit = new Long(source.ServiceTemplateMemberLimit);
+        }
+        if (source.ServiceTemplateGroupMemberLimit != null) {
+            this.ServiceTemplateGroupMemberLimit = new Long(source.ServiceTemplateGroupMemberLimit);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

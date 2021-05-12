@@ -206,6 +206,41 @@ public class CloneItem extends AbstractModel{
         this.TaskStatus = TaskStatus;
     }
 
+    public CloneItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CloneItem(CloneItem source) {
+        if (source.SrcInstanceId != null) {
+            this.SrcInstanceId = new String(source.SrcInstanceId);
+        }
+        if (source.DstInstanceId != null) {
+            this.DstInstanceId = new String(source.DstInstanceId);
+        }
+        if (source.CloneJobId != null) {
+            this.CloneJobId = new Long(source.CloneJobId);
+        }
+        if (source.RollbackStrategy != null) {
+            this.RollbackStrategy = new String(source.RollbackStrategy);
+        }
+        if (source.RollbackTargetTime != null) {
+            this.RollbackTargetTime = new String(source.RollbackTargetTime);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+        if (source.TaskStatus != null) {
+            this.TaskStatus = new String(source.TaskStatus);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -45,6 +45,20 @@ public class DeleteLoginStatusResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DeleteLoginStatusResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteLoginStatusResponse(DeleteLoginStatusResponse source) {
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

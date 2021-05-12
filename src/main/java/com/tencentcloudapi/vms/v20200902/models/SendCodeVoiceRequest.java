@@ -142,6 +142,32 @@ public class SendCodeVoiceRequest extends AbstractModel{
         this.SessionContext = SessionContext;
     }
 
+    public SendCodeVoiceRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SendCodeVoiceRequest(SendCodeVoiceRequest source) {
+        if (source.CodeMessage != null) {
+            this.CodeMessage = new String(source.CodeMessage);
+        }
+        if (source.CalledNumber != null) {
+            this.CalledNumber = new String(source.CalledNumber);
+        }
+        if (source.VoiceSdkAppid != null) {
+            this.VoiceSdkAppid = new String(source.VoiceSdkAppid);
+        }
+        if (source.PlayTimes != null) {
+            this.PlayTimes = new Long(source.PlayTimes);
+        }
+        if (source.SessionContext != null) {
+            this.SessionContext = new String(source.SessionContext);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -68,6 +68,23 @@ public class StopGameRequest extends AbstractModel{
         this.HostUserId = HostUserId;
     }
 
+    public StopGameRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public StopGameRequest(StopGameRequest source) {
+        if (source.UserId != null) {
+            this.UserId = new String(source.UserId);
+        }
+        if (source.HostUserId != null) {
+            this.HostUserId = new String(source.HostUserId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

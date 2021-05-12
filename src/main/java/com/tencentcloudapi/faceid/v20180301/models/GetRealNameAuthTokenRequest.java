@@ -91,6 +91,26 @@ public class GetRealNameAuthTokenRequest extends AbstractModel{
         this.CallbackURL = CallbackURL;
     }
 
+    public GetRealNameAuthTokenRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GetRealNameAuthTokenRequest(GetRealNameAuthTokenRequest source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.IDCard != null) {
+            this.IDCard = new String(source.IDCard);
+        }
+        if (source.CallbackURL != null) {
+            this.CallbackURL = new String(source.CallbackURL);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

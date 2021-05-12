@@ -68,6 +68,23 @@ public class DescribeTaskDetailRequest extends AbstractModel{
         this.ShowAllSegments = ShowAllSegments;
     }
 
+    public DescribeTaskDetailRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeTaskDetailRequest(DescribeTaskDetailRequest source) {
+        if (source.TaskId != null) {
+            this.TaskId = new String(source.TaskId);
+        }
+        if (source.ShowAllSegments != null) {
+            this.ShowAllSegments = new Boolean(source.ShowAllSegments);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

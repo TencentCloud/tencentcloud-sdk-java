@@ -68,6 +68,26 @@ public class NetDetectState extends AbstractModel{
         this.NetDetectIpStateSet = NetDetectIpStateSet;
     }
 
+    public NetDetectState() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public NetDetectState(NetDetectState source) {
+        if (source.NetDetectId != null) {
+            this.NetDetectId = new String(source.NetDetectId);
+        }
+        if (source.NetDetectIpStateSet != null) {
+            this.NetDetectIpStateSet = new NetDetectIpState[source.NetDetectIpStateSet.length];
+            for (int i = 0; i < source.NetDetectIpStateSet.length; i++) {
+                this.NetDetectIpStateSet[i] = new NetDetectIpState(source.NetDetectIpStateSet[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

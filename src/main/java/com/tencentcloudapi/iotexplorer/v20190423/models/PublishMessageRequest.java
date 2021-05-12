@@ -160,6 +160,35 @@ public class PublishMessageRequest extends AbstractModel{
         this.PayloadEncoding = PayloadEncoding;
     }
 
+    public PublishMessageRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PublishMessageRequest(PublishMessageRequest source) {
+        if (source.ProductId != null) {
+            this.ProductId = new String(source.ProductId);
+        }
+        if (source.DeviceName != null) {
+            this.DeviceName = new String(source.DeviceName);
+        }
+        if (source.Topic != null) {
+            this.Topic = new String(source.Topic);
+        }
+        if (source.Payload != null) {
+            this.Payload = new String(source.Payload);
+        }
+        if (source.Qos != null) {
+            this.Qos = new Long(source.Qos);
+        }
+        if (source.PayloadEncoding != null) {
+            this.PayloadEncoding = new String(source.PayloadEncoding);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

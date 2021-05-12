@@ -68,6 +68,26 @@ public class DeleteAlertRulesRequest extends AbstractModel{
         this.InstanceId = InstanceId;
     }
 
+    public DeleteAlertRulesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteAlertRulesRequest(DeleteAlertRulesRequest source) {
+        if (source.RuleIds != null) {
+            this.RuleIds = new String[source.RuleIds.length];
+            for (int i = 0; i < source.RuleIds.length; i++) {
+                this.RuleIds[i] = new String(source.RuleIds[i]);
+            }
+        }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

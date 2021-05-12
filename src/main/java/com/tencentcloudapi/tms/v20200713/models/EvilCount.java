@@ -68,6 +68,23 @@ public class EvilCount extends AbstractModel{
         this.Count = Count;
     }
 
+    public EvilCount() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public EvilCount(EvilCount source) {
+        if (source.EvilType != null) {
+            this.EvilType = new String(source.EvilType);
+        }
+        if (source.Count != null) {
+            this.Count = new Long(source.Count);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

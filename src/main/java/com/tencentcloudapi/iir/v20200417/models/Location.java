@@ -114,6 +114,29 @@ public class Location extends AbstractModel{
         this.YMax = YMax;
     }
 
+    public Location() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Location(Location source) {
+        if (source.XMin != null) {
+            this.XMin = new Long(source.XMin);
+        }
+        if (source.YMin != null) {
+            this.YMin = new Long(source.YMin);
+        }
+        if (source.XMax != null) {
+            this.XMax = new Long(source.XMax);
+        }
+        if (source.YMax != null) {
+            this.YMax = new Long(source.YMax);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

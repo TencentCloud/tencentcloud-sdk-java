@@ -68,6 +68,26 @@ public class DeleteEnvironmentsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DeleteEnvironmentsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteEnvironmentsResponse(DeleteEnvironmentsResponse source) {
+        if (source.EnvironmentIds != null) {
+            this.EnvironmentIds = new String[source.EnvironmentIds.length];
+            for (int i = 0; i < source.EnvironmentIds.length; i++) {
+                this.EnvironmentIds[i] = new String(source.EnvironmentIds[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

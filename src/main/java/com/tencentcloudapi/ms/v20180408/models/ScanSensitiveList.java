@@ -45,6 +45,23 @@ public class ScanSensitiveList extends AbstractModel{
         this.SensitiveList = SensitiveList;
     }
 
+    public ScanSensitiveList() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ScanSensitiveList(ScanSensitiveList source) {
+        if (source.SensitiveList != null) {
+            this.SensitiveList = new ScanSensitiveInfo[source.SensitiveList.length];
+            for (int i = 0; i < source.SensitiveList.length; i++) {
+                this.SensitiveList[i] = new ScanSensitiveInfo(source.SensitiveList[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -114,6 +114,29 @@ public class ReplaceTopicRuleRequest extends AbstractModel{
         this.ActionIndex = ActionIndex;
     }
 
+    public ReplaceTopicRuleRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ReplaceTopicRuleRequest(ReplaceTopicRuleRequest source) {
+        if (source.RuleName != null) {
+            this.RuleName = new String(source.RuleName);
+        }
+        if (source.TopicRulePayload != null) {
+            this.TopicRulePayload = new TopicRulePayload(source.TopicRulePayload);
+        }
+        if (source.ModifyType != null) {
+            this.ModifyType = new Long(source.ModifyType);
+        }
+        if (source.ActionIndex != null) {
+            this.ActionIndex = new Long(source.ActionIndex);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

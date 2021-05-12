@@ -160,6 +160,35 @@ public class CloneAccountRequest extends AbstractModel{
         this.DstDesc = DstDesc;
     }
 
+    public CloneAccountRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CloneAccountRequest(CloneAccountRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.SrcUser != null) {
+            this.SrcUser = new String(source.SrcUser);
+        }
+        if (source.SrcHost != null) {
+            this.SrcHost = new String(source.SrcHost);
+        }
+        if (source.DstUser != null) {
+            this.DstUser = new String(source.DstUser);
+        }
+        if (source.DstHost != null) {
+            this.DstHost = new String(source.DstHost);
+        }
+        if (source.DstDesc != null) {
+            this.DstDesc = new String(source.DstDesc);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -68,6 +68,23 @@ public class ModifyIngressRequest extends AbstractModel{
         this.SourceChannel = SourceChannel;
     }
 
+    public ModifyIngressRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyIngressRequest(ModifyIngressRequest source) {
+        if (source.Ingress != null) {
+            this.Ingress = new IngressInfo(source.Ingress);
+        }
+        if (source.SourceChannel != null) {
+            this.SourceChannel = new Long(source.SourceChannel);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

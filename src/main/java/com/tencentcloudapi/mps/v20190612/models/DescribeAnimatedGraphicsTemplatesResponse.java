@@ -91,6 +91,29 @@ public class DescribeAnimatedGraphicsTemplatesResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeAnimatedGraphicsTemplatesResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeAnimatedGraphicsTemplatesResponse(DescribeAnimatedGraphicsTemplatesResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.AnimatedGraphicsTemplateSet != null) {
+            this.AnimatedGraphicsTemplateSet = new AnimatedGraphicsTemplate[source.AnimatedGraphicsTemplateSet.length];
+            for (int i = 0; i < source.AnimatedGraphicsTemplateSet.length; i++) {
+                this.AnimatedGraphicsTemplateSet[i] = new AnimatedGraphicsTemplate(source.AnimatedGraphicsTemplateSet[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -68,6 +68,23 @@ public class ResourceLoc extends AbstractModel{
         this.Param = Param;
     }
 
+    public ResourceLoc() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ResourceLoc(ResourceLoc source) {
+        if (source.StorageType != null) {
+            this.StorageType = new Long(source.StorageType);
+        }
+        if (source.Param != null) {
+            this.Param = new ResourceLocParam(source.Param);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -45,6 +45,20 @@ public class DealGoodsPriceNewElem extends AbstractModel{
         this.RealTotalCost = RealTotalCost;
     }
 
+    public DealGoodsPriceNewElem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DealGoodsPriceNewElem(DealGoodsPriceNewElem source) {
+        if (source.RealTotalCost != null) {
+            this.RealTotalCost = new Long(source.RealTotalCost);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

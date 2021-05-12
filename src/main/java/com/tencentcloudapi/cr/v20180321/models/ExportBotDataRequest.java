@@ -137,6 +137,32 @@ public class ExportBotDataRequest extends AbstractModel{
         this.BotName = BotName;
     }
 
+    public ExportBotDataRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ExportBotDataRequest(ExportBotDataRequest source) {
+        if (source.Module != null) {
+            this.Module = new String(source.Module);
+        }
+        if (source.Operation != null) {
+            this.Operation = new String(source.Operation);
+        }
+        if (source.BizDate != null) {
+            this.BizDate = new String(source.BizDate);
+        }
+        if (source.BotId != null) {
+            this.BotId = new String(source.BotId);
+        }
+        if (source.BotName != null) {
+            this.BotName = new String(source.BotName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

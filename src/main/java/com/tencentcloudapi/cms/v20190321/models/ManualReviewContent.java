@@ -315,6 +315,50 @@ public class ManualReviewContent extends AbstractModel{
         this.Title = Title;
     }
 
+    public ManualReviewContent() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ManualReviewContent(ManualReviewContent source) {
+        if (source.BatchId != null) {
+            this.BatchId = new String(source.BatchId);
+        }
+        if (source.Content != null) {
+            this.Content = new String(source.Content);
+        }
+        if (source.ContentId != null) {
+            this.ContentId = new String(source.ContentId);
+        }
+        if (source.ContentType != null) {
+            this.ContentType = new Long(source.ContentType);
+        }
+        if (source.UserInfo != null) {
+            this.UserInfo = new User(source.UserInfo);
+        }
+        if (source.AutoDetailCode != null) {
+            this.AutoDetailCode = new Long(source.AutoDetailCode);
+        }
+        if (source.AutoResult != null) {
+            this.AutoResult = new Long(source.AutoResult);
+        }
+        if (source.CallBackInfo != null) {
+            this.CallBackInfo = new String(source.CallBackInfo);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.Priority != null) {
+            this.Priority = new Long(source.Priority);
+        }
+        if (source.Title != null) {
+            this.Title = new String(source.Title);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

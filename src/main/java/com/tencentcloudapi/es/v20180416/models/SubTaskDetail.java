@@ -206,6 +206,44 @@ public class SubTaskDetail extends AbstractModel{
         this.Level = Level;
     }
 
+    public SubTaskDetail() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SubTaskDetail(SubTaskDetail source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Result != null) {
+            this.Result = new Boolean(source.Result);
+        }
+        if (source.ErrMsg != null) {
+            this.ErrMsg = new String(source.ErrMsg);
+        }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.FailedIndices != null) {
+            this.FailedIndices = new String[source.FailedIndices.length];
+            for (int i = 0; i < source.FailedIndices.length; i++) {
+                this.FailedIndices[i] = new String(source.FailedIndices[i]);
+            }
+        }
+        if (source.FinishTime != null) {
+            this.FinishTime = new String(source.FinishTime);
+        }
+        if (source.Level != null) {
+            this.Level = new Long(source.Level);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

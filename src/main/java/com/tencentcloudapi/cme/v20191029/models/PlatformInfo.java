@@ -160,6 +160,35 @@ public class PlatformInfo extends AbstractModel{
         this.UpdateTime = UpdateTime;
     }
 
+    public PlatformInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PlatformInfo(PlatformInfo source) {
+        if (source.Platform != null) {
+            this.Platform = new String(source.Platform);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.VodSubAppId != null) {
+            this.VodSubAppId = new Long(source.VodSubAppId);
+        }
+        if (source.LicenseId != null) {
+            this.LicenseId = new String(source.LicenseId);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new String(source.UpdateTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -420,6 +420,65 @@ ipvs-bpf模式: 设置KubeProxyMode为kube-proxy-bpf
         this.BasePodNumber = BasePodNumber;
     }
 
+    public ClusterAdvancedSettings() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ClusterAdvancedSettings(ClusterAdvancedSettings source) {
+        if (source.IPVS != null) {
+            this.IPVS = new Boolean(source.IPVS);
+        }
+        if (source.AsEnabled != null) {
+            this.AsEnabled = new Boolean(source.AsEnabled);
+        }
+        if (source.ContainerRuntime != null) {
+            this.ContainerRuntime = new String(source.ContainerRuntime);
+        }
+        if (source.NodeNameType != null) {
+            this.NodeNameType = new String(source.NodeNameType);
+        }
+        if (source.ExtraArgs != null) {
+            this.ExtraArgs = new ClusterExtraArgs(source.ExtraArgs);
+        }
+        if (source.NetworkType != null) {
+            this.NetworkType = new String(source.NetworkType);
+        }
+        if (source.IsNonStaticIpMode != null) {
+            this.IsNonStaticIpMode = new Boolean(source.IsNonStaticIpMode);
+        }
+        if (source.DeletionProtection != null) {
+            this.DeletionProtection = new Boolean(source.DeletionProtection);
+        }
+        if (source.KubeProxyMode != null) {
+            this.KubeProxyMode = new String(source.KubeProxyMode);
+        }
+        if (source.AuditEnabled != null) {
+            this.AuditEnabled = new Boolean(source.AuditEnabled);
+        }
+        if (source.AuditLogsetId != null) {
+            this.AuditLogsetId = new String(source.AuditLogsetId);
+        }
+        if (source.AuditLogTopicId != null) {
+            this.AuditLogTopicId = new String(source.AuditLogTopicId);
+        }
+        if (source.VpcCniType != null) {
+            this.VpcCniType = new String(source.VpcCniType);
+        }
+        if (source.RuntimeVersion != null) {
+            this.RuntimeVersion = new String(source.RuntimeVersion);
+        }
+        if (source.EnableCustomizedPodCIDR != null) {
+            this.EnableCustomizedPodCIDR = new Boolean(source.EnableCustomizedPodCIDR);
+        }
+        if (source.BasePodNumber != null) {
+            this.BasePodNumber = new Long(source.BasePodNumber);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

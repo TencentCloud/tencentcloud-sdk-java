@@ -91,6 +91,26 @@ public class CreateAnonymousAccessTokenRequest extends AbstractModel{
         this.OldAccessToken = OldAccessToken;
     }
 
+    public CreateAnonymousAccessTokenRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateAnonymousAccessTokenRequest(CreateAnonymousAccessTokenRequest source) {
+        if (source.TtlMinutes != null) {
+            this.TtlMinutes = new Long(source.TtlMinutes);
+        }
+        if (source.Tid != null) {
+            this.Tid = new String(source.Tid);
+        }
+        if (source.OldAccessToken != null) {
+            this.OldAccessToken = new String(source.OldAccessToken);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -114,6 +114,38 @@ public class CreateNewL7RulesUploadRequest extends AbstractModel{
         this.Rules = Rules;
     }
 
+    public CreateNewL7RulesUploadRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateNewL7RulesUploadRequest(CreateNewL7RulesUploadRequest source) {
+        if (source.Business != null) {
+            this.Business = new String(source.Business);
+        }
+        if (source.IdList != null) {
+            this.IdList = new String[source.IdList.length];
+            for (int i = 0; i < source.IdList.length; i++) {
+                this.IdList[i] = new String(source.IdList[i]);
+            }
+        }
+        if (source.VipList != null) {
+            this.VipList = new String[source.VipList.length];
+            for (int i = 0; i < source.VipList.length; i++) {
+                this.VipList[i] = new String(source.VipList[i]);
+            }
+        }
+        if (source.Rules != null) {
+            this.Rules = new L7RuleEntry[source.Rules.length];
+            for (int i = 0; i < source.Rules.length; i++) {
+                this.Rules[i] = new L7RuleEntry(source.Rules[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

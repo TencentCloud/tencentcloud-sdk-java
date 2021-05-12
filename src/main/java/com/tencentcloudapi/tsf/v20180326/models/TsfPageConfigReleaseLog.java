@@ -78,6 +78,26 @@ public class TsfPageConfigReleaseLog extends AbstractModel{
         this.Content = Content;
     }
 
+    public TsfPageConfigReleaseLog() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TsfPageConfigReleaseLog(TsfPageConfigReleaseLog source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.Content != null) {
+            this.Content = new ConfigReleaseLog[source.Content.length];
+            for (int i = 0; i < source.Content.length; i++) {
+                this.Content[i] = new ConfigReleaseLog(source.Content[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

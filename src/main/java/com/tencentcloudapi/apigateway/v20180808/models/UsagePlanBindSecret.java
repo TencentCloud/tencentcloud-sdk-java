@@ -106,6 +106,26 @@ public class UsagePlanBindSecret extends AbstractModel{
         this.Status = Status;
     }
 
+    public UsagePlanBindSecret() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UsagePlanBindSecret(UsagePlanBindSecret source) {
+        if (source.AccessKeyId != null) {
+            this.AccessKeyId = new String(source.AccessKeyId);
+        }
+        if (source.SecretName != null) {
+            this.SecretName = new String(source.SecretName);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -195,6 +195,38 @@ public class DescribeCDNUsageDataRequest extends AbstractModel{
         this.SubAppId = SubAppId;
     }
 
+    public DescribeCDNUsageDataRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeCDNUsageDataRequest(DescribeCDNUsageDataRequest source) {
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+        if (source.DataType != null) {
+            this.DataType = new String(source.DataType);
+        }
+        if (source.DataInterval != null) {
+            this.DataInterval = new Long(source.DataInterval);
+        }
+        if (source.DomainNames != null) {
+            this.DomainNames = new String[source.DomainNames.length];
+            for (int i = 0; i < source.DomainNames.length; i++) {
+                this.DomainNames[i] = new String(source.DomainNames[i]);
+            }
+        }
+        if (source.SubAppId != null) {
+            this.SubAppId = new Long(source.SubAppId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -68,6 +68,23 @@ public class MuxInfo extends AbstractModel{
         this.FlvFlags = FlvFlags;
     }
 
+    public MuxInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MuxInfo(MuxInfo source) {
+        if (source.DeleteStream != null) {
+            this.DeleteStream = new String(source.DeleteStream);
+        }
+        if (source.FlvFlags != null) {
+            this.FlvFlags = new String(source.FlvFlags);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

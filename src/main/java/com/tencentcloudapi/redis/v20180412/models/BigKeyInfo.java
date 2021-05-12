@@ -137,6 +137,32 @@ public class BigKeyInfo extends AbstractModel{
         this.Updatetime = Updatetime;
     }
 
+    public BigKeyInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public BigKeyInfo(BigKeyInfo source) {
+        if (source.DB != null) {
+            this.DB = new Long(source.DB);
+        }
+        if (source.Key != null) {
+            this.Key = new String(source.Key);
+        }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.Size != null) {
+            this.Size = new Long(source.Size);
+        }
+        if (source.Updatetime != null) {
+            this.Updatetime = new Long(source.Updatetime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

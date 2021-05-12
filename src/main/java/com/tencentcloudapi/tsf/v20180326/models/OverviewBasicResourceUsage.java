@@ -162,6 +162,32 @@ public class OverviewBasicResourceUsage extends AbstractModel{
         this.ConsulInstanceCount = ConsulInstanceCount;
     }
 
+    public OverviewBasicResourceUsage() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public OverviewBasicResourceUsage(OverviewBasicResourceUsage source) {
+        if (source.ApplicationCount != null) {
+            this.ApplicationCount = new Long(source.ApplicationCount);
+        }
+        if (source.NamespaceCount != null) {
+            this.NamespaceCount = new Long(source.NamespaceCount);
+        }
+        if (source.GroupCount != null) {
+            this.GroupCount = new Long(source.GroupCount);
+        }
+        if (source.PackageSpaceUsed != null) {
+            this.PackageSpaceUsed = new Long(source.PackageSpaceUsed);
+        }
+        if (source.ConsulInstanceCount != null) {
+            this.ConsulInstanceCount = new Long(source.ConsulInstanceCount);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

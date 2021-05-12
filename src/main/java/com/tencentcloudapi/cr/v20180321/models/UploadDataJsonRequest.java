@@ -137,6 +137,32 @@ public class UploadDataJsonRequest extends AbstractModel{
         this.InstanceId = InstanceId;
     }
 
+    public UploadDataJsonRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UploadDataJsonRequest(UploadDataJsonRequest source) {
+        if (source.Module != null) {
+            this.Module = new String(source.Module);
+        }
+        if (source.Operation != null) {
+            this.Operation = new String(source.Operation);
+        }
+        if (source.Data != null) {
+            this.Data = new String(source.Data);
+        }
+        if (source.UploadModel != null) {
+            this.UploadModel = new String(source.UploadModel);
+        }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

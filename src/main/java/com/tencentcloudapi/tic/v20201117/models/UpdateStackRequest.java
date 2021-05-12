@@ -91,6 +91,26 @@ public class UpdateStackRequest extends AbstractModel{
         this.Description = Description;
     }
 
+    public UpdateStackRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UpdateStackRequest(UpdateStackRequest source) {
+        if (source.StackId != null) {
+            this.StackId = new String(source.StackId);
+        }
+        if (source.StackName != null) {
+            this.StackName = new String(source.StackName);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -114,6 +114,29 @@ public class SecurityGroupsInboundAndOutbound extends AbstractModel{
         this.Proto = Proto;
     }
 
+    public SecurityGroupsInboundAndOutbound() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SecurityGroupsInboundAndOutbound(SecurityGroupsInboundAndOutbound source) {
+        if (source.Action != null) {
+            this.Action = new String(source.Action);
+        }
+        if (source.Ip != null) {
+            this.Ip = new String(source.Ip);
+        }
+        if (source.Port != null) {
+            this.Port = new String(source.Port);
+        }
+        if (source.Proto != null) {
+            this.Proto = new String(source.Proto);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

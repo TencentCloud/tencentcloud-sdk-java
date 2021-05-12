@@ -183,6 +183,41 @@ public class ModifyHTTPSListenerAttributeRequest extends AbstractModel{
         this.PolyClientCertificateIds = PolyClientCertificateIds;
     }
 
+    public ModifyHTTPSListenerAttributeRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyHTTPSListenerAttributeRequest(ModifyHTTPSListenerAttributeRequest source) {
+        if (source.ListenerId != null) {
+            this.ListenerId = new String(source.ListenerId);
+        }
+        if (source.ProxyId != null) {
+            this.ProxyId = new String(source.ProxyId);
+        }
+        if (source.ListenerName != null) {
+            this.ListenerName = new String(source.ListenerName);
+        }
+        if (source.ForwardProtocol != null) {
+            this.ForwardProtocol = new String(source.ForwardProtocol);
+        }
+        if (source.CertificateId != null) {
+            this.CertificateId = new String(source.CertificateId);
+        }
+        if (source.ClientCertificateId != null) {
+            this.ClientCertificateId = new String(source.ClientCertificateId);
+        }
+        if (source.PolyClientCertificateIds != null) {
+            this.PolyClientCertificateIds = new String[source.PolyClientCertificateIds.length];
+            for (int i = 0; i < source.PolyClientCertificateIds.length; i++) {
+                this.PolyClientCertificateIds[i] = new String(source.PolyClientCertificateIds[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

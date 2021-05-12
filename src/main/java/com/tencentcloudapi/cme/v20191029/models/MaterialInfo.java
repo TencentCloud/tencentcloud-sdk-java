@@ -213,6 +213,38 @@ public class MaterialInfo extends AbstractModel{
         this.OtherMaterial = OtherMaterial;
     }
 
+    public MaterialInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MaterialInfo(MaterialInfo source) {
+        if (source.BasicInfo != null) {
+            this.BasicInfo = new MaterialBasicInfo(source.BasicInfo);
+        }
+        if (source.VideoMaterial != null) {
+            this.VideoMaterial = new VideoMaterial(source.VideoMaterial);
+        }
+        if (source.AudioMaterial != null) {
+            this.AudioMaterial = new AudioMaterial(source.AudioMaterial);
+        }
+        if (source.ImageMaterial != null) {
+            this.ImageMaterial = new ImageMaterial(source.ImageMaterial);
+        }
+        if (source.LinkMaterial != null) {
+            this.LinkMaterial = new LinkMaterial(source.LinkMaterial);
+        }
+        if (source.VideoEditTemplateMaterial != null) {
+            this.VideoEditTemplateMaterial = new VideoEditTemplateMaterial(source.VideoEditTemplateMaterial);
+        }
+        if (source.OtherMaterial != null) {
+            this.OtherMaterial = new OtherMaterial(source.OtherMaterial);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

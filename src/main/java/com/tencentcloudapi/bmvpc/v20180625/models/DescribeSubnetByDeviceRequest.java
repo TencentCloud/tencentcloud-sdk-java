@@ -114,6 +114,32 @@ public class DescribeSubnetByDeviceRequest extends AbstractModel{
         this.Limit = Limit;
     }
 
+    public DescribeSubnetByDeviceRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeSubnetByDeviceRequest(DescribeSubnetByDeviceRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.Types != null) {
+            this.Types = new Long[source.Types.length];
+            for (int i = 0; i < source.Types.length; i++) {
+                this.Types[i] = new Long(source.Types[i]);
+            }
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

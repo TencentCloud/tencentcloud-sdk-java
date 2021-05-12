@@ -129,6 +129,29 @@ public class AppStatisticsItem extends AbstractModel{
         this.Date = Date;
     }
 
+    public AppStatisticsItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AppStatisticsItem(AppStatisticsItem source) {
+        if (source.RealtimeSpeechStatisticsItem != null) {
+            this.RealtimeSpeechStatisticsItem = new RealTimeSpeechStatisticsItem(source.RealtimeSpeechStatisticsItem);
+        }
+        if (source.VoiceMessageStatisticsItem != null) {
+            this.VoiceMessageStatisticsItem = new VoiceMessageStatisticsItem(source.VoiceMessageStatisticsItem);
+        }
+        if (source.VoiceFilterStatisticsItem != null) {
+            this.VoiceFilterStatisticsItem = new VoiceFilterStatisticsItem(source.VoiceFilterStatisticsItem);
+        }
+        if (source.Date != null) {
+            this.Date = new String(source.Date);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

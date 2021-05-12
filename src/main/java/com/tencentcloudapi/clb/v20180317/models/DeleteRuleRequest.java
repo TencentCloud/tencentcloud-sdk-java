@@ -160,6 +160,38 @@ public class DeleteRuleRequest extends AbstractModel{
         this.NewDefaultServerDomain = NewDefaultServerDomain;
     }
 
+    public DeleteRuleRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteRuleRequest(DeleteRuleRequest source) {
+        if (source.LoadBalancerId != null) {
+            this.LoadBalancerId = new String(source.LoadBalancerId);
+        }
+        if (source.ListenerId != null) {
+            this.ListenerId = new String(source.ListenerId);
+        }
+        if (source.LocationIds != null) {
+            this.LocationIds = new String[source.LocationIds.length];
+            for (int i = 0; i < source.LocationIds.length; i++) {
+                this.LocationIds[i] = new String(source.LocationIds[i]);
+            }
+        }
+        if (source.Domain != null) {
+            this.Domain = new String(source.Domain);
+        }
+        if (source.Url != null) {
+            this.Url = new String(source.Url);
+        }
+        if (source.NewDefaultServerDomain != null) {
+            this.NewDefaultServerDomain = new String(source.NewDefaultServerDomain);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

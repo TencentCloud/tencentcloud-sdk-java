@@ -183,6 +183,38 @@ public class CallTimeDict extends AbstractModel{
         this.Sunday = Sunday;
     }
 
+    public CallTimeDict() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CallTimeDict(CallTimeDict source) {
+        if (source.Monday != null) {
+            this.Monday = new CallTimeInfo(source.Monday);
+        }
+        if (source.Tuesday != null) {
+            this.Tuesday = new CallTimeInfo(source.Tuesday);
+        }
+        if (source.Wednesday != null) {
+            this.Wednesday = new CallTimeInfo(source.Wednesday);
+        }
+        if (source.Thursday != null) {
+            this.Thursday = new CallTimeInfo(source.Thursday);
+        }
+        if (source.Friday != null) {
+            this.Friday = new CallTimeInfo(source.Friday);
+        }
+        if (source.Saturday != null) {
+            this.Saturday = new CallTimeInfo(source.Saturday);
+        }
+        if (source.Sunday != null) {
+            this.Sunday = new CallTimeInfo(source.Sunday);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

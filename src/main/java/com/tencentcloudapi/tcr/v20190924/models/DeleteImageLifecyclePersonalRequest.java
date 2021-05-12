@@ -45,6 +45,20 @@ public class DeleteImageLifecyclePersonalRequest extends AbstractModel{
         this.RepoName = RepoName;
     }
 
+    public DeleteImageLifecyclePersonalRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteImageLifecyclePersonalRequest(DeleteImageLifecyclePersonalRequest source) {
+        if (source.RepoName != null) {
+            this.RepoName = new String(source.RepoName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -114,6 +114,35 @@ public class CompareIdlFilesResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public CompareIdlFilesResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CompareIdlFilesResponse(CompareIdlFilesResponse source) {
+        if (source.IdlFiles != null) {
+            this.IdlFiles = new IdlFileInfo[source.IdlFiles.length];
+            for (int i = 0; i < source.IdlFiles.length; i++) {
+                this.IdlFiles[i] = new IdlFileInfo(source.IdlFiles[i]);
+            }
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.TableInfos != null) {
+            this.TableInfos = new ParsedTableInfoNew[source.TableInfos.length];
+            for (int i = 0; i < source.TableInfos.length; i++) {
+                this.TableInfos[i] = new ParsedTableInfoNew(source.TableInfos[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

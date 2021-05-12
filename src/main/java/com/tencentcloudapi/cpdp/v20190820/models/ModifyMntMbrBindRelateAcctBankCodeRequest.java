@@ -206,6 +206,41 @@ public class ModifyMntMbrBindRelateAcctBankCodeRequest extends AbstractModel{
         this.Profile = Profile;
     }
 
+    public ModifyMntMbrBindRelateAcctBankCodeRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyMntMbrBindRelateAcctBankCodeRequest(ModifyMntMbrBindRelateAcctBankCodeRequest source) {
+        if (source.MrchCode != null) {
+            this.MrchCode = new String(source.MrchCode);
+        }
+        if (source.SubAcctNo != null) {
+            this.SubAcctNo = new String(source.SubAcctNo);
+        }
+        if (source.MemberBindAcctNo != null) {
+            this.MemberBindAcctNo = new String(source.MemberBindAcctNo);
+        }
+        if (source.AcctOpenBranchName != null) {
+            this.AcctOpenBranchName = new String(source.AcctOpenBranchName);
+        }
+        if (source.CnapsBranchId != null) {
+            this.CnapsBranchId = new String(source.CnapsBranchId);
+        }
+        if (source.EiconBankBranchId != null) {
+            this.EiconBankBranchId = new String(source.EiconBankBranchId);
+        }
+        if (source.ReservedMsg != null) {
+            this.ReservedMsg = new String(source.ReservedMsg);
+        }
+        if (source.Profile != null) {
+            this.Profile = new String(source.Profile);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

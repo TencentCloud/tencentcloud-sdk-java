@@ -68,6 +68,23 @@ public class OpenServerlessDBExtranetAccessRequest extends AbstractModel{
         this.DBInstanceName = DBInstanceName;
     }
 
+    public OpenServerlessDBExtranetAccessRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public OpenServerlessDBExtranetAccessRequest(OpenServerlessDBExtranetAccessRequest source) {
+        if (source.DBInstanceId != null) {
+            this.DBInstanceId = new String(source.DBInstanceId);
+        }
+        if (source.DBInstanceName != null) {
+            this.DBInstanceName = new String(source.DBInstanceName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

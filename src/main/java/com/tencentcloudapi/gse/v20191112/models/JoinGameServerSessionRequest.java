@@ -91,6 +91,26 @@ public class JoinGameServerSessionRequest extends AbstractModel{
         this.PlayerData = PlayerData;
     }
 
+    public JoinGameServerSessionRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public JoinGameServerSessionRequest(JoinGameServerSessionRequest source) {
+        if (source.GameServerSessionId != null) {
+            this.GameServerSessionId = new String(source.GameServerSessionId);
+        }
+        if (source.PlayerId != null) {
+            this.PlayerId = new String(source.PlayerId);
+        }
+        if (source.PlayerData != null) {
+            this.PlayerData = new String(source.PlayerData);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

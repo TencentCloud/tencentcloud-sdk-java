@@ -68,6 +68,26 @@ public class DescribeRepairTaskConstantResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeRepairTaskConstantResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeRepairTaskConstantResponse(DescribeRepairTaskConstantResponse source) {
+        if (source.TaskTypeSet != null) {
+            this.TaskTypeSet = new TaskType[source.TaskTypeSet.length];
+            for (int i = 0; i < source.TaskTypeSet.length; i++) {
+                this.TaskTypeSet[i] = new TaskType(source.TaskTypeSet[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

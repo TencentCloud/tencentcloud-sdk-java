@@ -206,6 +206,41 @@ public class CreateLoRaGatewayRequest extends AbstractModel{
         this.FrequencyId = FrequencyId;
     }
 
+    public CreateLoRaGatewayRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateLoRaGatewayRequest(CreateLoRaGatewayRequest source) {
+        if (source.GatewayId != null) {
+            this.GatewayId = new String(source.GatewayId);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.Location != null) {
+            this.Location = new LoRaGatewayLocation(source.Location);
+        }
+        if (source.Position != null) {
+            this.Position = new String(source.Position);
+        }
+        if (source.PositionDetails != null) {
+            this.PositionDetails = new String(source.PositionDetails);
+        }
+        if (source.IsPublic != null) {
+            this.IsPublic = new Boolean(source.IsPublic);
+        }
+        if (source.FrequencyId != null) {
+            this.FrequencyId = new String(source.FrequencyId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

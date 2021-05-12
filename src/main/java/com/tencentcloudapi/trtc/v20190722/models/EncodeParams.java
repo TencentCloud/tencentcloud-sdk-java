@@ -310,6 +310,50 @@ public class EncodeParams extends AbstractModel{
         this.AudioCodec = AudioCodec;
     }
 
+    public EncodeParams() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public EncodeParams(EncodeParams source) {
+        if (source.AudioSampleRate != null) {
+            this.AudioSampleRate = new Long(source.AudioSampleRate);
+        }
+        if (source.AudioBitrate != null) {
+            this.AudioBitrate = new Long(source.AudioBitrate);
+        }
+        if (source.AudioChannels != null) {
+            this.AudioChannels = new Long(source.AudioChannels);
+        }
+        if (source.VideoWidth != null) {
+            this.VideoWidth = new Long(source.VideoWidth);
+        }
+        if (source.VideoHeight != null) {
+            this.VideoHeight = new Long(source.VideoHeight);
+        }
+        if (source.VideoBitrate != null) {
+            this.VideoBitrate = new Long(source.VideoBitrate);
+        }
+        if (source.VideoFramerate != null) {
+            this.VideoFramerate = new Long(source.VideoFramerate);
+        }
+        if (source.VideoGop != null) {
+            this.VideoGop = new Long(source.VideoGop);
+        }
+        if (source.BackgroundColor != null) {
+            this.BackgroundColor = new Long(source.BackgroundColor);
+        }
+        if (source.BackgroundImageId != null) {
+            this.BackgroundImageId = new Long(source.BackgroundImageId);
+        }
+        if (source.AudioCodec != null) {
+            this.AudioCodec = new Long(source.AudioCodec);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

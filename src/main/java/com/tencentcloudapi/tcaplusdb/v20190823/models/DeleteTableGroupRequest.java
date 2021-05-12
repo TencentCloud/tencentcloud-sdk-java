@@ -68,6 +68,23 @@ public class DeleteTableGroupRequest extends AbstractModel{
         this.TableGroupId = TableGroupId;
     }
 
+    public DeleteTableGroupRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteTableGroupRequest(DeleteTableGroupRequest source) {
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
+        if (source.TableGroupId != null) {
+            this.TableGroupId = new String(source.TableGroupId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

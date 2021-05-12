@@ -96,6 +96,29 @@ public class DescribeCustomersResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeCustomersResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeCustomersResponse(DescribeCustomersResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.UserList != null) {
+            this.UserList = new CustomerInfo[source.UserList.length];
+            for (int i = 0; i < source.UserList.length; i++) {
+                this.UserList[i] = new CustomerInfo(source.UserList[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

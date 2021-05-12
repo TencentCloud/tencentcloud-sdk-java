@@ -50,6 +50,20 @@ public class FieldRef extends AbstractModel{
         this.FieldPath = FieldPath;
     }
 
+    public FieldRef() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public FieldRef(FieldRef source) {
+        if (source.FieldPath != null) {
+            this.FieldPath = new String(source.FieldPath);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

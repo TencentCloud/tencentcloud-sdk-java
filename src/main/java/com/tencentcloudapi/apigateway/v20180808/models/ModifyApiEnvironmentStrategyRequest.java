@@ -114,6 +114,32 @@ public class ModifyApiEnvironmentStrategyRequest extends AbstractModel{
         this.ApiIds = ApiIds;
     }
 
+    public ModifyApiEnvironmentStrategyRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyApiEnvironmentStrategyRequest(ModifyApiEnvironmentStrategyRequest source) {
+        if (source.ServiceId != null) {
+            this.ServiceId = new String(source.ServiceId);
+        }
+        if (source.Strategy != null) {
+            this.Strategy = new Long(source.Strategy);
+        }
+        if (source.EnvironmentName != null) {
+            this.EnvironmentName = new String(source.EnvironmentName);
+        }
+        if (source.ApiIds != null) {
+            this.ApiIds = new String[source.ApiIds.length];
+            for (int i = 0; i < source.ApiIds.length; i++) {
+                this.ApiIds[i] = new String(source.ApiIds[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

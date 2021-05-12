@@ -298,6 +298,56 @@ public class TradeDealDetail extends AbstractModel{
         this.InstanceIds = InstanceIds;
     }
 
+    public TradeDealDetail() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TradeDealDetail(TradeDealDetail source) {
+        if (source.DealId != null) {
+            this.DealId = new String(source.DealId);
+        }
+        if (source.DealName != null) {
+            this.DealName = new String(source.DealName);
+        }
+        if (source.ZoneId != null) {
+            this.ZoneId = new Long(source.ZoneId);
+        }
+        if (source.GoodsNum != null) {
+            this.GoodsNum = new Long(source.GoodsNum);
+        }
+        if (source.Creater != null) {
+            this.Creater = new String(source.Creater);
+        }
+        if (source.CreatTime != null) {
+            this.CreatTime = new String(source.CreatTime);
+        }
+        if (source.OverdueTime != null) {
+            this.OverdueTime = new String(source.OverdueTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.Price != null) {
+            this.Price = new Long(source.Price);
+        }
+        if (source.InstanceIds != null) {
+            this.InstanceIds = new String[source.InstanceIds.length];
+            for (int i = 0; i < source.InstanceIds.length; i++) {
+                this.InstanceIds[i] = new String(source.InstanceIds[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

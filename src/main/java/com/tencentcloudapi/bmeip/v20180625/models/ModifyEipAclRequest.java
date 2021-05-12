@@ -137,6 +137,35 @@ public class ModifyEipAclRequest extends AbstractModel{
         this.Rules = Rules;
     }
 
+    public ModifyEipAclRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyEipAclRequest(ModifyEipAclRequest source) {
+        if (source.AclId != null) {
+            this.AclId = new String(source.AclId);
+        }
+        if (source.AclName != null) {
+            this.AclName = new String(source.AclName);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.Rules != null) {
+            this.Rules = new EipAclRule[source.Rules.length];
+            for (int i = 0; i < source.Rules.length; i++) {
+                this.Rules[i] = new EipAclRule(source.Rules[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

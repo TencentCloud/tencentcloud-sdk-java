@@ -218,6 +218,38 @@ public class ServiceParameter extends AbstractModel{
         this.RelevantRequestParameterType = RelevantRequestParameterType;
     }
 
+    public ServiceParameter() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ServiceParameter(ServiceParameter source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Position != null) {
+            this.Position = new String(source.Position);
+        }
+        if (source.RelevantRequestParameterPosition != null) {
+            this.RelevantRequestParameterPosition = new String(source.RelevantRequestParameterPosition);
+        }
+        if (source.RelevantRequestParameterName != null) {
+            this.RelevantRequestParameterName = new String(source.RelevantRequestParameterName);
+        }
+        if (source.DefaultValue != null) {
+            this.DefaultValue = new String(source.DefaultValue);
+        }
+        if (source.RelevantRequestParameterDesc != null) {
+            this.RelevantRequestParameterDesc = new String(source.RelevantRequestParameterDesc);
+        }
+        if (source.RelevantRequestParameterType != null) {
+            this.RelevantRequestParameterType = new String(source.RelevantRequestParameterType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

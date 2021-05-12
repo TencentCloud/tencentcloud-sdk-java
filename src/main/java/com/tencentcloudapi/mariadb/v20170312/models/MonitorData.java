@@ -91,6 +91,29 @@ public class MonitorData extends AbstractModel{
         this.Data = Data;
     }
 
+    public MonitorData() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MonitorData(MonitorData source) {
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+        if (source.Data != null) {
+            this.Data = new Float[source.Data.length];
+            for (int i = 0; i < source.Data.length; i++) {
+                this.Data[i] = new Float(source.Data[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

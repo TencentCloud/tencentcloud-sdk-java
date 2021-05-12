@@ -101,6 +101,26 @@ public class ImportKeyPairRequest extends AbstractModel{
         this.PublicKey = PublicKey;
     }
 
+    public ImportKeyPairRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ImportKeyPairRequest(ImportKeyPairRequest source) {
+        if (source.KeyName != null) {
+            this.KeyName = new String(source.KeyName);
+        }
+        if (source.ProjectId != null) {
+            this.ProjectId = new Long(source.ProjectId);
+        }
+        if (source.PublicKey != null) {
+            this.PublicKey = new String(source.PublicKey);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

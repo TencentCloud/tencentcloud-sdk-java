@@ -185,6 +185,35 @@ openssl在生成rsa时，可能会需要设置加密密钥，请记住设置的�
         this.Priority = Priority;
     }
 
+    public ModifyFairPlayPemRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyFairPlayPemRequest(ModifyFairPlayPemRequest source) {
+        if (source.Pem != null) {
+            this.Pem = new String(source.Pem);
+        }
+        if (source.Ask != null) {
+            this.Ask = new String(source.Ask);
+        }
+        if (source.FairPlayPemId != null) {
+            this.FairPlayPemId = new Long(source.FairPlayPemId);
+        }
+        if (source.PemDecryptKey != null) {
+            this.PemDecryptKey = new String(source.PemDecryptKey);
+        }
+        if (source.BailorId != null) {
+            this.BailorId = new Long(source.BailorId);
+        }
+        if (source.Priority != null) {
+            this.Priority = new Long(source.Priority);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -310,6 +310,56 @@ public class RuleInfo extends AbstractModel{
         this.CreateUin = CreateUin;
     }
 
+    public RuleInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RuleInfo(RuleInfo source) {
+        if (source.RuleName != null) {
+            this.RuleName = new String(source.RuleName);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.RuleDesc != null) {
+            this.RuleDesc = new String(source.RuleDesc);
+        }
+        if (source.RuleScript != null) {
+            this.RuleScript = new String(source.RuleScript);
+        }
+        if (source.Tags != null) {
+            this.Tags = new StringKV[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new StringKV(source.Tags[i]);
+            }
+        }
+        if (source.MatchCodeList != null) {
+            this.MatchCodeList = new StringKV[source.MatchCodeList.length];
+            for (int i = 0; i < source.MatchCodeList.length; i++) {
+                this.MatchCodeList[i] = new StringKV(source.MatchCodeList[i]);
+            }
+        }
+        if (source.RuleCode != null) {
+            this.RuleCode = new String(source.RuleCode);
+        }
+        if (source.Region != null) {
+            this.Region = new String(source.Region);
+        }
+        if (source.AppId != null) {
+            this.AppId = new String(source.AppId);
+        }
+        if (source.Uin != null) {
+            this.Uin = new String(source.Uin);
+        }
+        if (source.CreateUin != null) {
+            this.CreateUin = new String(source.CreateUin);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

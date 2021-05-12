@@ -891,6 +891,110 @@ PROTECTIVELY_ISOLATED：表示被安全隔离的实例。
         this.PhysicalPosition = PhysicalPosition;
     }
 
+    public Instance() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Instance(Instance source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.InstanceName != null) {
+            this.InstanceName = new String(source.InstanceName);
+        }
+        if (source.InstanceState != null) {
+            this.InstanceState = new String(source.InstanceState);
+        }
+        if (source.Image != null) {
+            this.Image = new Image(source.Image);
+        }
+        if (source.SimpleModule != null) {
+            this.SimpleModule = new SimpleModule(source.SimpleModule);
+        }
+        if (source.Position != null) {
+            this.Position = new Position(source.Position);
+        }
+        if (source.Internet != null) {
+            this.Internet = new Internet(source.Internet);
+        }
+        if (source.InstanceTypeConfig != null) {
+            this.InstanceTypeConfig = new InstanceTypeConfig(source.InstanceTypeConfig);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.TagSet != null) {
+            this.TagSet = new Tag[source.TagSet.length];
+            for (int i = 0; i < source.TagSet.length; i++) {
+                this.TagSet[i] = new Tag(source.TagSet[i]);
+            }
+        }
+        if (source.LatestOperation != null) {
+            this.LatestOperation = new String(source.LatestOperation);
+        }
+        if (source.LatestOperationState != null) {
+            this.LatestOperationState = new String(source.LatestOperationState);
+        }
+        if (source.RestrictState != null) {
+            this.RestrictState = new String(source.RestrictState);
+        }
+        if (source.SystemDiskSize != null) {
+            this.SystemDiskSize = new Long(source.SystemDiskSize);
+        }
+        if (source.DataDiskSize != null) {
+            this.DataDiskSize = new Long(source.DataDiskSize);
+        }
+        if (source.UUID != null) {
+            this.UUID = new String(source.UUID);
+        }
+        if (source.PayMode != null) {
+            this.PayMode = new Long(source.PayMode);
+        }
+        if (source.ExpireTime != null) {
+            this.ExpireTime = new String(source.ExpireTime);
+        }
+        if (source.IsolatedTime != null) {
+            this.IsolatedTime = new String(source.IsolatedTime);
+        }
+        if (source.RenewFlag != null) {
+            this.RenewFlag = new Long(source.RenewFlag);
+        }
+        if (source.ExpireState != null) {
+            this.ExpireState = new String(source.ExpireState);
+        }
+        if (source.SystemDisk != null) {
+            this.SystemDisk = new DiskInfo(source.SystemDisk);
+        }
+        if (source.DataDisks != null) {
+            this.DataDisks = new DiskInfo[source.DataDisks.length];
+            for (int i = 0; i < source.DataDisks.length; i++) {
+                this.DataDisks[i] = new DiskInfo(source.DataDisks[i]);
+            }
+        }
+        if (source.NewFlag != null) {
+            this.NewFlag = new Long(source.NewFlag);
+        }
+        if (source.SecurityGroupIds != null) {
+            this.SecurityGroupIds = new String[source.SecurityGroupIds.length];
+            for (int i = 0; i < source.SecurityGroupIds.length; i++) {
+                this.SecurityGroupIds[i] = new String(source.SecurityGroupIds[i]);
+            }
+        }
+        if (source.VirtualPrivateCloud != null) {
+            this.VirtualPrivateCloud = new VirtualPrivateCloud(source.VirtualPrivateCloud);
+        }
+        if (source.ISP != null) {
+            this.ISP = new String(source.ISP);
+        }
+        if (source.PhysicalPosition != null) {
+            this.PhysicalPosition = new PhysicalPosition(source.PhysicalPosition);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

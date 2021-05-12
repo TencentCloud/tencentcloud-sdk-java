@@ -274,6 +274,44 @@ public class OutterResource extends AbstractModel{
         this.InstanceType = InstanceType;
     }
 
+    public OutterResource() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public OutterResource(OutterResource source) {
+        if (source.Spec != null) {
+            this.Spec = new String(source.Spec);
+        }
+        if (source.SpecName != null) {
+            this.SpecName = new String(source.SpecName);
+        }
+        if (source.StorageType != null) {
+            this.StorageType = new Long(source.StorageType);
+        }
+        if (source.DiskType != null) {
+            this.DiskType = new String(source.DiskType);
+        }
+        if (source.RootSize != null) {
+            this.RootSize = new Long(source.RootSize);
+        }
+        if (source.MemSize != null) {
+            this.MemSize = new Long(source.MemSize);
+        }
+        if (source.Cpu != null) {
+            this.Cpu = new Long(source.Cpu);
+        }
+        if (source.DiskSize != null) {
+            this.DiskSize = new Long(source.DiskSize);
+        }
+        if (source.InstanceType != null) {
+            this.InstanceType = new String(source.InstanceType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

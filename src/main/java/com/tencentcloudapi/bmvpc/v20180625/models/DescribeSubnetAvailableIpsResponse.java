@@ -68,6 +68,26 @@ public class DescribeSubnetAvailableIpsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeSubnetAvailableIpsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeSubnetAvailableIpsResponse(DescribeSubnetAvailableIpsResponse source) {
+        if (source.IpSet != null) {
+            this.IpSet = new String[source.IpSet.length];
+            for (int i = 0; i < source.IpSet.length; i++) {
+                this.IpSet[i] = new String(source.IpSet[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -137,6 +137,32 @@ public class ModifyComputeEnvRequest extends AbstractModel{
         this.EnvData = EnvData;
     }
 
+    public ModifyComputeEnvRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyComputeEnvRequest(ModifyComputeEnvRequest source) {
+        if (source.EnvId != null) {
+            this.EnvId = new String(source.EnvId);
+        }
+        if (source.DesiredComputeNodeCount != null) {
+            this.DesiredComputeNodeCount = new Long(source.DesiredComputeNodeCount);
+        }
+        if (source.EnvName != null) {
+            this.EnvName = new String(source.EnvName);
+        }
+        if (source.EnvDescription != null) {
+            this.EnvDescription = new String(source.EnvDescription);
+        }
+        if (source.EnvData != null) {
+            this.EnvData = new ComputeEnvData(source.EnvData);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

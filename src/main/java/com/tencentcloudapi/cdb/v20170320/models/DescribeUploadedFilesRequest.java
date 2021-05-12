@@ -91,6 +91,26 @@ public class DescribeUploadedFilesRequest extends AbstractModel{
         this.Limit = Limit;
     }
 
+    public DescribeUploadedFilesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeUploadedFilesRequest(DescribeUploadedFilesRequest source) {
+        if (source.Path != null) {
+            this.Path = new String(source.Path);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

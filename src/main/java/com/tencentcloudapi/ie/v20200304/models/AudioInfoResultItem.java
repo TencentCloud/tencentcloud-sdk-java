@@ -210,6 +210,35 @@ public class AudioInfoResultItem extends AbstractModel{
         this.Duration = Duration;
     }
 
+    public AudioInfoResultItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AudioInfoResultItem(AudioInfoResultItem source) {
+        if (source.Stream != null) {
+            this.Stream = new Long(source.Stream);
+        }
+        if (source.Sample != null) {
+            this.Sample = new Long(source.Sample);
+        }
+        if (source.Channel != null) {
+            this.Channel = new Long(source.Channel);
+        }
+        if (source.Codec != null) {
+            this.Codec = new String(source.Codec);
+        }
+        if (source.Bitrate != null) {
+            this.Bitrate = new Long(source.Bitrate);
+        }
+        if (source.Duration != null) {
+            this.Duration = new Long(source.Duration);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

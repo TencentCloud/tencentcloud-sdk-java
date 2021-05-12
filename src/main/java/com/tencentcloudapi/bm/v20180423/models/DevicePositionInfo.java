@@ -275,6 +275,50 @@ public class DevicePositionInfo extends AbstractModel{
         this.Deadline = Deadline;
     }
 
+    public DevicePositionInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DevicePositionInfo(DevicePositionInfo source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.Zone != null) {
+            this.Zone = new String(source.Zone);
+        }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.SubnetId != null) {
+            this.SubnetId = new String(source.SubnetId);
+        }
+        if (source.LanIp != null) {
+            this.LanIp = new String(source.LanIp);
+        }
+        if (source.Alias != null) {
+            this.Alias = new String(source.Alias);
+        }
+        if (source.RckName != null) {
+            this.RckName = new String(source.RckName);
+        }
+        if (source.PosCode != null) {
+            this.PosCode = new Long(source.PosCode);
+        }
+        if (source.SwitchName != null) {
+            this.SwitchName = new String(source.SwitchName);
+        }
+        if (source.DeliverTime != null) {
+            this.DeliverTime = new String(source.DeliverTime);
+        }
+        if (source.Deadline != null) {
+            this.Deadline = new String(source.Deadline);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

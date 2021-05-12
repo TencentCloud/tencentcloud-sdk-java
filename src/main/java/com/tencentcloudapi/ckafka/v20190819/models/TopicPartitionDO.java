@@ -114,6 +114,29 @@ public class TopicPartitionDO extends AbstractModel{
         this.ReplicaNum = ReplicaNum;
     }
 
+    public TopicPartitionDO() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TopicPartitionDO(TopicPartitionDO source) {
+        if (source.Partition != null) {
+            this.Partition = new Long(source.Partition);
+        }
+        if (source.LeaderStatus != null) {
+            this.LeaderStatus = new Long(source.LeaderStatus);
+        }
+        if (source.IsrNum != null) {
+            this.IsrNum = new Long(source.IsrNum);
+        }
+        if (source.ReplicaNum != null) {
+            this.ReplicaNum = new Long(source.ReplicaNum);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

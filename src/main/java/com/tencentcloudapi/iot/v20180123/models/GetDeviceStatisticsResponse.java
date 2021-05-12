@@ -68,6 +68,26 @@ public class GetDeviceStatisticsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public GetDeviceStatisticsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GetDeviceStatisticsResponse(GetDeviceStatisticsResponse source) {
+        if (source.DeviceStatistics != null) {
+            this.DeviceStatistics = new DeviceStatData[source.DeviceStatistics.length];
+            for (int i = 0; i < source.DeviceStatistics.length; i++) {
+                this.DeviceStatistics[i] = new DeviceStatData(source.DeviceStatistics[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

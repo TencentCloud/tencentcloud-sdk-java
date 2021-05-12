@@ -88,6 +88,23 @@ public class FaceDetailInfo extends AbstractModel{
         this.FaceDetailAttributesInfo = FaceDetailAttributesInfo;
     }
 
+    public FaceDetailInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public FaceDetailInfo(FaceDetailInfo source) {
+        if (source.FaceRect != null) {
+            this.FaceRect = new FaceRect(source.FaceRect);
+        }
+        if (source.FaceDetailAttributesInfo != null) {
+            this.FaceDetailAttributesInfo = new FaceDetailAttributesInfo(source.FaceDetailAttributesInfo);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

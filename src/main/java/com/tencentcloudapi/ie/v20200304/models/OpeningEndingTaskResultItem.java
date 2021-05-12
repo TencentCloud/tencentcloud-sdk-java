@@ -114,6 +114,29 @@ public class OpeningEndingTaskResultItem extends AbstractModel{
         this.EndingConfidence = EndingConfidence;
     }
 
+    public OpeningEndingTaskResultItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public OpeningEndingTaskResultItem(OpeningEndingTaskResultItem source) {
+        if (source.OpeningTimeOffset != null) {
+            this.OpeningTimeOffset = new Float(source.OpeningTimeOffset);
+        }
+        if (source.OpeningConfidence != null) {
+            this.OpeningConfidence = new Float(source.OpeningConfidence);
+        }
+        if (source.EndingTimeOffset != null) {
+            this.EndingTimeOffset = new Float(source.EndingTimeOffset);
+        }
+        if (source.EndingConfidence != null) {
+            this.EndingConfidence = new Float(source.EndingConfidence);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

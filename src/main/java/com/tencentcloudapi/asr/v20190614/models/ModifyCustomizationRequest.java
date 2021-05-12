@@ -114,6 +114,29 @@ public class ModifyCustomizationRequest extends AbstractModel{
         this.TextUrl = TextUrl;
     }
 
+    public ModifyCustomizationRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyCustomizationRequest(ModifyCustomizationRequest source) {
+        if (source.ModelId != null) {
+            this.ModelId = new String(source.ModelId);
+        }
+        if (source.ModelName != null) {
+            this.ModelName = new String(source.ModelName);
+        }
+        if (source.ModelType != null) {
+            this.ModelType = new String(source.ModelType);
+        }
+        if (source.TextUrl != null) {
+            this.TextUrl = new String(source.TextUrl);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

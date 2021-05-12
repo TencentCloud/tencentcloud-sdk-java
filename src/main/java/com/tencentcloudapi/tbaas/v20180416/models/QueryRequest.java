@@ -229,6 +229,50 @@ public class QueryRequest extends AbstractModel{
         this.Args = Args;
     }
 
+    public QueryRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public QueryRequest(QueryRequest source) {
+        if (source.Module != null) {
+            this.Module = new String(source.Module);
+        }
+        if (source.Operation != null) {
+            this.Operation = new String(source.Operation);
+        }
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
+        if (source.ChaincodeName != null) {
+            this.ChaincodeName = new String(source.ChaincodeName);
+        }
+        if (source.ChannelName != null) {
+            this.ChannelName = new String(source.ChannelName);
+        }
+        if (source.Peers != null) {
+            this.Peers = new PeerSet[source.Peers.length];
+            for (int i = 0; i < source.Peers.length; i++) {
+                this.Peers[i] = new PeerSet(source.Peers[i]);
+            }
+        }
+        if (source.FuncName != null) {
+            this.FuncName = new String(source.FuncName);
+        }
+        if (source.GroupName != null) {
+            this.GroupName = new String(source.GroupName);
+        }
+        if (source.Args != null) {
+            this.Args = new String[source.Args.length];
+            for (int i = 0; i < source.Args.length; i++) {
+                this.Args[i] = new String(source.Args[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

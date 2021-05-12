@@ -257,6 +257,32 @@ public class AlgorithmResult extends AbstractModel{
         this.AlgoType = AlgoType;
     }
 
+    public AlgorithmResult() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AlgorithmResult(AlgorithmResult source) {
+        if (source.AlgoId != null) {
+            this.AlgoId = new String(source.AlgoId);
+        }
+        if (source.AlgoName != null) {
+            this.AlgoName = new String(source.AlgoName);
+        }
+        if (source.Result != null) {
+            this.Result = new String(source.Result);
+        }
+        if (source.Error != null) {
+            this.Error = new String(source.Error);
+        }
+        if (source.AlgoType != null) {
+            this.AlgoType = new Long(source.AlgoType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -78,6 +78,23 @@ public class OsData extends AbstractModel{
         this.ChipManufacture = ChipManufacture;
     }
 
+    public OsData() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public OsData(OsData source) {
+        if (source.ChipId != null) {
+            this.ChipId = new String(source.ChipId);
+        }
+        if (source.ChipManufacture != null) {
+            this.ChipManufacture = new String(source.ChipManufacture);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -114,6 +114,29 @@ public class DescribeLaneRulesRequest extends AbstractModel{
         this.RuleId = RuleId;
     }
 
+    public DescribeLaneRulesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeLaneRulesRequest(DescribeLaneRulesRequest source) {
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.SearchWord != null) {
+            this.SearchWord = new String(source.SearchWord);
+        }
+        if (source.RuleId != null) {
+            this.RuleId = new String(source.RuleId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

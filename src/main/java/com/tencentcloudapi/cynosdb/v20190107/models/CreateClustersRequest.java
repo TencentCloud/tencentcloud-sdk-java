@@ -851,6 +851,119 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
         this.AutoPauseDelay = AutoPauseDelay;
     }
 
+    public CreateClustersRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateClustersRequest(CreateClustersRequest source) {
+        if (source.Zone != null) {
+            this.Zone = new String(source.Zone);
+        }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.SubnetId != null) {
+            this.SubnetId = new String(source.SubnetId);
+        }
+        if (source.DbType != null) {
+            this.DbType = new String(source.DbType);
+        }
+        if (source.DbVersion != null) {
+            this.DbVersion = new String(source.DbVersion);
+        }
+        if (source.ProjectId != null) {
+            this.ProjectId = new Long(source.ProjectId);
+        }
+        if (source.Cpu != null) {
+            this.Cpu = new Long(source.Cpu);
+        }
+        if (source.Memory != null) {
+            this.Memory = new Long(source.Memory);
+        }
+        if (source.Storage != null) {
+            this.Storage = new Long(source.Storage);
+        }
+        if (source.ClusterName != null) {
+            this.ClusterName = new String(source.ClusterName);
+        }
+        if (source.AdminPassword != null) {
+            this.AdminPassword = new String(source.AdminPassword);
+        }
+        if (source.Port != null) {
+            this.Port = new Long(source.Port);
+        }
+        if (source.PayMode != null) {
+            this.PayMode = new Long(source.PayMode);
+        }
+        if (source.Count != null) {
+            this.Count = new Long(source.Count);
+        }
+        if (source.RollbackStrategy != null) {
+            this.RollbackStrategy = new String(source.RollbackStrategy);
+        }
+        if (source.RollbackId != null) {
+            this.RollbackId = new Long(source.RollbackId);
+        }
+        if (source.OriginalClusterId != null) {
+            this.OriginalClusterId = new String(source.OriginalClusterId);
+        }
+        if (source.ExpectTime != null) {
+            this.ExpectTime = new String(source.ExpectTime);
+        }
+        if (source.ExpectTimeThresh != null) {
+            this.ExpectTimeThresh = new Long(source.ExpectTimeThresh);
+        }
+        if (source.StorageLimit != null) {
+            this.StorageLimit = new Long(source.StorageLimit);
+        }
+        if (source.InstanceCount != null) {
+            this.InstanceCount = new Long(source.InstanceCount);
+        }
+        if (source.TimeSpan != null) {
+            this.TimeSpan = new Long(source.TimeSpan);
+        }
+        if (source.TimeUnit != null) {
+            this.TimeUnit = new String(source.TimeUnit);
+        }
+        if (source.AutoRenewFlag != null) {
+            this.AutoRenewFlag = new Long(source.AutoRenewFlag);
+        }
+        if (source.AutoVoucher != null) {
+            this.AutoVoucher = new Long(source.AutoVoucher);
+        }
+        if (source.HaCount != null) {
+            this.HaCount = new Long(source.HaCount);
+        }
+        if (source.OrderSource != null) {
+            this.OrderSource = new String(source.OrderSource);
+        }
+        if (source.ResourceTags != null) {
+            this.ResourceTags = new Tag[source.ResourceTags.length];
+            for (int i = 0; i < source.ResourceTags.length; i++) {
+                this.ResourceTags[i] = new Tag(source.ResourceTags[i]);
+            }
+        }
+        if (source.DbMode != null) {
+            this.DbMode = new String(source.DbMode);
+        }
+        if (source.MinCpu != null) {
+            this.MinCpu = new Float(source.MinCpu);
+        }
+        if (source.MaxCpu != null) {
+            this.MaxCpu = new Float(source.MaxCpu);
+        }
+        if (source.AutoPause != null) {
+            this.AutoPause = new String(source.AutoPause);
+        }
+        if (source.AutoPauseDelay != null) {
+            this.AutoPauseDelay = new Long(source.AutoPauseDelay);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

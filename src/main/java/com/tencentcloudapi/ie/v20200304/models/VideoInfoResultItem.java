@@ -309,6 +309,44 @@ public class VideoInfoResultItem extends AbstractModel{
         this.PixFormat = PixFormat;
     }
 
+    public VideoInfoResultItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public VideoInfoResultItem(VideoInfoResultItem source) {
+        if (source.Stream != null) {
+            this.Stream = new Long(source.Stream);
+        }
+        if (source.Width != null) {
+            this.Width = new Long(source.Width);
+        }
+        if (source.Height != null) {
+            this.Height = new Long(source.Height);
+        }
+        if (source.Bitrate != null) {
+            this.Bitrate = new Long(source.Bitrate);
+        }
+        if (source.Fps != null) {
+            this.Fps = new String(source.Fps);
+        }
+        if (source.Codec != null) {
+            this.Codec = new String(source.Codec);
+        }
+        if (source.Rotate != null) {
+            this.Rotate = new Long(source.Rotate);
+        }
+        if (source.Duration != null) {
+            this.Duration = new Long(source.Duration);
+        }
+        if (source.PixFormat != null) {
+            this.PixFormat = new String(source.PixFormat);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

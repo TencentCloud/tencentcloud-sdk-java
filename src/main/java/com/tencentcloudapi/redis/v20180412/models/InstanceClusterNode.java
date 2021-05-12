@@ -321,6 +321,56 @@ public class InstanceClusterNode extends AbstractModel{
         this.StorageSlope = StorageSlope;
     }
 
+    public InstanceClusterNode() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public InstanceClusterNode(InstanceClusterNode source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.RunId != null) {
+            this.RunId = new String(source.RunId);
+        }
+        if (source.Role != null) {
+            this.Role = new Long(source.Role);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.Connected != null) {
+            this.Connected = new Long(source.Connected);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.DownTime != null) {
+            this.DownTime = new String(source.DownTime);
+        }
+        if (source.Slots != null) {
+            this.Slots = new String(source.Slots);
+        }
+        if (source.Keys != null) {
+            this.Keys = new Long(source.Keys);
+        }
+        if (source.Qps != null) {
+            this.Qps = new Long(source.Qps);
+        }
+        if (source.QpsSlope != null) {
+            this.QpsSlope = new Float(source.QpsSlope);
+        }
+        if (source.Storage != null) {
+            this.Storage = new Long(source.Storage);
+        }
+        if (source.StorageSlope != null) {
+            this.StorageSlope = new Float(source.StorageSlope);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -91,6 +91,29 @@ public class DescribeDisksResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeDisksResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeDisksResponse(DescribeDisksResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.DiskSet != null) {
+            this.DiskSet = new Disk[source.DiskSet.length];
+            for (int i = 0; i < source.DiskSet.length; i++) {
+                this.DiskSet[i] = new Disk(source.DiskSet[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -78,6 +78,23 @@ public class UsagePlanBindEnvironment extends AbstractModel{
         this.ServiceId = ServiceId;
     }
 
+    public UsagePlanBindEnvironment() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UsagePlanBindEnvironment(UsagePlanBindEnvironment source) {
+        if (source.EnvironmentName != null) {
+            this.EnvironmentName = new String(source.EnvironmentName);
+        }
+        if (source.ServiceId != null) {
+            this.ServiceId = new String(source.ServiceId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

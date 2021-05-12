@@ -68,6 +68,26 @@ public class DescribeDbauditInstanceTypeResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeDbauditInstanceTypeResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeDbauditInstanceTypeResponse(DescribeDbauditInstanceTypeResponse source) {
+        if (source.DbauditTypesSet != null) {
+            this.DbauditTypesSet = new DbauditTypesInfo[source.DbauditTypesSet.length];
+            for (int i = 0; i < source.DbauditTypesSet.length; i++) {
+                this.DbauditTypesSet[i] = new DbauditTypesInfo(source.DbauditTypesSet[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

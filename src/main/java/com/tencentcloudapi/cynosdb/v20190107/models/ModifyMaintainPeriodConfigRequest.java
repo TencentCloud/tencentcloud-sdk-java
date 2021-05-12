@@ -114,6 +114,32 @@ public class ModifyMaintainPeriodConfigRequest extends AbstractModel{
         this.MaintainWeekDays = MaintainWeekDays;
     }
 
+    public ModifyMaintainPeriodConfigRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyMaintainPeriodConfigRequest(ModifyMaintainPeriodConfigRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.MaintainStartTime != null) {
+            this.MaintainStartTime = new Long(source.MaintainStartTime);
+        }
+        if (source.MaintainDuration != null) {
+            this.MaintainDuration = new Long(source.MaintainDuration);
+        }
+        if (source.MaintainWeekDays != null) {
+            this.MaintainWeekDays = new String[source.MaintainWeekDays.length];
+            for (int i = 0; i < source.MaintainWeekDays.length; i++) {
+                this.MaintainWeekDays[i] = new String(source.MaintainWeekDays[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

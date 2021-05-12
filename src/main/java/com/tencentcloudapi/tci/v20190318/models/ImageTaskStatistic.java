@@ -206,6 +206,50 @@ public class ImageTaskStatistic extends AbstractModel{
         this.TeacherMovement = TeacherMovement;
     }
 
+    public ImageTaskStatistic() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ImageTaskStatistic(ImageTaskStatistic source) {
+        if (source.FaceDetect != null) {
+            this.FaceDetect = new FaceDetectStatistic[source.FaceDetect.length];
+            for (int i = 0; i < source.FaceDetect.length; i++) {
+                this.FaceDetect[i] = new FaceDetectStatistic(source.FaceDetect[i]);
+            }
+        }
+        if (source.FaceExpression != null) {
+            this.FaceExpression = new FaceExpressStatistic[source.FaceExpression.length];
+            for (int i = 0; i < source.FaceExpression.length; i++) {
+                this.FaceExpression[i] = new FaceExpressStatistic(source.FaceExpression[i]);
+            }
+        }
+        if (source.FaceIdentify != null) {
+            this.FaceIdentify = new FaceIdentifyStatistic[source.FaceIdentify.length];
+            for (int i = 0; i < source.FaceIdentify.length; i++) {
+                this.FaceIdentify[i] = new FaceIdentifyStatistic(source.FaceIdentify[i]);
+            }
+        }
+        if (source.Gesture != null) {
+            this.Gesture = new ActionStatistic(source.Gesture);
+        }
+        if (source.Handtracking != null) {
+            this.Handtracking = new ActionStatistic(source.Handtracking);
+        }
+        if (source.Light != null) {
+            this.Light = new LightStatistic(source.Light);
+        }
+        if (source.StudentMovement != null) {
+            this.StudentMovement = new ActionStatistic(source.StudentMovement);
+        }
+        if (source.TeacherMovement != null) {
+            this.TeacherMovement = new ActionStatistic(source.TeacherMovement);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

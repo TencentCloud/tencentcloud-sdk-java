@@ -137,6 +137,35 @@ public class DescribeClusterPersonTraceResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeClusterPersonTraceResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeClusterPersonTraceResponse(DescribeClusterPersonTraceResponse source) {
+        if (source.MallId != null) {
+            this.MallId = new String(source.MallId);
+        }
+        if (source.MallCode != null) {
+            this.MallCode = new String(source.MallCode);
+        }
+        if (source.PersonId != null) {
+            this.PersonId = new String(source.PersonId);
+        }
+        if (source.TracePointSet != null) {
+            this.TracePointSet = new DailyTracePoint[source.TracePointSet.length];
+            for (int i = 0; i < source.TracePointSet.length; i++) {
+                this.TracePointSet[i] = new DailyTracePoint(source.TracePointSet[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

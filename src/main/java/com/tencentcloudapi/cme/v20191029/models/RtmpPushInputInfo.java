@@ -68,6 +68,23 @@ public class RtmpPushInputInfo extends AbstractModel{
         this.PushUrl = PushUrl;
     }
 
+    public RtmpPushInputInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RtmpPushInputInfo(RtmpPushInputInfo source) {
+        if (source.ExpiredSecond != null) {
+            this.ExpiredSecond = new Long(source.ExpiredSecond);
+        }
+        if (source.PushUrl != null) {
+            this.PushUrl = new String(source.PushUrl);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

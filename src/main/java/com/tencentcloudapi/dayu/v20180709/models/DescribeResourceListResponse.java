@@ -264,6 +264,32 @@ public class DescribeResourceListResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeResourceListResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeResourceListResponse(DescribeResourceListResponse source) {
+        if (source.Total != null) {
+            this.Total = new Long(source.Total);
+        }
+        if (source.ServicePacks != null) {
+            this.ServicePacks = new KeyValueRecord[source.ServicePacks.length];
+            for (int i = 0; i < source.ServicePacks.length; i++) {
+                this.ServicePacks[i] = new KeyValueRecord(source.ServicePacks[i]);
+            }
+        }
+        if (source.Business != null) {
+            this.Business = new String(source.Business);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

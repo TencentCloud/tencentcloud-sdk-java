@@ -298,6 +298,53 @@ public class DescribeBaseOverviewResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeBaseOverviewResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeBaseOverviewResponse(DescribeBaseOverviewResponse source) {
+        if (source.ModuleNum != null) {
+            this.ModuleNum = new Long(source.ModuleNum);
+        }
+        if (source.NodeNum != null) {
+            this.NodeNum = new Long(source.NodeNum);
+        }
+        if (source.VcpuNum != null) {
+            this.VcpuNum = new Long(source.VcpuNum);
+        }
+        if (source.MemoryNum != null) {
+            this.MemoryNum = new Long(source.MemoryNum);
+        }
+        if (source.StorageNum != null) {
+            this.StorageNum = new Long(source.StorageNum);
+        }
+        if (source.NetworkNum != null) {
+            this.NetworkNum = new Long(source.NetworkNum);
+        }
+        if (source.InstanceNum != null) {
+            this.InstanceNum = new Long(source.InstanceNum);
+        }
+        if (source.RunningNum != null) {
+            this.RunningNum = new Long(source.RunningNum);
+        }
+        if (source.IsolationNum != null) {
+            this.IsolationNum = new Long(source.IsolationNum);
+        }
+        if (source.ExpiredNum != null) {
+            this.ExpiredNum = new Long(source.ExpiredNum);
+        }
+        if (source.WillExpireNum != null) {
+            this.WillExpireNum = new Long(source.WillExpireNum);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

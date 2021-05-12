@@ -160,6 +160,38 @@ public class CreateMailProfileRequest extends AbstractModel{
         this.BindInstanceIds = BindInstanceIds;
     }
 
+    public CreateMailProfileRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateMailProfileRequest(CreateMailProfileRequest source) {
+        if (source.ProfileInfo != null) {
+            this.ProfileInfo = new ProfileInfo(source.ProfileInfo);
+        }
+        if (source.ProfileLevel != null) {
+            this.ProfileLevel = new String(source.ProfileLevel);
+        }
+        if (source.ProfileName != null) {
+            this.ProfileName = new String(source.ProfileName);
+        }
+        if (source.ProfileType != null) {
+            this.ProfileType = new String(source.ProfileType);
+        }
+        if (source.Product != null) {
+            this.Product = new String(source.Product);
+        }
+        if (source.BindInstanceIds != null) {
+            this.BindInstanceIds = new String[source.BindInstanceIds.length];
+            for (int i = 0; i < source.BindInstanceIds.length; i++) {
+                this.BindInstanceIds[i] = new String(source.BindInstanceIds[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

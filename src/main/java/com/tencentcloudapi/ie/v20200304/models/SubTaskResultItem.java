@@ -248,6 +248,38 @@ public class SubTaskResultItem extends AbstractModel{
         this.FileInfo = FileInfo;
     }
 
+    public SubTaskResultItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SubTaskResultItem(SubTaskResultItem source) {
+        if (source.TaskName != null) {
+            this.TaskName = new String(source.TaskName);
+        }
+        if (source.StatusCode != null) {
+            this.StatusCode = new Long(source.StatusCode);
+        }
+        if (source.StatusMsg != null) {
+            this.StatusMsg = new String(source.StatusMsg);
+        }
+        if (source.ProgressRate != null) {
+            this.ProgressRate = new Long(source.ProgressRate);
+        }
+        if (source.DownloadUrl != null) {
+            this.DownloadUrl = new String(source.DownloadUrl);
+        }
+        if (source.Md5 != null) {
+            this.Md5 = new String(source.Md5);
+        }
+        if (source.FileInfo != null) {
+            this.FileInfo = new FileInfo(source.FileInfo);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

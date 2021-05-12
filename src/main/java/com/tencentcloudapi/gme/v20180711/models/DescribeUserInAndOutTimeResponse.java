@@ -91,6 +91,29 @@ public class DescribeUserInAndOutTimeResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeUserInAndOutTimeResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeUserInAndOutTimeResponse(DescribeUserInAndOutTimeResponse source) {
+        if (source.InOutList != null) {
+            this.InOutList = new InOutTimeInfo[source.InOutList.length];
+            for (int i = 0; i < source.InOutList.length; i++) {
+                this.InOutList[i] = new InOutTimeInfo(source.InOutList[i]);
+            }
+        }
+        if (source.Duration != null) {
+            this.Duration = new Long(source.Duration);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

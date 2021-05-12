@@ -68,6 +68,26 @@ public class DescribeBaseMetricsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeBaseMetricsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeBaseMetricsResponse(DescribeBaseMetricsResponse source) {
+        if (source.MetricSet != null) {
+            this.MetricSet = new MetricSet[source.MetricSet.length];
+            for (int i = 0; i < source.MetricSet.length; i++) {
+                this.MetricSet[i] = new MetricSet(source.MetricSet[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -91,6 +91,26 @@ public class CreateSnapshotRequest extends AbstractModel{
         this.Deadline = Deadline;
     }
 
+    public CreateSnapshotRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateSnapshotRequest(CreateSnapshotRequest source) {
+        if (source.DiskId != null) {
+            this.DiskId = new String(source.DiskId);
+        }
+        if (source.SnapshotName != null) {
+            this.SnapshotName = new String(source.SnapshotName);
+        }
+        if (source.Deadline != null) {
+            this.Deadline = new String(source.Deadline);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

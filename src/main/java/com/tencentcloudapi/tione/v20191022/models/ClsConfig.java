@@ -91,6 +91,26 @@ public class ClsConfig extends AbstractModel{
         this.TopicId = TopicId;
     }
 
+    public ClsConfig() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ClsConfig(ClsConfig source) {
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.LogSetId != null) {
+            this.LogSetId = new String(source.LogSetId);
+        }
+        if (source.TopicId != null) {
+            this.TopicId = new String(source.TopicId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -68,6 +68,26 @@ public class DescribeRewriteResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeRewriteResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeRewriteResponse(DescribeRewriteResponse source) {
+        if (source.RewriteSet != null) {
+            this.RewriteSet = new RuleOutput[source.RewriteSet.length];
+            for (int i = 0; i < source.RewriteSet.length; i++) {
+                this.RewriteSet[i] = new RuleOutput(source.RewriteSet[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

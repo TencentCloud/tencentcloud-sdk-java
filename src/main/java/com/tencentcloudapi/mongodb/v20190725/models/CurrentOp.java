@@ -264,6 +264,44 @@ public class CurrentOp extends AbstractModel{
         this.MicrosecsRunning = MicrosecsRunning;
     }
 
+    public CurrentOp() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CurrentOp(CurrentOp source) {
+        if (source.OpId != null) {
+            this.OpId = new Long(source.OpId);
+        }
+        if (source.Ns != null) {
+            this.Ns = new String(source.Ns);
+        }
+        if (source.Query != null) {
+            this.Query = new String(source.Query);
+        }
+        if (source.Op != null) {
+            this.Op = new String(source.Op);
+        }
+        if (source.ReplicaSetName != null) {
+            this.ReplicaSetName = new String(source.ReplicaSetName);
+        }
+        if (source.State != null) {
+            this.State = new String(source.State);
+        }
+        if (source.Operation != null) {
+            this.Operation = new String(source.Operation);
+        }
+        if (source.NodeName != null) {
+            this.NodeName = new String(source.NodeName);
+        }
+        if (source.MicrosecsRunning != null) {
+            this.MicrosecsRunning = new Long(source.MicrosecsRunning);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

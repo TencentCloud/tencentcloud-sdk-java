@@ -137,6 +137,35 @@ public class DescribeZoneTrafficInfoResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeZoneTrafficInfoResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeZoneTrafficInfoResponse(DescribeZoneTrafficInfoResponse source) {
+        if (source.CompanyId != null) {
+            this.CompanyId = new String(source.CompanyId);
+        }
+        if (source.ShopId != null) {
+            this.ShopId = new Long(source.ShopId);
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.ZoneTrafficInfoSet != null) {
+            this.ZoneTrafficInfoSet = new ZoneTrafficInfo[source.ZoneTrafficInfoSet.length];
+            for (int i = 0; i < source.ZoneTrafficInfoSet.length; i++) {
+                this.ZoneTrafficInfoSet[i] = new ZoneTrafficInfo(source.ZoneTrafficInfoSet[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

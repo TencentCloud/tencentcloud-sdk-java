@@ -91,6 +91,29 @@ public class ListNamespacesResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public ListNamespacesResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ListNamespacesResponse(ListNamespacesResponse source) {
+        if (source.Namespaces != null) {
+            this.Namespaces = new Namespace[source.Namespaces.length];
+            for (int i = 0; i < source.Namespaces.length; i++) {
+                this.Namespaces[i] = new Namespace(source.Namespaces[i]);
+            }
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

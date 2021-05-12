@@ -229,6 +229,47 @@ public class TextTable extends AbstractModel{
         this.AdvancedInfo = AdvancedInfo;
     }
 
+    public TextTable() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TextTable(TextTable source) {
+        if (source.ColTl != null) {
+            this.ColTl = new Long(source.ColTl);
+        }
+        if (source.RowTl != null) {
+            this.RowTl = new Long(source.RowTl);
+        }
+        if (source.ColBr != null) {
+            this.ColBr = new Long(source.ColBr);
+        }
+        if (source.RowBr != null) {
+            this.RowBr = new Long(source.RowBr);
+        }
+        if (source.Text != null) {
+            this.Text = new String(source.Text);
+        }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.Confidence != null) {
+            this.Confidence = new Long(source.Confidence);
+        }
+        if (source.Polygon != null) {
+            this.Polygon = new Coord[source.Polygon.length];
+            for (int i = 0; i < source.Polygon.length; i++) {
+                this.Polygon[i] = new Coord(source.Polygon[i]);
+            }
+        }
+        if (source.AdvancedInfo != null) {
+            this.AdvancedInfo = new String(source.AdvancedInfo);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

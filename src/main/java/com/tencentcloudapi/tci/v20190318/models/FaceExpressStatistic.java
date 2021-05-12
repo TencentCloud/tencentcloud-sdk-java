@@ -68,6 +68,26 @@ public class FaceExpressStatistic extends AbstractModel{
         this.ExpressRatio = ExpressRatio;
     }
 
+    public FaceExpressStatistic() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public FaceExpressStatistic(FaceExpressStatistic source) {
+        if (source.PersonId != null) {
+            this.PersonId = new String(source.PersonId);
+        }
+        if (source.ExpressRatio != null) {
+            this.ExpressRatio = new ExpressRatioStatistic[source.ExpressRatio.length];
+            for (int i = 0; i < source.ExpressRatio.length; i++) {
+                this.ExpressRatio[i] = new ExpressRatioStatistic(source.ExpressRatio[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

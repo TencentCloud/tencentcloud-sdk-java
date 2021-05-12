@@ -371,6 +371,56 @@ public class EnvBillingInfoItem extends AbstractModel{
         this.FreeQuota = FreeQuota;
     }
 
+    public EnvBillingInfoItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public EnvBillingInfoItem(EnvBillingInfoItem source) {
+        if (source.EnvId != null) {
+            this.EnvId = new String(source.EnvId);
+        }
+        if (source.PackageId != null) {
+            this.PackageId = new String(source.PackageId);
+        }
+        if (source.IsAutoRenew != null) {
+            this.IsAutoRenew = new Boolean(source.IsAutoRenew);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.PayMode != null) {
+            this.PayMode = new String(source.PayMode);
+        }
+        if (source.IsolatedTime != null) {
+            this.IsolatedTime = new String(source.IsolatedTime);
+        }
+        if (source.ExpireTime != null) {
+            this.ExpireTime = new String(source.ExpireTime);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new String(source.UpdateTime);
+        }
+        if (source.IsAlwaysFree != null) {
+            this.IsAlwaysFree = new Boolean(source.IsAlwaysFree);
+        }
+        if (source.PaymentChannel != null) {
+            this.PaymentChannel = new String(source.PaymentChannel);
+        }
+        if (source.OrderInfo != null) {
+            this.OrderInfo = new OrderInfo(source.OrderInfo);
+        }
+        if (source.FreeQuota != null) {
+            this.FreeQuota = new String(source.FreeQuota);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

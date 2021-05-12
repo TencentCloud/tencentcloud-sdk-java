@@ -134,6 +134,29 @@ public class ClientCert extends AbstractModel{
         this.DeployTime = DeployTime;
     }
 
+    public ClientCert() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ClientCert(ClientCert source) {
+        if (source.Certificate != null) {
+            this.Certificate = new String(source.Certificate);
+        }
+        if (source.CertName != null) {
+            this.CertName = new String(source.CertName);
+        }
+        if (source.ExpireTime != null) {
+            this.ExpireTime = new String(source.ExpireTime);
+        }
+        if (source.DeployTime != null) {
+            this.DeployTime = new String(source.DeployTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

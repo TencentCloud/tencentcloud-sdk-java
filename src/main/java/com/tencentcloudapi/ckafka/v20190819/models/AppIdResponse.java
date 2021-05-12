@@ -73,6 +73,26 @@ public class AppIdResponse extends AbstractModel{
         this.AppIdList = AppIdList;
     }
 
+    public AppIdResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AppIdResponse(AppIdResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.AppIdList != null) {
+            this.AppIdList = new Long[source.AppIdList.length];
+            for (int i = 0; i < source.AppIdList.length; i++) {
+                this.AppIdList[i] = new Long(source.AppIdList[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

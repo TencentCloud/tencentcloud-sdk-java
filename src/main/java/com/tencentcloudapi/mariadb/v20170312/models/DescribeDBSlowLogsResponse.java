@@ -160,6 +160,38 @@ public class DescribeDBSlowLogsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeDBSlowLogsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeDBSlowLogsResponse(DescribeDBSlowLogsResponse source) {
+        if (source.Data != null) {
+            this.Data = new SlowLogData[source.Data.length];
+            for (int i = 0; i < source.Data.length; i++) {
+                this.Data[i] = new SlowLogData(source.Data[i]);
+            }
+        }
+        if (source.LockTimeSum != null) {
+            this.LockTimeSum = new Float(source.LockTimeSum);
+        }
+        if (source.QueryCount != null) {
+            this.QueryCount = new Long(source.QueryCount);
+        }
+        if (source.Total != null) {
+            this.Total = new Long(source.Total);
+        }
+        if (source.QueryTimeSum != null) {
+            this.QueryTimeSum = new Float(source.QueryTimeSum);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -45,6 +45,20 @@ public class CreateProcessTaskRequest extends AbstractModel{
         this.Uuid = Uuid;
     }
 
+    public CreateProcessTaskRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateProcessTaskRequest(CreateProcessTaskRequest source) {
+        if (source.Uuid != null) {
+            this.Uuid = new String(source.Uuid);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -229,6 +229,44 @@ public class CreateSpotDeviceRequest extends AbstractModel{
         this.Passwd = Passwd;
     }
 
+    public CreateSpotDeviceRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateSpotDeviceRequest(CreateSpotDeviceRequest source) {
+        if (source.Zone != null) {
+            this.Zone = new String(source.Zone);
+        }
+        if (source.ComputeType != null) {
+            this.ComputeType = new String(source.ComputeType);
+        }
+        if (source.OsTypeId != null) {
+            this.OsTypeId = new Long(source.OsTypeId);
+        }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.SubnetId != null) {
+            this.SubnetId = new String(source.SubnetId);
+        }
+        if (source.GoodsNum != null) {
+            this.GoodsNum = new Long(source.GoodsNum);
+        }
+        if (source.SpotStrategy != null) {
+            this.SpotStrategy = new String(source.SpotStrategy);
+        }
+        if (source.SpotPriceLimit != null) {
+            this.SpotPriceLimit = new Float(source.SpotPriceLimit);
+        }
+        if (source.Passwd != null) {
+            this.Passwd = new String(source.Passwd);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

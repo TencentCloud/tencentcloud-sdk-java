@@ -666,6 +666,101 @@ public class EipInfo extends AbstractModel{
         this.HInstanceAlias = HInstanceAlias;
     }
 
+    public EipInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public EipInfo(EipInfo source) {
+        if (source.EipId != null) {
+            this.EipId = new String(source.EipId);
+        }
+        if (source.EipName != null) {
+            this.EipName = new String(source.EipName);
+        }
+        if (source.Eip != null) {
+            this.Eip = new String(source.Eip);
+        }
+        if (source.IspId != null) {
+            this.IspId = new Long(source.IspId);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.Arrears != null) {
+            this.Arrears = new Long(source.Arrears);
+        }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.InstanceAlias != null) {
+            this.InstanceAlias = new String(source.InstanceAlias);
+        }
+        if (source.FreeAt != null) {
+            this.FreeAt = new String(source.FreeAt);
+        }
+        if (source.CreatedAt != null) {
+            this.CreatedAt = new String(source.CreatedAt);
+        }
+        if (source.UpdatedAt != null) {
+            this.UpdatedAt = new String(source.UpdatedAt);
+        }
+        if (source.FreeSecond != null) {
+            this.FreeSecond = new Long(source.FreeSecond);
+        }
+        if (source.Type != null) {
+            this.Type = new Long(source.Type);
+        }
+        if (source.PayMode != null) {
+            this.PayMode = new String(source.PayMode);
+        }
+        if (source.Bandwidth != null) {
+            this.Bandwidth = new Long(source.Bandwidth);
+        }
+        if (source.LatestPayMode != null) {
+            this.LatestPayMode = new String(source.LatestPayMode);
+        }
+        if (source.LatestBandwidth != null) {
+            this.LatestBandwidth = new Long(source.LatestBandwidth);
+        }
+        if (source.VpcName != null) {
+            this.VpcName = new String(source.VpcName);
+        }
+        if (source.NatId != null) {
+            this.NatId = new Long(source.NatId);
+        }
+        if (source.NatUid != null) {
+            this.NatUid = new String(source.NatUid);
+        }
+        if (source.VpcIp != null) {
+            this.VpcIp = new String(source.VpcIp);
+        }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.Exclusive != null) {
+            this.Exclusive = new Long(source.Exclusive);
+        }
+        if (source.VpcCidr != null) {
+            this.VpcCidr = new String(source.VpcCidr);
+        }
+        if (source.AclId != null) {
+            this.AclId = new String(source.AclId);
+        }
+        if (source.AclName != null) {
+            this.AclName = new String(source.AclName);
+        }
+        if (source.HInstanceId != null) {
+            this.HInstanceId = new String(source.HInstanceId);
+        }
+        if (source.HInstanceAlias != null) {
+            this.HInstanceAlias = new String(source.HInstanceAlias);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

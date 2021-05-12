@@ -91,6 +91,26 @@ public class StartAnalyseRequest extends AbstractModel{
         this.DlUrl = DlUrl;
     }
 
+    public StartAnalyseRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public StartAnalyseRequest(StartAnalyseRequest source) {
+        if (source.Pk != null) {
+            this.Pk = new String(source.Pk);
+        }
+        if (source.Md5 != null) {
+            this.Md5 = new String(source.Md5);
+        }
+        if (source.DlUrl != null) {
+            this.DlUrl = new String(source.DlUrl);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

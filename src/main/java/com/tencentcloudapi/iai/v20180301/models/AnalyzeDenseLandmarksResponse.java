@@ -137,6 +137,35 @@ public class AnalyzeDenseLandmarksResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public AnalyzeDenseLandmarksResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AnalyzeDenseLandmarksResponse(AnalyzeDenseLandmarksResponse source) {
+        if (source.ImageWidth != null) {
+            this.ImageWidth = new Long(source.ImageWidth);
+        }
+        if (source.ImageHeight != null) {
+            this.ImageHeight = new Long(source.ImageHeight);
+        }
+        if (source.DenseFaceShapeSet != null) {
+            this.DenseFaceShapeSet = new DenseFaceShape[source.DenseFaceShapeSet.length];
+            for (int i = 0; i < source.DenseFaceShapeSet.length; i++) {
+                this.DenseFaceShapeSet[i] = new DenseFaceShape(source.DenseFaceShapeSet[i]);
+            }
+        }
+        if (source.FaceModelVersion != null) {
+            this.FaceModelVersion = new String(source.FaceModelVersion);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

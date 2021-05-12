@@ -91,6 +91,29 @@ public class CreateSitesResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public CreateSitesResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateSitesResponse(CreateSitesResponse source) {
+        if (source.Number != null) {
+            this.Number = new Long(source.Number);
+        }
+        if (source.Sites != null) {
+            this.Sites = new MiniSite[source.Sites.length];
+            for (int i = 0; i < source.Sites.length; i++) {
+                this.Sites[i] = new MiniSite(source.Sites[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

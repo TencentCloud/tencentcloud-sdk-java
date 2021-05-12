@@ -183,6 +183,38 @@ public class ShieldInfo extends AbstractModel{
         this.ServiceEdition = ServiceEdition;
     }
 
+    public ShieldInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ShieldInfo(ShieldInfo source) {
+        if (source.ShieldCode != null) {
+            this.ShieldCode = new Long(source.ShieldCode);
+        }
+        if (source.ShieldSize != null) {
+            this.ShieldSize = new Long(source.ShieldSize);
+        }
+        if (source.ShieldMd5 != null) {
+            this.ShieldMd5 = new String(source.ShieldMd5);
+        }
+        if (source.AppUrl != null) {
+            this.AppUrl = new String(source.AppUrl);
+        }
+        if (source.TaskTime != null) {
+            this.TaskTime = new Long(source.TaskTime);
+        }
+        if (source.ItemId != null) {
+            this.ItemId = new String(source.ItemId);
+        }
+        if (source.ServiceEdition != null) {
+            this.ServiceEdition = new String(source.ServiceEdition);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

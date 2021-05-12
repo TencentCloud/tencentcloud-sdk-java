@@ -573,6 +573,89 @@ public class ClusterInfo extends AbstractModel{
         this.ProxyList = ProxyList;
     }
 
+    public ClusterInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ClusterInfo(ClusterInfo source) {
+        if (source.ClusterName != null) {
+            this.ClusterName = new String(source.ClusterName);
+        }
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
+        if (source.Region != null) {
+            this.Region = new String(source.Region);
+        }
+        if (source.IdlType != null) {
+            this.IdlType = new String(source.IdlType);
+        }
+        if (source.NetworkType != null) {
+            this.NetworkType = new String(source.NetworkType);
+        }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.SubnetId != null) {
+            this.SubnetId = new String(source.SubnetId);
+        }
+        if (source.CreatedTime != null) {
+            this.CreatedTime = new String(source.CreatedTime);
+        }
+        if (source.Password != null) {
+            this.Password = new String(source.Password);
+        }
+        if (source.PasswordStatus != null) {
+            this.PasswordStatus = new String(source.PasswordStatus);
+        }
+        if (source.ApiAccessId != null) {
+            this.ApiAccessId = new String(source.ApiAccessId);
+        }
+        if (source.ApiAccessIp != null) {
+            this.ApiAccessIp = new String(source.ApiAccessIp);
+        }
+        if (source.ApiAccessPort != null) {
+            this.ApiAccessPort = new Long(source.ApiAccessPort);
+        }
+        if (source.OldPasswordExpireTime != null) {
+            this.OldPasswordExpireTime = new String(source.OldPasswordExpireTime);
+        }
+        if (source.ApiAccessIpv6 != null) {
+            this.ApiAccessIpv6 = new String(source.ApiAccessIpv6);
+        }
+        if (source.ClusterType != null) {
+            this.ClusterType = new Long(source.ClusterType);
+        }
+        if (source.ClusterStatus != null) {
+            this.ClusterStatus = new Long(source.ClusterStatus);
+        }
+        if (source.ReadCapacityUnit != null) {
+            this.ReadCapacityUnit = new Long(source.ReadCapacityUnit);
+        }
+        if (source.WriteCapacityUnit != null) {
+            this.WriteCapacityUnit = new Long(source.WriteCapacityUnit);
+        }
+        if (source.DiskVolume != null) {
+            this.DiskVolume = new Long(source.DiskVolume);
+        }
+        if (source.ServerList != null) {
+            this.ServerList = new ServerDetailInfo[source.ServerList.length];
+            for (int i = 0; i < source.ServerList.length; i++) {
+                this.ServerList[i] = new ServerDetailInfo(source.ServerList[i]);
+            }
+        }
+        if (source.ProxyList != null) {
+            this.ProxyList = new ProxyDetailInfo[source.ProxyList.length];
+            for (int i = 0; i < source.ProxyList.length; i++) {
+                this.ProxyList[i] = new ProxyDetailInfo(source.ProxyList[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

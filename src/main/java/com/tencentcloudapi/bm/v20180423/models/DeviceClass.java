@@ -387,6 +387,62 @@ public class DeviceClass extends AbstractModel{
         this.Mem = Mem;
     }
 
+    public DeviceClass() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeviceClass(DeviceClass source) {
+        if (source.DeviceClassCode != null) {
+            this.DeviceClassCode = new String(source.DeviceClassCode);
+        }
+        if (source.CpuDescription != null) {
+            this.CpuDescription = new String(source.CpuDescription);
+        }
+        if (source.MemDescription != null) {
+            this.MemDescription = new String(source.MemDescription);
+        }
+        if (source.DiskDescription != null) {
+            this.DiskDescription = new String(source.DiskDescription);
+        }
+        if (source.HaveRaidCard != null) {
+            this.HaveRaidCard = new Long(source.HaveRaidCard);
+        }
+        if (source.NicDescription != null) {
+            this.NicDescription = new String(source.NicDescription);
+        }
+        if (source.GpuDescription != null) {
+            this.GpuDescription = new String(source.GpuDescription);
+        }
+        if (source.Discount != null) {
+            this.Discount = new Float(source.Discount);
+        }
+        if (source.UnitPrice != null) {
+            this.UnitPrice = new Long(source.UnitPrice);
+        }
+        if (source.RealPrice != null) {
+            this.RealPrice = new Long(source.RealPrice);
+        }
+        if (source.NormalPrice != null) {
+            this.NormalPrice = new Long(source.NormalPrice);
+        }
+        if (source.DeviceType != null) {
+            this.DeviceType = new String(source.DeviceType);
+        }
+        if (source.Series != null) {
+            this.Series = new Long(source.Series);
+        }
+        if (source.Cpu != null) {
+            this.Cpu = new Long(source.Cpu);
+        }
+        if (source.Mem != null) {
+            this.Mem = new Long(source.Mem);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

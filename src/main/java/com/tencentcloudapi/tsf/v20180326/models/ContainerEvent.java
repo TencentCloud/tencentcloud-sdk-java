@@ -246,6 +246,41 @@ public class ContainerEvent extends AbstractModel{
         this.Count = Count;
     }
 
+    public ContainerEvent() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ContainerEvent(ContainerEvent source) {
+        if (source.FirstTimestamp != null) {
+            this.FirstTimestamp = new Long(source.FirstTimestamp);
+        }
+        if (source.LastTimestamp != null) {
+            this.LastTimestamp = new Long(source.LastTimestamp);
+        }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.Kind != null) {
+            this.Kind = new String(source.Kind);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Reason != null) {
+            this.Reason = new String(source.Reason);
+        }
+        if (source.Message != null) {
+            this.Message = new String(source.Message);
+        }
+        if (source.Count != null) {
+            this.Count = new Long(source.Count);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

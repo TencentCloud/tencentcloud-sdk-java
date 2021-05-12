@@ -330,6 +330,53 @@ public class MLIDPassportOCRResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public MLIDPassportOCRResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MLIDPassportOCRResponse(MLIDPassportOCRResponse source) {
+        if (source.ID != null) {
+            this.ID = new String(source.ID);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.DateOfBirth != null) {
+            this.DateOfBirth = new String(source.DateOfBirth);
+        }
+        if (source.Sex != null) {
+            this.Sex = new String(source.Sex);
+        }
+        if (source.DateOfExpiration != null) {
+            this.DateOfExpiration = new String(source.DateOfExpiration);
+        }
+        if (source.IssuingCountry != null) {
+            this.IssuingCountry = new String(source.IssuingCountry);
+        }
+        if (source.Nationality != null) {
+            this.Nationality = new String(source.Nationality);
+        }
+        if (source.Warn != null) {
+            this.Warn = new Long[source.Warn.length];
+            for (int i = 0; i < source.Warn.length; i++) {
+                this.Warn[i] = new Long(source.Warn[i]);
+            }
+        }
+        if (source.Image != null) {
+            this.Image = new String(source.Image);
+        }
+        if (source.AdvancedInfo != null) {
+            this.AdvancedInfo = new String(source.AdvancedInfo);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

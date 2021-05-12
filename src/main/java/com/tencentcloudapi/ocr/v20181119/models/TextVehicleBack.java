@@ -302,6 +302,47 @@ public class TextVehicleBack extends AbstractModel{
         this.TotalQuasiMass = TotalQuasiMass;
     }
 
+    public TextVehicleBack() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TextVehicleBack(TextVehicleBack source) {
+        if (source.PlateNo != null) {
+            this.PlateNo = new String(source.PlateNo);
+        }
+        if (source.FileNo != null) {
+            this.FileNo = new String(source.FileNo);
+        }
+        if (source.AllowNum != null) {
+            this.AllowNum = new String(source.AllowNum);
+        }
+        if (source.TotalMass != null) {
+            this.TotalMass = new String(source.TotalMass);
+        }
+        if (source.CurbWeight != null) {
+            this.CurbWeight = new String(source.CurbWeight);
+        }
+        if (source.LoadQuality != null) {
+            this.LoadQuality = new String(source.LoadQuality);
+        }
+        if (source.ExternalSize != null) {
+            this.ExternalSize = new String(source.ExternalSize);
+        }
+        if (source.Marks != null) {
+            this.Marks = new String(source.Marks);
+        }
+        if (source.Record != null) {
+            this.Record = new String(source.Record);
+        }
+        if (source.TotalQuasiMass != null) {
+            this.TotalQuasiMass = new String(source.TotalQuasiMass);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

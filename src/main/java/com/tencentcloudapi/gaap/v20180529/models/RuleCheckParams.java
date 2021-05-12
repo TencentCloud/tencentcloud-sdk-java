@@ -249,6 +249,47 @@ public class RuleCheckParams extends AbstractModel{
         this.BlockInter = BlockInter;
     }
 
+    public RuleCheckParams() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RuleCheckParams(RuleCheckParams source) {
+        if (source.DelayLoop != null) {
+            this.DelayLoop = new Long(source.DelayLoop);
+        }
+        if (source.ConnectTimeout != null) {
+            this.ConnectTimeout = new Long(source.ConnectTimeout);
+        }
+        if (source.Path != null) {
+            this.Path = new String(source.Path);
+        }
+        if (source.Method != null) {
+            this.Method = new String(source.Method);
+        }
+        if (source.StatusCode != null) {
+            this.StatusCode = new Long[source.StatusCode.length];
+            for (int i = 0; i < source.StatusCode.length; i++) {
+                this.StatusCode[i] = new Long(source.StatusCode[i]);
+            }
+        }
+        if (source.Domain != null) {
+            this.Domain = new String(source.Domain);
+        }
+        if (source.FailedCountInter != null) {
+            this.FailedCountInter = new Long(source.FailedCountInter);
+        }
+        if (source.FailedThreshold != null) {
+            this.FailedThreshold = new Long(source.FailedThreshold);
+        }
+        if (source.BlockInter != null) {
+            this.BlockInter = new Long(source.BlockInter);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

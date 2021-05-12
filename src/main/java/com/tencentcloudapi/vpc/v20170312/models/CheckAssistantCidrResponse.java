@@ -68,6 +68,26 @@ public class CheckAssistantCidrResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public CheckAssistantCidrResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CheckAssistantCidrResponse(CheckAssistantCidrResponse source) {
+        if (source.ConflictSourceSet != null) {
+            this.ConflictSourceSet = new ConflictSource[source.ConflictSourceSet.length];
+            for (int i = 0; i < source.ConflictSourceSet.length; i++) {
+                this.ConflictSourceSet[i] = new ConflictSource(source.ConflictSourceSet[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

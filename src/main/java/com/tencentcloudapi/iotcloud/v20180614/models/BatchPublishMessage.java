@@ -68,6 +68,23 @@ public class BatchPublishMessage extends AbstractModel{
         this.Payload = Payload;
     }
 
+    public BatchPublishMessage() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public BatchPublishMessage(BatchPublishMessage source) {
+        if (source.Topic != null) {
+            this.Topic = new String(source.Topic);
+        }
+        if (source.Payload != null) {
+            this.Payload = new String(source.Payload);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

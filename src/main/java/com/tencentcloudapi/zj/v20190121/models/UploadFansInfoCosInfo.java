@@ -91,6 +91,26 @@ public class UploadFansInfoCosInfo extends AbstractModel{
         this.Region = Region;
     }
 
+    public UploadFansInfoCosInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UploadFansInfoCosInfo(UploadFansInfoCosInfo source) {
+        if (source.Bucket != null) {
+            this.Bucket = new String(source.Bucket);
+        }
+        if (source.Key != null) {
+            this.Key = new String(source.Key);
+        }
+        if (source.Region != null) {
+            this.Region = new String(source.Region);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

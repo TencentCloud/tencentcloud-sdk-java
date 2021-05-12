@@ -298,6 +298,59 @@ public class CreateTCPListenersRequest extends AbstractModel{
         this.FailoverSwitch = FailoverSwitch;
     }
 
+    public CreateTCPListenersRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateTCPListenersRequest(CreateTCPListenersRequest source) {
+        if (source.ListenerName != null) {
+            this.ListenerName = new String(source.ListenerName);
+        }
+        if (source.Ports != null) {
+            this.Ports = new Long[source.Ports.length];
+            for (int i = 0; i < source.Ports.length; i++) {
+                this.Ports[i] = new Long(source.Ports[i]);
+            }
+        }
+        if (source.Scheduler != null) {
+            this.Scheduler = new String(source.Scheduler);
+        }
+        if (source.HealthCheck != null) {
+            this.HealthCheck = new Long(source.HealthCheck);
+        }
+        if (source.RealServerType != null) {
+            this.RealServerType = new String(source.RealServerType);
+        }
+        if (source.ProxyId != null) {
+            this.ProxyId = new String(source.ProxyId);
+        }
+        if (source.GroupId != null) {
+            this.GroupId = new String(source.GroupId);
+        }
+        if (source.DelayLoop != null) {
+            this.DelayLoop = new Long(source.DelayLoop);
+        }
+        if (source.ConnectTimeout != null) {
+            this.ConnectTimeout = new Long(source.ConnectTimeout);
+        }
+        if (source.RealServerPorts != null) {
+            this.RealServerPorts = new Long[source.RealServerPorts.length];
+            for (int i = 0; i < source.RealServerPorts.length; i++) {
+                this.RealServerPorts[i] = new Long(source.RealServerPorts[i]);
+            }
+        }
+        if (source.ClientIPMethod != null) {
+            this.ClientIPMethod = new Long(source.ClientIPMethod);
+        }
+        if (source.FailoverSwitch != null) {
+            this.FailoverSwitch = new Long(source.FailoverSwitch);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

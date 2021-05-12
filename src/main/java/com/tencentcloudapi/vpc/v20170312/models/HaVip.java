@@ -285,6 +285,50 @@ public class HaVip extends AbstractModel{
         this.Business = Business;
     }
 
+    public HaVip() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public HaVip(HaVip source) {
+        if (source.HaVipId != null) {
+            this.HaVipId = new String(source.HaVipId);
+        }
+        if (source.HaVipName != null) {
+            this.HaVipName = new String(source.HaVipName);
+        }
+        if (source.Vip != null) {
+            this.Vip = new String(source.Vip);
+        }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.SubnetId != null) {
+            this.SubnetId = new String(source.SubnetId);
+        }
+        if (source.NetworkInterfaceId != null) {
+            this.NetworkInterfaceId = new String(source.NetworkInterfaceId);
+        }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.AddressIp != null) {
+            this.AddressIp = new String(source.AddressIp);
+        }
+        if (source.State != null) {
+            this.State = new String(source.State);
+        }
+        if (source.CreatedTime != null) {
+            this.CreatedTime = new String(source.CreatedTime);
+        }
+        if (source.Business != null) {
+            this.Business = new String(source.Business);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

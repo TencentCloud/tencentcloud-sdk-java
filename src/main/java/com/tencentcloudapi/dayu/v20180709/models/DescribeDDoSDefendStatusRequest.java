@@ -293,6 +293,38 @@ public class DescribeDDoSDefendStatusRequest extends AbstractModel{
         this.IPRegion = IPRegion;
     }
 
+    public DescribeDDoSDefendStatusRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeDDoSDefendStatusRequest(DescribeDDoSDefendStatusRequest source) {
+        if (source.Business != null) {
+            this.Business = new String(source.Business);
+        }
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
+        if (source.Ip != null) {
+            this.Ip = new String(source.Ip);
+        }
+        if (source.BizType != null) {
+            this.BizType = new String(source.BizType);
+        }
+        if (source.DeviceType != null) {
+            this.DeviceType = new String(source.DeviceType);
+        }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.IPRegion != null) {
+            this.IPRegion = new String(source.IPRegion);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

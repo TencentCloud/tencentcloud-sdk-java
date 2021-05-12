@@ -215,6 +215,35 @@ PROCESSING :表示操作中。
         this.EndTime = EndTime;
     }
 
+    public SnapshotOperationLog() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SnapshotOperationLog(SnapshotOperationLog source) {
+        if (source.Operator != null) {
+            this.Operator = new String(source.Operator);
+        }
+        if (source.Operation != null) {
+            this.Operation = new String(source.Operation);
+        }
+        if (source.SnapshotId != null) {
+            this.SnapshotId = new String(source.SnapshotId);
+        }
+        if (source.OperationState != null) {
+            this.OperationState = new String(source.OperationState);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

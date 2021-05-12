@@ -252,6 +252,47 @@ public class SqlLogItem extends AbstractModel{
         this.ResultCode = ResultCode;
     }
 
+    public SqlLogItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SqlLogItem(SqlLogItem source) {
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.User != null) {
+            this.User = new String(source.User);
+        }
+        if (source.Client != null) {
+            this.Client = new String(source.Client);
+        }
+        if (source.DbName != null) {
+            this.DbName = new String(source.DbName);
+        }
+        if (source.Sql != null) {
+            this.Sql = new String(source.Sql);
+        }
+        if (source.SelectRowNum != null) {
+            this.SelectRowNum = new Long(source.SelectRowNum);
+        }
+        if (source.AffectRowNum != null) {
+            this.AffectRowNum = new Long(source.AffectRowNum);
+        }
+        if (source.Timestamp != null) {
+            this.Timestamp = new Long(source.Timestamp);
+        }
+        if (source.TimeCostMs != null) {
+            this.TimeCostMs = new Long(source.TimeCostMs);
+        }
+        if (source.ResultCode != null) {
+            this.ResultCode = new Long(source.ResultCode);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

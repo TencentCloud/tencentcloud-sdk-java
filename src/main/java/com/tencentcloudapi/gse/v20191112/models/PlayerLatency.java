@@ -101,6 +101,26 @@ public class PlayerLatency extends AbstractModel{
         this.LatencyInMilliseconds = LatencyInMilliseconds;
     }
 
+    public PlayerLatency() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PlayerLatency(PlayerLatency source) {
+        if (source.PlayerId != null) {
+            this.PlayerId = new String(source.PlayerId);
+        }
+        if (source.RegionIdentifier != null) {
+            this.RegionIdentifier = new String(source.RegionIdentifier);
+        }
+        if (source.LatencyInMilliseconds != null) {
+            this.LatencyInMilliseconds = new Long(source.LatencyInMilliseconds);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

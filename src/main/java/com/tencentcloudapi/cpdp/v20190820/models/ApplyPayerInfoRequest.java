@@ -252,6 +252,47 @@ public class ApplyPayerInfoRequest extends AbstractModel{
         this.Profile = Profile;
     }
 
+    public ApplyPayerInfoRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ApplyPayerInfoRequest(ApplyPayerInfoRequest source) {
+        if (source.PayerId != null) {
+            this.PayerId = new String(source.PayerId);
+        }
+        if (source.PayerType != null) {
+            this.PayerType = new String(source.PayerType);
+        }
+        if (source.PayerName != null) {
+            this.PayerName = new String(source.PayerName);
+        }
+        if (source.PayerIdType != null) {
+            this.PayerIdType = new String(source.PayerIdType);
+        }
+        if (source.PayerIdNo != null) {
+            this.PayerIdNo = new String(source.PayerIdNo);
+        }
+        if (source.PayerCountryCode != null) {
+            this.PayerCountryCode = new String(source.PayerCountryCode);
+        }
+        if (source.PayerContactName != null) {
+            this.PayerContactName = new String(source.PayerContactName);
+        }
+        if (source.PayerContactNumber != null) {
+            this.PayerContactNumber = new String(source.PayerContactNumber);
+        }
+        if (source.PayerEmailAddress != null) {
+            this.PayerEmailAddress = new String(source.PayerEmailAddress);
+        }
+        if (source.Profile != null) {
+            this.Profile = new String(source.Profile);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

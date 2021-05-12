@@ -114,6 +114,32 @@ public class CreateRuleRequest extends AbstractModel{
         this.Tags = Tags;
     }
 
+    public CreateRuleRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateRuleRequest(CreateRuleRequest source) {
+        if (source.RuleName != null) {
+            this.RuleName = new String(source.RuleName);
+        }
+        if (source.RuleScript != null) {
+            this.RuleScript = new String(source.RuleScript);
+        }
+        if (source.RuleDesc != null) {
+            this.RuleDesc = new String(source.RuleDesc);
+        }
+        if (source.Tags != null) {
+            this.Tags = new StringKV[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new StringKV(source.Tags[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

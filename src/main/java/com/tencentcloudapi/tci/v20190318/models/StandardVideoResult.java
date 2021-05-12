@@ -91,6 +91,29 @@ public class StandardVideoResult extends AbstractModel{
         this.Status = Status;
     }
 
+    public StandardVideoResult() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public StandardVideoResult(StandardVideoResult source) {
+        if (source.HighlightsInfo != null) {
+            this.HighlightsInfo = new HighlightsInfomation[source.HighlightsInfo.length];
+            for (int i = 0; i < source.HighlightsInfo.length; i++) {
+                this.HighlightsInfo[i] = new HighlightsInfomation(source.HighlightsInfo[i]);
+            }
+        }
+        if (source.Message != null) {
+            this.Message = new String(source.Message);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

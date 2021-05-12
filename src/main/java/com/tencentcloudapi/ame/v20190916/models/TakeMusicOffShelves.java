@@ -68,6 +68,23 @@ public class TakeMusicOffShelves extends AbstractModel{
         this.SaleStatus = SaleStatus;
     }
 
+    public TakeMusicOffShelves() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TakeMusicOffShelves(TakeMusicOffShelves source) {
+        if (source.MusicIds != null) {
+            this.MusicIds = new String(source.MusicIds);
+        }
+        if (source.SaleStatus != null) {
+            this.SaleStatus = new String(source.SaleStatus);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

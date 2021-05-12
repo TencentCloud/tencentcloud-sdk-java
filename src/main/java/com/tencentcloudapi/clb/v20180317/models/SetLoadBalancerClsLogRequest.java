@@ -114,6 +114,29 @@ public class SetLoadBalancerClsLogRequest extends AbstractModel{
         this.LogType = LogType;
     }
 
+    public SetLoadBalancerClsLogRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SetLoadBalancerClsLogRequest(SetLoadBalancerClsLogRequest source) {
+        if (source.LoadBalancerId != null) {
+            this.LoadBalancerId = new String(source.LoadBalancerId);
+        }
+        if (source.LogSetId != null) {
+            this.LogSetId = new String(source.LogSetId);
+        }
+        if (source.LogTopicId != null) {
+            this.LogTopicId = new String(source.LogTopicId);
+        }
+        if (source.LogType != null) {
+            this.LogType = new String(source.LogType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

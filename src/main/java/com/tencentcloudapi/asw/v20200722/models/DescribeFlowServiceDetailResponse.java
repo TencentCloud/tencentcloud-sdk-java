@@ -333,6 +333,53 @@ public class DescribeFlowServiceDetailResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeFlowServiceDetailResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeFlowServiceDetailResponse(DescribeFlowServiceDetailResponse source) {
+        if (source.FlowServiceName != null) {
+            this.FlowServiceName = new String(source.FlowServiceName);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.Definition != null) {
+            this.Definition = new String(source.Definition);
+        }
+        if (source.RoleResource != null) {
+            this.RoleResource = new String(source.RoleResource);
+        }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.CreateDate != null) {
+            this.CreateDate = new String(source.CreateDate);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.FlowServiceChineseName != null) {
+            this.FlowServiceChineseName = new String(source.FlowServiceChineseName);
+        }
+        if (source.EnableCLS != null) {
+            this.EnableCLS = new Boolean(source.EnableCLS);
+        }
+        if (source.CLSUrl != null) {
+            this.CLSUrl = new String(source.CLSUrl);
+        }
+        if (source.FlowInput != null) {
+            this.FlowInput = new String(source.FlowInput);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

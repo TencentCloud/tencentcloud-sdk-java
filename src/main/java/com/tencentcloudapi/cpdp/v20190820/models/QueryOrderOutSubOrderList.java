@@ -252,6 +252,47 @@ public class QueryOrderOutSubOrderList extends AbstractModel{
         this.SubOutTradeNo = SubOutTradeNo;
     }
 
+    public QueryOrderOutSubOrderList() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public QueryOrderOutSubOrderList(QueryOrderOutSubOrderList source) {
+        if (source.Amt != null) {
+            this.Amt = new Long(source.Amt);
+        }
+        if (source.SubMchIncome != null) {
+            this.SubMchIncome = new Long(source.SubMchIncome);
+        }
+        if (source.Metadata != null) {
+            this.Metadata = new String(source.Metadata);
+        }
+        if (source.OriginalAmt != null) {
+            this.OriginalAmt = new Long(source.OriginalAmt);
+        }
+        if (source.PlatformIncome != null) {
+            this.PlatformIncome = new Long(source.PlatformIncome);
+        }
+        if (source.ProductDetail != null) {
+            this.ProductDetail = new String(source.ProductDetail);
+        }
+        if (source.ProductName != null) {
+            this.ProductName = new String(source.ProductName);
+        }
+        if (source.SettleCheck != null) {
+            this.SettleCheck = new Long(source.SettleCheck);
+        }
+        if (source.SubAppId != null) {
+            this.SubAppId = new String(source.SubAppId);
+        }
+        if (source.SubOutTradeNo != null) {
+            this.SubOutTradeNo = new String(source.SubOutTradeNo);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

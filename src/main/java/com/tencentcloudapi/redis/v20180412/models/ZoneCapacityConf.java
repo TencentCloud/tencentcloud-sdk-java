@@ -183,6 +183,44 @@ public class ZoneCapacityConf extends AbstractModel{
         this.OldZoneId = OldZoneId;
     }
 
+    public ZoneCapacityConf() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ZoneCapacityConf(ZoneCapacityConf source) {
+        if (source.ZoneId != null) {
+            this.ZoneId = new String(source.ZoneId);
+        }
+        if (source.ZoneName != null) {
+            this.ZoneName = new String(source.ZoneName);
+        }
+        if (source.IsSaleout != null) {
+            this.IsSaleout = new Boolean(source.IsSaleout);
+        }
+        if (source.IsDefault != null) {
+            this.IsDefault = new Boolean(source.IsDefault);
+        }
+        if (source.NetWorkType != null) {
+            this.NetWorkType = new String[source.NetWorkType.length];
+            for (int i = 0; i < source.NetWorkType.length; i++) {
+                this.NetWorkType[i] = new String(source.NetWorkType[i]);
+            }
+        }
+        if (source.ProductSet != null) {
+            this.ProductSet = new ProductConf[source.ProductSet.length];
+            for (int i = 0; i < source.ProductSet.length; i++) {
+                this.ProductSet[i] = new ProductConf(source.ProductSet[i]);
+            }
+        }
+        if (source.OldZoneId != null) {
+            this.OldZoneId = new Long(source.OldZoneId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

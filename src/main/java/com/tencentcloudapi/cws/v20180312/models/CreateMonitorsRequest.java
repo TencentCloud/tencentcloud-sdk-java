@@ -160,6 +160,38 @@ public class CreateMonitorsRequest extends AbstractModel{
         this.FirstScanStartTime = FirstScanStartTime;
     }
 
+    public CreateMonitorsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateMonitorsRequest(CreateMonitorsRequest source) {
+        if (source.Urls != null) {
+            this.Urls = new String[source.Urls.length];
+            for (int i = 0; i < source.Urls.length; i++) {
+                this.Urls[i] = new String(source.Urls[i]);
+            }
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.ScannerType != null) {
+            this.ScannerType = new String(source.ScannerType);
+        }
+        if (source.Crontab != null) {
+            this.Crontab = new Long(source.Crontab);
+        }
+        if (source.RateLimit != null) {
+            this.RateLimit = new Long(source.RateLimit);
+        }
+        if (source.FirstScanStartTime != null) {
+            this.FirstScanStartTime = new String(source.FirstScanStartTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

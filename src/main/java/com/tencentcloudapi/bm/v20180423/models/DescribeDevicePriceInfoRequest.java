@@ -91,6 +91,29 @@ public class DescribeDevicePriceInfoRequest extends AbstractModel{
         this.TimeSpan = TimeSpan;
     }
 
+    public DescribeDevicePriceInfoRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeDevicePriceInfoRequest(DescribeDevicePriceInfoRequest source) {
+        if (source.InstanceIds != null) {
+            this.InstanceIds = new String[source.InstanceIds.length];
+            for (int i = 0; i < source.InstanceIds.length; i++) {
+                this.InstanceIds[i] = new String(source.InstanceIds[i]);
+            }
+        }
+        if (source.TimeUnit != null) {
+            this.TimeUnit = new String(source.TimeUnit);
+        }
+        if (source.TimeSpan != null) {
+            this.TimeSpan = new Long(source.TimeSpan);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

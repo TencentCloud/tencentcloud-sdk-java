@@ -436,6 +436,71 @@ public class ClassicalListener extends AbstractModel{
         this.Status = Status;
     }
 
+    public ClassicalListener() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ClassicalListener(ClassicalListener source) {
+        if (source.ListenerId != null) {
+            this.ListenerId = new String(source.ListenerId);
+        }
+        if (source.ListenerPort != null) {
+            this.ListenerPort = new Long(source.ListenerPort);
+        }
+        if (source.InstancePort != null) {
+            this.InstancePort = new Long(source.InstancePort);
+        }
+        if (source.ListenerName != null) {
+            this.ListenerName = new String(source.ListenerName);
+        }
+        if (source.Protocol != null) {
+            this.Protocol = new String(source.Protocol);
+        }
+        if (source.SessionExpire != null) {
+            this.SessionExpire = new Long(source.SessionExpire);
+        }
+        if (source.HealthSwitch != null) {
+            this.HealthSwitch = new Long(source.HealthSwitch);
+        }
+        if (source.TimeOut != null) {
+            this.TimeOut = new Long(source.TimeOut);
+        }
+        if (source.IntervalTime != null) {
+            this.IntervalTime = new Long(source.IntervalTime);
+        }
+        if (source.HealthNum != null) {
+            this.HealthNum = new Long(source.HealthNum);
+        }
+        if (source.UnhealthNum != null) {
+            this.UnhealthNum = new Long(source.UnhealthNum);
+        }
+        if (source.HttpHash != null) {
+            this.HttpHash = new String(source.HttpHash);
+        }
+        if (source.HttpCode != null) {
+            this.HttpCode = new Long(source.HttpCode);
+        }
+        if (source.HttpCheckPath != null) {
+            this.HttpCheckPath = new String(source.HttpCheckPath);
+        }
+        if (source.SSLMode != null) {
+            this.SSLMode = new String(source.SSLMode);
+        }
+        if (source.CertId != null) {
+            this.CertId = new String(source.CertId);
+        }
+        if (source.CertCaId != null) {
+            this.CertCaId = new String(source.CertCaId);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -435,6 +435,71 @@ public class ProxyGroupDetail extends AbstractModel{
         this.ClientIPMethod = ClientIPMethod;
     }
 
+    public ProxyGroupDetail() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ProxyGroupDetail(ProxyGroupDetail source) {
+        if (source.CreateTime != null) {
+            this.CreateTime = new Long(source.CreateTime);
+        }
+        if (source.ProjectId != null) {
+            this.ProjectId = new Long(source.ProjectId);
+        }
+        if (source.ProxyNum != null) {
+            this.ProxyNum = new Long(source.ProxyNum);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.OwnerUin != null) {
+            this.OwnerUin = new String(source.OwnerUin);
+        }
+        if (source.CreateUin != null) {
+            this.CreateUin = new String(source.CreateUin);
+        }
+        if (source.GroupName != null) {
+            this.GroupName = new String(source.GroupName);
+        }
+        if (source.DnsDefaultIp != null) {
+            this.DnsDefaultIp = new String(source.DnsDefaultIp);
+        }
+        if (source.Domain != null) {
+            this.Domain = new String(source.Domain);
+        }
+        if (source.RealServerRegionInfo != null) {
+            this.RealServerRegionInfo = new RegionDetail(source.RealServerRegionInfo);
+        }
+        if (source.IsOldGroup != null) {
+            this.IsOldGroup = new Boolean(source.IsOldGroup);
+        }
+        if (source.GroupId != null) {
+            this.GroupId = new String(source.GroupId);
+        }
+        if (source.TagSet != null) {
+            this.TagSet = new TagPair[source.TagSet.length];
+            for (int i = 0; i < source.TagSet.length; i++) {
+                this.TagSet[i] = new TagPair(source.TagSet[i]);
+            }
+        }
+        if (source.PolicyId != null) {
+            this.PolicyId = new String(source.PolicyId);
+        }
+        if (source.Version != null) {
+            this.Version = new String(source.Version);
+        }
+        if (source.ClientIPMethod != null) {
+            this.ClientIPMethod = new Long[source.ClientIPMethod.length];
+            for (int i = 0; i < source.ClientIPMethod.length; i++) {
+                this.ClientIPMethod[i] = new Long(source.ClientIPMethod[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

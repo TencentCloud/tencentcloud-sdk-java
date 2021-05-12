@@ -182,6 +182,35 @@ global：预热全球节点
         this.ParseM3U8 = ParseM3U8;
     }
 
+    public PushUrlsCacheRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PushUrlsCacheRequest(PushUrlsCacheRequest source) {
+        if (source.Urls != null) {
+            this.Urls = new String[source.Urls.length];
+            for (int i = 0; i < source.Urls.length; i++) {
+                this.Urls[i] = new String(source.Urls[i]);
+            }
+        }
+        if (source.UserAgent != null) {
+            this.UserAgent = new String(source.UserAgent);
+        }
+        if (source.Area != null) {
+            this.Area = new String(source.Area);
+        }
+        if (source.Layer != null) {
+            this.Layer = new String(source.Layer);
+        }
+        if (source.ParseM3U8 != null) {
+            this.ParseM3U8 = new Boolean(source.ParseM3U8);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

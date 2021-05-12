@@ -96,6 +96,26 @@ public class DescribeRecordStatisticRequest extends AbstractModel{
         this.SdkAppId = SdkAppId;
     }
 
+    public DescribeRecordStatisticRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeRecordStatisticRequest(DescribeRecordStatisticRequest source) {
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+        if (source.SdkAppId != null) {
+            this.SdkAppId = new Long(source.SdkAppId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

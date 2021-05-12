@@ -344,6 +344,59 @@ public class VirturalNumCdr extends AbstractModel{
         this.RecordUrl = RecordUrl;
     }
 
+    public VirturalNumCdr() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public VirturalNumCdr(VirturalNumCdr source) {
+        if (source.CallId != null) {
+            this.CallId = new String(source.CallId);
+        }
+        if (source.BindId != null) {
+            this.BindId = new String(source.BindId);
+        }
+        if (source.Src != null) {
+            this.Src = new String(source.Src);
+        }
+        if (source.Dst != null) {
+            this.Dst = new String(source.Dst);
+        }
+        if (source.DstVirtualNum != null) {
+            this.DstVirtualNum = new String(source.DstVirtualNum);
+        }
+        if (source.CallCenterAcceptTime != null) {
+            this.CallCenterAcceptTime = new String(source.CallCenterAcceptTime);
+        }
+        if (source.StartDstCallTime != null) {
+            this.StartDstCallTime = new String(source.StartDstCallTime);
+        }
+        if (source.StartDstRingTime != null) {
+            this.StartDstRingTime = new String(source.StartDstRingTime);
+        }
+        if (source.DstAcceptTime != null) {
+            this.DstAcceptTime = new String(source.DstAcceptTime);
+        }
+        if (source.EndCallTime != null) {
+            this.EndCallTime = new String(source.EndCallTime);
+        }
+        if (source.CallEndStatus != null) {
+            this.CallEndStatus = new String(source.CallEndStatus);
+        }
+        if (source.SrcDuration != null) {
+            this.SrcDuration = new String(source.SrcDuration);
+        }
+        if (source.DstDuration != null) {
+            this.DstDuration = new String(source.DstDuration);
+        }
+        if (source.RecordUrl != null) {
+            this.RecordUrl = new String(source.RecordUrl);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

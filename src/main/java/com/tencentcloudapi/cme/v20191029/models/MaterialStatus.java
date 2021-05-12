@@ -60,6 +60,20 @@ public class MaterialStatus extends AbstractModel{
         this.EditorUsableStatus = EditorUsableStatus;
     }
 
+    public MaterialStatus() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MaterialStatus(MaterialStatus source) {
+        if (source.EditorUsableStatus != null) {
+            this.EditorUsableStatus = new String(source.EditorUsableStatus);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

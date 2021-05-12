@@ -91,6 +91,26 @@ public class ModifyDBInstanceReadOnlyGroupRequest extends AbstractModel{
         this.NewReadOnlyGroupId = NewReadOnlyGroupId;
     }
 
+    public ModifyDBInstanceReadOnlyGroupRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyDBInstanceReadOnlyGroupRequest(ModifyDBInstanceReadOnlyGroupRequest source) {
+        if (source.DBInstanceId != null) {
+            this.DBInstanceId = new String(source.DBInstanceId);
+        }
+        if (source.ReadOnlyGroupId != null) {
+            this.ReadOnlyGroupId = new String(source.ReadOnlyGroupId);
+        }
+        if (source.NewReadOnlyGroupId != null) {
+            this.NewReadOnlyGroupId = new String(source.NewReadOnlyGroupId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

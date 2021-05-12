@@ -298,6 +298,53 @@ public class SaDivulgeDataQueryPubRequest extends AbstractModel{
         this.Limit = Limit;
     }
 
+    public SaDivulgeDataQueryPubRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SaDivulgeDataQueryPubRequest(SaDivulgeDataQueryPubRequest source) {
+        if (source.QueryKey != null) {
+            this.QueryKey = new String(source.QueryKey);
+        }
+        if (source.EventName != null) {
+            this.EventName = new String(source.EventName);
+        }
+        if (source.DivulgeSoure != null) {
+            this.DivulgeSoure = new String(source.DivulgeSoure);
+        }
+        if (source.Asset != null) {
+            this.Asset = new String(source.Asset);
+        }
+        if (source.RuleName != null) {
+            this.RuleName = new String(source.RuleName);
+        }
+        if (source.RuleId != null) {
+            this.RuleId = new String(source.RuleId);
+        }
+        if (source.Level != null) {
+            this.Level = new String(source.Level);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+        if (source.Offset != null) {
+            this.Offset = new String(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new String(source.Limit);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

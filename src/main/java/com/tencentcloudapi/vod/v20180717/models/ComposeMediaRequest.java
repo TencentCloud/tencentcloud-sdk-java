@@ -160,6 +160,38 @@ public class ComposeMediaRequest extends AbstractModel{
         this.SubAppId = SubAppId;
     }
 
+    public ComposeMediaRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ComposeMediaRequest(ComposeMediaRequest source) {
+        if (source.Tracks != null) {
+            this.Tracks = new MediaTrack[source.Tracks.length];
+            for (int i = 0; i < source.Tracks.length; i++) {
+                this.Tracks[i] = new MediaTrack(source.Tracks[i]);
+            }
+        }
+        if (source.Output != null) {
+            this.Output = new ComposeMediaOutput(source.Output);
+        }
+        if (source.Canvas != null) {
+            this.Canvas = new Canvas(source.Canvas);
+        }
+        if (source.SessionContext != null) {
+            this.SessionContext = new String(source.SessionContext);
+        }
+        if (source.SessionId != null) {
+            this.SessionId = new String(source.SessionId);
+        }
+        if (source.SubAppId != null) {
+            this.SubAppId = new Long(source.SubAppId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

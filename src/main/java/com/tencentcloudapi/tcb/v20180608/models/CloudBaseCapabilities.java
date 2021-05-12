@@ -78,6 +78,29 @@ public class CloudBaseCapabilities extends AbstractModel{
         this.Drop = Drop;
     }
 
+    public CloudBaseCapabilities() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CloudBaseCapabilities(CloudBaseCapabilities source) {
+        if (source.Add != null) {
+            this.Add = new String[source.Add.length];
+            for (int i = 0; i < source.Add.length; i++) {
+                this.Add[i] = new String(source.Add[i]);
+            }
+        }
+        if (source.Drop != null) {
+            this.Drop = new String[source.Drop.length];
+            for (int i = 0; i < source.Drop.length; i++) {
+                this.Drop[i] = new String(source.Drop[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

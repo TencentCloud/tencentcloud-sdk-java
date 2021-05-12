@@ -327,6 +327,50 @@ Other-Overseas（其他境外地区）
         this.ProductRegion = ProductRegion;
     }
 
+    public ProductBase() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ProductBase(ProductBase source) {
+        if (source.ProductId != null) {
+            this.ProductId = new String(source.ProductId);
+        }
+        if (source.ProductModel != null) {
+            this.ProductModel = new String(source.ProductModel);
+        }
+        if (source.ProductName != null) {
+            this.ProductName = new String(source.ProductName);
+        }
+        if (source.ProductDescription != null) {
+            this.ProductDescription = new String(source.ProductDescription);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new Long(source.CreateTime);
+        }
+        if (source.IotModelRevision != null) {
+            this.IotModelRevision = new Long(source.IotModelRevision);
+        }
+        if (source.SecretKey != null) {
+            this.SecretKey = new String(source.SecretKey);
+        }
+        if (source.FuncCode != null) {
+            this.FuncCode = new String[source.FuncCode.length];
+            for (int i = 0; i < source.FuncCode.length; i++) {
+                this.FuncCode[i] = new String(source.FuncCode[i]);
+            }
+        }
+        if (source.ProductCate != null) {
+            this.ProductCate = new Long(source.ProductCate);
+        }
+        if (source.ProductRegion != null) {
+            this.ProductRegion = new String(source.ProductRegion);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

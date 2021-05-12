@@ -305,6 +305,53 @@ public class UDPListener extends AbstractModel{
         this.CreateTime = CreateTime;
     }
 
+    public UDPListener() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UDPListener(UDPListener source) {
+        if (source.ListenerId != null) {
+            this.ListenerId = new String(source.ListenerId);
+        }
+        if (source.ListenerName != null) {
+            this.ListenerName = new String(source.ListenerName);
+        }
+        if (source.Port != null) {
+            this.Port = new Long(source.Port);
+        }
+        if (source.RealServerPort != null) {
+            this.RealServerPort = new Long(source.RealServerPort);
+        }
+        if (source.RealServerType != null) {
+            this.RealServerType = new String(source.RealServerType);
+        }
+        if (source.Protocol != null) {
+            this.Protocol = new String(source.Protocol);
+        }
+        if (source.ListenerStatus != null) {
+            this.ListenerStatus = new Long(source.ListenerStatus);
+        }
+        if (source.Scheduler != null) {
+            this.Scheduler = new String(source.Scheduler);
+        }
+        if (source.BindStatus != null) {
+            this.BindStatus = new Long(source.BindStatus);
+        }
+        if (source.RealServerSet != null) {
+            this.RealServerSet = new BindRealServer[source.RealServerSet.length];
+            for (int i = 0; i < source.RealServerSet.length; i++) {
+                this.RealServerSet[i] = new BindRealServer(source.RealServerSet[i]);
+            }
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new Long(source.CreateTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

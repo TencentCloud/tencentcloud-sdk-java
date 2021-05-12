@@ -45,6 +45,20 @@ public class StopExecutionRequest extends AbstractModel{
         this.ExecutionQrn = ExecutionQrn;
     }
 
+    public StopExecutionRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public StopExecutionRequest(StopExecutionRequest source) {
+        if (source.ExecutionQrn != null) {
+            this.ExecutionQrn = new String(source.ExecutionQrn);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

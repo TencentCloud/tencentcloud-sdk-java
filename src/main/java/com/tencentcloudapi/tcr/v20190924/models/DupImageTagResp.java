@@ -45,6 +45,20 @@ public class DupImageTagResp extends AbstractModel{
         this.Digest = Digest;
     }
 
+    public DupImageTagResp() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DupImageTagResp(DupImageTagResp source) {
+        if (source.Digest != null) {
+            this.Digest = new String(source.Digest);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

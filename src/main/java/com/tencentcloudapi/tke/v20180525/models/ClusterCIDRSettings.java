@@ -183,6 +183,41 @@ public class ClusterCIDRSettings extends AbstractModel{
         this.ClaimExpiredSeconds = ClaimExpiredSeconds;
     }
 
+    public ClusterCIDRSettings() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ClusterCIDRSettings(ClusterCIDRSettings source) {
+        if (source.ClusterCIDR != null) {
+            this.ClusterCIDR = new String(source.ClusterCIDR);
+        }
+        if (source.IgnoreClusterCIDRConflict != null) {
+            this.IgnoreClusterCIDRConflict = new Boolean(source.IgnoreClusterCIDRConflict);
+        }
+        if (source.MaxNodePodNum != null) {
+            this.MaxNodePodNum = new Long(source.MaxNodePodNum);
+        }
+        if (source.MaxClusterServiceNum != null) {
+            this.MaxClusterServiceNum = new Long(source.MaxClusterServiceNum);
+        }
+        if (source.ServiceCIDR != null) {
+            this.ServiceCIDR = new String(source.ServiceCIDR);
+        }
+        if (source.EniSubnetIds != null) {
+            this.EniSubnetIds = new String[source.EniSubnetIds.length];
+            for (int i = 0; i < source.EniSubnetIds.length; i++) {
+                this.EniSubnetIds[i] = new String(source.EniSubnetIds[i]);
+            }
+        }
+        if (source.ClaimExpiredSeconds != null) {
+            this.ClaimExpiredSeconds = new Long(source.ClaimExpiredSeconds);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

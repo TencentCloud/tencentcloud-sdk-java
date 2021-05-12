@@ -114,6 +114,32 @@ public class AnonymousComputeEnv extends AbstractModel{
         this.AgentRunningMode = AgentRunningMode;
     }
 
+    public AnonymousComputeEnv() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AnonymousComputeEnv(AnonymousComputeEnv source) {
+        if (source.EnvType != null) {
+            this.EnvType = new String(source.EnvType);
+        }
+        if (source.EnvData != null) {
+            this.EnvData = new EnvData(source.EnvData);
+        }
+        if (source.MountDataDisks != null) {
+            this.MountDataDisks = new MountDataDisk[source.MountDataDisks.length];
+            for (int i = 0; i < source.MountDataDisks.length; i++) {
+                this.MountDataDisks[i] = new MountDataDisk(source.MountDataDisks[i]);
+            }
+        }
+        if (source.AgentRunningMode != null) {
+            this.AgentRunningMode = new AgentRunningMode(source.AgentRunningMode);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

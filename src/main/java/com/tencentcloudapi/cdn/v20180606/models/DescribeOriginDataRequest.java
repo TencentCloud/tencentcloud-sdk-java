@@ -326,6 +326,44 @@ overseas：指定查询中国境外 CDN 数据
         this.Area = Area;
     }
 
+    public DescribeOriginDataRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeOriginDataRequest(DescribeOriginDataRequest source) {
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+        if (source.Metric != null) {
+            this.Metric = new String(source.Metric);
+        }
+        if (source.Domains != null) {
+            this.Domains = new String[source.Domains.length];
+            for (int i = 0; i < source.Domains.length; i++) {
+                this.Domains[i] = new String(source.Domains[i]);
+            }
+        }
+        if (source.Project != null) {
+            this.Project = new Long(source.Project);
+        }
+        if (source.Interval != null) {
+            this.Interval = new String(source.Interval);
+        }
+        if (source.Detail != null) {
+            this.Detail = new Boolean(source.Detail);
+        }
+        if (source.Area != null) {
+            this.Area = new String(source.Area);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -68,6 +68,23 @@ public class DeleteLiveDomainRequest extends AbstractModel{
         this.DomainType = DomainType;
     }
 
+    public DeleteLiveDomainRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteLiveDomainRequest(DeleteLiveDomainRequest source) {
+        if (source.DomainName != null) {
+            this.DomainName = new String(source.DomainName);
+        }
+        if (source.DomainType != null) {
+            this.DomainType = new Long(source.DomainType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

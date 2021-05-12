@@ -252,6 +252,47 @@ public class ShardInfo extends AbstractModel{
         this.Cpu = Cpu;
     }
 
+    public ShardInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ShardInfo(ShardInfo source) {
+        if (source.ShardInstanceId != null) {
+            this.ShardInstanceId = new String(source.ShardInstanceId);
+        }
+        if (source.ShardSerialId != null) {
+            this.ShardSerialId = new String(source.ShardSerialId);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.Createtime != null) {
+            this.Createtime = new String(source.Createtime);
+        }
+        if (source.Memory != null) {
+            this.Memory = new Long(source.Memory);
+        }
+        if (source.Storage != null) {
+            this.Storage = new Long(source.Storage);
+        }
+        if (source.ShardId != null) {
+            this.ShardId = new Long(source.ShardId);
+        }
+        if (source.NodeCount != null) {
+            this.NodeCount = new Long(source.NodeCount);
+        }
+        if (source.Pid != null) {
+            this.Pid = new Long(source.Pid);
+        }
+        if (source.Cpu != null) {
+            this.Cpu = new Long(source.Cpu);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

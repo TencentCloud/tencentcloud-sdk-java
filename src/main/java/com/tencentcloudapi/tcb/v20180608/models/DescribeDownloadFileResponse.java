@@ -129,6 +129,29 @@ public class DescribeDownloadFileResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeDownloadFileResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeDownloadFileResponse(DescribeDownloadFileResponse source) {
+        if (source.FilePath != null) {
+            this.FilePath = new String(source.FilePath);
+        }
+        if (source.CustomKey != null) {
+            this.CustomKey = new String(source.CustomKey);
+        }
+        if (source.DownloadUrl != null) {
+            this.DownloadUrl = new String(source.DownloadUrl);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

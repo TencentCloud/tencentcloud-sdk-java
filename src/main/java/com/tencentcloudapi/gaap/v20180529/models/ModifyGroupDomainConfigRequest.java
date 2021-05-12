@@ -91,6 +91,29 @@ public class ModifyGroupDomainConfigRequest extends AbstractModel{
         this.AccessRegionList = AccessRegionList;
     }
 
+    public ModifyGroupDomainConfigRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyGroupDomainConfigRequest(ModifyGroupDomainConfigRequest source) {
+        if (source.GroupId != null) {
+            this.GroupId = new String(source.GroupId);
+        }
+        if (source.DefaultDnsIp != null) {
+            this.DefaultDnsIp = new String(source.DefaultDnsIp);
+        }
+        if (source.AccessRegionList != null) {
+            this.AccessRegionList = new AccessRegionDomainConf[source.AccessRegionList.length];
+            for (int i = 0; i < source.AccessRegionList.length; i++) {
+                this.AccessRegionList[i] = new AccessRegionDomainConf(source.AccessRegionList[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

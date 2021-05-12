@@ -68,6 +68,23 @@ public class DescribeSecurityGroupLimitsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeSecurityGroupLimitsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeSecurityGroupLimitsResponse(DescribeSecurityGroupLimitsResponse source) {
+        if (source.SecurityGroupLimitSet != null) {
+            this.SecurityGroupLimitSet = new SecurityGroupLimitSet(source.SecurityGroupLimitSet);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

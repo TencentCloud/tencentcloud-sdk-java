@@ -78,6 +78,23 @@ public class PlayerLatencyPolicy extends AbstractModel{
         this.PolicyDurationSeconds = PolicyDurationSeconds;
     }
 
+    public PlayerLatencyPolicy() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PlayerLatencyPolicy(PlayerLatencyPolicy source) {
+        if (source.MaximumIndividualPlayerLatencyMilliseconds != null) {
+            this.MaximumIndividualPlayerLatencyMilliseconds = new Long(source.MaximumIndividualPlayerLatencyMilliseconds);
+        }
+        if (source.PolicyDurationSeconds != null) {
+            this.PolicyDurationSeconds = new Long(source.PolicyDurationSeconds);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

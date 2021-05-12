@@ -215,6 +215,35 @@ public class DescribeStorageDetailsRequest extends AbstractModel{
         this.Area = Area;
     }
 
+    public DescribeStorageDetailsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeStorageDetailsRequest(DescribeStorageDetailsRequest source) {
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+        if (source.Interval != null) {
+            this.Interval = new String(source.Interval);
+        }
+        if (source.StorageType != null) {
+            this.StorageType = new String(source.StorageType);
+        }
+        if (source.SubAppId != null) {
+            this.SubAppId = new Long(source.SubAppId);
+        }
+        if (source.Area != null) {
+            this.Area = new String(source.Area);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

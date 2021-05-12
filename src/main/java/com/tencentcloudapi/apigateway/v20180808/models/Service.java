@@ -526,6 +526,80 @@ public class Service extends AbstractModel{
         this.SetType = SetType;
     }
 
+    public Service() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Service(Service source) {
+        if (source.InnerHttpsPort != null) {
+            this.InnerHttpsPort = new Long(source.InnerHttpsPort);
+        }
+        if (source.ServiceDesc != null) {
+            this.ServiceDesc = new String(source.ServiceDesc);
+        }
+        if (source.Protocol != null) {
+            this.Protocol = new String(source.Protocol);
+        }
+        if (source.ModifiedTime != null) {
+            this.ModifiedTime = new String(source.ModifiedTime);
+        }
+        if (source.NetTypes != null) {
+            this.NetTypes = new String[source.NetTypes.length];
+            for (int i = 0; i < source.NetTypes.length; i++) {
+                this.NetTypes[i] = new String(source.NetTypes[i]);
+            }
+        }
+        if (source.ExclusiveSetName != null) {
+            this.ExclusiveSetName = new String(source.ExclusiveSetName);
+        }
+        if (source.ServiceId != null) {
+            this.ServiceId = new String(source.ServiceId);
+        }
+        if (source.IpVersion != null) {
+            this.IpVersion = new String(source.IpVersion);
+        }
+        if (source.AvailableEnvironments != null) {
+            this.AvailableEnvironments = new String[source.AvailableEnvironments.length];
+            for (int i = 0; i < source.AvailableEnvironments.length; i++) {
+                this.AvailableEnvironments[i] = new String(source.AvailableEnvironments[i]);
+            }
+        }
+        if (source.ServiceName != null) {
+            this.ServiceName = new String(source.ServiceName);
+        }
+        if (source.OuterSubDomain != null) {
+            this.OuterSubDomain = new String(source.OuterSubDomain);
+        }
+        if (source.CreatedTime != null) {
+            this.CreatedTime = new String(source.CreatedTime);
+        }
+        if (source.InnerHttpPort != null) {
+            this.InnerHttpPort = new Long(source.InnerHttpPort);
+        }
+        if (source.InnerSubDomain != null) {
+            this.InnerSubDomain = new String(source.InnerSubDomain);
+        }
+        if (source.TradeIsolateStatus != null) {
+            this.TradeIsolateStatus = new Long(source.TradeIsolateStatus);
+        }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.SetType != null) {
+            this.SetType = new String(source.SetType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

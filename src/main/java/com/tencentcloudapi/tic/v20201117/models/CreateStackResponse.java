@@ -91,6 +91,26 @@ public class CreateStackResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public CreateStackResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateStackResponse(CreateStackResponse source) {
+        if (source.StackId != null) {
+            this.StackId = new String(source.StackId);
+        }
+        if (source.VersionId != null) {
+            this.VersionId = new String(source.VersionId);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

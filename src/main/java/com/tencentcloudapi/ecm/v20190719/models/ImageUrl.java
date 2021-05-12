@@ -45,6 +45,20 @@ public class ImageUrl extends AbstractModel{
         this.ImageFile = ImageFile;
     }
 
+    public ImageUrl() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ImageUrl(ImageUrl source) {
+        if (source.ImageFile != null) {
+            this.ImageFile = new String(source.ImageFile);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

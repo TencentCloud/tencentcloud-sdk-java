@@ -344,6 +344,62 @@ public class TrafficMirrorReceiver extends AbstractModel{
         this.Operates = Operates;
     }
 
+    public TrafficMirrorReceiver() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TrafficMirrorReceiver(TrafficMirrorReceiver source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.Port != null) {
+            this.Port = new Long(source.Port);
+        }
+        if (source.Weight != null) {
+            this.Weight = new Long(source.Weight);
+        }
+        if (source.TrafficMirrorId != null) {
+            this.TrafficMirrorId = new String(source.TrafficMirrorId);
+        }
+        if (source.Alias != null) {
+            this.Alias = new String(source.Alias);
+        }
+        if (source.LanIp != null) {
+            this.LanIp = new String(source.LanIp);
+        }
+        if (source.SubnetId != null) {
+            this.SubnetId = new String(source.SubnetId);
+        }
+        if (source.SubnetName != null) {
+            this.SubnetName = new String(source.SubnetName);
+        }
+        if (source.SubnetCidrBlock != null) {
+            this.SubnetCidrBlock = new String(source.SubnetCidrBlock);
+        }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.VpcName != null) {
+            this.VpcName = new String(source.VpcName);
+        }
+        if (source.VpcCidrBlock != null) {
+            this.VpcCidrBlock = new String(source.VpcCidrBlock);
+        }
+        if (source.HealthStatus != null) {
+            this.HealthStatus = new String(source.HealthStatus);
+        }
+        if (source.Operates != null) {
+            this.Operates = new String[source.Operates.length];
+            for (int i = 0; i < source.Operates.length; i++) {
+                this.Operates[i] = new String(source.Operates[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

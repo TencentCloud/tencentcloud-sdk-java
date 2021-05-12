@@ -190,6 +190,35 @@ public class CosCredentials extends AbstractModel{
         this.Domain = Domain;
     }
 
+    public CosCredentials() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CosCredentials(CosCredentials source) {
+        if (source.SessionToken != null) {
+            this.SessionToken = new String(source.SessionToken);
+        }
+        if (source.TmpAppId != null) {
+            this.TmpAppId = new String(source.TmpAppId);
+        }
+        if (source.TmpSecretId != null) {
+            this.TmpSecretId = new String(source.TmpSecretId);
+        }
+        if (source.TmpSecretKey != null) {
+            this.TmpSecretKey = new String(source.TmpSecretKey);
+        }
+        if (source.ExpiredTime != null) {
+            this.ExpiredTime = new Long(source.ExpiredTime);
+        }
+        if (source.Domain != null) {
+            this.Domain = new String(source.Domain);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

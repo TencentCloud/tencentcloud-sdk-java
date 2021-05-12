@@ -68,6 +68,23 @@ public class CreateTaskRequest extends AbstractModel{
         this.DatabaseName = DatabaseName;
     }
 
+    public CreateTaskRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateTaskRequest(CreateTaskRequest source) {
+        if (source.Task != null) {
+            this.Task = new Task(source.Task);
+        }
+        if (source.DatabaseName != null) {
+            this.DatabaseName = new String(source.DatabaseName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

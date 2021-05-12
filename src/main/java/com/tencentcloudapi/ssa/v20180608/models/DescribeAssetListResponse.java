@@ -114,6 +114,35 @@ public class DescribeAssetListResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeAssetListResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeAssetListResponse(DescribeAssetListResponse source) {
+        if (source.AssetList != null) {
+            this.AssetList = new AssetList(source.AssetList);
+        }
+        if (source.AggregationData != null) {
+            this.AggregationData = new AggregationObj[source.AggregationData.length];
+            for (int i = 0; i < source.AggregationData.length; i++) {
+                this.AggregationData[i] = new AggregationObj(source.AggregationData[i]);
+            }
+        }
+        if (source.NamespaceData != null) {
+            this.NamespaceData = new String[source.NamespaceData.length];
+            for (int i = 0; i < source.NamespaceData.length; i++) {
+                this.NamespaceData[i] = new String(source.NamespaceData[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

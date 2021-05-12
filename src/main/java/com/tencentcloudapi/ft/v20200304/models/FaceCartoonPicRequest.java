@@ -139,6 +139,29 @@ public class FaceCartoonPicRequest extends AbstractModel{
         this.DisableGlobalEffect = DisableGlobalEffect;
     }
 
+    public FaceCartoonPicRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public FaceCartoonPicRequest(FaceCartoonPicRequest source) {
+        if (source.Image != null) {
+            this.Image = new String(source.Image);
+        }
+        if (source.Url != null) {
+            this.Url = new String(source.Url);
+        }
+        if (source.RspImgType != null) {
+            this.RspImgType = new String(source.RspImgType);
+        }
+        if (source.DisableGlobalEffect != null) {
+            this.DisableGlobalEffect = new String(source.DisableGlobalEffect);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

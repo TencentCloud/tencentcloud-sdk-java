@@ -68,6 +68,26 @@ public class DescribeInsurePacksResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeInsurePacksResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeInsurePacksResponse(DescribeInsurePacksResponse source) {
+        if (source.InsurePacks != null) {
+            this.InsurePacks = new KeyValueRecord[source.InsurePacks.length];
+            for (int i = 0; i < source.InsurePacks.length; i++) {
+                this.InsurePacks[i] = new KeyValueRecord(source.InsurePacks[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

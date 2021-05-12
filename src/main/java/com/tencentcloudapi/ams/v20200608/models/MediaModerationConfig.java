@@ -160,6 +160,35 @@ public class MediaModerationConfig extends AbstractModel{
         this.UseAudio = UseAudio;
     }
 
+    public MediaModerationConfig() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MediaModerationConfig(MediaModerationConfig source) {
+        if (source.AudioFrequency != null) {
+            this.AudioFrequency = new Long(source.AudioFrequency);
+        }
+        if (source.ImageFrequency != null) {
+            this.ImageFrequency = new Long(source.ImageFrequency);
+        }
+        if (source.CallbackUrl != null) {
+            this.CallbackUrl = new String(source.CallbackUrl);
+        }
+        if (source.SegmentOutput != null) {
+            this.SegmentOutput = new FileOutput(source.SegmentOutput);
+        }
+        if (source.UseOCR != null) {
+            this.UseOCR = new Boolean(source.UseOCR);
+        }
+        if (source.UseAudio != null) {
+            this.UseAudio = new Boolean(source.UseAudio);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

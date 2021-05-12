@@ -137,6 +137,35 @@ public class CreateSchedulerMailProfileRequest extends AbstractModel{
         this.Product = Product;
     }
 
+    public CreateSchedulerMailProfileRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateSchedulerMailProfileRequest(CreateSchedulerMailProfileRequest source) {
+        if (source.WeekConfiguration != null) {
+            this.WeekConfiguration = new Long[source.WeekConfiguration.length];
+            for (int i = 0; i < source.WeekConfiguration.length; i++) {
+                this.WeekConfiguration[i] = new Long(source.WeekConfiguration[i]);
+            }
+        }
+        if (source.ProfileInfo != null) {
+            this.ProfileInfo = new ProfileInfo(source.ProfileInfo);
+        }
+        if (source.ProfileName != null) {
+            this.ProfileName = new String(source.ProfileName);
+        }
+        if (source.BindInstanceId != null) {
+            this.BindInstanceId = new String(source.BindInstanceId);
+        }
+        if (source.Product != null) {
+            this.Product = new String(source.Product);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

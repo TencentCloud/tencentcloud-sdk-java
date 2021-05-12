@@ -91,6 +91,26 @@ public class UploadTaxPaymentRequest extends AbstractModel{
         this.FileUrl = FileUrl;
     }
 
+    public UploadTaxPaymentRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UploadTaxPaymentRequest(UploadTaxPaymentRequest source) {
+        if (source.Channel != null) {
+            this.Channel = new Long(source.Channel);
+        }
+        if (source.TaxId != null) {
+            this.TaxId = new String(source.TaxId);
+        }
+        if (source.FileUrl != null) {
+            this.FileUrl = new String(source.FileUrl);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

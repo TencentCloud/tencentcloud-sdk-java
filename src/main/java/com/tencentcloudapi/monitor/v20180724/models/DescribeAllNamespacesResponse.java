@@ -137,6 +137,38 @@ public class DescribeAllNamespacesResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeAllNamespacesResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeAllNamespacesResponse(DescribeAllNamespacesResponse source) {
+        if (source.QceNamespaces != null) {
+            this.QceNamespaces = new CommonNamespace(source.QceNamespaces);
+        }
+        if (source.CustomNamespaces != null) {
+            this.CustomNamespaces = new CommonNamespace(source.CustomNamespaces);
+        }
+        if (source.QceNamespacesNew != null) {
+            this.QceNamespacesNew = new CommonNamespace[source.QceNamespacesNew.length];
+            for (int i = 0; i < source.QceNamespacesNew.length; i++) {
+                this.QceNamespacesNew[i] = new CommonNamespace(source.QceNamespacesNew[i]);
+            }
+        }
+        if (source.CustomNamespacesNew != null) {
+            this.CustomNamespacesNew = new CommonNamespace[source.CustomNamespacesNew.length];
+            for (int i = 0; i < source.CustomNamespacesNew.length; i++) {
+                this.CustomNamespacesNew[i] = new CommonNamespace(source.CustomNamespacesNew[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -114,6 +114,29 @@ public class Environment extends AbstractModel{
         this.VersionName = VersionName;
     }
 
+    public Environment() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Environment(Environment source) {
+        if (source.EnvironmentName != null) {
+            this.EnvironmentName = new String(source.EnvironmentName);
+        }
+        if (source.Url != null) {
+            this.Url = new String(source.Url);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.VersionName != null) {
+            this.VersionName = new String(source.VersionName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

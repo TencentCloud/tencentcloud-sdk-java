@@ -218,6 +218,38 @@ public class Connection extends AbstractModel{
         this.MsgThroughputIn = MsgThroughputIn;
     }
 
+    public Connection() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Connection(Connection source) {
+        if (source.Address != null) {
+            this.Address = new String(source.Address);
+        }
+        if (source.Partitions != null) {
+            this.Partitions = new Long(source.Partitions);
+        }
+        if (source.ClientVersion != null) {
+            this.ClientVersion = new String(source.ClientVersion);
+        }
+        if (source.ProducerName != null) {
+            this.ProducerName = new String(source.ProducerName);
+        }
+        if (source.ProducerId != null) {
+            this.ProducerId = new String(source.ProducerId);
+        }
+        if (source.AverageMsgSize != null) {
+            this.AverageMsgSize = new String(source.AverageMsgSize);
+        }
+        if (source.MsgThroughputIn != null) {
+            this.MsgThroughputIn = new String(source.MsgThroughputIn);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

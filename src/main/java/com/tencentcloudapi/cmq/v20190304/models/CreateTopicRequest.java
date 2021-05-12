@@ -137,6 +137,32 @@ public class CreateTopicRequest extends AbstractModel{
         this.Trace = Trace;
     }
 
+    public CreateTopicRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateTopicRequest(CreateTopicRequest source) {
+        if (source.TopicName != null) {
+            this.TopicName = new String(source.TopicName);
+        }
+        if (source.MaxMsgSize != null) {
+            this.MaxMsgSize = new Long(source.MaxMsgSize);
+        }
+        if (source.FilterType != null) {
+            this.FilterType = new Long(source.FilterType);
+        }
+        if (source.MsgRetentionSeconds != null) {
+            this.MsgRetentionSeconds = new Long(source.MsgRetentionSeconds);
+        }
+        if (source.Trace != null) {
+            this.Trace = new Boolean(source.Trace);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

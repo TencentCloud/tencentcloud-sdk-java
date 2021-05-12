@@ -287,6 +287,47 @@ public class CertificateDetail extends AbstractModel{
         this.SubjectCN = SubjectCN;
     }
 
+    public CertificateDetail() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CertificateDetail(CertificateDetail source) {
+        if (source.CertificateId != null) {
+            this.CertificateId = new String(source.CertificateId);
+        }
+        if (source.CertificateType != null) {
+            this.CertificateType = new Long(source.CertificateType);
+        }
+        if (source.CertificateAlias != null) {
+            this.CertificateAlias = new String(source.CertificateAlias);
+        }
+        if (source.CertificateContent != null) {
+            this.CertificateContent = new String(source.CertificateContent);
+        }
+        if (source.CertificateKey != null) {
+            this.CertificateKey = new String(source.CertificateKey);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new Long(source.CreateTime);
+        }
+        if (source.BeginTime != null) {
+            this.BeginTime = new Long(source.BeginTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new Long(source.EndTime);
+        }
+        if (source.IssuerCN != null) {
+            this.IssuerCN = new String(source.IssuerCN);
+        }
+        if (source.SubjectCN != null) {
+            this.SubjectCN = new String(source.SubjectCN);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

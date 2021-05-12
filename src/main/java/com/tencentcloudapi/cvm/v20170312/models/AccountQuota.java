@@ -137,6 +137,47 @@ public class AccountQuota extends AbstractModel{
         this.DisasterRecoverGroupQuotaSet = DisasterRecoverGroupQuotaSet;
     }
 
+    public AccountQuota() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AccountQuota(AccountQuota source) {
+        if (source.PostPaidQuotaSet != null) {
+            this.PostPaidQuotaSet = new PostPaidQuota[source.PostPaidQuotaSet.length];
+            for (int i = 0; i < source.PostPaidQuotaSet.length; i++) {
+                this.PostPaidQuotaSet[i] = new PostPaidQuota(source.PostPaidQuotaSet[i]);
+            }
+        }
+        if (source.PrePaidQuotaSet != null) {
+            this.PrePaidQuotaSet = new PrePaidQuota[source.PrePaidQuotaSet.length];
+            for (int i = 0; i < source.PrePaidQuotaSet.length; i++) {
+                this.PrePaidQuotaSet[i] = new PrePaidQuota(source.PrePaidQuotaSet[i]);
+            }
+        }
+        if (source.SpotPaidQuotaSet != null) {
+            this.SpotPaidQuotaSet = new SpotPaidQuota[source.SpotPaidQuotaSet.length];
+            for (int i = 0; i < source.SpotPaidQuotaSet.length; i++) {
+                this.SpotPaidQuotaSet[i] = new SpotPaidQuota(source.SpotPaidQuotaSet[i]);
+            }
+        }
+        if (source.ImageQuotaSet != null) {
+            this.ImageQuotaSet = new ImageQuota[source.ImageQuotaSet.length];
+            for (int i = 0; i < source.ImageQuotaSet.length; i++) {
+                this.ImageQuotaSet[i] = new ImageQuota(source.ImageQuotaSet[i]);
+            }
+        }
+        if (source.DisasterRecoverGroupQuotaSet != null) {
+            this.DisasterRecoverGroupQuotaSet = new DisasterRecoverGroupQuota[source.DisasterRecoverGroupQuotaSet.length];
+            for (int i = 0; i < source.DisasterRecoverGroupQuotaSet.length; i++) {
+                this.DisasterRecoverGroupQuotaSet[i] = new DisasterRecoverGroupQuota(source.DisasterRecoverGroupQuotaSet[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

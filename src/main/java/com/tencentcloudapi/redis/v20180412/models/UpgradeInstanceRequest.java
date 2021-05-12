@@ -137,6 +137,35 @@ public class UpgradeInstanceRequest extends AbstractModel{
         this.NodeSet = NodeSet;
     }
 
+    public UpgradeInstanceRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UpgradeInstanceRequest(UpgradeInstanceRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.MemSize != null) {
+            this.MemSize = new Long(source.MemSize);
+        }
+        if (source.RedisShardNum != null) {
+            this.RedisShardNum = new Long(source.RedisShardNum);
+        }
+        if (source.RedisReplicasNum != null) {
+            this.RedisReplicasNum = new Long(source.RedisReplicasNum);
+        }
+        if (source.NodeSet != null) {
+            this.NodeSet = new RedisNodeInfo[source.NodeSet.length];
+            for (int i = 0; i < source.NodeSet.length; i++) {
+                this.NodeSet[i] = new RedisNodeInfo(source.NodeSet[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

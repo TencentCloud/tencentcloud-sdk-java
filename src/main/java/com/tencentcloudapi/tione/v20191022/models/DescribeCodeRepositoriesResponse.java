@@ -96,6 +96,29 @@ public class DescribeCodeRepositoriesResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeCodeRepositoriesResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeCodeRepositoriesResponse(DescribeCodeRepositoriesResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.CodeRepoSet != null) {
+            this.CodeRepoSet = new CodeRepoSummary[source.CodeRepoSet.length];
+            for (int i = 0; i < source.CodeRepoSet.length; i++) {
+                this.CodeRepoSet[i] = new CodeRepoSummary(source.CodeRepoSet[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

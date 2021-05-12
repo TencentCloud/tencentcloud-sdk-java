@@ -183,6 +183,41 @@ public class EditMediaRequest extends AbstractModel{
         this.SessionContext = SessionContext;
     }
 
+    public EditMediaRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public EditMediaRequest(EditMediaRequest source) {
+        if (source.FileInfos != null) {
+            this.FileInfos = new EditMediaFileInfo[source.FileInfos.length];
+            for (int i = 0; i < source.FileInfos.length; i++) {
+                this.FileInfos[i] = new EditMediaFileInfo(source.FileInfos[i]);
+            }
+        }
+        if (source.OutputStorage != null) {
+            this.OutputStorage = new TaskOutputStorage(source.OutputStorage);
+        }
+        if (source.OutputObjectPath != null) {
+            this.OutputObjectPath = new String(source.OutputObjectPath);
+        }
+        if (source.TaskNotifyConfig != null) {
+            this.TaskNotifyConfig = new TaskNotifyConfig(source.TaskNotifyConfig);
+        }
+        if (source.TasksPriority != null) {
+            this.TasksPriority = new Long(source.TasksPriority);
+        }
+        if (source.SessionId != null) {
+            this.SessionId = new String(source.SessionId);
+        }
+        if (source.SessionContext != null) {
+            this.SessionContext = new String(source.SessionContext);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

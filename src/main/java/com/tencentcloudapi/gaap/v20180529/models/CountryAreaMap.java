@@ -160,6 +160,35 @@ public class CountryAreaMap extends AbstractModel{
         this.ContinentInnerCode = ContinentInnerCode;
     }
 
+    public CountryAreaMap() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CountryAreaMap(CountryAreaMap source) {
+        if (source.NationCountryName != null) {
+            this.NationCountryName = new String(source.NationCountryName);
+        }
+        if (source.NationCountryInnerCode != null) {
+            this.NationCountryInnerCode = new String(source.NationCountryInnerCode);
+        }
+        if (source.GeographicalZoneName != null) {
+            this.GeographicalZoneName = new String(source.GeographicalZoneName);
+        }
+        if (source.GeographicalZoneInnerCode != null) {
+            this.GeographicalZoneInnerCode = new String(source.GeographicalZoneInnerCode);
+        }
+        if (source.ContinentName != null) {
+            this.ContinentName = new String(source.ContinentName);
+        }
+        if (source.ContinentInnerCode != null) {
+            this.ContinentInnerCode = new String(source.ContinentInnerCode);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

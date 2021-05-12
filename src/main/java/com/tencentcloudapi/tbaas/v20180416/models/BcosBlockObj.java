@@ -206,6 +206,41 @@ public class BcosBlockObj extends AbstractModel{
         this.ModifyTime = ModifyTime;
     }
 
+    public BcosBlockObj() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public BcosBlockObj(BcosBlockObj source) {
+        if (source.BlockHash != null) {
+            this.BlockHash = new String(source.BlockHash);
+        }
+        if (source.BlockNumber != null) {
+            this.BlockNumber = new Long(source.BlockNumber);
+        }
+        if (source.BlockTimestamp != null) {
+            this.BlockTimestamp = new String(source.BlockTimestamp);
+        }
+        if (source.Sealer != null) {
+            this.Sealer = new String(source.Sealer);
+        }
+        if (source.SealerIndex != null) {
+            this.SealerIndex = new Long(source.SealerIndex);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.TransCount != null) {
+            this.TransCount = new Long(source.TransCount);
+        }
+        if (source.ModifyTime != null) {
+            this.ModifyTime = new String(source.ModifyTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

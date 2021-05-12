@@ -303,6 +303,53 @@ public class WhiteboxKeyInfo extends AbstractModel{
         this.DeviceFingerprintBind = DeviceFingerprintBind;
     }
 
+    public WhiteboxKeyInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public WhiteboxKeyInfo(WhiteboxKeyInfo source) {
+        if (source.KeyId != null) {
+            this.KeyId = new String(source.KeyId);
+        }
+        if (source.Alias != null) {
+            this.Alias = new String(source.Alias);
+        }
+        if (source.CreatorUin != null) {
+            this.CreatorUin = new Long(source.CreatorUin);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new Long(source.CreateTime);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.OwnerUin != null) {
+            this.OwnerUin = new Long(source.OwnerUin);
+        }
+        if (source.Algorithm != null) {
+            this.Algorithm = new String(source.Algorithm);
+        }
+        if (source.EncryptKey != null) {
+            this.EncryptKey = new String(source.EncryptKey);
+        }
+        if (source.DecryptKey != null) {
+            this.DecryptKey = new String(source.DecryptKey);
+        }
+        if (source.ResourceId != null) {
+            this.ResourceId = new String(source.ResourceId);
+        }
+        if (source.DeviceFingerprintBind != null) {
+            this.DeviceFingerprintBind = new Boolean(source.DeviceFingerprintBind);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

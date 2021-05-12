@@ -68,6 +68,26 @@ public class ServiceSubDomainMappings extends AbstractModel{
         this.PathMappingSet = PathMappingSet;
     }
 
+    public ServiceSubDomainMappings() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ServiceSubDomainMappings(ServiceSubDomainMappings source) {
+        if (source.IsDefaultMapping != null) {
+            this.IsDefaultMapping = new Boolean(source.IsDefaultMapping);
+        }
+        if (source.PathMappingSet != null) {
+            this.PathMappingSet = new PathMapping[source.PathMappingSet.length];
+            for (int i = 0; i < source.PathMappingSet.length; i++) {
+                this.PathMappingSet[i] = new PathMapping(source.PathMappingSet[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -252,6 +252,47 @@ public class CreateDeviceRequest extends AbstractModel{
         this.LoraAppKey = LoraAppKey;
     }
 
+    public CreateDeviceRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateDeviceRequest(CreateDeviceRequest source) {
+        if (source.ProductId != null) {
+            this.ProductId = new String(source.ProductId);
+        }
+        if (source.DeviceName != null) {
+            this.DeviceName = new String(source.DeviceName);
+        }
+        if (source.Attribute != null) {
+            this.Attribute = new Attribute(source.Attribute);
+        }
+        if (source.DefinedPsk != null) {
+            this.DefinedPsk = new String(source.DefinedPsk);
+        }
+        if (source.Isp != null) {
+            this.Isp = new Long(source.Isp);
+        }
+        if (source.Imei != null) {
+            this.Imei = new String(source.Imei);
+        }
+        if (source.LoraDevEui != null) {
+            this.LoraDevEui = new String(source.LoraDevEui);
+        }
+        if (source.LoraMoteType != null) {
+            this.LoraMoteType = new Long(source.LoraMoteType);
+        }
+        if (source.Skey != null) {
+            this.Skey = new String(source.Skey);
+        }
+        if (source.LoraAppKey != null) {
+            this.LoraAppKey = new String(source.LoraAppKey);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

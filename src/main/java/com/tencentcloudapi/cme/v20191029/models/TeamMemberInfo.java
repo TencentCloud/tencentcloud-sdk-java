@@ -106,6 +106,26 @@ public class TeamMemberInfo extends AbstractModel{
         this.Role = Role;
     }
 
+    public TeamMemberInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TeamMemberInfo(TeamMemberInfo source) {
+        if (source.MemberId != null) {
+            this.MemberId = new String(source.MemberId);
+        }
+        if (source.Remark != null) {
+            this.Remark = new String(source.Remark);
+        }
+        if (source.Role != null) {
+            this.Role = new String(source.Role);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

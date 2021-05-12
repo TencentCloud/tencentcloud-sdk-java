@@ -45,6 +45,20 @@ public class ImageLimitConfig extends AbstractModel{
         this.MaxImageSize = MaxImageSize;
     }
 
+    public ImageLimitConfig() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ImageLimitConfig(ImageLimitConfig source) {
+        if (source.MaxImageSize != null) {
+            this.MaxImageSize = new Long(source.MaxImageSize);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

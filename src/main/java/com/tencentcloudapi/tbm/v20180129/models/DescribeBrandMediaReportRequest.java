@@ -91,6 +91,26 @@ public class DescribeBrandMediaReportRequest extends AbstractModel{
         this.EndDate = EndDate;
     }
 
+    public DescribeBrandMediaReportRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeBrandMediaReportRequest(DescribeBrandMediaReportRequest source) {
+        if (source.BrandId != null) {
+            this.BrandId = new String(source.BrandId);
+        }
+        if (source.StartDate != null) {
+            this.StartDate = new String(source.StartDate);
+        }
+        if (source.EndDate != null) {
+            this.EndDate = new String(source.EndDate);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

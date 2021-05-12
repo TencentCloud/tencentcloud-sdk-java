@@ -114,6 +114,29 @@ public class ModifyAccountDescriptionRequest extends AbstractModel{
         this.Description = Description;
     }
 
+    public ModifyAccountDescriptionRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyAccountDescriptionRequest(ModifyAccountDescriptionRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.UserName != null) {
+            this.UserName = new String(source.UserName);
+        }
+        if (source.Host != null) {
+            this.Host = new String(source.Host);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

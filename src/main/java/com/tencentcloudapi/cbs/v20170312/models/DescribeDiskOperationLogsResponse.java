@@ -68,6 +68,26 @@ public class DescribeDiskOperationLogsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeDiskOperationLogsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeDiskOperationLogsResponse(DescribeDiskOperationLogsResponse source) {
+        if (source.DiskOperationLogSet != null) {
+            this.DiskOperationLogSet = new DiskOperationLog[source.DiskOperationLogSet.length];
+            for (int i = 0; i < source.DiskOperationLogSet.length; i++) {
+                this.DiskOperationLogSet[i] = new DiskOperationLog(source.DiskOperationLogSet[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

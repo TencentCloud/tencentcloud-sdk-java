@@ -183,6 +183,38 @@ public class IMCdrInfo extends AbstractModel{
         this.Timestamp = Timestamp;
     }
 
+    public IMCdrInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public IMCdrInfo(IMCdrInfo source) {
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
+        if (source.Duration != null) {
+            this.Duration = new Long(source.Duration);
+        }
+        if (source.EndStatus != null) {
+            this.EndStatus = new Long(source.EndStatus);
+        }
+        if (source.Nickname != null) {
+            this.Nickname = new String(source.Nickname);
+        }
+        if (source.Type != null) {
+            this.Type = new Long(source.Type);
+        }
+        if (source.StaffId != null) {
+            this.StaffId = new String(source.StaffId);
+        }
+        if (source.Timestamp != null) {
+            this.Timestamp = new Long(source.Timestamp);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

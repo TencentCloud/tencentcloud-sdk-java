@@ -73,6 +73,26 @@ public class KeywordsExtractionResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public KeywordsExtractionResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public KeywordsExtractionResponse(KeywordsExtractionResponse source) {
+        if (source.Keywords != null) {
+            this.Keywords = new Keyword[source.Keywords.length];
+            for (int i = 0; i < source.Keywords.length; i++) {
+                this.Keywords[i] = new Keyword(source.Keywords[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

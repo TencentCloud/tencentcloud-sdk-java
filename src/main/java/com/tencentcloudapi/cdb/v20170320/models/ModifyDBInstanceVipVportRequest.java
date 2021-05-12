@@ -160,6 +160,35 @@ public class ModifyDBInstanceVipVportRequest extends AbstractModel{
         this.ReleaseDuration = ReleaseDuration;
     }
 
+    public ModifyDBInstanceVipVportRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyDBInstanceVipVportRequest(ModifyDBInstanceVipVportRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.DstIp != null) {
+            this.DstIp = new String(source.DstIp);
+        }
+        if (source.DstPort != null) {
+            this.DstPort = new Long(source.DstPort);
+        }
+        if (source.UniqVpcId != null) {
+            this.UniqVpcId = new String(source.UniqVpcId);
+        }
+        if (source.UniqSubnetId != null) {
+            this.UniqSubnetId = new String(source.UniqSubnetId);
+        }
+        if (source.ReleaseDuration != null) {
+            this.ReleaseDuration = new Long(source.ReleaseDuration);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

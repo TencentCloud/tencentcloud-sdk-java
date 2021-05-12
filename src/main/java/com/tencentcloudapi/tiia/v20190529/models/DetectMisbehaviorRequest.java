@@ -108,6 +108,23 @@ public class DetectMisbehaviorRequest extends AbstractModel{
         this.ImageBase64 = ImageBase64;
     }
 
+    public DetectMisbehaviorRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DetectMisbehaviorRequest(DetectMisbehaviorRequest source) {
+        if (source.ImageUrl != null) {
+            this.ImageUrl = new String(source.ImageUrl);
+        }
+        if (source.ImageBase64 != null) {
+            this.ImageBase64 = new String(source.ImageBase64);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

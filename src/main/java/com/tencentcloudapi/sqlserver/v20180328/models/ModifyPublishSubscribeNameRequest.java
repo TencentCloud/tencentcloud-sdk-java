@@ -68,6 +68,23 @@ public class ModifyPublishSubscribeNameRequest extends AbstractModel{
         this.PublishSubscribeName = PublishSubscribeName;
     }
 
+    public ModifyPublishSubscribeNameRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyPublishSubscribeNameRequest(ModifyPublishSubscribeNameRequest source) {
+        if (source.PublishSubscribeId != null) {
+            this.PublishSubscribeId = new Long(source.PublishSubscribeId);
+        }
+        if (source.PublishSubscribeName != null) {
+            this.PublishSubscribeName = new String(source.PublishSubscribeName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

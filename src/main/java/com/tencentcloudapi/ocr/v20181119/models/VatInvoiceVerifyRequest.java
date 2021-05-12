@@ -139,6 +139,29 @@ public class VatInvoiceVerifyRequest extends AbstractModel{
         this.Additional = Additional;
     }
 
+    public VatInvoiceVerifyRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public VatInvoiceVerifyRequest(VatInvoiceVerifyRequest source) {
+        if (source.InvoiceCode != null) {
+            this.InvoiceCode = new String(source.InvoiceCode);
+        }
+        if (source.InvoiceNo != null) {
+            this.InvoiceNo = new String(source.InvoiceNo);
+        }
+        if (source.InvoiceDate != null) {
+            this.InvoiceDate = new String(source.InvoiceDate);
+        }
+        if (source.Additional != null) {
+            this.Additional = new String(source.Additional);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

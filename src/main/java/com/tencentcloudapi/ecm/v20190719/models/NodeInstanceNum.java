@@ -68,6 +68,23 @@ public class NodeInstanceNum extends AbstractModel{
         this.InstanceNum = InstanceNum;
     }
 
+    public NodeInstanceNum() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public NodeInstanceNum(NodeInstanceNum source) {
+        if (source.NodeNum != null) {
+            this.NodeNum = new Long(source.NodeNum);
+        }
+        if (source.InstanceNum != null) {
+            this.InstanceNum = new Long(source.InstanceNum);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

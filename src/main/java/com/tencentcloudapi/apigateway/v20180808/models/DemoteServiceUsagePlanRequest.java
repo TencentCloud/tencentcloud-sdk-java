@@ -91,6 +91,26 @@ public class DemoteServiceUsagePlanRequest extends AbstractModel{
         this.Environment = Environment;
     }
 
+    public DemoteServiceUsagePlanRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DemoteServiceUsagePlanRequest(DemoteServiceUsagePlanRequest source) {
+        if (source.UsagePlanId != null) {
+            this.UsagePlanId = new String(source.UsagePlanId);
+        }
+        if (source.ServiceId != null) {
+            this.ServiceId = new String(source.ServiceId);
+        }
+        if (source.Environment != null) {
+            this.Environment = new String(source.Environment);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

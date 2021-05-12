@@ -91,6 +91,26 @@ public class BeautifyVideoResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public BeautifyVideoResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public BeautifyVideoResponse(BeautifyVideoResponse source) {
+        if (source.JobId != null) {
+            this.JobId = new String(source.JobId);
+        }
+        if (source.EstimatedProcessTime != null) {
+            this.EstimatedProcessTime = new Long(source.EstimatedProcessTime);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

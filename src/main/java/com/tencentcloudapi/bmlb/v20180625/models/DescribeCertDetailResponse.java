@@ -275,6 +275,56 @@ public class DescribeCertDetailResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeCertDetailResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeCertDetailResponse(DescribeCertDetailResponse source) {
+        if (source.CertId != null) {
+            this.CertId = new String(source.CertId);
+        }
+        if (source.CertName != null) {
+            this.CertName = new String(source.CertName);
+        }
+        if (source.CertType != null) {
+            this.CertType = new String(source.CertType);
+        }
+        if (source.CertContent != null) {
+            this.CertContent = new String(source.CertContent);
+        }
+        if (source.CertDomain != null) {
+            this.CertDomain = new String(source.CertDomain);
+        }
+        if (source.CertSubjectDomain != null) {
+            this.CertSubjectDomain = new String[source.CertSubjectDomain.length];
+            for (int i = 0; i < source.CertSubjectDomain.length; i++) {
+                this.CertSubjectDomain[i] = new String(source.CertSubjectDomain[i]);
+            }
+        }
+        if (source.CertUploadTime != null) {
+            this.CertUploadTime = new String(source.CertUploadTime);
+        }
+        if (source.CertBeginTime != null) {
+            this.CertBeginTime = new String(source.CertBeginTime);
+        }
+        if (source.CertEndTime != null) {
+            this.CertEndTime = new String(source.CertEndTime);
+        }
+        if (source.CertLoadBalancerSet != null) {
+            this.CertLoadBalancerSet = new CertDetailLoadBalancer[source.CertLoadBalancerSet.length];
+            for (int i = 0; i < source.CertLoadBalancerSet.length; i++) {
+                this.CertLoadBalancerSet[i] = new CertDetailLoadBalancer(source.CertLoadBalancerSet[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

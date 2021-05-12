@@ -78,6 +78,23 @@ public class VoiceFilter extends AbstractModel{
         this.Word = Word;
     }
 
+    public VoiceFilter() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public VoiceFilter(VoiceFilter source) {
+        if (source.Type != null) {
+            this.Type = new Long(source.Type);
+        }
+        if (source.Word != null) {
+            this.Word = new String(source.Word);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

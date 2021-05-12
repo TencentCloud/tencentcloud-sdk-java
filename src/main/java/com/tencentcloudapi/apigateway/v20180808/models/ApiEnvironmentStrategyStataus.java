@@ -78,6 +78,26 @@ public class ApiEnvironmentStrategyStataus extends AbstractModel{
         this.ApiEnvironmentStrategySet = ApiEnvironmentStrategySet;
     }
 
+    public ApiEnvironmentStrategyStataus() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ApiEnvironmentStrategyStataus(ApiEnvironmentStrategyStataus source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.ApiEnvironmentStrategySet != null) {
+            this.ApiEnvironmentStrategySet = new ApiEnvironmentStrategy[source.ApiEnvironmentStrategySet.length];
+            for (int i = 0; i < source.ApiEnvironmentStrategySet.length; i++) {
+                this.ApiEnvironmentStrategySet[i] = new ApiEnvironmentStrategy(source.ApiEnvironmentStrategySet[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

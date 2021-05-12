@@ -45,6 +45,20 @@ public class DescribeApiRateLimitRulesRequest extends AbstractModel{
         this.ApiId = ApiId;
     }
 
+    public DescribeApiRateLimitRulesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeApiRateLimitRulesRequest(DescribeApiRateLimitRulesRequest source) {
+        if (source.ApiId != null) {
+            this.ApiId = new String(source.ApiId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

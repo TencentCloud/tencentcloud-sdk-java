@@ -275,6 +275,50 @@ public class ReverseShellRule extends AbstractModel{
         this.Hostip = Hostip;
     }
 
+    public ReverseShellRule() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ReverseShellRule(ReverseShellRule source) {
+        if (source.Id != null) {
+            this.Id = new Long(source.Id);
+        }
+        if (source.Uuid != null) {
+            this.Uuid = new String(source.Uuid);
+        }
+        if (source.ProcessName != null) {
+            this.ProcessName = new String(source.ProcessName);
+        }
+        if (source.DestIp != null) {
+            this.DestIp = new String(source.DestIp);
+        }
+        if (source.DestPort != null) {
+            this.DestPort = new String(source.DestPort);
+        }
+        if (source.Operator != null) {
+            this.Operator = new String(source.Operator);
+        }
+        if (source.IsGlobal != null) {
+            this.IsGlobal = new Long(source.IsGlobal);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.ModifyTime != null) {
+            this.ModifyTime = new String(source.ModifyTime);
+        }
+        if (source.Hostip != null) {
+            this.Hostip = new String(source.Hostip);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

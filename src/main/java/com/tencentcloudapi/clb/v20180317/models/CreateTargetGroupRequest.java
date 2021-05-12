@@ -114,6 +114,32 @@ public class CreateTargetGroupRequest extends AbstractModel{
         this.TargetGroupInstances = TargetGroupInstances;
     }
 
+    public CreateTargetGroupRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateTargetGroupRequest(CreateTargetGroupRequest source) {
+        if (source.TargetGroupName != null) {
+            this.TargetGroupName = new String(source.TargetGroupName);
+        }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.Port != null) {
+            this.Port = new Long(source.Port);
+        }
+        if (source.TargetGroupInstances != null) {
+            this.TargetGroupInstances = new TargetGroupInstance[source.TargetGroupInstances.length];
+            for (int i = 0; i < source.TargetGroupInstances.length; i++) {
+                this.TargetGroupInstances[i] = new TargetGroupInstance(source.TargetGroupInstances[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

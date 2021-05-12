@@ -68,6 +68,23 @@ public class DescribeTableRequest extends AbstractModel{
         this.DatabaseName = DatabaseName;
     }
 
+    public DescribeTableRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeTableRequest(DescribeTableRequest source) {
+        if (source.TableName != null) {
+            this.TableName = new String(source.TableName);
+        }
+        if (source.DatabaseName != null) {
+            this.DatabaseName = new String(source.DatabaseName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

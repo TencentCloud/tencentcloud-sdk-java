@@ -91,6 +91,32 @@ public class DestroyProxiesResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DestroyProxiesResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DestroyProxiesResponse(DestroyProxiesResponse source) {
+        if (source.InvalidStatusInstanceSet != null) {
+            this.InvalidStatusInstanceSet = new String[source.InvalidStatusInstanceSet.length];
+            for (int i = 0; i < source.InvalidStatusInstanceSet.length; i++) {
+                this.InvalidStatusInstanceSet[i] = new String(source.InvalidStatusInstanceSet[i]);
+            }
+        }
+        if (source.OperationFailedInstanceSet != null) {
+            this.OperationFailedInstanceSet = new String[source.OperationFailedInstanceSet.length];
+            for (int i = 0; i < source.OperationFailedInstanceSet.length; i++) {
+                this.OperationFailedInstanceSet[i] = new String(source.OperationFailedInstanceSet[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

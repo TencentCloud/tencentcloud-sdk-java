@@ -275,6 +275,53 @@ public class CreateLoadBalancersRequest extends AbstractModel{
         this.IpProtocolType = IpProtocolType;
     }
 
+    public CreateLoadBalancersRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateLoadBalancersRequest(CreateLoadBalancersRequest source) {
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.LoadBalancerType != null) {
+            this.LoadBalancerType = new String(source.LoadBalancerType);
+        }
+        if (source.SubnetId != null) {
+            this.SubnetId = new String(source.SubnetId);
+        }
+        if (source.ProjectId != null) {
+            this.ProjectId = new Long(source.ProjectId);
+        }
+        if (source.GoodsNum != null) {
+            this.GoodsNum = new Long(source.GoodsNum);
+        }
+        if (source.PayMode != null) {
+            this.PayMode = new String(source.PayMode);
+        }
+        if (source.TgwSetType != null) {
+            this.TgwSetType = new String(source.TgwSetType);
+        }
+        if (source.Exclusive != null) {
+            this.Exclusive = new Long(source.Exclusive);
+        }
+        if (source.SpecifiedVips != null) {
+            this.SpecifiedVips = new String[source.SpecifiedVips.length];
+            for (int i = 0; i < source.SpecifiedVips.length; i++) {
+                this.SpecifiedVips[i] = new String(source.SpecifiedVips[i]);
+            }
+        }
+        if (source.BzConf != null) {
+            this.BzConf = new CreateLoadBalancerBzConf(source.BzConf);
+        }
+        if (source.IpProtocolType != null) {
+            this.IpProtocolType = new String(source.IpProtocolType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

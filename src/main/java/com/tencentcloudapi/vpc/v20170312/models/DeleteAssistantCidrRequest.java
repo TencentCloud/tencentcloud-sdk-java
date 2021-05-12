@@ -68,6 +68,26 @@ public class DeleteAssistantCidrRequest extends AbstractModel{
         this.CidrBlocks = CidrBlocks;
     }
 
+    public DeleteAssistantCidrRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteAssistantCidrRequest(DeleteAssistantCidrRequest source) {
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.CidrBlocks != null) {
+            this.CidrBlocks = new String[source.CidrBlocks.length];
+            for (int i = 0; i < source.CidrBlocks.length; i++) {
+                this.CidrBlocks[i] = new String(source.CidrBlocks[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

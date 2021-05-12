@@ -50,6 +50,20 @@ public class MediaJoiningTaskResult extends AbstractModel{
         this.File = File;
     }
 
+    public MediaJoiningTaskResult() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MediaJoiningTaskResult(MediaJoiningTaskResult source) {
+        if (source.File != null) {
+            this.File = new TaskResultFile(source.File);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

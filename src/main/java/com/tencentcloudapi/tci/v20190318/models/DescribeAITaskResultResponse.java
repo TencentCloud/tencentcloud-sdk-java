@@ -160,6 +160,35 @@ public class DescribeAITaskResultResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeAITaskResultResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeAITaskResultResponse(DescribeAITaskResultResponse source) {
+        if (source.AudioResult != null) {
+            this.AudioResult = new StandardAudioResult(source.AudioResult);
+        }
+        if (source.ImageResult != null) {
+            this.ImageResult = new StandardImageResult(source.ImageResult);
+        }
+        if (source.VideoResult != null) {
+            this.VideoResult = new StandardVideoResult(source.VideoResult);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.TaskId != null) {
+            this.TaskId = new Long(source.TaskId);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

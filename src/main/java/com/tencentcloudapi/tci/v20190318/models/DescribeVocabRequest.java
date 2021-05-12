@@ -45,6 +45,20 @@ public class DescribeVocabRequest extends AbstractModel{
         this.VocabLibName = VocabLibName;
     }
 
+    public DescribeVocabRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeVocabRequest(DescribeVocabRequest source) {
+        if (source.VocabLibName != null) {
+            this.VocabLibName = new String(source.VocabLibName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -91,6 +91,26 @@ public class ModifyTopicResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public ModifyTopicResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyTopicResponse(ModifyTopicResponse source) {
+        if (source.Partitions != null) {
+            this.Partitions = new Long(source.Partitions);
+        }
+        if (source.Remark != null) {
+            this.Remark = new String(source.Remark);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

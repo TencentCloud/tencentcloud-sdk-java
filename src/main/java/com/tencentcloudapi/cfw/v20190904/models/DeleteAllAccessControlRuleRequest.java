@@ -91,6 +91,26 @@ public class DeleteAllAccessControlRuleRequest extends AbstractModel{
         this.Area = Area;
     }
 
+    public DeleteAllAccessControlRuleRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteAllAccessControlRuleRequest(DeleteAllAccessControlRuleRequest source) {
+        if (source.Direction != null) {
+            this.Direction = new Long(source.Direction);
+        }
+        if (source.EdgeId != null) {
+            this.EdgeId = new String(source.EdgeId);
+        }
+        if (source.Area != null) {
+            this.Area = new String(source.Area);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

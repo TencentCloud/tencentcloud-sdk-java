@@ -269,6 +269,44 @@ public class GetPolicyResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public GetPolicyResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GetPolicyResponse(GetPolicyResponse source) {
+        if (source.PolicyName != null) {
+            this.PolicyName = new String(source.PolicyName);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.Type != null) {
+            this.Type = new Long(source.Type);
+        }
+        if (source.AddTime != null) {
+            this.AddTime = new String(source.AddTime);
+        }
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new String(source.UpdateTime);
+        }
+        if (source.PolicyDocument != null) {
+            this.PolicyDocument = new String(source.PolicyDocument);
+        }
+        if (source.PresetAlias != null) {
+            this.PresetAlias = new String(source.PresetAlias);
+        }
+        if (source.IsServiceLinkedRolePolicy != null) {
+            this.IsServiceLinkedRolePolicy = new Long(source.IsServiceLinkedRolePolicy);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

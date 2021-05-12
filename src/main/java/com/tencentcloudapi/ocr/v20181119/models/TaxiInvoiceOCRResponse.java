@@ -331,6 +331,56 @@ public class TaxiInvoiceOCRResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public TaxiInvoiceOCRResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TaxiInvoiceOCRResponse(TaxiInvoiceOCRResponse source) {
+        if (source.InvoiceNum != null) {
+            this.InvoiceNum = new String(source.InvoiceNum);
+        }
+        if (source.InvoiceCode != null) {
+            this.InvoiceCode = new String(source.InvoiceCode);
+        }
+        if (source.Date != null) {
+            this.Date = new String(source.Date);
+        }
+        if (source.Fare != null) {
+            this.Fare = new String(source.Fare);
+        }
+        if (source.GetOnTime != null) {
+            this.GetOnTime = new String(source.GetOnTime);
+        }
+        if (source.GetOffTime != null) {
+            this.GetOffTime = new String(source.GetOffTime);
+        }
+        if (source.Distance != null) {
+            this.Distance = new String(source.Distance);
+        }
+        if (source.Location != null) {
+            this.Location = new String(source.Location);
+        }
+        if (source.PlateNumber != null) {
+            this.PlateNumber = new String(source.PlateNumber);
+        }
+        if (source.InvoiceType != null) {
+            this.InvoiceType = new String(source.InvoiceType);
+        }
+        if (source.Province != null) {
+            this.Province = new String(source.Province);
+        }
+        if (source.City != null) {
+            this.City = new String(source.City);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

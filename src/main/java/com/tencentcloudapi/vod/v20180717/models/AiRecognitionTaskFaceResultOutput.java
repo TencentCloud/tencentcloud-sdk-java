@@ -45,6 +45,23 @@ public class AiRecognitionTaskFaceResultOutput extends AbstractModel{
         this.ResultSet = ResultSet;
     }
 
+    public AiRecognitionTaskFaceResultOutput() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AiRecognitionTaskFaceResultOutput(AiRecognitionTaskFaceResultOutput source) {
+        if (source.ResultSet != null) {
+            this.ResultSet = new AiRecognitionTaskFaceResultItem[source.ResultSet.length];
+            for (int i = 0; i < source.ResultSet.length; i++) {
+                this.ResultSet[i] = new AiRecognitionTaskFaceResultItem(source.ResultSet[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -160,6 +160,35 @@ public class DescribeEipQuotaResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeEipQuotaResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeEipQuotaResponse(DescribeEipQuotaResponse source) {
+        if (source.EipNumQuota != null) {
+            this.EipNumQuota = new Long(source.EipNumQuota);
+        }
+        if (source.CurrentEipNum != null) {
+            this.CurrentEipNum = new Long(source.CurrentEipNum);
+        }
+        if (source.DailyApplyCount != null) {
+            this.DailyApplyCount = new Long(source.DailyApplyCount);
+        }
+        if (source.DailyApplyQuota != null) {
+            this.DailyApplyQuota = new Long(source.DailyApplyQuota);
+        }
+        if (source.BatchApplyMax != null) {
+            this.BatchApplyMax = new Long(source.BatchApplyMax);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

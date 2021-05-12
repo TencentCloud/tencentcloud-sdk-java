@@ -305,6 +305,53 @@ public class Invocation extends AbstractModel{
         this.DefaultParameters = DefaultParameters;
     }
 
+    public Invocation() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Invocation(Invocation source) {
+        if (source.InvocationId != null) {
+            this.InvocationId = new String(source.InvocationId);
+        }
+        if (source.CommandId != null) {
+            this.CommandId = new String(source.CommandId);
+        }
+        if (source.InvocationStatus != null) {
+            this.InvocationStatus = new String(source.InvocationStatus);
+        }
+        if (source.InvocationTaskBasicInfoSet != null) {
+            this.InvocationTaskBasicInfoSet = new InvocationTaskBasicInfo[source.InvocationTaskBasicInfoSet.length];
+            for (int i = 0; i < source.InvocationTaskBasicInfoSet.length; i++) {
+                this.InvocationTaskBasicInfoSet[i] = new InvocationTaskBasicInfo(source.InvocationTaskBasicInfoSet[i]);
+            }
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+        if (source.CreatedTime != null) {
+            this.CreatedTime = new String(source.CreatedTime);
+        }
+        if (source.UpdatedTime != null) {
+            this.UpdatedTime = new String(source.UpdatedTime);
+        }
+        if (source.Parameters != null) {
+            this.Parameters = new String(source.Parameters);
+        }
+        if (source.DefaultParameters != null) {
+            this.DefaultParameters = new String(source.DefaultParameters);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

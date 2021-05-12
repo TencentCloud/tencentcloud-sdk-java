@@ -147,6 +147,32 @@ overseas：境外
         this.LogName = LogName;
     }
 
+    public DomainLog() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DomainLog(DomainLog source) {
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+        if (source.LogPath != null) {
+            this.LogPath = new String(source.LogPath);
+        }
+        if (source.Area != null) {
+            this.Area = new String(source.Area);
+        }
+        if (source.LogName != null) {
+            this.LogName = new String(source.LogName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

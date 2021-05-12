@@ -91,6 +91,26 @@ public class DeleteRepositoryRequest extends AbstractModel{
         this.RepositoryName = RepositoryName;
     }
 
+    public DeleteRepositoryRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteRepositoryRequest(DeleteRepositoryRequest source) {
+        if (source.RegistryId != null) {
+            this.RegistryId = new String(source.RegistryId);
+        }
+        if (source.NamespaceName != null) {
+            this.NamespaceName = new String(source.NamespaceName);
+        }
+        if (source.RepositoryName != null) {
+            this.RepositoryName = new String(source.RepositoryName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

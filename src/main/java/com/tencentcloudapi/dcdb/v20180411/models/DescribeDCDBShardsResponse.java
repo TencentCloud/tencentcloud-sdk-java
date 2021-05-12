@@ -119,6 +119,32 @@ public class DescribeDCDBShardsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeDCDBShardsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeDCDBShardsResponse(DescribeDCDBShardsResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.Shards != null) {
+            this.Shards = new DCDBShardInfo[source.Shards.length];
+            for (int i = 0; i < source.Shards.length; i++) {
+                this.Shards[i] = new DCDBShardInfo(source.Shards[i]);
+            }
+        }
+        if (source.DcnFlag != null) {
+            this.DcnFlag = new Long(source.DcnFlag);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

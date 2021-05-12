@@ -68,6 +68,26 @@ public class AiRecognitionTaskAsrFullTextResultOutput extends AbstractModel{
         this.SubtitleUrl = SubtitleUrl;
     }
 
+    public AiRecognitionTaskAsrFullTextResultOutput() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AiRecognitionTaskAsrFullTextResultOutput(AiRecognitionTaskAsrFullTextResultOutput source) {
+        if (source.SegmentSet != null) {
+            this.SegmentSet = new AiRecognitionTaskAsrFullTextSegmentItem[source.SegmentSet.length];
+            for (int i = 0; i < source.SegmentSet.length; i++) {
+                this.SegmentSet[i] = new AiRecognitionTaskAsrFullTextSegmentItem(source.SegmentSet[i]);
+            }
+        }
+        if (source.SubtitleUrl != null) {
+            this.SubtitleUrl = new String(source.SubtitleUrl);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

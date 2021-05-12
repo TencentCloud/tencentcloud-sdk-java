@@ -206,6 +206,44 @@ public class DescribeResourcesByTagsUnionRequest extends AbstractModel{
         this.ServiceType = ServiceType;
     }
 
+    public DescribeResourcesByTagsUnionRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeResourcesByTagsUnionRequest(DescribeResourcesByTagsUnionRequest source) {
+        if (source.TagFilters != null) {
+            this.TagFilters = new TagFilter[source.TagFilters.length];
+            for (int i = 0; i < source.TagFilters.length; i++) {
+                this.TagFilters[i] = new TagFilter(source.TagFilters[i]);
+            }
+        }
+        if (source.CreateUin != null) {
+            this.CreateUin = new Long(source.CreateUin);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.ResourcePrefix != null) {
+            this.ResourcePrefix = new String(source.ResourcePrefix);
+        }
+        if (source.ResourceId != null) {
+            this.ResourceId = new String(source.ResourceId);
+        }
+        if (source.ResourceRegion != null) {
+            this.ResourceRegion = new String(source.ResourceRegion);
+        }
+        if (source.ServiceType != null) {
+            this.ServiceType = new String(source.ServiceType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

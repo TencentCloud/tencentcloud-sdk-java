@@ -88,6 +88,26 @@ public class VodPullInputInfo extends AbstractModel{
         this.LoopTimes = LoopTimes;
     }
 
+    public VodPullInputInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public VodPullInputInfo(VodPullInputInfo source) {
+        if (source.InputUrls != null) {
+            this.InputUrls = new String[source.InputUrls.length];
+            for (int i = 0; i < source.InputUrls.length; i++) {
+                this.InputUrls[i] = new String(source.InputUrls[i]);
+            }
+        }
+        if (source.LoopTimes != null) {
+            this.LoopTimes = new Long(source.LoopTimes);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

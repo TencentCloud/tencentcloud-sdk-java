@@ -68,6 +68,23 @@ public class KeyMetadata extends AbstractModel{
         this.KeyId = KeyId;
     }
 
+    public KeyMetadata() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public KeyMetadata(KeyMetadata source) {
+        if (source.Alias != null) {
+            this.Alias = new String(source.Alias);
+        }
+        if (source.KeyId != null) {
+            this.KeyId = new String(source.KeyId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

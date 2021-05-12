@@ -45,6 +45,20 @@ public class DeleteReverseShellRulesResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DeleteReverseShellRulesResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteReverseShellRulesResponse(DeleteReverseShellRulesResponse source) {
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

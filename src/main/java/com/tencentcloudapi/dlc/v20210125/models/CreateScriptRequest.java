@@ -114,6 +114,29 @@ public class CreateScriptRequest extends AbstractModel{
         this.DatabaseName = DatabaseName;
     }
 
+    public CreateScriptRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateScriptRequest(CreateScriptRequest source) {
+        if (source.ScriptName != null) {
+            this.ScriptName = new String(source.ScriptName);
+        }
+        if (source.SQLStatement != null) {
+            this.SQLStatement = new String(source.SQLStatement);
+        }
+        if (source.ScriptDesc != null) {
+            this.ScriptDesc = new String(source.ScriptDesc);
+        }
+        if (source.DatabaseName != null) {
+            this.DatabaseName = new String(source.DatabaseName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

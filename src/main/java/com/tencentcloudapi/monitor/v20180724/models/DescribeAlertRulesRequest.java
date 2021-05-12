@@ -193,6 +193,38 @@ public class DescribeAlertRulesRequest extends AbstractModel{
         this.Type = Type;
     }
 
+    public DescribeAlertRulesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeAlertRulesRequest(DescribeAlertRulesRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.RuleId != null) {
+            this.RuleId = new String(source.RuleId);
+        }
+        if (source.RuleState != null) {
+            this.RuleState = new Long(source.RuleState);
+        }
+        if (source.RuleName != null) {
+            this.RuleName = new String(source.RuleName);
+        }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

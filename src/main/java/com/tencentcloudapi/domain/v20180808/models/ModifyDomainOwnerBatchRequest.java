@@ -68,6 +68,26 @@ public class ModifyDomainOwnerBatchRequest extends AbstractModel{
         this.NewOwnerUin = NewOwnerUin;
     }
 
+    public ModifyDomainOwnerBatchRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyDomainOwnerBatchRequest(ModifyDomainOwnerBatchRequest source) {
+        if (source.Domains != null) {
+            this.Domains = new String[source.Domains.length];
+            for (int i = 0; i < source.Domains.length; i++) {
+                this.Domains[i] = new String(source.Domains[i]);
+            }
+        }
+        if (source.NewOwnerUin != null) {
+            this.NewOwnerUin = new String(source.NewOwnerUin);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

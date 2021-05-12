@@ -91,6 +91,29 @@ public class DescribeL4HealthConfigRequest extends AbstractModel{
         this.RuleIdList = RuleIdList;
     }
 
+    public DescribeL4HealthConfigRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeL4HealthConfigRequest(DescribeL4HealthConfigRequest source) {
+        if (source.Business != null) {
+            this.Business = new String(source.Business);
+        }
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
+        if (source.RuleIdList != null) {
+            this.RuleIdList = new String[source.RuleIdList.length];
+            for (int i = 0; i < source.RuleIdList.length; i++) {
+                this.RuleIdList[i] = new String(source.RuleIdList[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

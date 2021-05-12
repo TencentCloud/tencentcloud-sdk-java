@@ -68,6 +68,23 @@ public class QueryPayerInfoRequest extends AbstractModel{
         this.Profile = Profile;
     }
 
+    public QueryPayerInfoRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public QueryPayerInfoRequest(QueryPayerInfoRequest source) {
+        if (source.PayerId != null) {
+            this.PayerId = new String(source.PayerId);
+        }
+        if (source.Profile != null) {
+            this.Profile = new String(source.Profile);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

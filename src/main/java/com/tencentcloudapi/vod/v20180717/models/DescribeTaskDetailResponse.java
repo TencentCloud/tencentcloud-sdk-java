@@ -581,6 +581,71 @@ public class DescribeTaskDetailResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeTaskDetailResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeTaskDetailResponse(DescribeTaskDetailResponse source) {
+        if (source.TaskType != null) {
+            this.TaskType = new String(source.TaskType);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.BeginProcessTime != null) {
+            this.BeginProcessTime = new String(source.BeginProcessTime);
+        }
+        if (source.FinishTime != null) {
+            this.FinishTime = new String(source.FinishTime);
+        }
+        if (source.ProcedureTask != null) {
+            this.ProcedureTask = new ProcedureTask(source.ProcedureTask);
+        }
+        if (source.EditMediaTask != null) {
+            this.EditMediaTask = new EditMediaTask(source.EditMediaTask);
+        }
+        if (source.WechatPublishTask != null) {
+            this.WechatPublishTask = new WechatPublishTask(source.WechatPublishTask);
+        }
+        if (source.ComposeMediaTask != null) {
+            this.ComposeMediaTask = new ComposeMediaTask(source.ComposeMediaTask);
+        }
+        if (source.SplitMediaTask != null) {
+            this.SplitMediaTask = new SplitMediaTask(source.SplitMediaTask);
+        }
+        if (source.WechatMiniProgramPublishTask != null) {
+            this.WechatMiniProgramPublishTask = new WechatMiniProgramPublishTask(source.WechatMiniProgramPublishTask);
+        }
+        if (source.PullUploadTask != null) {
+            this.PullUploadTask = new PullUploadTask(source.PullUploadTask);
+        }
+        if (source.TranscodeTask != null) {
+            this.TranscodeTask = new TranscodeTask2017(source.TranscodeTask);
+        }
+        if (source.ConcatTask != null) {
+            this.ConcatTask = new ConcatTask2017(source.ConcatTask);
+        }
+        if (source.ClipTask != null) {
+            this.ClipTask = new ClipTask2017(source.ClipTask);
+        }
+        if (source.CreateImageSpriteTask != null) {
+            this.CreateImageSpriteTask = new CreateImageSpriteTask2017(source.CreateImageSpriteTask);
+        }
+        if (source.SnapshotByTimeOffsetTask != null) {
+            this.SnapshotByTimeOffsetTask = new SnapshotByTimeOffsetTask2017(source.SnapshotByTimeOffsetTask);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

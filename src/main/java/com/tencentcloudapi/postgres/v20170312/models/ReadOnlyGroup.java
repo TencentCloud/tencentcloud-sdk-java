@@ -443,6 +443,74 @@ public class ReadOnlyGroup extends AbstractModel{
         this.DBInstanceNetInfo = DBInstanceNetInfo;
     }
 
+    public ReadOnlyGroup() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ReadOnlyGroup(ReadOnlyGroup source) {
+        if (source.ReadOnlyGroupId != null) {
+            this.ReadOnlyGroupId = new String(source.ReadOnlyGroupId);
+        }
+        if (source.ReadOnlyGroupName != null) {
+            this.ReadOnlyGroupName = new String(source.ReadOnlyGroupName);
+        }
+        if (source.ProjectId != null) {
+            this.ProjectId = new Long(source.ProjectId);
+        }
+        if (source.MasterDBInstanceId != null) {
+            this.MasterDBInstanceId = new String(source.MasterDBInstanceId);
+        }
+        if (source.MinDelayEliminateReserve != null) {
+            this.MinDelayEliminateReserve = new Long(source.MinDelayEliminateReserve);
+        }
+        if (source.MaxReplayLatency != null) {
+            this.MaxReplayLatency = new Long(source.MaxReplayLatency);
+        }
+        if (source.ReplayLatencyEliminate != null) {
+            this.ReplayLatencyEliminate = new Long(source.ReplayLatencyEliminate);
+        }
+        if (source.MaxReplayLag != null) {
+            this.MaxReplayLag = new Float(source.MaxReplayLag);
+        }
+        if (source.ReplayLagEliminate != null) {
+            this.ReplayLagEliminate = new Long(source.ReplayLagEliminate);
+        }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.SubnetId != null) {
+            this.SubnetId = new String(source.SubnetId);
+        }
+        if (source.Region != null) {
+            this.Region = new String(source.Region);
+        }
+        if (source.Zone != null) {
+            this.Zone = new String(source.Zone);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.ReadOnlyDBInstanceList != null) {
+            this.ReadOnlyDBInstanceList = new DBInstance[source.ReadOnlyDBInstanceList.length];
+            for (int i = 0; i < source.ReadOnlyDBInstanceList.length; i++) {
+                this.ReadOnlyDBInstanceList[i] = new DBInstance(source.ReadOnlyDBInstanceList[i]);
+            }
+        }
+        if (source.Rebalance != null) {
+            this.Rebalance = new Long(source.Rebalance);
+        }
+        if (source.DBInstanceNetInfo != null) {
+            this.DBInstanceNetInfo = new DBInstanceNetInfo[source.DBInstanceNetInfo.length];
+            for (int i = 0; i < source.DBInstanceNetInfo.length; i++) {
+                this.DBInstanceNetInfo[i] = new DBInstanceNetInfo(source.DBInstanceNetInfo[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

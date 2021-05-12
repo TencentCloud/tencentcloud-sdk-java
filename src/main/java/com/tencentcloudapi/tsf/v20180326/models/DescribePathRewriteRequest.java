@@ -45,6 +45,20 @@ public class DescribePathRewriteRequest extends AbstractModel{
         this.PathRewriteId = PathRewriteId;
     }
 
+    public DescribePathRewriteRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribePathRewriteRequest(DescribePathRewriteRequest source) {
+        if (source.PathRewriteId != null) {
+            this.PathRewriteId = new String(source.PathRewriteId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -119,6 +119,29 @@ public class DescribeAllKeysRequest extends AbstractModel{
         this.ContentType = ContentType;
     }
 
+    public DescribeAllKeysRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeAllKeysRequest(DescribeAllKeysRequest source) {
+        if (source.DrmType != null) {
+            this.DrmType = new String(source.DrmType);
+        }
+        if (source.RsaPublicKey != null) {
+            this.RsaPublicKey = new String(source.RsaPublicKey);
+        }
+        if (source.ContentId != null) {
+            this.ContentId = new String(source.ContentId);
+        }
+        if (source.ContentType != null) {
+            this.ContentType = new String(source.ContentType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

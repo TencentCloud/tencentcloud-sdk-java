@@ -68,6 +68,23 @@ public class DescribeTelSessionResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeTelSessionResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeTelSessionResponse(DescribeTelSessionResponse source) {
+        if (source.Session != null) {
+            this.Session = new PSTNSession(source.Session);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

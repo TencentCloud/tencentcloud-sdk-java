@@ -45,6 +45,23 @@ public class DescribeSubAccountsRequest extends AbstractModel{
         this.FilterSubAccountUin = FilterSubAccountUin;
     }
 
+    public DescribeSubAccountsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeSubAccountsRequest(DescribeSubAccountsRequest source) {
+        if (source.FilterSubAccountUin != null) {
+            this.FilterSubAccountUin = new Long[source.FilterSubAccountUin.length];
+            for (int i = 0; i < source.FilterSubAccountUin.length; i++) {
+                this.FilterSubAccountUin[i] = new Long(source.FilterSubAccountUin[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

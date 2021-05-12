@@ -96,6 +96,26 @@ public class QueryBeautifyVideoJobResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public QueryBeautifyVideoJobResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public QueryBeautifyVideoJobResponse(QueryBeautifyVideoJobResponse source) {
+        if (source.JobStatus != null) {
+            this.JobStatus = new String(source.JobStatus);
+        }
+        if (source.BeautifyVideoOutput != null) {
+            this.BeautifyVideoOutput = new BeautifyVideoOutput(source.BeautifyVideoOutput);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

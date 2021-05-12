@@ -91,6 +91,29 @@ public class ModifyPersonTagInfoRequest extends AbstractModel{
         this.Tags = Tags;
     }
 
+    public ModifyPersonTagInfoRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyPersonTagInfoRequest(ModifyPersonTagInfoRequest source) {
+        if (source.CompanyId != null) {
+            this.CompanyId = new String(source.CompanyId);
+        }
+        if (source.ShopId != null) {
+            this.ShopId = new Long(source.ShopId);
+        }
+        if (source.Tags != null) {
+            this.Tags = new PersonTagInfo[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new PersonTagInfo(source.Tags[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -91,6 +91,26 @@ public class UnBindingAllPolicyObjectRequest extends AbstractModel{
         this.PolicyId = PolicyId;
     }
 
+    public UnBindingAllPolicyObjectRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UnBindingAllPolicyObjectRequest(UnBindingAllPolicyObjectRequest source) {
+        if (source.Module != null) {
+            this.Module = new String(source.Module);
+        }
+        if (source.GroupId != null) {
+            this.GroupId = new Long(source.GroupId);
+        }
+        if (source.PolicyId != null) {
+            this.PolicyId = new String(source.PolicyId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

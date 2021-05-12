@@ -203,6 +203,38 @@ public class PrometheusAlertHistoryItem extends AbstractModel{
         this.TopicName = TopicName;
     }
 
+    public PrometheusAlertHistoryItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PrometheusAlertHistoryItem(PrometheusAlertHistoryItem source) {
+        if (source.RuleName != null) {
+            this.RuleName = new String(source.RuleName);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.Content != null) {
+            this.Content = new String(source.Content);
+        }
+        if (source.State != null) {
+            this.State = new String(source.State);
+        }
+        if (source.RuleItem != null) {
+            this.RuleItem = new String(source.RuleItem);
+        }
+        if (source.TopicId != null) {
+            this.TopicId = new String(source.TopicId);
+        }
+        if (source.TopicName != null) {
+            this.TopicName = new String(source.TopicName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

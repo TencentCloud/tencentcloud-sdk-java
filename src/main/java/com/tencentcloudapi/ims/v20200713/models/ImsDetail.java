@@ -206,6 +206,41 @@ public class ImsDetail extends AbstractModel{
         this.OperEvilType = OperEvilType;
     }
 
+    public ImsDetail() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ImsDetail(ImsDetail source) {
+        if (source.Content != null) {
+            this.Content = new String(source.Content);
+        }
+        if (source.DataSource != null) {
+            this.DataSource = new Long(source.DataSource);
+        }
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new String(source.UpdateTime);
+        }
+        if (source.EvilType != null) {
+            this.EvilType = new Long(source.EvilType);
+        }
+        if (source.ModerationTime != null) {
+            this.ModerationTime = new String(source.ModerationTime);
+        }
+        if (source.UpdateUser != null) {
+            this.UpdateUser = new String(source.UpdateUser);
+        }
+        if (source.ContentId != null) {
+            this.ContentId = new String(source.ContentId);
+        }
+        if (source.OperEvilType != null) {
+            this.OperEvilType = new Long(source.OperEvilType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

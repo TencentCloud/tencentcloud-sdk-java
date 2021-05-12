@@ -262,6 +262,47 @@ public class TextToVoiceRequest extends AbstractModel{
         this.Codec = Codec;
     }
 
+    public TextToVoiceRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TextToVoiceRequest(TextToVoiceRequest source) {
+        if (source.Text != null) {
+            this.Text = new String(source.Text);
+        }
+        if (source.SessionId != null) {
+            this.SessionId = new String(source.SessionId);
+        }
+        if (source.ModelType != null) {
+            this.ModelType = new Long(source.ModelType);
+        }
+        if (source.Volume != null) {
+            this.Volume = new Float(source.Volume);
+        }
+        if (source.Speed != null) {
+            this.Speed = new Float(source.Speed);
+        }
+        if (source.ProjectId != null) {
+            this.ProjectId = new Long(source.ProjectId);
+        }
+        if (source.VoiceType != null) {
+            this.VoiceType = new Long(source.VoiceType);
+        }
+        if (source.PrimaryLanguage != null) {
+            this.PrimaryLanguage = new Long(source.PrimaryLanguage);
+        }
+        if (source.SampleRate != null) {
+            this.SampleRate = new Long(source.SampleRate);
+        }
+        if (source.Codec != null) {
+            this.Codec = new String(source.Codec);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -134,6 +134,29 @@ public class DataTemplate extends AbstractModel{
         this.Bool = Bool;
     }
 
+    public DataTemplate() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DataTemplate(DataTemplate source) {
+        if (source.Number != null) {
+            this.Number = new NumberData(source.Number);
+        }
+        if (source.String != null) {
+            this.String = new StringData(source.String);
+        }
+        if (source.Enum != null) {
+            this.Enum = new EnumData(source.Enum);
+        }
+        if (source.Bool != null) {
+            this.Bool = new BoolData(source.Bool);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

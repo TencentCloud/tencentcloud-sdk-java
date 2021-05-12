@@ -91,6 +91,26 @@ public class ModifyBandwidthPackageAttributeRequest extends AbstractModel{
         this.ChargeType = ChargeType;
     }
 
+    public ModifyBandwidthPackageAttributeRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyBandwidthPackageAttributeRequest(ModifyBandwidthPackageAttributeRequest source) {
+        if (source.BandwidthPackageId != null) {
+            this.BandwidthPackageId = new String(source.BandwidthPackageId);
+        }
+        if (source.BandwidthPackageName != null) {
+            this.BandwidthPackageName = new String(source.BandwidthPackageName);
+        }
+        if (source.ChargeType != null) {
+            this.ChargeType = new String(source.ChargeType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

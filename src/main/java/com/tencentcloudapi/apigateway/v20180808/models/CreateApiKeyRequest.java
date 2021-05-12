@@ -114,6 +114,29 @@ public class CreateApiKeyRequest extends AbstractModel{
         this.AccessKeySecret = AccessKeySecret;
     }
 
+    public CreateApiKeyRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateApiKeyRequest(CreateApiKeyRequest source) {
+        if (source.SecretName != null) {
+            this.SecretName = new String(source.SecretName);
+        }
+        if (source.AccessKeyType != null) {
+            this.AccessKeyType = new String(source.AccessKeyType);
+        }
+        if (source.AccessKeyId != null) {
+            this.AccessKeyId = new String(source.AccessKeyId);
+        }
+        if (source.AccessKeySecret != null) {
+            this.AccessKeySecret = new String(source.AccessKeySecret);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

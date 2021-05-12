@@ -68,6 +68,23 @@ public class ClusterInternalLB extends AbstractModel{
         this.SubnetId = SubnetId;
     }
 
+    public ClusterInternalLB() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ClusterInternalLB(ClusterInternalLB source) {
+        if (source.Enabled != null) {
+            this.Enabled = new Boolean(source.Enabled);
+        }
+        if (source.SubnetId != null) {
+            this.SubnetId = new String(source.SubnetId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

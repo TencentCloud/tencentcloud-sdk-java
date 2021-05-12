@@ -252,6 +252,50 @@ public class AdvancedAuthenticationTypeB extends AbstractModel{
         this.RulePaths = RulePaths;
     }
 
+    public AdvancedAuthenticationTypeB() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AdvancedAuthenticationTypeB(AdvancedAuthenticationTypeB source) {
+        if (source.KeyAlpha != null) {
+            this.KeyAlpha = new String(source.KeyAlpha);
+        }
+        if (source.KeyBeta != null) {
+            this.KeyBeta = new String(source.KeyBeta);
+        }
+        if (source.KeyGamma != null) {
+            this.KeyGamma = new String(source.KeyGamma);
+        }
+        if (source.SignParam != null) {
+            this.SignParam = new String(source.SignParam);
+        }
+        if (source.TimeParam != null) {
+            this.TimeParam = new String(source.TimeParam);
+        }
+        if (source.ExpireTime != null) {
+            this.ExpireTime = new Long(source.ExpireTime);
+        }
+        if (source.TimeFormat != null) {
+            this.TimeFormat = new String(source.TimeFormat);
+        }
+        if (source.FailCode != null) {
+            this.FailCode = new Long(source.FailCode);
+        }
+        if (source.ExpireCode != null) {
+            this.ExpireCode = new Long(source.ExpireCode);
+        }
+        if (source.RulePaths != null) {
+            this.RulePaths = new String[source.RulePaths.length];
+            for (int i = 0; i < source.RulePaths.length; i++) {
+                this.RulePaths[i] = new String(source.RulePaths[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

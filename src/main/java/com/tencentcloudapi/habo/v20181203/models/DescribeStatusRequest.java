@@ -68,6 +68,23 @@ public class DescribeStatusRequest extends AbstractModel{
         this.Md5 = Md5;
     }
 
+    public DescribeStatusRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeStatusRequest(DescribeStatusRequest source) {
+        if (source.Pk != null) {
+            this.Pk = new String(source.Pk);
+        }
+        if (source.Md5 != null) {
+            this.Md5 = new String(source.Md5);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

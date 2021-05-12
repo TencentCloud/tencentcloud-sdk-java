@@ -257,6 +257,47 @@ public class NamespaceLimit extends AbstractModel{
         this.MaxMsgTTL = MaxMsgTTL;
     }
 
+    public NamespaceLimit() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public NamespaceLimit(NamespaceLimit source) {
+        if (source.FunctionsCount != null) {
+            this.FunctionsCount = new Long(source.FunctionsCount);
+        }
+        if (source.Trigger != null) {
+            this.Trigger = new TriggerCount(source.Trigger);
+        }
+        if (source.Namespace != null) {
+            this.Namespace = new String(source.Namespace);
+        }
+        if (source.ConcurrentExecutions != null) {
+            this.ConcurrentExecutions = new Long(source.ConcurrentExecutions);
+        }
+        if (source.TimeoutLimit != null) {
+            this.TimeoutLimit = new Long(source.TimeoutLimit);
+        }
+        if (source.TestModelLimit != null) {
+            this.TestModelLimit = new Long(source.TestModelLimit);
+        }
+        if (source.InitTimeoutLimit != null) {
+            this.InitTimeoutLimit = new Long(source.InitTimeoutLimit);
+        }
+        if (source.RetryNumLimit != null) {
+            this.RetryNumLimit = new Long(source.RetryNumLimit);
+        }
+        if (source.MinMsgTTL != null) {
+            this.MinMsgTTL = new Long(source.MinMsgTTL);
+        }
+        if (source.MaxMsgTTL != null) {
+            this.MaxMsgTTL = new Long(source.MaxMsgTTL);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

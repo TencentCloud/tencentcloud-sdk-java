@@ -326,6 +326,65 @@ public class Vpc extends AbstractModel{
         this.AssistantCidrSet = AssistantCidrSet;
     }
 
+    public Vpc() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Vpc(Vpc source) {
+        if (source.VpcName != null) {
+            this.VpcName = new String(source.VpcName);
+        }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.CidrBlock != null) {
+            this.CidrBlock = new String(source.CidrBlock);
+        }
+        if (source.IsDefault != null) {
+            this.IsDefault = new Boolean(source.IsDefault);
+        }
+        if (source.EnableMulticast != null) {
+            this.EnableMulticast = new Boolean(source.EnableMulticast);
+        }
+        if (source.CreatedTime != null) {
+            this.CreatedTime = new String(source.CreatedTime);
+        }
+        if (source.DnsServerSet != null) {
+            this.DnsServerSet = new String[source.DnsServerSet.length];
+            for (int i = 0; i < source.DnsServerSet.length; i++) {
+                this.DnsServerSet[i] = new String(source.DnsServerSet[i]);
+            }
+        }
+        if (source.DomainName != null) {
+            this.DomainName = new String(source.DomainName);
+        }
+        if (source.DhcpOptionsId != null) {
+            this.DhcpOptionsId = new String(source.DhcpOptionsId);
+        }
+        if (source.EnableDhcp != null) {
+            this.EnableDhcp = new Boolean(source.EnableDhcp);
+        }
+        if (source.Ipv6CidrBlock != null) {
+            this.Ipv6CidrBlock = new String(source.Ipv6CidrBlock);
+        }
+        if (source.TagSet != null) {
+            this.TagSet = new Tag[source.TagSet.length];
+            for (int i = 0; i < source.TagSet.length; i++) {
+                this.TagSet[i] = new Tag(source.TagSet[i]);
+            }
+        }
+        if (source.AssistantCidrSet != null) {
+            this.AssistantCidrSet = new AssistantCidr[source.AssistantCidrSet.length];
+            for (int i = 0; i < source.AssistantCidrSet.length; i++) {
+                this.AssistantCidrSet[i] = new AssistantCidr(source.AssistantCidrSet[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

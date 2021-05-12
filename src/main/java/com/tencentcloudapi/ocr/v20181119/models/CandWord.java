@@ -45,6 +45,23 @@ public class CandWord extends AbstractModel{
         this.CandWords = CandWords;
     }
 
+    public CandWord() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CandWord(CandWord source) {
+        if (source.CandWords != null) {
+            this.CandWords = new Words[source.CandWords.length];
+            for (int i = 0; i < source.CandWords.length; i++) {
+                this.CandWords[i] = new Words(source.CandWords[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

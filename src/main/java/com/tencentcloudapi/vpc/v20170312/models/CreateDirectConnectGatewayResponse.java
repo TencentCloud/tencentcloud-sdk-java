@@ -68,6 +68,23 @@ public class CreateDirectConnectGatewayResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public CreateDirectConnectGatewayResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateDirectConnectGatewayResponse(CreateDirectConnectGatewayResponse source) {
+        if (source.DirectConnectGateway != null) {
+            this.DirectConnectGateway = new DirectConnectGateway(source.DirectConnectGateway);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

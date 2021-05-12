@@ -68,6 +68,23 @@ public class CreateMmsInstanceItem extends AbstractModel{
         this.Content = Content;
     }
 
+    public CreateMmsInstanceItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateMmsInstanceItem(CreateMmsInstanceItem source) {
+        if (source.ContentType != null) {
+            this.ContentType = new Long(source.ContentType);
+        }
+        if (source.Content != null) {
+            this.Content = new String(source.Content);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -251,6 +251,44 @@ off：关闭全路径缓存（即开启参数过滤）
         this.KeyRules = KeyRules;
     }
 
+    public CacheKey() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CacheKey(CacheKey source) {
+        if (source.FullUrlCache != null) {
+            this.FullUrlCache = new String(source.FullUrlCache);
+        }
+        if (source.IgnoreCase != null) {
+            this.IgnoreCase = new String(source.IgnoreCase);
+        }
+        if (source.QueryString != null) {
+            this.QueryString = new QueryStringKey(source.QueryString);
+        }
+        if (source.Cookie != null) {
+            this.Cookie = new CookieKey(source.Cookie);
+        }
+        if (source.Header != null) {
+            this.Header = new HeaderKey(source.Header);
+        }
+        if (source.CacheTag != null) {
+            this.CacheTag = new CacheTagKey(source.CacheTag);
+        }
+        if (source.Scheme != null) {
+            this.Scheme = new SchemeKey(source.Scheme);
+        }
+        if (source.KeyRules != null) {
+            this.KeyRules = new KeyRule[source.KeyRules.length];
+            for (int i = 0; i < source.KeyRules.length; i++) {
+                this.KeyRules[i] = new KeyRule(source.KeyRules[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -68,6 +68,26 @@ public class ClusterVersion extends AbstractModel{
         this.Versions = Versions;
     }
 
+    public ClusterVersion() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ClusterVersion(ClusterVersion source) {
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
+        if (source.Versions != null) {
+            this.Versions = new String[source.Versions.length];
+            for (int i = 0; i < source.Versions.length; i++) {
+                this.Versions[i] = new String(source.Versions[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

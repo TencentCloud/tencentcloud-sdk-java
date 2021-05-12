@@ -367,6 +367,62 @@ public class SyncJobInfo extends AbstractModel{
         this.EndTime = EndTime;
     }
 
+    public SyncJobInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SyncJobInfo(SyncJobInfo source) {
+        if (source.JobId != null) {
+            this.JobId = new String(source.JobId);
+        }
+        if (source.JobName != null) {
+            this.JobName = new String(source.JobName);
+        }
+        if (source.SyncOption != null) {
+            this.SyncOption = new SyncOption(source.SyncOption);
+        }
+        if (source.SrcAccessType != null) {
+            this.SrcAccessType = new String(source.SrcAccessType);
+        }
+        if (source.SrcDatabaseType != null) {
+            this.SrcDatabaseType = new String(source.SrcDatabaseType);
+        }
+        if (source.SrcInfo != null) {
+            this.SrcInfo = new SyncInstanceInfo(source.SrcInfo);
+        }
+        if (source.DstAccessType != null) {
+            this.DstAccessType = new String(source.DstAccessType);
+        }
+        if (source.DstDatabaseType != null) {
+            this.DstDatabaseType = new String(source.DstDatabaseType);
+        }
+        if (source.DstInfo != null) {
+            this.DstInfo = new SyncInstanceInfo(source.DstInfo);
+        }
+        if (source.Detail != null) {
+            this.Detail = new SyncDetailInfo(source.Detail);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.DatabaseInfo != null) {
+            this.DatabaseInfo = new String(source.DatabaseInfo);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

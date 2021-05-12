@@ -655,6 +655,86 @@ public class CloudBaseProjectVersion extends AbstractModel{
         this.AutoDeployOnCodeChange = AutoDeployOnCodeChange;
     }
 
+    public CloudBaseProjectVersion() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CloudBaseProjectVersion(CloudBaseProjectVersion source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Sam != null) {
+            this.Sam = new String(source.Sam);
+        }
+        if (source.Source != null) {
+            this.Source = new CodeSource(source.Source);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new Long(source.CreateTime);
+        }
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new Long(source.UpdateTime);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.Parameters != null) {
+            this.Parameters = new KVPair[source.Parameters.length];
+            for (int i = 0; i < source.Parameters.length; i++) {
+                this.Parameters[i] = new KVPair(source.Parameters[i]);
+            }
+        }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.CIId != null) {
+            this.CIId = new String(source.CIId);
+        }
+        if (source.CDId != null) {
+            this.CDId = new String(source.CDId);
+        }
+        if (source.EnvId != null) {
+            this.EnvId = new String(source.EnvId);
+        }
+        if (source.VersionNum != null) {
+            this.VersionNum = new Long(source.VersionNum);
+        }
+        if (source.FailReason != null) {
+            this.FailReason = new String(source.FailReason);
+        }
+        if (source.RcJson != null) {
+            this.RcJson = new String(source.RcJson);
+        }
+        if (source.AddonConfig != null) {
+            this.AddonConfig = new String(source.AddonConfig);
+        }
+        if (source.Tags != null) {
+            this.Tags = new String[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new String(source.Tags[i]);
+            }
+        }
+        if (source.NetworkConfig != null) {
+            this.NetworkConfig = new String(source.NetworkConfig);
+        }
+        if (source.ExtensionId != null) {
+            this.ExtensionId = new String(source.ExtensionId);
+        }
+        if (source.FailType != null) {
+            this.FailType = new String(source.FailType);
+        }
+        if (source.RepoUrl != null) {
+            this.RepoUrl = new String(source.RepoUrl);
+        }
+        if (source.AutoDeployOnCodeChange != null) {
+            this.AutoDeployOnCodeChange = new Boolean(source.AutoDeployOnCodeChange);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

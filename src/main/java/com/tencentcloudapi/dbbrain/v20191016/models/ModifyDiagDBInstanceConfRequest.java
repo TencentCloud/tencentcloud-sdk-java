@@ -114,6 +114,32 @@ public class ModifyDiagDBInstanceConfRequest extends AbstractModel{
         this.InstanceIds = InstanceIds;
     }
 
+    public ModifyDiagDBInstanceConfRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyDiagDBInstanceConfRequest(ModifyDiagDBInstanceConfRequest source) {
+        if (source.InstanceConfs != null) {
+            this.InstanceConfs = new InstanceConfs(source.InstanceConfs);
+        }
+        if (source.Regions != null) {
+            this.Regions = new String(source.Regions);
+        }
+        if (source.Product != null) {
+            this.Product = new String(source.Product);
+        }
+        if (source.InstanceIds != null) {
+            this.InstanceIds = new String[source.InstanceIds.length];
+            for (int i = 0; i < source.InstanceIds.length; i++) {
+                this.InstanceIds[i] = new String(source.InstanceIds[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

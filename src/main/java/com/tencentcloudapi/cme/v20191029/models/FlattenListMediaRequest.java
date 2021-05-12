@@ -160,6 +160,35 @@ public class FlattenListMediaRequest extends AbstractModel{
         this.Operator = Operator;
     }
 
+    public FlattenListMediaRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public FlattenListMediaRequest(FlattenListMediaRequest source) {
+        if (source.Platform != null) {
+            this.Platform = new String(source.Platform);
+        }
+        if (source.ClassPath != null) {
+            this.ClassPath = new String(source.ClassPath);
+        }
+        if (source.Owner != null) {
+            this.Owner = new Entity(source.Owner);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.Operator != null) {
+            this.Operator = new String(source.Operator);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

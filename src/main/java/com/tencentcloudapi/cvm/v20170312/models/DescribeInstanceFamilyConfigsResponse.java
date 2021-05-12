@@ -68,6 +68,26 @@ public class DescribeInstanceFamilyConfigsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeInstanceFamilyConfigsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeInstanceFamilyConfigsResponse(DescribeInstanceFamilyConfigsResponse source) {
+        if (source.InstanceFamilyConfigSet != null) {
+            this.InstanceFamilyConfigSet = new InstanceFamilyConfig[source.InstanceFamilyConfigSet.length];
+            for (int i = 0; i < source.InstanceFamilyConfigSet.length; i++) {
+                this.InstanceFamilyConfigSet[i] = new InstanceFamilyConfig(source.InstanceFamilyConfigSet[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

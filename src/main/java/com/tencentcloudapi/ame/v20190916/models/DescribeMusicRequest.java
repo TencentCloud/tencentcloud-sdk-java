@@ -124,6 +124,29 @@ Values:Y , N(default)
         this.Ssl = Ssl;
     }
 
+    public DescribeMusicRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeMusicRequest(DescribeMusicRequest source) {
+        if (source.ItemId != null) {
+            this.ItemId = new String(source.ItemId);
+        }
+        if (source.IdentityId != null) {
+            this.IdentityId = new String(source.IdentityId);
+        }
+        if (source.SubItemType != null) {
+            this.SubItemType = new String(source.SubItemType);
+        }
+        if (source.Ssl != null) {
+            this.Ssl = new String(source.Ssl);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

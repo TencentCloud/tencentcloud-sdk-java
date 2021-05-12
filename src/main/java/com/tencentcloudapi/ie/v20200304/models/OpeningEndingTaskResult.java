@@ -129,6 +129,29 @@ public class OpeningEndingTaskResult extends AbstractModel{
         this.Item = Item;
     }
 
+    public OpeningEndingTaskResult() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public OpeningEndingTaskResult(OpeningEndingTaskResult source) {
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.ErrCode != null) {
+            this.ErrCode = new Long(source.ErrCode);
+        }
+        if (source.ErrMsg != null) {
+            this.ErrMsg = new String(source.ErrMsg);
+        }
+        if (source.Item != null) {
+            this.Item = new OpeningEndingTaskResultItem(source.Item);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

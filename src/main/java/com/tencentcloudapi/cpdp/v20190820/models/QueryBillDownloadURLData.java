@@ -78,6 +78,23 @@ public class QueryBillDownloadURLData extends AbstractModel{
         this.OriginalBillDownloadURL = OriginalBillDownloadURL;
     }
 
+    public QueryBillDownloadURLData() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public QueryBillDownloadURLData(QueryBillDownloadURLData source) {
+        if (source.BillDownloadURL != null) {
+            this.BillDownloadURL = new String(source.BillDownloadURL);
+        }
+        if (source.OriginalBillDownloadURL != null) {
+            this.OriginalBillDownloadURL = new String(source.OriginalBillDownloadURL);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

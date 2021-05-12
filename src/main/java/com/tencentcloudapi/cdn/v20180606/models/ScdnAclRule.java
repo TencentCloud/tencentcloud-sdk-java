@@ -91,6 +91,26 @@ public class ScdnAclRule extends AbstractModel{
         this.MatchValue = MatchValue;
     }
 
+    public ScdnAclRule() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ScdnAclRule(ScdnAclRule source) {
+        if (source.MatchKey != null) {
+            this.MatchKey = new String(source.MatchKey);
+        }
+        if (source.LogiOperator != null) {
+            this.LogiOperator = new String(source.LogiOperator);
+        }
+        if (source.MatchValue != null) {
+            this.MatchValue = new String(source.MatchValue);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

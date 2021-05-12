@@ -96,6 +96,29 @@ public class ListKeysResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public ListKeysResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ListKeysResponse(ListKeysResponse source) {
+        if (source.Keys != null) {
+            this.Keys = new Key[source.Keys.length];
+            for (int i = 0; i < source.Keys.length; i++) {
+                this.Keys[i] = new Key(source.Keys[i]);
+            }
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

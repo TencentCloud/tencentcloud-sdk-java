@@ -68,6 +68,23 @@ public class ImageQuota extends AbstractModel{
         this.TotalQuota = TotalQuota;
     }
 
+    public ImageQuota() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ImageQuota(ImageQuota source) {
+        if (source.UsedQuota != null) {
+            this.UsedQuota = new Long(source.UsedQuota);
+        }
+        if (source.TotalQuota != null) {
+            this.TotalQuota = new Long(source.TotalQuota);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

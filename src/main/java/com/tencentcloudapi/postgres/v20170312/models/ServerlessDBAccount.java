@@ -106,6 +106,26 @@ public class ServerlessDBAccount extends AbstractModel{
         this.DBConnLimit = DBConnLimit;
     }
 
+    public ServerlessDBAccount() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ServerlessDBAccount(ServerlessDBAccount source) {
+        if (source.DBUser != null) {
+            this.DBUser = new String(source.DBUser);
+        }
+        if (source.DBPassword != null) {
+            this.DBPassword = new String(source.DBPassword);
+        }
+        if (source.DBConnLimit != null) {
+            this.DBConnLimit = new Long(source.DBConnLimit);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

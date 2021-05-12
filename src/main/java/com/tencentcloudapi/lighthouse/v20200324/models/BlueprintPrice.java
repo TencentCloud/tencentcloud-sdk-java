@@ -114,6 +114,29 @@ public class BlueprintPrice extends AbstractModel{
         this.DiscountPrice = DiscountPrice;
     }
 
+    public BlueprintPrice() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public BlueprintPrice(BlueprintPrice source) {
+        if (source.OriginalBlueprintPrice != null) {
+            this.OriginalBlueprintPrice = new Float(source.OriginalBlueprintPrice);
+        }
+        if (source.OriginalPrice != null) {
+            this.OriginalPrice = new Float(source.OriginalPrice);
+        }
+        if (source.Discount != null) {
+            this.Discount = new Long(source.Discount);
+        }
+        if (source.DiscountPrice != null) {
+            this.DiscountPrice = new Float(source.DiscountPrice);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

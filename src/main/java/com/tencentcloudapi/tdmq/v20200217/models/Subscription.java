@@ -488,6 +488,74 @@ public class Subscription extends AbstractModel{
         this.UpdateTime = UpdateTime;
     }
 
+    public Subscription() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Subscription(Subscription source) {
+        if (source.TopicName != null) {
+            this.TopicName = new String(source.TopicName);
+        }
+        if (source.EnvironmentId != null) {
+            this.EnvironmentId = new String(source.EnvironmentId);
+        }
+        if (source.ConnectedSince != null) {
+            this.ConnectedSince = new String(source.ConnectedSince);
+        }
+        if (source.ConsumerAddr != null) {
+            this.ConsumerAddr = new String(source.ConsumerAddr);
+        }
+        if (source.ConsumerCount != null) {
+            this.ConsumerCount = new String(source.ConsumerCount);
+        }
+        if (source.ConsumerName != null) {
+            this.ConsumerName = new String(source.ConsumerName);
+        }
+        if (source.MsgBacklog != null) {
+            this.MsgBacklog = new String(source.MsgBacklog);
+        }
+        if (source.MsgRateExpired != null) {
+            this.MsgRateExpired = new String(source.MsgRateExpired);
+        }
+        if (source.MsgRateOut != null) {
+            this.MsgRateOut = new String(source.MsgRateOut);
+        }
+        if (source.MsgThroughputOut != null) {
+            this.MsgThroughputOut = new String(source.MsgThroughputOut);
+        }
+        if (source.SubscriptionName != null) {
+            this.SubscriptionName = new String(source.SubscriptionName);
+        }
+        if (source.ConsumerSets != null) {
+            this.ConsumerSets = new Consumer[source.ConsumerSets.length];
+            for (int i = 0; i < source.ConsumerSets.length; i++) {
+                this.ConsumerSets[i] = new Consumer(source.ConsumerSets[i]);
+            }
+        }
+        if (source.IsOnline != null) {
+            this.IsOnline = new Boolean(source.IsOnline);
+        }
+        if (source.ConsumersScheduleSets != null) {
+            this.ConsumersScheduleSets = new ConsumersSchedule[source.ConsumersScheduleSets.length];
+            for (int i = 0; i < source.ConsumersScheduleSets.length; i++) {
+                this.ConsumersScheduleSets[i] = new ConsumersSchedule(source.ConsumersScheduleSets[i]);
+            }
+        }
+        if (source.Remark != null) {
+            this.Remark = new String(source.Remark);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new String(source.UpdateTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

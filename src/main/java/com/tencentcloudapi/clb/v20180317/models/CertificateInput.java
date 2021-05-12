@@ -206,6 +206,41 @@ public class CertificateInput extends AbstractModel{
         this.CertCaContent = CertCaContent;
     }
 
+    public CertificateInput() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CertificateInput(CertificateInput source) {
+        if (source.SSLMode != null) {
+            this.SSLMode = new String(source.SSLMode);
+        }
+        if (source.CertId != null) {
+            this.CertId = new String(source.CertId);
+        }
+        if (source.CertCaId != null) {
+            this.CertCaId = new String(source.CertCaId);
+        }
+        if (source.CertName != null) {
+            this.CertName = new String(source.CertName);
+        }
+        if (source.CertKey != null) {
+            this.CertKey = new String(source.CertKey);
+        }
+        if (source.CertContent != null) {
+            this.CertContent = new String(source.CertContent);
+        }
+        if (source.CertCaName != null) {
+            this.CertCaName = new String(source.CertCaName);
+        }
+        if (source.CertCaContent != null) {
+            this.CertCaContent = new String(source.CertCaContent);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

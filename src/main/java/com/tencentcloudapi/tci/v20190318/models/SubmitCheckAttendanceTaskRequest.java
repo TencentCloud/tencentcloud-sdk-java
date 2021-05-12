@@ -239,6 +239,47 @@ public class SubmitCheckAttendanceTaskRequest extends AbstractModel{
         this.Threshold = Threshold;
     }
 
+    public SubmitCheckAttendanceTaskRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SubmitCheckAttendanceTaskRequest(SubmitCheckAttendanceTaskRequest source) {
+        if (source.FileContent != null) {
+            this.FileContent = new String(source.FileContent);
+        }
+        if (source.FileType != null) {
+            this.FileType = new String(source.FileType);
+        }
+        if (source.LibraryIds != null) {
+            this.LibraryIds = new String[source.LibraryIds.length];
+            for (int i = 0; i < source.LibraryIds.length; i++) {
+                this.LibraryIds[i] = new String(source.LibraryIds[i]);
+            }
+        }
+        if (source.AttendanceThreshold != null) {
+            this.AttendanceThreshold = new Float(source.AttendanceThreshold);
+        }
+        if (source.EnableStranger != null) {
+            this.EnableStranger = new Boolean(source.EnableStranger);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new Long(source.EndTime);
+        }
+        if (source.NoticeUrl != null) {
+            this.NoticeUrl = new String(source.NoticeUrl);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new Long(source.StartTime);
+        }
+        if (source.Threshold != null) {
+            this.Threshold = new Float(source.Threshold);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

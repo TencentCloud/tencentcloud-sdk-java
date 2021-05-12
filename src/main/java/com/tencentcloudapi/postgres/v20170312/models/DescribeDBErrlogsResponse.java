@@ -91,6 +91,29 @@ public class DescribeDBErrlogsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeDBErrlogsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeDBErrlogsResponse(DescribeDBErrlogsResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.Details != null) {
+            this.Details = new ErrLogDetail[source.Details.length];
+            for (int i = 0; i < source.Details.length; i++) {
+                this.Details[i] = new ErrLogDetail(source.Details[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

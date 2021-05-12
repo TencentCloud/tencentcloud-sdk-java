@@ -206,6 +206,41 @@ public class WebhookTriggerLog extends AbstractModel{
         this.Status = Status;
     }
 
+    public WebhookTriggerLog() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public WebhookTriggerLog(WebhookTriggerLog source) {
+        if (source.Id != null) {
+            this.Id = new Long(source.Id);
+        }
+        if (source.TriggerId != null) {
+            this.TriggerId = new Long(source.TriggerId);
+        }
+        if (source.EventType != null) {
+            this.EventType = new String(source.EventType);
+        }
+        if (source.NotifyType != null) {
+            this.NotifyType = new String(source.NotifyType);
+        }
+        if (source.Detail != null) {
+            this.Detail = new String(source.Detail);
+        }
+        if (source.CreationTime != null) {
+            this.CreationTime = new String(source.CreationTime);
+        }
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new String(source.UpdateTime);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

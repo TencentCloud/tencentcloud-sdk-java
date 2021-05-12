@@ -160,6 +160,41 @@ public class CMEExportInfo extends AbstractModel{
         this.ThirdPartyPublishInfos = ThirdPartyPublishInfos;
     }
 
+    public CMEExportInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CMEExportInfo(CMEExportInfo source) {
+        if (source.Owner != null) {
+            this.Owner = new Entity(source.Owner);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.ClassPath != null) {
+            this.ClassPath = new String(source.ClassPath);
+        }
+        if (source.TagSet != null) {
+            this.TagSet = new String[source.TagSet.length];
+            for (int i = 0; i < source.TagSet.length; i++) {
+                this.TagSet[i] = new String(source.TagSet[i]);
+            }
+        }
+        if (source.ThirdPartyPublishInfos != null) {
+            this.ThirdPartyPublishInfos = new ThirdPartyPublishInfo[source.ThirdPartyPublishInfos.length];
+            for (int i = 0; i < source.ThirdPartyPublishInfos.length; i++) {
+                this.ThirdPartyPublishInfos[i] = new ThirdPartyPublishInfo(source.ThirdPartyPublishInfos[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

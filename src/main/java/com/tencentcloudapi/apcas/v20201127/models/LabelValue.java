@@ -91,6 +91,26 @@ public class LabelValue extends AbstractModel{
         this.Tgi = Tgi;
     }
 
+    public LabelValue() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public LabelValue(LabelValue source) {
+        if (source.Proportion != null) {
+            this.Proportion = new Float(source.Proportion);
+        }
+        if (source.Market != null) {
+            this.Market = new Float(source.Market);
+        }
+        if (source.Tgi != null) {
+            this.Tgi = new Float(source.Tgi);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

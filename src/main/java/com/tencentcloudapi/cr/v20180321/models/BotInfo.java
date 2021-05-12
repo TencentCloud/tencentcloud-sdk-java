@@ -91,6 +91,26 @@ public class BotInfo extends AbstractModel{
         this.BotStatus = BotStatus;
     }
 
+    public BotInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public BotInfo(BotInfo source) {
+        if (source.BotId != null) {
+            this.BotId = new String(source.BotId);
+        }
+        if (source.BotName != null) {
+            this.BotName = new String(source.BotName);
+        }
+        if (source.BotStatus != null) {
+            this.BotStatus = new String(source.BotStatus);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -303,6 +303,53 @@ public class AddInstancesRequest extends AbstractModel{
         this.OrderSource = OrderSource;
     }
 
+    public AddInstancesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AddInstancesRequest(AddInstancesRequest source) {
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
+        if (source.Cpu != null) {
+            this.Cpu = new Long(source.Cpu);
+        }
+        if (source.Memory != null) {
+            this.Memory = new Long(source.Memory);
+        }
+        if (source.ReadOnlyCount != null) {
+            this.ReadOnlyCount = new Long(source.ReadOnlyCount);
+        }
+        if (source.InstanceGrpId != null) {
+            this.InstanceGrpId = new String(source.InstanceGrpId);
+        }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.SubnetId != null) {
+            this.SubnetId = new String(source.SubnetId);
+        }
+        if (source.Port != null) {
+            this.Port = new Long(source.Port);
+        }
+        if (source.InstanceName != null) {
+            this.InstanceName = new String(source.InstanceName);
+        }
+        if (source.AutoVoucher != null) {
+            this.AutoVoucher = new Long(source.AutoVoucher);
+        }
+        if (source.DbType != null) {
+            this.DbType = new String(source.DbType);
+        }
+        if (source.OrderSource != null) {
+            this.OrderSource = new String(source.OrderSource);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

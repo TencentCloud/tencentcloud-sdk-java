@@ -91,6 +91,29 @@ public class CreateAgentGroupRequest extends AbstractModel{
         this.Agents = Agents;
     }
 
+    public CreateAgentGroupRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateAgentGroupRequest(CreateAgentGroupRequest source) {
+        if (source.GroupName != null) {
+            this.GroupName = new String(source.GroupName);
+        }
+        if (source.IsDefault != null) {
+            this.IsDefault = new Long(source.IsDefault);
+        }
+        if (source.Agents != null) {
+            this.Agents = new CatAgent[source.Agents.length];
+            for (int i = 0; i < source.Agents.length; i++) {
+                this.Agents[i] = new CatAgent(source.Agents[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -390,6 +390,65 @@ public class Model extends AbstractModel{
         this.DelTime = DelTime;
     }
 
+    public Model() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Model(Model source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.Cluster != null) {
+            this.Cluster = new String(source.Cluster);
+        }
+        if (source.Model != null) {
+            this.Model = new String(source.Model);
+        }
+        if (source.RuntimeVersion != null) {
+            this.RuntimeVersion = new String(source.RuntimeVersion);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.State != null) {
+            this.State = new String(source.State);
+        }
+        if (source.ServingUrl != null) {
+            this.ServingUrl = new String(source.ServingUrl);
+        }
+        if (source.Message != null) {
+            this.Message = new String(source.Message);
+        }
+        if (source.AppId != null) {
+            this.AppId = new Long(source.AppId);
+        }
+        if (source.ServType != null) {
+            this.ServType = new String(source.ServType);
+        }
+        if (source.Expose != null) {
+            this.Expose = new String(source.Expose);
+        }
+        if (source.Replicas != null) {
+            this.Replicas = new Long(source.Replicas);
+        }
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
+        if (source.Uin != null) {
+            this.Uin = new String(source.Uin);
+        }
+        if (source.DelTime != null) {
+            this.DelTime = new String(source.DelTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

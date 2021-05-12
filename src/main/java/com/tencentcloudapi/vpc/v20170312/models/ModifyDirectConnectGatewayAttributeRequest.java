@@ -114,6 +114,29 @@ public class ModifyDirectConnectGatewayAttributeRequest extends AbstractModel{
         this.ModeType = ModeType;
     }
 
+    public ModifyDirectConnectGatewayAttributeRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyDirectConnectGatewayAttributeRequest(ModifyDirectConnectGatewayAttributeRequest source) {
+        if (source.DirectConnectGatewayId != null) {
+            this.DirectConnectGatewayId = new String(source.DirectConnectGatewayId);
+        }
+        if (source.DirectConnectGatewayName != null) {
+            this.DirectConnectGatewayName = new String(source.DirectConnectGatewayName);
+        }
+        if (source.CcnRouteType != null) {
+            this.CcnRouteType = new String(source.CcnRouteType);
+        }
+        if (source.ModeType != null) {
+            this.ModeType = new String(source.ModeType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

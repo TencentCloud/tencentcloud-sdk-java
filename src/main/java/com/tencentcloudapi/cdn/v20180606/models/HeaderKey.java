@@ -78,6 +78,23 @@ public class HeaderKey extends AbstractModel{
         this.Value = Value;
     }
 
+    public HeaderKey() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public HeaderKey(HeaderKey source) {
+        if (source.Switch != null) {
+            this.Switch = new String(source.Switch);
+        }
+        if (source.Value != null) {
+            this.Value = new String(source.Value);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -68,6 +68,23 @@ public class LabelDetailData extends AbstractModel{
         this.Label = Label;
     }
 
+    public LabelDetailData() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public LabelDetailData(LabelDetailData source) {
+        if (source.Value != null) {
+            this.Value = new LabelValue(source.Value);
+        }
+        if (source.Label != null) {
+            this.Label = new String(source.Label);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

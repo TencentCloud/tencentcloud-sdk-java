@@ -91,6 +91,26 @@ public class DescribePersonTraceDetailRequest extends AbstractModel{
         this.TraceId = TraceId;
     }
 
+    public DescribePersonTraceDetailRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribePersonTraceDetailRequest(DescribePersonTraceDetailRequest source) {
+        if (source.MallId != null) {
+            this.MallId = new String(source.MallId);
+        }
+        if (source.PersonId != null) {
+            this.PersonId = new String(source.PersonId);
+        }
+        if (source.TraceId != null) {
+            this.TraceId = new String(source.TraceId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

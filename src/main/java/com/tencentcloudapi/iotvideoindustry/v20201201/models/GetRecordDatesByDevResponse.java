@@ -73,6 +73,26 @@ public class GetRecordDatesByDevResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public GetRecordDatesByDevResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GetRecordDatesByDevResponse(GetRecordDatesByDevResponse source) {
+        if (source.Dates != null) {
+            this.Dates = new String[source.Dates.length];
+            for (int i = 0; i < source.Dates.length; i++) {
+                this.Dates[i] = new String(source.Dates[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

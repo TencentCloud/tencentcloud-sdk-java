@@ -147,6 +147,32 @@ offline：下线状态
         this.Status = Status;
     }
 
+    public IpStatus() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public IpStatus(IpStatus source) {
+        if (source.Ip != null) {
+            this.Ip = new String(source.Ip);
+        }
+        if (source.District != null) {
+            this.District = new String(source.District);
+        }
+        if (source.Isp != null) {
+            this.Isp = new String(source.Isp);
+        }
+        if (source.City != null) {
+            this.City = new String(source.City);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -68,6 +68,23 @@ public class MetricObjectMeaning extends AbstractModel{
         this.Zh = Zh;
     }
 
+    public MetricObjectMeaning() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MetricObjectMeaning(MetricObjectMeaning source) {
+        if (source.En != null) {
+            this.En = new String(source.En);
+        }
+        if (source.Zh != null) {
+            this.Zh = new String(source.Zh);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -144,6 +144,29 @@ NoListFile：不存储结果列表。
         this.ResultListSaveType = ResultListSaveType;
     }
 
+    public MediaTargetInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MediaTargetInfo(MediaTargetInfo source) {
+        if (source.FileName != null) {
+            this.FileName = new String(source.FileName);
+        }
+        if (source.Format != null) {
+            this.Format = new String(source.Format);
+        }
+        if (source.TargetVideoInfo != null) {
+            this.TargetVideoInfo = new TargetVideoInfo(source.TargetVideoInfo);
+        }
+        if (source.ResultListSaveType != null) {
+            this.ResultListSaveType = new String(source.ResultListSaveType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

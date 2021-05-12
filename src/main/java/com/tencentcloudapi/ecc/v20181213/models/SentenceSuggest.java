@@ -183,6 +183,44 @@ public class SentenceSuggest extends AbstractModel{
         this.ErrorCoordinates = ErrorCoordinates;
     }
 
+    public SentenceSuggest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SentenceSuggest(SentenceSuggest source) {
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.ErrorType != null) {
+            this.ErrorType = new String(source.ErrorType);
+        }
+        if (source.Origin != null) {
+            this.Origin = new String(source.Origin);
+        }
+        if (source.Replace != null) {
+            this.Replace = new String(source.Replace);
+        }
+        if (source.Message != null) {
+            this.Message = new String(source.Message);
+        }
+        if (source.ErrorPosition != null) {
+            this.ErrorPosition = new Long[source.ErrorPosition.length];
+            for (int i = 0; i < source.ErrorPosition.length; i++) {
+                this.ErrorPosition[i] = new Long(source.ErrorPosition[i]);
+            }
+        }
+        if (source.ErrorCoordinates != null) {
+            this.ErrorCoordinates = new ErrorCoordinate[source.ErrorCoordinates.length];
+            for (int i = 0; i < source.ErrorCoordinates.length; i++) {
+                this.ErrorCoordinates[i] = new ErrorCoordinate(source.ErrorCoordinates[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

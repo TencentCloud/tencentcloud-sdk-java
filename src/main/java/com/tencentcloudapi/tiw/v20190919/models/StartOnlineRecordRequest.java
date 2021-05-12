@@ -432,6 +432,65 @@ VIDEO_GENERATION_MODE - 视频生成模式（内测中，需邮件申请开通�
         this.ExtraData = ExtraData;
     }
 
+    public StartOnlineRecordRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public StartOnlineRecordRequest(StartOnlineRecordRequest source) {
+        if (source.SdkAppId != null) {
+            this.SdkAppId = new Long(source.SdkAppId);
+        }
+        if (source.RoomId != null) {
+            this.RoomId = new Long(source.RoomId);
+        }
+        if (source.RecordUserId != null) {
+            this.RecordUserId = new String(source.RecordUserId);
+        }
+        if (source.RecordUserSig != null) {
+            this.RecordUserSig = new String(source.RecordUserSig);
+        }
+        if (source.GroupId != null) {
+            this.GroupId = new String(source.GroupId);
+        }
+        if (source.Concat != null) {
+            this.Concat = new Concat(source.Concat);
+        }
+        if (source.Whiteboard != null) {
+            this.Whiteboard = new Whiteboard(source.Whiteboard);
+        }
+        if (source.MixStream != null) {
+            this.MixStream = new MixStream(source.MixStream);
+        }
+        if (source.Extras != null) {
+            this.Extras = new String[source.Extras.length];
+            for (int i = 0; i < source.Extras.length; i++) {
+                this.Extras[i] = new String(source.Extras[i]);
+            }
+        }
+        if (source.AudioFileNeeded != null) {
+            this.AudioFileNeeded = new Boolean(source.AudioFileNeeded);
+        }
+        if (source.RecordControl != null) {
+            this.RecordControl = new RecordControl(source.RecordControl);
+        }
+        if (source.RecordMode != null) {
+            this.RecordMode = new String(source.RecordMode);
+        }
+        if (source.ChatGroupId != null) {
+            this.ChatGroupId = new String(source.ChatGroupId);
+        }
+        if (source.AutoStopTimeout != null) {
+            this.AutoStopTimeout = new Long(source.AutoStopTimeout);
+        }
+        if (source.ExtraData != null) {
+            this.ExtraData = new String(source.ExtraData);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

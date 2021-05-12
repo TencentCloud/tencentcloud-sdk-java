@@ -68,6 +68,26 @@ public class CloudStorageTimeData extends AbstractModel{
         this.VideoURL = VideoURL;
     }
 
+    public CloudStorageTimeData() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CloudStorageTimeData(CloudStorageTimeData source) {
+        if (source.TimeList != null) {
+            this.TimeList = new CloudStorageTimeInfo[source.TimeList.length];
+            for (int i = 0; i < source.TimeList.length; i++) {
+                this.TimeList[i] = new CloudStorageTimeInfo(source.TimeList[i]);
+            }
+        }
+        if (source.VideoURL != null) {
+            this.VideoURL = new String(source.VideoURL);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

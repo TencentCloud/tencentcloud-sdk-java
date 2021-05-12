@@ -234,6 +234,44 @@ public class RenewInstancesInfo extends AbstractModel{
         this.StorageType = StorageType;
     }
 
+    public RenewInstancesInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RenewInstancesInfo(RenewInstancesInfo source) {
+        if (source.EmrResourceId != null) {
+            this.EmrResourceId = new String(source.EmrResourceId);
+        }
+        if (source.Flag != null) {
+            this.Flag = new Long(source.Flag);
+        }
+        if (source.Ip != null) {
+            this.Ip = new String(source.Ip);
+        }
+        if (source.MemDesc != null) {
+            this.MemDesc = new String(source.MemDesc);
+        }
+        if (source.CpuNum != null) {
+            this.CpuNum = new Long(source.CpuNum);
+        }
+        if (source.DiskSize != null) {
+            this.DiskSize = new String(source.DiskSize);
+        }
+        if (source.ExpireTime != null) {
+            this.ExpireTime = new String(source.ExpireTime);
+        }
+        if (source.Spec != null) {
+            this.Spec = new String(source.Spec);
+        }
+        if (source.StorageType != null) {
+            this.StorageType = new Long(source.StorageType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

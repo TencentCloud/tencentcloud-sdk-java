@@ -208,6 +208,38 @@ public class CreateSinglePayResult extends AbstractModel{
         this.BankRetMsg = BankRetMsg;
     }
 
+    public CreateSinglePayResult() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateSinglePayResult(CreateSinglePayResult source) {
+        if (source.HandleStatus != null) {
+            this.HandleStatus = new String(source.HandleStatus);
+        }
+        if (source.HandleMsg != null) {
+            this.HandleMsg = new String(source.HandleMsg);
+        }
+        if (source.SerialNo != null) {
+            this.SerialNo = new String(source.SerialNo);
+        }
+        if (source.BankSerialNo != null) {
+            this.BankSerialNo = new String(source.BankSerialNo);
+        }
+        if (source.PayStatus != null) {
+            this.PayStatus = new String(source.PayStatus);
+        }
+        if (source.BankRetCode != null) {
+            this.BankRetCode = new String(source.BankRetCode);
+        }
+        if (source.BankRetMsg != null) {
+            this.BankRetMsg = new String(source.BankRetMsg);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

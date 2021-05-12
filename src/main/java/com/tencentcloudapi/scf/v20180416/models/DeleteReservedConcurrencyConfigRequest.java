@@ -68,6 +68,23 @@ public class DeleteReservedConcurrencyConfigRequest extends AbstractModel{
         this.Namespace = Namespace;
     }
 
+    public DeleteReservedConcurrencyConfigRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteReservedConcurrencyConfigRequest(DeleteReservedConcurrencyConfigRequest source) {
+        if (source.FunctionName != null) {
+            this.FunctionName = new String(source.FunctionName);
+        }
+        if (source.Namespace != null) {
+            this.Namespace = new String(source.Namespace);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

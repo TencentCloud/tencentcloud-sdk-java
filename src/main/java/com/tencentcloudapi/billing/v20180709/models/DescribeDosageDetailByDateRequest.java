@@ -242,6 +242,32 @@ cdn业务：
         this.InstanceID = InstanceID;
     }
 
+    public DescribeDosageDetailByDateRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeDosageDetailByDateRequest(DescribeDosageDetailByDateRequest source) {
+        if (source.StartDate != null) {
+            this.StartDate = new String(source.StartDate);
+        }
+        if (source.EndDate != null) {
+            this.EndDate = new String(source.EndDate);
+        }
+        if (source.ProductCode != null) {
+            this.ProductCode = new String(source.ProductCode);
+        }
+        if (source.Domain != null) {
+            this.Domain = new String(source.Domain);
+        }
+        if (source.InstanceID != null) {
+            this.InstanceID = new String(source.InstanceID);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

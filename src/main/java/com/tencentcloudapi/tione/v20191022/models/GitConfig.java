@@ -73,6 +73,23 @@ public class GitConfig extends AbstractModel{
         this.Branch = Branch;
     }
 
+    public GitConfig() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GitConfig(GitConfig source) {
+        if (source.RepositoryUrl != null) {
+            this.RepositoryUrl = new String(source.RepositoryUrl);
+        }
+        if (source.Branch != null) {
+            this.Branch = new String(source.Branch);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

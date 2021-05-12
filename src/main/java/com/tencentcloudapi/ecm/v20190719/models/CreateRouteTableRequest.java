@@ -91,6 +91,26 @@ public class CreateRouteTableRequest extends AbstractModel{
         this.EcmRegion = EcmRegion;
     }
 
+    public CreateRouteTableRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateRouteTableRequest(CreateRouteTableRequest source) {
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.RouteTableName != null) {
+            this.RouteTableName = new String(source.RouteTableName);
+        }
+        if (source.EcmRegion != null) {
+            this.EcmRegion = new String(source.EcmRegion);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

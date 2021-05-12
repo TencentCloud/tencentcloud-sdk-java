@@ -78,6 +78,23 @@ public class DescribeTagsRequest extends AbstractModel{
         this.MachineRegion = MachineRegion;
     }
 
+    public DescribeTagsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeTagsRequest(DescribeTagsRequest source) {
+        if (source.MachineType != null) {
+            this.MachineType = new String(source.MachineType);
+        }
+        if (source.MachineRegion != null) {
+            this.MachineRegion = new String(source.MachineRegion);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

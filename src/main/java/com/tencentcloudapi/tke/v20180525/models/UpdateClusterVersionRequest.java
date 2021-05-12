@@ -137,6 +137,32 @@ public class UpdateClusterVersionRequest extends AbstractModel{
         this.SkipPreCheck = SkipPreCheck;
     }
 
+    public UpdateClusterVersionRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UpdateClusterVersionRequest(UpdateClusterVersionRequest source) {
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
+        if (source.DstVersion != null) {
+            this.DstVersion = new String(source.DstVersion);
+        }
+        if (source.ExtraArgs != null) {
+            this.ExtraArgs = new ClusterExtraArgs(source.ExtraArgs);
+        }
+        if (source.MaxNotReadyPercent != null) {
+            this.MaxNotReadyPercent = new Float(source.MaxNotReadyPercent);
+        }
+        if (source.SkipPreCheck != null) {
+            this.SkipPreCheck = new Boolean(source.SkipPreCheck);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

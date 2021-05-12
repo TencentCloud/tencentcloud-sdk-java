@@ -106,6 +106,29 @@ public class SubscribeObject extends AbstractModel{
         this.TableNames = TableNames;
     }
 
+    public SubscribeObject() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SubscribeObject(SubscribeObject source) {
+        if (source.ObjectsType != null) {
+            this.ObjectsType = new Long(source.ObjectsType);
+        }
+        if (source.DatabaseName != null) {
+            this.DatabaseName = new String(source.DatabaseName);
+        }
+        if (source.TableNames != null) {
+            this.TableNames = new String[source.TableNames.length];
+            for (int i = 0; i < source.TableNames.length; i++) {
+                this.TableNames[i] = new String(source.TableNames[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

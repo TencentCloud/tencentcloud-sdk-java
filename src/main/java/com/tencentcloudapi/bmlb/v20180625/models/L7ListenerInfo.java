@@ -321,6 +321,59 @@ public class L7ListenerInfo extends AbstractModel{
         this.ForwardProtocol = ForwardProtocol;
     }
 
+    public L7ListenerInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public L7ListenerInfo(L7ListenerInfo source) {
+        if (source.ListenerId != null) {
+            this.ListenerId = new String(source.ListenerId);
+        }
+        if (source.ListenerName != null) {
+            this.ListenerName = new String(source.ListenerName);
+        }
+        if (source.Protocol != null) {
+            this.Protocol = new String(source.Protocol);
+        }
+        if (source.LoadBalancerPort != null) {
+            this.LoadBalancerPort = new Long(source.LoadBalancerPort);
+        }
+        if (source.Bandwidth != null) {
+            this.Bandwidth = new Long(source.Bandwidth);
+        }
+        if (source.ListenerType != null) {
+            this.ListenerType = new String(source.ListenerType);
+        }
+        if (source.SslMode != null) {
+            this.SslMode = new Long(source.SslMode);
+        }
+        if (source.CertId != null) {
+            this.CertId = new String(source.CertId);
+        }
+        if (source.CertCaId != null) {
+            this.CertCaId = new String(source.CertCaId);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.AddTimestamp != null) {
+            this.AddTimestamp = new String(source.AddTimestamp);
+        }
+        if (source.RuleSet != null) {
+            this.RuleSet = new L7ListenerInfoRule[source.RuleSet.length];
+            for (int i = 0; i < source.RuleSet.length; i++) {
+                this.RuleSet[i] = new L7ListenerInfoRule(source.RuleSet[i]);
+            }
+        }
+        if (source.ForwardProtocol != null) {
+            this.ForwardProtocol = new Long(source.ForwardProtocol);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

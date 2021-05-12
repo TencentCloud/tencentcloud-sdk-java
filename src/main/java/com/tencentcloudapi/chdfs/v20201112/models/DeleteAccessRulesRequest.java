@@ -45,6 +45,23 @@ public class DeleteAccessRulesRequest extends AbstractModel{
         this.AccessRuleIds = AccessRuleIds;
     }
 
+    public DeleteAccessRulesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteAccessRulesRequest(DeleteAccessRulesRequest source) {
+        if (source.AccessRuleIds != null) {
+            this.AccessRuleIds = new Long[source.AccessRuleIds.length];
+            for (int i = 0; i < source.AccessRuleIds.length; i++) {
+                this.AccessRuleIds[i] = new Long(source.AccessRuleIds[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

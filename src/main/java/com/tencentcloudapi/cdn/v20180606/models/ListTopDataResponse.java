@@ -68,6 +68,26 @@ public class ListTopDataResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public ListTopDataResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ListTopDataResponse(ListTopDataResponse source) {
+        if (source.Data != null) {
+            this.Data = new TopData[source.Data.length];
+            for (int i = 0; i < source.Data.length; i++) {
+                this.Data[i] = new TopData(source.Data[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -68,6 +68,23 @@ public class CmqRegionInfo extends AbstractModel{
         this.CmqRegion = CmqRegion;
     }
 
+    public CmqRegionInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CmqRegionInfo(CmqRegionInfo source) {
+        if (source.CmqRegionName != null) {
+            this.CmqRegionName = new String(source.CmqRegionName);
+        }
+        if (source.CmqRegion != null) {
+            this.CmqRegion = new String(source.CmqRegion);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

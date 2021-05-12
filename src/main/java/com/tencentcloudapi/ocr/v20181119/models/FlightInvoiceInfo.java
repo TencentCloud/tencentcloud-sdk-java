@@ -96,6 +96,26 @@ public class FlightInvoiceInfo extends AbstractModel{
         this.Row = Row;
     }
 
+    public FlightInvoiceInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public FlightInvoiceInfo(FlightInvoiceInfo source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Value != null) {
+            this.Value = new String(source.Value);
+        }
+        if (source.Row != null) {
+            this.Row = new Long(source.Row);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

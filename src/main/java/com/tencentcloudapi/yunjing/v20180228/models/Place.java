@@ -91,6 +91,26 @@ public class Place extends AbstractModel{
         this.CountryId = CountryId;
     }
 
+    public Place() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Place(Place source) {
+        if (source.CityId != null) {
+            this.CityId = new Long(source.CityId);
+        }
+        if (source.ProvinceId != null) {
+            this.ProvinceId = new Long(source.ProvinceId);
+        }
+        if (source.CountryId != null) {
+            this.CountryId = new Long(source.CountryId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

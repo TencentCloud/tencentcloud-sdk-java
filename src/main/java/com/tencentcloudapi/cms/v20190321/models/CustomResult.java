@@ -114,6 +114,32 @@ public class CustomResult extends AbstractModel{
         this.Type = Type;
     }
 
+    public CustomResult() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CustomResult(CustomResult source) {
+        if (source.Keywords != null) {
+            this.Keywords = new String[source.Keywords.length];
+            for (int i = 0; i < source.Keywords.length; i++) {
+                this.Keywords[i] = new String(source.Keywords[i]);
+            }
+        }
+        if (source.LibId != null) {
+            this.LibId = new String(source.LibId);
+        }
+        if (source.LibName != null) {
+            this.LibName = new String(source.LibName);
+        }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

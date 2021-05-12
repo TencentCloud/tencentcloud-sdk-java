@@ -68,6 +68,23 @@ public class AppSecureAddDeviceResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public AppSecureAddDeviceResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AppSecureAddDeviceResponse(AppSecureAddDeviceResponse source) {
+        if (source.AppDevice != null) {
+            this.AppDevice = new AppDevice(source.AppDevice);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

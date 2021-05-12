@@ -198,6 +198,38 @@ public class SecurityPolicyRuleOut extends AbstractModel{
         this.PolicyId = PolicyId;
     }
 
+    public SecurityPolicyRuleOut() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SecurityPolicyRuleOut(SecurityPolicyRuleOut source) {
+        if (source.Action != null) {
+            this.Action = new String(source.Action);
+        }
+        if (source.SourceCidr != null) {
+            this.SourceCidr = new String(source.SourceCidr);
+        }
+        if (source.AliasName != null) {
+            this.AliasName = new String(source.AliasName);
+        }
+        if (source.DestPortRange != null) {
+            this.DestPortRange = new String(source.DestPortRange);
+        }
+        if (source.RuleId != null) {
+            this.RuleId = new String(source.RuleId);
+        }
+        if (source.Protocol != null) {
+            this.Protocol = new String(source.Protocol);
+        }
+        if (source.PolicyId != null) {
+            this.PolicyId = new String(source.PolicyId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

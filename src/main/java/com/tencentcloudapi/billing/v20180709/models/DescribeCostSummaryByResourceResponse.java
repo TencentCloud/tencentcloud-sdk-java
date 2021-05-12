@@ -180,6 +180,38 @@ public class DescribeCostSummaryByResourceResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeCostSummaryByResourceResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeCostSummaryByResourceResponse(DescribeCostSummaryByResourceResponse source) {
+        if (source.Ready != null) {
+            this.Ready = new Long(source.Ready);
+        }
+        if (source.Total != null) {
+            this.Total = new ConsumptionSummaryTotal(source.Total);
+        }
+        if (source.ConditionValue != null) {
+            this.ConditionValue = new ConsumptionResourceSummaryConditionValue(source.ConditionValue);
+        }
+        if (source.RecordNum != null) {
+            this.RecordNum = new Long(source.RecordNum);
+        }
+        if (source.Data != null) {
+            this.Data = new ConsumptionResourceSummaryDataItem[source.Data.length];
+            for (int i = 0; i < source.Data.length; i++) {
+                this.Data[i] = new ConsumptionResourceSummaryDataItem(source.Data[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

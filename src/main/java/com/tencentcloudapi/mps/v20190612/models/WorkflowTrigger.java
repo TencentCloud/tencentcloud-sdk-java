@@ -73,6 +73,23 @@ public class WorkflowTrigger extends AbstractModel{
         this.CosFileUploadTrigger = CosFileUploadTrigger;
     }
 
+    public WorkflowTrigger() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public WorkflowTrigger(WorkflowTrigger source) {
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.CosFileUploadTrigger != null) {
+            this.CosFileUploadTrigger = new CosFileUploadTrigger(source.CosFileUploadTrigger);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

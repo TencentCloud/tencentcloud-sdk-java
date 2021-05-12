@@ -91,6 +91,26 @@ public class DescribeDbauditInstancesRequest extends AbstractModel{
         this.Offset = Offset;
     }
 
+    public DescribeDbauditInstancesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeDbauditInstancesRequest(DescribeDbauditInstancesRequest source) {
+        if (source.SearchRegion != null) {
+            this.SearchRegion = new String(source.SearchRegion);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

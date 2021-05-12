@@ -68,6 +68,26 @@ public class DeleteEndUserRequest extends AbstractModel{
         this.UserList = UserList;
     }
 
+    public DeleteEndUserRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteEndUserRequest(DeleteEndUserRequest source) {
+        if (source.EnvId != null) {
+            this.EnvId = new String(source.EnvId);
+        }
+        if (source.UserList != null) {
+            this.UserList = new String[source.UserList.length];
+            for (int i = 0; i < source.UserList.length; i++) {
+                this.UserList[i] = new String(source.UserList[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

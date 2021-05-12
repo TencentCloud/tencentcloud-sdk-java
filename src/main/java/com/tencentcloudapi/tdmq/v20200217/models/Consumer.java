@@ -134,6 +134,29 @@ public class Consumer extends AbstractModel{
         this.ClientVersion = ClientVersion;
     }
 
+    public Consumer() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Consumer(Consumer source) {
+        if (source.ConnectedSince != null) {
+            this.ConnectedSince = new String(source.ConnectedSince);
+        }
+        if (source.ConsumerAddr != null) {
+            this.ConsumerAddr = new String(source.ConsumerAddr);
+        }
+        if (source.ConsumerName != null) {
+            this.ConsumerName = new String(source.ConsumerName);
+        }
+        if (source.ClientVersion != null) {
+            this.ClientVersion = new String(source.ClientVersion);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

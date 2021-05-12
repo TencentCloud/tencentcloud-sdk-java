@@ -206,6 +206,44 @@ public class BandwidthPackage extends AbstractModel{
         this.Bandwidth = Bandwidth;
     }
 
+    public BandwidthPackage() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public BandwidthPackage(BandwidthPackage source) {
+        if (source.BandwidthPackageId != null) {
+            this.BandwidthPackageId = new String(source.BandwidthPackageId);
+        }
+        if (source.NetworkType != null) {
+            this.NetworkType = new String(source.NetworkType);
+        }
+        if (source.ChargeType != null) {
+            this.ChargeType = new String(source.ChargeType);
+        }
+        if (source.BandwidthPackageName != null) {
+            this.BandwidthPackageName = new String(source.BandwidthPackageName);
+        }
+        if (source.CreatedTime != null) {
+            this.CreatedTime = new String(source.CreatedTime);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.ResourceSet != null) {
+            this.ResourceSet = new Resource[source.ResourceSet.length];
+            for (int i = 0; i < source.ResourceSet.length; i++) {
+                this.ResourceSet[i] = new Resource(source.ResourceSet[i]);
+            }
+        }
+        if (source.Bandwidth != null) {
+            this.Bandwidth = new Long(source.Bandwidth);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

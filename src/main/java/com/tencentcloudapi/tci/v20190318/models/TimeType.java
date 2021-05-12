@@ -68,6 +68,23 @@ public class TimeType extends AbstractModel{
         this.StartTime = StartTime;
     }
 
+    public TimeType() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TimeType(TimeType source) {
+        if (source.EndTime != null) {
+            this.EndTime = new Long(source.EndTime);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new Long(source.StartTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -137,6 +137,35 @@ public class AvailableRegion extends AbstractModel{
         this.RegionCnName = RegionCnName;
     }
 
+    public AvailableRegion() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AvailableRegion(AvailableRegion source) {
+        if (source.Region != null) {
+            this.Region = new String(source.Region);
+        }
+        if (source.RegionName != null) {
+            this.RegionName = new String(source.RegionName);
+        }
+        if (source.RegionStatus != null) {
+            this.RegionStatus = new String(source.RegionStatus);
+        }
+        if (source.Zones != null) {
+            this.Zones = new AvailableZone[source.Zones.length];
+            for (int i = 0; i < source.Zones.length; i++) {
+                this.Zones[i] = new AvailableZone(source.Zones[i]);
+            }
+        }
+        if (source.RegionCnName != null) {
+            this.RegionCnName = new String(source.RegionCnName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

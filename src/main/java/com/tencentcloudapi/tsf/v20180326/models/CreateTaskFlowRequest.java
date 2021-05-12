@@ -114,6 +114,32 @@ public class CreateTaskFlowRequest extends AbstractModel{
         this.TimeOut = TimeOut;
     }
 
+    public CreateTaskFlowRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateTaskFlowRequest(CreateTaskFlowRequest source) {
+        if (source.FlowName != null) {
+            this.FlowName = new String(source.FlowName);
+        }
+        if (source.TriggerRule != null) {
+            this.TriggerRule = new TaskRule(source.TriggerRule);
+        }
+        if (source.FlowEdges != null) {
+            this.FlowEdges = new TaskFlowEdge[source.FlowEdges.length];
+            for (int i = 0; i < source.FlowEdges.length; i++) {
+                this.FlowEdges[i] = new TaskFlowEdge(source.FlowEdges[i]);
+            }
+        }
+        if (source.TimeOut != null) {
+            this.TimeOut = new Long(source.TimeOut);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -91,6 +91,26 @@ public class HotKeyInfo extends AbstractModel{
         this.Count = Count;
     }
 
+    public HotKeyInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public HotKeyInfo(HotKeyInfo source) {
+        if (source.Key != null) {
+            this.Key = new String(source.Key);
+        }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.Count != null) {
+            this.Count = new Long(source.Count);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -134,6 +134,29 @@ public class PolicyVersionDetail extends AbstractModel{
         this.Document = Document;
     }
 
+    public PolicyVersionDetail() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PolicyVersionDetail(PolicyVersionDetail source) {
+        if (source.VersionId != null) {
+            this.VersionId = new Long(source.VersionId);
+        }
+        if (source.CreateDate != null) {
+            this.CreateDate = new String(source.CreateDate);
+        }
+        if (source.IsDefaultVersion != null) {
+            this.IsDefaultVersion = new Long(source.IsDefaultVersion);
+        }
+        if (source.Document != null) {
+            this.Document = new String(source.Document);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -68,6 +68,23 @@ public class DBPrivilegeModifyInfo extends AbstractModel{
         this.Privilege = Privilege;
     }
 
+    public DBPrivilegeModifyInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DBPrivilegeModifyInfo(DBPrivilegeModifyInfo source) {
+        if (source.DBName != null) {
+            this.DBName = new String(source.DBName);
+        }
+        if (source.Privilege != null) {
+            this.Privilege = new String(source.Privilege);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

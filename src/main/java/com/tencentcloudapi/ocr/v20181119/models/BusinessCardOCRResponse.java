@@ -114,6 +114,32 @@ public class BusinessCardOCRResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public BusinessCardOCRResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public BusinessCardOCRResponse(BusinessCardOCRResponse source) {
+        if (source.BusinessCardInfos != null) {
+            this.BusinessCardInfos = new BusinessCardInfo[source.BusinessCardInfos.length];
+            for (int i = 0; i < source.BusinessCardInfos.length; i++) {
+                this.BusinessCardInfos[i] = new BusinessCardInfo(source.BusinessCardInfos[i]);
+            }
+        }
+        if (source.RetImageBase64 != null) {
+            this.RetImageBase64 = new String(source.RetImageBase64);
+        }
+        if (source.Angle != null) {
+            this.Angle = new Float(source.Angle);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

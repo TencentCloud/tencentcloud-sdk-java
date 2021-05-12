@@ -45,6 +45,20 @@ public class DescribeLoadBalancerTrafficRequest extends AbstractModel{
         this.LoadBalancerRegion = LoadBalancerRegion;
     }
 
+    public DescribeLoadBalancerTrafficRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeLoadBalancerTrafficRequest(DescribeLoadBalancerTrafficRequest source) {
+        if (source.LoadBalancerRegion != null) {
+            this.LoadBalancerRegion = new String(source.LoadBalancerRegion);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

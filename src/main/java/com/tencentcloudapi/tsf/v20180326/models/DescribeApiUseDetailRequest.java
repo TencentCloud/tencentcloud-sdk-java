@@ -114,6 +114,29 @@ public class DescribeApiUseDetailRequest extends AbstractModel{
         this.EndTime = EndTime;
     }
 
+    public DescribeApiUseDetailRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeApiUseDetailRequest(DescribeApiUseDetailRequest source) {
+        if (source.GatewayDeployGroupId != null) {
+            this.GatewayDeployGroupId = new String(source.GatewayDeployGroupId);
+        }
+        if (source.ApiId != null) {
+            this.ApiId = new String(source.ApiId);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -68,6 +68,23 @@ public class VersionWeight extends AbstractModel{
         this.Weight = Weight;
     }
 
+    public VersionWeight() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public VersionWeight(VersionWeight source) {
+        if (source.Version != null) {
+            this.Version = new String(source.Version);
+        }
+        if (source.Weight != null) {
+            this.Weight = new Float(source.Weight);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

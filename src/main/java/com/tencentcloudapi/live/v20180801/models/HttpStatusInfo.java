@@ -68,6 +68,23 @@ public class HttpStatusInfo extends AbstractModel{
         this.Num = Num;
     }
 
+    public HttpStatusInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public HttpStatusInfo(HttpStatusInfo source) {
+        if (source.HttpStatus != null) {
+            this.HttpStatus = new String(source.HttpStatus);
+        }
+        if (source.Num != null) {
+            this.Num = new Long(source.Num);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

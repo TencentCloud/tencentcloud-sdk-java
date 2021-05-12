@@ -114,6 +114,29 @@ public class ModifyAddressInternetChargeTypeRequest extends AbstractModel{
         this.AddressChargePrepaid = AddressChargePrepaid;
     }
 
+    public ModifyAddressInternetChargeTypeRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyAddressInternetChargeTypeRequest(ModifyAddressInternetChargeTypeRequest source) {
+        if (source.AddressId != null) {
+            this.AddressId = new String(source.AddressId);
+        }
+        if (source.InternetChargeType != null) {
+            this.InternetChargeType = new String(source.InternetChargeType);
+        }
+        if (source.InternetMaxBandwidthOut != null) {
+            this.InternetMaxBandwidthOut = new Long(source.InternetMaxBandwidthOut);
+        }
+        if (source.AddressChargePrepaid != null) {
+            this.AddressChargePrepaid = new AddressChargePrepaid(source.AddressChargePrepaid);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

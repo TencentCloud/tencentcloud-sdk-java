@@ -91,6 +91,26 @@ public class CreateBatchRequest extends AbstractModel{
         this.DevPre = DevPre;
     }
 
+    public CreateBatchRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateBatchRequest(CreateBatchRequest source) {
+        if (source.ProductId != null) {
+            this.ProductId = new String(source.ProductId);
+        }
+        if (source.DevNum != null) {
+            this.DevNum = new Long(source.DevNum);
+        }
+        if (source.DevPre != null) {
+            this.DevPre = new String(source.DevPre);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

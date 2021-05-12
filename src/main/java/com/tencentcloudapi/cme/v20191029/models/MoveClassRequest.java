@@ -137,6 +137,32 @@ public class MoveClassRequest extends AbstractModel{
         this.Operator = Operator;
     }
 
+    public MoveClassRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MoveClassRequest(MoveClassRequest source) {
+        if (source.Platform != null) {
+            this.Platform = new String(source.Platform);
+        }
+        if (source.Owner != null) {
+            this.Owner = new Entity(source.Owner);
+        }
+        if (source.SourceClassPath != null) {
+            this.SourceClassPath = new String(source.SourceClassPath);
+        }
+        if (source.DestinationClassPath != null) {
+            this.DestinationClassPath = new String(source.DestinationClassPath);
+        }
+        if (source.Operator != null) {
+            this.Operator = new String(source.Operator);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

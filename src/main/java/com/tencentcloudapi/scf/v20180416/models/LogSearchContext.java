@@ -114,6 +114,29 @@ public class LogSearchContext extends AbstractModel{
         this.Type = Type;
     }
 
+    public LogSearchContext() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public LogSearchContext(LogSearchContext source) {
+        if (source.Offset != null) {
+            this.Offset = new String(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.Keyword != null) {
+            this.Keyword = new String(source.Keyword);
+        }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

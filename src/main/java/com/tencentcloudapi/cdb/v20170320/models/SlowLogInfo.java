@@ -160,6 +160,35 @@ public class SlowLogInfo extends AbstractModel{
         this.Type = Type;
     }
 
+    public SlowLogInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SlowLogInfo(SlowLogInfo source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Size != null) {
+            this.Size = new Long(source.Size);
+        }
+        if (source.Date != null) {
+            this.Date = new String(source.Date);
+        }
+        if (source.IntranetUrl != null) {
+            this.IntranetUrl = new String(source.IntranetUrl);
+        }
+        if (source.InternetUrl != null) {
+            this.InternetUrl = new String(source.InternetUrl);
+        }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

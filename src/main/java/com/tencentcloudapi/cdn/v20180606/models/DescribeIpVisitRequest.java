@@ -162,6 +162,35 @@ day：天粒度，查询时间区间大于 1 天时，默认返回天粒度活�
         this.Interval = Interval;
     }
 
+    public DescribeIpVisitRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeIpVisitRequest(DescribeIpVisitRequest source) {
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+        if (source.Domains != null) {
+            this.Domains = new String[source.Domains.length];
+            for (int i = 0; i < source.Domains.length; i++) {
+                this.Domains[i] = new String(source.Domains[i]);
+            }
+        }
+        if (source.Project != null) {
+            this.Project = new Long(source.Project);
+        }
+        if (source.Interval != null) {
+            this.Interval = new String(source.Interval);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

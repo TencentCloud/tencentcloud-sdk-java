@@ -160,6 +160,35 @@ public class PurgeTask extends AbstractModel{
         this.CreateTime = CreateTime;
     }
 
+    public PurgeTask() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PurgeTask(PurgeTask source) {
+        if (source.TaskId != null) {
+            this.TaskId = new String(source.TaskId);
+        }
+        if (source.Url != null) {
+            this.Url = new String(source.Url);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.PurgeType != null) {
+            this.PurgeType = new String(source.PurgeType);
+        }
+        if (source.FlushType != null) {
+            this.FlushType = new String(source.FlushType);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

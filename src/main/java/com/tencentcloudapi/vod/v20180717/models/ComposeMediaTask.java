@@ -264,6 +264,44 @@ public class ComposeMediaTask extends AbstractModel{
         this.SessionId = SessionId;
     }
 
+    public ComposeMediaTask() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ComposeMediaTask(ComposeMediaTask source) {
+        if (source.TaskId != null) {
+            this.TaskId = new String(source.TaskId);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.ErrCode != null) {
+            this.ErrCode = new Long(source.ErrCode);
+        }
+        if (source.Message != null) {
+            this.Message = new String(source.Message);
+        }
+        if (source.Input != null) {
+            this.Input = new ComposeMediaTaskInput(source.Input);
+        }
+        if (source.Output != null) {
+            this.Output = new ComposeMediaTaskOutput(source.Output);
+        }
+        if (source.MetaData != null) {
+            this.MetaData = new MediaMetaData(source.MetaData);
+        }
+        if (source.SessionContext != null) {
+            this.SessionContext = new String(source.SessionContext);
+        }
+        if (source.SessionId != null) {
+            this.SessionId = new String(source.SessionId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

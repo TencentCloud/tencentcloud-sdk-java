@@ -331,6 +331,56 @@ public class DDoSEventRecord extends AbstractModel{
         this.EventId = EventId;
     }
 
+    public DDoSEventRecord() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DDoSEventRecord(DDoSEventRecord source) {
+        if (source.Business != null) {
+            this.Business = new String(source.Business);
+        }
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
+        if (source.Vip != null) {
+            this.Vip = new String(source.Vip);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+        if (source.Mbps != null) {
+            this.Mbps = new Long(source.Mbps);
+        }
+        if (source.Pps != null) {
+            this.Pps = new Long(source.Pps);
+        }
+        if (source.AttackType != null) {
+            this.AttackType = new String(source.AttackType);
+        }
+        if (source.BlockFlag != null) {
+            this.BlockFlag = new Long(source.BlockFlag);
+        }
+        if (source.OverLoad != null) {
+            this.OverLoad = new String(source.OverLoad);
+        }
+        if (source.AttackStatus != null) {
+            this.AttackStatus = new Long(source.AttackStatus);
+        }
+        if (source.ResourceName != null) {
+            this.ResourceName = new String(source.ResourceName);
+        }
+        if (source.EventId != null) {
+            this.EventId = new String(source.EventId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

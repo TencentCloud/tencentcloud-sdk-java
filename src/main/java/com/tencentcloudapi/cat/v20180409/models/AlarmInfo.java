@@ -229,6 +229,44 @@ public class AlarmInfo extends AbstractModel{
         this.ObjId = ObjId;
     }
 
+    public AlarmInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AlarmInfo(AlarmInfo source) {
+        if (source.ObjName != null) {
+            this.ObjName = new String(source.ObjName);
+        }
+        if (source.FirstOccurTime != null) {
+            this.FirstOccurTime = new String(source.FirstOccurTime);
+        }
+        if (source.LastOccurTime != null) {
+            this.LastOccurTime = new String(source.LastOccurTime);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.Content != null) {
+            this.Content = new String(source.Content);
+        }
+        if (source.TaskId != null) {
+            this.TaskId = new Long(source.TaskId);
+        }
+        if (source.MetricName != null) {
+            this.MetricName = new String(source.MetricName);
+        }
+        if (source.MetricValue != null) {
+            this.MetricValue = new String(source.MetricValue);
+        }
+        if (source.ObjId != null) {
+            this.ObjId = new String(source.ObjId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -206,6 +206,50 @@ public class SubmitDoubleVideoHighlightsRequest extends AbstractModel{
         this.TeacherFileContent = TeacherFileContent;
     }
 
+    public SubmitDoubleVideoHighlightsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SubmitDoubleVideoHighlightsRequest(SubmitDoubleVideoHighlightsRequest source) {
+        if (source.FileContent != null) {
+            this.FileContent = new String(source.FileContent);
+        }
+        if (source.LibIds != null) {
+            this.LibIds = new String[source.LibIds.length];
+            for (int i = 0; i < source.LibIds.length; i++) {
+                this.LibIds[i] = new String(source.LibIds[i]);
+            }
+        }
+        if (source.Functions != null) {
+            this.Functions = new DoubleVideoFunction(source.Functions);
+        }
+        if (source.PersonInfoList != null) {
+            this.PersonInfoList = new PersonInfo[source.PersonInfoList.length];
+            for (int i = 0; i < source.PersonInfoList.length; i++) {
+                this.PersonInfoList[i] = new PersonInfo(source.PersonInfoList[i]);
+            }
+        }
+        if (source.FrameInterval != null) {
+            this.FrameInterval = new Long(source.FrameInterval);
+        }
+        if (source.PersonIds != null) {
+            this.PersonIds = new String[source.PersonIds.length];
+            for (int i = 0; i < source.PersonIds.length; i++) {
+                this.PersonIds[i] = new String(source.PersonIds[i]);
+            }
+        }
+        if (source.SimThreshold != null) {
+            this.SimThreshold = new Float(source.SimThreshold);
+        }
+        if (source.TeacherFileContent != null) {
+            this.TeacherFileContent = new String(source.TeacherFileContent);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

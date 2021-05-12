@@ -45,6 +45,20 @@ public class DeleteNatGatewayRequest extends AbstractModel{
         this.NatGatewayId = NatGatewayId;
     }
 
+    public DeleteNatGatewayRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteNatGatewayRequest(DeleteNatGatewayRequest source) {
+        if (source.NatGatewayId != null) {
+            this.NatGatewayId = new String(source.NatGatewayId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

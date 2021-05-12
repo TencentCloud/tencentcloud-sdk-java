@@ -203,6 +203,38 @@ public class ModifySecurityRuleRequest extends AbstractModel{
         this.DestPortRange = DestPortRange;
     }
 
+    public ModifySecurityRuleRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifySecurityRuleRequest(ModifySecurityRuleRequest source) {
+        if (source.RuleId != null) {
+            this.RuleId = new String(source.RuleId);
+        }
+        if (source.AliasName != null) {
+            this.AliasName = new String(source.AliasName);
+        }
+        if (source.PolicyId != null) {
+            this.PolicyId = new String(source.PolicyId);
+        }
+        if (source.RuleAction != null) {
+            this.RuleAction = new String(source.RuleAction);
+        }
+        if (source.SourceCidr != null) {
+            this.SourceCidr = new String(source.SourceCidr);
+        }
+        if (source.Protocol != null) {
+            this.Protocol = new String(source.Protocol);
+        }
+        if (source.DestPortRange != null) {
+            this.DestPortRange = new String(source.DestPortRange);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

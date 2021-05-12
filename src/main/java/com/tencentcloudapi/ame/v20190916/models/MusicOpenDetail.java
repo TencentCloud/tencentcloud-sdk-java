@@ -274,6 +274,50 @@ public class MusicOpenDetail extends AbstractModel{
         this.LyricUrl = LyricUrl;
     }
 
+    public MusicOpenDetail() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MusicOpenDetail(MusicOpenDetail source) {
+        if (source.MusicId != null) {
+            this.MusicId = new String(source.MusicId);
+        }
+        if (source.AlbumName != null) {
+            this.AlbumName = new String(source.AlbumName);
+        }
+        if (source.AlbumImageUrl != null) {
+            this.AlbumImageUrl = new String(source.AlbumImageUrl);
+        }
+        if (source.MusicName != null) {
+            this.MusicName = new String(source.MusicName);
+        }
+        if (source.MusicImageUrl != null) {
+            this.MusicImageUrl = new String(source.MusicImageUrl);
+        }
+        if (source.Singers != null) {
+            this.Singers = new String[source.Singers.length];
+            for (int i = 0; i < source.Singers.length; i++) {
+                this.Singers[i] = new String(source.Singers[i]);
+            }
+        }
+        if (source.Duration != null) {
+            this.Duration = new Long(source.Duration);
+        }
+        if (source.Tags != null) {
+            this.Tags = new String[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new String(source.Tags[i]);
+            }
+        }
+        if (source.LyricUrl != null) {
+            this.LyricUrl = new String(source.LyricUrl);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

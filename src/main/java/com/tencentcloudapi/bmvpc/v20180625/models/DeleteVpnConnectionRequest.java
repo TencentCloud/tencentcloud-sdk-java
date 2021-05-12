@@ -45,6 +45,20 @@ public class DeleteVpnConnectionRequest extends AbstractModel{
         this.VpnConnectionId = VpnConnectionId;
     }
 
+    public DeleteVpnConnectionRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteVpnConnectionRequest(DeleteVpnConnectionRequest source) {
+        if (source.VpnConnectionId != null) {
+            this.VpnConnectionId = new String(source.VpnConnectionId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

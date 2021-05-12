@@ -134,6 +134,35 @@ public class DescribeIp6TranslatorsRequest extends AbstractModel{
         this.Limit = Limit;
     }
 
+    public DescribeIp6TranslatorsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeIp6TranslatorsRequest(DescribeIp6TranslatorsRequest source) {
+        if (source.Ip6TranslatorIds != null) {
+            this.Ip6TranslatorIds = new String[source.Ip6TranslatorIds.length];
+            for (int i = 0; i < source.Ip6TranslatorIds.length; i++) {
+                this.Ip6TranslatorIds[i] = new String(source.Ip6TranslatorIds[i]);
+            }
+        }
+        if (source.Filters != null) {
+            this.Filters = new Filter[source.Filters.length];
+            for (int i = 0; i < source.Filters.length; i++) {
+                this.Filters[i] = new Filter(source.Filters[i]);
+            }
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

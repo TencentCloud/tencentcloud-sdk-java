@@ -91,6 +91,26 @@ public class ModifyDBNameRequest extends AbstractModel{
         this.NewDBName = NewDBName;
     }
 
+    public ModifyDBNameRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyDBNameRequest(ModifyDBNameRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.OldDBName != null) {
+            this.OldDBName = new String(source.OldDBName);
+        }
+        if (source.NewDBName != null) {
+            this.NewDBName = new String(source.NewDBName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

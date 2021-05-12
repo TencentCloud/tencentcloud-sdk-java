@@ -492,6 +492,77 @@ public class ApplyOutwardOrderRequest extends AbstractModel{
         this.Profile = Profile;
     }
 
+    public ApplyOutwardOrderRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ApplyOutwardOrderRequest(ApplyOutwardOrderRequest source) {
+        if (source.TransactionId != null) {
+            this.TransactionId = new String(source.TransactionId);
+        }
+        if (source.PricingCurrency != null) {
+            this.PricingCurrency = new String(source.PricingCurrency);
+        }
+        if (source.SourceCurrency != null) {
+            this.SourceCurrency = new String(source.SourceCurrency);
+        }
+        if (source.TargetCurrency != null) {
+            this.TargetCurrency = new String(source.TargetCurrency);
+        }
+        if (source.PayeeType != null) {
+            this.PayeeType = new String(source.PayeeType);
+        }
+        if (source.PayeeAccount != null) {
+            this.PayeeAccount = new String(source.PayeeAccount);
+        }
+        if (source.SourceAmount != null) {
+            this.SourceAmount = new Float(source.SourceAmount);
+        }
+        if (source.TargetAmount != null) {
+            this.TargetAmount = new Float(source.TargetAmount);
+        }
+        if (source.PayeeName != null) {
+            this.PayeeName = new String(source.PayeeName);
+        }
+        if (source.PayeeAddress != null) {
+            this.PayeeAddress = new String(source.PayeeAddress);
+        }
+        if (source.PayeeBankAccountType != null) {
+            this.PayeeBankAccountType = new String(source.PayeeBankAccountType);
+        }
+        if (source.PayeeCountryCode != null) {
+            this.PayeeCountryCode = new String(source.PayeeCountryCode);
+        }
+        if (source.PayeeBankName != null) {
+            this.PayeeBankName = new String(source.PayeeBankName);
+        }
+        if (source.PayeeBankAddress != null) {
+            this.PayeeBankAddress = new String(source.PayeeBankAddress);
+        }
+        if (source.PayeeBankDistrict != null) {
+            this.PayeeBankDistrict = new String(source.PayeeBankDistrict);
+        }
+        if (source.PayeeBankSwiftCode != null) {
+            this.PayeeBankSwiftCode = new String(source.PayeeBankSwiftCode);
+        }
+        if (source.PayeeBankType != null) {
+            this.PayeeBankType = new String(source.PayeeBankType);
+        }
+        if (source.PayeeBankCode != null) {
+            this.PayeeBankCode = new String(source.PayeeBankCode);
+        }
+        if (source.ReferenceForBeneficiary != null) {
+            this.ReferenceForBeneficiary = new String(source.ReferenceForBeneficiary);
+        }
+        if (source.Profile != null) {
+            this.Profile = new String(source.Profile);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

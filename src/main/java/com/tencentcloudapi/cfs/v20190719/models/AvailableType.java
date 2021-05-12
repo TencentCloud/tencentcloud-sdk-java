@@ -91,6 +91,29 @@ public class AvailableType extends AbstractModel{
         this.Prepayment = Prepayment;
     }
 
+    public AvailableType() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AvailableType(AvailableType source) {
+        if (source.Protocols != null) {
+            this.Protocols = new AvailableProtoStatus[source.Protocols.length];
+            for (int i = 0; i < source.Protocols.length; i++) {
+                this.Protocols[i] = new AvailableProtoStatus(source.Protocols[i]);
+            }
+        }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.Prepayment != null) {
+            this.Prepayment = new Boolean(source.Prepayment);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

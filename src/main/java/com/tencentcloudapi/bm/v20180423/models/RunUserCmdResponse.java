@@ -91,6 +91,32 @@ public class RunUserCmdResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public RunUserCmdResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RunUserCmdResponse(RunUserCmdResponse source) {
+        if (source.SuccessTaskInfoSet != null) {
+            this.SuccessTaskInfoSet = new SuccessTaskInfo[source.SuccessTaskInfoSet.length];
+            for (int i = 0; i < source.SuccessTaskInfoSet.length; i++) {
+                this.SuccessTaskInfoSet[i] = new SuccessTaskInfo(source.SuccessTaskInfoSet[i]);
+            }
+        }
+        if (source.FailedTaskInfoSet != null) {
+            this.FailedTaskInfoSet = new FailedTaskInfo[source.FailedTaskInfoSet.length];
+            for (int i = 0; i < source.FailedTaskInfoSet.length; i++) {
+                this.FailedTaskInfoSet[i] = new FailedTaskInfo(source.FailedTaskInfoSet[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

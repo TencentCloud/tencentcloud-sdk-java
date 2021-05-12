@@ -91,6 +91,26 @@ public class UploadIdRequest extends AbstractModel{
         this.IdListBase64 = IdListBase64;
     }
 
+    public UploadIdRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UploadIdRequest(UploadIdRequest source) {
+        if (source.Type != null) {
+            this.Type = new Long(source.Type);
+        }
+        if (source.TaskName != null) {
+            this.TaskName = new String(source.TaskName);
+        }
+        if (source.IdListBase64 != null) {
+            this.IdListBase64 = new String(source.IdListBase64);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

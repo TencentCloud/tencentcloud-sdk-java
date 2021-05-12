@@ -68,6 +68,23 @@ public class TicketThroughUnit extends AbstractModel{
         this.Through = Through;
     }
 
+    public TicketThroughUnit() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TicketThroughUnit(TicketThroughUnit source) {
+        if (source.DateKey != null) {
+            this.DateKey = new String(source.DateKey);
+        }
+        if (source.Through != null) {
+            this.Through = new Long(source.Through);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

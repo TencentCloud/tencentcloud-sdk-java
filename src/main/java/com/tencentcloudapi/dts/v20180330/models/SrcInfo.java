@@ -395,6 +395,65 @@ public class SrcInfo extends AbstractModel{
         this.EngineVersion = EngineVersion;
     }
 
+    public SrcInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SrcInfo(SrcInfo source) {
+        if (source.AccessKey != null) {
+            this.AccessKey = new String(source.AccessKey);
+        }
+        if (source.Ip != null) {
+            this.Ip = new String(source.Ip);
+        }
+        if (source.Port != null) {
+            this.Port = new Long(source.Port);
+        }
+        if (source.User != null) {
+            this.User = new String(source.User);
+        }
+        if (source.Password != null) {
+            this.Password = new String(source.Password);
+        }
+        if (source.RdsInstanceId != null) {
+            this.RdsInstanceId = new String(source.RdsInstanceId);
+        }
+        if (source.CvmInstanceId != null) {
+            this.CvmInstanceId = new String(source.CvmInstanceId);
+        }
+        if (source.UniqDcgId != null) {
+            this.UniqDcgId = new String(source.UniqDcgId);
+        }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.SubnetId != null) {
+            this.SubnetId = new String(source.SubnetId);
+        }
+        if (source.UniqVpnGwId != null) {
+            this.UniqVpnGwId = new String(source.UniqVpnGwId);
+        }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.Region != null) {
+            this.Region = new String(source.Region);
+        }
+        if (source.Supplier != null) {
+            this.Supplier = new String(source.Supplier);
+        }
+        if (source.CcnId != null) {
+            this.CcnId = new String(source.CcnId);
+        }
+        if (source.EngineVersion != null) {
+            this.EngineVersion = new String(source.EngineVersion);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

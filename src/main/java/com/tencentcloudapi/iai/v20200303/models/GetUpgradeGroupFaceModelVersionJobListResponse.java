@@ -91,6 +91,29 @@ public class GetUpgradeGroupFaceModelVersionJobListResponse extends AbstractMode
         this.RequestId = RequestId;
     }
 
+    public GetUpgradeGroupFaceModelVersionJobListResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GetUpgradeGroupFaceModelVersionJobListResponse(GetUpgradeGroupFaceModelVersionJobListResponse source) {
+        if (source.JobInfos != null) {
+            this.JobInfos = new UpgradeJobInfo[source.JobInfos.length];
+            for (int i = 0; i < source.JobInfos.length; i++) {
+                this.JobInfos[i] = new UpgradeJobInfo(source.JobInfos[i]);
+            }
+        }
+        if (source.JobNum != null) {
+            this.JobNum = new Long(source.JobNum);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

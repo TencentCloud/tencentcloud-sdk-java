@@ -369,6 +369,59 @@ no_match(不检测)
         this.Action = Action;
     }
 
+    public DDoSPolicyPacketFilter() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DDoSPolicyPacketFilter(DDoSPolicyPacketFilter source) {
+        if (source.Protocol != null) {
+            this.Protocol = new String(source.Protocol);
+        }
+        if (source.SportStart != null) {
+            this.SportStart = new Long(source.SportStart);
+        }
+        if (source.SportEnd != null) {
+            this.SportEnd = new Long(source.SportEnd);
+        }
+        if (source.DportStart != null) {
+            this.DportStart = new Long(source.DportStart);
+        }
+        if (source.DportEnd != null) {
+            this.DportEnd = new Long(source.DportEnd);
+        }
+        if (source.PktlenMin != null) {
+            this.PktlenMin = new Long(source.PktlenMin);
+        }
+        if (source.PktlenMax != null) {
+            this.PktlenMax = new Long(source.PktlenMax);
+        }
+        if (source.MatchBegin != null) {
+            this.MatchBegin = new String(source.MatchBegin);
+        }
+        if (source.MatchType != null) {
+            this.MatchType = new String(source.MatchType);
+        }
+        if (source.Str != null) {
+            this.Str = new String(source.Str);
+        }
+        if (source.Depth != null) {
+            this.Depth = new Long(source.Depth);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.IsNot != null) {
+            this.IsNot = new Long(source.IsNot);
+        }
+        if (source.Action != null) {
+            this.Action = new String(source.Action);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

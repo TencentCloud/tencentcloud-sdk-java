@@ -101,6 +101,29 @@ public class DescribeBasicAlarmListResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeBasicAlarmListResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeBasicAlarmListResponse(DescribeBasicAlarmListResponse source) {
+        if (source.Alarms != null) {
+            this.Alarms = new DescribeBasicAlarmListAlarms[source.Alarms.length];
+            for (int i = 0; i < source.Alarms.length; i++) {
+                this.Alarms[i] = new DescribeBasicAlarmListAlarms(source.Alarms[i]);
+            }
+        }
+        if (source.Total != null) {
+            this.Total = new Long(source.Total);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

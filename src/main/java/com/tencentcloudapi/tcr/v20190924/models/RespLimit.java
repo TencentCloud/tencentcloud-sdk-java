@@ -45,6 +45,23 @@ public class RespLimit extends AbstractModel{
         this.LimitInfo = LimitInfo;
     }
 
+    public RespLimit() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RespLimit(RespLimit source) {
+        if (source.LimitInfo != null) {
+            this.LimitInfo = new Limit[source.LimitInfo.length];
+            for (int i = 0; i < source.LimitInfo.length; i++) {
+                this.LimitInfo[i] = new Limit(source.LimitInfo[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

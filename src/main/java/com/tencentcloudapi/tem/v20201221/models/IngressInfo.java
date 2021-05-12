@@ -254,6 +254,50 @@ public class IngressInfo extends AbstractModel{
         this.Vip = Vip;
     }
 
+    public IngressInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public IngressInfo(IngressInfo source) {
+        if (source.NamespaceId != null) {
+            this.NamespaceId = new String(source.NamespaceId);
+        }
+        if (source.EksNamespace != null) {
+            this.EksNamespace = new String(source.EksNamespace);
+        }
+        if (source.AddressIPVersion != null) {
+            this.AddressIPVersion = new String(source.AddressIPVersion);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Rules != null) {
+            this.Rules = new IngressRule[source.Rules.length];
+            for (int i = 0; i < source.Rules.length; i++) {
+                this.Rules[i] = new IngressRule(source.Rules[i]);
+            }
+        }
+        if (source.ClbId != null) {
+            this.ClbId = new String(source.ClbId);
+        }
+        if (source.Tls != null) {
+            this.Tls = new IngressTls[source.Tls.length];
+            for (int i = 0; i < source.Tls.length; i++) {
+                this.Tls[i] = new IngressTls(source.Tls[i]);
+            }
+        }
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
+        if (source.Vip != null) {
+            this.Vip = new String(source.Vip);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

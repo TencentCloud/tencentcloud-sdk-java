@@ -183,6 +183,38 @@ public class CreateSessionRequest extends AbstractModel{
         this.Resolution = Resolution;
     }
 
+    public CreateSessionRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateSessionRequest(CreateSessionRequest source) {
+        if (source.ClientSession != null) {
+            this.ClientSession = new String(source.ClientSession);
+        }
+        if (source.GameId != null) {
+            this.GameId = new String(source.GameId);
+        }
+        if (source.UserId != null) {
+            this.UserId = new String(source.UserId);
+        }
+        if (source.GameParas != null) {
+            this.GameParas = new String(source.GameParas);
+        }
+        if (source.GameRegion != null) {
+            this.GameRegion = new String(source.GameRegion);
+        }
+        if (source.ImageUrl != null) {
+            this.ImageUrl = new String(source.ImageUrl);
+        }
+        if (source.Resolution != null) {
+            this.Resolution = new String(source.Resolution);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

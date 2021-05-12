@@ -68,6 +68,23 @@ public class CreateAllGatewayApiAsyncRequest extends AbstractModel{
         this.MicroserviceId = MicroserviceId;
     }
 
+    public CreateAllGatewayApiAsyncRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateAllGatewayApiAsyncRequest(CreateAllGatewayApiAsyncRequest source) {
+        if (source.GroupId != null) {
+            this.GroupId = new String(source.GroupId);
+        }
+        if (source.MicroserviceId != null) {
+            this.MicroserviceId = new String(source.MicroserviceId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

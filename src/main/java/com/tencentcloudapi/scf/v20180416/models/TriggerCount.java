@@ -275,6 +275,50 @@ public class TriggerCount extends AbstractModel{
         this.Vod = Vod;
     }
 
+    public TriggerCount() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TriggerCount(TriggerCount source) {
+        if (source.Cos != null) {
+            this.Cos = new Long(source.Cos);
+        }
+        if (source.Timer != null) {
+            this.Timer = new Long(source.Timer);
+        }
+        if (source.Cmq != null) {
+            this.Cmq = new Long(source.Cmq);
+        }
+        if (source.Total != null) {
+            this.Total = new Long(source.Total);
+        }
+        if (source.Ckafka != null) {
+            this.Ckafka = new Long(source.Ckafka);
+        }
+        if (source.Apigw != null) {
+            this.Apigw = new Long(source.Apigw);
+        }
+        if (source.Cls != null) {
+            this.Cls = new Long(source.Cls);
+        }
+        if (source.Clb != null) {
+            this.Clb = new Long(source.Clb);
+        }
+        if (source.Mps != null) {
+            this.Mps = new Long(source.Mps);
+        }
+        if (source.Cm != null) {
+            this.Cm = new Long(source.Cm);
+        }
+        if (source.Vod != null) {
+            this.Vod = new Long(source.Vod);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

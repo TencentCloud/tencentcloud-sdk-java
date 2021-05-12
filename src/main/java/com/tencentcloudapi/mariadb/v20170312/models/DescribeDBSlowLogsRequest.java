@@ -229,6 +229,44 @@ public class DescribeDBSlowLogsRequest extends AbstractModel{
         this.Slave = Slave;
     }
 
+    public DescribeDBSlowLogsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeDBSlowLogsRequest(DescribeDBSlowLogsRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+        if (source.Db != null) {
+            this.Db = new String(source.Db);
+        }
+        if (source.OrderBy != null) {
+            this.OrderBy = new String(source.OrderBy);
+        }
+        if (source.OrderByType != null) {
+            this.OrderByType = new String(source.OrderByType);
+        }
+        if (source.Slave != null) {
+            this.Slave = new Long(source.Slave);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

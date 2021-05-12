@@ -68,6 +68,26 @@ public class NamespaceInfoResp extends AbstractModel{
         this.NamespaceInfo = NamespaceInfo;
     }
 
+    public NamespaceInfoResp() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public NamespaceInfoResp(NamespaceInfoResp source) {
+        if (source.NamespaceCount != null) {
+            this.NamespaceCount = new Long(source.NamespaceCount);
+        }
+        if (source.NamespaceInfo != null) {
+            this.NamespaceInfo = new NamespaceInfo[source.NamespaceInfo.length];
+            for (int i = 0; i < source.NamespaceInfo.length; i++) {
+                this.NamespaceInfo[i] = new NamespaceInfo(source.NamespaceInfo[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -160,6 +160,41 @@ public class DescribeIndustryNewsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeIndustryNewsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeIndustryNewsResponse(DescribeIndustryNewsResponse source) {
+        if (source.NewsCount != null) {
+            this.NewsCount = new Long(source.NewsCount);
+        }
+        if (source.FromCount != null) {
+            this.FromCount = new Long(source.FromCount);
+        }
+        if (source.AdverseCount != null) {
+            this.AdverseCount = new Long(source.AdverseCount);
+        }
+        if (source.NewsSet != null) {
+            this.NewsSet = new IndustryNews[source.NewsSet.length];
+            for (int i = 0; i < source.NewsSet.length; i++) {
+                this.NewsSet[i] = new IndustryNews(source.NewsSet[i]);
+            }
+        }
+        if (source.DateCountSet != null) {
+            this.DateCountSet = new DateCount[source.DateCountSet.length];
+            for (int i = 0; i < source.DateCountSet.length; i++) {
+                this.DateCountSet[i] = new DateCount(source.DateCountSet[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

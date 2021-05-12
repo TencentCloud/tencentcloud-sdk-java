@@ -137,6 +137,32 @@ public class CreateHashDepositRequest extends AbstractModel{
         this.EvidenceDescription = EvidenceDescription;
     }
 
+    public CreateHashDepositRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateHashDepositRequest(CreateHashDepositRequest source) {
+        if (source.EvidenceName != null) {
+            this.EvidenceName = new String(source.EvidenceName);
+        }
+        if (source.EvidenceHash != null) {
+            this.EvidenceHash = new String(source.EvidenceHash);
+        }
+        if (source.BusinessId != null) {
+            this.BusinessId = new String(source.BusinessId);
+        }
+        if (source.HashType != null) {
+            this.HashType = new Long(source.HashType);
+        }
+        if (source.EvidenceDescription != null) {
+            this.EvidenceDescription = new String(source.EvidenceDescription);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

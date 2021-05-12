@@ -45,6 +45,20 @@ public class ReplicaSetInfo extends AbstractModel{
         this.ReplicaSetId = ReplicaSetId;
     }
 
+    public ReplicaSetInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ReplicaSetInfo(ReplicaSetInfo source) {
+        if (source.ReplicaSetId != null) {
+            this.ReplicaSetId = new String(source.ReplicaSetId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

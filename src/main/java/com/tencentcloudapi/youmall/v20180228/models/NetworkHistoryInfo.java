@@ -183,6 +183,41 @@ public class NetworkHistoryInfo extends AbstractModel{
         this.Infos = Infos;
     }
 
+    public NetworkHistoryInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public NetworkHistoryInfo(NetworkHistoryInfo source) {
+        if (source.Count != null) {
+            this.Count = new Long(source.Count);
+        }
+        if (source.CompanyId != null) {
+            this.CompanyId = new String(source.CompanyId);
+        }
+        if (source.ShopId != null) {
+            this.ShopId = new Long(source.ShopId);
+        }
+        if (source.Province != null) {
+            this.Province = new String(source.Province);
+        }
+        if (source.City != null) {
+            this.City = new String(source.City);
+        }
+        if (source.ShopName != null) {
+            this.ShopName = new String(source.ShopName);
+        }
+        if (source.Infos != null) {
+            this.Infos = new NetworkInfo[source.Infos.length];
+            for (int i = 0; i < source.Infos.length; i++) {
+                this.Infos[i] = new NetworkInfo(source.Infos[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

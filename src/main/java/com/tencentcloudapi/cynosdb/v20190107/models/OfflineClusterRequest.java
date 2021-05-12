@@ -45,6 +45,20 @@ public class OfflineClusterRequest extends AbstractModel{
         this.ClusterId = ClusterId;
     }
 
+    public OfflineClusterRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public OfflineClusterRequest(OfflineClusterRequest source) {
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -91,6 +91,29 @@ public class DescribeUserCmdTaskInfoResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeUserCmdTaskInfoResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeUserCmdTaskInfoResponse(DescribeUserCmdTaskInfoResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.UserCmdTaskInfoSet != null) {
+            this.UserCmdTaskInfoSet = new UserCmdTaskInfo[source.UserCmdTaskInfoSet.length];
+            for (int i = 0; i < source.UserCmdTaskInfoSet.length; i++) {
+                this.UserCmdTaskInfoSet[i] = new UserCmdTaskInfo(source.UserCmdTaskInfoSet[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

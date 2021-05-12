@@ -68,6 +68,23 @@ public class ExposeServiceResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public ExposeServiceResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ExposeServiceResponse(ExposeServiceResponse source) {
+        if (source.Expose != null) {
+            this.Expose = new ExposeInfo(source.Expose);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

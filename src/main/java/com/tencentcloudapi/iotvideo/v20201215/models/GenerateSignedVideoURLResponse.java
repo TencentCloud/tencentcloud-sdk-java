@@ -68,6 +68,23 @@ public class GenerateSignedVideoURLResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public GenerateSignedVideoURLResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GenerateSignedVideoURLResponse(GenerateSignedVideoURLResponse source) {
+        if (source.SignedVideoURL != null) {
+            this.SignedVideoURL = new String(source.SignedVideoURL);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

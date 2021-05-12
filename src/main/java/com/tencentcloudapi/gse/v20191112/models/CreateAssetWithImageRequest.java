@@ -229,6 +229,44 @@ public class CreateAssetWithImageRequest extends AbstractModel{
         this.OsBit = OsBit;
     }
 
+    public CreateAssetWithImageRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateAssetWithImageRequest(CreateAssetWithImageRequest source) {
+        if (source.AssetName != null) {
+            this.AssetName = new String(source.AssetName);
+        }
+        if (source.AssetVersion != null) {
+            this.AssetVersion = new String(source.AssetVersion);
+        }
+        if (source.AssetRegion != null) {
+            this.AssetRegion = new String(source.AssetRegion);
+        }
+        if (source.ImageId != null) {
+            this.ImageId = new String(source.ImageId);
+        }
+        if (source.ImageSize != null) {
+            this.ImageSize = new String(source.ImageSize);
+        }
+        if (source.ImageOs != null) {
+            this.ImageOs = new String(source.ImageOs);
+        }
+        if (source.OsType != null) {
+            this.OsType = new String(source.OsType);
+        }
+        if (source.ImageType != null) {
+            this.ImageType = new String(source.ImageType);
+        }
+        if (source.OsBit != null) {
+            this.OsBit = new Long(source.OsBit);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

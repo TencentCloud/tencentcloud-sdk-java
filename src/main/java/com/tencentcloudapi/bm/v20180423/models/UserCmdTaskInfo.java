@@ -459,6 +459,74 @@ public class UserCmdTaskInfo extends AbstractModel{
         this.LastShellExit = LastShellExit;
     }
 
+    public UserCmdTaskInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UserCmdTaskInfo(UserCmdTaskInfo source) {
+        if (source.AutoId != null) {
+            this.AutoId = new Long(source.AutoId);
+        }
+        if (source.TaskId != null) {
+            this.TaskId = new String(source.TaskId);
+        }
+        if (source.RunBeginTime != null) {
+            this.RunBeginTime = new String(source.RunBeginTime);
+        }
+        if (source.RunEndTime != null) {
+            this.RunEndTime = new String(source.RunEndTime);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.InstanceName != null) {
+            this.InstanceName = new String(source.InstanceName);
+        }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.VpcName != null) {
+            this.VpcName = new String(source.VpcName);
+        }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.VpcCidrBlock != null) {
+            this.VpcCidrBlock = new String(source.VpcCidrBlock);
+        }
+        if (source.SubnetName != null) {
+            this.SubnetName = new String(source.SubnetName);
+        }
+        if (source.SubnetId != null) {
+            this.SubnetId = new String(source.SubnetId);
+        }
+        if (source.SubnetCidrBlock != null) {
+            this.SubnetCidrBlock = new String(source.SubnetCidrBlock);
+        }
+        if (source.LanIp != null) {
+            this.LanIp = new String(source.LanIp);
+        }
+        if (source.CmdContent != null) {
+            this.CmdContent = new String(source.CmdContent);
+        }
+        if (source.CmdParam != null) {
+            this.CmdParam = new String(source.CmdParam);
+        }
+        if (source.CmdResult != null) {
+            this.CmdResult = new String(source.CmdResult);
+        }
+        if (source.AppId != null) {
+            this.AppId = new Long(source.AppId);
+        }
+        if (source.LastShellExit != null) {
+            this.LastShellExit = new Long(source.LastShellExit);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

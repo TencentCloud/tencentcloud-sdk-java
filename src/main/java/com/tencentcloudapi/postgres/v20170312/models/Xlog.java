@@ -160,6 +160,35 @@ public class Xlog extends AbstractModel{
         this.Size = Size;
     }
 
+    public Xlog() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Xlog(Xlog source) {
+        if (source.Id != null) {
+            this.Id = new Long(source.Id);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+        if (source.InternalAddr != null) {
+            this.InternalAddr = new String(source.InternalAddr);
+        }
+        if (source.ExternalAddr != null) {
+            this.ExternalAddr = new String(source.ExternalAddr);
+        }
+        if (source.Size != null) {
+            this.Size = new Long(source.Size);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

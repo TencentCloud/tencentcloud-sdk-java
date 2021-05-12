@@ -73,6 +73,26 @@ public class ContainGroupResult extends AbstractModel{
         this.TotalCount = TotalCount;
     }
 
+    public ContainGroupResult() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ContainGroupResult(ContainGroupResult source) {
+        if (source.Content != null) {
+            this.Content = new ContainGroup[source.Content.length];
+            for (int i = 0; i < source.Content.length; i++) {
+                this.Content[i] = new ContainGroup(source.Content[i]);
+            }
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

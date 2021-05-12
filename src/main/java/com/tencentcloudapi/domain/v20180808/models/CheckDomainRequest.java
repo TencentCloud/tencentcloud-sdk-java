@@ -68,6 +68,23 @@ public class CheckDomainRequest extends AbstractModel{
         this.Period = Period;
     }
 
+    public CheckDomainRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CheckDomainRequest(CheckDomainRequest source) {
+        if (source.DomainName != null) {
+            this.DomainName = new String(source.DomainName);
+        }
+        if (source.Period != null) {
+            this.Period = new String(source.Period);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -386,6 +386,56 @@ public class SimpleGroup extends AbstractModel{
         this.AppMicroServiceType = AppMicroServiceType;
     }
 
+    public SimpleGroup() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SimpleGroup(SimpleGroup source) {
+        if (source.GroupId != null) {
+            this.GroupId = new String(source.GroupId);
+        }
+        if (source.GroupName != null) {
+            this.GroupName = new String(source.GroupName);
+        }
+        if (source.ApplicationId != null) {
+            this.ApplicationId = new String(source.ApplicationId);
+        }
+        if (source.ApplicationName != null) {
+            this.ApplicationName = new String(source.ApplicationName);
+        }
+        if (source.ApplicationType != null) {
+            this.ApplicationType = new String(source.ApplicationType);
+        }
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
+        if (source.ClusterName != null) {
+            this.ClusterName = new String(source.ClusterName);
+        }
+        if (source.ClusterType != null) {
+            this.ClusterType = new String(source.ClusterType);
+        }
+        if (source.NamespaceId != null) {
+            this.NamespaceId = new String(source.NamespaceId);
+        }
+        if (source.NamespaceName != null) {
+            this.NamespaceName = new String(source.NamespaceName);
+        }
+        if (source.StartupParameters != null) {
+            this.StartupParameters = new String(source.StartupParameters);
+        }
+        if (source.GroupResourceType != null) {
+            this.GroupResourceType = new String(source.GroupResourceType);
+        }
+        if (source.AppMicroServiceType != null) {
+            this.AppMicroServiceType = new String(source.AppMicroServiceType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

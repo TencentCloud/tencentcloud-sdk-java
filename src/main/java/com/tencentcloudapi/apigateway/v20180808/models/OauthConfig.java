@@ -91,6 +91,26 @@ public class OauthConfig extends AbstractModel{
         this.LoginRedirectUrl = LoginRedirectUrl;
     }
 
+    public OauthConfig() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public OauthConfig(OauthConfig source) {
+        if (source.PublicKey != null) {
+            this.PublicKey = new String(source.PublicKey);
+        }
+        if (source.TokenLocation != null) {
+            this.TokenLocation = new String(source.TokenLocation);
+        }
+        if (source.LoginRedirectUrl != null) {
+            this.LoginRedirectUrl = new String(source.LoginRedirectUrl);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -160,6 +160,38 @@ public class DescribeZoneFlowHourlyByZoneIdResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeZoneFlowHourlyByZoneIdResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeZoneFlowHourlyByZoneIdResponse(DescribeZoneFlowHourlyByZoneIdResponse source) {
+        if (source.CompanyId != null) {
+            this.CompanyId = new String(source.CompanyId);
+        }
+        if (source.ShopId != null) {
+            this.ShopId = new Long(source.ShopId);
+        }
+        if (source.ZoneId != null) {
+            this.ZoneId = new Long(source.ZoneId);
+        }
+        if (source.ZoneName != null) {
+            this.ZoneName = new String(source.ZoneName);
+        }
+        if (source.Data != null) {
+            this.Data = new ZoneHourFlow[source.Data.length];
+            for (int i = 0; i < source.Data.length; i++) {
+                this.Data[i] = new ZoneHourFlow(source.Data[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

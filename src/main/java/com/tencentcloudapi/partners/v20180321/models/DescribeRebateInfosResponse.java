@@ -91,6 +91,29 @@ public class DescribeRebateInfosResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeRebateInfosResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeRebateInfosResponse(DescribeRebateInfosResponse source) {
+        if (source.RebateInfoSet != null) {
+            this.RebateInfoSet = new RebateInfoElem[source.RebateInfoSet.length];
+            for (int i = 0; i < source.RebateInfoSet.length; i++) {
+                this.RebateInfoSet[i] = new RebateInfoElem(source.RebateInfoSet[i]);
+            }
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

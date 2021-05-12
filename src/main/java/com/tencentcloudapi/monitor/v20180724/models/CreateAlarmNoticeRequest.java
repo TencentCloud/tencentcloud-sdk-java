@@ -160,6 +160,41 @@ public class CreateAlarmNoticeRequest extends AbstractModel{
         this.URLNotices = URLNotices;
     }
 
+    public CreateAlarmNoticeRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateAlarmNoticeRequest(CreateAlarmNoticeRequest source) {
+        if (source.Module != null) {
+            this.Module = new String(source.Module);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.NoticeType != null) {
+            this.NoticeType = new String(source.NoticeType);
+        }
+        if (source.NoticeLanguage != null) {
+            this.NoticeLanguage = new String(source.NoticeLanguage);
+        }
+        if (source.UserNotices != null) {
+            this.UserNotices = new UserNotice[source.UserNotices.length];
+            for (int i = 0; i < source.UserNotices.length; i++) {
+                this.UserNotices[i] = new UserNotice(source.UserNotices[i]);
+            }
+        }
+        if (source.URLNotices != null) {
+            this.URLNotices = new URLNotice[source.URLNotices.length];
+            for (int i = 0; i < source.URLNotices.length; i++) {
+                this.URLNotices[i] = new URLNotice(source.URLNotices[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

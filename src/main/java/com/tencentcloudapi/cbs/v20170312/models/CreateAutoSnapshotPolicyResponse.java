@@ -91,6 +91,26 @@ public class CreateAutoSnapshotPolicyResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public CreateAutoSnapshotPolicyResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateAutoSnapshotPolicyResponse(CreateAutoSnapshotPolicyResponse source) {
+        if (source.AutoSnapshotPolicyId != null) {
+            this.AutoSnapshotPolicyId = new String(source.AutoSnapshotPolicyId);
+        }
+        if (source.NextTriggerTime != null) {
+            this.NextTriggerTime = new String(source.NextTriggerTime);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -91,6 +91,29 @@ public class DescribeAccessPointsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeAccessPointsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeAccessPointsResponse(DescribeAccessPointsResponse source) {
+        if (source.AccessPointSet != null) {
+            this.AccessPointSet = new AccessPoint[source.AccessPointSet.length];
+            for (int i = 0; i < source.AccessPointSet.length; i++) {
+                this.AccessPointSet[i] = new AccessPoint(source.AccessPointSet[i]);
+            }
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

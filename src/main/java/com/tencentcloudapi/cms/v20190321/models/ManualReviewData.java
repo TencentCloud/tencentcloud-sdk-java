@@ -68,6 +68,23 @@ public class ManualReviewData extends AbstractModel{
         this.ContentId = ContentId;
     }
 
+    public ManualReviewData() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ManualReviewData(ManualReviewData source) {
+        if (source.BatchId != null) {
+            this.BatchId = new String(source.BatchId);
+        }
+        if (source.ContentId != null) {
+            this.ContentId = new String(source.ContentId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

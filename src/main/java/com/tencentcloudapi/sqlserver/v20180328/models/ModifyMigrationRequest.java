@@ -183,6 +183,41 @@ public class ModifyMigrationRequest extends AbstractModel{
         this.MigrateDBSet = MigrateDBSet;
     }
 
+    public ModifyMigrationRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyMigrationRequest(ModifyMigrationRequest source) {
+        if (source.MigrateId != null) {
+            this.MigrateId = new Long(source.MigrateId);
+        }
+        if (source.MigrateName != null) {
+            this.MigrateName = new String(source.MigrateName);
+        }
+        if (source.MigrateType != null) {
+            this.MigrateType = new Long(source.MigrateType);
+        }
+        if (source.SourceType != null) {
+            this.SourceType = new Long(source.SourceType);
+        }
+        if (source.Source != null) {
+            this.Source = new MigrateSource(source.Source);
+        }
+        if (source.Target != null) {
+            this.Target = new MigrateTarget(source.Target);
+        }
+        if (source.MigrateDBSet != null) {
+            this.MigrateDBSet = new MigrateDB[source.MigrateDBSet.length];
+            for (int i = 0; i < source.MigrateDBSet.length; i++) {
+                this.MigrateDBSet[i] = new MigrateDB(source.MigrateDBSet[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

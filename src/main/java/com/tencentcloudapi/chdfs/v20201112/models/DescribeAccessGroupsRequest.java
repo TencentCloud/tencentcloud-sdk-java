@@ -73,6 +73,23 @@ public class DescribeAccessGroupsRequest extends AbstractModel{
         this.OwnerUin = OwnerUin;
     }
 
+    public DescribeAccessGroupsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeAccessGroupsRequest(DescribeAccessGroupsRequest source) {
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.OwnerUin != null) {
+            this.OwnerUin = new Long(source.OwnerUin);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

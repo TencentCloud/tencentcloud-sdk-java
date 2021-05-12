@@ -137,6 +137,35 @@ public class L7Rule extends AbstractModel{
         this.LocationSet = LocationSet;
     }
 
+    public L7Rule() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public L7Rule(L7Rule source) {
+        if (source.Domain != null) {
+            this.Domain = new String(source.Domain);
+        }
+        if (source.DomainId != null) {
+            this.DomainId = new String(source.DomainId);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.AddTimestamp != null) {
+            this.AddTimestamp = new String(source.AddTimestamp);
+        }
+        if (source.LocationSet != null) {
+            this.LocationSet = new L7RulesLocation[source.LocationSet.length];
+            for (int i = 0; i < source.LocationSet.length; i++) {
+                this.LocationSet[i] = new L7RulesLocation(source.LocationSet[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

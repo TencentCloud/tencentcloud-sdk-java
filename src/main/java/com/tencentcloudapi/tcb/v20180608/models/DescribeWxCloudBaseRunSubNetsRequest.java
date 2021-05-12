@@ -68,6 +68,23 @@ public class DescribeWxCloudBaseRunSubNetsRequest extends AbstractModel{
         this.Limit = Limit;
     }
 
+    public DescribeWxCloudBaseRunSubNetsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeWxCloudBaseRunSubNetsRequest(DescribeWxCloudBaseRunSubNetsRequest source) {
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -45,6 +45,23 @@ public class DescribeSecurityRulesRequest extends AbstractModel{
         this.SecurityRuleIds = SecurityRuleIds;
     }
 
+    public DescribeSecurityRulesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeSecurityRulesRequest(DescribeSecurityRulesRequest source) {
+        if (source.SecurityRuleIds != null) {
+            this.SecurityRuleIds = new String[source.SecurityRuleIds.length];
+            for (int i = 0; i < source.SecurityRuleIds.length; i++) {
+                this.SecurityRuleIds[i] = new String(source.SecurityRuleIds[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

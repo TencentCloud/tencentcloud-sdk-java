@@ -45,6 +45,20 @@ public class StopLoggingRequest extends AbstractModel{
         this.AuditName = AuditName;
     }
 
+    public StopLoggingRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public StopLoggingRequest(StopLoggingRequest source) {
+        if (source.AuditName != null) {
+            this.AuditName = new String(source.AuditName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -390,6 +390,65 @@ public class CreateL4Listener extends AbstractModel{
         this.ToaFlag = ToaFlag;
     }
 
+    public CreateL4Listener() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateL4Listener(CreateL4Listener source) {
+        if (source.LoadBalancerPort != null) {
+            this.LoadBalancerPort = new Long(source.LoadBalancerPort);
+        }
+        if (source.Protocol != null) {
+            this.Protocol = new String(source.Protocol);
+        }
+        if (source.ListenerName != null) {
+            this.ListenerName = new String(source.ListenerName);
+        }
+        if (source.SessionExpire != null) {
+            this.SessionExpire = new Long(source.SessionExpire);
+        }
+        if (source.HealthSwitch != null) {
+            this.HealthSwitch = new Long(source.HealthSwitch);
+        }
+        if (source.TimeOut != null) {
+            this.TimeOut = new Long(source.TimeOut);
+        }
+        if (source.IntervalTime != null) {
+            this.IntervalTime = new Long(source.IntervalTime);
+        }
+        if (source.HealthNum != null) {
+            this.HealthNum = new Long(source.HealthNum);
+        }
+        if (source.UnhealthNum != null) {
+            this.UnhealthNum = new Long(source.UnhealthNum);
+        }
+        if (source.Bandwidth != null) {
+            this.Bandwidth = new Long(source.Bandwidth);
+        }
+        if (source.CustomHealthSwitch != null) {
+            this.CustomHealthSwitch = new Long(source.CustomHealthSwitch);
+        }
+        if (source.InputType != null) {
+            this.InputType = new String(source.InputType);
+        }
+        if (source.LineSeparatorType != null) {
+            this.LineSeparatorType = new Long(source.LineSeparatorType);
+        }
+        if (source.HealthRequest != null) {
+            this.HealthRequest = new String(source.HealthRequest);
+        }
+        if (source.HealthResponse != null) {
+            this.HealthResponse = new String(source.HealthResponse);
+        }
+        if (source.ToaFlag != null) {
+            this.ToaFlag = new Long(source.ToaFlag);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -78,6 +78,23 @@ public class RollbackTableName extends AbstractModel{
         this.NewTableName = NewTableName;
     }
 
+    public RollbackTableName() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RollbackTableName(RollbackTableName source) {
+        if (source.TableName != null) {
+            this.TableName = new String(source.TableName);
+        }
+        if (source.NewTableName != null) {
+            this.NewTableName = new String(source.NewTableName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

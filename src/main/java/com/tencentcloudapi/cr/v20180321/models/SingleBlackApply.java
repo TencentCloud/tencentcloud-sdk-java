@@ -137,6 +137,32 @@ public class SingleBlackApply extends AbstractModel{
         this.BlackValidDate = BlackValidDate;
     }
 
+    public SingleBlackApply() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SingleBlackApply(SingleBlackApply source) {
+        if (source.BlackType != null) {
+            this.BlackType = new String(source.BlackType);
+        }
+        if (source.OperationType != null) {
+            this.OperationType = new String(source.OperationType);
+        }
+        if (source.BlackValue != null) {
+            this.BlackValue = new String(source.BlackValue);
+        }
+        if (source.BlackDescription != null) {
+            this.BlackDescription = new String(source.BlackDescription);
+        }
+        if (source.BlackValidDate != null) {
+            this.BlackValidDate = new String(source.BlackValidDate);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

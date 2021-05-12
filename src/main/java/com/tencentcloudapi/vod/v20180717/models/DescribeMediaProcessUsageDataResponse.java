@@ -68,6 +68,26 @@ public class DescribeMediaProcessUsageDataResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeMediaProcessUsageDataResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeMediaProcessUsageDataResponse(DescribeMediaProcessUsageDataResponse source) {
+        if (source.MediaProcessDataSet != null) {
+            this.MediaProcessDataSet = new TaskStatData[source.MediaProcessDataSet.length];
+            for (int i = 0; i < source.MediaProcessDataSet.length; i++) {
+                this.MediaProcessDataSet[i] = new TaskStatData(source.MediaProcessDataSet[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

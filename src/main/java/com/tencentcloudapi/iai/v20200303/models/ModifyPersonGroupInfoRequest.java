@@ -91,6 +91,29 @@ public class ModifyPersonGroupInfoRequest extends AbstractModel{
         this.PersonExDescriptionInfos = PersonExDescriptionInfos;
     }
 
+    public ModifyPersonGroupInfoRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyPersonGroupInfoRequest(ModifyPersonGroupInfoRequest source) {
+        if (source.GroupId != null) {
+            this.GroupId = new String(source.GroupId);
+        }
+        if (source.PersonId != null) {
+            this.PersonId = new String(source.PersonId);
+        }
+        if (source.PersonExDescriptionInfos != null) {
+            this.PersonExDescriptionInfos = new PersonExDescriptionInfo[source.PersonExDescriptionInfos.length];
+            for (int i = 0; i < source.PersonExDescriptionInfos.length; i++) {
+                this.PersonExDescriptionInfos[i] = new PersonExDescriptionInfo(source.PersonExDescriptionInfos[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

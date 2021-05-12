@@ -45,6 +45,23 @@ public class DeleteImageRequest extends AbstractModel{
         this.ImageIDSet = ImageIDSet;
     }
 
+    public DeleteImageRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteImageRequest(DeleteImageRequest source) {
+        if (source.ImageIDSet != null) {
+            this.ImageIDSet = new String[source.ImageIDSet.length];
+            for (int i = 0; i < source.ImageIDSet.length; i++) {
+                this.ImageIDSet[i] = new String(source.ImageIDSet[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

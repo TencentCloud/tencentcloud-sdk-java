@@ -114,6 +114,29 @@ public class ServiceInfo extends AbstractModel{
         this.PlanId = PlanId;
     }
 
+    public ServiceInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ServiceInfo(ServiceInfo source) {
+        if (source.ServiceEdition != null) {
+            this.ServiceEdition = new String(source.ServiceEdition);
+        }
+        if (source.CallbackUrl != null) {
+            this.CallbackUrl = new String(source.CallbackUrl);
+        }
+        if (source.SubmitSource != null) {
+            this.SubmitSource = new String(source.SubmitSource);
+        }
+        if (source.PlanId != null) {
+            this.PlanId = new Long(source.PlanId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

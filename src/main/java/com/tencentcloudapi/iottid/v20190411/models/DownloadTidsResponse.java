@@ -73,6 +73,26 @@ public class DownloadTidsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DownloadTidsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DownloadTidsResponse(DownloadTidsResponse source) {
+        if (source.TidSet != null) {
+            this.TidSet = new TidKeysInfo[source.TidSet.length];
+            for (int i = 0; i < source.TidSet.length; i++) {
+                this.TidSet[i] = new TidKeysInfo(source.TidSet[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -68,6 +68,23 @@ public class ProvincePortrait extends AbstractModel{
         this.Percent = Percent;
     }
 
+    public ProvincePortrait() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ProvincePortrait(ProvincePortrait source) {
+        if (source.Province != null) {
+            this.Province = new String(source.Province);
+        }
+        if (source.Percent != null) {
+            this.Percent = new Float(source.Percent);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

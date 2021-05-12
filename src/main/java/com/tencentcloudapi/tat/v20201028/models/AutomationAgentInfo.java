@@ -147,6 +147,32 @@ public class AutomationAgentInfo extends AbstractModel{
         this.Environment = Environment;
     }
 
+    public AutomationAgentInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AutomationAgentInfo(AutomationAgentInfo source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.Version != null) {
+            this.Version = new String(source.Version);
+        }
+        if (source.LastHeartbeatTime != null) {
+            this.LastHeartbeatTime = new String(source.LastHeartbeatTime);
+        }
+        if (source.AgentStatus != null) {
+            this.AgentStatus = new String(source.AgentStatus);
+        }
+        if (source.Environment != null) {
+            this.Environment = new String(source.Environment);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

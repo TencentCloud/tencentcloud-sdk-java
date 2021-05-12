@@ -45,6 +45,20 @@ public class EnableUnitRouteRequest extends AbstractModel{
         this.Id = Id;
     }
 
+    public EnableUnitRouteRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public EnableUnitRouteRequest(EnableUnitRouteRequest source) {
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -68,6 +68,26 @@ public class ModifyModuleSecurityGroupsRequest extends AbstractModel{
         this.ModuleId = ModuleId;
     }
 
+    public ModifyModuleSecurityGroupsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyModuleSecurityGroupsRequest(ModifyModuleSecurityGroupsRequest source) {
+        if (source.SecurityGroupIdSet != null) {
+            this.SecurityGroupIdSet = new String[source.SecurityGroupIdSet.length];
+            for (int i = 0; i < source.SecurityGroupIdSet.length; i++) {
+                this.SecurityGroupIdSet[i] = new String(source.SecurityGroupIdSet[i]);
+            }
+        }
+        if (source.ModuleId != null) {
+            this.ModuleId = new String(source.ModuleId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

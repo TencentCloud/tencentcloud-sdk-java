@@ -285,6 +285,50 @@ public class NonLocalLoginPlace extends AbstractModel{
         this.Uuid = Uuid;
     }
 
+    public NonLocalLoginPlace() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public NonLocalLoginPlace(NonLocalLoginPlace source) {
+        if (source.Id != null) {
+            this.Id = new Long(source.Id);
+        }
+        if (source.MachineIp != null) {
+            this.MachineIp = new String(source.MachineIp);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.UserName != null) {
+            this.UserName = new String(source.UserName);
+        }
+        if (source.City != null) {
+            this.City = new Long(source.City);
+        }
+        if (source.Country != null) {
+            this.Country = new Long(source.Country);
+        }
+        if (source.Province != null) {
+            this.Province = new Long(source.Province);
+        }
+        if (source.SrcIp != null) {
+            this.SrcIp = new String(source.SrcIp);
+        }
+        if (source.MachineName != null) {
+            this.MachineName = new String(source.MachineName);
+        }
+        if (source.LoginTime != null) {
+            this.LoginTime = new String(source.LoginTime);
+        }
+        if (source.Uuid != null) {
+            this.Uuid = new String(source.Uuid);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

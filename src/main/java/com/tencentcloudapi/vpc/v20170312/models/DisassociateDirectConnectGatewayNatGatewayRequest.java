@@ -91,6 +91,26 @@ public class DisassociateDirectConnectGatewayNatGatewayRequest extends AbstractM
         this.DirectConnectGatewayId = DirectConnectGatewayId;
     }
 
+    public DisassociateDirectConnectGatewayNatGatewayRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DisassociateDirectConnectGatewayNatGatewayRequest(DisassociateDirectConnectGatewayNatGatewayRequest source) {
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.NatGatewayId != null) {
+            this.NatGatewayId = new String(source.NatGatewayId);
+        }
+        if (source.DirectConnectGatewayId != null) {
+            this.DirectConnectGatewayId = new String(source.DirectConnectGatewayId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

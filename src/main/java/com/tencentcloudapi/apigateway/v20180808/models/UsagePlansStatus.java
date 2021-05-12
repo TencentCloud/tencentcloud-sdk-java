@@ -78,6 +78,26 @@ public class UsagePlansStatus extends AbstractModel{
         this.UsagePlanStatusSet = UsagePlanStatusSet;
     }
 
+    public UsagePlansStatus() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UsagePlansStatus(UsagePlansStatus source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.UsagePlanStatusSet != null) {
+            this.UsagePlanStatusSet = new UsagePlanStatusInfo[source.UsagePlanStatusSet.length];
+            for (int i = 0; i < source.UsagePlanStatusSet.length; i++) {
+                this.UsagePlanStatusSet[i] = new UsagePlanStatusInfo(source.UsagePlanStatusSet[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

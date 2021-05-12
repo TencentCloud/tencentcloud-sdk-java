@@ -68,6 +68,26 @@ public class CreateClusterEndpointVipRequest extends AbstractModel{
         this.SecurityPolicies = SecurityPolicies;
     }
 
+    public CreateClusterEndpointVipRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateClusterEndpointVipRequest(CreateClusterEndpointVipRequest source) {
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
+        if (source.SecurityPolicies != null) {
+            this.SecurityPolicies = new String[source.SecurityPolicies.length];
+            for (int i = 0; i < source.SecurityPolicies.length; i++) {
+                this.SecurityPolicies[i] = new String(source.SecurityPolicies[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

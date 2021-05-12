@@ -45,6 +45,20 @@ public class CoverBySnapshotTaskOutput extends AbstractModel{
         this.CoverUrl = CoverUrl;
     }
 
+    public CoverBySnapshotTaskOutput() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CoverBySnapshotTaskOutput(CoverBySnapshotTaskOutput source) {
+        if (source.CoverUrl != null) {
+            this.CoverUrl = new String(source.CoverUrl);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

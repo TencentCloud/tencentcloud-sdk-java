@@ -259,6 +259,44 @@ public class CreateTranscodeTemplateRequest extends AbstractModel{
         this.SubAppId = SubAppId;
     }
 
+    public CreateTranscodeTemplateRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateTranscodeTemplateRequest(CreateTranscodeTemplateRequest source) {
+        if (source.Container != null) {
+            this.Container = new String(source.Container);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Comment != null) {
+            this.Comment = new String(source.Comment);
+        }
+        if (source.RemoveVideo != null) {
+            this.RemoveVideo = new Long(source.RemoveVideo);
+        }
+        if (source.RemoveAudio != null) {
+            this.RemoveAudio = new Long(source.RemoveAudio);
+        }
+        if (source.VideoTemplate != null) {
+            this.VideoTemplate = new VideoTemplateInfo(source.VideoTemplate);
+        }
+        if (source.AudioTemplate != null) {
+            this.AudioTemplate = new AudioTemplateInfo(source.AudioTemplate);
+        }
+        if (source.TEHDConfig != null) {
+            this.TEHDConfig = new TEHDConfig(source.TEHDConfig);
+        }
+        if (source.SubAppId != null) {
+            this.SubAppId = new Long(source.SubAppId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

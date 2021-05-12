@@ -68,6 +68,26 @@ public class Notification extends AbstractModel{
         this.EventConfigs = EventConfigs;
     }
 
+    public Notification() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Notification(Notification source) {
+        if (source.TopicName != null) {
+            this.TopicName = new String(source.TopicName);
+        }
+        if (source.EventConfigs != null) {
+            this.EventConfigs = new EventConfig[source.EventConfigs.length];
+            for (int i = 0; i < source.EventConfigs.length; i++) {
+                this.EventConfigs[i] = new EventConfig(source.EventConfigs[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

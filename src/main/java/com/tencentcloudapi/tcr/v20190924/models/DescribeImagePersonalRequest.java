@@ -114,6 +114,29 @@ public class DescribeImagePersonalRequest extends AbstractModel{
         this.Tag = Tag;
     }
 
+    public DescribeImagePersonalRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeImagePersonalRequest(DescribeImagePersonalRequest source) {
+        if (source.RepoName != null) {
+            this.RepoName = new String(source.RepoName);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.Tag != null) {
+            this.Tag = new String(source.Tag);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

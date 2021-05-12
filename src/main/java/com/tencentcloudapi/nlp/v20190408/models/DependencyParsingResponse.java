@@ -143,6 +143,26 @@ public class DependencyParsingResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DependencyParsingResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DependencyParsingResponse(DependencyParsingResponse source) {
+        if (source.DpTokens != null) {
+            this.DpTokens = new DpToken[source.DpTokens.length];
+            for (int i = 0; i < source.DpTokens.length; i++) {
+                this.DpTokens[i] = new DpToken(source.DpTokens[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

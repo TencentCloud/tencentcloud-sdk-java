@@ -229,6 +229,44 @@ public class InstanceClusterShard extends AbstractModel{
         this.Connected = Connected;
     }
 
+    public InstanceClusterShard() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public InstanceClusterShard(InstanceClusterShard source) {
+        if (source.ShardName != null) {
+            this.ShardName = new String(source.ShardName);
+        }
+        if (source.ShardId != null) {
+            this.ShardId = new String(source.ShardId);
+        }
+        if (source.Role != null) {
+            this.Role = new Long(source.Role);
+        }
+        if (source.Keys != null) {
+            this.Keys = new Long(source.Keys);
+        }
+        if (source.Slots != null) {
+            this.Slots = new String(source.Slots);
+        }
+        if (source.Storage != null) {
+            this.Storage = new Long(source.Storage);
+        }
+        if (source.StorageSlope != null) {
+            this.StorageSlope = new Float(source.StorageSlope);
+        }
+        if (source.Runid != null) {
+            this.Runid = new String(source.Runid);
+        }
+        if (source.Connected != null) {
+            this.Connected = new Long(source.Connected);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

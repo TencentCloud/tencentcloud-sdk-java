@@ -45,6 +45,20 @@ public class DescribeBatchRequest extends AbstractModel{
         this.BatchId = BatchId;
     }
 
+    public DescribeBatchRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeBatchRequest(DescribeBatchRequest source) {
+        if (source.BatchId != null) {
+            this.BatchId = new Long(source.BatchId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

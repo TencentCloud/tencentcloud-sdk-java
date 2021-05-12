@@ -160,6 +160,35 @@ public class DescribeCodeRepositoryResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeCodeRepositoryResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeCodeRepositoryResponse(DescribeCodeRepositoryResponse source) {
+        if (source.CreationTime != null) {
+            this.CreationTime = new String(source.CreationTime);
+        }
+        if (source.LastModifiedTime != null) {
+            this.LastModifiedTime = new String(source.LastModifiedTime);
+        }
+        if (source.CodeRepositoryName != null) {
+            this.CodeRepositoryName = new String(source.CodeRepositoryName);
+        }
+        if (source.GitConfig != null) {
+            this.GitConfig = new GitConfig(source.GitConfig);
+        }
+        if (source.NoSecret != null) {
+            this.NoSecret = new Boolean(source.NoSecret);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

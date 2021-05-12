@@ -482,6 +482,89 @@ public class CopyFleetRequest extends AbstractModel{
         this.InternetMaxBandwidthOut = InternetMaxBandwidthOut;
     }
 
+    public CopyFleetRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CopyFleetRequest(CopyFleetRequest source) {
+        if (source.FleetId != null) {
+            this.FleetId = new String(source.FleetId);
+        }
+        if (source.CopyNumber != null) {
+            this.CopyNumber = new Long(source.CopyNumber);
+        }
+        if (source.AssetId != null) {
+            this.AssetId = new String(source.AssetId);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.InboundPermissions != null) {
+            this.InboundPermissions = new InboundPermission[source.InboundPermissions.length];
+            for (int i = 0; i < source.InboundPermissions.length; i++) {
+                this.InboundPermissions[i] = new InboundPermission(source.InboundPermissions[i]);
+            }
+        }
+        if (source.InstanceType != null) {
+            this.InstanceType = new String(source.InstanceType);
+        }
+        if (source.FleetType != null) {
+            this.FleetType = new String(source.FleetType);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.NewGameServerSessionProtectionPolicy != null) {
+            this.NewGameServerSessionProtectionPolicy = new String(source.NewGameServerSessionProtectionPolicy);
+        }
+        if (source.ResourceCreationLimitPolicy != null) {
+            this.ResourceCreationLimitPolicy = new ResourceCreationLimitPolicy(source.ResourceCreationLimitPolicy);
+        }
+        if (source.RuntimeConfiguration != null) {
+            this.RuntimeConfiguration = new RuntimeConfiguration(source.RuntimeConfiguration);
+        }
+        if (source.GameServerSessionProtectionTimeLimit != null) {
+            this.GameServerSessionProtectionTimeLimit = new Long(source.GameServerSessionProtectionTimeLimit);
+        }
+        if (source.SelectedScalingType != null) {
+            this.SelectedScalingType = new String(source.SelectedScalingType);
+        }
+        if (source.SelectedCcnType != null) {
+            this.SelectedCcnType = new String(source.SelectedCcnType);
+        }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
+        if (source.SystemDiskInfo != null) {
+            this.SystemDiskInfo = new DiskInfo(source.SystemDiskInfo);
+        }
+        if (source.DataDiskInfo != null) {
+            this.DataDiskInfo = new DiskInfo[source.DataDiskInfo.length];
+            for (int i = 0; i < source.DataDiskInfo.length; i++) {
+                this.DataDiskInfo[i] = new DiskInfo(source.DataDiskInfo[i]);
+            }
+        }
+        if (source.SelectedTimerType != null) {
+            this.SelectedTimerType = new String(source.SelectedTimerType);
+        }
+        if (source.CcnInfos != null) {
+            this.CcnInfos = new CcnInfo[source.CcnInfos.length];
+            for (int i = 0; i < source.CcnInfos.length; i++) {
+                this.CcnInfos[i] = new CcnInfo(source.CcnInfos[i]);
+            }
+        }
+        if (source.InternetMaxBandwidthOut != null) {
+            this.InternetMaxBandwidthOut = new Long(source.InternetMaxBandwidthOut);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

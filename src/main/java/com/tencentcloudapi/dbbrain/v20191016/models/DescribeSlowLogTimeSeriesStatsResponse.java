@@ -114,6 +114,32 @@ public class DescribeSlowLogTimeSeriesStatsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeSlowLogTimeSeriesStatsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeSlowLogTimeSeriesStatsResponse(DescribeSlowLogTimeSeriesStatsResponse source) {
+        if (source.Period != null) {
+            this.Period = new Long(source.Period);
+        }
+        if (source.TimeSeries != null) {
+            this.TimeSeries = new TimeSlice[source.TimeSeries.length];
+            for (int i = 0; i < source.TimeSeries.length; i++) {
+                this.TimeSeries[i] = new TimeSlice(source.TimeSeries[i]);
+            }
+        }
+        if (source.SeriesData != null) {
+            this.SeriesData = new MonitorMetricSeriesData(source.SeriesData);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

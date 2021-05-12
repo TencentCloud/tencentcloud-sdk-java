@@ -68,6 +68,23 @@ public class DescribeCloudStorageThumbnailResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeCloudStorageThumbnailResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeCloudStorageThumbnailResponse(DescribeCloudStorageThumbnailResponse source) {
+        if (source.ThumbnailURL != null) {
+            this.ThumbnailURL = new String(source.ThumbnailURL);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

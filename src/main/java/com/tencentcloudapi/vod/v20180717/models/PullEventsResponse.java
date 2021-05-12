@@ -73,6 +73,26 @@ public class PullEventsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public PullEventsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PullEventsResponse(PullEventsResponse source) {
+        if (source.EventSet != null) {
+            this.EventSet = new EventContent[source.EventSet.length];
+            for (int i = 0; i < source.EventSet.length; i++) {
+                this.EventSet[i] = new EventContent(source.EventSet[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

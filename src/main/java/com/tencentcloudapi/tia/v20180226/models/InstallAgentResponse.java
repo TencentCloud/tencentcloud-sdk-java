@@ -68,6 +68,23 @@ public class InstallAgentResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public InstallAgentResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public InstallAgentResponse(InstallAgentResponse source) {
+        if (source.TiaVersion != null) {
+            this.TiaVersion = new String(source.TiaVersion);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

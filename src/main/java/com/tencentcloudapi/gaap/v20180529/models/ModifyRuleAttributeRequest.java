@@ -241,6 +241,41 @@ lc，最小连接数。
         this.ForwardHost = ForwardHost;
     }
 
+    public ModifyRuleAttributeRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyRuleAttributeRequest(ModifyRuleAttributeRequest source) {
+        if (source.ListenerId != null) {
+            this.ListenerId = new String(source.ListenerId);
+        }
+        if (source.RuleId != null) {
+            this.RuleId = new String(source.RuleId);
+        }
+        if (source.Scheduler != null) {
+            this.Scheduler = new String(source.Scheduler);
+        }
+        if (source.HealthCheck != null) {
+            this.HealthCheck = new Long(source.HealthCheck);
+        }
+        if (source.CheckParams != null) {
+            this.CheckParams = new RuleCheckParams(source.CheckParams);
+        }
+        if (source.Path != null) {
+            this.Path = new String(source.Path);
+        }
+        if (source.ForwardProtocol != null) {
+            this.ForwardProtocol = new String(source.ForwardProtocol);
+        }
+        if (source.ForwardHost != null) {
+            this.ForwardHost = new String(source.ForwardHost);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

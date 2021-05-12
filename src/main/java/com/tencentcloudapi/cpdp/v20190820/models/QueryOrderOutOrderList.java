@@ -573,6 +573,86 @@ bank：网银
         this.ChannelExternalOrderId = ChannelExternalOrderId;
     }
 
+    public QueryOrderOutOrderList() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public QueryOrderOutOrderList(QueryOrderOutOrderList source) {
+        if (source.MidasAppId != null) {
+            this.MidasAppId = new String(source.MidasAppId);
+        }
+        if (source.Amt != null) {
+            this.Amt = new Long(source.Amt);
+        }
+        if (source.UserId != null) {
+            this.UserId = new String(source.UserId);
+        }
+        if (source.CashAmt != null) {
+            this.CashAmt = new String(source.CashAmt);
+        }
+        if (source.Metadata != null) {
+            this.Metadata = new String(source.Metadata);
+        }
+        if (source.PayTime != null) {
+            this.PayTime = new String(source.PayTime);
+        }
+        if (source.CouponAmt != null) {
+            this.CouponAmt = new String(source.CouponAmt);
+        }
+        if (source.OrderTime != null) {
+            this.OrderTime = new String(source.OrderTime);
+        }
+        if (source.ProductId != null) {
+            this.ProductId = new String(source.ProductId);
+        }
+        if (source.SceneInfo != null) {
+            this.SceneInfo = new String(source.SceneInfo);
+        }
+        if (source.OrderState != null) {
+            this.OrderState = new String(source.OrderState);
+        }
+        if (source.Channel != null) {
+            this.Channel = new String(source.Channel);
+        }
+        if (source.RefundFlag != null) {
+            this.RefundFlag = new String(source.RefundFlag);
+        }
+        if (source.OutTradeNo != null) {
+            this.OutTradeNo = new String(source.OutTradeNo);
+        }
+        if (source.ProductName != null) {
+            this.ProductName = new String(source.ProductName);
+        }
+        if (source.CallBackTime != null) {
+            this.CallBackTime = new String(source.CallBackTime);
+        }
+        if (source.CurrencyType != null) {
+            this.CurrencyType = new String(source.CurrencyType);
+        }
+        if (source.AcctSubAppId != null) {
+            this.AcctSubAppId = new String(source.AcctSubAppId);
+        }
+        if (source.TransactionId != null) {
+            this.TransactionId = new String(source.TransactionId);
+        }
+        if (source.ChannelOrderId != null) {
+            this.ChannelOrderId = new String(source.ChannelOrderId);
+        }
+        if (source.SubOrderList != null) {
+            this.SubOrderList = new QueryOrderOutSubOrderList[source.SubOrderList.length];
+            for (int i = 0; i < source.SubOrderList.length; i++) {
+                this.SubOrderList[i] = new QueryOrderOutSubOrderList(source.SubOrderList[i]);
+            }
+        }
+        if (source.ChannelExternalOrderId != null) {
+            this.ChannelExternalOrderId = new String(source.ChannelExternalOrderId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

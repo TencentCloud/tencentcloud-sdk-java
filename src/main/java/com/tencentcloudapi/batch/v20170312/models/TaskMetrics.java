@@ -206,6 +206,41 @@ public class TaskMetrics extends AbstractModel{
         this.FailedCount = FailedCount;
     }
 
+    public TaskMetrics() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TaskMetrics(TaskMetrics source) {
+        if (source.SubmittedCount != null) {
+            this.SubmittedCount = new Long(source.SubmittedCount);
+        }
+        if (source.PendingCount != null) {
+            this.PendingCount = new Long(source.PendingCount);
+        }
+        if (source.RunnableCount != null) {
+            this.RunnableCount = new Long(source.RunnableCount);
+        }
+        if (source.StartingCount != null) {
+            this.StartingCount = new Long(source.StartingCount);
+        }
+        if (source.RunningCount != null) {
+            this.RunningCount = new Long(source.RunningCount);
+        }
+        if (source.SucceedCount != null) {
+            this.SucceedCount = new Long(source.SucceedCount);
+        }
+        if (source.FailedInterruptedCount != null) {
+            this.FailedInterruptedCount = new Long(source.FailedInterruptedCount);
+        }
+        if (source.FailedCount != null) {
+            this.FailedCount = new Long(source.FailedCount);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

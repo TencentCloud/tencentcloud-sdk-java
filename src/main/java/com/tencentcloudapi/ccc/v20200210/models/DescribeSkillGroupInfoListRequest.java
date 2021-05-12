@@ -137,6 +137,32 @@ public class DescribeSkillGroupInfoListRequest extends AbstractModel{
         this.ModifiedTime = ModifiedTime;
     }
 
+    public DescribeSkillGroupInfoListRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeSkillGroupInfoListRequest(DescribeSkillGroupInfoListRequest source) {
+        if (source.SdkAppId != null) {
+            this.SdkAppId = new Long(source.SdkAppId);
+        }
+        if (source.PageSize != null) {
+            this.PageSize = new Long(source.PageSize);
+        }
+        if (source.PageNumber != null) {
+            this.PageNumber = new Long(source.PageNumber);
+        }
+        if (source.SkillGroupId != null) {
+            this.SkillGroupId = new Long(source.SkillGroupId);
+        }
+        if (source.ModifiedTime != null) {
+            this.ModifiedTime = new Long(source.ModifiedTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

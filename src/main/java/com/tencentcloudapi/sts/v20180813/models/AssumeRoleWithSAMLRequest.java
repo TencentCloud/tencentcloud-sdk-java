@@ -137,6 +137,32 @@ public class AssumeRoleWithSAMLRequest extends AbstractModel{
         this.DurationSeconds = DurationSeconds;
     }
 
+    public AssumeRoleWithSAMLRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AssumeRoleWithSAMLRequest(AssumeRoleWithSAMLRequest source) {
+        if (source.SAMLAssertion != null) {
+            this.SAMLAssertion = new String(source.SAMLAssertion);
+        }
+        if (source.PrincipalArn != null) {
+            this.PrincipalArn = new String(source.PrincipalArn);
+        }
+        if (source.RoleArn != null) {
+            this.RoleArn = new String(source.RoleArn);
+        }
+        if (source.RoleSessionName != null) {
+            this.RoleSessionName = new String(source.RoleSessionName);
+        }
+        if (source.DurationSeconds != null) {
+            this.DurationSeconds = new Long(source.DurationSeconds);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

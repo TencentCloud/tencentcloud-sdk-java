@@ -68,6 +68,26 @@ public class BindGroupDevicesRequest extends AbstractModel{
         this.DeviceList = DeviceList;
     }
 
+    public BindGroupDevicesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public BindGroupDevicesRequest(BindGroupDevicesRequest source) {
+        if (source.GroupId != null) {
+            this.GroupId = new String(source.GroupId);
+        }
+        if (source.DeviceList != null) {
+            this.DeviceList = new String[source.DeviceList.length];
+            for (int i = 0; i < source.DeviceList.length; i++) {
+                this.DeviceList[i] = new String(source.DeviceList[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

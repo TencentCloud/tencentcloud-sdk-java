@@ -101,6 +101,32 @@ public class DescribeAvailableClusterVersionResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeAvailableClusterVersionResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeAvailableClusterVersionResponse(DescribeAvailableClusterVersionResponse source) {
+        if (source.Versions != null) {
+            this.Versions = new String[source.Versions.length];
+            for (int i = 0; i < source.Versions.length; i++) {
+                this.Versions[i] = new String(source.Versions[i]);
+            }
+        }
+        if (source.Clusters != null) {
+            this.Clusters = new ClusterVersion[source.Clusters.length];
+            for (int i = 0; i < source.Clusters.length; i++) {
+                this.Clusters[i] = new ClusterVersion(source.Clusters[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -162,6 +162,32 @@ public class ForbidLiveStreamRequest extends AbstractModel{
         this.Reason = Reason;
     }
 
+    public ForbidLiveStreamRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ForbidLiveStreamRequest(ForbidLiveStreamRequest source) {
+        if (source.AppName != null) {
+            this.AppName = new String(source.AppName);
+        }
+        if (source.DomainName != null) {
+            this.DomainName = new String(source.DomainName);
+        }
+        if (source.StreamName != null) {
+            this.StreamName = new String(source.StreamName);
+        }
+        if (source.ResumeTime != null) {
+            this.ResumeTime = new String(source.ResumeTime);
+        }
+        if (source.Reason != null) {
+            this.Reason = new String(source.Reason);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

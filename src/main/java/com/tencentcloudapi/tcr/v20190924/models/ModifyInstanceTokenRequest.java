@@ -137,6 +137,32 @@ public class ModifyInstanceTokenRequest extends AbstractModel{
         this.ModifyFlag = ModifyFlag;
     }
 
+    public ModifyInstanceTokenRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyInstanceTokenRequest(ModifyInstanceTokenRequest source) {
+        if (source.TokenId != null) {
+            this.TokenId = new String(source.TokenId);
+        }
+        if (source.RegistryId != null) {
+            this.RegistryId = new String(source.RegistryId);
+        }
+        if (source.Enable != null) {
+            this.Enable = new Boolean(source.Enable);
+        }
+        if (source.Desc != null) {
+            this.Desc = new String(source.Desc);
+        }
+        if (source.ModifyFlag != null) {
+            this.ModifyFlag = new Long(source.ModifyFlag);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

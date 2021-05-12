@@ -137,6 +137,32 @@ public class ModifyDeviceActionRequest extends AbstractModel{
         this.IsNum = IsNum;
     }
 
+    public ModifyDeviceActionRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyDeviceActionRequest(ModifyDeviceActionRequest source) {
+        if (source.Tid != null) {
+            this.Tid = new String(source.Tid);
+        }
+        if (source.Wakeup != null) {
+            this.Wakeup = new Boolean(source.Wakeup);
+        }
+        if (source.Branch != null) {
+            this.Branch = new String(source.Branch);
+        }
+        if (source.Value != null) {
+            this.Value = new String(source.Value);
+        }
+        if (source.IsNum != null) {
+            this.IsNum = new Boolean(source.IsNum);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -50,6 +50,23 @@ public class ResponseMessage extends AbstractModel{
         this.GroupList = GroupList;
     }
 
+    public ResponseMessage() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ResponseMessage(ResponseMessage source) {
+        if (source.GroupList != null) {
+            this.GroupList = new Group[source.GroupList.length];
+            for (int i = 0; i < source.GroupList.length; i++) {
+                this.GroupList[i] = new Group(source.GroupList[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

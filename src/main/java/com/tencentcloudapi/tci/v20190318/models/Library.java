@@ -137,6 +137,32 @@ public class Library extends AbstractModel{
         this.UpdateTime = UpdateTime;
     }
 
+    public Library() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Library(Library source) {
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.LibraryId != null) {
+            this.LibraryId = new String(source.LibraryId);
+        }
+        if (source.LibraryName != null) {
+            this.LibraryName = new String(source.LibraryName);
+        }
+        if (source.PersonCount != null) {
+            this.PersonCount = new Long(source.PersonCount);
+        }
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new String(source.UpdateTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

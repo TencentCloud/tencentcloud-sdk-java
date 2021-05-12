@@ -114,6 +114,29 @@ public class CreateIPStrategyRequest extends AbstractModel{
         this.StrategyData = StrategyData;
     }
 
+    public CreateIPStrategyRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateIPStrategyRequest(CreateIPStrategyRequest source) {
+        if (source.ServiceId != null) {
+            this.ServiceId = new String(source.ServiceId);
+        }
+        if (source.StrategyName != null) {
+            this.StrategyName = new String(source.StrategyName);
+        }
+        if (source.StrategyType != null) {
+            this.StrategyType = new String(source.StrategyType);
+        }
+        if (source.StrategyData != null) {
+            this.StrategyData = new String(source.StrategyData);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

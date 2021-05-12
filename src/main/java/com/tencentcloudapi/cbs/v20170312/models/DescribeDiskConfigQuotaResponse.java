@@ -68,6 +68,26 @@ public class DescribeDiskConfigQuotaResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeDiskConfigQuotaResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeDiskConfigQuotaResponse(DescribeDiskConfigQuotaResponse source) {
+        if (source.DiskConfigSet != null) {
+            this.DiskConfigSet = new DiskConfig[source.DiskConfigSet.length];
+            for (int i = 0; i < source.DiskConfigSet.length; i++) {
+                this.DiskConfigSet[i] = new DiskConfig(source.DiskConfigSet[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

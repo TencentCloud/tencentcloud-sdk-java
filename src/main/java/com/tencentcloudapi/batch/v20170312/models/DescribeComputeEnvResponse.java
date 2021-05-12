@@ -326,6 +326,62 @@ public class DescribeComputeEnvResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeComputeEnvResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeComputeEnvResponse(DescribeComputeEnvResponse source) {
+        if (source.EnvId != null) {
+            this.EnvId = new String(source.EnvId);
+        }
+        if (source.EnvName != null) {
+            this.EnvName = new String(source.EnvName);
+        }
+        if (source.Placement != null) {
+            this.Placement = new Placement(source.Placement);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.ComputeNodeSet != null) {
+            this.ComputeNodeSet = new ComputeNode[source.ComputeNodeSet.length];
+            for (int i = 0; i < source.ComputeNodeSet.length; i++) {
+                this.ComputeNodeSet[i] = new ComputeNode(source.ComputeNodeSet[i]);
+            }
+        }
+        if (source.ComputeNodeMetrics != null) {
+            this.ComputeNodeMetrics = new ComputeNodeMetrics(source.ComputeNodeMetrics);
+        }
+        if (source.DesiredComputeNodeCount != null) {
+            this.DesiredComputeNodeCount = new Long(source.DesiredComputeNodeCount);
+        }
+        if (source.EnvType != null) {
+            this.EnvType = new String(source.EnvType);
+        }
+        if (source.ResourceType != null) {
+            this.ResourceType = new String(source.ResourceType);
+        }
+        if (source.NextAction != null) {
+            this.NextAction = new String(source.NextAction);
+        }
+        if (source.AttachedComputeNodeCount != null) {
+            this.AttachedComputeNodeCount = new Long(source.AttachedComputeNodeCount);
+        }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

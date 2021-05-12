@@ -68,6 +68,23 @@ public class VpcQuota extends AbstractModel{
         this.Quota = Quota;
     }
 
+    public VpcQuota() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public VpcQuota(VpcQuota source) {
+        if (source.TypeId != null) {
+            this.TypeId = new Long(source.TypeId);
+        }
+        if (source.Quota != null) {
+            this.Quota = new Long(source.Quota);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

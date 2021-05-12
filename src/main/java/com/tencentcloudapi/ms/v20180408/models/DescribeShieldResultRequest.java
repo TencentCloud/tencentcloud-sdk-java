@@ -45,6 +45,20 @@ public class DescribeShieldResultRequest extends AbstractModel{
         this.ItemId = ItemId;
     }
 
+    public DescribeShieldResultRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeShieldResultRequest(DescribeShieldResultRequest source) {
+        if (source.ItemId != null) {
+            this.ItemId = new String(source.ItemId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

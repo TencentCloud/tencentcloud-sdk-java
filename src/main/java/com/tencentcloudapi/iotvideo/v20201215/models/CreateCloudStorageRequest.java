@@ -161,6 +161,26 @@ ye1w7d : 事件7天存储周套餐。
         this.PackageId = PackageId;
     }
 
+    public CreateCloudStorageRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateCloudStorageRequest(CreateCloudStorageRequest source) {
+        if (source.ProductId != null) {
+            this.ProductId = new String(source.ProductId);
+        }
+        if (source.DeviceName != null) {
+            this.DeviceName = new String(source.DeviceName);
+        }
+        if (source.PackageId != null) {
+            this.PackageId = new String(source.PackageId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

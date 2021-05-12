@@ -78,6 +78,23 @@ public class MediaRecognitionTaskResult extends AbstractModel{
         this.SubtitleResults = SubtitleResults;
     }
 
+    public MediaRecognitionTaskResult() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MediaRecognitionTaskResult(MediaRecognitionTaskResult source) {
+        if (source.FrameTagResults != null) {
+            this.FrameTagResults = new FrameTagResult(source.FrameTagResults);
+        }
+        if (source.SubtitleResults != null) {
+            this.SubtitleResults = new SubtitleResult(source.SubtitleResults);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

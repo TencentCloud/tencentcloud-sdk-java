@@ -137,6 +137,32 @@ public class ModifyProductRequest extends AbstractModel{
         this.ChipId = ChipId;
     }
 
+    public ModifyProductRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyProductRequest(ModifyProductRequest source) {
+        if (source.ProductId != null) {
+            this.ProductId = new String(source.ProductId);
+        }
+        if (source.ProductName != null) {
+            this.ProductName = new String(source.ProductName);
+        }
+        if (source.ProductDescription != null) {
+            this.ProductDescription = new String(source.ProductDescription);
+        }
+        if (source.ChipManufactureId != null) {
+            this.ChipManufactureId = new String(source.ChipManufactureId);
+        }
+        if (source.ChipId != null) {
+            this.ChipId = new String(source.ChipId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

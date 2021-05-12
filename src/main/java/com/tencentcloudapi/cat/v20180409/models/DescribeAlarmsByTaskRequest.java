@@ -229,6 +229,44 @@ public class DescribeAlarmsByTaskRequest extends AbstractModel{
         this.ObjName = ObjName;
     }
 
+    public DescribeAlarmsByTaskRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeAlarmsByTaskRequest(DescribeAlarmsByTaskRequest source) {
+        if (source.TaskId != null) {
+            this.TaskId = new Long(source.TaskId);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.BeginTime != null) {
+            this.BeginTime = new String(source.BeginTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+        if (source.SortBy != null) {
+            this.SortBy = new String(source.SortBy);
+        }
+        if (source.SortType != null) {
+            this.SortType = new String(source.SortType);
+        }
+        if (source.ObjName != null) {
+            this.ObjName = new String(source.ObjName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

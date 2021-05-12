@@ -114,6 +114,29 @@ public class TextTranslateResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public TextTranslateResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TextTranslateResponse(TextTranslateResponse source) {
+        if (source.TargetText != null) {
+            this.TargetText = new String(source.TargetText);
+        }
+        if (source.Source != null) {
+            this.Source = new String(source.Source);
+        }
+        if (source.Target != null) {
+            this.Target = new String(source.Target);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

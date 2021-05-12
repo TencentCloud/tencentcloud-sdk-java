@@ -114,6 +114,29 @@ public class DescribeDownloadInfoRequest extends AbstractModel{
         this.RepositoryType = RepositoryType;
     }
 
+    public DescribeDownloadInfoRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeDownloadInfoRequest(DescribeDownloadInfoRequest source) {
+        if (source.ApplicationId != null) {
+            this.ApplicationId = new String(source.ApplicationId);
+        }
+        if (source.PkgId != null) {
+            this.PkgId = new String(source.PkgId);
+        }
+        if (source.RepositoryId != null) {
+            this.RepositoryId = new String(source.RepositoryId);
+        }
+        if (source.RepositoryType != null) {
+            this.RepositoryType = new String(source.RepositoryType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

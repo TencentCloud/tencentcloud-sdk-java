@@ -229,6 +229,44 @@ public class DescribeVulInfoResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeVulInfoResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeVulInfoResponse(DescribeVulInfoResponse source) {
+        if (source.VulId != null) {
+            this.VulId = new Long(source.VulId);
+        }
+        if (source.VulName != null) {
+            this.VulName = new String(source.VulName);
+        }
+        if (source.VulLevel != null) {
+            this.VulLevel = new String(source.VulLevel);
+        }
+        if (source.VulType != null) {
+            this.VulType = new String(source.VulType);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.RepairPlan != null) {
+            this.RepairPlan = new String(source.RepairPlan);
+        }
+        if (source.CveId != null) {
+            this.CveId = new String(source.CveId);
+        }
+        if (source.Reference != null) {
+            this.Reference = new String(source.Reference);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

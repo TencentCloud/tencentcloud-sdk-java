@@ -239,6 +239,44 @@ UTC 格式时间，例如：2019-01-07T15:00:00Z。
         this.Resolution = Resolution;
     }
 
+    public StreamEventInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public StreamEventInfo(StreamEventInfo source) {
+        if (source.AppName != null) {
+            this.AppName = new String(source.AppName);
+        }
+        if (source.DomainName != null) {
+            this.DomainName = new String(source.DomainName);
+        }
+        if (source.StreamName != null) {
+            this.StreamName = new String(source.StreamName);
+        }
+        if (source.StreamStartTime != null) {
+            this.StreamStartTime = new String(source.StreamStartTime);
+        }
+        if (source.StreamEndTime != null) {
+            this.StreamEndTime = new String(source.StreamEndTime);
+        }
+        if (source.StopReason != null) {
+            this.StopReason = new String(source.StopReason);
+        }
+        if (source.Duration != null) {
+            this.Duration = new Long(source.Duration);
+        }
+        if (source.ClientIp != null) {
+            this.ClientIp = new String(source.ClientIp);
+        }
+        if (source.Resolution != null) {
+            this.Resolution = new String(source.Resolution);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

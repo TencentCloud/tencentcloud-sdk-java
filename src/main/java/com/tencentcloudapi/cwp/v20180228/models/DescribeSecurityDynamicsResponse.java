@@ -91,6 +91,29 @@ public class DescribeSecurityDynamicsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeSecurityDynamicsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeSecurityDynamicsResponse(DescribeSecurityDynamicsResponse source) {
+        if (source.SecurityDynamics != null) {
+            this.SecurityDynamics = new SecurityDynamic[source.SecurityDynamics.length];
+            for (int i = 0; i < source.SecurityDynamics.length; i++) {
+                this.SecurityDynamics[i] = new SecurityDynamic(source.SecurityDynamics[i]);
+            }
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

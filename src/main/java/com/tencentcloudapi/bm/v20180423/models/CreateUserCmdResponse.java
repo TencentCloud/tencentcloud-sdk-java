@@ -68,6 +68,23 @@ public class CreateUserCmdResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public CreateUserCmdResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateUserCmdResponse(CreateUserCmdResponse source) {
+        if (source.CmdId != null) {
+            this.CmdId = new String(source.CmdId);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

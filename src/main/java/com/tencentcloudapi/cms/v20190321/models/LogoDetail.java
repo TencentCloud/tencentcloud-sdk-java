@@ -45,6 +45,23 @@ public class LogoDetail extends AbstractModel{
         this.AppLogoDetail = AppLogoDetail;
     }
 
+    public LogoDetail() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public LogoDetail(LogoDetail source) {
+        if (source.AppLogoDetail != null) {
+            this.AppLogoDetail = new Logo[source.AppLogoDetail.length];
+            for (int i = 0; i < source.AppLogoDetail.length; i++) {
+                this.AppLogoDetail[i] = new Logo(source.AppLogoDetail[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

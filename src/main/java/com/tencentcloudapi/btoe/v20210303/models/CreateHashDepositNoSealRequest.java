@@ -114,6 +114,29 @@ public class CreateHashDepositNoSealRequest extends AbstractModel{
         this.EvidenceInfo = EvidenceInfo;
     }
 
+    public CreateHashDepositNoSealRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateHashDepositNoSealRequest(CreateHashDepositNoSealRequest source) {
+        if (source.EvidenceHash != null) {
+            this.EvidenceHash = new String(source.EvidenceHash);
+        }
+        if (source.BusinessId != null) {
+            this.BusinessId = new String(source.BusinessId);
+        }
+        if (source.HashType != null) {
+            this.HashType = new Long(source.HashType);
+        }
+        if (source.EvidenceInfo != null) {
+            this.EvidenceInfo = new String(source.EvidenceInfo);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

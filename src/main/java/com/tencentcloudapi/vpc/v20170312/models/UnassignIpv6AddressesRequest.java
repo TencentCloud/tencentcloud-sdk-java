@@ -68,6 +68,26 @@ public class UnassignIpv6AddressesRequest extends AbstractModel{
         this.Ipv6Addresses = Ipv6Addresses;
     }
 
+    public UnassignIpv6AddressesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UnassignIpv6AddressesRequest(UnassignIpv6AddressesRequest source) {
+        if (source.NetworkInterfaceId != null) {
+            this.NetworkInterfaceId = new String(source.NetworkInterfaceId);
+        }
+        if (source.Ipv6Addresses != null) {
+            this.Ipv6Addresses = new Ipv6Address[source.Ipv6Addresses.length];
+            for (int i = 0; i < source.Ipv6Addresses.length; i++) {
+                this.Ipv6Addresses[i] = new Ipv6Address(source.Ipv6Addresses[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

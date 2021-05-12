@@ -183,6 +183,38 @@ public class WeeklyReportNonlocalLoginPlace extends AbstractModel{
         this.LoginTime = LoginTime;
     }
 
+    public WeeklyReportNonlocalLoginPlace() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public WeeklyReportNonlocalLoginPlace(WeeklyReportNonlocalLoginPlace source) {
+        if (source.MachineIp != null) {
+            this.MachineIp = new String(source.MachineIp);
+        }
+        if (source.Username != null) {
+            this.Username = new String(source.Username);
+        }
+        if (source.SrcIp != null) {
+            this.SrcIp = new String(source.SrcIp);
+        }
+        if (source.Country != null) {
+            this.Country = new Long(source.Country);
+        }
+        if (source.Province != null) {
+            this.Province = new Long(source.Province);
+        }
+        if (source.City != null) {
+            this.City = new Long(source.City);
+        }
+        if (source.LoginTime != null) {
+            this.LoginTime = new String(source.LoginTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

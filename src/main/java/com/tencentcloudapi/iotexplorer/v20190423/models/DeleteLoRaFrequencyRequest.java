@@ -45,6 +45,20 @@ public class DeleteLoRaFrequencyRequest extends AbstractModel{
         this.FreqId = FreqId;
     }
 
+    public DeleteLoRaFrequencyRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteLoRaFrequencyRequest(DeleteLoRaFrequencyRequest source) {
+        if (source.FreqId != null) {
+            this.FreqId = new String(source.FreqId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

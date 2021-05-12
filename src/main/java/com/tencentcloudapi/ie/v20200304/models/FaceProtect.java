@@ -45,6 +45,20 @@ public class FaceProtect extends AbstractModel{
         this.FaceUsmRatio = FaceUsmRatio;
     }
 
+    public FaceProtect() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public FaceProtect(FaceProtect source) {
+        if (source.FaceUsmRatio != null) {
+            this.FaceUsmRatio = new Float(source.FaceUsmRatio);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

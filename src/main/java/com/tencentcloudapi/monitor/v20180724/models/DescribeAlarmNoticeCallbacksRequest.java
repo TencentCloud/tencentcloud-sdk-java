@@ -45,6 +45,20 @@ public class DescribeAlarmNoticeCallbacksRequest extends AbstractModel{
         this.Module = Module;
     }
 
+    public DescribeAlarmNoticeCallbacksRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeAlarmNoticeCallbacksRequest(DescribeAlarmNoticeCallbacksRequest source) {
+        if (source.Module != null) {
+            this.Module = new String(source.Module);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -45,6 +45,20 @@ public class DeleteNetworkInterfaceRequest extends AbstractModel{
         this.NetworkInterfaceId = NetworkInterfaceId;
     }
 
+    public DeleteNetworkInterfaceRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteNetworkInterfaceRequest(DeleteNetworkInterfaceRequest source) {
+        if (source.NetworkInterfaceId != null) {
+            this.NetworkInterfaceId = new String(source.NetworkInterfaceId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

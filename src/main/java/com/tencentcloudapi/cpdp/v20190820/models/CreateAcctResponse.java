@@ -91,6 +91,26 @@ public class CreateAcctResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public CreateAcctResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateAcctResponse(CreateAcctResponse source) {
+        if (source.SubAppId != null) {
+            this.SubAppId = new String(source.SubAppId);
+        }
+        if (source.SubAcctNo != null) {
+            this.SubAcctNo = new String(source.SubAcctNo);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

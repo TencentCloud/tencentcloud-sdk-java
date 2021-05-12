@@ -114,6 +114,29 @@ public class ServerConfiguration extends AbstractModel{
         this.Realm = Realm;
     }
 
+    public ServerConfiguration() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ServerConfiguration(ServerConfiguration source) {
+        if (source.Host != null) {
+            this.Host = new String(source.Host);
+        }
+        if (source.Port != null) {
+            this.Port = new Long(source.Port);
+        }
+        if (source.Serial != null) {
+            this.Serial = new String(source.Serial);
+        }
+        if (source.Realm != null) {
+            this.Realm = new String(source.Realm);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

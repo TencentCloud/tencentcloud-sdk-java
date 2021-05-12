@@ -45,6 +45,20 @@ public class DeleteMachineRequest extends AbstractModel{
         this.Uuid = Uuid;
     }
 
+    public DeleteMachineRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteMachineRequest(DeleteMachineRequest source) {
+        if (source.Uuid != null) {
+            this.Uuid = new String(source.Uuid);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

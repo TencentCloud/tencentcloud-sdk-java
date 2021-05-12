@@ -114,6 +114,29 @@ public class DescribeDBDiagHistoryRequest extends AbstractModel{
         this.Product = Product;
     }
 
+    public DescribeDBDiagHistoryRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeDBDiagHistoryRequest(DescribeDBDiagHistoryRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+        if (source.Product != null) {
+            this.Product = new String(source.Product);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

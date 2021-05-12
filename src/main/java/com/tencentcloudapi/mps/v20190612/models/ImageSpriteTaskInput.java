@@ -147,6 +147,32 @@ public class ImageSpriteTaskInput extends AbstractModel{
         this.ObjectNumberFormat = ObjectNumberFormat;
     }
 
+    public ImageSpriteTaskInput() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ImageSpriteTaskInput(ImageSpriteTaskInput source) {
+        if (source.Definition != null) {
+            this.Definition = new Long(source.Definition);
+        }
+        if (source.OutputStorage != null) {
+            this.OutputStorage = new TaskOutputStorage(source.OutputStorage);
+        }
+        if (source.OutputObjectPath != null) {
+            this.OutputObjectPath = new String(source.OutputObjectPath);
+        }
+        if (source.WebVttObjectName != null) {
+            this.WebVttObjectName = new String(source.WebVttObjectName);
+        }
+        if (source.ObjectNumberFormat != null) {
+            this.ObjectNumberFormat = new NumberFormat(source.ObjectNumberFormat);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

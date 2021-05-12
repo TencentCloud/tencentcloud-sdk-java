@@ -137,6 +137,32 @@ public class InstanceProxySlowlogDetail extends AbstractModel{
         this.ExecuteTime = ExecuteTime;
     }
 
+    public InstanceProxySlowlogDetail() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public InstanceProxySlowlogDetail(InstanceProxySlowlogDetail source) {
+        if (source.Duration != null) {
+            this.Duration = new Long(source.Duration);
+        }
+        if (source.Client != null) {
+            this.Client = new String(source.Client);
+        }
+        if (source.Command != null) {
+            this.Command = new String(source.Command);
+        }
+        if (source.CommandLine != null) {
+            this.CommandLine = new String(source.CommandLine);
+        }
+        if (source.ExecuteTime != null) {
+            this.ExecuteTime = new String(source.ExecuteTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

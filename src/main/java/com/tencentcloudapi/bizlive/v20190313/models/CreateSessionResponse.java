@@ -68,6 +68,23 @@ public class CreateSessionResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public CreateSessionResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateSessionResponse(CreateSessionResponse source) {
+        if (source.ServerSession != null) {
+            this.ServerSession = new String(source.ServerSession);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

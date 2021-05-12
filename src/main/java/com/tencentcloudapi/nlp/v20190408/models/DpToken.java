@@ -134,6 +134,29 @@ public class DpToken extends AbstractModel{
         this.Id = Id;
     }
 
+    public DpToken() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DpToken(DpToken source) {
+        if (source.Relation != null) {
+            this.Relation = new String(source.Relation);
+        }
+        if (source.HeadId != null) {
+            this.HeadId = new Long(source.HeadId);
+        }
+        if (source.Word != null) {
+            this.Word = new String(source.Word);
+        }
+        if (source.Id != null) {
+            this.Id = new Long(source.Id);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -298,6 +298,53 @@ public class ApplyCertificateRequest extends AbstractModel{
         this.OldCertificateId = OldCertificateId;
     }
 
+    public ApplyCertificateRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ApplyCertificateRequest(ApplyCertificateRequest source) {
+        if (source.DvAuthMethod != null) {
+            this.DvAuthMethod = new String(source.DvAuthMethod);
+        }
+        if (source.DomainName != null) {
+            this.DomainName = new String(source.DomainName);
+        }
+        if (source.ProjectId != null) {
+            this.ProjectId = new Long(source.ProjectId);
+        }
+        if (source.PackageType != null) {
+            this.PackageType = new String(source.PackageType);
+        }
+        if (source.ContactEmail != null) {
+            this.ContactEmail = new String(source.ContactEmail);
+        }
+        if (source.ContactPhone != null) {
+            this.ContactPhone = new String(source.ContactPhone);
+        }
+        if (source.ValidityPeriod != null) {
+            this.ValidityPeriod = new String(source.ValidityPeriod);
+        }
+        if (source.CsrEncryptAlgo != null) {
+            this.CsrEncryptAlgo = new String(source.CsrEncryptAlgo);
+        }
+        if (source.CsrKeyParameter != null) {
+            this.CsrKeyParameter = new String(source.CsrKeyParameter);
+        }
+        if (source.CsrKeyPassword != null) {
+            this.CsrKeyPassword = new String(source.CsrKeyPassword);
+        }
+        if (source.Alias != null) {
+            this.Alias = new String(source.Alias);
+        }
+        if (source.OldCertificateId != null) {
+            this.OldCertificateId = new String(source.OldCertificateId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

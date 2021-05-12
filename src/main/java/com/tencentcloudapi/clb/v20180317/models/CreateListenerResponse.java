@@ -68,6 +68,26 @@ public class CreateListenerResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public CreateListenerResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateListenerResponse(CreateListenerResponse source) {
+        if (source.ListenerIds != null) {
+            this.ListenerIds = new String[source.ListenerIds.length];
+            for (int i = 0; i < source.ListenerIds.length; i++) {
+                this.ListenerIds[i] = new String(source.ListenerIds[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

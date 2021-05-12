@@ -91,6 +91,26 @@ public class ChatBotRequest extends AbstractModel{
         this.Flag = Flag;
     }
 
+    public ChatBotRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ChatBotRequest(ChatBotRequest source) {
+        if (source.Query != null) {
+            this.Query = new String(source.Query);
+        }
+        if (source.OpenId != null) {
+            this.OpenId = new String(source.OpenId);
+        }
+        if (source.Flag != null) {
+            this.Flag = new Long(source.Flag);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

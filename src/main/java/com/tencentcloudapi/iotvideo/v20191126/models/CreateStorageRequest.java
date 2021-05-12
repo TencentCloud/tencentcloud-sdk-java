@@ -91,6 +91,26 @@ public class CreateStorageRequest extends AbstractModel{
         this.UserTag = UserTag;
     }
 
+    public CreateStorageRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateStorageRequest(CreateStorageRequest source) {
+        if (source.PkgId != null) {
+            this.PkgId = new String(source.PkgId);
+        }
+        if (source.Tid != null) {
+            this.Tid = new String(source.Tid);
+        }
+        if (source.UserTag != null) {
+            this.UserTag = new String(source.UserTag);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

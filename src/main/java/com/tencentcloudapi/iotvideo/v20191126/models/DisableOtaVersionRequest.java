@@ -91,6 +91,26 @@ public class DisableOtaVersionRequest extends AbstractModel{
         this.Operator = Operator;
     }
 
+    public DisableOtaVersionRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DisableOtaVersionRequest(DisableOtaVersionRequest source) {
+        if (source.ProductId != null) {
+            this.ProductId = new String(source.ProductId);
+        }
+        if (source.OtaVersion != null) {
+            this.OtaVersion = new String(source.OtaVersion);
+        }
+        if (source.Operator != null) {
+            this.Operator = new String(source.Operator);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

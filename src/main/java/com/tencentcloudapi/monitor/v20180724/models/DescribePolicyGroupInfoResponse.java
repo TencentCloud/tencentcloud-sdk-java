@@ -466,6 +466,86 @@ public class DescribePolicyGroupInfoResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribePolicyGroupInfoResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribePolicyGroupInfoResponse(DescribePolicyGroupInfoResponse source) {
+        if (source.GroupName != null) {
+            this.GroupName = new String(source.GroupName);
+        }
+        if (source.ProjectId != null) {
+            this.ProjectId = new Long(source.ProjectId);
+        }
+        if (source.IsDefault != null) {
+            this.IsDefault = new Long(source.IsDefault);
+        }
+        if (source.ViewName != null) {
+            this.ViewName = new String(source.ViewName);
+        }
+        if (source.Remark != null) {
+            this.Remark = new String(source.Remark);
+        }
+        if (source.ShowName != null) {
+            this.ShowName = new String(source.ShowName);
+        }
+        if (source.LastEditUin != null) {
+            this.LastEditUin = new String(source.LastEditUin);
+        }
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new String(source.UpdateTime);
+        }
+        if (source.Region != null) {
+            this.Region = new String[source.Region.length];
+            for (int i = 0; i < source.Region.length; i++) {
+                this.Region[i] = new String(source.Region[i]);
+            }
+        }
+        if (source.DimensionGroup != null) {
+            this.DimensionGroup = new String[source.DimensionGroup.length];
+            for (int i = 0; i < source.DimensionGroup.length; i++) {
+                this.DimensionGroup[i] = new String(source.DimensionGroup[i]);
+            }
+        }
+        if (source.ConditionsConfig != null) {
+            this.ConditionsConfig = new DescribePolicyGroupInfoCondition[source.ConditionsConfig.length];
+            for (int i = 0; i < source.ConditionsConfig.length; i++) {
+                this.ConditionsConfig[i] = new DescribePolicyGroupInfoCondition(source.ConditionsConfig[i]);
+            }
+        }
+        if (source.EventConfig != null) {
+            this.EventConfig = new DescribePolicyGroupInfoEventCondition[source.EventConfig.length];
+            for (int i = 0; i < source.EventConfig.length; i++) {
+                this.EventConfig[i] = new DescribePolicyGroupInfoEventCondition(source.EventConfig[i]);
+            }
+        }
+        if (source.ReceiverInfos != null) {
+            this.ReceiverInfos = new DescribePolicyGroupInfoReceiverInfo[source.ReceiverInfos.length];
+            for (int i = 0; i < source.ReceiverInfos.length; i++) {
+                this.ReceiverInfos[i] = new DescribePolicyGroupInfoReceiverInfo(source.ReceiverInfos[i]);
+            }
+        }
+        if (source.Callback != null) {
+            this.Callback = new DescribePolicyGroupInfoCallback(source.Callback);
+        }
+        if (source.ConditionsTemp != null) {
+            this.ConditionsTemp = new DescribePolicyGroupInfoConditionTpl(source.ConditionsTemp);
+        }
+        if (source.CanSetDefault != null) {
+            this.CanSetDefault = new Boolean(source.CanSetDefault);
+        }
+        if (source.IsUnionRule != null) {
+            this.IsUnionRule = new Long(source.IsUnionRule);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

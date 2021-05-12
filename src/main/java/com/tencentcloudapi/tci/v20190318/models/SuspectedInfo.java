@@ -68,6 +68,26 @@ public class SuspectedInfo extends AbstractModel{
         this.PersonId = PersonId;
     }
 
+    public SuspectedInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SuspectedInfo(SuspectedInfo source) {
+        if (source.FaceSet != null) {
+            this.FaceSet = new FrameInfo[source.FaceSet.length];
+            for (int i = 0; i < source.FaceSet.length; i++) {
+                this.FaceSet[i] = new FrameInfo(source.FaceSet[i]);
+            }
+        }
+        if (source.PersonId != null) {
+            this.PersonId = new String(source.PersonId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

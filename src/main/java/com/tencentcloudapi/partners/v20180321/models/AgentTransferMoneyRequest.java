@@ -68,6 +68,23 @@ public class AgentTransferMoneyRequest extends AbstractModel{
         this.Amount = Amount;
     }
 
+    public AgentTransferMoneyRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AgentTransferMoneyRequest(AgentTransferMoneyRequest source) {
+        if (source.ClientUin != null) {
+            this.ClientUin = new String(source.ClientUin);
+        }
+        if (source.Amount != null) {
+            this.Amount = new Long(source.Amount);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

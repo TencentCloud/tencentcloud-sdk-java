@@ -160,6 +160,35 @@ public class AsyncEvent extends AbstractModel{
         this.EndTime = EndTime;
     }
 
+    public AsyncEvent() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AsyncEvent(AsyncEvent source) {
+        if (source.InvokeRequestId != null) {
+            this.InvokeRequestId = new String(source.InvokeRequestId);
+        }
+        if (source.InvokeType != null) {
+            this.InvokeType = new String(source.InvokeType);
+        }
+        if (source.Qualifier != null) {
+            this.Qualifier = new String(source.Qualifier);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

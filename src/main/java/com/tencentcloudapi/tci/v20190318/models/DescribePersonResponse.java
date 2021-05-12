@@ -298,6 +298,56 @@ public class DescribePersonResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribePersonResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribePersonResponse(DescribePersonResponse source) {
+        if (source.FaceSet != null) {
+            this.FaceSet = new Face[source.FaceSet.length];
+            for (int i = 0; i < source.FaceSet.length; i++) {
+                this.FaceSet[i] = new Face(source.FaceSet[i]);
+            }
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.JobNumber != null) {
+            this.JobNumber = new String(source.JobNumber);
+        }
+        if (source.LibraryId != null) {
+            this.LibraryId = new String(source.LibraryId);
+        }
+        if (source.Mail != null) {
+            this.Mail = new String(source.Mail);
+        }
+        if (source.Male != null) {
+            this.Male = new Long(source.Male);
+        }
+        if (source.PersonId != null) {
+            this.PersonId = new String(source.PersonId);
+        }
+        if (source.PersonName != null) {
+            this.PersonName = new String(source.PersonName);
+        }
+        if (source.PhoneNumber != null) {
+            this.PhoneNumber = new String(source.PhoneNumber);
+        }
+        if (source.StudentNumber != null) {
+            this.StudentNumber = new String(source.StudentNumber);
+        }
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new String(source.UpdateTime);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -91,6 +91,26 @@ public class DescribeCfwEipsRequest extends AbstractModel{
         this.CfwInstance = CfwInstance;
     }
 
+    public DescribeCfwEipsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeCfwEipsRequest(DescribeCfwEipsRequest source) {
+        if (source.Mode != null) {
+            this.Mode = new Long(source.Mode);
+        }
+        if (source.NatGatewayId != null) {
+            this.NatGatewayId = new String(source.NatGatewayId);
+        }
+        if (source.CfwInstance != null) {
+            this.CfwInstance = new String(source.CfwInstance);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

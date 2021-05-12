@@ -183,6 +183,38 @@ public class CreateDeviceRequest extends AbstractModel{
         this.NwkSKey = NwkSKey;
     }
 
+    public CreateDeviceRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateDeviceRequest(CreateDeviceRequest source) {
+        if (source.ProductId != null) {
+            this.ProductId = new String(source.ProductId);
+        }
+        if (source.DeviceName != null) {
+            this.DeviceName = new String(source.DeviceName);
+        }
+        if (source.DevAddr != null) {
+            this.DevAddr = new String(source.DevAddr);
+        }
+        if (source.AppKey != null) {
+            this.AppKey = new String(source.AppKey);
+        }
+        if (source.DevEUI != null) {
+            this.DevEUI = new String(source.DevEUI);
+        }
+        if (source.AppSKey != null) {
+            this.AppSKey = new String(source.AppSKey);
+        }
+        if (source.NwkSKey != null) {
+            this.NwkSKey = new String(source.NwkSKey);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

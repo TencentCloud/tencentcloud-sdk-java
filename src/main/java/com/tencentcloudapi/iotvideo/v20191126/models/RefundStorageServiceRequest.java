@@ -68,6 +68,23 @@ public class RefundStorageServiceRequest extends AbstractModel{
         this.OrderId = OrderId;
     }
 
+    public RefundStorageServiceRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RefundStorageServiceRequest(RefundStorageServiceRequest source) {
+        if (source.ServiceId != null) {
+            this.ServiceId = new String(source.ServiceId);
+        }
+        if (source.OrderId != null) {
+            this.OrderId = new String(source.OrderId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

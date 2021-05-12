@@ -137,6 +137,32 @@ public class HLFunction extends AbstractModel{
         this.EnableSmileWonderfulTime = EnableSmileWonderfulTime;
     }
 
+    public HLFunction() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public HLFunction(HLFunction source) {
+        if (source.EnableFaceDetect != null) {
+            this.EnableFaceDetect = new Boolean(source.EnableFaceDetect);
+        }
+        if (source.EnableFaceExpression != null) {
+            this.EnableFaceExpression = new Boolean(source.EnableFaceExpression);
+        }
+        if (source.EnableFaceIdent != null) {
+            this.EnableFaceIdent = new Boolean(source.EnableFaceIdent);
+        }
+        if (source.EnableKeywordWonderfulTime != null) {
+            this.EnableKeywordWonderfulTime = new Boolean(source.EnableKeywordWonderfulTime);
+        }
+        if (source.EnableSmileWonderfulTime != null) {
+            this.EnableSmileWonderfulTime = new Boolean(source.EnableSmileWonderfulTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

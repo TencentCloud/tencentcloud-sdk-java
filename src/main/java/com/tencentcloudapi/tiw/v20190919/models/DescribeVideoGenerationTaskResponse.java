@@ -244,6 +244,47 @@ public class DescribeVideoGenerationTaskResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeVideoGenerationTaskResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeVideoGenerationTaskResponse(DescribeVideoGenerationTaskResponse source) {
+        if (source.GroupId != null) {
+            this.GroupId = new String(source.GroupId);
+        }
+        if (source.RoomId != null) {
+            this.RoomId = new Long(source.RoomId);
+        }
+        if (source.TaskId != null) {
+            this.TaskId = new String(source.TaskId);
+        }
+        if (source.Progress != null) {
+            this.Progress = new Long(source.Progress);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.TotalTime != null) {
+            this.TotalTime = new Long(source.TotalTime);
+        }
+        if (source.VideoInfos != null) {
+            this.VideoInfos = new VideoInfo(source.VideoInfos);
+        }
+        if (source.VideoInfoList != null) {
+            this.VideoInfoList = new VideoInfo[source.VideoInfoList.length];
+            for (int i = 0; i < source.VideoInfoList.length; i++) {
+                this.VideoInfoList[i] = new VideoInfo(source.VideoInfoList[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

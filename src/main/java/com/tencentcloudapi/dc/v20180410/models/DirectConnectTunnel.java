@@ -817,6 +817,113 @@ REJECTED:拒绝
         this.CloudAttachId = CloudAttachId;
     }
 
+    public DirectConnectTunnel() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DirectConnectTunnel(DirectConnectTunnel source) {
+        if (source.DirectConnectTunnelId != null) {
+            this.DirectConnectTunnelId = new String(source.DirectConnectTunnelId);
+        }
+        if (source.DirectConnectId != null) {
+            this.DirectConnectId = new String(source.DirectConnectId);
+        }
+        if (source.State != null) {
+            this.State = new String(source.State);
+        }
+        if (source.DirectConnectOwnerAccount != null) {
+            this.DirectConnectOwnerAccount = new String(source.DirectConnectOwnerAccount);
+        }
+        if (source.OwnerAccount != null) {
+            this.OwnerAccount = new String(source.OwnerAccount);
+        }
+        if (source.NetworkType != null) {
+            this.NetworkType = new String(source.NetworkType);
+        }
+        if (source.NetworkRegion != null) {
+            this.NetworkRegion = new String(source.NetworkRegion);
+        }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.DirectConnectGatewayId != null) {
+            this.DirectConnectGatewayId = new String(source.DirectConnectGatewayId);
+        }
+        if (source.RouteType != null) {
+            this.RouteType = new String(source.RouteType);
+        }
+        if (source.BgpPeer != null) {
+            this.BgpPeer = new BgpPeer(source.BgpPeer);
+        }
+        if (source.RouteFilterPrefixes != null) {
+            this.RouteFilterPrefixes = new RouteFilterPrefix[source.RouteFilterPrefixes.length];
+            for (int i = 0; i < source.RouteFilterPrefixes.length; i++) {
+                this.RouteFilterPrefixes[i] = new RouteFilterPrefix(source.RouteFilterPrefixes[i]);
+            }
+        }
+        if (source.Vlan != null) {
+            this.Vlan = new Long(source.Vlan);
+        }
+        if (source.TencentAddress != null) {
+            this.TencentAddress = new String(source.TencentAddress);
+        }
+        if (source.CustomerAddress != null) {
+            this.CustomerAddress = new String(source.CustomerAddress);
+        }
+        if (source.DirectConnectTunnelName != null) {
+            this.DirectConnectTunnelName = new String(source.DirectConnectTunnelName);
+        }
+        if (source.CreatedTime != null) {
+            this.CreatedTime = new String(source.CreatedTime);
+        }
+        if (source.Bandwidth != null) {
+            this.Bandwidth = new Long(source.Bandwidth);
+        }
+        if (source.TagSet != null) {
+            this.TagSet = new Tag[source.TagSet.length];
+            for (int i = 0; i < source.TagSet.length; i++) {
+                this.TagSet[i] = new Tag(source.TagSet[i]);
+            }
+        }
+        if (source.NetDetectId != null) {
+            this.NetDetectId = new String(source.NetDetectId);
+        }
+        if (source.EnableBGPCommunity != null) {
+            this.EnableBGPCommunity = new Boolean(source.EnableBGPCommunity);
+        }
+        if (source.NatType != null) {
+            this.NatType = new Long(source.NatType);
+        }
+        if (source.VpcRegion != null) {
+            this.VpcRegion = new String(source.VpcRegion);
+        }
+        if (source.BfdEnable != null) {
+            this.BfdEnable = new Long(source.BfdEnable);
+        }
+        if (source.AccessPointType != null) {
+            this.AccessPointType = new String(source.AccessPointType);
+        }
+        if (source.DirectConnectGatewayName != null) {
+            this.DirectConnectGatewayName = new String(source.DirectConnectGatewayName);
+        }
+        if (source.VpcName != null) {
+            this.VpcName = new String(source.VpcName);
+        }
+        if (source.TencentBackupAddress != null) {
+            this.TencentBackupAddress = new String(source.TencentBackupAddress);
+        }
+        if (source.SignLaw != null) {
+            this.SignLaw = new Boolean(source.SignLaw);
+        }
+        if (source.CloudAttachId != null) {
+            this.CloudAttachId = new String(source.CloudAttachId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -88,6 +88,23 @@ public class ActivtyRelatedInstance extends AbstractModel{
         this.InstanceStatus = InstanceStatus;
     }
 
+    public ActivtyRelatedInstance() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ActivtyRelatedInstance(ActivtyRelatedInstance source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.InstanceStatus != null) {
+            this.InstanceStatus = new String(source.InstanceStatus);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

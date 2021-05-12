@@ -142,6 +142,32 @@ public class CcnRegionBandwidthLimit extends AbstractModel{
         this.DstIsBm = DstIsBm;
     }
 
+    public CcnRegionBandwidthLimit() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CcnRegionBandwidthLimit(CcnRegionBandwidthLimit source) {
+        if (source.Region != null) {
+            this.Region = new String(source.Region);
+        }
+        if (source.BandwidthLimit != null) {
+            this.BandwidthLimit = new Long(source.BandwidthLimit);
+        }
+        if (source.IsBm != null) {
+            this.IsBm = new Boolean(source.IsBm);
+        }
+        if (source.DstRegion != null) {
+            this.DstRegion = new String(source.DstRegion);
+        }
+        if (source.DstIsBm != null) {
+            this.DstIsBm = new Boolean(source.DstIsBm);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

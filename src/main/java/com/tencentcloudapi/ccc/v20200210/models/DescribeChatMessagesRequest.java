@@ -160,6 +160,35 @@ public class DescribeChatMessagesRequest extends AbstractModel{
         this.Order = Order;
     }
 
+    public DescribeChatMessagesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeChatMessagesRequest(DescribeChatMessagesRequest source) {
+        if (source.CdrId != null) {
+            this.CdrId = new String(source.CdrId);
+        }
+        if (source.InstanceId != null) {
+            this.InstanceId = new Long(source.InstanceId);
+        }
+        if (source.SdkAppId != null) {
+            this.SdkAppId = new Long(source.SdkAppId);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Order != null) {
+            this.Order = new Long(source.Order);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

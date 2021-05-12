@@ -137,6 +137,32 @@ public class DescribeBackupSummariesRequest extends AbstractModel{
         this.OrderDirection = OrderDirection;
     }
 
+    public DescribeBackupSummariesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeBackupSummariesRequest(DescribeBackupSummariesRequest source) {
+        if (source.Product != null) {
+            this.Product = new String(source.Product);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.OrderBy != null) {
+            this.OrderBy = new String(source.OrderBy);
+        }
+        if (source.OrderDirection != null) {
+            this.OrderDirection = new String(source.OrderDirection);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -108,6 +108,23 @@ public class FrameTagRec extends AbstractModel{
         this.GameExtendType = GameExtendType;
     }
 
+    public FrameTagRec() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public FrameTagRec(FrameTagRec source) {
+        if (source.TagType != null) {
+            this.TagType = new String(source.TagType);
+        }
+        if (source.GameExtendType != null) {
+            this.GameExtendType = new String(source.GameExtendType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

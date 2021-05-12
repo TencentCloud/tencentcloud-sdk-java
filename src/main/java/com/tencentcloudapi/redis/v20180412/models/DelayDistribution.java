@@ -121,6 +121,26 @@ public class DelayDistribution extends AbstractModel{
         this.Updatetime = Updatetime;
     }
 
+    public DelayDistribution() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DelayDistribution(DelayDistribution source) {
+        if (source.Ladder != null) {
+            this.Ladder = new Long(source.Ladder);
+        }
+        if (source.Size != null) {
+            this.Size = new Long(source.Size);
+        }
+        if (source.Updatetime != null) {
+            this.Updatetime = new Long(source.Updatetime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

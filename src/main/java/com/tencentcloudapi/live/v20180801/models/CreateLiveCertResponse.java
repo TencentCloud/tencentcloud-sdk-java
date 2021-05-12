@@ -68,6 +68,23 @@ public class CreateLiveCertResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public CreateLiveCertResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateLiveCertResponse(CreateLiveCertResponse source) {
+        if (source.CertId != null) {
+            this.CertId = new Long(source.CertId);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

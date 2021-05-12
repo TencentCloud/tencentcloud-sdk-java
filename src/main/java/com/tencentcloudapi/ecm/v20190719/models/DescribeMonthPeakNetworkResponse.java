@@ -73,6 +73,26 @@ public class DescribeMonthPeakNetworkResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeMonthPeakNetworkResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeMonthPeakNetworkResponse(DescribeMonthPeakNetworkResponse source) {
+        if (source.MonthNetWorkData != null) {
+            this.MonthNetWorkData = new MonthNetwork[source.MonthNetWorkData.length];
+            for (int i = 0; i < source.MonthNetWorkData.length; i++) {
+                this.MonthNetWorkData[i] = new MonthNetwork(source.MonthNetWorkData[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

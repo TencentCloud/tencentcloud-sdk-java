@@ -252,6 +252,50 @@ public class MigrateSource extends AbstractModel{
         this.UrlPassword = UrlPassword;
     }
 
+    public MigrateSource() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MigrateSource(MigrateSource source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.CvmId != null) {
+            this.CvmId = new String(source.CvmId);
+        }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.SubnetId != null) {
+            this.SubnetId = new String(source.SubnetId);
+        }
+        if (source.UserName != null) {
+            this.UserName = new String(source.UserName);
+        }
+        if (source.Password != null) {
+            this.Password = new String(source.Password);
+        }
+        if (source.Ip != null) {
+            this.Ip = new String(source.Ip);
+        }
+        if (source.Port != null) {
+            this.Port = new Long(source.Port);
+        }
+        if (source.Url != null) {
+            this.Url = new String[source.Url.length];
+            for (int i = 0; i < source.Url.length; i++) {
+                this.Url[i] = new String(source.Url[i]);
+            }
+        }
+        if (source.UrlPassword != null) {
+            this.UrlPassword = new String(source.UrlPassword);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

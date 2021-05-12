@@ -68,6 +68,23 @@ public class AttachGroupPolicyRequest extends AbstractModel{
         this.AttachGroupId = AttachGroupId;
     }
 
+    public AttachGroupPolicyRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AttachGroupPolicyRequest(AttachGroupPolicyRequest source) {
+        if (source.PolicyId != null) {
+            this.PolicyId = new Long(source.PolicyId);
+        }
+        if (source.AttachGroupId != null) {
+            this.AttachGroupId = new Long(source.AttachGroupId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

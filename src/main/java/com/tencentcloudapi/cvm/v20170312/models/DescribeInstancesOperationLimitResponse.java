@@ -68,6 +68,26 @@ public class DescribeInstancesOperationLimitResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeInstancesOperationLimitResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeInstancesOperationLimitResponse(DescribeInstancesOperationLimitResponse source) {
+        if (source.InstanceOperationLimitSet != null) {
+            this.InstanceOperationLimitSet = new OperationCountLimit[source.InstanceOperationLimitSet.length];
+            for (int i = 0; i < source.InstanceOperationLimitSet.length; i++) {
+                this.InstanceOperationLimitSet[i] = new OperationCountLimit(source.InstanceOperationLimitSet[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

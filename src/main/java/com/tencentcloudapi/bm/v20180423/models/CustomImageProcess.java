@@ -91,6 +91,26 @@ public class CustomImageProcess extends AbstractModel{
         this.StepType = StepType;
     }
 
+    public CustomImageProcess() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CustomImageProcess(CustomImageProcess source) {
+        if (source.StepName != null) {
+            this.StepName = new String(source.StepName);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.StepType != null) {
+            this.StepType = new Long(source.StepType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

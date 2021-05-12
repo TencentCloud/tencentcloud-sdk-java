@@ -68,6 +68,23 @@ public class ModifyAgentTaxPaymentInfoResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public ModifyAgentTaxPaymentInfoResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyAgentTaxPaymentInfoResponse(ModifyAgentTaxPaymentInfoResponse source) {
+        if (source.AgentTaxPaymentBatch != null) {
+            this.AgentTaxPaymentBatch = new AgentTaxPaymentBatch(source.AgentTaxPaymentBatch);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

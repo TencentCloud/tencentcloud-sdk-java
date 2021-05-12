@@ -78,6 +78,26 @@ public class DescribeSmsTemplateListRequest extends AbstractModel{
         this.International = International;
     }
 
+    public DescribeSmsTemplateListRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeSmsTemplateListRequest(DescribeSmsTemplateListRequest source) {
+        if (source.TemplateIdSet != null) {
+            this.TemplateIdSet = new Long[source.TemplateIdSet.length];
+            for (int i = 0; i < source.TemplateIdSet.length; i++) {
+                this.TemplateIdSet[i] = new Long(source.TemplateIdSet[i]);
+            }
+        }
+        if (source.International != null) {
+            this.International = new Long(source.International);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

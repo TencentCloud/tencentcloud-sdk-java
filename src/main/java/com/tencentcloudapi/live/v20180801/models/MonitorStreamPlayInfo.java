@@ -183,6 +183,38 @@ public class MonitorStreamPlayInfo extends AbstractModel{
         this.Request = Request;
     }
 
+    public MonitorStreamPlayInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MonitorStreamPlayInfo(MonitorStreamPlayInfo source) {
+        if (source.PlayDomain != null) {
+            this.PlayDomain = new String(source.PlayDomain);
+        }
+        if (source.StreamName != null) {
+            this.StreamName = new String(source.StreamName);
+        }
+        if (source.Rate != null) {
+            this.Rate = new Long(source.Rate);
+        }
+        if (source.Protocol != null) {
+            this.Protocol = new String(source.Protocol);
+        }
+        if (source.Bandwidth != null) {
+            this.Bandwidth = new Float(source.Bandwidth);
+        }
+        if (source.Online != null) {
+            this.Online = new Long(source.Online);
+        }
+        if (source.Request != null) {
+            this.Request = new Long(source.Request);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

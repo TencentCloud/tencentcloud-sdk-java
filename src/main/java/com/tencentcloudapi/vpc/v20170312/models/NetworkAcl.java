@@ -183,6 +183,47 @@ public class NetworkAcl extends AbstractModel{
         this.EgressEntries = EgressEntries;
     }
 
+    public NetworkAcl() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public NetworkAcl(NetworkAcl source) {
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.NetworkAclId != null) {
+            this.NetworkAclId = new String(source.NetworkAclId);
+        }
+        if (source.NetworkAclName != null) {
+            this.NetworkAclName = new String(source.NetworkAclName);
+        }
+        if (source.CreatedTime != null) {
+            this.CreatedTime = new String(source.CreatedTime);
+        }
+        if (source.SubnetSet != null) {
+            this.SubnetSet = new Subnet[source.SubnetSet.length];
+            for (int i = 0; i < source.SubnetSet.length; i++) {
+                this.SubnetSet[i] = new Subnet(source.SubnetSet[i]);
+            }
+        }
+        if (source.IngressEntries != null) {
+            this.IngressEntries = new NetworkAclEntry[source.IngressEntries.length];
+            for (int i = 0; i < source.IngressEntries.length; i++) {
+                this.IngressEntries[i] = new NetworkAclEntry(source.IngressEntries[i]);
+            }
+        }
+        if (source.EgressEntries != null) {
+            this.EgressEntries = new NetworkAclEntry[source.EgressEntries.length];
+            for (int i = 0; i < source.EgressEntries.length; i++) {
+                this.EgressEntries[i] = new NetworkAclEntry(source.EgressEntries[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

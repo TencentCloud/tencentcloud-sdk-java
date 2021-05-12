@@ -45,6 +45,23 @@ public class FrameTagResult extends AbstractModel{
         this.FrameTagItems = FrameTagItems;
     }
 
+    public FrameTagResult() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public FrameTagResult(FrameTagResult source) {
+        if (source.FrameTagItems != null) {
+            this.FrameTagItems = new FrameTagItem[source.FrameTagItems.length];
+            for (int i = 0; i < source.FrameTagItems.length; i++) {
+                this.FrameTagItems[i] = new FrameTagItem(source.FrameTagItems[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

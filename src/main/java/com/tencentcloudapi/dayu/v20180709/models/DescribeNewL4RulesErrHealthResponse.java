@@ -91,6 +91,29 @@ public class DescribeNewL4RulesErrHealthResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeNewL4RulesErrHealthResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeNewL4RulesErrHealthResponse(DescribeNewL4RulesErrHealthResponse source) {
+        if (source.Total != null) {
+            this.Total = new Long(source.Total);
+        }
+        if (source.ErrHealths != null) {
+            this.ErrHealths = new KeyValue[source.ErrHealths.length];
+            for (int i = 0; i < source.ErrHealths.length; i++) {
+                this.ErrHealths[i] = new KeyValue(source.ErrHealths[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

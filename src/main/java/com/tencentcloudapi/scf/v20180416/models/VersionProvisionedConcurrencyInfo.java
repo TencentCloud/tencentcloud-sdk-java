@@ -137,6 +137,32 @@ public class VersionProvisionedConcurrencyInfo extends AbstractModel{
         this.Qualifier = Qualifier;
     }
 
+    public VersionProvisionedConcurrencyInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public VersionProvisionedConcurrencyInfo(VersionProvisionedConcurrencyInfo source) {
+        if (source.AllocatedProvisionedConcurrencyNum != null) {
+            this.AllocatedProvisionedConcurrencyNum = new Long(source.AllocatedProvisionedConcurrencyNum);
+        }
+        if (source.AvailableProvisionedConcurrencyNum != null) {
+            this.AvailableProvisionedConcurrencyNum = new Long(source.AvailableProvisionedConcurrencyNum);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.StatusReason != null) {
+            this.StatusReason = new String(source.StatusReason);
+        }
+        if (source.Qualifier != null) {
+            this.Qualifier = new String(source.Qualifier);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

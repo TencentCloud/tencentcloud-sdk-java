@@ -45,6 +45,20 @@ public class DescribeRestoreTasksRequest extends AbstractModel{
         this.FileSystemId = FileSystemId;
     }
 
+    public DescribeRestoreTasksRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeRestoreTasksRequest(DescribeRestoreTasksRequest source) {
+        if (source.FileSystemId != null) {
+            this.FileSystemId = new String(source.FileSystemId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

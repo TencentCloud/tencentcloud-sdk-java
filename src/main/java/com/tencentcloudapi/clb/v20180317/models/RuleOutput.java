@@ -555,6 +555,80 @@ public class RuleOutput extends AbstractModel{
         this.QuicStatus = QuicStatus;
     }
 
+    public RuleOutput() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RuleOutput(RuleOutput source) {
+        if (source.LocationId != null) {
+            this.LocationId = new String(source.LocationId);
+        }
+        if (source.Domain != null) {
+            this.Domain = new String(source.Domain);
+        }
+        if (source.Url != null) {
+            this.Url = new String(source.Url);
+        }
+        if (source.SessionExpireTime != null) {
+            this.SessionExpireTime = new Long(source.SessionExpireTime);
+        }
+        if (source.HealthCheck != null) {
+            this.HealthCheck = new HealthCheck(source.HealthCheck);
+        }
+        if (source.Certificate != null) {
+            this.Certificate = new CertificateOutput(source.Certificate);
+        }
+        if (source.Scheduler != null) {
+            this.Scheduler = new String(source.Scheduler);
+        }
+        if (source.ListenerId != null) {
+            this.ListenerId = new String(source.ListenerId);
+        }
+        if (source.RewriteTarget != null) {
+            this.RewriteTarget = new RewriteTarget(source.RewriteTarget);
+        }
+        if (source.HttpGzip != null) {
+            this.HttpGzip = new Boolean(source.HttpGzip);
+        }
+        if (source.BeAutoCreated != null) {
+            this.BeAutoCreated = new Boolean(source.BeAutoCreated);
+        }
+        if (source.DefaultServer != null) {
+            this.DefaultServer = new Boolean(source.DefaultServer);
+        }
+        if (source.Http2 != null) {
+            this.Http2 = new Boolean(source.Http2);
+        }
+        if (source.ForwardType != null) {
+            this.ForwardType = new String(source.ForwardType);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.TargetType != null) {
+            this.TargetType = new String(source.TargetType);
+        }
+        if (source.TargetGroup != null) {
+            this.TargetGroup = new BasicTargetGroupInfo(source.TargetGroup);
+        }
+        if (source.WafDomainId != null) {
+            this.WafDomainId = new String(source.WafDomainId);
+        }
+        if (source.TrpcCallee != null) {
+            this.TrpcCallee = new String(source.TrpcCallee);
+        }
+        if (source.TrpcFunc != null) {
+            this.TrpcFunc = new String(source.TrpcFunc);
+        }
+        if (source.QuicStatus != null) {
+            this.QuicStatus = new String(source.QuicStatus);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

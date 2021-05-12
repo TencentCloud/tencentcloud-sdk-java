@@ -68,6 +68,23 @@ public class DescribeUploadInfoResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeUploadInfoResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeUploadInfoResponse(DescribeUploadInfoResponse source) {
+        if (source.Result != null) {
+            this.Result = new CosUploadInfo(source.Result);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

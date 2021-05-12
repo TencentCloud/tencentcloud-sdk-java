@@ -206,6 +206,47 @@ public class DescribeMicroservicesRequest extends AbstractModel{
         this.MicroserviceIdList = MicroserviceIdList;
     }
 
+    public DescribeMicroservicesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeMicroservicesRequest(DescribeMicroservicesRequest source) {
+        if (source.NamespaceId != null) {
+            this.NamespaceId = new String(source.NamespaceId);
+        }
+        if (source.SearchWord != null) {
+            this.SearchWord = new String(source.SearchWord);
+        }
+        if (source.OrderBy != null) {
+            this.OrderBy = new String(source.OrderBy);
+        }
+        if (source.OrderType != null) {
+            this.OrderType = new Long(source.OrderType);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.Status != null) {
+            this.Status = new String[source.Status.length];
+            for (int i = 0; i < source.Status.length; i++) {
+                this.Status[i] = new String(source.Status[i]);
+            }
+        }
+        if (source.MicroserviceIdList != null) {
+            this.MicroserviceIdList = new String[source.MicroserviceIdList.length];
+            for (int i = 0; i < source.MicroserviceIdList.length; i++) {
+                this.MicroserviceIdList[i] = new String(source.MicroserviceIdList[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

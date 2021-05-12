@@ -91,6 +91,26 @@ public class SubmitJobRequest extends AbstractModel{
         this.ClientToken = ClientToken;
     }
 
+    public SubmitJobRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SubmitJobRequest(SubmitJobRequest source) {
+        if (source.Placement != null) {
+            this.Placement = new Placement(source.Placement);
+        }
+        if (source.Job != null) {
+            this.Job = new Job(source.Job);
+        }
+        if (source.ClientToken != null) {
+            this.ClientToken = new String(source.ClientToken);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

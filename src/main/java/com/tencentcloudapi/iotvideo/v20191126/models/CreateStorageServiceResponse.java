@@ -295,6 +295,53 @@ public class CreateStorageServiceResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public CreateStorageServiceResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateStorageServiceResponse(CreateStorageServiceResponse source) {
+        if (source.IsRenew != null) {
+            this.IsRenew = new Boolean(source.IsRenew);
+        }
+        if (source.ServiceId != null) {
+            this.ServiceId = new String(source.ServiceId);
+        }
+        if (source.StorageRegion != null) {
+            this.StorageRegion = new String(source.StorageRegion);
+        }
+        if (source.Tid != null) {
+            this.Tid = new String(source.Tid);
+        }
+        if (source.ChnNum != null) {
+            this.ChnNum = new Long(source.ChnNum);
+        }
+        if (source.AccessId != null) {
+            this.AccessId = new String(source.AccessId);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new Long(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new Long(source.EndTime);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.Data != null) {
+            this.Data = new StorageOrder[source.Data.length];
+            for (int i = 0; i < source.Data.length; i++) {
+                this.Data[i] = new StorageOrder(source.Data[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

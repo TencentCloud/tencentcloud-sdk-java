@@ -68,6 +68,23 @@ public class CreateBatchResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public CreateBatchResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateBatchResponse(CreateBatchResponse source) {
+        if (source.BatchId != null) {
+            this.BatchId = new Long(source.BatchId);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

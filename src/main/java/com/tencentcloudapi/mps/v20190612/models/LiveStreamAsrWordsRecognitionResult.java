@@ -114,6 +114,29 @@ public class LiveStreamAsrWordsRecognitionResult extends AbstractModel{
         this.Confidence = Confidence;
     }
 
+    public LiveStreamAsrWordsRecognitionResult() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public LiveStreamAsrWordsRecognitionResult(LiveStreamAsrWordsRecognitionResult source) {
+        if (source.Word != null) {
+            this.Word = new String(source.Word);
+        }
+        if (source.StartPtsTime != null) {
+            this.StartPtsTime = new Float(source.StartPtsTime);
+        }
+        if (source.EndPtsTime != null) {
+            this.EndPtsTime = new Float(source.EndPtsTime);
+        }
+        if (source.Confidence != null) {
+            this.Confidence = new Float(source.Confidence);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

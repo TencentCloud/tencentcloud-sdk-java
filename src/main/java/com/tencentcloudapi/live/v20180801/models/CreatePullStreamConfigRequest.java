@@ -275,6 +275,35 @@ public class CreatePullStreamConfigRequest extends AbstractModel{
         this.EndTime = EndTime;
     }
 
+    public CreatePullStreamConfigRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreatePullStreamConfigRequest(CreatePullStreamConfigRequest source) {
+        if (source.FromUrl != null) {
+            this.FromUrl = new String(source.FromUrl);
+        }
+        if (source.ToUrl != null) {
+            this.ToUrl = new String(source.ToUrl);
+        }
+        if (source.AreaId != null) {
+            this.AreaId = new Long(source.AreaId);
+        }
+        if (source.IspId != null) {
+            this.IspId = new Long(source.IspId);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

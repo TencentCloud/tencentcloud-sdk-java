@@ -160,6 +160,35 @@ public class ActivateSubscribeRequest extends AbstractModel{
         this.Vport = Vport;
     }
 
+    public ActivateSubscribeRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ActivateSubscribeRequest(ActivateSubscribeRequest source) {
+        if (source.SubscribeId != null) {
+            this.SubscribeId = new String(source.SubscribeId);
+        }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.SubscribeObjectType != null) {
+            this.SubscribeObjectType = new Long(source.SubscribeObjectType);
+        }
+        if (source.Objects != null) {
+            this.Objects = new SubscribeObject(source.Objects);
+        }
+        if (source.UniqSubnetId != null) {
+            this.UniqSubnetId = new String(source.UniqSubnetId);
+        }
+        if (source.Vport != null) {
+            this.Vport = new Long(source.Vport);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -137,6 +137,32 @@ public class GetGameServerInstanceLogUrlRequest extends AbstractModel{
         this.Size = Size;
     }
 
+    public GetGameServerInstanceLogUrlRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GetGameServerInstanceLogUrlRequest(GetGameServerInstanceLogUrlRequest source) {
+        if (source.FleetId != null) {
+            this.FleetId = new String(source.FleetId);
+        }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.ServerIp != null) {
+            this.ServerIp = new String(source.ServerIp);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Size != null) {
+            this.Size = new Long(source.Size);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

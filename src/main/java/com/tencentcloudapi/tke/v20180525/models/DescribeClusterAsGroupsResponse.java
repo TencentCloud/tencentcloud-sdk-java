@@ -91,6 +91,29 @@ public class DescribeClusterAsGroupsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeClusterAsGroupsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeClusterAsGroupsResponse(DescribeClusterAsGroupsResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.ClusterAsGroupSet != null) {
+            this.ClusterAsGroupSet = new ClusterAsGroup[source.ClusterAsGroupSet.length];
+            for (int i = 0; i < source.ClusterAsGroupSet.length; i++) {
+                this.ClusterAsGroupSet[i] = new ClusterAsGroup(source.ClusterAsGroupSet[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -147,6 +147,38 @@ public class ViewResponseInfo extends AbstractModel{
         this.ModifiedTime = ModifiedTime;
     }
 
+    public ViewResponseInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ViewResponseInfo(ViewResponseInfo source) {
+        if (source.ViewBaseInfo != null) {
+            this.ViewBaseInfo = new ViewBaseInfo(source.ViewBaseInfo);
+        }
+        if (source.Columns != null) {
+            this.Columns = new Column[source.Columns.length];
+            for (int i = 0; i < source.Columns.length; i++) {
+                this.Columns[i] = new Column(source.Columns[i]);
+            }
+        }
+        if (source.Properties != null) {
+            this.Properties = new Property[source.Properties.length];
+            for (int i = 0; i < source.Properties.length; i++) {
+                this.Properties[i] = new Property(source.Properties[i]);
+            }
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.ModifiedTime != null) {
+            this.ModifiedTime = new String(source.ModifiedTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

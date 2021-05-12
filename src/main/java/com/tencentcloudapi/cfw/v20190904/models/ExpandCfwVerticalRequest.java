@@ -91,6 +91,26 @@ public class ExpandCfwVerticalRequest extends AbstractModel{
         this.CfwInstance = CfwInstance;
     }
 
+    public ExpandCfwVerticalRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ExpandCfwVerticalRequest(ExpandCfwVerticalRequest source) {
+        if (source.FwType != null) {
+            this.FwType = new String(source.FwType);
+        }
+        if (source.Width != null) {
+            this.Width = new Long(source.Width);
+        }
+        if (source.CfwInstance != null) {
+            this.CfwInstance = new String(source.CfwInstance);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

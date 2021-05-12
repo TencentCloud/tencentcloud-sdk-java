@@ -45,6 +45,20 @@ public class DescribeCallerDisplayListRequest extends AbstractModel{
         this.BizAppId = BizAppId;
     }
 
+    public DescribeCallerDisplayListRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeCallerDisplayListRequest(DescribeCallerDisplayListRequest source) {
+        if (source.BizAppId != null) {
+            this.BizAppId = new String(source.BizAppId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

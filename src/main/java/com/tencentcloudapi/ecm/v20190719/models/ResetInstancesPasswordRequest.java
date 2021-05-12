@@ -124,6 +124,32 @@ Windows实例密码必须12到16位，至少包括三项[a-z]，[A-Z]，[0-9]和
         this.UserName = UserName;
     }
 
+    public ResetInstancesPasswordRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ResetInstancesPasswordRequest(ResetInstancesPasswordRequest source) {
+        if (source.InstanceIdSet != null) {
+            this.InstanceIdSet = new String[source.InstanceIdSet.length];
+            for (int i = 0; i < source.InstanceIdSet.length; i++) {
+                this.InstanceIdSet[i] = new String(source.InstanceIdSet[i]);
+            }
+        }
+        if (source.Password != null) {
+            this.Password = new String(source.Password);
+        }
+        if (source.ForceStop != null) {
+            this.ForceStop = new Boolean(source.ForceStop);
+        }
+        if (source.UserName != null) {
+            this.UserName = new String(source.UserName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

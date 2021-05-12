@@ -68,6 +68,26 @@ public class AiAnalysisTaskCoverOutput extends AbstractModel{
         this.OutputStorage = OutputStorage;
     }
 
+    public AiAnalysisTaskCoverOutput() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AiAnalysisTaskCoverOutput(AiAnalysisTaskCoverOutput source) {
+        if (source.CoverSet != null) {
+            this.CoverSet = new MediaAiAnalysisCoverItem[source.CoverSet.length];
+            for (int i = 0; i < source.CoverSet.length; i++) {
+                this.CoverSet[i] = new MediaAiAnalysisCoverItem(source.CoverSet[i]);
+            }
+        }
+        if (source.OutputStorage != null) {
+            this.OutputStorage = new TaskOutputStorage(source.OutputStorage);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

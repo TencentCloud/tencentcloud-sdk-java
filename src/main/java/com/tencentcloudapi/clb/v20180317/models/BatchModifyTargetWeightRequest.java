@@ -68,6 +68,26 @@ public class BatchModifyTargetWeightRequest extends AbstractModel{
         this.ModifyList = ModifyList;
     }
 
+    public BatchModifyTargetWeightRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public BatchModifyTargetWeightRequest(BatchModifyTargetWeightRequest source) {
+        if (source.LoadBalancerId != null) {
+            this.LoadBalancerId = new String(source.LoadBalancerId);
+        }
+        if (source.ModifyList != null) {
+            this.ModifyList = new RsWeightRule[source.ModifyList.length];
+            for (int i = 0; i < source.ModifyList.length; i++) {
+                this.ModifyList[i] = new RsWeightRule(source.ModifyList[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

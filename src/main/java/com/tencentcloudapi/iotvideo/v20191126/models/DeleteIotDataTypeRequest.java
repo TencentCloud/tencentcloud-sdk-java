@@ -45,6 +45,20 @@ public class DeleteIotDataTypeRequest extends AbstractModel{
         this.TypeId = TypeId;
     }
 
+    public DeleteIotDataTypeRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteIotDataTypeRequest(DeleteIotDataTypeRequest source) {
+        if (source.TypeId != null) {
+            this.TypeId = new String(source.TypeId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

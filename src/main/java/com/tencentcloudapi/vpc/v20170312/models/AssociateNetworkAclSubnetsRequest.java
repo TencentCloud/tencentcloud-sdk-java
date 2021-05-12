@@ -68,6 +68,26 @@ public class AssociateNetworkAclSubnetsRequest extends AbstractModel{
         this.SubnetIds = SubnetIds;
     }
 
+    public AssociateNetworkAclSubnetsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AssociateNetworkAclSubnetsRequest(AssociateNetworkAclSubnetsRequest source) {
+        if (source.NetworkAclId != null) {
+            this.NetworkAclId = new String(source.NetworkAclId);
+        }
+        if (source.SubnetIds != null) {
+            this.SubnetIds = new String[source.SubnetIds.length];
+            for (int i = 0; i < source.SubnetIds.length; i++) {
+                this.SubnetIds[i] = new String(source.SubnetIds[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

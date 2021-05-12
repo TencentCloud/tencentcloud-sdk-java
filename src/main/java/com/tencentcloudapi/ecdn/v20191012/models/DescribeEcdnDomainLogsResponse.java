@@ -96,6 +96,29 @@ public class DescribeEcdnDomainLogsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeEcdnDomainLogsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeEcdnDomainLogsResponse(DescribeEcdnDomainLogsResponse source) {
+        if (source.DomainLogs != null) {
+            this.DomainLogs = new DomainLogs[source.DomainLogs.length];
+            for (int i = 0; i < source.DomainLogs.length; i++) {
+                this.DomainLogs[i] = new DomainLogs(source.DomainLogs[i]);
+            }
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -129,6 +129,29 @@ public class DescribeStreamPlayInfoListRequest extends AbstractModel{
         this.StreamName = StreamName;
     }
 
+    public DescribeStreamPlayInfoListRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeStreamPlayInfoListRequest(DescribeStreamPlayInfoListRequest source) {
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+        if (source.PlayDomain != null) {
+            this.PlayDomain = new String(source.PlayDomain);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.StreamName != null) {
+            this.StreamName = new String(source.StreamName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

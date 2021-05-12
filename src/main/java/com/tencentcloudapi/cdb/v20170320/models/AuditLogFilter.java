@@ -229,6 +229,59 @@ public class AuditLogFilter extends AbstractModel{
         this.AffectRows = AffectRows;
     }
 
+    public AuditLogFilter() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AuditLogFilter(AuditLogFilter source) {
+        if (source.Host != null) {
+            this.Host = new String[source.Host.length];
+            for (int i = 0; i < source.Host.length; i++) {
+                this.Host[i] = new String(source.Host[i]);
+            }
+        }
+        if (source.User != null) {
+            this.User = new String[source.User.length];
+            for (int i = 0; i < source.User.length; i++) {
+                this.User[i] = new String(source.User[i]);
+            }
+        }
+        if (source.DBName != null) {
+            this.DBName = new String[source.DBName.length];
+            for (int i = 0; i < source.DBName.length; i++) {
+                this.DBName[i] = new String(source.DBName[i]);
+            }
+        }
+        if (source.TableName != null) {
+            this.TableName = new String[source.TableName.length];
+            for (int i = 0; i < source.TableName.length; i++) {
+                this.TableName[i] = new String(source.TableName[i]);
+            }
+        }
+        if (source.PolicyName != null) {
+            this.PolicyName = new String[source.PolicyName.length];
+            for (int i = 0; i < source.PolicyName.length; i++) {
+                this.PolicyName[i] = new String(source.PolicyName[i]);
+            }
+        }
+        if (source.Sql != null) {
+            this.Sql = new String(source.Sql);
+        }
+        if (source.SqlType != null) {
+            this.SqlType = new String(source.SqlType);
+        }
+        if (source.ExecTime != null) {
+            this.ExecTime = new Long(source.ExecTime);
+        }
+        if (source.AffectRows != null) {
+            this.AffectRows = new Long(source.AffectRows);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

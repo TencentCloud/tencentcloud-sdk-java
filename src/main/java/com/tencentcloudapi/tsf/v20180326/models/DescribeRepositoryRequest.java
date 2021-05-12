@@ -45,6 +45,20 @@ public class DescribeRepositoryRequest extends AbstractModel{
         this.RepositoryId = RepositoryId;
     }
 
+    public DescribeRepositoryRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeRepositoryRequest(DescribeRepositoryRequest source) {
+        if (source.RepositoryId != null) {
+            this.RepositoryId = new String(source.RepositoryId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

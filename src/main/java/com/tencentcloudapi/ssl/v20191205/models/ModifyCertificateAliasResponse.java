@@ -68,6 +68,23 @@ public class ModifyCertificateAliasResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public ModifyCertificateAliasResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyCertificateAliasResponse(ModifyCertificateAliasResponse source) {
+        if (source.CertificateId != null) {
+            this.CertificateId = new String(source.CertificateId);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

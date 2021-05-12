@@ -91,6 +91,26 @@ public class CreateBlueprintRequest extends AbstractModel{
         this.InstanceId = InstanceId;
     }
 
+    public CreateBlueprintRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateBlueprintRequest(CreateBlueprintRequest source) {
+        if (source.BlueprintName != null) {
+            this.BlueprintName = new String(source.BlueprintName);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

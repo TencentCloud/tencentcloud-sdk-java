@@ -116,6 +116,26 @@ public class BizLicenseVerifyResult extends AbstractModel{
         this.Address = Address;
     }
 
+    public BizLicenseVerifyResult() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public BizLicenseVerifyResult(BizLicenseVerifyResult source) {
+        if (source.RegNum != null) {
+            this.RegNum = new String(source.RegNum);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Address != null) {
+            this.Address = new String(source.Address);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

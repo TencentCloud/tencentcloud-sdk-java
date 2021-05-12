@@ -45,6 +45,20 @@ public class DescribeLiveDomainRequest extends AbstractModel{
         this.DomainName = DomainName;
     }
 
+    public DescribeLiveDomainRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeLiveDomainRequest(DescribeLiveDomainRequest source) {
+        if (source.DomainName != null) {
+            this.DomainName = new String(source.DomainName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

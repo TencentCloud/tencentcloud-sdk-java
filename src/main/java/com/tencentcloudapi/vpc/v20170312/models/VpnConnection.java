@@ -459,6 +459,77 @@ public class VpnConnection extends AbstractModel{
         this.HealthCheckStatus = HealthCheckStatus;
     }
 
+    public VpnConnection() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public VpnConnection(VpnConnection source) {
+        if (source.VpnConnectionId != null) {
+            this.VpnConnectionId = new String(source.VpnConnectionId);
+        }
+        if (source.VpnConnectionName != null) {
+            this.VpnConnectionName = new String(source.VpnConnectionName);
+        }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.VpnGatewayId != null) {
+            this.VpnGatewayId = new String(source.VpnGatewayId);
+        }
+        if (source.CustomerGatewayId != null) {
+            this.CustomerGatewayId = new String(source.CustomerGatewayId);
+        }
+        if (source.PreShareKey != null) {
+            this.PreShareKey = new String(source.PreShareKey);
+        }
+        if (source.VpnProto != null) {
+            this.VpnProto = new String(source.VpnProto);
+        }
+        if (source.EncryptProto != null) {
+            this.EncryptProto = new String(source.EncryptProto);
+        }
+        if (source.RouteType != null) {
+            this.RouteType = new String(source.RouteType);
+        }
+        if (source.CreatedTime != null) {
+            this.CreatedTime = new String(source.CreatedTime);
+        }
+        if (source.State != null) {
+            this.State = new String(source.State);
+        }
+        if (source.NetStatus != null) {
+            this.NetStatus = new String(source.NetStatus);
+        }
+        if (source.SecurityPolicyDatabaseSet != null) {
+            this.SecurityPolicyDatabaseSet = new SecurityPolicyDatabase[source.SecurityPolicyDatabaseSet.length];
+            for (int i = 0; i < source.SecurityPolicyDatabaseSet.length; i++) {
+                this.SecurityPolicyDatabaseSet[i] = new SecurityPolicyDatabase(source.SecurityPolicyDatabaseSet[i]);
+            }
+        }
+        if (source.IKEOptionsSpecification != null) {
+            this.IKEOptionsSpecification = new IKEOptionsSpecification(source.IKEOptionsSpecification);
+        }
+        if (source.IPSECOptionsSpecification != null) {
+            this.IPSECOptionsSpecification = new IPSECOptionsSpecification(source.IPSECOptionsSpecification);
+        }
+        if (source.EnableHealthCheck != null) {
+            this.EnableHealthCheck = new Boolean(source.EnableHealthCheck);
+        }
+        if (source.HealthCheckLocalIp != null) {
+            this.HealthCheckLocalIp = new String(source.HealthCheckLocalIp);
+        }
+        if (source.HealthCheckRemoteIp != null) {
+            this.HealthCheckRemoteIp = new String(source.HealthCheckRemoteIp);
+        }
+        if (source.HealthCheckStatus != null) {
+            this.HealthCheckStatus = new String(source.HealthCheckStatus);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

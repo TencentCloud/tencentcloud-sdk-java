@@ -68,6 +68,29 @@ public class MigrationAction extends AbstractModel{
         this.AllowedAction = AllowedAction;
     }
 
+    public MigrationAction() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MigrationAction(MigrationAction source) {
+        if (source.AllAction != null) {
+            this.AllAction = new String[source.AllAction.length];
+            for (int i = 0; i < source.AllAction.length; i++) {
+                this.AllAction[i] = new String(source.AllAction[i]);
+            }
+        }
+        if (source.AllowedAction != null) {
+            this.AllowedAction = new String[source.AllowedAction.length];
+            for (int i = 0; i < source.AllowedAction.length; i++) {
+                this.AllowedAction[i] = new String(source.AllowedAction[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -114,6 +114,32 @@ public class SealOCRResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public SealOCRResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SealOCRResponse(SealOCRResponse source) {
+        if (source.SealBody != null) {
+            this.SealBody = new String(source.SealBody);
+        }
+        if (source.Location != null) {
+            this.Location = new Rect(source.Location);
+        }
+        if (source.OtherTexts != null) {
+            this.OtherTexts = new String[source.OtherTexts.length];
+            for (int i = 0; i < source.OtherTexts.length; i++) {
+                this.OtherTexts[i] = new String(source.OtherTexts[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

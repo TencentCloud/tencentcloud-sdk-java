@@ -91,6 +91,29 @@ public class DescribeCommandsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeCommandsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeCommandsResponse(DescribeCommandsResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.CommandSet != null) {
+            this.CommandSet = new Command[source.CommandSet.length];
+            for (int i = 0; i < source.CommandSet.length; i++) {
+                this.CommandSet[i] = new Command(source.CommandSet[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -91,6 +91,29 @@ public class DeleteFaceRequest extends AbstractModel{
         this.LibraryId = LibraryId;
     }
 
+    public DeleteFaceRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteFaceRequest(DeleteFaceRequest source) {
+        if (source.FaceIdSet != null) {
+            this.FaceIdSet = new String[source.FaceIdSet.length];
+            for (int i = 0; i < source.FaceIdSet.length; i++) {
+                this.FaceIdSet[i] = new String(source.FaceIdSet[i]);
+            }
+        }
+        if (source.PersonId != null) {
+            this.PersonId = new String(source.PersonId);
+        }
+        if (source.LibraryId != null) {
+            this.LibraryId = new String(source.LibraryId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

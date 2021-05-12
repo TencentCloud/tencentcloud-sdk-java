@@ -96,6 +96,26 @@ public class EnvironmentStrategy extends AbstractModel{
         this.MaxQuota = MaxQuota;
     }
 
+    public EnvironmentStrategy() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public EnvironmentStrategy(EnvironmentStrategy source) {
+        if (source.EnvironmentName != null) {
+            this.EnvironmentName = new String(source.EnvironmentName);
+        }
+        if (source.Quota != null) {
+            this.Quota = new Long(source.Quota);
+        }
+        if (source.MaxQuota != null) {
+            this.MaxQuota = new Long(source.MaxQuota);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

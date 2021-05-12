@@ -114,6 +114,29 @@ public class DeliverTidNotifyResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DeliverTidNotifyResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeliverTidNotifyResponse(DeliverTidNotifyResponse source) {
+        if (source.RemaindCount != null) {
+            this.RemaindCount = new Long(source.RemaindCount);
+        }
+        if (source.Tid != null) {
+            this.Tid = new String(source.Tid);
+        }
+        if (source.ProductKey != null) {
+            this.ProductKey = new String(source.ProductKey);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

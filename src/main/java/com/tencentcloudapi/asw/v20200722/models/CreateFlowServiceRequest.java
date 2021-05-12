@@ -229,6 +229,44 @@ public class CreateFlowServiceRequest extends AbstractModel{
         this.Input = Input;
     }
 
+    public CreateFlowServiceRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateFlowServiceRequest(CreateFlowServiceRequest source) {
+        if (source.Definition != null) {
+            this.Definition = new String(source.Definition);
+        }
+        if (source.FlowServiceName != null) {
+            this.FlowServiceName = new String(source.FlowServiceName);
+        }
+        if (source.IsNewRole != null) {
+            this.IsNewRole = new Boolean(source.IsNewRole);
+        }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.FlowServiceChineseName != null) {
+            this.FlowServiceChineseName = new String(source.FlowServiceChineseName);
+        }
+        if (source.RoleResource != null) {
+            this.RoleResource = new String(source.RoleResource);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.EnableCLS != null) {
+            this.EnableCLS = new Boolean(source.EnableCLS);
+        }
+        if (source.Input != null) {
+            this.Input = new String(source.Input);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

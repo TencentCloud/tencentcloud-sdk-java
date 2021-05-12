@@ -160,6 +160,38 @@ public class UpgradeLicenseRequest extends AbstractModel{
         this.ForceRestart = ForceRestart;
     }
 
+    public UpgradeLicenseRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UpgradeLicenseRequest(UpgradeLicenseRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.LicenseType != null) {
+            this.LicenseType = new String(source.LicenseType);
+        }
+        if (source.AutoVoucher != null) {
+            this.AutoVoucher = new Long(source.AutoVoucher);
+        }
+        if (source.VoucherIds != null) {
+            this.VoucherIds = new String[source.VoucherIds.length];
+            for (int i = 0; i < source.VoucherIds.length; i++) {
+                this.VoucherIds[i] = new String(source.VoucherIds[i]);
+            }
+        }
+        if (source.BasicSecurityType != null) {
+            this.BasicSecurityType = new Long(source.BasicSecurityType);
+        }
+        if (source.ForceRestart != null) {
+            this.ForceRestart = new Boolean(source.ForceRestart);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

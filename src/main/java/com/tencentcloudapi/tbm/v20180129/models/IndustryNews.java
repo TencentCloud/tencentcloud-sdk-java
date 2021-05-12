@@ -229,6 +229,44 @@ public class IndustryNews extends AbstractModel{
         this.Abstract = Abstract;
     }
 
+    public IndustryNews() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public IndustryNews(IndustryNews source) {
+        if (source.IndustryId != null) {
+            this.IndustryId = new String(source.IndustryId);
+        }
+        if (source.PubTime != null) {
+            this.PubTime = new String(source.PubTime);
+        }
+        if (source.FromSite != null) {
+            this.FromSite = new String(source.FromSite);
+        }
+        if (source.Title != null) {
+            this.Title = new String(source.Title);
+        }
+        if (source.Url != null) {
+            this.Url = new String(source.Url);
+        }
+        if (source.Level != null) {
+            this.Level = new Long(source.Level);
+        }
+        if (source.Hot != null) {
+            this.Hot = new Long(source.Hot);
+        }
+        if (source.Flag != null) {
+            this.Flag = new Long(source.Flag);
+        }
+        if (source.Abstract != null) {
+            this.Abstract = new String(source.Abstract);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

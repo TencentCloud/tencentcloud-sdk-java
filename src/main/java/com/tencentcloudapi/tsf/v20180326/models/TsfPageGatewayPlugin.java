@@ -78,6 +78,26 @@ public class TsfPageGatewayPlugin extends AbstractModel{
         this.Content = Content;
     }
 
+    public TsfPageGatewayPlugin() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TsfPageGatewayPlugin(TsfPageGatewayPlugin source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.Content != null) {
+            this.Content = new GatewayPlugin[source.Content.length];
+            for (int i = 0; i < source.Content.length; i++) {
+                this.Content[i] = new GatewayPlugin(source.Content[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

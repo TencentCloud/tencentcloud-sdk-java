@@ -68,6 +68,23 @@ public class PhonePool extends AbstractModel{
         this.PoolName = PoolName;
     }
 
+    public PhonePool() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PhonePool(PhonePool source) {
+        if (source.PoolId != null) {
+            this.PoolId = new String(source.PoolId);
+        }
+        if (source.PoolName != null) {
+            this.PoolName = new String(source.PoolName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

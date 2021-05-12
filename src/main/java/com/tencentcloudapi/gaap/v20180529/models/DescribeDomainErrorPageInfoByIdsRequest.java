@@ -45,6 +45,23 @@ public class DescribeDomainErrorPageInfoByIdsRequest extends AbstractModel{
         this.ErrorPageIds = ErrorPageIds;
     }
 
+    public DescribeDomainErrorPageInfoByIdsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeDomainErrorPageInfoByIdsRequest(DescribeDomainErrorPageInfoByIdsRequest source) {
+        if (source.ErrorPageIds != null) {
+            this.ErrorPageIds = new String[source.ErrorPageIds.length];
+            for (int i = 0; i < source.ErrorPageIds.length; i++) {
+                this.ErrorPageIds[i] = new String(source.ErrorPageIds[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

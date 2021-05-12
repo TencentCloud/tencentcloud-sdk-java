@@ -96,6 +96,29 @@ public class DescribeAccountsRequest extends AbstractModel{
         this.DbType = DbType;
     }
 
+    public DescribeAccountsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeAccountsRequest(DescribeAccountsRequest source) {
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
+        if (source.AccountNames != null) {
+            this.AccountNames = new String[source.AccountNames.length];
+            for (int i = 0; i < source.AccountNames.length; i++) {
+                this.AccountNames[i] = new String(source.AccountNames[i]);
+            }
+        }
+        if (source.DbType != null) {
+            this.DbType = new String(source.DbType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

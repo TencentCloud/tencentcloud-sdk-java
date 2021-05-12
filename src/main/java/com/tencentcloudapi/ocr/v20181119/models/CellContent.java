@@ -78,6 +78,23 @@ public class CellContent extends AbstractModel{
         this.WordSize = WordSize;
     }
 
+    public CellContent() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CellContent(CellContent source) {
+        if (source.ParagNo != null) {
+            this.ParagNo = new Long(source.ParagNo);
+        }
+        if (source.WordSize != null) {
+            this.WordSize = new Long(source.WordSize);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -73,6 +73,26 @@ public class DescribeAlarmNoticeCallbacksResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeAlarmNoticeCallbacksResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeAlarmNoticeCallbacksResponse(DescribeAlarmNoticeCallbacksResponse source) {
+        if (source.URLNotices != null) {
+            this.URLNotices = new URLNotice[source.URLNotices.length];
+            for (int i = 0; i < source.URLNotices.length; i++) {
+                this.URLNotices[i] = new URLNotice(source.URLNotices[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

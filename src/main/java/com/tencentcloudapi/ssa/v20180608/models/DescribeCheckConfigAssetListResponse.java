@@ -96,6 +96,29 @@ public class DescribeCheckConfigAssetListResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeCheckConfigAssetListResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeCheckConfigAssetListResponse(DescribeCheckConfigAssetListResponse source) {
+        if (source.Total != null) {
+            this.Total = new Long(source.Total);
+        }
+        if (source.CheckAssetsList != null) {
+            this.CheckAssetsList = new CheckAssetItem[source.CheckAssetsList.length];
+            for (int i = 0; i < source.CheckAssetsList.length; i++) {
+                this.CheckAssetsList[i] = new CheckAssetItem(source.CheckAssetsList[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

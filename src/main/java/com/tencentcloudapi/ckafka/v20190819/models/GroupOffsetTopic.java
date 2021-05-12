@@ -73,6 +73,26 @@ public class GroupOffsetTopic extends AbstractModel{
         this.Partitions = Partitions;
     }
 
+    public GroupOffsetTopic() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GroupOffsetTopic(GroupOffsetTopic source) {
+        if (source.Topic != null) {
+            this.Topic = new String(source.Topic);
+        }
+        if (source.Partitions != null) {
+            this.Partitions = new GroupOffsetPartition[source.Partitions.length];
+            for (int i = 0; i < source.Partitions.length; i++) {
+                this.Partitions[i] = new GroupOffsetPartition(source.Partitions[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

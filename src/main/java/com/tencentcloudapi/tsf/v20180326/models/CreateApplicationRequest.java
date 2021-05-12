@@ -229,6 +229,47 @@ public class CreateApplicationRequest extends AbstractModel{
         this.ServiceConfigList = ServiceConfigList;
     }
 
+    public CreateApplicationRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateApplicationRequest(CreateApplicationRequest source) {
+        if (source.ApplicationName != null) {
+            this.ApplicationName = new String(source.ApplicationName);
+        }
+        if (source.ApplicationType != null) {
+            this.ApplicationType = new String(source.ApplicationType);
+        }
+        if (source.MicroserviceType != null) {
+            this.MicroserviceType = new String(source.MicroserviceType);
+        }
+        if (source.ApplicationDesc != null) {
+            this.ApplicationDesc = new String(source.ApplicationDesc);
+        }
+        if (source.ApplicationLogConfig != null) {
+            this.ApplicationLogConfig = new String(source.ApplicationLogConfig);
+        }
+        if (source.ApplicationResourceType != null) {
+            this.ApplicationResourceType = new String(source.ApplicationResourceType);
+        }
+        if (source.ApplicationRuntimeType != null) {
+            this.ApplicationRuntimeType = new String(source.ApplicationRuntimeType);
+        }
+        if (source.ProgramId != null) {
+            this.ProgramId = new String(source.ProgramId);
+        }
+        if (source.ServiceConfigList != null) {
+            this.ServiceConfigList = new ServiceConfig[source.ServiceConfigList.length];
+            for (int i = 0; i < source.ServiceConfigList.length; i++) {
+                this.ServiceConfigList[i] = new ServiceConfig(source.ServiceConfigList[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -183,6 +183,38 @@ public class PullSmsReplyStatus extends AbstractModel{
         this.ReplyUnixTime = ReplyUnixTime;
     }
 
+    public PullSmsReplyStatus() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PullSmsReplyStatus(PullSmsReplyStatus source) {
+        if (source.ExtendCode != null) {
+            this.ExtendCode = new String(source.ExtendCode);
+        }
+        if (source.NationCode != null) {
+            this.NationCode = new String(source.NationCode);
+        }
+        if (source.PhoneNumber != null) {
+            this.PhoneNumber = new String(source.PhoneNumber);
+        }
+        if (source.Sign != null) {
+            this.Sign = new String(source.Sign);
+        }
+        if (source.ReplyContent != null) {
+            this.ReplyContent = new String(source.ReplyContent);
+        }
+        if (source.ReplyTime != null) {
+            this.ReplyTime = new String(source.ReplyTime);
+        }
+        if (source.ReplyUnixTime != null) {
+            this.ReplyUnixTime = new Long(source.ReplyUnixTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

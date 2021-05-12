@@ -152,6 +152,32 @@ public class DescribeDCDBUpgradePriceRequest extends AbstractModel{
         this.SplitShardConfig = SplitShardConfig;
     }
 
+    public DescribeDCDBUpgradePriceRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeDCDBUpgradePriceRequest(DescribeDCDBUpgradePriceRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.UpgradeType != null) {
+            this.UpgradeType = new String(source.UpgradeType);
+        }
+        if (source.AddShardConfig != null) {
+            this.AddShardConfig = new AddShardConfig(source.AddShardConfig);
+        }
+        if (source.ExpandShardConfig != null) {
+            this.ExpandShardConfig = new ExpandShardConfig(source.ExpandShardConfig);
+        }
+        if (source.SplitShardConfig != null) {
+            this.SplitShardConfig = new SplitShardConfig(source.SplitShardConfig);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

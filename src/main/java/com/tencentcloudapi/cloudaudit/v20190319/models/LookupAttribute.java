@@ -78,6 +78,23 @@ public class LookupAttribute extends AbstractModel{
         this.AttributeValue = AttributeValue;
     }
 
+    public LookupAttribute() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public LookupAttribute(LookupAttribute source) {
+        if (source.AttributeKey != null) {
+            this.AttributeKey = new String(source.AttributeKey);
+        }
+        if (source.AttributeValue != null) {
+            this.AttributeValue = new String(source.AttributeValue);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

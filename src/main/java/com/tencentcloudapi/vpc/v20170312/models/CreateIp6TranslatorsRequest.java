@@ -91,6 +91,26 @@ public class CreateIp6TranslatorsRequest extends AbstractModel{
         this.Ip6InternetServiceProvider = Ip6InternetServiceProvider;
     }
 
+    public CreateIp6TranslatorsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateIp6TranslatorsRequest(CreateIp6TranslatorsRequest source) {
+        if (source.Ip6TranslatorName != null) {
+            this.Ip6TranslatorName = new String(source.Ip6TranslatorName);
+        }
+        if (source.Ip6TranslatorCount != null) {
+            this.Ip6TranslatorCount = new Long(source.Ip6TranslatorCount);
+        }
+        if (source.Ip6InternetServiceProvider != null) {
+            this.Ip6InternetServiceProvider = new String(source.Ip6InternetServiceProvider);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

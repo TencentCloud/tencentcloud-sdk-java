@@ -162,6 +162,35 @@ public class TimeTemplateItem extends AbstractModel{
         this.TimeTemplateSpecs = TimeTemplateSpecs;
     }
 
+    public TimeTemplateItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TimeTemplateItem(TimeTemplateItem source) {
+        if (source.TemplateId != null) {
+            this.TemplateId = new String(source.TemplateId);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.IsAllWeek != null) {
+            this.IsAllWeek = new Long(source.IsAllWeek);
+        }
+        if (source.Type != null) {
+            this.Type = new Long(source.Type);
+        }
+        if (source.TimeTemplateSpecs != null) {
+            this.TimeTemplateSpecs = new TimeTemplateSpec[source.TimeTemplateSpecs.length];
+            for (int i = 0; i < source.TimeTemplateSpecs.length; i++) {
+                this.TimeTemplateSpecs[i] = new TimeTemplateSpec(source.TimeTemplateSpecs[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

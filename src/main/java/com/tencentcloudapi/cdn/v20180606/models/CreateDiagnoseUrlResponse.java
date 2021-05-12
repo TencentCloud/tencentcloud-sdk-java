@@ -68,6 +68,23 @@ public class CreateDiagnoseUrlResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public CreateDiagnoseUrlResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateDiagnoseUrlResponse(CreateDiagnoseUrlResponse source) {
+        if (source.DiagnoseLink != null) {
+            this.DiagnoseLink = new String(source.DiagnoseLink);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

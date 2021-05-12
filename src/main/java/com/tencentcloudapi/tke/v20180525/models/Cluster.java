@@ -471,6 +471,74 @@ public class Cluster extends AbstractModel{
         this.DeletionProtection = DeletionProtection;
     }
 
+    public Cluster() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Cluster(Cluster source) {
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
+        if (source.ClusterName != null) {
+            this.ClusterName = new String(source.ClusterName);
+        }
+        if (source.ClusterDescription != null) {
+            this.ClusterDescription = new String(source.ClusterDescription);
+        }
+        if (source.ClusterVersion != null) {
+            this.ClusterVersion = new String(source.ClusterVersion);
+        }
+        if (source.ClusterOs != null) {
+            this.ClusterOs = new String(source.ClusterOs);
+        }
+        if (source.ClusterType != null) {
+            this.ClusterType = new String(source.ClusterType);
+        }
+        if (source.ClusterNetworkSettings != null) {
+            this.ClusterNetworkSettings = new ClusterNetworkSettings(source.ClusterNetworkSettings);
+        }
+        if (source.ClusterNodeNum != null) {
+            this.ClusterNodeNum = new Long(source.ClusterNodeNum);
+        }
+        if (source.ProjectId != null) {
+            this.ProjectId = new Long(source.ProjectId);
+        }
+        if (source.TagSpecification != null) {
+            this.TagSpecification = new TagSpecification[source.TagSpecification.length];
+            for (int i = 0; i < source.TagSpecification.length; i++) {
+                this.TagSpecification[i] = new TagSpecification(source.TagSpecification[i]);
+            }
+        }
+        if (source.ClusterStatus != null) {
+            this.ClusterStatus = new String(source.ClusterStatus);
+        }
+        if (source.Property != null) {
+            this.Property = new String(source.Property);
+        }
+        if (source.ClusterMaterNodeNum != null) {
+            this.ClusterMaterNodeNum = new Long(source.ClusterMaterNodeNum);
+        }
+        if (source.ImageId != null) {
+            this.ImageId = new String(source.ImageId);
+        }
+        if (source.OsCustomizeType != null) {
+            this.OsCustomizeType = new String(source.OsCustomizeType);
+        }
+        if (source.ContainerRuntime != null) {
+            this.ContainerRuntime = new String(source.ContainerRuntime);
+        }
+        if (source.CreatedTime != null) {
+            this.CreatedTime = new String(source.CreatedTime);
+        }
+        if (source.DeletionProtection != null) {
+            this.DeletionProtection = new Boolean(source.DeletionProtection);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

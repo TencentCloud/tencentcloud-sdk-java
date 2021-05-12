@@ -68,6 +68,23 @@ public class DescribeCCAlarmThresholdRequest extends AbstractModel{
         this.RsId = RsId;
     }
 
+    public DescribeCCAlarmThresholdRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeCCAlarmThresholdRequest(DescribeCCAlarmThresholdRequest source) {
+        if (source.Business != null) {
+            this.Business = new String(source.Business);
+        }
+        if (source.RsId != null) {
+            this.RsId = new String(source.RsId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

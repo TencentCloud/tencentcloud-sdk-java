@@ -298,6 +298,53 @@ public class IKEOptionsSpecification extends AbstractModel{
         this.IKEVersion = IKEVersion;
     }
 
+    public IKEOptionsSpecification() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public IKEOptionsSpecification(IKEOptionsSpecification source) {
+        if (source.PropoEncryAlgorithm != null) {
+            this.PropoEncryAlgorithm = new String(source.PropoEncryAlgorithm);
+        }
+        if (source.PropoAuthenAlgorithm != null) {
+            this.PropoAuthenAlgorithm = new String(source.PropoAuthenAlgorithm);
+        }
+        if (source.ExchangeMode != null) {
+            this.ExchangeMode = new String(source.ExchangeMode);
+        }
+        if (source.LocalIdentity != null) {
+            this.LocalIdentity = new String(source.LocalIdentity);
+        }
+        if (source.RemoteIdentity != null) {
+            this.RemoteIdentity = new String(source.RemoteIdentity);
+        }
+        if (source.LocalAddress != null) {
+            this.LocalAddress = new String(source.LocalAddress);
+        }
+        if (source.RemoteAddress != null) {
+            this.RemoteAddress = new String(source.RemoteAddress);
+        }
+        if (source.LocalFqdnName != null) {
+            this.LocalFqdnName = new String(source.LocalFqdnName);
+        }
+        if (source.RemoteFqdnName != null) {
+            this.RemoteFqdnName = new String(source.RemoteFqdnName);
+        }
+        if (source.DhGroupName != null) {
+            this.DhGroupName = new String(source.DhGroupName);
+        }
+        if (source.IKESaLifetimeSeconds != null) {
+            this.IKESaLifetimeSeconds = new Long(source.IKESaLifetimeSeconds);
+        }
+        if (source.IKEVersion != null) {
+            this.IKEVersion = new String(source.IKEVersion);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

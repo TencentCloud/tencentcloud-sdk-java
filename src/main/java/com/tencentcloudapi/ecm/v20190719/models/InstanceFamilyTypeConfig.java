@@ -68,6 +68,23 @@ public class InstanceFamilyTypeConfig extends AbstractModel{
         this.InstanceFamilyTypeName = InstanceFamilyTypeName;
     }
 
+    public InstanceFamilyTypeConfig() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public InstanceFamilyTypeConfig(InstanceFamilyTypeConfig source) {
+        if (source.InstanceFamilyType != null) {
+            this.InstanceFamilyType = new String(source.InstanceFamilyType);
+        }
+        if (source.InstanceFamilyTypeName != null) {
+            this.InstanceFamilyTypeName = new String(source.InstanceFamilyTypeName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

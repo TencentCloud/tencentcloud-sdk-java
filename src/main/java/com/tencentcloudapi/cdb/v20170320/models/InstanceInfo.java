@@ -1028,6 +1028,149 @@ public class InstanceInfo extends AbstractModel{
         this.InstanceNodes = InstanceNodes;
     }
 
+    public InstanceInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public InstanceInfo(InstanceInfo source) {
+        if (source.WanStatus != null) {
+            this.WanStatus = new Long(source.WanStatus);
+        }
+        if (source.Zone != null) {
+            this.Zone = new String(source.Zone);
+        }
+        if (source.InitFlag != null) {
+            this.InitFlag = new Long(source.InitFlag);
+        }
+        if (source.RoVipInfo != null) {
+            this.RoVipInfo = new RoVipInfo(source.RoVipInfo);
+        }
+        if (source.Memory != null) {
+            this.Memory = new Long(source.Memory);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.VpcId != null) {
+            this.VpcId = new Long(source.VpcId);
+        }
+        if (source.SlaveInfo != null) {
+            this.SlaveInfo = new SlaveInfo(source.SlaveInfo);
+        }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.Volume != null) {
+            this.Volume = new Long(source.Volume);
+        }
+        if (source.AutoRenew != null) {
+            this.AutoRenew = new Long(source.AutoRenew);
+        }
+        if (source.ProtectMode != null) {
+            this.ProtectMode = new Long(source.ProtectMode);
+        }
+        if (source.RoGroups != null) {
+            this.RoGroups = new RoGroup[source.RoGroups.length];
+            for (int i = 0; i < source.RoGroups.length; i++) {
+                this.RoGroups[i] = new RoGroup(source.RoGroups[i]);
+            }
+        }
+        if (source.SubnetId != null) {
+            this.SubnetId = new Long(source.SubnetId);
+        }
+        if (source.InstanceType != null) {
+            this.InstanceType = new Long(source.InstanceType);
+        }
+        if (source.ProjectId != null) {
+            this.ProjectId = new Long(source.ProjectId);
+        }
+        if (source.Region != null) {
+            this.Region = new String(source.Region);
+        }
+        if (source.DeadlineTime != null) {
+            this.DeadlineTime = new String(source.DeadlineTime);
+        }
+        if (source.DeployMode != null) {
+            this.DeployMode = new Long(source.DeployMode);
+        }
+        if (source.TaskStatus != null) {
+            this.TaskStatus = new Long(source.TaskStatus);
+        }
+        if (source.MasterInfo != null) {
+            this.MasterInfo = new MasterInfo(source.MasterInfo);
+        }
+        if (source.DeviceType != null) {
+            this.DeviceType = new String(source.DeviceType);
+        }
+        if (source.EngineVersion != null) {
+            this.EngineVersion = new String(source.EngineVersion);
+        }
+        if (source.InstanceName != null) {
+            this.InstanceName = new String(source.InstanceName);
+        }
+        if (source.DrInfo != null) {
+            this.DrInfo = new DrInfo[source.DrInfo.length];
+            for (int i = 0; i < source.DrInfo.length; i++) {
+                this.DrInfo[i] = new DrInfo(source.DrInfo[i]);
+            }
+        }
+        if (source.WanDomain != null) {
+            this.WanDomain = new String(source.WanDomain);
+        }
+        if (source.WanPort != null) {
+            this.WanPort = new Long(source.WanPort);
+        }
+        if (source.PayType != null) {
+            this.PayType = new Long(source.PayType);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.Vip != null) {
+            this.Vip = new String(source.Vip);
+        }
+        if (source.Vport != null) {
+            this.Vport = new Long(source.Vport);
+        }
+        if (source.CdbError != null) {
+            this.CdbError = new Long(source.CdbError);
+        }
+        if (source.UniqVpcId != null) {
+            this.UniqVpcId = new String(source.UniqVpcId);
+        }
+        if (source.UniqSubnetId != null) {
+            this.UniqSubnetId = new String(source.UniqSubnetId);
+        }
+        if (source.PhysicalId != null) {
+            this.PhysicalId = new String(source.PhysicalId);
+        }
+        if (source.Cpu != null) {
+            this.Cpu = new Long(source.Cpu);
+        }
+        if (source.Qps != null) {
+            this.Qps = new Long(source.Qps);
+        }
+        if (source.ZoneName != null) {
+            this.ZoneName = new String(source.ZoneName);
+        }
+        if (source.DeviceClass != null) {
+            this.DeviceClass = new String(source.DeviceClass);
+        }
+        if (source.DeployGroupId != null) {
+            this.DeployGroupId = new String(source.DeployGroupId);
+        }
+        if (source.ZoneId != null) {
+            this.ZoneId = new Long(source.ZoneId);
+        }
+        if (source.InstanceNodes != null) {
+            this.InstanceNodes = new Long(source.InstanceNodes);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

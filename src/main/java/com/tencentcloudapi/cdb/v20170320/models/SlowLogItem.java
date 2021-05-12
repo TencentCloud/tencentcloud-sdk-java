@@ -330,6 +330,50 @@ public class SlowLogItem extends AbstractModel{
         this.Md5 = Md5;
     }
 
+    public SlowLogItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SlowLogItem(SlowLogItem source) {
+        if (source.Timestamp != null) {
+            this.Timestamp = new Long(source.Timestamp);
+        }
+        if (source.QueryTime != null) {
+            this.QueryTime = new Float(source.QueryTime);
+        }
+        if (source.SqlText != null) {
+            this.SqlText = new String(source.SqlText);
+        }
+        if (source.UserHost != null) {
+            this.UserHost = new String(source.UserHost);
+        }
+        if (source.UserName != null) {
+            this.UserName = new String(source.UserName);
+        }
+        if (source.Database != null) {
+            this.Database = new String(source.Database);
+        }
+        if (source.LockTime != null) {
+            this.LockTime = new Float(source.LockTime);
+        }
+        if (source.RowsExamined != null) {
+            this.RowsExamined = new Long(source.RowsExamined);
+        }
+        if (source.RowsSent != null) {
+            this.RowsSent = new Long(source.RowsSent);
+        }
+        if (source.SqlTemplate != null) {
+            this.SqlTemplate = new String(source.SqlTemplate);
+        }
+        if (source.Md5 != null) {
+            this.Md5 = new String(source.Md5);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

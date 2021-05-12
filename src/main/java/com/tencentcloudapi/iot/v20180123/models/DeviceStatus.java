@@ -147,6 +147,32 @@ public class DeviceStatus extends AbstractModel{
         this.OnlineTimes = OnlineTimes;
     }
 
+    public DeviceStatus() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeviceStatus(DeviceStatus source) {
+        if (source.DeviceName != null) {
+            this.DeviceName = new String(source.DeviceName);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.FirstOnline != null) {
+            this.FirstOnline = new String(source.FirstOnline);
+        }
+        if (source.LastOnline != null) {
+            this.LastOnline = new String(source.LastOnline);
+        }
+        if (source.OnlineTimes != null) {
+            this.OnlineTimes = new Long(source.OnlineTimes);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

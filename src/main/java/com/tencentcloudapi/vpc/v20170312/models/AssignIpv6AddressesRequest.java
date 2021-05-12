@@ -91,6 +91,29 @@ public class AssignIpv6AddressesRequest extends AbstractModel{
         this.Ipv6AddressCount = Ipv6AddressCount;
     }
 
+    public AssignIpv6AddressesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AssignIpv6AddressesRequest(AssignIpv6AddressesRequest source) {
+        if (source.NetworkInterfaceId != null) {
+            this.NetworkInterfaceId = new String(source.NetworkInterfaceId);
+        }
+        if (source.Ipv6Addresses != null) {
+            this.Ipv6Addresses = new Ipv6Address[source.Ipv6Addresses.length];
+            for (int i = 0; i < source.Ipv6Addresses.length; i++) {
+                this.Ipv6Addresses[i] = new Ipv6Address(source.Ipv6Addresses[i]);
+            }
+        }
+        if (source.Ipv6AddressCount != null) {
+            this.Ipv6AddressCount = new Long(source.Ipv6AddressCount);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

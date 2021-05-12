@@ -252,6 +252,53 @@ public class TransmitOralProcessWithInitResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public TransmitOralProcessWithInitResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TransmitOralProcessWithInitResponse(TransmitOralProcessWithInitResponse source) {
+        if (source.PronAccuracy != null) {
+            this.PronAccuracy = new Float(source.PronAccuracy);
+        }
+        if (source.PronFluency != null) {
+            this.PronFluency = new Float(source.PronFluency);
+        }
+        if (source.PronCompletion != null) {
+            this.PronCompletion = new Float(source.PronCompletion);
+        }
+        if (source.Words != null) {
+            this.Words = new WordRsp[source.Words.length];
+            for (int i = 0; i < source.Words.length; i++) {
+                this.Words[i] = new WordRsp(source.Words[i]);
+            }
+        }
+        if (source.SessionId != null) {
+            this.SessionId = new String(source.SessionId);
+        }
+        if (source.AudioUrl != null) {
+            this.AudioUrl = new String(source.AudioUrl);
+        }
+        if (source.SentenceInfoSet != null) {
+            this.SentenceInfoSet = new SentenceInfo[source.SentenceInfoSet.length];
+            for (int i = 0; i < source.SentenceInfoSet.length; i++) {
+                this.SentenceInfoSet[i] = new SentenceInfo(source.SentenceInfoSet[i]);
+            }
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.SuggestedScore != null) {
+            this.SuggestedScore = new Float(source.SuggestedScore);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

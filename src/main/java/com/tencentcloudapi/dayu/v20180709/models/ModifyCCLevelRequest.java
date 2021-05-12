@@ -137,6 +137,32 @@ public class ModifyCCLevelRequest extends AbstractModel{
         this.RuleId = RuleId;
     }
 
+    public ModifyCCLevelRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyCCLevelRequest(ModifyCCLevelRequest source) {
+        if (source.Business != null) {
+            this.Business = new String(source.Business);
+        }
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
+        if (source.Level != null) {
+            this.Level = new String(source.Level);
+        }
+        if (source.Protocol != null) {
+            this.Protocol = new String(source.Protocol);
+        }
+        if (source.RuleId != null) {
+            this.RuleId = new String(source.RuleId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -68,6 +68,23 @@ public class DeleteWxGatewayRouteRequest extends AbstractModel{
         this.GatewayRouteName = GatewayRouteName;
     }
 
+    public DeleteWxGatewayRouteRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteWxGatewayRouteRequest(DeleteWxGatewayRouteRequest source) {
+        if (source.EnvId != null) {
+            this.EnvId = new String(source.EnvId);
+        }
+        if (source.GatewayRouteName != null) {
+            this.GatewayRouteName = new String(source.GatewayRouteName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

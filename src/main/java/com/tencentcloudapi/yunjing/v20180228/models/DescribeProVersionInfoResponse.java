@@ -114,6 +114,29 @@ public class DescribeProVersionInfoResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeProVersionInfoResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeProVersionInfoResponse(DescribeProVersionInfoResponse source) {
+        if (source.PostPayCost != null) {
+            this.PostPayCost = new Long(source.PostPayCost);
+        }
+        if (source.IsAutoOpenProVersion != null) {
+            this.IsAutoOpenProVersion = new Boolean(source.IsAutoOpenProVersion);
+        }
+        if (source.ProVersionNum != null) {
+            this.ProVersionNum = new Long(source.ProVersionNum);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

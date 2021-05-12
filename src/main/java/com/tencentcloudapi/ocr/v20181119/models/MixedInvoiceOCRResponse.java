@@ -68,6 +68,26 @@ public class MixedInvoiceOCRResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public MixedInvoiceOCRResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MixedInvoiceOCRResponse(MixedInvoiceOCRResponse source) {
+        if (source.MixedInvoiceItems != null) {
+            this.MixedInvoiceItems = new MixedInvoiceItem[source.MixedInvoiceItems.length];
+            for (int i = 0; i < source.MixedInvoiceItems.length; i++) {
+                this.MixedInvoiceItems[i] = new MixedInvoiceItem(source.MixedInvoiceItems[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

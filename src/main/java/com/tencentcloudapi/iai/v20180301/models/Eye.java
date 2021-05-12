@@ -134,6 +134,29 @@ AttributeItem对应的Type为 —— 0：小眼睛，1：普通眼睛，2：大�
         this.EyeSize = EyeSize;
     }
 
+    public Eye() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Eye(Eye source) {
+        if (source.Glass != null) {
+            this.Glass = new AttributeItem(source.Glass);
+        }
+        if (source.EyeOpen != null) {
+            this.EyeOpen = new AttributeItem(source.EyeOpen);
+        }
+        if (source.EyelidType != null) {
+            this.EyelidType = new AttributeItem(source.EyelidType);
+        }
+        if (source.EyeSize != null) {
+            this.EyeSize = new AttributeItem(source.EyeSize);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

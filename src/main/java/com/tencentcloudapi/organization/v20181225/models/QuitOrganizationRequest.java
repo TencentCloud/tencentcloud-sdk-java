@@ -45,6 +45,20 @@ public class QuitOrganizationRequest extends AbstractModel{
         this.OrgId = OrgId;
     }
 
+    public QuitOrganizationRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public QuitOrganizationRequest(QuitOrganizationRequest source) {
+        if (source.OrgId != null) {
+            this.OrgId = new Long(source.OrgId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

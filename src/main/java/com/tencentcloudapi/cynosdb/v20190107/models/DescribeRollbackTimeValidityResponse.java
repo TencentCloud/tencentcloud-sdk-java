@@ -137,6 +137,32 @@ public class DescribeRollbackTimeValidityResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeRollbackTimeValidityResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeRollbackTimeValidityResponse(DescribeRollbackTimeValidityResponse source) {
+        if (source.PoolId != null) {
+            this.PoolId = new Long(source.PoolId);
+        }
+        if (source.QueryId != null) {
+            this.QueryId = new Long(source.QueryId);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.SuggestTime != null) {
+            this.SuggestTime = new String(source.SuggestTime);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

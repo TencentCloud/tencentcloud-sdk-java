@@ -183,6 +183,38 @@ public class SendStatus extends AbstractModel{
         this.IsoCode = IsoCode;
     }
 
+    public SendStatus() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SendStatus(SendStatus source) {
+        if (source.SerialNo != null) {
+            this.SerialNo = new String(source.SerialNo);
+        }
+        if (source.PhoneNumber != null) {
+            this.PhoneNumber = new String(source.PhoneNumber);
+        }
+        if (source.Fee != null) {
+            this.Fee = new Long(source.Fee);
+        }
+        if (source.SessionContext != null) {
+            this.SessionContext = new String(source.SessionContext);
+        }
+        if (source.Code != null) {
+            this.Code = new String(source.Code);
+        }
+        if (source.Message != null) {
+            this.Message = new String(source.Message);
+        }
+        if (source.IsoCode != null) {
+            this.IsoCode = new String(source.IsoCode);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

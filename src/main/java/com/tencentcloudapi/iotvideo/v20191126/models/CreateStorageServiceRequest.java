@@ -253,6 +253,38 @@ ye1w7d : 事件7天存储周套餐。
         this.EnableTime = EnableTime;
     }
 
+    public CreateStorageServiceRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateStorageServiceRequest(CreateStorageServiceRequest source) {
+        if (source.PkgId != null) {
+            this.PkgId = new String(source.PkgId);
+        }
+        if (source.Tid != null) {
+            this.Tid = new String(source.Tid);
+        }
+        if (source.OrderCount != null) {
+            this.OrderCount = new Long(source.OrderCount);
+        }
+        if (source.StorageRegion != null) {
+            this.StorageRegion = new String(source.StorageRegion);
+        }
+        if (source.ChnNum != null) {
+            this.ChnNum = new Long(source.ChnNum);
+        }
+        if (source.AccessId != null) {
+            this.AccessId = new String(source.AccessId);
+        }
+        if (source.EnableTime != null) {
+            this.EnableTime = new Long(source.EnableTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

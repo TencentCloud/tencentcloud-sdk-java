@@ -343,6 +343,53 @@ PayeeBankName：收款人开户行名称
         this.Profile = Profile;
     }
 
+    public TransferSinglePayRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TransferSinglePayRequest(TransferSinglePayRequest source) {
+        if (source.MerchantId != null) {
+            this.MerchantId = new String(source.MerchantId);
+        }
+        if (source.MerchantAppId != null) {
+            this.MerchantAppId = new String(source.MerchantAppId);
+        }
+        if (source.TransferType != null) {
+            this.TransferType = new Long(source.TransferType);
+        }
+        if (source.OrderId != null) {
+            this.OrderId = new String(source.OrderId);
+        }
+        if (source.TransferAmount != null) {
+            this.TransferAmount = new Long(source.TransferAmount);
+        }
+        if (source.PayeeId != null) {
+            this.PayeeId = new String(source.PayeeId);
+        }
+        if (source.PayeeName != null) {
+            this.PayeeName = new String(source.PayeeName);
+        }
+        if (source.PayeeExtends != null) {
+            this.PayeeExtends = new String(source.PayeeExtends);
+        }
+        if (source.ReqReserved != null) {
+            this.ReqReserved = new String(source.ReqReserved);
+        }
+        if (source.Remark != null) {
+            this.Remark = new String(source.Remark);
+        }
+        if (source.NotifyUrl != null) {
+            this.NotifyUrl = new String(source.NotifyUrl);
+        }
+        if (source.Profile != null) {
+            this.Profile = new String(source.Profile);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

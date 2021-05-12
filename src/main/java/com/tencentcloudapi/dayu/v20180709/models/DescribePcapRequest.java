@@ -137,6 +137,32 @@ public class DescribePcapRequest extends AbstractModel{
         this.Ip = Ip;
     }
 
+    public DescribePcapRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribePcapRequest(DescribePcapRequest source) {
+        if (source.Business != null) {
+            this.Business = new String(source.Business);
+        }
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+        if (source.Ip != null) {
+            this.Ip = new String(source.Ip);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

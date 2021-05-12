@@ -68,6 +68,23 @@ public class InstanceConfs extends AbstractModel{
         this.OverviewDisplay = OverviewDisplay;
     }
 
+    public InstanceConfs() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public InstanceConfs(InstanceConfs source) {
+        if (source.DailyInspection != null) {
+            this.DailyInspection = new String(source.DailyInspection);
+        }
+        if (source.OverviewDisplay != null) {
+            this.OverviewDisplay = new String(source.OverviewDisplay);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

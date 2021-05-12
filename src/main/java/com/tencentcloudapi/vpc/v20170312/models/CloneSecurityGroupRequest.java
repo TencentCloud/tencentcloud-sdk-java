@@ -137,6 +137,32 @@ public class CloneSecurityGroupRequest extends AbstractModel{
         this.RemoteRegion = RemoteRegion;
     }
 
+    public CloneSecurityGroupRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CloneSecurityGroupRequest(CloneSecurityGroupRequest source) {
+        if (source.SecurityGroupId != null) {
+            this.SecurityGroupId = new String(source.SecurityGroupId);
+        }
+        if (source.GroupName != null) {
+            this.GroupName = new String(source.GroupName);
+        }
+        if (source.GroupDescription != null) {
+            this.GroupDescription = new String(source.GroupDescription);
+        }
+        if (source.ProjectId != null) {
+            this.ProjectId = new String(source.ProjectId);
+        }
+        if (source.RemoteRegion != null) {
+            this.RemoteRegion = new String(source.RemoteRegion);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

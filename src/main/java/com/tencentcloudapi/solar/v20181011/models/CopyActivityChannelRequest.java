@@ -91,6 +91,29 @@ public class CopyActivityChannelRequest extends AbstractModel{
         this.ChannelTo = ChannelTo;
     }
 
+    public CopyActivityChannelRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CopyActivityChannelRequest(CopyActivityChannelRequest source) {
+        if (source.ActivityId != null) {
+            this.ActivityId = new String(source.ActivityId);
+        }
+        if (source.ChannelFrom != null) {
+            this.ChannelFrom = new String(source.ChannelFrom);
+        }
+        if (source.ChannelTo != null) {
+            this.ChannelTo = new String[source.ChannelTo.length];
+            for (int i = 0; i < source.ChannelTo.length; i++) {
+                this.ChannelTo[i] = new String(source.ChannelTo[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

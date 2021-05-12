@@ -147,6 +147,35 @@ public class DescribeBindingPolicyObjectListResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeBindingPolicyObjectListResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeBindingPolicyObjectListResponse(DescribeBindingPolicyObjectListResponse source) {
+        if (source.List != null) {
+            this.List = new DescribeBindingPolicyObjectListInstance[source.List.length];
+            for (int i = 0; i < source.List.length; i++) {
+                this.List[i] = new DescribeBindingPolicyObjectListInstance(source.List[i]);
+            }
+        }
+        if (source.Total != null) {
+            this.Total = new Long(source.Total);
+        }
+        if (source.NoShieldedSum != null) {
+            this.NoShieldedSum = new Long(source.NoShieldedSum);
+        }
+        if (source.InstanceGroup != null) {
+            this.InstanceGroup = new DescribeBindingPolicyObjectListInstanceGroup(source.InstanceGroup);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

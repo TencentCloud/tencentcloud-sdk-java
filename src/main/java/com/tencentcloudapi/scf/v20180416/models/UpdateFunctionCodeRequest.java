@@ -275,6 +275,50 @@ public class UpdateFunctionCodeRequest extends AbstractModel{
         this.CodeSource = CodeSource;
     }
 
+    public UpdateFunctionCodeRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UpdateFunctionCodeRequest(UpdateFunctionCodeRequest source) {
+        if (source.Handler != null) {
+            this.Handler = new String(source.Handler);
+        }
+        if (source.FunctionName != null) {
+            this.FunctionName = new String(source.FunctionName);
+        }
+        if (source.CosBucketName != null) {
+            this.CosBucketName = new String(source.CosBucketName);
+        }
+        if (source.CosObjectName != null) {
+            this.CosObjectName = new String(source.CosObjectName);
+        }
+        if (source.ZipFile != null) {
+            this.ZipFile = new String(source.ZipFile);
+        }
+        if (source.Namespace != null) {
+            this.Namespace = new String(source.Namespace);
+        }
+        if (source.CosBucketRegion != null) {
+            this.CosBucketRegion = new String(source.CosBucketRegion);
+        }
+        if (source.EnvId != null) {
+            this.EnvId = new String(source.EnvId);
+        }
+        if (source.Publish != null) {
+            this.Publish = new String(source.Publish);
+        }
+        if (source.Code != null) {
+            this.Code = new Code(source.Code);
+        }
+        if (source.CodeSource != null) {
+            this.CodeSource = new String(source.CodeSource);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

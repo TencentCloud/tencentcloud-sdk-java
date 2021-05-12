@@ -55,6 +55,20 @@ public class OcrFullTextConfigureInfoForUpdate extends AbstractModel{
         this.Switch = Switch;
     }
 
+    public OcrFullTextConfigureInfoForUpdate() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public OcrFullTextConfigureInfoForUpdate(OcrFullTextConfigureInfoForUpdate source) {
+        if (source.Switch != null) {
+            this.Switch = new String(source.Switch);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

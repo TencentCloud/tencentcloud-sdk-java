@@ -68,6 +68,23 @@ public class ResultObject extends AbstractModel{
         this.StructureResult = StructureResult;
     }
 
+    public ResultObject() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ResultObject(ResultObject source) {
+        if (source.Quality != null) {
+            this.Quality = new Float(source.Quality);
+        }
+        if (source.StructureResult != null) {
+            this.StructureResult = new String(source.StructureResult);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

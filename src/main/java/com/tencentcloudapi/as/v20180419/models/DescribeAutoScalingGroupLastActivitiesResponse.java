@@ -68,6 +68,26 @@ public class DescribeAutoScalingGroupLastActivitiesResponse extends AbstractMode
         this.RequestId = RequestId;
     }
 
+    public DescribeAutoScalingGroupLastActivitiesResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeAutoScalingGroupLastActivitiesResponse(DescribeAutoScalingGroupLastActivitiesResponse source) {
+        if (source.ActivitySet != null) {
+            this.ActivitySet = new Activity[source.ActivitySet.length];
+            for (int i = 0; i < source.ActivitySet.length; i++) {
+                this.ActivitySet[i] = new Activity(source.ActivitySet[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

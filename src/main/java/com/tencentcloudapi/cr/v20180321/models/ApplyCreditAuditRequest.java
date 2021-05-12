@@ -183,6 +183,38 @@ public class ApplyCreditAuditRequest extends AbstractModel{
         this.Data = Data;
     }
 
+    public ApplyCreditAuditRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ApplyCreditAuditRequest(ApplyCreditAuditRequest source) {
+        if (source.Module != null) {
+            this.Module = new String(source.Module);
+        }
+        if (source.Operation != null) {
+            this.Operation = new String(source.Operation);
+        }
+        if (source.InstId != null) {
+            this.InstId = new String(source.InstId);
+        }
+        if (source.ProductId != null) {
+            this.ProductId = new String(source.ProductId);
+        }
+        if (source.CaseId != null) {
+            this.CaseId = new String(source.CaseId);
+        }
+        if (source.CallbackUrl != null) {
+            this.CallbackUrl = new String(source.CallbackUrl);
+        }
+        if (source.Data != null) {
+            this.Data = new String(source.Data);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -206,6 +206,41 @@ public class CreateNamespaceRequest extends AbstractModel{
         this.ProgramId = ProgramId;
     }
 
+    public CreateNamespaceRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateNamespaceRequest(CreateNamespaceRequest source) {
+        if (source.NamespaceName != null) {
+            this.NamespaceName = new String(source.NamespaceName);
+        }
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
+        if (source.NamespaceDesc != null) {
+            this.NamespaceDesc = new String(source.NamespaceDesc);
+        }
+        if (source.NamespaceResourceType != null) {
+            this.NamespaceResourceType = new String(source.NamespaceResourceType);
+        }
+        if (source.NamespaceType != null) {
+            this.NamespaceType = new String(source.NamespaceType);
+        }
+        if (source.NamespaceId != null) {
+            this.NamespaceId = new String(source.NamespaceId);
+        }
+        if (source.IsHaEnable != null) {
+            this.IsHaEnable = new String(source.IsHaEnable);
+        }
+        if (source.ProgramId != null) {
+            this.ProgramId = new String(source.ProgramId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

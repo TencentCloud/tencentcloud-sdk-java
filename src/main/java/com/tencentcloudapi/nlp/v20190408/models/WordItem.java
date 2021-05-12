@@ -96,6 +96,26 @@ public class WordItem extends AbstractModel{
         this.Pos = Pos;
     }
 
+    public WordItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public WordItem(WordItem source) {
+        if (source.Text != null) {
+            this.Text = new String(source.Text);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.Pos != null) {
+            this.Pos = new String(source.Pos);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

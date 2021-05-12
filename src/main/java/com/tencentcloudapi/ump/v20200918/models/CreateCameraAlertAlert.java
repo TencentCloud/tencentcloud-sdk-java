@@ -183,6 +183,38 @@ public class CreateCameraAlertAlert extends AbstractModel{
         this.CoverAlert = CoverAlert;
     }
 
+    public CreateCameraAlertAlert() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateCameraAlertAlert(CreateCameraAlertAlert source) {
+        if (source.GroupCode != null) {
+            this.GroupCode = new String(source.GroupCode);
+        }
+        if (source.MallId != null) {
+            this.MallId = new Long(source.MallId);
+        }
+        if (source.CameraId != null) {
+            this.CameraId = new Long(source.CameraId);
+        }
+        if (source.CaptureTime != null) {
+            this.CaptureTime = new Long(source.CaptureTime);
+        }
+        if (source.Image != null) {
+            this.Image = new String(source.Image);
+        }
+        if (source.MoveAlert != null) {
+            this.MoveAlert = new CreateCameraAlertsMoveAlert(source.MoveAlert);
+        }
+        if (source.CoverAlert != null) {
+            this.CoverAlert = new CreateCameraAlertsCoverAlert(source.CoverAlert);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

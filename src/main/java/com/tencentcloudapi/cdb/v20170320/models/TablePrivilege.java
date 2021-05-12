@@ -91,6 +91,29 @@ public class TablePrivilege extends AbstractModel{
         this.Privileges = Privileges;
     }
 
+    public TablePrivilege() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TablePrivilege(TablePrivilege source) {
+        if (source.Database != null) {
+            this.Database = new String(source.Database);
+        }
+        if (source.Table != null) {
+            this.Table = new String(source.Table);
+        }
+        if (source.Privileges != null) {
+            this.Privileges = new String[source.Privileges.length];
+            for (int i = 0; i < source.Privileges.length; i++) {
+                this.Privileges[i] = new String(source.Privileges[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

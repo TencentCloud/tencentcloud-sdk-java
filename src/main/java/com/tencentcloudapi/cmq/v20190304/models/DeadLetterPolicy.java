@@ -162,6 +162,32 @@ public class DeadLetterPolicy extends AbstractModel{
         this.MaxReceiveCount = MaxReceiveCount;
     }
 
+    public DeadLetterPolicy() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeadLetterPolicy(DeadLetterPolicy source) {
+        if (source.DeadLetterQueueName != null) {
+            this.DeadLetterQueueName = new String(source.DeadLetterQueueName);
+        }
+        if (source.DeadLetterQueue != null) {
+            this.DeadLetterQueue = new String(source.DeadLetterQueue);
+        }
+        if (source.Policy != null) {
+            this.Policy = new Long(source.Policy);
+        }
+        if (source.MaxTimeToLive != null) {
+            this.MaxTimeToLive = new Long(source.MaxTimeToLive);
+        }
+        if (source.MaxReceiveCount != null) {
+            this.MaxReceiveCount = new Long(source.MaxReceiveCount);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

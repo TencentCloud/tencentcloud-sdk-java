@@ -106,6 +106,32 @@ public class ExclusiveCluster extends AbstractModel{
         this.ClassicalCluster = ClassicalCluster;
     }
 
+    public ExclusiveCluster() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ExclusiveCluster(ExclusiveCluster source) {
+        if (source.L4Clusters != null) {
+            this.L4Clusters = new ClusterItem[source.L4Clusters.length];
+            for (int i = 0; i < source.L4Clusters.length; i++) {
+                this.L4Clusters[i] = new ClusterItem(source.L4Clusters[i]);
+            }
+        }
+        if (source.L7Clusters != null) {
+            this.L7Clusters = new ClusterItem[source.L7Clusters.length];
+            for (int i = 0; i < source.L7Clusters.length; i++) {
+                this.L7Clusters[i] = new ClusterItem(source.L7Clusters[i]);
+            }
+        }
+        if (source.ClassicalCluster != null) {
+            this.ClassicalCluster = new ClusterItem(source.ClassicalCluster);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

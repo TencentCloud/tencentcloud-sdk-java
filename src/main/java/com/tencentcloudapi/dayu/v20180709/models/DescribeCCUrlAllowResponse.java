@@ -134,6 +134,35 @@ public class DescribeCCUrlAllowResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeCCUrlAllowResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeCCUrlAllowResponse(DescribeCCUrlAllowResponse source) {
+        if (source.Data != null) {
+            this.Data = new KeyValue[source.Data.length];
+            for (int i = 0; i < source.Data.length; i++) {
+                this.Data[i] = new KeyValue(source.Data[i]);
+            }
+        }
+        if (source.Total != null) {
+            this.Total = new Long(source.Total);
+        }
+        if (source.RecordList != null) {
+            this.RecordList = new KeyValueRecord[source.RecordList.length];
+            for (int i = 0; i < source.RecordList.length; i++) {
+                this.RecordList[i] = new KeyValueRecord(source.RecordList[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

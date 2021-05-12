@@ -129,6 +129,32 @@ public class RenewDomainBatchRequest extends AbstractModel{
         this.AutoRenewFlag = AutoRenewFlag;
     }
 
+    public RenewDomainBatchRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RenewDomainBatchRequest(RenewDomainBatchRequest source) {
+        if (source.Period != null) {
+            this.Period = new Long(source.Period);
+        }
+        if (source.Domains != null) {
+            this.Domains = new String[source.Domains.length];
+            for (int i = 0; i < source.Domains.length; i++) {
+                this.Domains[i] = new String(source.Domains[i]);
+            }
+        }
+        if (source.PayMode != null) {
+            this.PayMode = new Long(source.PayMode);
+        }
+        if (source.AutoRenewFlag != null) {
+            this.AutoRenewFlag = new Long(source.AutoRenewFlag);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

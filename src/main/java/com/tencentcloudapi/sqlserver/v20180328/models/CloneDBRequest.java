@@ -68,6 +68,26 @@ public class CloneDBRequest extends AbstractModel{
         this.RenameRestore = RenameRestore;
     }
 
+    public CloneDBRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CloneDBRequest(CloneDBRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.RenameRestore != null) {
+            this.RenameRestore = new RenameRestoreDatabase[source.RenameRestore.length];
+            for (int i = 0; i < source.RenameRestore.length; i++) {
+                this.RenameRestore[i] = new RenameRestoreDatabase(source.RenameRestore[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

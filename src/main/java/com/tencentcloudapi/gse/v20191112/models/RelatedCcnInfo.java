@@ -91,6 +91,26 @@ public class RelatedCcnInfo extends AbstractModel{
         this.AttachType = AttachType;
     }
 
+    public RelatedCcnInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RelatedCcnInfo(RelatedCcnInfo source) {
+        if (source.AccountId != null) {
+            this.AccountId = new String(source.AccountId);
+        }
+        if (source.CcnId != null) {
+            this.CcnId = new String(source.CcnId);
+        }
+        if (source.AttachType != null) {
+            this.AttachType = new String(source.AttachType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

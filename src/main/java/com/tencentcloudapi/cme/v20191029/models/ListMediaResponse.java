@@ -114,6 +114,35 @@ public class ListMediaResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public ListMediaResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ListMediaResponse(ListMediaResponse source) {
+        if (source.MaterialTotalCount != null) {
+            this.MaterialTotalCount = new Long(source.MaterialTotalCount);
+        }
+        if (source.MaterialInfoSet != null) {
+            this.MaterialInfoSet = new MaterialInfo[source.MaterialInfoSet.length];
+            for (int i = 0; i < source.MaterialInfoSet.length; i++) {
+                this.MaterialInfoSet[i] = new MaterialInfo(source.MaterialInfoSet[i]);
+            }
+        }
+        if (source.ClassInfoSet != null) {
+            this.ClassInfoSet = new ClassInfo[source.ClassInfoSet.length];
+            for (int i = 0; i < source.ClassInfoSet.length; i++) {
+                this.ClassInfoSet[i] = new ClassInfo(source.ClassInfoSet[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

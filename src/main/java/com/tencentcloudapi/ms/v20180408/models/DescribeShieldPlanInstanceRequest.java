@@ -68,6 +68,23 @@ public class DescribeShieldPlanInstanceRequest extends AbstractModel{
         this.Pid = Pid;
     }
 
+    public DescribeShieldPlanInstanceRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeShieldPlanInstanceRequest(DescribeShieldPlanInstanceRequest source) {
+        if (source.ResourceId != null) {
+            this.ResourceId = new String(source.ResourceId);
+        }
+        if (source.Pid != null) {
+            this.Pid = new Long(source.Pid);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

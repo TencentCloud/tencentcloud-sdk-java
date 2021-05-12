@@ -298,6 +298,59 @@ public class CreatePolicyGroupRequest extends AbstractModel{
         this.IsUnionRule = IsUnionRule;
     }
 
+    public CreatePolicyGroupRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreatePolicyGroupRequest(CreatePolicyGroupRequest source) {
+        if (source.GroupName != null) {
+            this.GroupName = new String(source.GroupName);
+        }
+        if (source.Module != null) {
+            this.Module = new String(source.Module);
+        }
+        if (source.ViewName != null) {
+            this.ViewName = new String(source.ViewName);
+        }
+        if (source.ProjectId != null) {
+            this.ProjectId = new Long(source.ProjectId);
+        }
+        if (source.ConditionTempGroupId != null) {
+            this.ConditionTempGroupId = new Long(source.ConditionTempGroupId);
+        }
+        if (source.IsShielded != null) {
+            this.IsShielded = new Long(source.IsShielded);
+        }
+        if (source.Remark != null) {
+            this.Remark = new String(source.Remark);
+        }
+        if (source.InsertTime != null) {
+            this.InsertTime = new Long(source.InsertTime);
+        }
+        if (source.Conditions != null) {
+            this.Conditions = new CreatePolicyGroupCondition[source.Conditions.length];
+            for (int i = 0; i < source.Conditions.length; i++) {
+                this.Conditions[i] = new CreatePolicyGroupCondition(source.Conditions[i]);
+            }
+        }
+        if (source.EventConditions != null) {
+            this.EventConditions = new CreatePolicyGroupEventCondition[source.EventConditions.length];
+            for (int i = 0; i < source.EventConditions.length; i++) {
+                this.EventConditions[i] = new CreatePolicyGroupEventCondition(source.EventConditions[i]);
+            }
+        }
+        if (source.BackEndCall != null) {
+            this.BackEndCall = new Long(source.BackEndCall);
+        }
+        if (source.IsUnionRule != null) {
+            this.IsUnionRule = new Long(source.IsUnionRule);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

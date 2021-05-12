@@ -68,6 +68,23 @@ public class SearchScope extends AbstractModel{
         this.ClassPath = ClassPath;
     }
 
+    public SearchScope() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SearchScope(SearchScope source) {
+        if (source.Owner != null) {
+            this.Owner = new Entity(source.Owner);
+        }
+        if (source.ClassPath != null) {
+            this.ClassPath = new String(source.ClassPath);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

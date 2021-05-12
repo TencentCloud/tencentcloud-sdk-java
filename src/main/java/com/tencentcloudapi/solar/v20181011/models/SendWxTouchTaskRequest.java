@@ -298,6 +298,53 @@ public class SendWxTouchTaskRequest extends AbstractModel{
         this.WxAppId = WxAppId;
     }
 
+    public SendWxTouchTaskRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SendWxTouchTaskRequest(SendWxTouchTaskRequest source) {
+        if (source.GroupId != null) {
+            this.GroupId = new String(source.GroupId);
+        }
+        if (source.DistinctFlag != null) {
+            this.DistinctFlag = new Boolean(source.DistinctFlag);
+        }
+        if (source.IsSendNow != null) {
+            this.IsSendNow = new Boolean(source.IsSendNow);
+        }
+        if (source.SendDate != null) {
+            this.SendDate = new Long(source.SendDate);
+        }
+        if (source.TaskName != null) {
+            this.TaskName = new String(source.TaskName);
+        }
+        if (source.WxTouchType != null) {
+            this.WxTouchType = new String(source.WxTouchType);
+        }
+        if (source.Title != null) {
+            this.Title = new String(source.Title);
+        }
+        if (source.Content != null) {
+            this.Content = new String(source.Content);
+        }
+        if (source.NewsId != null) {
+            this.NewsId = new String(source.NewsId);
+        }
+        if (source.SmallProgramId != null) {
+            this.SmallProgramId = new String(source.SmallProgramId);
+        }
+        if (source.TemplateId != null) {
+            this.TemplateId = new String(source.TemplateId);
+        }
+        if (source.WxAppId != null) {
+            this.WxAppId = new String(source.WxAppId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -68,6 +68,23 @@ public class RestartInstanceRequest extends AbstractModel{
         this.ForceRestart = ForceRestart;
     }
 
+    public RestartInstanceRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RestartInstanceRequest(RestartInstanceRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.ForceRestart != null) {
+            this.ForceRestart = new Boolean(source.ForceRestart);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

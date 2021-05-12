@@ -45,6 +45,20 @@ public class DescribeStructureTaskResultRequest extends AbstractModel{
         this.MainTaskId = MainTaskId;
     }
 
+    public DescribeStructureTaskResultRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeStructureTaskResultRequest(DescribeStructureTaskResultRequest source) {
+        if (source.MainTaskId != null) {
+            this.MainTaskId = new String(source.MainTaskId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

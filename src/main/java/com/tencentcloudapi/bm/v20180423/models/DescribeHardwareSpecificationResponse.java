@@ -114,6 +114,38 @@ public class DescribeHardwareSpecificationResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeHardwareSpecificationResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeHardwareSpecificationResponse(DescribeHardwareSpecificationResponse source) {
+        if (source.CpuInfoSet != null) {
+            this.CpuInfoSet = new CpuInfo[source.CpuInfoSet.length];
+            for (int i = 0; i < source.CpuInfoSet.length; i++) {
+                this.CpuInfoSet[i] = new CpuInfo(source.CpuInfoSet[i]);
+            }
+        }
+        if (source.MemSet != null) {
+            this.MemSet = new Long[source.MemSet.length];
+            for (int i = 0; i < source.MemSet.length; i++) {
+                this.MemSet[i] = new Long(source.MemSet[i]);
+            }
+        }
+        if (source.DiskInfoSet != null) {
+            this.DiskInfoSet = new DiskInfo[source.DiskInfoSet.length];
+            for (int i = 0; i < source.DiskInfoSet.length; i++) {
+                this.DiskInfoSet[i] = new DiskInfo(source.DiskInfoSet[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

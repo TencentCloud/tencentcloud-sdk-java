@@ -344,6 +344,59 @@ public class ProductEntry extends AbstractModel{
         this.DeviceType = DeviceType;
     }
 
+    public ProductEntry() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ProductEntry(ProductEntry source) {
+        if (source.ProductId != null) {
+            this.ProductId = new String(source.ProductId);
+        }
+        if (source.ProductKey != null) {
+            this.ProductKey = new String(source.ProductKey);
+        }
+        if (source.AppId != null) {
+            this.AppId = new Long(source.AppId);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.Domain != null) {
+            this.Domain = new String(source.Domain);
+        }
+        if (source.AuthType != null) {
+            this.AuthType = new Long(source.AuthType);
+        }
+        if (source.DataProtocol != null) {
+            this.DataProtocol = new String(source.DataProtocol);
+        }
+        if (source.Deleted != null) {
+            this.Deleted = new Long(source.Deleted);
+        }
+        if (source.Message != null) {
+            this.Message = new String(source.Message);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.CommProtocol != null) {
+            this.CommProtocol = new String(source.CommProtocol);
+        }
+        if (source.Region != null) {
+            this.Region = new String(source.Region);
+        }
+        if (source.DeviceType != null) {
+            this.DeviceType = new String(source.DeviceType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

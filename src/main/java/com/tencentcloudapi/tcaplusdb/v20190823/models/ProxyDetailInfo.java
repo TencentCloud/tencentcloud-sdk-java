@@ -137,6 +137,32 @@ public class ProxyDetailInfo extends AbstractModel{
         this.SlowProcessSpeed = SlowProcessSpeed;
     }
 
+    public ProxyDetailInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ProxyDetailInfo(ProxyDetailInfo source) {
+        if (source.ProxyUid != null) {
+            this.ProxyUid = new String(source.ProxyUid);
+        }
+        if (source.MachineType != null) {
+            this.MachineType = new String(source.MachineType);
+        }
+        if (source.ProcessSpeed != null) {
+            this.ProcessSpeed = new Long(source.ProcessSpeed);
+        }
+        if (source.AverageProcessDelay != null) {
+            this.AverageProcessDelay = new Long(source.AverageProcessDelay);
+        }
+        if (source.SlowProcessSpeed != null) {
+            this.SlowProcessSpeed = new Long(source.SlowProcessSpeed);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

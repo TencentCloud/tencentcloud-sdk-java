@@ -68,6 +68,23 @@ public class CreateTemplateResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public CreateTemplateResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateTemplateResponse(CreateTemplateResponse source) {
+        if (source.Template != null) {
+            this.Template = new TemplateInfo(source.Template);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

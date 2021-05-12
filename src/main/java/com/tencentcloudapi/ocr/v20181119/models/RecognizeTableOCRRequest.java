@@ -157,6 +157,32 @@ public class RecognizeTableOCRRequest extends AbstractModel{
         this.TableLanguage = TableLanguage;
     }
 
+    public RecognizeTableOCRRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RecognizeTableOCRRequest(RecognizeTableOCRRequest source) {
+        if (source.ImageBase64 != null) {
+            this.ImageBase64 = new String(source.ImageBase64);
+        }
+        if (source.ImageUrl != null) {
+            this.ImageUrl = new String(source.ImageUrl);
+        }
+        if (source.IsPdf != null) {
+            this.IsPdf = new Boolean(source.IsPdf);
+        }
+        if (source.PdfPageNumber != null) {
+            this.PdfPageNumber = new Long(source.PdfPageNumber);
+        }
+        if (source.TableLanguage != null) {
+            this.TableLanguage = new String(source.TableLanguage);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

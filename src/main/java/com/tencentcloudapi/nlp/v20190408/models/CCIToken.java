@@ -91,6 +91,26 @@ public class CCIToken extends AbstractModel{
         this.CorrectWord = CorrectWord;
     }
 
+    public CCIToken() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CCIToken(CCIToken source) {
+        if (source.Word != null) {
+            this.Word = new String(source.Word);
+        }
+        if (source.BeginOffset != null) {
+            this.BeginOffset = new Long(source.BeginOffset);
+        }
+        if (source.CorrectWord != null) {
+            this.CorrectWord = new String(source.CorrectWord);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

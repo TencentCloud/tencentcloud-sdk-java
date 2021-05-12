@@ -114,6 +114,32 @@ public class NamespacePage extends AbstractModel{
         this.Pages = Pages;
     }
 
+    public NamespacePage() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public NamespacePage(NamespacePage source) {
+        if (source.Records != null) {
+            this.Records = new TemNamespaceInfo[source.Records.length];
+            for (int i = 0; i < source.Records.length; i++) {
+                this.Records[i] = new TemNamespaceInfo(source.Records[i]);
+            }
+        }
+        if (source.Total != null) {
+            this.Total = new Long(source.Total);
+        }
+        if (source.Size != null) {
+            this.Size = new Long(source.Size);
+        }
+        if (source.Pages != null) {
+            this.Pages = new Long(source.Pages);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

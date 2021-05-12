@@ -68,6 +68,26 @@ public class DescribeLiveTranscodeTemplatesResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeLiveTranscodeTemplatesResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeLiveTranscodeTemplatesResponse(DescribeLiveTranscodeTemplatesResponse source) {
+        if (source.Templates != null) {
+            this.Templates = new TemplateInfo[source.Templates.length];
+            for (int i = 0; i < source.Templates.length; i++) {
+                this.Templates[i] = new TemplateInfo(source.Templates[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

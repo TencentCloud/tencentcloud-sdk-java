@@ -91,6 +91,29 @@ public class DescribeL7RulesRequest extends AbstractModel{
         this.DomainIds = DomainIds;
     }
 
+    public DescribeL7RulesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeL7RulesRequest(DescribeL7RulesRequest source) {
+        if (source.LoadBalancerId != null) {
+            this.LoadBalancerId = new String(source.LoadBalancerId);
+        }
+        if (source.ListenerId != null) {
+            this.ListenerId = new String(source.ListenerId);
+        }
+        if (source.DomainIds != null) {
+            this.DomainIds = new String[source.DomainIds.length];
+            for (int i = 0; i < source.DomainIds.length; i++) {
+                this.DomainIds[i] = new String(source.DomainIds[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

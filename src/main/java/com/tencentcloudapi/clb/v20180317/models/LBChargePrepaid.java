@@ -78,6 +78,23 @@ public class LBChargePrepaid extends AbstractModel{
         this.Period = Period;
     }
 
+    public LBChargePrepaid() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public LBChargePrepaid(LBChargePrepaid source) {
+        if (source.RenewFlag != null) {
+            this.RenewFlag = new String(source.RenewFlag);
+        }
+        if (source.Period != null) {
+            this.Period = new Long(source.Period);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

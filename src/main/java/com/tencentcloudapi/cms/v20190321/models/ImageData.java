@@ -333,6 +333,53 @@ public class ImageData extends AbstractModel{
         this.TerrorDetect = TerrorDetect;
     }
 
+    public ImageData() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ImageData(ImageData source) {
+        if (source.EvilFlag != null) {
+            this.EvilFlag = new Long(source.EvilFlag);
+        }
+        if (source.EvilType != null) {
+            this.EvilType = new Long(source.EvilType);
+        }
+        if (source.CodeDetect != null) {
+            this.CodeDetect = new CodeDetect(source.CodeDetect);
+        }
+        if (source.HotDetect != null) {
+            this.HotDetect = new ImageHotDetect(source.HotDetect);
+        }
+        if (source.IllegalDetect != null) {
+            this.IllegalDetect = new ImageIllegalDetect(source.IllegalDetect);
+        }
+        if (source.LogoDetect != null) {
+            this.LogoDetect = new LogoDetail(source.LogoDetect);
+        }
+        if (source.OCRDetect != null) {
+            this.OCRDetect = new OCRDetect(source.OCRDetect);
+        }
+        if (source.PhoneDetect != null) {
+            this.PhoneDetect = new PhoneDetect(source.PhoneDetect);
+        }
+        if (source.PolityDetect != null) {
+            this.PolityDetect = new ImagePolityDetect(source.PolityDetect);
+        }
+        if (source.PornDetect != null) {
+            this.PornDetect = new ImagePornDetect(source.PornDetect);
+        }
+        if (source.Similar != null) {
+            this.Similar = new Similar(source.Similar);
+        }
+        if (source.TerrorDetect != null) {
+            this.TerrorDetect = new ImageTerrorDetect(source.TerrorDetect);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

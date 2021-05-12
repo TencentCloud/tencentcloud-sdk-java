@@ -91,6 +91,26 @@ public class DownloadBotRecordRequest extends AbstractModel{
         this.BizDate = BizDate;
     }
 
+    public DownloadBotRecordRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DownloadBotRecordRequest(DownloadBotRecordRequest source) {
+        if (source.Module != null) {
+            this.Module = new String(source.Module);
+        }
+        if (source.Operation != null) {
+            this.Operation = new String(source.Operation);
+        }
+        if (source.BizDate != null) {
+            this.BizDate = new String(source.BizDate);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

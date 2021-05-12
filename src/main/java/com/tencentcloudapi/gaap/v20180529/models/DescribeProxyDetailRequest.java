@@ -45,6 +45,20 @@ public class DescribeProxyDetailRequest extends AbstractModel{
         this.ProxyId = ProxyId;
     }
 
+    public DescribeProxyDetailRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeProxyDetailRequest(DescribeProxyDetailRequest source) {
+        if (source.ProxyId != null) {
+            this.ProxyId = new String(source.ProxyId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -91,6 +91,26 @@ public class Operation extends AbstractModel{
         this.OpId = OpId;
     }
 
+    public Operation() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Operation(Operation source) {
+        if (source.ReplicaSetName != null) {
+            this.ReplicaSetName = new String(source.ReplicaSetName);
+        }
+        if (source.NodeName != null) {
+            this.NodeName = new String(source.NodeName);
+        }
+        if (source.OpId != null) {
+            this.OpId = new Long(source.OpId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

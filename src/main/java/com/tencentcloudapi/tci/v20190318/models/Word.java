@@ -137,6 +137,32 @@ public class Word extends AbstractModel{
         this.Wsize = Wsize;
     }
 
+    public Word() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Word(Word source) {
+        if (source.Confidence != null) {
+            this.Confidence = new Float(source.Confidence);
+        }
+        if (source.Mbtm != null) {
+            this.Mbtm = new Long(source.Mbtm);
+        }
+        if (source.Metm != null) {
+            this.Metm = new Long(source.Metm);
+        }
+        if (source.Text != null) {
+            this.Text = new String(source.Text);
+        }
+        if (source.Wsize != null) {
+            this.Wsize = new Long(source.Wsize);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

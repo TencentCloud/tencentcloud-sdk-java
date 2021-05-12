@@ -68,6 +68,23 @@ public class AppGetUserResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public AppGetUserResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AppGetUserResponse(AppGetUserResponse source) {
+        if (source.AppUser != null) {
+            this.AppUser = new AppUser(source.AppUser);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -712,6 +712,98 @@ public class QueueSet extends AbstractModel{
         this.Trace = Trace;
     }
 
+    public QueueSet() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public QueueSet(QueueSet source) {
+        if (source.QueueId != null) {
+            this.QueueId = new String(source.QueueId);
+        }
+        if (source.QueueName != null) {
+            this.QueueName = new String(source.QueueName);
+        }
+        if (source.Qps != null) {
+            this.Qps = new Long(source.Qps);
+        }
+        if (source.Bps != null) {
+            this.Bps = new Long(source.Bps);
+        }
+        if (source.MaxDelaySeconds != null) {
+            this.MaxDelaySeconds = new Long(source.MaxDelaySeconds);
+        }
+        if (source.MaxMsgHeapNum != null) {
+            this.MaxMsgHeapNum = new Long(source.MaxMsgHeapNum);
+        }
+        if (source.PollingWaitSeconds != null) {
+            this.PollingWaitSeconds = new Long(source.PollingWaitSeconds);
+        }
+        if (source.MsgRetentionSeconds != null) {
+            this.MsgRetentionSeconds = new Long(source.MsgRetentionSeconds);
+        }
+        if (source.VisibilityTimeout != null) {
+            this.VisibilityTimeout = new Long(source.VisibilityTimeout);
+        }
+        if (source.MaxMsgSize != null) {
+            this.MaxMsgSize = new Long(source.MaxMsgSize);
+        }
+        if (source.RewindSeconds != null) {
+            this.RewindSeconds = new Long(source.RewindSeconds);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new Long(source.CreateTime);
+        }
+        if (source.LastModifyTime != null) {
+            this.LastModifyTime = new Long(source.LastModifyTime);
+        }
+        if (source.ActiveMsgNum != null) {
+            this.ActiveMsgNum = new Long(source.ActiveMsgNum);
+        }
+        if (source.InactiveMsgNum != null) {
+            this.InactiveMsgNum = new Long(source.InactiveMsgNum);
+        }
+        if (source.DelayMsgNum != null) {
+            this.DelayMsgNum = new Long(source.DelayMsgNum);
+        }
+        if (source.RewindMsgNum != null) {
+            this.RewindMsgNum = new Long(source.RewindMsgNum);
+        }
+        if (source.MinMsgTime != null) {
+            this.MinMsgTime = new Long(source.MinMsgTime);
+        }
+        if (source.Transaction != null) {
+            this.Transaction = new Boolean(source.Transaction);
+        }
+        if (source.DeadLetterSource != null) {
+            this.DeadLetterSource = new DeadLetterSource[source.DeadLetterSource.length];
+            for (int i = 0; i < source.DeadLetterSource.length; i++) {
+                this.DeadLetterSource[i] = new DeadLetterSource(source.DeadLetterSource[i]);
+            }
+        }
+        if (source.DeadLetterPolicy != null) {
+            this.DeadLetterPolicy = new DeadLetterPolicy(source.DeadLetterPolicy);
+        }
+        if (source.TransactionPolicy != null) {
+            this.TransactionPolicy = new TransactionPolicy(source.TransactionPolicy);
+        }
+        if (source.CreateUin != null) {
+            this.CreateUin = new Long(source.CreateUin);
+        }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
+        if (source.Trace != null) {
+            this.Trace = new Boolean(source.Trace);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

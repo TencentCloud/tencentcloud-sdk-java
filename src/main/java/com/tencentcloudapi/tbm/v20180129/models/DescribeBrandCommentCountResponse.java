@@ -68,6 +68,26 @@ public class DescribeBrandCommentCountResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeBrandCommentCountResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeBrandCommentCountResponse(DescribeBrandCommentCountResponse source) {
+        if (source.CommentSet != null) {
+            this.CommentSet = new Comment[source.CommentSet.length];
+            for (int i = 0; i < source.CommentSet.length; i++) {
+                this.CommentSet[i] = new Comment(source.CommentSet[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

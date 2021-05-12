@@ -297,6 +297,47 @@ public class DescribeCaptchaMiniDataSumResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeCaptchaMiniDataSumResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeCaptchaMiniDataSumResponse(DescribeCaptchaMiniDataSumResponse source) {
+        if (source.GetSum != null) {
+            this.GetSum = new Long(source.GetSum);
+        }
+        if (source.VfySuccSum != null) {
+            this.VfySuccSum = new Long(source.VfySuccSum);
+        }
+        if (source.VfySum != null) {
+            this.VfySum = new Long(source.VfySum);
+        }
+        if (source.AttackSum != null) {
+            this.AttackSum = new Long(source.AttackSum);
+        }
+        if (source.CaptchaMsg != null) {
+            this.CaptchaMsg = new String(source.CaptchaMsg);
+        }
+        if (source.CaptchaCode != null) {
+            this.CaptchaCode = new Long(source.CaptchaCode);
+        }
+        if (source.CheckTicketSum != null) {
+            this.CheckTicketSum = new Long(source.CheckTicketSum);
+        }
+        if (source.TicketThroughputSum != null) {
+            this.TicketThroughputSum = new Long(source.TicketThroughputSum);
+        }
+        if (source.TicketInterceptSum != null) {
+            this.TicketInterceptSum = new Long(source.TicketInterceptSum);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

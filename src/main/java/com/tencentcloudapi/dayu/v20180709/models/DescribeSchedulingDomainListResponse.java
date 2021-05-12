@@ -91,6 +91,29 @@ public class DescribeSchedulingDomainListResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeSchedulingDomainListResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeSchedulingDomainListResponse(DescribeSchedulingDomainListResponse source) {
+        if (source.Total != null) {
+            this.Total = new Long(source.Total);
+        }
+        if (source.DomainList != null) {
+            this.DomainList = new SchedulingDomain[source.DomainList.length];
+            for (int i = 0; i < source.DomainList.length; i++) {
+                this.DomainList[i] = new SchedulingDomain(source.DomainList[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

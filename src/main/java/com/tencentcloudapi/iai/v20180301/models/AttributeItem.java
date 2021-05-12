@@ -68,6 +68,23 @@ public class AttributeItem extends AbstractModel{
         this.Probability = Probability;
     }
 
+    public AttributeItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AttributeItem(AttributeItem source) {
+        if (source.Type != null) {
+            this.Type = new Long(source.Type);
+        }
+        if (source.Probability != null) {
+            this.Probability = new Float(source.Probability);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

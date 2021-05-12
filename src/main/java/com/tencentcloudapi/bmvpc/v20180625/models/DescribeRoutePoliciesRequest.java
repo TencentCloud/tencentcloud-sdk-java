@@ -182,6 +182,38 @@ enable - Bool - （过滤条件）路由策略是否启用。
         this.Limit = Limit;
     }
 
+    public DescribeRoutePoliciesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeRoutePoliciesRequest(DescribeRoutePoliciesRequest source) {
+        if (source.RouteTableId != null) {
+            this.RouteTableId = new String(source.RouteTableId);
+        }
+        if (source.RoutePolicyIds != null) {
+            this.RoutePolicyIds = new String[source.RoutePolicyIds.length];
+            for (int i = 0; i < source.RoutePolicyIds.length; i++) {
+                this.RoutePolicyIds[i] = new String(source.RoutePolicyIds[i]);
+            }
+        }
+        if (source.Filters != null) {
+            this.Filters = new Filter[source.Filters.length];
+            for (int i = 0; i < source.Filters.length; i++) {
+                this.Filters[i] = new Filter(source.Filters[i]);
+            }
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -91,6 +91,26 @@ public class ImportImageRequest extends AbstractModel{
         this.SourceRegion = SourceRegion;
     }
 
+    public ImportImageRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ImportImageRequest(ImportImageRequest source) {
+        if (source.ImageId != null) {
+            this.ImageId = new String(source.ImageId);
+        }
+        if (source.ImageDescription != null) {
+            this.ImageDescription = new String(source.ImageDescription);
+        }
+        if (source.SourceRegion != null) {
+            this.SourceRegion = new String(source.SourceRegion);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

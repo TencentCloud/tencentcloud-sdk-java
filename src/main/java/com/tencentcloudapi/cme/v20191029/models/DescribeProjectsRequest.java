@@ -302,6 +302,59 @@ public class DescribeProjectsRequest extends AbstractModel{
         this.Operator = Operator;
     }
 
+    public DescribeProjectsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeProjectsRequest(DescribeProjectsRequest source) {
+        if (source.Platform != null) {
+            this.Platform = new String(source.Platform);
+        }
+        if (source.ProjectIds != null) {
+            this.ProjectIds = new String[source.ProjectIds.length];
+            for (int i = 0; i < source.ProjectIds.length; i++) {
+                this.ProjectIds[i] = new String(source.ProjectIds[i]);
+            }
+        }
+        if (source.AspectRatioSet != null) {
+            this.AspectRatioSet = new String[source.AspectRatioSet.length];
+            for (int i = 0; i < source.AspectRatioSet.length; i++) {
+                this.AspectRatioSet[i] = new String(source.AspectRatioSet[i]);
+            }
+        }
+        if (source.CategorySet != null) {
+            this.CategorySet = new String[source.CategorySet.length];
+            for (int i = 0; i < source.CategorySet.length; i++) {
+                this.CategorySet[i] = new String(source.CategorySet[i]);
+            }
+        }
+        if (source.Modes != null) {
+            this.Modes = new String[source.Modes.length];
+            for (int i = 0; i < source.Modes.length; i++) {
+                this.Modes[i] = new String(source.Modes[i]);
+            }
+        }
+        if (source.Sort != null) {
+            this.Sort = new SortBy(source.Sort);
+        }
+        if (source.Owner != null) {
+            this.Owner = new Entity(source.Owner);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.Operator != null) {
+            this.Operator = new String(source.Operator);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -343,6 +343,53 @@ public class ContentReviewTemplateItem extends AbstractModel{
         this.UpdateTime = UpdateTime;
     }
 
+    public ContentReviewTemplateItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ContentReviewTemplateItem(ContentReviewTemplateItem source) {
+        if (source.Definition != null) {
+            this.Definition = new Long(source.Definition);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Comment != null) {
+            this.Comment = new String(source.Comment);
+        }
+        if (source.PornConfigure != null) {
+            this.PornConfigure = new PornConfigureInfo(source.PornConfigure);
+        }
+        if (source.TerrorismConfigure != null) {
+            this.TerrorismConfigure = new TerrorismConfigureInfo(source.TerrorismConfigure);
+        }
+        if (source.PoliticalConfigure != null) {
+            this.PoliticalConfigure = new PoliticalConfigureInfo(source.PoliticalConfigure);
+        }
+        if (source.ProhibitedConfigure != null) {
+            this.ProhibitedConfigure = new ProhibitedConfigureInfo(source.ProhibitedConfigure);
+        }
+        if (source.UserDefineConfigure != null) {
+            this.UserDefineConfigure = new UserDefineConfigureInfo(source.UserDefineConfigure);
+        }
+        if (source.ReviewWallSwitch != null) {
+            this.ReviewWallSwitch = new String(source.ReviewWallSwitch);
+        }
+        if (source.ScreenshotInterval != null) {
+            this.ScreenshotInterval = new Float(source.ScreenshotInterval);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new String(source.UpdateTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

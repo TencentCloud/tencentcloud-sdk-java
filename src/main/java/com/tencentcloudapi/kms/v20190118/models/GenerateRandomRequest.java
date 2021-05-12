@@ -45,6 +45,20 @@ public class GenerateRandomRequest extends AbstractModel{
         this.NumberOfBytes = NumberOfBytes;
     }
 
+    public GenerateRandomRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GenerateRandomRequest(GenerateRandomRequest source) {
+        if (source.NumberOfBytes != null) {
+            this.NumberOfBytes = new Long(source.NumberOfBytes);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

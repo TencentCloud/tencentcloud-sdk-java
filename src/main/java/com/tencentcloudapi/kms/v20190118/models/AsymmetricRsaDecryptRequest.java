@@ -91,6 +91,26 @@ public class AsymmetricRsaDecryptRequest extends AbstractModel{
         this.Algorithm = Algorithm;
     }
 
+    public AsymmetricRsaDecryptRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AsymmetricRsaDecryptRequest(AsymmetricRsaDecryptRequest source) {
+        if (source.KeyId != null) {
+            this.KeyId = new String(source.KeyId);
+        }
+        if (source.Ciphertext != null) {
+            this.Ciphertext = new String(source.Ciphertext);
+        }
+        if (source.Algorithm != null) {
+            this.Algorithm = new String(source.Algorithm);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

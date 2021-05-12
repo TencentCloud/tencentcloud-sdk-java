@@ -321,6 +321,56 @@ public class BindRelateAcctUnionPayRequest extends AbstractModel{
         this.Profile = Profile;
     }
 
+    public BindRelateAcctUnionPayRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public BindRelateAcctUnionPayRequest(BindRelateAcctUnionPayRequest source) {
+        if (source.TranNetMemberCode != null) {
+            this.TranNetMemberCode = new String(source.TranNetMemberCode);
+        }
+        if (source.MemberName != null) {
+            this.MemberName = new String(source.MemberName);
+        }
+        if (source.MemberGlobalType != null) {
+            this.MemberGlobalType = new String(source.MemberGlobalType);
+        }
+        if (source.MemberGlobalId != null) {
+            this.MemberGlobalId = new String(source.MemberGlobalId);
+        }
+        if (source.MemberAcctNo != null) {
+            this.MemberAcctNo = new String(source.MemberAcctNo);
+        }
+        if (source.BankType != null) {
+            this.BankType = new String(source.BankType);
+        }
+        if (source.AcctOpenBranchName != null) {
+            this.AcctOpenBranchName = new String(source.AcctOpenBranchName);
+        }
+        if (source.Mobile != null) {
+            this.Mobile = new String(source.Mobile);
+        }
+        if (source.MrchCode != null) {
+            this.MrchCode = new String(source.MrchCode);
+        }
+        if (source.CnapsBranchId != null) {
+            this.CnapsBranchId = new String(source.CnapsBranchId);
+        }
+        if (source.EiconBankBranchId != null) {
+            this.EiconBankBranchId = new String(source.EiconBankBranchId);
+        }
+        if (source.ReservedMsg != null) {
+            this.ReservedMsg = new String(source.ReservedMsg);
+        }
+        if (source.Profile != null) {
+            this.Profile = new String(source.Profile);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

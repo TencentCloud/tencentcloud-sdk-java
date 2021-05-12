@@ -160,6 +160,35 @@ public class ReportData extends AbstractModel{
         this.BillingPercentage = BillingPercentage;
     }
 
+    public ReportData() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ReportData(ReportData source) {
+        if (source.ResourceId != null) {
+            this.ResourceId = new String(source.ResourceId);
+        }
+        if (source.Resource != null) {
+            this.Resource = new String(source.Resource);
+        }
+        if (source.Value != null) {
+            this.Value = new Long(source.Value);
+        }
+        if (source.Percentage != null) {
+            this.Percentage = new Float(source.Percentage);
+        }
+        if (source.BillingValue != null) {
+            this.BillingValue = new Long(source.BillingValue);
+        }
+        if (source.BillingPercentage != null) {
+            this.BillingPercentage = new Float(source.BillingPercentage);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

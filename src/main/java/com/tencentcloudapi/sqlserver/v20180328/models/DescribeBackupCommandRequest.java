@@ -114,6 +114,29 @@ public class DescribeBackupCommandRequest extends AbstractModel{
         this.LocalPath = LocalPath;
     }
 
+    public DescribeBackupCommandRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeBackupCommandRequest(DescribeBackupCommandRequest source) {
+        if (source.BackupFileType != null) {
+            this.BackupFileType = new String(source.BackupFileType);
+        }
+        if (source.DataBaseName != null) {
+            this.DataBaseName = new String(source.DataBaseName);
+        }
+        if (source.IsRecovery != null) {
+            this.IsRecovery = new String(source.IsRecovery);
+        }
+        if (source.LocalPath != null) {
+            this.LocalPath = new String(source.LocalPath);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -210,6 +210,38 @@ AccountType是10004时，对应手机号的MD5。
         this.RiskType = RiskType;
     }
 
+    public OutputActivityAntiRushAdvancedValue() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public OutputActivityAntiRushAdvancedValue(OutputActivityAntiRushAdvancedValue source) {
+        if (source.UserId != null) {
+            this.UserId = new String(source.UserId);
+        }
+        if (source.PostTime != null) {
+            this.PostTime = new Long(source.PostTime);
+        }
+        if (source.AssociateAccount != null) {
+            this.AssociateAccount = new String(source.AssociateAccount);
+        }
+        if (source.UserIp != null) {
+            this.UserIp = new String(source.UserIp);
+        }
+        if (source.Level != null) {
+            this.Level = new Long(source.Level);
+        }
+        if (source.RiskType != null) {
+            this.RiskType = new Long[source.RiskType.length];
+            for (int i = 0; i < source.RiskType.length; i++) {
+                this.RiskType[i] = new Long(source.RiskType[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

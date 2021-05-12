@@ -91,6 +91,26 @@ public class UpdateHealthCheckSettingsRequest extends AbstractModel{
         this.HealthCheckSettings = HealthCheckSettings;
     }
 
+    public UpdateHealthCheckSettingsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UpdateHealthCheckSettingsRequest(UpdateHealthCheckSettingsRequest source) {
+        if (source.GroupId != null) {
+            this.GroupId = new String(source.GroupId);
+        }
+        if (source.EnableHealthCheck != null) {
+            this.EnableHealthCheck = new Boolean(source.EnableHealthCheck);
+        }
+        if (source.HealthCheckSettings != null) {
+            this.HealthCheckSettings = new HealthCheckSettings(source.HealthCheckSettings);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

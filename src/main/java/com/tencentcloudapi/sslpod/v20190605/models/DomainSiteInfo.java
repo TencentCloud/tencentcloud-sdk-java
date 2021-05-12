@@ -326,6 +326,59 @@ public class DomainSiteInfo extends AbstractModel{
         this.Port = Port;
     }
 
+    public DomainSiteInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DomainSiteInfo(DomainSiteInfo source) {
+        if (source.Id != null) {
+            this.Id = new Long(source.Id);
+        }
+        if (source.Domain != null) {
+            this.Domain = new String(source.Domain);
+        }
+        if (source.Ip != null) {
+            this.Ip = new String(source.Ip);
+        }
+        if (source.AutoIP != null) {
+            this.AutoIP = new Boolean(source.AutoIP);
+        }
+        if (source.ServerType != null) {
+            this.ServerType = new Long(source.ServerType);
+        }
+        if (source.Brand != null) {
+            this.Brand = new String(source.Brand);
+        }
+        if (source.Grade != null) {
+            this.Grade = new String(source.Grade);
+        }
+        if (source.GradeCode != null) {
+            this.GradeCode = new Long(source.GradeCode);
+        }
+        if (source.Notice != null) {
+            this.Notice = new Boolean(source.Notice);
+        }
+        if (source.AccountDomainId != null) {
+            this.AccountDomainId = new Long(source.AccountDomainId);
+        }
+        if (source.Tags != null) {
+            this.Tags = new String[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new String(source.Tags[i]);
+            }
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.Port != null) {
+            this.Port = new String(source.Port);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

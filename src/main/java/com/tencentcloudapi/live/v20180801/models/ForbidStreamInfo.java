@@ -91,6 +91,26 @@ public class ForbidStreamInfo extends AbstractModel{
         this.ExpireTime = ExpireTime;
     }
 
+    public ForbidStreamInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ForbidStreamInfo(ForbidStreamInfo source) {
+        if (source.StreamName != null) {
+            this.StreamName = new String(source.StreamName);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.ExpireTime != null) {
+            this.ExpireTime = new String(source.ExpireTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

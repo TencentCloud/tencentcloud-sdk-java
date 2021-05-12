@@ -68,6 +68,23 @@ public class ModifyPrometheusTemplateRequest extends AbstractModel{
         this.Template = Template;
     }
 
+    public ModifyPrometheusTemplateRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyPrometheusTemplateRequest(ModifyPrometheusTemplateRequest source) {
+        if (source.TemplateId != null) {
+            this.TemplateId = new String(source.TemplateId);
+        }
+        if (source.Template != null) {
+            this.Template = new PrometheusTemplateModify(source.Template);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

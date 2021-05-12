@@ -134,6 +134,29 @@ public class RechargeRecord extends AbstractModel{
         this.OperateTime = OperateTime;
     }
 
+    public RechargeRecord() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RechargeRecord(RechargeRecord source) {
+        if (source.WaterId != null) {
+            this.WaterId = new Long(source.WaterId);
+        }
+        if (source.BalanceBeforeRecharge != null) {
+            this.BalanceBeforeRecharge = new Long(source.BalanceBeforeRecharge);
+        }
+        if (source.Money != null) {
+            this.Money = new Long(source.Money);
+        }
+        if (source.OperateTime != null) {
+            this.OperateTime = new Long(source.OperateTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

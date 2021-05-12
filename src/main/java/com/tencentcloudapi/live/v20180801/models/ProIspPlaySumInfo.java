@@ -114,6 +114,29 @@ public class ProIspPlaySumInfo extends AbstractModel{
         this.AvgFluxPerSecond = AvgFluxPerSecond;
     }
 
+    public ProIspPlaySumInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ProIspPlaySumInfo(ProIspPlaySumInfo source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.TotalFlux != null) {
+            this.TotalFlux = new Float(source.TotalFlux);
+        }
+        if (source.TotalRequest != null) {
+            this.TotalRequest = new Long(source.TotalRequest);
+        }
+        if (source.AvgFluxPerSecond != null) {
+            this.AvgFluxPerSecond = new Float(source.AvgFluxPerSecond);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

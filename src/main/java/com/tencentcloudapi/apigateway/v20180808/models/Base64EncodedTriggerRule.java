@@ -103,6 +103,26 @@ public class Base64EncodedTriggerRule extends AbstractModel{
         this.Value = Value;
     }
 
+    public Base64EncodedTriggerRule() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Base64EncodedTriggerRule(Base64EncodedTriggerRule source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Value != null) {
+            this.Value = new String[source.Value.length];
+            for (int i = 0; i < source.Value.length; i++) {
+                this.Value[i] = new String(source.Value[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

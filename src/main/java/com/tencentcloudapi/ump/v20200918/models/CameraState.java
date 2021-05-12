@@ -103,6 +103,23 @@ public class CameraState extends AbstractModel{
         this.State = State;
     }
 
+    public CameraState() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CameraState(CameraState source) {
+        if (source.CameraId != null) {
+            this.CameraId = new Long(source.CameraId);
+        }
+        if (source.State != null) {
+            this.State = new Long(source.State);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

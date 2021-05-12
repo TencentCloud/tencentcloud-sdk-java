@@ -114,6 +114,29 @@ public class GetReturnCodeHistoryRequest extends AbstractModel{
         this.Province = Province;
     }
 
+    public GetReturnCodeHistoryRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GetReturnCodeHistoryRequest(GetReturnCodeHistoryRequest source) {
+        if (source.TaskId != null) {
+            this.TaskId = new Long(source.TaskId);
+        }
+        if (source.BeginTime != null) {
+            this.BeginTime = new String(source.BeginTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+        if (source.Province != null) {
+            this.Province = new String(source.Province);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -68,6 +68,23 @@ public class InquiryPriceRenewDisksResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public InquiryPriceRenewDisksResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public InquiryPriceRenewDisksResponse(InquiryPriceRenewDisksResponse source) {
+        if (source.DiskPrice != null) {
+            this.DiskPrice = new PrepayPrice(source.DiskPrice);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

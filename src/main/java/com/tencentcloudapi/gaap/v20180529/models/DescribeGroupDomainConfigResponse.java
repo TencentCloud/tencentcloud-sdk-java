@@ -137,6 +137,35 @@ public class DescribeGroupDomainConfigResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeGroupDomainConfigResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeGroupDomainConfigResponse(DescribeGroupDomainConfigResponse source) {
+        if (source.AccessRegionList != null) {
+            this.AccessRegionList = new DomainAccessRegionDict[source.AccessRegionList.length];
+            for (int i = 0; i < source.AccessRegionList.length; i++) {
+                this.AccessRegionList[i] = new DomainAccessRegionDict(source.AccessRegionList[i]);
+            }
+        }
+        if (source.DefaultDnsIp != null) {
+            this.DefaultDnsIp = new String(source.DefaultDnsIp);
+        }
+        if (source.GroupId != null) {
+            this.GroupId = new String(source.GroupId);
+        }
+        if (source.AccessRegionCount != null) {
+            this.AccessRegionCount = new Long(source.AccessRegionCount);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

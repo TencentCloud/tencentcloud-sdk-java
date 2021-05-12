@@ -68,6 +68,23 @@ public class CosOutputStorage extends AbstractModel{
         this.Region = Region;
     }
 
+    public CosOutputStorage() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CosOutputStorage(CosOutputStorage source) {
+        if (source.Bucket != null) {
+            this.Bucket = new String(source.Bucket);
+        }
+        if (source.Region != null) {
+            this.Region = new String(source.Region);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -206,6 +206,41 @@ public class DescribeOverviewStatisticsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeOverviewStatisticsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeOverviewStatisticsResponse(DescribeOverviewStatisticsResponse source) {
+        if (source.OnlineMachineNum != null) {
+            this.OnlineMachineNum = new Long(source.OnlineMachineNum);
+        }
+        if (source.ProVersionMachineNum != null) {
+            this.ProVersionMachineNum = new Long(source.ProVersionMachineNum);
+        }
+        if (source.MalwareNum != null) {
+            this.MalwareNum = new Long(source.MalwareNum);
+        }
+        if (source.NonlocalLoginNum != null) {
+            this.NonlocalLoginNum = new Long(source.NonlocalLoginNum);
+        }
+        if (source.BruteAttackSuccessNum != null) {
+            this.BruteAttackSuccessNum = new Long(source.BruteAttackSuccessNum);
+        }
+        if (source.VulNum != null) {
+            this.VulNum = new Long(source.VulNum);
+        }
+        if (source.BaseLineNum != null) {
+            this.BaseLineNum = new Long(source.BaseLineNum);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -91,6 +91,29 @@ public class DescribeRealServersResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeRealServersResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeRealServersResponse(DescribeRealServersResponse source) {
+        if (source.RealServerSet != null) {
+            this.RealServerSet = new BindRealServerInfo[source.RealServerSet.length];
+            for (int i = 0; i < source.RealServerSet.length; i++) {
+                this.RealServerSet[i] = new BindRealServerInfo(source.RealServerSet[i]);
+            }
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

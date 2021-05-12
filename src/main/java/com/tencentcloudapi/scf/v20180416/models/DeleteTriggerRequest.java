@@ -160,6 +160,35 @@ public class DeleteTriggerRequest extends AbstractModel{
         this.Qualifier = Qualifier;
     }
 
+    public DeleteTriggerRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteTriggerRequest(DeleteTriggerRequest source) {
+        if (source.FunctionName != null) {
+            this.FunctionName = new String(source.FunctionName);
+        }
+        if (source.TriggerName != null) {
+            this.TriggerName = new String(source.TriggerName);
+        }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.Namespace != null) {
+            this.Namespace = new String(source.Namespace);
+        }
+        if (source.TriggerDesc != null) {
+            this.TriggerDesc = new String(source.TriggerDesc);
+        }
+        if (source.Qualifier != null) {
+            this.Qualifier = new String(source.Qualifier);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

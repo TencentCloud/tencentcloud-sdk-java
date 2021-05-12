@@ -68,6 +68,26 @@ public class DeleteVocabRequest extends AbstractModel{
         this.VocabList = VocabList;
     }
 
+    public DeleteVocabRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteVocabRequest(DeleteVocabRequest source) {
+        if (source.VocabLibName != null) {
+            this.VocabLibName = new String(source.VocabLibName);
+        }
+        if (source.VocabList != null) {
+            this.VocabList = new String[source.VocabList.length];
+            for (int i = 0; i < source.VocabList.length; i++) {
+                this.VocabList[i] = new String(source.VocabList[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

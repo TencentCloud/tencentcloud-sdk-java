@@ -137,6 +137,32 @@ public class QueryExchangerateData extends AbstractModel{
         this.BaseCurrency = BaseCurrency;
     }
 
+    public QueryExchangerateData() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public QueryExchangerateData(QueryExchangerateData source) {
+        if (source.Rate != null) {
+            this.Rate = new String(source.Rate);
+        }
+        if (source.SourceCurrency != null) {
+            this.SourceCurrency = new String(source.SourceCurrency);
+        }
+        if (source.TargetCurrency != null) {
+            this.TargetCurrency = new String(source.TargetCurrency);
+        }
+        if (source.RateTime != null) {
+            this.RateTime = new String(source.RateTime);
+        }
+        if (source.BaseCurrency != null) {
+            this.BaseCurrency = new String(source.BaseCurrency);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

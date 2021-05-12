@@ -114,6 +114,32 @@ public class SnapshotByTimeOffsetTask2017 extends AbstractModel{
         this.SnapshotInfoSet = SnapshotInfoSet;
     }
 
+    public SnapshotByTimeOffsetTask2017() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SnapshotByTimeOffsetTask2017(SnapshotByTimeOffsetTask2017 source) {
+        if (source.TaskId != null) {
+            this.TaskId = new String(source.TaskId);
+        }
+        if (source.FileId != null) {
+            this.FileId = new String(source.FileId);
+        }
+        if (source.Definition != null) {
+            this.Definition = new Long(source.Definition);
+        }
+        if (source.SnapshotInfoSet != null) {
+            this.SnapshotInfoSet = new SnapshotByTimeOffset2017[source.SnapshotInfoSet.length];
+            for (int i = 0; i < source.SnapshotInfoSet.length; i++) {
+                this.SnapshotInfoSet[i] = new SnapshotByTimeOffset2017(source.SnapshotInfoSet[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

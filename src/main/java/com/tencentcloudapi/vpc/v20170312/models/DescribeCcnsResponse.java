@@ -91,6 +91,29 @@ public class DescribeCcnsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeCcnsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeCcnsResponse(DescribeCcnsResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.CcnSet != null) {
+            this.CcnSet = new CCN[source.CcnSet.length];
+            for (int i = 0; i < source.CcnSet.length; i++) {
+                this.CcnSet[i] = new CCN(source.CcnSet[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

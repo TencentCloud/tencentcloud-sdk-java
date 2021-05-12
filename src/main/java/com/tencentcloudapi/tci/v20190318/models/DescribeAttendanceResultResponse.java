@@ -160,6 +160,47 @@ public class DescribeAttendanceResultResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeAttendanceResultResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeAttendanceResultResponse(DescribeAttendanceResultResponse source) {
+        if (source.AbsenceSetInLibs != null) {
+            this.AbsenceSetInLibs = new AbsenceInfo[source.AbsenceSetInLibs.length];
+            for (int i = 0; i < source.AbsenceSetInLibs.length; i++) {
+                this.AbsenceSetInLibs[i] = new AbsenceInfo(source.AbsenceSetInLibs[i]);
+            }
+        }
+        if (source.AttendanceSet != null) {
+            this.AttendanceSet = new AttendanceInfo[source.AttendanceSet.length];
+            for (int i = 0; i < source.AttendanceSet.length; i++) {
+                this.AttendanceSet[i] = new AttendanceInfo(source.AttendanceSet[i]);
+            }
+        }
+        if (source.SuspectedSet != null) {
+            this.SuspectedSet = new SuspectedInfo[source.SuspectedSet.length];
+            for (int i = 0; i < source.SuspectedSet.length; i++) {
+                this.SuspectedSet[i] = new SuspectedInfo(source.SuspectedSet[i]);
+            }
+        }
+        if (source.AbsenceSet != null) {
+            this.AbsenceSet = new String[source.AbsenceSet.length];
+            for (int i = 0; i < source.AbsenceSet.length; i++) {
+                this.AbsenceSet[i] = new String(source.AbsenceSet[i]);
+            }
+        }
+        if (source.Progress != null) {
+            this.Progress = new Long(source.Progress);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -45,6 +45,20 @@ public class ProductMetadata extends AbstractModel{
         this.CreationDate = CreationDate;
     }
 
+    public ProductMetadata() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ProductMetadata(ProductMetadata source) {
+        if (source.CreationDate != null) {
+            this.CreationDate = new Long(source.CreationDate);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -68,6 +68,26 @@ public class CreateLoadBalancerSnatIpsRequest extends AbstractModel{
         this.SnatIps = SnatIps;
     }
 
+    public CreateLoadBalancerSnatIpsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateLoadBalancerSnatIpsRequest(CreateLoadBalancerSnatIpsRequest source) {
+        if (source.LoadBalancerId != null) {
+            this.LoadBalancerId = new String(source.LoadBalancerId);
+        }
+        if (source.SnatIps != null) {
+            this.SnatIps = new SnatIp[source.SnatIps.length];
+            for (int i = 0; i < source.SnatIps.length; i++) {
+                this.SnatIps[i] = new SnatIp(source.SnatIps[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

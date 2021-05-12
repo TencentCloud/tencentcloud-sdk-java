@@ -339,6 +339,44 @@ public class CreateSampleSnapshotTemplateRequest extends AbstractModel{
         this.FillType = FillType;
     }
 
+    public CreateSampleSnapshotTemplateRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateSampleSnapshotTemplateRequest(CreateSampleSnapshotTemplateRequest source) {
+        if (source.SampleType != null) {
+            this.SampleType = new String(source.SampleType);
+        }
+        if (source.SampleInterval != null) {
+            this.SampleInterval = new Long(source.SampleInterval);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Width != null) {
+            this.Width = new Long(source.Width);
+        }
+        if (source.Height != null) {
+            this.Height = new Long(source.Height);
+        }
+        if (source.ResolutionAdaptive != null) {
+            this.ResolutionAdaptive = new String(source.ResolutionAdaptive);
+        }
+        if (source.Format != null) {
+            this.Format = new String(source.Format);
+        }
+        if (source.Comment != null) {
+            this.Comment = new String(source.Comment);
+        }
+        if (source.FillType != null) {
+            this.FillType = new String(source.FillType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

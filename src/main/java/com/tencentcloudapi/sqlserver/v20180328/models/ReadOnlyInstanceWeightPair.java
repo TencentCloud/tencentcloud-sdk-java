@@ -68,6 +68,23 @@ public class ReadOnlyInstanceWeightPair extends AbstractModel{
         this.ReadOnlyWeight = ReadOnlyWeight;
     }
 
+    public ReadOnlyInstanceWeightPair() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ReadOnlyInstanceWeightPair(ReadOnlyInstanceWeightPair source) {
+        if (source.ReadOnlyInstanceId != null) {
+            this.ReadOnlyInstanceId = new String(source.ReadOnlyInstanceId);
+        }
+        if (source.ReadOnlyWeight != null) {
+            this.ReadOnlyWeight = new Long(source.ReadOnlyWeight);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

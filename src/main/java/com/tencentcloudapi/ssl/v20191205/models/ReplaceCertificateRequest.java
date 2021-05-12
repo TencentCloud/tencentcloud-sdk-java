@@ -160,6 +160,35 @@ public class ReplaceCertificateRequest extends AbstractModel{
         this.Reason = Reason;
     }
 
+    public ReplaceCertificateRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ReplaceCertificateRequest(ReplaceCertificateRequest source) {
+        if (source.CertificateId != null) {
+            this.CertificateId = new String(source.CertificateId);
+        }
+        if (source.ValidType != null) {
+            this.ValidType = new String(source.ValidType);
+        }
+        if (source.CsrType != null) {
+            this.CsrType = new String(source.CsrType);
+        }
+        if (source.CsrContent != null) {
+            this.CsrContent = new String(source.CsrContent);
+        }
+        if (source.CsrkeyPassword != null) {
+            this.CsrkeyPassword = new String(source.CsrkeyPassword);
+        }
+        if (source.Reason != null) {
+            this.Reason = new String(source.Reason);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

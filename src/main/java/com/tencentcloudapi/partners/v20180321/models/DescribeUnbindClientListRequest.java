@@ -183,6 +183,38 @@ public class DescribeUnbindClientListRequest extends AbstractModel{
         this.OrderDirection = OrderDirection;
     }
 
+    public DescribeUnbindClientListRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeUnbindClientListRequest(DescribeUnbindClientListRequest source) {
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.UnbindUin != null) {
+            this.UnbindUin = new String(source.UnbindUin);
+        }
+        if (source.ApplyTimeStart != null) {
+            this.ApplyTimeStart = new String(source.ApplyTimeStart);
+        }
+        if (source.ApplyTimeEnd != null) {
+            this.ApplyTimeEnd = new String(source.ApplyTimeEnd);
+        }
+        if (source.OrderDirection != null) {
+            this.OrderDirection = new String(source.OrderDirection);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

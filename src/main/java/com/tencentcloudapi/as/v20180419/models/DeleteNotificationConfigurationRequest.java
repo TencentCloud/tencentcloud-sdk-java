@@ -45,6 +45,20 @@ public class DeleteNotificationConfigurationRequest extends AbstractModel{
         this.AutoScalingNotificationId = AutoScalingNotificationId;
     }
 
+    public DeleteNotificationConfigurationRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteNotificationConfigurationRequest(DeleteNotificationConfigurationRequest source) {
+        if (source.AutoScalingNotificationId != null) {
+            this.AutoScalingNotificationId = new String(source.AutoScalingNotificationId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

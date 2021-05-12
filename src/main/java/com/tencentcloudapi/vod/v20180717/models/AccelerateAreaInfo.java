@@ -111,6 +111,26 @@ public class AccelerateAreaInfo extends AbstractModel{
         this.TencentEdgeDomain = TencentEdgeDomain;
     }
 
+    public AccelerateAreaInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AccelerateAreaInfo(AccelerateAreaInfo source) {
+        if (source.Area != null) {
+            this.Area = new String(source.Area);
+        }
+        if (source.TencentDisableReason != null) {
+            this.TencentDisableReason = new String(source.TencentDisableReason);
+        }
+        if (source.TencentEdgeDomain != null) {
+            this.TencentEdgeDomain = new String(source.TencentEdgeDomain);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

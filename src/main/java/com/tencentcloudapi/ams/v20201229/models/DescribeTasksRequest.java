@@ -137,6 +137,32 @@ public class DescribeTasksRequest extends AbstractModel{
         this.EndTime = EndTime;
     }
 
+    public DescribeTasksRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeTasksRequest(DescribeTasksRequest source) {
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.Filter != null) {
+            this.Filter = new TaskFilter(source.Filter);
+        }
+        if (source.PageToken != null) {
+            this.PageToken = new String(source.PageToken);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

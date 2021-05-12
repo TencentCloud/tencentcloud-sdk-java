@@ -114,6 +114,29 @@ public class RedirectLocalInfo extends AbstractModel{
         this.StderrLocalFileName = StderrLocalFileName;
     }
 
+    public RedirectLocalInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RedirectLocalInfo(RedirectLocalInfo source) {
+        if (source.StdoutLocalPath != null) {
+            this.StdoutLocalPath = new String(source.StdoutLocalPath);
+        }
+        if (source.StderrLocalPath != null) {
+            this.StderrLocalPath = new String(source.StderrLocalPath);
+        }
+        if (source.StdoutLocalFileName != null) {
+            this.StdoutLocalFileName = new String(source.StdoutLocalFileName);
+        }
+        if (source.StderrLocalFileName != null) {
+            this.StderrLocalFileName = new String(source.StderrLocalFileName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

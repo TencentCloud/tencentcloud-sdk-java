@@ -91,6 +91,29 @@ public class DescribeL4BackendsRequest extends AbstractModel{
         this.BackendSet = BackendSet;
     }
 
+    public DescribeL4BackendsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeL4BackendsRequest(DescribeL4BackendsRequest source) {
+        if (source.LoadBalancerId != null) {
+            this.LoadBalancerId = new String(source.LoadBalancerId);
+        }
+        if (source.ListenerId != null) {
+            this.ListenerId = new String(source.ListenerId);
+        }
+        if (source.BackendSet != null) {
+            this.BackendSet = new DescribeL4Backend[source.BackendSet.length];
+            for (int i = 0; i < source.BackendSet.length; i++) {
+                this.BackendSet[i] = new DescribeL4Backend(source.BackendSet[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -160,6 +160,35 @@ public class RebateInfoElem extends AbstractModel{
         this.ExceptionFlag = ExceptionFlag;
     }
 
+    public RebateInfoElem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RebateInfoElem(RebateInfoElem source) {
+        if (source.Uin != null) {
+            this.Uin = new String(source.Uin);
+        }
+        if (source.RebateMonth != null) {
+            this.RebateMonth = new String(source.RebateMonth);
+        }
+        if (source.Amt != null) {
+            this.Amt = new Long(source.Amt);
+        }
+        if (source.MonthSales != null) {
+            this.MonthSales = new Long(source.MonthSales);
+        }
+        if (source.QuarterSales != null) {
+            this.QuarterSales = new Long(source.QuarterSales);
+        }
+        if (source.ExceptionFlag != null) {
+            this.ExceptionFlag = new String(source.ExceptionFlag);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

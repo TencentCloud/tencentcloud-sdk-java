@@ -298,6 +298,53 @@ public class SimultaneousInterpretingRequest extends AbstractModel{
         this.Seq = Seq;
     }
 
+    public SimultaneousInterpretingRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SimultaneousInterpretingRequest(SimultaneousInterpretingRequest source) {
+        if (source.ProjectId != null) {
+            this.ProjectId = new Long(source.ProjectId);
+        }
+        if (source.SubServiceType != null) {
+            this.SubServiceType = new Long(source.SubServiceType);
+        }
+        if (source.RecEngineModelType != null) {
+            this.RecEngineModelType = new String(source.RecEngineModelType);
+        }
+        if (source.Data != null) {
+            this.Data = new String(source.Data);
+        }
+        if (source.DataLen != null) {
+            this.DataLen = new Long(source.DataLen);
+        }
+        if (source.VoiceId != null) {
+            this.VoiceId = new String(source.VoiceId);
+        }
+        if (source.IsEnd != null) {
+            this.IsEnd = new Long(source.IsEnd);
+        }
+        if (source.VoiceFormat != null) {
+            this.VoiceFormat = new Long(source.VoiceFormat);
+        }
+        if (source.OpenTranslate != null) {
+            this.OpenTranslate = new Long(source.OpenTranslate);
+        }
+        if (source.SourceLanguage != null) {
+            this.SourceLanguage = new String(source.SourceLanguage);
+        }
+        if (source.TargetLanguage != null) {
+            this.TargetLanguage = new String(source.TargetLanguage);
+        }
+        if (source.Seq != null) {
+            this.Seq = new Long(source.Seq);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

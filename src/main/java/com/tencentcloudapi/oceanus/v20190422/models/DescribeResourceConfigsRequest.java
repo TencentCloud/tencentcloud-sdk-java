@@ -160,6 +160,38 @@ public class DescribeResourceConfigsRequest extends AbstractModel{
         this.JobId = JobId;
     }
 
+    public DescribeResourceConfigsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeResourceConfigsRequest(DescribeResourceConfigsRequest source) {
+        if (source.ResourceId != null) {
+            this.ResourceId = new String(source.ResourceId);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.ResourceConfigVersions != null) {
+            this.ResourceConfigVersions = new Long[source.ResourceConfigVersions.length];
+            for (int i = 0; i < source.ResourceConfigVersions.length; i++) {
+                this.ResourceConfigVersions[i] = new Long(source.ResourceConfigVersions[i]);
+            }
+        }
+        if (source.JobConfigVersion != null) {
+            this.JobConfigVersion = new Long(source.JobConfigVersion);
+        }
+        if (source.JobId != null) {
+            this.JobId = new String(source.JobId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

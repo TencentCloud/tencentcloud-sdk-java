@@ -78,6 +78,23 @@ public class ParseStreamingManifestRequest extends AbstractModel{
         this.ManifestType = ManifestType;
     }
 
+    public ParseStreamingManifestRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ParseStreamingManifestRequest(ParseStreamingManifestRequest source) {
+        if (source.MediaManifestContent != null) {
+            this.MediaManifestContent = new String(source.MediaManifestContent);
+        }
+        if (source.ManifestType != null) {
+            this.ManifestType = new String(source.ManifestType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

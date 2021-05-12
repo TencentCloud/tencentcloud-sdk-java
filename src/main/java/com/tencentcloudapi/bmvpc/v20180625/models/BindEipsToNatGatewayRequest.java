@@ -114,6 +114,32 @@ public class BindEipsToNatGatewayRequest extends AbstractModel{
         this.AutoAllocEipNum = AutoAllocEipNum;
     }
 
+    public BindEipsToNatGatewayRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public BindEipsToNatGatewayRequest(BindEipsToNatGatewayRequest source) {
+        if (source.NatId != null) {
+            this.NatId = new String(source.NatId);
+        }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.AssignedEips != null) {
+            this.AssignedEips = new String[source.AssignedEips.length];
+            for (int i = 0; i < source.AssignedEips.length; i++) {
+                this.AssignedEips[i] = new String(source.AssignedEips[i]);
+            }
+        }
+        if (source.AutoAllocEipNum != null) {
+            this.AutoAllocEipNum = new Long(source.AutoAllocEipNum);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

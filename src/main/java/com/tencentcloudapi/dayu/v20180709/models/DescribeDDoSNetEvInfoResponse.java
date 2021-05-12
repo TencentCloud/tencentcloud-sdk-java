@@ -413,6 +413,71 @@ public class DescribeDDoSNetEvInfoResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeDDoSNetEvInfoResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeDDoSNetEvInfoResponse(DescribeDDoSNetEvInfoResponse source) {
+        if (source.Business != null) {
+            this.Business = new String(source.Business);
+        }
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+        if (source.TcpPacketSum != null) {
+            this.TcpPacketSum = new Long(source.TcpPacketSum);
+        }
+        if (source.TcpKBSum != null) {
+            this.TcpKBSum = new Long(source.TcpKBSum);
+        }
+        if (source.UdpPacketSum != null) {
+            this.UdpPacketSum = new Long(source.UdpPacketSum);
+        }
+        if (source.UdpKBSum != null) {
+            this.UdpKBSum = new Long(source.UdpKBSum);
+        }
+        if (source.IcmpPacketSum != null) {
+            this.IcmpPacketSum = new Long(source.IcmpPacketSum);
+        }
+        if (source.IcmpKBSum != null) {
+            this.IcmpKBSum = new Long(source.IcmpKBSum);
+        }
+        if (source.OtherPacketSum != null) {
+            this.OtherPacketSum = new Long(source.OtherPacketSum);
+        }
+        if (source.OtherKBSum != null) {
+            this.OtherKBSum = new Long(source.OtherKBSum);
+        }
+        if (source.TotalTraffic != null) {
+            this.TotalTraffic = new Long(source.TotalTraffic);
+        }
+        if (source.Mbps != null) {
+            this.Mbps = new Long(source.Mbps);
+        }
+        if (source.Pps != null) {
+            this.Pps = new Long(source.Pps);
+        }
+        if (source.PcapUrl != null) {
+            this.PcapUrl = new String[source.PcapUrl.length];
+            for (int i = 0; i < source.PcapUrl.length; i++) {
+                this.PcapUrl[i] = new String(source.PcapUrl[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -45,6 +45,20 @@ public class CreateRestoreTasksResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public CreateRestoreTasksResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateRestoreTasksResponse(CreateRestoreTasksResponse source) {
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

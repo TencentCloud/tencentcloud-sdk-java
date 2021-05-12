@@ -106,6 +106,35 @@ public class Internet extends AbstractModel{
         this.InstanceNetworkInfoSet = InstanceNetworkInfoSet;
     }
 
+    public Internet() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Internet(Internet source) {
+        if (source.PrivateIPAddressSet != null) {
+            this.PrivateIPAddressSet = new PrivateIPAddressInfo[source.PrivateIPAddressSet.length];
+            for (int i = 0; i < source.PrivateIPAddressSet.length; i++) {
+                this.PrivateIPAddressSet[i] = new PrivateIPAddressInfo(source.PrivateIPAddressSet[i]);
+            }
+        }
+        if (source.PublicIPAddressSet != null) {
+            this.PublicIPAddressSet = new PublicIPAddressInfo[source.PublicIPAddressSet.length];
+            for (int i = 0; i < source.PublicIPAddressSet.length; i++) {
+                this.PublicIPAddressSet[i] = new PublicIPAddressInfo(source.PublicIPAddressSet[i]);
+            }
+        }
+        if (source.InstanceNetworkInfoSet != null) {
+            this.InstanceNetworkInfoSet = new InstanceNetworkInfo[source.InstanceNetworkInfoSet.length];
+            for (int i = 0; i < source.InstanceNetworkInfoSet.length; i++) {
+                this.InstanceNetworkInfoSet[i] = new InstanceNetworkInfo(source.InstanceNetworkInfoSet[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

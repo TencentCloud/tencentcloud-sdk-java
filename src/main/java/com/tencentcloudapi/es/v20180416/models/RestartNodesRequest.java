@@ -91,6 +91,29 @@ public class RestartNodesRequest extends AbstractModel{
         this.ForceRestart = ForceRestart;
     }
 
+    public RestartNodesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RestartNodesRequest(RestartNodesRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.NodeNames != null) {
+            this.NodeNames = new String[source.NodeNames.length];
+            for (int i = 0; i < source.NodeNames.length; i++) {
+                this.NodeNames[i] = new String(source.NodeNames[i]);
+            }
+        }
+        if (source.ForceRestart != null) {
+            this.ForceRestart = new Boolean(source.ForceRestart);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

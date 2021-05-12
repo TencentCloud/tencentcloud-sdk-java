@@ -114,6 +114,29 @@ public class AssociateAddressRequest extends AbstractModel{
         this.PrivateIpAddress = PrivateIpAddress;
     }
 
+    public AssociateAddressRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AssociateAddressRequest(AssociateAddressRequest source) {
+        if (source.AddressId != null) {
+            this.AddressId = new String(source.AddressId);
+        }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.NetworkInterfaceId != null) {
+            this.NetworkInterfaceId = new String(source.NetworkInterfaceId);
+        }
+        if (source.PrivateIpAddress != null) {
+            this.PrivateIpAddress = new String(source.PrivateIpAddress);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -91,6 +91,29 @@ public class DescribeSalesmansResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeSalesmansResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeSalesmansResponse(DescribeSalesmansResponse source) {
+        if (source.AgentSalesmanSet != null) {
+            this.AgentSalesmanSet = new AgentSalesmanElem[source.AgentSalesmanSet.length];
+            for (int i = 0; i < source.AgentSalesmanSet.length; i++) {
+                this.AgentSalesmanSet[i] = new AgentSalesmanElem(source.AgentSalesmanSet[i]);
+            }
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -179,6 +179,29 @@ public class DescribeCaptchaMiniRiskResultResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeCaptchaMiniRiskResultResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeCaptchaMiniRiskResultResponse(DescribeCaptchaMiniRiskResultResponse source) {
+        if (source.CaptchaCode != null) {
+            this.CaptchaCode = new Long(source.CaptchaCode);
+        }
+        if (source.CaptchaMsg != null) {
+            this.CaptchaMsg = new String(source.CaptchaMsg);
+        }
+        if (source.ManageMarketingRiskValue != null) {
+            this.ManageMarketingRiskValue = new OutputManageMarketingRiskValue(source.ManageMarketingRiskValue);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

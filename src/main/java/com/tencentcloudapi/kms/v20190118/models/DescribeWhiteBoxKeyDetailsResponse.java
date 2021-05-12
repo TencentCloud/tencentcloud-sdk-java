@@ -96,6 +96,29 @@ public class DescribeWhiteBoxKeyDetailsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeWhiteBoxKeyDetailsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeWhiteBoxKeyDetailsResponse(DescribeWhiteBoxKeyDetailsResponse source) {
+        if (source.KeyInfos != null) {
+            this.KeyInfos = new WhiteboxKeyInfo[source.KeyInfos.length];
+            for (int i = 0; i < source.KeyInfos.length; i++) {
+                this.KeyInfos[i] = new WhiteboxKeyInfo(source.KeyInfos[i]);
+            }
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

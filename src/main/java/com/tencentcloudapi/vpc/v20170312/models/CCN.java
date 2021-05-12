@@ -285,6 +285,53 @@ public class CCN extends AbstractModel{
         this.RoutePriorityFlag = RoutePriorityFlag;
     }
 
+    public CCN() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CCN(CCN source) {
+        if (source.CcnId != null) {
+            this.CcnId = new String(source.CcnId);
+        }
+        if (source.CcnName != null) {
+            this.CcnName = new String(source.CcnName);
+        }
+        if (source.CcnDescription != null) {
+            this.CcnDescription = new String(source.CcnDescription);
+        }
+        if (source.InstanceCount != null) {
+            this.InstanceCount = new Long(source.InstanceCount);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.State != null) {
+            this.State = new String(source.State);
+        }
+        if (source.QosLevel != null) {
+            this.QosLevel = new String(source.QosLevel);
+        }
+        if (source.InstanceChargeType != null) {
+            this.InstanceChargeType = new String(source.InstanceChargeType);
+        }
+        if (source.BandwidthLimitType != null) {
+            this.BandwidthLimitType = new String(source.BandwidthLimitType);
+        }
+        if (source.TagSet != null) {
+            this.TagSet = new Tag[source.TagSet.length];
+            for (int i = 0; i < source.TagSet.length; i++) {
+                this.TagSet[i] = new Tag(source.TagSet[i]);
+            }
+        }
+        if (source.RoutePriorityFlag != null) {
+            this.RoutePriorityFlag = new Boolean(source.RoutePriorityFlag);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

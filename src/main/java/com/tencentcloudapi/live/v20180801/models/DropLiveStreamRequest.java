@@ -91,6 +91,26 @@ public class DropLiveStreamRequest extends AbstractModel{
         this.AppName = AppName;
     }
 
+    public DropLiveStreamRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DropLiveStreamRequest(DropLiveStreamRequest source) {
+        if (source.StreamName != null) {
+            this.StreamName = new String(source.StreamName);
+        }
+        if (source.DomainName != null) {
+            this.DomainName = new String(source.DomainName);
+        }
+        if (source.AppName != null) {
+            this.AppName = new String(source.AppName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

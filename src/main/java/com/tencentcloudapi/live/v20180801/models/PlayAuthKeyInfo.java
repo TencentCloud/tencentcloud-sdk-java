@@ -147,6 +147,32 @@ public class PlayAuthKeyInfo extends AbstractModel{
         this.AuthBackKey = AuthBackKey;
     }
 
+    public PlayAuthKeyInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PlayAuthKeyInfo(PlayAuthKeyInfo source) {
+        if (source.DomainName != null) {
+            this.DomainName = new String(source.DomainName);
+        }
+        if (source.Enable != null) {
+            this.Enable = new Long(source.Enable);
+        }
+        if (source.AuthKey != null) {
+            this.AuthKey = new String(source.AuthKey);
+        }
+        if (source.AuthDelta != null) {
+            this.AuthDelta = new Long(source.AuthDelta);
+        }
+        if (source.AuthBackKey != null) {
+            this.AuthBackKey = new String(source.AuthBackKey);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

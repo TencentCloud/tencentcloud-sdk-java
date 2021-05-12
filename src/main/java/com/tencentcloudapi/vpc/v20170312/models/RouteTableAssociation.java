@@ -68,6 +68,23 @@ public class RouteTableAssociation extends AbstractModel{
         this.RouteTableId = RouteTableId;
     }
 
+    public RouteTableAssociation() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RouteTableAssociation(RouteTableAssociation source) {
+        if (source.SubnetId != null) {
+            this.SubnetId = new String(source.SubnetId);
+        }
+        if (source.RouteTableId != null) {
+            this.RouteTableId = new String(source.RouteTableId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

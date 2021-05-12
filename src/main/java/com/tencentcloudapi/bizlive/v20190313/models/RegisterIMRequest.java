@@ -114,6 +114,29 @@ public class RegisterIMRequest extends AbstractModel{
         this.Level = Level;
     }
 
+    public RegisterIMRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RegisterIMRequest(RegisterIMRequest source) {
+        if (source.Nickname != null) {
+            this.Nickname = new String(source.Nickname);
+        }
+        if (source.UserId != null) {
+            this.UserId = new String(source.UserId);
+        }
+        if (source.HeadImgUrl != null) {
+            this.HeadImgUrl = new String(source.HeadImgUrl);
+        }
+        if (source.Level != null) {
+            this.Level = new Long(source.Level);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

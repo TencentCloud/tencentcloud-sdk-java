@@ -206,6 +206,50 @@ public class DescribeExistedInstancesRequest extends AbstractModel{
         this.IpAddresses = IpAddresses;
     }
 
+    public DescribeExistedInstancesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeExistedInstancesRequest(DescribeExistedInstancesRequest source) {
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
+        if (source.InstanceIds != null) {
+            this.InstanceIds = new String[source.InstanceIds.length];
+            for (int i = 0; i < source.InstanceIds.length; i++) {
+                this.InstanceIds[i] = new String(source.InstanceIds[i]);
+            }
+        }
+        if (source.Filters != null) {
+            this.Filters = new Filter[source.Filters.length];
+            for (int i = 0; i < source.Filters.length; i++) {
+                this.Filters[i] = new Filter(source.Filters[i]);
+            }
+        }
+        if (source.VagueIpAddress != null) {
+            this.VagueIpAddress = new String(source.VagueIpAddress);
+        }
+        if (source.VagueInstanceName != null) {
+            this.VagueInstanceName = new String(source.VagueInstanceName);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.IpAddresses != null) {
+            this.IpAddresses = new String[source.IpAddresses.length];
+            for (int i = 0; i < source.IpAddresses.length; i++) {
+                this.IpAddresses[i] = new String(source.IpAddresses[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

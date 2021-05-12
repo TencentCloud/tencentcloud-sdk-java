@@ -68,6 +68,23 @@ public class ModifyRouteTableRequest extends AbstractModel{
         this.RouteTableName = RouteTableName;
     }
 
+    public ModifyRouteTableRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyRouteTableRequest(ModifyRouteTableRequest source) {
+        if (source.RouteTableId != null) {
+            this.RouteTableId = new String(source.RouteTableId);
+        }
+        if (source.RouteTableName != null) {
+            this.RouteTableName = new String(source.RouteTableName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -68,6 +68,23 @@ public class DescribeDatabaseObjectsRequest extends AbstractModel{
         this.DbName = DbName;
     }
 
+    public DescribeDatabaseObjectsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeDatabaseObjectsRequest(DescribeDatabaseObjectsRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.DbName != null) {
+            this.DbName = new String(source.DbName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -45,6 +45,20 @@ public class ModifyIpv6AddressesAttributeResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public ModifyIpv6AddressesAttributeResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyIpv6AddressesAttributeResponse(ModifyIpv6AddressesAttributeResponse source) {
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

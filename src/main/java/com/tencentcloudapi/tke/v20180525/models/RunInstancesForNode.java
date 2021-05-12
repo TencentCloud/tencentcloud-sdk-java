@@ -91,6 +91,32 @@ public class RunInstancesForNode extends AbstractModel{
         this.InstanceAdvancedSettingsOverrides = InstanceAdvancedSettingsOverrides;
     }
 
+    public RunInstancesForNode() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RunInstancesForNode(RunInstancesForNode source) {
+        if (source.NodeRole != null) {
+            this.NodeRole = new String(source.NodeRole);
+        }
+        if (source.RunInstancesPara != null) {
+            this.RunInstancesPara = new String[source.RunInstancesPara.length];
+            for (int i = 0; i < source.RunInstancesPara.length; i++) {
+                this.RunInstancesPara[i] = new String(source.RunInstancesPara[i]);
+            }
+        }
+        if (source.InstanceAdvancedSettingsOverrides != null) {
+            this.InstanceAdvancedSettingsOverrides = new InstanceAdvancedSettings[source.InstanceAdvancedSettingsOverrides.length];
+            for (int i = 0; i < source.InstanceAdvancedSettingsOverrides.length; i++) {
+                this.InstanceAdvancedSettingsOverrides[i] = new InstanceAdvancedSettings(source.InstanceAdvancedSettingsOverrides[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

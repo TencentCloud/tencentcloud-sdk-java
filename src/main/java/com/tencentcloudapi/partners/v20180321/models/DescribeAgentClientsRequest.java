@@ -206,6 +206,41 @@ public class DescribeAgentClientsRequest extends AbstractModel{
         this.SalesName = SalesName;
     }
 
+    public DescribeAgentClientsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeAgentClientsRequest(DescribeAgentClientsRequest source) {
+        if (source.ClientUin != null) {
+            this.ClientUin = new String(source.ClientUin);
+        }
+        if (source.ClientName != null) {
+            this.ClientName = new String(source.ClientName);
+        }
+        if (source.ClientFlag != null) {
+            this.ClientFlag = new String(source.ClientFlag);
+        }
+        if (source.OrderDirection != null) {
+            this.OrderDirection = new String(source.OrderDirection);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.SalesUin != null) {
+            this.SalesUin = new String(source.SalesUin);
+        }
+        if (source.SalesName != null) {
+            this.SalesName = new String(source.SalesName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

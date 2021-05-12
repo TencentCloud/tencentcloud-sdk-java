@@ -68,6 +68,23 @@ public class CreateNetworkAclRequest extends AbstractModel{
         this.NetworkAclName = NetworkAclName;
     }
 
+    public CreateNetworkAclRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateNetworkAclRequest(CreateNetworkAclRequest source) {
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.NetworkAclName != null) {
+            this.NetworkAclName = new String(source.NetworkAclName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -91,6 +91,29 @@ public class MediaSnapshotByTimePicInfoItem extends AbstractModel{
         this.WaterMarkDefinition = WaterMarkDefinition;
     }
 
+    public MediaSnapshotByTimePicInfoItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MediaSnapshotByTimePicInfoItem(MediaSnapshotByTimePicInfoItem source) {
+        if (source.TimeOffset != null) {
+            this.TimeOffset = new Float(source.TimeOffset);
+        }
+        if (source.Path != null) {
+            this.Path = new String(source.Path);
+        }
+        if (source.WaterMarkDefinition != null) {
+            this.WaterMarkDefinition = new Long[source.WaterMarkDefinition.length];
+            for (int i = 0; i < source.WaterMarkDefinition.length; i++) {
+                this.WaterMarkDefinition[i] = new Long(source.WaterMarkDefinition[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

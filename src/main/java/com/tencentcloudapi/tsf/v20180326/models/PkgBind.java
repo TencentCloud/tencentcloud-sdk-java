@@ -78,6 +78,23 @@ public class PkgBind extends AbstractModel{
         this.GroupId = GroupId;
     }
 
+    public PkgBind() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PkgBind(PkgBind source) {
+        if (source.ApplicationId != null) {
+            this.ApplicationId = new String(source.ApplicationId);
+        }
+        if (source.GroupId != null) {
+            this.GroupId = new String(source.GroupId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

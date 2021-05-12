@@ -554,6 +554,77 @@ public class ServerlessGroup extends AbstractModel{
         this.ApplicationName = ApplicationName;
     }
 
+    public ServerlessGroup() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ServerlessGroup(ServerlessGroup source) {
+        if (source.GroupId != null) {
+            this.GroupId = new String(source.GroupId);
+        }
+        if (source.GroupName != null) {
+            this.GroupName = new String(source.GroupName);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.PkgId != null) {
+            this.PkgId = new String(source.PkgId);
+        }
+        if (source.PkgName != null) {
+            this.PkgName = new String(source.PkgName);
+        }
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
+        if (source.ClusterName != null) {
+            this.ClusterName = new String(source.ClusterName);
+        }
+        if (source.NamespaceId != null) {
+            this.NamespaceId = new String(source.NamespaceId);
+        }
+        if (source.NamespaceName != null) {
+            this.NamespaceName = new String(source.NamespaceName);
+        }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.SubnetId != null) {
+            this.SubnetId = new String(source.SubnetId);
+        }
+        if (source.PkgVersion != null) {
+            this.PkgVersion = new String(source.PkgVersion);
+        }
+        if (source.Memory != null) {
+            this.Memory = new String(source.Memory);
+        }
+        if (source.InstanceRequest != null) {
+            this.InstanceRequest = new Long(source.InstanceRequest);
+        }
+        if (source.StartupParameters != null) {
+            this.StartupParameters = new String(source.StartupParameters);
+        }
+        if (source.ApplicationId != null) {
+            this.ApplicationId = new String(source.ApplicationId);
+        }
+        if (source.InstanceCount != null) {
+            this.InstanceCount = new Long(source.InstanceCount);
+        }
+        if (source.ApplicationName != null) {
+            this.ApplicationName = new String[source.ApplicationName.length];
+            for (int i = 0; i < source.ApplicationName.length; i++) {
+                this.ApplicationName[i] = new String(source.ApplicationName[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

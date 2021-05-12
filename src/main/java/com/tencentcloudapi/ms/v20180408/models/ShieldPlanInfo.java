@@ -68,6 +68,26 @@ public class ShieldPlanInfo extends AbstractModel{
         this.PlanSet = PlanSet;
     }
 
+    public ShieldPlanInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ShieldPlanInfo(ShieldPlanInfo source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.PlanSet != null) {
+            this.PlanSet = new PlanDetailInfo[source.PlanSet.length];
+            for (int i = 0; i < source.PlanSet.length; i++) {
+                this.PlanSet[i] = new PlanDetailInfo(source.PlanSet[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

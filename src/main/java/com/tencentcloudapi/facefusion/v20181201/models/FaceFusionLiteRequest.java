@@ -160,6 +160,38 @@ public class FaceFusionLiteRequest extends AbstractModel{
         this.Engine = Engine;
     }
 
+    public FaceFusionLiteRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public FaceFusionLiteRequest(FaceFusionLiteRequest source) {
+        if (source.ProjectId != null) {
+            this.ProjectId = new String(source.ProjectId);
+        }
+        if (source.ModelId != null) {
+            this.ModelId = new String(source.ModelId);
+        }
+        if (source.MergeInfos != null) {
+            this.MergeInfos = new MergeInfo[source.MergeInfos.length];
+            for (int i = 0; i < source.MergeInfos.length; i++) {
+                this.MergeInfos[i] = new MergeInfo(source.MergeInfos[i]);
+            }
+        }
+        if (source.RspImgType != null) {
+            this.RspImgType = new String(source.RspImgType);
+        }
+        if (source.CelebrityIdentify != null) {
+            this.CelebrityIdentify = new Long(source.CelebrityIdentify);
+        }
+        if (source.Engine != null) {
+            this.Engine = new String(source.Engine);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

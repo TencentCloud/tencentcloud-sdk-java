@@ -91,6 +91,29 @@ public class DescribeAlarmTopicResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeAlarmTopicResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeAlarmTopicResponse(DescribeAlarmTopicResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.Topics != null) {
+            this.Topics = new AlarmTopic[source.Topics.length];
+            for (int i = 0; i < source.Topics.length; i++) {
+                this.Topics[i] = new AlarmTopic(source.Topics[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

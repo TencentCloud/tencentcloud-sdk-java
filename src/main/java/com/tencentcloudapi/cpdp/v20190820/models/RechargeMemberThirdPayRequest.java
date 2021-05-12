@@ -382,6 +382,62 @@ public class RechargeMemberThirdPayRequest extends AbstractModel{
         this.Profile = Profile;
     }
 
+    public RechargeMemberThirdPayRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RechargeMemberThirdPayRequest(RechargeMemberThirdPayRequest source) {
+        if (source.TranNetMemberCode != null) {
+            this.TranNetMemberCode = new String(source.TranNetMemberCode);
+        }
+        if (source.MemberFillAmt != null) {
+            this.MemberFillAmt = new String(source.MemberFillAmt);
+        }
+        if (source.Commission != null) {
+            this.Commission = new String(source.Commission);
+        }
+        if (source.Ccy != null) {
+            this.Ccy = new String(source.Ccy);
+        }
+        if (source.PayChannelType != null) {
+            this.PayChannelType = new String(source.PayChannelType);
+        }
+        if (source.PayChannelAssignMerNo != null) {
+            this.PayChannelAssignMerNo = new String(source.PayChannelAssignMerNo);
+        }
+        if (source.PayChannelTranSeqNo != null) {
+            this.PayChannelTranSeqNo = new String(source.PayChannelTranSeqNo);
+        }
+        if (source.EjzbOrderNo != null) {
+            this.EjzbOrderNo = new String(source.EjzbOrderNo);
+        }
+        if (source.MrchCode != null) {
+            this.MrchCode = new String(source.MrchCode);
+        }
+        if (source.EjzbOrderContent != null) {
+            this.EjzbOrderContent = new String(source.EjzbOrderContent);
+        }
+        if (source.Remark != null) {
+            this.Remark = new String(source.Remark);
+        }
+        if (source.ReservedMsgOne != null) {
+            this.ReservedMsgOne = new String(source.ReservedMsgOne);
+        }
+        if (source.ReservedMsgTwo != null) {
+            this.ReservedMsgTwo = new String(source.ReservedMsgTwo);
+        }
+        if (source.ReservedMsgThree != null) {
+            this.ReservedMsgThree = new String(source.ReservedMsgThree);
+        }
+        if (source.Profile != null) {
+            this.Profile = new String(source.Profile);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

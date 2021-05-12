@@ -230,6 +230,35 @@ bandwidth：带宽计费
         this.RequestId = RequestId;
     }
 
+    public DescribePayTypeResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribePayTypeResponse(DescribePayTypeResponse source) {
+        if (source.PayType != null) {
+            this.PayType = new String(source.PayType);
+        }
+        if (source.BillingCycle != null) {
+            this.BillingCycle = new String(source.BillingCycle);
+        }
+        if (source.StatType != null) {
+            this.StatType = new String(source.StatType);
+        }
+        if (source.RegionType != null) {
+            this.RegionType = new String(source.RegionType);
+        }
+        if (source.CurrentPayType != null) {
+            this.CurrentPayType = new String(source.CurrentPayType);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

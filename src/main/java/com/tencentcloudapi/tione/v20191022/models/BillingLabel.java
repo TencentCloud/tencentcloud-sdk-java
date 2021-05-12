@@ -111,6 +111,26 @@ Computing: 计算和存储都计费
         this.Status = Status;
     }
 
+    public BillingLabel() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public BillingLabel(BillingLabel source) {
+        if (source.Label != null) {
+            this.Label = new String(source.Label);
+        }
+        if (source.VolumeSize != null) {
+            this.VolumeSize = new Long(source.VolumeSize);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

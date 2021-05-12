@@ -78,6 +78,23 @@ public class Labels extends AbstractModel{
         this.SecondLabel = SecondLabel;
     }
 
+    public Labels() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Labels(Labels source) {
+        if (source.FirstLabel != null) {
+            this.FirstLabel = new String(source.FirstLabel);
+        }
+        if (source.SecondLabel != null) {
+            this.SecondLabel = new String(source.SecondLabel);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

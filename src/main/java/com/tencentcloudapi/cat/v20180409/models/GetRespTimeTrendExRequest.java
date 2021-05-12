@@ -137,6 +137,32 @@ public class GetRespTimeTrendExRequest extends AbstractModel{
         this.MetricName = MetricName;
     }
 
+    public GetRespTimeTrendExRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GetRespTimeTrendExRequest(GetRespTimeTrendExRequest source) {
+        if (source.TaskId != null) {
+            this.TaskId = new Long(source.TaskId);
+        }
+        if (source.Date != null) {
+            this.Date = new String(source.Date);
+        }
+        if (source.Period != null) {
+            this.Period = new Long(source.Period);
+        }
+        if (source.Dimensions != null) {
+            this.Dimensions = new DimensionsDetail(source.Dimensions);
+        }
+        if (source.MetricName != null) {
+            this.MetricName = new String(source.MetricName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

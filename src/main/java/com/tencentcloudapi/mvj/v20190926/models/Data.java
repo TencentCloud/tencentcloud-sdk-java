@@ -134,6 +134,29 @@ accountType不同对应不同的用户ID。如果是QQ或微信用户则填入�
         this.ValueScore = ValueScore;
     }
 
+    public Data() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Data(Data source) {
+        if (source.PostTime != null) {
+            this.PostTime = new Long(source.PostTime);
+        }
+        if (source.Uid != null) {
+            this.Uid = new String(source.Uid);
+        }
+        if (source.UserIp != null) {
+            this.UserIp = new String(source.UserIp);
+        }
+        if (source.ValueScore != null) {
+            this.ValueScore = new Long(source.ValueScore);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

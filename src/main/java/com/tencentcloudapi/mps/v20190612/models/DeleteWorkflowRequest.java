@@ -45,6 +45,20 @@ public class DeleteWorkflowRequest extends AbstractModel{
         this.WorkflowId = WorkflowId;
     }
 
+    public DeleteWorkflowRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteWorkflowRequest(DeleteWorkflowRequest source) {
+        if (source.WorkflowId != null) {
+            this.WorkflowId = new Long(source.WorkflowId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

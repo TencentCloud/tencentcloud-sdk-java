@@ -114,6 +114,29 @@ public class AssumeRoleWithSAMLResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public AssumeRoleWithSAMLResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AssumeRoleWithSAMLResponse(AssumeRoleWithSAMLResponse source) {
+        if (source.Credentials != null) {
+            this.Credentials = new Credentials(source.Credentials);
+        }
+        if (source.ExpiredTime != null) {
+            this.ExpiredTime = new Long(source.ExpiredTime);
+        }
+        if (source.Expiration != null) {
+            this.Expiration = new String(source.Expiration);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

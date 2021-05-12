@@ -68,6 +68,26 @@ public class DescribeGroupInfoRequest extends AbstractModel{
         this.GroupList = GroupList;
     }
 
+    public DescribeGroupInfoRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeGroupInfoRequest(DescribeGroupInfoRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.GroupList != null) {
+            this.GroupList = new String[source.GroupList.length];
+            for (int i = 0; i < source.GroupList.length; i++) {
+                this.GroupList[i] = new String(source.GroupList[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

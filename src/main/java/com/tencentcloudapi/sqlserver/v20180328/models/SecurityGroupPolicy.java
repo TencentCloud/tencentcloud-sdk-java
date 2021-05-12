@@ -137,6 +137,32 @@ public class SecurityGroupPolicy extends AbstractModel{
         this.Dir = Dir;
     }
 
+    public SecurityGroupPolicy() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SecurityGroupPolicy(SecurityGroupPolicy source) {
+        if (source.Action != null) {
+            this.Action = new String(source.Action);
+        }
+        if (source.CidrIp != null) {
+            this.CidrIp = new String(source.CidrIp);
+        }
+        if (source.PortRange != null) {
+            this.PortRange = new String(source.PortRange);
+        }
+        if (source.IpProtocol != null) {
+            this.IpProtocol = new String(source.IpProtocol);
+        }
+        if (source.Dir != null) {
+            this.Dir = new String(source.Dir);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

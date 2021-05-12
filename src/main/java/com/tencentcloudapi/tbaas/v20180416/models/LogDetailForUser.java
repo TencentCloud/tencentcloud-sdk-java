@@ -68,6 +68,23 @@ public class LogDetailForUser extends AbstractModel{
         this.LogMessage = LogMessage;
     }
 
+    public LogDetailForUser() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public LogDetailForUser(LogDetailForUser source) {
+        if (source.LineNumber != null) {
+            this.LineNumber = new Long(source.LineNumber);
+        }
+        if (source.LogMessage != null) {
+            this.LogMessage = new String(source.LogMessage);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -206,6 +206,41 @@ public class UserCmd extends AbstractModel{
         this.OsType = OsType;
     }
 
+    public UserCmd() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UserCmd(UserCmd source) {
+        if (source.Alias != null) {
+            this.Alias = new String(source.Alias);
+        }
+        if (source.AppId != null) {
+            this.AppId = new Long(source.AppId);
+        }
+        if (source.AutoId != null) {
+            this.AutoId = new Long(source.AutoId);
+        }
+        if (source.CmdId != null) {
+            this.CmdId = new String(source.CmdId);
+        }
+        if (source.Content != null) {
+            this.Content = new String(source.Content);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.ModifyTime != null) {
+            this.ModifyTime = new String(source.ModifyTime);
+        }
+        if (source.OsType != null) {
+            this.OsType = new String(source.OsType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

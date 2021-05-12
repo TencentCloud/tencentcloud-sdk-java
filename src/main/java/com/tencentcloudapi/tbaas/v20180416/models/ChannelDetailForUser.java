@@ -68,6 +68,26 @@ public class ChannelDetailForUser extends AbstractModel{
         this.PeerList = PeerList;
     }
 
+    public ChannelDetailForUser() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ChannelDetailForUser(ChannelDetailForUser source) {
+        if (source.ChannelName != null) {
+            this.ChannelName = new String(source.ChannelName);
+        }
+        if (source.PeerList != null) {
+            this.PeerList = new PeerDetailForUser[source.PeerList.length];
+            for (int i = 0; i < source.PeerList.length; i++) {
+                this.PeerList[i] = new PeerDetailForUser(source.PeerList[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

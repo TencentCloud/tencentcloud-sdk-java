@@ -106,6 +106,29 @@ public class AiReviewProhibitedOcrTaskOutput extends AbstractModel{
         this.SegmentSet = SegmentSet;
     }
 
+    public AiReviewProhibitedOcrTaskOutput() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AiReviewProhibitedOcrTaskOutput(AiReviewProhibitedOcrTaskOutput source) {
+        if (source.Confidence != null) {
+            this.Confidence = new Float(source.Confidence);
+        }
+        if (source.Suggestion != null) {
+            this.Suggestion = new String(source.Suggestion);
+        }
+        if (source.SegmentSet != null) {
+            this.SegmentSet = new MediaContentReviewOcrTextSegmentItem[source.SegmentSet.length];
+            for (int i = 0; i < source.SegmentSet.length; i++) {
+                this.SegmentSet[i] = new MediaContentReviewOcrTextSegmentItem(source.SegmentSet[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

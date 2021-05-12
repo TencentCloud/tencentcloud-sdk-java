@@ -91,6 +91,26 @@ public class RedisNodes extends AbstractModel{
         this.ClusterId = ClusterId;
     }
 
+    public RedisNodes() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RedisNodes(RedisNodes source) {
+        if (source.NodeId != null) {
+            this.NodeId = new String(source.NodeId);
+        }
+        if (source.NodeRole != null) {
+            this.NodeRole = new String(source.NodeRole);
+        }
+        if (source.ClusterId != null) {
+            this.ClusterId = new Long(source.ClusterId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -91,6 +91,29 @@ public class DescribeExtraPkgBillingInfoResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeExtraPkgBillingInfoResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeExtraPkgBillingInfoResponse(DescribeExtraPkgBillingInfoResponse source) {
+        if (source.EnvInfoList != null) {
+            this.EnvInfoList = new EnvBillingInfoItem[source.EnvInfoList.length];
+            for (int i = 0; i < source.EnvInfoList.length; i++) {
+                this.EnvInfoList[i] = new EnvBillingInfoItem(source.EnvInfoList[i]);
+            }
+        }
+        if (source.Total != null) {
+            this.Total = new Long(source.Total);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

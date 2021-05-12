@@ -91,6 +91,29 @@ public class DescribeDDoSAttackSourceResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeDDoSAttackSourceResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeDDoSAttackSourceResponse(DescribeDDoSAttackSourceResponse source) {
+        if (source.Total != null) {
+            this.Total = new Long(source.Total);
+        }
+        if (source.AttackSourceList != null) {
+            this.AttackSourceList = new DDoSAttackSourceRecord[source.AttackSourceList.length];
+            for (int i = 0; i < source.AttackSourceList.length; i++) {
+                this.AttackSourceList[i] = new DDoSAttackSourceRecord(source.AttackSourceList[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

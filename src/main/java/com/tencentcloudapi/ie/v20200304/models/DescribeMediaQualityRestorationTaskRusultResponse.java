@@ -68,6 +68,23 @@ public class DescribeMediaQualityRestorationTaskRusultResponse extends AbstractM
         this.RequestId = RequestId;
     }
 
+    public DescribeMediaQualityRestorationTaskRusultResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeMediaQualityRestorationTaskRusultResponse(DescribeMediaQualityRestorationTaskRusultResponse source) {
+        if (source.TaskResult != null) {
+            this.TaskResult = new MediaQualityRestorationTaskResult(source.TaskResult);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

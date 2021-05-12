@@ -139,6 +139,29 @@ public class CreateTransferBatchResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public CreateTransferBatchResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateTransferBatchResponse(CreateTransferBatchResponse source) {
+        if (source.MerchantBatchNo != null) {
+            this.MerchantBatchNo = new String(source.MerchantBatchNo);
+        }
+        if (source.BatchId != null) {
+            this.BatchId = new String(source.BatchId);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

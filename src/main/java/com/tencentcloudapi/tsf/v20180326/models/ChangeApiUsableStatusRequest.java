@@ -68,6 +68,23 @@ public class ChangeApiUsableStatusRequest extends AbstractModel{
         this.UsableStatus = UsableStatus;
     }
 
+    public ChangeApiUsableStatusRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ChangeApiUsableStatusRequest(ChangeApiUsableStatusRequest source) {
+        if (source.ApiId != null) {
+            this.ApiId = new String(source.ApiId);
+        }
+        if (source.UsableStatus != null) {
+            this.UsableStatus = new String(source.UsableStatus);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

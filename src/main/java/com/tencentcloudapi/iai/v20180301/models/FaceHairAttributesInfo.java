@@ -106,6 +106,26 @@ public class FaceHairAttributesInfo extends AbstractModel{
         this.Color = Color;
     }
 
+    public FaceHairAttributesInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public FaceHairAttributesInfo(FaceHairAttributesInfo source) {
+        if (source.Length != null) {
+            this.Length = new Long(source.Length);
+        }
+        if (source.Bang != null) {
+            this.Bang = new Long(source.Bang);
+        }
+        if (source.Color != null) {
+            this.Color = new Long(source.Color);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

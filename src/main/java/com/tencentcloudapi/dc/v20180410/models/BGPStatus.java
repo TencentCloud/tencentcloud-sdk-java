@@ -68,6 +68,23 @@ public class BGPStatus extends AbstractModel{
         this.TencentBackupAddressBgpState = TencentBackupAddressBgpState;
     }
 
+    public BGPStatus() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public BGPStatus(BGPStatus source) {
+        if (source.TencentAddressBgpState != null) {
+            this.TencentAddressBgpState = new String(source.TencentAddressBgpState);
+        }
+        if (source.TencentBackupAddressBgpState != null) {
+            this.TencentBackupAddressBgpState = new String(source.TencentBackupAddressBgpState);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

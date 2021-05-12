@@ -114,6 +114,29 @@ public class DescribeSafeAuthFlagResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeSafeAuthFlagResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeSafeAuthFlagResponse(DescribeSafeAuthFlagResponse source) {
+        if (source.LoginFlag != null) {
+            this.LoginFlag = new LoginActionFlag(source.LoginFlag);
+        }
+        if (source.ActionFlag != null) {
+            this.ActionFlag = new LoginActionFlag(source.ActionFlag);
+        }
+        if (source.OffsiteFlag != null) {
+            this.OffsiteFlag = new OffsiteFlag(source.OffsiteFlag);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

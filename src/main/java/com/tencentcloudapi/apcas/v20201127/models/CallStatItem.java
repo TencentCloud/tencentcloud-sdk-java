@@ -68,6 +68,23 @@ public class CallStatItem extends AbstractModel{
         this.Amount = Amount;
     }
 
+    public CallStatItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CallStatItem(CallStatItem source) {
+        if (source.Date != null) {
+            this.Date = new String(source.Date);
+        }
+        if (source.Amount != null) {
+            this.Amount = new Long(source.Amount);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -45,6 +45,20 @@ public class OriginIp extends AbstractModel{
         this.Ip = Ip;
     }
 
+    public OriginIp() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public OriginIp(OriginIp source) {
+        if (source.Ip != null) {
+            this.Ip = new String(source.Ip);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

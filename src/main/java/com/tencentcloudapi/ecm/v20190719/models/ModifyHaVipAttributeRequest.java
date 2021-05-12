@@ -68,6 +68,23 @@ public class ModifyHaVipAttributeRequest extends AbstractModel{
         this.HaVipName = HaVipName;
     }
 
+    public ModifyHaVipAttributeRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyHaVipAttributeRequest(ModifyHaVipAttributeRequest source) {
+        if (source.HaVipId != null) {
+            this.HaVipId = new String(source.HaVipId);
+        }
+        if (source.HaVipName != null) {
+            this.HaVipName = new String(source.HaVipName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

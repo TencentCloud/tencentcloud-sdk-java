@@ -68,6 +68,23 @@ public class CreateRuntimeResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public CreateRuntimeResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateRuntimeResponse(CreateRuntimeResponse source) {
+        if (source.Runtime != null) {
+            this.Runtime = new Runtime(source.Runtime);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

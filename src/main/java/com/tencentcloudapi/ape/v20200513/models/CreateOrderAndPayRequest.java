@@ -91,6 +91,26 @@ public class CreateOrderAndPayRequest extends AbstractModel{
         this.MarshalId = MarshalId;
     }
 
+    public CreateOrderAndPayRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateOrderAndPayRequest(CreateOrderAndPayRequest source) {
+        if (source.ImageId != null) {
+            this.ImageId = new Long(source.ImageId);
+        }
+        if (source.AuthUserId != null) {
+            this.AuthUserId = new String(source.AuthUserId);
+        }
+        if (source.MarshalId != null) {
+            this.MarshalId = new Long(source.MarshalId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

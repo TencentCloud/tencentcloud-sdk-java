@@ -114,6 +114,29 @@ public class CloudBaseRunImageSecretInfo extends AbstractModel{
         this.Email = Email;
     }
 
+    public CloudBaseRunImageSecretInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CloudBaseRunImageSecretInfo(CloudBaseRunImageSecretInfo source) {
+        if (source.RegistryServer != null) {
+            this.RegistryServer = new String(source.RegistryServer);
+        }
+        if (source.UserName != null) {
+            this.UserName = new String(source.UserName);
+        }
+        if (source.Password != null) {
+            this.Password = new String(source.Password);
+        }
+        if (source.Email != null) {
+            this.Email = new String(source.Email);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

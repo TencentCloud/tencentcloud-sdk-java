@@ -280,6 +280,50 @@ public class HmtResidentPermitOCRResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public HmtResidentPermitOCRResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public HmtResidentPermitOCRResponse(HmtResidentPermitOCRResponse source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Sex != null) {
+            this.Sex = new String(source.Sex);
+        }
+        if (source.Birth != null) {
+            this.Birth = new String(source.Birth);
+        }
+        if (source.Address != null) {
+            this.Address = new String(source.Address);
+        }
+        if (source.IdCardNo != null) {
+            this.IdCardNo = new String(source.IdCardNo);
+        }
+        if (source.CardType != null) {
+            this.CardType = new Long(source.CardType);
+        }
+        if (source.ValidDate != null) {
+            this.ValidDate = new String(source.ValidDate);
+        }
+        if (source.Authority != null) {
+            this.Authority = new String(source.Authority);
+        }
+        if (source.VisaNum != null) {
+            this.VisaNum = new String(source.VisaNum);
+        }
+        if (source.PassNo != null) {
+            this.PassNo = new String(source.PassNo);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

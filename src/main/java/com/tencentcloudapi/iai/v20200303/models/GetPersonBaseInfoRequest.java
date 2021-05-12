@@ -45,6 +45,20 @@ public class GetPersonBaseInfoRequest extends AbstractModel{
         this.PersonId = PersonId;
     }
 
+    public GetPersonBaseInfoRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GetPersonBaseInfoRequest(GetPersonBaseInfoRequest source) {
+        if (source.PersonId != null) {
+            this.PersonId = new String(source.PersonId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

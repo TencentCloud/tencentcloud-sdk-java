@@ -325,6 +325,50 @@ merchant:商户子账户
         this.SubMerchantMemberType = SubMerchantMemberType;
     }
 
+    public QueryAcctItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public QueryAcctItem(QueryAcctItem source) {
+        if (source.SubMchType != null) {
+            this.SubMchType = new String(source.SubMchType);
+        }
+        if (source.SubMchName != null) {
+            this.SubMchName = new String(source.SubMchName);
+        }
+        if (source.SubAcctNo != null) {
+            this.SubAcctNo = new String(source.SubAcctNo);
+        }
+        if (source.ShortName != null) {
+            this.ShortName = new String(source.ShortName);
+        }
+        if (source.SubMchId != null) {
+            this.SubMchId = new String(source.SubMchId);
+        }
+        if (source.SubAppId != null) {
+            this.SubAppId = new String(source.SubAppId);
+        }
+        if (source.Contact != null) {
+            this.Contact = new String(source.Contact);
+        }
+        if (source.Address != null) {
+            this.Address = new String(source.Address);
+        }
+        if (source.Mobile != null) {
+            this.Mobile = new String(source.Mobile);
+        }
+        if (source.Email != null) {
+            this.Email = new String(source.Email);
+        }
+        if (source.SubMerchantMemberType != null) {
+            this.SubMerchantMemberType = new String(source.SubMerchantMemberType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

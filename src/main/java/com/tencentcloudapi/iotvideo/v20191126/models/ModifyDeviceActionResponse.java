@@ -106,6 +106,26 @@ public class ModifyDeviceActionResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public ModifyDeviceActionResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyDeviceActionResponse(ModifyDeviceActionResponse source) {
+        if (source.Data != null) {
+            this.Data = new String(source.Data);
+        }
+        if (source.TaskId != null) {
+            this.TaskId = new String(source.TaskId);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

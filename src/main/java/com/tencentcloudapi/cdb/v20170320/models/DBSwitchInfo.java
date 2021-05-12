@@ -68,6 +68,23 @@ public class DBSwitchInfo extends AbstractModel{
         this.SwitchType = SwitchType;
     }
 
+    public DBSwitchInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DBSwitchInfo(DBSwitchInfo source) {
+        if (source.SwitchTime != null) {
+            this.SwitchTime = new String(source.SwitchTime);
+        }
+        if (source.SwitchType != null) {
+            this.SwitchType = new String(source.SwitchType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

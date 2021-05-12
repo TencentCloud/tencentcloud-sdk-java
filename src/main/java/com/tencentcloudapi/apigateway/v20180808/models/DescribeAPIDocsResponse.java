@@ -68,6 +68,23 @@ public class DescribeAPIDocsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeAPIDocsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeAPIDocsResponse(DescribeAPIDocsResponse source) {
+        if (source.Result != null) {
+            this.Result = new APIDocs(source.Result);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

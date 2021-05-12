@@ -137,6 +137,32 @@ public class GatewayFlowMonitorDetail extends AbstractModel{
         this.OutTraffic = OutTraffic;
     }
 
+    public GatewayFlowMonitorDetail() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GatewayFlowMonitorDetail(GatewayFlowMonitorDetail source) {
+        if (source.PrivateIpAddress != null) {
+            this.PrivateIpAddress = new String(source.PrivateIpAddress);
+        }
+        if (source.InPkg != null) {
+            this.InPkg = new Long(source.InPkg);
+        }
+        if (source.OutPkg != null) {
+            this.OutPkg = new Long(source.OutPkg);
+        }
+        if (source.InTraffic != null) {
+            this.InTraffic = new Long(source.InTraffic);
+        }
+        if (source.OutTraffic != null) {
+            this.OutTraffic = new Long(source.OutTraffic);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

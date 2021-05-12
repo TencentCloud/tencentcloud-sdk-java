@@ -96,6 +96,29 @@ public class DescribeBatchOperationLogsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeBatchOperationLogsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeBatchOperationLogsResponse(DescribeBatchOperationLogsResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.DomainBatchLogSet != null) {
+            this.DomainBatchLogSet = new DomainBatchLogSet[source.DomainBatchLogSet.length];
+            for (int i = 0; i < source.DomainBatchLogSet.length; i++) {
+                this.DomainBatchLogSet[i] = new DomainBatchLogSet(source.DomainBatchLogSet[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

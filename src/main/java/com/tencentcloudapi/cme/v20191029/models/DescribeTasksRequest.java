@@ -203,6 +203,44 @@ public class DescribeTasksRequest extends AbstractModel{
         this.Operator = Operator;
     }
 
+    public DescribeTasksRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeTasksRequest(DescribeTasksRequest source) {
+        if (source.Platform != null) {
+            this.Platform = new String(source.Platform);
+        }
+        if (source.ProjectId != null) {
+            this.ProjectId = new String(source.ProjectId);
+        }
+        if (source.TaskTypeSet != null) {
+            this.TaskTypeSet = new String[source.TaskTypeSet.length];
+            for (int i = 0; i < source.TaskTypeSet.length; i++) {
+                this.TaskTypeSet[i] = new String(source.TaskTypeSet[i]);
+            }
+        }
+        if (source.StatusSet != null) {
+            this.StatusSet = new String[source.StatusSet.length];
+            for (int i = 0; i < source.StatusSet.length; i++) {
+                this.StatusSet[i] = new String(source.StatusSet[i]);
+            }
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.Operator != null) {
+            this.Operator = new String(source.Operator);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

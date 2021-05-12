@@ -91,6 +91,29 @@ public class DescribeIpGeolocationInfosResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeIpGeolocationInfosResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeIpGeolocationInfosResponse(DescribeIpGeolocationInfosResponse source) {
+        if (source.AddressInfo != null) {
+            this.AddressInfo = new IpGeolocationInfo[source.AddressInfo.length];
+            for (int i = 0; i < source.AddressInfo.length; i++) {
+                this.AddressInfo[i] = new IpGeolocationInfo(source.AddressInfo[i]);
+            }
+        }
+        if (source.Total != null) {
+            this.Total = new Long(source.Total);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

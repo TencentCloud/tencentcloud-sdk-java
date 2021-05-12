@@ -114,6 +114,29 @@ public class InquirePriceCreateInstancesRequest extends AbstractModel{
         this.BlueprintId = BlueprintId;
     }
 
+    public InquirePriceCreateInstancesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public InquirePriceCreateInstancesRequest(InquirePriceCreateInstancesRequest source) {
+        if (source.BundleId != null) {
+            this.BundleId = new String(source.BundleId);
+        }
+        if (source.InstanceCount != null) {
+            this.InstanceCount = new Long(source.InstanceCount);
+        }
+        if (source.InstanceChargePrepaid != null) {
+            this.InstanceChargePrepaid = new InstanceChargePrepaid(source.InstanceChargePrepaid);
+        }
+        if (source.BlueprintId != null) {
+            this.BlueprintId = new String(source.BlueprintId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

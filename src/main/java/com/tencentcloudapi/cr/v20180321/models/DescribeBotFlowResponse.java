@@ -129,6 +129,38 @@ public class DescribeBotFlowResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeBotFlowResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeBotFlowResponse(DescribeBotFlowResponse source) {
+        if (source.BotFlowList != null) {
+            this.BotFlowList = new BotFlow[source.BotFlowList.length];
+            for (int i = 0; i < source.BotFlowList.length; i++) {
+                this.BotFlowList[i] = new BotFlow(source.BotFlowList[i]);
+            }
+        }
+        if (source.SmsSignList != null) {
+            this.SmsSignList = new SmsSign[source.SmsSignList.length];
+            for (int i = 0; i < source.SmsSignList.length; i++) {
+                this.SmsSignList[i] = new SmsSign(source.SmsSignList[i]);
+            }
+        }
+        if (source.SmsTemplateList != null) {
+            this.SmsTemplateList = new SmsTemplate[source.SmsTemplateList.length];
+            for (int i = 0; i < source.SmsTemplateList.length; i++) {
+                this.SmsTemplateList[i] = new SmsTemplate(source.SmsTemplateList[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

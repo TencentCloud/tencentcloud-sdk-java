@@ -190,6 +190,35 @@ public class TriggerInvokePara extends AbstractModel{
         this.ClusterRegion = ClusterRegion;
     }
 
+    public TriggerInvokePara() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TriggerInvokePara(TriggerInvokePara source) {
+        if (source.AppId != null) {
+            this.AppId = new String(source.AppId);
+        }
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
+        if (source.Namespace != null) {
+            this.Namespace = new String(source.Namespace);
+        }
+        if (source.ServiceName != null) {
+            this.ServiceName = new String(source.ServiceName);
+        }
+        if (source.ContainerName != null) {
+            this.ContainerName = new String(source.ContainerName);
+        }
+        if (source.ClusterRegion != null) {
+            this.ClusterRegion = new Long(source.ClusterRegion);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

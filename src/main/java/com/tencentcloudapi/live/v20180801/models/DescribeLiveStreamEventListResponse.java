@@ -160,6 +160,38 @@ public class DescribeLiveStreamEventListResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeLiveStreamEventListResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeLiveStreamEventListResponse(DescribeLiveStreamEventListResponse source) {
+        if (source.EventList != null) {
+            this.EventList = new StreamEventInfo[source.EventList.length];
+            for (int i = 0; i < source.EventList.length; i++) {
+                this.EventList[i] = new StreamEventInfo(source.EventList[i]);
+            }
+        }
+        if (source.PageNum != null) {
+            this.PageNum = new Long(source.PageNum);
+        }
+        if (source.PageSize != null) {
+            this.PageSize = new Long(source.PageSize);
+        }
+        if (source.TotalNum != null) {
+            this.TotalNum = new Long(source.TotalNum);
+        }
+        if (source.TotalPage != null) {
+            this.TotalPage = new Long(source.TotalPage);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

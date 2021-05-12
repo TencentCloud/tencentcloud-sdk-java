@@ -114,6 +114,29 @@ public class InquiryPriceUpgradeDBInstanceRequest extends AbstractModel{
         this.InstanceChargeType = InstanceChargeType;
     }
 
+    public InquiryPriceUpgradeDBInstanceRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public InquiryPriceUpgradeDBInstanceRequest(InquiryPriceUpgradeDBInstanceRequest source) {
+        if (source.Storage != null) {
+            this.Storage = new Long(source.Storage);
+        }
+        if (source.Memory != null) {
+            this.Memory = new Long(source.Memory);
+        }
+        if (source.DBInstanceId != null) {
+            this.DBInstanceId = new String(source.DBInstanceId);
+        }
+        if (source.InstanceChargeType != null) {
+            this.InstanceChargeType = new String(source.InstanceChargeType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

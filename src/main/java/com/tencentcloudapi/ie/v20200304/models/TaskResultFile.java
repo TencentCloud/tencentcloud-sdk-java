@@ -106,6 +106,26 @@ public class TaskResultFile extends AbstractModel{
         this.MediaInfo = MediaInfo;
     }
 
+    public TaskResultFile() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TaskResultFile(TaskResultFile source) {
+        if (source.Url != null) {
+            this.Url = new String(source.Url);
+        }
+        if (source.FileSize != null) {
+            this.FileSize = new Long(source.FileSize);
+        }
+        if (source.MediaInfo != null) {
+            this.MediaInfo = new MediaResultInfo(source.MediaInfo);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

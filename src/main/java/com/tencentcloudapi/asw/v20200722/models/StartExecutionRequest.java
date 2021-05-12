@@ -91,6 +91,26 @@ public class StartExecutionRequest extends AbstractModel{
         this.Name = Name;
     }
 
+    public StartExecutionRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public StartExecutionRequest(StartExecutionRequest source) {
+        if (source.StateMachineResourceName != null) {
+            this.StateMachineResourceName = new String(source.StateMachineResourceName);
+        }
+        if (source.Input != null) {
+            this.Input = new String(source.Input);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

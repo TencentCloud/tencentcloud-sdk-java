@@ -68,6 +68,26 @@ public class ForbidMediaDistributionResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public ForbidMediaDistributionResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ForbidMediaDistributionResponse(ForbidMediaDistributionResponse source) {
+        if (source.NotExistFileIdSet != null) {
+            this.NotExistFileIdSet = new String[source.NotExistFileIdSet.length];
+            for (int i = 0; i < source.NotExistFileIdSet.length; i++) {
+                this.NotExistFileIdSet[i] = new String(source.NotExistFileIdSet[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

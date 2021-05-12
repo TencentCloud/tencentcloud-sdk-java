@@ -121,6 +121,26 @@ CommandId 与 Content，必须且只能提供一个。
         this.Content = Content;
     }
 
+    public PreviewReplacedCommandContentRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PreviewReplacedCommandContentRequest(PreviewReplacedCommandContentRequest source) {
+        if (source.Parameters != null) {
+            this.Parameters = new String(source.Parameters);
+        }
+        if (source.CommandId != null) {
+            this.CommandId = new String(source.CommandId);
+        }
+        if (source.Content != null) {
+            this.Content = new String(source.Content);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -160,6 +160,38 @@ public class SendTransactionHandlerRequest extends AbstractModel{
         this.FuncParam = FuncParam;
     }
 
+    public SendTransactionHandlerRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SendTransactionHandlerRequest(SendTransactionHandlerRequest source) {
+        if (source.Module != null) {
+            this.Module = new String(source.Module);
+        }
+        if (source.Operation != null) {
+            this.Operation = new String(source.Operation);
+        }
+        if (source.GroupPk != null) {
+            this.GroupPk = new String(source.GroupPk);
+        }
+        if (source.ContractId != null) {
+            this.ContractId = new Long(source.ContractId);
+        }
+        if (source.FuncName != null) {
+            this.FuncName = new String(source.FuncName);
+        }
+        if (source.FuncParam != null) {
+            this.FuncParam = new String[source.FuncParam.length];
+            for (int i = 0; i < source.FuncParam.length; i++) {
+                this.FuncParam[i] = new String(source.FuncParam[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

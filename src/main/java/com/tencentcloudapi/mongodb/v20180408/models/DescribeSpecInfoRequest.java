@@ -45,6 +45,20 @@ public class DescribeSpecInfoRequest extends AbstractModel{
         this.Zone = Zone;
     }
 
+    public DescribeSpecInfoRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeSpecInfoRequest(DescribeSpecInfoRequest source) {
+        if (source.Zone != null) {
+            this.Zone = new String(source.Zone);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

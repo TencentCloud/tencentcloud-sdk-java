@@ -68,6 +68,23 @@ public class InstanceRebootTime extends AbstractModel{
         this.TimeInSeconds = TimeInSeconds;
     }
 
+    public InstanceRebootTime() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public InstanceRebootTime(InstanceRebootTime source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.TimeInSeconds != null) {
+            this.TimeInSeconds = new Long(source.TimeInSeconds);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

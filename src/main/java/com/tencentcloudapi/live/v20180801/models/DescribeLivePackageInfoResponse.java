@@ -258,6 +258,41 @@ public class DescribeLivePackageInfoResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeLivePackageInfoResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeLivePackageInfoResponse(DescribeLivePackageInfoResponse source) {
+        if (source.LivePackageInfoList != null) {
+            this.LivePackageInfoList = new LivePackageInfo[source.LivePackageInfoList.length];
+            for (int i = 0; i < source.LivePackageInfoList.length; i++) {
+                this.LivePackageInfoList[i] = new LivePackageInfo(source.LivePackageInfoList[i]);
+            }
+        }
+        if (source.PackageBillMode != null) {
+            this.PackageBillMode = new Long(source.PackageBillMode);
+        }
+        if (source.TotalPage != null) {
+            this.TotalPage = new Long(source.TotalPage);
+        }
+        if (source.TotalNum != null) {
+            this.TotalNum = new Long(source.TotalNum);
+        }
+        if (source.PageNum != null) {
+            this.PageNum = new Long(source.PageNum);
+        }
+        if (source.PageSize != null) {
+            this.PageSize = new Long(source.PageSize);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -91,6 +91,26 @@ public class UpgradeDBInstanceResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public UpgradeDBInstanceResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UpgradeDBInstanceResponse(UpgradeDBInstanceResponse source) {
+        if (source.DealName != null) {
+            this.DealName = new String(source.DealName);
+        }
+        if (source.BillId != null) {
+            this.BillId = new String(source.BillId);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

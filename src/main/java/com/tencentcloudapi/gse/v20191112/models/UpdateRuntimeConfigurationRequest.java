@@ -68,6 +68,23 @@ public class UpdateRuntimeConfigurationRequest extends AbstractModel{
         this.RuntimeConfiguration = RuntimeConfiguration;
     }
 
+    public UpdateRuntimeConfigurationRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UpdateRuntimeConfigurationRequest(UpdateRuntimeConfigurationRequest source) {
+        if (source.FleetId != null) {
+            this.FleetId = new String(source.FleetId);
+        }
+        if (source.RuntimeConfiguration != null) {
+            this.RuntimeConfiguration = new RuntimeConfiguration(source.RuntimeConfiguration);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

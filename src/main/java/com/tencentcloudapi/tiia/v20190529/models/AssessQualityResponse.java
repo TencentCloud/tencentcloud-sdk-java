@@ -206,6 +206,41 @@ public class AssessQualityResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public AssessQualityResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AssessQualityResponse(AssessQualityResponse source) {
+        if (source.LongImage != null) {
+            this.LongImage = new Boolean(source.LongImage);
+        }
+        if (source.BlackAndWhite != null) {
+            this.BlackAndWhite = new Boolean(source.BlackAndWhite);
+        }
+        if (source.SmallImage != null) {
+            this.SmallImage = new Boolean(source.SmallImage);
+        }
+        if (source.BigImage != null) {
+            this.BigImage = new Boolean(source.BigImage);
+        }
+        if (source.PureImage != null) {
+            this.PureImage = new Boolean(source.PureImage);
+        }
+        if (source.ClarityScore != null) {
+            this.ClarityScore = new Long(source.ClarityScore);
+        }
+        if (source.AestheticScore != null) {
+            this.AestheticScore = new Long(source.AestheticScore);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -101,6 +101,32 @@ public class ScdnBotConfig extends AbstractModel{
         this.BotJavaScript = BotJavaScript;
     }
 
+    public ScdnBotConfig() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ScdnBotConfig(ScdnBotConfig source) {
+        if (source.Switch != null) {
+            this.Switch = new String(source.Switch);
+        }
+        if (source.BotCookie != null) {
+            this.BotCookie = new BotCookie[source.BotCookie.length];
+            for (int i = 0; i < source.BotCookie.length; i++) {
+                this.BotCookie[i] = new BotCookie(source.BotCookie[i]);
+            }
+        }
+        if (source.BotJavaScript != null) {
+            this.BotJavaScript = new BotJavaScript[source.BotJavaScript.length];
+            for (int i = 0; i < source.BotJavaScript.length; i++) {
+                this.BotJavaScript[i] = new BotJavaScript(source.BotJavaScript[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

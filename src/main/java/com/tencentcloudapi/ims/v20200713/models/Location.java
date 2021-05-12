@@ -137,6 +137,32 @@ public class Location extends AbstractModel{
         this.Rotate = Rotate;
     }
 
+    public Location() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Location(Location source) {
+        if (source.X != null) {
+            this.X = new Float(source.X);
+        }
+        if (source.Y != null) {
+            this.Y = new Float(source.Y);
+        }
+        if (source.Width != null) {
+            this.Width = new Float(source.Width);
+        }
+        if (source.Height != null) {
+            this.Height = new Float(source.Height);
+        }
+        if (source.Rotate != null) {
+            this.Rotate = new Float(source.Rotate);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

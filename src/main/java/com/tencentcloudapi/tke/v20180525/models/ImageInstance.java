@@ -134,6 +134,29 @@ public class ImageInstance extends AbstractModel{
         this.OsCustomizeType = OsCustomizeType;
     }
 
+    public ImageInstance() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ImageInstance(ImageInstance source) {
+        if (source.Alias != null) {
+            this.Alias = new String(source.Alias);
+        }
+        if (source.OsName != null) {
+            this.OsName = new String(source.OsName);
+        }
+        if (source.ImageId != null) {
+            this.ImageId = new String(source.ImageId);
+        }
+        if (source.OsCustomizeType != null) {
+            this.OsCustomizeType = new String(source.OsCustomizeType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

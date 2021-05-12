@@ -103,6 +103,23 @@ off：关闭
         this.Revalidate = Revalidate;
     }
 
+    public CacheConfigNoCache() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CacheConfigNoCache(CacheConfigNoCache source) {
+        if (source.Switch != null) {
+            this.Switch = new String(source.Switch);
+        }
+        if (source.Revalidate != null) {
+            this.Revalidate = new String(source.Revalidate);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -511,6 +511,86 @@ public class EnvInfo extends AbstractModel{
         this.Region = Region;
     }
 
+    public EnvInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public EnvInfo(EnvInfo source) {
+        if (source.EnvId != null) {
+            this.EnvId = new String(source.EnvId);
+        }
+        if (source.Source != null) {
+            this.Source = new String(source.Source);
+        }
+        if (source.Alias != null) {
+            this.Alias = new String(source.Alias);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new String(source.UpdateTime);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.Databases != null) {
+            this.Databases = new DatabasesInfo[source.Databases.length];
+            for (int i = 0; i < source.Databases.length; i++) {
+                this.Databases[i] = new DatabasesInfo(source.Databases[i]);
+            }
+        }
+        if (source.Storages != null) {
+            this.Storages = new StorageInfo[source.Storages.length];
+            for (int i = 0; i < source.Storages.length; i++) {
+                this.Storages[i] = new StorageInfo(source.Storages[i]);
+            }
+        }
+        if (source.Functions != null) {
+            this.Functions = new FunctionInfo[source.Functions.length];
+            for (int i = 0; i < source.Functions.length; i++) {
+                this.Functions[i] = new FunctionInfo(source.Functions[i]);
+            }
+        }
+        if (source.PackageId != null) {
+            this.PackageId = new String(source.PackageId);
+        }
+        if (source.PackageName != null) {
+            this.PackageName = new String(source.PackageName);
+        }
+        if (source.LogServices != null) {
+            this.LogServices = new LogServiceInfo[source.LogServices.length];
+            for (int i = 0; i < source.LogServices.length; i++) {
+                this.LogServices[i] = new LogServiceInfo(source.LogServices[i]);
+            }
+        }
+        if (source.StaticStorages != null) {
+            this.StaticStorages = new StaticStorageInfo[source.StaticStorages.length];
+            for (int i = 0; i < source.StaticStorages.length; i++) {
+                this.StaticStorages[i] = new StaticStorageInfo(source.StaticStorages[i]);
+            }
+        }
+        if (source.IsAutoDegrade != null) {
+            this.IsAutoDegrade = new Boolean(source.IsAutoDegrade);
+        }
+        if (source.EnvChannel != null) {
+            this.EnvChannel = new String(source.EnvChannel);
+        }
+        if (source.PayMode != null) {
+            this.PayMode = new String(source.PayMode);
+        }
+        if (source.IsDefault != null) {
+            this.IsDefault = new Boolean(source.IsDefault);
+        }
+        if (source.Region != null) {
+            this.Region = new String(source.Region);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

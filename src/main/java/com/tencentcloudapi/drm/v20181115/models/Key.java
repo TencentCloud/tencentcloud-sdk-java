@@ -142,6 +142,32 @@ public class Key extends AbstractModel{
         this.InsertTimestamp = InsertTimestamp;
     }
 
+    public Key() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Key(Key source) {
+        if (source.Track != null) {
+            this.Track = new String(source.Track);
+        }
+        if (source.KeyId != null) {
+            this.KeyId = new String(source.KeyId);
+        }
+        if (source.Key != null) {
+            this.Key = new String(source.Key);
+        }
+        if (source.Iv != null) {
+            this.Iv = new String(source.Iv);
+        }
+        if (source.InsertTimestamp != null) {
+            this.InsertTimestamp = new Long(source.InsertTimestamp);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

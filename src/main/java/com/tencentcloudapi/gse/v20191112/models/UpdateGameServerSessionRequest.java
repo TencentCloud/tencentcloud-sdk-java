@@ -137,6 +137,32 @@ public class UpdateGameServerSessionRequest extends AbstractModel{
         this.ProtectionPolicy = ProtectionPolicy;
     }
 
+    public UpdateGameServerSessionRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UpdateGameServerSessionRequest(UpdateGameServerSessionRequest source) {
+        if (source.GameServerSessionId != null) {
+            this.GameServerSessionId = new String(source.GameServerSessionId);
+        }
+        if (source.MaximumPlayerSessionCount != null) {
+            this.MaximumPlayerSessionCount = new Long(source.MaximumPlayerSessionCount);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.PlayerSessionCreationPolicy != null) {
+            this.PlayerSessionCreationPolicy = new String(source.PlayerSessionCreationPolicy);
+        }
+        if (source.ProtectionPolicy != null) {
+            this.ProtectionPolicy = new String(source.ProtectionPolicy);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

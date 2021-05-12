@@ -446,6 +446,74 @@ public class VerifyOfdVatInvoiceOCRResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public VerifyOfdVatInvoiceOCRResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public VerifyOfdVatInvoiceOCRResponse(VerifyOfdVatInvoiceOCRResponse source) {
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.InvoiceCode != null) {
+            this.InvoiceCode = new String(source.InvoiceCode);
+        }
+        if (source.InvoiceNumber != null) {
+            this.InvoiceNumber = new String(source.InvoiceNumber);
+        }
+        if (source.IssueDate != null) {
+            this.IssueDate = new String(source.IssueDate);
+        }
+        if (source.InvoiceCheckCode != null) {
+            this.InvoiceCheckCode = new String(source.InvoiceCheckCode);
+        }
+        if (source.MachineNumber != null) {
+            this.MachineNumber = new String(source.MachineNumber);
+        }
+        if (source.TaxControlCode != null) {
+            this.TaxControlCode = new String(source.TaxControlCode);
+        }
+        if (source.Buyer != null) {
+            this.Buyer = new VatInvoiceUserInfo(source.Buyer);
+        }
+        if (source.Seller != null) {
+            this.Seller = new VatInvoiceUserInfo(source.Seller);
+        }
+        if (source.TaxInclusiveTotalAmount != null) {
+            this.TaxInclusiveTotalAmount = new String(source.TaxInclusiveTotalAmount);
+        }
+        if (source.InvoiceClerk != null) {
+            this.InvoiceClerk = new String(source.InvoiceClerk);
+        }
+        if (source.Payee != null) {
+            this.Payee = new String(source.Payee);
+        }
+        if (source.Checker != null) {
+            this.Checker = new String(source.Checker);
+        }
+        if (source.TaxTotalAmount != null) {
+            this.TaxTotalAmount = new String(source.TaxTotalAmount);
+        }
+        if (source.TaxExclusiveTotalAmount != null) {
+            this.TaxExclusiveTotalAmount = new String(source.TaxExclusiveTotalAmount);
+        }
+        if (source.Note != null) {
+            this.Note = new String(source.Note);
+        }
+        if (source.GoodsInfos != null) {
+            this.GoodsInfos = new VatInvoiceGoodsInfo[source.GoodsInfos.length];
+            for (int i = 0; i < source.GoodsInfos.length; i++) {
+                this.GoodsInfos[i] = new VatInvoiceGoodsInfo(source.GoodsInfos[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

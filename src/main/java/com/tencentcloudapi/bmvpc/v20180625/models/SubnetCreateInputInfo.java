@@ -229,6 +229,47 @@ public class SubnetCreateInputInfo extends AbstractModel{
         this.IsSmartNic = IsSmartNic;
     }
 
+    public SubnetCreateInputInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SubnetCreateInputInfo(SubnetCreateInputInfo source) {
+        if (source.SubnetName != null) {
+            this.SubnetName = new String(source.SubnetName);
+        }
+        if (source.CidrBlock != null) {
+            this.CidrBlock = new String(source.CidrBlock);
+        }
+        if (source.DistributedFlag != null) {
+            this.DistributedFlag = new Long(source.DistributedFlag);
+        }
+        if (source.DhcpEnable != null) {
+            this.DhcpEnable = new Long(source.DhcpEnable);
+        }
+        if (source.DhcpServerIp != null) {
+            this.DhcpServerIp = new String[source.DhcpServerIp.length];
+            for (int i = 0; i < source.DhcpServerIp.length; i++) {
+                this.DhcpServerIp[i] = new String(source.DhcpServerIp[i]);
+            }
+        }
+        if (source.IpReserve != null) {
+            this.IpReserve = new Long(source.IpReserve);
+        }
+        if (source.VlanId != null) {
+            this.VlanId = new Long(source.VlanId);
+        }
+        if (source.Zone != null) {
+            this.Zone = new String(source.Zone);
+        }
+        if (source.IsSmartNic != null) {
+            this.IsSmartNic = new Long(source.IsSmartNic);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

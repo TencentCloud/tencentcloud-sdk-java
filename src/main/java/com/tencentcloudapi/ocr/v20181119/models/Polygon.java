@@ -114,6 +114,29 @@ public class Polygon extends AbstractModel{
         this.LeftBottom = LeftBottom;
     }
 
+    public Polygon() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Polygon(Polygon source) {
+        if (source.LeftTop != null) {
+            this.LeftTop = new Coord(source.LeftTop);
+        }
+        if (source.RightTop != null) {
+            this.RightTop = new Coord(source.RightTop);
+        }
+        if (source.RightBottom != null) {
+            this.RightBottom = new Coord(source.RightBottom);
+        }
+        if (source.LeftBottom != null) {
+            this.LeftBottom = new Coord(source.LeftBottom);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

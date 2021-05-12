@@ -240,6 +240,35 @@ None为不需要返回。默认为 None。
         this.FaceModelVersion = FaceModelVersion;
     }
 
+    public DetectFaceAttributesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DetectFaceAttributesRequest(DetectFaceAttributesRequest source) {
+        if (source.MaxFaceNum != null) {
+            this.MaxFaceNum = new Long(source.MaxFaceNum);
+        }
+        if (source.Image != null) {
+            this.Image = new String(source.Image);
+        }
+        if (source.Url != null) {
+            this.Url = new String(source.Url);
+        }
+        if (source.FaceAttributesType != null) {
+            this.FaceAttributesType = new String(source.FaceAttributesType);
+        }
+        if (source.NeedRotateDetection != null) {
+            this.NeedRotateDetection = new Long(source.NeedRotateDetection);
+        }
+        if (source.FaceModelVersion != null) {
+            this.FaceModelVersion = new String(source.FaceModelVersion);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

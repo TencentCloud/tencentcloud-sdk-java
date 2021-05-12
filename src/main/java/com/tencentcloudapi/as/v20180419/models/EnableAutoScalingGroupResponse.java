@@ -45,6 +45,20 @@ public class EnableAutoScalingGroupResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public EnableAutoScalingGroupResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public EnableAutoScalingGroupResponse(EnableAutoScalingGroupResponse source) {
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -137,6 +137,32 @@ public class UpdateDeviceShadowRequest extends AbstractModel{
         this.Prefix = Prefix;
     }
 
+    public UpdateDeviceShadowRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UpdateDeviceShadowRequest(UpdateDeviceShadowRequest source) {
+        if (source.ProductId != null) {
+            this.ProductId = new String(source.ProductId);
+        }
+        if (source.DeviceName != null) {
+            this.DeviceName = new String(source.DeviceName);
+        }
+        if (source.State != null) {
+            this.State = new String(source.State);
+        }
+        if (source.ShadowVersion != null) {
+            this.ShadowVersion = new Long(source.ShadowVersion);
+        }
+        if (source.Prefix != null) {
+            this.Prefix = new String(source.Prefix);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

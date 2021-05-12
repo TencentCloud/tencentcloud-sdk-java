@@ -91,6 +91,26 @@ public class PersonTagInfo extends AbstractModel{
         this.PersonId = PersonId;
     }
 
+    public PersonTagInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PersonTagInfo(PersonTagInfo source) {
+        if (source.OldType != null) {
+            this.OldType = new Long(source.OldType);
+        }
+        if (source.NewType != null) {
+            this.NewType = new Long(source.NewType);
+        }
+        if (source.PersonId != null) {
+            this.PersonId = new Long(source.PersonId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

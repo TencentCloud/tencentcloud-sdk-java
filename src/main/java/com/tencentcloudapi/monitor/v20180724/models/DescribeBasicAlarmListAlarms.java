@@ -633,6 +633,89 @@ public class DescribeBasicAlarmListAlarms extends AbstractModel{
         this.InstanceGroup = InstanceGroup;
     }
 
+    public DescribeBasicAlarmListAlarms() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeBasicAlarmListAlarms(DescribeBasicAlarmListAlarms source) {
+        if (source.Id != null) {
+            this.Id = new Long(source.Id);
+        }
+        if (source.ProjectId != null) {
+            this.ProjectId = new Long(source.ProjectId);
+        }
+        if (source.ProjectName != null) {
+            this.ProjectName = new String(source.ProjectName);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.AlarmStatus != null) {
+            this.AlarmStatus = new String(source.AlarmStatus);
+        }
+        if (source.GroupId != null) {
+            this.GroupId = new Long(source.GroupId);
+        }
+        if (source.GroupName != null) {
+            this.GroupName = new String(source.GroupName);
+        }
+        if (source.FirstOccurTime != null) {
+            this.FirstOccurTime = new String(source.FirstOccurTime);
+        }
+        if (source.Duration != null) {
+            this.Duration = new Long(source.Duration);
+        }
+        if (source.LastOccurTime != null) {
+            this.LastOccurTime = new String(source.LastOccurTime);
+        }
+        if (source.Content != null) {
+            this.Content = new String(source.Content);
+        }
+        if (source.ObjName != null) {
+            this.ObjName = new String(source.ObjName);
+        }
+        if (source.ObjId != null) {
+            this.ObjId = new String(source.ObjId);
+        }
+        if (source.ViewName != null) {
+            this.ViewName = new String(source.ViewName);
+        }
+        if (source.Vpc != null) {
+            this.Vpc = new String(source.Vpc);
+        }
+        if (source.MetricId != null) {
+            this.MetricId = new Long(source.MetricId);
+        }
+        if (source.MetricName != null) {
+            this.MetricName = new String(source.MetricName);
+        }
+        if (source.AlarmType != null) {
+            this.AlarmType = new Long(source.AlarmType);
+        }
+        if (source.Region != null) {
+            this.Region = new String(source.Region);
+        }
+        if (source.Dimensions != null) {
+            this.Dimensions = new String(source.Dimensions);
+        }
+        if (source.NotifyWay != null) {
+            this.NotifyWay = new String[source.NotifyWay.length];
+            for (int i = 0; i < source.NotifyWay.length; i++) {
+                this.NotifyWay[i] = new String(source.NotifyWay[i]);
+            }
+        }
+        if (source.InstanceGroup != null) {
+            this.InstanceGroup = new InstanceGroup[source.InstanceGroup.length];
+            for (int i = 0; i < source.InstanceGroup.length; i++) {
+                this.InstanceGroup[i] = new InstanceGroup(source.InstanceGroup[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

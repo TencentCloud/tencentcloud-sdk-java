@@ -164,6 +164,35 @@ IsAttached: 当需要查询标记实体是否已经关联策略时不为null。0
         this.RequestId = RequestId;
     }
 
+    public ListPoliciesResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ListPoliciesResponse(ListPoliciesResponse source) {
+        if (source.TotalNum != null) {
+            this.TotalNum = new Long(source.TotalNum);
+        }
+        if (source.List != null) {
+            this.List = new StrategyInfo[source.List.length];
+            for (int i = 0; i < source.List.length; i++) {
+                this.List[i] = new StrategyInfo(source.List[i]);
+            }
+        }
+        if (source.ServiceTypeList != null) {
+            this.ServiceTypeList = new String[source.ServiceTypeList.length];
+            for (int i = 0; i < source.ServiceTypeList.length; i++) {
+                this.ServiceTypeList[i] = new String(source.ServiceTypeList[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

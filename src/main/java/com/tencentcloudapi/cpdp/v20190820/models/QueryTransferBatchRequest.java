@@ -311,6 +311,41 @@ FAIL：转账失败，只查询转账失败的明细单。
         this.DetailStatus = DetailStatus;
     }
 
+    public QueryTransferBatchRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public QueryTransferBatchRequest(QueryTransferBatchRequest source) {
+        if (source.MerchantId != null) {
+            this.MerchantId = new String(source.MerchantId);
+        }
+        if (source.NeedQueryDetail != null) {
+            this.NeedQueryDetail = new Boolean(source.NeedQueryDetail);
+        }
+        if (source.MerchantBatchNo != null) {
+            this.MerchantBatchNo = new String(source.MerchantBatchNo);
+        }
+        if (source.BatchId != null) {
+            this.BatchId = new String(source.BatchId);
+        }
+        if (source.Profile != null) {
+            this.Profile = new String(source.Profile);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.DetailStatus != null) {
+            this.DetailStatus = new String(source.DetailStatus);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

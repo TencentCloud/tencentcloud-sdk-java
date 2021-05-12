@@ -68,6 +68,23 @@ public class DescribeBackupAccessRequest extends AbstractModel{
         this.BackupName = BackupName;
     }
 
+    public DescribeBackupAccessRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeBackupAccessRequest(DescribeBackupAccessRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.BackupName != null) {
+            this.BackupName = new String(source.BackupName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

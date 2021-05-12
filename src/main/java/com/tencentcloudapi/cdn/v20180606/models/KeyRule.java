@@ -240,6 +240,38 @@ off：关闭全路径缓存（即开启参数过滤）
         this.RuleTag = RuleTag;
     }
 
+    public KeyRule() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public KeyRule(KeyRule source) {
+        if (source.RulePaths != null) {
+            this.RulePaths = new String[source.RulePaths.length];
+            for (int i = 0; i < source.RulePaths.length; i++) {
+                this.RulePaths[i] = new String(source.RulePaths[i]);
+            }
+        }
+        if (source.RuleType != null) {
+            this.RuleType = new String(source.RuleType);
+        }
+        if (source.FullUrlCache != null) {
+            this.FullUrlCache = new String(source.FullUrlCache);
+        }
+        if (source.IgnoreCase != null) {
+            this.IgnoreCase = new String(source.IgnoreCase);
+        }
+        if (source.QueryString != null) {
+            this.QueryString = new RuleQueryString(source.QueryString);
+        }
+        if (source.RuleTag != null) {
+            this.RuleTag = new String(source.RuleTag);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

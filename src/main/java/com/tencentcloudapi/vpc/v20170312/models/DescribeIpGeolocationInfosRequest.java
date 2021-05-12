@@ -68,6 +68,26 @@ public class DescribeIpGeolocationInfosRequest extends AbstractModel{
         this.Fields = Fields;
     }
 
+    public DescribeIpGeolocationInfosRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeIpGeolocationInfosRequest(DescribeIpGeolocationInfosRequest source) {
+        if (source.AddressIps != null) {
+            this.AddressIps = new String[source.AddressIps.length];
+            for (int i = 0; i < source.AddressIps.length; i++) {
+                this.AddressIps[i] = new String(source.AddressIps[i]);
+            }
+        }
+        if (source.Fields != null) {
+            this.Fields = new IpField(source.Fields);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

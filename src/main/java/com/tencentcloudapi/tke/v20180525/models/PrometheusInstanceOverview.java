@@ -175,6 +175,35 @@ running = 运行中
         this.COSBucket = COSBucket;
     }
 
+    public PrometheusInstanceOverview() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PrometheusInstanceOverview(PrometheusInstanceOverview source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.SubnetId != null) {
+            this.SubnetId = new String(source.SubnetId);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.COSBucket != null) {
+            this.COSBucket = new String(source.COSBucket);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

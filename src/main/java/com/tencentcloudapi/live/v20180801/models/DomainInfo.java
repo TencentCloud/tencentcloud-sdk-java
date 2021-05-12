@@ -363,6 +363,53 @@ public class DomainInfo extends AbstractModel{
         this.IsMiniProgramLive = IsMiniProgramLive;
     }
 
+    public DomainInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DomainInfo(DomainInfo source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Type != null) {
+            this.Type = new Long(source.Type);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.BCName != null) {
+            this.BCName = new Long(source.BCName);
+        }
+        if (source.TargetDomain != null) {
+            this.TargetDomain = new String(source.TargetDomain);
+        }
+        if (source.PlayType != null) {
+            this.PlayType = new Long(source.PlayType);
+        }
+        if (source.IsDelayLive != null) {
+            this.IsDelayLive = new Long(source.IsDelayLive);
+        }
+        if (source.CurrentCName != null) {
+            this.CurrentCName = new String(source.CurrentCName);
+        }
+        if (source.RentTag != null) {
+            this.RentTag = new Long(source.RentTag);
+        }
+        if (source.RentExpireTime != null) {
+            this.RentExpireTime = new String(source.RentExpireTime);
+        }
+        if (source.IsMiniProgramLive != null) {
+            this.IsMiniProgramLive = new Long(source.IsMiniProgramLive);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

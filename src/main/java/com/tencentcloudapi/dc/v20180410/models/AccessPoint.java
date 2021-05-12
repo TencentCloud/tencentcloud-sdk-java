@@ -272,6 +272,53 @@ public class AccessPoint extends AbstractModel{
         this.Area = Area;
     }
 
+    public AccessPoint() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AccessPoint(AccessPoint source) {
+        if (source.AccessPointName != null) {
+            this.AccessPointName = new String(source.AccessPointName);
+        }
+        if (source.AccessPointId != null) {
+            this.AccessPointId = new String(source.AccessPointId);
+        }
+        if (source.State != null) {
+            this.State = new String(source.State);
+        }
+        if (source.Location != null) {
+            this.Location = new String(source.Location);
+        }
+        if (source.LineOperator != null) {
+            this.LineOperator = new String[source.LineOperator.length];
+            for (int i = 0; i < source.LineOperator.length; i++) {
+                this.LineOperator[i] = new String(source.LineOperator[i]);
+            }
+        }
+        if (source.RegionId != null) {
+            this.RegionId = new String(source.RegionId);
+        }
+        if (source.AvailablePortType != null) {
+            this.AvailablePortType = new String[source.AvailablePortType.length];
+            for (int i = 0; i < source.AvailablePortType.length; i++) {
+                this.AvailablePortType[i] = new String(source.AvailablePortType[i]);
+            }
+        }
+        if (source.Coordinate != null) {
+            this.Coordinate = new Coordinate(source.Coordinate);
+        }
+        if (source.City != null) {
+            this.City = new String(source.City);
+        }
+        if (source.Area != null) {
+            this.Area = new String(source.Area);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

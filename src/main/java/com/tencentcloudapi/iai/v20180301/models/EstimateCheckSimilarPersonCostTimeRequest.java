@@ -50,6 +50,23 @@ public class EstimateCheckSimilarPersonCostTimeRequest extends AbstractModel{
         this.GroupIds = GroupIds;
     }
 
+    public EstimateCheckSimilarPersonCostTimeRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public EstimateCheckSimilarPersonCostTimeRequest(EstimateCheckSimilarPersonCostTimeRequest source) {
+        if (source.GroupIds != null) {
+            this.GroupIds = new String[source.GroupIds.length];
+            for (int i = 0; i < source.GroupIds.length; i++) {
+                this.GroupIds[i] = new String(source.GroupIds[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

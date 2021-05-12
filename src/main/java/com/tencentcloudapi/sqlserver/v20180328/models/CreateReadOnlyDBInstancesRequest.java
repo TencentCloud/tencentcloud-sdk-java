@@ -482,6 +482,86 @@ public class CreateReadOnlyDBInstancesRequest extends AbstractModel{
         this.ResourceTags = ResourceTags;
     }
 
+    public CreateReadOnlyDBInstancesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateReadOnlyDBInstancesRequest(CreateReadOnlyDBInstancesRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.Zone != null) {
+            this.Zone = new String(source.Zone);
+        }
+        if (source.ReadOnlyGroupType != null) {
+            this.ReadOnlyGroupType = new Long(source.ReadOnlyGroupType);
+        }
+        if (source.Memory != null) {
+            this.Memory = new Long(source.Memory);
+        }
+        if (source.Storage != null) {
+            this.Storage = new Long(source.Storage);
+        }
+        if (source.ReadOnlyGroupForcedUpgrade != null) {
+            this.ReadOnlyGroupForcedUpgrade = new Long(source.ReadOnlyGroupForcedUpgrade);
+        }
+        if (source.ReadOnlyGroupId != null) {
+            this.ReadOnlyGroupId = new String(source.ReadOnlyGroupId);
+        }
+        if (source.ReadOnlyGroupName != null) {
+            this.ReadOnlyGroupName = new String(source.ReadOnlyGroupName);
+        }
+        if (source.ReadOnlyGroupIsOfflineDelay != null) {
+            this.ReadOnlyGroupIsOfflineDelay = new Long(source.ReadOnlyGroupIsOfflineDelay);
+        }
+        if (source.ReadOnlyGroupMaxDelayTime != null) {
+            this.ReadOnlyGroupMaxDelayTime = new Long(source.ReadOnlyGroupMaxDelayTime);
+        }
+        if (source.ReadOnlyGroupMinInGroup != null) {
+            this.ReadOnlyGroupMinInGroup = new Long(source.ReadOnlyGroupMinInGroup);
+        }
+        if (source.InstanceChargeType != null) {
+            this.InstanceChargeType = new String(source.InstanceChargeType);
+        }
+        if (source.GoodsNum != null) {
+            this.GoodsNum = new Long(source.GoodsNum);
+        }
+        if (source.SubnetId != null) {
+            this.SubnetId = new String(source.SubnetId);
+        }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.Period != null) {
+            this.Period = new Long(source.Period);
+        }
+        if (source.SecurityGroupList != null) {
+            this.SecurityGroupList = new String[source.SecurityGroupList.length];
+            for (int i = 0; i < source.SecurityGroupList.length; i++) {
+                this.SecurityGroupList[i] = new String(source.SecurityGroupList[i]);
+            }
+        }
+        if (source.AutoVoucher != null) {
+            this.AutoVoucher = new Long(source.AutoVoucher);
+        }
+        if (source.VoucherIds != null) {
+            this.VoucherIds = new String[source.VoucherIds.length];
+            for (int i = 0; i < source.VoucherIds.length; i++) {
+                this.VoucherIds[i] = new String(source.VoucherIds[i]);
+            }
+        }
+        if (source.ResourceTags != null) {
+            this.ResourceTags = new ResourceTag[source.ResourceTags.length];
+            for (int i = 0; i < source.ResourceTags.length; i++) {
+                this.ResourceTags[i] = new ResourceTag(source.ResourceTags[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

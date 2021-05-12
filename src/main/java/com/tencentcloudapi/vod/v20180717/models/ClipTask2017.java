@@ -91,6 +91,26 @@ public class ClipTask2017 extends AbstractModel{
         this.FileInfo = FileInfo;
     }
 
+    public ClipTask2017() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ClipTask2017(ClipTask2017 source) {
+        if (source.TaskId != null) {
+            this.TaskId = new String(source.TaskId);
+        }
+        if (source.SrcFileId != null) {
+            this.SrcFileId = new String(source.SrcFileId);
+        }
+        if (source.FileInfo != null) {
+            this.FileInfo = new ClipFileInfo2017(source.FileInfo);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

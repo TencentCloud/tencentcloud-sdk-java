@@ -137,6 +137,32 @@ public class ScoreItem extends AbstractModel{
         this.ScoreLost = ScoreLost;
     }
 
+    public ScoreItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ScoreItem(ScoreItem source) {
+        if (source.DiagItem != null) {
+            this.DiagItem = new String(source.DiagItem);
+        }
+        if (source.IssueType != null) {
+            this.IssueType = new String(source.IssueType);
+        }
+        if (source.TopSeverity != null) {
+            this.TopSeverity = new String(source.TopSeverity);
+        }
+        if (source.Count != null) {
+            this.Count = new Long(source.Count);
+        }
+        if (source.ScoreLost != null) {
+            this.ScoreLost = new Long(source.ScoreLost);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

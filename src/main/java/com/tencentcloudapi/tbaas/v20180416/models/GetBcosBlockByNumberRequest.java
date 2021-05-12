@@ -91,6 +91,26 @@ public class GetBcosBlockByNumberRequest extends AbstractModel{
         this.BlockNumber = BlockNumber;
     }
 
+    public GetBcosBlockByNumberRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GetBcosBlockByNumberRequest(GetBcosBlockByNumberRequest source) {
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
+        if (source.GroupId != null) {
+            this.GroupId = new Long(source.GroupId);
+        }
+        if (source.BlockNumber != null) {
+            this.BlockNumber = new Long(source.BlockNumber);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

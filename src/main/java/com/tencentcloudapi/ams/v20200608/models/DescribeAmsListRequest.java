@@ -114,6 +114,32 @@ public class DescribeAmsListRequest extends AbstractModel{
         this.Filters = Filters;
     }
 
+    public DescribeAmsListRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeAmsListRequest(DescribeAmsListRequest source) {
+        if (source.PageToken != null) {
+            this.PageToken = new String(source.PageToken);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.PageDirection != null) {
+            this.PageDirection = new String(source.PageDirection);
+        }
+        if (source.Filters != null) {
+            this.Filters = new Filter[source.Filters.length];
+            for (int i = 0; i < source.Filters.length; i++) {
+                this.Filters[i] = new Filter(source.Filters[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -91,6 +91,29 @@ public class DescribeInstanceLimitResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeInstanceLimitResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeInstanceLimitResponse(DescribeInstanceLimitResponse source) {
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.ExtraInfos != null) {
+            this.ExtraInfos = new ExtraInfos[source.ExtraInfos.length];
+            for (int i = 0; i < source.ExtraInfos.length; i++) {
+                this.ExtraInfos[i] = new ExtraInfos(source.ExtraInfos[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

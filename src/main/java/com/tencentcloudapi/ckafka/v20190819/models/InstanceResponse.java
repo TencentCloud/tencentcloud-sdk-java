@@ -78,6 +78,26 @@ public class InstanceResponse extends AbstractModel{
         this.TotalCount = TotalCount;
     }
 
+    public InstanceResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public InstanceResponse(InstanceResponse source) {
+        if (source.InstanceList != null) {
+            this.InstanceList = new Instance[source.InstanceList.length];
+            for (int i = 0; i < source.InstanceList.length; i++) {
+                this.InstanceList[i] = new Instance(source.InstanceList[i]);
+            }
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

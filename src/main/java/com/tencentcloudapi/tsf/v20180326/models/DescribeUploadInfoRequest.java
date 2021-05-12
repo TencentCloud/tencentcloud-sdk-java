@@ -183,6 +183,38 @@ public class DescribeUploadInfoRequest extends AbstractModel{
         this.RepositoryId = RepositoryId;
     }
 
+    public DescribeUploadInfoRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeUploadInfoRequest(DescribeUploadInfoRequest source) {
+        if (source.ApplicationId != null) {
+            this.ApplicationId = new String(source.ApplicationId);
+        }
+        if (source.PkgName != null) {
+            this.PkgName = new String(source.PkgName);
+        }
+        if (source.PkgVersion != null) {
+            this.PkgVersion = new String(source.PkgVersion);
+        }
+        if (source.PkgType != null) {
+            this.PkgType = new String(source.PkgType);
+        }
+        if (source.PkgDesc != null) {
+            this.PkgDesc = new String(source.PkgDesc);
+        }
+        if (source.RepositoryType != null) {
+            this.RepositoryType = new String(source.RepositoryType);
+        }
+        if (source.RepositoryId != null) {
+            this.RepositoryId = new String(source.RepositoryId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

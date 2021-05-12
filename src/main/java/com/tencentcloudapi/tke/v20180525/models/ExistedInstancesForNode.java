@@ -91,6 +91,26 @@ public class ExistedInstancesForNode extends AbstractModel{
         this.InstanceAdvancedSettingsOverride = InstanceAdvancedSettingsOverride;
     }
 
+    public ExistedInstancesForNode() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ExistedInstancesForNode(ExistedInstancesForNode source) {
+        if (source.NodeRole != null) {
+            this.NodeRole = new String(source.NodeRole);
+        }
+        if (source.ExistedInstancesPara != null) {
+            this.ExistedInstancesPara = new ExistedInstancesPara(source.ExistedInstancesPara);
+        }
+        if (source.InstanceAdvancedSettingsOverride != null) {
+            this.InstanceAdvancedSettingsOverride = new InstanceAdvancedSettings(source.InstanceAdvancedSettingsOverride);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

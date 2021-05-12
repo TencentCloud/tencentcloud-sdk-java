@@ -183,6 +183,41 @@ public class CreateBandwidthPackageRequest extends AbstractModel{
         this.Protocol = Protocol;
     }
 
+    public CreateBandwidthPackageRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateBandwidthPackageRequest(CreateBandwidthPackageRequest source) {
+        if (source.NetworkType != null) {
+            this.NetworkType = new String(source.NetworkType);
+        }
+        if (source.ChargeType != null) {
+            this.ChargeType = new String(source.ChargeType);
+        }
+        if (source.BandwidthPackageName != null) {
+            this.BandwidthPackageName = new String(source.BandwidthPackageName);
+        }
+        if (source.BandwidthPackageCount != null) {
+            this.BandwidthPackageCount = new Long(source.BandwidthPackageCount);
+        }
+        if (source.InternetMaxBandwidth != null) {
+            this.InternetMaxBandwidth = new Long(source.InternetMaxBandwidth);
+        }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
+        if (source.Protocol != null) {
+            this.Protocol = new String(source.Protocol);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

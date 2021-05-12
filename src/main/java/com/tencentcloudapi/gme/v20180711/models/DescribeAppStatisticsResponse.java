@@ -45,6 +45,23 @@ public class DescribeAppStatisticsResponse extends AbstractModel{
         this.AppStatistics = AppStatistics;
     }
 
+    public DescribeAppStatisticsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeAppStatisticsResponse(DescribeAppStatisticsResponse source) {
+        if (source.AppStatistics != null) {
+            this.AppStatistics = new AppStatisticsItem[source.AppStatistics.length];
+            for (int i = 0; i < source.AppStatistics.length; i++) {
+                this.AppStatistics[i] = new AppStatisticsItem(source.AppStatistics[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

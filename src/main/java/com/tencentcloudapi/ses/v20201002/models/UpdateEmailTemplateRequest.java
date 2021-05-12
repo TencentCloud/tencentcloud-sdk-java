@@ -91,6 +91,26 @@ public class UpdateEmailTemplateRequest extends AbstractModel{
         this.TemplateName = TemplateName;
     }
 
+    public UpdateEmailTemplateRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UpdateEmailTemplateRequest(UpdateEmailTemplateRequest source) {
+        if (source.TemplateContent != null) {
+            this.TemplateContent = new TemplateContent(source.TemplateContent);
+        }
+        if (source.TemplateID != null) {
+            this.TemplateID = new Long(source.TemplateID);
+        }
+        if (source.TemplateName != null) {
+            this.TemplateName = new String(source.TemplateName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

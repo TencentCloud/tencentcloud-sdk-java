@@ -1002,6 +1002,125 @@ public class VmGroup extends AbstractModel{
         this.Alias = Alias;
     }
 
+    public VmGroup() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public VmGroup(VmGroup source) {
+        if (source.GroupId != null) {
+            this.GroupId = new String(source.GroupId);
+        }
+        if (source.GroupName != null) {
+            this.GroupName = new String(source.GroupName);
+        }
+        if (source.GroupStatus != null) {
+            this.GroupStatus = new String(source.GroupStatus);
+        }
+        if (source.PackageId != null) {
+            this.PackageId = new String(source.PackageId);
+        }
+        if (source.PackageName != null) {
+            this.PackageName = new String(source.PackageName);
+        }
+        if (source.PackageVersion != null) {
+            this.PackageVersion = new String(source.PackageVersion);
+        }
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
+        if (source.ClusterName != null) {
+            this.ClusterName = new String(source.ClusterName);
+        }
+        if (source.NamespaceId != null) {
+            this.NamespaceId = new String(source.NamespaceId);
+        }
+        if (source.NamespaceName != null) {
+            this.NamespaceName = new String(source.NamespaceName);
+        }
+        if (source.ApplicationId != null) {
+            this.ApplicationId = new String(source.ApplicationId);
+        }
+        if (source.ApplicationName != null) {
+            this.ApplicationName = new String(source.ApplicationName);
+        }
+        if (source.InstanceCount != null) {
+            this.InstanceCount = new Long(source.InstanceCount);
+        }
+        if (source.RunInstanceCount != null) {
+            this.RunInstanceCount = new Long(source.RunInstanceCount);
+        }
+        if (source.StartupParameters != null) {
+            this.StartupParameters = new String(source.StartupParameters);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new String(source.UpdateTime);
+        }
+        if (source.OffInstanceCount != null) {
+            this.OffInstanceCount = new Long(source.OffInstanceCount);
+        }
+        if (source.GroupDesc != null) {
+            this.GroupDesc = new String(source.GroupDesc);
+        }
+        if (source.MicroserviceType != null) {
+            this.MicroserviceType = new String(source.MicroserviceType);
+        }
+        if (source.ApplicationType != null) {
+            this.ApplicationType = new String(source.ApplicationType);
+        }
+        if (source.GroupResourceType != null) {
+            this.GroupResourceType = new String(source.GroupResourceType);
+        }
+        if (source.UpdatedTime != null) {
+            this.UpdatedTime = new Long(source.UpdatedTime);
+        }
+        if (source.DeployDesc != null) {
+            this.DeployDesc = new String(source.DeployDesc);
+        }
+        if (source.UpdateType != null) {
+            this.UpdateType = new Long(source.UpdateType);
+        }
+        if (source.DeployBetaEnable != null) {
+            this.DeployBetaEnable = new Boolean(source.DeployBetaEnable);
+        }
+        if (source.DeployBatch != null) {
+            this.DeployBatch = new Float[source.DeployBatch.length];
+            for (int i = 0; i < source.DeployBatch.length; i++) {
+                this.DeployBatch[i] = new Float(source.DeployBatch[i]);
+            }
+        }
+        if (source.DeployExeMode != null) {
+            this.DeployExeMode = new String(source.DeployExeMode);
+        }
+        if (source.DeployWaitTime != null) {
+            this.DeployWaitTime = new Long(source.DeployWaitTime);
+        }
+        if (source.EnableHealthCheck != null) {
+            this.EnableHealthCheck = new Boolean(source.EnableHealthCheck);
+        }
+        if (source.HealthCheckSettings != null) {
+            this.HealthCheckSettings = new HealthCheckSettings(source.HealthCheckSettings);
+        }
+        if (source.PackageType != null) {
+            this.PackageType = new String(source.PackageType);
+        }
+        if (source.StartScript != null) {
+            this.StartScript = new String(source.StartScript);
+        }
+        if (source.StopScript != null) {
+            this.StopScript = new String(source.StopScript);
+        }
+        if (source.Alias != null) {
+            this.Alias = new String(source.Alias);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

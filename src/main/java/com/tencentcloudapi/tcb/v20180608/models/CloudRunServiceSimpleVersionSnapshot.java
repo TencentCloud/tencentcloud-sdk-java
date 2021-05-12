@@ -834,6 +834,104 @@ public class CloudRunServiceSimpleVersionSnapshot extends AbstractModel{
         this.Status = Status;
     }
 
+    public CloudRunServiceSimpleVersionSnapshot() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CloudRunServiceSimpleVersionSnapshot(CloudRunServiceSimpleVersionSnapshot source) {
+        if (source.VersionName != null) {
+            this.VersionName = new String(source.VersionName);
+        }
+        if (source.Remark != null) {
+            this.Remark = new String(source.Remark);
+        }
+        if (source.Cpu != null) {
+            this.Cpu = new Float(source.Cpu);
+        }
+        if (source.Mem != null) {
+            this.Mem = new Float(source.Mem);
+        }
+        if (source.MinNum != null) {
+            this.MinNum = new Long(source.MinNum);
+        }
+        if (source.MaxNum != null) {
+            this.MaxNum = new Long(source.MaxNum);
+        }
+        if (source.ImageUrl != null) {
+            this.ImageUrl = new String(source.ImageUrl);
+        }
+        if (source.PolicyType != null) {
+            this.PolicyType = new String(source.PolicyType);
+        }
+        if (source.PolicyThreshold != null) {
+            this.PolicyThreshold = new Long(source.PolicyThreshold);
+        }
+        if (source.EnvParams != null) {
+            this.EnvParams = new String(source.EnvParams);
+        }
+        if (source.ContainerPort != null) {
+            this.ContainerPort = new Long(source.ContainerPort);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new String(source.UpdateTime);
+        }
+        if (source.UploadType != null) {
+            this.UploadType = new String(source.UploadType);
+        }
+        if (source.DockerfilePath != null) {
+            this.DockerfilePath = new String(source.DockerfilePath);
+        }
+        if (source.BuildDir != null) {
+            this.BuildDir = new String(source.BuildDir);
+        }
+        if (source.RepoType != null) {
+            this.RepoType = new String(source.RepoType);
+        }
+        if (source.Repo != null) {
+            this.Repo = new String(source.Repo);
+        }
+        if (source.Branch != null) {
+            this.Branch = new String(source.Branch);
+        }
+        if (source.EnvId != null) {
+            this.EnvId = new String(source.EnvId);
+        }
+        if (source.ServerName != null) {
+            this.ServerName = new String(source.ServerName);
+        }
+        if (source.PackageName != null) {
+            this.PackageName = new String(source.PackageName);
+        }
+        if (source.PackageVersion != null) {
+            this.PackageVersion = new String(source.PackageVersion);
+        }
+        if (source.CustomLogs != null) {
+            this.CustomLogs = new String(source.CustomLogs);
+        }
+        if (source.InitialDelaySeconds != null) {
+            this.InitialDelaySeconds = new Long(source.InitialDelaySeconds);
+        }
+        if (source.SnapshotName != null) {
+            this.SnapshotName = new String(source.SnapshotName);
+        }
+        if (source.ImageInfo != null) {
+            this.ImageInfo = new CloudBaseRunImageInfo(source.ImageInfo);
+        }
+        if (source.CodeDetail != null) {
+            this.CodeDetail = new CloudBaseCodeRepoDetail(source.CodeDetail);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -68,6 +68,23 @@ public class ClassificationTaskResultItem extends AbstractModel{
         this.Confidence = Confidence;
     }
 
+    public ClassificationTaskResultItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ClassificationTaskResultItem(ClassificationTaskResultItem source) {
+        if (source.Classification != null) {
+            this.Classification = new String(source.Classification);
+        }
+        if (source.Confidence != null) {
+            this.Confidence = new Float(source.Confidence);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

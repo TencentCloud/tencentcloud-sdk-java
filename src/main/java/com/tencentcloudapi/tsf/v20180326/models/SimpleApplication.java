@@ -330,6 +330,50 @@ public class SimpleApplication extends AbstractModel{
         this.ApplicationRuntimeType = ApplicationRuntimeType;
     }
 
+    public SimpleApplication() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SimpleApplication(SimpleApplication source) {
+        if (source.ApplicationId != null) {
+            this.ApplicationId = new String(source.ApplicationId);
+        }
+        if (source.ApplicationName != null) {
+            this.ApplicationName = new String(source.ApplicationName);
+        }
+        if (source.ApplicationType != null) {
+            this.ApplicationType = new String(source.ApplicationType);
+        }
+        if (source.MicroserviceType != null) {
+            this.MicroserviceType = new String(source.MicroserviceType);
+        }
+        if (source.ApplicationDesc != null) {
+            this.ApplicationDesc = new String(source.ApplicationDesc);
+        }
+        if (source.ProgLang != null) {
+            this.ProgLang = new String(source.ProgLang);
+        }
+        if (source.ApplicationResourceType != null) {
+            this.ApplicationResourceType = new String(source.ApplicationResourceType);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new String(source.UpdateTime);
+        }
+        if (source.ApigatewayServiceId != null) {
+            this.ApigatewayServiceId = new String(source.ApigatewayServiceId);
+        }
+        if (source.ApplicationRuntimeType != null) {
+            this.ApplicationRuntimeType = new String(source.ApplicationRuntimeType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

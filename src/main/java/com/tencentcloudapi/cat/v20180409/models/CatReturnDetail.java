@@ -206,6 +206,41 @@ public class CatReturnDetail extends AbstractModel{
         this.ErrorReason = ErrorReason;
     }
 
+    public CatReturnDetail() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CatReturnDetail(CatReturnDetail source) {
+        if (source.IspName != null) {
+            this.IspName = new String(source.IspName);
+        }
+        if (source.Province != null) {
+            this.Province = new String(source.Province);
+        }
+        if (source.ProvinceName != null) {
+            this.ProvinceName = new String(source.ProvinceName);
+        }
+        if (source.MapKey != null) {
+            this.MapKey = new String(source.MapKey);
+        }
+        if (source.ServerIp != null) {
+            this.ServerIp = new String(source.ServerIp);
+        }
+        if (source.ResultCount != null) {
+            this.ResultCount = new Long(source.ResultCount);
+        }
+        if (source.ResultCode != null) {
+            this.ResultCode = new Long(source.ResultCode);
+        }
+        if (source.ErrorReason != null) {
+            this.ErrorReason = new String(source.ErrorReason);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

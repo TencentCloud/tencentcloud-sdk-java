@@ -45,6 +45,20 @@ public class DescribeHSMBySubnetIdRequest extends AbstractModel{
         this.SubnetId = SubnetId;
     }
 
+    public DescribeHSMBySubnetIdRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeHSMBySubnetIdRequest(DescribeHSMBySubnetIdRequest source) {
+        if (source.SubnetId != null) {
+            this.SubnetId = new String(source.SubnetId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

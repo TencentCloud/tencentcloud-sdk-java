@@ -91,6 +91,29 @@ public class DescribeViewsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeViewsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeViewsResponse(DescribeViewsResponse source) {
+        if (source.ViewList != null) {
+            this.ViewList = new ViewResponseInfo[source.ViewList.length];
+            for (int i = 0; i < source.ViewList.length; i++) {
+                this.ViewList[i] = new ViewResponseInfo(source.ViewList[i]);
+            }
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

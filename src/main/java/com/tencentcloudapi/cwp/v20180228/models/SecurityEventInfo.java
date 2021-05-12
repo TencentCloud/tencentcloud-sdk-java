@@ -68,6 +68,23 @@ public class SecurityEventInfo extends AbstractModel{
         this.UuidCnt = UuidCnt;
     }
 
+    public SecurityEventInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SecurityEventInfo(SecurityEventInfo source) {
+        if (source.EventCnt != null) {
+            this.EventCnt = new Long(source.EventCnt);
+        }
+        if (source.UuidCnt != null) {
+            this.UuidCnt = new Long(source.UuidCnt);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

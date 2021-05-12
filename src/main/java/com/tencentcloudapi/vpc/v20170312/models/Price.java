@@ -68,6 +68,23 @@ public class Price extends AbstractModel{
         this.BandwidthPrice = BandwidthPrice;
     }
 
+    public Price() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Price(Price source) {
+        if (source.InstancePrice != null) {
+            this.InstancePrice = new ItemPrice(source.InstancePrice);
+        }
+        if (source.BandwidthPrice != null) {
+            this.BandwidthPrice = new ItemPrice(source.BandwidthPrice);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -91,6 +91,29 @@ public class DescribeSkillGroupInfoListResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeSkillGroupInfoListResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeSkillGroupInfoListResponse(DescribeSkillGroupInfoListResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.SkillGroupList != null) {
+            this.SkillGroupList = new SkillGroupInfoItem[source.SkillGroupList.length];
+            for (int i = 0; i < source.SkillGroupList.length; i++) {
+                this.SkillGroupList[i] = new SkillGroupInfoItem(source.SkillGroupList[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

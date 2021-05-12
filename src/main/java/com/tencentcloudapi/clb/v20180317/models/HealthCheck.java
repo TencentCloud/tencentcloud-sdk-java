@@ -442,6 +442,62 @@ public class HealthCheck extends AbstractModel{
         this.HttpVersion = HttpVersion;
     }
 
+    public HealthCheck() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public HealthCheck(HealthCheck source) {
+        if (source.HealthSwitch != null) {
+            this.HealthSwitch = new Long(source.HealthSwitch);
+        }
+        if (source.TimeOut != null) {
+            this.TimeOut = new Long(source.TimeOut);
+        }
+        if (source.IntervalTime != null) {
+            this.IntervalTime = new Long(source.IntervalTime);
+        }
+        if (source.HealthNum != null) {
+            this.HealthNum = new Long(source.HealthNum);
+        }
+        if (source.UnHealthNum != null) {
+            this.UnHealthNum = new Long(source.UnHealthNum);
+        }
+        if (source.HttpCode != null) {
+            this.HttpCode = new Long(source.HttpCode);
+        }
+        if (source.HttpCheckPath != null) {
+            this.HttpCheckPath = new String(source.HttpCheckPath);
+        }
+        if (source.HttpCheckDomain != null) {
+            this.HttpCheckDomain = new String(source.HttpCheckDomain);
+        }
+        if (source.HttpCheckMethod != null) {
+            this.HttpCheckMethod = new String(source.HttpCheckMethod);
+        }
+        if (source.CheckPort != null) {
+            this.CheckPort = new Long(source.CheckPort);
+        }
+        if (source.ContextType != null) {
+            this.ContextType = new String(source.ContextType);
+        }
+        if (source.SendContext != null) {
+            this.SendContext = new String(source.SendContext);
+        }
+        if (source.RecvContext != null) {
+            this.RecvContext = new String(source.RecvContext);
+        }
+        if (source.CheckType != null) {
+            this.CheckType = new String(source.CheckType);
+        }
+        if (source.HttpVersion != null) {
+            this.HttpVersion = new String(source.HttpVersion);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -68,6 +68,26 @@ public class WebhookTarget extends AbstractModel{
         this.Headers = Headers;
     }
 
+    public WebhookTarget() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public WebhookTarget(WebhookTarget source) {
+        if (source.Address != null) {
+            this.Address = new String(source.Address);
+        }
+        if (source.Headers != null) {
+            this.Headers = new Header[source.Headers.length];
+            for (int i = 0; i < source.Headers.length; i++) {
+                this.Headers[i] = new Header(source.Headers[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

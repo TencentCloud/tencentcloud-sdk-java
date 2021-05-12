@@ -68,6 +68,26 @@ public class DescribeL4BackendsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeL4BackendsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeL4BackendsResponse(DescribeL4BackendsResponse source) {
+        if (source.BackendSet != null) {
+            this.BackendSet = new L4Backend[source.BackendSet.length];
+            for (int i = 0; i < source.BackendSet.length; i++) {
+                this.BackendSet[i] = new L4Backend(source.BackendSet[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -68,6 +68,23 @@ public class SwitchDrToMasterRequest extends AbstractModel{
         this.DatabaseType = DatabaseType;
     }
 
+    public SwitchDrToMasterRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SwitchDrToMasterRequest(SwitchDrToMasterRequest source) {
+        if (source.DstInfo != null) {
+            this.DstInfo = new SyncInstanceInfo(source.DstInfo);
+        }
+        if (source.DatabaseType != null) {
+            this.DatabaseType = new String(source.DatabaseType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

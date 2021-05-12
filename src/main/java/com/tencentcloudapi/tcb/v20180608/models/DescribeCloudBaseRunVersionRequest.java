@@ -91,6 +91,26 @@ public class DescribeCloudBaseRunVersionRequest extends AbstractModel{
         this.VersionName = VersionName;
     }
 
+    public DescribeCloudBaseRunVersionRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeCloudBaseRunVersionRequest(DescribeCloudBaseRunVersionRequest source) {
+        if (source.EnvId != null) {
+            this.EnvId = new String(source.EnvId);
+        }
+        if (source.ServerName != null) {
+            this.ServerName = new String(source.ServerName);
+        }
+        if (source.VersionName != null) {
+            this.VersionName = new String(source.VersionName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -45,6 +45,20 @@ public class DeleteDomainErrorPageInfoRequest extends AbstractModel{
         this.ErrorPageId = ErrorPageId;
     }
 
+    public DeleteDomainErrorPageInfoRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteDomainErrorPageInfoRequest(DeleteDomainErrorPageInfoRequest source) {
+        if (source.ErrorPageId != null) {
+            this.ErrorPageId = new String(source.ErrorPageId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

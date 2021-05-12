@@ -137,6 +137,35 @@ public class ReplicaGroup extends AbstractModel{
         this.RedisNodes = RedisNodes;
     }
 
+    public ReplicaGroup() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ReplicaGroup(ReplicaGroup source) {
+        if (source.GroupId != null) {
+            this.GroupId = new Long(source.GroupId);
+        }
+        if (source.GroupName != null) {
+            this.GroupName = new String(source.GroupName);
+        }
+        if (source.ZoneId != null) {
+            this.ZoneId = new String(source.ZoneId);
+        }
+        if (source.Role != null) {
+            this.Role = new String(source.Role);
+        }
+        if (source.RedisNodes != null) {
+            this.RedisNodes = new RedisNode[source.RedisNodes.length];
+            for (int i = 0; i < source.RedisNodes.length; i++) {
+                this.RedisNodes[i] = new RedisNode(source.RedisNodes[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

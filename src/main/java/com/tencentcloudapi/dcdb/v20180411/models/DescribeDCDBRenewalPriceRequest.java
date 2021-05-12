@@ -68,6 +68,23 @@ public class DescribeDCDBRenewalPriceRequest extends AbstractModel{
         this.Period = Period;
     }
 
+    public DescribeDCDBRenewalPriceRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeDCDBRenewalPriceRequest(DescribeDCDBRenewalPriceRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.Period != null) {
+            this.Period = new Long(source.Period);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

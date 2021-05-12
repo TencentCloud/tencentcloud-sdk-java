@@ -252,6 +252,47 @@ public class TableSpaceData extends AbstractModel{
         this.PhysicalFileSize = PhysicalFileSize;
     }
 
+    public TableSpaceData() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TableSpaceData(TableSpaceData source) {
+        if (source.TableName != null) {
+            this.TableName = new String(source.TableName);
+        }
+        if (source.TableSchema != null) {
+            this.TableSchema = new String(source.TableSchema);
+        }
+        if (source.Engine != null) {
+            this.Engine = new String(source.Engine);
+        }
+        if (source.DataLength != null) {
+            this.DataLength = new Float(source.DataLength);
+        }
+        if (source.IndexLength != null) {
+            this.IndexLength = new Float(source.IndexLength);
+        }
+        if (source.DataFree != null) {
+            this.DataFree = new Float(source.DataFree);
+        }
+        if (source.TotalLength != null) {
+            this.TotalLength = new Float(source.TotalLength);
+        }
+        if (source.FragRatio != null) {
+            this.FragRatio = new Float(source.FragRatio);
+        }
+        if (source.TableRows != null) {
+            this.TableRows = new Long(source.TableRows);
+        }
+        if (source.PhysicalFileSize != null) {
+            this.PhysicalFileSize = new Float(source.PhysicalFileSize);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

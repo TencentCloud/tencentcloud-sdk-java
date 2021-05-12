@@ -68,6 +68,23 @@ public class CreateResourceConfigResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public CreateResourceConfigResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateResourceConfigResponse(CreateResourceConfigResponse source) {
+        if (source.Version != null) {
+            this.Version = new Long(source.Version);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

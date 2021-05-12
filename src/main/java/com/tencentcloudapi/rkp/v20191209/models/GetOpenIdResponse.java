@@ -101,6 +101,29 @@ public class GetOpenIdResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public GetOpenIdResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GetOpenIdResponse(GetOpenIdResponse source) {
+        if (source.OpenId != null) {
+            this.OpenId = new String(source.OpenId);
+        }
+        if (source.RiskInfo != null) {
+            this.RiskInfo = new RiskInfo[source.RiskInfo.length];
+            for (int i = 0; i < source.RiskInfo.length; i++) {
+                this.RiskInfo[i] = new RiskInfo(source.RiskInfo[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

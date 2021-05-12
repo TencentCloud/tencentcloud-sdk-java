@@ -68,6 +68,26 @@ public class OCRDetect extends AbstractModel{
         this.TextInfo = TextInfo;
     }
 
+    public OCRDetect() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public OCRDetect(OCRDetect source) {
+        if (source.Item != null) {
+            this.Item = new OCRItem[source.Item.length];
+            for (int i = 0; i < source.Item.length; i++) {
+                this.Item[i] = new OCRItem(source.Item[i]);
+            }
+        }
+        if (source.TextInfo != null) {
+            this.TextInfo = new String(source.TextInfo);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

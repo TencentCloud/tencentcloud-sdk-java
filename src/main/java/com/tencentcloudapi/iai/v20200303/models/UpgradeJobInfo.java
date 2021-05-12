@@ -175,6 +175,35 @@ Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00
         this.Status = Status;
     }
 
+    public UpgradeJobInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UpgradeJobInfo(UpgradeJobInfo source) {
+        if (source.JobId != null) {
+            this.JobId = new String(source.JobId);
+        }
+        if (source.GroupId != null) {
+            this.GroupId = new String(source.GroupId);
+        }
+        if (source.FromFaceModelVersion != null) {
+            this.FromFaceModelVersion = new String(source.FromFaceModelVersion);
+        }
+        if (source.ToFaceModelVersion != null) {
+            this.ToFaceModelVersion = new String(source.ToFaceModelVersion);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new Long(source.StartTime);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

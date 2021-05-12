@@ -114,6 +114,29 @@ public class InboundPermission extends AbstractModel{
         this.ToPort = ToPort;
     }
 
+    public InboundPermission() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public InboundPermission(InboundPermission source) {
+        if (source.FromPort != null) {
+            this.FromPort = new Long(source.FromPort);
+        }
+        if (source.IpRange != null) {
+            this.IpRange = new String(source.IpRange);
+        }
+        if (source.Protocol != null) {
+            this.Protocol = new String(source.Protocol);
+        }
+        if (source.ToPort != null) {
+            this.ToPort = new Long(source.ToPort);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -114,6 +114,32 @@ public class ReservedInstanceConfigInfoItem extends AbstractModel{
         this.InstanceFamilies = InstanceFamilies;
     }
 
+    public ReservedInstanceConfigInfoItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ReservedInstanceConfigInfoItem(ReservedInstanceConfigInfoItem source) {
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.TypeName != null) {
+            this.TypeName = new String(source.TypeName);
+        }
+        if (source.Order != null) {
+            this.Order = new Long(source.Order);
+        }
+        if (source.InstanceFamilies != null) {
+            this.InstanceFamilies = new ReservedInstanceFamilyItem[source.InstanceFamilies.length];
+            for (int i = 0; i < source.InstanceFamilies.length; i++) {
+                this.InstanceFamilies[i] = new ReservedInstanceFamilyItem(source.InstanceFamilies[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

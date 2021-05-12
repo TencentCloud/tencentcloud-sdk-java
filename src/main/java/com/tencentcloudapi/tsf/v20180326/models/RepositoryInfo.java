@@ -269,6 +269,44 @@ public class RepositoryInfo extends AbstractModel{
         this.Directory = Directory;
     }
 
+    public RepositoryInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RepositoryInfo(RepositoryInfo source) {
+        if (source.RepositoryId != null) {
+            this.RepositoryId = new String(source.RepositoryId);
+        }
+        if (source.RepositoryName != null) {
+            this.RepositoryName = new String(source.RepositoryName);
+        }
+        if (source.RepositoryType != null) {
+            this.RepositoryType = new String(source.RepositoryType);
+        }
+        if (source.RepositoryDesc != null) {
+            this.RepositoryDesc = new String(source.RepositoryDesc);
+        }
+        if (source.IsUsed != null) {
+            this.IsUsed = new Boolean(source.IsUsed);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.BucketName != null) {
+            this.BucketName = new String(source.BucketName);
+        }
+        if (source.BucketRegion != null) {
+            this.BucketRegion = new String(source.BucketRegion);
+        }
+        if (source.Directory != null) {
+            this.Directory = new String(source.Directory);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

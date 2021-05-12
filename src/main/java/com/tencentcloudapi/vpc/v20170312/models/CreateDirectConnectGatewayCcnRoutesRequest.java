@@ -68,6 +68,26 @@ public class CreateDirectConnectGatewayCcnRoutesRequest extends AbstractModel{
         this.Routes = Routes;
     }
 
+    public CreateDirectConnectGatewayCcnRoutesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateDirectConnectGatewayCcnRoutesRequest(CreateDirectConnectGatewayCcnRoutesRequest source) {
+        if (source.DirectConnectGatewayId != null) {
+            this.DirectConnectGatewayId = new String(source.DirectConnectGatewayId);
+        }
+        if (source.Routes != null) {
+            this.Routes = new DirectConnectGatewayCcnRoute[source.Routes.length];
+            for (int i = 0; i < source.Routes.length; i++) {
+                this.Routes[i] = new DirectConnectGatewayCcnRoute(source.Routes[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

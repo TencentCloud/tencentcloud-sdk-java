@@ -121,6 +121,32 @@ public class CreateNotificationConfigurationRequest extends AbstractModel{
         this.NotificationUserGroupIds = NotificationUserGroupIds;
     }
 
+    public CreateNotificationConfigurationRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateNotificationConfigurationRequest(CreateNotificationConfigurationRequest source) {
+        if (source.AutoScalingGroupId != null) {
+            this.AutoScalingGroupId = new String(source.AutoScalingGroupId);
+        }
+        if (source.NotificationTypes != null) {
+            this.NotificationTypes = new String[source.NotificationTypes.length];
+            for (int i = 0; i < source.NotificationTypes.length; i++) {
+                this.NotificationTypes[i] = new String(source.NotificationTypes[i]);
+            }
+        }
+        if (source.NotificationUserGroupIds != null) {
+            this.NotificationUserGroupIds = new String[source.NotificationUserGroupIds.length];
+            for (int i = 0; i < source.NotificationUserGroupIds.length; i++) {
+                this.NotificationUserGroupIds[i] = new String(source.NotificationUserGroupIds[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

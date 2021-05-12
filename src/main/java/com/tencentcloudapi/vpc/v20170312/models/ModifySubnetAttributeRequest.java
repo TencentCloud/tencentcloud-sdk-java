@@ -91,6 +91,26 @@ public class ModifySubnetAttributeRequest extends AbstractModel{
         this.EnableBroadcast = EnableBroadcast;
     }
 
+    public ModifySubnetAttributeRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifySubnetAttributeRequest(ModifySubnetAttributeRequest source) {
+        if (source.SubnetId != null) {
+            this.SubnetId = new String(source.SubnetId);
+        }
+        if (source.SubnetName != null) {
+            this.SubnetName = new String(source.SubnetName);
+        }
+        if (source.EnableBroadcast != null) {
+            this.EnableBroadcast = new String(source.EnableBroadcast);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

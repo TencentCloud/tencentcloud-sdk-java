@@ -206,6 +206,41 @@ public class DescribeSafetyEventListRequest extends AbstractModel{
         this.IsFilterResponseTime = IsFilterResponseTime;
     }
 
+    public DescribeSafetyEventListRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeSafetyEventListRequest(DescribeSafetyEventListRequest source) {
+        if (source.Filter != null) {
+            this.Filter = new String(source.Filter);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Order != null) {
+            this.Order = new String(source.Order);
+        }
+        if (source.By != null) {
+            this.By = new String(source.By);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+        if (source.IsFilterResponseTime != null) {
+            this.IsFilterResponseTime = new Boolean(source.IsFilterResponseTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -91,6 +91,29 @@ public class QueryOrderResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public QueryOrderResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public QueryOrderResponse(QueryOrderResponse source) {
+        if (source.TotalNum != null) {
+            this.TotalNum = new Long(source.TotalNum);
+        }
+        if (source.OrderList != null) {
+            this.OrderList = new QueryOrderOutOrderList[source.OrderList.length];
+            for (int i = 0; i < source.OrderList.length; i++) {
+                this.OrderList[i] = new QueryOrderOutOrderList(source.OrderList[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

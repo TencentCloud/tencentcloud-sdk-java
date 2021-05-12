@@ -114,6 +114,29 @@ public class RGBAInfo extends AbstractModel{
         this.A = A;
     }
 
+    public RGBAInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RGBAInfo(RGBAInfo source) {
+        if (source.R != null) {
+            this.R = new Long(source.R);
+        }
+        if (source.G != null) {
+            this.G = new Long(source.G);
+        }
+        if (source.B != null) {
+            this.B = new Long(source.B);
+        }
+        if (source.A != null) {
+            this.A = new Long(source.A);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

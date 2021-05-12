@@ -733,6 +733,98 @@ public class CardInfo extends AbstractModel{
         this.CertificationState = CertificationState;
     }
 
+    public CardInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CardInfo(CardInfo source) {
+        if (source.Iccid != null) {
+            this.Iccid = new String(source.Iccid);
+        }
+        if (source.Msisdn != null) {
+            this.Msisdn = new String(source.Msisdn);
+        }
+        if (source.Imsi != null) {
+            this.Imsi = new String(source.Imsi);
+        }
+        if (source.Imei != null) {
+            this.Imei = new String(source.Imei);
+        }
+        if (source.Sdkappid != null) {
+            this.Sdkappid = new String(source.Sdkappid);
+        }
+        if (source.Teleoperator != null) {
+            this.Teleoperator = new Long(source.Teleoperator);
+        }
+        if (source.CardStatus != null) {
+            this.CardStatus = new Long(source.CardStatus);
+        }
+        if (source.NetworkStatus != null) {
+            this.NetworkStatus = new Long(source.NetworkStatus);
+        }
+        if (source.ActivitedTime != null) {
+            this.ActivitedTime = new String(source.ActivitedTime);
+        }
+        if (source.Type != null) {
+            this.Type = new Long(source.Type);
+        }
+        if (source.ProductId != null) {
+            this.ProductId = new String(source.ProductId);
+        }
+        if (source.PoolId != null) {
+            this.PoolId = new String(source.PoolId);
+        }
+        if (source.DataUsedInPeriod != null) {
+            this.DataUsedInPeriod = new Float(source.DataUsedInPeriod);
+        }
+        if (source.DataTotalInPeriod != null) {
+            this.DataTotalInPeriod = new Float(source.DataTotalInPeriod);
+        }
+        if (source.ProductExpiredTime != null) {
+            this.ProductExpiredTime = new String(source.ProductExpiredTime);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.CreatedTime != null) {
+            this.CreatedTime = new String(source.CreatedTime);
+        }
+        if (source.ModifiedTime != null) {
+            this.ModifiedTime = new String(source.ModifiedTime);
+        }
+        if (source.PreorderCnt != null) {
+            this.PreorderCnt = new Long(source.PreorderCnt);
+        }
+        if (source.IsActivated != null) {
+            this.IsActivated = new Long(source.IsActivated);
+        }
+        if (source.OrderId != null) {
+            this.OrderId = new String(source.OrderId);
+        }
+        if (source.AutoRenew != null) {
+            this.AutoRenew = new Long(source.AutoRenew);
+        }
+        if (source.Remark != null) {
+            this.Remark = new String(source.Remark);
+        }
+        if (source.AllowArrears != null) {
+            this.AllowArrears = new Long(source.AllowArrears);
+        }
+        if (source.NeedSms != null) {
+            this.NeedSms = new Long(source.NeedSms);
+        }
+        if (source.Provider != null) {
+            this.Provider = new Long(source.Provider);
+        }
+        if (source.CertificationState != null) {
+            this.CertificationState = new Long(source.CertificationState);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -114,6 +114,32 @@ public class DescribeAlarmsByTaskResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeAlarmsByTaskResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeAlarmsByTaskResponse(DescribeAlarmsByTaskResponse source) {
+        if (source.AlarmInfos != null) {
+            this.AlarmInfos = new AlarmInfo[source.AlarmInfos.length];
+            for (int i = 0; i < source.AlarmInfos.length; i++) {
+                this.AlarmInfos[i] = new AlarmInfo(source.AlarmInfos[i]);
+            }
+        }
+        if (source.FaultRatio != null) {
+            this.FaultRatio = new Float(source.FaultRatio);
+        }
+        if (source.FaultTimeSpec != null) {
+            this.FaultTimeSpec = new String(source.FaultTimeSpec);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

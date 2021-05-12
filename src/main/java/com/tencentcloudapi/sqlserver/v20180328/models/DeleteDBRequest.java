@@ -68,6 +68,26 @@ public class DeleteDBRequest extends AbstractModel{
         this.Names = Names;
     }
 
+    public DeleteDBRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteDBRequest(DeleteDBRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.Names != null) {
+            this.Names = new String[source.Names.length];
+            for (int i = 0; i < source.Names.length; i++) {
+                this.Names[i] = new String(source.Names[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

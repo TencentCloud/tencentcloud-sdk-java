@@ -330,6 +330,53 @@ public class TableRollbackResultNew extends AbstractModel{
         this.TotalKeyNum = TotalKeyNum;
     }
 
+    public TableRollbackResultNew() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TableRollbackResultNew(TableRollbackResultNew source) {
+        if (source.TableInstanceId != null) {
+            this.TableInstanceId = new String(source.TableInstanceId);
+        }
+        if (source.TaskId != null) {
+            this.TaskId = new String(source.TaskId);
+        }
+        if (source.TableName != null) {
+            this.TableName = new String(source.TableName);
+        }
+        if (source.TableType != null) {
+            this.TableType = new String(source.TableType);
+        }
+        if (source.TableIdlType != null) {
+            this.TableIdlType = new String(source.TableIdlType);
+        }
+        if (source.TableGroupId != null) {
+            this.TableGroupId = new String(source.TableGroupId);
+        }
+        if (source.Error != null) {
+            this.Error = new ErrorInfo(source.Error);
+        }
+        if (source.TaskIds != null) {
+            this.TaskIds = new String[source.TaskIds.length];
+            for (int i = 0; i < source.TaskIds.length; i++) {
+                this.TaskIds[i] = new String(source.TaskIds[i]);
+            }
+        }
+        if (source.FileId != null) {
+            this.FileId = new String(source.FileId);
+        }
+        if (source.SuccKeyNum != null) {
+            this.SuccKeyNum = new Long(source.SuccKeyNum);
+        }
+        if (source.TotalKeyNum != null) {
+            this.TotalKeyNum = new Long(source.TotalKeyNum);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -160,6 +160,35 @@ public class DomainSetList extends AbstractModel{
         this.NetType = NetType;
     }
 
+    public DomainSetList() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DomainSetList(DomainSetList source) {
+        if (source.DomainName != null) {
+            this.DomainName = new String(source.DomainName);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.CertificateId != null) {
+            this.CertificateId = new String(source.CertificateId);
+        }
+        if (source.IsDefaultMapping != null) {
+            this.IsDefaultMapping = new Boolean(source.IsDefaultMapping);
+        }
+        if (source.Protocol != null) {
+            this.Protocol = new String(source.Protocol);
+        }
+        if (source.NetType != null) {
+            this.NetType = new String(source.NetType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

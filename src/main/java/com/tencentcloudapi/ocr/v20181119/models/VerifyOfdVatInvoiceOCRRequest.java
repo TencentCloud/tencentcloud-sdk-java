@@ -73,6 +73,23 @@ OfdFileUrl 和 OfdFileBase64 必传其一，若两者都传，只解析OfdFileBa
         this.OfdFileBase64 = OfdFileBase64;
     }
 
+    public VerifyOfdVatInvoiceOCRRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public VerifyOfdVatInvoiceOCRRequest(VerifyOfdVatInvoiceOCRRequest source) {
+        if (source.OfdFileUrl != null) {
+            this.OfdFileUrl = new String(source.OfdFileUrl);
+        }
+        if (source.OfdFileBase64 != null) {
+            this.OfdFileBase64 = new String(source.OfdFileBase64);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

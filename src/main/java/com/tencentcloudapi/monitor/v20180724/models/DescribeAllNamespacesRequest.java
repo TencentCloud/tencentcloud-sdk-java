@@ -114,6 +114,35 @@ public class DescribeAllNamespacesRequest extends AbstractModel{
         this.Ids = Ids;
     }
 
+    public DescribeAllNamespacesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeAllNamespacesRequest(DescribeAllNamespacesRequest source) {
+        if (source.SceneType != null) {
+            this.SceneType = new String(source.SceneType);
+        }
+        if (source.Module != null) {
+            this.Module = new String(source.Module);
+        }
+        if (source.MonitorTypes != null) {
+            this.MonitorTypes = new String[source.MonitorTypes.length];
+            for (int i = 0; i < source.MonitorTypes.length; i++) {
+                this.MonitorTypes[i] = new String(source.MonitorTypes[i]);
+            }
+        }
+        if (source.Ids != null) {
+            this.Ids = new String[source.Ids.length];
+            for (int i = 0; i < source.Ids.length; i++) {
+                this.Ids[i] = new String(source.Ids[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -206,6 +206,41 @@ public class JobFlowResourceSpec extends AbstractModel{
         this.CommonResourceSpec = CommonResourceSpec;
     }
 
+    public JobFlowResourceSpec() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public JobFlowResourceSpec(JobFlowResourceSpec source) {
+        if (source.MasterCount != null) {
+            this.MasterCount = new Long(source.MasterCount);
+        }
+        if (source.MasterResourceSpec != null) {
+            this.MasterResourceSpec = new JobFlowResource(source.MasterResourceSpec);
+        }
+        if (source.CoreCount != null) {
+            this.CoreCount = new Long(source.CoreCount);
+        }
+        if (source.CoreResourceSpec != null) {
+            this.CoreResourceSpec = new JobFlowResource(source.CoreResourceSpec);
+        }
+        if (source.TaskCount != null) {
+            this.TaskCount = new Long(source.TaskCount);
+        }
+        if (source.CommonCount != null) {
+            this.CommonCount = new Long(source.CommonCount);
+        }
+        if (source.TaskResourceSpec != null) {
+            this.TaskResourceSpec = new JobFlowResource(source.TaskResourceSpec);
+        }
+        if (source.CommonResourceSpec != null) {
+            this.CommonResourceSpec = new JobFlowResource(source.CommonResourceSpec);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

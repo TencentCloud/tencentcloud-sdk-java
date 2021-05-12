@@ -106,6 +106,26 @@ public class ApiVersionArray extends AbstractModel{
         this.PkgVersion = PkgVersion;
     }
 
+    public ApiVersionArray() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ApiVersionArray(ApiVersionArray source) {
+        if (source.ApplicationId != null) {
+            this.ApplicationId = new String(source.ApplicationId);
+        }
+        if (source.ApplicationName != null) {
+            this.ApplicationName = new String(source.ApplicationName);
+        }
+        if (source.PkgVersion != null) {
+            this.PkgVersion = new String(source.PkgVersion);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

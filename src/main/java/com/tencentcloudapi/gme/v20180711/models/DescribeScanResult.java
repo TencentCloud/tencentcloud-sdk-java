@@ -323,6 +323,59 @@ public class DescribeScanResult extends AbstractModel{
         this.Status = Status;
     }
 
+    public DescribeScanResult() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeScanResult(DescribeScanResult source) {
+        if (source.Code != null) {
+            this.Code = new Long(source.Code);
+        }
+        if (source.DataId != null) {
+            this.DataId = new String(source.DataId);
+        }
+        if (source.ScanFinishTime != null) {
+            this.ScanFinishTime = new Long(source.ScanFinishTime);
+        }
+        if (source.HitFlag != null) {
+            this.HitFlag = new Boolean(source.HitFlag);
+        }
+        if (source.Live != null) {
+            this.Live = new Boolean(source.Live);
+        }
+        if (source.Msg != null) {
+            this.Msg = new String(source.Msg);
+        }
+        if (source.ScanPiece != null) {
+            this.ScanPiece = new ScanPiece[source.ScanPiece.length];
+            for (int i = 0; i < source.ScanPiece.length; i++) {
+                this.ScanPiece[i] = new ScanPiece(source.ScanPiece[i]);
+            }
+        }
+        if (source.ScanStartTime != null) {
+            this.ScanStartTime = new Long(source.ScanStartTime);
+        }
+        if (source.Scenes != null) {
+            this.Scenes = new String[source.Scenes.length];
+            for (int i = 0; i < source.Scenes.length; i++) {
+                this.Scenes[i] = new String(source.Scenes[i]);
+            }
+        }
+        if (source.TaskId != null) {
+            this.TaskId = new String(source.TaskId);
+        }
+        if (source.Url != null) {
+            this.Url = new String(source.Url);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

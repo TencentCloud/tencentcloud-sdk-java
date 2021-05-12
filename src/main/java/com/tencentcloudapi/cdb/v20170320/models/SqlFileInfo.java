@@ -160,6 +160,35 @@ public class SqlFileInfo extends AbstractModel{
         this.FileId = FileId;
     }
 
+    public SqlFileInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SqlFileInfo(SqlFileInfo source) {
+        if (source.UploadTime != null) {
+            this.UploadTime = new String(source.UploadTime);
+        }
+        if (source.UploadInfo != null) {
+            this.UploadInfo = new UploadInfo(source.UploadInfo);
+        }
+        if (source.FileName != null) {
+            this.FileName = new String(source.FileName);
+        }
+        if (source.FileSize != null) {
+            this.FileSize = new Long(source.FileSize);
+        }
+        if (source.IsUploadFinished != null) {
+            this.IsUploadFinished = new Long(source.IsUploadFinished);
+        }
+        if (source.FileId != null) {
+            this.FileId = new String(source.FileId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

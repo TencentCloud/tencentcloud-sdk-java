@@ -210,6 +210,50 @@ OcrFullTextRecognition 时有效。
         this.OcrFullTextRecognitionResultSet = OcrFullTextRecognitionResultSet;
     }
 
+    public LiveStreamAiRecognitionResultItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public LiveStreamAiRecognitionResultItem(LiveStreamAiRecognitionResultItem source) {
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.FaceRecognitionResultSet != null) {
+            this.FaceRecognitionResultSet = new LiveStreamFaceRecognitionResult[source.FaceRecognitionResultSet.length];
+            for (int i = 0; i < source.FaceRecognitionResultSet.length; i++) {
+                this.FaceRecognitionResultSet[i] = new LiveStreamFaceRecognitionResult(source.FaceRecognitionResultSet[i]);
+            }
+        }
+        if (source.AsrWordsRecognitionResultSet != null) {
+            this.AsrWordsRecognitionResultSet = new LiveStreamAsrWordsRecognitionResult[source.AsrWordsRecognitionResultSet.length];
+            for (int i = 0; i < source.AsrWordsRecognitionResultSet.length; i++) {
+                this.AsrWordsRecognitionResultSet[i] = new LiveStreamAsrWordsRecognitionResult(source.AsrWordsRecognitionResultSet[i]);
+            }
+        }
+        if (source.OcrWordsRecognitionResultSet != null) {
+            this.OcrWordsRecognitionResultSet = new LiveStreamOcrWordsRecognitionResult[source.OcrWordsRecognitionResultSet.length];
+            for (int i = 0; i < source.OcrWordsRecognitionResultSet.length; i++) {
+                this.OcrWordsRecognitionResultSet[i] = new LiveStreamOcrWordsRecognitionResult(source.OcrWordsRecognitionResultSet[i]);
+            }
+        }
+        if (source.AsrFullTextRecognitionResultSet != null) {
+            this.AsrFullTextRecognitionResultSet = new LiveStreamAsrFullTextRecognitionResult[source.AsrFullTextRecognitionResultSet.length];
+            for (int i = 0; i < source.AsrFullTextRecognitionResultSet.length; i++) {
+                this.AsrFullTextRecognitionResultSet[i] = new LiveStreamAsrFullTextRecognitionResult(source.AsrFullTextRecognitionResultSet[i]);
+            }
+        }
+        if (source.OcrFullTextRecognitionResultSet != null) {
+            this.OcrFullTextRecognitionResultSet = new LiveStreamOcrFullTextRecognitionResult[source.OcrFullTextRecognitionResultSet.length];
+            for (int i = 0; i < source.OcrFullTextRecognitionResultSet.length; i++) {
+                this.OcrFullTextRecognitionResultSet[i] = new LiveStreamOcrFullTextRecognitionResult(source.OcrFullTextRecognitionResultSet[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

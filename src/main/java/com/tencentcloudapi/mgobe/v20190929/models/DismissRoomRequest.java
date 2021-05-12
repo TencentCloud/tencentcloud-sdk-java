@@ -68,6 +68,23 @@ public class DismissRoomRequest extends AbstractModel{
         this.RoomId = RoomId;
     }
 
+    public DismissRoomRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DismissRoomRequest(DismissRoomRequest source) {
+        if (source.GameId != null) {
+            this.GameId = new String(source.GameId);
+        }
+        if (source.RoomId != null) {
+            this.RoomId = new String(source.RoomId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

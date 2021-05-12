@@ -114,6 +114,29 @@ public class DescribePictureRequest extends AbstractModel{
         this.PageNo = PageNo;
     }
 
+    public DescribePictureRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribePictureRequest(DescribePictureRequest source) {
+        if (source.SdkAppId != null) {
+            this.SdkAppId = new Long(source.SdkAppId);
+        }
+        if (source.PictureId != null) {
+            this.PictureId = new Long(source.PictureId);
+        }
+        if (source.PageSize != null) {
+            this.PageSize = new Long(source.PageSize);
+        }
+        if (source.PageNo != null) {
+            this.PageNo = new Long(source.PageNo);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

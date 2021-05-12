@@ -284,6 +284,47 @@ avg表示均值；
         this.Ip = Ip;
     }
 
+    public DescribeBaradDataRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeBaradDataRequest(DescribeBaradDataRequest source) {
+        if (source.Business != null) {
+            this.Business = new String(source.Business);
+        }
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
+        if (source.MetricName != null) {
+            this.MetricName = new String(source.MetricName);
+        }
+        if (source.Period != null) {
+            this.Period = new Long(source.Period);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+        if (source.Statistics != null) {
+            this.Statistics = new String(source.Statistics);
+        }
+        if (source.ProtocolPort != null) {
+            this.ProtocolPort = new ProtocolPort[source.ProtocolPort.length];
+            for (int i = 0; i < source.ProtocolPort.length; i++) {
+                this.ProtocolPort[i] = new ProtocolPort(source.ProtocolPort[i]);
+            }
+        }
+        if (source.Ip != null) {
+            this.Ip = new String(source.Ip);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -183,6 +183,38 @@ public class EditReverseShellRuleRequest extends AbstractModel{
         this.IsGlobal = IsGlobal;
     }
 
+    public EditReverseShellRuleRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public EditReverseShellRuleRequest(EditReverseShellRuleRequest source) {
+        if (source.Id != null) {
+            this.Id = new Long(source.Id);
+        }
+        if (source.Uuid != null) {
+            this.Uuid = new String(source.Uuid);
+        }
+        if (source.Hostip != null) {
+            this.Hostip = new String(source.Hostip);
+        }
+        if (source.DestIp != null) {
+            this.DestIp = new String(source.DestIp);
+        }
+        if (source.DestPort != null) {
+            this.DestPort = new String(source.DestPort);
+        }
+        if (source.ProcessName != null) {
+            this.ProcessName = new String(source.ProcessName);
+        }
+        if (source.IsGlobal != null) {
+            this.IsGlobal = new Long(source.IsGlobal);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

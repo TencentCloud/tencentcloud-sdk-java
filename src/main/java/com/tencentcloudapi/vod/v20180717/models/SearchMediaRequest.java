@@ -781,6 +781,122 @@ public class SearchMediaRequest extends AbstractModel{
         this.EndTime = EndTime;
     }
 
+    public SearchMediaRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SearchMediaRequest(SearchMediaRequest source) {
+        if (source.FileIds != null) {
+            this.FileIds = new String[source.FileIds.length];
+            for (int i = 0; i < source.FileIds.length; i++) {
+                this.FileIds[i] = new String(source.FileIds[i]);
+            }
+        }
+        if (source.Names != null) {
+            this.Names = new String[source.Names.length];
+            for (int i = 0; i < source.Names.length; i++) {
+                this.Names[i] = new String(source.Names[i]);
+            }
+        }
+        if (source.NamePrefixes != null) {
+            this.NamePrefixes = new String[source.NamePrefixes.length];
+            for (int i = 0; i < source.NamePrefixes.length; i++) {
+                this.NamePrefixes[i] = new String(source.NamePrefixes[i]);
+            }
+        }
+        if (source.Descriptions != null) {
+            this.Descriptions = new String[source.Descriptions.length];
+            for (int i = 0; i < source.Descriptions.length; i++) {
+                this.Descriptions[i] = new String(source.Descriptions[i]);
+            }
+        }
+        if (source.ClassIds != null) {
+            this.ClassIds = new Long[source.ClassIds.length];
+            for (int i = 0; i < source.ClassIds.length; i++) {
+                this.ClassIds[i] = new Long(source.ClassIds[i]);
+            }
+        }
+        if (source.Tags != null) {
+            this.Tags = new String[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new String(source.Tags[i]);
+            }
+        }
+        if (source.Categories != null) {
+            this.Categories = new String[source.Categories.length];
+            for (int i = 0; i < source.Categories.length; i++) {
+                this.Categories[i] = new String(source.Categories[i]);
+            }
+        }
+        if (source.SourceTypes != null) {
+            this.SourceTypes = new String[source.SourceTypes.length];
+            for (int i = 0; i < source.SourceTypes.length; i++) {
+                this.SourceTypes[i] = new String(source.SourceTypes[i]);
+            }
+        }
+        if (source.StreamIds != null) {
+            this.StreamIds = new String[source.StreamIds.length];
+            for (int i = 0; i < source.StreamIds.length; i++) {
+                this.StreamIds[i] = new String(source.StreamIds[i]);
+            }
+        }
+        if (source.Vids != null) {
+            this.Vids = new String[source.Vids.length];
+            for (int i = 0; i < source.Vids.length; i++) {
+                this.Vids[i] = new String(source.Vids[i]);
+            }
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new TimeRange(source.CreateTime);
+        }
+        if (source.Sort != null) {
+            this.Sort = new SortBy(source.Sort);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.Filters != null) {
+            this.Filters = new String[source.Filters.length];
+            for (int i = 0; i < source.Filters.length; i++) {
+                this.Filters[i] = new String(source.Filters[i]);
+            }
+        }
+        if (source.StorageRegions != null) {
+            this.StorageRegions = new String[source.StorageRegions.length];
+            for (int i = 0; i < source.StorageRegions.length; i++) {
+                this.StorageRegions[i] = new String(source.StorageRegions[i]);
+            }
+        }
+        if (source.SubAppId != null) {
+            this.SubAppId = new Long(source.SubAppId);
+        }
+        if (source.Text != null) {
+            this.Text = new String(source.Text);
+        }
+        if (source.SourceType != null) {
+            this.SourceType = new String(source.SourceType);
+        }
+        if (source.StreamId != null) {
+            this.StreamId = new String(source.StreamId);
+        }
+        if (source.Vid != null) {
+            this.Vid = new String(source.Vid);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -344,6 +344,62 @@ public class GetTransactionDetailForUserResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public GetTransactionDetailForUserResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GetTransactionDetailForUserResponse(GetTransactionDetailForUserResponse source) {
+        if (source.TransactionId != null) {
+            this.TransactionId = new String(source.TransactionId);
+        }
+        if (source.TransactionHash != null) {
+            this.TransactionHash = new String(source.TransactionHash);
+        }
+        if (source.CreateOrgName != null) {
+            this.CreateOrgName = new String(source.CreateOrgName);
+        }
+        if (source.TransactionType != null) {
+            this.TransactionType = new String(source.TransactionType);
+        }
+        if (source.TransactionStatus != null) {
+            this.TransactionStatus = new String(source.TransactionStatus);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.TransactionData != null) {
+            this.TransactionData = new String(source.TransactionData);
+        }
+        if (source.BlockId != null) {
+            this.BlockId = new Long(source.BlockId);
+        }
+        if (source.BlockHash != null) {
+            this.BlockHash = new String(source.BlockHash);
+        }
+        if (source.BlockHeight != null) {
+            this.BlockHeight = new Long(source.BlockHeight);
+        }
+        if (source.ChannelName != null) {
+            this.ChannelName = new String(source.ChannelName);
+        }
+        if (source.ContractName != null) {
+            this.ContractName = new String(source.ContractName);
+        }
+        if (source.EndorserOrgList != null) {
+            this.EndorserOrgList = new EndorserGroup[source.EndorserOrgList.length];
+            for (int i = 0; i < source.EndorserOrgList.length; i++) {
+                this.EndorserOrgList[i] = new EndorserGroup(source.EndorserOrgList[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

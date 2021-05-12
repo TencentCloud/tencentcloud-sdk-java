@@ -229,6 +229,50 @@ public class DescribeDBDiagReportTasksRequest extends AbstractModel{
         this.Product = Product;
     }
 
+    public DescribeDBDiagReportTasksRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeDBDiagReportTasksRequest(DescribeDBDiagReportTasksRequest source) {
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+        if (source.InstanceIds != null) {
+            this.InstanceIds = new String[source.InstanceIds.length];
+            for (int i = 0; i < source.InstanceIds.length; i++) {
+                this.InstanceIds[i] = new String(source.InstanceIds[i]);
+            }
+        }
+        if (source.Sources != null) {
+            this.Sources = new String[source.Sources.length];
+            for (int i = 0; i < source.Sources.length; i++) {
+                this.Sources[i] = new String(source.Sources[i]);
+            }
+        }
+        if (source.HealthLevels != null) {
+            this.HealthLevels = new String(source.HealthLevels);
+        }
+        if (source.TaskStatuses != null) {
+            this.TaskStatuses = new String(source.TaskStatuses);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.Product != null) {
+            this.Product = new String(source.Product);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

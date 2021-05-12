@@ -114,6 +114,29 @@ public class GenerateDataKeyRequest extends AbstractModel{
         this.EncryptionContext = EncryptionContext;
     }
 
+    public GenerateDataKeyRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GenerateDataKeyRequest(GenerateDataKeyRequest source) {
+        if (source.KeyId != null) {
+            this.KeyId = new String(source.KeyId);
+        }
+        if (source.KeySpec != null) {
+            this.KeySpec = new String(source.KeySpec);
+        }
+        if (source.NumberOfBytes != null) {
+            this.NumberOfBytes = new Long(source.NumberOfBytes);
+        }
+        if (source.EncryptionContext != null) {
+            this.EncryptionContext = new String(source.EncryptionContext);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

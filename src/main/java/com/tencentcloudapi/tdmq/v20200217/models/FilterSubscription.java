@@ -114,6 +114,32 @@ public class FilterSubscription extends AbstractModel{
         this.SubscriptionNames = SubscriptionNames;
     }
 
+    public FilterSubscription() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public FilterSubscription(FilterSubscription source) {
+        if (source.ConsumerHasCount != null) {
+            this.ConsumerHasCount = new Boolean(source.ConsumerHasCount);
+        }
+        if (source.ConsumerHasBacklog != null) {
+            this.ConsumerHasBacklog = new Boolean(source.ConsumerHasBacklog);
+        }
+        if (source.ConsumerHasExpired != null) {
+            this.ConsumerHasExpired = new Boolean(source.ConsumerHasExpired);
+        }
+        if (source.SubscriptionNames != null) {
+            this.SubscriptionNames = new String[source.SubscriptionNames.length];
+            for (int i = 0; i < source.SubscriptionNames.length; i++) {
+                this.SubscriptionNames[i] = new String(source.SubscriptionNames[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

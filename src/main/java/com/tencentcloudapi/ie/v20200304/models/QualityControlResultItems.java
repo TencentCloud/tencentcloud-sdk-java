@@ -73,6 +73,26 @@ public class QualityControlResultItems extends AbstractModel{
         this.QualityControlItems = QualityControlItems;
     }
 
+    public QualityControlResultItems() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public QualityControlResultItems(QualityControlResultItems source) {
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
+        if (source.QualityControlItems != null) {
+            this.QualityControlItems = new QualityControlItem[source.QualityControlItems.length];
+            for (int i = 0; i < source.QualityControlItems.length; i++) {
+                this.QualityControlItems[i] = new QualityControlItem(source.QualityControlItems[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

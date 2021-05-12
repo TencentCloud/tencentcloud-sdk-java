@@ -134,6 +134,35 @@ public class DescribeLaunchConfigurationsRequest extends AbstractModel{
         this.Offset = Offset;
     }
 
+    public DescribeLaunchConfigurationsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeLaunchConfigurationsRequest(DescribeLaunchConfigurationsRequest source) {
+        if (source.LaunchConfigurationIds != null) {
+            this.LaunchConfigurationIds = new String[source.LaunchConfigurationIds.length];
+            for (int i = 0; i < source.LaunchConfigurationIds.length; i++) {
+                this.LaunchConfigurationIds[i] = new String(source.LaunchConfigurationIds[i]);
+            }
+        }
+        if (source.Filters != null) {
+            this.Filters = new Filter[source.Filters.length];
+            for (int i = 0; i < source.Filters.length; i++) {
+                this.Filters[i] = new Filter(source.Filters[i]);
+            }
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

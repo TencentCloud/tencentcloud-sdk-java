@@ -229,6 +229,44 @@ public class ModifyLiveRecordTemplateRequest extends AbstractModel{
         this.Mp3Param = Mp3Param;
     }
 
+    public ModifyLiveRecordTemplateRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyLiveRecordTemplateRequest(ModifyLiveRecordTemplateRequest source) {
+        if (source.TemplateId != null) {
+            this.TemplateId = new Long(source.TemplateId);
+        }
+        if (source.TemplateName != null) {
+            this.TemplateName = new String(source.TemplateName);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.FlvParam != null) {
+            this.FlvParam = new RecordParam(source.FlvParam);
+        }
+        if (source.HlsParam != null) {
+            this.HlsParam = new RecordParam(source.HlsParam);
+        }
+        if (source.Mp4Param != null) {
+            this.Mp4Param = new RecordParam(source.Mp4Param);
+        }
+        if (source.AacParam != null) {
+            this.AacParam = new RecordParam(source.AacParam);
+        }
+        if (source.HlsSpecialParam != null) {
+            this.HlsSpecialParam = new HlsSpecialParam(source.HlsSpecialParam);
+        }
+        if (source.Mp3Param != null) {
+            this.Mp3Param = new RecordParam(source.Mp3Param);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

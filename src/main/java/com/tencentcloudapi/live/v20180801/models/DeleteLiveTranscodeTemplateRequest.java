@@ -55,6 +55,20 @@ public class DeleteLiveTranscodeTemplateRequest extends AbstractModel{
         this.TemplateId = TemplateId;
     }
 
+    public DeleteLiveTranscodeTemplateRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteLiveTranscodeTemplateRequest(DeleteLiveTranscodeTemplateRequest source) {
+        if (source.TemplateId != null) {
+            this.TemplateId = new Long(source.TemplateId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

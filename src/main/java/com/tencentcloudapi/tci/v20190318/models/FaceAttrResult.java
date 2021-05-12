@@ -68,6 +68,23 @@ public class FaceAttrResult extends AbstractModel{
         this.Sex = Sex;
     }
 
+    public FaceAttrResult() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public FaceAttrResult(FaceAttrResult source) {
+        if (source.Age != null) {
+            this.Age = new Long(source.Age);
+        }
+        if (source.Sex != null) {
+            this.Sex = new String(source.Sex);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

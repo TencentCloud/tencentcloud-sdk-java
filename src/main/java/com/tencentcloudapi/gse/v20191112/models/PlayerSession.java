@@ -295,6 +295,50 @@ public class PlayerSession extends AbstractModel{
         this.TerminationTime = TerminationTime;
     }
 
+    public PlayerSession() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PlayerSession(PlayerSession source) {
+        if (source.CreationTime != null) {
+            this.CreationTime = new String(source.CreationTime);
+        }
+        if (source.DnsName != null) {
+            this.DnsName = new String(source.DnsName);
+        }
+        if (source.FleetId != null) {
+            this.FleetId = new String(source.FleetId);
+        }
+        if (source.GameServerSessionId != null) {
+            this.GameServerSessionId = new String(source.GameServerSessionId);
+        }
+        if (source.IpAddress != null) {
+            this.IpAddress = new String(source.IpAddress);
+        }
+        if (source.PlayerData != null) {
+            this.PlayerData = new String(source.PlayerData);
+        }
+        if (source.PlayerId != null) {
+            this.PlayerId = new String(source.PlayerId);
+        }
+        if (source.PlayerSessionId != null) {
+            this.PlayerSessionId = new String(source.PlayerSessionId);
+        }
+        if (source.Port != null) {
+            this.Port = new Long(source.Port);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.TerminationTime != null) {
+            this.TerminationTime = new String(source.TerminationTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

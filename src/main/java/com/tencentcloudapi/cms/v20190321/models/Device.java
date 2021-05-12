@@ -183,6 +183,38 @@ public class Device extends AbstractModel{
         this.TokenId = TokenId;
     }
 
+    public Device() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Device(Device source) {
+        if (source.DeviceId != null) {
+            this.DeviceId = new String(source.DeviceId);
+        }
+        if (source.IDFA != null) {
+            this.IDFA = new String(source.IDFA);
+        }
+        if (source.IDFV != null) {
+            this.IDFV = new String(source.IDFV);
+        }
+        if (source.IMEI != null) {
+            this.IMEI = new String(source.IMEI);
+        }
+        if (source.IP != null) {
+            this.IP = new String(source.IP);
+        }
+        if (source.Mac != null) {
+            this.Mac = new String(source.Mac);
+        }
+        if (source.TokenId != null) {
+            this.TokenId = new String(source.TokenId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

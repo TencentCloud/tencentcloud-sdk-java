@@ -206,6 +206,41 @@ public class DescribeCameraPersonRequest extends AbstractModel{
         this.IsNeedPic = IsNeedPic;
     }
 
+    public DescribeCameraPersonRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeCameraPersonRequest(DescribeCameraPersonRequest source) {
+        if (source.CompanyId != null) {
+            this.CompanyId = new String(source.CompanyId);
+        }
+        if (source.ShopId != null) {
+            this.ShopId = new Long(source.ShopId);
+        }
+        if (source.CameraId != null) {
+            this.CameraId = new Long(source.CameraId);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new Long(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new Long(source.EndTime);
+        }
+        if (source.PosId != null) {
+            this.PosId = new String(source.PosId);
+        }
+        if (source.Num != null) {
+            this.Num = new Long(source.Num);
+        }
+        if (source.IsNeedPic != null) {
+            this.IsNeedPic = new Long(source.IsNeedPic);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

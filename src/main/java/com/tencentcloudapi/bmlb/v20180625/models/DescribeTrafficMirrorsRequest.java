@@ -206,6 +206,50 @@ public class DescribeTrafficMirrorsRequest extends AbstractModel{
         this.SearchKey = SearchKey;
     }
 
+    public DescribeTrafficMirrorsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeTrafficMirrorsRequest(DescribeTrafficMirrorsRequest source) {
+        if (source.TrafficMirrorIds != null) {
+            this.TrafficMirrorIds = new String[source.TrafficMirrorIds.length];
+            for (int i = 0; i < source.TrafficMirrorIds.length; i++) {
+                this.TrafficMirrorIds[i] = new String(source.TrafficMirrorIds[i]);
+            }
+        }
+        if (source.Aliases != null) {
+            this.Aliases = new String[source.Aliases.length];
+            for (int i = 0; i < source.Aliases.length; i++) {
+                this.Aliases[i] = new String(source.Aliases[i]);
+            }
+        }
+        if (source.VpcIds != null) {
+            this.VpcIds = new String[source.VpcIds.length];
+            for (int i = 0; i < source.VpcIds.length; i++) {
+                this.VpcIds[i] = new String(source.VpcIds[i]);
+            }
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.OrderField != null) {
+            this.OrderField = new String(source.OrderField);
+        }
+        if (source.Order != null) {
+            this.Order = new Long(source.Order);
+        }
+        if (source.SearchKey != null) {
+            this.SearchKey = new String(source.SearchKey);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

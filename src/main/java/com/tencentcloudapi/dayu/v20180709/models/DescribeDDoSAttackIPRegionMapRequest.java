@@ -137,6 +137,35 @@ public class DescribeDDoSAttackIPRegionMapRequest extends AbstractModel{
         this.IpList = IpList;
     }
 
+    public DescribeDDoSAttackIPRegionMapRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeDDoSAttackIPRegionMapRequest(DescribeDDoSAttackIPRegionMapRequest source) {
+        if (source.Business != null) {
+            this.Business = new String(source.Business);
+        }
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+        if (source.IpList != null) {
+            this.IpList = new String[source.IpList.length];
+            for (int i = 0; i < source.IpList.length; i++) {
+                this.IpList[i] = new String(source.IpList[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

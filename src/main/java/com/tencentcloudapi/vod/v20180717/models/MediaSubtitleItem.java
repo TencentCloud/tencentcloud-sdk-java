@@ -162,6 +162,32 @@ public class MediaSubtitleItem extends AbstractModel{
         this.Url = Url;
     }
 
+    public MediaSubtitleItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MediaSubtitleItem(MediaSubtitleItem source) {
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Language != null) {
+            this.Language = new String(source.Language);
+        }
+        if (source.Format != null) {
+            this.Format = new String(source.Format);
+        }
+        if (source.Url != null) {
+            this.Url = new String(source.Url);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

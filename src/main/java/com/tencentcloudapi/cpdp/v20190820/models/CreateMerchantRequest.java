@@ -525,6 +525,80 @@ public class CreateMerchantRequest extends AbstractModel{
         this.Profile = Profile;
     }
 
+    public CreateMerchantRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateMerchantRequest(CreateMerchantRequest source) {
+        if (source.InvoicePlatformId != null) {
+            this.InvoicePlatformId = new Long(source.InvoicePlatformId);
+        }
+        if (source.TaxpayerName != null) {
+            this.TaxpayerName = new String(source.TaxpayerName);
+        }
+        if (source.TaxpayerNum != null) {
+            this.TaxpayerNum = new String(source.TaxpayerNum);
+        }
+        if (source.LegalPersonName != null) {
+            this.LegalPersonName = new String(source.LegalPersonName);
+        }
+        if (source.ContactsName != null) {
+            this.ContactsName = new String(source.ContactsName);
+        }
+        if (source.Phone != null) {
+            this.Phone = new String(source.Phone);
+        }
+        if (source.Address != null) {
+            this.Address = new String(source.Address);
+        }
+        if (source.RegionCode != null) {
+            this.RegionCode = new Long(source.RegionCode);
+        }
+        if (source.CityName != null) {
+            this.CityName = new String(source.CityName);
+        }
+        if (source.Drawer != null) {
+            this.Drawer = new String(source.Drawer);
+        }
+        if (source.TaxRegistrationCertificate != null) {
+            this.TaxRegistrationCertificate = new String(source.TaxRegistrationCertificate);
+        }
+        if (source.Email != null) {
+            this.Email = new String(source.Email);
+        }
+        if (source.BusinessMobile != null) {
+            this.BusinessMobile = new String(source.BusinessMobile);
+        }
+        if (source.BankName != null) {
+            this.BankName = new String(source.BankName);
+        }
+        if (source.BankAccount != null) {
+            this.BankAccount = new String(source.BankAccount);
+        }
+        if (source.Reviewer != null) {
+            this.Reviewer = new String(source.Reviewer);
+        }
+        if (source.Payee != null) {
+            this.Payee = new String(source.Payee);
+        }
+        if (source.RegisterCode != null) {
+            this.RegisterCode = new String(source.RegisterCode);
+        }
+        if (source.State != null) {
+            this.State = new String(source.State);
+        }
+        if (source.CallbackUrl != null) {
+            this.CallbackUrl = new String(source.CallbackUrl);
+        }
+        if (source.Profile != null) {
+            this.Profile = new String(source.Profile);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -252,6 +252,47 @@ public class BackupSummaryItem extends AbstractModel{
         this.BackupVolume = BackupVolume;
     }
 
+    public BackupSummaryItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public BackupSummaryItem(BackupSummaryItem source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.AutoBackupCount != null) {
+            this.AutoBackupCount = new Long(source.AutoBackupCount);
+        }
+        if (source.AutoBackupVolume != null) {
+            this.AutoBackupVolume = new Long(source.AutoBackupVolume);
+        }
+        if (source.ManualBackupCount != null) {
+            this.ManualBackupCount = new Long(source.ManualBackupCount);
+        }
+        if (source.ManualBackupVolume != null) {
+            this.ManualBackupVolume = new Long(source.ManualBackupVolume);
+        }
+        if (source.DataBackupCount != null) {
+            this.DataBackupCount = new Long(source.DataBackupCount);
+        }
+        if (source.DataBackupVolume != null) {
+            this.DataBackupVolume = new Long(source.DataBackupVolume);
+        }
+        if (source.BinlogBackupCount != null) {
+            this.BinlogBackupCount = new Long(source.BinlogBackupCount);
+        }
+        if (source.BinlogBackupVolume != null) {
+            this.BinlogBackupVolume = new Long(source.BinlogBackupVolume);
+        }
+        if (source.BackupVolume != null) {
+            this.BackupVolume = new Long(source.BackupVolume);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

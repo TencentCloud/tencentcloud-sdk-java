@@ -68,6 +68,23 @@ public class MTicket extends AbstractModel{
         this.MatchTicketId = MatchTicketId;
     }
 
+    public MTicket() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MTicket(MTicket source) {
+        if (source.MatchCode != null) {
+            this.MatchCode = new String(source.MatchCode);
+        }
+        if (source.MatchTicketId != null) {
+            this.MatchTicketId = new String(source.MatchTicketId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

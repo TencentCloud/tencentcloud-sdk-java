@@ -969,6 +969,107 @@ public class ClusterInstancesInfo extends AbstractModel{
         this.ProductId = ProductId;
     }
 
+    public ClusterInstancesInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ClusterInstancesInfo(ClusterInstancesInfo source) {
+        if (source.Id != null) {
+            this.Id = new Long(source.Id);
+        }
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
+        if (source.Ftitle != null) {
+            this.Ftitle = new String(source.Ftitle);
+        }
+        if (source.ClusterName != null) {
+            this.ClusterName = new String(source.ClusterName);
+        }
+        if (source.RegionId != null) {
+            this.RegionId = new Long(source.RegionId);
+        }
+        if (source.ZoneId != null) {
+            this.ZoneId = new Long(source.ZoneId);
+        }
+        if (source.AppId != null) {
+            this.AppId = new Long(source.AppId);
+        }
+        if (source.Uin != null) {
+            this.Uin = new String(source.Uin);
+        }
+        if (source.ProjectId != null) {
+            this.ProjectId = new Long(source.ProjectId);
+        }
+        if (source.VpcId != null) {
+            this.VpcId = new Long(source.VpcId);
+        }
+        if (source.SubnetId != null) {
+            this.SubnetId = new Long(source.SubnetId);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.AddTime != null) {
+            this.AddTime = new String(source.AddTime);
+        }
+        if (source.RunTime != null) {
+            this.RunTime = new String(source.RunTime);
+        }
+        if (source.Config != null) {
+            this.Config = new EmrProductConfigOutter(source.Config);
+        }
+        if (source.MasterIp != null) {
+            this.MasterIp = new String(source.MasterIp);
+        }
+        if (source.EmrVersion != null) {
+            this.EmrVersion = new String(source.EmrVersion);
+        }
+        if (source.ChargeType != null) {
+            this.ChargeType = new Long(source.ChargeType);
+        }
+        if (source.TradeVersion != null) {
+            this.TradeVersion = new Long(source.TradeVersion);
+        }
+        if (source.ResourceOrderId != null) {
+            this.ResourceOrderId = new Long(source.ResourceOrderId);
+        }
+        if (source.IsTradeCluster != null) {
+            this.IsTradeCluster = new Long(source.IsTradeCluster);
+        }
+        if (source.AlarmInfo != null) {
+            this.AlarmInfo = new String(source.AlarmInfo);
+        }
+        if (source.IsWoodpeckerCluster != null) {
+            this.IsWoodpeckerCluster = new Long(source.IsWoodpeckerCluster);
+        }
+        if (source.MetaDb != null) {
+            this.MetaDb = new String(source.MetaDb);
+        }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
+        if (source.HiveMetaDb != null) {
+            this.HiveMetaDb = new String(source.HiveMetaDb);
+        }
+        if (source.ServiceClass != null) {
+            this.ServiceClass = new String(source.ServiceClass);
+        }
+        if (source.AliasInfo != null) {
+            this.AliasInfo = new String(source.AliasInfo);
+        }
+        if (source.ProductId != null) {
+            this.ProductId = new Long(source.ProductId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

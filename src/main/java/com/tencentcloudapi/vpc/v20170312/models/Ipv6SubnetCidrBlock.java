@@ -68,6 +68,23 @@ public class Ipv6SubnetCidrBlock extends AbstractModel{
         this.Ipv6CidrBlock = Ipv6CidrBlock;
     }
 
+    public Ipv6SubnetCidrBlock() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Ipv6SubnetCidrBlock(Ipv6SubnetCidrBlock source) {
+        if (source.SubnetId != null) {
+            this.SubnetId = new String(source.SubnetId);
+        }
+        if (source.Ipv6CidrBlock != null) {
+            this.Ipv6CidrBlock = new String(source.Ipv6CidrBlock);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

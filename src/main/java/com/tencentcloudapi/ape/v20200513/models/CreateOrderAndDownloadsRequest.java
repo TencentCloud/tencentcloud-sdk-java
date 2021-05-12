@@ -45,6 +45,23 @@ public class CreateOrderAndDownloadsRequest extends AbstractModel{
         this.ImageInfos = ImageInfos;
     }
 
+    public CreateOrderAndDownloadsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateOrderAndDownloadsRequest(CreateOrderAndDownloadsRequest source) {
+        if (source.ImageInfos != null) {
+            this.ImageInfos = new ImageInfo[source.ImageInfos.length];
+            for (int i = 0; i < source.ImageInfos.length; i++) {
+                this.ImageInfos[i] = new ImageInfo(source.ImageInfos[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

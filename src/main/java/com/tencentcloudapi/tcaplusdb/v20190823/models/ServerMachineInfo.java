@@ -68,6 +68,23 @@ public class ServerMachineInfo extends AbstractModel{
         this.MachineType = MachineType;
     }
 
+    public ServerMachineInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ServerMachineInfo(ServerMachineInfo source) {
+        if (source.ServerUid != null) {
+            this.ServerUid = new String(source.ServerUid);
+        }
+        if (source.MachineType != null) {
+            this.MachineType = new String(source.MachineType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

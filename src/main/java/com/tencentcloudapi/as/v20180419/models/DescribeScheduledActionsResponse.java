@@ -91,6 +91,29 @@ public class DescribeScheduledActionsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeScheduledActionsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeScheduledActionsResponse(DescribeScheduledActionsResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.ScheduledActionSet != null) {
+            this.ScheduledActionSet = new ScheduledAction[source.ScheduledActionSet.length];
+            for (int i = 0; i < source.ScheduledActionSet.length; i++) {
+                this.ScheduledActionSet[i] = new ScheduledAction(source.ScheduledActionSet[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -206,6 +206,41 @@ public class L4HealthConfig extends AbstractModel{
         this.KeepTime = KeepTime;
     }
 
+    public L4HealthConfig() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public L4HealthConfig(L4HealthConfig source) {
+        if (source.Protocol != null) {
+            this.Protocol = new String(source.Protocol);
+        }
+        if (source.VirtualPort != null) {
+            this.VirtualPort = new Long(source.VirtualPort);
+        }
+        if (source.Enable != null) {
+            this.Enable = new Long(source.Enable);
+        }
+        if (source.TimeOut != null) {
+            this.TimeOut = new Long(source.TimeOut);
+        }
+        if (source.Interval != null) {
+            this.Interval = new Long(source.Interval);
+        }
+        if (source.KickNum != null) {
+            this.KickNum = new Long(source.KickNum);
+        }
+        if (source.AliveNum != null) {
+            this.AliveNum = new Long(source.AliveNum);
+        }
+        if (source.KeepTime != null) {
+            this.KeepTime = new Long(source.KeepTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

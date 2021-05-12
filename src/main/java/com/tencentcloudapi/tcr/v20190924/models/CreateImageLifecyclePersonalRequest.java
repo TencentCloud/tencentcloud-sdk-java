@@ -91,6 +91,26 @@ public class CreateImageLifecyclePersonalRequest extends AbstractModel{
         this.Val = Val;
     }
 
+    public CreateImageLifecyclePersonalRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateImageLifecyclePersonalRequest(CreateImageLifecyclePersonalRequest source) {
+        if (source.RepoName != null) {
+            this.RepoName = new String(source.RepoName);
+        }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.Val != null) {
+            this.Val = new Long(source.Val);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

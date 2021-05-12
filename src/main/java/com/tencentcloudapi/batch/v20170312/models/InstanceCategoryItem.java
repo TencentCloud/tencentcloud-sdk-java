@@ -68,6 +68,26 @@ public class InstanceCategoryItem extends AbstractModel{
         this.InstanceFamilySet = InstanceFamilySet;
     }
 
+    public InstanceCategoryItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public InstanceCategoryItem(InstanceCategoryItem source) {
+        if (source.InstanceCategory != null) {
+            this.InstanceCategory = new String(source.InstanceCategory);
+        }
+        if (source.InstanceFamilySet != null) {
+            this.InstanceFamilySet = new String[source.InstanceFamilySet.length];
+            for (int i = 0; i < source.InstanceFamilySet.length; i++) {
+                this.InstanceFamilySet[i] = new String(source.InstanceFamilySet[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

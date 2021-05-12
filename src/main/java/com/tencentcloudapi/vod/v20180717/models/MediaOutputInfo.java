@@ -91,6 +91,26 @@ public class MediaOutputInfo extends AbstractModel{
         this.Dir = Dir;
     }
 
+    public MediaOutputInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MediaOutputInfo(MediaOutputInfo source) {
+        if (source.Region != null) {
+            this.Region = new String(source.Region);
+        }
+        if (source.Bucket != null) {
+            this.Bucket = new String(source.Bucket);
+        }
+        if (source.Dir != null) {
+            this.Dir = new String(source.Dir);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

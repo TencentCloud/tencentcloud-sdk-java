@@ -321,6 +321,56 @@ public class QueryInvoiceResultData extends AbstractModel{
         this.PdfUrl = PdfUrl;
     }
 
+    public QueryInvoiceResultData() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public QueryInvoiceResultData(QueryInvoiceResultData source) {
+        if (source.OrderId != null) {
+            this.OrderId = new String(source.OrderId);
+        }
+        if (source.OrderSn != null) {
+            this.OrderSn = new String(source.OrderSn);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.Message != null) {
+            this.Message = new String(source.Message);
+        }
+        if (source.TicketDate != null) {
+            this.TicketDate = new String(source.TicketDate);
+        }
+        if (source.TicketSn != null) {
+            this.TicketSn = new String(source.TicketSn);
+        }
+        if (source.TicketCode != null) {
+            this.TicketCode = new String(source.TicketCode);
+        }
+        if (source.CheckCode != null) {
+            this.CheckCode = new String(source.CheckCode);
+        }
+        if (source.AmountWithTax != null) {
+            this.AmountWithTax = new String(source.AmountWithTax);
+        }
+        if (source.AmountWithoutTax != null) {
+            this.AmountWithoutTax = new String(source.AmountWithoutTax);
+        }
+        if (source.TaxAmount != null) {
+            this.TaxAmount = new String(source.TaxAmount);
+        }
+        if (source.IsRedWashed != null) {
+            this.IsRedWashed = new Long(source.IsRedWashed);
+        }
+        if (source.PdfUrl != null) {
+            this.PdfUrl = new String(source.PdfUrl);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

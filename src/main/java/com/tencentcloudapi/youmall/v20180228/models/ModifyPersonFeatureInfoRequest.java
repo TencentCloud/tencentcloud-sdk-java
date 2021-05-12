@@ -160,6 +160,35 @@ public class ModifyPersonFeatureInfoRequest extends AbstractModel{
         this.ShopId = ShopId;
     }
 
+    public ModifyPersonFeatureInfoRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyPersonFeatureInfoRequest(ModifyPersonFeatureInfoRequest source) {
+        if (source.CompanyId != null) {
+            this.CompanyId = new String(source.CompanyId);
+        }
+        if (source.PersonId != null) {
+            this.PersonId = new Long(source.PersonId);
+        }
+        if (source.Picture != null) {
+            this.Picture = new String(source.Picture);
+        }
+        if (source.PictureName != null) {
+            this.PictureName = new String(source.PictureName);
+        }
+        if (source.PersonType != null) {
+            this.PersonType = new Long(source.PersonType);
+        }
+        if (source.ShopId != null) {
+            this.ShopId = new Long(source.ShopId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

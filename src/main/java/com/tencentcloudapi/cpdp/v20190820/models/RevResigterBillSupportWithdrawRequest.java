@@ -252,6 +252,47 @@ public class RevResigterBillSupportWithdrawRequest extends AbstractModel{
         this.Profile = Profile;
     }
 
+    public RevResigterBillSupportWithdrawRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RevResigterBillSupportWithdrawRequest(RevResigterBillSupportWithdrawRequest source) {
+        if (source.MrchCode != null) {
+            this.MrchCode = new String(source.MrchCode);
+        }
+        if (source.TranNetMemberCode != null) {
+            this.TranNetMemberCode = new String(source.TranNetMemberCode);
+        }
+        if (source.OldOrderNo != null) {
+            this.OldOrderNo = new String(source.OldOrderNo);
+        }
+        if (source.CancelAmt != null) {
+            this.CancelAmt = new String(source.CancelAmt);
+        }
+        if (source.TranFee != null) {
+            this.TranFee = new String(source.TranFee);
+        }
+        if (source.Remark != null) {
+            this.Remark = new String(source.Remark);
+        }
+        if (source.ReservedMsgOne != null) {
+            this.ReservedMsgOne = new String(source.ReservedMsgOne);
+        }
+        if (source.ReservedMsgTwo != null) {
+            this.ReservedMsgTwo = new String(source.ReservedMsgTwo);
+        }
+        if (source.ReservedMsgThree != null) {
+            this.ReservedMsgThree = new String(source.ReservedMsgThree);
+        }
+        if (source.Profile != null) {
+            this.Profile = new String(source.Profile);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

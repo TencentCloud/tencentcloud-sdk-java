@@ -45,6 +45,20 @@ public class StartMigrateJobRequest extends AbstractModel{
         this.JobId = JobId;
     }
 
+    public StartMigrateJobRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public StartMigrateJobRequest(StartMigrateJobRequest source) {
+        if (source.JobId != null) {
+            this.JobId = new String(source.JobId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

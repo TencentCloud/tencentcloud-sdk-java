@@ -68,6 +68,26 @@ public class DescribeAttackVulTypeListResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeAttackVulTypeListResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeAttackVulTypeListResponse(DescribeAttackVulTypeListResponse source) {
+        if (source.List != null) {
+            this.List = new String[source.List.length];
+            for (int i = 0; i < source.List.length; i++) {
+                this.List[i] = new String(source.List[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

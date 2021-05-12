@@ -160,6 +160,41 @@ public class MatchAttribute extends AbstractModel{
         this.MapValue = MapValue;
     }
 
+    public MatchAttribute() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MatchAttribute(MatchAttribute source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Type != null) {
+            this.Type = new Long(source.Type);
+        }
+        if (source.NumberValue != null) {
+            this.NumberValue = new Float(source.NumberValue);
+        }
+        if (source.StringValue != null) {
+            this.StringValue = new String(source.StringValue);
+        }
+        if (source.ListValue != null) {
+            this.ListValue = new String[source.ListValue.length];
+            for (int i = 0; i < source.ListValue.length; i++) {
+                this.ListValue[i] = new String(source.ListValue[i]);
+            }
+        }
+        if (source.MapValue != null) {
+            this.MapValue = new AttributeMap[source.MapValue.length];
+            for (int i = 0; i < source.MapValue.length; i++) {
+                this.MapValue[i] = new AttributeMap(source.MapValue[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -91,6 +91,35 @@ public class DataPoint extends AbstractModel{
         this.Values = Values;
     }
 
+    public DataPoint() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DataPoint(DataPoint source) {
+        if (source.Dimensions != null) {
+            this.Dimensions = new Dimension[source.Dimensions.length];
+            for (int i = 0; i < source.Dimensions.length; i++) {
+                this.Dimensions[i] = new Dimension(source.Dimensions[i]);
+            }
+        }
+        if (source.Timestamps != null) {
+            this.Timestamps = new Long[source.Timestamps.length];
+            for (int i = 0; i < source.Timestamps.length; i++) {
+                this.Timestamps[i] = new Long(source.Timestamps[i]);
+            }
+        }
+        if (source.Values != null) {
+            this.Values = new Float[source.Values.length];
+            for (int i = 0; i < source.Values.length; i++) {
+                this.Values[i] = new Float(source.Values[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

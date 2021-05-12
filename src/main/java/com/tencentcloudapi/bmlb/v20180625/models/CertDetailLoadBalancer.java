@@ -114,6 +114,29 @@ public class CertDetailLoadBalancer extends AbstractModel{
         this.RegionId = RegionId;
     }
 
+    public CertDetailLoadBalancer() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CertDetailLoadBalancer(CertDetailLoadBalancer source) {
+        if (source.LoadBalancerId != null) {
+            this.LoadBalancerId = new String(source.LoadBalancerId);
+        }
+        if (source.LoadBalancerName != null) {
+            this.LoadBalancerName = new String(source.LoadBalancerName);
+        }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.RegionId != null) {
+            this.RegionId = new Long(source.RegionId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

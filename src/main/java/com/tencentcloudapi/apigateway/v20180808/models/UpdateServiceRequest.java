@@ -114,6 +114,29 @@ public class UpdateServiceRequest extends AbstractModel{
         this.UpdateDesc = UpdateDesc;
     }
 
+    public UpdateServiceRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UpdateServiceRequest(UpdateServiceRequest source) {
+        if (source.ServiceId != null) {
+            this.ServiceId = new String(source.ServiceId);
+        }
+        if (source.EnvironmentName != null) {
+            this.EnvironmentName = new String(source.EnvironmentName);
+        }
+        if (source.VersionName != null) {
+            this.VersionName = new String(source.VersionName);
+        }
+        if (source.UpdateDesc != null) {
+            this.UpdateDesc = new String(source.UpdateDesc);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

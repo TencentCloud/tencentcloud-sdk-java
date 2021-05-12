@@ -147,6 +147,32 @@ public class ComponentStatistics extends AbstractModel{
         this.Description = Description;
     }
 
+    public ComponentStatistics() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ComponentStatistics(ComponentStatistics source) {
+        if (source.Id != null) {
+            this.Id = new Long(source.Id);
+        }
+        if (source.MachineNum != null) {
+            this.MachineNum = new Long(source.MachineNum);
+        }
+        if (source.ComponentName != null) {
+            this.ComponentName = new String(source.ComponentName);
+        }
+        if (source.ComponentType != null) {
+            this.ComponentType = new String(source.ComponentType);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

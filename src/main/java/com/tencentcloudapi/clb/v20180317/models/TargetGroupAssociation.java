@@ -114,6 +114,29 @@ public class TargetGroupAssociation extends AbstractModel{
         this.LocationId = LocationId;
     }
 
+    public TargetGroupAssociation() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TargetGroupAssociation(TargetGroupAssociation source) {
+        if (source.LoadBalancerId != null) {
+            this.LoadBalancerId = new String(source.LoadBalancerId);
+        }
+        if (source.ListenerId != null) {
+            this.ListenerId = new String(source.ListenerId);
+        }
+        if (source.TargetGroupId != null) {
+            this.TargetGroupId = new String(source.TargetGroupId);
+        }
+        if (source.LocationId != null) {
+            this.LocationId = new String(source.LocationId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

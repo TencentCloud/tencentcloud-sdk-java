@@ -233,6 +233,41 @@ NORMAL_CVM：普通云服务器；
         this.NetDetectName = NetDetectName;
     }
 
+    public CheckNetDetectStateRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CheckNetDetectStateRequest(CheckNetDetectStateRequest source) {
+        if (source.DetectDestinationIp != null) {
+            this.DetectDestinationIp = new String[source.DetectDestinationIp.length];
+            for (int i = 0; i < source.DetectDestinationIp.length; i++) {
+                this.DetectDestinationIp[i] = new String(source.DetectDestinationIp[i]);
+            }
+        }
+        if (source.NextHopType != null) {
+            this.NextHopType = new String(source.NextHopType);
+        }
+        if (source.NextHopDestination != null) {
+            this.NextHopDestination = new String(source.NextHopDestination);
+        }
+        if (source.NetDetectId != null) {
+            this.NetDetectId = new String(source.NetDetectId);
+        }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.SubnetId != null) {
+            this.SubnetId = new String(source.SubnetId);
+        }
+        if (source.NetDetectName != null) {
+            this.NetDetectName = new String(source.NetDetectName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -333,6 +333,53 @@ public class DescribeWhiteboardPushResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeWhiteboardPushResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeWhiteboardPushResponse(DescribeWhiteboardPushResponse source) {
+        if (source.FinishReason != null) {
+            this.FinishReason = new String(source.FinishReason);
+        }
+        if (source.TaskId != null) {
+            this.TaskId = new String(source.TaskId);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.RoomId != null) {
+            this.RoomId = new Long(source.RoomId);
+        }
+        if (source.GroupId != null) {
+            this.GroupId = new String(source.GroupId);
+        }
+        if (source.PushUserId != null) {
+            this.PushUserId = new String(source.PushUserId);
+        }
+        if (source.PushStartTime != null) {
+            this.PushStartTime = new Long(source.PushStartTime);
+        }
+        if (source.PushStopTime != null) {
+            this.PushStopTime = new Long(source.PushStopTime);
+        }
+        if (source.ExceptionCnt != null) {
+            this.ExceptionCnt = new Long(source.ExceptionCnt);
+        }
+        if (source.IMSyncTime != null) {
+            this.IMSyncTime = new Long(source.IMSyncTime);
+        }
+        if (source.Backup != null) {
+            this.Backup = new String(source.Backup);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -180,6 +180,41 @@ public class MediaSampleSnapshotItem extends AbstractModel{
         this.WaterMarkDefinition = WaterMarkDefinition;
     }
 
+    public MediaSampleSnapshotItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MediaSampleSnapshotItem(MediaSampleSnapshotItem source) {
+        if (source.Definition != null) {
+            this.Definition = new Long(source.Definition);
+        }
+        if (source.SampleType != null) {
+            this.SampleType = new String(source.SampleType);
+        }
+        if (source.Interval != null) {
+            this.Interval = new Long(source.Interval);
+        }
+        if (source.Storage != null) {
+            this.Storage = new TaskOutputStorage(source.Storage);
+        }
+        if (source.ImagePathSet != null) {
+            this.ImagePathSet = new String[source.ImagePathSet.length];
+            for (int i = 0; i < source.ImagePathSet.length; i++) {
+                this.ImagePathSet[i] = new String(source.ImagePathSet[i]);
+            }
+        }
+        if (source.WaterMarkDefinition != null) {
+            this.WaterMarkDefinition = new Long[source.WaterMarkDefinition.length];
+            for (int i = 0; i < source.WaterMarkDefinition.length; i++) {
+                this.WaterMarkDefinition[i] = new Long(source.WaterMarkDefinition[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

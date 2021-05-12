@@ -91,6 +91,26 @@ public class CreateDisasterRecoverGroupRequest extends AbstractModel{
         this.ClientToken = ClientToken;
     }
 
+    public CreateDisasterRecoverGroupRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateDisasterRecoverGroupRequest(CreateDisasterRecoverGroupRequest source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.ClientToken != null) {
+            this.ClientToken = new String(source.ClientToken);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

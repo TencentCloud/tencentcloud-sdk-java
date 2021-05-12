@@ -96,6 +96,29 @@ public class DescribeNatGatewaySourceIpTranslationNatRulesResponse extends Abstr
         this.RequestId = RequestId;
     }
 
+    public DescribeNatGatewaySourceIpTranslationNatRulesResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeNatGatewaySourceIpTranslationNatRulesResponse(DescribeNatGatewaySourceIpTranslationNatRulesResponse source) {
+        if (source.SourceIpTranslationNatRuleSet != null) {
+            this.SourceIpTranslationNatRuleSet = new SourceIpTranslationNatRule[source.SourceIpTranslationNatRuleSet.length];
+            for (int i = 0; i < source.SourceIpTranslationNatRuleSet.length; i++) {
+                this.SourceIpTranslationNatRuleSet[i] = new SourceIpTranslationNatRule(source.SourceIpTranslationNatRuleSet[i]);
+            }
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -137,6 +137,32 @@ public class CreateCosTokenRequest extends AbstractModel{
         this.SourceChannel = SourceChannel;
     }
 
+    public CreateCosTokenRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateCosTokenRequest(CreateCosTokenRequest source) {
+        if (source.ServiceId != null) {
+            this.ServiceId = new String(source.ServiceId);
+        }
+        if (source.VersionId != null) {
+            this.VersionId = new String(source.VersionId);
+        }
+        if (source.PkgName != null) {
+            this.PkgName = new String(source.PkgName);
+        }
+        if (source.OptType != null) {
+            this.OptType = new Long(source.OptType);
+        }
+        if (source.SourceChannel != null) {
+            this.SourceChannel = new Long(source.SourceChannel);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

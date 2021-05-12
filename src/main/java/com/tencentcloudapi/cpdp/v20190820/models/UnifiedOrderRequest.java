@@ -650,6 +650,98 @@ development: 开发环境
         this.PaymentNotifyUrl = PaymentNotifyUrl;
     }
 
+    public UnifiedOrderRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UnifiedOrderRequest(UnifiedOrderRequest source) {
+        if (source.CurrencyType != null) {
+            this.CurrencyType = new String(source.CurrencyType);
+        }
+        if (source.MidasAppId != null) {
+            this.MidasAppId = new String(source.MidasAppId);
+        }
+        if (source.OutTradeNo != null) {
+            this.OutTradeNo = new String(source.OutTradeNo);
+        }
+        if (source.ProductDetail != null) {
+            this.ProductDetail = new String(source.ProductDetail);
+        }
+        if (source.ProductId != null) {
+            this.ProductId = new String(source.ProductId);
+        }
+        if (source.ProductName != null) {
+            this.ProductName = new String(source.ProductName);
+        }
+        if (source.TotalAmt != null) {
+            this.TotalAmt = new Long(source.TotalAmt);
+        }
+        if (source.UserId != null) {
+            this.UserId = new String(source.UserId);
+        }
+        if (source.RealChannel != null) {
+            this.RealChannel = new String(source.RealChannel);
+        }
+        if (source.OriginalAmt != null) {
+            this.OriginalAmt = new Long(source.OriginalAmt);
+        }
+        if (source.MidasSecretId != null) {
+            this.MidasSecretId = new String(source.MidasSecretId);
+        }
+        if (source.MidasSignature != null) {
+            this.MidasSignature = new String(source.MidasSignature);
+        }
+        if (source.CallbackUrl != null) {
+            this.CallbackUrl = new String(source.CallbackUrl);
+        }
+        if (source.Channel != null) {
+            this.Channel = new String(source.Channel);
+        }
+        if (source.Metadata != null) {
+            this.Metadata = new String(source.Metadata);
+        }
+        if (source.Quantity != null) {
+            this.Quantity = new Long(source.Quantity);
+        }
+        if (source.SubAppId != null) {
+            this.SubAppId = new String(source.SubAppId);
+        }
+        if (source.SubOrderList != null) {
+            this.SubOrderList = new UnifiedOrderInSubOrderList[source.SubOrderList.length];
+            for (int i = 0; i < source.SubOrderList.length; i++) {
+                this.SubOrderList[i] = new UnifiedOrderInSubOrderList(source.SubOrderList[i]);
+            }
+        }
+        if (source.TotalMchIncome != null) {
+            this.TotalMchIncome = new Long(source.TotalMchIncome);
+        }
+        if (source.TotalPlatformIncome != null) {
+            this.TotalPlatformIncome = new Long(source.TotalPlatformIncome);
+        }
+        if (source.WxOpenId != null) {
+            this.WxOpenId = new String(source.WxOpenId);
+        }
+        if (source.WxSubOpenId != null) {
+            this.WxSubOpenId = new String(source.WxSubOpenId);
+        }
+        if (source.MidasEnvironment != null) {
+            this.MidasEnvironment = new String(source.MidasEnvironment);
+        }
+        if (source.WxAppId != null) {
+            this.WxAppId = new String(source.WxAppId);
+        }
+        if (source.WxSubAppId != null) {
+            this.WxSubAppId = new String(source.WxSubAppId);
+        }
+        if (source.PaymentNotifyUrl != null) {
+            this.PaymentNotifyUrl = new String(source.PaymentNotifyUrl);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

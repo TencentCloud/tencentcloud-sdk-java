@@ -114,6 +114,29 @@ public class ThirdPartyPublishInfo extends AbstractModel{
         this.KuaishouPublishInfo = KuaishouPublishInfo;
     }
 
+    public ThirdPartyPublishInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ThirdPartyPublishInfo(ThirdPartyPublishInfo source) {
+        if (source.ChannelMaterialId != null) {
+            this.ChannelMaterialId = new String(source.ChannelMaterialId);
+        }
+        if (source.PenguinMediaPlatformPublishInfo != null) {
+            this.PenguinMediaPlatformPublishInfo = new PenguinMediaPlatformPublishInfo(source.PenguinMediaPlatformPublishInfo);
+        }
+        if (source.WeiboPublishInfo != null) {
+            this.WeiboPublishInfo = new WeiboPublishInfo(source.WeiboPublishInfo);
+        }
+        if (source.KuaishouPublishInfo != null) {
+            this.KuaishouPublishInfo = new KuaishouPublishInfo(source.KuaishouPublishInfo);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

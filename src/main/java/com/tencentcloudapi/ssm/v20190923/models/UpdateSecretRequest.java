@@ -114,6 +114,29 @@ public class UpdateSecretRequest extends AbstractModel{
         this.SecretString = SecretString;
     }
 
+    public UpdateSecretRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UpdateSecretRequest(UpdateSecretRequest source) {
+        if (source.SecretName != null) {
+            this.SecretName = new String(source.SecretName);
+        }
+        if (source.VersionId != null) {
+            this.VersionId = new String(source.VersionId);
+        }
+        if (source.SecretBinary != null) {
+            this.SecretBinary = new String(source.SecretBinary);
+        }
+        if (source.SecretString != null) {
+            this.SecretString = new String(source.SecretString);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

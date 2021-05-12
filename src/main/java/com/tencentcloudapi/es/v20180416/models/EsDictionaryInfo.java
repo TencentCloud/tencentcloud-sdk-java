@@ -137,6 +137,44 @@ public class EsDictionaryInfo extends AbstractModel{
         this.UpdateType = UpdateType;
     }
 
+    public EsDictionaryInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public EsDictionaryInfo(EsDictionaryInfo source) {
+        if (source.MainDict != null) {
+            this.MainDict = new DictInfo[source.MainDict.length];
+            for (int i = 0; i < source.MainDict.length; i++) {
+                this.MainDict[i] = new DictInfo(source.MainDict[i]);
+            }
+        }
+        if (source.Stopwords != null) {
+            this.Stopwords = new DictInfo[source.Stopwords.length];
+            for (int i = 0; i < source.Stopwords.length; i++) {
+                this.Stopwords[i] = new DictInfo(source.Stopwords[i]);
+            }
+        }
+        if (source.QQDict != null) {
+            this.QQDict = new DictInfo[source.QQDict.length];
+            for (int i = 0; i < source.QQDict.length; i++) {
+                this.QQDict[i] = new DictInfo(source.QQDict[i]);
+            }
+        }
+        if (source.Synonym != null) {
+            this.Synonym = new DictInfo[source.Synonym.length];
+            for (int i = 0; i < source.Synonym.length; i++) {
+                this.Synonym[i] = new DictInfo(source.Synonym[i]);
+            }
+        }
+        if (source.UpdateType != null) {
+            this.UpdateType = new String(source.UpdateType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -137,6 +137,32 @@ public class QQAccountInfo extends AbstractModel{
         this.DeviceId = DeviceId;
     }
 
+    public QQAccountInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public QQAccountInfo(QQAccountInfo source) {
+        if (source.QQOpenId != null) {
+            this.QQOpenId = new String(source.QQOpenId);
+        }
+        if (source.AppIdUser != null) {
+            this.AppIdUser = new String(source.AppIdUser);
+        }
+        if (source.AssociateAccount != null) {
+            this.AssociateAccount = new String(source.AssociateAccount);
+        }
+        if (source.MobilePhone != null) {
+            this.MobilePhone = new String(source.MobilePhone);
+        }
+        if (source.DeviceId != null) {
+            this.DeviceId = new String(source.DeviceId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

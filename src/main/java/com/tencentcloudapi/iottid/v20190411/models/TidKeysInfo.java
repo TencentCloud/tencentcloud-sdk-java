@@ -160,6 +160,35 @@ public class TidKeysInfo extends AbstractModel{
         this.DeviceCode = DeviceCode;
     }
 
+    public TidKeysInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TidKeysInfo(TidKeysInfo source) {
+        if (source.Tid != null) {
+            this.Tid = new String(source.Tid);
+        }
+        if (source.PublicKey != null) {
+            this.PublicKey = new String(source.PublicKey);
+        }
+        if (source.PrivateKey != null) {
+            this.PrivateKey = new String(source.PrivateKey);
+        }
+        if (source.Psk != null) {
+            this.Psk = new String(source.Psk);
+        }
+        if (source.DownloadUrl != null) {
+            this.DownloadUrl = new String(source.DownloadUrl);
+        }
+        if (source.DeviceCode != null) {
+            this.DeviceCode = new String(source.DeviceCode);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

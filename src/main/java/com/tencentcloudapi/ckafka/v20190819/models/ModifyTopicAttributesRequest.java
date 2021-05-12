@@ -252,6 +252,47 @@ public class ModifyTopicAttributesRequest extends AbstractModel{
         this.CleanUpPolicy = CleanUpPolicy;
     }
 
+    public ModifyTopicAttributesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyTopicAttributesRequest(ModifyTopicAttributesRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.TopicName != null) {
+            this.TopicName = new String(source.TopicName);
+        }
+        if (source.Note != null) {
+            this.Note = new String(source.Note);
+        }
+        if (source.EnableWhiteList != null) {
+            this.EnableWhiteList = new Long(source.EnableWhiteList);
+        }
+        if (source.MinInsyncReplicas != null) {
+            this.MinInsyncReplicas = new Long(source.MinInsyncReplicas);
+        }
+        if (source.UncleanLeaderElectionEnable != null) {
+            this.UncleanLeaderElectionEnable = new Long(source.UncleanLeaderElectionEnable);
+        }
+        if (source.RetentionMs != null) {
+            this.RetentionMs = new Long(source.RetentionMs);
+        }
+        if (source.SegmentMs != null) {
+            this.SegmentMs = new Long(source.SegmentMs);
+        }
+        if (source.MaxMessageBytes != null) {
+            this.MaxMessageBytes = new Long(source.MaxMessageBytes);
+        }
+        if (source.CleanUpPolicy != null) {
+            this.CleanUpPolicy = new String(source.CleanUpPolicy);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

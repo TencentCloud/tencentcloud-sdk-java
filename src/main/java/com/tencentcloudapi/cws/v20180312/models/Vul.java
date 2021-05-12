@@ -436,6 +436,71 @@ public class Vul extends AbstractModel{
         this.Uin = Uin;
     }
 
+    public Vul() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Vul(Vul source) {
+        if (source.Id != null) {
+            this.Id = new Long(source.Id);
+        }
+        if (source.SiteId != null) {
+            this.SiteId = new Long(source.SiteId);
+        }
+        if (source.TaskId != null) {
+            this.TaskId = new Long(source.TaskId);
+        }
+        if (source.Level != null) {
+            this.Level = new String(source.Level);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Url != null) {
+            this.Url = new String(source.Url);
+        }
+        if (source.Html != null) {
+            this.Html = new String(source.Html);
+        }
+        if (source.Nickname != null) {
+            this.Nickname = new String(source.Nickname);
+        }
+        if (source.Harm != null) {
+            this.Harm = new String(source.Harm);
+        }
+        if (source.Describe != null) {
+            this.Describe = new String(source.Describe);
+        }
+        if (source.Solution != null) {
+            this.Solution = new String(source.Solution);
+        }
+        if (source.From != null) {
+            this.From = new String(source.From);
+        }
+        if (source.Parameter != null) {
+            this.Parameter = new String(source.Parameter);
+        }
+        if (source.CreatedAt != null) {
+            this.CreatedAt = new String(source.CreatedAt);
+        }
+        if (source.UpdatedAt != null) {
+            this.UpdatedAt = new String(source.UpdatedAt);
+        }
+        if (source.IsReported != null) {
+            this.IsReported = new Long(source.IsReported);
+        }
+        if (source.Appid != null) {
+            this.Appid = new Long(source.Appid);
+        }
+        if (source.Uin != null) {
+            this.Uin = new String(source.Uin);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

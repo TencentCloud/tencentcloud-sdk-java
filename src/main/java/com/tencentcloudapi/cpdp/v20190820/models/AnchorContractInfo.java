@@ -137,6 +137,32 @@ public class AnchorContractInfo extends AbstractModel{
         this.IdNo = IdNo;
     }
 
+    public AnchorContractInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AnchorContractInfo(AnchorContractInfo source) {
+        if (source.AnchorId != null) {
+            this.AnchorId = new String(source.AnchorId);
+        }
+        if (source.AnchorName != null) {
+            this.AnchorName = new String(source.AnchorName);
+        }
+        if (source.AgentId != null) {
+            this.AgentId = new String(source.AgentId);
+        }
+        if (source.AgentName != null) {
+            this.AgentName = new String(source.AgentName);
+        }
+        if (source.IdNo != null) {
+            this.IdNo = new String(source.IdNo);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

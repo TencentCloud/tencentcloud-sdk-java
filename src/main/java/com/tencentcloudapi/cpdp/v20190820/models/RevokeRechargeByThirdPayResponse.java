@@ -119,6 +119,29 @@ public class RevokeRechargeByThirdPayResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public RevokeRechargeByThirdPayResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RevokeRechargeByThirdPayResponse(RevokeRechargeByThirdPayResponse source) {
+        if (source.RequestType != null) {
+            this.RequestType = new String(source.RequestType);
+        }
+        if (source.ReservedMessage != null) {
+            this.ReservedMessage = new String(source.ReservedMessage);
+        }
+        if (source.FrontSequenceNumber != null) {
+            this.FrontSequenceNumber = new String(source.FrontSequenceNumber);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

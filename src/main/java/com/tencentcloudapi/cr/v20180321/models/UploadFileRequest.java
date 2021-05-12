@@ -137,6 +137,32 @@ public class UploadFileRequest extends AbstractModel{
         this.FileDate = FileDate;
     }
 
+    public UploadFileRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UploadFileRequest(UploadFileRequest source) {
+        if (source.Module != null) {
+            this.Module = new String(source.Module);
+        }
+        if (source.Operation != null) {
+            this.Operation = new String(source.Operation);
+        }
+        if (source.FileUrl != null) {
+            this.FileUrl = new String(source.FileUrl);
+        }
+        if (source.FileName != null) {
+            this.FileName = new String(source.FileName);
+        }
+        if (source.FileDate != null) {
+            this.FileDate = new String(source.FileDate);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

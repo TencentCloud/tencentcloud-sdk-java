@@ -91,6 +91,29 @@ public class CreateCameraStateRequest extends AbstractModel{
         this.CameraStates = CameraStates;
     }
 
+    public CreateCameraStateRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateCameraStateRequest(CreateCameraStateRequest source) {
+        if (source.GroupCode != null) {
+            this.GroupCode = new String(source.GroupCode);
+        }
+        if (source.MallId != null) {
+            this.MallId = new Long(source.MallId);
+        }
+        if (source.CameraStates != null) {
+            this.CameraStates = new CameraState[source.CameraStates.length];
+            for (int i = 0; i < source.CameraStates.length; i++) {
+                this.CameraStates[i] = new CameraState(source.CameraStates[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

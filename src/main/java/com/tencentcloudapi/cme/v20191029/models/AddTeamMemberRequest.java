@@ -114,6 +114,32 @@ public class AddTeamMemberRequest extends AbstractModel{
         this.Operator = Operator;
     }
 
+    public AddTeamMemberRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AddTeamMemberRequest(AddTeamMemberRequest source) {
+        if (source.Platform != null) {
+            this.Platform = new String(source.Platform);
+        }
+        if (source.TeamId != null) {
+            this.TeamId = new String(source.TeamId);
+        }
+        if (source.TeamMembers != null) {
+            this.TeamMembers = new AddMemberInfo[source.TeamMembers.length];
+            for (int i = 0; i < source.TeamMembers.length; i++) {
+                this.TeamMembers[i] = new AddMemberInfo(source.TeamMembers[i]);
+            }
+        }
+        if (source.Operator != null) {
+            this.Operator = new String(source.Operator);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

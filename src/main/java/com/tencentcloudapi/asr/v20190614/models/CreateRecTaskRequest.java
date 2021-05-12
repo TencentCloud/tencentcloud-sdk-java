@@ -460,6 +460,65 @@ public class CreateRecTaskRequest extends AbstractModel{
         this.FilterPunc = FilterPunc;
     }
 
+    public CreateRecTaskRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateRecTaskRequest(CreateRecTaskRequest source) {
+        if (source.EngineModelType != null) {
+            this.EngineModelType = new String(source.EngineModelType);
+        }
+        if (source.ChannelNum != null) {
+            this.ChannelNum = new Long(source.ChannelNum);
+        }
+        if (source.ResTextFormat != null) {
+            this.ResTextFormat = new Long(source.ResTextFormat);
+        }
+        if (source.SourceType != null) {
+            this.SourceType = new Long(source.SourceType);
+        }
+        if (source.SpeakerDiarization != null) {
+            this.SpeakerDiarization = new Long(source.SpeakerDiarization);
+        }
+        if (source.SpeakerNumber != null) {
+            this.SpeakerNumber = new Long(source.SpeakerNumber);
+        }
+        if (source.CallbackUrl != null) {
+            this.CallbackUrl = new String(source.CallbackUrl);
+        }
+        if (source.Url != null) {
+            this.Url = new String(source.Url);
+        }
+        if (source.Data != null) {
+            this.Data = new String(source.Data);
+        }
+        if (source.DataLen != null) {
+            this.DataLen = new Long(source.DataLen);
+        }
+        if (source.HotwordId != null) {
+            this.HotwordId = new String(source.HotwordId);
+        }
+        if (source.FilterDirty != null) {
+            this.FilterDirty = new Long(source.FilterDirty);
+        }
+        if (source.FilterModal != null) {
+            this.FilterModal = new Long(source.FilterModal);
+        }
+        if (source.ConvertNumMode != null) {
+            this.ConvertNumMode = new Long(source.ConvertNumMode);
+        }
+        if (source.Extra != null) {
+            this.Extra = new String(source.Extra);
+        }
+        if (source.FilterPunc != null) {
+            this.FilterPunc = new Long(source.FilterPunc);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -68,6 +68,23 @@ public class TraceStatus extends AbstractModel{
         this.IsExist = IsExist;
     }
 
+    public TraceStatus() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TraceStatus(TraceStatus source) {
+        if (source.Tid != null) {
+            this.Tid = new String(source.Tid);
+        }
+        if (source.IsExist != null) {
+            this.IsExist = new Boolean(source.IsExist);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

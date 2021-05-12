@@ -229,6 +229,44 @@ public class CallbackStatusStatistics extends AbstractModel{
         this.FrequencyLimitCount = FrequencyLimitCount;
     }
 
+    public CallbackStatusStatistics() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CallbackStatusStatistics(CallbackStatusStatistics source) {
+        if (source.CallbackCount != null) {
+            this.CallbackCount = new Long(source.CallbackCount);
+        }
+        if (source.RequestSuccessCount != null) {
+            this.RequestSuccessCount = new Long(source.RequestSuccessCount);
+        }
+        if (source.CallbackFailCount != null) {
+            this.CallbackFailCount = new Long(source.CallbackFailCount);
+        }
+        if (source.CallbackSuccessCount != null) {
+            this.CallbackSuccessCount = new Long(source.CallbackSuccessCount);
+        }
+        if (source.InternalErrorCount != null) {
+            this.InternalErrorCount = new Long(source.InternalErrorCount);
+        }
+        if (source.InvalidNumberCount != null) {
+            this.InvalidNumberCount = new Long(source.InvalidNumberCount);
+        }
+        if (source.ShutdownErrorCount != null) {
+            this.ShutdownErrorCount = new Long(source.ShutdownErrorCount);
+        }
+        if (source.BlackListCount != null) {
+            this.BlackListCount = new Long(source.BlackListCount);
+        }
+        if (source.FrequencyLimitCount != null) {
+            this.FrequencyLimitCount = new Long(source.FrequencyLimitCount);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

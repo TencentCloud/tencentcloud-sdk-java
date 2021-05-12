@@ -114,6 +114,41 @@ public class ZoneConf extends AbstractModel{
         this.BackupZone = BackupZone;
     }
 
+    public ZoneConf() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ZoneConf(ZoneConf source) {
+        if (source.DeployMode != null) {
+            this.DeployMode = new Long[source.DeployMode.length];
+            for (int i = 0; i < source.DeployMode.length; i++) {
+                this.DeployMode[i] = new Long(source.DeployMode[i]);
+            }
+        }
+        if (source.MasterZone != null) {
+            this.MasterZone = new String[source.MasterZone.length];
+            for (int i = 0; i < source.MasterZone.length; i++) {
+                this.MasterZone[i] = new String(source.MasterZone[i]);
+            }
+        }
+        if (source.SlaveZone != null) {
+            this.SlaveZone = new String[source.SlaveZone.length];
+            for (int i = 0; i < source.SlaveZone.length; i++) {
+                this.SlaveZone[i] = new String(source.SlaveZone[i]);
+            }
+        }
+        if (source.BackupZone != null) {
+            this.BackupZone = new String[source.BackupZone.length];
+            for (int i = 0; i < source.BackupZone.length; i++) {
+                this.BackupZone[i] = new String(source.BackupZone[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -182,6 +182,32 @@ public class TransferDetailRequest extends AbstractModel{
         this.UserName = UserName;
     }
 
+    public TransferDetailRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TransferDetailRequest(TransferDetailRequest source) {
+        if (source.MerchantDetailNo != null) {
+            this.MerchantDetailNo = new String(source.MerchantDetailNo);
+        }
+        if (source.TransferAmount != null) {
+            this.TransferAmount = new Long(source.TransferAmount);
+        }
+        if (source.TransferRemark != null) {
+            this.TransferRemark = new String(source.TransferRemark);
+        }
+        if (source.OpenId != null) {
+            this.OpenId = new String(source.OpenId);
+        }
+        if (source.UserName != null) {
+            this.UserName = new String(source.UserName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

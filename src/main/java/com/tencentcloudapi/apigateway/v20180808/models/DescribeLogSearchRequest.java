@@ -279,6 +279,50 @@ req_t：”>=“ 、 ”<=“
         this.LogQuerys = LogQuerys;
     }
 
+    public DescribeLogSearchRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeLogSearchRequest(DescribeLogSearchRequest source) {
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+        if (source.ServiceId != null) {
+            this.ServiceId = new String(source.ServiceId);
+        }
+        if (source.Filters != null) {
+            this.Filters = new Filter[source.Filters.length];
+            for (int i = 0; i < source.Filters.length; i++) {
+                this.Filters[i] = new Filter(source.Filters[i]);
+            }
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.ConText != null) {
+            this.ConText = new String(source.ConText);
+        }
+        if (source.Sort != null) {
+            this.Sort = new String(source.Sort);
+        }
+        if (source.Query != null) {
+            this.Query = new String(source.Query);
+        }
+        if (source.LogQuerys != null) {
+            this.LogQuerys = new LogQuery[source.LogQuerys.length];
+            for (int i = 0; i < source.LogQuerys.length; i++) {
+                this.LogQuerys[i] = new LogQuery(source.LogQuerys[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

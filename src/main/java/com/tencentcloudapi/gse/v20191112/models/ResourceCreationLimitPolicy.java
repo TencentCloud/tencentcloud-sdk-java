@@ -68,6 +68,23 @@ public class ResourceCreationLimitPolicy extends AbstractModel{
         this.PolicyPeriodInMinutes = PolicyPeriodInMinutes;
     }
 
+    public ResourceCreationLimitPolicy() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ResourceCreationLimitPolicy(ResourceCreationLimitPolicy source) {
+        if (source.NewGameServerSessionsPerCreator != null) {
+            this.NewGameServerSessionsPerCreator = new Long(source.NewGameServerSessionsPerCreator);
+        }
+        if (source.PolicyPeriodInMinutes != null) {
+            this.PolicyPeriodInMinutes = new Long(source.PolicyPeriodInMinutes);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -436,6 +436,74 @@ public class VpnGateway extends AbstractModel{
         this.NetworkInstanceId = NetworkInstanceId;
     }
 
+    public VpnGateway() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public VpnGateway(VpnGateway source) {
+        if (source.VpnGatewayId != null) {
+            this.VpnGatewayId = new String(source.VpnGatewayId);
+        }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.VpnGatewayName != null) {
+            this.VpnGatewayName = new String(source.VpnGatewayName);
+        }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.State != null) {
+            this.State = new String(source.State);
+        }
+        if (source.PublicIpAddress != null) {
+            this.PublicIpAddress = new String(source.PublicIpAddress);
+        }
+        if (source.RenewFlag != null) {
+            this.RenewFlag = new String(source.RenewFlag);
+        }
+        if (source.InstanceChargeType != null) {
+            this.InstanceChargeType = new String(source.InstanceChargeType);
+        }
+        if (source.InternetMaxBandwidthOut != null) {
+            this.InternetMaxBandwidthOut = new Long(source.InternetMaxBandwidthOut);
+        }
+        if (source.CreatedTime != null) {
+            this.CreatedTime = new String(source.CreatedTime);
+        }
+        if (source.ExpiredTime != null) {
+            this.ExpiredTime = new String(source.ExpiredTime);
+        }
+        if (source.IsAddressBlocked != null) {
+            this.IsAddressBlocked = new Boolean(source.IsAddressBlocked);
+        }
+        if (source.NewPurchasePlan != null) {
+            this.NewPurchasePlan = new String(source.NewPurchasePlan);
+        }
+        if (source.RestrictState != null) {
+            this.RestrictState = new String(source.RestrictState);
+        }
+        if (source.Zone != null) {
+            this.Zone = new String(source.Zone);
+        }
+        if (source.VpnGatewayQuotaSet != null) {
+            this.VpnGatewayQuotaSet = new VpnGatewayQuota[source.VpnGatewayQuotaSet.length];
+            for (int i = 0; i < source.VpnGatewayQuotaSet.length; i++) {
+                this.VpnGatewayQuotaSet[i] = new VpnGatewayQuota(source.VpnGatewayQuotaSet[i]);
+            }
+        }
+        if (source.Version != null) {
+            this.Version = new String(source.Version);
+        }
+        if (source.NetworkInstanceId != null) {
+            this.NetworkInstanceId = new String(source.NetworkInstanceId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

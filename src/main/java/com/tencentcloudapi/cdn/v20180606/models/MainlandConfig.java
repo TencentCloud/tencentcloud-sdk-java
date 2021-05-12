@@ -694,6 +694,89 @@ public class MainlandConfig extends AbstractModel{
         this.VideoSeek = VideoSeek;
     }
 
+    public MainlandConfig() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MainlandConfig(MainlandConfig source) {
+        if (source.Authentication != null) {
+            this.Authentication = new Authentication(source.Authentication);
+        }
+        if (source.BandwidthAlert != null) {
+            this.BandwidthAlert = new BandwidthAlert(source.BandwidthAlert);
+        }
+        if (source.Cache != null) {
+            this.Cache = new Cache(source.Cache);
+        }
+        if (source.CacheKey != null) {
+            this.CacheKey = new CacheKey(source.CacheKey);
+        }
+        if (source.Compression != null) {
+            this.Compression = new Compression(source.Compression);
+        }
+        if (source.DownstreamCapping != null) {
+            this.DownstreamCapping = new DownstreamCapping(source.DownstreamCapping);
+        }
+        if (source.ErrorPage != null) {
+            this.ErrorPage = new ErrorPage(source.ErrorPage);
+        }
+        if (source.FollowRedirect != null) {
+            this.FollowRedirect = new FollowRedirect(source.FollowRedirect);
+        }
+        if (source.ForceRedirect != null) {
+            this.ForceRedirect = new ForceRedirect(source.ForceRedirect);
+        }
+        if (source.Https != null) {
+            this.Https = new Https(source.Https);
+        }
+        if (source.IpFilter != null) {
+            this.IpFilter = new IpFilter(source.IpFilter);
+        }
+        if (source.IpFreqLimit != null) {
+            this.IpFreqLimit = new IpFreqLimit(source.IpFreqLimit);
+        }
+        if (source.MaxAge != null) {
+            this.MaxAge = new MaxAge(source.MaxAge);
+        }
+        if (source.Origin != null) {
+            this.Origin = new Origin(source.Origin);
+        }
+        if (source.OriginPullOptimization != null) {
+            this.OriginPullOptimization = new OriginPullOptimization(source.OriginPullOptimization);
+        }
+        if (source.RangeOriginPull != null) {
+            this.RangeOriginPull = new RangeOriginPull(source.RangeOriginPull);
+        }
+        if (source.Referer != null) {
+            this.Referer = new Referer(source.Referer);
+        }
+        if (source.RequestHeader != null) {
+            this.RequestHeader = new RequestHeader(source.RequestHeader);
+        }
+        if (source.ResponseHeader != null) {
+            this.ResponseHeader = new ResponseHeader(source.ResponseHeader);
+        }
+        if (source.ResponseHeaderCache != null) {
+            this.ResponseHeaderCache = new ResponseHeaderCache(source.ResponseHeaderCache);
+        }
+        if (source.Seo != null) {
+            this.Seo = new Seo(source.Seo);
+        }
+        if (source.ServiceType != null) {
+            this.ServiceType = new String(source.ServiceType);
+        }
+        if (source.StatusCodeCache != null) {
+            this.StatusCodeCache = new StatusCodeCache(source.StatusCodeCache);
+        }
+        if (source.VideoSeek != null) {
+            this.VideoSeek = new VideoSeek(source.VideoSeek);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

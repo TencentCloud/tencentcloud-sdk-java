@@ -68,6 +68,23 @@ public class MigrateDetail extends AbstractModel{
         this.Progress = Progress;
     }
 
+    public MigrateDetail() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MigrateDetail(MigrateDetail source) {
+        if (source.StepName != null) {
+            this.StepName = new String(source.StepName);
+        }
+        if (source.Progress != null) {
+            this.Progress = new Long(source.Progress);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -229,6 +229,44 @@ public class DescribeGatewayFlowMonitorDetailRequest extends AbstractModel{
         this.OrderDirection = OrderDirection;
     }
 
+    public DescribeGatewayFlowMonitorDetailRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeGatewayFlowMonitorDetailRequest(DescribeGatewayFlowMonitorDetailRequest source) {
+        if (source.TimePoint != null) {
+            this.TimePoint = new String(source.TimePoint);
+        }
+        if (source.VpnId != null) {
+            this.VpnId = new String(source.VpnId);
+        }
+        if (source.DirectConnectGatewayId != null) {
+            this.DirectConnectGatewayId = new String(source.DirectConnectGatewayId);
+        }
+        if (source.PeeringConnectionId != null) {
+            this.PeeringConnectionId = new String(source.PeeringConnectionId);
+        }
+        if (source.NatId != null) {
+            this.NatId = new String(source.NatId);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.OrderField != null) {
+            this.OrderField = new String(source.OrderField);
+        }
+        if (source.OrderDirection != null) {
+            this.OrderDirection = new String(source.OrderDirection);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

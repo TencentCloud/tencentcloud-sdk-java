@@ -137,6 +137,32 @@ public class SignLocation extends AbstractModel{
         this.SignLocationRUY = SignLocationRUY;
     }
 
+    public SignLocation() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SignLocation(SignLocation source) {
+        if (source.SignOnPage != null) {
+            this.SignOnPage = new String(source.SignOnPage);
+        }
+        if (source.SignLocationLBX != null) {
+            this.SignLocationLBX = new String(source.SignLocationLBX);
+        }
+        if (source.SignLocationLBY != null) {
+            this.SignLocationLBY = new String(source.SignLocationLBY);
+        }
+        if (source.SignLocationRUX != null) {
+            this.SignLocationRUX = new String(source.SignLocationRUX);
+        }
+        if (source.SignLocationRUY != null) {
+            this.SignLocationRUY = new String(source.SignLocationRUY);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

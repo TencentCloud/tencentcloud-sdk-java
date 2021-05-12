@@ -183,6 +183,38 @@ public class LoadBalancerPortInfoListener extends AbstractModel{
         this.Port = Port;
     }
 
+    public LoadBalancerPortInfoListener() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public LoadBalancerPortInfoListener(LoadBalancerPortInfoListener source) {
+        if (source.ListenerId != null) {
+            this.ListenerId = new String(source.ListenerId);
+        }
+        if (source.ListenerName != null) {
+            this.ListenerName = new String(source.ListenerName);
+        }
+        if (source.Protocol != null) {
+            this.Protocol = new String(source.Protocol);
+        }
+        if (source.LoadBalancerPort != null) {
+            this.LoadBalancerPort = new Long(source.LoadBalancerPort);
+        }
+        if (source.Bandwidth != null) {
+            this.Bandwidth = new Long(source.Bandwidth);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.Port != null) {
+            this.Port = new Long(source.Port);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

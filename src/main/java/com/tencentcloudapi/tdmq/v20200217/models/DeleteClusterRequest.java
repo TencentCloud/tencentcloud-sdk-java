@@ -45,6 +45,20 @@ public class DeleteClusterRequest extends AbstractModel{
         this.ClusterId = ClusterId;
     }
 
+    public DeleteClusterRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteClusterRequest(DeleteClusterRequest source) {
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

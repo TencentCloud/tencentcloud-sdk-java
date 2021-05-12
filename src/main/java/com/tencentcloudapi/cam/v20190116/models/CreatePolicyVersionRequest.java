@@ -91,6 +91,26 @@ public class CreatePolicyVersionRequest extends AbstractModel{
         this.SetAsDefault = SetAsDefault;
     }
 
+    public CreatePolicyVersionRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreatePolicyVersionRequest(CreatePolicyVersionRequest source) {
+        if (source.PolicyId != null) {
+            this.PolicyId = new Long(source.PolicyId);
+        }
+        if (source.PolicyDocument != null) {
+            this.PolicyDocument = new String(source.PolicyDocument);
+        }
+        if (source.SetAsDefault != null) {
+            this.SetAsDefault = new Boolean(source.SetAsDefault);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

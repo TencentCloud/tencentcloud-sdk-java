@@ -126,6 +126,26 @@ CloseAudit、LogExpireDay必须至少提供一个，如果两个都提供则按�
         this.CloseAudit = CloseAudit;
     }
 
+    public ModifyAuditConfigRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyAuditConfigRequest(ModifyAuditConfigRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.LogExpireDay != null) {
+            this.LogExpireDay = new Long(source.LogExpireDay);
+        }
+        if (source.CloseAudit != null) {
+            this.CloseAudit = new Boolean(source.CloseAudit);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

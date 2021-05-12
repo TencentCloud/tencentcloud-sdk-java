@@ -131,6 +131,32 @@ index 时填充 /
         this.Origin = Origin;
     }
 
+    public PathBasedOriginRule() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PathBasedOriginRule(PathBasedOriginRule source) {
+        if (source.RuleType != null) {
+            this.RuleType = new String(source.RuleType);
+        }
+        if (source.RulePaths != null) {
+            this.RulePaths = new String[source.RulePaths.length];
+            for (int i = 0; i < source.RulePaths.length; i++) {
+                this.RulePaths[i] = new String(source.RulePaths[i]);
+            }
+        }
+        if (source.Origin != null) {
+            this.Origin = new String[source.Origin.length];
+            for (int i = 0; i < source.Origin.length; i++) {
+                this.Origin[i] = new String(source.Origin[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

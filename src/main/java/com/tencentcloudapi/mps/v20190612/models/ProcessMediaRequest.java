@@ -275,6 +275,50 @@ public class ProcessMediaRequest extends AbstractModel{
         this.SessionContext = SessionContext;
     }
 
+    public ProcessMediaRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ProcessMediaRequest(ProcessMediaRequest source) {
+        if (source.InputInfo != null) {
+            this.InputInfo = new MediaInputInfo(source.InputInfo);
+        }
+        if (source.OutputStorage != null) {
+            this.OutputStorage = new TaskOutputStorage(source.OutputStorage);
+        }
+        if (source.OutputDir != null) {
+            this.OutputDir = new String(source.OutputDir);
+        }
+        if (source.MediaProcessTask != null) {
+            this.MediaProcessTask = new MediaProcessTaskInput(source.MediaProcessTask);
+        }
+        if (source.AiContentReviewTask != null) {
+            this.AiContentReviewTask = new AiContentReviewTaskInput(source.AiContentReviewTask);
+        }
+        if (source.AiAnalysisTask != null) {
+            this.AiAnalysisTask = new AiAnalysisTaskInput(source.AiAnalysisTask);
+        }
+        if (source.AiRecognitionTask != null) {
+            this.AiRecognitionTask = new AiRecognitionTaskInput(source.AiRecognitionTask);
+        }
+        if (source.TaskNotifyConfig != null) {
+            this.TaskNotifyConfig = new TaskNotifyConfig(source.TaskNotifyConfig);
+        }
+        if (source.TasksPriority != null) {
+            this.TasksPriority = new Long(source.TasksPriority);
+        }
+        if (source.SessionId != null) {
+            this.SessionId = new String(source.SessionId);
+        }
+        if (source.SessionContext != null) {
+            this.SessionContext = new String(source.SessionContext);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

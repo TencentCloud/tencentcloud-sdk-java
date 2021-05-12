@@ -45,6 +45,20 @@ public class ModifyConfigAttributeRequest extends AbstractModel{
         this.NoticeLevel = NoticeLevel;
     }
 
+    public ModifyConfigAttributeRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyConfigAttributeRequest(ModifyConfigAttributeRequest source) {
+        if (source.NoticeLevel != null) {
+            this.NoticeLevel = new String(source.NoticeLevel);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

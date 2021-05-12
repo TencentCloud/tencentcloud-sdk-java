@@ -279,6 +279,44 @@ public class CommonMixOutputParams extends AbstractModel{
         this.MixSei = MixSei;
     }
 
+    public CommonMixOutputParams() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CommonMixOutputParams(CommonMixOutputParams source) {
+        if (source.OutputStreamName != null) {
+            this.OutputStreamName = new String(source.OutputStreamName);
+        }
+        if (source.OutputStreamType != null) {
+            this.OutputStreamType = new Long(source.OutputStreamType);
+        }
+        if (source.OutputStreamBitRate != null) {
+            this.OutputStreamBitRate = new Long(source.OutputStreamBitRate);
+        }
+        if (source.OutputStreamGop != null) {
+            this.OutputStreamGop = new Long(source.OutputStreamGop);
+        }
+        if (source.OutputStreamFrameRate != null) {
+            this.OutputStreamFrameRate = new Long(source.OutputStreamFrameRate);
+        }
+        if (source.OutputAudioBitRate != null) {
+            this.OutputAudioBitRate = new Long(source.OutputAudioBitRate);
+        }
+        if (source.OutputAudioSampleRate != null) {
+            this.OutputAudioSampleRate = new Long(source.OutputAudioSampleRate);
+        }
+        if (source.OutputAudioChannels != null) {
+            this.OutputAudioChannels = new Long(source.OutputAudioChannels);
+        }
+        if (source.MixSei != null) {
+            this.MixSei = new String(source.MixSei);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

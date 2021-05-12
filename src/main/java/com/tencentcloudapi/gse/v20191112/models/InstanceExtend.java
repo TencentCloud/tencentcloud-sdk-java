@@ -246,6 +246,41 @@ public class InstanceExtend extends AbstractModel{
         this.MaxPlayerSessionCnt = MaxPlayerSessionCnt;
     }
 
+    public InstanceExtend() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public InstanceExtend(InstanceExtend source) {
+        if (source.Instance != null) {
+            this.Instance = new Instance(source.Instance);
+        }
+        if (source.State != null) {
+            this.State = new String(source.State);
+        }
+        if (source.HealthyProcessCnt != null) {
+            this.HealthyProcessCnt = new Long(source.HealthyProcessCnt);
+        }
+        if (source.ActiveProcessCnt != null) {
+            this.ActiveProcessCnt = new Long(source.ActiveProcessCnt);
+        }
+        if (source.GameSessionCnt != null) {
+            this.GameSessionCnt = new Long(source.GameSessionCnt);
+        }
+        if (source.MaxGameSessionCnt != null) {
+            this.MaxGameSessionCnt = new Long(source.MaxGameSessionCnt);
+        }
+        if (source.PlayerSessionCnt != null) {
+            this.PlayerSessionCnt = new Long(source.PlayerSessionCnt);
+        }
+        if (source.MaxPlayerSessionCnt != null) {
+            this.MaxPlayerSessionCnt = new Long(source.MaxPlayerSessionCnt);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

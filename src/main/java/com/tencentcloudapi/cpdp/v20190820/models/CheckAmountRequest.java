@@ -183,6 +183,38 @@ public class CheckAmountRequest extends AbstractModel{
         this.Profile = Profile;
     }
 
+    public CheckAmountRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CheckAmountRequest(CheckAmountRequest source) {
+        if (source.MrchCode != null) {
+            this.MrchCode = new String(source.MrchCode);
+        }
+        if (source.TranNetMemberCode != null) {
+            this.TranNetMemberCode = new String(source.TranNetMemberCode);
+        }
+        if (source.TakeCashAcctNo != null) {
+            this.TakeCashAcctNo = new String(source.TakeCashAcctNo);
+        }
+        if (source.AuthAmt != null) {
+            this.AuthAmt = new String(source.AuthAmt);
+        }
+        if (source.Ccy != null) {
+            this.Ccy = new String(source.Ccy);
+        }
+        if (source.ReservedMsg != null) {
+            this.ReservedMsg = new String(source.ReservedMsg);
+        }
+        if (source.Profile != null) {
+            this.Profile = new String(source.Profile);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

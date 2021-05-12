@@ -73,6 +73,23 @@ public class DescribeGroupByIdResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeGroupByIdResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeGroupByIdResponse(DescribeGroupByIdResponse source) {
+        if (source.Group != null) {
+            this.Group = new GroupItem(source.Group);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

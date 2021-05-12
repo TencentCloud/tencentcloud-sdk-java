@@ -349,6 +349,59 @@ public class BRIRequest extends AbstractModel{
         this.WechatTag = WechatTag;
     }
 
+    public BRIRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public BRIRequest(BRIRequest source) {
+        if (source.Service != null) {
+            this.Service = new String(source.Service);
+        }
+        if (source.QQ != null) {
+            this.QQ = new String(source.QQ);
+        }
+        if (source.QQTag != null) {
+            this.QQTag = new String(source.QQTag);
+        }
+        if (source.Url != null) {
+            this.Url = new String(source.Url);
+        }
+        if (source.CertMd5 != null) {
+            this.CertMd5 = new String(source.CertMd5);
+        }
+        if (source.PackageName != null) {
+            this.PackageName = new String(source.PackageName);
+        }
+        if (source.FileMd5 != null) {
+            this.FileMd5 = new String(source.FileMd5);
+        }
+        if (source.Scene != null) {
+            this.Scene = new String(source.Scene);
+        }
+        if (source.PhoneNumber != null) {
+            this.PhoneNumber = new String(source.PhoneNumber);
+        }
+        if (source.FileSize != null) {
+            this.FileSize = new Long(source.FileSize);
+        }
+        if (source.Ip != null) {
+            this.Ip = new String(source.Ip);
+        }
+        if (source.Imei != null) {
+            this.Imei = new String(source.Imei);
+        }
+        if (source.Wechat != null) {
+            this.Wechat = new String(source.Wechat);
+        }
+        if (source.WechatTag != null) {
+            this.WechatTag = new String(source.WechatTag);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

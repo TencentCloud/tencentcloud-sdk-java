@@ -45,6 +45,20 @@ public class QueryActivityAntiRushAdvancedRequest extends AbstractModel{
         this.BusinessSecurityData = BusinessSecurityData;
     }
 
+    public QueryActivityAntiRushAdvancedRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public QueryActivityAntiRushAdvancedRequest(QueryActivityAntiRushAdvancedRequest source) {
+        if (source.BusinessSecurityData != null) {
+            this.BusinessSecurityData = new InputActivityAntiRushAdvanced(source.BusinessSecurityData);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

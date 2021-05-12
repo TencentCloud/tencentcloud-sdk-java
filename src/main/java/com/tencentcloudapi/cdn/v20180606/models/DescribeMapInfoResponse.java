@@ -124,6 +124,38 @@ public class DescribeMapInfoResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeMapInfoResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeMapInfoResponse(DescribeMapInfoResponse source) {
+        if (source.MapInfoList != null) {
+            this.MapInfoList = new MapInfo[source.MapInfoList.length];
+            for (int i = 0; i < source.MapInfoList.length; i++) {
+                this.MapInfoList[i] = new MapInfo(source.MapInfoList[i]);
+            }
+        }
+        if (source.ServerRegionRelation != null) {
+            this.ServerRegionRelation = new RegionMapRelation[source.ServerRegionRelation.length];
+            for (int i = 0; i < source.ServerRegionRelation.length; i++) {
+                this.ServerRegionRelation[i] = new RegionMapRelation(source.ServerRegionRelation[i]);
+            }
+        }
+        if (source.ClientRegionRelation != null) {
+            this.ClientRegionRelation = new RegionMapRelation[source.ClientRegionRelation.length];
+            for (int i = 0; i < source.ClientRegionRelation.length; i++) {
+                this.ClientRegionRelation[i] = new RegionMapRelation(source.ClientRegionRelation[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

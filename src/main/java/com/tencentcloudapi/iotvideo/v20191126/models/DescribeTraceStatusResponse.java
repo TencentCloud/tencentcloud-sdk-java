@@ -73,6 +73,26 @@ public class DescribeTraceStatusResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeTraceStatusResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeTraceStatusResponse(DescribeTraceStatusResponse source) {
+        if (source.Data != null) {
+            this.Data = new TraceStatus[source.Data.length];
+            for (int i = 0; i < source.Data.length; i++) {
+                this.Data[i] = new TraceStatus(source.Data[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

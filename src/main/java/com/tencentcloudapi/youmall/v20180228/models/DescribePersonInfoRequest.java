@@ -183,6 +183,38 @@ public class DescribePersonInfoRequest extends AbstractModel{
         this.PersonType = PersonType;
     }
 
+    public DescribePersonInfoRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribePersonInfoRequest(DescribePersonInfoRequest source) {
+        if (source.CompanyId != null) {
+            this.CompanyId = new String(source.CompanyId);
+        }
+        if (source.ShopId != null) {
+            this.ShopId = new Long(source.ShopId);
+        }
+        if (source.StartPersonId != null) {
+            this.StartPersonId = new Long(source.StartPersonId);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.PictureExpires != null) {
+            this.PictureExpires = new Long(source.PictureExpires);
+        }
+        if (source.PersonType != null) {
+            this.PersonType = new Long(source.PersonType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

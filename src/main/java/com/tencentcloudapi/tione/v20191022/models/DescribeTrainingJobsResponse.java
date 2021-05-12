@@ -91,6 +91,29 @@ public class DescribeTrainingJobsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeTrainingJobsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeTrainingJobsResponse(DescribeTrainingJobsResponse source) {
+        if (source.TrainingJobSet != null) {
+            this.TrainingJobSet = new TrainingJobSummary[source.TrainingJobSet.length];
+            for (int i = 0; i < source.TrainingJobSet.length; i++) {
+                this.TrainingJobSet[i] = new TrainingJobSummary(source.TrainingJobSet[i]);
+            }
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

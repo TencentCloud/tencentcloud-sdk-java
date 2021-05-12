@@ -91,6 +91,26 @@ public class PersonInfo extends AbstractModel{
         this.CoverEndUrl = CoverEndUrl;
     }
 
+    public PersonInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PersonInfo(PersonInfo source) {
+        if (source.PersonId != null) {
+            this.PersonId = new String(source.PersonId);
+        }
+        if (source.CoverBeginUrl != null) {
+            this.CoverBeginUrl = new String(source.CoverBeginUrl);
+        }
+        if (source.CoverEndUrl != null) {
+            this.CoverEndUrl = new String(source.CoverEndUrl);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -165,6 +165,35 @@ public class GetFaceIdTokenRequest extends AbstractModel{
         this.Extra = Extra;
     }
 
+    public GetFaceIdTokenRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GetFaceIdTokenRequest(GetFaceIdTokenRequest source) {
+        if (source.CompareLib != null) {
+            this.CompareLib = new String(source.CompareLib);
+        }
+        if (source.IdCard != null) {
+            this.IdCard = new String(source.IdCard);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.ImageBase64 != null) {
+            this.ImageBase64 = new String(source.ImageBase64);
+        }
+        if (source.Meta != null) {
+            this.Meta = new String(source.Meta);
+        }
+        if (source.Extra != null) {
+            this.Extra = new String(source.Extra);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

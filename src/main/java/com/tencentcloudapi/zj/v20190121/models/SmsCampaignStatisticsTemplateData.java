@@ -114,6 +114,29 @@ public class SmsCampaignStatisticsTemplateData extends AbstractModel{
         this.ClickCount = ClickCount;
     }
 
+    public SmsCampaignStatisticsTemplateData() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SmsCampaignStatisticsTemplateData(SmsCampaignStatisticsTemplateData source) {
+        if (source.TemplateId != null) {
+            this.TemplateId = new String(source.TemplateId);
+        }
+        if (source.TemplateContent != null) {
+            this.TemplateContent = new String(source.TemplateContent);
+        }
+        if (source.SendCount != null) {
+            this.SendCount = new Long(source.SendCount);
+        }
+        if (source.ClickCount != null) {
+            this.ClickCount = new Long(source.ClickCount);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

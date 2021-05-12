@@ -68,6 +68,23 @@ public class ModuleItem extends AbstractModel{
         this.Module = Module;
     }
 
+    public ModuleItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModuleItem(ModuleItem source) {
+        if (source.NodeInstanceNum != null) {
+            this.NodeInstanceNum = new NodeInstanceNum(source.NodeInstanceNum);
+        }
+        if (source.Module != null) {
+            this.Module = new Module(source.Module);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

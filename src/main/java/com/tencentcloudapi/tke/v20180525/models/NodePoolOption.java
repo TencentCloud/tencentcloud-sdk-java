@@ -91,6 +91,26 @@ public class NodePoolOption extends AbstractModel{
         this.InheritConfigurationFromNodePool = InheritConfigurationFromNodePool;
     }
 
+    public NodePoolOption() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public NodePoolOption(NodePoolOption source) {
+        if (source.AddToNodePool != null) {
+            this.AddToNodePool = new Boolean(source.AddToNodePool);
+        }
+        if (source.NodePoolId != null) {
+            this.NodePoolId = new String(source.NodePoolId);
+        }
+        if (source.InheritConfigurationFromNodePool != null) {
+            this.InheritConfigurationFromNodePool = new Boolean(source.InheritConfigurationFromNodePool);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -73,6 +73,26 @@ public class DescribeCloudBaseRunVersionSnapshotResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeCloudBaseRunVersionSnapshotResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeCloudBaseRunVersionSnapshotResponse(DescribeCloudBaseRunVersionSnapshotResponse source) {
+        if (source.Snapshots != null) {
+            this.Snapshots = new CloudRunServiceSimpleVersionSnapshot[source.Snapshots.length];
+            for (int i = 0; i < source.Snapshots.length; i++) {
+                this.Snapshots[i] = new CloudRunServiceSimpleVersionSnapshot(source.Snapshots[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -68,6 +68,26 @@ public class DescribeSdkAppidResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeSdkAppidResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeSdkAppidResponse(DescribeSdkAppidResponse source) {
+        if (source.SdkAppids != null) {
+            this.SdkAppids = new Long[source.SdkAppids.length];
+            for (int i = 0; i < source.SdkAppids.length; i++) {
+                this.SdkAppids[i] = new Long(source.SdkAppids[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

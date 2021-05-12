@@ -213,6 +213,44 @@ public class ScdnWafConfig extends AbstractModel{
         this.SubRuleSwitch = SubRuleSwitch;
     }
 
+    public ScdnWafConfig() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ScdnWafConfig(ScdnWafConfig source) {
+        if (source.Switch != null) {
+            this.Switch = new String(source.Switch);
+        }
+        if (source.Mode != null) {
+            this.Mode = new String(source.Mode);
+        }
+        if (source.ErrorPage != null) {
+            this.ErrorPage = new ScdnErrorPage(source.ErrorPage);
+        }
+        if (source.WebShellSwitch != null) {
+            this.WebShellSwitch = new String(source.WebShellSwitch);
+        }
+        if (source.Rules != null) {
+            this.Rules = new ScdnWafRule[source.Rules.length];
+            for (int i = 0; i < source.Rules.length; i++) {
+                this.Rules[i] = new ScdnWafRule(source.Rules[i]);
+            }
+        }
+        if (source.Level != null) {
+            this.Level = new Long(source.Level);
+        }
+        if (source.SubRuleSwitch != null) {
+            this.SubRuleSwitch = new WafSubRuleStatus[source.SubRuleSwitch.length];
+            for (int i = 0; i < source.SubRuleSwitch.length; i++) {
+                this.SubRuleSwitch[i] = new WafSubRuleStatus(source.SubRuleSwitch[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

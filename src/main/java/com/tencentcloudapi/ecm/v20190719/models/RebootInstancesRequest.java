@@ -131,6 +131,29 @@ SOFT_FIRST：表示优先软关机，失败再执行硬关机
         this.StopType = StopType;
     }
 
+    public RebootInstancesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RebootInstancesRequest(RebootInstancesRequest source) {
+        if (source.InstanceIdSet != null) {
+            this.InstanceIdSet = new String[source.InstanceIdSet.length];
+            for (int i = 0; i < source.InstanceIdSet.length; i++) {
+                this.InstanceIdSet[i] = new String(source.InstanceIdSet[i]);
+            }
+        }
+        if (source.ForceReboot != null) {
+            this.ForceReboot = new Boolean(source.ForceReboot);
+        }
+        if (source.StopType != null) {
+            this.StopType = new String(source.StopType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

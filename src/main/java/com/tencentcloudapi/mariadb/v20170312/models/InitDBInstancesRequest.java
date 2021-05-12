@@ -68,6 +68,29 @@ public class InitDBInstancesRequest extends AbstractModel{
         this.Params = Params;
     }
 
+    public InitDBInstancesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public InitDBInstancesRequest(InitDBInstancesRequest source) {
+        if (source.InstanceIds != null) {
+            this.InstanceIds = new String[source.InstanceIds.length];
+            for (int i = 0; i < source.InstanceIds.length; i++) {
+                this.InstanceIds[i] = new String(source.InstanceIds[i]);
+            }
+        }
+        if (source.Params != null) {
+            this.Params = new DBParamValue[source.Params.length];
+            for (int i = 0; i < source.Params.length; i++) {
+                this.Params[i] = new DBParamValue(source.Params[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

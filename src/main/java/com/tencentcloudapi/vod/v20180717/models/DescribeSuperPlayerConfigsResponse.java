@@ -91,6 +91,29 @@ public class DescribeSuperPlayerConfigsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeSuperPlayerConfigsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeSuperPlayerConfigsResponse(DescribeSuperPlayerConfigsResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.PlayerConfigSet != null) {
+            this.PlayerConfigSet = new PlayerConfig[source.PlayerConfigSet.length];
+            for (int i = 0; i < source.PlayerConfigSet.length; i++) {
+                this.PlayerConfigSet[i] = new PlayerConfig(source.PlayerConfigSet[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

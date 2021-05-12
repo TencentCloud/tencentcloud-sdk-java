@@ -73,6 +73,26 @@ public class DescribePolicyConditionListConfigManualCalcType extends AbstractMod
         this.Need = Need;
     }
 
+    public DescribePolicyConditionListConfigManualCalcType() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribePolicyConditionListConfigManualCalcType(DescribePolicyConditionListConfigManualCalcType source) {
+        if (source.Keys != null) {
+            this.Keys = new Long[source.Keys.length];
+            for (int i = 0; i < source.Keys.length; i++) {
+                this.Keys[i] = new Long(source.Keys[i]);
+            }
+        }
+        if (source.Need != null) {
+            this.Need = new Boolean(source.Need);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

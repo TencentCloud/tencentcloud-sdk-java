@@ -91,6 +91,26 @@ public class CreateProductRequest extends AbstractModel{
         this.Skey = Skey;
     }
 
+    public CreateProductRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateProductRequest(CreateProductRequest source) {
+        if (source.ProductName != null) {
+            this.ProductName = new String(source.ProductName);
+        }
+        if (source.ProductProperties != null) {
+            this.ProductProperties = new ProductProperties(source.ProductProperties);
+        }
+        if (source.Skey != null) {
+            this.Skey = new String(source.Skey);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

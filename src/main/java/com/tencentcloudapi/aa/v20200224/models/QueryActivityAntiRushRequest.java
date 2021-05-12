@@ -845,6 +845,110 @@ public class QueryActivityAntiRushRequest extends AbstractModel{
         this.CheckDevice = CheckDevice;
     }
 
+    public QueryActivityAntiRushRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public QueryActivityAntiRushRequest(QueryActivityAntiRushRequest source) {
+        if (source.AccountType != null) {
+            this.AccountType = new String(source.AccountType);
+        }
+        if (source.Uid != null) {
+            this.Uid = new String(source.Uid);
+        }
+        if (source.UserIp != null) {
+            this.UserIp = new String(source.UserIp);
+        }
+        if (source.PostTime != null) {
+            this.PostTime = new String(source.PostTime);
+        }
+        if (source.AppIdU != null) {
+            this.AppIdU = new String(source.AppIdU);
+        }
+        if (source.NickName != null) {
+            this.NickName = new String(source.NickName);
+        }
+        if (source.PhoneNumber != null) {
+            this.PhoneNumber = new String(source.PhoneNumber);
+        }
+        if (source.EmailAddress != null) {
+            this.EmailAddress = new String(source.EmailAddress);
+        }
+        if (source.RegisterTime != null) {
+            this.RegisterTime = new String(source.RegisterTime);
+        }
+        if (source.RegisterIp != null) {
+            this.RegisterIp = new String(source.RegisterIp);
+        }
+        if (source.CookieHash != null) {
+            this.CookieHash = new String(source.CookieHash);
+        }
+        if (source.Address != null) {
+            this.Address = new String(source.Address);
+        }
+        if (source.LoginSource != null) {
+            this.LoginSource = new String(source.LoginSource);
+        }
+        if (source.LoginType != null) {
+            this.LoginType = new String(source.LoginType);
+        }
+        if (source.LoginSpend != null) {
+            this.LoginSpend = new String(source.LoginSpend);
+        }
+        if (source.RootId != null) {
+            this.RootId = new String(source.RootId);
+        }
+        if (source.Referer != null) {
+            this.Referer = new String(source.Referer);
+        }
+        if (source.JumpUrl != null) {
+            this.JumpUrl = new String(source.JumpUrl);
+        }
+        if (source.UserAgent != null) {
+            this.UserAgent = new String(source.UserAgent);
+        }
+        if (source.XForwardedFor != null) {
+            this.XForwardedFor = new String(source.XForwardedFor);
+        }
+        if (source.MouseClickCount != null) {
+            this.MouseClickCount = new String(source.MouseClickCount);
+        }
+        if (source.KeyboardClickCount != null) {
+            this.KeyboardClickCount = new String(source.KeyboardClickCount);
+        }
+        if (source.MacAddress != null) {
+            this.MacAddress = new String(source.MacAddress);
+        }
+        if (source.VendorId != null) {
+            this.VendorId = new String(source.VendorId);
+        }
+        if (source.Imei != null) {
+            this.Imei = new String(source.Imei);
+        }
+        if (source.AppVersion != null) {
+            this.AppVersion = new String(source.AppVersion);
+        }
+        if (source.BusinessId != null) {
+            this.BusinessId = new String(source.BusinessId);
+        }
+        if (source.WxSubType != null) {
+            this.WxSubType = new String(source.WxSubType);
+        }
+        if (source.RandNum != null) {
+            this.RandNum = new String(source.RandNum);
+        }
+        if (source.WxToken != null) {
+            this.WxToken = new String(source.WxToken);
+        }
+        if (source.CheckDevice != null) {
+            this.CheckDevice = new String(source.CheckDevice);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

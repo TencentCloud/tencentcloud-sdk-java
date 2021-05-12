@@ -68,6 +68,26 @@ public class IpInfo extends AbstractModel{
         this.Ips = Ips;
     }
 
+    public IpInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public IpInfo(IpInfo source) {
+        if (source.SubnetId != null) {
+            this.SubnetId = new String(source.SubnetId);
+        }
+        if (source.Ips != null) {
+            this.Ips = new String[source.Ips.length];
+            for (int i = 0; i < source.Ips.length; i++) {
+                this.Ips[i] = new String(source.Ips[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

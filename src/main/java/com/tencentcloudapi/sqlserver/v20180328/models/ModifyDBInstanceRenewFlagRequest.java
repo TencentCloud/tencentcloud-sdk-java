@@ -45,6 +45,23 @@ public class ModifyDBInstanceRenewFlagRequest extends AbstractModel{
         this.RenewFlags = RenewFlags;
     }
 
+    public ModifyDBInstanceRenewFlagRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyDBInstanceRenewFlagRequest(ModifyDBInstanceRenewFlagRequest source) {
+        if (source.RenewFlags != null) {
+            this.RenewFlags = new InstanceRenewInfo[source.RenewFlags.length];
+            for (int i = 0; i < source.RenewFlags.length; i++) {
+                this.RenewFlags[i] = new InstanceRenewInfo(source.RenewFlags[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

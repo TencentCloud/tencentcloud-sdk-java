@@ -152,6 +152,32 @@ public class ModifyEventConfigRequest extends AbstractModel{
         this.SubAppId = SubAppId;
     }
 
+    public ModifyEventConfigRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyEventConfigRequest(ModifyEventConfigRequest source) {
+        if (source.Mode != null) {
+            this.Mode = new String(source.Mode);
+        }
+        if (source.NotificationUrl != null) {
+            this.NotificationUrl = new String(source.NotificationUrl);
+        }
+        if (source.UploadMediaCompleteEventSwitch != null) {
+            this.UploadMediaCompleteEventSwitch = new String(source.UploadMediaCompleteEventSwitch);
+        }
+        if (source.DeleteMediaCompleteEventSwitch != null) {
+            this.DeleteMediaCompleteEventSwitch = new String(source.DeleteMediaCompleteEventSwitch);
+        }
+        if (source.SubAppId != null) {
+            this.SubAppId = new Long(source.SubAppId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

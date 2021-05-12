@@ -78,6 +78,23 @@ public class NodeCountSummary extends AbstractModel{
         this.AutoscalingAdded = AutoscalingAdded;
     }
 
+    public NodeCountSummary() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public NodeCountSummary(NodeCountSummary source) {
+        if (source.ManuallyAdded != null) {
+            this.ManuallyAdded = new ManuallyAdded(source.ManuallyAdded);
+        }
+        if (source.AutoscalingAdded != null) {
+            this.AutoscalingAdded = new AutoscalingAdded(source.AutoscalingAdded);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

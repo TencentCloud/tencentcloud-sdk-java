@@ -68,6 +68,26 @@ public class CreateRoutesRequest extends AbstractModel{
         this.Routes = Routes;
     }
 
+    public CreateRoutesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateRoutesRequest(CreateRoutesRequest source) {
+        if (source.RouteTableId != null) {
+            this.RouteTableId = new String(source.RouteTableId);
+        }
+        if (source.Routes != null) {
+            this.Routes = new Route[source.Routes.length];
+            for (int i = 0; i < source.Routes.length; i++) {
+                this.Routes[i] = new Route(source.Routes[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

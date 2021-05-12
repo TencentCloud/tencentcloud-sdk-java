@@ -68,6 +68,26 @@ public class DescribeCvmZoneInstanceConfigInfosResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeCvmZoneInstanceConfigInfosResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeCvmZoneInstanceConfigInfosResponse(DescribeCvmZoneInstanceConfigInfosResponse source) {
+        if (source.InstanceTypeQuotaSet != null) {
+            this.InstanceTypeQuotaSet = new InstanceTypeQuotaItem[source.InstanceTypeQuotaSet.length];
+            for (int i = 0; i < source.InstanceTypeQuotaSet.length; i++) {
+                this.InstanceTypeQuotaSet[i] = new InstanceTypeQuotaItem(source.InstanceTypeQuotaSet[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

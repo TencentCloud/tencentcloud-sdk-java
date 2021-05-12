@@ -91,6 +91,32 @@ public class RecognizeCarResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public RecognizeCarResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RecognizeCarResponse(RecognizeCarResponse source) {
+        if (source.CarCoords != null) {
+            this.CarCoords = new Coord[source.CarCoords.length];
+            for (int i = 0; i < source.CarCoords.length; i++) {
+                this.CarCoords[i] = new Coord(source.CarCoords[i]);
+            }
+        }
+        if (source.CarTags != null) {
+            this.CarTags = new CarTagItem[source.CarTags.length];
+            for (int i = 0; i < source.CarTags.length; i++) {
+                this.CarTags[i] = new CarTagItem(source.CarTags[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

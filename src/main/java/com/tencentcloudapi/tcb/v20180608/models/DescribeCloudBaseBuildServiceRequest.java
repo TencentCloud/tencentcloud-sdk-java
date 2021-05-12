@@ -114,6 +114,29 @@ public class DescribeCloudBaseBuildServiceRequest extends AbstractModel{
         this.ServiceVersion = ServiceVersion;
     }
 
+    public DescribeCloudBaseBuildServiceRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeCloudBaseBuildServiceRequest(DescribeCloudBaseBuildServiceRequest source) {
+        if (source.EnvId != null) {
+            this.EnvId = new String(source.EnvId);
+        }
+        if (source.ServiceName != null) {
+            this.ServiceName = new String(source.ServiceName);
+        }
+        if (source.CIBusiness != null) {
+            this.CIBusiness = new String(source.CIBusiness);
+        }
+        if (source.ServiceVersion != null) {
+            this.ServiceVersion = new String(source.ServiceVersion);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -160,6 +160,41 @@ public class MusicDetailInfo extends AbstractModel{
         this.Score = Score;
     }
 
+    public MusicDetailInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MusicDetailInfo(MusicDetailInfo source) {
+        if (source.MusicId != null) {
+            this.MusicId = new String(source.MusicId);
+        }
+        if (source.AmeId != null) {
+            this.AmeId = new String(source.AmeId);
+        }
+        if (source.Tags != null) {
+            this.Tags = new String[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new String(source.Tags[i]);
+            }
+        }
+        if (source.HitWords != null) {
+            this.HitWords = new String[source.HitWords.length];
+            for (int i = 0; i < source.HitWords.length; i++) {
+                this.HitWords[i] = new String(source.HitWords[i]);
+            }
+        }
+        if (source.Bpm != null) {
+            this.Bpm = new Long(source.Bpm);
+        }
+        if (source.Score != null) {
+            this.Score = new Float(source.Score);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

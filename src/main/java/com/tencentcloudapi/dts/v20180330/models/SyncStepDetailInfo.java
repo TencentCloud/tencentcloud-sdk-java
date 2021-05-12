@@ -114,6 +114,29 @@ public class SyncStepDetailInfo extends AbstractModel{
         this.StepId = StepId;
     }
 
+    public SyncStepDetailInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SyncStepDetailInfo(SyncStepDetailInfo source) {
+        if (source.StepNo != null) {
+            this.StepNo = new Long(source.StepNo);
+        }
+        if (source.StepName != null) {
+            this.StepName = new String(source.StepName);
+        }
+        if (source.CanStop != null) {
+            this.CanStop = new Long(source.CanStop);
+        }
+        if (source.StepId != null) {
+            this.StepId = new Long(source.StepId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

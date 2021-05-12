@@ -68,6 +68,26 @@ public class SmsCampaignStatisticsData extends AbstractModel{
         this.Statistics = Statistics;
     }
 
+    public SmsCampaignStatisticsData() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SmsCampaignStatisticsData(SmsCampaignStatisticsData source) {
+        if (source.CampaignId != null) {
+            this.CampaignId = new Long(source.CampaignId);
+        }
+        if (source.Statistics != null) {
+            this.Statistics = new SmsCampaignStatisticsCrowdData[source.Statistics.length];
+            for (int i = 0; i < source.Statistics.length; i++) {
+                this.Statistics[i] = new SmsCampaignStatisticsCrowdData(source.Statistics[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

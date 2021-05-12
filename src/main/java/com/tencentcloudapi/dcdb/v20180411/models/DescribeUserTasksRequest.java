@@ -206,6 +206,53 @@ public class DescribeUserTasksRequest extends AbstractModel{
         this.Offset = Offset;
     }
 
+    public DescribeUserTasksRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeUserTasksRequest(DescribeUserTasksRequest source) {
+        if (source.Statuses != null) {
+            this.Statuses = new Long[source.Statuses.length];
+            for (int i = 0; i < source.Statuses.length; i++) {
+                this.Statuses[i] = new Long(source.Statuses[i]);
+            }
+        }
+        if (source.InstanceIds != null) {
+            this.InstanceIds = new String[source.InstanceIds.length];
+            for (int i = 0; i < source.InstanceIds.length; i++) {
+                this.InstanceIds[i] = new String(source.InstanceIds[i]);
+            }
+        }
+        if (source.FlowTypes != null) {
+            this.FlowTypes = new Long[source.FlowTypes.length];
+            for (int i = 0; i < source.FlowTypes.length; i++) {
+                this.FlowTypes[i] = new Long(source.FlowTypes[i]);
+            }
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+        if (source.UTaskIds != null) {
+            this.UTaskIds = new Long[source.UTaskIds.length];
+            for (int i = 0; i < source.UTaskIds.length; i++) {
+                this.UTaskIds[i] = new Long(source.UTaskIds[i]);
+            }
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

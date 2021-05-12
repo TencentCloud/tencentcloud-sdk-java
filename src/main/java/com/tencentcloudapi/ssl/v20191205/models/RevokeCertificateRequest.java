@@ -68,6 +68,23 @@ public class RevokeCertificateRequest extends AbstractModel{
         this.Reason = Reason;
     }
 
+    public RevokeCertificateRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RevokeCertificateRequest(RevokeCertificateRequest source) {
+        if (source.CertificateId != null) {
+            this.CertificateId = new String(source.CertificateId);
+        }
+        if (source.Reason != null) {
+            this.Reason = new String(source.Reason);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -91,6 +91,26 @@ public class ListClsTopicDomainsRequest extends AbstractModel{
         this.Channel = Channel;
     }
 
+    public ListClsTopicDomainsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ListClsTopicDomainsRequest(ListClsTopicDomainsRequest source) {
+        if (source.LogsetId != null) {
+            this.LogsetId = new String(source.LogsetId);
+        }
+        if (source.TopicId != null) {
+            this.TopicId = new String(source.TopicId);
+        }
+        if (source.Channel != null) {
+            this.Channel = new String(source.Channel);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

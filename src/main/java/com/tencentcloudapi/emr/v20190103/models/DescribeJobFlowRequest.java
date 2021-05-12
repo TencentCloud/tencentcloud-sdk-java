@@ -45,6 +45,20 @@ public class DescribeJobFlowRequest extends AbstractModel{
         this.JobFlowId = JobFlowId;
     }
 
+    public DescribeJobFlowRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeJobFlowRequest(DescribeJobFlowRequest source) {
+        if (source.JobFlowId != null) {
+            this.JobFlowId = new Long(source.JobFlowId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

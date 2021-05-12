@@ -239,6 +239,44 @@ public class DiskConfig extends AbstractModel{
         this.InstanceFamily = InstanceFamily;
     }
 
+    public DiskConfig() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DiskConfig(DiskConfig source) {
+        if (source.Available != null) {
+            this.Available = new Boolean(source.Available);
+        }
+        if (source.DiskType != null) {
+            this.DiskType = new String(source.DiskType);
+        }
+        if (source.DiskUsage != null) {
+            this.DiskUsage = new String(source.DiskUsage);
+        }
+        if (source.DiskChargeType != null) {
+            this.DiskChargeType = new String(source.DiskChargeType);
+        }
+        if (source.MaxDiskSize != null) {
+            this.MaxDiskSize = new Long(source.MaxDiskSize);
+        }
+        if (source.MinDiskSize != null) {
+            this.MinDiskSize = new Long(source.MinDiskSize);
+        }
+        if (source.Zone != null) {
+            this.Zone = new String(source.Zone);
+        }
+        if (source.DeviceClass != null) {
+            this.DeviceClass = new String(source.DeviceClass);
+        }
+        if (source.InstanceFamily != null) {
+            this.InstanceFamily = new String(source.InstanceFamily);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

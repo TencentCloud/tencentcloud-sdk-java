@@ -436,6 +436,71 @@ public class PrivilegeEscalationProcess extends AbstractModel{
         this.MachineName = MachineName;
     }
 
+    public PrivilegeEscalationProcess() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PrivilegeEscalationProcess(PrivilegeEscalationProcess source) {
+        if (source.Id != null) {
+            this.Id = new Long(source.Id);
+        }
+        if (source.Uuid != null) {
+            this.Uuid = new String(source.Uuid);
+        }
+        if (source.Quuid != null) {
+            this.Quuid = new String(source.Quuid);
+        }
+        if (source.Hostip != null) {
+            this.Hostip = new String(source.Hostip);
+        }
+        if (source.ProcessName != null) {
+            this.ProcessName = new String(source.ProcessName);
+        }
+        if (source.FullPath != null) {
+            this.FullPath = new String(source.FullPath);
+        }
+        if (source.CmdLine != null) {
+            this.CmdLine = new String(source.CmdLine);
+        }
+        if (source.UserName != null) {
+            this.UserName = new String(source.UserName);
+        }
+        if (source.UserGroup != null) {
+            this.UserGroup = new String(source.UserGroup);
+        }
+        if (source.ProcFilePrivilege != null) {
+            this.ProcFilePrivilege = new String(source.ProcFilePrivilege);
+        }
+        if (source.ParentProcName != null) {
+            this.ParentProcName = new String(source.ParentProcName);
+        }
+        if (source.ParentProcUser != null) {
+            this.ParentProcUser = new String(source.ParentProcUser);
+        }
+        if (source.ParentProcGroup != null) {
+            this.ParentProcGroup = new String(source.ParentProcGroup);
+        }
+        if (source.ParentProcPath != null) {
+            this.ParentProcPath = new String(source.ParentProcPath);
+        }
+        if (source.ProcTree != null) {
+            this.ProcTree = new String(source.ProcTree);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.MachineName != null) {
+            this.MachineName = new String(source.MachineName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

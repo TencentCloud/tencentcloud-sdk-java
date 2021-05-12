@@ -68,6 +68,26 @@ public class DescribeInstancesDeniedActionsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeInstancesDeniedActionsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeInstancesDeniedActionsResponse(DescribeInstancesDeniedActionsResponse source) {
+        if (source.InstanceDeniedActionSet != null) {
+            this.InstanceDeniedActionSet = new InstanceDeniedActions[source.InstanceDeniedActionSet.length];
+            for (int i = 0; i < source.InstanceDeniedActionSet.length; i++) {
+                this.InstanceDeniedActionSet[i] = new InstanceDeniedActions(source.InstanceDeniedActionSet[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -165,6 +165,35 @@ public class AudioMaterial extends AbstractModel{
         this.VodFileId = VodFileId;
     }
 
+    public AudioMaterial() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AudioMaterial(AudioMaterial source) {
+        if (source.MetaData != null) {
+            this.MetaData = new MediaMetaData(source.MetaData);
+        }
+        if (source.MaterialUrl != null) {
+            this.MaterialUrl = new String(source.MaterialUrl);
+        }
+        if (source.CoverUrl != null) {
+            this.CoverUrl = new String(source.CoverUrl);
+        }
+        if (source.MaterialStatus != null) {
+            this.MaterialStatus = new MaterialStatus(source.MaterialStatus);
+        }
+        if (source.OriginalUrl != null) {
+            this.OriginalUrl = new String(source.OriginalUrl);
+        }
+        if (source.VodFileId != null) {
+            this.VodFileId = new String(source.VodFileId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

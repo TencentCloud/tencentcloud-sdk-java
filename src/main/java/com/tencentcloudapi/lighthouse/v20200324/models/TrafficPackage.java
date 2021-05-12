@@ -269,6 +269,44 @@ public class TrafficPackage extends AbstractModel{
         this.Status = Status;
     }
 
+    public TrafficPackage() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TrafficPackage(TrafficPackage source) {
+        if (source.TrafficPackageId != null) {
+            this.TrafficPackageId = new String(source.TrafficPackageId);
+        }
+        if (source.TrafficUsed != null) {
+            this.TrafficUsed = new Long(source.TrafficUsed);
+        }
+        if (source.TrafficPackageTotal != null) {
+            this.TrafficPackageTotal = new Long(source.TrafficPackageTotal);
+        }
+        if (source.TrafficPackageRemaining != null) {
+            this.TrafficPackageRemaining = new Long(source.TrafficPackageRemaining);
+        }
+        if (source.TrafficOverflow != null) {
+            this.TrafficOverflow = new Long(source.TrafficOverflow);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+        if (source.Deadline != null) {
+            this.Deadline = new String(source.Deadline);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

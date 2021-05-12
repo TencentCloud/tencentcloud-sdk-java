@@ -68,6 +68,23 @@ public class CreateSealResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public CreateSealResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateSealResponse(CreateSealResponse source) {
+        if (source.SealResId != null) {
+            this.SealResId = new String(source.SealResId);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

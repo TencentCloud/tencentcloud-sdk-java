@@ -285,6 +285,65 @@ public class SchedulingDomain extends AbstractModel{
         this.ModifyTime = ModifyTime;
     }
 
+    public SchedulingDomain() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SchedulingDomain(SchedulingDomain source) {
+        if (source.Domain != null) {
+            this.Domain = new String(source.Domain);
+        }
+        if (source.BGPIpList != null) {
+            this.BGPIpList = new String[source.BGPIpList.length];
+            for (int i = 0; i < source.BGPIpList.length; i++) {
+                this.BGPIpList[i] = new String(source.BGPIpList[i]);
+            }
+        }
+        if (source.CTCCIpList != null) {
+            this.CTCCIpList = new String[source.CTCCIpList.length];
+            for (int i = 0; i < source.CTCCIpList.length; i++) {
+                this.CTCCIpList[i] = new String(source.CTCCIpList[i]);
+            }
+        }
+        if (source.CUCCIpList != null) {
+            this.CUCCIpList = new String[source.CUCCIpList.length];
+            for (int i = 0; i < source.CUCCIpList.length; i++) {
+                this.CUCCIpList[i] = new String(source.CUCCIpList[i]);
+            }
+        }
+        if (source.CMCCIpList != null) {
+            this.CMCCIpList = new String[source.CMCCIpList.length];
+            for (int i = 0; i < source.CMCCIpList.length; i++) {
+                this.CMCCIpList[i] = new String(source.CMCCIpList[i]);
+            }
+        }
+        if (source.OverseaIpList != null) {
+            this.OverseaIpList = new String[source.OverseaIpList.length];
+            for (int i = 0; i < source.OverseaIpList.length; i++) {
+                this.OverseaIpList[i] = new String(source.OverseaIpList[i]);
+            }
+        }
+        if (source.Method != null) {
+            this.Method = new String(source.Method);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.TTL != null) {
+            this.TTL = new Long(source.TTL);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.ModifyTime != null) {
+            this.ModifyTime = new String(source.ModifyTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -68,6 +68,23 @@ public class DescribeGatewayAllGroupApisRequest extends AbstractModel{
         this.SearchWord = SearchWord;
     }
 
+    public DescribeGatewayAllGroupApisRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeGatewayAllGroupApisRequest(DescribeGatewayAllGroupApisRequest source) {
+        if (source.GatewayDeployGroupId != null) {
+            this.GatewayDeployGroupId = new String(source.GatewayDeployGroupId);
+        }
+        if (source.SearchWord != null) {
+            this.SearchWord = new String(source.SearchWord);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

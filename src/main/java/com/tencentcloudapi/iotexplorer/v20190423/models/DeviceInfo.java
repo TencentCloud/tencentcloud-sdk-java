@@ -404,6 +404,59 @@ public class DeviceInfo extends AbstractModel{
         this.NwkSKey = NwkSKey;
     }
 
+    public DeviceInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeviceInfo(DeviceInfo source) {
+        if (source.DeviceName != null) {
+            this.DeviceName = new String(source.DeviceName);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.DevicePsk != null) {
+            this.DevicePsk = new String(source.DevicePsk);
+        }
+        if (source.FirstOnlineTime != null) {
+            this.FirstOnlineTime = new Long(source.FirstOnlineTime);
+        }
+        if (source.LoginTime != null) {
+            this.LoginTime = new Long(source.LoginTime);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new Long(source.CreateTime);
+        }
+        if (source.Version != null) {
+            this.Version = new String(source.Version);
+        }
+        if (source.DeviceCert != null) {
+            this.DeviceCert = new String(source.DeviceCert);
+        }
+        if (source.LogLevel != null) {
+            this.LogLevel = new Long(source.LogLevel);
+        }
+        if (source.DevAddr != null) {
+            this.DevAddr = new String(source.DevAddr);
+        }
+        if (source.AppKey != null) {
+            this.AppKey = new String(source.AppKey);
+        }
+        if (source.DevEUI != null) {
+            this.DevEUI = new String(source.DevEUI);
+        }
+        if (source.AppSKey != null) {
+            this.AppSKey = new String(source.AppSKey);
+        }
+        if (source.NwkSKey != null) {
+            this.NwkSKey = new String(source.NwkSKey);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

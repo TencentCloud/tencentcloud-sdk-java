@@ -83,6 +83,26 @@ off：关闭
         this.CappingRules = CappingRules;
     }
 
+    public DownstreamCapping() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DownstreamCapping(DownstreamCapping source) {
+        if (source.Switch != null) {
+            this.Switch = new String(source.Switch);
+        }
+        if (source.CappingRules != null) {
+            this.CappingRules = new CappingRule[source.CappingRules.length];
+            for (int i = 0; i < source.CappingRules.length; i++) {
+                this.CappingRules[i] = new CappingRule(source.CappingRules[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -91,6 +91,26 @@ public class CreateLoadBalancerBzConf extends AbstractModel{
         this.BzL7Metrics = BzL7Metrics;
     }
 
+    public CreateLoadBalancerBzConf() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateLoadBalancerBzConf(CreateLoadBalancerBzConf source) {
+        if (source.BzPayMode != null) {
+            this.BzPayMode = new String(source.BzPayMode);
+        }
+        if (source.BzL4Metrics != null) {
+            this.BzL4Metrics = new String(source.BzL4Metrics);
+        }
+        if (source.BzL7Metrics != null) {
+            this.BzL7Metrics = new String(source.BzL7Metrics);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

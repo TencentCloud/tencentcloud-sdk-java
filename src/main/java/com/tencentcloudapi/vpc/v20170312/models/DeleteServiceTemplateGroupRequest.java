@@ -45,6 +45,20 @@ public class DeleteServiceTemplateGroupRequest extends AbstractModel{
         this.ServiceTemplateGroupId = ServiceTemplateGroupId;
     }
 
+    public DeleteServiceTemplateGroupRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteServiceTemplateGroupRequest(DeleteServiceTemplateGroupRequest source) {
+        if (source.ServiceTemplateGroupId != null) {
+            this.ServiceTemplateGroupId = new String(source.ServiceTemplateGroupId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

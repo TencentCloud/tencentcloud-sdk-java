@@ -216,6 +216,44 @@ public class CertInfo extends AbstractModel{
         this.DomainList = DomainList;
     }
 
+    public CertInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CertInfo(CertInfo source) {
+        if (source.CertId != null) {
+            this.CertId = new Long(source.CertId);
+        }
+        if (source.CertName != null) {
+            this.CertName = new String(source.CertName);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.HttpsCrt != null) {
+            this.HttpsCrt = new String(source.HttpsCrt);
+        }
+        if (source.CertType != null) {
+            this.CertType = new Long(source.CertType);
+        }
+        if (source.CertExpireTime != null) {
+            this.CertExpireTime = new String(source.CertExpireTime);
+        }
+        if (source.DomainList != null) {
+            this.DomainList = new String[source.DomainList.length];
+            for (int i = 0; i < source.DomainList.length; i++) {
+                this.DomainList[i] = new String(source.DomainList[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

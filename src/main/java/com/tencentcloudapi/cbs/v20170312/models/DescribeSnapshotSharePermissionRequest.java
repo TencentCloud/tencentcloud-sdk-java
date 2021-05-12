@@ -45,6 +45,20 @@ public class DescribeSnapshotSharePermissionRequest extends AbstractModel{
         this.SnapshotId = SnapshotId;
     }
 
+    public DescribeSnapshotSharePermissionRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeSnapshotSharePermissionRequest(DescribeSnapshotSharePermissionRequest source) {
+        if (source.SnapshotId != null) {
+            this.SnapshotId = new String(source.SnapshotId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

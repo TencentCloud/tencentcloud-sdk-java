@@ -147,6 +147,32 @@ public class GatewayGroupApiVo extends AbstractModel{
         this.NamespaceName = NamespaceName;
     }
 
+    public GatewayGroupApiVo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GatewayGroupApiVo(GatewayGroupApiVo source) {
+        if (source.ApiId != null) {
+            this.ApiId = new String(source.ApiId);
+        }
+        if (source.Path != null) {
+            this.Path = new String(source.Path);
+        }
+        if (source.MicroserviceName != null) {
+            this.MicroserviceName = new String(source.MicroserviceName);
+        }
+        if (source.Method != null) {
+            this.Method = new String(source.Method);
+        }
+        if (source.NamespaceName != null) {
+            this.NamespaceName = new String(source.NamespaceName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -91,6 +91,26 @@ public class COSSettings extends AbstractModel{
         this.LogOnCosPath = LogOnCosPath;
     }
 
+    public COSSettings() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public COSSettings(COSSettings source) {
+        if (source.CosSecretId != null) {
+            this.CosSecretId = new String(source.CosSecretId);
+        }
+        if (source.CosSecretKey != null) {
+            this.CosSecretKey = new String(source.CosSecretKey);
+        }
+        if (source.LogOnCosPath != null) {
+            this.LogOnCosPath = new String(source.LogOnCosPath);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

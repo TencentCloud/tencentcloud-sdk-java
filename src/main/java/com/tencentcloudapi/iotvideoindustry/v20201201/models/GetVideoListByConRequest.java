@@ -142,6 +142,32 @@ public class GetVideoListByConRequest extends AbstractModel{
         this.Date = Date;
     }
 
+    public GetVideoListByConRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GetVideoListByConRequest(GetVideoListByConRequest source) {
+        if (source.DeviceId != null) {
+            this.DeviceId = new String(source.DeviceId);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.LatestDay != null) {
+            this.LatestDay = new Long(source.LatestDay);
+        }
+        if (source.Date != null) {
+            this.Date = new String(source.Date);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

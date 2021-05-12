@@ -114,6 +114,32 @@ public class CosFileUploadTrigger extends AbstractModel{
         this.Formats = Formats;
     }
 
+    public CosFileUploadTrigger() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CosFileUploadTrigger(CosFileUploadTrigger source) {
+        if (source.Bucket != null) {
+            this.Bucket = new String(source.Bucket);
+        }
+        if (source.Region != null) {
+            this.Region = new String(source.Region);
+        }
+        if (source.Dir != null) {
+            this.Dir = new String(source.Dir);
+        }
+        if (source.Formats != null) {
+            this.Formats = new String[source.Formats.length];
+            for (int i = 0; i < source.Formats.length; i++) {
+                this.Formats[i] = new String(source.Formats[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

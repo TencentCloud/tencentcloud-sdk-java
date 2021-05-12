@@ -183,6 +183,38 @@ public class ClusterNetworkSettings extends AbstractModel{
         this.Cni = Cni;
     }
 
+    public ClusterNetworkSettings() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ClusterNetworkSettings(ClusterNetworkSettings source) {
+        if (source.ClusterCIDR != null) {
+            this.ClusterCIDR = new String(source.ClusterCIDR);
+        }
+        if (source.IgnoreClusterCIDRConflict != null) {
+            this.IgnoreClusterCIDRConflict = new Boolean(source.IgnoreClusterCIDRConflict);
+        }
+        if (source.MaxNodePodNum != null) {
+            this.MaxNodePodNum = new Long(source.MaxNodePodNum);
+        }
+        if (source.MaxClusterServiceNum != null) {
+            this.MaxClusterServiceNum = new Long(source.MaxClusterServiceNum);
+        }
+        if (source.Ipvs != null) {
+            this.Ipvs = new Boolean(source.Ipvs);
+        }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.Cni != null) {
+            this.Cni = new Boolean(source.Cni);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

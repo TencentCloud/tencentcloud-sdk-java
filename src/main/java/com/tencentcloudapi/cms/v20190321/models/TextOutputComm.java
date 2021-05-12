@@ -114,6 +114,29 @@ public class TextOutputComm extends AbstractModel{
         this.Uin = Uin;
     }
 
+    public TextOutputComm() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TextOutputComm(TextOutputComm source) {
+        if (source.AppID != null) {
+            this.AppID = new Long(source.AppID);
+        }
+        if (source.BUCtrlID != null) {
+            this.BUCtrlID = new Long(source.BUCtrlID);
+        }
+        if (source.SendTime != null) {
+            this.SendTime = new Long(source.SendTime);
+        }
+        if (source.Uin != null) {
+            this.Uin = new Long(source.Uin);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

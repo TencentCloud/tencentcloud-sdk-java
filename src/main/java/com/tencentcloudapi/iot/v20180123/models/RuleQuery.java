@@ -124,6 +124,29 @@ public class RuleQuery extends AbstractModel{
         this.ProductId = ProductId;
     }
 
+    public RuleQuery() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RuleQuery(RuleQuery source) {
+        if (source.Field != null) {
+            this.Field = new String(source.Field);
+        }
+        if (source.Condition != null) {
+            this.Condition = new String(source.Condition);
+        }
+        if (source.Topic != null) {
+            this.Topic = new String(source.Topic);
+        }
+        if (source.ProductId != null) {
+            this.ProductId = new String(source.ProductId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

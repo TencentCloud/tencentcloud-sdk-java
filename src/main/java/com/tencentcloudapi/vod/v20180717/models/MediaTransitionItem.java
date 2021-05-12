@@ -68,6 +68,26 @@ public class MediaTransitionItem extends AbstractModel{
         this.Transitions = Transitions;
     }
 
+    public MediaTransitionItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MediaTransitionItem(MediaTransitionItem source) {
+        if (source.Duration != null) {
+            this.Duration = new Float(source.Duration);
+        }
+        if (source.Transitions != null) {
+            this.Transitions = new TransitionOpertion[source.Transitions.length];
+            for (int i = 0; i < source.Transitions.length; i++) {
+                this.Transitions[i] = new TransitionOpertion(source.Transitions[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

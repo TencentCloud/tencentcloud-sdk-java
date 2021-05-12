@@ -620,6 +620,98 @@ public class SubmitCertificateInformationRequest extends AbstractModel{
         this.ContactPosition = ContactPosition;
     }
 
+    public SubmitCertificateInformationRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SubmitCertificateInformationRequest(SubmitCertificateInformationRequest source) {
+        if (source.CertificateId != null) {
+            this.CertificateId = new String(source.CertificateId);
+        }
+        if (source.CsrType != null) {
+            this.CsrType = new String(source.CsrType);
+        }
+        if (source.CsrContent != null) {
+            this.CsrContent = new String(source.CsrContent);
+        }
+        if (source.CertificateDomain != null) {
+            this.CertificateDomain = new String(source.CertificateDomain);
+        }
+        if (source.DomainList != null) {
+            this.DomainList = new String[source.DomainList.length];
+            for (int i = 0; i < source.DomainList.length; i++) {
+                this.DomainList[i] = new String(source.DomainList[i]);
+            }
+        }
+        if (source.KeyPassword != null) {
+            this.KeyPassword = new String(source.KeyPassword);
+        }
+        if (source.OrganizationName != null) {
+            this.OrganizationName = new String(source.OrganizationName);
+        }
+        if (source.OrganizationDivision != null) {
+            this.OrganizationDivision = new String(source.OrganizationDivision);
+        }
+        if (source.OrganizationAddress != null) {
+            this.OrganizationAddress = new String(source.OrganizationAddress);
+        }
+        if (source.OrganizationCountry != null) {
+            this.OrganizationCountry = new String(source.OrganizationCountry);
+        }
+        if (source.OrganizationCity != null) {
+            this.OrganizationCity = new String(source.OrganizationCity);
+        }
+        if (source.OrganizationRegion != null) {
+            this.OrganizationRegion = new String(source.OrganizationRegion);
+        }
+        if (source.PostalCode != null) {
+            this.PostalCode = new String(source.PostalCode);
+        }
+        if (source.PhoneAreaCode != null) {
+            this.PhoneAreaCode = new String(source.PhoneAreaCode);
+        }
+        if (source.PhoneNumber != null) {
+            this.PhoneNumber = new String(source.PhoneNumber);
+        }
+        if (source.VerifyType != null) {
+            this.VerifyType = new String(source.VerifyType);
+        }
+        if (source.AdminFirstName != null) {
+            this.AdminFirstName = new String(source.AdminFirstName);
+        }
+        if (source.AdminLastName != null) {
+            this.AdminLastName = new String(source.AdminLastName);
+        }
+        if (source.AdminPhoneNum != null) {
+            this.AdminPhoneNum = new String(source.AdminPhoneNum);
+        }
+        if (source.AdminEmail != null) {
+            this.AdminEmail = new String(source.AdminEmail);
+        }
+        if (source.AdminPosition != null) {
+            this.AdminPosition = new String(source.AdminPosition);
+        }
+        if (source.ContactFirstName != null) {
+            this.ContactFirstName = new String(source.ContactFirstName);
+        }
+        if (source.ContactLastName != null) {
+            this.ContactLastName = new String(source.ContactLastName);
+        }
+        if (source.ContactEmail != null) {
+            this.ContactEmail = new String(source.ContactEmail);
+        }
+        if (source.ContactNumber != null) {
+            this.ContactNumber = new String(source.ContactNumber);
+        }
+        if (source.ContactPosition != null) {
+            this.ContactPosition = new String(source.ContactPosition);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

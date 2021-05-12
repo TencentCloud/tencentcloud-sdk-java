@@ -400,6 +400,68 @@ public class DescribeCaptchaAppIdInfoResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeCaptchaAppIdInfoResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeCaptchaAppIdInfoResponse(DescribeCaptchaAppIdInfoResponse source) {
+        if (source.SchemeColor != null) {
+            this.SchemeColor = new String(source.SchemeColor);
+        }
+        if (source.Language != null) {
+            this.Language = new Long(source.Language);
+        }
+        if (source.SceneType != null) {
+            this.SceneType = new Long(source.SceneType);
+        }
+        if (source.EvilInterceptGrade != null) {
+            this.EvilInterceptGrade = new Long(source.EvilInterceptGrade);
+        }
+        if (source.SmartVerify != null) {
+            this.SmartVerify = new Long(source.SmartVerify);
+        }
+        if (source.SmartEngine != null) {
+            this.SmartEngine = new Long(source.SmartEngine);
+        }
+        if (source.CapType != null) {
+            this.CapType = new Long(source.CapType);
+        }
+        if (source.AppName != null) {
+            this.AppName = new String(source.AppName);
+        }
+        if (source.DomainLimit != null) {
+            this.DomainLimit = new String(source.DomainLimit);
+        }
+        if (source.MailAlarm != null) {
+            this.MailAlarm = new String[source.MailAlarm.length];
+            for (int i = 0; i < source.MailAlarm.length; i++) {
+                this.MailAlarm[i] = new String(source.MailAlarm[i]);
+            }
+        }
+        if (source.TrafficThreshold != null) {
+            this.TrafficThreshold = new Long(source.TrafficThreshold);
+        }
+        if (source.EncryptKey != null) {
+            this.EncryptKey = new String(source.EncryptKey);
+        }
+        if (source.TopFullScreen != null) {
+            this.TopFullScreen = new Long(source.TopFullScreen);
+        }
+        if (source.CaptchaCode != null) {
+            this.CaptchaCode = new Long(source.CaptchaCode);
+        }
+        if (source.CaptchaMsg != null) {
+            this.CaptchaMsg = new String(source.CaptchaMsg);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

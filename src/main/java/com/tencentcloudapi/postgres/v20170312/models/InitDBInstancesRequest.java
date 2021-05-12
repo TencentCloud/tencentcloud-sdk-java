@@ -114,6 +114,32 @@ public class InitDBInstancesRequest extends AbstractModel{
         this.Charset = Charset;
     }
 
+    public InitDBInstancesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public InitDBInstancesRequest(InitDBInstancesRequest source) {
+        if (source.DBInstanceIdSet != null) {
+            this.DBInstanceIdSet = new String[source.DBInstanceIdSet.length];
+            for (int i = 0; i < source.DBInstanceIdSet.length; i++) {
+                this.DBInstanceIdSet[i] = new String(source.DBInstanceIdSet[i]);
+            }
+        }
+        if (source.AdminName != null) {
+            this.AdminName = new String(source.AdminName);
+        }
+        if (source.AdminPassword != null) {
+            this.AdminPassword = new String(source.AdminPassword);
+        }
+        if (source.Charset != null) {
+            this.Charset = new String(source.Charset);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

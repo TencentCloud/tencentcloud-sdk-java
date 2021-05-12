@@ -298,6 +298,53 @@ public class RegisterMigrationTaskRequest extends AbstractModel{
         this.DstDatabaseType = DstDatabaseType;
     }
 
+    public RegisterMigrationTaskRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RegisterMigrationTaskRequest(RegisterMigrationTaskRequest source) {
+        if (source.TaskType != null) {
+            this.TaskType = new String(source.TaskType);
+        }
+        if (source.TaskName != null) {
+            this.TaskName = new String(source.TaskName);
+        }
+        if (source.ServiceSupplier != null) {
+            this.ServiceSupplier = new String(source.ServiceSupplier);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new String(source.UpdateTime);
+        }
+        if (source.MigrateClass != null) {
+            this.MigrateClass = new String(source.MigrateClass);
+        }
+        if (source.SrcInfo != null) {
+            this.SrcInfo = new SrcInfo(source.SrcInfo);
+        }
+        if (source.DstInfo != null) {
+            this.DstInfo = new DstInfo(source.DstInfo);
+        }
+        if (source.SrcAccessType != null) {
+            this.SrcAccessType = new String(source.SrcAccessType);
+        }
+        if (source.SrcDatabaseType != null) {
+            this.SrcDatabaseType = new String(source.SrcDatabaseType);
+        }
+        if (source.DstAccessType != null) {
+            this.DstAccessType = new String(source.DstAccessType);
+        }
+        if (source.DstDatabaseType != null) {
+            this.DstDatabaseType = new String(source.DstDatabaseType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

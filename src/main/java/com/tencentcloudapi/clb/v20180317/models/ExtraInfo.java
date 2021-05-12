@@ -78,6 +78,23 @@ public class ExtraInfo extends AbstractModel{
         this.TgwGroupName = TgwGroupName;
     }
 
+    public ExtraInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ExtraInfo(ExtraInfo source) {
+        if (source.ZhiTong != null) {
+            this.ZhiTong = new Boolean(source.ZhiTong);
+        }
+        if (source.TgwGroupName != null) {
+            this.TgwGroupName = new String(source.TgwGroupName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

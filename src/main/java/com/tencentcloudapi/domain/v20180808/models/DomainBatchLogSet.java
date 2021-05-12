@@ -124,6 +124,29 @@ done 执行完成。
         this.CreatedOn = CreatedOn;
     }
 
+    public DomainBatchLogSet() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DomainBatchLogSet(DomainBatchLogSet source) {
+        if (source.LogId != null) {
+            this.LogId = new Long(source.LogId);
+        }
+        if (source.Number != null) {
+            this.Number = new Long(source.Number);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.CreatedOn != null) {
+            this.CreatedOn = new String(source.CreatedOn);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

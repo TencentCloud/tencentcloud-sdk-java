@@ -344,6 +344,59 @@ public class DescribeAccountBalanceResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeAccountBalanceResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeAccountBalanceResponse(DescribeAccountBalanceResponse source) {
+        if (source.Balance != null) {
+            this.Balance = new Long(source.Balance);
+        }
+        if (source.Uin != null) {
+            this.Uin = new Long(source.Uin);
+        }
+        if (source.RealBalance != null) {
+            this.RealBalance = new Float(source.RealBalance);
+        }
+        if (source.CashAccountBalance != null) {
+            this.CashAccountBalance = new Float(source.CashAccountBalance);
+        }
+        if (source.IncomeIntoAccountBalance != null) {
+            this.IncomeIntoAccountBalance = new Float(source.IncomeIntoAccountBalance);
+        }
+        if (source.PresentAccountBalance != null) {
+            this.PresentAccountBalance = new Float(source.PresentAccountBalance);
+        }
+        if (source.FreezeAmount != null) {
+            this.FreezeAmount = new Float(source.FreezeAmount);
+        }
+        if (source.OweAmount != null) {
+            this.OweAmount = new Float(source.OweAmount);
+        }
+        if (source.IsAllowArrears != null) {
+            this.IsAllowArrears = new Boolean(source.IsAllowArrears);
+        }
+        if (source.IsCreditLimited != null) {
+            this.IsCreditLimited = new Boolean(source.IsCreditLimited);
+        }
+        if (source.CreditAmount != null) {
+            this.CreditAmount = new Float(source.CreditAmount);
+        }
+        if (source.CreditBalance != null) {
+            this.CreditBalance = new Float(source.CreditBalance);
+        }
+        if (source.RealCreditBalance != null) {
+            this.RealCreditBalance = new Float(source.RealCreditBalance);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

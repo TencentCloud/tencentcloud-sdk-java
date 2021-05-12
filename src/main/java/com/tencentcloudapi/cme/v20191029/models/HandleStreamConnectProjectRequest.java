@@ -193,6 +193,38 @@ public class HandleStreamConnectProjectRequest extends AbstractModel{
         this.CurrentStopTime = CurrentStopTime;
     }
 
+    public HandleStreamConnectProjectRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public HandleStreamConnectProjectRequest(HandleStreamConnectProjectRequest source) {
+        if (source.Platform != null) {
+            this.Platform = new String(source.Platform);
+        }
+        if (source.ProjectId != null) {
+            this.ProjectId = new String(source.ProjectId);
+        }
+        if (source.Operation != null) {
+            this.Operation = new String(source.Operation);
+        }
+        if (source.InputInfo != null) {
+            this.InputInfo = new StreamInputInfo(source.InputInfo);
+        }
+        if (source.InputEndpoint != null) {
+            this.InputEndpoint = new String(source.InputEndpoint);
+        }
+        if (source.OutputInfo != null) {
+            this.OutputInfo = new StreamConnectOutput(source.OutputInfo);
+        }
+        if (source.CurrentStopTime != null) {
+            this.CurrentStopTime = new String(source.CurrentStopTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

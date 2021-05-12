@@ -68,6 +68,23 @@ public class TagType extends AbstractModel{
         this.Desc = Desc;
     }
 
+    public TagType() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TagType(TagType source) {
+        if (source.Tag != null) {
+            this.Tag = new String(source.Tag);
+        }
+        if (source.Desc != null) {
+            this.Desc = new String(source.Desc);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

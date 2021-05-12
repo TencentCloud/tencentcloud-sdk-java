@@ -114,6 +114,29 @@ public class RealServer extends AbstractModel{
         this.ProjectId = ProjectId;
     }
 
+    public RealServer() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RealServer(RealServer source) {
+        if (source.RealServerIP != null) {
+            this.RealServerIP = new String(source.RealServerIP);
+        }
+        if (source.RealServerId != null) {
+            this.RealServerId = new String(source.RealServerId);
+        }
+        if (source.RealServerName != null) {
+            this.RealServerName = new String(source.RealServerName);
+        }
+        if (source.ProjectId != null) {
+            this.ProjectId = new Long(source.ProjectId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

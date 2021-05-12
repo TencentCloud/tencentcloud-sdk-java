@@ -114,6 +114,29 @@ public class DeleteSecurityGroupRuleRequest extends AbstractModel{
         this.IsDelReverse = IsDelReverse;
     }
 
+    public DeleteSecurityGroupRuleRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteSecurityGroupRuleRequest(DeleteSecurityGroupRuleRequest source) {
+        if (source.Id != null) {
+            this.Id = new Long(source.Id);
+        }
+        if (source.Area != null) {
+            this.Area = new String(source.Area);
+        }
+        if (source.Direction != null) {
+            this.Direction = new Long(source.Direction);
+        }
+        if (source.IsDelReverse != null) {
+            this.IsDelReverse = new Long(source.IsDelReverse);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

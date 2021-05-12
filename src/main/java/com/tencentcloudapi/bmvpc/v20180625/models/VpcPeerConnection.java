@@ -428,6 +428,68 @@ public class VpcPeerConnection extends AbstractModel{
         this.CreateTime = CreateTime;
     }
 
+    public VpcPeerConnection() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public VpcPeerConnection(VpcPeerConnection source) {
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.PeerVpcId != null) {
+            this.PeerVpcId = new String(source.PeerVpcId);
+        }
+        if (source.AppId != null) {
+            this.AppId = new String(source.AppId);
+        }
+        if (source.PeerAppId != null) {
+            this.PeerAppId = new String(source.PeerAppId);
+        }
+        if (source.VpcPeerConnectionId != null) {
+            this.VpcPeerConnectionId = new String(source.VpcPeerConnectionId);
+        }
+        if (source.VpcPeerConnectionName != null) {
+            this.VpcPeerConnectionName = new String(source.VpcPeerConnectionName);
+        }
+        if (source.State != null) {
+            this.State = new String(source.State);
+        }
+        if (source.VpcZone != null) {
+            this.VpcZone = new String(source.VpcZone);
+        }
+        if (source.PeerVpcZone != null) {
+            this.PeerVpcZone = new String(source.PeerVpcZone);
+        }
+        if (source.Uin != null) {
+            this.Uin = new Long(source.Uin);
+        }
+        if (source.PeerUin != null) {
+            this.PeerUin = new Long(source.PeerUin);
+        }
+        if (source.PeerType != null) {
+            this.PeerType = new Long(source.PeerType);
+        }
+        if (source.Bandwidth != null) {
+            this.Bandwidth = new Long(source.Bandwidth);
+        }
+        if (source.Region != null) {
+            this.Region = new String(source.Region);
+        }
+        if (source.PeerRegion != null) {
+            this.PeerRegion = new String(source.PeerRegion);
+        }
+        if (source.DeleteFlag != null) {
+            this.DeleteFlag = new Long(source.DeleteFlag);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

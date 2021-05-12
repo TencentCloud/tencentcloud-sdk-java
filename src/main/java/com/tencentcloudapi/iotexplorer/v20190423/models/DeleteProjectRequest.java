@@ -45,6 +45,20 @@ public class DeleteProjectRequest extends AbstractModel{
         this.ProjectId = ProjectId;
     }
 
+    public DeleteProjectRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteProjectRequest(DeleteProjectRequest source) {
+        if (source.ProjectId != null) {
+            this.ProjectId = new String(source.ProjectId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

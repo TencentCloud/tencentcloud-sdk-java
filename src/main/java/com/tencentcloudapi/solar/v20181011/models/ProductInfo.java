@@ -218,6 +218,38 @@ public class ProductInfo extends AbstractModel{
         this.ProductName = ProductName;
     }
 
+    public ProductInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ProductInfo(ProductInfo source) {
+        if (source.TemplateId != null) {
+            this.TemplateId = new String(source.TemplateId);
+        }
+        if (source.ProductTitle != null) {
+            this.ProductTitle = new String(source.ProductTitle);
+        }
+        if (source.ProductDesc != null) {
+            this.ProductDesc = new String(source.ProductDesc);
+        }
+        if (source.ProductCover != null) {
+            this.ProductCover = new String(source.ProductCover);
+        }
+        if (source.ProductId != null) {
+            this.ProductId = new String(source.ProductId);
+        }
+        if (source.ProductUrl != null) {
+            this.ProductUrl = new String(source.ProductUrl);
+        }
+        if (source.ProductName != null) {
+            this.ProductName = new String(source.ProductName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

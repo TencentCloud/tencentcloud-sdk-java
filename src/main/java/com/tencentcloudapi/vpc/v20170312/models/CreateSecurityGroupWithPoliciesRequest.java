@@ -114,6 +114,29 @@ public class CreateSecurityGroupWithPoliciesRequest extends AbstractModel{
         this.SecurityGroupPolicySet = SecurityGroupPolicySet;
     }
 
+    public CreateSecurityGroupWithPoliciesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateSecurityGroupWithPoliciesRequest(CreateSecurityGroupWithPoliciesRequest source) {
+        if (source.GroupName != null) {
+            this.GroupName = new String(source.GroupName);
+        }
+        if (source.GroupDescription != null) {
+            this.GroupDescription = new String(source.GroupDescription);
+        }
+        if (source.ProjectId != null) {
+            this.ProjectId = new String(source.ProjectId);
+        }
+        if (source.SecurityGroupPolicySet != null) {
+            this.SecurityGroupPolicySet = new SecurityGroupPolicySet(source.SecurityGroupPolicySet);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

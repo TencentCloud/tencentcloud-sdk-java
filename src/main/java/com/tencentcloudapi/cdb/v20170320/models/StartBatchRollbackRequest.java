@@ -45,6 +45,23 @@ public class StartBatchRollbackRequest extends AbstractModel{
         this.Instances = Instances;
     }
 
+    public StartBatchRollbackRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public StartBatchRollbackRequest(StartBatchRollbackRequest source) {
+        if (source.Instances != null) {
+            this.Instances = new RollbackInstancesInfo[source.Instances.length];
+            for (int i = 0; i < source.Instances.length; i++) {
+                this.Instances[i] = new RollbackInstancesInfo(source.Instances[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -137,6 +137,35 @@ public class ConsumptionProjectSummaryDataItem extends AbstractModel{
         this.Business = Business;
     }
 
+    public ConsumptionProjectSummaryDataItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ConsumptionProjectSummaryDataItem(ConsumptionProjectSummaryDataItem source) {
+        if (source.ProjectId != null) {
+            this.ProjectId = new String(source.ProjectId);
+        }
+        if (source.ProjectName != null) {
+            this.ProjectName = new String(source.ProjectName);
+        }
+        if (source.RealTotalCost != null) {
+            this.RealTotalCost = new String(source.RealTotalCost);
+        }
+        if (source.Trend != null) {
+            this.Trend = new ConsumptionSummaryTrend(source.Trend);
+        }
+        if (source.Business != null) {
+            this.Business = new ConsumptionBusinessSummaryDataItem[source.Business.length];
+            for (int i = 0; i < source.Business.length; i++) {
+                this.Business[i] = new ConsumptionBusinessSummaryDataItem(source.Business[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -96,6 +96,29 @@ public class GetGroupListResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public GetGroupListResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GetGroupListResponse(GetGroupListResponse source) {
+        if (source.GroupInfos != null) {
+            this.GroupInfos = new GroupInfo[source.GroupInfos.length];
+            for (int i = 0; i < source.GroupInfos.length; i++) {
+                this.GroupInfos[i] = new GroupInfo(source.GroupInfos[i]);
+            }
+        }
+        if (source.GroupNum != null) {
+            this.GroupNum = new Long(source.GroupNum);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

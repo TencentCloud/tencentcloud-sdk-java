@@ -157,6 +157,38 @@ subnet-id - String - HAVIP所在子网ID。
         this.EcmRegion = EcmRegion;
     }
 
+    public DescribeHaVipsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeHaVipsRequest(DescribeHaVipsRequest source) {
+        if (source.HaVipIds != null) {
+            this.HaVipIds = new String[source.HaVipIds.length];
+            for (int i = 0; i < source.HaVipIds.length; i++) {
+                this.HaVipIds[i] = new String(source.HaVipIds[i]);
+            }
+        }
+        if (source.Filters != null) {
+            this.Filters = new Filter[source.Filters.length];
+            for (int i = 0; i < source.Filters.length; i++) {
+                this.Filters[i] = new Filter(source.Filters[i]);
+            }
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.EcmRegion != null) {
+            this.EcmRegion = new String(source.EcmRegion);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

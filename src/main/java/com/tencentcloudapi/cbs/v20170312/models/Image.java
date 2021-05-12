@@ -68,6 +68,23 @@ public class Image extends AbstractModel{
         this.ImageName = ImageName;
     }
 
+    public Image() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Image(Image source) {
+        if (source.ImageId != null) {
+            this.ImageId = new String(source.ImageId);
+        }
+        if (source.ImageName != null) {
+            this.ImageName = new String(source.ImageName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -206,6 +206,44 @@ public class KeyPair extends AbstractModel{
         this.CreatedTime = CreatedTime;
     }
 
+    public KeyPair() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public KeyPair(KeyPair source) {
+        if (source.KeyId != null) {
+            this.KeyId = new String(source.KeyId);
+        }
+        if (source.KeyName != null) {
+            this.KeyName = new String(source.KeyName);
+        }
+        if (source.ProjectId != null) {
+            this.ProjectId = new Long(source.ProjectId);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.PublicKey != null) {
+            this.PublicKey = new String(source.PublicKey);
+        }
+        if (source.PrivateKey != null) {
+            this.PrivateKey = new String(source.PrivateKey);
+        }
+        if (source.AssociatedInstanceIds != null) {
+            this.AssociatedInstanceIds = new String[source.AssociatedInstanceIds.length];
+            for (int i = 0; i < source.AssociatedInstanceIds.length; i++) {
+                this.AssociatedInstanceIds[i] = new String(source.AssociatedInstanceIds[i]);
+            }
+        }
+        if (source.CreatedTime != null) {
+            this.CreatedTime = new String(source.CreatedTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

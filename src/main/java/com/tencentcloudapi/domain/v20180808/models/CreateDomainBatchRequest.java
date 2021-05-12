@@ -170,6 +170,38 @@ public class CreateDomainBatchRequest extends AbstractModel{
         this.PackageResourceId = PackageResourceId;
     }
 
+    public CreateDomainBatchRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateDomainBatchRequest(CreateDomainBatchRequest source) {
+        if (source.TemplateId != null) {
+            this.TemplateId = new String(source.TemplateId);
+        }
+        if (source.Period != null) {
+            this.Period = new Long(source.Period);
+        }
+        if (source.Domains != null) {
+            this.Domains = new String[source.Domains.length];
+            for (int i = 0; i < source.Domains.length; i++) {
+                this.Domains[i] = new String(source.Domains[i]);
+            }
+        }
+        if (source.PayMode != null) {
+            this.PayMode = new Long(source.PayMode);
+        }
+        if (source.AutoRenewFlag != null) {
+            this.AutoRenewFlag = new Long(source.AutoRenewFlag);
+        }
+        if (source.PackageResourceId != null) {
+            this.PackageResourceId = new String(source.PackageResourceId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -91,6 +91,26 @@ public class ModifyAlarmPolicyStatusRequest extends AbstractModel{
         this.Enable = Enable;
     }
 
+    public ModifyAlarmPolicyStatusRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyAlarmPolicyStatusRequest(ModifyAlarmPolicyStatusRequest source) {
+        if (source.Module != null) {
+            this.Module = new String(source.Module);
+        }
+        if (source.PolicyId != null) {
+            this.PolicyId = new String(source.PolicyId);
+        }
+        if (source.Enable != null) {
+            this.Enable = new Long(source.Enable);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

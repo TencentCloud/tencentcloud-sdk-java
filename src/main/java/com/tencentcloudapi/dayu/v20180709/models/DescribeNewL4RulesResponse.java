@@ -114,6 +114,35 @@ public class DescribeNewL4RulesResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeNewL4RulesResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeNewL4RulesResponse(DescribeNewL4RulesResponse source) {
+        if (source.Rules != null) {
+            this.Rules = new NewL4RuleEntry[source.Rules.length];
+            for (int i = 0; i < source.Rules.length; i++) {
+                this.Rules[i] = new NewL4RuleEntry(source.Rules[i]);
+            }
+        }
+        if (source.Total != null) {
+            this.Total = new Long(source.Total);
+        }
+        if (source.Healths != null) {
+            this.Healths = new L4RuleHealth[source.Healths.length];
+            for (int i = 0; i < source.Healths.length; i++) {
+                this.Healths[i] = new L4RuleHealth(source.Healths[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

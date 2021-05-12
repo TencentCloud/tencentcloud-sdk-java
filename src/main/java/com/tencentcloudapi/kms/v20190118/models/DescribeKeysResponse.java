@@ -73,6 +73,26 @@ public class DescribeKeysResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeKeysResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeKeysResponse(DescribeKeysResponse source) {
+        if (source.KeyMetadatas != null) {
+            this.KeyMetadatas = new KeyMetadata[source.KeyMetadatas.length];
+            for (int i = 0; i < source.KeyMetadatas.length; i++) {
+                this.KeyMetadatas[i] = new KeyMetadata(source.KeyMetadatas[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

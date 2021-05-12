@@ -297,6 +297,50 @@ public class SetAuthenticationRequest extends AbstractModel{
         this.PolyRealServerCertificateIds = PolyRealServerCertificateIds;
     }
 
+    public SetAuthenticationRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SetAuthenticationRequest(SetAuthenticationRequest source) {
+        if (source.ListenerId != null) {
+            this.ListenerId = new String(source.ListenerId);
+        }
+        if (source.Domain != null) {
+            this.Domain = new String(source.Domain);
+        }
+        if (source.BasicAuth != null) {
+            this.BasicAuth = new Long(source.BasicAuth);
+        }
+        if (source.GaapAuth != null) {
+            this.GaapAuth = new Long(source.GaapAuth);
+        }
+        if (source.RealServerAuth != null) {
+            this.RealServerAuth = new Long(source.RealServerAuth);
+        }
+        if (source.BasicAuthConfId != null) {
+            this.BasicAuthConfId = new String(source.BasicAuthConfId);
+        }
+        if (source.GaapCertificateId != null) {
+            this.GaapCertificateId = new String(source.GaapCertificateId);
+        }
+        if (source.RealServerCertificateId != null) {
+            this.RealServerCertificateId = new String(source.RealServerCertificateId);
+        }
+        if (source.RealServerCertificateDomain != null) {
+            this.RealServerCertificateDomain = new String(source.RealServerCertificateDomain);
+        }
+        if (source.PolyRealServerCertificateIds != null) {
+            this.PolyRealServerCertificateIds = new String[source.PolyRealServerCertificateIds.length];
+            for (int i = 0; i < source.PolyRealServerCertificateIds.length; i++) {
+                this.PolyRealServerCertificateIds[i] = new String(source.PolyRealServerCertificateIds[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

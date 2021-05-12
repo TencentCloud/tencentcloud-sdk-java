@@ -91,6 +91,26 @@ public class DeleteServiceSubDomainMappingRequest extends AbstractModel{
         this.Environment = Environment;
     }
 
+    public DeleteServiceSubDomainMappingRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteServiceSubDomainMappingRequest(DeleteServiceSubDomainMappingRequest source) {
+        if (source.ServiceId != null) {
+            this.ServiceId = new String(source.ServiceId);
+        }
+        if (source.SubDomain != null) {
+            this.SubDomain = new String(source.SubDomain);
+        }
+        if (source.Environment != null) {
+            this.Environment = new String(source.Environment);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

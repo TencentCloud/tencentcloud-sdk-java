@@ -101,6 +101,26 @@ public class ImageOperation extends AbstractModel{
         this.CenterCut = CenterCut;
     }
 
+    public ImageOperation() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ImageOperation(ImageOperation source) {
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.Scale != null) {
+            this.Scale = new ImageScale(source.Scale);
+        }
+        if (source.CenterCut != null) {
+            this.CenterCut = new ImageCenterCut(source.CenterCut);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

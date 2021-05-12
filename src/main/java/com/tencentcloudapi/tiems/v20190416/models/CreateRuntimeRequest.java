@@ -137,6 +137,32 @@ public class CreateRuntimeRequest extends AbstractModel{
         this.HealthCheckOn = HealthCheckOn;
     }
 
+    public CreateRuntimeRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateRuntimeRequest(CreateRuntimeRequest source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Image != null) {
+            this.Image = new String(source.Image);
+        }
+        if (source.Framework != null) {
+            this.Framework = new String(source.Framework);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.HealthCheckOn != null) {
+            this.HealthCheckOn = new Boolean(source.HealthCheckOn);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

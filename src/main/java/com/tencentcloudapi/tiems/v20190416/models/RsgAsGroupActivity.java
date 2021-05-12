@@ -298,6 +298,56 @@ public class RsgAsGroupActivity extends AbstractModel{
         this.StatusMessageSimplified = StatusMessageSimplified;
     }
 
+    public RsgAsGroupActivity() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RsgAsGroupActivity(RsgAsGroupActivity source) {
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
+        if (source.RsgAsGroupId != null) {
+            this.RsgAsGroupId = new String(source.RsgAsGroupId);
+        }
+        if (source.ActivityType != null) {
+            this.ActivityType = new String(source.ActivityType);
+        }
+        if (source.StatusCode != null) {
+            this.StatusCode = new String(source.StatusCode);
+        }
+        if (source.StatusMessage != null) {
+            this.StatusMessage = new String(source.StatusMessage);
+        }
+        if (source.Cause != null) {
+            this.Cause = new String(source.Cause);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.RsgAsActivityRelatedInstance != null) {
+            this.RsgAsActivityRelatedInstance = new RsgAsActivityRelatedInstance[source.RsgAsActivityRelatedInstance.length];
+            for (int i = 0; i < source.RsgAsActivityRelatedInstance.length; i++) {
+                this.RsgAsActivityRelatedInstance[i] = new RsgAsActivityRelatedInstance(source.RsgAsActivityRelatedInstance[i]);
+            }
+        }
+        if (source.StatusMessageSimplified != null) {
+            this.StatusMessageSimplified = new String(source.StatusMessageSimplified);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

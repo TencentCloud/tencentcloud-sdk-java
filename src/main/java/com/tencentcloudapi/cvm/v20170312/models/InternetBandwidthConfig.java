@@ -91,6 +91,26 @@ public class InternetBandwidthConfig extends AbstractModel{
         this.InternetAccessible = InternetAccessible;
     }
 
+    public InternetBandwidthConfig() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public InternetBandwidthConfig(InternetBandwidthConfig source) {
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+        if (source.InternetAccessible != null) {
+            this.InternetAccessible = new InternetAccessible(source.InternetAccessible);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

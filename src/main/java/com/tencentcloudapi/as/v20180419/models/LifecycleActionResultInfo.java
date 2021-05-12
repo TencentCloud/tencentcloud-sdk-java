@@ -137,6 +137,32 @@ public class LifecycleActionResultInfo extends AbstractModel{
         this.ResultReason = ResultReason;
     }
 
+    public LifecycleActionResultInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public LifecycleActionResultInfo(LifecycleActionResultInfo source) {
+        if (source.LifecycleHookId != null) {
+            this.LifecycleHookId = new String(source.LifecycleHookId);
+        }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.NotificationResult != null) {
+            this.NotificationResult = new String(source.NotificationResult);
+        }
+        if (source.LifecycleActionResult != null) {
+            this.LifecycleActionResult = new String(source.LifecycleActionResult);
+        }
+        if (source.ResultReason != null) {
+            this.ResultReason = new String(source.ResultReason);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

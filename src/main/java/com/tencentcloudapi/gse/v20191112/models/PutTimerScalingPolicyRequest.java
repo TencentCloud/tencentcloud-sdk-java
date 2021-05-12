@@ -45,6 +45,20 @@ public class PutTimerScalingPolicyRequest extends AbstractModel{
         this.TimerScalingPolicy = TimerScalingPolicy;
     }
 
+    public PutTimerScalingPolicyRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PutTimerScalingPolicyRequest(PutTimerScalingPolicyRequest source) {
+        if (source.TimerScalingPolicy != null) {
+            this.TimerScalingPolicy = new TimerScalingPolicy(source.TimerScalingPolicy);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

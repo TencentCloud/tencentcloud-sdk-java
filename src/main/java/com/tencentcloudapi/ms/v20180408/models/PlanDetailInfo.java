@@ -114,6 +114,29 @@ public class PlanDetailInfo extends AbstractModel{
         this.PlanInfo = PlanInfo;
     }
 
+    public PlanDetailInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PlanDetailInfo(PlanDetailInfo source) {
+        if (source.IsDefault != null) {
+            this.IsDefault = new Long(source.IsDefault);
+        }
+        if (source.PlanId != null) {
+            this.PlanId = new Long(source.PlanId);
+        }
+        if (source.PlanName != null) {
+            this.PlanName = new String(source.PlanName);
+        }
+        if (source.PlanInfo != null) {
+            this.PlanInfo = new PlanInfo(source.PlanInfo);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -68,6 +68,23 @@ public class ExtensionAddon extends AbstractModel{
         this.AddonParam = AddonParam;
     }
 
+    public ExtensionAddon() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ExtensionAddon(ExtensionAddon source) {
+        if (source.AddonName != null) {
+            this.AddonName = new String(source.AddonName);
+        }
+        if (source.AddonParam != null) {
+            this.AddonParam = new String(source.AddonParam);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

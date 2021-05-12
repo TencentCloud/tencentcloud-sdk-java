@@ -68,6 +68,23 @@ public class SmsSign extends AbstractModel{
         this.SignName = SignName;
     }
 
+    public SmsSign() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SmsSign(SmsSign source) {
+        if (source.SignId != null) {
+            this.SignId = new String(source.SignId);
+        }
+        if (source.SignName != null) {
+            this.SignName = new String(source.SignName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -73,6 +73,23 @@ public class TriggerInvokeCondition extends AbstractModel{
         this.InvokeExpr = InvokeExpr;
     }
 
+    public TriggerInvokeCondition() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TriggerInvokeCondition(TriggerInvokeCondition source) {
+        if (source.InvokeMethod != null) {
+            this.InvokeMethod = new String(source.InvokeMethod);
+        }
+        if (source.InvokeExpr != null) {
+            this.InvokeExpr = new String(source.InvokeExpr);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

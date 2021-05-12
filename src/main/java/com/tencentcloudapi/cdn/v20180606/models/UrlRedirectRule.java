@@ -119,6 +119,29 @@ public class UrlRedirectRule extends AbstractModel{
         this.RedirectHost = RedirectHost;
     }
 
+    public UrlRedirectRule() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UrlRedirectRule(UrlRedirectRule source) {
+        if (source.RedirectStatusCode != null) {
+            this.RedirectStatusCode = new Long(source.RedirectStatusCode);
+        }
+        if (source.Pattern != null) {
+            this.Pattern = new String(source.Pattern);
+        }
+        if (source.RedirectUrl != null) {
+            this.RedirectUrl = new String(source.RedirectUrl);
+        }
+        if (source.RedirectHost != null) {
+            this.RedirectHost = new String(source.RedirectHost);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

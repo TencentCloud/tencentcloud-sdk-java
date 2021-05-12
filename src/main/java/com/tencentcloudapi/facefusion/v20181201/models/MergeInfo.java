@@ -114,6 +114,29 @@ public class MergeInfo extends AbstractModel{
         this.TemplateFaceID = TemplateFaceID;
     }
 
+    public MergeInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MergeInfo(MergeInfo source) {
+        if (source.Image != null) {
+            this.Image = new String(source.Image);
+        }
+        if (source.Url != null) {
+            this.Url = new String(source.Url);
+        }
+        if (source.InputImageFaceRect != null) {
+            this.InputImageFaceRect = new FaceRect(source.InputImageFaceRect);
+        }
+        if (source.TemplateFaceID != null) {
+            this.TemplateFaceID = new String(source.TemplateFaceID);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

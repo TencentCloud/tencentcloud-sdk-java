@@ -535,6 +535,65 @@ public class EventContent extends AbstractModel{
         this.WechatMiniProgramPublishCompleteEvent = WechatMiniProgramPublishCompleteEvent;
     }
 
+    public EventContent() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public EventContent(EventContent source) {
+        if (source.EventHandle != null) {
+            this.EventHandle = new String(source.EventHandle);
+        }
+        if (source.EventType != null) {
+            this.EventType = new String(source.EventType);
+        }
+        if (source.FileUploadEvent != null) {
+            this.FileUploadEvent = new FileUploadTask(source.FileUploadEvent);
+        }
+        if (source.ProcedureStateChangeEvent != null) {
+            this.ProcedureStateChangeEvent = new ProcedureTask(source.ProcedureStateChangeEvent);
+        }
+        if (source.FileDeleteEvent != null) {
+            this.FileDeleteEvent = new FileDeleteTask(source.FileDeleteEvent);
+        }
+        if (source.PullCompleteEvent != null) {
+            this.PullCompleteEvent = new PullUploadTask(source.PullCompleteEvent);
+        }
+        if (source.EditMediaCompleteEvent != null) {
+            this.EditMediaCompleteEvent = new EditMediaTask(source.EditMediaCompleteEvent);
+        }
+        if (source.SplitMediaCompleteEvent != null) {
+            this.SplitMediaCompleteEvent = new SplitMediaTask(source.SplitMediaCompleteEvent);
+        }
+        if (source.ComposeMediaCompleteEvent != null) {
+            this.ComposeMediaCompleteEvent = new ComposeMediaTask(source.ComposeMediaCompleteEvent);
+        }
+        if (source.ClipCompleteEvent != null) {
+            this.ClipCompleteEvent = new ClipTask2017(source.ClipCompleteEvent);
+        }
+        if (source.TranscodeCompleteEvent != null) {
+            this.TranscodeCompleteEvent = new TranscodeTask2017(source.TranscodeCompleteEvent);
+        }
+        if (source.CreateImageSpriteCompleteEvent != null) {
+            this.CreateImageSpriteCompleteEvent = new CreateImageSpriteTask2017(source.CreateImageSpriteCompleteEvent);
+        }
+        if (source.ConcatCompleteEvent != null) {
+            this.ConcatCompleteEvent = new ConcatTask2017(source.ConcatCompleteEvent);
+        }
+        if (source.SnapshotByTimeOffsetCompleteEvent != null) {
+            this.SnapshotByTimeOffsetCompleteEvent = new SnapshotByTimeOffsetTask2017(source.SnapshotByTimeOffsetCompleteEvent);
+        }
+        if (source.WechatPublishCompleteEvent != null) {
+            this.WechatPublishCompleteEvent = new WechatPublishTask(source.WechatPublishCompleteEvent);
+        }
+        if (source.WechatMiniProgramPublishCompleteEvent != null) {
+            this.WechatMiniProgramPublishCompleteEvent = new WechatMiniProgramPublishTask(source.WechatMiniProgramPublishCompleteEvent);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

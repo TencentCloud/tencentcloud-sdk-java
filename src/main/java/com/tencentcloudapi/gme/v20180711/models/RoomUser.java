@@ -73,6 +73,26 @@ public class RoomUser extends AbstractModel{
         this.Uins = Uins;
     }
 
+    public RoomUser() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RoomUser(RoomUser source) {
+        if (source.RoomId != null) {
+            this.RoomId = new Long(source.RoomId);
+        }
+        if (source.Uins != null) {
+            this.Uins = new Long[source.Uins.length];
+            for (int i = 0; i < source.Uins.length; i++) {
+                this.Uins[i] = new Long(source.Uins[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

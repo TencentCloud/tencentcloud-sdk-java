@@ -298,6 +298,56 @@ public class PreExecuteFileSettings extends AbstractModel{
         this.AppId = AppId;
     }
 
+    public PreExecuteFileSettings() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PreExecuteFileSettings(PreExecuteFileSettings source) {
+        if (source.Path != null) {
+            this.Path = new String(source.Path);
+        }
+        if (source.Args != null) {
+            this.Args = new String[source.Args.length];
+            for (int i = 0; i < source.Args.length; i++) {
+                this.Args[i] = new String(source.Args[i]);
+            }
+        }
+        if (source.Bucket != null) {
+            this.Bucket = new String(source.Bucket);
+        }
+        if (source.Region != null) {
+            this.Region = new String(source.Region);
+        }
+        if (source.Domain != null) {
+            this.Domain = new String(source.Domain);
+        }
+        if (source.RunOrder != null) {
+            this.RunOrder = new Long(source.RunOrder);
+        }
+        if (source.WhenRun != null) {
+            this.WhenRun = new String(source.WhenRun);
+        }
+        if (source.CosFileName != null) {
+            this.CosFileName = new String(source.CosFileName);
+        }
+        if (source.CosFileURI != null) {
+            this.CosFileURI = new String(source.CosFileURI);
+        }
+        if (source.CosSecretId != null) {
+            this.CosSecretId = new String(source.CosSecretId);
+        }
+        if (source.CosSecretKey != null) {
+            this.CosSecretKey = new String(source.CosSecretKey);
+        }
+        if (source.AppId != null) {
+            this.AppId = new String(source.AppId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

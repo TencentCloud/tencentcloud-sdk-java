@@ -160,6 +160,38 @@ public class ReportServiceRegisterRequest extends AbstractModel{
         this.ReportTime = ReportTime;
     }
 
+    public ReportServiceRegisterRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ReportServiceRegisterRequest(ReportServiceRegisterRequest source) {
+        if (source.GroupCode != null) {
+            this.GroupCode = new String(source.GroupCode);
+        }
+        if (source.MallId != null) {
+            this.MallId = new Long(source.MallId);
+        }
+        if (source.ServiceRegisterInfos != null) {
+            this.ServiceRegisterInfos = new ServiceRegisterInfo[source.ServiceRegisterInfos.length];
+            for (int i = 0; i < source.ServiceRegisterInfos.length; i++) {
+                this.ServiceRegisterInfos[i] = new ServiceRegisterInfo(source.ServiceRegisterInfos[i]);
+            }
+        }
+        if (source.ServerIp != null) {
+            this.ServerIp = new String(source.ServerIp);
+        }
+        if (source.ServerNodeId != null) {
+            this.ServerNodeId = new String(source.ServerNodeId);
+        }
+        if (source.ReportTime != null) {
+            this.ReportTime = new Long(source.ReportTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

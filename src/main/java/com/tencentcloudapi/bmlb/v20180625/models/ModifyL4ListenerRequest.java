@@ -413,6 +413,68 @@ public class ModifyL4ListenerRequest extends AbstractModel{
         this.BalanceMode = BalanceMode;
     }
 
+    public ModifyL4ListenerRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyL4ListenerRequest(ModifyL4ListenerRequest source) {
+        if (source.LoadBalancerId != null) {
+            this.LoadBalancerId = new String(source.LoadBalancerId);
+        }
+        if (source.ListenerId != null) {
+            this.ListenerId = new String(source.ListenerId);
+        }
+        if (source.ListenerName != null) {
+            this.ListenerName = new String(source.ListenerName);
+        }
+        if (source.SessionExpire != null) {
+            this.SessionExpire = new Long(source.SessionExpire);
+        }
+        if (source.HealthSwitch != null) {
+            this.HealthSwitch = new Long(source.HealthSwitch);
+        }
+        if (source.TimeOut != null) {
+            this.TimeOut = new Long(source.TimeOut);
+        }
+        if (source.IntervalTime != null) {
+            this.IntervalTime = new Long(source.IntervalTime);
+        }
+        if (source.HealthNum != null) {
+            this.HealthNum = new Long(source.HealthNum);
+        }
+        if (source.UnhealthNum != null) {
+            this.UnhealthNum = new Long(source.UnhealthNum);
+        }
+        if (source.Bandwidth != null) {
+            this.Bandwidth = new Long(source.Bandwidth);
+        }
+        if (source.CustomHealthSwitch != null) {
+            this.CustomHealthSwitch = new Long(source.CustomHealthSwitch);
+        }
+        if (source.InputType != null) {
+            this.InputType = new String(source.InputType);
+        }
+        if (source.LineSeparatorType != null) {
+            this.LineSeparatorType = new Long(source.LineSeparatorType);
+        }
+        if (source.HealthRequest != null) {
+            this.HealthRequest = new String(source.HealthRequest);
+        }
+        if (source.HealthResponse != null) {
+            this.HealthResponse = new String(source.HealthResponse);
+        }
+        if (source.ToaFlag != null) {
+            this.ToaFlag = new Long(source.ToaFlag);
+        }
+        if (source.BalanceMode != null) {
+            this.BalanceMode = new String(source.BalanceMode);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

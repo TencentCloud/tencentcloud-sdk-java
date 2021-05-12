@@ -137,6 +137,35 @@ public class DescribeRunPodPage extends AbstractModel{
         this.PodList = PodList;
     }
 
+    public DescribeRunPodPage() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeRunPodPage(DescribeRunPodPage source) {
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+        if (source.PodList != null) {
+            this.PodList = new RunVersionPod[source.PodList.length];
+            for (int i = 0; i < source.PodList.length; i++) {
+                this.PodList[i] = new RunVersionPod(source.PodList[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

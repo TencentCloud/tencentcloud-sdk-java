@@ -45,6 +45,23 @@ public class Polygon extends AbstractModel{
         this.Points = Points;
     }
 
+    public Polygon() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Polygon(Polygon source) {
+        if (source.Points != null) {
+            this.Points = new Point[source.Points.length];
+            for (int i = 0; i < source.Points.length; i++) {
+                this.Points[i] = new Point(source.Points[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

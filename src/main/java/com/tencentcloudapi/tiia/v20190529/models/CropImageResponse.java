@@ -246,6 +246,41 @@ public class CropImageResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public CropImageResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CropImageResponse(CropImageResponse source) {
+        if (source.X != null) {
+            this.X = new Long(source.X);
+        }
+        if (source.Y != null) {
+            this.Y = new Long(source.Y);
+        }
+        if (source.Width != null) {
+            this.Width = new Long(source.Width);
+        }
+        if (source.Height != null) {
+            this.Height = new Long(source.Height);
+        }
+        if (source.OriginalWidth != null) {
+            this.OriginalWidth = new Long(source.OriginalWidth);
+        }
+        if (source.OriginalHeight != null) {
+            this.OriginalHeight = new Long(source.OriginalHeight);
+        }
+        if (source.CropResult != null) {
+            this.CropResult = new Long(source.CropResult);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

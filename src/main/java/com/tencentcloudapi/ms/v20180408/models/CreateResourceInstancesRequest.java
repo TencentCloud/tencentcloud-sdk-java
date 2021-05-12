@@ -114,6 +114,29 @@ public class CreateResourceInstancesRequest extends AbstractModel{
         this.ResourceNum = ResourceNum;
     }
 
+    public CreateResourceInstancesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateResourceInstancesRequest(CreateResourceInstancesRequest source) {
+        if (source.Pid != null) {
+            this.Pid = new Long(source.Pid);
+        }
+        if (source.TimeUnit != null) {
+            this.TimeUnit = new String(source.TimeUnit);
+        }
+        if (source.TimeSpan != null) {
+            this.TimeSpan = new Long(source.TimeSpan);
+        }
+        if (source.ResourceNum != null) {
+            this.ResourceNum = new Long(source.ResourceNum);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

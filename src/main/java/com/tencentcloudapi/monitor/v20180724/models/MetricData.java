@@ -68,6 +68,26 @@ public class MetricData extends AbstractModel{
         this.Points = Points;
     }
 
+    public MetricData() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MetricData(MetricData source) {
+        if (source.MetricName != null) {
+            this.MetricName = new String(source.MetricName);
+        }
+        if (source.Points != null) {
+            this.Points = new MetricDataPoint[source.Points.length];
+            for (int i = 0; i < source.Points.length; i++) {
+                this.Points[i] = new MetricDataPoint(source.Points[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

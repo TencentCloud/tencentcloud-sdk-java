@@ -321,6 +321,56 @@ public class FunctionLog extends AbstractModel{
         this.RetryNum = RetryNum;
     }
 
+    public FunctionLog() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public FunctionLog(FunctionLog source) {
+        if (source.FunctionName != null) {
+            this.FunctionName = new String(source.FunctionName);
+        }
+        if (source.RetMsg != null) {
+            this.RetMsg = new String(source.RetMsg);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.RetCode != null) {
+            this.RetCode = new Long(source.RetCode);
+        }
+        if (source.InvokeFinished != null) {
+            this.InvokeFinished = new Long(source.InvokeFinished);
+        }
+        if (source.Duration != null) {
+            this.Duration = new Float(source.Duration);
+        }
+        if (source.BillDuration != null) {
+            this.BillDuration = new Long(source.BillDuration);
+        }
+        if (source.MemUsage != null) {
+            this.MemUsage = new Long(source.MemUsage);
+        }
+        if (source.Log != null) {
+            this.Log = new String(source.Log);
+        }
+        if (source.Level != null) {
+            this.Level = new String(source.Level);
+        }
+        if (source.Source != null) {
+            this.Source = new String(source.Source);
+        }
+        if (source.RetryNum != null) {
+            this.RetryNum = new Long(source.RetryNum);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -208,6 +208,38 @@ public class ExportVideoByEditorTrackDataRequest extends AbstractModel{
         this.Operator = Operator;
     }
 
+    public ExportVideoByEditorTrackDataRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ExportVideoByEditorTrackDataRequest(ExportVideoByEditorTrackDataRequest source) {
+        if (source.Platform != null) {
+            this.Platform = new String(source.Platform);
+        }
+        if (source.Definition != null) {
+            this.Definition = new Long(source.Definition);
+        }
+        if (source.ExportDestination != null) {
+            this.ExportDestination = new String(source.ExportDestination);
+        }
+        if (source.TrackData != null) {
+            this.TrackData = new String(source.TrackData);
+        }
+        if (source.CMEExportInfo != null) {
+            this.CMEExportInfo = new CMEExportInfo(source.CMEExportInfo);
+        }
+        if (source.VODExportInfo != null) {
+            this.VODExportInfo = new VODExportInfo(source.VODExportInfo);
+        }
+        if (source.Operator != null) {
+            this.Operator = new String(source.Operator);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

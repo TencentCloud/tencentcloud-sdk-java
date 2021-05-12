@@ -137,6 +137,32 @@ public class ClassicalHealth extends AbstractModel{
         this.HealthStatus = HealthStatus;
     }
 
+    public ClassicalHealth() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ClassicalHealth(ClassicalHealth source) {
+        if (source.IP != null) {
+            this.IP = new String(source.IP);
+        }
+        if (source.Port != null) {
+            this.Port = new Long(source.Port);
+        }
+        if (source.ListenerPort != null) {
+            this.ListenerPort = new Long(source.ListenerPort);
+        }
+        if (source.Protocol != null) {
+            this.Protocol = new String(source.Protocol);
+        }
+        if (source.HealthStatus != null) {
+            this.HealthStatus = new Long(source.HealthStatus);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

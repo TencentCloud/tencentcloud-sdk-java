@@ -68,6 +68,26 @@ public class CreateServiceTemplateRequest extends AbstractModel{
         this.Services = Services;
     }
 
+    public CreateServiceTemplateRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateServiceTemplateRequest(CreateServiceTemplateRequest source) {
+        if (source.ServiceTemplateName != null) {
+            this.ServiceTemplateName = new String(source.ServiceTemplateName);
+        }
+        if (source.Services != null) {
+            this.Services = new String[source.Services.length];
+            for (int i = 0; i < source.Services.length; i++) {
+                this.Services[i] = new String(source.Services[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

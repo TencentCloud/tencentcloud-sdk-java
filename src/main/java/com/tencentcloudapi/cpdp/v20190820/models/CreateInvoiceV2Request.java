@@ -880,6 +880,128 @@ public class CreateInvoiceV2Request extends AbstractModel{
         this.InvoiceChannel = InvoiceChannel;
     }
 
+    public CreateInvoiceV2Request() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateInvoiceV2Request(CreateInvoiceV2Request source) {
+        if (source.InvoicePlatformId != null) {
+            this.InvoicePlatformId = new Long(source.InvoicePlatformId);
+        }
+        if (source.TitleType != null) {
+            this.TitleType = new Long(source.TitleType);
+        }
+        if (source.BuyerTitle != null) {
+            this.BuyerTitle = new String(source.BuyerTitle);
+        }
+        if (source.OrderId != null) {
+            this.OrderId = new String(source.OrderId);
+        }
+        if (source.AmountHasTax != null) {
+            this.AmountHasTax = new Long(source.AmountHasTax);
+        }
+        if (source.TaxAmount != null) {
+            this.TaxAmount = new Long(source.TaxAmount);
+        }
+        if (source.AmountWithoutTax != null) {
+            this.AmountWithoutTax = new Long(source.AmountWithoutTax);
+        }
+        if (source.SellerTaxpayerNum != null) {
+            this.SellerTaxpayerNum = new String(source.SellerTaxpayerNum);
+        }
+        if (source.SellerName != null) {
+            this.SellerName = new String(source.SellerName);
+        }
+        if (source.SellerAddress != null) {
+            this.SellerAddress = new String(source.SellerAddress);
+        }
+        if (source.SellerPhone != null) {
+            this.SellerPhone = new String(source.SellerPhone);
+        }
+        if (source.SellerBankName != null) {
+            this.SellerBankName = new String(source.SellerBankName);
+        }
+        if (source.SellerBankAccount != null) {
+            this.SellerBankAccount = new String(source.SellerBankAccount);
+        }
+        if (source.BuyerTaxpayerNum != null) {
+            this.BuyerTaxpayerNum = new String(source.BuyerTaxpayerNum);
+        }
+        if (source.BuyerAddress != null) {
+            this.BuyerAddress = new String(source.BuyerAddress);
+        }
+        if (source.BuyerBankName != null) {
+            this.BuyerBankName = new String(source.BuyerBankName);
+        }
+        if (source.BuyerBankAccount != null) {
+            this.BuyerBankAccount = new String(source.BuyerBankAccount);
+        }
+        if (source.BuyerPhone != null) {
+            this.BuyerPhone = new String(source.BuyerPhone);
+        }
+        if (source.BuyerEmail != null) {
+            this.BuyerEmail = new String(source.BuyerEmail);
+        }
+        if (source.TakerPhone != null) {
+            this.TakerPhone = new String(source.TakerPhone);
+        }
+        if (source.InvoiceType != null) {
+            this.InvoiceType = new Long(source.InvoiceType);
+        }
+        if (source.CallbackUrl != null) {
+            this.CallbackUrl = new String(source.CallbackUrl);
+        }
+        if (source.Drawer != null) {
+            this.Drawer = new String(source.Drawer);
+        }
+        if (source.Payee != null) {
+            this.Payee = new String(source.Payee);
+        }
+        if (source.Checker != null) {
+            this.Checker = new String(source.Checker);
+        }
+        if (source.TerminalCode != null) {
+            this.TerminalCode = new String(source.TerminalCode);
+        }
+        if (source.LevyMethod != null) {
+            this.LevyMethod = new String(source.LevyMethod);
+        }
+        if (source.Deduction != null) {
+            this.Deduction = new Long(source.Deduction);
+        }
+        if (source.Remark != null) {
+            this.Remark = new String(source.Remark);
+        }
+        if (source.Items != null) {
+            this.Items = new CreateInvoiceItem[source.Items.length];
+            for (int i = 0; i < source.Items.length; i++) {
+                this.Items[i] = new CreateInvoiceItem(source.Items[i]);
+            }
+        }
+        if (source.Profile != null) {
+            this.Profile = new String(source.Profile);
+        }
+        if (source.UndoPart != null) {
+            this.UndoPart = new Long(source.UndoPart);
+        }
+        if (source.OrderDate != null) {
+            this.OrderDate = new String(source.OrderDate);
+        }
+        if (source.Discount != null) {
+            this.Discount = new Long(source.Discount);
+        }
+        if (source.StoreNo != null) {
+            this.StoreNo = new String(source.StoreNo);
+        }
+        if (source.InvoiceChannel != null) {
+            this.InvoiceChannel = new Long(source.InvoiceChannel);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -229,6 +229,59 @@ public class CreateMmsInstanceRequest extends AbstractModel{
         this.UrlParams = UrlParams;
     }
 
+    public CreateMmsInstanceRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateMmsInstanceRequest(CreateMmsInstanceRequest source) {
+        if (source.License != null) {
+            this.License = new String(source.License);
+        }
+        if (source.InstanceName != null) {
+            this.InstanceName = new String(source.InstanceName);
+        }
+        if (source.Title != null) {
+            this.Title = new String(source.Title);
+        }
+        if (source.Sign != null) {
+            this.Sign = new String(source.Sign);
+        }
+        if (source.Contents != null) {
+            this.Contents = new CreateMmsInstanceItem[source.Contents.length];
+            for (int i = 0; i < source.Contents.length; i++) {
+                this.Contents[i] = new CreateMmsInstanceItem(source.Contents[i]);
+            }
+        }
+        if (source.Urls != null) {
+            this.Urls = new String[source.Urls.length];
+            for (int i = 0; i < source.Urls.length; i++) {
+                this.Urls[i] = new String(source.Urls[i]);
+            }
+        }
+        if (source.PhoneType != null) {
+            this.PhoneType = new Long[source.PhoneType.length];
+            for (int i = 0; i < source.PhoneType.length; i++) {
+                this.PhoneType[i] = new Long(source.PhoneType[i]);
+            }
+        }
+        if (source.CommonParams != null) {
+            this.CommonParams = new Long[source.CommonParams.length];
+            for (int i = 0; i < source.CommonParams.length; i++) {
+                this.CommonParams[i] = new Long(source.CommonParams[i]);
+            }
+        }
+        if (source.UrlParams != null) {
+            this.UrlParams = new Long[source.UrlParams.length];
+            for (int i = 0; i < source.UrlParams.length; i++) {
+                this.UrlParams[i] = new Long(source.UrlParams[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

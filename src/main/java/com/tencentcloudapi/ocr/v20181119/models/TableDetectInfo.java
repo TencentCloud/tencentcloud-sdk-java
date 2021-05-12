@@ -149,6 +149,38 @@ public class TableDetectInfo extends AbstractModel{
         this.TableCoordPoint = TableCoordPoint;
     }
 
+    public TableDetectInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TableDetectInfo(TableDetectInfo source) {
+        if (source.Cells != null) {
+            this.Cells = new TableCell[source.Cells.length];
+            for (int i = 0; i < source.Cells.length; i++) {
+                this.Cells[i] = new TableCell(source.Cells[i]);
+            }
+        }
+        if (source.Titles != null) {
+            this.Titles = new TableTitle[source.Titles.length];
+            for (int i = 0; i < source.Titles.length; i++) {
+                this.Titles[i] = new TableTitle(source.Titles[i]);
+            }
+        }
+        if (source.Type != null) {
+            this.Type = new Long(source.Type);
+        }
+        if (source.TableCoordPoint != null) {
+            this.TableCoordPoint = new Coord[source.TableCoordPoint.length];
+            for (int i = 0; i < source.TableCoordPoint.length; i++) {
+                this.TableCoordPoint[i] = new Coord(source.TableCoordPoint[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

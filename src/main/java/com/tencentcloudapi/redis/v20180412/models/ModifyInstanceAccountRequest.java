@@ -183,6 +183,41 @@ public class ModifyInstanceAccountRequest extends AbstractModel{
         this.NoAuth = NoAuth;
     }
 
+    public ModifyInstanceAccountRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyInstanceAccountRequest(ModifyInstanceAccountRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.AccountName != null) {
+            this.AccountName = new String(source.AccountName);
+        }
+        if (source.AccountPassword != null) {
+            this.AccountPassword = new String(source.AccountPassword);
+        }
+        if (source.Remark != null) {
+            this.Remark = new String(source.Remark);
+        }
+        if (source.ReadonlyPolicy != null) {
+            this.ReadonlyPolicy = new String[source.ReadonlyPolicy.length];
+            for (int i = 0; i < source.ReadonlyPolicy.length; i++) {
+                this.ReadonlyPolicy[i] = new String(source.ReadonlyPolicy[i]);
+            }
+        }
+        if (source.Privilege != null) {
+            this.Privilege = new String(source.Privilege);
+        }
+        if (source.NoAuth != null) {
+            this.NoAuth = new Boolean(source.NoAuth);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

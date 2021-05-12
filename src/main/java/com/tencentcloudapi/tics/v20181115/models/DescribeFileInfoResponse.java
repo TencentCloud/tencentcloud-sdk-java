@@ -216,6 +216,50 @@ public class DescribeFileInfoResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeFileInfoResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeFileInfoResponse(DescribeFileInfoResponse source) {
+        if (source.ReturnCode != null) {
+            this.ReturnCode = new Long(source.ReturnCode);
+        }
+        if (source.Result != null) {
+            this.Result = new String(source.Result);
+        }
+        if (source.Confidence != null) {
+            this.Confidence = new Long(source.Confidence);
+        }
+        if (source.FileInfo != null) {
+            this.FileInfo = new FileInfoType[source.FileInfo.length];
+            for (int i = 0; i < source.FileInfo.length; i++) {
+                this.FileInfo[i] = new FileInfoType(source.FileInfo[i]);
+            }
+        }
+        if (source.Tags != null) {
+            this.Tags = new TagType[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new TagType(source.Tags[i]);
+            }
+        }
+        if (source.Intelligences != null) {
+            this.Intelligences = new IntelligenceType[source.Intelligences.length];
+            for (int i = 0; i < source.Intelligences.length; i++) {
+                this.Intelligences[i] = new IntelligenceType(source.Intelligences[i]);
+            }
+        }
+        if (source.Context != null) {
+            this.Context = new String(source.Context);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

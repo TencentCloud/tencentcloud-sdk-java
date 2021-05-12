@@ -183,6 +183,38 @@ public class CreateConfigRequest extends AbstractModel{
         this.EncodeWithBase64 = EncodeWithBase64;
     }
 
+    public CreateConfigRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateConfigRequest(CreateConfigRequest source) {
+        if (source.ConfigName != null) {
+            this.ConfigName = new String(source.ConfigName);
+        }
+        if (source.ConfigVersion != null) {
+            this.ConfigVersion = new String(source.ConfigVersion);
+        }
+        if (source.ConfigValue != null) {
+            this.ConfigValue = new String(source.ConfigValue);
+        }
+        if (source.ApplicationId != null) {
+            this.ApplicationId = new String(source.ApplicationId);
+        }
+        if (source.ConfigVersionDesc != null) {
+            this.ConfigVersionDesc = new String(source.ConfigVersionDesc);
+        }
+        if (source.ConfigType != null) {
+            this.ConfigType = new String(source.ConfigType);
+        }
+        if (source.EncodeWithBase64 != null) {
+            this.EncodeWithBase64 = new Boolean(source.EncodeWithBase64);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

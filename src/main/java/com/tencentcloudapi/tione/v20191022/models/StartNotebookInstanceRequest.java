@@ -101,6 +101,26 @@ public class StartNotebookInstanceRequest extends AbstractModel{
         this.StoppingCondition = StoppingCondition;
     }
 
+    public StartNotebookInstanceRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public StartNotebookInstanceRequest(StartNotebookInstanceRequest source) {
+        if (source.NotebookInstanceName != null) {
+            this.NotebookInstanceName = new String(source.NotebookInstanceName);
+        }
+        if (source.AutoStopping != null) {
+            this.AutoStopping = new String(source.AutoStopping);
+        }
+        if (source.StoppingCondition != null) {
+            this.StoppingCondition = new StoppingCondition(source.StoppingCondition);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

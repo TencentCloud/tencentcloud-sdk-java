@@ -91,6 +91,29 @@ public class DescribePlayErrorCodeDetailInfoListResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribePlayErrorCodeDetailInfoListResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribePlayErrorCodeDetailInfoListResponse(DescribePlayErrorCodeDetailInfoListResponse source) {
+        if (source.HttpCodeList != null) {
+            this.HttpCodeList = new HttpCodeInfo[source.HttpCodeList.length];
+            for (int i = 0; i < source.HttpCodeList.length; i++) {
+                this.HttpCodeList[i] = new HttpCodeInfo(source.HttpCodeList[i]);
+            }
+        }
+        if (source.StatType != null) {
+            this.StatType = new String(source.StatType);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

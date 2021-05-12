@@ -78,6 +78,23 @@ AttributeItem对应的Type为 —— 0：不戴帽子，1：红色系，2：黄�
         this.Color = Color;
     }
 
+    public Hat() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Hat(Hat source) {
+        if (source.Style != null) {
+            this.Style = new AttributeItem(source.Style);
+        }
+        if (source.Color != null) {
+            this.Color = new AttributeItem(source.Color);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -68,6 +68,23 @@ public class AgePortrait extends AbstractModel{
         this.Percent = Percent;
     }
 
+    public AgePortrait() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AgePortrait(AgePortrait source) {
+        if (source.AgeRange != null) {
+            this.AgeRange = new String(source.AgeRange);
+        }
+        if (source.Percent != null) {
+            this.Percent = new Float(source.Percent);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

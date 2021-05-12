@@ -65,6 +65,20 @@ windows镜像目前不支持IP直通。
         this.Enabled = Enabled;
     }
 
+    public RunEIPDirectServiceEnabled() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RunEIPDirectServiceEnabled(RunEIPDirectServiceEnabled source) {
+        if (source.Enabled != null) {
+            this.Enabled = new Boolean(source.Enabled);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

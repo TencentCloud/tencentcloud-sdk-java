@@ -450,6 +450,77 @@ public class ProcedureTask extends AbstractModel{
         this.SessionId = SessionId;
     }
 
+    public ProcedureTask() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ProcedureTask(ProcedureTask source) {
+        if (source.TaskId != null) {
+            this.TaskId = new String(source.TaskId);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.ErrCode != null) {
+            this.ErrCode = new Long(source.ErrCode);
+        }
+        if (source.Message != null) {
+            this.Message = new String(source.Message);
+        }
+        if (source.FileId != null) {
+            this.FileId = new String(source.FileId);
+        }
+        if (source.FileName != null) {
+            this.FileName = new String(source.FileName);
+        }
+        if (source.FileUrl != null) {
+            this.FileUrl = new String(source.FileUrl);
+        }
+        if (source.MetaData != null) {
+            this.MetaData = new MediaMetaData(source.MetaData);
+        }
+        if (source.MediaProcessResultSet != null) {
+            this.MediaProcessResultSet = new MediaProcessTaskResult[source.MediaProcessResultSet.length];
+            for (int i = 0; i < source.MediaProcessResultSet.length; i++) {
+                this.MediaProcessResultSet[i] = new MediaProcessTaskResult(source.MediaProcessResultSet[i]);
+            }
+        }
+        if (source.AiContentReviewResultSet != null) {
+            this.AiContentReviewResultSet = new AiContentReviewResult[source.AiContentReviewResultSet.length];
+            for (int i = 0; i < source.AiContentReviewResultSet.length; i++) {
+                this.AiContentReviewResultSet[i] = new AiContentReviewResult(source.AiContentReviewResultSet[i]);
+            }
+        }
+        if (source.AiAnalysisResultSet != null) {
+            this.AiAnalysisResultSet = new AiAnalysisResult[source.AiAnalysisResultSet.length];
+            for (int i = 0; i < source.AiAnalysisResultSet.length; i++) {
+                this.AiAnalysisResultSet[i] = new AiAnalysisResult(source.AiAnalysisResultSet[i]);
+            }
+        }
+        if (source.AiRecognitionResultSet != null) {
+            this.AiRecognitionResultSet = new AiRecognitionResult[source.AiRecognitionResultSet.length];
+            for (int i = 0; i < source.AiRecognitionResultSet.length; i++) {
+                this.AiRecognitionResultSet[i] = new AiRecognitionResult(source.AiRecognitionResultSet[i]);
+            }
+        }
+        if (source.TasksPriority != null) {
+            this.TasksPriority = new Long(source.TasksPriority);
+        }
+        if (source.TasksNotifyMode != null) {
+            this.TasksNotifyMode = new String(source.TasksNotifyMode);
+        }
+        if (source.SessionContext != null) {
+            this.SessionContext = new String(source.SessionContext);
+        }
+        if (source.SessionId != null) {
+            this.SessionId = new String(source.SessionId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

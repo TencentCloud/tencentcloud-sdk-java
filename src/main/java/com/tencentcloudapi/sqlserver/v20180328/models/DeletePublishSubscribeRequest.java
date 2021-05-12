@@ -68,6 +68,26 @@ public class DeletePublishSubscribeRequest extends AbstractModel{
         this.DatabaseTupleSet = DatabaseTupleSet;
     }
 
+    public DeletePublishSubscribeRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeletePublishSubscribeRequest(DeletePublishSubscribeRequest source) {
+        if (source.PublishSubscribeId != null) {
+            this.PublishSubscribeId = new Long(source.PublishSubscribeId);
+        }
+        if (source.DatabaseTupleSet != null) {
+            this.DatabaseTupleSet = new DatabaseTuple[source.DatabaseTupleSet.length];
+            for (int i = 0; i < source.DatabaseTupleSet.length; i++) {
+                this.DatabaseTupleSet[i] = new DatabaseTuple(source.DatabaseTupleSet[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

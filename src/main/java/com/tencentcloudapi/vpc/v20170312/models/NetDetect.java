@@ -386,6 +386,62 @@ NORMAL_CVM：普通云服务器；
         this.CreateTime = CreateTime;
     }
 
+    public NetDetect() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public NetDetect(NetDetect source) {
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.VpcName != null) {
+            this.VpcName = new String(source.VpcName);
+        }
+        if (source.SubnetId != null) {
+            this.SubnetId = new String(source.SubnetId);
+        }
+        if (source.SubnetName != null) {
+            this.SubnetName = new String(source.SubnetName);
+        }
+        if (source.NetDetectId != null) {
+            this.NetDetectId = new String(source.NetDetectId);
+        }
+        if (source.NetDetectName != null) {
+            this.NetDetectName = new String(source.NetDetectName);
+        }
+        if (source.DetectDestinationIp != null) {
+            this.DetectDestinationIp = new String[source.DetectDestinationIp.length];
+            for (int i = 0; i < source.DetectDestinationIp.length; i++) {
+                this.DetectDestinationIp[i] = new String(source.DetectDestinationIp[i]);
+            }
+        }
+        if (source.DetectSourceIp != null) {
+            this.DetectSourceIp = new String[source.DetectSourceIp.length];
+            for (int i = 0; i < source.DetectSourceIp.length; i++) {
+                this.DetectSourceIp[i] = new String(source.DetectSourceIp[i]);
+            }
+        }
+        if (source.NextHopType != null) {
+            this.NextHopType = new String(source.NextHopType);
+        }
+        if (source.NextHopDestination != null) {
+            this.NextHopDestination = new String(source.NextHopDestination);
+        }
+        if (source.NextHopName != null) {
+            this.NextHopName = new String(source.NextHopName);
+        }
+        if (source.NetDetectDescription != null) {
+            this.NetDetectDescription = new String(source.NetDetectDescription);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

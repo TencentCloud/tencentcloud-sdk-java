@@ -91,6 +91,29 @@ public class ModifyAccountPasswordRequest extends AbstractModel{
         this.Accounts = Accounts;
     }
 
+    public ModifyAccountPasswordRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyAccountPasswordRequest(ModifyAccountPasswordRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.NewPassword != null) {
+            this.NewPassword = new String(source.NewPassword);
+        }
+        if (source.Accounts != null) {
+            this.Accounts = new Account[source.Accounts.length];
+            for (int i = 0; i < source.Accounts.length; i++) {
+                this.Accounts[i] = new Account(source.Accounts[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -160,6 +160,35 @@ public class SmallVideoLayoutParams extends AbstractModel{
         this.LocationY = LocationY;
     }
 
+    public SmallVideoLayoutParams() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SmallVideoLayoutParams(SmallVideoLayoutParams source) {
+        if (source.UserId != null) {
+            this.UserId = new String(source.UserId);
+        }
+        if (source.StreamType != null) {
+            this.StreamType = new Long(source.StreamType);
+        }
+        if (source.ImageWidth != null) {
+            this.ImageWidth = new Long(source.ImageWidth);
+        }
+        if (source.ImageHeight != null) {
+            this.ImageHeight = new Long(source.ImageHeight);
+        }
+        if (source.LocationX != null) {
+            this.LocationX = new Long(source.LocationX);
+        }
+        if (source.LocationY != null) {
+            this.LocationY = new Long(source.LocationY);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

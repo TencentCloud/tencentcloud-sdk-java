@@ -45,6 +45,20 @@ public class DescribeLifeCycleRulesRequest extends AbstractModel{
         this.FileSystemId = FileSystemId;
     }
 
+    public DescribeLifeCycleRulesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeLifeCycleRulesRequest(DescribeLifeCycleRulesRequest source) {
+        if (source.FileSystemId != null) {
+            this.FileSystemId = new String(source.FileSystemId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

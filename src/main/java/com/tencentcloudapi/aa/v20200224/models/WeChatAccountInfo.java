@@ -198,6 +198,38 @@ public class WeChatAccountInfo extends AbstractModel{
         this.DeviceId = DeviceId;
     }
 
+    public WeChatAccountInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public WeChatAccountInfo(WeChatAccountInfo source) {
+        if (source.WeChatOpenId != null) {
+            this.WeChatOpenId = new String(source.WeChatOpenId);
+        }
+        if (source.WeChatSubType != null) {
+            this.WeChatSubType = new Long(source.WeChatSubType);
+        }
+        if (source.RandStr != null) {
+            this.RandStr = new String(source.RandStr);
+        }
+        if (source.WeChatAccessToken != null) {
+            this.WeChatAccessToken = new String(source.WeChatAccessToken);
+        }
+        if (source.AssociateAccount != null) {
+            this.AssociateAccount = new String(source.AssociateAccount);
+        }
+        if (source.MobilePhone != null) {
+            this.MobilePhone = new String(source.MobilePhone);
+        }
+        if (source.DeviceId != null) {
+            this.DeviceId = new String(source.DeviceId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

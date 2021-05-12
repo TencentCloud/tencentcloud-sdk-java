@@ -45,6 +45,23 @@ public class DeleteEipRequest extends AbstractModel{
         this.EipIds = EipIds;
     }
 
+    public DeleteEipRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteEipRequest(DeleteEipRequest source) {
+        if (source.EipIds != null) {
+            this.EipIds = new String[source.EipIds.length];
+            for (int i = 0; i < source.EipIds.length; i++) {
+                this.EipIds[i] = new String(source.EipIds[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

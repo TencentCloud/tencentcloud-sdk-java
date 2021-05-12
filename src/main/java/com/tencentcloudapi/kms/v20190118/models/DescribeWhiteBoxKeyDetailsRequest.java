@@ -114,6 +114,32 @@ public class DescribeWhiteBoxKeyDetailsRequest extends AbstractModel{
         this.TagFilters = TagFilters;
     }
 
+    public DescribeWhiteBoxKeyDetailsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeWhiteBoxKeyDetailsRequest(DescribeWhiteBoxKeyDetailsRequest source) {
+        if (source.KeyStatus != null) {
+            this.KeyStatus = new Long(source.KeyStatus);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.TagFilters != null) {
+            this.TagFilters = new TagFilter[source.TagFilters.length];
+            for (int i = 0; i < source.TagFilters.length; i++) {
+                this.TagFilters[i] = new TagFilter(source.TagFilters[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

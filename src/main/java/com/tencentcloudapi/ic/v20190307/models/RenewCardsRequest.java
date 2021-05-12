@@ -91,6 +91,29 @@ public class RenewCardsRequest extends AbstractModel{
         this.RenewNum = RenewNum;
     }
 
+    public RenewCardsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RenewCardsRequest(RenewCardsRequest source) {
+        if (source.Sdkappid != null) {
+            this.Sdkappid = new Long(source.Sdkappid);
+        }
+        if (source.Iccids != null) {
+            this.Iccids = new String[source.Iccids.length];
+            for (int i = 0; i < source.Iccids.length; i++) {
+                this.Iccids[i] = new String(source.Iccids[i]);
+            }
+        }
+        if (source.RenewNum != null) {
+            this.RenewNum = new Long(source.RenewNum);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

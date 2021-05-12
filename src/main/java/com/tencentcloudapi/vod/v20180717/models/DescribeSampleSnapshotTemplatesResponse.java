@@ -91,6 +91,29 @@ public class DescribeSampleSnapshotTemplatesResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeSampleSnapshotTemplatesResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeSampleSnapshotTemplatesResponse(DescribeSampleSnapshotTemplatesResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.SampleSnapshotTemplateSet != null) {
+            this.SampleSnapshotTemplateSet = new SampleSnapshotTemplate[source.SampleSnapshotTemplateSet.length];
+            for (int i = 0; i < source.SampleSnapshotTemplateSet.length; i++) {
+                this.SampleSnapshotTemplateSet[i] = new SampleSnapshotTemplate(source.SampleSnapshotTemplateSet[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -45,6 +45,20 @@ public class DeleteAutoScalingGroupRequest extends AbstractModel{
         this.AutoScalingGroupId = AutoScalingGroupId;
     }
 
+    public DeleteAutoScalingGroupRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteAutoScalingGroupRequest(DeleteAutoScalingGroupRequest source) {
+        if (source.AutoScalingGroupId != null) {
+            this.AutoScalingGroupId = new String(source.AutoScalingGroupId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

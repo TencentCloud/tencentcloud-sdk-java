@@ -134,6 +134,29 @@ public class CosDownloadInfo extends AbstractModel{
         this.Credentials = Credentials;
     }
 
+    public CosDownloadInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CosDownloadInfo(CosDownloadInfo source) {
+        if (source.Bucket != null) {
+            this.Bucket = new String(source.Bucket);
+        }
+        if (source.Region != null) {
+            this.Region = new String(source.Region);
+        }
+        if (source.Path != null) {
+            this.Path = new String(source.Path);
+        }
+        if (source.Credentials != null) {
+            this.Credentials = new CosCredentials(source.Credentials);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

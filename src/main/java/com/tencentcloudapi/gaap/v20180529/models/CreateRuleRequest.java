@@ -234,6 +234,44 @@ public class CreateRuleRequest extends AbstractModel{
         this.ForwardHost = ForwardHost;
     }
 
+    public CreateRuleRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateRuleRequest(CreateRuleRequest source) {
+        if (source.ListenerId != null) {
+            this.ListenerId = new String(source.ListenerId);
+        }
+        if (source.Domain != null) {
+            this.Domain = new String(source.Domain);
+        }
+        if (source.Path != null) {
+            this.Path = new String(source.Path);
+        }
+        if (source.RealServerType != null) {
+            this.RealServerType = new String(source.RealServerType);
+        }
+        if (source.Scheduler != null) {
+            this.Scheduler = new String(source.Scheduler);
+        }
+        if (source.HealthCheck != null) {
+            this.HealthCheck = new Long(source.HealthCheck);
+        }
+        if (source.CheckParams != null) {
+            this.CheckParams = new RuleCheckParams(source.CheckParams);
+        }
+        if (source.ForwardProtocol != null) {
+            this.ForwardProtocol = new String(source.ForwardProtocol);
+        }
+        if (source.ForwardHost != null) {
+            this.ForwardHost = new String(source.ForwardHost);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

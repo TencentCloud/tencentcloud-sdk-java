@@ -119,6 +119,29 @@ public class DescribeAuditConfigResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeAuditConfigResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeAuditConfigResponse(DescribeAuditConfigResponse source) {
+        if (source.LogExpireDay != null) {
+            this.LogExpireDay = new Long(source.LogExpireDay);
+        }
+        if (source.LogType != null) {
+            this.LogType = new String(source.LogType);
+        }
+        if (source.IsClosing != null) {
+            this.IsClosing = new String(source.IsClosing);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

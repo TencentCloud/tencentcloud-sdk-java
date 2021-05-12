@@ -78,6 +78,29 @@ public class CacheOptResult extends AbstractModel{
         this.FailUrls = FailUrls;
     }
 
+    public CacheOptResult() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CacheOptResult(CacheOptResult source) {
+        if (source.SuccessUrls != null) {
+            this.SuccessUrls = new String[source.SuccessUrls.length];
+            for (int i = 0; i < source.SuccessUrls.length; i++) {
+                this.SuccessUrls[i] = new String(source.SuccessUrls[i]);
+            }
+        }
+        if (source.FailUrls != null) {
+            this.FailUrls = new String[source.FailUrls.length];
+            for (int i = 0; i < source.FailUrls.length; i++) {
+                this.FailUrls[i] = new String(source.FailUrls[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

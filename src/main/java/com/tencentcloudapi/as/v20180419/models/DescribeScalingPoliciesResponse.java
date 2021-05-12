@@ -91,6 +91,29 @@ public class DescribeScalingPoliciesResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeScalingPoliciesResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeScalingPoliciesResponse(DescribeScalingPoliciesResponse source) {
+        if (source.ScalingPolicySet != null) {
+            this.ScalingPolicySet = new ScalingPolicy[source.ScalingPolicySet.length];
+            for (int i = 0; i < source.ScalingPolicySet.length; i++) {
+                this.ScalingPolicySet[i] = new ScalingPolicy(source.ScalingPolicySet[i]);
+            }
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -45,6 +45,20 @@ public class CheckInstanceNameRequest extends AbstractModel{
         this.RegistryName = RegistryName;
     }
 
+    public CheckInstanceNameRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CheckInstanceNameRequest(CheckInstanceNameRequest source) {
+        if (source.RegistryName != null) {
+            this.RegistryName = new String(source.RegistryName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

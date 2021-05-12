@@ -330,6 +330,50 @@ public class ScalingPolicy extends AbstractModel{
         this.TargetConfiguration = TargetConfiguration;
     }
 
+    public ScalingPolicy() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ScalingPolicy(ScalingPolicy source) {
+        if (source.FleetId != null) {
+            this.FleetId = new String(source.FleetId);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.ScalingAdjustment != null) {
+            this.ScalingAdjustment = new String(source.ScalingAdjustment);
+        }
+        if (source.ScalingAdjustmentType != null) {
+            this.ScalingAdjustmentType = new String(source.ScalingAdjustmentType);
+        }
+        if (source.ComparisonOperator != null) {
+            this.ComparisonOperator = new String(source.ComparisonOperator);
+        }
+        if (source.Threshold != null) {
+            this.Threshold = new String(source.Threshold);
+        }
+        if (source.EvaluationPeriods != null) {
+            this.EvaluationPeriods = new String(source.EvaluationPeriods);
+        }
+        if (source.MetricName != null) {
+            this.MetricName = new String(source.MetricName);
+        }
+        if (source.PolicyType != null) {
+            this.PolicyType = new String(source.PolicyType);
+        }
+        if (source.TargetConfiguration != null) {
+            this.TargetConfiguration = new TargetConfiguration(source.TargetConfiguration);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

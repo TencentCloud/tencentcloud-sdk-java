@@ -114,6 +114,32 @@ public class CreateClusterInstancesRequest extends AbstractModel{
         this.SkipValidateOptions = SkipValidateOptions;
     }
 
+    public CreateClusterInstancesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateClusterInstancesRequest(CreateClusterInstancesRequest source) {
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
+        if (source.RunInstancePara != null) {
+            this.RunInstancePara = new String(source.RunInstancePara);
+        }
+        if (source.InstanceAdvancedSettings != null) {
+            this.InstanceAdvancedSettings = new InstanceAdvancedSettings(source.InstanceAdvancedSettings);
+        }
+        if (source.SkipValidateOptions != null) {
+            this.SkipValidateOptions = new String[source.SkipValidateOptions.length];
+            for (int i = 0; i < source.SkipValidateOptions.length; i++) {
+                this.SkipValidateOptions[i] = new String(source.SkipValidateOptions[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -68,6 +68,29 @@ public class NetworkAclEntrySet extends AbstractModel{
         this.Egress = Egress;
     }
 
+    public NetworkAclEntrySet() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public NetworkAclEntrySet(NetworkAclEntrySet source) {
+        if (source.Ingress != null) {
+            this.Ingress = new NetworkAclEntry[source.Ingress.length];
+            for (int i = 0; i < source.Ingress.length; i++) {
+                this.Ingress[i] = new NetworkAclEntry(source.Ingress[i]);
+            }
+        }
+        if (source.Egress != null) {
+            this.Egress = new NetworkAclEntry[source.Egress.length];
+            for (int i = 0; i < source.Egress.length; i++) {
+                this.Egress[i] = new NetworkAclEntry(source.Egress[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

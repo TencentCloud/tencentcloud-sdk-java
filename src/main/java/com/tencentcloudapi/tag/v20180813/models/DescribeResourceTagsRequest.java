@@ -206,6 +206,41 @@ public class DescribeResourceTagsRequest extends AbstractModel{
         this.CosResourceId = CosResourceId;
     }
 
+    public DescribeResourceTagsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeResourceTagsRequest(DescribeResourceTagsRequest source) {
+        if (source.CreateUin != null) {
+            this.CreateUin = new Long(source.CreateUin);
+        }
+        if (source.ResourceRegion != null) {
+            this.ResourceRegion = new String(source.ResourceRegion);
+        }
+        if (source.ServiceType != null) {
+            this.ServiceType = new String(source.ServiceType);
+        }
+        if (source.ResourcePrefix != null) {
+            this.ResourcePrefix = new String(source.ResourcePrefix);
+        }
+        if (source.ResourceId != null) {
+            this.ResourceId = new String(source.ResourceId);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.CosResourceId != null) {
+            this.CosResourceId = new Long(source.CosResourceId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

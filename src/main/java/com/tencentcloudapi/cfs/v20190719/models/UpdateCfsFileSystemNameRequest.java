@@ -68,6 +68,23 @@ public class UpdateCfsFileSystemNameRequest extends AbstractModel{
         this.FsName = FsName;
     }
 
+    public UpdateCfsFileSystemNameRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UpdateCfsFileSystemNameRequest(UpdateCfsFileSystemNameRequest source) {
+        if (source.FileSystemId != null) {
+            this.FileSystemId = new String(source.FileSystemId);
+        }
+        if (source.FsName != null) {
+            this.FsName = new String(source.FsName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

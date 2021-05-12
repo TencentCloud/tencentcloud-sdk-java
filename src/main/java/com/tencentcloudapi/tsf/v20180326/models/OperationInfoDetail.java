@@ -106,6 +106,26 @@ public class OperationInfoDetail extends AbstractModel{
         this.Supported = Supported;
     }
 
+    public OperationInfoDetail() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public OperationInfoDetail(OperationInfoDetail source) {
+        if (source.DisabledReason != null) {
+            this.DisabledReason = new String(source.DisabledReason);
+        }
+        if (source.Enabled != null) {
+            this.Enabled = new Boolean(source.Enabled);
+        }
+        if (source.Supported != null) {
+            this.Supported = new Boolean(source.Supported);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -73,6 +73,23 @@ public class AutoSummarizationRequest extends AbstractModel{
         this.Length = Length;
     }
 
+    public AutoSummarizationRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AutoSummarizationRequest(AutoSummarizationRequest source) {
+        if (source.Text != null) {
+            this.Text = new String(source.Text);
+        }
+        if (source.Length != null) {
+            this.Length = new Long(source.Length);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

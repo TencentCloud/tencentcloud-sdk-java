@@ -338,6 +338,53 @@ public class ReservedInstances extends AbstractModel{
         this.InstanceFamily = InstanceFamily;
     }
 
+    public ReservedInstances() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ReservedInstances(ReservedInstances source) {
+        if (source.ReservedInstancesId != null) {
+            this.ReservedInstancesId = new String(source.ReservedInstancesId);
+        }
+        if (source.InstanceType != null) {
+            this.InstanceType = new String(source.InstanceType);
+        }
+        if (source.Zone != null) {
+            this.Zone = new String(source.Zone);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+        if (source.Duration != null) {
+            this.Duration = new Long(source.Duration);
+        }
+        if (source.InstanceCount != null) {
+            this.InstanceCount = new Long(source.InstanceCount);
+        }
+        if (source.ProductDescription != null) {
+            this.ProductDescription = new String(source.ProductDescription);
+        }
+        if (source.State != null) {
+            this.State = new String(source.State);
+        }
+        if (source.CurrencyCode != null) {
+            this.CurrencyCode = new String(source.CurrencyCode);
+        }
+        if (source.OfferingType != null) {
+            this.OfferingType = new String(source.OfferingType);
+        }
+        if (source.InstanceFamily != null) {
+            this.InstanceFamily = new String(source.InstanceFamily);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

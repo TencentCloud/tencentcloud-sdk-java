@@ -275,6 +275,50 @@ public class LoRaGatewayItem extends AbstractModel{
         this.FrequencyId = FrequencyId;
     }
 
+    public LoRaGatewayItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public LoRaGatewayItem(LoRaGatewayItem source) {
+        if (source.GatewayId != null) {
+            this.GatewayId = new String(source.GatewayId);
+        }
+        if (source.IsPublic != null) {
+            this.IsPublic = new Boolean(source.IsPublic);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Position != null) {
+            this.Position = new String(source.Position);
+        }
+        if (source.PositionDetails != null) {
+            this.PositionDetails = new String(source.PositionDetails);
+        }
+        if (source.Location != null) {
+            this.Location = new LoRaGatewayLocation(source.Location);
+        }
+        if (source.UpdatedAt != null) {
+            this.UpdatedAt = new String(source.UpdatedAt);
+        }
+        if (source.CreatedAt != null) {
+            this.CreatedAt = new String(source.CreatedAt);
+        }
+        if (source.LastSeenAt != null) {
+            this.LastSeenAt = new String(source.LastSeenAt);
+        }
+        if (source.FrequencyId != null) {
+            this.FrequencyId = new String(source.FrequencyId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

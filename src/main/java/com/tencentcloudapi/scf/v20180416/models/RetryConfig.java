@@ -45,6 +45,20 @@ public class RetryConfig extends AbstractModel{
         this.RetryNum = RetryNum;
     }
 
+    public RetryConfig() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RetryConfig(RetryConfig source) {
+        if (source.RetryNum != null) {
+            this.RetryNum = new Long(source.RetryNum);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

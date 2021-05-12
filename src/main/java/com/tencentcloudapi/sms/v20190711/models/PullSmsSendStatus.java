@@ -206,6 +206,41 @@ public class PullSmsSendStatus extends AbstractModel{
         this.Description = Description;
     }
 
+    public PullSmsSendStatus() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PullSmsSendStatus(PullSmsSendStatus source) {
+        if (source.UserReceiveTime != null) {
+            this.UserReceiveTime = new String(source.UserReceiveTime);
+        }
+        if (source.UserReceiveUnixTime != null) {
+            this.UserReceiveUnixTime = new Long(source.UserReceiveUnixTime);
+        }
+        if (source.NationCode != null) {
+            this.NationCode = new String(source.NationCode);
+        }
+        if (source.PurePhoneNumber != null) {
+            this.PurePhoneNumber = new String(source.PurePhoneNumber);
+        }
+        if (source.PhoneNumber != null) {
+            this.PhoneNumber = new String(source.PhoneNumber);
+        }
+        if (source.SerialNo != null) {
+            this.SerialNo = new String(source.SerialNo);
+        }
+        if (source.ReportStatus != null) {
+            this.ReportStatus = new String(source.ReportStatus);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

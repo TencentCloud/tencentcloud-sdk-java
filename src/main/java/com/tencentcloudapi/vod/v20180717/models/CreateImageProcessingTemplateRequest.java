@@ -119,6 +119,32 @@ public class CreateImageProcessingTemplateRequest extends AbstractModel{
         this.SubAppId = SubAppId;
     }
 
+    public CreateImageProcessingTemplateRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateImageProcessingTemplateRequest(CreateImageProcessingTemplateRequest source) {
+        if (source.Operations != null) {
+            this.Operations = new ImageOperation[source.Operations.length];
+            for (int i = 0; i < source.Operations.length; i++) {
+                this.Operations[i] = new ImageOperation(source.Operations[i]);
+            }
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Comment != null) {
+            this.Comment = new String(source.Comment);
+        }
+        if (source.SubAppId != null) {
+            this.SubAppId = new Long(source.SubAppId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

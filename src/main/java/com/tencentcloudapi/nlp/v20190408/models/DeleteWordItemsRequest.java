@@ -68,6 +68,26 @@ public class DeleteWordItemsRequest extends AbstractModel{
         this.WordItems = WordItems;
     }
 
+    public DeleteWordItemsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteWordItemsRequest(DeleteWordItemsRequest source) {
+        if (source.DictId != null) {
+            this.DictId = new String(source.DictId);
+        }
+        if (source.WordItems != null) {
+            this.WordItems = new WordItem[source.WordItems.length];
+            for (int i = 0; i < source.WordItems.length; i++) {
+                this.WordItems[i] = new WordItem(source.WordItems[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

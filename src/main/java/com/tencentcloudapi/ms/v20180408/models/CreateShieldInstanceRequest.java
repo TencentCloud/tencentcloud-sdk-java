@@ -68,6 +68,23 @@ public class CreateShieldInstanceRequest extends AbstractModel{
         this.ServiceInfo = ServiceInfo;
     }
 
+    public CreateShieldInstanceRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateShieldInstanceRequest(CreateShieldInstanceRequest source) {
+        if (source.AppInfo != null) {
+            this.AppInfo = new AppInfo(source.AppInfo);
+        }
+        if (source.ServiceInfo != null) {
+            this.ServiceInfo = new ServiceInfo(source.ServiceInfo);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

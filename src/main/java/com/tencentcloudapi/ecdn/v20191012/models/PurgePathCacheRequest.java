@@ -68,6 +68,26 @@ public class PurgePathCacheRequest extends AbstractModel{
         this.FlushType = FlushType;
     }
 
+    public PurgePathCacheRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PurgePathCacheRequest(PurgePathCacheRequest source) {
+        if (source.Paths != null) {
+            this.Paths = new String[source.Paths.length];
+            for (int i = 0; i < source.Paths.length; i++) {
+                this.Paths[i] = new String(source.Paths[i]);
+            }
+        }
+        if (source.FlushType != null) {
+            this.FlushType = new String(source.FlushType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

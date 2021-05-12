@@ -390,6 +390,77 @@ public class DescribeDCDBInstancesRequest extends AbstractModel{
         this.FilterInstanceType = FilterInstanceType;
     }
 
+    public DescribeDCDBInstancesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeDCDBInstancesRequest(DescribeDCDBInstancesRequest source) {
+        if (source.InstanceIds != null) {
+            this.InstanceIds = new String[source.InstanceIds.length];
+            for (int i = 0; i < source.InstanceIds.length; i++) {
+                this.InstanceIds[i] = new String(source.InstanceIds[i]);
+            }
+        }
+        if (source.SearchName != null) {
+            this.SearchName = new String(source.SearchName);
+        }
+        if (source.SearchKey != null) {
+            this.SearchKey = new String(source.SearchKey);
+        }
+        if (source.ProjectIds != null) {
+            this.ProjectIds = new Long[source.ProjectIds.length];
+            for (int i = 0; i < source.ProjectIds.length; i++) {
+                this.ProjectIds[i] = new Long(source.ProjectIds[i]);
+            }
+        }
+        if (source.IsFilterVpc != null) {
+            this.IsFilterVpc = new Boolean(source.IsFilterVpc);
+        }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.SubnetId != null) {
+            this.SubnetId = new String(source.SubnetId);
+        }
+        if (source.OrderBy != null) {
+            this.OrderBy = new String(source.OrderBy);
+        }
+        if (source.OrderByType != null) {
+            this.OrderByType = new String(source.OrderByType);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.ExclusterType != null) {
+            this.ExclusterType = new Long(source.ExclusterType);
+        }
+        if (source.IsFilterExcluster != null) {
+            this.IsFilterExcluster = new Boolean(source.IsFilterExcluster);
+        }
+        if (source.ExclusterIds != null) {
+            this.ExclusterIds = new String[source.ExclusterIds.length];
+            for (int i = 0; i < source.ExclusterIds.length; i++) {
+                this.ExclusterIds[i] = new String(source.ExclusterIds[i]);
+            }
+        }
+        if (source.TagKeys != null) {
+            this.TagKeys = new String[source.TagKeys.length];
+            for (int i = 0; i < source.TagKeys.length; i++) {
+                this.TagKeys[i] = new String(source.TagKeys[i]);
+            }
+        }
+        if (source.FilterInstanceType != null) {
+            this.FilterInstanceType = new String(source.FilterInstanceType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

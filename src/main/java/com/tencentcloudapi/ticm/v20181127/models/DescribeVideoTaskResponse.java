@@ -313,6 +313,53 @@ FINISH：已完成。
         this.RequestId = RequestId;
     }
 
+    public DescribeVideoTaskResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeVideoTaskResponse(DescribeVideoTaskResponse source) {
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.BeginProcessTime != null) {
+            this.BeginProcessTime = new String(source.BeginProcessTime);
+        }
+        if (source.FinishTime != null) {
+            this.FinishTime = new String(source.FinishTime);
+        }
+        if (source.PornResult != null) {
+            this.PornResult = new VodPornReviewResult(source.PornResult);
+        }
+        if (source.TerrorismResult != null) {
+            this.TerrorismResult = new VodTerrorismReviewResult(source.TerrorismResult);
+        }
+        if (source.PoliticalResult != null) {
+            this.PoliticalResult = new VodPoliticalReviewResult(source.PoliticalResult);
+        }
+        if (source.PoliticalOcrResult != null) {
+            this.PoliticalOcrResult = new VodPoliticalOcrReviewResult(source.PoliticalOcrResult);
+        }
+        if (source.PornAsrResult != null) {
+            this.PornAsrResult = new VodPornAsrReviewResult(source.PornAsrResult);
+        }
+        if (source.PoliticalAsrResult != null) {
+            this.PoliticalAsrResult = new VodPoliticalAsrReviewResult(source.PoliticalAsrResult);
+        }
+        if (source.PornOcrResult != null) {
+            this.PornOcrResult = new VodPornOcrResult(source.PornOcrResult);
+        }
+        if (source.MetaData != null) {
+            this.MetaData = new VodMetaData(source.MetaData);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -864,6 +864,128 @@ public class Disk extends AbstractModel{
         this.ThroughputPerformance = ThroughputPerformance;
     }
 
+    public Disk() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Disk(Disk source) {
+        if (source.DiskId != null) {
+            this.DiskId = new String(source.DiskId);
+        }
+        if (source.DiskUsage != null) {
+            this.DiskUsage = new String(source.DiskUsage);
+        }
+        if (source.DiskChargeType != null) {
+            this.DiskChargeType = new String(source.DiskChargeType);
+        }
+        if (source.Portable != null) {
+            this.Portable = new Boolean(source.Portable);
+        }
+        if (source.Placement != null) {
+            this.Placement = new Placement(source.Placement);
+        }
+        if (source.SnapshotAbility != null) {
+            this.SnapshotAbility = new Boolean(source.SnapshotAbility);
+        }
+        if (source.DiskName != null) {
+            this.DiskName = new String(source.DiskName);
+        }
+        if (source.DiskSize != null) {
+            this.DiskSize = new Long(source.DiskSize);
+        }
+        if (source.DiskState != null) {
+            this.DiskState = new String(source.DiskState);
+        }
+        if (source.DiskType != null) {
+            this.DiskType = new String(source.DiskType);
+        }
+        if (source.Attached != null) {
+            this.Attached = new Boolean(source.Attached);
+        }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.DeadlineTime != null) {
+            this.DeadlineTime = new String(source.DeadlineTime);
+        }
+        if (source.Rollbacking != null) {
+            this.Rollbacking = new Boolean(source.Rollbacking);
+        }
+        if (source.RollbackPercent != null) {
+            this.RollbackPercent = new Long(source.RollbackPercent);
+        }
+        if (source.Encrypt != null) {
+            this.Encrypt = new Boolean(source.Encrypt);
+        }
+        if (source.AutoRenewFlagError != null) {
+            this.AutoRenewFlagError = new Boolean(source.AutoRenewFlagError);
+        }
+        if (source.RenewFlag != null) {
+            this.RenewFlag = new String(source.RenewFlag);
+        }
+        if (source.DeadlineError != null) {
+            this.DeadlineError = new Boolean(source.DeadlineError);
+        }
+        if (source.IsReturnable != null) {
+            this.IsReturnable = new Boolean(source.IsReturnable);
+        }
+        if (source.ReturnFailCode != null) {
+            this.ReturnFailCode = new Long(source.ReturnFailCode);
+        }
+        if (source.AutoSnapshotPolicyIds != null) {
+            this.AutoSnapshotPolicyIds = new String[source.AutoSnapshotPolicyIds.length];
+            for (int i = 0; i < source.AutoSnapshotPolicyIds.length; i++) {
+                this.AutoSnapshotPolicyIds[i] = new String(source.AutoSnapshotPolicyIds[i]);
+            }
+        }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
+        if (source.DeleteWithInstance != null) {
+            this.DeleteWithInstance = new Boolean(source.DeleteWithInstance);
+        }
+        if (source.DifferDaysOfDeadline != null) {
+            this.DifferDaysOfDeadline = new Long(source.DifferDaysOfDeadline);
+        }
+        if (source.Migrating != null) {
+            this.Migrating = new Boolean(source.Migrating);
+        }
+        if (source.MigratePercent != null) {
+            this.MigratePercent = new Long(source.MigratePercent);
+        }
+        if (source.Shareable != null) {
+            this.Shareable = new Boolean(source.Shareable);
+        }
+        if (source.InstanceIdList != null) {
+            this.InstanceIdList = new String[source.InstanceIdList.length];
+            for (int i = 0; i < source.InstanceIdList.length; i++) {
+                this.InstanceIdList[i] = new String(source.InstanceIdList[i]);
+            }
+        }
+        if (source.SnapshotCount != null) {
+            this.SnapshotCount = new Long(source.SnapshotCount);
+        }
+        if (source.SnapshotSize != null) {
+            this.SnapshotSize = new Long(source.SnapshotSize);
+        }
+        if (source.BackupDisk != null) {
+            this.BackupDisk = new Boolean(source.BackupDisk);
+        }
+        if (source.ThroughputPerformance != null) {
+            this.ThroughputPerformance = new Long(source.ThroughputPerformance);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

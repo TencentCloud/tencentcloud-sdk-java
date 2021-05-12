@@ -124,6 +124,29 @@ public class DescribeMountPointsRequest extends AbstractModel{
         this.Limit = Limit;
     }
 
+    public DescribeMountPointsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeMountPointsRequest(DescribeMountPointsRequest source) {
+        if (source.FileSystemId != null) {
+            this.FileSystemId = new String(source.FileSystemId);
+        }
+        if (source.AccessGroupId != null) {
+            this.AccessGroupId = new String(source.AccessGroupId);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

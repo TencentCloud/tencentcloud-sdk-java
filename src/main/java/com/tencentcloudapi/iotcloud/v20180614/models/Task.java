@@ -68,6 +68,23 @@ public class Task extends AbstractModel{
         this.PublishMessageTask = PublishMessageTask;
     }
 
+    public Task() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Task(Task source) {
+        if (source.UpdateShadowTask != null) {
+            this.UpdateShadowTask = new BatchUpdateShadow(source.UpdateShadowTask);
+        }
+        if (source.PublishMessageTask != null) {
+            this.PublishMessageTask = new BatchPublishMessage(source.PublishMessageTask);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

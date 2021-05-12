@@ -114,6 +114,29 @@ public class SmsRet extends AbstractModel{
         this.Sid = Sid;
     }
 
+    public SmsRet() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SmsRet(SmsRet source) {
+        if (source.Code != null) {
+            this.Code = new String(source.Code);
+        }
+        if (source.Msg != null) {
+            this.Msg = new String(source.Msg);
+        }
+        if (source.Iccid != null) {
+            this.Iccid = new String(source.Iccid);
+        }
+        if (source.Sid != null) {
+            this.Sid = new String(source.Sid);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

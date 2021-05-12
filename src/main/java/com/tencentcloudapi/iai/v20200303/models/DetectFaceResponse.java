@@ -137,6 +137,35 @@ public class DetectFaceResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DetectFaceResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DetectFaceResponse(DetectFaceResponse source) {
+        if (source.ImageWidth != null) {
+            this.ImageWidth = new Long(source.ImageWidth);
+        }
+        if (source.ImageHeight != null) {
+            this.ImageHeight = new Long(source.ImageHeight);
+        }
+        if (source.FaceInfos != null) {
+            this.FaceInfos = new FaceInfo[source.FaceInfos.length];
+            for (int i = 0; i < source.FaceInfos.length; i++) {
+                this.FaceInfos[i] = new FaceInfo(source.FaceInfos[i]);
+            }
+        }
+        if (source.FaceModelVersion != null) {
+            this.FaceModelVersion = new String(source.FaceModelVersion);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

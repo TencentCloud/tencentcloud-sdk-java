@@ -99,6 +99,26 @@ public class IcClient extends AbstractClient{
     }
 
     /**
+     *编辑卡片备注
+     * @param req ModifyUserCardRemarkRequest
+     * @return ModifyUserCardRemarkResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyUserCardRemarkResponse ModifyUserCardRemark(ModifyUserCardRemarkRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyUserCardRemarkResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyUserCardRemarkResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyUserCardRemark");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *批量为卡片续费，此接口建议调用至少间隔10s,如果出现返回deal lock failed相关的错误，请过10s再重试。
 续费的必要条件：
 1、单次续费的卡片不可以超过 100张。

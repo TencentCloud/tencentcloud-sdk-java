@@ -91,6 +91,29 @@ public class CreateBandwidthPackageResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public CreateBandwidthPackageResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateBandwidthPackageResponse(CreateBandwidthPackageResponse source) {
+        if (source.BandwidthPackageId != null) {
+            this.BandwidthPackageId = new String(source.BandwidthPackageId);
+        }
+        if (source.BandwidthPackageIds != null) {
+            this.BandwidthPackageIds = new String[source.BandwidthPackageIds.length];
+            for (int i = 0; i < source.BandwidthPackageIds.length; i++) {
+                this.BandwidthPackageIds[i] = new String(source.BandwidthPackageIds[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

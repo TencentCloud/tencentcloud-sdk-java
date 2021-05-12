@@ -206,6 +206,44 @@ public class BatchUpdateFirmwareRequest extends AbstractModel{
         this.DeviceNames = DeviceNames;
     }
 
+    public BatchUpdateFirmwareRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public BatchUpdateFirmwareRequest(BatchUpdateFirmwareRequest source) {
+        if (source.ProductID != null) {
+            this.ProductID = new String(source.ProductID);
+        }
+        if (source.FirmwareVersion != null) {
+            this.FirmwareVersion = new String(source.FirmwareVersion);
+        }
+        if (source.FirmwareOriVersion != null) {
+            this.FirmwareOriVersion = new String(source.FirmwareOriVersion);
+        }
+        if (source.UpgradeMethod != null) {
+            this.UpgradeMethod = new Long(source.UpgradeMethod);
+        }
+        if (source.FileName != null) {
+            this.FileName = new String(source.FileName);
+        }
+        if (source.FileMd5 != null) {
+            this.FileMd5 = new String(source.FileMd5);
+        }
+        if (source.FileSize != null) {
+            this.FileSize = new Long(source.FileSize);
+        }
+        if (source.DeviceNames != null) {
+            this.DeviceNames = new String[source.DeviceNames.length];
+            for (int i = 0; i < source.DeviceNames.length; i++) {
+                this.DeviceNames[i] = new String(source.DeviceNames[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

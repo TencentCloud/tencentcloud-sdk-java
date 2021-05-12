@@ -101,6 +101,26 @@ COS 腾讯云对象存储类型
         this.BucketInfo = BucketInfo;
     }
 
+    public StorageInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public StorageInfo(StorageInfo source) {
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.Url != null) {
+            this.Url = new String(source.Url);
+        }
+        if (source.BucketInfo != null) {
+            this.BucketInfo = new BucketInfo(source.BucketInfo);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

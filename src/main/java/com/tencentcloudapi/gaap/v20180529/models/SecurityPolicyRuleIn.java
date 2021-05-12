@@ -157,6 +157,32 @@ public class SecurityPolicyRuleIn extends AbstractModel{
         this.DestPortRange = DestPortRange;
     }
 
+    public SecurityPolicyRuleIn() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SecurityPolicyRuleIn(SecurityPolicyRuleIn source) {
+        if (source.SourceCidr != null) {
+            this.SourceCidr = new String(source.SourceCidr);
+        }
+        if (source.Action != null) {
+            this.Action = new String(source.Action);
+        }
+        if (source.AliasName != null) {
+            this.AliasName = new String(source.AliasName);
+        }
+        if (source.Protocol != null) {
+            this.Protocol = new String(source.Protocol);
+        }
+        if (source.DestPortRange != null) {
+            this.DestPortRange = new String(source.DestPortRange);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

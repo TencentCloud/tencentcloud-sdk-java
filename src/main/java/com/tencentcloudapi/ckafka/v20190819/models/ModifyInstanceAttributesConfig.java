@@ -91,6 +91,26 @@ public class ModifyInstanceAttributesConfig extends AbstractModel{
         this.DefaultReplicationFactor = DefaultReplicationFactor;
     }
 
+    public ModifyInstanceAttributesConfig() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyInstanceAttributesConfig(ModifyInstanceAttributesConfig source) {
+        if (source.AutoCreateTopicEnable != null) {
+            this.AutoCreateTopicEnable = new Boolean(source.AutoCreateTopicEnable);
+        }
+        if (source.DefaultNumPartitions != null) {
+            this.DefaultNumPartitions = new Long(source.DefaultNumPartitions);
+        }
+        if (source.DefaultReplicationFactor != null) {
+            this.DefaultReplicationFactor = new Long(source.DefaultReplicationFactor);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

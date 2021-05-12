@@ -68,6 +68,26 @@ public class EnableCcnRoutesRequest extends AbstractModel{
         this.RouteIds = RouteIds;
     }
 
+    public EnableCcnRoutesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public EnableCcnRoutesRequest(EnableCcnRoutesRequest source) {
+        if (source.CcnId != null) {
+            this.CcnId = new String(source.CcnId);
+        }
+        if (source.RouteIds != null) {
+            this.RouteIds = new String[source.RouteIds.length];
+            for (int i = 0; i < source.RouteIds.length; i++) {
+                this.RouteIds[i] = new String(source.RouteIds[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

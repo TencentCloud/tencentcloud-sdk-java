@@ -134,6 +134,29 @@ public class SgUnit extends AbstractModel{
         this.CreateTime = CreateTime;
     }
 
+    public SgUnit() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SgUnit(SgUnit source) {
+        if (source.SgId != null) {
+            this.SgId = new String(source.SgId);
+        }
+        if (source.SgName != null) {
+            this.SgName = new String(source.SgName);
+        }
+        if (source.SgRemark != null) {
+            this.SgRemark = new String(source.SgRemark);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

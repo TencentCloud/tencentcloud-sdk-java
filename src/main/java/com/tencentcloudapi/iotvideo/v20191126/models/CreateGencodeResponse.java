@@ -73,6 +73,23 @@ public class CreateGencodeResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public CreateGencodeResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateGencodeResponse(CreateGencodeResponse source) {
+        if (source.ZipCode != null) {
+            this.ZipCode = new String(source.ZipCode);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

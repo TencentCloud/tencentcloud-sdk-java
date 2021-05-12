@@ -183,6 +183,41 @@ public class TextItem extends AbstractModel{
         this.TextSize = TextSize;
     }
 
+    public TextItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TextItem(TextItem source) {
+        if (source.Words != null) {
+            this.Words = new Word[source.Words.length];
+            for (int i = 0; i < source.Words.length; i++) {
+                this.Words[i] = new Word(source.Words[i]);
+            }
+        }
+        if (source.Confidence != null) {
+            this.Confidence = new Float(source.Confidence);
+        }
+        if (source.Mbtm != null) {
+            this.Mbtm = new Long(source.Mbtm);
+        }
+        if (source.Metm != null) {
+            this.Metm = new Long(source.Metm);
+        }
+        if (source.Tag != null) {
+            this.Tag = new Long(source.Tag);
+        }
+        if (source.Text != null) {
+            this.Text = new String(source.Text);
+        }
+        if (source.TextSize != null) {
+            this.TextSize = new Long(source.TextSize);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

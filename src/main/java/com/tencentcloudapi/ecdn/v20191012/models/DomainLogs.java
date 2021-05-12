@@ -91,6 +91,26 @@ public class DomainLogs extends AbstractModel{
         this.LogPath = LogPath;
     }
 
+    public DomainLogs() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DomainLogs(DomainLogs source) {
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+        if (source.LogPath != null) {
+            this.LogPath = new String(source.LogPath);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

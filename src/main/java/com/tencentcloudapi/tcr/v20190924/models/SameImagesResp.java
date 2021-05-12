@@ -50,6 +50,23 @@ public class SameImagesResp extends AbstractModel{
         this.SameImages = SameImages;
     }
 
+    public SameImagesResp() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SameImagesResp(SameImagesResp source) {
+        if (source.SameImages != null) {
+            this.SameImages = new String[source.SameImages.length];
+            for (int i = 0; i < source.SameImages.length; i++) {
+                this.SameImages[i] = new String(source.SameImages[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

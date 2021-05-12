@@ -114,6 +114,32 @@ public class GetTransListHandlerResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public GetTransListHandlerResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GetTransListHandlerResponse(GetTransListHandlerResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.GroupPk != null) {
+            this.GroupPk = new String(source.GroupPk);
+        }
+        if (source.List != null) {
+            this.List = new BcosTransInfo[source.List.length];
+            for (int i = 0; i < source.List.length; i++) {
+                this.List[i] = new BcosTransInfo(source.List[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

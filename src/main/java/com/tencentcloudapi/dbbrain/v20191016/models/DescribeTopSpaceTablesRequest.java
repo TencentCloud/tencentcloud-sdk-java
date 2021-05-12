@@ -114,6 +114,29 @@ public class DescribeTopSpaceTablesRequest extends AbstractModel{
         this.Product = Product;
     }
 
+    public DescribeTopSpaceTablesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeTopSpaceTablesRequest(DescribeTopSpaceTablesRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.SortBy != null) {
+            this.SortBy = new String(source.SortBy);
+        }
+        if (source.Product != null) {
+            this.Product = new String(source.Product);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

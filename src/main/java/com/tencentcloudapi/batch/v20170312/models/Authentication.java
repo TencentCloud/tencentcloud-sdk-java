@@ -91,6 +91,26 @@ public class Authentication extends AbstractModel{
         this.SecretKey = SecretKey;
     }
 
+    public Authentication() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Authentication(Authentication source) {
+        if (source.Scene != null) {
+            this.Scene = new String(source.Scene);
+        }
+        if (source.SecretId != null) {
+            this.SecretId = new String(source.SecretId);
+        }
+        if (source.SecretKey != null) {
+            this.SecretKey = new String(source.SecretKey);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

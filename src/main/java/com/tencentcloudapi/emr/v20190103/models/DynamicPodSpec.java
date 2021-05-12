@@ -114,6 +114,29 @@ public class DynamicPodSpec extends AbstractModel{
         this.LimitMemory = LimitMemory;
     }
 
+    public DynamicPodSpec() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DynamicPodSpec(DynamicPodSpec source) {
+        if (source.RequestCpu != null) {
+            this.RequestCpu = new Float(source.RequestCpu);
+        }
+        if (source.LimitCpu != null) {
+            this.LimitCpu = new Float(source.LimitCpu);
+        }
+        if (source.RequestMemory != null) {
+            this.RequestMemory = new Float(source.RequestMemory);
+        }
+        if (source.LimitMemory != null) {
+            this.LimitMemory = new Float(source.LimitMemory);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -152,6 +152,41 @@ public class DescribeScdnTopDataResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeScdnTopDataResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeScdnTopDataResponse(DescribeScdnTopDataResponse source) {
+        if (source.TopTypeData != null) {
+            this.TopTypeData = new ScdnTypeData[source.TopTypeData.length];
+            for (int i = 0; i < source.TopTypeData.length; i++) {
+                this.TopTypeData[i] = new ScdnTypeData(source.TopTypeData[i]);
+            }
+        }
+        if (source.TopIpData != null) {
+            this.TopIpData = new ScdnTopData[source.TopIpData.length];
+            for (int i = 0; i < source.TopIpData.length; i++) {
+                this.TopIpData[i] = new ScdnTopData(source.TopIpData[i]);
+            }
+        }
+        if (source.Mode != null) {
+            this.Mode = new String(source.Mode);
+        }
+        if (source.TopUrlData != null) {
+            this.TopUrlData = new ScdnTopUrlData[source.TopUrlData.length];
+            for (int i = 0; i < source.TopUrlData.length; i++) {
+                this.TopUrlData[i] = new ScdnTopUrlData(source.TopUrlData[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

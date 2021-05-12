@@ -91,6 +91,29 @@ public class DeleteSubscriptionsRequest extends AbstractModel{
         this.EnvironmentId = EnvironmentId;
     }
 
+    public DeleteSubscriptionsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteSubscriptionsRequest(DeleteSubscriptionsRequest source) {
+        if (source.SubscriptionTopicSets != null) {
+            this.SubscriptionTopicSets = new SubscriptionTopic[source.SubscriptionTopicSets.length];
+            for (int i = 0; i < source.SubscriptionTopicSets.length; i++) {
+                this.SubscriptionTopicSets[i] = new SubscriptionTopic(source.SubscriptionTopicSets[i]);
+            }
+        }
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
+        if (source.EnvironmentId != null) {
+            this.EnvironmentId = new String(source.EnvironmentId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -68,6 +68,26 @@ public class DeregisterTargetGroupInstancesRequest extends AbstractModel{
         this.TargetGroupInstances = TargetGroupInstances;
     }
 
+    public DeregisterTargetGroupInstancesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeregisterTargetGroupInstancesRequest(DeregisterTargetGroupInstancesRequest source) {
+        if (source.TargetGroupId != null) {
+            this.TargetGroupId = new String(source.TargetGroupId);
+        }
+        if (source.TargetGroupInstances != null) {
+            this.TargetGroupInstances = new TargetGroupInstance[source.TargetGroupInstances.length];
+            for (int i = 0; i < source.TargetGroupInstances.length; i++) {
+                this.TargetGroupInstances[i] = new TargetGroupInstance(source.TargetGroupInstances[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

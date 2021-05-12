@@ -183,6 +183,47 @@ public class TransmitAudioStreamResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public TransmitAudioStreamResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TransmitAudioStreamResponse(TransmitAudioStreamResponse source) {
+        if (source.AsrStat != null) {
+            this.AsrStat = new ASRStat(source.AsrStat);
+        }
+        if (source.Texts != null) {
+            this.Texts = new WholeTextItem[source.Texts.length];
+            for (int i = 0; i < source.Texts.length; i++) {
+                this.Texts[i] = new WholeTextItem(source.Texts[i]);
+            }
+        }
+        if (source.VocabAnalysisDetailInfo != null) {
+            this.VocabAnalysisDetailInfo = new VocabDetailInfomation[source.VocabAnalysisDetailInfo.length];
+            for (int i = 0; i < source.VocabAnalysisDetailInfo.length; i++) {
+                this.VocabAnalysisDetailInfo[i] = new VocabDetailInfomation(source.VocabAnalysisDetailInfo[i]);
+            }
+        }
+        if (source.VocabAnalysisStatInfo != null) {
+            this.VocabAnalysisStatInfo = new VocabStatInfomation[source.VocabAnalysisStatInfo.length];
+            for (int i = 0; i < source.VocabAnalysisStatInfo.length; i++) {
+                this.VocabAnalysisStatInfo[i] = new VocabStatInfomation(source.VocabAnalysisStatInfo[i]);
+            }
+        }
+        if (source.AllTexts != null) {
+            this.AllTexts = new String(source.AllTexts);
+        }
+        if (source.AudioUrl != null) {
+            this.AudioUrl = new String(source.AudioUrl);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -126,6 +126,29 @@ public class ExportAttackLogsRequest extends AbstractModel{
         this.Quuid = Quuid;
     }
 
+    public ExportAttackLogsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ExportAttackLogsRequest(ExportAttackLogsRequest source) {
+        if (source.Filters != null) {
+            this.Filters = new Filters[source.Filters.length];
+            for (int i = 0; i < source.Filters.length; i++) {
+                this.Filters[i] = new Filters(source.Filters[i]);
+            }
+        }
+        if (source.Uuid != null) {
+            this.Uuid = new String(source.Uuid);
+        }
+        if (source.Quuid != null) {
+            this.Quuid = new String(source.Quuid);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

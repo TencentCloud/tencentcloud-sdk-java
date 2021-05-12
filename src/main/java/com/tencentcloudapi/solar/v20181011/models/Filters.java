@@ -91,6 +91,32 @@ public class Filters extends AbstractModel{
         this.UserIds = UserIds;
     }
 
+    public Filters() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Filters(Filters source) {
+        if (source.Type != null) {
+            this.Type = new Long(source.Type);
+        }
+        if (source.DeptIds != null) {
+            this.DeptIds = new String[source.DeptIds.length];
+            for (int i = 0; i < source.DeptIds.length; i++) {
+                this.DeptIds[i] = new String(source.DeptIds[i]);
+            }
+        }
+        if (source.UserIds != null) {
+            this.UserIds = new String[source.UserIds.length];
+            for (int i = 0; i < source.UserIds.length; i++) {
+                this.UserIds[i] = new String(source.UserIds[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

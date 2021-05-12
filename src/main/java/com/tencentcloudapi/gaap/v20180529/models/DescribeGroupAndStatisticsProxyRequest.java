@@ -45,6 +45,20 @@ public class DescribeGroupAndStatisticsProxyRequest extends AbstractModel{
         this.ProjectId = ProjectId;
     }
 
+    public DescribeGroupAndStatisticsProxyRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeGroupAndStatisticsProxyRequest(DescribeGroupAndStatisticsProxyRequest source) {
+        if (source.ProjectId != null) {
+            this.ProjectId = new Long(source.ProjectId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -341,6 +341,56 @@ finished 已完成
         this.OutBoundCallee = OutBoundCallee;
     }
 
+    public PSTNSession() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PSTNSession(PSTNSession source) {
+        if (source.SessionID != null) {
+            this.SessionID = new String(source.SessionID);
+        }
+        if (source.RoomID != null) {
+            this.RoomID = new String(source.RoomID);
+        }
+        if (source.Caller != null) {
+            this.Caller = new String(source.Caller);
+        }
+        if (source.Callee != null) {
+            this.Callee = new String(source.Callee);
+        }
+        if (source.StartTimestamp != null) {
+            this.StartTimestamp = new Long(source.StartTimestamp);
+        }
+        if (source.RingTimestamp != null) {
+            this.RingTimestamp = new Long(source.RingTimestamp);
+        }
+        if (source.AcceptTimestamp != null) {
+            this.AcceptTimestamp = new Long(source.AcceptTimestamp);
+        }
+        if (source.StaffEmail != null) {
+            this.StaffEmail = new String(source.StaffEmail);
+        }
+        if (source.StaffNumber != null) {
+            this.StaffNumber = new String(source.StaffNumber);
+        }
+        if (source.SessionStatus != null) {
+            this.SessionStatus = new String(source.SessionStatus);
+        }
+        if (source.Direction != null) {
+            this.Direction = new Long(source.Direction);
+        }
+        if (source.OutBoundCaller != null) {
+            this.OutBoundCaller = new String(source.OutBoundCaller);
+        }
+        if (source.OutBoundCallee != null) {
+            this.OutBoundCallee = new String(source.OutBoundCallee);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

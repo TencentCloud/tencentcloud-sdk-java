@@ -91,6 +91,26 @@ public class CosInputInfo extends AbstractModel{
         this.Object = Object;
     }
 
+    public CosInputInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CosInputInfo(CosInputInfo source) {
+        if (source.Bucket != null) {
+            this.Bucket = new String(source.Bucket);
+        }
+        if (source.Region != null) {
+            this.Region = new String(source.Region);
+        }
+        if (source.Object != null) {
+            this.Object = new String(source.Object);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

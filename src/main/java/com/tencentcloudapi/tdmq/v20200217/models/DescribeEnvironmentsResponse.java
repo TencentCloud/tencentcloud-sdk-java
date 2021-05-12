@@ -91,6 +91,29 @@ public class DescribeEnvironmentsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeEnvironmentsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeEnvironmentsResponse(DescribeEnvironmentsResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.EnvironmentSet != null) {
+            this.EnvironmentSet = new Environment[source.EnvironmentSet.length];
+            for (int i = 0; i < source.EnvironmentSet.length; i++) {
+                this.EnvironmentSet[i] = new Environment(source.EnvironmentSet[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

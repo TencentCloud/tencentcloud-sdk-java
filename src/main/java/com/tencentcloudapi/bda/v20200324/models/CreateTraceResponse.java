@@ -152,6 +152,35 @@ public class CreateTraceResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public CreateTraceResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateTraceResponse(CreateTraceResponse source) {
+        if (source.TraceId != null) {
+            this.TraceId = new String(source.TraceId);
+        }
+        if (source.BodyModelVersion != null) {
+            this.BodyModelVersion = new String(source.BodyModelVersion);
+        }
+        if (source.InputRetCode != null) {
+            this.InputRetCode = new Long(source.InputRetCode);
+        }
+        if (source.InputRetCodeDetails != null) {
+            this.InputRetCodeDetails = new Long[source.InputRetCodeDetails.length];
+            for (int i = 0; i < source.InputRetCodeDetails.length; i++) {
+                this.InputRetCodeDetails[i] = new Long(source.InputRetCodeDetails[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

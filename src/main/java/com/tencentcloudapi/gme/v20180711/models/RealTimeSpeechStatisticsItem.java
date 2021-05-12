@@ -160,6 +160,35 @@ public class RealTimeSpeechStatisticsItem extends AbstractModel{
         this.OverseaDuration = OverseaDuration;
     }
 
+    public RealTimeSpeechStatisticsItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RealTimeSpeechStatisticsItem(RealTimeSpeechStatisticsItem source) {
+        if (source.MainLandDau != null) {
+            this.MainLandDau = new Long(source.MainLandDau);
+        }
+        if (source.MainLandPcu != null) {
+            this.MainLandPcu = new Long(source.MainLandPcu);
+        }
+        if (source.MainLandDuration != null) {
+            this.MainLandDuration = new Long(source.MainLandDuration);
+        }
+        if (source.OverseaDau != null) {
+            this.OverseaDau = new Long(source.OverseaDau);
+        }
+        if (source.OverseaPcu != null) {
+            this.OverseaPcu = new Long(source.OverseaPcu);
+        }
+        if (source.OverseaDuration != null) {
+            this.OverseaDuration = new Long(source.OverseaDuration);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

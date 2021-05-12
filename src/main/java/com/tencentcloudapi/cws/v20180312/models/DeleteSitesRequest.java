@@ -45,6 +45,23 @@ public class DeleteSitesRequest extends AbstractModel{
         this.SiteIds = SiteIds;
     }
 
+    public DeleteSitesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteSitesRequest(DeleteSitesRequest source) {
+        if (source.SiteIds != null) {
+            this.SiteIds = new Long[source.SiteIds.length];
+            for (int i = 0; i < source.SiteIds.length; i++) {
+                this.SiteIds[i] = new Long(source.SiteIds[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -154,6 +154,35 @@ public class DescribeBundlesRequest extends AbstractModel{
         this.Filters = Filters;
     }
 
+    public DescribeBundlesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeBundlesRequest(DescribeBundlesRequest source) {
+        if (source.BundleIds != null) {
+            this.BundleIds = new String[source.BundleIds.length];
+            for (int i = 0; i < source.BundleIds.length; i++) {
+                this.BundleIds[i] = new String(source.BundleIds[i]);
+            }
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.Filters != null) {
+            this.Filters = new Filter[source.Filters.length];
+            for (int i = 0; i < source.Filters.length; i++) {
+                this.Filters[i] = new Filter(source.Filters[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

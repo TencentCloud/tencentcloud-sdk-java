@@ -114,6 +114,29 @@ public class ListPoliciesRequest extends AbstractModel{
         this.Keyword = Keyword;
     }
 
+    public ListPoliciesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ListPoliciesRequest(ListPoliciesRequest source) {
+        if (source.Rp != null) {
+            this.Rp = new Long(source.Rp);
+        }
+        if (source.Page != null) {
+            this.Page = new Long(source.Page);
+        }
+        if (source.Scope != null) {
+            this.Scope = new String(source.Scope);
+        }
+        if (source.Keyword != null) {
+            this.Keyword = new String(source.Keyword);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -175,6 +175,35 @@ Unit :ms
         this.FullUrl = FullUrl;
     }
 
+    public Music() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Music(Music source) {
+        if (source.Url != null) {
+            this.Url = new String(source.Url);
+        }
+        if (source.FileSize != null) {
+            this.FileSize = new Long(source.FileSize);
+        }
+        if (source.FileExtension != null) {
+            this.FileExtension = new String(source.FileExtension);
+        }
+        if (source.AuditionBegin != null) {
+            this.AuditionBegin = new Long(source.AuditionBegin);
+        }
+        if (source.AuditionEnd != null) {
+            this.AuditionEnd = new Long(source.AuditionEnd);
+        }
+        if (source.FullUrl != null) {
+            this.FullUrl = new String(source.FullUrl);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

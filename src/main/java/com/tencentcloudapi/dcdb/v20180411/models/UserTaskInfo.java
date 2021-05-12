@@ -275,6 +275,50 @@ public class UserTaskInfo extends AbstractModel{
         this.RegionId = RegionId;
     }
 
+    public UserTaskInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UserTaskInfo(UserTaskInfo source) {
+        if (source.Id != null) {
+            this.Id = new Long(source.Id);
+        }
+        if (source.AppId != null) {
+            this.AppId = new Long(source.AppId);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.UserTaskType != null) {
+            this.UserTaskType = new Long(source.UserTaskType);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+        if (source.ErrMsg != null) {
+            this.ErrMsg = new String(source.ErrMsg);
+        }
+        if (source.InputData != null) {
+            this.InputData = new String(source.InputData);
+        }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.InstanceName != null) {
+            this.InstanceName = new String(source.InstanceName);
+        }
+        if (source.RegionId != null) {
+            this.RegionId = new Long(source.RegionId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

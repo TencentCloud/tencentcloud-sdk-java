@@ -68,6 +68,23 @@ public class ClassInfo extends AbstractModel{
         this.ClassPath = ClassPath;
     }
 
+    public ClassInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ClassInfo(ClassInfo source) {
+        if (source.Owner != null) {
+            this.Owner = new Entity(source.Owner);
+        }
+        if (source.ClassPath != null) {
+            this.ClassPath = new String(source.ClassPath);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

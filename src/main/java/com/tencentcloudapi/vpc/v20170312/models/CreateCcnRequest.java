@@ -160,6 +160,38 @@ public class CreateCcnRequest extends AbstractModel{
         this.Tags = Tags;
     }
 
+    public CreateCcnRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateCcnRequest(CreateCcnRequest source) {
+        if (source.CcnName != null) {
+            this.CcnName = new String(source.CcnName);
+        }
+        if (source.CcnDescription != null) {
+            this.CcnDescription = new String(source.CcnDescription);
+        }
+        if (source.QosLevel != null) {
+            this.QosLevel = new String(source.QosLevel);
+        }
+        if (source.InstanceChargeType != null) {
+            this.InstanceChargeType = new String(source.InstanceChargeType);
+        }
+        if (source.BandwidthLimitType != null) {
+            this.BandwidthLimitType = new String(source.BandwidthLimitType);
+        }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

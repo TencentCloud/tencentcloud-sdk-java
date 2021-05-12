@@ -584,6 +584,89 @@ public class TaskInfo extends AbstractModel{
         this.TaskSubType = TaskSubType;
     }
 
+    public TaskInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TaskInfo(TaskInfo source) {
+        if (source.TaskId != null) {
+            this.TaskId = new String(source.TaskId);
+        }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.Alias != null) {
+            this.Alias = new String(source.Alias);
+        }
+        if (source.TaskTypeId != null) {
+            this.TaskTypeId = new Long(source.TaskTypeId);
+        }
+        if (source.TaskStatus != null) {
+            this.TaskStatus = new Long(source.TaskStatus);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.AuthTime != null) {
+            this.AuthTime = new String(source.AuthTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+        if (source.TaskDetail != null) {
+            this.TaskDetail = new String(source.TaskDetail);
+        }
+        if (source.DeviceStatus != null) {
+            this.DeviceStatus = new Long(source.DeviceStatus);
+        }
+        if (source.OperateStatus != null) {
+            this.OperateStatus = new Long(source.OperateStatus);
+        }
+        if (source.Zone != null) {
+            this.Zone = new String(source.Zone);
+        }
+        if (source.Region != null) {
+            this.Region = new String(source.Region);
+        }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.SubnetId != null) {
+            this.SubnetId = new String(source.SubnetId);
+        }
+        if (source.SubnetName != null) {
+            this.SubnetName = new String(source.SubnetName);
+        }
+        if (source.VpcName != null) {
+            this.VpcName = new String(source.VpcName);
+        }
+        if (source.VpcCidrBlock != null) {
+            this.VpcCidrBlock = new String(source.VpcCidrBlock);
+        }
+        if (source.SubnetCidrBlock != null) {
+            this.SubnetCidrBlock = new String(source.SubnetCidrBlock);
+        }
+        if (source.WanIp != null) {
+            this.WanIp = new String(source.WanIp);
+        }
+        if (source.LanIp != null) {
+            this.LanIp = new String(source.LanIp);
+        }
+        if (source.MgtIp != null) {
+            this.MgtIp = new String(source.MgtIp);
+        }
+        if (source.TaskTypeName != null) {
+            this.TaskTypeName = new String(source.TaskTypeName);
+        }
+        if (source.TaskSubType != null) {
+            this.TaskSubType = new String(source.TaskSubType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

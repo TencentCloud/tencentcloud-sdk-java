@@ -160,6 +160,35 @@ public class DescribeDisasterRecoverGroupQuotaResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeDisasterRecoverGroupQuotaResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeDisasterRecoverGroupQuotaResponse(DescribeDisasterRecoverGroupQuotaResponse source) {
+        if (source.GroupQuota != null) {
+            this.GroupQuota = new Long(source.GroupQuota);
+        }
+        if (source.CurrentNum != null) {
+            this.CurrentNum = new Long(source.CurrentNum);
+        }
+        if (source.CvmInHostGroupQuota != null) {
+            this.CvmInHostGroupQuota = new Long(source.CvmInHostGroupQuota);
+        }
+        if (source.CvmInSwGroupQuota != null) {
+            this.CvmInSwGroupQuota = new Long(source.CvmInSwGroupQuota);
+        }
+        if (source.CvmInRackGroupQuota != null) {
+            this.CvmInRackGroupQuota = new Long(source.CvmInRackGroupQuota);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

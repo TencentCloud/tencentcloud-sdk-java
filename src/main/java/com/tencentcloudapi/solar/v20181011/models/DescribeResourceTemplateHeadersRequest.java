@@ -45,6 +45,20 @@ public class DescribeResourceTemplateHeadersRequest extends AbstractModel{
         this.WxAppId = WxAppId;
     }
 
+    public DescribeResourceTemplateHeadersRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeResourceTemplateHeadersRequest(DescribeResourceTemplateHeadersRequest source) {
+        if (source.WxAppId != null) {
+            this.WxAppId = new String(source.WxAppId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

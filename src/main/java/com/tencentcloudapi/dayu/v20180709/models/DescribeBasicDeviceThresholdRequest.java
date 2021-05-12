@@ -183,6 +183,38 @@ public class DescribeBasicDeviceThresholdRequest extends AbstractModel{
         this.BasicIspCode = BasicIspCode;
     }
 
+    public DescribeBasicDeviceThresholdRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeBasicDeviceThresholdRequest(DescribeBasicDeviceThresholdRequest source) {
+        if (source.BasicIp != null) {
+            this.BasicIp = new String(source.BasicIp);
+        }
+        if (source.BasicRegion != null) {
+            this.BasicRegion = new String(source.BasicRegion);
+        }
+        if (source.BasicBizType != null) {
+            this.BasicBizType = new String(source.BasicBizType);
+        }
+        if (source.BasicDeviceType != null) {
+            this.BasicDeviceType = new String(source.BasicDeviceType);
+        }
+        if (source.BasicCheckFlag != null) {
+            this.BasicCheckFlag = new Long(source.BasicCheckFlag);
+        }
+        if (source.BasicIpInstance != null) {
+            this.BasicIpInstance = new String(source.BasicIpInstance);
+        }
+        if (source.BasicIspCode != null) {
+            this.BasicIspCode = new Long(source.BasicIspCode);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

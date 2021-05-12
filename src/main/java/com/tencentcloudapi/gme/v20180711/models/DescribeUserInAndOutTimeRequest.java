@@ -91,6 +91,26 @@ public class DescribeUserInAndOutTimeRequest extends AbstractModel{
         this.UserId = UserId;
     }
 
+    public DescribeUserInAndOutTimeRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeUserInAndOutTimeRequest(DescribeUserInAndOutTimeRequest source) {
+        if (source.BizId != null) {
+            this.BizId = new Long(source.BizId);
+        }
+        if (source.RoomId != null) {
+            this.RoomId = new Long(source.RoomId);
+        }
+        if (source.UserId != null) {
+            this.UserId = new Long(source.UserId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

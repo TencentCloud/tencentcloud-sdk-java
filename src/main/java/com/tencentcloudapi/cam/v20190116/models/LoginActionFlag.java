@@ -137,6 +137,32 @@ public class LoginActionFlag extends AbstractModel{
         this.Custom = Custom;
     }
 
+    public LoginActionFlag() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public LoginActionFlag(LoginActionFlag source) {
+        if (source.Phone != null) {
+            this.Phone = new Long(source.Phone);
+        }
+        if (source.Token != null) {
+            this.Token = new Long(source.Token);
+        }
+        if (source.Stoken != null) {
+            this.Stoken = new Long(source.Stoken);
+        }
+        if (source.Wechat != null) {
+            this.Wechat = new Long(source.Wechat);
+        }
+        if (source.Custom != null) {
+            this.Custom = new Long(source.Custom);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

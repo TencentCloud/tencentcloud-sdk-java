@@ -252,6 +252,53 @@ public class PsaRegulation extends AbstractModel{
         this.TaskTypeIds = TaskTypeIds;
     }
 
+    public PsaRegulation() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PsaRegulation(PsaRegulation source) {
+        if (source.PsaId != null) {
+            this.PsaId = new String(source.PsaId);
+        }
+        if (source.PsaName != null) {
+            this.PsaName = new String(source.PsaName);
+        }
+        if (source.TagCount != null) {
+            this.TagCount = new Long(source.TagCount);
+        }
+        if (source.InstanceCount != null) {
+            this.InstanceCount = new Long(source.InstanceCount);
+        }
+        if (source.RepairCount != null) {
+            this.RepairCount = new Long(source.RepairCount);
+        }
+        if (source.RepairLimit != null) {
+            this.RepairLimit = new Long(source.RepairLimit);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.PsaDescription != null) {
+            this.PsaDescription = new String(source.PsaDescription);
+        }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
+        if (source.TaskTypeIds != null) {
+            this.TaskTypeIds = new Long[source.TaskTypeIds.length];
+            for (int i = 0; i < source.TaskTypeIds.length; i++) {
+                this.TaskTypeIds[i] = new Long(source.TaskTypeIds[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

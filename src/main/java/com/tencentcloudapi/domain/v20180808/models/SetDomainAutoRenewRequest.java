@@ -83,6 +83,23 @@ public class SetDomainAutoRenewRequest extends AbstractModel{
         this.AutoRenew = AutoRenew;
     }
 
+    public SetDomainAutoRenewRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SetDomainAutoRenewRequest(SetDomainAutoRenewRequest source) {
+        if (source.DomainId != null) {
+            this.DomainId = new String(source.DomainId);
+        }
+        if (source.AutoRenew != null) {
+            this.AutoRenew = new Long(source.AutoRenew);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

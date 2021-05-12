@@ -45,6 +45,20 @@ public class DescribeCcnInstancesRequest extends AbstractModel{
         this.FleetId = FleetId;
     }
 
+    public DescribeCcnInstancesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeCcnInstancesRequest(DescribeCcnInstancesRequest source) {
+        if (source.FleetId != null) {
+            this.FleetId = new String(source.FleetId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

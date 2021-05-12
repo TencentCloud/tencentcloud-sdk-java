@@ -206,6 +206,41 @@ public class FaceDetectStatistic extends AbstractModel{
         this.SideFaceRealRatio = SideFaceRealRatio;
     }
 
+    public FaceDetectStatistic() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public FaceDetectStatistic(FaceDetectStatistic source) {
+        if (source.FaceSizeRatio != null) {
+            this.FaceSizeRatio = new Float(source.FaceSizeRatio);
+        }
+        if (source.FrontalFaceCount != null) {
+            this.FrontalFaceCount = new Long(source.FrontalFaceCount);
+        }
+        if (source.FrontalFaceRatio != null) {
+            this.FrontalFaceRatio = new Float(source.FrontalFaceRatio);
+        }
+        if (source.FrontalFaceRealRatio != null) {
+            this.FrontalFaceRealRatio = new Float(source.FrontalFaceRealRatio);
+        }
+        if (source.PersonId != null) {
+            this.PersonId = new String(source.PersonId);
+        }
+        if (source.SideFaceCount != null) {
+            this.SideFaceCount = new Long(source.SideFaceCount);
+        }
+        if (source.SideFaceRatio != null) {
+            this.SideFaceRatio = new Float(source.SideFaceRatio);
+        }
+        if (source.SideFaceRealRatio != null) {
+            this.SideFaceRealRatio = new Float(source.SideFaceRealRatio);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

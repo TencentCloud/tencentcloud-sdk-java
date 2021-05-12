@@ -252,6 +252,53 @@ public class CreatePersonRequest extends AbstractModel{
         this.Urls = Urls;
     }
 
+    public CreatePersonRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreatePersonRequest(CreatePersonRequest source) {
+        if (source.LibraryId != null) {
+            this.LibraryId = new String(source.LibraryId);
+        }
+        if (source.PersonName != null) {
+            this.PersonName = new String(source.PersonName);
+        }
+        if (source.Images != null) {
+            this.Images = new String[source.Images.length];
+            for (int i = 0; i < source.Images.length; i++) {
+                this.Images[i] = new String(source.Images[i]);
+            }
+        }
+        if (source.JobNumber != null) {
+            this.JobNumber = new String(source.JobNumber);
+        }
+        if (source.Mail != null) {
+            this.Mail = new String(source.Mail);
+        }
+        if (source.Male != null) {
+            this.Male = new Long(source.Male);
+        }
+        if (source.PersonId != null) {
+            this.PersonId = new String(source.PersonId);
+        }
+        if (source.PhoneNumber != null) {
+            this.PhoneNumber = new String(source.PhoneNumber);
+        }
+        if (source.StudentNumber != null) {
+            this.StudentNumber = new String(source.StudentNumber);
+        }
+        if (source.Urls != null) {
+            this.Urls = new String[source.Urls.length];
+            for (int i = 0; i < source.Urls.length; i++) {
+                this.Urls[i] = new String(source.Urls[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

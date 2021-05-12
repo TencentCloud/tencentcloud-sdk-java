@@ -68,6 +68,23 @@ public class PlacedPlayerSession extends AbstractModel{
         this.PlayerSessionId = PlayerSessionId;
     }
 
+    public PlacedPlayerSession() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PlacedPlayerSession(PlacedPlayerSession source) {
+        if (source.PlayerId != null) {
+            this.PlayerId = new String(source.PlayerId);
+        }
+        if (source.PlayerSessionId != null) {
+            this.PlayerSessionId = new String(source.PlayerSessionId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

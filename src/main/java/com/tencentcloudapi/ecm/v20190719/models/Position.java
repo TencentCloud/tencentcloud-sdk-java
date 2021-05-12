@@ -160,6 +160,35 @@ public class Position extends AbstractModel{
         this.RegionInfo = RegionInfo;
     }
 
+    public Position() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Position(Position source) {
+        if (source.ZoneInfo != null) {
+            this.ZoneInfo = new ZoneInfo(source.ZoneInfo);
+        }
+        if (source.Country != null) {
+            this.Country = new Country(source.Country);
+        }
+        if (source.Area != null) {
+            this.Area = new Area(source.Area);
+        }
+        if (source.Province != null) {
+            this.Province = new Province(source.Province);
+        }
+        if (source.City != null) {
+            this.City = new City(source.City);
+        }
+        if (source.RegionInfo != null) {
+            this.RegionInfo = new RegionInfo(source.RegionInfo);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

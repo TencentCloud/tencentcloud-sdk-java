@@ -68,6 +68,23 @@ public class CheckPhoneAndNameRequest extends AbstractModel{
         this.Name = Name;
     }
 
+    public CheckPhoneAndNameRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CheckPhoneAndNameRequest(CheckPhoneAndNameRequest source) {
+        if (source.Mobile != null) {
+            this.Mobile = new String(source.Mobile);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

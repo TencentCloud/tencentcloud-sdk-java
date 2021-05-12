@@ -91,6 +91,26 @@ public class AppGetTokenRequest extends AbstractModel{
         this.Expire = Expire;
     }
 
+    public AppGetTokenRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AppGetTokenRequest(AppGetTokenRequest source) {
+        if (source.UserName != null) {
+            this.UserName = new String(source.UserName);
+        }
+        if (source.Password != null) {
+            this.Password = new String(source.Password);
+        }
+        if (source.Expire != null) {
+            this.Expire = new Long(source.Expire);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

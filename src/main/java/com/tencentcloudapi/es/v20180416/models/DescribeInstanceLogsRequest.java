@@ -236,6 +236,41 @@ public class DescribeInstanceLogsRequest extends AbstractModel{
         this.OrderByType = OrderByType;
     }
 
+    public DescribeInstanceLogsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeInstanceLogsRequest(DescribeInstanceLogsRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.LogType != null) {
+            this.LogType = new Long(source.LogType);
+        }
+        if (source.SearchKey != null) {
+            this.SearchKey = new String(source.SearchKey);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.OrderByType != null) {
+            this.OrderByType = new Long(source.OrderByType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

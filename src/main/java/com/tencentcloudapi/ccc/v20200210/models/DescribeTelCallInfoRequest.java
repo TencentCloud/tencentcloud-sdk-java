@@ -91,6 +91,29 @@ public class DescribeTelCallInfoRequest extends AbstractModel{
         this.SdkAppIdList = SdkAppIdList;
     }
 
+    public DescribeTelCallInfoRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeTelCallInfoRequest(DescribeTelCallInfoRequest source) {
+        if (source.StartTimeStamp != null) {
+            this.StartTimeStamp = new Long(source.StartTimeStamp);
+        }
+        if (source.EndTimeStamp != null) {
+            this.EndTimeStamp = new Long(source.EndTimeStamp);
+        }
+        if (source.SdkAppIdList != null) {
+            this.SdkAppIdList = new Long[source.SdkAppIdList.length];
+            for (int i = 0; i < source.SdkAppIdList.length; i++) {
+                this.SdkAppIdList[i] = new Long(source.SdkAppIdList[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

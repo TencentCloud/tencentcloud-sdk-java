@@ -241,6 +241,41 @@ public class DescribeTaskDetailResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeTaskDetailResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeTaskDetailResponse(DescribeTaskDetailResponse source) {
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.Progress != null) {
+            this.Progress = new Long(source.Progress);
+        }
+        if (source.ErrCode != null) {
+            this.ErrCode = new Long(source.ErrCode);
+        }
+        if (source.ErrMsg != null) {
+            this.ErrMsg = new String(source.ErrMsg);
+        }
+        if (source.TaskType != null) {
+            this.TaskType = new String(source.TaskType);
+        }
+        if (source.VideoEditProjectOutput != null) {
+            this.VideoEditProjectOutput = new VideoEditProjectOutput(source.VideoEditProjectOutput);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

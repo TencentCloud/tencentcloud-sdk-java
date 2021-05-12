@@ -134,6 +134,41 @@ public class CaptchaOperDataRes extends AbstractModel{
         this.OperDataTryTimesDistributeUnitArray = OperDataTryTimesDistributeUnitArray;
     }
 
+    public CaptchaOperDataRes() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CaptchaOperDataRes(CaptchaOperDataRes source) {
+        if (source.OperDataLoadTimeUnitArray != null) {
+            this.OperDataLoadTimeUnitArray = new CaptchaOperDataLoadTimeUnit[source.OperDataLoadTimeUnitArray.length];
+            for (int i = 0; i < source.OperDataLoadTimeUnitArray.length; i++) {
+                this.OperDataLoadTimeUnitArray[i] = new CaptchaOperDataLoadTimeUnit(source.OperDataLoadTimeUnitArray[i]);
+            }
+        }
+        if (source.OperDataInterceptUnitArray != null) {
+            this.OperDataInterceptUnitArray = new CaptchaOperDataInterceptUnit[source.OperDataInterceptUnitArray.length];
+            for (int i = 0; i < source.OperDataInterceptUnitArray.length; i++) {
+                this.OperDataInterceptUnitArray[i] = new CaptchaOperDataInterceptUnit(source.OperDataInterceptUnitArray[i]);
+            }
+        }
+        if (source.OperDataTryTimesUnitArray != null) {
+            this.OperDataTryTimesUnitArray = new CaptchaOperDataTryTimesUnit[source.OperDataTryTimesUnitArray.length];
+            for (int i = 0; i < source.OperDataTryTimesUnitArray.length; i++) {
+                this.OperDataTryTimesUnitArray[i] = new CaptchaOperDataTryTimesUnit(source.OperDataTryTimesUnitArray[i]);
+            }
+        }
+        if (source.OperDataTryTimesDistributeUnitArray != null) {
+            this.OperDataTryTimesDistributeUnitArray = new CaptchaOperDataTryTimesDistributeUnit[source.OperDataTryTimesDistributeUnitArray.length];
+            for (int i = 0; i < source.OperDataTryTimesDistributeUnitArray.length; i++) {
+                this.OperDataTryTimesDistributeUnitArray[i] = new CaptchaOperDataTryTimesDistributeUnit(source.OperDataTryTimesDistributeUnitArray[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

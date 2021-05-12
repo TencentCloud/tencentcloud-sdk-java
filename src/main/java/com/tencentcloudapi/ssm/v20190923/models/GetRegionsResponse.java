@@ -68,6 +68,26 @@ public class GetRegionsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public GetRegionsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GetRegionsResponse(GetRegionsResponse source) {
+        if (source.Regions != null) {
+            this.Regions = new String[source.Regions.length];
+            for (int i = 0; i < source.Regions.length; i++) {
+                this.Regions[i] = new String(source.Regions[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -252,6 +252,77 @@ public class HttpStatusMap extends AbstractModel{
         this.SourceHttp5xx = SourceHttp5xx;
     }
 
+    public HttpStatusMap() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public HttpStatusMap(HttpStatusMap source) {
+        if (source.Http2xx != null) {
+            this.Http2xx = new Float[source.Http2xx.length];
+            for (int i = 0; i < source.Http2xx.length; i++) {
+                this.Http2xx[i] = new Float(source.Http2xx[i]);
+            }
+        }
+        if (source.Http3xx != null) {
+            this.Http3xx = new Float[source.Http3xx.length];
+            for (int i = 0; i < source.Http3xx.length; i++) {
+                this.Http3xx[i] = new Float(source.Http3xx[i]);
+            }
+        }
+        if (source.Http404 != null) {
+            this.Http404 = new Float[source.Http404.length];
+            for (int i = 0; i < source.Http404.length; i++) {
+                this.Http404[i] = new Float(source.Http404[i]);
+            }
+        }
+        if (source.Http4xx != null) {
+            this.Http4xx = new Float[source.Http4xx.length];
+            for (int i = 0; i < source.Http4xx.length; i++) {
+                this.Http4xx[i] = new Float(source.Http4xx[i]);
+            }
+        }
+        if (source.Http5xx != null) {
+            this.Http5xx = new Float[source.Http5xx.length];
+            for (int i = 0; i < source.Http5xx.length; i++) {
+                this.Http5xx[i] = new Float(source.Http5xx[i]);
+            }
+        }
+        if (source.SourceHttp2xx != null) {
+            this.SourceHttp2xx = new Float[source.SourceHttp2xx.length];
+            for (int i = 0; i < source.SourceHttp2xx.length; i++) {
+                this.SourceHttp2xx[i] = new Float(source.SourceHttp2xx[i]);
+            }
+        }
+        if (source.SourceHttp3xx != null) {
+            this.SourceHttp3xx = new Float[source.SourceHttp3xx.length];
+            for (int i = 0; i < source.SourceHttp3xx.length; i++) {
+                this.SourceHttp3xx[i] = new Float(source.SourceHttp3xx[i]);
+            }
+        }
+        if (source.SourceHttp404 != null) {
+            this.SourceHttp404 = new Float[source.SourceHttp404.length];
+            for (int i = 0; i < source.SourceHttp404.length; i++) {
+                this.SourceHttp404[i] = new Float(source.SourceHttp404[i]);
+            }
+        }
+        if (source.SourceHttp4xx != null) {
+            this.SourceHttp4xx = new Float[source.SourceHttp4xx.length];
+            for (int i = 0; i < source.SourceHttp4xx.length; i++) {
+                this.SourceHttp4xx[i] = new Float(source.SourceHttp4xx[i]);
+            }
+        }
+        if (source.SourceHttp5xx != null) {
+            this.SourceHttp5xx = new Float[source.SourceHttp5xx.length];
+            for (int i = 0; i < source.SourceHttp5xx.length; i++) {
+                this.SourceHttp5xx[i] = new Float(source.SourceHttp5xx[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

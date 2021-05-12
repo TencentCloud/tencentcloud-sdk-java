@@ -73,6 +73,23 @@ public class SmsSid extends AbstractModel{
         this.Sid = Sid;
     }
 
+    public SmsSid() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SmsSid(SmsSid source) {
+        if (source.Iccid != null) {
+            this.Iccid = new String(source.Iccid);
+        }
+        if (source.Sid != null) {
+            this.Sid = new String(source.Sid);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

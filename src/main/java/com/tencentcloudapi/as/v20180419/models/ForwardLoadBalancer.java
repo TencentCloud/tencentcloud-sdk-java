@@ -137,6 +137,35 @@ public class ForwardLoadBalancer extends AbstractModel{
         this.Region = Region;
     }
 
+    public ForwardLoadBalancer() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ForwardLoadBalancer(ForwardLoadBalancer source) {
+        if (source.LoadBalancerId != null) {
+            this.LoadBalancerId = new String(source.LoadBalancerId);
+        }
+        if (source.ListenerId != null) {
+            this.ListenerId = new String(source.ListenerId);
+        }
+        if (source.TargetAttributes != null) {
+            this.TargetAttributes = new TargetAttribute[source.TargetAttributes.length];
+            for (int i = 0; i < source.TargetAttributes.length; i++) {
+                this.TargetAttributes[i] = new TargetAttribute(source.TargetAttributes[i]);
+            }
+        }
+        if (source.LocationId != null) {
+            this.LocationId = new String(source.LocationId);
+        }
+        if (source.Region != null) {
+            this.Region = new String(source.Region);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -91,6 +91,26 @@ public class BindCloudResourceRequest extends AbstractModel{
         this.ResourceId = ResourceId;
     }
 
+    public BindCloudResourceRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public BindCloudResourceRequest(BindCloudResourceRequest source) {
+        if (source.KeyId != null) {
+            this.KeyId = new String(source.KeyId);
+        }
+        if (source.ProductId != null) {
+            this.ProductId = new String(source.ProductId);
+        }
+        if (source.ResourceId != null) {
+            this.ResourceId = new String(source.ResourceId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

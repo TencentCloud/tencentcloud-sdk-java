@@ -101,6 +101,29 @@ public class DescribeCloudBaseProjectLatestVersionListResponse extends AbstractM
         this.RequestId = RequestId;
     }
 
+    public DescribeCloudBaseProjectLatestVersionListResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeCloudBaseProjectLatestVersionListResponse(DescribeCloudBaseProjectLatestVersionListResponse source) {
+        if (source.ProjectList != null) {
+            this.ProjectList = new CloudBaseProjectVersion[source.ProjectList.length];
+            for (int i = 0; i < source.ProjectList.length; i++) {
+                this.ProjectList[i] = new CloudBaseProjectVersion(source.ProjectList[i]);
+            }
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -45,6 +45,20 @@ public class DeleteScheduledActionRequest extends AbstractModel{
         this.ScheduledActionId = ScheduledActionId;
     }
 
+    public DeleteScheduledActionRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteScheduledActionRequest(DeleteScheduledActionRequest source) {
+        if (source.ScheduledActionId != null) {
+            this.ScheduledActionId = new String(source.ScheduledActionId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

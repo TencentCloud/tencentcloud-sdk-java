@@ -152,6 +152,35 @@ public class DescribeDeviceActionHistoryResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeDeviceActionHistoryResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeDeviceActionHistoryResponse(DescribeDeviceActionHistoryResponse source) {
+        if (source.TotalCounts != null) {
+            this.TotalCounts = new Long(source.TotalCounts);
+        }
+        if (source.ActionHistories != null) {
+            this.ActionHistories = new ActionHistory[source.ActionHistories.length];
+            for (int i = 0; i < source.ActionHistories.length; i++) {
+                this.ActionHistories[i] = new ActionHistory(source.ActionHistories[i]);
+            }
+        }
+        if (source.Context != null) {
+            this.Context = new String(source.Context);
+        }
+        if (source.Listover != null) {
+            this.Listover = new Boolean(source.Listover);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

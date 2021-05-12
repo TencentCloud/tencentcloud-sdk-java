@@ -275,6 +275,53 @@ public class CreateCfsFileSystemRequest extends AbstractModel{
         this.ClientToken = ClientToken;
     }
 
+    public CreateCfsFileSystemRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateCfsFileSystemRequest(CreateCfsFileSystemRequest source) {
+        if (source.Zone != null) {
+            this.Zone = new String(source.Zone);
+        }
+        if (source.NetInterface != null) {
+            this.NetInterface = new String(source.NetInterface);
+        }
+        if (source.PGroupId != null) {
+            this.PGroupId = new String(source.PGroupId);
+        }
+        if (source.Protocol != null) {
+            this.Protocol = new String(source.Protocol);
+        }
+        if (source.StorageType != null) {
+            this.StorageType = new String(source.StorageType);
+        }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.SubnetId != null) {
+            this.SubnetId = new String(source.SubnetId);
+        }
+        if (source.MountIP != null) {
+            this.MountIP = new String(source.MountIP);
+        }
+        if (source.FsName != null) {
+            this.FsName = new String(source.FsName);
+        }
+        if (source.ResourceTags != null) {
+            this.ResourceTags = new TagInfo[source.ResourceTags.length];
+            for (int i = 0; i < source.ResourceTags.length; i++) {
+                this.ResourceTags[i] = new TagInfo(source.ResourceTags[i]);
+            }
+        }
+        if (source.ClientToken != null) {
+            this.ClientToken = new String(source.ClientToken);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

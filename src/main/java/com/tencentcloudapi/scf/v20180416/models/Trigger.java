@@ -298,6 +298,53 @@ public class Trigger extends AbstractModel{
         this.Qualifier = Qualifier;
     }
 
+    public Trigger() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Trigger(Trigger source) {
+        if (source.ModTime != null) {
+            this.ModTime = new String(source.ModTime);
+        }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.TriggerDesc != null) {
+            this.TriggerDesc = new String(source.TriggerDesc);
+        }
+        if (source.TriggerName != null) {
+            this.TriggerName = new String(source.TriggerName);
+        }
+        if (source.AddTime != null) {
+            this.AddTime = new String(source.AddTime);
+        }
+        if (source.Enable != null) {
+            this.Enable = new Long(source.Enable);
+        }
+        if (source.CustomArgument != null) {
+            this.CustomArgument = new String(source.CustomArgument);
+        }
+        if (source.AvailableStatus != null) {
+            this.AvailableStatus = new String(source.AvailableStatus);
+        }
+        if (source.ResourceId != null) {
+            this.ResourceId = new String(source.ResourceId);
+        }
+        if (source.BindStatus != null) {
+            this.BindStatus = new String(source.BindStatus);
+        }
+        if (source.TriggerAttribute != null) {
+            this.TriggerAttribute = new String(source.TriggerAttribute);
+        }
+        if (source.Qualifier != null) {
+            this.Qualifier = new String(source.Qualifier);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -206,6 +206,44 @@ public class AddInstancesRequest extends AbstractModel{
         this.InstanceImportMode = InstanceImportMode;
     }
 
+    public AddInstancesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AddInstancesRequest(AddInstancesRequest source) {
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
+        if (source.InstanceIdList != null) {
+            this.InstanceIdList = new String[source.InstanceIdList.length];
+            for (int i = 0; i < source.InstanceIdList.length; i++) {
+                this.InstanceIdList[i] = new String(source.InstanceIdList[i]);
+            }
+        }
+        if (source.OsName != null) {
+            this.OsName = new String(source.OsName);
+        }
+        if (source.ImageId != null) {
+            this.ImageId = new String(source.ImageId);
+        }
+        if (source.Password != null) {
+            this.Password = new String(source.Password);
+        }
+        if (source.KeyId != null) {
+            this.KeyId = new String(source.KeyId);
+        }
+        if (source.SgId != null) {
+            this.SgId = new String(source.SgId);
+        }
+        if (source.InstanceImportMode != null) {
+            this.InstanceImportMode = new String(source.InstanceImportMode);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

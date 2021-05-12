@@ -45,6 +45,20 @@ public class DescribeAPIDocDetailRequest extends AbstractModel{
         this.ApiDocId = ApiDocId;
     }
 
+    public DescribeAPIDocDetailRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeAPIDocDetailRequest(DescribeAPIDocDetailRequest source) {
+        if (source.ApiDocId != null) {
+            this.ApiDocId = new String(source.ApiDocId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

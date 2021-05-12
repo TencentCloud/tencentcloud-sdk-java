@@ -73,6 +73,26 @@ public class GroupOffsetResponse extends AbstractModel{
         this.TopicList = TopicList;
     }
 
+    public GroupOffsetResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GroupOffsetResponse(GroupOffsetResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.TopicList != null) {
+            this.TopicList = new GroupOffsetTopic[source.TopicList.length];
+            for (int i = 0; i < source.TopicList.length; i++) {
+                this.TopicList[i] = new GroupOffsetTopic(source.TopicList[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

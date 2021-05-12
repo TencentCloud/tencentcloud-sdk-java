@@ -91,6 +91,29 @@ public class DescribePrometheusAlertRuleResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribePrometheusAlertRuleResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribePrometheusAlertRuleResponse(DescribePrometheusAlertRuleResponse source) {
+        if (source.AlertRules != null) {
+            this.AlertRules = new PrometheusAlertRuleDetail[source.AlertRules.length];
+            for (int i = 0; i < source.AlertRules.length; i++) {
+                this.AlertRules[i] = new PrometheusAlertRuleDetail(source.AlertRules[i]);
+            }
+        }
+        if (source.Total != null) {
+            this.Total = new Long(source.Total);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -262,6 +262,47 @@ public class Activity extends AbstractModel{
         this.InstanceId = InstanceId;
     }
 
+    public Activity() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Activity(Activity source) {
+        if (source.ActivityId != null) {
+            this.ActivityId = new String(source.ActivityId);
+        }
+        if (source.ComputeNodeId != null) {
+            this.ComputeNodeId = new String(source.ComputeNodeId);
+        }
+        if (source.ComputeNodeActivityType != null) {
+            this.ComputeNodeActivityType = new String(source.ComputeNodeActivityType);
+        }
+        if (source.EnvId != null) {
+            this.EnvId = new String(source.EnvId);
+        }
+        if (source.Cause != null) {
+            this.Cause = new String(source.Cause);
+        }
+        if (source.ActivityState != null) {
+            this.ActivityState = new String(source.ActivityState);
+        }
+        if (source.StateReason != null) {
+            this.StateReason = new String(source.StateReason);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

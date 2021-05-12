@@ -137,6 +137,38 @@ public class CreateBoundIPRequest extends AbstractModel{
         this.CopyPolicy = CopyPolicy;
     }
 
+    public CreateBoundIPRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateBoundIPRequest(CreateBoundIPRequest source) {
+        if (source.Business != null) {
+            this.Business = new String(source.Business);
+        }
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
+        if (source.BoundDevList != null) {
+            this.BoundDevList = new BoundIpInfo[source.BoundDevList.length];
+            for (int i = 0; i < source.BoundDevList.length; i++) {
+                this.BoundDevList[i] = new BoundIpInfo(source.BoundDevList[i]);
+            }
+        }
+        if (source.UnBoundDevList != null) {
+            this.UnBoundDevList = new BoundIpInfo[source.UnBoundDevList.length];
+            for (int i = 0; i < source.UnBoundDevList.length; i++) {
+                this.UnBoundDevList[i] = new BoundIpInfo(source.UnBoundDevList[i]);
+            }
+        }
+        if (source.CopyPolicy != null) {
+            this.CopyPolicy = new String(source.CopyPolicy);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

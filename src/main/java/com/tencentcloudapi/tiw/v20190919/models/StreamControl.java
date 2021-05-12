@@ -219,6 +219,29 @@ false - 录制大画面。
         this.PullSmallVideo = PullSmallVideo;
     }
 
+    public StreamControl() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public StreamControl(StreamControl source) {
+        if (source.StreamId != null) {
+            this.StreamId = new String(source.StreamId);
+        }
+        if (source.DisableRecord != null) {
+            this.DisableRecord = new Boolean(source.DisableRecord);
+        }
+        if (source.DisableAudio != null) {
+            this.DisableAudio = new Boolean(source.DisableAudio);
+        }
+        if (source.PullSmallVideo != null) {
+            this.PullSmallVideo = new Boolean(source.PullSmallVideo);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

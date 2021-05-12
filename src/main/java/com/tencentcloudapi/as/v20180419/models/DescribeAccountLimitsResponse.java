@@ -137,6 +137,32 @@ public class DescribeAccountLimitsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeAccountLimitsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeAccountLimitsResponse(DescribeAccountLimitsResponse source) {
+        if (source.MaxNumberOfLaunchConfigurations != null) {
+            this.MaxNumberOfLaunchConfigurations = new Long(source.MaxNumberOfLaunchConfigurations);
+        }
+        if (source.NumberOfLaunchConfigurations != null) {
+            this.NumberOfLaunchConfigurations = new Long(source.NumberOfLaunchConfigurations);
+        }
+        if (source.MaxNumberOfAutoScalingGroups != null) {
+            this.MaxNumberOfAutoScalingGroups = new Long(source.MaxNumberOfAutoScalingGroups);
+        }
+        if (source.NumberOfAutoScalingGroups != null) {
+            this.NumberOfAutoScalingGroups = new Long(source.NumberOfAutoScalingGroups);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

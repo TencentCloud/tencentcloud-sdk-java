@@ -91,6 +91,26 @@ public class CommonMixInputParam extends AbstractModel{
         this.CropParams = CropParams;
     }
 
+    public CommonMixInputParam() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CommonMixInputParam(CommonMixInputParam source) {
+        if (source.InputStreamName != null) {
+            this.InputStreamName = new String(source.InputStreamName);
+        }
+        if (source.LayoutParams != null) {
+            this.LayoutParams = new CommonMixLayoutParams(source.LayoutParams);
+        }
+        if (source.CropParams != null) {
+            this.CropParams = new CommonMixCropParams(source.CropParams);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

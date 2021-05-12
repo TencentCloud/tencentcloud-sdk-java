@@ -45,6 +45,23 @@ public class CheckBatchStatusRequest extends AbstractModel{
         this.LogIds = LogIds;
     }
 
+    public CheckBatchStatusRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CheckBatchStatusRequest(CheckBatchStatusRequest source) {
+        if (source.LogIds != null) {
+            this.LogIds = new Long[source.LogIds.length];
+            for (int i = 0; i < source.LogIds.length; i++) {
+                this.LogIds[i] = new Long(source.LogIds[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

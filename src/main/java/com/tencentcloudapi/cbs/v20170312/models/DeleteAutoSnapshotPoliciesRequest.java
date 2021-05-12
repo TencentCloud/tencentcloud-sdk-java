@@ -45,6 +45,23 @@ public class DeleteAutoSnapshotPoliciesRequest extends AbstractModel{
         this.AutoSnapshotPolicyIds = AutoSnapshotPolicyIds;
     }
 
+    public DeleteAutoSnapshotPoliciesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteAutoSnapshotPoliciesRequest(DeleteAutoSnapshotPoliciesRequest source) {
+        if (source.AutoSnapshotPolicyIds != null) {
+            this.AutoSnapshotPolicyIds = new String[source.AutoSnapshotPolicyIds.length];
+            for (int i = 0; i < source.AutoSnapshotPolicyIds.length; i++) {
+                this.AutoSnapshotPolicyIds[i] = new String(source.AutoSnapshotPolicyIds[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

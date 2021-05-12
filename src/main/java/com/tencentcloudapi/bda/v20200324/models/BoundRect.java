@@ -114,6 +114,29 @@ public class BoundRect extends AbstractModel{
         this.Height = Height;
     }
 
+    public BoundRect() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public BoundRect(BoundRect source) {
+        if (source.X != null) {
+            this.X = new Long(source.X);
+        }
+        if (source.Y != null) {
+            this.Y = new Long(source.Y);
+        }
+        if (source.Width != null) {
+            this.Width = new Long(source.Width);
+        }
+        if (source.Height != null) {
+            this.Height = new Long(source.Height);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

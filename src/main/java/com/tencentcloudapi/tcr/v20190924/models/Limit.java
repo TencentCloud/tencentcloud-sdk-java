@@ -91,6 +91,26 @@ public class Limit extends AbstractModel{
         this.Value = Value;
     }
 
+    public Limit() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Limit(Limit source) {
+        if (source.Username != null) {
+            this.Username = new String(source.Username);
+        }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.Value != null) {
+            this.Value = new Long(source.Value);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -91,6 +91,29 @@ public class FlattenListMediaResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public FlattenListMediaResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public FlattenListMediaResponse(FlattenListMediaResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.MaterialInfoSet != null) {
+            this.MaterialInfoSet = new MaterialInfo[source.MaterialInfoSet.length];
+            for (int i = 0; i < source.MaterialInfoSet.length; i++) {
+                this.MaterialInfoSet[i] = new MaterialInfo(source.MaterialInfoSet[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

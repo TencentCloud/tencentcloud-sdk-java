@@ -68,6 +68,23 @@ public class AttachUserPolicyRequest extends AbstractModel{
         this.AttachUin = AttachUin;
     }
 
+    public AttachUserPolicyRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AttachUserPolicyRequest(AttachUserPolicyRequest source) {
+        if (source.PolicyId != null) {
+            this.PolicyId = new Long(source.PolicyId);
+        }
+        if (source.AttachUin != null) {
+            this.AttachUin = new Long(source.AttachUin);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

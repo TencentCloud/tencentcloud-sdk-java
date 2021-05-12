@@ -73,6 +73,26 @@ public class ResponseHeader extends AbstractModel{
         this.HeaderRules = HeaderRules;
     }
 
+    public ResponseHeader() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ResponseHeader(ResponseHeader source) {
+        if (source.Switch != null) {
+            this.Switch = new String(source.Switch);
+        }
+        if (source.HeaderRules != null) {
+            this.HeaderRules = new HttpHeaderPathRule[source.HeaderRules.length];
+            for (int i = 0; i < source.HeaderRules.length; i++) {
+                this.HeaderRules[i] = new HttpHeaderPathRule(source.HeaderRules[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

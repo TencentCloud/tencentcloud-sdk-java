@@ -185,6 +185,38 @@ public class BindRealServer extends AbstractModel{
         this.DownIPList = DownIPList;
     }
 
+    public BindRealServer() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public BindRealServer(BindRealServer source) {
+        if (source.RealServerId != null) {
+            this.RealServerId = new String(source.RealServerId);
+        }
+        if (source.RealServerIP != null) {
+            this.RealServerIP = new String(source.RealServerIP);
+        }
+        if (source.RealServerWeight != null) {
+            this.RealServerWeight = new Long(source.RealServerWeight);
+        }
+        if (source.RealServerStatus != null) {
+            this.RealServerStatus = new Long(source.RealServerStatus);
+        }
+        if (source.RealServerPort != null) {
+            this.RealServerPort = new Long(source.RealServerPort);
+        }
+        if (source.DownIPList != null) {
+            this.DownIPList = new String[source.DownIPList.length];
+            for (int i = 0; i < source.DownIPList.length; i++) {
+                this.DownIPList[i] = new String(source.DownIPList[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

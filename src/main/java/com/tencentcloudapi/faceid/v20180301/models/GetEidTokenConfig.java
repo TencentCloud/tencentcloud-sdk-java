@@ -75,6 +75,20 @@ public class GetEidTokenConfig extends AbstractModel{
         this.InputType = InputType;
     }
 
+    public GetEidTokenConfig() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GetEidTokenConfig(GetEidTokenConfig source) {
+        if (source.InputType != null) {
+            this.InputType = new String(source.InputType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

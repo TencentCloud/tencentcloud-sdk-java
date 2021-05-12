@@ -45,6 +45,20 @@ public class DescribeRepositoryPersonalRequest extends AbstractModel{
         this.RepoName = RepoName;
     }
 
+    public DescribeRepositoryPersonalRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeRepositoryPersonalRequest(DescribeRepositoryPersonalRequest source) {
+        if (source.RepoName != null) {
+            this.RepoName = new String(source.RepoName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

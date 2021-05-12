@@ -114,6 +114,29 @@ public class CompleteLifecycleActionRequest extends AbstractModel{
         this.LifecycleActionToken = LifecycleActionToken;
     }
 
+    public CompleteLifecycleActionRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CompleteLifecycleActionRequest(CompleteLifecycleActionRequest source) {
+        if (source.LifecycleHookId != null) {
+            this.LifecycleHookId = new String(source.LifecycleHookId);
+        }
+        if (source.LifecycleActionResult != null) {
+            this.LifecycleActionResult = new String(source.LifecycleActionResult);
+        }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.LifecycleActionToken != null) {
+            this.LifecycleActionToken = new String(source.LifecycleActionToken);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

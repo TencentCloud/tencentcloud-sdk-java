@@ -180,6 +180,35 @@ public class CreateCallBackResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public CreateCallBackResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateCallBackResponse(CreateCallBackResponse source) {
+        if (source.CallId != null) {
+            this.CallId = new String(source.CallId);
+        }
+        if (source.SrcDisplayNum != null) {
+            this.SrcDisplayNum = new String(source.SrcDisplayNum);
+        }
+        if (source.DstDisplayNum != null) {
+            this.DstDisplayNum = new String(source.DstDisplayNum);
+        }
+        if (source.ErrorCode != null) {
+            this.ErrorCode = new String(source.ErrorCode);
+        }
+        if (source.Msg != null) {
+            this.Msg = new String(source.Msg);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

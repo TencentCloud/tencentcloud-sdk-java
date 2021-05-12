@@ -91,6 +91,35 @@ public class DescribeDomainPriceListRequest extends AbstractModel{
         this.Operation = Operation;
     }
 
+    public DescribeDomainPriceListRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeDomainPriceListRequest(DescribeDomainPriceListRequest source) {
+        if (source.TldList != null) {
+            this.TldList = new String[source.TldList.length];
+            for (int i = 0; i < source.TldList.length; i++) {
+                this.TldList[i] = new String(source.TldList[i]);
+            }
+        }
+        if (source.Year != null) {
+            this.Year = new Long[source.Year.length];
+            for (int i = 0; i < source.Year.length; i++) {
+                this.Year[i] = new Long(source.Year[i]);
+            }
+        }
+        if (source.Operation != null) {
+            this.Operation = new String[source.Operation.length];
+            for (int i = 0; i < source.Operation.length; i++) {
+                this.Operation[i] = new String(source.Operation[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

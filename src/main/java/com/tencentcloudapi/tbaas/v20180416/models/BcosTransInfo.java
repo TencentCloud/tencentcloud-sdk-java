@@ -183,6 +183,38 @@ public class BcosTransInfo extends AbstractModel{
         this.ModifyTime = ModifyTime;
     }
 
+    public BcosTransInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public BcosTransInfo(BcosTransInfo source) {
+        if (source.BlockNumber != null) {
+            this.BlockNumber = new Long(source.BlockNumber);
+        }
+        if (source.BlockTimestamp != null) {
+            this.BlockTimestamp = new String(source.BlockTimestamp);
+        }
+        if (source.TransHash != null) {
+            this.TransHash = new String(source.TransHash);
+        }
+        if (source.TransFrom != null) {
+            this.TransFrom = new String(source.TransFrom);
+        }
+        if (source.TransTo != null) {
+            this.TransTo = new String(source.TransTo);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.ModifyTime != null) {
+            this.ModifyTime = new String(source.ModifyTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

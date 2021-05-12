@@ -211,6 +211,41 @@ public class ProjectInfo extends AbstractModel{
         this.ProjectOrgId = ProjectOrgId;
     }
 
+    public ProjectInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ProjectInfo(ProjectInfo source) {
+        if (source.ProjectId != null) {
+            this.ProjectId = new String(source.ProjectId);
+        }
+        if (source.ProjectName != null) {
+            this.ProjectName = new String(source.ProjectName);
+        }
+        if (source.ProjectOrg != null) {
+            this.ProjectOrg = new String(source.ProjectOrg);
+        }
+        if (source.ProjectBudget != null) {
+            this.ProjectBudget = new Float(source.ProjectBudget);
+        }
+        if (source.ProjectStatus != null) {
+            this.ProjectStatus = new String(source.ProjectStatus);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.ProjectIntroduction != null) {
+            this.ProjectIntroduction = new String(source.ProjectIntroduction);
+        }
+        if (source.ProjectOrgId != null) {
+            this.ProjectOrgId = new String(source.ProjectOrgId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

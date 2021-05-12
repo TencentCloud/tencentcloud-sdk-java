@@ -205,6 +205,38 @@ pending 还未开始
         this.Detail = Detail;
     }
 
+    public InstanceUpgradeProgressItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public InstanceUpgradeProgressItem(InstanceUpgradeProgressItem source) {
+        if (source.InstanceID != null) {
+            this.InstanceID = new String(source.InstanceID);
+        }
+        if (source.LifeState != null) {
+            this.LifeState = new String(source.LifeState);
+        }
+        if (source.StartAt != null) {
+            this.StartAt = new String(source.StartAt);
+        }
+        if (source.EndAt != null) {
+            this.EndAt = new String(source.EndAt);
+        }
+        if (source.CheckResult != null) {
+            this.CheckResult = new InstanceUpgradePreCheckResult(source.CheckResult);
+        }
+        if (source.Detail != null) {
+            this.Detail = new TaskStepInfo[source.Detail.length];
+            for (int i = 0; i < source.Detail.length; i++) {
+                this.Detail[i] = new TaskStepInfo(source.Detail[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

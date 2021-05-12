@@ -106,6 +106,26 @@ public class ApplicationAttribute extends AbstractModel{
         this.GroupCount = GroupCount;
     }
 
+    public ApplicationAttribute() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ApplicationAttribute(ApplicationAttribute source) {
+        if (source.InstanceCount != null) {
+            this.InstanceCount = new Long(source.InstanceCount);
+        }
+        if (source.RunInstanceCount != null) {
+            this.RunInstanceCount = new Long(source.RunInstanceCount);
+        }
+        if (source.GroupCount != null) {
+            this.GroupCount = new Long(source.GroupCount);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -137,6 +137,32 @@ public class DescribeProjectsRequest extends AbstractModel{
         this.ProjectStatus = ProjectStatus;
     }
 
+    public DescribeProjectsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeProjectsRequest(DescribeProjectsRequest source) {
+        if (source.PageNo != null) {
+            this.PageNo = new Long(source.PageNo);
+        }
+        if (source.PageSize != null) {
+            this.PageSize = new Long(source.PageSize);
+        }
+        if (source.SearchWord != null) {
+            this.SearchWord = new String(source.SearchWord);
+        }
+        if (source.Filters != null) {
+            this.Filters = new Filters(source.Filters);
+        }
+        if (source.ProjectStatus != null) {
+            this.ProjectStatus = new Long(source.ProjectStatus);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

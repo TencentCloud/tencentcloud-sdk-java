@@ -91,6 +91,26 @@ public class NatGatewayAddress extends AbstractModel{
         this.IsBlocked = IsBlocked;
     }
 
+    public NatGatewayAddress() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public NatGatewayAddress(NatGatewayAddress source) {
+        if (source.AddressId != null) {
+            this.AddressId = new String(source.AddressId);
+        }
+        if (source.PublicIpAddress != null) {
+            this.PublicIpAddress = new String(source.PublicIpAddress);
+        }
+        if (source.IsBlocked != null) {
+            this.IsBlocked = new Boolean(source.IsBlocked);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -68,6 +68,26 @@ public class EnableReplicaReadonlyRequest extends AbstractModel{
         this.ReadonlyPolicy = ReadonlyPolicy;
     }
 
+    public EnableReplicaReadonlyRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public EnableReplicaReadonlyRequest(EnableReplicaReadonlyRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.ReadonlyPolicy != null) {
+            this.ReadonlyPolicy = new String[source.ReadonlyPolicy.length];
+            for (int i = 0; i < source.ReadonlyPolicy.length; i++) {
+                this.ReadonlyPolicy[i] = new String(source.ReadonlyPolicy[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

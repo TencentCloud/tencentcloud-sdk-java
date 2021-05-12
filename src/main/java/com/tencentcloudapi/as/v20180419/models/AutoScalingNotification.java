@@ -114,6 +114,35 @@ public class AutoScalingNotification extends AbstractModel{
         this.AutoScalingNotificationId = AutoScalingNotificationId;
     }
 
+    public AutoScalingNotification() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AutoScalingNotification(AutoScalingNotification source) {
+        if (source.AutoScalingGroupId != null) {
+            this.AutoScalingGroupId = new String(source.AutoScalingGroupId);
+        }
+        if (source.NotificationUserGroupIds != null) {
+            this.NotificationUserGroupIds = new String[source.NotificationUserGroupIds.length];
+            for (int i = 0; i < source.NotificationUserGroupIds.length; i++) {
+                this.NotificationUserGroupIds[i] = new String(source.NotificationUserGroupIds[i]);
+            }
+        }
+        if (source.NotificationTypes != null) {
+            this.NotificationTypes = new String[source.NotificationTypes.length];
+            for (int i = 0; i < source.NotificationTypes.length; i++) {
+                this.NotificationTypes[i] = new String(source.NotificationTypes[i]);
+            }
+        }
+        if (source.AutoScalingNotificationId != null) {
+            this.AutoScalingNotificationId = new String(source.AutoScalingNotificationId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

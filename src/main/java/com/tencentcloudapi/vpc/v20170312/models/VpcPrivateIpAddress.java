@@ -114,6 +114,29 @@ public class VpcPrivateIpAddress extends AbstractModel{
         this.CreatedTime = CreatedTime;
     }
 
+    public VpcPrivateIpAddress() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public VpcPrivateIpAddress(VpcPrivateIpAddress source) {
+        if (source.PrivateIpAddress != null) {
+            this.PrivateIpAddress = new String(source.PrivateIpAddress);
+        }
+        if (source.CidrBlock != null) {
+            this.CidrBlock = new String(source.CidrBlock);
+        }
+        if (source.PrivateIpAddressType != null) {
+            this.PrivateIpAddressType = new String(source.PrivateIpAddressType);
+        }
+        if (source.CreatedTime != null) {
+            this.CreatedTime = new String(source.CreatedTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

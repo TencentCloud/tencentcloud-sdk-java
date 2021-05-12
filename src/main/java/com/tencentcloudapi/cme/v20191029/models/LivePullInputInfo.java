@@ -45,6 +45,20 @@ public class LivePullInputInfo extends AbstractModel{
         this.InputUrl = InputUrl;
     }
 
+    public LivePullInputInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public LivePullInputInfo(LivePullInputInfo source) {
+        if (source.InputUrl != null) {
+            this.InputUrl = new String(source.InputUrl);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -137,6 +137,32 @@ public class CreateAccountRequest extends AbstractModel{
         this.Remark = Remark;
     }
 
+    public CreateAccountRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateAccountRequest(CreateAccountRequest source) {
+        if (source.CompanyId != null) {
+            this.CompanyId = new String(source.CompanyId);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Password != null) {
+            this.Password = new String(source.Password);
+        }
+        if (source.ShopCode != null) {
+            this.ShopCode = new String(source.ShopCode);
+        }
+        if (source.Remark != null) {
+            this.Remark = new String(source.Remark);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

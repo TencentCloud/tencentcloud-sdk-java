@@ -68,6 +68,26 @@ public class OpenProVersionPrepaidRequest extends AbstractModel{
         this.Machines = Machines;
     }
 
+    public OpenProVersionPrepaidRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public OpenProVersionPrepaidRequest(OpenProVersionPrepaidRequest source) {
+        if (source.ChargePrepaid != null) {
+            this.ChargePrepaid = new ChargePrepaid(source.ChargePrepaid);
+        }
+        if (source.Machines != null) {
+            this.Machines = new ProVersionMachine[source.Machines.length];
+            for (int i = 0; i < source.Machines.length; i++) {
+                this.Machines[i] = new ProVersionMachine(source.Machines[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

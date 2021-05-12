@@ -106,6 +106,26 @@ public class TimeTemplateSpec extends AbstractModel{
         this.EndTime = EndTime;
     }
 
+    public TimeTemplateSpec() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TimeTemplateSpec(TimeTemplateSpec source) {
+        if (source.DayofWeek != null) {
+            this.DayofWeek = new Long(source.DayofWeek);
+        }
+        if (source.BeginTime != null) {
+            this.BeginTime = new String(source.BeginTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

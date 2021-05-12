@@ -183,6 +183,38 @@ public class GetPeerLogForUserRequest extends AbstractModel{
         this.RowNum = RowNum;
     }
 
+    public GetPeerLogForUserRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GetPeerLogForUserRequest(GetPeerLogForUserRequest source) {
+        if (source.Module != null) {
+            this.Module = new String(source.Module);
+        }
+        if (source.Operation != null) {
+            this.Operation = new String(source.Operation);
+        }
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
+        if (source.GroupName != null) {
+            this.GroupName = new String(source.GroupName);
+        }
+        if (source.PeerName != null) {
+            this.PeerName = new String(source.PeerName);
+        }
+        if (source.BeginTime != null) {
+            this.BeginTime = new String(source.BeginTime);
+        }
+        if (source.RowNum != null) {
+            this.RowNum = new Long(source.RowNum);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

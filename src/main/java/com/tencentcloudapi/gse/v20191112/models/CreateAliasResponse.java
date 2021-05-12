@@ -68,6 +68,23 @@ public class CreateAliasResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public CreateAliasResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateAliasResponse(CreateAliasResponse source) {
+        if (source.Alias != null) {
+            this.Alias = new Alias(source.Alias);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

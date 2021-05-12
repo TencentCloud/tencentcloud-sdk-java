@@ -45,6 +45,23 @@ public class ImageRecord extends AbstractModel{
         this.Value = Value;
     }
 
+    public ImageRecord() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ImageRecord(ImageRecord source) {
+        if (source.Value != null) {
+            this.Value = new ItemValue[source.Value.length];
+            for (int i = 0; i < source.Value.length; i++) {
+                this.Value[i] = new ItemValue(source.Value[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

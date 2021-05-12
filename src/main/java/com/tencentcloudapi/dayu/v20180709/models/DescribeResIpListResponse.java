@@ -68,6 +68,26 @@ public class DescribeResIpListResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeResIpListResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeResIpListResponse(DescribeResIpListResponse source) {
+        if (source.Resource != null) {
+            this.Resource = new ResourceIp[source.Resource.length];
+            for (int i = 0; i < source.Resource.length; i++) {
+                this.Resource[i] = new ResourceIp(source.Resource[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

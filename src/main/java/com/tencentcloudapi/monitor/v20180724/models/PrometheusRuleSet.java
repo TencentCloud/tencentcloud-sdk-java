@@ -358,6 +358,62 @@ public class PrometheusRuleSet extends AbstractModel{
         this.UpdatedAt = UpdatedAt;
     }
 
+    public PrometheusRuleSet() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PrometheusRuleSet(PrometheusRuleSet source) {
+        if (source.RuleId != null) {
+            this.RuleId = new String(source.RuleId);
+        }
+        if (source.RuleName != null) {
+            this.RuleName = new String(source.RuleName);
+        }
+        if (source.RuleState != null) {
+            this.RuleState = new Long(source.RuleState);
+        }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.Labels != null) {
+            this.Labels = new PrometheusRuleKV[source.Labels.length];
+            for (int i = 0; i < source.Labels.length; i++) {
+                this.Labels[i] = new PrometheusRuleKV(source.Labels[i]);
+            }
+        }
+        if (source.Annotations != null) {
+            this.Annotations = new PrometheusRuleKV[source.Annotations.length];
+            for (int i = 0; i < source.Annotations.length; i++) {
+                this.Annotations[i] = new PrometheusRuleKV(source.Annotations[i]);
+            }
+        }
+        if (source.Expr != null) {
+            this.Expr = new String(source.Expr);
+        }
+        if (source.Duration != null) {
+            this.Duration = new String(source.Duration);
+        }
+        if (source.Receivers != null) {
+            this.Receivers = new String[source.Receivers.length];
+            for (int i = 0; i < source.Receivers.length; i++) {
+                this.Receivers[i] = new String(source.Receivers[i]);
+            }
+        }
+        if (source.Health != null) {
+            this.Health = new String(source.Health);
+        }
+        if (source.CreatedAt != null) {
+            this.CreatedAt = new String(source.CreatedAt);
+        }
+        if (source.UpdatedAt != null) {
+            this.UpdatedAt = new String(source.UpdatedAt);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

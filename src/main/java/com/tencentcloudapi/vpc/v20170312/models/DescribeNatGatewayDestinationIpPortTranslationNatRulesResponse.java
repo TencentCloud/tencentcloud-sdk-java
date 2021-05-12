@@ -91,6 +91,29 @@ public class DescribeNatGatewayDestinationIpPortTranslationNatRulesResponse exte
         this.RequestId = RequestId;
     }
 
+    public DescribeNatGatewayDestinationIpPortTranslationNatRulesResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeNatGatewayDestinationIpPortTranslationNatRulesResponse(DescribeNatGatewayDestinationIpPortTranslationNatRulesResponse source) {
+        if (source.NatGatewayDestinationIpPortTranslationNatRuleSet != null) {
+            this.NatGatewayDestinationIpPortTranslationNatRuleSet = new NatGatewayDestinationIpPortTranslationNatRule[source.NatGatewayDestinationIpPortTranslationNatRuleSet.length];
+            for (int i = 0; i < source.NatGatewayDestinationIpPortTranslationNatRuleSet.length; i++) {
+                this.NatGatewayDestinationIpPortTranslationNatRuleSet[i] = new NatGatewayDestinationIpPortTranslationNatRule(source.NatGatewayDestinationIpPortTranslationNatRuleSet[i]);
+            }
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

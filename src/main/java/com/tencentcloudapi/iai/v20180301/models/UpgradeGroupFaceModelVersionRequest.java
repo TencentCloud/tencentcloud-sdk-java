@@ -68,6 +68,23 @@ public class UpgradeGroupFaceModelVersionRequest extends AbstractModel{
         this.FaceModelVersion = FaceModelVersion;
     }
 
+    public UpgradeGroupFaceModelVersionRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UpgradeGroupFaceModelVersionRequest(UpgradeGroupFaceModelVersionRequest source) {
+        if (source.GroupId != null) {
+            this.GroupId = new String(source.GroupId);
+        }
+        if (source.FaceModelVersion != null) {
+            this.FaceModelVersion = new String(source.FaceModelVersion);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

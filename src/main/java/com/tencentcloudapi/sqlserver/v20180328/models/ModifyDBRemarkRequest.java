@@ -68,6 +68,26 @@ public class ModifyDBRemarkRequest extends AbstractModel{
         this.DBRemarks = DBRemarks;
     }
 
+    public ModifyDBRemarkRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyDBRemarkRequest(ModifyDBRemarkRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.DBRemarks != null) {
+            this.DBRemarks = new DBRemark[source.DBRemarks.length];
+            for (int i = 0; i < source.DBRemarks.length; i++) {
+                this.DBRemarks[i] = new DBRemark(source.DBRemarks[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

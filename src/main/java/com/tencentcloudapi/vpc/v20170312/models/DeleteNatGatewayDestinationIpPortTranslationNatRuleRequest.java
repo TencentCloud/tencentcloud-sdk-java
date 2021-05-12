@@ -68,6 +68,26 @@ public class DeleteNatGatewayDestinationIpPortTranslationNatRuleRequest extends 
         this.DestinationIpPortTranslationNatRules = DestinationIpPortTranslationNatRules;
     }
 
+    public DeleteNatGatewayDestinationIpPortTranslationNatRuleRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteNatGatewayDestinationIpPortTranslationNatRuleRequest(DeleteNatGatewayDestinationIpPortTranslationNatRuleRequest source) {
+        if (source.NatGatewayId != null) {
+            this.NatGatewayId = new String(source.NatGatewayId);
+        }
+        if (source.DestinationIpPortTranslationNatRules != null) {
+            this.DestinationIpPortTranslationNatRules = new DestinationIpPortTranslationNatRule[source.DestinationIpPortTranslationNatRules.length];
+            for (int i = 0; i < source.DestinationIpPortTranslationNatRules.length; i++) {
+                this.DestinationIpPortTranslationNatRules[i] = new DestinationIpPortTranslationNatRule(source.DestinationIpPortTranslationNatRules[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

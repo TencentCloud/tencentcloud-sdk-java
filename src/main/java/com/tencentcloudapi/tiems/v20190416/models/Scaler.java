@@ -114,6 +114,32 @@ public class Scaler extends AbstractModel{
         this.HpaMetrics = HpaMetrics;
     }
 
+    public Scaler() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Scaler(Scaler source) {
+        if (source.MaxReplicas != null) {
+            this.MaxReplicas = new Long(source.MaxReplicas);
+        }
+        if (source.MinReplicas != null) {
+            this.MinReplicas = new Long(source.MinReplicas);
+        }
+        if (source.StartReplicas != null) {
+            this.StartReplicas = new Long(source.StartReplicas);
+        }
+        if (source.HpaMetrics != null) {
+            this.HpaMetrics = new Option[source.HpaMetrics.length];
+            for (int i = 0; i < source.HpaMetrics.length; i++) {
+                this.HpaMetrics[i] = new Option(source.HpaMetrics[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

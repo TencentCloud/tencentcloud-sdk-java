@@ -91,6 +91,29 @@ public class GetLatesdTransactionListResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public GetLatesdTransactionListResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GetLatesdTransactionListResponse(GetLatesdTransactionListResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.TransactionList != null) {
+            this.TransactionList = new TransactionItem[source.TransactionList.length];
+            for (int i = 0; i < source.TransactionList.length; i++) {
+                this.TransactionList[i] = new TransactionItem(source.TransactionList[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

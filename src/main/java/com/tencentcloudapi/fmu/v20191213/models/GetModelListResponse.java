@@ -96,6 +96,29 @@ public class GetModelListResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public GetModelListResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GetModelListResponse(GetModelListResponse source) {
+        if (source.ModelIdNum != null) {
+            this.ModelIdNum = new Long(source.ModelIdNum);
+        }
+        if (source.ModelInfos != null) {
+            this.ModelInfos = new ModelInfo[source.ModelInfos.length];
+            for (int i = 0; i < source.ModelInfos.length; i++) {
+                this.ModelInfos[i] = new ModelInfo(source.ModelInfos[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

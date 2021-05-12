@@ -206,6 +206,44 @@ public class CreateContractByUploadRequest extends AbstractModel{
         this.ExpireTime = ExpireTime;
     }
 
+    public CreateContractByUploadRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateContractByUploadRequest(CreateContractByUploadRequest source) {
+        if (source.Module != null) {
+            this.Module = new String(source.Module);
+        }
+        if (source.Operation != null) {
+            this.Operation = new String(source.Operation);
+        }
+        if (source.SignInfos != null) {
+            this.SignInfos = new SignInfo[source.SignInfos.length];
+            for (int i = 0; i < source.SignInfos.length; i++) {
+                this.SignInfos[i] = new SignInfo(source.SignInfos[i]);
+            }
+        }
+        if (source.ContractFile != null) {
+            this.ContractFile = new String(source.ContractFile);
+        }
+        if (source.ContractName != null) {
+            this.ContractName = new String(source.ContractName);
+        }
+        if (source.Remarks != null) {
+            this.Remarks = new String(source.Remarks);
+        }
+        if (source.Initiator != null) {
+            this.Initiator = new String(source.Initiator);
+        }
+        if (source.ExpireTime != null) {
+            this.ExpireTime = new String(source.ExpireTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

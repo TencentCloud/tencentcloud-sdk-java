@@ -606,6 +606,89 @@ Y: 有清单 N：无清单
         this.Items = Items;
     }
 
+    public VatInvoice() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public VatInvoice(VatInvoice source) {
+        if (source.Code != null) {
+            this.Code = new String(source.Code);
+        }
+        if (source.Number != null) {
+            this.Number = new String(source.Number);
+        }
+        if (source.Date != null) {
+            this.Date = new String(source.Date);
+        }
+        if (source.BuyerName != null) {
+            this.BuyerName = new String(source.BuyerName);
+        }
+        if (source.BuyerTaxCode != null) {
+            this.BuyerTaxCode = new String(source.BuyerTaxCode);
+        }
+        if (source.BuyerAddressPhone != null) {
+            this.BuyerAddressPhone = new String(source.BuyerAddressPhone);
+        }
+        if (source.BuyerBankAccount != null) {
+            this.BuyerBankAccount = new String(source.BuyerBankAccount);
+        }
+        if (source.SellerName != null) {
+            this.SellerName = new String(source.SellerName);
+        }
+        if (source.SellerTaxCode != null) {
+            this.SellerTaxCode = new String(source.SellerTaxCode);
+        }
+        if (source.SellerAddressPhone != null) {
+            this.SellerAddressPhone = new String(source.SellerAddressPhone);
+        }
+        if (source.SellerBankAccount != null) {
+            this.SellerBankAccount = new String(source.SellerBankAccount);
+        }
+        if (source.Remark != null) {
+            this.Remark = new String(source.Remark);
+        }
+        if (source.MachineNo != null) {
+            this.MachineNo = new String(source.MachineNo);
+        }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.CheckCode != null) {
+            this.CheckCode = new String(source.CheckCode);
+        }
+        if (source.IsAbandoned != null) {
+            this.IsAbandoned = new String(source.IsAbandoned);
+        }
+        if (source.HasSellerList != null) {
+            this.HasSellerList = new String(source.HasSellerList);
+        }
+        if (source.SellerListTitle != null) {
+            this.SellerListTitle = new String(source.SellerListTitle);
+        }
+        if (source.SellerListTax != null) {
+            this.SellerListTax = new String(source.SellerListTax);
+        }
+        if (source.AmountWithoutTax != null) {
+            this.AmountWithoutTax = new String(source.AmountWithoutTax);
+        }
+        if (source.TaxAmount != null) {
+            this.TaxAmount = new String(source.TaxAmount);
+        }
+        if (source.AmountWithTax != null) {
+            this.AmountWithTax = new String(source.AmountWithTax);
+        }
+        if (source.Items != null) {
+            this.Items = new VatInvoiceItem[source.Items.length];
+            for (int i = 0; i < source.Items.length; i++) {
+                this.Items[i] = new VatInvoiceItem(source.Items[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

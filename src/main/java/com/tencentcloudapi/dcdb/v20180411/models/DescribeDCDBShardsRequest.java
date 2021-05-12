@@ -160,6 +160,38 @@ public class DescribeDCDBShardsRequest extends AbstractModel{
         this.OrderByType = OrderByType;
     }
 
+    public DescribeDCDBShardsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeDCDBShardsRequest(DescribeDCDBShardsRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.ShardInstanceIds != null) {
+            this.ShardInstanceIds = new String[source.ShardInstanceIds.length];
+            for (int i = 0; i < source.ShardInstanceIds.length; i++) {
+                this.ShardInstanceIds[i] = new String(source.ShardInstanceIds[i]);
+            }
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.OrderBy != null) {
+            this.OrderBy = new String(source.OrderBy);
+        }
+        if (source.OrderByType != null) {
+            this.OrderByType = new String(source.OrderByType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

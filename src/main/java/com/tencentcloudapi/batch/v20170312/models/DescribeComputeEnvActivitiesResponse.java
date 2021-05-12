@@ -91,6 +91,29 @@ public class DescribeComputeEnvActivitiesResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeComputeEnvActivitiesResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeComputeEnvActivitiesResponse(DescribeComputeEnvActivitiesResponse source) {
+        if (source.ActivitySet != null) {
+            this.ActivitySet = new Activity[source.ActivitySet.length];
+            for (int i = 0; i < source.ActivitySet.length; i++) {
+                this.ActivitySet[i] = new Activity(source.ActivitySet[i]);
+            }
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -68,6 +68,23 @@ public class DeletePersonRequest extends AbstractModel{
         this.PersonId = PersonId;
     }
 
+    public DeletePersonRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeletePersonRequest(DeletePersonRequest source) {
+        if (source.LibraryId != null) {
+            this.LibraryId = new String(source.LibraryId);
+        }
+        if (source.PersonId != null) {
+            this.PersonId = new String(source.PersonId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

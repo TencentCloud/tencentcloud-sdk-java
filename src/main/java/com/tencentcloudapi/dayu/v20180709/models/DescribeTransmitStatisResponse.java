@@ -134,6 +134,35 @@ pkg表示包速率；
         this.RequestId = RequestId;
     }
 
+    public DescribeTransmitStatisResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeTransmitStatisResponse(DescribeTransmitStatisResponse source) {
+        if (source.InDataList != null) {
+            this.InDataList = new Float[source.InDataList.length];
+            for (int i = 0; i < source.InDataList.length; i++) {
+                this.InDataList[i] = new Float(source.InDataList[i]);
+            }
+        }
+        if (source.OutDataList != null) {
+            this.OutDataList = new Float[source.OutDataList.length];
+            for (int i = 0; i < source.OutDataList.length; i++) {
+                this.OutDataList[i] = new Float(source.OutDataList[i]);
+            }
+        }
+        if (source.MetricName != null) {
+            this.MetricName = new String(source.MetricName);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

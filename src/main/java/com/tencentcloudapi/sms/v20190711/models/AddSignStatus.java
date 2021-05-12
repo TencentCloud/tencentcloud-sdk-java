@@ -68,6 +68,23 @@ public class AddSignStatus extends AbstractModel{
         this.SignApplyId = SignApplyId;
     }
 
+    public AddSignStatus() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AddSignStatus(AddSignStatus source) {
+        if (source.SignId != null) {
+            this.SignId = new Long(source.SignId);
+        }
+        if (source.SignApplyId != null) {
+            this.SignApplyId = new Long(source.SignApplyId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

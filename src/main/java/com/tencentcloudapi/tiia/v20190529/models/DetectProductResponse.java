@@ -68,6 +68,26 @@ public class DetectProductResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DetectProductResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DetectProductResponse(DetectProductResponse source) {
+        if (source.Products != null) {
+            this.Products = new Product[source.Products.length];
+            for (int i = 0; i < source.Products.length; i++) {
+                this.Products[i] = new Product(source.Products[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

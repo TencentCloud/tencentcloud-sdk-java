@@ -114,6 +114,29 @@ public class RegisterCallbackRequest extends AbstractModel{
         this.NeedFacePic = NeedFacePic;
     }
 
+    public RegisterCallbackRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RegisterCallbackRequest(RegisterCallbackRequest source) {
+        if (source.CompanyId != null) {
+            this.CompanyId = new String(source.CompanyId);
+        }
+        if (source.BackUrl != null) {
+            this.BackUrl = new String(source.BackUrl);
+        }
+        if (source.Time != null) {
+            this.Time = new Long(source.Time);
+        }
+        if (source.NeedFacePic != null) {
+            this.NeedFacePic = new Long(source.NeedFacePic);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

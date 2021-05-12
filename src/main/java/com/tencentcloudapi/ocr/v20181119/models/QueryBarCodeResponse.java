@@ -91,6 +91,29 @@ public class QueryBarCodeResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public QueryBarCodeResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public QueryBarCodeResponse(QueryBarCodeResponse source) {
+        if (source.BarCode != null) {
+            this.BarCode = new String(source.BarCode);
+        }
+        if (source.ProductDataRecords != null) {
+            this.ProductDataRecords = new ProductDataRecord[source.ProductDataRecords.length];
+            for (int i = 0; i < source.ProductDataRecords.length; i++) {
+                this.ProductDataRecords[i] = new ProductDataRecord(source.ProductDataRecords[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

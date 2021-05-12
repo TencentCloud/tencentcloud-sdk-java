@@ -211,6 +211,41 @@ public class ExecutionEvent extends AbstractModel{
         this.Exception = Exception;
     }
 
+    public ExecutionEvent() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ExecutionEvent(ExecutionEvent source) {
+        if (source.ExecutionResourceName != null) {
+            this.ExecutionResourceName = new String(source.ExecutionResourceName);
+        }
+        if (source.EventId != null) {
+            this.EventId = new Long(source.EventId);
+        }
+        if (source.EventCategory != null) {
+            this.EventCategory = new String(source.EventCategory);
+        }
+        if (source.StepName != null) {
+            this.StepName = new String(source.StepName);
+        }
+        if (source.ResourceName != null) {
+            this.ResourceName = new String(source.ResourceName);
+        }
+        if (source.Timestamp != null) {
+            this.Timestamp = new String(source.Timestamp);
+        }
+        if (source.Content != null) {
+            this.Content = new String(source.Content);
+        }
+        if (source.Exception != null) {
+            this.Exception = new String(source.Exception);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

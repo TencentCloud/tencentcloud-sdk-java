@@ -68,6 +68,23 @@ public class WorkerRegionInfo extends AbstractModel{
         this.Region = Region;
     }
 
+    public WorkerRegionInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public WorkerRegionInfo(WorkerRegionInfo source) {
+        if (source.Idle != null) {
+            this.Idle = new Long(source.Idle);
+        }
+        if (source.Region != null) {
+            this.Region = new String(source.Region);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -514,6 +514,53 @@ public class DescribeCDNStatDetailsRequest extends AbstractModel{
         this.SubAppId = SubAppId;
     }
 
+    public DescribeCDNStatDetailsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeCDNStatDetailsRequest(DescribeCDNStatDetailsRequest source) {
+        if (source.Metric != null) {
+            this.Metric = new String(source.Metric);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+        if (source.DomainNames != null) {
+            this.DomainNames = new String[source.DomainNames.length];
+            for (int i = 0; i < source.DomainNames.length; i++) {
+                this.DomainNames[i] = new String(source.DomainNames[i]);
+            }
+        }
+        if (source.Area != null) {
+            this.Area = new String(source.Area);
+        }
+        if (source.Districts != null) {
+            this.Districts = new String[source.Districts.length];
+            for (int i = 0; i < source.Districts.length; i++) {
+                this.Districts[i] = new String(source.Districts[i]);
+            }
+        }
+        if (source.Isps != null) {
+            this.Isps = new String[source.Isps.length];
+            for (int i = 0; i < source.Isps.length; i++) {
+                this.Isps[i] = new String(source.Isps[i]);
+            }
+        }
+        if (source.DataInterval != null) {
+            this.DataInterval = new Long(source.DataInterval);
+        }
+        if (source.SubAppId != null) {
+            this.SubAppId = new Long(source.SubAppId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

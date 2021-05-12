@@ -280,6 +280,35 @@ public class Event extends AbstractModel{
         this.ResourceId = ResourceId;
     }
 
+    public Event() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Event(Event source) {
+        if (source.EventCode != null) {
+            this.EventCode = new String(source.EventCode);
+        }
+        if (source.EventId != null) {
+            this.EventId = new String(source.EventId);
+        }
+        if (source.EventTime != null) {
+            this.EventTime = new String(source.EventTime);
+        }
+        if (source.Message != null) {
+            this.Message = new String(source.Message);
+        }
+        if (source.PreSignedLogUrl != null) {
+            this.PreSignedLogUrl = new String(source.PreSignedLogUrl);
+        }
+        if (source.ResourceId != null) {
+            this.ResourceId = new String(source.ResourceId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

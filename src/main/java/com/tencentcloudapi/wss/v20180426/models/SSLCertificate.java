@@ -750,6 +750,98 @@ public class SSLCertificate extends AbstractModel{
         this.Cert = Cert;
     }
 
+    public SSLCertificate() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SSLCertificate(SSLCertificate source) {
+        if (source.OwnerUin != null) {
+            this.OwnerUin = new String(source.OwnerUin);
+        }
+        if (source.ProjectId != null) {
+            this.ProjectId = new String(source.ProjectId);
+        }
+        if (source.From != null) {
+            this.From = new String(source.From);
+        }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.CertType != null) {
+            this.CertType = new String(source.CertType);
+        }
+        if (source.ProductZhName != null) {
+            this.ProductZhName = new String(source.ProductZhName);
+        }
+        if (source.Domain != null) {
+            this.Domain = new String(source.Domain);
+        }
+        if (source.Alias != null) {
+            this.Alias = new String(source.Alias);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.VulnerabilityStatus != null) {
+            this.VulnerabilityStatus = new String(source.VulnerabilityStatus);
+        }
+        if (source.StatusMsg != null) {
+            this.StatusMsg = new String(source.StatusMsg);
+        }
+        if (source.VerifyType != null) {
+            this.VerifyType = new String(source.VerifyType);
+        }
+        if (source.CertBeginTime != null) {
+            this.CertBeginTime = new String(source.CertBeginTime);
+        }
+        if (source.CertEndTime != null) {
+            this.CertEndTime = new String(source.CertEndTime);
+        }
+        if (source.ValidityPeriod != null) {
+            this.ValidityPeriod = new String(source.ValidityPeriod);
+        }
+        if (source.InsertTime != null) {
+            this.InsertTime = new String(source.InsertTime);
+        }
+        if (source.ProjectInfo != null) {
+            this.ProjectInfo = new SSLProjectInfo(source.ProjectInfo);
+        }
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
+        if (source.SubjectAltName != null) {
+            this.SubjectAltName = new String[source.SubjectAltName.length];
+            for (int i = 0; i < source.SubjectAltName.length; i++) {
+                this.SubjectAltName[i] = new String(source.SubjectAltName[i]);
+            }
+        }
+        if (source.TypeName != null) {
+            this.TypeName = new String(source.TypeName);
+        }
+        if (source.StatusName != null) {
+            this.StatusName = new String(source.StatusName);
+        }
+        if (source.IsVip != null) {
+            this.IsVip = new Boolean(source.IsVip);
+        }
+        if (source.IsDv != null) {
+            this.IsDv = new Boolean(source.IsDv);
+        }
+        if (source.IsWildcard != null) {
+            this.IsWildcard = new Boolean(source.IsWildcard);
+        }
+        if (source.IsVulnerability != null) {
+            this.IsVulnerability = new Boolean(source.IsVulnerability);
+        }
+        if (source.Cert != null) {
+            this.Cert = new String(source.Cert);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

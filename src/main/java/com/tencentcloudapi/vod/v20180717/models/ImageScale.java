@@ -162,6 +162,32 @@ public class ImageScale extends AbstractModel{
         this.ShortEdge = ShortEdge;
     }
 
+    public ImageScale() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ImageScale(ImageScale source) {
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.Height != null) {
+            this.Height = new Long(source.Height);
+        }
+        if (source.Width != null) {
+            this.Width = new Long(source.Width);
+        }
+        if (source.LongEdge != null) {
+            this.LongEdge = new Long(source.LongEdge);
+        }
+        if (source.ShortEdge != null) {
+            this.ShortEdge = new Long(source.ShortEdge);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

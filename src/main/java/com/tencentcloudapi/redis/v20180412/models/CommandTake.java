@@ -68,6 +68,23 @@ public class CommandTake extends AbstractModel{
         this.Took = Took;
     }
 
+    public CommandTake() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CommandTake(CommandTake source) {
+        if (source.Cmd != null) {
+            this.Cmd = new String(source.Cmd);
+        }
+        if (source.Took != null) {
+            this.Took = new Long(source.Took);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

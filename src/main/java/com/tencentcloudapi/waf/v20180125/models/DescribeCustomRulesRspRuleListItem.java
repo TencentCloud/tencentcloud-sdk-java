@@ -252,6 +252,50 @@ public class DescribeCustomRulesRspRuleListItem extends AbstractModel{
         this.Strategies = Strategies;
     }
 
+    public DescribeCustomRulesRspRuleListItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeCustomRulesRspRuleListItem(DescribeCustomRulesRspRuleListItem source) {
+        if (source.ActionType != null) {
+            this.ActionType = new String(source.ActionType);
+        }
+        if (source.Bypass != null) {
+            this.Bypass = new String(source.Bypass);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.ExpireTime != null) {
+            this.ExpireTime = new String(source.ExpireTime);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Redirect != null) {
+            this.Redirect = new String(source.Redirect);
+        }
+        if (source.RuleId != null) {
+            this.RuleId = new String(source.RuleId);
+        }
+        if (source.SortId != null) {
+            this.SortId = new String(source.SortId);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.Strategies != null) {
+            this.Strategies = new Strategy[source.Strategies.length];
+            for (int i = 0; i < source.Strategies.length; i++) {
+                this.Strategies[i] = new Strategy(source.Strategies[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

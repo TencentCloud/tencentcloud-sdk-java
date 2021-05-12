@@ -68,6 +68,23 @@ public class CosRegionInfo extends AbstractModel{
         this.CosRegionName = CosRegionName;
     }
 
+    public CosRegionInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CosRegionInfo(CosRegionInfo source) {
+        if (source.CosRegion != null) {
+            this.CosRegion = new String(source.CosRegion);
+        }
+        if (source.CosRegionName != null) {
+            this.CosRegionName = new String(source.CosRegionName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

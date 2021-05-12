@@ -165,6 +165,38 @@ public class DescribeCCUrlAllowRequest extends AbstractModel{
         this.Protocol = Protocol;
     }
 
+    public DescribeCCUrlAllowRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeCCUrlAllowRequest(DescribeCCUrlAllowRequest source) {
+        if (source.Business != null) {
+            this.Business = new String(source.Business);
+        }
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
+        if (source.Type != null) {
+            this.Type = new String[source.Type.length];
+            for (int i = 0; i < source.Type.length; i++) {
+                this.Type[i] = new String(source.Type[i]);
+            }
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Protocol != null) {
+            this.Protocol = new String(source.Protocol);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

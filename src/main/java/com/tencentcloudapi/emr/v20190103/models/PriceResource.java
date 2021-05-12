@@ -386,6 +386,62 @@ public class PriceResource extends AbstractModel{
         this.LocalDiskNum = LocalDiskNum;
     }
 
+    public PriceResource() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PriceResource(PriceResource source) {
+        if (source.Spec != null) {
+            this.Spec = new String(source.Spec);
+        }
+        if (source.StorageType != null) {
+            this.StorageType = new Long(source.StorageType);
+        }
+        if (source.DiskType != null) {
+            this.DiskType = new String(source.DiskType);
+        }
+        if (source.RootSize != null) {
+            this.RootSize = new Long(source.RootSize);
+        }
+        if (source.MemSize != null) {
+            this.MemSize = new Long(source.MemSize);
+        }
+        if (source.Cpu != null) {
+            this.Cpu = new Long(source.Cpu);
+        }
+        if (source.DiskSize != null) {
+            this.DiskSize = new Long(source.DiskSize);
+        }
+        if (source.MultiDisks != null) {
+            this.MultiDisks = new MultiDisk[source.MultiDisks.length];
+            for (int i = 0; i < source.MultiDisks.length; i++) {
+                this.MultiDisks[i] = new MultiDisk(source.MultiDisks[i]);
+            }
+        }
+        if (source.DiskCnt != null) {
+            this.DiskCnt = new Long(source.DiskCnt);
+        }
+        if (source.InstanceType != null) {
+            this.InstanceType = new String(source.InstanceType);
+        }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
+        if (source.DiskNum != null) {
+            this.DiskNum = new Long(source.DiskNum);
+        }
+        if (source.LocalDiskNum != null) {
+            this.LocalDiskNum = new Long(source.LocalDiskNum);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

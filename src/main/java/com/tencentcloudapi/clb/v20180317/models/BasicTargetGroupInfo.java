@@ -68,6 +68,23 @@ public class BasicTargetGroupInfo extends AbstractModel{
         this.TargetGroupName = TargetGroupName;
     }
 
+    public BasicTargetGroupInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public BasicTargetGroupInfo(BasicTargetGroupInfo source) {
+        if (source.TargetGroupId != null) {
+            this.TargetGroupId = new String(source.TargetGroupId);
+        }
+        if (source.TargetGroupName != null) {
+            this.TargetGroupName = new String(source.TargetGroupName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

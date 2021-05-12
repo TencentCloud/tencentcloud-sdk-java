@@ -326,6 +326,56 @@ public class ImageTag extends AbstractModel{
         this.SizeByte = SizeByte;
     }
 
+    public ImageTag() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ImageTag(ImageTag source) {
+        if (source.RepoName != null) {
+            this.RepoName = new String(source.RepoName);
+        }
+        if (source.TagName != null) {
+            this.TagName = new String(source.TagName);
+        }
+        if (source.TagId != null) {
+            this.TagId = new String(source.TagId);
+        }
+        if (source.ImageId != null) {
+            this.ImageId = new String(source.ImageId);
+        }
+        if (source.Size != null) {
+            this.Size = new String(source.Size);
+        }
+        if (source.CreationTime != null) {
+            this.CreationTime = new String(source.CreationTime);
+        }
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new String(source.UpdateTime);
+        }
+        if (source.Author != null) {
+            this.Author = new String(source.Author);
+        }
+        if (source.Architecture != null) {
+            this.Architecture = new String(source.Architecture);
+        }
+        if (source.DockerVersion != null) {
+            this.DockerVersion = new String(source.DockerVersion);
+        }
+        if (source.Os != null) {
+            this.Os = new String(source.Os);
+        }
+        if (source.PushTime != null) {
+            this.PushTime = new String(source.PushTime);
+        }
+        if (source.SizeByte != null) {
+            this.SizeByte = new Long(source.SizeByte);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

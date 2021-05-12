@@ -367,6 +367,65 @@ public class DescribeImageResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeImageResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeImageResponse(DescribeImageResponse source) {
+        if (source.ImageId != null) {
+            this.ImageId = new Long(source.ImageId);
+        }
+        if (source.Title != null) {
+            this.Title = new String(source.Title);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.PreviewUrl != null) {
+            this.PreviewUrl = new String(source.PreviewUrl);
+        }
+        if (source.ThumbUrl != null) {
+            this.ThumbUrl = new String(source.ThumbUrl);
+        }
+        if (source.Vendor != null) {
+            this.Vendor = new String(source.Vendor);
+        }
+        if (source.Marshals != null) {
+            this.Marshals = new ImageMarshal[source.Marshals.length];
+            for (int i = 0; i < source.Marshals.length; i++) {
+                this.Marshals[i] = new ImageMarshal(source.Marshals[i]);
+            }
+        }
+        if (source.Width != null) {
+            this.Width = new Long(source.Width);
+        }
+        if (source.Height != null) {
+            this.Height = new Long(source.Height);
+        }
+        if (source.ImageFormat != null) {
+            this.ImageFormat = new String(source.ImageFormat);
+        }
+        if (source.ImageSenseType != null) {
+            this.ImageSenseType = new String(source.ImageSenseType);
+        }
+        if (source.Keywords != null) {
+            this.Keywords = new String(source.Keywords);
+        }
+        if (source.LayeredGalleryId != null) {
+            this.LayeredGalleryId = new Long(source.LayeredGalleryId);
+        }
+        if (source.Orientation != null) {
+            this.Orientation = new String(source.Orientation);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

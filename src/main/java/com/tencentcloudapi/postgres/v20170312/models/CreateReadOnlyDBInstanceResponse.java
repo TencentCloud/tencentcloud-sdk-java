@@ -114,6 +114,35 @@ public class CreateReadOnlyDBInstanceResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public CreateReadOnlyDBInstanceResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateReadOnlyDBInstanceResponse(CreateReadOnlyDBInstanceResponse source) {
+        if (source.DealNames != null) {
+            this.DealNames = new String[source.DealNames.length];
+            for (int i = 0; i < source.DealNames.length; i++) {
+                this.DealNames[i] = new String(source.DealNames[i]);
+            }
+        }
+        if (source.BillId != null) {
+            this.BillId = new String(source.BillId);
+        }
+        if (source.DBInstanceIdSet != null) {
+            this.DBInstanceIdSet = new String[source.DBInstanceIdSet.length];
+            for (int i = 0; i < source.DBInstanceIdSet.length; i++) {
+                this.DBInstanceIdSet[i] = new String(source.DBInstanceIdSet[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

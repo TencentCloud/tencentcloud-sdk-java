@@ -183,6 +183,38 @@ public class ProIspPlayCodeDataInfo extends AbstractModel{
         this.Code5xx = Code5xx;
     }
 
+    public ProIspPlayCodeDataInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ProIspPlayCodeDataInfo(ProIspPlayCodeDataInfo source) {
+        if (source.CountryAreaName != null) {
+            this.CountryAreaName = new String(source.CountryAreaName);
+        }
+        if (source.ProvinceName != null) {
+            this.ProvinceName = new String(source.ProvinceName);
+        }
+        if (source.IspName != null) {
+            this.IspName = new String(source.IspName);
+        }
+        if (source.Code2xx != null) {
+            this.Code2xx = new Long(source.Code2xx);
+        }
+        if (source.Code3xx != null) {
+            this.Code3xx = new Long(source.Code3xx);
+        }
+        if (source.Code4xx != null) {
+            this.Code4xx = new Long(source.Code4xx);
+        }
+        if (source.Code5xx != null) {
+            this.Code5xx = new Long(source.Code5xx);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

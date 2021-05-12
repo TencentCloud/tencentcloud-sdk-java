@@ -68,6 +68,26 @@ public class DescribeSpecInfoResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeSpecInfoResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeSpecInfoResponse(DescribeSpecInfoResponse source) {
+        if (source.SpecInfoList != null) {
+            this.SpecInfoList = new SpecificationInfo[source.SpecInfoList.length];
+            for (int i = 0; i < source.SpecInfoList.length; i++) {
+                this.SpecInfoList[i] = new SpecificationInfo(source.SpecInfoList[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

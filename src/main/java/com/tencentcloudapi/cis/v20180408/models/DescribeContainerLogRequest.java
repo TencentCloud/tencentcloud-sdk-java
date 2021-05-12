@@ -114,6 +114,29 @@ public class DescribeContainerLogRequest extends AbstractModel{
         this.SinceTime = SinceTime;
     }
 
+    public DescribeContainerLogRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeContainerLogRequest(DescribeContainerLogRequest source) {
+        if (source.InstanceName != null) {
+            this.InstanceName = new String(source.InstanceName);
+        }
+        if (source.ContainerName != null) {
+            this.ContainerName = new String(source.ContainerName);
+        }
+        if (source.Tail != null) {
+            this.Tail = new Long(source.Tail);
+        }
+        if (source.SinceTime != null) {
+            this.SinceTime = new String(source.SinceTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

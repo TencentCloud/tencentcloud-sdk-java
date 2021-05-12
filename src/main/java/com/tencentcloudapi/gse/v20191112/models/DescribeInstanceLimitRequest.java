@@ -22,6 +22,17 @@ import java.util.HashMap;
 
 public class DescribeInstanceLimitRequest extends AbstractModel{
 
+    public DescribeInstanceLimitRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeInstanceLimitRequest(DescribeInstanceLimitRequest source) {
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

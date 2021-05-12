@@ -142,6 +142,32 @@ public class CustomerGateway extends AbstractModel{
         this.VpnConnNum = VpnConnNum;
     }
 
+    public CustomerGateway() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CustomerGateway(CustomerGateway source) {
+        if (source.CustomerGatewayId != null) {
+            this.CustomerGatewayId = new String(source.CustomerGatewayId);
+        }
+        if (source.CustomerGatewayName != null) {
+            this.CustomerGatewayName = new String(source.CustomerGatewayName);
+        }
+        if (source.IpAddress != null) {
+            this.IpAddress = new String(source.IpAddress);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.VpnConnNum != null) {
+            this.VpnConnNum = new Long(source.VpnConnNum);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

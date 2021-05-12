@@ -236,6 +236,44 @@ public class StreamConnectProjectInfo extends AbstractModel{
         this.OutputSet = OutputSet;
     }
 
+    public StreamConnectProjectInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public StreamConnectProjectInfo(StreamConnectProjectInfo source) {
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.CurrentInputEndpoint != null) {
+            this.CurrentInputEndpoint = new String(source.CurrentInputEndpoint);
+        }
+        if (source.CurrentStartTime != null) {
+            this.CurrentStartTime = new String(source.CurrentStartTime);
+        }
+        if (source.CurrentStopTime != null) {
+            this.CurrentStopTime = new String(source.CurrentStopTime);
+        }
+        if (source.LastStopTime != null) {
+            this.LastStopTime = new String(source.LastStopTime);
+        }
+        if (source.MainInput != null) {
+            this.MainInput = new StreamInputInfo(source.MainInput);
+        }
+        if (source.BackupInput != null) {
+            this.BackupInput = new StreamInputInfo(source.BackupInput);
+        }
+        if (source.OutputSet != null) {
+            this.OutputSet = new StreamConnectOutputInfo[source.OutputSet.length];
+            for (int i = 0; i < source.OutputSet.length; i++) {
+                this.OutputSet[i] = new StreamConnectOutputInfo(source.OutputSet[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

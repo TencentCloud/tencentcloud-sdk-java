@@ -208,6 +208,47 @@ public class ApiDetailResponse extends AbstractModel{
         this.Description = Description;
     }
 
+    public ApiDetailResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ApiDetailResponse(ApiDetailResponse source) {
+        if (source.Request != null) {
+            this.Request = new ApiRequestDescr[source.Request.length];
+            for (int i = 0; i < source.Request.length; i++) {
+                this.Request[i] = new ApiRequestDescr(source.Request[i]);
+            }
+        }
+        if (source.Response != null) {
+            this.Response = new ApiResponseDescr[source.Response.length];
+            for (int i = 0; i < source.Response.length; i++) {
+                this.Response[i] = new ApiResponseDescr(source.Response[i]);
+            }
+        }
+        if (source.Definitions != null) {
+            this.Definitions = new ApiDefinitionDescr[source.Definitions.length];
+            for (int i = 0; i < source.Definitions.length; i++) {
+                this.Definitions[i] = new ApiDefinitionDescr(source.Definitions[i]);
+            }
+        }
+        if (source.RequestContentType != null) {
+            this.RequestContentType = new String(source.RequestContentType);
+        }
+        if (source.CanRun != null) {
+            this.CanRun = new Boolean(source.CanRun);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -170,6 +170,35 @@ public class UnitRuleTag extends AbstractModel{
         this.Id = Id;
     }
 
+    public UnitRuleTag() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UnitRuleTag(UnitRuleTag source) {
+        if (source.TagType != null) {
+            this.TagType = new String(source.TagType);
+        }
+        if (source.TagField != null) {
+            this.TagField = new String(source.TagField);
+        }
+        if (source.TagOperator != null) {
+            this.TagOperator = new String(source.TagOperator);
+        }
+        if (source.TagValue != null) {
+            this.TagValue = new String(source.TagValue);
+        }
+        if (source.UnitRuleItemId != null) {
+            this.UnitRuleItemId = new String(source.UnitRuleItemId);
+        }
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

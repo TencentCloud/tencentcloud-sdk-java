@@ -45,6 +45,23 @@ public class DeleteShieldInstancesRequest extends AbstractModel{
         this.ItemIds = ItemIds;
     }
 
+    public DeleteShieldInstancesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteShieldInstancesRequest(DeleteShieldInstancesRequest source) {
+        if (source.ItemIds != null) {
+            this.ItemIds = new String[source.ItemIds.length];
+            for (int i = 0; i < source.ItemIds.length; i++) {
+                this.ItemIds[i] = new String(source.ItemIds[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

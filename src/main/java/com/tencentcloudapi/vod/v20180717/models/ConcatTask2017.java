@@ -68,6 +68,26 @@ public class ConcatTask2017 extends AbstractModel{
         this.FileInfoSet = FileInfoSet;
     }
 
+    public ConcatTask2017() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ConcatTask2017(ConcatTask2017 source) {
+        if (source.TaskId != null) {
+            this.TaskId = new String(source.TaskId);
+        }
+        if (source.FileInfoSet != null) {
+            this.FileInfoSet = new ConcatFileInfo2017[source.FileInfoSet.length];
+            for (int i = 0; i < source.FileInfoSet.length; i++) {
+                this.FileInfoSet[i] = new ConcatFileInfo2017(source.FileInfoSet[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

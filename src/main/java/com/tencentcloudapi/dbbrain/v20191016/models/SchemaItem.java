@@ -45,6 +45,20 @@ public class SchemaItem extends AbstractModel{
         this.Schema = Schema;
     }
 
+    public SchemaItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SchemaItem(SchemaItem source) {
+        if (source.Schema != null) {
+            this.Schema = new String(source.Schema);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

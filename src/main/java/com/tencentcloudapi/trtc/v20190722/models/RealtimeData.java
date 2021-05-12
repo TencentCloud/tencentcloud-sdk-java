@@ -73,6 +73,26 @@ public class RealtimeData extends AbstractModel{
         this.DataType = DataType;
     }
 
+    public RealtimeData() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RealtimeData(RealtimeData source) {
+        if (source.Content != null) {
+            this.Content = new TimeValue[source.Content.length];
+            for (int i = 0; i < source.Content.length; i++) {
+                this.Content[i] = new TimeValue(source.Content[i]);
+            }
+        }
+        if (source.DataType != null) {
+            this.DataType = new String(source.DataType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

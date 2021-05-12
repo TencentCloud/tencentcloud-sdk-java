@@ -114,6 +114,29 @@ public class PublishToDeviceRequest extends AbstractModel{
         this.Payload = Payload;
     }
 
+    public PublishToDeviceRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PublishToDeviceRequest(PublishToDeviceRequest source) {
+        if (source.ProductId != null) {
+            this.ProductId = new String(source.ProductId);
+        }
+        if (source.DeviceName != null) {
+            this.DeviceName = new String(source.DeviceName);
+        }
+        if (source.Port != null) {
+            this.Port = new Long(source.Port);
+        }
+        if (source.Payload != null) {
+            this.Payload = new String(source.Payload);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

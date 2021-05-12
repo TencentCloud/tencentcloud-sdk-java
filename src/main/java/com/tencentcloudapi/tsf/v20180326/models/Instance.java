@@ -1086,6 +1086,131 @@ public class Instance extends AbstractModel{
         this.AgentVersion = AgentVersion;
     }
 
+    public Instance() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Instance(Instance source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.InstanceName != null) {
+            this.InstanceName = new String(source.InstanceName);
+        }
+        if (source.LanIp != null) {
+            this.LanIp = new String(source.LanIp);
+        }
+        if (source.WanIp != null) {
+            this.WanIp = new String(source.WanIp);
+        }
+        if (source.InstanceDesc != null) {
+            this.InstanceDesc = new String(source.InstanceDesc);
+        }
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
+        if (source.ClusterName != null) {
+            this.ClusterName = new String(source.ClusterName);
+        }
+        if (source.InstanceStatus != null) {
+            this.InstanceStatus = new String(source.InstanceStatus);
+        }
+        if (source.InstanceAvailableStatus != null) {
+            this.InstanceAvailableStatus = new String(source.InstanceAvailableStatus);
+        }
+        if (source.ServiceInstanceStatus != null) {
+            this.ServiceInstanceStatus = new String(source.ServiceInstanceStatus);
+        }
+        if (source.CountInTsf != null) {
+            this.CountInTsf = new Long(source.CountInTsf);
+        }
+        if (source.GroupId != null) {
+            this.GroupId = new String(source.GroupId);
+        }
+        if (source.ApplicationId != null) {
+            this.ApplicationId = new String(source.ApplicationId);
+        }
+        if (source.ApplicationName != null) {
+            this.ApplicationName = new String(source.ApplicationName);
+        }
+        if (source.InstanceCreatedTime != null) {
+            this.InstanceCreatedTime = new String(source.InstanceCreatedTime);
+        }
+        if (source.InstanceExpiredTime != null) {
+            this.InstanceExpiredTime = new String(source.InstanceExpiredTime);
+        }
+        if (source.InstanceChargeType != null) {
+            this.InstanceChargeType = new String(source.InstanceChargeType);
+        }
+        if (source.InstanceTotalCpu != null) {
+            this.InstanceTotalCpu = new Float(source.InstanceTotalCpu);
+        }
+        if (source.InstanceTotalMem != null) {
+            this.InstanceTotalMem = new Float(source.InstanceTotalMem);
+        }
+        if (source.InstanceUsedCpu != null) {
+            this.InstanceUsedCpu = new Float(source.InstanceUsedCpu);
+        }
+        if (source.InstanceUsedMem != null) {
+            this.InstanceUsedMem = new Float(source.InstanceUsedMem);
+        }
+        if (source.InstanceLimitCpu != null) {
+            this.InstanceLimitCpu = new Float(source.InstanceLimitCpu);
+        }
+        if (source.InstanceLimitMem != null) {
+            this.InstanceLimitMem = new Float(source.InstanceLimitMem);
+        }
+        if (source.InstancePkgVersion != null) {
+            this.InstancePkgVersion = new String(source.InstancePkgVersion);
+        }
+        if (source.ClusterType != null) {
+            this.ClusterType = new String(source.ClusterType);
+        }
+        if (source.RestrictState != null) {
+            this.RestrictState = new String(source.RestrictState);
+        }
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new String(source.UpdateTime);
+        }
+        if (source.OperationState != null) {
+            this.OperationState = new Long(source.OperationState);
+        }
+        if (source.NamespaceId != null) {
+            this.NamespaceId = new String(source.NamespaceId);
+        }
+        if (source.InstanceZoneId != null) {
+            this.InstanceZoneId = new String(source.InstanceZoneId);
+        }
+        if (source.InstanceImportMode != null) {
+            this.InstanceImportMode = new String(source.InstanceImportMode);
+        }
+        if (source.ApplicationType != null) {
+            this.ApplicationType = new String(source.ApplicationType);
+        }
+        if (source.ApplicationResourceType != null) {
+            this.ApplicationResourceType = new String(source.ApplicationResourceType);
+        }
+        if (source.ServiceSidecarStatus != null) {
+            this.ServiceSidecarStatus = new String(source.ServiceSidecarStatus);
+        }
+        if (source.GroupName != null) {
+            this.GroupName = new String(source.GroupName);
+        }
+        if (source.NamespaceName != null) {
+            this.NamespaceName = new String(source.NamespaceName);
+        }
+        if (source.Reason != null) {
+            this.Reason = new String(source.Reason);
+        }
+        if (source.AgentVersion != null) {
+            this.AgentVersion = new String(source.AgentVersion);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

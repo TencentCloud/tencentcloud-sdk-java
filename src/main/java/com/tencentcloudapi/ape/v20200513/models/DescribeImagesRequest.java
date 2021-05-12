@@ -160,6 +160,38 @@ public class DescribeImagesRequest extends AbstractModel{
         this.LayeredGalleryIds = LayeredGalleryIds;
     }
 
+    public DescribeImagesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeImagesRequest(DescribeImagesRequest source) {
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.Keyword != null) {
+            this.Keyword = new String(source.Keyword);
+        }
+        if (source.Orientation != null) {
+            this.Orientation = new String(source.Orientation);
+        }
+        if (source.ImageSenseType != null) {
+            this.ImageSenseType = new String(source.ImageSenseType);
+        }
+        if (source.LayeredGalleryIds != null) {
+            this.LayeredGalleryIds = new Long[source.LayeredGalleryIds.length];
+            for (int i = 0; i < source.LayeredGalleryIds.length; i++) {
+                this.LayeredGalleryIds[i] = new Long(source.LayeredGalleryIds[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -91,6 +91,26 @@ public class DescribeRoomRequest extends AbstractModel{
         this.RoomId = RoomId;
     }
 
+    public DescribeRoomRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeRoomRequest(DescribeRoomRequest source) {
+        if (source.GameId != null) {
+            this.GameId = new String(source.GameId);
+        }
+        if (source.PlayerId != null) {
+            this.PlayerId = new String(source.PlayerId);
+        }
+        if (source.RoomId != null) {
+            this.RoomId = new String(source.RoomId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

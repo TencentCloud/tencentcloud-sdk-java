@@ -183,6 +183,38 @@ public class InvokeRequest extends AbstractModel{
         this.RoutingKey = RoutingKey;
     }
 
+    public InvokeRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public InvokeRequest(InvokeRequest source) {
+        if (source.FunctionName != null) {
+            this.FunctionName = new String(source.FunctionName);
+        }
+        if (source.InvocationType != null) {
+            this.InvocationType = new String(source.InvocationType);
+        }
+        if (source.Qualifier != null) {
+            this.Qualifier = new String(source.Qualifier);
+        }
+        if (source.ClientContext != null) {
+            this.ClientContext = new String(source.ClientContext);
+        }
+        if (source.LogType != null) {
+            this.LogType = new String(source.LogType);
+        }
+        if (source.Namespace != null) {
+            this.Namespace = new String(source.Namespace);
+        }
+        if (source.RoutingKey != null) {
+            this.RoutingKey = new String(source.RoutingKey);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

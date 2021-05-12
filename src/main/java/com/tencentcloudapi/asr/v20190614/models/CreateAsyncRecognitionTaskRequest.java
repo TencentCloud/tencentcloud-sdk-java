@@ -272,6 +272,47 @@ public class CreateAsyncRecognitionTaskRequest extends AbstractModel{
         this.HotwordId = HotwordId;
     }
 
+    public CreateAsyncRecognitionTaskRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateAsyncRecognitionTaskRequest(CreateAsyncRecognitionTaskRequest source) {
+        if (source.EngineType != null) {
+            this.EngineType = new String(source.EngineType);
+        }
+        if (source.Url != null) {
+            this.Url = new String(source.Url);
+        }
+        if (source.CallbackUrl != null) {
+            this.CallbackUrl = new String(source.CallbackUrl);
+        }
+        if (source.SignToken != null) {
+            this.SignToken = new String(source.SignToken);
+        }
+        if (source.FilterDirty != null) {
+            this.FilterDirty = new Long(source.FilterDirty);
+        }
+        if (source.FilterModal != null) {
+            this.FilterModal = new Long(source.FilterModal);
+        }
+        if (source.FilterPunc != null) {
+            this.FilterPunc = new Long(source.FilterPunc);
+        }
+        if (source.ConvertNumMode != null) {
+            this.ConvertNumMode = new Long(source.ConvertNumMode);
+        }
+        if (source.WordInfo != null) {
+            this.WordInfo = new Long(source.WordInfo);
+        }
+        if (source.HotwordId != null) {
+            this.HotwordId = new String(source.HotwordId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

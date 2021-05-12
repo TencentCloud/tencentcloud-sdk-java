@@ -302,6 +302,47 @@ public class ApiRateLimitRule extends AbstractModel{
         this.UpdatedTime = UpdatedTime;
     }
 
+    public ApiRateLimitRule() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ApiRateLimitRule(ApiRateLimitRule source) {
+        if (source.RuleId != null) {
+            this.RuleId = new String(source.RuleId);
+        }
+        if (source.ApiId != null) {
+            this.ApiId = new String(source.ApiId);
+        }
+        if (source.RuleName != null) {
+            this.RuleName = new String(source.RuleName);
+        }
+        if (source.MaxQps != null) {
+            this.MaxQps = new Long(source.MaxQps);
+        }
+        if (source.UsableStatus != null) {
+            this.UsableStatus = new String(source.UsableStatus);
+        }
+        if (source.RuleContent != null) {
+            this.RuleContent = new String(source.RuleContent);
+        }
+        if (source.TsfRuleId != null) {
+            this.TsfRuleId = new String(source.TsfRuleId);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.CreatedTime != null) {
+            this.CreatedTime = new String(source.CreatedTime);
+        }
+        if (source.UpdatedTime != null) {
+            this.UpdatedTime = new String(source.UpdatedTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -114,6 +114,29 @@ public class UpdateAliasRequest extends AbstractModel{
         this.RoutingStrategy = RoutingStrategy;
     }
 
+    public UpdateAliasRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UpdateAliasRequest(UpdateAliasRequest source) {
+        if (source.AliasId != null) {
+            this.AliasId = new String(source.AliasId);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.RoutingStrategy != null) {
+            this.RoutingStrategy = new RoutingStrategy(source.RoutingStrategy);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

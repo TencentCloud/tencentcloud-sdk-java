@@ -252,6 +252,47 @@ public class Topic extends AbstractModel{
         this.UpdateTime = UpdateTime;
     }
 
+    public Topic() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Topic(Topic source) {
+        if (source.TopicId != null) {
+            this.TopicId = new String(source.TopicId);
+        }
+        if (source.TopicName != null) {
+            this.TopicName = new String(source.TopicName);
+        }
+        if (source.ProductId != null) {
+            this.ProductId = new String(source.ProductId);
+        }
+        if (source.MsgLife != null) {
+            this.MsgLife = new Long(source.MsgLife);
+        }
+        if (source.MsgSize != null) {
+            this.MsgSize = new Long(source.MsgSize);
+        }
+        if (source.MsgCount != null) {
+            this.MsgCount = new Long(source.MsgCount);
+        }
+        if (source.Deleted != null) {
+            this.Deleted = new Long(source.Deleted);
+        }
+        if (source.Path != null) {
+            this.Path = new String(source.Path);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new String(source.UpdateTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

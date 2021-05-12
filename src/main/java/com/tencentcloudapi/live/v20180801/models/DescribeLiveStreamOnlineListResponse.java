@@ -160,6 +160,38 @@ public class DescribeLiveStreamOnlineListResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeLiveStreamOnlineListResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeLiveStreamOnlineListResponse(DescribeLiveStreamOnlineListResponse source) {
+        if (source.TotalNum != null) {
+            this.TotalNum = new Long(source.TotalNum);
+        }
+        if (source.TotalPage != null) {
+            this.TotalPage = new Long(source.TotalPage);
+        }
+        if (source.PageNum != null) {
+            this.PageNum = new Long(source.PageNum);
+        }
+        if (source.PageSize != null) {
+            this.PageSize = new Long(source.PageSize);
+        }
+        if (source.OnlineInfo != null) {
+            this.OnlineInfo = new StreamOnlineInfo[source.OnlineInfo.length];
+            for (int i = 0; i < source.OnlineInfo.length; i++) {
+                this.OnlineInfo[i] = new StreamOnlineInfo(source.OnlineInfo[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

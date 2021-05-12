@@ -114,6 +114,38 @@ public class CreateMediaProcessTaskRequest extends AbstractModel{
         this.CallbackInfoSet = CallbackInfoSet;
     }
 
+    public CreateMediaProcessTaskRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateMediaProcessTaskRequest(CreateMediaProcessTaskRequest source) {
+        if (source.MediaProcessInfo != null) {
+            this.MediaProcessInfo = new MediaProcessInfo(source.MediaProcessInfo);
+        }
+        if (source.SourceInfoSet != null) {
+            this.SourceInfoSet = new MediaSourceInfo[source.SourceInfoSet.length];
+            for (int i = 0; i < source.SourceInfoSet.length; i++) {
+                this.SourceInfoSet[i] = new MediaSourceInfo(source.SourceInfoSet[i]);
+            }
+        }
+        if (source.SaveInfoSet != null) {
+            this.SaveInfoSet = new SaveInfo[source.SaveInfoSet.length];
+            for (int i = 0; i < source.SaveInfoSet.length; i++) {
+                this.SaveInfoSet[i] = new SaveInfo(source.SaveInfoSet[i]);
+            }
+        }
+        if (source.CallbackInfoSet != null) {
+            this.CallbackInfoSet = new CallbackInfo[source.CallbackInfoSet.length];
+            for (int i = 0; i < source.CallbackInfoSet.length; i++) {
+                this.CallbackInfoSet[i] = new CallbackInfo(source.CallbackInfoSet[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

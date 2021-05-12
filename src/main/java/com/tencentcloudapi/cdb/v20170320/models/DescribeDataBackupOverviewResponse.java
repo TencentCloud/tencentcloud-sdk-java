@@ -183,6 +183,38 @@ public class DescribeDataBackupOverviewResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeDataBackupOverviewResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeDataBackupOverviewResponse(DescribeDataBackupOverviewResponse source) {
+        if (source.DataBackupVolume != null) {
+            this.DataBackupVolume = new Long(source.DataBackupVolume);
+        }
+        if (source.DataBackupCount != null) {
+            this.DataBackupCount = new Long(source.DataBackupCount);
+        }
+        if (source.AutoBackupVolume != null) {
+            this.AutoBackupVolume = new Long(source.AutoBackupVolume);
+        }
+        if (source.AutoBackupCount != null) {
+            this.AutoBackupCount = new Long(source.AutoBackupCount);
+        }
+        if (source.ManualBackupVolume != null) {
+            this.ManualBackupVolume = new Long(source.ManualBackupVolume);
+        }
+        if (source.ManualBackupCount != null) {
+            this.ManualBackupCount = new Long(source.ManualBackupCount);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

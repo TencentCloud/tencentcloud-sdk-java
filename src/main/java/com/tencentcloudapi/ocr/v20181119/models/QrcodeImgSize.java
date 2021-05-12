@@ -68,6 +68,23 @@ public class QrcodeImgSize extends AbstractModel{
         this.High = High;
     }
 
+    public QrcodeImgSize() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public QrcodeImgSize(QrcodeImgSize source) {
+        if (source.Wide != null) {
+            this.Wide = new Long(source.Wide);
+        }
+        if (source.High != null) {
+            this.High = new Long(source.High);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

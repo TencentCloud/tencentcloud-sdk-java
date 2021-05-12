@@ -137,6 +137,41 @@ public class AutoRewriteRequest extends AbstractModel{
         this.TakeUrls = TakeUrls;
     }
 
+    public AutoRewriteRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AutoRewriteRequest(AutoRewriteRequest source) {
+        if (source.LoadBalancerId != null) {
+            this.LoadBalancerId = new String(source.LoadBalancerId);
+        }
+        if (source.ListenerId != null) {
+            this.ListenerId = new String(source.ListenerId);
+        }
+        if (source.Domains != null) {
+            this.Domains = new String[source.Domains.length];
+            for (int i = 0; i < source.Domains.length; i++) {
+                this.Domains[i] = new String(source.Domains[i]);
+            }
+        }
+        if (source.RewriteCodes != null) {
+            this.RewriteCodes = new Long[source.RewriteCodes.length];
+            for (int i = 0; i < source.RewriteCodes.length; i++) {
+                this.RewriteCodes[i] = new Long(source.RewriteCodes[i]);
+            }
+        }
+        if (source.TakeUrls != null) {
+            this.TakeUrls = new Boolean[source.TakeUrls.length];
+            for (int i = 0; i < source.TakeUrls.length; i++) {
+                this.TakeUrls[i] = new Boolean(source.TakeUrls[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -88,6 +88,23 @@ public class MediaSourceData extends AbstractModel{
         this.SourceContext = SourceContext;
     }
 
+    public MediaSourceData() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MediaSourceData(MediaSourceData source) {
+        if (source.SourceType != null) {
+            this.SourceType = new String(source.SourceType);
+        }
+        if (source.SourceContext != null) {
+            this.SourceContext = new String(source.SourceContext);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

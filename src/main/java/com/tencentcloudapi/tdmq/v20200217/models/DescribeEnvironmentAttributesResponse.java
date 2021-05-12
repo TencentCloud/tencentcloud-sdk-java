@@ -229,6 +229,44 @@ public class DescribeEnvironmentAttributesResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeEnvironmentAttributesResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeEnvironmentAttributesResponse(DescribeEnvironmentAttributesResponse source) {
+        if (source.MsgTTL != null) {
+            this.MsgTTL = new Long(source.MsgTTL);
+        }
+        if (source.RateInByte != null) {
+            this.RateInByte = new Long(source.RateInByte);
+        }
+        if (source.RateInSize != null) {
+            this.RateInSize = new Long(source.RateInSize);
+        }
+        if (source.RetentionHours != null) {
+            this.RetentionHours = new Long(source.RetentionHours);
+        }
+        if (source.RetentionSize != null) {
+            this.RetentionSize = new Long(source.RetentionSize);
+        }
+        if (source.EnvironmentId != null) {
+            this.EnvironmentId = new String(source.EnvironmentId);
+        }
+        if (source.Replicas != null) {
+            this.Replicas = new Long(source.Replicas);
+        }
+        if (source.Remark != null) {
+            this.Remark = new String(source.Remark);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

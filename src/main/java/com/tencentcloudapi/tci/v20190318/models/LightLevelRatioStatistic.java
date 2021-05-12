@@ -68,6 +68,23 @@ public class LightLevelRatioStatistic extends AbstractModel{
         this.Ratio = Ratio;
     }
 
+    public LightLevelRatioStatistic() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public LightLevelRatioStatistic(LightLevelRatioStatistic source) {
+        if (source.Level != null) {
+            this.Level = new String(source.Level);
+        }
+        if (source.Ratio != null) {
+            this.Ratio = new Float(source.Ratio);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

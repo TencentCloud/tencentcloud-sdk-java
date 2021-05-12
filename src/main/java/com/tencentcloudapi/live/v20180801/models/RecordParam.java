@@ -252,6 +252,32 @@ public class RecordParam extends AbstractModel{
         this.VodFileName = VodFileName;
     }
 
+    public RecordParam() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RecordParam(RecordParam source) {
+        if (source.RecordInterval != null) {
+            this.RecordInterval = new Long(source.RecordInterval);
+        }
+        if (source.StorageTime != null) {
+            this.StorageTime = new Long(source.StorageTime);
+        }
+        if (source.Enable != null) {
+            this.Enable = new Long(source.Enable);
+        }
+        if (source.VodSubAppId != null) {
+            this.VodSubAppId = new Long(source.VodSubAppId);
+        }
+        if (source.VodFileName != null) {
+            this.VodFileName = new String(source.VodFileName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

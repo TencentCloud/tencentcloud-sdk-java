@@ -101,6 +101,26 @@ public class RoutingStrategy extends AbstractModel{
         this.Message = Message;
     }
 
+    public RoutingStrategy() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RoutingStrategy(RoutingStrategy source) {
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.FleetId != null) {
+            this.FleetId = new String(source.FleetId);
+        }
+        if (source.Message != null) {
+            this.Message = new String(source.Message);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

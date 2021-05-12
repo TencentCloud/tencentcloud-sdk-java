@@ -344,6 +344,59 @@ public class CreateJobRequest extends AbstractModel{
         this.LogTopicId = LogTopicId;
     }
 
+    public CreateJobRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateJobRequest(CreateJobRequest source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.ResourceGroupId != null) {
+            this.ResourceGroupId = new String(source.ResourceGroupId);
+        }
+        if (source.Cpu != null) {
+            this.Cpu = new Long(source.Cpu);
+        }
+        if (source.Memory != null) {
+            this.Memory = new Long(source.Memory);
+        }
+        if (source.Cluster != null) {
+            this.Cluster = new String(source.Cluster);
+        }
+        if (source.PredictInput != null) {
+            this.PredictInput = new PredictInput(source.PredictInput);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.WorkerCount != null) {
+            this.WorkerCount = new Long(source.WorkerCount);
+        }
+        if (source.ConfigId != null) {
+            this.ConfigId = new String(source.ConfigId);
+        }
+        if (source.Gpu != null) {
+            this.Gpu = new Long(source.Gpu);
+        }
+        if (source.GpuMemory != null) {
+            this.GpuMemory = new Long(source.GpuMemory);
+        }
+        if (source.GpuType != null) {
+            this.GpuType = new String(source.GpuType);
+        }
+        if (source.QuantizationInput != null) {
+            this.QuantizationInput = new QuantizationInput(source.QuantizationInput);
+        }
+        if (source.LogTopicId != null) {
+            this.LogTopicId = new String(source.LogTopicId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

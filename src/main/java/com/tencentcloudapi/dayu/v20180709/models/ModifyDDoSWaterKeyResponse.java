@@ -68,6 +68,26 @@ public class ModifyDDoSWaterKeyResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public ModifyDDoSWaterKeyResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyDDoSWaterKeyResponse(ModifyDDoSWaterKeyResponse source) {
+        if (source.KeyList != null) {
+            this.KeyList = new WaterPrintKey[source.KeyList.length];
+            for (int i = 0; i < source.KeyList.length; i++) {
+                this.KeyList[i] = new WaterPrintKey(source.KeyList[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

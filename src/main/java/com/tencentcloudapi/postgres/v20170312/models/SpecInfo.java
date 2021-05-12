@@ -91,6 +91,29 @@ public class SpecInfo extends AbstractModel{
         this.SpecItemInfoList = SpecItemInfoList;
     }
 
+    public SpecInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SpecInfo(SpecInfo source) {
+        if (source.Region != null) {
+            this.Region = new String(source.Region);
+        }
+        if (source.Zone != null) {
+            this.Zone = new String(source.Zone);
+        }
+        if (source.SpecItemInfoList != null) {
+            this.SpecItemInfoList = new SpecItemInfo[source.SpecItemInfoList.length];
+            for (int i = 0; i < source.SpecItemInfoList.length; i++) {
+                this.SpecItemInfoList[i] = new SpecItemInfo(source.SpecItemInfoList[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

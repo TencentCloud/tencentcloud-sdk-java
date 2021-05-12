@@ -91,6 +91,29 @@ public class DescribeTendisSlowLogResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeTendisSlowLogResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeTendisSlowLogResponse(DescribeTendisSlowLogResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.TendisSlowLogDetail != null) {
+            this.TendisSlowLogDetail = new TendisSlowLogDetail[source.TendisSlowLogDetail.length];
+            for (int i = 0; i < source.TendisSlowLogDetail.length; i++) {
+                this.TendisSlowLogDetail[i] = new TendisSlowLogDetail(source.TendisSlowLogDetail[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

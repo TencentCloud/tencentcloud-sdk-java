@@ -114,6 +114,29 @@ public class ZoneFlowAndAvrStayTime extends AbstractModel{
         this.AvrStayTime = AvrStayTime;
     }
 
+    public ZoneFlowAndAvrStayTime() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ZoneFlowAndAvrStayTime(ZoneFlowAndAvrStayTime source) {
+        if (source.ZoneId != null) {
+            this.ZoneId = new Long(source.ZoneId);
+        }
+        if (source.ZoneName != null) {
+            this.ZoneName = new String(source.ZoneName);
+        }
+        if (source.FlowCount != null) {
+            this.FlowCount = new Long(source.FlowCount);
+        }
+        if (source.AvrStayTime != null) {
+            this.AvrStayTime = new Long(source.AvrStayTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

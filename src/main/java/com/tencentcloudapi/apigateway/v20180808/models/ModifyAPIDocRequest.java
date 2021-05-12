@@ -137,6 +137,35 @@ public class ModifyAPIDocRequest extends AbstractModel{
         this.ApiIds = ApiIds;
     }
 
+    public ModifyAPIDocRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyAPIDocRequest(ModifyAPIDocRequest source) {
+        if (source.ApiDocId != null) {
+            this.ApiDocId = new String(source.ApiDocId);
+        }
+        if (source.ApiDocName != null) {
+            this.ApiDocName = new String(source.ApiDocName);
+        }
+        if (source.ServiceId != null) {
+            this.ServiceId = new String(source.ServiceId);
+        }
+        if (source.Environment != null) {
+            this.Environment = new String(source.Environment);
+        }
+        if (source.ApiIds != null) {
+            this.ApiIds = new String[source.ApiIds.length];
+            for (int i = 0; i < source.ApiIds.length; i++) {
+                this.ApiIds[i] = new String(source.ApiIds[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

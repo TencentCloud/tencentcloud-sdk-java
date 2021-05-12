@@ -183,6 +183,47 @@ public class CreateDomainErrorPageInfoRequest extends AbstractModel{
         this.SetHeaders = SetHeaders;
     }
 
+    public CreateDomainErrorPageInfoRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateDomainErrorPageInfoRequest(CreateDomainErrorPageInfoRequest source) {
+        if (source.ListenerId != null) {
+            this.ListenerId = new String(source.ListenerId);
+        }
+        if (source.Domain != null) {
+            this.Domain = new String(source.Domain);
+        }
+        if (source.ErrorNos != null) {
+            this.ErrorNos = new Long[source.ErrorNos.length];
+            for (int i = 0; i < source.ErrorNos.length; i++) {
+                this.ErrorNos[i] = new Long(source.ErrorNos[i]);
+            }
+        }
+        if (source.Body != null) {
+            this.Body = new String(source.Body);
+        }
+        if (source.NewErrorNo != null) {
+            this.NewErrorNo = new Long(source.NewErrorNo);
+        }
+        if (source.ClearHeaders != null) {
+            this.ClearHeaders = new String[source.ClearHeaders.length];
+            for (int i = 0; i < source.ClearHeaders.length; i++) {
+                this.ClearHeaders[i] = new String(source.ClearHeaders[i]);
+            }
+        }
+        if (source.SetHeaders != null) {
+            this.SetHeaders = new HttpHeaderParam[source.SetHeaders.length];
+            for (int i = 0; i < source.SetHeaders.length; i++) {
+                this.SetHeaders[i] = new HttpHeaderParam(source.SetHeaders[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -91,6 +91,26 @@ public class DescribeTaskOperationLogRequest extends AbstractModel{
         this.Order = Order;
     }
 
+    public DescribeTaskOperationLogRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeTaskOperationLogRequest(DescribeTaskOperationLogRequest source) {
+        if (source.TaskId != null) {
+            this.TaskId = new String(source.TaskId);
+        }
+        if (source.OrderField != null) {
+            this.OrderField = new String(source.OrderField);
+        }
+        if (source.Order != null) {
+            this.Order = new Long(source.Order);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

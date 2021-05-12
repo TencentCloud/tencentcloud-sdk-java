@@ -91,6 +91,29 @@ public class DescribeBizTrendResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeBizTrendResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeBizTrendResponse(DescribeBizTrendResponse source) {
+        if (source.DataList != null) {
+            this.DataList = new Float[source.DataList.length];
+            for (int i = 0; i < source.DataList.length; i++) {
+                this.DataList[i] = new Float(source.DataList[i]);
+            }
+        }
+        if (source.MetricName != null) {
+            this.MetricName = new String(source.MetricName);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

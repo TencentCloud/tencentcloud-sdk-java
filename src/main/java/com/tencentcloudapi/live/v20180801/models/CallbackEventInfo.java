@@ -183,6 +183,38 @@ public class CallbackEventInfo extends AbstractModel{
         this.StreamId = StreamId;
     }
 
+    public CallbackEventInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CallbackEventInfo(CallbackEventInfo source) {
+        if (source.EventTime != null) {
+            this.EventTime = new String(source.EventTime);
+        }
+        if (source.EventType != null) {
+            this.EventType = new Long(source.EventType);
+        }
+        if (source.Request != null) {
+            this.Request = new String(source.Request);
+        }
+        if (source.Response != null) {
+            this.Response = new String(source.Response);
+        }
+        if (source.ResponseTime != null) {
+            this.ResponseTime = new String(source.ResponseTime);
+        }
+        if (source.ResultCode != null) {
+            this.ResultCode = new Long(source.ResultCode);
+        }
+        if (source.StreamId != null) {
+            this.StreamId = new String(source.StreamId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

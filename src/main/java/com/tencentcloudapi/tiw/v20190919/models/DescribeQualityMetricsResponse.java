@@ -91,6 +91,29 @@ public class DescribeQualityMetricsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeQualityMetricsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeQualityMetricsResponse(DescribeQualityMetricsResponse source) {
+        if (source.Metric != null) {
+            this.Metric = new String(source.Metric);
+        }
+        if (source.Content != null) {
+            this.Content = new TimeValue[source.Content.length];
+            for (int i = 0; i < source.Content.length; i++) {
+                this.Content[i] = new TimeValue(source.Content[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -68,6 +68,23 @@ public class DescribeLiveDomainCertResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeLiveDomainCertResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeLiveDomainCertResponse(DescribeLiveDomainCertResponse source) {
+        if (source.DomainCertInfo != null) {
+            this.DomainCertInfo = new DomainCertInfo(source.DomainCertInfo);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -169,6 +169,29 @@ public class FaceQualityInfo extends AbstractModel{
         this.Completeness = Completeness;
     }
 
+    public FaceQualityInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public FaceQualityInfo(FaceQualityInfo source) {
+        if (source.Score != null) {
+            this.Score = new Long(source.Score);
+        }
+        if (source.Sharpness != null) {
+            this.Sharpness = new Long(source.Sharpness);
+        }
+        if (source.Brightness != null) {
+            this.Brightness = new Long(source.Brightness);
+        }
+        if (source.Completeness != null) {
+            this.Completeness = new FaceQualityCompleteness(source.Completeness);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

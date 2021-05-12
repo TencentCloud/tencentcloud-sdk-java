@@ -114,6 +114,29 @@ public class QueryMerchantInfoForManagementRequest extends AbstractModel{
         this.Profile = Profile;
     }
 
+    public QueryMerchantInfoForManagementRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public QueryMerchantInfoForManagementRequest(QueryMerchantInfoForManagementRequest source) {
+        if (source.InvoicePlatformId != null) {
+            this.InvoicePlatformId = new Long(source.InvoicePlatformId);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.Profile != null) {
+            this.Profile = new String(source.Profile);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

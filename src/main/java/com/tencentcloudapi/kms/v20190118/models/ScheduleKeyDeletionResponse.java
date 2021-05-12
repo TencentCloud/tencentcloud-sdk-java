@@ -91,6 +91,26 @@ public class ScheduleKeyDeletionResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public ScheduleKeyDeletionResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ScheduleKeyDeletionResponse(ScheduleKeyDeletionResponse source) {
+        if (source.DeletionDate != null) {
+            this.DeletionDate = new Long(source.DeletionDate);
+        }
+        if (source.KeyId != null) {
+            this.KeyId = new String(source.KeyId);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

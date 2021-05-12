@@ -45,6 +45,20 @@ public class RecognizePreciseTargetAudienceRequest extends AbstractModel{
         this.BspData = BspData;
     }
 
+    public RecognizePreciseTargetAudienceRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RecognizePreciseTargetAudienceRequest(RecognizePreciseTargetAudienceRequest source) {
+        if (source.BspData != null) {
+            this.BspData = new InputRecognizeTargetAudience(source.BspData);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

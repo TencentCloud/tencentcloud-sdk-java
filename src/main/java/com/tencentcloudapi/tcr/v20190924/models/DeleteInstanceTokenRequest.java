@@ -68,6 +68,23 @@ public class DeleteInstanceTokenRequest extends AbstractModel{
         this.TokenId = TokenId;
     }
 
+    public DeleteInstanceTokenRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteInstanceTokenRequest(DeleteInstanceTokenRequest source) {
+        if (source.RegistryId != null) {
+            this.RegistryId = new String(source.RegistryId);
+        }
+        if (source.TokenId != null) {
+            this.TokenId = new String(source.TokenId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

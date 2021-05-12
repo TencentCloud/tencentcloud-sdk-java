@@ -68,6 +68,23 @@ public class ModifyDhcpIpAttributeRequest extends AbstractModel{
         this.DhcpIpName = DhcpIpName;
     }
 
+    public ModifyDhcpIpAttributeRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyDhcpIpAttributeRequest(ModifyDhcpIpAttributeRequest source) {
+        if (source.DhcpIpId != null) {
+            this.DhcpIpId = new String(source.DhcpIpId);
+        }
+        if (source.DhcpIpName != null) {
+            this.DhcpIpName = new String(source.DhcpIpName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

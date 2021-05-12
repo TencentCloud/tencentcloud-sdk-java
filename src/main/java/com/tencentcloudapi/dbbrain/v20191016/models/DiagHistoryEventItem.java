@@ -267,6 +267,47 @@ public class DiagHistoryEventItem extends AbstractModel{
         this.Region = Region;
     }
 
+    public DiagHistoryEventItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DiagHistoryEventItem(DiagHistoryEventItem source) {
+        if (source.DiagType != null) {
+            this.DiagType = new String(source.DiagType);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.EventId != null) {
+            this.EventId = new Long(source.EventId);
+        }
+        if (source.Severity != null) {
+            this.Severity = new Long(source.Severity);
+        }
+        if (source.Outline != null) {
+            this.Outline = new String(source.Outline);
+        }
+        if (source.DiagItem != null) {
+            this.DiagItem = new String(source.DiagItem);
+        }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.Metric != null) {
+            this.Metric = new String(source.Metric);
+        }
+        if (source.Region != null) {
+            this.Region = new String(source.Region);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -96,6 +96,26 @@ public class CreateInstancePreResponse extends AbstractModel{
         this.Data = Data;
     }
 
+    public CreateInstancePreResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateInstancePreResponse(CreateInstancePreResponse source) {
+        if (source.ReturnCode != null) {
+            this.ReturnCode = new String(source.ReturnCode);
+        }
+        if (source.ReturnMessage != null) {
+            this.ReturnMessage = new String(source.ReturnMessage);
+        }
+        if (source.Data != null) {
+            this.Data = new CreateInstancePreData(source.Data);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

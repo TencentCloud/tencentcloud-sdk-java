@@ -386,6 +386,62 @@ public class UsagePlanInfo extends AbstractModel{
         this.BindEnvironments = BindEnvironments;
     }
 
+    public UsagePlanInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UsagePlanInfo(UsagePlanInfo source) {
+        if (source.UsagePlanId != null) {
+            this.UsagePlanId = new String(source.UsagePlanId);
+        }
+        if (source.UsagePlanName != null) {
+            this.UsagePlanName = new String(source.UsagePlanName);
+        }
+        if (source.UsagePlanDesc != null) {
+            this.UsagePlanDesc = new String(source.UsagePlanDesc);
+        }
+        if (source.InitQuota != null) {
+            this.InitQuota = new Long(source.InitQuota);
+        }
+        if (source.MaxRequestNumPreSec != null) {
+            this.MaxRequestNumPreSec = new Long(source.MaxRequestNumPreSec);
+        }
+        if (source.MaxRequestNum != null) {
+            this.MaxRequestNum = new Long(source.MaxRequestNum);
+        }
+        if (source.IsHide != null) {
+            this.IsHide = new Long(source.IsHide);
+        }
+        if (source.CreatedTime != null) {
+            this.CreatedTime = new String(source.CreatedTime);
+        }
+        if (source.ModifiedTime != null) {
+            this.ModifiedTime = new String(source.ModifiedTime);
+        }
+        if (source.BindSecretIdTotalCount != null) {
+            this.BindSecretIdTotalCount = new Long(source.BindSecretIdTotalCount);
+        }
+        if (source.BindSecretIds != null) {
+            this.BindSecretIds = new String[source.BindSecretIds.length];
+            for (int i = 0; i < source.BindSecretIds.length; i++) {
+                this.BindSecretIds[i] = new String(source.BindSecretIds[i]);
+            }
+        }
+        if (source.BindEnvironmentTotalCount != null) {
+            this.BindEnvironmentTotalCount = new Long(source.BindEnvironmentTotalCount);
+        }
+        if (source.BindEnvironments != null) {
+            this.BindEnvironments = new UsagePlanBindEnvironment[source.BindEnvironments.length];
+            for (int i = 0; i < source.BindEnvironments.length; i++) {
+                this.BindEnvironments[i] = new UsagePlanBindEnvironment(source.BindEnvironments[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

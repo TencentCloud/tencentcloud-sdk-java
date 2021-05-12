@@ -22,6 +22,17 @@ import java.util.HashMap;
 
 public class GetTaskTotalNumberRequest extends AbstractModel{
 
+    public GetTaskTotalNumberRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GetTaskTotalNumberRequest(GetTaskTotalNumberRequest source) {
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

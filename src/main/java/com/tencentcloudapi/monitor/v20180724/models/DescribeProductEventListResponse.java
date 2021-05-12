@@ -124,6 +124,32 @@ public class DescribeProductEventListResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeProductEventListResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeProductEventListResponse(DescribeProductEventListResponse source) {
+        if (source.Events != null) {
+            this.Events = new DescribeProductEventListEvents[source.Events.length];
+            for (int i = 0; i < source.Events.length; i++) {
+                this.Events[i] = new DescribeProductEventListEvents(source.Events[i]);
+            }
+        }
+        if (source.OverView != null) {
+            this.OverView = new DescribeProductEventListOverView(source.OverView);
+        }
+        if (source.Total != null) {
+            this.Total = new Long(source.Total);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

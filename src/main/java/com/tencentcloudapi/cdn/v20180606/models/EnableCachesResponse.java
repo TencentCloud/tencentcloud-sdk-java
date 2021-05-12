@@ -73,6 +73,23 @@ public class EnableCachesResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public EnableCachesResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public EnableCachesResponse(EnableCachesResponse source) {
+        if (source.CacheOptResult != null) {
+            this.CacheOptResult = new CacheOptResult(source.CacheOptResult);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

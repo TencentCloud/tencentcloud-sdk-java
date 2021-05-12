@@ -183,6 +183,38 @@ public class CreateL7RuleCertRequest extends AbstractModel{
         this.PrivateKey = PrivateKey;
     }
 
+    public CreateL7RuleCertRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateL7RuleCertRequest(CreateL7RuleCertRequest source) {
+        if (source.Business != null) {
+            this.Business = new String(source.Business);
+        }
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
+        if (source.RuleId != null) {
+            this.RuleId = new String(source.RuleId);
+        }
+        if (source.CertType != null) {
+            this.CertType = new Long(source.CertType);
+        }
+        if (source.SSLId != null) {
+            this.SSLId = new String(source.SSLId);
+        }
+        if (source.Cert != null) {
+            this.Cert = new String(source.Cert);
+        }
+        if (source.PrivateKey != null) {
+            this.PrivateKey = new String(source.PrivateKey);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

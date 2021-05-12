@@ -160,6 +160,35 @@ public class QueryInstantDataRequest extends AbstractModel{
         this.Data = Data;
     }
 
+    public QueryInstantDataRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public QueryInstantDataRequest(QueryInstantDataRequest source) {
+        if (source.Module != null) {
+            this.Module = new String(source.Module);
+        }
+        if (source.Operation != null) {
+            this.Operation = new String(source.Operation);
+        }
+        if (source.ProductId != null) {
+            this.ProductId = new String(source.ProductId);
+        }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.QueryModel != null) {
+            this.QueryModel = new String(source.QueryModel);
+        }
+        if (source.Data != null) {
+            this.Data = new String(source.Data);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

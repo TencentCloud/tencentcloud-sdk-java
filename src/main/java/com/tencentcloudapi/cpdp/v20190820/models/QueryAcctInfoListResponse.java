@@ -114,6 +114,32 @@ public class QueryAcctInfoListResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public QueryAcctInfoListResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public QueryAcctInfoListResponse(QueryAcctInfoListResponse source) {
+        if (source.ResultCount != null) {
+            this.ResultCount = new Long(source.ResultCount);
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.QueryAcctItems != null) {
+            this.QueryAcctItems = new QueryAcctItem[source.QueryAcctItems.length];
+            for (int i = 0; i < source.QueryAcctItems.length; i++) {
+                this.QueryAcctItems[i] = new QueryAcctItem(source.QueryAcctItems[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

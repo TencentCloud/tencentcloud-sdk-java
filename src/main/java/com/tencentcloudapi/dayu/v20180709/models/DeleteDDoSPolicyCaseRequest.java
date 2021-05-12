@@ -68,6 +68,23 @@ public class DeleteDDoSPolicyCaseRequest extends AbstractModel{
         this.SceneId = SceneId;
     }
 
+    public DeleteDDoSPolicyCaseRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteDDoSPolicyCaseRequest(DeleteDDoSPolicyCaseRequest source) {
+        if (source.Business != null) {
+            this.Business = new String(source.Business);
+        }
+        if (source.SceneId != null) {
+            this.SceneId = new String(source.SceneId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

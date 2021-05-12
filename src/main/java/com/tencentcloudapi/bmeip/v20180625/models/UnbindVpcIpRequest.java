@@ -91,6 +91,26 @@ public class UnbindVpcIpRequest extends AbstractModel{
         this.VpcIp = VpcIp;
     }
 
+    public UnbindVpcIpRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UnbindVpcIpRequest(UnbindVpcIpRequest source) {
+        if (source.EipId != null) {
+            this.EipId = new String(source.EipId);
+        }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.VpcIp != null) {
+            this.VpcIp = new String(source.VpcIp);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

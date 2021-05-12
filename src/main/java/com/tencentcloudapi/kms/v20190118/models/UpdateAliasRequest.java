@@ -68,6 +68,23 @@ public class UpdateAliasRequest extends AbstractModel{
         this.KeyId = KeyId;
     }
 
+    public UpdateAliasRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UpdateAliasRequest(UpdateAliasRequest source) {
+        if (source.Alias != null) {
+            this.Alias = new String(source.Alias);
+        }
+        if (source.KeyId != null) {
+            this.KeyId = new String(source.KeyId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

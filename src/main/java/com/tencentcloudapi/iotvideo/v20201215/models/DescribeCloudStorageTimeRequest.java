@@ -91,6 +91,26 @@ public class DescribeCloudStorageTimeRequest extends AbstractModel{
         this.Date = Date;
     }
 
+    public DescribeCloudStorageTimeRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeCloudStorageTimeRequest(DescribeCloudStorageTimeRequest source) {
+        if (source.ProductId != null) {
+            this.ProductId = new String(source.ProductId);
+        }
+        if (source.DeviceName != null) {
+            this.DeviceName = new String(source.DeviceName);
+        }
+        if (source.Date != null) {
+            this.Date = new String(source.Date);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -143,6 +143,23 @@ focusOut - 焦距变远
         this.Command = Command;
     }
 
+    public ControlDevicePTZRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ControlDevicePTZRequest(ControlDevicePTZRequest source) {
+        if (source.DeviceId != null) {
+            this.DeviceId = new String(source.DeviceId);
+        }
+        if (source.Command != null) {
+            this.Command = new String(source.Command);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

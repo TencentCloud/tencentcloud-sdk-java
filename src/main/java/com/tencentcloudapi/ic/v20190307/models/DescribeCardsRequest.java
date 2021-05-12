@@ -91,6 +91,26 @@ public class DescribeCardsRequest extends AbstractModel{
         this.Limit = Limit;
     }
 
+    public DescribeCardsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeCardsRequest(DescribeCardsRequest source) {
+        if (source.Sdkappid != null) {
+            this.Sdkappid = new String(source.Sdkappid);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

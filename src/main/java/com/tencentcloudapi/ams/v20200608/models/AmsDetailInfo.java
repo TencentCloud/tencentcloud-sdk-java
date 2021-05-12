@@ -367,6 +367,68 @@ public class AmsDetailInfo extends AbstractModel{
         this.Status = Status;
     }
 
+    public AmsDetailInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AmsDetailInfo(AmsDetailInfo source) {
+        if (source.Label != null) {
+            this.Label = new String[source.Label.length];
+            for (int i = 0; i < source.Label.length; i++) {
+                this.Label[i] = new String(source.Label[i]);
+            }
+        }
+        if (source.Duration != null) {
+            this.Duration = new Long(source.Duration);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.TaskID != null) {
+            this.TaskID = new String(source.TaskID);
+        }
+        if (source.InsertTime != null) {
+            this.InsertTime = new String(source.InsertTime);
+        }
+        if (source.DataForm != null) {
+            this.DataForm = new Long(source.DataForm);
+        }
+        if (source.Operator != null) {
+            this.Operator = new String(source.Operator);
+        }
+        if (source.OriginalLabel != null) {
+            this.OriginalLabel = new String[source.OriginalLabel.length];
+            for (int i = 0; i < source.OriginalLabel.length; i++) {
+                this.OriginalLabel[i] = new String(source.OriginalLabel[i]);
+            }
+        }
+        if (source.OperateTime != null) {
+            this.OperateTime = new String(source.OperateTime);
+        }
+        if (source.Url != null) {
+            this.Url = new String(source.Url);
+        }
+        if (source.Thumbnail != null) {
+            this.Thumbnail = new String(source.Thumbnail);
+        }
+        if (source.Content != null) {
+            this.Content = new String(source.Content);
+        }
+        if (source.DetailCount != null) {
+            this.DetailCount = new Long(source.DetailCount);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

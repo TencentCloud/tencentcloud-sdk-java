@@ -45,6 +45,20 @@ public class TopicAction extends AbstractModel{
         this.Topic = Topic;
     }
 
+    public TopicAction() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TopicAction(TopicAction source) {
+        if (source.Topic != null) {
+            this.Topic = new String(source.Topic);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

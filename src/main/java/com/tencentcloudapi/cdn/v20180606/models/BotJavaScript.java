@@ -170,6 +170,38 @@ public class BotJavaScript extends AbstractModel{
         this.UpdateTime = UpdateTime;
     }
 
+    public BotJavaScript() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public BotJavaScript(BotJavaScript source) {
+        if (source.Switch != null) {
+            this.Switch = new String(source.Switch);
+        }
+        if (source.RuleType != null) {
+            this.RuleType = new String(source.RuleType);
+        }
+        if (source.RuleValue != null) {
+            this.RuleValue = new String[source.RuleValue.length];
+            for (int i = 0; i < source.RuleValue.length; i++) {
+                this.RuleValue[i] = new String(source.RuleValue[i]);
+            }
+        }
+        if (source.Action != null) {
+            this.Action = new String(source.Action);
+        }
+        if (source.RedirectUrl != null) {
+            this.RedirectUrl = new String(source.RedirectUrl);
+        }
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new String(source.UpdateTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -896,6 +896,146 @@ public class InstanceDetail extends AbstractModel{
         this.RealInstanceId = RealInstanceId;
     }
 
+    public InstanceDetail() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public InstanceDetail(InstanceDetail source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.InstanceName != null) {
+            this.InstanceName = new String(source.InstanceName);
+        }
+        if (source.PayMode != null) {
+            this.PayMode = new Long(source.PayMode);
+        }
+        if (source.ProjectId != null) {
+            this.ProjectId = new Long(source.ProjectId);
+        }
+        if (source.ClusterType != null) {
+            this.ClusterType = new Long(source.ClusterType);
+        }
+        if (source.Region != null) {
+            this.Region = new String(source.Region);
+        }
+        if (source.Zone != null) {
+            this.Zone = new String(source.Zone);
+        }
+        if (source.NetType != null) {
+            this.NetType = new Long(source.NetType);
+        }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.SubnetId != null) {
+            this.SubnetId = new String(source.SubnetId);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.Vip != null) {
+            this.Vip = new String(source.Vip);
+        }
+        if (source.Vport != null) {
+            this.Vport = new Long(source.Vport);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.DeadLine != null) {
+            this.DeadLine = new String(source.DeadLine);
+        }
+        if (source.MongoVersion != null) {
+            this.MongoVersion = new String(source.MongoVersion);
+        }
+        if (source.Memory != null) {
+            this.Memory = new Long(source.Memory);
+        }
+        if (source.Volume != null) {
+            this.Volume = new Long(source.Volume);
+        }
+        if (source.CpuNum != null) {
+            this.CpuNum = new Long(source.CpuNum);
+        }
+        if (source.MachineType != null) {
+            this.MachineType = new String(source.MachineType);
+        }
+        if (source.SecondaryNum != null) {
+            this.SecondaryNum = new Long(source.SecondaryNum);
+        }
+        if (source.ReplicationSetNum != null) {
+            this.ReplicationSetNum = new Long(source.ReplicationSetNum);
+        }
+        if (source.AutoRenewFlag != null) {
+            this.AutoRenewFlag = new Long(source.AutoRenewFlag);
+        }
+        if (source.UsedVolume != null) {
+            this.UsedVolume = new Long(source.UsedVolume);
+        }
+        if (source.MaintenanceStart != null) {
+            this.MaintenanceStart = new String(source.MaintenanceStart);
+        }
+        if (source.MaintenanceEnd != null) {
+            this.MaintenanceEnd = new String(source.MaintenanceEnd);
+        }
+        if (source.ReplicaSets != null) {
+            this.ReplicaSets = new ShardInfo[source.ReplicaSets.length];
+            for (int i = 0; i < source.ReplicaSets.length; i++) {
+                this.ReplicaSets[i] = new ShardInfo(source.ReplicaSets[i]);
+            }
+        }
+        if (source.ReadonlyInstances != null) {
+            this.ReadonlyInstances = new DBInstanceInfo[source.ReadonlyInstances.length];
+            for (int i = 0; i < source.ReadonlyInstances.length; i++) {
+                this.ReadonlyInstances[i] = new DBInstanceInfo(source.ReadonlyInstances[i]);
+            }
+        }
+        if (source.StandbyInstances != null) {
+            this.StandbyInstances = new DBInstanceInfo[source.StandbyInstances.length];
+            for (int i = 0; i < source.StandbyInstances.length; i++) {
+                this.StandbyInstances[i] = new DBInstanceInfo(source.StandbyInstances[i]);
+            }
+        }
+        if (source.CloneInstances != null) {
+            this.CloneInstances = new DBInstanceInfo[source.CloneInstances.length];
+            for (int i = 0; i < source.CloneInstances.length; i++) {
+                this.CloneInstances[i] = new DBInstanceInfo(source.CloneInstances[i]);
+            }
+        }
+        if (source.RelatedInstance != null) {
+            this.RelatedInstance = new DBInstanceInfo(source.RelatedInstance);
+        }
+        if (source.Tags != null) {
+            this.Tags = new TagInfo[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new TagInfo(source.Tags[i]);
+            }
+        }
+        if (source.InstanceVer != null) {
+            this.InstanceVer = new Long(source.InstanceVer);
+        }
+        if (source.ClusterVer != null) {
+            this.ClusterVer = new Long(source.ClusterVer);
+        }
+        if (source.Protocol != null) {
+            this.Protocol = new Long(source.Protocol);
+        }
+        if (source.InstanceType != null) {
+            this.InstanceType = new Long(source.InstanceType);
+        }
+        if (source.InstanceStatusDesc != null) {
+            this.InstanceStatusDesc = new String(source.InstanceStatusDesc);
+        }
+        if (source.RealInstanceId != null) {
+            this.RealInstanceId = new String(source.RealInstanceId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

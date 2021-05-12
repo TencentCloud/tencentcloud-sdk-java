@@ -68,6 +68,29 @@ public class LightStatistic extends AbstractModel{
         this.LightLevelRatio = LightLevelRatio;
     }
 
+    public LightStatistic() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public LightStatistic(LightStatistic source) {
+        if (source.LightDistribution != null) {
+            this.LightDistribution = new LightDistributionStatistic[source.LightDistribution.length];
+            for (int i = 0; i < source.LightDistribution.length; i++) {
+                this.LightDistribution[i] = new LightDistributionStatistic(source.LightDistribution[i]);
+            }
+        }
+        if (source.LightLevelRatio != null) {
+            this.LightLevelRatio = new LightLevelRatioStatistic[source.LightLevelRatio.length];
+            for (int i = 0; i < source.LightLevelRatio.length; i++) {
+                this.LightLevelRatio[i] = new LightLevelRatioStatistic(source.LightLevelRatio[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

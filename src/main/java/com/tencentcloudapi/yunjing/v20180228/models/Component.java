@@ -216,6 +216,41 @@ public class Component extends AbstractModel{
         this.ModifyTime = ModifyTime;
     }
 
+    public Component() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Component(Component source) {
+        if (source.Id != null) {
+            this.Id = new Long(source.Id);
+        }
+        if (source.Uuid != null) {
+            this.Uuid = new String(source.Uuid);
+        }
+        if (source.MachineIp != null) {
+            this.MachineIp = new String(source.MachineIp);
+        }
+        if (source.MachineName != null) {
+            this.MachineName = new String(source.MachineName);
+        }
+        if (source.ComponentVersion != null) {
+            this.ComponentVersion = new String(source.ComponentVersion);
+        }
+        if (source.ComponentType != null) {
+            this.ComponentType = new String(source.ComponentType);
+        }
+        if (source.ComponentName != null) {
+            this.ComponentName = new String(source.ComponentName);
+        }
+        if (source.ModifyTime != null) {
+            this.ModifyTime = new String(source.ModifyTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

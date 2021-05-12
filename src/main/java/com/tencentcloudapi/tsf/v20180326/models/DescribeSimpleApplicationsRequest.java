@@ -183,6 +183,44 @@ public class DescribeSimpleApplicationsRequest extends AbstractModel{
         this.SearchWord = SearchWord;
     }
 
+    public DescribeSimpleApplicationsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeSimpleApplicationsRequest(DescribeSimpleApplicationsRequest source) {
+        if (source.ApplicationIdList != null) {
+            this.ApplicationIdList = new String[source.ApplicationIdList.length];
+            for (int i = 0; i < source.ApplicationIdList.length; i++) {
+                this.ApplicationIdList[i] = new String(source.ApplicationIdList[i]);
+            }
+        }
+        if (source.ApplicationType != null) {
+            this.ApplicationType = new String(source.ApplicationType);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.MicroserviceType != null) {
+            this.MicroserviceType = new String(source.MicroserviceType);
+        }
+        if (source.ApplicationResourceTypeList != null) {
+            this.ApplicationResourceTypeList = new String[source.ApplicationResourceTypeList.length];
+            for (int i = 0; i < source.ApplicationResourceTypeList.length; i++) {
+                this.ApplicationResourceTypeList[i] = new String(source.ApplicationResourceTypeList[i]);
+            }
+        }
+        if (source.SearchWord != null) {
+            this.SearchWord = new String(source.SearchWord);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

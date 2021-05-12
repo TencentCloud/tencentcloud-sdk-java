@@ -68,6 +68,26 @@ public class DescribeLiveDelayInfoListResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeLiveDelayInfoListResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeLiveDelayInfoListResponse(DescribeLiveDelayInfoListResponse source) {
+        if (source.DelayInfoList != null) {
+            this.DelayInfoList = new DelayInfo[source.DelayInfoList.length];
+            for (int i = 0; i < source.DelayInfoList.length; i++) {
+                this.DelayInfoList[i] = new DelayInfo(source.DelayInfoList[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

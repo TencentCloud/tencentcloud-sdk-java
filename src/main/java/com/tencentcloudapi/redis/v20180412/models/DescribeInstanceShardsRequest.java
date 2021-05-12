@@ -68,6 +68,23 @@ public class DescribeInstanceShardsRequest extends AbstractModel{
         this.FilterSlave = FilterSlave;
     }
 
+    public DescribeInstanceShardsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeInstanceShardsRequest(DescribeInstanceShardsRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.FilterSlave != null) {
+            this.FilterSlave = new Boolean(source.FilterSlave);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

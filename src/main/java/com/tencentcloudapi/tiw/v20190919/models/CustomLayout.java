@@ -68,6 +68,26 @@ public class CustomLayout extends AbstractModel{
         this.InputStreamList = InputStreamList;
     }
 
+    public CustomLayout() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CustomLayout(CustomLayout source) {
+        if (source.Canvas != null) {
+            this.Canvas = new Canvas(source.Canvas);
+        }
+        if (source.InputStreamList != null) {
+            this.InputStreamList = new StreamLayout[source.InputStreamList.length];
+            for (int i = 0; i < source.InputStreamList.length; i++) {
+                this.InputStreamList[i] = new StreamLayout(source.InputStreamList[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

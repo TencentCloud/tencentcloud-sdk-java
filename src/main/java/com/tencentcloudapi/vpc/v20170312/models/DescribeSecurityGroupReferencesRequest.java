@@ -45,6 +45,23 @@ public class DescribeSecurityGroupReferencesRequest extends AbstractModel{
         this.SecurityGroupIds = SecurityGroupIds;
     }
 
+    public DescribeSecurityGroupReferencesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeSecurityGroupReferencesRequest(DescribeSecurityGroupReferencesRequest source) {
+        if (source.SecurityGroupIds != null) {
+            this.SecurityGroupIds = new String[source.SecurityGroupIds.length];
+            for (int i = 0; i < source.SecurityGroupIds.length; i++) {
+                this.SecurityGroupIds[i] = new String(source.SecurityGroupIds[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

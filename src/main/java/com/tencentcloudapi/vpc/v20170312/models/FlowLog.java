@@ -275,6 +275,53 @@ public class FlowLog extends AbstractModel{
         this.TagSet = TagSet;
     }
 
+    public FlowLog() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public FlowLog(FlowLog source) {
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.FlowLogId != null) {
+            this.FlowLogId = new String(source.FlowLogId);
+        }
+        if (source.FlowLogName != null) {
+            this.FlowLogName = new String(source.FlowLogName);
+        }
+        if (source.ResourceType != null) {
+            this.ResourceType = new String(source.ResourceType);
+        }
+        if (source.ResourceId != null) {
+            this.ResourceId = new String(source.ResourceId);
+        }
+        if (source.TrafficType != null) {
+            this.TrafficType = new String(source.TrafficType);
+        }
+        if (source.CloudLogId != null) {
+            this.CloudLogId = new String(source.CloudLogId);
+        }
+        if (source.CloudLogState != null) {
+            this.CloudLogState = new String(source.CloudLogState);
+        }
+        if (source.FlowLogDescription != null) {
+            this.FlowLogDescription = new String(source.FlowLogDescription);
+        }
+        if (source.CreatedTime != null) {
+            this.CreatedTime = new String(source.CreatedTime);
+        }
+        if (source.TagSet != null) {
+            this.TagSet = new Tag[source.TagSet.length];
+            for (int i = 0; i < source.TagSet.length; i++) {
+                this.TagSet[i] = new Tag(source.TagSet[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -183,6 +183,41 @@ public class AddProductRequest extends AbstractModel{
         this.DeviceType = DeviceType;
     }
 
+    public AddProductRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AddProductRequest(AddProductRequest source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.DataTemplate != null) {
+            this.DataTemplate = new DataTemplate[source.DataTemplate.length];
+            for (int i = 0; i < source.DataTemplate.length; i++) {
+                this.DataTemplate[i] = new DataTemplate(source.DataTemplate[i]);
+            }
+        }
+        if (source.DataProtocol != null) {
+            this.DataProtocol = new String(source.DataProtocol);
+        }
+        if (source.AuthType != null) {
+            this.AuthType = new Long(source.AuthType);
+        }
+        if (source.CommProtocol != null) {
+            this.CommProtocol = new String(source.CommProtocol);
+        }
+        if (source.DeviceType != null) {
+            this.DeviceType = new String(source.DeviceType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

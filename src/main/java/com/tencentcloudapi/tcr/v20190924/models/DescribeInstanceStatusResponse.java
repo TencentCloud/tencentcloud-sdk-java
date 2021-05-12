@@ -73,6 +73,26 @@ public class DescribeInstanceStatusResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeInstanceStatusResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeInstanceStatusResponse(DescribeInstanceStatusResponse source) {
+        if (source.RegistryStatusSet != null) {
+            this.RegistryStatusSet = new RegistryStatus[source.RegistryStatusSet.length];
+            for (int i = 0; i < source.RegistryStatusSet.length; i++) {
+                this.RegistryStatusSet[i] = new RegistryStatus(source.RegistryStatusSet[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

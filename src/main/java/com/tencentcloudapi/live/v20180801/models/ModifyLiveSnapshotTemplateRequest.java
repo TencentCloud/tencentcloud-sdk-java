@@ -328,6 +328,53 @@ public class ModifyLiveSnapshotTemplateRequest extends AbstractModel{
         this.CosFileName = CosFileName;
     }
 
+    public ModifyLiveSnapshotTemplateRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyLiveSnapshotTemplateRequest(ModifyLiveSnapshotTemplateRequest source) {
+        if (source.TemplateId != null) {
+            this.TemplateId = new Long(source.TemplateId);
+        }
+        if (source.TemplateName != null) {
+            this.TemplateName = new String(source.TemplateName);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.SnapshotInterval != null) {
+            this.SnapshotInterval = new Long(source.SnapshotInterval);
+        }
+        if (source.Width != null) {
+            this.Width = new Long(source.Width);
+        }
+        if (source.Height != null) {
+            this.Height = new Long(source.Height);
+        }
+        if (source.PornFlag != null) {
+            this.PornFlag = new Long(source.PornFlag);
+        }
+        if (source.CosAppId != null) {
+            this.CosAppId = new Long(source.CosAppId);
+        }
+        if (source.CosBucket != null) {
+            this.CosBucket = new String(source.CosBucket);
+        }
+        if (source.CosRegion != null) {
+            this.CosRegion = new String(source.CosRegion);
+        }
+        if (source.CosPrefix != null) {
+            this.CosPrefix = new String(source.CosPrefix);
+        }
+        if (source.CosFileName != null) {
+            this.CosFileName = new String(source.CosFileName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

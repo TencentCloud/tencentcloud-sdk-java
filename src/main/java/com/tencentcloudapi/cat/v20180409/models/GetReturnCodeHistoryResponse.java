@@ -137,6 +137,38 @@ public class GetReturnCodeHistoryResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public GetReturnCodeHistoryResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GetReturnCodeHistoryResponse(GetReturnCodeHistoryResponse source) {
+        if (source.Details != null) {
+            this.Details = new CatReturnDetail[source.Details.length];
+            for (int i = 0; i < source.Details.length; i++) {
+                this.Details[i] = new CatReturnDetail(source.Details[i]);
+            }
+        }
+        if (source.Summary != null) {
+            this.Summary = new CatReturnSummary[source.Summary.length];
+            for (int i = 0; i < source.Summary.length; i++) {
+                this.Summary[i] = new CatReturnSummary(source.Summary[i]);
+            }
+        }
+        if (source.BeginTime != null) {
+            this.BeginTime = new String(source.BeginTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

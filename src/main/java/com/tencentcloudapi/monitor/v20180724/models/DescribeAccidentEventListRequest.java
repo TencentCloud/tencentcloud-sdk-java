@@ -298,6 +298,65 @@ public class DescribeAccidentEventListRequest extends AbstractModel{
         this.AffectResource = AffectResource;
     }
 
+    public DescribeAccidentEventListRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeAccidentEventListRequest(DescribeAccidentEventListRequest source) {
+        if (source.Module != null) {
+            this.Module = new String(source.Module);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new Long(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new Long(source.EndTime);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.UpdateTimeOrder != null) {
+            this.UpdateTimeOrder = new String(source.UpdateTimeOrder);
+        }
+        if (source.OccurTimeOrder != null) {
+            this.OccurTimeOrder = new String(source.OccurTimeOrder);
+        }
+        if (source.AccidentType != null) {
+            this.AccidentType = new Long[source.AccidentType.length];
+            for (int i = 0; i < source.AccidentType.length; i++) {
+                this.AccidentType[i] = new Long(source.AccidentType[i]);
+            }
+        }
+        if (source.AccidentEvent != null) {
+            this.AccidentEvent = new Long[source.AccidentEvent.length];
+            for (int i = 0; i < source.AccidentEvent.length; i++) {
+                this.AccidentEvent[i] = new Long(source.AccidentEvent[i]);
+            }
+        }
+        if (source.AccidentStatus != null) {
+            this.AccidentStatus = new Long[source.AccidentStatus.length];
+            for (int i = 0; i < source.AccidentStatus.length; i++) {
+                this.AccidentStatus[i] = new Long(source.AccidentStatus[i]);
+            }
+        }
+        if (source.AccidentRegion != null) {
+            this.AccidentRegion = new String[source.AccidentRegion.length];
+            for (int i = 0; i < source.AccidentRegion.length; i++) {
+                this.AccidentRegion[i] = new String(source.AccidentRegion[i]);
+            }
+        }
+        if (source.AffectResource != null) {
+            this.AffectResource = new String(source.AffectResource);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

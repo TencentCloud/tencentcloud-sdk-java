@@ -68,6 +68,23 @@ public class OutputMapping extends AbstractModel{
         this.DestinationPath = DestinationPath;
     }
 
+    public OutputMapping() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public OutputMapping(OutputMapping source) {
+        if (source.SourcePath != null) {
+            this.SourcePath = new String(source.SourcePath);
+        }
+        if (source.DestinationPath != null) {
+            this.DestinationPath = new String(source.DestinationPath);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

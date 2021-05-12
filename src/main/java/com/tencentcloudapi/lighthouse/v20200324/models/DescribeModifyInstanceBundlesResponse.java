@@ -91,6 +91,29 @@ public class DescribeModifyInstanceBundlesResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeModifyInstanceBundlesResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeModifyInstanceBundlesResponse(DescribeModifyInstanceBundlesResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.ModifyBundleSet != null) {
+            this.ModifyBundleSet = new ModifyBundle[source.ModifyBundleSet.length];
+            for (int i = 0; i < source.ModifyBundleSet.length; i++) {
+                this.ModifyBundleSet[i] = new ModifyBundle(source.ModifyBundleSet[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

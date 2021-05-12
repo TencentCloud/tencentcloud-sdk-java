@@ -45,6 +45,20 @@ public class CreateIotDataTypeRequest extends AbstractModel{
         this.IotDataType = IotDataType;
     }
 
+    public CreateIotDataTypeRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateIotDataTypeRequest(CreateIotDataTypeRequest source) {
+        if (source.IotDataType != null) {
+            this.IotDataType = new String(source.IotDataType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

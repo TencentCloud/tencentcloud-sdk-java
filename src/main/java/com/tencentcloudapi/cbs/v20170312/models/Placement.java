@@ -152,6 +152,32 @@ public class Placement extends AbstractModel{
         this.CdcName = CdcName;
     }
 
+    public Placement() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Placement(Placement source) {
+        if (source.Zone != null) {
+            this.Zone = new String(source.Zone);
+        }
+        if (source.ProjectId != null) {
+            this.ProjectId = new Long(source.ProjectId);
+        }
+        if (source.CdcId != null) {
+            this.CdcId = new String(source.CdcId);
+        }
+        if (source.CageId != null) {
+            this.CageId = new String(source.CageId);
+        }
+        if (source.CdcName != null) {
+            this.CdcName = new String(source.CdcName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

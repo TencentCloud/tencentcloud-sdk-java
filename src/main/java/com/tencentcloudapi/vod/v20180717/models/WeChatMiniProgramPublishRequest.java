@@ -91,6 +91,26 @@ public class WeChatMiniProgramPublishRequest extends AbstractModel{
         this.SubAppId = SubAppId;
     }
 
+    public WeChatMiniProgramPublishRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public WeChatMiniProgramPublishRequest(WeChatMiniProgramPublishRequest source) {
+        if (source.FileId != null) {
+            this.FileId = new String(source.FileId);
+        }
+        if (source.SourceDefinition != null) {
+            this.SourceDefinition = new Long(source.SourceDefinition);
+        }
+        if (source.SubAppId != null) {
+            this.SubAppId = new Long(source.SubAppId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -320,6 +320,50 @@ public class InvocationTask extends AbstractModel{
         this.CommandDocument = CommandDocument;
     }
 
+    public InvocationTask() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public InvocationTask(InvocationTask source) {
+        if (source.InvocationId != null) {
+            this.InvocationId = new String(source.InvocationId);
+        }
+        if (source.InvocationTaskId != null) {
+            this.InvocationTaskId = new String(source.InvocationTaskId);
+        }
+        if (source.CommandId != null) {
+            this.CommandId = new String(source.CommandId);
+        }
+        if (source.TaskStatus != null) {
+            this.TaskStatus = new String(source.TaskStatus);
+        }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.TaskResult != null) {
+            this.TaskResult = new TaskResult(source.TaskResult);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+        if (source.CreatedTime != null) {
+            this.CreatedTime = new String(source.CreatedTime);
+        }
+        if (source.UpdatedTime != null) {
+            this.UpdatedTime = new String(source.UpdatedTime);
+        }
+        if (source.CommandDocument != null) {
+            this.CommandDocument = new CommandDocument(source.CommandDocument);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

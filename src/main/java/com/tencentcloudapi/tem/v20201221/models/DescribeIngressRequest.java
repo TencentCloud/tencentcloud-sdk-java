@@ -114,6 +114,29 @@ public class DescribeIngressRequest extends AbstractModel{
         this.SourceChannel = SourceChannel;
     }
 
+    public DescribeIngressRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeIngressRequest(DescribeIngressRequest source) {
+        if (source.NamespaceId != null) {
+            this.NamespaceId = new String(source.NamespaceId);
+        }
+        if (source.EksNamespace != null) {
+            this.EksNamespace = new String(source.EksNamespace);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.SourceChannel != null) {
+            this.SourceChannel = new Long(source.SourceChannel);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

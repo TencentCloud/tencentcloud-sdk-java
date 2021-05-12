@@ -68,6 +68,23 @@ public class ModifyEipNameRequest extends AbstractModel{
         this.EipName = EipName;
     }
 
+    public ModifyEipNameRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyEipNameRequest(ModifyEipNameRequest source) {
+        if (source.EipId != null) {
+            this.EipId = new String(source.EipId);
+        }
+        if (source.EipName != null) {
+            this.EipName = new String(source.EipName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -114,6 +114,32 @@ public class CreateClsLogTopicRequest extends AbstractModel{
         this.DomainAreaConfigs = DomainAreaConfigs;
     }
 
+    public CreateClsLogTopicRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateClsLogTopicRequest(CreateClsLogTopicRequest source) {
+        if (source.TopicName != null) {
+            this.TopicName = new String(source.TopicName);
+        }
+        if (source.LogsetId != null) {
+            this.LogsetId = new String(source.LogsetId);
+        }
+        if (source.Channel != null) {
+            this.Channel = new String(source.Channel);
+        }
+        if (source.DomainAreaConfigs != null) {
+            this.DomainAreaConfigs = new DomainAreaConfig[source.DomainAreaConfigs.length];
+            for (int i = 0; i < source.DomainAreaConfigs.length; i++) {
+                this.DomainAreaConfigs[i] = new DomainAreaConfig(source.DomainAreaConfigs[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

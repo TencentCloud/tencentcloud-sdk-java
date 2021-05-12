@@ -129,6 +129,29 @@ FALSE：表示开机状态制作，目前不支持，需要先手动关机
         this.ForcePoweroff = ForcePoweroff;
     }
 
+    public CreateImageRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateImageRequest(CreateImageRequest source) {
+        if (source.ImageName != null) {
+            this.ImageName = new String(source.ImageName);
+        }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.ImageDescription != null) {
+            this.ImageDescription = new String(source.ImageDescription);
+        }
+        if (source.ForcePoweroff != null) {
+            this.ForcePoweroff = new String(source.ForcePoweroff);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

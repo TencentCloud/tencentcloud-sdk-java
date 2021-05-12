@@ -101,6 +101,26 @@ public class BodyDetectResult extends AbstractModel{
         this.BodyAttributeInfo = BodyAttributeInfo;
     }
 
+    public BodyDetectResult() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public BodyDetectResult(BodyDetectResult source) {
+        if (source.Confidence != null) {
+            this.Confidence = new Float(source.Confidence);
+        }
+        if (source.BodyRect != null) {
+            this.BodyRect = new BodyRect(source.BodyRect);
+        }
+        if (source.BodyAttributeInfo != null) {
+            this.BodyAttributeInfo = new BodyAttributeInfo(source.BodyAttributeInfo);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

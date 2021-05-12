@@ -369,6 +369,59 @@ public class CreateInvoiceItem extends AbstractModel{
         this.VatSpecialManagement = VatSpecialManagement;
     }
 
+    public CreateInvoiceItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateInvoiceItem(CreateInvoiceItem source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.TaxCode != null) {
+            this.TaxCode = new String(source.TaxCode);
+        }
+        if (source.TotalPrice != null) {
+            this.TotalPrice = new Long(source.TotalPrice);
+        }
+        if (source.TaxRate != null) {
+            this.TaxRate = new Long(source.TaxRate);
+        }
+        if (source.TaxAmount != null) {
+            this.TaxAmount = new Long(source.TaxAmount);
+        }
+        if (source.TaxType != null) {
+            this.TaxType = new String(source.TaxType);
+        }
+        if (source.Models != null) {
+            this.Models = new String(source.Models);
+        }
+        if (source.Unit != null) {
+            this.Unit = new String(source.Unit);
+        }
+        if (source.Total != null) {
+            this.Total = new String(source.Total);
+        }
+        if (source.Price != null) {
+            this.Price = new String(source.Price);
+        }
+        if (source.Discount != null) {
+            this.Discount = new Long(source.Discount);
+        }
+        if (source.PreferentialPolicyFlag != null) {
+            this.PreferentialPolicyFlag = new String(source.PreferentialPolicyFlag);
+        }
+        if (source.ZeroTaxFlag != null) {
+            this.ZeroTaxFlag = new String(source.ZeroTaxFlag);
+        }
+        if (source.VatSpecialManagement != null) {
+            this.VatSpecialManagement = new String(source.VatSpecialManagement);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

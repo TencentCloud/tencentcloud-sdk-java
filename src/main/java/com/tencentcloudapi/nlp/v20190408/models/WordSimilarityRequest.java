@@ -68,6 +68,23 @@ public class WordSimilarityRequest extends AbstractModel{
         this.TargetWord = TargetWord;
     }
 
+    public WordSimilarityRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public WordSimilarityRequest(WordSimilarityRequest source) {
+        if (source.SrcWord != null) {
+            this.SrcWord = new String(source.SrcWord);
+        }
+        if (source.TargetWord != null) {
+            this.TargetWord = new String(source.TargetWord);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

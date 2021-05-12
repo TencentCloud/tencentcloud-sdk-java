@@ -114,6 +114,29 @@ public class InvokeServiceRequest extends AbstractModel{
         this.Input = Input;
     }
 
+    public InvokeServiceRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public InvokeServiceRequest(InvokeServiceRequest source) {
+        if (source.ServiceId != null) {
+            this.ServiceId = new String(source.ServiceId);
+        }
+        if (source.ServiceStatus != null) {
+            this.ServiceStatus = new Long(source.ServiceStatus);
+        }
+        if (source.FileUrl != null) {
+            this.FileUrl = new String(source.FileUrl);
+        }
+        if (source.Input != null) {
+            this.Input = new String(source.Input);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

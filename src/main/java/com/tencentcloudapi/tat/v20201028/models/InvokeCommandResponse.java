@@ -68,6 +68,23 @@ public class InvokeCommandResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public InvokeCommandResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public InvokeCommandResponse(InvokeCommandResponse source) {
+        if (source.InvocationId != null) {
+            this.InvocationId = new String(source.InvocationId);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

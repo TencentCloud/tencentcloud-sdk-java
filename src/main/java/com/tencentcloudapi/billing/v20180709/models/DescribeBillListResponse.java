@@ -321,6 +321,59 @@ public class DescribeBillListResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeBillListResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeBillListResponse(DescribeBillListResponse source) {
+        if (source.TransactionList != null) {
+            this.TransactionList = new BillTransactionInfo[source.TransactionList.length];
+            for (int i = 0; i < source.TransactionList.length; i++) {
+                this.TransactionList[i] = new BillTransactionInfo(source.TransactionList[i]);
+            }
+        }
+        if (source.Total != null) {
+            this.Total = new Long(source.Total);
+        }
+        if (source.ReturnAmount != null) {
+            this.ReturnAmount = new Float(source.ReturnAmount);
+        }
+        if (source.RechargeAmount != null) {
+            this.RechargeAmount = new Float(source.RechargeAmount);
+        }
+        if (source.BlockAmount != null) {
+            this.BlockAmount = new Float(source.BlockAmount);
+        }
+        if (source.UnblockAmount != null) {
+            this.UnblockAmount = new Float(source.UnblockAmount);
+        }
+        if (source.DeductAmount != null) {
+            this.DeductAmount = new Float(source.DeductAmount);
+        }
+        if (source.AgentInAmount != null) {
+            this.AgentInAmount = new Float(source.AgentInAmount);
+        }
+        if (source.AdvanceRechargeAmount != null) {
+            this.AdvanceRechargeAmount = new Float(source.AdvanceRechargeAmount);
+        }
+        if (source.WithdrawAmount != null) {
+            this.WithdrawAmount = new Float(source.WithdrawAmount);
+        }
+        if (source.AgentOutAmount != null) {
+            this.AgentOutAmount = new Float(source.AgentOutAmount);
+        }
+        if (source.AdvancePayAmount != null) {
+            this.AdvancePayAmount = new Float(source.AdvancePayAmount);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

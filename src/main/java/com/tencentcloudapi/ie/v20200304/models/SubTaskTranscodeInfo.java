@@ -160,6 +160,35 @@ public class SubTaskTranscodeInfo extends AbstractModel{
         this.MuxInfo = MuxInfo;
     }
 
+    public SubTaskTranscodeInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SubTaskTranscodeInfo(SubTaskTranscodeInfo source) {
+        if (source.TaskName != null) {
+            this.TaskName = new String(source.TaskName);
+        }
+        if (source.TargetInfo != null) {
+            this.TargetInfo = new TargetInfo(source.TargetInfo);
+        }
+        if (source.EditInfo != null) {
+            this.EditInfo = new EditInfo(source.EditInfo);
+        }
+        if (source.VideoInfo != null) {
+            this.VideoInfo = new VideoInfo(source.VideoInfo);
+        }
+        if (source.AudioInfo != null) {
+            this.AudioInfo = new AudioInfo(source.AudioInfo);
+        }
+        if (source.MuxInfo != null) {
+            this.MuxInfo = new MuxInfo(source.MuxInfo);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

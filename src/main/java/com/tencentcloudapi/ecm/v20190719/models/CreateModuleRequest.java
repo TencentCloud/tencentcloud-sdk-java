@@ -285,6 +285,56 @@ public class CreateModuleRequest extends AbstractModel{
         this.DisableWanIp = DisableWanIp;
     }
 
+    public CreateModuleRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateModuleRequest(CreateModuleRequest source) {
+        if (source.ModuleName != null) {
+            this.ModuleName = new String(source.ModuleName);
+        }
+        if (source.DefaultBandWidth != null) {
+            this.DefaultBandWidth = new Long(source.DefaultBandWidth);
+        }
+        if (source.DefaultImageId != null) {
+            this.DefaultImageId = new String(source.DefaultImageId);
+        }
+        if (source.InstanceType != null) {
+            this.InstanceType = new String(source.InstanceType);
+        }
+        if (source.DefaultSystemDiskSize != null) {
+            this.DefaultSystemDiskSize = new Long(source.DefaultSystemDiskSize);
+        }
+        if (source.DefaultDataDiskSize != null) {
+            this.DefaultDataDiskSize = new Long(source.DefaultDataDiskSize);
+        }
+        if (source.CloseIpDirect != null) {
+            this.CloseIpDirect = new Boolean(source.CloseIpDirect);
+        }
+        if (source.TagSpecification != null) {
+            this.TagSpecification = new TagSpecification[source.TagSpecification.length];
+            for (int i = 0; i < source.TagSpecification.length; i++) {
+                this.TagSpecification[i] = new TagSpecification(source.TagSpecification[i]);
+            }
+        }
+        if (source.SecurityGroups != null) {
+            this.SecurityGroups = new String[source.SecurityGroups.length];
+            for (int i = 0; i < source.SecurityGroups.length; i++) {
+                this.SecurityGroups[i] = new String(source.SecurityGroups[i]);
+            }
+        }
+        if (source.DefaultBandWidthIn != null) {
+            this.DefaultBandWidthIn = new Long(source.DefaultBandWidthIn);
+        }
+        if (source.DisableWanIp != null) {
+            this.DisableWanIp = new Boolean(source.DisableWanIp);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

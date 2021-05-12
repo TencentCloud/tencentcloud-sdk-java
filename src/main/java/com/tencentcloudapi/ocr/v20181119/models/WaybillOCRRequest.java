@@ -126,6 +126,26 @@ public class WaybillOCRRequest extends AbstractModel{
         this.EnablePreDetect = EnablePreDetect;
     }
 
+    public WaybillOCRRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public WaybillOCRRequest(WaybillOCRRequest source) {
+        if (source.ImageBase64 != null) {
+            this.ImageBase64 = new String(source.ImageBase64);
+        }
+        if (source.ImageUrl != null) {
+            this.ImageUrl = new String(source.ImageUrl);
+        }
+        if (source.EnablePreDetect != null) {
+            this.EnablePreDetect = new Boolean(source.EnablePreDetect);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

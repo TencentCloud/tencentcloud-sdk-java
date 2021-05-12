@@ -68,6 +68,23 @@ public class CreateScdnFailedLogTaskRequest extends AbstractModel{
         this.Area = Area;
     }
 
+    public CreateScdnFailedLogTaskRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateScdnFailedLogTaskRequest(CreateScdnFailedLogTaskRequest source) {
+        if (source.TaskId != null) {
+            this.TaskId = new String(source.TaskId);
+        }
+        if (source.Area != null) {
+            this.Area = new String(source.Area);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

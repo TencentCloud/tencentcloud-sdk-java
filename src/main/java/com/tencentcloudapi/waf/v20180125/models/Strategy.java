@@ -114,6 +114,29 @@ public class Strategy extends AbstractModel{
         this.Arg = Arg;
     }
 
+    public Strategy() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Strategy(Strategy source) {
+        if (source.Field != null) {
+            this.Field = new String(source.Field);
+        }
+        if (source.CompareFunc != null) {
+            this.CompareFunc = new String(source.CompareFunc);
+        }
+        if (source.Content != null) {
+            this.Content = new String(source.Content);
+        }
+        if (source.Arg != null) {
+            this.Arg = new String(source.Arg);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

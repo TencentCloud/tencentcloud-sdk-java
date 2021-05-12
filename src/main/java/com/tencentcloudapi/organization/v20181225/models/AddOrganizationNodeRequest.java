@@ -68,6 +68,23 @@ public class AddOrganizationNodeRequest extends AbstractModel{
         this.Name = Name;
     }
 
+    public AddOrganizationNodeRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AddOrganizationNodeRequest(AddOrganizationNodeRequest source) {
+        if (source.ParentNodeId != null) {
+            this.ParentNodeId = new Long(source.ParentNodeId);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

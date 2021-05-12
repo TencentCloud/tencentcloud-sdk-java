@@ -68,6 +68,23 @@ public class DatabaseTuple extends AbstractModel{
         this.SubscribeDatabase = SubscribeDatabase;
     }
 
+    public DatabaseTuple() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DatabaseTuple(DatabaseTuple source) {
+        if (source.PublishDatabase != null) {
+            this.PublishDatabase = new String(source.PublishDatabase);
+        }
+        if (source.SubscribeDatabase != null) {
+            this.SubscribeDatabase = new String(source.SubscribeDatabase);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

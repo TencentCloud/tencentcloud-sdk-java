@@ -45,6 +45,20 @@ public class SmsAddCrowdPackInfoResponse extends AbstractModel{
         this.ID = ID;
     }
 
+    public SmsAddCrowdPackInfoResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SmsAddCrowdPackInfoResponse(SmsAddCrowdPackInfoResponse source) {
+        if (source.ID != null) {
+            this.ID = new Long(source.ID);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -229,6 +229,50 @@ public class UpdateBaselineStrategyRequest extends AbstractModel{
         this.Quuids = Quuids;
     }
 
+    public UpdateBaselineStrategyRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UpdateBaselineStrategyRequest(UpdateBaselineStrategyRequest source) {
+        if (source.StrategyId != null) {
+            this.StrategyId = new Long(source.StrategyId);
+        }
+        if (source.StrategyName != null) {
+            this.StrategyName = new String(source.StrategyName);
+        }
+        if (source.ScanCycle != null) {
+            this.ScanCycle = new Long(source.ScanCycle);
+        }
+        if (source.ScanAt != null) {
+            this.ScanAt = new String(source.ScanAt);
+        }
+        if (source.CategoryIds != null) {
+            this.CategoryIds = new String[source.CategoryIds.length];
+            for (int i = 0; i < source.CategoryIds.length; i++) {
+                this.CategoryIds[i] = new String(source.CategoryIds[i]);
+            }
+        }
+        if (source.IsGlobal != null) {
+            this.IsGlobal = new Long(source.IsGlobal);
+        }
+        if (source.MachineType != null) {
+            this.MachineType = new String(source.MachineType);
+        }
+        if (source.RegionCode != null) {
+            this.RegionCode = new String(source.RegionCode);
+        }
+        if (source.Quuids != null) {
+            this.Quuids = new String[source.Quuids.length];
+            for (int i = 0; i < source.Quuids.length; i++) {
+                this.Quuids[i] = new String(source.Quuids[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

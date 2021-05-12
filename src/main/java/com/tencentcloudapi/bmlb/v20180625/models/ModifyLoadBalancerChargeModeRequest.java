@@ -91,6 +91,29 @@ public class ModifyLoadBalancerChargeModeRequest extends AbstractModel{
         this.ListenerSet = ListenerSet;
     }
 
+    public ModifyLoadBalancerChargeModeRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyLoadBalancerChargeModeRequest(ModifyLoadBalancerChargeModeRequest source) {
+        if (source.LoadBalancerId != null) {
+            this.LoadBalancerId = new String(source.LoadBalancerId);
+        }
+        if (source.PayMode != null) {
+            this.PayMode = new String(source.PayMode);
+        }
+        if (source.ListenerSet != null) {
+            this.ListenerSet = new ModifyLoadBalancerChargeModeListener[source.ListenerSet.length];
+            for (int i = 0; i < source.ListenerSet.length; i++) {
+                this.ListenerSet[i] = new ModifyLoadBalancerChargeModeListener(source.ListenerSet[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

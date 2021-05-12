@@ -1435,6 +1435,188 @@ OPEN：公网属性， INTERNAL：内网属性。
         this.HealthLogTopicId = HealthLogTopicId;
     }
 
+    public LoadBalancer() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public LoadBalancer(LoadBalancer source) {
+        if (source.LoadBalancerId != null) {
+            this.LoadBalancerId = new String(source.LoadBalancerId);
+        }
+        if (source.LoadBalancerName != null) {
+            this.LoadBalancerName = new String(source.LoadBalancerName);
+        }
+        if (source.LoadBalancerType != null) {
+            this.LoadBalancerType = new String(source.LoadBalancerType);
+        }
+        if (source.Forward != null) {
+            this.Forward = new Long(source.Forward);
+        }
+        if (source.Domain != null) {
+            this.Domain = new String(source.Domain);
+        }
+        if (source.LoadBalancerVips != null) {
+            this.LoadBalancerVips = new String[source.LoadBalancerVips.length];
+            for (int i = 0; i < source.LoadBalancerVips.length; i++) {
+                this.LoadBalancerVips[i] = new String(source.LoadBalancerVips[i]);
+            }
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.StatusTime != null) {
+            this.StatusTime = new String(source.StatusTime);
+        }
+        if (source.ProjectId != null) {
+            this.ProjectId = new Long(source.ProjectId);
+        }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.OpenBgp != null) {
+            this.OpenBgp = new Long(source.OpenBgp);
+        }
+        if (source.Snat != null) {
+            this.Snat = new Boolean(source.Snat);
+        }
+        if (source.Isolation != null) {
+            this.Isolation = new Long(source.Isolation);
+        }
+        if (source.Log != null) {
+            this.Log = new String(source.Log);
+        }
+        if (source.SubnetId != null) {
+            this.SubnetId = new String(source.SubnetId);
+        }
+        if (source.Tags != null) {
+            this.Tags = new TagInfo[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new TagInfo(source.Tags[i]);
+            }
+        }
+        if (source.SecureGroups != null) {
+            this.SecureGroups = new String[source.SecureGroups.length];
+            for (int i = 0; i < source.SecureGroups.length; i++) {
+                this.SecureGroups[i] = new String(source.SecureGroups[i]);
+            }
+        }
+        if (source.TargetRegionInfo != null) {
+            this.TargetRegionInfo = new TargetRegionInfo(source.TargetRegionInfo);
+        }
+        if (source.AnycastZone != null) {
+            this.AnycastZone = new String(source.AnycastZone);
+        }
+        if (source.AddressIPVersion != null) {
+            this.AddressIPVersion = new String(source.AddressIPVersion);
+        }
+        if (source.NumericalVpcId != null) {
+            this.NumericalVpcId = new Long(source.NumericalVpcId);
+        }
+        if (source.VipIsp != null) {
+            this.VipIsp = new String(source.VipIsp);
+        }
+        if (source.MasterZone != null) {
+            this.MasterZone = new ZoneInfo(source.MasterZone);
+        }
+        if (source.BackupZoneSet != null) {
+            this.BackupZoneSet = new ZoneInfo[source.BackupZoneSet.length];
+            for (int i = 0; i < source.BackupZoneSet.length; i++) {
+                this.BackupZoneSet[i] = new ZoneInfo(source.BackupZoneSet[i]);
+            }
+        }
+        if (source.IsolatedTime != null) {
+            this.IsolatedTime = new String(source.IsolatedTime);
+        }
+        if (source.ExpireTime != null) {
+            this.ExpireTime = new String(source.ExpireTime);
+        }
+        if (source.ChargeType != null) {
+            this.ChargeType = new String(source.ChargeType);
+        }
+        if (source.NetworkAttributes != null) {
+            this.NetworkAttributes = new InternetAccessible(source.NetworkAttributes);
+        }
+        if (source.PrepaidAttributes != null) {
+            this.PrepaidAttributes = new LBChargePrepaid(source.PrepaidAttributes);
+        }
+        if (source.LogSetId != null) {
+            this.LogSetId = new String(source.LogSetId);
+        }
+        if (source.LogTopicId != null) {
+            this.LogTopicId = new String(source.LogTopicId);
+        }
+        if (source.AddressIPv6 != null) {
+            this.AddressIPv6 = new String(source.AddressIPv6);
+        }
+        if (source.ExtraInfo != null) {
+            this.ExtraInfo = new ExtraInfo(source.ExtraInfo);
+        }
+        if (source.IsDDos != null) {
+            this.IsDDos = new Boolean(source.IsDDos);
+        }
+        if (source.ConfigId != null) {
+            this.ConfigId = new String(source.ConfigId);
+        }
+        if (source.LoadBalancerPassToTarget != null) {
+            this.LoadBalancerPassToTarget = new Boolean(source.LoadBalancerPassToTarget);
+        }
+        if (source.ExclusiveCluster != null) {
+            this.ExclusiveCluster = new ExclusiveCluster(source.ExclusiveCluster);
+        }
+        if (source.IPv6Mode != null) {
+            this.IPv6Mode = new String(source.IPv6Mode);
+        }
+        if (source.SnatPro != null) {
+            this.SnatPro = new Boolean(source.SnatPro);
+        }
+        if (source.SnatIps != null) {
+            this.SnatIps = new SnatIp[source.SnatIps.length];
+            for (int i = 0; i < source.SnatIps.length; i++) {
+                this.SnatIps[i] = new SnatIp(source.SnatIps[i]);
+            }
+        }
+        if (source.SlaType != null) {
+            this.SlaType = new String(source.SlaType);
+        }
+        if (source.IsBlock != null) {
+            this.IsBlock = new Boolean(source.IsBlock);
+        }
+        if (source.IsBlockTime != null) {
+            this.IsBlockTime = new String(source.IsBlockTime);
+        }
+        if (source.LocalBgp != null) {
+            this.LocalBgp = new Boolean(source.LocalBgp);
+        }
+        if (source.ClusterTag != null) {
+            this.ClusterTag = new String(source.ClusterTag);
+        }
+        if (source.MixIpTarget != null) {
+            this.MixIpTarget = new Boolean(source.MixIpTarget);
+        }
+        if (source.Zones != null) {
+            this.Zones = new String[source.Zones.length];
+            for (int i = 0; i < source.Zones.length; i++) {
+                this.Zones[i] = new String(source.Zones[i]);
+            }
+        }
+        if (source.NfvInfo != null) {
+            this.NfvInfo = new String(source.NfvInfo);
+        }
+        if (source.HealthLogSetId != null) {
+            this.HealthLogSetId = new String(source.HealthLogSetId);
+        }
+        if (source.HealthLogTopicId != null) {
+            this.HealthLogTopicId = new String(source.HealthLogTopicId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

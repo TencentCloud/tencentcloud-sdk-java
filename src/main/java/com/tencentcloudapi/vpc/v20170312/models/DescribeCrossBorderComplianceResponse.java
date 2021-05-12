@@ -91,6 +91,29 @@ public class DescribeCrossBorderComplianceResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeCrossBorderComplianceResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeCrossBorderComplianceResponse(DescribeCrossBorderComplianceResponse source) {
+        if (source.CrossBorderComplianceSet != null) {
+            this.CrossBorderComplianceSet = new CrossBorderCompliance[source.CrossBorderComplianceSet.length];
+            for (int i = 0; i < source.CrossBorderComplianceSet.length; i++) {
+                this.CrossBorderComplianceSet[i] = new CrossBorderCompliance(source.CrossBorderComplianceSet[i]);
+            }
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -321,6 +321,56 @@ public class CreateForwardRuleResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public CreateForwardRuleResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateForwardRuleResponse(CreateForwardRuleResponse source) {
+        if (source.Endpoint != null) {
+            this.Endpoint = new String(source.Endpoint);
+        }
+        if (source.QueueName != null) {
+            this.QueueName = new String(source.QueueName);
+        }
+        if (source.ProductID != null) {
+            this.ProductID = new String(source.ProductID);
+        }
+        if (source.MsgType != null) {
+            this.MsgType = new Long(source.MsgType);
+        }
+        if (source.Result != null) {
+            this.Result = new Long(source.Result);
+        }
+        if (source.RoleName != null) {
+            this.RoleName = new String(source.RoleName);
+        }
+        if (source.RoleID != null) {
+            this.RoleID = new Long(source.RoleID);
+        }
+        if (source.QueueRegion != null) {
+            this.QueueRegion = new String(source.QueueRegion);
+        }
+        if (source.QueueType != null) {
+            this.QueueType = new Long(source.QueueType);
+        }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.InstanceName != null) {
+            this.InstanceName = new String(source.InstanceName);
+        }
+        if (source.ErrMsg != null) {
+            this.ErrMsg = new String(source.ErrMsg);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

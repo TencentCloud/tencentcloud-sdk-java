@@ -435,6 +435,62 @@ ip：IP 列表作为源站
         this.PathBasedOrigin = PathBasedOrigin;
     }
 
+    public Origin() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Origin(Origin source) {
+        if (source.Origins != null) {
+            this.Origins = new String[source.Origins.length];
+            for (int i = 0; i < source.Origins.length; i++) {
+                this.Origins[i] = new String(source.Origins[i]);
+            }
+        }
+        if (source.OriginType != null) {
+            this.OriginType = new String(source.OriginType);
+        }
+        if (source.ServerName != null) {
+            this.ServerName = new String(source.ServerName);
+        }
+        if (source.CosPrivateAccess != null) {
+            this.CosPrivateAccess = new String(source.CosPrivateAccess);
+        }
+        if (source.OriginPullProtocol != null) {
+            this.OriginPullProtocol = new String(source.OriginPullProtocol);
+        }
+        if (source.BackupOrigins != null) {
+            this.BackupOrigins = new String[source.BackupOrigins.length];
+            for (int i = 0; i < source.BackupOrigins.length; i++) {
+                this.BackupOrigins[i] = new String(source.BackupOrigins[i]);
+            }
+        }
+        if (source.BackupOriginType != null) {
+            this.BackupOriginType = new String(source.BackupOriginType);
+        }
+        if (source.BackupServerName != null) {
+            this.BackupServerName = new String(source.BackupServerName);
+        }
+        if (source.BasePath != null) {
+            this.BasePath = new String(source.BasePath);
+        }
+        if (source.PathRules != null) {
+            this.PathRules = new PathRule[source.PathRules.length];
+            for (int i = 0; i < source.PathRules.length; i++) {
+                this.PathRules[i] = new PathRule(source.PathRules[i]);
+            }
+        }
+        if (source.PathBasedOrigin != null) {
+            this.PathBasedOrigin = new PathBasedOriginRule[source.PathBasedOrigin.length];
+            for (int i = 0; i < source.PathBasedOrigin.length; i++) {
+                this.PathBasedOrigin[i] = new PathBasedOriginRule(source.PathBasedOrigin[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -137,6 +137,32 @@ public class Block extends AbstractModel{
         this.TxCount = TxCount;
     }
 
+    public Block() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Block(Block source) {
+        if (source.BlockNum != null) {
+            this.BlockNum = new Long(source.BlockNum);
+        }
+        if (source.DataHash != null) {
+            this.DataHash = new String(source.DataHash);
+        }
+        if (source.BlockId != null) {
+            this.BlockId = new Long(source.BlockId);
+        }
+        if (source.PreHash != null) {
+            this.PreHash = new String(source.PreHash);
+        }
+        if (source.TxCount != null) {
+            this.TxCount = new Long(source.TxCount);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

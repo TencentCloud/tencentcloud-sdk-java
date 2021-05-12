@@ -114,6 +114,29 @@ public class CommandDocument extends AbstractModel{
         this.WorkingDirectory = WorkingDirectory;
     }
 
+    public CommandDocument() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CommandDocument(CommandDocument source) {
+        if (source.Content != null) {
+            this.Content = new String(source.Content);
+        }
+        if (source.CommandType != null) {
+            this.CommandType = new String(source.CommandType);
+        }
+        if (source.Timeout != null) {
+            this.Timeout = new Long(source.Timeout);
+        }
+        if (source.WorkingDirectory != null) {
+            this.WorkingDirectory = new String(source.WorkingDirectory);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

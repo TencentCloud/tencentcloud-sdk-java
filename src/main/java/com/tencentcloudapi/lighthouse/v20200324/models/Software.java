@@ -137,6 +137,35 @@ public class Software extends AbstractModel{
         this.DetailSet = DetailSet;
     }
 
+    public Software() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Software(Software source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Version != null) {
+            this.Version = new String(source.Version);
+        }
+        if (source.ImageUrl != null) {
+            this.ImageUrl = new String(source.ImageUrl);
+        }
+        if (source.InstallDir != null) {
+            this.InstallDir = new String(source.InstallDir);
+        }
+        if (source.DetailSet != null) {
+            this.DetailSet = new SoftwareDetail[source.DetailSet.length];
+            for (int i = 0; i < source.DetailSet.length; i++) {
+                this.DetailSet[i] = new SoftwareDetail(source.DetailSet[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

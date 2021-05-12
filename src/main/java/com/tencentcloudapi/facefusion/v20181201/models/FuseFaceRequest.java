@@ -198,6 +198,41 @@ public class FuseFaceRequest extends AbstractModel{
         this.CelebrityIdentify = CelebrityIdentify;
     }
 
+    public FuseFaceRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public FuseFaceRequest(FuseFaceRequest source) {
+        if (source.ProjectId != null) {
+            this.ProjectId = new String(source.ProjectId);
+        }
+        if (source.ModelId != null) {
+            this.ModelId = new String(source.ModelId);
+        }
+        if (source.RspImgType != null) {
+            this.RspImgType = new String(source.RspImgType);
+        }
+        if (source.MergeInfos != null) {
+            this.MergeInfos = new MergeInfo[source.MergeInfos.length];
+            for (int i = 0; i < source.MergeInfos.length; i++) {
+                this.MergeInfos[i] = new MergeInfo(source.MergeInfos[i]);
+            }
+        }
+        if (source.FuseProfileDegree != null) {
+            this.FuseProfileDegree = new Long(source.FuseProfileDegree);
+        }
+        if (source.FuseFaceDegree != null) {
+            this.FuseFaceDegree = new Long(source.FuseFaceDegree);
+        }
+        if (source.CelebrityIdentify != null) {
+            this.CelebrityIdentify = new Long(source.CelebrityIdentify);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

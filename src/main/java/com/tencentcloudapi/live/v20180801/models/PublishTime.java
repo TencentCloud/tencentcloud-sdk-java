@@ -50,6 +50,20 @@ UTC 格式，例如：2018-06-29T19:00:00Z。
         this.PublishTime = PublishTime;
     }
 
+    public PublishTime() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PublishTime(PublishTime source) {
+        if (source.PublishTime != null) {
+            this.PublishTime = new String(source.PublishTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

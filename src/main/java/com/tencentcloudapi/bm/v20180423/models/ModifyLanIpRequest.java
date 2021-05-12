@@ -137,6 +137,32 @@ public class ModifyLanIpRequest extends AbstractModel{
         this.RebootDevice = RebootDevice;
     }
 
+    public ModifyLanIpRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyLanIpRequest(ModifyLanIpRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.SubnetId != null) {
+            this.SubnetId = new String(source.SubnetId);
+        }
+        if (source.LanIp != null) {
+            this.LanIp = new String(source.LanIp);
+        }
+        if (source.RebootDevice != null) {
+            this.RebootDevice = new Long(source.RebootDevice);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

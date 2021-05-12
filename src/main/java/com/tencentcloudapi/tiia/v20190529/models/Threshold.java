@@ -91,6 +91,26 @@ public class Threshold extends AbstractModel{
         this.FalseRate1Permil = FalseRate1Permil;
     }
 
+    public Threshold() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Threshold(Threshold source) {
+        if (source.FalseRate1Percent != null) {
+            this.FalseRate1Percent = new Long(source.FalseRate1Percent);
+        }
+        if (source.FalseRate5Permil != null) {
+            this.FalseRate5Permil = new Long(source.FalseRate5Permil);
+        }
+        if (source.FalseRate1Permil != null) {
+            this.FalseRate1Permil = new Long(source.FalseRate1Permil);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

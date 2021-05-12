@@ -433,6 +433,62 @@ DefenceMode 映射如下：
         this.Area = Area;
     }
 
+    public CreateScdnLogTaskRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateScdnLogTaskRequest(CreateScdnLogTaskRequest source) {
+        if (source.Mode != null) {
+            this.Mode = new String(source.Mode);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+        if (source.Domain != null) {
+            this.Domain = new String(source.Domain);
+        }
+        if (source.AttackType != null) {
+            this.AttackType = new String(source.AttackType);
+        }
+        if (source.DefenceMode != null) {
+            this.DefenceMode = new String(source.DefenceMode);
+        }
+        if (source.Ip != null) {
+            this.Ip = new String(source.Ip);
+        }
+        if (source.Domains != null) {
+            this.Domains = new String[source.Domains.length];
+            for (int i = 0; i < source.Domains.length; i++) {
+                this.Domains[i] = new String(source.Domains[i]);
+            }
+        }
+        if (source.AttackTypes != null) {
+            this.AttackTypes = new String[source.AttackTypes.length];
+            for (int i = 0; i < source.AttackTypes.length; i++) {
+                this.AttackTypes[i] = new String(source.AttackTypes[i]);
+            }
+        }
+        if (source.Conditions != null) {
+            this.Conditions = new ScdnEventLogConditions[source.Conditions.length];
+            for (int i = 0; i < source.Conditions.length; i++) {
+                this.Conditions[i] = new ScdnEventLogConditions(source.Conditions[i]);
+            }
+        }
+        if (source.Source != null) {
+            this.Source = new String(source.Source);
+        }
+        if (source.Area != null) {
+            this.Area = new String(source.Area);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

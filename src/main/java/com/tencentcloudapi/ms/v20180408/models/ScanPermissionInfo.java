@@ -45,6 +45,20 @@ public class ScanPermissionInfo extends AbstractModel{
         this.Permission = Permission;
     }
 
+    public ScanPermissionInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ScanPermissionInfo(ScanPermissionInfo source) {
+        if (source.Permission != null) {
+            this.Permission = new String(source.Permission);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

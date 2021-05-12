@@ -180,6 +180,38 @@ public class DescribePlayErrorCodeDetailInfoListRequest extends AbstractModel{
         this.MainlandOrOversea = MainlandOrOversea;
     }
 
+    public DescribePlayErrorCodeDetailInfoListRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribePlayErrorCodeDetailInfoListRequest(DescribePlayErrorCodeDetailInfoListRequest source) {
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+        if (source.Granularity != null) {
+            this.Granularity = new Long(source.Granularity);
+        }
+        if (source.StatType != null) {
+            this.StatType = new String(source.StatType);
+        }
+        if (source.PlayDomains != null) {
+            this.PlayDomains = new String[source.PlayDomains.length];
+            for (int i = 0; i < source.PlayDomains.length; i++) {
+                this.PlayDomains[i] = new String(source.PlayDomains[i]);
+            }
+        }
+        if (source.MainlandOrOversea != null) {
+            this.MainlandOrOversea = new String(source.MainlandOrOversea);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

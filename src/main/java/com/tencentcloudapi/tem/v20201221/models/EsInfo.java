@@ -137,6 +137,32 @@ public class EsInfo extends AbstractModel{
         this.VersionId = VersionId;
     }
 
+    public EsInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public EsInfo(EsInfo source) {
+        if (source.MinAliveInstances != null) {
+            this.MinAliveInstances = new Long(source.MinAliveInstances);
+        }
+        if (source.MaxAliveInstances != null) {
+            this.MaxAliveInstances = new Long(source.MaxAliveInstances);
+        }
+        if (source.EsStrategy != null) {
+            this.EsStrategy = new Long(source.EsStrategy);
+        }
+        if (source.Threshold != null) {
+            this.Threshold = new Long(source.Threshold);
+        }
+        if (source.VersionId != null) {
+            this.VersionId = new String(source.VersionId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

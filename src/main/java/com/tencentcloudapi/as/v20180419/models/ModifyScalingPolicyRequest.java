@@ -188,6 +188,41 @@ public class ModifyScalingPolicyRequest extends AbstractModel{
         this.NotificationUserGroupIds = NotificationUserGroupIds;
     }
 
+    public ModifyScalingPolicyRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyScalingPolicyRequest(ModifyScalingPolicyRequest source) {
+        if (source.AutoScalingPolicyId != null) {
+            this.AutoScalingPolicyId = new String(source.AutoScalingPolicyId);
+        }
+        if (source.ScalingPolicyName != null) {
+            this.ScalingPolicyName = new String(source.ScalingPolicyName);
+        }
+        if (source.AdjustmentType != null) {
+            this.AdjustmentType = new String(source.AdjustmentType);
+        }
+        if (source.AdjustmentValue != null) {
+            this.AdjustmentValue = new Long(source.AdjustmentValue);
+        }
+        if (source.Cooldown != null) {
+            this.Cooldown = new Long(source.Cooldown);
+        }
+        if (source.MetricAlarm != null) {
+            this.MetricAlarm = new MetricAlarm(source.MetricAlarm);
+        }
+        if (source.NotificationUserGroupIds != null) {
+            this.NotificationUserGroupIds = new String[source.NotificationUserGroupIds.length];
+            for (int i = 0; i < source.NotificationUserGroupIds.length; i++) {
+                this.NotificationUserGroupIds[i] = new String(source.NotificationUserGroupIds[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

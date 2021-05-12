@@ -45,6 +45,20 @@ public class DescribeUsagePlanRequest extends AbstractModel{
         this.UsagePlanId = UsagePlanId;
     }
 
+    public DescribeUsagePlanRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeUsagePlanRequest(DescribeUsagePlanRequest source) {
+        if (source.UsagePlanId != null) {
+            this.UsagePlanId = new String(source.UsagePlanId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

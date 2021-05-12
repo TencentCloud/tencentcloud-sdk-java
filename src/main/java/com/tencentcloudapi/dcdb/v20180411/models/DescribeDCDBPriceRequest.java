@@ -221,6 +221,41 @@ public class DescribeDCDBPriceRequest extends AbstractModel{
         this.Paymode = Paymode;
     }
 
+    public DescribeDCDBPriceRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeDCDBPriceRequest(DescribeDCDBPriceRequest source) {
+        if (source.Zone != null) {
+            this.Zone = new String(source.Zone);
+        }
+        if (source.Count != null) {
+            this.Count = new Long(source.Count);
+        }
+        if (source.Period != null) {
+            this.Period = new Long(source.Period);
+        }
+        if (source.ShardNodeCount != null) {
+            this.ShardNodeCount = new Long(source.ShardNodeCount);
+        }
+        if (source.ShardMemory != null) {
+            this.ShardMemory = new Long(source.ShardMemory);
+        }
+        if (source.ShardStorage != null) {
+            this.ShardStorage = new Long(source.ShardStorage);
+        }
+        if (source.ShardCount != null) {
+            this.ShardCount = new Long(source.ShardCount);
+        }
+        if (source.Paymode != null) {
+            this.Paymode = new String(source.Paymode);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

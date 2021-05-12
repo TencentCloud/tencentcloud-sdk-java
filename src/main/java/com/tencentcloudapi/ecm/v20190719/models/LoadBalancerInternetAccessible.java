@@ -45,6 +45,20 @@ public class LoadBalancerInternetAccessible extends AbstractModel{
         this.InternetMaxBandwidthOut = InternetMaxBandwidthOut;
     }
 
+    public LoadBalancerInternetAccessible() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public LoadBalancerInternetAccessible(LoadBalancerInternetAccessible source) {
+        if (source.InternetMaxBandwidthOut != null) {
+            this.InternetMaxBandwidthOut = new Long(source.InternetMaxBandwidthOut);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

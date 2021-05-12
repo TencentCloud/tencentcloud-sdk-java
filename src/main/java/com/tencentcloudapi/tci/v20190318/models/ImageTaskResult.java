@@ -321,6 +321,56 @@ public class ImageTaskResult extends AbstractModel{
         this.TimeInfo = TimeInfo;
     }
 
+    public ImageTaskResult() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ImageTaskResult(ImageTaskResult source) {
+        if (source.ActionInfo != null) {
+            this.ActionInfo = new ActionInfo(source.ActionInfo);
+        }
+        if (source.FaceAttr != null) {
+            this.FaceAttr = new FaceAttrResult(source.FaceAttr);
+        }
+        if (source.FaceExpression != null) {
+            this.FaceExpression = new FaceExpressionResult(source.FaceExpression);
+        }
+        if (source.FaceIdentify != null) {
+            this.FaceIdentify = new FaceIdentifyResult(source.FaceIdentify);
+        }
+        if (source.FaceInfo != null) {
+            this.FaceInfo = new FaceInfoResult(source.FaceInfo);
+        }
+        if (source.FacePose != null) {
+            this.FacePose = new FacePoseResult(source.FacePose);
+        }
+        if (source.Gesture != null) {
+            this.Gesture = new GestureResult(source.Gesture);
+        }
+        if (source.HandTracking != null) {
+            this.HandTracking = new HandTrackingResult(source.HandTracking);
+        }
+        if (source.Light != null) {
+            this.Light = new LightResult(source.Light);
+        }
+        if (source.StudentBodyMovement != null) {
+            this.StudentBodyMovement = new StudentBodyMovementResult(source.StudentBodyMovement);
+        }
+        if (source.TeacherBodyMovement != null) {
+            this.TeacherBodyMovement = new BodyMovementResult(source.TeacherBodyMovement);
+        }
+        if (source.TeacherOutScreen != null) {
+            this.TeacherOutScreen = new TeacherOutScreenResult(source.TeacherOutScreen);
+        }
+        if (source.TimeInfo != null) {
+            this.TimeInfo = new TimeInfoResult(source.TimeInfo);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -91,6 +91,29 @@ public class ModifyAddressTemplateAttributeRequest extends AbstractModel{
         this.Addresses = Addresses;
     }
 
+    public ModifyAddressTemplateAttributeRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyAddressTemplateAttributeRequest(ModifyAddressTemplateAttributeRequest source) {
+        if (source.AddressTemplateId != null) {
+            this.AddressTemplateId = new String(source.AddressTemplateId);
+        }
+        if (source.AddressTemplateName != null) {
+            this.AddressTemplateName = new String(source.AddressTemplateName);
+        }
+        if (source.Addresses != null) {
+            this.Addresses = new String[source.Addresses.length];
+            for (int i = 0; i < source.Addresses.length; i++) {
+                this.Addresses[i] = new String(source.Addresses[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -142,6 +142,32 @@ SUSPEND：暂停；EXECUTE：恢复；
         this.BotName = BotName;
     }
 
+    public ChangeBotTaskStatusRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ChangeBotTaskStatusRequest(ChangeBotTaskStatusRequest source) {
+        if (source.Module != null) {
+            this.Module = new String(source.Module);
+        }
+        if (source.Operation != null) {
+            this.Operation = new String(source.Operation);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.BotId != null) {
+            this.BotId = new String(source.BotId);
+        }
+        if (source.BotName != null) {
+            this.BotName = new String(source.BotName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

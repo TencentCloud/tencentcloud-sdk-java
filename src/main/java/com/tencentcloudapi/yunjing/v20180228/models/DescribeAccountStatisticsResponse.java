@@ -91,6 +91,29 @@ public class DescribeAccountStatisticsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeAccountStatisticsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeAccountStatisticsResponse(DescribeAccountStatisticsResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.AccountStatistics != null) {
+            this.AccountStatistics = new AccountStatistics[source.AccountStatistics.length];
+            for (int i = 0; i < source.AccountStatistics.length; i++) {
+                this.AccountStatistics[i] = new AccountStatistics(source.AccountStatistics[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

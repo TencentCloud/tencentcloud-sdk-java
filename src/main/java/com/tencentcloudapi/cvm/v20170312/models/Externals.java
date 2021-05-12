@@ -106,6 +106,29 @@ public class Externals extends AbstractModel{
         this.StorageBlockAttr = StorageBlockAttr;
     }
 
+    public Externals() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Externals(Externals source) {
+        if (source.ReleaseAddress != null) {
+            this.ReleaseAddress = new Boolean(source.ReleaseAddress);
+        }
+        if (source.UnsupportNetworks != null) {
+            this.UnsupportNetworks = new String[source.UnsupportNetworks.length];
+            for (int i = 0; i < source.UnsupportNetworks.length; i++) {
+                this.UnsupportNetworks[i] = new String(source.UnsupportNetworks[i]);
+            }
+        }
+        if (source.StorageBlockAttr != null) {
+            this.StorageBlockAttr = new StorageBlock(source.StorageBlockAttr);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

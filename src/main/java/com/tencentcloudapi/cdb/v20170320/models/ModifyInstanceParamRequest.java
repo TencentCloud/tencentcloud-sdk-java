@@ -114,6 +114,35 @@ public class ModifyInstanceParamRequest extends AbstractModel{
         this.WaitSwitch = WaitSwitch;
     }
 
+    public ModifyInstanceParamRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyInstanceParamRequest(ModifyInstanceParamRequest source) {
+        if (source.InstanceIds != null) {
+            this.InstanceIds = new String[source.InstanceIds.length];
+            for (int i = 0; i < source.InstanceIds.length; i++) {
+                this.InstanceIds[i] = new String(source.InstanceIds[i]);
+            }
+        }
+        if (source.ParamList != null) {
+            this.ParamList = new Parameter[source.ParamList.length];
+            for (int i = 0; i < source.ParamList.length; i++) {
+                this.ParamList[i] = new Parameter(source.ParamList[i]);
+            }
+        }
+        if (source.TemplateId != null) {
+            this.TemplateId = new Long(source.TemplateId);
+        }
+        if (source.WaitSwitch != null) {
+            this.WaitSwitch = new Long(source.WaitSwitch);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

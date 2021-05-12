@@ -114,6 +114,29 @@ public class ResultSummary extends AbstractModel{
         this.ReponseTime = ReponseTime;
     }
 
+    public ResultSummary() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ResultSummary(ResultSummary source) {
+        if (source.LogTime != null) {
+            this.LogTime = new String(source.LogTime);
+        }
+        if (source.TaskId != null) {
+            this.TaskId = new Long(source.TaskId);
+        }
+        if (source.AvailRatio != null) {
+            this.AvailRatio = new Float(source.AvailRatio);
+        }
+        if (source.ReponseTime != null) {
+            this.ReponseTime = new Float(source.ReponseTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

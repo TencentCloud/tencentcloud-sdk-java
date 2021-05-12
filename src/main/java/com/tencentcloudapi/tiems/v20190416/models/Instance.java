@@ -459,6 +459,74 @@ public class Instance extends AbstractModel{
         this.RsgAsGroupId = RsgAsGroupId;
     }
 
+    public Instance() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Instance(Instance source) {
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
+        if (source.Zone != null) {
+            this.Zone = new String(source.Zone);
+        }
+        if (source.InstanceType != null) {
+            this.InstanceType = new String(source.InstanceType);
+        }
+        if (source.InstanceChargeType != null) {
+            this.InstanceChargeType = new String(source.InstanceChargeType);
+        }
+        if (source.Cpu != null) {
+            this.Cpu = new Long(source.Cpu);
+        }
+        if (source.Memory != null) {
+            this.Memory = new Long(source.Memory);
+        }
+        if (source.Gpu != null) {
+            this.Gpu = new Long(source.Gpu);
+        }
+        if (source.State != null) {
+            this.State = new String(source.State);
+        }
+        if (source.AbnormalReason != null) {
+            this.AbnormalReason = new String(source.AbnormalReason);
+        }
+        if (source.Created != null) {
+            this.Created = new String(source.Created);
+        }
+        if (source.Updated != null) {
+            this.Updated = new String(source.Updated);
+        }
+        if (source.DeadlineTime != null) {
+            this.DeadlineTime = new String(source.DeadlineTime);
+        }
+        if (source.ResourceGroupId != null) {
+            this.ResourceGroupId = new String(source.ResourceGroupId);
+        }
+        if (source.RenewFlag != null) {
+            this.RenewFlag = new String(source.RenewFlag);
+        }
+        if (source.Region != null) {
+            this.Region = new String(source.Region);
+        }
+        if (source.CpuRequested != null) {
+            this.CpuRequested = new Long(source.CpuRequested);
+        }
+        if (source.MemoryRequested != null) {
+            this.MemoryRequested = new Long(source.MemoryRequested);
+        }
+        if (source.GpuRequested != null) {
+            this.GpuRequested = new Long(source.GpuRequested);
+        }
+        if (source.RsgAsGroupId != null) {
+            this.RsgAsGroupId = new String(source.RsgAsGroupId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

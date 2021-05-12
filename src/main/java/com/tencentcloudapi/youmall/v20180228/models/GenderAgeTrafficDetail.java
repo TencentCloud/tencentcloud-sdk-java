@@ -91,6 +91,26 @@ public class GenderAgeTrafficDetail extends AbstractModel{
         this.TrafficCount = TrafficCount;
     }
 
+    public GenderAgeTrafficDetail() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GenderAgeTrafficDetail(GenderAgeTrafficDetail source) {
+        if (source.Gender != null) {
+            this.Gender = new Long(source.Gender);
+        }
+        if (source.AgeGap != null) {
+            this.AgeGap = new String(source.AgeGap);
+        }
+        if (source.TrafficCount != null) {
+            this.TrafficCount = new Long(source.TrafficCount);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

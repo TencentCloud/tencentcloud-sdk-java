@@ -45,6 +45,20 @@ public class Other extends AbstractModel{
         this.Format = Format;
     }
 
+    public Other() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Other(Other source) {
+        if (source.Format != null) {
+            this.Format = new String(source.Format);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

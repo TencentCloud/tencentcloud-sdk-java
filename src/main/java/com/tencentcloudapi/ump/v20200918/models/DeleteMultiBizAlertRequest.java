@@ -175,6 +175,35 @@ public class DeleteMultiBizAlertRequest extends AbstractModel{
         this.Image = Image;
     }
 
+    public DeleteMultiBizAlertRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteMultiBizAlertRequest(DeleteMultiBizAlertRequest source) {
+        if (source.GroupCode != null) {
+            this.GroupCode = new String(source.GroupCode);
+        }
+        if (source.MallId != null) {
+            this.MallId = new Long(source.MallId);
+        }
+        if (source.ZoneId != null) {
+            this.ZoneId = new Long(source.ZoneId);
+        }
+        if (source.CameraId != null) {
+            this.CameraId = new Long(source.CameraId);
+        }
+        if (source.ActionType != null) {
+            this.ActionType = new Long(source.ActionType);
+        }
+        if (source.Image != null) {
+            this.Image = new String(source.Image);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

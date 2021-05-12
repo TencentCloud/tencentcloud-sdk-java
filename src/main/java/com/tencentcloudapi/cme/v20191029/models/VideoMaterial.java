@@ -211,6 +211,41 @@ public class VideoMaterial extends AbstractModel{
         this.VodFileId = VodFileId;
     }
 
+    public VideoMaterial() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public VideoMaterial(VideoMaterial source) {
+        if (source.MetaData != null) {
+            this.MetaData = new MediaMetaData(source.MetaData);
+        }
+        if (source.ImageSpriteInfo != null) {
+            this.ImageSpriteInfo = new MediaImageSpriteInfo(source.ImageSpriteInfo);
+        }
+        if (source.MaterialUrl != null) {
+            this.MaterialUrl = new String(source.MaterialUrl);
+        }
+        if (source.CoverUrl != null) {
+            this.CoverUrl = new String(source.CoverUrl);
+        }
+        if (source.Resolution != null) {
+            this.Resolution = new String(source.Resolution);
+        }
+        if (source.MaterialStatus != null) {
+            this.MaterialStatus = new MaterialStatus(source.MaterialStatus);
+        }
+        if (source.OriginalUrl != null) {
+            this.OriginalUrl = new String(source.OriginalUrl);
+        }
+        if (source.VodFileId != null) {
+            this.VodFileId = new String(source.VodFileId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

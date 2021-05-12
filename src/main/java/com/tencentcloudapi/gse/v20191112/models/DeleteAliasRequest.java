@@ -45,6 +45,20 @@ public class DeleteAliasRequest extends AbstractModel{
         this.AliasId = AliasId;
     }
 
+    public DeleteAliasRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteAliasRequest(DeleteAliasRequest source) {
+        if (source.AliasId != null) {
+            this.AliasId = new String(source.AliasId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

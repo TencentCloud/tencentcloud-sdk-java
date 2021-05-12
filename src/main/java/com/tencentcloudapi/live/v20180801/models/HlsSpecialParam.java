@@ -50,6 +50,20 @@ public class HlsSpecialParam extends AbstractModel{
         this.FlowContinueDuration = FlowContinueDuration;
     }
 
+    public HlsSpecialParam() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public HlsSpecialParam(HlsSpecialParam source) {
+        if (source.FlowContinueDuration != null) {
+            this.FlowContinueDuration = new Long(source.FlowContinueDuration);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

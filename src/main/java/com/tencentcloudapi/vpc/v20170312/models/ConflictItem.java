@@ -68,6 +68,23 @@ public class ConflictItem extends AbstractModel{
         this.DestinationItem = DestinationItem;
     }
 
+    public ConflictItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ConflictItem(ConflictItem source) {
+        if (source.ConfilctId != null) {
+            this.ConfilctId = new String(source.ConfilctId);
+        }
+        if (source.DestinationItem != null) {
+            this.DestinationItem = new String(source.DestinationItem);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

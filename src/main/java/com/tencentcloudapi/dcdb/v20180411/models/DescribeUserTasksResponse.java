@@ -91,6 +91,29 @@ public class DescribeUserTasksResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeUserTasksResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeUserTasksResponse(DescribeUserTasksResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.FlowSet != null) {
+            this.FlowSet = new UserTaskInfo[source.FlowSet.length];
+            for (int i = 0; i < source.FlowSet.length; i++) {
+                this.FlowSet[i] = new UserTaskInfo(source.FlowSet[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

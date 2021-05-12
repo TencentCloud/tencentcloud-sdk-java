@@ -229,6 +229,50 @@ public class DevicesBindInfoLoadBalancer extends AbstractModel{
         this.L7ListenerSet = L7ListenerSet;
     }
 
+    public DevicesBindInfoLoadBalancer() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DevicesBindInfoLoadBalancer(DevicesBindInfoLoadBalancer source) {
+        if (source.LoadBalancerId != null) {
+            this.LoadBalancerId = new String(source.LoadBalancerId);
+        }
+        if (source.AppId != null) {
+            this.AppId = new Long(source.AppId);
+        }
+        if (source.ProjectId != null) {
+            this.ProjectId = new Long(source.ProjectId);
+        }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.Vip != null) {
+            this.Vip = new String(source.Vip);
+        }
+        if (source.TgwSetType != null) {
+            this.TgwSetType = new String(source.TgwSetType);
+        }
+        if (source.Exclusive != null) {
+            this.Exclusive = new Long(source.Exclusive);
+        }
+        if (source.L4ListenerSet != null) {
+            this.L4ListenerSet = new DevicesBindInfoL4Listener[source.L4ListenerSet.length];
+            for (int i = 0; i < source.L4ListenerSet.length; i++) {
+                this.L4ListenerSet[i] = new DevicesBindInfoL4Listener(source.L4ListenerSet[i]);
+            }
+        }
+        if (source.L7ListenerSet != null) {
+            this.L7ListenerSet = new DevicesBindInfoL7Listener[source.L7ListenerSet.length];
+            for (int i = 0; i < source.L7ListenerSet.length; i++) {
+                this.L7ListenerSet[i] = new DevicesBindInfoL7Listener(source.L7ListenerSet[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -45,6 +45,20 @@ public class DeleteDirectConnectTunnelRequest extends AbstractModel{
         this.DirectConnectTunnelId = DirectConnectTunnelId;
     }
 
+    public DeleteDirectConnectTunnelRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteDirectConnectTunnelRequest(DeleteDirectConnectTunnelRequest source) {
+        if (source.DirectConnectTunnelId != null) {
+            this.DirectConnectTunnelId = new String(source.DirectConnectTunnelId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

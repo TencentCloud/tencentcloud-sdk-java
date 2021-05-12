@@ -68,6 +68,23 @@ public class DescribeBaseMetricsRequest extends AbstractModel{
         this.MetricName = MetricName;
     }
 
+    public DescribeBaseMetricsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeBaseMetricsRequest(DescribeBaseMetricsRequest source) {
+        if (source.Namespace != null) {
+            this.Namespace = new String(source.Namespace);
+        }
+        if (source.MetricName != null) {
+            this.MetricName = new String(source.MetricName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

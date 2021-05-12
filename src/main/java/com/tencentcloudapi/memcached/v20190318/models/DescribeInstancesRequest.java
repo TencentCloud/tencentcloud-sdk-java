@@ -275,6 +275,71 @@ public class DescribeInstancesRequest extends AbstractModel{
         this.Vips = Vips;
     }
 
+    public DescribeInstancesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeInstancesRequest(DescribeInstancesRequest source) {
+        if (source.InstanceIds != null) {
+            this.InstanceIds = new String[source.InstanceIds.length];
+            for (int i = 0; i < source.InstanceIds.length; i++) {
+                this.InstanceIds[i] = new String(source.InstanceIds[i]);
+            }
+        }
+        if (source.InstanceNames != null) {
+            this.InstanceNames = new String[source.InstanceNames.length];
+            for (int i = 0; i < source.InstanceNames.length; i++) {
+                this.InstanceNames[i] = new String(source.InstanceNames[i]);
+            }
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.OrderBy != null) {
+            this.OrderBy = new String(source.OrderBy);
+        }
+        if (source.OrderType != null) {
+            this.OrderType = new Long(source.OrderType);
+        }
+        if (source.ProjectIds != null) {
+            this.ProjectIds = new Long[source.ProjectIds.length];
+            for (int i = 0; i < source.ProjectIds.length; i++) {
+                this.ProjectIds[i] = new Long(source.ProjectIds[i]);
+            }
+        }
+        if (source.SearchKeys != null) {
+            this.SearchKeys = new String[source.SearchKeys.length];
+            for (int i = 0; i < source.SearchKeys.length; i++) {
+                this.SearchKeys[i] = new String(source.SearchKeys[i]);
+            }
+        }
+        if (source.UniqSubnetIds != null) {
+            this.UniqSubnetIds = new String[source.UniqSubnetIds.length];
+            for (int i = 0; i < source.UniqSubnetIds.length; i++) {
+                this.UniqSubnetIds[i] = new String(source.UniqSubnetIds[i]);
+            }
+        }
+        if (source.UniqVpcIds != null) {
+            this.UniqVpcIds = new String[source.UniqVpcIds.length];
+            for (int i = 0; i < source.UniqVpcIds.length; i++) {
+                this.UniqVpcIds[i] = new String(source.UniqVpcIds[i]);
+            }
+        }
+        if (source.Vips != null) {
+            this.Vips = new String[source.Vips.length];
+            for (int i = 0; i < source.Vips.length; i++) {
+                this.Vips[i] = new String(source.Vips[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

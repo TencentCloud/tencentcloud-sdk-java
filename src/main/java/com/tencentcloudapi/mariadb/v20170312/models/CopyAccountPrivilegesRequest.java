@@ -183,6 +183,38 @@ public class CopyAccountPrivilegesRequest extends AbstractModel{
         this.DstReadOnly = DstReadOnly;
     }
 
+    public CopyAccountPrivilegesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CopyAccountPrivilegesRequest(CopyAccountPrivilegesRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.SrcUserName != null) {
+            this.SrcUserName = new String(source.SrcUserName);
+        }
+        if (source.SrcHost != null) {
+            this.SrcHost = new String(source.SrcHost);
+        }
+        if (source.DstUserName != null) {
+            this.DstUserName = new String(source.DstUserName);
+        }
+        if (source.DstHost != null) {
+            this.DstHost = new String(source.DstHost);
+        }
+        if (source.SrcReadOnly != null) {
+            this.SrcReadOnly = new String(source.SrcReadOnly);
+        }
+        if (source.DstReadOnly != null) {
+            this.DstReadOnly = new String(source.DstReadOnly);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

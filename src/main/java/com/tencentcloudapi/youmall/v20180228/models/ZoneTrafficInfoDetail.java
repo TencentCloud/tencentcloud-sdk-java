@@ -114,6 +114,29 @@ public class ZoneTrafficInfoDetail extends AbstractModel{
         this.AvgStayTime = AvgStayTime;
     }
 
+    public ZoneTrafficInfoDetail() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ZoneTrafficInfoDetail(ZoneTrafficInfoDetail source) {
+        if (source.ZoneId != null) {
+            this.ZoneId = new Long(source.ZoneId);
+        }
+        if (source.ZoneName != null) {
+            this.ZoneName = new String(source.ZoneName);
+        }
+        if (source.TrafficTotalCount != null) {
+            this.TrafficTotalCount = new Long(source.TrafficTotalCount);
+        }
+        if (source.AvgStayTime != null) {
+            this.AvgStayTime = new Long(source.AvgStayTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -83,6 +83,26 @@ off：关闭
         this.CompressionRules = CompressionRules;
     }
 
+    public Compression() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Compression(Compression source) {
+        if (source.Switch != null) {
+            this.Switch = new String(source.Switch);
+        }
+        if (source.CompressionRules != null) {
+            this.CompressionRules = new CompressionRule[source.CompressionRules.length];
+            for (int i = 0; i < source.CompressionRules.length; i++) {
+                this.CompressionRules[i] = new CompressionRule(source.CompressionRules[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

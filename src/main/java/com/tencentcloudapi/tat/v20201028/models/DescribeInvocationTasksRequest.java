@@ -137,6 +137,38 @@ public class DescribeInvocationTasksRequest extends AbstractModel{
         this.HideOutput = HideOutput;
     }
 
+    public DescribeInvocationTasksRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeInvocationTasksRequest(DescribeInvocationTasksRequest source) {
+        if (source.InvocationTaskIds != null) {
+            this.InvocationTaskIds = new String[source.InvocationTaskIds.length];
+            for (int i = 0; i < source.InvocationTaskIds.length; i++) {
+                this.InvocationTaskIds[i] = new String(source.InvocationTaskIds[i]);
+            }
+        }
+        if (source.Filters != null) {
+            this.Filters = new Filter[source.Filters.length];
+            for (int i = 0; i < source.Filters.length; i++) {
+                this.Filters[i] = new Filter(source.Filters[i]);
+            }
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.HideOutput != null) {
+            this.HideOutput = new Boolean(source.HideOutput);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

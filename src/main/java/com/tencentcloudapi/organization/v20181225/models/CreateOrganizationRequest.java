@@ -45,6 +45,20 @@ public class CreateOrganizationRequest extends AbstractModel{
         this.OrgType = OrgType;
     }
 
+    public CreateOrganizationRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateOrganizationRequest(CreateOrganizationRequest source) {
+        if (source.OrgType != null) {
+            this.OrgType = new Long(source.OrgType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -101,6 +101,26 @@ DATA_DISK：数据盘。
         this.DiskSize = DiskSize;
     }
 
+    public Snapshot() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Snapshot(Snapshot source) {
+        if (source.SnapshotId != null) {
+            this.SnapshotId = new String(source.SnapshotId);
+        }
+        if (source.DiskUsage != null) {
+            this.DiskUsage = new String(source.DiskUsage);
+        }
+        if (source.DiskSize != null) {
+            this.DiskSize = new Long(source.DiskSize);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

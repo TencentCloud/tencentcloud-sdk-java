@@ -91,6 +91,26 @@ public class UpgradeInstanceVersionRequest extends AbstractModel{
         this.InstanceId = InstanceId;
     }
 
+    public UpgradeInstanceVersionRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UpgradeInstanceVersionRequest(UpgradeInstanceVersionRequest source) {
+        if (source.TargetInstanceType != null) {
+            this.TargetInstanceType = new String(source.TargetInstanceType);
+        }
+        if (source.SwitchOption != null) {
+            this.SwitchOption = new Long(source.SwitchOption);
+        }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -45,6 +45,20 @@ public class PeerDetailForUser extends AbstractModel{
         this.PeerName = PeerName;
     }
 
+    public PeerDetailForUser() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PeerDetailForUser(PeerDetailForUser source) {
+        if (source.PeerName != null) {
+            this.PeerName = new String(source.PeerName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

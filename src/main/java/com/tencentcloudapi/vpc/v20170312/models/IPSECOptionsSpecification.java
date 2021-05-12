@@ -137,6 +137,32 @@ public class IPSECOptionsSpecification extends AbstractModel{
         this.IPSECSaLifetimeTraffic = IPSECSaLifetimeTraffic;
     }
 
+    public IPSECOptionsSpecification() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public IPSECOptionsSpecification(IPSECOptionsSpecification source) {
+        if (source.EncryptAlgorithm != null) {
+            this.EncryptAlgorithm = new String(source.EncryptAlgorithm);
+        }
+        if (source.IntegrityAlgorith != null) {
+            this.IntegrityAlgorith = new String(source.IntegrityAlgorith);
+        }
+        if (source.IPSECSaLifetimeSeconds != null) {
+            this.IPSECSaLifetimeSeconds = new Long(source.IPSECSaLifetimeSeconds);
+        }
+        if (source.PfsDhGroup != null) {
+            this.PfsDhGroup = new String(source.PfsDhGroup);
+        }
+        if (source.IPSECSaLifetimeTraffic != null) {
+            this.IPSECSaLifetimeTraffic = new Long(source.IPSECSaLifetimeTraffic);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

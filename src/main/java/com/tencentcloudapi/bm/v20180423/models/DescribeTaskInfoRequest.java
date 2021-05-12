@@ -275,6 +275,65 @@ public class DescribeTaskInfoRequest extends AbstractModel{
         this.TaskTypeIds = TaskTypeIds;
     }
 
+    public DescribeTaskInfoRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeTaskInfoRequest(DescribeTaskInfoRequest source) {
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.StartDate != null) {
+            this.StartDate = new String(source.StartDate);
+        }
+        if (source.EndDate != null) {
+            this.EndDate = new String(source.EndDate);
+        }
+        if (source.TaskStatus != null) {
+            this.TaskStatus = new Long[source.TaskStatus.length];
+            for (int i = 0; i < source.TaskStatus.length; i++) {
+                this.TaskStatus[i] = new Long(source.TaskStatus[i]);
+            }
+        }
+        if (source.OrderField != null) {
+            this.OrderField = new String(source.OrderField);
+        }
+        if (source.Order != null) {
+            this.Order = new Long(source.Order);
+        }
+        if (source.TaskIds != null) {
+            this.TaskIds = new String[source.TaskIds.length];
+            for (int i = 0; i < source.TaskIds.length; i++) {
+                this.TaskIds[i] = new String(source.TaskIds[i]);
+            }
+        }
+        if (source.InstanceIds != null) {
+            this.InstanceIds = new String[source.InstanceIds.length];
+            for (int i = 0; i < source.InstanceIds.length; i++) {
+                this.InstanceIds[i] = new String(source.InstanceIds[i]);
+            }
+        }
+        if (source.Aliases != null) {
+            this.Aliases = new String[source.Aliases.length];
+            for (int i = 0; i < source.Aliases.length; i++) {
+                this.Aliases[i] = new String(source.Aliases[i]);
+            }
+        }
+        if (source.TaskTypeIds != null) {
+            this.TaskTypeIds = new Long[source.TaskTypeIds.length];
+            for (int i = 0; i < source.TaskTypeIds.length; i++) {
+                this.TaskTypeIds[i] = new Long(source.TaskTypeIds[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

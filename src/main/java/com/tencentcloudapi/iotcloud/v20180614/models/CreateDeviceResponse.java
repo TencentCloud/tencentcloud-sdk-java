@@ -229,6 +229,44 @@ public class CreateDeviceResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public CreateDeviceResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateDeviceResponse(CreateDeviceResponse source) {
+        if (source.DeviceName != null) {
+            this.DeviceName = new String(source.DeviceName);
+        }
+        if (source.DevicePsk != null) {
+            this.DevicePsk = new String(source.DevicePsk);
+        }
+        if (source.DeviceCert != null) {
+            this.DeviceCert = new String(source.DeviceCert);
+        }
+        if (source.DevicePrivateKey != null) {
+            this.DevicePrivateKey = new String(source.DevicePrivateKey);
+        }
+        if (source.LoraDevEui != null) {
+            this.LoraDevEui = new String(source.LoraDevEui);
+        }
+        if (source.LoraMoteType != null) {
+            this.LoraMoteType = new Long(source.LoraMoteType);
+        }
+        if (source.LoraAppKey != null) {
+            this.LoraAppKey = new String(source.LoraAppKey);
+        }
+        if (source.LoraNwkKey != null) {
+            this.LoraNwkKey = new String(source.LoraNwkKey);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

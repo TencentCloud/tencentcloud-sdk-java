@@ -1665,6 +1665,194 @@ off：不支持
         this.Quic = Quic;
     }
 
+    public DetailDomain() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DetailDomain(DetailDomain source) {
+        if (source.ResourceId != null) {
+            this.ResourceId = new String(source.ResourceId);
+        }
+        if (source.AppId != null) {
+            this.AppId = new Long(source.AppId);
+        }
+        if (source.Domain != null) {
+            this.Domain = new String(source.Domain);
+        }
+        if (source.Cname != null) {
+            this.Cname = new String(source.Cname);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.ProjectId != null) {
+            this.ProjectId = new Long(source.ProjectId);
+        }
+        if (source.ServiceType != null) {
+            this.ServiceType = new String(source.ServiceType);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new String(source.UpdateTime);
+        }
+        if (source.Origin != null) {
+            this.Origin = new Origin(source.Origin);
+        }
+        if (source.IpFilter != null) {
+            this.IpFilter = new IpFilter(source.IpFilter);
+        }
+        if (source.IpFreqLimit != null) {
+            this.IpFreqLimit = new IpFreqLimit(source.IpFreqLimit);
+        }
+        if (source.StatusCodeCache != null) {
+            this.StatusCodeCache = new StatusCodeCache(source.StatusCodeCache);
+        }
+        if (source.Compression != null) {
+            this.Compression = new Compression(source.Compression);
+        }
+        if (source.BandwidthAlert != null) {
+            this.BandwidthAlert = new BandwidthAlert(source.BandwidthAlert);
+        }
+        if (source.RangeOriginPull != null) {
+            this.RangeOriginPull = new RangeOriginPull(source.RangeOriginPull);
+        }
+        if (source.FollowRedirect != null) {
+            this.FollowRedirect = new FollowRedirect(source.FollowRedirect);
+        }
+        if (source.ErrorPage != null) {
+            this.ErrorPage = new ErrorPage(source.ErrorPage);
+        }
+        if (source.RequestHeader != null) {
+            this.RequestHeader = new RequestHeader(source.RequestHeader);
+        }
+        if (source.ResponseHeader != null) {
+            this.ResponseHeader = new ResponseHeader(source.ResponseHeader);
+        }
+        if (source.DownstreamCapping != null) {
+            this.DownstreamCapping = new DownstreamCapping(source.DownstreamCapping);
+        }
+        if (source.CacheKey != null) {
+            this.CacheKey = new CacheKey(source.CacheKey);
+        }
+        if (source.ResponseHeaderCache != null) {
+            this.ResponseHeaderCache = new ResponseHeaderCache(source.ResponseHeaderCache);
+        }
+        if (source.VideoSeek != null) {
+            this.VideoSeek = new VideoSeek(source.VideoSeek);
+        }
+        if (source.Cache != null) {
+            this.Cache = new Cache(source.Cache);
+        }
+        if (source.OriginPullOptimization != null) {
+            this.OriginPullOptimization = new OriginPullOptimization(source.OriginPullOptimization);
+        }
+        if (source.Https != null) {
+            this.Https = new Https(source.Https);
+        }
+        if (source.Authentication != null) {
+            this.Authentication = new Authentication(source.Authentication);
+        }
+        if (source.Seo != null) {
+            this.Seo = new Seo(source.Seo);
+        }
+        if (source.Disable != null) {
+            this.Disable = new String(source.Disable);
+        }
+        if (source.ForceRedirect != null) {
+            this.ForceRedirect = new ForceRedirect(source.ForceRedirect);
+        }
+        if (source.Referer != null) {
+            this.Referer = new Referer(source.Referer);
+        }
+        if (source.MaxAge != null) {
+            this.MaxAge = new MaxAge(source.MaxAge);
+        }
+        if (source.Ipv6 != null) {
+            this.Ipv6 = new Ipv6(source.Ipv6);
+        }
+        if (source.Compatibility != null) {
+            this.Compatibility = new Compatibility(source.Compatibility);
+        }
+        if (source.SpecificConfig != null) {
+            this.SpecificConfig = new SpecificConfig(source.SpecificConfig);
+        }
+        if (source.Area != null) {
+            this.Area = new String(source.Area);
+        }
+        if (source.Readonly != null) {
+            this.Readonly = new String(source.Readonly);
+        }
+        if (source.OriginPullTimeout != null) {
+            this.OriginPullTimeout = new OriginPullTimeout(source.OriginPullTimeout);
+        }
+        if (source.AwsPrivateAccess != null) {
+            this.AwsPrivateAccess = new AwsPrivateAccess(source.AwsPrivateAccess);
+        }
+        if (source.SecurityConfig != null) {
+            this.SecurityConfig = new SecurityConfig(source.SecurityConfig);
+        }
+        if (source.ImageOptimization != null) {
+            this.ImageOptimization = new ImageOptimization(source.ImageOptimization);
+        }
+        if (source.UserAgentFilter != null) {
+            this.UserAgentFilter = new UserAgentFilter(source.UserAgentFilter);
+        }
+        if (source.AccessControl != null) {
+            this.AccessControl = new AccessControl(source.AccessControl);
+        }
+        if (source.Advance != null) {
+            this.Advance = new String(source.Advance);
+        }
+        if (source.UrlRedirect != null) {
+            this.UrlRedirect = new UrlRedirect(source.UrlRedirect);
+        }
+        if (source.AccessPort != null) {
+            this.AccessPort = new Long[source.AccessPort.length];
+            for (int i = 0; i < source.AccessPort.length; i++) {
+                this.AccessPort[i] = new Long(source.AccessPort[i]);
+            }
+        }
+        if (source.Tag != null) {
+            this.Tag = new Tag[source.Tag.length];
+            for (int i = 0; i < source.Tag.length; i++) {
+                this.Tag[i] = new Tag(source.Tag[i]);
+            }
+        }
+        if (source.AdvancedAuthentication != null) {
+            this.AdvancedAuthentication = new AdvancedAuthentication(source.AdvancedAuthentication);
+        }
+        if (source.OriginAuthentication != null) {
+            this.OriginAuthentication = new OriginAuthentication(source.OriginAuthentication);
+        }
+        if (source.Ipv6Access != null) {
+            this.Ipv6Access = new Ipv6Access(source.Ipv6Access);
+        }
+        if (source.AdvanceSet != null) {
+            this.AdvanceSet = new AdvanceConfig[source.AdvanceSet.length];
+            for (int i = 0; i < source.AdvanceSet.length; i++) {
+                this.AdvanceSet[i] = new AdvanceConfig(source.AdvanceSet[i]);
+            }
+        }
+        if (source.OfflineCache != null) {
+            this.OfflineCache = new OfflineCache(source.OfflineCache);
+        }
+        if (source.OriginCombine != null) {
+            this.OriginCombine = new OriginCombine(source.OriginCombine);
+        }
+        if (source.PostMaxSize != null) {
+            this.PostMaxSize = new PostSize(source.PostMaxSize);
+        }
+        if (source.Quic != null) {
+            this.Quic = new Quic(source.Quic);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

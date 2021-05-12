@@ -114,6 +114,29 @@ public class CreateUsagePlanRequest extends AbstractModel{
         this.MaxRequestNumPreSec = MaxRequestNumPreSec;
     }
 
+    public CreateUsagePlanRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateUsagePlanRequest(CreateUsagePlanRequest source) {
+        if (source.UsagePlanName != null) {
+            this.UsagePlanName = new String(source.UsagePlanName);
+        }
+        if (source.UsagePlanDesc != null) {
+            this.UsagePlanDesc = new String(source.UsagePlanDesc);
+        }
+        if (source.MaxRequestNum != null) {
+            this.MaxRequestNum = new Long(source.MaxRequestNum);
+        }
+        if (source.MaxRequestNumPreSec != null) {
+            this.MaxRequestNumPreSec = new Long(source.MaxRequestNumPreSec);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

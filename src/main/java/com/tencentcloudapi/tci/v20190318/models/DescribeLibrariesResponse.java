@@ -91,6 +91,29 @@ public class DescribeLibrariesResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeLibrariesResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeLibrariesResponse(DescribeLibrariesResponse source) {
+        if (source.LibrarySet != null) {
+            this.LibrarySet = new Library[source.LibrarySet.length];
+            for (int i = 0; i < source.LibrarySet.length; i++) {
+                this.LibrarySet[i] = new Library(source.LibrarySet[i]);
+            }
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

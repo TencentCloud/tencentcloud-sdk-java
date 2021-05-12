@@ -114,6 +114,29 @@ public class SlowLogPattern extends AbstractModel{
         this.Total = Total;
     }
 
+    public SlowLogPattern() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SlowLogPattern(SlowLogPattern source) {
+        if (source.Pattern != null) {
+            this.Pattern = new String(source.Pattern);
+        }
+        if (source.MaxTime != null) {
+            this.MaxTime = new Long(source.MaxTime);
+        }
+        if (source.AverageTime != null) {
+            this.AverageTime = new Long(source.AverageTime);
+        }
+        if (source.Total != null) {
+            this.Total = new Long(source.Total);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -96,6 +96,29 @@ public class TextCorrectionResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public TextCorrectionResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TextCorrectionResponse(TextCorrectionResponse source) {
+        if (source.CCITokens != null) {
+            this.CCITokens = new CCIToken[source.CCITokens.length];
+            for (int i = 0; i < source.CCITokens.length; i++) {
+                this.CCITokens[i] = new CCIToken(source.CCITokens[i]);
+            }
+        }
+        if (source.ResultText != null) {
+            this.ResultText = new String(source.ResultText);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

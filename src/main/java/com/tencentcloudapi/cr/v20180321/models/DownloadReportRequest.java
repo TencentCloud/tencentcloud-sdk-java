@@ -114,6 +114,29 @@ public class DownloadReportRequest extends AbstractModel{
         this.InstId = InstId;
     }
 
+    public DownloadReportRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DownloadReportRequest(DownloadReportRequest source) {
+        if (source.Module != null) {
+            this.Module = new String(source.Module);
+        }
+        if (source.Operation != null) {
+            this.Operation = new String(source.Operation);
+        }
+        if (source.ReportDate != null) {
+            this.ReportDate = new String(source.ReportDate);
+        }
+        if (source.InstId != null) {
+            this.InstId = new String(source.InstId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

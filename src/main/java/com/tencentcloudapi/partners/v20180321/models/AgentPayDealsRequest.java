@@ -91,6 +91,29 @@ public class AgentPayDealsRequest extends AbstractModel{
         this.DealNames = DealNames;
     }
 
+    public AgentPayDealsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AgentPayDealsRequest(AgentPayDealsRequest source) {
+        if (source.OwnerUin != null) {
+            this.OwnerUin = new String(source.OwnerUin);
+        }
+        if (source.AgentPay != null) {
+            this.AgentPay = new Long(source.AgentPay);
+        }
+        if (source.DealNames != null) {
+            this.DealNames = new String[source.DealNames.length];
+            for (int i = 0; i < source.DealNames.length; i++) {
+                this.DealNames[i] = new String(source.DealNames[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

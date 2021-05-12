@@ -137,6 +137,32 @@ public class WholeTextItem extends AbstractModel{
         this.Speed = Speed;
     }
 
+    public WholeTextItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public WholeTextItem(WholeTextItem source) {
+        if (source.TextItem != null) {
+            this.TextItem = new TextItem(source.TextItem);
+        }
+        if (source.AvgVolume != null) {
+            this.AvgVolume = new Float(source.AvgVolume);
+        }
+        if (source.MaxVolume != null) {
+            this.MaxVolume = new Float(source.MaxVolume);
+        }
+        if (source.MinVolume != null) {
+            this.MinVolume = new Float(source.MinVolume);
+        }
+        if (source.Speed != null) {
+            this.Speed = new Float(source.Speed);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

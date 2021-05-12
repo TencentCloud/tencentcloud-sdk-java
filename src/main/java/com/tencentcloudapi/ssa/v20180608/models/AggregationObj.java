@@ -68,6 +68,26 @@ public class AggregationObj extends AbstractModel{
         this.Bucket = Bucket;
     }
 
+    public AggregationObj() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AggregationObj(AggregationObj source) {
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.Bucket != null) {
+            this.Bucket = new Bucket[source.Bucket.length];
+            for (int i = 0; i < source.Bucket.length; i++) {
+                this.Bucket[i] = new Bucket(source.Bucket[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

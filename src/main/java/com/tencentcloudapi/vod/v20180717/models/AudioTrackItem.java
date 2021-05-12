@@ -129,6 +129,32 @@ public class AudioTrackItem extends AbstractModel{
         this.AudioOperations = AudioOperations;
     }
 
+    public AudioTrackItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AudioTrackItem(AudioTrackItem source) {
+        if (source.SourceMedia != null) {
+            this.SourceMedia = new String(source.SourceMedia);
+        }
+        if (source.SourceMediaStartTime != null) {
+            this.SourceMediaStartTime = new Float(source.SourceMediaStartTime);
+        }
+        if (source.Duration != null) {
+            this.Duration = new Float(source.Duration);
+        }
+        if (source.AudioOperations != null) {
+            this.AudioOperations = new AudioTransform[source.AudioOperations.length];
+            for (int i = 0; i < source.AudioOperations.length; i++) {
+                this.AudioOperations[i] = new AudioTransform(source.AudioOperations[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

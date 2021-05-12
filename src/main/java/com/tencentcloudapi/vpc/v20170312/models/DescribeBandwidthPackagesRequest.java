@@ -149,6 +149,35 @@ public class DescribeBandwidthPackagesRequest extends AbstractModel{
         this.Limit = Limit;
     }
 
+    public DescribeBandwidthPackagesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeBandwidthPackagesRequest(DescribeBandwidthPackagesRequest source) {
+        if (source.BandwidthPackageIds != null) {
+            this.BandwidthPackageIds = new String[source.BandwidthPackageIds.length];
+            for (int i = 0; i < source.BandwidthPackageIds.length; i++) {
+                this.BandwidthPackageIds[i] = new String(source.BandwidthPackageIds[i]);
+            }
+        }
+        if (source.Filters != null) {
+            this.Filters = new Filter[source.Filters.length];
+            for (int i = 0; i < source.Filters.length; i++) {
+                this.Filters[i] = new Filter(source.Filters[i]);
+            }
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

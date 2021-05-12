@@ -68,6 +68,23 @@ public class QueryRefundResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public QueryRefundResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public QueryRefundResponse(QueryRefundResponse source) {
+        if (source.State != null) {
+            this.State = new String(source.State);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

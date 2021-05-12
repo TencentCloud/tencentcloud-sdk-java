@@ -551,6 +551,86 @@ public class RechargeByThirdPayRequest extends AbstractModel{
         this.Remark = Remark;
     }
 
+    public RechargeByThirdPayRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RechargeByThirdPayRequest(RechargeByThirdPayRequest source) {
+        if (source.RequestType != null) {
+            this.RequestType = new String(source.RequestType);
+        }
+        if (source.MerchantCode != null) {
+            this.MerchantCode = new String(source.MerchantCode);
+        }
+        if (source.PayChannel != null) {
+            this.PayChannel = new String(source.PayChannel);
+        }
+        if (source.PayChannelSubId != null) {
+            this.PayChannelSubId = new Long(source.PayChannelSubId);
+        }
+        if (source.OrderId != null) {
+            this.OrderId = new String(source.OrderId);
+        }
+        if (source.BankAccountNumber != null) {
+            this.BankAccountNumber = new String(source.BankAccountNumber);
+        }
+        if (source.PlatformShortNumber != null) {
+            this.PlatformShortNumber = new String(source.PlatformShortNumber);
+        }
+        if (source.MidasSecretId != null) {
+            this.MidasSecretId = new String(source.MidasSecretId);
+        }
+        if (source.MidasAppId != null) {
+            this.MidasAppId = new String(source.MidasAppId);
+        }
+        if (source.MidasSignature != null) {
+            this.MidasSignature = new String(source.MidasSignature);
+        }
+        if (source.TransSequenceNumber != null) {
+            this.TransSequenceNumber = new String(source.TransSequenceNumber);
+        }
+        if (source.BankSubAccountNumber != null) {
+            this.BankSubAccountNumber = new String(source.BankSubAccountNumber);
+        }
+        if (source.TransFee != null) {
+            this.TransFee = new String(source.TransFee);
+        }
+        if (source.ThirdPayChannel != null) {
+            this.ThirdPayChannel = new String(source.ThirdPayChannel);
+        }
+        if (source.ThirdPayChannelMerchantCode != null) {
+            this.ThirdPayChannelMerchantCode = new String(source.ThirdPayChannelMerchantCode);
+        }
+        if (source.ThirdPayChannelOrderId != null) {
+            this.ThirdPayChannelOrderId = new String(source.ThirdPayChannelOrderId);
+        }
+        if (source.CurrencyAmount != null) {
+            this.CurrencyAmount = new String(source.CurrencyAmount);
+        }
+        if (source.CurrencyUnit != null) {
+            this.CurrencyUnit = new String(source.CurrencyUnit);
+        }
+        if (source.CurrencyType != null) {
+            this.CurrencyType = new String(source.CurrencyType);
+        }
+        if (source.TransNetMemberCode != null) {
+            this.TransNetMemberCode = new String(source.TransNetMemberCode);
+        }
+        if (source.MidasEnvironment != null) {
+            this.MidasEnvironment = new String(source.MidasEnvironment);
+        }
+        if (source.ReservedMessage != null) {
+            this.ReservedMessage = new String(source.ReservedMessage);
+        }
+        if (source.Remark != null) {
+            this.Remark = new String(source.Remark);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

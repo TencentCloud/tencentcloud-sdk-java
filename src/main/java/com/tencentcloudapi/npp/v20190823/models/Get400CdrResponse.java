@@ -152,6 +152,35 @@ public class Get400CdrResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public Get400CdrResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Get400CdrResponse(Get400CdrResponse source) {
+        if (source.ErrorCode != null) {
+            this.ErrorCode = new String(source.ErrorCode);
+        }
+        if (source.Msg != null) {
+            this.Msg = new String(source.Msg);
+        }
+        if (source.Offset != null) {
+            this.Offset = new String(source.Offset);
+        }
+        if (source.Cdr != null) {
+            this.Cdr = new VirturalNumCdr[source.Cdr.length];
+            for (int i = 0; i < source.Cdr.length; i++) {
+                this.Cdr[i] = new VirturalNumCdr(source.Cdr[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

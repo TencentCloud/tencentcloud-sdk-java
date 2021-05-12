@@ -160,6 +160,35 @@ public class CreateMultiDevicesTaskRequest extends AbstractModel{
         this.Hash = Hash;
     }
 
+    public CreateMultiDevicesTaskRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateMultiDevicesTaskRequest(CreateMultiDevicesTaskRequest source) {
+        if (source.ProductId != null) {
+            this.ProductId = new String(source.ProductId);
+        }
+        if (source.ParametersType != null) {
+            this.ParametersType = new String(source.ParametersType);
+        }
+        if (source.FileName != null) {
+            this.FileName = new String(source.FileName);
+        }
+        if (source.FileSize != null) {
+            this.FileSize = new Long(source.FileSize);
+        }
+        if (source.BatchCount != null) {
+            this.BatchCount = new Long(source.BatchCount);
+        }
+        if (source.Hash != null) {
+            this.Hash = new String(source.Hash);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

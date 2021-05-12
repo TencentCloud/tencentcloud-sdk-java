@@ -137,6 +137,35 @@ public class LiveStreamOcrWordsRecognitionResult extends AbstractModel{
         this.AreaCoords = AreaCoords;
     }
 
+    public LiveStreamOcrWordsRecognitionResult() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public LiveStreamOcrWordsRecognitionResult(LiveStreamOcrWordsRecognitionResult source) {
+        if (source.Word != null) {
+            this.Word = new String(source.Word);
+        }
+        if (source.StartPtsTime != null) {
+            this.StartPtsTime = new Float(source.StartPtsTime);
+        }
+        if (source.EndPtsTime != null) {
+            this.EndPtsTime = new Float(source.EndPtsTime);
+        }
+        if (source.Confidence != null) {
+            this.Confidence = new Float(source.Confidence);
+        }
+        if (source.AreaCoords != null) {
+            this.AreaCoords = new Long[source.AreaCoords.length];
+            for (int i = 0; i < source.AreaCoords.length; i++) {
+                this.AreaCoords[i] = new Long(source.AreaCoords[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

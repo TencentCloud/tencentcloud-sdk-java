@@ -91,6 +91,26 @@ public class DeleteWebhookTriggerRequest extends AbstractModel{
         this.Id = Id;
     }
 
+    public DeleteWebhookTriggerRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteWebhookTriggerRequest(DeleteWebhookTriggerRequest source) {
+        if (source.RegistryId != null) {
+            this.RegistryId = new String(source.RegistryId);
+        }
+        if (source.Namespace != null) {
+            this.Namespace = new String(source.Namespace);
+        }
+        if (source.Id != null) {
+            this.Id = new Long(source.Id);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

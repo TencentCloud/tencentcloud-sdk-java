@@ -298,6 +298,59 @@ public class CCPolicy extends AbstractModel{
         this.Domain = Domain;
     }
 
+    public CCPolicy() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CCPolicy(CCPolicy source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Smode != null) {
+            this.Smode = new String(source.Smode);
+        }
+        if (source.SetId != null) {
+            this.SetId = new String(source.SetId);
+        }
+        if (source.Frequency != null) {
+            this.Frequency = new Long(source.Frequency);
+        }
+        if (source.ExeMode != null) {
+            this.ExeMode = new String(source.ExeMode);
+        }
+        if (source.Switch != null) {
+            this.Switch = new Long(source.Switch);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.RuleList != null) {
+            this.RuleList = new CCRule[source.RuleList.length];
+            for (int i = 0; i < source.RuleList.length; i++) {
+                this.RuleList[i] = new CCRule(source.RuleList[i]);
+            }
+        }
+        if (source.IpList != null) {
+            this.IpList = new String[source.IpList.length];
+            for (int i = 0; i < source.IpList.length; i++) {
+                this.IpList[i] = new String(source.IpList[i]);
+            }
+        }
+        if (source.Protocol != null) {
+            this.Protocol = new String(source.Protocol);
+        }
+        if (source.RuleId != null) {
+            this.RuleId = new String(source.RuleId);
+        }
+        if (source.Domain != null) {
+            this.Domain = new String(source.Domain);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

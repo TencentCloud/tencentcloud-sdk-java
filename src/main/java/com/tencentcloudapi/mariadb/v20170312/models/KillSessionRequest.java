@@ -68,6 +68,26 @@ public class KillSessionRequest extends AbstractModel{
         this.SessionId = SessionId;
     }
 
+    public KillSessionRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public KillSessionRequest(KillSessionRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.SessionId != null) {
+            this.SessionId = new Long[source.SessionId.length];
+            for (int i = 0; i < source.SessionId.length; i++) {
+                this.SessionId[i] = new Long(source.SessionId[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

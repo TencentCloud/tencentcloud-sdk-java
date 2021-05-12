@@ -289,6 +289,44 @@ public class IdCardOCRVerificationResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public IdCardOCRVerificationResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public IdCardOCRVerificationResponse(IdCardOCRVerificationResponse source) {
+        if (source.Result != null) {
+            this.Result = new String(source.Result);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.IdCard != null) {
+            this.IdCard = new String(source.IdCard);
+        }
+        if (source.Sex != null) {
+            this.Sex = new String(source.Sex);
+        }
+        if (source.Nation != null) {
+            this.Nation = new String(source.Nation);
+        }
+        if (source.Birth != null) {
+            this.Birth = new String(source.Birth);
+        }
+        if (source.Address != null) {
+            this.Address = new String(source.Address);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

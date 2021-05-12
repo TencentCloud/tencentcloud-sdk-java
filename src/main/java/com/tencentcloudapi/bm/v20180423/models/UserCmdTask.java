@@ -229,6 +229,44 @@ public class UserCmdTask extends AbstractModel{
         this.RunEndTime = RunEndTime;
     }
 
+    public UserCmdTask() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UserCmdTask(UserCmdTask source) {
+        if (source.TaskId != null) {
+            this.TaskId = new String(source.TaskId);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.Alias != null) {
+            this.Alias = new String(source.Alias);
+        }
+        if (source.CmdId != null) {
+            this.CmdId = new String(source.CmdId);
+        }
+        if (source.InstanceCount != null) {
+            this.InstanceCount = new Long(source.InstanceCount);
+        }
+        if (source.SuccessCount != null) {
+            this.SuccessCount = new Long(source.SuccessCount);
+        }
+        if (source.FailureCount != null) {
+            this.FailureCount = new Long(source.FailureCount);
+        }
+        if (source.RunBeginTime != null) {
+            this.RunBeginTime = new String(source.RunBeginTime);
+        }
+        if (source.RunEndTime != null) {
+            this.RunEndTime = new String(source.RunEndTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

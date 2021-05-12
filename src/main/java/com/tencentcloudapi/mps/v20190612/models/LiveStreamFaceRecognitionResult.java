@@ -188,6 +188,41 @@ public class LiveStreamFaceRecognitionResult extends AbstractModel{
         this.AreaCoordSet = AreaCoordSet;
     }
 
+    public LiveStreamFaceRecognitionResult() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public LiveStreamFaceRecognitionResult(LiveStreamFaceRecognitionResult source) {
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.StartPtsTime != null) {
+            this.StartPtsTime = new Float(source.StartPtsTime);
+        }
+        if (source.EndPtsTime != null) {
+            this.EndPtsTime = new Float(source.EndPtsTime);
+        }
+        if (source.Confidence != null) {
+            this.Confidence = new Float(source.Confidence);
+        }
+        if (source.AreaCoordSet != null) {
+            this.AreaCoordSet = new Long[source.AreaCoordSet.length];
+            for (int i = 0; i < source.AreaCoordSet.length; i++) {
+                this.AreaCoordSet[i] = new Long(source.AreaCoordSet[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

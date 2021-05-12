@@ -220,6 +220,35 @@ public class FaceQualityCompleteness extends AbstractModel{
         this.Chin = Chin;
     }
 
+    public FaceQualityCompleteness() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public FaceQualityCompleteness(FaceQualityCompleteness source) {
+        if (source.Eyebrow != null) {
+            this.Eyebrow = new Long(source.Eyebrow);
+        }
+        if (source.Eye != null) {
+            this.Eye = new Long(source.Eye);
+        }
+        if (source.Nose != null) {
+            this.Nose = new Long(source.Nose);
+        }
+        if (source.Cheek != null) {
+            this.Cheek = new Long(source.Cheek);
+        }
+        if (source.Mouth != null) {
+            this.Mouth = new Long(source.Mouth);
+        }
+        if (source.Chin != null) {
+            this.Chin = new Long(source.Chin);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

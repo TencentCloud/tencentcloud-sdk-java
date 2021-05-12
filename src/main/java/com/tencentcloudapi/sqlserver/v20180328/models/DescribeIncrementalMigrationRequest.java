@@ -229,6 +229,47 @@ public class DescribeIncrementalMigrationRequest extends AbstractModel{
         this.IncrementalMigrationId = IncrementalMigrationId;
     }
 
+    public DescribeIncrementalMigrationRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeIncrementalMigrationRequest(DescribeIncrementalMigrationRequest source) {
+        if (source.BackupMigrationId != null) {
+            this.BackupMigrationId = new String(source.BackupMigrationId);
+        }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.BackupFileName != null) {
+            this.BackupFileName = new String(source.BackupFileName);
+        }
+        if (source.StatusSet != null) {
+            this.StatusSet = new Long[source.StatusSet.length];
+            for (int i = 0; i < source.StatusSet.length; i++) {
+                this.StatusSet[i] = new Long(source.StatusSet[i]);
+            }
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.OrderBy != null) {
+            this.OrderBy = new String(source.OrderBy);
+        }
+        if (source.OrderByType != null) {
+            this.OrderByType = new String(source.OrderByType);
+        }
+        if (source.IncrementalMigrationId != null) {
+            this.IncrementalMigrationId = new String(source.IncrementalMigrationId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

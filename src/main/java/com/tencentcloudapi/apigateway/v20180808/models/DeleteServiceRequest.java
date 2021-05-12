@@ -68,6 +68,23 @@ public class DeleteServiceRequest extends AbstractModel{
         this.SkipVerification = SkipVerification;
     }
 
+    public DeleteServiceRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteServiceRequest(DeleteServiceRequest source) {
+        if (source.ServiceId != null) {
+            this.ServiceId = new String(source.ServiceId);
+        }
+        if (source.SkipVerification != null) {
+            this.SkipVerification = new Long(source.SkipVerification);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -160,6 +160,38 @@ public class GetMonitorDataResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public GetMonitorDataResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GetMonitorDataResponse(GetMonitorDataResponse source) {
+        if (source.Period != null) {
+            this.Period = new Long(source.Period);
+        }
+        if (source.MetricName != null) {
+            this.MetricName = new String(source.MetricName);
+        }
+        if (source.DataPoints != null) {
+            this.DataPoints = new DataPoint[source.DataPoints.length];
+            for (int i = 0; i < source.DataPoints.length; i++) {
+                this.DataPoints[i] = new DataPoint(source.DataPoints[i]);
+            }
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

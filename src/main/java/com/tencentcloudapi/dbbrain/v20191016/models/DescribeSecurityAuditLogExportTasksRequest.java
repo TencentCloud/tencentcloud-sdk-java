@@ -137,6 +137,35 @@ public class DescribeSecurityAuditLogExportTasksRequest extends AbstractModel{
         this.Limit = Limit;
     }
 
+    public DescribeSecurityAuditLogExportTasksRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeSecurityAuditLogExportTasksRequest(DescribeSecurityAuditLogExportTasksRequest source) {
+        if (source.SecAuditGroupId != null) {
+            this.SecAuditGroupId = new String(source.SecAuditGroupId);
+        }
+        if (source.Product != null) {
+            this.Product = new String(source.Product);
+        }
+        if (source.AsyncRequestIds != null) {
+            this.AsyncRequestIds = new Long[source.AsyncRequestIds.length];
+            for (int i = 0; i < source.AsyncRequestIds.length; i++) {
+                this.AsyncRequestIds[i] = new Long(source.AsyncRequestIds[i]);
+            }
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

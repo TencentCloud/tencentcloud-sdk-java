@@ -131,6 +131,26 @@ FAIL：转账失败，需要确认失败原因以后，再决定是否重新发�
         this.DetailStatus = DetailStatus;
     }
 
+    public TransferDetailResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TransferDetailResponse(TransferDetailResponse source) {
+        if (source.MerchantDetailNo != null) {
+            this.MerchantDetailNo = new String(source.MerchantDetailNo);
+        }
+        if (source.DetailId != null) {
+            this.DetailId = new String(source.DetailId);
+        }
+        if (source.DetailStatus != null) {
+            this.DetailStatus = new String(source.DetailStatus);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

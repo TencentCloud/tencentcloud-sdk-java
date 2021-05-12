@@ -78,6 +78,23 @@ public class ExtraInfos extends AbstractModel{
         this.TotalInstances = TotalInstances;
     }
 
+    public ExtraInfos() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ExtraInfos(ExtraInfos source) {
+        if (source.InstanceType != null) {
+            this.InstanceType = new String(source.InstanceType);
+        }
+        if (source.TotalInstances != null) {
+            this.TotalInstances = new Long(source.TotalInstances);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

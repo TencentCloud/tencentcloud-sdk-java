@@ -229,6 +229,44 @@ public class L7RuleHealth extends AbstractModel{
         this.Status = Status;
     }
 
+    public L7RuleHealth() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public L7RuleHealth(L7RuleHealth source) {
+        if (source.RuleId != null) {
+            this.RuleId = new String(source.RuleId);
+        }
+        if (source.Enable != null) {
+            this.Enable = new Long(source.Enable);
+        }
+        if (source.Interval != null) {
+            this.Interval = new Long(source.Interval);
+        }
+        if (source.KickNum != null) {
+            this.KickNum = new Long(source.KickNum);
+        }
+        if (source.AliveNum != null) {
+            this.AliveNum = new Long(source.AliveNum);
+        }
+        if (source.Method != null) {
+            this.Method = new String(source.Method);
+        }
+        if (source.StatusCode != null) {
+            this.StatusCode = new Long(source.StatusCode);
+        }
+        if (source.Url != null) {
+            this.Url = new String(source.Url);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

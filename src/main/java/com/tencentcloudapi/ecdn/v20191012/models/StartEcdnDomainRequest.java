@@ -45,6 +45,20 @@ public class StartEcdnDomainRequest extends AbstractModel{
         this.Domain = Domain;
     }
 
+    public StartEcdnDomainRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public StartEcdnDomainRequest(StartEcdnDomainRequest source) {
+        if (source.Domain != null) {
+            this.Domain = new String(source.Domain);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

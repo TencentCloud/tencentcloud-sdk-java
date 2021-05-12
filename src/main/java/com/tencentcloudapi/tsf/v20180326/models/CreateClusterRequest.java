@@ -298,6 +298,53 @@ public class CreateClusterRequest extends AbstractModel{
         this.ProgramId = ProgramId;
     }
 
+    public CreateClusterRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateClusterRequest(CreateClusterRequest source) {
+        if (source.ClusterName != null) {
+            this.ClusterName = new String(source.ClusterName);
+        }
+        if (source.ClusterType != null) {
+            this.ClusterType = new String(source.ClusterType);
+        }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.ClusterCIDR != null) {
+            this.ClusterCIDR = new String(source.ClusterCIDR);
+        }
+        if (source.ClusterDesc != null) {
+            this.ClusterDesc = new String(source.ClusterDesc);
+        }
+        if (source.TsfRegionId != null) {
+            this.TsfRegionId = new String(source.TsfRegionId);
+        }
+        if (source.TsfZoneId != null) {
+            this.TsfZoneId = new String(source.TsfZoneId);
+        }
+        if (source.SubnetId != null) {
+            this.SubnetId = new String(source.SubnetId);
+        }
+        if (source.ClusterVersion != null) {
+            this.ClusterVersion = new String(source.ClusterVersion);
+        }
+        if (source.MaxNodePodNum != null) {
+            this.MaxNodePodNum = new Long(source.MaxNodePodNum);
+        }
+        if (source.MaxClusterServiceNum != null) {
+            this.MaxClusterServiceNum = new Long(source.MaxClusterServiceNum);
+        }
+        if (source.ProgramId != null) {
+            this.ProgramId = new String(source.ProgramId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -137,6 +137,32 @@ public class LocalDiskType extends AbstractModel{
         this.Required = Required;
     }
 
+    public LocalDiskType() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public LocalDiskType(LocalDiskType source) {
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.PartitionType != null) {
+            this.PartitionType = new String(source.PartitionType);
+        }
+        if (source.MinSize != null) {
+            this.MinSize = new Long(source.MinSize);
+        }
+        if (source.MaxSize != null) {
+            this.MaxSize = new Long(source.MaxSize);
+        }
+        if (source.Required != null) {
+            this.Required = new String(source.Required);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

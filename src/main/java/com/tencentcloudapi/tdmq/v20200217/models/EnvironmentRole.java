@@ -160,6 +160,38 @@ public class EnvironmentRole extends AbstractModel{
         this.UpdateTime = UpdateTime;
     }
 
+    public EnvironmentRole() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public EnvironmentRole(EnvironmentRole source) {
+        if (source.EnvironmentId != null) {
+            this.EnvironmentId = new String(source.EnvironmentId);
+        }
+        if (source.RoleName != null) {
+            this.RoleName = new String(source.RoleName);
+        }
+        if (source.Permissions != null) {
+            this.Permissions = new String[source.Permissions.length];
+            for (int i = 0; i < source.Permissions.length; i++) {
+                this.Permissions[i] = new String(source.Permissions[i]);
+            }
+        }
+        if (source.RoleDescribe != null) {
+            this.RoleDescribe = new String(source.RoleDescribe);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new String(source.UpdateTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

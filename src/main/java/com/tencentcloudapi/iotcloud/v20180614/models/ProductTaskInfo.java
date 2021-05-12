@@ -323,6 +323,53 @@ public class ProductTaskInfo extends AbstractModel{
         this.CompleteTime = CompleteTime;
     }
 
+    public ProductTaskInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ProductTaskInfo(ProductTaskInfo source) {
+        if (source.Id != null) {
+            this.Id = new Long(source.Id);
+        }
+        if (source.Type != null) {
+            this.Type = new Long(source.Type);
+        }
+        if (source.State != null) {
+            this.State = new Long(source.State);
+        }
+        if (source.ParametersType != null) {
+            this.ParametersType = new String(source.ParametersType);
+        }
+        if (source.Parameters != null) {
+            this.Parameters = new String(source.Parameters);
+        }
+        if (source.ResultType != null) {
+            this.ResultType = new String(source.ResultType);
+        }
+        if (source.Result != null) {
+            this.Result = new String(source.Result);
+        }
+        if (source.BatchCount != null) {
+            this.BatchCount = new Long(source.BatchCount);
+        }
+        if (source.BatchOffset != null) {
+            this.BatchOffset = new Long(source.BatchOffset);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new Long(source.CreateTime);
+        }
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new Long(source.UpdateTime);
+        }
+        if (source.CompleteTime != null) {
+            this.CompleteTime = new Long(source.CompleteTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

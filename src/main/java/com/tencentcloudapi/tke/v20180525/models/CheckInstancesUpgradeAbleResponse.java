@@ -147,6 +147,35 @@ public class CheckInstancesUpgradeAbleResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public CheckInstancesUpgradeAbleResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CheckInstancesUpgradeAbleResponse(CheckInstancesUpgradeAbleResponse source) {
+        if (source.ClusterVersion != null) {
+            this.ClusterVersion = new String(source.ClusterVersion);
+        }
+        if (source.LatestVersion != null) {
+            this.LatestVersion = new String(source.LatestVersion);
+        }
+        if (source.UpgradeAbleInstances != null) {
+            this.UpgradeAbleInstances = new UpgradeAbleInstancesItem[source.UpgradeAbleInstances.length];
+            for (int i = 0; i < source.UpgradeAbleInstances.length; i++) {
+                this.UpgradeAbleInstances[i] = new UpgradeAbleInstancesItem(source.UpgradeAbleInstances[i]);
+            }
+        }
+        if (source.Total != null) {
+            this.Total = new Long(source.Total);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

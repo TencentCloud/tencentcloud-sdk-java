@@ -91,6 +91,26 @@ public class ScanFileRequest extends AbstractModel{
         this.Md5 = Md5;
     }
 
+    public ScanFileRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ScanFileRequest(ScanFileRequest source) {
+        if (source.Key != null) {
+            this.Key = new String(source.Key);
+        }
+        if (source.Sample != null) {
+            this.Sample = new String(source.Sample);
+        }
+        if (source.Md5 != null) {
+            this.Md5 = new String(source.Md5);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

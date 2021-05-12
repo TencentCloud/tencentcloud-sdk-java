@@ -68,6 +68,23 @@ public class ClassificationEditingInfo extends AbstractModel{
         this.CustomInfo = CustomInfo;
     }
 
+    public ClassificationEditingInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ClassificationEditingInfo(ClassificationEditingInfo source) {
+        if (source.Switch != null) {
+            this.Switch = new Long(source.Switch);
+        }
+        if (source.CustomInfo != null) {
+            this.CustomInfo = new String(source.CustomInfo);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

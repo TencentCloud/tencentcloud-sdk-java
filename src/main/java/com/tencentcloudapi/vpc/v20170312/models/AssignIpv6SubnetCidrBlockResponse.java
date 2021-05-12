@@ -68,6 +68,26 @@ public class AssignIpv6SubnetCidrBlockResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public AssignIpv6SubnetCidrBlockResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AssignIpv6SubnetCidrBlockResponse(AssignIpv6SubnetCidrBlockResponse source) {
+        if (source.Ipv6SubnetCidrBlockSet != null) {
+            this.Ipv6SubnetCidrBlockSet = new Ipv6SubnetCidrBlock[source.Ipv6SubnetCidrBlockSet.length];
+            for (int i = 0; i < source.Ipv6SubnetCidrBlockSet.length; i++) {
+                this.Ipv6SubnetCidrBlockSet[i] = new Ipv6SubnetCidrBlock(source.Ipv6SubnetCidrBlockSet[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

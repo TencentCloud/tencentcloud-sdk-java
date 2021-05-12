@@ -114,6 +114,29 @@ public class ExtensionFileInfo extends AbstractModel{
         this.MaxSize = MaxSize;
     }
 
+    public ExtensionFileInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ExtensionFileInfo(ExtensionFileInfo source) {
+        if (source.CodeUri != null) {
+            this.CodeUri = new String(source.CodeUri);
+        }
+        if (source.UploadUrl != null) {
+            this.UploadUrl = new String(source.UploadUrl);
+        }
+        if (source.CustomKey != null) {
+            this.CustomKey = new String(source.CustomKey);
+        }
+        if (source.MaxSize != null) {
+            this.MaxSize = new Long(source.MaxSize);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

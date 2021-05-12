@@ -91,6 +91,26 @@ public class Lyric extends AbstractModel{
         this.SubItemType = SubItemType;
     }
 
+    public Lyric() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Lyric(Lyric source) {
+        if (source.Url != null) {
+            this.Url = new String(source.Url);
+        }
+        if (source.FileNameExt != null) {
+            this.FileNameExt = new String(source.FileNameExt);
+        }
+        if (source.SubItemType != null) {
+            this.SubItemType = new String(source.SubItemType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

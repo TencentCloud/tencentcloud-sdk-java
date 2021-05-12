@@ -91,6 +91,29 @@ public class DescribeResourcesByTagResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeResourcesByTagResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeResourcesByTagResponse(DescribeResourcesByTagResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.ResourceSet != null) {
+            this.ResourceSet = new TagResourceInfo[source.ResourceSet.length];
+            for (int i = 0; i < source.ResourceSet.length; i++) {
+                this.ResourceSet[i] = new TagResourceInfo(source.ResourceSet[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

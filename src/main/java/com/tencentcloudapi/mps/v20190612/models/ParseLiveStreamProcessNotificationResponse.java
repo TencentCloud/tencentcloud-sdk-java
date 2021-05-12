@@ -236,6 +236,41 @@ public class ParseLiveStreamProcessNotificationResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public ParseLiveStreamProcessNotificationResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ParseLiveStreamProcessNotificationResponse(ParseLiveStreamProcessNotificationResponse source) {
+        if (source.NotificationType != null) {
+            this.NotificationType = new String(source.NotificationType);
+        }
+        if (source.TaskId != null) {
+            this.TaskId = new String(source.TaskId);
+        }
+        if (source.ProcessEofInfo != null) {
+            this.ProcessEofInfo = new LiveStreamProcessErrorInfo(source.ProcessEofInfo);
+        }
+        if (source.AiReviewResultInfo != null) {
+            this.AiReviewResultInfo = new LiveStreamAiReviewResultInfo(source.AiReviewResultInfo);
+        }
+        if (source.AiRecognitionResultInfo != null) {
+            this.AiRecognitionResultInfo = new LiveStreamAiRecognitionResultInfo(source.AiRecognitionResultInfo);
+        }
+        if (source.SessionId != null) {
+            this.SessionId = new String(source.SessionId);
+        }
+        if (source.SessionContext != null) {
+            this.SessionContext = new String(source.SessionContext);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

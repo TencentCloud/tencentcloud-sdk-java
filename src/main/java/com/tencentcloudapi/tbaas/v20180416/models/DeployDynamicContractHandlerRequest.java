@@ -183,6 +183,41 @@ public class DeployDynamicContractHandlerRequest extends AbstractModel{
         this.ConstructorParams = ConstructorParams;
     }
 
+    public DeployDynamicContractHandlerRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeployDynamicContractHandlerRequest(DeployDynamicContractHandlerRequest source) {
+        if (source.Module != null) {
+            this.Module = new String(source.Module);
+        }
+        if (source.Operation != null) {
+            this.Operation = new String(source.Operation);
+        }
+        if (source.GroupPk != null) {
+            this.GroupPk = new String(source.GroupPk);
+        }
+        if (source.ContractName != null) {
+            this.ContractName = new String(source.ContractName);
+        }
+        if (source.AbiInfo != null) {
+            this.AbiInfo = new String(source.AbiInfo);
+        }
+        if (source.ByteCodeBin != null) {
+            this.ByteCodeBin = new String(source.ByteCodeBin);
+        }
+        if (source.ConstructorParams != null) {
+            this.ConstructorParams = new String[source.ConstructorParams.length];
+            for (int i = 0; i < source.ConstructorParams.length; i++) {
+                this.ConstructorParams[i] = new String(source.ConstructorParams[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

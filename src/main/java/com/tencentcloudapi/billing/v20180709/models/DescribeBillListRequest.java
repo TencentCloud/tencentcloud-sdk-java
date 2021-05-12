@@ -183,6 +183,44 @@ public class DescribeBillListRequest extends AbstractModel{
         this.WithZeroAmount = WithZeroAmount;
     }
 
+    public DescribeBillListRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeBillListRequest(DescribeBillListRequest source) {
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.PayType != null) {
+            this.PayType = new String[source.PayType.length];
+            for (int i = 0; i < source.PayType.length; i++) {
+                this.PayType[i] = new String(source.PayType[i]);
+            }
+        }
+        if (source.SubPayType != null) {
+            this.SubPayType = new String[source.SubPayType.length];
+            for (int i = 0; i < source.SubPayType.length; i++) {
+                this.SubPayType[i] = new String(source.SubPayType[i]);
+            }
+        }
+        if (source.WithZeroAmount != null) {
+            this.WithZeroAmount = new Long(source.WithZeroAmount);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

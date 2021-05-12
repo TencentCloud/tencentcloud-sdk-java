@@ -91,6 +91,26 @@ public class DescribeRepositoryOwnerPersonalRequest extends AbstractModel{
         this.RepoName = RepoName;
     }
 
+    public DescribeRepositoryOwnerPersonalRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeRepositoryOwnerPersonalRequest(DescribeRepositoryOwnerPersonalRequest source) {
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.RepoName != null) {
+            this.RepoName = new String(source.RepoName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

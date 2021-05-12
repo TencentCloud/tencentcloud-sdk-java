@@ -162,6 +162,38 @@ public class DescribeImagesRequest extends AbstractModel{
         this.InstanceType = InstanceType;
     }
 
+    public DescribeImagesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeImagesRequest(DescribeImagesRequest source) {
+        if (source.ImageIds != null) {
+            this.ImageIds = new String[source.ImageIds.length];
+            for (int i = 0; i < source.ImageIds.length; i++) {
+                this.ImageIds[i] = new String(source.ImageIds[i]);
+            }
+        }
+        if (source.Filters != null) {
+            this.Filters = new Filter[source.Filters.length];
+            for (int i = 0; i < source.Filters.length; i++) {
+                this.Filters[i] = new Filter(source.Filters[i]);
+            }
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.InstanceType != null) {
+            this.InstanceType = new String(source.InstanceType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

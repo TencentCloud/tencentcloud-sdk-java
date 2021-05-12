@@ -160,6 +160,38 @@ public class AgentGroup extends AbstractModel{
         this.MaxGroupNum = MaxGroupNum;
     }
 
+    public AgentGroup() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AgentGroup(AgentGroup source) {
+        if (source.GroupId != null) {
+            this.GroupId = new Long(source.GroupId);
+        }
+        if (source.GroupName != null) {
+            this.GroupName = new String(source.GroupName);
+        }
+        if (source.IsDefault != null) {
+            this.IsDefault = new Long(source.IsDefault);
+        }
+        if (source.TaskNum != null) {
+            this.TaskNum = new Long(source.TaskNum);
+        }
+        if (source.GroupDetail != null) {
+            this.GroupDetail = new CatAgent[source.GroupDetail.length];
+            for (int i = 0; i < source.GroupDetail.length; i++) {
+                this.GroupDetail[i] = new CatAgent(source.GroupDetail[i]);
+            }
+        }
+        if (source.MaxGroupNum != null) {
+            this.MaxGroupNum = new Long(source.MaxGroupNum);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

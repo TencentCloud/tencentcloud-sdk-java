@@ -134,6 +134,29 @@ public class FileSystemDataSource extends AbstractModel{
         this.FileSystemId = FileSystemId;
     }
 
+    public FileSystemDataSource() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public FileSystemDataSource(FileSystemDataSource source) {
+        if (source.DirectoryPath != null) {
+            this.DirectoryPath = new String(source.DirectoryPath);
+        }
+        if (source.FileSystemType != null) {
+            this.FileSystemType = new String(source.FileSystemType);
+        }
+        if (source.FileSystemAccessMode != null) {
+            this.FileSystemAccessMode = new String(source.FileSystemAccessMode);
+        }
+        if (source.FileSystemId != null) {
+            this.FileSystemId = new String(source.FileSystemId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -337,6 +337,47 @@ eg. record_interval=3600&storage_time=2592000。
         this.StreamParam = StreamParam;
     }
 
+    public CreateLiveRecordRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateLiveRecordRequest(CreateLiveRecordRequest source) {
+        if (source.StreamName != null) {
+            this.StreamName = new String(source.StreamName);
+        }
+        if (source.AppName != null) {
+            this.AppName = new String(source.AppName);
+        }
+        if (source.DomainName != null) {
+            this.DomainName = new String(source.DomainName);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+        if (source.RecordType != null) {
+            this.RecordType = new String(source.RecordType);
+        }
+        if (source.FileFormat != null) {
+            this.FileFormat = new String(source.FileFormat);
+        }
+        if (source.Highlight != null) {
+            this.Highlight = new Long(source.Highlight);
+        }
+        if (source.MixStream != null) {
+            this.MixStream = new Long(source.MixStream);
+        }
+        if (source.StreamParam != null) {
+            this.StreamParam = new String(source.StreamParam);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

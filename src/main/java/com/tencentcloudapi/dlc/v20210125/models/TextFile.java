@@ -73,6 +73,23 @@ public class TextFile extends AbstractModel{
         this.Regex = Regex;
     }
 
+    public TextFile() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TextFile(TextFile source) {
+        if (source.Format != null) {
+            this.Format = new String(source.Format);
+        }
+        if (source.Regex != null) {
+            this.Regex = new String(source.Regex);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -292,6 +292,59 @@ L: 联纵
         this.Zones = Zones;
     }
 
+    public Config() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Config(Config source) {
+        if (source.CameraProducer != null) {
+            this.CameraProducer = new String(source.CameraProducer);
+        }
+        if (source.RTSP != null) {
+            this.RTSP = new String(source.RTSP);
+        }
+        if (source.Fps != null) {
+            this.Fps = new Long(source.Fps);
+        }
+        if (source.DecodeFps != null) {
+            this.DecodeFps = new Long(source.DecodeFps);
+        }
+        if (source.PassengerFlow != null) {
+            this.PassengerFlow = new Long(source.PassengerFlow);
+        }
+        if (source.FaceExpose != null) {
+            this.FaceExpose = new Long(source.FaceExpose);
+        }
+        if (source.MallArea != null) {
+            this.MallArea = new Point[source.MallArea.length];
+            for (int i = 0; i < source.MallArea.length; i++) {
+                this.MallArea[i] = new Point(source.MallArea[i]);
+            }
+        }
+        if (source.ShopArea != null) {
+            this.ShopArea = new Point[source.ShopArea.length];
+            for (int i = 0; i < source.ShopArea.length; i++) {
+                this.ShopArea[i] = new Point(source.ShopArea[i]);
+            }
+        }
+        if (source.TrackAreas != null) {
+            this.TrackAreas = new Polygon[source.TrackAreas.length];
+            for (int i = 0; i < source.TrackAreas.length; i++) {
+                this.TrackAreas[i] = new Polygon(source.TrackAreas[i]);
+            }
+        }
+        if (source.Zones != null) {
+            this.Zones = new ZoneArea[source.Zones.length];
+            for (int i = 0; i < source.Zones.length; i++) {
+                this.Zones[i] = new ZoneArea(source.Zones[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

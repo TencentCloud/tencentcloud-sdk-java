@@ -68,6 +68,23 @@ public class GenderPortrait extends AbstractModel{
         this.Percent = Percent;
     }
 
+    public GenderPortrait() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GenderPortrait(GenderPortrait source) {
+        if (source.Gender != null) {
+            this.Gender = new String(source.Gender);
+        }
+        if (source.Percent != null) {
+            this.Percent = new Long(source.Percent);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

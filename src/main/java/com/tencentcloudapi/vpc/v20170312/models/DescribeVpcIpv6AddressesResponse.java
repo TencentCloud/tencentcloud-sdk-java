@@ -91,6 +91,29 @@ public class DescribeVpcIpv6AddressesResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeVpcIpv6AddressesResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeVpcIpv6AddressesResponse(DescribeVpcIpv6AddressesResponse source) {
+        if (source.Ipv6AddressSet != null) {
+            this.Ipv6AddressSet = new VpcIpv6Address[source.Ipv6AddressSet.length];
+            for (int i = 0; i < source.Ipv6AddressSet.length; i++) {
+                this.Ipv6AddressSet[i] = new VpcIpv6Address(source.Ipv6AddressSet[i]);
+            }
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

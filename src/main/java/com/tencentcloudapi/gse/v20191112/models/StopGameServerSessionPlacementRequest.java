@@ -45,6 +45,20 @@ public class StopGameServerSessionPlacementRequest extends AbstractModel{
         this.PlacementId = PlacementId;
     }
 
+    public StopGameServerSessionPlacementRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public StopGameServerSessionPlacementRequest(StopGameServerSessionPlacementRequest source) {
+        if (source.PlacementId != null) {
+            this.PlacementId = new String(source.PlacementId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

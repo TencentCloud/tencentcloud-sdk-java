@@ -160,6 +160,35 @@ public class ArrivedMallInfo extends AbstractModel{
         this.TraceId = TraceId;
     }
 
+    public ArrivedMallInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ArrivedMallInfo(ArrivedMallInfo source) {
+        if (source.ArrivedTime != null) {
+            this.ArrivedTime = new String(source.ArrivedTime);
+        }
+        if (source.LeaveTime != null) {
+            this.LeaveTime = new String(source.LeaveTime);
+        }
+        if (source.StaySecond != null) {
+            this.StaySecond = new Long(source.StaySecond);
+        }
+        if (source.InCapPic != null) {
+            this.InCapPic = new String(source.InCapPic);
+        }
+        if (source.OutCapPic != null) {
+            this.OutCapPic = new String(source.OutCapPic);
+        }
+        if (source.TraceId != null) {
+            this.TraceId = new String(source.TraceId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -96,6 +96,29 @@ public class DescribeBillSummaryByRegionResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeBillSummaryByRegionResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeBillSummaryByRegionResponse(DescribeBillSummaryByRegionResponse source) {
+        if (source.Ready != null) {
+            this.Ready = new Long(source.Ready);
+        }
+        if (source.SummaryOverview != null) {
+            this.SummaryOverview = new RegionSummaryOverviewItem[source.SummaryOverview.length];
+            for (int i = 0; i < source.SummaryOverview.length; i++) {
+                this.SummaryOverview[i] = new RegionSummaryOverviewItem(source.SummaryOverview[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -68,6 +68,23 @@ public class CommentInfo extends AbstractModel{
         this.Date = Date;
     }
 
+    public CommentInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CommentInfo(CommentInfo source) {
+        if (source.Comment != null) {
+            this.Comment = new String(source.Comment);
+        }
+        if (source.Date != null) {
+            this.Date = new String(source.Date);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

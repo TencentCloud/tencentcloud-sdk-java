@@ -68,6 +68,26 @@ public class DeleteLoadBalancerSnatIpsRequest extends AbstractModel{
         this.Ips = Ips;
     }
 
+    public DeleteLoadBalancerSnatIpsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteLoadBalancerSnatIpsRequest(DeleteLoadBalancerSnatIpsRequest source) {
+        if (source.LoadBalancerId != null) {
+            this.LoadBalancerId = new String(source.LoadBalancerId);
+        }
+        if (source.Ips != null) {
+            this.Ips = new String[source.Ips.length];
+            for (int i = 0; i < source.Ips.length; i++) {
+                this.Ips[i] = new String(source.Ips[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -137,6 +137,32 @@ public class ModifyPathRewriteRequest extends AbstractModel{
         this.Order = Order;
     }
 
+    public ModifyPathRewriteRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyPathRewriteRequest(ModifyPathRewriteRequest source) {
+        if (source.PathRewriteId != null) {
+            this.PathRewriteId = new String(source.PathRewriteId);
+        }
+        if (source.Regex != null) {
+            this.Regex = new String(source.Regex);
+        }
+        if (source.Replacement != null) {
+            this.Replacement = new String(source.Replacement);
+        }
+        if (source.Blocked != null) {
+            this.Blocked = new String(source.Blocked);
+        }
+        if (source.Order != null) {
+            this.Order = new Long(source.Order);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

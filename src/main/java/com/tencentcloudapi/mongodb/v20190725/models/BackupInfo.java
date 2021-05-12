@@ -249,6 +249,44 @@ public class BackupInfo extends AbstractModel{
         this.BackupMethod = BackupMethod;
     }
 
+    public BackupInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public BackupInfo(BackupInfo source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.BackupType != null) {
+            this.BackupType = new Long(source.BackupType);
+        }
+        if (source.BackupName != null) {
+            this.BackupName = new String(source.BackupName);
+        }
+        if (source.BackupDesc != null) {
+            this.BackupDesc = new String(source.BackupDesc);
+        }
+        if (source.BackupSize != null) {
+            this.BackupSize = new Long(source.BackupSize);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.BackupMethod != null) {
+            this.BackupMethod = new Long(source.BackupMethod);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

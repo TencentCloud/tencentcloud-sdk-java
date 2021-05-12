@@ -45,6 +45,23 @@ public class DescribeLoadBalancerListByCertIdRequest extends AbstractModel{
         this.CertIds = CertIds;
     }
 
+    public DescribeLoadBalancerListByCertIdRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeLoadBalancerListByCertIdRequest(DescribeLoadBalancerListByCertIdRequest source) {
+        if (source.CertIds != null) {
+            this.CertIds = new String[source.CertIds.length];
+            for (int i = 0; i < source.CertIds.length; i++) {
+                this.CertIds[i] = new String(source.CertIds[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

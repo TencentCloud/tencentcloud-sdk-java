@@ -304,6 +304,53 @@ min：1 分钟粒度，支持近 60 天内的数据查询，每次查询时间�
         this.Interval = Interval;
     }
 
+    public DescribeDistrictIspDataRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeDistrictIspDataRequest(DescribeDistrictIspDataRequest source) {
+        if (source.Domains != null) {
+            this.Domains = new String[source.Domains.length];
+            for (int i = 0; i < source.Domains.length; i++) {
+                this.Domains[i] = new String(source.Domains[i]);
+            }
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+        if (source.Metric != null) {
+            this.Metric = new String(source.Metric);
+        }
+        if (source.Districts != null) {
+            this.Districts = new Long[source.Districts.length];
+            for (int i = 0; i < source.Districts.length; i++) {
+                this.Districts[i] = new Long(source.Districts[i]);
+            }
+        }
+        if (source.Isps != null) {
+            this.Isps = new Long[source.Isps.length];
+            for (int i = 0; i < source.Isps.length; i++) {
+                this.Isps[i] = new Long(source.Isps[i]);
+            }
+        }
+        if (source.Protocol != null) {
+            this.Protocol = new String(source.Protocol);
+        }
+        if (source.IpProtocol != null) {
+            this.IpProtocol = new String(source.IpProtocol);
+        }
+        if (source.Interval != null) {
+            this.Interval = new String(source.Interval);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

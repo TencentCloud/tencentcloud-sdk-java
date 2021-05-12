@@ -68,6 +68,23 @@ public class DescribeDomainErrorPageInfoRequest extends AbstractModel{
         this.Domain = Domain;
     }
 
+    public DescribeDomainErrorPageInfoRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeDomainErrorPageInfoRequest(DescribeDomainErrorPageInfoRequest source) {
+        if (source.ListenerId != null) {
+            this.ListenerId = new String(source.ListenerId);
+        }
+        if (source.Domain != null) {
+            this.Domain = new String(source.Domain);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

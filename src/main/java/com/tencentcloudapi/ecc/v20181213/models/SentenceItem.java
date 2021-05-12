@@ -91,6 +91,26 @@ public class SentenceItem extends AbstractModel{
         this.SentenceID = SentenceID;
     }
 
+    public SentenceItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SentenceItem(SentenceItem source) {
+        if (source.Sentence != null) {
+            this.Sentence = new String(source.Sentence);
+        }
+        if (source.ParaID != null) {
+            this.ParaID = new Long(source.ParaID);
+        }
+        if (source.SentenceID != null) {
+            this.SentenceID = new Long(source.SentenceID);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

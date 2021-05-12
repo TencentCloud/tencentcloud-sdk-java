@@ -101,6 +101,29 @@ public class DescribeGameServerSessionDetailsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeGameServerSessionDetailsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeGameServerSessionDetailsResponse(DescribeGameServerSessionDetailsResponse source) {
+        if (source.GameServerSessionDetails != null) {
+            this.GameServerSessionDetails = new GameServerSessionDetail[source.GameServerSessionDetails.length];
+            for (int i = 0; i < source.GameServerSessionDetails.length; i++) {
+                this.GameServerSessionDetails[i] = new GameServerSessionDetail(source.GameServerSessionDetails[i]);
+            }
+        }
+        if (source.NextToken != null) {
+            this.NextToken = new String(source.NextToken);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

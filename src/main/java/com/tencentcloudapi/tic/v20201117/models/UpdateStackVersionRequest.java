@@ -114,6 +114,29 @@ public class UpdateStackVersionRequest extends AbstractModel{
         this.Description = Description;
     }
 
+    public UpdateStackVersionRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UpdateStackVersionRequest(UpdateStackVersionRequest source) {
+        if (source.VersionId != null) {
+            this.VersionId = new String(source.VersionId);
+        }
+        if (source.TemplateUrl != null) {
+            this.TemplateUrl = new String(source.TemplateUrl);
+        }
+        if (source.VersionName != null) {
+            this.VersionName = new String(source.VersionName);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

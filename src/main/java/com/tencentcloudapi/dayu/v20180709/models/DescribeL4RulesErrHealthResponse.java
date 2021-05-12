@@ -144,6 +144,35 @@ SourceIp表示源站IP，SourcePort表示源站端口，AbnormalStatTime表示�
         this.RequestId = RequestId;
     }
 
+    public DescribeL4RulesErrHealthResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeL4RulesErrHealthResponse(DescribeL4RulesErrHealthResponse source) {
+        if (source.Total != null) {
+            this.Total = new Long(source.Total);
+        }
+        if (source.ErrHealths != null) {
+            this.ErrHealths = new KeyValue[source.ErrHealths.length];
+            for (int i = 0; i < source.ErrHealths.length; i++) {
+                this.ErrHealths[i] = new KeyValue(source.ErrHealths[i]);
+            }
+        }
+        if (source.ExtErrHealths != null) {
+            this.ExtErrHealths = new KeyValueRecord[source.ExtErrHealths.length];
+            for (int i = 0; i < source.ExtErrHealths.length; i++) {
+                this.ExtErrHealths[i] = new KeyValueRecord(source.ExtErrHealths[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

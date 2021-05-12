@@ -91,6 +91,29 @@ public class DevicesBindInfoLocation extends AbstractModel{
         this.BackendSet = BackendSet;
     }
 
+    public DevicesBindInfoLocation() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DevicesBindInfoLocation(DevicesBindInfoLocation source) {
+        if (source.Url != null) {
+            this.Url = new String(source.Url);
+        }
+        if (source.LocationId != null) {
+            this.LocationId = new String(source.LocationId);
+        }
+        if (source.BackendSet != null) {
+            this.BackendSet = new DevicesBindInfoBackend[source.BackendSet.length];
+            for (int i = 0; i < source.BackendSet.length; i++) {
+                this.BackendSet[i] = new DevicesBindInfoBackend(source.BackendSet[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

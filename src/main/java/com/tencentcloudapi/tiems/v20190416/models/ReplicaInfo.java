@@ -203,6 +203,38 @@ public class ReplicaInfo extends AbstractModel{
         this.Restarted = Restarted;
     }
 
+    public ReplicaInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ReplicaInfo(ReplicaInfo source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.EniIp != null) {
+            this.EniIp = new String(source.EniIp);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.Message != null) {
+            this.Message = new String(source.Message);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.Restarted != null) {
+            this.Restarted = new Long(source.Restarted);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

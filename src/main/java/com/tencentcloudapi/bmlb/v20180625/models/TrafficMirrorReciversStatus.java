@@ -68,6 +68,26 @@ public class TrafficMirrorReciversStatus extends AbstractModel{
         this.ReceiversPortStatusSet = ReceiversPortStatusSet;
     }
 
+    public TrafficMirrorReciversStatus() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TrafficMirrorReciversStatus(TrafficMirrorReciversStatus source) {
+        if (source.LanIp != null) {
+            this.LanIp = new String(source.LanIp);
+        }
+        if (source.ReceiversPortStatusSet != null) {
+            this.ReceiversPortStatusSet = new TrafficMirrorPortStatus[source.ReceiversPortStatusSet.length];
+            for (int i = 0; i < source.ReceiversPortStatusSet.length; i++) {
+                this.ReceiversPortStatusSet[i] = new TrafficMirrorPortStatus(source.ReceiversPortStatusSet[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -114,6 +114,32 @@ public class CodeDetail extends AbstractModel{
         this.CodeType = CodeType;
     }
 
+    public CodeDetail() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CodeDetail(CodeDetail source) {
+        if (source.CodePosition != null) {
+            this.CodePosition = new CodePosition[source.CodePosition.length];
+            for (int i = 0; i < source.CodePosition.length; i++) {
+                this.CodePosition[i] = new CodePosition(source.CodePosition[i]);
+            }
+        }
+        if (source.CodeCharset != null) {
+            this.CodeCharset = new String(source.CodeCharset);
+        }
+        if (source.CodeText != null) {
+            this.CodeText = new String(source.CodeText);
+        }
+        if (source.CodeType != null) {
+            this.CodeType = new Long(source.CodeType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

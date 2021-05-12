@@ -68,6 +68,26 @@ public class DescribeVocabLibResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeVocabLibResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeVocabLibResponse(DescribeVocabLibResponse source) {
+        if (source.VocabLibNameSet != null) {
+            this.VocabLibNameSet = new String[source.VocabLibNameSet.length];
+            for (int i = 0; i < source.VocabLibNameSet.length; i++) {
+                this.VocabLibNameSet[i] = new String(source.VocabLibNameSet[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

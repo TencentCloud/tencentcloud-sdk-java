@@ -68,6 +68,26 @@ public class DeleteVpcEndPointServiceWhiteListRequest extends AbstractModel{
         this.EndPointServiceId = EndPointServiceId;
     }
 
+    public DeleteVpcEndPointServiceWhiteListRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteVpcEndPointServiceWhiteListRequest(DeleteVpcEndPointServiceWhiteListRequest source) {
+        if (source.UserUin != null) {
+            this.UserUin = new String[source.UserUin.length];
+            for (int i = 0; i < source.UserUin.length; i++) {
+                this.UserUin[i] = new String(source.UserUin[i]);
+            }
+        }
+        if (source.EndPointServiceId != null) {
+            this.EndPointServiceId = new String(source.EndPointServiceId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

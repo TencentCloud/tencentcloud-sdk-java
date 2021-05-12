@@ -165,6 +165,35 @@ public class ParamDesc extends AbstractModel{
         this.HaveSetValue = HaveSetValue;
     }
 
+    public ParamDesc() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ParamDesc(ParamDesc source) {
+        if (source.Param != null) {
+            this.Param = new String(source.Param);
+        }
+        if (source.Value != null) {
+            this.Value = new String(source.Value);
+        }
+        if (source.SetValue != null) {
+            this.SetValue = new String(source.SetValue);
+        }
+        if (source.Default != null) {
+            this.Default = new String(source.Default);
+        }
+        if (source.Constraint != null) {
+            this.Constraint = new ParamConstraint(source.Constraint);
+        }
+        if (source.HaveSetValue != null) {
+            this.HaveSetValue = new Boolean(source.HaveSetValue);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

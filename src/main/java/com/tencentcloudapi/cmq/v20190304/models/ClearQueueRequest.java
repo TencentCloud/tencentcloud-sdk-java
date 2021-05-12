@@ -45,6 +45,20 @@ public class ClearQueueRequest extends AbstractModel{
         this.QueueName = QueueName;
     }
 
+    public ClearQueueRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ClearQueueRequest(ClearQueueRequest source) {
+        if (source.QueueName != null) {
+            this.QueueName = new String(source.QueueName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

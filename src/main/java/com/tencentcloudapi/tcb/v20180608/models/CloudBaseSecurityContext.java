@@ -50,6 +50,20 @@ public class CloudBaseSecurityContext extends AbstractModel{
         this.Capabilities = Capabilities;
     }
 
+    public CloudBaseSecurityContext() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CloudBaseSecurityContext(CloudBaseSecurityContext source) {
+        if (source.Capabilities != null) {
+            this.Capabilities = new CloudBaseCapabilities(source.Capabilities);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

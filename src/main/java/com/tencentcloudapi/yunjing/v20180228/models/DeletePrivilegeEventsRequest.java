@@ -45,6 +45,23 @@ public class DeletePrivilegeEventsRequest extends AbstractModel{
         this.Ids = Ids;
     }
 
+    public DeletePrivilegeEventsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeletePrivilegeEventsRequest(DeletePrivilegeEventsRequest source) {
+        if (source.Ids != null) {
+            this.Ids = new Long[source.Ids.length];
+            for (int i = 0; i < source.Ids.length; i++) {
+                this.Ids[i] = new Long(source.Ids[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

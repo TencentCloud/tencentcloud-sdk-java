@@ -722,6 +722,92 @@ public class MsInstance extends AbstractModel{
         this.HiddenStatus = HiddenStatus;
     }
 
+    public MsInstance() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MsInstance(MsInstance source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.InstanceName != null) {
+            this.InstanceName = new String(source.InstanceName);
+        }
+        if (source.Port != null) {
+            this.Port = new String(source.Port);
+        }
+        if (source.LanIp != null) {
+            this.LanIp = new String(source.LanIp);
+        }
+        if (source.WanIp != null) {
+            this.WanIp = new String(source.WanIp);
+        }
+        if (source.InstanceAvailableStatus != null) {
+            this.InstanceAvailableStatus = new String(source.InstanceAvailableStatus);
+        }
+        if (source.ServiceInstanceStatus != null) {
+            this.ServiceInstanceStatus = new String(source.ServiceInstanceStatus);
+        }
+        if (source.ApplicationId != null) {
+            this.ApplicationId = new String(source.ApplicationId);
+        }
+        if (source.ApplicationName != null) {
+            this.ApplicationName = new String(source.ApplicationName);
+        }
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
+        if (source.ClusterName != null) {
+            this.ClusterName = new String(source.ClusterName);
+        }
+        if (source.NamespaceId != null) {
+            this.NamespaceId = new String(source.NamespaceId);
+        }
+        if (source.NamespaceName != null) {
+            this.NamespaceName = new String(source.NamespaceName);
+        }
+        if (source.GroupId != null) {
+            this.GroupId = new String(source.GroupId);
+        }
+        if (source.GroupName != null) {
+            this.GroupName = new String(source.GroupName);
+        }
+        if (source.InstanceStatus != null) {
+            this.InstanceStatus = new String(source.InstanceStatus);
+        }
+        if (source.HealthCheckUrl != null) {
+            this.HealthCheckUrl = new String(source.HealthCheckUrl);
+        }
+        if (source.ClusterType != null) {
+            this.ClusterType = new String(source.ClusterType);
+        }
+        if (source.ApplicationPackageVersion != null) {
+            this.ApplicationPackageVersion = new String(source.ApplicationPackageVersion);
+        }
+        if (source.ApplicationType != null) {
+            this.ApplicationType = new String(source.ApplicationType);
+        }
+        if (source.ServiceStatus != null) {
+            this.ServiceStatus = new String(source.ServiceStatus);
+        }
+        if (source.RegistrationTime != null) {
+            this.RegistrationTime = new Long(source.RegistrationTime);
+        }
+        if (source.LastHeartbeatTime != null) {
+            this.LastHeartbeatTime = new Long(source.LastHeartbeatTime);
+        }
+        if (source.RegistrationId != null) {
+            this.RegistrationId = new String(source.RegistrationId);
+        }
+        if (source.HiddenStatus != null) {
+            this.HiddenStatus = new String(source.HiddenStatus);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -252,6 +252,47 @@ public class DescribeRecordsRequest extends AbstractModel{
         this.InstId = InstId;
     }
 
+    public DescribeRecordsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeRecordsRequest(DescribeRecordsRequest source) {
+        if (source.Module != null) {
+            this.Module = new String(source.Module);
+        }
+        if (source.Operation != null) {
+            this.Operation = new String(source.Operation);
+        }
+        if (source.ProductId != null) {
+            this.ProductId = new String(source.ProductId);
+        }
+        if (source.AccountNum != null) {
+            this.AccountNum = new String(source.AccountNum);
+        }
+        if (source.CalledPhone != null) {
+            this.CalledPhone = new String(source.CalledPhone);
+        }
+        if (source.StartBizDate != null) {
+            this.StartBizDate = new String(source.StartBizDate);
+        }
+        if (source.EndBizDate != null) {
+            this.EndBizDate = new String(source.EndBizDate);
+        }
+        if (source.Offset != null) {
+            this.Offset = new String(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new String(source.Limit);
+        }
+        if (source.InstId != null) {
+            this.InstId = new String(source.InstId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -68,6 +68,23 @@ public class GetTransByHashHandlerResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public GetTransByHashHandlerResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GetTransByHashHandlerResponse(GetTransByHashHandlerResponse source) {
+        if (source.TransactionJson != null) {
+            this.TransactionJson = new String(source.TransactionJson);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

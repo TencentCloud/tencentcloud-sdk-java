@@ -160,6 +160,35 @@ public class CreateAIAnalysisTemplateRequest extends AbstractModel{
         this.FrameTagConfigure = FrameTagConfigure;
     }
 
+    public CreateAIAnalysisTemplateRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateAIAnalysisTemplateRequest(CreateAIAnalysisTemplateRequest source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Comment != null) {
+            this.Comment = new String(source.Comment);
+        }
+        if (source.ClassificationConfigure != null) {
+            this.ClassificationConfigure = new ClassificationConfigureInfo(source.ClassificationConfigure);
+        }
+        if (source.TagConfigure != null) {
+            this.TagConfigure = new TagConfigureInfo(source.TagConfigure);
+        }
+        if (source.CoverConfigure != null) {
+            this.CoverConfigure = new CoverConfigureInfo(source.CoverConfigure);
+        }
+        if (source.FrameTagConfigure != null) {
+            this.FrameTagConfigure = new FrameTagConfigureInfo(source.FrameTagConfigure);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

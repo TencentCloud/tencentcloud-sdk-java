@@ -206,6 +206,47 @@ public class ModifyPolicyGroupRequest extends AbstractModel{
         this.ConditionTempGroupId = ConditionTempGroupId;
     }
 
+    public ModifyPolicyGroupRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyPolicyGroupRequest(ModifyPolicyGroupRequest source) {
+        if (source.Module != null) {
+            this.Module = new String(source.Module);
+        }
+        if (source.GroupId != null) {
+            this.GroupId = new Long(source.GroupId);
+        }
+        if (source.ViewName != null) {
+            this.ViewName = new String(source.ViewName);
+        }
+        if (source.GroupName != null) {
+            this.GroupName = new String(source.GroupName);
+        }
+        if (source.IsUnionRule != null) {
+            this.IsUnionRule = new Long(source.IsUnionRule);
+        }
+        if (source.Conditions != null) {
+            this.Conditions = new ModifyPolicyGroupCondition[source.Conditions.length];
+            for (int i = 0; i < source.Conditions.length; i++) {
+                this.Conditions[i] = new ModifyPolicyGroupCondition(source.Conditions[i]);
+            }
+        }
+        if (source.EventConditions != null) {
+            this.EventConditions = new ModifyPolicyGroupEventCondition[source.EventConditions.length];
+            for (int i = 0; i < source.EventConditions.length; i++) {
+                this.EventConditions[i] = new ModifyPolicyGroupEventCondition(source.EventConditions[i]);
+            }
+        }
+        if (source.ConditionTempGroupId != null) {
+            this.ConditionTempGroupId = new Long(source.ConditionTempGroupId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

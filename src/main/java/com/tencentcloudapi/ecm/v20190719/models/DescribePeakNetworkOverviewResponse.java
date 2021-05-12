@@ -73,6 +73,26 @@ public class DescribePeakNetworkOverviewResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribePeakNetworkOverviewResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribePeakNetworkOverviewResponse(DescribePeakNetworkOverviewResponse source) {
+        if (source.PeakNetworkRegionSet != null) {
+            this.PeakNetworkRegionSet = new PeakNetworkRegionInfo[source.PeakNetworkRegionSet.length];
+            for (int i = 0; i < source.PeakNetworkRegionSet.length; i++) {
+                this.PeakNetworkRegionSet[i] = new PeakNetworkRegionInfo(source.PeakNetworkRegionSet[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

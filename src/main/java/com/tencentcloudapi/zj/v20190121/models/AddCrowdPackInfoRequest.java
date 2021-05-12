@@ -160,6 +160,35 @@ public class AddCrowdPackInfoRequest extends AbstractModel{
         this.PhoneNum = PhoneNum;
     }
 
+    public AddCrowdPackInfoRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AddCrowdPackInfoRequest(AddCrowdPackInfoRequest source) {
+        if (source.License != null) {
+            this.License = new String(source.License);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.FileName != null) {
+            this.FileName = new String(source.FileName);
+        }
+        if (source.Desc != null) {
+            this.Desc = new String(source.Desc);
+        }
+        if (source.CosUrl != null) {
+            this.CosUrl = new String(source.CosUrl);
+        }
+        if (source.PhoneNum != null) {
+            this.PhoneNum = new Long(source.PhoneNum);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

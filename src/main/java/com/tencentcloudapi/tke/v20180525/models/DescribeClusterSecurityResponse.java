@@ -267,6 +267,50 @@ public class DescribeClusterSecurityResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeClusterSecurityResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeClusterSecurityResponse(DescribeClusterSecurityResponse source) {
+        if (source.UserName != null) {
+            this.UserName = new String(source.UserName);
+        }
+        if (source.Password != null) {
+            this.Password = new String(source.Password);
+        }
+        if (source.CertificationAuthority != null) {
+            this.CertificationAuthority = new String(source.CertificationAuthority);
+        }
+        if (source.ClusterExternalEndpoint != null) {
+            this.ClusterExternalEndpoint = new String(source.ClusterExternalEndpoint);
+        }
+        if (source.Domain != null) {
+            this.Domain = new String(source.Domain);
+        }
+        if (source.PgwEndpoint != null) {
+            this.PgwEndpoint = new String(source.PgwEndpoint);
+        }
+        if (source.SecurityPolicy != null) {
+            this.SecurityPolicy = new String[source.SecurityPolicy.length];
+            for (int i = 0; i < source.SecurityPolicy.length; i++) {
+                this.SecurityPolicy[i] = new String(source.SecurityPolicy[i]);
+            }
+        }
+        if (source.Kubeconfig != null) {
+            this.Kubeconfig = new String(source.Kubeconfig);
+        }
+        if (source.JnsGwEndpoint != null) {
+            this.JnsGwEndpoint = new String(source.JnsGwEndpoint);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -114,6 +114,32 @@ public class GetDeviceLogResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public GetDeviceLogResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GetDeviceLogResponse(GetDeviceLogResponse source) {
+        if (source.DeviceLog != null) {
+            this.DeviceLog = new DeviceLogEntry[source.DeviceLog.length];
+            for (int i = 0; i < source.DeviceLog.length; i++) {
+                this.DeviceLog[i] = new DeviceLogEntry(source.DeviceLog[i]);
+            }
+        }
+        if (source.ScrollId != null) {
+            this.ScrollId = new String(source.ScrollId);
+        }
+        if (source.ScrollTimeout != null) {
+            this.ScrollTimeout = new Long(source.ScrollTimeout);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -78,6 +78,26 @@ public class TopicResult extends AbstractModel{
         this.TotalCount = TotalCount;
     }
 
+    public TopicResult() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TopicResult(TopicResult source) {
+        if (source.TopicList != null) {
+            this.TopicList = new Topic[source.TopicList.length];
+            for (int i = 0; i < source.TopicList.length; i++) {
+                this.TopicList[i] = new Topic(source.TopicList[i]);
+            }
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

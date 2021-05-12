@@ -137,6 +137,35 @@ public class ModifyBlockIgnoreListRequest extends AbstractModel{
         this.EndTime = EndTime;
     }
 
+    public ModifyBlockIgnoreListRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyBlockIgnoreListRequest(ModifyBlockIgnoreListRequest source) {
+        if (source.RuleType != null) {
+            this.RuleType = new Long(source.RuleType);
+        }
+        if (source.IOC != null) {
+            this.IOC = new IocListData[source.IOC.length];
+            for (int i = 0; i < source.IOC.length; i++) {
+                this.IOC[i] = new IocListData(source.IOC[i]);
+            }
+        }
+        if (source.IocAction != null) {
+            this.IocAction = new String(source.IocAction);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -68,6 +68,23 @@ public class AccountStatistics extends AbstractModel{
         this.MachineNum = MachineNum;
     }
 
+    public AccountStatistics() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AccountStatistics(AccountStatistics source) {
+        if (source.Username != null) {
+            this.Username = new String(source.Username);
+        }
+        if (source.MachineNum != null) {
+            this.MachineNum = new Long(source.MachineNum);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

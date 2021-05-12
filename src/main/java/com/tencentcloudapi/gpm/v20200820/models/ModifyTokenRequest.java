@@ -91,6 +91,26 @@ public class ModifyTokenRequest extends AbstractModel{
         this.MatchToken = MatchToken;
     }
 
+    public ModifyTokenRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyTokenRequest(ModifyTokenRequest source) {
+        if (source.MatchCode != null) {
+            this.MatchCode = new String(source.MatchCode);
+        }
+        if (source.CompatibleSpan != null) {
+            this.CompatibleSpan = new Long(source.CompatibleSpan);
+        }
+        if (source.MatchToken != null) {
+            this.MatchToken = new String(source.MatchToken);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

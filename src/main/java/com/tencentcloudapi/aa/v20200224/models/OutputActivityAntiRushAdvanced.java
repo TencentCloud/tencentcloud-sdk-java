@@ -91,6 +91,26 @@ public class OutputActivityAntiRushAdvanced extends AbstractModel{
         this.Value = Value;
     }
 
+    public OutputActivityAntiRushAdvanced() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public OutputActivityAntiRushAdvanced(OutputActivityAntiRushAdvanced source) {
+        if (source.Code != null) {
+            this.Code = new Long(source.Code);
+        }
+        if (source.Message != null) {
+            this.Message = new String(source.Message);
+        }
+        if (source.Value != null) {
+            this.Value = new OutputActivityAntiRushAdvancedValue(source.Value);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

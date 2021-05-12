@@ -68,6 +68,26 @@ public class AsyncTriggerConfig extends AbstractModel{
         this.MsgTTL = MsgTTL;
     }
 
+    public AsyncTriggerConfig() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AsyncTriggerConfig(AsyncTriggerConfig source) {
+        if (source.RetryConfig != null) {
+            this.RetryConfig = new RetryConfig[source.RetryConfig.length];
+            for (int i = 0; i < source.RetryConfig.length; i++) {
+                this.RetryConfig[i] = new RetryConfig(source.RetryConfig[i]);
+            }
+        }
+        if (source.MsgTTL != null) {
+            this.MsgTTL = new Long(source.MsgTTL);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -68,6 +68,26 @@ public class ModifyTableMemosRequest extends AbstractModel{
         this.TableMemos = TableMemos;
     }
 
+    public ModifyTableMemosRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyTableMemosRequest(ModifyTableMemosRequest source) {
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
+        if (source.TableMemos != null) {
+            this.TableMemos = new SelectedTableInfoNew[source.TableMemos.length];
+            for (int i = 0; i < source.TableMemos.length; i++) {
+                this.TableMemos[i] = new SelectedTableInfoNew(source.TableMemos[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

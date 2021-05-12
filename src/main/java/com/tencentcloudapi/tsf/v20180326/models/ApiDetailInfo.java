@@ -610,6 +610,80 @@ public class ApiDetailInfo extends AbstractModel{
         this.Description = Description;
     }
 
+    public ApiDetailInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ApiDetailInfo(ApiDetailInfo source) {
+        if (source.ApiId != null) {
+            this.ApiId = new String(source.ApiId);
+        }
+        if (source.NamespaceId != null) {
+            this.NamespaceId = new String(source.NamespaceId);
+        }
+        if (source.NamespaceName != null) {
+            this.NamespaceName = new String(source.NamespaceName);
+        }
+        if (source.MicroserviceId != null) {
+            this.MicroserviceId = new String(source.MicroserviceId);
+        }
+        if (source.MicroserviceName != null) {
+            this.MicroserviceName = new String(source.MicroserviceName);
+        }
+        if (source.Path != null) {
+            this.Path = new String(source.Path);
+        }
+        if (source.PathMapping != null) {
+            this.PathMapping = new String(source.PathMapping);
+        }
+        if (source.Method != null) {
+            this.Method = new String(source.Method);
+        }
+        if (source.GroupId != null) {
+            this.GroupId = new String(source.GroupId);
+        }
+        if (source.UsableStatus != null) {
+            this.UsableStatus = new String(source.UsableStatus);
+        }
+        if (source.ReleaseStatus != null) {
+            this.ReleaseStatus = new String(source.ReleaseStatus);
+        }
+        if (source.RateLimitStatus != null) {
+            this.RateLimitStatus = new String(source.RateLimitStatus);
+        }
+        if (source.MockStatus != null) {
+            this.MockStatus = new String(source.MockStatus);
+        }
+        if (source.CreatedTime != null) {
+            this.CreatedTime = new String(source.CreatedTime);
+        }
+        if (source.UpdatedTime != null) {
+            this.UpdatedTime = new String(source.UpdatedTime);
+        }
+        if (source.ReleasedTime != null) {
+            this.ReleasedTime = new String(source.ReleasedTime);
+        }
+        if (source.GroupName != null) {
+            this.GroupName = new String(source.GroupName);
+        }
+        if (source.Timeout != null) {
+            this.Timeout = new Long(source.Timeout);
+        }
+        if (source.Host != null) {
+            this.Host = new String(source.Host);
+        }
+        if (source.ApiType != null) {
+            this.ApiType = new String(source.ApiType);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

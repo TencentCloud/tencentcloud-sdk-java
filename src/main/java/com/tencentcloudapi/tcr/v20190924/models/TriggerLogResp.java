@@ -274,6 +274,44 @@ public class TriggerLogResp extends AbstractModel{
         this.InvokeResult = InvokeResult;
     }
 
+    public TriggerLogResp() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TriggerLogResp(TriggerLogResp source) {
+        if (source.RepoName != null) {
+            this.RepoName = new String(source.RepoName);
+        }
+        if (source.TagName != null) {
+            this.TagName = new String(source.TagName);
+        }
+        if (source.TriggerName != null) {
+            this.TriggerName = new String(source.TriggerName);
+        }
+        if (source.InvokeSource != null) {
+            this.InvokeSource = new String(source.InvokeSource);
+        }
+        if (source.InvokeAction != null) {
+            this.InvokeAction = new String(source.InvokeAction);
+        }
+        if (source.InvokeTime != null) {
+            this.InvokeTime = new String(source.InvokeTime);
+        }
+        if (source.InvokeCondition != null) {
+            this.InvokeCondition = new TriggerInvokeCondition(source.InvokeCondition);
+        }
+        if (source.InvokePara != null) {
+            this.InvokePara = new TriggerInvokePara(source.InvokePara);
+        }
+        if (source.InvokeResult != null) {
+            this.InvokeResult = new TriggerInvokeResult(source.InvokeResult);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

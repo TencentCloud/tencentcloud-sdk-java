@@ -134,6 +134,29 @@ public class UrlRecord extends AbstractModel{
         this.UpdateTime = UpdateTime;
     }
 
+    public UrlRecord() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UrlRecord(UrlRecord source) {
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.RealUrl != null) {
+            this.RealUrl = new String(source.RealUrl);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new String(source.UpdateTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

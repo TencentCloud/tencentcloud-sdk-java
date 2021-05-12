@@ -45,6 +45,23 @@ public class ModifyAccessRulesRequest extends AbstractModel{
         this.AccessRules = AccessRules;
     }
 
+    public ModifyAccessRulesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyAccessRulesRequest(ModifyAccessRulesRequest source) {
+        if (source.AccessRules != null) {
+            this.AccessRules = new AccessRule[source.AccessRules.length];
+            for (int i = 0; i < source.AccessRules.length; i++) {
+                this.AccessRules[i] = new AccessRule(source.AccessRules[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

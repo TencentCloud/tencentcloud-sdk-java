@@ -91,6 +91,35 @@ public class ActionStatistic extends AbstractModel{
         this.ActionDurationRatio = ActionDurationRatio;
     }
 
+    public ActionStatistic() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ActionStatistic(ActionStatistic source) {
+        if (source.ActionCount != null) {
+            this.ActionCount = new ActionCountStatistic[source.ActionCount.length];
+            for (int i = 0; i < source.ActionCount.length; i++) {
+                this.ActionCount[i] = new ActionCountStatistic(source.ActionCount[i]);
+            }
+        }
+        if (source.ActionDuration != null) {
+            this.ActionDuration = new ActionDurationStatistic[source.ActionDuration.length];
+            for (int i = 0; i < source.ActionDuration.length; i++) {
+                this.ActionDuration[i] = new ActionDurationStatistic(source.ActionDuration[i]);
+            }
+        }
+        if (source.ActionDurationRatio != null) {
+            this.ActionDurationRatio = new ActionDurationRatioStatistic[source.ActionDurationRatio.length];
+            for (int i = 0; i < source.ActionDurationRatio.length; i++) {
+                this.ActionDurationRatio[i] = new ActionDurationRatioStatistic(source.ActionDurationRatio[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

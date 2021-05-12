@@ -395,6 +395,80 @@ public class ZoneSellConf extends AbstractModel{
         this.RemoteRoZone = RemoteRoZone;
     }
 
+    public ZoneSellConf() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ZoneSellConf(ZoneSellConf source) {
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.ZoneName != null) {
+            this.ZoneName = new String(source.ZoneName);
+        }
+        if (source.IsCustom != null) {
+            this.IsCustom = new Boolean(source.IsCustom);
+        }
+        if (source.IsSupportDr != null) {
+            this.IsSupportDr = new Boolean(source.IsSupportDr);
+        }
+        if (source.IsSupportVpc != null) {
+            this.IsSupportVpc = new Boolean(source.IsSupportVpc);
+        }
+        if (source.HourInstanceSaleMaxNum != null) {
+            this.HourInstanceSaleMaxNum = new Long(source.HourInstanceSaleMaxNum);
+        }
+        if (source.IsDefaultZone != null) {
+            this.IsDefaultZone = new Boolean(source.IsDefaultZone);
+        }
+        if (source.IsBm != null) {
+            this.IsBm = new Boolean(source.IsBm);
+        }
+        if (source.PayType != null) {
+            this.PayType = new String[source.PayType.length];
+            for (int i = 0; i < source.PayType.length; i++) {
+                this.PayType[i] = new String(source.PayType[i]);
+            }
+        }
+        if (source.ProtectMode != null) {
+            this.ProtectMode = new String[source.ProtectMode.length];
+            for (int i = 0; i < source.ProtectMode.length; i++) {
+                this.ProtectMode[i] = new String(source.ProtectMode[i]);
+            }
+        }
+        if (source.Zone != null) {
+            this.Zone = new String(source.Zone);
+        }
+        if (source.SellType != null) {
+            this.SellType = new SellType[source.SellType.length];
+            for (int i = 0; i < source.SellType.length; i++) {
+                this.SellType[i] = new SellType(source.SellType[i]);
+            }
+        }
+        if (source.ZoneConf != null) {
+            this.ZoneConf = new ZoneConf(source.ZoneConf);
+        }
+        if (source.DrZone != null) {
+            this.DrZone = new String[source.DrZone.length];
+            for (int i = 0; i < source.DrZone.length; i++) {
+                this.DrZone[i] = new String(source.DrZone[i]);
+            }
+        }
+        if (source.IsSupportRemoteRo != null) {
+            this.IsSupportRemoteRo = new Boolean(source.IsSupportRemoteRo);
+        }
+        if (source.RemoteRoZone != null) {
+            this.RemoteRoZone = new String[source.RemoteRoZone.length];
+            for (int i = 0; i < source.RemoteRoZone.length; i++) {
+                this.RemoteRoZone[i] = new String(source.RemoteRoZone[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

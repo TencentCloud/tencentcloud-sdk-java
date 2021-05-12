@@ -359,6 +359,59 @@ public class DescribeWeeklyReportInfoResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeWeeklyReportInfoResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeWeeklyReportInfoResponse(DescribeWeeklyReportInfoResponse source) {
+        if (source.CompanyName != null) {
+            this.CompanyName = new String(source.CompanyName);
+        }
+        if (source.MachineNum != null) {
+            this.MachineNum = new Long(source.MachineNum);
+        }
+        if (source.OnlineMachineNum != null) {
+            this.OnlineMachineNum = new Long(source.OnlineMachineNum);
+        }
+        if (source.OfflineMachineNum != null) {
+            this.OfflineMachineNum = new Long(source.OfflineMachineNum);
+        }
+        if (source.ProVersionMachineNum != null) {
+            this.ProVersionMachineNum = new Long(source.ProVersionMachineNum);
+        }
+        if (source.BeginDate != null) {
+            this.BeginDate = new String(source.BeginDate);
+        }
+        if (source.EndDate != null) {
+            this.EndDate = new String(source.EndDate);
+        }
+        if (source.Level != null) {
+            this.Level = new String(source.Level);
+        }
+        if (source.MalwareNum != null) {
+            this.MalwareNum = new Long(source.MalwareNum);
+        }
+        if (source.NonlocalLoginNum != null) {
+            this.NonlocalLoginNum = new Long(source.NonlocalLoginNum);
+        }
+        if (source.BruteAttackSuccessNum != null) {
+            this.BruteAttackSuccessNum = new Long(source.BruteAttackSuccessNum);
+        }
+        if (source.VulNum != null) {
+            this.VulNum = new Long(source.VulNum);
+        }
+        if (source.DownloadUrl != null) {
+            this.DownloadUrl = new String(source.DownloadUrl);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

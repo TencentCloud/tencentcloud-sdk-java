@@ -137,6 +137,32 @@ public class UnifiedOrderResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public UnifiedOrderResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UnifiedOrderResponse(UnifiedOrderResponse source) {
+        if (source.TotalAmt != null) {
+            this.TotalAmt = new Long(source.TotalAmt);
+        }
+        if (source.OutTradeNo != null) {
+            this.OutTradeNo = new String(source.OutTradeNo);
+        }
+        if (source.PayInfo != null) {
+            this.PayInfo = new String(source.PayInfo);
+        }
+        if (source.TransactionId != null) {
+            this.TransactionId = new String(source.TransactionId);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -114,6 +114,29 @@ public class DescribeUserBaseInfoInstanceResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeUserBaseInfoInstanceResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeUserBaseInfoInstanceResponse(DescribeUserBaseInfoInstanceResponse source) {
+        if (source.UserUin != null) {
+            this.UserUin = new Long(source.UserUin);
+        }
+        if (source.UserAppid != null) {
+            this.UserAppid = new Long(source.UserAppid);
+        }
+        if (source.TimeStamp != null) {
+            this.TimeStamp = new Long(source.TimeStamp);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

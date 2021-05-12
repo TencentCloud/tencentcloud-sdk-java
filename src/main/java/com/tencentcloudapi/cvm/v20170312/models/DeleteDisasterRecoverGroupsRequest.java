@@ -45,6 +45,23 @@ public class DeleteDisasterRecoverGroupsRequest extends AbstractModel{
         this.DisasterRecoverGroupIds = DisasterRecoverGroupIds;
     }
 
+    public DeleteDisasterRecoverGroupsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteDisasterRecoverGroupsRequest(DeleteDisasterRecoverGroupsRequest source) {
+        if (source.DisasterRecoverGroupIds != null) {
+            this.DisasterRecoverGroupIds = new String[source.DisasterRecoverGroupIds.length];
+            for (int i = 0; i < source.DisasterRecoverGroupIds.length; i++) {
+                this.DisasterRecoverGroupIds[i] = new String(source.DisasterRecoverGroupIds[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

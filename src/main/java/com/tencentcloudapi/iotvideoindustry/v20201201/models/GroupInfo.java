@@ -262,6 +262,47 @@ public class GroupInfo extends AbstractModel{
         this.Error = Error;
     }
 
+    public GroupInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GroupInfo(GroupInfo source) {
+        if (source.GroupId != null) {
+            this.GroupId = new String(source.GroupId);
+        }
+        if (source.GroupName != null) {
+            this.GroupName = new String(source.GroupName);
+        }
+        if (source.GroupType != null) {
+            this.GroupType = new String(source.GroupType);
+        }
+        if (source.GroupPath != null) {
+            this.GroupPath = new String(source.GroupPath);
+        }
+        if (source.ParentId != null) {
+            this.ParentId = new String(source.ParentId);
+        }
+        if (source.GroupDescribe != null) {
+            this.GroupDescribe = new String(source.GroupDescribe);
+        }
+        if (source.ExtraInformation != null) {
+            this.ExtraInformation = new String(source.ExtraInformation);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new Long(source.CreateTime);
+        }
+        if (source.GroupStatus != null) {
+            this.GroupStatus = new Long(source.GroupStatus);
+        }
+        if (source.Error != null) {
+            this.Error = new String(source.Error);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -91,6 +91,26 @@ public class UpgradeDeviceRequest extends AbstractModel{
         this.UpgradeNow = UpgradeNow;
     }
 
+    public UpgradeDeviceRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UpgradeDeviceRequest(UpgradeDeviceRequest source) {
+        if (source.Tid != null) {
+            this.Tid = new String(source.Tid);
+        }
+        if (source.OtaVersion != null) {
+            this.OtaVersion = new String(source.OtaVersion);
+        }
+        if (source.UpgradeNow != null) {
+            this.UpgradeNow = new Boolean(source.UpgradeNow);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

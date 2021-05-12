@@ -183,6 +183,38 @@ public class FirmwareInfo extends AbstractModel{
         this.ProductId = ProductId;
     }
 
+    public FirmwareInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public FirmwareInfo(FirmwareInfo source) {
+        if (source.Version != null) {
+            this.Version = new String(source.Version);
+        }
+        if (source.Md5sum != null) {
+            this.Md5sum = new String(source.Md5sum);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new Long(source.CreateTime);
+        }
+        if (source.ProductName != null) {
+            this.ProductName = new String(source.ProductName);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.ProductId != null) {
+            this.ProductId = new String(source.ProductId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

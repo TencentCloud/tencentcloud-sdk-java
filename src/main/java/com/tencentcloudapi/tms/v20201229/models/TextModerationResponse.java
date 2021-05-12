@@ -297,6 +297,56 @@ public class TextModerationResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public TextModerationResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TextModerationResponse(TextModerationResponse source) {
+        if (source.BizType != null) {
+            this.BizType = new String(source.BizType);
+        }
+        if (source.Label != null) {
+            this.Label = new String(source.Label);
+        }
+        if (source.Suggestion != null) {
+            this.Suggestion = new String(source.Suggestion);
+        }
+        if (source.Keywords != null) {
+            this.Keywords = new String[source.Keywords.length];
+            for (int i = 0; i < source.Keywords.length; i++) {
+                this.Keywords[i] = new String(source.Keywords[i]);
+            }
+        }
+        if (source.Score != null) {
+            this.Score = new Long(source.Score);
+        }
+        if (source.DetailResults != null) {
+            this.DetailResults = new DetailResults[source.DetailResults.length];
+            for (int i = 0; i < source.DetailResults.length; i++) {
+                this.DetailResults[i] = new DetailResults(source.DetailResults[i]);
+            }
+        }
+        if (source.RiskDetails != null) {
+            this.RiskDetails = new RiskDetails[source.RiskDetails.length];
+            for (int i = 0; i < source.RiskDetails.length; i++) {
+                this.RiskDetails[i] = new RiskDetails(source.RiskDetails[i]);
+            }
+        }
+        if (source.Extra != null) {
+            this.Extra = new String(source.Extra);
+        }
+        if (source.DataId != null) {
+            this.DataId = new String(source.DataId);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

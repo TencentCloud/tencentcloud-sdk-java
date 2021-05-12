@@ -229,6 +229,44 @@ public class ASRStat extends AbstractModel{
         this.WordNum = WordNum;
     }
 
+    public ASRStat() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ASRStat(ASRStat source) {
+        if (source.AvgSpeed != null) {
+            this.AvgSpeed = new Float(source.AvgSpeed);
+        }
+        if (source.AvgVolume != null) {
+            this.AvgVolume = new Float(source.AvgVolume);
+        }
+        if (source.MaxVolume != null) {
+            this.MaxVolume = new Float(source.MaxVolume);
+        }
+        if (source.MinVolume != null) {
+            this.MinVolume = new Float(source.MinVolume);
+        }
+        if (source.MuteDuration != null) {
+            this.MuteDuration = new Long(source.MuteDuration);
+        }
+        if (source.SoundDuration != null) {
+            this.SoundDuration = new Long(source.SoundDuration);
+        }
+        if (source.TotalDuration != null) {
+            this.TotalDuration = new Long(source.TotalDuration);
+        }
+        if (source.VadNum != null) {
+            this.VadNum = new Long(source.VadNum);
+        }
+        if (source.WordNum != null) {
+            this.WordNum = new Long(source.WordNum);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -152,6 +152,32 @@ public class ModifyLivePushAuthKeyRequest extends AbstractModel{
         this.AuthDelta = AuthDelta;
     }
 
+    public ModifyLivePushAuthKeyRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyLivePushAuthKeyRequest(ModifyLivePushAuthKeyRequest source) {
+        if (source.DomainName != null) {
+            this.DomainName = new String(source.DomainName);
+        }
+        if (source.Enable != null) {
+            this.Enable = new Long(source.Enable);
+        }
+        if (source.MasterAuthKey != null) {
+            this.MasterAuthKey = new String(source.MasterAuthKey);
+        }
+        if (source.BackupAuthKey != null) {
+            this.BackupAuthKey = new String(source.BackupAuthKey);
+        }
+        if (source.AuthDelta != null) {
+            this.AuthDelta = new Long(source.AuthDelta);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

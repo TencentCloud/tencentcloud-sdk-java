@@ -206,6 +206,50 @@ public class StartGameServerSessionPlacementRequest extends AbstractModel{
         this.PlayerLatencies = PlayerLatencies;
     }
 
+    public StartGameServerSessionPlacementRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public StartGameServerSessionPlacementRequest(StartGameServerSessionPlacementRequest source) {
+        if (source.PlacementId != null) {
+            this.PlacementId = new String(source.PlacementId);
+        }
+        if (source.GameServerSessionQueueName != null) {
+            this.GameServerSessionQueueName = new String(source.GameServerSessionQueueName);
+        }
+        if (source.MaximumPlayerSessionCount != null) {
+            this.MaximumPlayerSessionCount = new Long(source.MaximumPlayerSessionCount);
+        }
+        if (source.DesiredPlayerSessions != null) {
+            this.DesiredPlayerSessions = new DesiredPlayerSession[source.DesiredPlayerSessions.length];
+            for (int i = 0; i < source.DesiredPlayerSessions.length; i++) {
+                this.DesiredPlayerSessions[i] = new DesiredPlayerSession(source.DesiredPlayerSessions[i]);
+            }
+        }
+        if (source.GameProperties != null) {
+            this.GameProperties = new GameProperty[source.GameProperties.length];
+            for (int i = 0; i < source.GameProperties.length; i++) {
+                this.GameProperties[i] = new GameProperty(source.GameProperties[i]);
+            }
+        }
+        if (source.GameServerSessionData != null) {
+            this.GameServerSessionData = new String(source.GameServerSessionData);
+        }
+        if (source.GameServerSessionName != null) {
+            this.GameServerSessionName = new String(source.GameServerSessionName);
+        }
+        if (source.PlayerLatencies != null) {
+            this.PlayerLatencies = new PlayerLatency[source.PlayerLatencies.length];
+            for (int i = 0; i < source.PlayerLatencies.length; i++) {
+                this.PlayerLatencies[i] = new PlayerLatency(source.PlayerLatencies[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

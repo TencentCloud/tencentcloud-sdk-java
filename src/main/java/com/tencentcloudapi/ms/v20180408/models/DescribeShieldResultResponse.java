@@ -160,6 +160,35 @@ public class DescribeShieldResultResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeShieldResultResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeShieldResultResponse(DescribeShieldResultResponse source) {
+        if (source.TaskStatus != null) {
+            this.TaskStatus = new Long(source.TaskStatus);
+        }
+        if (source.AppDetailInfo != null) {
+            this.AppDetailInfo = new AppDetailInfo(source.AppDetailInfo);
+        }
+        if (source.ShieldInfo != null) {
+            this.ShieldInfo = new ShieldInfo(source.ShieldInfo);
+        }
+        if (source.StatusDesc != null) {
+            this.StatusDesc = new String(source.StatusDesc);
+        }
+        if (source.StatusRef != null) {
+            this.StatusRef = new String(source.StatusRef);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

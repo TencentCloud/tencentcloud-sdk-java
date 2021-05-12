@@ -118,6 +118,23 @@ public class PlayStatFileInfo extends AbstractModel{
         this.Url = Url;
     }
 
+    public PlayStatFileInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PlayStatFileInfo(PlayStatFileInfo source) {
+        if (source.Date != null) {
+            this.Date = new String(source.Date);
+        }
+        if (source.Url != null) {
+            this.Url = new String(source.Url);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

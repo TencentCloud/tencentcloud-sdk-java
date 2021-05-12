@@ -73,6 +73,26 @@ QUOTAID属性是TOTAL_TRANSLATOR_QUOTA，表示账户在指定地域的IPV6转�
         this.RequestId = RequestId;
     }
 
+    public DescribeIp6TranslatorQuotaResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeIp6TranslatorQuotaResponse(DescribeIp6TranslatorQuotaResponse source) {
+        if (source.QuotaSet != null) {
+            this.QuotaSet = new Quota[source.QuotaSet.length];
+            for (int i = 0; i < source.QuotaSet.length; i++) {
+                this.QuotaSet[i] = new Quota(source.QuotaSet[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

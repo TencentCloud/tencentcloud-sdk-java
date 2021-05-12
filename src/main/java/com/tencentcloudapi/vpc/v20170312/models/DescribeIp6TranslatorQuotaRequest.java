@@ -45,6 +45,23 @@ public class DescribeIp6TranslatorQuotaRequest extends AbstractModel{
         this.Ip6TranslatorIds = Ip6TranslatorIds;
     }
 
+    public DescribeIp6TranslatorQuotaRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeIp6TranslatorQuotaRequest(DescribeIp6TranslatorQuotaRequest source) {
+        if (source.Ip6TranslatorIds != null) {
+            this.Ip6TranslatorIds = new String[source.Ip6TranslatorIds.length];
+            for (int i = 0; i < source.Ip6TranslatorIds.length; i++) {
+                this.Ip6TranslatorIds[i] = new String(source.Ip6TranslatorIds[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

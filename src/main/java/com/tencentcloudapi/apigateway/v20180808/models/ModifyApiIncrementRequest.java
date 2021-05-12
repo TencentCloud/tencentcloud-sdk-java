@@ -137,6 +137,32 @@ public class ModifyApiIncrementRequest extends AbstractModel{
         this.LoginRedirectUrl = LoginRedirectUrl;
     }
 
+    public ModifyApiIncrementRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyApiIncrementRequest(ModifyApiIncrementRequest source) {
+        if (source.ServiceId != null) {
+            this.ServiceId = new String(source.ServiceId);
+        }
+        if (source.ApiId != null) {
+            this.ApiId = new String(source.ApiId);
+        }
+        if (source.BusinessType != null) {
+            this.BusinessType = new String(source.BusinessType);
+        }
+        if (source.PublicKey != null) {
+            this.PublicKey = new String(source.PublicKey);
+        }
+        if (source.LoginRedirectUrl != null) {
+            this.LoginRedirectUrl = new String(source.LoginRedirectUrl);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

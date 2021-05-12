@@ -91,6 +91,29 @@ public class ResetInstancesMaxBandwidthRequest extends AbstractModel{
         this.MaxBandwidthIn = MaxBandwidthIn;
     }
 
+    public ResetInstancesMaxBandwidthRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ResetInstancesMaxBandwidthRequest(ResetInstancesMaxBandwidthRequest source) {
+        if (source.InstanceIdSet != null) {
+            this.InstanceIdSet = new String[source.InstanceIdSet.length];
+            for (int i = 0; i < source.InstanceIdSet.length; i++) {
+                this.InstanceIdSet[i] = new String(source.InstanceIdSet[i]);
+            }
+        }
+        if (source.MaxBandwidthOut != null) {
+            this.MaxBandwidthOut = new Long(source.MaxBandwidthOut);
+        }
+        if (source.MaxBandwidthIn != null) {
+            this.MaxBandwidthIn = new Long(source.MaxBandwidthIn);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

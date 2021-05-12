@@ -689,6 +689,107 @@ public class DeployContainerGroupRequest extends AbstractModel{
         this.SchedulingStrategy = SchedulingStrategy;
     }
 
+    public DeployContainerGroupRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeployContainerGroupRequest(DeployContainerGroupRequest source) {
+        if (source.GroupId != null) {
+            this.GroupId = new String(source.GroupId);
+        }
+        if (source.TagName != null) {
+            this.TagName = new String(source.TagName);
+        }
+        if (source.InstanceNum != null) {
+            this.InstanceNum = new Long(source.InstanceNum);
+        }
+        if (source.Server != null) {
+            this.Server = new String(source.Server);
+        }
+        if (source.Reponame != null) {
+            this.Reponame = new String(source.Reponame);
+        }
+        if (source.CpuLimit != null) {
+            this.CpuLimit = new String(source.CpuLimit);
+        }
+        if (source.MemLimit != null) {
+            this.MemLimit = new String(source.MemLimit);
+        }
+        if (source.JvmOpts != null) {
+            this.JvmOpts = new String(source.JvmOpts);
+        }
+        if (source.CpuRequest != null) {
+            this.CpuRequest = new String(source.CpuRequest);
+        }
+        if (source.MemRequest != null) {
+            this.MemRequest = new String(source.MemRequest);
+        }
+        if (source.DoNotStart != null) {
+            this.DoNotStart = new Boolean(source.DoNotStart);
+        }
+        if (source.RepoName != null) {
+            this.RepoName = new String(source.RepoName);
+        }
+        if (source.UpdateType != null) {
+            this.UpdateType = new Long(source.UpdateType);
+        }
+        if (source.UpdateIvl != null) {
+            this.UpdateIvl = new Long(source.UpdateIvl);
+        }
+        if (source.AgentCpuRequest != null) {
+            this.AgentCpuRequest = new String(source.AgentCpuRequest);
+        }
+        if (source.AgentCpuLimit != null) {
+            this.AgentCpuLimit = new String(source.AgentCpuLimit);
+        }
+        if (source.AgentMemRequest != null) {
+            this.AgentMemRequest = new String(source.AgentMemRequest);
+        }
+        if (source.AgentMemLimit != null) {
+            this.AgentMemLimit = new String(source.AgentMemLimit);
+        }
+        if (source.IstioCpuRequest != null) {
+            this.IstioCpuRequest = new String(source.IstioCpuRequest);
+        }
+        if (source.IstioCpuLimit != null) {
+            this.IstioCpuLimit = new String(source.IstioCpuLimit);
+        }
+        if (source.IstioMemRequest != null) {
+            this.IstioMemRequest = new String(source.IstioMemRequest);
+        }
+        if (source.IstioMemLimit != null) {
+            this.IstioMemLimit = new String(source.IstioMemLimit);
+        }
+        if (source.MaxSurge != null) {
+            this.MaxSurge = new String(source.MaxSurge);
+        }
+        if (source.MaxUnavailable != null) {
+            this.MaxUnavailable = new String(source.MaxUnavailable);
+        }
+        if (source.HealthCheckSettings != null) {
+            this.HealthCheckSettings = new HealthCheckSettings(source.HealthCheckSettings);
+        }
+        if (source.Envs != null) {
+            this.Envs = new Env[source.Envs.length];
+            for (int i = 0; i < source.Envs.length; i++) {
+                this.Envs[i] = new Env(source.Envs[i]);
+            }
+        }
+        if (source.ServiceSetting != null) {
+            this.ServiceSetting = new ServiceSetting(source.ServiceSetting);
+        }
+        if (source.DeployAgent != null) {
+            this.DeployAgent = new Boolean(source.DeployAgent);
+        }
+        if (source.SchedulingStrategy != null) {
+            this.SchedulingStrategy = new SchedulingStrategy(source.SchedulingStrategy);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

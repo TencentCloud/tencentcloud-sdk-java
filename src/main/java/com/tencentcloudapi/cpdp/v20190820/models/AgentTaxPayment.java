@@ -183,6 +183,38 @@ public class AgentTaxPayment extends AbstractModel{
         this.Tax = Tax;
     }
 
+    public AgentTaxPayment() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AgentTaxPayment(AgentTaxPayment source) {
+        if (source.AnchorId != null) {
+            this.AnchorId = new String(source.AnchorId);
+        }
+        if (source.AnchorName != null) {
+            this.AnchorName = new String(source.AnchorName);
+        }
+        if (source.AnchorIDCard != null) {
+            this.AnchorIDCard = new String(source.AnchorIDCard);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+        if (source.Amount != null) {
+            this.Amount = new Long(source.Amount);
+        }
+        if (source.Tax != null) {
+            this.Tax = new Long(source.Tax);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

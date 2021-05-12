@@ -198,6 +198,38 @@ public class DescribeCreditResultResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeCreditResultResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeCreditResultResponse(DescribeCreditResultResponse source) {
+        if (source.ResultCode != null) {
+            this.ResultCode = new String(source.ResultCode);
+        }
+        if (source.ClientCode != null) {
+            this.ClientCode = new String(source.ClientCode);
+        }
+        if (source.RingStartTime != null) {
+            this.RingStartTime = new String(source.RingStartTime);
+        }
+        if (source.RingDuration != null) {
+            this.RingDuration = new Long(source.RingDuration);
+        }
+        if (source.AnswerDuration != null) {
+            this.AnswerDuration = new Long(source.AnswerDuration);
+        }
+        if (source.ContextValue != null) {
+            this.ContextValue = new String(source.ContextValue);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

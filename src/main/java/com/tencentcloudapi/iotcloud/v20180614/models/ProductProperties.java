@@ -326,6 +326,56 @@ public class ProductProperties extends AbstractModel{
         this.RegisterLimit = RegisterLimit;
     }
 
+    public ProductProperties() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ProductProperties(ProductProperties source) {
+        if (source.ProductDescription != null) {
+            this.ProductDescription = new String(source.ProductDescription);
+        }
+        if (source.EncryptionType != null) {
+            this.EncryptionType = new String(source.EncryptionType);
+        }
+        if (source.Region != null) {
+            this.Region = new String(source.Region);
+        }
+        if (source.ProductType != null) {
+            this.ProductType = new Long(source.ProductType);
+        }
+        if (source.Format != null) {
+            this.Format = new String(source.Format);
+        }
+        if (source.Platform != null) {
+            this.Platform = new String(source.Platform);
+        }
+        if (source.Appeui != null) {
+            this.Appeui = new String(source.Appeui);
+        }
+        if (source.ModelId != null) {
+            this.ModelId = new String(source.ModelId);
+        }
+        if (source.ModelName != null) {
+            this.ModelName = new String(source.ModelName);
+        }
+        if (source.ProductKey != null) {
+            this.ProductKey = new String(source.ProductKey);
+        }
+        if (source.RegisterType != null) {
+            this.RegisterType = new Long(source.RegisterType);
+        }
+        if (source.ProductSecret != null) {
+            this.ProductSecret = new String(source.ProductSecret);
+        }
+        if (source.RegisterLimit != null) {
+            this.RegisterLimit = new Long(source.RegisterLimit);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

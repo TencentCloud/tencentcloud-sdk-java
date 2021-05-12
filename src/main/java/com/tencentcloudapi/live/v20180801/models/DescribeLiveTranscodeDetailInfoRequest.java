@@ -223,6 +223,38 @@ public class DescribeLiveTranscodeDetailInfoRequest extends AbstractModel{
         this.EndDayTime = EndDayTime;
     }
 
+    public DescribeLiveTranscodeDetailInfoRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeLiveTranscodeDetailInfoRequest(DescribeLiveTranscodeDetailInfoRequest source) {
+        if (source.PushDomain != null) {
+            this.PushDomain = new String(source.PushDomain);
+        }
+        if (source.StreamName != null) {
+            this.StreamName = new String(source.StreamName);
+        }
+        if (source.DayTime != null) {
+            this.DayTime = new String(source.DayTime);
+        }
+        if (source.PageNum != null) {
+            this.PageNum = new Long(source.PageNum);
+        }
+        if (source.PageSize != null) {
+            this.PageSize = new Long(source.PageSize);
+        }
+        if (source.StartDayTime != null) {
+            this.StartDayTime = new String(source.StartDayTime);
+        }
+        if (source.EndDayTime != null) {
+            this.EndDayTime = new String(source.EndDayTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -106,6 +106,26 @@ public class RuleCacheConfig extends AbstractModel{
         this.FollowOrigin = FollowOrigin;
     }
 
+    public RuleCacheConfig() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RuleCacheConfig(RuleCacheConfig source) {
+        if (source.Cache != null) {
+            this.Cache = new CacheConfigCache(source.Cache);
+        }
+        if (source.NoCache != null) {
+            this.NoCache = new CacheConfigNoCache(source.NoCache);
+        }
+        if (source.FollowOrigin != null) {
+            this.FollowOrigin = new CacheConfigFollowOrigin(source.FollowOrigin);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

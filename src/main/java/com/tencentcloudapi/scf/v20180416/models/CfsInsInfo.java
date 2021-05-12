@@ -259,6 +259,44 @@ public class CfsInsInfo extends AbstractModel{
         this.MountSubnetId = MountSubnetId;
     }
 
+    public CfsInsInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CfsInsInfo(CfsInsInfo source) {
+        if (source.UserId != null) {
+            this.UserId = new String(source.UserId);
+        }
+        if (source.UserGroupId != null) {
+            this.UserGroupId = new String(source.UserGroupId);
+        }
+        if (source.CfsId != null) {
+            this.CfsId = new String(source.CfsId);
+        }
+        if (source.MountInsId != null) {
+            this.MountInsId = new String(source.MountInsId);
+        }
+        if (source.LocalMountDir != null) {
+            this.LocalMountDir = new String(source.LocalMountDir);
+        }
+        if (source.RemoteMountDir != null) {
+            this.RemoteMountDir = new String(source.RemoteMountDir);
+        }
+        if (source.IpAddress != null) {
+            this.IpAddress = new String(source.IpAddress);
+        }
+        if (source.MountVpcId != null) {
+            this.MountVpcId = new String(source.MountVpcId);
+        }
+        if (source.MountSubnetId != null) {
+            this.MountSubnetId = new String(source.MountSubnetId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

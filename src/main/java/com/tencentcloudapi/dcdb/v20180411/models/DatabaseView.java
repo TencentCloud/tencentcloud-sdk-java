@@ -45,6 +45,20 @@ public class DatabaseView extends AbstractModel{
         this.View = View;
     }
 
+    public DatabaseView() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DatabaseView(DatabaseView source) {
+        if (source.View != null) {
+            this.View = new String(source.View);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

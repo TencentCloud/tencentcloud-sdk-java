@@ -45,6 +45,20 @@ public class DescribeDeviceRequest extends AbstractModel{
         this.Tid = Tid;
     }
 
+    public DescribeDeviceRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeDeviceRequest(DescribeDeviceRequest source) {
+        if (source.Tid != null) {
+            this.Tid = new String(source.Tid);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

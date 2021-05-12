@@ -137,6 +137,32 @@ public class AlarmHistoryMetric extends AbstractModel{
         this.Description = Description;
     }
 
+    public AlarmHistoryMetric() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AlarmHistoryMetric(AlarmHistoryMetric source) {
+        if (source.QceNamespace != null) {
+            this.QceNamespace = new String(source.QceNamespace);
+        }
+        if (source.MetricName != null) {
+            this.MetricName = new String(source.MetricName);
+        }
+        if (source.Period != null) {
+            this.Period = new Long(source.Period);
+        }
+        if (source.Value != null) {
+            this.Value = new String(source.Value);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

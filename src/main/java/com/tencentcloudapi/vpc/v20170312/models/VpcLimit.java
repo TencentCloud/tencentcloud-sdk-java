@@ -68,6 +68,23 @@ public class VpcLimit extends AbstractModel{
         this.LimitValue = LimitValue;
     }
 
+    public VpcLimit() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public VpcLimit(VpcLimit source) {
+        if (source.LimitType != null) {
+            this.LimitType = new String(source.LimitType);
+        }
+        if (source.LimitValue != null) {
+            this.LimitValue = new Long(source.LimitValue);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

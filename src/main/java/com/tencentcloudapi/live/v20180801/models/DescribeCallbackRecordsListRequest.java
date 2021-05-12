@@ -198,6 +198,38 @@ public class DescribeCallbackRecordsListRequest extends AbstractModel{
         this.ResultCode = ResultCode;
     }
 
+    public DescribeCallbackRecordsListRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeCallbackRecordsListRequest(DescribeCallbackRecordsListRequest source) {
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+        if (source.StreamName != null) {
+            this.StreamName = new String(source.StreamName);
+        }
+        if (source.PageNum != null) {
+            this.PageNum = new Long(source.PageNum);
+        }
+        if (source.PageSize != null) {
+            this.PageSize = new Long(source.PageSize);
+        }
+        if (source.EventType != null) {
+            this.EventType = new Long(source.EventType);
+        }
+        if (source.ResultCode != null) {
+            this.ResultCode = new Long(source.ResultCode);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

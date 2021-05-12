@@ -45,6 +45,23 @@ public class DescribeInternalEndpointDnsStatusRequest extends AbstractModel{
         this.VpcSet = VpcSet;
     }
 
+    public DescribeInternalEndpointDnsStatusRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeInternalEndpointDnsStatusRequest(DescribeInternalEndpointDnsStatusRequest source) {
+        if (source.VpcSet != null) {
+            this.VpcSet = new VpcAndDomainInfo[source.VpcSet.length];
+            for (int i = 0; i < source.VpcSet.length; i++) {
+                this.VpcSet[i] = new VpcAndDomainInfo(source.VpcSet[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

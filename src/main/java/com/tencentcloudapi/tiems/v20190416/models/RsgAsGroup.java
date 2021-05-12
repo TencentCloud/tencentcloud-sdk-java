@@ -344,6 +344,59 @@ public class RsgAsGroup extends AbstractModel{
         this.DesiredSize = DesiredSize;
     }
 
+    public RsgAsGroup() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RsgAsGroup(RsgAsGroup source) {
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
+        if (source.Region != null) {
+            this.Region = new String(source.Region);
+        }
+        if (source.Zone != null) {
+            this.Zone = new String(source.Zone);
+        }
+        if (source.Cluster != null) {
+            this.Cluster = new String(source.Cluster);
+        }
+        if (source.RsgId != null) {
+            this.RsgId = new String(source.RsgId);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.MaxSize != null) {
+            this.MaxSize = new Long(source.MaxSize);
+        }
+        if (source.MinSize != null) {
+            this.MinSize = new Long(source.MinSize);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new String(source.UpdateTime);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.InstanceType != null) {
+            this.InstanceType = new String(source.InstanceType);
+        }
+        if (source.InstanceCount != null) {
+            this.InstanceCount = new Long(source.InstanceCount);
+        }
+        if (source.DesiredSize != null) {
+            this.DesiredSize = new Long(source.DesiredSize);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -68,6 +68,23 @@ public class DescribeDictRequest extends AbstractModel{
         this.Name = Name;
     }
 
+    public DescribeDictRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeDictRequest(DescribeDictRequest source) {
+        if (source.DictId != null) {
+            this.DictId = new String(source.DictId);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

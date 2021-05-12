@@ -574,6 +574,92 @@ public class InstanceListInfo extends AbstractModel{
         this.ZoneId = ZoneId;
     }
 
+    public InstanceListInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public InstanceListInfo(InstanceListInfo source) {
+        if (source.Tags != null) {
+            this.Tags = new TagInfo[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new TagInfo(source.Tags[i]);
+            }
+        }
+        if (source.AddTimeStamp != null) {
+            this.AddTimeStamp = new String(source.AddTimeStamp);
+        }
+        if (source.AppId != null) {
+            this.AppId = new Long(source.AppId);
+        }
+        if (source.AutoRenewFlag != null) {
+            this.AutoRenewFlag = new Long(source.AutoRenewFlag);
+        }
+        if (source.CmemId != null) {
+            this.CmemId = new Long(source.CmemId);
+        }
+        if (source.DeadlineTimeStamp != null) {
+            this.DeadlineTimeStamp = new String(source.DeadlineTimeStamp);
+        }
+        if (source.Expire != null) {
+            this.Expire = new Long(source.Expire);
+        }
+        if (source.InstanceDesc != null) {
+            this.InstanceDesc = new String(source.InstanceDesc);
+        }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.InstanceName != null) {
+            this.InstanceName = new String(source.InstanceName);
+        }
+        if (source.IsolateTimeStamp != null) {
+            this.IsolateTimeStamp = new String(source.IsolateTimeStamp);
+        }
+        if (source.ModTimeStamp != null) {
+            this.ModTimeStamp = new String(source.ModTimeStamp);
+        }
+        if (source.PayMode != null) {
+            this.PayMode = new Long(source.PayMode);
+        }
+        if (source.ProjectId != null) {
+            this.ProjectId = new Long(source.ProjectId);
+        }
+        if (source.RegionId != null) {
+            this.RegionId = new Long(source.RegionId);
+        }
+        if (source.SetId != null) {
+            this.SetId = new Long(source.SetId);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.SubnetId != null) {
+            this.SubnetId = new Long(source.SubnetId);
+        }
+        if (source.UniqSubnetId != null) {
+            this.UniqSubnetId = new String(source.UniqSubnetId);
+        }
+        if (source.UniqVpcId != null) {
+            this.UniqVpcId = new String(source.UniqVpcId);
+        }
+        if (source.Vip != null) {
+            this.Vip = new String(source.Vip);
+        }
+        if (source.VpcId != null) {
+            this.VpcId = new Long(source.VpcId);
+        }
+        if (source.Vport != null) {
+            this.Vport = new Long(source.Vport);
+        }
+        if (source.ZoneId != null) {
+            this.ZoneId = new Long(source.ZoneId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

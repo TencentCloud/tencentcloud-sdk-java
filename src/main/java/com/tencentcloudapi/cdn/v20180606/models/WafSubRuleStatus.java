@@ -68,6 +68,26 @@ public class WafSubRuleStatus extends AbstractModel{
         this.SubIds = SubIds;
     }
 
+    public WafSubRuleStatus() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public WafSubRuleStatus(WafSubRuleStatus source) {
+        if (source.Switch != null) {
+            this.Switch = new String(source.Switch);
+        }
+        if (source.SubIds != null) {
+            this.SubIds = new Long[source.SubIds.length];
+            for (int i = 0; i < source.SubIds.length; i++) {
+                this.SubIds[i] = new Long(source.SubIds[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

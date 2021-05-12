@@ -68,6 +68,23 @@ public class ParamModifyResult extends AbstractModel{
         this.Code = Code;
     }
 
+    public ParamModifyResult() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ParamModifyResult(ParamModifyResult source) {
+        if (source.Param != null) {
+            this.Param = new String(source.Param);
+        }
+        if (source.Code != null) {
+            this.Code = new Long(source.Code);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

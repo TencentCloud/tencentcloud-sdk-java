@@ -114,6 +114,32 @@ public class UnBindIPStrategyRequest extends AbstractModel{
         this.UnBindApiIds = UnBindApiIds;
     }
 
+    public UnBindIPStrategyRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UnBindIPStrategyRequest(UnBindIPStrategyRequest source) {
+        if (source.ServiceId != null) {
+            this.ServiceId = new String(source.ServiceId);
+        }
+        if (source.StrategyId != null) {
+            this.StrategyId = new String(source.StrategyId);
+        }
+        if (source.EnvironmentName != null) {
+            this.EnvironmentName = new String(source.EnvironmentName);
+        }
+        if (source.UnBindApiIds != null) {
+            this.UnBindApiIds = new String[source.UnBindApiIds.length];
+            for (int i = 0; i < source.UnBindApiIds.length; i++) {
+                this.UnBindApiIds[i] = new String(source.UnBindApiIds[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

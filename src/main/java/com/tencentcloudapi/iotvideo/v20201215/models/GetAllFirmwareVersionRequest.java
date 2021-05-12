@@ -45,6 +45,20 @@ public class GetAllFirmwareVersionRequest extends AbstractModel{
         this.ProductID = ProductID;
     }
 
+    public GetAllFirmwareVersionRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GetAllFirmwareVersionRequest(GetAllFirmwareVersionRequest source) {
+        if (source.ProductID != null) {
+            this.ProductID = new String(source.ProductID);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

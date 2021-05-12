@@ -73,6 +73,23 @@ public class SlaveInfo extends AbstractModel{
         this.Second = Second;
     }
 
+    public SlaveInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SlaveInfo(SlaveInfo source) {
+        if (source.First != null) {
+            this.First = new SlaveInstanceInfo(source.First);
+        }
+        if (source.Second != null) {
+            this.Second = new SlaveInstanceInfo(source.Second);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

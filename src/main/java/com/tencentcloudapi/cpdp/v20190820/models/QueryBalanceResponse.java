@@ -160,6 +160,38 @@ public class QueryBalanceResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public QueryBalanceResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public QueryBalanceResponse(QueryBalanceResponse source) {
+        if (source.ResultCount != null) {
+            this.ResultCount = new String(source.ResultCount);
+        }
+        if (source.StartRecordOffset != null) {
+            this.StartRecordOffset = new String(source.StartRecordOffset);
+        }
+        if (source.EndFlag != null) {
+            this.EndFlag = new String(source.EndFlag);
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new String(source.TotalCount);
+        }
+        if (source.QueryItems != null) {
+            this.QueryItems = new QueryItem[source.QueryItems.length];
+            for (int i = 0; i < source.QueryItems.length; i++) {
+                this.QueryItems[i] = new QueryItem(source.QueryItems[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

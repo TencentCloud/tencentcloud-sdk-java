@@ -68,6 +68,26 @@ public class UnassignIpv6SubnetCidrBlockRequest extends AbstractModel{
         this.Ipv6SubnetCidrBlocks = Ipv6SubnetCidrBlocks;
     }
 
+    public UnassignIpv6SubnetCidrBlockRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UnassignIpv6SubnetCidrBlockRequest(UnassignIpv6SubnetCidrBlockRequest source) {
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.Ipv6SubnetCidrBlocks != null) {
+            this.Ipv6SubnetCidrBlocks = new Ipv6SubnetCidrBlock[source.Ipv6SubnetCidrBlocks.length];
+            for (int i = 0; i < source.Ipv6SubnetCidrBlocks.length; i++) {
+                this.Ipv6SubnetCidrBlocks[i] = new Ipv6SubnetCidrBlock(source.Ipv6SubnetCidrBlocks[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

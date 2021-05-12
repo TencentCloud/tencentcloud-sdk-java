@@ -229,6 +229,44 @@ public class CCFrequencyRule extends AbstractModel{
         this.ExeDuration = ExeDuration;
     }
 
+    public CCFrequencyRule() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CCFrequencyRule(CCFrequencyRule source) {
+        if (source.CCFrequencyRuleId != null) {
+            this.CCFrequencyRuleId = new String(source.CCFrequencyRuleId);
+        }
+        if (source.Uri != null) {
+            this.Uri = new String(source.Uri);
+        }
+        if (source.UserAgent != null) {
+            this.UserAgent = new String(source.UserAgent);
+        }
+        if (source.Cookie != null) {
+            this.Cookie = new String(source.Cookie);
+        }
+        if (source.Mode != null) {
+            this.Mode = new String(source.Mode);
+        }
+        if (source.Period != null) {
+            this.Period = new Long(source.Period);
+        }
+        if (source.ReqNumber != null) {
+            this.ReqNumber = new Long(source.ReqNumber);
+        }
+        if (source.Act != null) {
+            this.Act = new String(source.Act);
+        }
+        if (source.ExeDuration != null) {
+            this.ExeDuration = new Long(source.ExeDuration);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

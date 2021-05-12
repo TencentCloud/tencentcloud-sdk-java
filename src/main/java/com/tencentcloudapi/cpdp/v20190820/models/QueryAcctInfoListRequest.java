@@ -241,6 +241,41 @@ development: 开发环境
         this.MidasEnvironment = MidasEnvironment;
     }
 
+    public QueryAcctInfoListRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public QueryAcctInfoListRequest(QueryAcctInfoListRequest source) {
+        if (source.MidasAppId != null) {
+            this.MidasAppId = new String(source.MidasAppId);
+        }
+        if (source.QueryAcctBeginTime != null) {
+            this.QueryAcctBeginTime = new String(source.QueryAcctBeginTime);
+        }
+        if (source.QueryAcctEndTime != null) {
+            this.QueryAcctEndTime = new String(source.QueryAcctEndTime);
+        }
+        if (source.PageOffset != null) {
+            this.PageOffset = new String(source.PageOffset);
+        }
+        if (source.MidasSecretId != null) {
+            this.MidasSecretId = new String(source.MidasSecretId);
+        }
+        if (source.MidasSignature != null) {
+            this.MidasSignature = new String(source.MidasSignature);
+        }
+        if (source.EncryptType != null) {
+            this.EncryptType = new String(source.EncryptType);
+        }
+        if (source.MidasEnvironment != null) {
+            this.MidasEnvironment = new String(source.MidasEnvironment);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

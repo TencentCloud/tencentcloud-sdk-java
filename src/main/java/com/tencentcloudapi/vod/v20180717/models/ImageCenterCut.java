@@ -124,6 +124,29 @@ public class ImageCenterCut extends AbstractModel{
         this.Radius = Radius;
     }
 
+    public ImageCenterCut() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ImageCenterCut(ImageCenterCut source) {
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.Width != null) {
+            this.Width = new Long(source.Width);
+        }
+        if (source.Height != null) {
+            this.Height = new Long(source.Height);
+        }
+        if (source.Radius != null) {
+            this.Radius = new Long(source.Radius);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

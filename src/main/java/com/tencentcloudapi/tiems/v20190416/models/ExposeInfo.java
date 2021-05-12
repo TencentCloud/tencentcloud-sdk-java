@@ -208,6 +208,38 @@ public class ExposeInfo extends AbstractModel{
         this.GateWayDomain = GateWayDomain;
     }
 
+    public ExposeInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ExposeInfo(ExposeInfo source) {
+        if (source.ExposeType != null) {
+            this.ExposeType = new String(source.ExposeType);
+        }
+        if (source.Ip != null) {
+            this.Ip = new String(source.Ip);
+        }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.SubnetId != null) {
+            this.SubnetId = new String(source.SubnetId);
+        }
+        if (source.GateWayServiceId != null) {
+            this.GateWayServiceId = new String(source.GateWayServiceId);
+        }
+        if (source.GateWayAPIId != null) {
+            this.GateWayAPIId = new String(source.GateWayAPIId);
+        }
+        if (source.GateWayDomain != null) {
+            this.GateWayDomain = new String(source.GateWayDomain);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -166,6 +166,26 @@ public class ProductInstanceRecource extends AbstractModel{
         this.Left = Left;
     }
 
+    public ProductInstanceRecource() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ProductInstanceRecource(ProductInstanceRecource source) {
+        if (source.ResourceType != null) {
+            this.ResourceType = new String(source.ResourceType);
+        }
+        if (source.Amount != null) {
+            this.Amount = new Long(source.Amount);
+        }
+        if (source.Left != null) {
+            this.Left = new Long(source.Left);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

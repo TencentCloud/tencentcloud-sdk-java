@@ -68,6 +68,26 @@ public class UnbindTrafficMirrorListenersRequest extends AbstractModel{
         this.ListenerIds = ListenerIds;
     }
 
+    public UnbindTrafficMirrorListenersRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UnbindTrafficMirrorListenersRequest(UnbindTrafficMirrorListenersRequest source) {
+        if (source.TrafficMirrorId != null) {
+            this.TrafficMirrorId = new String(source.TrafficMirrorId);
+        }
+        if (source.ListenerIds != null) {
+            this.ListenerIds = new String[source.ListenerIds.length];
+            for (int i = 0; i < source.ListenerIds.length; i++) {
+                this.ListenerIds[i] = new String(source.ListenerIds[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

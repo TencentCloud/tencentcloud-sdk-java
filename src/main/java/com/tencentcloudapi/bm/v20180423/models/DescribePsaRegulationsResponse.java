@@ -91,6 +91,29 @@ public class DescribePsaRegulationsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribePsaRegulationsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribePsaRegulationsResponse(DescribePsaRegulationsResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.PsaRegulations != null) {
+            this.PsaRegulations = new PsaRegulation[source.PsaRegulations.length];
+            for (int i = 0; i < source.PsaRegulations.length; i++) {
+                this.PsaRegulations[i] = new PsaRegulation(source.PsaRegulations[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

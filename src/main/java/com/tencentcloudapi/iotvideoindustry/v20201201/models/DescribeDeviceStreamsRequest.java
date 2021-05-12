@@ -68,6 +68,23 @@ public class DescribeDeviceStreamsRequest extends AbstractModel{
         this.ExpireTime = ExpireTime;
     }
 
+    public DescribeDeviceStreamsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeDeviceStreamsRequest(DescribeDeviceStreamsRequest source) {
+        if (source.DeviceId != null) {
+            this.DeviceId = new String(source.DeviceId);
+        }
+        if (source.ExpireTime != null) {
+            this.ExpireTime = new Long(source.ExpireTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

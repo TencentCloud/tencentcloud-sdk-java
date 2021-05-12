@@ -101,6 +101,29 @@ public class DescribePushTasksResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribePushTasksResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribePushTasksResponse(DescribePushTasksResponse source) {
+        if (source.PushLogs != null) {
+            this.PushLogs = new PushTask[source.PushLogs.length];
+            for (int i = 0; i < source.PushLogs.length; i++) {
+                this.PushLogs[i] = new PushTask(source.PushLogs[i]);
+            }
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

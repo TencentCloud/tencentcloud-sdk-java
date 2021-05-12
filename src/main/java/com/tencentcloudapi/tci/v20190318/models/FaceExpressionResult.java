@@ -68,6 +68,23 @@ public class FaceExpressionResult extends AbstractModel{
         this.Expression = Expression;
     }
 
+    public FaceExpressionResult() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public FaceExpressionResult(FaceExpressionResult source) {
+        if (source.Confidence != null) {
+            this.Confidence = new Float(source.Confidence);
+        }
+        if (source.Expression != null) {
+            this.Expression = new String(source.Expression);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

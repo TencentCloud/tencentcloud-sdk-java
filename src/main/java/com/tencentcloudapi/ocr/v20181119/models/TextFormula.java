@@ -45,6 +45,20 @@ public class TextFormula extends AbstractModel{
         this.DetectedText = DetectedText;
     }
 
+    public TextFormula() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TextFormula(TextFormula source) {
+        if (source.DetectedText != null) {
+            this.DetectedText = new String(source.DetectedText);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

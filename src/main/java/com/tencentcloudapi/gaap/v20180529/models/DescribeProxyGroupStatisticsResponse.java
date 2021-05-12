@@ -68,6 +68,26 @@ public class DescribeProxyGroupStatisticsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeProxyGroupStatisticsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeProxyGroupStatisticsResponse(DescribeProxyGroupStatisticsResponse source) {
+        if (source.StatisticsData != null) {
+            this.StatisticsData = new MetricStatisticsInfo[source.StatisticsData.length];
+            for (int i = 0; i < source.StatisticsData.length; i++) {
+                this.StatisticsData[i] = new MetricStatisticsInfo(source.StatisticsData[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

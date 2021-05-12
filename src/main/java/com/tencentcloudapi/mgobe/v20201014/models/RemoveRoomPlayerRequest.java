@@ -68,6 +68,23 @@ public class RemoveRoomPlayerRequest extends AbstractModel{
         this.RemovePlayerId = RemovePlayerId;
     }
 
+    public RemoveRoomPlayerRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RemoveRoomPlayerRequest(RemoveRoomPlayerRequest source) {
+        if (source.GameId != null) {
+            this.GameId = new String(source.GameId);
+        }
+        if (source.RemovePlayerId != null) {
+            this.RemovePlayerId = new String(source.RemovePlayerId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

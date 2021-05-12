@@ -91,6 +91,26 @@ public class PodParameter extends AbstractModel{
         this.Parameter = Parameter;
     }
 
+    public PodParameter() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PodParameter(PodParameter source) {
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
+        if (source.Config != null) {
+            this.Config = new String(source.Config);
+        }
+        if (source.Parameter != null) {
+            this.Parameter = new String(source.Parameter);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

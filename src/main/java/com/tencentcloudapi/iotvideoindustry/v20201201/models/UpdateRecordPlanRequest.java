@@ -170,6 +170,38 @@ public class UpdateRecordPlanRequest extends AbstractModel{
         this.IsModifyDevices = IsModifyDevices;
     }
 
+    public UpdateRecordPlanRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UpdateRecordPlanRequest(UpdateRecordPlanRequest source) {
+        if (source.PlanId != null) {
+            this.PlanId = new String(source.PlanId);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.TimeTemplateId != null) {
+            this.TimeTemplateId = new String(source.TimeTemplateId);
+        }
+        if (source.EventId != null) {
+            this.EventId = new Long(source.EventId);
+        }
+        if (source.Devices != null) {
+            this.Devices = new DeviceItem[source.Devices.length];
+            for (int i = 0; i < source.Devices.length; i++) {
+                this.Devices[i] = new DeviceItem(source.Devices[i]);
+            }
+        }
+        if (source.IsModifyDevices != null) {
+            this.IsModifyDevices = new Long(source.IsModifyDevices);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

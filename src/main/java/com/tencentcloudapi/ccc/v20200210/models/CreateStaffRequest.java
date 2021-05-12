@@ -68,6 +68,26 @@ public class CreateStaffRequest extends AbstractModel{
         this.Staffs = Staffs;
     }
 
+    public CreateStaffRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateStaffRequest(CreateStaffRequest source) {
+        if (source.SdkAppId != null) {
+            this.SdkAppId = new Long(source.SdkAppId);
+        }
+        if (source.Staffs != null) {
+            this.Staffs = new SeatUserInfo[source.Staffs.length];
+            for (int i = 0; i < source.Staffs.length; i++) {
+                this.Staffs[i] = new SeatUserInfo(source.Staffs[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

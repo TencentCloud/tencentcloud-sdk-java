@@ -114,6 +114,29 @@ public class RegionInfo extends AbstractModel{
         this.Ipv6Enable = Ipv6Enable;
     }
 
+    public RegionInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RegionInfo(RegionInfo source) {
+        if (source.RegionName != null) {
+            this.RegionName = new String(source.RegionName);
+        }
+        if (source.RegionAbbr != null) {
+            this.RegionAbbr = new String(source.RegionAbbr);
+        }
+        if (source.RegionId != null) {
+            this.RegionId = new Long(source.RegionId);
+        }
+        if (source.Ipv6Enable != null) {
+            this.Ipv6Enable = new Long(source.Ipv6Enable);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

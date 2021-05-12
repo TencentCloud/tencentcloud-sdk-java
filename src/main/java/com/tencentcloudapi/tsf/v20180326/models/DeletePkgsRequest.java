@@ -114,6 +114,32 @@ public class DeletePkgsRequest extends AbstractModel{
         this.RepositoryId = RepositoryId;
     }
 
+    public DeletePkgsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeletePkgsRequest(DeletePkgsRequest source) {
+        if (source.ApplicationId != null) {
+            this.ApplicationId = new String(source.ApplicationId);
+        }
+        if (source.PkgIds != null) {
+            this.PkgIds = new String[source.PkgIds.length];
+            for (int i = 0; i < source.PkgIds.length; i++) {
+                this.PkgIds[i] = new String(source.PkgIds[i]);
+            }
+        }
+        if (source.RepositoryType != null) {
+            this.RepositoryType = new String(source.RepositoryType);
+        }
+        if (source.RepositoryId != null) {
+            this.RepositoryId = new String(source.RepositoryId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

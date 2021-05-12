@@ -119,6 +119,29 @@ public class ParamConstraint extends AbstractModel{
         this.String = String;
     }
 
+    public ParamConstraint() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ParamConstraint(ParamConstraint source) {
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.Enum != null) {
+            this.Enum = new String(source.Enum);
+        }
+        if (source.Range != null) {
+            this.Range = new ConstraintRange(source.Range);
+        }
+        if (source.String != null) {
+            this.String = new String(source.String);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

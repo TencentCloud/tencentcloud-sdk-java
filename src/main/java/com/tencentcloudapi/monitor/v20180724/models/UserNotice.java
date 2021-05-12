@@ -330,6 +330,62 @@ public class UserNotice extends AbstractModel{
         this.NeedPhoneArriveNotice = NeedPhoneArriveNotice;
     }
 
+    public UserNotice() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UserNotice(UserNotice source) {
+        if (source.ReceiverType != null) {
+            this.ReceiverType = new String(source.ReceiverType);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new Long(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new Long(source.EndTime);
+        }
+        if (source.NoticeWay != null) {
+            this.NoticeWay = new String[source.NoticeWay.length];
+            for (int i = 0; i < source.NoticeWay.length; i++) {
+                this.NoticeWay[i] = new String(source.NoticeWay[i]);
+            }
+        }
+        if (source.UserIds != null) {
+            this.UserIds = new Long[source.UserIds.length];
+            for (int i = 0; i < source.UserIds.length; i++) {
+                this.UserIds[i] = new Long(source.UserIds[i]);
+            }
+        }
+        if (source.GroupIds != null) {
+            this.GroupIds = new Long[source.GroupIds.length];
+            for (int i = 0; i < source.GroupIds.length; i++) {
+                this.GroupIds[i] = new Long(source.GroupIds[i]);
+            }
+        }
+        if (source.PhoneOrder != null) {
+            this.PhoneOrder = new Long[source.PhoneOrder.length];
+            for (int i = 0; i < source.PhoneOrder.length; i++) {
+                this.PhoneOrder[i] = new Long(source.PhoneOrder[i]);
+            }
+        }
+        if (source.PhoneCircleTimes != null) {
+            this.PhoneCircleTimes = new Long(source.PhoneCircleTimes);
+        }
+        if (source.PhoneInnerInterval != null) {
+            this.PhoneInnerInterval = new Long(source.PhoneInnerInterval);
+        }
+        if (source.PhoneCircleInterval != null) {
+            this.PhoneCircleInterval = new Long(source.PhoneCircleInterval);
+        }
+        if (source.NeedPhoneArriveNotice != null) {
+            this.NeedPhoneArriveNotice = new Long(source.NeedPhoneArriveNotice);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

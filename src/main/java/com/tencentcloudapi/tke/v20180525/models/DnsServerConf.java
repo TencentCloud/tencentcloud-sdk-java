@@ -68,6 +68,26 @@ public class DnsServerConf extends AbstractModel{
         this.DnsServers = DnsServers;
     }
 
+    public DnsServerConf() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DnsServerConf(DnsServerConf source) {
+        if (source.Domain != null) {
+            this.Domain = new String(source.Domain);
+        }
+        if (source.DnsServers != null) {
+            this.DnsServers = new String[source.DnsServers.length];
+            for (int i = 0; i < source.DnsServers.length; i++) {
+                this.DnsServers[i] = new String(source.DnsServers[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

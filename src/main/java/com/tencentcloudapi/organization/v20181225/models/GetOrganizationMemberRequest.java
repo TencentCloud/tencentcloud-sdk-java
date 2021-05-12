@@ -45,6 +45,20 @@ public class GetOrganizationMemberRequest extends AbstractModel{
         this.MemberUin = MemberUin;
     }
 
+    public GetOrganizationMemberRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GetOrganizationMemberRequest(GetOrganizationMemberRequest source) {
+        if (source.MemberUin != null) {
+            this.MemberUin = new Long(source.MemberUin);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -180,6 +180,35 @@ success  操作成功。
         this.UpdatedOn = UpdatedOn;
     }
 
+    public DomainBatchDetailSet() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DomainBatchDetailSet(DomainBatchDetailSet source) {
+        if (source.Id != null) {
+            this.Id = new Long(source.Id);
+        }
+        if (source.Domain != null) {
+            this.Domain = new String(source.Domain);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.Reason != null) {
+            this.Reason = new String(source.Reason);
+        }
+        if (source.CreatedOn != null) {
+            this.CreatedOn = new String(source.CreatedOn);
+        }
+        if (source.UpdatedOn != null) {
+            this.UpdatedOn = new String(source.UpdatedOn);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

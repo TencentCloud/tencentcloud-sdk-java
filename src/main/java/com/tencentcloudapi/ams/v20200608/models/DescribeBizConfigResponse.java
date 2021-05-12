@@ -193,6 +193,41 @@ public class DescribeBizConfigResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeBizConfigResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeBizConfigResponse(DescribeBizConfigResponse source) {
+        if (source.BizType != null) {
+            this.BizType = new String(source.BizType);
+        }
+        if (source.BizName != null) {
+            this.BizName = new String(source.BizName);
+        }
+        if (source.ModerationCategories != null) {
+            this.ModerationCategories = new String[source.ModerationCategories.length];
+            for (int i = 0; i < source.ModerationCategories.length; i++) {
+                this.ModerationCategories[i] = new String(source.ModerationCategories[i]);
+            }
+        }
+        if (source.MediaModeration != null) {
+            this.MediaModeration = new MediaModerationConfig(source.MediaModeration);
+        }
+        if (source.CreatedAt != null) {
+            this.CreatedAt = new String(source.CreatedAt);
+        }
+        if (source.UpdatedAt != null) {
+            this.UpdatedAt = new String(source.UpdatedAt);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

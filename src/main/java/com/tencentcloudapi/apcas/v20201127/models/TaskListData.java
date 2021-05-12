@@ -114,6 +114,32 @@ public class TaskListData extends AbstractModel{
         this.TaskList = TaskList;
     }
 
+    public TaskListData() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TaskListData(TaskListData source) {
+        if (source.PageNumber != null) {
+            this.PageNumber = new Long(source.PageNumber);
+        }
+        if (source.PageSize != null) {
+            this.PageSize = new Long(source.PageSize);
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.TaskList != null) {
+            this.TaskList = new ListModel[source.TaskList.length];
+            for (int i = 0; i < source.TaskList.length; i++) {
+                this.TaskList[i] = new ListModel(source.TaskList[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

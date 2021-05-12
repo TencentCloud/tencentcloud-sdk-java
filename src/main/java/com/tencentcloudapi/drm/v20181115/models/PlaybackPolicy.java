@@ -68,6 +68,23 @@ public class PlaybackPolicy extends AbstractModel{
         this.PlaybackDurationSeconds = PlaybackDurationSeconds;
     }
 
+    public PlaybackPolicy() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PlaybackPolicy(PlaybackPolicy source) {
+        if (source.LicenseDurationSeconds != null) {
+            this.LicenseDurationSeconds = new Long(source.LicenseDurationSeconds);
+        }
+        if (source.PlaybackDurationSeconds != null) {
+            this.PlaybackDurationSeconds = new Long(source.PlaybackDurationSeconds);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

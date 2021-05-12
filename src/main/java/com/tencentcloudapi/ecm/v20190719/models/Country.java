@@ -68,6 +68,23 @@ public class Country extends AbstractModel{
         this.CountryName = CountryName;
     }
 
+    public Country() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Country(Country source) {
+        if (source.CountryId != null) {
+            this.CountryId = new String(source.CountryId);
+        }
+        if (source.CountryName != null) {
+            this.CountryName = new String(source.CountryName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

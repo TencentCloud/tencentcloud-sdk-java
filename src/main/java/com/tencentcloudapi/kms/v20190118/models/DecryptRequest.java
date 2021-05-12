@@ -68,6 +68,23 @@ public class DecryptRequest extends AbstractModel{
         this.EncryptionContext = EncryptionContext;
     }
 
+    public DecryptRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DecryptRequest(DecryptRequest source) {
+        if (source.CiphertextBlob != null) {
+            this.CiphertextBlob = new String(source.CiphertextBlob);
+        }
+        if (source.EncryptionContext != null) {
+            this.EncryptionContext = new String(source.EncryptionContext);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

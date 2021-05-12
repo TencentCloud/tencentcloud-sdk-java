@@ -124,6 +124,29 @@ public class MsApiArray extends AbstractModel{
         this.Status = Status;
     }
 
+    public MsApiArray() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MsApiArray(MsApiArray source) {
+        if (source.Path != null) {
+            this.Path = new String(source.Path);
+        }
+        if (source.Method != null) {
+            this.Method = new String(source.Method);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

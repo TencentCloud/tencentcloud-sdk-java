@@ -137,6 +137,32 @@ public class DescribeCustomRulesRequest extends AbstractModel{
         this.Search = Search;
     }
 
+    public DescribeCustomRulesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeCustomRulesRequest(DescribeCustomRulesRequest source) {
+        if (source.Domain != null) {
+            this.Domain = new String(source.Domain);
+        }
+        if (source.Paging != null) {
+            this.Paging = new DescribeCustomRulesPagingInfo(source.Paging);
+        }
+        if (source.Edition != null) {
+            this.Edition = new String(source.Edition);
+        }
+        if (source.ActionType != null) {
+            this.ActionType = new String(source.ActionType);
+        }
+        if (source.Search != null) {
+            this.Search = new String(source.Search);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -387,6 +387,62 @@ public class MaliciousRequest extends AbstractModel{
         this.Pid = Pid;
     }
 
+    public MaliciousRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MaliciousRequest(MaliciousRequest source) {
+        if (source.Id != null) {
+            this.Id = new Long(source.Id);
+        }
+        if (source.Uuid != null) {
+            this.Uuid = new String(source.Uuid);
+        }
+        if (source.MachineIp != null) {
+            this.MachineIp = new String(source.MachineIp);
+        }
+        if (source.MachineName != null) {
+            this.MachineName = new String(source.MachineName);
+        }
+        if (source.Domain != null) {
+            this.Domain = new String(source.Domain);
+        }
+        if (source.Count != null) {
+            this.Count = new Long(source.Count);
+        }
+        if (source.ProcessName != null) {
+            this.ProcessName = new String(source.ProcessName);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.Reference != null) {
+            this.Reference = new String(source.Reference);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.MergeTime != null) {
+            this.MergeTime = new String(source.MergeTime);
+        }
+        if (source.ProcessMd5 != null) {
+            this.ProcessMd5 = new String(source.ProcessMd5);
+        }
+        if (source.CmdLine != null) {
+            this.CmdLine = new String(source.CmdLine);
+        }
+        if (source.Pid != null) {
+            this.Pid = new Long(source.Pid);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

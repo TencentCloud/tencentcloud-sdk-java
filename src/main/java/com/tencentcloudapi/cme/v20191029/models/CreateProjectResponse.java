@@ -96,6 +96,29 @@ public class CreateProjectResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public CreateProjectResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateProjectResponse(CreateProjectResponse source) {
+        if (source.ProjectId != null) {
+            this.ProjectId = new String(source.ProjectId);
+        }
+        if (source.RtmpPushInputInfoSet != null) {
+            this.RtmpPushInputInfoSet = new RtmpPushInputInfo[source.RtmpPushInputInfoSet.length];
+            for (int i = 0; i < source.RtmpPushInputInfoSet.length; i++) {
+                this.RtmpPushInputInfoSet[i] = new RtmpPushInputInfo(source.RtmpPushInputInfoSet[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

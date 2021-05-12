@@ -241,6 +241,41 @@ public class ModifyMigrateJobRequest extends AbstractModel{
         this.DatabaseInfo = DatabaseInfo;
     }
 
+    public ModifyMigrateJobRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyMigrateJobRequest(ModifyMigrateJobRequest source) {
+        if (source.JobId != null) {
+            this.JobId = new String(source.JobId);
+        }
+        if (source.JobName != null) {
+            this.JobName = new String(source.JobName);
+        }
+        if (source.MigrateOption != null) {
+            this.MigrateOption = new MigrateOption(source.MigrateOption);
+        }
+        if (source.SrcAccessType != null) {
+            this.SrcAccessType = new String(source.SrcAccessType);
+        }
+        if (source.SrcInfo != null) {
+            this.SrcInfo = new SrcInfo(source.SrcInfo);
+        }
+        if (source.DstAccessType != null) {
+            this.DstAccessType = new String(source.DstAccessType);
+        }
+        if (source.DstInfo != null) {
+            this.DstInfo = new DstInfo(source.DstInfo);
+        }
+        if (source.DatabaseInfo != null) {
+            this.DatabaseInfo = new String(source.DatabaseInfo);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

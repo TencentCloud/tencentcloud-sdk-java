@@ -45,6 +45,20 @@ public class RepoIsExistResp extends AbstractModel{
         this.IsExist = IsExist;
     }
 
+    public RepoIsExistResp() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RepoIsExistResp(RepoIsExistResp source) {
+        if (source.IsExist != null) {
+            this.IsExist = new Boolean(source.IsExist);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

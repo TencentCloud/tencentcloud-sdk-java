@@ -68,6 +68,26 @@ public class VideoEditTemplateMaterial extends AbstractModel{
         this.SlotSet = SlotSet;
     }
 
+    public VideoEditTemplateMaterial() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public VideoEditTemplateMaterial(VideoEditTemplateMaterial source) {
+        if (source.AspectRatio != null) {
+            this.AspectRatio = new String(source.AspectRatio);
+        }
+        if (source.SlotSet != null) {
+            this.SlotSet = new SlotInfo[source.SlotSet.length];
+            for (int i = 0; i < source.SlotSet.length; i++) {
+                this.SlotSet[i] = new SlotInfo(source.SlotSet[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

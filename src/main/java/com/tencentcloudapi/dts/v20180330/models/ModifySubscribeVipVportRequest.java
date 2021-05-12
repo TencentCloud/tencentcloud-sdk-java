@@ -114,6 +114,29 @@ public class ModifySubscribeVipVportRequest extends AbstractModel{
         this.DstPort = DstPort;
     }
 
+    public ModifySubscribeVipVportRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifySubscribeVipVportRequest(ModifySubscribeVipVportRequest source) {
+        if (source.SubscribeId != null) {
+            this.SubscribeId = new String(source.SubscribeId);
+        }
+        if (source.DstUniqSubnetId != null) {
+            this.DstUniqSubnetId = new String(source.DstUniqSubnetId);
+        }
+        if (source.DstIp != null) {
+            this.DstIp = new String(source.DstIp);
+        }
+        if (source.DstPort != null) {
+            this.DstPort = new Long(source.DstPort);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

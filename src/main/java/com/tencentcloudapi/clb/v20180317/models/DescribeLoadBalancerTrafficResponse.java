@@ -73,6 +73,26 @@ public class DescribeLoadBalancerTrafficResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeLoadBalancerTrafficResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeLoadBalancerTrafficResponse(DescribeLoadBalancerTrafficResponse source) {
+        if (source.LoadBalancerTraffic != null) {
+            this.LoadBalancerTraffic = new LoadBalancerTraffic[source.LoadBalancerTraffic.length];
+            for (int i = 0; i < source.LoadBalancerTraffic.length; i++) {
+                this.LoadBalancerTraffic[i] = new LoadBalancerTraffic(source.LoadBalancerTraffic[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

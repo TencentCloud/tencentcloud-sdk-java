@@ -108,6 +108,23 @@ public class CHPResponse extends AbstractModel{
         this.TagCount = TagCount;
     }
 
+    public CHPResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CHPResponse(CHPResponse source) {
+        if (source.TagType != null) {
+            this.TagType = new Long(source.TagType);
+        }
+        if (source.TagCount != null) {
+            this.TagCount = new Long(source.TagCount);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

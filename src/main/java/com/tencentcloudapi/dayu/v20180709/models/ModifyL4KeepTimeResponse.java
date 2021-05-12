@@ -68,6 +68,23 @@ public class ModifyL4KeepTimeResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public ModifyL4KeepTimeResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyL4KeepTimeResponse(ModifyL4KeepTimeResponse source) {
+        if (source.Success != null) {
+            this.Success = new SuccessCode(source.Success);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

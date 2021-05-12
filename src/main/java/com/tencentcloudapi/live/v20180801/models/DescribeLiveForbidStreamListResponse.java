@@ -160,6 +160,38 @@ public class DescribeLiveForbidStreamListResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeLiveForbidStreamListResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeLiveForbidStreamListResponse(DescribeLiveForbidStreamListResponse source) {
+        if (source.TotalNum != null) {
+            this.TotalNum = new Long(source.TotalNum);
+        }
+        if (source.TotalPage != null) {
+            this.TotalPage = new Long(source.TotalPage);
+        }
+        if (source.PageNum != null) {
+            this.PageNum = new Long(source.PageNum);
+        }
+        if (source.PageSize != null) {
+            this.PageSize = new Long(source.PageSize);
+        }
+        if (source.ForbidStreamList != null) {
+            this.ForbidStreamList = new ForbidStreamInfo[source.ForbidStreamList.length];
+            for (int i = 0; i < source.ForbidStreamList.length; i++) {
+                this.ForbidStreamList[i] = new ForbidStreamInfo(source.ForbidStreamList[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

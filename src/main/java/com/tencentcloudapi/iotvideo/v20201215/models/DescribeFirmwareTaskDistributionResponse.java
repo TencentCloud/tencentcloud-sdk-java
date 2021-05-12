@@ -68,6 +68,26 @@ public class DescribeFirmwareTaskDistributionResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeFirmwareTaskDistributionResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeFirmwareTaskDistributionResponse(DescribeFirmwareTaskDistributionResponse source) {
+        if (source.StatusInfos != null) {
+            this.StatusInfos = new StatusStatistic[source.StatusInfos.length];
+            for (int i = 0; i < source.StatusInfos.length; i++) {
+                this.StatusInfos[i] = new StatusStatistic(source.StatusInfos[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

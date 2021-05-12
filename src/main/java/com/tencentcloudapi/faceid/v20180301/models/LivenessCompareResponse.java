@@ -170,6 +170,38 @@ public class LivenessCompareResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public LivenessCompareResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public LivenessCompareResponse(LivenessCompareResponse source) {
+        if (source.BestFrameBase64 != null) {
+            this.BestFrameBase64 = new String(source.BestFrameBase64);
+        }
+        if (source.Sim != null) {
+            this.Sim = new Float(source.Sim);
+        }
+        if (source.Result != null) {
+            this.Result = new String(source.Result);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.BestFrameList != null) {
+            this.BestFrameList = new String[source.BestFrameList.length];
+            for (int i = 0; i < source.BestFrameList.length; i++) {
+                this.BestFrameList[i] = new String(source.BestFrameList[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

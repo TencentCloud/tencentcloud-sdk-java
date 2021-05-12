@@ -114,6 +114,29 @@ public class LiveStreamTaskNotifyConfig extends AbstractModel{
         this.TopicName = TopicName;
     }
 
+    public LiveStreamTaskNotifyConfig() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public LiveStreamTaskNotifyConfig(LiveStreamTaskNotifyConfig source) {
+        if (source.CmqModel != null) {
+            this.CmqModel = new String(source.CmqModel);
+        }
+        if (source.CmqRegion != null) {
+            this.CmqRegion = new String(source.CmqRegion);
+        }
+        if (source.QueueName != null) {
+            this.QueueName = new String(source.QueueName);
+        }
+        if (source.TopicName != null) {
+            this.TopicName = new String(source.TopicName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

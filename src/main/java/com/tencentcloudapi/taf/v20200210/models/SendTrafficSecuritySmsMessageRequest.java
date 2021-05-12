@@ -45,6 +45,20 @@ public class SendTrafficSecuritySmsMessageRequest extends AbstractModel{
         this.BspData = BspData;
     }
 
+    public SendTrafficSecuritySmsMessageRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SendTrafficSecuritySmsMessageRequest(SendTrafficSecuritySmsMessageRequest source) {
+        if (source.BspData != null) {
+            this.BspData = new InputSendTrafficSecuritySmsMsg(source.BspData);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

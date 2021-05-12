@@ -574,6 +574,89 @@ public class QueryDevAndRiskRequest extends AbstractModel{
         this.SerialId = SerialId;
     }
 
+    public QueryDevAndRiskRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public QueryDevAndRiskRequest(QueryDevAndRiskRequest source) {
+        if (source.DevType != null) {
+            this.DevType = new Long(source.DevType);
+        }
+        if (source.Imei != null) {
+            this.Imei = new String(source.Imei);
+        }
+        if (source.Mac != null) {
+            this.Mac = new String(source.Mac);
+        }
+        if (source.Aid != null) {
+            this.Aid = new String(source.Aid);
+        }
+        if (source.Cid != null) {
+            this.Cid = new String(source.Cid);
+        }
+        if (source.Imsi != null) {
+            this.Imsi = new String(source.Imsi);
+        }
+        if (source.Df != null) {
+            this.Df = new String(source.Df);
+        }
+        if (source.KernelVer != null) {
+            this.KernelVer = new String(source.KernelVer);
+        }
+        if (source.Storage != null) {
+            this.Storage = new String(source.Storage);
+        }
+        if (source.Dfp != null) {
+            this.Dfp = new String(source.Dfp);
+        }
+        if (source.BootTime != null) {
+            this.BootTime = new String(source.BootTime);
+        }
+        if (source.Resolution != null) {
+            this.Resolution = new String(source.Resolution);
+        }
+        if (source.RingList != null) {
+            this.RingList = new String(source.RingList);
+        }
+        if (source.FontList != null) {
+            this.FontList = new String(source.FontList);
+        }
+        if (source.SensorList != null) {
+            this.SensorList = new String(source.SensorList);
+        }
+        if (source.CpuType != null) {
+            this.CpuType = new String(source.CpuType);
+        }
+        if (source.Battery != null) {
+            this.Battery = new String(source.Battery);
+        }
+        if (source.Oaid != null) {
+            this.Oaid = new String(source.Oaid);
+        }
+        if (source.Idfa != null) {
+            this.Idfa = new String(source.Idfa);
+        }
+        if (source.Idfv != null) {
+            this.Idfv = new String(source.Idfv);
+        }
+        if (source.DeviceName != null) {
+            this.DeviceName = new String(source.DeviceName);
+        }
+        if (source.IphoneModel != null) {
+            this.IphoneModel = new String(source.IphoneModel);
+        }
+        if (source.Fingerprint != null) {
+            this.Fingerprint = new String(source.Fingerprint);
+        }
+        if (source.SerialId != null) {
+            this.SerialId = new String(source.SerialId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

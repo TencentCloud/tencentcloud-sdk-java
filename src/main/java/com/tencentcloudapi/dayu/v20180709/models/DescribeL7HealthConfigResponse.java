@@ -68,6 +68,26 @@ public class DescribeL7HealthConfigResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeL7HealthConfigResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeL7HealthConfigResponse(DescribeL7HealthConfigResponse source) {
+        if (source.HealthConfig != null) {
+            this.HealthConfig = new L7HealthConfig[source.HealthConfig.length];
+            for (int i = 0; i < source.HealthConfig.length; i++) {
+                this.HealthConfig[i] = new L7HealthConfig(source.HealthConfig[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

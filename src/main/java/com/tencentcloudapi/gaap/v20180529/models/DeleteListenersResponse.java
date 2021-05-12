@@ -114,6 +114,38 @@ public class DeleteListenersResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DeleteListenersResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteListenersResponse(DeleteListenersResponse source) {
+        if (source.OperationFailedListenerSet != null) {
+            this.OperationFailedListenerSet = new String[source.OperationFailedListenerSet.length];
+            for (int i = 0; i < source.OperationFailedListenerSet.length; i++) {
+                this.OperationFailedListenerSet[i] = new String(source.OperationFailedListenerSet[i]);
+            }
+        }
+        if (source.OperationSucceedListenerSet != null) {
+            this.OperationSucceedListenerSet = new String[source.OperationSucceedListenerSet.length];
+            for (int i = 0; i < source.OperationSucceedListenerSet.length; i++) {
+                this.OperationSucceedListenerSet[i] = new String(source.OperationSucceedListenerSet[i]);
+            }
+        }
+        if (source.InvalidStatusListenerSet != null) {
+            this.InvalidStatusListenerSet = new String[source.InvalidStatusListenerSet.length];
+            for (int i = 0; i < source.InvalidStatusListenerSet.length; i++) {
+                this.InvalidStatusListenerSet[i] = new String(source.InvalidStatusListenerSet[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -257,6 +257,47 @@ public class ModifyRuleRequest extends AbstractModel{
         this.TrpcFunc = TrpcFunc;
     }
 
+    public ModifyRuleRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyRuleRequest(ModifyRuleRequest source) {
+        if (source.LoadBalancerId != null) {
+            this.LoadBalancerId = new String(source.LoadBalancerId);
+        }
+        if (source.ListenerId != null) {
+            this.ListenerId = new String(source.ListenerId);
+        }
+        if (source.LocationId != null) {
+            this.LocationId = new String(source.LocationId);
+        }
+        if (source.Url != null) {
+            this.Url = new String(source.Url);
+        }
+        if (source.HealthCheck != null) {
+            this.HealthCheck = new HealthCheck(source.HealthCheck);
+        }
+        if (source.Scheduler != null) {
+            this.Scheduler = new String(source.Scheduler);
+        }
+        if (source.SessionExpireTime != null) {
+            this.SessionExpireTime = new Long(source.SessionExpireTime);
+        }
+        if (source.ForwardType != null) {
+            this.ForwardType = new String(source.ForwardType);
+        }
+        if (source.TrpcCallee != null) {
+            this.TrpcCallee = new String(source.TrpcCallee);
+        }
+        if (source.TrpcFunc != null) {
+            this.TrpcFunc = new String(source.TrpcFunc);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

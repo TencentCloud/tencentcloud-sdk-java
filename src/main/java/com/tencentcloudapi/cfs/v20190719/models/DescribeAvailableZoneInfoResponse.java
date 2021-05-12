@@ -68,6 +68,26 @@ public class DescribeAvailableZoneInfoResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeAvailableZoneInfoResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeAvailableZoneInfoResponse(DescribeAvailableZoneInfoResponse source) {
+        if (source.RegionZones != null) {
+            this.RegionZones = new AvailableRegion[source.RegionZones.length];
+            for (int i = 0; i < source.RegionZones.length; i++) {
+                this.RegionZones[i] = new AvailableRegion(source.RegionZones[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

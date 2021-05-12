@@ -160,6 +160,38 @@ public class DescribeStorageDataResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeStorageDataResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeStorageDataResponse(DescribeStorageDataResponse source) {
+        if (source.MediaCount != null) {
+            this.MediaCount = new Long(source.MediaCount);
+        }
+        if (source.TotalStorage != null) {
+            this.TotalStorage = new Long(source.TotalStorage);
+        }
+        if (source.InfrequentStorage != null) {
+            this.InfrequentStorage = new Long(source.InfrequentStorage);
+        }
+        if (source.StandardStorage != null) {
+            this.StandardStorage = new Long(source.StandardStorage);
+        }
+        if (source.StorageStat != null) {
+            this.StorageStat = new StorageStatData[source.StorageStat.length];
+            for (int i = 0; i < source.StorageStat.length; i++) {
+                this.StorageStat[i] = new StorageStatData(source.StorageStat[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

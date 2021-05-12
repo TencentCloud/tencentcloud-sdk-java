@@ -275,6 +275,53 @@ public class DeviceClassPartitionInfo extends AbstractModel{
         this.DeviceDiskSizeInfoSet = DeviceDiskSizeInfoSet;
     }
 
+    public DeviceClassPartitionInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeviceClassPartitionInfo(DeviceClassPartitionInfo source) {
+        if (source.RaidId != null) {
+            this.RaidId = new Long(source.RaidId);
+        }
+        if (source.Raid != null) {
+            this.Raid = new String(source.Raid);
+        }
+        if (source.RaidDisplay != null) {
+            this.RaidDisplay = new String(source.RaidDisplay);
+        }
+        if (source.SystemDiskSize != null) {
+            this.SystemDiskSize = new Long(source.SystemDiskSize);
+        }
+        if (source.SysRootSpace != null) {
+            this.SysRootSpace = new Long(source.SysRootSpace);
+        }
+        if (source.SysSwaporuefiSpace != null) {
+            this.SysSwaporuefiSpace = new Long(source.SysSwaporuefiSpace);
+        }
+        if (source.SysUsrlocalSpace != null) {
+            this.SysUsrlocalSpace = new Long(source.SysUsrlocalSpace);
+        }
+        if (source.SysDataSpace != null) {
+            this.SysDataSpace = new Long(source.SysDataSpace);
+        }
+        if (source.SysIsUefiType != null) {
+            this.SysIsUefiType = new Long(source.SysIsUefiType);
+        }
+        if (source.DataDiskSize != null) {
+            this.DataDiskSize = new Long(source.DataDiskSize);
+        }
+        if (source.DeviceDiskSizeInfoSet != null) {
+            this.DeviceDiskSizeInfoSet = new DeviceDiskSizeInfo[source.DeviceDiskSizeInfoSet.length];
+            for (int i = 0; i < source.DeviceDiskSizeInfoSet.length; i++) {
+                this.DeviceDiskSizeInfoSet[i] = new DeviceDiskSizeInfo(source.DeviceDiskSizeInfoSet[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

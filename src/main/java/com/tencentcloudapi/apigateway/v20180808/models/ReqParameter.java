@@ -160,6 +160,35 @@ public class ReqParameter extends AbstractModel{
         this.Desc = Desc;
     }
 
+    public ReqParameter() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ReqParameter(ReqParameter source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Position != null) {
+            this.Position = new String(source.Position);
+        }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.DefaultValue != null) {
+            this.DefaultValue = new String(source.DefaultValue);
+        }
+        if (source.Required != null) {
+            this.Required = new Boolean(source.Required);
+        }
+        if (source.Desc != null) {
+            this.Desc = new String(source.Desc);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -321,6 +321,56 @@ public class UpdateCaptchaAppIdInfoRequest extends AbstractModel{
         this.TrafficThreshold = TrafficThreshold;
     }
 
+    public UpdateCaptchaAppIdInfoRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UpdateCaptchaAppIdInfoRequest(UpdateCaptchaAppIdInfoRequest source) {
+        if (source.CaptchaAppId != null) {
+            this.CaptchaAppId = new Long(source.CaptchaAppId);
+        }
+        if (source.AppName != null) {
+            this.AppName = new String(source.AppName);
+        }
+        if (source.DomainLimit != null) {
+            this.DomainLimit = new String(source.DomainLimit);
+        }
+        if (source.SceneType != null) {
+            this.SceneType = new Long(source.SceneType);
+        }
+        if (source.CapType != null) {
+            this.CapType = new Long(source.CapType);
+        }
+        if (source.EvilInterceptGrade != null) {
+            this.EvilInterceptGrade = new Long(source.EvilInterceptGrade);
+        }
+        if (source.SmartVerify != null) {
+            this.SmartVerify = new Long(source.SmartVerify);
+        }
+        if (source.SmartEngine != null) {
+            this.SmartEngine = new Long(source.SmartEngine);
+        }
+        if (source.SchemeColor != null) {
+            this.SchemeColor = new String(source.SchemeColor);
+        }
+        if (source.CaptchaLanguage != null) {
+            this.CaptchaLanguage = new Long(source.CaptchaLanguage);
+        }
+        if (source.MailAlarm != null) {
+            this.MailAlarm = new String(source.MailAlarm);
+        }
+        if (source.TopFullScreen != null) {
+            this.TopFullScreen = new Long(source.TopFullScreen);
+        }
+        if (source.TrafficThreshold != null) {
+            this.TrafficThreshold = new Long(source.TrafficThreshold);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

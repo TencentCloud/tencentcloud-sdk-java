@@ -206,6 +206,41 @@ public class ClusterInstanceDetail extends AbstractModel{
         this.InstanceStorage = InstanceStorage;
     }
 
+    public ClusterInstanceDetail() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ClusterInstanceDetail(ClusterInstanceDetail source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.InstanceName != null) {
+            this.InstanceName = new String(source.InstanceName);
+        }
+        if (source.InstanceType != null) {
+            this.InstanceType = new String(source.InstanceType);
+        }
+        if (source.InstanceStatus != null) {
+            this.InstanceStatus = new String(source.InstanceStatus);
+        }
+        if (source.InstanceStatusDesc != null) {
+            this.InstanceStatusDesc = new String(source.InstanceStatusDesc);
+        }
+        if (source.InstanceCpu != null) {
+            this.InstanceCpu = new Long(source.InstanceCpu);
+        }
+        if (source.InstanceMemory != null) {
+            this.InstanceMemory = new Long(source.InstanceMemory);
+        }
+        if (source.InstanceStorage != null) {
+            this.InstanceStorage = new Long(source.InstanceStorage);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

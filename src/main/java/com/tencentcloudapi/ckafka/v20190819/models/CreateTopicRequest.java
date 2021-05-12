@@ -298,6 +298,56 @@ public class CreateTopicRequest extends AbstractModel{
         this.SegmentMs = SegmentMs;
     }
 
+    public CreateTopicRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateTopicRequest(CreateTopicRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.TopicName != null) {
+            this.TopicName = new String(source.TopicName);
+        }
+        if (source.PartitionNum != null) {
+            this.PartitionNum = new Long(source.PartitionNum);
+        }
+        if (source.ReplicaNum != null) {
+            this.ReplicaNum = new Long(source.ReplicaNum);
+        }
+        if (source.EnableWhiteList != null) {
+            this.EnableWhiteList = new Long(source.EnableWhiteList);
+        }
+        if (source.IpWhiteList != null) {
+            this.IpWhiteList = new String[source.IpWhiteList.length];
+            for (int i = 0; i < source.IpWhiteList.length; i++) {
+                this.IpWhiteList[i] = new String(source.IpWhiteList[i]);
+            }
+        }
+        if (source.CleanUpPolicy != null) {
+            this.CleanUpPolicy = new String(source.CleanUpPolicy);
+        }
+        if (source.Note != null) {
+            this.Note = new String(source.Note);
+        }
+        if (source.MinInsyncReplicas != null) {
+            this.MinInsyncReplicas = new Long(source.MinInsyncReplicas);
+        }
+        if (source.UncleanLeaderElectionEnable != null) {
+            this.UncleanLeaderElectionEnable = new Long(source.UncleanLeaderElectionEnable);
+        }
+        if (source.RetentionMs != null) {
+            this.RetentionMs = new Long(source.RetentionMs);
+        }
+        if (source.SegmentMs != null) {
+            this.SegmentMs = new Long(source.SegmentMs);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

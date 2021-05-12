@@ -129,6 +129,32 @@ public class DescribeWorkflowsRequest extends AbstractModel{
         this.Limit = Limit;
     }
 
+    public DescribeWorkflowsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeWorkflowsRequest(DescribeWorkflowsRequest source) {
+        if (source.WorkflowIds != null) {
+            this.WorkflowIds = new Long[source.WorkflowIds.length];
+            for (int i = 0; i < source.WorkflowIds.length; i++) {
+                this.WorkflowIds[i] = new Long(source.WorkflowIds[i]);
+            }
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

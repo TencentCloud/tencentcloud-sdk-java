@@ -446,6 +446,98 @@ public class DescribeAlarmHistoriesRequest extends AbstractModel{
         this.PolicyIds = PolicyIds;
     }
 
+    public DescribeAlarmHistoriesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeAlarmHistoriesRequest(DescribeAlarmHistoriesRequest source) {
+        if (source.Module != null) {
+            this.Module = new String(source.Module);
+        }
+        if (source.PageNumber != null) {
+            this.PageNumber = new Long(source.PageNumber);
+        }
+        if (source.PageSize != null) {
+            this.PageSize = new Long(source.PageSize);
+        }
+        if (source.Order != null) {
+            this.Order = new String(source.Order);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new Long(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new Long(source.EndTime);
+        }
+        if (source.MonitorTypes != null) {
+            this.MonitorTypes = new String[source.MonitorTypes.length];
+            for (int i = 0; i < source.MonitorTypes.length; i++) {
+                this.MonitorTypes[i] = new String(source.MonitorTypes[i]);
+            }
+        }
+        if (source.AlarmObject != null) {
+            this.AlarmObject = new String(source.AlarmObject);
+        }
+        if (source.AlarmStatus != null) {
+            this.AlarmStatus = new String[source.AlarmStatus.length];
+            for (int i = 0; i < source.AlarmStatus.length; i++) {
+                this.AlarmStatus[i] = new String(source.AlarmStatus[i]);
+            }
+        }
+        if (source.ProjectIds != null) {
+            this.ProjectIds = new Long[source.ProjectIds.length];
+            for (int i = 0; i < source.ProjectIds.length; i++) {
+                this.ProjectIds[i] = new Long(source.ProjectIds[i]);
+            }
+        }
+        if (source.InstanceGroupIds != null) {
+            this.InstanceGroupIds = new Long[source.InstanceGroupIds.length];
+            for (int i = 0; i < source.InstanceGroupIds.length; i++) {
+                this.InstanceGroupIds[i] = new Long(source.InstanceGroupIds[i]);
+            }
+        }
+        if (source.Namespaces != null) {
+            this.Namespaces = new MonitorTypeNamespace[source.Namespaces.length];
+            for (int i = 0; i < source.Namespaces.length; i++) {
+                this.Namespaces[i] = new MonitorTypeNamespace(source.Namespaces[i]);
+            }
+        }
+        if (source.MetricNames != null) {
+            this.MetricNames = new String[source.MetricNames.length];
+            for (int i = 0; i < source.MetricNames.length; i++) {
+                this.MetricNames[i] = new String(source.MetricNames[i]);
+            }
+        }
+        if (source.PolicyName != null) {
+            this.PolicyName = new String(source.PolicyName);
+        }
+        if (source.Content != null) {
+            this.Content = new String(source.Content);
+        }
+        if (source.ReceiverUids != null) {
+            this.ReceiverUids = new Long[source.ReceiverUids.length];
+            for (int i = 0; i < source.ReceiverUids.length; i++) {
+                this.ReceiverUids[i] = new Long(source.ReceiverUids[i]);
+            }
+        }
+        if (source.ReceiverGroups != null) {
+            this.ReceiverGroups = new Long[source.ReceiverGroups.length];
+            for (int i = 0; i < source.ReceiverGroups.length; i++) {
+                this.ReceiverGroups[i] = new Long(source.ReceiverGroups[i]);
+            }
+        }
+        if (source.PolicyIds != null) {
+            this.PolicyIds = new String[source.PolicyIds.length];
+            for (int i = 0; i < source.PolicyIds.length; i++) {
+                this.PolicyIds[i] = new String(source.PolicyIds[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

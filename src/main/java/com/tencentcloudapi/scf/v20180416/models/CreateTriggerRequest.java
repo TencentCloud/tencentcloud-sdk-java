@@ -206,6 +206,41 @@ public class CreateTriggerRequest extends AbstractModel{
         this.CustomArgument = CustomArgument;
     }
 
+    public CreateTriggerRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateTriggerRequest(CreateTriggerRequest source) {
+        if (source.FunctionName != null) {
+            this.FunctionName = new String(source.FunctionName);
+        }
+        if (source.TriggerName != null) {
+            this.TriggerName = new String(source.TriggerName);
+        }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.TriggerDesc != null) {
+            this.TriggerDesc = new String(source.TriggerDesc);
+        }
+        if (source.Namespace != null) {
+            this.Namespace = new String(source.Namespace);
+        }
+        if (source.Qualifier != null) {
+            this.Qualifier = new String(source.Qualifier);
+        }
+        if (source.Enable != null) {
+            this.Enable = new String(source.Enable);
+        }
+        if (source.CustomArgument != null) {
+            this.CustomArgument = new String(source.CustomArgument);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

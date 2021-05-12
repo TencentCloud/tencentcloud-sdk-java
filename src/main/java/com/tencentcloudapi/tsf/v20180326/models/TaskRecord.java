@@ -537,6 +537,83 @@ public class TaskRecord extends AbstractModel{
         this.TaskArgument = TaskArgument;
     }
 
+    public TaskRecord() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TaskRecord(TaskRecord source) {
+        if (source.TaskName != null) {
+            this.TaskName = new String(source.TaskName);
+        }
+        if (source.TaskType != null) {
+            this.TaskType = new String(source.TaskType);
+        }
+        if (source.ExecuteType != null) {
+            this.ExecuteType = new String(source.ExecuteType);
+        }
+        if (source.TaskContent != null) {
+            this.TaskContent = new String(source.TaskContent);
+        }
+        if (source.GroupId != null) {
+            this.GroupId = new String(source.GroupId);
+        }
+        if (source.TimeOut != null) {
+            this.TimeOut = new Long(source.TimeOut);
+        }
+        if (source.RetryCount != null) {
+            this.RetryCount = new Long(source.RetryCount);
+        }
+        if (source.RetryInterval != null) {
+            this.RetryInterval = new Long(source.RetryInterval);
+        }
+        if (source.TaskRule != null) {
+            this.TaskRule = new TaskRule(source.TaskRule);
+        }
+        if (source.TaskState != null) {
+            this.TaskState = new String(source.TaskState);
+        }
+        if (source.TaskId != null) {
+            this.TaskId = new String(source.TaskId);
+        }
+        if (source.SuccessOperator != null) {
+            this.SuccessOperator = new String(source.SuccessOperator);
+        }
+        if (source.SuccessRatio != null) {
+            this.SuccessRatio = new Long(source.SuccessRatio);
+        }
+        if (source.ShardCount != null) {
+            this.ShardCount = new Long(source.ShardCount);
+        }
+        if (source.AdvanceSettings != null) {
+            this.AdvanceSettings = new AdvanceSettings(source.AdvanceSettings);
+        }
+        if (source.ShardArguments != null) {
+            this.ShardArguments = new ShardArgument[source.ShardArguments.length];
+            for (int i = 0; i < source.ShardArguments.length; i++) {
+                this.ShardArguments[i] = new ShardArgument(source.ShardArguments[i]);
+            }
+        }
+        if (source.BelongFlowIds != null) {
+            this.BelongFlowIds = new String[source.BelongFlowIds.length];
+            for (int i = 0; i < source.BelongFlowIds.length; i++) {
+                this.BelongFlowIds[i] = new String(source.BelongFlowIds[i]);
+            }
+        }
+        if (source.TaskLogId != null) {
+            this.TaskLogId = new String(source.TaskLogId);
+        }
+        if (source.TriggerType != null) {
+            this.TriggerType = new String(source.TriggerType);
+        }
+        if (source.TaskArgument != null) {
+            this.TaskArgument = new String(source.TaskArgument);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

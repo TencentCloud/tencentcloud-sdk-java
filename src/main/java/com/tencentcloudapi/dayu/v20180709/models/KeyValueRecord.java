@@ -45,6 +45,23 @@ public class KeyValueRecord extends AbstractModel{
         this.Record = Record;
     }
 
+    public KeyValueRecord() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public KeyValueRecord(KeyValueRecord source) {
+        if (source.Record != null) {
+            this.Record = new KeyValue[source.Record.length];
+            for (int i = 0; i < source.Record.length; i++) {
+                this.Record[i] = new KeyValue(source.Record[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

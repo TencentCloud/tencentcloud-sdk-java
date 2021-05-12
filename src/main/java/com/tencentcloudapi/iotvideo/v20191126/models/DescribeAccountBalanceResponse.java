@@ -157,6 +157,32 @@ public class DescribeAccountBalanceResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeAccountBalanceResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeAccountBalanceResponse(DescribeAccountBalanceResponse source) {
+        if (source.AccountType != null) {
+            this.AccountType = new Long(source.AccountType);
+        }
+        if (source.Balance != null) {
+            this.Balance = new Long(source.Balance);
+        }
+        if (source.State != null) {
+            this.State = new Long(source.State);
+        }
+        if (source.LastUpdateTime != null) {
+            this.LastUpdateTime = new Long(source.LastUpdateTime);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -387,6 +387,62 @@ public class Registry extends AbstractModel{
         this.RenewFlag = RenewFlag;
     }
 
+    public Registry() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Registry(Registry source) {
+        if (source.RegistryId != null) {
+            this.RegistryId = new String(source.RegistryId);
+        }
+        if (source.RegistryName != null) {
+            this.RegistryName = new String(source.RegistryName);
+        }
+        if (source.RegistryType != null) {
+            this.RegistryType = new String(source.RegistryType);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.PublicDomain != null) {
+            this.PublicDomain = new String(source.PublicDomain);
+        }
+        if (source.CreatedAt != null) {
+            this.CreatedAt = new String(source.CreatedAt);
+        }
+        if (source.RegionName != null) {
+            this.RegionName = new String(source.RegionName);
+        }
+        if (source.RegionId != null) {
+            this.RegionId = new Long(source.RegionId);
+        }
+        if (source.EnableAnonymous != null) {
+            this.EnableAnonymous = new Boolean(source.EnableAnonymous);
+        }
+        if (source.TokenValidTime != null) {
+            this.TokenValidTime = new Long(source.TokenValidTime);
+        }
+        if (source.InternalEndpoint != null) {
+            this.InternalEndpoint = new String(source.InternalEndpoint);
+        }
+        if (source.TagSpecification != null) {
+            this.TagSpecification = new TagSpecification(source.TagSpecification);
+        }
+        if (source.ExpiredAt != null) {
+            this.ExpiredAt = new String(source.ExpiredAt);
+        }
+        if (source.PayMod != null) {
+            this.PayMod = new Long(source.PayMod);
+        }
+        if (source.RenewFlag != null) {
+            this.RenewFlag = new Long(source.RenewFlag);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

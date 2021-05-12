@@ -165,6 +165,38 @@ public class PrometheusAlertRule extends AbstractModel{
         this.Describe = Describe;
     }
 
+    public PrometheusAlertRule() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PrometheusAlertRule(PrometheusAlertRule source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Rule != null) {
+            this.Rule = new String(source.Rule);
+        }
+        if (source.Labels != null) {
+            this.Labels = new Label[source.Labels.length];
+            for (int i = 0; i < source.Labels.length; i++) {
+                this.Labels[i] = new Label(source.Labels[i]);
+            }
+        }
+        if (source.Template != null) {
+            this.Template = new String(source.Template);
+        }
+        if (source.For != null) {
+            this.For = new String(source.For);
+        }
+        if (source.Describe != null) {
+            this.Describe = new String(source.Describe);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

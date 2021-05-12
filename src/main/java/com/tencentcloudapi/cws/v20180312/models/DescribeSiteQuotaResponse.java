@@ -114,6 +114,29 @@ public class DescribeSiteQuotaResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeSiteQuotaResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeSiteQuotaResponse(DescribeSiteQuotaResponse source) {
+        if (source.Total != null) {
+            this.Total = new Long(source.Total);
+        }
+        if (source.Used != null) {
+            this.Used = new Long(source.Used);
+        }
+        if (source.Available != null) {
+            this.Available = new Long(source.Available);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

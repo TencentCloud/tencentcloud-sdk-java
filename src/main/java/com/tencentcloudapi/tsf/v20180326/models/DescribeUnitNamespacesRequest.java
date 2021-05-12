@@ -114,6 +114,29 @@ public class DescribeUnitNamespacesRequest extends AbstractModel{
         this.Limit = Limit;
     }
 
+    public DescribeUnitNamespacesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeUnitNamespacesRequest(DescribeUnitNamespacesRequest source) {
+        if (source.GatewayInstanceId != null) {
+            this.GatewayInstanceId = new String(source.GatewayInstanceId);
+        }
+        if (source.SearchWord != null) {
+            this.SearchWord = new String(source.SearchWord);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

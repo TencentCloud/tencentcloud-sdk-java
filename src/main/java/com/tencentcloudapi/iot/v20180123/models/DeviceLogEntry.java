@@ -160,6 +160,35 @@ public class DeviceLogEntry extends AbstractModel{
         this.Method = Method;
     }
 
+    public DeviceLogEntry() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeviceLogEntry(DeviceLogEntry source) {
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
+        if (source.Msg != null) {
+            this.Msg = new String(source.Msg);
+        }
+        if (source.Code != null) {
+            this.Code = new String(source.Code);
+        }
+        if (source.Timestamp != null) {
+            this.Timestamp = new Long(source.Timestamp);
+        }
+        if (source.DeviceName != null) {
+            this.DeviceName = new String(source.DeviceName);
+        }
+        if (source.Method != null) {
+            this.Method = new String(source.Method);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -124,6 +124,29 @@ Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
         this.Optional = Optional;
     }
 
+    public ImageRecognitionRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ImageRecognitionRequest(ImageRecognitionRequest source) {
+        if (source.IdCard != null) {
+            this.IdCard = new String(source.IdCard);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.ImageBase64 != null) {
+            this.ImageBase64 = new String(source.ImageBase64);
+        }
+        if (source.Optional != null) {
+            this.Optional = new String(source.Optional);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

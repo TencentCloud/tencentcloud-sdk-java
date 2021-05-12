@@ -68,6 +68,23 @@ public class CertificateAliasInfo extends AbstractModel{
         this.CertificateAlias = CertificateAlias;
     }
 
+    public CertificateAliasInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CertificateAliasInfo(CertificateAliasInfo source) {
+        if (source.CertificateId != null) {
+            this.CertificateId = new String(source.CertificateId);
+        }
+        if (source.CertificateAlias != null) {
+            this.CertificateAlias = new String(source.CertificateAlias);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

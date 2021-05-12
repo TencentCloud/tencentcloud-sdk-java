@@ -230,6 +230,35 @@ public class ImageTranslateRequest extends AbstractModel{
         this.ProjectId = ProjectId;
     }
 
+    public ImageTranslateRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ImageTranslateRequest(ImageTranslateRequest source) {
+        if (source.SessionUuid != null) {
+            this.SessionUuid = new String(source.SessionUuid);
+        }
+        if (source.Scene != null) {
+            this.Scene = new String(source.Scene);
+        }
+        if (source.Data != null) {
+            this.Data = new String(source.Data);
+        }
+        if (source.Source != null) {
+            this.Source = new String(source.Source);
+        }
+        if (source.Target != null) {
+            this.Target = new String(source.Target);
+        }
+        if (source.ProjectId != null) {
+            this.ProjectId = new Long(source.ProjectId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

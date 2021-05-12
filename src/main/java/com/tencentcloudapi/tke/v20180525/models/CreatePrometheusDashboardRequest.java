@@ -96,6 +96,29 @@ public class CreatePrometheusDashboardRequest extends AbstractModel{
         this.Contents = Contents;
     }
 
+    public CreatePrometheusDashboardRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreatePrometheusDashboardRequest(CreatePrometheusDashboardRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.DashboardName != null) {
+            this.DashboardName = new String(source.DashboardName);
+        }
+        if (source.Contents != null) {
+            this.Contents = new String[source.Contents.length];
+            for (int i = 0; i < source.Contents.length; i++) {
+                this.Contents[i] = new String(source.Contents[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

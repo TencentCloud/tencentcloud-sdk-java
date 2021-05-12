@@ -183,6 +183,41 @@ public class ModifyLaneRuleRequest extends AbstractModel{
         this.Enable = Enable;
     }
 
+    public ModifyLaneRuleRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyLaneRuleRequest(ModifyLaneRuleRequest source) {
+        if (source.RuleId != null) {
+            this.RuleId = new String(source.RuleId);
+        }
+        if (source.RuleName != null) {
+            this.RuleName = new String(source.RuleName);
+        }
+        if (source.Remark != null) {
+            this.Remark = new String(source.Remark);
+        }
+        if (source.RuleTagList != null) {
+            this.RuleTagList = new LaneRuleTag[source.RuleTagList.length];
+            for (int i = 0; i < source.RuleTagList.length; i++) {
+                this.RuleTagList[i] = new LaneRuleTag(source.RuleTagList[i]);
+            }
+        }
+        if (source.RuleTagRelationship != null) {
+            this.RuleTagRelationship = new String(source.RuleTagRelationship);
+        }
+        if (source.LaneId != null) {
+            this.LaneId = new String(source.LaneId);
+        }
+        if (source.Enable != null) {
+            this.Enable = new Boolean(source.Enable);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -91,6 +91,26 @@ public class SetServerWeightRequest extends AbstractModel{
         this.Weight = Weight;
     }
 
+    public SetServerWeightRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SetServerWeightRequest(SetServerWeightRequest source) {
+        if (source.FleetId != null) {
+            this.FleetId = new String(source.FleetId);
+        }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.Weight != null) {
+            this.Weight = new Long(source.Weight);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

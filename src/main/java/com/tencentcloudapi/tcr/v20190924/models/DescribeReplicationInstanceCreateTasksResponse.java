@@ -91,6 +91,29 @@ public class DescribeReplicationInstanceCreateTasksResponse extends AbstractMode
         this.RequestId = RequestId;
     }
 
+    public DescribeReplicationInstanceCreateTasksResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeReplicationInstanceCreateTasksResponse(DescribeReplicationInstanceCreateTasksResponse source) {
+        if (source.TaskDetail != null) {
+            this.TaskDetail = new TaskDetail[source.TaskDetail.length];
+            for (int i = 0; i < source.TaskDetail.length; i++) {
+                this.TaskDetail[i] = new TaskDetail(source.TaskDetail[i]);
+            }
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

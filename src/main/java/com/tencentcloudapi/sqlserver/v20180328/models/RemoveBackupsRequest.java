@@ -68,6 +68,26 @@ public class RemoveBackupsRequest extends AbstractModel{
         this.BackupNames = BackupNames;
     }
 
+    public RemoveBackupsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RemoveBackupsRequest(RemoveBackupsRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.BackupNames != null) {
+            this.BackupNames = new String[source.BackupNames.length];
+            for (int i = 0; i < source.BackupNames.length; i++) {
+                this.BackupNames[i] = new String(source.BackupNames[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

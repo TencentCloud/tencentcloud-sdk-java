@@ -68,6 +68,26 @@ public class LightStandard extends AbstractModel{
         this.Range = Range;
     }
 
+    public LightStandard() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public LightStandard(LightStandard source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Range != null) {
+            this.Range = new Float[source.Range.length];
+            for (int i = 0; i < source.Range.length; i++) {
+                this.Range[i] = new Float(source.Range[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

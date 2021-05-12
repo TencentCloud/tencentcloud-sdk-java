@@ -597,6 +597,92 @@ public class InputTaBspData extends AbstractModel{
         this.Context = Context;
     }
 
+    public InputTaBspData() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public InputTaBspData(InputTaBspData source) {
+        if (source.Seq != null) {
+            this.Seq = new Long(source.Seq);
+        }
+        if (source.OsType != null) {
+            this.OsType = new String(source.OsType);
+        }
+        if (source.AgeFloor != null) {
+            this.AgeFloor = new Long(source.AgeFloor);
+        }
+        if (source.AgeCeil != null) {
+            this.AgeCeil = new Long(source.AgeCeil);
+        }
+        if (source.Gender != null) {
+            this.Gender = new Long(source.Gender);
+        }
+        if (source.UserTime != null) {
+            this.UserTime = new Long(source.UserTime);
+        }
+        if (source.Imei != null) {
+            this.Imei = new String(source.Imei);
+        }
+        if (source.ImeiMd5 != null) {
+            this.ImeiMd5 = new String(source.ImeiMd5);
+        }
+        if (source.Idfa != null) {
+            this.Idfa = new String(source.Idfa);
+        }
+        if (source.IdfaMd5 != null) {
+            this.IdfaMd5 = new String(source.IdfaMd5);
+        }
+        if (source.UserIp != null) {
+            this.UserIp = new String(source.UserIp);
+        }
+        if (source.Mac != null) {
+            this.Mac = new String(source.Mac);
+        }
+        if (source.PhoneNum != null) {
+            this.PhoneNum = new String(source.PhoneNum);
+        }
+        if (source.UserAgent != null) {
+            this.UserAgent = new String(source.UserAgent);
+        }
+        if (source.App != null) {
+            this.App = new String(source.App);
+        }
+        if (source.Package != null) {
+            this.Package = new String(source.Package);
+        }
+        if (source.DeviceMaker != null) {
+            this.DeviceMaker = new String(source.DeviceMaker);
+        }
+        if (source.DeviceModule != null) {
+            this.DeviceModule = new String(source.DeviceModule);
+        }
+        if (source.AccessMode != null) {
+            this.AccessMode = new String(source.AccessMode);
+        }
+        if (source.Sp != null) {
+            this.Sp = new String(source.Sp);
+        }
+        if (source.Url != null) {
+            this.Url = new String(source.Url);
+        }
+        if (source.Location != null) {
+            this.Location = new String(source.Location);
+        }
+        if (source.Latitude != null) {
+            this.Latitude = new String(source.Latitude);
+        }
+        if (source.Longitude != null) {
+            this.Longitude = new String(source.Longitude);
+        }
+        if (source.Context != null) {
+            this.Context = new String(source.Context);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

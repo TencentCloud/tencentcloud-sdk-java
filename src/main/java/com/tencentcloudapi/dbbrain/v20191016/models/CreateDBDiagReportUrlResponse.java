@@ -91,6 +91,26 @@ public class CreateDBDiagReportUrlResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public CreateDBDiagReportUrlResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateDBDiagReportUrlResponse(CreateDBDiagReportUrlResponse source) {
+        if (source.ReportUrl != null) {
+            this.ReportUrl = new String(source.ReportUrl);
+        }
+        if (source.ExpireTime != null) {
+            this.ExpireTime = new Long(source.ExpireTime);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

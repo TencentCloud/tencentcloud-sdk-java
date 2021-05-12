@@ -137,6 +137,35 @@ public class CreateVpcRequest extends AbstractModel{
         this.EnableMonitoring = EnableMonitoring;
     }
 
+    public CreateVpcRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateVpcRequest(CreateVpcRequest source) {
+        if (source.VpcName != null) {
+            this.VpcName = new String(source.VpcName);
+        }
+        if (source.CidrBlock != null) {
+            this.CidrBlock = new String(source.CidrBlock);
+        }
+        if (source.Zone != null) {
+            this.Zone = new String(source.Zone);
+        }
+        if (source.SubnetSet != null) {
+            this.SubnetSet = new VpcSubnetCreateInfo[source.SubnetSet.length];
+            for (int i = 0; i < source.SubnetSet.length; i++) {
+                this.SubnetSet[i] = new VpcSubnetCreateInfo(source.SubnetSet[i]);
+            }
+        }
+        if (source.EnableMonitoring != null) {
+            this.EnableMonitoring = new Boolean(source.EnableMonitoring);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

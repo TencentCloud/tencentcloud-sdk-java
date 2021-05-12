@@ -114,6 +114,32 @@ public class DescribeMaintenanceSpanResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeMaintenanceSpanResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeMaintenanceSpanResponse(DescribeMaintenanceSpanResponse source) {
+        if (source.Weekly != null) {
+            this.Weekly = new Long[source.Weekly.length];
+            for (int i = 0; i < source.Weekly.length; i++) {
+                this.Weekly[i] = new Long(source.Weekly[i]);
+            }
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.Span != null) {
+            this.Span = new Long(source.Span);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

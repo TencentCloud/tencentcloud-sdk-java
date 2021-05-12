@@ -256,6 +256,41 @@ UTC格式时间，例如：2019-01-08T10:00:00Z。
         this.Status = Status;
     }
 
+    public PullStreamConfig() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PullStreamConfig(PullStreamConfig source) {
+        if (source.ConfigId != null) {
+            this.ConfigId = new String(source.ConfigId);
+        }
+        if (source.FromUrl != null) {
+            this.FromUrl = new String(source.FromUrl);
+        }
+        if (source.ToUrl != null) {
+            this.ToUrl = new String(source.ToUrl);
+        }
+        if (source.AreaName != null) {
+            this.AreaName = new String(source.AreaName);
+        }
+        if (source.IspName != null) {
+            this.IspName = new String(source.IspName);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

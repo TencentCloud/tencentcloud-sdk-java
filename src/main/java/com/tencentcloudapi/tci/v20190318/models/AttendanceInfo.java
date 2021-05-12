@@ -68,6 +68,23 @@ public class AttendanceInfo extends AbstractModel{
         this.PersonId = PersonId;
     }
 
+    public AttendanceInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AttendanceInfo(AttendanceInfo source) {
+        if (source.Face != null) {
+            this.Face = new FrameInfo(source.Face);
+        }
+        if (source.PersonId != null) {
+            this.PersonId = new String(source.PersonId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

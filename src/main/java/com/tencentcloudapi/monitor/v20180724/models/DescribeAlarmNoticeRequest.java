@@ -68,6 +68,23 @@ public class DescribeAlarmNoticeRequest extends AbstractModel{
         this.NoticeId = NoticeId;
     }
 
+    public DescribeAlarmNoticeRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeAlarmNoticeRequest(DescribeAlarmNoticeRequest source) {
+        if (source.Module != null) {
+            this.Module = new String(source.Module);
+        }
+        if (source.NoticeId != null) {
+            this.NoticeId = new String(source.NoticeId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

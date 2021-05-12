@@ -68,6 +68,23 @@ public class StatisticsItem extends AbstractModel{
         this.Data = Data;
     }
 
+    public StatisticsItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public StatisticsItem(StatisticsItem source) {
+        if (source.StatDate != null) {
+            this.StatDate = new String(source.StatDate);
+        }
+        if (source.Data != null) {
+            this.Data = new Long(source.Data);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

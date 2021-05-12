@@ -354,6 +354,29 @@ public class TopicRulePayload extends AbstractModel{
         this.RuleDisabled = RuleDisabled;
     }
 
+    public TopicRulePayload() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TopicRulePayload(TopicRulePayload source) {
+        if (source.Sql != null) {
+            this.Sql = new String(source.Sql);
+        }
+        if (source.Actions != null) {
+            this.Actions = new String(source.Actions);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.RuleDisabled != null) {
+            this.RuleDisabled = new Boolean(source.RuleDisabled);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

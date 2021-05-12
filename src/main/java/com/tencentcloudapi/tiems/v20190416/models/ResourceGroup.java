@@ -557,6 +557,80 @@ public class ResourceGroup extends AbstractModel{
         this.PayMode = PayMode;
     }
 
+    public ResourceGroup() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ResourceGroup(ResourceGroup source) {
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
+        if (source.Region != null) {
+            this.Region = new String(source.Region);
+        }
+        if (source.Cluster != null) {
+            this.Cluster = new String(source.Cluster);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.Created != null) {
+            this.Created = new String(source.Created);
+        }
+        if (source.Updated != null) {
+            this.Updated = new String(source.Updated);
+        }
+        if (source.InstanceCount != null) {
+            this.InstanceCount = new Long(source.InstanceCount);
+        }
+        if (source.ServiceCount != null) {
+            this.ServiceCount = new Long(source.ServiceCount);
+        }
+        if (source.JobCount != null) {
+            this.JobCount = new Long(source.JobCount);
+        }
+        if (source.Public != null) {
+            this.Public = new Boolean(source.Public);
+        }
+        if (source.InstanceType != null) {
+            this.InstanceType = new String(source.InstanceType);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.Gpu != null) {
+            this.Gpu = new Long(source.Gpu);
+        }
+        if (source.Cpu != null) {
+            this.Cpu = new Long(source.Cpu);
+        }
+        if (source.Memory != null) {
+            this.Memory = new Long(source.Memory);
+        }
+        if (source.Zone != null) {
+            this.Zone = new String(source.Zone);
+        }
+        if (source.GpuType != null) {
+            this.GpuType = new String[source.GpuType.length];
+            for (int i = 0; i < source.GpuType.length; i++) {
+                this.GpuType[i] = new String(source.GpuType[i]);
+            }
+        }
+        if (source.HasPrepaid != null) {
+            this.HasPrepaid = new Boolean(source.HasPrepaid);
+        }
+        if (source.PayMode != null) {
+            this.PayMode = new String(source.PayMode);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

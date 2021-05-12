@@ -229,6 +229,50 @@ public class LayoutParams extends AbstractModel{
         this.PureAudioHoldPlaceMode = PureAudioHoldPlaceMode;
     }
 
+    public LayoutParams() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public LayoutParams(LayoutParams source) {
+        if (source.Template != null) {
+            this.Template = new Long(source.Template);
+        }
+        if (source.MainVideoUserId != null) {
+            this.MainVideoUserId = new String(source.MainVideoUserId);
+        }
+        if (source.MainVideoStreamType != null) {
+            this.MainVideoStreamType = new Long(source.MainVideoStreamType);
+        }
+        if (source.SmallVideoLayoutParams != null) {
+            this.SmallVideoLayoutParams = new SmallVideoLayoutParams(source.SmallVideoLayoutParams);
+        }
+        if (source.MainVideoRightAlign != null) {
+            this.MainVideoRightAlign = new Long(source.MainVideoRightAlign);
+        }
+        if (source.MixVideoUids != null) {
+            this.MixVideoUids = new String[source.MixVideoUids.length];
+            for (int i = 0; i < source.MixVideoUids.length; i++) {
+                this.MixVideoUids[i] = new String(source.MixVideoUids[i]);
+            }
+        }
+        if (source.PresetLayoutConfig != null) {
+            this.PresetLayoutConfig = new PresetLayoutConfig[source.PresetLayoutConfig.length];
+            for (int i = 0; i < source.PresetLayoutConfig.length; i++) {
+                this.PresetLayoutConfig[i] = new PresetLayoutConfig(source.PresetLayoutConfig[i]);
+            }
+        }
+        if (source.PlaceHolderMode != null) {
+            this.PlaceHolderMode = new Long(source.PlaceHolderMode);
+        }
+        if (source.PureAudioHoldPlaceMode != null) {
+            this.PureAudioHoldPlaceMode = new Long(source.PureAudioHoldPlaceMode);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

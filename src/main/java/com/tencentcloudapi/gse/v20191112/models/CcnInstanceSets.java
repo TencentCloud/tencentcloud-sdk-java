@@ -162,6 +162,32 @@ public class CcnInstanceSets extends AbstractModel{
         this.State = State;
     }
 
+    public CcnInstanceSets() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CcnInstanceSets(CcnInstanceSets source) {
+        if (source.AccountId != null) {
+            this.AccountId = new String(source.AccountId);
+        }
+        if (source.CcnId != null) {
+            this.CcnId = new String(source.CcnId);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.InstanceName != null) {
+            this.InstanceName = new String(source.InstanceName);
+        }
+        if (source.State != null) {
+            this.State = new String(source.State);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

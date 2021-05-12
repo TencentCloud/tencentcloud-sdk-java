@@ -275,6 +275,50 @@ public class CreateEnterpriseAccountRequest extends AbstractModel{
         this.Email = Email;
     }
 
+    public CreateEnterpriseAccountRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateEnterpriseAccountRequest(CreateEnterpriseAccountRequest source) {
+        if (source.Module != null) {
+            this.Module = new String(source.Module);
+        }
+        if (source.Operation != null) {
+            this.Operation = new String(source.Operation);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.IdentType != null) {
+            this.IdentType = new Long(source.IdentType);
+        }
+        if (source.IdentNo != null) {
+            this.IdentNo = new String(source.IdentNo);
+        }
+        if (source.MobilePhone != null) {
+            this.MobilePhone = new String(source.MobilePhone);
+        }
+        if (source.TransactorName != null) {
+            this.TransactorName = new String(source.TransactorName);
+        }
+        if (source.TransactorIdentType != null) {
+            this.TransactorIdentType = new Long(source.TransactorIdentType);
+        }
+        if (source.TransactorIdentNo != null) {
+            this.TransactorIdentNo = new String(source.TransactorIdentNo);
+        }
+        if (source.TransactorPhone != null) {
+            this.TransactorPhone = new String(source.TransactorPhone);
+        }
+        if (source.Email != null) {
+            this.Email = new String(source.Email);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -574,6 +574,98 @@ public class CreateDDoSPolicyCaseRequest extends AbstractModel{
         this.UdpPortList = UdpPortList;
     }
 
+    public CreateDDoSPolicyCaseRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateDDoSPolicyCaseRequest(CreateDDoSPolicyCaseRequest source) {
+        if (source.Business != null) {
+            this.Business = new String(source.Business);
+        }
+        if (source.CaseName != null) {
+            this.CaseName = new String(source.CaseName);
+        }
+        if (source.PlatformTypes != null) {
+            this.PlatformTypes = new String[source.PlatformTypes.length];
+            for (int i = 0; i < source.PlatformTypes.length; i++) {
+                this.PlatformTypes[i] = new String(source.PlatformTypes[i]);
+            }
+        }
+        if (source.AppType != null) {
+            this.AppType = new String(source.AppType);
+        }
+        if (source.AppProtocols != null) {
+            this.AppProtocols = new String[source.AppProtocols.length];
+            for (int i = 0; i < source.AppProtocols.length; i++) {
+                this.AppProtocols[i] = new String(source.AppProtocols[i]);
+            }
+        }
+        if (source.TcpSportStart != null) {
+            this.TcpSportStart = new String(source.TcpSportStart);
+        }
+        if (source.TcpSportEnd != null) {
+            this.TcpSportEnd = new String(source.TcpSportEnd);
+        }
+        if (source.UdpSportStart != null) {
+            this.UdpSportStart = new String(source.UdpSportStart);
+        }
+        if (source.UdpSportEnd != null) {
+            this.UdpSportEnd = new String(source.UdpSportEnd);
+        }
+        if (source.HasAbroad != null) {
+            this.HasAbroad = new String(source.HasAbroad);
+        }
+        if (source.HasInitiateTcp != null) {
+            this.HasInitiateTcp = new String(source.HasInitiateTcp);
+        }
+        if (source.HasInitiateUdp != null) {
+            this.HasInitiateUdp = new String(source.HasInitiateUdp);
+        }
+        if (source.PeerTcpPort != null) {
+            this.PeerTcpPort = new String(source.PeerTcpPort);
+        }
+        if (source.PeerUdpPort != null) {
+            this.PeerUdpPort = new String(source.PeerUdpPort);
+        }
+        if (source.TcpFootprint != null) {
+            this.TcpFootprint = new String(source.TcpFootprint);
+        }
+        if (source.UdpFootprint != null) {
+            this.UdpFootprint = new String(source.UdpFootprint);
+        }
+        if (source.WebApiUrl != null) {
+            this.WebApiUrl = new String[source.WebApiUrl.length];
+            for (int i = 0; i < source.WebApiUrl.length; i++) {
+                this.WebApiUrl[i] = new String(source.WebApiUrl[i]);
+            }
+        }
+        if (source.MinTcpPackageLen != null) {
+            this.MinTcpPackageLen = new String(source.MinTcpPackageLen);
+        }
+        if (source.MaxTcpPackageLen != null) {
+            this.MaxTcpPackageLen = new String(source.MaxTcpPackageLen);
+        }
+        if (source.MinUdpPackageLen != null) {
+            this.MinUdpPackageLen = new String(source.MinUdpPackageLen);
+        }
+        if (source.MaxUdpPackageLen != null) {
+            this.MaxUdpPackageLen = new String(source.MaxUdpPackageLen);
+        }
+        if (source.HasVPN != null) {
+            this.HasVPN = new String(source.HasVPN);
+        }
+        if (source.TcpPortList != null) {
+            this.TcpPortList = new String(source.TcpPortList);
+        }
+        if (source.UdpPortList != null) {
+            this.UdpPortList = new String(source.UdpPortList);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

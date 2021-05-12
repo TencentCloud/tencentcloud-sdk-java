@@ -152,6 +152,32 @@ public class SendOnlineMsgRequest extends AbstractModel{
         this.MsgContent = MsgContent;
     }
 
+    public SendOnlineMsgRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SendOnlineMsgRequest(SendOnlineMsgRequest source) {
+        if (source.Tid != null) {
+            this.Tid = new String(source.Tid);
+        }
+        if (source.Wakeup != null) {
+            this.Wakeup = new Boolean(source.Wakeup);
+        }
+        if (source.WaitResp != null) {
+            this.WaitResp = new Long(source.WaitResp);
+        }
+        if (source.MsgTopic != null) {
+            this.MsgTopic = new String(source.MsgTopic);
+        }
+        if (source.MsgContent != null) {
+            this.MsgContent = new String(source.MsgContent);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

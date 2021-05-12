@@ -68,6 +68,26 @@ public class ModifyDBInstanceSecurityGroupsRequest extends AbstractModel{
         this.SecurityGroupIdSet = SecurityGroupIdSet;
     }
 
+    public ModifyDBInstanceSecurityGroupsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyDBInstanceSecurityGroupsRequest(ModifyDBInstanceSecurityGroupsRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.SecurityGroupIdSet != null) {
+            this.SecurityGroupIdSet = new String[source.SecurityGroupIdSet.length];
+            for (int i = 0; i < source.SecurityGroupIdSet.length; i++) {
+                this.SecurityGroupIdSet[i] = new String(source.SecurityGroupIdSet[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

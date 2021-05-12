@@ -68,6 +68,23 @@ public class DescribeAlarmEventsRequest extends AbstractModel{
         this.Namespace = Namespace;
     }
 
+    public DescribeAlarmEventsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeAlarmEventsRequest(DescribeAlarmEventsRequest source) {
+        if (source.Module != null) {
+            this.Module = new String(source.Module);
+        }
+        if (source.Namespace != null) {
+            this.Namespace = new String(source.Namespace);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

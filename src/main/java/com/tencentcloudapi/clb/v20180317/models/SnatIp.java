@@ -68,6 +68,23 @@ public class SnatIp extends AbstractModel{
         this.Ip = Ip;
     }
 
+    public SnatIp() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SnatIp(SnatIp source) {
+        if (source.SubnetId != null) {
+            this.SubnetId = new String(source.SubnetId);
+        }
+        if (source.Ip != null) {
+            this.Ip = new String(source.Ip);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

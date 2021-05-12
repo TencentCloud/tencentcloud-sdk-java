@@ -68,6 +68,26 @@ public class RegionMapRelation extends AbstractModel{
         this.SubRegionIdList = SubRegionIdList;
     }
 
+    public RegionMapRelation() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RegionMapRelation(RegionMapRelation source) {
+        if (source.RegionId != null) {
+            this.RegionId = new Long(source.RegionId);
+        }
+        if (source.SubRegionIdList != null) {
+            this.SubRegionIdList = new Long[source.SubRegionIdList.length];
+            for (int i = 0; i < source.SubRegionIdList.length; i++) {
+                this.SubRegionIdList[i] = new Long(source.SubRegionIdList[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

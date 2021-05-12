@@ -78,6 +78,23 @@ public class ErrlogItem extends AbstractModel{
         this.Content = Content;
     }
 
+    public ErrlogItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ErrlogItem(ErrlogItem source) {
+        if (source.Timestamp != null) {
+            this.Timestamp = new Long(source.Timestamp);
+        }
+        if (source.Content != null) {
+            this.Content = new String(source.Content);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

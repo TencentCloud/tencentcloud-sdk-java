@@ -91,6 +91,26 @@ public class ModifyFlowServiceResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public ModifyFlowServiceResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyFlowServiceResponse(ModifyFlowServiceResponse source) {
+        if (source.FlowServiceResource != null) {
+            this.FlowServiceResource = new String(source.FlowServiceResource);
+        }
+        if (source.UpdateDate != null) {
+            this.UpdateDate = new String(source.UpdateDate);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

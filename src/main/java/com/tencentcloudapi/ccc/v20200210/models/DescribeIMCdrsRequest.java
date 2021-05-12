@@ -183,6 +183,38 @@ public class DescribeIMCdrsRequest extends AbstractModel{
         this.Type = Type;
     }
 
+    public DescribeIMCdrsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeIMCdrsRequest(DescribeIMCdrsRequest source) {
+        if (source.StartTimestamp != null) {
+            this.StartTimestamp = new Long(source.StartTimestamp);
+        }
+        if (source.EndTimestamp != null) {
+            this.EndTimestamp = new Long(source.EndTimestamp);
+        }
+        if (source.InstanceId != null) {
+            this.InstanceId = new Long(source.InstanceId);
+        }
+        if (source.SdkAppId != null) {
+            this.SdkAppId = new Long(source.SdkAppId);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Type != null) {
+            this.Type = new Long(source.Type);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

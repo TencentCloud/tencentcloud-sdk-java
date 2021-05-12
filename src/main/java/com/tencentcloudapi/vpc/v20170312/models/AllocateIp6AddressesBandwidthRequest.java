@@ -114,6 +114,32 @@ public class AllocateIp6AddressesBandwidthRequest extends AbstractModel{
         this.BandwidthPackageId = BandwidthPackageId;
     }
 
+    public AllocateIp6AddressesBandwidthRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AllocateIp6AddressesBandwidthRequest(AllocateIp6AddressesBandwidthRequest source) {
+        if (source.Ip6Addresses != null) {
+            this.Ip6Addresses = new String[source.Ip6Addresses.length];
+            for (int i = 0; i < source.Ip6Addresses.length; i++) {
+                this.Ip6Addresses[i] = new String(source.Ip6Addresses[i]);
+            }
+        }
+        if (source.InternetMaxBandwidthOut != null) {
+            this.InternetMaxBandwidthOut = new Long(source.InternetMaxBandwidthOut);
+        }
+        if (source.InternetChargeType != null) {
+            this.InternetChargeType = new String(source.InternetChargeType);
+        }
+        if (source.BandwidthPackageId != null) {
+            this.BandwidthPackageId = new String(source.BandwidthPackageId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

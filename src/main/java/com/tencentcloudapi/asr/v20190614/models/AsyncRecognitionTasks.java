@@ -50,6 +50,23 @@ public class AsyncRecognitionTasks extends AbstractModel{
         this.Tasks = Tasks;
     }
 
+    public AsyncRecognitionTasks() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AsyncRecognitionTasks(AsyncRecognitionTasks source) {
+        if (source.Tasks != null) {
+            this.Tasks = new AsyncRecognitionTaskInfo[source.Tasks.length];
+            for (int i = 0; i < source.Tasks.length; i++) {
+                this.Tasks[i] = new AsyncRecognitionTaskInfo(source.Tasks[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

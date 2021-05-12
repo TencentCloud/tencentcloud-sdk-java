@@ -45,6 +45,20 @@ public class DescribeCfsRulesRequest extends AbstractModel{
         this.PGroupId = PGroupId;
     }
 
+    public DescribeCfsRulesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeCfsRulesRequest(DescribeCfsRulesRequest source) {
+        if (source.PGroupId != null) {
+            this.PGroupId = new String(source.PGroupId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

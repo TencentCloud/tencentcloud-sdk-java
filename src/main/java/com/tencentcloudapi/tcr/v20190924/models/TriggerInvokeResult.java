@@ -78,6 +78,23 @@ public class TriggerInvokeResult extends AbstractModel{
         this.ReturnMsg = ReturnMsg;
     }
 
+    public TriggerInvokeResult() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TriggerInvokeResult(TriggerInvokeResult source) {
+        if (source.ReturnCode != null) {
+            this.ReturnCode = new Long(source.ReturnCode);
+        }
+        if (source.ReturnMsg != null) {
+            this.ReturnMsg = new String(source.ReturnMsg);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

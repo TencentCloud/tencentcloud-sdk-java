@@ -91,6 +91,29 @@ public class GetBcosBlockListResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public GetBcosBlockListResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GetBcosBlockListResponse(GetBcosBlockListResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.List != null) {
+            this.List = new BcosBlockObj[source.List.length];
+            for (int i = 0; i < source.List.length; i++) {
+                this.List[i] = new BcosBlockObj(source.List[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

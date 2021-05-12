@@ -45,6 +45,23 @@ public class StarPortraitInfo extends AbstractModel{
         this.PortraitSet = PortraitSet;
     }
 
+    public StarPortraitInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public StarPortraitInfo(StarPortraitInfo source) {
+        if (source.PortraitSet != null) {
+            this.PortraitSet = new StarPortrait[source.PortraitSet.length];
+            for (int i = 0; i < source.PortraitSet.length; i++) {
+                this.PortraitSet[i] = new StarPortrait(source.PortraitSet[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

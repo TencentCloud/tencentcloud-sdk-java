@@ -101,6 +101,26 @@ public class DeviceModelData extends AbstractModel{
         this.IotModel = IotModel;
     }
 
+    public DeviceModelData() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeviceModelData(DeviceModelData source) {
+        if (source.Tid != null) {
+            this.Tid = new String(source.Tid);
+        }
+        if (source.Branch != null) {
+            this.Branch = new String(source.Branch);
+        }
+        if (source.IotModel != null) {
+            this.IotModel = new String(source.IotModel);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

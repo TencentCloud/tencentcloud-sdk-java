@@ -229,6 +229,44 @@ public class Ip6Rule extends AbstractModel{
         this.CreatedTime = CreatedTime;
     }
 
+    public Ip6Rule() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Ip6Rule(Ip6Rule source) {
+        if (source.Ip6RuleId != null) {
+            this.Ip6RuleId = new String(source.Ip6RuleId);
+        }
+        if (source.Ip6RuleName != null) {
+            this.Ip6RuleName = new String(source.Ip6RuleName);
+        }
+        if (source.Vip6 != null) {
+            this.Vip6 = new String(source.Vip6);
+        }
+        if (source.Vport6 != null) {
+            this.Vport6 = new Long(source.Vport6);
+        }
+        if (source.Protocol != null) {
+            this.Protocol = new String(source.Protocol);
+        }
+        if (source.Vip != null) {
+            this.Vip = new String(source.Vip);
+        }
+        if (source.Vport != null) {
+            this.Vport = new Long(source.Vport);
+        }
+        if (source.RuleStatus != null) {
+            this.RuleStatus = new String(source.RuleStatus);
+        }
+        if (source.CreatedTime != null) {
+            this.CreatedTime = new String(source.CreatedTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

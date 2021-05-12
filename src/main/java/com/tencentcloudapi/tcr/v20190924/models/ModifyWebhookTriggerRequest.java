@@ -91,6 +91,26 @@ public class ModifyWebhookTriggerRequest extends AbstractModel{
         this.Namespace = Namespace;
     }
 
+    public ModifyWebhookTriggerRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyWebhookTriggerRequest(ModifyWebhookTriggerRequest source) {
+        if (source.RegistryId != null) {
+            this.RegistryId = new String(source.RegistryId);
+        }
+        if (source.Trigger != null) {
+            this.Trigger = new WebhookTrigger(source.Trigger);
+        }
+        if (source.Namespace != null) {
+            this.Namespace = new String(source.Namespace);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

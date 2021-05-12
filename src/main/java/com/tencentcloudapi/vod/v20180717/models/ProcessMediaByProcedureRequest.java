@@ -206,6 +206,41 @@ public class ProcessMediaByProcedureRequest extends AbstractModel{
         this.SubAppId = SubAppId;
     }
 
+    public ProcessMediaByProcedureRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ProcessMediaByProcedureRequest(ProcessMediaByProcedureRequest source) {
+        if (source.FileId != null) {
+            this.FileId = new String(source.FileId);
+        }
+        if (source.ProcedureName != null) {
+            this.ProcedureName = new String(source.ProcedureName);
+        }
+        if (source.TasksPriority != null) {
+            this.TasksPriority = new Long(source.TasksPriority);
+        }
+        if (source.TasksNotifyMode != null) {
+            this.TasksNotifyMode = new String(source.TasksNotifyMode);
+        }
+        if (source.SessionContext != null) {
+            this.SessionContext = new String(source.SessionContext);
+        }
+        if (source.SessionId != null) {
+            this.SessionId = new String(source.SessionId);
+        }
+        if (source.ExtInfo != null) {
+            this.ExtInfo = new String(source.ExtInfo);
+        }
+        if (source.SubAppId != null) {
+            this.SubAppId = new Long(source.SubAppId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

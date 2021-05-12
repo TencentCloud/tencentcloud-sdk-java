@@ -68,6 +68,23 @@ public class SetOnlineRecordCallbackKeyRequest extends AbstractModel{
         this.CallbackKey = CallbackKey;
     }
 
+    public SetOnlineRecordCallbackKeyRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SetOnlineRecordCallbackKeyRequest(SetOnlineRecordCallbackKeyRequest source) {
+        if (source.SdkAppId != null) {
+            this.SdkAppId = new Long(source.SdkAppId);
+        }
+        if (source.CallbackKey != null) {
+            this.CallbackKey = new String(source.CallbackKey);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

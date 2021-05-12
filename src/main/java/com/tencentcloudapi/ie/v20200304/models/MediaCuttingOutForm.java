@@ -199,6 +199,29 @@ Gaussian：高斯模糊；
         this.SpriteColumnCount = SpriteColumnCount;
     }
 
+    public MediaCuttingOutForm() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MediaCuttingOutForm(MediaCuttingOutForm source) {
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.FillType != null) {
+            this.FillType = new String(source.FillType);
+        }
+        if (source.SpriteRowCount != null) {
+            this.SpriteRowCount = new Long(source.SpriteRowCount);
+        }
+        if (source.SpriteColumnCount != null) {
+            this.SpriteColumnCount = new Long(source.SpriteColumnCount);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

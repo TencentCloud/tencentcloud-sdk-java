@@ -114,6 +114,32 @@ public class DescribeFirewallRulesResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeFirewallRulesResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeFirewallRulesResponse(DescribeFirewallRulesResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.FirewallRuleSet != null) {
+            this.FirewallRuleSet = new FirewallRuleInfo[source.FirewallRuleSet.length];
+            for (int i = 0; i < source.FirewallRuleSet.length; i++) {
+                this.FirewallRuleSet[i] = new FirewallRuleInfo(source.FirewallRuleSet[i]);
+            }
+        }
+        if (source.FirewallVersion != null) {
+            this.FirewallVersion = new Long(source.FirewallVersion);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

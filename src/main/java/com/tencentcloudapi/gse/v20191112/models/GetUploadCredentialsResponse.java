@@ -114,6 +114,29 @@ public class GetUploadCredentialsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public GetUploadCredentialsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GetUploadCredentialsResponse(GetUploadCredentialsResponse source) {
+        if (source.BucketAuth != null) {
+            this.BucketAuth = new String(source.BucketAuth);
+        }
+        if (source.BucketName != null) {
+            this.BucketName = new String(source.BucketName);
+        }
+        if (source.AssetRegion != null) {
+            this.AssetRegion = new String(source.AssetRegion);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

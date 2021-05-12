@@ -68,6 +68,23 @@ public class SharePermission extends AbstractModel{
         this.AccountId = AccountId;
     }
 
+    public SharePermission() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SharePermission(SharePermission source) {
+        if (source.CreatedTime != null) {
+            this.CreatedTime = new String(source.CreatedTime);
+        }
+        if (source.AccountId != null) {
+            this.AccountId = new String(source.AccountId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -45,6 +45,20 @@ public class DeleteMigrationRequest extends AbstractModel{
         this.MigrateId = MigrateId;
     }
 
+    public DeleteMigrationRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteMigrationRequest(DeleteMigrationRequest source) {
+        if (source.MigrateId != null) {
+            this.MigrateId = new Long(source.MigrateId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

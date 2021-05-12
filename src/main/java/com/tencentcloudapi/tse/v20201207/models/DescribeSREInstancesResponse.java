@@ -91,6 +91,29 @@ public class DescribeSREInstancesResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeSREInstancesResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeSREInstancesResponse(DescribeSREInstancesResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.Content != null) {
+            this.Content = new SREInstance[source.Content.length];
+            for (int i = 0; i < source.Content.length; i++) {
+                this.Content[i] = new SREInstance(source.Content[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

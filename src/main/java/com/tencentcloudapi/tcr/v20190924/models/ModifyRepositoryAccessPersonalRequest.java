@@ -68,6 +68,23 @@ public class ModifyRepositoryAccessPersonalRequest extends AbstractModel{
         this.Public = Public;
     }
 
+    public ModifyRepositoryAccessPersonalRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyRepositoryAccessPersonalRequest(ModifyRepositoryAccessPersonalRequest source) {
+        if (source.RepoName != null) {
+            this.RepoName = new String(source.RepoName);
+        }
+        if (source.Public != null) {
+            this.Public = new Long(source.Public);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

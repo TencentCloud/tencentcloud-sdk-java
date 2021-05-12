@@ -78,6 +78,23 @@ public class DeadLetterSource extends AbstractModel{
         this.QueueName = QueueName;
     }
 
+    public DeadLetterSource() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeadLetterSource(DeadLetterSource source) {
+        if (source.QueueId != null) {
+            this.QueueId = new String(source.QueueId);
+        }
+        if (source.QueueName != null) {
+            this.QueueName = new String(source.QueueName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

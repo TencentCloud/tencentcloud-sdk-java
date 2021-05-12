@@ -91,6 +91,26 @@ public class CreateRoInstanceIpRequest extends AbstractModel{
         this.UniqVpcId = UniqVpcId;
     }
 
+    public CreateRoInstanceIpRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateRoInstanceIpRequest(CreateRoInstanceIpRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.UniqSubnetId != null) {
+            this.UniqSubnetId = new String(source.UniqSubnetId);
+        }
+        if (source.UniqVpcId != null) {
+            this.UniqVpcId = new String(source.UniqVpcId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

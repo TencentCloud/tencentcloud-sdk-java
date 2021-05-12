@@ -124,6 +124,35 @@ public class DescribeInstanceRenewNodesResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeInstanceRenewNodesResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeInstanceRenewNodesResponse(DescribeInstanceRenewNodesResponse source) {
+        if (source.TotalCnt != null) {
+            this.TotalCnt = new Long(source.TotalCnt);
+        }
+        if (source.NodeList != null) {
+            this.NodeList = new RenewInstancesInfo[source.NodeList.length];
+            for (int i = 0; i < source.NodeList.length; i++) {
+                this.NodeList[i] = new RenewInstancesInfo(source.NodeList[i]);
+            }
+        }
+        if (source.MetaInfo != null) {
+            this.MetaInfo = new String[source.MetaInfo.length];
+            for (int i = 0; i < source.MetaInfo.length; i++) {
+                this.MetaInfo[i] = new String(source.MetaInfo[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

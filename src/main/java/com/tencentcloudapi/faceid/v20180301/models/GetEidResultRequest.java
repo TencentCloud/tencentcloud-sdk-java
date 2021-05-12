@@ -101,6 +101,26 @@ public class GetEidResultRequest extends AbstractModel{
         this.BestFramesCount = BestFramesCount;
     }
 
+    public GetEidResultRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GetEidResultRequest(GetEidResultRequest source) {
+        if (source.EidToken != null) {
+            this.EidToken = new String(source.EidToken);
+        }
+        if (source.InfoType != null) {
+            this.InfoType = new String(source.InfoType);
+        }
+        if (source.BestFramesCount != null) {
+            this.BestFramesCount = new Long(source.BestFramesCount);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

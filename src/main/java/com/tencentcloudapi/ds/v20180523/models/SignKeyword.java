@@ -137,6 +137,32 @@ public class SignKeyword extends AbstractModel{
         this.ImageHeight = ImageHeight;
     }
 
+    public SignKeyword() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SignKeyword(SignKeyword source) {
+        if (source.Keyword != null) {
+            this.Keyword = new String(source.Keyword);
+        }
+        if (source.OffsetCoordX != null) {
+            this.OffsetCoordX = new String(source.OffsetCoordX);
+        }
+        if (source.OffsetCoordY != null) {
+            this.OffsetCoordY = new String(source.OffsetCoordY);
+        }
+        if (source.ImageWidth != null) {
+            this.ImageWidth = new String(source.ImageWidth);
+        }
+        if (source.ImageHeight != null) {
+            this.ImageHeight = new String(source.ImageHeight);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

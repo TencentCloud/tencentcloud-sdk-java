@@ -78,6 +78,26 @@ public class ServiceUsagePlanSet extends AbstractModel{
         this.ServiceUsagePlanList = ServiceUsagePlanList;
     }
 
+    public ServiceUsagePlanSet() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ServiceUsagePlanSet(ServiceUsagePlanSet source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.ServiceUsagePlanList != null) {
+            this.ServiceUsagePlanList = new ApiUsagePlan[source.ServiceUsagePlanList.length];
+            for (int i = 0; i < source.ServiceUsagePlanList.length; i++) {
+                this.ServiceUsagePlanList[i] = new ApiUsagePlan(source.ServiceUsagePlanList[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

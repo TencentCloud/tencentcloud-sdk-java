@@ -91,6 +91,26 @@ public class GetRealNameAuthTokenResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public GetRealNameAuthTokenResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GetRealNameAuthTokenResponse(GetRealNameAuthTokenResponse source) {
+        if (source.AuthToken != null) {
+            this.AuthToken = new String(source.AuthToken);
+        }
+        if (source.RedirectURL != null) {
+            this.RedirectURL = new String(source.RedirectURL);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

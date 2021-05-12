@@ -68,6 +68,23 @@ public class DeleteImagePersonalRequest extends AbstractModel{
         this.Tag = Tag;
     }
 
+    public DeleteImagePersonalRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteImagePersonalRequest(DeleteImagePersonalRequest source) {
+        if (source.RepoName != null) {
+            this.RepoName = new String(source.RepoName);
+        }
+        if (source.Tag != null) {
+            this.Tag = new String(source.Tag);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

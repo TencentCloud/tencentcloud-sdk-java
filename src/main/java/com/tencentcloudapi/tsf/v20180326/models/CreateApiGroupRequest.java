@@ -160,6 +160,35 @@ public class CreateApiGroupRequest extends AbstractModel{
         this.GatewayInstanceId = GatewayInstanceId;
     }
 
+    public CreateApiGroupRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateApiGroupRequest(CreateApiGroupRequest source) {
+        if (source.GroupName != null) {
+            this.GroupName = new String(source.GroupName);
+        }
+        if (source.GroupContext != null) {
+            this.GroupContext = new String(source.GroupContext);
+        }
+        if (source.AuthType != null) {
+            this.AuthType = new String(source.AuthType);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.GroupType != null) {
+            this.GroupType = new String(source.GroupType);
+        }
+        if (source.GatewayInstanceId != null) {
+            this.GatewayInstanceId = new String(source.GatewayInstanceId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

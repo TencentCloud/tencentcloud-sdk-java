@@ -91,6 +91,26 @@ public class TimeInfoResult extends AbstractModel{
         this.StartTs = StartTs;
     }
 
+    public TimeInfoResult() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TimeInfoResult(TimeInfoResult source) {
+        if (source.Duration != null) {
+            this.Duration = new Long(source.Duration);
+        }
+        if (source.EndTs != null) {
+            this.EndTs = new Long(source.EndTs);
+        }
+        if (source.StartTs != null) {
+            this.StartTs = new Long(source.StartTs);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

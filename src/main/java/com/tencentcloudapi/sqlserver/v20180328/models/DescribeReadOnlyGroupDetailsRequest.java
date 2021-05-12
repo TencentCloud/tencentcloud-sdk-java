@@ -68,6 +68,23 @@ public class DescribeReadOnlyGroupDetailsRequest extends AbstractModel{
         this.ReadOnlyGroupId = ReadOnlyGroupId;
     }
 
+    public DescribeReadOnlyGroupDetailsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeReadOnlyGroupDetailsRequest(DescribeReadOnlyGroupDetailsRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.ReadOnlyGroupId != null) {
+            this.ReadOnlyGroupId = new String(source.ReadOnlyGroupId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

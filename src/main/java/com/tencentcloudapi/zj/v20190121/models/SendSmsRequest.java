@@ -239,6 +239,50 @@ public class SendSmsRequest extends AbstractModel{
         this.Content = Content;
     }
 
+    public SendSmsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SendSmsRequest(SendSmsRequest source) {
+        if (source.License != null) {
+            this.License = new String(source.License);
+        }
+        if (source.Phone != null) {
+            this.Phone = new String[source.Phone.length];
+            for (int i = 0; i < source.Phone.length; i++) {
+                this.Phone[i] = new String(source.Phone[i]);
+            }
+        }
+        if (source.TemplateId != null) {
+            this.TemplateId = new String(source.TemplateId);
+        }
+        if (source.Params != null) {
+            this.Params = new String[source.Params.length];
+            for (int i = 0; i < source.Params.length; i++) {
+                this.Params[i] = new String(source.Params[i]);
+            }
+        }
+        if (source.Sign != null) {
+            this.Sign = new String(source.Sign);
+        }
+        if (source.SenderId != null) {
+            this.SenderId = new String(source.SenderId);
+        }
+        if (source.SmsType != null) {
+            this.SmsType = new Long(source.SmsType);
+        }
+        if (source.International != null) {
+            this.International = new Long(source.International);
+        }
+        if (source.Content != null) {
+            this.Content = new String(source.Content);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

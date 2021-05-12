@@ -91,6 +91,26 @@ public class CreateAlarmPolicyResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public CreateAlarmPolicyResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateAlarmPolicyResponse(CreateAlarmPolicyResponse source) {
+        if (source.PolicyId != null) {
+            this.PolicyId = new String(source.PolicyId);
+        }
+        if (source.OriginId != null) {
+            this.OriginId = new String(source.OriginId);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

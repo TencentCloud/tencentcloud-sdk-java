@@ -137,6 +137,32 @@ public class ContainerState extends AbstractModel{
         this.ExitCode = ExitCode;
     }
 
+    public ContainerState() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ContainerState(ContainerState source) {
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.State != null) {
+            this.State = new String(source.State);
+        }
+        if (source.Reason != null) {
+            this.Reason = new String(source.Reason);
+        }
+        if (source.FinishTime != null) {
+            this.FinishTime = new String(source.FinishTime);
+        }
+        if (source.ExitCode != null) {
+            this.ExitCode = new Long(source.ExitCode);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

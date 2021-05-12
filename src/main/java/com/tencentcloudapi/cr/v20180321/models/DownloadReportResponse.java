@@ -213,6 +213,38 @@ public class DownloadReportResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DownloadReportResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DownloadReportResponse(DownloadReportResponse source) {
+        if (source.DailyReportUrl != null) {
+            this.DailyReportUrl = new String(source.DailyReportUrl);
+        }
+        if (source.ResultReportUrl != null) {
+            this.ResultReportUrl = new String(source.ResultReportUrl);
+        }
+        if (source.DetailReportUrl != null) {
+            this.DetailReportUrl = new String(source.DetailReportUrl);
+        }
+        if (source.CallbackDailyReportUrl != null) {
+            this.CallbackDailyReportUrl = new String(source.CallbackDailyReportUrl);
+        }
+        if (source.CallbackResultReportUrl != null) {
+            this.CallbackResultReportUrl = new String(source.CallbackResultReportUrl);
+        }
+        if (source.CallbackDetailReportUrl != null) {
+            this.CallbackDetailReportUrl = new String(source.CallbackDetailReportUrl);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

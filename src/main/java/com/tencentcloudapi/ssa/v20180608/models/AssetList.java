@@ -68,6 +68,26 @@ public class AssetList extends AbstractModel{
         this.List = List;
     }
 
+    public AssetList() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AssetList(AssetList source) {
+        if (source.Total != null) {
+            this.Total = new Long(source.Total);
+        }
+        if (source.List != null) {
+            this.List = new Asset[source.List.length];
+            for (int i = 0; i < source.List.length; i++) {
+                this.List[i] = new Asset(source.List[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

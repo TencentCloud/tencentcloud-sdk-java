@@ -275,6 +275,50 @@ public class SitesVerification extends AbstractModel{
         this.VerifyFileUrl = VerifyFileUrl;
     }
 
+    public SitesVerification() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SitesVerification(SitesVerification source) {
+        if (source.Domain != null) {
+            this.Domain = new String(source.Domain);
+        }
+        if (source.TxtName != null) {
+            this.TxtName = new String(source.TxtName);
+        }
+        if (source.TxtText != null) {
+            this.TxtText = new String(source.TxtText);
+        }
+        if (source.ValidTo != null) {
+            this.ValidTo = new String(source.ValidTo);
+        }
+        if (source.VerifyStatus != null) {
+            this.VerifyStatus = new Long(source.VerifyStatus);
+        }
+        if (source.CreatedAt != null) {
+            this.CreatedAt = new String(source.CreatedAt);
+        }
+        if (source.UpdatedAt != null) {
+            this.UpdatedAt = new String(source.UpdatedAt);
+        }
+        if (source.Id != null) {
+            this.Id = new Long(source.Id);
+        }
+        if (source.Appid != null) {
+            this.Appid = new Long(source.Appid);
+        }
+        if (source.VerifyUrl != null) {
+            this.VerifyUrl = new String(source.VerifyUrl);
+        }
+        if (source.VerifyFileUrl != null) {
+            this.VerifyFileUrl = new String(source.VerifyFileUrl);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

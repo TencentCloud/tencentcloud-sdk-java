@@ -68,6 +68,23 @@ public class IntegerRange extends AbstractModel{
         this.UpperBound = UpperBound;
     }
 
+    public IntegerRange() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public IntegerRange(IntegerRange source) {
+        if (source.LowerBound != null) {
+            this.LowerBound = new Long(source.LowerBound);
+        }
+        if (source.UpperBound != null) {
+            this.UpperBound = new Long(source.UpperBound);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

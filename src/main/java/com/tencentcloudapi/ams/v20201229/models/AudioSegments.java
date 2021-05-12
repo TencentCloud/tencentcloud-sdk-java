@@ -88,6 +88,23 @@ public class AudioSegments extends AbstractModel{
         this.Result = Result;
     }
 
+    public AudioSegments() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AudioSegments(AudioSegments source) {
+        if (source.OffsetTime != null) {
+            this.OffsetTime = new String(source.OffsetTime);
+        }
+        if (source.Result != null) {
+            this.Result = new AudioResult(source.Result);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

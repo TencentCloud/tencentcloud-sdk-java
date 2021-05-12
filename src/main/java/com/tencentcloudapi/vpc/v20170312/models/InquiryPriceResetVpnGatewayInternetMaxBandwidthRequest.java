@@ -68,6 +68,23 @@ public class InquiryPriceResetVpnGatewayInternetMaxBandwidthRequest extends Abst
         this.InternetMaxBandwidthOut = InternetMaxBandwidthOut;
     }
 
+    public InquiryPriceResetVpnGatewayInternetMaxBandwidthRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public InquiryPriceResetVpnGatewayInternetMaxBandwidthRequest(InquiryPriceResetVpnGatewayInternetMaxBandwidthRequest source) {
+        if (source.VpnGatewayId != null) {
+            this.VpnGatewayId = new String(source.VpnGatewayId);
+        }
+        if (source.InternetMaxBandwidthOut != null) {
+            this.InternetMaxBandwidthOut = new Long(source.InternetMaxBandwidthOut);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

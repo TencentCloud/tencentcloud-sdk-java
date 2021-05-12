@@ -183,6 +183,38 @@ public class ShopInfo extends AbstractModel{
         this.CompanyName = CompanyName;
     }
 
+    public ShopInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ShopInfo(ShopInfo source) {
+        if (source.CompanyId != null) {
+            this.CompanyId = new String(source.CompanyId);
+        }
+        if (source.ShopId != null) {
+            this.ShopId = new Long(source.ShopId);
+        }
+        if (source.ShopName != null) {
+            this.ShopName = new String(source.ShopName);
+        }
+        if (source.ShopCode != null) {
+            this.ShopCode = new String(source.ShopCode);
+        }
+        if (source.Province != null) {
+            this.Province = new String(source.Province);
+        }
+        if (source.City != null) {
+            this.City = new String(source.City);
+        }
+        if (source.CompanyName != null) {
+            this.CompanyName = new String(source.CompanyName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

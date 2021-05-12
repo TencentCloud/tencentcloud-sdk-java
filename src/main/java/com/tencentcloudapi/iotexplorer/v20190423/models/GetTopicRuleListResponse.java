@@ -91,6 +91,29 @@ public class GetTopicRuleListResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public GetTopicRuleListResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GetTopicRuleListResponse(GetTopicRuleListResponse source) {
+        if (source.TotalCnt != null) {
+            this.TotalCnt = new Long(source.TotalCnt);
+        }
+        if (source.Rules != null) {
+            this.Rules = new TopicRuleInfo[source.Rules.length];
+            for (int i = 0; i < source.Rules.length; i++) {
+                this.Rules[i] = new TopicRuleInfo(source.Rules[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

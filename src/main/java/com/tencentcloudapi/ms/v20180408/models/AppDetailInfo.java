@@ -183,6 +183,38 @@ public class AppDetailInfo extends AbstractModel{
         this.FileName = FileName;
     }
 
+    public AppDetailInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AppDetailInfo(AppDetailInfo source) {
+        if (source.AppName != null) {
+            this.AppName = new String(source.AppName);
+        }
+        if (source.AppPkgName != null) {
+            this.AppPkgName = new String(source.AppPkgName);
+        }
+        if (source.AppVersion != null) {
+            this.AppVersion = new String(source.AppVersion);
+        }
+        if (source.AppSize != null) {
+            this.AppSize = new Long(source.AppSize);
+        }
+        if (source.AppMd5 != null) {
+            this.AppMd5 = new String(source.AppMd5);
+        }
+        if (source.AppIconUrl != null) {
+            this.AppIconUrl = new String(source.AppIconUrl);
+        }
+        if (source.FileName != null) {
+            this.FileName = new String(source.FileName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

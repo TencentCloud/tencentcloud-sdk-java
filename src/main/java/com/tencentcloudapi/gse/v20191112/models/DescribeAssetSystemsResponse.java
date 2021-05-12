@@ -68,6 +68,26 @@ public class DescribeAssetSystemsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeAssetSystemsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeAssetSystemsResponse(DescribeAssetSystemsResponse source) {
+        if (source.AssetSupportSys != null) {
+            this.AssetSupportSys = new AssetSupportSys[source.AssetSupportSys.length];
+            for (int i = 0; i < source.AssetSupportSys.length; i++) {
+                this.AssetSupportSys[i] = new AssetSupportSys(source.AssetSupportSys[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -96,6 +96,29 @@ public class DescribeBillResourceSummaryResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeBillResourceSummaryResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeBillResourceSummaryResponse(DescribeBillResourceSummaryResponse source) {
+        if (source.ResourceSummarySet != null) {
+            this.ResourceSummarySet = new BillResourceSummary[source.ResourceSummarySet.length];
+            for (int i = 0; i < source.ResourceSummarySet.length; i++) {
+                this.ResourceSummarySet[i] = new BillResourceSummary(source.ResourceSummarySet[i]);
+            }
+        }
+        if (source.Total != null) {
+            this.Total = new Long(source.Total);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

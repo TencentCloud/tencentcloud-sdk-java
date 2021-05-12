@@ -160,6 +160,35 @@ public class CreateVpcPeerConnectionRequest extends AbstractModel{
         this.Bandwidth = Bandwidth;
     }
 
+    public CreateVpcPeerConnectionRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateVpcPeerConnectionRequest(CreateVpcPeerConnectionRequest source) {
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.PeerVpcId != null) {
+            this.PeerVpcId = new String(source.PeerVpcId);
+        }
+        if (source.PeerRegion != null) {
+            this.PeerRegion = new String(source.PeerRegion);
+        }
+        if (source.VpcPeerConnectionName != null) {
+            this.VpcPeerConnectionName = new String(source.VpcPeerConnectionName);
+        }
+        if (source.PeerUin != null) {
+            this.PeerUin = new String(source.PeerUin);
+        }
+        if (source.Bandwidth != null) {
+            this.Bandwidth = new Long(source.Bandwidth);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

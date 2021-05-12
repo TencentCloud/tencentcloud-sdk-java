@@ -321,6 +321,56 @@ public class AppScanSet extends AbstractModel{
         this.VulCount = VulCount;
     }
 
+    public AppScanSet() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AppScanSet(AppScanSet source) {
+        if (source.ItemId != null) {
+            this.ItemId = new String(source.ItemId);
+        }
+        if (source.AppName != null) {
+            this.AppName = new String(source.AppName);
+        }
+        if (source.AppPkgName != null) {
+            this.AppPkgName = new String(source.AppPkgName);
+        }
+        if (source.AppVersion != null) {
+            this.AppVersion = new String(source.AppVersion);
+        }
+        if (source.AppMd5 != null) {
+            this.AppMd5 = new String(source.AppMd5);
+        }
+        if (source.AppSize != null) {
+            this.AppSize = new Long(source.AppSize);
+        }
+        if (source.ScanCode != null) {
+            this.ScanCode = new Long(source.ScanCode);
+        }
+        if (source.TaskStatus != null) {
+            this.TaskStatus = new Long(source.TaskStatus);
+        }
+        if (source.TaskTime != null) {
+            this.TaskTime = new Long(source.TaskTime);
+        }
+        if (source.AppIconUrl != null) {
+            this.AppIconUrl = new String(source.AppIconUrl);
+        }
+        if (source.AppSid != null) {
+            this.AppSid = new String(source.AppSid);
+        }
+        if (source.SafeType != null) {
+            this.SafeType = new Long(source.SafeType);
+        }
+        if (source.VulCount != null) {
+            this.VulCount = new Long(source.VulCount);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

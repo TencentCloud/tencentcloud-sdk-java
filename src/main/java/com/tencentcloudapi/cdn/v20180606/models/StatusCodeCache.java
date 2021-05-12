@@ -88,6 +88,26 @@ off：关闭
         this.CacheRules = CacheRules;
     }
 
+    public StatusCodeCache() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public StatusCodeCache(StatusCodeCache source) {
+        if (source.Switch != null) {
+            this.Switch = new String(source.Switch);
+        }
+        if (source.CacheRules != null) {
+            this.CacheRules = new StatusCodeCacheRule[source.CacheRules.length];
+            for (int i = 0; i < source.CacheRules.length; i++) {
+                this.CacheRules[i] = new StatusCodeCacheRule(source.CacheRules[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

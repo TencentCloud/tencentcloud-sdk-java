@@ -68,6 +68,23 @@ public class ManageImageLifecycleGlobalPersonalRequest extends AbstractModel{
         this.Val = Val;
     }
 
+    public ManageImageLifecycleGlobalPersonalRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ManageImageLifecycleGlobalPersonalRequest(ManageImageLifecycleGlobalPersonalRequest source) {
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.Val != null) {
+            this.Val = new Long(source.Val);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

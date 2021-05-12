@@ -78,6 +78,26 @@ public class ApiUsagePlanSet extends AbstractModel{
         this.ApiUsagePlanList = ApiUsagePlanList;
     }
 
+    public ApiUsagePlanSet() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ApiUsagePlanSet(ApiUsagePlanSet source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.ApiUsagePlanList != null) {
+            this.ApiUsagePlanList = new ApiUsagePlan[source.ApiUsagePlanList.length];
+            for (int i = 0; i < source.ApiUsagePlanList.length; i++) {
+                this.ApiUsagePlanList[i] = new ApiUsagePlan(source.ApiUsagePlanList[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

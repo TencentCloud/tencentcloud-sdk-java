@@ -68,6 +68,26 @@ public class CreateDirectConnectTunnelResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public CreateDirectConnectTunnelResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateDirectConnectTunnelResponse(CreateDirectConnectTunnelResponse source) {
+        if (source.DirectConnectTunnelIdSet != null) {
+            this.DirectConnectTunnelIdSet = new String[source.DirectConnectTunnelIdSet.length];
+            for (int i = 0; i < source.DirectConnectTunnelIdSet.length; i++) {
+                this.DirectConnectTunnelIdSet[i] = new String(source.DirectConnectTunnelIdSet[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

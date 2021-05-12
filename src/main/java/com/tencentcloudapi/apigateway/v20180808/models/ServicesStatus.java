@@ -78,6 +78,26 @@ public class ServicesStatus extends AbstractModel{
         this.ServiceSet = ServiceSet;
     }
 
+    public ServicesStatus() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ServicesStatus(ServicesStatus source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.ServiceSet != null) {
+            this.ServiceSet = new Service[source.ServiceSet.length];
+            for (int i = 0; i < source.ServiceSet.length; i++) {
+                this.ServiceSet[i] = new Service(source.ServiceSet[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

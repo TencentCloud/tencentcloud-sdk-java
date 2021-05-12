@@ -111,6 +111,26 @@ public class ModifyDatabaseACLRequest extends AbstractModel{
         this.AclTag = AclTag;
     }
 
+    public ModifyDatabaseACLRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyDatabaseACLRequest(ModifyDatabaseACLRequest source) {
+        if (source.EnvId != null) {
+            this.EnvId = new String(source.EnvId);
+        }
+        if (source.CollectionName != null) {
+            this.CollectionName = new String(source.CollectionName);
+        }
+        if (source.AclTag != null) {
+            this.AclTag = new String(source.AclTag);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

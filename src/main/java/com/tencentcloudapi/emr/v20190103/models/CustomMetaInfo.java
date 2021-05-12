@@ -91,6 +91,26 @@ public class CustomMetaInfo extends AbstractModel{
         this.MetaDataPass = MetaDataPass;
     }
 
+    public CustomMetaInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CustomMetaInfo(CustomMetaInfo source) {
+        if (source.MetaDataJdbcUrl != null) {
+            this.MetaDataJdbcUrl = new String(source.MetaDataJdbcUrl);
+        }
+        if (source.MetaDataUser != null) {
+            this.MetaDataUser = new String(source.MetaDataUser);
+        }
+        if (source.MetaDataPass != null) {
+            this.MetaDataPass = new String(source.MetaDataPass);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

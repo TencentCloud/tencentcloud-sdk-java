@@ -91,6 +91,26 @@ public class ListUsersForGroupRequest extends AbstractModel{
         this.Rp = Rp;
     }
 
+    public ListUsersForGroupRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ListUsersForGroupRequest(ListUsersForGroupRequest source) {
+        if (source.GroupId != null) {
+            this.GroupId = new Long(source.GroupId);
+        }
+        if (source.Page != null) {
+            this.Page = new Long(source.Page);
+        }
+        if (source.Rp != null) {
+            this.Rp = new Long(source.Rp);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -137,6 +137,32 @@ public class ModifyUDPListenerAttributeRequest extends AbstractModel{
         this.Scheduler = Scheduler;
     }
 
+    public ModifyUDPListenerAttributeRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyUDPListenerAttributeRequest(ModifyUDPListenerAttributeRequest source) {
+        if (source.ListenerId != null) {
+            this.ListenerId = new String(source.ListenerId);
+        }
+        if (source.GroupId != null) {
+            this.GroupId = new String(source.GroupId);
+        }
+        if (source.ProxyId != null) {
+            this.ProxyId = new String(source.ProxyId);
+        }
+        if (source.ListenerName != null) {
+            this.ListenerName = new String(source.ListenerName);
+        }
+        if (source.Scheduler != null) {
+            this.Scheduler = new String(source.Scheduler);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

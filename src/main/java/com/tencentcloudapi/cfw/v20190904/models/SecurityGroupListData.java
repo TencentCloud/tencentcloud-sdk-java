@@ -489,6 +489,74 @@ public class SecurityGroupListData extends AbstractModel{
         this.Cidr = Cidr;
     }
 
+    public SecurityGroupListData() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SecurityGroupListData(SecurityGroupListData source) {
+        if (source.Id != null) {
+            this.Id = new Long(source.Id);
+        }
+        if (source.OrderIndex != null) {
+            this.OrderIndex = new Long(source.OrderIndex);
+        }
+        if (source.SourceId != null) {
+            this.SourceId = new String(source.SourceId);
+        }
+        if (source.SourceType != null) {
+            this.SourceType = new Long(source.SourceType);
+        }
+        if (source.TargetId != null) {
+            this.TargetId = new String(source.TargetId);
+        }
+        if (source.TargetType != null) {
+            this.TargetType = new Long(source.TargetType);
+        }
+        if (source.Protocol != null) {
+            this.Protocol = new String(source.Protocol);
+        }
+        if (source.Port != null) {
+            this.Port = new String(source.Port);
+        }
+        if (source.Strategy != null) {
+            this.Strategy = new Long(source.Strategy);
+        }
+        if (source.Detail != null) {
+            this.Detail = new String(source.Detail);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.IsNew != null) {
+            this.IsNew = new Long(source.IsNew);
+        }
+        if (source.BothWay != null) {
+            this.BothWay = new Long(source.BothWay);
+        }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.SubnetId != null) {
+            this.SubnetId = new String(source.SubnetId);
+        }
+        if (source.InstanceName != null) {
+            this.InstanceName = new String(source.InstanceName);
+        }
+        if (source.PublicIp != null) {
+            this.PublicIp = new String(source.PublicIp);
+        }
+        if (source.PrivateIp != null) {
+            this.PrivateIp = new String(source.PrivateIp);
+        }
+        if (source.Cidr != null) {
+            this.Cidr = new String(source.Cidr);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

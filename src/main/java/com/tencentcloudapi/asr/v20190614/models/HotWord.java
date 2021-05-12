@@ -68,6 +68,23 @@ public class HotWord extends AbstractModel{
         this.Weight = Weight;
     }
 
+    public HotWord() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public HotWord(HotWord source) {
+        if (source.Word != null) {
+            this.Word = new String(source.Word);
+        }
+        if (source.Weight != null) {
+            this.Weight = new Long(source.Weight);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

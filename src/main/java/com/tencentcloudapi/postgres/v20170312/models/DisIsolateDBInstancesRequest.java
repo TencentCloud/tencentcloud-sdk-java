@@ -114,6 +114,35 @@ public class DisIsolateDBInstancesRequest extends AbstractModel{
         this.VoucherIds = VoucherIds;
     }
 
+    public DisIsolateDBInstancesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DisIsolateDBInstancesRequest(DisIsolateDBInstancesRequest source) {
+        if (source.DBInstanceIdSet != null) {
+            this.DBInstanceIdSet = new String[source.DBInstanceIdSet.length];
+            for (int i = 0; i < source.DBInstanceIdSet.length; i++) {
+                this.DBInstanceIdSet[i] = new String(source.DBInstanceIdSet[i]);
+            }
+        }
+        if (source.Period != null) {
+            this.Period = new Long(source.Period);
+        }
+        if (source.AutoVoucher != null) {
+            this.AutoVoucher = new Boolean(source.AutoVoucher);
+        }
+        if (source.VoucherIds != null) {
+            this.VoucherIds = new String[source.VoucherIds.length];
+            for (int i = 0; i < source.VoucherIds.length; i++) {
+                this.VoucherIds[i] = new String(source.VoucherIds[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -91,6 +91,29 @@ public class GroupProIspDataInfo extends AbstractModel{
         this.DetailInfoList = DetailInfoList;
     }
 
+    public GroupProIspDataInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GroupProIspDataInfo(GroupProIspDataInfo source) {
+        if (source.ProvinceName != null) {
+            this.ProvinceName = new String(source.ProvinceName);
+        }
+        if (source.IspName != null) {
+            this.IspName = new String(source.IspName);
+        }
+        if (source.DetailInfoList != null) {
+            this.DetailInfoList = new CdnPlayStatData[source.DetailInfoList.length];
+            for (int i = 0; i < source.DetailInfoList.length; i++) {
+                this.DetailInfoList[i] = new CdnPlayStatData(source.DetailInfoList[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

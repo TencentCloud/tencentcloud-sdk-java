@@ -137,6 +137,32 @@ public class DescribeRecordStreamData extends AbstractModel{
         this.StreamId = StreamId;
     }
 
+    public DescribeRecordStreamData() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeRecordStreamData(DescribeRecordStreamData source) {
+        if (source.RtspAddr != null) {
+            this.RtspAddr = new String(source.RtspAddr);
+        }
+        if (source.RtmpAddr != null) {
+            this.RtmpAddr = new String(source.RtmpAddr);
+        }
+        if (source.HlsAddr != null) {
+            this.HlsAddr = new String(source.HlsAddr);
+        }
+        if (source.FlvAddr != null) {
+            this.FlvAddr = new String(source.FlvAddr);
+        }
+        if (source.StreamId != null) {
+            this.StreamId = new String(source.StreamId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

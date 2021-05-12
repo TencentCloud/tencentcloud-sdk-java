@@ -45,6 +45,20 @@ public class DescribeEventConfigRequest extends AbstractModel{
         this.SubAppId = SubAppId;
     }
 
+    public DescribeEventConfigRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeEventConfigRequest(DescribeEventConfigRequest source) {
+        if (source.SubAppId != null) {
+            this.SubAppId = new Long(source.SubAppId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

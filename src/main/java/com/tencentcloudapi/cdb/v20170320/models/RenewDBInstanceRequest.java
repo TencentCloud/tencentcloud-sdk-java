@@ -91,6 +91,26 @@ public class RenewDBInstanceRequest extends AbstractModel{
         this.ModifyPayType = ModifyPayType;
     }
 
+    public RenewDBInstanceRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RenewDBInstanceRequest(RenewDBInstanceRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.TimeSpan != null) {
+            this.TimeSpan = new Long(source.TimeSpan);
+        }
+        if (source.ModifyPayType != null) {
+            this.ModifyPayType = new String(source.ModifyPayType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

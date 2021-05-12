@@ -291,6 +291,32 @@ public class TaskStatData extends AbstractModel{
         this.Details = Details;
     }
 
+    public TaskStatData() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TaskStatData(TaskStatData source) {
+        if (source.TaskType != null) {
+            this.TaskType = new String(source.TaskType);
+        }
+        if (source.Summary != null) {
+            this.Summary = new TaskStatDataItem[source.Summary.length];
+            for (int i = 0; i < source.Summary.length; i++) {
+                this.Summary[i] = new TaskStatDataItem(source.Summary[i]);
+            }
+        }
+        if (source.Details != null) {
+            this.Details = new SpecificationDataItem[source.Details.length];
+            for (int i = 0; i < source.Details.length; i++) {
+                this.Details[i] = new SpecificationDataItem(source.Details[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

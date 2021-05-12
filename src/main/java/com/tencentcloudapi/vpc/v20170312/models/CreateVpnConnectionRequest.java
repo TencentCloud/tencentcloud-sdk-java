@@ -298,6 +298,59 @@ public class CreateVpnConnectionRequest extends AbstractModel{
         this.HealthCheckRemoteIp = HealthCheckRemoteIp;
     }
 
+    public CreateVpnConnectionRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateVpnConnectionRequest(CreateVpnConnectionRequest source) {
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.VpnGatewayId != null) {
+            this.VpnGatewayId = new String(source.VpnGatewayId);
+        }
+        if (source.CustomerGatewayId != null) {
+            this.CustomerGatewayId = new String(source.CustomerGatewayId);
+        }
+        if (source.VpnConnectionName != null) {
+            this.VpnConnectionName = new String(source.VpnConnectionName);
+        }
+        if (source.PreShareKey != null) {
+            this.PreShareKey = new String(source.PreShareKey);
+        }
+        if (source.SecurityPolicyDatabases != null) {
+            this.SecurityPolicyDatabases = new SecurityPolicyDatabase[source.SecurityPolicyDatabases.length];
+            for (int i = 0; i < source.SecurityPolicyDatabases.length; i++) {
+                this.SecurityPolicyDatabases[i] = new SecurityPolicyDatabase(source.SecurityPolicyDatabases[i]);
+            }
+        }
+        if (source.IKEOptionsSpecification != null) {
+            this.IKEOptionsSpecification = new IKEOptionsSpecification(source.IKEOptionsSpecification);
+        }
+        if (source.IPSECOptionsSpecification != null) {
+            this.IPSECOptionsSpecification = new IPSECOptionsSpecification(source.IPSECOptionsSpecification);
+        }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
+        if (source.EnableHealthCheck != null) {
+            this.EnableHealthCheck = new Boolean(source.EnableHealthCheck);
+        }
+        if (source.HealthCheckLocalIp != null) {
+            this.HealthCheckLocalIp = new String(source.HealthCheckLocalIp);
+        }
+        if (source.HealthCheckRemoteIp != null) {
+            this.HealthCheckRemoteIp = new String(source.HealthCheckRemoteIp);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

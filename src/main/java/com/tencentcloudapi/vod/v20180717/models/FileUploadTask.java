@@ -119,6 +119,29 @@ public class FileUploadTask extends AbstractModel{
         this.MetaData = MetaData;
     }
 
+    public FileUploadTask() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public FileUploadTask(FileUploadTask source) {
+        if (source.FileId != null) {
+            this.FileId = new String(source.FileId);
+        }
+        if (source.MediaBasicInfo != null) {
+            this.MediaBasicInfo = new MediaBasicInfo(source.MediaBasicInfo);
+        }
+        if (source.ProcedureTaskId != null) {
+            this.ProcedureTaskId = new String(source.ProcedureTaskId);
+        }
+        if (source.MetaData != null) {
+            this.MetaData = new MediaMetaData(source.MetaData);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

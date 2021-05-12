@@ -218,6 +218,38 @@ public class TagInstance extends AbstractModel{
         this.TagStatus = TagStatus;
     }
 
+    public TagInstance() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TagInstance(TagInstance source) {
+        if (source.Key != null) {
+            this.Key = new String(source.Key);
+        }
+        if (source.Value != null) {
+            this.Value = new String(source.Value);
+        }
+        if (source.InstanceSum != null) {
+            this.InstanceSum = new Long(source.InstanceSum);
+        }
+        if (source.ServiceType != null) {
+            this.ServiceType = new String(source.ServiceType);
+        }
+        if (source.RegionId != null) {
+            this.RegionId = new String(source.RegionId);
+        }
+        if (source.BindingStatus != null) {
+            this.BindingStatus = new Long(source.BindingStatus);
+        }
+        if (source.TagStatus != null) {
+            this.TagStatus = new Long(source.TagStatus);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

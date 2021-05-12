@@ -45,6 +45,20 @@ public class DeleteCustomerGatewayRequest extends AbstractModel{
         this.CustomerGatewayId = CustomerGatewayId;
     }
 
+    public DeleteCustomerGatewayRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteCustomerGatewayRequest(DeleteCustomerGatewayRequest source) {
+        if (source.CustomerGatewayId != null) {
+            this.CustomerGatewayId = new String(source.CustomerGatewayId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

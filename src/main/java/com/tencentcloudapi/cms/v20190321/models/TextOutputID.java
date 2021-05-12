@@ -68,6 +68,23 @@ public class TextOutputID extends AbstractModel{
         this.Uin = Uin;
     }
 
+    public TextOutputID() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TextOutputID(TextOutputID source) {
+        if (source.MsgID != null) {
+            this.MsgID = new String(source.MsgID);
+        }
+        if (source.Uin != null) {
+            this.Uin = new String(source.Uin);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

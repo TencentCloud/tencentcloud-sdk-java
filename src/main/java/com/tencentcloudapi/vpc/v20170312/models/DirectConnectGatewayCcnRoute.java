@@ -91,6 +91,29 @@ public class DirectConnectGatewayCcnRoute extends AbstractModel{
         this.ASPath = ASPath;
     }
 
+    public DirectConnectGatewayCcnRoute() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DirectConnectGatewayCcnRoute(DirectConnectGatewayCcnRoute source) {
+        if (source.RouteId != null) {
+            this.RouteId = new String(source.RouteId);
+        }
+        if (source.DestinationCidrBlock != null) {
+            this.DestinationCidrBlock = new String(source.DestinationCidrBlock);
+        }
+        if (source.ASPath != null) {
+            this.ASPath = new String[source.ASPath.length];
+            for (int i = 0; i < source.ASPath.length; i++) {
+                this.ASPath[i] = new String(source.ASPath[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

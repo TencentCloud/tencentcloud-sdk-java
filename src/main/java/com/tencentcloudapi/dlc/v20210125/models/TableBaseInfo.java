@@ -68,6 +68,23 @@ public class TableBaseInfo extends AbstractModel{
         this.TableName = TableName;
     }
 
+    public TableBaseInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TableBaseInfo(TableBaseInfo source) {
+        if (source.DatabaseName != null) {
+            this.DatabaseName = new String(source.DatabaseName);
+        }
+        if (source.TableName != null) {
+            this.TableName = new String(source.TableName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

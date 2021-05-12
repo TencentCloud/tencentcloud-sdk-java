@@ -160,6 +160,38 @@ public class DescribeSyncCheckJobResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeSyncCheckJobResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeSyncCheckJobResponse(DescribeSyncCheckJobResponse source) {
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.ErrorCode != null) {
+            this.ErrorCode = new Long(source.ErrorCode);
+        }
+        if (source.ErrorMessage != null) {
+            this.ErrorMessage = new String(source.ErrorMessage);
+        }
+        if (source.StepInfo != null) {
+            this.StepInfo = new SyncCheckStepInfo[source.StepInfo.length];
+            for (int i = 0; i < source.StepInfo.length; i++) {
+                this.StepInfo[i] = new SyncCheckStepInfo(source.StepInfo[i]);
+            }
+        }
+        if (source.CheckFlag != null) {
+            this.CheckFlag = new Long(source.CheckFlag);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

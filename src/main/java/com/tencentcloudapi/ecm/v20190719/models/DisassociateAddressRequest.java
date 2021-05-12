@@ -126,6 +126,26 @@ FALSE：表示解绑 EIP 之后不分配普通公网 IP。
         this.ReallocateNormalPublicIp = ReallocateNormalPublicIp;
     }
 
+    public DisassociateAddressRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DisassociateAddressRequest(DisassociateAddressRequest source) {
+        if (source.EcmRegion != null) {
+            this.EcmRegion = new String(source.EcmRegion);
+        }
+        if (source.AddressId != null) {
+            this.AddressId = new String(source.AddressId);
+        }
+        if (source.ReallocateNormalPublicIp != null) {
+            this.ReallocateNormalPublicIp = new Boolean(source.ReallocateNormalPublicIp);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

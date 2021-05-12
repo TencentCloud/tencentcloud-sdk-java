@@ -344,6 +344,62 @@ public class DeployGroupRequest extends AbstractModel{
         this.StopScript = StopScript;
     }
 
+    public DeployGroupRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeployGroupRequest(DeployGroupRequest source) {
+        if (source.GroupId != null) {
+            this.GroupId = new String(source.GroupId);
+        }
+        if (source.PkgId != null) {
+            this.PkgId = new String(source.PkgId);
+        }
+        if (source.StartupParameters != null) {
+            this.StartupParameters = new String(source.StartupParameters);
+        }
+        if (source.DeployDesc != null) {
+            this.DeployDesc = new String(source.DeployDesc);
+        }
+        if (source.ForceStart != null) {
+            this.ForceStart = new Boolean(source.ForceStart);
+        }
+        if (source.EnableHealthCheck != null) {
+            this.EnableHealthCheck = new Boolean(source.EnableHealthCheck);
+        }
+        if (source.HealthCheckSettings != null) {
+            this.HealthCheckSettings = new HealthCheckSettings(source.HealthCheckSettings);
+        }
+        if (source.UpdateType != null) {
+            this.UpdateType = new Long(source.UpdateType);
+        }
+        if (source.DeployBetaEnable != null) {
+            this.DeployBetaEnable = new Boolean(source.DeployBetaEnable);
+        }
+        if (source.DeployBatch != null) {
+            this.DeployBatch = new Float[source.DeployBatch.length];
+            for (int i = 0; i < source.DeployBatch.length; i++) {
+                this.DeployBatch[i] = new Float(source.DeployBatch[i]);
+            }
+        }
+        if (source.DeployExeMode != null) {
+            this.DeployExeMode = new String(source.DeployExeMode);
+        }
+        if (source.DeployWaitTime != null) {
+            this.DeployWaitTime = new Long(source.DeployWaitTime);
+        }
+        if (source.StartScript != null) {
+            this.StartScript = new String(source.StartScript);
+        }
+        if (source.StopScript != null) {
+            this.StopScript = new String(source.StopScript);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

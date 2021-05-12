@@ -175,6 +175,41 @@ public class DescribeConfigResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeConfigResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeConfigResponse(DescribeConfigResponse source) {
+        if (source.NetworkStorageRange != null) {
+            this.NetworkStorageRange = new NetworkStorageRange(source.NetworkStorageRange);
+        }
+        if (source.ImageWhiteSet != null) {
+            this.ImageWhiteSet = new String[source.ImageWhiteSet.length];
+            for (int i = 0; i < source.ImageWhiteSet.length; i++) {
+                this.ImageWhiteSet[i] = new String(source.ImageWhiteSet[i]);
+            }
+        }
+        if (source.InstanceNetworkLimitConfigs != null) {
+            this.InstanceNetworkLimitConfigs = new InstanceNetworkLimitConfig[source.InstanceNetworkLimitConfigs.length];
+            for (int i = 0; i < source.InstanceNetworkLimitConfigs.length; i++) {
+                this.InstanceNetworkLimitConfigs[i] = new InstanceNetworkLimitConfig(source.InstanceNetworkLimitConfigs[i]);
+            }
+        }
+        if (source.ImageLimits != null) {
+            this.ImageLimits = new ImageLimitConfig(source.ImageLimits);
+        }
+        if (source.DefaultIPDirect != null) {
+            this.DefaultIPDirect = new Boolean(source.DefaultIPDirect);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

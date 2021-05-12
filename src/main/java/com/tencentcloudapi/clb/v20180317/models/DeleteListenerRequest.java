@@ -68,6 +68,23 @@ public class DeleteListenerRequest extends AbstractModel{
         this.ListenerId = ListenerId;
     }
 
+    public DeleteListenerRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteListenerRequest(DeleteListenerRequest source) {
+        if (source.LoadBalancerId != null) {
+            this.LoadBalancerId = new String(source.LoadBalancerId);
+        }
+        if (source.ListenerId != null) {
+            this.ListenerId = new String(source.ListenerId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

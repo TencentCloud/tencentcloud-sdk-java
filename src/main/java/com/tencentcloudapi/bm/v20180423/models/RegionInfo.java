@@ -114,6 +114,32 @@ public class RegionInfo extends AbstractModel{
         this.ZoneInfoSet = ZoneInfoSet;
     }
 
+    public RegionInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RegionInfo(RegionInfo source) {
+        if (source.Region != null) {
+            this.Region = new String(source.Region);
+        }
+        if (source.RegionId != null) {
+            this.RegionId = new Long(source.RegionId);
+        }
+        if (source.RegionDescription != null) {
+            this.RegionDescription = new String(source.RegionDescription);
+        }
+        if (source.ZoneInfoSet != null) {
+            this.ZoneInfoSet = new ZoneInfo[source.ZoneInfoSet.length];
+            for (int i = 0; i < source.ZoneInfoSet.length; i++) {
+                this.ZoneInfoSet[i] = new ZoneInfo(source.ZoneInfoSet[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

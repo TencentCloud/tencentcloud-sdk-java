@@ -333,6 +333,56 @@ public class StrategyInfo extends AbstractModel{
         this.IsServiceLinkedPolicy = IsServiceLinkedPolicy;
     }
 
+    public StrategyInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public StrategyInfo(StrategyInfo source) {
+        if (source.PolicyId != null) {
+            this.PolicyId = new Long(source.PolicyId);
+        }
+        if (source.PolicyName != null) {
+            this.PolicyName = new String(source.PolicyName);
+        }
+        if (source.AddTime != null) {
+            this.AddTime = new String(source.AddTime);
+        }
+        if (source.Type != null) {
+            this.Type = new Long(source.Type);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.CreateMode != null) {
+            this.CreateMode = new Long(source.CreateMode);
+        }
+        if (source.Attachments != null) {
+            this.Attachments = new Long(source.Attachments);
+        }
+        if (source.ServiceType != null) {
+            this.ServiceType = new String(source.ServiceType);
+        }
+        if (source.IsAttached != null) {
+            this.IsAttached = new Long(source.IsAttached);
+        }
+        if (source.Deactived != null) {
+            this.Deactived = new Long(source.Deactived);
+        }
+        if (source.DeactivedDetail != null) {
+            this.DeactivedDetail = new String[source.DeactivedDetail.length];
+            for (int i = 0; i < source.DeactivedDetail.length; i++) {
+                this.DeactivedDetail[i] = new String(source.DeactivedDetail[i]);
+            }
+        }
+        if (source.IsServiceLinkedPolicy != null) {
+            this.IsServiceLinkedPolicy = new Long(source.IsServiceLinkedPolicy);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

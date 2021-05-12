@@ -96,6 +96,29 @@ public class DescribeUserQuotasResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeUserQuotasResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeUserQuotasResponse(DescribeUserQuotasResponse source) {
+        if (source.QuotaResource != null) {
+            this.QuotaResource = new QuotaResource[source.QuotaResource.length];
+            for (int i = 0; i < source.QuotaResource.length; i++) {
+                this.QuotaResource[i] = new QuotaResource(source.QuotaResource[i]);
+            }
+        }
+        if (source.Total != null) {
+            this.Total = new Long(source.Total);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

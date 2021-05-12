@@ -203,6 +203,38 @@ public class SkillGroupInfoItem extends AbstractModel{
         this.LastModifyTimestamp = LastModifyTimestamp;
     }
 
+    public SkillGroupInfoItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SkillGroupInfoItem(SkillGroupInfoItem source) {
+        if (source.SkillGroupId != null) {
+            this.SkillGroupId = new Long(source.SkillGroupId);
+        }
+        if (source.SkillGroupName != null) {
+            this.SkillGroupName = new String(source.SkillGroupName);
+        }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.RoutePolicy != null) {
+            this.RoutePolicy = new String(source.RoutePolicy);
+        }
+        if (source.UsingLastSeat != null) {
+            this.UsingLastSeat = new Long(source.UsingLastSeat);
+        }
+        if (source.MaxConcurrency != null) {
+            this.MaxConcurrency = new Long(source.MaxConcurrency);
+        }
+        if (source.LastModifyTimestamp != null) {
+            this.LastModifyTimestamp = new Long(source.LastModifyTimestamp);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

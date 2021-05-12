@@ -45,6 +45,20 @@ public class Group extends AbstractModel{
         this.GroupName = GroupName;
     }
 
+    public Group() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Group(Group source) {
+        if (source.GroupName != null) {
+            this.GroupName = new String(source.GroupName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

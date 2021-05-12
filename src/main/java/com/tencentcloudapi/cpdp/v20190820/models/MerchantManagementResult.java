@@ -68,6 +68,26 @@ public class MerchantManagementResult extends AbstractModel{
         this.List = List;
     }
 
+    public MerchantManagementResult() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MerchantManagementResult(MerchantManagementResult source) {
+        if (source.Total != null) {
+            this.Total = new Long(source.Total);
+        }
+        if (source.List != null) {
+            this.List = new MerchantManagementList[source.List.length];
+            for (int i = 0; i < source.List.length; i++) {
+                this.List[i] = new MerchantManagementList(source.List[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

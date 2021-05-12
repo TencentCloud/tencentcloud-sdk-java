@@ -68,6 +68,23 @@ public class DescribeBackupUrlRequest extends AbstractModel{
         this.BackupId = BackupId;
     }
 
+    public DescribeBackupUrlRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeBackupUrlRequest(DescribeBackupUrlRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.BackupId != null) {
+            this.BackupId = new String(source.BackupId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

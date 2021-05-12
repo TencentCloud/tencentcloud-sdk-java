@@ -114,6 +114,29 @@ public class StartDelayReplicationRequest extends AbstractModel{
         this.Gtid = Gtid;
     }
 
+    public StartDelayReplicationRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public StartDelayReplicationRequest(StartDelayReplicationRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.DelayReplicationType != null) {
+            this.DelayReplicationType = new String(source.DelayReplicationType);
+        }
+        if (source.DueTime != null) {
+            this.DueTime = new Long(source.DueTime);
+        }
+        if (source.Gtid != null) {
+            this.Gtid = new String(source.Gtid);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

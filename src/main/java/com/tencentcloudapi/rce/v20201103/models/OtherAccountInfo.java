@@ -116,6 +116,26 @@ AccountType是10004时，填入手机号的MD5值。
         this.DeviceId = DeviceId;
     }
 
+    public OtherAccountInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public OtherAccountInfo(OtherAccountInfo source) {
+        if (source.AccountId != null) {
+            this.AccountId = new String(source.AccountId);
+        }
+        if (source.MobilePhone != null) {
+            this.MobilePhone = new String(source.MobilePhone);
+        }
+        if (source.DeviceId != null) {
+            this.DeviceId = new String(source.DeviceId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

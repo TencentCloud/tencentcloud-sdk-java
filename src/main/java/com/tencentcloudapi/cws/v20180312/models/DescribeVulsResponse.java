@@ -91,6 +91,29 @@ public class DescribeVulsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeVulsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeVulsResponse(DescribeVulsResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.Vuls != null) {
+            this.Vuls = new Vul[source.Vuls.length];
+            for (int i = 0; i < source.Vuls.length; i++) {
+                this.Vuls[i] = new Vul(source.Vuls[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -252,6 +252,47 @@ public class CreateWorkflowRequest extends AbstractModel{
         this.TaskPriority = TaskPriority;
     }
 
+    public CreateWorkflowRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateWorkflowRequest(CreateWorkflowRequest source) {
+        if (source.WorkflowName != null) {
+            this.WorkflowName = new String(source.WorkflowName);
+        }
+        if (source.Trigger != null) {
+            this.Trigger = new WorkflowTrigger(source.Trigger);
+        }
+        if (source.OutputStorage != null) {
+            this.OutputStorage = new TaskOutputStorage(source.OutputStorage);
+        }
+        if (source.OutputDir != null) {
+            this.OutputDir = new String(source.OutputDir);
+        }
+        if (source.MediaProcessTask != null) {
+            this.MediaProcessTask = new MediaProcessTaskInput(source.MediaProcessTask);
+        }
+        if (source.AiContentReviewTask != null) {
+            this.AiContentReviewTask = new AiContentReviewTaskInput(source.AiContentReviewTask);
+        }
+        if (source.AiAnalysisTask != null) {
+            this.AiAnalysisTask = new AiAnalysisTaskInput(source.AiAnalysisTask);
+        }
+        if (source.AiRecognitionTask != null) {
+            this.AiRecognitionTask = new AiRecognitionTaskInput(source.AiRecognitionTask);
+        }
+        if (source.TaskNotifyConfig != null) {
+            this.TaskNotifyConfig = new TaskNotifyConfig(source.TaskNotifyConfig);
+        }
+        if (source.TaskPriority != null) {
+            this.TaskPriority = new Long(source.TaskPriority);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

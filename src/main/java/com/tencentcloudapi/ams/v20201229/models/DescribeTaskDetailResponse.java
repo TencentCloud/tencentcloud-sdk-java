@@ -510,6 +510,71 @@ Block 建议屏蔽；
         this.RequestId = RequestId;
     }
 
+    public DescribeTaskDetailResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeTaskDetailResponse(DescribeTaskDetailResponse source) {
+        if (source.TaskId != null) {
+            this.TaskId = new String(source.TaskId);
+        }
+        if (source.DataId != null) {
+            this.DataId = new String(source.DataId);
+        }
+        if (source.BizType != null) {
+            this.BizType = new String(source.BizType);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.Suggestion != null) {
+            this.Suggestion = new String(source.Suggestion);
+        }
+        if (source.Labels != null) {
+            this.Labels = new TaskLabel[source.Labels.length];
+            for (int i = 0; i < source.Labels.length; i++) {
+                this.Labels[i] = new TaskLabel(source.Labels[i]);
+            }
+        }
+        if (source.InputInfo != null) {
+            this.InputInfo = new InputInfo(source.InputInfo);
+        }
+        if (source.AudioText != null) {
+            this.AudioText = new String(source.AudioText);
+        }
+        if (source.AudioSegments != null) {
+            this.AudioSegments = new AudioSegments[source.AudioSegments.length];
+            for (int i = 0; i < source.AudioSegments.length; i++) {
+                this.AudioSegments[i] = new AudioSegments(source.AudioSegments[i]);
+            }
+        }
+        if (source.ErrorType != null) {
+            this.ErrorType = new String(source.ErrorType);
+        }
+        if (source.ErrorDescription != null) {
+            this.ErrorDescription = new String(source.ErrorDescription);
+        }
+        if (source.CreatedAt != null) {
+            this.CreatedAt = new String(source.CreatedAt);
+        }
+        if (source.UpdatedAt != null) {
+            this.UpdatedAt = new String(source.UpdatedAt);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

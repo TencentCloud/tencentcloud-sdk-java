@@ -96,6 +96,26 @@ public class SplitMediaTaskSegmentInfo extends AbstractModel{
         this.ProcedureTaskId = ProcedureTaskId;
     }
 
+    public SplitMediaTaskSegmentInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SplitMediaTaskSegmentInfo(SplitMediaTaskSegmentInfo source) {
+        if (source.Input != null) {
+            this.Input = new SplitMediaTaskInput(source.Input);
+        }
+        if (source.Output != null) {
+            this.Output = new TaskOutputMediaInfo(source.Output);
+        }
+        if (source.ProcedureTaskId != null) {
+            this.ProcedureTaskId = new String(source.ProcedureTaskId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

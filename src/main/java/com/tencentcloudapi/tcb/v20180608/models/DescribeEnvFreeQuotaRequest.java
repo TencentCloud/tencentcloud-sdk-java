@@ -73,6 +73,26 @@ public class DescribeEnvFreeQuotaRequest extends AbstractModel{
         this.ResourceTypes = ResourceTypes;
     }
 
+    public DescribeEnvFreeQuotaRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeEnvFreeQuotaRequest(DescribeEnvFreeQuotaRequest source) {
+        if (source.EnvId != null) {
+            this.EnvId = new String(source.EnvId);
+        }
+        if (source.ResourceTypes != null) {
+            this.ResourceTypes = new String[source.ResourceTypes.length];
+            for (int i = 0; i < source.ResourceTypes.length; i++) {
+                this.ResourceTypes[i] = new String(source.ResourceTypes[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

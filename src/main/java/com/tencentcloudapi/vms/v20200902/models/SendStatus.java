@@ -73,6 +73,23 @@ public class SendStatus extends AbstractModel{
         this.SessionContext = SessionContext;
     }
 
+    public SendStatus() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SendStatus(SendStatus source) {
+        if (source.CallId != null) {
+            this.CallId = new String(source.CallId);
+        }
+        if (source.SessionContext != null) {
+            this.SessionContext = new String(source.SessionContext);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

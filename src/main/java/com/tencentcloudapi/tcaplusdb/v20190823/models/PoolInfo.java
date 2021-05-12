@@ -137,6 +137,38 @@ public class PoolInfo extends AbstractModel{
         this.ProxyList = ProxyList;
     }
 
+    public PoolInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PoolInfo(PoolInfo source) {
+        if (source.PoolUid != null) {
+            this.PoolUid = new Long(source.PoolUid);
+        }
+        if (source.Ipv6Enable != null) {
+            this.Ipv6Enable = new Long(source.Ipv6Enable);
+        }
+        if (source.AvailableAppCount != null) {
+            this.AvailableAppCount = new Long(source.AvailableAppCount);
+        }
+        if (source.ServerList != null) {
+            this.ServerList = new ServerMachineInfo[source.ServerList.length];
+            for (int i = 0; i < source.ServerList.length; i++) {
+                this.ServerList[i] = new ServerMachineInfo(source.ServerList[i]);
+            }
+        }
+        if (source.ProxyList != null) {
+            this.ProxyList = new ProxyMachineInfo[source.ProxyList.length];
+            for (int i = 0; i < source.ProxyList.length; i++) {
+                this.ProxyList[i] = new ProxyMachineInfo(source.ProxyList[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

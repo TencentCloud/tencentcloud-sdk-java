@@ -124,6 +124,35 @@ public class ListVersionByFunctionResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public ListVersionByFunctionResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ListVersionByFunctionResponse(ListVersionByFunctionResponse source) {
+        if (source.FunctionVersion != null) {
+            this.FunctionVersion = new String[source.FunctionVersion.length];
+            for (int i = 0; i < source.FunctionVersion.length; i++) {
+                this.FunctionVersion[i] = new String(source.FunctionVersion[i]);
+            }
+        }
+        if (source.Versions != null) {
+            this.Versions = new FunctionVersion[source.Versions.length];
+            for (int i = 0; i < source.Versions.length; i++) {
+                this.Versions[i] = new FunctionVersion(source.Versions[i]);
+            }
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

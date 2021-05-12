@@ -91,6 +91,29 @@ public class ListSAMLProvidersResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public ListSAMLProvidersResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ListSAMLProvidersResponse(ListSAMLProvidersResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.SAMLProviderSet != null) {
+            this.SAMLProviderSet = new SAMLProviderInfo[source.SAMLProviderSet.length];
+            for (int i = 0; i < source.SAMLProviderSet.length; i++) {
+                this.SAMLProviderSet[i] = new SAMLProviderInfo(source.SAMLProviderSet[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

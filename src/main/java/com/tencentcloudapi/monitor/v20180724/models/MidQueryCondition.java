@@ -91,6 +91,29 @@ public class MidQueryCondition extends AbstractModel{
         this.Value = Value;
     }
 
+    public MidQueryCondition() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MidQueryCondition(MidQueryCondition source) {
+        if (source.Key != null) {
+            this.Key = new String(source.Key);
+        }
+        if (source.Operator != null) {
+            this.Operator = new String(source.Operator);
+        }
+        if (source.Value != null) {
+            this.Value = new String[source.Value.length];
+            for (int i = 0; i < source.Value.length; i++) {
+                this.Value[i] = new String(source.Value[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

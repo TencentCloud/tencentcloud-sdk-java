@@ -68,6 +68,23 @@ public class CancelCampaignRequest extends AbstractModel{
         this.CampaignId = CampaignId;
     }
 
+    public CancelCampaignRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CancelCampaignRequest(CancelCampaignRequest source) {
+        if (source.License != null) {
+            this.License = new String(source.License);
+        }
+        if (source.CampaignId != null) {
+            this.CampaignId = new Long(source.CampaignId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

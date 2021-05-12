@@ -160,6 +160,35 @@ public class DescribeFaceIdByTempIdRequest extends AbstractModel{
         this.PictureExpires = PictureExpires;
     }
 
+    public DescribeFaceIdByTempIdRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeFaceIdByTempIdRequest(DescribeFaceIdByTempIdRequest source) {
+        if (source.CompanyId != null) {
+            this.CompanyId = new String(source.CompanyId);
+        }
+        if (source.ShopId != null) {
+            this.ShopId = new Long(source.ShopId);
+        }
+        if (source.TempId != null) {
+            this.TempId = new String(source.TempId);
+        }
+        if (source.CameraId != null) {
+            this.CameraId = new Long(source.CameraId);
+        }
+        if (source.PosId != null) {
+            this.PosId = new String(source.PosId);
+        }
+        if (source.PictureExpires != null) {
+            this.PictureExpires = new Long(source.PictureExpires);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

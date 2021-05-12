@@ -45,6 +45,23 @@ public class DeleteTagsRequest extends AbstractModel{
         this.Ids = Ids;
     }
 
+    public DeleteTagsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteTagsRequest(DeleteTagsRequest source) {
+        if (source.Ids != null) {
+            this.Ids = new Long[source.Ids.length];
+            for (int i = 0; i < source.Ids.length; i++) {
+                this.Ids[i] = new Long(source.Ids[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

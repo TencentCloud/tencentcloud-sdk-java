@@ -165,6 +165,35 @@ public class FaceFusionRequest extends AbstractModel{
         this.CelebrityIdentify = CelebrityIdentify;
     }
 
+    public FaceFusionRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public FaceFusionRequest(FaceFusionRequest source) {
+        if (source.ProjectId != null) {
+            this.ProjectId = new String(source.ProjectId);
+        }
+        if (source.ModelId != null) {
+            this.ModelId = new String(source.ModelId);
+        }
+        if (source.Image != null) {
+            this.Image = new String(source.Image);
+        }
+        if (source.RspImgType != null) {
+            this.RspImgType = new String(source.RspImgType);
+        }
+        if (source.PornDetect != null) {
+            this.PornDetect = new Long(source.PornDetect);
+        }
+        if (source.CelebrityIdentify != null) {
+            this.CelebrityIdentify = new Long(source.CelebrityIdentify);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -91,6 +91,26 @@ public class HttpCodeValue extends AbstractModel{
         this.Percentage = Percentage;
     }
 
+    public HttpCodeValue() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public HttpCodeValue(HttpCodeValue source) {
+        if (source.Time != null) {
+            this.Time = new String(source.Time);
+        }
+        if (source.Numbers != null) {
+            this.Numbers = new Long(source.Numbers);
+        }
+        if (source.Percentage != null) {
+            this.Percentage = new Float(source.Percentage);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

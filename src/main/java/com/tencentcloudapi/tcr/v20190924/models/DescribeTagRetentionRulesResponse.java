@@ -91,6 +91,29 @@ public class DescribeTagRetentionRulesResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeTagRetentionRulesResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeTagRetentionRulesResponse(DescribeTagRetentionRulesResponse source) {
+        if (source.RetentionPolicyList != null) {
+            this.RetentionPolicyList = new RetentionPolicy[source.RetentionPolicyList.length];
+            for (int i = 0; i < source.RetentionPolicyList.length; i++) {
+                this.RetentionPolicyList[i] = new RetentionPolicy(source.RetentionPolicyList[i]);
+            }
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

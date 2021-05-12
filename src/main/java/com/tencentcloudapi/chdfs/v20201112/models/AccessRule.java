@@ -137,6 +137,32 @@ public class AccessRule extends AbstractModel{
         this.CreateTime = CreateTime;
     }
 
+    public AccessRule() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AccessRule(AccessRule source) {
+        if (source.AccessRuleId != null) {
+            this.AccessRuleId = new Long(source.AccessRuleId);
+        }
+        if (source.Address != null) {
+            this.Address = new String(source.Address);
+        }
+        if (source.AccessMode != null) {
+            this.AccessMode = new Long(source.AccessMode);
+        }
+        if (source.Priority != null) {
+            this.Priority = new Long(source.Priority);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

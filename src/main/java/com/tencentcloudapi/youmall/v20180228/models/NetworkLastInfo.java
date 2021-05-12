@@ -68,6 +68,26 @@ public class NetworkLastInfo extends AbstractModel{
         this.Infos = Infos;
     }
 
+    public NetworkLastInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public NetworkLastInfo(NetworkLastInfo source) {
+        if (source.Count != null) {
+            this.Count = new Long(source.Count);
+        }
+        if (source.Infos != null) {
+            this.Infos = new NetworkAndShopInfo[source.Infos.length];
+            for (int i = 0; i < source.Infos.length; i++) {
+                this.Infos[i] = new NetworkAndShopInfo(source.Infos[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

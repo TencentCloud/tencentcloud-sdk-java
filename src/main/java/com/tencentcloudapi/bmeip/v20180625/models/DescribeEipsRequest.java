@@ -367,6 +367,77 @@ public class DescribeEipsRequest extends AbstractModel{
         this.BindAcl = BindAcl;
     }
 
+    public DescribeEipsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeEipsRequest(DescribeEipsRequest source) {
+        if (source.EipIds != null) {
+            this.EipIds = new String[source.EipIds.length];
+            for (int i = 0; i < source.EipIds.length; i++) {
+                this.EipIds[i] = new String(source.EipIds[i]);
+            }
+        }
+        if (source.Eips != null) {
+            this.Eips = new String[source.Eips.length];
+            for (int i = 0; i < source.Eips.length; i++) {
+                this.Eips[i] = new String(source.Eips[i]);
+            }
+        }
+        if (source.InstanceIds != null) {
+            this.InstanceIds = new String[source.InstanceIds.length];
+            for (int i = 0; i < source.InstanceIds.length; i++) {
+                this.InstanceIds[i] = new String(source.InstanceIds[i]);
+            }
+        }
+        if (source.SearchKey != null) {
+            this.SearchKey = new String(source.SearchKey);
+        }
+        if (source.Status != null) {
+            this.Status = new Long[source.Status.length];
+            for (int i = 0; i < source.Status.length; i++) {
+                this.Status[i] = new Long(source.Status[i]);
+            }
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.OrderField != null) {
+            this.OrderField = new String(source.OrderField);
+        }
+        if (source.Order != null) {
+            this.Order = new Long(source.Order);
+        }
+        if (source.PayMode != null) {
+            this.PayMode = new String(source.PayMode);
+        }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.BindTypes != null) {
+            this.BindTypes = new Long[source.BindTypes.length];
+            for (int i = 0; i < source.BindTypes.length; i++) {
+                this.BindTypes[i] = new Long(source.BindTypes[i]);
+            }
+        }
+        if (source.ExclusiveTag != null) {
+            this.ExclusiveTag = new Long(source.ExclusiveTag);
+        }
+        if (source.AclId != null) {
+            this.AclId = new String(source.AclId);
+        }
+        if (source.BindAcl != null) {
+            this.BindAcl = new Long(source.BindAcl);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -114,6 +114,29 @@ public class NetworkInterfaceAttachment extends AbstractModel{
         this.AttachTime = AttachTime;
     }
 
+    public NetworkInterfaceAttachment() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public NetworkInterfaceAttachment(NetworkInterfaceAttachment source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.DeviceIndex != null) {
+            this.DeviceIndex = new Long(source.DeviceIndex);
+        }
+        if (source.InstanceAccountId != null) {
+            this.InstanceAccountId = new String(source.InstanceAccountId);
+        }
+        if (source.AttachTime != null) {
+            this.AttachTime = new String(source.AttachTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

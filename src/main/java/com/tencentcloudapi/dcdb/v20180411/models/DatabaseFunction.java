@@ -45,6 +45,20 @@ public class DatabaseFunction extends AbstractModel{
         this.Func = Func;
     }
 
+    public DatabaseFunction() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DatabaseFunction(DatabaseFunction source) {
+        if (source.Func != null) {
+            this.Func = new String(source.Func);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

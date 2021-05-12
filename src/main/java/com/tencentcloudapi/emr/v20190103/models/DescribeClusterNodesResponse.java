@@ -152,6 +152,41 @@ public class DescribeClusterNodesResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeClusterNodesResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeClusterNodesResponse(DescribeClusterNodesResponse source) {
+        if (source.TotalCnt != null) {
+            this.TotalCnt = new Long(source.TotalCnt);
+        }
+        if (source.NodeList != null) {
+            this.NodeList = new NodeHardwareInfo[source.NodeList.length];
+            for (int i = 0; i < source.NodeList.length; i++) {
+                this.NodeList[i] = new NodeHardwareInfo(source.NodeList[i]);
+            }
+        }
+        if (source.TagKeys != null) {
+            this.TagKeys = new String[source.TagKeys.length];
+            for (int i = 0; i < source.TagKeys.length; i++) {
+                this.TagKeys[i] = new String(source.TagKeys[i]);
+            }
+        }
+        if (source.HardwareResourceTypeList != null) {
+            this.HardwareResourceTypeList = new String[source.HardwareResourceTypeList.length];
+            for (int i = 0; i < source.HardwareResourceTypeList.length; i++) {
+                this.HardwareResourceTypeList[i] = new String(source.HardwareResourceTypeList[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

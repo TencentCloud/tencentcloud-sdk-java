@@ -68,6 +68,23 @@ public class ModifySubscribeAutoRenewFlagRequest extends AbstractModel{
         this.AutoRenewFlag = AutoRenewFlag;
     }
 
+    public ModifySubscribeAutoRenewFlagRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifySubscribeAutoRenewFlagRequest(ModifySubscribeAutoRenewFlagRequest source) {
+        if (source.SubscribeId != null) {
+            this.SubscribeId = new String(source.SubscribeId);
+        }
+        if (source.AutoRenewFlag != null) {
+            this.AutoRenewFlag = new Long(source.AutoRenewFlag);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

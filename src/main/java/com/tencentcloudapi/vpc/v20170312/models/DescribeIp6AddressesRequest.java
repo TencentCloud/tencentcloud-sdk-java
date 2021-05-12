@@ -124,6 +124,35 @@ public class DescribeIp6AddressesRequest extends AbstractModel{
         this.Limit = Limit;
     }
 
+    public DescribeIp6AddressesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeIp6AddressesRequest(DescribeIp6AddressesRequest source) {
+        if (source.Ip6AddressIds != null) {
+            this.Ip6AddressIds = new String[source.Ip6AddressIds.length];
+            for (int i = 0; i < source.Ip6AddressIds.length; i++) {
+                this.Ip6AddressIds[i] = new String(source.Ip6AddressIds[i]);
+            }
+        }
+        if (source.Filters != null) {
+            this.Filters = new Filter[source.Filters.length];
+            for (int i = 0; i < source.Filters.length; i++) {
+                this.Filters[i] = new Filter(source.Filters[i]);
+            }
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -91,6 +91,26 @@ public class GeneralResourceQuota extends AbstractModel{
         this.ResourceQuotaTotal = ResourceQuotaTotal;
     }
 
+    public GeneralResourceQuota() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GeneralResourceQuota(GeneralResourceQuota source) {
+        if (source.ResourceName != null) {
+            this.ResourceName = new String(source.ResourceName);
+        }
+        if (source.ResourceQuotaAvailable != null) {
+            this.ResourceQuotaAvailable = new Long(source.ResourceQuotaAvailable);
+        }
+        if (source.ResourceQuotaTotal != null) {
+            this.ResourceQuotaTotal = new Long(source.ResourceQuotaTotal);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

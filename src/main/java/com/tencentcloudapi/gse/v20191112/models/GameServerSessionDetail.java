@@ -73,6 +73,23 @@ public class GameServerSessionDetail extends AbstractModel{
         this.ProtectionPolicy = ProtectionPolicy;
     }
 
+    public GameServerSessionDetail() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GameServerSessionDetail(GameServerSessionDetail source) {
+        if (source.GameServerSession != null) {
+            this.GameServerSession = new GameServerSession(source.GameServerSession);
+        }
+        if (source.ProtectionPolicy != null) {
+            this.ProtectionPolicy = new String(source.ProtectionPolicy);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

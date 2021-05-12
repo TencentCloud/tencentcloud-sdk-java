@@ -68,6 +68,23 @@ public class ISP extends AbstractModel{
         this.ISPName = ISPName;
     }
 
+    public ISP() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ISP(ISP source) {
+        if (source.ISPId != null) {
+            this.ISPId = new String(source.ISPId);
+        }
+        if (source.ISPName != null) {
+            this.ISPName = new String(source.ISPName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -162,6 +162,35 @@ public class EffectiveMachineInfo extends AbstractModel{
         this.Quuid = Quuid;
     }
 
+    public EffectiveMachineInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public EffectiveMachineInfo(EffectiveMachineInfo source) {
+        if (source.MachineName != null) {
+            this.MachineName = new String(source.MachineName);
+        }
+        if (source.MachinePublicIp != null) {
+            this.MachinePublicIp = new String(source.MachinePublicIp);
+        }
+        if (source.MachinePrivateIp != null) {
+            this.MachinePrivateIp = new String(source.MachinePrivateIp);
+        }
+        if (source.MachineTag != null) {
+            this.MachineTag = new MachineTag[source.MachineTag.length];
+            for (int i = 0; i < source.MachineTag.length; i++) {
+                this.MachineTag[i] = new MachineTag(source.MachineTag[i]);
+            }
+        }
+        if (source.Quuid != null) {
+            this.Quuid = new String(source.Quuid);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

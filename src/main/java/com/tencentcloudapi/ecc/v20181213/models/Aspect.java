@@ -91,6 +91,26 @@ public class Aspect extends AbstractModel{
         this.Percentage = Percentage;
     }
 
+    public Aspect() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Aspect(Aspect source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Score != null) {
+            this.Score = new Float(source.Score);
+        }
+        if (source.Percentage != null) {
+            this.Percentage = new Float(source.Percentage);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

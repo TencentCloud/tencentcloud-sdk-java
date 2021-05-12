@@ -91,6 +91,29 @@ public class DescribeManagersResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeManagersResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeManagersResponse(DescribeManagersResponse source) {
+        if (source.Managers != null) {
+            this.Managers = new ManagerInfo[source.Managers.length];
+            for (int i = 0; i < source.Managers.length; i++) {
+                this.Managers[i] = new ManagerInfo(source.Managers[i]);
+            }
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

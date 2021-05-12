@@ -170,6 +170,35 @@ public class ServiceEnvironmentStrategy extends AbstractModel{
         this.MaxStrategy = MaxStrategy;
     }
 
+    public ServiceEnvironmentStrategy() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ServiceEnvironmentStrategy(ServiceEnvironmentStrategy source) {
+        if (source.EnvironmentName != null) {
+            this.EnvironmentName = new String(source.EnvironmentName);
+        }
+        if (source.Url != null) {
+            this.Url = new String(source.Url);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.VersionName != null) {
+            this.VersionName = new String(source.VersionName);
+        }
+        if (source.Strategy != null) {
+            this.Strategy = new Long(source.Strategy);
+        }
+        if (source.MaxStrategy != null) {
+            this.MaxStrategy = new Long(source.MaxStrategy);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

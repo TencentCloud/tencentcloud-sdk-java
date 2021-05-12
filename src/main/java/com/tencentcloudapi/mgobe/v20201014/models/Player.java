@@ -183,6 +183,38 @@ public class Player extends AbstractModel{
         this.CustomProfile = CustomProfile;
     }
 
+    public Player() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Player(Player source) {
+        if (source.OpenId != null) {
+            this.OpenId = new String(source.OpenId);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.TeamId != null) {
+            this.TeamId = new String(source.TeamId);
+        }
+        if (source.IsRobot != null) {
+            this.IsRobot = new Boolean(source.IsRobot);
+        }
+        if (source.PlayerId != null) {
+            this.PlayerId = new String(source.PlayerId);
+        }
+        if (source.CustomPlayerStatus != null) {
+            this.CustomPlayerStatus = new Long(source.CustomPlayerStatus);
+        }
+        if (source.CustomProfile != null) {
+            this.CustomProfile = new String(source.CustomProfile);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

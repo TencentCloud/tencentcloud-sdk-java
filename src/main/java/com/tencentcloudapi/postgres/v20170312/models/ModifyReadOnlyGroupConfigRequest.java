@@ -206,6 +206,41 @@ public class ModifyReadOnlyGroupConfigRequest extends AbstractModel{
         this.MinDelayEliminateReserve = MinDelayEliminateReserve;
     }
 
+    public ModifyReadOnlyGroupConfigRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyReadOnlyGroupConfigRequest(ModifyReadOnlyGroupConfigRequest source) {
+        if (source.ReadOnlyGroupId != null) {
+            this.ReadOnlyGroupId = new String(source.ReadOnlyGroupId);
+        }
+        if (source.ReadOnlyGroupName != null) {
+            this.ReadOnlyGroupName = new String(source.ReadOnlyGroupName);
+        }
+        if (source.ReplayLagEliminate != null) {
+            this.ReplayLagEliminate = new Long(source.ReplayLagEliminate);
+        }
+        if (source.ReplayLatencyEliminate != null) {
+            this.ReplayLatencyEliminate = new Long(source.ReplayLatencyEliminate);
+        }
+        if (source.MaxReplayLatency != null) {
+            this.MaxReplayLatency = new Long(source.MaxReplayLatency);
+        }
+        if (source.MaxReplayLag != null) {
+            this.MaxReplayLag = new Long(source.MaxReplayLag);
+        }
+        if (source.Rebalance != null) {
+            this.Rebalance = new Long(source.Rebalance);
+        }
+        if (source.MinDelayEliminateReserve != null) {
+            this.MinDelayEliminateReserve = new Long(source.MinDelayEliminateReserve);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

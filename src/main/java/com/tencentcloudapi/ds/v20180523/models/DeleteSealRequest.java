@@ -114,6 +114,29 @@ public class DeleteSealRequest extends AbstractModel{
         this.SealResId = SealResId;
     }
 
+    public DeleteSealRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteSealRequest(DeleteSealRequest source) {
+        if (source.Module != null) {
+            this.Module = new String(source.Module);
+        }
+        if (source.Operation != null) {
+            this.Operation = new String(source.Operation);
+        }
+        if (source.AccountResId != null) {
+            this.AccountResId = new String(source.AccountResId);
+        }
+        if (source.SealResId != null) {
+            this.SealResId = new String(source.SealResId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

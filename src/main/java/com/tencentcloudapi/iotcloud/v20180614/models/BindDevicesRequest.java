@@ -137,6 +137,35 @@ public class BindDevicesRequest extends AbstractModel{
         this.Skey = Skey;
     }
 
+    public BindDevicesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public BindDevicesRequest(BindDevicesRequest source) {
+        if (source.GatewayProductId != null) {
+            this.GatewayProductId = new String(source.GatewayProductId);
+        }
+        if (source.GatewayDeviceName != null) {
+            this.GatewayDeviceName = new String(source.GatewayDeviceName);
+        }
+        if (source.ProductId != null) {
+            this.ProductId = new String(source.ProductId);
+        }
+        if (source.DeviceNames != null) {
+            this.DeviceNames = new String[source.DeviceNames.length];
+            for (int i = 0; i < source.DeviceNames.length; i++) {
+                this.DeviceNames[i] = new String(source.DeviceNames[i]);
+            }
+        }
+        if (source.Skey != null) {
+            this.Skey = new String(source.Skey);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

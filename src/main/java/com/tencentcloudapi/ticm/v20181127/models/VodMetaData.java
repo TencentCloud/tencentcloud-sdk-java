@@ -330,6 +330,56 @@ public class VodMetaData extends AbstractModel{
         this.AudioDuration = AudioDuration;
     }
 
+    public VodMetaData() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public VodMetaData(VodMetaData source) {
+        if (source.Size != null) {
+            this.Size = new Long(source.Size);
+        }
+        if (source.Container != null) {
+            this.Container = new String(source.Container);
+        }
+        if (source.Bitrate != null) {
+            this.Bitrate = new Long(source.Bitrate);
+        }
+        if (source.Height != null) {
+            this.Height = new Long(source.Height);
+        }
+        if (source.Width != null) {
+            this.Width = new Long(source.Width);
+        }
+        if (source.Duration != null) {
+            this.Duration = new Float(source.Duration);
+        }
+        if (source.Rotate != null) {
+            this.Rotate = new Long(source.Rotate);
+        }
+        if (source.VideoStreamSet != null) {
+            this.VideoStreamSet = new VodVideoStreamItem[source.VideoStreamSet.length];
+            for (int i = 0; i < source.VideoStreamSet.length; i++) {
+                this.VideoStreamSet[i] = new VodVideoStreamItem(source.VideoStreamSet[i]);
+            }
+        }
+        if (source.AudioStreamSet != null) {
+            this.AudioStreamSet = new VodAudioStreamItem[source.AudioStreamSet.length];
+            for (int i = 0; i < source.AudioStreamSet.length; i++) {
+                this.AudioStreamSet[i] = new VodAudioStreamItem(source.AudioStreamSet[i]);
+            }
+        }
+        if (source.VideoDuration != null) {
+            this.VideoDuration = new Float(source.VideoDuration);
+        }
+        if (source.AudioDuration != null) {
+            this.AudioDuration = new Float(source.AudioDuration);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

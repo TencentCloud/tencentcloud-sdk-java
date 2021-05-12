@@ -570,6 +570,65 @@ SdkAppID = 12345678，RoomID = 12345，PushUserID = push_user_1
         this.ExtraData = ExtraData;
     }
 
+    public StartWhiteboardPushRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public StartWhiteboardPushRequest(StartWhiteboardPushRequest source) {
+        if (source.SdkAppId != null) {
+            this.SdkAppId = new Long(source.SdkAppId);
+        }
+        if (source.RoomId != null) {
+            this.RoomId = new Long(source.RoomId);
+        }
+        if (source.PushUserId != null) {
+            this.PushUserId = new String(source.PushUserId);
+        }
+        if (source.PushUserSig != null) {
+            this.PushUserSig = new String(source.PushUserSig);
+        }
+        if (source.Whiteboard != null) {
+            this.Whiteboard = new Whiteboard(source.Whiteboard);
+        }
+        if (source.AutoStopTimeout != null) {
+            this.AutoStopTimeout = new Long(source.AutoStopTimeout);
+        }
+        if (source.AutoManageBackup != null) {
+            this.AutoManageBackup = new Boolean(source.AutoManageBackup);
+        }
+        if (source.Backup != null) {
+            this.Backup = new WhiteboardPushBackupParam(source.Backup);
+        }
+        if (source.PrivateMapKey != null) {
+            this.PrivateMapKey = new String(source.PrivateMapKey);
+        }
+        if (source.VideoFPS != null) {
+            this.VideoFPS = new Long(source.VideoFPS);
+        }
+        if (source.VideoBitrate != null) {
+            this.VideoBitrate = new Long(source.VideoBitrate);
+        }
+        if (source.AutoRecord != null) {
+            this.AutoRecord = new Boolean(source.AutoRecord);
+        }
+        if (source.UserDefinedRecordId != null) {
+            this.UserDefinedRecordId = new String(source.UserDefinedRecordId);
+        }
+        if (source.AutoPublish != null) {
+            this.AutoPublish = new Boolean(source.AutoPublish);
+        }
+        if (source.UserDefinedStreamId != null) {
+            this.UserDefinedStreamId = new String(source.UserDefinedStreamId);
+        }
+        if (source.ExtraData != null) {
+            this.ExtraData = new String(source.ExtraData);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

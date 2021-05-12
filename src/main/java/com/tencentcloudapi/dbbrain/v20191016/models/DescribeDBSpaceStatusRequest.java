@@ -91,6 +91,26 @@ public class DescribeDBSpaceStatusRequest extends AbstractModel{
         this.Product = Product;
     }
 
+    public DescribeDBSpaceStatusRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeDBSpaceStatusRequest(DescribeDBSpaceStatusRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.RangeDays != null) {
+            this.RangeDays = new Long(source.RangeDays);
+        }
+        if (source.Product != null) {
+            this.Product = new String(source.Product);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

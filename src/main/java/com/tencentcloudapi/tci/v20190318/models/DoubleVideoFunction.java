@@ -45,6 +45,20 @@ public class DoubleVideoFunction extends AbstractModel{
         this.EnableCoverPictures = EnableCoverPictures;
     }
 
+    public DoubleVideoFunction() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DoubleVideoFunction(DoubleVideoFunction source) {
+        if (source.EnableCoverPictures != null) {
+            this.EnableCoverPictures = new Boolean(source.EnableCoverPictures);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

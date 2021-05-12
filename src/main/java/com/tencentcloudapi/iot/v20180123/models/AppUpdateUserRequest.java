@@ -68,6 +68,23 @@ public class AppUpdateUserRequest extends AbstractModel{
         this.NickName = NickName;
     }
 
+    public AppUpdateUserRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AppUpdateUserRequest(AppUpdateUserRequest source) {
+        if (source.AccessToken != null) {
+            this.AccessToken = new String(source.AccessToken);
+        }
+        if (source.NickName != null) {
+            this.NickName = new String(source.NickName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -229,6 +229,50 @@ public class SubmitImageTaskRequest extends AbstractModel{
         this.SimThreshold = SimThreshold;
     }
 
+    public SubmitImageTaskRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SubmitImageTaskRequest(SubmitImageTaskRequest source) {
+        if (source.FileContent != null) {
+            this.FileContent = new String(source.FileContent);
+        }
+        if (source.FileType != null) {
+            this.FileType = new String(source.FileType);
+        }
+        if (source.Functions != null) {
+            this.Functions = new ImageTaskFunction(source.Functions);
+        }
+        if (source.LightStandardSet != null) {
+            this.LightStandardSet = new LightStandard[source.LightStandardSet.length];
+            for (int i = 0; i < source.LightStandardSet.length; i++) {
+                this.LightStandardSet[i] = new LightStandard(source.LightStandardSet[i]);
+            }
+        }
+        if (source.EventsCallBack != null) {
+            this.EventsCallBack = new String(source.EventsCallBack);
+        }
+        if (source.FrameInterval != null) {
+            this.FrameInterval = new Long(source.FrameInterval);
+        }
+        if (source.LibrarySet != null) {
+            this.LibrarySet = new String[source.LibrarySet.length];
+            for (int i = 0; i < source.LibrarySet.length; i++) {
+                this.LibrarySet[i] = new String(source.LibrarySet[i]);
+            }
+        }
+        if (source.MaxVideoDuration != null) {
+            this.MaxVideoDuration = new Long(source.MaxVideoDuration);
+        }
+        if (source.SimThreshold != null) {
+            this.SimThreshold = new Float(source.SimThreshold);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

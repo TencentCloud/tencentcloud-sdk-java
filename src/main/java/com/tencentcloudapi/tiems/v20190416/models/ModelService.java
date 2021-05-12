@@ -670,6 +670,98 @@ public class ModelService extends AbstractModel{
         this.LogTopicId = LogTopicId;
     }
 
+    public ModelService() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModelService(ModelService source) {
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
+        if (source.Cluster != null) {
+            this.Cluster = new String(source.Cluster);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Runtime != null) {
+            this.Runtime = new String(source.Runtime);
+        }
+        if (source.ModelUri != null) {
+            this.ModelUri = new String(source.ModelUri);
+        }
+        if (source.Cpu != null) {
+            this.Cpu = new Long(source.Cpu);
+        }
+        if (source.Memory != null) {
+            this.Memory = new Long(source.Memory);
+        }
+        if (source.Gpu != null) {
+            this.Gpu = new Long(source.Gpu);
+        }
+        if (source.GpuMemory != null) {
+            this.GpuMemory = new Long(source.GpuMemory);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new String(source.UpdateTime);
+        }
+        if (source.ScaleMode != null) {
+            this.ScaleMode = new String(source.ScaleMode);
+        }
+        if (source.Scaler != null) {
+            this.Scaler = new Scaler(source.Scaler);
+        }
+        if (source.Status != null) {
+            this.Status = new ServiceStatus(source.Status);
+        }
+        if (source.AccessToken != null) {
+            this.AccessToken = new String(source.AccessToken);
+        }
+        if (source.ConfigId != null) {
+            this.ConfigId = new String(source.ConfigId);
+        }
+        if (source.ConfigName != null) {
+            this.ConfigName = new String(source.ConfigName);
+        }
+        if (source.ServeSeconds != null) {
+            this.ServeSeconds = new Long(source.ServeSeconds);
+        }
+        if (source.ConfigVersion != null) {
+            this.ConfigVersion = new String(source.ConfigVersion);
+        }
+        if (source.ResourceGroupId != null) {
+            this.ResourceGroupId = new String(source.ResourceGroupId);
+        }
+        if (source.Exposes != null) {
+            this.Exposes = new ExposeInfo[source.Exposes.length];
+            for (int i = 0; i < source.Exposes.length; i++) {
+                this.Exposes[i] = new ExposeInfo(source.Exposes[i]);
+            }
+        }
+        if (source.Region != null) {
+            this.Region = new String(source.Region);
+        }
+        if (source.ResourceGroupName != null) {
+            this.ResourceGroupName = new String(source.ResourceGroupName);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.GpuType != null) {
+            this.GpuType = new String(source.GpuType);
+        }
+        if (source.LogTopicId != null) {
+            this.LogTopicId = new String(source.LogTopicId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -229,6 +229,50 @@ public class SubmitHighlightsRequest extends AbstractModel{
         this.SimThreshold = SimThreshold;
     }
 
+    public SubmitHighlightsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SubmitHighlightsRequest(SubmitHighlightsRequest source) {
+        if (source.Functions != null) {
+            this.Functions = new HLFunction(source.Functions);
+        }
+        if (source.FileContent != null) {
+            this.FileContent = new String(source.FileContent);
+        }
+        if (source.FileType != null) {
+            this.FileType = new String(source.FileType);
+        }
+        if (source.LibIds != null) {
+            this.LibIds = new String[source.LibIds.length];
+            for (int i = 0; i < source.LibIds.length; i++) {
+                this.LibIds[i] = new String(source.LibIds[i]);
+            }
+        }
+        if (source.FrameInterval != null) {
+            this.FrameInterval = new Long(source.FrameInterval);
+        }
+        if (source.KeywordsLanguage != null) {
+            this.KeywordsLanguage = new Long(source.KeywordsLanguage);
+        }
+        if (source.KeywordsStrings != null) {
+            this.KeywordsStrings = new String[source.KeywordsStrings.length];
+            for (int i = 0; i < source.KeywordsStrings.length; i++) {
+                this.KeywordsStrings[i] = new String(source.KeywordsStrings[i]);
+            }
+        }
+        if (source.MaxVideoDuration != null) {
+            this.MaxVideoDuration = new Long(source.MaxVideoDuration);
+        }
+        if (source.SimThreshold != null) {
+            this.SimThreshold = new Float(source.SimThreshold);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

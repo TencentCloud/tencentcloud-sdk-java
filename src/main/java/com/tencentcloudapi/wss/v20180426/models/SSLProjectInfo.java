@@ -190,6 +190,35 @@ public class SSLProjectInfo extends AbstractModel{
         this.Info = Info;
     }
 
+    public SSLProjectInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SSLProjectInfo(SSLProjectInfo source) {
+        if (source.ProjectId != null) {
+            this.ProjectId = new String(source.ProjectId);
+        }
+        if (source.OwnerUin != null) {
+            this.OwnerUin = new Long(source.OwnerUin);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.CreatorUin != null) {
+            this.CreatorUin = new Long(source.CreatorUin);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.Info != null) {
+            this.Info = new String(source.Info);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

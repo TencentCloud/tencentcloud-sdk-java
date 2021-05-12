@@ -333,6 +333,38 @@ AreaId为4的时候，IspId只能为其他。如有改动，需同时传入AreaI
         this.EndTime = EndTime;
     }
 
+    public ModifyPullStreamConfigRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyPullStreamConfigRequest(ModifyPullStreamConfigRequest source) {
+        if (source.ConfigId != null) {
+            this.ConfigId = new String(source.ConfigId);
+        }
+        if (source.FromUrl != null) {
+            this.FromUrl = new String(source.FromUrl);
+        }
+        if (source.ToUrl != null) {
+            this.ToUrl = new String(source.ToUrl);
+        }
+        if (source.AreaId != null) {
+            this.AreaId = new Long(source.AreaId);
+        }
+        if (source.IspId != null) {
+            this.IspId = new Long(source.IspId);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

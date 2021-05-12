@@ -481,6 +481,77 @@ public class NodePool extends AbstractModel{
         this.UserScript = UserScript;
     }
 
+    public NodePool() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public NodePool(NodePool source) {
+        if (source.NodePoolId != null) {
+            this.NodePoolId = new String(source.NodePoolId);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.ClusterInstanceId != null) {
+            this.ClusterInstanceId = new String(source.ClusterInstanceId);
+        }
+        if (source.LifeState != null) {
+            this.LifeState = new String(source.LifeState);
+        }
+        if (source.LaunchConfigurationId != null) {
+            this.LaunchConfigurationId = new String(source.LaunchConfigurationId);
+        }
+        if (source.AutoscalingGroupId != null) {
+            this.AutoscalingGroupId = new String(source.AutoscalingGroupId);
+        }
+        if (source.Labels != null) {
+            this.Labels = new Label[source.Labels.length];
+            for (int i = 0; i < source.Labels.length; i++) {
+                this.Labels[i] = new Label(source.Labels[i]);
+            }
+        }
+        if (source.Taints != null) {
+            this.Taints = new Taint[source.Taints.length];
+            for (int i = 0; i < source.Taints.length; i++) {
+                this.Taints[i] = new Taint(source.Taints[i]);
+            }
+        }
+        if (source.NodeCountSummary != null) {
+            this.NodeCountSummary = new NodeCountSummary(source.NodeCountSummary);
+        }
+        if (source.AutoscalingGroupStatus != null) {
+            this.AutoscalingGroupStatus = new String(source.AutoscalingGroupStatus);
+        }
+        if (source.MaxNodesNum != null) {
+            this.MaxNodesNum = new Long(source.MaxNodesNum);
+        }
+        if (source.MinNodesNum != null) {
+            this.MinNodesNum = new Long(source.MinNodesNum);
+        }
+        if (source.DesiredNodesNum != null) {
+            this.DesiredNodesNum = new Long(source.DesiredNodesNum);
+        }
+        if (source.NodePoolOs != null) {
+            this.NodePoolOs = new String(source.NodePoolOs);
+        }
+        if (source.OsCustomizeType != null) {
+            this.OsCustomizeType = new String(source.OsCustomizeType);
+        }
+        if (source.ImageId != null) {
+            this.ImageId = new String(source.ImageId);
+        }
+        if (source.DesiredPodNum != null) {
+            this.DesiredPodNum = new Long(source.DesiredPodNum);
+        }
+        if (source.UserScript != null) {
+            this.UserScript = new String(source.UserScript);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

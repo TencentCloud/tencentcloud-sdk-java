@@ -106,6 +106,26 @@ AttributeItem对应的Type为 —— 0：黑色，1：金色，2：棕色，3：
         this.Color = Color;
     }
 
+    public Hair() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Hair(Hair source) {
+        if (source.Length != null) {
+            this.Length = new AttributeItem(source.Length);
+        }
+        if (source.Bang != null) {
+            this.Bang = new AttributeItem(source.Bang);
+        }
+        if (source.Color != null) {
+            this.Color = new AttributeItem(source.Color);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -45,6 +45,20 @@ public class EPAResponse extends AbstractModel{
         this.RetCode = RetCode;
     }
 
+    public EPAResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public EPAResponse(EPAResponse source) {
+        if (source.RetCode != null) {
+            this.RetCode = new Long(source.RetCode);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

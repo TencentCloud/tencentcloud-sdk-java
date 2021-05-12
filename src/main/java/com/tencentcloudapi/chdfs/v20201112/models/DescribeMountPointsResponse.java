@@ -68,6 +68,26 @@ public class DescribeMountPointsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeMountPointsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeMountPointsResponse(DescribeMountPointsResponse source) {
+        if (source.MountPoints != null) {
+            this.MountPoints = new MountPoint[source.MountPoints.length];
+            for (int i = 0; i < source.MountPoints.length; i++) {
+                this.MountPoints[i] = new MountPoint(source.MountPoints[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

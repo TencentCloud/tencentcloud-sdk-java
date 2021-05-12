@@ -218,6 +218,41 @@ public class DiagnoseInfo extends AbstractModel{
         this.Area = Area;
     }
 
+    public DiagnoseInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DiagnoseInfo(DiagnoseInfo source) {
+        if (source.DiagnoseUrl != null) {
+            this.DiagnoseUrl = new String(source.DiagnoseUrl);
+        }
+        if (source.DiagnoseLink != null) {
+            this.DiagnoseLink = new String(source.DiagnoseLink);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.ExpireDate != null) {
+            this.ExpireDate = new String(source.ExpireDate);
+        }
+        if (source.VisitCount != null) {
+            this.VisitCount = new Long(source.VisitCount);
+        }
+        if (source.ClientList != null) {
+            this.ClientList = new DiagnoseList[source.ClientList.length];
+            for (int i = 0; i < source.ClientList.length; i++) {
+                this.ClientList[i] = new DiagnoseList(source.ClientList[i]);
+            }
+        }
+        if (source.Area != null) {
+            this.Area = new String(source.Area);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -68,6 +68,23 @@ public class CreateEmailTemplateRequest extends AbstractModel{
         this.TemplateContent = TemplateContent;
     }
 
+    public CreateEmailTemplateRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateEmailTemplateRequest(CreateEmailTemplateRequest source) {
+        if (source.TemplateName != null) {
+            this.TemplateName = new String(source.TemplateName);
+        }
+        if (source.TemplateContent != null) {
+            this.TemplateContent = new TemplateContent(source.TemplateContent);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

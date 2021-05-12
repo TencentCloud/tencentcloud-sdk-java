@@ -160,6 +160,35 @@ public class ControlDeviceDataRequest extends AbstractModel{
         this.DataTimestamp = DataTimestamp;
     }
 
+    public ControlDeviceDataRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ControlDeviceDataRequest(ControlDeviceDataRequest source) {
+        if (source.ProductId != null) {
+            this.ProductId = new String(source.ProductId);
+        }
+        if (source.DeviceName != null) {
+            this.DeviceName = new String(source.DeviceName);
+        }
+        if (source.Data != null) {
+            this.Data = new String(source.Data);
+        }
+        if (source.Method != null) {
+            this.Method = new String(source.Method);
+        }
+        if (source.DeviceId != null) {
+            this.DeviceId = new String(source.DeviceId);
+        }
+        if (source.DataTimestamp != null) {
+            this.DataTimestamp = new Long(source.DataTimestamp);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -68,6 +68,26 @@ public class GetRequestTargetNodeTypesResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public GetRequestTargetNodeTypesResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GetRequestTargetNodeTypesResponse(GetRequestTargetNodeTypesResponse source) {
+        if (source.TargetNodeTypes != null) {
+            this.TargetNodeTypes = new String[source.TargetNodeTypes.length];
+            for (int i = 0; i < source.TargetNodeTypes.length; i++) {
+                this.TargetNodeTypes[i] = new String(source.TargetNodeTypes[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

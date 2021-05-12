@@ -68,6 +68,26 @@ public class CodeDetect extends AbstractModel{
         this.ModerationCode = ModerationCode;
     }
 
+    public CodeDetect() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CodeDetect(CodeDetect source) {
+        if (source.ModerationDetail != null) {
+            this.ModerationDetail = new CodeDetail[source.ModerationDetail.length];
+            for (int i = 0; i < source.ModerationDetail.length; i++) {
+                this.ModerationDetail[i] = new CodeDetail(source.ModerationDetail[i]);
+            }
+        }
+        if (source.ModerationCode != null) {
+            this.ModerationCode = new Long(source.ModerationCode);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

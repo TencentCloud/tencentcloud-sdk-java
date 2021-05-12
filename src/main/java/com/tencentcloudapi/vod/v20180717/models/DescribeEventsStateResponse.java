@@ -68,6 +68,23 @@ public class DescribeEventsStateResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeEventsStateResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeEventsStateResponse(DescribeEventsStateResponse source) {
+        if (source.CountOfEventsToPull != null) {
+            this.CountOfEventsToPull = new Long(source.CountOfEventsToPull);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

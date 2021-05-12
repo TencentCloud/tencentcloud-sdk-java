@@ -114,6 +114,29 @@ public class DescribeTagKeysRequest extends AbstractModel{
         this.ShowProject = ShowProject;
     }
 
+    public DescribeTagKeysRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeTagKeysRequest(DescribeTagKeysRequest source) {
+        if (source.CreateUin != null) {
+            this.CreateUin = new Long(source.CreateUin);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.ShowProject != null) {
+            this.ShowProject = new Long(source.ShowProject);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

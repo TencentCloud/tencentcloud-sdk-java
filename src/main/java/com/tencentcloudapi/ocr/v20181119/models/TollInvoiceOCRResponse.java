@@ -91,6 +91,29 @@ public class TollInvoiceOCRResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public TollInvoiceOCRResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TollInvoiceOCRResponse(TollInvoiceOCRResponse source) {
+        if (source.TollInvoiceInfos != null) {
+            this.TollInvoiceInfos = new TollInvoiceInfo[source.TollInvoiceInfos.length];
+            for (int i = 0; i < source.TollInvoiceInfos.length; i++) {
+                this.TollInvoiceInfos[i] = new TollInvoiceInfo(source.TollInvoiceInfos[i]);
+            }
+        }
+        if (source.Angle != null) {
+            this.Angle = new Float(source.Angle);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

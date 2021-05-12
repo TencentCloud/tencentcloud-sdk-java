@@ -165,6 +165,38 @@ public class QueryAntiFraudResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public QueryAntiFraudResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public QueryAntiFraudResponse(QueryAntiFraudResponse source) {
+        if (source.Found != null) {
+            this.Found = new Long(source.Found);
+        }
+        if (source.IdFound != null) {
+            this.IdFound = new Long(source.IdFound);
+        }
+        if (source.RiskScore != null) {
+            this.RiskScore = new Long(source.RiskScore);
+        }
+        if (source.RiskInfo != null) {
+            this.RiskInfo = new RiskDetail[source.RiskInfo.length];
+            for (int i = 0; i < source.RiskInfo.length; i++) {
+                this.RiskInfo[i] = new RiskDetail(source.RiskInfo[i]);
+            }
+        }
+        if (source.CodeDesc != null) {
+            this.CodeDesc = new String(source.CodeDesc);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

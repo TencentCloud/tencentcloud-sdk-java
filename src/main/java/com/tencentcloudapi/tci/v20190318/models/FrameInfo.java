@@ -91,6 +91,26 @@ public class FrameInfo extends AbstractModel{
         this.Ts = Ts;
     }
 
+    public FrameInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public FrameInfo(FrameInfo source) {
+        if (source.Similarity != null) {
+            this.Similarity = new Float(source.Similarity);
+        }
+        if (source.SnapshotUrl != null) {
+            this.SnapshotUrl = new String(source.SnapshotUrl);
+        }
+        if (source.Ts != null) {
+            this.Ts = new Long(source.Ts);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

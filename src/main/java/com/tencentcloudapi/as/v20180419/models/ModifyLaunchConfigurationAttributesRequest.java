@@ -429,6 +429,68 @@ public class ModifyLaunchConfigurationAttributesRequest extends AbstractModel{
         this.DataDisks = DataDisks;
     }
 
+    public ModifyLaunchConfigurationAttributesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyLaunchConfigurationAttributesRequest(ModifyLaunchConfigurationAttributesRequest source) {
+        if (source.LaunchConfigurationId != null) {
+            this.LaunchConfigurationId = new String(source.LaunchConfigurationId);
+        }
+        if (source.ImageId != null) {
+            this.ImageId = new String(source.ImageId);
+        }
+        if (source.InstanceTypes != null) {
+            this.InstanceTypes = new String[source.InstanceTypes.length];
+            for (int i = 0; i < source.InstanceTypes.length; i++) {
+                this.InstanceTypes[i] = new String(source.InstanceTypes[i]);
+            }
+        }
+        if (source.InstanceTypesCheckPolicy != null) {
+            this.InstanceTypesCheckPolicy = new String(source.InstanceTypesCheckPolicy);
+        }
+        if (source.LaunchConfigurationName != null) {
+            this.LaunchConfigurationName = new String(source.LaunchConfigurationName);
+        }
+        if (source.UserData != null) {
+            this.UserData = new String(source.UserData);
+        }
+        if (source.SecurityGroupIds != null) {
+            this.SecurityGroupIds = new String[source.SecurityGroupIds.length];
+            for (int i = 0; i < source.SecurityGroupIds.length; i++) {
+                this.SecurityGroupIds[i] = new String(source.SecurityGroupIds[i]);
+            }
+        }
+        if (source.InternetAccessible != null) {
+            this.InternetAccessible = new InternetAccessible(source.InternetAccessible);
+        }
+        if (source.InstanceChargeType != null) {
+            this.InstanceChargeType = new String(source.InstanceChargeType);
+        }
+        if (source.InstanceChargePrepaid != null) {
+            this.InstanceChargePrepaid = new InstanceChargePrepaid(source.InstanceChargePrepaid);
+        }
+        if (source.InstanceMarketOptions != null) {
+            this.InstanceMarketOptions = new InstanceMarketOptionsRequest(source.InstanceMarketOptions);
+        }
+        if (source.DiskTypePolicy != null) {
+            this.DiskTypePolicy = new String(source.DiskTypePolicy);
+        }
+        if (source.SystemDisk != null) {
+            this.SystemDisk = new SystemDisk(source.SystemDisk);
+        }
+        if (source.DataDisks != null) {
+            this.DataDisks = new DataDisk[source.DataDisks.length];
+            for (int i = 0; i < source.DataDisks.length; i++) {
+                this.DataDisks[i] = new DataDisk(source.DataDisks[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

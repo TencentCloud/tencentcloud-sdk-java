@@ -68,6 +68,23 @@ public class MonitorTypeNamespace extends AbstractModel{
         this.Namespace = Namespace;
     }
 
+    public MonitorTypeNamespace() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MonitorTypeNamespace(MonitorTypeNamespace source) {
+        if (source.MonitorType != null) {
+            this.MonitorType = new String(source.MonitorType);
+        }
+        if (source.Namespace != null) {
+            this.Namespace = new String(source.Namespace);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

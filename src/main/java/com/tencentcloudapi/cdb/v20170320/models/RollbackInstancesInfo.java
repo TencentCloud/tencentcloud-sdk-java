@@ -152,6 +152,38 @@ public class RollbackInstancesInfo extends AbstractModel{
         this.Tables = Tables;
     }
 
+    public RollbackInstancesInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RollbackInstancesInfo(RollbackInstancesInfo source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.Strategy != null) {
+            this.Strategy = new String(source.Strategy);
+        }
+        if (source.RollbackTime != null) {
+            this.RollbackTime = new String(source.RollbackTime);
+        }
+        if (source.Databases != null) {
+            this.Databases = new RollbackDBName[source.Databases.length];
+            for (int i = 0; i < source.Databases.length; i++) {
+                this.Databases[i] = new RollbackDBName(source.Databases[i]);
+            }
+        }
+        if (source.Tables != null) {
+            this.Tables = new RollbackTables[source.Tables.length];
+            for (int i = 0; i < source.Tables.length; i++) {
+                this.Tables[i] = new RollbackTables(source.Tables[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -198,6 +198,38 @@ public class QuerySmallAmountTransferResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public QuerySmallAmountTransferResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public QuerySmallAmountTransferResponse(QuerySmallAmountTransferResponse source) {
+        if (source.TxnReturnCode != null) {
+            this.TxnReturnCode = new String(source.TxnReturnCode);
+        }
+        if (source.TxnReturnMsg != null) {
+            this.TxnReturnMsg = new String(source.TxnReturnMsg);
+        }
+        if (source.CnsmrSeqNo != null) {
+            this.CnsmrSeqNo = new String(source.CnsmrSeqNo);
+        }
+        if (source.ReturnStatus != null) {
+            this.ReturnStatus = new String(source.ReturnStatus);
+        }
+        if (source.ReturnMsg != null) {
+            this.ReturnMsg = new String(source.ReturnMsg);
+        }
+        if (source.ReservedMsg != null) {
+            this.ReservedMsg = new String(source.ReservedMsg);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

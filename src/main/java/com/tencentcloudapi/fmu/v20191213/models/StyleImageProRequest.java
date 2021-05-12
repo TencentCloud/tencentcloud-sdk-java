@@ -167,6 +167,32 @@ public class StyleImageProRequest extends AbstractModel{
         this.RspImgType = RspImgType;
     }
 
+    public StyleImageProRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public StyleImageProRequest(StyleImageProRequest source) {
+        if (source.FilterType != null) {
+            this.FilterType = new Long(source.FilterType);
+        }
+        if (source.Image != null) {
+            this.Image = new String(source.Image);
+        }
+        if (source.Url != null) {
+            this.Url = new String(source.Url);
+        }
+        if (source.FilterDegree != null) {
+            this.FilterDegree = new Long(source.FilterDegree);
+        }
+        if (source.RspImgType != null) {
+            this.RspImgType = new String(source.RspImgType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

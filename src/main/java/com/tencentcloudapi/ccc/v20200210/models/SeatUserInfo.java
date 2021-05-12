@@ -193,6 +193,41 @@ public class SeatUserInfo extends AbstractModel{
         this.StaffNumber = StaffNumber;
     }
 
+    public SeatUserInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SeatUserInfo(SeatUserInfo source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Mail != null) {
+            this.Mail = new String(source.Mail);
+        }
+        if (source.Phone != null) {
+            this.Phone = new String(source.Phone);
+        }
+        if (source.Nick != null) {
+            this.Nick = new String(source.Nick);
+        }
+        if (source.UserId != null) {
+            this.UserId = new String(source.UserId);
+        }
+        if (source.SkillGroupNameList != null) {
+            this.SkillGroupNameList = new String[source.SkillGroupNameList.length];
+            for (int i = 0; i < source.SkillGroupNameList.length; i++) {
+                this.SkillGroupNameList[i] = new String(source.SkillGroupNameList[i]);
+            }
+        }
+        if (source.StaffNumber != null) {
+            this.StaffNumber = new String(source.StaffNumber);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

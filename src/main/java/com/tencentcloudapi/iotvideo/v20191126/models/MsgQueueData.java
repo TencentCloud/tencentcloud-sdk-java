@@ -137,6 +137,32 @@ public class MsgQueueData extends AbstractModel{
         this.MsgRegion = MsgRegion;
     }
 
+    public MsgQueueData() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MsgQueueData(MsgQueueData source) {
+        if (source.MsgQueueType != null) {
+            this.MsgQueueType = new Long(source.MsgQueueType);
+        }
+        if (source.MsgType != null) {
+            this.MsgType = new String(source.MsgType);
+        }
+        if (source.Topic != null) {
+            this.Topic = new String(source.Topic);
+        }
+        if (source.Instance != null) {
+            this.Instance = new String(source.Instance);
+        }
+        if (source.MsgRegion != null) {
+            this.MsgRegion = new String(source.MsgRegion);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

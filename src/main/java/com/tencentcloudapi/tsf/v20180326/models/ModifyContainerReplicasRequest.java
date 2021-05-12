@@ -68,6 +68,23 @@ public class ModifyContainerReplicasRequest extends AbstractModel{
         this.InstanceNum = InstanceNum;
     }
 
+    public ModifyContainerReplicasRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyContainerReplicasRequest(ModifyContainerReplicasRequest source) {
+        if (source.GroupId != null) {
+            this.GroupId = new String(source.GroupId);
+        }
+        if (source.InstanceNum != null) {
+            this.InstanceNum = new Long(source.InstanceNum);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

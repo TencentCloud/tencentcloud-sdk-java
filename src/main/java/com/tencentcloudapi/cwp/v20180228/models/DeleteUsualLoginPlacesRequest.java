@@ -68,6 +68,26 @@ public class DeleteUsualLoginPlacesRequest extends AbstractModel{
         this.CityIds = CityIds;
     }
 
+    public DeleteUsualLoginPlacesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteUsualLoginPlacesRequest(DeleteUsualLoginPlacesRequest source) {
+        if (source.Uuid != null) {
+            this.Uuid = new String(source.Uuid);
+        }
+        if (source.CityIds != null) {
+            this.CityIds = new Long[source.CityIds.length];
+            for (int i = 0; i < source.CityIds.length; i++) {
+                this.CityIds[i] = new Long(source.CityIds[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

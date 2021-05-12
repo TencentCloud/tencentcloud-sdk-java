@@ -45,6 +45,20 @@ public class StopTrainingJobRequest extends AbstractModel{
         this.TrainingJobName = TrainingJobName;
     }
 
+    public StopTrainingJobRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public StopTrainingJobRequest(StopTrainingJobRequest source) {
+        if (source.TrainingJobName != null) {
+            this.TrainingJobName = new String(source.TrainingJobName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

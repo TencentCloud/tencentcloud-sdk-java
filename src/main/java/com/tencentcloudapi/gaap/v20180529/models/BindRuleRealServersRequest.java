@@ -83,6 +83,26 @@ public class BindRuleRealServersRequest extends AbstractModel{
         this.RealServerBindSet = RealServerBindSet;
     }
 
+    public BindRuleRealServersRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public BindRuleRealServersRequest(BindRuleRealServersRequest source) {
+        if (source.RuleId != null) {
+            this.RuleId = new String(source.RuleId);
+        }
+        if (source.RealServerBindSet != null) {
+            this.RealServerBindSet = new RealServerBindSetReq[source.RealServerBindSet.length];
+            for (int i = 0; i < source.RealServerBindSet.length; i++) {
+                this.RealServerBindSet[i] = new RealServerBindSetReq(source.RealServerBindSet[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -735,6 +735,122 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
         this.AutoSyncFlag = AutoSyncFlag;
     }
 
+    public CreateDBInstanceHourRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateDBInstanceHourRequest(CreateDBInstanceHourRequest source) {
+        if (source.GoodsNum != null) {
+            this.GoodsNum = new Long(source.GoodsNum);
+        }
+        if (source.Memory != null) {
+            this.Memory = new Long(source.Memory);
+        }
+        if (source.Volume != null) {
+            this.Volume = new Long(source.Volume);
+        }
+        if (source.EngineVersion != null) {
+            this.EngineVersion = new String(source.EngineVersion);
+        }
+        if (source.UniqVpcId != null) {
+            this.UniqVpcId = new String(source.UniqVpcId);
+        }
+        if (source.UniqSubnetId != null) {
+            this.UniqSubnetId = new String(source.UniqSubnetId);
+        }
+        if (source.ProjectId != null) {
+            this.ProjectId = new Long(source.ProjectId);
+        }
+        if (source.Zone != null) {
+            this.Zone = new String(source.Zone);
+        }
+        if (source.MasterInstanceId != null) {
+            this.MasterInstanceId = new String(source.MasterInstanceId);
+        }
+        if (source.InstanceRole != null) {
+            this.InstanceRole = new String(source.InstanceRole);
+        }
+        if (source.MasterRegion != null) {
+            this.MasterRegion = new String(source.MasterRegion);
+        }
+        if (source.Port != null) {
+            this.Port = new Long(source.Port);
+        }
+        if (source.Password != null) {
+            this.Password = new String(source.Password);
+        }
+        if (source.ParamList != null) {
+            this.ParamList = new ParamInfo[source.ParamList.length];
+            for (int i = 0; i < source.ParamList.length; i++) {
+                this.ParamList[i] = new ParamInfo(source.ParamList[i]);
+            }
+        }
+        if (source.ProtectMode != null) {
+            this.ProtectMode = new Long(source.ProtectMode);
+        }
+        if (source.DeployMode != null) {
+            this.DeployMode = new Long(source.DeployMode);
+        }
+        if (source.SlaveZone != null) {
+            this.SlaveZone = new String(source.SlaveZone);
+        }
+        if (source.BackupZone != null) {
+            this.BackupZone = new String(source.BackupZone);
+        }
+        if (source.SecurityGroup != null) {
+            this.SecurityGroup = new String[source.SecurityGroup.length];
+            for (int i = 0; i < source.SecurityGroup.length; i++) {
+                this.SecurityGroup[i] = new String(source.SecurityGroup[i]);
+            }
+        }
+        if (source.RoGroup != null) {
+            this.RoGroup = new RoGroup(source.RoGroup);
+        }
+        if (source.AutoRenewFlag != null) {
+            this.AutoRenewFlag = new Long(source.AutoRenewFlag);
+        }
+        if (source.InstanceName != null) {
+            this.InstanceName = new String(source.InstanceName);
+        }
+        if (source.ResourceTags != null) {
+            this.ResourceTags = new TagInfo[source.ResourceTags.length];
+            for (int i = 0; i < source.ResourceTags.length; i++) {
+                this.ResourceTags[i] = new TagInfo(source.ResourceTags[i]);
+            }
+        }
+        if (source.DeployGroupId != null) {
+            this.DeployGroupId = new String(source.DeployGroupId);
+        }
+        if (source.ClientToken != null) {
+            this.ClientToken = new String(source.ClientToken);
+        }
+        if (source.DeviceType != null) {
+            this.DeviceType = new String(source.DeviceType);
+        }
+        if (source.ParamTemplateId != null) {
+            this.ParamTemplateId = new Long(source.ParamTemplateId);
+        }
+        if (source.AlarmPolicyList != null) {
+            this.AlarmPolicyList = new Long[source.AlarmPolicyList.length];
+            for (int i = 0; i < source.AlarmPolicyList.length; i++) {
+                this.AlarmPolicyList[i] = new Long(source.AlarmPolicyList[i]);
+            }
+        }
+        if (source.InstanceNodes != null) {
+            this.InstanceNodes = new Long(source.InstanceNodes);
+        }
+        if (source.Cpu != null) {
+            this.Cpu = new Long(source.Cpu);
+        }
+        if (source.AutoSyncFlag != null) {
+            this.AutoSyncFlag = new Long(source.AutoSyncFlag);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

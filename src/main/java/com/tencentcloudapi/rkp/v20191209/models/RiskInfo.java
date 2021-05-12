@@ -73,6 +73,23 @@ public class RiskInfo extends AbstractModel{
         this.Value = Value;
     }
 
+    public RiskInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RiskInfo(RiskInfo source) {
+        if (source.Key != null) {
+            this.Key = new Long(source.Key);
+        }
+        if (source.Value != null) {
+            this.Value = new String(source.Value);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

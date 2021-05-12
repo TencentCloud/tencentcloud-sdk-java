@@ -137,6 +137,32 @@ public class MRLResponse extends AbstractModel{
         this.CheatLevel = CheatLevel;
     }
 
+    public MRLResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MRLResponse(MRLResponse source) {
+        if (source.DisturbLevel != null) {
+            this.DisturbLevel = new Long(source.DisturbLevel);
+        }
+        if (source.HouseAgentLevel != null) {
+            this.HouseAgentLevel = new Long(source.HouseAgentLevel);
+        }
+        if (source.InsuranceLevel != null) {
+            this.InsuranceLevel = new Long(source.InsuranceLevel);
+        }
+        if (source.SalesLevel != null) {
+            this.SalesLevel = new Long(source.SalesLevel);
+        }
+        if (source.CheatLevel != null) {
+            this.CheatLevel = new Long(source.CheatLevel);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

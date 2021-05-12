@@ -96,6 +96,29 @@ public class DescribeInternalEndpointsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeInternalEndpointsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeInternalEndpointsResponse(DescribeInternalEndpointsResponse source) {
+        if (source.AccessVpcSet != null) {
+            this.AccessVpcSet = new AccessVpc[source.AccessVpcSet.length];
+            for (int i = 0; i < source.AccessVpcSet.length; i++) {
+                this.AccessVpcSet[i] = new AccessVpc(source.AccessVpcSet[i]);
+            }
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

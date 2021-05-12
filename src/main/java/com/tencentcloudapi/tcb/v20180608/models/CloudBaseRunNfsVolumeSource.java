@@ -137,6 +137,32 @@ public class CloudBaseRunNfsVolumeSource extends AbstractModel{
         this.EnableEmptyDirVolume = EnableEmptyDirVolume;
     }
 
+    public CloudBaseRunNfsVolumeSource() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CloudBaseRunNfsVolumeSource(CloudBaseRunNfsVolumeSource source) {
+        if (source.Server != null) {
+            this.Server = new String(source.Server);
+        }
+        if (source.Path != null) {
+            this.Path = new String(source.Path);
+        }
+        if (source.ReadOnly != null) {
+            this.ReadOnly = new Boolean(source.ReadOnly);
+        }
+        if (source.SecretName != null) {
+            this.SecretName = new String(source.SecretName);
+        }
+        if (source.EnableEmptyDirVolume != null) {
+            this.EnableEmptyDirVolume = new Boolean(source.EnableEmptyDirVolume);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

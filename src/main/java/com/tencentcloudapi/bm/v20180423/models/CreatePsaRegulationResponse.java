@@ -68,6 +68,23 @@ public class CreatePsaRegulationResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public CreatePsaRegulationResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreatePsaRegulationResponse(CreatePsaRegulationResponse source) {
+        if (source.PsaId != null) {
+            this.PsaId = new String(source.PsaId);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

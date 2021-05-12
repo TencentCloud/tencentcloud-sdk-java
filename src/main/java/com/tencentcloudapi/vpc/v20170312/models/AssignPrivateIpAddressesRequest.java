@@ -91,6 +91,29 @@ public class AssignPrivateIpAddressesRequest extends AbstractModel{
         this.SecondaryPrivateIpAddressCount = SecondaryPrivateIpAddressCount;
     }
 
+    public AssignPrivateIpAddressesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AssignPrivateIpAddressesRequest(AssignPrivateIpAddressesRequest source) {
+        if (source.NetworkInterfaceId != null) {
+            this.NetworkInterfaceId = new String(source.NetworkInterfaceId);
+        }
+        if (source.PrivateIpAddresses != null) {
+            this.PrivateIpAddresses = new PrivateIpAddressSpecification[source.PrivateIpAddresses.length];
+            for (int i = 0; i < source.PrivateIpAddresses.length; i++) {
+                this.PrivateIpAddresses[i] = new PrivateIpAddressSpecification(source.PrivateIpAddresses[i]);
+            }
+        }
+        if (source.SecondaryPrivateIpAddressCount != null) {
+            this.SecondaryPrivateIpAddressCount = new Long(source.SecondaryPrivateIpAddressCount);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -68,6 +68,23 @@ public class DescribeSmpnChpRequest extends AbstractModel{
         this.RequestData = RequestData;
     }
 
+    public DescribeSmpnChpRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeSmpnChpRequest(DescribeSmpnChpRequest source) {
+        if (source.ResourceId != null) {
+            this.ResourceId = new String(source.ResourceId);
+        }
+        if (source.RequestData != null) {
+            this.RequestData = new CHPRequest(source.RequestData);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

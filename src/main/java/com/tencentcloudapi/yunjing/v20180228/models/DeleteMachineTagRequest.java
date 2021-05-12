@@ -45,6 +45,20 @@ public class DeleteMachineTagRequest extends AbstractModel{
         this.Rid = Rid;
     }
 
+    public DeleteMachineTagRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteMachineTagRequest(DeleteMachineTagRequest source) {
+        if (source.Rid != null) {
+            this.Rid = new Long(source.Rid);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

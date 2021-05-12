@@ -137,6 +137,32 @@ public class ModifyVpcEndPointServiceAttributeRequest extends AbstractModel{
         this.ServiceInstanceId = ServiceInstanceId;
     }
 
+    public ModifyVpcEndPointServiceAttributeRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyVpcEndPointServiceAttributeRequest(ModifyVpcEndPointServiceAttributeRequest source) {
+        if (source.EndPointServiceId != null) {
+            this.EndPointServiceId = new String(source.EndPointServiceId);
+        }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.EndPointServiceName != null) {
+            this.EndPointServiceName = new String(source.EndPointServiceName);
+        }
+        if (source.AutoAcceptFlag != null) {
+            this.AutoAcceptFlag = new Boolean(source.AutoAcceptFlag);
+        }
+        if (source.ServiceInstanceId != null) {
+            this.ServiceInstanceId = new String(source.ServiceInstanceId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

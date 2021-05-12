@@ -91,6 +91,29 @@ public class DescribeRepositoriesResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeRepositoriesResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeRepositoriesResponse(DescribeRepositoriesResponse source) {
+        if (source.RepositoryList != null) {
+            this.RepositoryList = new TcrRepositoryInfo[source.RepositoryList.length];
+            for (int i = 0; i < source.RepositoryList.length; i++) {
+                this.RepositoryList[i] = new TcrRepositoryInfo(source.RepositoryList[i]);
+            }
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

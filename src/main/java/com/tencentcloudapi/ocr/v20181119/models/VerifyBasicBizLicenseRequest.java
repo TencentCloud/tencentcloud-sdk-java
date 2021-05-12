@@ -233,6 +233,38 @@ Config = {"Name":true,"Address":true}
         this.RegCapital = RegCapital;
     }
 
+    public VerifyBasicBizLicenseRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public VerifyBasicBizLicenseRequest(VerifyBasicBizLicenseRequest source) {
+        if (source.ImageBase64 != null) {
+            this.ImageBase64 = new String(source.ImageBase64);
+        }
+        if (source.ImageUrl != null) {
+            this.ImageUrl = new String(source.ImageUrl);
+        }
+        if (source.ImageConfig != null) {
+            this.ImageConfig = new String(source.ImageConfig);
+        }
+        if (source.RegNum != null) {
+            this.RegNum = new String(source.RegNum);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Address != null) {
+            this.Address = new String(source.Address);
+        }
+        if (source.RegCapital != null) {
+            this.RegCapital = new Long(source.RegCapital);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

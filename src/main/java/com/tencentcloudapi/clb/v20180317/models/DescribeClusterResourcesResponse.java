@@ -91,6 +91,29 @@ public class DescribeClusterResourcesResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeClusterResourcesResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeClusterResourcesResponse(DescribeClusterResourcesResponse source) {
+        if (source.ClusterResourceSet != null) {
+            this.ClusterResourceSet = new ClusterResource[source.ClusterResourceSet.length];
+            for (int i = 0; i < source.ClusterResourceSet.length; i++) {
+                this.ClusterResourceSet[i] = new ClusterResource(source.ClusterResourceSet[i]);
+            }
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

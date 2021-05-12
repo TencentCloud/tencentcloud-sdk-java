@@ -91,6 +91,29 @@ public class CreateCustomerGatewayRequest extends AbstractModel{
         this.Tags = Tags;
     }
 
+    public CreateCustomerGatewayRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateCustomerGatewayRequest(CreateCustomerGatewayRequest source) {
+        if (source.CustomerGatewayName != null) {
+            this.CustomerGatewayName = new String(source.CustomerGatewayName);
+        }
+        if (source.IpAddress != null) {
+            this.IpAddress = new String(source.IpAddress);
+        }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

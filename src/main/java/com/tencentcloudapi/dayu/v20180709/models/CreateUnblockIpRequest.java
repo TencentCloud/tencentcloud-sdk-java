@@ -68,6 +68,23 @@ public class CreateUnblockIpRequest extends AbstractModel{
         this.ActionType = ActionType;
     }
 
+    public CreateUnblockIpRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateUnblockIpRequest(CreateUnblockIpRequest source) {
+        if (source.Ip != null) {
+            this.Ip = new String(source.Ip);
+        }
+        if (source.ActionType != null) {
+            this.ActionType = new String(source.ActionType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

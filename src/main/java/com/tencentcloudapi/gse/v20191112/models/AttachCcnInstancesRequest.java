@@ -91,6 +91,26 @@ public class AttachCcnInstancesRequest extends AbstractModel{
         this.CcnId = CcnId;
     }
 
+    public AttachCcnInstancesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AttachCcnInstancesRequest(AttachCcnInstancesRequest source) {
+        if (source.FleetId != null) {
+            this.FleetId = new String(source.FleetId);
+        }
+        if (source.AccountId != null) {
+            this.AccountId = new String(source.AccountId);
+        }
+        if (source.CcnId != null) {
+            this.CcnId = new String(source.CcnId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

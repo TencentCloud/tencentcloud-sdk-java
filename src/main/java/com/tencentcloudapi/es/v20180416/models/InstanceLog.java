@@ -114,6 +114,29 @@ public class InstanceLog extends AbstractModel{
         this.Message = Message;
     }
 
+    public InstanceLog() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public InstanceLog(InstanceLog source) {
+        if (source.Time != null) {
+            this.Time = new String(source.Time);
+        }
+        if (source.Level != null) {
+            this.Level = new String(source.Level);
+        }
+        if (source.Ip != null) {
+            this.Ip = new String(source.Ip);
+        }
+        if (source.Message != null) {
+            this.Message = new String(source.Message);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

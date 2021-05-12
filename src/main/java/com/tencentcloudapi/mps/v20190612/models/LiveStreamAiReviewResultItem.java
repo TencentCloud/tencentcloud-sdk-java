@@ -157,6 +157,44 @@ public class LiveStreamAiReviewResultItem extends AbstractModel{
         this.VoicePornResultSet = VoicePornResultSet;
     }
 
+    public LiveStreamAiReviewResultItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public LiveStreamAiReviewResultItem(LiveStreamAiReviewResultItem source) {
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.ImagePornResultSet != null) {
+            this.ImagePornResultSet = new LiveStreamAiReviewImagePornResult[source.ImagePornResultSet.length];
+            for (int i = 0; i < source.ImagePornResultSet.length; i++) {
+                this.ImagePornResultSet[i] = new LiveStreamAiReviewImagePornResult(source.ImagePornResultSet[i]);
+            }
+        }
+        if (source.ImageTerrorismResultSet != null) {
+            this.ImageTerrorismResultSet = new LiveStreamAiReviewImageTerrorismResult[source.ImageTerrorismResultSet.length];
+            for (int i = 0; i < source.ImageTerrorismResultSet.length; i++) {
+                this.ImageTerrorismResultSet[i] = new LiveStreamAiReviewImageTerrorismResult(source.ImageTerrorismResultSet[i]);
+            }
+        }
+        if (source.ImagePoliticalResultSet != null) {
+            this.ImagePoliticalResultSet = new LiveStreamAiReviewImagePoliticalResult[source.ImagePoliticalResultSet.length];
+            for (int i = 0; i < source.ImagePoliticalResultSet.length; i++) {
+                this.ImagePoliticalResultSet[i] = new LiveStreamAiReviewImagePoliticalResult(source.ImagePoliticalResultSet[i]);
+            }
+        }
+        if (source.VoicePornResultSet != null) {
+            this.VoicePornResultSet = new LiveStreamAiReviewVoicePornResult[source.VoicePornResultSet.length];
+            for (int i = 0; i < source.VoicePornResultSet.length; i++) {
+                this.VoicePornResultSet[i] = new LiveStreamAiReviewVoicePornResult(source.VoicePornResultSet[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

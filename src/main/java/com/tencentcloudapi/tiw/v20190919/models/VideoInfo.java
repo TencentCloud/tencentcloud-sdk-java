@@ -277,6 +277,47 @@ public class VideoInfo extends AbstractModel{
         this.Height = Height;
     }
 
+    public VideoInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public VideoInfo(VideoInfo source) {
+        if (source.VideoPlayTime != null) {
+            this.VideoPlayTime = new Long(source.VideoPlayTime);
+        }
+        if (source.VideoSize != null) {
+            this.VideoSize = new Long(source.VideoSize);
+        }
+        if (source.VideoFormat != null) {
+            this.VideoFormat = new String(source.VideoFormat);
+        }
+        if (source.VideoDuration != null) {
+            this.VideoDuration = new Long(source.VideoDuration);
+        }
+        if (source.VideoUrl != null) {
+            this.VideoUrl = new String(source.VideoUrl);
+        }
+        if (source.VideoId != null) {
+            this.VideoId = new String(source.VideoId);
+        }
+        if (source.VideoType != null) {
+            this.VideoType = new Long(source.VideoType);
+        }
+        if (source.UserId != null) {
+            this.UserId = new String(source.UserId);
+        }
+        if (source.Width != null) {
+            this.Width = new Long(source.Width);
+        }
+        if (source.Height != null) {
+            this.Height = new Long(source.Height);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

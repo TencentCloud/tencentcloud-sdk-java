@@ -183,6 +183,38 @@ public class InstanceTypeConfig extends AbstractModel{
         this.FPGA = FPGA;
     }
 
+    public InstanceTypeConfig() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public InstanceTypeConfig(InstanceTypeConfig source) {
+        if (source.Zone != null) {
+            this.Zone = new String(source.Zone);
+        }
+        if (source.InstanceType != null) {
+            this.InstanceType = new String(source.InstanceType);
+        }
+        if (source.InstanceFamily != null) {
+            this.InstanceFamily = new String(source.InstanceFamily);
+        }
+        if (source.GPU != null) {
+            this.GPU = new Long(source.GPU);
+        }
+        if (source.CPU != null) {
+            this.CPU = new Long(source.CPU);
+        }
+        if (source.Memory != null) {
+            this.Memory = new Long(source.Memory);
+        }
+        if (source.FPGA != null) {
+            this.FPGA = new Long(source.FPGA);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

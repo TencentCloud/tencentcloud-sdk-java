@@ -160,6 +160,35 @@ public class DestinationIpPortTranslationNatRule extends AbstractModel{
         this.Description = Description;
     }
 
+    public DestinationIpPortTranslationNatRule() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DestinationIpPortTranslationNatRule(DestinationIpPortTranslationNatRule source) {
+        if (source.IpProtocol != null) {
+            this.IpProtocol = new String(source.IpProtocol);
+        }
+        if (source.PublicIpAddress != null) {
+            this.PublicIpAddress = new String(source.PublicIpAddress);
+        }
+        if (source.PublicPort != null) {
+            this.PublicPort = new Long(source.PublicPort);
+        }
+        if (source.PrivateIpAddress != null) {
+            this.PrivateIpAddress = new String(source.PrivateIpAddress);
+        }
+        if (source.PrivatePort != null) {
+            this.PrivatePort = new Long(source.PrivatePort);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -137,6 +137,35 @@ public class AbnormalExperience extends AbstractModel{
         this.EventTime = EventTime;
     }
 
+    public AbnormalExperience() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AbnormalExperience(AbnormalExperience source) {
+        if (source.UserId != null) {
+            this.UserId = new String(source.UserId);
+        }
+        if (source.ExperienceId != null) {
+            this.ExperienceId = new Long(source.ExperienceId);
+        }
+        if (source.RoomId != null) {
+            this.RoomId = new String(source.RoomId);
+        }
+        if (source.AbnormalEventList != null) {
+            this.AbnormalEventList = new AbnormalEvent[source.AbnormalEventList.length];
+            for (int i = 0; i < source.AbnormalEventList.length; i++) {
+                this.AbnormalEventList[i] = new AbnormalEvent(source.AbnormalEventList[i]);
+            }
+        }
+        if (source.EventTime != null) {
+            this.EventTime = new Long(source.EventTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

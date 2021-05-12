@@ -229,6 +229,44 @@ public class ECCRequest extends AbstractModel{
         this.SessionId = SessionId;
     }
 
+    public ECCRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ECCRequest(ECCRequest source) {
+        if (source.Content != null) {
+            this.Content = new String(source.Content);
+        }
+        if (source.Title != null) {
+            this.Title = new String(source.Title);
+        }
+        if (source.Grade != null) {
+            this.Grade = new String(source.Grade);
+        }
+        if (source.Requirement != null) {
+            this.Requirement = new String(source.Requirement);
+        }
+        if (source.ModelTitle != null) {
+            this.ModelTitle = new String(source.ModelTitle);
+        }
+        if (source.ModelContent != null) {
+            this.ModelContent = new String(source.ModelContent);
+        }
+        if (source.EccAppid != null) {
+            this.EccAppid = new String(source.EccAppid);
+        }
+        if (source.IsAsync != null) {
+            this.IsAsync = new Long(source.IsAsync);
+        }
+        if (source.SessionId != null) {
+            this.SessionId = new String(source.SessionId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

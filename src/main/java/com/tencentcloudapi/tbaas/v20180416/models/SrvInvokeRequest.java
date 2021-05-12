@@ -91,6 +91,26 @@ public class SrvInvokeRequest extends AbstractModel{
         this.Param = Param;
     }
 
+    public SrvInvokeRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SrvInvokeRequest(SrvInvokeRequest source) {
+        if (source.Service != null) {
+            this.Service = new String(source.Service);
+        }
+        if (source.Method != null) {
+            this.Method = new String(source.Method);
+        }
+        if (source.Param != null) {
+            this.Param = new String(source.Param);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

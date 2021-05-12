@@ -229,6 +229,62 @@ public class ModifyLoRaFrequencyRequest extends AbstractModel{
         this.ChannelsJoinRX2 = ChannelsJoinRX2;
     }
 
+    public ModifyLoRaFrequencyRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyLoRaFrequencyRequest(ModifyLoRaFrequencyRequest source) {
+        if (source.FreqId != null) {
+            this.FreqId = new String(source.FreqId);
+        }
+        if (source.FreqName != null) {
+            this.FreqName = new String(source.FreqName);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.ChannelsDataUp != null) {
+            this.ChannelsDataUp = new Long[source.ChannelsDataUp.length];
+            for (int i = 0; i < source.ChannelsDataUp.length; i++) {
+                this.ChannelsDataUp[i] = new Long(source.ChannelsDataUp[i]);
+            }
+        }
+        if (source.ChannelsDataRX1 != null) {
+            this.ChannelsDataRX1 = new Long[source.ChannelsDataRX1.length];
+            for (int i = 0; i < source.ChannelsDataRX1.length; i++) {
+                this.ChannelsDataRX1[i] = new Long(source.ChannelsDataRX1[i]);
+            }
+        }
+        if (source.ChannelsDataRX2 != null) {
+            this.ChannelsDataRX2 = new Long[source.ChannelsDataRX2.length];
+            for (int i = 0; i < source.ChannelsDataRX2.length; i++) {
+                this.ChannelsDataRX2[i] = new Long(source.ChannelsDataRX2[i]);
+            }
+        }
+        if (source.ChannelsJoinUp != null) {
+            this.ChannelsJoinUp = new Long[source.ChannelsJoinUp.length];
+            for (int i = 0; i < source.ChannelsJoinUp.length; i++) {
+                this.ChannelsJoinUp[i] = new Long(source.ChannelsJoinUp[i]);
+            }
+        }
+        if (source.ChannelsJoinRX1 != null) {
+            this.ChannelsJoinRX1 = new Long[source.ChannelsJoinRX1.length];
+            for (int i = 0; i < source.ChannelsJoinRX1.length; i++) {
+                this.ChannelsJoinRX1[i] = new Long(source.ChannelsJoinRX1[i]);
+            }
+        }
+        if (source.ChannelsJoinRX2 != null) {
+            this.ChannelsJoinRX2 = new Long[source.ChannelsJoinRX2.length];
+            for (int i = 0; i < source.ChannelsJoinRX2.length; i++) {
+                this.ChannelsJoinRX2[i] = new Long(source.ChannelsJoinRX2[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

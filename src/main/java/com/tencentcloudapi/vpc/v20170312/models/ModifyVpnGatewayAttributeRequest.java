@@ -91,6 +91,26 @@ public class ModifyVpnGatewayAttributeRequest extends AbstractModel{
         this.InstanceChargeType = InstanceChargeType;
     }
 
+    public ModifyVpnGatewayAttributeRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyVpnGatewayAttributeRequest(ModifyVpnGatewayAttributeRequest source) {
+        if (source.VpnGatewayId != null) {
+            this.VpnGatewayId = new String(source.VpnGatewayId);
+        }
+        if (source.VpnGatewayName != null) {
+            this.VpnGatewayName = new String(source.VpnGatewayName);
+        }
+        if (source.InstanceChargeType != null) {
+            this.InstanceChargeType = new String(source.InstanceChargeType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

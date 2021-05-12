@@ -236,6 +236,41 @@ public class PrometheusTemplateSyncTarget extends AbstractModel{
         this.ClusterName = ClusterName;
     }
 
+    public PrometheusTemplateSyncTarget() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PrometheusTemplateSyncTarget(PrometheusTemplateSyncTarget source) {
+        if (source.Region != null) {
+            this.Region = new String(source.Region);
+        }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
+        if (source.SyncTime != null) {
+            this.SyncTime = new String(source.SyncTime);
+        }
+        if (source.Version != null) {
+            this.Version = new String(source.Version);
+        }
+        if (source.ClusterType != null) {
+            this.ClusterType = new String(source.ClusterType);
+        }
+        if (source.InstanceName != null) {
+            this.InstanceName = new String(source.InstanceName);
+        }
+        if (source.ClusterName != null) {
+            this.ClusterName = new String(source.ClusterName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

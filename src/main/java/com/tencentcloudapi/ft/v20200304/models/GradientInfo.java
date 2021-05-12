@@ -68,6 +68,23 @@ public class GradientInfo extends AbstractModel{
         this.MorphTime = MorphTime;
     }
 
+    public GradientInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GradientInfo(GradientInfo source) {
+        if (source.Tempo != null) {
+            this.Tempo = new Float(source.Tempo);
+        }
+        if (source.MorphTime != null) {
+            this.MorphTime = new Float(source.MorphTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

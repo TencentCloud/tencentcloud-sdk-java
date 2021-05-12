@@ -68,6 +68,23 @@ public class DeleteContentReviewTemplateRequest extends AbstractModel{
         this.SubAppId = SubAppId;
     }
 
+    public DeleteContentReviewTemplateRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteContentReviewTemplateRequest(DeleteContentReviewTemplateRequest source) {
+        if (source.Definition != null) {
+            this.Definition = new Long(source.Definition);
+        }
+        if (source.SubAppId != null) {
+            this.SubAppId = new Long(source.SubAppId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

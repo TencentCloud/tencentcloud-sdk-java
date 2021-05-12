@@ -257,6 +257,47 @@ public class RepositoryInfoResp extends AbstractModel{
         this.IsQcloudOfficial = IsQcloudOfficial;
     }
 
+    public RepositoryInfoResp() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RepositoryInfoResp(RepositoryInfoResp source) {
+        if (source.RepoName != null) {
+            this.RepoName = new String(source.RepoName);
+        }
+        if (source.RepoType != null) {
+            this.RepoType = new String(source.RepoType);
+        }
+        if (source.Server != null) {
+            this.Server = new String(source.Server);
+        }
+        if (source.CreationTime != null) {
+            this.CreationTime = new String(source.CreationTime);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.Public != null) {
+            this.Public = new Long(source.Public);
+        }
+        if (source.PullCount != null) {
+            this.PullCount = new Long(source.PullCount);
+        }
+        if (source.FavorCount != null) {
+            this.FavorCount = new Long(source.FavorCount);
+        }
+        if (source.IsUserFavor != null) {
+            this.IsUserFavor = new Boolean(source.IsUserFavor);
+        }
+        if (source.IsQcloudOfficial != null) {
+            this.IsQcloudOfficial = new Boolean(source.IsQcloudOfficial);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

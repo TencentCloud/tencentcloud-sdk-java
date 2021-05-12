@@ -68,6 +68,23 @@ public class DescribeDeviceModelRequest extends AbstractModel{
         this.Branch = Branch;
     }
 
+    public DescribeDeviceModelRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeDeviceModelRequest(DescribeDeviceModelRequest source) {
+        if (source.Tid != null) {
+            this.Tid = new String(source.Tid);
+        }
+        if (source.Branch != null) {
+            this.Branch = new String(source.Branch);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

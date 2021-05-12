@@ -45,6 +45,20 @@ public class DescribeAlarmTopicRequest extends AbstractModel{
         this.NeedAdd = NeedAdd;
     }
 
+    public DescribeAlarmTopicRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeAlarmTopicRequest(DescribeAlarmTopicRequest source) {
+        if (source.NeedAdd != null) {
+            this.NeedAdd = new Long(source.NeedAdd);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

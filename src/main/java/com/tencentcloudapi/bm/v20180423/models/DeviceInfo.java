@@ -579,6 +579,92 @@ public class DeviceInfo extends AbstractModel{
         this.IsLuckyDevice = IsLuckyDevice;
     }
 
+    public DeviceInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeviceInfo(DeviceInfo source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.SubnetId != null) {
+            this.SubnetId = new String(source.SubnetId);
+        }
+        if (source.DeviceStatus != null) {
+            this.DeviceStatus = new Long(source.DeviceStatus);
+        }
+        if (source.OperateStatus != null) {
+            this.OperateStatus = new Long(source.OperateStatus);
+        }
+        if (source.OsTypeId != null) {
+            this.OsTypeId = new Long(source.OsTypeId);
+        }
+        if (source.RaidId != null) {
+            this.RaidId = new Long(source.RaidId);
+        }
+        if (source.Alias != null) {
+            this.Alias = new String(source.Alias);
+        }
+        if (source.AppId != null) {
+            this.AppId = new Long(source.AppId);
+        }
+        if (source.Zone != null) {
+            this.Zone = new String(source.Zone);
+        }
+        if (source.WanIp != null) {
+            this.WanIp = new String(source.WanIp);
+        }
+        if (source.LanIp != null) {
+            this.LanIp = new String(source.LanIp);
+        }
+        if (source.DeliverTime != null) {
+            this.DeliverTime = new String(source.DeliverTime);
+        }
+        if (source.Deadline != null) {
+            this.Deadline = new String(source.Deadline);
+        }
+        if (source.AutoRenewFlag != null) {
+            this.AutoRenewFlag = new Long(source.AutoRenewFlag);
+        }
+        if (source.DeviceClassCode != null) {
+            this.DeviceClassCode = new String(source.DeviceClassCode);
+        }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
+        if (source.CpmPayMode != null) {
+            this.CpmPayMode = new Long(source.CpmPayMode);
+        }
+        if (source.DhcpIp != null) {
+            this.DhcpIp = new String(source.DhcpIp);
+        }
+        if (source.VpcName != null) {
+            this.VpcName = new String(source.VpcName);
+        }
+        if (source.SubnetName != null) {
+            this.SubnetName = new String(source.SubnetName);
+        }
+        if (source.VpcCidrBlock != null) {
+            this.VpcCidrBlock = new String(source.VpcCidrBlock);
+        }
+        if (source.SubnetCidrBlock != null) {
+            this.SubnetCidrBlock = new String(source.SubnetCidrBlock);
+        }
+        if (source.IsLuckyDevice != null) {
+            this.IsLuckyDevice = new Long(source.IsLuckyDevice);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

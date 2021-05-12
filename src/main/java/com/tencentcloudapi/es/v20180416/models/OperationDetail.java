@@ -68,6 +68,29 @@ public class OperationDetail extends AbstractModel{
         this.NewInfo = NewInfo;
     }
 
+    public OperationDetail() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public OperationDetail(OperationDetail source) {
+        if (source.OldInfo != null) {
+            this.OldInfo = new KeyValue[source.OldInfo.length];
+            for (int i = 0; i < source.OldInfo.length; i++) {
+                this.OldInfo[i] = new KeyValue(source.OldInfo[i]);
+            }
+        }
+        if (source.NewInfo != null) {
+            this.NewInfo = new KeyValue[source.NewInfo.length];
+            for (int i = 0; i < source.NewInfo.length; i++) {
+                this.NewInfo[i] = new KeyValue(source.NewInfo[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

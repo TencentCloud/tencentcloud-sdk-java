@@ -114,6 +114,32 @@ public class DescribeMaintainPeriodResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeMaintainPeriodResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeMaintainPeriodResponse(DescribeMaintainPeriodResponse source) {
+        if (source.MaintainWeekDays != null) {
+            this.MaintainWeekDays = new String[source.MaintainWeekDays.length];
+            for (int i = 0; i < source.MaintainWeekDays.length; i++) {
+                this.MaintainWeekDays[i] = new String(source.MaintainWeekDays[i]);
+            }
+        }
+        if (source.MaintainStartTime != null) {
+            this.MaintainStartTime = new Long(source.MaintainStartTime);
+        }
+        if (source.MaintainDuration != null) {
+            this.MaintainDuration = new Long(source.MaintainDuration);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

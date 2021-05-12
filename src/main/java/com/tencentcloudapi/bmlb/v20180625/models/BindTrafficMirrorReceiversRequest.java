@@ -68,6 +68,26 @@ public class BindTrafficMirrorReceiversRequest extends AbstractModel{
         this.ReceiverSet = ReceiverSet;
     }
 
+    public BindTrafficMirrorReceiversRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public BindTrafficMirrorReceiversRequest(BindTrafficMirrorReceiversRequest source) {
+        if (source.TrafficMirrorId != null) {
+            this.TrafficMirrorId = new String(source.TrafficMirrorId);
+        }
+        if (source.ReceiverSet != null) {
+            this.ReceiverSet = new BindTrafficMirrorReceiver[source.ReceiverSet.length];
+            for (int i = 0; i < source.ReceiverSet.length; i++) {
+                this.ReceiverSet[i] = new BindTrafficMirrorReceiver(source.ReceiverSet[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

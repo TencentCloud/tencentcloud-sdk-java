@@ -206,6 +206,44 @@ public class DescribeTrajectoryDataResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeTrajectoryDataResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeTrajectoryDataResponse(DescribeTrajectoryDataResponse source) {
+        if (source.CompanyId != null) {
+            this.CompanyId = new String(source.CompanyId);
+        }
+        if (source.ShopId != null) {
+            this.ShopId = new Long(source.ShopId);
+        }
+        if (source.TotalPerson != null) {
+            this.TotalPerson = new Long(source.TotalPerson);
+        }
+        if (source.TotalTrajectory != null) {
+            this.TotalTrajectory = new Long(source.TotalTrajectory);
+        }
+        if (source.Person != null) {
+            this.Person = new Long(source.Person);
+        }
+        if (source.Trajectory != null) {
+            this.Trajectory = new Long(source.Trajectory);
+        }
+        if (source.Data != null) {
+            this.Data = new TrajectorySunData[source.Data.length];
+            for (int i = 0; i < source.Data.length; i++) {
+                this.Data[i] = new TrajectorySunData(source.Data[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

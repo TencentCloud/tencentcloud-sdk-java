@@ -114,6 +114,29 @@ public class AssetSupportSys extends AbstractModel{
         this.OsVersion = OsVersion;
     }
 
+    public AssetSupportSys() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AssetSupportSys(AssetSupportSys source) {
+        if (source.ImageId != null) {
+            this.ImageId = new String(source.ImageId);
+        }
+        if (source.OsType != null) {
+            this.OsType = new String(source.OsType);
+        }
+        if (source.OsBit != null) {
+            this.OsBit = new Long(source.OsBit);
+        }
+        if (source.OsVersion != null) {
+            this.OsVersion = new String(source.OsVersion);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

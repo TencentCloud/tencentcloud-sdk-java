@@ -321,6 +321,56 @@ public class EvaluationRequest extends AbstractModel{
         this.RejectVagueArithmetic = RejectVagueArithmetic;
     }
 
+    public EvaluationRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public EvaluationRequest(EvaluationRequest source) {
+        if (source.SessionId != null) {
+            this.SessionId = new String(source.SessionId);
+        }
+        if (source.Image != null) {
+            this.Image = new String(source.Image);
+        }
+        if (source.HcmAppid != null) {
+            this.HcmAppid = new String(source.HcmAppid);
+        }
+        if (source.Url != null) {
+            this.Url = new String(source.Url);
+        }
+        if (source.SupportHorizontalImage != null) {
+            this.SupportHorizontalImage = new Boolean(source.SupportHorizontalImage);
+        }
+        if (source.RejectNonArithmeticImage != null) {
+            this.RejectNonArithmeticImage = new Boolean(source.RejectNonArithmeticImage);
+        }
+        if (source.IsAsync != null) {
+            this.IsAsync = new Long(source.IsAsync);
+        }
+        if (source.EnableDispRelatedVertical != null) {
+            this.EnableDispRelatedVertical = new Boolean(source.EnableDispRelatedVertical);
+        }
+        if (source.EnableDispMidresult != null) {
+            this.EnableDispMidresult = new Boolean(source.EnableDispMidresult);
+        }
+        if (source.EnablePdfRecognize != null) {
+            this.EnablePdfRecognize = new Boolean(source.EnablePdfRecognize);
+        }
+        if (source.PdfPageIndex != null) {
+            this.PdfPageIndex = new Long(source.PdfPageIndex);
+        }
+        if (source.LaTex != null) {
+            this.LaTex = new Long(source.LaTex);
+        }
+        if (source.RejectVagueArithmetic != null) {
+            this.RejectVagueArithmetic = new Boolean(source.RejectVagueArithmetic);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

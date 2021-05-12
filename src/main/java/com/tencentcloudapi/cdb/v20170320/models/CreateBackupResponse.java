@@ -68,6 +68,23 @@ public class CreateBackupResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public CreateBackupResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateBackupResponse(CreateBackupResponse source) {
+        if (source.BackupId != null) {
+            this.BackupId = new Long(source.BackupId);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

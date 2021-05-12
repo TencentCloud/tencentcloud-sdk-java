@@ -241,6 +241,50 @@ public class TableResponseInfo extends AbstractModel{
         this.InputFormat = InputFormat;
     }
 
+    public TableResponseInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TableResponseInfo(TableResponseInfo source) {
+        if (source.TableBaseInfo != null) {
+            this.TableBaseInfo = new TableBaseInfo(source.TableBaseInfo);
+        }
+        if (source.Columns != null) {
+            this.Columns = new Column[source.Columns.length];
+            for (int i = 0; i < source.Columns.length; i++) {
+                this.Columns[i] = new Column(source.Columns[i]);
+            }
+        }
+        if (source.Partitions != null) {
+            this.Partitions = new Partition[source.Partitions.length];
+            for (int i = 0; i < source.Partitions.length; i++) {
+                this.Partitions[i] = new Partition(source.Partitions[i]);
+            }
+        }
+        if (source.Location != null) {
+            this.Location = new String(source.Location);
+        }
+        if (source.Properties != null) {
+            this.Properties = new Property[source.Properties.length];
+            for (int i = 0; i < source.Properties.length; i++) {
+                this.Properties[i] = new Property(source.Properties[i]);
+            }
+        }
+        if (source.ModifiedTime != null) {
+            this.ModifiedTime = new String(source.ModifiedTime);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.InputFormat != null) {
+            this.InputFormat = new String(source.InputFormat);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

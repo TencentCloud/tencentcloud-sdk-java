@@ -91,6 +91,26 @@ public class Whiteboard extends AbstractModel{
         this.InitParam = InitParam;
     }
 
+    public Whiteboard() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Whiteboard(Whiteboard source) {
+        if (source.Width != null) {
+            this.Width = new Long(source.Width);
+        }
+        if (source.Height != null) {
+            this.Height = new Long(source.Height);
+        }
+        if (source.InitParam != null) {
+            this.InitParam = new String(source.InitParam);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

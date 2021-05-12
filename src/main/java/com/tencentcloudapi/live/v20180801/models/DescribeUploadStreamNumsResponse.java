@@ -68,6 +68,26 @@ public class DescribeUploadStreamNumsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeUploadStreamNumsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeUploadStreamNumsResponse(DescribeUploadStreamNumsResponse source) {
+        if (source.DataInfoList != null) {
+            this.DataInfoList = new ConcurrentRecordStreamNum[source.DataInfoList.length];
+            for (int i = 0; i < source.DataInfoList.length; i++) {
+                this.DataInfoList[i] = new ConcurrentRecordStreamNum(source.DataInfoList[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -108,6 +108,23 @@ public class MHMResponse extends AbstractModel{
         this.TagCount = TagCount;
     }
 
+    public MHMResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MHMResponse(MHMResponse source) {
+        if (source.TagType != null) {
+            this.TagType = new Long(source.TagType);
+        }
+        if (source.TagCount != null) {
+            this.TagCount = new Long(source.TagCount);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -528,6 +528,113 @@ public class DescribeInstancesRequest extends AbstractModel{
         this.MonitorVersion = MonitorVersion;
     }
 
+    public DescribeInstancesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeInstancesRequest(DescribeInstancesRequest source) {
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.OrderBy != null) {
+            this.OrderBy = new String(source.OrderBy);
+        }
+        if (source.OrderType != null) {
+            this.OrderType = new Long(source.OrderType);
+        }
+        if (source.VpcIds != null) {
+            this.VpcIds = new String[source.VpcIds.length];
+            for (int i = 0; i < source.VpcIds.length; i++) {
+                this.VpcIds[i] = new String(source.VpcIds[i]);
+            }
+        }
+        if (source.SubnetIds != null) {
+            this.SubnetIds = new String[source.SubnetIds.length];
+            for (int i = 0; i < source.SubnetIds.length; i++) {
+                this.SubnetIds[i] = new String(source.SubnetIds[i]);
+            }
+        }
+        if (source.ProjectIds != null) {
+            this.ProjectIds = new Long[source.ProjectIds.length];
+            for (int i = 0; i < source.ProjectIds.length; i++) {
+                this.ProjectIds[i] = new Long(source.ProjectIds[i]);
+            }
+        }
+        if (source.SearchKey != null) {
+            this.SearchKey = new String(source.SearchKey);
+        }
+        if (source.InstanceName != null) {
+            this.InstanceName = new String(source.InstanceName);
+        }
+        if (source.UniqVpcIds != null) {
+            this.UniqVpcIds = new String[source.UniqVpcIds.length];
+            for (int i = 0; i < source.UniqVpcIds.length; i++) {
+                this.UniqVpcIds[i] = new String(source.UniqVpcIds[i]);
+            }
+        }
+        if (source.UniqSubnetIds != null) {
+            this.UniqSubnetIds = new String[source.UniqSubnetIds.length];
+            for (int i = 0; i < source.UniqSubnetIds.length; i++) {
+                this.UniqSubnetIds[i] = new String(source.UniqSubnetIds[i]);
+            }
+        }
+        if (source.RegionIds != null) {
+            this.RegionIds = new Long[source.RegionIds.length];
+            for (int i = 0; i < source.RegionIds.length; i++) {
+                this.RegionIds[i] = new Long(source.RegionIds[i]);
+            }
+        }
+        if (source.Status != null) {
+            this.Status = new Long[source.Status.length];
+            for (int i = 0; i < source.Status.length; i++) {
+                this.Status[i] = new Long(source.Status[i]);
+            }
+        }
+        if (source.TypeVersion != null) {
+            this.TypeVersion = new Long(source.TypeVersion);
+        }
+        if (source.EngineName != null) {
+            this.EngineName = new String(source.EngineName);
+        }
+        if (source.AutoRenew != null) {
+            this.AutoRenew = new Long[source.AutoRenew.length];
+            for (int i = 0; i < source.AutoRenew.length; i++) {
+                this.AutoRenew[i] = new Long(source.AutoRenew[i]);
+            }
+        }
+        if (source.BillingMode != null) {
+            this.BillingMode = new String(source.BillingMode);
+        }
+        if (source.Type != null) {
+            this.Type = new Long(source.Type);
+        }
+        if (source.SearchKeys != null) {
+            this.SearchKeys = new String[source.SearchKeys.length];
+            for (int i = 0; i < source.SearchKeys.length; i++) {
+                this.SearchKeys[i] = new String(source.SearchKeys[i]);
+            }
+        }
+        if (source.TypeList != null) {
+            this.TypeList = new Long[source.TypeList.length];
+            for (int i = 0; i < source.TypeList.length; i++) {
+                this.TypeList[i] = new Long(source.TypeList[i]);
+            }
+        }
+        if (source.MonitorVersion != null) {
+            this.MonitorVersion = new String(source.MonitorVersion);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -259,6 +259,47 @@ PicUrlExpireTime 时间点后图片将被删除）。
         this.PicUrlExpireTime = PicUrlExpireTime;
     }
 
+    public LiveStreamAiReviewImagePoliticalResult() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public LiveStreamAiReviewImagePoliticalResult(LiveStreamAiReviewImagePoliticalResult source) {
+        if (source.StartPtsTime != null) {
+            this.StartPtsTime = new Float(source.StartPtsTime);
+        }
+        if (source.EndPtsTime != null) {
+            this.EndPtsTime = new Float(source.EndPtsTime);
+        }
+        if (source.Confidence != null) {
+            this.Confidence = new Float(source.Confidence);
+        }
+        if (source.Suggestion != null) {
+            this.Suggestion = new String(source.Suggestion);
+        }
+        if (source.Label != null) {
+            this.Label = new String(source.Label);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.AreaCoordSet != null) {
+            this.AreaCoordSet = new Long[source.AreaCoordSet.length];
+            for (int i = 0; i < source.AreaCoordSet.length; i++) {
+                this.AreaCoordSet[i] = new Long(source.AreaCoordSet[i]);
+            }
+        }
+        if (source.Url != null) {
+            this.Url = new String(source.Url);
+        }
+        if (source.PicUrlExpireTime != null) {
+            this.PicUrlExpireTime = new String(source.PicUrlExpireTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

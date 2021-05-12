@@ -68,6 +68,23 @@ public class CreateTemplateRequest extends AbstractModel{
         this.CertificateInfo = CertificateInfo;
     }
 
+    public CreateTemplateRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateTemplateRequest(CreateTemplateRequest source) {
+        if (source.ContactInfo != null) {
+            this.ContactInfo = new ContactInfo(source.ContactInfo);
+        }
+        if (source.CertificateInfo != null) {
+            this.CertificateInfo = new CertificateInfo(source.CertificateInfo);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

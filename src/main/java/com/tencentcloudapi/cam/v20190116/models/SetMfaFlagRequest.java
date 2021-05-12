@@ -91,6 +91,26 @@ public class SetMfaFlagRequest extends AbstractModel{
         this.ActionFlag = ActionFlag;
     }
 
+    public SetMfaFlagRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SetMfaFlagRequest(SetMfaFlagRequest source) {
+        if (source.OpUin != null) {
+            this.OpUin = new Long(source.OpUin);
+        }
+        if (source.LoginFlag != null) {
+            this.LoginFlag = new LoginActionMfaFlag(source.LoginFlag);
+        }
+        if (source.ActionFlag != null) {
+            this.ActionFlag = new LoginActionMfaFlag(source.ActionFlag);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

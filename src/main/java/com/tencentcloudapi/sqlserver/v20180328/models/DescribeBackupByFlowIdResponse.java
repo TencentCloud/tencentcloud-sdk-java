@@ -321,6 +321,59 @@ public class DescribeBackupByFlowIdResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeBackupByFlowIdResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeBackupByFlowIdResponse(DescribeBackupByFlowIdResponse source) {
+        if (source.Id != null) {
+            this.Id = new Long(source.Id);
+        }
+        if (source.FileName != null) {
+            this.FileName = new String(source.FileName);
+        }
+        if (source.BackupName != null) {
+            this.BackupName = new String(source.BackupName);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+        if (source.Size != null) {
+            this.Size = new Long(source.Size);
+        }
+        if (source.Strategy != null) {
+            this.Strategy = new Long(source.Strategy);
+        }
+        if (source.BackupWay != null) {
+            this.BackupWay = new Long(source.BackupWay);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.DBs != null) {
+            this.DBs = new String[source.DBs.length];
+            for (int i = 0; i < source.DBs.length; i++) {
+                this.DBs[i] = new String(source.DBs[i]);
+            }
+        }
+        if (source.InternalAddr != null) {
+            this.InternalAddr = new String(source.InternalAddr);
+        }
+        if (source.ExternalAddr != null) {
+            this.ExternalAddr = new String(source.ExternalAddr);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -45,6 +45,20 @@ public class DestroyDBInstanceRequest extends AbstractModel{
         this.DBInstanceId = DBInstanceId;
     }
 
+    public DestroyDBInstanceRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DestroyDBInstanceRequest(DestroyDBInstanceRequest source) {
+        if (source.DBInstanceId != null) {
+            this.DBInstanceId = new String(source.DBInstanceId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

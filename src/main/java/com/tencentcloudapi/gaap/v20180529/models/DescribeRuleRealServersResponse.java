@@ -137,6 +137,38 @@ public class DescribeRuleRealServersResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeRuleRealServersResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeRuleRealServersResponse(DescribeRuleRealServersResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.RealServerSet != null) {
+            this.RealServerSet = new RealServer[source.RealServerSet.length];
+            for (int i = 0; i < source.RealServerSet.length; i++) {
+                this.RealServerSet[i] = new RealServer(source.RealServerSet[i]);
+            }
+        }
+        if (source.BindRealServerTotalCount != null) {
+            this.BindRealServerTotalCount = new Long(source.BindRealServerTotalCount);
+        }
+        if (source.BindRealServerSet != null) {
+            this.BindRealServerSet = new BindRealServer[source.BindRealServerSet.length];
+            for (int i = 0; i < source.BindRealServerSet.length; i++) {
+                this.BindRealServerSet[i] = new BindRealServer(source.BindRealServerSet[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -131,6 +131,32 @@ public class CreateWordSamplesRequest extends AbstractModel{
         this.SubAppId = SubAppId;
     }
 
+    public CreateWordSamplesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateWordSamplesRequest(CreateWordSamplesRequest source) {
+        if (source.Usages != null) {
+            this.Usages = new String[source.Usages.length];
+            for (int i = 0; i < source.Usages.length; i++) {
+                this.Usages[i] = new String(source.Usages[i]);
+            }
+        }
+        if (source.Words != null) {
+            this.Words = new AiSampleWordInfo[source.Words.length];
+            for (int i = 0; i < source.Words.length; i++) {
+                this.Words[i] = new AiSampleWordInfo(source.Words[i]);
+            }
+        }
+        if (source.SubAppId != null) {
+            this.SubAppId = new Long(source.SubAppId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

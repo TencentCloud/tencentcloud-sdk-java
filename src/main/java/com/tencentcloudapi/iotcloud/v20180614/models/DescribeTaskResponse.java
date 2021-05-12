@@ -344,6 +344,59 @@ public class DescribeTaskResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeTaskResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeTaskResponse(DescribeTaskResponse source) {
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
+        if (source.ProductId != null) {
+            this.ProductId = new String(source.ProductId);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new Long(source.CreateTime);
+        }
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new Long(source.UpdateTime);
+        }
+        if (source.DoneTime != null) {
+            this.DoneTime = new Long(source.DoneTime);
+        }
+        if (source.ScheduleTime != null) {
+            this.ScheduleTime = new Long(source.ScheduleTime);
+        }
+        if (source.RetCode != null) {
+            this.RetCode = new Long(source.RetCode);
+        }
+        if (source.ErrMsg != null) {
+            this.ErrMsg = new String(source.ErrMsg);
+        }
+        if (source.Percent != null) {
+            this.Percent = new Long(source.Percent);
+        }
+        if (source.AllDeviceCnt != null) {
+            this.AllDeviceCnt = new Long(source.AllDeviceCnt);
+        }
+        if (source.DoneDeviceCnt != null) {
+            this.DoneDeviceCnt = new Long(source.DoneDeviceCnt);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

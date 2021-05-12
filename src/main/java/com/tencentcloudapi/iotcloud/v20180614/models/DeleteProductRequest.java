@@ -68,6 +68,23 @@ public class DeleteProductRequest extends AbstractModel{
         this.Skey = Skey;
     }
 
+    public DeleteProductRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteProductRequest(DeleteProductRequest source) {
+        if (source.ProductId != null) {
+            this.ProductId = new String(source.ProductId);
+        }
+        if (source.Skey != null) {
+            this.Skey = new String(source.Skey);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

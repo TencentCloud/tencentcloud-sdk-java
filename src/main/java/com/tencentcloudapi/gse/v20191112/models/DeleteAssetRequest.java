@@ -45,6 +45,20 @@ public class DeleteAssetRequest extends AbstractModel{
         this.AssetId = AssetId;
     }
 
+    public DeleteAssetRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteAssetRequest(DeleteAssetRequest source) {
+        if (source.AssetId != null) {
+            this.AssetId = new String(source.AssetId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

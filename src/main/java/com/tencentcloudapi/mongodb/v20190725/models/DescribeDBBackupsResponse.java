@@ -91,6 +91,29 @@ public class DescribeDBBackupsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeDBBackupsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeDBBackupsResponse(DescribeDBBackupsResponse source) {
+        if (source.BackupList != null) {
+            this.BackupList = new BackupInfo[source.BackupList.length];
+            for (int i = 0; i < source.BackupList.length; i++) {
+                this.BackupList[i] = new BackupInfo(source.BackupList[i]);
+            }
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

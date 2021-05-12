@@ -91,6 +91,29 @@ public class DescribeOpenPortsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeOpenPortsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeOpenPortsResponse(DescribeOpenPortsResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.OpenPorts != null) {
+            this.OpenPorts = new OpenPort[source.OpenPorts.length];
+            for (int i = 0; i < source.OpenPorts.length; i++) {
+                this.OpenPorts[i] = new OpenPort(source.OpenPorts[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -96,6 +96,26 @@ public class GetSimilarPersonResultResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public GetSimilarPersonResultResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GetSimilarPersonResultResponse(GetSimilarPersonResultResponse source) {
+        if (source.Progress != null) {
+            this.Progress = new Float(source.Progress);
+        }
+        if (source.SimilarPersonsUrl != null) {
+            this.SimilarPersonsUrl = new String(source.SimilarPersonsUrl);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

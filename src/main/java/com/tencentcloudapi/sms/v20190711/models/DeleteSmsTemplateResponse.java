@@ -68,6 +68,23 @@ public class DeleteSmsTemplateResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DeleteSmsTemplateResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteSmsTemplateResponse(DeleteSmsTemplateResponse source) {
+        if (source.DeleteTemplateStatus != null) {
+            this.DeleteTemplateStatus = new DeleteTemplateStatus(source.DeleteTemplateStatus);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

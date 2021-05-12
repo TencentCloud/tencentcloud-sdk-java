@@ -114,6 +114,29 @@ public class CreateEdgePackTaskRequest extends AbstractModel{
         this.CosUriTo = CosUriTo;
     }
 
+    public CreateEdgePackTaskRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateEdgePackTaskRequest(CreateEdgePackTaskRequest source) {
+        if (source.CosBucket != null) {
+            this.CosBucket = new String(source.CosBucket);
+        }
+        if (source.CosUriFrom != null) {
+            this.CosUriFrom = new String(source.CosUriFrom);
+        }
+        if (source.BlockID != null) {
+            this.BlockID = new Long(source.BlockID);
+        }
+        if (source.CosUriTo != null) {
+            this.CosUriTo = new String(source.CosUriTo);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

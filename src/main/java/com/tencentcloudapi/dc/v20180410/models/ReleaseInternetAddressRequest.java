@@ -45,6 +45,20 @@ public class ReleaseInternetAddressRequest extends AbstractModel{
         this.InstanceId = InstanceId;
     }
 
+    public ReleaseInternetAddressRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ReleaseInternetAddressRequest(ReleaseInternetAddressRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -162,6 +162,32 @@ public class ObjectTask extends AbstractModel{
         this.ObjectType = ObjectType;
     }
 
+    public ObjectTask() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ObjectTask(ObjectTask source) {
+        if (source.TaskId != null) {
+            this.TaskId = new Long(source.TaskId);
+        }
+        if (source.TaskType != null) {
+            this.TaskType = new String(source.TaskType);
+        }
+        if (source.TaskStatus != null) {
+            this.TaskStatus = new String(source.TaskStatus);
+        }
+        if (source.ObjectId != null) {
+            this.ObjectId = new String(source.ObjectId);
+        }
+        if (source.ObjectType != null) {
+            this.ObjectType = new String(source.ObjectType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

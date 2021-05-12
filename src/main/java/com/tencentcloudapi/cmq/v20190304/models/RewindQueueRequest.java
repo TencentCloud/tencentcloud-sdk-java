@@ -68,6 +68,23 @@ public class RewindQueueRequest extends AbstractModel{
         this.StartConsumeTime = StartConsumeTime;
     }
 
+    public RewindQueueRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RewindQueueRequest(RewindQueueRequest source) {
+        if (source.QueueName != null) {
+            this.QueueName = new String(source.QueueName);
+        }
+        if (source.StartConsumeTime != null) {
+            this.StartConsumeTime = new Long(source.StartConsumeTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

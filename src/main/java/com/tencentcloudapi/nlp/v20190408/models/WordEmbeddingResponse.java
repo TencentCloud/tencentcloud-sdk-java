@@ -91,6 +91,29 @@ public class WordEmbeddingResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public WordEmbeddingResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public WordEmbeddingResponse(WordEmbeddingResponse source) {
+        if (source.Vector != null) {
+            this.Vector = new Float[source.Vector.length];
+            for (int i = 0; i < source.Vector.length; i++) {
+                this.Vector[i] = new Float(source.Vector[i]);
+            }
+        }
+        if (source.Dimension != null) {
+            this.Dimension = new Long(source.Dimension);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

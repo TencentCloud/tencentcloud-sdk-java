@@ -918,6 +918,119 @@ Public：公网属性， Private：内网属性。
         this.LoadBalancerPassToTarget = LoadBalancerPassToTarget;
     }
 
+    public LoadBalancerDetail() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public LoadBalancerDetail(LoadBalancerDetail source) {
+        if (source.LoadBalancerId != null) {
+            this.LoadBalancerId = new String(source.LoadBalancerId);
+        }
+        if (source.LoadBalancerName != null) {
+            this.LoadBalancerName = new String(source.LoadBalancerName);
+        }
+        if (source.LoadBalancerType != null) {
+            this.LoadBalancerType = new String(source.LoadBalancerType);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.Address != null) {
+            this.Address = new String(source.Address);
+        }
+        if (source.AddressIPv6 != null) {
+            this.AddressIPv6 = new String(source.AddressIPv6);
+        }
+        if (source.AddressIPVersion != null) {
+            this.AddressIPVersion = new String(source.AddressIPVersion);
+        }
+        if (source.IPv6Mode != null) {
+            this.IPv6Mode = new String(source.IPv6Mode);
+        }
+        if (source.Zone != null) {
+            this.Zone = new String(source.Zone);
+        }
+        if (source.AddressIsp != null) {
+            this.AddressIsp = new String(source.AddressIsp);
+        }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.ProjectId != null) {
+            this.ProjectId = new Long(source.ProjectId);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.ChargeType != null) {
+            this.ChargeType = new String(source.ChargeType);
+        }
+        if (source.NetworkAttributes != null) {
+            this.NetworkAttributes = new InternetAccessible(source.NetworkAttributes);
+        }
+        if (source.PrepaidAttributes != null) {
+            this.PrepaidAttributes = new LBChargePrepaid(source.PrepaidAttributes);
+        }
+        if (source.ExtraInfo != null) {
+            this.ExtraInfo = new ExtraInfo(source.ExtraInfo);
+        }
+        if (source.ConfigId != null) {
+            this.ConfigId = new String(source.ConfigId);
+        }
+        if (source.Tags != null) {
+            this.Tags = new TagInfo[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new TagInfo(source.Tags[i]);
+            }
+        }
+        if (source.ListenerId != null) {
+            this.ListenerId = new String(source.ListenerId);
+        }
+        if (source.Protocol != null) {
+            this.Protocol = new String(source.Protocol);
+        }
+        if (source.Port != null) {
+            this.Port = new Long(source.Port);
+        }
+        if (source.LocationId != null) {
+            this.LocationId = new String(source.LocationId);
+        }
+        if (source.Domain != null) {
+            this.Domain = new String(source.Domain);
+        }
+        if (source.Url != null) {
+            this.Url = new String(source.Url);
+        }
+        if (source.TargetId != null) {
+            this.TargetId = new String(source.TargetId);
+        }
+        if (source.TargetAddress != null) {
+            this.TargetAddress = new String(source.TargetAddress);
+        }
+        if (source.TargetPort != null) {
+            this.TargetPort = new Long(source.TargetPort);
+        }
+        if (source.TargetWeight != null) {
+            this.TargetWeight = new Long(source.TargetWeight);
+        }
+        if (source.Isolation != null) {
+            this.Isolation = new Long(source.Isolation);
+        }
+        if (source.SecurityGroup != null) {
+            this.SecurityGroup = new String[source.SecurityGroup.length];
+            for (int i = 0; i < source.SecurityGroup.length; i++) {
+                this.SecurityGroup[i] = new String(source.SecurityGroup[i]);
+            }
+        }
+        if (source.LoadBalancerPassToTarget != null) {
+            this.LoadBalancerPassToTarget = new Long(source.LoadBalancerPassToTarget);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

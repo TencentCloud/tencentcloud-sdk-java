@@ -599,6 +599,74 @@ public class ItemPrice extends AbstractModel{
         this.DiscountOneYear = DiscountOneYear;
     }
 
+    public ItemPrice() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ItemPrice(ItemPrice source) {
+        if (source.UnitPrice != null) {
+            this.UnitPrice = new Float(source.UnitPrice);
+        }
+        if (source.ChargeUnit != null) {
+            this.ChargeUnit = new String(source.ChargeUnit);
+        }
+        if (source.OriginalPrice != null) {
+            this.OriginalPrice = new Float(source.OriginalPrice);
+        }
+        if (source.DiscountPrice != null) {
+            this.DiscountPrice = new Float(source.DiscountPrice);
+        }
+        if (source.Discount != null) {
+            this.Discount = new Float(source.Discount);
+        }
+        if (source.UnitPriceDiscount != null) {
+            this.UnitPriceDiscount = new Float(source.UnitPriceDiscount);
+        }
+        if (source.UnitPriceSecondStep != null) {
+            this.UnitPriceSecondStep = new Float(source.UnitPriceSecondStep);
+        }
+        if (source.UnitPriceDiscountSecondStep != null) {
+            this.UnitPriceDiscountSecondStep = new Float(source.UnitPriceDiscountSecondStep);
+        }
+        if (source.UnitPriceThirdStep != null) {
+            this.UnitPriceThirdStep = new Float(source.UnitPriceThirdStep);
+        }
+        if (source.UnitPriceDiscountThirdStep != null) {
+            this.UnitPriceDiscountThirdStep = new Float(source.UnitPriceDiscountThirdStep);
+        }
+        if (source.OriginalPriceThreeYear != null) {
+            this.OriginalPriceThreeYear = new Float(source.OriginalPriceThreeYear);
+        }
+        if (source.DiscountPriceThreeYear != null) {
+            this.DiscountPriceThreeYear = new Float(source.DiscountPriceThreeYear);
+        }
+        if (source.DiscountThreeYear != null) {
+            this.DiscountThreeYear = new Float(source.DiscountThreeYear);
+        }
+        if (source.OriginalPriceFiveYear != null) {
+            this.OriginalPriceFiveYear = new Float(source.OriginalPriceFiveYear);
+        }
+        if (source.DiscountPriceFiveYear != null) {
+            this.DiscountPriceFiveYear = new Float(source.DiscountPriceFiveYear);
+        }
+        if (source.DiscountFiveYear != null) {
+            this.DiscountFiveYear = new Float(source.DiscountFiveYear);
+        }
+        if (source.OriginalPriceOneYear != null) {
+            this.OriginalPriceOneYear = new Float(source.OriginalPriceOneYear);
+        }
+        if (source.DiscountPriceOneYear != null) {
+            this.DiscountPriceOneYear = new Float(source.DiscountPriceOneYear);
+        }
+        if (source.DiscountOneYear != null) {
+            this.DiscountOneYear = new Float(source.DiscountOneYear);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

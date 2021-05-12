@@ -313,6 +313,62 @@ public class SearchMaterialRequest extends AbstractModel{
         this.Operator = Operator;
     }
 
+    public SearchMaterialRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SearchMaterialRequest(SearchMaterialRequest source) {
+        if (source.Platform != null) {
+            this.Platform = new String(source.Platform);
+        }
+        if (source.SearchScopes != null) {
+            this.SearchScopes = new SearchScope[source.SearchScopes.length];
+            for (int i = 0; i < source.SearchScopes.length; i++) {
+                this.SearchScopes[i] = new SearchScope(source.SearchScopes[i]);
+            }
+        }
+        if (source.MaterialTypes != null) {
+            this.MaterialTypes = new String[source.MaterialTypes.length];
+            for (int i = 0; i < source.MaterialTypes.length; i++) {
+                this.MaterialTypes[i] = new String(source.MaterialTypes[i]);
+            }
+        }
+        if (source.Text != null) {
+            this.Text = new String(source.Text);
+        }
+        if (source.Resolution != null) {
+            this.Resolution = new String(source.Resolution);
+        }
+        if (source.DurationRange != null) {
+            this.DurationRange = new IntegerRange(source.DurationRange);
+        }
+        if (source.CreateTimeRange != null) {
+            this.CreateTimeRange = new TimeRange(source.CreateTimeRange);
+        }
+        if (source.Tags != null) {
+            this.Tags = new String[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new String(source.Tags[i]);
+            }
+        }
+        if (source.Sort != null) {
+            this.Sort = new SortBy(source.Sort);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.Operator != null) {
+            this.Operator = new String(source.Operator);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

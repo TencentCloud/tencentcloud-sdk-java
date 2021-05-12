@@ -91,6 +91,29 @@ public class BodyJointsResult extends AbstractModel{
         this.Confidence = Confidence;
     }
 
+    public BodyJointsResult() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public BodyJointsResult(BodyJointsResult source) {
+        if (source.BoundBox != null) {
+            this.BoundBox = new BoundRect(source.BoundBox);
+        }
+        if (source.BodyJoints != null) {
+            this.BodyJoints = new KeyPointInfo[source.BodyJoints.length];
+            for (int i = 0; i < source.BodyJoints.length; i++) {
+                this.BodyJoints[i] = new KeyPointInfo(source.BodyJoints[i]);
+            }
+        }
+        if (source.Confidence != null) {
+            this.Confidence = new Float(source.Confidence);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

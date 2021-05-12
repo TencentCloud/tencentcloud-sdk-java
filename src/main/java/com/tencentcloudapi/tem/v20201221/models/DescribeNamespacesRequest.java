@@ -91,6 +91,26 @@ public class DescribeNamespacesRequest extends AbstractModel{
         this.SourceChannel = SourceChannel;
     }
 
+    public DescribeNamespacesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeNamespacesRequest(DescribeNamespacesRequest source) {
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.SourceChannel != null) {
+            this.SourceChannel = new Long(source.SourceChannel);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

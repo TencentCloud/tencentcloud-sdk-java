@@ -114,6 +114,29 @@ public class GetFunctionRequest extends AbstractModel{
         this.ShowCode = ShowCode;
     }
 
+    public GetFunctionRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GetFunctionRequest(GetFunctionRequest source) {
+        if (source.FunctionName != null) {
+            this.FunctionName = new String(source.FunctionName);
+        }
+        if (source.Qualifier != null) {
+            this.Qualifier = new String(source.Qualifier);
+        }
+        if (source.Namespace != null) {
+            this.Namespace = new String(source.Namespace);
+        }
+        if (source.ShowCode != null) {
+            this.ShowCode = new String(source.ShowCode);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

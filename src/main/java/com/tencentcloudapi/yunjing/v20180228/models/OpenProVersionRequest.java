@@ -134,6 +134,32 @@ public class OpenProVersionRequest extends AbstractModel{
         this.ActivityId = ActivityId;
     }
 
+    public OpenProVersionRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public OpenProVersionRequest(OpenProVersionRequest source) {
+        if (source.MachineType != null) {
+            this.MachineType = new String(source.MachineType);
+        }
+        if (source.MachineRegion != null) {
+            this.MachineRegion = new String(source.MachineRegion);
+        }
+        if (source.Quuids != null) {
+            this.Quuids = new String[source.Quuids.length];
+            for (int i = 0; i < source.Quuids.length; i++) {
+                this.Quuids[i] = new String(source.Quuids[i]);
+            }
+        }
+        if (source.ActivityId != null) {
+            this.ActivityId = new Long(source.ActivityId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -91,6 +91,29 @@ public class DescribeComplianceAssetListResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeComplianceAssetListResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeComplianceAssetListResponse(DescribeComplianceAssetListResponse source) {
+        if (source.CheckAssetsList != null) {
+            this.CheckAssetsList = new CheckAssetItem[source.CheckAssetsList.length];
+            for (int i = 0; i < source.CheckAssetsList.length; i++) {
+                this.CheckAssetsList[i] = new CheckAssetItem(source.CheckAssetsList[i]);
+            }
+        }
+        if (source.Total != null) {
+            this.Total = new Long(source.Total);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

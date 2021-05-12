@@ -45,6 +45,20 @@ public class DeleteComputeEnvRequest extends AbstractModel{
         this.EnvId = EnvId;
     }
 
+    public DeleteComputeEnvRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteComputeEnvRequest(DeleteComputeEnvRequest source) {
+        if (source.EnvId != null) {
+            this.EnvId = new String(source.EnvId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

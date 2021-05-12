@@ -303,6 +303,59 @@ USER_ATTACHED：用户添加到计算环境中的实例资源。
         this.ResourceOrigin = ResourceOrigin;
     }
 
+    public ComputeNode() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ComputeNode(ComputeNode source) {
+        if (source.ComputeNodeId != null) {
+            this.ComputeNodeId = new String(source.ComputeNodeId);
+        }
+        if (source.ComputeNodeInstanceId != null) {
+            this.ComputeNodeInstanceId = new String(source.ComputeNodeInstanceId);
+        }
+        if (source.ComputeNodeState != null) {
+            this.ComputeNodeState = new String(source.ComputeNodeState);
+        }
+        if (source.Cpu != null) {
+            this.Cpu = new Long(source.Cpu);
+        }
+        if (source.Mem != null) {
+            this.Mem = new Long(source.Mem);
+        }
+        if (source.ResourceCreatedTime != null) {
+            this.ResourceCreatedTime = new String(source.ResourceCreatedTime);
+        }
+        if (source.TaskInstanceNumAvailable != null) {
+            this.TaskInstanceNumAvailable = new Long(source.TaskInstanceNumAvailable);
+        }
+        if (source.AgentVersion != null) {
+            this.AgentVersion = new String(source.AgentVersion);
+        }
+        if (source.PrivateIpAddresses != null) {
+            this.PrivateIpAddresses = new String[source.PrivateIpAddresses.length];
+            for (int i = 0; i < source.PrivateIpAddresses.length; i++) {
+                this.PrivateIpAddresses[i] = new String(source.PrivateIpAddresses[i]);
+            }
+        }
+        if (source.PublicIpAddresses != null) {
+            this.PublicIpAddresses = new String[source.PublicIpAddresses.length];
+            for (int i = 0; i < source.PublicIpAddresses.length; i++) {
+                this.PublicIpAddresses[i] = new String(source.PublicIpAddresses[i]);
+            }
+        }
+        if (source.ResourceType != null) {
+            this.ResourceType = new String(source.ResourceType);
+        }
+        if (source.ResourceOrigin != null) {
+            this.ResourceOrigin = new String(source.ResourceOrigin);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -114,6 +114,29 @@ public class GetStatisticsReportRequest extends AbstractModel{
         this.ReceivingMailboxType = ReceivingMailboxType;
     }
 
+    public GetStatisticsReportRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GetStatisticsReportRequest(GetStatisticsReportRequest source) {
+        if (source.StartDate != null) {
+            this.StartDate = new String(source.StartDate);
+        }
+        if (source.EndDate != null) {
+            this.EndDate = new String(source.EndDate);
+        }
+        if (source.Domain != null) {
+            this.Domain = new String(source.Domain);
+        }
+        if (source.ReceivingMailboxType != null) {
+            this.ReceivingMailboxType = new String(source.ReceivingMailboxType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

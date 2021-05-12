@@ -114,6 +114,29 @@ public class DescribeMaterialListRequest extends AbstractModel{
         this.Offset = Offset;
     }
 
+    public DescribeMaterialListRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeMaterialListRequest(DescribeMaterialListRequest source) {
+        if (source.ActivityId != null) {
+            this.ActivityId = new Long(source.ActivityId);
+        }
+        if (source.MaterialId != null) {
+            this.MaterialId = new String(source.MaterialId);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

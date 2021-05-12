@@ -96,6 +96,29 @@ public class DescribeSharedSpaceResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeSharedSpaceResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeSharedSpaceResponse(DescribeSharedSpaceResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.AuthorizerSet != null) {
+            this.AuthorizerSet = new Authorizer[source.AuthorizerSet.length];
+            for (int i = 0; i < source.AuthorizerSet.length; i++) {
+                this.AuthorizerSet[i] = new Authorizer(source.AuthorizerSet[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

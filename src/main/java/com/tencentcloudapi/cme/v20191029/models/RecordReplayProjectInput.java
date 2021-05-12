@@ -114,6 +114,29 @@ public class RecordReplayProjectInput extends AbstractModel{
         this.PushStreamUrl = PushStreamUrl;
     }
 
+    public RecordReplayProjectInput() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RecordReplayProjectInput(RecordReplayProjectInput source) {
+        if (source.PullStreamUrl != null) {
+            this.PullStreamUrl = new String(source.PullStreamUrl);
+        }
+        if (source.MaterialOwner != null) {
+            this.MaterialOwner = new Entity(source.MaterialOwner);
+        }
+        if (source.MaterialClassPath != null) {
+            this.MaterialClassPath = new String(source.MaterialClassPath);
+        }
+        if (source.PushStreamUrl != null) {
+            this.PushStreamUrl = new String(source.PushStreamUrl);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

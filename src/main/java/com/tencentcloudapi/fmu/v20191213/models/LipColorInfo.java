@@ -124,6 +124,29 @@ ModelId 和 RGBA 两个参数只需提供一个，若都提供只使用 ModelId�
         this.ModelAlpha = ModelAlpha;
     }
 
+    public LipColorInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public LipColorInfo(LipColorInfo source) {
+        if (source.RGBA != null) {
+            this.RGBA = new RGBAInfo(source.RGBA);
+        }
+        if (source.ModelId != null) {
+            this.ModelId = new String(source.ModelId);
+        }
+        if (source.FaceRect != null) {
+            this.FaceRect = new FaceRect(source.FaceRect);
+        }
+        if (source.ModelAlpha != null) {
+            this.ModelAlpha = new Long(source.ModelAlpha);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

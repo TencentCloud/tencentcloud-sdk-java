@@ -229,6 +229,53 @@ public class DescribeTaskListRequest extends AbstractModel{
         this.TaskStatus = TaskStatus;
     }
 
+    public DescribeTaskListRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeTaskListRequest(DescribeTaskListRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.InstanceName != null) {
+            this.InstanceName = new String(source.InstanceName);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.ProjectIds != null) {
+            this.ProjectIds = new Long[source.ProjectIds.length];
+            for (int i = 0; i < source.ProjectIds.length; i++) {
+                this.ProjectIds[i] = new Long(source.ProjectIds[i]);
+            }
+        }
+        if (source.TaskTypes != null) {
+            this.TaskTypes = new String[source.TaskTypes.length];
+            for (int i = 0; i < source.TaskTypes.length; i++) {
+                this.TaskTypes[i] = new String(source.TaskTypes[i]);
+            }
+        }
+        if (source.BeginTime != null) {
+            this.BeginTime = new String(source.BeginTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+        if (source.TaskStatus != null) {
+            this.TaskStatus = new Long[source.TaskStatus.length];
+            for (int i = 0; i < source.TaskStatus.length; i++) {
+                this.TaskStatus[i] = new Long(source.TaskStatus[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

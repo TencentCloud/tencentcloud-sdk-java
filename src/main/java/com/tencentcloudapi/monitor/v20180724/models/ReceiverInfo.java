@@ -367,6 +367,80 @@ public class ReceiverInfo extends AbstractModel{
         this.ReceiveLanguage = ReceiveLanguage;
     }
 
+    public ReceiverInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ReceiverInfo(ReceiverInfo source) {
+        if (source.StartTime != null) {
+            this.StartTime = new Long(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new Long(source.EndTime);
+        }
+        if (source.NotifyWay != null) {
+            this.NotifyWay = new String[source.NotifyWay.length];
+            for (int i = 0; i < source.NotifyWay.length; i++) {
+                this.NotifyWay[i] = new String(source.NotifyWay[i]);
+            }
+        }
+        if (source.ReceiverType != null) {
+            this.ReceiverType = new String(source.ReceiverType);
+        }
+        if (source.Id != null) {
+            this.Id = new Long(source.Id);
+        }
+        if (source.SendFor != null) {
+            this.SendFor = new String[source.SendFor.length];
+            for (int i = 0; i < source.SendFor.length; i++) {
+                this.SendFor[i] = new String(source.SendFor[i]);
+            }
+        }
+        if (source.UidList != null) {
+            this.UidList = new Long[source.UidList.length];
+            for (int i = 0; i < source.UidList.length; i++) {
+                this.UidList[i] = new Long(source.UidList[i]);
+            }
+        }
+        if (source.RoundNumber != null) {
+            this.RoundNumber = new Long(source.RoundNumber);
+        }
+        if (source.PersonInterval != null) {
+            this.PersonInterval = new Long(source.PersonInterval);
+        }
+        if (source.RoundInterval != null) {
+            this.RoundInterval = new Long(source.RoundInterval);
+        }
+        if (source.RecoverNotify != null) {
+            this.RecoverNotify = new String[source.RecoverNotify.length];
+            for (int i = 0; i < source.RecoverNotify.length; i++) {
+                this.RecoverNotify[i] = new String(source.RecoverNotify[i]);
+            }
+        }
+        if (source.NeedSendNotice != null) {
+            this.NeedSendNotice = new Long(source.NeedSendNotice);
+        }
+        if (source.ReceiverGroupList != null) {
+            this.ReceiverGroupList = new Long[source.ReceiverGroupList.length];
+            for (int i = 0; i < source.ReceiverGroupList.length; i++) {
+                this.ReceiverGroupList[i] = new Long(source.ReceiverGroupList[i]);
+            }
+        }
+        if (source.ReceiverUserList != null) {
+            this.ReceiverUserList = new Long[source.ReceiverUserList.length];
+            for (int i = 0; i < source.ReceiverUserList.length; i++) {
+                this.ReceiverUserList[i] = new Long(source.ReceiverUserList[i]);
+            }
+        }
+        if (source.ReceiveLanguage != null) {
+            this.ReceiveLanguage = new String(source.ReceiveLanguage);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

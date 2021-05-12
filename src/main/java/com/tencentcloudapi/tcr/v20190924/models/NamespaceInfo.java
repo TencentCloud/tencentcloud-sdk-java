@@ -91,6 +91,26 @@ public class NamespaceInfo extends AbstractModel{
         this.RepoCount = RepoCount;
     }
 
+    public NamespaceInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public NamespaceInfo(NamespaceInfo source) {
+        if (source.Namespace != null) {
+            this.Namespace = new String(source.Namespace);
+        }
+        if (source.CreationTime != null) {
+            this.CreationTime = new String(source.CreationTime);
+        }
+        if (source.RepoCount != null) {
+            this.RepoCount = new Long(source.RepoCount);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

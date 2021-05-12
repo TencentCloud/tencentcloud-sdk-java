@@ -106,6 +106,26 @@ public class AddressInfo extends AbstractModel{
         this.PublicIPv6AddressInfo = PublicIPv6AddressInfo;
     }
 
+    public AddressInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AddressInfo(AddressInfo source) {
+        if (source.PublicIPAddressInfo != null) {
+            this.PublicIPAddressInfo = new PublicIPAddressInfo(source.PublicIPAddressInfo);
+        }
+        if (source.PrivateIPAddressInfo != null) {
+            this.PrivateIPAddressInfo = new PrivateIPAddressInfo(source.PrivateIPAddressInfo);
+        }
+        if (source.PublicIPv6AddressInfo != null) {
+            this.PublicIPv6AddressInfo = new PublicIPAddressInfo(source.PublicIPv6AddressInfo);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

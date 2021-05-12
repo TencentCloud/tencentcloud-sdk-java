@@ -68,6 +68,26 @@ public class CreateResourceInstancesResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public CreateResourceInstancesResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateResourceInstancesResponse(CreateResourceInstancesResponse source) {
+        if (source.ResourceSet != null) {
+            this.ResourceSet = new String[source.ResourceSet.length];
+            for (int i = 0; i < source.ResourceSet.length; i++) {
+                this.ResourceSet[i] = new String(source.ResourceSet[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

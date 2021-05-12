@@ -91,6 +91,26 @@ public class ResetInstanceBlueprint extends AbstractModel{
         this.NonResettableMessage = NonResettableMessage;
     }
 
+    public ResetInstanceBlueprint() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ResetInstanceBlueprint(ResetInstanceBlueprint source) {
+        if (source.BlueprintInfo != null) {
+            this.BlueprintInfo = new Blueprint(source.BlueprintInfo);
+        }
+        if (source.IsResettable != null) {
+            this.IsResettable = new Boolean(source.IsResettable);
+        }
+        if (source.NonResettableMessage != null) {
+            this.NonResettableMessage = new String(source.NonResettableMessage);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

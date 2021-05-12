@@ -119,6 +119,29 @@ public class StorageInfo extends AbstractModel{
         this.AppId = AppId;
     }
 
+    public StorageInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public StorageInfo(StorageInfo source) {
+        if (source.Region != null) {
+            this.Region = new String(source.Region);
+        }
+        if (source.Bucket != null) {
+            this.Bucket = new String(source.Bucket);
+        }
+        if (source.CdnDomain != null) {
+            this.CdnDomain = new String(source.CdnDomain);
+        }
+        if (source.AppId != null) {
+            this.AppId = new String(source.AppId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

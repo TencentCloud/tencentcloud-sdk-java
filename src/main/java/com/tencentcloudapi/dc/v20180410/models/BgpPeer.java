@@ -68,6 +68,23 @@ public class BgpPeer extends AbstractModel{
         this.AuthKey = AuthKey;
     }
 
+    public BgpPeer() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public BgpPeer(BgpPeer source) {
+        if (source.Asn != null) {
+            this.Asn = new Long(source.Asn);
+        }
+        if (source.AuthKey != null) {
+            this.AuthKey = new String(source.AuthKey);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

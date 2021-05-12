@@ -325,6 +325,53 @@ public class AttachPolicyInfo extends AbstractModel{
         this.DeactivedDetail = DeactivedDetail;
     }
 
+    public AttachPolicyInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AttachPolicyInfo(AttachPolicyInfo source) {
+        if (source.PolicyId != null) {
+            this.PolicyId = new Long(source.PolicyId);
+        }
+        if (source.PolicyName != null) {
+            this.PolicyName = new String(source.PolicyName);
+        }
+        if (source.AddTime != null) {
+            this.AddTime = new String(source.AddTime);
+        }
+        if (source.CreateMode != null) {
+            this.CreateMode = new Long(source.CreateMode);
+        }
+        if (source.PolicyType != null) {
+            this.PolicyType = new String(source.PolicyType);
+        }
+        if (source.Remark != null) {
+            this.Remark = new String(source.Remark);
+        }
+        if (source.OperateOwnerUin != null) {
+            this.OperateOwnerUin = new String(source.OperateOwnerUin);
+        }
+        if (source.OperateUin != null) {
+            this.OperateUin = new String(source.OperateUin);
+        }
+        if (source.OperateUinType != null) {
+            this.OperateUinType = new Long(source.OperateUinType);
+        }
+        if (source.Deactived != null) {
+            this.Deactived = new Long(source.Deactived);
+        }
+        if (source.DeactivedDetail != null) {
+            this.DeactivedDetail = new String[source.DeactivedDetail.length];
+            for (int i = 0; i < source.DeactivedDetail.length; i++) {
+                this.DeactivedDetail[i] = new String(source.DeactivedDetail[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

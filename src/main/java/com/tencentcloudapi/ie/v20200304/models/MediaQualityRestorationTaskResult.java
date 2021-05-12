@@ -68,6 +68,26 @@ public class MediaQualityRestorationTaskResult extends AbstractModel{
         this.SubTaskResult = SubTaskResult;
     }
 
+    public MediaQualityRestorationTaskResult() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MediaQualityRestorationTaskResult(MediaQualityRestorationTaskResult source) {
+        if (source.TaskId != null) {
+            this.TaskId = new String(source.TaskId);
+        }
+        if (source.SubTaskResult != null) {
+            this.SubTaskResult = new SubTaskResultItem[source.SubTaskResult.length];
+            for (int i = 0; i < source.SubTaskResult.length; i++) {
+                this.SubTaskResult[i] = new SubTaskResultItem(source.SubTaskResult[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

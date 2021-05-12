@@ -68,6 +68,23 @@ public class CreateCodeRepositoryResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public CreateCodeRepositoryResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateCodeRepositoryResponse(CreateCodeRepositoryResponse source) {
+        if (source.CodeRepositoryName != null) {
+            this.CodeRepositoryName = new String(source.CodeRepositoryName);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

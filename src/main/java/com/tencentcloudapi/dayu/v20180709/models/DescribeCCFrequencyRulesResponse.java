@@ -91,6 +91,29 @@ public class DescribeCCFrequencyRulesResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeCCFrequencyRulesResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeCCFrequencyRulesResponse(DescribeCCFrequencyRulesResponse source) {
+        if (source.CCFrequencyRuleList != null) {
+            this.CCFrequencyRuleList = new CCFrequencyRule[source.CCFrequencyRuleList.length];
+            for (int i = 0; i < source.CCFrequencyRuleList.length; i++) {
+                this.CCFrequencyRuleList[i] = new CCFrequencyRule(source.CCFrequencyRuleList[i]);
+            }
+        }
+        if (source.CCFrequencyRuleStatus != null) {
+            this.CCFrequencyRuleStatus = new String(source.CCFrequencyRuleStatus);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

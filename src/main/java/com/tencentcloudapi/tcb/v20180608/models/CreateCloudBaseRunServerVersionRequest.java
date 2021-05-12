@@ -275,6 +275,13 @@ public class CreateCloudBaseRunServerVersionRequest extends AbstractModel{
     private CloudRunServiceVolume [] ServiceVolumes;
 
     /**
+    * 是否创建JnsGw 0未传默认创建 1创建 2不创建
+    */
+    @SerializedName("IsCreateJnsGw")
+    @Expose
+    private Long IsCreateJnsGw;
+
+    /**
      * Get 环境ID 
      * @return EnvId 环境ID
      */
@@ -851,6 +858,153 @@ public class CreateCloudBaseRunServerVersionRequest extends AbstractModel{
     }
 
     /**
+     * Get 是否创建JnsGw 0未传默认创建 1创建 2不创建 
+     * @return IsCreateJnsGw 是否创建JnsGw 0未传默认创建 1创建 2不创建
+     */
+    public Long getIsCreateJnsGw() {
+        return this.IsCreateJnsGw;
+    }
+
+    /**
+     * Set 是否创建JnsGw 0未传默认创建 1创建 2不创建
+     * @param IsCreateJnsGw 是否创建JnsGw 0未传默认创建 1创建 2不创建
+     */
+    public void setIsCreateJnsGw(Long IsCreateJnsGw) {
+        this.IsCreateJnsGw = IsCreateJnsGw;
+    }
+
+    public CreateCloudBaseRunServerVersionRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateCloudBaseRunServerVersionRequest(CreateCloudBaseRunServerVersionRequest source) {
+        if (source.EnvId != null) {
+            this.EnvId = new String(source.EnvId);
+        }
+        if (source.UploadType != null) {
+            this.UploadType = new String(source.UploadType);
+        }
+        if (source.FlowRatio != null) {
+            this.FlowRatio = new Long(source.FlowRatio);
+        }
+        if (source.Cpu != null) {
+            this.Cpu = new Float(source.Cpu);
+        }
+        if (source.Mem != null) {
+            this.Mem = new Float(source.Mem);
+        }
+        if (source.MinNum != null) {
+            this.MinNum = new Long(source.MinNum);
+        }
+        if (source.MaxNum != null) {
+            this.MaxNum = new Long(source.MaxNum);
+        }
+        if (source.PolicyType != null) {
+            this.PolicyType = new String(source.PolicyType);
+        }
+        if (source.PolicyThreshold != null) {
+            this.PolicyThreshold = new Long(source.PolicyThreshold);
+        }
+        if (source.ContainerPort != null) {
+            this.ContainerPort = new Long(source.ContainerPort);
+        }
+        if (source.ServerName != null) {
+            this.ServerName = new String(source.ServerName);
+        }
+        if (source.RepositoryType != null) {
+            this.RepositoryType = new String(source.RepositoryType);
+        }
+        if (source.DockerfilePath != null) {
+            this.DockerfilePath = new String(source.DockerfilePath);
+        }
+        if (source.BuildDir != null) {
+            this.BuildDir = new String(source.BuildDir);
+        }
+        if (source.EnvParams != null) {
+            this.EnvParams = new String(source.EnvParams);
+        }
+        if (source.Repository != null) {
+            this.Repository = new String(source.Repository);
+        }
+        if (source.Branch != null) {
+            this.Branch = new String(source.Branch);
+        }
+        if (source.VersionRemark != null) {
+            this.VersionRemark = new String(source.VersionRemark);
+        }
+        if (source.PackageName != null) {
+            this.PackageName = new String(source.PackageName);
+        }
+        if (source.PackageVersion != null) {
+            this.PackageVersion = new String(source.PackageVersion);
+        }
+        if (source.ImageInfo != null) {
+            this.ImageInfo = new CloudBaseRunImageInfo(source.ImageInfo);
+        }
+        if (source.CodeDetail != null) {
+            this.CodeDetail = new CloudBaseCodeRepoDetail(source.CodeDetail);
+        }
+        if (source.ImageSecretInfo != null) {
+            this.ImageSecretInfo = new CloudBaseRunImageSecretInfo(source.ImageSecretInfo);
+        }
+        if (source.ImagePullSecret != null) {
+            this.ImagePullSecret = new String(source.ImagePullSecret);
+        }
+        if (source.CustomLogs != null) {
+            this.CustomLogs = new String(source.CustomLogs);
+        }
+        if (source.InitialDelaySeconds != null) {
+            this.InitialDelaySeconds = new Long(source.InitialDelaySeconds);
+        }
+        if (source.MountVolumeInfo != null) {
+            this.MountVolumeInfo = new CloudBaseRunVolumeMount[source.MountVolumeInfo.length];
+            for (int i = 0; i < source.MountVolumeInfo.length; i++) {
+                this.MountVolumeInfo[i] = new CloudBaseRunVolumeMount(source.MountVolumeInfo[i]);
+            }
+        }
+        if (source.AccessType != null) {
+            this.AccessType = new Long(source.AccessType);
+        }
+        if (source.EsInfo != null) {
+            this.EsInfo = new CloudBaseEsInfo(source.EsInfo);
+        }
+        if (source.EnableUnion != null) {
+            this.EnableUnion = new Boolean(source.EnableUnion);
+        }
+        if (source.OperatorRemark != null) {
+            this.OperatorRemark = new String(source.OperatorRemark);
+        }
+        if (source.ServerPath != null) {
+            this.ServerPath = new String(source.ServerPath);
+        }
+        if (source.ImageReuseKey != null) {
+            this.ImageReuseKey = new String(source.ImageReuseKey);
+        }
+        if (source.SidecarSpecs != null) {
+            this.SidecarSpecs = new CloudBaseRunSideSpec[source.SidecarSpecs.length];
+            for (int i = 0; i < source.SidecarSpecs.length; i++) {
+                this.SidecarSpecs[i] = new CloudBaseRunSideSpec(source.SidecarSpecs[i]);
+            }
+        }
+        if (source.Security != null) {
+            this.Security = new CloudBaseSecurityContext(source.Security);
+        }
+        if (source.ServiceVolumes != null) {
+            this.ServiceVolumes = new CloudRunServiceVolume[source.ServiceVolumes.length];
+            for (int i = 0; i < source.ServiceVolumes.length; i++) {
+                this.ServiceVolumes[i] = new CloudRunServiceVolume(source.ServiceVolumes[i]);
+            }
+        }
+        if (source.IsCreateJnsGw != null) {
+            this.IsCreateJnsGw = new Long(source.IsCreateJnsGw);
+        }
+    }
+
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -890,6 +1044,7 @@ public class CreateCloudBaseRunServerVersionRequest extends AbstractModel{
         this.setParamArrayObj(map, prefix + "SidecarSpecs.", this.SidecarSpecs);
         this.setParamObj(map, prefix + "Security.", this.Security);
         this.setParamArrayObj(map, prefix + "ServiceVolumes.", this.ServiceVolumes);
+        this.setParamSimple(map, prefix + "IsCreateJnsGw", this.IsCreateJnsGw);
 
     }
 }

@@ -83,6 +83,23 @@ public class DeleteProxyGroupRequest extends AbstractModel{
         this.Force = Force;
     }
 
+    public DeleteProxyGroupRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteProxyGroupRequest(DeleteProxyGroupRequest source) {
+        if (source.GroupId != null) {
+            this.GroupId = new String(source.GroupId);
+        }
+        if (source.Force != null) {
+            this.Force = new Long(source.Force);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

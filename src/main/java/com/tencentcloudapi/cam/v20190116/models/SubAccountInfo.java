@@ -234,6 +234,44 @@ public class SubAccountInfo extends AbstractModel{
         this.CreateTime = CreateTime;
     }
 
+    public SubAccountInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SubAccountInfo(SubAccountInfo source) {
+        if (source.Uin != null) {
+            this.Uin = new Long(source.Uin);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Uid != null) {
+            this.Uid = new Long(source.Uid);
+        }
+        if (source.Remark != null) {
+            this.Remark = new String(source.Remark);
+        }
+        if (source.ConsoleLogin != null) {
+            this.ConsoleLogin = new Long(source.ConsoleLogin);
+        }
+        if (source.PhoneNum != null) {
+            this.PhoneNum = new String(source.PhoneNum);
+        }
+        if (source.CountryCode != null) {
+            this.CountryCode = new String(source.CountryCode);
+        }
+        if (source.Email != null) {
+            this.Email = new String(source.Email);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

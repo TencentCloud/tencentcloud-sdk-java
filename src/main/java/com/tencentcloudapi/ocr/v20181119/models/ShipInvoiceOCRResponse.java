@@ -91,6 +91,29 @@ public class ShipInvoiceOCRResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public ShipInvoiceOCRResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ShipInvoiceOCRResponse(ShipInvoiceOCRResponse source) {
+        if (source.ShipInvoiceInfos != null) {
+            this.ShipInvoiceInfos = new ShipInvoiceInfo[source.ShipInvoiceInfos.length];
+            for (int i = 0; i < source.ShipInvoiceInfos.length; i++) {
+                this.ShipInvoiceInfos[i] = new ShipInvoiceInfo(source.ShipInvoiceInfos[i]);
+            }
+        }
+        if (source.Angle != null) {
+            this.Angle = new Float(source.Angle);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

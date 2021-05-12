@@ -45,6 +45,20 @@ public class AiContentReviewTaskInput extends AbstractModel{
         this.Definition = Definition;
     }
 
+    public AiContentReviewTaskInput() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AiContentReviewTaskInput(AiContentReviewTaskInput source) {
+        if (source.Definition != null) {
+            this.Definition = new Long(source.Definition);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

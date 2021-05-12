@@ -187,6 +187,35 @@ public class DiagnoseList extends AbstractModel{
         this.CreateTime = CreateTime;
     }
 
+    public DiagnoseList() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DiagnoseList(DiagnoseList source) {
+        if (source.DiagnoseTag != null) {
+            this.DiagnoseTag = new String(source.DiagnoseTag);
+        }
+        if (source.ReportId != null) {
+            this.ReportId = new String(source.ReportId);
+        }
+        if (source.ClientInfo != null) {
+            this.ClientInfo = new ClientInfo[source.ClientInfo.length];
+            for (int i = 0; i < source.ClientInfo.length; i++) {
+                this.ClientInfo[i] = new ClientInfo(source.ClientInfo[i]);
+            }
+        }
+        if (source.FinalDiagnose != null) {
+            this.FinalDiagnose = new Long(source.FinalDiagnose);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -206,6 +206,41 @@ public class DescribeCostSummaryByResourceRequest extends AbstractModel{
         this.Conditions = Conditions;
     }
 
+    public DescribeCostSummaryByResourceRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeCostSummaryByResourceRequest(DescribeCostSummaryByResourceRequest source) {
+        if (source.BeginTime != null) {
+            this.BeginTime = new String(source.BeginTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.PayerUin != null) {
+            this.PayerUin = new String(source.PayerUin);
+        }
+        if (source.NeedRecordNum != null) {
+            this.NeedRecordNum = new Long(source.NeedRecordNum);
+        }
+        if (source.NeedConditionValue != null) {
+            this.NeedConditionValue = new Long(source.NeedConditionValue);
+        }
+        if (source.Conditions != null) {
+            this.Conditions = new Conditions(source.Conditions);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -275,6 +275,50 @@ public class UpdateServiceRequest extends AbstractModel{
         this.LogTopicId = LogTopicId;
     }
 
+    public UpdateServiceRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UpdateServiceRequest(UpdateServiceRequest source) {
+        if (source.ServiceId != null) {
+            this.ServiceId = new String(source.ServiceId);
+        }
+        if (source.Scaler != null) {
+            this.Scaler = new Scaler(source.Scaler);
+        }
+        if (source.ServiceConfigId != null) {
+            this.ServiceConfigId = new String(source.ServiceConfigId);
+        }
+        if (source.ScaleMode != null) {
+            this.ScaleMode = new String(source.ScaleMode);
+        }
+        if (source.ServiceAction != null) {
+            this.ServiceAction = new String(source.ServiceAction);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.GpuType != null) {
+            this.GpuType = new String(source.GpuType);
+        }
+        if (source.Cpu != null) {
+            this.Cpu = new Long(source.Cpu);
+        }
+        if (source.Memory != null) {
+            this.Memory = new Long(source.Memory);
+        }
+        if (source.Gpu != null) {
+            this.Gpu = new Long(source.Gpu);
+        }
+        if (source.LogTopicId != null) {
+            this.LogTopicId = new String(source.LogTopicId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

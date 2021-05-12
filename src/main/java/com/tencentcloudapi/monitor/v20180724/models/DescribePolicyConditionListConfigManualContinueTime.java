@@ -101,6 +101,29 @@ public class DescribePolicyConditionListConfigManualContinueTime extends Abstrac
         this.Need = Need;
     }
 
+    public DescribePolicyConditionListConfigManualContinueTime() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribePolicyConditionListConfigManualContinueTime(DescribePolicyConditionListConfigManualContinueTime source) {
+        if (source.Default != null) {
+            this.Default = new Long(source.Default);
+        }
+        if (source.Keys != null) {
+            this.Keys = new Long[source.Keys.length];
+            for (int i = 0; i < source.Keys.length; i++) {
+                this.Keys[i] = new Long(source.Keys[i]);
+            }
+        }
+        if (source.Need != null) {
+            this.Need = new Boolean(source.Need);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

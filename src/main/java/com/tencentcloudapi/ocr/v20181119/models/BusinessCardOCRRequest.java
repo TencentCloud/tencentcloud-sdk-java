@@ -166,6 +166,26 @@ Config = {"RetImageType":"PROPROCESS"}
         this.Config = Config;
     }
 
+    public BusinessCardOCRRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public BusinessCardOCRRequest(BusinessCardOCRRequest source) {
+        if (source.ImageBase64 != null) {
+            this.ImageBase64 = new String(source.ImageBase64);
+        }
+        if (source.ImageUrl != null) {
+            this.ImageUrl = new String(source.ImageUrl);
+        }
+        if (source.Config != null) {
+            this.Config = new String(source.Config);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

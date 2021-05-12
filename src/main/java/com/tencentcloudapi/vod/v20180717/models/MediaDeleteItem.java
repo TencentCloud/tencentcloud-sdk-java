@@ -83,6 +83,23 @@ public class MediaDeleteItem extends AbstractModel{
         this.Definition = Definition;
     }
 
+    public MediaDeleteItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MediaDeleteItem(MediaDeleteItem source) {
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.Definition != null) {
+            this.Definition = new Long(source.Definition);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

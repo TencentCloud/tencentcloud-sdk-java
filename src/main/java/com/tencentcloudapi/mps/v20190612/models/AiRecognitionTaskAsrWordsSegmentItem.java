@@ -91,6 +91,26 @@ public class AiRecognitionTaskAsrWordsSegmentItem extends AbstractModel{
         this.Confidence = Confidence;
     }
 
+    public AiRecognitionTaskAsrWordsSegmentItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AiRecognitionTaskAsrWordsSegmentItem(AiRecognitionTaskAsrWordsSegmentItem source) {
+        if (source.StartTimeOffset != null) {
+            this.StartTimeOffset = new Float(source.StartTimeOffset);
+        }
+        if (source.EndTimeOffset != null) {
+            this.EndTimeOffset = new Float(source.EndTimeOffset);
+        }
+        if (source.Confidence != null) {
+            this.Confidence = new Float(source.Confidence);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

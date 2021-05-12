@@ -45,6 +45,20 @@ public class DescribeSafeAuthFlagCollRequest extends AbstractModel{
         this.SubUin = SubUin;
     }
 
+    public DescribeSafeAuthFlagCollRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeSafeAuthFlagCollRequest(DescribeSafeAuthFlagCollRequest source) {
+        if (source.SubUin != null) {
+            this.SubUin = new Long(source.SubUin);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

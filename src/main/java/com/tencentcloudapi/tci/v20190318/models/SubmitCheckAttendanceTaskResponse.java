@@ -91,6 +91,29 @@ public class SubmitCheckAttendanceTaskResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public SubmitCheckAttendanceTaskResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SubmitCheckAttendanceTaskResponse(SubmitCheckAttendanceTaskResponse source) {
+        if (source.JobId != null) {
+            this.JobId = new Long(source.JobId);
+        }
+        if (source.NotRegisteredSet != null) {
+            this.NotRegisteredSet = new String[source.NotRegisteredSet.length];
+            for (int i = 0; i < source.NotRegisteredSet.length; i++) {
+                this.NotRegisteredSet[i] = new String(source.NotRegisteredSet[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

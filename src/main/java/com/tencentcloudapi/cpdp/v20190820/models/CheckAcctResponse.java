@@ -68,6 +68,23 @@ public class CheckAcctResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public CheckAcctResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CheckAcctResponse(CheckAcctResponse source) {
+        if (source.FrontSeqNo != null) {
+            this.FrontSeqNo = new String(source.FrontSeqNo);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

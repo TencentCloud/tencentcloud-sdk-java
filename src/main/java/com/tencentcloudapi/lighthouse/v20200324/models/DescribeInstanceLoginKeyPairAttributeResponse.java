@@ -68,6 +68,23 @@ public class DescribeInstanceLoginKeyPairAttributeResponse extends AbstractModel
         this.RequestId = RequestId;
     }
 
+    public DescribeInstanceLoginKeyPairAttributeResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeInstanceLoginKeyPairAttributeResponse(DescribeInstanceLoginKeyPairAttributeResponse source) {
+        if (source.PermitLogin != null) {
+            this.PermitLogin = new String(source.PermitLogin);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

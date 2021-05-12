@@ -152,6 +152,35 @@ NormalLive：普通直播。
         this.PushDomains = PushDomains;
     }
 
+    public DescribeConcurrentRecordStreamNumRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeConcurrentRecordStreamNumRequest(DescribeConcurrentRecordStreamNumRequest source) {
+        if (source.LiveType != null) {
+            this.LiveType = new String(source.LiveType);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+        if (source.MainlandOrOversea != null) {
+            this.MainlandOrOversea = new String(source.MainlandOrOversea);
+        }
+        if (source.PushDomains != null) {
+            this.PushDomains = new String[source.PushDomains.length];
+            for (int i = 0; i < source.PushDomains.length; i++) {
+                this.PushDomains[i] = new String(source.PushDomains[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

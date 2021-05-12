@@ -91,6 +91,26 @@ public class SoftwareDetail extends AbstractModel{
         this.Value = Value;
     }
 
+    public SoftwareDetail() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SoftwareDetail(SoftwareDetail source) {
+        if (source.Key != null) {
+            this.Key = new String(source.Key);
+        }
+        if (source.Title != null) {
+            this.Title = new String(source.Title);
+        }
+        if (source.Value != null) {
+            this.Value = new String(source.Value);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

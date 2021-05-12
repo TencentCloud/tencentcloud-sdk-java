@@ -805,6 +805,125 @@ public class Asset extends AbstractModel{
         this.EventRisk = EventRisk;
     }
 
+    public Asset() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Asset(Asset source) {
+        if (source.AssetType != null) {
+            this.AssetType = new String(source.AssetType);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.AssetRegionName != null) {
+            this.AssetRegionName = new String(source.AssetRegionName);
+        }
+        if (source.AssetVpcid != null) {
+            this.AssetVpcid = new String(source.AssetVpcid);
+        }
+        if (source.InstanceType != null) {
+            this.InstanceType = new String(source.InstanceType);
+        }
+        if (source.InstanceState != null) {
+            this.InstanceState = new String(source.InstanceState);
+        }
+        if (source.EngineVersion != null) {
+            this.EngineVersion = new String(source.EngineVersion);
+        }
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
+        if (source.Tag != null) {
+            this.Tag = new Tag[source.Tag.length];
+            for (int i = 0; i < source.Tag.length; i++) {
+                this.Tag[i] = new Tag(source.Tag[i]);
+            }
+        }
+        if (source.AssetCspmRiskNum != null) {
+            this.AssetCspmRiskNum = new Long(source.AssetCspmRiskNum);
+        }
+        if (source.PublicIpAddresses != null) {
+            this.PublicIpAddresses = new String[source.PublicIpAddresses.length];
+            for (int i = 0; i < source.PublicIpAddresses.length; i++) {
+                this.PublicIpAddresses[i] = new String(source.PublicIpAddresses[i]);
+            }
+        }
+        if (source.AssetUniqid != null) {
+            this.AssetUniqid = new String(source.AssetUniqid);
+        }
+        if (source.ChargeType != null) {
+            this.ChargeType = new String(source.ChargeType);
+        }
+        if (source.AssetEventNum != null) {
+            this.AssetEventNum = new Long(source.AssetEventNum);
+        }
+        if (source.AssetVulNum != null) {
+            this.AssetVulNum = new Long(source.AssetVulNum);
+        }
+        if (source.PrivateIpAddresses != null) {
+            this.PrivateIpAddresses = new String[source.PrivateIpAddresses.length];
+            for (int i = 0; i < source.PrivateIpAddresses.length; i++) {
+                this.PrivateIpAddresses[i] = new String(source.PrivateIpAddresses[i]);
+            }
+        }
+        if (source.GroupName != null) {
+            this.GroupName = new String(source.GroupName);
+        }
+        if (source.SsaAssetDiscoverTime != null) {
+            this.SsaAssetDiscoverTime = new String(source.SsaAssetDiscoverTime);
+        }
+        if (source.SsaAssetDeleteTime != null) {
+            this.SsaAssetDeleteTime = new String(source.SsaAssetDeleteTime);
+        }
+        if (source.IsNew != null) {
+            this.IsNew = new Boolean(source.IsNew);
+        }
+        if (source.AssetSubnetId != null) {
+            this.AssetSubnetId = new String(source.AssetSubnetId);
+        }
+        if (source.AssetSubnetName != null) {
+            this.AssetSubnetName = new String(source.AssetSubnetName);
+        }
+        if (source.AssetVpcName != null) {
+            this.AssetVpcName = new String(source.AssetVpcName);
+        }
+        if (source.ClusterType != null) {
+            this.ClusterType = new Long(source.ClusterType);
+        }
+        if (source.NameSpace != null) {
+            this.NameSpace = new String(source.NameSpace);
+        }
+        if (source.LoadBalancerType != null) {
+            this.LoadBalancerType = new String(source.LoadBalancerType);
+        }
+        if (source.LoadBalancerVips != null) {
+            this.LoadBalancerVips = new String[source.LoadBalancerVips.length];
+            for (int i = 0; i < source.LoadBalancerVips.length; i++) {
+                this.LoadBalancerVips[i] = new String(source.LoadBalancerVips[i]);
+            }
+        }
+        if (source.AssetIpv6 != null) {
+            this.AssetIpv6 = new String[source.AssetIpv6.length];
+            for (int i = 0; i < source.AssetIpv6.length; i++) {
+                this.AssetIpv6[i] = new String(source.AssetIpv6[i]);
+            }
+        }
+        if (source.SSHRisk != null) {
+            this.SSHRisk = new String(source.SSHRisk);
+        }
+        if (source.RDPRisk != null) {
+            this.RDPRisk = new String(source.RDPRisk);
+        }
+        if (source.EventRisk != null) {
+            this.EventRisk = new String(source.EventRisk);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

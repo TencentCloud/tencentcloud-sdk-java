@@ -206,6 +206,41 @@ public class PersonCoordinate extends AbstractModel{
         this.Event = Event;
     }
 
+    public PersonCoordinate() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PersonCoordinate(PersonCoordinate source) {
+        if (source.CADX != null) {
+            this.CADX = new Float(source.CADX);
+        }
+        if (source.CADY != null) {
+            this.CADY = new Float(source.CADY);
+        }
+        if (source.CapTime != null) {
+            this.CapTime = new String(source.CapTime);
+        }
+        if (source.CapPic != null) {
+            this.CapPic = new String(source.CapPic);
+        }
+        if (source.MallAreaType != null) {
+            this.MallAreaType = new Long(source.MallAreaType);
+        }
+        if (source.PosId != null) {
+            this.PosId = new Long(source.PosId);
+        }
+        if (source.ShopId != null) {
+            this.ShopId = new Long(source.ShopId);
+        }
+        if (source.Event != null) {
+            this.Event = new String(source.Event);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

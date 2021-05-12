@@ -366,6 +366,56 @@ public class QuerySingleTransactionStatusResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public QuerySingleTransactionStatusResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public QuerySingleTransactionStatusResponse(QuerySingleTransactionStatusResponse source) {
+        if (source.TxnReturnCode != null) {
+            this.TxnReturnCode = new String(source.TxnReturnCode);
+        }
+        if (source.TxnReturnMsg != null) {
+            this.TxnReturnMsg = new String(source.TxnReturnMsg);
+        }
+        if (source.CnsmrSeqNo != null) {
+            this.CnsmrSeqNo = new String(source.CnsmrSeqNo);
+        }
+        if (source.BookingFlag != null) {
+            this.BookingFlag = new String(source.BookingFlag);
+        }
+        if (source.TranStatus != null) {
+            this.TranStatus = new String(source.TranStatus);
+        }
+        if (source.TranAmt != null) {
+            this.TranAmt = new String(source.TranAmt);
+        }
+        if (source.TranDate != null) {
+            this.TranDate = new String(source.TranDate);
+        }
+        if (source.TranTime != null) {
+            this.TranTime = new String(source.TranTime);
+        }
+        if (source.InSubAcctNo != null) {
+            this.InSubAcctNo = new String(source.InSubAcctNo);
+        }
+        if (source.OutSubAcctNo != null) {
+            this.OutSubAcctNo = new String(source.OutSubAcctNo);
+        }
+        if (source.FailMsg != null) {
+            this.FailMsg = new String(source.FailMsg);
+        }
+        if (source.OldTranFrontSeqNo != null) {
+            this.OldTranFrontSeqNo = new String(source.OldTranFrontSeqNo);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -111,6 +111,26 @@ public class DescribeStatisticDetailsRequest extends AbstractModel{
         this.StatisticField = StatisticField;
     }
 
+    public DescribeStatisticDetailsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeStatisticDetailsRequest(DescribeStatisticDetailsRequest source) {
+        if (source.StartDate != null) {
+            this.StartDate = new String(source.StartDate);
+        }
+        if (source.EndDate != null) {
+            this.EndDate = new String(source.EndDate);
+        }
+        if (source.StatisticField != null) {
+            this.StatisticField = new String(source.StatisticField);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

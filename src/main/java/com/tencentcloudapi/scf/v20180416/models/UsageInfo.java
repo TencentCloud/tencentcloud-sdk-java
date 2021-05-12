@@ -137,6 +137,35 @@ public class UsageInfo extends AbstractModel{
         this.UserConcurrencyMemLimit = UserConcurrencyMemLimit;
     }
 
+    public UsageInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UsageInfo(UsageInfo source) {
+        if (source.NamespacesCount != null) {
+            this.NamespacesCount = new Long(source.NamespacesCount);
+        }
+        if (source.Namespace != null) {
+            this.Namespace = new NamespaceUsage[source.Namespace.length];
+            for (int i = 0; i < source.Namespace.length; i++) {
+                this.Namespace[i] = new NamespaceUsage(source.Namespace[i]);
+            }
+        }
+        if (source.TotalConcurrencyMem != null) {
+            this.TotalConcurrencyMem = new Long(source.TotalConcurrencyMem);
+        }
+        if (source.TotalAllocatedConcurrencyMem != null) {
+            this.TotalAllocatedConcurrencyMem = new Long(source.TotalAllocatedConcurrencyMem);
+        }
+        if (source.UserConcurrencyMemLimit != null) {
+            this.UserConcurrencyMemLimit = new Long(source.UserConcurrencyMemLimit);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

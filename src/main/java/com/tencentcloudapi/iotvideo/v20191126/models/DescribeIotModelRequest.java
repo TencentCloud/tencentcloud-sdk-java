@@ -68,6 +68,23 @@ public class DescribeIotModelRequest extends AbstractModel{
         this.Revision = Revision;
     }
 
+    public DescribeIotModelRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeIotModelRequest(DescribeIotModelRequest source) {
+        if (source.ProductId != null) {
+            this.ProductId = new String(source.ProductId);
+        }
+        if (source.Revision != null) {
+            this.Revision = new Long(source.Revision);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

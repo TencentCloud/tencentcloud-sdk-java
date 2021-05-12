@@ -152,6 +152,32 @@ PersonType=2时(黑名单)，0普通黑名单，1小偷)
         this.PersonSubType = PersonSubType;
     }
 
+    public ModifyPersonTypeRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyPersonTypeRequest(ModifyPersonTypeRequest source) {
+        if (source.CompanyId != null) {
+            this.CompanyId = new String(source.CompanyId);
+        }
+        if (source.ShopId != null) {
+            this.ShopId = new Long(source.ShopId);
+        }
+        if (source.PersonId != null) {
+            this.PersonId = new Long(source.PersonId);
+        }
+        if (source.PersonType != null) {
+            this.PersonType = new Long(source.PersonType);
+        }
+        if (source.PersonSubType != null) {
+            this.PersonSubType = new Long(source.PersonSubType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

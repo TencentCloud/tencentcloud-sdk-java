@@ -377,6 +377,62 @@ public class Blueprint extends AbstractModel{
         this.RequiredMemorySize = RequiredMemorySize;
     }
 
+    public Blueprint() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Blueprint(Blueprint source) {
+        if (source.BlueprintId != null) {
+            this.BlueprintId = new String(source.BlueprintId);
+        }
+        if (source.DisplayTitle != null) {
+            this.DisplayTitle = new String(source.DisplayTitle);
+        }
+        if (source.DisplayVersion != null) {
+            this.DisplayVersion = new String(source.DisplayVersion);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.OsName != null) {
+            this.OsName = new String(source.OsName);
+        }
+        if (source.Platform != null) {
+            this.Platform = new String(source.Platform);
+        }
+        if (source.PlatformType != null) {
+            this.PlatformType = new String(source.PlatformType);
+        }
+        if (source.BlueprintType != null) {
+            this.BlueprintType = new String(source.BlueprintType);
+        }
+        if (source.ImageUrl != null) {
+            this.ImageUrl = new String(source.ImageUrl);
+        }
+        if (source.RequiredSystemDiskSize != null) {
+            this.RequiredSystemDiskSize = new Long(source.RequiredSystemDiskSize);
+        }
+        if (source.BlueprintState != null) {
+            this.BlueprintState = new String(source.BlueprintState);
+        }
+        if (source.CreatedTime != null) {
+            this.CreatedTime = new String(source.CreatedTime);
+        }
+        if (source.BlueprintName != null) {
+            this.BlueprintName = new String(source.BlueprintName);
+        }
+        if (source.SupportAutomationTools != null) {
+            this.SupportAutomationTools = new Boolean(source.SupportAutomationTools);
+        }
+        if (source.RequiredMemorySize != null) {
+            this.RequiredMemorySize = new Long(source.RequiredMemorySize);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

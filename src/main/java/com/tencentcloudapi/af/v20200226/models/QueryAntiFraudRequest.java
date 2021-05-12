@@ -598,6 +598,83 @@ ID 区分统计数据
         this.NameCryptoType = NameCryptoType;
     }
 
+    public QueryAntiFraudRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public QueryAntiFraudRequest(QueryAntiFraudRequest source) {
+        if (source.PhoneNumber != null) {
+            this.PhoneNumber = new String(source.PhoneNumber);
+        }
+        if (source.IdNumber != null) {
+            this.IdNumber = new String(source.IdNumber);
+        }
+        if (source.BankCardNumber != null) {
+            this.BankCardNumber = new String(source.BankCardNumber);
+        }
+        if (source.UserIp != null) {
+            this.UserIp = new String(source.UserIp);
+        }
+        if (source.Imei != null) {
+            this.Imei = new String(source.Imei);
+        }
+        if (source.Idfa != null) {
+            this.Idfa = new String(source.Idfa);
+        }
+        if (source.Scene != null) {
+            this.Scene = new String(source.Scene);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.EmailAddress != null) {
+            this.EmailAddress = new String(source.EmailAddress);
+        }
+        if (source.Address != null) {
+            this.Address = new String(source.Address);
+        }
+        if (source.Mac != null) {
+            this.Mac = new String(source.Mac);
+        }
+        if (source.Imsi != null) {
+            this.Imsi = new String(source.Imsi);
+        }
+        if (source.AccountType != null) {
+            this.AccountType = new String(source.AccountType);
+        }
+        if (source.Uid != null) {
+            this.Uid = new String(source.Uid);
+        }
+        if (source.AppIdU != null) {
+            this.AppIdU = new String(source.AppIdU);
+        }
+        if (source.WifiMac != null) {
+            this.WifiMac = new String(source.WifiMac);
+        }
+        if (source.WifiSSID != null) {
+            this.WifiSSID = new String(source.WifiSSID);
+        }
+        if (source.WifiBSSID != null) {
+            this.WifiBSSID = new String(source.WifiBSSID);
+        }
+        if (source.BusinessId != null) {
+            this.BusinessId = new String(source.BusinessId);
+        }
+        if (source.IdCryptoType != null) {
+            this.IdCryptoType = new String(source.IdCryptoType);
+        }
+        if (source.PhoneCryptoType != null) {
+            this.PhoneCryptoType = new String(source.PhoneCryptoType);
+        }
+        if (source.NameCryptoType != null) {
+            this.NameCryptoType = new String(source.NameCryptoType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

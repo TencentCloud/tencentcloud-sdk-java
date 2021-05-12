@@ -68,6 +68,23 @@ public class Candidate extends AbstractModel{
         this.Confidence = Confidence;
     }
 
+    public Candidate() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Candidate(Candidate source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Confidence != null) {
+            this.Confidence = new Long(source.Confidence);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

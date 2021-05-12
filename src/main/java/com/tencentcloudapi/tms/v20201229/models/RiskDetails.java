@@ -68,6 +68,23 @@ public class RiskDetails extends AbstractModel{
         this.Level = Level;
     }
 
+    public RiskDetails() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RiskDetails(RiskDetails source) {
+        if (source.Label != null) {
+            this.Label = new String(source.Label);
+        }
+        if (source.Level != null) {
+            this.Level = new Long(source.Level);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

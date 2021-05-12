@@ -73,6 +73,26 @@ public class Album extends AbstractModel{
         this.ImagePathMap = ImagePathMap;
     }
 
+    public Album() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Album(Album source) {
+        if (source.AlbumName != null) {
+            this.AlbumName = new String(source.AlbumName);
+        }
+        if (source.ImagePathMap != null) {
+            this.ImagePathMap = new ImagePath[source.ImagePathMap.length];
+            for (int i = 0; i < source.ImagePathMap.length; i++) {
+                this.ImagePathMap[i] = new ImagePath(source.ImagePathMap[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

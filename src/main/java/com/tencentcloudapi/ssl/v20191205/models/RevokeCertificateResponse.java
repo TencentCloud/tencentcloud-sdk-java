@@ -73,6 +73,26 @@ public class RevokeCertificateResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public RevokeCertificateResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RevokeCertificateResponse(RevokeCertificateResponse source) {
+        if (source.RevokeDomainValidateAuths != null) {
+            this.RevokeDomainValidateAuths = new RevokeDomainValidateAuths[source.RevokeDomainValidateAuths.length];
+            for (int i = 0; i < source.RevokeDomainValidateAuths.length; i++) {
+                this.RevokeDomainValidateAuths[i] = new RevokeDomainValidateAuths(source.RevokeDomainValidateAuths[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

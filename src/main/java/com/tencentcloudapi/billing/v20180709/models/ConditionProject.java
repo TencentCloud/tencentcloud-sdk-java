@@ -68,6 +68,23 @@ public class ConditionProject extends AbstractModel{
         this.ProjectName = ProjectName;
     }
 
+    public ConditionProject() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ConditionProject(ConditionProject source) {
+        if (source.ProjectId != null) {
+            this.ProjectId = new String(source.ProjectId);
+        }
+        if (source.ProjectName != null) {
+            this.ProjectName = new String(source.ProjectName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

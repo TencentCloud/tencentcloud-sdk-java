@@ -91,6 +91,29 @@ public class DescribeTaskLogsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeTaskLogsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeTaskLogsResponse(DescribeTaskLogsResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.TaskInstanceLogSet != null) {
+            this.TaskInstanceLogSet = new TaskInstanceLog[source.TaskInstanceLogSet.length];
+            for (int i = 0; i < source.TaskInstanceLogSet.length; i++) {
+                this.TaskInstanceLogSet[i] = new TaskInstanceLog(source.TaskInstanceLogSet[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -45,6 +45,20 @@ public class DescribeLiveCertRequest extends AbstractModel{
         this.CertId = CertId;
     }
 
+    public DescribeLiveCertRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeLiveCertRequest(DescribeLiveCertRequest source) {
+        if (source.CertId != null) {
+            this.CertId = new Long(source.CertId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

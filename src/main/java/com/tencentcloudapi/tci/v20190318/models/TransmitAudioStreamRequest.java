@@ -252,6 +252,50 @@ public class TransmitAudioStreamRequest extends AbstractModel{
         this.VocabLibNameList = VocabLibNameList;
     }
 
+    public TransmitAudioStreamRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TransmitAudioStreamRequest(TransmitAudioStreamRequest source) {
+        if (source.Functions != null) {
+            this.Functions = new Function(source.Functions);
+        }
+        if (source.SeqId != null) {
+            this.SeqId = new Long(source.SeqId);
+        }
+        if (source.SessionId != null) {
+            this.SessionId = new String(source.SessionId);
+        }
+        if (source.UserVoiceData != null) {
+            this.UserVoiceData = new String(source.UserVoiceData);
+        }
+        if (source.VoiceEncodeType != null) {
+            this.VoiceEncodeType = new Long(source.VoiceEncodeType);
+        }
+        if (source.VoiceFileType != null) {
+            this.VoiceFileType = new Long(source.VoiceFileType);
+        }
+        if (source.IsEnd != null) {
+            this.IsEnd = new Long(source.IsEnd);
+        }
+        if (source.Lang != null) {
+            this.Lang = new Long(source.Lang);
+        }
+        if (source.StorageMode != null) {
+            this.StorageMode = new Long(source.StorageMode);
+        }
+        if (source.VocabLibNameList != null) {
+            this.VocabLibNameList = new String[source.VocabLibNameList.length];
+            for (int i = 0; i < source.VocabLibNameList.length; i++) {
+                this.VocabLibNameList[i] = new String(source.VocabLibNameList[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

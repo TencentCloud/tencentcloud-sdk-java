@@ -91,6 +91,26 @@ public class ServerProcesse extends AbstractModel{
         this.Parameters = Parameters;
     }
 
+    public ServerProcesse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ServerProcesse(ServerProcesse source) {
+        if (source.ConcurrentExecutions != null) {
+            this.ConcurrentExecutions = new Long(source.ConcurrentExecutions);
+        }
+        if (source.LaunchPath != null) {
+            this.LaunchPath = new String(source.LaunchPath);
+        }
+        if (source.Parameters != null) {
+            this.Parameters = new String(source.Parameters);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

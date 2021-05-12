@@ -91,6 +91,26 @@ public class DescribeDosageCosDetailByDateRequest extends AbstractModel{
         this.BucketName = BucketName;
     }
 
+    public DescribeDosageCosDetailByDateRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeDosageCosDetailByDateRequest(DescribeDosageCosDetailByDateRequest source) {
+        if (source.StartDate != null) {
+            this.StartDate = new String(source.StartDate);
+        }
+        if (source.EndDate != null) {
+            this.EndDate = new String(source.EndDate);
+        }
+        if (source.BucketName != null) {
+            this.BucketName = new String(source.BucketName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

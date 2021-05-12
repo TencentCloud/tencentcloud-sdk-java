@@ -505,6 +505,86 @@ public class Product extends AbstractModel{
         this.AssociatedProducts = AssociatedProducts;
     }
 
+    public Product() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Product(Product source) {
+        if (source.ProductId != null) {
+            this.ProductId = new String(source.ProductId);
+        }
+        if (source.ProductKey != null) {
+            this.ProductKey = new String(source.ProductKey);
+        }
+        if (source.AppId != null) {
+            this.AppId = new Long(source.AppId);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.Domain != null) {
+            this.Domain = new String(source.Domain);
+        }
+        if (source.Standard != null) {
+            this.Standard = new Long(source.Standard);
+        }
+        if (source.AuthType != null) {
+            this.AuthType = new Long(source.AuthType);
+        }
+        if (source.Deleted != null) {
+            this.Deleted = new Long(source.Deleted);
+        }
+        if (source.Message != null) {
+            this.Message = new String(source.Message);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new String(source.UpdateTime);
+        }
+        if (source.DataTemplate != null) {
+            this.DataTemplate = new DataTemplate[source.DataTemplate.length];
+            for (int i = 0; i < source.DataTemplate.length; i++) {
+                this.DataTemplate[i] = new DataTemplate(source.DataTemplate[i]);
+            }
+        }
+        if (source.DataProtocol != null) {
+            this.DataProtocol = new String(source.DataProtocol);
+        }
+        if (source.Username != null) {
+            this.Username = new String(source.Username);
+        }
+        if (source.Password != null) {
+            this.Password = new String(source.Password);
+        }
+        if (source.CommProtocol != null) {
+            this.CommProtocol = new String(source.CommProtocol);
+        }
+        if (source.Qps != null) {
+            this.Qps = new Long(source.Qps);
+        }
+        if (source.Region != null) {
+            this.Region = new String(source.Region);
+        }
+        if (source.DeviceType != null) {
+            this.DeviceType = new String(source.DeviceType);
+        }
+        if (source.AssociatedProducts != null) {
+            this.AssociatedProducts = new String[source.AssociatedProducts.length];
+            for (int i = 0; i < source.AssociatedProducts.length; i++) {
+                this.AssociatedProducts[i] = new String(source.AssociatedProducts[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

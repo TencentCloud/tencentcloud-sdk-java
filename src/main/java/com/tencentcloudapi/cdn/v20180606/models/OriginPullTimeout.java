@@ -78,6 +78,23 @@ public class OriginPullTimeout extends AbstractModel{
         this.ReceiveTimeout = ReceiveTimeout;
     }
 
+    public OriginPullTimeout() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public OriginPullTimeout(OriginPullTimeout source) {
+        if (source.ConnectTimeout != null) {
+            this.ConnectTimeout = new Long(source.ConnectTimeout);
+        }
+        if (source.ReceiveTimeout != null) {
+            this.ReceiveTimeout = new Long(source.ReceiveTimeout);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

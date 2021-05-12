@@ -147,6 +147,32 @@ public class CreatePersonResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public CreatePersonResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreatePersonResponse(CreatePersonResponse source) {
+        if (source.FaceId != null) {
+            this.FaceId = new String(source.FaceId);
+        }
+        if (source.FaceRect != null) {
+            this.FaceRect = new FaceRect(source.FaceRect);
+        }
+        if (source.SimilarPersonId != null) {
+            this.SimilarPersonId = new String(source.SimilarPersonId);
+        }
+        if (source.FaceModelVersion != null) {
+            this.FaceModelVersion = new String(source.FaceModelVersion);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

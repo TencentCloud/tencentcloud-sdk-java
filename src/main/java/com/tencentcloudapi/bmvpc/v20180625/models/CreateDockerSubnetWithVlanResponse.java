@@ -68,6 +68,23 @@ public class CreateDockerSubnetWithVlanResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public CreateDockerSubnetWithVlanResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateDockerSubnetWithVlanResponse(CreateDockerSubnetWithVlanResponse source) {
+        if (source.TaskId != null) {
+            this.TaskId = new Long(source.TaskId);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -50,6 +50,20 @@ public class HealthCheckConfig extends AbstractModel{
         this.Path = Path;
     }
 
+    public HealthCheckConfig() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public HealthCheckConfig(HealthCheckConfig source) {
+        if (source.Path != null) {
+            this.Path = new String(source.Path);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

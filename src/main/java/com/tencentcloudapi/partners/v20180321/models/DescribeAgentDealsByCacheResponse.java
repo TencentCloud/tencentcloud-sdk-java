@@ -91,6 +91,29 @@ public class DescribeAgentDealsByCacheResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeAgentDealsByCacheResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeAgentDealsByCacheResponse(DescribeAgentDealsByCacheResponse source) {
+        if (source.AgentDealSet != null) {
+            this.AgentDealSet = new AgentDealNewElem[source.AgentDealSet.length];
+            for (int i = 0; i < source.AgentDealSet.length; i++) {
+                this.AgentDealSet[i] = new AgentDealNewElem(source.AgentDealSet[i]);
+            }
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

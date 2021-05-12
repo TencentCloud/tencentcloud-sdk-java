@@ -68,6 +68,26 @@ public class GetSendEmailStatusResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public GetSendEmailStatusResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GetSendEmailStatusResponse(GetSendEmailStatusResponse source) {
+        if (source.EmailStatusList != null) {
+            this.EmailStatusList = new SendEmailStatus[source.EmailStatusList.length];
+            for (int i = 0; i < source.EmailStatusList.length; i++) {
+                this.EmailStatusList[i] = new SendEmailStatus(source.EmailStatusList[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

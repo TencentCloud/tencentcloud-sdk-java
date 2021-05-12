@@ -68,6 +68,26 @@ public class DescribeInstanceSpecsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeInstanceSpecsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeInstanceSpecsResponse(DescribeInstanceSpecsResponse source) {
+        if (source.InstanceSpecSet != null) {
+            this.InstanceSpecSet = new InstanceSpec[source.InstanceSpecSet.length];
+            for (int i = 0; i < source.InstanceSpecSet.length; i++) {
+                this.InstanceSpecSet[i] = new InstanceSpec(source.InstanceSpecSet[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

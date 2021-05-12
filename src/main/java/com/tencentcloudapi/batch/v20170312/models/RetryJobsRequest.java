@@ -45,6 +45,23 @@ public class RetryJobsRequest extends AbstractModel{
         this.JobIds = JobIds;
     }
 
+    public RetryJobsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RetryJobsRequest(RetryJobsRequest source) {
+        if (source.JobIds != null) {
+            this.JobIds = new String[source.JobIds.length];
+            for (int i = 0; i < source.JobIds.length; i++) {
+                this.JobIds[i] = new String(source.JobIds[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

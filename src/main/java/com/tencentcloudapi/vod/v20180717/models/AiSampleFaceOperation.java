@@ -106,6 +106,32 @@ public class AiSampleFaceOperation extends AbstractModel{
         this.FaceContents = FaceContents;
     }
 
+    public AiSampleFaceOperation() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AiSampleFaceOperation(AiSampleFaceOperation source) {
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.FaceIds != null) {
+            this.FaceIds = new String[source.FaceIds.length];
+            for (int i = 0; i < source.FaceIds.length; i++) {
+                this.FaceIds[i] = new String(source.FaceIds[i]);
+            }
+        }
+        if (source.FaceContents != null) {
+            this.FaceContents = new String[source.FaceContents.length];
+            for (int i = 0; i < source.FaceContents.length; i++) {
+                this.FaceContents[i] = new String(source.FaceContents[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

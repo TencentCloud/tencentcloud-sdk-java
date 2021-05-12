@@ -392,6 +392,50 @@ failed：部署失败
         this.TlsVersion = TlsVersion;
     }
 
+    public Https() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Https(Https source) {
+        if (source.Switch != null) {
+            this.Switch = new String(source.Switch);
+        }
+        if (source.Http2 != null) {
+            this.Http2 = new String(source.Http2);
+        }
+        if (source.OcspStapling != null) {
+            this.OcspStapling = new String(source.OcspStapling);
+        }
+        if (source.VerifyClient != null) {
+            this.VerifyClient = new String(source.VerifyClient);
+        }
+        if (source.CertInfo != null) {
+            this.CertInfo = new ServerCert(source.CertInfo);
+        }
+        if (source.ClientCertInfo != null) {
+            this.ClientCertInfo = new ClientCert(source.ClientCertInfo);
+        }
+        if (source.Spdy != null) {
+            this.Spdy = new String(source.Spdy);
+        }
+        if (source.SslStatus != null) {
+            this.SslStatus = new String(source.SslStatus);
+        }
+        if (source.Hsts != null) {
+            this.Hsts = new Hsts(source.Hsts);
+        }
+        if (source.TlsVersion != null) {
+            this.TlsVersion = new String[source.TlsVersion.length];
+            for (int i = 0; i < source.TlsVersion.length; i++) {
+                this.TlsVersion[i] = new String(source.TlsVersion[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

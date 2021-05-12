@@ -231,6 +231,26 @@ GZJGZY: 公证机构执业证。
         this.ImgUrl = ImgUrl;
     }
 
+    public CertificateInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CertificateInfo(CertificateInfo source) {
+        if (source.CertificateCode != null) {
+            this.CertificateCode = new String(source.CertificateCode);
+        }
+        if (source.CertificateType != null) {
+            this.CertificateType = new String(source.CertificateType);
+        }
+        if (source.ImgUrl != null) {
+            this.ImgUrl = new String(source.ImgUrl);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

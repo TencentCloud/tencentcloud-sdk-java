@@ -68,6 +68,26 @@ public class DescribeDeviceClassPartitionResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeDeviceClassPartitionResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeDeviceClassPartitionResponse(DescribeDeviceClassPartitionResponse source) {
+        if (source.DeviceClassPartitionInfoSet != null) {
+            this.DeviceClassPartitionInfoSet = new DeviceClassPartitionInfo[source.DeviceClassPartitionInfoSet.length];
+            for (int i = 0; i < source.DeviceClassPartitionInfoSet.length; i++) {
+                this.DeviceClassPartitionInfoSet[i] = new DeviceClassPartitionInfo(source.DeviceClassPartitionInfoSet[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

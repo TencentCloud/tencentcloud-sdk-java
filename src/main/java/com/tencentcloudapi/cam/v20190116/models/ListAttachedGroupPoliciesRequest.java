@@ -91,6 +91,26 @@ public class ListAttachedGroupPoliciesRequest extends AbstractModel{
         this.Rp = Rp;
     }
 
+    public ListAttachedGroupPoliciesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ListAttachedGroupPoliciesRequest(ListAttachedGroupPoliciesRequest source) {
+        if (source.TargetGroupId != null) {
+            this.TargetGroupId = new Long(source.TargetGroupId);
+        }
+        if (source.Page != null) {
+            this.Page = new Long(source.Page);
+        }
+        if (source.Rp != null) {
+            this.Rp = new Long(source.Rp);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

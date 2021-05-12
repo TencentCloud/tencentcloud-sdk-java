@@ -492,6 +492,80 @@ public class InstanceTypeQuotaItem extends AbstractModel{
         this.Remark = Remark;
     }
 
+    public InstanceTypeQuotaItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public InstanceTypeQuotaItem(InstanceTypeQuotaItem source) {
+        if (source.Zone != null) {
+            this.Zone = new String(source.Zone);
+        }
+        if (source.InstanceType != null) {
+            this.InstanceType = new String(source.InstanceType);
+        }
+        if (source.InstanceChargeType != null) {
+            this.InstanceChargeType = new String(source.InstanceChargeType);
+        }
+        if (source.NetworkCard != null) {
+            this.NetworkCard = new Long(source.NetworkCard);
+        }
+        if (source.Externals != null) {
+            this.Externals = new Externals(source.Externals);
+        }
+        if (source.Cpu != null) {
+            this.Cpu = new Long(source.Cpu);
+        }
+        if (source.Memory != null) {
+            this.Memory = new Long(source.Memory);
+        }
+        if (source.InstanceFamily != null) {
+            this.InstanceFamily = new String(source.InstanceFamily);
+        }
+        if (source.TypeName != null) {
+            this.TypeName = new String(source.TypeName);
+        }
+        if (source.LocalDiskTypeList != null) {
+            this.LocalDiskTypeList = new LocalDiskType[source.LocalDiskTypeList.length];
+            for (int i = 0; i < source.LocalDiskTypeList.length; i++) {
+                this.LocalDiskTypeList[i] = new LocalDiskType(source.LocalDiskTypeList[i]);
+            }
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.Price != null) {
+            this.Price = new ItemPrice(source.Price);
+        }
+        if (source.SoldOutReason != null) {
+            this.SoldOutReason = new String(source.SoldOutReason);
+        }
+        if (source.InstanceBandwidth != null) {
+            this.InstanceBandwidth = new Float(source.InstanceBandwidth);
+        }
+        if (source.InstancePps != null) {
+            this.InstancePps = new Long(source.InstancePps);
+        }
+        if (source.StorageBlockAmount != null) {
+            this.StorageBlockAmount = new Long(source.StorageBlockAmount);
+        }
+        if (source.CpuType != null) {
+            this.CpuType = new String(source.CpuType);
+        }
+        if (source.Gpu != null) {
+            this.Gpu = new Long(source.Gpu);
+        }
+        if (source.Fpga != null) {
+            this.Fpga = new Long(source.Fpga);
+        }
+        if (source.Remark != null) {
+            this.Remark = new String(source.Remark);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

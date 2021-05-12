@@ -114,6 +114,32 @@ public class GetFunctionLogsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public GetFunctionLogsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GetFunctionLogsResponse(GetFunctionLogsResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.Data != null) {
+            this.Data = new FunctionLog[source.Data.length];
+            for (int i = 0; i < source.Data.length; i++) {
+                this.Data[i] = new FunctionLog(source.Data[i]);
+            }
+        }
+        if (source.SearchContext != null) {
+            this.SearchContext = new LogSearchContext(source.SearchContext);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

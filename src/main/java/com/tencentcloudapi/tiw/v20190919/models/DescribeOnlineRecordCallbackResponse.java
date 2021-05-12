@@ -91,6 +91,26 @@ public class DescribeOnlineRecordCallbackResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeOnlineRecordCallbackResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeOnlineRecordCallbackResponse(DescribeOnlineRecordCallbackResponse source) {
+        if (source.Callback != null) {
+            this.Callback = new String(source.Callback);
+        }
+        if (source.CallbackKey != null) {
+            this.CallbackKey = new String(source.CallbackKey);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

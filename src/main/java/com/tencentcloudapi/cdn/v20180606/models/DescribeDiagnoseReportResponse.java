@@ -229,6 +229,44 @@ public class DescribeDiagnoseReportResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeDiagnoseReportResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeDiagnoseReportResponse(DescribeDiagnoseReportResponse source) {
+        if (source.BaskInfo != null) {
+            this.BaskInfo = new DiagnoseData(source.BaskInfo);
+        }
+        if (source.CnameInfo != null) {
+            this.CnameInfo = new DiagnoseData(source.CnameInfo);
+        }
+        if (source.ClientInfo != null) {
+            this.ClientInfo = new DiagnoseData(source.ClientInfo);
+        }
+        if (source.DnsInfo != null) {
+            this.DnsInfo = new DiagnoseData(source.DnsInfo);
+        }
+        if (source.NetworkInfo != null) {
+            this.NetworkInfo = new DiagnoseData(source.NetworkInfo);
+        }
+        if (source.OcNodeInfo != null) {
+            this.OcNodeInfo = new DiagnoseData(source.OcNodeInfo);
+        }
+        if (source.MidNodeInfo != null) {
+            this.MidNodeInfo = new DiagnoseData(source.MidNodeInfo);
+        }
+        if (source.OriginInfo != null) {
+            this.OriginInfo = new DiagnoseData(source.OriginInfo);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

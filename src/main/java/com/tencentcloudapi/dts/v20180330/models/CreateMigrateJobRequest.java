@@ -269,6 +269,44 @@ Schema:s1}]
         this.DatabaseInfo = DatabaseInfo;
     }
 
+    public CreateMigrateJobRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateMigrateJobRequest(CreateMigrateJobRequest source) {
+        if (source.JobName != null) {
+            this.JobName = new String(source.JobName);
+        }
+        if (source.MigrateOption != null) {
+            this.MigrateOption = new MigrateOption(source.MigrateOption);
+        }
+        if (source.SrcDatabaseType != null) {
+            this.SrcDatabaseType = new String(source.SrcDatabaseType);
+        }
+        if (source.SrcAccessType != null) {
+            this.SrcAccessType = new String(source.SrcAccessType);
+        }
+        if (source.SrcInfo != null) {
+            this.SrcInfo = new SrcInfo(source.SrcInfo);
+        }
+        if (source.DstDatabaseType != null) {
+            this.DstDatabaseType = new String(source.DstDatabaseType);
+        }
+        if (source.DstAccessType != null) {
+            this.DstAccessType = new String(source.DstAccessType);
+        }
+        if (source.DstInfo != null) {
+            this.DstInfo = new DstInfo(source.DstInfo);
+        }
+        if (source.DatabaseInfo != null) {
+            this.DatabaseInfo = new String(source.DatabaseInfo);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

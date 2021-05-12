@@ -91,6 +91,29 @@ public class IssueTypeInfo extends AbstractModel{
         this.TotalCount = TotalCount;
     }
 
+    public IssueTypeInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public IssueTypeInfo(IssueTypeInfo source) {
+        if (source.IssueType != null) {
+            this.IssueType = new String(source.IssueType);
+        }
+        if (source.Events != null) {
+            this.Events = new EventInfo[source.Events.length];
+            for (int i = 0; i < source.Events.length; i++) {
+                this.Events[i] = new EventInfo(source.Events[i]);
+            }
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

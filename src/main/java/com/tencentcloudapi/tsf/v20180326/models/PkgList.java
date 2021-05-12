@@ -157,6 +157,35 @@ public class PkgList extends AbstractModel{
         this.RepositoryName = RepositoryName;
     }
 
+    public PkgList() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PkgList(PkgList source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.Content != null) {
+            this.Content = new PkgInfo[source.Content.length];
+            for (int i = 0; i < source.Content.length; i++) {
+                this.Content[i] = new PkgInfo(source.Content[i]);
+            }
+        }
+        if (source.RepositoryId != null) {
+            this.RepositoryId = new String(source.RepositoryId);
+        }
+        if (source.RepositoryType != null) {
+            this.RepositoryType = new String(source.RepositoryType);
+        }
+        if (source.RepositoryName != null) {
+            this.RepositoryName = new String(source.RepositoryName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

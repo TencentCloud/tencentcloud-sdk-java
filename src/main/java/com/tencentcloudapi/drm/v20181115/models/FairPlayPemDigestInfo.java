@@ -162,6 +162,32 @@ public class FairPlayPemDigestInfo extends AbstractModel{
         this.Md5PemDecryptKey = Md5PemDecryptKey;
     }
 
+    public FairPlayPemDigestInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public FairPlayPemDigestInfo(FairPlayPemDigestInfo source) {
+        if (source.FairPlayPemId != null) {
+            this.FairPlayPemId = new Long(source.FairPlayPemId);
+        }
+        if (source.Priority != null) {
+            this.Priority = new Long(source.Priority);
+        }
+        if (source.Md5Pem != null) {
+            this.Md5Pem = new String(source.Md5Pem);
+        }
+        if (source.Md5Ask != null) {
+            this.Md5Ask = new String(source.Md5Ask);
+        }
+        if (source.Md5PemDecryptKey != null) {
+            this.Md5PemDecryptKey = new String(source.Md5PemDecryptKey);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

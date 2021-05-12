@@ -142,6 +142,32 @@ public class ObjectDetail extends AbstractModel{
         this.Location = Location;
     }
 
+    public ObjectDetail() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ObjectDetail(ObjectDetail source) {
+        if (source.Id != null) {
+            this.Id = new Long(source.Id);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Value != null) {
+            this.Value = new String(source.Value);
+        }
+        if (source.Score != null) {
+            this.Score = new Long(source.Score);
+        }
+        if (source.Location != null) {
+            this.Location = new Location(source.Location);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

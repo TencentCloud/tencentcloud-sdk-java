@@ -160,6 +160,35 @@ public class ModifyPictureRequest extends AbstractModel{
         this.YPosition = YPosition;
     }
 
+    public ModifyPictureRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyPictureRequest(ModifyPictureRequest source) {
+        if (source.PictureId != null) {
+            this.PictureId = new Long(source.PictureId);
+        }
+        if (source.SdkAppId != null) {
+            this.SdkAppId = new Long(source.SdkAppId);
+        }
+        if (source.Height != null) {
+            this.Height = new Long(source.Height);
+        }
+        if (source.Width != null) {
+            this.Width = new Long(source.Width);
+        }
+        if (source.XPosition != null) {
+            this.XPosition = new Long(source.XPosition);
+        }
+        if (source.YPosition != null) {
+            this.YPosition = new Long(source.YPosition);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

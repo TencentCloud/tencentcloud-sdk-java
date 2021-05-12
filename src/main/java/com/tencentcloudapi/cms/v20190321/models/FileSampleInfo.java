@@ -345,6 +345,50 @@ public class FileSampleInfo extends AbstractModel{
         this.FileUrl = FileUrl;
     }
 
+    public FileSampleInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public FileSampleInfo(FileSampleInfo source) {
+        if (source.Code != null) {
+            this.Code = new Long(source.Code);
+        }
+        if (source.CreatedAt != null) {
+            this.CreatedAt = new Long(source.CreatedAt);
+        }
+        if (source.EvilType != null) {
+            this.EvilType = new Long(source.EvilType);
+        }
+        if (source.FileMd5 != null) {
+            this.FileMd5 = new String(source.FileMd5);
+        }
+        if (source.FileName != null) {
+            this.FileName = new String(source.FileName);
+        }
+        if (source.FileType != null) {
+            this.FileType = new String(source.FileType);
+        }
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
+        if (source.Label != null) {
+            this.Label = new Long(source.Label);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.CompressFileUrl != null) {
+            this.CompressFileUrl = new String(source.CompressFileUrl);
+        }
+        if (source.FileUrl != null) {
+            this.FileUrl = new String(source.FileUrl);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

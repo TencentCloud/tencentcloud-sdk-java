@@ -249,6 +249,44 @@ public class AIAnalysisTemplateItem extends AbstractModel{
         this.UpdateTime = UpdateTime;
     }
 
+    public AIAnalysisTemplateItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AIAnalysisTemplateItem(AIAnalysisTemplateItem source) {
+        if (source.Definition != null) {
+            this.Definition = new Long(source.Definition);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Comment != null) {
+            this.Comment = new String(source.Comment);
+        }
+        if (source.ClassificationConfigure != null) {
+            this.ClassificationConfigure = new ClassificationConfigureInfo(source.ClassificationConfigure);
+        }
+        if (source.TagConfigure != null) {
+            this.TagConfigure = new TagConfigureInfo(source.TagConfigure);
+        }
+        if (source.CoverConfigure != null) {
+            this.CoverConfigure = new CoverConfigureInfo(source.CoverConfigure);
+        }
+        if (source.FrameTagConfigure != null) {
+            this.FrameTagConfigure = new FrameTagConfigureInfo(source.FrameTagConfigure);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new String(source.UpdateTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

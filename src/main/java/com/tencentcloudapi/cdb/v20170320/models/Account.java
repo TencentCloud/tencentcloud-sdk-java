@@ -68,6 +68,23 @@ public class Account extends AbstractModel{
         this.Host = Host;
     }
 
+    public Account() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Account(Account source) {
+        if (source.User != null) {
+            this.User = new String(source.User);
+        }
+        if (source.Host != null) {
+            this.Host = new String(source.Host);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

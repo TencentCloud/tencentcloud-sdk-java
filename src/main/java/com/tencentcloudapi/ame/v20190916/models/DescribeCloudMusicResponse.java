@@ -198,6 +198,41 @@ public class DescribeCloudMusicResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeCloudMusicResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeCloudMusicResponse(DescribeCloudMusicResponse source) {
+        if (source.MusicId != null) {
+            this.MusicId = new String(source.MusicId);
+        }
+        if (source.MusicName != null) {
+            this.MusicName = new String(source.MusicName);
+        }
+        if (source.Duration != null) {
+            this.Duration = new Long(source.Duration);
+        }
+        if (source.MusicUrl != null) {
+            this.MusicUrl = new String(source.MusicUrl);
+        }
+        if (source.MusicImageUrl != null) {
+            this.MusicImageUrl = new String(source.MusicImageUrl);
+        }
+        if (source.Singers != null) {
+            this.Singers = new String[source.Singers.length];
+            for (int i = 0; i < source.Singers.length; i++) {
+                this.Singers[i] = new String(source.Singers[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

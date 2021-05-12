@@ -341,6 +341,56 @@ public class TopicDetail extends AbstractModel{
         this.RetentionTimeConfig = RetentionTimeConfig;
     }
 
+    public TopicDetail() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TopicDetail(TopicDetail source) {
+        if (source.TopicName != null) {
+            this.TopicName = new String(source.TopicName);
+        }
+        if (source.TopicId != null) {
+            this.TopicId = new String(source.TopicId);
+        }
+        if (source.PartitionNum != null) {
+            this.PartitionNum = new Long(source.PartitionNum);
+        }
+        if (source.ReplicaNum != null) {
+            this.ReplicaNum = new Long(source.ReplicaNum);
+        }
+        if (source.Note != null) {
+            this.Note = new String(source.Note);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new Long(source.CreateTime);
+        }
+        if (source.EnableWhiteList != null) {
+            this.EnableWhiteList = new Boolean(source.EnableWhiteList);
+        }
+        if (source.IpWhiteListCount != null) {
+            this.IpWhiteListCount = new Long(source.IpWhiteListCount);
+        }
+        if (source.ForwardCosBucket != null) {
+            this.ForwardCosBucket = new String(source.ForwardCosBucket);
+        }
+        if (source.ForwardStatus != null) {
+            this.ForwardStatus = new Long(source.ForwardStatus);
+        }
+        if (source.ForwardInterval != null) {
+            this.ForwardInterval = new Long(source.ForwardInterval);
+        }
+        if (source.Config != null) {
+            this.Config = new Config(source.Config);
+        }
+        if (source.RetentionTimeConfig != null) {
+            this.RetentionTimeConfig = new TopicRetentionTimeConfigRsp(source.RetentionTimeConfig);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

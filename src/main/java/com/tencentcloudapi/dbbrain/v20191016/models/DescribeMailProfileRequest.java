@@ -137,6 +137,32 @@ public class DescribeMailProfileRequest extends AbstractModel{
         this.ProfileName = ProfileName;
     }
 
+    public DescribeMailProfileRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeMailProfileRequest(DescribeMailProfileRequest source) {
+        if (source.ProfileType != null) {
+            this.ProfileType = new String(source.ProfileType);
+        }
+        if (source.Product != null) {
+            this.Product = new String(source.Product);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.ProfileName != null) {
+            this.ProfileName = new String(source.ProfileName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

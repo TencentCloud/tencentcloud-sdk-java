@@ -129,6 +129,29 @@ public class DescribePushResourceTaskStatisticsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribePushResourceTaskStatisticsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribePushResourceTaskStatisticsResponse(DescribePushResourceTaskStatisticsResponse source) {
+        if (source.SuccessTotal != null) {
+            this.SuccessTotal = new Long(source.SuccessTotal);
+        }
+        if (source.FailureTotal != null) {
+            this.FailureTotal = new Long(source.FailureTotal);
+        }
+        if (source.UpgradingTotal != null) {
+            this.UpgradingTotal = new Long(source.UpgradingTotal);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

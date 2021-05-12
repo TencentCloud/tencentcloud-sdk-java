@@ -310,6 +310,53 @@ public class TaskData extends AbstractModel{
         this.UpdatedAt = UpdatedAt;
     }
 
+    public TaskData() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TaskData(TaskData source) {
+        if (source.DataId != null) {
+            this.DataId = new String(source.DataId);
+        }
+        if (source.TaskId != null) {
+            this.TaskId = new String(source.TaskId);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.BizType != null) {
+            this.BizType = new String(source.BizType);
+        }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.Suggestion != null) {
+            this.Suggestion = new String(source.Suggestion);
+        }
+        if (source.Labels != null) {
+            this.Labels = new TaskLabel[source.Labels.length];
+            for (int i = 0; i < source.Labels.length; i++) {
+                this.Labels[i] = new TaskLabel(source.Labels[i]);
+            }
+        }
+        if (source.MediaInfo != null) {
+            this.MediaInfo = new MediaInfo(source.MediaInfo);
+        }
+        if (source.CreatedAt != null) {
+            this.CreatedAt = new String(source.CreatedAt);
+        }
+        if (source.UpdatedAt != null) {
+            this.UpdatedAt = new String(source.UpdatedAt);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

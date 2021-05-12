@@ -78,6 +78,23 @@ public class OutputRecognizeEffectiveFlowValue extends AbstractModel{
         this.Score = Score;
     }
 
+    public OutputRecognizeEffectiveFlowValue() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public OutputRecognizeEffectiveFlowValue(OutputRecognizeEffectiveFlowValue source) {
+        if (source.Lable != null) {
+            this.Lable = new String(source.Lable);
+        }
+        if (source.Score != null) {
+            this.Score = new Float(source.Score);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

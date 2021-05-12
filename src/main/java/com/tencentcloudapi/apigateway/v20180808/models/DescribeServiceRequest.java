@@ -45,6 +45,20 @@ public class DescribeServiceRequest extends AbstractModel{
         this.ServiceId = ServiceId;
     }
 
+    public DescribeServiceRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeServiceRequest(DescribeServiceRequest source) {
+        if (source.ServiceId != null) {
+            this.ServiceId = new String(source.ServiceId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

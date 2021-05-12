@@ -193,6 +193,44 @@ public class SearchResult extends AbstractModel{
         this.SegList = SegList;
     }
 
+    public SearchResult() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SearchResult(SearchResult source) {
+        if (source.CostTime != null) {
+            this.CostTime = new Long(source.CostTime);
+        }
+        if (source.DisplayNum != null) {
+            this.DisplayNum = new Long(source.DisplayNum);
+        }
+        if (source.Echo != null) {
+            this.Echo = new String(source.Echo);
+        }
+        if (source.EResultNum != null) {
+            this.EResultNum = new Long(source.EResultNum);
+        }
+        if (source.ResultNum != null) {
+            this.ResultNum = new Long(source.ResultNum);
+        }
+        if (source.ResultList != null) {
+            this.ResultList = new SearchResultItem[source.ResultList.length];
+            for (int i = 0; i < source.ResultList.length; i++) {
+                this.ResultList[i] = new SearchResultItem(source.ResultList[i]);
+            }
+        }
+        if (source.SegList != null) {
+            this.SegList = new SearchResultSeg[source.SegList.length];
+            for (int i = 0; i < source.SegList.length; i++) {
+                this.SegList[i] = new SearchResultSeg(source.SegList[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

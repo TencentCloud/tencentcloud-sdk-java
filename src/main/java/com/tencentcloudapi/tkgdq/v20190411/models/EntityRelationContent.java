@@ -91,6 +91,32 @@ public class EntityRelationContent extends AbstractModel{
         this.Relation = Relation;
     }
 
+    public EntityRelationContent() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public EntityRelationContent(EntityRelationContent source) {
+        if (source.Object != null) {
+            this.Object = new EntityRelationObject[source.Object.length];
+            for (int i = 0; i < source.Object.length; i++) {
+                this.Object[i] = new EntityRelationObject(source.Object[i]);
+            }
+        }
+        if (source.Subject != null) {
+            this.Subject = new EntityRelationSubject[source.Subject.length];
+            for (int i = 0; i < source.Subject.length; i++) {
+                this.Subject[i] = new EntityRelationSubject(source.Subject[i]);
+            }
+        }
+        if (source.Relation != null) {
+            this.Relation = new String(source.Relation);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

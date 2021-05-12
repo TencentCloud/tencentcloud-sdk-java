@@ -91,6 +91,29 @@ public class DescribeMigrationDatabasesResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeMigrationDatabasesResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeMigrationDatabasesResponse(DescribeMigrationDatabasesResponse source) {
+        if (source.Amount != null) {
+            this.Amount = new Long(source.Amount);
+        }
+        if (source.MigrateDBSet != null) {
+            this.MigrateDBSet = new String[source.MigrateDBSet.length];
+            for (int i = 0; i < source.MigrateDBSet.length; i++) {
+                this.MigrateDBSet[i] = new String(source.MigrateDBSet[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

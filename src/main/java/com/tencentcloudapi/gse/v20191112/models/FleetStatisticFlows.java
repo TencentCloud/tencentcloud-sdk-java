@@ -78,6 +78,23 @@ public class FleetStatisticFlows extends AbstractModel{
         this.BeginTime = BeginTime;
     }
 
+    public FleetStatisticFlows() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public FleetStatisticFlows(FleetStatisticFlows source) {
+        if (source.TotalUsedFlowMegaBytes != null) {
+            this.TotalUsedFlowMegaBytes = new Float(source.TotalUsedFlowMegaBytes);
+        }
+        if (source.BeginTime != null) {
+            this.BeginTime = new String(source.BeginTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

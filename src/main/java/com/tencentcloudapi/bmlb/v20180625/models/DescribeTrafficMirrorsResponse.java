@@ -91,6 +91,29 @@ public class DescribeTrafficMirrorsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeTrafficMirrorsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeTrafficMirrorsResponse(DescribeTrafficMirrorsResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.TrafficMirrorSet != null) {
+            this.TrafficMirrorSet = new TrafficMirror[source.TrafficMirrorSet.length];
+            for (int i = 0; i < source.TrafficMirrorSet.length; i++) {
+                this.TrafficMirrorSet[i] = new TrafficMirror(source.TrafficMirrorSet[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

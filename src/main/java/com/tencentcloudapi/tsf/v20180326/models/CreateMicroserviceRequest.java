@@ -91,6 +91,26 @@ public class CreateMicroserviceRequest extends AbstractModel{
         this.MicroserviceDesc = MicroserviceDesc;
     }
 
+    public CreateMicroserviceRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateMicroserviceRequest(CreateMicroserviceRequest source) {
+        if (source.NamespaceId != null) {
+            this.NamespaceId = new String(source.NamespaceId);
+        }
+        if (source.MicroserviceName != null) {
+            this.MicroserviceName = new String(source.MicroserviceName);
+        }
+        if (source.MicroserviceDesc != null) {
+            this.MicroserviceDesc = new String(source.MicroserviceDesc);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

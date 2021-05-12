@@ -91,6 +91,29 @@ public class RemoveUserByStrRoomIdRequest extends AbstractModel{
         this.UserIds = UserIds;
     }
 
+    public RemoveUserByStrRoomIdRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RemoveUserByStrRoomIdRequest(RemoveUserByStrRoomIdRequest source) {
+        if (source.SdkAppId != null) {
+            this.SdkAppId = new Long(source.SdkAppId);
+        }
+        if (source.RoomId != null) {
+            this.RoomId = new String(source.RoomId);
+        }
+        if (source.UserIds != null) {
+            this.UserIds = new String[source.UserIds.length];
+            for (int i = 0; i < source.UserIds.length; i++) {
+                this.UserIds[i] = new String(source.UserIds[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

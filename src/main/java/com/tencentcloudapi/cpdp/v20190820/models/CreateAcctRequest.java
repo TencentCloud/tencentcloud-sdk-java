@@ -503,6 +503,68 @@ development: 开发环境
         this.MidasEnvironment = MidasEnvironment;
     }
 
+    public CreateAcctRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateAcctRequest(CreateAcctRequest source) {
+        if (source.MidasAppId != null) {
+            this.MidasAppId = new String(source.MidasAppId);
+        }
+        if (source.SubMchId != null) {
+            this.SubMchId = new String(source.SubMchId);
+        }
+        if (source.SubMchName != null) {
+            this.SubMchName = new String(source.SubMchName);
+        }
+        if (source.Address != null) {
+            this.Address = new String(source.Address);
+        }
+        if (source.Contact != null) {
+            this.Contact = new String(source.Contact);
+        }
+        if (source.Mobile != null) {
+            this.Mobile = new String(source.Mobile);
+        }
+        if (source.Email != null) {
+            this.Email = new String(source.Email);
+        }
+        if (source.MidasSecretId != null) {
+            this.MidasSecretId = new String(source.MidasSecretId);
+        }
+        if (source.MidasSignature != null) {
+            this.MidasSignature = new String(source.MidasSignature);
+        }
+        if (source.SubMchType != null) {
+            this.SubMchType = new String(source.SubMchType);
+        }
+        if (source.ShortName != null) {
+            this.ShortName = new String(source.ShortName);
+        }
+        if (source.SubMerchantMemberType != null) {
+            this.SubMerchantMemberType = new String(source.SubMerchantMemberType);
+        }
+        if (source.SubMerchantKey != null) {
+            this.SubMerchantKey = new String(source.SubMerchantKey);
+        }
+        if (source.SubMerchantPrivateKey != null) {
+            this.SubMerchantPrivateKey = new String(source.SubMerchantPrivateKey);
+        }
+        if (source.EncryptType != null) {
+            this.EncryptType = new String(source.EncryptType);
+        }
+        if (source.SubAcctNo != null) {
+            this.SubAcctNo = new String(source.SubAcctNo);
+        }
+        if (source.MidasEnvironment != null) {
+            this.MidasEnvironment = new String(source.MidasEnvironment);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -387,6 +387,65 @@ public class RoGroup extends AbstractModel{
         this.RoGroupZone = RoGroupZone;
     }
 
+    public RoGroup() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RoGroup(RoGroup source) {
+        if (source.RoGroupMode != null) {
+            this.RoGroupMode = new String(source.RoGroupMode);
+        }
+        if (source.RoGroupId != null) {
+            this.RoGroupId = new String(source.RoGroupId);
+        }
+        if (source.RoGroupName != null) {
+            this.RoGroupName = new String(source.RoGroupName);
+        }
+        if (source.RoOfflineDelay != null) {
+            this.RoOfflineDelay = new Long(source.RoOfflineDelay);
+        }
+        if (source.RoMaxDelayTime != null) {
+            this.RoMaxDelayTime = new Long(source.RoMaxDelayTime);
+        }
+        if (source.MinRoInGroup != null) {
+            this.MinRoInGroup = new Long(source.MinRoInGroup);
+        }
+        if (source.WeightMode != null) {
+            this.WeightMode = new String(source.WeightMode);
+        }
+        if (source.Weight != null) {
+            this.Weight = new Long(source.Weight);
+        }
+        if (source.RoInstances != null) {
+            this.RoInstances = new RoInstanceInfo[source.RoInstances.length];
+            for (int i = 0; i < source.RoInstances.length; i++) {
+                this.RoInstances[i] = new RoInstanceInfo(source.RoInstances[i]);
+            }
+        }
+        if (source.Vip != null) {
+            this.Vip = new String(source.Vip);
+        }
+        if (source.Vport != null) {
+            this.Vport = new Long(source.Vport);
+        }
+        if (source.UniqVpcId != null) {
+            this.UniqVpcId = new String(source.UniqVpcId);
+        }
+        if (source.UniqSubnetId != null) {
+            this.UniqSubnetId = new String(source.UniqSubnetId);
+        }
+        if (source.RoGroupRegion != null) {
+            this.RoGroupRegion = new String(source.RoGroupRegion);
+        }
+        if (source.RoGroupZone != null) {
+            this.RoGroupZone = new String(source.RoGroupZone);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

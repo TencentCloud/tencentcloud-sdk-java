@@ -226,6 +226,26 @@ public class DescribeQuotaDataRequest extends AbstractModel{
         this.ResourceID = ResourceID;
     }
 
+    public DescribeQuotaDataRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeQuotaDataRequest(DescribeQuotaDataRequest source) {
+        if (source.EnvId != null) {
+            this.EnvId = new String(source.EnvId);
+        }
+        if (source.MetricName != null) {
+            this.MetricName = new String(source.MetricName);
+        }
+        if (source.ResourceID != null) {
+            this.ResourceID = new String(source.ResourceID);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -283,6 +283,38 @@ public class MosaicInput extends AbstractModel{
         this.EndTimeOffset = EndTimeOffset;
     }
 
+    public MosaicInput() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MosaicInput(MosaicInput source) {
+        if (source.CoordinateOrigin != null) {
+            this.CoordinateOrigin = new String(source.CoordinateOrigin);
+        }
+        if (source.XPos != null) {
+            this.XPos = new String(source.XPos);
+        }
+        if (source.YPos != null) {
+            this.YPos = new String(source.YPos);
+        }
+        if (source.Width != null) {
+            this.Width = new String(source.Width);
+        }
+        if (source.Height != null) {
+            this.Height = new String(source.Height);
+        }
+        if (source.StartTimeOffset != null) {
+            this.StartTimeOffset = new Float(source.StartTimeOffset);
+        }
+        if (source.EndTimeOffset != null) {
+            this.EndTimeOffset = new Float(source.EndTimeOffset);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

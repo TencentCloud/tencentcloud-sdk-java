@@ -183,6 +183,38 @@ public class ModifySiteAttributeRequest extends AbstractModel{
         this.ScanDisallow = ScanDisallow;
     }
 
+    public ModifySiteAttributeRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifySiteAttributeRequest(ModifySiteAttributeRequest source) {
+        if (source.SiteId != null) {
+            this.SiteId = new Long(source.SiteId);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.NeedLogin != null) {
+            this.NeedLogin = new Long(source.NeedLogin);
+        }
+        if (source.LoginCookie != null) {
+            this.LoginCookie = new String(source.LoginCookie);
+        }
+        if (source.LoginCheckUrl != null) {
+            this.LoginCheckUrl = new String(source.LoginCheckUrl);
+        }
+        if (source.LoginCheckKw != null) {
+            this.LoginCheckKw = new String(source.LoginCheckKw);
+        }
+        if (source.ScanDisallow != null) {
+            this.ScanDisallow = new String(source.ScanDisallow);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

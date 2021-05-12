@@ -91,6 +91,26 @@ public class ModifyProjectRequest extends AbstractModel{
         this.ProjectDesc = ProjectDesc;
     }
 
+    public ModifyProjectRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyProjectRequest(ModifyProjectRequest source) {
+        if (source.ProjectId != null) {
+            this.ProjectId = new String(source.ProjectId);
+        }
+        if (source.ProjectName != null) {
+            this.ProjectName = new String(source.ProjectName);
+        }
+        if (source.ProjectDesc != null) {
+            this.ProjectDesc = new String(source.ProjectDesc);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

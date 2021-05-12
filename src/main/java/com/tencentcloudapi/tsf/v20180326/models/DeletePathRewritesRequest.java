@@ -45,6 +45,23 @@ public class DeletePathRewritesRequest extends AbstractModel{
         this.PathRewriteIds = PathRewriteIds;
     }
 
+    public DeletePathRewritesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeletePathRewritesRequest(DeletePathRewritesRequest source) {
+        if (source.PathRewriteIds != null) {
+            this.PathRewriteIds = new String[source.PathRewriteIds.length];
+            for (int i = 0; i < source.PathRewriteIds.length; i++) {
+                this.PathRewriteIds[i] = new String(source.PathRewriteIds[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

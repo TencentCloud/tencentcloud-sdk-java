@@ -330,6 +330,53 @@ public class HealthCheckSetting extends AbstractModel{
         this.Type = Type;
     }
 
+    public HealthCheckSetting() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public HealthCheckSetting(HealthCheckSetting source) {
+        if (source.ActionType != null) {
+            this.ActionType = new String(source.ActionType);
+        }
+        if (source.InitialDelaySeconds != null) {
+            this.InitialDelaySeconds = new Long(source.InitialDelaySeconds);
+        }
+        if (source.TimeoutSeconds != null) {
+            this.TimeoutSeconds = new Long(source.TimeoutSeconds);
+        }
+        if (source.PeriodSeconds != null) {
+            this.PeriodSeconds = new Long(source.PeriodSeconds);
+        }
+        if (source.SuccessThreshold != null) {
+            this.SuccessThreshold = new Long(source.SuccessThreshold);
+        }
+        if (source.FailureThreshold != null) {
+            this.FailureThreshold = new Long(source.FailureThreshold);
+        }
+        if (source.Scheme != null) {
+            this.Scheme = new String(source.Scheme);
+        }
+        if (source.Port != null) {
+            this.Port = new Long(source.Port);
+        }
+        if (source.Path != null) {
+            this.Path = new String(source.Path);
+        }
+        if (source.Command != null) {
+            this.Command = new String[source.Command.length];
+            for (int i = 0; i < source.Command.length; i++) {
+                this.Command[i] = new String(source.Command[i]);
+            }
+        }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

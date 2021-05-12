@@ -114,6 +114,29 @@ public class ExpressRatioStatistic extends AbstractModel{
         this.RatioUseDuration = RatioUseDuration;
     }
 
+    public ExpressRatioStatistic() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ExpressRatioStatistic(ExpressRatioStatistic source) {
+        if (source.Count != null) {
+            this.Count = new Long(source.Count);
+        }
+        if (source.Express != null) {
+            this.Express = new String(source.Express);
+        }
+        if (source.Ratio != null) {
+            this.Ratio = new Float(source.Ratio);
+        }
+        if (source.RatioUseDuration != null) {
+            this.RatioUseDuration = new Float(source.RatioUseDuration);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

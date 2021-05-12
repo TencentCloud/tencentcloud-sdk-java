@@ -329,6 +329,47 @@ public class StickerTrackItem extends AbstractModel{
         this.ImageOperations = ImageOperations;
     }
 
+    public StickerTrackItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public StickerTrackItem(StickerTrackItem source) {
+        if (source.SourceMedia != null) {
+            this.SourceMedia = new String(source.SourceMedia);
+        }
+        if (source.Duration != null) {
+            this.Duration = new Float(source.Duration);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new Float(source.StartTime);
+        }
+        if (source.CoordinateOrigin != null) {
+            this.CoordinateOrigin = new String(source.CoordinateOrigin);
+        }
+        if (source.XPos != null) {
+            this.XPos = new String(source.XPos);
+        }
+        if (source.YPos != null) {
+            this.YPos = new String(source.YPos);
+        }
+        if (source.Width != null) {
+            this.Width = new String(source.Width);
+        }
+        if (source.Height != null) {
+            this.Height = new String(source.Height);
+        }
+        if (source.ImageOperations != null) {
+            this.ImageOperations = new ImageTransform[source.ImageOperations.length];
+            for (int i = 0; i < source.ImageOperations.length; i++) {
+                this.ImageOperations[i] = new ImageTransform(source.ImageOperations[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

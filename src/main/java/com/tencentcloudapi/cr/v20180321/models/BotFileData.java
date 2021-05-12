@@ -68,6 +68,23 @@ public class BotFileData extends AbstractModel{
         this.CosUrl = CosUrl;
     }
 
+    public BotFileData() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public BotFileData(BotFileData source) {
+        if (source.FileType != null) {
+            this.FileType = new String(source.FileType);
+        }
+        if (source.CosUrl != null) {
+            this.CosUrl = new String(source.CosUrl);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

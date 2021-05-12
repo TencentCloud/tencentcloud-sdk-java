@@ -274,6 +274,44 @@ public class IpGeolocationInfo extends AbstractModel{
         this.AddressIp = AddressIp;
     }
 
+    public IpGeolocationInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public IpGeolocationInfo(IpGeolocationInfo source) {
+        if (source.Country != null) {
+            this.Country = new String(source.Country);
+        }
+        if (source.Province != null) {
+            this.Province = new String(source.Province);
+        }
+        if (source.City != null) {
+            this.City = new String(source.City);
+        }
+        if (source.Region != null) {
+            this.Region = new String(source.Region);
+        }
+        if (source.Isp != null) {
+            this.Isp = new String(source.Isp);
+        }
+        if (source.AsName != null) {
+            this.AsName = new String(source.AsName);
+        }
+        if (source.AsId != null) {
+            this.AsId = new String(source.AsId);
+        }
+        if (source.Comment != null) {
+            this.Comment = new String(source.Comment);
+        }
+        if (source.AddressIp != null) {
+            this.AddressIp = new String(source.AddressIp);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

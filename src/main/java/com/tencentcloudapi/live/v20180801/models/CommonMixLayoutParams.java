@@ -376,6 +376,41 @@ public class CommonMixLayoutParams extends AbstractModel{
         this.WatermarkId = WatermarkId;
     }
 
+    public CommonMixLayoutParams() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CommonMixLayoutParams(CommonMixLayoutParams source) {
+        if (source.ImageLayer != null) {
+            this.ImageLayer = new Long(source.ImageLayer);
+        }
+        if (source.InputType != null) {
+            this.InputType = new Long(source.InputType);
+        }
+        if (source.ImageWidth != null) {
+            this.ImageWidth = new Float(source.ImageWidth);
+        }
+        if (source.ImageHeight != null) {
+            this.ImageHeight = new Float(source.ImageHeight);
+        }
+        if (source.LocationX != null) {
+            this.LocationX = new Float(source.LocationX);
+        }
+        if (source.LocationY != null) {
+            this.LocationY = new Float(source.LocationY);
+        }
+        if (source.Color != null) {
+            this.Color = new String(source.Color);
+        }
+        if (source.WatermarkId != null) {
+            this.WatermarkId = new Long(source.WatermarkId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

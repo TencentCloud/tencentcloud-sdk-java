@@ -68,6 +68,23 @@ public class CreateStudioProductResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public CreateStudioProductResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateStudioProductResponse(CreateStudioProductResponse source) {
+        if (source.Product != null) {
+            this.Product = new ProductEntry(source.Product);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

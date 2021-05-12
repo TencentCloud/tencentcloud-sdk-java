@@ -114,6 +114,35 @@ public class InquiryPriceRenewDisksRequest extends AbstractModel{
         this.ProjectId = ProjectId;
     }
 
+    public InquiryPriceRenewDisksRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public InquiryPriceRenewDisksRequest(InquiryPriceRenewDisksRequest source) {
+        if (source.DiskIds != null) {
+            this.DiskIds = new String[source.DiskIds.length];
+            for (int i = 0; i < source.DiskIds.length; i++) {
+                this.DiskIds[i] = new String(source.DiskIds[i]);
+            }
+        }
+        if (source.DiskChargePrepaids != null) {
+            this.DiskChargePrepaids = new DiskChargePrepaid[source.DiskChargePrepaids.length];
+            for (int i = 0; i < source.DiskChargePrepaids.length; i++) {
+                this.DiskChargePrepaids[i] = new DiskChargePrepaid(source.DiskChargePrepaids[i]);
+            }
+        }
+        if (source.NewDeadline != null) {
+            this.NewDeadline = new String(source.NewDeadline);
+        }
+        if (source.ProjectId != null) {
+            this.ProjectId = new Long(source.ProjectId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

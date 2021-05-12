@@ -91,6 +91,26 @@ public class AddUserContactRequest extends AbstractModel{
         this.Product = Product;
     }
 
+    public AddUserContactRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AddUserContactRequest(AddUserContactRequest source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.ContactInfo != null) {
+            this.ContactInfo = new String(source.ContactInfo);
+        }
+        if (source.Product != null) {
+            this.Product = new String(source.Product);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

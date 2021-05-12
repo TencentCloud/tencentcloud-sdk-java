@@ -96,6 +96,29 @@ public class DescribeRuntimesResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeRuntimesResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeRuntimesResponse(DescribeRuntimesResponse source) {
+        if (source.Runtimes != null) {
+            this.Runtimes = new Runtime[source.Runtimes.length];
+            for (int i = 0; i < source.Runtimes.length; i++) {
+                this.Runtimes[i] = new Runtime(source.Runtimes[i]);
+            }
+        }
+        if (source.UserAccess != null) {
+            this.UserAccess = new Long(source.UserAccess);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

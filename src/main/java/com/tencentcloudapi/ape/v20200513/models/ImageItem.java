@@ -229,6 +229,44 @@ public class ImageItem extends AbstractModel{
         this.Height = Height;
     }
 
+    public ImageItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ImageItem(ImageItem source) {
+        if (source.ImageId != null) {
+            this.ImageId = new Long(source.ImageId);
+        }
+        if (source.Title != null) {
+            this.Title = new String(source.Title);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.PreviewUrl != null) {
+            this.PreviewUrl = new String(source.PreviewUrl);
+        }
+        if (source.ThumbUrl != null) {
+            this.ThumbUrl = new String(source.ThumbUrl);
+        }
+        if (source.Vendor != null) {
+            this.Vendor = new String(source.Vendor);
+        }
+        if (source.Keywords != null) {
+            this.Keywords = new String(source.Keywords);
+        }
+        if (source.Width != null) {
+            this.Width = new Long(source.Width);
+        }
+        if (source.Height != null) {
+            this.Height = new Long(source.Height);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

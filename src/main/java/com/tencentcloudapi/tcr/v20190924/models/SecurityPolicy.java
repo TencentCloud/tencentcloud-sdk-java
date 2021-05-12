@@ -114,6 +114,29 @@ public class SecurityPolicy extends AbstractModel{
         this.PolicyVersion = PolicyVersion;
     }
 
+    public SecurityPolicy() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SecurityPolicy(SecurityPolicy source) {
+        if (source.PolicyIndex != null) {
+            this.PolicyIndex = new Long(source.PolicyIndex);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.CidrBlock != null) {
+            this.CidrBlock = new String(source.CidrBlock);
+        }
+        if (source.PolicyVersion != null) {
+            this.PolicyVersion = new String(source.PolicyVersion);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

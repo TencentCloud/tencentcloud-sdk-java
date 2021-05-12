@@ -114,6 +114,29 @@ public class ResetRequest extends AbstractModel{
         this.BotEnv = BotEnv;
     }
 
+    public ResetRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ResetRequest(ResetRequest source) {
+        if (source.BotId != null) {
+            this.BotId = new String(source.BotId);
+        }
+        if (source.UserId != null) {
+            this.UserId = new String(source.UserId);
+        }
+        if (source.BotVersion != null) {
+            this.BotVersion = new String(source.BotVersion);
+        }
+        if (source.BotEnv != null) {
+            this.BotEnv = new String(source.BotEnv);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -106,6 +106,32 @@ public class MediaResultInfo extends AbstractModel{
         this.ResultAudioInfoSet = ResultAudioInfoSet;
     }
 
+    public MediaResultInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MediaResultInfo(MediaResultInfo source) {
+        if (source.Duration != null) {
+            this.Duration = new Long(source.Duration);
+        }
+        if (source.ResultVideoInfoSet != null) {
+            this.ResultVideoInfoSet = new ResultVideoInfo[source.ResultVideoInfoSet.length];
+            for (int i = 0; i < source.ResultVideoInfoSet.length; i++) {
+                this.ResultVideoInfoSet[i] = new ResultVideoInfo(source.ResultVideoInfoSet[i]);
+            }
+        }
+        if (source.ResultAudioInfoSet != null) {
+            this.ResultAudioInfoSet = new ResultAudioInfo[source.ResultAudioInfoSet.length];
+            for (int i = 0; i < source.ResultAudioInfoSet.length; i++) {
+                this.ResultAudioInfoSet[i] = new ResultAudioInfo(source.ResultAudioInfoSet[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

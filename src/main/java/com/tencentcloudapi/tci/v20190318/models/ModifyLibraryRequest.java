@@ -68,6 +68,23 @@ public class ModifyLibraryRequest extends AbstractModel{
         this.LibraryName = LibraryName;
     }
 
+    public ModifyLibraryRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyLibraryRequest(ModifyLibraryRequest source) {
+        if (source.LibraryId != null) {
+            this.LibraryId = new String(source.LibraryId);
+        }
+        if (source.LibraryName != null) {
+            this.LibraryName = new String(source.LibraryName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -45,6 +45,20 @@ public class UpdateBucketAccelerateOptRequest extends AbstractModel{
         this.Allowed = Allowed;
     }
 
+    public UpdateBucketAccelerateOptRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UpdateBucketAccelerateOptRequest(UpdateBucketAccelerateOptRequest source) {
+        if (source.Allowed != null) {
+            this.Allowed = new Boolean(source.Allowed);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

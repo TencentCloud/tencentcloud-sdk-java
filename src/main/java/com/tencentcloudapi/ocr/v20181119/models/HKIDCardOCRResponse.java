@@ -404,6 +404,62 @@ public class HKIDCardOCRResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public HKIDCardOCRResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public HKIDCardOCRResponse(HKIDCardOCRResponse source) {
+        if (source.CnName != null) {
+            this.CnName = new String(source.CnName);
+        }
+        if (source.EnName != null) {
+            this.EnName = new String(source.EnName);
+        }
+        if (source.TelexCode != null) {
+            this.TelexCode = new String(source.TelexCode);
+        }
+        if (source.Sex != null) {
+            this.Sex = new String(source.Sex);
+        }
+        if (source.Birthday != null) {
+            this.Birthday = new String(source.Birthday);
+        }
+        if (source.Permanent != null) {
+            this.Permanent = new Long(source.Permanent);
+        }
+        if (source.IdNum != null) {
+            this.IdNum = new String(source.IdNum);
+        }
+        if (source.Symbol != null) {
+            this.Symbol = new String(source.Symbol);
+        }
+        if (source.FirstIssueDate != null) {
+            this.FirstIssueDate = new String(source.FirstIssueDate);
+        }
+        if (source.CurrentIssueDate != null) {
+            this.CurrentIssueDate = new String(source.CurrentIssueDate);
+        }
+        if (source.FakeDetectResult != null) {
+            this.FakeDetectResult = new Long(source.FakeDetectResult);
+        }
+        if (source.HeadImage != null) {
+            this.HeadImage = new String(source.HeadImage);
+        }
+        if (source.WarningCode != null) {
+            this.WarningCode = new Long[source.WarningCode.length];
+            for (int i = 0; i < source.WarningCode.length; i++) {
+                this.WarningCode[i] = new Long(source.WarningCode[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

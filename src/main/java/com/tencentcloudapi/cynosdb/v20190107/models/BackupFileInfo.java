@@ -229,6 +229,44 @@ public class BackupFileInfo extends AbstractModel{
         this.SnapshotTime = SnapshotTime;
     }
 
+    public BackupFileInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public BackupFileInfo(BackupFileInfo source) {
+        if (source.SnapshotId != null) {
+            this.SnapshotId = new Long(source.SnapshotId);
+        }
+        if (source.FileName != null) {
+            this.FileName = new String(source.FileName);
+        }
+        if (source.FileSize != null) {
+            this.FileSize = new Long(source.FileSize);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.FinishTime != null) {
+            this.FinishTime = new String(source.FinishTime);
+        }
+        if (source.BackupType != null) {
+            this.BackupType = new String(source.BackupType);
+        }
+        if (source.BackupMethod != null) {
+            this.BackupMethod = new String(source.BackupMethod);
+        }
+        if (source.BackupStatus != null) {
+            this.BackupStatus = new String(source.BackupStatus);
+        }
+        if (source.SnapshotTime != null) {
+            this.SnapshotTime = new String(source.SnapshotTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -218,6 +218,38 @@ public class CloudBaseEsInfo extends AbstractModel{
         this.Password = Password;
     }
 
+    public CloudBaseEsInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CloudBaseEsInfo(CloudBaseEsInfo source) {
+        if (source.Id != null) {
+            this.Id = new Long(source.Id);
+        }
+        if (source.SecretName != null) {
+            this.SecretName = new String(source.SecretName);
+        }
+        if (source.Ip != null) {
+            this.Ip = new String(source.Ip);
+        }
+        if (source.Port != null) {
+            this.Port = new Long(source.Port);
+        }
+        if (source.Index != null) {
+            this.Index = new String(source.Index);
+        }
+        if (source.Account != null) {
+            this.Account = new String(source.Account);
+        }
+        if (source.Password != null) {
+            this.Password = new String(source.Password);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

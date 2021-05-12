@@ -68,6 +68,23 @@ public class ResponseCode extends AbstractModel{
         this.Message = Message;
     }
 
+    public ResponseCode() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ResponseCode(ResponseCode source) {
+        if (source.Code != null) {
+            this.Code = new String(source.Code);
+        }
+        if (source.Message != null) {
+            this.Message = new String(source.Message);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

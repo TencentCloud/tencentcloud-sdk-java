@@ -68,6 +68,26 @@ public class DescribleRegionCountResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribleRegionCountResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribleRegionCountResponse(DescribleRegionCountResponse source) {
+        if (source.RegionList != null) {
+            this.RegionList = new RegionInstanceCount[source.RegionList.length];
+            for (int i = 0; i < source.RegionList.length; i++) {
+                this.RegionList[i] = new RegionInstanceCount(source.RegionList[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

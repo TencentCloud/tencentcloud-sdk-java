@@ -137,6 +137,32 @@ public class DNSAttributes extends AbstractModel{
         this.Status = Status;
     }
 
+    public DNSAttributes() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DNSAttributes(DNSAttributes source) {
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.SendDomain != null) {
+            this.SendDomain = new String(source.SendDomain);
+        }
+        if (source.ExpectedValue != null) {
+            this.ExpectedValue = new String(source.ExpectedValue);
+        }
+        if (source.CurrentValue != null) {
+            this.CurrentValue = new String(source.CurrentValue);
+        }
+        if (source.Status != null) {
+            this.Status = new Boolean(source.Status);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

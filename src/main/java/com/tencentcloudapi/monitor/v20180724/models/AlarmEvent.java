@@ -91,6 +91,26 @@ public class AlarmEvent extends AbstractModel{
         this.Namespace = Namespace;
     }
 
+    public AlarmEvent() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AlarmEvent(AlarmEvent source) {
+        if (source.EventName != null) {
+            this.EventName = new String(source.EventName);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.Namespace != null) {
+            this.Namespace = new String(source.Namespace);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -78,6 +78,23 @@ public class TimeRange extends AbstractModel{
         this.Before = Before;
     }
 
+    public TimeRange() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TimeRange(TimeRange source) {
+        if (source.After != null) {
+            this.After = new String(source.After);
+        }
+        if (source.Before != null) {
+            this.Before = new String(source.Before);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

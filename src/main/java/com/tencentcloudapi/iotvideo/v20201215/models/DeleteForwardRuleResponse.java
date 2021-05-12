@@ -160,6 +160,35 @@ public class DeleteForwardRuleResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DeleteForwardRuleResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteForwardRuleResponse(DeleteForwardRuleResponse source) {
+        if (source.Endpoint != null) {
+            this.Endpoint = new String(source.Endpoint);
+        }
+        if (source.QueueName != null) {
+            this.QueueName = new String(source.QueueName);
+        }
+        if (source.ProductID != null) {
+            this.ProductID = new String(source.ProductID);
+        }
+        if (source.Result != null) {
+            this.Result = new Long(source.Result);
+        }
+        if (source.ErrMsg != null) {
+            this.ErrMsg = new String(source.ErrMsg);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

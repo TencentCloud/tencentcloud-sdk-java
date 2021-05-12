@@ -114,6 +114,29 @@ public class DevTokenInfo extends AbstractModel{
         this.ExpireTime = ExpireTime;
     }
 
+    public DevTokenInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DevTokenInfo(DevTokenInfo source) {
+        if (source.AccessId != null) {
+            this.AccessId = new String(source.AccessId);
+        }
+        if (source.Tid != null) {
+            this.Tid = new String(source.Tid);
+        }
+        if (source.AccessToken != null) {
+            this.AccessToken = new String(source.AccessToken);
+        }
+        if (source.ExpireTime != null) {
+            this.ExpireTime = new Long(source.ExpireTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

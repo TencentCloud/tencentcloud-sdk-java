@@ -344,6 +344,59 @@ public class ModifyQueueAttributeRequest extends AbstractModel{
         this.Trace = Trace;
     }
 
+    public ModifyQueueAttributeRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyQueueAttributeRequest(ModifyQueueAttributeRequest source) {
+        if (source.QueueName != null) {
+            this.QueueName = new String(source.QueueName);
+        }
+        if (source.MaxMsgHeapNum != null) {
+            this.MaxMsgHeapNum = new Long(source.MaxMsgHeapNum);
+        }
+        if (source.PollingWaitSeconds != null) {
+            this.PollingWaitSeconds = new Long(source.PollingWaitSeconds);
+        }
+        if (source.VisibilityTimeout != null) {
+            this.VisibilityTimeout = new Long(source.VisibilityTimeout);
+        }
+        if (source.MaxMsgSize != null) {
+            this.MaxMsgSize = new Long(source.MaxMsgSize);
+        }
+        if (source.MsgRetentionSeconds != null) {
+            this.MsgRetentionSeconds = new Long(source.MsgRetentionSeconds);
+        }
+        if (source.RewindSeconds != null) {
+            this.RewindSeconds = new Long(source.RewindSeconds);
+        }
+        if (source.FirstQueryInterval != null) {
+            this.FirstQueryInterval = new Long(source.FirstQueryInterval);
+        }
+        if (source.MaxQueryCount != null) {
+            this.MaxQueryCount = new Long(source.MaxQueryCount);
+        }
+        if (source.DeadLetterQueueName != null) {
+            this.DeadLetterQueueName = new String(source.DeadLetterQueueName);
+        }
+        if (source.MaxTimeToLive != null) {
+            this.MaxTimeToLive = new Long(source.MaxTimeToLive);
+        }
+        if (source.MaxReceiveCount != null) {
+            this.MaxReceiveCount = new Long(source.MaxReceiveCount);
+        }
+        if (source.Policy != null) {
+            this.Policy = new Long(source.Policy);
+        }
+        if (source.Trace != null) {
+            this.Trace = new Boolean(source.Trace);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -310,6 +310,59 @@ public class MaterialBasicInfo extends AbstractModel{
         this.TagInfoSet = TagInfoSet;
     }
 
+    public MaterialBasicInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MaterialBasicInfo(MaterialBasicInfo source) {
+        if (source.MaterialId != null) {
+            this.MaterialId = new String(source.MaterialId);
+        }
+        if (source.MaterialType != null) {
+            this.MaterialType = new String(source.MaterialType);
+        }
+        if (source.Owner != null) {
+            this.Owner = new Entity(source.Owner);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new String(source.UpdateTime);
+        }
+        if (source.ClassPath != null) {
+            this.ClassPath = new String(source.ClassPath);
+        }
+        if (source.PresetTagSet != null) {
+            this.PresetTagSet = new PresetTagInfo[source.PresetTagSet.length];
+            for (int i = 0; i < source.PresetTagSet.length; i++) {
+                this.PresetTagSet[i] = new PresetTagInfo(source.PresetTagSet[i]);
+            }
+        }
+        if (source.TagSet != null) {
+            this.TagSet = new String[source.TagSet.length];
+            for (int i = 0; i < source.TagSet.length; i++) {
+                this.TagSet[i] = new String(source.TagSet[i]);
+            }
+        }
+        if (source.PreviewUrl != null) {
+            this.PreviewUrl = new String(source.PreviewUrl);
+        }
+        if (source.TagInfoSet != null) {
+            this.TagInfoSet = new MaterialTagInfo[source.TagInfoSet.length];
+            for (int i = 0; i < source.TagInfoSet.length; i++) {
+                this.TagInfoSet[i] = new MaterialTagInfo(source.TagInfoSet[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

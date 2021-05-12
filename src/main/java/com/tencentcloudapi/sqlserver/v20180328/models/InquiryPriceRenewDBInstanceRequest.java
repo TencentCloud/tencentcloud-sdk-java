@@ -91,6 +91,26 @@ public class InquiryPriceRenewDBInstanceRequest extends AbstractModel{
         this.TimeUnit = TimeUnit;
     }
 
+    public InquiryPriceRenewDBInstanceRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public InquiryPriceRenewDBInstanceRequest(InquiryPriceRenewDBInstanceRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.Period != null) {
+            this.Period = new Long(source.Period);
+        }
+        if (source.TimeUnit != null) {
+            this.TimeUnit = new String(source.TimeUnit);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

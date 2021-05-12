@@ -68,6 +68,23 @@ public class StatusReason extends AbstractModel{
         this.ErrorMessage = ErrorMessage;
     }
 
+    public StatusReason() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public StatusReason(StatusReason source) {
+        if (source.ErrorCode != null) {
+            this.ErrorCode = new String(source.ErrorCode);
+        }
+        if (source.ErrorMessage != null) {
+            this.ErrorMessage = new String(source.ErrorMessage);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

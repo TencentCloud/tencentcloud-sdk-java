@@ -68,6 +68,26 @@ public class ModifyInstanceParamsRequest extends AbstractModel{
         this.InstanceParams = InstanceParams;
     }
 
+    public ModifyInstanceParamsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyInstanceParamsRequest(ModifyInstanceParamsRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.InstanceParams != null) {
+            this.InstanceParams = new InstanceParam[source.InstanceParams.length];
+            for (int i = 0; i < source.InstanceParams.length; i++) {
+                this.InstanceParams[i] = new InstanceParam(source.InstanceParams[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

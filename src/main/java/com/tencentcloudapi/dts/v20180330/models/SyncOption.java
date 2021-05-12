@@ -114,6 +114,29 @@ public class SyncOption extends AbstractModel{
         this.ConsistencyType = ConsistencyType;
     }
 
+    public SyncOption() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SyncOption(SyncOption source) {
+        if (source.SyncObject != null) {
+            this.SyncObject = new Long(source.SyncObject);
+        }
+        if (source.RunMode != null) {
+            this.RunMode = new Long(source.RunMode);
+        }
+        if (source.SyncType != null) {
+            this.SyncType = new Long(source.SyncType);
+        }
+        if (source.ConsistencyType != null) {
+            this.ConsistencyType = new Long(source.ConsistencyType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -91,6 +91,29 @@ public class FaceFusionResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public FaceFusionResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public FaceFusionResponse(FaceFusionResponse source) {
+        if (source.Image != null) {
+            this.Image = new String(source.Image);
+        }
+        if (source.ReviewResultSet != null) {
+            this.ReviewResultSet = new FuseFaceReviewResult[source.ReviewResultSet.length];
+            for (int i = 0; i < source.ReviewResultSet.length; i++) {
+                this.ReviewResultSet[i] = new FuseFaceReviewResult(source.ReviewResultSet[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

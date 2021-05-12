@@ -206,6 +206,41 @@ public class IpField extends AbstractModel{
         this.Comment = Comment;
     }
 
+    public IpField() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public IpField(IpField source) {
+        if (source.Country != null) {
+            this.Country = new Boolean(source.Country);
+        }
+        if (source.Province != null) {
+            this.Province = new Boolean(source.Province);
+        }
+        if (source.City != null) {
+            this.City = new Boolean(source.City);
+        }
+        if (source.Region != null) {
+            this.Region = new Boolean(source.Region);
+        }
+        if (source.Isp != null) {
+            this.Isp = new Boolean(source.Isp);
+        }
+        if (source.AsName != null) {
+            this.AsName = new Boolean(source.AsName);
+        }
+        if (source.AsId != null) {
+            this.AsId = new Boolean(source.AsId);
+        }
+        if (source.Comment != null) {
+            this.Comment = new Boolean(source.Comment);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

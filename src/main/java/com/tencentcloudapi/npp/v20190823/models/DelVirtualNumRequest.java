@@ -91,6 +91,26 @@ public class DelVirtualNumRequest extends AbstractModel{
         this.BizId = BizId;
     }
 
+    public DelVirtualNumRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DelVirtualNumRequest(DelVirtualNumRequest source) {
+        if (source.BizAppId != null) {
+            this.BizAppId = new String(source.BizAppId);
+        }
+        if (source.BindId != null) {
+            this.BindId = new String(source.BindId);
+        }
+        if (source.BizId != null) {
+            this.BizId = new String(source.BizId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

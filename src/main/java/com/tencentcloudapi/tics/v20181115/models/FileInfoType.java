@@ -436,6 +436,71 @@ public class FileInfoType extends AbstractModel{
         this.WhiteScore = WhiteScore;
     }
 
+    public FileInfoType() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public FileInfoType(FileInfoType source) {
+        if (source.DetectId != null) {
+            this.DetectId = new String(source.DetectId);
+        }
+        if (source.DetectPriority != null) {
+            this.DetectPriority = new String(source.DetectPriority);
+        }
+        if (source.EnginePriority != null) {
+            this.EnginePriority = new String(source.EnginePriority);
+        }
+        if (source.FileExist != null) {
+            this.FileExist = new String(source.FileExist);
+        }
+        if (source.FileForceUpload != null) {
+            this.FileForceUpload = new String(source.FileForceUpload);
+        }
+        if (source.FileSize != null) {
+            this.FileSize = new String(source.FileSize);
+        }
+        if (source.FileupTime != null) {
+            this.FileupTime = new String(source.FileupTime);
+        }
+        if (source.FullVirusName != null) {
+            this.FullVirusName = new String(source.FullVirusName);
+        }
+        if (source.IdcPosition != null) {
+            this.IdcPosition = new String(source.IdcPosition);
+        }
+        if (source.Md5Type != null) {
+            this.Md5Type = new String(source.Md5Type);
+        }
+        if (source.PeExist != null) {
+            this.PeExist = new String(source.PeExist);
+        }
+        if (source.PeForceUpload != null) {
+            this.PeForceUpload = new String(source.PeForceUpload);
+        }
+        if (source.SafeLevel != null) {
+            this.SafeLevel = new String(source.SafeLevel);
+        }
+        if (source.ScanModiTime != null) {
+            this.ScanModiTime = new String(source.ScanModiTime);
+        }
+        if (source.SubdetectId != null) {
+            this.SubdetectId = new String(source.SubdetectId);
+        }
+        if (source.UserDefName != null) {
+            this.UserDefName = new String(source.UserDefName);
+        }
+        if (source.VirusType != null) {
+            this.VirusType = new String(source.VirusType);
+        }
+        if (source.WhiteScore != null) {
+            this.WhiteScore = new String(source.WhiteScore);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

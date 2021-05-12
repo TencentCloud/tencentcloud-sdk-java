@@ -229,6 +229,47 @@ public class ListKeyDetailRequest extends AbstractModel{
         this.TagFilters = TagFilters;
     }
 
+    public ListKeyDetailRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ListKeyDetailRequest(ListKeyDetailRequest source) {
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.Role != null) {
+            this.Role = new Long(source.Role);
+        }
+        if (source.OrderType != null) {
+            this.OrderType = new Long(source.OrderType);
+        }
+        if (source.KeyState != null) {
+            this.KeyState = new Long(source.KeyState);
+        }
+        if (source.SearchKeyAlias != null) {
+            this.SearchKeyAlias = new String(source.SearchKeyAlias);
+        }
+        if (source.Origin != null) {
+            this.Origin = new String(source.Origin);
+        }
+        if (source.KeyUsage != null) {
+            this.KeyUsage = new String(source.KeyUsage);
+        }
+        if (source.TagFilters != null) {
+            this.TagFilters = new TagFilter[source.TagFilters.length];
+            for (int i = 0; i < source.TagFilters.length; i++) {
+                this.TagFilters[i] = new TagFilter(source.TagFilters[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

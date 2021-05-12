@@ -68,6 +68,23 @@ public class DescribeDBSecurityGroupsRequest extends AbstractModel{
         this.ForReadonlyInstance = ForReadonlyInstance;
     }
 
+    public DescribeDBSecurityGroupsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeDBSecurityGroupsRequest(DescribeDBSecurityGroupsRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.ForReadonlyInstance != null) {
+            this.ForReadonlyInstance = new Boolean(source.ForReadonlyInstance);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

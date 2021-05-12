@@ -206,6 +206,41 @@ public class UpgradeLifecycleHookRequest extends AbstractModel{
         this.LifecycleTransitionType = LifecycleTransitionType;
     }
 
+    public UpgradeLifecycleHookRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UpgradeLifecycleHookRequest(UpgradeLifecycleHookRequest source) {
+        if (source.LifecycleHookId != null) {
+            this.LifecycleHookId = new String(source.LifecycleHookId);
+        }
+        if (source.LifecycleHookName != null) {
+            this.LifecycleHookName = new String(source.LifecycleHookName);
+        }
+        if (source.LifecycleTransition != null) {
+            this.LifecycleTransition = new String(source.LifecycleTransition);
+        }
+        if (source.DefaultResult != null) {
+            this.DefaultResult = new String(source.DefaultResult);
+        }
+        if (source.HeartbeatTimeout != null) {
+            this.HeartbeatTimeout = new Long(source.HeartbeatTimeout);
+        }
+        if (source.NotificationMetadata != null) {
+            this.NotificationMetadata = new String(source.NotificationMetadata);
+        }
+        if (source.NotificationTarget != null) {
+            this.NotificationTarget = new NotificationTarget(source.NotificationTarget);
+        }
+        if (source.LifecycleTransitionType != null) {
+            this.LifecycleTransitionType = new String(source.LifecycleTransitionType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

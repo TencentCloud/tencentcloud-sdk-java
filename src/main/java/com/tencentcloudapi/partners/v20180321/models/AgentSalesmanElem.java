@@ -114,6 +114,29 @@ public class AgentSalesmanElem extends AbstractModel{
         this.CreateTime = CreateTime;
     }
 
+    public AgentSalesmanElem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AgentSalesmanElem(AgentSalesmanElem source) {
+        if (source.Uin != null) {
+            this.Uin = new String(source.Uin);
+        }
+        if (source.SalesUin != null) {
+            this.SalesUin = new String(source.SalesUin);
+        }
+        if (source.SalesName != null) {
+            this.SalesName = new String(source.SalesName);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -269,6 +269,44 @@ public class DescribeInstanceDTSInfoResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeInstanceDTSInfoResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeInstanceDTSInfoResponse(DescribeInstanceDTSInfoResponse source) {
+        if (source.JobId != null) {
+            this.JobId = new String(source.JobId);
+        }
+        if (source.JobName != null) {
+            this.JobName = new String(source.JobName);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.StatusDesc != null) {
+            this.StatusDesc = new String(source.StatusDesc);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.CutDownTime != null) {
+            this.CutDownTime = new String(source.CutDownTime);
+        }
+        if (source.SrcInfo != null) {
+            this.SrcInfo = new DescribeInstanceDTSInstanceInfo(source.SrcInfo);
+        }
+        if (source.DstInfo != null) {
+            this.DstInfo = new DescribeInstanceDTSInstanceInfo(source.DstInfo);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

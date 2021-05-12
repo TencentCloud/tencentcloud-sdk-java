@@ -252,6 +252,68 @@ public class DescribeTrafficMirrorListenersRequest extends AbstractModel{
         this.SearchLoadBalancerPorts = SearchLoadBalancerPorts;
     }
 
+    public DescribeTrafficMirrorListenersRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeTrafficMirrorListenersRequest(DescribeTrafficMirrorListenersRequest source) {
+        if (source.TrafficMirrorId != null) {
+            this.TrafficMirrorId = new String(source.TrafficMirrorId);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.SearchLoadBalancerIds != null) {
+            this.SearchLoadBalancerIds = new String[source.SearchLoadBalancerIds.length];
+            for (int i = 0; i < source.SearchLoadBalancerIds.length; i++) {
+                this.SearchLoadBalancerIds[i] = new String(source.SearchLoadBalancerIds[i]);
+            }
+        }
+        if (source.SearchLoadBalancerNames != null) {
+            this.SearchLoadBalancerNames = new String[source.SearchLoadBalancerNames.length];
+            for (int i = 0; i < source.SearchLoadBalancerNames.length; i++) {
+                this.SearchLoadBalancerNames[i] = new String(source.SearchLoadBalancerNames[i]);
+            }
+        }
+        if (source.SearchVips != null) {
+            this.SearchVips = new String[source.SearchVips.length];
+            for (int i = 0; i < source.SearchVips.length; i++) {
+                this.SearchVips[i] = new String(source.SearchVips[i]);
+            }
+        }
+        if (source.SearchListenerIds != null) {
+            this.SearchListenerIds = new String[source.SearchListenerIds.length];
+            for (int i = 0; i < source.SearchListenerIds.length; i++) {
+                this.SearchListenerIds[i] = new String(source.SearchListenerIds[i]);
+            }
+        }
+        if (source.SearchListenerNames != null) {
+            this.SearchListenerNames = new String[source.SearchListenerNames.length];
+            for (int i = 0; i < source.SearchListenerNames.length; i++) {
+                this.SearchListenerNames[i] = new String(source.SearchListenerNames[i]);
+            }
+        }
+        if (source.SearchProtocols != null) {
+            this.SearchProtocols = new String[source.SearchProtocols.length];
+            for (int i = 0; i < source.SearchProtocols.length; i++) {
+                this.SearchProtocols[i] = new String(source.SearchProtocols[i]);
+            }
+        }
+        if (source.SearchLoadBalancerPorts != null) {
+            this.SearchLoadBalancerPorts = new Long[source.SearchLoadBalancerPorts.length];
+            for (int i = 0; i < source.SearchLoadBalancerPorts.length; i++) {
+                this.SearchLoadBalancerPorts[i] = new Long(source.SearchLoadBalancerPorts[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

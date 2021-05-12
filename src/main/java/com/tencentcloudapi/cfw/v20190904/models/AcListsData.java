@@ -287,6 +287,47 @@ public class AcListsData extends AbstractModel{
         this.LogId = LogId;
     }
 
+    public AcListsData() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AcListsData(AcListsData source) {
+        if (source.Id != null) {
+            this.Id = new Long(source.Id);
+        }
+        if (source.SourceIp != null) {
+            this.SourceIp = new String(source.SourceIp);
+        }
+        if (source.TargetIp != null) {
+            this.TargetIp = new String(source.TargetIp);
+        }
+        if (source.Protocol != null) {
+            this.Protocol = new String(source.Protocol);
+        }
+        if (source.Port != null) {
+            this.Port = new String(source.Port);
+        }
+        if (source.Strategy != null) {
+            this.Strategy = new Long(source.Strategy);
+        }
+        if (source.Detail != null) {
+            this.Detail = new String(source.Detail);
+        }
+        if (source.Count != null) {
+            this.Count = new Long(source.Count);
+        }
+        if (source.OrderIndex != null) {
+            this.OrderIndex = new Long(source.OrderIndex);
+        }
+        if (source.LogId != null) {
+            this.LogId = new String(source.LogId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

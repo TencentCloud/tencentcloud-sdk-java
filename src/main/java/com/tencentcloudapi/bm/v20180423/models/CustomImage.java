@@ -298,6 +298,56 @@ public class CustomImage extends AbstractModel{
         this.OsTypeId = OsTypeId;
     }
 
+    public CustomImage() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CustomImage(CustomImage source) {
+        if (source.ImageId != null) {
+            this.ImageId = new String(source.ImageId);
+        }
+        if (source.ImageName != null) {
+            this.ImageName = new String(source.ImageName);
+        }
+        if (source.ImageStatus != null) {
+            this.ImageStatus = new Long(source.ImageStatus);
+        }
+        if (source.OsClass != null) {
+            this.OsClass = new String(source.OsClass);
+        }
+        if (source.OsVersion != null) {
+            this.OsVersion = new String(source.OsVersion);
+        }
+        if (source.OsBit != null) {
+            this.OsBit = new Long(source.OsBit);
+        }
+        if (source.ImageSize != null) {
+            this.ImageSize = new Long(source.ImageSize);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.PartitionInfoSet != null) {
+            this.PartitionInfoSet = new PartitionInfo[source.PartitionInfoSet.length];
+            for (int i = 0; i < source.PartitionInfoSet.length; i++) {
+                this.PartitionInfoSet[i] = new PartitionInfo(source.PartitionInfoSet[i]);
+            }
+        }
+        if (source.DeviceClassCode != null) {
+            this.DeviceClassCode = new String(source.DeviceClassCode);
+        }
+        if (source.ImageDescription != null) {
+            this.ImageDescription = new String(source.ImageDescription);
+        }
+        if (source.OsTypeId != null) {
+            this.OsTypeId = new Long(source.OsTypeId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

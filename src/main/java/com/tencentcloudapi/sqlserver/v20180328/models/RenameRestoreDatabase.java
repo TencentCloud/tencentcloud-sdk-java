@@ -73,6 +73,23 @@ public class RenameRestoreDatabase extends AbstractModel{
         this.NewName = NewName;
     }
 
+    public RenameRestoreDatabase() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RenameRestoreDatabase(RenameRestoreDatabase source) {
+        if (source.OldName != null) {
+            this.OldName = new String(source.OldName);
+        }
+        if (source.NewName != null) {
+            this.NewName = new String(source.NewName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

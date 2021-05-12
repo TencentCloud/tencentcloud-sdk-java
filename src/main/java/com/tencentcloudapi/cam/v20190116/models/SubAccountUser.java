@@ -216,6 +216,41 @@ public class SubAccountUser extends AbstractModel{
         this.LastLoginTime = LastLoginTime;
     }
 
+    public SubAccountUser() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SubAccountUser(SubAccountUser source) {
+        if (source.Uin != null) {
+            this.Uin = new Long(source.Uin);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Uid != null) {
+            this.Uid = new Long(source.Uid);
+        }
+        if (source.Remark != null) {
+            this.Remark = new String(source.Remark);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.UserType != null) {
+            this.UserType = new Long(source.UserType);
+        }
+        if (source.LastLoginIp != null) {
+            this.LastLoginIp = new String(source.LastLoginIp);
+        }
+        if (source.LastLoginTime != null) {
+            this.LastLoginTime = new String(source.LastLoginTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

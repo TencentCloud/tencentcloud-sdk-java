@@ -68,6 +68,26 @@ public class InsuranceBillOCRResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public InsuranceBillOCRResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public InsuranceBillOCRResponse(InsuranceBillOCRResponse source) {
+        if (source.InsuranceBillInfos != null) {
+            this.InsuranceBillInfos = new InsuranceBillInfo[source.InsuranceBillInfos.length];
+            for (int i = 0; i < source.InsuranceBillInfos.length; i++) {
+                this.InsuranceBillInfos[i] = new InsuranceBillInfo(source.InsuranceBillInfos[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

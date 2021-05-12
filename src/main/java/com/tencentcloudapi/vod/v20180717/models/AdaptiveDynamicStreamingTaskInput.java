@@ -91,6 +91,32 @@ public class AdaptiveDynamicStreamingTaskInput extends AbstractModel{
         this.SubtitleSet = SubtitleSet;
     }
 
+    public AdaptiveDynamicStreamingTaskInput() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AdaptiveDynamicStreamingTaskInput(AdaptiveDynamicStreamingTaskInput source) {
+        if (source.Definition != null) {
+            this.Definition = new Long(source.Definition);
+        }
+        if (source.WatermarkSet != null) {
+            this.WatermarkSet = new WatermarkInput[source.WatermarkSet.length];
+            for (int i = 0; i < source.WatermarkSet.length; i++) {
+                this.WatermarkSet[i] = new WatermarkInput(source.WatermarkSet[i]);
+            }
+        }
+        if (source.SubtitleSet != null) {
+            this.SubtitleSet = new String[source.SubtitleSet.length];
+            for (int i = 0; i < source.SubtitleSet.length; i++) {
+                this.SubtitleSet[i] = new String(source.SubtitleSet[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

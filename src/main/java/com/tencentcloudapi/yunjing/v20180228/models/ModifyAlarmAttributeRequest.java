@@ -98,6 +98,23 @@ public class ModifyAlarmAttributeRequest extends AbstractModel{
         this.Value = Value;
     }
 
+    public ModifyAlarmAttributeRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyAlarmAttributeRequest(ModifyAlarmAttributeRequest source) {
+        if (source.Attribute != null) {
+            this.Attribute = new String(source.Attribute);
+        }
+        if (source.Value != null) {
+            this.Value = new String(source.Value);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

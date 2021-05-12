@@ -68,6 +68,23 @@ public class UpdateProhibitionBatchResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public UpdateProhibitionBatchResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UpdateProhibitionBatchResponse(UpdateProhibitionBatchResponse source) {
+        if (source.LogId != null) {
+            this.LogId = new Long(source.LogId);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

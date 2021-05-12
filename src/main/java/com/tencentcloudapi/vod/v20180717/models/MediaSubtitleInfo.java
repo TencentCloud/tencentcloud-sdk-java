@@ -45,6 +45,23 @@ public class MediaSubtitleInfo extends AbstractModel{
         this.SubtitleSet = SubtitleSet;
     }
 
+    public MediaSubtitleInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MediaSubtitleInfo(MediaSubtitleInfo source) {
+        if (source.SubtitleSet != null) {
+            this.SubtitleSet = new MediaSubtitleItem[source.SubtitleSet.length];
+            for (int i = 0; i < source.SubtitleSet.length; i++) {
+                this.SubtitleSet[i] = new MediaSubtitleItem(source.SubtitleSet[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

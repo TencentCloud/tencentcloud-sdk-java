@@ -292,6 +292,50 @@ public class ResetResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public ResetResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ResetResponse(ResetResponse source) {
+        if (source.DialogStatus != null) {
+            this.DialogStatus = new String(source.DialogStatus);
+        }
+        if (source.BotName != null) {
+            this.BotName = new String(source.BotName);
+        }
+        if (source.IntentName != null) {
+            this.IntentName = new String(source.IntentName);
+        }
+        if (source.ResponseText != null) {
+            this.ResponseText = new String(source.ResponseText);
+        }
+        if (source.SlotInfoList != null) {
+            this.SlotInfoList = new SlotInfo[source.SlotInfoList.length];
+            for (int i = 0; i < source.SlotInfoList.length; i++) {
+                this.SlotInfoList[i] = new SlotInfo(source.SlotInfoList[i]);
+            }
+        }
+        if (source.SessionAttributes != null) {
+            this.SessionAttributes = new String(source.SessionAttributes);
+        }
+        if (source.Question != null) {
+            this.Question = new String(source.Question);
+        }
+        if (source.WaveUrl != null) {
+            this.WaveUrl = new String(source.WaveUrl);
+        }
+        if (source.WaveData != null) {
+            this.WaveData = new String(source.WaveData);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

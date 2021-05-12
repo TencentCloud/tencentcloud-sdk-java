@@ -96,6 +96,26 @@ public class CreatePostpayPackageResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public CreatePostpayPackageResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreatePostpayPackageResponse(CreatePostpayPackageResponse source) {
+        if (source.TranId != null) {
+            this.TranId = new String(source.TranId);
+        }
+        if (source.EnvId != null) {
+            this.EnvId = new String(source.EnvId);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

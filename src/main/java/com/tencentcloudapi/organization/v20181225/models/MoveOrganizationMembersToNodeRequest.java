@@ -68,6 +68,26 @@ public class MoveOrganizationMembersToNodeRequest extends AbstractModel{
         this.Uins = Uins;
     }
 
+    public MoveOrganizationMembersToNodeRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MoveOrganizationMembersToNodeRequest(MoveOrganizationMembersToNodeRequest source) {
+        if (source.NodeId != null) {
+            this.NodeId = new Long(source.NodeId);
+        }
+        if (source.Uins != null) {
+            this.Uins = new Long[source.Uins.length];
+            for (int i = 0; i < source.Uins.length; i++) {
+                this.Uins[i] = new Long(source.Uins[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

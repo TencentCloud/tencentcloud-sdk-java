@@ -106,6 +106,26 @@ public class TaskFlowLastBatchState extends AbstractModel{
         this.State = State;
     }
 
+    public TaskFlowLastBatchState() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TaskFlowLastBatchState(TaskFlowLastBatchState source) {
+        if (source.FlowBatchId != null) {
+            this.FlowBatchId = new String(source.FlowBatchId);
+        }
+        if (source.FlowBatchLogId != null) {
+            this.FlowBatchLogId = new String(source.FlowBatchLogId);
+        }
+        if (source.State != null) {
+            this.State = new String(source.State);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

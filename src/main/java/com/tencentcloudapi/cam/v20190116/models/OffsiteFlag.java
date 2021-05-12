@@ -137,6 +137,32 @@ public class OffsiteFlag extends AbstractModel{
         this.Tips = Tips;
     }
 
+    public OffsiteFlag() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public OffsiteFlag(OffsiteFlag source) {
+        if (source.VerifyFlag != null) {
+            this.VerifyFlag = new Long(source.VerifyFlag);
+        }
+        if (source.NotifyPhone != null) {
+            this.NotifyPhone = new Long(source.NotifyPhone);
+        }
+        if (source.NotifyEmail != null) {
+            this.NotifyEmail = new Long(source.NotifyEmail);
+        }
+        if (source.NotifyWechat != null) {
+            this.NotifyWechat = new Long(source.NotifyWechat);
+        }
+        if (source.Tips != null) {
+            this.Tips = new Long(source.Tips);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -45,6 +45,20 @@ public class Artist extends AbstractModel{
         this.ArtistName = ArtistName;
     }
 
+    public Artist() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Artist(Artist source) {
+        if (source.ArtistName != null) {
+            this.ArtistName = new String(source.ArtistName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

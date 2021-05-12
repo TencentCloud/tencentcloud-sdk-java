@@ -45,6 +45,20 @@ public class DescribeRunLogRequest extends AbstractModel{
         this.Tid = Tid;
     }
 
+    public DescribeRunLogRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeRunLogRequest(DescribeRunLogRequest source) {
+        if (source.Tid != null) {
+            this.Tid = new String(source.Tid);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

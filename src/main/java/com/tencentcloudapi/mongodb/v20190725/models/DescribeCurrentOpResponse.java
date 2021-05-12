@@ -91,6 +91,29 @@ public class DescribeCurrentOpResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeCurrentOpResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeCurrentOpResponse(DescribeCurrentOpResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.CurrentOps != null) {
+            this.CurrentOps = new CurrentOp[source.CurrentOps.length];
+            for (int i = 0; i < source.CurrentOps.length; i++) {
+                this.CurrentOps[i] = new CurrentOp(source.CurrentOps[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

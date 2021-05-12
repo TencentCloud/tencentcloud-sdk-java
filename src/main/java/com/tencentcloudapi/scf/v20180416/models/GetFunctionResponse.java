@@ -995,6 +995,152 @@ public class GetFunctionResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public GetFunctionResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GetFunctionResponse(GetFunctionResponse source) {
+        if (source.ModTime != null) {
+            this.ModTime = new String(source.ModTime);
+        }
+        if (source.CodeInfo != null) {
+            this.CodeInfo = new String(source.CodeInfo);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.Triggers != null) {
+            this.Triggers = new Trigger[source.Triggers.length];
+            for (int i = 0; i < source.Triggers.length; i++) {
+                this.Triggers[i] = new Trigger(source.Triggers[i]);
+            }
+        }
+        if (source.Handler != null) {
+            this.Handler = new String(source.Handler);
+        }
+        if (source.CodeSize != null) {
+            this.CodeSize = new Long(source.CodeSize);
+        }
+        if (source.Timeout != null) {
+            this.Timeout = new Long(source.Timeout);
+        }
+        if (source.FunctionVersion != null) {
+            this.FunctionVersion = new String(source.FunctionVersion);
+        }
+        if (source.MemorySize != null) {
+            this.MemorySize = new Long(source.MemorySize);
+        }
+        if (source.Runtime != null) {
+            this.Runtime = new String(source.Runtime);
+        }
+        if (source.FunctionName != null) {
+            this.FunctionName = new String(source.FunctionName);
+        }
+        if (source.VpcConfig != null) {
+            this.VpcConfig = new VpcConfig(source.VpcConfig);
+        }
+        if (source.UseGpu != null) {
+            this.UseGpu = new String(source.UseGpu);
+        }
+        if (source.Environment != null) {
+            this.Environment = new Environment(source.Environment);
+        }
+        if (source.CodeResult != null) {
+            this.CodeResult = new String(source.CodeResult);
+        }
+        if (source.CodeError != null) {
+            this.CodeError = new String(source.CodeError);
+        }
+        if (source.ErrNo != null) {
+            this.ErrNo = new Long(source.ErrNo);
+        }
+        if (source.Namespace != null) {
+            this.Namespace = new String(source.Namespace);
+        }
+        if (source.Role != null) {
+            this.Role = new String(source.Role);
+        }
+        if (source.InstallDependency != null) {
+            this.InstallDependency = new String(source.InstallDependency);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.StatusDesc != null) {
+            this.StatusDesc = new String(source.StatusDesc);
+        }
+        if (source.ClsLogsetId != null) {
+            this.ClsLogsetId = new String(source.ClsLogsetId);
+        }
+        if (source.ClsTopicId != null) {
+            this.ClsTopicId = new String(source.ClsTopicId);
+        }
+        if (source.FunctionId != null) {
+            this.FunctionId = new String(source.FunctionId);
+        }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
+        if (source.EipConfig != null) {
+            this.EipConfig = new EipOutConfig(source.EipConfig);
+        }
+        if (source.AccessInfo != null) {
+            this.AccessInfo = new AccessInfo(source.AccessInfo);
+        }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.L5Enable != null) {
+            this.L5Enable = new String(source.L5Enable);
+        }
+        if (source.Layers != null) {
+            this.Layers = new LayerVersionInfo[source.Layers.length];
+            for (int i = 0; i < source.Layers.length; i++) {
+                this.Layers[i] = new LayerVersionInfo(source.Layers[i]);
+            }
+        }
+        if (source.DeadLetterConfig != null) {
+            this.DeadLetterConfig = new DeadLetterConfig(source.DeadLetterConfig);
+        }
+        if (source.AddTime != null) {
+            this.AddTime = new String(source.AddTime);
+        }
+        if (source.PublicNetConfig != null) {
+            this.PublicNetConfig = new PublicNetConfigOut(source.PublicNetConfig);
+        }
+        if (source.OnsEnable != null) {
+            this.OnsEnable = new String(source.OnsEnable);
+        }
+        if (source.CfsConfig != null) {
+            this.CfsConfig = new CfsConfig(source.CfsConfig);
+        }
+        if (source.AvailableStatus != null) {
+            this.AvailableStatus = new String(source.AvailableStatus);
+        }
+        if (source.Qualifier != null) {
+            this.Qualifier = new String(source.Qualifier);
+        }
+        if (source.InitTimeout != null) {
+            this.InitTimeout = new Long(source.InitTimeout);
+        }
+        if (source.StatusReasons != null) {
+            this.StatusReasons = new StatusReason[source.StatusReasons.length];
+            for (int i = 0; i < source.StatusReasons.length; i++) {
+                this.StatusReasons[i] = new StatusReason(source.StatusReasons[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

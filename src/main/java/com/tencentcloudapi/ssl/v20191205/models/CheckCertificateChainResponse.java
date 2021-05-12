@@ -114,6 +114,32 @@ public class CheckCertificateChainResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public CheckCertificateChainResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CheckCertificateChainResponse(CheckCertificateChainResponse source) {
+        if (source.IsValid != null) {
+            this.IsValid = new Boolean(source.IsValid);
+        }
+        if (source.IsTrustedCA != null) {
+            this.IsTrustedCA = new Boolean(source.IsTrustedCA);
+        }
+        if (source.Chains != null) {
+            this.Chains = new String[source.Chains.length];
+            for (int i = 0; i < source.Chains.length; i++) {
+                this.Chains[i] = new String(source.Chains[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

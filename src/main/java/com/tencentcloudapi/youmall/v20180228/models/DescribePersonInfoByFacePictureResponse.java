@@ -206,6 +206,41 @@ public class DescribePersonInfoByFacePictureResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribePersonInfoByFacePictureResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribePersonInfoByFacePictureResponse(DescribePersonInfoByFacePictureResponse source) {
+        if (source.CompanyId != null) {
+            this.CompanyId = new String(source.CompanyId);
+        }
+        if (source.ShopId != null) {
+            this.ShopId = new Long(source.ShopId);
+        }
+        if (source.PersonId != null) {
+            this.PersonId = new Long(source.PersonId);
+        }
+        if (source.PictureUrl != null) {
+            this.PictureUrl = new String(source.PictureUrl);
+        }
+        if (source.PersonType != null) {
+            this.PersonType = new Long(source.PersonType);
+        }
+        if (source.FirstVisitTime != null) {
+            this.FirstVisitTime = new String(source.FirstVisitTime);
+        }
+        if (source.VisitTimes != null) {
+            this.VisitTimes = new Long(source.VisitTimes);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

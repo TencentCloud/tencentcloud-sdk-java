@@ -947,6 +947,146 @@ public class BuyDevicesRequest extends AbstractModel{
         this.TemplateId = TemplateId;
     }
 
+    public BuyDevicesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public BuyDevicesRequest(BuyDevicesRequest source) {
+        if (source.Zone != null) {
+            this.Zone = new String(source.Zone);
+        }
+        if (source.OsTypeId != null) {
+            this.OsTypeId = new Long(source.OsTypeId);
+        }
+        if (source.RaidId != null) {
+            this.RaidId = new Long(source.RaidId);
+        }
+        if (source.GoodsCount != null) {
+            this.GoodsCount = new Long(source.GoodsCount);
+        }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.SubnetId != null) {
+            this.SubnetId = new String(source.SubnetId);
+        }
+        if (source.DeviceClassCode != null) {
+            this.DeviceClassCode = new String(source.DeviceClassCode);
+        }
+        if (source.TimeUnit != null) {
+            this.TimeUnit = new String(source.TimeUnit);
+        }
+        if (source.TimeSpan != null) {
+            this.TimeSpan = new Long(source.TimeSpan);
+        }
+        if (source.NeedSecurityAgent != null) {
+            this.NeedSecurityAgent = new Long(source.NeedSecurityAgent);
+        }
+        if (source.NeedMonitorAgent != null) {
+            this.NeedMonitorAgent = new Long(source.NeedMonitorAgent);
+        }
+        if (source.NeedEMRAgent != null) {
+            this.NeedEMRAgent = new Long(source.NeedEMRAgent);
+        }
+        if (source.NeedEMRSoftware != null) {
+            this.NeedEMRSoftware = new Long(source.NeedEMRSoftware);
+        }
+        if (source.ApplyEip != null) {
+            this.ApplyEip = new Long(source.ApplyEip);
+        }
+        if (source.EipPayMode != null) {
+            this.EipPayMode = new String(source.EipPayMode);
+        }
+        if (source.EipBandwidth != null) {
+            this.EipBandwidth = new Long(source.EipBandwidth);
+        }
+        if (source.IsZoning != null) {
+            this.IsZoning = new Long(source.IsZoning);
+        }
+        if (source.CpmPayMode != null) {
+            this.CpmPayMode = new Long(source.CpmPayMode);
+        }
+        if (source.ImageId != null) {
+            this.ImageId = new String(source.ImageId);
+        }
+        if (source.Password != null) {
+            this.Password = new String(source.Password);
+        }
+        if (source.AutoRenewFlag != null) {
+            this.AutoRenewFlag = new Long(source.AutoRenewFlag);
+        }
+        if (source.SysRootSpace != null) {
+            this.SysRootSpace = new Long(source.SysRootSpace);
+        }
+        if (source.SysSwaporuefiSpace != null) {
+            this.SysSwaporuefiSpace = new Long(source.SysSwaporuefiSpace);
+        }
+        if (source.SysUsrlocalSpace != null) {
+            this.SysUsrlocalSpace = new Long(source.SysUsrlocalSpace);
+        }
+        if (source.SysDataSpace != null) {
+            this.SysDataSpace = new Long(source.SysDataSpace);
+        }
+        if (source.HyperThreading != null) {
+            this.HyperThreading = new Long(source.HyperThreading);
+        }
+        if (source.LanIps != null) {
+            this.LanIps = new String[source.LanIps.length];
+            for (int i = 0; i < source.LanIps.length; i++) {
+                this.LanIps[i] = new String(source.LanIps[i]);
+            }
+        }
+        if (source.Aliases != null) {
+            this.Aliases = new String[source.Aliases.length];
+            for (int i = 0; i < source.Aliases.length; i++) {
+                this.Aliases[i] = new String(source.Aliases[i]);
+            }
+        }
+        if (source.CpuId != null) {
+            this.CpuId = new Long(source.CpuId);
+        }
+        if (source.ContainRaidCard != null) {
+            this.ContainRaidCard = new Long(source.ContainRaidCard);
+        }
+        if (source.MemSize != null) {
+            this.MemSize = new Long(source.MemSize);
+        }
+        if (source.SystemDiskTypeId != null) {
+            this.SystemDiskTypeId = new Long(source.SystemDiskTypeId);
+        }
+        if (source.SystemDiskCount != null) {
+            this.SystemDiskCount = new Long(source.SystemDiskCount);
+        }
+        if (source.DataDiskTypeId != null) {
+            this.DataDiskTypeId = new Long(source.DataDiskTypeId);
+        }
+        if (source.DataDiskCount != null) {
+            this.DataDiskCount = new Long(source.DataDiskCount);
+        }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
+        if (source.FileSystem != null) {
+            this.FileSystem = new String(source.FileSystem);
+        }
+        if (source.BuySession != null) {
+            this.BuySession = new String(source.BuySession);
+        }
+        if (source.SgId != null) {
+            this.SgId = new String(source.SgId);
+        }
+        if (source.TemplateId != null) {
+            this.TemplateId = new String(source.TemplateId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

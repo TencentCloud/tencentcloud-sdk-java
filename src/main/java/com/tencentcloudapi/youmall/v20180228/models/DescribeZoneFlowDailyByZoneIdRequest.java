@@ -137,6 +137,32 @@ public class DescribeZoneFlowDailyByZoneIdRequest extends AbstractModel{
         this.EndDate = EndDate;
     }
 
+    public DescribeZoneFlowDailyByZoneIdRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeZoneFlowDailyByZoneIdRequest(DescribeZoneFlowDailyByZoneIdRequest source) {
+        if (source.CompanyId != null) {
+            this.CompanyId = new String(source.CompanyId);
+        }
+        if (source.ShopId != null) {
+            this.ShopId = new Long(source.ShopId);
+        }
+        if (source.ZoneId != null) {
+            this.ZoneId = new Long(source.ZoneId);
+        }
+        if (source.StartDate != null) {
+            this.StartDate = new String(source.StartDate);
+        }
+        if (source.EndDate != null) {
+            this.EndDate = new String(source.EndDate);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

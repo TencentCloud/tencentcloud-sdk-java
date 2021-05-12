@@ -96,6 +96,29 @@ public class DeliverTidsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DeliverTidsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeliverTidsResponse(DeliverTidsResponse source) {
+        if (source.TidSet != null) {
+            this.TidSet = new TidKeysInfo[source.TidSet.length];
+            for (int i = 0; i < source.TidSet.length; i++) {
+                this.TidSet[i] = new TidKeysInfo(source.TidSet[i]);
+            }
+        }
+        if (source.ProductKey != null) {
+            this.ProductKey = new String(source.ProductKey);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

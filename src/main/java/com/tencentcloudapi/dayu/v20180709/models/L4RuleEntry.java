@@ -275,6 +275,53 @@ public class L4RuleEntry extends AbstractModel{
         this.RemoveSwitch = RemoveSwitch;
     }
 
+    public L4RuleEntry() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public L4RuleEntry(L4RuleEntry source) {
+        if (source.Protocol != null) {
+            this.Protocol = new String(source.Protocol);
+        }
+        if (source.VirtualPort != null) {
+            this.VirtualPort = new Long(source.VirtualPort);
+        }
+        if (source.SourcePort != null) {
+            this.SourcePort = new Long(source.SourcePort);
+        }
+        if (source.SourceType != null) {
+            this.SourceType = new Long(source.SourceType);
+        }
+        if (source.KeepTime != null) {
+            this.KeepTime = new Long(source.KeepTime);
+        }
+        if (source.SourceList != null) {
+            this.SourceList = new L4RuleSource[source.SourceList.length];
+            for (int i = 0; i < source.SourceList.length; i++) {
+                this.SourceList[i] = new L4RuleSource(source.SourceList[i]);
+            }
+        }
+        if (source.LbType != null) {
+            this.LbType = new Long(source.LbType);
+        }
+        if (source.KeepEnable != null) {
+            this.KeepEnable = new Long(source.KeepEnable);
+        }
+        if (source.RuleId != null) {
+            this.RuleId = new String(source.RuleId);
+        }
+        if (source.RuleName != null) {
+            this.RuleName = new String(source.RuleName);
+        }
+        if (source.RemoveSwitch != null) {
+            this.RemoveSwitch = new Long(source.RemoveSwitch);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

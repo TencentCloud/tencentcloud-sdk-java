@@ -45,6 +45,20 @@ public class CCAlarmThreshold extends AbstractModel{
         this.AlarmThreshold = AlarmThreshold;
     }
 
+    public CCAlarmThreshold() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CCAlarmThreshold(CCAlarmThreshold source) {
+        if (source.AlarmThreshold != null) {
+            this.AlarmThreshold = new Long(source.AlarmThreshold);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

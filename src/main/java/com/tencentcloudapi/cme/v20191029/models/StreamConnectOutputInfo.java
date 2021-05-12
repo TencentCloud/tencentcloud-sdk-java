@@ -83,6 +83,23 @@ public class StreamConnectOutputInfo extends AbstractModel{
         this.PushSwitch = PushSwitch;
     }
 
+    public StreamConnectOutputInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public StreamConnectOutputInfo(StreamConnectOutputInfo source) {
+        if (source.StreamConnectOutput != null) {
+            this.StreamConnectOutput = new StreamConnectOutput(source.StreamConnectOutput);
+        }
+        if (source.PushSwitch != null) {
+            this.PushSwitch = new String(source.PushSwitch);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

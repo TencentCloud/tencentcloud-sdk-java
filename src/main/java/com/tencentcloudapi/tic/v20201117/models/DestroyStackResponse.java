@@ -68,6 +68,23 @@ public class DestroyStackResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DestroyStackResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DestroyStackResponse(DestroyStackResponse source) {
+        if (source.EventId != null) {
+            this.EventId = new String(source.EventId);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -91,6 +91,26 @@ public class StartExecutionResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public StartExecutionResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public StartExecutionResponse(StartExecutionResponse source) {
+        if (source.ExecutionResourceName != null) {
+            this.ExecutionResourceName = new String(source.ExecutionResourceName);
+        }
+        if (source.StartDate != null) {
+            this.StartDate = new String(source.StartDate);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

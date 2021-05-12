@@ -55,6 +55,20 @@ district：省份（中国境内）、国家/地区（中国境外）映射查�
         this.Name = Name;
     }
 
+    public DescribeMapInfoRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeMapInfoRequest(DescribeMapInfoRequest source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

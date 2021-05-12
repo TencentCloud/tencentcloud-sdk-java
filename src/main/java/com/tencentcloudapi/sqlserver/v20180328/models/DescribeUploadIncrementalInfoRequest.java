@@ -91,6 +91,26 @@ public class DescribeUploadIncrementalInfoRequest extends AbstractModel{
         this.IncrementalMigrationId = IncrementalMigrationId;
     }
 
+    public DescribeUploadIncrementalInfoRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeUploadIncrementalInfoRequest(DescribeUploadIncrementalInfoRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.BackupMigrationId != null) {
+            this.BackupMigrationId = new String(source.BackupMigrationId);
+        }
+        if (source.IncrementalMigrationId != null) {
+            this.IncrementalMigrationId = new String(source.IncrementalMigrationId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

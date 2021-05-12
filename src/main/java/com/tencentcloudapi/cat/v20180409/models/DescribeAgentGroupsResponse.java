@@ -91,6 +91,29 @@ public class DescribeAgentGroupsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeAgentGroupsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeAgentGroupsResponse(DescribeAgentGroupsResponse source) {
+        if (source.SysDefaultGroup != null) {
+            this.SysDefaultGroup = new AgentGroup(source.SysDefaultGroup);
+        }
+        if (source.CustomGroups != null) {
+            this.CustomGroups = new AgentGroup[source.CustomGroups.length];
+            for (int i = 0; i < source.CustomGroups.length; i++) {
+                this.CustomGroups[i] = new AgentGroup(source.CustomGroups[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

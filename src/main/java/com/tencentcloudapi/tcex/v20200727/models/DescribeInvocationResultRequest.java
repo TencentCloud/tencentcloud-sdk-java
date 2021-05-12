@@ -45,6 +45,20 @@ public class DescribeInvocationResultRequest extends AbstractModel{
         this.InvokeId = InvokeId;
     }
 
+    public DescribeInvocationResultRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeInvocationResultRequest(DescribeInvocationResultRequest source) {
+        if (source.InvokeId != null) {
+            this.InvokeId = new String(source.InvokeId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

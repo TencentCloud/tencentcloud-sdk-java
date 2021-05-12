@@ -504,6 +504,89 @@ OPEN：公网属性， INTERNAL：内网属性。
         this.Filters = Filters;
     }
 
+    public DescribeLoadBalancersRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeLoadBalancersRequest(DescribeLoadBalancersRequest source) {
+        if (source.LoadBalancerIds != null) {
+            this.LoadBalancerIds = new String[source.LoadBalancerIds.length];
+            for (int i = 0; i < source.LoadBalancerIds.length; i++) {
+                this.LoadBalancerIds[i] = new String(source.LoadBalancerIds[i]);
+            }
+        }
+        if (source.LoadBalancerType != null) {
+            this.LoadBalancerType = new String(source.LoadBalancerType);
+        }
+        if (source.Forward != null) {
+            this.Forward = new Long(source.Forward);
+        }
+        if (source.LoadBalancerName != null) {
+            this.LoadBalancerName = new String(source.LoadBalancerName);
+        }
+        if (source.Domain != null) {
+            this.Domain = new String(source.Domain);
+        }
+        if (source.LoadBalancerVips != null) {
+            this.LoadBalancerVips = new String[source.LoadBalancerVips.length];
+            for (int i = 0; i < source.LoadBalancerVips.length; i++) {
+                this.LoadBalancerVips[i] = new String(source.LoadBalancerVips[i]);
+            }
+        }
+        if (source.BackendPublicIps != null) {
+            this.BackendPublicIps = new String[source.BackendPublicIps.length];
+            for (int i = 0; i < source.BackendPublicIps.length; i++) {
+                this.BackendPublicIps[i] = new String(source.BackendPublicIps[i]);
+            }
+        }
+        if (source.BackendPrivateIps != null) {
+            this.BackendPrivateIps = new String[source.BackendPrivateIps.length];
+            for (int i = 0; i < source.BackendPrivateIps.length; i++) {
+                this.BackendPrivateIps[i] = new String(source.BackendPrivateIps[i]);
+            }
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.OrderBy != null) {
+            this.OrderBy = new String(source.OrderBy);
+        }
+        if (source.OrderType != null) {
+            this.OrderType = new Long(source.OrderType);
+        }
+        if (source.SearchKey != null) {
+            this.SearchKey = new String(source.SearchKey);
+        }
+        if (source.ProjectId != null) {
+            this.ProjectId = new Long(source.ProjectId);
+        }
+        if (source.WithRs != null) {
+            this.WithRs = new Long(source.WithRs);
+        }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.SecurityGroup != null) {
+            this.SecurityGroup = new String(source.SecurityGroup);
+        }
+        if (source.MasterZone != null) {
+            this.MasterZone = new String(source.MasterZone);
+        }
+        if (source.Filters != null) {
+            this.Filters = new Filter[source.Filters.length];
+            for (int i = 0; i < source.Filters.length; i++) {
+                this.Filters[i] = new Filter(source.Filters[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

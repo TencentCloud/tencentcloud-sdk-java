@@ -206,6 +206,44 @@ public class Ip6Translator extends AbstractModel{
         this.IP6RuleSet = IP6RuleSet;
     }
 
+    public Ip6Translator() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Ip6Translator(Ip6Translator source) {
+        if (source.Ip6TranslatorId != null) {
+            this.Ip6TranslatorId = new String(source.Ip6TranslatorId);
+        }
+        if (source.Ip6TranslatorName != null) {
+            this.Ip6TranslatorName = new String(source.Ip6TranslatorName);
+        }
+        if (source.Vip6 != null) {
+            this.Vip6 = new String(source.Vip6);
+        }
+        if (source.IspName != null) {
+            this.IspName = new String(source.IspName);
+        }
+        if (source.TranslatorStatus != null) {
+            this.TranslatorStatus = new String(source.TranslatorStatus);
+        }
+        if (source.CreatedTime != null) {
+            this.CreatedTime = new String(source.CreatedTime);
+        }
+        if (source.Ip6RuleCount != null) {
+            this.Ip6RuleCount = new Long(source.Ip6RuleCount);
+        }
+        if (source.IP6RuleSet != null) {
+            this.IP6RuleSet = new Ip6Rule[source.IP6RuleSet.length];
+            for (int i = 0; i < source.IP6RuleSet.length; i++) {
+                this.IP6RuleSet[i] = new Ip6Rule(source.IP6RuleSet[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

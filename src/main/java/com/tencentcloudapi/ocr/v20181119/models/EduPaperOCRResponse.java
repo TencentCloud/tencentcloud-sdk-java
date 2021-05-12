@@ -114,6 +114,35 @@ public class EduPaperOCRResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public EduPaperOCRResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public EduPaperOCRResponse(EduPaperOCRResponse source) {
+        if (source.EduPaperInfos != null) {
+            this.EduPaperInfos = new TextEduPaper[source.EduPaperInfos.length];
+            for (int i = 0; i < source.EduPaperInfos.length; i++) {
+                this.EduPaperInfos[i] = new TextEduPaper(source.EduPaperInfos[i]);
+            }
+        }
+        if (source.Angle != null) {
+            this.Angle = new Long(source.Angle);
+        }
+        if (source.QuestionBlockInfos != null) {
+            this.QuestionBlockInfos = new QuestionBlockObj[source.QuestionBlockInfos.length];
+            for (int i = 0; i < source.QuestionBlockInfos.length; i++) {
+                this.QuestionBlockInfos[i] = new QuestionBlockObj(source.QuestionBlockInfos[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

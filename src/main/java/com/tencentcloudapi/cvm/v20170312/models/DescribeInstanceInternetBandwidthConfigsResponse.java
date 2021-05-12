@@ -68,6 +68,26 @@ public class DescribeInstanceInternetBandwidthConfigsResponse extends AbstractMo
         this.RequestId = RequestId;
     }
 
+    public DescribeInstanceInternetBandwidthConfigsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeInstanceInternetBandwidthConfigsResponse(DescribeInstanceInternetBandwidthConfigsResponse source) {
+        if (source.InternetBandwidthConfigSet != null) {
+            this.InternetBandwidthConfigSet = new InternetBandwidthConfig[source.InternetBandwidthConfigSet.length];
+            for (int i = 0; i < source.InternetBandwidthConfigSet.length; i++) {
+                this.InternetBandwidthConfigSet[i] = new InternetBandwidthConfig(source.InternetBandwidthConfigSet[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -91,6 +91,26 @@ public class ModifyL4RulesRequest extends AbstractModel{
         this.Rule = Rule;
     }
 
+    public ModifyL4RulesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyL4RulesRequest(ModifyL4RulesRequest source) {
+        if (source.Business != null) {
+            this.Business = new String(source.Business);
+        }
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
+        if (source.Rule != null) {
+            this.Rule = new L4RuleEntry(source.Rule);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

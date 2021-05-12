@@ -106,6 +106,26 @@ DAILY_PUBLIC_IP_ASSIGN：用户当前地域下，重新分配公网 IP次数。
         this.QuotaLimit = QuotaLimit;
     }
 
+    public EipQuota() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public EipQuota(EipQuota source) {
+        if (source.QuotaId != null) {
+            this.QuotaId = new String(source.QuotaId);
+        }
+        if (source.QuotaCurrent != null) {
+            this.QuotaCurrent = new Long(source.QuotaCurrent);
+        }
+        if (source.QuotaLimit != null) {
+            this.QuotaLimit = new Long(source.QuotaLimit);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -134,6 +134,32 @@ public class GatewayVo extends AbstractModel{
         this.Groups = Groups;
     }
 
+    public GatewayVo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GatewayVo(GatewayVo source) {
+        if (source.GatewayDeployGroupId != null) {
+            this.GatewayDeployGroupId = new String(source.GatewayDeployGroupId);
+        }
+        if (source.GatewayDeployGroupName != null) {
+            this.GatewayDeployGroupName = new String(source.GatewayDeployGroupName);
+        }
+        if (source.GroupNum != null) {
+            this.GroupNum = new Long(source.GroupNum);
+        }
+        if (source.Groups != null) {
+            this.Groups = new GatewayApiGroupVo[source.Groups.length];
+            for (int i = 0; i < source.Groups.length; i++) {
+                this.Groups[i] = new GatewayApiGroupVo(source.Groups[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

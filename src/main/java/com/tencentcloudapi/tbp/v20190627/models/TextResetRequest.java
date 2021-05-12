@@ -137,6 +137,32 @@ public class TextResetRequest extends AbstractModel{
         this.PlatformId = PlatformId;
     }
 
+    public TextResetRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TextResetRequest(TextResetRequest source) {
+        if (source.BotId != null) {
+            this.BotId = new String(source.BotId);
+        }
+        if (source.BotEnv != null) {
+            this.BotEnv = new String(source.BotEnv);
+        }
+        if (source.TerminalId != null) {
+            this.TerminalId = new String(source.TerminalId);
+        }
+        if (source.PlatformType != null) {
+            this.PlatformType = new String(source.PlatformType);
+        }
+        if (source.PlatformId != null) {
+            this.PlatformId = new String(source.PlatformId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

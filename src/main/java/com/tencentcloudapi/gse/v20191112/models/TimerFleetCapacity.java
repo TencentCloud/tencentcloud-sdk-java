@@ -218,6 +218,38 @@ public class TimerFleetCapacity extends AbstractModel{
         this.TargetConfiguration = TargetConfiguration;
     }
 
+    public TimerFleetCapacity() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TimerFleetCapacity(TimerFleetCapacity source) {
+        if (source.FleetId != null) {
+            this.FleetId = new String(source.FleetId);
+        }
+        if (source.DesiredInstances != null) {
+            this.DesiredInstances = new Long(source.DesiredInstances);
+        }
+        if (source.MinSize != null) {
+            this.MinSize = new Long(source.MinSize);
+        }
+        if (source.MaxSize != null) {
+            this.MaxSize = new Long(source.MaxSize);
+        }
+        if (source.ScalingInterval != null) {
+            this.ScalingInterval = new Long(source.ScalingInterval);
+        }
+        if (source.ScalingType != null) {
+            this.ScalingType = new Long(source.ScalingType);
+        }
+        if (source.TargetConfiguration != null) {
+            this.TargetConfiguration = new TargetConfiguration(source.TargetConfiguration);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

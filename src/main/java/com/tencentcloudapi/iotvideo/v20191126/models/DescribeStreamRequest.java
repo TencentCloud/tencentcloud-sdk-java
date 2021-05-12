@@ -137,6 +137,32 @@ public class DescribeStreamRequest extends AbstractModel{
         this.AccessToken = AccessToken;
     }
 
+    public DescribeStreamRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeStreamRequest(DescribeStreamRequest source) {
+        if (source.Tid != null) {
+            this.Tid = new String(source.Tid);
+        }
+        if (source.AccessId != null) {
+            this.AccessId = new String(source.AccessId);
+        }
+        if (source.Protocol != null) {
+            this.Protocol = new String(source.Protocol);
+        }
+        if (source.Address != null) {
+            this.Address = new String(source.Address);
+        }
+        if (source.AccessToken != null) {
+            this.AccessToken = new String(source.AccessToken);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -159,6 +159,29 @@ https：强制 https 跳转
         this.CarryHeaders = CarryHeaders;
     }
 
+    public ForceRedirect() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ForceRedirect(ForceRedirect source) {
+        if (source.Switch != null) {
+            this.Switch = new String(source.Switch);
+        }
+        if (source.RedirectType != null) {
+            this.RedirectType = new String(source.RedirectType);
+        }
+        if (source.RedirectStatusCode != null) {
+            this.RedirectStatusCode = new Long(source.RedirectStatusCode);
+        }
+        if (source.CarryHeaders != null) {
+            this.CarryHeaders = new String(source.CarryHeaders);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

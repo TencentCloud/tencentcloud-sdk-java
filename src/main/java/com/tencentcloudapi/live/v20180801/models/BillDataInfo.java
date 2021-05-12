@@ -114,6 +114,29 @@ public class BillDataInfo extends AbstractModel{
         this.PeakTime = PeakTime;
     }
 
+    public BillDataInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public BillDataInfo(BillDataInfo source) {
+        if (source.Time != null) {
+            this.Time = new String(source.Time);
+        }
+        if (source.Bandwidth != null) {
+            this.Bandwidth = new Float(source.Bandwidth);
+        }
+        if (source.Flux != null) {
+            this.Flux = new Float(source.Flux);
+        }
+        if (source.PeakTime != null) {
+            this.PeakTime = new String(source.PeakTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -160,6 +160,35 @@ public class QueryLogsRequest extends AbstractModel{
         this.Context = Context;
     }
 
+    public QueryLogsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public QueryLogsRequest(QueryLogsRequest source) {
+        if (source.JobName != null) {
+            this.JobName = new String(source.JobName);
+        }
+        if (source.Cluster != null) {
+            this.Cluster = new String(source.Cluster);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.Context != null) {
+            this.Context = new String(source.Context);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -45,6 +45,23 @@ public class CreateVulsMisinformationRequest extends AbstractModel{
         this.VulIds = VulIds;
     }
 
+    public CreateVulsMisinformationRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateVulsMisinformationRequest(CreateVulsMisinformationRequest source) {
+        if (source.VulIds != null) {
+            this.VulIds = new Long[source.VulIds.length];
+            for (int i = 0; i < source.VulIds.length; i++) {
+                this.VulIds[i] = new Long(source.VulIds[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

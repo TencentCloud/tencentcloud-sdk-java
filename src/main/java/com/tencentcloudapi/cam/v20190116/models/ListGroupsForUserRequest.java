@@ -114,6 +114,29 @@ public class ListGroupsForUserRequest extends AbstractModel{
         this.SubUin = SubUin;
     }
 
+    public ListGroupsForUserRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ListGroupsForUserRequest(ListGroupsForUserRequest source) {
+        if (source.Uid != null) {
+            this.Uid = new Long(source.Uid);
+        }
+        if (source.Rp != null) {
+            this.Rp = new Long(source.Rp);
+        }
+        if (source.Page != null) {
+            this.Page = new Long(source.Page);
+        }
+        if (source.SubUin != null) {
+            this.SubUin = new Long(source.SubUin);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

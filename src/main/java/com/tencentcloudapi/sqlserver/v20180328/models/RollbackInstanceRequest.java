@@ -160,6 +160,41 @@ public class RollbackInstanceRequest extends AbstractModel{
         this.RenameRestore = RenameRestore;
     }
 
+    public RollbackInstanceRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RollbackInstanceRequest(RollbackInstanceRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.Type != null) {
+            this.Type = new Long(source.Type);
+        }
+        if (source.DBs != null) {
+            this.DBs = new String[source.DBs.length];
+            for (int i = 0; i < source.DBs.length; i++) {
+                this.DBs[i] = new String(source.DBs[i]);
+            }
+        }
+        if (source.Time != null) {
+            this.Time = new String(source.Time);
+        }
+        if (source.TargetInstanceId != null) {
+            this.TargetInstanceId = new String(source.TargetInstanceId);
+        }
+        if (source.RenameRestore != null) {
+            this.RenameRestore = new RenameRestoreDatabase[source.RenameRestore.length];
+            for (int i = 0; i < source.RenameRestore.length; i++) {
+                this.RenameRestore[i] = new RenameRestoreDatabase(source.RenameRestore[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

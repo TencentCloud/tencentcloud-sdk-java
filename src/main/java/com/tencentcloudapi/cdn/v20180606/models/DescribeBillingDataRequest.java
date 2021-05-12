@@ -301,6 +301,41 @@ bandwidth：计费带宽
         this.Metric = Metric;
     }
 
+    public DescribeBillingDataRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeBillingDataRequest(DescribeBillingDataRequest source) {
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+        if (source.Interval != null) {
+            this.Interval = new String(source.Interval);
+        }
+        if (source.Domain != null) {
+            this.Domain = new String(source.Domain);
+        }
+        if (source.Project != null) {
+            this.Project = new Long(source.Project);
+        }
+        if (source.Area != null) {
+            this.Area = new String(source.Area);
+        }
+        if (source.District != null) {
+            this.District = new Long(source.District);
+        }
+        if (source.Metric != null) {
+            this.Metric = new String(source.Metric);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

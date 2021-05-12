@@ -206,6 +206,50 @@ public class CreateAppRequest extends AbstractModel{
         this.Tags = Tags;
     }
 
+    public CreateAppRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateAppRequest(CreateAppRequest source) {
+        if (source.AppName != null) {
+            this.AppName = new String(source.AppName);
+        }
+        if (source.ProjectId != null) {
+            this.ProjectId = new Long(source.ProjectId);
+        }
+        if (source.EngineList != null) {
+            this.EngineList = new String[source.EngineList.length];
+            for (int i = 0; i < source.EngineList.length; i++) {
+                this.EngineList[i] = new String(source.EngineList[i]);
+            }
+        }
+        if (source.RegionList != null) {
+            this.RegionList = new String[source.RegionList.length];
+            for (int i = 0; i < source.RegionList.length; i++) {
+                this.RegionList[i] = new String(source.RegionList[i]);
+            }
+        }
+        if (source.RealtimeSpeechConf != null) {
+            this.RealtimeSpeechConf = new RealtimeSpeechConf(source.RealtimeSpeechConf);
+        }
+        if (source.VoiceMessageConf != null) {
+            this.VoiceMessageConf = new VoiceMessageConf(source.VoiceMessageConf);
+        }
+        if (source.VoiceFilterConf != null) {
+            this.VoiceFilterConf = new VoiceFilterConf(source.VoiceFilterConf);
+        }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

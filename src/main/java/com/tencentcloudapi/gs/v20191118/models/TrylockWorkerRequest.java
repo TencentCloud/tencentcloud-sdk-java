@@ -160,6 +160,35 @@ public class TrylockWorkerRequest extends AbstractModel{
         this.GroupId = GroupId;
     }
 
+    public TrylockWorkerRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TrylockWorkerRequest(TrylockWorkerRequest source) {
+        if (source.UserId != null) {
+            this.UserId = new String(source.UserId);
+        }
+        if (source.GameId != null) {
+            this.GameId = new String(source.GameId);
+        }
+        if (source.GameRegion != null) {
+            this.GameRegion = new String(source.GameRegion);
+        }
+        if (source.SetNo != null) {
+            this.SetNo = new Long(source.SetNo);
+        }
+        if (source.UserIp != null) {
+            this.UserIp = new String(source.UserIp);
+        }
+        if (source.GroupId != null) {
+            this.GroupId = new String(source.GroupId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

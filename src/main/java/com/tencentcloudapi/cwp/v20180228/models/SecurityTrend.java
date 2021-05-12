@@ -68,6 +68,23 @@ public class SecurityTrend extends AbstractModel{
         this.EventNum = EventNum;
     }
 
+    public SecurityTrend() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SecurityTrend(SecurityTrend source) {
+        if (source.Date != null) {
+            this.Date = new String(source.Date);
+        }
+        if (source.EventNum != null) {
+            this.EventNum = new Long(source.EventNum);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

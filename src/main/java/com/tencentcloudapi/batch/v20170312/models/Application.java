@@ -114,6 +114,29 @@ public class Application extends AbstractModel{
         this.Docker = Docker;
     }
 
+    public Application() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Application(Application source) {
+        if (source.Command != null) {
+            this.Command = new String(source.Command);
+        }
+        if (source.DeliveryForm != null) {
+            this.DeliveryForm = new String(source.DeliveryForm);
+        }
+        if (source.PackagePath != null) {
+            this.PackagePath = new String(source.PackagePath);
+        }
+        if (source.Docker != null) {
+            this.Docker = new Docker(source.Docker);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

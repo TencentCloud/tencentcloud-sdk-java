@@ -252,6 +252,47 @@ public class InquirePriceCreateDBInstancesRequest extends AbstractModel{
         this.ReplicateSetNum = ReplicateSetNum;
     }
 
+    public InquirePriceCreateDBInstancesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public InquirePriceCreateDBInstancesRequest(InquirePriceCreateDBInstancesRequest source) {
+        if (source.Zone != null) {
+            this.Zone = new String(source.Zone);
+        }
+        if (source.NodeNum != null) {
+            this.NodeNum = new Long(source.NodeNum);
+        }
+        if (source.Memory != null) {
+            this.Memory = new Long(source.Memory);
+        }
+        if (source.Volume != null) {
+            this.Volume = new Long(source.Volume);
+        }
+        if (source.MongoVersion != null) {
+            this.MongoVersion = new String(source.MongoVersion);
+        }
+        if (source.MachineCode != null) {
+            this.MachineCode = new String(source.MachineCode);
+        }
+        if (source.GoodsNum != null) {
+            this.GoodsNum = new Long(source.GoodsNum);
+        }
+        if (source.Period != null) {
+            this.Period = new Long(source.Period);
+        }
+        if (source.ClusterType != null) {
+            this.ClusterType = new String(source.ClusterType);
+        }
+        if (source.ReplicateSetNum != null) {
+            this.ReplicateSetNum = new Long(source.ReplicateSetNum);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

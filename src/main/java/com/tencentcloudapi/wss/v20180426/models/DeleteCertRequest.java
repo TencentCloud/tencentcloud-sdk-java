@@ -68,6 +68,23 @@ public class DeleteCertRequest extends AbstractModel{
         this.ModuleType = ModuleType;
     }
 
+    public DeleteCertRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteCertRequest(DeleteCertRequest source) {
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
+        if (source.ModuleType != null) {
+            this.ModuleType = new String(source.ModuleType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

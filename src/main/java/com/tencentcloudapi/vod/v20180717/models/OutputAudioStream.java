@@ -146,6 +146,26 @@ public class OutputAudioStream extends AbstractModel{
         this.AudioChannel = AudioChannel;
     }
 
+    public OutputAudioStream() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public OutputAudioStream(OutputAudioStream source) {
+        if (source.Codec != null) {
+            this.Codec = new String(source.Codec);
+        }
+        if (source.SampleRate != null) {
+            this.SampleRate = new Long(source.SampleRate);
+        }
+        if (source.AudioChannel != null) {
+            this.AudioChannel = new Long(source.AudioChannel);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

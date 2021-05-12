@@ -114,6 +114,29 @@ public class FieldInfo extends AbstractModel{
         this.FieldSize = FieldSize;
     }
 
+    public FieldInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public FieldInfo(FieldInfo source) {
+        if (source.FieldName != null) {
+            this.FieldName = new String(source.FieldName);
+        }
+        if (source.IsPrimaryKey != null) {
+            this.IsPrimaryKey = new String(source.IsPrimaryKey);
+        }
+        if (source.FieldType != null) {
+            this.FieldType = new String(source.FieldType);
+        }
+        if (source.FieldSize != null) {
+            this.FieldSize = new Long(source.FieldSize);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

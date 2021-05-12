@@ -183,6 +183,38 @@ public class InvokeBcosTransRequest extends AbstractModel{
         this.FuncParam = FuncParam;
     }
 
+    public InvokeBcosTransRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public InvokeBcosTransRequest(InvokeBcosTransRequest source) {
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
+        if (source.GroupId != null) {
+            this.GroupId = new Long(source.GroupId);
+        }
+        if (source.ContractAddress != null) {
+            this.ContractAddress = new String(source.ContractAddress);
+        }
+        if (source.AbiInfo != null) {
+            this.AbiInfo = new String(source.AbiInfo);
+        }
+        if (source.FuncName != null) {
+            this.FuncName = new String(source.FuncName);
+        }
+        if (source.SignUserId != null) {
+            this.SignUserId = new String(source.SignUserId);
+        }
+        if (source.FuncParam != null) {
+            this.FuncParam = new String(source.FuncParam);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

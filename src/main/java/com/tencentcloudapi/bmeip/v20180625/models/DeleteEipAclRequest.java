@@ -45,6 +45,20 @@ public class DeleteEipAclRequest extends AbstractModel{
         this.AclId = AclId;
     }
 
+    public DeleteEipAclRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteEipAclRequest(DeleteEipAclRequest source) {
+        if (source.AclId != null) {
+            this.AclId = new String(source.AclId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

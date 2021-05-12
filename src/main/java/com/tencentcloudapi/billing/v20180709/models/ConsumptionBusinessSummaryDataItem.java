@@ -114,6 +114,29 @@ public class ConsumptionBusinessSummaryDataItem extends AbstractModel{
         this.Trend = Trend;
     }
 
+    public ConsumptionBusinessSummaryDataItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ConsumptionBusinessSummaryDataItem(ConsumptionBusinessSummaryDataItem source) {
+        if (source.BusinessCode != null) {
+            this.BusinessCode = new String(source.BusinessCode);
+        }
+        if (source.BusinessCodeName != null) {
+            this.BusinessCodeName = new String(source.BusinessCodeName);
+        }
+        if (source.RealTotalCost != null) {
+            this.RealTotalCost = new String(source.RealTotalCost);
+        }
+        if (source.Trend != null) {
+            this.Trend = new ConsumptionSummaryTrend(source.Trend);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

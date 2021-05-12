@@ -45,6 +45,23 @@ public class ClearDeviceActiveCodeRequest extends AbstractModel{
         this.Tids = Tids;
     }
 
+    public ClearDeviceActiveCodeRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ClearDeviceActiveCodeRequest(ClearDeviceActiveCodeRequest source) {
+        if (source.Tids != null) {
+            this.Tids = new String[source.Tids.length];
+            for (int i = 0; i < source.Tids.length; i++) {
+                this.Tids[i] = new String(source.Tids[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

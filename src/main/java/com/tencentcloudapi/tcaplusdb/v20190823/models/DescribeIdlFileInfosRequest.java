@@ -137,6 +137,38 @@ public class DescribeIdlFileInfosRequest extends AbstractModel{
         this.Limit = Limit;
     }
 
+    public DescribeIdlFileInfosRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeIdlFileInfosRequest(DescribeIdlFileInfosRequest source) {
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
+        if (source.TableGroupIds != null) {
+            this.TableGroupIds = new String[source.TableGroupIds.length];
+            for (int i = 0; i < source.TableGroupIds.length; i++) {
+                this.TableGroupIds[i] = new String(source.TableGroupIds[i]);
+            }
+        }
+        if (source.IdlFileIds != null) {
+            this.IdlFileIds = new String[source.IdlFileIds.length];
+            for (int i = 0; i < source.IdlFileIds.length; i++) {
+                this.IdlFileIds[i] = new String(source.IdlFileIds[i]);
+            }
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

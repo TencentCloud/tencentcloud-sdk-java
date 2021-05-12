@@ -68,6 +68,23 @@ public class AccountPrivilege extends AbstractModel{
         this.Privilege = Privilege;
     }
 
+    public AccountPrivilege() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AccountPrivilege(AccountPrivilege source) {
+        if (source.UserName != null) {
+            this.UserName = new String(source.UserName);
+        }
+        if (source.Privilege != null) {
+            this.Privilege = new String(source.Privilege);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

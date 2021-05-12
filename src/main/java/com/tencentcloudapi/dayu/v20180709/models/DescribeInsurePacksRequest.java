@@ -45,6 +45,23 @@ public class DescribeInsurePacksRequest extends AbstractModel{
         this.IdList = IdList;
     }
 
+    public DescribeInsurePacksRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeInsurePacksRequest(DescribeInsurePacksRequest source) {
+        if (source.IdList != null) {
+            this.IdList = new String[source.IdList.length];
+            for (int i = 0; i < source.IdList.length; i++) {
+                this.IdList[i] = new String(source.IdList[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

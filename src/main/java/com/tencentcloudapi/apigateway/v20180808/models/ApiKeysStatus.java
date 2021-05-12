@@ -78,6 +78,26 @@ public class ApiKeysStatus extends AbstractModel{
         this.ApiKeySet = ApiKeySet;
     }
 
+    public ApiKeysStatus() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ApiKeysStatus(ApiKeysStatus source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.ApiKeySet != null) {
+            this.ApiKeySet = new ApiKey[source.ApiKeySet.length];
+            for (int i = 0; i < source.ApiKeySet.length; i++) {
+                this.ApiKeySet[i] = new ApiKey(source.ApiKeySet[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -91,6 +91,26 @@ public class CreateCertificateRequest extends AbstractModel{
         this.TimeSpan = TimeSpan;
     }
 
+    public CreateCertificateRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateCertificateRequest(CreateCertificateRequest source) {
+        if (source.ProductId != null) {
+            this.ProductId = new Long(source.ProductId);
+        }
+        if (source.DomainNum != null) {
+            this.DomainNum = new Long(source.DomainNum);
+        }
+        if (source.TimeSpan != null) {
+            this.TimeSpan = new Long(source.TimeSpan);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -91,6 +91,29 @@ public class LoginSettings extends AbstractModel{
         this.KeepImageLogin = KeepImageLogin;
     }
 
+    public LoginSettings() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public LoginSettings(LoginSettings source) {
+        if (source.Password != null) {
+            this.Password = new String(source.Password);
+        }
+        if (source.KeyIds != null) {
+            this.KeyIds = new String[source.KeyIds.length];
+            for (int i = 0; i < source.KeyIds.length; i++) {
+                this.KeyIds[i] = new String(source.KeyIds[i]);
+            }
+        }
+        if (source.KeepImageLogin != null) {
+            this.KeepImageLogin = new String(source.KeepImageLogin);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

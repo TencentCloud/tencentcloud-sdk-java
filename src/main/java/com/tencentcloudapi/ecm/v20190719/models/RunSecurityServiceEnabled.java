@@ -68,6 +68,23 @@ public class RunSecurityServiceEnabled extends AbstractModel{
         this.Version = Version;
     }
 
+    public RunSecurityServiceEnabled() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RunSecurityServiceEnabled(RunSecurityServiceEnabled source) {
+        if (source.Enabled != null) {
+            this.Enabled = new Boolean(source.Enabled);
+        }
+        if (source.Version != null) {
+            this.Version = new Long(source.Version);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

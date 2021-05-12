@@ -137,6 +137,32 @@ public class DescribeL7BackendsRequest extends AbstractModel{
         this.QueryType = QueryType;
     }
 
+    public DescribeL7BackendsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeL7BackendsRequest(DescribeL7BackendsRequest source) {
+        if (source.LoadBalancerId != null) {
+            this.LoadBalancerId = new String(source.LoadBalancerId);
+        }
+        if (source.ListenerId != null) {
+            this.ListenerId = new String(source.ListenerId);
+        }
+        if (source.DomainId != null) {
+            this.DomainId = new String(source.DomainId);
+        }
+        if (source.LocationId != null) {
+            this.LocationId = new String(source.LocationId);
+        }
+        if (source.QueryType != null) {
+            this.QueryType = new String(source.QueryType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

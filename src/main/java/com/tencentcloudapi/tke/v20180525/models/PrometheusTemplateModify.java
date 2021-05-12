@@ -261,6 +261,59 @@ public class PrometheusTemplateModify extends AbstractModel{
         this.AlertDetailRules = AlertDetailRules;
     }
 
+    public PrometheusTemplateModify() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PrometheusTemplateModify(PrometheusTemplateModify source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Describe != null) {
+            this.Describe = new String(source.Describe);
+        }
+        if (source.AlertRules != null) {
+            this.AlertRules = new PrometheusAlertRule[source.AlertRules.length];
+            for (int i = 0; i < source.AlertRules.length; i++) {
+                this.AlertRules[i] = new PrometheusAlertRule(source.AlertRules[i]);
+            }
+        }
+        if (source.RecordRules != null) {
+            this.RecordRules = new PrometheusConfigItem[source.RecordRules.length];
+            for (int i = 0; i < source.RecordRules.length; i++) {
+                this.RecordRules[i] = new PrometheusConfigItem(source.RecordRules[i]);
+            }
+        }
+        if (source.ServiceMonitors != null) {
+            this.ServiceMonitors = new PrometheusConfigItem[source.ServiceMonitors.length];
+            for (int i = 0; i < source.ServiceMonitors.length; i++) {
+                this.ServiceMonitors[i] = new PrometheusConfigItem(source.ServiceMonitors[i]);
+            }
+        }
+        if (source.PodMonitors != null) {
+            this.PodMonitors = new PrometheusConfigItem[source.PodMonitors.length];
+            for (int i = 0; i < source.PodMonitors.length; i++) {
+                this.PodMonitors[i] = new PrometheusConfigItem(source.PodMonitors[i]);
+            }
+        }
+        if (source.RawJobs != null) {
+            this.RawJobs = new PrometheusConfigItem[source.RawJobs.length];
+            for (int i = 0; i < source.RawJobs.length; i++) {
+                this.RawJobs[i] = new PrometheusConfigItem(source.RawJobs[i]);
+            }
+        }
+        if (source.AlertDetailRules != null) {
+            this.AlertDetailRules = new PrometheusAlertRuleDetail[source.AlertDetailRules.length];
+            for (int i = 0; i < source.AlertDetailRules.length; i++) {
+                this.AlertDetailRules[i] = new PrometheusAlertRuleDetail(source.AlertDetailRules[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

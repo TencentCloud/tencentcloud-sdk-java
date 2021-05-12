@@ -91,6 +91,26 @@ public class CreateCustomImageRequest extends AbstractModel{
         this.ImageDescription = ImageDescription;
     }
 
+    public CreateCustomImageRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateCustomImageRequest(CreateCustomImageRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.ImageName != null) {
+            this.ImageName = new String(source.ImageName);
+        }
+        if (source.ImageDescription != null) {
+            this.ImageDescription = new String(source.ImageDescription);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

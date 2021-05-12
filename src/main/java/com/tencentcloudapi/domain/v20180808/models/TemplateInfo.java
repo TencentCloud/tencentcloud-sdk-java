@@ -275,6 +275,50 @@ public class TemplateInfo extends AbstractModel{
         this.InvalidReason = InvalidReason;
     }
 
+    public TemplateInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TemplateInfo(TemplateInfo source) {
+        if (source.TemplateId != null) {
+            this.TemplateId = new String(source.TemplateId);
+        }
+        if (source.AuditStatus != null) {
+            this.AuditStatus = new String(source.AuditStatus);
+        }
+        if (source.CreatedOn != null) {
+            this.CreatedOn = new String(source.CreatedOn);
+        }
+        if (source.UpdatedOn != null) {
+            this.UpdatedOn = new String(source.UpdatedOn);
+        }
+        if (source.UserUin != null) {
+            this.UserUin = new String(source.UserUin);
+        }
+        if (source.IsDefault != null) {
+            this.IsDefault = new String(source.IsDefault);
+        }
+        if (source.AuditReason != null) {
+            this.AuditReason = new String(source.AuditReason);
+        }
+        if (source.CertificateInfo != null) {
+            this.CertificateInfo = new CertificateInfo(source.CertificateInfo);
+        }
+        if (source.ContactInfo != null) {
+            this.ContactInfo = new ContactInfo(source.ContactInfo);
+        }
+        if (source.IsValidTemplate != null) {
+            this.IsValidTemplate = new Long(source.IsValidTemplate);
+        }
+        if (source.InvalidReason != null) {
+            this.InvalidReason = new String(source.InvalidReason);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

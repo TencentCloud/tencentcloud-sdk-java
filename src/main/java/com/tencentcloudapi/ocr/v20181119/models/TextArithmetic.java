@@ -266,6 +266,44 @@ public class TextArithmetic extends AbstractModel{
         this.Answer = Answer;
     }
 
+    public TextArithmetic() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TextArithmetic(TextArithmetic source) {
+        if (source.DetectedText != null) {
+            this.DetectedText = new String(source.DetectedText);
+        }
+        if (source.Result != null) {
+            this.Result = new Boolean(source.Result);
+        }
+        if (source.Confidence != null) {
+            this.Confidence = new Long(source.Confidence);
+        }
+        if (source.Polygon != null) {
+            this.Polygon = new Coord[source.Polygon.length];
+            for (int i = 0; i < source.Polygon.length; i++) {
+                this.Polygon[i] = new Coord(source.Polygon[i]);
+            }
+        }
+        if (source.AdvancedInfo != null) {
+            this.AdvancedInfo = new String(source.AdvancedInfo);
+        }
+        if (source.ItemCoord != null) {
+            this.ItemCoord = new ItemCoord(source.ItemCoord);
+        }
+        if (source.ExpressionType != null) {
+            this.ExpressionType = new String(source.ExpressionType);
+        }
+        if (source.Answer != null) {
+            this.Answer = new String(source.Answer);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

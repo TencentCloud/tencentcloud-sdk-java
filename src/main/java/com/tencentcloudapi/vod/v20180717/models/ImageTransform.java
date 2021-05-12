@@ -116,6 +116,26 @@ public class ImageTransform extends AbstractModel{
         this.Flip = Flip;
     }
 
+    public ImageTransform() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ImageTransform(ImageTransform source) {
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.RotateAngle != null) {
+            this.RotateAngle = new Float(source.RotateAngle);
+        }
+        if (source.Flip != null) {
+            this.Flip = new String(source.Flip);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

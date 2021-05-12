@@ -114,6 +114,29 @@ public class DescribeBindingPolicyObjectListInstance extends AbstractModel{
         this.Region = Region;
     }
 
+    public DescribeBindingPolicyObjectListInstance() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeBindingPolicyObjectListInstance(DescribeBindingPolicyObjectListInstance source) {
+        if (source.UniqueId != null) {
+            this.UniqueId = new String(source.UniqueId);
+        }
+        if (source.Dimensions != null) {
+            this.Dimensions = new String(source.Dimensions);
+        }
+        if (source.IsShielded != null) {
+            this.IsShielded = new Long(source.IsShielded);
+        }
+        if (source.Region != null) {
+            this.Region = new String(source.Region);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

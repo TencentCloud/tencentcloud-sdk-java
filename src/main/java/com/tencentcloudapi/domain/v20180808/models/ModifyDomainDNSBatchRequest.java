@@ -68,6 +68,29 @@ public class ModifyDomainDNSBatchRequest extends AbstractModel{
         this.Dns = Dns;
     }
 
+    public ModifyDomainDNSBatchRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyDomainDNSBatchRequest(ModifyDomainDNSBatchRequest source) {
+        if (source.Domains != null) {
+            this.Domains = new String[source.Domains.length];
+            for (int i = 0; i < source.Domains.length; i++) {
+                this.Domains[i] = new String(source.Domains[i]);
+            }
+        }
+        if (source.Dns != null) {
+            this.Dns = new String[source.Dns.length];
+            for (int i = 0; i < source.Dns.length; i++) {
+                this.Dns[i] = new String(source.Dns[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

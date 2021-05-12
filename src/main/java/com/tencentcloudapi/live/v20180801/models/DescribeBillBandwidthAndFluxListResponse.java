@@ -183,6 +183,41 @@ public class DescribeBillBandwidthAndFluxListResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeBillBandwidthAndFluxListResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeBillBandwidthAndFluxListResponse(DescribeBillBandwidthAndFluxListResponse source) {
+        if (source.PeakBandwidthTime != null) {
+            this.PeakBandwidthTime = new String(source.PeakBandwidthTime);
+        }
+        if (source.PeakBandwidth != null) {
+            this.PeakBandwidth = new Float(source.PeakBandwidth);
+        }
+        if (source.P95PeakBandwidthTime != null) {
+            this.P95PeakBandwidthTime = new String(source.P95PeakBandwidthTime);
+        }
+        if (source.P95PeakBandwidth != null) {
+            this.P95PeakBandwidth = new Float(source.P95PeakBandwidth);
+        }
+        if (source.SumFlux != null) {
+            this.SumFlux = new Float(source.SumFlux);
+        }
+        if (source.DataInfoList != null) {
+            this.DataInfoList = new BillDataInfo[source.DataInfoList.length];
+            for (int i = 0; i < source.DataInfoList.length; i++) {
+                this.DataInfoList[i] = new BillDataInfo(source.DataInfoList[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

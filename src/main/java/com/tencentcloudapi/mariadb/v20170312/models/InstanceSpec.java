@@ -68,6 +68,26 @@ public class InstanceSpec extends AbstractModel{
         this.SpecInfos = SpecInfos;
     }
 
+    public InstanceSpec() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public InstanceSpec(InstanceSpec source) {
+        if (source.Machine != null) {
+            this.Machine = new String(source.Machine);
+        }
+        if (source.SpecInfos != null) {
+            this.SpecInfos = new SpecConfigInfo[source.SpecInfos.length];
+            for (int i = 0; i < source.SpecInfos.length; i++) {
+                this.SpecInfos[i] = new SpecConfigInfo(source.SpecInfos[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

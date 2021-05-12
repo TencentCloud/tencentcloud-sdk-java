@@ -137,6 +137,32 @@ public class InquiryPriceDbauditInstanceRequest extends AbstractModel{
         this.ServiceRegion = ServiceRegion;
     }
 
+    public InquiryPriceDbauditInstanceRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public InquiryPriceDbauditInstanceRequest(InquiryPriceDbauditInstanceRequest source) {
+        if (source.InstanceVersion != null) {
+            this.InstanceVersion = new String(source.InstanceVersion);
+        }
+        if (source.InquiryType != null) {
+            this.InquiryType = new String(source.InquiryType);
+        }
+        if (source.TimeSpan != null) {
+            this.TimeSpan = new Long(source.TimeSpan);
+        }
+        if (source.TimeUnit != null) {
+            this.TimeUnit = new String(source.TimeUnit);
+        }
+        if (source.ServiceRegion != null) {
+            this.ServiceRegion = new String(source.ServiceRegion);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

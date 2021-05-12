@@ -96,6 +96,26 @@ public class AddCustomRuleResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public AddCustomRuleResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AddCustomRuleResponse(AddCustomRuleResponse source) {
+        if (source.Success != null) {
+            this.Success = new ResponseCode(source.Success);
+        }
+        if (source.RuleId != null) {
+            this.RuleId = new Long(source.RuleId);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

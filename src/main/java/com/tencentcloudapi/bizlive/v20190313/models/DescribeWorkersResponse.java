@@ -114,6 +114,32 @@ public class DescribeWorkersResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeWorkersResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeWorkersResponse(DescribeWorkersResponse source) {
+        if (source.RegionDetail != null) {
+            this.RegionDetail = new WorkerRegionInfo[source.RegionDetail.length];
+            for (int i = 0; i < source.RegionDetail.length; i++) {
+                this.RegionDetail[i] = new WorkerRegionInfo(source.RegionDetail[i]);
+            }
+        }
+        if (source.Idle != null) {
+            this.Idle = new Long(source.Idle);
+        }
+        if (source.RegionNum != null) {
+            this.RegionNum = new Long(source.RegionNum);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -68,6 +68,23 @@ public class DescribeRelationRequest extends AbstractModel{
         this.RightEntityName = RightEntityName;
     }
 
+    public DescribeRelationRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeRelationRequest(DescribeRelationRequest source) {
+        if (source.LeftEntityName != null) {
+            this.LeftEntityName = new String(source.LeftEntityName);
+        }
+        if (source.RightEntityName != null) {
+            this.RightEntityName = new String(source.RightEntityName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

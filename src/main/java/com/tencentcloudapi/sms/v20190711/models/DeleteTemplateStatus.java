@@ -68,6 +68,23 @@ public class DeleteTemplateStatus extends AbstractModel{
         this.DeleteTime = DeleteTime;
     }
 
+    public DeleteTemplateStatus() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteTemplateStatus(DeleteTemplateStatus source) {
+        if (source.DeleteStatus != null) {
+            this.DeleteStatus = new String(source.DeleteStatus);
+        }
+        if (source.DeleteTime != null) {
+            this.DeleteTime = new Long(source.DeleteTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

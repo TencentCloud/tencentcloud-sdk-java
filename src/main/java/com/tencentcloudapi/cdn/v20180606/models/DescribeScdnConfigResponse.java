@@ -188,6 +188,38 @@ public class DescribeScdnConfigResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeScdnConfigResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeScdnConfigResponse(DescribeScdnConfigResponse source) {
+        if (source.Acl != null) {
+            this.Acl = new ScdnAclConfig(source.Acl);
+        }
+        if (source.Waf != null) {
+            this.Waf = new ScdnWafConfig(source.Waf);
+        }
+        if (source.CC != null) {
+            this.CC = new ScdnConfig(source.CC);
+        }
+        if (source.Ddos != null) {
+            this.Ddos = new ScdnDdosConfig(source.Ddos);
+        }
+        if (source.Bot != null) {
+            this.Bot = new ScdnBotConfig(source.Bot);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

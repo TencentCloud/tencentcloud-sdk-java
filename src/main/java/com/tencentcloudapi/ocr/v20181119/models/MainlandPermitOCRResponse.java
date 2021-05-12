@@ -298,6 +298,53 @@ public class MainlandPermitOCRResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public MainlandPermitOCRResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MainlandPermitOCRResponse(MainlandPermitOCRResponse source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.EnglishName != null) {
+            this.EnglishName = new String(source.EnglishName);
+        }
+        if (source.Sex != null) {
+            this.Sex = new String(source.Sex);
+        }
+        if (source.Birthday != null) {
+            this.Birthday = new String(source.Birthday);
+        }
+        if (source.IssueAuthority != null) {
+            this.IssueAuthority = new String(source.IssueAuthority);
+        }
+        if (source.ValidDate != null) {
+            this.ValidDate = new String(source.ValidDate);
+        }
+        if (source.Number != null) {
+            this.Number = new String(source.Number);
+        }
+        if (source.IssueAddress != null) {
+            this.IssueAddress = new String(source.IssueAddress);
+        }
+        if (source.IssueNumber != null) {
+            this.IssueNumber = new String(source.IssueNumber);
+        }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.Profile != null) {
+            this.Profile = new String(source.Profile);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

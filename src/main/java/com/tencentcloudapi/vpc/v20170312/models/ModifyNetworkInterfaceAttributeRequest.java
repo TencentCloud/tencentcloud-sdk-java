@@ -114,6 +114,32 @@ public class ModifyNetworkInterfaceAttributeRequest extends AbstractModel{
         this.SecurityGroupIds = SecurityGroupIds;
     }
 
+    public ModifyNetworkInterfaceAttributeRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyNetworkInterfaceAttributeRequest(ModifyNetworkInterfaceAttributeRequest source) {
+        if (source.NetworkInterfaceId != null) {
+            this.NetworkInterfaceId = new String(source.NetworkInterfaceId);
+        }
+        if (source.NetworkInterfaceName != null) {
+            this.NetworkInterfaceName = new String(source.NetworkInterfaceName);
+        }
+        if (source.NetworkInterfaceDescription != null) {
+            this.NetworkInterfaceDescription = new String(source.NetworkInterfaceDescription);
+        }
+        if (source.SecurityGroupIds != null) {
+            this.SecurityGroupIds = new String[source.SecurityGroupIds.length];
+            for (int i = 0; i < source.SecurityGroupIds.length; i++) {
+                this.SecurityGroupIds[i] = new String(source.SecurityGroupIds[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

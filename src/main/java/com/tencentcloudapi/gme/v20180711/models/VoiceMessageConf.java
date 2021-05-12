@@ -68,6 +68,23 @@ public class VoiceMessageConf extends AbstractModel{
         this.Language = Language;
     }
 
+    public VoiceMessageConf() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public VoiceMessageConf(VoiceMessageConf source) {
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.Language != null) {
+            this.Language = new String(source.Language);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

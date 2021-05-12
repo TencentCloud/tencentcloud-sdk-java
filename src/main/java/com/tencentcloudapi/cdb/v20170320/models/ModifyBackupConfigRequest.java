@@ -160,6 +160,35 @@ public class ModifyBackupConfigRequest extends AbstractModel{
         this.BackupTimeWindow = BackupTimeWindow;
     }
 
+    public ModifyBackupConfigRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyBackupConfigRequest(ModifyBackupConfigRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.ExpireDays != null) {
+            this.ExpireDays = new Long(source.ExpireDays);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.BackupMethod != null) {
+            this.BackupMethod = new String(source.BackupMethod);
+        }
+        if (source.BinlogExpireDays != null) {
+            this.BinlogExpireDays = new Long(source.BinlogExpireDays);
+        }
+        if (source.BackupTimeWindow != null) {
+            this.BackupTimeWindow = new CommonTimeWindow(source.BackupTimeWindow);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

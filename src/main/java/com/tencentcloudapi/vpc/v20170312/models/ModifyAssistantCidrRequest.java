@@ -91,6 +91,32 @@ public class ModifyAssistantCidrRequest extends AbstractModel{
         this.OldCidrBlocks = OldCidrBlocks;
     }
 
+    public ModifyAssistantCidrRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyAssistantCidrRequest(ModifyAssistantCidrRequest source) {
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.NewCidrBlocks != null) {
+            this.NewCidrBlocks = new String[source.NewCidrBlocks.length];
+            for (int i = 0; i < source.NewCidrBlocks.length; i++) {
+                this.NewCidrBlocks[i] = new String(source.NewCidrBlocks[i]);
+            }
+        }
+        if (source.OldCidrBlocks != null) {
+            this.OldCidrBlocks = new String[source.OldCidrBlocks.length];
+            for (int i = 0; i < source.OldCidrBlocks.length; i++) {
+                this.OldCidrBlocks[i] = new String(source.OldCidrBlocks[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

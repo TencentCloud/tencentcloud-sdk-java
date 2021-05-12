@@ -68,6 +68,23 @@ public class AssociateSubDeviceToGatewayProductRequest extends AbstractModel{
         this.GatewayProductId = GatewayProductId;
     }
 
+    public AssociateSubDeviceToGatewayProductRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AssociateSubDeviceToGatewayProductRequest(AssociateSubDeviceToGatewayProductRequest source) {
+        if (source.SubDeviceProductId != null) {
+            this.SubDeviceProductId = new String(source.SubDeviceProductId);
+        }
+        if (source.GatewayProductId != null) {
+            this.GatewayProductId = new String(source.GatewayProductId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -45,6 +45,20 @@ public class DeleteNetDetectRequest extends AbstractModel{
         this.NetDetectId = NetDetectId;
     }
 
+    public DeleteNetDetectRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteNetDetectRequest(DeleteNetDetectRequest source) {
+        if (source.NetDetectId != null) {
+            this.NetDetectId = new String(source.NetDetectId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

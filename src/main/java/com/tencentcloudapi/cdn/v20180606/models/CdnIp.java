@@ -195,6 +195,38 @@ unknown：服务地域无法获取
         this.City = City;
     }
 
+    public CdnIp() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CdnIp(CdnIp source) {
+        if (source.Ip != null) {
+            this.Ip = new String(source.Ip);
+        }
+        if (source.Platform != null) {
+            this.Platform = new String(source.Platform);
+        }
+        if (source.Location != null) {
+            this.Location = new String(source.Location);
+        }
+        if (source.History != null) {
+            this.History = new CdnIpHistory[source.History.length];
+            for (int i = 0; i < source.History.length; i++) {
+                this.History[i] = new CdnIpHistory(source.History[i]);
+            }
+        }
+        if (source.Area != null) {
+            this.Area = new String(source.Area);
+        }
+        if (source.City != null) {
+            this.City = new String(source.City);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

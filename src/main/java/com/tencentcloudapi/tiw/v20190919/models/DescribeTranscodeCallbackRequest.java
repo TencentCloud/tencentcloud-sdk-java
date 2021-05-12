@@ -45,6 +45,20 @@ public class DescribeTranscodeCallbackRequest extends AbstractModel{
         this.SdkAppId = SdkAppId;
     }
 
+    public DescribeTranscodeCallbackRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeTranscodeCallbackRequest(DescribeTranscodeCallbackRequest source) {
+        if (source.SdkAppId != null) {
+            this.SdkAppId = new Long(source.SdkAppId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

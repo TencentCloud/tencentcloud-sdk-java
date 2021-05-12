@@ -91,6 +91,29 @@ public class DescribeGatewayFlowQosResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeGatewayFlowQosResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeGatewayFlowQosResponse(DescribeGatewayFlowQosResponse source) {
+        if (source.GatewayQosSet != null) {
+            this.GatewayQosSet = new GatewayQos[source.GatewayQosSet.length];
+            for (int i = 0; i < source.GatewayQosSet.length; i++) {
+                this.GatewayQosSet[i] = new GatewayQos(source.GatewayQosSet[i]);
+            }
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

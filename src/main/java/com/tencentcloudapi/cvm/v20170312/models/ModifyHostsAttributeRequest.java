@@ -114,6 +114,32 @@ public class ModifyHostsAttributeRequest extends AbstractModel{
         this.ProjectId = ProjectId;
     }
 
+    public ModifyHostsAttributeRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyHostsAttributeRequest(ModifyHostsAttributeRequest source) {
+        if (source.HostIds != null) {
+            this.HostIds = new String[source.HostIds.length];
+            for (int i = 0; i < source.HostIds.length; i++) {
+                this.HostIds[i] = new String(source.HostIds[i]);
+            }
+        }
+        if (source.HostName != null) {
+            this.HostName = new String(source.HostName);
+        }
+        if (source.RenewFlag != null) {
+            this.RenewFlag = new String(source.RenewFlag);
+        }
+        if (source.ProjectId != null) {
+            this.ProjectId = new Long(source.ProjectId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

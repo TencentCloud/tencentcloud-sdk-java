@@ -185,6 +185,35 @@ complain：申诉进行中
         this.UpdateTime = UpdateTime;
     }
 
+    public ViolationUrl() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ViolationUrl(ViolationUrl source) {
+        if (source.Id != null) {
+            this.Id = new Long(source.Id);
+        }
+        if (source.RealUrl != null) {
+            this.RealUrl = new String(source.RealUrl);
+        }
+        if (source.DownloadUrl != null) {
+            this.DownloadUrl = new String(source.DownloadUrl);
+        }
+        if (source.UrlStatus != null) {
+            this.UrlStatus = new String(source.UrlStatus);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new String(source.UpdateTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

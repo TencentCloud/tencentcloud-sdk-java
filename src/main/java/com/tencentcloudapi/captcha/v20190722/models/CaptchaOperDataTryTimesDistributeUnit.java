@@ -68,6 +68,23 @@ public class CaptchaOperDataTryTimesDistributeUnit extends AbstractModel{
         this.UserCount = UserCount;
     }
 
+    public CaptchaOperDataTryTimesDistributeUnit() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CaptchaOperDataTryTimesDistributeUnit(CaptchaOperDataTryTimesDistributeUnit source) {
+        if (source.TryCount != null) {
+            this.TryCount = new Long(source.TryCount);
+        }
+        if (source.UserCount != null) {
+            this.UserCount = new Long(source.UserCount);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

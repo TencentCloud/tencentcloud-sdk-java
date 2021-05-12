@@ -73,6 +73,23 @@ public class DescribeClusterAsGroupOptionResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeClusterAsGroupOptionResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeClusterAsGroupOptionResponse(DescribeClusterAsGroupOptionResponse source) {
+        if (source.ClusterAsGroupOption != null) {
+            this.ClusterAsGroupOption = new ClusterAsGroupOption(source.ClusterAsGroupOption);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

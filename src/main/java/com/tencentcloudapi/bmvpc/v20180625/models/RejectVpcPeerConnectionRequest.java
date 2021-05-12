@@ -45,6 +45,20 @@ public class RejectVpcPeerConnectionRequest extends AbstractModel{
         this.VpcPeerConnectionId = VpcPeerConnectionId;
     }
 
+    public RejectVpcPeerConnectionRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RejectVpcPeerConnectionRequest(RejectVpcPeerConnectionRequest source) {
+        if (source.VpcPeerConnectionId != null) {
+            this.VpcPeerConnectionId = new String(source.VpcPeerConnectionId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

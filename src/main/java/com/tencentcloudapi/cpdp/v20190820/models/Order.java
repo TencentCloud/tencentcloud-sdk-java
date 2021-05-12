@@ -302,6 +302,50 @@ public class Order extends AbstractModel{
         this.Items = Items;
     }
 
+    public Order() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Order(Order source) {
+        if (source.AmountHasTax != null) {
+            this.AmountHasTax = new Float(source.AmountHasTax);
+        }
+        if (source.Discount != null) {
+            this.Discount = new Float(source.Discount);
+        }
+        if (source.SellerName != null) {
+            this.SellerName = new String(source.SellerName);
+        }
+        if (source.InvoiceType != null) {
+            this.InvoiceType = new Long(source.InvoiceType);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Amount != null) {
+            this.Amount = new Float(source.Amount);
+        }
+        if (source.OrderDate != null) {
+            this.OrderDate = new String(source.OrderDate);
+        }
+        if (source.OrderId != null) {
+            this.OrderId = new String(source.OrderId);
+        }
+        if (source.StoreNo != null) {
+            this.StoreNo = new String(source.StoreNo);
+        }
+        if (source.Items != null) {
+            this.Items = new OrderItem[source.Items.length];
+            for (int i = 0; i < source.Items.length; i++) {
+                this.Items[i] = new OrderItem(source.Items[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

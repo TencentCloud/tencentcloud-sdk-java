@@ -68,6 +68,26 @@ public class DescribeDCDBSaleInfoResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeDCDBSaleInfoResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeDCDBSaleInfoResponse(DescribeDCDBSaleInfoResponse source) {
+        if (source.RegionList != null) {
+            this.RegionList = new RegionInfo[source.RegionList.length];
+            for (int i = 0; i < source.RegionList.length; i++) {
+                this.RegionList[i] = new RegionInfo(source.RegionList[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

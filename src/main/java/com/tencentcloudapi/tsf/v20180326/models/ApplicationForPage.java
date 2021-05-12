@@ -386,6 +386,59 @@ public class ApplicationForPage extends AbstractModel{
         this.ServiceConfigList = ServiceConfigList;
     }
 
+    public ApplicationForPage() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ApplicationForPage(ApplicationForPage source) {
+        if (source.ApplicationId != null) {
+            this.ApplicationId = new String(source.ApplicationId);
+        }
+        if (source.ApplicationName != null) {
+            this.ApplicationName = new String(source.ApplicationName);
+        }
+        if (source.ApplicationDesc != null) {
+            this.ApplicationDesc = new String(source.ApplicationDesc);
+        }
+        if (source.ApplicationType != null) {
+            this.ApplicationType = new String(source.ApplicationType);
+        }
+        if (source.MicroserviceType != null) {
+            this.MicroserviceType = new String(source.MicroserviceType);
+        }
+        if (source.ProgLang != null) {
+            this.ProgLang = new String(source.ProgLang);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new String(source.UpdateTime);
+        }
+        if (source.ApplicationResourceType != null) {
+            this.ApplicationResourceType = new String(source.ApplicationResourceType);
+        }
+        if (source.ApplicationRuntimeType != null) {
+            this.ApplicationRuntimeType = new String(source.ApplicationRuntimeType);
+        }
+        if (source.ApigatewayServiceId != null) {
+            this.ApigatewayServiceId = new String(source.ApigatewayServiceId);
+        }
+        if (source.ApplicationRemarkName != null) {
+            this.ApplicationRemarkName = new String(source.ApplicationRemarkName);
+        }
+        if (source.ServiceConfigList != null) {
+            this.ServiceConfigList = new ServiceConfig[source.ServiceConfigList.length];
+            for (int i = 0; i < source.ServiceConfigList.length; i++) {
+                this.ServiceConfigList[i] = new ServiceConfig(source.ServiceConfigList[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -364,6 +364,44 @@ public class VideoTemplateInfo extends AbstractModel{
         this.Gop = Gop;
     }
 
+    public VideoTemplateInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public VideoTemplateInfo(VideoTemplateInfo source) {
+        if (source.Codec != null) {
+            this.Codec = new String(source.Codec);
+        }
+        if (source.Fps != null) {
+            this.Fps = new Long(source.Fps);
+        }
+        if (source.Bitrate != null) {
+            this.Bitrate = new Long(source.Bitrate);
+        }
+        if (source.ResolutionAdaptive != null) {
+            this.ResolutionAdaptive = new String(source.ResolutionAdaptive);
+        }
+        if (source.Width != null) {
+            this.Width = new Long(source.Width);
+        }
+        if (source.Height != null) {
+            this.Height = new Long(source.Height);
+        }
+        if (source.FillType != null) {
+            this.FillType = new String(source.FillType);
+        }
+        if (source.Vcrf != null) {
+            this.Vcrf = new Long(source.Vcrf);
+        }
+        if (source.Gop != null) {
+            this.Gop = new Long(source.Gop);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -160,6 +160,35 @@ public class CreatePersonalAccountRequest extends AbstractModel{
         this.MobilePhone = MobilePhone;
     }
 
+    public CreatePersonalAccountRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreatePersonalAccountRequest(CreatePersonalAccountRequest source) {
+        if (source.Module != null) {
+            this.Module = new String(source.Module);
+        }
+        if (source.Operation != null) {
+            this.Operation = new String(source.Operation);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.IdentType != null) {
+            this.IdentType = new Long(source.IdentType);
+        }
+        if (source.IdentNo != null) {
+            this.IdentNo = new String(source.IdentNo);
+        }
+        if (source.MobilePhone != null) {
+            this.MobilePhone = new String(source.MobilePhone);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

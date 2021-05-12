@@ -206,6 +206,41 @@ public class DescribeTelCdrRequest extends AbstractModel{
         this.PageNumber = PageNumber;
     }
 
+    public DescribeTelCdrRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeTelCdrRequest(DescribeTelCdrRequest source) {
+        if (source.StartTimeStamp != null) {
+            this.StartTimeStamp = new Long(source.StartTimeStamp);
+        }
+        if (source.EndTimeStamp != null) {
+            this.EndTimeStamp = new Long(source.EndTimeStamp);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.InstanceId != null) {
+            this.InstanceId = new Long(source.InstanceId);
+        }
+        if (source.SdkAppId != null) {
+            this.SdkAppId = new Long(source.SdkAppId);
+        }
+        if (source.PageSize != null) {
+            this.PageSize = new Long(source.PageSize);
+        }
+        if (source.PageNumber != null) {
+            this.PageNumber = new Long(source.PageNumber);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

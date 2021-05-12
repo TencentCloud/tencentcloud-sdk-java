@@ -199,6 +199,29 @@ public class InvoiceDetectInfo extends AbstractModel{
         this.Image = Image;
     }
 
+    public InvoiceDetectInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public InvoiceDetectInfo(InvoiceDetectInfo source) {
+        if (source.Angle != null) {
+            this.Angle = new Float(source.Angle);
+        }
+        if (source.Type != null) {
+            this.Type = new Long(source.Type);
+        }
+        if (source.Rect != null) {
+            this.Rect = new Rect(source.Rect);
+        }
+        if (source.Image != null) {
+            this.Image = new String(source.Image);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

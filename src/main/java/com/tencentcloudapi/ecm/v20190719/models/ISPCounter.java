@@ -114,6 +114,32 @@ public class ISPCounter extends AbstractModel{
         this.ZoneInstanceInfoSet = ZoneInstanceInfoSet;
     }
 
+    public ISPCounter() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ISPCounter(ISPCounter source) {
+        if (source.ProviderName != null) {
+            this.ProviderName = new String(source.ProviderName);
+        }
+        if (source.ProviderNodeNum != null) {
+            this.ProviderNodeNum = new Long(source.ProviderNodeNum);
+        }
+        if (source.ProvederInstanceNum != null) {
+            this.ProvederInstanceNum = new Long(source.ProvederInstanceNum);
+        }
+        if (source.ZoneInstanceInfoSet != null) {
+            this.ZoneInstanceInfoSet = new ZoneInstanceInfo[source.ZoneInstanceInfoSet.length];
+            for (int i = 0; i < source.ZoneInstanceInfoSet.length; i++) {
+                this.ZoneInstanceInfoSet[i] = new ZoneInstanceInfo(source.ZoneInstanceInfoSet[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

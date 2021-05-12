@@ -114,6 +114,29 @@ public class AppUpdateDeviceRequest extends AbstractModel{
         this.AliasName = AliasName;
     }
 
+    public AppUpdateDeviceRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AppUpdateDeviceRequest(AppUpdateDeviceRequest source) {
+        if (source.AccessToken != null) {
+            this.AccessToken = new String(source.AccessToken);
+        }
+        if (source.ProductId != null) {
+            this.ProductId = new String(source.ProductId);
+        }
+        if (source.DeviceName != null) {
+            this.DeviceName = new String(source.DeviceName);
+        }
+        if (source.AliasName != null) {
+            this.AliasName = new String(source.AliasName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

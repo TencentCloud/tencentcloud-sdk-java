@@ -68,6 +68,23 @@ public class ProhibitedConfigureInfoForUpdate extends AbstractModel{
         this.OcrReviewInfo = OcrReviewInfo;
     }
 
+    public ProhibitedConfigureInfoForUpdate() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ProhibitedConfigureInfoForUpdate(ProhibitedConfigureInfoForUpdate source) {
+        if (source.AsrReviewInfo != null) {
+            this.AsrReviewInfo = new ProhibitedAsrReviewTemplateInfoForUpdate(source.AsrReviewInfo);
+        }
+        if (source.OcrReviewInfo != null) {
+            this.OcrReviewInfo = new ProhibitedOcrReviewTemplateInfoForUpdate(source.OcrReviewInfo);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

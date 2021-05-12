@@ -137,6 +137,32 @@ public class SceneInfo extends AbstractModel{
         this.HeadHeight = HeadHeight;
     }
 
+    public SceneInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SceneInfo(SceneInfo source) {
+        if (source.ScenePictureURL != null) {
+            this.ScenePictureURL = new String(source.ScenePictureURL);
+        }
+        if (source.HeadX != null) {
+            this.HeadX = new Long(source.HeadX);
+        }
+        if (source.HeadY != null) {
+            this.HeadY = new Long(source.HeadY);
+        }
+        if (source.HeadWidth != null) {
+            this.HeadWidth = new Long(source.HeadWidth);
+        }
+        if (source.HeadHeight != null) {
+            this.HeadHeight = new Long(source.HeadHeight);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

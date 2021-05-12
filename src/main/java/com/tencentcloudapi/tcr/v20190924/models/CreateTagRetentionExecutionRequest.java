@@ -91,6 +91,26 @@ public class CreateTagRetentionExecutionRequest extends AbstractModel{
         this.DryRun = DryRun;
     }
 
+    public CreateTagRetentionExecutionRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateTagRetentionExecutionRequest(CreateTagRetentionExecutionRequest source) {
+        if (source.RegistryId != null) {
+            this.RegistryId = new String(source.RegistryId);
+        }
+        if (source.RetentionId != null) {
+            this.RetentionId = new Long(source.RetentionId);
+        }
+        if (source.DryRun != null) {
+            this.DryRun = new Boolean(source.DryRun);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

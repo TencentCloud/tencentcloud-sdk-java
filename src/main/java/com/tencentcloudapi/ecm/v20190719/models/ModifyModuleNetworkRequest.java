@@ -91,6 +91,26 @@ public class ModifyModuleNetworkRequest extends AbstractModel{
         this.DefaultBandwidthIn = DefaultBandwidthIn;
     }
 
+    public ModifyModuleNetworkRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyModuleNetworkRequest(ModifyModuleNetworkRequest source) {
+        if (source.ModuleId != null) {
+            this.ModuleId = new String(source.ModuleId);
+        }
+        if (source.DefaultBandwidth != null) {
+            this.DefaultBandwidth = new Long(source.DefaultBandwidth);
+        }
+        if (source.DefaultBandwidthIn != null) {
+            this.DefaultBandwidthIn = new Long(source.DefaultBandwidthIn);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

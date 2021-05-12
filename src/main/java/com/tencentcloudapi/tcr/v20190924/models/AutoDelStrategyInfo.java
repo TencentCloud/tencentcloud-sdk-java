@@ -160,6 +160,35 @@ public class AutoDelStrategyInfo extends AbstractModel{
         this.CreationTime = CreationTime;
     }
 
+    public AutoDelStrategyInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AutoDelStrategyInfo(AutoDelStrategyInfo source) {
+        if (source.Username != null) {
+            this.Username = new String(source.Username);
+        }
+        if (source.RepoName != null) {
+            this.RepoName = new String(source.RepoName);
+        }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.Value != null) {
+            this.Value = new Long(source.Value);
+        }
+        if (source.Valid != null) {
+            this.Valid = new Long(source.Valid);
+        }
+        if (source.CreationTime != null) {
+            this.CreationTime = new String(source.CreationTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

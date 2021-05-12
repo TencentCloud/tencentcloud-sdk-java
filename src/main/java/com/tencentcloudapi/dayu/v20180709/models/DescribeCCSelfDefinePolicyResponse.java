@@ -91,6 +91,29 @@ public class DescribeCCSelfDefinePolicyResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeCCSelfDefinePolicyResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeCCSelfDefinePolicyResponse(DescribeCCSelfDefinePolicyResponse source) {
+        if (source.Total != null) {
+            this.Total = new Long(source.Total);
+        }
+        if (source.Policys != null) {
+            this.Policys = new CCPolicy[source.Policys.length];
+            for (int i = 0; i < source.Policys.length; i++) {
+                this.Policys[i] = new CCPolicy(source.Policys[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

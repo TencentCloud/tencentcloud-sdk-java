@@ -226,6 +226,41 @@ public class NodeInfo extends AbstractModel{
         this.DiskEncrypt = DiskEncrypt;
     }
 
+    public NodeInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public NodeInfo(NodeInfo source) {
+        if (source.NodeNum != null) {
+            this.NodeNum = new Long(source.NodeNum);
+        }
+        if (source.NodeType != null) {
+            this.NodeType = new String(source.NodeType);
+        }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.DiskType != null) {
+            this.DiskType = new String(source.DiskType);
+        }
+        if (source.DiskSize != null) {
+            this.DiskSize = new Long(source.DiskSize);
+        }
+        if (source.LocalDiskInfo != null) {
+            this.LocalDiskInfo = new LocalDiskInfo(source.LocalDiskInfo);
+        }
+        if (source.DiskCount != null) {
+            this.DiskCount = new Long(source.DiskCount);
+        }
+        if (source.DiskEncrypt != null) {
+            this.DiskEncrypt = new Long(source.DiskEncrypt);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

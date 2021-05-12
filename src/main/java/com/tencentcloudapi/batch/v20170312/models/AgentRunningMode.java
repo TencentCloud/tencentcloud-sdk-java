@@ -91,6 +91,26 @@ public class AgentRunningMode extends AbstractModel{
         this.Session = Session;
     }
 
+    public AgentRunningMode() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AgentRunningMode(AgentRunningMode source) {
+        if (source.Scene != null) {
+            this.Scene = new String(source.Scene);
+        }
+        if (source.User != null) {
+            this.User = new String(source.User);
+        }
+        if (source.Session != null) {
+            this.Session = new String(source.Session);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

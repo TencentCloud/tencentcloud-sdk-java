@@ -190,6 +190,35 @@ public class CcnBandwidthInfo extends AbstractModel{
         this.CcnRegionBandwidthLimit = CcnRegionBandwidthLimit;
     }
 
+    public CcnBandwidthInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CcnBandwidthInfo(CcnBandwidthInfo source) {
+        if (source.CcnId != null) {
+            this.CcnId = new String(source.CcnId);
+        }
+        if (source.CreatedTime != null) {
+            this.CreatedTime = new String(source.CreatedTime);
+        }
+        if (source.ExpiredTime != null) {
+            this.ExpiredTime = new String(source.ExpiredTime);
+        }
+        if (source.RegionFlowControlId != null) {
+            this.RegionFlowControlId = new String(source.RegionFlowControlId);
+        }
+        if (source.RenewFlag != null) {
+            this.RenewFlag = new String(source.RenewFlag);
+        }
+        if (source.CcnRegionBandwidthLimit != null) {
+            this.CcnRegionBandwidthLimit = new CcnRegionBandwidthLimit(source.CcnRegionBandwidthLimit);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

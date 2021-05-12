@@ -68,6 +68,23 @@ public class OperationLog extends AbstractModel{
         this.CreatedOn = CreatedOn;
     }
 
+    public OperationLog() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public OperationLog(OperationLog source) {
+        if (source.Action != null) {
+            this.Action = new String(source.Action);
+        }
+        if (source.CreatedOn != null) {
+            this.CreatedOn = new String(source.CreatedOn);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

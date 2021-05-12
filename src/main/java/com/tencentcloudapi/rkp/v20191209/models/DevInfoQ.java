@@ -119,6 +119,32 @@ public class DevInfoQ extends AbstractModel{
         this.Probability = Probability;
     }
 
+    public DevInfoQ() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DevInfoQ(DevInfoQ source) {
+        if (source.OpenId != null) {
+            this.OpenId = new String(source.OpenId);
+        }
+        if (source.RiskScore != null) {
+            this.RiskScore = new Long(source.RiskScore);
+        }
+        if (source.RiskInfo != null) {
+            this.RiskInfo = new RiskDetail[source.RiskInfo.length];
+            for (int i = 0; i < source.RiskInfo.length; i++) {
+                this.RiskInfo[i] = new RiskDetail(source.RiskInfo[i]);
+            }
+        }
+        if (source.Probability != null) {
+            this.Probability = new Float(source.Probability);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

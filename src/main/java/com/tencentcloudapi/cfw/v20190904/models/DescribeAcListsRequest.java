@@ -252,6 +252,47 @@ public class DescribeAcListsRequest extends AbstractModel{
         this.InstanceId = InstanceId;
     }
 
+    public DescribeAcListsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeAcListsRequest(DescribeAcListsRequest source) {
+        if (source.Protocol != null) {
+            this.Protocol = new String(source.Protocol);
+        }
+        if (source.Strategy != null) {
+            this.Strategy = new String(source.Strategy);
+        }
+        if (source.SearchValue != null) {
+            this.SearchValue = new String(source.SearchValue);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Direction != null) {
+            this.Direction = new Long(source.Direction);
+        }
+        if (source.EdgeId != null) {
+            this.EdgeId = new String(source.EdgeId);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.Area != null) {
+            this.Area = new String(source.Area);
+        }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

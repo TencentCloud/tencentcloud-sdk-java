@@ -101,6 +101,26 @@ base64后的脚本长度不能超过16384个字符
         this.StartScript = StartScript;
     }
 
+    public UpdateNotebookLifecycleScriptRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UpdateNotebookLifecycleScriptRequest(UpdateNotebookLifecycleScriptRequest source) {
+        if (source.NotebookLifecycleScriptsName != null) {
+            this.NotebookLifecycleScriptsName = new String(source.NotebookLifecycleScriptsName);
+        }
+        if (source.CreateScript != null) {
+            this.CreateScript = new String(source.CreateScript);
+        }
+        if (source.StartScript != null) {
+            this.StartScript = new String(source.StartScript);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -91,6 +91,26 @@ public class CSVSerde extends AbstractModel{
         this.Separator = Separator;
     }
 
+    public CSVSerde() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CSVSerde(CSVSerde source) {
+        if (source.Escape != null) {
+            this.Escape = new String(source.Escape);
+        }
+        if (source.Quote != null) {
+            this.Quote = new String(source.Quote);
+        }
+        if (source.Separator != null) {
+            this.Separator = new String(source.Separator);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -106,6 +106,26 @@ public class SentenceWords extends AbstractModel{
         this.OffsetEndMs = OffsetEndMs;
     }
 
+    public SentenceWords() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SentenceWords(SentenceWords source) {
+        if (source.Word != null) {
+            this.Word = new String(source.Word);
+        }
+        if (source.OffsetStartMs != null) {
+            this.OffsetStartMs = new Long(source.OffsetStartMs);
+        }
+        if (source.OffsetEndMs != null) {
+            this.OffsetEndMs = new Long(source.OffsetEndMs);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -111,6 +111,26 @@ public class ApplyInternetAddressRequest extends AbstractModel{
         this.AddrProto = AddrProto;
     }
 
+    public ApplyInternetAddressRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ApplyInternetAddressRequest(ApplyInternetAddressRequest source) {
+        if (source.MaskLen != null) {
+            this.MaskLen = new Long(source.MaskLen);
+        }
+        if (source.AddrType != null) {
+            this.AddrType = new Long(source.AddrType);
+        }
+        if (source.AddrProto != null) {
+            this.AddrProto = new Long(source.AddrProto);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -68,6 +68,23 @@ public class GetSecretValueRequest extends AbstractModel{
         this.VersionId = VersionId;
     }
 
+    public GetSecretValueRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GetSecretValueRequest(GetSecretValueRequest source) {
+        if (source.SecretName != null) {
+            this.SecretName = new String(source.SecretName);
+        }
+        if (source.VersionId != null) {
+            this.VersionId = new String(source.VersionId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

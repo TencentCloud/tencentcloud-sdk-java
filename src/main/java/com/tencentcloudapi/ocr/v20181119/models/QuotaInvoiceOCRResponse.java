@@ -244,6 +244,44 @@ public class QuotaInvoiceOCRResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public QuotaInvoiceOCRResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public QuotaInvoiceOCRResponse(QuotaInvoiceOCRResponse source) {
+        if (source.InvoiceNum != null) {
+            this.InvoiceNum = new String(source.InvoiceNum);
+        }
+        if (source.InvoiceCode != null) {
+            this.InvoiceCode = new String(source.InvoiceCode);
+        }
+        if (source.Rate != null) {
+            this.Rate = new String(source.Rate);
+        }
+        if (source.RateNum != null) {
+            this.RateNum = new String(source.RateNum);
+        }
+        if (source.InvoiceType != null) {
+            this.InvoiceType = new String(source.InvoiceType);
+        }
+        if (source.Province != null) {
+            this.Province = new String(source.Province);
+        }
+        if (source.City != null) {
+            this.City = new String(source.City);
+        }
+        if (source.HasStamp != null) {
+            this.HasStamp = new String(source.HasStamp);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

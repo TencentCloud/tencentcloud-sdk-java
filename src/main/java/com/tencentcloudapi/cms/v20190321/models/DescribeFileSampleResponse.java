@@ -91,6 +91,29 @@ public class DescribeFileSampleResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeFileSampleResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeFileSampleResponse(DescribeFileSampleResponse source) {
+        if (source.FileSampleSet != null) {
+            this.FileSampleSet = new FileSampleInfo[source.FileSampleSet.length];
+            for (int i = 0; i < source.FileSampleSet.length; i++) {
+                this.FileSampleSet[i] = new FileSampleInfo(source.FileSampleSet[i]);
+            }
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

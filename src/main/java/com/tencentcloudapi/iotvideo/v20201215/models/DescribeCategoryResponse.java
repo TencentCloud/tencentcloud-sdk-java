@@ -68,6 +68,23 @@ public class DescribeCategoryResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeCategoryResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeCategoryResponse(DescribeCategoryResponse source) {
+        if (source.Data != null) {
+            this.Data = new ProductTemplate(source.Data);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

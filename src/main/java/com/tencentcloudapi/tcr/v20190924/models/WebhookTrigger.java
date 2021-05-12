@@ -206,6 +206,47 @@ public class WebhookTrigger extends AbstractModel{
         this.NamespaceId = NamespaceId;
     }
 
+    public WebhookTrigger() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public WebhookTrigger(WebhookTrigger source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Targets != null) {
+            this.Targets = new WebhookTarget[source.Targets.length];
+            for (int i = 0; i < source.Targets.length; i++) {
+                this.Targets[i] = new WebhookTarget(source.Targets[i]);
+            }
+        }
+        if (source.EventTypes != null) {
+            this.EventTypes = new String[source.EventTypes.length];
+            for (int i = 0; i < source.EventTypes.length; i++) {
+                this.EventTypes[i] = new String(source.EventTypes[i]);
+            }
+        }
+        if (source.Condition != null) {
+            this.Condition = new String(source.Condition);
+        }
+        if (source.Enabled != null) {
+            this.Enabled = new Boolean(source.Enabled);
+        }
+        if (source.Id != null) {
+            this.Id = new Long(source.Id);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.NamespaceId != null) {
+            this.NamespaceId = new Long(source.NamespaceId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

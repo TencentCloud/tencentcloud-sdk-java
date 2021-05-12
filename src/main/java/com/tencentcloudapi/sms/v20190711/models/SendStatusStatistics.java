@@ -91,6 +91,26 @@ public class SendStatusStatistics extends AbstractModel{
         this.RequestSuccessCount = RequestSuccessCount;
     }
 
+    public SendStatusStatistics() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SendStatusStatistics(SendStatusStatistics source) {
+        if (source.FeeCount != null) {
+            this.FeeCount = new Long(source.FeeCount);
+        }
+        if (source.RequestCount != null) {
+            this.RequestCount = new Long(source.RequestCount);
+        }
+        if (source.RequestSuccessCount != null) {
+            this.RequestSuccessCount = new Long(source.RequestSuccessCount);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -68,6 +68,23 @@ public class UnassignIpv6CidrBlockRequest extends AbstractModel{
         this.Ipv6CidrBlock = Ipv6CidrBlock;
     }
 
+    public UnassignIpv6CidrBlockRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UnassignIpv6CidrBlockRequest(UnassignIpv6CidrBlockRequest source) {
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.Ipv6CidrBlock != null) {
+            this.Ipv6CidrBlock = new String(source.Ipv6CidrBlock);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

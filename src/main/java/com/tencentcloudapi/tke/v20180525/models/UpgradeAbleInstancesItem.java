@@ -96,6 +96,26 @@ public class UpgradeAbleInstancesItem extends AbstractModel{
         this.LatestVersion = LatestVersion;
     }
 
+    public UpgradeAbleInstancesItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UpgradeAbleInstancesItem(UpgradeAbleInstancesItem source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.Version != null) {
+            this.Version = new String(source.Version);
+        }
+        if (source.LatestVersion != null) {
+            this.LatestVersion = new String(source.LatestVersion);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

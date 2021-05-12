@@ -45,6 +45,20 @@ public class CreateNamespacePersonalRequest extends AbstractModel{
         this.Namespace = Namespace;
     }
 
+    public CreateNamespacePersonalRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateNamespacePersonalRequest(CreateNamespacePersonalRequest source) {
+        if (source.Namespace != null) {
+            this.Namespace = new String(source.Namespace);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -165,6 +165,35 @@ public class CreateHashDepositNoSealResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public CreateHashDepositNoSealResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateHashDepositNoSealResponse(CreateHashDepositNoSealResponse source) {
+        if (source.BusinessId != null) {
+            this.BusinessId = new String(source.BusinessId);
+        }
+        if (source.EvidenceId != null) {
+            this.EvidenceId = new String(source.EvidenceId);
+        }
+        if (source.EvidenceTime != null) {
+            this.EvidenceTime = new String(source.EvidenceTime);
+        }
+        if (source.EvidenceTxHash != null) {
+            this.EvidenceTxHash = new String(source.EvidenceTxHash);
+        }
+        if (source.BlockchainHeight != null) {
+            this.BlockchainHeight = new Long(source.BlockchainHeight);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

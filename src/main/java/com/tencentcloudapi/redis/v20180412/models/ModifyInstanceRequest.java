@@ -206,6 +206,50 @@ public class ModifyInstanceRequest extends AbstractModel{
         this.AutoRenew = AutoRenew;
     }
 
+    public ModifyInstanceRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyInstanceRequest(ModifyInstanceRequest source) {
+        if (source.Operation != null) {
+            this.Operation = new String(source.Operation);
+        }
+        if (source.InstanceIds != null) {
+            this.InstanceIds = new String[source.InstanceIds.length];
+            for (int i = 0; i < source.InstanceIds.length; i++) {
+                this.InstanceIds[i] = new String(source.InstanceIds[i]);
+            }
+        }
+        if (source.InstanceNames != null) {
+            this.InstanceNames = new String[source.InstanceNames.length];
+            for (int i = 0; i < source.InstanceNames.length; i++) {
+                this.InstanceNames[i] = new String(source.InstanceNames[i]);
+            }
+        }
+        if (source.ProjectId != null) {
+            this.ProjectId = new Long(source.ProjectId);
+        }
+        if (source.AutoRenews != null) {
+            this.AutoRenews = new Long[source.AutoRenews.length];
+            for (int i = 0; i < source.AutoRenews.length; i++) {
+                this.AutoRenews[i] = new Long(source.AutoRenews[i]);
+            }
+        }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.InstanceName != null) {
+            this.InstanceName = new String(source.InstanceName);
+        }
+        if (source.AutoRenew != null) {
+            this.AutoRenew = new Long(source.AutoRenew);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

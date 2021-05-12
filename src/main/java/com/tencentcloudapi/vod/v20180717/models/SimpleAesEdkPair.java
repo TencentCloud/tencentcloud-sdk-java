@@ -68,6 +68,23 @@ public class SimpleAesEdkPair extends AbstractModel{
         this.Dk = Dk;
     }
 
+    public SimpleAesEdkPair() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SimpleAesEdkPair(SimpleAesEdkPair source) {
+        if (source.Edk != null) {
+            this.Edk = new String(source.Edk);
+        }
+        if (source.Dk != null) {
+            this.Dk = new String(source.Dk);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

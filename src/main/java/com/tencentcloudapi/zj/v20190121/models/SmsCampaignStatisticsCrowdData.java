@@ -114,6 +114,32 @@ public class SmsCampaignStatisticsCrowdData extends AbstractModel{
         this.TemplateList = TemplateList;
     }
 
+    public SmsCampaignStatisticsCrowdData() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SmsCampaignStatisticsCrowdData(SmsCampaignStatisticsCrowdData source) {
+        if (source.CrowdId != null) {
+            this.CrowdId = new Long(source.CrowdId);
+        }
+        if (source.CrowdName != null) {
+            this.CrowdName = new String(source.CrowdName);
+        }
+        if (source.CrowdCount != null) {
+            this.CrowdCount = new Long(source.CrowdCount);
+        }
+        if (source.TemplateList != null) {
+            this.TemplateList = new SmsCampaignStatisticsTemplateData[source.TemplateList.length];
+            for (int i = 0; i < source.TemplateList.length; i++) {
+                this.TemplateList[i] = new SmsCampaignStatisticsTemplateData(source.TemplateList[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

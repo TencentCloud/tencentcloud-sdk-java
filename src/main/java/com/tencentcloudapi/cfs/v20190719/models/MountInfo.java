@@ -252,6 +252,47 @@ public class MountInfo extends AbstractModel{
         this.SubnetName = SubnetName;
     }
 
+    public MountInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MountInfo(MountInfo source) {
+        if (source.FileSystemId != null) {
+            this.FileSystemId = new String(source.FileSystemId);
+        }
+        if (source.MountTargetId != null) {
+            this.MountTargetId = new String(source.MountTargetId);
+        }
+        if (source.IpAddress != null) {
+            this.IpAddress = new String(source.IpAddress);
+        }
+        if (source.FSID != null) {
+            this.FSID = new String(source.FSID);
+        }
+        if (source.LifeCycleState != null) {
+            this.LifeCycleState = new String(source.LifeCycleState);
+        }
+        if (source.NetworkInterface != null) {
+            this.NetworkInterface = new String(source.NetworkInterface);
+        }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.VpcName != null) {
+            this.VpcName = new String(source.VpcName);
+        }
+        if (source.SubnetId != null) {
+            this.SubnetId = new String(source.SubnetId);
+        }
+        if (source.SubnetName != null) {
+            this.SubnetName = new String(source.SubnetName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

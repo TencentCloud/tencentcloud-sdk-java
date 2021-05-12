@@ -175,6 +175,41 @@ public class ListenerBackend extends AbstractModel{
         this.EndPort = EndPort;
     }
 
+    public ListenerBackend() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ListenerBackend(ListenerBackend source) {
+        if (source.ListenerId != null) {
+            this.ListenerId = new String(source.ListenerId);
+        }
+        if (source.Protocol != null) {
+            this.Protocol = new String(source.Protocol);
+        }
+        if (source.Port != null) {
+            this.Port = new Long(source.Port);
+        }
+        if (source.Rules != null) {
+            this.Rules = new RuleTargets[source.Rules.length];
+            for (int i = 0; i < source.Rules.length; i++) {
+                this.Rules[i] = new RuleTargets(source.Rules[i]);
+            }
+        }
+        if (source.Targets != null) {
+            this.Targets = new Backend[source.Targets.length];
+            for (int i = 0; i < source.Targets.length; i++) {
+                this.Targets[i] = new Backend(source.Targets[i]);
+            }
+        }
+        if (source.EndPort != null) {
+            this.EndPort = new Long(source.EndPort);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

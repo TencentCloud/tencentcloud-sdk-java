@@ -68,6 +68,23 @@ public class CloseDBExtranetAccessRequest extends AbstractModel{
         this.IsIpv6 = IsIpv6;
     }
 
+    public CloseDBExtranetAccessRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CloseDBExtranetAccessRequest(CloseDBExtranetAccessRequest source) {
+        if (source.DBInstanceId != null) {
+            this.DBInstanceId = new String(source.DBInstanceId);
+        }
+        if (source.IsIpv6 != null) {
+            this.IsIpv6 = new Long(source.IsIpv6);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -218,6 +218,38 @@ public class ActivityInfo extends AbstractModel{
         this.PersonalConfig = PersonalConfig;
     }
 
+    public ActivityInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ActivityInfo(ActivityInfo source) {
+        if (source.TemplateId != null) {
+            this.TemplateId = new String(source.TemplateId);
+        }
+        if (source.ActivityTitle != null) {
+            this.ActivityTitle = new String(source.ActivityTitle);
+        }
+        if (source.ActivityDesc != null) {
+            this.ActivityDesc = new String(source.ActivityDesc);
+        }
+        if (source.ActivityCover != null) {
+            this.ActivityCover = new String(source.ActivityCover);
+        }
+        if (source.ActivityType != null) {
+            this.ActivityType = new String(source.ActivityType);
+        }
+        if (source.ActivityId != null) {
+            this.ActivityId = new String(source.ActivityId);
+        }
+        if (source.PersonalConfig != null) {
+            this.PersonalConfig = new String(source.PersonalConfig);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

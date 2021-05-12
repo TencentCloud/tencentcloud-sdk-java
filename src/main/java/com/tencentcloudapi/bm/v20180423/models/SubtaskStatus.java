@@ -103,6 +103,23 @@ public class SubtaskStatus extends AbstractModel{
         this.TaskStatus = TaskStatus;
     }
 
+    public SubtaskStatus() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SubtaskStatus(SubtaskStatus source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.TaskStatus != null) {
+            this.TaskStatus = new Long(source.TaskStatus);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

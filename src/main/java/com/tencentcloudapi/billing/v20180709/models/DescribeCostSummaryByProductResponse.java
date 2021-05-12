@@ -147,6 +147,35 @@ public class DescribeCostSummaryByProductResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeCostSummaryByProductResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeCostSummaryByProductResponse(DescribeCostSummaryByProductResponse source) {
+        if (source.Ready != null) {
+            this.Ready = new Long(source.Ready);
+        }
+        if (source.Total != null) {
+            this.Total = new ConsumptionSummaryTotal(source.Total);
+        }
+        if (source.Data != null) {
+            this.Data = new ConsumptionBusinessSummaryDataItem[source.Data.length];
+            for (int i = 0; i < source.Data.length; i++) {
+                this.Data[i] = new ConsumptionBusinessSummaryDataItem(source.Data[i]);
+            }
+        }
+        if (source.RecordNum != null) {
+            this.RecordNum = new Long(source.RecordNum);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

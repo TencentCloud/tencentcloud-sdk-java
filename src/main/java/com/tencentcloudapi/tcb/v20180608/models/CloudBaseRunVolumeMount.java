@@ -114,6 +114,32 @@ public class CloudBaseRunVolumeMount extends AbstractModel{
         this.NfsVolumes = NfsVolumes;
     }
 
+    public CloudBaseRunVolumeMount() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CloudBaseRunVolumeMount(CloudBaseRunVolumeMount source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.MountPath != null) {
+            this.MountPath = new String(source.MountPath);
+        }
+        if (source.ReadOnly != null) {
+            this.ReadOnly = new Boolean(source.ReadOnly);
+        }
+        if (source.NfsVolumes != null) {
+            this.NfsVolumes = new CloudBaseRunNfsVolumeSource[source.NfsVolumes.length];
+            for (int i = 0; i < source.NfsVolumes.length; i++) {
+                this.NfsVolumes[i] = new CloudBaseRunNfsVolumeSource(source.NfsVolumes[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

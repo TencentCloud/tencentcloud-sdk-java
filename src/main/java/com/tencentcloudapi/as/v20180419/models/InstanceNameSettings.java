@@ -118,6 +118,23 @@ UNIQUE，入参所填的 InstanceName 相当于实例名前缀，AS 和 CVM 会�
         this.InstanceNameStyle = InstanceNameStyle;
     }
 
+    public InstanceNameSettings() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public InstanceNameSettings(InstanceNameSettings source) {
+        if (source.InstanceName != null) {
+            this.InstanceName = new String(source.InstanceName);
+        }
+        if (source.InstanceNameStyle != null) {
+            this.InstanceNameStyle = new String(source.InstanceNameStyle);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

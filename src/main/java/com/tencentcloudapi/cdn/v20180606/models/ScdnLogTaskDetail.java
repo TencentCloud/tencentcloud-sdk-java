@@ -453,6 +453,56 @@ DefenceMode映射如下：
         this.Area = Area;
     }
 
+    public ScdnLogTaskDetail() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ScdnLogTaskDetail(ScdnLogTaskDetail source) {
+        if (source.Domain != null) {
+            this.Domain = new String(source.Domain);
+        }
+        if (source.Mode != null) {
+            this.Mode = new String(source.Mode);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.DownloadUrl != null) {
+            this.DownloadUrl = new String(source.DownloadUrl);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.TaskID != null) {
+            this.TaskID = new String(source.TaskID);
+        }
+        if (source.AttackType != null) {
+            this.AttackType = new String(source.AttackType);
+        }
+        if (source.DefenceMode != null) {
+            this.DefenceMode = new String(source.DefenceMode);
+        }
+        if (source.Conditions != null) {
+            this.Conditions = new ScdnEventLogConditions[source.Conditions.length];
+            for (int i = 0; i < source.Conditions.length; i++) {
+                this.Conditions[i] = new ScdnEventLogConditions(source.Conditions[i]);
+            }
+        }
+        if (source.Area != null) {
+            this.Area = new String(source.Area);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

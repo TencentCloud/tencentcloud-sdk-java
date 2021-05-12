@@ -68,6 +68,26 @@ public class GetAllFirmwareVersionResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public GetAllFirmwareVersionResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GetAllFirmwareVersionResponse(GetAllFirmwareVersionResponse source) {
+        if (source.Version != null) {
+            this.Version = new String[source.Version.length];
+            for (int i = 0; i < source.Version.length; i++) {
+                this.Version[i] = new String(source.Version[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

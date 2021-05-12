@@ -213,6 +213,38 @@ public class TaskInstanceLog extends AbstractModel{
         this.StderrRedirectFileName = StderrRedirectFileName;
     }
 
+    public TaskInstanceLog() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TaskInstanceLog(TaskInstanceLog source) {
+        if (source.TaskInstanceIndex != null) {
+            this.TaskInstanceIndex = new Long(source.TaskInstanceIndex);
+        }
+        if (source.StdoutLog != null) {
+            this.StdoutLog = new String(source.StdoutLog);
+        }
+        if (source.StderrLog != null) {
+            this.StderrLog = new String(source.StderrLog);
+        }
+        if (source.StdoutRedirectPath != null) {
+            this.StdoutRedirectPath = new String(source.StdoutRedirectPath);
+        }
+        if (source.StderrRedirectPath != null) {
+            this.StderrRedirectPath = new String(source.StderrRedirectPath);
+        }
+        if (source.StdoutRedirectFileName != null) {
+            this.StdoutRedirectFileName = new String(source.StdoutRedirectFileName);
+        }
+        if (source.StderrRedirectFileName != null) {
+            this.StderrRedirectFileName = new String(source.StderrRedirectFileName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

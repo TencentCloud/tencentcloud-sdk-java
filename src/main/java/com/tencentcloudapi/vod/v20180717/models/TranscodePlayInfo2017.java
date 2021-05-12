@@ -137,6 +137,32 @@ public class TranscodePlayInfo2017 extends AbstractModel{
         this.Width = Width;
     }
 
+    public TranscodePlayInfo2017() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TranscodePlayInfo2017(TranscodePlayInfo2017 source) {
+        if (source.Url != null) {
+            this.Url = new String(source.Url);
+        }
+        if (source.Definition != null) {
+            this.Definition = new Long(source.Definition);
+        }
+        if (source.Bitrate != null) {
+            this.Bitrate = new Long(source.Bitrate);
+        }
+        if (source.Height != null) {
+            this.Height = new Long(source.Height);
+        }
+        if (source.Width != null) {
+            this.Width = new Long(source.Width);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -149,6 +149,29 @@ LIP为数字模式，ACTION为动作模式，SILENT为静默模式，三种模�
         this.Optional = Optional;
     }
 
+    public LivenessRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public LivenessRequest(LivenessRequest source) {
+        if (source.VideoBase64 != null) {
+            this.VideoBase64 = new String(source.VideoBase64);
+        }
+        if (source.LivenessType != null) {
+            this.LivenessType = new String(source.LivenessType);
+        }
+        if (source.ValidateData != null) {
+            this.ValidateData = new String(source.ValidateData);
+        }
+        if (source.Optional != null) {
+            this.Optional = new String(source.Optional);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

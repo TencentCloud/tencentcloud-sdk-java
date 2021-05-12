@@ -68,6 +68,26 @@ public class DescribleRegionCountRequest extends AbstractModel{
         this.LineList = LineList;
     }
 
+    public DescribleRegionCountRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribleRegionCountRequest(DescribleRegionCountRequest source) {
+        if (source.Business != null) {
+            this.Business = new String(source.Business);
+        }
+        if (source.LineList != null) {
+            this.LineList = new Long[source.LineList.length];
+            for (int i = 0; i < source.LineList.length; i++) {
+                this.LineList[i] = new Long(source.LineList[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -114,6 +114,29 @@ public class TcrImageInfo extends AbstractModel{
         this.UpdateTime = UpdateTime;
     }
 
+    public TcrImageInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TcrImageInfo(TcrImageInfo source) {
+        if (source.Digest != null) {
+            this.Digest = new String(source.Digest);
+        }
+        if (source.Size != null) {
+            this.Size = new Long(source.Size);
+        }
+        if (source.ImageVersion != null) {
+            this.ImageVersion = new String(source.ImageVersion);
+        }
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new String(source.UpdateTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

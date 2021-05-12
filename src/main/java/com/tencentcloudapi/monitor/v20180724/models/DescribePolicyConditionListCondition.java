@@ -221,6 +221,50 @@ public class DescribePolicyConditionListCondition extends AbstractModel{
         this.SupportRegions = SupportRegions;
     }
 
+    public DescribePolicyConditionListCondition() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribePolicyConditionListCondition(DescribePolicyConditionListCondition source) {
+        if (source.PolicyViewName != null) {
+            this.PolicyViewName = new String(source.PolicyViewName);
+        }
+        if (source.EventMetrics != null) {
+            this.EventMetrics = new DescribePolicyConditionListEventMetric[source.EventMetrics.length];
+            for (int i = 0; i < source.EventMetrics.length; i++) {
+                this.EventMetrics[i] = new DescribePolicyConditionListEventMetric(source.EventMetrics[i]);
+            }
+        }
+        if (source.IsSupportMultiRegion != null) {
+            this.IsSupportMultiRegion = new Boolean(source.IsSupportMultiRegion);
+        }
+        if (source.Metrics != null) {
+            this.Metrics = new DescribePolicyConditionListMetric[source.Metrics.length];
+            for (int i = 0; i < source.Metrics.length; i++) {
+                this.Metrics[i] = new DescribePolicyConditionListMetric(source.Metrics[i]);
+            }
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.SortId != null) {
+            this.SortId = new Long(source.SortId);
+        }
+        if (source.SupportDefault != null) {
+            this.SupportDefault = new Boolean(source.SupportDefault);
+        }
+        if (source.SupportRegions != null) {
+            this.SupportRegions = new String[source.SupportRegions.length];
+            for (int i = 0; i < source.SupportRegions.length; i++) {
+                this.SupportRegions[i] = new String(source.SupportRegions[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

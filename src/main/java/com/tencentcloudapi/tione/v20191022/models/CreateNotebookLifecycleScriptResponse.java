@@ -68,6 +68,23 @@ public class CreateNotebookLifecycleScriptResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public CreateNotebookLifecycleScriptResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateNotebookLifecycleScriptResponse(CreateNotebookLifecycleScriptResponse source) {
+        if (source.NotebookLifecycleScriptsName != null) {
+            this.NotebookLifecycleScriptsName = new String(source.NotebookLifecycleScriptsName);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

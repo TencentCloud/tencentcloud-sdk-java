@@ -137,6 +137,32 @@ public class PublicIPAddressInfo extends AbstractModel{
         this.MaxBandwidthIn = MaxBandwidthIn;
     }
 
+    public PublicIPAddressInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PublicIPAddressInfo(PublicIPAddressInfo source) {
+        if (source.ChargeMode != null) {
+            this.ChargeMode = new String(source.ChargeMode);
+        }
+        if (source.PublicIPAddress != null) {
+            this.PublicIPAddress = new String(source.PublicIPAddress);
+        }
+        if (source.ISP != null) {
+            this.ISP = new ISP(source.ISP);
+        }
+        if (source.MaxBandwidthOut != null) {
+            this.MaxBandwidthOut = new Long(source.MaxBandwidthOut);
+        }
+        if (source.MaxBandwidthIn != null) {
+            this.MaxBandwidthIn = new Long(source.MaxBandwidthIn);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

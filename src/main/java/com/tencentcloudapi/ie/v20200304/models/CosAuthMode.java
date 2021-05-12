@@ -157,6 +157,32 @@ public class CosAuthMode extends AbstractModel{
         this.Token = Token;
     }
 
+    public CosAuthMode() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CosAuthMode(CosAuthMode source) {
+        if (source.Type != null) {
+            this.Type = new Long(source.Type);
+        }
+        if (source.HostedId != null) {
+            this.HostedId = new String(source.HostedId);
+        }
+        if (source.SecretId != null) {
+            this.SecretId = new String(source.SecretId);
+        }
+        if (source.SecretKey != null) {
+            this.SecretKey = new String(source.SecretKey);
+        }
+        if (source.Token != null) {
+            this.Token = new String(source.Token);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

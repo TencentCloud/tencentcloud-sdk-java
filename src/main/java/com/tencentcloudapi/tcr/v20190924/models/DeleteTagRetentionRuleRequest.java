@@ -68,6 +68,23 @@ public class DeleteTagRetentionRuleRequest extends AbstractModel{
         this.RetentionId = RetentionId;
     }
 
+    public DeleteTagRetentionRuleRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteTagRetentionRuleRequest(DeleteTagRetentionRuleRequest source) {
+        if (source.RegistryId != null) {
+            this.RegistryId = new String(source.RegistryId);
+        }
+        if (source.RetentionId != null) {
+            this.RetentionId = new Long(source.RetentionId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

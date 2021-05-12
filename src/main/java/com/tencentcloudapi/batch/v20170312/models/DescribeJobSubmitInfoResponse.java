@@ -211,6 +211,50 @@ public class DescribeJobSubmitInfoResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeJobSubmitInfoResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeJobSubmitInfoResponse(DescribeJobSubmitInfoResponse source) {
+        if (source.JobId != null) {
+            this.JobId = new String(source.JobId);
+        }
+        if (source.JobName != null) {
+            this.JobName = new String(source.JobName);
+        }
+        if (source.JobDescription != null) {
+            this.JobDescription = new String(source.JobDescription);
+        }
+        if (source.Priority != null) {
+            this.Priority = new Long(source.Priority);
+        }
+        if (source.Tasks != null) {
+            this.Tasks = new Task[source.Tasks.length];
+            for (int i = 0; i < source.Tasks.length; i++) {
+                this.Tasks[i] = new Task(source.Tasks[i]);
+            }
+        }
+        if (source.Dependences != null) {
+            this.Dependences = new Dependence[source.Dependences.length];
+            for (int i = 0; i < source.Dependences.length; i++) {
+                this.Dependences[i] = new Dependence(source.Dependences[i]);
+            }
+        }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -91,6 +91,26 @@ public class LoginActionMfaFlag extends AbstractModel{
         this.Wechat = Wechat;
     }
 
+    public LoginActionMfaFlag() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public LoginActionMfaFlag(LoginActionMfaFlag source) {
+        if (source.Phone != null) {
+            this.Phone = new Long(source.Phone);
+        }
+        if (source.Stoken != null) {
+            this.Stoken = new Long(source.Stoken);
+        }
+        if (source.Wechat != null) {
+            this.Wechat = new Long(source.Wechat);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

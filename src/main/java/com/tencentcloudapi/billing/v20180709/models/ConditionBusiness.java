@@ -68,6 +68,23 @@ public class ConditionBusiness extends AbstractModel{
         this.BusinessCodeName = BusinessCodeName;
     }
 
+    public ConditionBusiness() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ConditionBusiness(ConditionBusiness source) {
+        if (source.BusinessCode != null) {
+            this.BusinessCode = new String(source.BusinessCode);
+        }
+        if (source.BusinessCodeName != null) {
+            this.BusinessCodeName = new String(source.BusinessCodeName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

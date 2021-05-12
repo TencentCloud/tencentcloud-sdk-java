@@ -252,6 +252,47 @@ public class Task extends AbstractModel{
         this.DstInfo = DstInfo;
     }
 
+    public Task() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Task(Task source) {
+        if (source.TaskId != null) {
+            this.TaskId = new String(source.TaskId);
+        }
+        if (source.TaskName != null) {
+            this.TaskName = new String(source.TaskName);
+        }
+        if (source.MigrationType != null) {
+            this.MigrationType = new String(source.MigrationType);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.ProjectId != null) {
+            this.ProjectId = new Long(source.ProjectId);
+        }
+        if (source.ProjectName != null) {
+            this.ProjectName = new String(source.ProjectName);
+        }
+        if (source.SrcInfo != null) {
+            this.SrcInfo = new SrcInfo(source.SrcInfo);
+        }
+        if (source.MigrationTimeLine != null) {
+            this.MigrationTimeLine = new TimeObj(source.MigrationTimeLine);
+        }
+        if (source.Updated != null) {
+            this.Updated = new String(source.Updated);
+        }
+        if (source.DstInfo != null) {
+            this.DstInfo = new DstInfo(source.DstInfo);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

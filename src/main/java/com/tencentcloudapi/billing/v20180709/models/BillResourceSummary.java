@@ -786,6 +786,119 @@ public class BillResourceSummary extends AbstractModel{
         this.RegionId = RegionId;
     }
 
+    public BillResourceSummary() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public BillResourceSummary(BillResourceSummary source) {
+        if (source.BusinessCodeName != null) {
+            this.BusinessCodeName = new String(source.BusinessCodeName);
+        }
+        if (source.ProductCodeName != null) {
+            this.ProductCodeName = new String(source.ProductCodeName);
+        }
+        if (source.PayModeName != null) {
+            this.PayModeName = new String(source.PayModeName);
+        }
+        if (source.ProjectName != null) {
+            this.ProjectName = new String(source.ProjectName);
+        }
+        if (source.RegionName != null) {
+            this.RegionName = new String(source.RegionName);
+        }
+        if (source.ZoneName != null) {
+            this.ZoneName = new String(source.ZoneName);
+        }
+        if (source.ResourceId != null) {
+            this.ResourceId = new String(source.ResourceId);
+        }
+        if (source.ResourceName != null) {
+            this.ResourceName = new String(source.ResourceName);
+        }
+        if (source.ActionTypeName != null) {
+            this.ActionTypeName = new String(source.ActionTypeName);
+        }
+        if (source.OrderId != null) {
+            this.OrderId = new String(source.OrderId);
+        }
+        if (source.PayTime != null) {
+            this.PayTime = new String(source.PayTime);
+        }
+        if (source.FeeBeginTime != null) {
+            this.FeeBeginTime = new String(source.FeeBeginTime);
+        }
+        if (source.FeeEndTime != null) {
+            this.FeeEndTime = new String(source.FeeEndTime);
+        }
+        if (source.ConfigDesc != null) {
+            this.ConfigDesc = new String(source.ConfigDesc);
+        }
+        if (source.ExtendField1 != null) {
+            this.ExtendField1 = new String(source.ExtendField1);
+        }
+        if (source.ExtendField2 != null) {
+            this.ExtendField2 = new String(source.ExtendField2);
+        }
+        if (source.TotalCost != null) {
+            this.TotalCost = new String(source.TotalCost);
+        }
+        if (source.Discount != null) {
+            this.Discount = new String(source.Discount);
+        }
+        if (source.ReduceType != null) {
+            this.ReduceType = new String(source.ReduceType);
+        }
+        if (source.RealTotalCost != null) {
+            this.RealTotalCost = new String(source.RealTotalCost);
+        }
+        if (source.VoucherPayAmount != null) {
+            this.VoucherPayAmount = new String(source.VoucherPayAmount);
+        }
+        if (source.CashPayAmount != null) {
+            this.CashPayAmount = new String(source.CashPayAmount);
+        }
+        if (source.IncentivePayAmount != null) {
+            this.IncentivePayAmount = new String(source.IncentivePayAmount);
+        }
+        if (source.ExtendField3 != null) {
+            this.ExtendField3 = new String(source.ExtendField3);
+        }
+        if (source.ExtendField4 != null) {
+            this.ExtendField4 = new String(source.ExtendField4);
+        }
+        if (source.ExtendField5 != null) {
+            this.ExtendField5 = new String(source.ExtendField5);
+        }
+        if (source.Tags != null) {
+            this.Tags = new BillTagInfo[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new BillTagInfo(source.Tags[i]);
+            }
+        }
+        if (source.PayerUin != null) {
+            this.PayerUin = new String(source.PayerUin);
+        }
+        if (source.OwnerUin != null) {
+            this.OwnerUin = new String(source.OwnerUin);
+        }
+        if (source.OperateUin != null) {
+            this.OperateUin = new String(source.OperateUin);
+        }
+        if (source.BusinessCode != null) {
+            this.BusinessCode = new String(source.BusinessCode);
+        }
+        if (source.ProductCode != null) {
+            this.ProductCode = new String(source.ProductCode);
+        }
+        if (source.RegionId != null) {
+            this.RegionId = new Long(source.RegionId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

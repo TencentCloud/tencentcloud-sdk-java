@@ -68,6 +68,26 @@ public class UploadDeviceUniqueCodeRequest extends AbstractModel{
         this.OrderId = OrderId;
     }
 
+    public UploadDeviceUniqueCodeRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UploadDeviceUniqueCodeRequest(UploadDeviceUniqueCodeRequest source) {
+        if (source.CodeSet != null) {
+            this.CodeSet = new String[source.CodeSet.length];
+            for (int i = 0; i < source.CodeSet.length; i++) {
+                this.CodeSet[i] = new String(source.CodeSet[i]);
+            }
+        }
+        if (source.OrderId != null) {
+            this.OrderId = new String(source.OrderId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

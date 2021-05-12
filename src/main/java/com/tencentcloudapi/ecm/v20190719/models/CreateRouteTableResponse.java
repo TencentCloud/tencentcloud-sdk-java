@@ -68,6 +68,23 @@ public class CreateRouteTableResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public CreateRouteTableResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateRouteTableResponse(CreateRouteTableResponse source) {
+        if (source.RouteTable != null) {
+            this.RouteTable = new RouteTable(source.RouteTable);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -160,6 +160,35 @@ public class Device extends AbstractModel{
         this.DeviceInfo = DeviceInfo;
     }
 
+    public Device() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Device(Device source) {
+        if (source.ProductId != null) {
+            this.ProductId = new String(source.ProductId);
+        }
+        if (source.DeviceName != null) {
+            this.DeviceName = new String(source.DeviceName);
+        }
+        if (source.DeviceSecret != null) {
+            this.DeviceSecret = new String(source.DeviceSecret);
+        }
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new String(source.UpdateTime);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.DeviceInfo != null) {
+            this.DeviceInfo = new String(source.DeviceInfo);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

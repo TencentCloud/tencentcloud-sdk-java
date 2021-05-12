@@ -91,6 +91,26 @@ public class ReplaceSecurityGroupPolicyRequest extends AbstractModel{
         this.OriginalSecurityGroupPolicySet = OriginalSecurityGroupPolicySet;
     }
 
+    public ReplaceSecurityGroupPolicyRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ReplaceSecurityGroupPolicyRequest(ReplaceSecurityGroupPolicyRequest source) {
+        if (source.SecurityGroupId != null) {
+            this.SecurityGroupId = new String(source.SecurityGroupId);
+        }
+        if (source.SecurityGroupPolicySet != null) {
+            this.SecurityGroupPolicySet = new SecurityGroupPolicySet(source.SecurityGroupPolicySet);
+        }
+        if (source.OriginalSecurityGroupPolicySet != null) {
+            this.OriginalSecurityGroupPolicySet = new SecurityGroupPolicySet(source.OriginalSecurityGroupPolicySet);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

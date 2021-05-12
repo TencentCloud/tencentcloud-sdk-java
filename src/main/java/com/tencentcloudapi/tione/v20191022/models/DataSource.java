@@ -78,6 +78,23 @@ public class DataSource extends AbstractModel{
         this.FileSystemDataSource = FileSystemDataSource;
     }
 
+    public DataSource() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DataSource(DataSource source) {
+        if (source.CosDataSource != null) {
+            this.CosDataSource = new CosDataSource(source.CosDataSource);
+        }
+        if (source.FileSystemDataSource != null) {
+            this.FileSystemDataSource = new FileSystemDataSource(source.FileSystemDataSource);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

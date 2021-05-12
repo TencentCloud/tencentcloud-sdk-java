@@ -68,6 +68,23 @@ public class QueryTradeResult extends AbstractModel{
         this.Code = Code;
     }
 
+    public QueryTradeResult() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public QueryTradeResult(QueryTradeResult source) {
+        if (source.Data != null) {
+            this.Data = new QueryTradeData(source.Data);
+        }
+        if (source.Code != null) {
+            this.Code = new String(source.Code);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -114,6 +114,29 @@ public class NerToken extends AbstractModel{
         this.Type = Type;
     }
 
+    public NerToken() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public NerToken(NerToken source) {
+        if (source.Word != null) {
+            this.Word = new String(source.Word);
+        }
+        if (source.Length != null) {
+            this.Length = new Long(source.Length);
+        }
+        if (source.BeginOffset != null) {
+            this.BeginOffset = new Long(source.BeginOffset);
+        }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

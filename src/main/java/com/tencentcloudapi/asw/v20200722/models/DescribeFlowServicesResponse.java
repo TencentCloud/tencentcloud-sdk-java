@@ -91,6 +91,29 @@ public class DescribeFlowServicesResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeFlowServicesResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeFlowServicesResponse(DescribeFlowServicesResponse source) {
+        if (source.FlowServiceSet != null) {
+            this.FlowServiceSet = new StateMachine[source.FlowServiceSet.length];
+            for (int i = 0; i < source.FlowServiceSet.length; i++) {
+                this.FlowServiceSet[i] = new StateMachine(source.FlowServiceSet[i]);
+            }
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -68,6 +68,23 @@ public class ModifyAppStatusRequest extends AbstractModel{
         this.Status = Status;
     }
 
+    public ModifyAppStatusRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyAppStatusRequest(ModifyAppStatusRequest source) {
+        if (source.BizId != null) {
+            this.BizId = new Long(source.BizId);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

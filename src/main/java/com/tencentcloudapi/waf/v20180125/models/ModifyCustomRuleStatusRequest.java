@@ -114,6 +114,29 @@ public class ModifyCustomRuleStatusRequest extends AbstractModel{
         this.Edition = Edition;
     }
 
+    public ModifyCustomRuleStatusRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyCustomRuleStatusRequest(ModifyCustomRuleStatusRequest source) {
+        if (source.Domain != null) {
+            this.Domain = new String(source.Domain);
+        }
+        if (source.RuleId != null) {
+            this.RuleId = new Long(source.RuleId);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.Edition != null) {
+            this.Edition = new String(source.Edition);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

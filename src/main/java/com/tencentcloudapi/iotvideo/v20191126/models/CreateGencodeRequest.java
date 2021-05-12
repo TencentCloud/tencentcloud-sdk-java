@@ -68,6 +68,23 @@ public class CreateGencodeRequest extends AbstractModel{
         this.Revision = Revision;
     }
 
+    public CreateGencodeRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateGencodeRequest(CreateGencodeRequest source) {
+        if (source.ProductId != null) {
+            this.ProductId = new String(source.ProductId);
+        }
+        if (source.Revision != null) {
+            this.Revision = new Long(source.Revision);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

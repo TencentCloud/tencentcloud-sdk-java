@@ -114,6 +114,29 @@ public class CreateClusterRouteTableRequest extends AbstractModel{
         this.IgnoreClusterCidrConflict = IgnoreClusterCidrConflict;
     }
 
+    public CreateClusterRouteTableRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateClusterRouteTableRequest(CreateClusterRouteTableRequest source) {
+        if (source.RouteTableName != null) {
+            this.RouteTableName = new String(source.RouteTableName);
+        }
+        if (source.RouteTableCidrBlock != null) {
+            this.RouteTableCidrBlock = new String(source.RouteTableCidrBlock);
+        }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.IgnoreClusterCidrConflict != null) {
+            this.IgnoreClusterCidrConflict = new Long(source.IgnoreClusterCidrConflict);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

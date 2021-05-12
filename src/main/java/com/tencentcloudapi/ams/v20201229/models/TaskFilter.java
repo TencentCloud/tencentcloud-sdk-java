@@ -114,6 +114,29 @@ public class TaskFilter extends AbstractModel{
         this.TaskStatus = TaskStatus;
     }
 
+    public TaskFilter() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TaskFilter(TaskFilter source) {
+        if (source.BizType != null) {
+            this.BizType = new String(source.BizType);
+        }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.Suggestion != null) {
+            this.Suggestion = new String(source.Suggestion);
+        }
+        if (source.TaskStatus != null) {
+            this.TaskStatus = new String(source.TaskStatus);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

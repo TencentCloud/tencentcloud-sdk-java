@@ -68,6 +68,23 @@ public class DescribeComplianceDetailResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeComplianceDetailResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeComplianceDetailResponse(DescribeComplianceDetailResponse source) {
+        if (source.CheckConfigDetail != null) {
+            this.CheckConfigDetail = new ComplianceCheckDetail(source.CheckConfigDetail);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

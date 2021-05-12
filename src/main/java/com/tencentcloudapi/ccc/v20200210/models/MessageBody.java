@@ -91,6 +91,29 @@ public class MessageBody extends AbstractModel{
         this.Messages = Messages;
     }
 
+    public MessageBody() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MessageBody(MessageBody source) {
+        if (source.Timestamp != null) {
+            this.Timestamp = new Long(source.Timestamp);
+        }
+        if (source.From != null) {
+            this.From = new String(source.From);
+        }
+        if (source.Messages != null) {
+            this.Messages = new Message[source.Messages.length];
+            for (int i = 0; i < source.Messages.length; i++) {
+                this.Messages[i] = new Message(source.Messages[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

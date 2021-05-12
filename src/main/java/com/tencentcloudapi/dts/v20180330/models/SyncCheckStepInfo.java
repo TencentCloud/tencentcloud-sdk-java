@@ -114,6 +114,29 @@ public class SyncCheckStepInfo extends AbstractModel{
         this.StepMessage = StepMessage;
     }
 
+    public SyncCheckStepInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SyncCheckStepInfo(SyncCheckStepInfo source) {
+        if (source.StepNo != null) {
+            this.StepNo = new Long(source.StepNo);
+        }
+        if (source.StepName != null) {
+            this.StepName = new String(source.StepName);
+        }
+        if (source.StepCode != null) {
+            this.StepCode = new Long(source.StepCode);
+        }
+        if (source.StepMessage != null) {
+            this.StepMessage = new String(source.StepMessage);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

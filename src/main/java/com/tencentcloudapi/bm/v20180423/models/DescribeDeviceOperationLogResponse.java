@@ -91,6 +91,29 @@ public class DescribeDeviceOperationLogResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeDeviceOperationLogResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeDeviceOperationLogResponse(DescribeDeviceOperationLogResponse source) {
+        if (source.DeviceOperationLogSet != null) {
+            this.DeviceOperationLogSet = new DeviceOperationLog[source.DeviceOperationLogSet.length];
+            for (int i = 0; i < source.DeviceOperationLogSet.length; i++) {
+                this.DeviceOperationLogSet[i] = new DeviceOperationLog(source.DeviceOperationLogSet[i]);
+            }
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

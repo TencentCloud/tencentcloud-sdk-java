@@ -160,6 +160,38 @@ public class CreateNamespaceRequest extends AbstractModel{
         this.SourceChannel = SourceChannel;
     }
 
+    public CreateNamespaceRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateNamespaceRequest(CreateNamespaceRequest source) {
+        if (source.NamespaceName != null) {
+            this.NamespaceName = new String(source.NamespaceName);
+        }
+        if (source.Vpc != null) {
+            this.Vpc = new String(source.Vpc);
+        }
+        if (source.SubnetIds != null) {
+            this.SubnetIds = new String[source.SubnetIds.length];
+            for (int i = 0; i < source.SubnetIds.length; i++) {
+                this.SubnetIds[i] = new String(source.SubnetIds[i]);
+            }
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.K8sVersion != null) {
+            this.K8sVersion = new String(source.K8sVersion);
+        }
+        if (source.SourceChannel != null) {
+            this.SourceChannel = new Long(source.SourceChannel);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

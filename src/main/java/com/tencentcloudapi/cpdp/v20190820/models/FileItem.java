@@ -134,6 +134,29 @@ public class FileItem extends AbstractModel{
         this.DrawCode = DrawCode;
     }
 
+    public FileItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public FileItem(FileItem source) {
+        if (source.FileName != null) {
+            this.FileName = new String(source.FileName);
+        }
+        if (source.RandomPassword != null) {
+            this.RandomPassword = new String(source.RandomPassword);
+        }
+        if (source.FilePath != null) {
+            this.FilePath = new String(source.FilePath);
+        }
+        if (source.DrawCode != null) {
+            this.DrawCode = new String(source.DrawCode);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

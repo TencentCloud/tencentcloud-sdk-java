@@ -668,6 +668,86 @@ Failed: 失败
         this.RequestId = RequestId;
     }
 
+    public DescribeNotebookInstanceResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeNotebookInstanceResponse(DescribeNotebookInstanceResponse source) {
+        if (source.NotebookInstanceName != null) {
+            this.NotebookInstanceName = new String(source.NotebookInstanceName);
+        }
+        if (source.InstanceType != null) {
+            this.InstanceType = new String(source.InstanceType);
+        }
+        if (source.RoleArn != null) {
+            this.RoleArn = new String(source.RoleArn);
+        }
+        if (source.DirectInternetAccess != null) {
+            this.DirectInternetAccess = new String(source.DirectInternetAccess);
+        }
+        if (source.RootAccess != null) {
+            this.RootAccess = new String(source.RootAccess);
+        }
+        if (source.SubnetId != null) {
+            this.SubnetId = new String(source.SubnetId);
+        }
+        if (source.VolumeSizeInGB != null) {
+            this.VolumeSizeInGB = new Long(source.VolumeSizeInGB);
+        }
+        if (source.FailureReason != null) {
+            this.FailureReason = new String(source.FailureReason);
+        }
+        if (source.CreationTime != null) {
+            this.CreationTime = new String(source.CreationTime);
+        }
+        if (source.LastModifiedTime != null) {
+            this.LastModifiedTime = new String(source.LastModifiedTime);
+        }
+        if (source.LogUrl != null) {
+            this.LogUrl = new String(source.LogUrl);
+        }
+        if (source.NotebookInstanceStatus != null) {
+            this.NotebookInstanceStatus = new String(source.NotebookInstanceStatus);
+        }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.LifecycleScriptsName != null) {
+            this.LifecycleScriptsName = new String(source.LifecycleScriptsName);
+        }
+        if (source.DefaultCodeRepository != null) {
+            this.DefaultCodeRepository = new String(source.DefaultCodeRepository);
+        }
+        if (source.AdditionalCodeRepositories != null) {
+            this.AdditionalCodeRepositories = new String[source.AdditionalCodeRepositories.length];
+            for (int i = 0; i < source.AdditionalCodeRepositories.length; i++) {
+                this.AdditionalCodeRepositories[i] = new String(source.AdditionalCodeRepositories[i]);
+            }
+        }
+        if (source.ClsAccess != null) {
+            this.ClsAccess = new String(source.ClsAccess);
+        }
+        if (source.Prepay != null) {
+            this.Prepay = new Boolean(source.Prepay);
+        }
+        if (source.Deadline != null) {
+            this.Deadline = new String(source.Deadline);
+        }
+        if (source.StoppingCondition != null) {
+            this.StoppingCondition = new StoppingCondition(source.StoppingCondition);
+        }
+        if (source.ClsConfig != null) {
+            this.ClsConfig = new ClsConfig(source.ClsConfig);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

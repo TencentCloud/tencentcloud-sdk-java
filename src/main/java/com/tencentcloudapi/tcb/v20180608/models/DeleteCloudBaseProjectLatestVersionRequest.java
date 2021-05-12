@@ -68,6 +68,23 @@ public class DeleteCloudBaseProjectLatestVersionRequest extends AbstractModel{
         this.ProjectName = ProjectName;
     }
 
+    public DeleteCloudBaseProjectLatestVersionRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteCloudBaseProjectLatestVersionRequest(DeleteCloudBaseProjectLatestVersionRequest source) {
+        if (source.EnvId != null) {
+            this.EnvId = new String(source.EnvId);
+        }
+        if (source.ProjectName != null) {
+            this.ProjectName = new String(source.ProjectName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

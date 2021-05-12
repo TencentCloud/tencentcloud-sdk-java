@@ -137,6 +137,35 @@ public class ModifyAuditRuleRequest extends AbstractModel{
         this.AuditAll = AuditAll;
     }
 
+    public ModifyAuditRuleRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyAuditRuleRequest(ModifyAuditRuleRequest source) {
+        if (source.RuleId != null) {
+            this.RuleId = new String(source.RuleId);
+        }
+        if (source.RuleName != null) {
+            this.RuleName = new String(source.RuleName);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.RuleFilters != null) {
+            this.RuleFilters = new AuditFilter[source.RuleFilters.length];
+            for (int i = 0; i < source.RuleFilters.length; i++) {
+                this.RuleFilters[i] = new AuditFilter(source.RuleFilters[i]);
+            }
+        }
+        if (source.AuditAll != null) {
+            this.AuditAll = new Boolean(source.AuditAll);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

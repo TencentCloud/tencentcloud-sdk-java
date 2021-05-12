@@ -274,6 +274,44 @@ public class OrderItem extends AbstractModel{
         this.TaxCode = TaxCode;
     }
 
+    public OrderItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public OrderItem(OrderItem source) {
+        if (source.AmountHasTax != null) {
+            this.AmountHasTax = new Float(source.AmountHasTax);
+        }
+        if (source.Discount != null) {
+            this.Discount = new Float(source.Discount);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Models != null) {
+            this.Models = new String(source.Models);
+        }
+        if (source.Total != null) {
+            this.Total = new Long(source.Total);
+        }
+        if (source.Unit != null) {
+            this.Unit = new String(source.Unit);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.Price != null) {
+            this.Price = new Float(source.Price);
+        }
+        if (source.TaxCode != null) {
+            this.TaxCode = new String(source.TaxCode);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

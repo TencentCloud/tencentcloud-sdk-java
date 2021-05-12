@@ -206,6 +206,41 @@ public class PhoneInfo extends AbstractModel{
         this.MatchTag = MatchTag;
     }
 
+    public PhoneInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PhoneInfo(PhoneInfo source) {
+        if (source.MemBeginTime != null) {
+            this.MemBeginTime = new Long(source.MemBeginTime);
+        }
+        if (source.MemEndTime != null) {
+            this.MemEndTime = new Long(source.MemEndTime);
+        }
+        if (source.PronAccuracy != null) {
+            this.PronAccuracy = new Float(source.PronAccuracy);
+        }
+        if (source.DetectedStress != null) {
+            this.DetectedStress = new Boolean(source.DetectedStress);
+        }
+        if (source.Phone != null) {
+            this.Phone = new String(source.Phone);
+        }
+        if (source.Stress != null) {
+            this.Stress = new Boolean(source.Stress);
+        }
+        if (source.ReferencePhone != null) {
+            this.ReferencePhone = new String(source.ReferencePhone);
+        }
+        if (source.MatchTag != null) {
+            this.MatchTag = new Long(source.MatchTag);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

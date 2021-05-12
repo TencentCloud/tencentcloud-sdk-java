@@ -45,6 +45,23 @@ public class DeleteDeployGroupsRequest extends AbstractModel{
         this.DeployGroupIds = DeployGroupIds;
     }
 
+    public DeleteDeployGroupsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteDeployGroupsRequest(DeleteDeployGroupsRequest source) {
+        if (source.DeployGroupIds != null) {
+            this.DeployGroupIds = new String[source.DeployGroupIds.length];
+            for (int i = 0; i < source.DeployGroupIds.length; i++) {
+                this.DeployGroupIds[i] = new String(source.DeployGroupIds[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

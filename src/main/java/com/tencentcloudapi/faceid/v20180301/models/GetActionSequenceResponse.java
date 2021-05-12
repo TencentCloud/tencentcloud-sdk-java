@@ -68,6 +68,23 @@ public class GetActionSequenceResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public GetActionSequenceResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GetActionSequenceResponse(GetActionSequenceResponse source) {
+        if (source.ActionSequence != null) {
+            this.ActionSequence = new String(source.ActionSequence);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

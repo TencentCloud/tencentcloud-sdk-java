@@ -137,6 +137,32 @@ public class CreateVpcEndPointServiceRequest extends AbstractModel{
         this.IsPassService = IsPassService;
     }
 
+    public CreateVpcEndPointServiceRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateVpcEndPointServiceRequest(CreateVpcEndPointServiceRequest source) {
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.EndPointServiceName != null) {
+            this.EndPointServiceName = new String(source.EndPointServiceName);
+        }
+        if (source.AutoAcceptFlag != null) {
+            this.AutoAcceptFlag = new Boolean(source.AutoAcceptFlag);
+        }
+        if (source.ServiceInstanceId != null) {
+            this.ServiceInstanceId = new String(source.ServiceInstanceId);
+        }
+        if (source.IsPassService != null) {
+            this.IsPassService = new Boolean(source.IsPassService);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

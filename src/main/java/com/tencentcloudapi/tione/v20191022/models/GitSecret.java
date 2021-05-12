@@ -78,6 +78,23 @@ public class GitSecret extends AbstractModel{
         this.Secret = Secret;
     }
 
+    public GitSecret() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GitSecret(GitSecret source) {
+        if (source.NoSecret != null) {
+            this.NoSecret = new Boolean(source.NoSecret);
+        }
+        if (source.Secret != null) {
+            this.Secret = new String(source.Secret);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

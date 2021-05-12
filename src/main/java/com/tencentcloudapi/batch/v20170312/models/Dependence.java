@@ -68,6 +68,23 @@ public class Dependence extends AbstractModel{
         this.EndTask = EndTask;
     }
 
+    public Dependence() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Dependence(Dependence source) {
+        if (source.StartTask != null) {
+            this.StartTask = new String(source.StartTask);
+        }
+        if (source.EndTask != null) {
+            this.EndTask = new String(source.EndTask);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

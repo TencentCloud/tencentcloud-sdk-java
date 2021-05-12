@@ -91,6 +91,26 @@ public class SearchResult extends AbstractModel{
         this.Similarity = Similarity;
     }
 
+    public SearchResult() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SearchResult(SearchResult source) {
+        if (source.Image != null) {
+            this.Image = new String(source.Image);
+        }
+        if (source.PersonId != null) {
+            this.PersonId = new String(source.PersonId);
+        }
+        if (source.Similarity != null) {
+            this.Similarity = new Float(source.Similarity);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

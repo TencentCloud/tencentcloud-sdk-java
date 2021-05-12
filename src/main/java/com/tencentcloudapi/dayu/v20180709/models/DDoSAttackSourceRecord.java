@@ -137,6 +137,32 @@ public class DDoSAttackSourceRecord extends AbstractModel{
         this.PacketLen = PacketLen;
     }
 
+    public DDoSAttackSourceRecord() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DDoSAttackSourceRecord(DDoSAttackSourceRecord source) {
+        if (source.SrcIp != null) {
+            this.SrcIp = new String(source.SrcIp);
+        }
+        if (source.Province != null) {
+            this.Province = new String(source.Province);
+        }
+        if (source.Nation != null) {
+            this.Nation = new String(source.Nation);
+        }
+        if (source.PacketSum != null) {
+            this.PacketSum = new Long(source.PacketSum);
+        }
+        if (source.PacketLen != null) {
+            this.PacketLen = new Long(source.PacketLen);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

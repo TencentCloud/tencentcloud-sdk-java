@@ -68,6 +68,26 @@ public class DescribeRollbackTimeRequest extends AbstractModel{
         this.DBs = DBs;
     }
 
+    public DescribeRollbackTimeRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeRollbackTimeRequest(DescribeRollbackTimeRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.DBs != null) {
+            this.DBs = new String[source.DBs.length];
+            for (int i = 0; i < source.DBs.length; i++) {
+                this.DBs[i] = new String(source.DBs[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

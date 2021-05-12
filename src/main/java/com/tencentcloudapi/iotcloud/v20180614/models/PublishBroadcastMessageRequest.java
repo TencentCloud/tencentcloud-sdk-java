@@ -91,6 +91,26 @@ public class PublishBroadcastMessageRequest extends AbstractModel{
         this.Qos = Qos;
     }
 
+    public PublishBroadcastMessageRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PublishBroadcastMessageRequest(PublishBroadcastMessageRequest source) {
+        if (source.ProductId != null) {
+            this.ProductId = new String(source.ProductId);
+        }
+        if (source.Payload != null) {
+            this.Payload = new String(source.Payload);
+        }
+        if (source.Qos != null) {
+            this.Qos = new Long(source.Qos);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

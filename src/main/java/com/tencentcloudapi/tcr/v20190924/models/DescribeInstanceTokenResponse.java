@@ -91,6 +91,29 @@ public class DescribeInstanceTokenResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeInstanceTokenResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeInstanceTokenResponse(DescribeInstanceTokenResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.Tokens != null) {
+            this.Tokens = new TcrInstanceToken[source.Tokens.length];
+            for (int i = 0; i < source.Tokens.length; i++) {
+                this.Tokens[i] = new TcrInstanceToken(source.Tokens[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

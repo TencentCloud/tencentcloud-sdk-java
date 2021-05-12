@@ -68,6 +68,26 @@ public class TsfPageApiGroupInfo extends AbstractModel{
         this.Content = Content;
     }
 
+    public TsfPageApiGroupInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TsfPageApiGroupInfo(TsfPageApiGroupInfo source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.Content != null) {
+            this.Content = new ApiGroupInfo[source.Content.length];
+            for (int i = 0; i < source.Content.length; i++) {
+                this.Content[i] = new ApiGroupInfo(source.Content[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

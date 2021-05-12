@@ -68,6 +68,26 @@ public class LimitsInfo extends AbstractModel{
         this.Namespace = Namespace;
     }
 
+    public LimitsInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public LimitsInfo(LimitsInfo source) {
+        if (source.NamespacesCount != null) {
+            this.NamespacesCount = new Long(source.NamespacesCount);
+        }
+        if (source.Namespace != null) {
+            this.Namespace = new NamespaceLimit[source.Namespace.length];
+            for (int i = 0; i < source.Namespace.length; i++) {
+                this.Namespace[i] = new NamespaceLimit(source.Namespace[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

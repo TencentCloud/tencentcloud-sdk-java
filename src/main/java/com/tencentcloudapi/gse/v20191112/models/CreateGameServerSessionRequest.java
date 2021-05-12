@@ -229,6 +229,47 @@ public class CreateGameServerSessionRequest extends AbstractModel{
         this.Name = Name;
     }
 
+    public CreateGameServerSessionRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateGameServerSessionRequest(CreateGameServerSessionRequest source) {
+        if (source.MaximumPlayerSessionCount != null) {
+            this.MaximumPlayerSessionCount = new Long(source.MaximumPlayerSessionCount);
+        }
+        if (source.AliasId != null) {
+            this.AliasId = new String(source.AliasId);
+        }
+        if (source.CreatorId != null) {
+            this.CreatorId = new String(source.CreatorId);
+        }
+        if (source.FleetId != null) {
+            this.FleetId = new String(source.FleetId);
+        }
+        if (source.GameProperties != null) {
+            this.GameProperties = new GameProperty[source.GameProperties.length];
+            for (int i = 0; i < source.GameProperties.length; i++) {
+                this.GameProperties[i] = new GameProperty(source.GameProperties[i]);
+            }
+        }
+        if (source.GameServerSessionData != null) {
+            this.GameServerSessionData = new String(source.GameServerSessionData);
+        }
+        if (source.GameServerSessionId != null) {
+            this.GameServerSessionId = new String(source.GameServerSessionId);
+        }
+        if (source.IdempotencyToken != null) {
+            this.IdempotencyToken = new String(source.IdempotencyToken);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

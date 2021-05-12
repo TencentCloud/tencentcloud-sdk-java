@@ -470,6 +470,65 @@ public class ServeParticipant extends AbstractModel{
         this.SkillGroupName = SkillGroupName;
     }
 
+    public ServeParticipant() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ServeParticipant(ServeParticipant source) {
+        if (source.Mail != null) {
+            this.Mail = new String(source.Mail);
+        }
+        if (source.Phone != null) {
+            this.Phone = new String(source.Phone);
+        }
+        if (source.RingTimestamp != null) {
+            this.RingTimestamp = new Long(source.RingTimestamp);
+        }
+        if (source.AcceptTimestamp != null) {
+            this.AcceptTimestamp = new Long(source.AcceptTimestamp);
+        }
+        if (source.EndedTimestamp != null) {
+            this.EndedTimestamp = new Long(source.EndedTimestamp);
+        }
+        if (source.RecordId != null) {
+            this.RecordId = new String(source.RecordId);
+        }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.TransferFrom != null) {
+            this.TransferFrom = new String(source.TransferFrom);
+        }
+        if (source.TransferTo != null) {
+            this.TransferTo = new String(source.TransferTo);
+        }
+        if (source.TransferToType != null) {
+            this.TransferToType = new String(source.TransferToType);
+        }
+        if (source.SkillGroupId != null) {
+            this.SkillGroupId = new Long(source.SkillGroupId);
+        }
+        if (source.EndStatusString != null) {
+            this.EndStatusString = new String(source.EndStatusString);
+        }
+        if (source.RecordURL != null) {
+            this.RecordURL = new String(source.RecordURL);
+        }
+        if (source.Sequence != null) {
+            this.Sequence = new Long(source.Sequence);
+        }
+        if (source.StartTimestamp != null) {
+            this.StartTimestamp = new Long(source.StartTimestamp);
+        }
+        if (source.SkillGroupName != null) {
+            this.SkillGroupName = new String(source.SkillGroupName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

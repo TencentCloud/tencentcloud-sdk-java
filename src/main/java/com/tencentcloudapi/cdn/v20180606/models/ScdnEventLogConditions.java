@@ -91,6 +91,26 @@ public class ScdnEventLogConditions extends AbstractModel{
         this.Value = Value;
     }
 
+    public ScdnEventLogConditions() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ScdnEventLogConditions(ScdnEventLogConditions source) {
+        if (source.Key != null) {
+            this.Key = new String(source.Key);
+        }
+        if (source.Operator != null) {
+            this.Operator = new String(source.Operator);
+        }
+        if (source.Value != null) {
+            this.Value = new String(source.Value);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

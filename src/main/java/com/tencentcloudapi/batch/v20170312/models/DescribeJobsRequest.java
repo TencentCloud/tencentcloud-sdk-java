@@ -154,6 +154,35 @@ public class DescribeJobsRequest extends AbstractModel{
         this.Limit = Limit;
     }
 
+    public DescribeJobsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeJobsRequest(DescribeJobsRequest source) {
+        if (source.JobIds != null) {
+            this.JobIds = new String[source.JobIds.length];
+            for (int i = 0; i < source.JobIds.length; i++) {
+                this.JobIds[i] = new String(source.JobIds[i]);
+            }
+        }
+        if (source.Filters != null) {
+            this.Filters = new Filter[source.Filters.length];
+            for (int i = 0; i < source.Filters.length; i++) {
+                this.Filters[i] = new Filter(source.Filters[i]);
+            }
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

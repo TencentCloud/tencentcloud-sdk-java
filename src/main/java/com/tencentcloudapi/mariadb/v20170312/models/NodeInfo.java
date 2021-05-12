@@ -68,6 +68,23 @@ public class NodeInfo extends AbstractModel{
         this.Role = Role;
     }
 
+    public NodeInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public NodeInfo(NodeInfo source) {
+        if (source.NodeId != null) {
+            this.NodeId = new String(source.NodeId);
+        }
+        if (source.Role != null) {
+            this.Role = new String(source.Role);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

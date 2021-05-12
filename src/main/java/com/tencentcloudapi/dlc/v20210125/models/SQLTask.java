@@ -45,6 +45,20 @@ public class SQLTask extends AbstractModel{
         this.SQL = SQL;
     }
 
+    public SQLTask() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SQLTask(SQLTask source) {
+        if (source.SQL != null) {
+            this.SQL = new String(source.SQL);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

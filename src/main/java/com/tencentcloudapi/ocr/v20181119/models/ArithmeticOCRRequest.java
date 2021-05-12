@@ -241,6 +241,41 @@ public class ArithmeticOCRRequest extends AbstractModel{
         this.PdfPageIndex = PdfPageIndex;
     }
 
+    public ArithmeticOCRRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ArithmeticOCRRequest(ArithmeticOCRRequest source) {
+        if (source.ImageBase64 != null) {
+            this.ImageBase64 = new String(source.ImageBase64);
+        }
+        if (source.ImageUrl != null) {
+            this.ImageUrl = new String(source.ImageUrl);
+        }
+        if (source.SupportHorizontalImage != null) {
+            this.SupportHorizontalImage = new Boolean(source.SupportHorizontalImage);
+        }
+        if (source.RejectNonArithmeticPic != null) {
+            this.RejectNonArithmeticPic = new Boolean(source.RejectNonArithmeticPic);
+        }
+        if (source.EnableDispRelatedVertical != null) {
+            this.EnableDispRelatedVertical = new Boolean(source.EnableDispRelatedVertical);
+        }
+        if (source.EnableDispMidResult != null) {
+            this.EnableDispMidResult = new Boolean(source.EnableDispMidResult);
+        }
+        if (source.EnablePdfRecognize != null) {
+            this.EnablePdfRecognize = new Boolean(source.EnablePdfRecognize);
+        }
+        if (source.PdfPageIndex != null) {
+            this.PdfPageIndex = new Long(source.PdfPageIndex);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

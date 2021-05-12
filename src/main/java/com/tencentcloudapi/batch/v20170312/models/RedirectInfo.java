@@ -114,6 +114,29 @@ public class RedirectInfo extends AbstractModel{
         this.StderrRedirectFileName = StderrRedirectFileName;
     }
 
+    public RedirectInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RedirectInfo(RedirectInfo source) {
+        if (source.StdoutRedirectPath != null) {
+            this.StdoutRedirectPath = new String(source.StdoutRedirectPath);
+        }
+        if (source.StderrRedirectPath != null) {
+            this.StderrRedirectPath = new String(source.StderrRedirectPath);
+        }
+        if (source.StdoutRedirectFileName != null) {
+            this.StdoutRedirectFileName = new String(source.StdoutRedirectFileName);
+        }
+        if (source.StderrRedirectFileName != null) {
+            this.StderrRedirectFileName = new String(source.StderrRedirectFileName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

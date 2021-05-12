@@ -68,6 +68,23 @@ public class CreateCustomerGatewayResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public CreateCustomerGatewayResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateCustomerGatewayResponse(CreateCustomerGatewayResponse source) {
+        if (source.CustomerGateway != null) {
+            this.CustomerGateway = new CustomerGateway(source.CustomerGateway);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

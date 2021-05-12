@@ -236,6 +236,44 @@ public class ClusterInfo extends AbstractModel{
         this.ZoneIds = ZoneIds;
     }
 
+    public ClusterInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ClusterInfo(ClusterInfo source) {
+        if (source.ClusterId != null) {
+            this.ClusterId = new Long(source.ClusterId);
+        }
+        if (source.ClusterName != null) {
+            this.ClusterName = new String(source.ClusterName);
+        }
+        if (source.MaxDiskSize != null) {
+            this.MaxDiskSize = new Long(source.MaxDiskSize);
+        }
+        if (source.MaxBandWidth != null) {
+            this.MaxBandWidth = new Long(source.MaxBandWidth);
+        }
+        if (source.AvailableDiskSize != null) {
+            this.AvailableDiskSize = new Long(source.AvailableDiskSize);
+        }
+        if (source.AvailableBandWidth != null) {
+            this.AvailableBandWidth = new Long(source.AvailableBandWidth);
+        }
+        if (source.ZoneId != null) {
+            this.ZoneId = new Long(source.ZoneId);
+        }
+        if (source.ZoneIds != null) {
+            this.ZoneIds = new Long[source.ZoneIds.length];
+            for (int i = 0; i < source.ZoneIds.length; i++) {
+                this.ZoneIds[i] = new Long(source.ZoneIds[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

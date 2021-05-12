@@ -321,6 +321,62 @@ public class GetRealAvailRatioResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public GetRealAvailRatioResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GetRealAvailRatioResponse(GetRealAvailRatioResponse source) {
+        if (source.AvgAvailRatio != null) {
+            this.AvgAvailRatio = new Float(source.AvgAvailRatio);
+        }
+        if (source.LowestAvailRatio != null) {
+            this.LowestAvailRatio = new Float(source.LowestAvailRatio);
+        }
+        if (source.LowestProvince != null) {
+            this.LowestProvince = new String(source.LowestProvince);
+        }
+        if (source.LowestIsp != null) {
+            this.LowestIsp = new String(source.LowestIsp);
+        }
+        if (source.ProvinceData != null) {
+            this.ProvinceData = new ProvinceDetail[source.ProvinceData.length];
+            for (int i = 0; i < source.ProvinceData.length; i++) {
+                this.ProvinceData[i] = new ProvinceDetail(source.ProvinceData[i]);
+            }
+        }
+        if (source.AvgTime != null) {
+            this.AvgTime = new Float(source.AvgTime);
+        }
+        if (source.AvgAvailRatio2 != null) {
+            this.AvgAvailRatio2 = new Float(source.AvgAvailRatio2);
+        }
+        if (source.AvgTime2 != null) {
+            this.AvgTime2 = new Float(source.AvgTime2);
+        }
+        if (source.LowestAvailRatio2 != null) {
+            this.LowestAvailRatio2 = new Float(source.LowestAvailRatio2);
+        }
+        if (source.LowestProvince2 != null) {
+            this.LowestProvince2 = new String(source.LowestProvince2);
+        }
+        if (source.LowestIsp2 != null) {
+            this.LowestIsp2 = new String(source.LowestIsp2);
+        }
+        if (source.ProvinceData2 != null) {
+            this.ProvinceData2 = new ProvinceDetail[source.ProvinceData2.length];
+            for (int i = 0; i < source.ProvinceData2.length; i++) {
+                this.ProvinceData2[i] = new ProvinceDetail(source.ProvinceData2[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

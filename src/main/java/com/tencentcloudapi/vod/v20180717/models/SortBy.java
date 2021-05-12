@@ -68,6 +68,23 @@ public class SortBy extends AbstractModel{
         this.Order = Order;
     }
 
+    public SortBy() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SortBy(SortBy source) {
+        if (source.Field != null) {
+            this.Field = new String(source.Field);
+        }
+        if (source.Order != null) {
+            this.Order = new String(source.Order);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

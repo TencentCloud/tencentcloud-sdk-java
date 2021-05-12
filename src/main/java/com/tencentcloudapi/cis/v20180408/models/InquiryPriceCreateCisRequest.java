@@ -91,6 +91,26 @@ public class InquiryPriceCreateCisRequest extends AbstractModel{
         this.Memory = Memory;
     }
 
+    public InquiryPriceCreateCisRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public InquiryPriceCreateCisRequest(InquiryPriceCreateCisRequest source) {
+        if (source.Zone != null) {
+            this.Zone = new String(source.Zone);
+        }
+        if (source.Cpu != null) {
+            this.Cpu = new Float(source.Cpu);
+        }
+        if (source.Memory != null) {
+            this.Memory = new Float(source.Memory);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

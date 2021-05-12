@@ -91,6 +91,26 @@ public class ModifyAddressAttributeRequest extends AbstractModel{
         this.EipDirectConnection = EipDirectConnection;
     }
 
+    public ModifyAddressAttributeRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyAddressAttributeRequest(ModifyAddressAttributeRequest source) {
+        if (source.AddressId != null) {
+            this.AddressId = new String(source.AddressId);
+        }
+        if (source.AddressName != null) {
+            this.AddressName = new String(source.AddressName);
+        }
+        if (source.EipDirectConnection != null) {
+            this.EipDirectConnection = new String(source.EipDirectConnection);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

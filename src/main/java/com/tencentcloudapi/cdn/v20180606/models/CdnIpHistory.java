@@ -88,6 +88,23 @@ offline：节点下线
         this.Datetime = Datetime;
     }
 
+    public CdnIpHistory() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CdnIpHistory(CdnIpHistory source) {
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.Datetime != null) {
+            this.Datetime = new String(source.Datetime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

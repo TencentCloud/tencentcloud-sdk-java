@@ -308,6 +308,74 @@ public class DDosPolicy extends AbstractModel{
         this.SceneId = SceneId;
     }
 
+    public DDosPolicy() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DDosPolicy(DDosPolicy source) {
+        if (source.Resources != null) {
+            this.Resources = new ResourceIp[source.Resources.length];
+            for (int i = 0; i < source.Resources.length; i++) {
+                this.Resources[i] = new ResourceIp(source.Resources[i]);
+            }
+        }
+        if (source.DropOptions != null) {
+            this.DropOptions = new DDoSPolicyDropOption(source.DropOptions);
+        }
+        if (source.PortLimits != null) {
+            this.PortLimits = new DDoSPolicyPortLimit[source.PortLimits.length];
+            for (int i = 0; i < source.PortLimits.length; i++) {
+                this.PortLimits[i] = new DDoSPolicyPortLimit(source.PortLimits[i]);
+            }
+        }
+        if (source.PacketFilters != null) {
+            this.PacketFilters = new DDoSPolicyPacketFilter[source.PacketFilters.length];
+            for (int i = 0; i < source.PacketFilters.length; i++) {
+                this.PacketFilters[i] = new DDoSPolicyPacketFilter(source.PacketFilters[i]);
+            }
+        }
+        if (source.IpBlackWhiteLists != null) {
+            this.IpBlackWhiteLists = new IpBlackWhite[source.IpBlackWhiteLists.length];
+            for (int i = 0; i < source.IpBlackWhiteLists.length; i++) {
+                this.IpBlackWhiteLists[i] = new IpBlackWhite(source.IpBlackWhiteLists[i]);
+            }
+        }
+        if (source.PolicyId != null) {
+            this.PolicyId = new String(source.PolicyId);
+        }
+        if (source.PolicyName != null) {
+            this.PolicyName = new String(source.PolicyName);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.WaterPrint != null) {
+            this.WaterPrint = new WaterPrintPolicy[source.WaterPrint.length];
+            for (int i = 0; i < source.WaterPrint.length; i++) {
+                this.WaterPrint[i] = new WaterPrintPolicy(source.WaterPrint[i]);
+            }
+        }
+        if (source.WaterKey != null) {
+            this.WaterKey = new WaterPrintKey[source.WaterKey.length];
+            for (int i = 0; i < source.WaterKey.length; i++) {
+                this.WaterKey[i] = new WaterPrintKey(source.WaterKey[i]);
+            }
+        }
+        if (source.BoundResources != null) {
+            this.BoundResources = new String[source.BoundResources.length];
+            for (int i = 0; i < source.BoundResources.length; i++) {
+                this.BoundResources[i] = new String(source.BoundResources[i]);
+            }
+        }
+        if (source.SceneId != null) {
+            this.SceneId = new String(source.SceneId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

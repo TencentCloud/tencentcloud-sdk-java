@@ -78,6 +78,23 @@ public class AudioTransform extends AbstractModel{
         this.VolumeParam = VolumeParam;
     }
 
+    public AudioTransform() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AudioTransform(AudioTransform source) {
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.VolumeParam != null) {
+            this.VolumeParam = new AudioVolumeParam(source.VolumeParam);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

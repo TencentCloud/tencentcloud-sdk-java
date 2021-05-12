@@ -212,6 +212,35 @@ false - 所有流都录制大画面，默认为false。
         this.StreamControls = StreamControls;
     }
 
+    public RecordControl() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RecordControl(RecordControl source) {
+        if (source.Enabled != null) {
+            this.Enabled = new Boolean(source.Enabled);
+        }
+        if (source.DisableRecord != null) {
+            this.DisableRecord = new Boolean(source.DisableRecord);
+        }
+        if (source.DisableAudio != null) {
+            this.DisableAudio = new Boolean(source.DisableAudio);
+        }
+        if (source.PullSmallVideo != null) {
+            this.PullSmallVideo = new Boolean(source.PullSmallVideo);
+        }
+        if (source.StreamControls != null) {
+            this.StreamControls = new StreamControl[source.StreamControls.length];
+            for (int i = 0; i < source.StreamControls.length; i++) {
+                this.StreamControls[i] = new StreamControl(source.StreamControls[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

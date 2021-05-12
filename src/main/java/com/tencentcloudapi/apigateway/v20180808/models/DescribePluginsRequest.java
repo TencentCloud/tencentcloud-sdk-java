@@ -160,6 +160,41 @@ public class DescribePluginsRequest extends AbstractModel{
         this.Filters = Filters;
     }
 
+    public DescribePluginsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribePluginsRequest(DescribePluginsRequest source) {
+        if (source.PluginIds != null) {
+            this.PluginIds = new String[source.PluginIds.length];
+            for (int i = 0; i < source.PluginIds.length; i++) {
+                this.PluginIds[i] = new String(source.PluginIds[i]);
+            }
+        }
+        if (source.PluginName != null) {
+            this.PluginName = new String(source.PluginName);
+        }
+        if (source.PluginType != null) {
+            this.PluginType = new String(source.PluginType);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Filters != null) {
+            this.Filters = new Filter[source.Filters.length];
+            for (int i = 0; i < source.Filters.length; i++) {
+                this.Filters[i] = new Filter(source.Filters[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

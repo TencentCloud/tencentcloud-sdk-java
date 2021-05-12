@@ -45,6 +45,20 @@ public class TrustMaliciousRequestRequest extends AbstractModel{
         this.Id = Id;
     }
 
+    public TrustMaliciousRequestRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TrustMaliciousRequestRequest(TrustMaliciousRequestRequest source) {
+        if (source.Id != null) {
+            this.Id = new Long(source.Id);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

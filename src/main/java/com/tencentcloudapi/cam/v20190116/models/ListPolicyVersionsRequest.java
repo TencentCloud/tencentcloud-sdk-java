@@ -45,6 +45,20 @@ public class ListPolicyVersionsRequest extends AbstractModel{
         this.PolicyId = PolicyId;
     }
 
+    public ListPolicyVersionsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ListPolicyVersionsRequest(ListPolicyVersionsRequest source) {
+        if (source.PolicyId != null) {
+            this.PolicyId = new Long(source.PolicyId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -68,6 +68,23 @@ public class QuerySinglePayResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public QuerySinglePayResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public QuerySinglePayResponse(QuerySinglePayResponse source) {
+        if (source.Result != null) {
+            this.Result = new QuerySinglePayResult(source.Result);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

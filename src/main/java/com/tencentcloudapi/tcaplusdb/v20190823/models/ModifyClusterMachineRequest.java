@@ -114,6 +114,35 @@ public class ModifyClusterMachineRequest extends AbstractModel{
         this.ClusterType = ClusterType;
     }
 
+    public ModifyClusterMachineRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyClusterMachineRequest(ModifyClusterMachineRequest source) {
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
+        if (source.ServerList != null) {
+            this.ServerList = new MachineInfo[source.ServerList.length];
+            for (int i = 0; i < source.ServerList.length; i++) {
+                this.ServerList[i] = new MachineInfo(source.ServerList[i]);
+            }
+        }
+        if (source.ProxyList != null) {
+            this.ProxyList = new MachineInfo[source.ProxyList.length];
+            for (int i = 0; i < source.ProxyList.length; i++) {
+                this.ProxyList[i] = new MachineInfo(source.ProxyList[i]);
+            }
+        }
+        if (source.ClusterType != null) {
+            this.ClusterType = new Long(source.ClusterType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

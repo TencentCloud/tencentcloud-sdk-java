@@ -68,6 +68,23 @@ public class AlgType extends AbstractModel{
         this.Sip = Sip;
     }
 
+    public AlgType() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AlgType(AlgType source) {
+        if (source.Ftp != null) {
+            this.Ftp = new Boolean(source.Ftp);
+        }
+        if (source.Sip != null) {
+            this.Sip = new Boolean(source.Sip);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

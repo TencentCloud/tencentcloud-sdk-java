@@ -198,6 +198,38 @@ public class Item extends AbstractModel{
         this.QuestionId = QuestionId;
     }
 
+    public Item() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Item(Item source) {
+        if (source.Item != null) {
+            this.Item = new String(source.Item);
+        }
+        if (source.ItemString != null) {
+            this.ItemString = new String(source.ItemString);
+        }
+        if (source.ItemCoord != null) {
+            this.ItemCoord = new ItemCoord(source.ItemCoord);
+        }
+        if (source.Answer != null) {
+            this.Answer = new String(source.Answer);
+        }
+        if (source.ExpressionType != null) {
+            this.ExpressionType = new String(source.ExpressionType);
+        }
+        if (source.ItemConf != null) {
+            this.ItemConf = new Float(source.ItemConf);
+        }
+        if (source.QuestionId != null) {
+            this.QuestionId = new String(source.QuestionId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

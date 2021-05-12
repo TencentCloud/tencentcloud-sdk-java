@@ -73,6 +73,26 @@ public class DescribeTargetsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeTargetsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeTargetsResponse(DescribeTargetsResponse source) {
+        if (source.Listeners != null) {
+            this.Listeners = new ListenerBackend[source.Listeners.length];
+            for (int i = 0; i < source.Listeners.length; i++) {
+                this.Listeners[i] = new ListenerBackend(source.Listeners[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

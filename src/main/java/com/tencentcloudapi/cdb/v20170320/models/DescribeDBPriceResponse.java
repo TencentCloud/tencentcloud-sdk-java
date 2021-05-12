@@ -91,6 +91,26 @@ public class DescribeDBPriceResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeDBPriceResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeDBPriceResponse(DescribeDBPriceResponse source) {
+        if (source.Price != null) {
+            this.Price = new Long(source.Price);
+        }
+        if (source.OriginalPrice != null) {
+            this.OriginalPrice = new Long(source.OriginalPrice);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

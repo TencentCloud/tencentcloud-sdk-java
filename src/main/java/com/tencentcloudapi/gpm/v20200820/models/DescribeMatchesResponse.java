@@ -188,6 +188,41 @@ public class DescribeMatchesResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeMatchesResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeMatchesResponse(DescribeMatchesResponse source) {
+        if (source.MatchInfoList != null) {
+            this.MatchInfoList = new MatchInfo[source.MatchInfoList.length];
+            for (int i = 0; i < source.MatchInfoList.length; i++) {
+                this.MatchInfoList[i] = new MatchInfo(source.MatchInfoList[i]);
+            }
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.PageNumber != null) {
+            this.PageNumber = new Long(source.PageNumber);
+        }
+        if (source.PageSize != null) {
+            this.PageSize = new Long(source.PageSize);
+        }
+        if (source.SearchType != null) {
+            this.SearchType = new String(source.SearchType);
+        }
+        if (source.Keyword != null) {
+            this.Keyword = new String(source.Keyword);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

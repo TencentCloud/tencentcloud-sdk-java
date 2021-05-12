@@ -114,6 +114,29 @@ public class FacePoseResult extends AbstractModel{
         this.Yaw = Yaw;
     }
 
+    public FacePoseResult() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public FacePoseResult(FacePoseResult source) {
+        if (source.Direction != null) {
+            this.Direction = new String(source.Direction);
+        }
+        if (source.Pitch != null) {
+            this.Pitch = new Float(source.Pitch);
+        }
+        if (source.Roll != null) {
+            this.Roll = new Float(source.Roll);
+        }
+        if (source.Yaw != null) {
+            this.Yaw = new Float(source.Yaw);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

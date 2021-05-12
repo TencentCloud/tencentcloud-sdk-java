@@ -114,6 +114,29 @@ public class CallDeviceActionSyncRequest extends AbstractModel{
         this.InputParams = InputParams;
     }
 
+    public CallDeviceActionSyncRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CallDeviceActionSyncRequest(CallDeviceActionSyncRequest source) {
+        if (source.ProductId != null) {
+            this.ProductId = new String(source.ProductId);
+        }
+        if (source.DeviceName != null) {
+            this.DeviceName = new String(source.DeviceName);
+        }
+        if (source.ActionId != null) {
+            this.ActionId = new String(source.ActionId);
+        }
+        if (source.InputParams != null) {
+            this.InputParams = new String(source.InputParams);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -68,6 +68,23 @@ public class CallBackPhoneCode extends AbstractModel{
         this.Phone = Phone;
     }
 
+    public CallBackPhoneCode() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CallBackPhoneCode(CallBackPhoneCode source) {
+        if (source.Nation != null) {
+            this.Nation = new String(source.Nation);
+        }
+        if (source.Phone != null) {
+            this.Phone = new String(source.Phone);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

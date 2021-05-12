@@ -898,6 +898,116 @@ public class DirectConnect extends AbstractModel{
         this.MinBandwidth = MinBandwidth;
     }
 
+    public DirectConnect() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DirectConnect(DirectConnect source) {
+        if (source.DirectConnectId != null) {
+            this.DirectConnectId = new String(source.DirectConnectId);
+        }
+        if (source.DirectConnectName != null) {
+            this.DirectConnectName = new String(source.DirectConnectName);
+        }
+        if (source.AccessPointId != null) {
+            this.AccessPointId = new String(source.AccessPointId);
+        }
+        if (source.State != null) {
+            this.State = new String(source.State);
+        }
+        if (source.CreatedTime != null) {
+            this.CreatedTime = new String(source.CreatedTime);
+        }
+        if (source.EnabledTime != null) {
+            this.EnabledTime = new String(source.EnabledTime);
+        }
+        if (source.LineOperator != null) {
+            this.LineOperator = new String(source.LineOperator);
+        }
+        if (source.Location != null) {
+            this.Location = new String(source.Location);
+        }
+        if (source.Bandwidth != null) {
+            this.Bandwidth = new Long(source.Bandwidth);
+        }
+        if (source.PortType != null) {
+            this.PortType = new String(source.PortType);
+        }
+        if (source.CircuitCode != null) {
+            this.CircuitCode = new String(source.CircuitCode);
+        }
+        if (source.RedundantDirectConnectId != null) {
+            this.RedundantDirectConnectId = new String(source.RedundantDirectConnectId);
+        }
+        if (source.Vlan != null) {
+            this.Vlan = new Long(source.Vlan);
+        }
+        if (source.TencentAddress != null) {
+            this.TencentAddress = new String(source.TencentAddress);
+        }
+        if (source.CustomerAddress != null) {
+            this.CustomerAddress = new String(source.CustomerAddress);
+        }
+        if (source.CustomerName != null) {
+            this.CustomerName = new String(source.CustomerName);
+        }
+        if (source.CustomerContactMail != null) {
+            this.CustomerContactMail = new String(source.CustomerContactMail);
+        }
+        if (source.CustomerContactNumber != null) {
+            this.CustomerContactNumber = new String(source.CustomerContactNumber);
+        }
+        if (source.ExpiredTime != null) {
+            this.ExpiredTime = new String(source.ExpiredTime);
+        }
+        if (source.ChargeType != null) {
+            this.ChargeType = new String(source.ChargeType);
+        }
+        if (source.FaultReportContactPerson != null) {
+            this.FaultReportContactPerson = new String(source.FaultReportContactPerson);
+        }
+        if (source.FaultReportContactNumber != null) {
+            this.FaultReportContactNumber = new String(source.FaultReportContactNumber);
+        }
+        if (source.TagSet != null) {
+            this.TagSet = new Tag[source.TagSet.length];
+            for (int i = 0; i < source.TagSet.length; i++) {
+                this.TagSet[i] = new Tag(source.TagSet[i]);
+            }
+        }
+        if (source.AccessPointType != null) {
+            this.AccessPointType = new String(source.AccessPointType);
+        }
+        if (source.IdcCity != null) {
+            this.IdcCity = new String(source.IdcCity);
+        }
+        if (source.ChargeState != null) {
+            this.ChargeState = new String(source.ChargeState);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.SignLaw != null) {
+            this.SignLaw = new Boolean(source.SignLaw);
+        }
+        if (source.LocalZone != null) {
+            this.LocalZone = new Boolean(source.LocalZone);
+        }
+        if (source.VlanZeroDirectConnectTunnelCount != null) {
+            this.VlanZeroDirectConnectTunnelCount = new Long(source.VlanZeroDirectConnectTunnelCount);
+        }
+        if (source.OtherVlanDirectConnectTunnelCount != null) {
+            this.OtherVlanDirectConnectTunnelCount = new Long(source.OtherVlanDirectConnectTunnelCount);
+        }
+        if (source.MinBandwidth != null) {
+            this.MinBandwidth = new Long(source.MinBandwidth);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

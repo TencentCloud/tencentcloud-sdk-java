@@ -274,6 +274,47 @@ public class IPStrategy extends AbstractModel{
         this.BindApis = BindApis;
     }
 
+    public IPStrategy() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public IPStrategy(IPStrategy source) {
+        if (source.StrategyId != null) {
+            this.StrategyId = new String(source.StrategyId);
+        }
+        if (source.StrategyName != null) {
+            this.StrategyName = new String(source.StrategyName);
+        }
+        if (source.StrategyType != null) {
+            this.StrategyType = new String(source.StrategyType);
+        }
+        if (source.StrategyData != null) {
+            this.StrategyData = new String(source.StrategyData);
+        }
+        if (source.CreatedTime != null) {
+            this.CreatedTime = new String(source.CreatedTime);
+        }
+        if (source.ModifiedTime != null) {
+            this.ModifiedTime = new String(source.ModifiedTime);
+        }
+        if (source.ServiceId != null) {
+            this.ServiceId = new String(source.ServiceId);
+        }
+        if (source.BindApiTotalCount != null) {
+            this.BindApiTotalCount = new Long(source.BindApiTotalCount);
+        }
+        if (source.BindApis != null) {
+            this.BindApis = new DesApisStatus[source.BindApis.length];
+            for (int i = 0; i < source.BindApis.length; i++) {
+                this.BindApis[i] = new DesApisStatus(source.BindApis[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

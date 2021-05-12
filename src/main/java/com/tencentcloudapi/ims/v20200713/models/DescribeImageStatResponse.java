@@ -119,6 +119,35 @@ public class DescribeImageStatResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeImageStatResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeImageStatResponse(DescribeImageStatResponse source) {
+        if (source.Overview != null) {
+            this.Overview = new Overview(source.Overview);
+        }
+        if (source.TrendCount != null) {
+            this.TrendCount = new TrendCount[source.TrendCount.length];
+            for (int i = 0; i < source.TrendCount.length; i++) {
+                this.TrendCount[i] = new TrendCount(source.TrendCount[i]);
+            }
+        }
+        if (source.EvilCount != null) {
+            this.EvilCount = new EvilCount[source.EvilCount.length];
+            for (int i = 0; i < source.EvilCount.length; i++) {
+                this.EvilCount[i] = new EvilCount(source.EvilCount[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

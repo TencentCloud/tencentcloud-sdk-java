@@ -218,6 +218,38 @@ public class GatewayDeployGroup extends AbstractModel{
         this.ClusterType = ClusterType;
     }
 
+    public GatewayDeployGroup() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GatewayDeployGroup(GatewayDeployGroup source) {
+        if (source.DeployGroupId != null) {
+            this.DeployGroupId = new String(source.DeployGroupId);
+        }
+        if (source.DeployGroupName != null) {
+            this.DeployGroupName = new String(source.DeployGroupName);
+        }
+        if (source.ApplicationId != null) {
+            this.ApplicationId = new String(source.ApplicationId);
+        }
+        if (source.ApplicationName != null) {
+            this.ApplicationName = new String(source.ApplicationName);
+        }
+        if (source.ApplicationType != null) {
+            this.ApplicationType = new String(source.ApplicationType);
+        }
+        if (source.GroupStatus != null) {
+            this.GroupStatus = new String(source.GroupStatus);
+        }
+        if (source.ClusterType != null) {
+            this.ClusterType = new String(source.ClusterType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

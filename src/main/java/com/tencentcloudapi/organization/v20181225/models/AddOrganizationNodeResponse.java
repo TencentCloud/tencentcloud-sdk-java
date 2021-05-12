@@ -68,6 +68,23 @@ public class AddOrganizationNodeResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public AddOrganizationNodeResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AddOrganizationNodeResponse(AddOrganizationNodeResponse source) {
+        if (source.NodeId != null) {
+            this.NodeId = new Long(source.NodeId);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

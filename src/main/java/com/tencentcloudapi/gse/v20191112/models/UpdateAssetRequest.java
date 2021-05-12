@@ -91,6 +91,26 @@ public class UpdateAssetRequest extends AbstractModel{
         this.AssetVersion = AssetVersion;
     }
 
+    public UpdateAssetRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UpdateAssetRequest(UpdateAssetRequest source) {
+        if (source.AssetId != null) {
+            this.AssetId = new String(source.AssetId);
+        }
+        if (source.AssetName != null) {
+            this.AssetName = new String(source.AssetName);
+        }
+        if (source.AssetVersion != null) {
+            this.AssetVersion = new String(source.AssetVersion);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

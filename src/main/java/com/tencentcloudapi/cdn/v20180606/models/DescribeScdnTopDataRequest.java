@@ -336,6 +336,41 @@ DefenceMode 映射如下：
         this.DefenceMode = DefenceMode;
     }
 
+    public DescribeScdnTopDataRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeScdnTopDataRequest(DescribeScdnTopDataRequest source) {
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+        if (source.Mode != null) {
+            this.Mode = new String(source.Mode);
+        }
+        if (source.Metric != null) {
+            this.Metric = new String(source.Metric);
+        }
+        if (source.Filter != null) {
+            this.Filter = new String(source.Filter);
+        }
+        if (source.Domain != null) {
+            this.Domain = new String(source.Domain);
+        }
+        if (source.AttackType != null) {
+            this.AttackType = new String(source.AttackType);
+        }
+        if (source.DefenceMode != null) {
+            this.DefenceMode = new String(source.DefenceMode);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

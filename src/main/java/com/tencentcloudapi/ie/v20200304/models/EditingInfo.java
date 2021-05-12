@@ -160,6 +160,35 @@ public class EditingInfo extends AbstractModel{
         this.OpeningEndingEditingInfo = OpeningEndingEditingInfo;
     }
 
+    public EditingInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public EditingInfo(EditingInfo source) {
+        if (source.TagEditingInfo != null) {
+            this.TagEditingInfo = new TagEditingInfo(source.TagEditingInfo);
+        }
+        if (source.ClassificationEditingInfo != null) {
+            this.ClassificationEditingInfo = new ClassificationEditingInfo(source.ClassificationEditingInfo);
+        }
+        if (source.StripEditingInfo != null) {
+            this.StripEditingInfo = new StripEditingInfo(source.StripEditingInfo);
+        }
+        if (source.HighlightsEditingInfo != null) {
+            this.HighlightsEditingInfo = new HighlightsEditingInfo(source.HighlightsEditingInfo);
+        }
+        if (source.CoverEditingInfo != null) {
+            this.CoverEditingInfo = new CoverEditingInfo(source.CoverEditingInfo);
+        }
+        if (source.OpeningEndingEditingInfo != null) {
+            this.OpeningEndingEditingInfo = new OpeningEndingEditingInfo(source.OpeningEndingEditingInfo);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

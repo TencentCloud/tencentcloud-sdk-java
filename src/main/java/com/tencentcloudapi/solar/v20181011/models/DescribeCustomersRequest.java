@@ -321,6 +321,56 @@ public class DescribeCustomersRequest extends AbstractModel{
         this.SubProjectId = SubProjectId;
     }
 
+    public DescribeCustomersRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeCustomersRequest(DescribeCustomersRequest source) {
+        if (source.QueryType != null) {
+            this.QueryType = new String(source.QueryType);
+        }
+        if (source.GroupId != null) {
+            this.GroupId = new String(source.GroupId);
+        }
+        if (source.MarkFlag != null) {
+            this.MarkFlag = new Long(source.MarkFlag);
+        }
+        if (source.TagIds != null) {
+            this.TagIds = new String(source.TagIds);
+        }
+        if (source.RelChannelFlag != null) {
+            this.RelChannelFlag = new String(source.RelChannelFlag);
+        }
+        if (source.NeedPhoneFlag != null) {
+            this.NeedPhoneFlag = new Long(source.NeedPhoneFlag);
+        }
+        if (source.Province != null) {
+            this.Province = new String(source.Province);
+        }
+        if (source.City != null) {
+            this.City = new String(source.City);
+        }
+        if (source.Sex != null) {
+            this.Sex = new String(source.Sex);
+        }
+        if (source.KeyWord != null) {
+            this.KeyWord = new String(source.KeyWord);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.SubProjectId != null) {
+            this.SubProjectId = new String(source.SubProjectId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

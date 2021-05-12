@@ -91,6 +91,26 @@ public class DeleteCallBackRequest extends AbstractModel{
         this.CancelFlag = CancelFlag;
     }
 
+    public DeleteCallBackRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteCallBackRequest(DeleteCallBackRequest source) {
+        if (source.BizAppId != null) {
+            this.BizAppId = new String(source.BizAppId);
+        }
+        if (source.CallId != null) {
+            this.CallId = new String(source.CallId);
+        }
+        if (source.CancelFlag != null) {
+            this.CancelFlag = new String(source.CancelFlag);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

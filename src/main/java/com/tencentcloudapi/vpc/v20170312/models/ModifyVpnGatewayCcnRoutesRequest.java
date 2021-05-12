@@ -68,6 +68,26 @@ public class ModifyVpnGatewayCcnRoutesRequest extends AbstractModel{
         this.Routes = Routes;
     }
 
+    public ModifyVpnGatewayCcnRoutesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyVpnGatewayCcnRoutesRequest(ModifyVpnGatewayCcnRoutesRequest source) {
+        if (source.VpnGatewayId != null) {
+            this.VpnGatewayId = new String(source.VpnGatewayId);
+        }
+        if (source.Routes != null) {
+            this.Routes = new VpngwCcnRoutes[source.Routes.length];
+            for (int i = 0; i < source.Routes.length; i++) {
+                this.Routes[i] = new VpngwCcnRoutes(source.Routes[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

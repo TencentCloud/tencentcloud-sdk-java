@@ -91,6 +91,26 @@ public class PaiInstance extends AbstractModel{
         this.PaiMateUrl = PaiMateUrl;
     }
 
+    public PaiInstance() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PaiInstance(PaiInstance source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.DomainName != null) {
+            this.DomainName = new String(source.DomainName);
+        }
+        if (source.PaiMateUrl != null) {
+            this.PaiMateUrl = new String(source.PaiMateUrl);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

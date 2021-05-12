@@ -442,6 +442,62 @@ public class CdbInfo extends AbstractModel{
         this.RegionId = RegionId;
     }
 
+    public CdbInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CdbInfo(CdbInfo source) {
+        if (source.InstanceName != null) {
+            this.InstanceName = new String(source.InstanceName);
+        }
+        if (source.Ip != null) {
+            this.Ip = new String(source.Ip);
+        }
+        if (source.Port != null) {
+            this.Port = new Long(source.Port);
+        }
+        if (source.MemSize != null) {
+            this.MemSize = new Long(source.MemSize);
+        }
+        if (source.Volume != null) {
+            this.Volume = new Long(source.Volume);
+        }
+        if (source.Service != null) {
+            this.Service = new String(source.Service);
+        }
+        if (source.ExpireTime != null) {
+            this.ExpireTime = new String(source.ExpireTime);
+        }
+        if (source.ApplyTime != null) {
+            this.ApplyTime = new String(source.ApplyTime);
+        }
+        if (source.PayType != null) {
+            this.PayType = new Long(source.PayType);
+        }
+        if (source.ExpireFlag != null) {
+            this.ExpireFlag = new Boolean(source.ExpireFlag);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.IsAutoRenew != null) {
+            this.IsAutoRenew = new Long(source.IsAutoRenew);
+        }
+        if (source.SerialNo != null) {
+            this.SerialNo = new String(source.SerialNo);
+        }
+        if (source.ZoneId != null) {
+            this.ZoneId = new Long(source.ZoneId);
+        }
+        if (source.RegionId != null) {
+            this.RegionId = new Long(source.RegionId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

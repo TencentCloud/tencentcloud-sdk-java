@@ -160,6 +160,35 @@ public class RedisBackupSet extends AbstractModel{
         this.Locked = Locked;
     }
 
+    public RedisBackupSet() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RedisBackupSet(RedisBackupSet source) {
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.BackupId != null) {
+            this.BackupId = new String(source.BackupId);
+        }
+        if (source.BackupType != null) {
+            this.BackupType = new String(source.BackupType);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.Remark != null) {
+            this.Remark = new String(source.Remark);
+        }
+        if (source.Locked != null) {
+            this.Locked = new Long(source.Locked);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

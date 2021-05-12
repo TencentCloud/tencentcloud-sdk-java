@@ -318,6 +318,53 @@ public class QueryPayerinfoData extends AbstractModel{
         this.PayerContactName = PayerContactName;
     }
 
+    public QueryPayerinfoData() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public QueryPayerinfoData(QueryPayerinfoData source) {
+        if (source.MerchantId != null) {
+            this.MerchantId = new String(source.MerchantId);
+        }
+        if (source.PayerId != null) {
+            this.PayerId = new String(source.PayerId);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.FailReason != null) {
+            this.FailReason = new String(source.FailReason);
+        }
+        if (source.PayerType != null) {
+            this.PayerType = new String(source.PayerType);
+        }
+        if (source.PayerName != null) {
+            this.PayerName = new String(source.PayerName);
+        }
+        if (source.PayerIdType != null) {
+            this.PayerIdType = new String(source.PayerIdType);
+        }
+        if (source.PayerIdNo != null) {
+            this.PayerIdNo = new String(source.PayerIdNo);
+        }
+        if (source.PayerContactNumber != null) {
+            this.PayerContactNumber = new String(source.PayerContactNumber);
+        }
+        if (source.PayerEmailAddress != null) {
+            this.PayerEmailAddress = new String(source.PayerEmailAddress);
+        }
+        if (source.PayerCountryCode != null) {
+            this.PayerCountryCode = new String(source.PayerCountryCode);
+        }
+        if (source.PayerContactName != null) {
+            this.PayerContactName = new String(source.PayerContactName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

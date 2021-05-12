@@ -96,6 +96,26 @@ public class DeleteAllAccessControlRuleResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DeleteAllAccessControlRuleResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteAllAccessControlRuleResponse(DeleteAllAccessControlRuleResponse source) {
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.Info != null) {
+            this.Info = new Long(source.Info);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

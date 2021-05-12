@@ -160,6 +160,35 @@ public class ApplyTradeData extends AbstractModel{
         this.Status = Status;
     }
 
+    public ApplyTradeData() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ApplyTradeData(ApplyTradeData source) {
+        if (source.MerchantId != null) {
+            this.MerchantId = new String(source.MerchantId);
+        }
+        if (source.TradeFileId != null) {
+            this.TradeFileId = new String(source.TradeFileId);
+        }
+        if (source.TradeCurrency != null) {
+            this.TradeCurrency = new String(source.TradeCurrency);
+        }
+        if (source.TradeAmount != null) {
+            this.TradeAmount = new String(source.TradeAmount);
+        }
+        if (source.PayerId != null) {
+            this.PayerId = new String(source.PayerId);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

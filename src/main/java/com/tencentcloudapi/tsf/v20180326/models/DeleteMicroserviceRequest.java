@@ -45,6 +45,20 @@ public class DeleteMicroserviceRequest extends AbstractModel{
         this.MicroserviceId = MicroserviceId;
     }
 
+    public DeleteMicroserviceRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteMicroserviceRequest(DeleteMicroserviceRequest source) {
+        if (source.MicroserviceId != null) {
+            this.MicroserviceId = new String(source.MicroserviceId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

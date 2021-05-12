@@ -68,6 +68,23 @@ public class DelCrowdPackRequest extends AbstractModel{
         this.ID = ID;
     }
 
+    public DelCrowdPackRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DelCrowdPackRequest(DelCrowdPackRequest source) {
+        if (source.License != null) {
+            this.License = new String(source.License);
+        }
+        if (source.ID != null) {
+            this.ID = new Long(source.ID);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

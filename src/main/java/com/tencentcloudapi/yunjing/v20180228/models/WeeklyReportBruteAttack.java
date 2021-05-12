@@ -137,6 +137,32 @@ public class WeeklyReportBruteAttack extends AbstractModel{
         this.AttackTime = AttackTime;
     }
 
+    public WeeklyReportBruteAttack() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public WeeklyReportBruteAttack(WeeklyReportBruteAttack source) {
+        if (source.MachineIp != null) {
+            this.MachineIp = new String(source.MachineIp);
+        }
+        if (source.Username != null) {
+            this.Username = new String(source.Username);
+        }
+        if (source.SrcIp != null) {
+            this.SrcIp = new String(source.SrcIp);
+        }
+        if (source.Count != null) {
+            this.Count = new Long(source.Count);
+        }
+        if (source.AttackTime != null) {
+            this.AttackTime = new String(source.AttackTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

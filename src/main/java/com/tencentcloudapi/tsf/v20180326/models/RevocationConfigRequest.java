@@ -45,6 +45,20 @@ public class RevocationConfigRequest extends AbstractModel{
         this.ConfigReleaseId = ConfigReleaseId;
     }
 
+    public RevocationConfigRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RevocationConfigRequest(RevocationConfigRequest source) {
+        if (source.ConfigReleaseId != null) {
+            this.ConfigReleaseId = new String(source.ConfigReleaseId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

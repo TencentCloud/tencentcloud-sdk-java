@@ -372,6 +372,62 @@ public class CreateCallBackRequest extends AbstractModel{
         this.OrderId = OrderId;
     }
 
+    public CreateCallBackRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateCallBackRequest(CreateCallBackRequest source) {
+        if (source.BizAppId != null) {
+            this.BizAppId = new String(source.BizAppId);
+        }
+        if (source.Src != null) {
+            this.Src = new String(source.Src);
+        }
+        if (source.Dst != null) {
+            this.Dst = new String(source.Dst);
+        }
+        if (source.SrcDisplayNum != null) {
+            this.SrcDisplayNum = new String(source.SrcDisplayNum);
+        }
+        if (source.DstDisplayNum != null) {
+            this.DstDisplayNum = new String(source.DstDisplayNum);
+        }
+        if (source.Record != null) {
+            this.Record = new String(source.Record);
+        }
+        if (source.MaxAllowTime != null) {
+            this.MaxAllowTime = new String(source.MaxAllowTime);
+        }
+        if (source.StatusFlag != null) {
+            this.StatusFlag = new String(source.StatusFlag);
+        }
+        if (source.StatusUrl != null) {
+            this.StatusUrl = new String(source.StatusUrl);
+        }
+        if (source.HangupUrl != null) {
+            this.HangupUrl = new String(source.HangupUrl);
+        }
+        if (source.RecordUrl != null) {
+            this.RecordUrl = new String(source.RecordUrl);
+        }
+        if (source.BizId != null) {
+            this.BizId = new String(source.BizId);
+        }
+        if (source.LastCallId != null) {
+            this.LastCallId = new String(source.LastCallId);
+        }
+        if (source.PreCallerHandle != null) {
+            this.PreCallerHandle = new RreCallerHandle(source.PreCallerHandle);
+        }
+        if (source.OrderId != null) {
+            this.OrderId = new String(source.OrderId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

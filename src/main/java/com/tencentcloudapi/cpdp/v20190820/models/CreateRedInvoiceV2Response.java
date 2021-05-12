@@ -119,6 +119,29 @@ public class CreateRedInvoiceV2Response extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public CreateRedInvoiceV2Response() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateRedInvoiceV2Response(CreateRedInvoiceV2Response source) {
+        if (source.Result != null) {
+            this.Result = new CreateRedInvoiceResultV2(source.Result);
+        }
+        if (source.ErrCode != null) {
+            this.ErrCode = new String(source.ErrCode);
+        }
+        if (source.ErrMessage != null) {
+            this.ErrMessage = new String(source.ErrMessage);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

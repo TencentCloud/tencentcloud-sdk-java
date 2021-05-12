@@ -574,6 +574,92 @@ public class CreateContainGroupRequest extends AbstractModel{
         this.IstioMemLimit = IstioMemLimit;
     }
 
+    public CreateContainGroupRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateContainGroupRequest(CreateContainGroupRequest source) {
+        if (source.ApplicationId != null) {
+            this.ApplicationId = new String(source.ApplicationId);
+        }
+        if (source.NamespaceId != null) {
+            this.NamespaceId = new String(source.NamespaceId);
+        }
+        if (source.GroupName != null) {
+            this.GroupName = new String(source.GroupName);
+        }
+        if (source.InstanceNum != null) {
+            this.InstanceNum = new Long(source.InstanceNum);
+        }
+        if (source.AccessType != null) {
+            this.AccessType = new Long(source.AccessType);
+        }
+        if (source.ProtocolPorts != null) {
+            this.ProtocolPorts = new ProtocolPort[source.ProtocolPorts.length];
+            for (int i = 0; i < source.ProtocolPorts.length; i++) {
+                this.ProtocolPorts[i] = new ProtocolPort(source.ProtocolPorts[i]);
+            }
+        }
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
+        if (source.CpuLimit != null) {
+            this.CpuLimit = new String(source.CpuLimit);
+        }
+        if (source.MemLimit != null) {
+            this.MemLimit = new String(source.MemLimit);
+        }
+        if (source.GroupComment != null) {
+            this.GroupComment = new String(source.GroupComment);
+        }
+        if (source.UpdateType != null) {
+            this.UpdateType = new Long(source.UpdateType);
+        }
+        if (source.UpdateIvl != null) {
+            this.UpdateIvl = new Long(source.UpdateIvl);
+        }
+        if (source.CpuRequest != null) {
+            this.CpuRequest = new String(source.CpuRequest);
+        }
+        if (source.MemRequest != null) {
+            this.MemRequest = new String(source.MemRequest);
+        }
+        if (source.GroupResourceType != null) {
+            this.GroupResourceType = new String(source.GroupResourceType);
+        }
+        if (source.SubnetId != null) {
+            this.SubnetId = new String(source.SubnetId);
+        }
+        if (source.AgentCpuRequest != null) {
+            this.AgentCpuRequest = new String(source.AgentCpuRequest);
+        }
+        if (source.AgentCpuLimit != null) {
+            this.AgentCpuLimit = new String(source.AgentCpuLimit);
+        }
+        if (source.AgentMemRequest != null) {
+            this.AgentMemRequest = new String(source.AgentMemRequest);
+        }
+        if (source.AgentMemLimit != null) {
+            this.AgentMemLimit = new String(source.AgentMemLimit);
+        }
+        if (source.IstioCpuRequest != null) {
+            this.IstioCpuRequest = new String(source.IstioCpuRequest);
+        }
+        if (source.IstioCpuLimit != null) {
+            this.IstioCpuLimit = new String(source.IstioCpuLimit);
+        }
+        if (source.IstioMemRequest != null) {
+            this.IstioMemRequest = new String(source.IstioMemRequest);
+        }
+        if (source.IstioMemLimit != null) {
+            this.IstioMemLimit = new String(source.IstioMemLimit);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

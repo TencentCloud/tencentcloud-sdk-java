@@ -252,6 +252,56 @@ public class CreateClusterRequest extends AbstractModel{
         this.ClusterType = ClusterType;
     }
 
+    public CreateClusterRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateClusterRequest(CreateClusterRequest source) {
+        if (source.IdlType != null) {
+            this.IdlType = new String(source.IdlType);
+        }
+        if (source.ClusterName != null) {
+            this.ClusterName = new String(source.ClusterName);
+        }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.SubnetId != null) {
+            this.SubnetId = new String(source.SubnetId);
+        }
+        if (source.Password != null) {
+            this.Password = new String(source.Password);
+        }
+        if (source.ResourceTags != null) {
+            this.ResourceTags = new TagInfoUnit[source.ResourceTags.length];
+            for (int i = 0; i < source.ResourceTags.length; i++) {
+                this.ResourceTags[i] = new TagInfoUnit(source.ResourceTags[i]);
+            }
+        }
+        if (source.Ipv6Enable != null) {
+            this.Ipv6Enable = new Long(source.Ipv6Enable);
+        }
+        if (source.ServerList != null) {
+            this.ServerList = new MachineInfo[source.ServerList.length];
+            for (int i = 0; i < source.ServerList.length; i++) {
+                this.ServerList[i] = new MachineInfo(source.ServerList[i]);
+            }
+        }
+        if (source.ProxyList != null) {
+            this.ProxyList = new MachineInfo[source.ProxyList.length];
+            for (int i = 0; i < source.ProxyList.length; i++) {
+                this.ProxyList[i] = new MachineInfo(source.ProxyList[i]);
+            }
+        }
+        if (source.ClusterType != null) {
+            this.ClusterType = new Long(source.ClusterType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -91,6 +91,26 @@ public class BunkZone extends AbstractModel{
         this.BunkCodes = BunkCodes;
     }
 
+    public BunkZone() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public BunkZone(BunkZone source) {
+        if (source.ZoneId != null) {
+            this.ZoneId = new Long(source.ZoneId);
+        }
+        if (source.ZoneName != null) {
+            this.ZoneName = new String(source.ZoneName);
+        }
+        if (source.BunkCodes != null) {
+            this.BunkCodes = new String(source.BunkCodes);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

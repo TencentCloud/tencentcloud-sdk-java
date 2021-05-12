@@ -68,6 +68,23 @@ public class HourTrafficInfoDetail extends AbstractModel{
         this.HourTrafficTotalCount = HourTrafficTotalCount;
     }
 
+    public HourTrafficInfoDetail() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public HourTrafficInfoDetail(HourTrafficInfoDetail source) {
+        if (source.Hour != null) {
+            this.Hour = new Long(source.Hour);
+        }
+        if (source.HourTrafficTotalCount != null) {
+            this.HourTrafficTotalCount = new Long(source.HourTrafficTotalCount);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

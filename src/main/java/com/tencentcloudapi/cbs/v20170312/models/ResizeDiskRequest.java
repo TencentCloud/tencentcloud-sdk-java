@@ -68,6 +68,23 @@ public class ResizeDiskRequest extends AbstractModel{
         this.DiskSize = DiskSize;
     }
 
+    public ResizeDiskRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ResizeDiskRequest(ResizeDiskRequest source) {
+        if (source.DiskId != null) {
+            this.DiskId = new String(source.DiskId);
+        }
+        if (source.DiskSize != null) {
+            this.DiskSize = new Long(source.DiskSize);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

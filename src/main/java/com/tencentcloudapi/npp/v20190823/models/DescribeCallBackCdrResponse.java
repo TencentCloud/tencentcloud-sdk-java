@@ -157,6 +157,35 @@ public class DescribeCallBackCdrResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeCallBackCdrResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeCallBackCdrResponse(DescribeCallBackCdrResponse source) {
+        if (source.Cdr != null) {
+            this.Cdr = new CallBackCdr[source.Cdr.length];
+            for (int i = 0; i < source.Cdr.length; i++) {
+                this.Cdr[i] = new CallBackCdr(source.Cdr[i]);
+            }
+        }
+        if (source.Offset != null) {
+            this.Offset = new String(source.Offset);
+        }
+        if (source.ErrorCode != null) {
+            this.ErrorCode = new String(source.ErrorCode);
+        }
+        if (source.Msg != null) {
+            this.Msg = new String(source.Msg);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -73,6 +73,26 @@ public class DescribeServiceDiscoveryResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeServiceDiscoveryResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeServiceDiscoveryResponse(DescribeServiceDiscoveryResponse source) {
+        if (source.ServiceDiscoverySet != null) {
+            this.ServiceDiscoverySet = new ServiceDiscoveryItem[source.ServiceDiscoverySet.length];
+            for (int i = 0; i < source.ServiceDiscoverySet.length; i++) {
+                this.ServiceDiscoverySet[i] = new ServiceDiscoveryItem(source.ServiceDiscoverySet[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -68,6 +68,26 @@ public class AiRecognitionTaskObjectResultItem extends AbstractModel{
         this.SegmentSet = SegmentSet;
     }
 
+    public AiRecognitionTaskObjectResultItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AiRecognitionTaskObjectResultItem(AiRecognitionTaskObjectResultItem source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.SegmentSet != null) {
+            this.SegmentSet = new AiRecognitionTaskObjectSeqmentItem[source.SegmentSet.length];
+            for (int i = 0; i < source.SegmentSet.length; i++) {
+                this.SegmentSet[i] = new AiRecognitionTaskObjectSeqmentItem(source.SegmentSet[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

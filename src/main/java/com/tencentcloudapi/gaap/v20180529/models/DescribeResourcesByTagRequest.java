@@ -111,6 +111,26 @@ RealServer表示源站。
         this.ResourceType = ResourceType;
     }
 
+    public DescribeResourcesByTagRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeResourcesByTagRequest(DescribeResourcesByTagRequest source) {
+        if (source.TagKey != null) {
+            this.TagKey = new String(source.TagKey);
+        }
+        if (source.TagValue != null) {
+            this.TagValue = new String(source.TagValue);
+        }
+        if (source.ResourceType != null) {
+            this.ResourceType = new String(source.ResourceType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

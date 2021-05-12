@@ -96,6 +96,29 @@ public class DescribeBackupTimeResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeBackupTimeResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeBackupTimeResponse(DescribeBackupTimeResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.Items != null) {
+            this.Items = new DBBackupTimeConfig[source.Items.length];
+            for (int i = 0; i < source.Items.length; i++) {
+                this.Items[i] = new DBBackupTimeConfig(source.Items[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

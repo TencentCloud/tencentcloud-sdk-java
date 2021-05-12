@@ -91,6 +91,29 @@ public class ModifyAlarmPolicyTasksRequest extends AbstractModel{
         this.TriggerTasks = TriggerTasks;
     }
 
+    public ModifyAlarmPolicyTasksRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyAlarmPolicyTasksRequest(ModifyAlarmPolicyTasksRequest source) {
+        if (source.Module != null) {
+            this.Module = new String(source.Module);
+        }
+        if (source.PolicyId != null) {
+            this.PolicyId = new String(source.PolicyId);
+        }
+        if (source.TriggerTasks != null) {
+            this.TriggerTasks = new AlarmPolicyTriggerTask[source.TriggerTasks.length];
+            for (int i = 0; i < source.TriggerTasks.length; i++) {
+                this.TriggerTasks[i] = new AlarmPolicyTriggerTask(source.TriggerTasks[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

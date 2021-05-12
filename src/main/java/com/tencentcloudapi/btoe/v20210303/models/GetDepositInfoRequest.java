@@ -45,6 +45,20 @@ public class GetDepositInfoRequest extends AbstractModel{
         this.EvidenceId = EvidenceId;
     }
 
+    public GetDepositInfoRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GetDepositInfoRequest(GetDepositInfoRequest source) {
+        if (source.EvidenceId != null) {
+            this.EvidenceId = new String(source.EvidenceId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

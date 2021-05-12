@@ -45,6 +45,20 @@ public class HaVipDisassociateAddressIpRequest extends AbstractModel{
         this.HaVipId = HaVipId;
     }
 
+    public HaVipDisassociateAddressIpRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public HaVipDisassociateAddressIpRequest(HaVipDisassociateAddressIpRequest source) {
+        if (source.HaVipId != null) {
+            this.HaVipId = new String(source.HaVipId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

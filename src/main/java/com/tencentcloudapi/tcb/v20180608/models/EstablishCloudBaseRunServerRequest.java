@@ -275,6 +275,50 @@ public class EstablishCloudBaseRunServerRequest extends AbstractModel{
         this.PublicAccess = PublicAccess;
     }
 
+    public EstablishCloudBaseRunServerRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public EstablishCloudBaseRunServerRequest(EstablishCloudBaseRunServerRequest source) {
+        if (source.EnvId != null) {
+            this.EnvId = new String(source.EnvId);
+        }
+        if (source.ServiceName != null) {
+            this.ServiceName = new String(source.ServiceName);
+        }
+        if (source.IsPublic != null) {
+            this.IsPublic = new Boolean(source.IsPublic);
+        }
+        if (source.ImageRepo != null) {
+            this.ImageRepo = new String(source.ImageRepo);
+        }
+        if (source.Remark != null) {
+            this.Remark = new String(source.Remark);
+        }
+        if (source.EsInfo != null) {
+            this.EsInfo = new CloudBaseEsInfo(source.EsInfo);
+        }
+        if (source.LogType != null) {
+            this.LogType = new String(source.LogType);
+        }
+        if (source.OperatorRemark != null) {
+            this.OperatorRemark = new String(source.OperatorRemark);
+        }
+        if (source.Source != null) {
+            this.Source = new String(source.Source);
+        }
+        if (source.VpcInfo != null) {
+            this.VpcInfo = new CloudBaseRunVpcInfo(source.VpcInfo);
+        }
+        if (source.PublicAccess != null) {
+            this.PublicAccess = new Long(source.PublicAccess);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

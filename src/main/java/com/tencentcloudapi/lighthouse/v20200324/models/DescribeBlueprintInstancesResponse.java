@@ -91,6 +91,29 @@ public class DescribeBlueprintInstancesResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeBlueprintInstancesResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeBlueprintInstancesResponse(DescribeBlueprintInstancesResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.BlueprintInstanceSet != null) {
+            this.BlueprintInstanceSet = new BlueprintInstance[source.BlueprintInstanceSet.length];
+            for (int i = 0; i < source.BlueprintInstanceSet.length; i++) {
+                this.BlueprintInstanceSet[i] = new BlueprintInstance(source.BlueprintInstanceSet[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

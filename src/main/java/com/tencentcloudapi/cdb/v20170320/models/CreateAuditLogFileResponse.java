@@ -68,6 +68,23 @@ public class CreateAuditLogFileResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public CreateAuditLogFileResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateAuditLogFileResponse(CreateAuditLogFileResponse source) {
+        if (source.FileName != null) {
+            this.FileName = new String(source.FileName);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

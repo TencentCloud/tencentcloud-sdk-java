@@ -114,6 +114,29 @@ public class ListLayersRequest extends AbstractModel{
         this.SearchKey = SearchKey;
     }
 
+    public ListLayersRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ListLayersRequest(ListLayersRequest source) {
+        if (source.CompatibleRuntime != null) {
+            this.CompatibleRuntime = new String(source.CompatibleRuntime);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.SearchKey != null) {
+            this.SearchKey = new String(source.SearchKey);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

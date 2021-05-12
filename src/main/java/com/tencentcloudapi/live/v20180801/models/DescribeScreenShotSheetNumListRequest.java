@@ -137,6 +137,35 @@ public class DescribeScreenShotSheetNumListRequest extends AbstractModel{
         this.Granularity = Granularity;
     }
 
+    public DescribeScreenShotSheetNumListRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeScreenShotSheetNumListRequest(DescribeScreenShotSheetNumListRequest source) {
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+        if (source.Zone != null) {
+            this.Zone = new String(source.Zone);
+        }
+        if (source.PushDomains != null) {
+            this.PushDomains = new String[source.PushDomains.length];
+            for (int i = 0; i < source.PushDomains.length; i++) {
+                this.PushDomains[i] = new String(source.PushDomains[i]);
+            }
+        }
+        if (source.Granularity != null) {
+            this.Granularity = new String(source.Granularity);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

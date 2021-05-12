@@ -321,6 +321,83 @@ public class ApplicationDataStatistics extends AbstractModel{
         this.PcuDataSum = PcuDataSum;
     }
 
+    public ApplicationDataStatistics() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ApplicationDataStatistics(ApplicationDataStatistics source) {
+        if (source.BizId != null) {
+            this.BizId = new Long(source.BizId);
+        }
+        if (source.DauDataNum != null) {
+            this.DauDataNum = new Long(source.DauDataNum);
+        }
+        if (source.DauDataMainland != null) {
+            this.DauDataMainland = new StatisticsItem[source.DauDataMainland.length];
+            for (int i = 0; i < source.DauDataMainland.length; i++) {
+                this.DauDataMainland[i] = new StatisticsItem(source.DauDataMainland[i]);
+            }
+        }
+        if (source.DauDataOversea != null) {
+            this.DauDataOversea = new StatisticsItem[source.DauDataOversea.length];
+            for (int i = 0; i < source.DauDataOversea.length; i++) {
+                this.DauDataOversea[i] = new StatisticsItem(source.DauDataOversea[i]);
+            }
+        }
+        if (source.DauDataSum != null) {
+            this.DauDataSum = new StatisticsItem[source.DauDataSum.length];
+            for (int i = 0; i < source.DauDataSum.length; i++) {
+                this.DauDataSum[i] = new StatisticsItem(source.DauDataSum[i]);
+            }
+        }
+        if (source.DurationDataNum != null) {
+            this.DurationDataNum = new Long(source.DurationDataNum);
+        }
+        if (source.DurationDataMainland != null) {
+            this.DurationDataMainland = new StatisticsItem[source.DurationDataMainland.length];
+            for (int i = 0; i < source.DurationDataMainland.length; i++) {
+                this.DurationDataMainland[i] = new StatisticsItem(source.DurationDataMainland[i]);
+            }
+        }
+        if (source.DurationDataOversea != null) {
+            this.DurationDataOversea = new StatisticsItem[source.DurationDataOversea.length];
+            for (int i = 0; i < source.DurationDataOversea.length; i++) {
+                this.DurationDataOversea[i] = new StatisticsItem(source.DurationDataOversea[i]);
+            }
+        }
+        if (source.DurationDataSum != null) {
+            this.DurationDataSum = new StatisticsItem[source.DurationDataSum.length];
+            for (int i = 0; i < source.DurationDataSum.length; i++) {
+                this.DurationDataSum[i] = new StatisticsItem(source.DurationDataSum[i]);
+            }
+        }
+        if (source.PcuDataNum != null) {
+            this.PcuDataNum = new Long(source.PcuDataNum);
+        }
+        if (source.PcuDataMainland != null) {
+            this.PcuDataMainland = new StatisticsItem[source.PcuDataMainland.length];
+            for (int i = 0; i < source.PcuDataMainland.length; i++) {
+                this.PcuDataMainland[i] = new StatisticsItem(source.PcuDataMainland[i]);
+            }
+        }
+        if (source.PcuDataOversea != null) {
+            this.PcuDataOversea = new StatisticsItem[source.PcuDataOversea.length];
+            for (int i = 0; i < source.PcuDataOversea.length; i++) {
+                this.PcuDataOversea[i] = new StatisticsItem(source.PcuDataOversea[i]);
+            }
+        }
+        if (source.PcuDataSum != null) {
+            this.PcuDataSum = new StatisticsItem[source.PcuDataSum.length];
+            for (int i = 0; i < source.PcuDataSum.length; i++) {
+                this.PcuDataSum[i] = new StatisticsItem(source.PcuDataSum[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

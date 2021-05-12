@@ -386,6 +386,56 @@ public class Instance extends AbstractModel{
         this.AutoScalingGroupName = AutoScalingGroupName;
     }
 
+    public Instance() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Instance(Instance source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.AutoScalingGroupId != null) {
+            this.AutoScalingGroupId = new String(source.AutoScalingGroupId);
+        }
+        if (source.LaunchConfigurationId != null) {
+            this.LaunchConfigurationId = new String(source.LaunchConfigurationId);
+        }
+        if (source.LaunchConfigurationName != null) {
+            this.LaunchConfigurationName = new String(source.LaunchConfigurationName);
+        }
+        if (source.LifeCycleState != null) {
+            this.LifeCycleState = new String(source.LifeCycleState);
+        }
+        if (source.HealthStatus != null) {
+            this.HealthStatus = new String(source.HealthStatus);
+        }
+        if (source.ProtectedFromScaleIn != null) {
+            this.ProtectedFromScaleIn = new Boolean(source.ProtectedFromScaleIn);
+        }
+        if (source.Zone != null) {
+            this.Zone = new String(source.Zone);
+        }
+        if (source.CreationType != null) {
+            this.CreationType = new String(source.CreationType);
+        }
+        if (source.AddTime != null) {
+            this.AddTime = new String(source.AddTime);
+        }
+        if (source.InstanceType != null) {
+            this.InstanceType = new String(source.InstanceType);
+        }
+        if (source.VersionNumber != null) {
+            this.VersionNumber = new Long(source.VersionNumber);
+        }
+        if (source.AutoScalingGroupName != null) {
+            this.AutoScalingGroupName = new String(source.AutoScalingGroupName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

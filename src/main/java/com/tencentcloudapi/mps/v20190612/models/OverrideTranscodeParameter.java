@@ -180,6 +180,35 @@ public class OverrideTranscodeParameter extends AbstractModel{
         this.TEHDConfig = TEHDConfig;
     }
 
+    public OverrideTranscodeParameter() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public OverrideTranscodeParameter(OverrideTranscodeParameter source) {
+        if (source.Container != null) {
+            this.Container = new String(source.Container);
+        }
+        if (source.RemoveVideo != null) {
+            this.RemoveVideo = new Long(source.RemoveVideo);
+        }
+        if (source.RemoveAudio != null) {
+            this.RemoveAudio = new Long(source.RemoveAudio);
+        }
+        if (source.VideoTemplate != null) {
+            this.VideoTemplate = new VideoTemplateInfoForUpdate(source.VideoTemplate);
+        }
+        if (source.AudioTemplate != null) {
+            this.AudioTemplate = new AudioTemplateInfoForUpdate(source.AudioTemplate);
+        }
+        if (source.TEHDConfig != null) {
+            this.TEHDConfig = new TEHDConfigForUpdate(source.TEHDConfig);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

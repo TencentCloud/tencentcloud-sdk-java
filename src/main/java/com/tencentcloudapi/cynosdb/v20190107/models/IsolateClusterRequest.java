@@ -73,6 +73,23 @@ public class IsolateClusterRequest extends AbstractModel{
         this.DbType = DbType;
     }
 
+    public IsolateClusterRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public IsolateClusterRequest(IsolateClusterRequest source) {
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
+        if (source.DbType != null) {
+            this.DbType = new String(source.DbType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

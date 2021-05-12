@@ -73,6 +73,23 @@ public class JoinGameServerSessionResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public JoinGameServerSessionResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public JoinGameServerSessionResponse(JoinGameServerSessionResponse source) {
+        if (source.PlayerSession != null) {
+            this.PlayerSession = new PlayerSession(source.PlayerSession);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

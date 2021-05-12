@@ -160,6 +160,35 @@ public class CreateRepositoryRequest extends AbstractModel{
         this.RepositoryDesc = RepositoryDesc;
     }
 
+    public CreateRepositoryRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateRepositoryRequest(CreateRepositoryRequest source) {
+        if (source.RepositoryName != null) {
+            this.RepositoryName = new String(source.RepositoryName);
+        }
+        if (source.RepositoryType != null) {
+            this.RepositoryType = new String(source.RepositoryType);
+        }
+        if (source.BucketName != null) {
+            this.BucketName = new String(source.BucketName);
+        }
+        if (source.BucketRegion != null) {
+            this.BucketRegion = new String(source.BucketRegion);
+        }
+        if (source.Directory != null) {
+            this.Directory = new String(source.Directory);
+        }
+        if (source.RepositoryDesc != null) {
+            this.RepositoryDesc = new String(source.RepositoryDesc);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

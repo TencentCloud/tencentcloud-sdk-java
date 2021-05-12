@@ -68,6 +68,23 @@ public class TableColumn extends AbstractModel{
         this.Type = Type;
     }
 
+    public TableColumn() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TableColumn(TableColumn source) {
+        if (source.Col != null) {
+            this.Col = new String(source.Col);
+        }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

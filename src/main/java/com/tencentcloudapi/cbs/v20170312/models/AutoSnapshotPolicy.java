@@ -252,6 +252,53 @@ public class AutoSnapshotPolicy extends AbstractModel{
         this.DiskIdSet = DiskIdSet;
     }
 
+    public AutoSnapshotPolicy() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AutoSnapshotPolicy(AutoSnapshotPolicy source) {
+        if (source.AutoSnapshotPolicyId != null) {
+            this.AutoSnapshotPolicyId = new String(source.AutoSnapshotPolicyId);
+        }
+        if (source.AutoSnapshotPolicyName != null) {
+            this.AutoSnapshotPolicyName = new String(source.AutoSnapshotPolicyName);
+        }
+        if (source.AutoSnapshotPolicyState != null) {
+            this.AutoSnapshotPolicyState = new String(source.AutoSnapshotPolicyState);
+        }
+        if (source.IsActivated != null) {
+            this.IsActivated = new Boolean(source.IsActivated);
+        }
+        if (source.IsPermanent != null) {
+            this.IsPermanent = new Boolean(source.IsPermanent);
+        }
+        if (source.RetentionDays != null) {
+            this.RetentionDays = new Long(source.RetentionDays);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.NextTriggerTime != null) {
+            this.NextTriggerTime = new String(source.NextTriggerTime);
+        }
+        if (source.Policy != null) {
+            this.Policy = new Policy[source.Policy.length];
+            for (int i = 0; i < source.Policy.length; i++) {
+                this.Policy[i] = new Policy(source.Policy[i]);
+            }
+        }
+        if (source.DiskIdSet != null) {
+            this.DiskIdSet = new String[source.DiskIdSet.length];
+            for (int i = 0; i < source.DiskIdSet.length; i++) {
+                this.DiskIdSet[i] = new String(source.DiskIdSet[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -169,6 +169,29 @@ public class DescribeLivePackageInfoRequest extends AbstractModel{
         this.PageSize = PageSize;
     }
 
+    public DescribeLivePackageInfoRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeLivePackageInfoRequest(DescribeLivePackageInfoRequest source) {
+        if (source.PackageType != null) {
+            this.PackageType = new Long(source.PackageType);
+        }
+        if (source.OrderBy != null) {
+            this.OrderBy = new String(source.OrderBy);
+        }
+        if (source.PageNum != null) {
+            this.PageNum = new Long(source.PageNum);
+        }
+        if (source.PageSize != null) {
+            this.PageSize = new Long(source.PageSize);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

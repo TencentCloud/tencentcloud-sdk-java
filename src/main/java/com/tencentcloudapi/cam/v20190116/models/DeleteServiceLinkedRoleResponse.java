@@ -68,6 +68,23 @@ public class DeleteServiceLinkedRoleResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DeleteServiceLinkedRoleResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteServiceLinkedRoleResponse(DeleteServiceLinkedRoleResponse source) {
+        if (source.DeletionTaskId != null) {
+            this.DeletionTaskId = new String(source.DeletionTaskId);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

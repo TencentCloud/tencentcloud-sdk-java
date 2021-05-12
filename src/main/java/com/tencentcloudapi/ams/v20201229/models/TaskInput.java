@@ -91,6 +91,26 @@ public class TaskInput extends AbstractModel{
         this.Input = Input;
     }
 
+    public TaskInput() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TaskInput(TaskInput source) {
+        if (source.DataId != null) {
+            this.DataId = new String(source.DataId);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Input != null) {
+            this.Input = new StorageInfo(source.Input);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

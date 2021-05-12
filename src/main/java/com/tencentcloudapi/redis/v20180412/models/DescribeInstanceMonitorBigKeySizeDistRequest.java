@@ -68,6 +68,23 @@ public class DescribeInstanceMonitorBigKeySizeDistRequest extends AbstractModel{
         this.Date = Date;
     }
 
+    public DescribeInstanceMonitorBigKeySizeDistRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeInstanceMonitorBigKeySizeDistRequest(DescribeInstanceMonitorBigKeySizeDistRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.Date != null) {
+            this.Date = new String(source.Date);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

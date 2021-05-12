@@ -114,6 +114,29 @@ public class CreateUnblockIpResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public CreateUnblockIpResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateUnblockIpResponse(CreateUnblockIpResponse source) {
+        if (source.Ip != null) {
+            this.Ip = new String(source.Ip);
+        }
+        if (source.ActionType != null) {
+            this.ActionType = new String(source.ActionType);
+        }
+        if (source.UnblockTime != null) {
+            this.UnblockTime = new String(source.UnblockTime);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

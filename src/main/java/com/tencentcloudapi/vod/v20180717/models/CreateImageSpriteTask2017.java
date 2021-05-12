@@ -216,6 +216,44 @@ public class CreateImageSpriteTask2017 extends AbstractModel{
         this.WebVttUrl = WebVttUrl;
     }
 
+    public CreateImageSpriteTask2017() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateImageSpriteTask2017(CreateImageSpriteTask2017 source) {
+        if (source.TaskId != null) {
+            this.TaskId = new String(source.TaskId);
+        }
+        if (source.ErrCode != null) {
+            this.ErrCode = new Long(source.ErrCode);
+        }
+        if (source.Message != null) {
+            this.Message = new String(source.Message);
+        }
+        if (source.FileId != null) {
+            this.FileId = new String(source.FileId);
+        }
+        if (source.Definition != null) {
+            this.Definition = new Long(source.Definition);
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.ImageSpriteUrlSet != null) {
+            this.ImageSpriteUrlSet = new String[source.ImageSpriteUrlSet.length];
+            for (int i = 0; i < source.ImageSpriteUrlSet.length; i++) {
+                this.ImageSpriteUrlSet[i] = new String(source.ImageSpriteUrlSet[i]);
+            }
+        }
+        if (source.WebVttUrl != null) {
+            this.WebVttUrl = new String(source.WebVttUrl);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -193,6 +193,50 @@ public class ImagePolityDetect extends AbstractModel{
         this.Score = Score;
     }
 
+    public ImagePolityDetect() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ImagePolityDetect(ImagePolityDetect source) {
+        if (source.EvilType != null) {
+            this.EvilType = new Long(source.EvilType);
+        }
+        if (source.HitFlag != null) {
+            this.HitFlag = new Long(source.HitFlag);
+        }
+        if (source.PolityLogoDetail != null) {
+            this.PolityLogoDetail = new Logo[source.PolityLogoDetail.length];
+            for (int i = 0; i < source.PolityLogoDetail.length; i++) {
+                this.PolityLogoDetail[i] = new Logo(source.PolityLogoDetail[i]);
+            }
+        }
+        if (source.FaceNames != null) {
+            this.FaceNames = new String[source.FaceNames.length];
+            for (int i = 0; i < source.FaceNames.length; i++) {
+                this.FaceNames[i] = new String(source.FaceNames[i]);
+            }
+        }
+        if (source.Keywords != null) {
+            this.Keywords = new String[source.Keywords.length];
+            for (int i = 0; i < source.Keywords.length; i++) {
+                this.Keywords[i] = new String(source.Keywords[i]);
+            }
+        }
+        if (source.PolityItems != null) {
+            this.PolityItems = new String[source.PolityItems.length];
+            for (int i = 0; i < source.PolityItems.length; i++) {
+                this.PolityItems[i] = new String(source.PolityItems[i]);
+            }
+        }
+        if (source.Score != null) {
+            this.Score = new Long(source.Score);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

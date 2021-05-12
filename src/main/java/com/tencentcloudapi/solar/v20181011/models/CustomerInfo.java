@@ -577,6 +577,77 @@ public class CustomerInfo extends AbstractModel{
         this.WxProvince = WxProvince;
     }
 
+    public CustomerInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CustomerInfo(CustomerInfo source) {
+        if (source.Activity != null) {
+            this.Activity = new Long(source.Activity);
+        }
+        if (source.AudienceUserId != null) {
+            this.AudienceUserId = new String(source.AudienceUserId);
+        }
+        if (source.Avatar != null) {
+            this.Avatar = new String(source.Avatar);
+        }
+        if (source.City != null) {
+            this.City = new String(source.City);
+        }
+        if (source.LastActiveTime != null) {
+            this.LastActiveTime = new String(source.LastActiveTime);
+        }
+        if (source.MarkFlag != null) {
+            this.MarkFlag = new String(source.MarkFlag);
+        }
+        if (source.MonthActive != null) {
+            this.MonthActive = new Long(source.MonthActive);
+        }
+        if (source.MonthRecommend != null) {
+            this.MonthRecommend = new Long(source.MonthRecommend);
+        }
+        if (source.Phone != null) {
+            this.Phone = new String(source.Phone);
+        }
+        if (source.Province != null) {
+            this.Province = new String(source.Province);
+        }
+        if (source.RealName != null) {
+            this.RealName = new String(source.RealName);
+        }
+        if (source.RelChannelFlag != null) {
+            this.RelChannelFlag = new Long(source.RelChannelFlag);
+        }
+        if (source.Sex != null) {
+            this.Sex = new Long(source.Sex);
+        }
+        if (source.Spread != null) {
+            this.Spread = new Long(source.Spread);
+        }
+        if (source.WeekActive != null) {
+            this.WeekActive = new Long(source.WeekActive);
+        }
+        if (source.WeekRecommend != null) {
+            this.WeekRecommend = new Long(source.WeekRecommend);
+        }
+        if (source.WxCity != null) {
+            this.WxCity = new String(source.WxCity);
+        }
+        if (source.WxCountry != null) {
+            this.WxCountry = new String(source.WxCountry);
+        }
+        if (source.WxNickname != null) {
+            this.WxNickname = new String(source.WxNickname);
+        }
+        if (source.WxProvince != null) {
+            this.WxProvince = new String(source.WxProvince);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

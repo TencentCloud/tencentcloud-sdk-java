@@ -91,6 +91,26 @@ public class SendOrganizationInvitationRequest extends AbstractModel{
         this.Remark = Remark;
     }
 
+    public SendOrganizationInvitationRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SendOrganizationInvitationRequest(SendOrganizationInvitationRequest source) {
+        if (source.InviteUin != null) {
+            this.InviteUin = new Long(source.InviteUin);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Remark != null) {
+            this.Remark = new String(source.Remark);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

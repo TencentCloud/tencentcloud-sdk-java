@@ -137,6 +137,32 @@ public class SmsGetCrowdUploadInfoResponse extends AbstractModel{
         this.CosInfo = CosInfo;
     }
 
+    public SmsGetCrowdUploadInfoResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SmsGetCrowdUploadInfoResponse(SmsGetCrowdUploadInfoResponse source) {
+        if (source.ExpiredTime != null) {
+            this.ExpiredTime = new Long(source.ExpiredTime);
+        }
+        if (source.SessionToken != null) {
+            this.SessionToken = new String(source.SessionToken);
+        }
+        if (source.TmpSecretId != null) {
+            this.TmpSecretId = new String(source.TmpSecretId);
+        }
+        if (source.TmpSecretKey != null) {
+            this.TmpSecretKey = new String(source.TmpSecretKey);
+        }
+        if (source.CosInfo != null) {
+            this.CosInfo = new UploadFansInfoCosInfo(source.CosInfo);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

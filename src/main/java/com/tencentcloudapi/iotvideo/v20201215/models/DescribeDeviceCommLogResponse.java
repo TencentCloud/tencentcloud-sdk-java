@@ -114,6 +114,32 @@ public class DescribeDeviceCommLogResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeDeviceCommLogResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeDeviceCommLogResponse(DescribeDeviceCommLogResponse source) {
+        if (source.Listover != null) {
+            this.Listover = new Boolean(source.Listover);
+        }
+        if (source.Context != null) {
+            this.Context = new String(source.Context);
+        }
+        if (source.Results != null) {
+            this.Results = new DeviceCommLogItem[source.Results.length];
+            for (int i = 0; i < source.Results.length; i++) {
+                this.Results[i] = new DeviceCommLogItem(source.Results[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

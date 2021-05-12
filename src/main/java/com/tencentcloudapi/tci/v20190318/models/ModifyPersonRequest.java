@@ -206,6 +206,41 @@ public class ModifyPersonRequest extends AbstractModel{
         this.StudentNumber = StudentNumber;
     }
 
+    public ModifyPersonRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyPersonRequest(ModifyPersonRequest source) {
+        if (source.LibraryId != null) {
+            this.LibraryId = new String(source.LibraryId);
+        }
+        if (source.PersonId != null) {
+            this.PersonId = new String(source.PersonId);
+        }
+        if (source.JobNumber != null) {
+            this.JobNumber = new String(source.JobNumber);
+        }
+        if (source.Mail != null) {
+            this.Mail = new String(source.Mail);
+        }
+        if (source.Male != null) {
+            this.Male = new Long(source.Male);
+        }
+        if (source.PersonName != null) {
+            this.PersonName = new String(source.PersonName);
+        }
+        if (source.PhoneNumber != null) {
+            this.PhoneNumber = new String(source.PhoneNumber);
+        }
+        if (source.StudentNumber != null) {
+            this.StudentNumber = new String(source.StudentNumber);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

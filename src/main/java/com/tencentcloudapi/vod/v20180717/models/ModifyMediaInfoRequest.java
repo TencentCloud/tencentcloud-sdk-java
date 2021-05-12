@@ -405,6 +405,83 @@ public class ModifyMediaInfoRequest extends AbstractModel{
         this.SubAppId = SubAppId;
     }
 
+    public ModifyMediaInfoRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyMediaInfoRequest(ModifyMediaInfoRequest source) {
+        if (source.FileId != null) {
+            this.FileId = new String(source.FileId);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.ClassId != null) {
+            this.ClassId = new Long(source.ClassId);
+        }
+        if (source.ExpireTime != null) {
+            this.ExpireTime = new String(source.ExpireTime);
+        }
+        if (source.CoverData != null) {
+            this.CoverData = new String(source.CoverData);
+        }
+        if (source.AddKeyFrameDescs != null) {
+            this.AddKeyFrameDescs = new MediaKeyFrameDescItem[source.AddKeyFrameDescs.length];
+            for (int i = 0; i < source.AddKeyFrameDescs.length; i++) {
+                this.AddKeyFrameDescs[i] = new MediaKeyFrameDescItem(source.AddKeyFrameDescs[i]);
+            }
+        }
+        if (source.DeleteKeyFrameDescs != null) {
+            this.DeleteKeyFrameDescs = new Float[source.DeleteKeyFrameDescs.length];
+            for (int i = 0; i < source.DeleteKeyFrameDescs.length; i++) {
+                this.DeleteKeyFrameDescs[i] = new Float(source.DeleteKeyFrameDescs[i]);
+            }
+        }
+        if (source.ClearKeyFrameDescs != null) {
+            this.ClearKeyFrameDescs = new Long(source.ClearKeyFrameDescs);
+        }
+        if (source.AddTags != null) {
+            this.AddTags = new String[source.AddTags.length];
+            for (int i = 0; i < source.AddTags.length; i++) {
+                this.AddTags[i] = new String(source.AddTags[i]);
+            }
+        }
+        if (source.DeleteTags != null) {
+            this.DeleteTags = new String[source.DeleteTags.length];
+            for (int i = 0; i < source.DeleteTags.length; i++) {
+                this.DeleteTags[i] = new String(source.DeleteTags[i]);
+            }
+        }
+        if (source.ClearTags != null) {
+            this.ClearTags = new Long(source.ClearTags);
+        }
+        if (source.AddSubtitles != null) {
+            this.AddSubtitles = new MediaSubtitleInput[source.AddSubtitles.length];
+            for (int i = 0; i < source.AddSubtitles.length; i++) {
+                this.AddSubtitles[i] = new MediaSubtitleInput(source.AddSubtitles[i]);
+            }
+        }
+        if (source.DeleteSubtitleIds != null) {
+            this.DeleteSubtitleIds = new String[source.DeleteSubtitleIds.length];
+            for (int i = 0; i < source.DeleteSubtitleIds.length; i++) {
+                this.DeleteSubtitleIds[i] = new String(source.DeleteSubtitleIds[i]);
+            }
+        }
+        if (source.ClearSubtitles != null) {
+            this.ClearSubtitles = new Long(source.ClearSubtitles);
+        }
+        if (source.SubAppId != null) {
+            this.SubAppId = new Long(source.SubAppId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

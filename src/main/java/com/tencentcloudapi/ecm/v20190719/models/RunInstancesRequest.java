@@ -503,6 +503,77 @@ Windows 实例：名字符长度为[2, 15]，允许字母（不限制大小写�
         this.InstanceChargeType = InstanceChargeType;
     }
 
+    public RunInstancesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RunInstancesRequest(RunInstancesRequest source) {
+        if (source.ZoneInstanceCountISPSet != null) {
+            this.ZoneInstanceCountISPSet = new ZoneInstanceCountISP[source.ZoneInstanceCountISPSet.length];
+            for (int i = 0; i < source.ZoneInstanceCountISPSet.length; i++) {
+                this.ZoneInstanceCountISPSet[i] = new ZoneInstanceCountISP(source.ZoneInstanceCountISPSet[i]);
+            }
+        }
+        if (source.Password != null) {
+            this.Password = new String(source.Password);
+        }
+        if (source.InternetMaxBandwidthOut != null) {
+            this.InternetMaxBandwidthOut = new Long(source.InternetMaxBandwidthOut);
+        }
+        if (source.ModuleId != null) {
+            this.ModuleId = new String(source.ModuleId);
+        }
+        if (source.ImageId != null) {
+            this.ImageId = new String(source.ImageId);
+        }
+        if (source.InstanceName != null) {
+            this.InstanceName = new String(source.InstanceName);
+        }
+        if (source.HostName != null) {
+            this.HostName = new String(source.HostName);
+        }
+        if (source.ClientToken != null) {
+            this.ClientToken = new String(source.ClientToken);
+        }
+        if (source.EnhancedService != null) {
+            this.EnhancedService = new EnhancedService(source.EnhancedService);
+        }
+        if (source.TagSpecification != null) {
+            this.TagSpecification = new TagSpecification[source.TagSpecification.length];
+            for (int i = 0; i < source.TagSpecification.length; i++) {
+                this.TagSpecification[i] = new TagSpecification(source.TagSpecification[i]);
+            }
+        }
+        if (source.UserData != null) {
+            this.UserData = new String(source.UserData);
+        }
+        if (source.InstanceType != null) {
+            this.InstanceType = new String(source.InstanceType);
+        }
+        if (source.DataDiskSize != null) {
+            this.DataDiskSize = new Long(source.DataDiskSize);
+        }
+        if (source.SecurityGroupIds != null) {
+            this.SecurityGroupIds = new String[source.SecurityGroupIds.length];
+            for (int i = 0; i < source.SecurityGroupIds.length; i++) {
+                this.SecurityGroupIds[i] = new String(source.SecurityGroupIds[i]);
+            }
+        }
+        if (source.SystemDiskSize != null) {
+            this.SystemDiskSize = new Long(source.SystemDiskSize);
+        }
+        if (source.InternetMaxBandwidthIn != null) {
+            this.InternetMaxBandwidthIn = new Long(source.InternetMaxBandwidthIn);
+        }
+        if (source.InstanceChargeType != null) {
+            this.InstanceChargeType = new Long(source.InstanceChargeType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

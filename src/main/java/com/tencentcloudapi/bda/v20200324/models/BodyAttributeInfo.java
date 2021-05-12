@@ -220,6 +220,35 @@ AttributesType 不含 LowerBodyCloth 或检测超过 5 个人体时，此参数�
         this.LowerBodyCloth = LowerBodyCloth;
     }
 
+    public BodyAttributeInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public BodyAttributeInfo(BodyAttributeInfo source) {
+        if (source.Age != null) {
+            this.Age = new Age(source.Age);
+        }
+        if (source.Bag != null) {
+            this.Bag = new Bag(source.Bag);
+        }
+        if (source.Gender != null) {
+            this.Gender = new Gender(source.Gender);
+        }
+        if (source.Orientation != null) {
+            this.Orientation = new Orientation(source.Orientation);
+        }
+        if (source.UpperBodyCloth != null) {
+            this.UpperBodyCloth = new UpperBodyCloth(source.UpperBodyCloth);
+        }
+        if (source.LowerBodyCloth != null) {
+            this.LowerBodyCloth = new LowerBodyCloth(source.LowerBodyCloth);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

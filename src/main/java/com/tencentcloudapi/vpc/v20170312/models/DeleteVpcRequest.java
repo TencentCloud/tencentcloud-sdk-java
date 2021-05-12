@@ -45,6 +45,20 @@ public class DeleteVpcRequest extends AbstractModel{
         this.VpcId = VpcId;
     }
 
+    public DeleteVpcRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteVpcRequest(DeleteVpcRequest source) {
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

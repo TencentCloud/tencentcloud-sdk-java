@@ -671,6 +671,113 @@ public class LoadBalancer extends AbstractModel{
         this.CurVips = CurVips;
     }
 
+    public LoadBalancer() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public LoadBalancer(LoadBalancer source) {
+        if (source.LoadBalancerId != null) {
+            this.LoadBalancerId = new String(source.LoadBalancerId);
+        }
+        if (source.ProjectId != null) {
+            this.ProjectId = new Long(source.ProjectId);
+        }
+        if (source.LoadBalancerName != null) {
+            this.LoadBalancerName = new String(source.LoadBalancerName);
+        }
+        if (source.LoadBalancerType != null) {
+            this.LoadBalancerType = new String(source.LoadBalancerType);
+        }
+        if (source.Exclusive != null) {
+            this.Exclusive = new Long(source.Exclusive);
+        }
+        if (source.TgwSetType != null) {
+            this.TgwSetType = new String(source.TgwSetType);
+        }
+        if (source.Domain != null) {
+            this.Domain = new String(source.Domain);
+        }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.SubnetId != null) {
+            this.SubnetId = new String(source.SubnetId);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.PayMode != null) {
+            this.PayMode = new String(source.PayMode);
+        }
+        if (source.LatestPayMode != null) {
+            this.LatestPayMode = new String(source.LatestPayMode);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.StatusTime != null) {
+            this.StatusTime = new String(source.StatusTime);
+        }
+        if (source.VpcName != null) {
+            this.VpcName = new String(source.VpcName);
+        }
+        if (source.VpcCidrBlock != null) {
+            this.VpcCidrBlock = new String(source.VpcCidrBlock);
+        }
+        if (source.LoadBalancerVips != null) {
+            this.LoadBalancerVips = new String[source.LoadBalancerVips.length];
+            for (int i = 0; i < source.LoadBalancerVips.length; i++) {
+                this.LoadBalancerVips[i] = new String(source.LoadBalancerVips[i]);
+            }
+        }
+        if (source.SupportListenerTypes != null) {
+            this.SupportListenerTypes = new String[source.SupportListenerTypes.length];
+            for (int i = 0; i < source.SupportListenerTypes.length; i++) {
+                this.SupportListenerTypes[i] = new String(source.SupportListenerTypes[i]);
+            }
+        }
+        if (source.Bandwidth != null) {
+            this.Bandwidth = new Long(source.Bandwidth);
+        }
+        if (source.ConfId != null) {
+            this.ConfId = new String(source.ConfId);
+        }
+        if (source.ConfName != null) {
+            this.ConfName = new String(source.ConfName);
+        }
+        if (source.LoadBalancerVipv6s != null) {
+            this.LoadBalancerVipv6s = new String[source.LoadBalancerVipv6s.length];
+            for (int i = 0; i < source.LoadBalancerVipv6s.length; i++) {
+                this.LoadBalancerVipv6s[i] = new String(source.LoadBalancerVipv6s[i]);
+            }
+        }
+        if (source.IpProtocolType != null) {
+            this.IpProtocolType = new String(source.IpProtocolType);
+        }
+        if (source.BzPayMode != null) {
+            this.BzPayMode = new String(source.BzPayMode);
+        }
+        if (source.BzL4Metrics != null) {
+            this.BzL4Metrics = new String(source.BzL4Metrics);
+        }
+        if (source.BzL7Metrics != null) {
+            this.BzL7Metrics = new String(source.BzL7Metrics);
+        }
+        if (source.IntVpcId != null) {
+            this.IntVpcId = new Long(source.IntVpcId);
+        }
+        if (source.CurVips != null) {
+            this.CurVips = new String[source.CurVips.length];
+            for (int i = 0; i < source.CurVips.length; i++) {
+                this.CurVips[i] = new String(source.CurVips[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -137,6 +137,38 @@ public class AddressTemplateGroup extends AbstractModel{
         this.AddressTemplateSet = AddressTemplateSet;
     }
 
+    public AddressTemplateGroup() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AddressTemplateGroup(AddressTemplateGroup source) {
+        if (source.AddressTemplateGroupName != null) {
+            this.AddressTemplateGroupName = new String(source.AddressTemplateGroupName);
+        }
+        if (source.AddressTemplateGroupId != null) {
+            this.AddressTemplateGroupId = new String(source.AddressTemplateGroupId);
+        }
+        if (source.AddressTemplateIdSet != null) {
+            this.AddressTemplateIdSet = new String[source.AddressTemplateIdSet.length];
+            for (int i = 0; i < source.AddressTemplateIdSet.length; i++) {
+                this.AddressTemplateIdSet[i] = new String(source.AddressTemplateIdSet[i]);
+            }
+        }
+        if (source.CreatedTime != null) {
+            this.CreatedTime = new String(source.CreatedTime);
+        }
+        if (source.AddressTemplateSet != null) {
+            this.AddressTemplateSet = new AddressTemplateItem[source.AddressTemplateSet.length];
+            for (int i = 0; i < source.AddressTemplateSet.length; i++) {
+                this.AddressTemplateSet[i] = new AddressTemplateItem(source.AddressTemplateSet[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

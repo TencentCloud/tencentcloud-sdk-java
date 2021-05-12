@@ -300,6 +300,53 @@ public class DomainCertInfo extends AbstractModel{
         this.CloudCertId = CloudCertId;
     }
 
+    public DomainCertInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DomainCertInfo(DomainCertInfo source) {
+        if (source.CertId != null) {
+            this.CertId = new Long(source.CertId);
+        }
+        if (source.CertName != null) {
+            this.CertName = new String(source.CertName);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.HttpsCrt != null) {
+            this.HttpsCrt = new String(source.HttpsCrt);
+        }
+        if (source.CertType != null) {
+            this.CertType = new Long(source.CertType);
+        }
+        if (source.CertExpireTime != null) {
+            this.CertExpireTime = new String(source.CertExpireTime);
+        }
+        if (source.DomainName != null) {
+            this.DomainName = new String(source.DomainName);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.CertDomains != null) {
+            this.CertDomains = new String[source.CertDomains.length];
+            for (int i = 0; i < source.CertDomains.length; i++) {
+                this.CertDomains[i] = new String(source.CertDomains[i]);
+            }
+        }
+        if (source.CloudCertId != null) {
+            this.CloudCertId = new String(source.CloudCertId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

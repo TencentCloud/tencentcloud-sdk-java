@@ -165,6 +165,35 @@ public class VpcBindRecord extends AbstractModel{
         this.Remark = Remark;
     }
 
+    public VpcBindRecord() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public VpcBindRecord(VpcBindRecord source) {
+        if (source.UniqueVpcId != null) {
+            this.UniqueVpcId = new String(source.UniqueVpcId);
+        }
+        if (source.UniqueSubnetId != null) {
+            this.UniqueSubnetId = new String(source.UniqueSubnetId);
+        }
+        if (source.RouterId != null) {
+            this.RouterId = new String(source.RouterId);
+        }
+        if (source.Ip != null) {
+            this.Ip = new String(source.Ip);
+        }
+        if (source.Port != null) {
+            this.Port = new Long(source.Port);
+        }
+        if (source.Remark != null) {
+            this.Remark = new String(source.Remark);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -101,6 +101,26 @@ Sent = 1 表示设备已经在线并且订阅了控制下发的mqtt topic
         this.RequestId = RequestId;
     }
 
+    public ControlDeviceDataResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ControlDeviceDataResponse(ControlDeviceDataResponse source) {
+        if (source.Data != null) {
+            this.Data = new String(source.Data);
+        }
+        if (source.Result != null) {
+            this.Result = new String(source.Result);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

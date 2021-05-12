@@ -91,6 +91,29 @@ public class ListUsersForGroupResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public ListUsersForGroupResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ListUsersForGroupResponse(ListUsersForGroupResponse source) {
+        if (source.TotalNum != null) {
+            this.TotalNum = new Long(source.TotalNum);
+        }
+        if (source.UserInfo != null) {
+            this.UserInfo = new GroupMemberInfo[source.UserInfo.length];
+            for (int i = 0; i < source.UserInfo.length; i++) {
+                this.UserInfo[i] = new GroupMemberInfo(source.UserInfo[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

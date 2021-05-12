@@ -609,6 +609,89 @@ development 开发环境
         this.ReservedMessage = ReservedMessage;
     }
 
+    public ExecuteMemberTransactionRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ExecuteMemberTransactionRequest(ExecuteMemberTransactionRequest source) {
+        if (source.RequestType != null) {
+            this.RequestType = new String(source.RequestType);
+        }
+        if (source.MerchantCode != null) {
+            this.MerchantCode = new String(source.MerchantCode);
+        }
+        if (source.PayChannel != null) {
+            this.PayChannel = new String(source.PayChannel);
+        }
+        if (source.PayChannelSubId != null) {
+            this.PayChannelSubId = new Long(source.PayChannelSubId);
+        }
+        if (source.OutTransNetMemberCode != null) {
+            this.OutTransNetMemberCode = new String(source.OutTransNetMemberCode);
+        }
+        if (source.OutSubAccountName != null) {
+            this.OutSubAccountName = new String(source.OutSubAccountName);
+        }
+        if (source.InSubAccountName != null) {
+            this.InSubAccountName = new String(source.InSubAccountName);
+        }
+        if (source.OutSubAccountNumber != null) {
+            this.OutSubAccountNumber = new String(source.OutSubAccountNumber);
+        }
+        if (source.InSubAccountNumber != null) {
+            this.InSubAccountNumber = new String(source.InSubAccountNumber);
+        }
+        if (source.BankAccountNumber != null) {
+            this.BankAccountNumber = new String(source.BankAccountNumber);
+        }
+        if (source.CurrencyUnit != null) {
+            this.CurrencyUnit = new String(source.CurrencyUnit);
+        }
+        if (source.CurrencyType != null) {
+            this.CurrencyType = new String(source.CurrencyType);
+        }
+        if (source.CurrencyAmount != null) {
+            this.CurrencyAmount = new String(source.CurrencyAmount);
+        }
+        if (source.OrderId != null) {
+            this.OrderId = new String(source.OrderId);
+        }
+        if (source.MidasAppId != null) {
+            this.MidasAppId = new String(source.MidasAppId);
+        }
+        if (source.MidasSecretId != null) {
+            this.MidasSecretId = new String(source.MidasSecretId);
+        }
+        if (source.MidasSignature != null) {
+            this.MidasSignature = new String(source.MidasSignature);
+        }
+        if (source.TransSequenceNumber != null) {
+            this.TransSequenceNumber = new String(source.TransSequenceNumber);
+        }
+        if (source.InTransNetMemberCode != null) {
+            this.InTransNetMemberCode = new String(source.InTransNetMemberCode);
+        }
+        if (source.MidasEnvironment != null) {
+            this.MidasEnvironment = new String(source.MidasEnvironment);
+        }
+        if (source.PlatformShortNumber != null) {
+            this.PlatformShortNumber = new String(source.PlatformShortNumber);
+        }
+        if (source.TransType != null) {
+            this.TransType = new String(source.TransType);
+        }
+        if (source.TransFee != null) {
+            this.TransFee = new String(source.TransFee);
+        }
+        if (source.ReservedMessage != null) {
+            this.ReservedMessage = new String(source.ReservedMessage);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

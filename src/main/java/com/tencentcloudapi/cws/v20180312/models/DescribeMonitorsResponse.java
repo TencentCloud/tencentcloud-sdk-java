@@ -91,6 +91,29 @@ public class DescribeMonitorsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeMonitorsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeMonitorsResponse(DescribeMonitorsResponse source) {
+        if (source.Monitors != null) {
+            this.Monitors = new MonitorsDetail[source.Monitors.length];
+            for (int i = 0; i < source.Monitors.length; i++) {
+                this.Monitors[i] = new MonitorsDetail(source.Monitors[i]);
+            }
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

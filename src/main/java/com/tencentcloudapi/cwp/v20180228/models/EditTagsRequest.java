@@ -91,6 +91,29 @@ public class EditTagsRequest extends AbstractModel{
         this.Quuids = Quuids;
     }
 
+    public EditTagsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public EditTagsRequest(EditTagsRequest source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Id != null) {
+            this.Id = new Long(source.Id);
+        }
+        if (source.Quuids != null) {
+            this.Quuids = new String[source.Quuids.length];
+            for (int i = 0; i < source.Quuids.length; i++) {
+                this.Quuids[i] = new String(source.Quuids[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

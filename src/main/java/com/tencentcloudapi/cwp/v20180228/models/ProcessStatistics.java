@@ -68,6 +68,23 @@ public class ProcessStatistics extends AbstractModel{
         this.MachineNum = MachineNum;
     }
 
+    public ProcessStatistics() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ProcessStatistics(ProcessStatistics source) {
+        if (source.ProcessName != null) {
+            this.ProcessName = new String(source.ProcessName);
+        }
+        if (source.MachineNum != null) {
+            this.MachineNum = new Long(source.MachineNum);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

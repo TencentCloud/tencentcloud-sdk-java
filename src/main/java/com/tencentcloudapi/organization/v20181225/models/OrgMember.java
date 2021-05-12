@@ -114,6 +114,29 @@ public class OrgMember extends AbstractModel{
         this.JoinTime = JoinTime;
     }
 
+    public OrgMember() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public OrgMember(OrgMember source) {
+        if (source.Uin != null) {
+            this.Uin = new Long(source.Uin);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Remark != null) {
+            this.Remark = new String(source.Remark);
+        }
+        if (source.JoinTime != null) {
+            this.JoinTime = new String(source.JoinTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

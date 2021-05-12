@@ -183,6 +183,38 @@ public class TagMachine extends AbstractModel{
         this.MachineType = MachineType;
     }
 
+    public TagMachine() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TagMachine(TagMachine source) {
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
+        if (source.Quuid != null) {
+            this.Quuid = new String(source.Quuid);
+        }
+        if (source.MachineName != null) {
+            this.MachineName = new String(source.MachineName);
+        }
+        if (source.MachineIp != null) {
+            this.MachineIp = new String(source.MachineIp);
+        }
+        if (source.MachineWanIp != null) {
+            this.MachineWanIp = new String(source.MachineWanIp);
+        }
+        if (source.MachineRegion != null) {
+            this.MachineRegion = new String(source.MachineRegion);
+        }
+        if (source.MachineType != null) {
+            this.MachineType = new String(source.MachineType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

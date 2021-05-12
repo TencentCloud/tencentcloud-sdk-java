@@ -229,6 +229,44 @@ public class DescribePersonVisitInfoRequest extends AbstractModel{
         this.EndDateTime = EndDateTime;
     }
 
+    public DescribePersonVisitInfoRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribePersonVisitInfoRequest(DescribePersonVisitInfoRequest source) {
+        if (source.CompanyId != null) {
+            this.CompanyId = new String(source.CompanyId);
+        }
+        if (source.ShopId != null) {
+            this.ShopId = new Long(source.ShopId);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.StartDate != null) {
+            this.StartDate = new String(source.StartDate);
+        }
+        if (source.EndDate != null) {
+            this.EndDate = new String(source.EndDate);
+        }
+        if (source.PictureExpires != null) {
+            this.PictureExpires = new Long(source.PictureExpires);
+        }
+        if (source.StartDateTime != null) {
+            this.StartDateTime = new String(source.StartDateTime);
+        }
+        if (source.EndDateTime != null) {
+            this.EndDateTime = new String(source.EndDateTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

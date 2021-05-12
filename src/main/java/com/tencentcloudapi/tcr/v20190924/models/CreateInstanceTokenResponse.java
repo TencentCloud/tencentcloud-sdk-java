@@ -147,6 +147,32 @@ public class CreateInstanceTokenResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public CreateInstanceTokenResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateInstanceTokenResponse(CreateInstanceTokenResponse source) {
+        if (source.Username != null) {
+            this.Username = new String(source.Username);
+        }
+        if (source.Token != null) {
+            this.Token = new String(source.Token);
+        }
+        if (source.ExpTime != null) {
+            this.ExpTime = new Long(source.ExpTime);
+        }
+        if (source.TokenId != null) {
+            this.TokenId = new String(source.TokenId);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

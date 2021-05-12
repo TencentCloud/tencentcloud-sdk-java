@@ -91,6 +91,29 @@ public class CreateBackupDownloadTaskRequest extends AbstractModel{
         this.BackupSets = BackupSets;
     }
 
+    public CreateBackupDownloadTaskRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateBackupDownloadTaskRequest(CreateBackupDownloadTaskRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.BackupName != null) {
+            this.BackupName = new String(source.BackupName);
+        }
+        if (source.BackupSets != null) {
+            this.BackupSets = new ReplicaSetInfo[source.BackupSets.length];
+            for (int i = 0; i < source.BackupSets.length; i++) {
+                this.BackupSets[i] = new ReplicaSetInfo(source.BackupSets[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

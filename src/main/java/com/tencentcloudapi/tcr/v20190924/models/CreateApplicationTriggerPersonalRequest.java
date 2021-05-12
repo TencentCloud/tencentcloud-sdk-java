@@ -252,6 +252,47 @@ public class CreateApplicationTriggerPersonalRequest extends AbstractModel{
         this.InvokeExpr = InvokeExpr;
     }
 
+    public CreateApplicationTriggerPersonalRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateApplicationTriggerPersonalRequest(CreateApplicationTriggerPersonalRequest source) {
+        if (source.RepoName != null) {
+            this.RepoName = new String(source.RepoName);
+        }
+        if (source.TriggerName != null) {
+            this.TriggerName = new String(source.TriggerName);
+        }
+        if (source.InvokeMethod != null) {
+            this.InvokeMethod = new String(source.InvokeMethod);
+        }
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
+        if (source.Namespace != null) {
+            this.Namespace = new String(source.Namespace);
+        }
+        if (source.WorkloadType != null) {
+            this.WorkloadType = new String(source.WorkloadType);
+        }
+        if (source.WorkloadName != null) {
+            this.WorkloadName = new String(source.WorkloadName);
+        }
+        if (source.ContainerName != null) {
+            this.ContainerName = new String(source.ContainerName);
+        }
+        if (source.ClusterRegion != null) {
+            this.ClusterRegion = new Long(source.ClusterRegion);
+        }
+        if (source.InvokeExpr != null) {
+            this.InvokeExpr = new String(source.InvokeExpr);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

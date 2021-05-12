@@ -73,6 +73,26 @@ public class DescribeBindDevResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeBindDevResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeBindDevResponse(DescribeBindDevResponse source) {
+        if (source.Data != null) {
+            this.Data = new BindDevInfo[source.Data.length];
+            for (int i = 0; i < source.Data.length; i++) {
+                this.Data[i] = new BindDevInfo(source.Data[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

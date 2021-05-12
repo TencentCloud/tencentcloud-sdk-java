@@ -114,6 +114,32 @@ public class GetDataHistoryResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public GetDataHistoryResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GetDataHistoryResponse(GetDataHistoryResponse source) {
+        if (source.DataHistory != null) {
+            this.DataHistory = new DataHistoryEntry[source.DataHistory.length];
+            for (int i = 0; i < source.DataHistory.length; i++) {
+                this.DataHistory[i] = new DataHistoryEntry(source.DataHistory[i]);
+            }
+        }
+        if (source.ScrollId != null) {
+            this.ScrollId = new String(source.ScrollId);
+        }
+        if (source.ScrollTimeout != null) {
+            this.ScrollTimeout = new Long(source.ScrollTimeout);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

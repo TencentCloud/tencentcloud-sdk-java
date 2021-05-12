@@ -68,6 +68,26 @@ public class FinanBillOCRResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public FinanBillOCRResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public FinanBillOCRResponse(FinanBillOCRResponse source) {
+        if (source.FinanBillInfos != null) {
+            this.FinanBillInfos = new FinanBillInfo[source.FinanBillInfos.length];
+            for (int i = 0; i < source.FinanBillInfos.length; i++) {
+                this.FinanBillInfos[i] = new FinanBillInfo(source.FinanBillInfos[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

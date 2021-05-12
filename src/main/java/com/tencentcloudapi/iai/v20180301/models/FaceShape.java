@@ -229,6 +229,71 @@ public class FaceShape extends AbstractModel{
         this.RightPupil = RightPupil;
     }
 
+    public FaceShape() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public FaceShape(FaceShape source) {
+        if (source.FaceProfile != null) {
+            this.FaceProfile = new Point[source.FaceProfile.length];
+            for (int i = 0; i < source.FaceProfile.length; i++) {
+                this.FaceProfile[i] = new Point(source.FaceProfile[i]);
+            }
+        }
+        if (source.LeftEye != null) {
+            this.LeftEye = new Point[source.LeftEye.length];
+            for (int i = 0; i < source.LeftEye.length; i++) {
+                this.LeftEye[i] = new Point(source.LeftEye[i]);
+            }
+        }
+        if (source.RightEye != null) {
+            this.RightEye = new Point[source.RightEye.length];
+            for (int i = 0; i < source.RightEye.length; i++) {
+                this.RightEye[i] = new Point(source.RightEye[i]);
+            }
+        }
+        if (source.LeftEyeBrow != null) {
+            this.LeftEyeBrow = new Point[source.LeftEyeBrow.length];
+            for (int i = 0; i < source.LeftEyeBrow.length; i++) {
+                this.LeftEyeBrow[i] = new Point(source.LeftEyeBrow[i]);
+            }
+        }
+        if (source.RightEyeBrow != null) {
+            this.RightEyeBrow = new Point[source.RightEyeBrow.length];
+            for (int i = 0; i < source.RightEyeBrow.length; i++) {
+                this.RightEyeBrow[i] = new Point(source.RightEyeBrow[i]);
+            }
+        }
+        if (source.Mouth != null) {
+            this.Mouth = new Point[source.Mouth.length];
+            for (int i = 0; i < source.Mouth.length; i++) {
+                this.Mouth[i] = new Point(source.Mouth[i]);
+            }
+        }
+        if (source.Nose != null) {
+            this.Nose = new Point[source.Nose.length];
+            for (int i = 0; i < source.Nose.length; i++) {
+                this.Nose[i] = new Point(source.Nose[i]);
+            }
+        }
+        if (source.LeftPupil != null) {
+            this.LeftPupil = new Point[source.LeftPupil.length];
+            for (int i = 0; i < source.LeftPupil.length; i++) {
+                this.LeftPupil[i] = new Point(source.LeftPupil[i]);
+            }
+        }
+        if (source.RightPupil != null) {
+            this.RightPupil = new Point[source.RightPupil.length];
+            for (int i = 0; i < source.RightPupil.length; i++) {
+                this.RightPupil[i] = new Point(source.RightPupil[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

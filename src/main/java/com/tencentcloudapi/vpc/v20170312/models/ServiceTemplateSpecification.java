@@ -68,6 +68,23 @@ public class ServiceTemplateSpecification extends AbstractModel{
         this.ServiceGroupId = ServiceGroupId;
     }
 
+    public ServiceTemplateSpecification() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ServiceTemplateSpecification(ServiceTemplateSpecification source) {
+        if (source.ServiceId != null) {
+            this.ServiceId = new String(source.ServiceId);
+        }
+        if (source.ServiceGroupId != null) {
+            this.ServiceGroupId = new String(source.ServiceGroupId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

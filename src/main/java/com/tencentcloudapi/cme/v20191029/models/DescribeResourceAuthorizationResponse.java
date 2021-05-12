@@ -96,6 +96,29 @@ public class DescribeResourceAuthorizationResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeResourceAuthorizationResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeResourceAuthorizationResponse(DescribeResourceAuthorizationResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.AuthorizationInfoSet != null) {
+            this.AuthorizationInfoSet = new AuthorizationInfo[source.AuthorizationInfoSet.length];
+            for (int i = 0; i < source.AuthorizationInfoSet.length; i++) {
+                this.AuthorizationInfoSet[i] = new AuthorizationInfo(source.AuthorizationInfoSet[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

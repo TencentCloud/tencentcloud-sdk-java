@@ -137,6 +137,32 @@ public class DescribePublicConfigReleasesRequest extends AbstractModel{
         this.ConfigId = ConfigId;
     }
 
+    public DescribePublicConfigReleasesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribePublicConfigReleasesRequest(DescribePublicConfigReleasesRequest source) {
+        if (source.ConfigName != null) {
+            this.ConfigName = new String(source.ConfigName);
+        }
+        if (source.NamespaceId != null) {
+            this.NamespaceId = new String(source.NamespaceId);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.ConfigId != null) {
+            this.ConfigId = new String(source.ConfigId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

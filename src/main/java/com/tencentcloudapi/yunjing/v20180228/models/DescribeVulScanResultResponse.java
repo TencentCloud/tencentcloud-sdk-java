@@ -160,6 +160,35 @@ public class DescribeVulScanResultResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeVulScanResultResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeVulScanResultResponse(DescribeVulScanResultResponse source) {
+        if (source.VulNum != null) {
+            this.VulNum = new Long(source.VulNum);
+        }
+        if (source.ProVersionNum != null) {
+            this.ProVersionNum = new Long(source.ProVersionNum);
+        }
+        if (source.ImpactedHostNum != null) {
+            this.ImpactedHostNum = new Long(source.ImpactedHostNum);
+        }
+        if (source.HostNum != null) {
+            this.HostNum = new Long(source.HostNum);
+        }
+        if (source.BasicVersionNum != null) {
+            this.BasicVersionNum = new Long(source.BasicVersionNum);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

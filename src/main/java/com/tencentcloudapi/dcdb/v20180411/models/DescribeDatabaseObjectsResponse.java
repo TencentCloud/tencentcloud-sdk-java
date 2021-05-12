@@ -183,6 +183,50 @@ public class DescribeDatabaseObjectsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeDatabaseObjectsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeDatabaseObjectsResponse(DescribeDatabaseObjectsResponse source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.DbName != null) {
+            this.DbName = new String(source.DbName);
+        }
+        if (source.Tables != null) {
+            this.Tables = new DatabaseTable[source.Tables.length];
+            for (int i = 0; i < source.Tables.length; i++) {
+                this.Tables[i] = new DatabaseTable(source.Tables[i]);
+            }
+        }
+        if (source.Views != null) {
+            this.Views = new DatabaseView[source.Views.length];
+            for (int i = 0; i < source.Views.length; i++) {
+                this.Views[i] = new DatabaseView(source.Views[i]);
+            }
+        }
+        if (source.Procs != null) {
+            this.Procs = new DatabaseProcedure[source.Procs.length];
+            for (int i = 0; i < source.Procs.length; i++) {
+                this.Procs[i] = new DatabaseProcedure(source.Procs[i]);
+            }
+        }
+        if (source.Funcs != null) {
+            this.Funcs = new DatabaseFunction[source.Funcs.length];
+            for (int i = 0; i < source.Funcs.length; i++) {
+                this.Funcs[i] = new DatabaseFunction(source.Funcs[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

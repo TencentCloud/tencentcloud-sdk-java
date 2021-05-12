@@ -45,6 +45,20 @@ public class DescribeBundleDiscountRequest extends AbstractModel{
         this.BundleId = BundleId;
     }
 
+    public DescribeBundleDiscountRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeBundleDiscountRequest(DescribeBundleDiscountRequest source) {
+        if (source.BundleId != null) {
+            this.BundleId = new String(source.BundleId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

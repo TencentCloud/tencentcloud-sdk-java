@@ -45,6 +45,23 @@ public class DeleteUserCmdsRequest extends AbstractModel{
         this.CmdIds = CmdIds;
     }
 
+    public DeleteUserCmdsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteUserCmdsRequest(DeleteUserCmdsRequest source) {
+        if (source.CmdIds != null) {
+            this.CmdIds = new String[source.CmdIds.length];
+            for (int i = 0; i < source.CmdIds.length; i++) {
+                this.CmdIds[i] = new String(source.CmdIds[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

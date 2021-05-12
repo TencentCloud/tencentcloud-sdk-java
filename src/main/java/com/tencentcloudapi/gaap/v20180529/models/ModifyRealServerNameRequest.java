@@ -68,6 +68,23 @@ public class ModifyRealServerNameRequest extends AbstractModel{
         this.RealServerId = RealServerId;
     }
 
+    public ModifyRealServerNameRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyRealServerNameRequest(ModifyRealServerNameRequest source) {
+        if (source.RealServerName != null) {
+            this.RealServerName = new String(source.RealServerName);
+        }
+        if (source.RealServerId != null) {
+            this.RealServerId = new String(source.RealServerId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

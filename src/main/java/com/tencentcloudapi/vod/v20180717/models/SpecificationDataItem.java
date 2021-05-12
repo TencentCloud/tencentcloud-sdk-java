@@ -68,6 +68,26 @@ public class SpecificationDataItem extends AbstractModel{
         this.Data = Data;
     }
 
+    public SpecificationDataItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SpecificationDataItem(SpecificationDataItem source) {
+        if (source.Specification != null) {
+            this.Specification = new String(source.Specification);
+        }
+        if (source.Data != null) {
+            this.Data = new TaskStatDataItem[source.Data.length];
+            for (int i = 0; i < source.Data.length; i++) {
+                this.Data[i] = new TaskStatDataItem(source.Data[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

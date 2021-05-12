@@ -68,6 +68,23 @@ public class Tag extends AbstractModel{
         this.Fname = Fname;
     }
 
+    public Tag() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Tag(Tag source) {
+        if (source.Fid != null) {
+            this.Fid = new Long(source.Fid);
+        }
+        if (source.Fname != null) {
+            this.Fname = new String(source.Fname);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

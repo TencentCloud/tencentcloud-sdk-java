@@ -68,6 +68,23 @@ public class DescribeFileModelResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeFileModelResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeFileModelResponse(DescribeFileModelResponse source) {
+        if (source.CosUrl != null) {
+            this.CosUrl = new String(source.CosUrl);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

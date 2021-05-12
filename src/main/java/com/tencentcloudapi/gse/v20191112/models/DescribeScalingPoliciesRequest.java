@@ -114,6 +114,29 @@ public class DescribeScalingPoliciesRequest extends AbstractModel{
         this.Limit = Limit;
     }
 
+    public DescribeScalingPoliciesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeScalingPoliciesRequest(DescribeScalingPoliciesRequest source) {
+        if (source.FleetId != null) {
+            this.FleetId = new String(source.FleetId);
+        }
+        if (source.StatusFilter != null) {
+            this.StatusFilter = new String(source.StatusFilter);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

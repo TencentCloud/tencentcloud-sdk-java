@@ -68,6 +68,26 @@ public class InstanceNode extends AbstractModel{
         this.InstanceClusterNode = InstanceClusterNode;
     }
 
+    public InstanceNode() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public InstanceNode(InstanceNode source) {
+        if (source.Id != null) {
+            this.Id = new Long(source.Id);
+        }
+        if (source.InstanceClusterNode != null) {
+            this.InstanceClusterNode = new InstanceClusterNode[source.InstanceClusterNode.length];
+            for (int i = 0; i < source.InstanceClusterNode.length; i++) {
+                this.InstanceClusterNode[i] = new InstanceClusterNode(source.InstanceClusterNode[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

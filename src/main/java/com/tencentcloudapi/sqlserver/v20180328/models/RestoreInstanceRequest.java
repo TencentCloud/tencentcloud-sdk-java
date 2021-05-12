@@ -114,6 +114,32 @@ public class RestoreInstanceRequest extends AbstractModel{
         this.RenameRestore = RenameRestore;
     }
 
+    public RestoreInstanceRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RestoreInstanceRequest(RestoreInstanceRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.BackupId != null) {
+            this.BackupId = new Long(source.BackupId);
+        }
+        if (source.TargetInstanceId != null) {
+            this.TargetInstanceId = new String(source.TargetInstanceId);
+        }
+        if (source.RenameRestore != null) {
+            this.RenameRestore = new RenameRestoreDatabase[source.RenameRestore.length];
+            for (int i = 0; i < source.RenameRestore.length; i++) {
+                this.RenameRestore[i] = new RenameRestoreDatabase(source.RenameRestore[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

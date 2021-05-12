@@ -137,6 +137,35 @@ public class RecognizeTableOCRResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public RecognizeTableOCRResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RecognizeTableOCRResponse(RecognizeTableOCRResponse source) {
+        if (source.TableDetections != null) {
+            this.TableDetections = new TableDetectInfo[source.TableDetections.length];
+            for (int i = 0; i < source.TableDetections.length; i++) {
+                this.TableDetections[i] = new TableDetectInfo(source.TableDetections[i]);
+            }
+        }
+        if (source.Data != null) {
+            this.Data = new String(source.Data);
+        }
+        if (source.PdfPageSize != null) {
+            this.PdfPageSize = new Long(source.PdfPageSize);
+        }
+        if (source.Angle != null) {
+            this.Angle = new Float(source.Angle);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

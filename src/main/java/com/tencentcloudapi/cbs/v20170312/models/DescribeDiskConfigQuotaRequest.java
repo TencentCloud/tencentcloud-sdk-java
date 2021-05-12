@@ -206,6 +206,50 @@ public class DescribeDiskConfigQuotaRequest extends AbstractModel{
         this.Memory = Memory;
     }
 
+    public DescribeDiskConfigQuotaRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeDiskConfigQuotaRequest(DescribeDiskConfigQuotaRequest source) {
+        if (source.InquiryType != null) {
+            this.InquiryType = new String(source.InquiryType);
+        }
+        if (source.Zones != null) {
+            this.Zones = new String[source.Zones.length];
+            for (int i = 0; i < source.Zones.length; i++) {
+                this.Zones[i] = new String(source.Zones[i]);
+            }
+        }
+        if (source.DiskChargeType != null) {
+            this.DiskChargeType = new String(source.DiskChargeType);
+        }
+        if (source.DiskTypes != null) {
+            this.DiskTypes = new String[source.DiskTypes.length];
+            for (int i = 0; i < source.DiskTypes.length; i++) {
+                this.DiskTypes[i] = new String(source.DiskTypes[i]);
+            }
+        }
+        if (source.DiskUsage != null) {
+            this.DiskUsage = new String(source.DiskUsage);
+        }
+        if (source.InstanceFamilies != null) {
+            this.InstanceFamilies = new String[source.InstanceFamilies.length];
+            for (int i = 0; i < source.InstanceFamilies.length; i++) {
+                this.InstanceFamilies[i] = new String(source.InstanceFamilies[i]);
+            }
+        }
+        if (source.CPU != null) {
+            this.CPU = new Long(source.CPU);
+        }
+        if (source.Memory != null) {
+            this.Memory = new Long(source.Memory);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

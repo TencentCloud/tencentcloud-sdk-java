@@ -326,6 +326,62 @@ public class CreateListenerRequest extends AbstractModel{
         this.EndPort = EndPort;
     }
 
+    public CreateListenerRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateListenerRequest(CreateListenerRequest source) {
+        if (source.LoadBalancerId != null) {
+            this.LoadBalancerId = new String(source.LoadBalancerId);
+        }
+        if (source.Ports != null) {
+            this.Ports = new Long[source.Ports.length];
+            for (int i = 0; i < source.Ports.length; i++) {
+                this.Ports[i] = new Long(source.Ports[i]);
+            }
+        }
+        if (source.Protocol != null) {
+            this.Protocol = new String(source.Protocol);
+        }
+        if (source.ListenerNames != null) {
+            this.ListenerNames = new String[source.ListenerNames.length];
+            for (int i = 0; i < source.ListenerNames.length; i++) {
+                this.ListenerNames[i] = new String(source.ListenerNames[i]);
+            }
+        }
+        if (source.HealthCheck != null) {
+            this.HealthCheck = new HealthCheck(source.HealthCheck);
+        }
+        if (source.Certificate != null) {
+            this.Certificate = new CertificateInput(source.Certificate);
+        }
+        if (source.SessionExpireTime != null) {
+            this.SessionExpireTime = new Long(source.SessionExpireTime);
+        }
+        if (source.Scheduler != null) {
+            this.Scheduler = new String(source.Scheduler);
+        }
+        if (source.SniSwitch != null) {
+            this.SniSwitch = new Long(source.SniSwitch);
+        }
+        if (source.TargetType != null) {
+            this.TargetType = new String(source.TargetType);
+        }
+        if (source.SessionType != null) {
+            this.SessionType = new String(source.SessionType);
+        }
+        if (source.KeepaliveEnable != null) {
+            this.KeepaliveEnable = new Long(source.KeepaliveEnable);
+        }
+        if (source.EndPort != null) {
+            this.EndPort = new Long(source.EndPort);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

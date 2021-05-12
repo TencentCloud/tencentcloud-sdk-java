@@ -68,6 +68,26 @@ public class DescribeExtensionUploadInfoResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeExtensionUploadInfoResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeExtensionUploadInfoResponse(DescribeExtensionUploadInfoResponse source) {
+        if (source.FilesData != null) {
+            this.FilesData = new ExtensionFileInfo[source.FilesData.length];
+            for (int i = 0; i < source.FilesData.length; i++) {
+                this.FilesData[i] = new ExtensionFileInfo(source.FilesData[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

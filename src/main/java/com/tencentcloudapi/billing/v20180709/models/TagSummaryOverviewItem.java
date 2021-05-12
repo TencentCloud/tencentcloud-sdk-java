@@ -106,6 +106,26 @@ public class TagSummaryOverviewItem extends AbstractModel{
         this.RealTotalCostRatio = RealTotalCostRatio;
     }
 
+    public TagSummaryOverviewItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TagSummaryOverviewItem(TagSummaryOverviewItem source) {
+        if (source.TagValue != null) {
+            this.TagValue = new String(source.TagValue);
+        }
+        if (source.RealTotalCost != null) {
+            this.RealTotalCost = new String(source.RealTotalCost);
+        }
+        if (source.RealTotalCostRatio != null) {
+            this.RealTotalCostRatio = new String(source.RealTotalCostRatio);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

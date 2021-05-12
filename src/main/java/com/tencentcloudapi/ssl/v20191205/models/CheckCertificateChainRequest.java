@@ -45,6 +45,20 @@ public class CheckCertificateChainRequest extends AbstractModel{
         this.CertificateChain = CertificateChain;
     }
 
+    public CheckCertificateChainRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CheckCertificateChainRequest(CheckCertificateChainRequest source) {
+        if (source.CertificateChain != null) {
+            this.CertificateChain = new String(source.CertificateChain);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

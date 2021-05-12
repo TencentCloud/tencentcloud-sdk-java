@@ -411,6 +411,56 @@ Failed: 失败
         this.RemainTimeInSeconds = RemainTimeInSeconds;
     }
 
+    public NotebookInstanceSummary() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public NotebookInstanceSummary(NotebookInstanceSummary source) {
+        if (source.CreationTime != null) {
+            this.CreationTime = new String(source.CreationTime);
+        }
+        if (source.LastModifiedTime != null) {
+            this.LastModifiedTime = new String(source.LastModifiedTime);
+        }
+        if (source.NotebookInstanceName != null) {
+            this.NotebookInstanceName = new String(source.NotebookInstanceName);
+        }
+        if (source.NotebookInstanceStatus != null) {
+            this.NotebookInstanceStatus = new String(source.NotebookInstanceStatus);
+        }
+        if (source.InstanceType != null) {
+            this.InstanceType = new String(source.InstanceType);
+        }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.StartupTime != null) {
+            this.StartupTime = new String(source.StartupTime);
+        }
+        if (source.Deadline != null) {
+            this.Deadline = new String(source.Deadline);
+        }
+        if (source.StoppingCondition != null) {
+            this.StoppingCondition = new StoppingCondition(source.StoppingCondition);
+        }
+        if (source.Prepay != null) {
+            this.Prepay = new Boolean(source.Prepay);
+        }
+        if (source.BillingLabel != null) {
+            this.BillingLabel = new BillingLabel(source.BillingLabel);
+        }
+        if (source.RuntimeInSeconds != null) {
+            this.RuntimeInSeconds = new Long(source.RuntimeInSeconds);
+        }
+        if (source.RemainTimeInSeconds != null) {
+            this.RemainTimeInSeconds = new Long(source.RemainTimeInSeconds);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

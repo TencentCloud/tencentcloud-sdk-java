@@ -367,6 +367,62 @@ public class NetworkStorageRange extends AbstractModel{
         this.MaxModuleNum = MaxModuleNum;
     }
 
+    public NetworkStorageRange() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public NetworkStorageRange(NetworkStorageRange source) {
+        if (source.MaxBandwidth != null) {
+            this.MaxBandwidth = new Long(source.MaxBandwidth);
+        }
+        if (source.MaxSystemDiskSize != null) {
+            this.MaxSystemDiskSize = new Long(source.MaxSystemDiskSize);
+        }
+        if (source.MinBandwidth != null) {
+            this.MinBandwidth = new Long(source.MinBandwidth);
+        }
+        if (source.MinSystemDiskSize != null) {
+            this.MinSystemDiskSize = new Long(source.MinSystemDiskSize);
+        }
+        if (source.MaxDataDiskSize != null) {
+            this.MaxDataDiskSize = new Long(source.MaxDataDiskSize);
+        }
+        if (source.MinDataDiskSize != null) {
+            this.MinDataDiskSize = new Long(source.MinDataDiskSize);
+        }
+        if (source.SuggestBandwidth != null) {
+            this.SuggestBandwidth = new Long(source.SuggestBandwidth);
+        }
+        if (source.SuggestDataDiskSize != null) {
+            this.SuggestDataDiskSize = new Long(source.SuggestDataDiskSize);
+        }
+        if (source.SuggestSystemDiskSize != null) {
+            this.SuggestSystemDiskSize = new Long(source.SuggestSystemDiskSize);
+        }
+        if (source.MaxVcpu != null) {
+            this.MaxVcpu = new Long(source.MaxVcpu);
+        }
+        if (source.MinVcpu != null) {
+            this.MinVcpu = new Long(source.MinVcpu);
+        }
+        if (source.MaxVcpuPerReq != null) {
+            this.MaxVcpuPerReq = new Long(source.MaxVcpuPerReq);
+        }
+        if (source.PerBandwidth != null) {
+            this.PerBandwidth = new Long(source.PerBandwidth);
+        }
+        if (source.PerDataDisk != null) {
+            this.PerDataDisk = new Long(source.PerDataDisk);
+        }
+        if (source.MaxModuleNum != null) {
+            this.MaxModuleNum = new Long(source.MaxModuleNum);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

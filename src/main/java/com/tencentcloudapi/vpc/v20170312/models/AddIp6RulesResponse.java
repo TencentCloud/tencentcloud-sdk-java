@@ -68,6 +68,26 @@ public class AddIp6RulesResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public AddIp6RulesResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AddIp6RulesResponse(AddIp6RulesResponse source) {
+        if (source.Ip6RuleSet != null) {
+            this.Ip6RuleSet = new String[source.Ip6RuleSet.length];
+            for (int i = 0; i < source.Ip6RuleSet.length; i++) {
+                this.Ip6RuleSet[i] = new String(source.Ip6RuleSet[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

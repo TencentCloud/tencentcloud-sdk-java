@@ -68,6 +68,26 @@ public class UnBindSecretIdsRequest extends AbstractModel{
         this.AccessKeyIds = AccessKeyIds;
     }
 
+    public UnBindSecretIdsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UnBindSecretIdsRequest(UnBindSecretIdsRequest source) {
+        if (source.UsagePlanId != null) {
+            this.UsagePlanId = new String(source.UsagePlanId);
+        }
+        if (source.AccessKeyIds != null) {
+            this.AccessKeyIds = new String[source.AccessKeyIds.length];
+            for (int i = 0; i < source.AccessKeyIds.length; i++) {
+                this.AccessKeyIds[i] = new String(source.AccessKeyIds[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

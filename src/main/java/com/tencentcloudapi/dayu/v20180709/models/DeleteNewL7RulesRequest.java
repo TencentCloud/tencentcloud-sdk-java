@@ -68,6 +68,26 @@ public class DeleteNewL7RulesRequest extends AbstractModel{
         this.Rule = Rule;
     }
 
+    public DeleteNewL7RulesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteNewL7RulesRequest(DeleteNewL7RulesRequest source) {
+        if (source.Business != null) {
+            this.Business = new String(source.Business);
+        }
+        if (source.Rule != null) {
+            this.Rule = new L4DelRule[source.Rule.length];
+            for (int i = 0; i < source.Rule.length; i++) {
+                this.Rule[i] = new L4DelRule(source.Rule[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

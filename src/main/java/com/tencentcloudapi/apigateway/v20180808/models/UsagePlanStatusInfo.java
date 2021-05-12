@@ -218,6 +218,38 @@ public class UsagePlanStatusInfo extends AbstractModel{
         this.ModifiedTime = ModifiedTime;
     }
 
+    public UsagePlanStatusInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UsagePlanStatusInfo(UsagePlanStatusInfo source) {
+        if (source.UsagePlanId != null) {
+            this.UsagePlanId = new String(source.UsagePlanId);
+        }
+        if (source.UsagePlanName != null) {
+            this.UsagePlanName = new String(source.UsagePlanName);
+        }
+        if (source.UsagePlanDesc != null) {
+            this.UsagePlanDesc = new String(source.UsagePlanDesc);
+        }
+        if (source.MaxRequestNumPreSec != null) {
+            this.MaxRequestNumPreSec = new Long(source.MaxRequestNumPreSec);
+        }
+        if (source.MaxRequestNum != null) {
+            this.MaxRequestNum = new Long(source.MaxRequestNum);
+        }
+        if (source.CreatedTime != null) {
+            this.CreatedTime = new String(source.CreatedTime);
+        }
+        if (source.ModifiedTime != null) {
+            this.ModifiedTime = new String(source.ModifiedTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

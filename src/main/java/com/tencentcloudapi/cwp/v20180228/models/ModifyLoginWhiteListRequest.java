@@ -45,6 +45,20 @@ public class ModifyLoginWhiteListRequest extends AbstractModel{
         this.Rules = Rules;
     }
 
+    public ModifyLoginWhiteListRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyLoginWhiteListRequest(ModifyLoginWhiteListRequest source) {
+        if (source.Rules != null) {
+            this.Rules = new LoginWhiteListsRule(source.Rules);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

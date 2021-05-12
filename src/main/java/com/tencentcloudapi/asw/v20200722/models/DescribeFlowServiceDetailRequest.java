@@ -45,6 +45,20 @@ public class DescribeFlowServiceDetailRequest extends AbstractModel{
         this.FlowServiceResource = FlowServiceResource;
     }
 
+    public DescribeFlowServiceDetailRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeFlowServiceDetailRequest(DescribeFlowServiceDetailRequest source) {
+        if (source.FlowServiceResource != null) {
+            this.FlowServiceResource = new String(source.FlowServiceResource);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

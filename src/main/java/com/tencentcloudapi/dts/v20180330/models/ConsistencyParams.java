@@ -91,6 +91,26 @@ public class ConsistencyParams extends AbstractModel{
         this.TablesSelectCount = TablesSelectCount;
     }
 
+    public ConsistencyParams() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ConsistencyParams(ConsistencyParams source) {
+        if (source.SelectRowsPerTable != null) {
+            this.SelectRowsPerTable = new Long(source.SelectRowsPerTable);
+        }
+        if (source.TablesSelectAll != null) {
+            this.TablesSelectAll = new Long(source.TablesSelectAll);
+        }
+        if (source.TablesSelectCount != null) {
+            this.TablesSelectCount = new Long(source.TablesSelectCount);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

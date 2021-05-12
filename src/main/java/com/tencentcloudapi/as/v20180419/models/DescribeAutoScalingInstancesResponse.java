@@ -91,6 +91,29 @@ public class DescribeAutoScalingInstancesResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeAutoScalingInstancesResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeAutoScalingInstancesResponse(DescribeAutoScalingInstancesResponse source) {
+        if (source.AutoScalingInstanceSet != null) {
+            this.AutoScalingInstanceSet = new Instance[source.AutoScalingInstanceSet.length];
+            for (int i = 0; i < source.AutoScalingInstanceSet.length; i++) {
+                this.AutoScalingInstanceSet[i] = new Instance(source.AutoScalingInstanceSet[i]);
+            }
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

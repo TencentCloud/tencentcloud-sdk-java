@@ -160,6 +160,35 @@ public class MetricAlarm extends AbstractModel{
         this.Statistic = Statistic;
     }
 
+    public MetricAlarm() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MetricAlarm(MetricAlarm source) {
+        if (source.ComparisonOperator != null) {
+            this.ComparisonOperator = new String(source.ComparisonOperator);
+        }
+        if (source.MetricName != null) {
+            this.MetricName = new String(source.MetricName);
+        }
+        if (source.Threshold != null) {
+            this.Threshold = new Long(source.Threshold);
+        }
+        if (source.Period != null) {
+            this.Period = new Long(source.Period);
+        }
+        if (source.ContinuousTime != null) {
+            this.ContinuousTime = new Long(source.ContinuousTime);
+        }
+        if (source.Statistic != null) {
+            this.Statistic = new String(source.Statistic);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

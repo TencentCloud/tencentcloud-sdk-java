@@ -68,6 +68,23 @@ public class UpdateKeyDescriptionRequest extends AbstractModel{
         this.KeyId = KeyId;
     }
 
+    public UpdateKeyDescriptionRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UpdateKeyDescriptionRequest(UpdateKeyDescriptionRequest source) {
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.KeyId != null) {
+            this.KeyId = new String(source.KeyId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

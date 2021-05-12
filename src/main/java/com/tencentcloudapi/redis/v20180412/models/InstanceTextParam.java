@@ -206,6 +206,44 @@ public class InstanceTextParam extends AbstractModel{
         this.Status = Status;
     }
 
+    public InstanceTextParam() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public InstanceTextParam(InstanceTextParam source) {
+        if (source.ParamName != null) {
+            this.ParamName = new String(source.ParamName);
+        }
+        if (source.ValueType != null) {
+            this.ValueType = new String(source.ValueType);
+        }
+        if (source.NeedRestart != null) {
+            this.NeedRestart = new String(source.NeedRestart);
+        }
+        if (source.DefaultValue != null) {
+            this.DefaultValue = new String(source.DefaultValue);
+        }
+        if (source.CurrentValue != null) {
+            this.CurrentValue = new String(source.CurrentValue);
+        }
+        if (source.Tips != null) {
+            this.Tips = new String(source.Tips);
+        }
+        if (source.TextValue != null) {
+            this.TextValue = new String[source.TextValue.length];
+            for (int i = 0; i < source.TextValue.length; i++) {
+                this.TextValue[i] = new String(source.TextValue[i]);
+            }
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

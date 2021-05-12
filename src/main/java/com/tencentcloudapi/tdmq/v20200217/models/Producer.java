@@ -124,6 +124,32 @@ public class Producer extends AbstractModel{
         this.ConnectionSets = ConnectionSets;
     }
 
+    public Producer() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Producer(Producer source) {
+        if (source.EnvironmentId != null) {
+            this.EnvironmentId = new String(source.EnvironmentId);
+        }
+        if (source.TopicName != null) {
+            this.TopicName = new String(source.TopicName);
+        }
+        if (source.CountConnect != null) {
+            this.CountConnect = new Long(source.CountConnect);
+        }
+        if (source.ConnectionSets != null) {
+            this.ConnectionSets = new Connection[source.ConnectionSets.length];
+            for (int i = 0; i < source.ConnectionSets.length; i++) {
+                this.ConnectionSets[i] = new Connection(source.ConnectionSets[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

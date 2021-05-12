@@ -234,6 +234,47 @@ public class CreateServiceResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public CreateServiceResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateServiceResponse(CreateServiceResponse source) {
+        if (source.ServiceId != null) {
+            this.ServiceId = new String(source.ServiceId);
+        }
+        if (source.ServiceName != null) {
+            this.ServiceName = new String(source.ServiceName);
+        }
+        if (source.ServiceDesc != null) {
+            this.ServiceDesc = new String(source.ServiceDesc);
+        }
+        if (source.OuterSubDomain != null) {
+            this.OuterSubDomain = new String(source.OuterSubDomain);
+        }
+        if (source.InnerSubDomain != null) {
+            this.InnerSubDomain = new String(source.InnerSubDomain);
+        }
+        if (source.CreatedTime != null) {
+            this.CreatedTime = new String(source.CreatedTime);
+        }
+        if (source.NetTypes != null) {
+            this.NetTypes = new String[source.NetTypes.length];
+            for (int i = 0; i < source.NetTypes.length; i++) {
+                this.NetTypes[i] = new String(source.NetTypes[i]);
+            }
+        }
+        if (source.IpVersion != null) {
+            this.IpVersion = new String(source.IpVersion);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

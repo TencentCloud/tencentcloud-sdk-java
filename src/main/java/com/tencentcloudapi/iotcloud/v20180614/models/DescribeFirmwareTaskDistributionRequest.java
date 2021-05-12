@@ -91,6 +91,26 @@ public class DescribeFirmwareTaskDistributionRequest extends AbstractModel{
         this.TaskId = TaskId;
     }
 
+    public DescribeFirmwareTaskDistributionRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeFirmwareTaskDistributionRequest(DescribeFirmwareTaskDistributionRequest source) {
+        if (source.ProductID != null) {
+            this.ProductID = new String(source.ProductID);
+        }
+        if (source.FirmwareVersion != null) {
+            this.FirmwareVersion = new String(source.FirmwareVersion);
+        }
+        if (source.TaskId != null) {
+            this.TaskId = new Long(source.TaskId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

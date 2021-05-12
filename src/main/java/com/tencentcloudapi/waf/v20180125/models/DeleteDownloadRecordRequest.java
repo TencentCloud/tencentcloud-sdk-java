@@ -45,6 +45,20 @@ public class DeleteDownloadRecordRequest extends AbstractModel{
         this.Flow = Flow;
     }
 
+    public DeleteDownloadRecordRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteDownloadRecordRequest(DeleteDownloadRecordRequest source) {
+        if (source.Flow != null) {
+            this.Flow = new String(source.Flow);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

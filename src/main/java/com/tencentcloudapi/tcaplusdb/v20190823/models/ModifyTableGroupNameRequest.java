@@ -91,6 +91,26 @@ public class ModifyTableGroupNameRequest extends AbstractModel{
         this.TableGroupName = TableGroupName;
     }
 
+    public ModifyTableGroupNameRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyTableGroupNameRequest(ModifyTableGroupNameRequest source) {
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
+        if (source.TableGroupId != null) {
+            this.TableGroupId = new String(source.TableGroupId);
+        }
+        if (source.TableGroupName != null) {
+            this.TableGroupName = new String(source.TableGroupName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

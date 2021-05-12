@@ -68,6 +68,26 @@ public class ModifyNetworkInterfaceQosRequest extends AbstractModel{
         this.QosLevel = QosLevel;
     }
 
+    public ModifyNetworkInterfaceQosRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyNetworkInterfaceQosRequest(ModifyNetworkInterfaceQosRequest source) {
+        if (source.NetworkInterfaceIds != null) {
+            this.NetworkInterfaceIds = new String[source.NetworkInterfaceIds.length];
+            for (int i = 0; i < source.NetworkInterfaceIds.length; i++) {
+                this.NetworkInterfaceIds[i] = new String(source.NetworkInterfaceIds[i]);
+            }
+        }
+        if (source.QosLevel != null) {
+            this.QosLevel = new String(source.QosLevel);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -137,6 +137,32 @@ public class DescribeGroupDevicesRequest extends AbstractModel{
         this.Recordable = Recordable;
     }
 
+    public DescribeGroupDevicesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeGroupDevicesRequest(DescribeGroupDevicesRequest source) {
+        if (source.GroupId != null) {
+            this.GroupId = new String(source.GroupId);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.NickName != null) {
+            this.NickName = new String(source.NickName);
+        }
+        if (source.Recordable != null) {
+            this.Recordable = new Long(source.Recordable);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

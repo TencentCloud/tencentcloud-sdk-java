@@ -91,6 +91,29 @@ public class DescribeAbnormalEventResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeAbnormalEventResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeAbnormalEventResponse(DescribeAbnormalEventResponse source) {
+        if (source.Total != null) {
+            this.Total = new Long(source.Total);
+        }
+        if (source.AbnormalExperienceList != null) {
+            this.AbnormalExperienceList = new AbnormalExperience[source.AbnormalExperienceList.length];
+            for (int i = 0; i < source.AbnormalExperienceList.length; i++) {
+                this.AbnormalExperienceList[i] = new AbnormalExperience(source.AbnormalExperienceList[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

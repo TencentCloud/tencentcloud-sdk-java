@@ -91,6 +91,29 @@ public class FormulaOCRResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public FormulaOCRResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public FormulaOCRResponse(FormulaOCRResponse source) {
+        if (source.Angle != null) {
+            this.Angle = new Long(source.Angle);
+        }
+        if (source.FormulaInfos != null) {
+            this.FormulaInfos = new TextFormula[source.FormulaInfos.length];
+            for (int i = 0; i < source.FormulaInfos.length; i++) {
+                this.FormulaInfos[i] = new TextFormula(source.FormulaInfos[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

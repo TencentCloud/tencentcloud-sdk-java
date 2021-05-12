@@ -45,6 +45,20 @@ public class EnableTaskFlowRequest extends AbstractModel{
         this.FlowId = FlowId;
     }
 
+    public EnableTaskFlowRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public EnableTaskFlowRequest(EnableTaskFlowRequest source) {
+        if (source.FlowId != null) {
+            this.FlowId = new String(source.FlowId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

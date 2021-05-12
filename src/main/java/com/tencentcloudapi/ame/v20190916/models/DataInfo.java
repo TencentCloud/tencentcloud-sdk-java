@@ -137,6 +137,32 @@ public class DataInfo extends AbstractModel{
         this.AuditionEnd = AuditionEnd;
     }
 
+    public DataInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DataInfo(DataInfo source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Version != null) {
+            this.Version = new String(source.Version);
+        }
+        if (source.Duration != null) {
+            this.Duration = new String(source.Duration);
+        }
+        if (source.AuditionBegin != null) {
+            this.AuditionBegin = new Long(source.AuditionBegin);
+        }
+        if (source.AuditionEnd != null) {
+            this.AuditionEnd = new Long(source.AuditionEnd);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

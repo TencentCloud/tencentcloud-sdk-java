@@ -564,6 +564,74 @@ baseline/main/high。
         this.ShortEdgeAsHeight = ShortEdgeAsHeight;
     }
 
+    public ModifyLiveTranscodeTemplateRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyLiveTranscodeTemplateRequest(ModifyLiveTranscodeTemplateRequest source) {
+        if (source.TemplateId != null) {
+            this.TemplateId = new Long(source.TemplateId);
+        }
+        if (source.Vcodec != null) {
+            this.Vcodec = new String(source.Vcodec);
+        }
+        if (source.Acodec != null) {
+            this.Acodec = new String(source.Acodec);
+        }
+        if (source.AudioBitrate != null) {
+            this.AudioBitrate = new Long(source.AudioBitrate);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.VideoBitrate != null) {
+            this.VideoBitrate = new Long(source.VideoBitrate);
+        }
+        if (source.Width != null) {
+            this.Width = new Long(source.Width);
+        }
+        if (source.NeedVideo != null) {
+            this.NeedVideo = new Long(source.NeedVideo);
+        }
+        if (source.NeedAudio != null) {
+            this.NeedAudio = new Long(source.NeedAudio);
+        }
+        if (source.Height != null) {
+            this.Height = new Long(source.Height);
+        }
+        if (source.Fps != null) {
+            this.Fps = new Long(source.Fps);
+        }
+        if (source.Gop != null) {
+            this.Gop = new Long(source.Gop);
+        }
+        if (source.Rotate != null) {
+            this.Rotate = new Long(source.Rotate);
+        }
+        if (source.Profile != null) {
+            this.Profile = new String(source.Profile);
+        }
+        if (source.BitrateToOrig != null) {
+            this.BitrateToOrig = new Long(source.BitrateToOrig);
+        }
+        if (source.HeightToOrig != null) {
+            this.HeightToOrig = new Long(source.HeightToOrig);
+        }
+        if (source.FpsToOrig != null) {
+            this.FpsToOrig = new Long(source.FpsToOrig);
+        }
+        if (source.AdaptBitratePercent != null) {
+            this.AdaptBitratePercent = new Float(source.AdaptBitratePercent);
+        }
+        if (source.ShortEdgeAsHeight != null) {
+            this.ShortEdgeAsHeight = new Long(source.ShortEdgeAsHeight);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

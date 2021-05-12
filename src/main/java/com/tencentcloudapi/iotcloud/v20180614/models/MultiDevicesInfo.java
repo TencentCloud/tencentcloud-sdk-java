@@ -160,6 +160,35 @@ public class MultiDevicesInfo extends AbstractModel{
         this.ErrMsg = ErrMsg;
     }
 
+    public MultiDevicesInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MultiDevicesInfo(MultiDevicesInfo source) {
+        if (source.DeviceName != null) {
+            this.DeviceName = new String(source.DeviceName);
+        }
+        if (source.DevicePsk != null) {
+            this.DevicePsk = new String(source.DevicePsk);
+        }
+        if (source.DeviceCert != null) {
+            this.DeviceCert = new String(source.DeviceCert);
+        }
+        if (source.DevicePrivateKey != null) {
+            this.DevicePrivateKey = new String(source.DevicePrivateKey);
+        }
+        if (source.Result != null) {
+            this.Result = new Long(source.Result);
+        }
+        if (source.ErrMsg != null) {
+            this.ErrMsg = new String(source.ErrMsg);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

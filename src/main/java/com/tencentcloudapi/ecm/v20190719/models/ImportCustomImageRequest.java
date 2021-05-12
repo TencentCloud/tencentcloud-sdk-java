@@ -183,6 +183,41 @@ public class ImportCustomImageRequest extends AbstractModel{
         this.ImageUrls = ImageUrls;
     }
 
+    public ImportCustomImageRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ImportCustomImageRequest(ImportCustomImageRequest source) {
+        if (source.ImageName != null) {
+            this.ImageName = new String(source.ImageName);
+        }
+        if (source.Architecture != null) {
+            this.Architecture = new String(source.Architecture);
+        }
+        if (source.OsType != null) {
+            this.OsType = new String(source.OsType);
+        }
+        if (source.OsVersion != null) {
+            this.OsVersion = new String(source.OsVersion);
+        }
+        if (source.ImageDescription != null) {
+            this.ImageDescription = new String(source.ImageDescription);
+        }
+        if (source.InitFlag != null) {
+            this.InitFlag = new String(source.InitFlag);
+        }
+        if (source.ImageUrls != null) {
+            this.ImageUrls = new ImageUrl[source.ImageUrls.length];
+            for (int i = 0; i < source.ImageUrls.length; i++) {
+                this.ImageUrls[i] = new ImageUrl(source.ImageUrls[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

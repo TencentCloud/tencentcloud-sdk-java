@@ -206,6 +206,41 @@ public class ModifyAIRecognitionTemplateRequest extends AbstractModel{
         this.AsrWordsConfigure = AsrWordsConfigure;
     }
 
+    public ModifyAIRecognitionTemplateRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyAIRecognitionTemplateRequest(ModifyAIRecognitionTemplateRequest source) {
+        if (source.Definition != null) {
+            this.Definition = new Long(source.Definition);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Comment != null) {
+            this.Comment = new String(source.Comment);
+        }
+        if (source.FaceConfigure != null) {
+            this.FaceConfigure = new FaceConfigureInfoForUpdate(source.FaceConfigure);
+        }
+        if (source.OcrFullTextConfigure != null) {
+            this.OcrFullTextConfigure = new OcrFullTextConfigureInfoForUpdate(source.OcrFullTextConfigure);
+        }
+        if (source.OcrWordsConfigure != null) {
+            this.OcrWordsConfigure = new OcrWordsConfigureInfoForUpdate(source.OcrWordsConfigure);
+        }
+        if (source.AsrFullTextConfigure != null) {
+            this.AsrFullTextConfigure = new AsrFullTextConfigureInfoForUpdate(source.AsrFullTextConfigure);
+        }
+        if (source.AsrWordsConfigure != null) {
+            this.AsrWordsConfigure = new AsrWordsConfigureInfoForUpdate(source.AsrWordsConfigure);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -137,6 +137,35 @@ public class AccountCreateInfo extends AbstractModel{
         this.IsAdmin = IsAdmin;
     }
 
+    public AccountCreateInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AccountCreateInfo(AccountCreateInfo source) {
+        if (source.UserName != null) {
+            this.UserName = new String(source.UserName);
+        }
+        if (source.Password != null) {
+            this.Password = new String(source.Password);
+        }
+        if (source.DBPrivileges != null) {
+            this.DBPrivileges = new DBPrivilege[source.DBPrivileges.length];
+            for (int i = 0; i < source.DBPrivileges.length; i++) {
+                this.DBPrivileges[i] = new DBPrivilege(source.DBPrivileges[i]);
+            }
+        }
+        if (source.Remark != null) {
+            this.Remark = new String(source.Remark);
+        }
+        if (source.IsAdmin != null) {
+            this.IsAdmin = new Boolean(source.IsAdmin);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

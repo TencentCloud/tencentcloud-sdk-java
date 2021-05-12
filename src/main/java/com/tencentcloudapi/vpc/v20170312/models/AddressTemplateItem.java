@@ -68,6 +68,23 @@ public class AddressTemplateItem extends AbstractModel{
         this.To = To;
     }
 
+    public AddressTemplateItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AddressTemplateItem(AddressTemplateItem source) {
+        if (source.From != null) {
+            this.From = new String(source.From);
+        }
+        if (source.To != null) {
+            this.To = new String(source.To);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

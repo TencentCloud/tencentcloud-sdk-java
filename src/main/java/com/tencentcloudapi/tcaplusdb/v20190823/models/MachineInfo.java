@@ -68,6 +68,23 @@ public class MachineInfo extends AbstractModel{
         this.MachineNum = MachineNum;
     }
 
+    public MachineInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MachineInfo(MachineInfo source) {
+        if (source.MachineType != null) {
+            this.MachineType = new String(source.MachineType);
+        }
+        if (source.MachineNum != null) {
+            this.MachineNum = new Long(source.MachineNum);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

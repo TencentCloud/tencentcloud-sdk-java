@@ -469,6 +469,74 @@ public class DescribeManagerDetailResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeManagerDetailResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeManagerDetailResponse(DescribeManagerDetailResponse source) {
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.ManagerFirstName != null) {
+            this.ManagerFirstName = new String(source.ManagerFirstName);
+        }
+        if (source.ManagerMail != null) {
+            this.ManagerMail = new String(source.ManagerMail);
+        }
+        if (source.ContactFirstName != null) {
+            this.ContactFirstName = new String(source.ContactFirstName);
+        }
+        if (source.ManagerLastName != null) {
+            this.ManagerLastName = new String(source.ManagerLastName);
+        }
+        if (source.ContactPosition != null) {
+            this.ContactPosition = new String(source.ContactPosition);
+        }
+        if (source.ManagerPosition != null) {
+            this.ManagerPosition = new String(source.ManagerPosition);
+        }
+        if (source.VerifyTime != null) {
+            this.VerifyTime = new String(source.VerifyTime);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.ExpireTime != null) {
+            this.ExpireTime = new String(source.ExpireTime);
+        }
+        if (source.ContactLastName != null) {
+            this.ContactLastName = new String(source.ContactLastName);
+        }
+        if (source.ManagerPhone != null) {
+            this.ManagerPhone = new String(source.ManagerPhone);
+        }
+        if (source.ContactPhone != null) {
+            this.ContactPhone = new String(source.ContactPhone);
+        }
+        if (source.ContactMail != null) {
+            this.ContactMail = new String(source.ContactMail);
+        }
+        if (source.ManagerDepartment != null) {
+            this.ManagerDepartment = new String(source.ManagerDepartment);
+        }
+        if (source.CompanyInfo != null) {
+            this.CompanyInfo = new CompanyInfo(source.CompanyInfo);
+        }
+        if (source.CompanyId != null) {
+            this.CompanyId = new Long(source.CompanyId);
+        }
+        if (source.ManagerId != null) {
+            this.ManagerId = new Long(source.ManagerId);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

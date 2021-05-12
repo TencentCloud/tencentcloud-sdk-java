@@ -231,6 +231,41 @@ key为自定义参数名称，value为该参数的默认取值。kv均为字符�
         this.DefaultParameters = DefaultParameters;
     }
 
+    public ModifyCommandRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyCommandRequest(ModifyCommandRequest source) {
+        if (source.CommandId != null) {
+            this.CommandId = new String(source.CommandId);
+        }
+        if (source.CommandName != null) {
+            this.CommandName = new String(source.CommandName);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.Content != null) {
+            this.Content = new String(source.Content);
+        }
+        if (source.CommandType != null) {
+            this.CommandType = new String(source.CommandType);
+        }
+        if (source.WorkingDirectory != null) {
+            this.WorkingDirectory = new String(source.WorkingDirectory);
+        }
+        if (source.Timeout != null) {
+            this.Timeout = new Long(source.Timeout);
+        }
+        if (source.DefaultParameters != null) {
+            this.DefaultParameters = new String(source.DefaultParameters);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

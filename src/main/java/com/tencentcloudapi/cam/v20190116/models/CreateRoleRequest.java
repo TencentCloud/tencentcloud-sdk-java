@@ -137,6 +137,32 @@ public class CreateRoleRequest extends AbstractModel{
         this.SessionDuration = SessionDuration;
     }
 
+    public CreateRoleRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateRoleRequest(CreateRoleRequest source) {
+        if (source.RoleName != null) {
+            this.RoleName = new String(source.RoleName);
+        }
+        if (source.PolicyDocument != null) {
+            this.PolicyDocument = new String(source.PolicyDocument);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.ConsoleLogin != null) {
+            this.ConsoleLogin = new Long(source.ConsoleLogin);
+        }
+        if (source.SessionDuration != null) {
+            this.SessionDuration = new Long(source.SessionDuration);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

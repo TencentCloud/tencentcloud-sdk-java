@@ -91,6 +91,29 @@ public class DescribeTextSampleResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeTextSampleResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeTextSampleResponse(DescribeTextSampleResponse source) {
+        if (source.TextSampleSet != null) {
+            this.TextSampleSet = new TextSample[source.TextSampleSet.length];
+            for (int i = 0; i < source.TextSampleSet.length; i++) {
+                this.TextSampleSet[i] = new TextSample(source.TextSampleSet[i]);
+            }
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -211,6 +211,44 @@ public class DescribeTopClientIpSumInfoListRequest extends AbstractModel{
         this.OutLanguage = OutLanguage;
     }
 
+    public DescribeTopClientIpSumInfoListRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeTopClientIpSumInfoListRequest(DescribeTopClientIpSumInfoListRequest source) {
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+        if (source.PlayDomains != null) {
+            this.PlayDomains = new String[source.PlayDomains.length];
+            for (int i = 0; i < source.PlayDomains.length; i++) {
+                this.PlayDomains[i] = new String(source.PlayDomains[i]);
+            }
+        }
+        if (source.PageNum != null) {
+            this.PageNum = new Long(source.PageNum);
+        }
+        if (source.PageSize != null) {
+            this.PageSize = new Long(source.PageSize);
+        }
+        if (source.OrderParam != null) {
+            this.OrderParam = new String(source.OrderParam);
+        }
+        if (source.MainlandOrOversea != null) {
+            this.MainlandOrOversea = new String(source.MainlandOrOversea);
+        }
+        if (source.OutLanguage != null) {
+            this.OutLanguage = new String(source.OutLanguage);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

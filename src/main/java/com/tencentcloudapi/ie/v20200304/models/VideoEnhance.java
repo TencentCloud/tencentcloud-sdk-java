@@ -234,6 +234,44 @@ public class VideoEnhance extends AbstractModel{
         this.LowLightEnhance = LowLightEnhance;
     }
 
+    public VideoEnhance() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public VideoEnhance(VideoEnhance source) {
+        if (source.ArtifactReduction != null) {
+            this.ArtifactReduction = new ArtifactReduction(source.ArtifactReduction);
+        }
+        if (source.Denoising != null) {
+            this.Denoising = new Denoising(source.Denoising);
+        }
+        if (source.ColorEnhance != null) {
+            this.ColorEnhance = new ColorEnhance(source.ColorEnhance);
+        }
+        if (source.Sharp != null) {
+            this.Sharp = new Sharp(source.Sharp);
+        }
+        if (source.WdSuperResolution != null) {
+            this.WdSuperResolution = new Long(source.WdSuperResolution);
+        }
+        if (source.FaceProtect != null) {
+            this.FaceProtect = new FaceProtect(source.FaceProtect);
+        }
+        if (source.WdFps != null) {
+            this.WdFps = new Long(source.WdFps);
+        }
+        if (source.ScratchRepair != null) {
+            this.ScratchRepair = new ScratchRepair(source.ScratchRepair);
+        }
+        if (source.LowLightEnhance != null) {
+            this.LowLightEnhance = new LowLightEnhance(source.LowLightEnhance);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

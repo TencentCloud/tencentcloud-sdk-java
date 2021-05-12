@@ -152,6 +152,32 @@ public class AttachEntityOfPolicy extends AbstractModel{
         this.AttachmentTime = AttachmentTime;
     }
 
+    public AttachEntityOfPolicy() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AttachEntityOfPolicy(AttachEntityOfPolicy source) {
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Uin != null) {
+            this.Uin = new Long(source.Uin);
+        }
+        if (source.RelatedType != null) {
+            this.RelatedType = new Long(source.RelatedType);
+        }
+        if (source.AttachmentTime != null) {
+            this.AttachmentTime = new String(source.AttachmentTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

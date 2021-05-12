@@ -185,6 +185,35 @@ public class CreateDirectConnectGatewayRequest extends AbstractModel{
         this.Zone = Zone;
     }
 
+    public CreateDirectConnectGatewayRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateDirectConnectGatewayRequest(CreateDirectConnectGatewayRequest source) {
+        if (source.DirectConnectGatewayName != null) {
+            this.DirectConnectGatewayName = new String(source.DirectConnectGatewayName);
+        }
+        if (source.NetworkType != null) {
+            this.NetworkType = new String(source.NetworkType);
+        }
+        if (source.NetworkInstanceId != null) {
+            this.NetworkInstanceId = new String(source.NetworkInstanceId);
+        }
+        if (source.GatewayType != null) {
+            this.GatewayType = new String(source.GatewayType);
+        }
+        if (source.ModeType != null) {
+            this.ModeType = new String(source.ModeType);
+        }
+        if (source.Zone != null) {
+            this.Zone = new String(source.Zone);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

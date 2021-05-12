@@ -68,6 +68,26 @@ public class DescribeCamerasResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeCamerasResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeCamerasResponse(DescribeCamerasResponse source) {
+        if (source.Cameras != null) {
+            this.Cameras = new CameraZones[source.Cameras.length];
+            for (int i = 0; i < source.Cameras.length; i++) {
+                this.Cameras[i] = new CameraZones(source.Cameras[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -137,6 +137,35 @@ public class ModifyServiceRequest extends AbstractModel{
         this.NetTypes = NetTypes;
     }
 
+    public ModifyServiceRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyServiceRequest(ModifyServiceRequest source) {
+        if (source.ServiceId != null) {
+            this.ServiceId = new String(source.ServiceId);
+        }
+        if (source.ServiceName != null) {
+            this.ServiceName = new String(source.ServiceName);
+        }
+        if (source.ServiceDesc != null) {
+            this.ServiceDesc = new String(source.ServiceDesc);
+        }
+        if (source.Protocol != null) {
+            this.Protocol = new String(source.Protocol);
+        }
+        if (source.NetTypes != null) {
+            this.NetTypes = new String[source.NetTypes.length];
+            for (int i = 0; i < source.NetTypes.length; i++) {
+                this.NetTypes[i] = new String(source.NetTypes[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

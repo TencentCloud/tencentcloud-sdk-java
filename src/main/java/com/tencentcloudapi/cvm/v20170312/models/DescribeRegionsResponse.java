@@ -91,6 +91,29 @@ public class DescribeRegionsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeRegionsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeRegionsResponse(DescribeRegionsResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.RegionSet != null) {
+            this.RegionSet = new RegionInfo[source.RegionSet.length];
+            for (int i = 0; i < source.RegionSet.length; i++) {
+                this.RegionSet[i] = new RegionInfo(source.RegionSet[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

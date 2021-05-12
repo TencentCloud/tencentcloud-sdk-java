@@ -111,6 +111,29 @@ FalseRate1Percent, FalseRate5Permil, FalseRate1Permil分别代表误识率在百
         this.RequestId = RequestId;
     }
 
+    public DetectCelebrityResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DetectCelebrityResponse(DetectCelebrityResponse source) {
+        if (source.Faces != null) {
+            this.Faces = new Face[source.Faces.length];
+            for (int i = 0; i < source.Faces.length; i++) {
+                this.Faces[i] = new Face(source.Faces[i]);
+            }
+        }
+        if (source.Threshold != null) {
+            this.Threshold = new Threshold(source.Threshold);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

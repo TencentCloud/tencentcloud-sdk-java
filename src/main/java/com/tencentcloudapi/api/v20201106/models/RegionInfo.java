@@ -91,6 +91,26 @@ public class RegionInfo extends AbstractModel{
         this.RegionState = RegionState;
     }
 
+    public RegionInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RegionInfo(RegionInfo source) {
+        if (source.Region != null) {
+            this.Region = new String(source.Region);
+        }
+        if (source.RegionName != null) {
+            this.RegionName = new String(source.RegionName);
+        }
+        if (source.RegionState != null) {
+            this.RegionState = new String(source.RegionState);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

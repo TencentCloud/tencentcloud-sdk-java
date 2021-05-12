@@ -114,6 +114,29 @@ public class PosToken extends AbstractModel{
         this.Pos = Pos;
     }
 
+    public PosToken() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PosToken(PosToken source) {
+        if (source.Word != null) {
+            this.Word = new String(source.Word);
+        }
+        if (source.Length != null) {
+            this.Length = new Long(source.Length);
+        }
+        if (source.BeginOffset != null) {
+            this.BeginOffset = new Long(source.BeginOffset);
+        }
+        if (source.Pos != null) {
+            this.Pos = new String(source.Pos);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

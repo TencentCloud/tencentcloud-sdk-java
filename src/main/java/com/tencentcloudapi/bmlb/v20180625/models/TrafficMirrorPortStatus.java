@@ -68,6 +68,23 @@ public class TrafficMirrorPortStatus extends AbstractModel{
         this.Status = Status;
     }
 
+    public TrafficMirrorPortStatus() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TrafficMirrorPortStatus(TrafficMirrorPortStatus source) {
+        if (source.Port != null) {
+            this.Port = new Long(source.Port);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

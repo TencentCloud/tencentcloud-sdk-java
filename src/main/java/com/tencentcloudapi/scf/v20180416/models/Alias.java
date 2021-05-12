@@ -180,6 +180,35 @@ public class Alias extends AbstractModel{
         this.ModTime = ModTime;
     }
 
+    public Alias() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Alias(Alias source) {
+        if (source.FunctionVersion != null) {
+            this.FunctionVersion = new String(source.FunctionVersion);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.RoutingConfig != null) {
+            this.RoutingConfig = new RoutingConfig(source.RoutingConfig);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.AddTime != null) {
+            this.AddTime = new String(source.AddTime);
+        }
+        if (source.ModTime != null) {
+            this.ModTime = new String(source.ModTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

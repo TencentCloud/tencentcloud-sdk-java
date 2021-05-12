@@ -91,6 +91,29 @@ public class GetDeviceStatisticsRequest extends AbstractModel{
         this.EndDate = EndDate;
     }
 
+    public GetDeviceStatisticsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GetDeviceStatisticsRequest(GetDeviceStatisticsRequest source) {
+        if (source.Products != null) {
+            this.Products = new String[source.Products.length];
+            for (int i = 0; i < source.Products.length; i++) {
+                this.Products[i] = new String(source.Products[i]);
+            }
+        }
+        if (source.StartDate != null) {
+            this.StartDate = new String(source.StartDate);
+        }
+        if (source.EndDate != null) {
+            this.EndDate = new String(source.EndDate);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

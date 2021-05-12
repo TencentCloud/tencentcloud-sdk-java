@@ -101,6 +101,26 @@ public class ModifyConnectionConfigRequest extends AbstractModel{
         this.ClientLimit = ClientLimit;
     }
 
+    public ModifyConnectionConfigRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyConnectionConfigRequest(ModifyConnectionConfigRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.Bandwidth != null) {
+            this.Bandwidth = new Long(source.Bandwidth);
+        }
+        if (source.ClientLimit != null) {
+            this.ClientLimit = new Long(source.ClientLimit);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

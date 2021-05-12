@@ -68,6 +68,23 @@ public class InstanceStatus extends AbstractModel{
         this.InstanceState = InstanceState;
     }
 
+    public InstanceStatus() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public InstanceStatus(InstanceStatus source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.InstanceState != null) {
+            this.InstanceState = new String(source.InstanceState);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

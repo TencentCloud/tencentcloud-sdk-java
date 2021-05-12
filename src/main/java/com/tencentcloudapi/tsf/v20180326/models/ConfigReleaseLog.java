@@ -498,6 +498,68 @@ public class ConfigReleaseLog extends AbstractModel{
         this.RollbackFlag = RollbackFlag;
     }
 
+    public ConfigReleaseLog() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ConfigReleaseLog(ConfigReleaseLog source) {
+        if (source.ConfigReleaseLogId != null) {
+            this.ConfigReleaseLogId = new String(source.ConfigReleaseLogId);
+        }
+        if (source.ConfigId != null) {
+            this.ConfigId = new String(source.ConfigId);
+        }
+        if (source.ConfigName != null) {
+            this.ConfigName = new String(source.ConfigName);
+        }
+        if (source.ConfigVersion != null) {
+            this.ConfigVersion = new String(source.ConfigVersion);
+        }
+        if (source.GroupId != null) {
+            this.GroupId = new String(source.GroupId);
+        }
+        if (source.GroupName != null) {
+            this.GroupName = new String(source.GroupName);
+        }
+        if (source.NamespaceId != null) {
+            this.NamespaceId = new String(source.NamespaceId);
+        }
+        if (source.NamespaceName != null) {
+            this.NamespaceName = new String(source.NamespaceName);
+        }
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
+        if (source.ClusterName != null) {
+            this.ClusterName = new String(source.ClusterName);
+        }
+        if (source.ReleaseTime != null) {
+            this.ReleaseTime = new String(source.ReleaseTime);
+        }
+        if (source.ReleaseDesc != null) {
+            this.ReleaseDesc = new String(source.ReleaseDesc);
+        }
+        if (source.ReleaseStatus != null) {
+            this.ReleaseStatus = new String(source.ReleaseStatus);
+        }
+        if (source.LastConfigId != null) {
+            this.LastConfigId = new String(source.LastConfigId);
+        }
+        if (source.LastConfigName != null) {
+            this.LastConfigName = new String(source.LastConfigName);
+        }
+        if (source.LastConfigVersion != null) {
+            this.LastConfigVersion = new String(source.LastConfigVersion);
+        }
+        if (source.RollbackFlag != null) {
+            this.RollbackFlag = new Boolean(source.RollbackFlag);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

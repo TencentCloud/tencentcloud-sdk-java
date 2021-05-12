@@ -183,6 +183,41 @@ public class DescribeConfigsRequest extends AbstractModel{
         this.ConfigVersion = ConfigVersion;
     }
 
+    public DescribeConfigsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeConfigsRequest(DescribeConfigsRequest source) {
+        if (source.ApplicationId != null) {
+            this.ApplicationId = new String(source.ApplicationId);
+        }
+        if (source.ConfigId != null) {
+            this.ConfigId = new String(source.ConfigId);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.ConfigIdList != null) {
+            this.ConfigIdList = new String[source.ConfigIdList.length];
+            for (int i = 0; i < source.ConfigIdList.length; i++) {
+                this.ConfigIdList[i] = new String(source.ConfigIdList[i]);
+            }
+        }
+        if (source.ConfigName != null) {
+            this.ConfigName = new String(source.ConfigName);
+        }
+        if (source.ConfigVersion != null) {
+            this.ConfigVersion = new String(source.ConfigVersion);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

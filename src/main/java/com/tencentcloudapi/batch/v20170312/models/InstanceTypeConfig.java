@@ -137,6 +137,32 @@ public class InstanceTypeConfig extends AbstractModel{
         this.InstanceFamily = InstanceFamily;
     }
 
+    public InstanceTypeConfig() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public InstanceTypeConfig(InstanceTypeConfig source) {
+        if (source.Mem != null) {
+            this.Mem = new Long(source.Mem);
+        }
+        if (source.Cpu != null) {
+            this.Cpu = new Long(source.Cpu);
+        }
+        if (source.InstanceType != null) {
+            this.InstanceType = new String(source.InstanceType);
+        }
+        if (source.Zone != null) {
+            this.Zone = new String(source.Zone);
+        }
+        if (source.InstanceFamily != null) {
+            this.InstanceFamily = new String(source.InstanceFamily);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

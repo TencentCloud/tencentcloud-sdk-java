@@ -91,6 +91,26 @@ public class UpdateJobRequest extends AbstractModel{
         this.Description = Description;
     }
 
+    public UpdateJobRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UpdateJobRequest(UpdateJobRequest source) {
+        if (source.JobId != null) {
+            this.JobId = new String(source.JobId);
+        }
+        if (source.JobAction != null) {
+            this.JobAction = new String(source.JobAction);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -126,6 +126,29 @@ JobFlowFinish，流程任务已完成。
         this.RequestId = RequestId;
     }
 
+    public DescribeJobFlowResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeJobFlowResponse(DescribeJobFlowResponse source) {
+        if (source.State != null) {
+            this.State = new String(source.State);
+        }
+        if (source.Details != null) {
+            this.Details = new JobResult[source.Details.length];
+            for (int i = 0; i < source.Details.length; i++) {
+                this.Details[i] = new JobResult(source.Details[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

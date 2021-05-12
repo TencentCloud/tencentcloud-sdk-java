@@ -68,6 +68,23 @@ public class ScanVoiceResult extends AbstractModel{
         this.TaskId = TaskId;
     }
 
+    public ScanVoiceResult() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ScanVoiceResult(ScanVoiceResult source) {
+        if (source.DataId != null) {
+            this.DataId = new String(source.DataId);
+        }
+        if (source.TaskId != null) {
+            this.TaskId = new String(source.TaskId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

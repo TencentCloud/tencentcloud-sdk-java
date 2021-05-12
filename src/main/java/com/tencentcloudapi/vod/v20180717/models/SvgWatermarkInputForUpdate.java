@@ -196,6 +196,26 @@ public class SvgWatermarkInputForUpdate extends AbstractModel{
         this.CycleConfig = CycleConfig;
     }
 
+    public SvgWatermarkInputForUpdate() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SvgWatermarkInputForUpdate(SvgWatermarkInputForUpdate source) {
+        if (source.Width != null) {
+            this.Width = new String(source.Width);
+        }
+        if (source.Height != null) {
+            this.Height = new String(source.Height);
+        }
+        if (source.CycleConfig != null) {
+            this.CycleConfig = new WatermarkCycleConfigForUpdate(source.CycleConfig);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -73,6 +73,23 @@ public class GetReservedConcurrencyConfigResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public GetReservedConcurrencyConfigResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GetReservedConcurrencyConfigResponse(GetReservedConcurrencyConfigResponse source) {
+        if (source.ReservedMem != null) {
+            this.ReservedMem = new Long(source.ReservedMem);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

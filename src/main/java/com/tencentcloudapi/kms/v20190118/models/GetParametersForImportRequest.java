@@ -91,6 +91,26 @@ public class GetParametersForImportRequest extends AbstractModel{
         this.WrappingKeySpec = WrappingKeySpec;
     }
 
+    public GetParametersForImportRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GetParametersForImportRequest(GetParametersForImportRequest source) {
+        if (source.KeyId != null) {
+            this.KeyId = new String(source.KeyId);
+        }
+        if (source.WrappingAlgorithm != null) {
+            this.WrappingAlgorithm = new String(source.WrappingAlgorithm);
+        }
+        if (source.WrappingKeySpec != null) {
+            this.WrappingKeySpec = new String(source.WrappingKeySpec);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

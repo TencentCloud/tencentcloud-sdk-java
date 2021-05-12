@@ -68,6 +68,26 @@ public class DescribePrometheusTemplateSyncResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribePrometheusTemplateSyncResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribePrometheusTemplateSyncResponse(DescribePrometheusTemplateSyncResponse source) {
+        if (source.Targets != null) {
+            this.Targets = new PrometheusTemplateSyncTarget[source.Targets.length];
+            for (int i = 0; i < source.Targets.length; i++) {
+                this.Targets[i] = new PrometheusTemplateSyncTarget(source.Targets[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

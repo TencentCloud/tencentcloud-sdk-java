@@ -68,6 +68,26 @@ public class PluginSummary extends AbstractModel{
         this.PluginSet = PluginSet;
     }
 
+    public PluginSummary() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PluginSummary(PluginSummary source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.PluginSet != null) {
+            this.PluginSet = new Plugin[source.PluginSet.length];
+            for (int i = 0; i < source.PluginSet.length; i++) {
+                this.PluginSet[i] = new Plugin(source.PluginSet[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

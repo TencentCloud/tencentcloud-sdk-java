@@ -91,6 +91,26 @@ public class DescribeImageManifestsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeImageManifestsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeImageManifestsResponse(DescribeImageManifestsResponse source) {
+        if (source.Manifest != null) {
+            this.Manifest = new String(source.Manifest);
+        }
+        if (source.Config != null) {
+            this.Config = new String(source.Config);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

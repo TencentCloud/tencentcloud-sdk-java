@@ -129,6 +129,29 @@ public class DescribeDDoSDefendStatusResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeDDoSDefendStatusResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeDDoSDefendStatusResponse(DescribeDDoSDefendStatusResponse source) {
+        if (source.DefendStatus != null) {
+            this.DefendStatus = new Long(source.DefendStatus);
+        }
+        if (source.UndefendExpire != null) {
+            this.UndefendExpire = new String(source.UndefendExpire);
+        }
+        if (source.ShowFlag != null) {
+            this.ShowFlag = new Long(source.ShowFlag);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

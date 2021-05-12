@@ -211,6 +211,47 @@ public class CreateImageRequest extends AbstractModel{
         this.DryRun = DryRun;
     }
 
+    public CreateImageRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateImageRequest(CreateImageRequest source) {
+        if (source.ImageName != null) {
+            this.ImageName = new String(source.ImageName);
+        }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.ImageDescription != null) {
+            this.ImageDescription = new String(source.ImageDescription);
+        }
+        if (source.ForcePoweroff != null) {
+            this.ForcePoweroff = new String(source.ForcePoweroff);
+        }
+        if (source.Sysprep != null) {
+            this.Sysprep = new String(source.Sysprep);
+        }
+        if (source.DataDiskIds != null) {
+            this.DataDiskIds = new String[source.DataDiskIds.length];
+            for (int i = 0; i < source.DataDiskIds.length; i++) {
+                this.DataDiskIds[i] = new String(source.DataDiskIds[i]);
+            }
+        }
+        if (source.SnapshotIds != null) {
+            this.SnapshotIds = new String[source.SnapshotIds.length];
+            for (int i = 0; i < source.SnapshotIds.length; i++) {
+                this.SnapshotIds[i] = new String(source.SnapshotIds[i]);
+            }
+        }
+        if (source.DryRun != null) {
+            this.DryRun = new Boolean(source.DryRun);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

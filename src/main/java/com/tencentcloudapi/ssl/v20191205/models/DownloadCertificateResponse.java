@@ -101,6 +101,26 @@ public class DownloadCertificateResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DownloadCertificateResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DownloadCertificateResponse(DownloadCertificateResponse source) {
+        if (source.Content != null) {
+            this.Content = new String(source.Content);
+        }
+        if (source.ContentType != null) {
+            this.ContentType = new String(source.ContentType);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -68,6 +68,26 @@ public class OverwriteWhiteBoxDeviceFingerprintsRequest extends AbstractModel{
         this.DeviceFingerprints = DeviceFingerprints;
     }
 
+    public OverwriteWhiteBoxDeviceFingerprintsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public OverwriteWhiteBoxDeviceFingerprintsRequest(OverwriteWhiteBoxDeviceFingerprintsRequest source) {
+        if (source.KeyId != null) {
+            this.KeyId = new String(source.KeyId);
+        }
+        if (source.DeviceFingerprints != null) {
+            this.DeviceFingerprints = new DeviceFingerprint[source.DeviceFingerprints.length];
+            for (int i = 0; i < source.DeviceFingerprints.length; i++) {
+                this.DeviceFingerprints[i] = new DeviceFingerprint(source.DeviceFingerprints[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

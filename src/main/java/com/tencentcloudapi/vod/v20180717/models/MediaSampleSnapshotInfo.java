@@ -45,6 +45,23 @@ public class MediaSampleSnapshotInfo extends AbstractModel{
         this.SampleSnapshotSet = SampleSnapshotSet;
     }
 
+    public MediaSampleSnapshotInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MediaSampleSnapshotInfo(MediaSampleSnapshotInfo source) {
+        if (source.SampleSnapshotSet != null) {
+            this.SampleSnapshotSet = new MediaSampleSnapshotItem[source.SampleSnapshotSet.length];
+            for (int i = 0; i < source.SampleSnapshotSet.length; i++) {
+                this.SampleSnapshotSet[i] = new MediaSampleSnapshotItem(source.SampleSnapshotSet[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

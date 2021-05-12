@@ -137,6 +137,32 @@ public class CreateEipAclResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public CreateEipAclResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateEipAclResponse(CreateEipAclResponse source) {
+        if (source.AclId != null) {
+            this.AclId = new String(source.AclId);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.AclName != null) {
+            this.AclName = new String(source.AclName);
+        }
+        if (source.CreatedAt != null) {
+            this.CreatedAt = new String(source.CreatedAt);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

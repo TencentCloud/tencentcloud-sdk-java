@@ -96,6 +96,29 @@ public class ListAliasesResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public ListAliasesResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ListAliasesResponse(ListAliasesResponse source) {
+        if (source.Aliases != null) {
+            this.Aliases = new Alias[source.Aliases.length];
+            for (int i = 0; i < source.Aliases.length; i++) {
+                this.Aliases[i] = new Alias(source.Aliases[i]);
+            }
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

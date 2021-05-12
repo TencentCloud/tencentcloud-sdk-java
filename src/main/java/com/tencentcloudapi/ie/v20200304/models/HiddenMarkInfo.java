@@ -114,6 +114,29 @@ public class HiddenMarkInfo extends AbstractModel{
         this.CosInfo = CosInfo;
     }
 
+    public HiddenMarkInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public HiddenMarkInfo(HiddenMarkInfo source) {
+        if (source.Path != null) {
+            this.Path = new String(source.Path);
+        }
+        if (source.Frequency != null) {
+            this.Frequency = new Long(source.Frequency);
+        }
+        if (source.Strength != null) {
+            this.Strength = new Long(source.Strength);
+        }
+        if (source.CosInfo != null) {
+            this.CosInfo = new CosInfo(source.CosInfo);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

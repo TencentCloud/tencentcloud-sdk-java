@@ -68,6 +68,26 @@ public class DeleteVirtualIpRequest extends AbstractModel{
         this.Ips = Ips;
     }
 
+    public DeleteVirtualIpRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteVirtualIpRequest(DeleteVirtualIpRequest source) {
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.Ips != null) {
+            this.Ips = new String[source.Ips.length];
+            for (int i = 0; i < source.Ips.length; i++) {
+                this.Ips[i] = new String(source.Ips[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

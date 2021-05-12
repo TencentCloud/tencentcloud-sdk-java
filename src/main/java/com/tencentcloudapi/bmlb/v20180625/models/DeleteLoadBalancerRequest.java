@@ -45,6 +45,20 @@ public class DeleteLoadBalancerRequest extends AbstractModel{
         this.LoadBalancerId = LoadBalancerId;
     }
 
+    public DeleteLoadBalancerRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteLoadBalancerRequest(DeleteLoadBalancerRequest source) {
+        if (source.LoadBalancerId != null) {
+            this.LoadBalancerId = new String(source.LoadBalancerId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

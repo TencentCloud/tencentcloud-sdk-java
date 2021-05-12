@@ -68,6 +68,29 @@ public class CreateUsualLoginPlacesRequest extends AbstractModel{
         this.Places = Places;
     }
 
+    public CreateUsualLoginPlacesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateUsualLoginPlacesRequest(CreateUsualLoginPlacesRequest source) {
+        if (source.Uuids != null) {
+            this.Uuids = new String[source.Uuids.length];
+            for (int i = 0; i < source.Uuids.length; i++) {
+                this.Uuids[i] = new String(source.Uuids[i]);
+            }
+        }
+        if (source.Places != null) {
+            this.Places = new Place[source.Places.length];
+            for (int i = 0; i < source.Places.length; i++) {
+                this.Places[i] = new Place(source.Places[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -321,6 +321,56 @@ public class ImageRecognitionRequest extends AbstractModel{
         this.StreamId = StreamId;
     }
 
+    public ImageRecognitionRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ImageRecognitionRequest(ImageRecognitionRequest source) {
+        if (source.Channel != null) {
+            this.Channel = new Long(source.Channel);
+        }
+        if (source.CustomAppId != null) {
+            this.CustomAppId = new String(source.CustomAppId);
+        }
+        if (source.BizType != null) {
+            this.BizType = new String(source.BizType);
+        }
+        if (source.DataId != null) {
+            this.DataId = new String(source.DataId);
+        }
+        if (source.FileContent != null) {
+            this.FileContent = new String(source.FileContent);
+        }
+        if (source.FileUrl != null) {
+            this.FileUrl = new String(source.FileUrl);
+        }
+        if (source.Interval != null) {
+            this.Interval = new Long(source.Interval);
+        }
+        if (source.MaxFrames != null) {
+            this.MaxFrames = new Long(source.MaxFrames);
+        }
+        if (source.User != null) {
+            this.User = new User(source.User);
+        }
+        if (source.Device != null) {
+            this.Device = new Device(source.Device);
+        }
+        if (source.CustomUin != null) {
+            this.CustomUin = new String(source.CustomUin);
+        }
+        if (source.CustomSubAccountUin != null) {
+            this.CustomSubAccountUin = new String(source.CustomSubAccountUin);
+        }
+        if (source.StreamId != null) {
+            this.StreamId = new String(source.StreamId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

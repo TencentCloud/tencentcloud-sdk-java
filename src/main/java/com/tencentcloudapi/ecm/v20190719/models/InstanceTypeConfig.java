@@ -267,6 +267,47 @@ public class InstanceTypeConfig extends AbstractModel{
         this.GpuModelName = GpuModelName;
     }
 
+    public InstanceTypeConfig() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public InstanceTypeConfig(InstanceTypeConfig source) {
+        if (source.InstanceFamilyConfig != null) {
+            this.InstanceFamilyConfig = new InstanceFamilyConfig(source.InstanceFamilyConfig);
+        }
+        if (source.InstanceType != null) {
+            this.InstanceType = new String(source.InstanceType);
+        }
+        if (source.Vcpu != null) {
+            this.Vcpu = new Long(source.Vcpu);
+        }
+        if (source.Memory != null) {
+            this.Memory = new Long(source.Memory);
+        }
+        if (source.Frequency != null) {
+            this.Frequency = new String(source.Frequency);
+        }
+        if (source.CpuModelName != null) {
+            this.CpuModelName = new String(source.CpuModelName);
+        }
+        if (source.InstanceFamilyTypeConfig != null) {
+            this.InstanceFamilyTypeConfig = new InstanceFamilyTypeConfig(source.InstanceFamilyTypeConfig);
+        }
+        if (source.ExtInfo != null) {
+            this.ExtInfo = new String(source.ExtInfo);
+        }
+        if (source.Vgpu != null) {
+            this.Vgpu = new Float(source.Vgpu);
+        }
+        if (source.GpuModelName != null) {
+            this.GpuModelName = new String(source.GpuModelName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

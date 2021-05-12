@@ -183,6 +183,38 @@ public class MasterNodeInfo extends AbstractModel{
         this.MasterNodeDiskType = MasterNodeDiskType;
     }
 
+    public MasterNodeInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MasterNodeInfo(MasterNodeInfo source) {
+        if (source.EnableDedicatedMaster != null) {
+            this.EnableDedicatedMaster = new Boolean(source.EnableDedicatedMaster);
+        }
+        if (source.MasterNodeType != null) {
+            this.MasterNodeType = new String(source.MasterNodeType);
+        }
+        if (source.MasterNodeNum != null) {
+            this.MasterNodeNum = new Long(source.MasterNodeNum);
+        }
+        if (source.MasterNodeCpuNum != null) {
+            this.MasterNodeCpuNum = new Long(source.MasterNodeCpuNum);
+        }
+        if (source.MasterNodeMemSize != null) {
+            this.MasterNodeMemSize = new Long(source.MasterNodeMemSize);
+        }
+        if (source.MasterNodeDiskSize != null) {
+            this.MasterNodeDiskSize = new Long(source.MasterNodeDiskSize);
+        }
+        if (source.MasterNodeDiskType != null) {
+            this.MasterNodeDiskType = new String(source.MasterNodeDiskType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

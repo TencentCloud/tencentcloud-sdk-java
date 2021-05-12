@@ -114,6 +114,38 @@ public class CreateTablesRequest extends AbstractModel{
         this.ResourceTags = ResourceTags;
     }
 
+    public CreateTablesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateTablesRequest(CreateTablesRequest source) {
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
+        if (source.IdlFiles != null) {
+            this.IdlFiles = new IdlFileInfo[source.IdlFiles.length];
+            for (int i = 0; i < source.IdlFiles.length; i++) {
+                this.IdlFiles[i] = new IdlFileInfo(source.IdlFiles[i]);
+            }
+        }
+        if (source.SelectedTables != null) {
+            this.SelectedTables = new SelectedTableInfoNew[source.SelectedTables.length];
+            for (int i = 0; i < source.SelectedTables.length; i++) {
+                this.SelectedTables[i] = new SelectedTableInfoNew(source.SelectedTables[i]);
+            }
+        }
+        if (source.ResourceTags != null) {
+            this.ResourceTags = new TagInfoUnit[source.ResourceTags.length];
+            for (int i = 0; i < source.ResourceTags.length; i++) {
+                this.ResourceTags[i] = new TagInfoUnit(source.ResourceTags[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

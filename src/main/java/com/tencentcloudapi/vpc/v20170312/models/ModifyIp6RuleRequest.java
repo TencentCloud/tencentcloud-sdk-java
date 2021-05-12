@@ -137,6 +137,32 @@ public class ModifyIp6RuleRequest extends AbstractModel{
         this.Vport = Vport;
     }
 
+    public ModifyIp6RuleRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyIp6RuleRequest(ModifyIp6RuleRequest source) {
+        if (source.Ip6TranslatorId != null) {
+            this.Ip6TranslatorId = new String(source.Ip6TranslatorId);
+        }
+        if (source.Ip6RuleId != null) {
+            this.Ip6RuleId = new String(source.Ip6RuleId);
+        }
+        if (source.Ip6RuleName != null) {
+            this.Ip6RuleName = new String(source.Ip6RuleName);
+        }
+        if (source.Vip != null) {
+            this.Vip = new String(source.Vip);
+        }
+        if (source.Vport != null) {
+            this.Vport = new Long(source.Vport);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

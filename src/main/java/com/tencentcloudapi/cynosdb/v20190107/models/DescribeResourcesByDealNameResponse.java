@@ -68,6 +68,26 @@ public class DescribeResourcesByDealNameResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeResourcesByDealNameResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeResourcesByDealNameResponse(DescribeResourcesByDealNameResponse source) {
+        if (source.BillingResourceInfos != null) {
+            this.BillingResourceInfos = new BillingResourceInfo[source.BillingResourceInfos.length];
+            for (int i = 0; i < source.BillingResourceInfos.length; i++) {
+                this.BillingResourceInfos[i] = new BillingResourceInfo(source.BillingResourceInfos[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -68,6 +68,23 @@ public class DrmSourceObject extends AbstractModel{
         this.ObjectName = ObjectName;
     }
 
+    public DrmSourceObject() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DrmSourceObject(DrmSourceObject source) {
+        if (source.BucketName != null) {
+            this.BucketName = new String(source.BucketName);
+        }
+        if (source.ObjectName != null) {
+            this.ObjectName = new String(source.ObjectName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

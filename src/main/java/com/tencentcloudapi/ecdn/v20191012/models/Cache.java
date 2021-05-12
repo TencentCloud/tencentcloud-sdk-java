@@ -88,6 +88,26 @@ off：关闭
         this.FollowOrigin = FollowOrigin;
     }
 
+    public Cache() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Cache(Cache source) {
+        if (source.CacheRules != null) {
+            this.CacheRules = new CacheRule[source.CacheRules.length];
+            for (int i = 0; i < source.CacheRules.length; i++) {
+                this.CacheRules[i] = new CacheRule(source.CacheRules[i]);
+            }
+        }
+        if (source.FollowOrigin != null) {
+            this.FollowOrigin = new String(source.FollowOrigin);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

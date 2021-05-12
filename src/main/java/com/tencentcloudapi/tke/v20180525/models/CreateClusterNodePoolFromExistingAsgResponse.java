@@ -68,6 +68,23 @@ public class CreateClusterNodePoolFromExistingAsgResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public CreateClusterNodePoolFromExistingAsgResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateClusterNodePoolFromExistingAsgResponse(CreateClusterNodePoolFromExistingAsgResponse source) {
+        if (source.NodePoolId != null) {
+            this.NodePoolId = new String(source.NodePoolId);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -45,6 +45,20 @@ public class DescribeLiveWatermarkRequest extends AbstractModel{
         this.WatermarkId = WatermarkId;
     }
 
+    public DescribeLiveWatermarkRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeLiveWatermarkRequest(DescribeLiveWatermarkRequest source) {
+        if (source.WatermarkId != null) {
+            this.WatermarkId = new Long(source.WatermarkId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

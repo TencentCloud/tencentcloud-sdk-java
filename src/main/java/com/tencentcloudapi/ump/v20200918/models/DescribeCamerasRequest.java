@@ -68,6 +68,23 @@ public class DescribeCamerasRequest extends AbstractModel{
         this.MallId = MallId;
     }
 
+    public DescribeCamerasRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeCamerasRequest(DescribeCamerasRequest source) {
+        if (source.GroupCode != null) {
+            this.GroupCode = new String(source.GroupCode);
+        }
+        if (source.MallId != null) {
+            this.MallId = new Long(source.MallId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

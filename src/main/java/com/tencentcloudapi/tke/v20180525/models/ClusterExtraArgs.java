@@ -134,6 +134,41 @@ public class ClusterExtraArgs extends AbstractModel{
         this.Etcd = Etcd;
     }
 
+    public ClusterExtraArgs() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ClusterExtraArgs(ClusterExtraArgs source) {
+        if (source.KubeAPIServer != null) {
+            this.KubeAPIServer = new String[source.KubeAPIServer.length];
+            for (int i = 0; i < source.KubeAPIServer.length; i++) {
+                this.KubeAPIServer[i] = new String(source.KubeAPIServer[i]);
+            }
+        }
+        if (source.KubeControllerManager != null) {
+            this.KubeControllerManager = new String[source.KubeControllerManager.length];
+            for (int i = 0; i < source.KubeControllerManager.length; i++) {
+                this.KubeControllerManager[i] = new String(source.KubeControllerManager[i]);
+            }
+        }
+        if (source.KubeScheduler != null) {
+            this.KubeScheduler = new String[source.KubeScheduler.length];
+            for (int i = 0; i < source.KubeScheduler.length; i++) {
+                this.KubeScheduler[i] = new String(source.KubeScheduler[i]);
+            }
+        }
+        if (source.Etcd != null) {
+            this.Etcd = new String[source.Etcd.length];
+            for (int i = 0; i < source.Etcd.length; i++) {
+                this.Etcd[i] = new String(source.Etcd[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

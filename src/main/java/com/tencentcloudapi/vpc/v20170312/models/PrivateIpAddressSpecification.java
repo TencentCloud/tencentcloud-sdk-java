@@ -203,6 +203,38 @@ AVAILABLE：可用的
         this.State = State;
     }
 
+    public PrivateIpAddressSpecification() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PrivateIpAddressSpecification(PrivateIpAddressSpecification source) {
+        if (source.PrivateIpAddress != null) {
+            this.PrivateIpAddress = new String(source.PrivateIpAddress);
+        }
+        if (source.Primary != null) {
+            this.Primary = new Boolean(source.Primary);
+        }
+        if (source.PublicIpAddress != null) {
+            this.PublicIpAddress = new String(source.PublicIpAddress);
+        }
+        if (source.AddressId != null) {
+            this.AddressId = new String(source.AddressId);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.IsWanIpBlocked != null) {
+            this.IsWanIpBlocked = new Boolean(source.IsWanIpBlocked);
+        }
+        if (source.State != null) {
+            this.State = new String(source.State);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

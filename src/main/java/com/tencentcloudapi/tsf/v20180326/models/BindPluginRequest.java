@@ -45,6 +45,23 @@ public class BindPluginRequest extends AbstractModel{
         this.PluginInstanceList = PluginInstanceList;
     }
 
+    public BindPluginRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public BindPluginRequest(BindPluginRequest source) {
+        if (source.PluginInstanceList != null) {
+            this.PluginInstanceList = new GatewayPluginBoundParam[source.PluginInstanceList.length];
+            for (int i = 0; i < source.PluginInstanceList.length; i++) {
+                this.PluginInstanceList[i] = new GatewayPluginBoundParam(source.PluginInstanceList[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

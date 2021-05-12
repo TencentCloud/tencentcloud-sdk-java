@@ -68,6 +68,23 @@ public class ConsumerGroupTopic extends AbstractModel{
         this.TopicName = TopicName;
     }
 
+    public ConsumerGroupTopic() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ConsumerGroupTopic(ConsumerGroupTopic source) {
+        if (source.TopicId != null) {
+            this.TopicId = new String(source.TopicId);
+        }
+        if (source.TopicName != null) {
+            this.TopicName = new String(source.TopicName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

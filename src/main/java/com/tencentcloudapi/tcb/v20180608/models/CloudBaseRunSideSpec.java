@@ -274,6 +274,47 @@ public class CloudBaseRunSideSpec extends AbstractModel{
         this.VolumeMountInfos = VolumeMountInfos;
     }
 
+    public CloudBaseRunSideSpec() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CloudBaseRunSideSpec(CloudBaseRunSideSpec source) {
+        if (source.ContainerImage != null) {
+            this.ContainerImage = new String(source.ContainerImage);
+        }
+        if (source.ContainerPort != null) {
+            this.ContainerPort = new Long(source.ContainerPort);
+        }
+        if (source.ContainerName != null) {
+            this.ContainerName = new String(source.ContainerName);
+        }
+        if (source.EnvVar != null) {
+            this.EnvVar = new String(source.EnvVar);
+        }
+        if (source.InitialDelaySeconds != null) {
+            this.InitialDelaySeconds = new Long(source.InitialDelaySeconds);
+        }
+        if (source.Cpu != null) {
+            this.Cpu = new Long(source.Cpu);
+        }
+        if (source.Mem != null) {
+            this.Mem = new Long(source.Mem);
+        }
+        if (source.Security != null) {
+            this.Security = new CloudBaseSecurityContext(source.Security);
+        }
+        if (source.VolumeMountInfos != null) {
+            this.VolumeMountInfos = new CloudBaseRunVolumeMount[source.VolumeMountInfos.length];
+            for (int i = 0; i < source.VolumeMountInfos.length; i++) {
+                this.VolumeMountInfos[i] = new CloudBaseRunVolumeMount(source.VolumeMountInfos[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

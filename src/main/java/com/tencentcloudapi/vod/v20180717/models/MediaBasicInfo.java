@@ -476,6 +476,74 @@ public class MediaBasicInfo extends AbstractModel{
         this.StorageClass = StorageClass;
     }
 
+    public MediaBasicInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MediaBasicInfo(MediaBasicInfo source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new String(source.UpdateTime);
+        }
+        if (source.ExpireTime != null) {
+            this.ExpireTime = new String(source.ExpireTime);
+        }
+        if (source.ClassId != null) {
+            this.ClassId = new Long(source.ClassId);
+        }
+        if (source.ClassName != null) {
+            this.ClassName = new String(source.ClassName);
+        }
+        if (source.ClassPath != null) {
+            this.ClassPath = new String(source.ClassPath);
+        }
+        if (source.CoverUrl != null) {
+            this.CoverUrl = new String(source.CoverUrl);
+        }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.MediaUrl != null) {
+            this.MediaUrl = new String(source.MediaUrl);
+        }
+        if (source.SourceInfo != null) {
+            this.SourceInfo = new MediaSourceData(source.SourceInfo);
+        }
+        if (source.StorageRegion != null) {
+            this.StorageRegion = new String(source.StorageRegion);
+        }
+        if (source.TagSet != null) {
+            this.TagSet = new String[source.TagSet.length];
+            for (int i = 0; i < source.TagSet.length; i++) {
+                this.TagSet[i] = new String(source.TagSet[i]);
+            }
+        }
+        if (source.Vid != null) {
+            this.Vid = new String(source.Vid);
+        }
+        if (source.Category != null) {
+            this.Category = new String(source.Category);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.StorageClass != null) {
+            this.StorageClass = new String(source.StorageClass);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -91,6 +91,29 @@ public class ClusterDetailForUser extends AbstractModel{
         this.ClusterName = ClusterName;
     }
 
+    public ClusterDetailForUser() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ClusterDetailForUser(ClusterDetailForUser source) {
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
+        if (source.GroupList != null) {
+            this.GroupList = new GroupDetailForUser[source.GroupList.length];
+            for (int i = 0; i < source.GroupList.length; i++) {
+                this.GroupList[i] = new GroupDetailForUser(source.GroupList[i]);
+            }
+        }
+        if (source.ClusterName != null) {
+            this.ClusterName = new String(source.ClusterName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -68,6 +68,23 @@ public class DeviceDataHistoryItem extends AbstractModel{
         this.Value = Value;
     }
 
+    public DeviceDataHistoryItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeviceDataHistoryItem(DeviceDataHistoryItem source) {
+        if (source.Time != null) {
+            this.Time = new String(source.Time);
+        }
+        if (source.Value != null) {
+            this.Value = new String(source.Value);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

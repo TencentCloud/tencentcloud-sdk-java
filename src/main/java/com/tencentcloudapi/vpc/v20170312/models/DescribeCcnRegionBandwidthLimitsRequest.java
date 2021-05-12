@@ -45,6 +45,20 @@ public class DescribeCcnRegionBandwidthLimitsRequest extends AbstractModel{
         this.CcnId = CcnId;
     }
 
+    public DescribeCcnRegionBandwidthLimitsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeCcnRegionBandwidthLimitsRequest(DescribeCcnRegionBandwidthLimitsRequest source) {
+        if (source.CcnId != null) {
+            this.CcnId = new String(source.CcnId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

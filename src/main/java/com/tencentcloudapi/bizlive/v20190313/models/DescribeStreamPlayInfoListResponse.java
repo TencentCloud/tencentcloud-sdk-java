@@ -68,6 +68,26 @@ public class DescribeStreamPlayInfoListResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeStreamPlayInfoListResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeStreamPlayInfoListResponse(DescribeStreamPlayInfoListResponse source) {
+        if (source.DataInfoList != null) {
+            this.DataInfoList = new DayStreamPlayInfo[source.DataInfoList.length];
+            for (int i = 0; i < source.DataInfoList.length; i++) {
+                this.DataInfoList[i] = new DayStreamPlayInfo(source.DataInfoList[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

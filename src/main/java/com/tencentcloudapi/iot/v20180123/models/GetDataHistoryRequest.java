@@ -183,6 +183,41 @@ public class GetDataHistoryRequest extends AbstractModel{
         this.ScrollId = ScrollId;
     }
 
+    public GetDataHistoryRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GetDataHistoryRequest(GetDataHistoryRequest source) {
+        if (source.ProductId != null) {
+            this.ProductId = new String(source.ProductId);
+        }
+        if (source.DeviceNames != null) {
+            this.DeviceNames = new String[source.DeviceNames.length];
+            for (int i = 0; i < source.DeviceNames.length; i++) {
+                this.DeviceNames[i] = new String(source.DeviceNames[i]);
+            }
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+        if (source.Size != null) {
+            this.Size = new Long(source.Size);
+        }
+        if (source.Order != null) {
+            this.Order = new String(source.Order);
+        }
+        if (source.ScrollId != null) {
+            this.ScrollId = new String(source.ScrollId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

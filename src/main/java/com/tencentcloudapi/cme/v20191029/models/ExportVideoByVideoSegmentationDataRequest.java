@@ -254,6 +254,47 @@ public class ExportVideoByVideoSegmentationDataRequest extends AbstractModel{
         this.Operator = Operator;
     }
 
+    public ExportVideoByVideoSegmentationDataRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ExportVideoByVideoSegmentationDataRequest(ExportVideoByVideoSegmentationDataRequest source) {
+        if (source.Platform != null) {
+            this.Platform = new String(source.Platform);
+        }
+        if (source.ProjectId != null) {
+            this.ProjectId = new String(source.ProjectId);
+        }
+        if (source.SegmentGroupId != null) {
+            this.SegmentGroupId = new String(source.SegmentGroupId);
+        }
+        if (source.SegmentIds != null) {
+            this.SegmentIds = new String[source.SegmentIds.length];
+            for (int i = 0; i < source.SegmentIds.length; i++) {
+                this.SegmentIds[i] = new String(source.SegmentIds[i]);
+            }
+        }
+        if (source.Definition != null) {
+            this.Definition = new Long(source.Definition);
+        }
+        if (source.ExportDestination != null) {
+            this.ExportDestination = new String(source.ExportDestination);
+        }
+        if (source.CMEExportInfo != null) {
+            this.CMEExportInfo = new CMEExportInfo(source.CMEExportInfo);
+        }
+        if (source.VODExportInfo != null) {
+            this.VODExportInfo = new VODExportInfo(source.VODExportInfo);
+        }
+        if (source.Operator != null) {
+            this.Operator = new String(source.Operator);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

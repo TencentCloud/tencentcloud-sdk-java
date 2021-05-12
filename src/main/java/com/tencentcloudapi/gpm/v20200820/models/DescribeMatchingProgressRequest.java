@@ -45,6 +45,23 @@ public class DescribeMatchingProgressRequest extends AbstractModel{
         this.MatchTicketIds = MatchTicketIds;
     }
 
+    public DescribeMatchingProgressRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeMatchingProgressRequest(DescribeMatchingProgressRequest source) {
+        if (source.MatchTicketIds != null) {
+            this.MatchTicketIds = new MTicket[source.MatchTicketIds.length];
+            for (int i = 0; i < source.MatchTicketIds.length; i++) {
+                this.MatchTicketIds[i] = new MTicket(source.MatchTicketIds[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

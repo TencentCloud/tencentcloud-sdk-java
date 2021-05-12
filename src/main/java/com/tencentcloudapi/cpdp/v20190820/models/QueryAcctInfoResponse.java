@@ -348,6 +348,53 @@ merchant:商户子账户
         this.RequestId = RequestId;
     }
 
+    public QueryAcctInfoResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public QueryAcctInfoResponse(QueryAcctInfoResponse source) {
+        if (source.SubAppId != null) {
+            this.SubAppId = new String(source.SubAppId);
+        }
+        if (source.SubMchName != null) {
+            this.SubMchName = new String(source.SubMchName);
+        }
+        if (source.SubMchType != null) {
+            this.SubMchType = new String(source.SubMchType);
+        }
+        if (source.ShortName != null) {
+            this.ShortName = new String(source.ShortName);
+        }
+        if (source.Address != null) {
+            this.Address = new String(source.Address);
+        }
+        if (source.Contact != null) {
+            this.Contact = new String(source.Contact);
+        }
+        if (source.Mobile != null) {
+            this.Mobile = new String(source.Mobile);
+        }
+        if (source.Email != null) {
+            this.Email = new String(source.Email);
+        }
+        if (source.SubMchId != null) {
+            this.SubMchId = new String(source.SubMchId);
+        }
+        if (source.SubAcctNo != null) {
+            this.SubAcctNo = new String(source.SubAcctNo);
+        }
+        if (source.SubMerchantMemberType != null) {
+            this.SubMerchantMemberType = new String(source.SubMerchantMemberType);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

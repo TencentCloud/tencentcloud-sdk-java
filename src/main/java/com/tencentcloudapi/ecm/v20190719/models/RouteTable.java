@@ -193,6 +193,44 @@ public class RouteTable extends AbstractModel{
         this.CreatedTime = CreatedTime;
     }
 
+    public RouteTable() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RouteTable(RouteTable source) {
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.RouteTableId != null) {
+            this.RouteTableId = new String(source.RouteTableId);
+        }
+        if (source.RouteTableName != null) {
+            this.RouteTableName = new String(source.RouteTableName);
+        }
+        if (source.AssociationSet != null) {
+            this.AssociationSet = new RouteTableAssociation[source.AssociationSet.length];
+            for (int i = 0; i < source.AssociationSet.length; i++) {
+                this.AssociationSet[i] = new RouteTableAssociation(source.AssociationSet[i]);
+            }
+        }
+        if (source.RouteSet != null) {
+            this.RouteSet = new Route[source.RouteSet.length];
+            for (int i = 0; i < source.RouteSet.length; i++) {
+                this.RouteSet[i] = new Route(source.RouteSet[i]);
+            }
+        }
+        if (source.Main != null) {
+            this.Main = new Boolean(source.Main);
+        }
+        if (source.CreatedTime != null) {
+            this.CreatedTime = new String(source.CreatedTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

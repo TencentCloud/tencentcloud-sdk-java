@@ -114,6 +114,32 @@ public class BindIPStrategyRequest extends AbstractModel{
         this.BindApiIds = BindApiIds;
     }
 
+    public BindIPStrategyRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public BindIPStrategyRequest(BindIPStrategyRequest source) {
+        if (source.ServiceId != null) {
+            this.ServiceId = new String(source.ServiceId);
+        }
+        if (source.StrategyId != null) {
+            this.StrategyId = new String(source.StrategyId);
+        }
+        if (source.EnvironmentName != null) {
+            this.EnvironmentName = new String(source.EnvironmentName);
+        }
+        if (source.BindApiIds != null) {
+            this.BindApiIds = new String[source.BindApiIds.length];
+            for (int i = 0; i < source.BindApiIds.length; i++) {
+                this.BindApiIds[i] = new String(source.BindApiIds[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

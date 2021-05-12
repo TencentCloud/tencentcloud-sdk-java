@@ -114,6 +114,32 @@ public class UpdateUnitRuleRequest extends AbstractModel{
         this.UnitRuleItemList = UnitRuleItemList;
     }
 
+    public UpdateUnitRuleRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UpdateUnitRuleRequest(UpdateUnitRuleRequest source) {
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.UnitRuleItemList != null) {
+            this.UnitRuleItemList = new UnitRuleItem[source.UnitRuleItemList.length];
+            for (int i = 0; i < source.UnitRuleItemList.length; i++) {
+                this.UnitRuleItemList[i] = new UnitRuleItem(source.UnitRuleItemList[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -114,6 +114,32 @@ public class StartMatchingBackfillRequest extends AbstractModel{
         this.MatchTicketId = MatchTicketId;
     }
 
+    public StartMatchingBackfillRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public StartMatchingBackfillRequest(StartMatchingBackfillRequest source) {
+        if (source.MatchCode != null) {
+            this.MatchCode = new String(source.MatchCode);
+        }
+        if (source.Players != null) {
+            this.Players = new Player[source.Players.length];
+            for (int i = 0; i < source.Players.length; i++) {
+                this.Players[i] = new Player(source.Players[i]);
+            }
+        }
+        if (source.GameServerSessionId != null) {
+            this.GameServerSessionId = new String(source.GameServerSessionId);
+        }
+        if (source.MatchTicketId != null) {
+            this.MatchTicketId = new String(source.MatchTicketId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

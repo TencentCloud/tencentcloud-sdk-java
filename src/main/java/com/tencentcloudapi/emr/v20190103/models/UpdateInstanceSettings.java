@@ -114,6 +114,29 @@ public class UpdateInstanceSettings extends AbstractModel{
         this.InstanceType = InstanceType;
     }
 
+    public UpdateInstanceSettings() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UpdateInstanceSettings(UpdateInstanceSettings source) {
+        if (source.Memory != null) {
+            this.Memory = new Long(source.Memory);
+        }
+        if (source.CPUCores != null) {
+            this.CPUCores = new Long(source.CPUCores);
+        }
+        if (source.ResourceId != null) {
+            this.ResourceId = new String(source.ResourceId);
+        }
+        if (source.InstanceType != null) {
+            this.InstanceType = new String(source.InstanceType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -91,6 +91,26 @@ public class BindVpcIpRequest extends AbstractModel{
         this.VpcIp = VpcIp;
     }
 
+    public BindVpcIpRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public BindVpcIpRequest(BindVpcIpRequest source) {
+        if (source.EipId != null) {
+            this.EipId = new String(source.EipId);
+        }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.VpcIp != null) {
+            this.VpcIp = new String(source.VpcIp);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

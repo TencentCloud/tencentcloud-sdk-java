@@ -367,6 +367,65 @@ public class DescribeReadOnlyGroupDetailsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeReadOnlyGroupDetailsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeReadOnlyGroupDetailsResponse(DescribeReadOnlyGroupDetailsResponse source) {
+        if (source.ReadOnlyGroupId != null) {
+            this.ReadOnlyGroupId = new String(source.ReadOnlyGroupId);
+        }
+        if (source.ReadOnlyGroupName != null) {
+            this.ReadOnlyGroupName = new String(source.ReadOnlyGroupName);
+        }
+        if (source.RegionId != null) {
+            this.RegionId = new String(source.RegionId);
+        }
+        if (source.ZoneId != null) {
+            this.ZoneId = new String(source.ZoneId);
+        }
+        if (source.IsOfflineDelay != null) {
+            this.IsOfflineDelay = new Long(source.IsOfflineDelay);
+        }
+        if (source.ReadOnlyMaxDelayTime != null) {
+            this.ReadOnlyMaxDelayTime = new Long(source.ReadOnlyMaxDelayTime);
+        }
+        if (source.MinReadOnlyInGroup != null) {
+            this.MinReadOnlyInGroup = new Long(source.MinReadOnlyInGroup);
+        }
+        if (source.Vip != null) {
+            this.Vip = new String(source.Vip);
+        }
+        if (source.Vport != null) {
+            this.Vport = new Long(source.Vport);
+        }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.SubnetId != null) {
+            this.SubnetId = new String(source.SubnetId);
+        }
+        if (source.ReadOnlyInstanceSet != null) {
+            this.ReadOnlyInstanceSet = new ReadOnlyInstance[source.ReadOnlyInstanceSet.length];
+            for (int i = 0; i < source.ReadOnlyInstanceSet.length; i++) {
+                this.ReadOnlyInstanceSet[i] = new ReadOnlyInstance(source.ReadOnlyInstanceSet[i]);
+            }
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.MasterInstanceId != null) {
+            this.MasterInstanceId = new String(source.MasterInstanceId);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -91,6 +91,26 @@ public class ModifyVpcAttributeRequest extends AbstractModel{
         this.EnableMonitor = EnableMonitor;
     }
 
+    public ModifyVpcAttributeRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyVpcAttributeRequest(ModifyVpcAttributeRequest source) {
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.VpcName != null) {
+            this.VpcName = new String(source.VpcName);
+        }
+        if (source.EnableMonitor != null) {
+            this.EnableMonitor = new Boolean(source.EnableMonitor);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

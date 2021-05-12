@@ -182,6 +182,32 @@ public class SecurityDynamic extends AbstractModel{
         this.SecurityLevel = SecurityLevel;
     }
 
+    public SecurityDynamic() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SecurityDynamic(SecurityDynamic source) {
+        if (source.Uuid != null) {
+            this.Uuid = new String(source.Uuid);
+        }
+        if (source.EventTime != null) {
+            this.EventTime = new String(source.EventTime);
+        }
+        if (source.EventType != null) {
+            this.EventType = new String(source.EventType);
+        }
+        if (source.Message != null) {
+            this.Message = new String(source.Message);
+        }
+        if (source.SecurityLevel != null) {
+            this.SecurityLevel = new String(source.SecurityLevel);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

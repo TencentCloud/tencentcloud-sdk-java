@@ -68,6 +68,26 @@ public class SecurityPolicyDatabase extends AbstractModel{
         this.RemoteCidrBlock = RemoteCidrBlock;
     }
 
+    public SecurityPolicyDatabase() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SecurityPolicyDatabase(SecurityPolicyDatabase source) {
+        if (source.LocalCidrBlock != null) {
+            this.LocalCidrBlock = new String(source.LocalCidrBlock);
+        }
+        if (source.RemoteCidrBlock != null) {
+            this.RemoteCidrBlock = new String[source.RemoteCidrBlock.length];
+            for (int i = 0; i < source.RemoteCidrBlock.length; i++) {
+                this.RemoteCidrBlock[i] = new String(source.RemoteCidrBlock[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

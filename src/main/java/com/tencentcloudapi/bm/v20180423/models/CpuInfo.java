@@ -114,6 +114,32 @@ public class CpuInfo extends AbstractModel{
         this.ContainRaidCard = ContainRaidCard;
     }
 
+    public CpuInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CpuInfo(CpuInfo source) {
+        if (source.CpuId != null) {
+            this.CpuId = new Long(source.CpuId);
+        }
+        if (source.CpuDescription != null) {
+            this.CpuDescription = new String(source.CpuDescription);
+        }
+        if (source.Series != null) {
+            this.Series = new Long(source.Series);
+        }
+        if (source.ContainRaidCard != null) {
+            this.ContainRaidCard = new Long[source.ContainRaidCard.length];
+            for (int i = 0; i < source.ContainRaidCard.length; i++) {
+                this.ContainRaidCard[i] = new Long(source.ContainRaidCard[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

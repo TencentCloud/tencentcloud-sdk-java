@@ -137,6 +137,32 @@ public class PurchaseReservedInstancesOfferingRequest extends AbstractModel{
         this.ReservedInstanceName = ReservedInstanceName;
     }
 
+    public PurchaseReservedInstancesOfferingRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PurchaseReservedInstancesOfferingRequest(PurchaseReservedInstancesOfferingRequest source) {
+        if (source.InstanceCount != null) {
+            this.InstanceCount = new Long(source.InstanceCount);
+        }
+        if (source.ReservedInstancesOfferingId != null) {
+            this.ReservedInstancesOfferingId = new String(source.ReservedInstancesOfferingId);
+        }
+        if (source.DryRun != null) {
+            this.DryRun = new Boolean(source.DryRun);
+        }
+        if (source.ClientToken != null) {
+            this.ClientToken = new String(source.ClientToken);
+        }
+        if (source.ReservedInstanceName != null) {
+            this.ReservedInstanceName = new String(source.ReservedInstanceName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -321,6 +321,59 @@ public class CreateDisksRequest extends AbstractModel{
         this.ThroughputPerformance = ThroughputPerformance;
     }
 
+    public CreateDisksRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateDisksRequest(CreateDisksRequest source) {
+        if (source.DiskType != null) {
+            this.DiskType = new String(source.DiskType);
+        }
+        if (source.DiskChargeType != null) {
+            this.DiskChargeType = new String(source.DiskChargeType);
+        }
+        if (source.Placement != null) {
+            this.Placement = new Placement(source.Placement);
+        }
+        if (source.DiskName != null) {
+            this.DiskName = new String(source.DiskName);
+        }
+        if (source.DiskCount != null) {
+            this.DiskCount = new Long(source.DiskCount);
+        }
+        if (source.DiskChargePrepaid != null) {
+            this.DiskChargePrepaid = new DiskChargePrepaid(source.DiskChargePrepaid);
+        }
+        if (source.DiskSize != null) {
+            this.DiskSize = new Long(source.DiskSize);
+        }
+        if (source.SnapshotId != null) {
+            this.SnapshotId = new String(source.SnapshotId);
+        }
+        if (source.ClientToken != null) {
+            this.ClientToken = new String(source.ClientToken);
+        }
+        if (source.Encrypt != null) {
+            this.Encrypt = new String(source.Encrypt);
+        }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
+        if (source.Shareable != null) {
+            this.Shareable = new Boolean(source.Shareable);
+        }
+        if (source.ThroughputPerformance != null) {
+            this.ThroughputPerformance = new Long(source.ThroughputPerformance);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -106,6 +106,29 @@ STOP_CHARGING：关机停止收费
         this.StoppedMode = StoppedMode;
     }
 
+    public StopAutoScalingInstancesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public StopAutoScalingInstancesRequest(StopAutoScalingInstancesRequest source) {
+        if (source.AutoScalingGroupId != null) {
+            this.AutoScalingGroupId = new String(source.AutoScalingGroupId);
+        }
+        if (source.InstanceIds != null) {
+            this.InstanceIds = new String[source.InstanceIds.length];
+            for (int i = 0; i < source.InstanceIds.length; i++) {
+                this.InstanceIds[i] = new String(source.InstanceIds[i]);
+            }
+        }
+        if (source.StoppedMode != null) {
+            this.StoppedMode = new String(source.StoppedMode);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

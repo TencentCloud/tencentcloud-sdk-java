@@ -45,6 +45,23 @@ public class CreateCameraAlertsRequest extends AbstractModel{
         this.Alerts = Alerts;
     }
 
+    public CreateCameraAlertsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateCameraAlertsRequest(CreateCameraAlertsRequest source) {
+        if (source.Alerts != null) {
+            this.Alerts = new CreateCameraAlertAlert[source.Alerts.length];
+            for (int i = 0; i < source.Alerts.length; i++) {
+                this.Alerts[i] = new CreateCameraAlertAlert(source.Alerts[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

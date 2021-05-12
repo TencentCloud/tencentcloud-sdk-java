@@ -91,6 +91,26 @@ public class ModifyVpcEndPointServiceWhiteListRequest extends AbstractModel{
         this.Description = Description;
     }
 
+    public ModifyVpcEndPointServiceWhiteListRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyVpcEndPointServiceWhiteListRequest(ModifyVpcEndPointServiceWhiteListRequest source) {
+        if (source.UserUin != null) {
+            this.UserUin = new String(source.UserUin);
+        }
+        if (source.EndPointServiceId != null) {
+            this.EndPointServiceId = new String(source.EndPointServiceId);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

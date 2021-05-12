@@ -91,6 +91,29 @@ public class DeleteClusterAsGroupsRequest extends AbstractModel{
         this.KeepInstance = KeepInstance;
     }
 
+    public DeleteClusterAsGroupsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteClusterAsGroupsRequest(DeleteClusterAsGroupsRequest source) {
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
+        if (source.AutoScalingGroupIds != null) {
+            this.AutoScalingGroupIds = new String[source.AutoScalingGroupIds.length];
+            for (int i = 0; i < source.AutoScalingGroupIds.length; i++) {
+                this.AutoScalingGroupIds[i] = new String(source.AutoScalingGroupIds[i]);
+            }
+        }
+        if (source.KeepInstance != null) {
+            this.KeepInstance = new Boolean(source.KeepInstance);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

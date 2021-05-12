@@ -68,6 +68,23 @@ public class Conditions extends AbstractModel{
         this.Count = Count;
     }
 
+    public Conditions() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Conditions(Conditions source) {
+        if (source.Reason != null) {
+            this.Reason = new String(source.Reason);
+        }
+        if (source.Count != null) {
+            this.Count = new Long(source.Count);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

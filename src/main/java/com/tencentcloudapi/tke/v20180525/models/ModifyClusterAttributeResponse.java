@@ -129,6 +129,29 @@ public class ModifyClusterAttributeResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public ModifyClusterAttributeResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyClusterAttributeResponse(ModifyClusterAttributeResponse source) {
+        if (source.ProjectId != null) {
+            this.ProjectId = new Long(source.ProjectId);
+        }
+        if (source.ClusterName != null) {
+            this.ClusterName = new String(source.ClusterName);
+        }
+        if (source.ClusterDesc != null) {
+            this.ClusterDesc = new String(source.ClusterDesc);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

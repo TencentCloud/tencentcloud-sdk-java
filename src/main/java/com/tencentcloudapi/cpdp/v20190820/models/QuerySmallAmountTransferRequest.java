@@ -137,6 +137,32 @@ public class QuerySmallAmountTransferRequest extends AbstractModel{
         this.Profile = Profile;
     }
 
+    public QuerySmallAmountTransferRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public QuerySmallAmountTransferRequest(QuerySmallAmountTransferRequest source) {
+        if (source.MrchCode != null) {
+            this.MrchCode = new String(source.MrchCode);
+        }
+        if (source.OldTranSeqNo != null) {
+            this.OldTranSeqNo = new String(source.OldTranSeqNo);
+        }
+        if (source.TranDate != null) {
+            this.TranDate = new String(source.TranDate);
+        }
+        if (source.ReservedMsg != null) {
+            this.ReservedMsg = new String(source.ReservedMsg);
+        }
+        if (source.Profile != null) {
+            this.Profile = new String(source.Profile);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

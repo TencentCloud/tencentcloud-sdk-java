@@ -91,6 +91,29 @@ public class DescribeVpnConnectionsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeVpnConnectionsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeVpnConnectionsResponse(DescribeVpnConnectionsResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.VpnConnectionSet != null) {
+            this.VpnConnectionSet = new VpnConnection[source.VpnConnectionSet.length];
+            for (int i = 0; i < source.VpnConnectionSet.length; i++) {
+                this.VpnConnectionSet[i] = new VpnConnection(source.VpnConnectionSet[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

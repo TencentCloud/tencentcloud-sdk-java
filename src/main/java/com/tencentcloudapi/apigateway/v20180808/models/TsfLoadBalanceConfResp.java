@@ -134,6 +134,29 @@ public class TsfLoadBalanceConfResp extends AbstractModel{
         this.SessionStickTimeout = SessionStickTimeout;
     }
 
+    public TsfLoadBalanceConfResp() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TsfLoadBalanceConfResp(TsfLoadBalanceConfResp source) {
+        if (source.IsLoadBalance != null) {
+            this.IsLoadBalance = new Boolean(source.IsLoadBalance);
+        }
+        if (source.Method != null) {
+            this.Method = new String(source.Method);
+        }
+        if (source.SessionStickRequired != null) {
+            this.SessionStickRequired = new Boolean(source.SessionStickRequired);
+        }
+        if (source.SessionStickTimeout != null) {
+            this.SessionStickTimeout = new Long(source.SessionStickTimeout);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

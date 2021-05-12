@@ -91,6 +91,29 @@ public class ListOrganizationInvitationsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public ListOrganizationInvitationsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ListOrganizationInvitationsResponse(ListOrganizationInvitationsResponse source) {
+        if (source.Invitations != null) {
+            this.Invitations = new OrgInvitation[source.Invitations.length];
+            for (int i = 0; i < source.Invitations.length; i++) {
+                this.Invitations[i] = new OrgInvitation(source.Invitations[i]);
+            }
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

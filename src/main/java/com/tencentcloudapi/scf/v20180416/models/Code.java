@@ -344,6 +344,59 @@ public class Code extends AbstractModel{
         this.GitUserNameSecret = GitUserNameSecret;
     }
 
+    public Code() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Code(Code source) {
+        if (source.CosBucketName != null) {
+            this.CosBucketName = new String(source.CosBucketName);
+        }
+        if (source.CosObjectName != null) {
+            this.CosObjectName = new String(source.CosObjectName);
+        }
+        if (source.ZipFile != null) {
+            this.ZipFile = new String(source.ZipFile);
+        }
+        if (source.CosBucketRegion != null) {
+            this.CosBucketRegion = new String(source.CosBucketRegion);
+        }
+        if (source.DemoId != null) {
+            this.DemoId = new String(source.DemoId);
+        }
+        if (source.TempCosObjectName != null) {
+            this.TempCosObjectName = new String(source.TempCosObjectName);
+        }
+        if (source.GitUrl != null) {
+            this.GitUrl = new String(source.GitUrl);
+        }
+        if (source.GitUserName != null) {
+            this.GitUserName = new String(source.GitUserName);
+        }
+        if (source.GitPassword != null) {
+            this.GitPassword = new String(source.GitPassword);
+        }
+        if (source.GitPasswordSecret != null) {
+            this.GitPasswordSecret = new String(source.GitPasswordSecret);
+        }
+        if (source.GitBranch != null) {
+            this.GitBranch = new String(source.GitBranch);
+        }
+        if (source.GitDirectory != null) {
+            this.GitDirectory = new String(source.GitDirectory);
+        }
+        if (source.GitCommitId != null) {
+            this.GitCommitId = new String(source.GitCommitId);
+        }
+        if (source.GitUserNameSecret != null) {
+            this.GitUserNameSecret = new String(source.GitUserNameSecret);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

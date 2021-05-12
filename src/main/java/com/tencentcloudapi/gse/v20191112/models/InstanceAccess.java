@@ -137,6 +137,32 @@ public class InstanceAccess extends AbstractModel{
         this.OperatingSystem = OperatingSystem;
     }
 
+    public InstanceAccess() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public InstanceAccess(InstanceAccess source) {
+        if (source.Credentials != null) {
+            this.Credentials = new Credentials(source.Credentials);
+        }
+        if (source.FleetId != null) {
+            this.FleetId = new String(source.FleetId);
+        }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.IpAddress != null) {
+            this.IpAddress = new String(source.IpAddress);
+        }
+        if (source.OperatingSystem != null) {
+            this.OperatingSystem = new String(source.OperatingSystem);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

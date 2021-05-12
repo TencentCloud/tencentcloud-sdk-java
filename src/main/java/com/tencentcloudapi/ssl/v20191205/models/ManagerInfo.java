@@ -364,6 +364,59 @@ public class ManagerInfo extends AbstractModel{
         this.VerifyTime = VerifyTime;
     }
 
+    public ManagerInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ManagerInfo(ManagerInfo source) {
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.ManagerFirstName != null) {
+            this.ManagerFirstName = new String(source.ManagerFirstName);
+        }
+        if (source.ManagerLastName != null) {
+            this.ManagerLastName = new String(source.ManagerLastName);
+        }
+        if (source.ManagerPosition != null) {
+            this.ManagerPosition = new String(source.ManagerPosition);
+        }
+        if (source.ManagerPhone != null) {
+            this.ManagerPhone = new String(source.ManagerPhone);
+        }
+        if (source.ManagerMail != null) {
+            this.ManagerMail = new String(source.ManagerMail);
+        }
+        if (source.ManagerDepartment != null) {
+            this.ManagerDepartment = new String(source.ManagerDepartment);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.DomainCount != null) {
+            this.DomainCount = new Long(source.DomainCount);
+        }
+        if (source.CertCount != null) {
+            this.CertCount = new Long(source.CertCount);
+        }
+        if (source.ManagerId != null) {
+            this.ManagerId = new Long(source.ManagerId);
+        }
+        if (source.ExpireTime != null) {
+            this.ExpireTime = new String(source.ExpireTime);
+        }
+        if (source.SubmitAuditTime != null) {
+            this.SubmitAuditTime = new String(source.SubmitAuditTime);
+        }
+        if (source.VerifyTime != null) {
+            this.VerifyTime = new String(source.VerifyTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

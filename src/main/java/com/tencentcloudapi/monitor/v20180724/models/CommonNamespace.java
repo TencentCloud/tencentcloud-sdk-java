@@ -206,6 +206,44 @@ public class CommonNamespace extends AbstractModel{
         this.DashboardId = DashboardId;
     }
 
+    public CommonNamespace() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CommonNamespace(CommonNamespace source) {
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Value != null) {
+            this.Value = new String(source.Value);
+        }
+        if (source.ProductName != null) {
+            this.ProductName = new String(source.ProductName);
+        }
+        if (source.Config != null) {
+            this.Config = new String(source.Config);
+        }
+        if (source.AvailableRegions != null) {
+            this.AvailableRegions = new String[source.AvailableRegions.length];
+            for (int i = 0; i < source.AvailableRegions.length; i++) {
+                this.AvailableRegions[i] = new String(source.AvailableRegions[i]);
+            }
+        }
+        if (source.SortId != null) {
+            this.SortId = new Long(source.SortId);
+        }
+        if (source.DashboardId != null) {
+            this.DashboardId = new String(source.DashboardId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

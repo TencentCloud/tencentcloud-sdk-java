@@ -183,6 +183,41 @@ public class CreateCampaignRequest extends AbstractModel{
         this.SmsType = SmsType;
     }
 
+    public CreateCampaignRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateCampaignRequest(CreateCampaignRequest source) {
+        if (source.License != null) {
+            this.License = new String(source.License);
+        }
+        if (source.SendTime != null) {
+            this.SendTime = new Long(source.SendTime);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Strategies != null) {
+            this.Strategies = new PaasStrategy[source.Strategies.length];
+            for (int i = 0; i < source.Strategies.length; i++) {
+                this.Strategies[i] = new PaasStrategy(source.Strategies[i]);
+            }
+        }
+        if (source.TemplateId != null) {
+            this.TemplateId = new Long(source.TemplateId);
+        }
+        if (source.CrowdID != null) {
+            this.CrowdID = new Long(source.CrowdID);
+        }
+        if (source.SmsType != null) {
+            this.SmsType = new Long(source.SmsType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -91,6 +91,29 @@ public class DescribeCatLogsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeCatLogsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeCatLogsResponse(DescribeCatLogsResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.CatLogs != null) {
+            this.CatLogs = new CatLog[source.CatLogs.length];
+            for (int i = 0; i < source.CatLogs.length; i++) {
+                this.CatLogs[i] = new CatLog(source.CatLogs[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

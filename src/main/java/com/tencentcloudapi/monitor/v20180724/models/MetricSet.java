@@ -206,6 +206,50 @@ public class MetricSet extends AbstractModel{
         this.Dimensions = Dimensions;
     }
 
+    public MetricSet() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MetricSet(MetricSet source) {
+        if (source.Namespace != null) {
+            this.Namespace = new String(source.Namespace);
+        }
+        if (source.MetricName != null) {
+            this.MetricName = new String(source.MetricName);
+        }
+        if (source.Unit != null) {
+            this.Unit = new String(source.Unit);
+        }
+        if (source.UnitCname != null) {
+            this.UnitCname = new String(source.UnitCname);
+        }
+        if (source.Period != null) {
+            this.Period = new Long[source.Period.length];
+            for (int i = 0; i < source.Period.length; i++) {
+                this.Period[i] = new Long(source.Period[i]);
+            }
+        }
+        if (source.Periods != null) {
+            this.Periods = new PeriodsSt[source.Periods.length];
+            for (int i = 0; i < source.Periods.length; i++) {
+                this.Periods[i] = new PeriodsSt(source.Periods[i]);
+            }
+        }
+        if (source.Meaning != null) {
+            this.Meaning = new MetricObjectMeaning(source.Meaning);
+        }
+        if (source.Dimensions != null) {
+            this.Dimensions = new DimensionsDesc[source.Dimensions.length];
+            for (int i = 0; i < source.Dimensions.length; i++) {
+                this.Dimensions[i] = new DimensionsDesc(source.Dimensions[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

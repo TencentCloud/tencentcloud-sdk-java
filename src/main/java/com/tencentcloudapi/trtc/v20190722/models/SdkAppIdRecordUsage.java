@@ -68,6 +68,26 @@ public class SdkAppIdRecordUsage extends AbstractModel{
         this.Usages = Usages;
     }
 
+    public SdkAppIdRecordUsage() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SdkAppIdRecordUsage(SdkAppIdRecordUsage source) {
+        if (source.SdkAppId != null) {
+            this.SdkAppId = new String(source.SdkAppId);
+        }
+        if (source.Usages != null) {
+            this.Usages = new RecordUsage[source.Usages.length];
+            for (int i = 0; i < source.Usages.length; i++) {
+                this.Usages[i] = new RecordUsage(source.Usages[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

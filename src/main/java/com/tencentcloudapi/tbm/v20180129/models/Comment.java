@@ -91,6 +91,26 @@ public class Comment extends AbstractModel{
         this.PosCommentCount = PosCommentCount;
     }
 
+    public Comment() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Comment(Comment source) {
+        if (source.Date != null) {
+            this.Date = new String(source.Date);
+        }
+        if (source.NegCommentCount != null) {
+            this.NegCommentCount = new Long(source.NegCommentCount);
+        }
+        if (source.PosCommentCount != null) {
+            this.PosCommentCount = new Long(source.PosCommentCount);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

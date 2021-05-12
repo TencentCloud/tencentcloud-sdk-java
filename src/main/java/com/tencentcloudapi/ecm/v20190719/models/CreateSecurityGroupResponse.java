@@ -68,6 +68,23 @@ public class CreateSecurityGroupResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public CreateSecurityGroupResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateSecurityGroupResponse(CreateSecurityGroupResponse source) {
+        if (source.SecurityGroup != null) {
+            this.SecurityGroup = new SecurityGroup(source.SecurityGroup);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

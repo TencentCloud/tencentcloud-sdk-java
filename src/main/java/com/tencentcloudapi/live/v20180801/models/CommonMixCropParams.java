@@ -114,6 +114,29 @@ public class CommonMixCropParams extends AbstractModel{
         this.CropStartLocationY = CropStartLocationY;
     }
 
+    public CommonMixCropParams() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CommonMixCropParams(CommonMixCropParams source) {
+        if (source.CropWidth != null) {
+            this.CropWidth = new Float(source.CropWidth);
+        }
+        if (source.CropHeight != null) {
+            this.CropHeight = new Float(source.CropHeight);
+        }
+        if (source.CropStartLocationX != null) {
+            this.CropStartLocationX = new Float(source.CropStartLocationX);
+        }
+        if (source.CropStartLocationY != null) {
+            this.CropStartLocationY = new Float(source.CropStartLocationY);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

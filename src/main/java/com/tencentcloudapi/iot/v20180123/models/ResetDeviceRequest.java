@@ -68,6 +68,23 @@ public class ResetDeviceRequest extends AbstractModel{
         this.DeviceName = DeviceName;
     }
 
+    public ResetDeviceRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ResetDeviceRequest(ResetDeviceRequest source) {
+        if (source.ProductId != null) {
+            this.ProductId = new String(source.ProductId);
+        }
+        if (source.DeviceName != null) {
+            this.DeviceName = new String(source.DeviceName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

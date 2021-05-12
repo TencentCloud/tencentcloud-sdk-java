@@ -137,6 +137,32 @@ public class DescribeEventConfigResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeEventConfigResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeEventConfigResponse(DescribeEventConfigResponse source) {
+        if (source.Mode != null) {
+            this.Mode = new String(source.Mode);
+        }
+        if (source.NotificationUrl != null) {
+            this.NotificationUrl = new String(source.NotificationUrl);
+        }
+        if (source.UploadMediaCompleteEventSwitch != null) {
+            this.UploadMediaCompleteEventSwitch = new String(source.UploadMediaCompleteEventSwitch);
+        }
+        if (source.DeleteMediaCompleteEventSwitch != null) {
+            this.DeleteMediaCompleteEventSwitch = new String(source.DeleteMediaCompleteEventSwitch);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

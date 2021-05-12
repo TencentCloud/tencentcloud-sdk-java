@@ -91,6 +91,26 @@ public class CreateHostingDomainRequest extends AbstractModel{
         this.CertId = CertId;
     }
 
+    public CreateHostingDomainRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateHostingDomainRequest(CreateHostingDomainRequest source) {
+        if (source.EnvId != null) {
+            this.EnvId = new String(source.EnvId);
+        }
+        if (source.Domain != null) {
+            this.Domain = new String(source.Domain);
+        }
+        if (source.CertId != null) {
+            this.CertId = new String(source.CertId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

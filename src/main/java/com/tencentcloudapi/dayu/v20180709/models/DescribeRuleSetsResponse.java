@@ -131,6 +131,32 @@ Key值为"RuleNum"时，Value值表示资源的规则数
         this.RequestId = RequestId;
     }
 
+    public DescribeRuleSetsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeRuleSetsResponse(DescribeRuleSetsResponse source) {
+        if (source.L4RuleSets != null) {
+            this.L4RuleSets = new KeyValueRecord[source.L4RuleSets.length];
+            for (int i = 0; i < source.L4RuleSets.length; i++) {
+                this.L4RuleSets[i] = new KeyValueRecord(source.L4RuleSets[i]);
+            }
+        }
+        if (source.L7RuleSets != null) {
+            this.L7RuleSets = new KeyValueRecord[source.L7RuleSets.length];
+            for (int i = 0; i < source.L7RuleSets.length; i++) {
+                this.L7RuleSets[i] = new KeyValueRecord(source.L7RuleSets[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

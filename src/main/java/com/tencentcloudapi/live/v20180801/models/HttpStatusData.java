@@ -73,6 +73,26 @@ public class HttpStatusData extends AbstractModel{
         this.HttpStatusInfoList = HttpStatusInfoList;
     }
 
+    public HttpStatusData() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public HttpStatusData(HttpStatusData source) {
+        if (source.Time != null) {
+            this.Time = new String(source.Time);
+        }
+        if (source.HttpStatusInfoList != null) {
+            this.HttpStatusInfoList = new HttpStatusInfo[source.HttpStatusInfoList.length];
+            for (int i = 0; i < source.HttpStatusInfoList.length; i++) {
+                this.HttpStatusInfoList[i] = new HttpStatusInfo(source.HttpStatusInfoList[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

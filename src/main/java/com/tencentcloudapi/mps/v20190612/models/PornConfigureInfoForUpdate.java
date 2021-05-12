@@ -91,6 +91,26 @@ public class PornConfigureInfoForUpdate extends AbstractModel{
         this.OcrReviewInfo = OcrReviewInfo;
     }
 
+    public PornConfigureInfoForUpdate() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PornConfigureInfoForUpdate(PornConfigureInfoForUpdate source) {
+        if (source.ImgReviewInfo != null) {
+            this.ImgReviewInfo = new PornImgReviewTemplateInfoForUpdate(source.ImgReviewInfo);
+        }
+        if (source.AsrReviewInfo != null) {
+            this.AsrReviewInfo = new PornAsrReviewTemplateInfoForUpdate(source.AsrReviewInfo);
+        }
+        if (source.OcrReviewInfo != null) {
+            this.OcrReviewInfo = new PornOcrReviewTemplateInfoForUpdate(source.OcrReviewInfo);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

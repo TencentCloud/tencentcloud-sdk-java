@@ -124,6 +124,29 @@ public class StreamConnectOutput extends AbstractModel{
         this.PushUrl = PushUrl;
     }
 
+    public StreamConnectOutput() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public StreamConnectOutput(StreamConnectOutput source) {
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.PushUrl != null) {
+            this.PushUrl = new String(source.PushUrl);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

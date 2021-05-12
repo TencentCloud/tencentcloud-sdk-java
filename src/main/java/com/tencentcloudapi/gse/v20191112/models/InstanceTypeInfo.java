@@ -137,6 +137,32 @@ public class InstanceTypeInfo extends AbstractModel{
         this.NetworkCard = NetworkCard;
     }
 
+    public InstanceTypeInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public InstanceTypeInfo(InstanceTypeInfo source) {
+        if (source.TypeName != null) {
+            this.TypeName = new String(source.TypeName);
+        }
+        if (source.InstanceType != null) {
+            this.InstanceType = new String(source.InstanceType);
+        }
+        if (source.Cpu != null) {
+            this.Cpu = new Long(source.Cpu);
+        }
+        if (source.Memory != null) {
+            this.Memory = new Long(source.Memory);
+        }
+        if (source.NetworkCard != null) {
+            this.NetworkCard = new Long(source.NetworkCard);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

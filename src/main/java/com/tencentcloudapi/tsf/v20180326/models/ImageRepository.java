@@ -330,6 +330,50 @@ public class ImageRepository extends AbstractModel{
         this.UpdateTime = UpdateTime;
     }
 
+    public ImageRepository() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ImageRepository(ImageRepository source) {
+        if (source.Reponame != null) {
+            this.Reponame = new String(source.Reponame);
+        }
+        if (source.Repotype != null) {
+            this.Repotype = new String(source.Repotype);
+        }
+        if (source.TagCount != null) {
+            this.TagCount = new Long(source.TagCount);
+        }
+        if (source.IsPublic != null) {
+            this.IsPublic = new Long(source.IsPublic);
+        }
+        if (source.IsUserFavor != null) {
+            this.IsUserFavor = new Boolean(source.IsUserFavor);
+        }
+        if (source.IsQcloudOfficial != null) {
+            this.IsQcloudOfficial = new Boolean(source.IsQcloudOfficial);
+        }
+        if (source.FavorCount != null) {
+            this.FavorCount = new Long(source.FavorCount);
+        }
+        if (source.PullCount != null) {
+            this.PullCount = new Long(source.PullCount);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.CreationTime != null) {
+            this.CreationTime = new String(source.CreationTime);
+        }
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new String(source.UpdateTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

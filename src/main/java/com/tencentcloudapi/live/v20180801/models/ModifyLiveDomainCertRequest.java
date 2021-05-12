@@ -91,6 +91,26 @@ public class ModifyLiveDomainCertRequest extends AbstractModel{
         this.Status = Status;
     }
 
+    public ModifyLiveDomainCertRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyLiveDomainCertRequest(ModifyLiveDomainCertRequest source) {
+        if (source.DomainName != null) {
+            this.DomainName = new String(source.DomainName);
+        }
+        if (source.CertId != null) {
+            this.CertId = new Long(source.CertId);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

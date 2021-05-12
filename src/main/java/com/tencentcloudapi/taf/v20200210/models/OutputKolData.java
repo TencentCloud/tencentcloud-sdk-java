@@ -106,6 +106,29 @@ public class OutputKolData extends AbstractModel{
         this.Value = Value;
     }
 
+    public OutputKolData() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public OutputKolData(OutputKolData source) {
+        if (source.Code != null) {
+            this.Code = new Long(source.Code);
+        }
+        if (source.Message != null) {
+            this.Message = new String(source.Message);
+        }
+        if (source.Value != null) {
+            this.Value = new OutputKolValue[source.Value.length];
+            for (int i = 0; i < source.Value.length; i++) {
+                this.Value[i] = new OutputKolValue(source.Value[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -114,6 +114,29 @@ public class TempCertificate extends AbstractModel{
         this.ExpiredTime = ExpiredTime;
     }
 
+    public TempCertificate() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TempCertificate(TempCertificate source) {
+        if (source.SecretId != null) {
+            this.SecretId = new String(source.SecretId);
+        }
+        if (source.SecretKey != null) {
+            this.SecretKey = new String(source.SecretKey);
+        }
+        if (source.Token != null) {
+            this.Token = new String(source.Token);
+        }
+        if (source.ExpiredTime != null) {
+            this.ExpiredTime = new Long(source.ExpiredTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

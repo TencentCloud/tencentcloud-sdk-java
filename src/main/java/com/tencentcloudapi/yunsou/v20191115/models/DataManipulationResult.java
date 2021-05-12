@@ -147,6 +147,35 @@ public class DataManipulationResult extends AbstractModel{
         this.ErrorResult = ErrorResult;
     }
 
+    public DataManipulationResult() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DataManipulationResult(DataManipulationResult source) {
+        if (source.AppId != null) {
+            this.AppId = new Long(source.AppId);
+        }
+        if (source.Seq != null) {
+            this.Seq = new Long(source.Seq);
+        }
+        if (source.TotalResult != null) {
+            this.TotalResult = new String(source.TotalResult);
+        }
+        if (source.Result != null) {
+            this.Result = new DataManipulationResultItem[source.Result.length];
+            for (int i = 0; i < source.Result.length; i++) {
+                this.Result[i] = new DataManipulationResultItem(source.Result[i]);
+            }
+        }
+        if (source.ErrorResult != null) {
+            this.ErrorResult = new String(source.ErrorResult);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

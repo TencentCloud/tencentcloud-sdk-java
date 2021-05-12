@@ -91,6 +91,26 @@ public class ReplaceRouteTableAssociationRequest extends AbstractModel{
         this.EcmRegion = EcmRegion;
     }
 
+    public ReplaceRouteTableAssociationRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ReplaceRouteTableAssociationRequest(ReplaceRouteTableAssociationRequest source) {
+        if (source.SubnetId != null) {
+            this.SubnetId = new String(source.SubnetId);
+        }
+        if (source.RouteTableId != null) {
+            this.RouteTableId = new String(source.RouteTableId);
+        }
+        if (source.EcmRegion != null) {
+            this.EcmRegion = new String(source.EcmRegion);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

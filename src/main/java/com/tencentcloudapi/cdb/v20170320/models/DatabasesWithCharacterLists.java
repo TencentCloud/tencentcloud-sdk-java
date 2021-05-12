@@ -68,6 +68,23 @@ public class DatabasesWithCharacterLists extends AbstractModel{
         this.CharacterSet = CharacterSet;
     }
 
+    public DatabasesWithCharacterLists() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DatabasesWithCharacterLists(DatabasesWithCharacterLists source) {
+        if (source.DatabaseName != null) {
+            this.DatabaseName = new String(source.DatabaseName);
+        }
+        if (source.CharacterSet != null) {
+            this.CharacterSet = new String(source.CharacterSet);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

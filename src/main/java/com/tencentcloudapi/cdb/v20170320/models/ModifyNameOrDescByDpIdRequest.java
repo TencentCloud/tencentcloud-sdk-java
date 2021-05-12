@@ -91,6 +91,26 @@ public class ModifyNameOrDescByDpIdRequest extends AbstractModel{
         this.Description = Description;
     }
 
+    public ModifyNameOrDescByDpIdRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyNameOrDescByDpIdRequest(ModifyNameOrDescByDpIdRequest source) {
+        if (source.DeployGroupId != null) {
+            this.DeployGroupId = new String(source.DeployGroupId);
+        }
+        if (source.DeployGroupName != null) {
+            this.DeployGroupName = new String(source.DeployGroupName);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

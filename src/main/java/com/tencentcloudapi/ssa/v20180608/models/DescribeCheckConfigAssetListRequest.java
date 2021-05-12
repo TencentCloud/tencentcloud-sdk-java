@@ -137,6 +137,38 @@ public class DescribeCheckConfigAssetListRequest extends AbstractModel{
         this.Filter = Filter;
     }
 
+    public DescribeCheckConfigAssetListRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeCheckConfigAssetListRequest(DescribeCheckConfigAssetListRequest source) {
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.Search != null) {
+            this.Search = new Filter[source.Search.length];
+            for (int i = 0; i < source.Search.length; i++) {
+                this.Search[i] = new Filter(source.Search[i]);
+            }
+        }
+        if (source.Filter != null) {
+            this.Filter = new Filter[source.Filter.length];
+            for (int i = 0; i < source.Filter.length; i++) {
+                this.Filter[i] = new Filter(source.Filter[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

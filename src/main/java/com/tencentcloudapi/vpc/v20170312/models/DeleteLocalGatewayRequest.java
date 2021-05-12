@@ -91,6 +91,26 @@ public class DeleteLocalGatewayRequest extends AbstractModel{
         this.VpcId = VpcId;
     }
 
+    public DeleteLocalGatewayRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteLocalGatewayRequest(DeleteLocalGatewayRequest source) {
+        if (source.LocalGatewayId != null) {
+            this.LocalGatewayId = new String(source.LocalGatewayId);
+        }
+        if (source.CdcId != null) {
+            this.CdcId = new String(source.CdcId);
+        }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

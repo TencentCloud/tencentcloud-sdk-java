@@ -91,6 +91,26 @@ public class ModifyLoadBalancerChargeModeListener extends AbstractModel{
         this.Bandwidth = Bandwidth;
     }
 
+    public ModifyLoadBalancerChargeModeListener() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyLoadBalancerChargeModeListener(ModifyLoadBalancerChargeModeListener source) {
+        if (source.ListenerId != null) {
+            this.ListenerId = new String(source.ListenerId);
+        }
+        if (source.Protocol != null) {
+            this.Protocol = new String(source.Protocol);
+        }
+        if (source.Bandwidth != null) {
+            this.Bandwidth = new Long(source.Bandwidth);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -185,6 +185,41 @@ public class JobStatus extends AbstractModel{
         this.ReplicaInfos = ReplicaInfos;
     }
 
+    public JobStatus() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public JobStatus(JobStatus source) {
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.Message != null) {
+            this.Message = new String(source.Message);
+        }
+        if (source.DesiredWorkers != null) {
+            this.DesiredWorkers = new Long(source.DesiredWorkers);
+        }
+        if (source.CurrentWorkers != null) {
+            this.CurrentWorkers = new Long(source.CurrentWorkers);
+        }
+        if (source.Replicas != null) {
+            this.Replicas = new String[source.Replicas.length];
+            for (int i = 0; i < source.Replicas.length; i++) {
+                this.Replicas[i] = new String(source.Replicas[i]);
+            }
+        }
+        if (source.ReplicaInfos != null) {
+            this.ReplicaInfos = new ReplicaInfo[source.ReplicaInfos.length];
+            for (int i = 0; i < source.ReplicaInfos.length; i++) {
+                this.ReplicaInfos[i] = new ReplicaInfo(source.ReplicaInfos[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

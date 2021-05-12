@@ -78,6 +78,26 @@ public class IPStrategyApiStatus extends AbstractModel{
         this.ApiIdStatusSet = ApiIdStatusSet;
     }
 
+    public IPStrategyApiStatus() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public IPStrategyApiStatus(IPStrategyApiStatus source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.ApiIdStatusSet != null) {
+            this.ApiIdStatusSet = new IPStrategyApi[source.ApiIdStatusSet.length];
+            for (int i = 0; i < source.ApiIdStatusSet.length; i++) {
+                this.ApiIdStatusSet[i] = new IPStrategyApi(source.ApiIdStatusSet[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

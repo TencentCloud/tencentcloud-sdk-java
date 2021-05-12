@@ -401,6 +401,59 @@ public class GetVirtualNumRequest extends AbstractModel{
         this.RecordUrl = RecordUrl;
     }
 
+    public GetVirtualNumRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GetVirtualNumRequest(GetVirtualNumRequest source) {
+        if (source.BizAppId != null) {
+            this.BizAppId = new String(source.BizAppId);
+        }
+        if (source.Dst != null) {
+            this.Dst = new String(source.Dst);
+        }
+        if (source.Src != null) {
+            this.Src = new String(source.Src);
+        }
+        if (source.AccreditList != null) {
+            this.AccreditList = new String[source.AccreditList.length];
+            for (int i = 0; i < source.AccreditList.length; i++) {
+                this.AccreditList[i] = new String(source.AccreditList[i]);
+            }
+        }
+        if (source.AssignVirtualNum != null) {
+            this.AssignVirtualNum = new String(source.AssignVirtualNum);
+        }
+        if (source.Record != null) {
+            this.Record = new String(source.Record);
+        }
+        if (source.CityId != null) {
+            this.CityId = new String(source.CityId);
+        }
+        if (source.BizId != null) {
+            this.BizId = new String(source.BizId);
+        }
+        if (source.MaxAssignTime != null) {
+            this.MaxAssignTime = new String(source.MaxAssignTime);
+        }
+        if (source.StatusFlag != null) {
+            this.StatusFlag = new String(source.StatusFlag);
+        }
+        if (source.StatusUrl != null) {
+            this.StatusUrl = new String(source.StatusUrl);
+        }
+        if (source.HangupUrl != null) {
+            this.HangupUrl = new String(source.HangupUrl);
+        }
+        if (source.RecordUrl != null) {
+            this.RecordUrl = new String(source.RecordUrl);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

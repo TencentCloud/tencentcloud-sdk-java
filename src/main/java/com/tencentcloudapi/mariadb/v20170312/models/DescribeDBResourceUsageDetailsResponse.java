@@ -124,6 +124,29 @@ public class DescribeDBResourceUsageDetailsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeDBResourceUsageDetailsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeDBResourceUsageDetailsResponse(DescribeDBResourceUsageDetailsResponse source) {
+        if (source.Master != null) {
+            this.Master = new ResourceUsageMonitorSet(source.Master);
+        }
+        if (source.Slave1 != null) {
+            this.Slave1 = new ResourceUsageMonitorSet(source.Slave1);
+        }
+        if (source.Slave2 != null) {
+            this.Slave2 = new ResourceUsageMonitorSet(source.Slave2);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

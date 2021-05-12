@@ -91,6 +91,26 @@ public class GetCOSURLRequest extends AbstractModel{
         this.FileSize = FileSize;
     }
 
+    public GetCOSURLRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GetCOSURLRequest(GetCOSURLRequest source) {
+        if (source.ProductID != null) {
+            this.ProductID = new String(source.ProductID);
+        }
+        if (source.FirmwareVersion != null) {
+            this.FirmwareVersion = new String(source.FirmwareVersion);
+        }
+        if (source.FileSize != null) {
+            this.FileSize = new Long(source.FileSize);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

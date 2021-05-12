@@ -68,6 +68,23 @@ public class ModifySubscribeNameRequest extends AbstractModel{
         this.SubscribeName = SubscribeName;
     }
 
+    public ModifySubscribeNameRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifySubscribeNameRequest(ModifySubscribeNameRequest source) {
+        if (source.SubscribeId != null) {
+            this.SubscribeId = new String(source.SubscribeId);
+        }
+        if (source.SubscribeName != null) {
+            this.SubscribeName = new String(source.SubscribeName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

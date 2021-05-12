@@ -308,6 +308,23 @@ public class GetDetectInfoResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public GetDetectInfoResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GetDetectInfoResponse(GetDetectInfoResponse source) {
+        if (source.DetectInfo != null) {
+            this.DetectInfo = new String(source.DetectInfo);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

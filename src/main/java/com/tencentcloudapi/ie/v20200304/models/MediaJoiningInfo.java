@@ -50,6 +50,20 @@ public class MediaJoiningInfo extends AbstractModel{
         this.TargetInfo = TargetInfo;
     }
 
+    public MediaJoiningInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MediaJoiningInfo(MediaJoiningInfo source) {
+        if (source.TargetInfo != null) {
+            this.TargetInfo = new MediaTargetInfo(source.TargetInfo);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

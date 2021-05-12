@@ -185,6 +185,35 @@ public class GetDetectInfoEnhancedResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public GetDetectInfoEnhancedResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GetDetectInfoEnhancedResponse(GetDetectInfoEnhancedResponse source) {
+        if (source.Text != null) {
+            this.Text = new DetectInfoText(source.Text);
+        }
+        if (source.IdCardData != null) {
+            this.IdCardData = new DetectInfoIdCardData(source.IdCardData);
+        }
+        if (source.BestFrame != null) {
+            this.BestFrame = new DetectInfoBestFrame(source.BestFrame);
+        }
+        if (source.VideoData != null) {
+            this.VideoData = new DetectInfoVideoData(source.VideoData);
+        }
+        if (source.Encryption != null) {
+            this.Encryption = new Encryption(source.Encryption);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

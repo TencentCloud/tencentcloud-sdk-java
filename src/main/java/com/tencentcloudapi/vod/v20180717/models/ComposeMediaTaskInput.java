@@ -96,6 +96,29 @@ public class ComposeMediaTaskInput extends AbstractModel{
         this.Output = Output;
     }
 
+    public ComposeMediaTaskInput() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ComposeMediaTaskInput(ComposeMediaTaskInput source) {
+        if (source.Tracks != null) {
+            this.Tracks = new MediaTrack[source.Tracks.length];
+            for (int i = 0; i < source.Tracks.length; i++) {
+                this.Tracks[i] = new MediaTrack(source.Tracks[i]);
+            }
+        }
+        if (source.Canvas != null) {
+            this.Canvas = new Canvas(source.Canvas);
+        }
+        if (source.Output != null) {
+            this.Output = new ComposeMediaOutput(source.Output);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

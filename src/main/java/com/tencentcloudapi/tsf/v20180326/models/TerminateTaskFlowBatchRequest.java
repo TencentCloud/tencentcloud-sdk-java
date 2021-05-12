@@ -45,6 +45,20 @@ public class TerminateTaskFlowBatchRequest extends AbstractModel{
         this.FlowBatchId = FlowBatchId;
     }
 
+    public TerminateTaskFlowBatchRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TerminateTaskFlowBatchRequest(TerminateTaskFlowBatchRequest source) {
+        if (source.FlowBatchId != null) {
+            this.FlowBatchId = new String(source.FlowBatchId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

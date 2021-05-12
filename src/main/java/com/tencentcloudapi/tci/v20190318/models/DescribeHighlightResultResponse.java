@@ -114,6 +114,32 @@ public class DescribeHighlightResultResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeHighlightResultResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeHighlightResultResponse(DescribeHighlightResultResponse source) {
+        if (source.HighlightsInfo != null) {
+            this.HighlightsInfo = new HighlightsInfomation[source.HighlightsInfo.length];
+            for (int i = 0; i < source.HighlightsInfo.length; i++) {
+                this.HighlightsInfo[i] = new HighlightsInfomation(source.HighlightsInfo[i]);
+            }
+        }
+        if (source.JobId != null) {
+            this.JobId = new Long(source.JobId);
+        }
+        if (source.Progress != null) {
+            this.Progress = new Float(source.Progress);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

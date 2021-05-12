@@ -68,6 +68,23 @@ public class UnBindSubDomainRequest extends AbstractModel{
         this.SubDomain = SubDomain;
     }
 
+    public UnBindSubDomainRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UnBindSubDomainRequest(UnBindSubDomainRequest source) {
+        if (source.ServiceId != null) {
+            this.ServiceId = new String(source.ServiceId);
+        }
+        if (source.SubDomain != null) {
+            this.SubDomain = new String(source.SubDomain);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

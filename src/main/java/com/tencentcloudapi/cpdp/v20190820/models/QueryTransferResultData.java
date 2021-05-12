@@ -149,6 +149,29 @@ public class QueryTransferResultData extends AbstractModel{
         this.Remark = Remark;
     }
 
+    public QueryTransferResultData() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public QueryTransferResultData(QueryTransferResultData source) {
+        if (source.TradeSerialNo != null) {
+            this.TradeSerialNo = new String(source.TradeSerialNo);
+        }
+        if (source.OrderId != null) {
+            this.OrderId = new String(source.OrderId);
+        }
+        if (source.TradeStatus != null) {
+            this.TradeStatus = new Long(source.TradeStatus);
+        }
+        if (source.Remark != null) {
+            this.Remark = new String(source.Remark);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

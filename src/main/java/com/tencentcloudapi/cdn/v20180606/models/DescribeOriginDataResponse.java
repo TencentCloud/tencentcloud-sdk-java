@@ -91,6 +91,29 @@ public class DescribeOriginDataResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeOriginDataResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeOriginDataResponse(DescribeOriginDataResponse source) {
+        if (source.Interval != null) {
+            this.Interval = new String(source.Interval);
+        }
+        if (source.Data != null) {
+            this.Data = new ResourceOriginData[source.Data.length];
+            for (int i = 0; i < source.Data.length; i++) {
+                this.Data[i] = new ResourceOriginData(source.Data[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

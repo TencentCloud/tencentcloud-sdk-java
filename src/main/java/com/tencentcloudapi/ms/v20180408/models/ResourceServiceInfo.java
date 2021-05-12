@@ -91,6 +91,26 @@ public class ResourceServiceInfo extends AbstractModel{
         this.ResourceName = ResourceName;
     }
 
+    public ResourceServiceInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ResourceServiceInfo(ResourceServiceInfo source) {
+        if (source.CreateTime != null) {
+            this.CreateTime = new Long(source.CreateTime);
+        }
+        if (source.ExpireTime != null) {
+            this.ExpireTime = new Long(source.ExpireTime);
+        }
+        if (source.ResourceName != null) {
+            this.ResourceName = new String(source.ResourceName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

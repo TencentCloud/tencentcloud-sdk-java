@@ -73,6 +73,26 @@ public class FavorResp extends AbstractModel{
         this.RepoInfo = RepoInfo;
     }
 
+    public FavorResp() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public FavorResp(FavorResp source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.RepoInfo != null) {
+            this.RepoInfo = new Favors[source.RepoInfo.length];
+            for (int i = 0; i < source.RepoInfo.length; i++) {
+                this.RepoInfo[i] = new Favors(source.RepoInfo[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

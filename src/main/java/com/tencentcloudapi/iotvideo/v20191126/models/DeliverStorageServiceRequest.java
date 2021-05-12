@@ -114,6 +114,29 @@ public class DeliverStorageServiceRequest extends AbstractModel{
         this.AccessId = AccessId;
     }
 
+    public DeliverStorageServiceRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeliverStorageServiceRequest(DeliverStorageServiceRequest source) {
+        if (source.SrcServiceId != null) {
+            this.SrcServiceId = new String(source.SrcServiceId);
+        }
+        if (source.Tid != null) {
+            this.Tid = new String(source.Tid);
+        }
+        if (source.ChnNum != null) {
+            this.ChnNum = new Long(source.ChnNum);
+        }
+        if (source.AccessId != null) {
+            this.AccessId = new String(source.AccessId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -91,6 +91,26 @@ public class ChatBotResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public ChatBotResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ChatBotResponse(ChatBotResponse source) {
+        if (source.Reply != null) {
+            this.Reply = new String(source.Reply);
+        }
+        if (source.Confidence != null) {
+            this.Confidence = new Float(source.Confidence);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

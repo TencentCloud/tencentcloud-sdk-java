@@ -91,6 +91,26 @@ public class ResetAccountPasswordRequest extends AbstractModel{
         this.Password = Password;
     }
 
+    public ResetAccountPasswordRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ResetAccountPasswordRequest(ResetAccountPasswordRequest source) {
+        if (source.DBInstanceId != null) {
+            this.DBInstanceId = new String(source.DBInstanceId);
+        }
+        if (source.UserName != null) {
+            this.UserName = new String(source.UserName);
+        }
+        if (source.Password != null) {
+            this.Password = new String(source.Password);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -111,6 +111,26 @@ public class ProVersionMachine extends AbstractModel{
         this.Quuid = Quuid;
     }
 
+    public ProVersionMachine() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ProVersionMachine(ProVersionMachine source) {
+        if (source.MachineType != null) {
+            this.MachineType = new String(source.MachineType);
+        }
+        if (source.MachineRegion != null) {
+            this.MachineRegion = new String(source.MachineRegion);
+        }
+        if (source.Quuid != null) {
+            this.Quuid = new String(source.Quuid);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

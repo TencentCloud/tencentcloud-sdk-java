@@ -91,6 +91,29 @@ public class DescribeWatermarkTemplatesResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeWatermarkTemplatesResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeWatermarkTemplatesResponse(DescribeWatermarkTemplatesResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.WatermarkTemplateSet != null) {
+            this.WatermarkTemplateSet = new WatermarkTemplate[source.WatermarkTemplateSet.length];
+            for (int i = 0; i < source.WatermarkTemplateSet.length; i++) {
+                this.WatermarkTemplateSet[i] = new WatermarkTemplate(source.WatermarkTemplateSet[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

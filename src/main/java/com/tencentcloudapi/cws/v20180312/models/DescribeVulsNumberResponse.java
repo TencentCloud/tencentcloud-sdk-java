@@ -252,6 +252,53 @@ public class DescribeVulsNumberResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeVulsNumberResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeVulsNumberResponse(DescribeVulsNumberResponse source) {
+        if (source.ImpactSiteNumber != null) {
+            this.ImpactSiteNumber = new Long(source.ImpactSiteNumber);
+        }
+        if (source.SiteNumber != null) {
+            this.SiteNumber = new Long(source.SiteNumber);
+        }
+        if (source.VulsHighNumber != null) {
+            this.VulsHighNumber = new Long(source.VulsHighNumber);
+        }
+        if (source.VulsMiddleNumber != null) {
+            this.VulsMiddleNumber = new Long(source.VulsMiddleNumber);
+        }
+        if (source.VulsLowNumber != null) {
+            this.VulsLowNumber = new Long(source.VulsLowNumber);
+        }
+        if (source.VulsNoticeNumber != null) {
+            this.VulsNoticeNumber = new Long(source.VulsNoticeNumber);
+        }
+        if (source.PageCount != null) {
+            this.PageCount = new Long(source.PageCount);
+        }
+        if (source.Sites != null) {
+            this.Sites = new MonitorMiniSite[source.Sites.length];
+            for (int i = 0; i < source.Sites.length; i++) {
+                this.Sites[i] = new MonitorMiniSite(source.Sites[i]);
+            }
+        }
+        if (source.ImpactSites != null) {
+            this.ImpactSites = new MonitorMiniSite[source.ImpactSites.length];
+            for (int i = 0; i < source.ImpactSites.length; i++) {
+                this.ImpactSites[i] = new MonitorMiniSite(source.ImpactSites[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

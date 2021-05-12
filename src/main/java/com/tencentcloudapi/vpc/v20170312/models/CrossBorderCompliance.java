@@ -528,6 +528,83 @@ public class CrossBorderCompliance extends AbstractModel{
         this.CreatedTime = CreatedTime;
     }
 
+    public CrossBorderCompliance() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CrossBorderCompliance(CrossBorderCompliance source) {
+        if (source.ServiceProvider != null) {
+            this.ServiceProvider = new String(source.ServiceProvider);
+        }
+        if (source.ComplianceId != null) {
+            this.ComplianceId = new Long(source.ComplianceId);
+        }
+        if (source.Company != null) {
+            this.Company = new String(source.Company);
+        }
+        if (source.UniformSocialCreditCode != null) {
+            this.UniformSocialCreditCode = new String(source.UniformSocialCreditCode);
+        }
+        if (source.LegalPerson != null) {
+            this.LegalPerson = new String(source.LegalPerson);
+        }
+        if (source.IssuingAuthority != null) {
+            this.IssuingAuthority = new String(source.IssuingAuthority);
+        }
+        if (source.BusinessLicense != null) {
+            this.BusinessLicense = new String(source.BusinessLicense);
+        }
+        if (source.BusinessAddress != null) {
+            this.BusinessAddress = new String(source.BusinessAddress);
+        }
+        if (source.PostCode != null) {
+            this.PostCode = new Long(source.PostCode);
+        }
+        if (source.Manager != null) {
+            this.Manager = new String(source.Manager);
+        }
+        if (source.ManagerId != null) {
+            this.ManagerId = new String(source.ManagerId);
+        }
+        if (source.ManagerIdCard != null) {
+            this.ManagerIdCard = new String(source.ManagerIdCard);
+        }
+        if (source.ManagerAddress != null) {
+            this.ManagerAddress = new String(source.ManagerAddress);
+        }
+        if (source.ManagerTelephone != null) {
+            this.ManagerTelephone = new String(source.ManagerTelephone);
+        }
+        if (source.Email != null) {
+            this.Email = new String(source.Email);
+        }
+        if (source.ServiceHandlingForm != null) {
+            this.ServiceHandlingForm = new String(source.ServiceHandlingForm);
+        }
+        if (source.AuthorizationLetter != null) {
+            this.AuthorizationLetter = new String(source.AuthorizationLetter);
+        }
+        if (source.SafetyCommitment != null) {
+            this.SafetyCommitment = new String(source.SafetyCommitment);
+        }
+        if (source.ServiceStartDate != null) {
+            this.ServiceStartDate = new String(source.ServiceStartDate);
+        }
+        if (source.ServiceEndDate != null) {
+            this.ServiceEndDate = new String(source.ServiceEndDate);
+        }
+        if (source.State != null) {
+            this.State = new String(source.State);
+        }
+        if (source.CreatedTime != null) {
+            this.CreatedTime = new String(source.CreatedTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

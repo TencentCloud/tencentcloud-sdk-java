@@ -45,6 +45,20 @@ public class CancelOrganizationInvitationRequest extends AbstractModel{
         this.Id = Id;
     }
 
+    public CancelOrganizationInvitationRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CancelOrganizationInvitationRequest(CancelOrganizationInvitationRequest source) {
+        if (source.Id != null) {
+            this.Id = new Long(source.Id);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

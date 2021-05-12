@@ -137,6 +137,32 @@ public class ResourceRefDetail extends AbstractModel{
         this.SystemProvide = SystemProvide;
     }
 
+    public ResourceRefDetail() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ResourceRefDetail(ResourceRefDetail source) {
+        if (source.ResourceId != null) {
+            this.ResourceId = new String(source.ResourceId);
+        }
+        if (source.Version != null) {
+            this.Version = new Long(source.Version);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Type != null) {
+            this.Type = new Long(source.Type);
+        }
+        if (source.SystemProvide != null) {
+            this.SystemProvide = new Long(source.SystemProvide);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -185,6 +185,35 @@ public class InquiryPriceBuyVsmResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public InquiryPriceBuyVsmResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public InquiryPriceBuyVsmResponse(InquiryPriceBuyVsmResponse source) {
+        if (source.TotalCost != null) {
+            this.TotalCost = new Float(source.TotalCost);
+        }
+        if (source.GoodsNum != null) {
+            this.GoodsNum = new Long(source.GoodsNum);
+        }
+        if (source.TimeSpan != null) {
+            this.TimeSpan = new String(source.TimeSpan);
+        }
+        if (source.TimeUnit != null) {
+            this.TimeUnit = new String(source.TimeUnit);
+        }
+        if (source.OriginalCost != null) {
+            this.OriginalCost = new Float(source.OriginalCost);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

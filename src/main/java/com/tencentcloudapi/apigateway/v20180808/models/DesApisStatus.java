@@ -544,6 +544,80 @@ public class DesApisStatus extends AbstractModel{
         this.Method = Method;
     }
 
+    public DesApisStatus() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DesApisStatus(DesApisStatus source) {
+        if (source.ServiceId != null) {
+            this.ServiceId = new String(source.ServiceId);
+        }
+        if (source.ApiId != null) {
+            this.ApiId = new String(source.ApiId);
+        }
+        if (source.ApiDesc != null) {
+            this.ApiDesc = new String(source.ApiDesc);
+        }
+        if (source.CreatedTime != null) {
+            this.CreatedTime = new String(source.CreatedTime);
+        }
+        if (source.ModifiedTime != null) {
+            this.ModifiedTime = new String(source.ModifiedTime);
+        }
+        if (source.ApiName != null) {
+            this.ApiName = new String(source.ApiName);
+        }
+        if (source.VpcId != null) {
+            this.VpcId = new Long(source.VpcId);
+        }
+        if (source.UniqVpcId != null) {
+            this.UniqVpcId = new String(source.UniqVpcId);
+        }
+        if (source.ApiType != null) {
+            this.ApiType = new String(source.ApiType);
+        }
+        if (source.Protocol != null) {
+            this.Protocol = new String(source.Protocol);
+        }
+        if (source.IsDebugAfterCharge != null) {
+            this.IsDebugAfterCharge = new Boolean(source.IsDebugAfterCharge);
+        }
+        if (source.AuthType != null) {
+            this.AuthType = new String(source.AuthType);
+        }
+        if (source.ApiBusinessType != null) {
+            this.ApiBusinessType = new String(source.ApiBusinessType);
+        }
+        if (source.AuthRelationApiId != null) {
+            this.AuthRelationApiId = new String(source.AuthRelationApiId);
+        }
+        if (source.OauthConfig != null) {
+            this.OauthConfig = new OauthConfig(source.OauthConfig);
+        }
+        if (source.RelationBuniessApiIds != null) {
+            this.RelationBuniessApiIds = new String[source.RelationBuniessApiIds.length];
+            for (int i = 0; i < source.RelationBuniessApiIds.length; i++) {
+                this.RelationBuniessApiIds[i] = new String(source.RelationBuniessApiIds[i]);
+            }
+        }
+        if (source.Tags != null) {
+            this.Tags = new String[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new String(source.Tags[i]);
+            }
+        }
+        if (source.Path != null) {
+            this.Path = new String(source.Path);
+        }
+        if (source.Method != null) {
+            this.Method = new String(source.Method);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

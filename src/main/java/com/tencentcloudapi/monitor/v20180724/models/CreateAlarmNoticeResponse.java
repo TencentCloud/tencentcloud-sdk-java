@@ -68,6 +68,23 @@ public class CreateAlarmNoticeResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public CreateAlarmNoticeResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateAlarmNoticeResponse(CreateAlarmNoticeResponse source) {
+        if (source.NoticeId != null) {
+            this.NoticeId = new String(source.NoticeId);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

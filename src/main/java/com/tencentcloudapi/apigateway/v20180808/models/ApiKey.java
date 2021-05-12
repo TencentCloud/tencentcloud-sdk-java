@@ -183,6 +183,38 @@ public class ApiKey extends AbstractModel{
         this.CreatedTime = CreatedTime;
     }
 
+    public ApiKey() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ApiKey(ApiKey source) {
+        if (source.AccessKeyId != null) {
+            this.AccessKeyId = new String(source.AccessKeyId);
+        }
+        if (source.AccessKeySecret != null) {
+            this.AccessKeySecret = new String(source.AccessKeySecret);
+        }
+        if (source.AccessKeyType != null) {
+            this.AccessKeyType = new String(source.AccessKeyType);
+        }
+        if (source.SecretName != null) {
+            this.SecretName = new String(source.SecretName);
+        }
+        if (source.ModifiedTime != null) {
+            this.ModifiedTime = new String(source.ModifiedTime);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.CreatedTime != null) {
+            this.CreatedTime = new String(source.CreatedTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

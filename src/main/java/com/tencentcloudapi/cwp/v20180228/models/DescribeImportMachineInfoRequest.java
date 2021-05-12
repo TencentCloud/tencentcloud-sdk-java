@@ -68,6 +68,26 @@ public class DescribeImportMachineInfoRequest extends AbstractModel{
         this.ImportType = ImportType;
     }
 
+    public DescribeImportMachineInfoRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeImportMachineInfoRequest(DescribeImportMachineInfoRequest source) {
+        if (source.MachineList != null) {
+            this.MachineList = new String[source.MachineList.length];
+            for (int i = 0; i < source.MachineList.length; i++) {
+                this.MachineList[i] = new String(source.MachineList[i]);
+            }
+        }
+        if (source.ImportType != null) {
+            this.ImportType = new String(source.ImportType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

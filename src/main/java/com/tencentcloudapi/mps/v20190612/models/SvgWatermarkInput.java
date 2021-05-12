@@ -148,6 +148,23 @@ public class SvgWatermarkInput extends AbstractModel{
         this.Height = Height;
     }
 
+    public SvgWatermarkInput() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SvgWatermarkInput(SvgWatermarkInput source) {
+        if (source.Width != null) {
+            this.Width = new String(source.Width);
+        }
+        if (source.Height != null) {
+            this.Height = new String(source.Height);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

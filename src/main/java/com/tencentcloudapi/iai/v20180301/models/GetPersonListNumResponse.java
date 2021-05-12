@@ -91,6 +91,26 @@ public class GetPersonListNumResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public GetPersonListNumResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GetPersonListNumResponse(GetPersonListNumResponse source) {
+        if (source.PersonNum != null) {
+            this.PersonNum = new Long(source.PersonNum);
+        }
+        if (source.FaceNum != null) {
+            this.FaceNum = new Long(source.FaceNum);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

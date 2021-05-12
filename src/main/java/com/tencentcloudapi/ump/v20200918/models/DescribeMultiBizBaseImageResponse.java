@@ -68,6 +68,23 @@ public class DescribeMultiBizBaseImageResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeMultiBizBaseImageResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeMultiBizBaseImageResponse(DescribeMultiBizBaseImageResponse source) {
+        if (source.ImageUrl != null) {
+            this.ImageUrl = new String(source.ImageUrl);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

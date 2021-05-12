@@ -348,6 +348,53 @@ public class TaskFlowEdge extends AbstractModel{
         this.TaskLogId = TaskLogId;
     }
 
+    public TaskFlowEdge() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TaskFlowEdge(TaskFlowEdge source) {
+        if (source.NodeId != null) {
+            this.NodeId = new String(source.NodeId);
+        }
+        if (source.ChildNodeId != null) {
+            this.ChildNodeId = new String(source.ChildNodeId);
+        }
+        if (source.CoreNode != null) {
+            this.CoreNode = new String(source.CoreNode);
+        }
+        if (source.EdgeType != null) {
+            this.EdgeType = new String(source.EdgeType);
+        }
+        if (source.NodeType != null) {
+            this.NodeType = new String(source.NodeType);
+        }
+        if (source.PositionX != null) {
+            this.PositionX = new String(source.PositionX);
+        }
+        if (source.PositionY != null) {
+            this.PositionY = new String(source.PositionY);
+        }
+        if (source.GraphId != null) {
+            this.GraphId = new String(source.GraphId);
+        }
+        if (source.FlowId != null) {
+            this.FlowId = new String(source.FlowId);
+        }
+        if (source.NodeName != null) {
+            this.NodeName = new String(source.NodeName);
+        }
+        if (source.TaskId != null) {
+            this.TaskId = new String(source.TaskId);
+        }
+        if (source.TaskLogId != null) {
+            this.TaskLogId = new String(source.TaskLogId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -91,6 +91,26 @@ public class CustomerGatewayVendor extends AbstractModel{
         this.VendorName = VendorName;
     }
 
+    public CustomerGatewayVendor() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CustomerGatewayVendor(CustomerGatewayVendor source) {
+        if (source.Platform != null) {
+            this.Platform = new String(source.Platform);
+        }
+        if (source.SoftwareVersion != null) {
+            this.SoftwareVersion = new String(source.SoftwareVersion);
+        }
+        if (source.VendorName != null) {
+            this.VendorName = new String(source.VendorName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

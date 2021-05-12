@@ -160,6 +160,35 @@ public class EditPrivilegeRuleRequest extends AbstractModel{
         this.IsGlobal = IsGlobal;
     }
 
+    public EditPrivilegeRuleRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public EditPrivilegeRuleRequest(EditPrivilegeRuleRequest source) {
+        if (source.Id != null) {
+            this.Id = new Long(source.Id);
+        }
+        if (source.Uuid != null) {
+            this.Uuid = new String(source.Uuid);
+        }
+        if (source.Hostip != null) {
+            this.Hostip = new String(source.Hostip);
+        }
+        if (source.ProcessName != null) {
+            this.ProcessName = new String(source.ProcessName);
+        }
+        if (source.SMode != null) {
+            this.SMode = new Long(source.SMode);
+        }
+        if (source.IsGlobal != null) {
+            this.IsGlobal = new Long(source.IsGlobal);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

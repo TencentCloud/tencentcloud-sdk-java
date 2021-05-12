@@ -68,6 +68,23 @@ public class DeleteAgentTaxPaymentInfoRequest extends AbstractModel{
         this.Profile = Profile;
     }
 
+    public DeleteAgentTaxPaymentInfoRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteAgentTaxPaymentInfoRequest(DeleteAgentTaxPaymentInfoRequest source) {
+        if (source.BatchNum != null) {
+            this.BatchNum = new Long(source.BatchNum);
+        }
+        if (source.Profile != null) {
+            this.Profile = new String(source.Profile);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -68,6 +68,23 @@ public class VipEntity extends AbstractModel{
         this.Vport = Vport;
     }
 
+    public VipEntity() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public VipEntity(VipEntity source) {
+        if (source.Vip != null) {
+            this.Vip = new String(source.Vip);
+        }
+        if (source.Vport != null) {
+            this.Vport = new String(source.Vport);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

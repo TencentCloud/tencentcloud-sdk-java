@@ -91,6 +91,26 @@ public class EncryptByWhiteBoxRequest extends AbstractModel{
         this.InitializationVector = InitializationVector;
     }
 
+    public EncryptByWhiteBoxRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public EncryptByWhiteBoxRequest(EncryptByWhiteBoxRequest source) {
+        if (source.KeyId != null) {
+            this.KeyId = new String(source.KeyId);
+        }
+        if (source.PlainText != null) {
+            this.PlainText = new String(source.PlainText);
+        }
+        if (source.InitializationVector != null) {
+            this.InitializationVector = new String(source.InitializationVector);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

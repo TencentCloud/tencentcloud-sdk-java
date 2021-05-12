@@ -119,6 +119,29 @@ public class ApplyPayerinfoData extends AbstractModel{
         this.FailReason = FailReason;
     }
 
+    public ApplyPayerinfoData() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ApplyPayerinfoData(ApplyPayerinfoData source) {
+        if (source.MerchantId != null) {
+            this.MerchantId = new String(source.MerchantId);
+        }
+        if (source.PayerId != null) {
+            this.PayerId = new String(source.PayerId);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.FailReason != null) {
+            this.FailReason = new String(source.FailReason);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

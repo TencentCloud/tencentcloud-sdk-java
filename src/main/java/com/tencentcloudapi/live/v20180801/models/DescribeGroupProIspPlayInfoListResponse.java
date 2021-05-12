@@ -68,6 +68,26 @@ public class DescribeGroupProIspPlayInfoListResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeGroupProIspPlayInfoListResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeGroupProIspPlayInfoListResponse(DescribeGroupProIspPlayInfoListResponse source) {
+        if (source.DataInfoList != null) {
+            this.DataInfoList = new GroupProIspDataInfo[source.DataInfoList.length];
+            for (int i = 0; i < source.DataInfoList.length; i++) {
+                this.DataInfoList[i] = new GroupProIspDataInfo(source.DataInfoList[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

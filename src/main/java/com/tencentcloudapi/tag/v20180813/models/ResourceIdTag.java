@@ -78,6 +78,26 @@ public class ResourceIdTag extends AbstractModel{
         this.TagKeyValues = TagKeyValues;
     }
 
+    public ResourceIdTag() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ResourceIdTag(ResourceIdTag source) {
+        if (source.ResourceId != null) {
+            this.ResourceId = new String(source.ResourceId);
+        }
+        if (source.TagKeyValues != null) {
+            this.TagKeyValues = new Tag[source.TagKeyValues.length];
+            for (int i = 0; i < source.TagKeyValues.length; i++) {
+                this.TagKeyValues[i] = new Tag(source.TagKeyValues[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

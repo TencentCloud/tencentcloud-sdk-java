@@ -170,6 +170,35 @@ public class QueryTransferResultRequest extends AbstractModel{
         this.Profile = Profile;
     }
 
+    public QueryTransferResultRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public QueryTransferResultRequest(QueryTransferResultRequest source) {
+        if (source.MerchantId != null) {
+            this.MerchantId = new String(source.MerchantId);
+        }
+        if (source.MerchantAppId != null) {
+            this.MerchantAppId = new String(source.MerchantAppId);
+        }
+        if (source.TransferType != null) {
+            this.TransferType = new Long(source.TransferType);
+        }
+        if (source.TradeSerialNo != null) {
+            this.TradeSerialNo = new String(source.TradeSerialNo);
+        }
+        if (source.OrderId != null) {
+            this.OrderId = new String(source.OrderId);
+        }
+        if (source.Profile != null) {
+            this.Profile = new String(source.Profile);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -101,6 +101,29 @@ public class GetRecordPlansResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public GetRecordPlansResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GetRecordPlansResponse(GetRecordPlansResponse source) {
+        if (source.Plans != null) {
+            this.Plans = new RecordPlanItem[source.Plans.length];
+            for (int i = 0; i < source.Plans.length; i++) {
+                this.Plans[i] = new RecordPlanItem(source.Plans[i]);
+            }
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

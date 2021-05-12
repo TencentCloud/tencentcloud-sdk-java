@@ -78,6 +78,23 @@ certExpireTime，证书过期时间
         this.Sequence = Sequence;
     }
 
+    public Sort() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Sort(Sort source) {
+        if (source.Key != null) {
+            this.Key = new String(source.Key);
+        }
+        if (source.Sequence != null) {
+            this.Sequence = new String(source.Sequence);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -114,6 +114,29 @@ public class OutputParams extends AbstractModel{
         this.RecordAudioOnly = RecordAudioOnly;
     }
 
+    public OutputParams() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public OutputParams(OutputParams source) {
+        if (source.StreamId != null) {
+            this.StreamId = new String(source.StreamId);
+        }
+        if (source.PureAudioStream != null) {
+            this.PureAudioStream = new Long(source.PureAudioStream);
+        }
+        if (source.RecordId != null) {
+            this.RecordId = new String(source.RecordId);
+        }
+        if (source.RecordAudioOnly != null) {
+            this.RecordAudioOnly = new Long(source.RecordAudioOnly);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

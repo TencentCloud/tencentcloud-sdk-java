@@ -45,6 +45,20 @@ public class DeleteEmailAddressRequest extends AbstractModel{
         this.EmailAddress = EmailAddress;
     }
 
+    public DeleteEmailAddressRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteEmailAddressRequest(DeleteEmailAddressRequest source) {
+        if (source.EmailAddress != null) {
+            this.EmailAddress = new String(source.EmailAddress);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

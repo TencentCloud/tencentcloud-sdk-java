@@ -188,6 +188,26 @@ public class BRIResponse extends AbstractModel{
         this.Tags = Tags;
     }
 
+    public BRIResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public BRIResponse(BRIResponse source) {
+        if (source.Score != null) {
+            this.Score = new Float(source.Score);
+        }
+        if (source.Tags != null) {
+            this.Tags = new String[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new String(source.Tags[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

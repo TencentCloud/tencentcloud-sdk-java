@@ -114,6 +114,29 @@ public class SnapshotInfoNew extends AbstractModel{
         this.SnapshotDeadTime = SnapshotDeadTime;
     }
 
+    public SnapshotInfoNew() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SnapshotInfoNew(SnapshotInfoNew source) {
+        if (source.TableGroupId != null) {
+            this.TableGroupId = new String(source.TableGroupId);
+        }
+        if (source.TableName != null) {
+            this.TableName = new String(source.TableName);
+        }
+        if (source.SnapshotName != null) {
+            this.SnapshotName = new String(source.SnapshotName);
+        }
+        if (source.SnapshotDeadTime != null) {
+            this.SnapshotDeadTime = new String(source.SnapshotDeadTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

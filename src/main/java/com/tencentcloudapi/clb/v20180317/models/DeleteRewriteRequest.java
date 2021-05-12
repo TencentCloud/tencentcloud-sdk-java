@@ -114,6 +114,32 @@ public class DeleteRewriteRequest extends AbstractModel{
         this.RewriteInfos = RewriteInfos;
     }
 
+    public DeleteRewriteRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteRewriteRequest(DeleteRewriteRequest source) {
+        if (source.LoadBalancerId != null) {
+            this.LoadBalancerId = new String(source.LoadBalancerId);
+        }
+        if (source.SourceListenerId != null) {
+            this.SourceListenerId = new String(source.SourceListenerId);
+        }
+        if (source.TargetListenerId != null) {
+            this.TargetListenerId = new String(source.TargetListenerId);
+        }
+        if (source.RewriteInfos != null) {
+            this.RewriteInfos = new RewriteLocationMap[source.RewriteInfos.length];
+            for (int i = 0; i < source.RewriteInfos.length; i++) {
+                this.RewriteInfos[i] = new RewriteLocationMap(source.RewriteInfos[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

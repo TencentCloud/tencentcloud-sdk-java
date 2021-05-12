@@ -91,6 +91,29 @@ public class DescribeTablesInRecycleResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeTablesInRecycleResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeTablesInRecycleResponse(DescribeTablesInRecycleResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.TableInfos != null) {
+            this.TableInfos = new TableInfoNew[source.TableInfos.length];
+            for (int i = 0; i < source.TableInfos.length; i++) {
+                this.TableInfos[i] = new TableInfoNew(source.TableInfos[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -91,6 +91,26 @@ public class DescribePackageItemsRequest extends AbstractModel{
         this.Length = Length;
     }
 
+    public DescribePackageItemsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribePackageItemsRequest(DescribePackageItemsRequest source) {
+        if (source.OrderId != null) {
+            this.OrderId = new String(source.OrderId);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Length != null) {
+            this.Length = new Long(source.Length);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

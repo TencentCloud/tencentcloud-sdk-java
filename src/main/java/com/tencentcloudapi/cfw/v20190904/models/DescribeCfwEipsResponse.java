@@ -68,6 +68,26 @@ public class DescribeCfwEipsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeCfwEipsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeCfwEipsResponse(DescribeCfwEipsResponse source) {
+        if (source.NatFwEipList != null) {
+            this.NatFwEipList = new NatFwEipsInfo[source.NatFwEipList.length];
+            for (int i = 0; i < source.NatFwEipList.length; i++) {
+                this.NatFwEipList[i] = new NatFwEipsInfo(source.NatFwEipList[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

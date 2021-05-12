@@ -152,6 +152,32 @@ public class ProgramStateItem extends AbstractModel{
         this.State = State;
     }
 
+    public ProgramStateItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ProgramStateItem(ProgramStateItem source) {
+        if (source.ServerIp != null) {
+            this.ServerIp = new String(source.ServerIp);
+        }
+        if (source.ProgramName != null) {
+            this.ProgramName = new String(source.ProgramName);
+        }
+        if (source.OnlineCount != null) {
+            this.OnlineCount = new Long(source.OnlineCount);
+        }
+        if (source.OfflineCount != null) {
+            this.OfflineCount = new Long(source.OfflineCount);
+        }
+        if (source.State != null) {
+            this.State = new Long(source.State);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -68,6 +68,26 @@ public class SentenceCom extends AbstractModel{
         this.Sentence = Sentence;
     }
 
+    public SentenceCom() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SentenceCom(SentenceCom source) {
+        if (source.Suggestions != null) {
+            this.Suggestions = new SentenceSuggest[source.Suggestions.length];
+            for (int i = 0; i < source.Suggestions.length; i++) {
+                this.Suggestions[i] = new SentenceSuggest(source.Suggestions[i]);
+            }
+        }
+        if (source.Sentence != null) {
+            this.Sentence = new SentenceItem(source.Sentence);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -137,6 +137,32 @@ public class DescribeUserLimitResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeUserLimitResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeUserLimitResponse(DescribeUserLimitResponse source) {
+        if (source.MaxTaskNum != null) {
+            this.MaxTaskNum = new Long(source.MaxTaskNum);
+        }
+        if (source.MaxAgentNum != null) {
+            this.MaxAgentNum = new Long(source.MaxAgentNum);
+        }
+        if (source.MaxGroupNum != null) {
+            this.MaxGroupNum = new Long(source.MaxGroupNum);
+        }
+        if (source.MinPeriod != null) {
+            this.MinPeriod = new Long(source.MinPeriod);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

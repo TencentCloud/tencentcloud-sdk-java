@@ -417,6 +417,62 @@ public class SentenceRecognitionRequest extends AbstractModel{
         this.WordInfo = WordInfo;
     }
 
+    public SentenceRecognitionRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SentenceRecognitionRequest(SentenceRecognitionRequest source) {
+        if (source.ProjectId != null) {
+            this.ProjectId = new Long(source.ProjectId);
+        }
+        if (source.SubServiceType != null) {
+            this.SubServiceType = new Long(source.SubServiceType);
+        }
+        if (source.EngSerViceType != null) {
+            this.EngSerViceType = new String(source.EngSerViceType);
+        }
+        if (source.SourceType != null) {
+            this.SourceType = new Long(source.SourceType);
+        }
+        if (source.VoiceFormat != null) {
+            this.VoiceFormat = new String(source.VoiceFormat);
+        }
+        if (source.UsrAudioKey != null) {
+            this.UsrAudioKey = new String(source.UsrAudioKey);
+        }
+        if (source.Url != null) {
+            this.Url = new String(source.Url);
+        }
+        if (source.Data != null) {
+            this.Data = new String(source.Data);
+        }
+        if (source.DataLen != null) {
+            this.DataLen = new Long(source.DataLen);
+        }
+        if (source.HotwordId != null) {
+            this.HotwordId = new String(source.HotwordId);
+        }
+        if (source.FilterDirty != null) {
+            this.FilterDirty = new Long(source.FilterDirty);
+        }
+        if (source.FilterModal != null) {
+            this.FilterModal = new Long(source.FilterModal);
+        }
+        if (source.FilterPunc != null) {
+            this.FilterPunc = new Long(source.FilterPunc);
+        }
+        if (source.ConvertNumMode != null) {
+            this.ConvertNumMode = new Long(source.ConvertNumMode);
+        }
+        if (source.WordInfo != null) {
+            this.WordInfo = new Long(source.WordInfo);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

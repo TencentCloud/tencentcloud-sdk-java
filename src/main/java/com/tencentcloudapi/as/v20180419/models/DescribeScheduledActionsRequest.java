@@ -129,6 +129,35 @@ public class DescribeScheduledActionsRequest extends AbstractModel{
         this.Limit = Limit;
     }
 
+    public DescribeScheduledActionsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeScheduledActionsRequest(DescribeScheduledActionsRequest source) {
+        if (source.ScheduledActionIds != null) {
+            this.ScheduledActionIds = new String[source.ScheduledActionIds.length];
+            for (int i = 0; i < source.ScheduledActionIds.length; i++) {
+                this.ScheduledActionIds[i] = new String(source.ScheduledActionIds[i]);
+            }
+        }
+        if (source.Filters != null) {
+            this.Filters = new Filter[source.Filters.length];
+            for (int i = 0; i < source.Filters.length; i++) {
+                this.Filters[i] = new Filter(source.Filters[i]);
+            }
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

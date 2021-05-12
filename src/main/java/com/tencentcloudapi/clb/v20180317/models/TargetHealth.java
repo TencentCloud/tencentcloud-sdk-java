@@ -137,6 +137,32 @@ public class TargetHealth extends AbstractModel{
         this.HealthStatusDetial = HealthStatusDetial;
     }
 
+    public TargetHealth() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TargetHealth(TargetHealth source) {
+        if (source.IP != null) {
+            this.IP = new String(source.IP);
+        }
+        if (source.Port != null) {
+            this.Port = new Long(source.Port);
+        }
+        if (source.HealthStatus != null) {
+            this.HealthStatus = new Boolean(source.HealthStatus);
+        }
+        if (source.TargetId != null) {
+            this.TargetId = new String(source.TargetId);
+        }
+        if (source.HealthStatusDetial != null) {
+            this.HealthStatusDetial = new String(source.HealthStatusDetial);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

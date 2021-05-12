@@ -45,6 +45,20 @@ public class WechatMiniProgramPublishTaskInput extends AbstractModel{
         this.SourceDefinition = SourceDefinition;
     }
 
+    public WechatMiniProgramPublishTaskInput() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public WechatMiniProgramPublishTaskInput(WechatMiniProgramPublishTaskInput source) {
+        if (source.SourceDefinition != null) {
+            this.SourceDefinition = new Long(source.SourceDefinition);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

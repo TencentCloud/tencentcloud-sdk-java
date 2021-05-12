@@ -91,6 +91,26 @@ public class GetFunctionAddressResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public GetFunctionAddressResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GetFunctionAddressResponse(GetFunctionAddressResponse source) {
+        if (source.Url != null) {
+            this.Url = new String(source.Url);
+        }
+        if (source.CodeSha256 != null) {
+            this.CodeSha256 = new String(source.CodeSha256);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

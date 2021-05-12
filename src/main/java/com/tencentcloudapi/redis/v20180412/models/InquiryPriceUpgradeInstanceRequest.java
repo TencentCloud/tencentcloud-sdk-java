@@ -114,6 +114,29 @@ public class InquiryPriceUpgradeInstanceRequest extends AbstractModel{
         this.RedisReplicasNum = RedisReplicasNum;
     }
 
+    public InquiryPriceUpgradeInstanceRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public InquiryPriceUpgradeInstanceRequest(InquiryPriceUpgradeInstanceRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.MemSize != null) {
+            this.MemSize = new Long(source.MemSize);
+        }
+        if (source.RedisShardNum != null) {
+            this.RedisShardNum = new Long(source.RedisShardNum);
+        }
+        if (source.RedisReplicasNum != null) {
+            this.RedisReplicasNum = new Long(source.RedisReplicasNum);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

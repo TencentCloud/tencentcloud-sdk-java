@@ -91,6 +91,26 @@ public class CreateShieldInstanceResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public CreateShieldInstanceResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateShieldInstanceResponse(CreateShieldInstanceResponse source) {
+        if (source.Progress != null) {
+            this.Progress = new Long(source.Progress);
+        }
+        if (source.ItemId != null) {
+            this.ItemId = new String(source.ItemId);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

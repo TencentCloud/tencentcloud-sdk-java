@@ -211,6 +211,47 @@ public class TopicAttributesResponse extends AbstractModel{
         this.Partitions = Partitions;
     }
 
+    public TopicAttributesResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TopicAttributesResponse(TopicAttributesResponse source) {
+        if (source.TopicId != null) {
+            this.TopicId = new String(source.TopicId);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new Long(source.CreateTime);
+        }
+        if (source.Note != null) {
+            this.Note = new String(source.Note);
+        }
+        if (source.PartitionNum != null) {
+            this.PartitionNum = new Long(source.PartitionNum);
+        }
+        if (source.EnableWhiteList != null) {
+            this.EnableWhiteList = new Long(source.EnableWhiteList);
+        }
+        if (source.IpWhiteList != null) {
+            this.IpWhiteList = new String[source.IpWhiteList.length];
+            for (int i = 0; i < source.IpWhiteList.length; i++) {
+                this.IpWhiteList[i] = new String(source.IpWhiteList[i]);
+            }
+        }
+        if (source.Config != null) {
+            this.Config = new Config(source.Config);
+        }
+        if (source.Partitions != null) {
+            this.Partitions = new TopicPartitionDO[source.Partitions.length];
+            for (int i = 0; i < source.Partitions.length; i++) {
+                this.Partitions[i] = new TopicPartitionDO(source.Partitions[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -604,6 +604,107 @@ public class DeployServiceV2Request extends AbstractModel{
         this.ImageArgs = ImageArgs;
     }
 
+    public DeployServiceV2Request() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeployServiceV2Request(DeployServiceV2Request source) {
+        if (source.ServiceId != null) {
+            this.ServiceId = new String(source.ServiceId);
+        }
+        if (source.ContainerPort != null) {
+            this.ContainerPort = new Long(source.ContainerPort);
+        }
+        if (source.InitPodNum != null) {
+            this.InitPodNum = new Long(source.InitPodNum);
+        }
+        if (source.CpuSpec != null) {
+            this.CpuSpec = new Float(source.CpuSpec);
+        }
+        if (source.MemorySpec != null) {
+            this.MemorySpec = new Float(source.MemorySpec);
+        }
+        if (source.NamespaceId != null) {
+            this.NamespaceId = new String(source.NamespaceId);
+        }
+        if (source.ImgRepo != null) {
+            this.ImgRepo = new String(source.ImgRepo);
+        }
+        if (source.VersionDesc != null) {
+            this.VersionDesc = new String(source.VersionDesc);
+        }
+        if (source.JvmOpts != null) {
+            this.JvmOpts = new String(source.JvmOpts);
+        }
+        if (source.EsInfo != null) {
+            this.EsInfo = new EsInfo(source.EsInfo);
+        }
+        if (source.EnvConf != null) {
+            this.EnvConf = new Pair[source.EnvConf.length];
+            for (int i = 0; i < source.EnvConf.length; i++) {
+                this.EnvConf[i] = new Pair(source.EnvConf[i]);
+            }
+        }
+        if (source.LogConfs != null) {
+            this.LogConfs = new String[source.LogConfs.length];
+            for (int i = 0; i < source.LogConfs.length; i++) {
+                this.LogConfs[i] = new String(source.LogConfs[i]);
+            }
+        }
+        if (source.StorageConfs != null) {
+            this.StorageConfs = new StorageConf[source.StorageConfs.length];
+            for (int i = 0; i < source.StorageConfs.length; i++) {
+                this.StorageConfs[i] = new StorageConf(source.StorageConfs[i]);
+            }
+        }
+        if (source.StorageMountConfs != null) {
+            this.StorageMountConfs = new StorageMountConf[source.StorageMountConfs.length];
+            for (int i = 0; i < source.StorageMountConfs.length; i++) {
+                this.StorageMountConfs[i] = new StorageMountConf(source.StorageMountConfs[i]);
+            }
+        }
+        if (source.DeployMode != null) {
+            this.DeployMode = new String(source.DeployMode);
+        }
+        if (source.DeployVersion != null) {
+            this.DeployVersion = new String(source.DeployVersion);
+        }
+        if (source.PkgName != null) {
+            this.PkgName = new String(source.PkgName);
+        }
+        if (source.JdkVersion != null) {
+            this.JdkVersion = new String(source.JdkVersion);
+        }
+        if (source.SecurityGroupIds != null) {
+            this.SecurityGroupIds = new String[source.SecurityGroupIds.length];
+            for (int i = 0; i < source.SecurityGroupIds.length; i++) {
+                this.SecurityGroupIds[i] = new String(source.SecurityGroupIds[i]);
+            }
+        }
+        if (source.LogOutputConf != null) {
+            this.LogOutputConf = new LogOutputConf(source.LogOutputConf);
+        }
+        if (source.SourceChannel != null) {
+            this.SourceChannel = new Long(source.SourceChannel);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.ImageCommand != null) {
+            this.ImageCommand = new String(source.ImageCommand);
+        }
+        if (source.ImageArgs != null) {
+            this.ImageArgs = new String[source.ImageArgs.length];
+            for (int i = 0; i < source.ImageArgs.length; i++) {
+                this.ImageArgs[i] = new String(source.ImageArgs[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

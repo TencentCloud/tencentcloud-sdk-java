@@ -160,6 +160,35 @@ public class QueryCallListRequest extends AbstractModel{
         this.FileName = FileName;
     }
 
+    public QueryCallListRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public QueryCallListRequest(QueryCallListRequest source) {
+        if (source.Module != null) {
+            this.Module = new String(source.Module);
+        }
+        if (source.Operation != null) {
+            this.Operation = new String(source.Operation);
+        }
+        if (source.BizDate != null) {
+            this.BizDate = new String(source.BizDate);
+        }
+        if (source.BotId != null) {
+            this.BotId = new String(source.BotId);
+        }
+        if (source.BotName != null) {
+            this.BotName = new String(source.BotName);
+        }
+        if (source.FileName != null) {
+            this.FileName = new String(source.FileName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -160,6 +160,35 @@ public class UpdateFleetAttributesRequest extends AbstractModel{
         this.GameServerSessionProtectionTimeLimit = GameServerSessionProtectionTimeLimit;
     }
 
+    public UpdateFleetAttributesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UpdateFleetAttributesRequest(UpdateFleetAttributesRequest source) {
+        if (source.FleetId != null) {
+            this.FleetId = new String(source.FleetId);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.NewGameSessionProtectionPolicy != null) {
+            this.NewGameSessionProtectionPolicy = new String(source.NewGameSessionProtectionPolicy);
+        }
+        if (source.ResourceCreationLimitPolicy != null) {
+            this.ResourceCreationLimitPolicy = new ResourceCreationLimitPolicy(source.ResourceCreationLimitPolicy);
+        }
+        if (source.GameServerSessionProtectionTimeLimit != null) {
+            this.GameServerSessionProtectionTimeLimit = new Long(source.GameServerSessionProtectionTimeLimit);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

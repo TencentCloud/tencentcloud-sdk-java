@@ -68,6 +68,23 @@ public class ReleaseStudioProductRequest extends AbstractModel{
         this.DevStatus = DevStatus;
     }
 
+    public ReleaseStudioProductRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ReleaseStudioProductRequest(ReleaseStudioProductRequest source) {
+        if (source.ProductId != null) {
+            this.ProductId = new String(source.ProductId);
+        }
+        if (source.DevStatus != null) {
+            this.DevStatus = new String(source.DevStatus);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

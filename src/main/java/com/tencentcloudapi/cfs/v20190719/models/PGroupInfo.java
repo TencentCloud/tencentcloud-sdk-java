@@ -137,6 +137,32 @@ public class PGroupInfo extends AbstractModel{
         this.BindCfsNum = BindCfsNum;
     }
 
+    public PGroupInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PGroupInfo(PGroupInfo source) {
+        if (source.PGroupId != null) {
+            this.PGroupId = new String(source.PGroupId);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.DescInfo != null) {
+            this.DescInfo = new String(source.DescInfo);
+        }
+        if (source.CDate != null) {
+            this.CDate = new String(source.CDate);
+        }
+        if (source.BindCfsNum != null) {
+            this.BindCfsNum = new Long(source.BindCfsNum);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

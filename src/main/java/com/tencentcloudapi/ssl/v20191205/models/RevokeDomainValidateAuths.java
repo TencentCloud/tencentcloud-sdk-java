@@ -134,6 +134,29 @@ public class RevokeDomainValidateAuths extends AbstractModel{
         this.DomainValidateAuthDomain = DomainValidateAuthDomain;
     }
 
+    public RevokeDomainValidateAuths() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RevokeDomainValidateAuths(RevokeDomainValidateAuths source) {
+        if (source.DomainValidateAuthPath != null) {
+            this.DomainValidateAuthPath = new String(source.DomainValidateAuthPath);
+        }
+        if (source.DomainValidateAuthKey != null) {
+            this.DomainValidateAuthKey = new String(source.DomainValidateAuthKey);
+        }
+        if (source.DomainValidateAuthValue != null) {
+            this.DomainValidateAuthValue = new String(source.DomainValidateAuthValue);
+        }
+        if (source.DomainValidateAuthDomain != null) {
+            this.DomainValidateAuthDomain = new String(source.DomainValidateAuthDomain);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

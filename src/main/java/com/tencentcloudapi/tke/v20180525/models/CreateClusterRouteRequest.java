@@ -91,6 +91,26 @@ public class CreateClusterRouteRequest extends AbstractModel{
         this.GatewayIp = GatewayIp;
     }
 
+    public CreateClusterRouteRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateClusterRouteRequest(CreateClusterRouteRequest source) {
+        if (source.RouteTableName != null) {
+            this.RouteTableName = new String(source.RouteTableName);
+        }
+        if (source.DestinationCidrBlock != null) {
+            this.DestinationCidrBlock = new String(source.DestinationCidrBlock);
+        }
+        if (source.GatewayIp != null) {
+            this.GatewayIp = new String(source.GatewayIp);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

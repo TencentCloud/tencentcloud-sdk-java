@@ -218,6 +218,38 @@ public class InstanceCounts extends AbstractModel{
         this.Terminating = Terminating;
     }
 
+    public InstanceCounts() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public InstanceCounts(InstanceCounts source) {
+        if (source.Active != null) {
+            this.Active = new Long(source.Active);
+        }
+        if (source.Desired != null) {
+            this.Desired = new Long(source.Desired);
+        }
+        if (source.Idle != null) {
+            this.Idle = new Long(source.Idle);
+        }
+        if (source.MaxiNum != null) {
+            this.MaxiNum = new Long(source.MaxiNum);
+        }
+        if (source.MiniNum != null) {
+            this.MiniNum = new Long(source.MiniNum);
+        }
+        if (source.Pending != null) {
+            this.Pending = new Long(source.Pending);
+        }
+        if (source.Terminating != null) {
+            this.Terminating = new Long(source.Terminating);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

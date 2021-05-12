@@ -483,6 +483,71 @@ NAT类型支持网络地址转换配置，类型确定后不能修改；一个�
         this.Zone = Zone;
     }
 
+    public DirectConnectGateway() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DirectConnectGateway(DirectConnectGateway source) {
+        if (source.DirectConnectGatewayId != null) {
+            this.DirectConnectGatewayId = new String(source.DirectConnectGatewayId);
+        }
+        if (source.DirectConnectGatewayName != null) {
+            this.DirectConnectGatewayName = new String(source.DirectConnectGatewayName);
+        }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.NetworkType != null) {
+            this.NetworkType = new String(source.NetworkType);
+        }
+        if (source.NetworkInstanceId != null) {
+            this.NetworkInstanceId = new String(source.NetworkInstanceId);
+        }
+        if (source.GatewayType != null) {
+            this.GatewayType = new String(source.GatewayType);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.DirectConnectGatewayIp != null) {
+            this.DirectConnectGatewayIp = new String(source.DirectConnectGatewayIp);
+        }
+        if (source.CcnId != null) {
+            this.CcnId = new String(source.CcnId);
+        }
+        if (source.CcnRouteType != null) {
+            this.CcnRouteType = new String(source.CcnRouteType);
+        }
+        if (source.EnableBGP != null) {
+            this.EnableBGP = new Boolean(source.EnableBGP);
+        }
+        if (source.EnableBGPCommunity != null) {
+            this.EnableBGPCommunity = new Boolean(source.EnableBGPCommunity);
+        }
+        if (source.NatGatewayId != null) {
+            this.NatGatewayId = new String(source.NatGatewayId);
+        }
+        if (source.VXLANSupport != null) {
+            this.VXLANSupport = new Boolean[source.VXLANSupport.length];
+            for (int i = 0; i < source.VXLANSupport.length; i++) {
+                this.VXLANSupport[i] = new Boolean(source.VXLANSupport[i]);
+            }
+        }
+        if (source.ModeType != null) {
+            this.ModeType = new String(source.ModeType);
+        }
+        if (source.LocalZone != null) {
+            this.LocalZone = new Boolean(source.LocalZone);
+        }
+        if (source.Zone != null) {
+            this.Zone = new String(source.Zone);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -68,6 +68,23 @@ public class DescribeDeviceClassRequest extends AbstractModel{
         this.NeedPriceInfo = NeedPriceInfo;
     }
 
+    public DescribeDeviceClassRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeDeviceClassRequest(DescribeDeviceClassRequest source) {
+        if (source.OnSale != null) {
+            this.OnSale = new Long(source.OnSale);
+        }
+        if (source.NeedPriceInfo != null) {
+            this.NeedPriceInfo = new Long(source.NeedPriceInfo);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

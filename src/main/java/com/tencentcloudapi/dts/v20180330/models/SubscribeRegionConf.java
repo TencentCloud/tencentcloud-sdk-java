@@ -162,6 +162,32 @@ public class SubscribeRegionConf extends AbstractModel{
         this.Status = Status;
     }
 
+    public SubscribeRegionConf() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SubscribeRegionConf(SubscribeRegionConf source) {
+        if (source.RegionName != null) {
+            this.RegionName = new String(source.RegionName);
+        }
+        if (source.Region != null) {
+            this.Region = new String(source.Region);
+        }
+        if (source.Area != null) {
+            this.Area = new String(source.Area);
+        }
+        if (source.IsDefaultRegion != null) {
+            this.IsDefaultRegion = new Long(source.IsDefaultRegion);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

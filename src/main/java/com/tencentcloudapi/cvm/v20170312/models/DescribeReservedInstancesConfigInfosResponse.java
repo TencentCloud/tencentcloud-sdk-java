@@ -68,6 +68,26 @@ public class DescribeReservedInstancesConfigInfosResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeReservedInstancesConfigInfosResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeReservedInstancesConfigInfosResponse(DescribeReservedInstancesConfigInfosResponse source) {
+        if (source.ReservedInstanceConfigInfos != null) {
+            this.ReservedInstanceConfigInfos = new ReservedInstanceConfigInfoItem[source.ReservedInstanceConfigInfos.length];
+            for (int i = 0; i < source.ReservedInstanceConfigInfos.length; i++) {
+                this.ReservedInstanceConfigInfos[i] = new ReservedInstanceConfigInfoItem(source.ReservedInstanceConfigInfos[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

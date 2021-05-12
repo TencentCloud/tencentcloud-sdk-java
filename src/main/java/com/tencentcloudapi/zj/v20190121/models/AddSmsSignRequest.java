@@ -268,6 +268,38 @@ public class AddSmsSignRequest extends AbstractModel{
         this.Remark = Remark;
     }
 
+    public AddSmsSignRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AddSmsSignRequest(AddSmsSignRequest source) {
+        if (source.License != null) {
+            this.License = new String(source.License);
+        }
+        if (source.SignType != null) {
+            this.SignType = new Long(source.SignType);
+        }
+        if (source.DocumentType != null) {
+            this.DocumentType = new Long(source.DocumentType);
+        }
+        if (source.International != null) {
+            this.International = new Long(source.International);
+        }
+        if (source.ProofImage != null) {
+            this.ProofImage = new String(source.ProofImage);
+        }
+        if (source.SignName != null) {
+            this.SignName = new String(source.SignName);
+        }
+        if (source.Remark != null) {
+            this.Remark = new String(source.Remark);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

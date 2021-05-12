@@ -68,6 +68,26 @@ public class PublishCdnParams extends AbstractModel{
         this.PublishCdnUrls = PublishCdnUrls;
     }
 
+    public PublishCdnParams() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PublishCdnParams(PublishCdnParams source) {
+        if (source.BizId != null) {
+            this.BizId = new Long(source.BizId);
+        }
+        if (source.PublishCdnUrls != null) {
+            this.PublishCdnUrls = new String[source.PublishCdnUrls.length];
+            for (int i = 0; i < source.PublishCdnUrls.length; i++) {
+                this.PublishCdnUrls[i] = new String(source.PublishCdnUrls[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

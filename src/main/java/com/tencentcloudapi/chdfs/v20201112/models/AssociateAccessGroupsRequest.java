@@ -68,6 +68,26 @@ public class AssociateAccessGroupsRequest extends AbstractModel{
         this.AccessGroupIds = AccessGroupIds;
     }
 
+    public AssociateAccessGroupsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AssociateAccessGroupsRequest(AssociateAccessGroupsRequest source) {
+        if (source.MountPointId != null) {
+            this.MountPointId = new String(source.MountPointId);
+        }
+        if (source.AccessGroupIds != null) {
+            this.AccessGroupIds = new String[source.AccessGroupIds.length];
+            for (int i = 0; i < source.AccessGroupIds.length; i++) {
+                this.AccessGroupIds[i] = new String(source.AccessGroupIds[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

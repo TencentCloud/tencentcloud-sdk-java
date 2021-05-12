@@ -68,6 +68,23 @@ public class SetOutBandVpnAuthPasswordRequest extends AbstractModel{
         this.Operate = Operate;
     }
 
+    public SetOutBandVpnAuthPasswordRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SetOutBandVpnAuthPasswordRequest(SetOutBandVpnAuthPasswordRequest source) {
+        if (source.Password != null) {
+            this.Password = new String(source.Password);
+        }
+        if (source.Operate != null) {
+            this.Operate = new String(source.Operate);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

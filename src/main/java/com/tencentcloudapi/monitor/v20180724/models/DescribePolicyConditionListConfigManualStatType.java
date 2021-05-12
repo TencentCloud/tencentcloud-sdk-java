@@ -246,6 +246,41 @@ public class DescribePolicyConditionListConfigManualStatType extends AbstractMod
         this.P86400 = P86400;
     }
 
+    public DescribePolicyConditionListConfigManualStatType() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribePolicyConditionListConfigManualStatType(DescribePolicyConditionListConfigManualStatType source) {
+        if (source.P5 != null) {
+            this.P5 = new String(source.P5);
+        }
+        if (source.P10 != null) {
+            this.P10 = new String(source.P10);
+        }
+        if (source.P60 != null) {
+            this.P60 = new String(source.P60);
+        }
+        if (source.P300 != null) {
+            this.P300 = new String(source.P300);
+        }
+        if (source.P600 != null) {
+            this.P600 = new String(source.P600);
+        }
+        if (source.P1800 != null) {
+            this.P1800 = new String(source.P1800);
+        }
+        if (source.P3600 != null) {
+            this.P3600 = new String(source.P3600);
+        }
+        if (source.P86400 != null) {
+            this.P86400 = new String(source.P86400);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

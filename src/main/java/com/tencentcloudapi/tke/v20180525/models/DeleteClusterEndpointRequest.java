@@ -68,6 +68,23 @@ public class DeleteClusterEndpointRequest extends AbstractModel{
         this.IsExtranet = IsExtranet;
     }
 
+    public DeleteClusterEndpointRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteClusterEndpointRequest(DeleteClusterEndpointRequest source) {
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
+        if (source.IsExtranet != null) {
+            this.IsExtranet = new Boolean(source.IsExtranet);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

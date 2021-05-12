@@ -114,6 +114,29 @@ public class CaptchaUserAllAppId extends AbstractModel{
         this.ChannelInfo = ChannelInfo;
     }
 
+    public CaptchaUserAllAppId() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CaptchaUserAllAppId(CaptchaUserAllAppId source) {
+        if (source.CaptchaAppId != null) {
+            this.CaptchaAppId = new Long(source.CaptchaAppId);
+        }
+        if (source.AppName != null) {
+            this.AppName = new String(source.AppName);
+        }
+        if (source.TcAppId != null) {
+            this.TcAppId = new Long(source.TcAppId);
+        }
+        if (source.ChannelInfo != null) {
+            this.ChannelInfo = new String(source.ChannelInfo);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

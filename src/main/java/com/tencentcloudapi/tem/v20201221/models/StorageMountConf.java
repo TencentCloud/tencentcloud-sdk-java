@@ -68,6 +68,23 @@ public class StorageMountConf extends AbstractModel{
         this.MountPath = MountPath;
     }
 
+    public StorageMountConf() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public StorageMountConf(StorageMountConf source) {
+        if (source.VolumeName != null) {
+            this.VolumeName = new String(source.VolumeName);
+        }
+        if (source.MountPath != null) {
+            this.MountPath = new String(source.MountPath);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -45,6 +45,20 @@ public class DescribeGroupByPathRequest extends AbstractModel{
         this.GroupPath = GroupPath;
     }
 
+    public DescribeGroupByPathRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeGroupByPathRequest(DescribeGroupByPathRequest source) {
+        if (source.GroupPath != null) {
+            this.GroupPath = new String(source.GroupPath);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

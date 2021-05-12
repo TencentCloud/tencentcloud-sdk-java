@@ -73,6 +73,26 @@ public class JoinGameServerSessionBatchResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public JoinGameServerSessionBatchResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public JoinGameServerSessionBatchResponse(JoinGameServerSessionBatchResponse source) {
+        if (source.PlayerSessions != null) {
+            this.PlayerSessions = new PlayerSession[source.PlayerSessions.length];
+            for (int i = 0; i < source.PlayerSessions.length; i++) {
+                this.PlayerSessions[i] = new PlayerSession(source.PlayerSessions[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

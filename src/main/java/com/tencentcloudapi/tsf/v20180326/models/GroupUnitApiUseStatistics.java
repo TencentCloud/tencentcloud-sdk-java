@@ -68,6 +68,26 @@ public class GroupUnitApiUseStatistics extends AbstractModel{
         this.Content = Content;
     }
 
+    public GroupUnitApiUseStatistics() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GroupUnitApiUseStatistics(GroupUnitApiUseStatistics source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.Content != null) {
+            this.Content = new GroupUnitApiDailyUseStatistics[source.Content.length];
+            for (int i = 0; i < source.Content.length; i++) {
+                this.Content[i] = new GroupUnitApiDailyUseStatistics(source.Content[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

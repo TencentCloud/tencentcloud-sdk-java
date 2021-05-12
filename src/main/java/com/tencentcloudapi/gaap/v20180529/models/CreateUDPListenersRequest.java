@@ -183,6 +183,44 @@ public class CreateUDPListenersRequest extends AbstractModel{
         this.RealServerPorts = RealServerPorts;
     }
 
+    public CreateUDPListenersRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateUDPListenersRequest(CreateUDPListenersRequest source) {
+        if (source.ListenerName != null) {
+            this.ListenerName = new String(source.ListenerName);
+        }
+        if (source.Ports != null) {
+            this.Ports = new Long[source.Ports.length];
+            for (int i = 0; i < source.Ports.length; i++) {
+                this.Ports[i] = new Long(source.Ports[i]);
+            }
+        }
+        if (source.Scheduler != null) {
+            this.Scheduler = new String(source.Scheduler);
+        }
+        if (source.RealServerType != null) {
+            this.RealServerType = new String(source.RealServerType);
+        }
+        if (source.ProxyId != null) {
+            this.ProxyId = new String(source.ProxyId);
+        }
+        if (source.GroupId != null) {
+            this.GroupId = new String(source.GroupId);
+        }
+        if (source.RealServerPorts != null) {
+            this.RealServerPorts = new Long[source.RealServerPorts.length];
+            for (int i = 0; i < source.RealServerPorts.length; i++) {
+                this.RealServerPorts[i] = new Long(source.RealServerPorts[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

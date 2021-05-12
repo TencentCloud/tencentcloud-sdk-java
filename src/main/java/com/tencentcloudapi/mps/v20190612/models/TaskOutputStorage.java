@@ -73,6 +73,23 @@ public class TaskOutputStorage extends AbstractModel{
         this.CosOutputStorage = CosOutputStorage;
     }
 
+    public TaskOutputStorage() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TaskOutputStorage(TaskOutputStorage source) {
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.CosOutputStorage != null) {
+            this.CosOutputStorage = new CosOutputStorage(source.CosOutputStorage);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

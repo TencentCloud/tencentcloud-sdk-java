@@ -160,6 +160,41 @@ public class CheckInstancesUpgradeAbleRequest extends AbstractModel{
         this.Filter = Filter;
     }
 
+    public CheckInstancesUpgradeAbleRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CheckInstancesUpgradeAbleRequest(CheckInstancesUpgradeAbleRequest source) {
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
+        if (source.InstanceIds != null) {
+            this.InstanceIds = new String[source.InstanceIds.length];
+            for (int i = 0; i < source.InstanceIds.length; i++) {
+                this.InstanceIds[i] = new String(source.InstanceIds[i]);
+            }
+        }
+        if (source.UpgradeType != null) {
+            this.UpgradeType = new String(source.UpgradeType);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.Filter != null) {
+            this.Filter = new Filter[source.Filter.length];
+            for (int i = 0; i < source.Filter.length; i++) {
+                this.Filter[i] = new Filter(source.Filter[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -183,6 +183,38 @@ public class InquiryPriceCreateDisksRequest extends AbstractModel{
         this.ThroughputPerformance = ThroughputPerformance;
     }
 
+    public InquiryPriceCreateDisksRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public InquiryPriceCreateDisksRequest(InquiryPriceCreateDisksRequest source) {
+        if (source.DiskType != null) {
+            this.DiskType = new String(source.DiskType);
+        }
+        if (source.DiskSize != null) {
+            this.DiskSize = new Long(source.DiskSize);
+        }
+        if (source.DiskChargeType != null) {
+            this.DiskChargeType = new String(source.DiskChargeType);
+        }
+        if (source.DiskChargePrepaid != null) {
+            this.DiskChargePrepaid = new DiskChargePrepaid(source.DiskChargePrepaid);
+        }
+        if (source.DiskCount != null) {
+            this.DiskCount = new Long(source.DiskCount);
+        }
+        if (source.ProjectId != null) {
+            this.ProjectId = new Long(source.ProjectId);
+        }
+        if (source.ThroughputPerformance != null) {
+            this.ThroughputPerformance = new Long(source.ThroughputPerformance);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

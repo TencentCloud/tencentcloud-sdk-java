@@ -45,6 +45,20 @@ public class DescribeAccessRulesRequest extends AbstractModel{
         this.AccessGroupId = AccessGroupId;
     }
 
+    public DescribeAccessRulesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeAccessRulesRequest(DescribeAccessRulesRequest source) {
+        if (source.AccessGroupId != null) {
+            this.AccessGroupId = new String(source.AccessGroupId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

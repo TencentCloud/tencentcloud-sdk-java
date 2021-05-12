@@ -137,6 +137,35 @@ public class DescribeTrafficPackagesResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeTrafficPackagesResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeTrafficPackagesResponse(DescribeTrafficPackagesResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.TrafficPackages != null) {
+            this.TrafficPackages = new TrafficPackage[source.TrafficPackages.length];
+            for (int i = 0; i < source.TrafficPackages.length; i++) {
+                this.TrafficPackages[i] = new TrafficPackage(source.TrafficPackages[i]);
+            }
+        }
+        if (source.ExpiringCount != null) {
+            this.ExpiringCount = new Long(source.ExpiringCount);
+        }
+        if (source.EnabledCount != null) {
+            this.EnabledCount = new Long(source.EnabledCount);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

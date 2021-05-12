@@ -68,6 +68,23 @@ public class DescribeFlowLastBatchStateResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeFlowLastBatchStateResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeFlowLastBatchStateResponse(DescribeFlowLastBatchStateResponse source) {
+        if (source.Result != null) {
+            this.Result = new TaskFlowLastBatchState(source.Result);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

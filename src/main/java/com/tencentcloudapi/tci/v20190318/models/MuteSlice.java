@@ -68,6 +68,23 @@ public class MuteSlice extends AbstractModel{
         this.MuteEtm = MuteEtm;
     }
 
+    public MuteSlice() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MuteSlice(MuteSlice source) {
+        if (source.MuteBtm != null) {
+            this.MuteBtm = new Long(source.MuteBtm);
+        }
+        if (source.MuteEtm != null) {
+            this.MuteEtm = new Long(source.MuteEtm);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -45,6 +45,23 @@ public class DescribeTaskStatusRequest extends AbstractModel{
         this.TaskSet = TaskSet;
     }
 
+    public DescribeTaskStatusRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeTaskStatusRequest(DescribeTaskStatusRequest source) {
+        if (source.TaskSet != null) {
+            this.TaskSet = new TaskInput[source.TaskSet.length];
+            for (int i = 0; i < source.TaskSet.length; i++) {
+                this.TaskSet[i] = new TaskInput(source.TaskSet[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

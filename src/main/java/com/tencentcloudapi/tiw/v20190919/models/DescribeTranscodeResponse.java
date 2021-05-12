@@ -320,6 +320,50 @@ public class DescribeTranscodeResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeTranscodeResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeTranscodeResponse(DescribeTranscodeResponse source) {
+        if (source.Pages != null) {
+            this.Pages = new Long(source.Pages);
+        }
+        if (source.Progress != null) {
+            this.Progress = new Long(source.Progress);
+        }
+        if (source.Resolution != null) {
+            this.Resolution = new String(source.Resolution);
+        }
+        if (source.ResultUrl != null) {
+            this.ResultUrl = new String(source.ResultUrl);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.TaskId != null) {
+            this.TaskId = new String(source.TaskId);
+        }
+        if (source.Title != null) {
+            this.Title = new String(source.Title);
+        }
+        if (source.ThumbnailUrl != null) {
+            this.ThumbnailUrl = new String(source.ThumbnailUrl);
+        }
+        if (source.ThumbnailResolution != null) {
+            this.ThumbnailResolution = new String(source.ThumbnailResolution);
+        }
+        if (source.CompressFileUrl != null) {
+            this.CompressFileUrl = new String(source.CompressFileUrl);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

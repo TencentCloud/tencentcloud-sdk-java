@@ -78,6 +78,26 @@ public class UserAgentFilter extends AbstractModel{
         this.FilterRules = FilterRules;
     }
 
+    public UserAgentFilter() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UserAgentFilter(UserAgentFilter source) {
+        if (source.Switch != null) {
+            this.Switch = new String(source.Switch);
+        }
+        if (source.FilterRules != null) {
+            this.FilterRules = new UserAgentFilterRule[source.FilterRules.length];
+            for (int i = 0; i < source.FilterRules.length; i++) {
+                this.FilterRules[i] = new UserAgentFilterRule(source.FilterRules[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

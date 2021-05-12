@@ -91,6 +91,32 @@ public class DescribeDDoSAttackIPRegionMapResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeDDoSAttackIPRegionMapResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeDDoSAttackIPRegionMapResponse(DescribeDDoSAttackIPRegionMapResponse source) {
+        if (source.NationCount != null) {
+            this.NationCount = new KeyValueRecord[source.NationCount.length];
+            for (int i = 0; i < source.NationCount.length; i++) {
+                this.NationCount[i] = new KeyValueRecord(source.NationCount[i]);
+            }
+        }
+        if (source.ProvinceCount != null) {
+            this.ProvinceCount = new KeyValueRecord[source.ProvinceCount.length];
+            for (int i = 0; i < source.ProvinceCount.length; i++) {
+                this.ProvinceCount[i] = new KeyValueRecord(source.ProvinceCount[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

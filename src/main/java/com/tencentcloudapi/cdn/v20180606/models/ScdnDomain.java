@@ -257,6 +257,47 @@ public class ScdnDomain extends AbstractModel{
         this.Area = Area;
     }
 
+    public ScdnDomain() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ScdnDomain(ScdnDomain source) {
+        if (source.Domain != null) {
+            this.Domain = new String(source.Domain);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.Waf != null) {
+            this.Waf = new String(source.Waf);
+        }
+        if (source.Acl != null) {
+            this.Acl = new String(source.Acl);
+        }
+        if (source.CC != null) {
+            this.CC = new String(source.CC);
+        }
+        if (source.Ddos != null) {
+            this.Ddos = new String(source.Ddos);
+        }
+        if (source.ProjectId != null) {
+            this.ProjectId = new String(source.ProjectId);
+        }
+        if (source.AclRuleNumbers != null) {
+            this.AclRuleNumbers = new Long(source.AclRuleNumbers);
+        }
+        if (source.Bot != null) {
+            this.Bot = new String(source.Bot);
+        }
+        if (source.Area != null) {
+            this.Area = new String(source.Area);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -114,6 +114,29 @@ public class UploadTaxListRequest extends AbstractModel{
         this.FileUrl = FileUrl;
     }
 
+    public UploadTaxListRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UploadTaxListRequest(UploadTaxListRequest source) {
+        if (source.Channel != null) {
+            this.Channel = new Long(source.Channel);
+        }
+        if (source.BeginMonth != null) {
+            this.BeginMonth = new String(source.BeginMonth);
+        }
+        if (source.EndMonth != null) {
+            this.EndMonth = new String(source.EndMonth);
+        }
+        if (source.FileUrl != null) {
+            this.FileUrl = new String(source.FileUrl);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

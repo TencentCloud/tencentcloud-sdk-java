@@ -45,6 +45,20 @@ public class EnhanceTaDegreeRequest extends AbstractModel{
         this.BspData = BspData;
     }
 
+    public EnhanceTaDegreeRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public EnhanceTaDegreeRequest(EnhanceTaDegreeRequest source) {
+        if (source.BspData != null) {
+            this.BspData = new InputTaBspData(source.BspData);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -277,6 +277,50 @@ public class ModifySuperPlayerConfigRequest extends AbstractModel{
         this.SubAppId = SubAppId;
     }
 
+    public ModifySuperPlayerConfigRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifySuperPlayerConfigRequest(ModifySuperPlayerConfigRequest source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.DrmSwitch != null) {
+            this.DrmSwitch = new String(source.DrmSwitch);
+        }
+        if (source.AdaptiveDynamicStreamingDefinition != null) {
+            this.AdaptiveDynamicStreamingDefinition = new Long(source.AdaptiveDynamicStreamingDefinition);
+        }
+        if (source.DrmStreamingsInfo != null) {
+            this.DrmStreamingsInfo = new DrmStreamingsInfoForUpdate(source.DrmStreamingsInfo);
+        }
+        if (source.ImageSpriteDefinition != null) {
+            this.ImageSpriteDefinition = new Long(source.ImageSpriteDefinition);
+        }
+        if (source.ResolutionNames != null) {
+            this.ResolutionNames = new ResolutionNameInfo[source.ResolutionNames.length];
+            for (int i = 0; i < source.ResolutionNames.length; i++) {
+                this.ResolutionNames[i] = new ResolutionNameInfo(source.ResolutionNames[i]);
+            }
+        }
+        if (source.Domain != null) {
+            this.Domain = new String(source.Domain);
+        }
+        if (source.Scheme != null) {
+            this.Scheme = new String(source.Scheme);
+        }
+        if (source.Comment != null) {
+            this.Comment = new String(source.Comment);
+        }
+        if (source.SubAppId != null) {
+            this.SubAppId = new Long(source.SubAppId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

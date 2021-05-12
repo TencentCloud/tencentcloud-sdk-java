@@ -137,6 +137,32 @@ public class ZoneInfo extends AbstractModel{
         this.ZoneSupportIpv6 = ZoneSupportIpv6;
     }
 
+    public ZoneInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ZoneInfo(ZoneInfo source) {
+        if (source.Zone != null) {
+            this.Zone = new String(source.Zone);
+        }
+        if (source.ZoneName != null) {
+            this.ZoneName = new String(source.ZoneName);
+        }
+        if (source.ZoneId != null) {
+            this.ZoneId = new Long(source.ZoneId);
+        }
+        if (source.ZoneState != null) {
+            this.ZoneState = new String(source.ZoneState);
+        }
+        if (source.ZoneSupportIpv6 != null) {
+            this.ZoneSupportIpv6 = new Long(source.ZoneSupportIpv6);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

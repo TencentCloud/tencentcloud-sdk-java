@@ -45,6 +45,23 @@ public class AddUserToGroupRequest extends AbstractModel{
         this.Info = Info;
     }
 
+    public AddUserToGroupRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AddUserToGroupRequest(AddUserToGroupRequest source) {
+        if (source.Info != null) {
+            this.Info = new GroupIdOfUidInfo[source.Info.length];
+            for (int i = 0; i < source.Info.length; i++) {
+                this.Info[i] = new GroupIdOfUidInfo(source.Info[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -275,6 +275,53 @@ public class ModifyRoomRequest extends AbstractModel{
         this.IsForbidJoin = IsForbidJoin;
     }
 
+    public ModifyRoomRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyRoomRequest(ModifyRoomRequest source) {
+        if (source.GameId != null) {
+            this.GameId = new String(source.GameId);
+        }
+        if (source.RoomId != null) {
+            this.RoomId = new String(source.RoomId);
+        }
+        if (source.PlayerId != null) {
+            this.PlayerId = new String(source.PlayerId);
+        }
+        if (source.ChangeRoomOptionList != null) {
+            this.ChangeRoomOptionList = new Long[source.ChangeRoomOptionList.length];
+            for (int i = 0; i < source.ChangeRoomOptionList.length; i++) {
+                this.ChangeRoomOptionList[i] = new Long(source.ChangeRoomOptionList[i]);
+            }
+        }
+        if (source.RoomName != null) {
+            this.RoomName = new String(source.RoomName);
+        }
+        if (source.Owner != null) {
+            this.Owner = new String(source.Owner);
+        }
+        if (source.IsViewed != null) {
+            this.IsViewed = new Boolean(source.IsViewed);
+        }
+        if (source.IsInvited != null) {
+            this.IsInvited = new Boolean(source.IsInvited);
+        }
+        if (source.IsPrivate != null) {
+            this.IsPrivate = new Boolean(source.IsPrivate);
+        }
+        if (source.CustomProperties != null) {
+            this.CustomProperties = new String(source.CustomProperties);
+        }
+        if (source.IsForbidJoin != null) {
+            this.IsForbidJoin = new Boolean(source.IsForbidJoin);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

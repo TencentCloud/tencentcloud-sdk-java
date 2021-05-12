@@ -68,6 +68,23 @@ public class InstanceMarketOptionsRequest extends AbstractModel{
         this.MarketType = MarketType;
     }
 
+    public InstanceMarketOptionsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public InstanceMarketOptionsRequest(InstanceMarketOptionsRequest source) {
+        if (source.SpotOptions != null) {
+            this.SpotOptions = new SpotMarketOptions(source.SpotOptions);
+        }
+        if (source.MarketType != null) {
+            this.MarketType = new String(source.MarketType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

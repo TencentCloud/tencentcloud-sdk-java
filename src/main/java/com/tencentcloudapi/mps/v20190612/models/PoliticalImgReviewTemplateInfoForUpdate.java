@@ -164,6 +164,32 @@ public class PoliticalImgReviewTemplateInfoForUpdate extends AbstractModel{
         this.ReviewConfidence = ReviewConfidence;
     }
 
+    public PoliticalImgReviewTemplateInfoForUpdate() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PoliticalImgReviewTemplateInfoForUpdate(PoliticalImgReviewTemplateInfoForUpdate source) {
+        if (source.Switch != null) {
+            this.Switch = new String(source.Switch);
+        }
+        if (source.LabelSet != null) {
+            this.LabelSet = new String[source.LabelSet.length];
+            for (int i = 0; i < source.LabelSet.length; i++) {
+                this.LabelSet[i] = new String(source.LabelSet[i]);
+            }
+        }
+        if (source.BlockConfidence != null) {
+            this.BlockConfidence = new Long(source.BlockConfidence);
+        }
+        if (source.ReviewConfidence != null) {
+            this.ReviewConfidence = new Long(source.ReviewConfidence);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

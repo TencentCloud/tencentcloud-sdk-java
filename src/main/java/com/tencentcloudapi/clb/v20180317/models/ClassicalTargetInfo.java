@@ -68,6 +68,23 @@ public class ClassicalTargetInfo extends AbstractModel{
         this.Weight = Weight;
     }
 
+    public ClassicalTargetInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ClassicalTargetInfo(ClassicalTargetInfo source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.Weight != null) {
+            this.Weight = new Long(source.Weight);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

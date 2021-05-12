@@ -45,6 +45,23 @@ public class AgePortraitInfo extends AbstractModel{
         this.PortraitSet = PortraitSet;
     }
 
+    public AgePortraitInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AgePortraitInfo(AgePortraitInfo source) {
+        if (source.PortraitSet != null) {
+            this.PortraitSet = new AgePortrait[source.PortraitSet.length];
+            for (int i = 0; i < source.PortraitSet.length; i++) {
+                this.PortraitSet[i] = new AgePortrait(source.PortraitSet[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -119,6 +119,29 @@ SD、HD、UHD1、UHD2、AUDIO
         this.Iv = Iv;
     }
 
+    public KeyParam() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public KeyParam(KeyParam source) {
+        if (source.Track != null) {
+            this.Track = new String(source.Track);
+        }
+        if (source.Key != null) {
+            this.Key = new String(source.Key);
+        }
+        if (source.KeyId != null) {
+            this.KeyId = new String(source.KeyId);
+        }
+        if (source.Iv != null) {
+            this.Iv = new String(source.Iv);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

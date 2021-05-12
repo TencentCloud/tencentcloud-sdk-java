@@ -114,6 +114,29 @@ public class BeautyParam extends AbstractModel{
         this.FaceShrinkLevel = FaceShrinkLevel;
     }
 
+    public BeautyParam() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public BeautyParam(BeautyParam source) {
+        if (source.WhitenLevel != null) {
+            this.WhitenLevel = new Long(source.WhitenLevel);
+        }
+        if (source.SmoothingLevel != null) {
+            this.SmoothingLevel = new Long(source.SmoothingLevel);
+        }
+        if (source.EyeEnlargeLevel != null) {
+            this.EyeEnlargeLevel = new Long(source.EyeEnlargeLevel);
+        }
+        if (source.FaceShrinkLevel != null) {
+            this.FaceShrinkLevel = new Long(source.FaceShrinkLevel);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

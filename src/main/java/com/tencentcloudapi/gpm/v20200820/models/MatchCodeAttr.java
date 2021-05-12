@@ -50,6 +50,20 @@ public class MatchCodeAttr extends AbstractModel{
         this.MatchCode = MatchCode;
     }
 
+    public MatchCodeAttr() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MatchCodeAttr(MatchCodeAttr source) {
+        if (source.MatchCode != null) {
+            this.MatchCode = new String(source.MatchCode);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

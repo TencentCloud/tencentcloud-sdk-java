@@ -160,6 +160,38 @@ public class ModifyBackupConfigRequest extends AbstractModel{
         this.BackupType = BackupType;
     }
 
+    public ModifyBackupConfigRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyBackupConfigRequest(ModifyBackupConfigRequest source) {
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
+        if (source.BackupTimeBeg != null) {
+            this.BackupTimeBeg = new Long(source.BackupTimeBeg);
+        }
+        if (source.BackupTimeEnd != null) {
+            this.BackupTimeEnd = new Long(source.BackupTimeEnd);
+        }
+        if (source.ReserveDuration != null) {
+            this.ReserveDuration = new Long(source.ReserveDuration);
+        }
+        if (source.BackupFreq != null) {
+            this.BackupFreq = new String[source.BackupFreq.length];
+            for (int i = 0; i < source.BackupFreq.length; i++) {
+                this.BackupFreq[i] = new String(source.BackupFreq[i]);
+            }
+        }
+        if (source.BackupType != null) {
+            this.BackupType = new String(source.BackupType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

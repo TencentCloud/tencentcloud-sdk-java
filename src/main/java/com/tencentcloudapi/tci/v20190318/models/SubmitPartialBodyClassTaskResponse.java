@@ -91,6 +91,29 @@ public class SubmitPartialBodyClassTaskResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public SubmitPartialBodyClassTaskResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SubmitPartialBodyClassTaskResponse(SubmitPartialBodyClassTaskResponse source) {
+        if (source.ImageResults != null) {
+            this.ImageResults = new ImageTaskResult[source.ImageResults.length];
+            for (int i = 0; i < source.ImageResults.length; i++) {
+                this.ImageResults[i] = new ImageTaskResult(source.ImageResults[i]);
+            }
+        }
+        if (source.TaskId != null) {
+            this.TaskId = new Long(source.TaskId);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

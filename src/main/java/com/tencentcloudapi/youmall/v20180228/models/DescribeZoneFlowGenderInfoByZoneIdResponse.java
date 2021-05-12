@@ -183,6 +183,38 @@ public class DescribeZoneFlowGenderInfoByZoneIdResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeZoneFlowGenderInfoByZoneIdResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeZoneFlowGenderInfoByZoneIdResponse(DescribeZoneFlowGenderInfoByZoneIdResponse source) {
+        if (source.CompanyId != null) {
+            this.CompanyId = new String(source.CompanyId);
+        }
+        if (source.ShopId != null) {
+            this.ShopId = new Long(source.ShopId);
+        }
+        if (source.ZoneId != null) {
+            this.ZoneId = new Long(source.ZoneId);
+        }
+        if (source.ZoneName != null) {
+            this.ZoneName = new String(source.ZoneName);
+        }
+        if (source.MalePercent != null) {
+            this.MalePercent = new Float(source.MalePercent);
+        }
+        if (source.FemalePercent != null) {
+            this.FemalePercent = new Float(source.FemalePercent);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -124,6 +124,29 @@ public class SearchResult extends AbstractModel{
         this.Pos = Pos;
     }
 
+    public SearchResult() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SearchResult(SearchResult source) {
+        if (source.Text != null) {
+            this.Text = new String(source.Text);
+        }
+        if (source.IsExist != null) {
+            this.IsExist = new Long(source.IsExist);
+        }
+        if (source.MatchText != null) {
+            this.MatchText = new String(source.MatchText);
+        }
+        if (source.Pos != null) {
+            this.Pos = new String(source.Pos);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

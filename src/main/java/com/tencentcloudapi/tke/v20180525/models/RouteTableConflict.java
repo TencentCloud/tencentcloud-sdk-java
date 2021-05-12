@@ -129,6 +129,29 @@ public class RouteTableConflict extends AbstractModel{
         this.RouteTableId = RouteTableId;
     }
 
+    public RouteTableConflict() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RouteTableConflict(RouteTableConflict source) {
+        if (source.RouteTableType != null) {
+            this.RouteTableType = new String(source.RouteTableType);
+        }
+        if (source.RouteTableCidrBlock != null) {
+            this.RouteTableCidrBlock = new String(source.RouteTableCidrBlock);
+        }
+        if (source.RouteTableName != null) {
+            this.RouteTableName = new String(source.RouteTableName);
+        }
+        if (source.RouteTableId != null) {
+            this.RouteTableId = new String(source.RouteTableId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -114,6 +114,29 @@ public class SpotPaidQuota extends AbstractModel{
         this.Zone = Zone;
     }
 
+    public SpotPaidQuota() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SpotPaidQuota(SpotPaidQuota source) {
+        if (source.UsedQuota != null) {
+            this.UsedQuota = new Long(source.UsedQuota);
+        }
+        if (source.RemainingQuota != null) {
+            this.RemainingQuota = new Long(source.RemainingQuota);
+        }
+        if (source.TotalQuota != null) {
+            this.TotalQuota = new Long(source.TotalQuota);
+        }
+        if (source.Zone != null) {
+            this.Zone = new String(source.Zone);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

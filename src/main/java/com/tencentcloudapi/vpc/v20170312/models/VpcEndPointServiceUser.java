@@ -137,6 +137,32 @@ public class VpcEndPointServiceUser extends AbstractModel{
         this.EndPointServiceId = EndPointServiceId;
     }
 
+    public VpcEndPointServiceUser() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public VpcEndPointServiceUser(VpcEndPointServiceUser source) {
+        if (source.Owner != null) {
+            this.Owner = new Long(source.Owner);
+        }
+        if (source.UserUin != null) {
+            this.UserUin = new String(source.UserUin);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.EndPointServiceId != null) {
+            this.EndPointServiceId = new String(source.EndPointServiceId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

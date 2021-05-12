@@ -139,6 +139,29 @@ public class NetDetectIpState extends AbstractModel{
         this.PacketLossRate = PacketLossRate;
     }
 
+    public NetDetectIpState() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public NetDetectIpState(NetDetectIpState source) {
+        if (source.DetectDestinationIp != null) {
+            this.DetectDestinationIp = new String(source.DetectDestinationIp);
+        }
+        if (source.State != null) {
+            this.State = new Long(source.State);
+        }
+        if (source.Delay != null) {
+            this.Delay = new Long(source.Delay);
+        }
+        if (source.PacketLossRate != null) {
+            this.PacketLossRate = new Long(source.PacketLossRate);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

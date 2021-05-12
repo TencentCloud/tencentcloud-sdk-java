@@ -101,6 +101,29 @@ public class DescribeUsgRuleResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeUsgRuleResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeUsgRuleResponse(DescribeUsgRuleResponse source) {
+        if (source.SgRules != null) {
+            this.SgRules = new UsgRuleDetail[source.SgRules.length];
+            for (int i = 0; i < source.SgRules.length; i++) {
+                this.SgRules[i] = new UsgRuleDetail(source.SgRules[i]);
+            }
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

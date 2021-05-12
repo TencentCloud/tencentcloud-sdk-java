@@ -96,6 +96,29 @@ public class MediaAiAnalysisFrameTagItem extends AbstractModel{
         this.Confidence = Confidence;
     }
 
+    public MediaAiAnalysisFrameTagItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MediaAiAnalysisFrameTagItem(MediaAiAnalysisFrameTagItem source) {
+        if (source.Tag != null) {
+            this.Tag = new String(source.Tag);
+        }
+        if (source.CategorySet != null) {
+            this.CategorySet = new String[source.CategorySet.length];
+            for (int i = 0; i < source.CategorySet.length; i++) {
+                this.CategorySet[i] = new String(source.CategorySet[i]);
+            }
+        }
+        if (source.Confidence != null) {
+            this.Confidence = new Float(source.Confidence);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

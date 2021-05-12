@@ -137,6 +137,35 @@ public class ModifySubnetDHCPRelayRequest extends AbstractModel{
         this.ReservedIpCount = ReservedIpCount;
     }
 
+    public ModifySubnetDHCPRelayRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifySubnetDHCPRelayRequest(ModifySubnetDHCPRelayRequest source) {
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.SubnetId != null) {
+            this.SubnetId = new String(source.SubnetId);
+        }
+        if (source.EnableDHCP != null) {
+            this.EnableDHCP = new Boolean(source.EnableDHCP);
+        }
+        if (source.ServerIps != null) {
+            this.ServerIps = new String[source.ServerIps.length];
+            for (int i = 0; i < source.ServerIps.length; i++) {
+                this.ServerIps[i] = new String(source.ServerIps[i]);
+            }
+        }
+        if (source.ReservedIpCount != null) {
+            this.ReservedIpCount = new Long(source.ReservedIpCount);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

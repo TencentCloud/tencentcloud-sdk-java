@@ -206,6 +206,44 @@ public class LoginWhiteListsRule extends AbstractModel{
         this.EndTime = EndTime;
     }
 
+    public LoginWhiteListsRule() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public LoginWhiteListsRule(LoginWhiteListsRule source) {
+        if (source.Places != null) {
+            this.Places = new Place[source.Places.length];
+            for (int i = 0; i < source.Places.length; i++) {
+                this.Places[i] = new Place(source.Places[i]);
+            }
+        }
+        if (source.SrcIp != null) {
+            this.SrcIp = new String(source.SrcIp);
+        }
+        if (source.UserName != null) {
+            this.UserName = new String(source.UserName);
+        }
+        if (source.IsGlobal != null) {
+            this.IsGlobal = new Boolean(source.IsGlobal);
+        }
+        if (source.HostIp != null) {
+            this.HostIp = new String(source.HostIp);
+        }
+        if (source.Id != null) {
+            this.Id = new Long(source.Id);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

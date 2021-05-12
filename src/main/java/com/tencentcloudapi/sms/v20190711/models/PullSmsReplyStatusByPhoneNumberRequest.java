@@ -170,6 +170,35 @@ public class PullSmsReplyStatusByPhoneNumberRequest extends AbstractModel{
         this.EndDateTime = EndDateTime;
     }
 
+    public PullSmsReplyStatusByPhoneNumberRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PullSmsReplyStatusByPhoneNumberRequest(PullSmsReplyStatusByPhoneNumberRequest source) {
+        if (source.SendDateTime != null) {
+            this.SendDateTime = new Long(source.SendDateTime);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.PhoneNumber != null) {
+            this.PhoneNumber = new String(source.PhoneNumber);
+        }
+        if (source.SmsSdkAppid != null) {
+            this.SmsSdkAppid = new String(source.SmsSdkAppid);
+        }
+        if (source.EndDateTime != null) {
+            this.EndDateTime = new Long(source.EndDateTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

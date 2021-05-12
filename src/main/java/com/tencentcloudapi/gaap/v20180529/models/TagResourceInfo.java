@@ -83,6 +83,23 @@ RealServer表示源站
         this.ResourceId = ResourceId;
     }
 
+    public TagResourceInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TagResourceInfo(TagResourceInfo source) {
+        if (source.ResourceType != null) {
+            this.ResourceType = new String(source.ResourceType);
+        }
+        if (source.ResourceId != null) {
+            this.ResourceId = new String(source.ResourceId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

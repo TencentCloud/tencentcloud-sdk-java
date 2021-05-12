@@ -68,6 +68,23 @@ public class MmsInstanceStateInfo extends AbstractModel{
         this.State = State;
     }
 
+    public MmsInstanceStateInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MmsInstanceStateInfo(MmsInstanceStateInfo source) {
+        if (source.Operator != null) {
+            this.Operator = new String(source.Operator);
+        }
+        if (source.State != null) {
+            this.State = new Long(source.State);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -229,6 +229,47 @@ public class AppDeviceDetail extends AbstractModel{
         this.DataTemplate = DataTemplate;
     }
 
+    public AppDeviceDetail() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AppDeviceDetail(AppDeviceDetail source) {
+        if (source.DeviceId != null) {
+            this.DeviceId = new String(source.DeviceId);
+        }
+        if (source.ProductId != null) {
+            this.ProductId = new String(source.ProductId);
+        }
+        if (source.DeviceName != null) {
+            this.DeviceName = new String(source.DeviceName);
+        }
+        if (source.AliasName != null) {
+            this.AliasName = new String(source.AliasName);
+        }
+        if (source.Region != null) {
+            this.Region = new String(source.Region);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new String(source.UpdateTime);
+        }
+        if (source.DeviceInfo != null) {
+            this.DeviceInfo = new String(source.DeviceInfo);
+        }
+        if (source.DataTemplate != null) {
+            this.DataTemplate = new DataTemplate[source.DataTemplate.length];
+            for (int i = 0; i < source.DataTemplate.length; i++) {
+                this.DataTemplate[i] = new DataTemplate(source.DataTemplate[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

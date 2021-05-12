@@ -277,6 +277,53 @@ public class ZoneResponse extends AbstractModel{
         this.Physical = Physical;
     }
 
+    public ZoneResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ZoneResponse(ZoneResponse source) {
+        if (source.ZoneList != null) {
+            this.ZoneList = new ZoneInfo[source.ZoneList.length];
+            for (int i = 0; i < source.ZoneList.length; i++) {
+                this.ZoneList[i] = new ZoneInfo(source.ZoneList[i]);
+            }
+        }
+        if (source.MaxBuyInstanceNum != null) {
+            this.MaxBuyInstanceNum = new Long(source.MaxBuyInstanceNum);
+        }
+        if (source.MaxBandwidth != null) {
+            this.MaxBandwidth = new Long(source.MaxBandwidth);
+        }
+        if (source.UnitPrice != null) {
+            this.UnitPrice = new Price(source.UnitPrice);
+        }
+        if (source.MessagePrice != null) {
+            this.MessagePrice = new Price(source.MessagePrice);
+        }
+        if (source.ClusterInfo != null) {
+            this.ClusterInfo = new ClusterInfo[source.ClusterInfo.length];
+            for (int i = 0; i < source.ClusterInfo.length; i++) {
+                this.ClusterInfo[i] = new ClusterInfo(source.ClusterInfo[i]);
+            }
+        }
+        if (source.Standard != null) {
+            this.Standard = new String(source.Standard);
+        }
+        if (source.StandardS2 != null) {
+            this.StandardS2 = new String(source.StandardS2);
+        }
+        if (source.Profession != null) {
+            this.Profession = new String(source.Profession);
+        }
+        if (source.Physical != null) {
+            this.Physical = new String(source.Physical);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

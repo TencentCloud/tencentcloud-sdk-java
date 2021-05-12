@@ -272,6 +272,59 @@ public class WorkflowTask extends AbstractModel{
         this.AiRecognitionResultSet = AiRecognitionResultSet;
     }
 
+    public WorkflowTask() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public WorkflowTask(WorkflowTask source) {
+        if (source.TaskId != null) {
+            this.TaskId = new String(source.TaskId);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.ErrCode != null) {
+            this.ErrCode = new Long(source.ErrCode);
+        }
+        if (source.Message != null) {
+            this.Message = new String(source.Message);
+        }
+        if (source.InputInfo != null) {
+            this.InputInfo = new MediaInputInfo(source.InputInfo);
+        }
+        if (source.MetaData != null) {
+            this.MetaData = new MediaMetaData(source.MetaData);
+        }
+        if (source.MediaProcessResultSet != null) {
+            this.MediaProcessResultSet = new MediaProcessTaskResult[source.MediaProcessResultSet.length];
+            for (int i = 0; i < source.MediaProcessResultSet.length; i++) {
+                this.MediaProcessResultSet[i] = new MediaProcessTaskResult(source.MediaProcessResultSet[i]);
+            }
+        }
+        if (source.AiContentReviewResultSet != null) {
+            this.AiContentReviewResultSet = new AiContentReviewResult[source.AiContentReviewResultSet.length];
+            for (int i = 0; i < source.AiContentReviewResultSet.length; i++) {
+                this.AiContentReviewResultSet[i] = new AiContentReviewResult(source.AiContentReviewResultSet[i]);
+            }
+        }
+        if (source.AiAnalysisResultSet != null) {
+            this.AiAnalysisResultSet = new AiAnalysisResult[source.AiAnalysisResultSet.length];
+            for (int i = 0; i < source.AiAnalysisResultSet.length; i++) {
+                this.AiAnalysisResultSet[i] = new AiAnalysisResult(source.AiAnalysisResultSet[i]);
+            }
+        }
+        if (source.AiRecognitionResultSet != null) {
+            this.AiRecognitionResultSet = new AiRecognitionResult[source.AiRecognitionResultSet.length];
+            for (int i = 0; i < source.AiRecognitionResultSet.length; i++) {
+                this.AiRecognitionResultSet[i] = new AiRecognitionResult(source.AiRecognitionResultSet[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -124,6 +124,32 @@ public class TagItem extends AbstractModel{
         this.Ext = Ext;
     }
 
+    public TagItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TagItem(TagItem source) {
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
+        if (source.Confidence != null) {
+            this.Confidence = new Long(source.Confidence);
+        }
+        if (source.Categorys != null) {
+            this.Categorys = new String[source.Categorys.length];
+            for (int i = 0; i < source.Categorys.length; i++) {
+                this.Categorys[i] = new String(source.Categorys[i]);
+            }
+        }
+        if (source.Ext != null) {
+            this.Ext = new String(source.Ext);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

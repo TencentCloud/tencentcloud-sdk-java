@@ -68,6 +68,26 @@ public class BindListenerRealServersRequest extends AbstractModel{
         this.RealServerBindSet = RealServerBindSet;
     }
 
+    public BindListenerRealServersRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public BindListenerRealServersRequest(BindListenerRealServersRequest source) {
+        if (source.ListenerId != null) {
+            this.ListenerId = new String(source.ListenerId);
+        }
+        if (source.RealServerBindSet != null) {
+            this.RealServerBindSet = new RealServerBindSetReq[source.RealServerBindSet.length];
+            for (int i = 0; i < source.RealServerBindSet.length; i++) {
+                this.RealServerBindSet[i] = new RealServerBindSetReq(source.RealServerBindSet[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

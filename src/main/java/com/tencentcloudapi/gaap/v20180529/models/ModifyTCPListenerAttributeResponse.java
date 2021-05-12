@@ -45,6 +45,20 @@ public class ModifyTCPListenerAttributeResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public ModifyTCPListenerAttributeResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyTCPListenerAttributeResponse(ModifyTCPListenerAttributeResponse source) {
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

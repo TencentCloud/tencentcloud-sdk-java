@@ -131,6 +131,29 @@ path 时填充绝对路径，如 /xxx/test.html
         this.KBpsThreshold = KBpsThreshold;
     }
 
+    public CappingRule() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CappingRule(CappingRule source) {
+        if (source.RuleType != null) {
+            this.RuleType = new String(source.RuleType);
+        }
+        if (source.RulePaths != null) {
+            this.RulePaths = new String[source.RulePaths.length];
+            for (int i = 0; i < source.RulePaths.length; i++) {
+                this.RulePaths[i] = new String(source.RulePaths[i]);
+            }
+        }
+        if (source.KBpsThreshold != null) {
+            this.KBpsThreshold = new Long(source.KBpsThreshold);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -68,6 +68,26 @@ public class DescribeRecordStatisticResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeRecordStatisticResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeRecordStatisticResponse(DescribeRecordStatisticResponse source) {
+        if (source.SdkAppIdUsages != null) {
+            this.SdkAppIdUsages = new SdkAppIdRecordUsage[source.SdkAppIdUsages.length];
+            for (int i = 0; i < source.SdkAppIdUsages.length; i++) {
+                this.SdkAppIdUsages[i] = new SdkAppIdRecordUsage(source.SdkAppIdUsages[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

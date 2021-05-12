@@ -91,6 +91,26 @@ public class UnbindHostedRequest extends AbstractModel{
         this.Eip = Eip;
     }
 
+    public UnbindHostedRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UnbindHostedRequest(UnbindHostedRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.EipId != null) {
+            this.EipId = new String(source.EipId);
+        }
+        if (source.Eip != null) {
+            this.Eip = new String(source.Eip);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

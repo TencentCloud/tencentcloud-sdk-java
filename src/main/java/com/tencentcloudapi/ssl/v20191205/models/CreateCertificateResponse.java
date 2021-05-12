@@ -91,6 +91,32 @@ public class CreateCertificateResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public CreateCertificateResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateCertificateResponse(CreateCertificateResponse source) {
+        if (source.CertificateIds != null) {
+            this.CertificateIds = new String[source.CertificateIds.length];
+            for (int i = 0; i < source.CertificateIds.length; i++) {
+                this.CertificateIds[i] = new String(source.CertificateIds[i]);
+            }
+        }
+        if (source.DealIds != null) {
+            this.DealIds = new String[source.DealIds.length];
+            for (int i = 0; i < source.DealIds.length; i++) {
+                this.DealIds[i] = new String(source.DealIds[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

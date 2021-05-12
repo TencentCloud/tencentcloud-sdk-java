@@ -68,6 +68,23 @@ public class TimeInterval extends AbstractModel{
         this.End = End;
     }
 
+    public TimeInterval() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TimeInterval(TimeInterval source) {
+        if (source.Start != null) {
+            this.Start = new String(source.Start);
+        }
+        if (source.End != null) {
+            this.End = new String(source.End);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

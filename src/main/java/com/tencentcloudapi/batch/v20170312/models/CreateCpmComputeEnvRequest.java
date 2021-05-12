@@ -91,6 +91,26 @@ public class CreateCpmComputeEnvRequest extends AbstractModel{
         this.ClientToken = ClientToken;
     }
 
+    public CreateCpmComputeEnvRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateCpmComputeEnvRequest(CreateCpmComputeEnvRequest source) {
+        if (source.ComputeEnv != null) {
+            this.ComputeEnv = new NamedCpmComputeEnv(source.ComputeEnv);
+        }
+        if (source.Placement != null) {
+            this.Placement = new Placement(source.Placement);
+        }
+        if (source.ClientToken != null) {
+            this.ClientToken = new String(source.ClientToken);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -218,6 +218,38 @@ public class ClearItem extends AbstractModel{
         this.TotalAmt = TotalAmt;
     }
 
+    public ClearItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ClearItem(ClearItem source) {
+        if (source.Date != null) {
+            this.Date = new String(source.Date);
+        }
+        if (source.SubAcctType != null) {
+            this.SubAcctType = new String(source.SubAcctType);
+        }
+        if (source.ReconcileStatus != null) {
+            this.ReconcileStatus = new String(source.ReconcileStatus);
+        }
+        if (source.ReconcileReturnMsg != null) {
+            this.ReconcileReturnMsg = new String(source.ReconcileReturnMsg);
+        }
+        if (source.ClearingStatus != null) {
+            this.ClearingStatus = new String(source.ClearingStatus);
+        }
+        if (source.ClearingReturnMsg != null) {
+            this.ClearingReturnMsg = new String(source.ClearingReturnMsg);
+        }
+        if (source.TotalAmt != null) {
+            this.TotalAmt = new String(source.TotalAmt);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

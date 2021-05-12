@@ -68,6 +68,26 @@ public class DeletePolicyVersionRequest extends AbstractModel{
         this.VersionId = VersionId;
     }
 
+    public DeletePolicyVersionRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeletePolicyVersionRequest(DeletePolicyVersionRequest source) {
+        if (source.PolicyId != null) {
+            this.PolicyId = new Long(source.PolicyId);
+        }
+        if (source.VersionId != null) {
+            this.VersionId = new Long[source.VersionId.length];
+            for (int i = 0; i < source.VersionId.length; i++) {
+                this.VersionId[i] = new Long(source.VersionId[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

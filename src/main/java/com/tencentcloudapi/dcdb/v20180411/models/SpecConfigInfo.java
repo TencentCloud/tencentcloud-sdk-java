@@ -206,6 +206,41 @@ public class SpecConfigInfo extends AbstractModel{
         this.Cpu = Cpu;
     }
 
+    public SpecConfigInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SpecConfigInfo(SpecConfigInfo source) {
+        if (source.NodeCount != null) {
+            this.NodeCount = new Long(source.NodeCount);
+        }
+        if (source.Memory != null) {
+            this.Memory = new Long(source.Memory);
+        }
+        if (source.MinStorage != null) {
+            this.MinStorage = new Long(source.MinStorage);
+        }
+        if (source.MaxStorage != null) {
+            this.MaxStorage = new Long(source.MaxStorage);
+        }
+        if (source.SuitInfo != null) {
+            this.SuitInfo = new String(source.SuitInfo);
+        }
+        if (source.Pid != null) {
+            this.Pid = new Long(source.Pid);
+        }
+        if (source.Qps != null) {
+            this.Qps = new Long(source.Qps);
+        }
+        if (source.Cpu != null) {
+            this.Cpu = new Long(source.Cpu);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

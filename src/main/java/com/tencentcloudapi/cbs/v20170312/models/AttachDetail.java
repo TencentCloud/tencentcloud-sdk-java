@@ -91,6 +91,26 @@ public class AttachDetail extends AbstractModel{
         this.MaxAttachCount = MaxAttachCount;
     }
 
+    public AttachDetail() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AttachDetail(AttachDetail source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.AttachedDiskCount != null) {
+            this.AttachedDiskCount = new Long(source.AttachedDiskCount);
+        }
+        if (source.MaxAttachCount != null) {
+            this.MaxAttachCount = new Long(source.MaxAttachCount);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -96,6 +96,29 @@ public class DescribeVpcResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeVpcResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeVpcResponse(DescribeVpcResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.VpcList != null) {
+            this.VpcList = new Vpc[source.VpcList.length];
+            for (int i = 0; i < source.VpcList.length; i++) {
+                this.VpcList[i] = new Vpc(source.VpcList[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

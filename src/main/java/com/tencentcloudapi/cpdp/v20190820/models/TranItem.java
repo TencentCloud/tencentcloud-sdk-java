@@ -358,6 +358,53 @@ public class TranItem extends AbstractModel{
         this.Mobile = Mobile;
     }
 
+    public TranItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TranItem(TranItem source) {
+        if (source.FundSummaryAcctNo != null) {
+            this.FundSummaryAcctNo = new String(source.FundSummaryAcctNo);
+        }
+        if (source.SubAcctNo != null) {
+            this.SubAcctNo = new String(source.SubAcctNo);
+        }
+        if (source.TranNetMemberCode != null) {
+            this.TranNetMemberCode = new String(source.TranNetMemberCode);
+        }
+        if (source.MemberName != null) {
+            this.MemberName = new String(source.MemberName);
+        }
+        if (source.MemberGlobalType != null) {
+            this.MemberGlobalType = new String(source.MemberGlobalType);
+        }
+        if (source.MemberGlobalId != null) {
+            this.MemberGlobalId = new String(source.MemberGlobalId);
+        }
+        if (source.MemberAcctNo != null) {
+            this.MemberAcctNo = new String(source.MemberAcctNo);
+        }
+        if (source.BankType != null) {
+            this.BankType = new String(source.BankType);
+        }
+        if (source.AcctOpenBranchName != null) {
+            this.AcctOpenBranchName = new String(source.AcctOpenBranchName);
+        }
+        if (source.CnapsBranchId != null) {
+            this.CnapsBranchId = new String(source.CnapsBranchId);
+        }
+        if (source.EiconBankBranchId != null) {
+            this.EiconBankBranchId = new String(source.EiconBankBranchId);
+        }
+        if (source.Mobile != null) {
+            this.Mobile = new String(source.Mobile);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

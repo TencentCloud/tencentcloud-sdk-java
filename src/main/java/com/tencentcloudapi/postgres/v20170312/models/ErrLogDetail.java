@@ -114,6 +114,29 @@ public class ErrLogDetail extends AbstractModel{
         this.ErrMsg = ErrMsg;
     }
 
+    public ErrLogDetail() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ErrLogDetail(ErrLogDetail source) {
+        if (source.UserName != null) {
+            this.UserName = new String(source.UserName);
+        }
+        if (source.Database != null) {
+            this.Database = new String(source.Database);
+        }
+        if (source.ErrTime != null) {
+            this.ErrTime = new String(source.ErrTime);
+        }
+        if (source.ErrMsg != null) {
+            this.ErrMsg = new String(source.ErrMsg);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

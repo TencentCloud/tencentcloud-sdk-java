@@ -160,6 +160,35 @@ public class UploadCertificateRequest extends AbstractModel{
         this.CertificateUse = CertificateUse;
     }
 
+    public UploadCertificateRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UploadCertificateRequest(UploadCertificateRequest source) {
+        if (source.CertificatePublicKey != null) {
+            this.CertificatePublicKey = new String(source.CertificatePublicKey);
+        }
+        if (source.CertificatePrivateKey != null) {
+            this.CertificatePrivateKey = new String(source.CertificatePrivateKey);
+        }
+        if (source.CertificateType != null) {
+            this.CertificateType = new String(source.CertificateType);
+        }
+        if (source.Alias != null) {
+            this.Alias = new String(source.Alias);
+        }
+        if (source.ProjectId != null) {
+            this.ProjectId = new Long(source.ProjectId);
+        }
+        if (source.CertificateUse != null) {
+            this.CertificateUse = new String(source.CertificateUse);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

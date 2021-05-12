@@ -91,6 +91,29 @@ public class ClsSearchLogs extends AbstractModel{
         this.Results = Results;
     }
 
+    public ClsSearchLogs() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ClsSearchLogs(ClsSearchLogs source) {
+        if (source.Context != null) {
+            this.Context = new String(source.Context);
+        }
+        if (source.Listover != null) {
+            this.Listover = new Boolean(source.Listover);
+        }
+        if (source.Results != null) {
+            this.Results = new ClsLogObject[source.Results.length];
+            for (int i = 0; i < source.Results.length; i++) {
+                this.Results[i] = new ClsLogObject(source.Results[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

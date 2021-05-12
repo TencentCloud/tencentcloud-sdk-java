@@ -206,6 +206,41 @@ public class NewResourceSpec extends AbstractModel{
         this.CommonCount = CommonCount;
     }
 
+    public NewResourceSpec() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public NewResourceSpec(NewResourceSpec source) {
+        if (source.MasterResourceSpec != null) {
+            this.MasterResourceSpec = new Resource(source.MasterResourceSpec);
+        }
+        if (source.CoreResourceSpec != null) {
+            this.CoreResourceSpec = new Resource(source.CoreResourceSpec);
+        }
+        if (source.TaskResourceSpec != null) {
+            this.TaskResourceSpec = new Resource(source.TaskResourceSpec);
+        }
+        if (source.MasterCount != null) {
+            this.MasterCount = new Long(source.MasterCount);
+        }
+        if (source.CoreCount != null) {
+            this.CoreCount = new Long(source.CoreCount);
+        }
+        if (source.TaskCount != null) {
+            this.TaskCount = new Long(source.TaskCount);
+        }
+        if (source.CommonResourceSpec != null) {
+            this.CommonResourceSpec = new Resource(source.CommonResourceSpec);
+        }
+        if (source.CommonCount != null) {
+            this.CommonCount = new Long(source.CommonCount);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -68,6 +68,26 @@ public class DescribeDailyPlayStatFileListResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeDailyPlayStatFileListResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeDailyPlayStatFileListResponse(DescribeDailyPlayStatFileListResponse source) {
+        if (source.PlayStatFileSet != null) {
+            this.PlayStatFileSet = new PlayStatFileInfo[source.PlayStatFileSet.length];
+            for (int i = 0; i < source.PlayStatFileSet.length; i++) {
+                this.PlayStatFileSet[i] = new PlayStatFileInfo(source.PlayStatFileSet[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

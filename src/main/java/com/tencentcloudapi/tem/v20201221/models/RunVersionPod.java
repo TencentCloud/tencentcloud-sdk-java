@@ -137,6 +137,32 @@ public class RunVersionPod extends AbstractModel{
         this.PodIp = PodIp;
     }
 
+    public RunVersionPod() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RunVersionPod(RunVersionPod source) {
+        if (source.Webshell != null) {
+            this.Webshell = new String(source.Webshell);
+        }
+        if (source.PodId != null) {
+            this.PodId = new String(source.PodId);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.PodIp != null) {
+            this.PodIp = new String(source.PodIp);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

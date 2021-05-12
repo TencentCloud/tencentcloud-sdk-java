@@ -406,6 +406,65 @@ webhook
         this.WebHook = WebHook;
     }
 
+    public PrometheusNotification() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PrometheusNotification(PrometheusNotification source) {
+        if (source.Enabled != null) {
+            this.Enabled = new Boolean(source.Enabled);
+        }
+        if (source.RepeatInterval != null) {
+            this.RepeatInterval = new String(source.RepeatInterval);
+        }
+        if (source.TimeRangeStart != null) {
+            this.TimeRangeStart = new String(source.TimeRangeStart);
+        }
+        if (source.TimeRangeEnd != null) {
+            this.TimeRangeEnd = new String(source.TimeRangeEnd);
+        }
+        if (source.NotifyWay != null) {
+            this.NotifyWay = new String[source.NotifyWay.length];
+            for (int i = 0; i < source.NotifyWay.length; i++) {
+                this.NotifyWay[i] = new String(source.NotifyWay[i]);
+            }
+        }
+        if (source.ReceiverGroups != null) {
+            this.ReceiverGroups = new Long[source.ReceiverGroups.length];
+            for (int i = 0; i < source.ReceiverGroups.length; i++) {
+                this.ReceiverGroups[i] = new Long(source.ReceiverGroups[i]);
+            }
+        }
+        if (source.PhoneNotifyOrder != null) {
+            this.PhoneNotifyOrder = new Long[source.PhoneNotifyOrder.length];
+            for (int i = 0; i < source.PhoneNotifyOrder.length; i++) {
+                this.PhoneNotifyOrder[i] = new Long(source.PhoneNotifyOrder[i]);
+            }
+        }
+        if (source.PhoneCircleTimes != null) {
+            this.PhoneCircleTimes = new Long(source.PhoneCircleTimes);
+        }
+        if (source.PhoneInnerInterval != null) {
+            this.PhoneInnerInterval = new Long(source.PhoneInnerInterval);
+        }
+        if (source.PhoneCircleInterval != null) {
+            this.PhoneCircleInterval = new Long(source.PhoneCircleInterval);
+        }
+        if (source.PhoneArriveNotice != null) {
+            this.PhoneArriveNotice = new Boolean(source.PhoneArriveNotice);
+        }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.WebHook != null) {
+            this.WebHook = new String(source.WebHook);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

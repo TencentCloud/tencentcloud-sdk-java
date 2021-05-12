@@ -114,6 +114,29 @@ public class OperationCountLimit extends AbstractModel{
         this.LimitCount = LimitCount;
     }
 
+    public OperationCountLimit() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public OperationCountLimit(OperationCountLimit source) {
+        if (source.Operation != null) {
+            this.Operation = new String(source.Operation);
+        }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.CurrentCount != null) {
+            this.CurrentCount = new Long(source.CurrentCount);
+        }
+        if (source.LimitCount != null) {
+            this.LimitCount = new Long(source.LimitCount);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

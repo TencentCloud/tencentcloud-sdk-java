@@ -68,6 +68,26 @@ public class TextSimilarityRequest extends AbstractModel{
         this.TargetText = TargetText;
     }
 
+    public TextSimilarityRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TextSimilarityRequest(TextSimilarityRequest source) {
+        if (source.SrcText != null) {
+            this.SrcText = new String(source.SrcText);
+        }
+        if (source.TargetText != null) {
+            this.TargetText = new String[source.TargetText.length];
+            for (int i = 0; i < source.TargetText.length; i++) {
+                this.TargetText[i] = new String(source.TargetText[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

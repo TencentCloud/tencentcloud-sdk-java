@@ -91,6 +91,26 @@ public class DescribeApiVersionsRequest extends AbstractModel{
         this.Method = Method;
     }
 
+    public DescribeApiVersionsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeApiVersionsRequest(DescribeApiVersionsRequest source) {
+        if (source.MicroserviceId != null) {
+            this.MicroserviceId = new String(source.MicroserviceId);
+        }
+        if (source.Path != null) {
+            this.Path = new String(source.Path);
+        }
+        if (source.Method != null) {
+            this.Method = new String(source.Method);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

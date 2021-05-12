@@ -160,6 +160,35 @@ public class DescribeLiveDomainsRequest extends AbstractModel{
         this.DomainPrefix = DomainPrefix;
     }
 
+    public DescribeLiveDomainsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeLiveDomainsRequest(DescribeLiveDomainsRequest source) {
+        if (source.DomainStatus != null) {
+            this.DomainStatus = new Long(source.DomainStatus);
+        }
+        if (source.DomainType != null) {
+            this.DomainType = new Long(source.DomainType);
+        }
+        if (source.PageSize != null) {
+            this.PageSize = new Long(source.PageSize);
+        }
+        if (source.PageNum != null) {
+            this.PageNum = new Long(source.PageNum);
+        }
+        if (source.IsDelayLive != null) {
+            this.IsDelayLive = new Long(source.IsDelayLive);
+        }
+        if (source.DomainPrefix != null) {
+            this.DomainPrefix = new String(source.DomainPrefix);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

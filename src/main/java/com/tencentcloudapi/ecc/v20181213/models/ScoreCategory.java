@@ -160,6 +160,35 @@ public class ScoreCategory extends AbstractModel{
         this.Percentage = Percentage;
     }
 
+    public ScoreCategory() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ScoreCategory(ScoreCategory source) {
+        if (source.Words != null) {
+            this.Words = new Aspect(source.Words);
+        }
+        if (source.Sentences != null) {
+            this.Sentences = new Aspect(source.Sentences);
+        }
+        if (source.Structure != null) {
+            this.Structure = new Aspect(source.Structure);
+        }
+        if (source.Content != null) {
+            this.Content = new Aspect(source.Content);
+        }
+        if (source.Score != null) {
+            this.Score = new Float(source.Score);
+        }
+        if (source.Percentage != null) {
+            this.Percentage = new Float(source.Percentage);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

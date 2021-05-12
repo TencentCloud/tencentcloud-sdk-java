@@ -96,6 +96,29 @@ public class DescribeClusterNodePoolsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeClusterNodePoolsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeClusterNodePoolsResponse(DescribeClusterNodePoolsResponse source) {
+        if (source.NodePoolSet != null) {
+            this.NodePoolSet = new NodePool[source.NodePoolSet.length];
+            for (int i = 0; i < source.NodePoolSet.length; i++) {
+                this.NodePoolSet[i] = new NodePool(source.NodePoolSet[i]);
+            }
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

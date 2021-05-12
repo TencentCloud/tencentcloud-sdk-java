@@ -91,6 +91,29 @@ public class DescribeEipAclsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeEipAclsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeEipAclsResponse(DescribeEipAclsResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.EipAclList != null) {
+            this.EipAclList = new EipAcl[source.EipAclList.length];
+            for (int i = 0; i < source.EipAclList.length; i++) {
+                this.EipAclList[i] = new EipAcl(source.EipAclList[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

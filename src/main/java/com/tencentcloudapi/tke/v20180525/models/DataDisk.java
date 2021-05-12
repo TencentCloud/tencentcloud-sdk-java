@@ -162,6 +162,32 @@ public class DataDisk extends AbstractModel{
         this.MountTarget = MountTarget;
     }
 
+    public DataDisk() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DataDisk(DataDisk source) {
+        if (source.DiskType != null) {
+            this.DiskType = new String(source.DiskType);
+        }
+        if (source.FileSystem != null) {
+            this.FileSystem = new String(source.FileSystem);
+        }
+        if (source.DiskSize != null) {
+            this.DiskSize = new Long(source.DiskSize);
+        }
+        if (source.AutoFormatAndMount != null) {
+            this.AutoFormatAndMount = new Boolean(source.AutoFormatAndMount);
+        }
+        if (source.MountTarget != null) {
+            this.MountTarget = new String(source.MountTarget);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

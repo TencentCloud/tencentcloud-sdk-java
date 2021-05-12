@@ -244,6 +244,44 @@ public class SubtitleItem extends AbstractModel{
         this.PuncEndTs = PuncEndTs;
     }
 
+    public SubtitleItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SubtitleItem(SubtitleItem source) {
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
+        if (source.Zh != null) {
+            this.Zh = new String(source.Zh);
+        }
+        if (source.En != null) {
+            this.En = new String(source.En);
+        }
+        if (source.StartPts != null) {
+            this.StartPts = new Long(source.StartPts);
+        }
+        if (source.EndPts != null) {
+            this.EndPts = new Long(source.EndPts);
+        }
+        if (source.Period != null) {
+            this.Period = new String(source.Period);
+        }
+        if (source.Confidence != null) {
+            this.Confidence = new Long(source.Confidence);
+        }
+        if (source.EndFlag != null) {
+            this.EndFlag = new Boolean(source.EndFlag);
+        }
+        if (source.PuncEndTs != null) {
+            this.PuncEndTs = new String(source.PuncEndTs);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

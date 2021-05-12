@@ -68,6 +68,23 @@ public class SetWhiteboardPushCallbackKeyRequest extends AbstractModel{
         this.CallbackKey = CallbackKey;
     }
 
+    public SetWhiteboardPushCallbackKeyRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SetWhiteboardPushCallbackKeyRequest(SetWhiteboardPushCallbackKeyRequest source) {
+        if (source.SdkAppId != null) {
+            this.SdkAppId = new Long(source.SdkAppId);
+        }
+        if (source.CallbackKey != null) {
+            this.CallbackKey = new String(source.CallbackKey);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

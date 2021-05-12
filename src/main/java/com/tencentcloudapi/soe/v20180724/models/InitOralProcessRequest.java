@@ -298,6 +298,53 @@ public class InitOralProcessRequest extends AbstractModel{
         this.TextMode = TextMode;
     }
 
+    public InitOralProcessRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public InitOralProcessRequest(InitOralProcessRequest source) {
+        if (source.SessionId != null) {
+            this.SessionId = new String(source.SessionId);
+        }
+        if (source.RefText != null) {
+            this.RefText = new String(source.RefText);
+        }
+        if (source.WorkMode != null) {
+            this.WorkMode = new Long(source.WorkMode);
+        }
+        if (source.EvalMode != null) {
+            this.EvalMode = new Long(source.EvalMode);
+        }
+        if (source.ScoreCoeff != null) {
+            this.ScoreCoeff = new Float(source.ScoreCoeff);
+        }
+        if (source.SoeAppId != null) {
+            this.SoeAppId = new String(source.SoeAppId);
+        }
+        if (source.IsLongLifeSession != null) {
+            this.IsLongLifeSession = new Long(source.IsLongLifeSession);
+        }
+        if (source.StorageMode != null) {
+            this.StorageMode = new Long(source.StorageMode);
+        }
+        if (source.SentenceInfoEnabled != null) {
+            this.SentenceInfoEnabled = new Long(source.SentenceInfoEnabled);
+        }
+        if (source.ServerType != null) {
+            this.ServerType = new Long(source.ServerType);
+        }
+        if (source.IsAsync != null) {
+            this.IsAsync = new Long(source.IsAsync);
+        }
+        if (source.TextMode != null) {
+            this.TextMode = new Long(source.TextMode);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -160,6 +160,35 @@ public class CompareMetricsData extends AbstractModel{
         this.LongContentRecall = LongContentRecall;
     }
 
+    public CompareMetricsData() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CompareMetricsData(CompareMetricsData source) {
+        if (source.ShortStructAccuracy != null) {
+            this.ShortStructAccuracy = new String(source.ShortStructAccuracy);
+        }
+        if (source.ShortStructRecall != null) {
+            this.ShortStructRecall = new String(source.ShortStructRecall);
+        }
+        if (source.LongStructAccuracy != null) {
+            this.LongStructAccuracy = new String(source.LongStructAccuracy);
+        }
+        if (source.LongStructRecall != null) {
+            this.LongStructRecall = new String(source.LongStructRecall);
+        }
+        if (source.LongContentAccuracy != null) {
+            this.LongContentAccuracy = new String(source.LongContentAccuracy);
+        }
+        if (source.LongContentRecall != null) {
+            this.LongContentRecall = new String(source.LongContentRecall);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

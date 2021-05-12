@@ -505,6 +505,92 @@ public class EnvDataCpm extends AbstractModel{
         this.LanIps = LanIps;
     }
 
+    public EnvDataCpm() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public EnvDataCpm(EnvDataCpm source) {
+        if (source.Zones != null) {
+            this.Zones = new String[source.Zones.length];
+            for (int i = 0; i < source.Zones.length; i++) {
+                this.Zones[i] = new String(source.Zones[i]);
+            }
+        }
+        if (source.InstanceTypes != null) {
+            this.InstanceTypes = new String[source.InstanceTypes.length];
+            for (int i = 0; i < source.InstanceTypes.length; i++) {
+                this.InstanceTypes[i] = new String(source.InstanceTypes[i]);
+            }
+        }
+        if (source.TimeUnit != null) {
+            this.TimeUnit = new String(source.TimeUnit);
+        }
+        if (source.TimeSpan != null) {
+            this.TimeSpan = new Long(source.TimeSpan);
+        }
+        if (source.RaidId != null) {
+            this.RaidId = new Long(source.RaidId);
+        }
+        if (source.OsTypeId != null) {
+            this.OsTypeId = new Long(source.OsTypeId);
+        }
+        if (source.VirtualPrivateClouds != null) {
+            this.VirtualPrivateClouds = new CpmVirtualPrivateCloud[source.VirtualPrivateClouds.length];
+            for (int i = 0; i < source.VirtualPrivateClouds.length; i++) {
+                this.VirtualPrivateClouds[i] = new CpmVirtualPrivateCloud(source.VirtualPrivateClouds[i]);
+            }
+        }
+        if (source.NeedSecurityAgent != null) {
+            this.NeedSecurityAgent = new Long(source.NeedSecurityAgent);
+        }
+        if (source.NeedMonitorAgent != null) {
+            this.NeedMonitorAgent = new Long(source.NeedMonitorAgent);
+        }
+        if (source.AutoRenewFlag != null) {
+            this.AutoRenewFlag = new Long(source.AutoRenewFlag);
+        }
+        if (source.IsZoning != null) {
+            this.IsZoning = new Long(source.IsZoning);
+        }
+        if (source.FileSystem != null) {
+            this.FileSystem = new String(source.FileSystem);
+        }
+        if (source.Password != null) {
+            this.Password = new String(source.Password);
+        }
+        if (source.ApplyEip != null) {
+            this.ApplyEip = new Long(source.ApplyEip);
+        }
+        if (source.EipPayMode != null) {
+            this.EipPayMode = new String(source.EipPayMode);
+        }
+        if (source.EipBandwidth != null) {
+            this.EipBandwidth = new Long(source.EipBandwidth);
+        }
+        if (source.ImageId != null) {
+            this.ImageId = new String(source.ImageId);
+        }
+        if (source.SysRootSpace != null) {
+            this.SysRootSpace = new Long(source.SysRootSpace);
+        }
+        if (source.SysDataSpace != null) {
+            this.SysDataSpace = new Long(source.SysDataSpace);
+        }
+        if (source.HyperThreading != null) {
+            this.HyperThreading = new Long(source.HyperThreading);
+        }
+        if (source.LanIps != null) {
+            this.LanIps = new String[source.LanIps.length];
+            for (int i = 0; i < source.LanIps.length; i++) {
+                this.LanIps[i] = new String(source.LanIps[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -68,6 +68,26 @@ public class ResourceIp extends AbstractModel{
         this.IpList = IpList;
     }
 
+    public ResourceIp() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ResourceIp(ResourceIp source) {
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
+        if (source.IpList != null) {
+            this.IpList = new String[source.IpList.length];
+            for (int i = 0; i < source.IpList.length; i++) {
+                this.IpList[i] = new String(source.IpList[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

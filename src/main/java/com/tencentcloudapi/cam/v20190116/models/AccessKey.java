@@ -91,6 +91,26 @@ public class AccessKey extends AbstractModel{
         this.CreateTime = CreateTime;
     }
 
+    public AccessKey() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AccessKey(AccessKey source) {
+        if (source.AccessKeyId != null) {
+            this.AccessKeyId = new String(source.AccessKeyId);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

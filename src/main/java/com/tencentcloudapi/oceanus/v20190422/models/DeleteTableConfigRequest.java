@@ -91,6 +91,26 @@ public class DeleteTableConfigRequest extends AbstractModel{
         this.TableName = TableName;
     }
 
+    public DeleteTableConfigRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteTableConfigRequest(DeleteTableConfigRequest source) {
+        if (source.JobId != null) {
+            this.JobId = new String(source.JobId);
+        }
+        if (source.DebugId != null) {
+            this.DebugId = new Long(source.DebugId);
+        }
+        if (source.TableName != null) {
+            this.TableName = new String(source.TableName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

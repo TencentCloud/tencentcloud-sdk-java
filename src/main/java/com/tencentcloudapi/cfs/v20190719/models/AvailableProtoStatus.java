@@ -68,6 +68,23 @@ public class AvailableProtoStatus extends AbstractModel{
         this.Protocol = Protocol;
     }
 
+    public AvailableProtoStatus() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AvailableProtoStatus(AvailableProtoStatus source) {
+        if (source.SaleStatus != null) {
+            this.SaleStatus = new String(source.SaleStatus);
+        }
+        if (source.Protocol != null) {
+            this.Protocol = new String(source.Protocol);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

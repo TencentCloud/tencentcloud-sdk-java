@@ -382,6 +382,62 @@ disabled：未启用
         this.RefundAvailable = RefundAvailable;
     }
 
+    public TrafficPackage() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TrafficPackage(TrafficPackage source) {
+        if (source.Id != null) {
+            this.Id = new Long(source.Id);
+        }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.Bytes != null) {
+            this.Bytes = new Long(source.Bytes);
+        }
+        if (source.BytesUsed != null) {
+            this.BytesUsed = new Long(source.BytesUsed);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.EnableTime != null) {
+            this.EnableTime = new String(source.EnableTime);
+        }
+        if (source.ExpireTime != null) {
+            this.ExpireTime = new String(source.ExpireTime);
+        }
+        if (source.ContractExtension != null) {
+            this.ContractExtension = new Boolean(source.ContractExtension);
+        }
+        if (source.AutoExtension != null) {
+            this.AutoExtension = new Boolean(source.AutoExtension);
+        }
+        if (source.Channel != null) {
+            this.Channel = new String(source.Channel);
+        }
+        if (source.Area != null) {
+            this.Area = new String(source.Area);
+        }
+        if (source.LifeTimeMonth != null) {
+            this.LifeTimeMonth = new Long(source.LifeTimeMonth);
+        }
+        if (source.ExtensionAvailable != null) {
+            this.ExtensionAvailable = new Boolean(source.ExtensionAvailable);
+        }
+        if (source.RefundAvailable != null) {
+            this.RefundAvailable = new Boolean(source.RefundAvailable);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

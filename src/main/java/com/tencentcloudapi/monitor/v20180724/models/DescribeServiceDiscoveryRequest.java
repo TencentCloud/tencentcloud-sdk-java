@@ -96,6 +96,26 @@ public class DescribeServiceDiscoveryRequest extends AbstractModel{
         this.KubeType = KubeType;
     }
 
+    public DescribeServiceDiscoveryRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeServiceDiscoveryRequest(DescribeServiceDiscoveryRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.KubeClusterId != null) {
+            this.KubeClusterId = new String(source.KubeClusterId);
+        }
+        if (source.KubeType != null) {
+            this.KubeType = new Long(source.KubeType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

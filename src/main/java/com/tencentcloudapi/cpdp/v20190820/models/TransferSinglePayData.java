@@ -45,6 +45,20 @@ public class TransferSinglePayData extends AbstractModel{
         this.TradeSerialNo = TradeSerialNo;
     }
 
+    public TransferSinglePayData() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TransferSinglePayData(TransferSinglePayData source) {
+        if (source.TradeSerialNo != null) {
+            this.TradeSerialNo = new String(source.TradeSerialNo);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

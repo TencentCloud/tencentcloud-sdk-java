@@ -68,6 +68,23 @@ public class RenewProVersionRequest extends AbstractModel{
         this.Quuid = Quuid;
     }
 
+    public RenewProVersionRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RenewProVersionRequest(RenewProVersionRequest source) {
+        if (source.ChargePrepaid != null) {
+            this.ChargePrepaid = new ChargePrepaid(source.ChargePrepaid);
+        }
+        if (source.Quuid != null) {
+            this.Quuid = new String(source.Quuid);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -68,6 +68,23 @@ public class ModifyIp6TranslatorRequest extends AbstractModel{
         this.Ip6TranslatorName = Ip6TranslatorName;
     }
 
+    public ModifyIp6TranslatorRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyIp6TranslatorRequest(ModifyIp6TranslatorRequest source) {
+        if (source.Ip6TranslatorId != null) {
+            this.Ip6TranslatorId = new String(source.Ip6TranslatorId);
+        }
+        if (source.Ip6TranslatorName != null) {
+            this.Ip6TranslatorName = new String(source.Ip6TranslatorName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

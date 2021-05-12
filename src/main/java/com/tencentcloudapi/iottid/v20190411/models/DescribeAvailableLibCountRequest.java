@@ -45,6 +45,20 @@ public class DescribeAvailableLibCountRequest extends AbstractModel{
         this.OrderId = OrderId;
     }
 
+    public DescribeAvailableLibCountRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeAvailableLibCountRequest(DescribeAvailableLibCountRequest source) {
+        if (source.OrderId != null) {
+            this.OrderId = new String(source.OrderId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

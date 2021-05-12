@@ -298,6 +298,53 @@ public class CvmInstance extends AbstractModel{
         this.InstanceEniCount = InstanceEniCount;
     }
 
+    public CvmInstance() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CvmInstance(CvmInstance source) {
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.SubnetId != null) {
+            this.SubnetId = new String(source.SubnetId);
+        }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.InstanceName != null) {
+            this.InstanceName = new String(source.InstanceName);
+        }
+        if (source.InstanceState != null) {
+            this.InstanceState = new String(source.InstanceState);
+        }
+        if (source.CPU != null) {
+            this.CPU = new Long(source.CPU);
+        }
+        if (source.Memory != null) {
+            this.Memory = new Long(source.Memory);
+        }
+        if (source.CreatedTime != null) {
+            this.CreatedTime = new String(source.CreatedTime);
+        }
+        if (source.InstanceType != null) {
+            this.InstanceType = new String(source.InstanceType);
+        }
+        if (source.EniLimit != null) {
+            this.EniLimit = new Long(source.EniLimit);
+        }
+        if (source.EniIpLimit != null) {
+            this.EniIpLimit = new Long(source.EniIpLimit);
+        }
+        if (source.InstanceEniCount != null) {
+            this.InstanceEniCount = new Long(source.InstanceEniCount);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

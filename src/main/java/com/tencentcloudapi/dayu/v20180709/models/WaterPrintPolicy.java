@@ -137,6 +137,38 @@ public class WaterPrintPolicy extends AbstractModel{
         this.OpenStatus = OpenStatus;
     }
 
+    public WaterPrintPolicy() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public WaterPrintPolicy(WaterPrintPolicy source) {
+        if (source.TcpPortList != null) {
+            this.TcpPortList = new String[source.TcpPortList.length];
+            for (int i = 0; i < source.TcpPortList.length; i++) {
+                this.TcpPortList[i] = new String(source.TcpPortList[i]);
+            }
+        }
+        if (source.UdpPortList != null) {
+            this.UdpPortList = new String[source.UdpPortList.length];
+            for (int i = 0; i < source.UdpPortList.length; i++) {
+                this.UdpPortList[i] = new String(source.UdpPortList[i]);
+            }
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.RemoveSwitch != null) {
+            this.RemoveSwitch = new Long(source.RemoveSwitch);
+        }
+        if (source.OpenStatus != null) {
+            this.OpenStatus = new Long(source.OpenStatus);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -91,6 +91,26 @@ public class SetServerReservedRequest extends AbstractModel{
         this.ReserveValue = ReserveValue;
     }
 
+    public SetServerReservedRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SetServerReservedRequest(SetServerReservedRequest source) {
+        if (source.FleetId != null) {
+            this.FleetId = new String(source.FleetId);
+        }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.ReserveValue != null) {
+            this.ReserveValue = new Long(source.ReserveValue);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

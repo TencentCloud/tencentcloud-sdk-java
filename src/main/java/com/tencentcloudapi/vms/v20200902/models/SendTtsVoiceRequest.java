@@ -170,6 +170,38 @@ public class SendTtsVoiceRequest extends AbstractModel{
         this.SessionContext = SessionContext;
     }
 
+    public SendTtsVoiceRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SendTtsVoiceRequest(SendTtsVoiceRequest source) {
+        if (source.TemplateId != null) {
+            this.TemplateId = new String(source.TemplateId);
+        }
+        if (source.CalledNumber != null) {
+            this.CalledNumber = new String(source.CalledNumber);
+        }
+        if (source.VoiceSdkAppid != null) {
+            this.VoiceSdkAppid = new String(source.VoiceSdkAppid);
+        }
+        if (source.TemplateParamSet != null) {
+            this.TemplateParamSet = new String[source.TemplateParamSet.length];
+            for (int i = 0; i < source.TemplateParamSet.length; i++) {
+                this.TemplateParamSet[i] = new String(source.TemplateParamSet[i]);
+            }
+        }
+        if (source.PlayTimes != null) {
+            this.PlayTimes = new Long(source.PlayTimes);
+        }
+        if (source.SessionContext != null) {
+            this.SessionContext = new String(source.SessionContext);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

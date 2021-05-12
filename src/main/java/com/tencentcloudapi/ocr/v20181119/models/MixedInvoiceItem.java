@@ -212,6 +212,35 @@ FailedOperation.UnKnowError：表示识别失败；
         this.SingleInvoiceInfos = SingleInvoiceInfos;
     }
 
+    public MixedInvoiceItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MixedInvoiceItem(MixedInvoiceItem source) {
+        if (source.Code != null) {
+            this.Code = new String(source.Code);
+        }
+        if (source.Type != null) {
+            this.Type = new Long(source.Type);
+        }
+        if (source.Rect != null) {
+            this.Rect = new Rect(source.Rect);
+        }
+        if (source.Angle != null) {
+            this.Angle = new Float(source.Angle);
+        }
+        if (source.SingleInvoiceInfos != null) {
+            this.SingleInvoiceInfos = new SingleInvoiceInfo[source.SingleInvoiceInfos.length];
+            for (int i = 0; i < source.SingleInvoiceInfos.length; i++) {
+                this.SingleInvoiceInfos[i] = new SingleInvoiceInfo(source.SingleInvoiceInfos[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

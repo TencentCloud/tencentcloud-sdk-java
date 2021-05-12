@@ -68,6 +68,23 @@ public class ConditionPayMode extends AbstractModel{
         this.PayModeName = PayModeName;
     }
 
+    public ConditionPayMode() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ConditionPayMode(ConditionPayMode source) {
+        if (source.PayMode != null) {
+            this.PayMode = new String(source.PayMode);
+        }
+        if (source.PayModeName != null) {
+            this.PayModeName = new String(source.PayModeName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

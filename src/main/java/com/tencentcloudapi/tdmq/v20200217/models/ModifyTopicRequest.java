@@ -137,6 +137,32 @@ public class ModifyTopicRequest extends AbstractModel{
         this.ClusterId = ClusterId;
     }
 
+    public ModifyTopicRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyTopicRequest(ModifyTopicRequest source) {
+        if (source.EnvironmentId != null) {
+            this.EnvironmentId = new String(source.EnvironmentId);
+        }
+        if (source.TopicName != null) {
+            this.TopicName = new String(source.TopicName);
+        }
+        if (source.Partitions != null) {
+            this.Partitions = new Long(source.Partitions);
+        }
+        if (source.Remark != null) {
+            this.Remark = new String(source.Remark);
+        }
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

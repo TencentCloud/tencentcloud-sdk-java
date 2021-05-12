@@ -226,6 +226,44 @@ public class AttachedPolicyOfRole extends AbstractModel{
         this.Description = Description;
     }
 
+    public AttachedPolicyOfRole() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AttachedPolicyOfRole(AttachedPolicyOfRole source) {
+        if (source.PolicyId != null) {
+            this.PolicyId = new Long(source.PolicyId);
+        }
+        if (source.PolicyName != null) {
+            this.PolicyName = new String(source.PolicyName);
+        }
+        if (source.AddTime != null) {
+            this.AddTime = new String(source.AddTime);
+        }
+        if (source.PolicyType != null) {
+            this.PolicyType = new String(source.PolicyType);
+        }
+        if (source.CreateMode != null) {
+            this.CreateMode = new Long(source.CreateMode);
+        }
+        if (source.Deactived != null) {
+            this.Deactived = new Long(source.Deactived);
+        }
+        if (source.DeactivedDetail != null) {
+            this.DeactivedDetail = new String[source.DeactivedDetail.length];
+            for (int i = 0; i < source.DeactivedDetail.length; i++) {
+                this.DeactivedDetail[i] = new String(source.DeactivedDetail[i]);
+            }
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

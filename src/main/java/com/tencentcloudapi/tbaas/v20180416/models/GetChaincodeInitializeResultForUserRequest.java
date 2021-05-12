@@ -206,6 +206,41 @@ public class GetChaincodeInitializeResultForUserRequest extends AbstractModel{
         this.TaskId = TaskId;
     }
 
+    public GetChaincodeInitializeResultForUserRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GetChaincodeInitializeResultForUserRequest(GetChaincodeInitializeResultForUserRequest source) {
+        if (source.Module != null) {
+            this.Module = new String(source.Module);
+        }
+        if (source.Operation != null) {
+            this.Operation = new String(source.Operation);
+        }
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
+        if (source.GroupName != null) {
+            this.GroupName = new String(source.GroupName);
+        }
+        if (source.ChannelName != null) {
+            this.ChannelName = new String(source.ChannelName);
+        }
+        if (source.ChaincodeName != null) {
+            this.ChaincodeName = new String(source.ChaincodeName);
+        }
+        if (source.ChaincodeVersion != null) {
+            this.ChaincodeVersion = new String(source.ChaincodeVersion);
+        }
+        if (source.TaskId != null) {
+            this.TaskId = new Long(source.TaskId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

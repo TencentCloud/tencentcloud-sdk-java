@@ -68,6 +68,23 @@ public class MountDataDisk extends AbstractModel{
         this.FileSystemType = FileSystemType;
     }
 
+    public MountDataDisk() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MountDataDisk(MountDataDisk source) {
+        if (source.LocalPath != null) {
+            this.LocalPath = new String(source.LocalPath);
+        }
+        if (source.FileSystemType != null) {
+            this.FileSystemType = new String(source.FileSystemType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

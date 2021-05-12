@@ -68,6 +68,26 @@ public class InitDBInstancesResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public InitDBInstancesResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public InitDBInstancesResponse(InitDBInstancesResponse source) {
+        if (source.AsyncRequestIds != null) {
+            this.AsyncRequestIds = new String[source.AsyncRequestIds.length];
+            for (int i = 0; i < source.AsyncRequestIds.length; i++) {
+                this.AsyncRequestIds[i] = new String(source.AsyncRequestIds[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

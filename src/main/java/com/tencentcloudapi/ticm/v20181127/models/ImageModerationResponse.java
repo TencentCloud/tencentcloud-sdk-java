@@ -218,6 +218,38 @@ BLOCK：违规
         this.RequestId = RequestId;
     }
 
+    public ImageModerationResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ImageModerationResponse(ImageModerationResponse source) {
+        if (source.Suggestion != null) {
+            this.Suggestion = new String(source.Suggestion);
+        }
+        if (source.PornResult != null) {
+            this.PornResult = new PornResult(source.PornResult);
+        }
+        if (source.TerrorismResult != null) {
+            this.TerrorismResult = new TerrorismResult(source.TerrorismResult);
+        }
+        if (source.PoliticsResult != null) {
+            this.PoliticsResult = new PoliticsResult(source.PoliticsResult);
+        }
+        if (source.Extra != null) {
+            this.Extra = new String(source.Extra);
+        }
+        if (source.DisgustResult != null) {
+            this.DisgustResult = new DisgustResult(source.DisgustResult);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

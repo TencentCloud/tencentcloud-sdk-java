@@ -124,6 +124,32 @@ public class DescribeMaterialsRequest extends AbstractModel{
         this.Operator = Operator;
     }
 
+    public DescribeMaterialsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeMaterialsRequest(DescribeMaterialsRequest source) {
+        if (source.Platform != null) {
+            this.Platform = new String(source.Platform);
+        }
+        if (source.MaterialIds != null) {
+            this.MaterialIds = new String[source.MaterialIds.length];
+            for (int i = 0; i < source.MaterialIds.length; i++) {
+                this.MaterialIds[i] = new String(source.MaterialIds[i]);
+            }
+        }
+        if (source.Sort != null) {
+            this.Sort = new SortBy(source.Sort);
+        }
+        if (source.Operator != null) {
+            this.Operator = new String(source.Operator);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

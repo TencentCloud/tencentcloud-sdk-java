@@ -78,6 +78,26 @@ public class DescribeSmsSignListRequest extends AbstractModel{
         this.International = International;
     }
 
+    public DescribeSmsSignListRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeSmsSignListRequest(DescribeSmsSignListRequest source) {
+        if (source.SignIdSet != null) {
+            this.SignIdSet = new Long[source.SignIdSet.length];
+            for (int i = 0; i < source.SignIdSet.length; i++) {
+                this.SignIdSet[i] = new Long(source.SignIdSet[i]);
+            }
+        }
+        if (source.International != null) {
+            this.International = new Long(source.International);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

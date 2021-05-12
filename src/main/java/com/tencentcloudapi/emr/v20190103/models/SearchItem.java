@@ -68,6 +68,23 @@ public class SearchItem extends AbstractModel{
         this.SearchValue = SearchValue;
     }
 
+    public SearchItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SearchItem(SearchItem source) {
+        if (source.SearchType != null) {
+            this.SearchType = new String(source.SearchType);
+        }
+        if (source.SearchValue != null) {
+            this.SearchValue = new String(source.SearchValue);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

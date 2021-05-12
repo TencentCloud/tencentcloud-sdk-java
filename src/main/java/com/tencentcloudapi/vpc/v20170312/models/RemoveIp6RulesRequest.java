@@ -68,6 +68,26 @@ public class RemoveIp6RulesRequest extends AbstractModel{
         this.Ip6RuleIds = Ip6RuleIds;
     }
 
+    public RemoveIp6RulesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RemoveIp6RulesRequest(RemoveIp6RulesRequest source) {
+        if (source.Ip6TranslatorId != null) {
+            this.Ip6TranslatorId = new String(source.Ip6TranslatorId);
+        }
+        if (source.Ip6RuleIds != null) {
+            this.Ip6RuleIds = new String[source.Ip6RuleIds.length];
+            for (int i = 0; i < source.Ip6RuleIds.length; i++) {
+                this.Ip6RuleIds[i] = new String(source.Ip6RuleIds[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

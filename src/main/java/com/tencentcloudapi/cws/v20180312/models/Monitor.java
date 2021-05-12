@@ -367,6 +367,62 @@ public class Monitor extends AbstractModel{
         this.ContentScanStatus = ContentScanStatus;
     }
 
+    public Monitor() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Monitor(Monitor source) {
+        if (source.Id != null) {
+            this.Id = new Long(source.Id);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.MonitorStatus != null) {
+            this.MonitorStatus = new Long(source.MonitorStatus);
+        }
+        if (source.ScannerType != null) {
+            this.ScannerType = new String(source.ScannerType);
+        }
+        if (source.Crontab != null) {
+            this.Crontab = new Long(source.Crontab);
+        }
+        if (source.IncludedVulsTypes != null) {
+            this.IncludedVulsTypes = new String(source.IncludedVulsTypes);
+        }
+        if (source.RateLimit != null) {
+            this.RateLimit = new Long(source.RateLimit);
+        }
+        if (source.FirstScanStartTime != null) {
+            this.FirstScanStartTime = new String(source.FirstScanStartTime);
+        }
+        if (source.ScanStatus != null) {
+            this.ScanStatus = new Long(source.ScanStatus);
+        }
+        if (source.LastScanFinishTime != null) {
+            this.LastScanFinishTime = new String(source.LastScanFinishTime);
+        }
+        if (source.CurrentScanStartTime != null) {
+            this.CurrentScanStartTime = new String(source.CurrentScanStartTime);
+        }
+        if (source.CreatedAt != null) {
+            this.CreatedAt = new String(source.CreatedAt);
+        }
+        if (source.UpdatedAt != null) {
+            this.UpdatedAt = new String(source.UpdatedAt);
+        }
+        if (source.Appid != null) {
+            this.Appid = new Long(source.Appid);
+        }
+        if (source.ContentScanStatus != null) {
+            this.ContentScanStatus = new Long(source.ContentScanStatus);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

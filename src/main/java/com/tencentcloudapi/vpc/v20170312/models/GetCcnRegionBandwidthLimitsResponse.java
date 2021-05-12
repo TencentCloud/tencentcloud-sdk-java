@@ -101,6 +101,29 @@ public class GetCcnRegionBandwidthLimitsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public GetCcnRegionBandwidthLimitsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GetCcnRegionBandwidthLimitsResponse(GetCcnRegionBandwidthLimitsResponse source) {
+        if (source.CcnBandwidthSet != null) {
+            this.CcnBandwidthSet = new CcnBandwidthInfo[source.CcnBandwidthSet.length];
+            for (int i = 0; i < source.CcnBandwidthSet.length; i++) {
+                this.CcnBandwidthSet[i] = new CcnBandwidthInfo(source.CcnBandwidthSet[i]);
+            }
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

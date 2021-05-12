@@ -198,6 +198,38 @@ public class LibDetail extends AbstractModel{
         this.Score = Score;
     }
 
+    public LibDetail() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public LibDetail(LibDetail source) {
+        if (source.Id != null) {
+            this.Id = new Long(source.Id);
+        }
+        if (source.LibId != null) {
+            this.LibId = new String(source.LibId);
+        }
+        if (source.LibName != null) {
+            this.LibName = new String(source.LibName);
+        }
+        if (source.ImageId != null) {
+            this.ImageId = new String(source.ImageId);
+        }
+        if (source.Label != null) {
+            this.Label = new String(source.Label);
+        }
+        if (source.Tag != null) {
+            this.Tag = new String(source.Tag);
+        }
+        if (source.Score != null) {
+            this.Score = new Long(source.Score);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

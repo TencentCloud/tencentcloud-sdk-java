@@ -68,6 +68,23 @@ public class Template extends AbstractModel{
         this.TemplateData = TemplateData;
     }
 
+    public Template() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Template(Template source) {
+        if (source.TemplateID != null) {
+            this.TemplateID = new Long(source.TemplateID);
+        }
+        if (source.TemplateData != null) {
+            this.TemplateData = new String(source.TemplateData);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

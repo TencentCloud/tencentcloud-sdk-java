@@ -68,6 +68,23 @@ public class GetTopicRequest extends AbstractModel{
         this.ProductId = ProductId;
     }
 
+    public GetTopicRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GetTopicRequest(GetTopicRequest source) {
+        if (source.TopicId != null) {
+            this.TopicId = new String(source.TopicId);
+        }
+        if (source.ProductId != null) {
+            this.ProductId = new String(source.ProductId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

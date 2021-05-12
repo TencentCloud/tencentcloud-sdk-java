@@ -91,6 +91,26 @@ public class IocListData extends AbstractModel{
         this.Domain = Domain;
     }
 
+    public IocListData() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public IocListData(IocListData source) {
+        if (source.IP != null) {
+            this.IP = new String(source.IP);
+        }
+        if (source.Direction != null) {
+            this.Direction = new Long(source.Direction);
+        }
+        if (source.Domain != null) {
+            this.Domain = new String(source.Domain);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -137,6 +137,32 @@ public class ModifyL4KeepTimeRequest extends AbstractModel{
         this.KeepTime = KeepTime;
     }
 
+    public ModifyL4KeepTimeRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyL4KeepTimeRequest(ModifyL4KeepTimeRequest source) {
+        if (source.Business != null) {
+            this.Business = new String(source.Business);
+        }
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
+        if (source.RuleId != null) {
+            this.RuleId = new String(source.RuleId);
+        }
+        if (source.KeepEnable != null) {
+            this.KeepEnable = new Long(source.KeepEnable);
+        }
+        if (source.KeepTime != null) {
+            this.KeepTime = new Long(source.KeepTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

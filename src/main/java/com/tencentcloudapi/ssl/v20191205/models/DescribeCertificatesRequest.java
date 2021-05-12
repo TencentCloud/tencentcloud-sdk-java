@@ -206,6 +206,44 @@ public class DescribeCertificatesRequest extends AbstractModel{
         this.Deployable = Deployable;
     }
 
+    public DescribeCertificatesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeCertificatesRequest(DescribeCertificatesRequest source) {
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.SearchKey != null) {
+            this.SearchKey = new String(source.SearchKey);
+        }
+        if (source.CertificateType != null) {
+            this.CertificateType = new String(source.CertificateType);
+        }
+        if (source.ProjectId != null) {
+            this.ProjectId = new Long(source.ProjectId);
+        }
+        if (source.ExpirationSort != null) {
+            this.ExpirationSort = new String(source.ExpirationSort);
+        }
+        if (source.CertificateStatus != null) {
+            this.CertificateStatus = new Long[source.CertificateStatus.length];
+            for (int i = 0; i < source.CertificateStatus.length; i++) {
+                this.CertificateStatus[i] = new Long(source.CertificateStatus[i]);
+            }
+        }
+        if (source.Deployable != null) {
+            this.Deployable = new Long(source.Deployable);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

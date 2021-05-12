@@ -152,6 +152,32 @@ public class AddDelayLiveStreamRequest extends AbstractModel{
         this.ExpireTime = ExpireTime;
     }
 
+    public AddDelayLiveStreamRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AddDelayLiveStreamRequest(AddDelayLiveStreamRequest source) {
+        if (source.AppName != null) {
+            this.AppName = new String(source.AppName);
+        }
+        if (source.DomainName != null) {
+            this.DomainName = new String(source.DomainName);
+        }
+        if (source.StreamName != null) {
+            this.StreamName = new String(source.StreamName);
+        }
+        if (source.DelayTime != null) {
+            this.DelayTime = new Long(source.DelayTime);
+        }
+        if (source.ExpireTime != null) {
+            this.ExpireTime = new String(source.ExpireTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

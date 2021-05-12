@@ -231,6 +231,41 @@ public class Region extends AbstractModel{
         this.MultiZone = MultiZone;
     }
 
+    public Region() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Region(Region source) {
+        if (source.RegionId != null) {
+            this.RegionId = new Long(source.RegionId);
+        }
+        if (source.RegionName != null) {
+            this.RegionName = new String(source.RegionName);
+        }
+        if (source.AreaName != null) {
+            this.AreaName = new String(source.AreaName);
+        }
+        if (source.RegionCode != null) {
+            this.RegionCode = new String(source.RegionCode);
+        }
+        if (source.RegionCodeV3 != null) {
+            this.RegionCodeV3 = new String(source.RegionCodeV3);
+        }
+        if (source.Support != null) {
+            this.Support = new String(source.Support);
+        }
+        if (source.Ipv6 != null) {
+            this.Ipv6 = new Long(source.Ipv6);
+        }
+        if (source.MultiZone != null) {
+            this.MultiZone = new Long(source.MultiZone);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

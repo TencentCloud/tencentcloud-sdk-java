@@ -83,6 +83,23 @@ public class ServiceRegisterInfo extends AbstractModel{
         this.ServiceType = ServiceType;
     }
 
+    public ServiceRegisterInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ServiceRegisterInfo(ServiceRegisterInfo source) {
+        if (source.CgiUrl != null) {
+            this.CgiUrl = new String(source.CgiUrl);
+        }
+        if (source.ServiceType != null) {
+            this.ServiceType = new Long(source.ServiceType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

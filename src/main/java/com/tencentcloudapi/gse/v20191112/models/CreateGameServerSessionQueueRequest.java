@@ -137,6 +137,41 @@ public class CreateGameServerSessionQueueRequest extends AbstractModel{
         this.Tags = Tags;
     }
 
+    public CreateGameServerSessionQueueRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateGameServerSessionQueueRequest(CreateGameServerSessionQueueRequest source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Destinations != null) {
+            this.Destinations = new GameServerSessionQueueDestination[source.Destinations.length];
+            for (int i = 0; i < source.Destinations.length; i++) {
+                this.Destinations[i] = new GameServerSessionQueueDestination(source.Destinations[i]);
+            }
+        }
+        if (source.PlayerLatencyPolicies != null) {
+            this.PlayerLatencyPolicies = new PlayerLatencyPolicy[source.PlayerLatencyPolicies.length];
+            for (int i = 0; i < source.PlayerLatencyPolicies.length; i++) {
+                this.PlayerLatencyPolicies[i] = new PlayerLatencyPolicy(source.PlayerLatencyPolicies[i]);
+            }
+        }
+        if (source.TimeoutInSeconds != null) {
+            this.TimeoutInSeconds = new Long(source.TimeoutInSeconds);
+        }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

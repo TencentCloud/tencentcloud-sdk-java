@@ -114,6 +114,32 @@ public class GetDebugLogResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public GetDebugLogResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GetDebugLogResponse(GetDebugLogResponse source) {
+        if (source.DebugLog != null) {
+            this.DebugLog = new DebugLogEntry[source.DebugLog.length];
+            for (int i = 0; i < source.DebugLog.length; i++) {
+                this.DebugLog[i] = new DebugLogEntry(source.DebugLog[i]);
+            }
+        }
+        if (source.ScrollId != null) {
+            this.ScrollId = new String(source.ScrollId);
+        }
+        if (source.ScrollTimeout != null) {
+            this.ScrollTimeout = new Long(source.ScrollTimeout);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

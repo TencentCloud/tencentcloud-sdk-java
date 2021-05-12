@@ -68,6 +68,23 @@ public class OpenDBExtranetAccessRequest extends AbstractModel{
         this.Ipv6Flag = Ipv6Flag;
     }
 
+    public OpenDBExtranetAccessRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public OpenDBExtranetAccessRequest(OpenDBExtranetAccessRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.Ipv6Flag != null) {
+            this.Ipv6Flag = new Long(source.Ipv6Flag);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

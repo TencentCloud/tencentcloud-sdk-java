@@ -68,6 +68,23 @@ public class DescribeImageFilterPersonalRequest extends AbstractModel{
         this.Tag = Tag;
     }
 
+    public DescribeImageFilterPersonalRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeImageFilterPersonalRequest(DescribeImageFilterPersonalRequest source) {
+        if (source.RepoName != null) {
+            this.RepoName = new String(source.RepoName);
+        }
+        if (source.Tag != null) {
+            this.Tag = new String(source.Tag);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

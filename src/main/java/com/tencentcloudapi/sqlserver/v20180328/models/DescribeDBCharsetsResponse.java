@@ -68,6 +68,26 @@ public class DescribeDBCharsetsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeDBCharsetsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeDBCharsetsResponse(DescribeDBCharsetsResponse source) {
+        if (source.DatabaseCharsets != null) {
+            this.DatabaseCharsets = new String[source.DatabaseCharsets.length];
+            for (int i = 0; i < source.DatabaseCharsets.length; i++) {
+                this.DatabaseCharsets[i] = new String(source.DatabaseCharsets[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

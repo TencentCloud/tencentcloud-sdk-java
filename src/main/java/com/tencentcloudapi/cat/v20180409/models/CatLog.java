@@ -528,6 +528,83 @@ public class CatLog extends AbstractModel{
         this.ReceiveTime = ReceiveTime;
     }
 
+    public CatLog() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CatLog(CatLog source) {
+        if (source.Time != null) {
+            this.Time = new String(source.Time);
+        }
+        if (source.CatTypeName != null) {
+            this.CatTypeName = new String(source.CatTypeName);
+        }
+        if (source.TaskId != null) {
+            this.TaskId = new Long(source.TaskId);
+        }
+        if (source.City != null) {
+            this.City = new String(source.City);
+        }
+        if (source.Isp != null) {
+            this.Isp = new String(source.Isp);
+        }
+        if (source.ServerIp != null) {
+            this.ServerIp = new String(source.ServerIp);
+        }
+        if (source.DomainName != null) {
+            this.DomainName = new String(source.DomainName);
+        }
+        if (source.TotalTime != null) {
+            this.TotalTime = new Long(source.TotalTime);
+        }
+        if (source.ResultType != null) {
+            this.ResultType = new Long(source.ResultType);
+        }
+        if (source.ResultCode != null) {
+            this.ResultCode = new Long(source.ResultCode);
+        }
+        if (source.ReqPkgSize != null) {
+            this.ReqPkgSize = new Long(source.ReqPkgSize);
+        }
+        if (source.RspPkgSize != null) {
+            this.RspPkgSize = new Long(source.RspPkgSize);
+        }
+        if (source.ReqMsg != null) {
+            this.ReqMsg = new String(source.ReqMsg);
+        }
+        if (source.RespMsg != null) {
+            this.RespMsg = new String(source.RespMsg);
+        }
+        if (source.ClientIp != null) {
+            this.ClientIp = new String(source.ClientIp);
+        }
+        if (source.CityName != null) {
+            this.CityName = new String(source.CityName);
+        }
+        if (source.IspName != null) {
+            this.IspName = new String(source.IspName);
+        }
+        if (source.ParseTime != null) {
+            this.ParseTime = new Long(source.ParseTime);
+        }
+        if (source.ConnectTime != null) {
+            this.ConnectTime = new Long(source.ConnectTime);
+        }
+        if (source.SendTime != null) {
+            this.SendTime = new Long(source.SendTime);
+        }
+        if (source.WaitTime != null) {
+            this.WaitTime = new Long(source.WaitTime);
+        }
+        if (source.ReceiveTime != null) {
+            this.ReceiveTime = new Long(source.ReceiveTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

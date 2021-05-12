@@ -114,6 +114,32 @@ public class UpdateProductRequest extends AbstractModel{
         this.DataTemplate = DataTemplate;
     }
 
+    public UpdateProductRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UpdateProductRequest(UpdateProductRequest source) {
+        if (source.ProductId != null) {
+            this.ProductId = new String(source.ProductId);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.DataTemplate != null) {
+            this.DataTemplate = new DataTemplate[source.DataTemplate.length];
+            for (int i = 0; i < source.DataTemplate.length; i++) {
+                this.DataTemplate[i] = new DataTemplate(source.DataTemplate[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

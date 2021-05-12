@@ -114,6 +114,32 @@ public class SplitShardConfig extends AbstractModel{
         this.ShardStorage = ShardStorage;
     }
 
+    public SplitShardConfig() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SplitShardConfig(SplitShardConfig source) {
+        if (source.ShardInstanceIds != null) {
+            this.ShardInstanceIds = new String[source.ShardInstanceIds.length];
+            for (int i = 0; i < source.ShardInstanceIds.length; i++) {
+                this.ShardInstanceIds[i] = new String(source.ShardInstanceIds[i]);
+            }
+        }
+        if (source.SplitRate != null) {
+            this.SplitRate = new Long(source.SplitRate);
+        }
+        if (source.ShardMemory != null) {
+            this.ShardMemory = new Long(source.ShardMemory);
+        }
+        if (source.ShardStorage != null) {
+            this.ShardStorage = new Long(source.ShardStorage);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

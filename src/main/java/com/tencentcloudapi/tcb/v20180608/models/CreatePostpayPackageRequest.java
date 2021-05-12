@@ -279,6 +279,44 @@ public class CreatePostpayPackageRequest extends AbstractModel{
         this.Flag = Flag;
     }
 
+    public CreatePostpayPackageRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreatePostpayPackageRequest(CreatePostpayPackageRequest source) {
+        if (source.EnvId != null) {
+            this.EnvId = new String(source.EnvId);
+        }
+        if (source.WxAppId != null) {
+            this.WxAppId = new String(source.WxAppId);
+        }
+        if (source.Source != null) {
+            this.Source = new String(source.Source);
+        }
+        if (source.FreeQuota != null) {
+            this.FreeQuota = new String(source.FreeQuota);
+        }
+        if (source.EnvSource != null) {
+            this.EnvSource = new String(source.EnvSource);
+        }
+        if (source.Alias != null) {
+            this.Alias = new String(source.Alias);
+        }
+        if (source.Channel != null) {
+            this.Channel = new String(source.Channel);
+        }
+        if (source.ExtensionId != null) {
+            this.ExtensionId = new String(source.ExtensionId);
+        }
+        if (source.Flag != null) {
+            this.Flag = new String(source.Flag);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

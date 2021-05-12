@@ -45,6 +45,20 @@ public class DescribeCpmOsInfoRequest extends AbstractModel{
         this.DeviceClassCode = DeviceClassCode;
     }
 
+    public DescribeCpmOsInfoRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeCpmOsInfoRequest(DescribeCpmOsInfoRequest source) {
+        if (source.DeviceClassCode != null) {
+            this.DeviceClassCode = new String(source.DeviceClassCode);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

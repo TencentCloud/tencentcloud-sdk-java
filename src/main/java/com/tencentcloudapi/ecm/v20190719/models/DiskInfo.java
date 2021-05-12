@@ -91,6 +91,26 @@ public class DiskInfo extends AbstractModel{
         this.DiskSize = DiskSize;
     }
 
+    public DiskInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DiskInfo(DiskInfo source) {
+        if (source.DiskType != null) {
+            this.DiskType = new String(source.DiskType);
+        }
+        if (source.DiskId != null) {
+            this.DiskId = new String(source.DiskId);
+        }
+        if (source.DiskSize != null) {
+            this.DiskSize = new Long(source.DiskSize);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

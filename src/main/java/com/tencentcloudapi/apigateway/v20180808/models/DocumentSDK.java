@@ -68,6 +68,23 @@ public class DocumentSDK extends AbstractModel{
         this.SdkURL = SdkURL;
     }
 
+    public DocumentSDK() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DocumentSDK(DocumentSDK source) {
+        if (source.DocumentURL != null) {
+            this.DocumentURL = new String(source.DocumentURL);
+        }
+        if (source.SdkURL != null) {
+            this.SdkURL = new String(source.SdkURL);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

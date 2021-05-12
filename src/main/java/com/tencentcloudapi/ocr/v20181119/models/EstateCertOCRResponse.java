@@ -321,6 +321,56 @@ public class EstateCertOCRResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public EstateCertOCRResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public EstateCertOCRResponse(EstateCertOCRResponse source) {
+        if (source.Obligee != null) {
+            this.Obligee = new String(source.Obligee);
+        }
+        if (source.Ownership != null) {
+            this.Ownership = new String(source.Ownership);
+        }
+        if (source.Location != null) {
+            this.Location = new String(source.Location);
+        }
+        if (source.Unit != null) {
+            this.Unit = new String(source.Unit);
+        }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.Property != null) {
+            this.Property = new String(source.Property);
+        }
+        if (source.Usage != null) {
+            this.Usage = new String(source.Usage);
+        }
+        if (source.Area != null) {
+            this.Area = new String(source.Area);
+        }
+        if (source.Term != null) {
+            this.Term = new String(source.Term);
+        }
+        if (source.Other != null) {
+            this.Other = new String(source.Other);
+        }
+        if (source.Angle != null) {
+            this.Angle = new Float(source.Angle);
+        }
+        if (source.Number != null) {
+            this.Number = new String(source.Number);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

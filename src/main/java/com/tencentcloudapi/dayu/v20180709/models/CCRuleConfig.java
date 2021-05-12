@@ -114,6 +114,29 @@ public class CCRuleConfig extends AbstractModel{
         this.ExeDuration = ExeDuration;
     }
 
+    public CCRuleConfig() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CCRuleConfig(CCRuleConfig source) {
+        if (source.Period != null) {
+            this.Period = new Long(source.Period);
+        }
+        if (source.ReqNumber != null) {
+            this.ReqNumber = new Long(source.ReqNumber);
+        }
+        if (source.Action != null) {
+            this.Action = new String(source.Action);
+        }
+        if (source.ExeDuration != null) {
+            this.ExeDuration = new Long(source.ExeDuration);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

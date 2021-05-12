@@ -390,6 +390,65 @@ public class SaDivulgeDataQueryPub extends AbstractModel{
         this.UpdateTime = UpdateTime;
     }
 
+    public SaDivulgeDataQueryPub() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SaDivulgeDataQueryPub(SaDivulgeDataQueryPub source) {
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
+        if (source.Uin != null) {
+            this.Uin = new String(source.Uin);
+        }
+        if (source.AppId != null) {
+            this.AppId = new String(source.AppId);
+        }
+        if (source.EventName != null) {
+            this.EventName = new String(source.EventName);
+        }
+        if (source.DivulgeSoure != null) {
+            this.DivulgeSoure = new String(source.DivulgeSoure);
+        }
+        if (source.Asset != null) {
+            this.Asset = new String(source.Asset);
+        }
+        if (source.RuleName != null) {
+            this.RuleName = new String(source.RuleName);
+        }
+        if (source.RuleId != null) {
+            this.RuleId = new String(source.RuleId);
+        }
+        if (source.RuleWord != null) {
+            this.RuleWord = new String(source.RuleWord);
+        }
+        if (source.ScanUrl != null) {
+            this.ScanUrl = new String(source.ScanUrl);
+        }
+        if (source.ScanCount != null) {
+            this.ScanCount = new String(source.ScanCount);
+        }
+        if (source.Level != null) {
+            this.Level = new String(source.Level);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.EventTime != null) {
+            this.EventTime = new String(source.EventTime);
+        }
+        if (source.InsertTime != null) {
+            this.InsertTime = new String(source.InsertTime);
+        }
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new String(source.UpdateTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

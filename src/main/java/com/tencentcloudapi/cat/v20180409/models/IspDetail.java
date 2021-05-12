@@ -96,6 +96,26 @@ public class IspDetail extends AbstractModel{
         this.AvgTime = AvgTime;
     }
 
+    public IspDetail() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public IspDetail(IspDetail source) {
+        if (source.IspName != null) {
+            this.IspName = new String(source.IspName);
+        }
+        if (source.AvailRatio != null) {
+            this.AvailRatio = new Float(source.AvailRatio);
+        }
+        if (source.AvgTime != null) {
+            this.AvgTime = new Float(source.AvgTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -91,6 +91,26 @@ public class CreateMerchantResultData extends AbstractModel{
         this.TaxpayerNum = TaxpayerNum;
     }
 
+    public CreateMerchantResultData() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateMerchantResultData(CreateMerchantResultData source) {
+        if (source.TaxpayerName != null) {
+            this.TaxpayerName = new String(source.TaxpayerName);
+        }
+        if (source.SerialNo != null) {
+            this.SerialNo = new String(source.SerialNo);
+        }
+        if (source.TaxpayerNum != null) {
+            this.TaxpayerNum = new String(source.TaxpayerNum);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -129,6 +129,29 @@ public class EncryptedPhoneVerificationRequest extends AbstractModel{
         this.EncryptionMode = EncryptionMode;
     }
 
+    public EncryptedPhoneVerificationRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public EncryptedPhoneVerificationRequest(EncryptedPhoneVerificationRequest source) {
+        if (source.IdCard != null) {
+            this.IdCard = new String(source.IdCard);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Phone != null) {
+            this.Phone = new String(source.Phone);
+        }
+        if (source.EncryptionMode != null) {
+            this.EncryptionMode = new String(source.EncryptionMode);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

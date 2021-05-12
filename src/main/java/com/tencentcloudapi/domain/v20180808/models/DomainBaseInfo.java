@@ -549,6 +549,65 @@ false：关闭锁定
         this.LockEndTime = LockEndTime;
     }
 
+    public DomainBaseInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DomainBaseInfo(DomainBaseInfo source) {
+        if (source.DomainId != null) {
+            this.DomainId = new String(source.DomainId);
+        }
+        if (source.DomainName != null) {
+            this.DomainName = new String(source.DomainName);
+        }
+        if (source.RealNameAuditStatus != null) {
+            this.RealNameAuditStatus = new String(source.RealNameAuditStatus);
+        }
+        if (source.RealNameAuditUnpassReason != null) {
+            this.RealNameAuditUnpassReason = new String(source.RealNameAuditUnpassReason);
+        }
+        if (source.DomainNameAuditStatus != null) {
+            this.DomainNameAuditStatus = new String(source.DomainNameAuditStatus);
+        }
+        if (source.DomainNameAuditUnpassReason != null) {
+            this.DomainNameAuditUnpassReason = new String(source.DomainNameAuditUnpassReason);
+        }
+        if (source.CreationDate != null) {
+            this.CreationDate = new String(source.CreationDate);
+        }
+        if (source.ExpirationDate != null) {
+            this.ExpirationDate = new String(source.ExpirationDate);
+        }
+        if (source.DomainStatus != null) {
+            this.DomainStatus = new String[source.DomainStatus.length];
+            for (int i = 0; i < source.DomainStatus.length; i++) {
+                this.DomainStatus[i] = new String(source.DomainStatus[i]);
+            }
+        }
+        if (source.BuyStatus != null) {
+            this.BuyStatus = new String(source.BuyStatus);
+        }
+        if (source.RegistrarType != null) {
+            this.RegistrarType = new String(source.RegistrarType);
+        }
+        if (source.NameServer != null) {
+            this.NameServer = new String[source.NameServer.length];
+            for (int i = 0; i < source.NameServer.length; i++) {
+                this.NameServer[i] = new String(source.NameServer[i]);
+            }
+        }
+        if (source.LockTransfer != null) {
+            this.LockTransfer = new Boolean(source.LockTransfer);
+        }
+        if (source.LockEndTime != null) {
+            this.LockEndTime = new String(source.LockEndTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

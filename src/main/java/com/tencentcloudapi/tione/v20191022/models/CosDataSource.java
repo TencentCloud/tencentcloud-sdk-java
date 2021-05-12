@@ -134,6 +134,29 @@ public class CosDataSource extends AbstractModel{
         this.DataType = DataType;
     }
 
+    public CosDataSource() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CosDataSource(CosDataSource source) {
+        if (source.Bucket != null) {
+            this.Bucket = new String(source.Bucket);
+        }
+        if (source.KeyPrefix != null) {
+            this.KeyPrefix = new String(source.KeyPrefix);
+        }
+        if (source.DataDistributionType != null) {
+            this.DataDistributionType = new String(source.DataDistributionType);
+        }
+        if (source.DataType != null) {
+            this.DataType = new String(source.DataType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

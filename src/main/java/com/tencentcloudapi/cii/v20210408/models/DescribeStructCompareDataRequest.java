@@ -68,6 +68,23 @@ public class DescribeStructCompareDataRequest extends AbstractModel{
         this.SubTaskId = SubTaskId;
     }
 
+    public DescribeStructCompareDataRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeStructCompareDataRequest(DescribeStructCompareDataRequest source) {
+        if (source.MainTaskId != null) {
+            this.MainTaskId = new String(source.MainTaskId);
+        }
+        if (source.SubTaskId != null) {
+            this.SubTaskId = new String(source.SubTaskId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

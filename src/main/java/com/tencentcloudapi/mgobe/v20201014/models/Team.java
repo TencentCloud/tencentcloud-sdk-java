@@ -114,6 +114,29 @@ public class Team extends AbstractModel{
         this.MaxPlayers = MaxPlayers;
     }
 
+    public Team() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Team(Team source) {
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.MinPlayers != null) {
+            this.MinPlayers = new Long(source.MinPlayers);
+        }
+        if (source.MaxPlayers != null) {
+            this.MaxPlayers = new Long(source.MaxPlayers);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

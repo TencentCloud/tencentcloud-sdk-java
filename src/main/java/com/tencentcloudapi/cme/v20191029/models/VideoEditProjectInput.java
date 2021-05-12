@@ -116,6 +116,29 @@ public class VideoEditProjectInput extends AbstractModel{
         this.InitTracks = InitTracks;
     }
 
+    public VideoEditProjectInput() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public VideoEditProjectInput(VideoEditProjectInput source) {
+        if (source.AspectRatio != null) {
+            this.AspectRatio = new String(source.AspectRatio);
+        }
+        if (source.VideoEditTemplateId != null) {
+            this.VideoEditTemplateId = new String(source.VideoEditTemplateId);
+        }
+        if (source.InitTracks != null) {
+            this.InitTracks = new MediaTrack[source.InitTracks.length];
+            for (int i = 0; i < source.InitTracks.length; i++) {
+                this.InitTracks[i] = new MediaTrack(source.InitTracks[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

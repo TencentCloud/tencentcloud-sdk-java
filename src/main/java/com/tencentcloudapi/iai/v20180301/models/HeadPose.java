@@ -91,6 +91,26 @@ public class HeadPose extends AbstractModel{
         this.Roll = Roll;
     }
 
+    public HeadPose() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public HeadPose(HeadPose source) {
+        if (source.Pitch != null) {
+            this.Pitch = new Long(source.Pitch);
+        }
+        if (source.Yaw != null) {
+            this.Yaw = new Long(source.Yaw);
+        }
+        if (source.Roll != null) {
+            this.Roll = new Long(source.Roll);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

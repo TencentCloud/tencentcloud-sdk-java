@@ -124,6 +124,29 @@ public class QueryInvoiceResult extends AbstractModel{
         this.Order = Order;
     }
 
+    public QueryInvoiceResult() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public QueryInvoiceResult(QueryInvoiceResult source) {
+        if (source.Message != null) {
+            this.Message = new String(source.Message);
+        }
+        if (source.Code != null) {
+            this.Code = new Long(source.Code);
+        }
+        if (source.Data != null) {
+            this.Data = new QueryInvoiceResultData(source.Data);
+        }
+        if (source.Order != null) {
+            this.Order = new Order(source.Order);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -229,6 +229,47 @@ public class PublishSubscribe extends AbstractModel{
         this.DatabaseTupleSet = DatabaseTupleSet;
     }
 
+    public PublishSubscribe() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PublishSubscribe(PublishSubscribe source) {
+        if (source.Id != null) {
+            this.Id = new Long(source.Id);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.PublishInstanceId != null) {
+            this.PublishInstanceId = new String(source.PublishInstanceId);
+        }
+        if (source.PublishInstanceName != null) {
+            this.PublishInstanceName = new String(source.PublishInstanceName);
+        }
+        if (source.PublishInstanceIp != null) {
+            this.PublishInstanceIp = new String(source.PublishInstanceIp);
+        }
+        if (source.SubscribeInstanceId != null) {
+            this.SubscribeInstanceId = new String(source.SubscribeInstanceId);
+        }
+        if (source.SubscribeInstanceName != null) {
+            this.SubscribeInstanceName = new String(source.SubscribeInstanceName);
+        }
+        if (source.SubscribeInstanceIp != null) {
+            this.SubscribeInstanceIp = new String(source.SubscribeInstanceIp);
+        }
+        if (source.DatabaseTupleSet != null) {
+            this.DatabaseTupleSet = new DatabaseTupleStatus[source.DatabaseTupleSet.length];
+            for (int i = 0; i < source.DatabaseTupleSet.length; i++) {
+                this.DatabaseTupleSet[i] = new DatabaseTupleStatus(source.DatabaseTupleSet[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

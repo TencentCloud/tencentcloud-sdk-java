@@ -134,6 +134,29 @@ public class DescribeProductEventListOverView extends AbstractModel{
         this.UnRecoverAmount = UnRecoverAmount;
     }
 
+    public DescribeProductEventListOverView() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeProductEventListOverView(DescribeProductEventListOverView source) {
+        if (source.StatusChangeAmount != null) {
+            this.StatusChangeAmount = new Long(source.StatusChangeAmount);
+        }
+        if (source.UnConfigAlarmAmount != null) {
+            this.UnConfigAlarmAmount = new Long(source.UnConfigAlarmAmount);
+        }
+        if (source.UnNormalEventAmount != null) {
+            this.UnNormalEventAmount = new Long(source.UnNormalEventAmount);
+        }
+        if (source.UnRecoverAmount != null) {
+            this.UnRecoverAmount = new Long(source.UnRecoverAmount);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

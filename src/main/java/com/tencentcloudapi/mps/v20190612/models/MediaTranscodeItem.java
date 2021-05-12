@@ -298,6 +298,59 @@ public class MediaTranscodeItem extends AbstractModel{
         this.VideoStreamSet = VideoStreamSet;
     }
 
+    public MediaTranscodeItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MediaTranscodeItem(MediaTranscodeItem source) {
+        if (source.OutputStorage != null) {
+            this.OutputStorage = new TaskOutputStorage(source.OutputStorage);
+        }
+        if (source.Path != null) {
+            this.Path = new String(source.Path);
+        }
+        if (source.Definition != null) {
+            this.Definition = new Long(source.Definition);
+        }
+        if (source.Bitrate != null) {
+            this.Bitrate = new Long(source.Bitrate);
+        }
+        if (source.Height != null) {
+            this.Height = new Long(source.Height);
+        }
+        if (source.Width != null) {
+            this.Width = new Long(source.Width);
+        }
+        if (source.Size != null) {
+            this.Size = new Long(source.Size);
+        }
+        if (source.Duration != null) {
+            this.Duration = new Float(source.Duration);
+        }
+        if (source.Container != null) {
+            this.Container = new String(source.Container);
+        }
+        if (source.Md5 != null) {
+            this.Md5 = new String(source.Md5);
+        }
+        if (source.AudioStreamSet != null) {
+            this.AudioStreamSet = new MediaAudioStreamItem[source.AudioStreamSet.length];
+            for (int i = 0; i < source.AudioStreamSet.length; i++) {
+                this.AudioStreamSet[i] = new MediaAudioStreamItem(source.AudioStreamSet[i]);
+            }
+        }
+        if (source.VideoStreamSet != null) {
+            this.VideoStreamSet = new MediaVideoStreamItem[source.VideoStreamSet.length];
+            for (int i = 0; i < source.VideoStreamSet.length; i++) {
+                this.VideoStreamSet[i] = new MediaVideoStreamItem(source.VideoStreamSet[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

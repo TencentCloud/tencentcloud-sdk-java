@@ -213,6 +213,38 @@ public class AdvancedAuthentication extends AbstractModel{
         this.TypeF = TypeF;
     }
 
+    public AdvancedAuthentication() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AdvancedAuthentication(AdvancedAuthentication source) {
+        if (source.Switch != null) {
+            this.Switch = new String(source.Switch);
+        }
+        if (source.TypeA != null) {
+            this.TypeA = new AdvancedAuthenticationTypeA(source.TypeA);
+        }
+        if (source.TypeB != null) {
+            this.TypeB = new AdvancedAuthenticationTypeB(source.TypeB);
+        }
+        if (source.TypeC != null) {
+            this.TypeC = new AdvancedAuthenticationTypeC(source.TypeC);
+        }
+        if (source.TypeD != null) {
+            this.TypeD = new AdvancedAuthenticationTypeD(source.TypeD);
+        }
+        if (source.TypeE != null) {
+            this.TypeE = new AdvancedAuthenticationTypeE(source.TypeE);
+        }
+        if (source.TypeF != null) {
+            this.TypeF = new AdvancedAuthenticationTypeF(source.TypeF);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

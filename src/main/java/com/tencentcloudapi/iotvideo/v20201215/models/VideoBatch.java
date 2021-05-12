@@ -252,6 +252,47 @@ public class VideoBatch extends AbstractModel{
         this.UpdateTime = UpdateTime;
     }
 
+    public VideoBatch() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public VideoBatch(VideoBatch source) {
+        if (source.Id != null) {
+            this.Id = new Long(source.Id);
+        }
+        if (source.UserId != null) {
+            this.UserId = new String(source.UserId);
+        }
+        if (source.ProductId != null) {
+            this.ProductId = new String(source.ProductId);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.DevPre != null) {
+            this.DevPre = new String(source.DevPre);
+        }
+        if (source.DevNum != null) {
+            this.DevNum = new Long(source.DevNum);
+        }
+        if (source.DevNumCreated != null) {
+            this.DevNumCreated = new Long(source.DevNumCreated);
+        }
+        if (source.BatchURL != null) {
+            this.BatchURL = new String(source.BatchURL);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new Long(source.CreateTime);
+        }
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new Long(source.UpdateTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

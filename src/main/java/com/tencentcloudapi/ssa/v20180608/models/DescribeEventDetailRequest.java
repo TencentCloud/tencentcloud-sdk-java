@@ -137,6 +137,32 @@ public class DescribeEventDetailRequest extends AbstractModel{
         this.Name = Name;
     }
 
+    public DescribeEventDetailRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeEventDetailRequest(DescribeEventDetailRequest source) {
+        if (source.Index != null) {
+            this.Index = new String(source.Index);
+        }
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
+        if (source.Source != null) {
+            this.Source = new String(source.Source);
+        }
+        if (source.SubEventType != null) {
+            this.SubEventType = new Long(source.SubEventType);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

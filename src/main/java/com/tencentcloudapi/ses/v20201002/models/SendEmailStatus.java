@@ -433,6 +433,53 @@ public class SendEmailStatus extends AbstractModel{
         this.UserComplainted = UserComplainted;
     }
 
+    public SendEmailStatus() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SendEmailStatus(SendEmailStatus source) {
+        if (source.MessageId != null) {
+            this.MessageId = new String(source.MessageId);
+        }
+        if (source.ToEmailAddress != null) {
+            this.ToEmailAddress = new String(source.ToEmailAddress);
+        }
+        if (source.FromEmailAddress != null) {
+            this.FromEmailAddress = new String(source.FromEmailAddress);
+        }
+        if (source.SendStatus != null) {
+            this.SendStatus = new Long(source.SendStatus);
+        }
+        if (source.DeliverStatus != null) {
+            this.DeliverStatus = new Long(source.DeliverStatus);
+        }
+        if (source.DeliverMessage != null) {
+            this.DeliverMessage = new String(source.DeliverMessage);
+        }
+        if (source.RequestTime != null) {
+            this.RequestTime = new Long(source.RequestTime);
+        }
+        if (source.DeliverTime != null) {
+            this.DeliverTime = new Long(source.DeliverTime);
+        }
+        if (source.UserOpened != null) {
+            this.UserOpened = new Boolean(source.UserOpened);
+        }
+        if (source.UserClicked != null) {
+            this.UserClicked = new Boolean(source.UserClicked);
+        }
+        if (source.UserUnsubscribed != null) {
+            this.UserUnsubscribed = new Boolean(source.UserUnsubscribed);
+        }
+        if (source.UserComplainted != null) {
+            this.UserComplainted = new Boolean(source.UserComplainted);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

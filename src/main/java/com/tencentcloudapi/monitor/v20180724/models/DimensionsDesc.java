@@ -45,6 +45,23 @@ public class DimensionsDesc extends AbstractModel{
         this.Dimensions = Dimensions;
     }
 
+    public DimensionsDesc() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DimensionsDesc(DimensionsDesc source) {
+        if (source.Dimensions != null) {
+            this.Dimensions = new String[source.Dimensions.length];
+            for (int i = 0; i < source.Dimensions.length; i++) {
+                this.Dimensions[i] = new String(source.Dimensions[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

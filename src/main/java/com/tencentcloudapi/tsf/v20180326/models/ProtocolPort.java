@@ -119,6 +119,29 @@ public class ProtocolPort extends AbstractModel{
         this.NodePort = NodePort;
     }
 
+    public ProtocolPort() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ProtocolPort(ProtocolPort source) {
+        if (source.Protocol != null) {
+            this.Protocol = new String(source.Protocol);
+        }
+        if (source.Port != null) {
+            this.Port = new Long(source.Port);
+        }
+        if (source.TargetPort != null) {
+            this.TargetPort = new Long(source.TargetPort);
+        }
+        if (source.NodePort != null) {
+            this.NodePort = new Long(source.NodePort);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

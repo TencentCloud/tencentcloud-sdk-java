@@ -236,6 +236,44 @@ public class QueryRegisterProtectionResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public QueryRegisterProtectionResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public QueryRegisterProtectionResponse(QueryRegisterProtectionResponse source) {
+        if (source.CodeDesc != null) {
+            this.CodeDesc = new String(source.CodeDesc);
+        }
+        if (source.AssociateAccount != null) {
+            this.AssociateAccount = new String(source.AssociateAccount);
+        }
+        if (source.RegisterTime != null) {
+            this.RegisterTime = new String(source.RegisterTime);
+        }
+        if (source.Uid != null) {
+            this.Uid = new String(source.Uid);
+        }
+        if (source.RegisterIp != null) {
+            this.RegisterIp = new String(source.RegisterIp);
+        }
+        if (source.Level != null) {
+            this.Level = new Long(source.Level);
+        }
+        if (source.RiskType != null) {
+            this.RiskType = new Long[source.RiskType.length];
+            for (int i = 0; i < source.RiskType.length; i++) {
+                this.RiskType[i] = new Long(source.RiskType[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

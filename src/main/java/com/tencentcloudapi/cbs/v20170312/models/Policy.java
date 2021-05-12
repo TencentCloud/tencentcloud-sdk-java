@@ -68,6 +68,29 @@ public class Policy extends AbstractModel{
         this.Hour = Hour;
     }
 
+    public Policy() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Policy(Policy source) {
+        if (source.DayOfWeek != null) {
+            this.DayOfWeek = new Long[source.DayOfWeek.length];
+            for (int i = 0; i < source.DayOfWeek.length; i++) {
+                this.DayOfWeek[i] = new Long(source.DayOfWeek[i]);
+            }
+        }
+        if (source.Hour != null) {
+            this.Hour = new Long[source.Hour.length];
+            for (int i = 0; i < source.Hour.length; i++) {
+                this.Hour[i] = new Long(source.Hour[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -91,6 +91,35 @@ public class GroupDailyUseStatistics extends AbstractModel{
         this.TopAvgTimeCost = TopAvgTimeCost;
     }
 
+    public GroupDailyUseStatistics() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GroupDailyUseStatistics(GroupDailyUseStatistics source) {
+        if (source.TopReqAmount != null) {
+            this.TopReqAmount = new GroupUseStatisticsEntity[source.TopReqAmount.length];
+            for (int i = 0; i < source.TopReqAmount.length; i++) {
+                this.TopReqAmount[i] = new GroupUseStatisticsEntity(source.TopReqAmount[i]);
+            }
+        }
+        if (source.TopFailureRate != null) {
+            this.TopFailureRate = new GroupUseStatisticsEntity[source.TopFailureRate.length];
+            for (int i = 0; i < source.TopFailureRate.length; i++) {
+                this.TopFailureRate[i] = new GroupUseStatisticsEntity(source.TopFailureRate[i]);
+            }
+        }
+        if (source.TopAvgTimeCost != null) {
+            this.TopAvgTimeCost = new GroupUseStatisticsEntity[source.TopAvgTimeCost.length];
+            for (int i = 0; i < source.TopAvgTimeCost.length; i++) {
+                this.TopAvgTimeCost[i] = new GroupUseStatisticsEntity(source.TopAvgTimeCost[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

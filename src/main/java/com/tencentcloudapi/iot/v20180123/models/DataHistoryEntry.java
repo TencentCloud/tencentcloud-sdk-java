@@ -114,6 +114,29 @@ public class DataHistoryEntry extends AbstractModel{
         this.Data = Data;
     }
 
+    public DataHistoryEntry() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DataHistoryEntry(DataHistoryEntry source) {
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
+        if (source.Timestamp != null) {
+            this.Timestamp = new Long(source.Timestamp);
+        }
+        if (source.DeviceName != null) {
+            this.DeviceName = new String(source.DeviceName);
+        }
+        if (source.Data != null) {
+            this.Data = new String(source.Data);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

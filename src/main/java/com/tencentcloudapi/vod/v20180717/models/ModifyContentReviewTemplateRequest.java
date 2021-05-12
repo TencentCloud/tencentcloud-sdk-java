@@ -295,6 +295,50 @@ public class ModifyContentReviewTemplateRequest extends AbstractModel{
         this.SubAppId = SubAppId;
     }
 
+    public ModifyContentReviewTemplateRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyContentReviewTemplateRequest(ModifyContentReviewTemplateRequest source) {
+        if (source.Definition != null) {
+            this.Definition = new Long(source.Definition);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Comment != null) {
+            this.Comment = new String(source.Comment);
+        }
+        if (source.TerrorismConfigure != null) {
+            this.TerrorismConfigure = new TerrorismConfigureInfoForUpdate(source.TerrorismConfigure);
+        }
+        if (source.PornConfigure != null) {
+            this.PornConfigure = new PornConfigureInfoForUpdate(source.PornConfigure);
+        }
+        if (source.PoliticalConfigure != null) {
+            this.PoliticalConfigure = new PoliticalConfigureInfoForUpdate(source.PoliticalConfigure);
+        }
+        if (source.ProhibitedConfigure != null) {
+            this.ProhibitedConfigure = new ProhibitedConfigureInfoForUpdate(source.ProhibitedConfigure);
+        }
+        if (source.UserDefineConfigure != null) {
+            this.UserDefineConfigure = new UserDefineConfigureInfoForUpdate(source.UserDefineConfigure);
+        }
+        if (source.ScreenshotInterval != null) {
+            this.ScreenshotInterval = new Float(source.ScreenshotInterval);
+        }
+        if (source.ReviewWallSwitch != null) {
+            this.ReviewWallSwitch = new String(source.ReviewWallSwitch);
+        }
+        if (source.SubAppId != null) {
+            this.SubAppId = new Long(source.SubAppId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

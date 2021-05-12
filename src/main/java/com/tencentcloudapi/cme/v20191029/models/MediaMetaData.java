@@ -229,6 +229,50 @@ public class MediaMetaData extends AbstractModel{
         this.AudioStreamInfoSet = AudioStreamInfoSet;
     }
 
+    public MediaMetaData() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MediaMetaData(MediaMetaData source) {
+        if (source.Size != null) {
+            this.Size = new Long(source.Size);
+        }
+        if (source.Container != null) {
+            this.Container = new String(source.Container);
+        }
+        if (source.Bitrate != null) {
+            this.Bitrate = new Long(source.Bitrate);
+        }
+        if (source.Height != null) {
+            this.Height = new Long(source.Height);
+        }
+        if (source.Width != null) {
+            this.Width = new Long(source.Width);
+        }
+        if (source.Duration != null) {
+            this.Duration = new Float(source.Duration);
+        }
+        if (source.Rotate != null) {
+            this.Rotate = new Long(source.Rotate);
+        }
+        if (source.VideoStreamInfoSet != null) {
+            this.VideoStreamInfoSet = new VideoStreamInfo[source.VideoStreamInfoSet.length];
+            for (int i = 0; i < source.VideoStreamInfoSet.length; i++) {
+                this.VideoStreamInfoSet[i] = new VideoStreamInfo(source.VideoStreamInfoSet[i]);
+            }
+        }
+        if (source.AudioStreamInfoSet != null) {
+            this.AudioStreamInfoSet = new AudioStreamInfo[source.AudioStreamInfoSet.length];
+            for (int i = 0; i < source.AudioStreamInfoSet.length; i++) {
+                this.AudioStreamInfoSet[i] = new AudioStreamInfo(source.AudioStreamInfoSet[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

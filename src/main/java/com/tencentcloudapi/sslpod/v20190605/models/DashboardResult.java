@@ -160,6 +160,53 @@ public class DashboardResult extends AbstractModel{
         this.ComplianceHistogram = ComplianceHistogram;
     }
 
+    public DashboardResult() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DashboardResult(DashboardResult source) {
+        if (source.SecurityLevelPie != null) {
+            this.SecurityLevelPie = new ChartNameValue[source.SecurityLevelPie.length];
+            for (int i = 0; i < source.SecurityLevelPie.length; i++) {
+                this.SecurityLevelPie[i] = new ChartNameValue(source.SecurityLevelPie[i]);
+            }
+        }
+        if (source.CertBrandsPie != null) {
+            this.CertBrandsPie = new ChartNameValue[source.CertBrandsPie.length];
+            for (int i = 0; i < source.CertBrandsPie.length; i++) {
+                this.CertBrandsPie[i] = new ChartNameValue(source.CertBrandsPie[i]);
+            }
+        }
+        if (source.CertValidTimePie != null) {
+            this.CertValidTimePie = new ChartNameValue[source.CertValidTimePie.length];
+            for (int i = 0; i < source.CertValidTimePie.length; i++) {
+                this.CertValidTimePie[i] = new ChartNameValue(source.CertValidTimePie[i]);
+            }
+        }
+        if (source.CertTypePie != null) {
+            this.CertTypePie = new ChartNameValue[source.CertTypePie.length];
+            for (int i = 0; i < source.CertTypePie.length; i++) {
+                this.CertTypePie[i] = new ChartNameValue(source.CertTypePie[i]);
+            }
+        }
+        if (source.SSLBugsLoopholeHistogram != null) {
+            this.SSLBugsLoopholeHistogram = new ChartHistogram[source.SSLBugsLoopholeHistogram.length];
+            for (int i = 0; i < source.SSLBugsLoopholeHistogram.length; i++) {
+                this.SSLBugsLoopholeHistogram[i] = new ChartHistogram(source.SSLBugsLoopholeHistogram[i]);
+            }
+        }
+        if (source.ComplianceHistogram != null) {
+            this.ComplianceHistogram = new ChartHistogram[source.ComplianceHistogram.length];
+            for (int i = 0; i < source.ComplianceHistogram.length; i++) {
+                this.ComplianceHistogram[i] = new ChartHistogram(source.ComplianceHistogram[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

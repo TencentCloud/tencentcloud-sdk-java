@@ -162,6 +162,32 @@ public class Data extends AbstractModel{
         this.AudioCodec = AudioCodec;
     }
 
+    public Data() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Data(Data source) {
+        if (source.Protocol != null) {
+            this.Protocol = new String(source.Protocol);
+        }
+        if (source.URI != null) {
+            this.URI = new String(source.URI);
+        }
+        if (source.ExpireTime != null) {
+            this.ExpireTime = new Long(source.ExpireTime);
+        }
+        if (source.VideoCodec != null) {
+            this.VideoCodec = new String(source.VideoCodec);
+        }
+        if (source.AudioCodec != null) {
+            this.AudioCodec = new String(source.AudioCodec);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

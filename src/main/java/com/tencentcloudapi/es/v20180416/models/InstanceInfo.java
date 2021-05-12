@@ -1354,6 +1354,188 @@ public class InstanceInfo extends AbstractModel{
         this.KibanaConfig = KibanaConfig;
     }
 
+    public InstanceInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public InstanceInfo(InstanceInfo source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.InstanceName != null) {
+            this.InstanceName = new String(source.InstanceName);
+        }
+        if (source.Region != null) {
+            this.Region = new String(source.Region);
+        }
+        if (source.Zone != null) {
+            this.Zone = new String(source.Zone);
+        }
+        if (source.AppId != null) {
+            this.AppId = new Long(source.AppId);
+        }
+        if (source.Uin != null) {
+            this.Uin = new String(source.Uin);
+        }
+        if (source.VpcUid != null) {
+            this.VpcUid = new String(source.VpcUid);
+        }
+        if (source.SubnetUid != null) {
+            this.SubnetUid = new String(source.SubnetUid);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.ChargeType != null) {
+            this.ChargeType = new String(source.ChargeType);
+        }
+        if (source.ChargePeriod != null) {
+            this.ChargePeriod = new Long(source.ChargePeriod);
+        }
+        if (source.RenewFlag != null) {
+            this.RenewFlag = new String(source.RenewFlag);
+        }
+        if (source.NodeType != null) {
+            this.NodeType = new String(source.NodeType);
+        }
+        if (source.NodeNum != null) {
+            this.NodeNum = new Long(source.NodeNum);
+        }
+        if (source.CpuNum != null) {
+            this.CpuNum = new Long(source.CpuNum);
+        }
+        if (source.MemSize != null) {
+            this.MemSize = new Long(source.MemSize);
+        }
+        if (source.DiskType != null) {
+            this.DiskType = new String(source.DiskType);
+        }
+        if (source.DiskSize != null) {
+            this.DiskSize = new Long(source.DiskSize);
+        }
+        if (source.EsDomain != null) {
+            this.EsDomain = new String(source.EsDomain);
+        }
+        if (source.EsVip != null) {
+            this.EsVip = new String(source.EsVip);
+        }
+        if (source.EsPort != null) {
+            this.EsPort = new Long(source.EsPort);
+        }
+        if (source.KibanaUrl != null) {
+            this.KibanaUrl = new String(source.KibanaUrl);
+        }
+        if (source.EsVersion != null) {
+            this.EsVersion = new String(source.EsVersion);
+        }
+        if (source.EsConfig != null) {
+            this.EsConfig = new String(source.EsConfig);
+        }
+        if (source.EsAcl != null) {
+            this.EsAcl = new EsAcl(source.EsAcl);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new String(source.UpdateTime);
+        }
+        if (source.Deadline != null) {
+            this.Deadline = new String(source.Deadline);
+        }
+        if (source.InstanceType != null) {
+            this.InstanceType = new Long(source.InstanceType);
+        }
+        if (source.IkConfig != null) {
+            this.IkConfig = new EsDictionaryInfo(source.IkConfig);
+        }
+        if (source.MasterNodeInfo != null) {
+            this.MasterNodeInfo = new MasterNodeInfo(source.MasterNodeInfo);
+        }
+        if (source.CosBackup != null) {
+            this.CosBackup = new CosBackup(source.CosBackup);
+        }
+        if (source.AllowCosBackup != null) {
+            this.AllowCosBackup = new Boolean(source.AllowCosBackup);
+        }
+        if (source.TagList != null) {
+            this.TagList = new TagInfo[source.TagList.length];
+            for (int i = 0; i < source.TagList.length; i++) {
+                this.TagList[i] = new TagInfo(source.TagList[i]);
+            }
+        }
+        if (source.LicenseType != null) {
+            this.LicenseType = new String(source.LicenseType);
+        }
+        if (source.EnableHotWarmMode != null) {
+            this.EnableHotWarmMode = new Boolean(source.EnableHotWarmMode);
+        }
+        if (source.WarmNodeType != null) {
+            this.WarmNodeType = new String(source.WarmNodeType);
+        }
+        if (source.WarmNodeNum != null) {
+            this.WarmNodeNum = new Long(source.WarmNodeNum);
+        }
+        if (source.WarmCpuNum != null) {
+            this.WarmCpuNum = new Long(source.WarmCpuNum);
+        }
+        if (source.WarmMemSize != null) {
+            this.WarmMemSize = new Long(source.WarmMemSize);
+        }
+        if (source.WarmDiskType != null) {
+            this.WarmDiskType = new String(source.WarmDiskType);
+        }
+        if (source.WarmDiskSize != null) {
+            this.WarmDiskSize = new Long(source.WarmDiskSize);
+        }
+        if (source.NodeInfoList != null) {
+            this.NodeInfoList = new NodeInfo[source.NodeInfoList.length];
+            for (int i = 0; i < source.NodeInfoList.length; i++) {
+                this.NodeInfoList[i] = new NodeInfo(source.NodeInfoList[i]);
+            }
+        }
+        if (source.EsPublicUrl != null) {
+            this.EsPublicUrl = new String(source.EsPublicUrl);
+        }
+        if (source.MultiZoneInfo != null) {
+            this.MultiZoneInfo = new ZoneDetail[source.MultiZoneInfo.length];
+            for (int i = 0; i < source.MultiZoneInfo.length; i++) {
+                this.MultiZoneInfo[i] = new ZoneDetail(source.MultiZoneInfo[i]);
+            }
+        }
+        if (source.DeployMode != null) {
+            this.DeployMode = new Long(source.DeployMode);
+        }
+        if (source.PublicAccess != null) {
+            this.PublicAccess = new String(source.PublicAccess);
+        }
+        if (source.EsPublicAcl != null) {
+            this.EsPublicAcl = new EsAcl(source.EsPublicAcl);
+        }
+        if (source.KibanaPrivateUrl != null) {
+            this.KibanaPrivateUrl = new String(source.KibanaPrivateUrl);
+        }
+        if (source.KibanaPublicAccess != null) {
+            this.KibanaPublicAccess = new String(source.KibanaPublicAccess);
+        }
+        if (source.KibanaPrivateAccess != null) {
+            this.KibanaPrivateAccess = new String(source.KibanaPrivateAccess);
+        }
+        if (source.SecurityType != null) {
+            this.SecurityType = new Long(source.SecurityType);
+        }
+        if (source.SceneType != null) {
+            this.SceneType = new Long(source.SceneType);
+        }
+        if (source.KibanaConfig != null) {
+            this.KibanaConfig = new String(source.KibanaConfig);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

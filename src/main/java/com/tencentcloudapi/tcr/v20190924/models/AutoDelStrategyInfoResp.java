@@ -73,6 +73,26 @@ public class AutoDelStrategyInfoResp extends AbstractModel{
         this.StrategyInfo = StrategyInfo;
     }
 
+    public AutoDelStrategyInfoResp() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AutoDelStrategyInfoResp(AutoDelStrategyInfoResp source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.StrategyInfo != null) {
+            this.StrategyInfo = new AutoDelStrategyInfo[source.StrategyInfo.length];
+            for (int i = 0; i < source.StrategyInfo.length; i++) {
+                this.StrategyInfo[i] = new AutoDelStrategyInfo(source.StrategyInfo[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

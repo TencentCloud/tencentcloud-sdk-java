@@ -91,6 +91,35 @@ public class MetricDataPointMap extends AbstractModel{
         this.AvgTimeCost = AvgTimeCost;
     }
 
+    public MetricDataPointMap() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MetricDataPointMap(MetricDataPointMap source) {
+        if (source.SumReqAmount != null) {
+            this.SumReqAmount = new MetricDataPoint[source.SumReqAmount.length];
+            for (int i = 0; i < source.SumReqAmount.length; i++) {
+                this.SumReqAmount[i] = new MetricDataPoint(source.SumReqAmount[i]);
+            }
+        }
+        if (source.AvgFailureRate != null) {
+            this.AvgFailureRate = new MetricDataPoint[source.AvgFailureRate.length];
+            for (int i = 0; i < source.AvgFailureRate.length; i++) {
+                this.AvgFailureRate[i] = new MetricDataPoint(source.AvgFailureRate[i]);
+            }
+        }
+        if (source.AvgTimeCost != null) {
+            this.AvgTimeCost = new MetricDataPoint[source.AvgTimeCost.length];
+            for (int i = 0; i < source.AvgTimeCost.length; i++) {
+                this.AvgTimeCost[i] = new MetricDataPoint(source.AvgTimeCost[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

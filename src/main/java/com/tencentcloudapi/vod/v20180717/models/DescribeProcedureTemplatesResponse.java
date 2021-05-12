@@ -91,6 +91,29 @@ public class DescribeProcedureTemplatesResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeProcedureTemplatesResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeProcedureTemplatesResponse(DescribeProcedureTemplatesResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.ProcedureTemplateSet != null) {
+            this.ProcedureTemplateSet = new ProcedureTemplate[source.ProcedureTemplateSet.length];
+            for (int i = 0; i < source.ProcedureTemplateSet.length; i++) {
+                this.ProcedureTemplateSet[i] = new ProcedureTemplate(source.ProcedureTemplateSet[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

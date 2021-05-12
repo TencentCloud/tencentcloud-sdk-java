@@ -354,6 +354,65 @@ public class Function extends AbstractModel{
         this.ReservedConcurrencyMem = ReservedConcurrencyMem;
     }
 
+    public Function() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Function(Function source) {
+        if (source.ModTime != null) {
+            this.ModTime = new String(source.ModTime);
+        }
+        if (source.AddTime != null) {
+            this.AddTime = new String(source.AddTime);
+        }
+        if (source.Runtime != null) {
+            this.Runtime = new String(source.Runtime);
+        }
+        if (source.FunctionName != null) {
+            this.FunctionName = new String(source.FunctionName);
+        }
+        if (source.FunctionId != null) {
+            this.FunctionId = new String(source.FunctionId);
+        }
+        if (source.Namespace != null) {
+            this.Namespace = new String(source.Namespace);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.StatusDesc != null) {
+            this.StatusDesc = new String(source.StatusDesc);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.StatusReasons != null) {
+            this.StatusReasons = new StatusReason[source.StatusReasons.length];
+            for (int i = 0; i < source.StatusReasons.length; i++) {
+                this.StatusReasons[i] = new StatusReason(source.StatusReasons[i]);
+            }
+        }
+        if (source.TotalProvisionedConcurrencyMem != null) {
+            this.TotalProvisionedConcurrencyMem = new Long(source.TotalProvisionedConcurrencyMem);
+        }
+        if (source.ReservedConcurrencyMem != null) {
+            this.ReservedConcurrencyMem = new Long(source.ReservedConcurrencyMem);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

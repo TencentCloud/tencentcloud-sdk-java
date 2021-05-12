@@ -226,6 +226,41 @@ public class RechargeMemberThirdPayResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public RechargeMemberThirdPayResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RechargeMemberThirdPayResponse(RechargeMemberThirdPayResponse source) {
+        if (source.TxnReturnCode != null) {
+            this.TxnReturnCode = new String(source.TxnReturnCode);
+        }
+        if (source.TxnReturnMsg != null) {
+            this.TxnReturnMsg = new String(source.TxnReturnMsg);
+        }
+        if (source.CnsmrSeqNo != null) {
+            this.CnsmrSeqNo = new String(source.CnsmrSeqNo);
+        }
+        if (source.FrontSeqNo != null) {
+            this.FrontSeqNo = new String(source.FrontSeqNo);
+        }
+        if (source.MemberSubAcctPreAvailBal != null) {
+            this.MemberSubAcctPreAvailBal = new String(source.MemberSubAcctPreAvailBal);
+        }
+        if (source.ReservedMsgOne != null) {
+            this.ReservedMsgOne = new String(source.ReservedMsgOne);
+        }
+        if (source.ReservedMsgTwo != null) {
+            this.ReservedMsgTwo = new String(source.ReservedMsgTwo);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

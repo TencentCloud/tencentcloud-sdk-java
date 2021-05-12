@@ -157,6 +157,32 @@ public class DescribePolicyConditionListConfigManualCalcValue extends AbstractMo
         this.Need = Need;
     }
 
+    public DescribePolicyConditionListConfigManualCalcValue() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribePolicyConditionListConfigManualCalcValue(DescribePolicyConditionListConfigManualCalcValue source) {
+        if (source.Default != null) {
+            this.Default = new String(source.Default);
+        }
+        if (source.Fixed != null) {
+            this.Fixed = new String(source.Fixed);
+        }
+        if (source.Max != null) {
+            this.Max = new String(source.Max);
+        }
+        if (source.Min != null) {
+            this.Min = new String(source.Min);
+        }
+        if (source.Need != null) {
+            this.Need = new Boolean(source.Need);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

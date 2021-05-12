@@ -215,6 +215,35 @@ public class MediaTrackItem extends AbstractModel{
         this.EmptyItem = EmptyItem;
     }
 
+    public MediaTrackItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MediaTrackItem(MediaTrackItem source) {
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.VideoItem != null) {
+            this.VideoItem = new VideoTrackItem(source.VideoItem);
+        }
+        if (source.AudioItem != null) {
+            this.AudioItem = new AudioTrackItem(source.AudioItem);
+        }
+        if (source.StickerItem != null) {
+            this.StickerItem = new StickerTrackItem(source.StickerItem);
+        }
+        if (source.TransitionItem != null) {
+            this.TransitionItem = new MediaTransitionItem(source.TransitionItem);
+        }
+        if (source.EmptyItem != null) {
+            this.EmptyItem = new EmptyTrackItem(source.EmptyItem);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

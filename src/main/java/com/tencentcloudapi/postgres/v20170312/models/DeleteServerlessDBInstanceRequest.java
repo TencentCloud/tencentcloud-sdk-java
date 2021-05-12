@@ -68,6 +68,23 @@ public class DeleteServerlessDBInstanceRequest extends AbstractModel{
         this.DBInstanceId = DBInstanceId;
     }
 
+    public DeleteServerlessDBInstanceRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteServerlessDBInstanceRequest(DeleteServerlessDBInstanceRequest source) {
+        if (source.DBInstanceName != null) {
+            this.DBInstanceName = new String(source.DBInstanceName);
+        }
+        if (source.DBInstanceId != null) {
+            this.DBInstanceId = new String(source.DBInstanceId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

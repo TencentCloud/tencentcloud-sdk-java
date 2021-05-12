@@ -216,6 +216,41 @@ public class Volume extends AbstractModel{
         this.UnsubscribeCount = UnsubscribeCount;
     }
 
+    public Volume() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Volume(Volume source) {
+        if (source.SendDate != null) {
+            this.SendDate = new String(source.SendDate);
+        }
+        if (source.RequestCount != null) {
+            this.RequestCount = new Long(source.RequestCount);
+        }
+        if (source.AcceptedCount != null) {
+            this.AcceptedCount = new Long(source.AcceptedCount);
+        }
+        if (source.DeliveredCount != null) {
+            this.DeliveredCount = new Long(source.DeliveredCount);
+        }
+        if (source.OpenedCount != null) {
+            this.OpenedCount = new Long(source.OpenedCount);
+        }
+        if (source.ClickedCount != null) {
+            this.ClickedCount = new Long(source.ClickedCount);
+        }
+        if (source.BounceCount != null) {
+            this.BounceCount = new Long(source.BounceCount);
+        }
+        if (source.UnsubscribeCount != null) {
+            this.UnsubscribeCount = new Long(source.UnsubscribeCount);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

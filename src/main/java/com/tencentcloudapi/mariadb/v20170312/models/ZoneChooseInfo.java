@@ -68,6 +68,26 @@ public class ZoneChooseInfo extends AbstractModel{
         this.SlaveZones = SlaveZones;
     }
 
+    public ZoneChooseInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ZoneChooseInfo(ZoneChooseInfo source) {
+        if (source.MasterZone != null) {
+            this.MasterZone = new ZonesInfo(source.MasterZone);
+        }
+        if (source.SlaveZones != null) {
+            this.SlaveZones = new ZonesInfo[source.SlaveZones.length];
+            for (int i = 0; i < source.SlaveZones.length; i++) {
+                this.SlaveZones[i] = new ZonesInfo(source.SlaveZones[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -326,6 +326,59 @@ public class HostItem extends AbstractModel{
         this.CageId = CageId;
     }
 
+    public HostItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public HostItem(HostItem source) {
+        if (source.Placement != null) {
+            this.Placement = new Placement(source.Placement);
+        }
+        if (source.HostId != null) {
+            this.HostId = new String(source.HostId);
+        }
+        if (source.HostType != null) {
+            this.HostType = new String(source.HostType);
+        }
+        if (source.HostName != null) {
+            this.HostName = new String(source.HostName);
+        }
+        if (source.HostChargeType != null) {
+            this.HostChargeType = new String(source.HostChargeType);
+        }
+        if (source.RenewFlag != null) {
+            this.RenewFlag = new String(source.RenewFlag);
+        }
+        if (source.CreatedTime != null) {
+            this.CreatedTime = new String(source.CreatedTime);
+        }
+        if (source.ExpiredTime != null) {
+            this.ExpiredTime = new String(source.ExpiredTime);
+        }
+        if (source.InstanceIds != null) {
+            this.InstanceIds = new String[source.InstanceIds.length];
+            for (int i = 0; i < source.InstanceIds.length; i++) {
+                this.InstanceIds[i] = new String(source.InstanceIds[i]);
+            }
+        }
+        if (source.HostState != null) {
+            this.HostState = new String(source.HostState);
+        }
+        if (source.HostIp != null) {
+            this.HostIp = new String(source.HostIp);
+        }
+        if (source.HostResource != null) {
+            this.HostResource = new HostResource(source.HostResource);
+        }
+        if (source.CageId != null) {
+            this.CageId = new String(source.CageId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

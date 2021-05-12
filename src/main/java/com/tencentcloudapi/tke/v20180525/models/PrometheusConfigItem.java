@@ -96,6 +96,26 @@ public class PrometheusConfigItem extends AbstractModel{
         this.TemplateId = TemplateId;
     }
 
+    public PrometheusConfigItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PrometheusConfigItem(PrometheusConfigItem source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Config != null) {
+            this.Config = new String(source.Config);
+        }
+        if (source.TemplateId != null) {
+            this.TemplateId = new String(source.TemplateId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

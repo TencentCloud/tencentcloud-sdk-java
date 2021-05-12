@@ -68,6 +68,23 @@ public class DeleteLiveCallbackRuleRequest extends AbstractModel{
         this.AppName = AppName;
     }
 
+    public DeleteLiveCallbackRuleRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteLiveCallbackRuleRequest(DeleteLiveCallbackRuleRequest source) {
+        if (source.DomainName != null) {
+            this.DomainName = new String(source.DomainName);
+        }
+        if (source.AppName != null) {
+            this.AppName = new String(source.AppName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

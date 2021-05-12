@@ -137,6 +137,32 @@ public class ReportOverviewData extends AbstractModel{
         this.AverageSec = AverageSec;
     }
 
+    public ReportOverviewData() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ReportOverviewData(ReportOverviewData source) {
+        if (source.TotalTimes != null) {
+            this.TotalTimes = new String(source.TotalTimes);
+        }
+        if (source.SuccessPercent != null) {
+            this.SuccessPercent = new Float(source.SuccessPercent);
+        }
+        if (source.TimeoutPercent != null) {
+            this.TimeoutPercent = new Float(source.TimeoutPercent);
+        }
+        if (source.FailPercent != null) {
+            this.FailPercent = new Float(source.FailPercent);
+        }
+        if (source.AverageSec != null) {
+            this.AverageSec = new Float(source.AverageSec);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

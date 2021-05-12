@@ -137,6 +137,32 @@ public class ListAttachedRolePoliciesRequest extends AbstractModel{
         this.PolicyType = PolicyType;
     }
 
+    public ListAttachedRolePoliciesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ListAttachedRolePoliciesRequest(ListAttachedRolePoliciesRequest source) {
+        if (source.Page != null) {
+            this.Page = new Long(source.Page);
+        }
+        if (source.Rp != null) {
+            this.Rp = new Long(source.Rp);
+        }
+        if (source.RoleId != null) {
+            this.RoleId = new String(source.RoleId);
+        }
+        if (source.RoleName != null) {
+            this.RoleName = new String(source.RoleName);
+        }
+        if (source.PolicyType != null) {
+            this.PolicyType = new String(source.PolicyType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

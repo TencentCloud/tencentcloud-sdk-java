@@ -804,6 +804,119 @@ public class Site extends AbstractModel{
         this.LastScanContentNum = LastScanContentNum;
     }
 
+    public Site() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Site(Site source) {
+        if (source.Id != null) {
+            this.Id = new Long(source.Id);
+        }
+        if (source.MonitorId != null) {
+            this.MonitorId = new Long(source.MonitorId);
+        }
+        if (source.Url != null) {
+            this.Url = new String(source.Url);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.VerifyStatus != null) {
+            this.VerifyStatus = new Long(source.VerifyStatus);
+        }
+        if (source.MonitorStatus != null) {
+            this.MonitorStatus = new Long(source.MonitorStatus);
+        }
+        if (source.ScanStatus != null) {
+            this.ScanStatus = new Long(source.ScanStatus);
+        }
+        if (source.LastScanTaskId != null) {
+            this.LastScanTaskId = new Long(source.LastScanTaskId);
+        }
+        if (source.LastScanStartTime != null) {
+            this.LastScanStartTime = new String(source.LastScanStartTime);
+        }
+        if (source.LastScanFinishTime != null) {
+            this.LastScanFinishTime = new String(source.LastScanFinishTime);
+        }
+        if (source.LastScanCancelTime != null) {
+            this.LastScanCancelTime = new String(source.LastScanCancelTime);
+        }
+        if (source.LastScanPageCount != null) {
+            this.LastScanPageCount = new Long(source.LastScanPageCount);
+        }
+        if (source.LastScanScannerType != null) {
+            this.LastScanScannerType = new String(source.LastScanScannerType);
+        }
+        if (source.LastScanVulsHighNum != null) {
+            this.LastScanVulsHighNum = new Long(source.LastScanVulsHighNum);
+        }
+        if (source.LastScanVulsMiddleNum != null) {
+            this.LastScanVulsMiddleNum = new Long(source.LastScanVulsMiddleNum);
+        }
+        if (source.LastScanVulsLowNum != null) {
+            this.LastScanVulsLowNum = new Long(source.LastScanVulsLowNum);
+        }
+        if (source.LastScanVulsNoticeNum != null) {
+            this.LastScanVulsNoticeNum = new Long(source.LastScanVulsNoticeNum);
+        }
+        if (source.CreatedAt != null) {
+            this.CreatedAt = new String(source.CreatedAt);
+        }
+        if (source.UpdatedAt != null) {
+            this.UpdatedAt = new String(source.UpdatedAt);
+        }
+        if (source.LastScanRateLimit != null) {
+            this.LastScanRateLimit = new Long(source.LastScanRateLimit);
+        }
+        if (source.LastScanVulsNum != null) {
+            this.LastScanVulsNum = new Long(source.LastScanVulsNum);
+        }
+        if (source.LastScanNoticeNum != null) {
+            this.LastScanNoticeNum = new Long(source.LastScanNoticeNum);
+        }
+        if (source.Progress != null) {
+            this.Progress = new Long(source.Progress);
+        }
+        if (source.Appid != null) {
+            this.Appid = new Long(source.Appid);
+        }
+        if (source.Uin != null) {
+            this.Uin = new String(source.Uin);
+        }
+        if (source.NeedLogin != null) {
+            this.NeedLogin = new Long(source.NeedLogin);
+        }
+        if (source.LoginCookie != null) {
+            this.LoginCookie = new String(source.LoginCookie);
+        }
+        if (source.LoginCookieValid != null) {
+            this.LoginCookieValid = new Long(source.LoginCookieValid);
+        }
+        if (source.LoginCheckUrl != null) {
+            this.LoginCheckUrl = new String(source.LoginCheckUrl);
+        }
+        if (source.LoginCheckKw != null) {
+            this.LoginCheckKw = new String(source.LoginCheckKw);
+        }
+        if (source.ScanDisallow != null) {
+            this.ScanDisallow = new String(source.ScanDisallow);
+        }
+        if (source.UserAgent != null) {
+            this.UserAgent = new String(source.UserAgent);
+        }
+        if (source.ContentStatus != null) {
+            this.ContentStatus = new Long(source.ContentStatus);
+        }
+        if (source.LastScanContentNum != null) {
+            this.LastScanContentNum = new Long(source.LastScanContentNum);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

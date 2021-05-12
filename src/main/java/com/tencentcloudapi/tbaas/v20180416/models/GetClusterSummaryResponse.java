@@ -390,6 +390,65 @@ public class GetClusterSummaryResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public GetClusterSummaryResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GetClusterSummaryResponse(GetClusterSummaryResponse source) {
+        if (source.TotalChannelCount != null) {
+            this.TotalChannelCount = new Long(source.TotalChannelCount);
+        }
+        if (source.MyChannelCount != null) {
+            this.MyChannelCount = new Long(source.MyChannelCount);
+        }
+        if (source.JoinChannelCount != null) {
+            this.JoinChannelCount = new Long(source.JoinChannelCount);
+        }
+        if (source.TotalPeerCount != null) {
+            this.TotalPeerCount = new Long(source.TotalPeerCount);
+        }
+        if (source.MyPeerCount != null) {
+            this.MyPeerCount = new Long(source.MyPeerCount);
+        }
+        if (source.OrderCount != null) {
+            this.OrderCount = new Long(source.OrderCount);
+        }
+        if (source.TotalGroupCount != null) {
+            this.TotalGroupCount = new Long(source.TotalGroupCount);
+        }
+        if (source.MyGroupCount != null) {
+            this.MyGroupCount = new Long(source.MyGroupCount);
+        }
+        if (source.TotalChaincodeCount != null) {
+            this.TotalChaincodeCount = new Long(source.TotalChaincodeCount);
+        }
+        if (source.RecentChaincodeCount != null) {
+            this.RecentChaincodeCount = new Long(source.RecentChaincodeCount);
+        }
+        if (source.MyChaincodeCount != null) {
+            this.MyChaincodeCount = new Long(source.MyChaincodeCount);
+        }
+        if (source.TotalCertCount != null) {
+            this.TotalCertCount = new Long(source.TotalCertCount);
+        }
+        if (source.TlsCertCount != null) {
+            this.TlsCertCount = new Long(source.TlsCertCount);
+        }
+        if (source.PeerCertCount != null) {
+            this.PeerCertCount = new Long(source.PeerCertCount);
+        }
+        if (source.ClientCertCount != null) {
+            this.ClientCertCount = new Long(source.ClientCertCount);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

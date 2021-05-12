@@ -459,6 +459,74 @@ public class RegisterBillRequest extends AbstractModel{
         this.MidasEnvironment = MidasEnvironment;
     }
 
+    public RegisterBillRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RegisterBillRequest(RegisterBillRequest source) {
+        if (source.RequestType != null) {
+            this.RequestType = new String(source.RequestType);
+        }
+        if (source.MerchantCode != null) {
+            this.MerchantCode = new String(source.MerchantCode);
+        }
+        if (source.PayChannel != null) {
+            this.PayChannel = new String(source.PayChannel);
+        }
+        if (source.PayChannelSubId != null) {
+            this.PayChannelSubId = new Long(source.PayChannelSubId);
+        }
+        if (source.OrderId != null) {
+            this.OrderId = new String(source.OrderId);
+        }
+        if (source.BankAccountNo != null) {
+            this.BankAccountNo = new String(source.BankAccountNo);
+        }
+        if (source.PlatformShortNo != null) {
+            this.PlatformShortNo = new String(source.PlatformShortNo);
+        }
+        if (source.MidasSecretId != null) {
+            this.MidasSecretId = new String(source.MidasSecretId);
+        }
+        if (source.MidasAppId != null) {
+            this.MidasAppId = new String(source.MidasAppId);
+        }
+        if (source.MidasSignature != null) {
+            this.MidasSignature = new String(source.MidasSignature);
+        }
+        if (source.TransSeqNo != null) {
+            this.TransSeqNo = new String(source.TransSeqNo);
+        }
+        if (source.TranFee != null) {
+            this.TranFee = new String(source.TranFee);
+        }
+        if (source.OrderAmt != null) {
+            this.OrderAmt = new String(source.OrderAmt);
+        }
+        if (source.BankSubAccountNo != null) {
+            this.BankSubAccountNo = new String(source.BankSubAccountNo);
+        }
+        if (source.TranNetMemberCode != null) {
+            this.TranNetMemberCode = new String(source.TranNetMemberCode);
+        }
+        if (source.TranType != null) {
+            this.TranType = new String(source.TranType);
+        }
+        if (source.ReservedMessage != null) {
+            this.ReservedMessage = new String(source.ReservedMessage);
+        }
+        if (source.Remark != null) {
+            this.Remark = new String(source.Remark);
+        }
+        if (source.MidasEnvironment != null) {
+            this.MidasEnvironment = new String(source.MidasEnvironment);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

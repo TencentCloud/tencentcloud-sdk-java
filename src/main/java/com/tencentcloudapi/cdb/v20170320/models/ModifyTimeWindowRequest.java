@@ -91,6 +91,32 @@ public class ModifyTimeWindowRequest extends AbstractModel{
         this.Weekdays = Weekdays;
     }
 
+    public ModifyTimeWindowRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyTimeWindowRequest(ModifyTimeWindowRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.TimeRanges != null) {
+            this.TimeRanges = new String[source.TimeRanges.length];
+            for (int i = 0; i < source.TimeRanges.length; i++) {
+                this.TimeRanges[i] = new String(source.TimeRanges[i]);
+            }
+        }
+        if (source.Weekdays != null) {
+            this.Weekdays = new String[source.Weekdays.length];
+            for (int i = 0; i < source.Weekdays.length; i++) {
+                this.Weekdays[i] = new String(source.Weekdays[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

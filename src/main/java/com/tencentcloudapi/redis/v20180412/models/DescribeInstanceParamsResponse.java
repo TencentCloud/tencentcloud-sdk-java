@@ -160,6 +160,47 @@ public class DescribeInstanceParamsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeInstanceParamsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeInstanceParamsResponse(DescribeInstanceParamsResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.InstanceEnumParam != null) {
+            this.InstanceEnumParam = new InstanceEnumParam[source.InstanceEnumParam.length];
+            for (int i = 0; i < source.InstanceEnumParam.length; i++) {
+                this.InstanceEnumParam[i] = new InstanceEnumParam(source.InstanceEnumParam[i]);
+            }
+        }
+        if (source.InstanceIntegerParam != null) {
+            this.InstanceIntegerParam = new InstanceIntegerParam[source.InstanceIntegerParam.length];
+            for (int i = 0; i < source.InstanceIntegerParam.length; i++) {
+                this.InstanceIntegerParam[i] = new InstanceIntegerParam(source.InstanceIntegerParam[i]);
+            }
+        }
+        if (source.InstanceTextParam != null) {
+            this.InstanceTextParam = new InstanceTextParam[source.InstanceTextParam.length];
+            for (int i = 0; i < source.InstanceTextParam.length; i++) {
+                this.InstanceTextParam[i] = new InstanceTextParam(source.InstanceTextParam[i]);
+            }
+        }
+        if (source.InstanceMultiParam != null) {
+            this.InstanceMultiParam = new InstanceMultiParam[source.InstanceMultiParam.length];
+            for (int i = 0; i < source.InstanceMultiParam.length; i++) {
+                this.InstanceMultiParam[i] = new InstanceMultiParam(source.InstanceMultiParam[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

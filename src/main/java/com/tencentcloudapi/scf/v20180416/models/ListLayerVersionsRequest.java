@@ -68,6 +68,26 @@ public class ListLayerVersionsRequest extends AbstractModel{
         this.CompatibleRuntime = CompatibleRuntime;
     }
 
+    public ListLayerVersionsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ListLayerVersionsRequest(ListLayerVersionsRequest source) {
+        if (source.LayerName != null) {
+            this.LayerName = new String(source.LayerName);
+        }
+        if (source.CompatibleRuntime != null) {
+            this.CompatibleRuntime = new String[source.CompatibleRuntime.length];
+            for (int i = 0; i < source.CompatibleRuntime.length; i++) {
+                this.CompatibleRuntime[i] = new String(source.CompatibleRuntime[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

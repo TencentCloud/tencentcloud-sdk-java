@@ -492,6 +492,86 @@ public class VpnConnection extends AbstractModel{
         this.SourceCidr = SourceCidr;
     }
 
+    public VpnConnection() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public VpnConnection(VpnConnection source) {
+        if (source.VpnConnectionId != null) {
+            this.VpnConnectionId = new String(source.VpnConnectionId);
+        }
+        if (source.VpnConnectionName != null) {
+            this.VpnConnectionName = new String(source.VpnConnectionName);
+        }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.VpnGatewayId != null) {
+            this.VpnGatewayId = new String(source.VpnGatewayId);
+        }
+        if (source.CustomerGatewayId != null) {
+            this.CustomerGatewayId = new String(source.CustomerGatewayId);
+        }
+        if (source.PreShareKey != null) {
+            this.PreShareKey = new String(source.PreShareKey);
+        }
+        if (source.VpnProto != null) {
+            this.VpnProto = new String(source.VpnProto);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.State != null) {
+            this.State = new String(source.State);
+        }
+        if (source.NetStatus != null) {
+            this.NetStatus = new String(source.NetStatus);
+        }
+        if (source.SecurityPolicyDatabaseSet != null) {
+            this.SecurityPolicyDatabaseSet = new SecurityPolicyDatabase[source.SecurityPolicyDatabaseSet.length];
+            for (int i = 0; i < source.SecurityPolicyDatabaseSet.length; i++) {
+                this.SecurityPolicyDatabaseSet[i] = new SecurityPolicyDatabase(source.SecurityPolicyDatabaseSet[i]);
+            }
+        }
+        if (source.IKEOptionsSpecification != null) {
+            this.IKEOptionsSpecification = new IKEOptionsSpecification(source.IKEOptionsSpecification);
+        }
+        if (source.IPSECOptionsSpecification != null) {
+            this.IPSECOptionsSpecification = new IPSECOptionsSpecification(source.IPSECOptionsSpecification);
+        }
+        if (source.Zone != null) {
+            this.Zone = new String(source.Zone);
+        }
+        if (source.VpcCidrBlock != null) {
+            this.VpcCidrBlock = new String(source.VpcCidrBlock);
+        }
+        if (source.VpcName != null) {
+            this.VpcName = new String(source.VpcName);
+        }
+        if (source.VpnGatewayName != null) {
+            this.VpnGatewayName = new String(source.VpnGatewayName);
+        }
+        if (source.CustomerGatewayName != null) {
+            this.CustomerGatewayName = new String(source.CustomerGatewayName);
+        }
+        if (source.DestinationCidr != null) {
+            this.DestinationCidr = new String[source.DestinationCidr.length];
+            for (int i = 0; i < source.DestinationCidr.length; i++) {
+                this.DestinationCidr[i] = new String(source.DestinationCidr[i]);
+            }
+        }
+        if (source.SourceCidr != null) {
+            this.SourceCidr = new String[source.SourceCidr.length];
+            for (int i = 0; i < source.SourceCidr.length; i++) {
+                this.SourceCidr[i] = new String(source.SourceCidr[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

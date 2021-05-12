@@ -50,6 +50,20 @@ public class TaskId extends AbstractModel{
         this.TaskId = TaskId;
     }
 
+    public TaskId() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TaskId(TaskId source) {
+        if (source.TaskId != null) {
+            this.TaskId = new String(source.TaskId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

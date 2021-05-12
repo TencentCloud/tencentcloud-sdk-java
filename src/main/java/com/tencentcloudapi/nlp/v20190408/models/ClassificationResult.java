@@ -292,6 +292,47 @@ public class ClassificationResult extends AbstractModel{
         this.FifthClassProbability = FifthClassProbability;
     }
 
+    public ClassificationResult() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ClassificationResult(ClassificationResult source) {
+        if (source.FirstClassName != null) {
+            this.FirstClassName = new String(source.FirstClassName);
+        }
+        if (source.SecondClassName != null) {
+            this.SecondClassName = new String(source.SecondClassName);
+        }
+        if (source.FirstClassProbability != null) {
+            this.FirstClassProbability = new Float(source.FirstClassProbability);
+        }
+        if (source.SecondClassProbability != null) {
+            this.SecondClassProbability = new Float(source.SecondClassProbability);
+        }
+        if (source.ThirdClassName != null) {
+            this.ThirdClassName = new String(source.ThirdClassName);
+        }
+        if (source.ThirdClassProbability != null) {
+            this.ThirdClassProbability = new Float(source.ThirdClassProbability);
+        }
+        if (source.FourthClassName != null) {
+            this.FourthClassName = new String(source.FourthClassName);
+        }
+        if (source.FourthClassProbability != null) {
+            this.FourthClassProbability = new Float(source.FourthClassProbability);
+        }
+        if (source.FifthClassName != null) {
+            this.FifthClassName = new String(source.FifthClassName);
+        }
+        if (source.FifthClassProbability != null) {
+            this.FifthClassProbability = new Float(source.FifthClassProbability);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -160,6 +160,53 @@ public class AdInfo extends AbstractModel{
         this.NotifyBars = NotifyBars;
     }
 
+    public AdInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AdInfo(AdInfo source) {
+        if (source.Spots != null) {
+            this.Spots = new PluginInfo[source.Spots.length];
+            for (int i = 0; i < source.Spots.length; i++) {
+                this.Spots[i] = new PluginInfo(source.Spots[i]);
+            }
+        }
+        if (source.BoutiqueRecommands != null) {
+            this.BoutiqueRecommands = new PluginInfo[source.BoutiqueRecommands.length];
+            for (int i = 0; i < source.BoutiqueRecommands.length; i++) {
+                this.BoutiqueRecommands[i] = new PluginInfo(source.BoutiqueRecommands[i]);
+            }
+        }
+        if (source.FloatWindowses != null) {
+            this.FloatWindowses = new PluginInfo[source.FloatWindowses.length];
+            for (int i = 0; i < source.FloatWindowses.length; i++) {
+                this.FloatWindowses[i] = new PluginInfo(source.FloatWindowses[i]);
+            }
+        }
+        if (source.Banners != null) {
+            this.Banners = new PluginInfo[source.Banners.length];
+            for (int i = 0; i < source.Banners.length; i++) {
+                this.Banners[i] = new PluginInfo(source.Banners[i]);
+            }
+        }
+        if (source.IntegralWalls != null) {
+            this.IntegralWalls = new PluginInfo[source.IntegralWalls.length];
+            for (int i = 0; i < source.IntegralWalls.length; i++) {
+                this.IntegralWalls[i] = new PluginInfo(source.IntegralWalls[i]);
+            }
+        }
+        if (source.NotifyBars != null) {
+            this.NotifyBars = new PluginInfo[source.NotifyBars.length];
+            for (int i = 0; i < source.NotifyBars.length; i++) {
+                this.NotifyBars[i] = new PluginInfo(source.NotifyBars[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

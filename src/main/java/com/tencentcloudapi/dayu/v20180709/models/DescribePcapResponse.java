@@ -68,6 +68,26 @@ public class DescribePcapResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribePcapResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribePcapResponse(DescribePcapResponse source) {
+        if (source.PcapUrlList != null) {
+            this.PcapUrlList = new String[source.PcapUrlList.length];
+            for (int i = 0; i < source.PcapUrlList.length; i++) {
+                this.PcapUrlList[i] = new String(source.PcapUrlList[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -321,6 +321,56 @@ public class CreateL7Listener extends AbstractModel{
         this.ForwardProtocol = ForwardProtocol;
     }
 
+    public CreateL7Listener() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateL7Listener(CreateL7Listener source) {
+        if (source.LoadBalancerPort != null) {
+            this.LoadBalancerPort = new Long(source.LoadBalancerPort);
+        }
+        if (source.Protocol != null) {
+            this.Protocol = new String(source.Protocol);
+        }
+        if (source.ListenerName != null) {
+            this.ListenerName = new String(source.ListenerName);
+        }
+        if (source.SslMode != null) {
+            this.SslMode = new Long(source.SslMode);
+        }
+        if (source.CertId != null) {
+            this.CertId = new String(source.CertId);
+        }
+        if (source.CertName != null) {
+            this.CertName = new String(source.CertName);
+        }
+        if (source.CertContent != null) {
+            this.CertContent = new String(source.CertContent);
+        }
+        if (source.CertKey != null) {
+            this.CertKey = new String(source.CertKey);
+        }
+        if (source.CertCaId != null) {
+            this.CertCaId = new String(source.CertCaId);
+        }
+        if (source.CertCaName != null) {
+            this.CertCaName = new String(source.CertCaName);
+        }
+        if (source.CertCaContent != null) {
+            this.CertCaContent = new String(source.CertCaContent);
+        }
+        if (source.Bandwidth != null) {
+            this.Bandwidth = new Long(source.Bandwidth);
+        }
+        if (source.ForwardProtocol != null) {
+            this.ForwardProtocol = new Long(source.ForwardProtocol);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

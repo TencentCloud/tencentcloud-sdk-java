@@ -68,6 +68,23 @@ public class MediaRecognitionInfo extends AbstractModel{
         this.SubtitleRec = SubtitleRec;
     }
 
+    public MediaRecognitionInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MediaRecognitionInfo(MediaRecognitionInfo source) {
+        if (source.FrameTagRec != null) {
+            this.FrameTagRec = new FrameTagRec(source.FrameTagRec);
+        }
+        if (source.SubtitleRec != null) {
+            this.SubtitleRec = new SubtitleRec(source.SubtitleRec);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

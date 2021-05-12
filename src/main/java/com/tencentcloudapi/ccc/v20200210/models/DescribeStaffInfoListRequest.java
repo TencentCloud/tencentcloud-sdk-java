@@ -137,6 +137,32 @@ public class DescribeStaffInfoListRequest extends AbstractModel{
         this.ModifiedTime = ModifiedTime;
     }
 
+    public DescribeStaffInfoListRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeStaffInfoListRequest(DescribeStaffInfoListRequest source) {
+        if (source.SdkAppId != null) {
+            this.SdkAppId = new Long(source.SdkAppId);
+        }
+        if (source.PageSize != null) {
+            this.PageSize = new Long(source.PageSize);
+        }
+        if (source.PageNumber != null) {
+            this.PageNumber = new Long(source.PageNumber);
+        }
+        if (source.StaffMail != null) {
+            this.StaffMail = new String(source.StaffMail);
+        }
+        if (source.ModifiedTime != null) {
+            this.ModifiedTime = new Long(source.ModifiedTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

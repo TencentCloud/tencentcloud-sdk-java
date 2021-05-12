@@ -68,6 +68,23 @@ public class DBRemark extends AbstractModel{
         this.Remark = Remark;
     }
 
+    public DBRemark() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DBRemark(DBRemark source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Remark != null) {
+            this.Remark = new String(source.Remark);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

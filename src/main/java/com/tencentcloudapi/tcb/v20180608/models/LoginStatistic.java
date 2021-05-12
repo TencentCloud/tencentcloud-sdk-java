@@ -134,6 +134,29 @@ public class LoginStatistic extends AbstractModel{
         this.UpdateTime = UpdateTime;
     }
 
+    public LoginStatistic() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public LoginStatistic(LoginStatistic source) {
+        if (source.StatisticalType != null) {
+            this.StatisticalType = new String(source.StatisticalType);
+        }
+        if (source.StatisticalCycle != null) {
+            this.StatisticalCycle = new String(source.StatisticalCycle);
+        }
+        if (source.Count != null) {
+            this.Count = new Long(source.Count);
+        }
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new String(source.UpdateTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

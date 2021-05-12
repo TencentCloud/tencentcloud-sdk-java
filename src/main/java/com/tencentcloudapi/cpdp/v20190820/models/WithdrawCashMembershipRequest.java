@@ -344,6 +344,59 @@ public class WithdrawCashMembershipRequest extends AbstractModel{
         this.Profile = Profile;
     }
 
+    public WithdrawCashMembershipRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public WithdrawCashMembershipRequest(WithdrawCashMembershipRequest source) {
+        if (source.MrchCode != null) {
+            this.MrchCode = new String(source.MrchCode);
+        }
+        if (source.TranWebName != null) {
+            this.TranWebName = new String(source.TranWebName);
+        }
+        if (source.MemberGlobalType != null) {
+            this.MemberGlobalType = new String(source.MemberGlobalType);
+        }
+        if (source.MemberGlobalId != null) {
+            this.MemberGlobalId = new String(source.MemberGlobalId);
+        }
+        if (source.TranNetMemberCode != null) {
+            this.TranNetMemberCode = new String(source.TranNetMemberCode);
+        }
+        if (source.MemberName != null) {
+            this.MemberName = new String(source.MemberName);
+        }
+        if (source.TakeCashAcctNo != null) {
+            this.TakeCashAcctNo = new String(source.TakeCashAcctNo);
+        }
+        if (source.OutAmtAcctName != null) {
+            this.OutAmtAcctName = new String(source.OutAmtAcctName);
+        }
+        if (source.Ccy != null) {
+            this.Ccy = new String(source.Ccy);
+        }
+        if (source.CashAmt != null) {
+            this.CashAmt = new String(source.CashAmt);
+        }
+        if (source.Remark != null) {
+            this.Remark = new String(source.Remark);
+        }
+        if (source.ReservedMsg != null) {
+            this.ReservedMsg = new String(source.ReservedMsg);
+        }
+        if (source.WebSign != null) {
+            this.WebSign = new String(source.WebSign);
+        }
+        if (source.Profile != null) {
+            this.Profile = new String(source.Profile);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

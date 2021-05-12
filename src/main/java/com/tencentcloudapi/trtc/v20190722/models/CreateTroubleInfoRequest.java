@@ -246,6 +246,41 @@ public class CreateTroubleInfoRequest extends AbstractModel{
         this.TroubleMsg = TroubleMsg;
     }
 
+    public CreateTroubleInfoRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateTroubleInfoRequest(CreateTroubleInfoRequest source) {
+        if (source.SdkAppId != null) {
+            this.SdkAppId = new String(source.SdkAppId);
+        }
+        if (source.RoomId != null) {
+            this.RoomId = new String(source.RoomId);
+        }
+        if (source.TeacherUserId != null) {
+            this.TeacherUserId = new String(source.TeacherUserId);
+        }
+        if (source.StudentUserId != null) {
+            this.StudentUserId = new String(source.StudentUserId);
+        }
+        if (source.TroubleUserId != null) {
+            this.TroubleUserId = new String(source.TroubleUserId);
+        }
+        if (source.TroubleType != null) {
+            this.TroubleType = new Long(source.TroubleType);
+        }
+        if (source.TroubleTime != null) {
+            this.TroubleTime = new Long(source.TroubleTime);
+        }
+        if (source.TroubleMsg != null) {
+            this.TroubleMsg = new String(source.TroubleMsg);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

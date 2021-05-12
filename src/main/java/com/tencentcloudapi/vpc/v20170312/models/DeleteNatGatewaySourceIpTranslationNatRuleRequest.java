@@ -68,6 +68,26 @@ public class DeleteNatGatewaySourceIpTranslationNatRuleRequest extends AbstractM
         this.NatGatewaySnatIds = NatGatewaySnatIds;
     }
 
+    public DeleteNatGatewaySourceIpTranslationNatRuleRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteNatGatewaySourceIpTranslationNatRuleRequest(DeleteNatGatewaySourceIpTranslationNatRuleRequest source) {
+        if (source.NatGatewayId != null) {
+            this.NatGatewayId = new String(source.NatGatewayId);
+        }
+        if (source.NatGatewaySnatIds != null) {
+            this.NatGatewaySnatIds = new String[source.NatGatewaySnatIds.length];
+            for (int i = 0; i < source.NatGatewaySnatIds.length; i++) {
+                this.NatGatewaySnatIds[i] = new String(source.NatGatewaySnatIds[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

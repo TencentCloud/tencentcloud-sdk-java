@@ -91,6 +91,26 @@ public class DeleteClsLogTopicRequest extends AbstractModel{
         this.Channel = Channel;
     }
 
+    public DeleteClsLogTopicRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteClsLogTopicRequest(DeleteClsLogTopicRequest source) {
+        if (source.TopicId != null) {
+            this.TopicId = new String(source.TopicId);
+        }
+        if (source.LogsetId != null) {
+            this.LogsetId = new String(source.LogsetId);
+        }
+        if (source.Channel != null) {
+            this.Channel = new String(source.Channel);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -160,6 +160,38 @@ public class ModifyBackupMigrationRequest extends AbstractModel{
         this.BackupFiles = BackupFiles;
     }
 
+    public ModifyBackupMigrationRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyBackupMigrationRequest(ModifyBackupMigrationRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.BackupMigrationId != null) {
+            this.BackupMigrationId = new String(source.BackupMigrationId);
+        }
+        if (source.MigrationName != null) {
+            this.MigrationName = new String(source.MigrationName);
+        }
+        if (source.RecoveryType != null) {
+            this.RecoveryType = new String(source.RecoveryType);
+        }
+        if (source.UploadType != null) {
+            this.UploadType = new String(source.UploadType);
+        }
+        if (source.BackupFiles != null) {
+            this.BackupFiles = new String[source.BackupFiles.length];
+            for (int i = 0; i < source.BackupFiles.length; i++) {
+                this.BackupFiles[i] = new String(source.BackupFiles[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

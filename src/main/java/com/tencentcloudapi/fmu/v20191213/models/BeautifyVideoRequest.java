@@ -91,6 +91,29 @@ public class BeautifyVideoRequest extends AbstractModel{
         this.OutputVideoType = OutputVideoType;
     }
 
+    public BeautifyVideoRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public BeautifyVideoRequest(BeautifyVideoRequest source) {
+        if (source.Url != null) {
+            this.Url = new String(source.Url);
+        }
+        if (source.BeautyParam != null) {
+            this.BeautyParam = new BeautyParam[source.BeautyParam.length];
+            for (int i = 0; i < source.BeautyParam.length; i++) {
+                this.BeautyParam[i] = new BeautyParam(source.BeautyParam[i]);
+            }
+        }
+        if (source.OutputVideoType != null) {
+            this.OutputVideoType = new String(source.OutputVideoType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

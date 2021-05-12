@@ -229,6 +229,44 @@ public class DownloadInfo extends AbstractModel{
         this.FirstDownload = FirstDownload;
     }
 
+    public DownloadInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DownloadInfo(DownloadInfo source) {
+        if (source.ImageInfo != null) {
+            this.ImageInfo = new ImageInfo(source.ImageInfo);
+        }
+        if (source.ImageUrl != null) {
+            this.ImageUrl = new String(source.ImageUrl);
+        }
+        if (source.ImageThumbUrl != null) {
+            this.ImageThumbUrl = new String(source.ImageThumbUrl);
+        }
+        if (source.OrderId != null) {
+            this.OrderId = new String(source.OrderId);
+        }
+        if (source.OrderCreateTime != null) {
+            this.OrderCreateTime = new String(source.OrderCreateTime);
+        }
+        if (source.DownloadId != null) {
+            this.DownloadId = new String(source.DownloadId);
+        }
+        if (source.DownloadTime != null) {
+            this.DownloadTime = new String(source.DownloadTime);
+        }
+        if (source.ConsumeType != null) {
+            this.ConsumeType = new Long(source.ConsumeType);
+        }
+        if (source.FirstDownload != null) {
+            this.FirstDownload = new Boolean(source.FirstDownload);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

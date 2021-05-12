@@ -68,6 +68,26 @@ public class DetailInfo extends AbstractModel{
         this.Keyword = Keyword;
     }
 
+    public DetailInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DetailInfo(DetailInfo source) {
+        if (source.Value != null) {
+            this.Value = new WordTimePair[source.Value.length];
+            for (int i = 0; i < source.Value.length; i++) {
+                this.Value[i] = new WordTimePair(source.Value[i]);
+            }
+        }
+        if (source.Keyword != null) {
+            this.Keyword = new String(source.Keyword);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

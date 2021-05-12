@@ -152,6 +152,35 @@ public class DescribeCallerDisplayListResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeCallerDisplayListResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeCallerDisplayListResponse(DescribeCallerDisplayListResponse source) {
+        if (source.AppId != null) {
+            this.AppId = new String(source.AppId);
+        }
+        if (source.CodeList != null) {
+            this.CodeList = new CallBackPhoneCode[source.CodeList.length];
+            for (int i = 0; i < source.CodeList.length; i++) {
+                this.CodeList[i] = new CallBackPhoneCode(source.CodeList[i]);
+            }
+        }
+        if (source.ErrorCode != null) {
+            this.ErrorCode = new String(source.ErrorCode);
+        }
+        if (source.Msg != null) {
+            this.Msg = new String(source.Msg);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

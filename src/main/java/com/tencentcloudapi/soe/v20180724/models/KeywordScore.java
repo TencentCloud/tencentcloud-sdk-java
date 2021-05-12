@@ -165,6 +165,38 @@ public class KeywordScore extends AbstractModel{
         this.SuggestedScore = SuggestedScore;
     }
 
+    public KeywordScore() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public KeywordScore(KeywordScore source) {
+        if (source.Keyword != null) {
+            this.Keyword = new String(source.Keyword);
+        }
+        if (source.PronAccuracy != null) {
+            this.PronAccuracy = new Float(source.PronAccuracy);
+        }
+        if (source.PronFluency != null) {
+            this.PronFluency = new Float(source.PronFluency);
+        }
+        if (source.PronCompletion != null) {
+            this.PronCompletion = new Float(source.PronCompletion);
+        }
+        if (source.Words != null) {
+            this.Words = new WordRsp[source.Words.length];
+            for (int i = 0; i < source.Words.length; i++) {
+                this.Words[i] = new WordRsp(source.Words[i]);
+            }
+        }
+        if (source.SuggestedScore != null) {
+            this.SuggestedScore = new Float(source.SuggestedScore);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

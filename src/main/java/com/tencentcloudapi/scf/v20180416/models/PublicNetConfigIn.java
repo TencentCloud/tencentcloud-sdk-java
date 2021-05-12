@@ -68,6 +68,23 @@ public class PublicNetConfigIn extends AbstractModel{
         this.EipConfig = EipConfig;
     }
 
+    public PublicNetConfigIn() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PublicNetConfigIn(PublicNetConfigIn source) {
+        if (source.PublicNetStatus != null) {
+            this.PublicNetStatus = new String(source.PublicNetStatus);
+        }
+        if (source.EipConfig != null) {
+            this.EipConfig = new EipConfigIn(source.EipConfig);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

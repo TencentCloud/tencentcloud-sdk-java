@@ -165,6 +165,35 @@ public class ApiRequestDescr extends AbstractModel{
         this.DefaultValue = DefaultValue;
     }
 
+    public ApiRequestDescr() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ApiRequestDescr(ApiRequestDescr source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.In != null) {
+            this.In = new String(source.In);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.Required != null) {
+            this.Required = new Boolean(source.Required);
+        }
+        if (source.DefaultValue != null) {
+            this.DefaultValue = new String(source.DefaultValue);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -208,6 +208,38 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
         this.RspImgType = RspImgType;
     }
 
+    public BeautifyPicRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public BeautifyPicRequest(BeautifyPicRequest source) {
+        if (source.Image != null) {
+            this.Image = new String(source.Image);
+        }
+        if (source.Url != null) {
+            this.Url = new String(source.Url);
+        }
+        if (source.Whitening != null) {
+            this.Whitening = new Long(source.Whitening);
+        }
+        if (source.Smoothing != null) {
+            this.Smoothing = new Long(source.Smoothing);
+        }
+        if (source.FaceLifting != null) {
+            this.FaceLifting = new Long(source.FaceLifting);
+        }
+        if (source.EyeEnlarging != null) {
+            this.EyeEnlarging = new Long(source.EyeEnlarging);
+        }
+        if (source.RspImgType != null) {
+            this.RspImgType = new String(source.RspImgType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

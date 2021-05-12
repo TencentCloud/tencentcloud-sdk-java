@@ -91,6 +91,29 @@ public class DescribeEnvironmentRolesResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeEnvironmentRolesResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeEnvironmentRolesResponse(DescribeEnvironmentRolesResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.EnvironmentRoleSets != null) {
+            this.EnvironmentRoleSets = new EnvironmentRole[source.EnvironmentRoleSets.length];
+            for (int i = 0; i < source.EnvironmentRoleSets.length; i++) {
+                this.EnvironmentRoleSets[i] = new EnvironmentRole(source.EnvironmentRoleSets[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

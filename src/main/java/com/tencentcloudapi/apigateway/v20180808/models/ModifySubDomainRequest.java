@@ -206,6 +206,44 @@ public class ModifySubDomainRequest extends AbstractModel{
         this.IsForcedHttps = IsForcedHttps;
     }
 
+    public ModifySubDomainRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifySubDomainRequest(ModifySubDomainRequest source) {
+        if (source.ServiceId != null) {
+            this.ServiceId = new String(source.ServiceId);
+        }
+        if (source.SubDomain != null) {
+            this.SubDomain = new String(source.SubDomain);
+        }
+        if (source.IsDefaultMapping != null) {
+            this.IsDefaultMapping = new Boolean(source.IsDefaultMapping);
+        }
+        if (source.CertificateId != null) {
+            this.CertificateId = new String(source.CertificateId);
+        }
+        if (source.Protocol != null) {
+            this.Protocol = new String(source.Protocol);
+        }
+        if (source.PathMappingSet != null) {
+            this.PathMappingSet = new PathMapping[source.PathMappingSet.length];
+            for (int i = 0; i < source.PathMappingSet.length; i++) {
+                this.PathMappingSet[i] = new PathMapping(source.PathMappingSet[i]);
+            }
+        }
+        if (source.NetType != null) {
+            this.NetType = new String(source.NetType);
+        }
+        if (source.IsForcedHttps != null) {
+            this.IsForcedHttps = new Boolean(source.IsForcedHttps);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

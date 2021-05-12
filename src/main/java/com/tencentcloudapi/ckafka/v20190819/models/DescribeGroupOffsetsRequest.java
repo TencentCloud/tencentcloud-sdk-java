@@ -160,6 +160,38 @@ public class DescribeGroupOffsetsRequest extends AbstractModel{
         this.Limit = Limit;
     }
 
+    public DescribeGroupOffsetsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeGroupOffsetsRequest(DescribeGroupOffsetsRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.Group != null) {
+            this.Group = new String(source.Group);
+        }
+        if (source.Topics != null) {
+            this.Topics = new String[source.Topics.length];
+            for (int i = 0; i < source.Topics.length; i++) {
+                this.Topics[i] = new String(source.Topics[i]);
+            }
+        }
+        if (source.SearchWord != null) {
+            this.SearchWord = new String(source.SearchWord);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

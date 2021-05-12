@@ -114,6 +114,29 @@ public class DownloadHelmChartRequest extends AbstractModel{
         this.ChartVersion = ChartVersion;
     }
 
+    public DownloadHelmChartRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DownloadHelmChartRequest(DownloadHelmChartRequest source) {
+        if (source.RegistryId != null) {
+            this.RegistryId = new String(source.RegistryId);
+        }
+        if (source.NamespaceName != null) {
+            this.NamespaceName = new String(source.NamespaceName);
+        }
+        if (source.ChartName != null) {
+            this.ChartName = new String(source.ChartName);
+        }
+        if (source.ChartVersion != null) {
+            this.ChartVersion = new String(source.ChartVersion);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -68,6 +68,23 @@ public class DescribeBRIRequest extends AbstractModel{
         this.ResourceId = ResourceId;
     }
 
+    public DescribeBRIRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeBRIRequest(DescribeBRIRequest source) {
+        if (source.RequestData != null) {
+            this.RequestData = new BRIRequest(source.RequestData);
+        }
+        if (source.ResourceId != null) {
+            this.ResourceId = new String(source.ResourceId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

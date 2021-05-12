@@ -73,6 +73,26 @@ public class ListEmailAddressResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public ListEmailAddressResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ListEmailAddressResponse(ListEmailAddressResponse source) {
+        if (source.EmailSenders != null) {
+            this.EmailSenders = new EmailSender[source.EmailSenders.length];
+            for (int i = 0; i < source.EmailSenders.length; i++) {
+                this.EmailSenders[i] = new EmailSender(source.EmailSenders[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

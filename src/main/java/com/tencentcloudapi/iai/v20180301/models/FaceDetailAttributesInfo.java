@@ -505,6 +505,65 @@ FaceAttributesType 不含 Smile 或检测超过 5 张人脸时，此参数仍返
         this.Smile = Smile;
     }
 
+    public FaceDetailAttributesInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public FaceDetailAttributesInfo(FaceDetailAttributesInfo source) {
+        if (source.Age != null) {
+            this.Age = new Long(source.Age);
+        }
+        if (source.Beauty != null) {
+            this.Beauty = new Long(source.Beauty);
+        }
+        if (source.Emotion != null) {
+            this.Emotion = new AttributeItem(source.Emotion);
+        }
+        if (source.Eye != null) {
+            this.Eye = new Eye(source.Eye);
+        }
+        if (source.Eyebrow != null) {
+            this.Eyebrow = new Eyebrow(source.Eyebrow);
+        }
+        if (source.Gender != null) {
+            this.Gender = new AttributeItem(source.Gender);
+        }
+        if (source.Hair != null) {
+            this.Hair = new Hair(source.Hair);
+        }
+        if (source.Hat != null) {
+            this.Hat = new Hat(source.Hat);
+        }
+        if (source.HeadPose != null) {
+            this.HeadPose = new HeadPose(source.HeadPose);
+        }
+        if (source.Mask != null) {
+            this.Mask = new AttributeItem(source.Mask);
+        }
+        if (source.Mouth != null) {
+            this.Mouth = new Mouth(source.Mouth);
+        }
+        if (source.Moustache != null) {
+            this.Moustache = new AttributeItem(source.Moustache);
+        }
+        if (source.Nose != null) {
+            this.Nose = new AttributeItem(source.Nose);
+        }
+        if (source.Shape != null) {
+            this.Shape = new AttributeItem(source.Shape);
+        }
+        if (source.Skin != null) {
+            this.Skin = new AttributeItem(source.Skin);
+        }
+        if (source.Smile != null) {
+            this.Smile = new Long(source.Smile);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

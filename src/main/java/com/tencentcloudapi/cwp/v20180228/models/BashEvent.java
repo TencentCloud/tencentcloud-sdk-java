@@ -321,6 +321,56 @@ public class BashEvent extends AbstractModel{
         this.MachineName = MachineName;
     }
 
+    public BashEvent() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public BashEvent(BashEvent source) {
+        if (source.Id != null) {
+            this.Id = new Long(source.Id);
+        }
+        if (source.Uuid != null) {
+            this.Uuid = new String(source.Uuid);
+        }
+        if (source.Quuid != null) {
+            this.Quuid = new String(source.Quuid);
+        }
+        if (source.Hostip != null) {
+            this.Hostip = new String(source.Hostip);
+        }
+        if (source.User != null) {
+            this.User = new String(source.User);
+        }
+        if (source.Platform != null) {
+            this.Platform = new Long(source.Platform);
+        }
+        if (source.BashCmd != null) {
+            this.BashCmd = new String(source.BashCmd);
+        }
+        if (source.RuleId != null) {
+            this.RuleId = new Long(source.RuleId);
+        }
+        if (source.RuleName != null) {
+            this.RuleName = new String(source.RuleName);
+        }
+        if (source.RuleLevel != null) {
+            this.RuleLevel = new Long(source.RuleLevel);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.MachineName != null) {
+            this.MachineName = new String(source.MachineName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

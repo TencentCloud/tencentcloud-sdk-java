@@ -91,6 +91,29 @@ public class RollbackTablesResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public RollbackTablesResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RollbackTablesResponse(RollbackTablesResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.TableResults != null) {
+            this.TableResults = new TableRollbackResultNew[source.TableResults.length];
+            for (int i = 0; i < source.TableResults.length; i++) {
+                this.TableResults[i] = new TableRollbackResultNew(source.TableResults[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

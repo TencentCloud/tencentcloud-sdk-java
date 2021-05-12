@@ -68,6 +68,23 @@ public class PeerSet extends AbstractModel{
         this.OrgName = OrgName;
     }
 
+    public PeerSet() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PeerSet(PeerSet source) {
+        if (source.PeerName != null) {
+            this.PeerName = new String(source.PeerName);
+        }
+        if (source.OrgName != null) {
+            this.OrgName = new String(source.OrgName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

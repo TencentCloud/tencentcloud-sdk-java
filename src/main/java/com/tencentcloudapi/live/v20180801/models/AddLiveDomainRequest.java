@@ -197,6 +197,32 @@ public class AddLiveDomainRequest extends AbstractModel{
         this.IsMiniProgramLive = IsMiniProgramLive;
     }
 
+    public AddLiveDomainRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AddLiveDomainRequest(AddLiveDomainRequest source) {
+        if (source.DomainName != null) {
+            this.DomainName = new String(source.DomainName);
+        }
+        if (source.DomainType != null) {
+            this.DomainType = new Long(source.DomainType);
+        }
+        if (source.PlayType != null) {
+            this.PlayType = new Long(source.PlayType);
+        }
+        if (source.IsDelayLive != null) {
+            this.IsDelayLive = new Long(source.IsDelayLive);
+        }
+        if (source.IsMiniProgramLive != null) {
+            this.IsMiniProgramLive = new Long(source.IsMiniProgramLive);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

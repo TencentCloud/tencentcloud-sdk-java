@@ -91,6 +91,26 @@ public class EmailIdentity extends AbstractModel{
         this.SendingEnabled = SendingEnabled;
     }
 
+    public EmailIdentity() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public EmailIdentity(EmailIdentity source) {
+        if (source.IdentityName != null) {
+            this.IdentityName = new String(source.IdentityName);
+        }
+        if (source.IdentityType != null) {
+            this.IdentityType = new String(source.IdentityType);
+        }
+        if (source.SendingEnabled != null) {
+            this.SendingEnabled = new Boolean(source.SendingEnabled);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

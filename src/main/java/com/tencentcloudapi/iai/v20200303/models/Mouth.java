@@ -50,6 +50,20 @@ AttributeItem对应的Type为 —— 0：不张嘴，1：张嘴。
         this.MouthOpen = MouthOpen;
     }
 
+    public Mouth() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Mouth(Mouth source) {
+        if (source.MouthOpen != null) {
+            this.MouthOpen = new AttributeItem(source.MouthOpen);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

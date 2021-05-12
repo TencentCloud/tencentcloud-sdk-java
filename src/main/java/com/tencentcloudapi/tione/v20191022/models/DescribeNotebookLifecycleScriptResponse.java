@@ -170,6 +170,35 @@ public class DescribeNotebookLifecycleScriptResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeNotebookLifecycleScriptResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeNotebookLifecycleScriptResponse(DescribeNotebookLifecycleScriptResponse source) {
+        if (source.NotebookLifecycleScriptsName != null) {
+            this.NotebookLifecycleScriptsName = new String(source.NotebookLifecycleScriptsName);
+        }
+        if (source.CreateScript != null) {
+            this.CreateScript = new String(source.CreateScript);
+        }
+        if (source.StartScript != null) {
+            this.StartScript = new String(source.StartScript);
+        }
+        if (source.CreationTime != null) {
+            this.CreationTime = new String(source.CreationTime);
+        }
+        if (source.LastModifiedTime != null) {
+            this.LastModifiedTime = new String(source.LastModifiedTime);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

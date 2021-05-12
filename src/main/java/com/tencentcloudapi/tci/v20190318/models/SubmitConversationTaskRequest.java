@@ -183,6 +183,41 @@ public class SubmitConversationTaskRequest extends AbstractModel{
         this.VocabLibNameList = VocabLibNameList;
     }
 
+    public SubmitConversationTaskRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SubmitConversationTaskRequest(SubmitConversationTaskRequest source) {
+        if (source.Lang != null) {
+            this.Lang = new Long(source.Lang);
+        }
+        if (source.StudentUrl != null) {
+            this.StudentUrl = new String(source.StudentUrl);
+        }
+        if (source.TeacherUrl != null) {
+            this.TeacherUrl = new String(source.TeacherUrl);
+        }
+        if (source.VoiceEncodeType != null) {
+            this.VoiceEncodeType = new Long(source.VoiceEncodeType);
+        }
+        if (source.VoiceFileType != null) {
+            this.VoiceFileType = new Long(source.VoiceFileType);
+        }
+        if (source.Functions != null) {
+            this.Functions = new Function(source.Functions);
+        }
+        if (source.VocabLibNameList != null) {
+            this.VocabLibNameList = new String[source.VocabLibNameList.length];
+            for (int i = 0; i < source.VocabLibNameList.length; i++) {
+                this.VocabLibNameList[i] = new String(source.VocabLibNameList[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

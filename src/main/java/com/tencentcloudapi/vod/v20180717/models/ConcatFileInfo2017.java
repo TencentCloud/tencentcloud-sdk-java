@@ -147,6 +147,32 @@ public class ConcatFileInfo2017 extends AbstractModel{
         this.FileType = FileType;
     }
 
+    public ConcatFileInfo2017() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ConcatFileInfo2017(ConcatFileInfo2017 source) {
+        if (source.ErrCode != null) {
+            this.ErrCode = new Long(source.ErrCode);
+        }
+        if (source.Message != null) {
+            this.Message = new String(source.Message);
+        }
+        if (source.FileId != null) {
+            this.FileId = new String(source.FileId);
+        }
+        if (source.FileUrl != null) {
+            this.FileUrl = new String(source.FileUrl);
+        }
+        if (source.FileType != null) {
+            this.FileType = new String(source.FileType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

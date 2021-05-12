@@ -298,6 +298,59 @@ public class Container extends AbstractModel{
         this.ContainerId = ContainerId;
     }
 
+    public Container() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Container(Container source) {
+        if (source.Command != null) {
+            this.Command = new String(source.Command);
+        }
+        if (source.Args != null) {
+            this.Args = new String[source.Args.length];
+            for (int i = 0; i < source.Args.length; i++) {
+                this.Args[i] = new String(source.Args[i]);
+            }
+        }
+        if (source.EnvironmentVars != null) {
+            this.EnvironmentVars = new EnvironmentVar[source.EnvironmentVars.length];
+            for (int i = 0; i < source.EnvironmentVars.length; i++) {
+                this.EnvironmentVars[i] = new EnvironmentVar(source.EnvironmentVars[i]);
+            }
+        }
+        if (source.Image != null) {
+            this.Image = new String(source.Image);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Cpu != null) {
+            this.Cpu = new Float(source.Cpu);
+        }
+        if (source.Memory != null) {
+            this.Memory = new Float(source.Memory);
+        }
+        if (source.RestartCount != null) {
+            this.RestartCount = new Long(source.RestartCount);
+        }
+        if (source.CurrentState != null) {
+            this.CurrentState = new ContainerState(source.CurrentState);
+        }
+        if (source.PreviousState != null) {
+            this.PreviousState = new ContainerState(source.PreviousState);
+        }
+        if (source.WorkingDir != null) {
+            this.WorkingDir = new String(source.WorkingDir);
+        }
+        if (source.ContainerId != null) {
+            this.ContainerId = new String(source.ContainerId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

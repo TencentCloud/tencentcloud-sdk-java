@@ -682,6 +682,98 @@ public class MatchInfo extends AbstractModel{
         this.LogStatus = LogStatus;
     }
 
+    public MatchInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MatchInfo(MatchInfo source) {
+        if (source.MatchCode != null) {
+            this.MatchCode = new String(source.MatchCode);
+        }
+        if (source.MatchName != null) {
+            this.MatchName = new String(source.MatchName);
+        }
+        if (source.MatchDesc != null) {
+            this.MatchDesc = new String(source.MatchDesc);
+        }
+        if (source.RuleCode != null) {
+            this.RuleCode = new String(source.RuleCode);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.Timeout != null) {
+            this.Timeout = new Long(source.Timeout);
+        }
+        if (source.NotifyUrl != null) {
+            this.NotifyUrl = new String(source.NotifyUrl);
+        }
+        if (source.ServerType != null) {
+            this.ServerType = new Long(source.ServerType);
+        }
+        if (source.ServerRegion != null) {
+            this.ServerRegion = new String(source.ServerRegion);
+        }
+        if (source.ServerQueue != null) {
+            this.ServerQueue = new String(source.ServerQueue);
+        }
+        if (source.CustomPushData != null) {
+            this.CustomPushData = new String(source.CustomPushData);
+        }
+        if (source.ServerSessionData != null) {
+            this.ServerSessionData = new String(source.ServerSessionData);
+        }
+        if (source.GameProperties != null) {
+            this.GameProperties = new StringKV[source.GameProperties.length];
+            for (int i = 0; i < source.GameProperties.length; i++) {
+                this.GameProperties[i] = new StringKV(source.GameProperties[i]);
+            }
+        }
+        if (source.LogSwitch != null) {
+            this.LogSwitch = new Long(source.LogSwitch);
+        }
+        if (source.LogsetId != null) {
+            this.LogsetId = new String(source.LogsetId);
+        }
+        if (source.LogsetName != null) {
+            this.LogsetName = new String(source.LogsetName);
+        }
+        if (source.LogTopicId != null) {
+            this.LogTopicId = new String(source.LogTopicId);
+        }
+        if (source.LogTopicName != null) {
+            this.LogTopicName = new String(source.LogTopicName);
+        }
+        if (source.Tags != null) {
+            this.Tags = new StringKV[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new StringKV(source.Tags[i]);
+            }
+        }
+        if (source.Region != null) {
+            this.Region = new String(source.Region);
+        }
+        if (source.AppId != null) {
+            this.AppId = new String(source.AppId);
+        }
+        if (source.Uin != null) {
+            this.Uin = new String(source.Uin);
+        }
+        if (source.CreateUin != null) {
+            this.CreateUin = new String(source.CreateUin);
+        }
+        if (source.RuleName != null) {
+            this.RuleName = new String(source.RuleName);
+        }
+        if (source.LogStatus != null) {
+            this.LogStatus = new Long(source.LogStatus);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

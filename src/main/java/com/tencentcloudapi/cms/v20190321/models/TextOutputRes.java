@@ -119,6 +119,29 @@ public class TextOutputRes extends AbstractModel{
         this.ResultType = ResultType;
     }
 
+    public TextOutputRes() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TextOutputRes(TextOutputRes source) {
+        if (source.Operator != null) {
+            this.Operator = new String(source.Operator);
+        }
+        if (source.ResultCode != null) {
+            this.ResultCode = new Long(source.ResultCode);
+        }
+        if (source.ResultMsg != null) {
+            this.ResultMsg = new String(source.ResultMsg);
+        }
+        if (source.ResultType != null) {
+            this.ResultType = new Long(source.ResultType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

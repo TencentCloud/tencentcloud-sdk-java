@@ -137,6 +137,44 @@ public class MailConfiguration extends AbstractModel{
         this.ContactGroup = ContactGroup;
     }
 
+    public MailConfiguration() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MailConfiguration(MailConfiguration source) {
+        if (source.SendMail != null) {
+            this.SendMail = new Long(source.SendMail);
+        }
+        if (source.Region != null) {
+            this.Region = new String[source.Region.length];
+            for (int i = 0; i < source.Region.length; i++) {
+                this.Region[i] = new String(source.Region[i]);
+            }
+        }
+        if (source.HealthStatus != null) {
+            this.HealthStatus = new String[source.HealthStatus.length];
+            for (int i = 0; i < source.HealthStatus.length; i++) {
+                this.HealthStatus[i] = new String(source.HealthStatus[i]);
+            }
+        }
+        if (source.ContactPerson != null) {
+            this.ContactPerson = new Long[source.ContactPerson.length];
+            for (int i = 0; i < source.ContactPerson.length; i++) {
+                this.ContactPerson[i] = new Long(source.ContactPerson[i]);
+            }
+        }
+        if (source.ContactGroup != null) {
+            this.ContactGroup = new Long[source.ContactGroup.length];
+            for (int i = 0; i < source.ContactGroup.length; i++) {
+                this.ContactGroup[i] = new Long(source.ContactGroup[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

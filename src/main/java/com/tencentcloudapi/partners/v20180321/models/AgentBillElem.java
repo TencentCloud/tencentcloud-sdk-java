@@ -336,6 +336,56 @@ public class AgentBillElem extends AbstractModel{
         this.ActivityId = ActivityId;
     }
 
+    public AgentBillElem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AgentBillElem(AgentBillElem source) {
+        if (source.Uin != null) {
+            this.Uin = new String(source.Uin);
+        }
+        if (source.OrderId != null) {
+            this.OrderId = new String(source.OrderId);
+        }
+        if (source.ClientUin != null) {
+            this.ClientUin = new String(source.ClientUin);
+        }
+        if (source.ClientRemark != null) {
+            this.ClientRemark = new String(source.ClientRemark);
+        }
+        if (source.PayTime != null) {
+            this.PayTime = new String(source.PayTime);
+        }
+        if (source.GoodsType != null) {
+            this.GoodsType = new String(source.GoodsType);
+        }
+        if (source.PayMode != null) {
+            this.PayMode = new String(source.PayMode);
+        }
+        if (source.SettleMonth != null) {
+            this.SettleMonth = new String(source.SettleMonth);
+        }
+        if (source.Amt != null) {
+            this.Amt = new Long(source.Amt);
+        }
+        if (source.PayerMode != null) {
+            this.PayerMode = new String(source.PayerMode);
+        }
+        if (source.ClientType != null) {
+            this.ClientType = new String(source.ClientType);
+        }
+        if (source.ProjectType != null) {
+            this.ProjectType = new String(source.ProjectType);
+        }
+        if (source.ActivityId != null) {
+            this.ActivityId = new String(source.ActivityId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

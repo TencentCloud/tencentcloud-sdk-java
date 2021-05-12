@@ -68,6 +68,23 @@ public class UploadRevokeLetterRequest extends AbstractModel{
         this.RevokeLetter = RevokeLetter;
     }
 
+    public UploadRevokeLetterRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UploadRevokeLetterRequest(UploadRevokeLetterRequest source) {
+        if (source.CertificateId != null) {
+            this.CertificateId = new String(source.CertificateId);
+        }
+        if (source.RevokeLetter != null) {
+            this.RevokeLetter = new String(source.RevokeLetter);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

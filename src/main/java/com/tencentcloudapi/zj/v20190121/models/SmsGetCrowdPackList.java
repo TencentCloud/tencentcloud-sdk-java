@@ -229,6 +229,44 @@ public class SmsGetCrowdPackList extends AbstractModel{
         this.Desc = Desc;
     }
 
+    public SmsGetCrowdPackList() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SmsGetCrowdPackList(SmsGetCrowdPackList source) {
+        if (source.CreatedAt != null) {
+            this.CreatedAt = new String(source.CreatedAt);
+        }
+        if (source.ID != null) {
+            this.ID = new Long(source.ID);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.PhoneNum != null) {
+            this.PhoneNum = new Long(source.PhoneNum);
+        }
+        if (source.Tag != null) {
+            this.Tag = new String(source.Tag);
+        }
+        if (source.MD5 != null) {
+            this.MD5 = new String(source.MD5);
+        }
+        if (source.FileName != null) {
+            this.FileName = new String(source.FileName);
+        }
+        if (source.Desc != null) {
+            this.Desc = new String(source.Desc);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

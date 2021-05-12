@@ -73,6 +73,26 @@ public class CreateVideoModerationTaskResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public CreateVideoModerationTaskResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateVideoModerationTaskResponse(CreateVideoModerationTaskResponse source) {
+        if (source.Results != null) {
+            this.Results = new TaskResult[source.Results.length];
+            for (int i = 0; i < source.Results.length; i++) {
+                this.Results[i] = new TaskResult(source.Results[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

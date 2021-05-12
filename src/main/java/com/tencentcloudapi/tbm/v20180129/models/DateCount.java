@@ -68,6 +68,23 @@ public class DateCount extends AbstractModel{
         this.Count = Count;
     }
 
+    public DateCount() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DateCount(DateCount source) {
+        if (source.Date != null) {
+            this.Date = new String(source.Date);
+        }
+        if (source.Count != null) {
+            this.Count = new Long(source.Count);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

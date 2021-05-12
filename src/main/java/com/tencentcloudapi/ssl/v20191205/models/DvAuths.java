@@ -190,6 +190,35 @@ public class DvAuths extends AbstractModel{
         this.DvAuthVerifyType = DvAuthVerifyType;
     }
 
+    public DvAuths() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DvAuths(DvAuths source) {
+        if (source.DvAuthKey != null) {
+            this.DvAuthKey = new String(source.DvAuthKey);
+        }
+        if (source.DvAuthValue != null) {
+            this.DvAuthValue = new String(source.DvAuthValue);
+        }
+        if (source.DvAuthDomain != null) {
+            this.DvAuthDomain = new String(source.DvAuthDomain);
+        }
+        if (source.DvAuthPath != null) {
+            this.DvAuthPath = new String(source.DvAuthPath);
+        }
+        if (source.DvAuthSubDomain != null) {
+            this.DvAuthSubDomain = new String(source.DvAuthSubDomain);
+        }
+        if (source.DvAuthVerifyType != null) {
+            this.DvAuthVerifyType = new String(source.DvAuthVerifyType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

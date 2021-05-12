@@ -275,6 +275,53 @@ public class VideoProduct extends AbstractModel{
         this.UpdateTime = UpdateTime;
     }
 
+    public VideoProduct() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public VideoProduct(VideoProduct source) {
+        if (source.ProductId != null) {
+            this.ProductId = new String(source.ProductId);
+        }
+        if (source.ProductName != null) {
+            this.ProductName = new String(source.ProductName);
+        }
+        if (source.DeviceType != null) {
+            this.DeviceType = new Long(source.DeviceType);
+        }
+        if (source.EncryptionType != null) {
+            this.EncryptionType = new Long(source.EncryptionType);
+        }
+        if (source.Features != null) {
+            this.Features = new String[source.Features.length];
+            for (int i = 0; i < source.Features.length; i++) {
+                this.Features[i] = new String(source.Features[i]);
+            }
+        }
+        if (source.ChipOs != null) {
+            this.ChipOs = new String(source.ChipOs);
+        }
+        if (source.ChipManufactureId != null) {
+            this.ChipManufactureId = new String(source.ChipManufactureId);
+        }
+        if (source.ChipId != null) {
+            this.ChipId = new String(source.ChipId);
+        }
+        if (source.ProductDescription != null) {
+            this.ProductDescription = new String(source.ProductDescription);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new Long(source.CreateTime);
+        }
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new Long(source.UpdateTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

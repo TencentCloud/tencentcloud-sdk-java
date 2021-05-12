@@ -160,6 +160,38 @@ public class RreCallerHandle extends AbstractModel{
         this.PromptGender = PromptGender;
     }
 
+    public RreCallerHandle() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RreCallerHandle(RreCallerHandle source) {
+        if (source.ReadPrompt != null) {
+            this.ReadPrompt = new String(source.ReadPrompt);
+        }
+        if (source.InterruptPrompt != null) {
+            this.InterruptPrompt = new String(source.InterruptPrompt);
+        }
+        if (source.KeyList != null) {
+            this.KeyList = new KeyList[source.KeyList.length];
+            for (int i = 0; i < source.KeyList.length; i++) {
+                this.KeyList[i] = new KeyList(source.KeyList[i]);
+            }
+        }
+        if (source.RepeatTimes != null) {
+            this.RepeatTimes = new String(source.RepeatTimes);
+        }
+        if (source.KeyPressUrl != null) {
+            this.KeyPressUrl = new String(source.KeyPressUrl);
+        }
+        if (source.PromptGender != null) {
+            this.PromptGender = new String(source.PromptGender);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

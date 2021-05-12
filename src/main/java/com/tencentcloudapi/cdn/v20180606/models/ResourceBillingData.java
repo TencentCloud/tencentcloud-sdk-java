@@ -88,6 +88,26 @@ all：账号维度数据明细
         this.BillingData = BillingData;
     }
 
+    public ResourceBillingData() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ResourceBillingData(ResourceBillingData source) {
+        if (source.Resource != null) {
+            this.Resource = new String(source.Resource);
+        }
+        if (source.BillingData != null) {
+            this.BillingData = new CdnData[source.BillingData.length];
+            for (int i = 0; i < source.BillingData.length; i++) {
+                this.BillingData[i] = new CdnData(source.BillingData[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

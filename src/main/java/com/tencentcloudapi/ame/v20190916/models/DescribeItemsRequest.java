@@ -114,6 +114,29 @@ public class DescribeItemsRequest extends AbstractModel{
         this.CategoryCode = CategoryCode;
     }
 
+    public DescribeItemsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeItemsRequest(DescribeItemsRequest source) {
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.CategoryId != null) {
+            this.CategoryId = new String(source.CategoryId);
+        }
+        if (source.CategoryCode != null) {
+            this.CategoryCode = new String(source.CategoryCode);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

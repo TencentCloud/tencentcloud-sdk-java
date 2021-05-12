@@ -73,6 +73,26 @@ public class DescribePrometheusAgentInstancesResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribePrometheusAgentInstancesResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribePrometheusAgentInstancesResponse(DescribePrometheusAgentInstancesResponse source) {
+        if (source.Instances != null) {
+            this.Instances = new String[source.Instances.length];
+            for (int i = 0; i < source.Instances.length; i++) {
+                this.Instances[i] = new String(source.Instances[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

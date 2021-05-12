@@ -392,6 +392,77 @@ public class NatGateway extends AbstractModel{
         this.SecurityGroupSet = SecurityGroupSet;
     }
 
+    public NatGateway() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public NatGateway(NatGateway source) {
+        if (source.NatGatewayId != null) {
+            this.NatGatewayId = new String(source.NatGatewayId);
+        }
+        if (source.NatGatewayName != null) {
+            this.NatGatewayName = new String(source.NatGatewayName);
+        }
+        if (source.CreatedTime != null) {
+            this.CreatedTime = new String(source.CreatedTime);
+        }
+        if (source.State != null) {
+            this.State = new String(source.State);
+        }
+        if (source.InternetMaxBandwidthOut != null) {
+            this.InternetMaxBandwidthOut = new Long(source.InternetMaxBandwidthOut);
+        }
+        if (source.MaxConcurrentConnection != null) {
+            this.MaxConcurrentConnection = new Long(source.MaxConcurrentConnection);
+        }
+        if (source.PublicIpAddressSet != null) {
+            this.PublicIpAddressSet = new NatGatewayAddress[source.PublicIpAddressSet.length];
+            for (int i = 0; i < source.PublicIpAddressSet.length; i++) {
+                this.PublicIpAddressSet[i] = new NatGatewayAddress(source.PublicIpAddressSet[i]);
+            }
+        }
+        if (source.NetworkState != null) {
+            this.NetworkState = new String(source.NetworkState);
+        }
+        if (source.DestinationIpPortTranslationNatRuleSet != null) {
+            this.DestinationIpPortTranslationNatRuleSet = new DestinationIpPortTranslationNatRule[source.DestinationIpPortTranslationNatRuleSet.length];
+            for (int i = 0; i < source.DestinationIpPortTranslationNatRuleSet.length; i++) {
+                this.DestinationIpPortTranslationNatRuleSet[i] = new DestinationIpPortTranslationNatRule(source.DestinationIpPortTranslationNatRuleSet[i]);
+            }
+        }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.Zone != null) {
+            this.Zone = new String(source.Zone);
+        }
+        if (source.DirectConnectGatewayIds != null) {
+            this.DirectConnectGatewayIds = new String[source.DirectConnectGatewayIds.length];
+            for (int i = 0; i < source.DirectConnectGatewayIds.length; i++) {
+                this.DirectConnectGatewayIds[i] = new String(source.DirectConnectGatewayIds[i]);
+            }
+        }
+        if (source.SubnetId != null) {
+            this.SubnetId = new String(source.SubnetId);
+        }
+        if (source.TagSet != null) {
+            this.TagSet = new Tag[source.TagSet.length];
+            for (int i = 0; i < source.TagSet.length; i++) {
+                this.TagSet[i] = new Tag(source.TagSet[i]);
+            }
+        }
+        if (source.SecurityGroupSet != null) {
+            this.SecurityGroupSet = new String[source.SecurityGroupSet.length];
+            for (int i = 0; i < source.SecurityGroupSet.length; i++) {
+                this.SecurityGroupSet[i] = new String(source.SecurityGroupSet[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

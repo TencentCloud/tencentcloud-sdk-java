@@ -246,6 +246,41 @@ public class Microservice extends AbstractModel{
         this.CriticalInstanceCount = CriticalInstanceCount;
     }
 
+    public Microservice() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Microservice(Microservice source) {
+        if (source.MicroserviceId != null) {
+            this.MicroserviceId = new String(source.MicroserviceId);
+        }
+        if (source.MicroserviceName != null) {
+            this.MicroserviceName = new String(source.MicroserviceName);
+        }
+        if (source.MicroserviceDesc != null) {
+            this.MicroserviceDesc = new String(source.MicroserviceDesc);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new Long(source.CreateTime);
+        }
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new Long(source.UpdateTime);
+        }
+        if (source.NamespaceId != null) {
+            this.NamespaceId = new String(source.NamespaceId);
+        }
+        if (source.RunInstanceCount != null) {
+            this.RunInstanceCount = new Long(source.RunInstanceCount);
+        }
+        if (source.CriticalInstanceCount != null) {
+            this.CriticalInstanceCount = new Long(source.CriticalInstanceCount);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

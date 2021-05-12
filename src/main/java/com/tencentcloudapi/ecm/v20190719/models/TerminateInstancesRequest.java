@@ -124,6 +124,32 @@ public class TerminateInstancesRequest extends AbstractModel{
         this.AssociatedResourceDestroy = AssociatedResourceDestroy;
     }
 
+    public TerminateInstancesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TerminateInstancesRequest(TerminateInstancesRequest source) {
+        if (source.InstanceIdSet != null) {
+            this.InstanceIdSet = new String[source.InstanceIdSet.length];
+            for (int i = 0; i < source.InstanceIdSet.length; i++) {
+                this.InstanceIdSet[i] = new String(source.InstanceIdSet[i]);
+            }
+        }
+        if (source.TerminateDelay != null) {
+            this.TerminateDelay = new Boolean(source.TerminateDelay);
+        }
+        if (source.TerminateTime != null) {
+            this.TerminateTime = new String(source.TerminateTime);
+        }
+        if (source.AssociatedResourceDestroy != null) {
+            this.AssociatedResourceDestroy = new Boolean(source.AssociatedResourceDestroy);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

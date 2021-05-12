@@ -73,6 +73,26 @@ public class DescribeClassicalLBTargetsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeClassicalLBTargetsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeClassicalLBTargetsResponse(DescribeClassicalLBTargetsResponse source) {
+        if (source.Targets != null) {
+            this.Targets = new ClassicalTarget[source.Targets.length];
+            for (int i = 0; i < source.Targets.length; i++) {
+                this.Targets[i] = new ClassicalTarget(source.Targets[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

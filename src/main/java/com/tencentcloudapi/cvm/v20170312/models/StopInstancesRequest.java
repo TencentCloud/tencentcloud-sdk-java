@@ -124,6 +124,32 @@ public class StopInstancesRequest extends AbstractModel{
         this.StoppedMode = StoppedMode;
     }
 
+    public StopInstancesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public StopInstancesRequest(StopInstancesRequest source) {
+        if (source.InstanceIds != null) {
+            this.InstanceIds = new String[source.InstanceIds.length];
+            for (int i = 0; i < source.InstanceIds.length; i++) {
+                this.InstanceIds[i] = new String(source.InstanceIds[i]);
+            }
+        }
+        if (source.ForceStop != null) {
+            this.ForceStop = new Boolean(source.ForceStop);
+        }
+        if (source.StopType != null) {
+            this.StopType = new String(source.StopType);
+        }
+        if (source.StoppedMode != null) {
+            this.StoppedMode = new String(source.StoppedMode);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

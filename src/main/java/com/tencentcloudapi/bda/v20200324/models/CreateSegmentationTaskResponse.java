@@ -91,6 +91,26 @@ public class CreateSegmentationTaskResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public CreateSegmentationTaskResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateSegmentationTaskResponse(CreateSegmentationTaskResponse source) {
+        if (source.TaskID != null) {
+            this.TaskID = new String(source.TaskID);
+        }
+        if (source.EstimatedProcessingTime != null) {
+            this.EstimatedProcessingTime = new Float(source.EstimatedProcessingTime);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

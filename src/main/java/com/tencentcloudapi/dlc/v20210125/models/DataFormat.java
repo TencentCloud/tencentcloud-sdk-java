@@ -190,6 +190,35 @@ public class DataFormat extends AbstractModel{
         this.AVRO = AVRO;
     }
 
+    public DataFormat() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DataFormat(DataFormat source) {
+        if (source.TextFile != null) {
+            this.TextFile = new TextFile(source.TextFile);
+        }
+        if (source.CSV != null) {
+            this.CSV = new CSV(source.CSV);
+        }
+        if (source.Json != null) {
+            this.Json = new Other(source.Json);
+        }
+        if (source.Parquet != null) {
+            this.Parquet = new Other(source.Parquet);
+        }
+        if (source.ORC != null) {
+            this.ORC = new Other(source.ORC);
+        }
+        if (source.AVRO != null) {
+            this.AVRO = new Other(source.AVRO);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

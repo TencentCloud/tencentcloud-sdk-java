@@ -91,6 +91,29 @@ public class ModifyEipChargeRequest extends AbstractModel{
         this.Bandwidth = Bandwidth;
     }
 
+    public ModifyEipChargeRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyEipChargeRequest(ModifyEipChargeRequest source) {
+        if (source.PayMode != null) {
+            this.PayMode = new String(source.PayMode);
+        }
+        if (source.EipIds != null) {
+            this.EipIds = new String[source.EipIds.length];
+            for (int i = 0; i < source.EipIds.length; i++) {
+                this.EipIds[i] = new String(source.EipIds[i]);
+            }
+        }
+        if (source.Bandwidth != null) {
+            this.Bandwidth = new Long(source.Bandwidth);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

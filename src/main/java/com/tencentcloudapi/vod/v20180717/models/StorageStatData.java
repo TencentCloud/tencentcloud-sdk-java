@@ -124,6 +124,29 @@ public class StorageStatData extends AbstractModel{
         this.StandardStorage = StandardStorage;
     }
 
+    public StorageStatData() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public StorageStatData(StorageStatData source) {
+        if (source.Area != null) {
+            this.Area = new String(source.Area);
+        }
+        if (source.TotalStorage != null) {
+            this.TotalStorage = new Long(source.TotalStorage);
+        }
+        if (source.InfrequentStorage != null) {
+            this.InfrequentStorage = new Long(source.InfrequentStorage);
+        }
+        if (source.StandardStorage != null) {
+            this.StandardStorage = new Long(source.StandardStorage);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

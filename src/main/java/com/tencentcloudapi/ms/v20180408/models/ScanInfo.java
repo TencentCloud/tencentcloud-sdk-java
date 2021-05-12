@@ -68,6 +68,26 @@ public class ScanInfo extends AbstractModel{
         this.ScanTypes = ScanTypes;
     }
 
+    public ScanInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ScanInfo(ScanInfo source) {
+        if (source.CallbackUrl != null) {
+            this.CallbackUrl = new String(source.CallbackUrl);
+        }
+        if (source.ScanTypes != null) {
+            this.ScanTypes = new String[source.ScanTypes.length];
+            for (int i = 0; i < source.ScanTypes.length; i++) {
+                this.ScanTypes[i] = new String(source.ScanTypes[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

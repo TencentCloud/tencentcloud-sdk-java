@@ -282,6 +282,47 @@ public class Favors extends AbstractModel{
         this.RegionId = RegionId;
     }
 
+    public Favors() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Favors(Favors source) {
+        if (source.RepoName != null) {
+            this.RepoName = new String(source.RepoName);
+        }
+        if (source.RepoType != null) {
+            this.RepoType = new String(source.RepoType);
+        }
+        if (source.PullCount != null) {
+            this.PullCount = new Long(source.PullCount);
+        }
+        if (source.FavorCount != null) {
+            this.FavorCount = new Long(source.FavorCount);
+        }
+        if (source.Public != null) {
+            this.Public = new Long(source.Public);
+        }
+        if (source.IsQcloudOfficial != null) {
+            this.IsQcloudOfficial = new Boolean(source.IsQcloudOfficial);
+        }
+        if (source.TagCount != null) {
+            this.TagCount = new Long(source.TagCount);
+        }
+        if (source.Logo != null) {
+            this.Logo = new String(source.Logo);
+        }
+        if (source.Region != null) {
+            this.Region = new String(source.Region);
+        }
+        if (source.RegionId != null) {
+            this.RegionId = new Long(source.RegionId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

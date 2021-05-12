@@ -206,6 +206,41 @@ public class RetentionTask extends AbstractModel{
         this.Repository = Repository;
     }
 
+    public RetentionTask() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RetentionTask(RetentionTask source) {
+        if (source.TaskId != null) {
+            this.TaskId = new Long(source.TaskId);
+        }
+        if (source.ExecutionId != null) {
+            this.ExecutionId = new Long(source.ExecutionId);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.Total != null) {
+            this.Total = new Long(source.Total);
+        }
+        if (source.Retained != null) {
+            this.Retained = new Long(source.Retained);
+        }
+        if (source.Repository != null) {
+            this.Repository = new String(source.Repository);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

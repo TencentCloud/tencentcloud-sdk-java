@@ -68,6 +68,26 @@ public class ListEmailIdentitiesResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public ListEmailIdentitiesResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ListEmailIdentitiesResponse(ListEmailIdentitiesResponse source) {
+        if (source.EmailIdentities != null) {
+            this.EmailIdentities = new EmailIdentity[source.EmailIdentities.length];
+            for (int i = 0; i < source.EmailIdentities.length; i++) {
+                this.EmailIdentities[i] = new EmailIdentity(source.EmailIdentities[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

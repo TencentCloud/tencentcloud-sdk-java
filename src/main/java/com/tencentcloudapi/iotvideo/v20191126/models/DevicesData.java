@@ -252,6 +252,47 @@ public class DevicesData extends AbstractModel{
         this.LastUpdateTime = LastUpdateTime;
     }
 
+    public DevicesData() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DevicesData(DevicesData source) {
+        if (source.Tid != null) {
+            this.Tid = new String(source.Tid);
+        }
+        if (source.DeviceName != null) {
+            this.DeviceName = new String(source.DeviceName);
+        }
+        if (source.ActiveTime != null) {
+            this.ActiveTime = new Long(source.ActiveTime);
+        }
+        if (source.Disabled != null) {
+            this.Disabled = new Boolean(source.Disabled);
+        }
+        if (source.StreamStatus != null) {
+            this.StreamStatus = new Boolean(source.StreamStatus);
+        }
+        if (source.OtaVersion != null) {
+            this.OtaVersion = new String(source.OtaVersion);
+        }
+        if (source.Online != null) {
+            this.Online = new Long(source.Online);
+        }
+        if (source.LastOnlineTime != null) {
+            this.LastOnlineTime = new Long(source.LastOnlineTime);
+        }
+        if (source.IotModel != null) {
+            this.IotModel = new String(source.IotModel);
+        }
+        if (source.LastUpdateTime != null) {
+            this.LastUpdateTime = new Long(source.LastUpdateTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

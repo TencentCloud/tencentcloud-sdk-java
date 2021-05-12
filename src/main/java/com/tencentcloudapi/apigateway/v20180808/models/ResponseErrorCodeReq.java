@@ -137,6 +137,32 @@ public class ResponseErrorCodeReq extends AbstractModel{
         this.NeedConvert = NeedConvert;
     }
 
+    public ResponseErrorCodeReq() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ResponseErrorCodeReq(ResponseErrorCodeReq source) {
+        if (source.Code != null) {
+            this.Code = new Long(source.Code);
+        }
+        if (source.Msg != null) {
+            this.Msg = new String(source.Msg);
+        }
+        if (source.Desc != null) {
+            this.Desc = new String(source.Desc);
+        }
+        if (source.ConvertedCode != null) {
+            this.ConvertedCode = new Long(source.ConvertedCode);
+        }
+        if (source.NeedConvert != null) {
+            this.NeedConvert = new Boolean(source.NeedConvert);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

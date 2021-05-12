@@ -137,6 +137,32 @@ public class ResetMsgSubOffsetByTimestampRequest extends AbstractModel{
         this.ClusterId = ClusterId;
     }
 
+    public ResetMsgSubOffsetByTimestampRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ResetMsgSubOffsetByTimestampRequest(ResetMsgSubOffsetByTimestampRequest source) {
+        if (source.EnvironmentId != null) {
+            this.EnvironmentId = new String(source.EnvironmentId);
+        }
+        if (source.TopicName != null) {
+            this.TopicName = new String(source.TopicName);
+        }
+        if (source.Subscription != null) {
+            this.Subscription = new String(source.Subscription);
+        }
+        if (source.ToTimestamp != null) {
+            this.ToTimestamp = new Long(source.ToTimestamp);
+        }
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

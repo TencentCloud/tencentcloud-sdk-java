@@ -252,6 +252,47 @@ public class DescribeDomainsRequest extends AbstractModel{
         this.Status = Status;
     }
 
+    public DescribeDomainsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeDomainsRequest(DescribeDomainsRequest source) {
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.SearchType != null) {
+            this.SearchType = new String(source.SearchType);
+        }
+        if (source.Tag != null) {
+            this.Tag = new String(source.Tag);
+        }
+        if (source.Grade != null) {
+            this.Grade = new String(source.Grade);
+        }
+        if (source.Brand != null) {
+            this.Brand = new String(source.Brand);
+        }
+        if (source.Code != null) {
+            this.Code = new String(source.Code);
+        }
+        if (source.Hash != null) {
+            this.Hash = new String(source.Hash);
+        }
+        if (source.Item != null) {
+            this.Item = new String(source.Item);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

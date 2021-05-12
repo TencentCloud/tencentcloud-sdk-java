@@ -91,6 +91,29 @@ public class ListFirmwaresResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public ListFirmwaresResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ListFirmwaresResponse(ListFirmwaresResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.Firmwares != null) {
+            this.Firmwares = new FirmwareInfo[source.Firmwares.length];
+            for (int i = 0; i < source.Firmwares.length; i++) {
+                this.Firmwares[i] = new FirmwareInfo(source.Firmwares[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

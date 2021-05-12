@@ -183,6 +183,38 @@ public class CommonTimeWindow extends AbstractModel{
         this.Sunday = Sunday;
     }
 
+    public CommonTimeWindow() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CommonTimeWindow(CommonTimeWindow source) {
+        if (source.Monday != null) {
+            this.Monday = new String(source.Monday);
+        }
+        if (source.Tuesday != null) {
+            this.Tuesday = new String(source.Tuesday);
+        }
+        if (source.Wednesday != null) {
+            this.Wednesday = new String(source.Wednesday);
+        }
+        if (source.Thursday != null) {
+            this.Thursday = new String(source.Thursday);
+        }
+        if (source.Friday != null) {
+            this.Friday = new String(source.Friday);
+        }
+        if (source.Saturday != null) {
+            this.Saturday = new String(source.Saturday);
+        }
+        if (source.Sunday != null) {
+            this.Sunday = new String(source.Sunday);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -91,6 +91,26 @@ public class SequenceData extends AbstractModel{
         this.NewOrderIndex = NewOrderIndex;
     }
 
+    public SequenceData() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SequenceData(SequenceData source) {
+        if (source.Id != null) {
+            this.Id = new Long(source.Id);
+        }
+        if (source.OrderIndex != null) {
+            this.OrderIndex = new Long(source.OrderIndex);
+        }
+        if (source.NewOrderIndex != null) {
+            this.NewOrderIndex = new Long(source.NewOrderIndex);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

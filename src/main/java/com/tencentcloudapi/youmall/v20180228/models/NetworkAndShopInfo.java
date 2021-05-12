@@ -344,6 +344,59 @@ public class NetworkAndShopInfo extends AbstractModel{
         this.Mac = Mac;
     }
 
+    public NetworkAndShopInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public NetworkAndShopInfo(NetworkAndShopInfo source) {
+        if (source.CompanyId != null) {
+            this.CompanyId = new String(source.CompanyId);
+        }
+        if (source.ShopId != null) {
+            this.ShopId = new Long(source.ShopId);
+        }
+        if (source.Province != null) {
+            this.Province = new String(source.Province);
+        }
+        if (source.City != null) {
+            this.City = new String(source.City);
+        }
+        if (source.ShopName != null) {
+            this.ShopName = new String(source.ShopName);
+        }
+        if (source.Upload != null) {
+            this.Upload = new Float(source.Upload);
+        }
+        if (source.Download != null) {
+            this.Download = new Float(source.Download);
+        }
+        if (source.MinRtt != null) {
+            this.MinRtt = new Float(source.MinRtt);
+        }
+        if (source.AvgRtt != null) {
+            this.AvgRtt = new Float(source.AvgRtt);
+        }
+        if (source.MaxRtt != null) {
+            this.MaxRtt = new Float(source.MaxRtt);
+        }
+        if (source.MdevRtt != null) {
+            this.MdevRtt = new Float(source.MdevRtt);
+        }
+        if (source.Loss != null) {
+            this.Loss = new Float(source.Loss);
+        }
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new Long(source.UpdateTime);
+        }
+        if (source.Mac != null) {
+            this.Mac = new String(source.Mac);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

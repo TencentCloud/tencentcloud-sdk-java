@@ -274,6 +274,44 @@ public class ComposeMediaOutput extends AbstractModel{
         this.RemoveAudio = RemoveAudio;
     }
 
+    public ComposeMediaOutput() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ComposeMediaOutput(ComposeMediaOutput source) {
+        if (source.FileName != null) {
+            this.FileName = new String(source.FileName);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.ClassId != null) {
+            this.ClassId = new Long(source.ClassId);
+        }
+        if (source.ExpireTime != null) {
+            this.ExpireTime = new String(source.ExpireTime);
+        }
+        if (source.Container != null) {
+            this.Container = new String(source.Container);
+        }
+        if (source.VideoStream != null) {
+            this.VideoStream = new OutputVideoStream(source.VideoStream);
+        }
+        if (source.AudioStream != null) {
+            this.AudioStream = new OutputAudioStream(source.AudioStream);
+        }
+        if (source.RemoveVideo != null) {
+            this.RemoveVideo = new Long(source.RemoveVideo);
+        }
+        if (source.RemoveAudio != null) {
+            this.RemoveAudio = new Long(source.RemoveAudio);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

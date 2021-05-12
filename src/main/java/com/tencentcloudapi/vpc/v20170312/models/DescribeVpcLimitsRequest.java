@@ -45,6 +45,23 @@ public class DescribeVpcLimitsRequest extends AbstractModel{
         this.LimitTypes = LimitTypes;
     }
 
+    public DescribeVpcLimitsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeVpcLimitsRequest(DescribeVpcLimitsRequest source) {
+        if (source.LimitTypes != null) {
+            this.LimitTypes = new String[source.LimitTypes.length];
+            for (int i = 0; i < source.LimitTypes.length; i++) {
+                this.LimitTypes[i] = new String(source.LimitTypes[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

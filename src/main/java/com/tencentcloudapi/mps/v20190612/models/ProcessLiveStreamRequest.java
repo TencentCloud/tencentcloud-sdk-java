@@ -206,6 +206,41 @@ public class ProcessLiveStreamRequest extends AbstractModel{
         this.SessionContext = SessionContext;
     }
 
+    public ProcessLiveStreamRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ProcessLiveStreamRequest(ProcessLiveStreamRequest source) {
+        if (source.Url != null) {
+            this.Url = new String(source.Url);
+        }
+        if (source.TaskNotifyConfig != null) {
+            this.TaskNotifyConfig = new LiveStreamTaskNotifyConfig(source.TaskNotifyConfig);
+        }
+        if (source.OutputStorage != null) {
+            this.OutputStorage = new TaskOutputStorage(source.OutputStorage);
+        }
+        if (source.OutputDir != null) {
+            this.OutputDir = new String(source.OutputDir);
+        }
+        if (source.AiContentReviewTask != null) {
+            this.AiContentReviewTask = new AiContentReviewTaskInput(source.AiContentReviewTask);
+        }
+        if (source.AiRecognitionTask != null) {
+            this.AiRecognitionTask = new AiRecognitionTaskInput(source.AiRecognitionTask);
+        }
+        if (source.SessionId != null) {
+            this.SessionId = new String(source.SessionId);
+        }
+        if (source.SessionContext != null) {
+            this.SessionContext = new String(source.SessionContext);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

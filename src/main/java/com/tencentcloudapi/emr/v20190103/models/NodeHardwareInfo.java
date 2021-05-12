@@ -1119,6 +1119,140 @@ public class NodeHardwareInfo extends AbstractModel{
         this.DynamicPodSpec = DynamicPodSpec;
     }
 
+    public NodeHardwareInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public NodeHardwareInfo(NodeHardwareInfo source) {
+        if (source.AppId != null) {
+            this.AppId = new Long(source.AppId);
+        }
+        if (source.SerialNo != null) {
+            this.SerialNo = new String(source.SerialNo);
+        }
+        if (source.OrderNo != null) {
+            this.OrderNo = new String(source.OrderNo);
+        }
+        if (source.WanIp != null) {
+            this.WanIp = new String(source.WanIp);
+        }
+        if (source.Flag != null) {
+            this.Flag = new Long(source.Flag);
+        }
+        if (source.Spec != null) {
+            this.Spec = new String(source.Spec);
+        }
+        if (source.CpuNum != null) {
+            this.CpuNum = new Long(source.CpuNum);
+        }
+        if (source.MemSize != null) {
+            this.MemSize = new Long(source.MemSize);
+        }
+        if (source.MemDesc != null) {
+            this.MemDesc = new String(source.MemDesc);
+        }
+        if (source.RegionId != null) {
+            this.RegionId = new Long(source.RegionId);
+        }
+        if (source.ZoneId != null) {
+            this.ZoneId = new Long(source.ZoneId);
+        }
+        if (source.ApplyTime != null) {
+            this.ApplyTime = new String(source.ApplyTime);
+        }
+        if (source.FreeTime != null) {
+            this.FreeTime = new String(source.FreeTime);
+        }
+        if (source.DiskSize != null) {
+            this.DiskSize = new String(source.DiskSize);
+        }
+        if (source.NameTag != null) {
+            this.NameTag = new String(source.NameTag);
+        }
+        if (source.Services != null) {
+            this.Services = new String(source.Services);
+        }
+        if (source.StorageType != null) {
+            this.StorageType = new Long(source.StorageType);
+        }
+        if (source.RootSize != null) {
+            this.RootSize = new Long(source.RootSize);
+        }
+        if (source.ChargeType != null) {
+            this.ChargeType = new Long(source.ChargeType);
+        }
+        if (source.CdbIp != null) {
+            this.CdbIp = new String(source.CdbIp);
+        }
+        if (source.CdbPort != null) {
+            this.CdbPort = new Long(source.CdbPort);
+        }
+        if (source.HwDiskSize != null) {
+            this.HwDiskSize = new Long(source.HwDiskSize);
+        }
+        if (source.HwDiskSizeDesc != null) {
+            this.HwDiskSizeDesc = new String(source.HwDiskSizeDesc);
+        }
+        if (source.HwMemSize != null) {
+            this.HwMemSize = new Long(source.HwMemSize);
+        }
+        if (source.HwMemSizeDesc != null) {
+            this.HwMemSizeDesc = new String(source.HwMemSizeDesc);
+        }
+        if (source.ExpireTime != null) {
+            this.ExpireTime = new String(source.ExpireTime);
+        }
+        if (source.EmrResourceId != null) {
+            this.EmrResourceId = new String(source.EmrResourceId);
+        }
+        if (source.IsAutoRenew != null) {
+            this.IsAutoRenew = new Long(source.IsAutoRenew);
+        }
+        if (source.DeviceClass != null) {
+            this.DeviceClass = new String(source.DeviceClass);
+        }
+        if (source.Mutable != null) {
+            this.Mutable = new Long(source.Mutable);
+        }
+        if (source.MCMultiDisk != null) {
+            this.MCMultiDisk = new MultiDiskMC[source.MCMultiDisk.length];
+            for (int i = 0; i < source.MCMultiDisk.length; i++) {
+                this.MCMultiDisk[i] = new MultiDiskMC(source.MCMultiDisk[i]);
+            }
+        }
+        if (source.CdbNodeInfo != null) {
+            this.CdbNodeInfo = new CdbInfo(source.CdbNodeInfo);
+        }
+        if (source.Ip != null) {
+            this.Ip = new String(source.Ip);
+        }
+        if (source.Destroyable != null) {
+            this.Destroyable = new Long(source.Destroyable);
+        }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
+        if (source.AutoFlag != null) {
+            this.AutoFlag = new Long(source.AutoFlag);
+        }
+        if (source.HardwareResourceType != null) {
+            this.HardwareResourceType = new String(source.HardwareResourceType);
+        }
+        if (source.IsDynamicSpec != null) {
+            this.IsDynamicSpec = new Long(source.IsDynamicSpec);
+        }
+        if (source.DynamicPodSpec != null) {
+            this.DynamicPodSpec = new String(source.DynamicPodSpec);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

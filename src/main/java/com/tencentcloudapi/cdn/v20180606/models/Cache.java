@@ -106,6 +106,29 @@ public class Cache extends AbstractModel{
         this.RuleCache = RuleCache;
     }
 
+    public Cache() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Cache(Cache source) {
+        if (source.SimpleCache != null) {
+            this.SimpleCache = new SimpleCache(source.SimpleCache);
+        }
+        if (source.AdvancedCache != null) {
+            this.AdvancedCache = new AdvancedCache(source.AdvancedCache);
+        }
+        if (source.RuleCache != null) {
+            this.RuleCache = new RuleCache[source.RuleCache.length];
+            for (int i = 0; i < source.RuleCache.length; i++) {
+                this.RuleCache[i] = new RuleCache(source.RuleCache[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

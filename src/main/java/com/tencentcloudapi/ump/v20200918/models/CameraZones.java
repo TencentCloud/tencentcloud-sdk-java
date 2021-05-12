@@ -281,6 +281,44 @@ public class CameraZones extends AbstractModel{
         this.RTSP = RTSP;
     }
 
+    public CameraZones() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CameraZones(CameraZones source) {
+        if (source.CameraId != null) {
+            this.CameraId = new Long(source.CameraId);
+        }
+        if (source.CameraName != null) {
+            this.CameraName = new String(source.CameraName);
+        }
+        if (source.CameraFeature != null) {
+            this.CameraFeature = new Long(source.CameraFeature);
+        }
+        if (source.CameraIp != null) {
+            this.CameraIp = new String(source.CameraIp);
+        }
+        if (source.CameraState != null) {
+            this.CameraState = new Long(source.CameraState);
+        }
+        if (source.Zones != null) {
+            this.Zones = new BunkZone[source.Zones.length];
+            for (int i = 0; i < source.Zones.length; i++) {
+                this.Zones[i] = new BunkZone(source.Zones[i]);
+            }
+        }
+        if (source.Pixel != null) {
+            this.Pixel = new String(source.Pixel);
+        }
+        if (source.RTSP != null) {
+            this.RTSP = new String(source.RTSP);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

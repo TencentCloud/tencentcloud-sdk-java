@@ -91,6 +91,26 @@ public class ModifyFirewallRuleDescriptionRequest extends AbstractModel{
         this.FirewallVersion = FirewallVersion;
     }
 
+    public ModifyFirewallRuleDescriptionRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyFirewallRuleDescriptionRequest(ModifyFirewallRuleDescriptionRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.FirewallRule != null) {
+            this.FirewallRule = new FirewallRule(source.FirewallRule);
+        }
+        if (source.FirewallVersion != null) {
+            this.FirewallVersion = new Long(source.FirewallVersion);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

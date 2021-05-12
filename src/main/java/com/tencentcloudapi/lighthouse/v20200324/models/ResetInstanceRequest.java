@@ -68,6 +68,23 @@ public class ResetInstanceRequest extends AbstractModel{
         this.BlueprintId = BlueprintId;
     }
 
+    public ResetInstanceRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ResetInstanceRequest(ResetInstanceRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.BlueprintId != null) {
+            this.BlueprintId = new String(source.BlueprintId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

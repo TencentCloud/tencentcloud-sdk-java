@@ -160,6 +160,38 @@ public class OCRItem extends AbstractModel{
         this.TextContent = TextContent;
     }
 
+    public OCRItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public OCRItem(OCRItem source) {
+        if (source.TextPosition != null) {
+            this.TextPosition = new Coordinate(source.TextPosition);
+        }
+        if (source.EvilLabel != null) {
+            this.EvilLabel = new String(source.EvilLabel);
+        }
+        if (source.EvilType != null) {
+            this.EvilType = new Long(source.EvilType);
+        }
+        if (source.Keywords != null) {
+            this.Keywords = new String[source.Keywords.length];
+            for (int i = 0; i < source.Keywords.length; i++) {
+                this.Keywords[i] = new String(source.Keywords[i]);
+            }
+        }
+        if (source.Rate != null) {
+            this.Rate = new Long(source.Rate);
+        }
+        if (source.TextContent != null) {
+            this.TextContent = new String(source.TextContent);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

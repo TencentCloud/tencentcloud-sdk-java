@@ -195,6 +195,41 @@ public class Origin extends AbstractModel{
         this.BackupOriginType = BackupOriginType;
     }
 
+    public Origin() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Origin(Origin source) {
+        if (source.Origins != null) {
+            this.Origins = new String[source.Origins.length];
+            for (int i = 0; i < source.Origins.length; i++) {
+                this.Origins[i] = new String(source.Origins[i]);
+            }
+        }
+        if (source.OriginType != null) {
+            this.OriginType = new String(source.OriginType);
+        }
+        if (source.ServerName != null) {
+            this.ServerName = new String(source.ServerName);
+        }
+        if (source.OriginPullProtocol != null) {
+            this.OriginPullProtocol = new String(source.OriginPullProtocol);
+        }
+        if (source.BackupOrigins != null) {
+            this.BackupOrigins = new String[source.BackupOrigins.length];
+            for (int i = 0; i < source.BackupOrigins.length; i++) {
+                this.BackupOrigins[i] = new String(source.BackupOrigins[i]);
+            }
+        }
+        if (source.BackupOriginType != null) {
+            this.BackupOriginType = new String(source.BackupOriginType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

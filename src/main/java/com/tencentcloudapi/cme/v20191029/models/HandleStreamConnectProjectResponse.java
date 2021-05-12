@@ -68,6 +68,23 @@ public class HandleStreamConnectProjectResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public HandleStreamConnectProjectResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public HandleStreamConnectProjectResponse(HandleStreamConnectProjectResponse source) {
+        if (source.StreamInputRtmpPushUrl != null) {
+            this.StreamInputRtmpPushUrl = new String(source.StreamInputRtmpPushUrl);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

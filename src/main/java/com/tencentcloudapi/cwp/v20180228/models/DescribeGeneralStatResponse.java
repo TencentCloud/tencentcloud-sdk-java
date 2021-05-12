@@ -252,6 +252,47 @@ public class DescribeGeneralStatResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeGeneralStatResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeGeneralStatResponse(DescribeGeneralStatResponse source) {
+        if (source.MachinesAll != null) {
+            this.MachinesAll = new Long(source.MachinesAll);
+        }
+        if (source.MachinesUninstalled != null) {
+            this.MachinesUninstalled = new Long(source.MachinesUninstalled);
+        }
+        if (source.AgentsAll != null) {
+            this.AgentsAll = new Long(source.AgentsAll);
+        }
+        if (source.AgentsOnline != null) {
+            this.AgentsOnline = new Long(source.AgentsOnline);
+        }
+        if (source.AgentsOffline != null) {
+            this.AgentsOffline = new Long(source.AgentsOffline);
+        }
+        if (source.AgentsPro != null) {
+            this.AgentsPro = new Long(source.AgentsPro);
+        }
+        if (source.AgentsBasic != null) {
+            this.AgentsBasic = new Long(source.AgentsBasic);
+        }
+        if (source.AgentsProExpireWithInSevenDays != null) {
+            this.AgentsProExpireWithInSevenDays = new Long(source.AgentsProExpireWithInSevenDays);
+        }
+        if (source.RiskMachine != null) {
+            this.RiskMachine = new Long(source.RiskMachine);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -91,6 +91,29 @@ public class DescribeResetInstanceBlueprintsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeResetInstanceBlueprintsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeResetInstanceBlueprintsResponse(DescribeResetInstanceBlueprintsResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.ResetInstanceBlueprintSet != null) {
+            this.ResetInstanceBlueprintSet = new ResetInstanceBlueprint[source.ResetInstanceBlueprintSet.length];
+            for (int i = 0; i < source.ResetInstanceBlueprintSet.length; i++) {
+                this.ResetInstanceBlueprintSet[i] = new ResetInstanceBlueprint(source.ResetInstanceBlueprintSet[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

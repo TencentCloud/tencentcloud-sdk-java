@@ -78,6 +78,26 @@ False：关闭禁止域名更新状态。
         this.Status = Status;
     }
 
+    public UpdateProhibitionBatchRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UpdateProhibitionBatchRequest(UpdateProhibitionBatchRequest source) {
+        if (source.Domains != null) {
+            this.Domains = new String[source.Domains.length];
+            for (int i = 0; i < source.Domains.length; i++) {
+                this.Domains[i] = new String(source.Domains[i]);
+            }
+        }
+        if (source.Status != null) {
+            this.Status = new Boolean(source.Status);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -68,6 +68,26 @@ public class ShopHourTrafficInfo extends AbstractModel{
         this.HourTrafficInfoDetailSet = HourTrafficInfoDetailSet;
     }
 
+    public ShopHourTrafficInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ShopHourTrafficInfo(ShopHourTrafficInfo source) {
+        if (source.Date != null) {
+            this.Date = new String(source.Date);
+        }
+        if (source.HourTrafficInfoDetailSet != null) {
+            this.HourTrafficInfoDetailSet = new HourTrafficInfoDetail[source.HourTrafficInfoDetailSet.length];
+            for (int i = 0; i < source.HourTrafficInfoDetailSet.length; i++) {
+                this.HourTrafficInfoDetailSet[i] = new HourTrafficInfoDetail(source.HourTrafficInfoDetailSet[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

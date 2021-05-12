@@ -165,6 +165,35 @@ public class AiAnalysisTaskCoverResult extends AbstractModel{
         this.Output = Output;
     }
 
+    public AiAnalysisTaskCoverResult() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AiAnalysisTaskCoverResult(AiAnalysisTaskCoverResult source) {
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.ErrCodeExt != null) {
+            this.ErrCodeExt = new String(source.ErrCodeExt);
+        }
+        if (source.ErrCode != null) {
+            this.ErrCode = new Long(source.ErrCode);
+        }
+        if (source.Message != null) {
+            this.Message = new String(source.Message);
+        }
+        if (source.Input != null) {
+            this.Input = new AiAnalysisTaskCoverInput(source.Input);
+        }
+        if (source.Output != null) {
+            this.Output = new AiAnalysisTaskCoverOutput(source.Output);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

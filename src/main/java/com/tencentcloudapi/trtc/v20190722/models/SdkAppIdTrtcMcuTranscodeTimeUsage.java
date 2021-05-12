@@ -137,6 +137,32 @@ public class SdkAppIdTrtcMcuTranscodeTimeUsage extends AbstractModel{
         this.VideoTimeFhd = VideoTimeFhd;
     }
 
+    public SdkAppIdTrtcMcuTranscodeTimeUsage() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SdkAppIdTrtcMcuTranscodeTimeUsage(SdkAppIdTrtcMcuTranscodeTimeUsage source) {
+        if (source.TimeKey != null) {
+            this.TimeKey = new String(source.TimeKey);
+        }
+        if (source.AudioTime != null) {
+            this.AudioTime = new Long(source.AudioTime);
+        }
+        if (source.VideoTimeSd != null) {
+            this.VideoTimeSd = new Long(source.VideoTimeSd);
+        }
+        if (source.VideoTimeHd != null) {
+            this.VideoTimeHd = new Long(source.VideoTimeHd);
+        }
+        if (source.VideoTimeFhd != null) {
+            this.VideoTimeFhd = new Long(source.VideoTimeFhd);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -114,6 +114,32 @@ public class DescribeTargetGroupInstancesResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeTargetGroupInstancesResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeTargetGroupInstancesResponse(DescribeTargetGroupInstancesResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.TargetGroupInstanceSet != null) {
+            this.TargetGroupInstanceSet = new TargetGroupBackend[source.TargetGroupInstanceSet.length];
+            for (int i = 0; i < source.TargetGroupInstanceSet.length; i++) {
+                this.TargetGroupInstanceSet[i] = new TargetGroupBackend(source.TargetGroupInstanceSet[i]);
+            }
+        }
+        if (source.RealCount != null) {
+            this.RealCount = new Long(source.RealCount);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

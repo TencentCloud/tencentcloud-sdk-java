@@ -91,6 +91,29 @@ public class DescribeInstanceParamRecordsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeInstanceParamRecordsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeInstanceParamRecordsResponse(DescribeInstanceParamRecordsResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.InstanceParamHistory != null) {
+            this.InstanceParamHistory = new InstanceParamHistory[source.InstanceParamHistory.length];
+            for (int i = 0; i < source.InstanceParamHistory.length; i++) {
+                this.InstanceParamHistory[i] = new InstanceParamHistory(source.InstanceParamHistory[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

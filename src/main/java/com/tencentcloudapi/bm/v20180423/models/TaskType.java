@@ -91,6 +91,26 @@ public class TaskType extends AbstractModel{
         this.TaskSubType = TaskSubType;
     }
 
+    public TaskType() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TaskType(TaskType source) {
+        if (source.TypeId != null) {
+            this.TypeId = new Long(source.TypeId);
+        }
+        if (source.TypeName != null) {
+            this.TypeName = new String(source.TypeName);
+        }
+        if (source.TaskSubType != null) {
+            this.TaskSubType = new String(source.TaskSubType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

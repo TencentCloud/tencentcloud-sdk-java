@@ -160,6 +160,35 @@ public class DescribeGroupsWithPluginRequest extends AbstractModel{
         this.GatewayInstanceId = GatewayInstanceId;
     }
 
+    public DescribeGroupsWithPluginRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeGroupsWithPluginRequest(DescribeGroupsWithPluginRequest source) {
+        if (source.PluginId != null) {
+            this.PluginId = new String(source.PluginId);
+        }
+        if (source.Bound != null) {
+            this.Bound = new Boolean(source.Bound);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.SearchWord != null) {
+            this.SearchWord = new String(source.SearchWord);
+        }
+        if (source.GatewayInstanceId != null) {
+            this.GatewayInstanceId = new String(source.GatewayInstanceId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

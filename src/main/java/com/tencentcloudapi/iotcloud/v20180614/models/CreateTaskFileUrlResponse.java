@@ -91,6 +91,26 @@ public class CreateTaskFileUrlResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public CreateTaskFileUrlResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateTaskFileUrlResponse(CreateTaskFileUrlResponse source) {
+        if (source.Url != null) {
+            this.Url = new String(source.Url);
+        }
+        if (source.FileName != null) {
+            this.FileName = new String(source.FileName);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

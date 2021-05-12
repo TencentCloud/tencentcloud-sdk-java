@@ -137,6 +137,35 @@ public class StandardImageResult extends AbstractModel{
         this.TotalCount = TotalCount;
     }
 
+    public StandardImageResult() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public StandardImageResult(StandardImageResult source) {
+        if (source.ResultSet != null) {
+            this.ResultSet = new ImageTaskResult[source.ResultSet.length];
+            for (int i = 0; i < source.ResultSet.length; i++) {
+                this.ResultSet[i] = new ImageTaskResult(source.ResultSet[i]);
+            }
+        }
+        if (source.Statistic != null) {
+            this.Statistic = new ImageTaskStatistic(source.Statistic);
+        }
+        if (source.Message != null) {
+            this.Message = new String(source.Message);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

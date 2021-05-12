@@ -68,6 +68,23 @@ public class CosBackup extends AbstractModel{
         this.BackupTime = BackupTime;
     }
 
+    public CosBackup() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CosBackup(CosBackup source) {
+        if (source.IsAutoBackup != null) {
+            this.IsAutoBackup = new Boolean(source.IsAutoBackup);
+        }
+        if (source.BackupTime != null) {
+            this.BackupTime = new String(source.BackupTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

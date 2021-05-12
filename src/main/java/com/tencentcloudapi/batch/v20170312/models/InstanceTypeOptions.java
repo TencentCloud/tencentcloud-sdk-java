@@ -91,6 +91,29 @@ public class InstanceTypeOptions extends AbstractModel{
         this.InstanceCategories = InstanceCategories;
     }
 
+    public InstanceTypeOptions() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public InstanceTypeOptions(InstanceTypeOptions source) {
+        if (source.CPU != null) {
+            this.CPU = new Long(source.CPU);
+        }
+        if (source.Memory != null) {
+            this.Memory = new Long(source.Memory);
+        }
+        if (source.InstanceCategories != null) {
+            this.InstanceCategories = new String[source.InstanceCategories.length];
+            for (int i = 0; i < source.InstanceCategories.length; i++) {
+                this.InstanceCategories[i] = new String(source.InstanceCategories[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

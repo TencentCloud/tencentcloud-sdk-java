@@ -68,6 +68,23 @@ public class DescribeSmsCampaignStatisticsRequest extends AbstractModel{
         this.License = License;
     }
 
+    public DescribeSmsCampaignStatisticsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeSmsCampaignStatisticsRequest(DescribeSmsCampaignStatisticsRequest source) {
+        if (source.CampaignId != null) {
+            this.CampaignId = new Long(source.CampaignId);
+        }
+        if (source.License != null) {
+            this.License = new String(source.License);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

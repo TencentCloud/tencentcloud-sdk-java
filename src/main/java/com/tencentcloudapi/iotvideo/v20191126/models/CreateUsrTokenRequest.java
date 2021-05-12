@@ -114,6 +114,29 @@ public class CreateUsrTokenRequest extends AbstractModel{
         this.OldAccessToken = OldAccessToken;
     }
 
+    public CreateUsrTokenRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateUsrTokenRequest(CreateUsrTokenRequest source) {
+        if (source.AccessId != null) {
+            this.AccessId = new String(source.AccessId);
+        }
+        if (source.UniqueId != null) {
+            this.UniqueId = new String(source.UniqueId);
+        }
+        if (source.TtlMinutes != null) {
+            this.TtlMinutes = new Long(source.TtlMinutes);
+        }
+        if (source.OldAccessToken != null) {
+            this.OldAccessToken = new String(source.OldAccessToken);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

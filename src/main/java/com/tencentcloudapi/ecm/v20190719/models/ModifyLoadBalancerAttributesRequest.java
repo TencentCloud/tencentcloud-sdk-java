@@ -114,6 +114,29 @@ public class ModifyLoadBalancerAttributesRequest extends AbstractModel{
         this.LoadBalancerPassToTarget = LoadBalancerPassToTarget;
     }
 
+    public ModifyLoadBalancerAttributesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyLoadBalancerAttributesRequest(ModifyLoadBalancerAttributesRequest source) {
+        if (source.LoadBalancerId != null) {
+            this.LoadBalancerId = new String(source.LoadBalancerId);
+        }
+        if (source.LoadBalancerName != null) {
+            this.LoadBalancerName = new String(source.LoadBalancerName);
+        }
+        if (source.InternetChargeInfo != null) {
+            this.InternetChargeInfo = new LoadBalancerInternetAccessible(source.InternetChargeInfo);
+        }
+        if (source.LoadBalancerPassToTarget != null) {
+            this.LoadBalancerPassToTarget = new Boolean(source.LoadBalancerPassToTarget);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

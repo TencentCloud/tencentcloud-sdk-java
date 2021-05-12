@@ -137,6 +137,35 @@ public class SubmitImageTaskPlusResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public SubmitImageTaskPlusResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SubmitImageTaskPlusResponse(SubmitImageTaskPlusResponse source) {
+        if (source.ResultSet != null) {
+            this.ResultSet = new ImageTaskResult[source.ResultSet.length];
+            for (int i = 0; i < source.ResultSet.length; i++) {
+                this.ResultSet[i] = new ImageTaskResult(source.ResultSet[i]);
+            }
+        }
+        if (source.JobId != null) {
+            this.JobId = new Long(source.JobId);
+        }
+        if (source.Progress != null) {
+            this.Progress = new Long(source.Progress);
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

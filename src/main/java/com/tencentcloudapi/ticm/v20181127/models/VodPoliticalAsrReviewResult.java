@@ -230,6 +230,38 @@ block。
         this.SegmentSet = SegmentSet;
     }
 
+    public VodPoliticalAsrReviewResult() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public VodPoliticalAsrReviewResult(VodPoliticalAsrReviewResult source) {
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.Code != null) {
+            this.Code = new Long(source.Code);
+        }
+        if (source.Msg != null) {
+            this.Msg = new String(source.Msg);
+        }
+        if (source.Confidence != null) {
+            this.Confidence = new Float(source.Confidence);
+        }
+        if (source.Suggestion != null) {
+            this.Suggestion = new String(source.Suggestion);
+        }
+        if (source.SegmentSet != null) {
+            this.SegmentSet = new VodAsrTextSegmentItem[source.SegmentSet.length];
+            for (int i = 0; i < source.SegmentSet.length; i++) {
+                this.SegmentSet[i] = new VodAsrTextSegmentItem(source.SegmentSet[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

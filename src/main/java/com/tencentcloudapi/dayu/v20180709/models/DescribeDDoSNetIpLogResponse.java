@@ -170,6 +170,38 @@ Key为"LogMessage"时，Value值为Ip日志内容
         this.RequestId = RequestId;
     }
 
+    public DescribeDDoSNetIpLogResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeDDoSNetIpLogResponse(DescribeDDoSNetIpLogResponse source) {
+        if (source.Business != null) {
+            this.Business = new String(source.Business);
+        }
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+        if (source.Data != null) {
+            this.Data = new KeyValueRecord[source.Data.length];
+            for (int i = 0; i < source.Data.length; i++) {
+                this.Data[i] = new KeyValueRecord(source.Data[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -50,6 +50,20 @@ public class CancelCommonMixStreamRequest extends AbstractModel{
         this.MixStreamSessionId = MixStreamSessionId;
     }
 
+    public CancelCommonMixStreamRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CancelCommonMixStreamRequest(CancelCommonMixStreamRequest source) {
+        if (source.MixStreamSessionId != null) {
+            this.MixStreamSessionId = new String(source.MixStreamSessionId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

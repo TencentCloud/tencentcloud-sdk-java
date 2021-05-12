@@ -45,6 +45,23 @@ public class DeleteImageTagsRequest extends AbstractModel{
         this.ImageTags = ImageTags;
     }
 
+    public DeleteImageTagsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteImageTagsRequest(DeleteImageTagsRequest source) {
+        if (source.ImageTags != null) {
+            this.ImageTags = new DeleteImageTag[source.ImageTags.length];
+            for (int i = 0; i < source.ImageTags.length; i++) {
+                this.ImageTags[i] = new DeleteImageTag(source.ImageTags[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

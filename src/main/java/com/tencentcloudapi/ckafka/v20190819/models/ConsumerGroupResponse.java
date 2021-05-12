@@ -241,6 +241,56 @@ public class ConsumerGroupResponse extends AbstractModel{
         this.GroupListForMonitor = GroupListForMonitor;
     }
 
+    public ConsumerGroupResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ConsumerGroupResponse(ConsumerGroupResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.TopicList != null) {
+            this.TopicList = new ConsumerGroupTopic[source.TopicList.length];
+            for (int i = 0; i < source.TopicList.length; i++) {
+                this.TopicList[i] = new ConsumerGroupTopic(source.TopicList[i]);
+            }
+        }
+        if (source.GroupList != null) {
+            this.GroupList = new ConsumerGroup[source.GroupList.length];
+            for (int i = 0; i < source.GroupList.length; i++) {
+                this.GroupList[i] = new ConsumerGroup(source.GroupList[i]);
+            }
+        }
+        if (source.TotalPartition != null) {
+            this.TotalPartition = new Long(source.TotalPartition);
+        }
+        if (source.PartitionListForMonitor != null) {
+            this.PartitionListForMonitor = new Partition[source.PartitionListForMonitor.length];
+            for (int i = 0; i < source.PartitionListForMonitor.length; i++) {
+                this.PartitionListForMonitor[i] = new Partition(source.PartitionListForMonitor[i]);
+            }
+        }
+        if (source.TotalTopic != null) {
+            this.TotalTopic = new Long(source.TotalTopic);
+        }
+        if (source.TopicListForMonitor != null) {
+            this.TopicListForMonitor = new ConsumerGroupTopic[source.TopicListForMonitor.length];
+            for (int i = 0; i < source.TopicListForMonitor.length; i++) {
+                this.TopicListForMonitor[i] = new ConsumerGroupTopic(source.TopicListForMonitor[i]);
+            }
+        }
+        if (source.GroupListForMonitor != null) {
+            this.GroupListForMonitor = new Group[source.GroupListForMonitor.length];
+            for (int i = 0; i < source.GroupListForMonitor.length; i++) {
+                this.GroupListForMonitor[i] = new Group(source.GroupListForMonitor[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

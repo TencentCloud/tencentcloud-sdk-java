@@ -91,6 +91,26 @@ public class MigratePrivateIpAddressRequest extends AbstractModel{
         this.PrivateIpAddress = PrivateIpAddress;
     }
 
+    public MigratePrivateIpAddressRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MigratePrivateIpAddressRequest(MigratePrivateIpAddressRequest source) {
+        if (source.SourceNetworkInterfaceId != null) {
+            this.SourceNetworkInterfaceId = new String(source.SourceNetworkInterfaceId);
+        }
+        if (source.DestinationNetworkInterfaceId != null) {
+            this.DestinationNetworkInterfaceId = new String(source.DestinationNetworkInterfaceId);
+        }
+        if (source.PrivateIpAddress != null) {
+            this.PrivateIpAddress = new String(source.PrivateIpAddress);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

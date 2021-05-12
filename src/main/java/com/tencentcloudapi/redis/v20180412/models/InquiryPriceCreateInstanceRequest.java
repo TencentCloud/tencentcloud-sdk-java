@@ -234,6 +234,44 @@ TypeId为标准架构时，MemSize是实例总内存容量；TypeId为集群架�
         this.ReplicasReadonly = ReplicasReadonly;
     }
 
+    public InquiryPriceCreateInstanceRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public InquiryPriceCreateInstanceRequest(InquiryPriceCreateInstanceRequest source) {
+        if (source.ZoneId != null) {
+            this.ZoneId = new Long(source.ZoneId);
+        }
+        if (source.TypeId != null) {
+            this.TypeId = new Long(source.TypeId);
+        }
+        if (source.MemSize != null) {
+            this.MemSize = new Long(source.MemSize);
+        }
+        if (source.GoodsNum != null) {
+            this.GoodsNum = new Long(source.GoodsNum);
+        }
+        if (source.Period != null) {
+            this.Period = new Long(source.Period);
+        }
+        if (source.BillingMode != null) {
+            this.BillingMode = new Long(source.BillingMode);
+        }
+        if (source.RedisShardNum != null) {
+            this.RedisShardNum = new Long(source.RedisShardNum);
+        }
+        if (source.RedisReplicasNum != null) {
+            this.RedisReplicasNum = new Long(source.RedisReplicasNum);
+        }
+        if (source.ReplicasReadonly != null) {
+            this.ReplicasReadonly = new Boolean(source.ReplicasReadonly);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

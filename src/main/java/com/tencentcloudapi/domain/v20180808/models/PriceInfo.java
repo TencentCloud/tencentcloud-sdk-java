@@ -137,6 +137,32 @@ public class PriceInfo extends AbstractModel{
         this.Operation = Operation;
     }
 
+    public PriceInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PriceInfo(PriceInfo source) {
+        if (source.Tld != null) {
+            this.Tld = new String(source.Tld);
+        }
+        if (source.Year != null) {
+            this.Year = new Long(source.Year);
+        }
+        if (source.Price != null) {
+            this.Price = new Long(source.Price);
+        }
+        if (source.RealPrice != null) {
+            this.RealPrice = new Long(source.RealPrice);
+        }
+        if (source.Operation != null) {
+            this.Operation = new String(source.Operation);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

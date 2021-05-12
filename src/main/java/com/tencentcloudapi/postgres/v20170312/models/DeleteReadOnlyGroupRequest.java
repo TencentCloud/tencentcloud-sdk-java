@@ -45,6 +45,20 @@ public class DeleteReadOnlyGroupRequest extends AbstractModel{
         this.ReadOnlyGroupId = ReadOnlyGroupId;
     }
 
+    public DeleteReadOnlyGroupRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteReadOnlyGroupRequest(DeleteReadOnlyGroupRequest source) {
+        if (source.ReadOnlyGroupId != null) {
+            this.ReadOnlyGroupId = new String(source.ReadOnlyGroupId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -91,6 +91,29 @@ public class GetCheckSimilarPersonJobIdListResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public GetCheckSimilarPersonJobIdListResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GetCheckSimilarPersonJobIdListResponse(GetCheckSimilarPersonJobIdListResponse source) {
+        if (source.JobIdInfos != null) {
+            this.JobIdInfos = new JobIdInfo[source.JobIdInfos.length];
+            for (int i = 0; i < source.JobIdInfos.length; i++) {
+                this.JobIdInfos[i] = new JobIdInfo(source.JobIdInfos[i]);
+            }
+        }
+        if (source.JobIdNum != null) {
+            this.JobIdNum = new Long(source.JobIdNum);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

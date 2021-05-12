@@ -229,6 +229,50 @@ public class DescribeAlarmNoticesRequest extends AbstractModel{
         this.GroupIds = GroupIds;
     }
 
+    public DescribeAlarmNoticesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeAlarmNoticesRequest(DescribeAlarmNoticesRequest source) {
+        if (source.Module != null) {
+            this.Module = new String(source.Module);
+        }
+        if (source.PageNumber != null) {
+            this.PageNumber = new Long(source.PageNumber);
+        }
+        if (source.PageSize != null) {
+            this.PageSize = new Long(source.PageSize);
+        }
+        if (source.Order != null) {
+            this.Order = new String(source.Order);
+        }
+        if (source.OwnerUid != null) {
+            this.OwnerUid = new Long(source.OwnerUid);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.ReceiverType != null) {
+            this.ReceiverType = new String(source.ReceiverType);
+        }
+        if (source.UserIds != null) {
+            this.UserIds = new Long[source.UserIds.length];
+            for (int i = 0; i < source.UserIds.length; i++) {
+                this.UserIds[i] = new Long(source.UserIds[i]);
+            }
+        }
+        if (source.GroupIds != null) {
+            this.GroupIds = new Long[source.GroupIds.length];
+            for (int i = 0; i < source.GroupIds.length; i++) {
+                this.GroupIds[i] = new Long(source.GroupIds[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

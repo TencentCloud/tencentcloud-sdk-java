@@ -91,6 +91,29 @@ public class ConflictSource extends AbstractModel{
         this.ConflictItemSet = ConflictItemSet;
     }
 
+    public ConflictSource() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ConflictSource(ConflictSource source) {
+        if (source.ConflictSourceId != null) {
+            this.ConflictSourceId = new String(source.ConflictSourceId);
+        }
+        if (source.SourceItem != null) {
+            this.SourceItem = new String(source.SourceItem);
+        }
+        if (source.ConflictItemSet != null) {
+            this.ConflictItemSet = new ConflictItem[source.ConflictItemSet.length];
+            for (int i = 0; i < source.ConflictItemSet.length; i++) {
+                this.ConflictItemSet[i] = new ConflictItem(source.ConflictItemSet[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

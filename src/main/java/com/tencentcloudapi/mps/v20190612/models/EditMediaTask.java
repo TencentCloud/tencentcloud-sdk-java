@@ -185,6 +185,35 @@ public class EditMediaTask extends AbstractModel{
         this.Output = Output;
     }
 
+    public EditMediaTask() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public EditMediaTask(EditMediaTask source) {
+        if (source.TaskId != null) {
+            this.TaskId = new String(source.TaskId);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.ErrCode != null) {
+            this.ErrCode = new Long(source.ErrCode);
+        }
+        if (source.Message != null) {
+            this.Message = new String(source.Message);
+        }
+        if (source.Input != null) {
+            this.Input = new EditMediaTaskInput(source.Input);
+        }
+        if (source.Output != null) {
+            this.Output = new EditMediaTaskOutput(source.Output);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

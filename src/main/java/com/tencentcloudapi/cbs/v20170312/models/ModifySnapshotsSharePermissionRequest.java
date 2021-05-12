@@ -91,6 +91,32 @@ public class ModifySnapshotsSharePermissionRequest extends AbstractModel{
         this.SnapshotIds = SnapshotIds;
     }
 
+    public ModifySnapshotsSharePermissionRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifySnapshotsSharePermissionRequest(ModifySnapshotsSharePermissionRequest source) {
+        if (source.AccountIds != null) {
+            this.AccountIds = new String[source.AccountIds.length];
+            for (int i = 0; i < source.AccountIds.length; i++) {
+                this.AccountIds[i] = new String(source.AccountIds[i]);
+            }
+        }
+        if (source.Permission != null) {
+            this.Permission = new String(source.Permission);
+        }
+        if (source.SnapshotIds != null) {
+            this.SnapshotIds = new String[source.SnapshotIds.length];
+            for (int i = 0; i < source.SnapshotIds.length; i++) {
+                this.SnapshotIds[i] = new String(source.SnapshotIds[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

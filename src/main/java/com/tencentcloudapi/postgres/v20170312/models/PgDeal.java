@@ -160,6 +160,38 @@ public class PgDeal extends AbstractModel{
         this.DBInstanceIdSet = DBInstanceIdSet;
     }
 
+    public PgDeal() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PgDeal(PgDeal source) {
+        if (source.DealName != null) {
+            this.DealName = new String(source.DealName);
+        }
+        if (source.OwnerUin != null) {
+            this.OwnerUin = new String(source.OwnerUin);
+        }
+        if (source.Count != null) {
+            this.Count = new Long(source.Count);
+        }
+        if (source.PayMode != null) {
+            this.PayMode = new Long(source.PayMode);
+        }
+        if (source.FlowId != null) {
+            this.FlowId = new Long(source.FlowId);
+        }
+        if (source.DBInstanceIdSet != null) {
+            this.DBInstanceIdSet = new String[source.DBInstanceIdSet.length];
+            for (int i = 0; i < source.DBInstanceIdSet.length; i++) {
+                this.DBInstanceIdSet[i] = new String(source.DBInstanceIdSet[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

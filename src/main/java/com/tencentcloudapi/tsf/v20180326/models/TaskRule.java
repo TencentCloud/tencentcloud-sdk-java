@@ -101,6 +101,26 @@ public class TaskRule extends AbstractModel{
         this.RepeatInterval = RepeatInterval;
     }
 
+    public TaskRule() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TaskRule(TaskRule source) {
+        if (source.RuleType != null) {
+            this.RuleType = new String(source.RuleType);
+        }
+        if (source.Expression != null) {
+            this.Expression = new String(source.Expression);
+        }
+        if (source.RepeatInterval != null) {
+            this.RepeatInterval = new Long(source.RepeatInterval);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -68,6 +68,23 @@ public class ApplyInstanceSnapshotRequest extends AbstractModel{
         this.SnapshotId = SnapshotId;
     }
 
+    public ApplyInstanceSnapshotRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ApplyInstanceSnapshotRequest(ApplyInstanceSnapshotRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.SnapshotId != null) {
+            this.SnapshotId = new String(source.SnapshotId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -91,6 +91,29 @@ public class DescribeSlowLogTopSqlsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeSlowLogTopSqlsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeSlowLogTopSqlsResponse(DescribeSlowLogTopSqlsResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.Rows != null) {
+            this.Rows = new SlowLogTopSqlItem[source.Rows.length];
+            for (int i = 0; i < source.Rows.length; i++) {
+                this.Rows[i] = new SlowLogTopSqlItem(source.Rows[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

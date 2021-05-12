@@ -203,6 +203,50 @@ RetCode的顺序和入参中 Images 或 Urls 的顺序一致。
         this.RequestId = RequestId;
     }
 
+    public CreateFaceResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateFaceResponse(CreateFaceResponse source) {
+        if (source.SucFaceNum != null) {
+            this.SucFaceNum = new Long(source.SucFaceNum);
+        }
+        if (source.SucFaceIds != null) {
+            this.SucFaceIds = new String[source.SucFaceIds.length];
+            for (int i = 0; i < source.SucFaceIds.length; i++) {
+                this.SucFaceIds[i] = new String(source.SucFaceIds[i]);
+            }
+        }
+        if (source.RetCode != null) {
+            this.RetCode = new Long[source.RetCode.length];
+            for (int i = 0; i < source.RetCode.length; i++) {
+                this.RetCode[i] = new Long(source.RetCode[i]);
+            }
+        }
+        if (source.SucIndexes != null) {
+            this.SucIndexes = new Long[source.SucIndexes.length];
+            for (int i = 0; i < source.SucIndexes.length; i++) {
+                this.SucIndexes[i] = new Long(source.SucIndexes[i]);
+            }
+        }
+        if (source.SucFaceRects != null) {
+            this.SucFaceRects = new FaceRect[source.SucFaceRects.length];
+            for (int i = 0; i < source.SucFaceRects.length; i++) {
+                this.SucFaceRects[i] = new FaceRect(source.SucFaceRects[i]);
+            }
+        }
+        if (source.FaceModelVersion != null) {
+            this.FaceModelVersion = new String(source.FaceModelVersion);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

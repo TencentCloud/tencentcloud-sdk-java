@@ -137,6 +137,32 @@ public class DeployServerlessGroupRequest extends AbstractModel{
         this.StartupParameters = StartupParameters;
     }
 
+    public DeployServerlessGroupRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeployServerlessGroupRequest(DeployServerlessGroupRequest source) {
+        if (source.GroupId != null) {
+            this.GroupId = new String(source.GroupId);
+        }
+        if (source.PkgId != null) {
+            this.PkgId = new String(source.PkgId);
+        }
+        if (source.Memory != null) {
+            this.Memory = new String(source.Memory);
+        }
+        if (source.InstanceRequest != null) {
+            this.InstanceRequest = new Long(source.InstanceRequest);
+        }
+        if (source.StartupParameters != null) {
+            this.StartupParameters = new String(source.StartupParameters);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

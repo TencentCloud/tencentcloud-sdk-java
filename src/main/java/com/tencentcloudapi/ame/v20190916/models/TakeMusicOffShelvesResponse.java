@@ -119,6 +119,32 @@ public class TakeMusicOffShelvesResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public TakeMusicOffShelvesResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TakeMusicOffShelvesResponse(TakeMusicOffShelvesResponse source) {
+        if (source.SuccessNum != null) {
+            this.SuccessNum = new Long(source.SuccessNum);
+        }
+        if (source.FailedNum != null) {
+            this.FailedNum = new Long(source.FailedNum);
+        }
+        if (source.FailedMusicIds != null) {
+            this.FailedMusicIds = new String[source.FailedMusicIds.length];
+            for (int i = 0; i < source.FailedMusicIds.length; i++) {
+                this.FailedMusicIds[i] = new String(source.FailedMusicIds[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

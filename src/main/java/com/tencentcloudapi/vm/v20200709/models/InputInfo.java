@@ -106,6 +106,26 @@ public class InputInfo extends AbstractModel{
         this.BucketInfo = BucketInfo;
     }
 
+    public InputInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public InputInfo(InputInfo source) {
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.Url != null) {
+            this.Url = new String(source.Url);
+        }
+        if (source.BucketInfo != null) {
+            this.BucketInfo = new String(source.BucketInfo);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

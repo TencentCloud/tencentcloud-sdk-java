@@ -68,6 +68,23 @@ public class ZoneHourFlow extends AbstractModel{
         this.FlowCount = FlowCount;
     }
 
+    public ZoneHourFlow() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ZoneHourFlow(ZoneHourFlow source) {
+        if (source.Hour != null) {
+            this.Hour = new Long(source.Hour);
+        }
+        if (source.FlowCount != null) {
+            this.FlowCount = new Long(source.FlowCount);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

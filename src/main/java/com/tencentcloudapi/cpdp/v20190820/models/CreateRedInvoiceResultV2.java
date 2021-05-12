@@ -45,6 +45,20 @@ public class CreateRedInvoiceResultV2 extends AbstractModel{
         this.InvoiceId = InvoiceId;
     }
 
+    public CreateRedInvoiceResultV2() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateRedInvoiceResultV2(CreateRedInvoiceResultV2 source) {
+        if (source.InvoiceId != null) {
+            this.InvoiceId = new String(source.InvoiceId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

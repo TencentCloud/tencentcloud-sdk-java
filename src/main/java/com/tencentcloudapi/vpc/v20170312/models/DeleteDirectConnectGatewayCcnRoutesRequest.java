@@ -68,6 +68,26 @@ public class DeleteDirectConnectGatewayCcnRoutesRequest extends AbstractModel{
         this.RouteIds = RouteIds;
     }
 
+    public DeleteDirectConnectGatewayCcnRoutesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteDirectConnectGatewayCcnRoutesRequest(DeleteDirectConnectGatewayCcnRoutesRequest source) {
+        if (source.DirectConnectGatewayId != null) {
+            this.DirectConnectGatewayId = new String(source.DirectConnectGatewayId);
+        }
+        if (source.RouteIds != null) {
+            this.RouteIds = new String[source.RouteIds.length];
+            for (int i = 0; i < source.RouteIds.length; i++) {
+                this.RouteIds[i] = new String(source.RouteIds[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

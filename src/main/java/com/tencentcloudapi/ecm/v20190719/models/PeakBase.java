@@ -114,6 +114,29 @@ public class PeakBase extends AbstractModel{
         this.RecordTime = RecordTime;
     }
 
+    public PeakBase() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PeakBase(PeakBase source) {
+        if (source.PeakCpuNum != null) {
+            this.PeakCpuNum = new Long(source.PeakCpuNum);
+        }
+        if (source.PeakMemoryNum != null) {
+            this.PeakMemoryNum = new Long(source.PeakMemoryNum);
+        }
+        if (source.PeakStorageNum != null) {
+            this.PeakStorageNum = new Long(source.PeakStorageNum);
+        }
+        if (source.RecordTime != null) {
+            this.RecordTime = new String(source.RecordTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -137,6 +137,35 @@ public class DescribeTaskLogsRequest extends AbstractModel{
         this.Limit = Limit;
     }
 
+    public DescribeTaskLogsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeTaskLogsRequest(DescribeTaskLogsRequest source) {
+        if (source.JobId != null) {
+            this.JobId = new String(source.JobId);
+        }
+        if (source.TaskName != null) {
+            this.TaskName = new String(source.TaskName);
+        }
+        if (source.TaskInstanceIndexes != null) {
+            this.TaskInstanceIndexes = new Long[source.TaskInstanceIndexes.length];
+            for (int i = 0; i < source.TaskInstanceIndexes.length; i++) {
+                this.TaskInstanceIndexes[i] = new Long(source.TaskInstanceIndexes[i]);
+            }
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

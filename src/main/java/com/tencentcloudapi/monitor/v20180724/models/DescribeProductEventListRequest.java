@@ -367,6 +367,86 @@ public class DescribeProductEventListRequest extends AbstractModel{
         this.Limit = Limit;
     }
 
+    public DescribeProductEventListRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeProductEventListRequest(DescribeProductEventListRequest source) {
+        if (source.Module != null) {
+            this.Module = new String(source.Module);
+        }
+        if (source.ProductName != null) {
+            this.ProductName = new String[source.ProductName.length];
+            for (int i = 0; i < source.ProductName.length; i++) {
+                this.ProductName[i] = new String(source.ProductName[i]);
+            }
+        }
+        if (source.EventName != null) {
+            this.EventName = new String[source.EventName.length];
+            for (int i = 0; i < source.EventName.length; i++) {
+                this.EventName[i] = new String(source.EventName[i]);
+            }
+        }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String[source.InstanceId.length];
+            for (int i = 0; i < source.InstanceId.length; i++) {
+                this.InstanceId[i] = new String(source.InstanceId[i]);
+            }
+        }
+        if (source.Dimensions != null) {
+            this.Dimensions = new DescribeProductEventListDimensions[source.Dimensions.length];
+            for (int i = 0; i < source.Dimensions.length; i++) {
+                this.Dimensions[i] = new DescribeProductEventListDimensions(source.Dimensions[i]);
+            }
+        }
+        if (source.RegionList != null) {
+            this.RegionList = new String[source.RegionList.length];
+            for (int i = 0; i < source.RegionList.length; i++) {
+                this.RegionList[i] = new String(source.RegionList[i]);
+            }
+        }
+        if (source.Type != null) {
+            this.Type = new String[source.Type.length];
+            for (int i = 0; i < source.Type.length; i++) {
+                this.Type[i] = new String(source.Type[i]);
+            }
+        }
+        if (source.Status != null) {
+            this.Status = new String[source.Status.length];
+            for (int i = 0; i < source.Status.length; i++) {
+                this.Status[i] = new String(source.Status[i]);
+            }
+        }
+        if (source.Project != null) {
+            this.Project = new String[source.Project.length];
+            for (int i = 0; i < source.Project.length; i++) {
+                this.Project[i] = new String(source.Project[i]);
+            }
+        }
+        if (source.IsAlarmConfig != null) {
+            this.IsAlarmConfig = new Long(source.IsAlarmConfig);
+        }
+        if (source.TimeOrder != null) {
+            this.TimeOrder = new String(source.TimeOrder);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new Long(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new Long(source.EndTime);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

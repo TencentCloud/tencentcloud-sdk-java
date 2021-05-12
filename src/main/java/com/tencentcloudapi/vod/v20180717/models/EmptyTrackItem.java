@@ -45,6 +45,20 @@ public class EmptyTrackItem extends AbstractModel{
         this.Duration = Duration;
     }
 
+    public EmptyTrackItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public EmptyTrackItem(EmptyTrackItem source) {
+        if (source.Duration != null) {
+            this.Duration = new Float(source.Duration);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

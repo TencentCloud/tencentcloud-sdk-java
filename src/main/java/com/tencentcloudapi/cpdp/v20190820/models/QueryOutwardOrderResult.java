@@ -68,6 +68,23 @@ public class QueryOutwardOrderResult extends AbstractModel{
         this.Data = Data;
     }
 
+    public QueryOutwardOrderResult() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public QueryOutwardOrderResult(QueryOutwardOrderResult source) {
+        if (source.Code != null) {
+            this.Code = new String(source.Code);
+        }
+        if (source.Data != null) {
+            this.Data = new QueryOutwardOrderData(source.Data);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

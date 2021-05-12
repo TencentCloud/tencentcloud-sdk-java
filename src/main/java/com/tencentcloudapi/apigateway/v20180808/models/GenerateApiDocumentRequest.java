@@ -91,6 +91,26 @@ public class GenerateApiDocumentRequest extends AbstractModel{
         this.GenLanguage = GenLanguage;
     }
 
+    public GenerateApiDocumentRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GenerateApiDocumentRequest(GenerateApiDocumentRequest source) {
+        if (source.ServiceId != null) {
+            this.ServiceId = new String(source.ServiceId);
+        }
+        if (source.GenEnvironment != null) {
+            this.GenEnvironment = new String(source.GenEnvironment);
+        }
+        if (source.GenLanguage != null) {
+            this.GenLanguage = new String(source.GenLanguage);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

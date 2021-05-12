@@ -114,6 +114,29 @@ public class UpgradeDBInstanceRequest extends AbstractModel{
         this.OplogSize = OplogSize;
     }
 
+    public UpgradeDBInstanceRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UpgradeDBInstanceRequest(UpgradeDBInstanceRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.Memory != null) {
+            this.Memory = new Long(source.Memory);
+        }
+        if (source.Volume != null) {
+            this.Volume = new Long(source.Volume);
+        }
+        if (source.OplogSize != null) {
+            this.OplogSize = new Long(source.OplogSize);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -45,6 +45,20 @@ public class DeleteLaunchConfigurationRequest extends AbstractModel{
         this.LaunchConfigurationId = LaunchConfigurationId;
     }
 
+    public DeleteLaunchConfigurationRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteLaunchConfigurationRequest(DeleteLaunchConfigurationRequest source) {
+        if (source.LaunchConfigurationId != null) {
+            this.LaunchConfigurationId = new String(source.LaunchConfigurationId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

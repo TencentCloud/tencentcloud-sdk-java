@@ -68,6 +68,23 @@ public class L4RuleSource extends AbstractModel{
         this.Weight = Weight;
     }
 
+    public L4RuleSource() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public L4RuleSource(L4RuleSource source) {
+        if (source.Source != null) {
+            this.Source = new String(source.Source);
+        }
+        if (source.Weight != null) {
+            this.Weight = new Long(source.Weight);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

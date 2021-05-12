@@ -436,6 +436,74 @@ public class UpdateFunctionConfigurationRequest extends AbstractModel{
         this.InitTimeout = InitTimeout;
     }
 
+    public UpdateFunctionConfigurationRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UpdateFunctionConfigurationRequest(UpdateFunctionConfigurationRequest source) {
+        if (source.FunctionName != null) {
+            this.FunctionName = new String(source.FunctionName);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.MemorySize != null) {
+            this.MemorySize = new Long(source.MemorySize);
+        }
+        if (source.Timeout != null) {
+            this.Timeout = new Long(source.Timeout);
+        }
+        if (source.Runtime != null) {
+            this.Runtime = new String(source.Runtime);
+        }
+        if (source.Environment != null) {
+            this.Environment = new Environment(source.Environment);
+        }
+        if (source.Namespace != null) {
+            this.Namespace = new String(source.Namespace);
+        }
+        if (source.VpcConfig != null) {
+            this.VpcConfig = new VpcConfig(source.VpcConfig);
+        }
+        if (source.Role != null) {
+            this.Role = new String(source.Role);
+        }
+        if (source.ClsLogsetId != null) {
+            this.ClsLogsetId = new String(source.ClsLogsetId);
+        }
+        if (source.ClsTopicId != null) {
+            this.ClsTopicId = new String(source.ClsTopicId);
+        }
+        if (source.Publish != null) {
+            this.Publish = new String(source.Publish);
+        }
+        if (source.L5Enable != null) {
+            this.L5Enable = new String(source.L5Enable);
+        }
+        if (source.Layers != null) {
+            this.Layers = new LayerVersionSimple[source.Layers.length];
+            for (int i = 0; i < source.Layers.length; i++) {
+                this.Layers[i] = new LayerVersionSimple(source.Layers[i]);
+            }
+        }
+        if (source.DeadLetterConfig != null) {
+            this.DeadLetterConfig = new DeadLetterConfig(source.DeadLetterConfig);
+        }
+        if (source.PublicNetConfig != null) {
+            this.PublicNetConfig = new PublicNetConfigIn(source.PublicNetConfig);
+        }
+        if (source.CfsConfig != null) {
+            this.CfsConfig = new CfsConfig(source.CfsConfig);
+        }
+        if (source.InitTimeout != null) {
+            this.InitTimeout = new Long(source.InitTimeout);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

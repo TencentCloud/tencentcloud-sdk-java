@@ -183,6 +183,38 @@ public class SecurityGroupLimitSet extends AbstractModel{
         this.ModuleSecurityGroupLimit = ModuleSecurityGroupLimit;
     }
 
+    public SecurityGroupLimitSet() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SecurityGroupLimitSet(SecurityGroupLimitSet source) {
+        if (source.SecurityGroupLimit != null) {
+            this.SecurityGroupLimit = new Long(source.SecurityGroupLimit);
+        }
+        if (source.SecurityGroupPolicyLimit != null) {
+            this.SecurityGroupPolicyLimit = new Long(source.SecurityGroupPolicyLimit);
+        }
+        if (source.ReferedSecurityGroupLimit != null) {
+            this.ReferedSecurityGroupLimit = new Long(source.ReferedSecurityGroupLimit);
+        }
+        if (source.SecurityGroupInstanceLimit != null) {
+            this.SecurityGroupInstanceLimit = new Long(source.SecurityGroupInstanceLimit);
+        }
+        if (source.InstanceSecurityGroupLimit != null) {
+            this.InstanceSecurityGroupLimit = new Long(source.InstanceSecurityGroupLimit);
+        }
+        if (source.SecurityGroupModuleLimit != null) {
+            this.SecurityGroupModuleLimit = new Long(source.SecurityGroupModuleLimit);
+        }
+        if (source.ModuleSecurityGroupLimit != null) {
+            this.ModuleSecurityGroupLimit = new Long(source.ModuleSecurityGroupLimit);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

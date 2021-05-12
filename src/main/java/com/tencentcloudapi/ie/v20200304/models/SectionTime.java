@@ -68,6 +68,23 @@ public class SectionTime extends AbstractModel{
         this.Duration = Duration;
     }
 
+    public SectionTime() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SectionTime(SectionTime source) {
+        if (source.StartTime != null) {
+            this.StartTime = new Long(source.StartTime);
+        }
+        if (source.Duration != null) {
+            this.Duration = new Long(source.Duration);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

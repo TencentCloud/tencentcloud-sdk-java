@@ -68,6 +68,23 @@ public class ModifyClusterAsGroupAttributeRequest extends AbstractModel{
         this.ClusterAsGroupAttribute = ClusterAsGroupAttribute;
     }
 
+    public ModifyClusterAsGroupAttributeRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyClusterAsGroupAttributeRequest(ModifyClusterAsGroupAttributeRequest source) {
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
+        if (source.ClusterAsGroupAttribute != null) {
+            this.ClusterAsGroupAttribute = new ClusterAsGroupAttribute(source.ClusterAsGroupAttribute);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

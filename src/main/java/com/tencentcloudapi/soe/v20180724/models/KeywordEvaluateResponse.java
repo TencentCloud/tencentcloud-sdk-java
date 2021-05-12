@@ -91,6 +91,29 @@ public class KeywordEvaluateResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public KeywordEvaluateResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public KeywordEvaluateResponse(KeywordEvaluateResponse source) {
+        if (source.KeywordScores != null) {
+            this.KeywordScores = new KeywordScore[source.KeywordScores.length];
+            for (int i = 0; i < source.KeywordScores.length; i++) {
+                this.KeywordScores[i] = new KeywordScore(source.KeywordScores[i]);
+            }
+        }
+        if (source.SessionId != null) {
+            this.SessionId = new String(source.SessionId);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

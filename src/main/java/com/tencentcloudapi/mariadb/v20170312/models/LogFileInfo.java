@@ -114,6 +114,29 @@ public class LogFileInfo extends AbstractModel{
         this.FileName = FileName;
     }
 
+    public LogFileInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public LogFileInfo(LogFileInfo source) {
+        if (source.Mtime != null) {
+            this.Mtime = new Long(source.Mtime);
+        }
+        if (source.Length != null) {
+            this.Length = new Long(source.Length);
+        }
+        if (source.Uri != null) {
+            this.Uri = new String(source.Uri);
+        }
+        if (source.FileName != null) {
+            this.FileName = new String(source.FileName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -302,6 +302,47 @@ public class HealthCheck extends AbstractModel{
         this.CheckType = CheckType;
     }
 
+    public HealthCheck() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public HealthCheck(HealthCheck source) {
+        if (source.HealthSwitch != null) {
+            this.HealthSwitch = new Long(source.HealthSwitch);
+        }
+        if (source.TimeOut != null) {
+            this.TimeOut = new Long(source.TimeOut);
+        }
+        if (source.IntervalTime != null) {
+            this.IntervalTime = new Long(source.IntervalTime);
+        }
+        if (source.HealthNum != null) {
+            this.HealthNum = new Long(source.HealthNum);
+        }
+        if (source.UnHealthyNum != null) {
+            this.UnHealthyNum = new Long(source.UnHealthyNum);
+        }
+        if (source.CheckPort != null) {
+            this.CheckPort = new Long(source.CheckPort);
+        }
+        if (source.ContextType != null) {
+            this.ContextType = new String(source.ContextType);
+        }
+        if (source.SendContext != null) {
+            this.SendContext = new String(source.SendContext);
+        }
+        if (source.RecvContext != null) {
+            this.RecvContext = new String(source.RecvContext);
+        }
+        if (source.CheckType != null) {
+            this.CheckType = new String(source.CheckType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

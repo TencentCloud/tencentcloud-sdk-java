@@ -68,6 +68,23 @@ public class DescribeZonesRequest extends AbstractModel{
         this.MallId = MallId;
     }
 
+    public DescribeZonesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeZonesRequest(DescribeZonesRequest source) {
+        if (source.GroupCode != null) {
+            this.GroupCode = new String(source.GroupCode);
+        }
+        if (source.MallId != null) {
+            this.MallId = new Long(source.MallId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

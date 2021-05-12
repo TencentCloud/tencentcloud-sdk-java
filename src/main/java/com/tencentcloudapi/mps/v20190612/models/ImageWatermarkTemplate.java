@@ -154,6 +154,29 @@ public class ImageWatermarkTemplate extends AbstractModel{
         this.RepeatType = RepeatType;
     }
 
+    public ImageWatermarkTemplate() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ImageWatermarkTemplate(ImageWatermarkTemplate source) {
+        if (source.ImageUrl != null) {
+            this.ImageUrl = new String(source.ImageUrl);
+        }
+        if (source.Width != null) {
+            this.Width = new String(source.Width);
+        }
+        if (source.Height != null) {
+            this.Height = new String(source.Height);
+        }
+        if (source.RepeatType != null) {
+            this.RepeatType = new String(source.RepeatType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

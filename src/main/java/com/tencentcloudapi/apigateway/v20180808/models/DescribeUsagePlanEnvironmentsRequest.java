@@ -114,6 +114,29 @@ public class DescribeUsagePlanEnvironmentsRequest extends AbstractModel{
         this.Offset = Offset;
     }
 
+    public DescribeUsagePlanEnvironmentsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeUsagePlanEnvironmentsRequest(DescribeUsagePlanEnvironmentsRequest source) {
+        if (source.UsagePlanId != null) {
+            this.UsagePlanId = new String(source.UsagePlanId);
+        }
+        if (source.BindType != null) {
+            this.BindType = new String(source.BindType);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

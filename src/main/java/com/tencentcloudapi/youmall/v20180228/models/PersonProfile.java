@@ -183,6 +183,38 @@ public class PersonProfile extends AbstractModel{
         this.Similarity = Similarity;
     }
 
+    public PersonProfile() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PersonProfile(PersonProfile source) {
+        if (source.PersonId != null) {
+            this.PersonId = new String(source.PersonId);
+        }
+        if (source.Gender != null) {
+            this.Gender = new Long(source.Gender);
+        }
+        if (source.Age != null) {
+            this.Age = new Long(source.Age);
+        }
+        if (source.FirstArrivedTime != null) {
+            this.FirstArrivedTime = new String(source.FirstArrivedTime);
+        }
+        if (source.ArrivedCount != null) {
+            this.ArrivedCount = new Long(source.ArrivedCount);
+        }
+        if (source.PicUrl != null) {
+            this.PicUrl = new String(source.PicUrl);
+        }
+        if (source.Similarity != null) {
+            this.Similarity = new Float(source.Similarity);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

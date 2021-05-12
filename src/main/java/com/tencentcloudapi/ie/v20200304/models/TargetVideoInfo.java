@@ -91,6 +91,26 @@ public class TargetVideoInfo extends AbstractModel{
         this.FrameRate = FrameRate;
     }
 
+    public TargetVideoInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TargetVideoInfo(TargetVideoInfo source) {
+        if (source.Width != null) {
+            this.Width = new Long(source.Width);
+        }
+        if (source.Height != null) {
+            this.Height = new Long(source.Height);
+        }
+        if (source.FrameRate != null) {
+            this.FrameRate = new Long(source.FrameRate);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

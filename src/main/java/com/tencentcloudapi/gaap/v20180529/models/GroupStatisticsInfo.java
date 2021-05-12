@@ -91,6 +91,29 @@ public class GroupStatisticsInfo extends AbstractModel{
         this.ProxySet = ProxySet;
     }
 
+    public GroupStatisticsInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GroupStatisticsInfo(GroupStatisticsInfo source) {
+        if (source.GroupId != null) {
+            this.GroupId = new String(source.GroupId);
+        }
+        if (source.GroupName != null) {
+            this.GroupName = new String(source.GroupName);
+        }
+        if (source.ProxySet != null) {
+            this.ProxySet = new ProxySimpleInfo[source.ProxySet.length];
+            for (int i = 0; i < source.ProxySet.length; i++) {
+                this.ProxySet[i] = new ProxySimpleInfo(source.ProxySet[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

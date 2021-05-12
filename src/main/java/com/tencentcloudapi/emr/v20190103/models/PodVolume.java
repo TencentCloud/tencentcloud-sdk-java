@@ -106,6 +106,26 @@ public class PodVolume extends AbstractModel{
         this.HostVolume = HostVolume;
     }
 
+    public PodVolume() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PodVolume(PodVolume source) {
+        if (source.VolumeType != null) {
+            this.VolumeType = new String(source.VolumeType);
+        }
+        if (source.PVCVolume != null) {
+            this.PVCVolume = new PersistentVolumeContext(source.PVCVolume);
+        }
+        if (source.HostVolume != null) {
+            this.HostVolume = new HostVolumeContext(source.HostVolume);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

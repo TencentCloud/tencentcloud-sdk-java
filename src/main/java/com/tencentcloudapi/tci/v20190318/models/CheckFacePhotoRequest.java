@@ -68,6 +68,23 @@ public class CheckFacePhotoRequest extends AbstractModel{
         this.FileType = FileType;
     }
 
+    public CheckFacePhotoRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CheckFacePhotoRequest(CheckFacePhotoRequest source) {
+        if (source.FileContent != null) {
+            this.FileContent = new String(source.FileContent);
+        }
+        if (source.FileType != null) {
+            this.FileType = new String(source.FileType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -45,6 +45,20 @@ public class PaasSmsCampaignStatusResp extends AbstractModel{
         this.Status = Status;
     }
 
+    public PaasSmsCampaignStatusResp() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PaasSmsCampaignStatusResp(PaasSmsCampaignStatusResp source) {
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

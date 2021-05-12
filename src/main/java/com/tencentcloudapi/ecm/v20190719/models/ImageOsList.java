@@ -78,6 +78,29 @@ public class ImageOsList extends AbstractModel{
         this.Linux = Linux;
     }
 
+    public ImageOsList() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ImageOsList(ImageOsList source) {
+        if (source.Windows != null) {
+            this.Windows = new String[source.Windows.length];
+            for (int i = 0; i < source.Windows.length; i++) {
+                this.Windows[i] = new String(source.Windows[i]);
+            }
+        }
+        if (source.Linux != null) {
+            this.Linux = new String[source.Linux.length];
+            for (int i = 0; i < source.Linux.length; i++) {
+                this.Linux[i] = new String(source.Linux[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

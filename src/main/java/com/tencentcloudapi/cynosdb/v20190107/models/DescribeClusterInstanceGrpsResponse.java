@@ -91,6 +91,29 @@ public class DescribeClusterInstanceGrpsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeClusterInstanceGrpsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeClusterInstanceGrpsResponse(DescribeClusterInstanceGrpsResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.InstanceGrpInfoList != null) {
+            this.InstanceGrpInfoList = new CynosdbInstanceGrp[source.InstanceGrpInfoList.length];
+            for (int i = 0; i < source.InstanceGrpInfoList.length; i++) {
+                this.InstanceGrpInfoList[i] = new CynosdbInstanceGrp(source.InstanceGrpInfoList[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

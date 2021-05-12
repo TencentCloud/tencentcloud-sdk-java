@@ -250,6 +250,35 @@ nor\hun\tha\lat\ara
         this.PdfPageNumber = PdfPageNumber;
     }
 
+    public GeneralBasicOCRRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GeneralBasicOCRRequest(GeneralBasicOCRRequest source) {
+        if (source.ImageBase64 != null) {
+            this.ImageBase64 = new String(source.ImageBase64);
+        }
+        if (source.ImageUrl != null) {
+            this.ImageUrl = new String(source.ImageUrl);
+        }
+        if (source.Scene != null) {
+            this.Scene = new String(source.Scene);
+        }
+        if (source.LanguageType != null) {
+            this.LanguageType = new String(source.LanguageType);
+        }
+        if (source.IsPdf != null) {
+            this.IsPdf = new Boolean(source.IsPdf);
+        }
+        if (source.PdfPageNumber != null) {
+            this.PdfPageNumber = new Long(source.PdfPageNumber);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

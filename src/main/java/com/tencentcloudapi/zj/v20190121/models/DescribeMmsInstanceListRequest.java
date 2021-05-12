@@ -137,6 +137,32 @@ public class DescribeMmsInstanceListRequest extends AbstractModel{
         this.Title = Title;
     }
 
+    public DescribeMmsInstanceListRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeMmsInstanceListRequest(DescribeMmsInstanceListRequest source) {
+        if (source.License != null) {
+            this.License = new String(source.License);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.AppSubId != null) {
+            this.AppSubId = new String(source.AppSubId);
+        }
+        if (source.Title != null) {
+            this.Title = new String(source.Title);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

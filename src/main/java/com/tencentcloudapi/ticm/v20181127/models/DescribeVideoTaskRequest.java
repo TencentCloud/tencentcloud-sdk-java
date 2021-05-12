@@ -45,6 +45,20 @@ public class DescribeVideoTaskRequest extends AbstractModel{
         this.VodTaskId = VodTaskId;
     }
 
+    public DescribeVideoTaskRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeVideoTaskRequest(DescribeVideoTaskRequest source) {
+        if (source.VodTaskId != null) {
+            this.VodTaskId = new String(source.VodTaskId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

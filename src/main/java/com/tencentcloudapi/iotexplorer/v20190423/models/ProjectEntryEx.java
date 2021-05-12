@@ -234,6 +234,44 @@ public class ProjectEntryEx extends AbstractModel{
         this.InstanceId = InstanceId;
     }
 
+    public ProjectEntryEx() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ProjectEntryEx(ProjectEntryEx source) {
+        if (source.ProjectId != null) {
+            this.ProjectId = new String(source.ProjectId);
+        }
+        if (source.ProjectName != null) {
+            this.ProjectName = new String(source.ProjectName);
+        }
+        if (source.ProjectDesc != null) {
+            this.ProjectDesc = new String(source.ProjectDesc);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new Long(source.CreateTime);
+        }
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new Long(source.UpdateTime);
+        }
+        if (source.ProductCount != null) {
+            this.ProductCount = new Long(source.ProductCount);
+        }
+        if (source.NativeAppCount != null) {
+            this.NativeAppCount = new Long(source.NativeAppCount);
+        }
+        if (source.WebAppCount != null) {
+            this.WebAppCount = new Long(source.WebAppCount);
+        }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

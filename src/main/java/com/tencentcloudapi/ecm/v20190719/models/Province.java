@@ -68,6 +68,23 @@ public class Province extends AbstractModel{
         this.ProvinceName = ProvinceName;
     }
 
+    public Province() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Province(Province source) {
+        if (source.ProvinceId != null) {
+            this.ProvinceId = new String(source.ProvinceId);
+        }
+        if (source.ProvinceName != null) {
+            this.ProvinceName = new String(source.ProvinceName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

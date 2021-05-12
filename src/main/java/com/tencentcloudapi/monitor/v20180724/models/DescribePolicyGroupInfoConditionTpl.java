@@ -221,6 +221,41 @@ public class DescribePolicyGroupInfoConditionTpl extends AbstractModel{
         this.IsUnionRule = IsUnionRule;
     }
 
+    public DescribePolicyGroupInfoConditionTpl() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribePolicyGroupInfoConditionTpl(DescribePolicyGroupInfoConditionTpl source) {
+        if (source.GroupId != null) {
+            this.GroupId = new Long(source.GroupId);
+        }
+        if (source.GroupName != null) {
+            this.GroupName = new String(source.GroupName);
+        }
+        if (source.ViewName != null) {
+            this.ViewName = new String(source.ViewName);
+        }
+        if (source.Remark != null) {
+            this.Remark = new String(source.Remark);
+        }
+        if (source.LastEditUin != null) {
+            this.LastEditUin = new String(source.LastEditUin);
+        }
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new Long(source.UpdateTime);
+        }
+        if (source.InsertTime != null) {
+            this.InsertTime = new Long(source.InsertTime);
+        }
+        if (source.IsUnionRule != null) {
+            this.IsUnionRule = new Long(source.IsUnionRule);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

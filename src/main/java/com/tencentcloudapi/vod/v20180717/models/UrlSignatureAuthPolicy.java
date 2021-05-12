@@ -78,6 +78,23 @@ public class UrlSignatureAuthPolicy extends AbstractModel{
         this.EncryptedKey = EncryptedKey;
     }
 
+    public UrlSignatureAuthPolicy() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UrlSignatureAuthPolicy(UrlSignatureAuthPolicy source) {
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.EncryptedKey != null) {
+            this.EncryptedKey = new String(source.EncryptedKey);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

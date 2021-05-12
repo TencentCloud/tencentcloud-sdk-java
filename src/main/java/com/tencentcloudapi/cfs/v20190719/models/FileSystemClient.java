@@ -160,6 +160,35 @@ public class FileSystemClient extends AbstractModel{
         this.MountDirectory = MountDirectory;
     }
 
+    public FileSystemClient() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public FileSystemClient(FileSystemClient source) {
+        if (source.CfsVip != null) {
+            this.CfsVip = new String(source.CfsVip);
+        }
+        if (source.ClientIp != null) {
+            this.ClientIp = new String(source.ClientIp);
+        }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.Zone != null) {
+            this.Zone = new String(source.Zone);
+        }
+        if (source.ZoneName != null) {
+            this.ZoneName = new String(source.ZoneName);
+        }
+        if (source.MountDirectory != null) {
+            this.MountDirectory = new String(source.MountDirectory);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

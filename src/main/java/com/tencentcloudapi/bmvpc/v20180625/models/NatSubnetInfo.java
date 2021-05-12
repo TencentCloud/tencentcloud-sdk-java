@@ -114,6 +114,29 @@ public class NatSubnetInfo extends AbstractModel{
         this.CidrBlock = CidrBlock;
     }
 
+    public NatSubnetInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public NatSubnetInfo(NatSubnetInfo source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.SubnetId != null) {
+            this.SubnetId = new String(source.SubnetId);
+        }
+        if (source.SubnetNatType != null) {
+            this.SubnetNatType = new Long(source.SubnetNatType);
+        }
+        if (source.CidrBlock != null) {
+            this.CidrBlock = new String(source.CidrBlock);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

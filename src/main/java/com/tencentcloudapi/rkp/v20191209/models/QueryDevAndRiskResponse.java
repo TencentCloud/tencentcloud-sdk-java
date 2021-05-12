@@ -124,6 +124,32 @@ public class QueryDevAndRiskResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public QueryDevAndRiskResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public QueryDevAndRiskResponse(QueryDevAndRiskResponse source) {
+        if (source.Found != null) {
+            this.Found = new Long(source.Found);
+        }
+        if (source.AllCnt != null) {
+            this.AllCnt = new Long(source.AllCnt);
+        }
+        if (source.Matches != null) {
+            this.Matches = new DevInfoQ[source.Matches.length];
+            for (int i = 0; i < source.Matches.length; i++) {
+                this.Matches[i] = new DevInfoQ(source.Matches[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

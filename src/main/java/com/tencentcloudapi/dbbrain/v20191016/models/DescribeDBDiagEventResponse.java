@@ -303,6 +303,53 @@ public class DescribeDBDiagEventResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeDBDiagEventResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeDBDiagEventResponse(DescribeDBDiagEventResponse source) {
+        if (source.DiagItem != null) {
+            this.DiagItem = new String(source.DiagItem);
+        }
+        if (source.DiagType != null) {
+            this.DiagType = new String(source.DiagType);
+        }
+        if (source.EventId != null) {
+            this.EventId = new Long(source.EventId);
+        }
+        if (source.Explanation != null) {
+            this.Explanation = new String(source.Explanation);
+        }
+        if (source.Outline != null) {
+            this.Outline = new String(source.Outline);
+        }
+        if (source.Problem != null) {
+            this.Problem = new String(source.Problem);
+        }
+        if (source.Severity != null) {
+            this.Severity = new Long(source.Severity);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.Suggestions != null) {
+            this.Suggestions = new String(source.Suggestions);
+        }
+        if (source.Metric != null) {
+            this.Metric = new String(source.Metric);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

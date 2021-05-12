@@ -91,6 +91,29 @@ public class DescribeImpactedHostsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeImpactedHostsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeImpactedHostsResponse(DescribeImpactedHostsResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.ImpactedHosts != null) {
+            this.ImpactedHosts = new ImpactedHost[source.ImpactedHosts.length];
+            for (int i = 0; i < source.ImpactedHosts.length; i++) {
+                this.ImpactedHosts[i] = new ImpactedHost(source.ImpactedHosts[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

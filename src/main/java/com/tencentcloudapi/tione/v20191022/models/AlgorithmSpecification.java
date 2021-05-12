@@ -106,6 +106,26 @@ public class AlgorithmSpecification extends AbstractModel{
         this.AlgorithmName = AlgorithmName;
     }
 
+    public AlgorithmSpecification() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AlgorithmSpecification(AlgorithmSpecification source) {
+        if (source.TrainingImageName != null) {
+            this.TrainingImageName = new String(source.TrainingImageName);
+        }
+        if (source.TrainingInputMode != null) {
+            this.TrainingInputMode = new String(source.TrainingInputMode);
+        }
+        if (source.AlgorithmName != null) {
+            this.AlgorithmName = new String(source.AlgorithmName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

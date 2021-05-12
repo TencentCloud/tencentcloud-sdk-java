@@ -96,6 +96,29 @@ public class DescribePolicyGroupListResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribePolicyGroupListResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribePolicyGroupListResponse(DescribePolicyGroupListResponse source) {
+        if (source.GroupList != null) {
+            this.GroupList = new DescribePolicyGroupListGroup[source.GroupList.length];
+            for (int i = 0; i < source.GroupList.length; i++) {
+                this.GroupList[i] = new DescribePolicyGroupListGroup(source.GroupList[i]);
+            }
+        }
+        if (source.Total != null) {
+            this.Total = new Long(source.Total);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

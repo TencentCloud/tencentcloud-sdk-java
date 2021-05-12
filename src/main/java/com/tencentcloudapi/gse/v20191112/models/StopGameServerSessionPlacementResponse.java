@@ -68,6 +68,23 @@ public class StopGameServerSessionPlacementResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public StopGameServerSessionPlacementResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public StopGameServerSessionPlacementResponse(StopGameServerSessionPlacementResponse source) {
+        if (source.GameServerSessionPlacement != null) {
+            this.GameServerSessionPlacement = new GameServerSessionPlacement(source.GameServerSessionPlacement);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

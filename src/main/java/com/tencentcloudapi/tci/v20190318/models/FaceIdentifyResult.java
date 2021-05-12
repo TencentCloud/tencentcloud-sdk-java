@@ -114,6 +114,29 @@ public class FaceIdentifyResult extends AbstractModel{
         this.Similarity = Similarity;
     }
 
+    public FaceIdentifyResult() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public FaceIdentifyResult(FaceIdentifyResult source) {
+        if (source.FaceId != null) {
+            this.FaceId = new String(source.FaceId);
+        }
+        if (source.LibraryId != null) {
+            this.LibraryId = new String(source.LibraryId);
+        }
+        if (source.PersonId != null) {
+            this.PersonId = new String(source.PersonId);
+        }
+        if (source.Similarity != null) {
+            this.Similarity = new Float(source.Similarity);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

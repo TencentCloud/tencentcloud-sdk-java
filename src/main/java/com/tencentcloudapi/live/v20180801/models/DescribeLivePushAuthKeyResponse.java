@@ -68,6 +68,23 @@ public class DescribeLivePushAuthKeyResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeLivePushAuthKeyResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeLivePushAuthKeyResponse(DescribeLivePushAuthKeyResponse source) {
+        if (source.PushAuthKeyInfo != null) {
+            this.PushAuthKeyInfo = new PushAuthKeyInfo(source.PushAuthKeyInfo);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

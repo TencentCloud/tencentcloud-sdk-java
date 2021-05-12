@@ -160,6 +160,38 @@ public class MountPoint extends AbstractModel{
         this.AccessGroupIds = AccessGroupIds;
     }
 
+    public MountPoint() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MountPoint(MountPoint source) {
+        if (source.MountPointId != null) {
+            this.MountPointId = new String(source.MountPointId);
+        }
+        if (source.MountPointName != null) {
+            this.MountPointName = new String(source.MountPointName);
+        }
+        if (source.FileSystemId != null) {
+            this.FileSystemId = new String(source.FileSystemId);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.AccessGroupIds != null) {
+            this.AccessGroupIds = new String[source.AccessGroupIds.length];
+            for (int i = 0; i < source.AccessGroupIds.length; i++) {
+                this.AccessGroupIds[i] = new String(source.AccessGroupIds[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

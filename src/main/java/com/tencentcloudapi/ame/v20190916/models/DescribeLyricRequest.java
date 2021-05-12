@@ -68,6 +68,23 @@ public class DescribeLyricRequest extends AbstractModel{
         this.SubItemType = SubItemType;
     }
 
+    public DescribeLyricRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeLyricRequest(DescribeLyricRequest source) {
+        if (source.ItemId != null) {
+            this.ItemId = new String(source.ItemId);
+        }
+        if (source.SubItemType != null) {
+            this.SubItemType = new String(source.SubItemType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

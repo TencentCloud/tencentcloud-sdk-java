@@ -114,6 +114,32 @@ public class DeleteClusterInstancesRequest extends AbstractModel{
         this.ForceDelete = ForceDelete;
     }
 
+    public DeleteClusterInstancesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteClusterInstancesRequest(DeleteClusterInstancesRequest source) {
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
+        if (source.InstanceIds != null) {
+            this.InstanceIds = new String[source.InstanceIds.length];
+            for (int i = 0; i < source.InstanceIds.length; i++) {
+                this.InstanceIds[i] = new String(source.InstanceIds[i]);
+            }
+        }
+        if (source.InstanceDeleteMode != null) {
+            this.InstanceDeleteMode = new String(source.InstanceDeleteMode);
+        }
+        if (source.ForceDelete != null) {
+            this.ForceDelete = new Boolean(source.ForceDelete);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -183,6 +183,38 @@ public class RideHailingTransportLicenseOCRResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public RideHailingTransportLicenseOCRResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RideHailingTransportLicenseOCRResponse(RideHailingTransportLicenseOCRResponse source) {
+        if (source.OperationLicenseNumber != null) {
+            this.OperationLicenseNumber = new String(source.OperationLicenseNumber);
+        }
+        if (source.VehicleOwner != null) {
+            this.VehicleOwner = new String(source.VehicleOwner);
+        }
+        if (source.VehicleNumber != null) {
+            this.VehicleNumber = new String(source.VehicleNumber);
+        }
+        if (source.StartDate != null) {
+            this.StartDate = new String(source.StartDate);
+        }
+        if (source.EndDate != null) {
+            this.EndDate = new String(source.EndDate);
+        }
+        if (source.ReleaseDate != null) {
+            this.ReleaseDate = new String(source.ReleaseDate);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

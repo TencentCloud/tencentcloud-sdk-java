@@ -68,6 +68,23 @@ public class CreateBotRequest extends AbstractModel{
         this.BotCnName = BotCnName;
     }
 
+    public CreateBotRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateBotRequest(CreateBotRequest source) {
+        if (source.BotName != null) {
+            this.BotName = new String(source.BotName);
+        }
+        if (source.BotCnName != null) {
+            this.BotCnName = new String(source.BotCnName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

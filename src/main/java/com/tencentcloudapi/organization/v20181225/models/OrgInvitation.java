@@ -275,6 +275,50 @@ public class OrgInvitation extends AbstractModel{
         this.ExpireTime = ExpireTime;
     }
 
+    public OrgInvitation() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public OrgInvitation(OrgInvitation source) {
+        if (source.Id != null) {
+            this.Id = new Long(source.Id);
+        }
+        if (source.Uin != null) {
+            this.Uin = new Long(source.Uin);
+        }
+        if (source.HostUin != null) {
+            this.HostUin = new Long(source.HostUin);
+        }
+        if (source.HostName != null) {
+            this.HostName = new String(source.HostName);
+        }
+        if (source.HostMail != null) {
+            this.HostMail = new String(source.HostMail);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Remark != null) {
+            this.Remark = new String(source.Remark);
+        }
+        if (source.OrgType != null) {
+            this.OrgType = new Long(source.OrgType);
+        }
+        if (source.InviteTime != null) {
+            this.InviteTime = new String(source.InviteTime);
+        }
+        if (source.ExpireTime != null) {
+            this.ExpireTime = new String(source.ExpireTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

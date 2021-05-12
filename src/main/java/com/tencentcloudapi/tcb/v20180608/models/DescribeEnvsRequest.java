@@ -96,6 +96,29 @@ public class DescribeEnvsRequest extends AbstractModel{
         this.Channels = Channels;
     }
 
+    public DescribeEnvsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeEnvsRequest(DescribeEnvsRequest source) {
+        if (source.EnvId != null) {
+            this.EnvId = new String(source.EnvId);
+        }
+        if (source.IsVisible != null) {
+            this.IsVisible = new Boolean(source.IsVisible);
+        }
+        if (source.Channels != null) {
+            this.Channels = new String[source.Channels.length];
+            for (int i = 0; i < source.Channels.length; i++) {
+                this.Channels[i] = new String(source.Channels[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

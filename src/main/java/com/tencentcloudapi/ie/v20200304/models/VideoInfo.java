@@ -476,6 +476,59 @@ hlg。
         this.HiddenMarkInfo = HiddenMarkInfo;
     }
 
+    public VideoInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public VideoInfo(VideoInfo source) {
+        if (source.Fps != null) {
+            this.Fps = new Long(source.Fps);
+        }
+        if (source.Width != null) {
+            this.Width = new Long(source.Width);
+        }
+        if (source.Height != null) {
+            this.Height = new Long(source.Height);
+        }
+        if (source.LongSide != null) {
+            this.LongSide = new Long(source.LongSide);
+        }
+        if (source.ShortSide != null) {
+            this.ShortSide = new Long(source.ShortSide);
+        }
+        if (source.Bitrate != null) {
+            this.Bitrate = new Long(source.Bitrate);
+        }
+        if (source.Gop != null) {
+            this.Gop = new Long(source.Gop);
+        }
+        if (source.VideoCodec != null) {
+            this.VideoCodec = new String(source.VideoCodec);
+        }
+        if (source.PicMarkInfo != null) {
+            this.PicMarkInfo = new PicMarkInfoItem[source.PicMarkInfo.length];
+            for (int i = 0; i < source.PicMarkInfo.length; i++) {
+                this.PicMarkInfo[i] = new PicMarkInfoItem(source.PicMarkInfo[i]);
+            }
+        }
+        if (source.DarInfo != null) {
+            this.DarInfo = new DarInfo(source.DarInfo);
+        }
+        if (source.Hdr != null) {
+            this.Hdr = new String(source.Hdr);
+        }
+        if (source.VideoEnhance != null) {
+            this.VideoEnhance = new VideoEnhance(source.VideoEnhance);
+        }
+        if (source.HiddenMarkInfo != null) {
+            this.HiddenMarkInfo = new HiddenMarkInfo(source.HiddenMarkInfo);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -68,6 +68,26 @@ public class DeleteUnitNamespacesRequest extends AbstractModel{
         this.UnitNamespaceList = UnitNamespaceList;
     }
 
+    public DeleteUnitNamespacesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteUnitNamespacesRequest(DeleteUnitNamespacesRequest source) {
+        if (source.GatewayInstanceId != null) {
+            this.GatewayInstanceId = new String(source.GatewayInstanceId);
+        }
+        if (source.UnitNamespaceList != null) {
+            this.UnitNamespaceList = new String[source.UnitNamespaceList.length];
+            for (int i = 0; i < source.UnitNamespaceList.length; i++) {
+                this.UnitNamespaceList[i] = new String(source.UnitNamespaceList[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

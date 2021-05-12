@@ -68,6 +68,26 @@ public class EndorserGroup extends AbstractModel{
         this.EndorserPeerList = EndorserPeerList;
     }
 
+    public EndorserGroup() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public EndorserGroup(EndorserGroup source) {
+        if (source.EndorserGroupName != null) {
+            this.EndorserGroupName = new String(source.EndorserGroupName);
+        }
+        if (source.EndorserPeerList != null) {
+            this.EndorserPeerList = new String[source.EndorserPeerList.length];
+            for (int i = 0; i < source.EndorserPeerList.length; i++) {
+                this.EndorserPeerList[i] = new String(source.EndorserPeerList[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

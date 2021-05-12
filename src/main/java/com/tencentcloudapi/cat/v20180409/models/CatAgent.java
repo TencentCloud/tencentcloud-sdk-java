@@ -124,6 +124,29 @@ public class CatAgent extends AbstractModel{
         this.IspName = IspName;
     }
 
+    public CatAgent() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CatAgent(CatAgent source) {
+        if (source.Province != null) {
+            this.Province = new String(source.Province);
+        }
+        if (source.Isp != null) {
+            this.Isp = new String(source.Isp);
+        }
+        if (source.ProvinceName != null) {
+            this.ProvinceName = new String(source.ProvinceName);
+        }
+        if (source.IspName != null) {
+            this.IspName = new String(source.IspName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

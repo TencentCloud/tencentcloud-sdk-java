@@ -167,6 +167,32 @@ public class InquiryPriceUpdateInstanceResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public InquiryPriceUpdateInstanceResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public InquiryPriceUpdateInstanceResponse(InquiryPriceUpdateInstanceResponse source) {
+        if (source.OriginalCost != null) {
+            this.OriginalCost = new Float(source.OriginalCost);
+        }
+        if (source.DiscountCost != null) {
+            this.DiscountCost = new Float(source.DiscountCost);
+        }
+        if (source.TimeUnit != null) {
+            this.TimeUnit = new String(source.TimeUnit);
+        }
+        if (source.TimeSpan != null) {
+            this.TimeSpan = new Long(source.TimeSpan);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -91,6 +91,26 @@ public class ModifyNamespaceRequest extends AbstractModel{
         this.IsPublic = IsPublic;
     }
 
+    public ModifyNamespaceRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyNamespaceRequest(ModifyNamespaceRequest source) {
+        if (source.RegistryId != null) {
+            this.RegistryId = new String(source.RegistryId);
+        }
+        if (source.NamespaceName != null) {
+            this.NamespaceName = new String(source.NamespaceName);
+        }
+        if (source.IsPublic != null) {
+            this.IsPublic = new Boolean(source.IsPublic);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

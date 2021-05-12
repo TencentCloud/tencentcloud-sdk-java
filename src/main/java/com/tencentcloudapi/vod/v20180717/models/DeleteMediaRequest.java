@@ -91,6 +91,29 @@ public class DeleteMediaRequest extends AbstractModel{
         this.SubAppId = SubAppId;
     }
 
+    public DeleteMediaRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteMediaRequest(DeleteMediaRequest source) {
+        if (source.FileId != null) {
+            this.FileId = new String(source.FileId);
+        }
+        if (source.DeleteParts != null) {
+            this.DeleteParts = new MediaDeleteItem[source.DeleteParts.length];
+            for (int i = 0; i < source.DeleteParts.length; i++) {
+                this.DeleteParts[i] = new MediaDeleteItem(source.DeleteParts[i]);
+            }
+        }
+        if (source.SubAppId != null) {
+            this.SubAppId = new Long(source.SubAppId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -91,6 +91,26 @@ public class SendCustomAlarmMsgRequest extends AbstractModel{
         this.Msg = Msg;
     }
 
+    public SendCustomAlarmMsgRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SendCustomAlarmMsgRequest(SendCustomAlarmMsgRequest source) {
+        if (source.Module != null) {
+            this.Module = new String(source.Module);
+        }
+        if (source.PolicyId != null) {
+            this.PolicyId = new String(source.PolicyId);
+        }
+        if (source.Msg != null) {
+            this.Msg = new String(source.Msg);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

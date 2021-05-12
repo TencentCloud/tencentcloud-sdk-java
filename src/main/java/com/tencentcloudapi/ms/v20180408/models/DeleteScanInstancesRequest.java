@@ -45,6 +45,23 @@ public class DeleteScanInstancesRequest extends AbstractModel{
         this.AppSids = AppSids;
     }
 
+    public DeleteScanInstancesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteScanInstancesRequest(DeleteScanInstancesRequest source) {
+        if (source.AppSids != null) {
+            this.AppSids = new String[source.AppSids.length];
+            for (int i = 0; i < source.AppSids.length; i++) {
+                this.AppSids[i] = new String(source.AppSids[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

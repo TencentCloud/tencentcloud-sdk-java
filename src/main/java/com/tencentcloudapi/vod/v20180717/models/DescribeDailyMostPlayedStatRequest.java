@@ -124,6 +124,29 @@ public class DescribeDailyMostPlayedStatRequest extends AbstractModel{
         this.SubAppId = SubAppId;
     }
 
+    public DescribeDailyMostPlayedStatRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeDailyMostPlayedStatRequest(DescribeDailyMostPlayedStatRequest source) {
+        if (source.Date != null) {
+            this.Date = new String(source.Date);
+        }
+        if (source.DomainName != null) {
+            this.DomainName = new String(source.DomainName);
+        }
+        if (source.Metric != null) {
+            this.Metric = new String(source.Metric);
+        }
+        if (source.SubAppId != null) {
+            this.SubAppId = new Long(source.SubAppId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

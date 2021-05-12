@@ -68,6 +68,26 @@ public class QueryApiKeyResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public QueryApiKeyResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public QueryApiKeyResponse(QueryApiKeyResponse source) {
+        if (source.IdKeys != null) {
+            this.IdKeys = new ApiKey[source.IdKeys.length];
+            for (int i = 0; i < source.IdKeys.length; i++) {
+                this.IdKeys[i] = new ApiKey(source.IdKeys[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

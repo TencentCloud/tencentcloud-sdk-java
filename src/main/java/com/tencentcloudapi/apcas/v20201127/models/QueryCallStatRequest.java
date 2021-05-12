@@ -91,6 +91,26 @@ public class QueryCallStatRequest extends AbstractModel{
         this.EndTime = EndTime;
     }
 
+    public QueryCallStatRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public QueryCallStatRequest(QueryCallStatRequest source) {
+        if (source.Type != null) {
+            this.Type = new Long(source.Type);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new Long(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new Long(source.EndTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -68,6 +68,26 @@ public class QueryBotListResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public QueryBotListResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public QueryBotListResponse(QueryBotListResponse source) {
+        if (source.BotList != null) {
+            this.BotList = new BotInfo[source.BotList.length];
+            for (int i = 0; i < source.BotList.length; i++) {
+                this.BotList[i] = new BotInfo(source.BotList[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

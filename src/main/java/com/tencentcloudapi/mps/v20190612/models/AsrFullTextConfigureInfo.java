@@ -83,6 +83,23 @@ public class AsrFullTextConfigureInfo extends AbstractModel{
         this.SubtitleFormat = SubtitleFormat;
     }
 
+    public AsrFullTextConfigureInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AsrFullTextConfigureInfo(AsrFullTextConfigureInfo source) {
+        if (source.Switch != null) {
+            this.Switch = new String(source.Switch);
+        }
+        if (source.SubtitleFormat != null) {
+            this.SubtitleFormat = new String(source.SubtitleFormat);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

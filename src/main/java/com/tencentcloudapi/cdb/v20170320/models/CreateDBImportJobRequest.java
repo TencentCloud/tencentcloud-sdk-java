@@ -137,6 +137,32 @@ public class CreateDBImportJobRequest extends AbstractModel{
         this.DbName = DbName;
     }
 
+    public CreateDBImportJobRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateDBImportJobRequest(CreateDBImportJobRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.FileName != null) {
+            this.FileName = new String(source.FileName);
+        }
+        if (source.User != null) {
+            this.User = new String(source.User);
+        }
+        if (source.Password != null) {
+            this.Password = new String(source.Password);
+        }
+        if (source.DbName != null) {
+            this.DbName = new String(source.DbName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -73,6 +73,23 @@ public class ResourceInfo extends AbstractModel{
         this.Owner = Owner;
     }
 
+    public ResourceInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ResourceInfo(ResourceInfo source) {
+        if (source.Resource != null) {
+            this.Resource = new Resource(source.Resource);
+        }
+        if (source.Owner != null) {
+            this.Owner = new Entity(source.Owner);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

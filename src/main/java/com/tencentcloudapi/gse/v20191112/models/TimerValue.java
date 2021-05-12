@@ -134,6 +134,32 @@ public class TimerValue extends AbstractModel{
         this.WeekDays = WeekDays;
     }
 
+    public TimerValue() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TimerValue(TimerValue source) {
+        if (source.Day != null) {
+            this.Day = new Long(source.Day);
+        }
+        if (source.FromDay != null) {
+            this.FromDay = new Long(source.FromDay);
+        }
+        if (source.ToDay != null) {
+            this.ToDay = new Long(source.ToDay);
+        }
+        if (source.WeekDays != null) {
+            this.WeekDays = new Long[source.WeekDays.length];
+            for (int i = 0; i < source.WeekDays.length; i++) {
+                this.WeekDays[i] = new Long(source.WeekDays[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

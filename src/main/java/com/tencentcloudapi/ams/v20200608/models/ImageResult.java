@@ -213,6 +213,41 @@ public class ImageResult extends AbstractModel{
         this.Extra = Extra;
     }
 
+    public ImageResult() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ImageResult(ImageResult source) {
+        if (source.HitFlag != null) {
+            this.HitFlag = new Long(source.HitFlag);
+        }
+        if (source.Suggestion != null) {
+            this.Suggestion = new String(source.Suggestion);
+        }
+        if (source.Label != null) {
+            this.Label = new String(source.Label);
+        }
+        if (source.Score != null) {
+            this.Score = new Long(source.Score);
+        }
+        if (source.Results != null) {
+            this.Results = new ImageResultResult[source.Results.length];
+            for (int i = 0; i < source.Results.length; i++) {
+                this.Results[i] = new ImageResultResult(source.Results[i]);
+            }
+        }
+        if (source.Url != null) {
+            this.Url = new String(source.Url);
+        }
+        if (source.Extra != null) {
+            this.Extra = new String(source.Extra);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

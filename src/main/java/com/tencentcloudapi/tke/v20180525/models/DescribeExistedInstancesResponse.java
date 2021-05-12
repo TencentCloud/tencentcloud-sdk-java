@@ -96,6 +96,29 @@ public class DescribeExistedInstancesResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeExistedInstancesResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeExistedInstancesResponse(DescribeExistedInstancesResponse source) {
+        if (source.ExistedInstanceSet != null) {
+            this.ExistedInstanceSet = new ExistedInstance[source.ExistedInstanceSet.length];
+            for (int i = 0; i < source.ExistedInstanceSet.length; i++) {
+                this.ExistedInstanceSet[i] = new ExistedInstance(source.ExistedInstanceSet[i]);
+            }
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

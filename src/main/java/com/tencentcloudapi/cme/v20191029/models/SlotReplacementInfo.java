@@ -111,6 +111,26 @@ public class SlotReplacementInfo extends AbstractModel{
         this.MediaReplacementInfo = MediaReplacementInfo;
     }
 
+    public SlotReplacementInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SlotReplacementInfo(SlotReplacementInfo source) {
+        if (source.Id != null) {
+            this.Id = new Long(source.Id);
+        }
+        if (source.ReplacementType != null) {
+            this.ReplacementType = new String(source.ReplacementType);
+        }
+        if (source.MediaReplacementInfo != null) {
+            this.MediaReplacementInfo = new MediaReplacementInfo(source.MediaReplacementInfo);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

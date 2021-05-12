@@ -229,6 +229,44 @@ public class SpeechTranslateResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public SpeechTranslateResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SpeechTranslateResponse(SpeechTranslateResponse source) {
+        if (source.SessionUuid != null) {
+            this.SessionUuid = new String(source.SessionUuid);
+        }
+        if (source.RecognizeStatus != null) {
+            this.RecognizeStatus = new Long(source.RecognizeStatus);
+        }
+        if (source.SourceText != null) {
+            this.SourceText = new String(source.SourceText);
+        }
+        if (source.TargetText != null) {
+            this.TargetText = new String(source.TargetText);
+        }
+        if (source.Seq != null) {
+            this.Seq = new Long(source.Seq);
+        }
+        if (source.Source != null) {
+            this.Source = new String(source.Source);
+        }
+        if (source.Target != null) {
+            this.Target = new String(source.Target);
+        }
+        if (source.VadSeq != null) {
+            this.VadSeq = new Long(source.VadSeq);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

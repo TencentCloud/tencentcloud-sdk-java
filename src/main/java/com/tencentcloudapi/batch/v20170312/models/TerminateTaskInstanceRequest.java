@@ -91,6 +91,26 @@ public class TerminateTaskInstanceRequest extends AbstractModel{
         this.TaskInstanceIndex = TaskInstanceIndex;
     }
 
+    public TerminateTaskInstanceRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TerminateTaskInstanceRequest(TerminateTaskInstanceRequest source) {
+        if (source.JobId != null) {
+            this.JobId = new String(source.JobId);
+        }
+        if (source.TaskName != null) {
+            this.TaskName = new String(source.TaskName);
+        }
+        if (source.TaskInstanceIndex != null) {
+            this.TaskInstanceIndex = new Long(source.TaskInstanceIndex);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

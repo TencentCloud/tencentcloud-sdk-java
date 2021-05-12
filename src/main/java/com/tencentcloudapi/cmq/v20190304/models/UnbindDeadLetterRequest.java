@@ -45,6 +45,20 @@ public class UnbindDeadLetterRequest extends AbstractModel{
         this.QueueName = QueueName;
     }
 
+    public UnbindDeadLetterRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UnbindDeadLetterRequest(UnbindDeadLetterRequest source) {
+        if (source.QueueName != null) {
+            this.QueueName = new String(source.QueueName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

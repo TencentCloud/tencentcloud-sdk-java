@@ -206,6 +206,41 @@ public class MountPoint extends AbstractModel{
         this.VpcType = VpcType;
     }
 
+    public MountPoint() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MountPoint(MountPoint source) {
+        if (source.MountPointId != null) {
+            this.MountPointId = new String(source.MountPointId);
+        }
+        if (source.MountPointName != null) {
+            this.MountPointName = new String(source.MountPointName);
+        }
+        if (source.FileSystemId != null) {
+            this.FileSystemId = new String(source.FileSystemId);
+        }
+        if (source.AccessGroupId != null) {
+            this.AccessGroupId = new String(source.AccessGroupId);
+        }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.VpcType != null) {
+            this.VpcType = new Long(source.VpcType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

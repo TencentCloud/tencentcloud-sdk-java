@@ -68,6 +68,23 @@ public class DescribeServiceRunPodListV2Response extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeServiceRunPodListV2Response() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeServiceRunPodListV2Response(DescribeServiceRunPodListV2Response source) {
+        if (source.Result != null) {
+            this.Result = new DescribeRunPodPage(source.Result);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

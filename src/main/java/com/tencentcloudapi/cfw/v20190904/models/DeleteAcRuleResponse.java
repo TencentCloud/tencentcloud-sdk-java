@@ -96,6 +96,26 @@ public class DeleteAcRuleResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DeleteAcRuleResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteAcRuleResponse(DeleteAcRuleResponse source) {
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.Info != null) {
+            this.Info = new String(source.Info);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

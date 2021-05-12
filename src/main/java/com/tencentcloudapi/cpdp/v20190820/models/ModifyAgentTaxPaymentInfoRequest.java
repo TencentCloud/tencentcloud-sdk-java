@@ -114,6 +114,29 @@ public class ModifyAgentTaxPaymentInfoRequest extends AbstractModel{
         this.Profile = Profile;
     }
 
+    public ModifyAgentTaxPaymentInfoRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyAgentTaxPaymentInfoRequest(ModifyAgentTaxPaymentInfoRequest source) {
+        if (source.BatchNum != null) {
+            this.BatchNum = new Long(source.BatchNum);
+        }
+        if (source.RawElectronicCertUrl != null) {
+            this.RawElectronicCertUrl = new String(source.RawElectronicCertUrl);
+        }
+        if (source.FileName != null) {
+            this.FileName = new String(source.FileName);
+        }
+        if (source.Profile != null) {
+            this.Profile = new String(source.Profile);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

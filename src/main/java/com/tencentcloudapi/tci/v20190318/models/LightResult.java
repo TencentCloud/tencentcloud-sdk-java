@@ -68,6 +68,23 @@ public class LightResult extends AbstractModel{
         this.LightValue = LightValue;
     }
 
+    public LightResult() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public LightResult(LightResult source) {
+        if (source.LightLevel != null) {
+            this.LightLevel = new String(source.LightLevel);
+        }
+        if (source.LightValue != null) {
+            this.LightValue = new Float(source.LightValue);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

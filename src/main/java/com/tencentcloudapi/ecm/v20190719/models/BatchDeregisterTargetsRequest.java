@@ -68,6 +68,26 @@ public class BatchDeregisterTargetsRequest extends AbstractModel{
         this.Targets = Targets;
     }
 
+    public BatchDeregisterTargetsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public BatchDeregisterTargetsRequest(BatchDeregisterTargetsRequest source) {
+        if (source.LoadBalancerId != null) {
+            this.LoadBalancerId = new String(source.LoadBalancerId);
+        }
+        if (source.Targets != null) {
+            this.Targets = new BatchTarget[source.Targets.length];
+            for (int i = 0; i < source.Targets.length; i++) {
+                this.Targets[i] = new BatchTarget(source.Targets[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -147,6 +147,35 @@ public class MediaMiniProgramReviewInfoItem extends AbstractModel{
         this.ReviewSummary = ReviewSummary;
     }
 
+    public MediaMiniProgramReviewInfoItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MediaMiniProgramReviewInfoItem(MediaMiniProgramReviewInfoItem source) {
+        if (source.Definition != null) {
+            this.Definition = new Long(source.Definition);
+        }
+        if (source.MetaData != null) {
+            this.MetaData = new MediaMetaData(source.MetaData);
+        }
+        if (source.Url != null) {
+            this.Url = new String(source.Url);
+        }
+        if (source.ReviewResult != null) {
+            this.ReviewResult = new String(source.ReviewResult);
+        }
+        if (source.ReviewSummary != null) {
+            this.ReviewSummary = new MediaMiniProgramReviewElem[source.ReviewSummary.length];
+            for (int i = 0; i < source.ReviewSummary.length; i++) {
+                this.ReviewSummary[i] = new MediaMiniProgramReviewElem(source.ReviewSummary[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -68,6 +68,23 @@ public class NamespaceIsExistsResp extends AbstractModel{
         this.IsPreserved = IsPreserved;
     }
 
+    public NamespaceIsExistsResp() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public NamespaceIsExistsResp(NamespaceIsExistsResp source) {
+        if (source.IsExist != null) {
+            this.IsExist = new Boolean(source.IsExist);
+        }
+        if (source.IsPreserved != null) {
+            this.IsPreserved = new Boolean(source.IsPreserved);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

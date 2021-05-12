@@ -68,6 +68,26 @@ public class Filter extends AbstractModel{
         this.ValueList = ValueList;
     }
 
+    public Filter() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Filter(Filter source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.ValueList != null) {
+            this.ValueList = new String[source.ValueList.length];
+            for (int i = 0; i < source.ValueList.length; i++) {
+                this.ValueList[i] = new String(source.ValueList[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

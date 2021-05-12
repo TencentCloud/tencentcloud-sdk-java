@@ -68,6 +68,23 @@ public class DDoSAlarmThreshold extends AbstractModel{
         this.AlarmThreshold = AlarmThreshold;
     }
 
+    public DDoSAlarmThreshold() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DDoSAlarmThreshold(DDoSAlarmThreshold source) {
+        if (source.AlarmType != null) {
+            this.AlarmType = new Long(source.AlarmType);
+        }
+        if (source.AlarmThreshold != null) {
+            this.AlarmThreshold = new Long(source.AlarmThreshold);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

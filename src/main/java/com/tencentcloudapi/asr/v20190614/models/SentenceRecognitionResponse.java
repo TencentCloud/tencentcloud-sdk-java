@@ -147,6 +147,35 @@ public class SentenceRecognitionResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public SentenceRecognitionResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SentenceRecognitionResponse(SentenceRecognitionResponse source) {
+        if (source.Result != null) {
+            this.Result = new String(source.Result);
+        }
+        if (source.AudioDuration != null) {
+            this.AudioDuration = new Long(source.AudioDuration);
+        }
+        if (source.WordSize != null) {
+            this.WordSize = new Long(source.WordSize);
+        }
+        if (source.WordList != null) {
+            this.WordList = new SentenceWord[source.WordList.length];
+            for (int i = 0; i < source.WordList.length; i++) {
+                this.WordList[i] = new SentenceWord(source.WordList[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

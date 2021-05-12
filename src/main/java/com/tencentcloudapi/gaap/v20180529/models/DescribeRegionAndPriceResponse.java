@@ -147,6 +147,38 @@ USD 美元
         this.RequestId = RequestId;
     }
 
+    public DescribeRegionAndPriceResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeRegionAndPriceResponse(DescribeRegionAndPriceResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.DestRegionSet != null) {
+            this.DestRegionSet = new RegionDetail[source.DestRegionSet.length];
+            for (int i = 0; i < source.DestRegionSet.length; i++) {
+                this.DestRegionSet[i] = new RegionDetail(source.DestRegionSet[i]);
+            }
+        }
+        if (source.BandwidthUnitPrice != null) {
+            this.BandwidthUnitPrice = new BandwidthPriceGradient[source.BandwidthUnitPrice.length];
+            for (int i = 0; i < source.BandwidthUnitPrice.length; i++) {
+                this.BandwidthUnitPrice[i] = new BandwidthPriceGradient(source.BandwidthUnitPrice[i]);
+            }
+        }
+        if (source.Currency != null) {
+            this.Currency = new String(source.Currency);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -68,6 +68,23 @@ public class DescribeVulDetailRequest extends AbstractModel{
         this.Source = Source;
     }
 
+    public DescribeVulDetailRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeVulDetailRequest(DescribeVulDetailRequest source) {
+        if (source.UniqId != null) {
+            this.UniqId = new String(source.UniqId);
+        }
+        if (source.Source != null) {
+            this.Source = new String(source.Source);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

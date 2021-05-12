@@ -91,6 +91,29 @@ public class AiRecognitionTaskOcrFullTextSegmentItem extends AbstractModel{
         this.TextSet = TextSet;
     }
 
+    public AiRecognitionTaskOcrFullTextSegmentItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AiRecognitionTaskOcrFullTextSegmentItem(AiRecognitionTaskOcrFullTextSegmentItem source) {
+        if (source.StartTimeOffset != null) {
+            this.StartTimeOffset = new Float(source.StartTimeOffset);
+        }
+        if (source.EndTimeOffset != null) {
+            this.EndTimeOffset = new Float(source.EndTimeOffset);
+        }
+        if (source.TextSet != null) {
+            this.TextSet = new AiRecognitionTaskOcrFullTextSegmentTextItem[source.TextSet.length];
+            for (int i = 0; i < source.TextSet.length; i++) {
+                this.TextSet[i] = new AiRecognitionTaskOcrFullTextSegmentTextItem(source.TextSet[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -114,6 +114,29 @@ public class ModifyDDoSAIStatusRequest extends AbstractModel{
         this.DDoSAI = DDoSAI;
     }
 
+    public ModifyDDoSAIStatusRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyDDoSAIStatusRequest(ModifyDDoSAIStatusRequest source) {
+        if (source.Business != null) {
+            this.Business = new String(source.Business);
+        }
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
+        if (source.Method != null) {
+            this.Method = new String(source.Method);
+        }
+        if (source.DDoSAI != null) {
+            this.DDoSAI = new String(source.DDoSAI);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

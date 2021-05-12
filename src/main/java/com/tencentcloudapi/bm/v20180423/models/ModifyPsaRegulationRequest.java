@@ -137,6 +137,35 @@ public class ModifyPsaRegulationRequest extends AbstractModel{
         this.TaskTypeIds = TaskTypeIds;
     }
 
+    public ModifyPsaRegulationRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyPsaRegulationRequest(ModifyPsaRegulationRequest source) {
+        if (source.PsaId != null) {
+            this.PsaId = new String(source.PsaId);
+        }
+        if (source.PsaName != null) {
+            this.PsaName = new String(source.PsaName);
+        }
+        if (source.RepairLimit != null) {
+            this.RepairLimit = new Long(source.RepairLimit);
+        }
+        if (source.PsaDescription != null) {
+            this.PsaDescription = new String(source.PsaDescription);
+        }
+        if (source.TaskTypeIds != null) {
+            this.TaskTypeIds = new Long[source.TaskTypeIds.length];
+            for (int i = 0; i < source.TaskTypeIds.length; i++) {
+                this.TaskTypeIds[i] = new Long(source.TaskTypeIds[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

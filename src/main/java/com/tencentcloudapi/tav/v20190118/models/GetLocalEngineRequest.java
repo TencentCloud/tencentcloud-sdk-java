@@ -45,6 +45,20 @@ public class GetLocalEngineRequest extends AbstractModel{
         this.Key = Key;
     }
 
+    public GetLocalEngineRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GetLocalEngineRequest(GetLocalEngineRequest source) {
+        if (source.Key != null) {
+            this.Key = new String(source.Key);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

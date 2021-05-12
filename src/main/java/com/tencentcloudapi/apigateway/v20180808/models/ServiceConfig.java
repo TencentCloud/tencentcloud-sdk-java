@@ -137,6 +137,32 @@ public class ServiceConfig extends AbstractModel{
         this.Method = Method;
     }
 
+    public ServiceConfig() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ServiceConfig(ServiceConfig source) {
+        if (source.Product != null) {
+            this.Product = new String(source.Product);
+        }
+        if (source.UniqVpcId != null) {
+            this.UniqVpcId = new String(source.UniqVpcId);
+        }
+        if (source.Url != null) {
+            this.Url = new String(source.Url);
+        }
+        if (source.Path != null) {
+            this.Path = new String(source.Path);
+        }
+        if (source.Method != null) {
+            this.Method = new String(source.Method);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

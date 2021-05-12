@@ -78,6 +78,23 @@ public class StatusStatistic extends AbstractModel{
         this.Total = Total;
     }
 
+    public StatusStatistic() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public StatusStatistic(StatusStatistic source) {
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.Total != null) {
+            this.Total = new Long(source.Total);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -183,6 +183,38 @@ public class Product extends AbstractModel{
         this.YMax = YMax;
     }
 
+    public Product() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Product(Product source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Parents != null) {
+            this.Parents = new String(source.Parents);
+        }
+        if (source.Confidence != null) {
+            this.Confidence = new Long(source.Confidence);
+        }
+        if (source.XMin != null) {
+            this.XMin = new Long(source.XMin);
+        }
+        if (source.YMin != null) {
+            this.YMin = new Long(source.YMin);
+        }
+        if (source.XMax != null) {
+            this.XMax = new Long(source.XMax);
+        }
+        if (source.YMax != null) {
+            this.YMax = new Long(source.YMax);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

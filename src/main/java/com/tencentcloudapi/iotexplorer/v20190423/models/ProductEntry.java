@@ -372,6 +372,62 @@ public class ProductEntry extends AbstractModel{
         this.EnableProductScript = EnableProductScript;
     }
 
+    public ProductEntry() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ProductEntry(ProductEntry source) {
+        if (source.ProductId != null) {
+            this.ProductId = new String(source.ProductId);
+        }
+        if (source.ProductName != null) {
+            this.ProductName = new String(source.ProductName);
+        }
+        if (source.CategoryId != null) {
+            this.CategoryId = new Long(source.CategoryId);
+        }
+        if (source.EncryptionType != null) {
+            this.EncryptionType = new String(source.EncryptionType);
+        }
+        if (source.NetType != null) {
+            this.NetType = new String(source.NetType);
+        }
+        if (source.DataProtocol != null) {
+            this.DataProtocol = new Long(source.DataProtocol);
+        }
+        if (source.ProductDesc != null) {
+            this.ProductDesc = new String(source.ProductDesc);
+        }
+        if (source.DevStatus != null) {
+            this.DevStatus = new String(source.DevStatus);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new Long(source.CreateTime);
+        }
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new Long(source.UpdateTime);
+        }
+        if (source.Region != null) {
+            this.Region = new String(source.Region);
+        }
+        if (source.ProductType != null) {
+            this.ProductType = new Long(source.ProductType);
+        }
+        if (source.ProjectId != null) {
+            this.ProjectId = new String(source.ProjectId);
+        }
+        if (source.ModuleId != null) {
+            this.ModuleId = new Long(source.ModuleId);
+        }
+        if (source.EnableProductScript != null) {
+            this.EnableProductScript = new String(source.EnableProductScript);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -91,6 +91,32 @@ public class DeleteAccountResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DeleteAccountResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteAccountResponse(DeleteAccountResponse source) {
+        if (source.DelSuccessList != null) {
+            this.DelSuccessList = new String[source.DelSuccessList.length];
+            for (int i = 0; i < source.DelSuccessList.length; i++) {
+                this.DelSuccessList[i] = new String(source.DelSuccessList[i]);
+            }
+        }
+        if (source.DelFailedList != null) {
+            this.DelFailedList = new String[source.DelFailedList.length];
+            for (int i = 0; i < source.DelFailedList.length; i++) {
+                this.DelFailedList[i] = new String(source.DelFailedList[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

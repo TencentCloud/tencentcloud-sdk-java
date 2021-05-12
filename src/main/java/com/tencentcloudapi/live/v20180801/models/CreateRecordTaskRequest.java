@@ -216,6 +216,41 @@ public class CreateRecordTaskRequest extends AbstractModel{
         this.Extension = Extension;
     }
 
+    public CreateRecordTaskRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateRecordTaskRequest(CreateRecordTaskRequest source) {
+        if (source.StreamName != null) {
+            this.StreamName = new String(source.StreamName);
+        }
+        if (source.DomainName != null) {
+            this.DomainName = new String(source.DomainName);
+        }
+        if (source.AppName != null) {
+            this.AppName = new String(source.AppName);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new Long(source.EndTime);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new Long(source.StartTime);
+        }
+        if (source.StreamType != null) {
+            this.StreamType = new Long(source.StreamType);
+        }
+        if (source.TemplateId != null) {
+            this.TemplateId = new Long(source.TemplateId);
+        }
+        if (source.Extension != null) {
+            this.Extension = new String(source.Extension);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

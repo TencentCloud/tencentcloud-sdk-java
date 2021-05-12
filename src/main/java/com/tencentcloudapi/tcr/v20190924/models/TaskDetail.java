@@ -170,6 +170,35 @@ public class TaskDetail extends AbstractModel{
         this.FinishedTime = FinishedTime;
     }
 
+    public TaskDetail() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TaskDetail(TaskDetail source) {
+        if (source.TaskName != null) {
+            this.TaskName = new String(source.TaskName);
+        }
+        if (source.TaskUUID != null) {
+            this.TaskUUID = new String(source.TaskUUID);
+        }
+        if (source.TaskStatus != null) {
+            this.TaskStatus = new String(source.TaskStatus);
+        }
+        if (source.TaskMessage != null) {
+            this.TaskMessage = new String(source.TaskMessage);
+        }
+        if (source.CreatedTime != null) {
+            this.CreatedTime = new String(source.CreatedTime);
+        }
+        if (source.FinishedTime != null) {
+            this.FinishedTime = new String(source.FinishedTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -444,6 +444,62 @@ Other-Overseas（其他境外地区）
         this.Os = Os;
     }
 
+    public ProductData() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ProductData(ProductData source) {
+        if (source.ProductId != null) {
+            this.ProductId = new String(source.ProductId);
+        }
+        if (source.ProductName != null) {
+            this.ProductName = new String(source.ProductName);
+        }
+        if (source.ProductDescription != null) {
+            this.ProductDescription = new String(source.ProductDescription);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new Long(source.CreateTime);
+        }
+        if (source.IotModelRevision != null) {
+            this.IotModelRevision = new Long(source.IotModelRevision);
+        }
+        if (source.SecretKey != null) {
+            this.SecretKey = new String(source.SecretKey);
+        }
+        if (source.Features != null) {
+            this.Features = new String[source.Features.length];
+            for (int i = 0; i < source.Features.length; i++) {
+                this.Features[i] = new String(source.Features[i]);
+            }
+        }
+        if (source.ProductModel != null) {
+            this.ProductModel = new String(source.ProductModel);
+        }
+        if (source.ChipManufactureId != null) {
+            this.ChipManufactureId = new String(source.ChipManufactureId);
+        }
+        if (source.ChipId != null) {
+            this.ChipId = new String(source.ChipId);
+        }
+        if (source.ProductCate != null) {
+            this.ProductCate = new Long(source.ProductCate);
+        }
+        if (source.ProductRegion != null) {
+            this.ProductRegion = new String(source.ProductRegion);
+        }
+        if (source.AccessMode != null) {
+            this.AccessMode = new Long(source.AccessMode);
+        }
+        if (source.Os != null) {
+            this.Os = new String(source.Os);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

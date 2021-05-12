@@ -441,6 +441,71 @@ public class SlowLogData extends AbstractModel{
         this.ExampleSql = ExampleSql;
     }
 
+    public SlowLogData() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SlowLogData(SlowLogData source) {
+        if (source.CheckSum != null) {
+            this.CheckSum = new String(source.CheckSum);
+        }
+        if (source.Db != null) {
+            this.Db = new String(source.Db);
+        }
+        if (source.FingerPrint != null) {
+            this.FingerPrint = new String(source.FingerPrint);
+        }
+        if (source.LockTimeAvg != null) {
+            this.LockTimeAvg = new String(source.LockTimeAvg);
+        }
+        if (source.LockTimeMax != null) {
+            this.LockTimeMax = new String(source.LockTimeMax);
+        }
+        if (source.LockTimeMin != null) {
+            this.LockTimeMin = new String(source.LockTimeMin);
+        }
+        if (source.LockTimeSum != null) {
+            this.LockTimeSum = new String(source.LockTimeSum);
+        }
+        if (source.QueryCount != null) {
+            this.QueryCount = new String(source.QueryCount);
+        }
+        if (source.QueryTimeAvg != null) {
+            this.QueryTimeAvg = new String(source.QueryTimeAvg);
+        }
+        if (source.QueryTimeMax != null) {
+            this.QueryTimeMax = new String(source.QueryTimeMax);
+        }
+        if (source.QueryTimeMin != null) {
+            this.QueryTimeMin = new String(source.QueryTimeMin);
+        }
+        if (source.QueryTimeSum != null) {
+            this.QueryTimeSum = new String(source.QueryTimeSum);
+        }
+        if (source.RowsExaminedSum != null) {
+            this.RowsExaminedSum = new String(source.RowsExaminedSum);
+        }
+        if (source.RowsSentSum != null) {
+            this.RowsSentSum = new String(source.RowsSentSum);
+        }
+        if (source.TsMax != null) {
+            this.TsMax = new String(source.TsMax);
+        }
+        if (source.TsMin != null) {
+            this.TsMin = new String(source.TsMin);
+        }
+        if (source.User != null) {
+            this.User = new String(source.User);
+        }
+        if (source.ExampleSql != null) {
+            this.ExampleSql = new String(source.ExampleSql);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

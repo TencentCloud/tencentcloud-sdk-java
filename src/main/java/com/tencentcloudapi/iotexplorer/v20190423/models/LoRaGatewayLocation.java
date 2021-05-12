@@ -114,6 +114,29 @@ public class LoRaGatewayLocation extends AbstractModel{
         this.Longitude = Longitude;
     }
 
+    public LoRaGatewayLocation() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public LoRaGatewayLocation(LoRaGatewayLocation source) {
+        if (source.Accuracy != null) {
+            this.Accuracy = new Float(source.Accuracy);
+        }
+        if (source.Altitude != null) {
+            this.Altitude = new Float(source.Altitude);
+        }
+        if (source.Latitude != null) {
+            this.Latitude = new Float(source.Latitude);
+        }
+        if (source.Longitude != null) {
+            this.Longitude = new Float(source.Longitude);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

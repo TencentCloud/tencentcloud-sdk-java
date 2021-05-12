@@ -91,6 +91,26 @@ public class ApiUseStatisticsEntity extends AbstractModel{
         this.Ratio = Ratio;
     }
 
+    public ApiUseStatisticsEntity() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ApiUseStatisticsEntity(ApiUseStatisticsEntity source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Count != null) {
+            this.Count = new String(source.Count);
+        }
+        if (source.Ratio != null) {
+            this.Ratio = new String(source.Ratio);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -137,6 +137,32 @@ public class InstanceParamHistory extends AbstractModel{
         this.ModifyTime = ModifyTime;
     }
 
+    public InstanceParamHistory() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public InstanceParamHistory(InstanceParamHistory source) {
+        if (source.ParamName != null) {
+            this.ParamName = new String(source.ParamName);
+        }
+        if (source.PreValue != null) {
+            this.PreValue = new String(source.PreValue);
+        }
+        if (source.NewValue != null) {
+            this.NewValue = new String(source.NewValue);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.ModifyTime != null) {
+            this.ModifyTime = new String(source.ModifyTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

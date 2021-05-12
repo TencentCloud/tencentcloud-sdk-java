@@ -183,6 +183,38 @@ public class DbauditTypesInfo extends AbstractModel{
         this.ArchivingStorageCapacity = ArchivingStorageCapacity;
     }
 
+    public DbauditTypesInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DbauditTypesInfo(DbauditTypesInfo source) {
+        if (source.InstanceVersionName != null) {
+            this.InstanceVersionName = new String(source.InstanceVersionName);
+        }
+        if (source.InstanceVersionKey != null) {
+            this.InstanceVersionKey = new String(source.InstanceVersionKey);
+        }
+        if (source.Qps != null) {
+            this.Qps = new Long(source.Qps);
+        }
+        if (source.MaxInstances != null) {
+            this.MaxInstances = new Long(source.MaxInstances);
+        }
+        if (source.InsertSpeed != null) {
+            this.InsertSpeed = new Long(source.InsertSpeed);
+        }
+        if (source.OnlineStorageCapacity != null) {
+            this.OnlineStorageCapacity = new Long(source.OnlineStorageCapacity);
+        }
+        if (source.ArchivingStorageCapacity != null) {
+            this.ArchivingStorageCapacity = new Long(source.ArchivingStorageCapacity);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

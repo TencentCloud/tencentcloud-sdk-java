@@ -162,6 +162,32 @@ public class CertificateExtra extends AbstractModel{
         this.RenewOrder = RenewOrder;
     }
 
+    public CertificateExtra() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CertificateExtra(CertificateExtra source) {
+        if (source.DomainNumber != null) {
+            this.DomainNumber = new String(source.DomainNumber);
+        }
+        if (source.OriginCertificateId != null) {
+            this.OriginCertificateId = new String(source.OriginCertificateId);
+        }
+        if (source.ReplacedBy != null) {
+            this.ReplacedBy = new String(source.ReplacedBy);
+        }
+        if (source.ReplacedFor != null) {
+            this.ReplacedFor = new String(source.ReplacedFor);
+        }
+        if (source.RenewOrder != null) {
+            this.RenewOrder = new String(source.RenewOrder);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

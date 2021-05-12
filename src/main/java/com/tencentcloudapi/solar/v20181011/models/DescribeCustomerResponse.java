@@ -857,6 +857,119 @@ public class DescribeCustomerResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeCustomerResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeCustomerResponse(DescribeCustomerResponse source) {
+        if (source.AddressList != null) {
+            this.AddressList = new String[source.AddressList.length];
+            for (int i = 0; i < source.AddressList.length; i++) {
+                this.AddressList[i] = new String(source.AddressList[i]);
+            }
+        }
+        if (source.UserId != null) {
+            this.UserId = new String(source.UserId);
+        }
+        if (source.Avatar != null) {
+            this.Avatar = new String(source.Avatar);
+        }
+        if (source.Birthday != null) {
+            this.Birthday = new String(source.Birthday);
+        }
+        if (source.City != null) {
+            this.City = new String(source.City);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.Device != null) {
+            this.Device = new String(source.Device);
+        }
+        if (source.Industrys != null) {
+            this.Industrys = new String[source.Industrys.length];
+            for (int i = 0; i < source.Industrys.length; i++) {
+                this.Industrys[i] = new String(source.Industrys[i]);
+            }
+        }
+        if (source.LastActiveTime != null) {
+            this.LastActiveTime = new String(source.LastActiveTime);
+        }
+        if (source.MarkFlag != null) {
+            this.MarkFlag = new String(source.MarkFlag);
+        }
+        if (source.Model != null) {
+            this.Model = new String(source.Model);
+        }
+        if (source.OpenId != null) {
+            this.OpenId = new String(source.OpenId);
+        }
+        if (source.PayFeature != null) {
+            this.PayFeature = new String(source.PayFeature);
+        }
+        if (source.Phone != null) {
+            this.Phone = new String(source.Phone);
+        }
+        if (source.PhoneList != null) {
+            this.PhoneList = new String(source.PhoneList);
+        }
+        if (source.Province != null) {
+            this.Province = new String(source.Province);
+        }
+        if (source.RealName != null) {
+            this.RealName = new String(source.RealName);
+        }
+        if (source.RelChannelFlag != null) {
+            this.RelChannelFlag = new String(source.RelChannelFlag);
+        }
+        if (source.Remark != null) {
+            this.Remark = new String(source.Remark);
+        }
+        if (source.Sex != null) {
+            this.Sex = new String(source.Sex);
+        }
+        if (source.SourceAudienceVo != null) {
+            this.SourceAudienceVo = new String(source.SourceAudienceVo);
+        }
+        if (source.SubWechats != null) {
+            this.SubWechats = new String[source.SubWechats.length];
+            for (int i = 0; i < source.SubWechats.length; i++) {
+                this.SubWechats[i] = new String(source.SubWechats[i]);
+            }
+        }
+        if (source.UnionId != null) {
+            this.UnionId = new String(source.UnionId);
+        }
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new String(source.UpdateTime);
+        }
+        if (source.UserTypes != null) {
+            this.UserTypes = new String[source.UserTypes.length];
+            for (int i = 0; i < source.UserTypes.length; i++) {
+                this.UserTypes[i] = new String(source.UserTypes[i]);
+            }
+        }
+        if (source.WxCity != null) {
+            this.WxCity = new String(source.WxCity);
+        }
+        if (source.WxCountry != null) {
+            this.WxCountry = new String(source.WxCountry);
+        }
+        if (source.WxNickname != null) {
+            this.WxNickname = new String(source.WxNickname);
+        }
+        if (source.WxProvince != null) {
+            this.WxProvince = new String(source.WxProvince);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

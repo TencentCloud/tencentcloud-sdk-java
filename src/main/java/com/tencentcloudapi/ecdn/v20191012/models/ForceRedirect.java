@@ -106,6 +106,26 @@ public class ForceRedirect extends AbstractModel{
         this.RedirectStatusCode = RedirectStatusCode;
     }
 
+    public ForceRedirect() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ForceRedirect(ForceRedirect source) {
+        if (source.Switch != null) {
+            this.Switch = new String(source.Switch);
+        }
+        if (source.RedirectType != null) {
+            this.RedirectType = new String(source.RedirectType);
+        }
+        if (source.RedirectStatusCode != null) {
+            this.RedirectStatusCode = new Long(source.RedirectStatusCode);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -256,6 +256,50 @@ global: 全部
         this.Area = Area;
     }
 
+    public DescribeEcdnDomainStatisticsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeEcdnDomainStatisticsRequest(DescribeEcdnDomainStatisticsRequest source) {
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+        if (source.Metrics != null) {
+            this.Metrics = new String[source.Metrics.length];
+            for (int i = 0; i < source.Metrics.length; i++) {
+                this.Metrics[i] = new String(source.Metrics[i]);
+            }
+        }
+        if (source.Domains != null) {
+            this.Domains = new String[source.Domains.length];
+            for (int i = 0; i < source.Domains.length; i++) {
+                this.Domains[i] = new String(source.Domains[i]);
+            }
+        }
+        if (source.Projects != null) {
+            this.Projects = new Long[source.Projects.length];
+            for (int i = 0; i < source.Projects.length; i++) {
+                this.Projects[i] = new Long(source.Projects[i]);
+            }
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.Area != null) {
+            this.Area = new String(source.Area);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

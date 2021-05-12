@@ -160,6 +160,53 @@ public class ReportTrendData extends AbstractModel{
         this.TimeList = TimeList;
     }
 
+    public ReportTrendData() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ReportTrendData(ReportTrendData source) {
+        if (source.TotalList != null) {
+            this.TotalList = new String[source.TotalList.length];
+            for (int i = 0; i < source.TotalList.length; i++) {
+                this.TotalList[i] = new String(source.TotalList[i]);
+            }
+        }
+        if (source.CancelList != null) {
+            this.CancelList = new String[source.CancelList.length];
+            for (int i = 0; i < source.CancelList.length; i++) {
+                this.CancelList[i] = new String(source.CancelList[i]);
+            }
+        }
+        if (source.SuccessList != null) {
+            this.SuccessList = new String[source.SuccessList.length];
+            for (int i = 0; i < source.SuccessList.length; i++) {
+                this.SuccessList[i] = new String(source.SuccessList[i]);
+            }
+        }
+        if (source.FailList != null) {
+            this.FailList = new String[source.FailList.length];
+            for (int i = 0; i < source.FailList.length; i++) {
+                this.FailList[i] = new String(source.FailList[i]);
+            }
+        }
+        if (source.TimeoutList != null) {
+            this.TimeoutList = new String[source.TimeoutList.length];
+            for (int i = 0; i < source.TimeoutList.length; i++) {
+                this.TimeoutList[i] = new String(source.TimeoutList[i]);
+            }
+        }
+        if (source.TimeList != null) {
+            this.TimeList = new String[source.TimeList.length];
+            for (int i = 0; i < source.TimeList.length; i++) {
+                this.TimeList[i] = new String(source.TimeList[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

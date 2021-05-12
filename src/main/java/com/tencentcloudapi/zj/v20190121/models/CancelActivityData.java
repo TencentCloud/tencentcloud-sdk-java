@@ -45,6 +45,20 @@ public class CancelActivityData extends AbstractModel{
         this.Message = Message;
     }
 
+    public CancelActivityData() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CancelActivityData(CancelActivityData source) {
+        if (source.Message != null) {
+            this.Message = new String(source.Message);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

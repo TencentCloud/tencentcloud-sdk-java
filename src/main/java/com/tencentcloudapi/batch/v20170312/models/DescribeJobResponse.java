@@ -377,6 +377,71 @@ public class DescribeJobResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeJobResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeJobResponse(DescribeJobResponse source) {
+        if (source.JobId != null) {
+            this.JobId = new String(source.JobId);
+        }
+        if (source.JobName != null) {
+            this.JobName = new String(source.JobName);
+        }
+        if (source.Zone != null) {
+            this.Zone = new String(source.Zone);
+        }
+        if (source.Priority != null) {
+            this.Priority = new Long(source.Priority);
+        }
+        if (source.JobState != null) {
+            this.JobState = new String(source.JobState);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+        if (source.TaskSet != null) {
+            this.TaskSet = new TaskView[source.TaskSet.length];
+            for (int i = 0; i < source.TaskSet.length; i++) {
+                this.TaskSet[i] = new TaskView(source.TaskSet[i]);
+            }
+        }
+        if (source.DependenceSet != null) {
+            this.DependenceSet = new Dependence[source.DependenceSet.length];
+            for (int i = 0; i < source.DependenceSet.length; i++) {
+                this.DependenceSet[i] = new Dependence(source.DependenceSet[i]);
+            }
+        }
+        if (source.TaskMetrics != null) {
+            this.TaskMetrics = new TaskMetrics(source.TaskMetrics);
+        }
+        if (source.TaskInstanceMetrics != null) {
+            this.TaskInstanceMetrics = new TaskInstanceMetrics(source.TaskInstanceMetrics);
+        }
+        if (source.StateReason != null) {
+            this.StateReason = new String(source.StateReason);
+        }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
+        if (source.NextAction != null) {
+            this.NextAction = new String(source.NextAction);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

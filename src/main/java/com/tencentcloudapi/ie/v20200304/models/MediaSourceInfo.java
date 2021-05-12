@@ -111,6 +111,26 @@ Audio：音频
         this.Type = Type;
     }
 
+    public MediaSourceInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MediaSourceInfo(MediaSourceInfo source) {
+        if (source.DownInfo != null) {
+            this.DownInfo = new DownInfo(source.DownInfo);
+        }
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

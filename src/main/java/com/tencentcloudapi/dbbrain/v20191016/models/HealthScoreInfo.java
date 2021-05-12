@@ -114,6 +114,32 @@ public class HealthScoreInfo extends AbstractModel{
         this.HealthLevel = HealthLevel;
     }
 
+    public HealthScoreInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public HealthScoreInfo(HealthScoreInfo source) {
+        if (source.IssueTypes != null) {
+            this.IssueTypes = new IssueTypeInfo[source.IssueTypes.length];
+            for (int i = 0; i < source.IssueTypes.length; i++) {
+                this.IssueTypes[i] = new IssueTypeInfo(source.IssueTypes[i]);
+            }
+        }
+        if (source.EventsTotalCount != null) {
+            this.EventsTotalCount = new Long(source.EventsTotalCount);
+        }
+        if (source.HealthScore != null) {
+            this.HealthScore = new Long(source.HealthScore);
+        }
+        if (source.HealthLevel != null) {
+            this.HealthLevel = new String(source.HealthLevel);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

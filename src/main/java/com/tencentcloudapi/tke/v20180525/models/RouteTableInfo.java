@@ -91,6 +91,26 @@ public class RouteTableInfo extends AbstractModel{
         this.VpcId = VpcId;
     }
 
+    public RouteTableInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RouteTableInfo(RouteTableInfo source) {
+        if (source.RouteTableName != null) {
+            this.RouteTableName = new String(source.RouteTableName);
+        }
+        if (source.RouteTableCidrBlock != null) {
+            this.RouteTableCidrBlock = new String(source.RouteTableCidrBlock);
+        }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

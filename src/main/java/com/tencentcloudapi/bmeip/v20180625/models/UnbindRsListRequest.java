@@ -45,6 +45,23 @@ public class UnbindRsListRequest extends AbstractModel{
         this.EipRsList = EipRsList;
     }
 
+    public UnbindRsListRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UnbindRsListRequest(UnbindRsListRequest source) {
+        if (source.EipRsList != null) {
+            this.EipRsList = new EipRsMap[source.EipRsList.length];
+            for (int i = 0; i < source.EipRsList.length; i++) {
+                this.EipRsList[i] = new EipRsMap(source.EipRsList[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

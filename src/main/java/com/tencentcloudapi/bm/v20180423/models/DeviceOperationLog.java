@@ -252,6 +252,47 @@ public class DeviceOperationLog extends AbstractModel{
         this.LogDescription = LogDescription;
     }
 
+    public DeviceOperationLog() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeviceOperationLog(DeviceOperationLog source) {
+        if (source.Id != null) {
+            this.Id = new Long(source.Id);
+        }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.TaskId != null) {
+            this.TaskId = new Long(source.TaskId);
+        }
+        if (source.TaskName != null) {
+            this.TaskName = new String(source.TaskName);
+        }
+        if (source.TaskDescription != null) {
+            this.TaskDescription = new String(source.TaskDescription);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.OpUin != null) {
+            this.OpUin = new String(source.OpUin);
+        }
+        if (source.LogDescription != null) {
+            this.LogDescription = new String(source.LogDescription);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

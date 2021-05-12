@@ -144,6 +144,29 @@ off ：字面匹配
         this.RuleHeader = RuleHeader;
     }
 
+    public AccessControlRule() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AccessControlRule(AccessControlRule source) {
+        if (source.RuleType != null) {
+            this.RuleType = new String(source.RuleType);
+        }
+        if (source.RuleContent != null) {
+            this.RuleContent = new String(source.RuleContent);
+        }
+        if (source.Regex != null) {
+            this.Regex = new String(source.Regex);
+        }
+        if (source.RuleHeader != null) {
+            this.RuleHeader = new String(source.RuleHeader);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

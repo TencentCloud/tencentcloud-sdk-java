@@ -229,6 +229,44 @@ public class EventInfo extends AbstractModel{
         this.Count = Count;
     }
 
+    public EventInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public EventInfo(EventInfo source) {
+        if (source.EventId != null) {
+            this.EventId = new Long(source.EventId);
+        }
+        if (source.DiagType != null) {
+            this.DiagType = new String(source.DiagType);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+        if (source.Outline != null) {
+            this.Outline = new String(source.Outline);
+        }
+        if (source.Severity != null) {
+            this.Severity = new Long(source.Severity);
+        }
+        if (source.ScoreLost != null) {
+            this.ScoreLost = new Long(source.ScoreLost);
+        }
+        if (source.Metric != null) {
+            this.Metric = new String(source.Metric);
+        }
+        if (source.Count != null) {
+            this.Count = new Long(source.Count);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

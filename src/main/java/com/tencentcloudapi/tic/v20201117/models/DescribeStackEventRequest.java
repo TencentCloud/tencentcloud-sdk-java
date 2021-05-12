@@ -45,6 +45,20 @@ public class DescribeStackEventRequest extends AbstractModel{
         this.EventId = EventId;
     }
 
+    public DescribeStackEventRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeStackEventRequest(DescribeStackEventRequest source) {
+        if (source.EventId != null) {
+            this.EventId = new String(source.EventId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

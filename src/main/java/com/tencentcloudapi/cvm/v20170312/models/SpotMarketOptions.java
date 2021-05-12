@@ -68,6 +68,23 @@ public class SpotMarketOptions extends AbstractModel{
         this.SpotInstanceType = SpotInstanceType;
     }
 
+    public SpotMarketOptions() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SpotMarketOptions(SpotMarketOptions source) {
+        if (source.MaxPrice != null) {
+            this.MaxPrice = new String(source.MaxPrice);
+        }
+        if (source.SpotInstanceType != null) {
+            this.SpotInstanceType = new String(source.SpotInstanceType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

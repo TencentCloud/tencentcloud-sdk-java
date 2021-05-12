@@ -68,6 +68,23 @@ public class CreateAccessGroupRequest extends AbstractModel{
         this.Description = Description;
     }
 
+    public CreateAccessGroupRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateAccessGroupRequest(CreateAccessGroupRequest source) {
+        if (source.AccessGroupName != null) {
+            this.AccessGroupName = new String(source.AccessGroupName);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

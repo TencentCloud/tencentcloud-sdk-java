@@ -167,6 +167,35 @@ public class CreateCommonMixStreamRequest extends AbstractModel{
         this.ControlParams = ControlParams;
     }
 
+    public CreateCommonMixStreamRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateCommonMixStreamRequest(CreateCommonMixStreamRequest source) {
+        if (source.MixStreamSessionId != null) {
+            this.MixStreamSessionId = new String(source.MixStreamSessionId);
+        }
+        if (source.InputStreamList != null) {
+            this.InputStreamList = new CommonMixInputParam[source.InputStreamList.length];
+            for (int i = 0; i < source.InputStreamList.length; i++) {
+                this.InputStreamList[i] = new CommonMixInputParam(source.InputStreamList[i]);
+            }
+        }
+        if (source.OutputParams != null) {
+            this.OutputParams = new CommonMixOutputParams(source.OutputParams);
+        }
+        if (source.MixStreamTemplateId != null) {
+            this.MixStreamTemplateId = new Long(source.MixStreamTemplateId);
+        }
+        if (source.ControlParams != null) {
+            this.ControlParams = new CommonMixControlParams(source.ControlParams);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

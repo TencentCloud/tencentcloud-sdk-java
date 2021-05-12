@@ -129,6 +129,32 @@ public class StripTaskResult extends AbstractModel{
         this.ItemSet = ItemSet;
     }
 
+    public StripTaskResult() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public StripTaskResult(StripTaskResult source) {
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.ErrCode != null) {
+            this.ErrCode = new Long(source.ErrCode);
+        }
+        if (source.ErrMsg != null) {
+            this.ErrMsg = new String(source.ErrMsg);
+        }
+        if (source.ItemSet != null) {
+            this.ItemSet = new StripTaskResultItem[source.ItemSet.length];
+            for (int i = 0; i < source.ItemSet.length; i++) {
+                this.ItemSet[i] = new StripTaskResultItem(source.ItemSet[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

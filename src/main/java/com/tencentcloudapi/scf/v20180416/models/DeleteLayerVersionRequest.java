@@ -68,6 +68,23 @@ public class DeleteLayerVersionRequest extends AbstractModel{
         this.LayerVersion = LayerVersion;
     }
 
+    public DeleteLayerVersionRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteLayerVersionRequest(DeleteLayerVersionRequest source) {
+        if (source.LayerName != null) {
+            this.LayerName = new String(source.LayerName);
+        }
+        if (source.LayerVersion != null) {
+            this.LayerVersion = new Long(source.LayerVersion);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

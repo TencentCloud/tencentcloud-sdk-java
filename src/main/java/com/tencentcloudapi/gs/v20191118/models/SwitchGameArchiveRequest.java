@@ -114,6 +114,29 @@ public class SwitchGameArchiveRequest extends AbstractModel{
         this.GameContext = GameContext;
     }
 
+    public SwitchGameArchiveRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SwitchGameArchiveRequest(SwitchGameArchiveRequest source) {
+        if (source.UserId != null) {
+            this.UserId = new String(source.UserId);
+        }
+        if (source.GameId != null) {
+            this.GameId = new String(source.GameId);
+        }
+        if (source.GameArchiveUrl != null) {
+            this.GameArchiveUrl = new String(source.GameArchiveUrl);
+        }
+        if (source.GameContext != null) {
+            this.GameContext = new String(source.GameContext);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

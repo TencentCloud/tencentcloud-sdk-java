@@ -114,6 +114,29 @@ public class ModifyDBInstanceNetworkRequest extends AbstractModel{
         this.OldIpRetainTime = OldIpRetainTime;
     }
 
+    public ModifyDBInstanceNetworkRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyDBInstanceNetworkRequest(ModifyDBInstanceNetworkRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.NewVpcId != null) {
+            this.NewVpcId = new String(source.NewVpcId);
+        }
+        if (source.NewSubnetId != null) {
+            this.NewSubnetId = new String(source.NewSubnetId);
+        }
+        if (source.OldIpRetainTime != null) {
+            this.OldIpRetainTime = new Long(source.OldIpRetainTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

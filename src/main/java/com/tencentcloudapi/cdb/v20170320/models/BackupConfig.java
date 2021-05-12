@@ -114,6 +114,29 @@ public class BackupConfig extends AbstractModel{
         this.Vport = Vport;
     }
 
+    public BackupConfig() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public BackupConfig(BackupConfig source) {
+        if (source.ReplicationMode != null) {
+            this.ReplicationMode = new String(source.ReplicationMode);
+        }
+        if (source.Zone != null) {
+            this.Zone = new String(source.Zone);
+        }
+        if (source.Vip != null) {
+            this.Vip = new String(source.Vip);
+        }
+        if (source.Vport != null) {
+            this.Vport = new Long(source.Vport);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

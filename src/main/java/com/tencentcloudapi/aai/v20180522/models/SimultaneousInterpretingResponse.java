@@ -91,6 +91,26 @@ public class SimultaneousInterpretingResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public SimultaneousInterpretingResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SimultaneousInterpretingResponse(SimultaneousInterpretingResponse source) {
+        if (source.AsrText != null) {
+            this.AsrText = new String(source.AsrText);
+        }
+        if (source.NmtText != null) {
+            this.NmtText = new String(source.NmtText);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

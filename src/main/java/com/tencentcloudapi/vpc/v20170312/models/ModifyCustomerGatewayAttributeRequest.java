@@ -68,6 +68,23 @@ public class ModifyCustomerGatewayAttributeRequest extends AbstractModel{
         this.CustomerGatewayName = CustomerGatewayName;
     }
 
+    public ModifyCustomerGatewayAttributeRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyCustomerGatewayAttributeRequest(ModifyCustomerGatewayAttributeRequest source) {
+        if (source.CustomerGatewayId != null) {
+            this.CustomerGatewayId = new String(source.CustomerGatewayId);
+        }
+        if (source.CustomerGatewayName != null) {
+            this.CustomerGatewayName = new String(source.CustomerGatewayName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -68,6 +68,23 @@ public class DownloadDialogueTextResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DownloadDialogueTextResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DownloadDialogueTextResponse(DownloadDialogueTextResponse source) {
+        if (source.TextReportUrl != null) {
+            this.TextReportUrl = new String(source.TextReportUrl);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

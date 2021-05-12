@@ -114,6 +114,32 @@ public class DescribeDomainsConfigRequest extends AbstractModel{
         this.Sort = Sort;
     }
 
+    public DescribeDomainsConfigRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeDomainsConfigRequest(DescribeDomainsConfigRequest source) {
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.Filters != null) {
+            this.Filters = new DomainFilter[source.Filters.length];
+            for (int i = 0; i < source.Filters.length; i++) {
+                this.Filters[i] = new DomainFilter(source.Filters[i]);
+            }
+        }
+        if (source.Sort != null) {
+            this.Sort = new Sort(source.Sort);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

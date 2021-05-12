@@ -73,6 +73,23 @@ public class RecognizeTargetAudienceResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public RecognizeTargetAudienceResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RecognizeTargetAudienceResponse(RecognizeTargetAudienceResponse source) {
+        if (source.Data != null) {
+            this.Data = new OutputRecognizeTargetAudience(source.Data);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

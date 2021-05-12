@@ -137,6 +137,35 @@ public class DescribeBindingPolicyObjectListRequest extends AbstractModel{
         this.Dimensions = Dimensions;
     }
 
+    public DescribeBindingPolicyObjectListRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeBindingPolicyObjectListRequest(DescribeBindingPolicyObjectListRequest source) {
+        if (source.Module != null) {
+            this.Module = new String(source.Module);
+        }
+        if (source.GroupId != null) {
+            this.GroupId = new Long(source.GroupId);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Dimensions != null) {
+            this.Dimensions = new DescribeBindingPolicyObjectListDimension[source.Dimensions.length];
+            for (int i = 0; i < source.Dimensions.length; i++) {
+                this.Dimensions[i] = new DescribeBindingPolicyObjectListDimension(source.Dimensions[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

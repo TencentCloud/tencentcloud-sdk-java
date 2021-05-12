@@ -160,6 +160,35 @@ public class TcrInstanceToken extends AbstractModel{
         this.ExpiredAt = ExpiredAt;
     }
 
+    public TcrInstanceToken() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TcrInstanceToken(TcrInstanceToken source) {
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
+        if (source.Desc != null) {
+            this.Desc = new String(source.Desc);
+        }
+        if (source.RegistryId != null) {
+            this.RegistryId = new String(source.RegistryId);
+        }
+        if (source.Enabled != null) {
+            this.Enabled = new Boolean(source.Enabled);
+        }
+        if (source.CreatedAt != null) {
+            this.CreatedAt = new String(source.CreatedAt);
+        }
+        if (source.ExpiredAt != null) {
+            this.ExpiredAt = new Long(source.ExpiredAt);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

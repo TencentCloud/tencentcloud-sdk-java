@@ -160,6 +160,38 @@ public class StartEncryptionRequest extends AbstractModel{
         this.OutputObjects = OutputObjects;
     }
 
+    public StartEncryptionRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public StartEncryptionRequest(StartEncryptionRequest source) {
+        if (source.CosEndPoint != null) {
+            this.CosEndPoint = new String(source.CosEndPoint);
+        }
+        if (source.CosSecretId != null) {
+            this.CosSecretId = new String(source.CosSecretId);
+        }
+        if (source.CosSecretKey != null) {
+            this.CosSecretKey = new String(source.CosSecretKey);
+        }
+        if (source.DrmType != null) {
+            this.DrmType = new String(source.DrmType);
+        }
+        if (source.SourceObject != null) {
+            this.SourceObject = new DrmSourceObject(source.SourceObject);
+        }
+        if (source.OutputObjects != null) {
+            this.OutputObjects = new DrmOutputObject[source.OutputObjects.length];
+            for (int i = 0; i < source.OutputObjects.length; i++) {
+                this.OutputObjects[i] = new DrmOutputObject(source.OutputObjects[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

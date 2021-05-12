@@ -68,6 +68,23 @@ public class CreateMigrationResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public CreateMigrationResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateMigrationResponse(CreateMigrationResponse source) {
+        if (source.MigrateId != null) {
+            this.MigrateId = new Long(source.MigrateId);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -68,6 +68,23 @@ public class ViewBaseInfo extends AbstractModel{
         this.ViewName = ViewName;
     }
 
+    public ViewBaseInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ViewBaseInfo(ViewBaseInfo source) {
+        if (source.DatabaseName != null) {
+            this.DatabaseName = new String(source.DatabaseName);
+        }
+        if (source.ViewName != null) {
+            this.ViewName = new String(source.ViewName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

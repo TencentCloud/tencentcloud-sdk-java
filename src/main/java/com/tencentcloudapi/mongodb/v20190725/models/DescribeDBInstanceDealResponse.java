@@ -137,6 +137,32 @@ public class DescribeDBInstanceDealResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeDBInstanceDealResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeDBInstanceDealResponse(DescribeDBInstanceDealResponse source) {
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.OriginalPrice != null) {
+            this.OriginalPrice = new Float(source.OriginalPrice);
+        }
+        if (source.DiscountPrice != null) {
+            this.DiscountPrice = new Float(source.DiscountPrice);
+        }
+        if (source.Action != null) {
+            this.Action = new String(source.Action);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

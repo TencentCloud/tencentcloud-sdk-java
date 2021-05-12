@@ -124,6 +124,32 @@ recvLossRateRaw：下行丢包率
         this.DataType = DataType;
     }
 
+    public DescribeRealtimeNetworkRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeRealtimeNetworkRequest(DescribeRealtimeNetworkRequest source) {
+        if (source.StartTime != null) {
+            this.StartTime = new Long(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new Long(source.EndTime);
+        }
+        if (source.SdkAppId != null) {
+            this.SdkAppId = new String(source.SdkAppId);
+        }
+        if (source.DataType != null) {
+            this.DataType = new String[source.DataType.length];
+            for (int i = 0; i < source.DataType.length; i++) {
+                this.DataType[i] = new String(source.DataType[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

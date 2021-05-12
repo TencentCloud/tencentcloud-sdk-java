@@ -68,6 +68,23 @@ public class Simple extends AbstractModel{
         this.Text = Text;
     }
 
+    public Simple() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Simple(Simple source) {
+        if (source.Html != null) {
+            this.Html = new String(source.Html);
+        }
+        if (source.Text != null) {
+            this.Text = new String(source.Text);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

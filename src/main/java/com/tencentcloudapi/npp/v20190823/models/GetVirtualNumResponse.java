@@ -180,6 +180,35 @@ public class GetVirtualNumResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public GetVirtualNumResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GetVirtualNumResponse(GetVirtualNumResponse source) {
+        if (source.ErrorCode != null) {
+            this.ErrorCode = new String(source.ErrorCode);
+        }
+        if (source.BindId != null) {
+            this.BindId = new String(source.BindId);
+        }
+        if (source.RefNum != null) {
+            this.RefNum = new String(source.RefNum);
+        }
+        if (source.VirtualNum != null) {
+            this.VirtualNum = new String(source.VirtualNum);
+        }
+        if (source.Msg != null) {
+            this.Msg = new String(source.Msg);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

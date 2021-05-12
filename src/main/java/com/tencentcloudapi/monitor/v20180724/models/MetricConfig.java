@@ -91,6 +91,35 @@ public class MetricConfig extends AbstractModel{
         this.ContinuePeriod = ContinuePeriod;
     }
 
+    public MetricConfig() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MetricConfig(MetricConfig source) {
+        if (source.Operator != null) {
+            this.Operator = new String[source.Operator.length];
+            for (int i = 0; i < source.Operator.length; i++) {
+                this.Operator[i] = new String(source.Operator[i]);
+            }
+        }
+        if (source.Period != null) {
+            this.Period = new Long[source.Period.length];
+            for (int i = 0; i < source.Period.length; i++) {
+                this.Period[i] = new Long(source.Period[i]);
+            }
+        }
+        if (source.ContinuePeriod != null) {
+            this.ContinuePeriod = new Long[source.ContinuePeriod.length];
+            for (int i = 0; i < source.ContinuePeriod.length; i++) {
+                this.ContinuePeriod[i] = new Long(source.ContinuePeriod[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -358,6 +358,53 @@ public class Config extends AbstractModel{
         this.ConfigVersionCount = ConfigVersionCount;
     }
 
+    public Config() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Config(Config source) {
+        if (source.ConfigId != null) {
+            this.ConfigId = new String(source.ConfigId);
+        }
+        if (source.ConfigName != null) {
+            this.ConfigName = new String(source.ConfigName);
+        }
+        if (source.ConfigVersion != null) {
+            this.ConfigVersion = new String(source.ConfigVersion);
+        }
+        if (source.ConfigVersionDesc != null) {
+            this.ConfigVersionDesc = new String(source.ConfigVersionDesc);
+        }
+        if (source.ConfigValue != null) {
+            this.ConfigValue = new String(source.ConfigValue);
+        }
+        if (source.ConfigType != null) {
+            this.ConfigType = new String(source.ConfigType);
+        }
+        if (source.CreationTime != null) {
+            this.CreationTime = new String(source.CreationTime);
+        }
+        if (source.ApplicationId != null) {
+            this.ApplicationId = new String(source.ApplicationId);
+        }
+        if (source.ApplicationName != null) {
+            this.ApplicationName = new String(source.ApplicationName);
+        }
+        if (source.DeleteFlag != null) {
+            this.DeleteFlag = new Boolean(source.DeleteFlag);
+        }
+        if (source.LastUpdateTime != null) {
+            this.LastUpdateTime = new String(source.LastUpdateTime);
+        }
+        if (source.ConfigVersionCount != null) {
+            this.ConfigVersionCount = new Long(source.ConfigVersionCount);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

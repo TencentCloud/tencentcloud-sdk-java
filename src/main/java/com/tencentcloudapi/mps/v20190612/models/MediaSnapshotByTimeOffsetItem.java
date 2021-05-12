@@ -91,6 +91,29 @@ public class MediaSnapshotByTimeOffsetItem extends AbstractModel{
         this.Storage = Storage;
     }
 
+    public MediaSnapshotByTimeOffsetItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MediaSnapshotByTimeOffsetItem(MediaSnapshotByTimeOffsetItem source) {
+        if (source.Definition != null) {
+            this.Definition = new Long(source.Definition);
+        }
+        if (source.PicInfoSet != null) {
+            this.PicInfoSet = new MediaSnapshotByTimePicInfoItem[source.PicInfoSet.length];
+            for (int i = 0; i < source.PicInfoSet.length; i++) {
+                this.PicInfoSet[i] = new MediaSnapshotByTimePicInfoItem(source.PicInfoSet[i]);
+            }
+        }
+        if (source.Storage != null) {
+            this.Storage = new TaskOutputStorage(source.Storage);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

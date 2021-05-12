@@ -68,6 +68,26 @@ public class DescribeNatSubnetsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeNatSubnetsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeNatSubnetsResponse(DescribeNatSubnetsResponse source) {
+        if (source.NatSubnetInfoSet != null) {
+            this.NatSubnetInfoSet = new NatSubnetInfo[source.NatSubnetInfoSet.length];
+            for (int i = 0; i < source.NatSubnetInfoSet.length; i++) {
+                this.NatSubnetInfoSet[i] = new NatSubnetInfo(source.NatSubnetInfoSet[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

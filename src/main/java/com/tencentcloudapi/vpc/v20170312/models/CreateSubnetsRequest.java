@@ -114,6 +114,35 @@ public class CreateSubnetsRequest extends AbstractModel{
         this.CdcId = CdcId;
     }
 
+    public CreateSubnetsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateSubnetsRequest(CreateSubnetsRequest source) {
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.Subnets != null) {
+            this.Subnets = new SubnetInput[source.Subnets.length];
+            for (int i = 0; i < source.Subnets.length; i++) {
+                this.Subnets[i] = new SubnetInput(source.Subnets[i]);
+            }
+        }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
+        if (source.CdcId != null) {
+            this.CdcId = new String(source.CdcId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

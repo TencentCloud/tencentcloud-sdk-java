@@ -114,6 +114,29 @@ public class CreateDeviceRequest extends AbstractModel{
         this.GroupId = GroupId;
     }
 
+    public CreateDeviceRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateDeviceRequest(CreateDeviceRequest source) {
+        if (source.NickName != null) {
+            this.NickName = new String(source.NickName);
+        }
+        if (source.PassWord != null) {
+            this.PassWord = new String(source.PassWord);
+        }
+        if (source.DeviceType != null) {
+            this.DeviceType = new Long(source.DeviceType);
+        }
+        if (source.GroupId != null) {
+            this.GroupId = new String(source.GroupId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

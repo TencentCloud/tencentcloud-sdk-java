@@ -91,6 +91,29 @@ public class DutyPaidProofOCRResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DutyPaidProofOCRResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DutyPaidProofOCRResponse(DutyPaidProofOCRResponse source) {
+        if (source.DutyPaidProofInfos != null) {
+            this.DutyPaidProofInfos = new DutyPaidProofInfo[source.DutyPaidProofInfos.length];
+            for (int i = 0; i < source.DutyPaidProofInfos.length; i++) {
+                this.DutyPaidProofInfos[i] = new DutyPaidProofInfo(source.DutyPaidProofInfos[i]);
+            }
+        }
+        if (source.Angle != null) {
+            this.Angle = new Float(source.Angle);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

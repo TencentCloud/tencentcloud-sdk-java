@@ -45,6 +45,20 @@ public class ModifyUserPasswordPersonalRequest extends AbstractModel{
         this.Password = Password;
     }
 
+    public ModifyUserPasswordPersonalRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyUserPasswordPersonalRequest(ModifyUserPasswordPersonalRequest source) {
+        if (source.Password != null) {
+            this.Password = new String(source.Password);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

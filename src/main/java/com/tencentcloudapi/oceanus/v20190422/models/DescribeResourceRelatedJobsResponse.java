@@ -91,6 +91,29 @@ public class DescribeResourceRelatedJobsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeResourceRelatedJobsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeResourceRelatedJobsResponse(DescribeResourceRelatedJobsResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.RefJobInfos != null) {
+            this.RefJobInfos = new ResourceRefJobInfo[source.RefJobInfos.length];
+            for (int i = 0; i < source.RefJobInfos.length; i++) {
+                this.RefJobInfos[i] = new ResourceRefJobInfo(source.RefJobInfos[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

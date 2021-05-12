@@ -267,6 +267,47 @@ PolicyType取值TargetBased时，MetricName取值PercentAvailableGameSessions
         this.TargetConfiguration = TargetConfiguration;
     }
 
+    public PutScalingPolicyRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PutScalingPolicyRequest(PutScalingPolicyRequest source) {
+        if (source.FleetId != null) {
+            this.FleetId = new String(source.FleetId);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.ScalingAdjustment != null) {
+            this.ScalingAdjustment = new Long(source.ScalingAdjustment);
+        }
+        if (source.ScalingAdjustmentType != null) {
+            this.ScalingAdjustmentType = new String(source.ScalingAdjustmentType);
+        }
+        if (source.Threshold != null) {
+            this.Threshold = new Float(source.Threshold);
+        }
+        if (source.ComparisonOperator != null) {
+            this.ComparisonOperator = new String(source.ComparisonOperator);
+        }
+        if (source.EvaluationPeriods != null) {
+            this.EvaluationPeriods = new Long(source.EvaluationPeriods);
+        }
+        if (source.MetricName != null) {
+            this.MetricName = new String(source.MetricName);
+        }
+        if (source.PolicyType != null) {
+            this.PolicyType = new String(source.PolicyType);
+        }
+        if (source.TargetConfiguration != null) {
+            this.TargetConfiguration = new TargetConfiguration(source.TargetConfiguration);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

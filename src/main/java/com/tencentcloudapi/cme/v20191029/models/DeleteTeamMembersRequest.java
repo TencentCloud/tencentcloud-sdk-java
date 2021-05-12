@@ -114,6 +114,32 @@ public class DeleteTeamMembersRequest extends AbstractModel{
         this.Operator = Operator;
     }
 
+    public DeleteTeamMembersRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteTeamMembersRequest(DeleteTeamMembersRequest source) {
+        if (source.Platform != null) {
+            this.Platform = new String(source.Platform);
+        }
+        if (source.TeamId != null) {
+            this.TeamId = new String(source.TeamId);
+        }
+        if (source.MemberIds != null) {
+            this.MemberIds = new String[source.MemberIds.length];
+            for (int i = 0; i < source.MemberIds.length; i++) {
+                this.MemberIds[i] = new String(source.MemberIds[i]);
+            }
+        }
+        if (source.Operator != null) {
+            this.Operator = new String(source.Operator);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

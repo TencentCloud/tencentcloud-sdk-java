@@ -68,6 +68,23 @@ public class ProxyMachineInfo extends AbstractModel{
         this.MachineType = MachineType;
     }
 
+    public ProxyMachineInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ProxyMachineInfo(ProxyMachineInfo source) {
+        if (source.ProxyUid != null) {
+            this.ProxyUid = new String(source.ProxyUid);
+        }
+        if (source.MachineType != null) {
+            this.MachineType = new String(source.MachineType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

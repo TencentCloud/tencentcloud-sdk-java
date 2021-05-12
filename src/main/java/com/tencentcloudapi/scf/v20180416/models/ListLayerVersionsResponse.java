@@ -68,6 +68,26 @@ public class ListLayerVersionsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public ListLayerVersionsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ListLayerVersionsResponse(ListLayerVersionsResponse source) {
+        if (source.LayerVersions != null) {
+            this.LayerVersions = new LayerVersionInfo[source.LayerVersions.length];
+            for (int i = 0; i < source.LayerVersions.length; i++) {
+                this.LayerVersions[i] = new LayerVersionInfo(source.LayerVersions[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

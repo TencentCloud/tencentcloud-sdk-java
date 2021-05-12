@@ -167,6 +167,32 @@ public class CheckBankCardInformationResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public CheckBankCardInformationResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CheckBankCardInformationResponse(CheckBankCardInformationResponse source) {
+        if (source.Result != null) {
+            this.Result = new String(source.Result);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.AccountBank != null) {
+            this.AccountBank = new String(source.AccountBank);
+        }
+        if (source.AccountType != null) {
+            this.AccountType = new Long(source.AccountType);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

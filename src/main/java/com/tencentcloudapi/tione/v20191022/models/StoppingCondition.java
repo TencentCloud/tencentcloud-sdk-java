@@ -78,6 +78,23 @@ public class StoppingCondition extends AbstractModel{
         this.MaxWaitTimeInSeconds = MaxWaitTimeInSeconds;
     }
 
+    public StoppingCondition() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public StoppingCondition(StoppingCondition source) {
+        if (source.MaxRuntimeInSeconds != null) {
+            this.MaxRuntimeInSeconds = new Long(source.MaxRuntimeInSeconds);
+        }
+        if (source.MaxWaitTimeInSeconds != null) {
+            this.MaxWaitTimeInSeconds = new Long(source.MaxWaitTimeInSeconds);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

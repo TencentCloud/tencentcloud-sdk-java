@@ -252,6 +252,53 @@ public class CreateClusterNodePoolRequest extends AbstractModel{
         this.OsCustomizeType = OsCustomizeType;
     }
 
+    public CreateClusterNodePoolRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateClusterNodePoolRequest(CreateClusterNodePoolRequest source) {
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
+        if (source.AutoScalingGroupPara != null) {
+            this.AutoScalingGroupPara = new String(source.AutoScalingGroupPara);
+        }
+        if (source.LaunchConfigurePara != null) {
+            this.LaunchConfigurePara = new String(source.LaunchConfigurePara);
+        }
+        if (source.InstanceAdvancedSettings != null) {
+            this.InstanceAdvancedSettings = new InstanceAdvancedSettings(source.InstanceAdvancedSettings);
+        }
+        if (source.EnableAutoscale != null) {
+            this.EnableAutoscale = new Boolean(source.EnableAutoscale);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Labels != null) {
+            this.Labels = new Label[source.Labels.length];
+            for (int i = 0; i < source.Labels.length; i++) {
+                this.Labels[i] = new Label(source.Labels[i]);
+            }
+        }
+        if (source.Taints != null) {
+            this.Taints = new Taint[source.Taints.length];
+            for (int i = 0; i < source.Taints.length; i++) {
+                this.Taints[i] = new Taint(source.Taints[i]);
+            }
+        }
+        if (source.NodePoolOs != null) {
+            this.NodePoolOs = new String(source.NodePoolOs);
+        }
+        if (source.OsCustomizeType != null) {
+            this.OsCustomizeType = new String(source.OsCustomizeType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

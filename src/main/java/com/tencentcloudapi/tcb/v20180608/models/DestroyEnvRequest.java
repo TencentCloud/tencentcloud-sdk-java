@@ -91,6 +91,26 @@ public class DestroyEnvRequest extends AbstractModel{
         this.BypassCheck = BypassCheck;
     }
 
+    public DestroyEnvRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DestroyEnvRequest(DestroyEnvRequest source) {
+        if (source.EnvId != null) {
+            this.EnvId = new String(source.EnvId);
+        }
+        if (source.IsForce != null) {
+            this.IsForce = new Boolean(source.IsForce);
+        }
+        if (source.BypassCheck != null) {
+            this.BypassCheck = new Boolean(source.BypassCheck);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

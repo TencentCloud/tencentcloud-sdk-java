@@ -45,6 +45,23 @@ public class UnbindApiGroupRequest extends AbstractModel{
         this.GroupGatewayList = GroupGatewayList;
     }
 
+    public UnbindApiGroupRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UnbindApiGroupRequest(UnbindApiGroupRequest source) {
+        if (source.GroupGatewayList != null) {
+            this.GroupGatewayList = new GatewayGroupIds[source.GroupGatewayList.length];
+            for (int i = 0; i < source.GroupGatewayList.length; i++) {
+                this.GroupGatewayList[i] = new GatewayGroupIds(source.GroupGatewayList[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

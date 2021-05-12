@@ -78,6 +78,23 @@ public class FrameTagConfigureInfo extends AbstractModel{
         this.ScreenshotInterval = ScreenshotInterval;
     }
 
+    public FrameTagConfigureInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public FrameTagConfigureInfo(FrameTagConfigureInfo source) {
+        if (source.Switch != null) {
+            this.Switch = new String(source.Switch);
+        }
+        if (source.ScreenshotInterval != null) {
+            this.ScreenshotInterval = new Float(source.ScreenshotInterval);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

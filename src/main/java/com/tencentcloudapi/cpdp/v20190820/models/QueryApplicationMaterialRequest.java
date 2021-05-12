@@ -68,6 +68,23 @@ public class QueryApplicationMaterialRequest extends AbstractModel{
         this.Profile = Profile;
     }
 
+    public QueryApplicationMaterialRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public QueryApplicationMaterialRequest(QueryApplicationMaterialRequest source) {
+        if (source.DeclareId != null) {
+            this.DeclareId = new String(source.DeclareId);
+        }
+        if (source.Profile != null) {
+            this.Profile = new String(source.Profile);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

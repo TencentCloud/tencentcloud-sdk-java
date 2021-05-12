@@ -73,6 +73,26 @@ public class CertIdRelatedWithLoadBalancers extends AbstractModel{
         this.LoadBalancers = LoadBalancers;
     }
 
+    public CertIdRelatedWithLoadBalancers() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CertIdRelatedWithLoadBalancers(CertIdRelatedWithLoadBalancers source) {
+        if (source.CertId != null) {
+            this.CertId = new String(source.CertId);
+        }
+        if (source.LoadBalancers != null) {
+            this.LoadBalancers = new LoadBalancer[source.LoadBalancers.length];
+            for (int i = 0; i < source.LoadBalancers.length; i++) {
+                this.LoadBalancers[i] = new LoadBalancer(source.LoadBalancers[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

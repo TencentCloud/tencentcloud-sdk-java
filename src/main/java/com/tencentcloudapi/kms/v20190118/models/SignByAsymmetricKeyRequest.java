@@ -114,6 +114,29 @@ public class SignByAsymmetricKeyRequest extends AbstractModel{
         this.MessageType = MessageType;
     }
 
+    public SignByAsymmetricKeyRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SignByAsymmetricKeyRequest(SignByAsymmetricKeyRequest source) {
+        if (source.Algorithm != null) {
+            this.Algorithm = new String(source.Algorithm);
+        }
+        if (source.Message != null) {
+            this.Message = new String(source.Message);
+        }
+        if (source.KeyId != null) {
+            this.KeyId = new String(source.KeyId);
+        }
+        if (source.MessageType != null) {
+            this.MessageType = new String(source.MessageType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

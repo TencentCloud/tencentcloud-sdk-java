@@ -160,6 +160,35 @@ public class CreateFacePictureRequest extends AbstractModel{
         this.IsForceUpload = IsForceUpload;
     }
 
+    public CreateFacePictureRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateFacePictureRequest(CreateFacePictureRequest source) {
+        if (source.CompanyId != null) {
+            this.CompanyId = new String(source.CompanyId);
+        }
+        if (source.PersonType != null) {
+            this.PersonType = new Long(source.PersonType);
+        }
+        if (source.Picture != null) {
+            this.Picture = new String(source.Picture);
+        }
+        if (source.PictureName != null) {
+            this.PictureName = new String(source.PictureName);
+        }
+        if (source.ShopId != null) {
+            this.ShopId = new Long(source.ShopId);
+        }
+        if (source.IsForceUpload != null) {
+            this.IsForceUpload = new Boolean(source.IsForceUpload);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -216,6 +216,41 @@ public class AttachedApiInfo extends AbstractModel{
         this.AttachedTime = AttachedTime;
     }
 
+    public AttachedApiInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AttachedApiInfo(AttachedApiInfo source) {
+        if (source.ServiceId != null) {
+            this.ServiceId = new String(source.ServiceId);
+        }
+        if (source.ServiceName != null) {
+            this.ServiceName = new String(source.ServiceName);
+        }
+        if (source.ServiceDesc != null) {
+            this.ServiceDesc = new String(source.ServiceDesc);
+        }
+        if (source.ApiId != null) {
+            this.ApiId = new String(source.ApiId);
+        }
+        if (source.ApiName != null) {
+            this.ApiName = new String(source.ApiName);
+        }
+        if (source.ApiDesc != null) {
+            this.ApiDesc = new String(source.ApiDesc);
+        }
+        if (source.Environment != null) {
+            this.Environment = new String(source.Environment);
+        }
+        if (source.AttachedTime != null) {
+            this.AttachedTime = new String(source.AttachedTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

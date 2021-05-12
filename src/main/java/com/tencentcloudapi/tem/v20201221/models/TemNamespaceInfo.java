@@ -136,6 +136,13 @@ public class TemNamespaceInfo extends AbstractModel{
     private String ClusterStatus;
 
     /**
+    * 是否开启tsw
+    */
+    @SerializedName("EnableTswTraceService")
+    @Expose
+    private Boolean EnableTswTraceService;
+
+    /**
      * Get 命名空间id 
      * @return NamespaceId 命名空间id
      */
@@ -396,6 +403,84 @@ public class TemNamespaceInfo extends AbstractModel{
     }
 
     /**
+     * Get 是否开启tsw 
+     * @return EnableTswTraceService 是否开启tsw
+     */
+    public Boolean getEnableTswTraceService() {
+        return this.EnableTswTraceService;
+    }
+
+    /**
+     * Set 是否开启tsw
+     * @param EnableTswTraceService 是否开启tsw
+     */
+    public void setEnableTswTraceService(Boolean EnableTswTraceService) {
+        this.EnableTswTraceService = EnableTswTraceService;
+    }
+
+    public TemNamespaceInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TemNamespaceInfo(TemNamespaceInfo source) {
+        if (source.NamespaceId != null) {
+            this.NamespaceId = new String(source.NamespaceId);
+        }
+        if (source.Channel != null) {
+            this.Channel = new String(source.Channel);
+        }
+        if (source.NamespaceName != null) {
+            this.NamespaceName = new String(source.NamespaceName);
+        }
+        if (source.Region != null) {
+            this.Region = new String(source.Region);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.Vpc != null) {
+            this.Vpc = new String(source.Vpc);
+        }
+        if (source.CreateDate != null) {
+            this.CreateDate = new String(source.CreateDate);
+        }
+        if (source.ModifyDate != null) {
+            this.ModifyDate = new String(source.ModifyDate);
+        }
+        if (source.Modifier != null) {
+            this.Modifier = new String(source.Modifier);
+        }
+        if (source.Creator != null) {
+            this.Creator = new String(source.Creator);
+        }
+        if (source.ServiceNum != null) {
+            this.ServiceNum = new Long(source.ServiceNum);
+        }
+        if (source.RunInstancesNum != null) {
+            this.RunInstancesNum = new Long(source.RunInstancesNum);
+        }
+        if (source.SubnetId != null) {
+            this.SubnetId = new String(source.SubnetId);
+        }
+        if (source.TcbEnvStatus != null) {
+            this.TcbEnvStatus = new String(source.TcbEnvStatus);
+        }
+        if (source.ClusterStatus != null) {
+            this.ClusterStatus = new String(source.ClusterStatus);
+        }
+        if (source.EnableTswTraceService != null) {
+            this.EnableTswTraceService = new Boolean(source.EnableTswTraceService);
+        }
+    }
+
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -415,6 +500,7 @@ public class TemNamespaceInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
         this.setParamSimple(map, prefix + "TcbEnvStatus", this.TcbEnvStatus);
         this.setParamSimple(map, prefix + "ClusterStatus", this.ClusterStatus);
+        this.setParamSimple(map, prefix + "EnableTswTraceService", this.EnableTswTraceService);
 
     }
 }

@@ -137,6 +137,32 @@ public class ModifyStudioProductRequest extends AbstractModel{
         this.EnableProductScript = EnableProductScript;
     }
 
+    public ModifyStudioProductRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyStudioProductRequest(ModifyStudioProductRequest source) {
+        if (source.ProductId != null) {
+            this.ProductId = new String(source.ProductId);
+        }
+        if (source.ProductName != null) {
+            this.ProductName = new String(source.ProductName);
+        }
+        if (source.ProductDesc != null) {
+            this.ProductDesc = new String(source.ProductDesc);
+        }
+        if (source.ModuleId != null) {
+            this.ModuleId = new Long(source.ModuleId);
+        }
+        if (source.EnableProductScript != null) {
+            this.EnableProductScript = new String(source.EnableProductScript);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

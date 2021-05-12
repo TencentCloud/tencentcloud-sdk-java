@@ -302,6 +302,47 @@ public class SnapshotResult extends AbstractModel{
         this.SnapshotStatus = SnapshotStatus;
     }
 
+    public SnapshotResult() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SnapshotResult(SnapshotResult source) {
+        if (source.TableGroupId != null) {
+            this.TableGroupId = new String(source.TableGroupId);
+        }
+        if (source.TableName != null) {
+            this.TableName = new String(source.TableName);
+        }
+        if (source.TaskId != null) {
+            this.TaskId = new String(source.TaskId);
+        }
+        if (source.Error != null) {
+            this.Error = new ErrorInfo(source.Error);
+        }
+        if (source.SnapshotName != null) {
+            this.SnapshotName = new String(source.SnapshotName);
+        }
+        if (source.SnapshotTime != null) {
+            this.SnapshotTime = new String(source.SnapshotTime);
+        }
+        if (source.SnapshotDeadTime != null) {
+            this.SnapshotDeadTime = new String(source.SnapshotDeadTime);
+        }
+        if (source.SnapshotCreateTime != null) {
+            this.SnapshotCreateTime = new String(source.SnapshotCreateTime);
+        }
+        if (source.SnapshotSize != null) {
+            this.SnapshotSize = new Long(source.SnapshotSize);
+        }
+        if (source.SnapshotStatus != null) {
+            this.SnapshotStatus = new Long(source.SnapshotStatus);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

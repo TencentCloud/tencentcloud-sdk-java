@@ -160,6 +160,35 @@ public class ListBlackEmailAddressRequest extends AbstractModel{
         this.TaskID = TaskID;
     }
 
+    public ListBlackEmailAddressRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ListBlackEmailAddressRequest(ListBlackEmailAddressRequest source) {
+        if (source.StartDate != null) {
+            this.StartDate = new String(source.StartDate);
+        }
+        if (source.EndDate != null) {
+            this.EndDate = new String(source.EndDate);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.EmailAddress != null) {
+            this.EmailAddress = new String(source.EmailAddress);
+        }
+        if (source.TaskID != null) {
+            this.TaskID = new String(source.TaskID);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

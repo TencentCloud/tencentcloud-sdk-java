@@ -114,6 +114,29 @@ public class Task extends AbstractModel{
         this.OpenId = OpenId;
     }
 
+    public Task() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Task(Task source) {
+        if (source.DataId != null) {
+            this.DataId = new String(source.DataId);
+        }
+        if (source.Url != null) {
+            this.Url = new String(source.Url);
+        }
+        if (source.RoomId != null) {
+            this.RoomId = new String(source.RoomId);
+        }
+        if (source.OpenId != null) {
+            this.OpenId = new String(source.OpenId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

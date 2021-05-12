@@ -45,6 +45,20 @@ public class DownloadAsrVocabRequest extends AbstractModel{
         this.VocabId = VocabId;
     }
 
+    public DownloadAsrVocabRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DownloadAsrVocabRequest(DownloadAsrVocabRequest source) {
+        if (source.VocabId != null) {
+            this.VocabId = new String(source.VocabId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

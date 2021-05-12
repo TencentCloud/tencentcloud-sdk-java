@@ -160,6 +160,35 @@ public class ModifyLoadBalancerAttributesRequest extends AbstractModel{
         this.SnatPro = SnatPro;
     }
 
+    public ModifyLoadBalancerAttributesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyLoadBalancerAttributesRequest(ModifyLoadBalancerAttributesRequest source) {
+        if (source.LoadBalancerId != null) {
+            this.LoadBalancerId = new String(source.LoadBalancerId);
+        }
+        if (source.LoadBalancerName != null) {
+            this.LoadBalancerName = new String(source.LoadBalancerName);
+        }
+        if (source.TargetRegionInfo != null) {
+            this.TargetRegionInfo = new TargetRegionInfo(source.TargetRegionInfo);
+        }
+        if (source.InternetChargeInfo != null) {
+            this.InternetChargeInfo = new InternetAccessible(source.InternetChargeInfo);
+        }
+        if (source.LoadBalancerPassToTarget != null) {
+            this.LoadBalancerPassToTarget = new Boolean(source.LoadBalancerPassToTarget);
+        }
+        if (source.SnatPro != null) {
+            this.SnatPro = new Boolean(source.SnatPro);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

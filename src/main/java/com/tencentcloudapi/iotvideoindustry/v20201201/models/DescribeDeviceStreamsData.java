@@ -114,6 +114,29 @@ public class DescribeDeviceStreamsData extends AbstractModel{
         this.FlvAddr = FlvAddr;
     }
 
+    public DescribeDeviceStreamsData() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeDeviceStreamsData(DescribeDeviceStreamsData source) {
+        if (source.RtspAddr != null) {
+            this.RtspAddr = new String(source.RtspAddr);
+        }
+        if (source.RtmpAddr != null) {
+            this.RtmpAddr = new String(source.RtmpAddr);
+        }
+        if (source.HlsAddr != null) {
+            this.HlsAddr = new String(source.HlsAddr);
+        }
+        if (source.FlvAddr != null) {
+            this.FlvAddr = new String(source.FlvAddr);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

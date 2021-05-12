@@ -91,6 +91,26 @@ public class AuditCrossBorderComplianceRequest extends AbstractModel{
         this.AuditBehavior = AuditBehavior;
     }
 
+    public AuditCrossBorderComplianceRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AuditCrossBorderComplianceRequest(AuditCrossBorderComplianceRequest source) {
+        if (source.ServiceProvider != null) {
+            this.ServiceProvider = new String(source.ServiceProvider);
+        }
+        if (source.ComplianceId != null) {
+            this.ComplianceId = new Long(source.ComplianceId);
+        }
+        if (source.AuditBehavior != null) {
+            this.AuditBehavior = new String(source.AuditBehavior);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -68,6 +68,26 @@ public class DescribeDevicesBindInfoResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeDevicesBindInfoResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeDevicesBindInfoResponse(DescribeDevicesBindInfoResponse source) {
+        if (source.LoadBalancerSet != null) {
+            this.LoadBalancerSet = new DevicesBindInfoLoadBalancer[source.LoadBalancerSet.length];
+            for (int i = 0; i < source.LoadBalancerSet.length; i++) {
+                this.LoadBalancerSet[i] = new DevicesBindInfoLoadBalancer(source.LoadBalancerSet[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

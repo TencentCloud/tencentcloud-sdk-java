@@ -45,6 +45,23 @@ public class DescribeTaskDetailRequest extends AbstractModel{
         this.TaskIds = TaskIds;
     }
 
+    public DescribeTaskDetailRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeTaskDetailRequest(DescribeTaskDetailRequest source) {
+        if (source.TaskIds != null) {
+            this.TaskIds = new Long[source.TaskIds.length];
+            for (int i = 0; i < source.TaskIds.length; i++) {
+                this.TaskIds[i] = new Long(source.TaskIds[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

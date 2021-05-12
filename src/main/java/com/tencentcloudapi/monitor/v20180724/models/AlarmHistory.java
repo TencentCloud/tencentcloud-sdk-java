@@ -556,6 +556,101 @@ public class AlarmHistory extends AbstractModel{
         this.MetricsInfo = MetricsInfo;
     }
 
+    public AlarmHistory() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AlarmHistory(AlarmHistory source) {
+        if (source.AlarmId != null) {
+            this.AlarmId = new String(source.AlarmId);
+        }
+        if (source.MonitorType != null) {
+            this.MonitorType = new String(source.MonitorType);
+        }
+        if (source.Namespace != null) {
+            this.Namespace = new String(source.Namespace);
+        }
+        if (source.AlarmObject != null) {
+            this.AlarmObject = new String(source.AlarmObject);
+        }
+        if (source.Content != null) {
+            this.Content = new String(source.Content);
+        }
+        if (source.FirstOccurTime != null) {
+            this.FirstOccurTime = new Long(source.FirstOccurTime);
+        }
+        if (source.LastOccurTime != null) {
+            this.LastOccurTime = new Long(source.LastOccurTime);
+        }
+        if (source.AlarmStatus != null) {
+            this.AlarmStatus = new String(source.AlarmStatus);
+        }
+        if (source.PolicyId != null) {
+            this.PolicyId = new String(source.PolicyId);
+        }
+        if (source.PolicyName != null) {
+            this.PolicyName = new String(source.PolicyName);
+        }
+        if (source.VPC != null) {
+            this.VPC = new String(source.VPC);
+        }
+        if (source.ProjectId != null) {
+            this.ProjectId = new Long(source.ProjectId);
+        }
+        if (source.ProjectName != null) {
+            this.ProjectName = new String(source.ProjectName);
+        }
+        if (source.InstanceGroup != null) {
+            this.InstanceGroup = new InstanceGroups[source.InstanceGroup.length];
+            for (int i = 0; i < source.InstanceGroup.length; i++) {
+                this.InstanceGroup[i] = new InstanceGroups(source.InstanceGroup[i]);
+            }
+        }
+        if (source.ReceiverUids != null) {
+            this.ReceiverUids = new Long[source.ReceiverUids.length];
+            for (int i = 0; i < source.ReceiverUids.length; i++) {
+                this.ReceiverUids[i] = new Long(source.ReceiverUids[i]);
+            }
+        }
+        if (source.ReceiverGroups != null) {
+            this.ReceiverGroups = new Long[source.ReceiverGroups.length];
+            for (int i = 0; i < source.ReceiverGroups.length; i++) {
+                this.ReceiverGroups[i] = new Long(source.ReceiverGroups[i]);
+            }
+        }
+        if (source.NoticeWays != null) {
+            this.NoticeWays = new String[source.NoticeWays.length];
+            for (int i = 0; i < source.NoticeWays.length; i++) {
+                this.NoticeWays[i] = new String(source.NoticeWays[i]);
+            }
+        }
+        if (source.OriginId != null) {
+            this.OriginId = new String(source.OriginId);
+        }
+        if (source.AlarmType != null) {
+            this.AlarmType = new String(source.AlarmType);
+        }
+        if (source.EventId != null) {
+            this.EventId = new Long(source.EventId);
+        }
+        if (source.Region != null) {
+            this.Region = new String(source.Region);
+        }
+        if (source.PolicyExists != null) {
+            this.PolicyExists = new Long(source.PolicyExists);
+        }
+        if (source.MetricsInfo != null) {
+            this.MetricsInfo = new AlarmHistoryMetric[source.MetricsInfo.length];
+            for (int i = 0; i < source.MetricsInfo.length; i++) {
+                this.MetricsInfo[i] = new AlarmHistoryMetric(source.MetricsInfo[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

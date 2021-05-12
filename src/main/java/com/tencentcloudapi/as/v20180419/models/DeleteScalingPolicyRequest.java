@@ -45,6 +45,20 @@ public class DeleteScalingPolicyRequest extends AbstractModel{
         this.AutoScalingPolicyId = AutoScalingPolicyId;
     }
 
+    public DeleteScalingPolicyRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteScalingPolicyRequest(DeleteScalingPolicyRequest source) {
+        if (source.AutoScalingPolicyId != null) {
+            this.AutoScalingPolicyId = new String(source.AutoScalingPolicyId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

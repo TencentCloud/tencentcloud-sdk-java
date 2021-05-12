@@ -68,6 +68,23 @@ public class PullSmsSendStatusRequest extends AbstractModel{
         this.SmsSdkAppid = SmsSdkAppid;
     }
 
+    public PullSmsSendStatusRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PullSmsSendStatusRequest(PullSmsSendStatusRequest source) {
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.SmsSdkAppid != null) {
+            this.SmsSdkAppid = new String(source.SmsSdkAppid);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -78,6 +78,23 @@ public class SpecificConfig extends AbstractModel{
         this.Overseas = Overseas;
     }
 
+    public SpecificConfig() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SpecificConfig(SpecificConfig source) {
+        if (source.Mainland != null) {
+            this.Mainland = new MainlandConfig(source.Mainland);
+        }
+        if (source.Overseas != null) {
+            this.Overseas = new OverseaConfig(source.Overseas);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

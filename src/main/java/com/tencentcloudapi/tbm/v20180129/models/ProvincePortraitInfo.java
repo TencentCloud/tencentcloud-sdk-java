@@ -45,6 +45,23 @@ public class ProvincePortraitInfo extends AbstractModel{
         this.PortraitSet = PortraitSet;
     }
 
+    public ProvincePortraitInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ProvincePortraitInfo(ProvincePortraitInfo source) {
+        if (source.PortraitSet != null) {
+            this.PortraitSet = new ProvincePortrait[source.PortraitSet.length];
+            for (int i = 0; i < source.PortraitSet.length; i++) {
+                this.PortraitSet[i] = new ProvincePortrait(source.PortraitSet[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

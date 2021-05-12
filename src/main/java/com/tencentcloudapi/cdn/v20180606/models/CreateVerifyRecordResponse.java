@@ -114,6 +114,29 @@ public class CreateVerifyRecordResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public CreateVerifyRecordResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateVerifyRecordResponse(CreateVerifyRecordResponse source) {
+        if (source.SubDomain != null) {
+            this.SubDomain = new String(source.SubDomain);
+        }
+        if (source.Record != null) {
+            this.Record = new String(source.Record);
+        }
+        if (source.RecordType != null) {
+            this.RecordType = new String(source.RecordType);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

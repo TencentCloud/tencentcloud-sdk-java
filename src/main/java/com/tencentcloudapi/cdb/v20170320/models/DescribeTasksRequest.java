@@ -306,6 +306,47 @@ public class DescribeTasksRequest extends AbstractModel{
         this.Limit = Limit;
     }
 
+    public DescribeTasksRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeTasksRequest(DescribeTasksRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.AsyncRequestId != null) {
+            this.AsyncRequestId = new String(source.AsyncRequestId);
+        }
+        if (source.TaskTypes != null) {
+            this.TaskTypes = new Long[source.TaskTypes.length];
+            for (int i = 0; i < source.TaskTypes.length; i++) {
+                this.TaskTypes[i] = new Long(source.TaskTypes[i]);
+            }
+        }
+        if (source.TaskStatus != null) {
+            this.TaskStatus = new Long[source.TaskStatus.length];
+            for (int i = 0; i < source.TaskStatus.length; i++) {
+                this.TaskStatus[i] = new Long(source.TaskStatus[i]);
+            }
+        }
+        if (source.StartTimeBegin != null) {
+            this.StartTimeBegin = new String(source.StartTimeBegin);
+        }
+        if (source.StartTimeEnd != null) {
+            this.StartTimeEnd = new String(source.StartTimeEnd);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

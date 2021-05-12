@@ -190,6 +190,35 @@ public class AdvancedAuthenticationTypeE extends AbstractModel{
         this.TimeFormat = TimeFormat;
     }
 
+    public AdvancedAuthenticationTypeE() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AdvancedAuthenticationTypeE(AdvancedAuthenticationTypeE source) {
+        if (source.SecretKey != null) {
+            this.SecretKey = new String(source.SecretKey);
+        }
+        if (source.SignParam != null) {
+            this.SignParam = new String(source.SignParam);
+        }
+        if (source.AclSignParam != null) {
+            this.AclSignParam = new String(source.AclSignParam);
+        }
+        if (source.StartTimeParam != null) {
+            this.StartTimeParam = new String(source.StartTimeParam);
+        }
+        if (source.ExpireTimeParam != null) {
+            this.ExpireTimeParam = new String(source.ExpireTimeParam);
+        }
+        if (source.TimeFormat != null) {
+            this.TimeFormat = new String(source.TimeFormat);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

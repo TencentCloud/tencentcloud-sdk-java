@@ -162,6 +162,44 @@ public class DetectLabelResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DetectLabelResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DetectLabelResponse(DetectLabelResponse source) {
+        if (source.Labels != null) {
+            this.Labels = new DetectLabelItem[source.Labels.length];
+            for (int i = 0; i < source.Labels.length; i++) {
+                this.Labels[i] = new DetectLabelItem(source.Labels[i]);
+            }
+        }
+        if (source.CameraLabels != null) {
+            this.CameraLabels = new DetectLabelItem[source.CameraLabels.length];
+            for (int i = 0; i < source.CameraLabels.length; i++) {
+                this.CameraLabels[i] = new DetectLabelItem(source.CameraLabels[i]);
+            }
+        }
+        if (source.AlbumLabels != null) {
+            this.AlbumLabels = new DetectLabelItem[source.AlbumLabels.length];
+            for (int i = 0; i < source.AlbumLabels.length; i++) {
+                this.AlbumLabels[i] = new DetectLabelItem(source.AlbumLabels[i]);
+            }
+        }
+        if (source.NewsLabels != null) {
+            this.NewsLabels = new DetectLabelItem[source.NewsLabels.length];
+            for (int i = 0; i < source.NewsLabels.length; i++) {
+                this.NewsLabels[i] = new DetectLabelItem(source.NewsLabels[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

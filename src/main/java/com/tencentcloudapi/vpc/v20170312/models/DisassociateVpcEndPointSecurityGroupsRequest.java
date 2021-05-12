@@ -68,6 +68,26 @@ public class DisassociateVpcEndPointSecurityGroupsRequest extends AbstractModel{
         this.EndPointId = EndPointId;
     }
 
+    public DisassociateVpcEndPointSecurityGroupsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DisassociateVpcEndPointSecurityGroupsRequest(DisassociateVpcEndPointSecurityGroupsRequest source) {
+        if (source.SecurityGroupIds != null) {
+            this.SecurityGroupIds = new String[source.SecurityGroupIds.length];
+            for (int i = 0; i < source.SecurityGroupIds.length; i++) {
+                this.SecurityGroupIds[i] = new String(source.SecurityGroupIds[i]);
+            }
+        }
+        if (source.EndPointId != null) {
+            this.EndPointId = new String(source.EndPointId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

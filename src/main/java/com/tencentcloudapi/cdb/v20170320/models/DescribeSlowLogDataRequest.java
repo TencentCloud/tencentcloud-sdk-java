@@ -275,6 +275,59 @@ public class DescribeSlowLogDataRequest extends AbstractModel{
         this.InstType = InstType;
     }
 
+    public DescribeSlowLogDataRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeSlowLogDataRequest(DescribeSlowLogDataRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new Long(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new Long(source.EndTime);
+        }
+        if (source.UserHosts != null) {
+            this.UserHosts = new String[source.UserHosts.length];
+            for (int i = 0; i < source.UserHosts.length; i++) {
+                this.UserHosts[i] = new String(source.UserHosts[i]);
+            }
+        }
+        if (source.UserNames != null) {
+            this.UserNames = new String[source.UserNames.length];
+            for (int i = 0; i < source.UserNames.length; i++) {
+                this.UserNames[i] = new String(source.UserNames[i]);
+            }
+        }
+        if (source.DataBases != null) {
+            this.DataBases = new String[source.DataBases.length];
+            for (int i = 0; i < source.DataBases.length; i++) {
+                this.DataBases[i] = new String(source.DataBases[i]);
+            }
+        }
+        if (source.SortBy != null) {
+            this.SortBy = new String(source.SortBy);
+        }
+        if (source.OrderBy != null) {
+            this.OrderBy = new String(source.OrderBy);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.InstType != null) {
+            this.InstType = new String(source.InstType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

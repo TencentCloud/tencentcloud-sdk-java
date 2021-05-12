@@ -91,6 +91,29 @@ public class BandwidthPriceGradient extends AbstractModel{
         this.DiscountBandwidthUnitPrice = DiscountBandwidthUnitPrice;
     }
 
+    public BandwidthPriceGradient() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public BandwidthPriceGradient(BandwidthPriceGradient source) {
+        if (source.BandwidthRange != null) {
+            this.BandwidthRange = new Long[source.BandwidthRange.length];
+            for (int i = 0; i < source.BandwidthRange.length; i++) {
+                this.BandwidthRange[i] = new Long(source.BandwidthRange[i]);
+            }
+        }
+        if (source.BandwidthUnitPrice != null) {
+            this.BandwidthUnitPrice = new Float(source.BandwidthUnitPrice);
+        }
+        if (source.DiscountBandwidthUnitPrice != null) {
+            this.DiscountBandwidthUnitPrice = new Float(source.DiscountBandwidthUnitPrice);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

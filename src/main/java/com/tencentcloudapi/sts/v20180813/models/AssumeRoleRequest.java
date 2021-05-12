@@ -187,6 +187,32 @@ qcs::cam::uin/12345678:role/tencentcloudServiceRole/4611686018427397920、qcs::c
         this.ExternalId = ExternalId;
     }
 
+    public AssumeRoleRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AssumeRoleRequest(AssumeRoleRequest source) {
+        if (source.RoleArn != null) {
+            this.RoleArn = new String(source.RoleArn);
+        }
+        if (source.RoleSessionName != null) {
+            this.RoleSessionName = new String(source.RoleSessionName);
+        }
+        if (source.DurationSeconds != null) {
+            this.DurationSeconds = new Long(source.DurationSeconds);
+        }
+        if (source.Policy != null) {
+            this.Policy = new String(source.Policy);
+        }
+        if (source.ExternalId != null) {
+            this.ExternalId = new String(source.ExternalId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

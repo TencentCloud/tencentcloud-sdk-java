@@ -78,6 +78,23 @@ public class OutputTaValue extends AbstractModel{
         this.IsMatch = IsMatch;
     }
 
+    public OutputTaValue() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public OutputTaValue(OutputTaValue source) {
+        if (source.IsCheck != null) {
+            this.IsCheck = new Long(source.IsCheck);
+        }
+        if (source.IsMatch != null) {
+            this.IsMatch = new Long(source.IsMatch);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

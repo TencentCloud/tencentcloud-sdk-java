@@ -160,6 +160,35 @@ public class ListModel extends AbstractModel{
         this.ErrMsg = ErrMsg;
     }
 
+    public ListModel() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ListModel(ListModel source) {
+        if (source.ID != null) {
+            this.ID = new Long(source.ID);
+        }
+        if (source.TaskName != null) {
+            this.TaskName = new String(source.TaskName);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new Long(source.StartTime);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.Available != null) {
+            this.Available = new Long(source.Available);
+        }
+        if (source.ErrMsg != null) {
+            this.ErrMsg = new String(source.ErrMsg);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

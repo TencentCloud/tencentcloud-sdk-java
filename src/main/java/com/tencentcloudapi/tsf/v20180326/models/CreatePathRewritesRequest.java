@@ -45,6 +45,20 @@ public class CreatePathRewritesRequest extends AbstractModel{
         this.PathRewrites = PathRewrites;
     }
 
+    public CreatePathRewritesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreatePathRewritesRequest(CreatePathRewritesRequest source) {
+        if (source.PathRewrites != null) {
+            this.PathRewrites = new PathRewriteCreateObject(source.PathRewrites);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

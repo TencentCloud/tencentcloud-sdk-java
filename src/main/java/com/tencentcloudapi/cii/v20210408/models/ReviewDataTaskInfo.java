@@ -114,6 +114,29 @@ public class ReviewDataTaskInfo extends AbstractModel{
         this.TaskType = TaskType;
     }
 
+    public ReviewDataTaskInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ReviewDataTaskInfo(ReviewDataTaskInfo source) {
+        if (source.MainTaskId != null) {
+            this.MainTaskId = new String(source.MainTaskId);
+        }
+        if (source.SubTaskId != null) {
+            this.SubTaskId = new String(source.SubTaskId);
+        }
+        if (source.TaskName != null) {
+            this.TaskName = new String(source.TaskName);
+        }
+        if (source.TaskType != null) {
+            this.TaskType = new String(source.TaskType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

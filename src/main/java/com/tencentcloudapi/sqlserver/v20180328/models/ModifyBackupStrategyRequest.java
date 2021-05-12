@@ -114,6 +114,29 @@ public class ModifyBackupStrategyRequest extends AbstractModel{
         this.BackupDay = BackupDay;
     }
 
+    public ModifyBackupStrategyRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyBackupStrategyRequest(ModifyBackupStrategyRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.BackupType != null) {
+            this.BackupType = new String(source.BackupType);
+        }
+        if (source.BackupTime != null) {
+            this.BackupTime = new Long(source.BackupTime);
+        }
+        if (source.BackupDay != null) {
+            this.BackupDay = new Long(source.BackupDay);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

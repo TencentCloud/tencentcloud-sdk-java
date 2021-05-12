@@ -221,6 +221,41 @@ public class ProductTemplate extends AbstractModel{
         this.IconUrlGrid = IconUrlGrid;
     }
 
+    public ProductTemplate() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ProductTemplate(ProductTemplate source) {
+        if (source.Id != null) {
+            this.Id = new Long(source.Id);
+        }
+        if (source.CategoryKey != null) {
+            this.CategoryKey = new String(source.CategoryKey);
+        }
+        if (source.CategoryName != null) {
+            this.CategoryName = new String(source.CategoryName);
+        }
+        if (source.ParentId != null) {
+            this.ParentId = new Long(source.ParentId);
+        }
+        if (source.ModelTemplate != null) {
+            this.ModelTemplate = new String(source.ModelTemplate);
+        }
+        if (source.ListOrder != null) {
+            this.ListOrder = new Long(source.ListOrder);
+        }
+        if (source.IconUrl != null) {
+            this.IconUrl = new String(source.IconUrl);
+        }
+        if (source.IconUrlGrid != null) {
+            this.IconUrlGrid = new String(source.IconUrlGrid);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

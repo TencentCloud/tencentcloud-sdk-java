@@ -359,6 +359,47 @@ RiskType
         this.RequestId = RequestId;
     }
 
+    public QueryLoginProtectionResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public QueryLoginProtectionResponse(QueryLoginProtectionResponse source) {
+        if (source.CodeDesc != null) {
+            this.CodeDesc = new String(source.CodeDesc);
+        }
+        if (source.AssociateAccount != null) {
+            this.AssociateAccount = new String(source.AssociateAccount);
+        }
+        if (source.LoginTime != null) {
+            this.LoginTime = new String(source.LoginTime);
+        }
+        if (source.Uid != null) {
+            this.Uid = new String(source.Uid);
+        }
+        if (source.LoginIp != null) {
+            this.LoginIp = new String(source.LoginIp);
+        }
+        if (source.Level != null) {
+            this.Level = new Long(source.Level);
+        }
+        if (source.RiskType != null) {
+            this.RiskType = new Long[source.RiskType.length];
+            for (int i = 0; i < source.RiskType.length; i++) {
+                this.RiskType[i] = new Long(source.RiskType[i]);
+            }
+        }
+        if (source.RootId != null) {
+            this.RootId = new String(source.RootId);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

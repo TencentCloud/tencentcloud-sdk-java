@@ -91,6 +91,26 @@ public class UpgradeNatGatewayRequest extends AbstractModel{
         this.MaxConcurrent = MaxConcurrent;
     }
 
+    public UpgradeNatGatewayRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UpgradeNatGatewayRequest(UpgradeNatGatewayRequest source) {
+        if (source.NatId != null) {
+            this.NatId = new String(source.NatId);
+        }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.MaxConcurrent != null) {
+            this.MaxConcurrent = new Long(source.MaxConcurrent);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

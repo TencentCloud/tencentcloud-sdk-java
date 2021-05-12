@@ -849,6 +849,119 @@ public class AlarmPolicy extends AbstractModel{
         this.TagInstances = TagInstances;
     }
 
+    public AlarmPolicy() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AlarmPolicy(AlarmPolicy source) {
+        if (source.PolicyId != null) {
+            this.PolicyId = new String(source.PolicyId);
+        }
+        if (source.PolicyName != null) {
+            this.PolicyName = new String(source.PolicyName);
+        }
+        if (source.Remark != null) {
+            this.Remark = new String(source.Remark);
+        }
+        if (source.MonitorType != null) {
+            this.MonitorType = new String(source.MonitorType);
+        }
+        if (source.Enable != null) {
+            this.Enable = new Long(source.Enable);
+        }
+        if (source.UseSum != null) {
+            this.UseSum = new Long(source.UseSum);
+        }
+        if (source.ProjectId != null) {
+            this.ProjectId = new Long(source.ProjectId);
+        }
+        if (source.ProjectName != null) {
+            this.ProjectName = new String(source.ProjectName);
+        }
+        if (source.Namespace != null) {
+            this.Namespace = new String(source.Namespace);
+        }
+        if (source.ConditionTemplateId != null) {
+            this.ConditionTemplateId = new String(source.ConditionTemplateId);
+        }
+        if (source.Condition != null) {
+            this.Condition = new AlarmPolicyCondition(source.Condition);
+        }
+        if (source.EventCondition != null) {
+            this.EventCondition = new AlarmPolicyEventCondition(source.EventCondition);
+        }
+        if (source.NoticeIds != null) {
+            this.NoticeIds = new String[source.NoticeIds.length];
+            for (int i = 0; i < source.NoticeIds.length; i++) {
+                this.NoticeIds[i] = new String(source.NoticeIds[i]);
+            }
+        }
+        if (source.Notices != null) {
+            this.Notices = new AlarmNotice[source.Notices.length];
+            for (int i = 0; i < source.Notices.length; i++) {
+                this.Notices[i] = new AlarmNotice(source.Notices[i]);
+            }
+        }
+        if (source.TriggerTasks != null) {
+            this.TriggerTasks = new AlarmPolicyTriggerTask[source.TriggerTasks.length];
+            for (int i = 0; i < source.TriggerTasks.length; i++) {
+                this.TriggerTasks[i] = new AlarmPolicyTriggerTask(source.TriggerTasks[i]);
+            }
+        }
+        if (source.ConditionsTemp != null) {
+            this.ConditionsTemp = new ConditionsTemp(source.ConditionsTemp);
+        }
+        if (source.LastEditUin != null) {
+            this.LastEditUin = new String(source.LastEditUin);
+        }
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new Long(source.UpdateTime);
+        }
+        if (source.InsertTime != null) {
+            this.InsertTime = new Long(source.InsertTime);
+        }
+        if (source.Region != null) {
+            this.Region = new String[source.Region.length];
+            for (int i = 0; i < source.Region.length; i++) {
+                this.Region[i] = new String(source.Region[i]);
+            }
+        }
+        if (source.NamespaceShowName != null) {
+            this.NamespaceShowName = new String(source.NamespaceShowName);
+        }
+        if (source.IsDefault != null) {
+            this.IsDefault = new Long(source.IsDefault);
+        }
+        if (source.CanSetDefault != null) {
+            this.CanSetDefault = new Long(source.CanSetDefault);
+        }
+        if (source.InstanceGroupId != null) {
+            this.InstanceGroupId = new Long(source.InstanceGroupId);
+        }
+        if (source.InstanceSum != null) {
+            this.InstanceSum = new Long(source.InstanceSum);
+        }
+        if (source.InstanceGroupName != null) {
+            this.InstanceGroupName = new String(source.InstanceGroupName);
+        }
+        if (source.RuleType != null) {
+            this.RuleType = new String(source.RuleType);
+        }
+        if (source.OriginId != null) {
+            this.OriginId = new String(source.OriginId);
+        }
+        if (source.TagInstances != null) {
+            this.TagInstances = new TagInstance[source.TagInstances.length];
+            for (int i = 0; i < source.TagInstances.length; i++) {
+                this.TagInstances[i] = new TagInstance(source.TagInstances[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

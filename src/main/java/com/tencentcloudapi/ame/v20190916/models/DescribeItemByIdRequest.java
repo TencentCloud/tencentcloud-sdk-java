@@ -45,6 +45,20 @@ public class DescribeItemByIdRequest extends AbstractModel{
         this.ItemIDs = ItemIDs;
     }
 
+    public DescribeItemByIdRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeItemByIdRequest(DescribeItemByIdRequest source) {
+        if (source.ItemIDs != null) {
+            this.ItemIDs = new String(source.ItemIDs);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

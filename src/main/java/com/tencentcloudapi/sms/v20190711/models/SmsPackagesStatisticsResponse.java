@@ -68,6 +68,26 @@ public class SmsPackagesStatisticsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public SmsPackagesStatisticsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SmsPackagesStatisticsResponse(SmsPackagesStatisticsResponse source) {
+        if (source.SmsPackagesStatisticsSet != null) {
+            this.SmsPackagesStatisticsSet = new SmsPackagesStatistics[source.SmsPackagesStatisticsSet.length];
+            for (int i = 0; i < source.SmsPackagesStatisticsSet.length; i++) {
+                this.SmsPackagesStatisticsSet[i] = new SmsPackagesStatistics(source.SmsPackagesStatisticsSet[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

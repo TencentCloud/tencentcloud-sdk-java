@@ -91,6 +91,29 @@ public class UnReleaseServiceRequest extends AbstractModel{
         this.ApiIds = ApiIds;
     }
 
+    public UnReleaseServiceRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UnReleaseServiceRequest(UnReleaseServiceRequest source) {
+        if (source.ServiceId != null) {
+            this.ServiceId = new String(source.ServiceId);
+        }
+        if (source.EnvironmentName != null) {
+            this.EnvironmentName = new String(source.EnvironmentName);
+        }
+        if (source.ApiIds != null) {
+            this.ApiIds = new String[source.ApiIds.length];
+            for (int i = 0; i < source.ApiIds.length; i++) {
+                this.ApiIds[i] = new String(source.ApiIds[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

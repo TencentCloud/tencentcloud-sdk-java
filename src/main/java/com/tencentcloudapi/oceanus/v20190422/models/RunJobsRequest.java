@@ -45,6 +45,23 @@ public class RunJobsRequest extends AbstractModel{
         this.RunJobDescriptions = RunJobDescriptions;
     }
 
+    public RunJobsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RunJobsRequest(RunJobsRequest source) {
+        if (source.RunJobDescriptions != null) {
+            this.RunJobDescriptions = new RunJobDescription[source.RunJobDescriptions.length];
+            for (int i = 0; i < source.RunJobDescriptions.length; i++) {
+                this.RunJobDescriptions[i] = new RunJobDescription(source.RunJobDescriptions[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

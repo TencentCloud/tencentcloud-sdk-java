@@ -83,6 +83,23 @@ public class InstanceAdvancedSettings extends AbstractModel{
         this.DockerGraphPath = DockerGraphPath;
     }
 
+    public InstanceAdvancedSettings() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public InstanceAdvancedSettings(InstanceAdvancedSettings source) {
+        if (source.MountTarget != null) {
+            this.MountTarget = new String(source.MountTarget);
+        }
+        if (source.DockerGraphPath != null) {
+            this.DockerGraphPath = new String(source.DockerGraphPath);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

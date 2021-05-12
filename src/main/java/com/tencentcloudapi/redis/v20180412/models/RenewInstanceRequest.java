@@ -68,6 +68,23 @@ public class RenewInstanceRequest extends AbstractModel{
         this.InstanceId = InstanceId;
     }
 
+    public RenewInstanceRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RenewInstanceRequest(RenewInstanceRequest source) {
+        if (source.Period != null) {
+            this.Period = new Long(source.Period);
+        }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

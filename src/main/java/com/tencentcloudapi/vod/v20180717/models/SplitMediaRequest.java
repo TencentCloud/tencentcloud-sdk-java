@@ -160,6 +160,38 @@ public class SplitMediaRequest extends AbstractModel{
         this.SubAppId = SubAppId;
     }
 
+    public SplitMediaRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SplitMediaRequest(SplitMediaRequest source) {
+        if (source.FileId != null) {
+            this.FileId = new String(source.FileId);
+        }
+        if (source.Segments != null) {
+            this.Segments = new SplitMediaTaskConfig[source.Segments.length];
+            for (int i = 0; i < source.Segments.length; i++) {
+                this.Segments[i] = new SplitMediaTaskConfig(source.Segments[i]);
+            }
+        }
+        if (source.SessionContext != null) {
+            this.SessionContext = new String(source.SessionContext);
+        }
+        if (source.SessionId != null) {
+            this.SessionId = new String(source.SessionId);
+        }
+        if (source.TasksPriority != null) {
+            this.TasksPriority = new Long(source.TasksPriority);
+        }
+        if (source.SubAppId != null) {
+            this.SubAppId = new Long(source.SubAppId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

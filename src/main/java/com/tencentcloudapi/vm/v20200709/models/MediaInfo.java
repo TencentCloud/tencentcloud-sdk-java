@@ -119,6 +119,29 @@ public class MediaInfo extends AbstractModel{
         this.Height = Height;
     }
 
+    public MediaInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MediaInfo(MediaInfo source) {
+        if (source.Codecs != null) {
+            this.Codecs = new String(source.Codecs);
+        }
+        if (source.Duration != null) {
+            this.Duration = new Long(source.Duration);
+        }
+        if (source.Width != null) {
+            this.Width = new Long(source.Width);
+        }
+        if (source.Height != null) {
+            this.Height = new Long(source.Height);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

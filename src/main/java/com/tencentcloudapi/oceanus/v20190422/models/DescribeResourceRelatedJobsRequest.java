@@ -114,6 +114,29 @@ public class DescribeResourceRelatedJobsRequest extends AbstractModel{
         this.Limit = Limit;
     }
 
+    public DescribeResourceRelatedJobsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeResourceRelatedJobsRequest(DescribeResourceRelatedJobsRequest source) {
+        if (source.ResourceId != null) {
+            this.ResourceId = new String(source.ResourceId);
+        }
+        if (source.DESCByJobConfigCreateTime != null) {
+            this.DESCByJobConfigCreateTime = new Long(source.DESCByJobConfigCreateTime);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

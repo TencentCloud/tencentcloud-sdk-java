@@ -152,6 +152,32 @@ public class LogData extends AbstractModel{
         this.NewValue = NewValue;
     }
 
+    public LogData() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public LogData(LogData source) {
+        if (source.Occurtime != null) {
+            this.Occurtime = new Long(source.Occurtime);
+        }
+        if (source.LogType != null) {
+            this.LogType = new Long(source.LogType);
+        }
+        if (source.DataObject != null) {
+            this.DataObject = new String(source.DataObject);
+        }
+        if (source.OldValue != null) {
+            this.OldValue = new String(source.OldValue);
+        }
+        if (source.NewValue != null) {
+            this.NewValue = new String(source.NewValue);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

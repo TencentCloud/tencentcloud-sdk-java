@@ -160,6 +160,38 @@ public class DirectConnectTunnelRoute extends AbstractModel{
         this.NextHop = NextHop;
     }
 
+    public DirectConnectTunnelRoute() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DirectConnectTunnelRoute(DirectConnectTunnelRoute source) {
+        if (source.RouteId != null) {
+            this.RouteId = new String(source.RouteId);
+        }
+        if (source.DestinationCidrBlock != null) {
+            this.DestinationCidrBlock = new String(source.DestinationCidrBlock);
+        }
+        if (source.RouteType != null) {
+            this.RouteType = new String(source.RouteType);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.ASPath != null) {
+            this.ASPath = new String[source.ASPath.length];
+            for (int i = 0; i < source.ASPath.length; i++) {
+                this.ASPath[i] = new String(source.ASPath[i]);
+            }
+        }
+        if (source.NextHop != null) {
+            this.NextHop = new String(source.NextHop);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

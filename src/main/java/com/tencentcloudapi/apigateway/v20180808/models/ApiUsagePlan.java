@@ -442,6 +442,62 @@ public class ApiUsagePlan extends AbstractModel{
         this.ServiceName = ServiceName;
     }
 
+    public ApiUsagePlan() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ApiUsagePlan(ApiUsagePlan source) {
+        if (source.ServiceId != null) {
+            this.ServiceId = new String(source.ServiceId);
+        }
+        if (source.ApiId != null) {
+            this.ApiId = new String(source.ApiId);
+        }
+        if (source.ApiName != null) {
+            this.ApiName = new String(source.ApiName);
+        }
+        if (source.Path != null) {
+            this.Path = new String(source.Path);
+        }
+        if (source.Method != null) {
+            this.Method = new String(source.Method);
+        }
+        if (source.UsagePlanId != null) {
+            this.UsagePlanId = new String(source.UsagePlanId);
+        }
+        if (source.UsagePlanName != null) {
+            this.UsagePlanName = new String(source.UsagePlanName);
+        }
+        if (source.UsagePlanDesc != null) {
+            this.UsagePlanDesc = new String(source.UsagePlanDesc);
+        }
+        if (source.Environment != null) {
+            this.Environment = new String(source.Environment);
+        }
+        if (source.InUseRequestNum != null) {
+            this.InUseRequestNum = new Long(source.InUseRequestNum);
+        }
+        if (source.MaxRequestNum != null) {
+            this.MaxRequestNum = new Long(source.MaxRequestNum);
+        }
+        if (source.MaxRequestNumPreSec != null) {
+            this.MaxRequestNumPreSec = new Long(source.MaxRequestNumPreSec);
+        }
+        if (source.CreatedTime != null) {
+            this.CreatedTime = new String(source.CreatedTime);
+        }
+        if (source.ModifiedTime != null) {
+            this.ModifiedTime = new String(source.ModifiedTime);
+        }
+        if (source.ServiceName != null) {
+            this.ServiceName = new String(source.ServiceName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -91,6 +91,29 @@ public class ListAsyncEventsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public ListAsyncEventsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ListAsyncEventsResponse(ListAsyncEventsResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.EventList != null) {
+            this.EventList = new AsyncEvent[source.EventList.length];
+            for (int i = 0; i < source.EventList.length; i++) {
+                this.EventList[i] = new AsyncEvent(source.EventList[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

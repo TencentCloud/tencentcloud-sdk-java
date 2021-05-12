@@ -68,6 +68,23 @@ public class DescribeInstanceMonitorTopNCmdRequest extends AbstractModel{
         this.SpanType = SpanType;
     }
 
+    public DescribeInstanceMonitorTopNCmdRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeInstanceMonitorTopNCmdRequest(DescribeInstanceMonitorTopNCmdRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.SpanType != null) {
+            this.SpanType = new Long(source.SpanType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

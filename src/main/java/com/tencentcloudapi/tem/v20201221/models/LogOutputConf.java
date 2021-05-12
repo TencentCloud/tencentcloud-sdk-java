@@ -44,6 +44,20 @@ public class LogOutputConf extends AbstractModel{
     private String ClsLogTopicId;
 
     /**
+    * cls日志集id
+    */
+    @SerializedName("ClsLogsetId")
+    @Expose
+    private String ClsLogsetId;
+
+    /**
+    * cls日志名称
+    */
+    @SerializedName("ClsLogTopicName")
+    @Expose
+    private String ClsLogTopicName;
+
+    /**
      * Get 日志消费端类型 
      * @return OutputType 日志消费端类型
      */
@@ -92,12 +106,72 @@ public class LogOutputConf extends AbstractModel{
     }
 
     /**
+     * Get cls日志集id 
+     * @return ClsLogsetId cls日志集id
+     */
+    public String getClsLogsetId() {
+        return this.ClsLogsetId;
+    }
+
+    /**
+     * Set cls日志集id
+     * @param ClsLogsetId cls日志集id
+     */
+    public void setClsLogsetId(String ClsLogsetId) {
+        this.ClsLogsetId = ClsLogsetId;
+    }
+
+    /**
+     * Get cls日志名称 
+     * @return ClsLogTopicName cls日志名称
+     */
+    public String getClsLogTopicName() {
+        return this.ClsLogTopicName;
+    }
+
+    /**
+     * Set cls日志名称
+     * @param ClsLogTopicName cls日志名称
+     */
+    public void setClsLogTopicName(String ClsLogTopicName) {
+        this.ClsLogTopicName = ClsLogTopicName;
+    }
+
+    public LogOutputConf() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public LogOutputConf(LogOutputConf source) {
+        if (source.OutputType != null) {
+            this.OutputType = new String(source.OutputType);
+        }
+        if (source.ClsLogsetName != null) {
+            this.ClsLogsetName = new String(source.ClsLogsetName);
+        }
+        if (source.ClsLogTopicId != null) {
+            this.ClsLogTopicId = new String(source.ClsLogTopicId);
+        }
+        if (source.ClsLogsetId != null) {
+            this.ClsLogsetId = new String(source.ClsLogsetId);
+        }
+        if (source.ClsLogTopicName != null) {
+            this.ClsLogTopicName = new String(source.ClsLogTopicName);
+        }
+    }
+
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "OutputType", this.OutputType);
         this.setParamSimple(map, prefix + "ClsLogsetName", this.ClsLogsetName);
         this.setParamSimple(map, prefix + "ClsLogTopicId", this.ClsLogTopicId);
+        this.setParamSimple(map, prefix + "ClsLogsetId", this.ClsLogsetId);
+        this.setParamSimple(map, prefix + "ClsLogTopicName", this.ClsLogTopicName);
 
     }
 }

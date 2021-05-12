@@ -160,6 +160,38 @@ public class LifeCycleRule extends AbstractModel{
         this.CreateTime = CreateTime;
     }
 
+    public LifeCycleRule() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public LifeCycleRule(LifeCycleRule source) {
+        if (source.LifeCycleRuleId != null) {
+            this.LifeCycleRuleId = new Long(source.LifeCycleRuleId);
+        }
+        if (source.LifeCycleRuleName != null) {
+            this.LifeCycleRuleName = new String(source.LifeCycleRuleName);
+        }
+        if (source.Path != null) {
+            this.Path = new String(source.Path);
+        }
+        if (source.Transitions != null) {
+            this.Transitions = new Transition[source.Transitions.length];
+            for (int i = 0; i < source.Transitions.length; i++) {
+                this.Transitions[i] = new Transition(source.Transitions[i]);
+            }
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

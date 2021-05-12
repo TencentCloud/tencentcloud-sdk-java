@@ -45,6 +45,23 @@ public class LiveStreamAiReviewResultInfo extends AbstractModel{
         this.ResultSet = ResultSet;
     }
 
+    public LiveStreamAiReviewResultInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public LiveStreamAiReviewResultInfo(LiveStreamAiReviewResultInfo source) {
+        if (source.ResultSet != null) {
+            this.ResultSet = new LiveStreamAiReviewResultItem[source.ResultSet.length];
+            for (int i = 0; i < source.ResultSet.length; i++) {
+                this.ResultSet[i] = new LiveStreamAiReviewResultItem(source.ResultSet[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -282,6 +282,50 @@ public class QueryCustAcctIdBalanceResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public QueryCustAcctIdBalanceResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public QueryCustAcctIdBalanceResponse(QueryCustAcctIdBalanceResponse source) {
+        if (source.TxnReturnCode != null) {
+            this.TxnReturnCode = new String(source.TxnReturnCode);
+        }
+        if (source.TxnReturnMsg != null) {
+            this.TxnReturnMsg = new String(source.TxnReturnMsg);
+        }
+        if (source.CnsmrSeqNo != null) {
+            this.CnsmrSeqNo = new String(source.CnsmrSeqNo);
+        }
+        if (source.ResultNum != null) {
+            this.ResultNum = new String(source.ResultNum);
+        }
+        if (source.StartRecordNo != null) {
+            this.StartRecordNo = new String(source.StartRecordNo);
+        }
+        if (source.EndFlag != null) {
+            this.EndFlag = new String(source.EndFlag);
+        }
+        if (source.TotalNum != null) {
+            this.TotalNum = new String(source.TotalNum);
+        }
+        if (source.AcctArray != null) {
+            this.AcctArray = new Acct[source.AcctArray.length];
+            for (int i = 0; i < source.AcctArray.length; i++) {
+                this.AcctArray[i] = new Acct(source.AcctArray[i]);
+            }
+        }
+        if (source.ReservedMsg != null) {
+            this.ReservedMsg = new String(source.ReservedMsg);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

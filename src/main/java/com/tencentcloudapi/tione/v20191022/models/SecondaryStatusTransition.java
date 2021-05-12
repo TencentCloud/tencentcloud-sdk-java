@@ -134,6 +134,29 @@ public class SecondaryStatusTransition extends AbstractModel{
         this.StatusMessage = StatusMessage;
     }
 
+    public SecondaryStatusTransition() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SecondaryStatusTransition(SecondaryStatusTransition source) {
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.StatusMessage != null) {
+            this.StatusMessage = new String(source.StatusMessage);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

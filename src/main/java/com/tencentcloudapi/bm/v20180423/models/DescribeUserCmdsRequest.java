@@ -160,6 +160,35 @@ public class DescribeUserCmdsRequest extends AbstractModel{
         this.CmdId = CmdId;
     }
 
+    public DescribeUserCmdsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeUserCmdsRequest(DescribeUserCmdsRequest source) {
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.OrderField != null) {
+            this.OrderField = new String(source.OrderField);
+        }
+        if (source.Order != null) {
+            this.Order = new Long(source.Order);
+        }
+        if (source.SearchKey != null) {
+            this.SearchKey = new String(source.SearchKey);
+        }
+        if (source.CmdId != null) {
+            this.CmdId = new String(source.CmdId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

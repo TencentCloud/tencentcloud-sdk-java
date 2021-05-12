@@ -246,6 +246,41 @@ public class CodeSource extends AbstractModel{
         this.Branch = Branch;
     }
 
+    public CodeSource() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CodeSource(CodeSource source) {
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.Url != null) {
+            this.Url = new String(source.Url);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.WorkDir != null) {
+            this.WorkDir = new String(source.WorkDir);
+        }
+        if (source.CodingPackageName != null) {
+            this.CodingPackageName = new String(source.CodingPackageName);
+        }
+        if (source.CodingPackageVersion != null) {
+            this.CodingPackageVersion = new String(source.CodingPackageVersion);
+        }
+        if (source.RawCode != null) {
+            this.RawCode = new String(source.RawCode);
+        }
+        if (source.Branch != null) {
+            this.Branch = new String(source.Branch);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

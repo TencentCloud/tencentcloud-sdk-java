@@ -68,6 +68,26 @@ public class DeviceCpuRateInfo extends AbstractModel{
         this.Rate = Rate;
     }
 
+    public DeviceCpuRateInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeviceCpuRateInfo(DeviceCpuRateInfo source) {
+        if (source.CpuCore != null) {
+            this.CpuCore = new Long(source.CpuCore);
+        }
+        if (source.Rate != null) {
+            this.Rate = new Long[source.Rate.length];
+            for (int i = 0; i < source.Rate.length; i++) {
+                this.Rate[i] = new Long(source.Rate[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

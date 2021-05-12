@@ -229,6 +229,47 @@ public class DescribeSlowLogTopSqlsRequest extends AbstractModel{
         this.Product = Product;
     }
 
+    public DescribeSlowLogTopSqlsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeSlowLogTopSqlsRequest(DescribeSlowLogTopSqlsRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+        if (source.SortBy != null) {
+            this.SortBy = new String(source.SortBy);
+        }
+        if (source.OrderBy != null) {
+            this.OrderBy = new String(source.OrderBy);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.SchemaList != null) {
+            this.SchemaList = new SchemaItem[source.SchemaList.length];
+            for (int i = 0; i < source.SchemaList.length; i++) {
+                this.SchemaList[i] = new SchemaItem(source.SchemaList[i]);
+            }
+        }
+        if (source.Product != null) {
+            this.Product = new String(source.Product);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

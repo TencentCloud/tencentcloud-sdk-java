@@ -160,6 +160,35 @@ public class VpcSubnetViewInfo extends AbstractModel{
         this.Zone = Zone;
     }
 
+    public VpcSubnetViewInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public VpcSubnetViewInfo(VpcSubnetViewInfo source) {
+        if (source.SubnetId != null) {
+            this.SubnetId = new String(source.SubnetId);
+        }
+        if (source.SubnetName != null) {
+            this.SubnetName = new String(source.SubnetName);
+        }
+        if (source.CidrBlock != null) {
+            this.CidrBlock = new String(source.CidrBlock);
+        }
+        if (source.CpmNum != null) {
+            this.CpmNum = new Long(source.CpmNum);
+        }
+        if (source.LbNum != null) {
+            this.LbNum = new Long(source.LbNum);
+        }
+        if (source.Zone != null) {
+            this.Zone = new String(source.Zone);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

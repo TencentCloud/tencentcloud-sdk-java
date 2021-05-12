@@ -137,6 +137,47 @@ public class DeviceDiskInfo extends AbstractModel{
         this.CapacityRatio = CapacityRatio;
     }
 
+    public DeviceDiskInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeviceDiskInfo(DeviceDiskInfo source) {
+        if (source.IoRatioPerSec != null) {
+            this.IoRatioPerSec = new Long[source.IoRatioPerSec.length];
+            for (int i = 0; i < source.IoRatioPerSec.length; i++) {
+                this.IoRatioPerSec[i] = new Long(source.IoRatioPerSec[i]);
+            }
+        }
+        if (source.IoWaitTime != null) {
+            this.IoWaitTime = new Long[source.IoWaitTime.length];
+            for (int i = 0; i < source.IoWaitTime.length; i++) {
+                this.IoWaitTime[i] = new Long(source.IoWaitTime[i]);
+            }
+        }
+        if (source.Read != null) {
+            this.Read = new Long[source.Read.length];
+            for (int i = 0; i < source.Read.length; i++) {
+                this.Read[i] = new Long(source.Read[i]);
+            }
+        }
+        if (source.Write != null) {
+            this.Write = new Long[source.Write.length];
+            for (int i = 0; i < source.Write.length; i++) {
+                this.Write[i] = new Long(source.Write[i]);
+            }
+        }
+        if (source.CapacityRatio != null) {
+            this.CapacityRatio = new Long[source.CapacityRatio.length];
+            for (int i = 0; i < source.CapacityRatio.length; i++) {
+                this.CapacityRatio[i] = new Long(source.CapacityRatio[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

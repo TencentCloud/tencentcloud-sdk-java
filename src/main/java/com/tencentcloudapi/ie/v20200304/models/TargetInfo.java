@@ -68,6 +68,23 @@ public class TargetInfo extends AbstractModel{
         this.SegmentInfo = SegmentInfo;
     }
 
+    public TargetInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TargetInfo(TargetInfo source) {
+        if (source.FileName != null) {
+            this.FileName = new String(source.FileName);
+        }
+        if (source.SegmentInfo != null) {
+            this.SegmentInfo = new SegmentInfo(source.SegmentInfo);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

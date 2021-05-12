@@ -91,6 +91,29 @@ public class ModifyImageSharePermissionRequest extends AbstractModel{
         this.Permission = Permission;
     }
 
+    public ModifyImageSharePermissionRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyImageSharePermissionRequest(ModifyImageSharePermissionRequest source) {
+        if (source.ImageId != null) {
+            this.ImageId = new String(source.ImageId);
+        }
+        if (source.AccountIds != null) {
+            this.AccountIds = new String[source.AccountIds.length];
+            for (int i = 0; i < source.AccountIds.length; i++) {
+                this.AccountIds[i] = new String(source.AccountIds[i]);
+            }
+        }
+        if (source.Permission != null) {
+            this.Permission = new String(source.Permission);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

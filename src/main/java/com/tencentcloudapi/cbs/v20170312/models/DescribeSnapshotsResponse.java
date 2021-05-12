@@ -91,6 +91,29 @@ public class DescribeSnapshotsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeSnapshotsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeSnapshotsResponse(DescribeSnapshotsResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.SnapshotSet != null) {
+            this.SnapshotSet = new Snapshot[source.SnapshotSet.length];
+            for (int i = 0; i < source.SnapshotSet.length; i++) {
+                this.SnapshotSet[i] = new Snapshot(source.SnapshotSet[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

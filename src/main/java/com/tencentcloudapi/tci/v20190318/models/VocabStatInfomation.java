@@ -68,6 +68,26 @@ public class VocabStatInfomation extends AbstractModel{
         this.VocabLibName = VocabLibName;
     }
 
+    public VocabStatInfomation() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public VocabStatInfomation(VocabStatInfomation source) {
+        if (source.VocabDetailInfo != null) {
+            this.VocabDetailInfo = new StatInfo[source.VocabDetailInfo.length];
+            for (int i = 0; i < source.VocabDetailInfo.length; i++) {
+                this.VocabDetailInfo[i] = new StatInfo(source.VocabDetailInfo[i]);
+            }
+        }
+        if (source.VocabLibName != null) {
+            this.VocabLibName = new String(source.VocabLibName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

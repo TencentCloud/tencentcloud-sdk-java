@@ -91,6 +91,29 @@ public class CreateDevTokenRequest extends AbstractModel{
         this.TtlMinutes = TtlMinutes;
     }
 
+    public CreateDevTokenRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateDevTokenRequest(CreateDevTokenRequest source) {
+        if (source.AccessId != null) {
+            this.AccessId = new String(source.AccessId);
+        }
+        if (source.Tids != null) {
+            this.Tids = new String[source.Tids.length];
+            for (int i = 0; i < source.Tids.length; i++) {
+                this.Tids[i] = new String(source.Tids[i]);
+            }
+        }
+        if (source.TtlMinutes != null) {
+            this.TtlMinutes = new Long(source.TtlMinutes);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

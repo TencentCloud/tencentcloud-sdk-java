@@ -320,6 +320,50 @@ BindType==2时必填
         this.IdCode = IdCode;
     }
 
+    public BankCardItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public BankCardItem(BankCardItem source) {
+        if (source.EiconBankBranchId != null) {
+            this.EiconBankBranchId = new String(source.EiconBankBranchId);
+        }
+        if (source.CnapsBranchId != null) {
+            this.CnapsBranchId = new String(source.CnapsBranchId);
+        }
+        if (source.SettleAcctType != null) {
+            this.SettleAcctType = new Long(source.SettleAcctType);
+        }
+        if (source.SettleAcctName != null) {
+            this.SettleAcctName = new String(source.SettleAcctName);
+        }
+        if (source.AcctBranchName != null) {
+            this.AcctBranchName = new String(source.AcctBranchName);
+        }
+        if (source.SettleAcctNo != null) {
+            this.SettleAcctNo = new String(source.SettleAcctNo);
+        }
+        if (source.SubAppId != null) {
+            this.SubAppId = new String(source.SubAppId);
+        }
+        if (source.BindType != null) {
+            this.BindType = new Long(source.BindType);
+        }
+        if (source.Mobile != null) {
+            this.Mobile = new String(source.Mobile);
+        }
+        if (source.IdType != null) {
+            this.IdType = new String(source.IdType);
+        }
+        if (source.IdCode != null) {
+            this.IdCode = new String(source.IdCode);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

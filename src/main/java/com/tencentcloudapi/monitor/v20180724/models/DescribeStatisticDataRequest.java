@@ -206,6 +206,50 @@ public class DescribeStatisticDataRequest extends AbstractModel{
         this.GroupBys = GroupBys;
     }
 
+    public DescribeStatisticDataRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeStatisticDataRequest(DescribeStatisticDataRequest source) {
+        if (source.Module != null) {
+            this.Module = new String(source.Module);
+        }
+        if (source.Namespace != null) {
+            this.Namespace = new String(source.Namespace);
+        }
+        if (source.MetricNames != null) {
+            this.MetricNames = new String[source.MetricNames.length];
+            for (int i = 0; i < source.MetricNames.length; i++) {
+                this.MetricNames[i] = new String(source.MetricNames[i]);
+            }
+        }
+        if (source.Conditions != null) {
+            this.Conditions = new MidQueryCondition[source.Conditions.length];
+            for (int i = 0; i < source.Conditions.length; i++) {
+                this.Conditions[i] = new MidQueryCondition(source.Conditions[i]);
+            }
+        }
+        if (source.Period != null) {
+            this.Period = new Long(source.Period);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+        if (source.GroupBys != null) {
+            this.GroupBys = new String[source.GroupBys.length];
+            for (int i = 0; i < source.GroupBys.length; i++) {
+                this.GroupBys[i] = new String(source.GroupBys[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

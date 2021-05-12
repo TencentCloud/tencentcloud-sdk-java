@@ -366,6 +366,56 @@ public class CreateProjectRequest extends AbstractModel{
         this.RecordReplayProjectInput = RecordReplayProjectInput;
     }
 
+    public CreateProjectRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateProjectRequest(CreateProjectRequest source) {
+        if (source.Platform != null) {
+            this.Platform = new String(source.Platform);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Owner != null) {
+            this.Owner = new Entity(source.Owner);
+        }
+        if (source.Category != null) {
+            this.Category = new String(source.Category);
+        }
+        if (source.Mode != null) {
+            this.Mode = new String(source.Mode);
+        }
+        if (source.AspectRatio != null) {
+            this.AspectRatio = new String(source.AspectRatio);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.SwitcherProjectInput != null) {
+            this.SwitcherProjectInput = new SwitcherProjectInput(source.SwitcherProjectInput);
+        }
+        if (source.LiveStreamClipProjectInput != null) {
+            this.LiveStreamClipProjectInput = new LiveStreamClipProjectInput(source.LiveStreamClipProjectInput);
+        }
+        if (source.VideoEditProjectInput != null) {
+            this.VideoEditProjectInput = new VideoEditProjectInput(source.VideoEditProjectInput);
+        }
+        if (source.VideoSegmentationProjectInput != null) {
+            this.VideoSegmentationProjectInput = new VideoSegmentationProjectInput(source.VideoSegmentationProjectInput);
+        }
+        if (source.StreamConnectProjectInput != null) {
+            this.StreamConnectProjectInput = new StreamConnectProjectInput(source.StreamConnectProjectInput);
+        }
+        if (source.RecordReplayProjectInput != null) {
+            this.RecordReplayProjectInput = new RecordReplayProjectInput(source.RecordReplayProjectInput);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

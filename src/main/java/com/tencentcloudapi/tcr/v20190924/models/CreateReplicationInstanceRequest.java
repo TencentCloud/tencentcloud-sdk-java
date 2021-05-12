@@ -68,6 +68,23 @@ public class CreateReplicationInstanceRequest extends AbstractModel{
         this.ReplicationRegionId = ReplicationRegionId;
     }
 
+    public CreateReplicationInstanceRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateReplicationInstanceRequest(CreateReplicationInstanceRequest source) {
+        if (source.RegistryId != null) {
+            this.RegistryId = new String(source.RegistryId);
+        }
+        if (source.ReplicationRegionId != null) {
+            this.ReplicationRegionId = new Long(source.ReplicationRegionId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

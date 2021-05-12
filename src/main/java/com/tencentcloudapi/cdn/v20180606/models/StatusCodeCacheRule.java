@@ -73,6 +73,23 @@ public class StatusCodeCacheRule extends AbstractModel{
         this.CacheTime = CacheTime;
     }
 
+    public StatusCodeCacheRule() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public StatusCodeCacheRule(StatusCodeCacheRule source) {
+        if (source.StatusCode != null) {
+            this.StatusCode = new String(source.StatusCode);
+        }
+        if (source.CacheTime != null) {
+            this.CacheTime = new Long(source.CacheTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

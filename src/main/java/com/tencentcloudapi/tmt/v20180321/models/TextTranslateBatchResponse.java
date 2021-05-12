@@ -114,6 +114,32 @@ public class TextTranslateBatchResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public TextTranslateBatchResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TextTranslateBatchResponse(TextTranslateBatchResponse source) {
+        if (source.Source != null) {
+            this.Source = new String(source.Source);
+        }
+        if (source.Target != null) {
+            this.Target = new String(source.Target);
+        }
+        if (source.TargetTextList != null) {
+            this.TargetTextList = new String[source.TargetTextList.length];
+            for (int i = 0; i < source.TargetTextList.length; i++) {
+                this.TargetTextList[i] = new String(source.TargetTextList[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

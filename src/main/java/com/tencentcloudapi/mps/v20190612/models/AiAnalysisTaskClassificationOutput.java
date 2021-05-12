@@ -45,6 +45,23 @@ public class AiAnalysisTaskClassificationOutput extends AbstractModel{
         this.ClassificationSet = ClassificationSet;
     }
 
+    public AiAnalysisTaskClassificationOutput() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AiAnalysisTaskClassificationOutput(AiAnalysisTaskClassificationOutput source) {
+        if (source.ClassificationSet != null) {
+            this.ClassificationSet = new MediaAiAnalysisClassificationItem[source.ClassificationSet.length];
+            for (int i = 0; i < source.ClassificationSet.length; i++) {
+                this.ClassificationSet[i] = new MediaAiAnalysisClassificationItem(source.ClassificationSet[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

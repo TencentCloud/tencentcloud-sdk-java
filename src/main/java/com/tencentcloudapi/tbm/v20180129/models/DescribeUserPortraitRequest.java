@@ -45,6 +45,20 @@ public class DescribeUserPortraitRequest extends AbstractModel{
         this.BrandId = BrandId;
     }
 
+    public DescribeUserPortraitRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeUserPortraitRequest(DescribeUserPortraitRequest source) {
+        if (source.BrandId != null) {
+            this.BrandId = new String(source.BrandId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

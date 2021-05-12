@@ -45,6 +45,20 @@ public class DisassociateDhcpIpWithAddressIpRequest extends AbstractModel{
         this.DhcpIpId = DhcpIpId;
     }
 
+    public DisassociateDhcpIpWithAddressIpRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DisassociateDhcpIpWithAddressIpRequest(DisassociateDhcpIpWithAddressIpRequest source) {
+        if (source.DhcpIpId != null) {
+            this.DhcpIpId = new String(source.DhcpIpId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

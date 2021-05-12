@@ -91,6 +91,26 @@ public class GetUploadFederationTokenResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public GetUploadFederationTokenResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GetUploadFederationTokenResponse(GetUploadFederationTokenResponse source) {
+        if (source.ExpiredTime != null) {
+            this.ExpiredTime = new Long(source.ExpiredTime);
+        }
+        if (source.AssetCredentials != null) {
+            this.AssetCredentials = new AssetCredentials(source.AssetCredentials);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

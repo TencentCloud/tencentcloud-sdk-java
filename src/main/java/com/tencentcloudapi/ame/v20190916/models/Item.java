@@ -157,6 +157,35 @@ public class Item extends AbstractModel{
         this.Status = Status;
     }
 
+    public Item() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Item(Item source) {
+        if (source.ItemID != null) {
+            this.ItemID = new String(source.ItemID);
+        }
+        if (source.DataInfo != null) {
+            this.DataInfo = new DataInfo(source.DataInfo);
+        }
+        if (source.Album != null) {
+            this.Album = new Album(source.Album);
+        }
+        if (source.Artists != null) {
+            this.Artists = new Artist[source.Artists.length];
+            for (int i = 0; i < source.Artists.length; i++) {
+                this.Artists[i] = new Artist(source.Artists[i]);
+            }
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

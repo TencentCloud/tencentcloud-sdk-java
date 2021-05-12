@@ -119,6 +119,29 @@ public class DescribePolicyConditionListMetric extends AbstractModel{
         this.MetricUnit = MetricUnit;
     }
 
+    public DescribePolicyConditionListMetric() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribePolicyConditionListMetric(DescribePolicyConditionListMetric source) {
+        if (source.ConfigManual != null) {
+            this.ConfigManual = new DescribePolicyConditionListConfigManual(source.ConfigManual);
+        }
+        if (source.MetricId != null) {
+            this.MetricId = new Long(source.MetricId);
+        }
+        if (source.MetricShowName != null) {
+            this.MetricShowName = new String(source.MetricShowName);
+        }
+        if (source.MetricUnit != null) {
+            this.MetricUnit = new String(source.MetricUnit);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

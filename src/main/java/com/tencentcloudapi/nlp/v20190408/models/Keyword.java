@@ -68,6 +68,23 @@ public class Keyword extends AbstractModel{
         this.Word = Word;
     }
 
+    public Keyword() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Keyword(Keyword source) {
+        if (source.Score != null) {
+            this.Score = new Float(source.Score);
+        }
+        if (source.Word != null) {
+            this.Word = new String(source.Word);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

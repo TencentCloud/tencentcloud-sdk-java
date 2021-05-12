@@ -221,6 +221,47 @@ public class DescribeVpnConnectionsRequest extends AbstractModel{
         this.OrderDirection = OrderDirection;
     }
 
+    public DescribeVpnConnectionsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeVpnConnectionsRequest(DescribeVpnConnectionsRequest source) {
+        if (source.VpnConnectionIds != null) {
+            this.VpnConnectionIds = new String[source.VpnConnectionIds.length];
+            for (int i = 0; i < source.VpnConnectionIds.length; i++) {
+                this.VpnConnectionIds[i] = new String(source.VpnConnectionIds[i]);
+            }
+        }
+        if (source.Filters != null) {
+            this.Filters = new Filter[source.Filters.length];
+            for (int i = 0; i < source.Filters.length; i++) {
+                this.Filters[i] = new Filter(source.Filters[i]);
+            }
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.VpnGatewayId != null) {
+            this.VpnGatewayId = new String(source.VpnGatewayId);
+        }
+        if (source.VpnConnectionName != null) {
+            this.VpnConnectionName = new String(source.VpnConnectionName);
+        }
+        if (source.OrderField != null) {
+            this.OrderField = new String(source.OrderField);
+        }
+        if (source.OrderDirection != null) {
+            this.OrderDirection = new String(source.OrderDirection);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

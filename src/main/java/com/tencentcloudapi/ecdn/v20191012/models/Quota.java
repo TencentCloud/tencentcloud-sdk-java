@@ -91,6 +91,26 @@ public class Quota extends AbstractModel{
         this.Available = Available;
     }
 
+    public Quota() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Quota(Quota source) {
+        if (source.Batch != null) {
+            this.Batch = new Long(source.Batch);
+        }
+        if (source.Total != null) {
+            this.Total = new Long(source.Total);
+        }
+        if (source.Available != null) {
+            this.Available = new Long(source.Available);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -206,6 +206,41 @@ public class BackupDownloadTask extends AbstractModel{
         this.Url = Url;
     }
 
+    public BackupDownloadTask() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public BackupDownloadTask(BackupDownloadTask source) {
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.BackupName != null) {
+            this.BackupName = new String(source.BackupName);
+        }
+        if (source.ReplicaSetId != null) {
+            this.ReplicaSetId = new String(source.ReplicaSetId);
+        }
+        if (source.BackupSize != null) {
+            this.BackupSize = new Long(source.BackupSize);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.Percent != null) {
+            this.Percent = new Long(source.Percent);
+        }
+        if (source.TimeSpend != null) {
+            this.TimeSpend = new Long(source.TimeSpend);
+        }
+        if (source.Url != null) {
+            this.Url = new String(source.Url);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

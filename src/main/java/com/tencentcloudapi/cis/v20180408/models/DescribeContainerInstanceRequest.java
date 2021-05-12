@@ -45,6 +45,20 @@ public class DescribeContainerInstanceRequest extends AbstractModel{
         this.InstanceName = InstanceName;
     }
 
+    public DescribeContainerInstanceRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeContainerInstanceRequest(DescribeContainerInstanceRequest source) {
+        if (source.InstanceName != null) {
+            this.InstanceName = new String(source.InstanceName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

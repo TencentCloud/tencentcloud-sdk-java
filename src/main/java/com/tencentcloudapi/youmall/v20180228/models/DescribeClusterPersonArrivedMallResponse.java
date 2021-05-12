@@ -137,6 +137,35 @@ public class DescribeClusterPersonArrivedMallResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeClusterPersonArrivedMallResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeClusterPersonArrivedMallResponse(DescribeClusterPersonArrivedMallResponse source) {
+        if (source.MallId != null) {
+            this.MallId = new String(source.MallId);
+        }
+        if (source.MallCode != null) {
+            this.MallCode = new String(source.MallCode);
+        }
+        if (source.PersonId != null) {
+            this.PersonId = new String(source.PersonId);
+        }
+        if (source.ArrivedMallSet != null) {
+            this.ArrivedMallSet = new ArrivedMallInfo[source.ArrivedMallSet.length];
+            for (int i = 0; i < source.ArrivedMallSet.length; i++) {
+                this.ArrivedMallSet[i] = new ArrivedMallInfo(source.ArrivedMallSet[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

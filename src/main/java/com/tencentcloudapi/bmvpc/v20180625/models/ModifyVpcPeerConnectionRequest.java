@@ -91,6 +91,26 @@ public class ModifyVpcPeerConnectionRequest extends AbstractModel{
         this.VpcPeerConnectionName = VpcPeerConnectionName;
     }
 
+    public ModifyVpcPeerConnectionRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyVpcPeerConnectionRequest(ModifyVpcPeerConnectionRequest source) {
+        if (source.VpcPeerConnectionId != null) {
+            this.VpcPeerConnectionId = new String(source.VpcPeerConnectionId);
+        }
+        if (source.Bandwidth != null) {
+            this.Bandwidth = new Long(source.Bandwidth);
+        }
+        if (source.VpcPeerConnectionName != null) {
+            this.VpcPeerConnectionName = new String(source.VpcPeerConnectionName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

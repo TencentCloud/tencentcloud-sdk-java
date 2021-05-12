@@ -114,6 +114,29 @@ public class HostedDeviceOutBandInfo extends AbstractModel{
         this.VpnPort = VpnPort;
     }
 
+    public HostedDeviceOutBandInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public HostedDeviceOutBandInfo(HostedDeviceOutBandInfo source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.OutBandIp != null) {
+            this.OutBandIp = new String(source.OutBandIp);
+        }
+        if (source.VpnIp != null) {
+            this.VpnIp = new String(source.VpnIp);
+        }
+        if (source.VpnPort != null) {
+            this.VpnPort = new Long(source.VpnPort);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

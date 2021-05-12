@@ -640,6 +640,83 @@ public class Topic extends AbstractModel{
         this.ConsumerLimit = ConsumerLimit;
     }
 
+    public Topic() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Topic(Topic source) {
+        if (source.AverageMsgSize != null) {
+            this.AverageMsgSize = new String(source.AverageMsgSize);
+        }
+        if (source.ConsumerCount != null) {
+            this.ConsumerCount = new String(source.ConsumerCount);
+        }
+        if (source.LastConfirmedEntry != null) {
+            this.LastConfirmedEntry = new String(source.LastConfirmedEntry);
+        }
+        if (source.LastLedgerCreatedTimestamp != null) {
+            this.LastLedgerCreatedTimestamp = new String(source.LastLedgerCreatedTimestamp);
+        }
+        if (source.MsgRateIn != null) {
+            this.MsgRateIn = new String(source.MsgRateIn);
+        }
+        if (source.MsgRateOut != null) {
+            this.MsgRateOut = new String(source.MsgRateOut);
+        }
+        if (source.MsgThroughputIn != null) {
+            this.MsgThroughputIn = new String(source.MsgThroughputIn);
+        }
+        if (source.MsgThroughputOut != null) {
+            this.MsgThroughputOut = new String(source.MsgThroughputOut);
+        }
+        if (source.NumberOfEntries != null) {
+            this.NumberOfEntries = new String(source.NumberOfEntries);
+        }
+        if (source.Partitions != null) {
+            this.Partitions = new Long(source.Partitions);
+        }
+        if (source.ProducerCount != null) {
+            this.ProducerCount = new String(source.ProducerCount);
+        }
+        if (source.TotalSize != null) {
+            this.TotalSize = new String(source.TotalSize);
+        }
+        if (source.SubTopicSets != null) {
+            this.SubTopicSets = new PartitionsTopic[source.SubTopicSets.length];
+            for (int i = 0; i < source.SubTopicSets.length; i++) {
+                this.SubTopicSets[i] = new PartitionsTopic(source.SubTopicSets[i]);
+            }
+        }
+        if (source.TopicType != null) {
+            this.TopicType = new Long(source.TopicType);
+        }
+        if (source.EnvironmentId != null) {
+            this.EnvironmentId = new String(source.EnvironmentId);
+        }
+        if (source.TopicName != null) {
+            this.TopicName = new String(source.TopicName);
+        }
+        if (source.Remark != null) {
+            this.Remark = new String(source.Remark);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new String(source.UpdateTime);
+        }
+        if (source.ProducerLimit != null) {
+            this.ProducerLimit = new String(source.ProducerLimit);
+        }
+        if (source.ConsumerLimit != null) {
+            this.ConsumerLimit = new String(source.ConsumerLimit);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

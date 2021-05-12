@@ -68,6 +68,23 @@ public class GroupDetailForUser extends AbstractModel{
         this.GroupMSPId = GroupMSPId;
     }
 
+    public GroupDetailForUser() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GroupDetailForUser(GroupDetailForUser source) {
+        if (source.GroupName != null) {
+            this.GroupName = new String(source.GroupName);
+        }
+        if (source.GroupMSPId != null) {
+            this.GroupMSPId = new String(source.GroupMSPId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

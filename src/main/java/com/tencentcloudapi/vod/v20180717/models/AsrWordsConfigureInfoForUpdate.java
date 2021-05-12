@@ -83,6 +83,26 @@ public class AsrWordsConfigureInfoForUpdate extends AbstractModel{
         this.LabelSet = LabelSet;
     }
 
+    public AsrWordsConfigureInfoForUpdate() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AsrWordsConfigureInfoForUpdate(AsrWordsConfigureInfoForUpdate source) {
+        if (source.Switch != null) {
+            this.Switch = new String(source.Switch);
+        }
+        if (source.LabelSet != null) {
+            this.LabelSet = new String[source.LabelSet.length];
+            for (int i = 0; i < source.LabelSet.length; i++) {
+                this.LabelSet[i] = new String(source.LabelSet[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -68,6 +68,26 @@ public class ModifyTableQuotasRequest extends AbstractModel{
         this.TableQuotas = TableQuotas;
     }
 
+    public ModifyTableQuotasRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyTableQuotasRequest(ModifyTableQuotasRequest source) {
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
+        if (source.TableQuotas != null) {
+            this.TableQuotas = new SelectedTableInfoNew[source.TableQuotas.length];
+            for (int i = 0; i < source.TableQuotas.length; i++) {
+                this.TableQuotas[i] = new SelectedTableInfoNew(source.TableQuotas[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

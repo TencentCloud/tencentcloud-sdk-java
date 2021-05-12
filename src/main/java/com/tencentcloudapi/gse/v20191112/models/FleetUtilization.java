@@ -162,6 +162,32 @@ public class FleetUtilization extends AbstractModel{
         this.MaximumPlayerSessionCount = MaximumPlayerSessionCount;
     }
 
+    public FleetUtilization() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public FleetUtilization(FleetUtilization source) {
+        if (source.ActiveGameServerSessionCount != null) {
+            this.ActiveGameServerSessionCount = new Long(source.ActiveGameServerSessionCount);
+        }
+        if (source.ActiveServerProcessCount != null) {
+            this.ActiveServerProcessCount = new Long(source.ActiveServerProcessCount);
+        }
+        if (source.CurrentPlayerSessionCount != null) {
+            this.CurrentPlayerSessionCount = new Long(source.CurrentPlayerSessionCount);
+        }
+        if (source.FleetId != null) {
+            this.FleetId = new String(source.FleetId);
+        }
+        if (source.MaximumPlayerSessionCount != null) {
+            this.MaximumPlayerSessionCount = new Long(source.MaximumPlayerSessionCount);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

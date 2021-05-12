@@ -137,6 +137,35 @@ public class DescribeAccountPrivilegesResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeAccountPrivilegesResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeAccountPrivilegesResponse(DescribeAccountPrivilegesResponse source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.Privileges != null) {
+            this.Privileges = new String[source.Privileges.length];
+            for (int i = 0; i < source.Privileges.length; i++) {
+                this.Privileges[i] = new String(source.Privileges[i]);
+            }
+        }
+        if (source.UserName != null) {
+            this.UserName = new String(source.UserName);
+        }
+        if (source.Host != null) {
+            this.Host = new String(source.Host);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

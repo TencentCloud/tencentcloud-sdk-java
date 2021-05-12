@@ -371,6 +371,56 @@ public class QueryOutwardOrderData extends AbstractModel{
         this.RefundCurrency = RefundCurrency;
     }
 
+    public QueryOutwardOrderData() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public QueryOutwardOrderData(QueryOutwardOrderData source) {
+        if (source.MerchantId != null) {
+            this.MerchantId = new String(source.MerchantId);
+        }
+        if (source.TransactionId != null) {
+            this.TransactionId = new String(source.TransactionId);
+        }
+        if (source.AcctDate != null) {
+            this.AcctDate = new String(source.AcctDate);
+        }
+        if (source.PricingCurrency != null) {
+            this.PricingCurrency = new String(source.PricingCurrency);
+        }
+        if (source.SourceCurrency != null) {
+            this.SourceCurrency = new String(source.SourceCurrency);
+        }
+        if (source.SourceAmount != null) {
+            this.SourceAmount = new String(source.SourceAmount);
+        }
+        if (source.TargetCurrency != null) {
+            this.TargetCurrency = new String(source.TargetCurrency);
+        }
+        if (source.TargetAmount != null) {
+            this.TargetAmount = new String(source.TargetAmount);
+        }
+        if (source.FxRate != null) {
+            this.FxRate = new String(source.FxRate);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.FailReason != null) {
+            this.FailReason = new String(source.FailReason);
+        }
+        if (source.RefundAmount != null) {
+            this.RefundAmount = new String(source.RefundAmount);
+        }
+        if (source.RefundCurrency != null) {
+            this.RefundCurrency = new String(source.RefundCurrency);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

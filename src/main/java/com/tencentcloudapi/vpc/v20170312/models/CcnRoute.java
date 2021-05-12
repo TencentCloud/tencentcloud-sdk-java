@@ -321,6 +321,56 @@ public class CcnRoute extends AbstractModel{
         this.InstanceExtraName = InstanceExtraName;
     }
 
+    public CcnRoute() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CcnRoute(CcnRoute source) {
+        if (source.RouteId != null) {
+            this.RouteId = new String(source.RouteId);
+        }
+        if (source.DestinationCidrBlock != null) {
+            this.DestinationCidrBlock = new String(source.DestinationCidrBlock);
+        }
+        if (source.InstanceType != null) {
+            this.InstanceType = new String(source.InstanceType);
+        }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.InstanceName != null) {
+            this.InstanceName = new String(source.InstanceName);
+        }
+        if (source.InstanceRegion != null) {
+            this.InstanceRegion = new String(source.InstanceRegion);
+        }
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new String(source.UpdateTime);
+        }
+        if (source.Enabled != null) {
+            this.Enabled = new Boolean(source.Enabled);
+        }
+        if (source.InstanceUin != null) {
+            this.InstanceUin = new String(source.InstanceUin);
+        }
+        if (source.ExtraState != null) {
+            this.ExtraState = new String(source.ExtraState);
+        }
+        if (source.IsBgp != null) {
+            this.IsBgp = new Boolean(source.IsBgp);
+        }
+        if (source.RoutePriority != null) {
+            this.RoutePriority = new Long(source.RoutePriority);
+        }
+        if (source.InstanceExtraName != null) {
+            this.InstanceExtraName = new String(source.InstanceExtraName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

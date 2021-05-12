@@ -160,6 +160,35 @@ public class MarketingValueJudgementRequest extends AbstractModel{
         this.Referer = Referer;
     }
 
+    public MarketingValueJudgementRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MarketingValueJudgementRequest(MarketingValueJudgementRequest source) {
+        if (source.AccountType != null) {
+            this.AccountType = new Long(source.AccountType);
+        }
+        if (source.Uid != null) {
+            this.Uid = new String(source.Uid);
+        }
+        if (source.UserIp != null) {
+            this.UserIp = new String(source.UserIp);
+        }
+        if (source.PostTime != null) {
+            this.PostTime = new Long(source.PostTime);
+        }
+        if (source.Imei != null) {
+            this.Imei = new String(source.Imei);
+        }
+        if (source.Referer != null) {
+            this.Referer = new String(source.Referer);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

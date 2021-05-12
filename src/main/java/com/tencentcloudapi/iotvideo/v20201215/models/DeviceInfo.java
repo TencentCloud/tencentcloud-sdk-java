@@ -160,6 +160,35 @@ public class DeviceInfo extends AbstractModel{
         this.ExpireTime = ExpireTime;
     }
 
+    public DeviceInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeviceInfo(DeviceInfo source) {
+        if (source.DeviceName != null) {
+            this.DeviceName = new String(source.DeviceName);
+        }
+        if (source.Online != null) {
+            this.Online = new Long(source.Online);
+        }
+        if (source.LoginTime != null) {
+            this.LoginTime = new Long(source.LoginTime);
+        }
+        if (source.DevicePsk != null) {
+            this.DevicePsk = new String(source.DevicePsk);
+        }
+        if (source.EnableState != null) {
+            this.EnableState = new Long(source.EnableState);
+        }
+        if (source.ExpireTime != null) {
+            this.ExpireTime = new Long(source.ExpireTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -137,6 +137,32 @@ public class DescribeImageTagsRequest extends AbstractModel{
         this.SearchWord = SearchWord;
     }
 
+    public DescribeImageTagsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeImageTagsRequest(DescribeImageTagsRequest source) {
+        if (source.ApplicationId != null) {
+            this.ApplicationId = new String(source.ApplicationId);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.QueryImageIdFlag != null) {
+            this.QueryImageIdFlag = new Long(source.QueryImageIdFlag);
+        }
+        if (source.SearchWord != null) {
+            this.SearchWord = new String(source.SearchWord);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -68,6 +68,23 @@ public class ModifyDBInstanceSpecResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public ModifyDBInstanceSpecResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyDBInstanceSpecResponse(ModifyDBInstanceSpecResponse source) {
+        if (source.DealId != null) {
+            this.DealId = new String(source.DealId);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

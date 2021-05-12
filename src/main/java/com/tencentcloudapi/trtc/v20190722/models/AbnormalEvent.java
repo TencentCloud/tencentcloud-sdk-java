@@ -73,6 +73,23 @@ public class AbnormalEvent extends AbstractModel{
         this.PeerId = PeerId;
     }
 
+    public AbnormalEvent() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AbnormalEvent(AbnormalEvent source) {
+        if (source.AbnormalEventId != null) {
+            this.AbnormalEventId = new Long(source.AbnormalEventId);
+        }
+        if (source.PeerId != null) {
+            this.PeerId = new String(source.PeerId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

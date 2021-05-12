@@ -114,6 +114,29 @@ public class DescribeBillSummaryByTagRequest extends AbstractModel{
         this.PayerUin = PayerUin;
     }
 
+    public DescribeBillSummaryByTagRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeBillSummaryByTagRequest(DescribeBillSummaryByTagRequest source) {
+        if (source.BeginTime != null) {
+            this.BeginTime = new String(source.BeginTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+        if (source.TagKey != null) {
+            this.TagKey = new String(source.TagKey);
+        }
+        if (source.PayerUin != null) {
+            this.PayerUin = new String(source.PayerUin);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

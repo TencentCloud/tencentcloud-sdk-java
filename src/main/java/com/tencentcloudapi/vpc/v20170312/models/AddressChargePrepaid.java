@@ -68,6 +68,23 @@ public class AddressChargePrepaid extends AbstractModel{
         this.AutoRenewFlag = AutoRenewFlag;
     }
 
+    public AddressChargePrepaid() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AddressChargePrepaid(AddressChargePrepaid source) {
+        if (source.Period != null) {
+            this.Period = new Long(source.Period);
+        }
+        if (source.AutoRenewFlag != null) {
+            this.AutoRenewFlag = new Long(source.AutoRenewFlag);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

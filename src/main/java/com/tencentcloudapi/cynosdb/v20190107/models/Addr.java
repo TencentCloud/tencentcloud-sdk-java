@@ -68,6 +68,23 @@ public class Addr extends AbstractModel{
         this.Port = Port;
     }
 
+    public Addr() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Addr(Addr source) {
+        if (source.IP != null) {
+            this.IP = new String(source.IP);
+        }
+        if (source.Port != null) {
+            this.Port = new Long(source.Port);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

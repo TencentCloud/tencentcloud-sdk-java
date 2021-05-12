@@ -175,6 +175,35 @@ public class CreateAuditLogFileRequest extends AbstractModel{
         this.Filter = Filter;
     }
 
+    public CreateAuditLogFileRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateAuditLogFileRequest(CreateAuditLogFileRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+        if (source.Order != null) {
+            this.Order = new String(source.Order);
+        }
+        if (source.OrderBy != null) {
+            this.OrderBy = new String(source.OrderBy);
+        }
+        if (source.Filter != null) {
+            this.Filter = new AuditLogFilter(source.Filter);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

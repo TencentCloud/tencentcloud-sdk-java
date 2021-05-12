@@ -114,6 +114,29 @@ public class CaptchaOperDataInterceptUnit extends AbstractModel{
         this.StrategyStopCnt = StrategyStopCnt;
     }
 
+    public CaptchaOperDataInterceptUnit() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CaptchaOperDataInterceptUnit(CaptchaOperDataInterceptUnit source) {
+        if (source.DateKey != null) {
+            this.DateKey = new String(source.DateKey);
+        }
+        if (source.AllStopCnt != null) {
+            this.AllStopCnt = new Float(source.AllStopCnt);
+        }
+        if (source.PicStopCnt != null) {
+            this.PicStopCnt = new Float(source.PicStopCnt);
+        }
+        if (source.StrategyStopCnt != null) {
+            this.StrategyStopCnt = new Float(source.StrategyStopCnt);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

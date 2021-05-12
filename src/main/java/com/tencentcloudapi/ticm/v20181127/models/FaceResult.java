@@ -68,6 +68,26 @@ public class FaceResult extends AbstractModel{
         this.Candidates = Candidates;
     }
 
+    public FaceResult() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public FaceResult(FaceResult source) {
+        if (source.FaceRect != null) {
+            this.FaceRect = new FaceRect(source.FaceRect);
+        }
+        if (source.Candidates != null) {
+            this.Candidates = new Candidate[source.Candidates.length];
+            for (int i = 0; i < source.Candidates.length; i++) {
+                this.Candidates[i] = new Candidate(source.Candidates[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

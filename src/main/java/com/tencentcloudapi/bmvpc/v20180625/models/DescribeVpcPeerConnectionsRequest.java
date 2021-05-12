@@ -147,6 +147,38 @@ public class DescribeVpcPeerConnectionsRequest extends AbstractModel{
         this.VpcId = VpcId;
     }
 
+    public DescribeVpcPeerConnectionsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeVpcPeerConnectionsRequest(DescribeVpcPeerConnectionsRequest source) {
+        if (source.VpcPeerConnectionIds != null) {
+            this.VpcPeerConnectionIds = new String[source.VpcPeerConnectionIds.length];
+            for (int i = 0; i < source.VpcPeerConnectionIds.length; i++) {
+                this.VpcPeerConnectionIds[i] = new String(source.VpcPeerConnectionIds[i]);
+            }
+        }
+        if (source.Filters != null) {
+            this.Filters = new Filter[source.Filters.length];
+            for (int i = 0; i < source.Filters.length; i++) {
+                this.Filters[i] = new Filter(source.Filters[i]);
+            }
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

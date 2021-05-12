@@ -96,6 +96,29 @@ public class ResultsReturnsByGroup extends AbstractModel{
         this.RetCode = RetCode;
     }
 
+    public ResultsReturnsByGroup() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ResultsReturnsByGroup(ResultsReturnsByGroup source) {
+        if (source.FaceRect != null) {
+            this.FaceRect = new FaceRect(source.FaceRect);
+        }
+        if (source.GroupCandidates != null) {
+            this.GroupCandidates = new GroupCandidate[source.GroupCandidates.length];
+            for (int i = 0; i < source.GroupCandidates.length; i++) {
+                this.GroupCandidates[i] = new GroupCandidate(source.GroupCandidates[i]);
+            }
+        }
+        if (source.RetCode != null) {
+            this.RetCode = new Long(source.RetCode);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

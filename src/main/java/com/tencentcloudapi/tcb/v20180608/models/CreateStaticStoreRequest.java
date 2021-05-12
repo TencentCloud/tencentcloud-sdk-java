@@ -68,6 +68,23 @@ public class CreateStaticStoreRequest extends AbstractModel{
         this.EnableUnion = EnableUnion;
     }
 
+    public CreateStaticStoreRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateStaticStoreRequest(CreateStaticStoreRequest source) {
+        if (source.EnvId != null) {
+            this.EnvId = new String(source.EnvId);
+        }
+        if (source.EnableUnion != null) {
+            this.EnableUnion = new Boolean(source.EnableUnion);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -183,6 +183,38 @@ public class GetTransactionDetailForUserRequest extends AbstractModel{
         this.TransactionId = TransactionId;
     }
 
+    public GetTransactionDetailForUserRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GetTransactionDetailForUserRequest(GetTransactionDetailForUserRequest source) {
+        if (source.Module != null) {
+            this.Module = new String(source.Module);
+        }
+        if (source.Operation != null) {
+            this.Operation = new String(source.Operation);
+        }
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
+        if (source.GroupName != null) {
+            this.GroupName = new String(source.GroupName);
+        }
+        if (source.ChannelName != null) {
+            this.ChannelName = new String(source.ChannelName);
+        }
+        if (source.BlockId != null) {
+            this.BlockId = new Long(source.BlockId);
+        }
+        if (source.TransactionId != null) {
+            this.TransactionId = new String(source.TransactionId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

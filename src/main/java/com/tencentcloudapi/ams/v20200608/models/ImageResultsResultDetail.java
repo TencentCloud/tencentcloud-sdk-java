@@ -297,6 +297,53 @@ public class ImageResultsResultDetail extends AbstractModel{
         this.SubLabelCode = SubLabelCode;
     }
 
+    public ImageResultsResultDetail() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ImageResultsResultDetail(ImageResultsResultDetail source) {
+        if (source.Location != null) {
+            this.Location = new ImageResultsResultDetailLocation[source.Location.length];
+            for (int i = 0; i < source.Location.length; i++) {
+                this.Location[i] = new ImageResultsResultDetailLocation(source.Location[i]);
+            }
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Text != null) {
+            this.Text = new String(source.Text);
+        }
+        if (source.Label != null) {
+            this.Label = new String(source.Label);
+        }
+        if (source.LibId != null) {
+            this.LibId = new String(source.LibId);
+        }
+        if (source.LibName != null) {
+            this.LibName = new String(source.LibName);
+        }
+        if (source.Keywords != null) {
+            this.Keywords = new String[source.Keywords.length];
+            for (int i = 0; i < source.Keywords.length; i++) {
+                this.Keywords[i] = new String(source.Keywords[i]);
+            }
+        }
+        if (source.Suggestion != null) {
+            this.Suggestion = new String(source.Suggestion);
+        }
+        if (source.Score != null) {
+            this.Score = new Long(source.Score);
+        }
+        if (source.SubLabelCode != null) {
+            this.SubLabelCode = new String(source.SubLabelCode);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

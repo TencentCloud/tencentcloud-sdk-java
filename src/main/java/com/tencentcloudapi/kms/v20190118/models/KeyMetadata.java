@@ -382,6 +382,62 @@ public class KeyMetadata extends AbstractModel{
         this.ResourceId = ResourceId;
     }
 
+    public KeyMetadata() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public KeyMetadata(KeyMetadata source) {
+        if (source.KeyId != null) {
+            this.KeyId = new String(source.KeyId);
+        }
+        if (source.Alias != null) {
+            this.Alias = new String(source.Alias);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new Long(source.CreateTime);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.KeyState != null) {
+            this.KeyState = new String(source.KeyState);
+        }
+        if (source.KeyUsage != null) {
+            this.KeyUsage = new String(source.KeyUsage);
+        }
+        if (source.Type != null) {
+            this.Type = new Long(source.Type);
+        }
+        if (source.CreatorUin != null) {
+            this.CreatorUin = new Long(source.CreatorUin);
+        }
+        if (source.KeyRotationEnabled != null) {
+            this.KeyRotationEnabled = new Boolean(source.KeyRotationEnabled);
+        }
+        if (source.Owner != null) {
+            this.Owner = new String(source.Owner);
+        }
+        if (source.NextRotateTime != null) {
+            this.NextRotateTime = new Long(source.NextRotateTime);
+        }
+        if (source.DeletionDate != null) {
+            this.DeletionDate = new Long(source.DeletionDate);
+        }
+        if (source.Origin != null) {
+            this.Origin = new String(source.Origin);
+        }
+        if (source.ValidTo != null) {
+            this.ValidTo = new Long(source.ValidTo);
+        }
+        if (source.ResourceId != null) {
+            this.ResourceId = new String(source.ResourceId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

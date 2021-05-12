@@ -602,6 +602,83 @@ Stopped：已停止
         this.RequestId = RequestId;
     }
 
+    public DescribeTrainingJobResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeTrainingJobResponse(DescribeTrainingJobResponse source) {
+        if (source.AlgorithmSpecification != null) {
+            this.AlgorithmSpecification = new AlgorithmSpecification(source.AlgorithmSpecification);
+        }
+        if (source.TrainingJobName != null) {
+            this.TrainingJobName = new String(source.TrainingJobName);
+        }
+        if (source.HyperParameters != null) {
+            this.HyperParameters = new String(source.HyperParameters);
+        }
+        if (source.InputDataConfig != null) {
+            this.InputDataConfig = new InputDataConfig[source.InputDataConfig.length];
+            for (int i = 0; i < source.InputDataConfig.length; i++) {
+                this.InputDataConfig[i] = new InputDataConfig(source.InputDataConfig[i]);
+            }
+        }
+        if (source.OutputDataConfig != null) {
+            this.OutputDataConfig = new OutputDataConfig(source.OutputDataConfig);
+        }
+        if (source.StoppingCondition != null) {
+            this.StoppingCondition = new StoppingCondition(source.StoppingCondition);
+        }
+        if (source.ResourceConfig != null) {
+            this.ResourceConfig = new ResourceConfig(source.ResourceConfig);
+        }
+        if (source.VpcConfig != null) {
+            this.VpcConfig = new VpcConfig(source.VpcConfig);
+        }
+        if (source.FailureReason != null) {
+            this.FailureReason = new String(source.FailureReason);
+        }
+        if (source.LastModifiedTime != null) {
+            this.LastModifiedTime = new String(source.LastModifiedTime);
+        }
+        if (source.TrainingStartTime != null) {
+            this.TrainingStartTime = new String(source.TrainingStartTime);
+        }
+        if (source.TrainingEndTime != null) {
+            this.TrainingEndTime = new String(source.TrainingEndTime);
+        }
+        if (source.ModelArtifacts != null) {
+            this.ModelArtifacts = new ModelArtifacts(source.ModelArtifacts);
+        }
+        if (source.SecondaryStatus != null) {
+            this.SecondaryStatus = new String(source.SecondaryStatus);
+        }
+        if (source.SecondaryStatusTransitions != null) {
+            this.SecondaryStatusTransitions = new SecondaryStatusTransition[source.SecondaryStatusTransitions.length];
+            for (int i = 0; i < source.SecondaryStatusTransitions.length; i++) {
+                this.SecondaryStatusTransitions[i] = new SecondaryStatusTransition(source.SecondaryStatusTransitions[i]);
+            }
+        }
+        if (source.RoleName != null) {
+            this.RoleName = new String(source.RoleName);
+        }
+        if (source.TrainingJobStatus != null) {
+            this.TrainingJobStatus = new String(source.TrainingJobStatus);
+        }
+        if (source.LogUrl != null) {
+            this.LogUrl = new String(source.LogUrl);
+        }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

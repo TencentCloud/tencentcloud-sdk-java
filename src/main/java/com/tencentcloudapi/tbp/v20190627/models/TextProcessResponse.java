@@ -269,6 +269,47 @@ public class TextProcessResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public TextProcessResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TextProcessResponse(TextProcessResponse source) {
+        if (source.DialogStatus != null) {
+            this.DialogStatus = new String(source.DialogStatus);
+        }
+        if (source.BotName != null) {
+            this.BotName = new String(source.BotName);
+        }
+        if (source.IntentName != null) {
+            this.IntentName = new String(source.IntentName);
+        }
+        if (source.SlotInfoList != null) {
+            this.SlotInfoList = new SlotInfo[source.SlotInfoList.length];
+            for (int i = 0; i < source.SlotInfoList.length; i++) {
+                this.SlotInfoList[i] = new SlotInfo(source.SlotInfoList[i]);
+            }
+        }
+        if (source.InputText != null) {
+            this.InputText = new String(source.InputText);
+        }
+        if (source.ResponseMessage != null) {
+            this.ResponseMessage = new ResponseMessage(source.ResponseMessage);
+        }
+        if (source.SessionAttributes != null) {
+            this.SessionAttributes = new String(source.SessionAttributes);
+        }
+        if (source.ResultType != null) {
+            this.ResultType = new String(source.ResultType);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

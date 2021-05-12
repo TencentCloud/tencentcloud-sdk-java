@@ -45,6 +45,20 @@ public class DeletePsaRegulationRequest extends AbstractModel{
         this.PsaId = PsaId;
     }
 
+    public DeletePsaRegulationRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeletePsaRegulationRequest(DeletePsaRegulationRequest source) {
+        if (source.PsaId != null) {
+            this.PsaId = new String(source.PsaId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

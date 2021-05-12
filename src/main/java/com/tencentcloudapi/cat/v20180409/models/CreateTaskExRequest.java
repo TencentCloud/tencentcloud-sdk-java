@@ -689,6 +689,104 @@ public class CreateTaskExRequest extends AbstractModel{
         this.RedirectFollowNum = RedirectFollowNum;
     }
 
+    public CreateTaskExRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateTaskExRequest(CreateTaskExRequest source) {
+        if (source.CatTypeName != null) {
+            this.CatTypeName = new String(source.CatTypeName);
+        }
+        if (source.Url != null) {
+            this.Url = new String(source.Url);
+        }
+        if (source.Period != null) {
+            this.Period = new Long(source.Period);
+        }
+        if (source.TaskName != null) {
+            this.TaskName = new String(source.TaskName);
+        }
+        if (source.AgentGroupId != null) {
+            this.AgentGroupId = new Long(source.AgentGroupId);
+        }
+        if (source.Host != null) {
+            this.Host = new String(source.Host);
+        }
+        if (source.IsHeader != null) {
+            this.IsHeader = new Long(source.IsHeader);
+        }
+        if (source.SslVer != null) {
+            this.SslVer = new String(source.SslVer);
+        }
+        if (source.PostData != null) {
+            this.PostData = new String(source.PostData);
+        }
+        if (source.UserAgent != null) {
+            this.UserAgent = new String(source.UserAgent);
+        }
+        if (source.CheckStr != null) {
+            this.CheckStr = new String(source.CheckStr);
+        }
+        if (source.CheckType != null) {
+            this.CheckType = new Long(source.CheckType);
+        }
+        if (source.Cookie != null) {
+            this.Cookie = new String(source.Cookie);
+        }
+        if (source.TaskId != null) {
+            this.TaskId = new Long(source.TaskId);
+        }
+        if (source.UserName != null) {
+            this.UserName = new String(source.UserName);
+        }
+        if (source.PassWord != null) {
+            this.PassWord = new String(source.PassWord);
+        }
+        if (source.ReqDataType != null) {
+            this.ReqDataType = new Long(source.ReqDataType);
+        }
+        if (source.ReqData != null) {
+            this.ReqData = new String(source.ReqData);
+        }
+        if (source.RespDataType != null) {
+            this.RespDataType = new Long(source.RespDataType);
+        }
+        if (source.RespData != null) {
+            this.RespData = new String(source.RespData);
+        }
+        if (source.DnsSvr != null) {
+            this.DnsSvr = new String(source.DnsSvr);
+        }
+        if (source.DnsCheckIp != null) {
+            this.DnsCheckIp = new String(source.DnsCheckIp);
+        }
+        if (source.DnsQueryType != null) {
+            this.DnsQueryType = new String(source.DnsQueryType);
+        }
+        if (source.UseSecConn != null) {
+            this.UseSecConn = new Long(source.UseSecConn);
+        }
+        if (source.NeedAuth != null) {
+            this.NeedAuth = new Long(source.NeedAuth);
+        }
+        if (source.Port != null) {
+            this.Port = new Long(source.Port);
+        }
+        if (source.Type != null) {
+            this.Type = new Long(source.Type);
+        }
+        if (source.IsVerify != null) {
+            this.IsVerify = new Long(source.IsVerify);
+        }
+        if (source.RedirectFollowNum != null) {
+            this.RedirectFollowNum = new Long(source.RedirectFollowNum);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

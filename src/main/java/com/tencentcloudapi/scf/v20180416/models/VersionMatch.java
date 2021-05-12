@@ -149,6 +149,29 @@ exact 匹配规则要求：
         this.Expression = Expression;
     }
 
+    public VersionMatch() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public VersionMatch(VersionMatch source) {
+        if (source.Version != null) {
+            this.Version = new String(source.Version);
+        }
+        if (source.Key != null) {
+            this.Key = new String(source.Key);
+        }
+        if (source.Method != null) {
+            this.Method = new String(source.Method);
+        }
+        if (source.Expression != null) {
+            this.Expression = new String(source.Expression);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

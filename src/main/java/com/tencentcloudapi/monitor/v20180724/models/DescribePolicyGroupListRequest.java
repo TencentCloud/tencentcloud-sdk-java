@@ -367,6 +367,74 @@ public class DescribePolicyGroupListRequest extends AbstractModel{
         this.IsOpen = IsOpen;
     }
 
+    public DescribePolicyGroupListRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribePolicyGroupListRequest(DescribePolicyGroupListRequest source) {
+        if (source.Module != null) {
+            this.Module = new String(source.Module);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Like != null) {
+            this.Like = new String(source.Like);
+        }
+        if (source.InstanceGroupId != null) {
+            this.InstanceGroupId = new Long(source.InstanceGroupId);
+        }
+        if (source.UpdateTimeOrder != null) {
+            this.UpdateTimeOrder = new String(source.UpdateTimeOrder);
+        }
+        if (source.ProjectIds != null) {
+            this.ProjectIds = new Long[source.ProjectIds.length];
+            for (int i = 0; i < source.ProjectIds.length; i++) {
+                this.ProjectIds[i] = new Long(source.ProjectIds[i]);
+            }
+        }
+        if (source.ViewNames != null) {
+            this.ViewNames = new String[source.ViewNames.length];
+            for (int i = 0; i < source.ViewNames.length; i++) {
+                this.ViewNames[i] = new String(source.ViewNames[i]);
+            }
+        }
+        if (source.FilterUnuseReceiver != null) {
+            this.FilterUnuseReceiver = new Long(source.FilterUnuseReceiver);
+        }
+        if (source.Receivers != null) {
+            this.Receivers = new String[source.Receivers.length];
+            for (int i = 0; i < source.Receivers.length; i++) {
+                this.Receivers[i] = new String(source.Receivers[i]);
+            }
+        }
+        if (source.ReceiverUserList != null) {
+            this.ReceiverUserList = new String[source.ReceiverUserList.length];
+            for (int i = 0; i < source.ReceiverUserList.length; i++) {
+                this.ReceiverUserList[i] = new String(source.ReceiverUserList[i]);
+            }
+        }
+        if (source.Dimensions != null) {
+            this.Dimensions = new String(source.Dimensions);
+        }
+        if (source.ConditionTempGroupId != null) {
+            this.ConditionTempGroupId = new String(source.ConditionTempGroupId);
+        }
+        if (source.ReceiverType != null) {
+            this.ReceiverType = new String(source.ReceiverType);
+        }
+        if (source.IsOpen != null) {
+            this.IsOpen = new Boolean(source.IsOpen);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

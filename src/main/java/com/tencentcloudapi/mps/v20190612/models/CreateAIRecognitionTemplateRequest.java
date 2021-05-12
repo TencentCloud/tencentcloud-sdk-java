@@ -183,6 +183,38 @@ public class CreateAIRecognitionTemplateRequest extends AbstractModel{
         this.AsrWordsConfigure = AsrWordsConfigure;
     }
 
+    public CreateAIRecognitionTemplateRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateAIRecognitionTemplateRequest(CreateAIRecognitionTemplateRequest source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Comment != null) {
+            this.Comment = new String(source.Comment);
+        }
+        if (source.FaceConfigure != null) {
+            this.FaceConfigure = new FaceConfigureInfo(source.FaceConfigure);
+        }
+        if (source.OcrFullTextConfigure != null) {
+            this.OcrFullTextConfigure = new OcrFullTextConfigureInfo(source.OcrFullTextConfigure);
+        }
+        if (source.OcrWordsConfigure != null) {
+            this.OcrWordsConfigure = new OcrWordsConfigureInfo(source.OcrWordsConfigure);
+        }
+        if (source.AsrFullTextConfigure != null) {
+            this.AsrFullTextConfigure = new AsrFullTextConfigureInfo(source.AsrFullTextConfigure);
+        }
+        if (source.AsrWordsConfigure != null) {
+            this.AsrWordsConfigure = new AsrWordsConfigureInfo(source.AsrWordsConfigure);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

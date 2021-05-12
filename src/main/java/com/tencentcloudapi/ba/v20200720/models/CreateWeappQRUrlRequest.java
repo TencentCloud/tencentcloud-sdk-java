@@ -45,6 +45,20 @@ public class CreateWeappQRUrlRequest extends AbstractModel{
         this.SessionKey = SessionKey;
     }
 
+    public CreateWeappQRUrlRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateWeappQRUrlRequest(CreateWeappQRUrlRequest source) {
+        if (source.SessionKey != null) {
+            this.SessionKey = new String(source.SessionKey);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

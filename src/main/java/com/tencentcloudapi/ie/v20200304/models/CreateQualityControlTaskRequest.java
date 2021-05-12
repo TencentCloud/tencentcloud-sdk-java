@@ -91,6 +91,26 @@ public class CreateQualityControlTaskRequest extends AbstractModel{
         this.CallbackInfo = CallbackInfo;
     }
 
+    public CreateQualityControlTaskRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateQualityControlTaskRequest(CreateQualityControlTaskRequest source) {
+        if (source.QualityControlInfo != null) {
+            this.QualityControlInfo = new QualityControlInfo(source.QualityControlInfo);
+        }
+        if (source.DownInfo != null) {
+            this.DownInfo = new DownInfo(source.DownInfo);
+        }
+        if (source.CallbackInfo != null) {
+            this.CallbackInfo = new CallbackInfo(source.CallbackInfo);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

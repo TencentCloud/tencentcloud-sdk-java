@@ -358,6 +358,53 @@ public class DeviceData extends AbstractModel{
         this.StreamStatus = StreamStatus;
     }
 
+    public DeviceData() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeviceData(DeviceData source) {
+        if (source.Tid != null) {
+            this.Tid = new String(source.Tid);
+        }
+        if (source.ActiveTime != null) {
+            this.ActiveTime = new Long(source.ActiveTime);
+        }
+        if (source.Disabled != null) {
+            this.Disabled = new Boolean(source.Disabled);
+        }
+        if (source.OtaVersion != null) {
+            this.OtaVersion = new String(source.OtaVersion);
+        }
+        if (source.Online != null) {
+            this.Online = new Long(source.Online);
+        }
+        if (source.LastOnlineTime != null) {
+            this.LastOnlineTime = new Long(source.LastOnlineTime);
+        }
+        if (source.IotModel != null) {
+            this.IotModel = new String(source.IotModel);
+        }
+        if (source.DeviceName != null) {
+            this.DeviceName = new String(source.DeviceName);
+        }
+        if (source.ProductId != null) {
+            this.ProductId = new String(source.ProductId);
+        }
+        if (source.Certificate != null) {
+            this.Certificate = new String(source.Certificate);
+        }
+        if (source.WhiteBoxSoUrl != null) {
+            this.WhiteBoxSoUrl = new String(source.WhiteBoxSoUrl);
+        }
+        if (source.StreamStatus != null) {
+            this.StreamStatus = new Boolean(source.StreamStatus);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

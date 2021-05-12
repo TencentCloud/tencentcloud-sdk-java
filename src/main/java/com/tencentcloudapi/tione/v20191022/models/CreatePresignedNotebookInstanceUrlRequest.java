@@ -73,6 +73,23 @@ public class CreatePresignedNotebookInstanceUrlRequest extends AbstractModel{
         this.SessionExpirationDurationInSeconds = SessionExpirationDurationInSeconds;
     }
 
+    public CreatePresignedNotebookInstanceUrlRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreatePresignedNotebookInstanceUrlRequest(CreatePresignedNotebookInstanceUrlRequest source) {
+        if (source.NotebookInstanceName != null) {
+            this.NotebookInstanceName = new String(source.NotebookInstanceName);
+        }
+        if (source.SessionExpirationDurationInSeconds != null) {
+            this.SessionExpirationDurationInSeconds = new Long(source.SessionExpirationDurationInSeconds);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

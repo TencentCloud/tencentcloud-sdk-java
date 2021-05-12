@@ -368,6 +368,56 @@ FilterType = 2表示用户使用 BindingKey 过滤。
         this.Trace = Trace;
     }
 
+    public TopicSet() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TopicSet(TopicSet source) {
+        if (source.TopicId != null) {
+            this.TopicId = new String(source.TopicId);
+        }
+        if (source.TopicName != null) {
+            this.TopicName = new String(source.TopicName);
+        }
+        if (source.MsgRetentionSeconds != null) {
+            this.MsgRetentionSeconds = new Long(source.MsgRetentionSeconds);
+        }
+        if (source.MaxMsgSize != null) {
+            this.MaxMsgSize = new Long(source.MaxMsgSize);
+        }
+        if (source.Qps != null) {
+            this.Qps = new Long(source.Qps);
+        }
+        if (source.FilterType != null) {
+            this.FilterType = new Long(source.FilterType);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new Long(source.CreateTime);
+        }
+        if (source.LastModifyTime != null) {
+            this.LastModifyTime = new Long(source.LastModifyTime);
+        }
+        if (source.MsgCount != null) {
+            this.MsgCount = new Long(source.MsgCount);
+        }
+        if (source.CreateUin != null) {
+            this.CreateUin = new Long(source.CreateUin);
+        }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
+        if (source.Trace != null) {
+            this.Trace = new Boolean(source.Trace);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -137,6 +137,32 @@ public class RecordUsage extends AbstractModel{
         this.AudioTime = AudioTime;
     }
 
+    public RecordUsage() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RecordUsage(RecordUsage source) {
+        if (source.TimeKey != null) {
+            this.TimeKey = new String(source.TimeKey);
+        }
+        if (source.Class1VideoTime != null) {
+            this.Class1VideoTime = new Long(source.Class1VideoTime);
+        }
+        if (source.Class2VideoTime != null) {
+            this.Class2VideoTime = new Long(source.Class2VideoTime);
+        }
+        if (source.Class3VideoTime != null) {
+            this.Class3VideoTime = new Long(source.Class3VideoTime);
+        }
+        if (source.AudioTime != null) {
+            this.AudioTime = new Long(source.AudioTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

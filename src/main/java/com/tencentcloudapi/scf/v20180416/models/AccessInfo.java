@@ -68,6 +68,23 @@ public class AccessInfo extends AbstractModel{
         this.Vip = Vip;
     }
 
+    public AccessInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AccessInfo(AccessInfo source) {
+        if (source.Host != null) {
+            this.Host = new String(source.Host);
+        }
+        if (source.Vip != null) {
+            this.Vip = new String(source.Vip);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

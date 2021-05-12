@@ -137,6 +137,32 @@ public class ReplaceCertRequest extends AbstractModel{
         this.DeleteOld = DeleteOld;
     }
 
+    public ReplaceCertRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ReplaceCertRequest(ReplaceCertRequest source) {
+        if (source.OldCertId != null) {
+            this.OldCertId = new String(source.OldCertId);
+        }
+        if (source.NewCert != null) {
+            this.NewCert = new String(source.NewCert);
+        }
+        if (source.NewAlias != null) {
+            this.NewAlias = new String(source.NewAlias);
+        }
+        if (source.NewKey != null) {
+            this.NewKey = new String(source.NewKey);
+        }
+        if (source.DeleteOld != null) {
+            this.DeleteOld = new Long(source.DeleteOld);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

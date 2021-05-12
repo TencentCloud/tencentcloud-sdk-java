@@ -68,6 +68,23 @@ public class DeleteInstanceAccountRequest extends AbstractModel{
         this.AccountName = AccountName;
     }
 
+    public DeleteInstanceAccountRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteInstanceAccountRequest(DeleteInstanceAccountRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.AccountName != null) {
+            this.AccountName = new String(source.AccountName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

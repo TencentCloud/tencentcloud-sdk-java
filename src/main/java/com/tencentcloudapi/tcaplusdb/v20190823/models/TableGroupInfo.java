@@ -137,6 +137,32 @@ public class TableGroupInfo extends AbstractModel{
         this.TotalSize = TotalSize;
     }
 
+    public TableGroupInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TableGroupInfo(TableGroupInfo source) {
+        if (source.TableGroupId != null) {
+            this.TableGroupId = new String(source.TableGroupId);
+        }
+        if (source.TableGroupName != null) {
+            this.TableGroupName = new String(source.TableGroupName);
+        }
+        if (source.CreatedTime != null) {
+            this.CreatedTime = new String(source.CreatedTime);
+        }
+        if (source.TableCount != null) {
+            this.TableCount = new Long(source.TableCount);
+        }
+        if (source.TotalSize != null) {
+            this.TotalSize = new Long(source.TotalSize);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

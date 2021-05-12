@@ -137,6 +137,32 @@ public class DescribeApplicationTriggerLogPersonalRequest extends AbstractModel{
         this.OrderBy = OrderBy;
     }
 
+    public DescribeApplicationTriggerLogPersonalRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeApplicationTriggerLogPersonalRequest(DescribeApplicationTriggerLogPersonalRequest source) {
+        if (source.RepoName != null) {
+            this.RepoName = new String(source.RepoName);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.Order != null) {
+            this.Order = new String(source.Order);
+        }
+        if (source.OrderBy != null) {
+            this.OrderBy = new String(source.OrderBy);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

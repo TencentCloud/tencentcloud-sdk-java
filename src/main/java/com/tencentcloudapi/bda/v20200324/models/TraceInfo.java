@@ -68,6 +68,26 @@ public class TraceInfo extends AbstractModel{
         this.BodyIds = BodyIds;
     }
 
+    public TraceInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TraceInfo(TraceInfo source) {
+        if (source.TraceId != null) {
+            this.TraceId = new String(source.TraceId);
+        }
+        if (source.BodyIds != null) {
+            this.BodyIds = new String[source.BodyIds.length];
+            for (int i = 0; i < source.BodyIds.length; i++) {
+                this.BodyIds[i] = new String(source.BodyIds[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

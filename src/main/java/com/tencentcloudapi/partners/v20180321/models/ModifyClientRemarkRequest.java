@@ -68,6 +68,23 @@ public class ModifyClientRemarkRequest extends AbstractModel{
         this.ClientUin = ClientUin;
     }
 
+    public ModifyClientRemarkRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyClientRemarkRequest(ModifyClientRemarkRequest source) {
+        if (source.ClientRemark != null) {
+            this.ClientRemark = new String(source.ClientRemark);
+        }
+        if (source.ClientUin != null) {
+            this.ClientUin = new String(source.ClientUin);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -229,6 +229,44 @@ public class DescribeUploadIncrementalInfoResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeUploadIncrementalInfoResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeUploadIncrementalInfoResponse(DescribeUploadIncrementalInfoResponse source) {
+        if (source.BucketName != null) {
+            this.BucketName = new String(source.BucketName);
+        }
+        if (source.Region != null) {
+            this.Region = new String(source.Region);
+        }
+        if (source.Path != null) {
+            this.Path = new String(source.Path);
+        }
+        if (source.TmpSecretId != null) {
+            this.TmpSecretId = new String(source.TmpSecretId);
+        }
+        if (source.TmpSecretKey != null) {
+            this.TmpSecretKey = new String(source.TmpSecretKey);
+        }
+        if (source.XCosSecurityToken != null) {
+            this.XCosSecurityToken = new String(source.XCosSecurityToken);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.ExpiredTime != null) {
+            this.ExpiredTime = new String(source.ExpiredTime);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -230,6 +230,35 @@ public class PackageFreeQuotaInfo extends AbstractModel{
         this.FreeQuotaType = FreeQuotaType;
     }
 
+    public PackageFreeQuotaInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PackageFreeQuotaInfo(PackageFreeQuotaInfo source) {
+        if (source.ResourceType != null) {
+            this.ResourceType = new String(source.ResourceType);
+        }
+        if (source.ResourceMetric != null) {
+            this.ResourceMetric = new String(source.ResourceMetric);
+        }
+        if (source.FreeQuota != null) {
+            this.FreeQuota = new Long(source.FreeQuota);
+        }
+        if (source.MetricUnit != null) {
+            this.MetricUnit = new String(source.MetricUnit);
+        }
+        if (source.DeductType != null) {
+            this.DeductType = new String(source.DeductType);
+        }
+        if (source.FreeQuotaType != null) {
+            this.FreeQuotaType = new String(source.FreeQuotaType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

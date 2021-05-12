@@ -134,6 +134,29 @@ public class QuotaResource extends AbstractModel{
         this.ExtraInfo = ExtraInfo;
     }
 
+    public QuotaResource() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public QuotaResource(QuotaResource source) {
+        if (source.ResourceType != null) {
+            this.ResourceType = new Long(source.ResourceType);
+        }
+        if (source.HardLimit != null) {
+            this.HardLimit = new Long(source.HardLimit);
+        }
+        if (source.Remaining != null) {
+            this.Remaining = new Long(source.Remaining);
+        }
+        if (source.ExtraInfo != null) {
+            this.ExtraInfo = new String(source.ExtraInfo);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

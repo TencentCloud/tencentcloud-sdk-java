@@ -124,6 +124,29 @@ public class ModifySyncJobRequest extends AbstractModel{
         this.DatabaseInfo = DatabaseInfo;
     }
 
+    public ModifySyncJobRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifySyncJobRequest(ModifySyncJobRequest source) {
+        if (source.JobId != null) {
+            this.JobId = new String(source.JobId);
+        }
+        if (source.JobName != null) {
+            this.JobName = new String(source.JobName);
+        }
+        if (source.SyncOption != null) {
+            this.SyncOption = new SyncOption(source.SyncOption);
+        }
+        if (source.DatabaseInfo != null) {
+            this.DatabaseInfo = new String(source.DatabaseInfo);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

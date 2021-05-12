@@ -68,6 +68,26 @@ public class DescribeSmsTemplateListResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeSmsTemplateListResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeSmsTemplateListResponse(DescribeSmsTemplateListResponse source) {
+        if (source.Data != null) {
+            this.Data = new DescribeSmsTemplateListDataStruct[source.Data.length];
+            for (int i = 0; i < source.Data.length; i++) {
+                this.Data[i] = new DescribeSmsTemplateListDataStruct(source.Data[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

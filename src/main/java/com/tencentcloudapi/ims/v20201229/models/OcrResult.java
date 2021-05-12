@@ -198,6 +198,41 @@ public class OcrResult extends AbstractModel{
         this.Text = Text;
     }
 
+    public OcrResult() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public OcrResult(OcrResult source) {
+        if (source.Scene != null) {
+            this.Scene = new String(source.Scene);
+        }
+        if (source.Suggestion != null) {
+            this.Suggestion = new String(source.Suggestion);
+        }
+        if (source.Label != null) {
+            this.Label = new String(source.Label);
+        }
+        if (source.SubLabel != null) {
+            this.SubLabel = new String(source.SubLabel);
+        }
+        if (source.Score != null) {
+            this.Score = new Long(source.Score);
+        }
+        if (source.Details != null) {
+            this.Details = new OcrTextDetail[source.Details.length];
+            for (int i = 0; i < source.Details.length; i++) {
+                this.Details[i] = new OcrTextDetail(source.Details[i]);
+            }
+        }
+        if (source.Text != null) {
+            this.Text = new String(source.Text);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

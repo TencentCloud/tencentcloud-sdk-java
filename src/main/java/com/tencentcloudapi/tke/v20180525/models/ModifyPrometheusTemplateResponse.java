@@ -45,6 +45,20 @@ public class ModifyPrometheusTemplateResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public ModifyPrometheusTemplateResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyPrometheusTemplateResponse(ModifyPrometheusTemplateResponse source) {
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -183,6 +183,38 @@ public class DescribeAgentBillsRequest extends AbstractModel{
         this.Limit = Limit;
     }
 
+    public DescribeAgentBillsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeAgentBillsRequest(DescribeAgentBillsRequest source) {
+        if (source.SettleMonth != null) {
+            this.SettleMonth = new String(source.SettleMonth);
+        }
+        if (source.ClientUin != null) {
+            this.ClientUin = new String(source.ClientUin);
+        }
+        if (source.PayMode != null) {
+            this.PayMode = new String(source.PayMode);
+        }
+        if (source.OrderId != null) {
+            this.OrderId = new String(source.OrderId);
+        }
+        if (source.ClientRemark != null) {
+            this.ClientRemark = new String(source.ClientRemark);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

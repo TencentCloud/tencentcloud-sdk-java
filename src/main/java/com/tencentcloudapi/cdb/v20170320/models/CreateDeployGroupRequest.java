@@ -137,6 +137,38 @@ public class CreateDeployGroupRequest extends AbstractModel{
         this.DevClass = DevClass;
     }
 
+    public CreateDeployGroupRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateDeployGroupRequest(CreateDeployGroupRequest source) {
+        if (source.DeployGroupName != null) {
+            this.DeployGroupName = new String(source.DeployGroupName);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.Affinity != null) {
+            this.Affinity = new Long[source.Affinity.length];
+            for (int i = 0; i < source.Affinity.length; i++) {
+                this.Affinity[i] = new Long(source.Affinity[i]);
+            }
+        }
+        if (source.LimitNum != null) {
+            this.LimitNum = new Long(source.LimitNum);
+        }
+        if (source.DevClass != null) {
+            this.DevClass = new String[source.DevClass.length];
+            for (int i = 0; i < source.DevClass.length; i++) {
+                this.DevClass[i] = new String(source.DevClass[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

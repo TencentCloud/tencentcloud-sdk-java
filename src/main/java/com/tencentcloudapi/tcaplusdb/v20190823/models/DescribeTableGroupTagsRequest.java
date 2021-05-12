@@ -68,6 +68,26 @@ public class DescribeTableGroupTagsRequest extends AbstractModel{
         this.TableGroupIds = TableGroupIds;
     }
 
+    public DescribeTableGroupTagsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeTableGroupTagsRequest(DescribeTableGroupTagsRequest source) {
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
+        if (source.TableGroupIds != null) {
+            this.TableGroupIds = new String[source.TableGroupIds.length];
+            for (int i = 0; i < source.TableGroupIds.length; i++) {
+                this.TableGroupIds[i] = new String(source.TableGroupIds[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

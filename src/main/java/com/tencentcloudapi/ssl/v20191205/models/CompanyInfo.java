@@ -183,6 +183,38 @@ public class CompanyInfo extends AbstractModel{
         this.CompanyPhone = CompanyPhone;
     }
 
+    public CompanyInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CompanyInfo(CompanyInfo source) {
+        if (source.CompanyName != null) {
+            this.CompanyName = new String(source.CompanyName);
+        }
+        if (source.CompanyId != null) {
+            this.CompanyId = new Long(source.CompanyId);
+        }
+        if (source.CompanyCountry != null) {
+            this.CompanyCountry = new String(source.CompanyCountry);
+        }
+        if (source.CompanyProvince != null) {
+            this.CompanyProvince = new String(source.CompanyProvince);
+        }
+        if (source.CompanyCity != null) {
+            this.CompanyCity = new String(source.CompanyCity);
+        }
+        if (source.CompanyAddress != null) {
+            this.CompanyAddress = new String(source.CompanyAddress);
+        }
+        if (source.CompanyPhone != null) {
+            this.CompanyPhone = new String(source.CompanyPhone);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

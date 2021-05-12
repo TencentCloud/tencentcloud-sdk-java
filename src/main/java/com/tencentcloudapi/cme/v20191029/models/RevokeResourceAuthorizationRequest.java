@@ -180,6 +180,44 @@ public class RevokeResourceAuthorizationRequest extends AbstractModel{
         this.Operator = Operator;
     }
 
+    public RevokeResourceAuthorizationRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RevokeResourceAuthorizationRequest(RevokeResourceAuthorizationRequest source) {
+        if (source.Platform != null) {
+            this.Platform = new String(source.Platform);
+        }
+        if (source.Owner != null) {
+            this.Owner = new Entity(source.Owner);
+        }
+        if (source.Resources != null) {
+            this.Resources = new Resource[source.Resources.length];
+            for (int i = 0; i < source.Resources.length; i++) {
+                this.Resources[i] = new Resource(source.Resources[i]);
+            }
+        }
+        if (source.Authorizees != null) {
+            this.Authorizees = new Entity[source.Authorizees.length];
+            for (int i = 0; i < source.Authorizees.length; i++) {
+                this.Authorizees[i] = new Entity(source.Authorizees[i]);
+            }
+        }
+        if (source.Permissions != null) {
+            this.Permissions = new String[source.Permissions.length];
+            for (int i = 0; i < source.Permissions.length; i++) {
+                this.Permissions[i] = new String(source.Permissions[i]);
+            }
+        }
+        if (source.Operator != null) {
+            this.Operator = new String(source.Operator);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

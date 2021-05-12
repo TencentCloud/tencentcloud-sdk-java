@@ -68,6 +68,23 @@ public class TaskOutputMediaInfo extends AbstractModel{
         this.MediaBasicInfo = MediaBasicInfo;
     }
 
+    public TaskOutputMediaInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TaskOutputMediaInfo(TaskOutputMediaInfo source) {
+        if (source.FileId != null) {
+            this.FileId = new String(source.FileId);
+        }
+        if (source.MediaBasicInfo != null) {
+            this.MediaBasicInfo = new MediaBasicInfo(source.MediaBasicInfo);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

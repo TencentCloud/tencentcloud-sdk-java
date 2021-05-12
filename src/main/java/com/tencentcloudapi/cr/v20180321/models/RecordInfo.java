@@ -229,6 +229,44 @@ public class RecordInfo extends AbstractModel{
         this.CosFileName = CosFileName;
     }
 
+    public RecordInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RecordInfo(RecordInfo source) {
+        if (source.BotId != null) {
+            this.BotId = new String(source.BotId);
+        }
+        if (source.BotName != null) {
+            this.BotName = new String(source.BotName);
+        }
+        if (source.BizDate != null) {
+            this.BizDate = new String(source.BizDate);
+        }
+        if (source.CalledPhone != null) {
+            this.CalledPhone = new String(source.CalledPhone);
+        }
+        if (source.CallStartTime != null) {
+            this.CallStartTime = new String(source.CallStartTime);
+        }
+        if (source.Duration != null) {
+            this.Duration = new Long(source.Duration);
+        }
+        if (source.CosUrl != null) {
+            this.CosUrl = new String(source.CosUrl);
+        }
+        if (source.DialogueLog != null) {
+            this.DialogueLog = new String(source.DialogueLog);
+        }
+        if (source.CosFileName != null) {
+            this.CosFileName = new String(source.CosFileName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

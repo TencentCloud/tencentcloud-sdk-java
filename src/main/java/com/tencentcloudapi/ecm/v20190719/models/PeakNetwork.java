@@ -114,6 +114,29 @@ public class PeakNetwork extends AbstractModel{
         this.ChargeNetwork = ChargeNetwork;
     }
 
+    public PeakNetwork() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PeakNetwork(PeakNetwork source) {
+        if (source.RecordTime != null) {
+            this.RecordTime = new String(source.RecordTime);
+        }
+        if (source.PeakInNetwork != null) {
+            this.PeakInNetwork = new String(source.PeakInNetwork);
+        }
+        if (source.PeakOutNetwork != null) {
+            this.PeakOutNetwork = new String(source.PeakOutNetwork);
+        }
+        if (source.ChargeNetwork != null) {
+            this.ChargeNetwork = new String(source.ChargeNetwork);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

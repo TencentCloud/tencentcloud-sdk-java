@@ -91,6 +91,29 @@ public class DescribeSlowLogResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeSlowLogResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeSlowLogResponse(DescribeSlowLogResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.InstanceSlowlogDetail != null) {
+            this.InstanceSlowlogDetail = new InstanceSlowlogDetail[source.InstanceSlowlogDetail.length];
+            for (int i = 0; i < source.InstanceSlowlogDetail.length; i++) {
+                this.InstanceSlowlogDetail[i] = new InstanceSlowlogDetail(source.InstanceSlowlogDetail[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

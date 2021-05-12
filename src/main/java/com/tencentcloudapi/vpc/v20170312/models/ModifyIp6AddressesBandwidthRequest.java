@@ -91,6 +91,32 @@ public class ModifyIp6AddressesBandwidthRequest extends AbstractModel{
         this.Ip6AddressIds = Ip6AddressIds;
     }
 
+    public ModifyIp6AddressesBandwidthRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyIp6AddressesBandwidthRequest(ModifyIp6AddressesBandwidthRequest source) {
+        if (source.InternetMaxBandwidthOut != null) {
+            this.InternetMaxBandwidthOut = new Long(source.InternetMaxBandwidthOut);
+        }
+        if (source.Ip6Addresses != null) {
+            this.Ip6Addresses = new String[source.Ip6Addresses.length];
+            for (int i = 0; i < source.Ip6Addresses.length; i++) {
+                this.Ip6Addresses[i] = new String(source.Ip6Addresses[i]);
+            }
+        }
+        if (source.Ip6AddressIds != null) {
+            this.Ip6AddressIds = new String[source.Ip6AddressIds.length];
+            for (int i = 0; i < source.Ip6AddressIds.length; i++) {
+                this.Ip6AddressIds[i] = new String(source.Ip6AddressIds[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

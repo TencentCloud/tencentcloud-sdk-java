@@ -321,6 +321,56 @@ public class TrainTicketOCRResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public TrainTicketOCRResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TrainTicketOCRResponse(TrainTicketOCRResponse source) {
+        if (source.TicketNum != null) {
+            this.TicketNum = new String(source.TicketNum);
+        }
+        if (source.StartStation != null) {
+            this.StartStation = new String(source.StartStation);
+        }
+        if (source.DestinationStation != null) {
+            this.DestinationStation = new String(source.DestinationStation);
+        }
+        if (source.Date != null) {
+            this.Date = new String(source.Date);
+        }
+        if (source.TrainNum != null) {
+            this.TrainNum = new String(source.TrainNum);
+        }
+        if (source.Seat != null) {
+            this.Seat = new String(source.Seat);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Price != null) {
+            this.Price = new String(source.Price);
+        }
+        if (source.SeatCategory != null) {
+            this.SeatCategory = new String(source.SeatCategory);
+        }
+        if (source.ID != null) {
+            this.ID = new String(source.ID);
+        }
+        if (source.InvoiceType != null) {
+            this.InvoiceType = new String(source.InvoiceType);
+        }
+        if (source.SerialNumber != null) {
+            this.SerialNumber = new String(source.SerialNumber);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

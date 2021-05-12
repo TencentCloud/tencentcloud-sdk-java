@@ -68,6 +68,23 @@ public class SchemaSpaceTimeSeries extends AbstractModel{
         this.SeriesData = SeriesData;
     }
 
+    public SchemaSpaceTimeSeries() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SchemaSpaceTimeSeries(SchemaSpaceTimeSeries source) {
+        if (source.TableSchema != null) {
+            this.TableSchema = new String(source.TableSchema);
+        }
+        if (source.SeriesData != null) {
+            this.SeriesData = new MonitorMetricSeriesData(source.SeriesData);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

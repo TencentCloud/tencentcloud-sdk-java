@@ -45,6 +45,20 @@ public class DescribeAccessRegionsByDestRegionRequest extends AbstractModel{
         this.DestRegion = DestRegion;
     }
 
+    public DescribeAccessRegionsByDestRegionRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeAccessRegionsByDestRegionRequest(DescribeAccessRegionsByDestRegionRequest source) {
+        if (source.DestRegion != null) {
+            this.DestRegion = new String(source.DestRegion);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

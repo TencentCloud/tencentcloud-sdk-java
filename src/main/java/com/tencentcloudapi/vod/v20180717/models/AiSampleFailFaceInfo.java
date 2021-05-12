@@ -101,6 +101,26 @@ public class AiSampleFailFaceInfo extends AbstractModel{
         this.Message = Message;
     }
 
+    public AiSampleFailFaceInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AiSampleFailFaceInfo(AiSampleFailFaceInfo source) {
+        if (source.Index != null) {
+            this.Index = new Long(source.Index);
+        }
+        if (source.ErrCode != null) {
+            this.ErrCode = new Long(source.ErrCode);
+        }
+        if (source.Message != null) {
+            this.Message = new String(source.Message);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

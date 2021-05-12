@@ -160,6 +160,35 @@ public class ParamRecord extends AbstractModel{
         this.ModifyTime = ModifyTime;
     }
 
+    public ParamRecord() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ParamRecord(ParamRecord source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.ParamName != null) {
+            this.ParamName = new String(source.ParamName);
+        }
+        if (source.OldValue != null) {
+            this.OldValue = new String(source.OldValue);
+        }
+        if (source.NewValue != null) {
+            this.NewValue = new String(source.NewValue);
+        }
+        if (source.IsSucess != null) {
+            this.IsSucess = new Boolean(source.IsSucess);
+        }
+        if (source.ModifyTime != null) {
+            this.ModifyTime = new String(source.ModifyTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

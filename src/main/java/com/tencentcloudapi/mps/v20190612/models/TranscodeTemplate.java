@@ -366,6 +366,56 @@ public class TranscodeTemplate extends AbstractModel{
         this.UpdateTime = UpdateTime;
     }
 
+    public TranscodeTemplate() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TranscodeTemplate(TranscodeTemplate source) {
+        if (source.Definition != null) {
+            this.Definition = new String(source.Definition);
+        }
+        if (source.Container != null) {
+            this.Container = new String(source.Container);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Comment != null) {
+            this.Comment = new String(source.Comment);
+        }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.RemoveVideo != null) {
+            this.RemoveVideo = new Long(source.RemoveVideo);
+        }
+        if (source.RemoveAudio != null) {
+            this.RemoveAudio = new Long(source.RemoveAudio);
+        }
+        if (source.VideoTemplate != null) {
+            this.VideoTemplate = new VideoTemplateInfo(source.VideoTemplate);
+        }
+        if (source.AudioTemplate != null) {
+            this.AudioTemplate = new AudioTemplateInfo(source.AudioTemplate);
+        }
+        if (source.TEHDConfig != null) {
+            this.TEHDConfig = new TEHDConfig(source.TEHDConfig);
+        }
+        if (source.ContainerType != null) {
+            this.ContainerType = new String(source.ContainerType);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new String(source.UpdateTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

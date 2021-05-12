@@ -106,6 +106,26 @@ public class URLNotice extends AbstractModel{
         this.ValidationCode = ValidationCode;
     }
 
+    public URLNotice() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public URLNotice(URLNotice source) {
+        if (source.URL != null) {
+            this.URL = new String(source.URL);
+        }
+        if (source.IsValid != null) {
+            this.IsValid = new Long(source.IsValid);
+        }
+        if (source.ValidationCode != null) {
+            this.ValidationCode = new String(source.ValidationCode);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

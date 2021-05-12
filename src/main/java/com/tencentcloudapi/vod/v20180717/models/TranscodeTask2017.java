@@ -216,6 +216,44 @@ public class TranscodeTask2017 extends AbstractModel{
         this.PlayInfoSet = PlayInfoSet;
     }
 
+    public TranscodeTask2017() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TranscodeTask2017(TranscodeTask2017 source) {
+        if (source.TaskId != null) {
+            this.TaskId = new String(source.TaskId);
+        }
+        if (source.ErrCode != null) {
+            this.ErrCode = new Long(source.ErrCode);
+        }
+        if (source.Message != null) {
+            this.Message = new String(source.Message);
+        }
+        if (source.FileId != null) {
+            this.FileId = new String(source.FileId);
+        }
+        if (source.FileName != null) {
+            this.FileName = new String(source.FileName);
+        }
+        if (source.Duration != null) {
+            this.Duration = new Long(source.Duration);
+        }
+        if (source.CoverUrl != null) {
+            this.CoverUrl = new String(source.CoverUrl);
+        }
+        if (source.PlayInfoSet != null) {
+            this.PlayInfoSet = new TranscodePlayInfo2017[source.PlayInfoSet.length];
+            for (int i = 0; i < source.PlayInfoSet.length; i++) {
+                this.PlayInfoSet[i] = new TranscodePlayInfo2017(source.PlayInfoSet[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

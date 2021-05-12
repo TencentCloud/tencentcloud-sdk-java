@@ -180,6 +180,41 @@ false：关闭60天内禁止转移注册商锁定
         this.LockTransfer = LockTransfer;
     }
 
+    public TransferInDomainBatchRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TransferInDomainBatchRequest(TransferInDomainBatchRequest source) {
+        if (source.Domains != null) {
+            this.Domains = new String[source.Domains.length];
+            for (int i = 0; i < source.Domains.length; i++) {
+                this.Domains[i] = new String(source.Domains[i]);
+            }
+        }
+        if (source.PassWords != null) {
+            this.PassWords = new String[source.PassWords.length];
+            for (int i = 0; i < source.PassWords.length; i++) {
+                this.PassWords[i] = new String(source.PassWords[i]);
+            }
+        }
+        if (source.TemplateId != null) {
+            this.TemplateId = new String(source.TemplateId);
+        }
+        if (source.PayMode != null) {
+            this.PayMode = new Long(source.PayMode);
+        }
+        if (source.AutoRenewFlag != null) {
+            this.AutoRenewFlag = new Long(source.AutoRenewFlag);
+        }
+        if (source.LockTransfer != null) {
+            this.LockTransfer = new Boolean(source.LockTransfer);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

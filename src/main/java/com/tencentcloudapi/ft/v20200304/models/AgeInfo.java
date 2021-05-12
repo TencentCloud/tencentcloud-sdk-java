@@ -73,6 +73,23 @@ public class AgeInfo extends AbstractModel{
         this.FaceRect = FaceRect;
     }
 
+    public AgeInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AgeInfo(AgeInfo source) {
+        if (source.Age != null) {
+            this.Age = new Long(source.Age);
+        }
+        if (source.FaceRect != null) {
+            this.FaceRect = new FaceRect(source.FaceRect);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

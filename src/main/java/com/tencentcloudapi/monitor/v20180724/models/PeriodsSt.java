@@ -68,6 +68,26 @@ public class PeriodsSt extends AbstractModel{
         this.StatType = StatType;
     }
 
+    public PeriodsSt() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PeriodsSt(PeriodsSt source) {
+        if (source.Period != null) {
+            this.Period = new String(source.Period);
+        }
+        if (source.StatType != null) {
+            this.StatType = new String[source.StatType.length];
+            for (int i = 0; i < source.StatType.length; i++) {
+                this.StatType[i] = new String(source.StatType[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

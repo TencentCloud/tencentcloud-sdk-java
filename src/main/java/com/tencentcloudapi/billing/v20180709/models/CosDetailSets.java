@@ -183,6 +183,38 @@ public class CosDetailSets extends AbstractModel{
         this.Unit = Unit;
     }
 
+    public CosDetailSets() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CosDetailSets(CosDetailSets source) {
+        if (source.BucketName != null) {
+            this.BucketName = new String(source.BucketName);
+        }
+        if (source.DosageBeginTime != null) {
+            this.DosageBeginTime = new String(source.DosageBeginTime);
+        }
+        if (source.DosageEndTime != null) {
+            this.DosageEndTime = new String(source.DosageEndTime);
+        }
+        if (source.SubProductCodeName != null) {
+            this.SubProductCodeName = new String(source.SubProductCodeName);
+        }
+        if (source.BillingItemCodeName != null) {
+            this.BillingItemCodeName = new String(source.BillingItemCodeName);
+        }
+        if (source.DosageValue != null) {
+            this.DosageValue = new String(source.DosageValue);
+        }
+        if (source.Unit != null) {
+            this.Unit = new String(source.Unit);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

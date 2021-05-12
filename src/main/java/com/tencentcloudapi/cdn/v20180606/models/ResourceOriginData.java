@@ -88,6 +88,26 @@ all：账号维度明细数据
         this.OriginData = OriginData;
     }
 
+    public ResourceOriginData() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ResourceOriginData(ResourceOriginData source) {
+        if (source.Resource != null) {
+            this.Resource = new String(source.Resource);
+        }
+        if (source.OriginData != null) {
+            this.OriginData = new CdnData[source.OriginData.length];
+            for (int i = 0; i < source.OriginData.length; i++) {
+                this.OriginData[i] = new CdnData(source.OriginData[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

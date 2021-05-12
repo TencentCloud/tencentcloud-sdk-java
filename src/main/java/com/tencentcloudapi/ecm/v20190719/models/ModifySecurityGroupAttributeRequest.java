@@ -91,6 +91,26 @@ public class ModifySecurityGroupAttributeRequest extends AbstractModel{
         this.GroupDescription = GroupDescription;
     }
 
+    public ModifySecurityGroupAttributeRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifySecurityGroupAttributeRequest(ModifySecurityGroupAttributeRequest source) {
+        if (source.SecurityGroupId != null) {
+            this.SecurityGroupId = new String(source.SecurityGroupId);
+        }
+        if (source.GroupName != null) {
+            this.GroupName = new String(source.GroupName);
+        }
+        if (source.GroupDescription != null) {
+            this.GroupDescription = new String(source.GroupDescription);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

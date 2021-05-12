@@ -91,6 +91,29 @@ public class DescribeVpcInstancesResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeVpcInstancesResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeVpcInstancesResponse(DescribeVpcInstancesResponse source) {
+        if (source.InstanceSet != null) {
+            this.InstanceSet = new CvmInstance[source.InstanceSet.length];
+            for (int i = 0; i < source.InstanceSet.length; i++) {
+                this.InstanceSet[i] = new CvmInstance(source.InstanceSet[i]);
+            }
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

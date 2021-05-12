@@ -91,6 +91,26 @@ public class TrajectorySunData extends AbstractModel{
         this.AvgStayTime = AvgStayTime;
     }
 
+    public TrajectorySunData() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TrajectorySunData(TrajectorySunData source) {
+        if (source.Zones != null) {
+            this.Zones = new String(source.Zones);
+        }
+        if (source.Count != null) {
+            this.Count = new Long(source.Count);
+        }
+        if (source.AvgStayTime != null) {
+            this.AvgStayTime = new Long(source.AvgStayTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

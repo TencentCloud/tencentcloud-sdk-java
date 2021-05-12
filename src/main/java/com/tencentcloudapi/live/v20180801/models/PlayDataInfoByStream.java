@@ -68,6 +68,23 @@ public class PlayDataInfoByStream extends AbstractModel{
         this.TotalFlux = TotalFlux;
     }
 
+    public PlayDataInfoByStream() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PlayDataInfoByStream(PlayDataInfoByStream source) {
+        if (source.StreamName != null) {
+            this.StreamName = new String(source.StreamName);
+        }
+        if (source.TotalFlux != null) {
+            this.TotalFlux = new Float(source.TotalFlux);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

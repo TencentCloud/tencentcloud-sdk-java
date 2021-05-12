@@ -91,6 +91,32 @@ public class DescribeBackupUrlResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeBackupUrlResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeBackupUrlResponse(DescribeBackupUrlResponse source) {
+        if (source.DownloadUrl != null) {
+            this.DownloadUrl = new String[source.DownloadUrl.length];
+            for (int i = 0; i < source.DownloadUrl.length; i++) {
+                this.DownloadUrl[i] = new String(source.DownloadUrl[i]);
+            }
+        }
+        if (source.InnerDownloadUrl != null) {
+            this.InnerDownloadUrl = new String[source.InnerDownloadUrl.length];
+            for (int i = 0; i < source.InnerDownloadUrl.length; i++) {
+                this.InnerDownloadUrl[i] = new String(source.InnerDownloadUrl[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -206,6 +206,41 @@ public class UploadOtaVersionRequest extends AbstractModel{
         this.Contents = Contents;
     }
 
+    public UploadOtaVersionRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UploadOtaVersionRequest(UploadOtaVersionRequest source) {
+        if (source.ProductId != null) {
+            this.ProductId = new String(source.ProductId);
+        }
+        if (source.OtaVersion != null) {
+            this.OtaVersion = new String(source.OtaVersion);
+        }
+        if (source.VersionUrl != null) {
+            this.VersionUrl = new String(source.VersionUrl);
+        }
+        if (source.FileSize != null) {
+            this.FileSize = new Long(source.FileSize);
+        }
+        if (source.Md5 != null) {
+            this.Md5 = new String(source.Md5);
+        }
+        if (source.Operator != null) {
+            this.Operator = new String(source.Operator);
+        }
+        if (source.Remark != null) {
+            this.Remark = new String(source.Remark);
+        }
+        if (source.Contents != null) {
+            this.Contents = new Contents(source.Contents);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

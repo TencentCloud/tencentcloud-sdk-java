@@ -106,6 +106,26 @@ public class PersistentVolumeContext extends AbstractModel{
         this.DiskNum = DiskNum;
     }
 
+    public PersistentVolumeContext() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PersistentVolumeContext(PersistentVolumeContext source) {
+        if (source.DiskSize != null) {
+            this.DiskSize = new Long(source.DiskSize);
+        }
+        if (source.DiskType != null) {
+            this.DiskType = new String(source.DiskType);
+        }
+        if (source.DiskNum != null) {
+            this.DiskNum = new Long(source.DiskNum);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

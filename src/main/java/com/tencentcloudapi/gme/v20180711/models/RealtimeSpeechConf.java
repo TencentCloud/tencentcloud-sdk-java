@@ -68,6 +68,23 @@ public class RealtimeSpeechConf extends AbstractModel{
         this.Quality = Quality;
     }
 
+    public RealtimeSpeechConf() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RealtimeSpeechConf(RealtimeSpeechConf source) {
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.Quality != null) {
+            this.Quality = new String(source.Quality);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

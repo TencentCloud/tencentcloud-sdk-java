@@ -346,6 +346,59 @@ public class SREInstance extends AbstractModel{
         this.Paymode = Paymode;
     }
 
+    public SREInstance() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SREInstance(SREInstance source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Edition != null) {
+            this.Edition = new String(source.Edition);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.SpecId != null) {
+            this.SpecId = new String(source.SpecId);
+        }
+        if (source.Replica != null) {
+            this.Replica = new Long(source.Replica);
+        }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.SubnetIds != null) {
+            this.SubnetIds = new String[source.SubnetIds.length];
+            for (int i = 0; i < source.SubnetIds.length; i++) {
+                this.SubnetIds[i] = new String(source.SubnetIds[i]);
+            }
+        }
+        if (source.EnableStorage != null) {
+            this.EnableStorage = new Boolean(source.EnableStorage);
+        }
+        if (source.StorageType != null) {
+            this.StorageType = new String(source.StorageType);
+        }
+        if (source.StorageCapacity != null) {
+            this.StorageCapacity = new Long(source.StorageCapacity);
+        }
+        if (source.Paymode != null) {
+            this.Paymode = new String(source.Paymode);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

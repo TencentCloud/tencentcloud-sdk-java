@@ -91,6 +91,26 @@ public class DetachNetworkInterfaceRequest extends AbstractModel{
         this.EcmRegion = EcmRegion;
     }
 
+    public DetachNetworkInterfaceRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DetachNetworkInterfaceRequest(DetachNetworkInterfaceRequest source) {
+        if (source.NetworkInterfaceId != null) {
+            this.NetworkInterfaceId = new String(source.NetworkInterfaceId);
+        }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.EcmRegion != null) {
+            this.EcmRegion = new String(source.EcmRegion);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

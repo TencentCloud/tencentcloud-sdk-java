@@ -91,6 +91,26 @@ public class DescribeModelRequest extends AbstractModel{
         this.ServType = ServType;
     }
 
+    public DescribeModelRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeModelRequest(DescribeModelRequest source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Cluster != null) {
+            this.Cluster = new String(source.Cluster);
+        }
+        if (source.ServType != null) {
+            this.ServType = new String(source.ServType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

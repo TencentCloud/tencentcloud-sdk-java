@@ -526,6 +526,71 @@ public class VersionData extends AbstractModel{
         this.AliveInMonthCnt = AliveInMonthCnt;
     }
 
+    public VersionData() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public VersionData(VersionData source) {
+        if (source.ProductId != null) {
+            this.ProductId = new String(source.ProductId);
+        }
+        if (source.OtaVersion != null) {
+            this.OtaVersion = new String(source.OtaVersion);
+        }
+        if (source.PubStatus != null) {
+            this.PubStatus = new Long(source.PubStatus);
+        }
+        if (source.VersionUrl != null) {
+            this.VersionUrl = new String(source.VersionUrl);
+        }
+        if (source.FileSize != null) {
+            this.FileSize = new Long(source.FileSize);
+        }
+        if (source.Md5 != null) {
+            this.Md5 = new String(source.Md5);
+        }
+        if (source.OldVersions != null) {
+            this.OldVersions = new String(source.OldVersions);
+        }
+        if (source.Tids != null) {
+            this.Tids = new String(source.Tids);
+        }
+        if (source.GrayValue != null) {
+            this.GrayValue = new Long(source.GrayValue);
+        }
+        if (source.PublishTime != null) {
+            this.PublishTime = new Long(source.PublishTime);
+        }
+        if (source.ActiveCount != null) {
+            this.ActiveCount = new Long(source.ActiveCount);
+        }
+        if (source.OnlineCount != null) {
+            this.OnlineCount = new Long(source.OnlineCount);
+        }
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new Long(source.UpdateTime);
+        }
+        if (source.UploadTime != null) {
+            this.UploadTime = new Long(source.UploadTime);
+        }
+        if (source.ModifyTimes != null) {
+            this.ModifyTimes = new Long(source.ModifyTimes);
+        }
+        if (source.Remark != null) {
+            this.Remark = new String(source.Remark);
+        }
+        if (source.Contents != null) {
+            this.Contents = new Contents(source.Contents);
+        }
+        if (source.AliveInMonthCnt != null) {
+            this.AliveInMonthCnt = new Long(source.AliveInMonthCnt);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

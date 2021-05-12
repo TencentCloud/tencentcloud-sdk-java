@@ -45,6 +45,20 @@ public class Database extends AbstractModel{
         this.DbName = DbName;
     }
 
+    public Database() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Database(Database source) {
+        if (source.DbName != null) {
+            this.DbName = new String(source.DbName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

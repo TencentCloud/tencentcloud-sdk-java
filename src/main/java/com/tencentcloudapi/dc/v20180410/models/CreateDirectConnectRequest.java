@@ -418,6 +418,68 @@ public class CreateDirectConnectRequest extends AbstractModel{
         this.SignLaw = SignLaw;
     }
 
+    public CreateDirectConnectRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateDirectConnectRequest(CreateDirectConnectRequest source) {
+        if (source.DirectConnectName != null) {
+            this.DirectConnectName = new String(source.DirectConnectName);
+        }
+        if (source.AccessPointId != null) {
+            this.AccessPointId = new String(source.AccessPointId);
+        }
+        if (source.LineOperator != null) {
+            this.LineOperator = new String(source.LineOperator);
+        }
+        if (source.PortType != null) {
+            this.PortType = new String(source.PortType);
+        }
+        if (source.CircuitCode != null) {
+            this.CircuitCode = new String(source.CircuitCode);
+        }
+        if (source.Location != null) {
+            this.Location = new String(source.Location);
+        }
+        if (source.Bandwidth != null) {
+            this.Bandwidth = new Long(source.Bandwidth);
+        }
+        if (source.RedundantDirectConnectId != null) {
+            this.RedundantDirectConnectId = new String(source.RedundantDirectConnectId);
+        }
+        if (source.Vlan != null) {
+            this.Vlan = new Long(source.Vlan);
+        }
+        if (source.TencentAddress != null) {
+            this.TencentAddress = new String(source.TencentAddress);
+        }
+        if (source.CustomerAddress != null) {
+            this.CustomerAddress = new String(source.CustomerAddress);
+        }
+        if (source.CustomerName != null) {
+            this.CustomerName = new String(source.CustomerName);
+        }
+        if (source.CustomerContactMail != null) {
+            this.CustomerContactMail = new String(source.CustomerContactMail);
+        }
+        if (source.CustomerContactNumber != null) {
+            this.CustomerContactNumber = new String(source.CustomerContactNumber);
+        }
+        if (source.FaultReportContactPerson != null) {
+            this.FaultReportContactPerson = new String(source.FaultReportContactPerson);
+        }
+        if (source.FaultReportContactNumber != null) {
+            this.FaultReportContactNumber = new String(source.FaultReportContactNumber);
+        }
+        if (source.SignLaw != null) {
+            this.SignLaw = new Boolean(source.SignLaw);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

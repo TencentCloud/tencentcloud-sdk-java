@@ -154,6 +154,29 @@ public class StreamLayout extends AbstractModel{
         this.FillMode = FillMode;
     }
 
+    public StreamLayout() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public StreamLayout(StreamLayout source) {
+        if (source.LayoutParams != null) {
+            this.LayoutParams = new LayoutParams(source.LayoutParams);
+        }
+        if (source.InputStreamId != null) {
+            this.InputStreamId = new String(source.InputStreamId);
+        }
+        if (source.BackgroundColor != null) {
+            this.BackgroundColor = new String(source.BackgroundColor);
+        }
+        if (source.FillMode != null) {
+            this.FillMode = new Long(source.FillMode);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

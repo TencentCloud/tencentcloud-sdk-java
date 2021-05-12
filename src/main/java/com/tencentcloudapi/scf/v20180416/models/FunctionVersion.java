@@ -129,6 +129,29 @@ public class FunctionVersion extends AbstractModel{
         this.ModTime = ModTime;
     }
 
+    public FunctionVersion() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public FunctionVersion(FunctionVersion source) {
+        if (source.Version != null) {
+            this.Version = new String(source.Version);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.AddTime != null) {
+            this.AddTime = new String(source.AddTime);
+        }
+        if (source.ModTime != null) {
+            this.ModTime = new String(source.ModTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

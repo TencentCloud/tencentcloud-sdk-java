@@ -68,6 +68,29 @@ public class DimensionsDetail extends AbstractModel{
         this.Province = Province;
     }
 
+    public DimensionsDetail() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DimensionsDetail(DimensionsDetail source) {
+        if (source.Isp != null) {
+            this.Isp = new String[source.Isp.length];
+            for (int i = 0; i < source.Isp.length; i++) {
+                this.Isp[i] = new String(source.Isp[i]);
+            }
+        }
+        if (source.Province != null) {
+            this.Province = new String[source.Province.length];
+            for (int i = 0; i < source.Province.length; i++) {
+                this.Province[i] = new String(source.Province[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

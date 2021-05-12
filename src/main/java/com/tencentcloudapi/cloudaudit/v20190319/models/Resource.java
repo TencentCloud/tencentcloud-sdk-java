@@ -73,6 +73,23 @@ public class Resource extends AbstractModel{
         this.ResourceName = ResourceName;
     }
 
+    public Resource() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Resource(Resource source) {
+        if (source.ResourceType != null) {
+            this.ResourceType = new String(source.ResourceType);
+        }
+        if (source.ResourceName != null) {
+            this.ResourceName = new String(source.ResourceName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

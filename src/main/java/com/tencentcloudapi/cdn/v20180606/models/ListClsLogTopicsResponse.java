@@ -96,6 +96,29 @@ public class ListClsLogTopicsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public ListClsLogTopicsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ListClsLogTopicsResponse(ListClsLogTopicsResponse source) {
+        if (source.Logset != null) {
+            this.Logset = new LogSetInfo(source.Logset);
+        }
+        if (source.Topics != null) {
+            this.Topics = new TopicInfo[source.Topics.length];
+            for (int i = 0; i < source.Topics.length; i++) {
+                this.Topics[i] = new TopicInfo(source.Topics[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

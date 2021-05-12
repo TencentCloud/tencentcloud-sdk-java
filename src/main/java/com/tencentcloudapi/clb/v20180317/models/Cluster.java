@@ -608,6 +608,83 @@ public class Cluster extends AbstractModel{
         this.ClustersVersion = ClustersVersion;
     }
 
+    public Cluster() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Cluster(Cluster source) {
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
+        if (source.ClusterName != null) {
+            this.ClusterName = new String(source.ClusterName);
+        }
+        if (source.ClusterType != null) {
+            this.ClusterType = new String(source.ClusterType);
+        }
+        if (source.ClusterTag != null) {
+            this.ClusterTag = new String(source.ClusterTag);
+        }
+        if (source.Zone != null) {
+            this.Zone = new String(source.Zone);
+        }
+        if (source.Network != null) {
+            this.Network = new String(source.Network);
+        }
+        if (source.MaxConn != null) {
+            this.MaxConn = new Long(source.MaxConn);
+        }
+        if (source.MaxInFlow != null) {
+            this.MaxInFlow = new Long(source.MaxInFlow);
+        }
+        if (source.MaxInPkg != null) {
+            this.MaxInPkg = new Long(source.MaxInPkg);
+        }
+        if (source.MaxOutFlow != null) {
+            this.MaxOutFlow = new Long(source.MaxOutFlow);
+        }
+        if (source.MaxOutPkg != null) {
+            this.MaxOutPkg = new Long(source.MaxOutPkg);
+        }
+        if (source.MaxNewConn != null) {
+            this.MaxNewConn = new Long(source.MaxNewConn);
+        }
+        if (source.HTTPMaxNewConn != null) {
+            this.HTTPMaxNewConn = new Long(source.HTTPMaxNewConn);
+        }
+        if (source.HTTPSMaxNewConn != null) {
+            this.HTTPSMaxNewConn = new Long(source.HTTPSMaxNewConn);
+        }
+        if (source.HTTPQps != null) {
+            this.HTTPQps = new Long(source.HTTPQps);
+        }
+        if (source.HTTPSQps != null) {
+            this.HTTPSQps = new Long(source.HTTPSQps);
+        }
+        if (source.ResourceCount != null) {
+            this.ResourceCount = new Long(source.ResourceCount);
+        }
+        if (source.IdleResourceCount != null) {
+            this.IdleResourceCount = new Long(source.IdleResourceCount);
+        }
+        if (source.LoadBalanceDirectorCount != null) {
+            this.LoadBalanceDirectorCount = new Long(source.LoadBalanceDirectorCount);
+        }
+        if (source.Isp != null) {
+            this.Isp = new String(source.Isp);
+        }
+        if (source.ClustersZone != null) {
+            this.ClustersZone = new ClustersZone(source.ClustersZone);
+        }
+        if (source.ClustersVersion != null) {
+            this.ClustersVersion = new String(source.ClustersVersion);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

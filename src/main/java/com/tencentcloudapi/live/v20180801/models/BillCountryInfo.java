@@ -68,6 +68,26 @@ public class BillCountryInfo extends AbstractModel{
         this.BandInfoList = BandInfoList;
     }
 
+    public BillCountryInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public BillCountryInfo(BillCountryInfo source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.BandInfoList != null) {
+            this.BandInfoList = new BillDataInfo[source.BandInfoList.length];
+            for (int i = 0; i < source.BandInfoList.length; i++) {
+                this.BandInfoList[i] = new BillDataInfo(source.BandInfoList[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -589,6 +589,89 @@ public class VpcResource extends AbstractModel{
         this.IntVpcId = IntVpcId;
     }
 
+    public VpcResource() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public VpcResource(VpcResource source) {
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.VpcName != null) {
+            this.VpcName = new String(source.VpcName);
+        }
+        if (source.CidrBlock != null) {
+            this.CidrBlock = new String(source.CidrBlock);
+        }
+        if (source.SubnetNum != null) {
+            this.SubnetNum = new Long(source.SubnetNum);
+        }
+        if (source.NatNum != null) {
+            this.NatNum = new Long(source.NatNum);
+        }
+        if (source.State != null) {
+            this.State = new String(source.State);
+        }
+        if (source.MonitorFlag != null) {
+            this.MonitorFlag = new Boolean(source.MonitorFlag);
+        }
+        if (source.CpmNum != null) {
+            this.CpmNum = new Long(source.CpmNum);
+        }
+        if (source.LeaveIpNum != null) {
+            this.LeaveIpNum = new Long(source.LeaveIpNum);
+        }
+        if (source.LbNum != null) {
+            this.LbNum = new Long(source.LbNum);
+        }
+        if (source.TrafficMirrorNum != null) {
+            this.TrafficMirrorNum = new Long(source.TrafficMirrorNum);
+        }
+        if (source.EipNum != null) {
+            this.EipNum = new Long(source.EipNum);
+        }
+        if (source.PlgwNum != null) {
+            this.PlgwNum = new Long(source.PlgwNum);
+        }
+        if (source.PlvpNum != null) {
+            this.PlvpNum = new Long(source.PlvpNum);
+        }
+        if (source.SslVpnGwNum != null) {
+            this.SslVpnGwNum = new Long(source.SslVpnGwNum);
+        }
+        if (source.VpcPeerNum != null) {
+            this.VpcPeerNum = new Long(source.VpcPeerNum);
+        }
+        if (source.IpsecVpnGwNum != null) {
+            this.IpsecVpnGwNum = new Long(source.IpsecVpnGwNum);
+        }
+        if (source.Zone != null) {
+            this.Zone = new String(source.Zone);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.IsOld != null) {
+            this.IsOld = new Boolean(source.IsOld);
+        }
+        if (source.CcnServiceNum != null) {
+            this.CcnServiceNum = new Long(source.CcnServiceNum);
+        }
+        if (source.VpcPeerLimitToAllRegion != null) {
+            this.VpcPeerLimitToAllRegion = new Long(source.VpcPeerLimitToAllRegion);
+        }
+        if (source.VpcPeerLimitToSameRegion != null) {
+            this.VpcPeerLimitToSameRegion = new Long(source.VpcPeerLimitToSameRegion);
+        }
+        if (source.IntVpcId != null) {
+            this.IntVpcId = new Long(source.IntVpcId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

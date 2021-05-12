@@ -321,6 +321,56 @@ public class ResidenceBookletOCRResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public ResidenceBookletOCRResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ResidenceBookletOCRResponse(ResidenceBookletOCRResponse source) {
+        if (source.HouseholdNumber != null) {
+            this.HouseholdNumber = new String(source.HouseholdNumber);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Sex != null) {
+            this.Sex = new String(source.Sex);
+        }
+        if (source.BirthPlace != null) {
+            this.BirthPlace = new String(source.BirthPlace);
+        }
+        if (source.Nation != null) {
+            this.Nation = new String(source.Nation);
+        }
+        if (source.NativePlace != null) {
+            this.NativePlace = new String(source.NativePlace);
+        }
+        if (source.BirthDate != null) {
+            this.BirthDate = new String(source.BirthDate);
+        }
+        if (source.IdCardNumber != null) {
+            this.IdCardNumber = new String(source.IdCardNumber);
+        }
+        if (source.EducationDegree != null) {
+            this.EducationDegree = new String(source.EducationDegree);
+        }
+        if (source.ServicePlace != null) {
+            this.ServicePlace = new String(source.ServicePlace);
+        }
+        if (source.Household != null) {
+            this.Household = new String(source.Household);
+        }
+        if (source.Address != null) {
+            this.Address = new String(source.Address);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

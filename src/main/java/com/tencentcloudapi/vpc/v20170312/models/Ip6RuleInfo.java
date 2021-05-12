@@ -114,6 +114,29 @@ public class Ip6RuleInfo extends AbstractModel{
         this.Vport = Vport;
     }
 
+    public Ip6RuleInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Ip6RuleInfo(Ip6RuleInfo source) {
+        if (source.Vport6 != null) {
+            this.Vport6 = new Long(source.Vport6);
+        }
+        if (source.Protocol != null) {
+            this.Protocol = new String(source.Protocol);
+        }
+        if (source.Vip != null) {
+            this.Vip = new String(source.Vip);
+        }
+        if (source.Vport != null) {
+            this.Vport = new Long(source.Vport);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

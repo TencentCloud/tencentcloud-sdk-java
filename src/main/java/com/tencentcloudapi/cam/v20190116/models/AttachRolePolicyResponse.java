@@ -45,6 +45,20 @@ public class AttachRolePolicyResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public AttachRolePolicyResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AttachRolePolicyResponse(AttachRolePolicyResponse source) {
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

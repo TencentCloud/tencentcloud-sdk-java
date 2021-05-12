@@ -68,6 +68,23 @@ public class OtaPubHistory extends AbstractModel{
         this.PublishTime = PublishTime;
     }
 
+    public OtaPubHistory() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public OtaPubHistory(OtaPubHistory source) {
+        if (source.OtaVersion != null) {
+            this.OtaVersion = new String(source.OtaVersion);
+        }
+        if (source.PublishTime != null) {
+            this.PublishTime = new Long(source.PublishTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

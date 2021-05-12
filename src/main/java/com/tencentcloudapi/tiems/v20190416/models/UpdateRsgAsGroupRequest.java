@@ -137,6 +137,32 @@ public class UpdateRsgAsGroupRequest extends AbstractModel{
         this.DesiredSize = DesiredSize;
     }
 
+    public UpdateRsgAsGroupRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UpdateRsgAsGroupRequest(UpdateRsgAsGroupRequest source) {
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.MaxSize != null) {
+            this.MaxSize = new Long(source.MaxSize);
+        }
+        if (source.MinSize != null) {
+            this.MinSize = new Long(source.MinSize);
+        }
+        if (source.DesiredSize != null) {
+            this.DesiredSize = new Long(source.DesiredSize);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

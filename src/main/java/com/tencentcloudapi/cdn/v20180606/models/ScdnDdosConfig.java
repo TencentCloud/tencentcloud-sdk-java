@@ -45,6 +45,20 @@ public class ScdnDdosConfig extends AbstractModel{
         this.Switch = Switch;
     }
 
+    public ScdnDdosConfig() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ScdnDdosConfig(ScdnDdosConfig source) {
+        if (source.Switch != null) {
+            this.Switch = new String(source.Switch);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

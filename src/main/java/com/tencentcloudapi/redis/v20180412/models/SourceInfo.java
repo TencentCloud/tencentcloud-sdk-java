@@ -91,6 +91,26 @@ public class SourceInfo extends AbstractModel{
         this.Cmd = Cmd;
     }
 
+    public SourceInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SourceInfo(SourceInfo source) {
+        if (source.Ip != null) {
+            this.Ip = new String(source.Ip);
+        }
+        if (source.Conn != null) {
+            this.Conn = new Long(source.Conn);
+        }
+        if (source.Cmd != null) {
+            this.Cmd = new Long(source.Cmd);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

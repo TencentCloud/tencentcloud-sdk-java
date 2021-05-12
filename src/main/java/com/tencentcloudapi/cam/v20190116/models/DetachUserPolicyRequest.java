@@ -68,6 +68,23 @@ public class DetachUserPolicyRequest extends AbstractModel{
         this.DetachUin = DetachUin;
     }
 
+    public DetachUserPolicyRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DetachUserPolicyRequest(DetachUserPolicyRequest source) {
+        if (source.PolicyId != null) {
+            this.PolicyId = new Long(source.PolicyId);
+        }
+        if (source.DetachUin != null) {
+            this.DetachUin = new Long(source.DetachUin);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

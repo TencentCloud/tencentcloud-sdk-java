@@ -114,6 +114,32 @@ public class ReplicationRule extends AbstractModel{
         this.Filters = Filters;
     }
 
+    public ReplicationRule() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ReplicationRule(ReplicationRule source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.DestNamespace != null) {
+            this.DestNamespace = new String(source.DestNamespace);
+        }
+        if (source.Override != null) {
+            this.Override = new Boolean(source.Override);
+        }
+        if (source.Filters != null) {
+            this.Filters = new ReplicationFilter[source.Filters.length];
+            for (int i = 0; i < source.Filters.length; i++) {
+                this.Filters[i] = new ReplicationFilter(source.Filters[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

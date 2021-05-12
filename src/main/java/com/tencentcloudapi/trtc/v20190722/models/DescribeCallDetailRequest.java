@@ -271,6 +271,47 @@ bigvHeight：上/下行分辨率高
         this.PageSize = PageSize;
     }
 
+    public DescribeCallDetailRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeCallDetailRequest(DescribeCallDetailRequest source) {
+        if (source.CommId != null) {
+            this.CommId = new String(source.CommId);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new Long(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new Long(source.EndTime);
+        }
+        if (source.SdkAppId != null) {
+            this.SdkAppId = new String(source.SdkAppId);
+        }
+        if (source.UserIds != null) {
+            this.UserIds = new String[source.UserIds.length];
+            for (int i = 0; i < source.UserIds.length; i++) {
+                this.UserIds[i] = new String(source.UserIds[i]);
+            }
+        }
+        if (source.DataType != null) {
+            this.DataType = new String[source.DataType.length];
+            for (int i = 0; i < source.DataType.length; i++) {
+                this.DataType[i] = new String(source.DataType[i]);
+            }
+        }
+        if (source.PageNumber != null) {
+            this.PageNumber = new String(source.PageNumber);
+        }
+        if (source.PageSize != null) {
+            this.PageSize = new String(source.PageSize);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

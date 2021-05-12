@@ -68,6 +68,29 @@ public class DescribeLiveTranscodeRulesRequest extends AbstractModel{
         this.DomainNames = DomainNames;
     }
 
+    public DescribeLiveTranscodeRulesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeLiveTranscodeRulesRequest(DescribeLiveTranscodeRulesRequest source) {
+        if (source.TemplateIds != null) {
+            this.TemplateIds = new Long[source.TemplateIds.length];
+            for (int i = 0; i < source.TemplateIds.length; i++) {
+                this.TemplateIds[i] = new Long(source.TemplateIds[i]);
+            }
+        }
+        if (source.DomainNames != null) {
+            this.DomainNames = new String[source.DomainNames.length];
+            for (int i = 0; i < source.DomainNames.length; i++) {
+                this.DomainNames[i] = new String(source.DomainNames[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

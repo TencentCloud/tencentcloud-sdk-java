@@ -91,6 +91,29 @@ public class SearchImageResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public SearchImageResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SearchImageResponse(SearchImageResponse source) {
+        if (source.FaceId != null) {
+            this.FaceId = new String(source.FaceId);
+        }
+        if (source.Results != null) {
+            this.Results = new SearchResult[source.Results.length];
+            for (int i = 0; i < source.Results.length; i++) {
+                this.Results[i] = new SearchResult(source.Results[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

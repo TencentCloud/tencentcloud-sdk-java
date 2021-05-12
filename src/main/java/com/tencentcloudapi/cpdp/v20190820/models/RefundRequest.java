@@ -318,6 +318,56 @@ development: 开发环境
         this.MidasEnvironment = MidasEnvironment;
     }
 
+    public RefundRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RefundRequest(RefundRequest source) {
+        if (source.UserId != null) {
+            this.UserId = new String(source.UserId);
+        }
+        if (source.RefundId != null) {
+            this.RefundId = new String(source.RefundId);
+        }
+        if (source.MidasAppId != null) {
+            this.MidasAppId = new String(source.MidasAppId);
+        }
+        if (source.TotalRefundAmt != null) {
+            this.TotalRefundAmt = new Long(source.TotalRefundAmt);
+        }
+        if (source.MidasSecretId != null) {
+            this.MidasSecretId = new String(source.MidasSecretId);
+        }
+        if (source.MidasSignature != null) {
+            this.MidasSignature = new String(source.MidasSignature);
+        }
+        if (source.OutTradeNo != null) {
+            this.OutTradeNo = new String(source.OutTradeNo);
+        }
+        if (source.MchRefundAmt != null) {
+            this.MchRefundAmt = new Long(source.MchRefundAmt);
+        }
+        if (source.TransactionId != null) {
+            this.TransactionId = new String(source.TransactionId);
+        }
+        if (source.PlatformRefundAmt != null) {
+            this.PlatformRefundAmt = new Long(source.PlatformRefundAmt);
+        }
+        if (source.SubOrderRefundList != null) {
+            this.SubOrderRefundList = new RefundOutSubOrderRefundList[source.SubOrderRefundList.length];
+            for (int i = 0; i < source.SubOrderRefundList.length; i++) {
+                this.SubOrderRefundList[i] = new RefundOutSubOrderRefundList(source.SubOrderRefundList[i]);
+            }
+        }
+        if (source.MidasEnvironment != null) {
+            this.MidasEnvironment = new String(source.MidasEnvironment);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -91,6 +91,29 @@ public class NamespaceUsage extends AbstractModel{
         this.FunctionsCount = FunctionsCount;
     }
 
+    public NamespaceUsage() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public NamespaceUsage(NamespaceUsage source) {
+        if (source.Functions != null) {
+            this.Functions = new String[source.Functions.length];
+            for (int i = 0; i < source.Functions.length; i++) {
+                this.Functions[i] = new String(source.Functions[i]);
+            }
+        }
+        if (source.Namespace != null) {
+            this.Namespace = new String(source.Namespace);
+        }
+        if (source.FunctionsCount != null) {
+            this.FunctionsCount = new Long(source.FunctionsCount);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

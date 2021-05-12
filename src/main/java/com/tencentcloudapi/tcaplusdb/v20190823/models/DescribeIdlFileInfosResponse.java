@@ -91,6 +91,29 @@ public class DescribeIdlFileInfosResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeIdlFileInfosResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeIdlFileInfosResponse(DescribeIdlFileInfosResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.IdlFileInfos != null) {
+            this.IdlFileInfos = new IdlFileInfo[source.IdlFileInfos.length];
+            for (int i = 0; i < source.IdlFileInfos.length; i++) {
+                this.IdlFileInfos[i] = new IdlFileInfo(source.IdlFileInfos[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

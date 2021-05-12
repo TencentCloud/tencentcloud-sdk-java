@@ -68,6 +68,23 @@ public class DescribeSubnetAvailableIpsRequest extends AbstractModel{
         this.Cidr = Cidr;
     }
 
+    public DescribeSubnetAvailableIpsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeSubnetAvailableIpsRequest(DescribeSubnetAvailableIpsRequest source) {
+        if (source.SubnetId != null) {
+            this.SubnetId = new String(source.SubnetId);
+        }
+        if (source.Cidr != null) {
+            this.Cidr = new String(source.Cidr);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

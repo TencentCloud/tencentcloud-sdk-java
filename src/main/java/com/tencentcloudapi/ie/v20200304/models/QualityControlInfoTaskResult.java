@@ -562,6 +562,107 @@ public class QualityControlInfoTaskResult extends AbstractModel{
         this.ErrMsg = ErrMsg;
     }
 
+    public QualityControlInfoTaskResult() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public QualityControlInfoTaskResult(QualityControlInfoTaskResult source) {
+        if (source.TaskId != null) {
+            this.TaskId = new String(source.TaskId);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.Progress != null) {
+            this.Progress = new Long(source.Progress);
+        }
+        if (source.UsedTime != null) {
+            this.UsedTime = new Long(source.UsedTime);
+        }
+        if (source.Duration != null) {
+            this.Duration = new Long(source.Duration);
+        }
+        if (source.NoAudio != null) {
+            this.NoAudio = new Boolean(source.NoAudio);
+        }
+        if (source.NoVideo != null) {
+            this.NoVideo = new Boolean(source.NoVideo);
+        }
+        if (source.QualityEvaluationScore != null) {
+            this.QualityEvaluationScore = new Long(source.QualityEvaluationScore);
+        }
+        if (source.QualityEvaluationResults != null) {
+            this.QualityEvaluationResults = new QualityControlResultItems[source.QualityEvaluationResults.length];
+            for (int i = 0; i < source.QualityEvaluationResults.length; i++) {
+                this.QualityEvaluationResults[i] = new QualityControlResultItems(source.QualityEvaluationResults[i]);
+            }
+        }
+        if (source.JitterResults != null) {
+            this.JitterResults = new QualityControlResultItems[source.JitterResults.length];
+            for (int i = 0; i < source.JitterResults.length; i++) {
+                this.JitterResults[i] = new QualityControlResultItems(source.JitterResults[i]);
+            }
+        }
+        if (source.BlurResults != null) {
+            this.BlurResults = new QualityControlResultItems[source.BlurResults.length];
+            for (int i = 0; i < source.BlurResults.length; i++) {
+                this.BlurResults[i] = new QualityControlResultItems(source.BlurResults[i]);
+            }
+        }
+        if (source.AbnormalLightingResults != null) {
+            this.AbnormalLightingResults = new QualityControlResultItems[source.AbnormalLightingResults.length];
+            for (int i = 0; i < source.AbnormalLightingResults.length; i++) {
+                this.AbnormalLightingResults[i] = new QualityControlResultItems(source.AbnormalLightingResults[i]);
+            }
+        }
+        if (source.CrashScreenResults != null) {
+            this.CrashScreenResults = new QualityControlResultItems[source.CrashScreenResults.length];
+            for (int i = 0; i < source.CrashScreenResults.length; i++) {
+                this.CrashScreenResults[i] = new QualityControlResultItems(source.CrashScreenResults[i]);
+            }
+        }
+        if (source.BlackWhiteEdgeResults != null) {
+            this.BlackWhiteEdgeResults = new QualityControlResultItems[source.BlackWhiteEdgeResults.length];
+            for (int i = 0; i < source.BlackWhiteEdgeResults.length; i++) {
+                this.BlackWhiteEdgeResults[i] = new QualityControlResultItems(source.BlackWhiteEdgeResults[i]);
+            }
+        }
+        if (source.NoiseResults != null) {
+            this.NoiseResults = new QualityControlResultItems[source.NoiseResults.length];
+            for (int i = 0; i < source.NoiseResults.length; i++) {
+                this.NoiseResults[i] = new QualityControlResultItems(source.NoiseResults[i]);
+            }
+        }
+        if (source.MosaicResults != null) {
+            this.MosaicResults = new QualityControlResultItems[source.MosaicResults.length];
+            for (int i = 0; i < source.MosaicResults.length; i++) {
+                this.MosaicResults[i] = new QualityControlResultItems(source.MosaicResults[i]);
+            }
+        }
+        if (source.QRCodeResults != null) {
+            this.QRCodeResults = new QualityControlResultItems[source.QRCodeResults.length];
+            for (int i = 0; i < source.QRCodeResults.length; i++) {
+                this.QRCodeResults[i] = new QualityControlResultItems(source.QRCodeResults[i]);
+            }
+        }
+        if (source.VoiceResults != null) {
+            this.VoiceResults = new QualityControlResultItems[source.VoiceResults.length];
+            for (int i = 0; i < source.VoiceResults.length; i++) {
+                this.VoiceResults[i] = new QualityControlResultItems(source.VoiceResults[i]);
+            }
+        }
+        if (source.ErrCode != null) {
+            this.ErrCode = new Long(source.ErrCode);
+        }
+        if (source.ErrMsg != null) {
+            this.ErrMsg = new String(source.ErrMsg);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

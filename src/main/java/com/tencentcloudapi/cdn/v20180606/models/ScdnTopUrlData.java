@@ -119,6 +119,29 @@ public class ScdnTopUrlData extends AbstractModel{
         this.Domain = Domain;
     }
 
+    public ScdnTopUrlData() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ScdnTopUrlData(ScdnTopUrlData source) {
+        if (source.Url != null) {
+            this.Url = new String(source.Url);
+        }
+        if (source.Value != null) {
+            this.Value = new Long(source.Value);
+        }
+        if (source.Time != null) {
+            this.Time = new String(source.Time);
+        }
+        if (source.Domain != null) {
+            this.Domain = new String(source.Domain);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

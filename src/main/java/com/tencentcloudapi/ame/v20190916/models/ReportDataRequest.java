@@ -105,6 +105,20 @@ https://github.com/ame-demo/doc
         this.ReportData = ReportData;
     }
 
+    public ReportDataRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ReportDataRequest(ReportDataRequest source) {
+        if (source.ReportData != null) {
+            this.ReportData = new String(source.ReportData);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

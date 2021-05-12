@@ -160,6 +160,35 @@ public class AdvancedAuthenticationTypeD extends AbstractModel{
         this.TimeFormat = TimeFormat;
     }
 
+    public AdvancedAuthenticationTypeD() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AdvancedAuthenticationTypeD(AdvancedAuthenticationTypeD source) {
+        if (source.SecretKey != null) {
+            this.SecretKey = new String(source.SecretKey);
+        }
+        if (source.BackupSecretKey != null) {
+            this.BackupSecretKey = new String(source.BackupSecretKey);
+        }
+        if (source.SignParam != null) {
+            this.SignParam = new String(source.SignParam);
+        }
+        if (source.TimeParam != null) {
+            this.TimeParam = new String(source.TimeParam);
+        }
+        if (source.ExpireTime != null) {
+            this.ExpireTime = new Long(source.ExpireTime);
+        }
+        if (source.TimeFormat != null) {
+            this.TimeFormat = new String(source.TimeFormat);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

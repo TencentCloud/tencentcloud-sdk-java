@@ -183,6 +183,44 @@ public class Player extends AbstractModel{
         this.RegionLatencies = RegionLatencies;
     }
 
+    public Player() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Player(Player source) {
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.MatchAttributes != null) {
+            this.MatchAttributes = new MatchAttribute[source.MatchAttributes.length];
+            for (int i = 0; i < source.MatchAttributes.length; i++) {
+                this.MatchAttributes[i] = new MatchAttribute(source.MatchAttributes[i]);
+            }
+        }
+        if (source.Team != null) {
+            this.Team = new String(source.Team);
+        }
+        if (source.CustomPlayerStatus != null) {
+            this.CustomPlayerStatus = new Long(source.CustomPlayerStatus);
+        }
+        if (source.CustomProfile != null) {
+            this.CustomProfile = new String(source.CustomProfile);
+        }
+        if (source.RegionLatencies != null) {
+            this.RegionLatencies = new RegionLatency[source.RegionLatencies.length];
+            for (int i = 0; i < source.RegionLatencies.length; i++) {
+                this.RegionLatencies[i] = new RegionLatency(source.RegionLatencies[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

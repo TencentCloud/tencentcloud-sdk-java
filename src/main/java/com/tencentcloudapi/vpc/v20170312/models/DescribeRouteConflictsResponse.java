@@ -68,6 +68,26 @@ public class DescribeRouteConflictsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeRouteConflictsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeRouteConflictsResponse(DescribeRouteConflictsResponse source) {
+        if (source.RouteConflictSet != null) {
+            this.RouteConflictSet = new RouteConflict[source.RouteConflictSet.length];
+            for (int i = 0; i < source.RouteConflictSet.length; i++) {
+                this.RouteConflictSet[i] = new RouteConflict(source.RouteConflictSet[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

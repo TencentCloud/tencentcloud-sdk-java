@@ -114,6 +114,29 @@ public class ModifyDDoSWaterKeyRequest extends AbstractModel{
         this.KeyId = KeyId;
     }
 
+    public ModifyDDoSWaterKeyRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyDDoSWaterKeyRequest(ModifyDDoSWaterKeyRequest source) {
+        if (source.Business != null) {
+            this.Business = new String(source.Business);
+        }
+        if (source.PolicyId != null) {
+            this.PolicyId = new String(source.PolicyId);
+        }
+        if (source.Method != null) {
+            this.Method = new String(source.Method);
+        }
+        if (source.KeyId != null) {
+            this.KeyId = new Long(source.KeyId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

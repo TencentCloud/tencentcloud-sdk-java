@@ -68,6 +68,23 @@ public class GetUploadCredentialsRequest extends AbstractModel{
         this.BucketKey = BucketKey;
     }
 
+    public GetUploadCredentialsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GetUploadCredentialsRequest(GetUploadCredentialsRequest source) {
+        if (source.AssetRegion != null) {
+            this.AssetRegion = new String(source.AssetRegion);
+        }
+        if (source.BucketKey != null) {
+            this.BucketKey = new String(source.BucketKey);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

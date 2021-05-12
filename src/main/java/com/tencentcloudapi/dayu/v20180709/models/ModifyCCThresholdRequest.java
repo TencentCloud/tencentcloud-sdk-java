@@ -353,6 +353,53 @@ public class ModifyCCThresholdRequest extends AbstractModel{
         this.Domain = Domain;
     }
 
+    public ModifyCCThresholdRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyCCThresholdRequest(ModifyCCThresholdRequest source) {
+        if (source.Business != null) {
+            this.Business = new String(source.Business);
+        }
+        if (source.Threshold != null) {
+            this.Threshold = new Long(source.Threshold);
+        }
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
+        if (source.Protocol != null) {
+            this.Protocol = new String(source.Protocol);
+        }
+        if (source.RuleId != null) {
+            this.RuleId = new String(source.RuleId);
+        }
+        if (source.BasicIp != null) {
+            this.BasicIp = new String(source.BasicIp);
+        }
+        if (source.BasicRegion != null) {
+            this.BasicRegion = new String(source.BasicRegion);
+        }
+        if (source.BasicBizType != null) {
+            this.BasicBizType = new String(source.BasicBizType);
+        }
+        if (source.BasicDeviceType != null) {
+            this.BasicDeviceType = new String(source.BasicDeviceType);
+        }
+        if (source.BasicIpInstance != null) {
+            this.BasicIpInstance = new String(source.BasicIpInstance);
+        }
+        if (source.BasicIspCode != null) {
+            this.BasicIspCode = new Long(source.BasicIspCode);
+        }
+        if (source.Domain != null) {
+            this.Domain = new String(source.Domain);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

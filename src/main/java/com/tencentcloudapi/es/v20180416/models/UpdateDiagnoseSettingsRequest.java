@@ -91,6 +91,26 @@ public class UpdateDiagnoseSettingsRequest extends AbstractModel{
         this.CronTime = CronTime;
     }
 
+    public UpdateDiagnoseSettingsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UpdateDiagnoseSettingsRequest(UpdateDiagnoseSettingsRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.CronTime != null) {
+            this.CronTime = new String(source.CronTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

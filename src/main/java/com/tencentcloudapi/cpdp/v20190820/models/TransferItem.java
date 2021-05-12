@@ -330,6 +330,50 @@ public class TransferItem extends AbstractModel{
         this.FrontSeqNo = FrontSeqNo;
     }
 
+    public TransferItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TransferItem(TransferItem source) {
+        if (source.InAcctType != null) {
+            this.InAcctType = new String(source.InAcctType);
+        }
+        if (source.TranNetMemberCode != null) {
+            this.TranNetMemberCode = new String(source.TranNetMemberCode);
+        }
+        if (source.SubAcctNo != null) {
+            this.SubAcctNo = new String(source.SubAcctNo);
+        }
+        if (source.TranAmt != null) {
+            this.TranAmt = new String(source.TranAmt);
+        }
+        if (source.InAcctNo != null) {
+            this.InAcctNo = new String(source.InAcctNo);
+        }
+        if (source.InAcctName != null) {
+            this.InAcctName = new String(source.InAcctName);
+        }
+        if (source.Ccy != null) {
+            this.Ccy = new String(source.Ccy);
+        }
+        if (source.AccountingDate != null) {
+            this.AccountingDate = new String(source.AccountingDate);
+        }
+        if (source.BankName != null) {
+            this.BankName = new String(source.BankName);
+        }
+        if (source.Remark != null) {
+            this.Remark = new String(source.Remark);
+        }
+        if (source.FrontSeqNo != null) {
+            this.FrontSeqNo = new String(source.FrontSeqNo);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -68,6 +68,23 @@ public class WordTimePair extends AbstractModel{
         this.Metm = Metm;
     }
 
+    public WordTimePair() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public WordTimePair(WordTimePair source) {
+        if (source.Mbtm != null) {
+            this.Mbtm = new Long(source.Mbtm);
+        }
+        if (source.Metm != null) {
+            this.Metm = new Long(source.Metm);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -68,6 +68,23 @@ public class EipAclMap extends AbstractModel{
         this.AclId = AclId;
     }
 
+    public EipAclMap() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public EipAclMap(EipAclMap source) {
+        if (source.EipId != null) {
+            this.EipId = new String(source.EipId);
+        }
+        if (source.AclId != null) {
+            this.AclId = new String(source.AclId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

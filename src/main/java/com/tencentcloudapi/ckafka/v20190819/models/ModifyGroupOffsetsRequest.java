@@ -206,6 +206,47 @@ public class ModifyGroupOffsetsRequest extends AbstractModel{
         this.Partitions = Partitions;
     }
 
+    public ModifyGroupOffsetsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyGroupOffsetsRequest(ModifyGroupOffsetsRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.Group != null) {
+            this.Group = new String(source.Group);
+        }
+        if (source.Strategy != null) {
+            this.Strategy = new Long(source.Strategy);
+        }
+        if (source.Topics != null) {
+            this.Topics = new String[source.Topics.length];
+            for (int i = 0; i < source.Topics.length; i++) {
+                this.Topics[i] = new String(source.Topics[i]);
+            }
+        }
+        if (source.Shift != null) {
+            this.Shift = new Long(source.Shift);
+        }
+        if (source.ShiftTimestamp != null) {
+            this.ShiftTimestamp = new Long(source.ShiftTimestamp);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Partitions != null) {
+            this.Partitions = new Long[source.Partitions.length];
+            for (int i = 0; i < source.Partitions.length; i++) {
+                this.Partitions[i] = new Long(source.Partitions[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

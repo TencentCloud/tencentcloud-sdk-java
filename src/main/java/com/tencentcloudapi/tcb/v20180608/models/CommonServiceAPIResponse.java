@@ -68,6 +68,23 @@ public class CommonServiceAPIResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public CommonServiceAPIResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CommonServiceAPIResponse(CommonServiceAPIResponse source) {
+        if (source.JSONResp != null) {
+            this.JSONResp = new String(source.JSONResp);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

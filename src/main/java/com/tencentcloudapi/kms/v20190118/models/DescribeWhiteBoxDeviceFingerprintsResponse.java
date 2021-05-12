@@ -68,6 +68,26 @@ public class DescribeWhiteBoxDeviceFingerprintsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeWhiteBoxDeviceFingerprintsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeWhiteBoxDeviceFingerprintsResponse(DescribeWhiteBoxDeviceFingerprintsResponse source) {
+        if (source.DeviceFingerprints != null) {
+            this.DeviceFingerprints = new DeviceFingerprint[source.DeviceFingerprints.length];
+            for (int i = 0; i < source.DeviceFingerprints.length; i++) {
+                this.DeviceFingerprints[i] = new DeviceFingerprint(source.DeviceFingerprints[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

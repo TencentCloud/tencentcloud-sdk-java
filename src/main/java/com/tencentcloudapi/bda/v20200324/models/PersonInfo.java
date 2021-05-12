@@ -91,6 +91,29 @@ public class PersonInfo extends AbstractModel{
         this.TraceInfos = TraceInfos;
     }
 
+    public PersonInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PersonInfo(PersonInfo source) {
+        if (source.PersonName != null) {
+            this.PersonName = new String(source.PersonName);
+        }
+        if (source.PersonId != null) {
+            this.PersonId = new String(source.PersonId);
+        }
+        if (source.TraceInfos != null) {
+            this.TraceInfos = new TraceInfo[source.TraceInfos.length];
+            for (int i = 0; i < source.TraceInfos.length; i++) {
+                this.TraceInfos[i] = new TraceInfo(source.TraceInfos[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

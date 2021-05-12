@@ -45,6 +45,23 @@ public class RemoveRealServersRequest extends AbstractModel{
         this.RealServerIds = RealServerIds;
     }
 
+    public RemoveRealServersRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RemoveRealServersRequest(RemoveRealServersRequest source) {
+        if (source.RealServerIds != null) {
+            this.RealServerIds = new String[source.RealServerIds.length];
+            for (int i = 0; i < source.RealServerIds.length; i++) {
+                this.RealServerIds[i] = new String(source.RealServerIds[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -252,6 +252,47 @@ public class ApplyApplicationMaterialRequest extends AbstractModel{
         this.Profile = Profile;
     }
 
+    public ApplyApplicationMaterialRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ApplyApplicationMaterialRequest(ApplyApplicationMaterialRequest source) {
+        if (source.TransactionId != null) {
+            this.TransactionId = new String(source.TransactionId);
+        }
+        if (source.DeclareId != null) {
+            this.DeclareId = new String(source.DeclareId);
+        }
+        if (source.PayerId != null) {
+            this.PayerId = new String(source.PayerId);
+        }
+        if (source.SourceCurrency != null) {
+            this.SourceCurrency = new String(source.SourceCurrency);
+        }
+        if (source.TargetCurrency != null) {
+            this.TargetCurrency = new String(source.TargetCurrency);
+        }
+        if (source.TradeCode != null) {
+            this.TradeCode = new String(source.TradeCode);
+        }
+        if (source.OriginalDeclareId != null) {
+            this.OriginalDeclareId = new String(source.OriginalDeclareId);
+        }
+        if (source.SourceAmount != null) {
+            this.SourceAmount = new Long(source.SourceAmount);
+        }
+        if (source.TargetAmount != null) {
+            this.TargetAmount = new Long(source.TargetAmount);
+        }
+        if (source.Profile != null) {
+            this.Profile = new String(source.Profile);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

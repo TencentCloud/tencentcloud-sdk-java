@@ -96,6 +96,29 @@ public class Result extends AbstractModel{
         this.RetCode = RetCode;
     }
 
+    public Result() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Result(Result source) {
+        if (source.Candidates != null) {
+            this.Candidates = new Candidate[source.Candidates.length];
+            for (int i = 0; i < source.Candidates.length; i++) {
+                this.Candidates[i] = new Candidate(source.Candidates[i]);
+            }
+        }
+        if (source.FaceRect != null) {
+            this.FaceRect = new FaceRect(source.FaceRect);
+        }
+        if (source.RetCode != null) {
+            this.RetCode = new Long(source.RetCode);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

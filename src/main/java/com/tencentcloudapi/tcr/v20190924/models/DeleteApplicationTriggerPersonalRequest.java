@@ -45,6 +45,20 @@ public class DeleteApplicationTriggerPersonalRequest extends AbstractModel{
         this.TriggerName = TriggerName;
     }
 
+    public DeleteApplicationTriggerPersonalRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteApplicationTriggerPersonalRequest(DeleteApplicationTriggerPersonalRequest source) {
+        if (source.TriggerName != null) {
+            this.TriggerName = new String(source.TriggerName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

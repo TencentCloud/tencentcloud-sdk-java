@@ -114,6 +114,29 @@ public class MigrateOrderRefundResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public MigrateOrderRefundResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MigrateOrderRefundResponse(MigrateOrderRefundResponse source) {
+        if (source.IsSuccess != null) {
+            this.IsSuccess = new Boolean(source.IsSuccess);
+        }
+        if (source.TradeSerialNo != null) {
+            this.TradeSerialNo = new String(source.TradeSerialNo);
+        }
+        if (source.TradeMsg != null) {
+            this.TradeMsg = new String(source.TradeMsg);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

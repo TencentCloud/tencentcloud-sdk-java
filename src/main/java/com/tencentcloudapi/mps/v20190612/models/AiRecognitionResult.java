@@ -235,6 +235,35 @@ public class AiRecognitionResult extends AbstractModel{
         this.OcrFullTextTask = OcrFullTextTask;
     }
 
+    public AiRecognitionResult() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AiRecognitionResult(AiRecognitionResult source) {
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.FaceTask != null) {
+            this.FaceTask = new AiRecognitionTaskFaceResult(source.FaceTask);
+        }
+        if (source.AsrWordsTask != null) {
+            this.AsrWordsTask = new AiRecognitionTaskAsrWordsResult(source.AsrWordsTask);
+        }
+        if (source.AsrFullTextTask != null) {
+            this.AsrFullTextTask = new AiRecognitionTaskAsrFullTextResult(source.AsrFullTextTask);
+        }
+        if (source.OcrWordsTask != null) {
+            this.OcrWordsTask = new AiRecognitionTaskOcrWordsResult(source.OcrWordsTask);
+        }
+        if (source.OcrFullTextTask != null) {
+            this.OcrFullTextTask = new AiRecognitionTaskOcrFullTextResult(source.OcrFullTextTask);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -91,6 +91,26 @@ public class ResetPasswordRequest extends AbstractModel{
         this.NoAuth = NoAuth;
     }
 
+    public ResetPasswordRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ResetPasswordRequest(ResetPasswordRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.Password != null) {
+            this.Password = new String(source.Password);
+        }
+        if (source.NoAuth != null) {
+            this.NoAuth = new Boolean(source.NoAuth);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

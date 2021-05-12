@@ -183,6 +183,41 @@ public class DescribeSqlLogsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeSqlLogsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeSqlLogsResponse(DescribeSqlLogsResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.StartOffset != null) {
+            this.StartOffset = new Long(source.StartOffset);
+        }
+        if (source.EndOffset != null) {
+            this.EndOffset = new Long(source.EndOffset);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Count != null) {
+            this.Count = new Long(source.Count);
+        }
+        if (source.SqlItems != null) {
+            this.SqlItems = new SqlLogItem[source.SqlItems.length];
+            for (int i = 0; i < source.SqlItems.length; i++) {
+                this.SqlItems[i] = new SqlLogItem(source.SqlItems[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

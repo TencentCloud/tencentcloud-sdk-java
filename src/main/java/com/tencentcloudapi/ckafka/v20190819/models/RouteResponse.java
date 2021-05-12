@@ -50,6 +50,23 @@ public class RouteResponse extends AbstractModel{
         this.Routers = Routers;
     }
 
+    public RouteResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RouteResponse(RouteResponse source) {
+        if (source.Routers != null) {
+            this.Routers = new Route[source.Routers.length];
+            for (int i = 0; i < source.Routers.length; i++) {
+                this.Routers[i] = new Route(source.Routers[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

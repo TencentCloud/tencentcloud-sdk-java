@@ -669,6 +669,77 @@ OVERDUE_CLOSE：系统超时关闭。
         this.RequestId = RequestId;
     }
 
+    public QueryTransferBatchResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public QueryTransferBatchResponse(QueryTransferBatchResponse source) {
+        if (source.MerchantId != null) {
+            this.MerchantId = new String(source.MerchantId);
+        }
+        if (source.MerchantBatchNo != null) {
+            this.MerchantBatchNo = new String(source.MerchantBatchNo);
+        }
+        if (source.BatchId != null) {
+            this.BatchId = new String(source.BatchId);
+        }
+        if (source.MerchantAppId != null) {
+            this.MerchantAppId = new String(source.MerchantAppId);
+        }
+        if (source.BatchStatus != null) {
+            this.BatchStatus = new String(source.BatchStatus);
+        }
+        if (source.CloseReason != null) {
+            this.CloseReason = new String(source.CloseReason);
+        }
+        if (source.TotalAmount != null) {
+            this.TotalAmount = new Long(source.TotalAmount);
+        }
+        if (source.TotalNum != null) {
+            this.TotalNum = new Long(source.TotalNum);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new String(source.UpdateTime);
+        }
+        if (source.SuccessAmount != null) {
+            this.SuccessAmount = new Long(source.SuccessAmount);
+        }
+        if (source.SuccessNum != null) {
+            this.SuccessNum = new Long(source.SuccessNum);
+        }
+        if (source.FailAmount != null) {
+            this.FailAmount = new Long(source.FailAmount);
+        }
+        if (source.FailNum != null) {
+            this.FailNum = new Long(source.FailNum);
+        }
+        if (source.TransferDetails != null) {
+            this.TransferDetails = new TransferDetailResponse[source.TransferDetails.length];
+            for (int i = 0; i < source.TransferDetails.length; i++) {
+                this.TransferDetails[i] = new TransferDetailResponse(source.TransferDetails[i]);
+            }
+        }
+        if (source.BatchType != null) {
+            this.BatchType = new String(source.BatchType);
+        }
+        if (source.BatchName != null) {
+            this.BatchName = new String(source.BatchName);
+        }
+        if (source.BatchRemark != null) {
+            this.BatchRemark = new String(source.BatchRemark);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

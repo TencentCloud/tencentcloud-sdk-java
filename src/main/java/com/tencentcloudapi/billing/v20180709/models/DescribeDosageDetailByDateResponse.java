@@ -157,6 +157,35 @@ public class DescribeDosageDetailByDateResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeDosageDetailByDateResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeDosageDetailByDateResponse(DescribeDosageDetailByDateResponse source) {
+        if (source.Unit != null) {
+            this.Unit = new String(source.Unit);
+        }
+        if (source.DetailSets != null) {
+            this.DetailSets = new DetailSet[source.DetailSets.length];
+            for (int i = 0; i < source.DetailSets.length; i++) {
+                this.DetailSets[i] = new DetailSet(source.DetailSets[i]);
+            }
+        }
+        if (source.RetCode != null) {
+            this.RetCode = new Long(source.RetCode);
+        }
+        if (source.RetMsg != null) {
+            this.RetMsg = new String(source.RetMsg);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

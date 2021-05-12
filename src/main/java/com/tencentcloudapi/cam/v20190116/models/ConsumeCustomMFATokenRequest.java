@@ -45,6 +45,20 @@ public class ConsumeCustomMFATokenRequest extends AbstractModel{
         this.MFAToken = MFAToken;
     }
 
+    public ConsumeCustomMFATokenRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ConsumeCustomMFATokenRequest(ConsumeCustomMFATokenRequest source) {
+        if (source.MFAToken != null) {
+            this.MFAToken = new String(source.MFAToken);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

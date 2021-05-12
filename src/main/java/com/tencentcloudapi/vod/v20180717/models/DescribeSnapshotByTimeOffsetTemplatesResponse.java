@@ -91,6 +91,29 @@ public class DescribeSnapshotByTimeOffsetTemplatesResponse extends AbstractModel
         this.RequestId = RequestId;
     }
 
+    public DescribeSnapshotByTimeOffsetTemplatesResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeSnapshotByTimeOffsetTemplatesResponse(DescribeSnapshotByTimeOffsetTemplatesResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.SnapshotByTimeOffsetTemplateSet != null) {
+            this.SnapshotByTimeOffsetTemplateSet = new SnapshotByTimeOffsetTemplate[source.SnapshotByTimeOffsetTemplateSet.length];
+            for (int i = 0; i < source.SnapshotByTimeOffsetTemplateSet.length; i++) {
+                this.SnapshotByTimeOffsetTemplateSet[i] = new SnapshotByTimeOffsetTemplate(source.SnapshotByTimeOffsetTemplateSet[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

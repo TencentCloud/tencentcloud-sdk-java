@@ -68,6 +68,23 @@ public class Area extends AbstractModel{
         this.AreaName = AreaName;
     }
 
+    public Area() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Area(Area source) {
+        if (source.AreaId != null) {
+            this.AreaId = new String(source.AreaId);
+        }
+        if (source.AreaName != null) {
+            this.AreaName = new String(source.AreaName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

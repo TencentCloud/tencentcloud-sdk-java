@@ -730,6 +730,98 @@ public class AgentDealElem extends AbstractModel{
         this.ProductInfo = ProductInfo;
     }
 
+    public AgentDealElem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AgentDealElem(AgentDealElem source) {
+        if (source.DealId != null) {
+            this.DealId = new String(source.DealId);
+        }
+        if (source.DealName != null) {
+            this.DealName = new String(source.DealName);
+        }
+        if (source.GoodsCategoryId != null) {
+            this.GoodsCategoryId = new String(source.GoodsCategoryId);
+        }
+        if (source.OwnerUin != null) {
+            this.OwnerUin = new String(source.OwnerUin);
+        }
+        if (source.AppId != null) {
+            this.AppId = new String(source.AppId);
+        }
+        if (source.GoodsNum != null) {
+            this.GoodsNum = new String(source.GoodsNum);
+        }
+        if (source.GoodsPrice != null) {
+            this.GoodsPrice = new DealGoodsPriceElem(source.GoodsPrice);
+        }
+        if (source.Creater != null) {
+            this.Creater = new String(source.Creater);
+        }
+        if (source.CreatTime != null) {
+            this.CreatTime = new String(source.CreatTime);
+        }
+        if (source.PayEndTime != null) {
+            this.PayEndTime = new String(source.PayEndTime);
+        }
+        if (source.BillId != null) {
+            this.BillId = new String(source.BillId);
+        }
+        if (source.Payer != null) {
+            this.Payer = new String(source.Payer);
+        }
+        if (source.DealStatus != null) {
+            this.DealStatus = new String(source.DealStatus);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.GoodsName != null) {
+            this.GoodsName = new String(source.GoodsName);
+        }
+        if (source.ClientRemark != null) {
+            this.ClientRemark = new String(source.ClientRemark);
+        }
+        if (source.ActionType != null) {
+            this.ActionType = new String(source.ActionType);
+        }
+        if (source.VoucherDecline != null) {
+            this.VoucherDecline = new String(source.VoucherDecline);
+        }
+        if (source.BigDealId != null) {
+            this.BigDealId = new String(source.BigDealId);
+        }
+        if (source.ClientType != null) {
+            this.ClientType = new String(source.ClientType);
+        }
+        if (source.ProjectType != null) {
+            this.ProjectType = new String(source.ProjectType);
+        }
+        if (source.SalesUin != null) {
+            this.SalesUin = new String(source.SalesUin);
+        }
+        if (source.PayerMode != null) {
+            this.PayerMode = new String(source.PayerMode);
+        }
+        if (source.ActivityId != null) {
+            this.ActivityId = new String(source.ActivityId);
+        }
+        if (source.OverdueTime != null) {
+            this.OverdueTime = new String(source.OverdueTime);
+        }
+        if (source.ProductInfo != null) {
+            this.ProductInfo = new ProductInfoElem[source.ProductInfo.length];
+            for (int i = 0; i < source.ProductInfo.length; i++) {
+                this.ProductInfo[i] = new ProductInfoElem(source.ProductInfo[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

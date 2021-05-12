@@ -183,6 +183,38 @@ public class L7ListenerInfoBackend extends AbstractModel{
         this.LanIp = LanIp;
     }
 
+    public L7ListenerInfoBackend() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public L7ListenerInfoBackend(L7ListenerInfoBackend source) {
+        if (source.BindType != null) {
+            this.BindType = new Long(source.BindType);
+        }
+        if (source.Port != null) {
+            this.Port = new Long(source.Port);
+        }
+        if (source.Weight != null) {
+            this.Weight = new Long(source.Weight);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.Alias != null) {
+            this.Alias = new String(source.Alias);
+        }
+        if (source.LanIp != null) {
+            this.LanIp = new String(source.LanIp);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

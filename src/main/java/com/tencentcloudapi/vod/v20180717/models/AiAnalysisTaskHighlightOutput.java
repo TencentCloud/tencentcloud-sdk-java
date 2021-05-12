@@ -45,6 +45,23 @@ public class AiAnalysisTaskHighlightOutput extends AbstractModel{
         this.HighlightSet = HighlightSet;
     }
 
+    public AiAnalysisTaskHighlightOutput() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AiAnalysisTaskHighlightOutput(AiAnalysisTaskHighlightOutput source) {
+        if (source.HighlightSet != null) {
+            this.HighlightSet = new MediaAiAnalysisHighlightItem[source.HighlightSet.length];
+            for (int i = 0; i < source.HighlightSet.length; i++) {
+                this.HighlightSet[i] = new MediaAiAnalysisHighlightItem(source.HighlightSet[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

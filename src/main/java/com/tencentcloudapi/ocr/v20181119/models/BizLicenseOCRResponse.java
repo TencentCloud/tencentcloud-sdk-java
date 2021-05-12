@@ -341,6 +341,62 @@ OCR_WARNING_TPYE_NOT_MATCH 非营业执照
         this.RequestId = RequestId;
     }
 
+    public BizLicenseOCRResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public BizLicenseOCRResponse(BizLicenseOCRResponse source) {
+        if (source.RegNum != null) {
+            this.RegNum = new String(source.RegNum);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Capital != null) {
+            this.Capital = new String(source.Capital);
+        }
+        if (source.Person != null) {
+            this.Person = new String(source.Person);
+        }
+        if (source.Address != null) {
+            this.Address = new String(source.Address);
+        }
+        if (source.Business != null) {
+            this.Business = new String(source.Business);
+        }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.Period != null) {
+            this.Period = new String(source.Period);
+        }
+        if (source.ComposingForm != null) {
+            this.ComposingForm = new String(source.ComposingForm);
+        }
+        if (source.SetDate != null) {
+            this.SetDate = new String(source.SetDate);
+        }
+        if (source.RecognizeWarnCode != null) {
+            this.RecognizeWarnCode = new Long[source.RecognizeWarnCode.length];
+            for (int i = 0; i < source.RecognizeWarnCode.length; i++) {
+                this.RecognizeWarnCode[i] = new Long(source.RecognizeWarnCode[i]);
+            }
+        }
+        if (source.RecognizeWarnMsg != null) {
+            this.RecognizeWarnMsg = new String[source.RecognizeWarnMsg.length];
+            for (int i = 0; i < source.RecognizeWarnMsg.length; i++) {
+                this.RecognizeWarnMsg[i] = new String(source.RecognizeWarnMsg[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

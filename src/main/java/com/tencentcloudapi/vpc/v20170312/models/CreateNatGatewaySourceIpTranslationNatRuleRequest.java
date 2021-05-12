@@ -68,6 +68,26 @@ public class CreateNatGatewaySourceIpTranslationNatRuleRequest extends AbstractM
         this.SourceIpTranslationNatRules = SourceIpTranslationNatRules;
     }
 
+    public CreateNatGatewaySourceIpTranslationNatRuleRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateNatGatewaySourceIpTranslationNatRuleRequest(CreateNatGatewaySourceIpTranslationNatRuleRequest source) {
+        if (source.NatGatewayId != null) {
+            this.NatGatewayId = new String(source.NatGatewayId);
+        }
+        if (source.SourceIpTranslationNatRules != null) {
+            this.SourceIpTranslationNatRules = new SourceIpTranslationNatRule[source.SourceIpTranslationNatRules.length];
+            for (int i = 0; i < source.SourceIpTranslationNatRules.length; i++) {
+                this.SourceIpTranslationNatRules[i] = new SourceIpTranslationNatRule(source.SourceIpTranslationNatRules[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

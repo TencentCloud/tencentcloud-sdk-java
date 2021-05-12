@@ -91,6 +91,29 @@ public class BlueprintInstance extends AbstractModel{
         this.InstanceId = InstanceId;
     }
 
+    public BlueprintInstance() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public BlueprintInstance(BlueprintInstance source) {
+        if (source.Blueprint != null) {
+            this.Blueprint = new Blueprint(source.Blueprint);
+        }
+        if (source.SoftwareSet != null) {
+            this.SoftwareSet = new Software[source.SoftwareSet.length];
+            for (int i = 0; i < source.SoftwareSet.length; i++) {
+                this.SoftwareSet[i] = new Software(source.SoftwareSet[i]);
+            }
+        }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

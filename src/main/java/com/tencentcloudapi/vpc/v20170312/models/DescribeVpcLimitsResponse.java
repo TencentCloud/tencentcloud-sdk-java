@@ -68,6 +68,26 @@ public class DescribeVpcLimitsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeVpcLimitsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeVpcLimitsResponse(DescribeVpcLimitsResponse source) {
+        if (source.VpcLimitSet != null) {
+            this.VpcLimitSet = new VpcLimit[source.VpcLimitSet.length];
+            for (int i = 0; i < source.VpcLimitSet.length; i++) {
+                this.VpcLimitSet[i] = new VpcLimit(source.VpcLimitSet[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

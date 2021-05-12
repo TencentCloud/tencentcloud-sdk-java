@@ -218,6 +218,38 @@ public class BeautifyVideoOutput extends AbstractModel{
         this.DurationInSec = DurationInSec;
     }
 
+    public BeautifyVideoOutput() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public BeautifyVideoOutput(BeautifyVideoOutput source) {
+        if (source.VideoUrl != null) {
+            this.VideoUrl = new String(source.VideoUrl);
+        }
+        if (source.VideoMD5 != null) {
+            this.VideoMD5 = new String(source.VideoMD5);
+        }
+        if (source.CoverImage != null) {
+            this.CoverImage = new String(source.CoverImage);
+        }
+        if (source.Width != null) {
+            this.Width = new Long(source.Width);
+        }
+        if (source.Height != null) {
+            this.Height = new Long(source.Height);
+        }
+        if (source.Fps != null) {
+            this.Fps = new Float(source.Fps);
+        }
+        if (source.DurationInSec != null) {
+            this.DurationInSec = new Float(source.DurationInSec);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

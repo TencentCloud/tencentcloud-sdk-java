@@ -68,6 +68,23 @@ public class UseRange extends AbstractModel{
         this.Name = Name;
     }
 
+    public UseRange() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UseRange(UseRange source) {
+        if (source.UseRangeId != null) {
+            this.UseRangeId = new Long(source.UseRangeId);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

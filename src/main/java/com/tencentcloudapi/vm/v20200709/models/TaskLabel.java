@@ -156,6 +156,26 @@ Block 确认违规
         this.Score = Score;
     }
 
+    public TaskLabel() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TaskLabel(TaskLabel source) {
+        if (source.Label != null) {
+            this.Label = new String(source.Label);
+        }
+        if (source.Suggestion != null) {
+            this.Suggestion = new String(source.Suggestion);
+        }
+        if (source.Score != null) {
+            this.Score = new Long(source.Score);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

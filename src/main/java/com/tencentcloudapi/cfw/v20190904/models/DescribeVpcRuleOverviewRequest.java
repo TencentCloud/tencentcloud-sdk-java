@@ -45,6 +45,20 @@ public class DescribeVpcRuleOverviewRequest extends AbstractModel{
         this.EdgeId = EdgeId;
     }
 
+    public DescribeVpcRuleOverviewRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeVpcRuleOverviewRequest(DescribeVpcRuleOverviewRequest source) {
+        if (source.EdgeId != null) {
+            this.EdgeId = new String(source.EdgeId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

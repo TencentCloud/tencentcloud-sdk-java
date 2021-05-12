@@ -68,6 +68,23 @@ public class NationCountryInnerInfo extends AbstractModel{
         this.NationCountryInnerCode = NationCountryInnerCode;
     }
 
+    public NationCountryInnerInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public NationCountryInnerInfo(NationCountryInnerInfo source) {
+        if (source.NationCountryName != null) {
+            this.NationCountryName = new String(source.NationCountryName);
+        }
+        if (source.NationCountryInnerCode != null) {
+            this.NationCountryInnerCode = new String(source.NationCountryInnerCode);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

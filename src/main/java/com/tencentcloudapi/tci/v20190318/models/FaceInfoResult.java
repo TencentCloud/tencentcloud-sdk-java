@@ -183,6 +183,38 @@ public class FaceInfoResult extends AbstractModel{
         this.Width = Width;
     }
 
+    public FaceInfoResult() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public FaceInfoResult(FaceInfoResult source) {
+        if (source.FaceRatio != null) {
+            this.FaceRatio = new Float(source.FaceRatio);
+        }
+        if (source.FrameHeight != null) {
+            this.FrameHeight = new Long(source.FrameHeight);
+        }
+        if (source.FrameWidth != null) {
+            this.FrameWidth = new Long(source.FrameWidth);
+        }
+        if (source.Height != null) {
+            this.Height = new Long(source.Height);
+        }
+        if (source.Left != null) {
+            this.Left = new Long(source.Left);
+        }
+        if (source.Top != null) {
+            this.Top = new Long(source.Top);
+        }
+        if (source.Width != null) {
+            this.Width = new Long(source.Width);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -114,6 +114,29 @@ public class CreateLiveTranscodeRuleRequest extends AbstractModel{
         this.TemplateId = TemplateId;
     }
 
+    public CreateLiveTranscodeRuleRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateLiveTranscodeRuleRequest(CreateLiveTranscodeRuleRequest source) {
+        if (source.DomainName != null) {
+            this.DomainName = new String(source.DomainName);
+        }
+        if (source.AppName != null) {
+            this.AppName = new String(source.AppName);
+        }
+        if (source.StreamName != null) {
+            this.StreamName = new String(source.StreamName);
+        }
+        if (source.TemplateId != null) {
+            this.TemplateId = new Long(source.TemplateId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

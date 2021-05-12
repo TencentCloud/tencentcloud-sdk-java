@@ -179,6 +179,32 @@ index 时填充 /
         this.FollowOrigin = FollowOrigin;
     }
 
+    public MaxAgeRule() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MaxAgeRule(MaxAgeRule source) {
+        if (source.MaxAgeType != null) {
+            this.MaxAgeType = new String(source.MaxAgeType);
+        }
+        if (source.MaxAgeContents != null) {
+            this.MaxAgeContents = new String[source.MaxAgeContents.length];
+            for (int i = 0; i < source.MaxAgeContents.length; i++) {
+                this.MaxAgeContents[i] = new String(source.MaxAgeContents[i]);
+            }
+        }
+        if (source.MaxAgeTime != null) {
+            this.MaxAgeTime = new Long(source.MaxAgeTime);
+        }
+        if (source.FollowOrigin != null) {
+            this.FollowOrigin = new String(source.FollowOrigin);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -68,6 +68,23 @@ public class ScdnTypeData extends AbstractModel{
         this.Value = Value;
     }
 
+    public ScdnTypeData() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ScdnTypeData(ScdnTypeData source) {
+        if (source.AttackType != null) {
+            this.AttackType = new String(source.AttackType);
+        }
+        if (source.Value != null) {
+            this.Value = new Long(source.Value);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

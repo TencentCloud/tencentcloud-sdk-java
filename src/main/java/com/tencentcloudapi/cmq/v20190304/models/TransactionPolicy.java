@@ -78,6 +78,23 @@ public class TransactionPolicy extends AbstractModel{
         this.MaxQueryCount = MaxQueryCount;
     }
 
+    public TransactionPolicy() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TransactionPolicy(TransactionPolicy source) {
+        if (source.FirstQueryInterval != null) {
+            this.FirstQueryInterval = new Long(source.FirstQueryInterval);
+        }
+        if (source.MaxQueryCount != null) {
+            this.MaxQueryCount = new Long(source.MaxQueryCount);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

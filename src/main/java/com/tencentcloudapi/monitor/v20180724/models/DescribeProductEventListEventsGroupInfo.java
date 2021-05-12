@@ -78,6 +78,23 @@ public class DescribeProductEventListEventsGroupInfo extends AbstractModel{
         this.GroupName = GroupName;
     }
 
+    public DescribeProductEventListEventsGroupInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeProductEventListEventsGroupInfo(DescribeProductEventListEventsGroupInfo source) {
+        if (source.GroupId != null) {
+            this.GroupId = new Long(source.GroupId);
+        }
+        if (source.GroupName != null) {
+            this.GroupName = new String(source.GroupName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

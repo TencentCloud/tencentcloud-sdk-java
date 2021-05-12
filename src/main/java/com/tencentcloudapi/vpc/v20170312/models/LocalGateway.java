@@ -160,6 +160,35 @@ public class LocalGateway extends AbstractModel{
         this.CreateTime = CreateTime;
     }
 
+    public LocalGateway() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public LocalGateway(LocalGateway source) {
+        if (source.CdcId != null) {
+            this.CdcId = new String(source.CdcId);
+        }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.UniqLocalGwId != null) {
+            this.UniqLocalGwId = new String(source.UniqLocalGwId);
+        }
+        if (source.LocalGatewayName != null) {
+            this.LocalGatewayName = new String(source.LocalGatewayName);
+        }
+        if (source.LocalGwIp != null) {
+            this.LocalGwIp = new String(source.LocalGwIp);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

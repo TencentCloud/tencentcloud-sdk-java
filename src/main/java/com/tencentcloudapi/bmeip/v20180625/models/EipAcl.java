@@ -183,6 +183,44 @@ public class EipAcl extends AbstractModel{
         this.InRules = InRules;
     }
 
+    public EipAcl() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public EipAcl(EipAcl source) {
+        if (source.AclId != null) {
+            this.AclId = new String(source.AclId);
+        }
+        if (source.AclName != null) {
+            this.AclName = new String(source.AclName);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.CreatedAt != null) {
+            this.CreatedAt = new String(source.CreatedAt);
+        }
+        if (source.EipNum != null) {
+            this.EipNum = new Long(source.EipNum);
+        }
+        if (source.OutRules != null) {
+            this.OutRules = new EipAclRule[source.OutRules.length];
+            for (int i = 0; i < source.OutRules.length; i++) {
+                this.OutRules[i] = new EipAclRule(source.OutRules[i]);
+            }
+        }
+        if (source.InRules != null) {
+            this.InRules = new EipAclRule[source.InRules.length];
+            for (int i = 0; i < source.InRules.length; i++) {
+                this.InRules[i] = new EipAclRule(source.InRules[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

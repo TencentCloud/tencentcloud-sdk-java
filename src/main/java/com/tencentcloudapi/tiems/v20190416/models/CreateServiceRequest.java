@@ -344,6 +344,59 @@ public class CreateServiceRequest extends AbstractModel{
         this.LogTopicId = LogTopicId;
     }
 
+    public CreateServiceRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateServiceRequest(CreateServiceRequest source) {
+        if (source.Scaler != null) {
+            this.Scaler = new Scaler(source.Scaler);
+        }
+        if (source.ServiceConfigId != null) {
+            this.ServiceConfigId = new String(source.ServiceConfigId);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.ScaleMode != null) {
+            this.ScaleMode = new String(source.ScaleMode);
+        }
+        if (source.ResourceGroupId != null) {
+            this.ResourceGroupId = new String(source.ResourceGroupId);
+        }
+        if (source.Cpu != null) {
+            this.Cpu = new Long(source.Cpu);
+        }
+        if (source.Memory != null) {
+            this.Memory = new Long(source.Memory);
+        }
+        if (source.Cluster != null) {
+            this.Cluster = new String(source.Cluster);
+        }
+        if (source.Authentication != null) {
+            this.Authentication = new String(source.Authentication);
+        }
+        if (source.Gpu != null) {
+            this.Gpu = new Long(source.Gpu);
+        }
+        if (source.GpuMemory != null) {
+            this.GpuMemory = new Long(source.GpuMemory);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.GpuType != null) {
+            this.GpuType = new String(source.GpuType);
+        }
+        if (source.LogTopicId != null) {
+            this.LogTopicId = new String(source.LogTopicId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

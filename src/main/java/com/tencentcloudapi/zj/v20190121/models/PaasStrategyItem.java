@@ -68,6 +68,23 @@ public class PaasStrategyItem extends AbstractModel{
         this.ContentType = ContentType;
     }
 
+    public PaasStrategyItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PaasStrategyItem(PaasStrategyItem source) {
+        if (source.Id != null) {
+            this.Id = new Long(source.Id);
+        }
+        if (source.ContentType != null) {
+            this.ContentType = new Long(source.ContentType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

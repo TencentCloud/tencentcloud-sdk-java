@@ -68,6 +68,26 @@ public class CheckNetDetectStateResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public CheckNetDetectStateResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CheckNetDetectStateResponse(CheckNetDetectStateResponse source) {
+        if (source.NetDetectIpStateSet != null) {
+            this.NetDetectIpStateSet = new NetDetectIpState[source.NetDetectIpStateSet.length];
+            for (int i = 0; i < source.NetDetectIpStateSet.length; i++) {
+                this.NetDetectIpStateSet[i] = new NetDetectIpState(source.NetDetectIpStateSet[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

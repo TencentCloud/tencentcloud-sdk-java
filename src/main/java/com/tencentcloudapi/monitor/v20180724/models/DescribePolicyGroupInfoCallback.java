@@ -91,6 +91,26 @@ public class DescribePolicyGroupInfoCallback extends AbstractModel{
         this.VerifyCode = VerifyCode;
     }
 
+    public DescribePolicyGroupInfoCallback() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribePolicyGroupInfoCallback(DescribePolicyGroupInfoCallback source) {
+        if (source.CallbackUrl != null) {
+            this.CallbackUrl = new String(source.CallbackUrl);
+        }
+        if (source.ValidFlag != null) {
+            this.ValidFlag = new Long(source.ValidFlag);
+        }
+        if (source.VerifyCode != null) {
+            this.VerifyCode = new String(source.VerifyCode);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

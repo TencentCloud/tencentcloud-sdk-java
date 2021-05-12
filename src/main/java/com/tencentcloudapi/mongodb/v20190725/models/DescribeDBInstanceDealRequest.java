@@ -45,6 +45,20 @@ public class DescribeDBInstanceDealRequest extends AbstractModel{
         this.DealId = DealId;
     }
 
+    public DescribeDBInstanceDealRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeDBInstanceDealRequest(DescribeDBInstanceDealRequest source) {
+        if (source.DealId != null) {
+            this.DealId = new String(source.DealId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

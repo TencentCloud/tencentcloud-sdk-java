@@ -68,6 +68,23 @@ public class EnhancedService extends AbstractModel{
         this.MonitorService = MonitorService;
     }
 
+    public EnhancedService() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public EnhancedService(EnhancedService source) {
+        if (source.SecurityService != null) {
+            this.SecurityService = new RunSecurityServiceEnabled(source.SecurityService);
+        }
+        if (source.MonitorService != null) {
+            this.MonitorService = new RunMonitorServiceEnabled(source.MonitorService);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

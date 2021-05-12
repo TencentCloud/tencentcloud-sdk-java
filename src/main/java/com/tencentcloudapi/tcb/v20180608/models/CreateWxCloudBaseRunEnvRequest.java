@@ -170,6 +170,38 @@ Activity：活动来源
         this.SubNetIds = SubNetIds;
     }
 
+    public CreateWxCloudBaseRunEnvRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateWxCloudBaseRunEnvRequest(CreateWxCloudBaseRunEnvRequest source) {
+        if (source.WxAppId != null) {
+            this.WxAppId = new String(source.WxAppId);
+        }
+        if (source.Alias != null) {
+            this.Alias = new String(source.Alias);
+        }
+        if (source.FreeQuota != null) {
+            this.FreeQuota = new String(source.FreeQuota);
+        }
+        if (source.Flag != null) {
+            this.Flag = new String(source.Flag);
+        }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.SubNetIds != null) {
+            this.SubNetIds = new String[source.SubNetIds.length];
+            for (int i = 0; i < source.SubNetIds.length; i++) {
+                this.SubNetIds[i] = new String(source.SubNetIds[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

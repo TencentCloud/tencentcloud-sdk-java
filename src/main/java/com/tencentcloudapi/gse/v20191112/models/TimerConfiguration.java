@@ -134,6 +134,29 @@ public class TimerConfiguration extends AbstractModel{
         this.EndTime = EndTime;
     }
 
+    public TimerConfiguration() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TimerConfiguration(TimerConfiguration source) {
+        if (source.TimerType != null) {
+            this.TimerType = new Long(source.TimerType);
+        }
+        if (source.TimerValue != null) {
+            this.TimerValue = new TimerValue(source.TimerValue);
+        }
+        if (source.BeginTime != null) {
+            this.BeginTime = new String(source.BeginTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

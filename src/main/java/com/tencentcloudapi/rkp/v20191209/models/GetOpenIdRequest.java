@@ -137,6 +137,32 @@ public class GetOpenIdRequest extends AbstractModel{
         this.Option = Option;
     }
 
+    public GetOpenIdRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GetOpenIdRequest(GetOpenIdRequest source) {
+        if (source.DeviceToken != null) {
+            this.DeviceToken = new String(source.DeviceToken);
+        }
+        if (source.BusinessId != null) {
+            this.BusinessId = new Long(source.BusinessId);
+        }
+        if (source.BusinessUserId != null) {
+            this.BusinessUserId = new String(source.BusinessUserId);
+        }
+        if (source.Platform != null) {
+            this.Platform = new Long(source.Platform);
+        }
+        if (source.Option != null) {
+            this.Option = new String(source.Option);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

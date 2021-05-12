@@ -91,6 +91,26 @@ public class TaskStatus extends AbstractModel{
         this.UpdateTime = UpdateTime;
     }
 
+    public TaskStatus() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TaskStatus(TaskStatus source) {
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.Progress != null) {
+            this.Progress = new String(source.Progress);
+        }
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new String(source.UpdateTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

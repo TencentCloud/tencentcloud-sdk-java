@@ -206,6 +206,41 @@ public class Result extends AbstractModel{
         this.InvokeResult = InvokeResult;
     }
 
+    public Result() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Result(Result source) {
+        if (source.Log != null) {
+            this.Log = new String(source.Log);
+        }
+        if (source.RetMsg != null) {
+            this.RetMsg = new String(source.RetMsg);
+        }
+        if (source.ErrMsg != null) {
+            this.ErrMsg = new String(source.ErrMsg);
+        }
+        if (source.MemUsage != null) {
+            this.MemUsage = new Long(source.MemUsage);
+        }
+        if (source.Duration != null) {
+            this.Duration = new Float(source.Duration);
+        }
+        if (source.BillDuration != null) {
+            this.BillDuration = new Long(source.BillDuration);
+        }
+        if (source.FunctionRequestId != null) {
+            this.FunctionRequestId = new String(source.FunctionRequestId);
+        }
+        if (source.InvokeResult != null) {
+            this.InvokeResult = new Long(source.InvokeResult);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

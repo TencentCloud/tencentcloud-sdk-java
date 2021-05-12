@@ -91,6 +91,26 @@ public class GetFaceIdResultRequest extends AbstractModel{
         this.IsNeedBestFrame = IsNeedBestFrame;
     }
 
+    public GetFaceIdResultRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GetFaceIdResultRequest(GetFaceIdResultRequest source) {
+        if (source.FaceIdToken != null) {
+            this.FaceIdToken = new String(source.FaceIdToken);
+        }
+        if (source.IsNeedVideo != null) {
+            this.IsNeedVideo = new Boolean(source.IsNeedVideo);
+        }
+        if (source.IsNeedBestFrame != null) {
+            this.IsNeedBestFrame = new Boolean(source.IsNeedBestFrame);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -152,6 +152,32 @@ public class DescribeFileSystemResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeFileSystemResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeFileSystemResponse(DescribeFileSystemResponse source) {
+        if (source.FileSystem != null) {
+            this.FileSystem = new FileSystem(source.FileSystem);
+        }
+        if (source.FileSystemCapacityUsed != null) {
+            this.FileSystemCapacityUsed = new Long(source.FileSystemCapacityUsed);
+        }
+        if (source.CapacityUsed != null) {
+            this.CapacityUsed = new Long(source.CapacityUsed);
+        }
+        if (source.ArchiveCapacityUsed != null) {
+            this.ArchiveCapacityUsed = new Long(source.ArchiveCapacityUsed);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

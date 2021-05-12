@@ -147,6 +147,32 @@ public class ClusterResource extends AbstractModel{
         this.ClusterName = ClusterName;
     }
 
+    public ClusterResource() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ClusterResource(ClusterResource source) {
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
+        if (source.Vip != null) {
+            this.Vip = new String(source.Vip);
+        }
+        if (source.LoadBalancerId != null) {
+            this.LoadBalancerId = new String(source.LoadBalancerId);
+        }
+        if (source.Idle != null) {
+            this.Idle = new String(source.Idle);
+        }
+        if (source.ClusterName != null) {
+            this.ClusterName = new String(source.ClusterName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

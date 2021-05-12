@@ -367,6 +367,62 @@ public class AppSetInfo extends AbstractModel{
         this.ShieldSize = ShieldSize;
     }
 
+    public AppSetInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AppSetInfo(AppSetInfo source) {
+        if (source.ItemId != null) {
+            this.ItemId = new String(source.ItemId);
+        }
+        if (source.AppName != null) {
+            this.AppName = new String(source.AppName);
+        }
+        if (source.AppPkgName != null) {
+            this.AppPkgName = new String(source.AppPkgName);
+        }
+        if (source.AppVersion != null) {
+            this.AppVersion = new String(source.AppVersion);
+        }
+        if (source.AppMd5 != null) {
+            this.AppMd5 = new String(source.AppMd5);
+        }
+        if (source.AppSize != null) {
+            this.AppSize = new Long(source.AppSize);
+        }
+        if (source.ServiceEdition != null) {
+            this.ServiceEdition = new String(source.ServiceEdition);
+        }
+        if (source.ShieldCode != null) {
+            this.ShieldCode = new Long(source.ShieldCode);
+        }
+        if (source.AppUrl != null) {
+            this.AppUrl = new String(source.AppUrl);
+        }
+        if (source.TaskStatus != null) {
+            this.TaskStatus = new Long(source.TaskStatus);
+        }
+        if (source.ClientIp != null) {
+            this.ClientIp = new String(source.ClientIp);
+        }
+        if (source.TaskTime != null) {
+            this.TaskTime = new Long(source.TaskTime);
+        }
+        if (source.AppIconUrl != null) {
+            this.AppIconUrl = new String(source.AppIconUrl);
+        }
+        if (source.ShieldMd5 != null) {
+            this.ShieldMd5 = new String(source.ShieldMd5);
+        }
+        if (source.ShieldSize != null) {
+            this.ShieldSize = new Long(source.ShieldSize);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

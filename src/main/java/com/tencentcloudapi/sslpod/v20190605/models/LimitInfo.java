@@ -91,6 +91,26 @@ public class LimitInfo extends AbstractModel{
         this.Sent = Sent;
     }
 
+    public LimitInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public LimitInfo(LimitInfo source) {
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.Total != null) {
+            this.Total = new Long(source.Total);
+        }
+        if (source.Sent != null) {
+            this.Sent = new Long(source.Sent);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

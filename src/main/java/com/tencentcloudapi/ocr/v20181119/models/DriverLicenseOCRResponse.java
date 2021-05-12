@@ -431,6 +431,71 @@ WARN_DRIVER_LICENSE_PS_CARD ps告警
         this.RequestId = RequestId;
     }
 
+    public DriverLicenseOCRResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DriverLicenseOCRResponse(DriverLicenseOCRResponse source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Sex != null) {
+            this.Sex = new String(source.Sex);
+        }
+        if (source.Nationality != null) {
+            this.Nationality = new String(source.Nationality);
+        }
+        if (source.Address != null) {
+            this.Address = new String(source.Address);
+        }
+        if (source.DateOfBirth != null) {
+            this.DateOfBirth = new String(source.DateOfBirth);
+        }
+        if (source.DateOfFirstIssue != null) {
+            this.DateOfFirstIssue = new String(source.DateOfFirstIssue);
+        }
+        if (source.Class != null) {
+            this.Class = new String(source.Class);
+        }
+        if (source.StartDate != null) {
+            this.StartDate = new String(source.StartDate);
+        }
+        if (source.EndDate != null) {
+            this.EndDate = new String(source.EndDate);
+        }
+        if (source.CardCode != null) {
+            this.CardCode = new String(source.CardCode);
+        }
+        if (source.ArchivesCode != null) {
+            this.ArchivesCode = new String(source.ArchivesCode);
+        }
+        if (source.Record != null) {
+            this.Record = new String(source.Record);
+        }
+        if (source.RecognizeWarnCode != null) {
+            this.RecognizeWarnCode = new Long[source.RecognizeWarnCode.length];
+            for (int i = 0; i < source.RecognizeWarnCode.length; i++) {
+                this.RecognizeWarnCode[i] = new Long(source.RecognizeWarnCode[i]);
+            }
+        }
+        if (source.RecognizeWarnMsg != null) {
+            this.RecognizeWarnMsg = new String[source.RecognizeWarnMsg.length];
+            for (int i = 0; i < source.RecognizeWarnMsg.length; i++) {
+                this.RecognizeWarnMsg[i] = new String(source.RecognizeWarnMsg[i]);
+            }
+        }
+        if (source.IssuingAuthority != null) {
+            this.IssuingAuthority = new String(source.IssuingAuthority);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

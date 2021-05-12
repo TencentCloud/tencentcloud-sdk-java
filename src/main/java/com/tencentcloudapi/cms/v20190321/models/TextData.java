@@ -402,6 +402,74 @@ public class TextData extends AbstractModel{
         this.Suggestion = Suggestion;
     }
 
+    public TextData() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TextData(TextData source) {
+        if (source.EvilFlag != null) {
+            this.EvilFlag = new Long(source.EvilFlag);
+        }
+        if (source.EvilType != null) {
+            this.EvilType = new Long(source.EvilType);
+        }
+        if (source.Common != null) {
+            this.Common = new TextOutputComm(source.Common);
+        }
+        if (source.CustomResult != null) {
+            this.CustomResult = new CustomResult[source.CustomResult.length];
+            for (int i = 0; i < source.CustomResult.length; i++) {
+                this.CustomResult[i] = new CustomResult(source.CustomResult[i]);
+            }
+        }
+        if (source.DetailResult != null) {
+            this.DetailResult = new DetailResult[source.DetailResult.length];
+            for (int i = 0; i < source.DetailResult.length; i++) {
+                this.DetailResult[i] = new DetailResult(source.DetailResult[i]);
+            }
+        }
+        if (source.ID != null) {
+            this.ID = new TextOutputID(source.ID);
+        }
+        if (source.Res != null) {
+            this.Res = new TextOutputRes(source.Res);
+        }
+        if (source.RiskDetails != null) {
+            this.RiskDetails = new RiskDetails[source.RiskDetails.length];
+            for (int i = 0; i < source.RiskDetails.length; i++) {
+                this.RiskDetails[i] = new RiskDetails(source.RiskDetails[i]);
+            }
+        }
+        if (source.BizType != null) {
+            this.BizType = new Long(source.BizType);
+        }
+        if (source.DataId != null) {
+            this.DataId = new String(source.DataId);
+        }
+        if (source.EvilLabel != null) {
+            this.EvilLabel = new String(source.EvilLabel);
+        }
+        if (source.Extra != null) {
+            this.Extra = new String(source.Extra);
+        }
+        if (source.Keywords != null) {
+            this.Keywords = new String[source.Keywords.length];
+            for (int i = 0; i < source.Keywords.length; i++) {
+                this.Keywords[i] = new String(source.Keywords[i]);
+            }
+        }
+        if (source.Score != null) {
+            this.Score = new Long(source.Score);
+        }
+        if (source.Suggestion != null) {
+            this.Suggestion = new String(source.Suggestion);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

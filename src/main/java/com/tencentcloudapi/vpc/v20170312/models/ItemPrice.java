@@ -114,6 +114,29 @@ public class ItemPrice extends AbstractModel{
         this.DiscountPrice = DiscountPrice;
     }
 
+    public ItemPrice() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ItemPrice(ItemPrice source) {
+        if (source.UnitPrice != null) {
+            this.UnitPrice = new Float(source.UnitPrice);
+        }
+        if (source.ChargeUnit != null) {
+            this.ChargeUnit = new String(source.ChargeUnit);
+        }
+        if (source.OriginalPrice != null) {
+            this.OriginalPrice = new Float(source.OriginalPrice);
+        }
+        if (source.DiscountPrice != null) {
+            this.DiscountPrice = new Float(source.DiscountPrice);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

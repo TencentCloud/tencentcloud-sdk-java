@@ -389,6 +389,65 @@ public class DescribeOnlineRecordResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeOnlineRecordResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeOnlineRecordResponse(DescribeOnlineRecordResponse source) {
+        if (source.FinishReason != null) {
+            this.FinishReason = new String(source.FinishReason);
+        }
+        if (source.TaskId != null) {
+            this.TaskId = new String(source.TaskId);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.RoomId != null) {
+            this.RoomId = new Long(source.RoomId);
+        }
+        if (source.GroupId != null) {
+            this.GroupId = new String(source.GroupId);
+        }
+        if (source.RecordUserId != null) {
+            this.RecordUserId = new String(source.RecordUserId);
+        }
+        if (source.RecordStartTime != null) {
+            this.RecordStartTime = new Long(source.RecordStartTime);
+        }
+        if (source.RecordStopTime != null) {
+            this.RecordStopTime = new Long(source.RecordStopTime);
+        }
+        if (source.TotalTime != null) {
+            this.TotalTime = new Long(source.TotalTime);
+        }
+        if (source.ExceptionCnt != null) {
+            this.ExceptionCnt = new Long(source.ExceptionCnt);
+        }
+        if (source.OmittedDurations != null) {
+            this.OmittedDurations = new OmittedDuration[source.OmittedDurations.length];
+            for (int i = 0; i < source.OmittedDurations.length; i++) {
+                this.OmittedDurations[i] = new OmittedDuration(source.OmittedDurations[i]);
+            }
+        }
+        if (source.VideoInfos != null) {
+            this.VideoInfos = new VideoInfo[source.VideoInfos.length];
+            for (int i = 0; i < source.VideoInfos.length; i++) {
+                this.VideoInfos[i] = new VideoInfo(source.VideoInfos[i]);
+            }
+        }
+        if (source.ReplayUrl != null) {
+            this.ReplayUrl = new String(source.ReplayUrl);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

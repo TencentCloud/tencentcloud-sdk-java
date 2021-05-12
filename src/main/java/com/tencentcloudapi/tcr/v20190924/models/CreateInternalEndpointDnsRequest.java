@@ -124,6 +124,29 @@ false: 使用vpc域名
         this.UsePublicDomain = UsePublicDomain;
     }
 
+    public CreateInternalEndpointDnsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateInternalEndpointDnsRequest(CreateInternalEndpointDnsRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.EniLBIp != null) {
+            this.EniLBIp = new String(source.EniLBIp);
+        }
+        if (source.UsePublicDomain != null) {
+            this.UsePublicDomain = new Boolean(source.UsePublicDomain);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

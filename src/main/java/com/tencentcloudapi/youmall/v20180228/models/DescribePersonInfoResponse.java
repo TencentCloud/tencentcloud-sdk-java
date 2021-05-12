@@ -137,6 +137,35 @@ public class DescribePersonInfoResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribePersonInfoResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribePersonInfoResponse(DescribePersonInfoResponse source) {
+        if (source.CompanyId != null) {
+            this.CompanyId = new String(source.CompanyId);
+        }
+        if (source.ShopId != null) {
+            this.ShopId = new Long(source.ShopId);
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.PersonInfoSet != null) {
+            this.PersonInfoSet = new PersonInfo[source.PersonInfoSet.length];
+            for (int i = 0; i < source.PersonInfoSet.length; i++) {
+                this.PersonInfoSet[i] = new PersonInfo(source.PersonInfoSet[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

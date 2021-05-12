@@ -91,6 +91,29 @@ public class DescribeCertListResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeCertListResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeCertListResponse(DescribeCertListResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.CertificateSet != null) {
+            this.CertificateSet = new SSLCertificate[source.CertificateSet.length];
+            for (int i = 0; i < source.CertificateSet.length; i++) {
+                this.CertificateSet[i] = new SSLCertificate(source.CertificateSet[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

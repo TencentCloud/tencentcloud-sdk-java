@@ -91,6 +91,29 @@ public class CreateProgramStateRequest extends AbstractModel{
         this.MallId = MallId;
     }
 
+    public CreateProgramStateRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateProgramStateRequest(CreateProgramStateRequest source) {
+        if (source.GroupCode != null) {
+            this.GroupCode = new String(source.GroupCode);
+        }
+        if (source.ProgramStateItems != null) {
+            this.ProgramStateItems = new ProgramStateItem[source.ProgramStateItems.length];
+            for (int i = 0; i < source.ProgramStateItems.length; i++) {
+                this.ProgramStateItems[i] = new ProgramStateItem(source.ProgramStateItems[i]);
+            }
+        }
+        if (source.MallId != null) {
+            this.MallId = new Long(source.MallId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -246,6 +246,41 @@ public class DescribeAccidentEventListAlarms extends AbstractModel{
         this.UpdateTime = UpdateTime;
     }
 
+    public DescribeAccidentEventListAlarms() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeAccidentEventListAlarms(DescribeAccidentEventListAlarms source) {
+        if (source.BusinessTypeDesc != null) {
+            this.BusinessTypeDesc = new String(source.BusinessTypeDesc);
+        }
+        if (source.AccidentTypeDesc != null) {
+            this.AccidentTypeDesc = new String(source.AccidentTypeDesc);
+        }
+        if (source.BusinessID != null) {
+            this.BusinessID = new Long(source.BusinessID);
+        }
+        if (source.EventStatus != null) {
+            this.EventStatus = new Long(source.EventStatus);
+        }
+        if (source.AffectResource != null) {
+            this.AffectResource = new String(source.AffectResource);
+        }
+        if (source.Region != null) {
+            this.Region = new String(source.Region);
+        }
+        if (source.OccurTime != null) {
+            this.OccurTime = new String(source.OccurTime);
+        }
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new String(source.UpdateTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

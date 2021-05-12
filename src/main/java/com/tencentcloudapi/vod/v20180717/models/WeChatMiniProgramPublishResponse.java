@@ -68,6 +68,23 @@ public class WeChatMiniProgramPublishResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public WeChatMiniProgramPublishResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public WeChatMiniProgramPublishResponse(WeChatMiniProgramPublishResponse source) {
+        if (source.TaskId != null) {
+            this.TaskId = new String(source.TaskId);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

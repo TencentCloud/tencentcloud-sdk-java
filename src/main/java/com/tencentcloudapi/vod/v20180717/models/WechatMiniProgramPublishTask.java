@@ -223,6 +223,38 @@ FINISH：已完成。
         this.PublishResult = PublishResult;
     }
 
+    public WechatMiniProgramPublishTask() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public WechatMiniProgramPublishTask(WechatMiniProgramPublishTask source) {
+        if (source.TaskId != null) {
+            this.TaskId = new String(source.TaskId);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.ErrCode != null) {
+            this.ErrCode = new Long(source.ErrCode);
+        }
+        if (source.Message != null) {
+            this.Message = new String(source.Message);
+        }
+        if (source.FileId != null) {
+            this.FileId = new String(source.FileId);
+        }
+        if (source.SourceDefinition != null) {
+            this.SourceDefinition = new Long(source.SourceDefinition);
+        }
+        if (source.PublishResult != null) {
+            this.PublishResult = new String(source.PublishResult);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

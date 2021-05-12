@@ -68,6 +68,26 @@ public class CreateScanInstancesRequest extends AbstractModel{
         this.ScanInfo = ScanInfo;
     }
 
+    public CreateScanInstancesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateScanInstancesRequest(CreateScanInstancesRequest source) {
+        if (source.AppInfos != null) {
+            this.AppInfos = new AppInfo[source.AppInfos.length];
+            for (int i = 0; i < source.AppInfos.length; i++) {
+                this.AppInfos[i] = new AppInfo(source.AppInfos[i]);
+            }
+        }
+        if (source.ScanInfo != null) {
+            this.ScanInfo = new ScanInfo(source.ScanInfo);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

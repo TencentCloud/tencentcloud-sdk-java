@@ -284,6 +284,47 @@ index：首页
         this.RedirectUrl = RedirectUrl;
     }
 
+    public ScdnCCRules() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ScdnCCRules(ScdnCCRules source) {
+        if (source.RuleType != null) {
+            this.RuleType = new String(source.RuleType);
+        }
+        if (source.RuleValue != null) {
+            this.RuleValue = new String[source.RuleValue.length];
+            for (int i = 0; i < source.RuleValue.length; i++) {
+                this.RuleValue[i] = new String(source.RuleValue[i]);
+            }
+        }
+        if (source.Qps != null) {
+            this.Qps = new Long(source.Qps);
+        }
+        if (source.DetectionTime != null) {
+            this.DetectionTime = new Long(source.DetectionTime);
+        }
+        if (source.FrequencyLimit != null) {
+            this.FrequencyLimit = new Long(source.FrequencyLimit);
+        }
+        if (source.PunishmentSwitch != null) {
+            this.PunishmentSwitch = new String(source.PunishmentSwitch);
+        }
+        if (source.PunishmentTime != null) {
+            this.PunishmentTime = new Long(source.PunishmentTime);
+        }
+        if (source.Action != null) {
+            this.Action = new String(source.Action);
+        }
+        if (source.RedirectUrl != null) {
+            this.RedirectUrl = new String(source.RedirectUrl);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

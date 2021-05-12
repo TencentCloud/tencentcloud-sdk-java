@@ -149,6 +149,32 @@ public class DetailResult extends AbstractModel{
         this.Score = Score;
     }
 
+    public DetailResult() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DetailResult(DetailResult source) {
+        if (source.EvilLabel != null) {
+            this.EvilLabel = new String(source.EvilLabel);
+        }
+        if (source.EvilType != null) {
+            this.EvilType = new Long(source.EvilType);
+        }
+        if (source.Keywords != null) {
+            this.Keywords = new String[source.Keywords.length];
+            for (int i = 0; i < source.Keywords.length; i++) {
+                this.Keywords[i] = new String(source.Keywords[i]);
+            }
+        }
+        if (source.Score != null) {
+            this.Score = new Long(source.Score);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

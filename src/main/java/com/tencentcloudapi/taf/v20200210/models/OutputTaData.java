@@ -101,6 +101,26 @@ public class OutputTaData extends AbstractModel{
         this.Value = Value;
     }
 
+    public OutputTaData() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public OutputTaData(OutputTaData source) {
+        if (source.Code != null) {
+            this.Code = new Long(source.Code);
+        }
+        if (source.Message != null) {
+            this.Message = new String(source.Message);
+        }
+        if (source.Value != null) {
+            this.Value = new OutputTaValue(source.Value);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

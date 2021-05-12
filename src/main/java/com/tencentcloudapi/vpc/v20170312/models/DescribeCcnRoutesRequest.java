@@ -162,6 +162,38 @@ public class DescribeCcnRoutesRequest extends AbstractModel{
         this.Limit = Limit;
     }
 
+    public DescribeCcnRoutesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeCcnRoutesRequest(DescribeCcnRoutesRequest source) {
+        if (source.CcnId != null) {
+            this.CcnId = new String(source.CcnId);
+        }
+        if (source.RouteIds != null) {
+            this.RouteIds = new String[source.RouteIds.length];
+            for (int i = 0; i < source.RouteIds.length; i++) {
+                this.RouteIds[i] = new String(source.RouteIds[i]);
+            }
+        }
+        if (source.Filters != null) {
+            this.Filters = new Filter[source.Filters.length];
+            for (int i = 0; i < source.Filters.length; i++) {
+                this.Filters[i] = new Filter(source.Filters[i]);
+            }
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

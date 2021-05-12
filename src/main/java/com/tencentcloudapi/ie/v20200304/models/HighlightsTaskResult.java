@@ -129,6 +129,32 @@ public class HighlightsTaskResult extends AbstractModel{
         this.ItemSet = ItemSet;
     }
 
+    public HighlightsTaskResult() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public HighlightsTaskResult(HighlightsTaskResult source) {
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.ErrCode != null) {
+            this.ErrCode = new Long(source.ErrCode);
+        }
+        if (source.ErrMsg != null) {
+            this.ErrMsg = new String(source.ErrMsg);
+        }
+        if (source.ItemSet != null) {
+            this.ItemSet = new HighlightsTaskResultItem[source.ItemSet.length];
+            for (int i = 0; i < source.ItemSet.length; i++) {
+                this.ItemSet[i] = new HighlightsTaskResultItem(source.ItemSet[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -68,6 +68,26 @@ public class BatchDescribeOrderCertificateResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public BatchDescribeOrderCertificateResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public BatchDescribeOrderCertificateResponse(BatchDescribeOrderCertificateResponse source) {
+        if (source.CertificateUrls != null) {
+            this.CertificateUrls = new String[source.CertificateUrls.length];
+            for (int i = 0; i < source.CertificateUrls.length; i++) {
+                this.CertificateUrls[i] = new String(source.CertificateUrls[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

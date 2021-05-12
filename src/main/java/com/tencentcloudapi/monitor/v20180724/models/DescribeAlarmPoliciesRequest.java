@@ -448,6 +448,95 @@ public class DescribeAlarmPoliciesRequest extends AbstractModel{
         this.NotBindingNoticeRule = NotBindingNoticeRule;
     }
 
+    public DescribeAlarmPoliciesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeAlarmPoliciesRequest(DescribeAlarmPoliciesRequest source) {
+        if (source.Module != null) {
+            this.Module = new String(source.Module);
+        }
+        if (source.PageNumber != null) {
+            this.PageNumber = new Long(source.PageNumber);
+        }
+        if (source.PageSize != null) {
+            this.PageSize = new Long(source.PageSize);
+        }
+        if (source.PolicyName != null) {
+            this.PolicyName = new String(source.PolicyName);
+        }
+        if (source.MonitorTypes != null) {
+            this.MonitorTypes = new String[source.MonitorTypes.length];
+            for (int i = 0; i < source.MonitorTypes.length; i++) {
+                this.MonitorTypes[i] = new String(source.MonitorTypes[i]);
+            }
+        }
+        if (source.Namespaces != null) {
+            this.Namespaces = new String[source.Namespaces.length];
+            for (int i = 0; i < source.Namespaces.length; i++) {
+                this.Namespaces[i] = new String(source.Namespaces[i]);
+            }
+        }
+        if (source.Dimensions != null) {
+            this.Dimensions = new String(source.Dimensions);
+        }
+        if (source.ReceiverUids != null) {
+            this.ReceiverUids = new Long[source.ReceiverUids.length];
+            for (int i = 0; i < source.ReceiverUids.length; i++) {
+                this.ReceiverUids[i] = new Long(source.ReceiverUids[i]);
+            }
+        }
+        if (source.ReceiverGroups != null) {
+            this.ReceiverGroups = new Long[source.ReceiverGroups.length];
+            for (int i = 0; i < source.ReceiverGroups.length; i++) {
+                this.ReceiverGroups[i] = new Long(source.ReceiverGroups[i]);
+            }
+        }
+        if (source.PolicyType != null) {
+            this.PolicyType = new String[source.PolicyType.length];
+            for (int i = 0; i < source.PolicyType.length; i++) {
+                this.PolicyType[i] = new String(source.PolicyType[i]);
+            }
+        }
+        if (source.Field != null) {
+            this.Field = new String(source.Field);
+        }
+        if (source.Order != null) {
+            this.Order = new String(source.Order);
+        }
+        if (source.ProjectIds != null) {
+            this.ProjectIds = new Long[source.ProjectIds.length];
+            for (int i = 0; i < source.ProjectIds.length; i++) {
+                this.ProjectIds[i] = new Long(source.ProjectIds[i]);
+            }
+        }
+        if (source.NoticeIds != null) {
+            this.NoticeIds = new String[source.NoticeIds.length];
+            for (int i = 0; i < source.NoticeIds.length; i++) {
+                this.NoticeIds[i] = new String(source.NoticeIds[i]);
+            }
+        }
+        if (source.RuleTypes != null) {
+            this.RuleTypes = new String[source.RuleTypes.length];
+            for (int i = 0; i < source.RuleTypes.length; i++) {
+                this.RuleTypes[i] = new String(source.RuleTypes[i]);
+            }
+        }
+        if (source.Enable != null) {
+            this.Enable = new Long[source.Enable.length];
+            for (int i = 0; i < source.Enable.length; i++) {
+                this.Enable[i] = new Long(source.Enable[i]);
+            }
+        }
+        if (source.NotBindingNoticeRule != null) {
+            this.NotBindingNoticeRule = new Long(source.NotBindingNoticeRule);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

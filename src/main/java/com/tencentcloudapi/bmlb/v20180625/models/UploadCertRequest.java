@@ -114,6 +114,29 @@ public class UploadCertRequest extends AbstractModel{
         this.Key = Key;
     }
 
+    public UploadCertRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UploadCertRequest(UploadCertRequest source) {
+        if (source.CertType != null) {
+            this.CertType = new String(source.CertType);
+        }
+        if (source.Cert != null) {
+            this.Cert = new String(source.Cert);
+        }
+        if (source.Alias != null) {
+            this.Alias = new String(source.Alias);
+        }
+        if (source.Key != null) {
+            this.Key = new String(source.Key);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

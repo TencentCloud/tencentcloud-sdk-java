@@ -165,6 +165,35 @@ public class DescribeBillResourceSummaryRequest extends AbstractModel{
         this.ActionType = ActionType;
     }
 
+    public DescribeBillResourceSummaryRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeBillResourceSummaryRequest(DescribeBillResourceSummaryRequest source) {
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.PeriodType != null) {
+            this.PeriodType = new String(source.PeriodType);
+        }
+        if (source.Month != null) {
+            this.Month = new String(source.Month);
+        }
+        if (source.NeedRecordNum != null) {
+            this.NeedRecordNum = new Long(source.NeedRecordNum);
+        }
+        if (source.ActionType != null) {
+            this.ActionType = new String(source.ActionType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

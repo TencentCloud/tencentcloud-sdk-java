@@ -476,6 +476,83 @@ public class NetworkInterface extends AbstractModel{
         this.CdcId = CdcId;
     }
 
+    public NetworkInterface() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public NetworkInterface(NetworkInterface source) {
+        if (source.NetworkInterfaceId != null) {
+            this.NetworkInterfaceId = new String(source.NetworkInterfaceId);
+        }
+        if (source.NetworkInterfaceName != null) {
+            this.NetworkInterfaceName = new String(source.NetworkInterfaceName);
+        }
+        if (source.NetworkInterfaceDescription != null) {
+            this.NetworkInterfaceDescription = new String(source.NetworkInterfaceDescription);
+        }
+        if (source.SubnetId != null) {
+            this.SubnetId = new String(source.SubnetId);
+        }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.GroupSet != null) {
+            this.GroupSet = new String[source.GroupSet.length];
+            for (int i = 0; i < source.GroupSet.length; i++) {
+                this.GroupSet[i] = new String(source.GroupSet[i]);
+            }
+        }
+        if (source.Primary != null) {
+            this.Primary = new Boolean(source.Primary);
+        }
+        if (source.MacAddress != null) {
+            this.MacAddress = new String(source.MacAddress);
+        }
+        if (source.State != null) {
+            this.State = new String(source.State);
+        }
+        if (source.PrivateIpAddressSet != null) {
+            this.PrivateIpAddressSet = new PrivateIpAddressSpecification[source.PrivateIpAddressSet.length];
+            for (int i = 0; i < source.PrivateIpAddressSet.length; i++) {
+                this.PrivateIpAddressSet[i] = new PrivateIpAddressSpecification(source.PrivateIpAddressSet[i]);
+            }
+        }
+        if (source.Attachment != null) {
+            this.Attachment = new NetworkInterfaceAttachment(source.Attachment);
+        }
+        if (source.Zone != null) {
+            this.Zone = new String(source.Zone);
+        }
+        if (source.CreatedTime != null) {
+            this.CreatedTime = new String(source.CreatedTime);
+        }
+        if (source.Ipv6AddressSet != null) {
+            this.Ipv6AddressSet = new Ipv6Address[source.Ipv6AddressSet.length];
+            for (int i = 0; i < source.Ipv6AddressSet.length; i++) {
+                this.Ipv6AddressSet[i] = new Ipv6Address(source.Ipv6AddressSet[i]);
+            }
+        }
+        if (source.TagSet != null) {
+            this.TagSet = new Tag[source.TagSet.length];
+            for (int i = 0; i < source.TagSet.length; i++) {
+                this.TagSet[i] = new Tag(source.TagSet[i]);
+            }
+        }
+        if (source.EniType != null) {
+            this.EniType = new Long(source.EniType);
+        }
+        if (source.Business != null) {
+            this.Business = new String(source.Business);
+        }
+        if (source.CdcId != null) {
+            this.CdcId = new String(source.CdcId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

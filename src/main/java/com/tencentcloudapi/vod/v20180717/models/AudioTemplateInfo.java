@@ -239,6 +239,29 @@ public class AudioTemplateInfo extends AbstractModel{
         this.AudioChannel = AudioChannel;
     }
 
+    public AudioTemplateInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AudioTemplateInfo(AudioTemplateInfo source) {
+        if (source.Codec != null) {
+            this.Codec = new String(source.Codec);
+        }
+        if (source.Bitrate != null) {
+            this.Bitrate = new Long(source.Bitrate);
+        }
+        if (source.SampleRate != null) {
+            this.SampleRate = new Long(source.SampleRate);
+        }
+        if (source.AudioChannel != null) {
+            this.AudioChannel = new Long(source.AudioChannel);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

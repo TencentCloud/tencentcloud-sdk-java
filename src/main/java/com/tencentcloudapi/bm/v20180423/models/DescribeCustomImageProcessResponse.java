@@ -68,6 +68,26 @@ public class DescribeCustomImageProcessResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeCustomImageProcessResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeCustomImageProcessResponse(DescribeCustomImageProcessResponse source) {
+        if (source.CustomImageProcessSet != null) {
+            this.CustomImageProcessSet = new CustomImageProcess[source.CustomImageProcessSet.length];
+            for (int i = 0; i < source.CustomImageProcessSet.length; i++) {
+                this.CustomImageProcessSet[i] = new CustomImageProcess(source.CustomImageProcessSet[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

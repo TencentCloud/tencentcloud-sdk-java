@@ -137,6 +137,32 @@ public class TaskResult extends AbstractModel{
         this.Dropped = Dropped;
     }
 
+    public TaskResult() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TaskResult(TaskResult source) {
+        if (source.ExitCode != null) {
+            this.ExitCode = new Long(source.ExitCode);
+        }
+        if (source.Output != null) {
+            this.Output = new String(source.Output);
+        }
+        if (source.ExecStartTime != null) {
+            this.ExecStartTime = new String(source.ExecStartTime);
+        }
+        if (source.ExecEndTime != null) {
+            this.ExecEndTime = new String(source.ExecEndTime);
+        }
+        if (source.Dropped != null) {
+            this.Dropped = new Long(source.Dropped);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -91,6 +91,29 @@ public class DescribeImageProcessingTemplatesResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeImageProcessingTemplatesResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeImageProcessingTemplatesResponse(DescribeImageProcessingTemplatesResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.ImageProcessingTemplateSet != null) {
+            this.ImageProcessingTemplateSet = new ImageProcessingTemplate[source.ImageProcessingTemplateSet.length];
+            for (int i = 0; i < source.ImageProcessingTemplateSet.length; i++) {
+                this.ImageProcessingTemplateSet[i] = new ImageProcessingTemplate(source.ImageProcessingTemplateSet[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

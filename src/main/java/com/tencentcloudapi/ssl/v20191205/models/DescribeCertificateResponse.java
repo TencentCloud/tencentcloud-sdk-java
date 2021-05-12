@@ -941,6 +941,122 @@ public class DescribeCertificateResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeCertificateResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeCertificateResponse(DescribeCertificateResponse source) {
+        if (source.OwnerUin != null) {
+            this.OwnerUin = new String(source.OwnerUin);
+        }
+        if (source.ProjectId != null) {
+            this.ProjectId = new String(source.ProjectId);
+        }
+        if (source.From != null) {
+            this.From = new String(source.From);
+        }
+        if (source.CertificateType != null) {
+            this.CertificateType = new String(source.CertificateType);
+        }
+        if (source.PackageType != null) {
+            this.PackageType = new String(source.PackageType);
+        }
+        if (source.ProductZhName != null) {
+            this.ProductZhName = new String(source.ProductZhName);
+        }
+        if (source.Domain != null) {
+            this.Domain = new String(source.Domain);
+        }
+        if (source.Alias != null) {
+            this.Alias = new String(source.Alias);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.StatusMsg != null) {
+            this.StatusMsg = new String(source.StatusMsg);
+        }
+        if (source.VerifyType != null) {
+            this.VerifyType = new String(source.VerifyType);
+        }
+        if (source.VulnerabilityStatus != null) {
+            this.VulnerabilityStatus = new String(source.VulnerabilityStatus);
+        }
+        if (source.CertBeginTime != null) {
+            this.CertBeginTime = new String(source.CertBeginTime);
+        }
+        if (source.CertEndTime != null) {
+            this.CertEndTime = new String(source.CertEndTime);
+        }
+        if (source.ValidityPeriod != null) {
+            this.ValidityPeriod = new String(source.ValidityPeriod);
+        }
+        if (source.InsertTime != null) {
+            this.InsertTime = new String(source.InsertTime);
+        }
+        if (source.OrderId != null) {
+            this.OrderId = new String(source.OrderId);
+        }
+        if (source.CertificateExtra != null) {
+            this.CertificateExtra = new CertificateExtra(source.CertificateExtra);
+        }
+        if (source.DvAuthDetail != null) {
+            this.DvAuthDetail = new DvAuthDetail(source.DvAuthDetail);
+        }
+        if (source.VulnerabilityReport != null) {
+            this.VulnerabilityReport = new String(source.VulnerabilityReport);
+        }
+        if (source.CertificateId != null) {
+            this.CertificateId = new String(source.CertificateId);
+        }
+        if (source.PackageTypeName != null) {
+            this.PackageTypeName = new String(source.PackageTypeName);
+        }
+        if (source.StatusName != null) {
+            this.StatusName = new String(source.StatusName);
+        }
+        if (source.SubjectAltName != null) {
+            this.SubjectAltName = new String[source.SubjectAltName.length];
+            for (int i = 0; i < source.SubjectAltName.length; i++) {
+                this.SubjectAltName[i] = new String(source.SubjectAltName[i]);
+            }
+        }
+        if (source.IsVip != null) {
+            this.IsVip = new Boolean(source.IsVip);
+        }
+        if (source.IsWildcard != null) {
+            this.IsWildcard = new Boolean(source.IsWildcard);
+        }
+        if (source.IsDv != null) {
+            this.IsDv = new Boolean(source.IsDv);
+        }
+        if (source.IsVulnerability != null) {
+            this.IsVulnerability = new Boolean(source.IsVulnerability);
+        }
+        if (source.RenewAble != null) {
+            this.RenewAble = new Boolean(source.RenewAble);
+        }
+        if (source.SubmittedData != null) {
+            this.SubmittedData = new SubmittedData(source.SubmittedData);
+        }
+        if (source.Deployable != null) {
+            this.Deployable = new Boolean(source.Deployable);
+        }
+        if (source.Tags != null) {
+            this.Tags = new Tags[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tags(source.Tags[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

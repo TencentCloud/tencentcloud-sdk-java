@@ -45,6 +45,20 @@ public class DeleteModelRequest extends AbstractModel{
         this.ModelId = ModelId;
     }
 
+    public DeleteModelRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteModelRequest(DeleteModelRequest source) {
+        if (source.ModelId != null) {
+            this.ModelId = new String(source.ModelId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

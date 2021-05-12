@@ -68,6 +68,23 @@ public class CreateNotificationConfigurationResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public CreateNotificationConfigurationResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateNotificationConfigurationResponse(CreateNotificationConfigurationResponse source) {
+        if (source.AutoScalingNotificationId != null) {
+            this.AutoScalingNotificationId = new String(source.AutoScalingNotificationId);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

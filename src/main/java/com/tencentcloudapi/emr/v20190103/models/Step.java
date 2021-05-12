@@ -129,6 +129,29 @@ public class Step extends AbstractModel{
         this.User = User;
     }
 
+    public Step() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Step(Step source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.ExecutionStep != null) {
+            this.ExecutionStep = new Execution(source.ExecutionStep);
+        }
+        if (source.ActionOnFailure != null) {
+            this.ActionOnFailure = new String(source.ActionOnFailure);
+        }
+        if (source.User != null) {
+            this.User = new String(source.User);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

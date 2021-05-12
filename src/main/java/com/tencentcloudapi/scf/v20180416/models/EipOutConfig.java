@@ -68,6 +68,26 @@ public class EipOutConfig extends AbstractModel{
         this.Eips = Eips;
     }
 
+    public EipOutConfig() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public EipOutConfig(EipOutConfig source) {
+        if (source.EipFixed != null) {
+            this.EipFixed = new String(source.EipFixed);
+        }
+        if (source.Eips != null) {
+            this.Eips = new String[source.Eips.length];
+            for (int i = 0; i < source.Eips.length; i++) {
+                this.Eips[i] = new String(source.Eips[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

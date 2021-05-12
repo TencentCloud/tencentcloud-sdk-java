@@ -285,6 +285,56 @@ public class EditMediaRequest extends AbstractModel{
         this.SubAppId = SubAppId;
     }
 
+    public EditMediaRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public EditMediaRequest(EditMediaRequest source) {
+        if (source.InputType != null) {
+            this.InputType = new String(source.InputType);
+        }
+        if (source.FileInfos != null) {
+            this.FileInfos = new EditMediaFileInfo[source.FileInfos.length];
+            for (int i = 0; i < source.FileInfos.length; i++) {
+                this.FileInfos[i] = new EditMediaFileInfo(source.FileInfos[i]);
+            }
+        }
+        if (source.StreamInfos != null) {
+            this.StreamInfos = new EditMediaStreamInfo[source.StreamInfos.length];
+            for (int i = 0; i < source.StreamInfos.length; i++) {
+                this.StreamInfos[i] = new EditMediaStreamInfo(source.StreamInfos[i]);
+            }
+        }
+        if (source.Definition != null) {
+            this.Definition = new Long(source.Definition);
+        }
+        if (source.ProcedureName != null) {
+            this.ProcedureName = new String(source.ProcedureName);
+        }
+        if (source.OutputConfig != null) {
+            this.OutputConfig = new EditMediaOutputConfig(source.OutputConfig);
+        }
+        if (source.SessionContext != null) {
+            this.SessionContext = new String(source.SessionContext);
+        }
+        if (source.TasksPriority != null) {
+            this.TasksPriority = new Long(source.TasksPriority);
+        }
+        if (source.SessionId != null) {
+            this.SessionId = new String(source.SessionId);
+        }
+        if (source.ExtInfo != null) {
+            this.ExtInfo = new String(source.ExtInfo);
+        }
+        if (source.SubAppId != null) {
+            this.SubAppId = new Long(source.SubAppId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -137,6 +137,32 @@ public class CreateCfsRuleRequest extends AbstractModel{
         this.UserPermission = UserPermission;
     }
 
+    public CreateCfsRuleRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateCfsRuleRequest(CreateCfsRuleRequest source) {
+        if (source.PGroupId != null) {
+            this.PGroupId = new String(source.PGroupId);
+        }
+        if (source.AuthClientIp != null) {
+            this.AuthClientIp = new String(source.AuthClientIp);
+        }
+        if (source.Priority != null) {
+            this.Priority = new Long(source.Priority);
+        }
+        if (source.RWPermission != null) {
+            this.RWPermission = new String(source.RWPermission);
+        }
+        if (source.UserPermission != null) {
+            this.UserPermission = new String(source.UserPermission);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

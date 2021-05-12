@@ -206,6 +206,44 @@ public class SubmitAudioTaskRequest extends AbstractModel{
         this.VocabLibNameList = VocabLibNameList;
     }
 
+    public SubmitAudioTaskRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SubmitAudioTaskRequest(SubmitAudioTaskRequest source) {
+        if (source.Lang != null) {
+            this.Lang = new Long(source.Lang);
+        }
+        if (source.Url != null) {
+            this.Url = new String(source.Url);
+        }
+        if (source.VoiceEncodeType != null) {
+            this.VoiceEncodeType = new Long(source.VoiceEncodeType);
+        }
+        if (source.VoiceFileType != null) {
+            this.VoiceFileType = new Long(source.VoiceFileType);
+        }
+        if (source.Functions != null) {
+            this.Functions = new Function(source.Functions);
+        }
+        if (source.FileType != null) {
+            this.FileType = new String(source.FileType);
+        }
+        if (source.MuteThreshold != null) {
+            this.MuteThreshold = new Long(source.MuteThreshold);
+        }
+        if (source.VocabLibNameList != null) {
+            this.VocabLibNameList = new String[source.VocabLibNameList.length];
+            for (int i = 0; i < source.VocabLibNameList.length; i++) {
+                this.VocabLibNameList[i] = new String(source.VocabLibNameList[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

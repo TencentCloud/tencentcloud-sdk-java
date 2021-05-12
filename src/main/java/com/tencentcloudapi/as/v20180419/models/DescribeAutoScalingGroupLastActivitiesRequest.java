@@ -45,6 +45,23 @@ public class DescribeAutoScalingGroupLastActivitiesRequest extends AbstractModel
         this.AutoScalingGroupIds = AutoScalingGroupIds;
     }
 
+    public DescribeAutoScalingGroupLastActivitiesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeAutoScalingGroupLastActivitiesRequest(DescribeAutoScalingGroupLastActivitiesRequest source) {
+        if (source.AutoScalingGroupIds != null) {
+            this.AutoScalingGroupIds = new String[source.AutoScalingGroupIds.length];
+            for (int i = 0; i < source.AutoScalingGroupIds.length; i++) {
+                this.AutoScalingGroupIds[i] = new String(source.AutoScalingGroupIds[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

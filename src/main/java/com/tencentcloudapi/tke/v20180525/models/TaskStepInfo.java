@@ -172,6 +172,32 @@ failed: 步骤失败
         this.FailedMsg = FailedMsg;
     }
 
+    public TaskStepInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TaskStepInfo(TaskStepInfo source) {
+        if (source.Step != null) {
+            this.Step = new String(source.Step);
+        }
+        if (source.LifeState != null) {
+            this.LifeState = new String(source.LifeState);
+        }
+        if (source.StartAt != null) {
+            this.StartAt = new String(source.StartAt);
+        }
+        if (source.EndAt != null) {
+            this.EndAt = new String(source.EndAt);
+        }
+        if (source.FailedMsg != null) {
+            this.FailedMsg = new String(source.FailedMsg);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

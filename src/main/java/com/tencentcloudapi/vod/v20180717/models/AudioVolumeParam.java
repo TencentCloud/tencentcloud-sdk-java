@@ -103,6 +103,23 @@ public class AudioVolumeParam extends AbstractModel{
         this.Gain = Gain;
     }
 
+    public AudioVolumeParam() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AudioVolumeParam(AudioVolumeParam source) {
+        if (source.Mute != null) {
+            this.Mute = new Long(source.Mute);
+        }
+        if (source.Gain != null) {
+            this.Gain = new Float(source.Gain);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -106,6 +106,26 @@ public class CommonMixControlParams extends AbstractModel{
         this.PassInputSei = PassInputSei;
     }
 
+    public CommonMixControlParams() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CommonMixControlParams(CommonMixControlParams source) {
+        if (source.UseMixCropCenter != null) {
+            this.UseMixCropCenter = new Long(source.UseMixCropCenter);
+        }
+        if (source.AllowCopy != null) {
+            this.AllowCopy = new Long(source.AllowCopy);
+        }
+        if (source.PassInputSei != null) {
+            this.PassInputSei = new Long(source.PassInputSei);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

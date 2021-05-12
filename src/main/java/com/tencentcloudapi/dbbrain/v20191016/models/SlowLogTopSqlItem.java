@@ -574,6 +574,89 @@ public class SlowLogTopSqlItem extends AbstractModel{
         this.RowsExaminedAvg = RowsExaminedAvg;
     }
 
+    public SlowLogTopSqlItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SlowLogTopSqlItem(SlowLogTopSqlItem source) {
+        if (source.LockTime != null) {
+            this.LockTime = new Float(source.LockTime);
+        }
+        if (source.LockTimeMax != null) {
+            this.LockTimeMax = new Float(source.LockTimeMax);
+        }
+        if (source.LockTimeMin != null) {
+            this.LockTimeMin = new Float(source.LockTimeMin);
+        }
+        if (source.RowsExamined != null) {
+            this.RowsExamined = new Long(source.RowsExamined);
+        }
+        if (source.RowsExaminedMax != null) {
+            this.RowsExaminedMax = new Long(source.RowsExaminedMax);
+        }
+        if (source.RowsExaminedMin != null) {
+            this.RowsExaminedMin = new Long(source.RowsExaminedMin);
+        }
+        if (source.QueryTime != null) {
+            this.QueryTime = new Float(source.QueryTime);
+        }
+        if (source.QueryTimeMax != null) {
+            this.QueryTimeMax = new Float(source.QueryTimeMax);
+        }
+        if (source.QueryTimeMin != null) {
+            this.QueryTimeMin = new Float(source.QueryTimeMin);
+        }
+        if (source.RowsSent != null) {
+            this.RowsSent = new Long(source.RowsSent);
+        }
+        if (source.RowsSentMax != null) {
+            this.RowsSentMax = new Long(source.RowsSentMax);
+        }
+        if (source.RowsSentMin != null) {
+            this.RowsSentMin = new Long(source.RowsSentMin);
+        }
+        if (source.ExecTimes != null) {
+            this.ExecTimes = new Long(source.ExecTimes);
+        }
+        if (source.SqlTemplate != null) {
+            this.SqlTemplate = new String(source.SqlTemplate);
+        }
+        if (source.SqlText != null) {
+            this.SqlText = new String(source.SqlText);
+        }
+        if (source.Schema != null) {
+            this.Schema = new String(source.Schema);
+        }
+        if (source.QueryTimeRatio != null) {
+            this.QueryTimeRatio = new Float(source.QueryTimeRatio);
+        }
+        if (source.LockTimeRatio != null) {
+            this.LockTimeRatio = new Float(source.LockTimeRatio);
+        }
+        if (source.RowsExaminedRatio != null) {
+            this.RowsExaminedRatio = new Float(source.RowsExaminedRatio);
+        }
+        if (source.RowsSentRatio != null) {
+            this.RowsSentRatio = new Float(source.RowsSentRatio);
+        }
+        if (source.QueryTimeAvg != null) {
+            this.QueryTimeAvg = new Float(source.QueryTimeAvg);
+        }
+        if (source.RowsSentAvg != null) {
+            this.RowsSentAvg = new Float(source.RowsSentAvg);
+        }
+        if (source.LockTimeAvg != null) {
+            this.LockTimeAvg = new Float(source.LockTimeAvg);
+        }
+        if (source.RowsExaminedAvg != null) {
+            this.RowsExaminedAvg = new Float(source.RowsExaminedAvg);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

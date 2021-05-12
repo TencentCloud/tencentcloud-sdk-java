@@ -68,6 +68,23 @@ public class SlaveConfig extends AbstractModel{
         this.Zone = Zone;
     }
 
+    public SlaveConfig() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SlaveConfig(SlaveConfig source) {
+        if (source.ReplicationMode != null) {
+            this.ReplicationMode = new String(source.ReplicationMode);
+        }
+        if (source.Zone != null) {
+            this.Zone = new String(source.Zone);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

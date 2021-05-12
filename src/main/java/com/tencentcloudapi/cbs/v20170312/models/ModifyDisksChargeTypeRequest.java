@@ -68,6 +68,26 @@ public class ModifyDisksChargeTypeRequest extends AbstractModel{
         this.DiskChargePrepaid = DiskChargePrepaid;
     }
 
+    public ModifyDisksChargeTypeRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyDisksChargeTypeRequest(ModifyDisksChargeTypeRequest source) {
+        if (source.DiskIds != null) {
+            this.DiskIds = new String[source.DiskIds.length];
+            for (int i = 0; i < source.DiskIds.length; i++) {
+                this.DiskIds[i] = new String(source.DiskIds[i]);
+            }
+        }
+        if (source.DiskChargePrepaid != null) {
+            this.DiskChargePrepaid = new DiskChargePrepaid(source.DiskChargePrepaid);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

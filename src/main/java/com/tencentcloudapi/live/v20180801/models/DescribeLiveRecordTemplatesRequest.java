@@ -55,6 +55,20 @@ public class DescribeLiveRecordTemplatesRequest extends AbstractModel{
         this.IsDelayLive = IsDelayLive;
     }
 
+    public DescribeLiveRecordTemplatesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeLiveRecordTemplatesRequest(DescribeLiveRecordTemplatesRequest source) {
+        if (source.IsDelayLive != null) {
+            this.IsDelayLive = new Long(source.IsDelayLive);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

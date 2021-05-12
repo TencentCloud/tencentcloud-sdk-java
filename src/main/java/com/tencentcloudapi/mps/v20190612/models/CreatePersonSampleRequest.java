@@ -167,6 +167,41 @@ public class CreatePersonSampleRequest extends AbstractModel{
         this.Tags = Tags;
     }
 
+    public CreatePersonSampleRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreatePersonSampleRequest(CreatePersonSampleRequest source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Usages != null) {
+            this.Usages = new String[source.Usages.length];
+            for (int i = 0; i < source.Usages.length; i++) {
+                this.Usages[i] = new String(source.Usages[i]);
+            }
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.FaceContents != null) {
+            this.FaceContents = new String[source.FaceContents.length];
+            for (int i = 0; i < source.FaceContents.length; i++) {
+                this.FaceContents[i] = new String(source.FaceContents[i]);
+            }
+        }
+        if (source.Tags != null) {
+            this.Tags = new String[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new String(source.Tags[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

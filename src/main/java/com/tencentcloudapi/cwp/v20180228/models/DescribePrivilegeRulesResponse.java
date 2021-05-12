@@ -91,6 +91,29 @@ public class DescribePrivilegeRulesResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribePrivilegeRulesResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribePrivilegeRulesResponse(DescribePrivilegeRulesResponse source) {
+        if (source.List != null) {
+            this.List = new PrivilegeRule[source.List.length];
+            for (int i = 0; i < source.List.length; i++) {
+                this.List[i] = new PrivilegeRule(source.List[i]);
+            }
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

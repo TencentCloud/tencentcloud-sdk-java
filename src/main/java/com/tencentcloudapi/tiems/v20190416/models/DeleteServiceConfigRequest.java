@@ -68,6 +68,23 @@ public class DeleteServiceConfigRequest extends AbstractModel{
         this.ServiceConfigName = ServiceConfigName;
     }
 
+    public DeleteServiceConfigRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteServiceConfigRequest(DeleteServiceConfigRequest source) {
+        if (source.ServiceConfigId != null) {
+            this.ServiceConfigId = new String(source.ServiceConfigId);
+        }
+        if (source.ServiceConfigName != null) {
+            this.ServiceConfigName = new String(source.ServiceConfigName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

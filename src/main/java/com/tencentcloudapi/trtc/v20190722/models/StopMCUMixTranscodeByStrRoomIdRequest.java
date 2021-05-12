@@ -68,6 +68,23 @@ public class StopMCUMixTranscodeByStrRoomIdRequest extends AbstractModel{
         this.StrRoomId = StrRoomId;
     }
 
+    public StopMCUMixTranscodeByStrRoomIdRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public StopMCUMixTranscodeByStrRoomIdRequest(StopMCUMixTranscodeByStrRoomIdRequest source) {
+        if (source.SdkAppId != null) {
+            this.SdkAppId = new Long(source.SdkAppId);
+        }
+        if (source.StrRoomId != null) {
+            this.StrRoomId = new String(source.StrRoomId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

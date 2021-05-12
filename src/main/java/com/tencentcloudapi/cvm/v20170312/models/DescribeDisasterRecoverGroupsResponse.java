@@ -91,6 +91,29 @@ public class DescribeDisasterRecoverGroupsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeDisasterRecoverGroupsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeDisasterRecoverGroupsResponse(DescribeDisasterRecoverGroupsResponse source) {
+        if (source.DisasterRecoverGroupSet != null) {
+            this.DisasterRecoverGroupSet = new DisasterRecoverGroup[source.DisasterRecoverGroupSet.length];
+            for (int i = 0; i < source.DisasterRecoverGroupSet.length; i++) {
+                this.DisasterRecoverGroupSet[i] = new DisasterRecoverGroup(source.DisasterRecoverGroupSet[i]);
+            }
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

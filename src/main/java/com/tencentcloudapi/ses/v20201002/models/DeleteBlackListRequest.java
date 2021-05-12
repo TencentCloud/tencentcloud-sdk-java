@@ -45,6 +45,23 @@ public class DeleteBlackListRequest extends AbstractModel{
         this.EmailAddressList = EmailAddressList;
     }
 
+    public DeleteBlackListRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteBlackListRequest(DeleteBlackListRequest source) {
+        if (source.EmailAddressList != null) {
+            this.EmailAddressList = new String[source.EmailAddressList.length];
+            for (int i = 0; i < source.EmailAddressList.length; i++) {
+                this.EmailAddressList[i] = new String(source.EmailAddressList[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -114,6 +114,29 @@ public class MerchantManagementList extends AbstractModel{
         this.InvoicePlatformId = InvoicePlatformId;
     }
 
+    public MerchantManagementList() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MerchantManagementList(MerchantManagementList source) {
+        if (source.TaxpayerName != null) {
+            this.TaxpayerName = new String(source.TaxpayerName);
+        }
+        if (source.TaxpayerNum != null) {
+            this.TaxpayerNum = new String(source.TaxpayerNum);
+        }
+        if (source.SerialNo != null) {
+            this.SerialNo = new String(source.SerialNo);
+        }
+        if (source.InvoicePlatformId != null) {
+            this.InvoicePlatformId = new Long(source.InvoicePlatformId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

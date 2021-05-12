@@ -183,6 +183,38 @@ public class IPSECOptionsSpecification extends AbstractModel{
         this.EncapMode = EncapMode;
     }
 
+    public IPSECOptionsSpecification() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public IPSECOptionsSpecification(IPSECOptionsSpecification source) {
+        if (source.PfsDhGroup != null) {
+            this.PfsDhGroup = new String(source.PfsDhGroup);
+        }
+        if (source.IPSECSaLifetimeTraffic != null) {
+            this.IPSECSaLifetimeTraffic = new Long(source.IPSECSaLifetimeTraffic);
+        }
+        if (source.EncryptAlgorithm != null) {
+            this.EncryptAlgorithm = new String(source.EncryptAlgorithm);
+        }
+        if (source.IntegrityAlgorith != null) {
+            this.IntegrityAlgorith = new String(source.IntegrityAlgorith);
+        }
+        if (source.IPSECSaLifetimeSeconds != null) {
+            this.IPSECSaLifetimeSeconds = new Long(source.IPSECSaLifetimeSeconds);
+        }
+        if (source.SecurityProto != null) {
+            this.SecurityProto = new String(source.SecurityProto);
+        }
+        if (source.EncapMode != null) {
+            this.EncapMode = new String(source.EncapMode);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

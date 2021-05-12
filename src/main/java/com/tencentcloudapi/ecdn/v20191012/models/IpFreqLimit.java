@@ -73,6 +73,23 @@ public class IpFreqLimit extends AbstractModel{
         this.Qps = Qps;
     }
 
+    public IpFreqLimit() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public IpFreqLimit(IpFreqLimit source) {
+        if (source.Switch != null) {
+            this.Switch = new String(source.Switch);
+        }
+        if (source.Qps != null) {
+            this.Qps = new Long(source.Qps);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

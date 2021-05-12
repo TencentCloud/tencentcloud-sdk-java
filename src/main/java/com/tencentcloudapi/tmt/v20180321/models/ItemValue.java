@@ -160,6 +160,35 @@ public class ItemValue extends AbstractModel{
         this.H = H;
     }
 
+    public ItemValue() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ItemValue(ItemValue source) {
+        if (source.SourceText != null) {
+            this.SourceText = new String(source.SourceText);
+        }
+        if (source.TargetText != null) {
+            this.TargetText = new String(source.TargetText);
+        }
+        if (source.X != null) {
+            this.X = new Long(source.X);
+        }
+        if (source.Y != null) {
+            this.Y = new Long(source.Y);
+        }
+        if (source.W != null) {
+            this.W = new Long(source.W);
+        }
+        if (source.H != null) {
+            this.H = new Long(source.H);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -277,6 +277,47 @@ public class Instance extends AbstractModel{
         this.AutoscalingGroupId = AutoscalingGroupId;
     }
 
+    public Instance() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Instance(Instance source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.InstanceRole != null) {
+            this.InstanceRole = new String(source.InstanceRole);
+        }
+        if (source.FailedReason != null) {
+            this.FailedReason = new String(source.FailedReason);
+        }
+        if (source.InstanceState != null) {
+            this.InstanceState = new String(source.InstanceState);
+        }
+        if (source.DrainStatus != null) {
+            this.DrainStatus = new String(source.DrainStatus);
+        }
+        if (source.InstanceAdvancedSettings != null) {
+            this.InstanceAdvancedSettings = new InstanceAdvancedSettings(source.InstanceAdvancedSettings);
+        }
+        if (source.CreatedTime != null) {
+            this.CreatedTime = new String(source.CreatedTime);
+        }
+        if (source.LanIP != null) {
+            this.LanIP = new String(source.LanIP);
+        }
+        if (source.NodePoolId != null) {
+            this.NodePoolId = new String(source.NodePoolId);
+        }
+        if (source.AutoscalingGroupId != null) {
+            this.AutoscalingGroupId = new String(source.AutoscalingGroupId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

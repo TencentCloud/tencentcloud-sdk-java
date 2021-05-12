@@ -229,6 +229,44 @@ public class PersonVisitInfo extends AbstractModel{
         this.SceneInfo = SceneInfo;
     }
 
+    public PersonVisitInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PersonVisitInfo(PersonVisitInfo source) {
+        if (source.PersonId != null) {
+            this.PersonId = new Long(source.PersonId);
+        }
+        if (source.VisitId != null) {
+            this.VisitId = new Long(source.VisitId);
+        }
+        if (source.InTime != null) {
+            this.InTime = new Long(source.InTime);
+        }
+        if (source.CapturedPicture != null) {
+            this.CapturedPicture = new String(source.CapturedPicture);
+        }
+        if (source.MaskType != null) {
+            this.MaskType = new Long(source.MaskType);
+        }
+        if (source.GlassType != null) {
+            this.GlassType = new Long(source.GlassType);
+        }
+        if (source.HairType != null) {
+            this.HairType = new Long(source.HairType);
+        }
+        if (source.CapturedPictureUrl != null) {
+            this.CapturedPictureUrl = new String(source.CapturedPictureUrl);
+        }
+        if (source.SceneInfo != null) {
+            this.SceneInfo = new SceneInfo(source.SceneInfo);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

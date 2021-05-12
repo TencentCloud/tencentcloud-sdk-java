@@ -436,6 +436,71 @@ public class RuleInfoData extends AbstractModel{
         this.CountryName = CountryName;
     }
 
+    public RuleInfoData() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RuleInfoData(RuleInfoData source) {
+        if (source.OrderIndex != null) {
+            this.OrderIndex = new Long(source.OrderIndex);
+        }
+        if (source.SourceIp != null) {
+            this.SourceIp = new String(source.SourceIp);
+        }
+        if (source.TargetIp != null) {
+            this.TargetIp = new String(source.TargetIp);
+        }
+        if (source.Protocol != null) {
+            this.Protocol = new String(source.Protocol);
+        }
+        if (source.Strategy != null) {
+            this.Strategy = new String(source.Strategy);
+        }
+        if (source.SourceType != null) {
+            this.SourceType = new Long(source.SourceType);
+        }
+        if (source.Direction != null) {
+            this.Direction = new Long(source.Direction);
+        }
+        if (source.Detail != null) {
+            this.Detail = new String(source.Detail);
+        }
+        if (source.TargetType != null) {
+            this.TargetType = new Long(source.TargetType);
+        }
+        if (source.Port != null) {
+            this.Port = new String(source.Port);
+        }
+        if (source.Id != null) {
+            this.Id = new Long(source.Id);
+        }
+        if (source.LogId != null) {
+            this.LogId = new String(source.LogId);
+        }
+        if (source.City != null) {
+            this.City = new Long(source.City);
+        }
+        if (source.Country != null) {
+            this.Country = new Long(source.Country);
+        }
+        if (source.CloudCode != null) {
+            this.CloudCode = new String(source.CloudCode);
+        }
+        if (source.IsRegion != null) {
+            this.IsRegion = new Long(source.IsRegion);
+        }
+        if (source.CityName != null) {
+            this.CityName = new String(source.CityName);
+        }
+        if (source.CountryName != null) {
+            this.CountryName = new String(source.CountryName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

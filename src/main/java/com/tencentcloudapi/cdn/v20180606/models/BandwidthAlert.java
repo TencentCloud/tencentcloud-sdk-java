@@ -149,6 +149,29 @@ RETURN_404：全部请求返回 404
         this.LastTriggerTime = LastTriggerTime;
     }
 
+    public BandwidthAlert() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public BandwidthAlert(BandwidthAlert source) {
+        if (source.Switch != null) {
+            this.Switch = new String(source.Switch);
+        }
+        if (source.BpsThreshold != null) {
+            this.BpsThreshold = new Long(source.BpsThreshold);
+        }
+        if (source.CounterMeasure != null) {
+            this.CounterMeasure = new String(source.CounterMeasure);
+        }
+        if (source.LastTriggerTime != null) {
+            this.LastTriggerTime = new String(source.LastTriggerTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

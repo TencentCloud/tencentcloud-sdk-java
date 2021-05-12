@@ -401,6 +401,59 @@ public class CreateNotebookInstanceRequest extends AbstractModel{
         this.ClsConfig = ClsConfig;
     }
 
+    public CreateNotebookInstanceRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateNotebookInstanceRequest(CreateNotebookInstanceRequest source) {
+        if (source.NotebookInstanceName != null) {
+            this.NotebookInstanceName = new String(source.NotebookInstanceName);
+        }
+        if (source.InstanceType != null) {
+            this.InstanceType = new String(source.InstanceType);
+        }
+        if (source.VolumeSizeInGB != null) {
+            this.VolumeSizeInGB = new Long(source.VolumeSizeInGB);
+        }
+        if (source.DirectInternetAccess != null) {
+            this.DirectInternetAccess = new String(source.DirectInternetAccess);
+        }
+        if (source.RootAccess != null) {
+            this.RootAccess = new String(source.RootAccess);
+        }
+        if (source.SubnetId != null) {
+            this.SubnetId = new String(source.SubnetId);
+        }
+        if (source.LifecycleScriptsName != null) {
+            this.LifecycleScriptsName = new String(source.LifecycleScriptsName);
+        }
+        if (source.DefaultCodeRepository != null) {
+            this.DefaultCodeRepository = new String(source.DefaultCodeRepository);
+        }
+        if (source.AdditionalCodeRepositories != null) {
+            this.AdditionalCodeRepositories = new String[source.AdditionalCodeRepositories.length];
+            for (int i = 0; i < source.AdditionalCodeRepositories.length; i++) {
+                this.AdditionalCodeRepositories[i] = new String(source.AdditionalCodeRepositories[i]);
+            }
+        }
+        if (source.ClsAccess != null) {
+            this.ClsAccess = new String(source.ClsAccess);
+        }
+        if (source.StoppingCondition != null) {
+            this.StoppingCondition = new StoppingCondition(source.StoppingCondition);
+        }
+        if (source.AutoStopping != null) {
+            this.AutoStopping = new String(source.AutoStopping);
+        }
+        if (source.ClsConfig != null) {
+            this.ClsConfig = new ClsConfig(source.ClsConfig);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

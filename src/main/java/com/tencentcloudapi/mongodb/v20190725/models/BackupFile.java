@@ -68,6 +68,23 @@ public class BackupFile extends AbstractModel{
         this.File = File;
     }
 
+    public BackupFile() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public BackupFile(BackupFile source) {
+        if (source.ReplicateSetId != null) {
+            this.ReplicateSetId = new String(source.ReplicateSetId);
+        }
+        if (source.File != null) {
+            this.File = new String(source.File);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

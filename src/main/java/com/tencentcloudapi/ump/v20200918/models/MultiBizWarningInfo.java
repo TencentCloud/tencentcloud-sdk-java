@@ -129,6 +129,32 @@ public class MultiBizWarningInfo extends AbstractModel{
         this.WarningAreaContour = WarningAreaContour;
     }
 
+    public MultiBizWarningInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MultiBizWarningInfo(MultiBizWarningInfo source) {
+        if (source.WarningType != null) {
+            this.WarningType = new Long(source.WarningType);
+        }
+        if (source.WarningAreaSize != null) {
+            this.WarningAreaSize = new Float(source.WarningAreaSize);
+        }
+        if (source.WarningLocation != null) {
+            this.WarningLocation = new Point(source.WarningLocation);
+        }
+        if (source.WarningAreaContour != null) {
+            this.WarningAreaContour = new Point[source.WarningAreaContour.length];
+            for (int i = 0; i < source.WarningAreaContour.length; i++) {
+                this.WarningAreaContour[i] = new Point(source.WarningAreaContour[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -367,6 +367,65 @@ public class NormalQueryItem extends AbstractModel{
         this.NormalQuery = NormalQuery;
     }
 
+    public NormalQueryItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public NormalQueryItem(NormalQueryItem source) {
+        if (source.UserName != null) {
+            this.UserName = new String(source.UserName);
+        }
+        if (source.Calls != null) {
+            this.Calls = new Long(source.Calls);
+        }
+        if (source.CallsGrids != null) {
+            this.CallsGrids = new Long[source.CallsGrids.length];
+            for (int i = 0; i < source.CallsGrids.length; i++) {
+                this.CallsGrids[i] = new Long(source.CallsGrids[i]);
+            }
+        }
+        if (source.CostTime != null) {
+            this.CostTime = new Float(source.CostTime);
+        }
+        if (source.Rows != null) {
+            this.Rows = new Long(source.Rows);
+        }
+        if (source.MinCostTime != null) {
+            this.MinCostTime = new Float(source.MinCostTime);
+        }
+        if (source.MaxCostTime != null) {
+            this.MaxCostTime = new Float(source.MaxCostTime);
+        }
+        if (source.FirstTime != null) {
+            this.FirstTime = new String(source.FirstTime);
+        }
+        if (source.LastTime != null) {
+            this.LastTime = new String(source.LastTime);
+        }
+        if (source.SharedReadBlks != null) {
+            this.SharedReadBlks = new Long(source.SharedReadBlks);
+        }
+        if (source.SharedWriteBlks != null) {
+            this.SharedWriteBlks = new Long(source.SharedWriteBlks);
+        }
+        if (source.ReadCostTime != null) {
+            this.ReadCostTime = new Long(source.ReadCostTime);
+        }
+        if (source.WriteCostTime != null) {
+            this.WriteCostTime = new Long(source.WriteCostTime);
+        }
+        if (source.DatabaseName != null) {
+            this.DatabaseName = new String(source.DatabaseName);
+        }
+        if (source.NormalQuery != null) {
+            this.NormalQuery = new String(source.NormalQuery);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -91,6 +91,32 @@ public class DescribeRewriteRequest extends AbstractModel{
         this.SourceLocationIds = SourceLocationIds;
     }
 
+    public DescribeRewriteRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeRewriteRequest(DescribeRewriteRequest source) {
+        if (source.LoadBalancerId != null) {
+            this.LoadBalancerId = new String(source.LoadBalancerId);
+        }
+        if (source.SourceListenerIds != null) {
+            this.SourceListenerIds = new String[source.SourceListenerIds.length];
+            for (int i = 0; i < source.SourceListenerIds.length; i++) {
+                this.SourceListenerIds[i] = new String(source.SourceListenerIds[i]);
+            }
+        }
+        if (source.SourceLocationIds != null) {
+            this.SourceLocationIds = new String[source.SourceLocationIds.length];
+            for (int i = 0; i < source.SourceLocationIds.length; i++) {
+                this.SourceLocationIds[i] = new String(source.SourceLocationIds[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

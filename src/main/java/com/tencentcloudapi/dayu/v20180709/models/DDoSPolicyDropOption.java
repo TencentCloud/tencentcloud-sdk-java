@@ -459,6 +459,74 @@ public class DDoSPolicyDropOption extends AbstractModel{
         this.DOtherMbpsLimit = DOtherMbpsLimit;
     }
 
+    public DDoSPolicyDropOption() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DDoSPolicyDropOption(DDoSPolicyDropOption source) {
+        if (source.DropTcp != null) {
+            this.DropTcp = new Long(source.DropTcp);
+        }
+        if (source.DropUdp != null) {
+            this.DropUdp = new Long(source.DropUdp);
+        }
+        if (source.DropIcmp != null) {
+            this.DropIcmp = new Long(source.DropIcmp);
+        }
+        if (source.DropOther != null) {
+            this.DropOther = new Long(source.DropOther);
+        }
+        if (source.DropAbroad != null) {
+            this.DropAbroad = new Long(source.DropAbroad);
+        }
+        if (source.CheckSyncConn != null) {
+            this.CheckSyncConn = new Long(source.CheckSyncConn);
+        }
+        if (source.SdNewLimit != null) {
+            this.SdNewLimit = new Long(source.SdNewLimit);
+        }
+        if (source.DstNewLimit != null) {
+            this.DstNewLimit = new Long(source.DstNewLimit);
+        }
+        if (source.SdConnLimit != null) {
+            this.SdConnLimit = new Long(source.SdConnLimit);
+        }
+        if (source.DstConnLimit != null) {
+            this.DstConnLimit = new Long(source.DstConnLimit);
+        }
+        if (source.BadConnThreshold != null) {
+            this.BadConnThreshold = new Long(source.BadConnThreshold);
+        }
+        if (source.NullConnEnable != null) {
+            this.NullConnEnable = new Long(source.NullConnEnable);
+        }
+        if (source.ConnTimeout != null) {
+            this.ConnTimeout = new Long(source.ConnTimeout);
+        }
+        if (source.SynRate != null) {
+            this.SynRate = new Long(source.SynRate);
+        }
+        if (source.SynLimit != null) {
+            this.SynLimit = new Long(source.SynLimit);
+        }
+        if (source.DTcpMbpsLimit != null) {
+            this.DTcpMbpsLimit = new Long(source.DTcpMbpsLimit);
+        }
+        if (source.DUdpMbpsLimit != null) {
+            this.DUdpMbpsLimit = new Long(source.DUdpMbpsLimit);
+        }
+        if (source.DIcmpMbpsLimit != null) {
+            this.DIcmpMbpsLimit = new Long(source.DIcmpMbpsLimit);
+        }
+        if (source.DOtherMbpsLimit != null) {
+            this.DOtherMbpsLimit = new Long(source.DOtherMbpsLimit);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

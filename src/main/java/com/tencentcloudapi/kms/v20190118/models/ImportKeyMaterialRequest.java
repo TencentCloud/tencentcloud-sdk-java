@@ -114,6 +114,29 @@ public class ImportKeyMaterialRequest extends AbstractModel{
         this.ValidTo = ValidTo;
     }
 
+    public ImportKeyMaterialRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ImportKeyMaterialRequest(ImportKeyMaterialRequest source) {
+        if (source.EncryptedKeyMaterial != null) {
+            this.EncryptedKeyMaterial = new String(source.EncryptedKeyMaterial);
+        }
+        if (source.ImportToken != null) {
+            this.ImportToken = new String(source.ImportToken);
+        }
+        if (source.KeyId != null) {
+            this.KeyId = new String(source.KeyId);
+        }
+        if (source.ValidTo != null) {
+            this.ValidTo = new Long(source.ValidTo);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

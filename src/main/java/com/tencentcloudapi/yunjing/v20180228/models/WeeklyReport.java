@@ -68,6 +68,23 @@ public class WeeklyReport extends AbstractModel{
         this.EndDate = EndDate;
     }
 
+    public WeeklyReport() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public WeeklyReport(WeeklyReport source) {
+        if (source.BeginDate != null) {
+            this.BeginDate = new String(source.BeginDate);
+        }
+        if (source.EndDate != null) {
+            this.EndDate = new String(source.EndDate);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

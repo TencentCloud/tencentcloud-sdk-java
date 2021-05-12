@@ -121,6 +121,26 @@ public class RawImageWatermarkInput extends AbstractModel{
         this.Height = Height;
     }
 
+    public RawImageWatermarkInput() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RawImageWatermarkInput(RawImageWatermarkInput source) {
+        if (source.ImageContent != null) {
+            this.ImageContent = new MediaInputInfo(source.ImageContent);
+        }
+        if (source.Width != null) {
+            this.Width = new String(source.Width);
+        }
+        if (source.Height != null) {
+            this.Height = new String(source.Height);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

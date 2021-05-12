@@ -68,6 +68,23 @@ public class BackupItem extends AbstractModel{
         this.Table = Table;
     }
 
+    public BackupItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public BackupItem(BackupItem source) {
+        if (source.Db != null) {
+            this.Db = new String(source.Db);
+        }
+        if (source.Table != null) {
+            this.Table = new String(source.Table);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

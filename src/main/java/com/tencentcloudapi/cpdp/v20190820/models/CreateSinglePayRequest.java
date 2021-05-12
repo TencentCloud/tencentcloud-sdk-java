@@ -436,6 +436,71 @@ public class CreateSinglePayRequest extends AbstractModel{
         this.Profile = Profile;
     }
 
+    public CreateSinglePayRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateSinglePayRequest(CreateSinglePayRequest source) {
+        if (source.SerialNumber != null) {
+            this.SerialNumber = new String(source.SerialNumber);
+        }
+        if (source.PayAccountNumber != null) {
+            this.PayAccountNumber = new String(source.PayAccountNumber);
+        }
+        if (source.PayAccountName != null) {
+            this.PayAccountName = new String(source.PayAccountName);
+        }
+        if (source.Amount != null) {
+            this.Amount = new Long(source.Amount);
+        }
+        if (source.RecvAccountNumber != null) {
+            this.RecvAccountNumber = new String(source.RecvAccountNumber);
+        }
+        if (source.RecvAccountName != null) {
+            this.RecvAccountName = new String(source.RecvAccountName);
+        }
+        if (source.PayBankCnaps != null) {
+            this.PayBankCnaps = new String(source.PayBankCnaps);
+        }
+        if (source.PayBankType != null) {
+            this.PayBankType = new String(source.PayBankType);
+        }
+        if (source.PayBankProvince != null) {
+            this.PayBankProvince = new String(source.PayBankProvince);
+        }
+        if (source.PayBankCity != null) {
+            this.PayBankCity = new String(source.PayBankCity);
+        }
+        if (source.RecvBankCnaps != null) {
+            this.RecvBankCnaps = new String(source.RecvBankCnaps);
+        }
+        if (source.RecvBankType != null) {
+            this.RecvBankType = new String(source.RecvBankType);
+        }
+        if (source.RecvBankProvince != null) {
+            this.RecvBankProvince = new String(source.RecvBankProvince);
+        }
+        if (source.RecvBankCity != null) {
+            this.RecvBankCity = new String(source.RecvBankCity);
+        }
+        if (source.RecvCertType != null) {
+            this.RecvCertType = new String(source.RecvCertType);
+        }
+        if (source.RecvCertNo != null) {
+            this.RecvCertNo = new String(source.RecvCertNo);
+        }
+        if (source.Summary != null) {
+            this.Summary = new String(source.Summary);
+        }
+        if (source.Profile != null) {
+            this.Profile = new String(source.Profile);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

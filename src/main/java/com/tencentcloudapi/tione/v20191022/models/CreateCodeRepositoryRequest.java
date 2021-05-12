@@ -91,6 +91,26 @@ public class CreateCodeRepositoryRequest extends AbstractModel{
         this.GitSecret = GitSecret;
     }
 
+    public CreateCodeRepositoryRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateCodeRepositoryRequest(CreateCodeRepositoryRequest source) {
+        if (source.CodeRepositoryName != null) {
+            this.CodeRepositoryName = new String(source.CodeRepositoryName);
+        }
+        if (source.GitConfig != null) {
+            this.GitConfig = new GitConfig(source.GitConfig);
+        }
+        if (source.GitSecret != null) {
+            this.GitSecret = new GitSecret(source.GitSecret);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

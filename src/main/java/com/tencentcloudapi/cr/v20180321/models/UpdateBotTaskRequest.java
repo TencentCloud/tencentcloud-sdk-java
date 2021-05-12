@@ -367,6 +367,62 @@ public class UpdateBotTaskRequest extends AbstractModel{
         this.SmsTemplateId = SmsTemplateId;
     }
 
+    public UpdateBotTaskRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UpdateBotTaskRequest(UpdateBotTaskRequest source) {
+        if (source.Module != null) {
+            this.Module = new String(source.Module);
+        }
+        if (source.Operation != null) {
+            this.Operation = new String(source.Operation);
+        }
+        if (source.BotName != null) {
+            this.BotName = new String(source.BotName);
+        }
+        if (source.BotId != null) {
+            this.BotId = new String(source.BotId);
+        }
+        if (source.CallTimeCollection != null) {
+            this.CallTimeCollection = new CallTimeDict(source.CallTimeCollection);
+        }
+        if (source.BanCall != null) {
+            this.BanCall = new String(source.BanCall);
+        }
+        if (source.StartTimeBan != null) {
+            this.StartTimeBan = new String(source.StartTimeBan);
+        }
+        if (source.EndTimeBan != null) {
+            this.EndTimeBan = new String(source.EndTimeBan);
+        }
+        if (source.PhoneCollection != null) {
+            this.PhoneCollection = new String(source.PhoneCollection);
+        }
+        if (source.CodeType != null) {
+            this.CodeType = new String(source.CodeType);
+        }
+        if (source.CodeCollection != null) {
+            this.CodeCollection = new String(source.CodeCollection);
+        }
+        if (source.CallCount != null) {
+            this.CallCount = new Long(source.CallCount);
+        }
+        if (source.CallInterval != null) {
+            this.CallInterval = new Long(source.CallInterval);
+        }
+        if (source.SmsSignId != null) {
+            this.SmsSignId = new String(source.SmsSignId);
+        }
+        if (source.SmsTemplateId != null) {
+            this.SmsTemplateId = new String(source.SmsTemplateId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -68,6 +68,23 @@ public class RepairTaskControlRequest extends AbstractModel{
         this.Operate = Operate;
     }
 
+    public RepairTaskControlRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RepairTaskControlRequest(RepairTaskControlRequest source) {
+        if (source.TaskId != null) {
+            this.TaskId = new String(source.TaskId);
+        }
+        if (source.Operate != null) {
+            this.Operate = new String(source.Operate);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -190,6 +190,35 @@ public class IdlFileInfoWithoutContent extends AbstractModel{
         this.Error = Error;
     }
 
+    public IdlFileInfoWithoutContent() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public IdlFileInfoWithoutContent(IdlFileInfoWithoutContent source) {
+        if (source.FileName != null) {
+            this.FileName = new String(source.FileName);
+        }
+        if (source.FileType != null) {
+            this.FileType = new String(source.FileType);
+        }
+        if (source.FileExtType != null) {
+            this.FileExtType = new String(source.FileExtType);
+        }
+        if (source.FileSize != null) {
+            this.FileSize = new Long(source.FileSize);
+        }
+        if (source.FileId != null) {
+            this.FileId = new Long(source.FileId);
+        }
+        if (source.Error != null) {
+            this.Error = new ErrorInfo(source.Error);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

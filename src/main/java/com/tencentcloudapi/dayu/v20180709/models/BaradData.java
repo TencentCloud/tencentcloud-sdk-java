@@ -126,6 +126,29 @@ outpkg表示出包速率；）
         this.Count = Count;
     }
 
+    public BaradData() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public BaradData(BaradData source) {
+        if (source.MetricName != null) {
+            this.MetricName = new String(source.MetricName);
+        }
+        if (source.Data != null) {
+            this.Data = new Float[source.Data.length];
+            for (int i = 0; i < source.Data.length; i++) {
+                this.Data[i] = new Float(source.Data[i]);
+            }
+        }
+        if (source.Count != null) {
+            this.Count = new Long(source.Count);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

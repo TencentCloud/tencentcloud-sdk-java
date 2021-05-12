@@ -152,6 +152,32 @@ public class SwitcherPgmOutputConfig extends AbstractModel{
         this.BitRate = BitRate;
     }
 
+    public SwitcherPgmOutputConfig() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SwitcherPgmOutputConfig(SwitcherPgmOutputConfig source) {
+        if (source.TemplateId != null) {
+            this.TemplateId = new Long(source.TemplateId);
+        }
+        if (source.Width != null) {
+            this.Width = new Long(source.Width);
+        }
+        if (source.Height != null) {
+            this.Height = new Long(source.Height);
+        }
+        if (source.Fps != null) {
+            this.Fps = new Long(source.Fps);
+        }
+        if (source.BitRate != null) {
+            this.BitRate = new Long(source.BitRate);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

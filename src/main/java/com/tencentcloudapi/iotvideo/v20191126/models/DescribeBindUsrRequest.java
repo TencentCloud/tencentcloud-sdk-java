@@ -68,6 +68,23 @@ public class DescribeBindUsrRequest extends AbstractModel{
         this.AccessId = AccessId;
     }
 
+    public DescribeBindUsrRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeBindUsrRequest(DescribeBindUsrRequest source) {
+        if (source.Tid != null) {
+            this.Tid = new String(source.Tid);
+        }
+        if (source.AccessId != null) {
+            this.AccessId = new String(source.AccessId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

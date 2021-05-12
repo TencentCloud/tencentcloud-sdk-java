@@ -68,6 +68,23 @@ public class TerrorismConfigureInfoForUpdate extends AbstractModel{
         this.OcrReviewInfo = OcrReviewInfo;
     }
 
+    public TerrorismConfigureInfoForUpdate() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TerrorismConfigureInfoForUpdate(TerrorismConfigureInfoForUpdate source) {
+        if (source.ImgReviewInfo != null) {
+            this.ImgReviewInfo = new TerrorismImgReviewTemplateInfoForUpdate(source.ImgReviewInfo);
+        }
+        if (source.OcrReviewInfo != null) {
+            this.OcrReviewInfo = new TerrorismOcrReviewTemplateInfoForUpdate(source.OcrReviewInfo);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

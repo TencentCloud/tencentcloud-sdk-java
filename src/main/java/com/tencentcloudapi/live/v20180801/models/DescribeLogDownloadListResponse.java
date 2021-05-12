@@ -91,6 +91,29 @@ public class DescribeLogDownloadListResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeLogDownloadListResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeLogDownloadListResponse(DescribeLogDownloadListResponse source) {
+        if (source.LogInfoList != null) {
+            this.LogInfoList = new LogInfo[source.LogInfoList.length];
+            for (int i = 0; i < source.LogInfoList.length; i++) {
+                this.LogInfoList[i] = new LogInfo(source.LogInfoList[i]);
+            }
+        }
+        if (source.TotalNum != null) {
+            this.TotalNum = new Long(source.TotalNum);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

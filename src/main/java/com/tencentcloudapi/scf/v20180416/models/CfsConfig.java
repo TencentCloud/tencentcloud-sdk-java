@@ -45,6 +45,23 @@ public class CfsConfig extends AbstractModel{
         this.CfsInsList = CfsInsList;
     }
 
+    public CfsConfig() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CfsConfig(CfsConfig source) {
+        if (source.CfsInsList != null) {
+            this.CfsInsList = new CfsInsInfo[source.CfsInsList.length];
+            for (int i = 0; i < source.CfsInsList.length; i++) {
+                this.CfsInsList[i] = new CfsInsInfo(source.CfsInsList[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

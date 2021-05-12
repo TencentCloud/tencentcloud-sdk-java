@@ -91,6 +91,26 @@ public class ActionTimer extends AbstractModel{
         this.ActionTime = ActionTime;
     }
 
+    public ActionTimer() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ActionTimer(ActionTimer source) {
+        if (source.Externals != null) {
+            this.Externals = new Externals(source.Externals);
+        }
+        if (source.TimerAction != null) {
+            this.TimerAction = new String(source.TimerAction);
+        }
+        if (source.ActionTime != null) {
+            this.ActionTime = new String(source.ActionTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

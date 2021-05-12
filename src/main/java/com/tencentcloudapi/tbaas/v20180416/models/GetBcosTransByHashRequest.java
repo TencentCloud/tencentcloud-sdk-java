@@ -91,6 +91,26 @@ public class GetBcosTransByHashRequest extends AbstractModel{
         this.TransHash = TransHash;
     }
 
+    public GetBcosTransByHashRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GetBcosTransByHashRequest(GetBcosTransByHashRequest source) {
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
+        if (source.GroupId != null) {
+            this.GroupId = new Long(source.GroupId);
+        }
+        if (source.TransHash != null) {
+            this.TransHash = new String(source.TransHash);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

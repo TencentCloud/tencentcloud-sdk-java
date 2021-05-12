@@ -119,6 +119,29 @@ public class EditMediaOutputConfig extends AbstractModel{
         this.ExpireTime = ExpireTime;
     }
 
+    public EditMediaOutputConfig() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public EditMediaOutputConfig(EditMediaOutputConfig source) {
+        if (source.MediaName != null) {
+            this.MediaName = new String(source.MediaName);
+        }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.ClassId != null) {
+            this.ClassId = new Long(source.ClassId);
+        }
+        if (source.ExpireTime != null) {
+            this.ExpireTime = new String(source.ExpireTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

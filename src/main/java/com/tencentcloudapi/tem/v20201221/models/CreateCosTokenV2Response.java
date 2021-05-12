@@ -73,6 +73,23 @@ public class CreateCosTokenV2Response extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public CreateCosTokenV2Response() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateCosTokenV2Response(CreateCosTokenV2Response source) {
+        if (source.Result != null) {
+            this.Result = new CosToken(source.Result);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

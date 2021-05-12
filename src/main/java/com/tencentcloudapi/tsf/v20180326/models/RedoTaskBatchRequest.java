@@ -68,6 +68,23 @@ public class RedoTaskBatchRequest extends AbstractModel{
         this.BatchId = BatchId;
     }
 
+    public RedoTaskBatchRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RedoTaskBatchRequest(RedoTaskBatchRequest source) {
+        if (source.TaskId != null) {
+            this.TaskId = new String(source.TaskId);
+        }
+        if (source.BatchId != null) {
+            this.BatchId = new String(source.BatchId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

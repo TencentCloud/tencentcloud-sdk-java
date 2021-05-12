@@ -91,6 +91,26 @@ public class DeleteRuleRequest extends AbstractModel{
         this.Force = Force;
     }
 
+    public DeleteRuleRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteRuleRequest(DeleteRuleRequest source) {
+        if (source.ListenerId != null) {
+            this.ListenerId = new String(source.ListenerId);
+        }
+        if (source.RuleId != null) {
+            this.RuleId = new String(source.RuleId);
+        }
+        if (source.Force != null) {
+            this.Force = new Long(source.Force);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

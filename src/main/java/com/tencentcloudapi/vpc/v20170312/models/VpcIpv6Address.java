@@ -114,6 +114,29 @@ public class VpcIpv6Address extends AbstractModel{
         this.CreatedTime = CreatedTime;
     }
 
+    public VpcIpv6Address() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public VpcIpv6Address(VpcIpv6Address source) {
+        if (source.Ipv6Address != null) {
+            this.Ipv6Address = new String(source.Ipv6Address);
+        }
+        if (source.CidrBlock != null) {
+            this.CidrBlock = new String(source.CidrBlock);
+        }
+        if (source.Ipv6AddressType != null) {
+            this.Ipv6AddressType = new String(source.Ipv6AddressType);
+        }
+        if (source.CreatedTime != null) {
+            this.CreatedTime = new String(source.CreatedTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -234,6 +234,44 @@ public class ModifyListenerRequest extends AbstractModel{
         this.KeepaliveEnable = KeepaliveEnable;
     }
 
+    public ModifyListenerRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyListenerRequest(ModifyListenerRequest source) {
+        if (source.LoadBalancerId != null) {
+            this.LoadBalancerId = new String(source.LoadBalancerId);
+        }
+        if (source.ListenerId != null) {
+            this.ListenerId = new String(source.ListenerId);
+        }
+        if (source.ListenerName != null) {
+            this.ListenerName = new String(source.ListenerName);
+        }
+        if (source.SessionExpireTime != null) {
+            this.SessionExpireTime = new Long(source.SessionExpireTime);
+        }
+        if (source.HealthCheck != null) {
+            this.HealthCheck = new HealthCheck(source.HealthCheck);
+        }
+        if (source.Certificate != null) {
+            this.Certificate = new CertificateInput(source.Certificate);
+        }
+        if (source.Scheduler != null) {
+            this.Scheduler = new String(source.Scheduler);
+        }
+        if (source.SniSwitch != null) {
+            this.SniSwitch = new Long(source.SniSwitch);
+        }
+        if (source.KeepaliveEnable != null) {
+            this.KeepaliveEnable = new Long(source.KeepaliveEnable);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

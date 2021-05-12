@@ -114,6 +114,29 @@ public class ResourceUsageMonitorSet extends AbstractModel{
         this.DataDiskAvailable = DataDiskAvailable;
     }
 
+    public ResourceUsageMonitorSet() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ResourceUsageMonitorSet(ResourceUsageMonitorSet source) {
+        if (source.BinlogDiskAvailable != null) {
+            this.BinlogDiskAvailable = new MonitorData(source.BinlogDiskAvailable);
+        }
+        if (source.CpuUsageRate != null) {
+            this.CpuUsageRate = new MonitorData(source.CpuUsageRate);
+        }
+        if (source.MemAvailable != null) {
+            this.MemAvailable = new MonitorData(source.MemAvailable);
+        }
+        if (source.DataDiskAvailable != null) {
+            this.DataDiskAvailable = new MonitorData(source.DataDiskAvailable);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

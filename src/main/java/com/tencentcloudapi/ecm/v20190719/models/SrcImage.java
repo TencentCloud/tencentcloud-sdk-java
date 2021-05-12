@@ -252,6 +252,47 @@ public class SrcImage extends AbstractModel{
         this.ImageType = ImageType;
     }
 
+    public SrcImage() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SrcImage(SrcImage source) {
+        if (source.ImageId != null) {
+            this.ImageId = new String(source.ImageId);
+        }
+        if (source.ImageName != null) {
+            this.ImageName = new String(source.ImageName);
+        }
+        if (source.ImageOsName != null) {
+            this.ImageOsName = new String(source.ImageOsName);
+        }
+        if (source.ImageDescription != null) {
+            this.ImageDescription = new String(source.ImageDescription);
+        }
+        if (source.Region != null) {
+            this.Region = new String(source.Region);
+        }
+        if (source.RegionID != null) {
+            this.RegionID = new Long(source.RegionID);
+        }
+        if (source.RegionName != null) {
+            this.RegionName = new String(source.RegionName);
+        }
+        if (source.InstanceName != null) {
+            this.InstanceName = new String(source.InstanceName);
+        }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.ImageType != null) {
+            this.ImageType = new String(source.ImageType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

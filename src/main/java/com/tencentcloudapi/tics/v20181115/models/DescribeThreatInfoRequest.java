@@ -91,6 +91,26 @@ public class DescribeThreatInfoRequest extends AbstractModel{
         this.Option = Option;
     }
 
+    public DescribeThreatInfoRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeThreatInfoRequest(DescribeThreatInfoRequest source) {
+        if (source.Key != null) {
+            this.Key = new String(source.Key);
+        }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.Option != null) {
+            this.Option = new Long(source.Option);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

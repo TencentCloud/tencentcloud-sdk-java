@@ -91,6 +91,26 @@ public class DescribePlayerRequest extends AbstractModel{
         this.PlayerId = PlayerId;
     }
 
+    public DescribePlayerRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribePlayerRequest(DescribePlayerRequest source) {
+        if (source.GameId != null) {
+            this.GameId = new String(source.GameId);
+        }
+        if (source.OpenId != null) {
+            this.OpenId = new String(source.OpenId);
+        }
+        if (source.PlayerId != null) {
+            this.PlayerId = new String(source.PlayerId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

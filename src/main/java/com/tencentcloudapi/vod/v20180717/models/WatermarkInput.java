@@ -177,6 +177,32 @@ SVG 水印不支持截图打水印。
         this.EndTimeOffset = EndTimeOffset;
     }
 
+    public WatermarkInput() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public WatermarkInput(WatermarkInput source) {
+        if (source.Definition != null) {
+            this.Definition = new Long(source.Definition);
+        }
+        if (source.TextContent != null) {
+            this.TextContent = new String(source.TextContent);
+        }
+        if (source.SvgContent != null) {
+            this.SvgContent = new String(source.SvgContent);
+        }
+        if (source.StartTimeOffset != null) {
+            this.StartTimeOffset = new Float(source.StartTimeOffset);
+        }
+        if (source.EndTimeOffset != null) {
+            this.EndTimeOffset = new Float(source.EndTimeOffset);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

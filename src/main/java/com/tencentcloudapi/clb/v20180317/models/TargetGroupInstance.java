@@ -114,6 +114,29 @@ public class TargetGroupInstance extends AbstractModel{
         this.NewPort = NewPort;
     }
 
+    public TargetGroupInstance() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TargetGroupInstance(TargetGroupInstance source) {
+        if (source.BindIP != null) {
+            this.BindIP = new String(source.BindIP);
+        }
+        if (source.Port != null) {
+            this.Port = new Long(source.Port);
+        }
+        if (source.Weight != null) {
+            this.Weight = new Long(source.Weight);
+        }
+        if (source.NewPort != null) {
+            this.NewPort = new Long(source.NewPort);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -91,6 +91,29 @@ public class DescribeShopInfoResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeShopInfoResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeShopInfoResponse(DescribeShopInfoResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.ShopInfoSet != null) {
+            this.ShopInfoSet = new ShopInfo[source.ShopInfoSet.length];
+            for (int i = 0; i < source.ShopInfoSet.length; i++) {
+                this.ShopInfoSet[i] = new ShopInfo(source.ShopInfoSet[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

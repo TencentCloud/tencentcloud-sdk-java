@@ -330,6 +330,50 @@ public class TextVehicleFront extends AbstractModel{
         this.Seal = Seal;
     }
 
+    public TextVehicleFront() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TextVehicleFront(TextVehicleFront source) {
+        if (source.PlateNo != null) {
+            this.PlateNo = new String(source.PlateNo);
+        }
+        if (source.VehicleType != null) {
+            this.VehicleType = new String(source.VehicleType);
+        }
+        if (source.Owner != null) {
+            this.Owner = new String(source.Owner);
+        }
+        if (source.Address != null) {
+            this.Address = new String(source.Address);
+        }
+        if (source.UseCharacter != null) {
+            this.UseCharacter = new String(source.UseCharacter);
+        }
+        if (source.Model != null) {
+            this.Model = new String(source.Model);
+        }
+        if (source.Vin != null) {
+            this.Vin = new String(source.Vin);
+        }
+        if (source.EngineNo != null) {
+            this.EngineNo = new String(source.EngineNo);
+        }
+        if (source.RegisterDate != null) {
+            this.RegisterDate = new String(source.RegisterDate);
+        }
+        if (source.IssueDate != null) {
+            this.IssueDate = new String(source.IssueDate);
+        }
+        if (source.Seal != null) {
+            this.Seal = new String(source.Seal);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

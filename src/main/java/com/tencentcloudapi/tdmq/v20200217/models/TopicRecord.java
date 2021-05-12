@@ -68,6 +68,23 @@ public class TopicRecord extends AbstractModel{
         this.TopicName = TopicName;
     }
 
+    public TopicRecord() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TopicRecord(TopicRecord source) {
+        if (source.EnvironmentId != null) {
+            this.EnvironmentId = new String(source.EnvironmentId);
+        }
+        if (source.TopicName != null) {
+            this.TopicName = new String(source.TopicName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

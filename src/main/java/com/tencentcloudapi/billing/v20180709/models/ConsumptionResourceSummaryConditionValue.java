@@ -114,6 +114,41 @@ public class ConsumptionResourceSummaryConditionValue extends AbstractModel{
         this.PayMode = PayMode;
     }
 
+    public ConsumptionResourceSummaryConditionValue() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ConsumptionResourceSummaryConditionValue(ConsumptionResourceSummaryConditionValue source) {
+        if (source.Business != null) {
+            this.Business = new ConditionBusiness[source.Business.length];
+            for (int i = 0; i < source.Business.length; i++) {
+                this.Business[i] = new ConditionBusiness(source.Business[i]);
+            }
+        }
+        if (source.Project != null) {
+            this.Project = new ConditionProject[source.Project.length];
+            for (int i = 0; i < source.Project.length; i++) {
+                this.Project[i] = new ConditionProject(source.Project[i]);
+            }
+        }
+        if (source.Region != null) {
+            this.Region = new ConditionRegion[source.Region.length];
+            for (int i = 0; i < source.Region.length; i++) {
+                this.Region[i] = new ConditionRegion(source.Region[i]);
+            }
+        }
+        if (source.PayMode != null) {
+            this.PayMode = new ConditionPayMode[source.PayMode.length];
+            for (int i = 0; i < source.PayMode.length; i++) {
+                this.PayMode[i] = new ConditionPayMode(source.PayMode[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -183,6 +183,38 @@ public class ResourceInfo extends AbstractModel{
         this.ResourceName = ResourceName;
     }
 
+    public ResourceInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ResourceInfo(ResourceInfo source) {
+        if (source.ResourceId != null) {
+            this.ResourceId = new String(source.ResourceId);
+        }
+        if (source.Pid != null) {
+            this.Pid = new Long(source.Pid);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new Long(source.CreateTime);
+        }
+        if (source.ExpireTime != null) {
+            this.ExpireTime = new Long(source.ExpireTime);
+        }
+        if (source.IsBind != null) {
+            this.IsBind = new Long(source.IsBind);
+        }
+        if (source.BindInfo != null) {
+            this.BindInfo = new BindInfo(source.BindInfo);
+        }
+        if (source.ResourceName != null) {
+            this.ResourceName = new String(source.ResourceName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

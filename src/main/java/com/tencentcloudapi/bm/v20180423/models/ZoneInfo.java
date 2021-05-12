@@ -91,6 +91,26 @@ public class ZoneInfo extends AbstractModel{
         this.ZoneDescription = ZoneDescription;
     }
 
+    public ZoneInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ZoneInfo(ZoneInfo source) {
+        if (source.Zone != null) {
+            this.Zone = new String(source.Zone);
+        }
+        if (source.ZoneId != null) {
+            this.ZoneId = new Long(source.ZoneId);
+        }
+        if (source.ZoneDescription != null) {
+            this.ZoneDescription = new String(source.ZoneDescription);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

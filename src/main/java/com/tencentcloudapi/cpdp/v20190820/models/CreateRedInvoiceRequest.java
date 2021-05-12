@@ -114,6 +114,32 @@ public class CreateRedInvoiceRequest extends AbstractModel{
         this.InvoiceChannel = InvoiceChannel;
     }
 
+    public CreateRedInvoiceRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateRedInvoiceRequest(CreateRedInvoiceRequest source) {
+        if (source.InvoicePlatformId != null) {
+            this.InvoicePlatformId = new Long(source.InvoicePlatformId);
+        }
+        if (source.Invoices != null) {
+            this.Invoices = new CreateRedInvoiceItem[source.Invoices.length];
+            for (int i = 0; i < source.Invoices.length; i++) {
+                this.Invoices[i] = new CreateRedInvoiceItem(source.Invoices[i]);
+            }
+        }
+        if (source.Profile != null) {
+            this.Profile = new String(source.Profile);
+        }
+        if (source.InvoiceChannel != null) {
+            this.InvoiceChannel = new Long(source.InvoiceChannel);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

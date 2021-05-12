@@ -249,6 +249,44 @@ public class CreateChaincodeAndInstallForUserRequest extends AbstractModel{
         this.Chaincode = Chaincode;
     }
 
+    public CreateChaincodeAndInstallForUserRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateChaincodeAndInstallForUserRequest(CreateChaincodeAndInstallForUserRequest source) {
+        if (source.Module != null) {
+            this.Module = new String(source.Module);
+        }
+        if (source.Operation != null) {
+            this.Operation = new String(source.Operation);
+        }
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
+        if (source.GroupName != null) {
+            this.GroupName = new String(source.GroupName);
+        }
+        if (source.PeerName != null) {
+            this.PeerName = new String(source.PeerName);
+        }
+        if (source.ChaincodeName != null) {
+            this.ChaincodeName = new String(source.ChaincodeName);
+        }
+        if (source.ChaincodeVersion != null) {
+            this.ChaincodeVersion = new String(source.ChaincodeVersion);
+        }
+        if (source.ChaincodeFileType != null) {
+            this.ChaincodeFileType = new String(source.ChaincodeFileType);
+        }
+        if (source.Chaincode != null) {
+            this.Chaincode = new String(source.Chaincode);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

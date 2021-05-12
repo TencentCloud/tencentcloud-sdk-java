@@ -326,6 +326,56 @@ public class CheckAssetItem extends AbstractModel{
         this.Remarks = Remarks;
     }
 
+    public CheckAssetItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CheckAssetItem(CheckAssetItem source) {
+        if (source.Id != null) {
+            this.Id = new Long(source.Id);
+        }
+        if (source.Instid != null) {
+            this.Instid = new String(source.Instid);
+        }
+        if (source.Url != null) {
+            this.Url = new String(source.Url);
+        }
+        if (source.Taskid != null) {
+            this.Taskid = new String(source.Taskid);
+        }
+        if (source.Result != null) {
+            this.Result = new Long(source.Result);
+        }
+        if (source.Updatetime != null) {
+            this.Updatetime = new String(source.Updatetime);
+        }
+        if (source.Tag != null) {
+            this.Tag = new String(source.Tag);
+        }
+        if (source.IsIgnore != null) {
+            this.IsIgnore = new Long(source.IsIgnore);
+        }
+        if (source.IsChecked != null) {
+            this.IsChecked = new Long(source.IsChecked);
+        }
+        if (source.AssetInfo != null) {
+            this.AssetInfo = new String(source.AssetInfo);
+        }
+        if (source.AssetId != null) {
+            this.AssetId = new String(source.AssetId);
+        }
+        if (source.Detail != null) {
+            this.Detail = new String(source.Detail);
+        }
+        if (source.Remarks != null) {
+            this.Remarks = new String(source.Remarks);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

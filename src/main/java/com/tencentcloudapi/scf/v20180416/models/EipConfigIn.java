@@ -45,6 +45,20 @@ public class EipConfigIn extends AbstractModel{
         this.EipStatus = EipStatus;
     }
 
+    public EipConfigIn() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public EipConfigIn(EipConfigIn source) {
+        if (source.EipStatus != null) {
+            this.EipStatus = new String(source.EipStatus);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

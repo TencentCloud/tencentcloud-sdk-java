@@ -45,6 +45,20 @@ public class InquirePriceCreateBlueprintRequest extends AbstractModel{
         this.BlueprintCount = BlueprintCount;
     }
 
+    public InquirePriceCreateBlueprintRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public InquirePriceCreateBlueprintRequest(InquirePriceCreateBlueprintRequest source) {
+        if (source.BlueprintCount != null) {
+            this.BlueprintCount = new Long(source.BlueprintCount);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

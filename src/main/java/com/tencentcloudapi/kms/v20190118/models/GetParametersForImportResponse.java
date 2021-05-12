@@ -137,6 +137,32 @@ public class GetParametersForImportResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public GetParametersForImportResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GetParametersForImportResponse(GetParametersForImportResponse source) {
+        if (source.KeyId != null) {
+            this.KeyId = new String(source.KeyId);
+        }
+        if (source.ImportToken != null) {
+            this.ImportToken = new String(source.ImportToken);
+        }
+        if (source.PublicKey != null) {
+            this.PublicKey = new String(source.PublicKey);
+        }
+        if (source.ParametersValidTo != null) {
+            this.ParametersValidTo = new Long(source.ParametersValidTo);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

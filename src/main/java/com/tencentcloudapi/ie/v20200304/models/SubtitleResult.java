@@ -45,6 +45,23 @@ public class SubtitleResult extends AbstractModel{
         this.SubtitleItems = SubtitleItems;
     }
 
+    public SubtitleResult() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SubtitleResult(SubtitleResult source) {
+        if (source.SubtitleItems != null) {
+            this.SubtitleItems = new SubtitleItem[source.SubtitleItems.length];
+            for (int i = 0; i < source.SubtitleItems.length; i++) {
+                this.SubtitleItems[i] = new SubtitleItem(source.SubtitleItems[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

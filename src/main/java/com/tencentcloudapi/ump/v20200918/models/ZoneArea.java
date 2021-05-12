@@ -68,6 +68,26 @@ public class ZoneArea extends AbstractModel{
         this.ShopArea = ShopArea;
     }
 
+    public ZoneArea() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ZoneArea(ZoneArea source) {
+        if (source.ZoneId != null) {
+            this.ZoneId = new Long(source.ZoneId);
+        }
+        if (source.ShopArea != null) {
+            this.ShopArea = new Point[source.ShopArea.length];
+            for (int i = 0; i < source.ShopArea.length; i++) {
+                this.ShopArea[i] = new Point(source.ShopArea[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

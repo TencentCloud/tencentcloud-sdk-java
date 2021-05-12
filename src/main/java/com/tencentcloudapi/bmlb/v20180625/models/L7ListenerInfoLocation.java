@@ -344,6 +344,65 @@ public class L7ListenerInfoLocation extends AbstractModel{
         this.BackendSet = BackendSet;
     }
 
+    public L7ListenerInfoLocation() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public L7ListenerInfoLocation(L7ListenerInfoLocation source) {
+        if (source.Url != null) {
+            this.Url = new String(source.Url);
+        }
+        if (source.LocationId != null) {
+            this.LocationId = new String(source.LocationId);
+        }
+        if (source.SessionExpire != null) {
+            this.SessionExpire = new Long(source.SessionExpire);
+        }
+        if (source.HealthSwitch != null) {
+            this.HealthSwitch = new Long(source.HealthSwitch);
+        }
+        if (source.HttpCheckPath != null) {
+            this.HttpCheckPath = new String(source.HttpCheckPath);
+        }
+        if (source.HttpCheckDomain != null) {
+            this.HttpCheckDomain = new String(source.HttpCheckDomain);
+        }
+        if (source.IntervalTime != null) {
+            this.IntervalTime = new Long(source.IntervalTime);
+        }
+        if (source.HealthNum != null) {
+            this.HealthNum = new Long(source.HealthNum);
+        }
+        if (source.UnhealthNum != null) {
+            this.UnhealthNum = new Long(source.UnhealthNum);
+        }
+        if (source.HttpCodes != null) {
+            this.HttpCodes = new Long[source.HttpCodes.length];
+            for (int i = 0; i < source.HttpCodes.length; i++) {
+                this.HttpCodes[i] = new Long(source.HttpCodes[i]);
+            }
+        }
+        if (source.BalanceMode != null) {
+            this.BalanceMode = new String(source.BalanceMode);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.AddTimestamp != null) {
+            this.AddTimestamp = new String(source.AddTimestamp);
+        }
+        if (source.BackendSet != null) {
+            this.BackendSet = new L7ListenerInfoBackend[source.BackendSet.length];
+            for (int i = 0; i < source.BackendSet.length; i++) {
+                this.BackendSet[i] = new L7ListenerInfoBackend(source.BackendSet[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

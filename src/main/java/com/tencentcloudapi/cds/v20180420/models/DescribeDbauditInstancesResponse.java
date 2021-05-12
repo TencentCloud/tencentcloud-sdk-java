@@ -91,6 +91,29 @@ public class DescribeDbauditInstancesResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeDbauditInstancesResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeDbauditInstancesResponse(DescribeDbauditInstancesResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.CdsAuditInstanceSet != null) {
+            this.CdsAuditInstanceSet = new CdsAuditInstance[source.CdsAuditInstanceSet.length];
+            for (int i = 0; i < source.CdsAuditInstanceSet.length; i++) {
+                this.CdsAuditInstanceSet[i] = new CdsAuditInstance(source.CdsAuditInstanceSet[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -114,6 +114,29 @@ public class SlaveInstanceInfo extends AbstractModel{
         this.Zone = Zone;
     }
 
+    public SlaveInstanceInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SlaveInstanceInfo(SlaveInstanceInfo source) {
+        if (source.Vport != null) {
+            this.Vport = new Long(source.Vport);
+        }
+        if (source.Region != null) {
+            this.Region = new String(source.Region);
+        }
+        if (source.Vip != null) {
+            this.Vip = new String(source.Vip);
+        }
+        if (source.Zone != null) {
+            this.Zone = new String(source.Zone);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

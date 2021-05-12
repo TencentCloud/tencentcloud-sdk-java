@@ -91,6 +91,29 @@ public class DescribeDBParametersResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeDBParametersResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeDBParametersResponse(DescribeDBParametersResponse source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.Params != null) {
+            this.Params = new ParamDesc[source.Params.length];
+            for (int i = 0; i < source.Params.length; i++) {
+                this.Params[i] = new ParamDesc(source.Params[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

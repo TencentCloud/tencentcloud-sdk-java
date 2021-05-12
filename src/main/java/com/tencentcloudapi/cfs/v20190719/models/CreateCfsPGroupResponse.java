@@ -160,6 +160,35 @@ public class CreateCfsPGroupResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public CreateCfsPGroupResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateCfsPGroupResponse(CreateCfsPGroupResponse source) {
+        if (source.PGroupId != null) {
+            this.PGroupId = new String(source.PGroupId);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.DescInfo != null) {
+            this.DescInfo = new String(source.DescInfo);
+        }
+        if (source.BindCfsNum != null) {
+            this.BindCfsNum = new Long(source.BindCfsNum);
+        }
+        if (source.CDate != null) {
+            this.CDate = new String(source.CDate);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -137,6 +137,32 @@ public class DescribeExecutionsRequest extends AbstractModel{
         this.FilterExecutionResourceName = FilterExecutionResourceName;
     }
 
+    public DescribeExecutionsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeExecutionsRequest(DescribeExecutionsRequest source) {
+        if (source.StateMachineResourceName != null) {
+            this.StateMachineResourceName = new String(source.StateMachineResourceName);
+        }
+        if (source.PageSize != null) {
+            this.PageSize = new Long(source.PageSize);
+        }
+        if (source.PageIndex != null) {
+            this.PageIndex = new Long(source.PageIndex);
+        }
+        if (source.FilterExecutionStatus != null) {
+            this.FilterExecutionStatus = new String(source.FilterExecutionStatus);
+        }
+        if (source.FilterExecutionResourceName != null) {
+            this.FilterExecutionResourceName = new String(source.FilterExecutionResourceName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

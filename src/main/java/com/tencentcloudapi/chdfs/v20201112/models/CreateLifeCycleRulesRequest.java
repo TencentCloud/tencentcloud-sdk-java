@@ -68,6 +68,26 @@ public class CreateLifeCycleRulesRequest extends AbstractModel{
         this.LifeCycleRules = LifeCycleRules;
     }
 
+    public CreateLifeCycleRulesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateLifeCycleRulesRequest(CreateLifeCycleRulesRequest source) {
+        if (source.FileSystemId != null) {
+            this.FileSystemId = new String(source.FileSystemId);
+        }
+        if (source.LifeCycleRules != null) {
+            this.LifeCycleRules = new LifeCycleRule[source.LifeCycleRules.length];
+            for (int i = 0; i < source.LifeCycleRules.length; i++) {
+                this.LifeCycleRules[i] = new LifeCycleRule(source.LifeCycleRules[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

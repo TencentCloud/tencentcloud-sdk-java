@@ -114,6 +114,32 @@ public class ServiceTemplate extends AbstractModel{
         this.CreatedTime = CreatedTime;
     }
 
+    public ServiceTemplate() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ServiceTemplate(ServiceTemplate source) {
+        if (source.ServiceTemplateId != null) {
+            this.ServiceTemplateId = new String(source.ServiceTemplateId);
+        }
+        if (source.ServiceTemplateName != null) {
+            this.ServiceTemplateName = new String(source.ServiceTemplateName);
+        }
+        if (source.ServiceSet != null) {
+            this.ServiceSet = new String[source.ServiceSet.length];
+            for (int i = 0; i < source.ServiceSet.length; i++) {
+                this.ServiceSet[i] = new String(source.ServiceSet[i]);
+            }
+        }
+        if (source.CreatedTime != null) {
+            this.CreatedTime = new String(source.CreatedTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

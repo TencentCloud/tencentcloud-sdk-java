@@ -114,6 +114,29 @@ public class TableSpaceTimeSeries extends AbstractModel{
         this.SeriesData = SeriesData;
     }
 
+    public TableSpaceTimeSeries() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TableSpaceTimeSeries(TableSpaceTimeSeries source) {
+        if (source.TableName != null) {
+            this.TableName = new String(source.TableName);
+        }
+        if (source.TableSchema != null) {
+            this.TableSchema = new String(source.TableSchema);
+        }
+        if (source.Engine != null) {
+            this.Engine = new String(source.Engine);
+        }
+        if (source.SeriesData != null) {
+            this.SeriesData = new MonitorFloatMetricSeriesData(source.SeriesData);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

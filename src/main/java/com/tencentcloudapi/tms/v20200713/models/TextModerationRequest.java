@@ -137,6 +137,32 @@ public class TextModerationRequest extends AbstractModel{
         this.Device = Device;
     }
 
+    public TextModerationRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TextModerationRequest(TextModerationRequest source) {
+        if (source.Content != null) {
+            this.Content = new String(source.Content);
+        }
+        if (source.BizType != null) {
+            this.BizType = new String(source.BizType);
+        }
+        if (source.DataId != null) {
+            this.DataId = new String(source.DataId);
+        }
+        if (source.User != null) {
+            this.User = new User(source.User);
+        }
+        if (source.Device != null) {
+            this.Device = new Device(source.Device);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

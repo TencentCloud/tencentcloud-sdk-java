@@ -91,6 +91,32 @@ public class GetResultSummaryResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public GetResultSummaryResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GetResultSummaryResponse(GetResultSummaryResponse source) {
+        if (source.RealData != null) {
+            this.RealData = new ResultSummary[source.RealData.length];
+            for (int i = 0; i < source.RealData.length; i++) {
+                this.RealData[i] = new ResultSummary(source.RealData[i]);
+            }
+        }
+        if (source.DayData != null) {
+            this.DayData = new ResultSummary[source.DayData.length];
+            for (int i = 0; i < source.DayData.length; i++) {
+                this.DayData[i] = new ResultSummary(source.DayData[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

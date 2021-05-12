@@ -114,6 +114,29 @@ public class CreateResourceConfigRequest extends AbstractModel{
         this.AutoDelete = AutoDelete;
     }
 
+    public CreateResourceConfigRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateResourceConfigRequest(CreateResourceConfigRequest source) {
+        if (source.ResourceId != null) {
+            this.ResourceId = new String(source.ResourceId);
+        }
+        if (source.ResourceLoc != null) {
+            this.ResourceLoc = new ResourceLoc(source.ResourceLoc);
+        }
+        if (source.Remark != null) {
+            this.Remark = new String(source.Remark);
+        }
+        if (source.AutoDelete != null) {
+            this.AutoDelete = new Long(source.AutoDelete);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -142,6 +142,32 @@ public class BindRelateAcctUnionPayResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public BindRelateAcctUnionPayResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public BindRelateAcctUnionPayResponse(BindRelateAcctUnionPayResponse source) {
+        if (source.ReservedMsg != null) {
+            this.ReservedMsg = new String(source.ReservedMsg);
+        }
+        if (source.TxnReturnCode != null) {
+            this.TxnReturnCode = new String(source.TxnReturnCode);
+        }
+        if (source.TxnReturnMsg != null) {
+            this.TxnReturnMsg = new String(source.TxnReturnMsg);
+        }
+        if (source.CnsmrSeqNo != null) {
+            this.CnsmrSeqNo = new String(source.CnsmrSeqNo);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

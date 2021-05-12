@@ -436,6 +436,71 @@ public class FileSystemInfo extends AbstractModel{
         this.BandwidthLimit = BandwidthLimit;
     }
 
+    public FileSystemInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public FileSystemInfo(FileSystemInfo source) {
+        if (source.CreationTime != null) {
+            this.CreationTime = new String(source.CreationTime);
+        }
+        if (source.CreationToken != null) {
+            this.CreationToken = new String(source.CreationToken);
+        }
+        if (source.FileSystemId != null) {
+            this.FileSystemId = new String(source.FileSystemId);
+        }
+        if (source.LifeCycleState != null) {
+            this.LifeCycleState = new String(source.LifeCycleState);
+        }
+        if (source.SizeByte != null) {
+            this.SizeByte = new Long(source.SizeByte);
+        }
+        if (source.SizeLimit != null) {
+            this.SizeLimit = new Long(source.SizeLimit);
+        }
+        if (source.ZoneId != null) {
+            this.ZoneId = new Long(source.ZoneId);
+        }
+        if (source.Zone != null) {
+            this.Zone = new String(source.Zone);
+        }
+        if (source.Protocol != null) {
+            this.Protocol = new String(source.Protocol);
+        }
+        if (source.StorageType != null) {
+            this.StorageType = new String(source.StorageType);
+        }
+        if (source.StorageResourcePkg != null) {
+            this.StorageResourcePkg = new String(source.StorageResourcePkg);
+        }
+        if (source.BandwidthResourcePkg != null) {
+            this.BandwidthResourcePkg = new String(source.BandwidthResourcePkg);
+        }
+        if (source.PGroup != null) {
+            this.PGroup = new PGroup(source.PGroup);
+        }
+        if (source.FsName != null) {
+            this.FsName = new String(source.FsName);
+        }
+        if (source.Encrypted != null) {
+            this.Encrypted = new Boolean(source.Encrypted);
+        }
+        if (source.KmsKeyId != null) {
+            this.KmsKeyId = new String(source.KmsKeyId);
+        }
+        if (source.AppId != null) {
+            this.AppId = new Long(source.AppId);
+        }
+        if (source.BandwidthLimit != null) {
+            this.BandwidthLimit = new Float(source.BandwidthLimit);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

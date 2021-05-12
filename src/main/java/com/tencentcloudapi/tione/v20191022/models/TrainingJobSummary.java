@@ -243,6 +243,38 @@ Stopped：已停止
         this.ResourceConfig = ResourceConfig;
     }
 
+    public TrainingJobSummary() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TrainingJobSummary(TrainingJobSummary source) {
+        if (source.CreationTime != null) {
+            this.CreationTime = new String(source.CreationTime);
+        }
+        if (source.LastModifiedTime != null) {
+            this.LastModifiedTime = new String(source.LastModifiedTime);
+        }
+        if (source.TrainingJobName != null) {
+            this.TrainingJobName = new String(source.TrainingJobName);
+        }
+        if (source.TrainingJobStatus != null) {
+            this.TrainingJobStatus = new String(source.TrainingJobStatus);
+        }
+        if (source.TrainingEndTime != null) {
+            this.TrainingEndTime = new String(source.TrainingEndTime);
+        }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.ResourceConfig != null) {
+            this.ResourceConfig = new ResourceConfig(source.ResourceConfig);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -91,6 +91,26 @@ public class OmittedDuration extends AbstractModel{
         this.ResumeTime = ResumeTime;
     }
 
+    public OmittedDuration() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public OmittedDuration(OmittedDuration source) {
+        if (source.VideoTime != null) {
+            this.VideoTime = new Long(source.VideoTime);
+        }
+        if (source.PauseTime != null) {
+            this.PauseTime = new Long(source.PauseTime);
+        }
+        if (source.ResumeTime != null) {
+            this.ResumeTime = new Long(source.ResumeTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

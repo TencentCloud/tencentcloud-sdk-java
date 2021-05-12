@@ -413,6 +413,68 @@ public class DescribeAttackLogInfoResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeAttackLogInfoResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeAttackLogInfoResponse(DescribeAttackLogInfoResponse source) {
+        if (source.Id != null) {
+            this.Id = new Long(source.Id);
+        }
+        if (source.Quuid != null) {
+            this.Quuid = new String(source.Quuid);
+        }
+        if (source.SrcPort != null) {
+            this.SrcPort = new Long(source.SrcPort);
+        }
+        if (source.SrcIp != null) {
+            this.SrcIp = new String(source.SrcIp);
+        }
+        if (source.DstPort != null) {
+            this.DstPort = new Long(source.DstPort);
+        }
+        if (source.DstIp != null) {
+            this.DstIp = new String(source.DstIp);
+        }
+        if (source.HttpMethod != null) {
+            this.HttpMethod = new String(source.HttpMethod);
+        }
+        if (source.HttpHost != null) {
+            this.HttpHost = new String(source.HttpHost);
+        }
+        if (source.HttpHead != null) {
+            this.HttpHead = new String(source.HttpHead);
+        }
+        if (source.HttpUserAgent != null) {
+            this.HttpUserAgent = new String(source.HttpUserAgent);
+        }
+        if (source.HttpReferer != null) {
+            this.HttpReferer = new String(source.HttpReferer);
+        }
+        if (source.VulType != null) {
+            this.VulType = new String(source.VulType);
+        }
+        if (source.HttpCgi != null) {
+            this.HttpCgi = new String(source.HttpCgi);
+        }
+        if (source.HttpParam != null) {
+            this.HttpParam = new String(source.HttpParam);
+        }
+        if (source.CreatedAt != null) {
+            this.CreatedAt = new String(source.CreatedAt);
+        }
+        if (source.HttpContent != null) {
+            this.HttpContent = new String(source.HttpContent);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

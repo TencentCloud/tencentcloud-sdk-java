@@ -157,6 +157,32 @@ public class UpdateServiceDiscoveryRequest extends AbstractModel{
         this.Yaml = Yaml;
     }
 
+    public UpdateServiceDiscoveryRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UpdateServiceDiscoveryRequest(UpdateServiceDiscoveryRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.KubeClusterId != null) {
+            this.KubeClusterId = new String(source.KubeClusterId);
+        }
+        if (source.KubeType != null) {
+            this.KubeType = new Long(source.KubeType);
+        }
+        if (source.Type != null) {
+            this.Type = new Long(source.Type);
+        }
+        if (source.Yaml != null) {
+            this.Yaml = new String(source.Yaml);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

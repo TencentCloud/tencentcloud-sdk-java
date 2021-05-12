@@ -114,6 +114,32 @@ public class GetEmailIdentityResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public GetEmailIdentityResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GetEmailIdentityResponse(GetEmailIdentityResponse source) {
+        if (source.IdentityType != null) {
+            this.IdentityType = new String(source.IdentityType);
+        }
+        if (source.VerifiedForSendingStatus != null) {
+            this.VerifiedForSendingStatus = new Boolean(source.VerifiedForSendingStatus);
+        }
+        if (source.Attributes != null) {
+            this.Attributes = new DNSAttributes[source.Attributes.length];
+            for (int i = 0; i < source.Attributes.length; i++) {
+                this.Attributes[i] = new DNSAttributes(source.Attributes[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

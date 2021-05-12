@@ -68,6 +68,26 @@ public class SendSmsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public SendSmsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SendSmsResponse(SendSmsResponse source) {
+        if (source.SendStatusSet != null) {
+            this.SendStatusSet = new SendStatus[source.SendStatusSet.length];
+            for (int i = 0; i < source.SendStatusSet.length; i++) {
+                this.SendStatusSet[i] = new SendStatus(source.SendStatusSet[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

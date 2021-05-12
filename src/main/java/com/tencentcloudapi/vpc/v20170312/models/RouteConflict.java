@@ -91,6 +91,29 @@ public class RouteConflict extends AbstractModel{
         this.ConflictSet = ConflictSet;
     }
 
+    public RouteConflict() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RouteConflict(RouteConflict source) {
+        if (source.RouteTableId != null) {
+            this.RouteTableId = new String(source.RouteTableId);
+        }
+        if (source.DestinationCidrBlock != null) {
+            this.DestinationCidrBlock = new String(source.DestinationCidrBlock);
+        }
+        if (source.ConflictSet != null) {
+            this.ConflictSet = new Route[source.ConflictSet.length];
+            for (int i = 0; i < source.ConflictSet.length; i++) {
+                this.ConflictSet[i] = new Route(source.ConflictSet[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

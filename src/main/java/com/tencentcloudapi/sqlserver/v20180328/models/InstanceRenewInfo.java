@@ -68,6 +68,23 @@ public class InstanceRenewInfo extends AbstractModel{
         this.RenewFlag = RenewFlag;
     }
 
+    public InstanceRenewInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public InstanceRenewInfo(InstanceRenewInfo source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.RenewFlag != null) {
+            this.RenewFlag = new Long(source.RenewFlag);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -366,6 +366,62 @@ public class Activity extends AbstractModel{
         this.LifecycleActionResultSet = LifecycleActionResultSet;
     }
 
+    public Activity() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Activity(Activity source) {
+        if (source.AutoScalingGroupId != null) {
+            this.AutoScalingGroupId = new String(source.AutoScalingGroupId);
+        }
+        if (source.ActivityId != null) {
+            this.ActivityId = new String(source.ActivityId);
+        }
+        if (source.ActivityType != null) {
+            this.ActivityType = new String(source.ActivityType);
+        }
+        if (source.StatusCode != null) {
+            this.StatusCode = new String(source.StatusCode);
+        }
+        if (source.StatusMessage != null) {
+            this.StatusMessage = new String(source.StatusMessage);
+        }
+        if (source.Cause != null) {
+            this.Cause = new String(source.Cause);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+        if (source.CreatedTime != null) {
+            this.CreatedTime = new String(source.CreatedTime);
+        }
+        if (source.ActivityRelatedInstanceSet != null) {
+            this.ActivityRelatedInstanceSet = new ActivtyRelatedInstance[source.ActivityRelatedInstanceSet.length];
+            for (int i = 0; i < source.ActivityRelatedInstanceSet.length; i++) {
+                this.ActivityRelatedInstanceSet[i] = new ActivtyRelatedInstance(source.ActivityRelatedInstanceSet[i]);
+            }
+        }
+        if (source.StatusMessageSimplified != null) {
+            this.StatusMessageSimplified = new String(source.StatusMessageSimplified);
+        }
+        if (source.LifecycleActionResultSet != null) {
+            this.LifecycleActionResultSet = new LifecycleActionResultInfo[source.LifecycleActionResultSet.length];
+            for (int i = 0; i < source.LifecycleActionResultSet.length; i++) {
+                this.LifecycleActionResultSet[i] = new LifecycleActionResultInfo(source.LifecycleActionResultSet[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

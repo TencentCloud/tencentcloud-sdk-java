@@ -137,6 +137,32 @@ public class UpdateApiGroupRequest extends AbstractModel{
         this.GroupContext = GroupContext;
     }
 
+    public UpdateApiGroupRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UpdateApiGroupRequest(UpdateApiGroupRequest source) {
+        if (source.GroupId != null) {
+            this.GroupId = new String(source.GroupId);
+        }
+        if (source.GroupName != null) {
+            this.GroupName = new String(source.GroupName);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.AuthType != null) {
+            this.AuthType = new String(source.AuthType);
+        }
+        if (source.GroupContext != null) {
+            this.GroupContext = new String(source.GroupContext);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

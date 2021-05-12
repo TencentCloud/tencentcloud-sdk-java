@@ -459,6 +459,107 @@ public class Conditions extends AbstractModel{
         this.Status = Status;
     }
 
+    public Conditions() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Conditions(Conditions source) {
+        if (source.TimeRange != null) {
+            this.TimeRange = new Long(source.TimeRange);
+        }
+        if (source.BusinessCode != null) {
+            this.BusinessCode = new String(source.BusinessCode);
+        }
+        if (source.ProjectId != null) {
+            this.ProjectId = new Long(source.ProjectId);
+        }
+        if (source.RegionId != null) {
+            this.RegionId = new Long(source.RegionId);
+        }
+        if (source.PayMode != null) {
+            this.PayMode = new String(source.PayMode);
+        }
+        if (source.ResourceKeyword != null) {
+            this.ResourceKeyword = new String(source.ResourceKeyword);
+        }
+        if (source.BusinessCodes != null) {
+            this.BusinessCodes = new String[source.BusinessCodes.length];
+            for (int i = 0; i < source.BusinessCodes.length; i++) {
+                this.BusinessCodes[i] = new String(source.BusinessCodes[i]);
+            }
+        }
+        if (source.ProductCodes != null) {
+            this.ProductCodes = new String[source.ProductCodes.length];
+            for (int i = 0; i < source.ProductCodes.length; i++) {
+                this.ProductCodes[i] = new String(source.ProductCodes[i]);
+            }
+        }
+        if (source.RegionIds != null) {
+            this.RegionIds = new Long[source.RegionIds.length];
+            for (int i = 0; i < source.RegionIds.length; i++) {
+                this.RegionIds[i] = new Long(source.RegionIds[i]);
+            }
+        }
+        if (source.ProjectIds != null) {
+            this.ProjectIds = new Long[source.ProjectIds.length];
+            for (int i = 0; i < source.ProjectIds.length; i++) {
+                this.ProjectIds[i] = new Long(source.ProjectIds[i]);
+            }
+        }
+        if (source.PayModes != null) {
+            this.PayModes = new String[source.PayModes.length];
+            for (int i = 0; i < source.PayModes.length; i++) {
+                this.PayModes[i] = new String(source.PayModes[i]);
+            }
+        }
+        if (source.ActionTypes != null) {
+            this.ActionTypes = new String[source.ActionTypes.length];
+            for (int i = 0; i < source.ActionTypes.length; i++) {
+                this.ActionTypes[i] = new String(source.ActionTypes[i]);
+            }
+        }
+        if (source.HideFreeCost != null) {
+            this.HideFreeCost = new Long(source.HideFreeCost);
+        }
+        if (source.OrderByCost != null) {
+            this.OrderByCost = new String(source.OrderByCost);
+        }
+        if (source.BillIds != null) {
+            this.BillIds = new String[source.BillIds.length];
+            for (int i = 0; i < source.BillIds.length; i++) {
+                this.BillIds[i] = new String(source.BillIds[i]);
+            }
+        }
+        if (source.ComponentCodes != null) {
+            this.ComponentCodes = new String[source.ComponentCodes.length];
+            for (int i = 0; i < source.ComponentCodes.length; i++) {
+                this.ComponentCodes[i] = new String(source.ComponentCodes[i]);
+            }
+        }
+        if (source.FileIds != null) {
+            this.FileIds = new String[source.FileIds.length];
+            for (int i = 0; i < source.FileIds.length; i++) {
+                this.FileIds[i] = new String(source.FileIds[i]);
+            }
+        }
+        if (source.FileTypes != null) {
+            this.FileTypes = new String[source.FileTypes.length];
+            for (int i = 0; i < source.FileTypes.length; i++) {
+                this.FileTypes[i] = new String(source.FileTypes[i]);
+            }
+        }
+        if (source.Status != null) {
+            this.Status = new Long[source.Status.length];
+            for (int i = 0; i < source.Status.length; i++) {
+                this.Status[i] = new Long(source.Status[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

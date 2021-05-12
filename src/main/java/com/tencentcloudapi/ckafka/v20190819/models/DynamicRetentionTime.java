@@ -134,6 +134,29 @@ public class DynamicRetentionTime extends AbstractModel{
         this.BottomRetention = BottomRetention;
     }
 
+    public DynamicRetentionTime() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DynamicRetentionTime(DynamicRetentionTime source) {
+        if (source.Enable != null) {
+            this.Enable = new Long(source.Enable);
+        }
+        if (source.DiskQuotaPercentage != null) {
+            this.DiskQuotaPercentage = new Long(source.DiskQuotaPercentage);
+        }
+        if (source.StepForwardPercentage != null) {
+            this.StepForwardPercentage = new Long(source.StepForwardPercentage);
+        }
+        if (source.BottomRetention != null) {
+            this.BottomRetention = new Long(source.BottomRetention);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

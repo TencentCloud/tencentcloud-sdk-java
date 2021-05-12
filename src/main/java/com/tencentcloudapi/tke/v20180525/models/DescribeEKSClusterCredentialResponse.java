@@ -137,6 +137,35 @@ public class DescribeEKSClusterCredentialResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeEKSClusterCredentialResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeEKSClusterCredentialResponse(DescribeEKSClusterCredentialResponse source) {
+        if (source.Addresses != null) {
+            this.Addresses = new IPAddress[source.Addresses.length];
+            for (int i = 0; i < source.Addresses.length; i++) {
+                this.Addresses[i] = new IPAddress(source.Addresses[i]);
+            }
+        }
+        if (source.Credential != null) {
+            this.Credential = new ClusterCredential(source.Credential);
+        }
+        if (source.PublicLB != null) {
+            this.PublicLB = new ClusterPublicLB(source.PublicLB);
+        }
+        if (source.InternalLB != null) {
+            this.InternalLB = new ClusterInternalLB(source.InternalLB);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

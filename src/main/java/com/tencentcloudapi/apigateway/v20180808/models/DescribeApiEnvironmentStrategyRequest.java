@@ -137,6 +137,35 @@ public class DescribeApiEnvironmentStrategyRequest extends AbstractModel{
         this.Offset = Offset;
     }
 
+    public DescribeApiEnvironmentStrategyRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeApiEnvironmentStrategyRequest(DescribeApiEnvironmentStrategyRequest source) {
+        if (source.ServiceId != null) {
+            this.ServiceId = new String(source.ServiceId);
+        }
+        if (source.EnvironmentNames != null) {
+            this.EnvironmentNames = new String[source.EnvironmentNames.length];
+            for (int i = 0; i < source.EnvironmentNames.length; i++) {
+                this.EnvironmentNames[i] = new String(source.EnvironmentNames[i]);
+            }
+        }
+        if (source.ApiId != null) {
+            this.ApiId = new String(source.ApiId);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

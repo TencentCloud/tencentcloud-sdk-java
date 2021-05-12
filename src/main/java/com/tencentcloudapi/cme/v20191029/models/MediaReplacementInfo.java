@@ -68,6 +68,23 @@ public class MediaReplacementInfo extends AbstractModel{
         this.StartTimeOffset = StartTimeOffset;
     }
 
+    public MediaReplacementInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MediaReplacementInfo(MediaReplacementInfo source) {
+        if (source.MaterialId != null) {
+            this.MaterialId = new String(source.MaterialId);
+        }
+        if (source.StartTimeOffset != null) {
+            this.StartTimeOffset = new Float(source.StartTimeOffset);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -183,6 +183,38 @@ public class PropOwnerCertOCRResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public PropOwnerCertOCRResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PropOwnerCertOCRResponse(PropOwnerCertOCRResponse source) {
+        if (source.Owner != null) {
+            this.Owner = new String(source.Owner);
+        }
+        if (source.Possession != null) {
+            this.Possession = new String(source.Possession);
+        }
+        if (source.RegisterTime != null) {
+            this.RegisterTime = new String(source.RegisterTime);
+        }
+        if (source.Purpose != null) {
+            this.Purpose = new String(source.Purpose);
+        }
+        if (source.Nature != null) {
+            this.Nature = new String(source.Nature);
+        }
+        if (source.Location != null) {
+            this.Location = new String(source.Location);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

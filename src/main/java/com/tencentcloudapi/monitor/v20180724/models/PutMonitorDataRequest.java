@@ -114,6 +114,32 @@ public class PutMonitorDataRequest extends AbstractModel{
         this.AnnounceInstance = AnnounceInstance;
     }
 
+    public PutMonitorDataRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PutMonitorDataRequest(PutMonitorDataRequest source) {
+        if (source.Metrics != null) {
+            this.Metrics = new MetricDatum[source.Metrics.length];
+            for (int i = 0; i < source.Metrics.length; i++) {
+                this.Metrics[i] = new MetricDatum(source.Metrics[i]);
+            }
+        }
+        if (source.AnnounceIp != null) {
+            this.AnnounceIp = new String(source.AnnounceIp);
+        }
+        if (source.AnnounceTimestamp != null) {
+            this.AnnounceTimestamp = new Long(source.AnnounceTimestamp);
+        }
+        if (source.AnnounceInstance != null) {
+            this.AnnounceInstance = new String(source.AnnounceInstance);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

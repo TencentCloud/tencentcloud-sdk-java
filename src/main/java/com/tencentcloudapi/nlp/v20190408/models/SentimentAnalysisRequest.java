@@ -121,6 +121,26 @@ public class SentimentAnalysisRequest extends AbstractModel{
         this.Mode = Mode;
     }
 
+    public SentimentAnalysisRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SentimentAnalysisRequest(SentimentAnalysisRequest source) {
+        if (source.Text != null) {
+            this.Text = new String(source.Text);
+        }
+        if (source.Flag != null) {
+            this.Flag = new Long(source.Flag);
+        }
+        if (source.Mode != null) {
+            this.Mode = new String(source.Mode);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

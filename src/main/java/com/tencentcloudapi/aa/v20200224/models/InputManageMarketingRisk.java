@@ -522,6 +522,80 @@ public class InputManageMarketingRisk extends AbstractModel{
         this.DeviceType = DeviceType;
     }
 
+    public InputManageMarketingRisk() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public InputManageMarketingRisk(InputManageMarketingRisk source) {
+        if (source.Account != null) {
+            this.Account = new AccountInfo(source.Account);
+        }
+        if (source.UserIp != null) {
+            this.UserIp = new String(source.UserIp);
+        }
+        if (source.PostTime != null) {
+            this.PostTime = new Long(source.PostTime);
+        }
+        if (source.SceneType != null) {
+            this.SceneType = new Long(source.SceneType);
+        }
+        if (source.UserId != null) {
+            this.UserId = new String(source.UserId);
+        }
+        if (source.DeviceToken != null) {
+            this.DeviceToken = new String(source.DeviceToken);
+        }
+        if (source.DeviceBusinessId != null) {
+            this.DeviceBusinessId = new Long(source.DeviceBusinessId);
+        }
+        if (source.BusinessId != null) {
+            this.BusinessId = new Long(source.BusinessId);
+        }
+        if (source.Nickname != null) {
+            this.Nickname = new String(source.Nickname);
+        }
+        if (source.EmailAddress != null) {
+            this.EmailAddress = new String(source.EmailAddress);
+        }
+        if (source.CheckDevice != null) {
+            this.CheckDevice = new Long(source.CheckDevice);
+        }
+        if (source.CookieHash != null) {
+            this.CookieHash = new String(source.CookieHash);
+        }
+        if (source.Referer != null) {
+            this.Referer = new String(source.Referer);
+        }
+        if (source.UserAgent != null) {
+            this.UserAgent = new String(source.UserAgent);
+        }
+        if (source.XForwardedFor != null) {
+            this.XForwardedFor = new String(source.XForwardedFor);
+        }
+        if (source.MacAddress != null) {
+            this.MacAddress = new String(source.MacAddress);
+        }
+        if (source.CrowdAntiRush != null) {
+            this.CrowdAntiRush = new CrowdAntiRushInfo(source.CrowdAntiRush);
+        }
+        if (source.SceneCode != null) {
+            this.SceneCode = new String(source.SceneCode);
+        }
+        if (source.Details != null) {
+            this.Details = new InputDetails[source.Details.length];
+            for (int i = 0; i < source.Details.length; i++) {
+                this.Details[i] = new InputDetails(source.Details[i]);
+            }
+        }
+        if (source.DeviceType != null) {
+            this.DeviceType = new Long(source.DeviceType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

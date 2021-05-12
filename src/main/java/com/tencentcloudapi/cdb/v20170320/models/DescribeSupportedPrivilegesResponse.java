@@ -137,6 +137,44 @@ public class DescribeSupportedPrivilegesResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeSupportedPrivilegesResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeSupportedPrivilegesResponse(DescribeSupportedPrivilegesResponse source) {
+        if (source.GlobalSupportedPrivileges != null) {
+            this.GlobalSupportedPrivileges = new String[source.GlobalSupportedPrivileges.length];
+            for (int i = 0; i < source.GlobalSupportedPrivileges.length; i++) {
+                this.GlobalSupportedPrivileges[i] = new String(source.GlobalSupportedPrivileges[i]);
+            }
+        }
+        if (source.DatabaseSupportedPrivileges != null) {
+            this.DatabaseSupportedPrivileges = new String[source.DatabaseSupportedPrivileges.length];
+            for (int i = 0; i < source.DatabaseSupportedPrivileges.length; i++) {
+                this.DatabaseSupportedPrivileges[i] = new String(source.DatabaseSupportedPrivileges[i]);
+            }
+        }
+        if (source.TableSupportedPrivileges != null) {
+            this.TableSupportedPrivileges = new String[source.TableSupportedPrivileges.length];
+            for (int i = 0; i < source.TableSupportedPrivileges.length; i++) {
+                this.TableSupportedPrivileges[i] = new String(source.TableSupportedPrivileges[i]);
+            }
+        }
+        if (source.ColumnSupportedPrivileges != null) {
+            this.ColumnSupportedPrivileges = new String[source.ColumnSupportedPrivileges.length];
+            for (int i = 0; i < source.ColumnSupportedPrivileges.length; i++) {
+                this.ColumnSupportedPrivileges[i] = new String(source.ColumnSupportedPrivileges[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -137,6 +137,32 @@ public class UpdateFirmwareRequest extends AbstractModel{
         this.UpgradeMethod = UpgradeMethod;
     }
 
+    public UpdateFirmwareRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UpdateFirmwareRequest(UpdateFirmwareRequest source) {
+        if (source.ProductID != null) {
+            this.ProductID = new String(source.ProductID);
+        }
+        if (source.DeviceName != null) {
+            this.DeviceName = new String(source.DeviceName);
+        }
+        if (source.FirmwareVersion != null) {
+            this.FirmwareVersion = new String(source.FirmwareVersion);
+        }
+        if (source.FirmwareOriVersion != null) {
+            this.FirmwareOriVersion = new String(source.FirmwareOriVersion);
+        }
+        if (source.UpgradeMethod != null) {
+            this.UpgradeMethod = new Long(source.UpgradeMethod);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

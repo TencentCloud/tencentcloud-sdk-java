@@ -459,6 +459,80 @@ public class Snapshot extends AbstractModel{
         this.TimeStartShare = TimeStartShare;
     }
 
+    public Snapshot() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Snapshot(Snapshot source) {
+        if (source.SnapshotId != null) {
+            this.SnapshotId = new String(source.SnapshotId);
+        }
+        if (source.Placement != null) {
+            this.Placement = new Placement(source.Placement);
+        }
+        if (source.DiskUsage != null) {
+            this.DiskUsage = new String(source.DiskUsage);
+        }
+        if (source.DiskId != null) {
+            this.DiskId = new String(source.DiskId);
+        }
+        if (source.DiskSize != null) {
+            this.DiskSize = new Long(source.DiskSize);
+        }
+        if (source.SnapshotState != null) {
+            this.SnapshotState = new String(source.SnapshotState);
+        }
+        if (source.SnapshotName != null) {
+            this.SnapshotName = new String(source.SnapshotName);
+        }
+        if (source.Percent != null) {
+            this.Percent = new Long(source.Percent);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.DeadlineTime != null) {
+            this.DeadlineTime = new String(source.DeadlineTime);
+        }
+        if (source.Encrypt != null) {
+            this.Encrypt = new Boolean(source.Encrypt);
+        }
+        if (source.IsPermanent != null) {
+            this.IsPermanent = new Boolean(source.IsPermanent);
+        }
+        if (source.CopyingToRegions != null) {
+            this.CopyingToRegions = new String[source.CopyingToRegions.length];
+            for (int i = 0; i < source.CopyingToRegions.length; i++) {
+                this.CopyingToRegions[i] = new String(source.CopyingToRegions[i]);
+            }
+        }
+        if (source.CopyFromRemote != null) {
+            this.CopyFromRemote = new Boolean(source.CopyFromRemote);
+        }
+        if (source.Images != null) {
+            this.Images = new Image[source.Images.length];
+            for (int i = 0; i < source.Images.length; i++) {
+                this.Images[i] = new Image(source.Images[i]);
+            }
+        }
+        if (source.ImageCount != null) {
+            this.ImageCount = new Long(source.ImageCount);
+        }
+        if (source.SnapshotType != null) {
+            this.SnapshotType = new String(source.SnapshotType);
+        }
+        if (source.ShareReference != null) {
+            this.ShareReference = new Long(source.ShareReference);
+        }
+        if (source.TimeStartShare != null) {
+            this.TimeStartShare = new String(source.TimeStartShare);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

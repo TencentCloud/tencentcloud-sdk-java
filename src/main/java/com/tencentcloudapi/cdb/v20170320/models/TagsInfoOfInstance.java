@@ -68,6 +68,26 @@ public class TagsInfoOfInstance extends AbstractModel{
         this.Tags = Tags;
     }
 
+    public TagsInfoOfInstance() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TagsInfoOfInstance(TagsInfoOfInstance source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.Tags != null) {
+            this.Tags = new TagInfoUnit[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new TagInfoUnit(source.Tags[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

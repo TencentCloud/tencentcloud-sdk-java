@@ -68,6 +68,23 @@ public class MaterialFaceList extends AbstractModel{
         this.FaceInfo = FaceInfo;
     }
 
+    public MaterialFaceList() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MaterialFaceList(MaterialFaceList source) {
+        if (source.FaceId != null) {
+            this.FaceId = new String(source.FaceId);
+        }
+        if (source.FaceInfo != null) {
+            this.FaceInfo = new FaceInfo(source.FaceInfo);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

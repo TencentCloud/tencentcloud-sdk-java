@@ -182,6 +182,32 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
         this.NeedRotateDetection = NeedRotateDetection;
     }
 
+    public AnalyzeDenseLandmarksRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AnalyzeDenseLandmarksRequest(AnalyzeDenseLandmarksRequest source) {
+        if (source.Mode != null) {
+            this.Mode = new Long(source.Mode);
+        }
+        if (source.Image != null) {
+            this.Image = new String(source.Image);
+        }
+        if (source.Url != null) {
+            this.Url = new String(source.Url);
+        }
+        if (source.FaceModelVersion != null) {
+            this.FaceModelVersion = new String(source.FaceModelVersion);
+        }
+        if (source.NeedRotateDetection != null) {
+            this.NeedRotateDetection = new Long(source.NeedRotateDetection);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

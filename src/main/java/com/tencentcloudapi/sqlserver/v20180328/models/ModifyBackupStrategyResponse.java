@@ -91,6 +91,26 @@ public class ModifyBackupStrategyResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public ModifyBackupStrategyResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyBackupStrategyResponse(ModifyBackupStrategyResponse source) {
+        if (source.Errno != null) {
+            this.Errno = new Long(source.Errno);
+        }
+        if (source.Msg != null) {
+            this.Msg = new String(source.Msg);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

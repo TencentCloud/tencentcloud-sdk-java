@@ -137,6 +137,32 @@ public class QuantizationInput extends AbstractModel{
         this.ConvertType = ConvertType;
     }
 
+    public QuantizationInput() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public QuantizationInput(QuantizationInput source) {
+        if (source.InputPath != null) {
+            this.InputPath = new String(source.InputPath);
+        }
+        if (source.OutputPath != null) {
+            this.OutputPath = new String(source.OutputPath);
+        }
+        if (source.BatchSize != null) {
+            this.BatchSize = new Long(source.BatchSize);
+        }
+        if (source.Precision != null) {
+            this.Precision = new String(source.Precision);
+        }
+        if (source.ConvertType != null) {
+            this.ConvertType = new String(source.ConvertType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

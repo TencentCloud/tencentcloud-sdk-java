@@ -129,6 +129,35 @@ public class SubscribedInfo extends AbstractModel{
         this.TopicId = TopicId;
     }
 
+    public SubscribedInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SubscribedInfo(SubscribedInfo source) {
+        if (source.TopicName != null) {
+            this.TopicName = new String(source.TopicName);
+        }
+        if (source.Partition != null) {
+            this.Partition = new Long[source.Partition.length];
+            for (int i = 0; i < source.Partition.length; i++) {
+                this.Partition[i] = new Long(source.Partition[i]);
+            }
+        }
+        if (source.PartitionOffset != null) {
+            this.PartitionOffset = new PartitionOffset[source.PartitionOffset.length];
+            for (int i = 0; i < source.PartitionOffset.length; i++) {
+                this.PartitionOffset[i] = new PartitionOffset(source.PartitionOffset[i]);
+            }
+        }
+        if (source.TopicId != null) {
+            this.TopicId = new String(source.TopicId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

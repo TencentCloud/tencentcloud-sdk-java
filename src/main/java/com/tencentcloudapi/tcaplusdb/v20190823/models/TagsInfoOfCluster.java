@@ -106,6 +106,29 @@ public class TagsInfoOfCluster extends AbstractModel{
         this.Error = Error;
     }
 
+    public TagsInfoOfCluster() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TagsInfoOfCluster(TagsInfoOfCluster source) {
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
+        if (source.Tags != null) {
+            this.Tags = new TagInfoUnit[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new TagInfoUnit(source.Tags[i]);
+            }
+        }
+        if (source.Error != null) {
+            this.Error = new ErrorInfo(source.Error);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

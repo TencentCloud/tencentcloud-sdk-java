@@ -45,6 +45,20 @@ public class AdvanceSettings extends AbstractModel{
         this.SubTaskConcurrency = SubTaskConcurrency;
     }
 
+    public AdvanceSettings() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AdvanceSettings(AdvanceSettings source) {
+        if (source.SubTaskConcurrency != null) {
+            this.SubTaskConcurrency = new Long(source.SubTaskConcurrency);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

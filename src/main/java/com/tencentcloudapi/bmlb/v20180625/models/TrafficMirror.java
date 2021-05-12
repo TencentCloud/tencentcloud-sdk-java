@@ -344,6 +344,62 @@ public class TrafficMirror extends AbstractModel{
         this.VpcName = VpcName;
     }
 
+    public TrafficMirror() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TrafficMirror(TrafficMirror source) {
+        if (source.TrafficMirrorId != null) {
+            this.TrafficMirrorId = new String(source.TrafficMirrorId);
+        }
+        if (source.Alias != null) {
+            this.Alias = new String(source.Alias);
+        }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.LoadBalancerType != null) {
+            this.LoadBalancerType = new String(source.LoadBalancerType);
+        }
+        if (source.HealthSwitch != null) {
+            this.HealthSwitch = new Long(source.HealthSwitch);
+        }
+        if (source.HealthNum != null) {
+            this.HealthNum = new Long(source.HealthNum);
+        }
+        if (source.UnhealthNum != null) {
+            this.UnhealthNum = new Long(source.UnhealthNum);
+        }
+        if (source.IntervalTime != null) {
+            this.IntervalTime = new Long(source.IntervalTime);
+        }
+        if (source.HttpCheckDomain != null) {
+            this.HttpCheckDomain = new String(source.HttpCheckDomain);
+        }
+        if (source.HttpCheckPath != null) {
+            this.HttpCheckPath = new String(source.HttpCheckPath);
+        }
+        if (source.HttpCodes != null) {
+            this.HttpCodes = new Long[source.HttpCodes.length];
+            for (int i = 0; i < source.HttpCodes.length; i++) {
+                this.HttpCodes[i] = new Long(source.HttpCodes[i]);
+            }
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.VpcCidrBlock != null) {
+            this.VpcCidrBlock = new String(source.VpcCidrBlock);
+        }
+        if (source.VpcName != null) {
+            this.VpcName = new String(source.VpcName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

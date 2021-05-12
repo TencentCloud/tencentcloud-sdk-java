@@ -91,6 +91,26 @@ public class CreateInstanceTokenRequest extends AbstractModel{
         this.Desc = Desc;
     }
 
+    public CreateInstanceTokenRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateInstanceTokenRequest(CreateInstanceTokenRequest source) {
+        if (source.RegistryId != null) {
+            this.RegistryId = new String(source.RegistryId);
+        }
+        if (source.TokenType != null) {
+            this.TokenType = new String(source.TokenType);
+        }
+        if (source.Desc != null) {
+            this.Desc = new String(source.Desc);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

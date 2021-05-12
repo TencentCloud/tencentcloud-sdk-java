@@ -182,6 +182,35 @@ block。
         this.KeywordSet = KeywordSet;
     }
 
+    public VodAsrTextSegmentItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public VodAsrTextSegmentItem(VodAsrTextSegmentItem source) {
+        if (source.StartTimeOffset != null) {
+            this.StartTimeOffset = new Float(source.StartTimeOffset);
+        }
+        if (source.EndTimeOffset != null) {
+            this.EndTimeOffset = new Float(source.EndTimeOffset);
+        }
+        if (source.Confidence != null) {
+            this.Confidence = new Float(source.Confidence);
+        }
+        if (source.Suggestion != null) {
+            this.Suggestion = new String(source.Suggestion);
+        }
+        if (source.KeywordSet != null) {
+            this.KeywordSet = new String[source.KeywordSet.length];
+            for (int i = 0; i < source.KeywordSet.length; i++) {
+                this.KeywordSet[i] = new String(source.KeywordSet[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -68,6 +68,23 @@ public class MediaKeyFrameDescItem extends AbstractModel{
         this.Content = Content;
     }
 
+    public MediaKeyFrameDescItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MediaKeyFrameDescItem(MediaKeyFrameDescItem source) {
+        if (source.TimeOffset != null) {
+            this.TimeOffset = new Float(source.TimeOffset);
+        }
+        if (source.Content != null) {
+            this.Content = new String(source.Content);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

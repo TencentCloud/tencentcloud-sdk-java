@@ -45,6 +45,20 @@ public class DeleteSAMLProviderRequest extends AbstractModel{
         this.Name = Name;
     }
 
+    public DeleteSAMLProviderRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteSAMLProviderRequest(DeleteSAMLProviderRequest source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

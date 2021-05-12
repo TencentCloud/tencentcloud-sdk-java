@@ -91,6 +91,29 @@ public class DescribeDCDBInstanceNodeInfoResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeDCDBInstanceNodeInfoResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeDCDBInstanceNodeInfoResponse(DescribeDCDBInstanceNodeInfoResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.NodesInfo != null) {
+            this.NodesInfo = new BriefNodeInfo[source.NodesInfo.length];
+            for (int i = 0; i < source.NodesInfo.length; i++) {
+                this.NodesInfo[i] = new BriefNodeInfo(source.NodesInfo[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

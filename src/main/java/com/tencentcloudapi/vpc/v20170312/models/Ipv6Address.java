@@ -180,6 +180,35 @@ public class Ipv6Address extends AbstractModel{
         this.State = State;
     }
 
+    public Ipv6Address() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Ipv6Address(Ipv6Address source) {
+        if (source.Address != null) {
+            this.Address = new String(source.Address);
+        }
+        if (source.Primary != null) {
+            this.Primary = new Boolean(source.Primary);
+        }
+        if (source.AddressId != null) {
+            this.AddressId = new String(source.AddressId);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.IsWanIpBlocked != null) {
+            this.IsWanIpBlocked = new Boolean(source.IsWanIpBlocked);
+        }
+        if (source.State != null) {
+            this.State = new String(source.State);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

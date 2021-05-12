@@ -91,6 +91,29 @@ public class NoticeInfoResult extends AbstractModel{
         this.LimitInfos = LimitInfos;
     }
 
+    public NoticeInfoResult() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public NoticeInfoResult(NoticeInfoResult source) {
+        if (source.Id != null) {
+            this.Id = new Long(source.Id);
+        }
+        if (source.NoticeType != null) {
+            this.NoticeType = new Long(source.NoticeType);
+        }
+        if (source.LimitInfos != null) {
+            this.LimitInfos = new LimitInfo[source.LimitInfos.length];
+            for (int i = 0; i < source.LimitInfos.length; i++) {
+                this.LimitInfos[i] = new LimitInfo(source.LimitInfos[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -93,6 +93,26 @@ public class DiagnoseData extends AbstractModel{
         this.Status = Status;
     }
 
+    public DiagnoseData() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DiagnoseData(DiagnoseData source) {
+        if (source.Data != null) {
+            this.Data = new DiagnoseUnit[source.Data.length];
+            for (int i = 0; i < source.Data.length; i++) {
+                this.Data[i] = new DiagnoseUnit(source.Data[i]);
+            }
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -137,6 +137,44 @@ public class DescribeAccountPrivilegesResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeAccountPrivilegesResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeAccountPrivilegesResponse(DescribeAccountPrivilegesResponse source) {
+        if (source.GlobalPrivileges != null) {
+            this.GlobalPrivileges = new String[source.GlobalPrivileges.length];
+            for (int i = 0; i < source.GlobalPrivileges.length; i++) {
+                this.GlobalPrivileges[i] = new String(source.GlobalPrivileges[i]);
+            }
+        }
+        if (source.DatabasePrivileges != null) {
+            this.DatabasePrivileges = new DatabasePrivilege[source.DatabasePrivileges.length];
+            for (int i = 0; i < source.DatabasePrivileges.length; i++) {
+                this.DatabasePrivileges[i] = new DatabasePrivilege(source.DatabasePrivileges[i]);
+            }
+        }
+        if (source.TablePrivileges != null) {
+            this.TablePrivileges = new TablePrivilege[source.TablePrivileges.length];
+            for (int i = 0; i < source.TablePrivileges.length; i++) {
+                this.TablePrivileges[i] = new TablePrivilege(source.TablePrivileges[i]);
+            }
+        }
+        if (source.ColumnPrivileges != null) {
+            this.ColumnPrivileges = new ColumnPrivilege[source.ColumnPrivileges.length];
+            for (int i = 0; i < source.ColumnPrivileges.length; i++) {
+                this.ColumnPrivileges[i] = new ColumnPrivilege(source.ColumnPrivileges[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

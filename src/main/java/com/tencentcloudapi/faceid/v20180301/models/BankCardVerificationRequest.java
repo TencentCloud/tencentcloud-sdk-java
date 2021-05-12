@@ -142,6 +142,32 @@ public class BankCardVerificationRequest extends AbstractModel{
         this.Encryption = Encryption;
     }
 
+    public BankCardVerificationRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public BankCardVerificationRequest(BankCardVerificationRequest source) {
+        if (source.IdCard != null) {
+            this.IdCard = new String(source.IdCard);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.BankCard != null) {
+            this.BankCard = new String(source.BankCard);
+        }
+        if (source.CertType != null) {
+            this.CertType = new Long(source.CertType);
+        }
+        if (source.Encryption != null) {
+            this.Encryption = new Encryption(source.Encryption);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

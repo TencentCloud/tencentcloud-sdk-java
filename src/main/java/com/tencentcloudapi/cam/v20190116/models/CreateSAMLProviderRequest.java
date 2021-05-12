@@ -91,6 +91,26 @@ public class CreateSAMLProviderRequest extends AbstractModel{
         this.SAMLMetadataDocument = SAMLMetadataDocument;
     }
 
+    public CreateSAMLProviderRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateSAMLProviderRequest(CreateSAMLProviderRequest source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.SAMLMetadataDocument != null) {
+            this.SAMLMetadataDocument = new String(source.SAMLMetadataDocument);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

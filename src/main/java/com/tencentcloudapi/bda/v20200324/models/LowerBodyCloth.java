@@ -91,6 +91,26 @@ public class LowerBodyCloth extends AbstractModel{
         this.Type = Type;
     }
 
+    public LowerBodyCloth() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public LowerBodyCloth(LowerBodyCloth source) {
+        if (source.Color != null) {
+            this.Color = new LowerBodyClothColor(source.Color);
+        }
+        if (source.Length != null) {
+            this.Length = new LowerBodyClothLength(source.Length);
+        }
+        if (source.Type != null) {
+            this.Type = new LowerBodyClothType(source.Type);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

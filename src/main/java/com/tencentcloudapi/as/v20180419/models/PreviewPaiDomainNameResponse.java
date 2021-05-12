@@ -68,6 +68,23 @@ public class PreviewPaiDomainNameResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public PreviewPaiDomainNameResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PreviewPaiDomainNameResponse(PreviewPaiDomainNameResponse source) {
+        if (source.DomainName != null) {
+            this.DomainName = new String(source.DomainName);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

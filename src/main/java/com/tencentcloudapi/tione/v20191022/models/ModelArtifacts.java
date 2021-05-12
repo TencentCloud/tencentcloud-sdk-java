@@ -50,6 +50,20 @@ public class ModelArtifacts extends AbstractModel{
         this.CosModelArtifacts = CosModelArtifacts;
     }
 
+    public ModelArtifacts() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModelArtifacts(ModelArtifacts source) {
+        if (source.CosModelArtifacts != null) {
+            this.CosModelArtifacts = new String(source.CosModelArtifacts);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

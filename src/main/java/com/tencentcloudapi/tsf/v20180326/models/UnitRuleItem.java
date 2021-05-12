@@ -254,6 +254,47 @@ public class UnitRuleItem extends AbstractModel{
         this.UnitRuleTagList = UnitRuleTagList;
     }
 
+    public UnitRuleItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UnitRuleItem(UnitRuleItem source) {
+        if (source.Relationship != null) {
+            this.Relationship = new String(source.Relationship);
+        }
+        if (source.DestNamespaceId != null) {
+            this.DestNamespaceId = new String(source.DestNamespaceId);
+        }
+        if (source.DestNamespaceName != null) {
+            this.DestNamespaceName = new String(source.DestNamespaceName);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
+        if (source.UnitRuleId != null) {
+            this.UnitRuleId = new String(source.UnitRuleId);
+        }
+        if (source.Priority != null) {
+            this.Priority = new Long(source.Priority);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.UnitRuleTagList != null) {
+            this.UnitRuleTagList = new UnitRuleTag[source.UnitRuleTagList.length];
+            for (int i = 0; i < source.UnitRuleTagList.length; i++) {
+                this.UnitRuleTagList[i] = new UnitRuleTag(source.UnitRuleTagList[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

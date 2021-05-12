@@ -183,6 +183,38 @@ public class TextWaybill extends AbstractModel{
         this.WaybillNum = WaybillNum;
     }
 
+    public TextWaybill() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TextWaybill(TextWaybill source) {
+        if (source.RecName != null) {
+            this.RecName = new WaybillObj(source.RecName);
+        }
+        if (source.RecNum != null) {
+            this.RecNum = new WaybillObj(source.RecNum);
+        }
+        if (source.RecAddr != null) {
+            this.RecAddr = new WaybillObj(source.RecAddr);
+        }
+        if (source.SenderName != null) {
+            this.SenderName = new WaybillObj(source.SenderName);
+        }
+        if (source.SenderNum != null) {
+            this.SenderNum = new WaybillObj(source.SenderNum);
+        }
+        if (source.SenderAddr != null) {
+            this.SenderAddr = new WaybillObj(source.SenderAddr);
+        }
+        if (source.WaybillNum != null) {
+            this.WaybillNum = new WaybillObj(source.WaybillNum);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

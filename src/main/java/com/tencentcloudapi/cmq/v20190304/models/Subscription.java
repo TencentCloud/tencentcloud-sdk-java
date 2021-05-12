@@ -378,6 +378,59 @@ filterType = 2表示用户使用 bindingKey 过滤。
         this.NotifyContentFormat = NotifyContentFormat;
     }
 
+    public Subscription() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Subscription(Subscription source) {
+        if (source.SubscriptionName != null) {
+            this.SubscriptionName = new String(source.SubscriptionName);
+        }
+        if (source.SubscriptionId != null) {
+            this.SubscriptionId = new String(source.SubscriptionId);
+        }
+        if (source.TopicOwner != null) {
+            this.TopicOwner = new Long(source.TopicOwner);
+        }
+        if (source.MsgCount != null) {
+            this.MsgCount = new Long(source.MsgCount);
+        }
+        if (source.LastModifyTime != null) {
+            this.LastModifyTime = new Long(source.LastModifyTime);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new Long(source.CreateTime);
+        }
+        if (source.BindingKey != null) {
+            this.BindingKey = new String[source.BindingKey.length];
+            for (int i = 0; i < source.BindingKey.length; i++) {
+                this.BindingKey[i] = new String(source.BindingKey[i]);
+            }
+        }
+        if (source.Endpoint != null) {
+            this.Endpoint = new String(source.Endpoint);
+        }
+        if (source.FilterTags != null) {
+            this.FilterTags = new String[source.FilterTags.length];
+            for (int i = 0; i < source.FilterTags.length; i++) {
+                this.FilterTags[i] = new String(source.FilterTags[i]);
+            }
+        }
+        if (source.Protocol != null) {
+            this.Protocol = new String(source.Protocol);
+        }
+        if (source.NotifyStrategy != null) {
+            this.NotifyStrategy = new String(source.NotifyStrategy);
+        }
+        if (source.NotifyContentFormat != null) {
+            this.NotifyContentFormat = new String(source.NotifyContentFormat);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

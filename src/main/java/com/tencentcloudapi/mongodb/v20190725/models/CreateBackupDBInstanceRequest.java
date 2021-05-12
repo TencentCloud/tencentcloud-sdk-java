@@ -91,6 +91,26 @@ public class CreateBackupDBInstanceRequest extends AbstractModel{
         this.BackupRemark = BackupRemark;
     }
 
+    public CreateBackupDBInstanceRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateBackupDBInstanceRequest(CreateBackupDBInstanceRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.BackupMethod != null) {
+            this.BackupMethod = new Long(source.BackupMethod);
+        }
+        if (source.BackupRemark != null) {
+            this.BackupRemark = new String(source.BackupRemark);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

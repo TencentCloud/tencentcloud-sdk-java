@@ -206,6 +206,41 @@ public class SecretMetadata extends AbstractModel{
         this.KmsKeyType = KmsKeyType;
     }
 
+    public SecretMetadata() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SecretMetadata(SecretMetadata source) {
+        if (source.SecretName != null) {
+            this.SecretName = new String(source.SecretName);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.KmsKeyId != null) {
+            this.KmsKeyId = new String(source.KmsKeyId);
+        }
+        if (source.CreateUin != null) {
+            this.CreateUin = new Long(source.CreateUin);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.DeleteTime != null) {
+            this.DeleteTime = new Long(source.DeleteTime);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new Long(source.CreateTime);
+        }
+        if (source.KmsKeyType != null) {
+            this.KmsKeyType = new String(source.KmsKeyType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

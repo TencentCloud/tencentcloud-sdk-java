@@ -68,6 +68,26 @@ public class ApiDefinitionDescr extends AbstractModel{
         this.Properties = Properties;
     }
 
+    public ApiDefinitionDescr() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ApiDefinitionDescr(ApiDefinitionDescr source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Properties != null) {
+            this.Properties = new PropertyField[source.Properties.length];
+            for (int i = 0; i < source.Properties.length; i++) {
+                this.Properties[i] = new PropertyField(source.Properties[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

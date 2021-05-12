@@ -183,6 +183,41 @@ public class SyncDetailInfo extends AbstractModel{
         this.StepInfo = StepInfo;
     }
 
+    public SyncDetailInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SyncDetailInfo(SyncDetailInfo source) {
+        if (source.StepAll != null) {
+            this.StepAll = new Long(source.StepAll);
+        }
+        if (source.StepNow != null) {
+            this.StepNow = new Long(source.StepNow);
+        }
+        if (source.Progress != null) {
+            this.Progress = new String(source.Progress);
+        }
+        if (source.CurrentStepProgress != null) {
+            this.CurrentStepProgress = new String(source.CurrentStepProgress);
+        }
+        if (source.MasterSlaveDistance != null) {
+            this.MasterSlaveDistance = new Long(source.MasterSlaveDistance);
+        }
+        if (source.SecondsBehindMaster != null) {
+            this.SecondsBehindMaster = new Long(source.SecondsBehindMaster);
+        }
+        if (source.StepInfo != null) {
+            this.StepInfo = new SyncStepDetailInfo[source.StepInfo.length];
+            for (int i = 0; i < source.StepInfo.length; i++) {
+                this.StepInfo[i] = new SyncStepDetailInfo(source.StepInfo[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

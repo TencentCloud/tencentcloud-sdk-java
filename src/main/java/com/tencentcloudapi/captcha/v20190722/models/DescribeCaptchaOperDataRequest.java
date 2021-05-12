@@ -91,6 +91,26 @@ public class DescribeCaptchaOperDataRequest extends AbstractModel{
         this.Type = Type;
     }
 
+    public DescribeCaptchaOperDataRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeCaptchaOperDataRequest(DescribeCaptchaOperDataRequest source) {
+        if (source.CaptchaAppId != null) {
+            this.CaptchaAppId = new Long(source.CaptchaAppId);
+        }
+        if (source.Start != null) {
+            this.Start = new Long(source.Start);
+        }
+        if (source.Type != null) {
+            this.Type = new Long(source.Type);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -45,6 +45,23 @@ public class AiRecognitionTaskObjectResultOutput extends AbstractModel{
         this.ResultSet = ResultSet;
     }
 
+    public AiRecognitionTaskObjectResultOutput() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AiRecognitionTaskObjectResultOutput(AiRecognitionTaskObjectResultOutput source) {
+        if (source.ResultSet != null) {
+            this.ResultSet = new AiRecognitionTaskObjectResultItem[source.ResultSet.length];
+            for (int i = 0; i < source.ResultSet.length; i++) {
+                this.ResultSet[i] = new AiRecognitionTaskObjectResultItem(source.ResultSet[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -22,6 +22,17 @@ import java.util.HashMap;
 
 public class DescribeAccountAttributesRequest extends AbstractModel{
 
+    public DescribeAccountAttributesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeAccountAttributesRequest(DescribeAccountAttributesRequest source) {
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

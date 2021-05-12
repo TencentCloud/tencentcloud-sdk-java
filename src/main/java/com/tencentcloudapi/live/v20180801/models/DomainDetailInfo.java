@@ -147,6 +147,32 @@ Oversea: 表示国外数据。
         this.Request = Request;
     }
 
+    public DomainDetailInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DomainDetailInfo(DomainDetailInfo source) {
+        if (source.MainlandOrOversea != null) {
+            this.MainlandOrOversea = new String(source.MainlandOrOversea);
+        }
+        if (source.Bandwidth != null) {
+            this.Bandwidth = new Float(source.Bandwidth);
+        }
+        if (source.Flux != null) {
+            this.Flux = new Float(source.Flux);
+        }
+        if (source.Online != null) {
+            this.Online = new Long(source.Online);
+        }
+        if (source.Request != null) {
+            this.Request = new Long(source.Request);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

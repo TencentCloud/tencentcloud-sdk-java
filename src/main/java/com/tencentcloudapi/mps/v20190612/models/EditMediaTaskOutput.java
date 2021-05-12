@@ -68,6 +68,23 @@ public class EditMediaTaskOutput extends AbstractModel{
         this.Path = Path;
     }
 
+    public EditMediaTaskOutput() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public EditMediaTaskOutput(EditMediaTaskOutput source) {
+        if (source.OutputStorage != null) {
+            this.OutputStorage = new TaskOutputStorage(source.OutputStorage);
+        }
+        if (source.Path != null) {
+            this.Path = new String(source.Path);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

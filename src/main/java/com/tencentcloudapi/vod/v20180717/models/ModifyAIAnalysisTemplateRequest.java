@@ -229,6 +229,44 @@ public class ModifyAIAnalysisTemplateRequest extends AbstractModel{
         this.SubAppId = SubAppId;
     }
 
+    public ModifyAIAnalysisTemplateRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyAIAnalysisTemplateRequest(ModifyAIAnalysisTemplateRequest source) {
+        if (source.Definition != null) {
+            this.Definition = new Long(source.Definition);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Comment != null) {
+            this.Comment = new String(source.Comment);
+        }
+        if (source.ClassificationConfigure != null) {
+            this.ClassificationConfigure = new ClassificationConfigureInfoForUpdate(source.ClassificationConfigure);
+        }
+        if (source.TagConfigure != null) {
+            this.TagConfigure = new TagConfigureInfoForUpdate(source.TagConfigure);
+        }
+        if (source.CoverConfigure != null) {
+            this.CoverConfigure = new CoverConfigureInfoForUpdate(source.CoverConfigure);
+        }
+        if (source.FrameTagConfigure != null) {
+            this.FrameTagConfigure = new FrameTagConfigureInfoForUpdate(source.FrameTagConfigure);
+        }
+        if (source.HighlightConfigure != null) {
+            this.HighlightConfigure = new HighlightsConfigureInfoForUpdate(source.HighlightConfigure);
+        }
+        if (source.SubAppId != null) {
+            this.SubAppId = new Long(source.SubAppId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

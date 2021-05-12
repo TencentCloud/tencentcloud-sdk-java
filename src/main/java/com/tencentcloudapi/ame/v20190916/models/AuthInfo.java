@@ -216,6 +216,41 @@ public class AuthInfo extends AbstractModel{
         this.Id = Id;
     }
 
+    public AuthInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AuthInfo(AuthInfo source) {
+        if (source.SubjectName != null) {
+            this.SubjectName = new String(source.SubjectName);
+        }
+        if (source.ProjectName != null) {
+            this.ProjectName = new String(source.ProjectName);
+        }
+        if (source.AppScene != null) {
+            this.AppScene = new Long(source.AppScene);
+        }
+        if (source.AppRegion != null) {
+            this.AppRegion = new Long(source.AppRegion);
+        }
+        if (source.AuthPeriod != null) {
+            this.AuthPeriod = new Long(source.AuthPeriod);
+        }
+        if (source.Commercialization != null) {
+            this.Commercialization = new Long(source.Commercialization);
+        }
+        if (source.Platform != null) {
+            this.Platform = new Long(source.Platform);
+        }
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

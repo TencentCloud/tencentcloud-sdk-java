@@ -68,6 +68,23 @@ public class SaveGameArchiveRequest extends AbstractModel{
         this.GameId = GameId;
     }
 
+    public SaveGameArchiveRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SaveGameArchiveRequest(SaveGameArchiveRequest source) {
+        if (source.UserId != null) {
+            this.UserId = new String(source.UserId);
+        }
+        if (source.GameId != null) {
+            this.GameId = new String(source.GameId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -262,6 +262,47 @@ public class ActionHistory extends AbstractModel{
         this.Status = Status;
     }
 
+    public ActionHistory() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ActionHistory(ActionHistory source) {
+        if (source.DeviceName != null) {
+            this.DeviceName = new String(source.DeviceName);
+        }
+        if (source.ActionId != null) {
+            this.ActionId = new String(source.ActionId);
+        }
+        if (source.ActionName != null) {
+            this.ActionName = new String(source.ActionName);
+        }
+        if (source.ReqTime != null) {
+            this.ReqTime = new Long(source.ReqTime);
+        }
+        if (source.RspTime != null) {
+            this.RspTime = new Long(source.RspTime);
+        }
+        if (source.InputParams != null) {
+            this.InputParams = new String(source.InputParams);
+        }
+        if (source.OutputParams != null) {
+            this.OutputParams = new String(source.OutputParams);
+        }
+        if (source.Calling != null) {
+            this.Calling = new String(source.Calling);
+        }
+        if (source.ClientToken != null) {
+            this.ClientToken = new String(source.ClientToken);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

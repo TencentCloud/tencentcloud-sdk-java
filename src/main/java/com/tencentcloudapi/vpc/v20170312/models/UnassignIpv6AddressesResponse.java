@@ -45,6 +45,20 @@ public class UnassignIpv6AddressesResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public UnassignIpv6AddressesResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UnassignIpv6AddressesResponse(UnassignIpv6AddressesResponse source) {
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

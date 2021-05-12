@@ -344,6 +344,59 @@ public class DefendAttackLog extends AbstractModel{
         this.HttpContent = HttpContent;
     }
 
+    public DefendAttackLog() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DefendAttackLog(DefendAttackLog source) {
+        if (source.Id != null) {
+            this.Id = new Long(source.Id);
+        }
+        if (source.Uuid != null) {
+            this.Uuid = new String(source.Uuid);
+        }
+        if (source.SrcIp != null) {
+            this.SrcIp = new String(source.SrcIp);
+        }
+        if (source.SrcPort != null) {
+            this.SrcPort = new Long(source.SrcPort);
+        }
+        if (source.HttpMethod != null) {
+            this.HttpMethod = new String(source.HttpMethod);
+        }
+        if (source.HttpCgi != null) {
+            this.HttpCgi = new String(source.HttpCgi);
+        }
+        if (source.HttpParam != null) {
+            this.HttpParam = new String(source.HttpParam);
+        }
+        if (source.VulType != null) {
+            this.VulType = new String(source.VulType);
+        }
+        if (source.CreatedAt != null) {
+            this.CreatedAt = new String(source.CreatedAt);
+        }
+        if (source.MachineIp != null) {
+            this.MachineIp = new String(source.MachineIp);
+        }
+        if (source.MachineName != null) {
+            this.MachineName = new String(source.MachineName);
+        }
+        if (source.DstIp != null) {
+            this.DstIp = new String(source.DstIp);
+        }
+        if (source.DstPort != null) {
+            this.DstPort = new Long(source.DstPort);
+        }
+        if (source.HttpContent != null) {
+            this.HttpContent = new String(source.HttpContent);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

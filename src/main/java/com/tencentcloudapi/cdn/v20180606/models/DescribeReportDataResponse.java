@@ -91,6 +91,32 @@ public class DescribeReportDataResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeReportDataResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeReportDataResponse(DescribeReportDataResponse source) {
+        if (source.DomainReport != null) {
+            this.DomainReport = new ReportData[source.DomainReport.length];
+            for (int i = 0; i < source.DomainReport.length; i++) {
+                this.DomainReport[i] = new ReportData(source.DomainReport[i]);
+            }
+        }
+        if (source.ProjectReport != null) {
+            this.ProjectReport = new ReportData[source.ProjectReport.length];
+            for (int i = 0; i < source.ProjectReport.length; i++) {
+                this.ProjectReport[i] = new ReportData(source.ProjectReport[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

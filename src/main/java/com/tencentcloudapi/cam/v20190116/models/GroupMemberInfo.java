@@ -275,6 +275,50 @@ public class GroupMemberInfo extends AbstractModel{
         this.IsReceiverOwner = IsReceiverOwner;
     }
 
+    public GroupMemberInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GroupMemberInfo(GroupMemberInfo source) {
+        if (source.Uid != null) {
+            this.Uid = new Long(source.Uid);
+        }
+        if (source.Uin != null) {
+            this.Uin = new Long(source.Uin);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.PhoneNum != null) {
+            this.PhoneNum = new String(source.PhoneNum);
+        }
+        if (source.CountryCode != null) {
+            this.CountryCode = new String(source.CountryCode);
+        }
+        if (source.PhoneFlag != null) {
+            this.PhoneFlag = new Long(source.PhoneFlag);
+        }
+        if (source.Email != null) {
+            this.Email = new String(source.Email);
+        }
+        if (source.EmailFlag != null) {
+            this.EmailFlag = new Long(source.EmailFlag);
+        }
+        if (source.UserType != null) {
+            this.UserType = new Long(source.UserType);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.IsReceiverOwner != null) {
+            this.IsReceiverOwner = new Long(source.IsReceiverOwner);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -45,6 +45,23 @@ public class BatchDeleteRepositoryPersonalRequest extends AbstractModel{
         this.RepoNames = RepoNames;
     }
 
+    public BatchDeleteRepositoryPersonalRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public BatchDeleteRepositoryPersonalRequest(BatchDeleteRepositoryPersonalRequest source) {
+        if (source.RepoNames != null) {
+            this.RepoNames = new String[source.RepoNames.length];
+            for (int i = 0; i < source.RepoNames.length; i++) {
+                this.RepoNames[i] = new String(source.RepoNames[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

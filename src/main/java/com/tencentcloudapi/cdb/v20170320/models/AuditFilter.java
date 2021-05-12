@@ -126,6 +126,26 @@ NEQ – 不等于；
         this.Value = Value;
     }
 
+    public AuditFilter() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AuditFilter(AuditFilter source) {
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.Compare != null) {
+            this.Compare = new String(source.Compare);
+        }
+        if (source.Value != null) {
+            this.Value = new String(source.Value);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -185,6 +185,38 @@ Stable：消费分组中各个消费者已经加入，处于稳定状态
         this.Group = Group;
     }
 
+    public GroupInfoResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GroupInfoResponse(GroupInfoResponse source) {
+        if (source.ErrorCode != null) {
+            this.ErrorCode = new String(source.ErrorCode);
+        }
+        if (source.State != null) {
+            this.State = new String(source.State);
+        }
+        if (source.ProtocolType != null) {
+            this.ProtocolType = new String(source.ProtocolType);
+        }
+        if (source.Protocol != null) {
+            this.Protocol = new String(source.Protocol);
+        }
+        if (source.Members != null) {
+            this.Members = new GroupInfoMember[source.Members.length];
+            for (int i = 0; i < source.Members.length; i++) {
+                this.Members[i] = new GroupInfoMember(source.Members[i]);
+            }
+        }
+        if (source.Group != null) {
+            this.Group = new String(source.Group);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

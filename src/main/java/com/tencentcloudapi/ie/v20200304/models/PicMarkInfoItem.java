@@ -206,6 +206,41 @@ public class PicMarkInfoItem extends AbstractModel{
         this.EndTime = EndTime;
     }
 
+    public PicMarkInfoItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PicMarkInfoItem(PicMarkInfoItem source) {
+        if (source.PosX != null) {
+            this.PosX = new Long(source.PosX);
+        }
+        if (source.PosY != null) {
+            this.PosY = new Long(source.PosY);
+        }
+        if (source.Path != null) {
+            this.Path = new String(source.Path);
+        }
+        if (source.CosInfo != null) {
+            this.CosInfo = new CosInfo(source.CosInfo);
+        }
+        if (source.Width != null) {
+            this.Width = new Long(source.Width);
+        }
+        if (source.Height != null) {
+            this.Height = new Long(source.Height);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new Long(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new Long(source.EndTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

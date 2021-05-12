@@ -114,6 +114,35 @@ public class JobFlowResource extends AbstractModel{
         this.DiskGroups = DiskGroups;
     }
 
+    public JobFlowResource() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public JobFlowResource(JobFlowResource source) {
+        if (source.Spec != null) {
+            this.Spec = new String(source.Spec);
+        }
+        if (source.InstanceType != null) {
+            this.InstanceType = new String(source.InstanceType);
+        }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
+        if (source.DiskGroups != null) {
+            this.DiskGroups = new DiskGroup[source.DiskGroups.length];
+            for (int i = 0; i < source.DiskGroups.length; i++) {
+                this.DiskGroups[i] = new DiskGroup(source.DiskGroups[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

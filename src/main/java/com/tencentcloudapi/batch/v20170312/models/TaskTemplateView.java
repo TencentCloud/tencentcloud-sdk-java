@@ -165,6 +165,38 @@ public class TaskTemplateView extends AbstractModel{
         this.Tags = Tags;
     }
 
+    public TaskTemplateView() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TaskTemplateView(TaskTemplateView source) {
+        if (source.TaskTemplateId != null) {
+            this.TaskTemplateId = new String(source.TaskTemplateId);
+        }
+        if (source.TaskTemplateName != null) {
+            this.TaskTemplateName = new String(source.TaskTemplateName);
+        }
+        if (source.TaskTemplateDescription != null) {
+            this.TaskTemplateDescription = new String(source.TaskTemplateDescription);
+        }
+        if (source.TaskTemplateInfo != null) {
+            this.TaskTemplateInfo = new Task(source.TaskTemplateInfo);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

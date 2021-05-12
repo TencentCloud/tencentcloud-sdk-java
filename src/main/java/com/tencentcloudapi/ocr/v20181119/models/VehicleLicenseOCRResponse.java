@@ -187,6 +187,38 @@ WARN_DRIVER_LICENSE_PS_CARD ps告警
         this.RequestId = RequestId;
     }
 
+    public VehicleLicenseOCRResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public VehicleLicenseOCRResponse(VehicleLicenseOCRResponse source) {
+        if (source.FrontInfo != null) {
+            this.FrontInfo = new TextVehicleFront(source.FrontInfo);
+        }
+        if (source.BackInfo != null) {
+            this.BackInfo = new TextVehicleBack(source.BackInfo);
+        }
+        if (source.RecognizeWarnCode != null) {
+            this.RecognizeWarnCode = new Long[source.RecognizeWarnCode.length];
+            for (int i = 0; i < source.RecognizeWarnCode.length; i++) {
+                this.RecognizeWarnCode[i] = new Long(source.RecognizeWarnCode[i]);
+            }
+        }
+        if (source.RecognizeWarnMsg != null) {
+            this.RecognizeWarnMsg = new String[source.RecognizeWarnMsg.length];
+            for (int i = 0; i < source.RecognizeWarnMsg.length; i++) {
+                this.RecognizeWarnMsg[i] = new String(source.RecognizeWarnMsg[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

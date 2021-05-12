@@ -45,6 +45,20 @@ public class RecognizeEffectiveFlowRequest extends AbstractModel{
         this.BusinessSecurityData = BusinessSecurityData;
     }
 
+    public RecognizeEffectiveFlowRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RecognizeEffectiveFlowRequest(RecognizeEffectiveFlowRequest source) {
+        if (source.BusinessSecurityData != null) {
+            this.BusinessSecurityData = new InputRecognizeEffectiveFlow(source.BusinessSecurityData);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

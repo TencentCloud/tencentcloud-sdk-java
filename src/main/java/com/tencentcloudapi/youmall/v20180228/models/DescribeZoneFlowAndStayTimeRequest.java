@@ -114,6 +114,29 @@ public class DescribeZoneFlowAndStayTimeRequest extends AbstractModel{
         this.EndDate = EndDate;
     }
 
+    public DescribeZoneFlowAndStayTimeRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeZoneFlowAndStayTimeRequest(DescribeZoneFlowAndStayTimeRequest source) {
+        if (source.CompanyId != null) {
+            this.CompanyId = new String(source.CompanyId);
+        }
+        if (source.ShopId != null) {
+            this.ShopId = new Long(source.ShopId);
+        }
+        if (source.StartDate != null) {
+            this.StartDate = new String(source.StartDate);
+        }
+        if (source.EndDate != null) {
+            this.EndDate = new String(source.EndDate);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

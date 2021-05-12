@@ -193,6 +193,41 @@ search-by-name - String - 是否必填：否 -（过滤条件）按照名称检�
         this.Filters = Filters;
     }
 
+    public DescribeTrainingJobsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeTrainingJobsRequest(DescribeTrainingJobsRequest source) {
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.CreationTimeAfter != null) {
+            this.CreationTimeAfter = new String(source.CreationTimeAfter);
+        }
+        if (source.CreationTimeBefore != null) {
+            this.CreationTimeBefore = new String(source.CreationTimeBefore);
+        }
+        if (source.NameContains != null) {
+            this.NameContains = new String(source.NameContains);
+        }
+        if (source.StatusEquals != null) {
+            this.StatusEquals = new String(source.StatusEquals);
+        }
+        if (source.Filters != null) {
+            this.Filters = new Filter[source.Filters.length];
+            for (int i = 0; i < source.Filters.length; i++) {
+                this.Filters[i] = new Filter(source.Filters[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

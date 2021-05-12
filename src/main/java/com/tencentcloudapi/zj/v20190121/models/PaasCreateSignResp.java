@@ -45,6 +45,20 @@ public class PaasCreateSignResp extends AbstractModel{
         this.SignId = SignId;
     }
 
+    public PaasCreateSignResp() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PaasCreateSignResp(PaasCreateSignResp source) {
+        if (source.SignId != null) {
+            this.SignId = new Long(source.SignId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

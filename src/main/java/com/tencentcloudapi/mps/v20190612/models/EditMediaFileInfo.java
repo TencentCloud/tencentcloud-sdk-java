@@ -91,6 +91,26 @@ public class EditMediaFileInfo extends AbstractModel{
         this.EndTimeOffset = EndTimeOffset;
     }
 
+    public EditMediaFileInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public EditMediaFileInfo(EditMediaFileInfo source) {
+        if (source.InputInfo != null) {
+            this.InputInfo = new MediaInputInfo(source.InputInfo);
+        }
+        if (source.StartTimeOffset != null) {
+            this.StartTimeOffset = new Float(source.StartTimeOffset);
+        }
+        if (source.EndTimeOffset != null) {
+            this.EndTimeOffset = new Float(source.EndTimeOffset);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

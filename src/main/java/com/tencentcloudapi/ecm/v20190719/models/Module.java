@@ -341,6 +341,62 @@ DELETEFAILED：删除失败
         this.DefaultBandwidthIn = DefaultBandwidthIn;
     }
 
+    public Module() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Module(Module source) {
+        if (source.ModuleId != null) {
+            this.ModuleId = new String(source.ModuleId);
+        }
+        if (source.ModuleName != null) {
+            this.ModuleName = new String(source.ModuleName);
+        }
+        if (source.ModuleState != null) {
+            this.ModuleState = new String(source.ModuleState);
+        }
+        if (source.DefaultSystemDiskSize != null) {
+            this.DefaultSystemDiskSize = new Long(source.DefaultSystemDiskSize);
+        }
+        if (source.DefaultDataDiskSize != null) {
+            this.DefaultDataDiskSize = new Long(source.DefaultDataDiskSize);
+        }
+        if (source.InstanceTypeConfig != null) {
+            this.InstanceTypeConfig = new InstanceTypeConfig(source.InstanceTypeConfig);
+        }
+        if (source.DefaultImage != null) {
+            this.DefaultImage = new Image(source.DefaultImage);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.DefaultBandwidth != null) {
+            this.DefaultBandwidth = new Long(source.DefaultBandwidth);
+        }
+        if (source.TagSet != null) {
+            this.TagSet = new Tag[source.TagSet.length];
+            for (int i = 0; i < source.TagSet.length; i++) {
+                this.TagSet[i] = new Tag(source.TagSet[i]);
+            }
+        }
+        if (source.CloseIpDirect != null) {
+            this.CloseIpDirect = new Long(source.CloseIpDirect);
+        }
+        if (source.SecurityGroupIds != null) {
+            this.SecurityGroupIds = new String[source.SecurityGroupIds.length];
+            for (int i = 0; i < source.SecurityGroupIds.length; i++) {
+                this.SecurityGroupIds[i] = new String(source.SecurityGroupIds[i]);
+            }
+        }
+        if (source.DefaultBandwidthIn != null) {
+            this.DefaultBandwidthIn = new Long(source.DefaultBandwidthIn);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

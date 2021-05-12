@@ -206,6 +206,41 @@ public class Outbound extends AbstractModel{
         this.Id = Id;
     }
 
+    public Outbound() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Outbound(Outbound source) {
+        if (source.Action != null) {
+            this.Action = new String(source.Action);
+        }
+        if (source.AddressModule != null) {
+            this.AddressModule = new String(source.AddressModule);
+        }
+        if (source.CidrIp != null) {
+            this.CidrIp = new String(source.CidrIp);
+        }
+        if (source.Desc != null) {
+            this.Desc = new String(source.Desc);
+        }
+        if (source.IpProtocol != null) {
+            this.IpProtocol = new String(source.IpProtocol);
+        }
+        if (source.PortRange != null) {
+            this.PortRange = new String(source.PortRange);
+        }
+        if (source.ServiceModule != null) {
+            this.ServiceModule = new String(source.ServiceModule);
+        }
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

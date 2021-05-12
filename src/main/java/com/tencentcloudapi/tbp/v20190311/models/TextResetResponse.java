@@ -241,6 +241,44 @@ public class TextResetResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public TextResetResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TextResetResponse(TextResetResponse source) {
+        if (source.DialogStatus != null) {
+            this.DialogStatus = new String(source.DialogStatus);
+        }
+        if (source.BotName != null) {
+            this.BotName = new String(source.BotName);
+        }
+        if (source.IntentName != null) {
+            this.IntentName = new String(source.IntentName);
+        }
+        if (source.SlotInfoList != null) {
+            this.SlotInfoList = new SlotInfo[source.SlotInfoList.length];
+            for (int i = 0; i < source.SlotInfoList.length; i++) {
+                this.SlotInfoList[i] = new SlotInfo(source.SlotInfoList[i]);
+            }
+        }
+        if (source.InputText != null) {
+            this.InputText = new String(source.InputText);
+        }
+        if (source.SessionAttributes != null) {
+            this.SessionAttributes = new String(source.SessionAttributes);
+        }
+        if (source.ResponseText != null) {
+            this.ResponseText = new String(source.ResponseText);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -91,6 +91,29 @@ public class DescribePlatformsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribePlatformsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribePlatformsResponse(DescribePlatformsResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.PlatformInfoSet != null) {
+            this.PlatformInfoSet = new PlatformInfo[source.PlatformInfoSet.length];
+            for (int i = 0; i < source.PlatformInfoSet.length; i++) {
+                this.PlatformInfoSet[i] = new PlatformInfo(source.PlatformInfoSet[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

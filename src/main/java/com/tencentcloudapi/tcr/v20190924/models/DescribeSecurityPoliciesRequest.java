@@ -45,6 +45,20 @@ public class DescribeSecurityPoliciesRequest extends AbstractModel{
         this.RegistryId = RegistryId;
     }
 
+    public DescribeSecurityPoliciesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeSecurityPoliciesRequest(DescribeSecurityPoliciesRequest source) {
+        if (source.RegistryId != null) {
+            this.RegistryId = new String(source.RegistryId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

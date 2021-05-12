@@ -68,6 +68,23 @@ public class PutUserPermissionsBoundaryRequest extends AbstractModel{
         this.PolicyId = PolicyId;
     }
 
+    public PutUserPermissionsBoundaryRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PutUserPermissionsBoundaryRequest(PutUserPermissionsBoundaryRequest source) {
+        if (source.TargetUin != null) {
+            this.TargetUin = new Long(source.TargetUin);
+        }
+        if (source.PolicyId != null) {
+            this.PolicyId = new Long(source.PolicyId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

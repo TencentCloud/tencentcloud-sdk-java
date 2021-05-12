@@ -129,6 +129,29 @@ public class SlotInfo extends AbstractModel{
         this.Duration = Duration;
     }
 
+    public SlotInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SlotInfo(SlotInfo source) {
+        if (source.Id != null) {
+            this.Id = new Long(source.Id);
+        }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.DefaultMaterialId != null) {
+            this.DefaultMaterialId = new String(source.DefaultMaterialId);
+        }
+        if (source.Duration != null) {
+            this.Duration = new Float(source.Duration);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

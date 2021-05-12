@@ -149,6 +149,29 @@ public class CreateCertificateRequest extends AbstractModel{
         this.CertificateKey = CertificateKey;
     }
 
+    public CreateCertificateRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateCertificateRequest(CreateCertificateRequest source) {
+        if (source.CertificateType != null) {
+            this.CertificateType = new Long(source.CertificateType);
+        }
+        if (source.CertificateContent != null) {
+            this.CertificateContent = new String(source.CertificateContent);
+        }
+        if (source.CertificateAlias != null) {
+            this.CertificateAlias = new String(source.CertificateAlias);
+        }
+        if (source.CertificateKey != null) {
+            this.CertificateKey = new String(source.CertificateKey);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

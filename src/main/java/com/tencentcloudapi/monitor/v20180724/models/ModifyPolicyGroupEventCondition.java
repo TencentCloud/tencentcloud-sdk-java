@@ -114,6 +114,29 @@ public class ModifyPolicyGroupEventCondition extends AbstractModel{
         this.RuleId = RuleId;
     }
 
+    public ModifyPolicyGroupEventCondition() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyPolicyGroupEventCondition(ModifyPolicyGroupEventCondition source) {
+        if (source.EventId != null) {
+            this.EventId = new Long(source.EventId);
+        }
+        if (source.AlarmNotifyType != null) {
+            this.AlarmNotifyType = new Long(source.AlarmNotifyType);
+        }
+        if (source.AlarmNotifyPeriod != null) {
+            this.AlarmNotifyPeriod = new Long(source.AlarmNotifyPeriod);
+        }
+        if (source.RuleId != null) {
+            this.RuleId = new Long(source.RuleId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

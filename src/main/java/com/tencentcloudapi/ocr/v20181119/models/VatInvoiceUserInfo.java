@@ -114,6 +114,29 @@ public class VatInvoiceUserInfo extends AbstractModel{
         this.FinancialAccount = FinancialAccount;
     }
 
+    public VatInvoiceUserInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public VatInvoiceUserInfo(VatInvoiceUserInfo source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.TaxId != null) {
+            this.TaxId = new String(source.TaxId);
+        }
+        if (source.AddrTel != null) {
+            this.AddrTel = new String(source.AddrTel);
+        }
+        if (source.FinancialAccount != null) {
+            this.FinancialAccount = new String(source.FinancialAccount);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -229,6 +229,44 @@ public class L7HealthConfig extends AbstractModel{
         this.Url = Url;
     }
 
+    public L7HealthConfig() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public L7HealthConfig(L7HealthConfig source) {
+        if (source.Protocol != null) {
+            this.Protocol = new String(source.Protocol);
+        }
+        if (source.Domain != null) {
+            this.Domain = new String(source.Domain);
+        }
+        if (source.Enable != null) {
+            this.Enable = new Long(source.Enable);
+        }
+        if (source.Interval != null) {
+            this.Interval = new Long(source.Interval);
+        }
+        if (source.KickNum != null) {
+            this.KickNum = new Long(source.KickNum);
+        }
+        if (source.AliveNum != null) {
+            this.AliveNum = new Long(source.AliveNum);
+        }
+        if (source.Method != null) {
+            this.Method = new String(source.Method);
+        }
+        if (source.StatusCode != null) {
+            this.StatusCode = new Long(source.StatusCode);
+        }
+        if (source.Url != null) {
+            this.Url = new String(source.Url);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

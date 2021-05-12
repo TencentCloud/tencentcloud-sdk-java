@@ -190,6 +190,44 @@ public class TranscodeTaskInput extends AbstractModel{
         this.EndTimeOffset = EndTimeOffset;
     }
 
+    public TranscodeTaskInput() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TranscodeTaskInput(TranscodeTaskInput source) {
+        if (source.Definition != null) {
+            this.Definition = new Long(source.Definition);
+        }
+        if (source.WatermarkSet != null) {
+            this.WatermarkSet = new WatermarkInput[source.WatermarkSet.length];
+            for (int i = 0; i < source.WatermarkSet.length; i++) {
+                this.WatermarkSet[i] = new WatermarkInput(source.WatermarkSet[i]);
+            }
+        }
+        if (source.MosaicSet != null) {
+            this.MosaicSet = new MosaicInput[source.MosaicSet.length];
+            for (int i = 0; i < source.MosaicSet.length; i++) {
+                this.MosaicSet[i] = new MosaicInput(source.MosaicSet[i]);
+            }
+        }
+        if (source.HeadTailSet != null) {
+            this.HeadTailSet = new HeadTailTaskInput[source.HeadTailSet.length];
+            for (int i = 0; i < source.HeadTailSet.length; i++) {
+                this.HeadTailSet[i] = new HeadTailTaskInput(source.HeadTailSet[i]);
+            }
+        }
+        if (source.StartTimeOffset != null) {
+            this.StartTimeOffset = new Float(source.StartTimeOffset);
+        }
+        if (source.EndTimeOffset != null) {
+            this.EndTimeOffset = new Float(source.EndTimeOffset);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -91,6 +91,26 @@ public class TextEduPaper extends AbstractModel{
         this.Itemcoord = Itemcoord;
     }
 
+    public TextEduPaper() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TextEduPaper(TextEduPaper source) {
+        if (source.Item != null) {
+            this.Item = new String(source.Item);
+        }
+        if (source.DetectedText != null) {
+            this.DetectedText = new String(source.DetectedText);
+        }
+        if (source.Itemcoord != null) {
+            this.Itemcoord = new ItemCoord(source.Itemcoord);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

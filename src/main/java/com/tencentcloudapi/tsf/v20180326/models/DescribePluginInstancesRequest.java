@@ -160,6 +160,35 @@ public class DescribePluginInstancesRequest extends AbstractModel{
         this.SearchWord = SearchWord;
     }
 
+    public DescribePluginInstancesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribePluginInstancesRequest(DescribePluginInstancesRequest source) {
+        if (source.ScopeValue != null) {
+            this.ScopeValue = new String(source.ScopeValue);
+        }
+        if (source.Bound != null) {
+            this.Bound = new Boolean(source.Bound);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.SearchWord != null) {
+            this.SearchWord = new String(source.SearchWord);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

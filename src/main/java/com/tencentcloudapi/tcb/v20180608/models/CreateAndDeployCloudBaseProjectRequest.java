@@ -321,6 +321,62 @@ public class CreateAndDeployCloudBaseProjectRequest extends AbstractModel{
         this.RepoUrl = RepoUrl;
     }
 
+    public CreateAndDeployCloudBaseProjectRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateAndDeployCloudBaseProjectRequest(CreateAndDeployCloudBaseProjectRequest source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Source != null) {
+            this.Source = new CodeSource(source.Source);
+        }
+        if (source.EnvId != null) {
+            this.EnvId = new String(source.EnvId);
+        }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.Parameters != null) {
+            this.Parameters = new KVPair[source.Parameters.length];
+            for (int i = 0; i < source.Parameters.length; i++) {
+                this.Parameters[i] = new KVPair(source.Parameters[i]);
+            }
+        }
+        if (source.EnvAlias != null) {
+            this.EnvAlias = new String(source.EnvAlias);
+        }
+        if (source.RcJson != null) {
+            this.RcJson = new String(source.RcJson);
+        }
+        if (source.AddonConfig != null) {
+            this.AddonConfig = new String(source.AddonConfig);
+        }
+        if (source.Tags != null) {
+            this.Tags = new String[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new String(source.Tags[i]);
+            }
+        }
+        if (source.NetworkConfig != null) {
+            this.NetworkConfig = new String(source.NetworkConfig);
+        }
+        if (source.FreeQuota != null) {
+            this.FreeQuota = new String(source.FreeQuota);
+        }
+        if (source.AutoDeployOnCodeChange != null) {
+            this.AutoDeployOnCodeChange = new Boolean(source.AutoDeployOnCodeChange);
+        }
+        if (source.RepoUrl != null) {
+            this.RepoUrl = new String(source.RepoUrl);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

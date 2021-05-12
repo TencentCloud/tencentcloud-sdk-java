@@ -114,6 +114,38 @@ public class ListAlgorithmsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public ListAlgorithmsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ListAlgorithmsResponse(ListAlgorithmsResponse source) {
+        if (source.SymmetricAlgorithms != null) {
+            this.SymmetricAlgorithms = new AlgorithmInfo[source.SymmetricAlgorithms.length];
+            for (int i = 0; i < source.SymmetricAlgorithms.length; i++) {
+                this.SymmetricAlgorithms[i] = new AlgorithmInfo(source.SymmetricAlgorithms[i]);
+            }
+        }
+        if (source.AsymmetricAlgorithms != null) {
+            this.AsymmetricAlgorithms = new AlgorithmInfo[source.AsymmetricAlgorithms.length];
+            for (int i = 0; i < source.AsymmetricAlgorithms.length; i++) {
+                this.AsymmetricAlgorithms[i] = new AlgorithmInfo(source.AsymmetricAlgorithms[i]);
+            }
+        }
+        if (source.AsymmetricSignVerifyAlgorithms != null) {
+            this.AsymmetricSignVerifyAlgorithms = new AlgorithmInfo[source.AsymmetricSignVerifyAlgorithms.length];
+            for (int i = 0; i < source.AsymmetricSignVerifyAlgorithms.length; i++) {
+                this.AsymmetricSignVerifyAlgorithms[i] = new AlgorithmInfo(source.AsymmetricSignVerifyAlgorithms[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

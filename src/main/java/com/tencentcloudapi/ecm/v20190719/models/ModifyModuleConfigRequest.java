@@ -91,6 +91,26 @@ public class ModifyModuleConfigRequest extends AbstractModel{
         this.DefaultDataDiskSize = DefaultDataDiskSize;
     }
 
+    public ModifyModuleConfigRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyModuleConfigRequest(ModifyModuleConfigRequest source) {
+        if (source.ModuleId != null) {
+            this.ModuleId = new String(source.ModuleId);
+        }
+        if (source.InstanceType != null) {
+            this.InstanceType = new String(source.InstanceType);
+        }
+        if (source.DefaultDataDiskSize != null) {
+            this.DefaultDataDiskSize = new Long(source.DefaultDataDiskSize);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

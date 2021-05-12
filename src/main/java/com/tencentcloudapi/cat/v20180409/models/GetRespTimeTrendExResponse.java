@@ -68,6 +68,26 @@ public class GetRespTimeTrendExResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public GetRespTimeTrendExResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GetRespTimeTrendExResponse(GetRespTimeTrendExResponse source) {
+        if (source.DataPoints != null) {
+            this.DataPoints = new DataPointMetric[source.DataPoints.length];
+            for (int i = 0; i < source.DataPoints.length; i++) {
+                this.DataPoints[i] = new DataPointMetric(source.DataPoints[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

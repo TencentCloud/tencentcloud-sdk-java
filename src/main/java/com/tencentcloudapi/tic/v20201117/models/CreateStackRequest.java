@@ -114,6 +114,29 @@ public class CreateStackRequest extends AbstractModel{
         this.Description = Description;
     }
 
+    public CreateStackRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateStackRequest(CreateStackRequest source) {
+        if (source.StackName != null) {
+            this.StackName = new String(source.StackName);
+        }
+        if (source.StackRegion != null) {
+            this.StackRegion = new String(source.StackRegion);
+        }
+        if (source.TemplateUrl != null) {
+            this.TemplateUrl = new String(source.TemplateUrl);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

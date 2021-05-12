@@ -45,6 +45,20 @@ public class VerifyResultRequest extends AbstractModel{
         this.ResultId = ResultId;
     }
 
+    public VerifyResultRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public VerifyResultRequest(VerifyResultRequest source) {
+        if (source.ResultId != null) {
+            this.ResultId = new Long(source.ResultId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -137,6 +137,35 @@ public class AvailableZone extends AbstractModel{
         this.ZoneName = ZoneName;
     }
 
+    public AvailableZone() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AvailableZone(AvailableZone source) {
+        if (source.Zone != null) {
+            this.Zone = new String(source.Zone);
+        }
+        if (source.ZoneId != null) {
+            this.ZoneId = new Long(source.ZoneId);
+        }
+        if (source.ZoneCnName != null) {
+            this.ZoneCnName = new String(source.ZoneCnName);
+        }
+        if (source.Types != null) {
+            this.Types = new AvailableType[source.Types.length];
+            for (int i = 0; i < source.Types.length; i++) {
+                this.Types[i] = new AvailableType(source.Types[i]);
+            }
+        }
+        if (source.ZoneName != null) {
+            this.ZoneName = new String(source.ZoneName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

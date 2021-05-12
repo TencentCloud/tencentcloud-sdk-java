@@ -167,6 +167,32 @@ public class SplitMediaTaskInput extends AbstractModel{
         this.OutputConfig = OutputConfig;
     }
 
+    public SplitMediaTaskInput() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SplitMediaTaskInput(SplitMediaTaskInput source) {
+        if (source.FileId != null) {
+            this.FileId = new String(source.FileId);
+        }
+        if (source.StartTimeOffset != null) {
+            this.StartTimeOffset = new Float(source.StartTimeOffset);
+        }
+        if (source.EndTimeOffset != null) {
+            this.EndTimeOffset = new Float(source.EndTimeOffset);
+        }
+        if (source.ProcedureName != null) {
+            this.ProcedureName = new String(source.ProcedureName);
+        }
+        if (source.OutputConfig != null) {
+            this.OutputConfig = new SplitMediaOutputConfig(source.OutputConfig);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

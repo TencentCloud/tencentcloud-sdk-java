@@ -68,6 +68,23 @@ public class SetForwardAuthRequest extends AbstractModel{
         this.QueueType = QueueType;
     }
 
+    public SetForwardAuthRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SetForwardAuthRequest(SetForwardAuthRequest source) {
+        if (source.Skey != null) {
+            this.Skey = new String(source.Skey);
+        }
+        if (source.QueueType != null) {
+            this.QueueType = new Long(source.QueueType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

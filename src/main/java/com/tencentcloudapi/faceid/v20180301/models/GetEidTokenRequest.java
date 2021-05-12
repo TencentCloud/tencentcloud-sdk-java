@@ -142,6 +142,32 @@ public class GetEidTokenRequest extends AbstractModel{
         this.Config = Config;
     }
 
+    public GetEidTokenRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GetEidTokenRequest(GetEidTokenRequest source) {
+        if (source.MerchantId != null) {
+            this.MerchantId = new String(source.MerchantId);
+        }
+        if (source.IdCard != null) {
+            this.IdCard = new String(source.IdCard);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Extra != null) {
+            this.Extra = new String(source.Extra);
+        }
+        if (source.Config != null) {
+            this.Config = new GetEidTokenConfig(source.Config);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -229,6 +229,47 @@ public class DescribeNatRuleOverviewResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeNatRuleOverviewResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeNatRuleOverviewResponse(DescribeNatRuleOverviewResponse source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.InstanceName != null) {
+            this.InstanceName = new String(source.InstanceName);
+        }
+        if (source.EipList != null) {
+            this.EipList = new String[source.EipList.length];
+            for (int i = 0; i < source.EipList.length; i++) {
+                this.EipList[i] = new String(source.EipList[i]);
+            }
+        }
+        if (source.DnatNum != null) {
+            this.DnatNum = new Long(source.DnatNum);
+        }
+        if (source.TotalNum != null) {
+            this.TotalNum = new Long(source.TotalNum);
+        }
+        if (source.RemainNum != null) {
+            this.RemainNum = new Long(source.RemainNum);
+        }
+        if (source.BlockNum != null) {
+            this.BlockNum = new Long(source.BlockNum);
+        }
+        if (source.EnableNum != null) {
+            this.EnableNum = new Long(source.EnableNum);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -68,6 +68,23 @@ public class DeleteDDoSPolicyRequest extends AbstractModel{
         this.PolicyId = PolicyId;
     }
 
+    public DeleteDDoSPolicyRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteDDoSPolicyRequest(DeleteDDoSPolicyRequest source) {
+        if (source.Business != null) {
+            this.Business = new String(source.Business);
+        }
+        if (source.PolicyId != null) {
+            this.PolicyId = new String(source.PolicyId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -91,6 +91,26 @@ public class StartMatchingResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public StartMatchingResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public StartMatchingResponse(StartMatchingResponse source) {
+        if (source.ErrCode != null) {
+            this.ErrCode = new Long(source.ErrCode);
+        }
+        if (source.MatchTicketId != null) {
+            this.MatchTicketId = new String(source.MatchTicketId);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

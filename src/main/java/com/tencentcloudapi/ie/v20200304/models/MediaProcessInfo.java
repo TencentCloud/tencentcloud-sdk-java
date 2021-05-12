@@ -134,6 +134,29 @@ MediaRecognition: 媒体识别。
         this.MediaRecognitionInfo = MediaRecognitionInfo;
     }
 
+    public MediaProcessInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MediaProcessInfo(MediaProcessInfo source) {
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.MediaCuttingInfo != null) {
+            this.MediaCuttingInfo = new MediaCuttingInfo(source.MediaCuttingInfo);
+        }
+        if (source.MediaJoiningInfo != null) {
+            this.MediaJoiningInfo = new MediaJoiningInfo(source.MediaJoiningInfo);
+        }
+        if (source.MediaRecognitionInfo != null) {
+            this.MediaRecognitionInfo = new MediaRecognitionInfo(source.MediaRecognitionInfo);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

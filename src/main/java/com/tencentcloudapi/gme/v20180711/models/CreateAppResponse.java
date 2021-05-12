@@ -206,6 +206,41 @@ public class CreateAppResponse extends AbstractModel{
         this.VoiceFilterConf = VoiceFilterConf;
     }
 
+    public CreateAppResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateAppResponse(CreateAppResponse source) {
+        if (source.BizId != null) {
+            this.BizId = new Long(source.BizId);
+        }
+        if (source.AppName != null) {
+            this.AppName = new String(source.AppName);
+        }
+        if (source.ProjectId != null) {
+            this.ProjectId = new Long(source.ProjectId);
+        }
+        if (source.SecretKey != null) {
+            this.SecretKey = new String(source.SecretKey);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new Long(source.CreateTime);
+        }
+        if (source.RealtimeSpeechConf != null) {
+            this.RealtimeSpeechConf = new RealtimeSpeechConf(source.RealtimeSpeechConf);
+        }
+        if (source.VoiceMessageConf != null) {
+            this.VoiceMessageConf = new VoiceMessageConf(source.VoiceMessageConf);
+        }
+        if (source.VoiceFilterConf != null) {
+            this.VoiceFilterConf = new VoiceFilterConf(source.VoiceFilterConf);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

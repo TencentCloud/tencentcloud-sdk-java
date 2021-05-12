@@ -183,6 +183,38 @@ public class QueryBlackListDataRequest extends AbstractModel{
         this.BlackValue = BlackValue;
     }
 
+    public QueryBlackListDataRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public QueryBlackListDataRequest(QueryBlackListDataRequest source) {
+        if (source.Module != null) {
+            this.Module = new String(source.Module);
+        }
+        if (source.Operation != null) {
+            this.Operation = new String(source.Operation);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.StartBizDate != null) {
+            this.StartBizDate = new String(source.StartBizDate);
+        }
+        if (source.EndBizDate != null) {
+            this.EndBizDate = new String(source.EndBizDate);
+        }
+        if (source.BlackValue != null) {
+            this.BlackValue = new String(source.BlackValue);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -277,6 +277,50 @@ public class MatchTicket extends AbstractModel{
         this.EndTime = EndTime;
     }
 
+    public MatchTicket() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MatchTicket(MatchTicket source) {
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
+        if (source.MatchCode != null) {
+            this.MatchCode = new String(source.MatchCode);
+        }
+        if (source.MatchResult != null) {
+            this.MatchResult = new String(source.MatchResult);
+        }
+        if (source.MatchType != null) {
+            this.MatchType = new String(source.MatchType);
+        }
+        if (source.Players != null) {
+            this.Players = new Player[source.Players.length];
+            for (int i = 0; i < source.Players.length; i++) {
+                this.Players[i] = new Player(source.Players[i]);
+            }
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.StatusMessage != null) {
+            this.StatusMessage = new String(source.StatusMessage);
+        }
+        if (source.StatusReason != null) {
+            this.StatusReason = new String(source.StatusReason);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

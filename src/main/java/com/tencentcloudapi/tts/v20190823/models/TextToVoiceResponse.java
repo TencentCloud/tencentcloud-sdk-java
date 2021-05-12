@@ -91,6 +91,26 @@ public class TextToVoiceResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public TextToVoiceResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TextToVoiceResponse(TextToVoiceResponse source) {
+        if (source.Audio != null) {
+            this.Audio = new String(source.Audio);
+        }
+        if (source.SessionId != null) {
+            this.SessionId = new String(source.SessionId);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -147,6 +147,32 @@ public class UnbindClientElem extends AbstractModel{
         this.ActionTime = ActionTime;
     }
 
+    public UnbindClientElem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UnbindClientElem(UnbindClientElem source) {
+        if (source.Uin != null) {
+            this.Uin = new String(source.Uin);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.ApplyTime != null) {
+            this.ApplyTime = new String(source.ApplyTime);
+        }
+        if (source.ActionTime != null) {
+            this.ActionTime = new String(source.ActionTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

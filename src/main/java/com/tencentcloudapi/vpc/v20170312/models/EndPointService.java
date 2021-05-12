@@ -262,6 +262,50 @@ public class EndPointService extends AbstractModel{
         this.CreateTime = CreateTime;
     }
 
+    public EndPointService() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public EndPointService(EndPointService source) {
+        if (source.EndPointServiceId != null) {
+            this.EndPointServiceId = new String(source.EndPointServiceId);
+        }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.ServiceOwner != null) {
+            this.ServiceOwner = new String(source.ServiceOwner);
+        }
+        if (source.ServiceName != null) {
+            this.ServiceName = new String(source.ServiceName);
+        }
+        if (source.ServiceVip != null) {
+            this.ServiceVip = new String(source.ServiceVip);
+        }
+        if (source.ServiceInstanceId != null) {
+            this.ServiceInstanceId = new String(source.ServiceInstanceId);
+        }
+        if (source.AutoAcceptFlag != null) {
+            this.AutoAcceptFlag = new Boolean(source.AutoAcceptFlag);
+        }
+        if (source.EndPointCount != null) {
+            this.EndPointCount = new Long(source.EndPointCount);
+        }
+        if (source.EndPointSet != null) {
+            this.EndPointSet = new EndPoint[source.EndPointSet.length];
+            for (int i = 0; i < source.EndPointSet.length; i++) {
+                this.EndPointSet[i] = new EndPoint(source.EndPointSet[i]);
+            }
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

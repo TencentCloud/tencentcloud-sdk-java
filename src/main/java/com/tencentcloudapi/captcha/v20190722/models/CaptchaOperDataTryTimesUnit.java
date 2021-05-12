@@ -91,6 +91,29 @@ public class CaptchaOperDataTryTimesUnit extends AbstractModel{
         this.MarketCntPerPass = MarketCntPerPass;
     }
 
+    public CaptchaOperDataTryTimesUnit() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CaptchaOperDataTryTimesUnit(CaptchaOperDataTryTimesUnit source) {
+        if (source.DateKey != null) {
+            this.DateKey = new String(source.DateKey);
+        }
+        if (source.CntPerPass != null) {
+            this.CntPerPass = new Float[source.CntPerPass.length];
+            for (int i = 0; i < source.CntPerPass.length; i++) {
+                this.CntPerPass[i] = new Float(source.CntPerPass[i]);
+            }
+        }
+        if (source.MarketCntPerPass != null) {
+            this.MarketCntPerPass = new Float(source.MarketCntPerPass);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

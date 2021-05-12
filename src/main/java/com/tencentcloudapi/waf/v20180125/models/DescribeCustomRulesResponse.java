@@ -91,6 +91,29 @@ public class DescribeCustomRulesResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeCustomRulesResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeCustomRulesResponse(DescribeCustomRulesResponse source) {
+        if (source.RuleList != null) {
+            this.RuleList = new DescribeCustomRulesRspRuleListItem[source.RuleList.length];
+            for (int i = 0; i < source.RuleList.length; i++) {
+                this.RuleList[i] = new DescribeCustomRulesRspRuleListItem(source.RuleList[i]);
+            }
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new String(source.TotalCount);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

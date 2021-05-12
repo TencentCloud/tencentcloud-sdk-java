@@ -45,6 +45,23 @@ public class MediaAnimatedGraphicsInfo extends AbstractModel{
         this.AnimatedGraphicsSet = AnimatedGraphicsSet;
     }
 
+    public MediaAnimatedGraphicsInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MediaAnimatedGraphicsInfo(MediaAnimatedGraphicsInfo source) {
+        if (source.AnimatedGraphicsSet != null) {
+            this.AnimatedGraphicsSet = new MediaAnimatedGraphicsItem[source.AnimatedGraphicsSet.length];
+            for (int i = 0; i < source.AnimatedGraphicsSet.length; i++) {
+                this.AnimatedGraphicsSet[i] = new MediaAnimatedGraphicsItem(source.AnimatedGraphicsSet[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

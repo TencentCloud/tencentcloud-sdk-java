@@ -137,6 +137,32 @@ public class UsualPlace extends AbstractModel{
         this.CityId = CityId;
     }
 
+    public UsualPlace() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UsualPlace(UsualPlace source) {
+        if (source.Id != null) {
+            this.Id = new Long(source.Id);
+        }
+        if (source.Uuid != null) {
+            this.Uuid = new String(source.Uuid);
+        }
+        if (source.CountryId != null) {
+            this.CountryId = new Long(source.CountryId);
+        }
+        if (source.ProvinceId != null) {
+            this.ProvinceId = new Long(source.ProvinceId);
+        }
+        if (source.CityId != null) {
+            this.CityId = new Long(source.CityId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

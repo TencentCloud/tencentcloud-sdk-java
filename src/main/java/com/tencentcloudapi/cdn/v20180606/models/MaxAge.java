@@ -88,6 +88,26 @@ off：关闭
         this.MaxAgeRules = MaxAgeRules;
     }
 
+    public MaxAge() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MaxAge(MaxAge source) {
+        if (source.Switch != null) {
+            this.Switch = new String(source.Switch);
+        }
+        if (source.MaxAgeRules != null) {
+            this.MaxAgeRules = new MaxAgeRule[source.MaxAgeRules.length];
+            for (int i = 0; i < source.MaxAgeRules.length; i++) {
+                this.MaxAgeRules[i] = new MaxAgeRule(source.MaxAgeRules[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -198,6 +198,38 @@ public class ServiceDiscoveryItem extends AbstractModel{
         this.Yaml = Yaml;
     }
 
+    public ServiceDiscoveryItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ServiceDiscoveryItem(ServiceDiscoveryItem source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Namespace != null) {
+            this.Namespace = new String(source.Namespace);
+        }
+        if (source.Kind != null) {
+            this.Kind = new String(source.Kind);
+        }
+        if (source.NamespaceSelector != null) {
+            this.NamespaceSelector = new String(source.NamespaceSelector);
+        }
+        if (source.Selector != null) {
+            this.Selector = new String(source.Selector);
+        }
+        if (source.Endpoints != null) {
+            this.Endpoints = new String(source.Endpoints);
+        }
+        if (source.Yaml != null) {
+            this.Yaml = new String(source.Yaml);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

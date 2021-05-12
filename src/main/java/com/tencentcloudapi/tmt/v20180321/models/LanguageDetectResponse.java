@@ -73,6 +73,23 @@ public class LanguageDetectResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public LanguageDetectResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public LanguageDetectResponse(LanguageDetectResponse source) {
+        if (source.Lang != null) {
+            this.Lang = new String(source.Lang);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

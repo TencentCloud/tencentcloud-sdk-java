@@ -106,6 +106,29 @@ public class ServerStateItem extends AbstractModel{
         this.DiskInfos = DiskInfos;
     }
 
+    public ServerStateItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ServerStateItem(ServerStateItem source) {
+        if (source.ServerState != null) {
+            this.ServerState = new Long(source.ServerState);
+        }
+        if (source.ServerIp != null) {
+            this.ServerIp = new String(source.ServerIp);
+        }
+        if (source.DiskInfos != null) {
+            this.DiskInfos = new DiskInfo[source.DiskInfos.length];
+            for (int i = 0; i < source.DiskInfos.length; i++) {
+                this.DiskInfos[i] = new DiskInfo(source.DiskInfos[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

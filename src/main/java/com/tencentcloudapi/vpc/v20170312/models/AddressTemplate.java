@@ -114,6 +114,32 @@ public class AddressTemplate extends AbstractModel{
         this.CreatedTime = CreatedTime;
     }
 
+    public AddressTemplate() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AddressTemplate(AddressTemplate source) {
+        if (source.AddressTemplateName != null) {
+            this.AddressTemplateName = new String(source.AddressTemplateName);
+        }
+        if (source.AddressTemplateId != null) {
+            this.AddressTemplateId = new String(source.AddressTemplateId);
+        }
+        if (source.AddressSet != null) {
+            this.AddressSet = new String[source.AddressSet.length];
+            for (int i = 0; i < source.AddressSet.length; i++) {
+                this.AddressSet[i] = new String(source.AddressSet[i]);
+            }
+        }
+        if (source.CreatedTime != null) {
+            this.CreatedTime = new String(source.CreatedTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

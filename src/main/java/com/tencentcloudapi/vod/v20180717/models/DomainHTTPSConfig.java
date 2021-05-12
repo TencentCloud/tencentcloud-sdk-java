@@ -50,6 +50,20 @@ public class DomainHTTPSConfig extends AbstractModel{
         this.CertExpireTime = CertExpireTime;
     }
 
+    public DomainHTTPSConfig() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DomainHTTPSConfig(DomainHTTPSConfig source) {
+        if (source.CertExpireTime != null) {
+            this.CertExpireTime = new String(source.CertExpireTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

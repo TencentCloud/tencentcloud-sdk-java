@@ -190,6 +190,35 @@ public class EventHistoryItem extends AbstractModel{
         this.Data = Data;
     }
 
+    public EventHistoryItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public EventHistoryItem(EventHistoryItem source) {
+        if (source.TimeStamp != null) {
+            this.TimeStamp = new Long(source.TimeStamp);
+        }
+        if (source.ProductId != null) {
+            this.ProductId = new String(source.ProductId);
+        }
+        if (source.DeviceName != null) {
+            this.DeviceName = new String(source.DeviceName);
+        }
+        if (source.EventId != null) {
+            this.EventId = new String(source.EventId);
+        }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.Data != null) {
+            this.Data = new String(source.Data);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

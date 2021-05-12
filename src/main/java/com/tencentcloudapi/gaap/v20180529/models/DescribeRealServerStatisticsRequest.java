@@ -183,6 +183,38 @@ public class DescribeRealServerStatisticsRequest extends AbstractModel{
         this.Granularity = Granularity;
     }
 
+    public DescribeRealServerStatisticsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeRealServerStatisticsRequest(DescribeRealServerStatisticsRequest source) {
+        if (source.RealServerId != null) {
+            this.RealServerId = new String(source.RealServerId);
+        }
+        if (source.ListenerId != null) {
+            this.ListenerId = new String(source.ListenerId);
+        }
+        if (source.RuleId != null) {
+            this.RuleId = new String(source.RuleId);
+        }
+        if (source.WithinTime != null) {
+            this.WithinTime = new Long(source.WithinTime);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+        if (source.Granularity != null) {
+            this.Granularity = new Long(source.Granularity);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

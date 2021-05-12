@@ -68,6 +68,26 @@ public class DescribeSmsSignListResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeSmsSignListResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeSmsSignListResponse(DescribeSmsSignListResponse source) {
+        if (source.DescribeSignListStatusSet != null) {
+            this.DescribeSignListStatusSet = new DescribeSignListStatus[source.DescribeSignListStatusSet.length];
+            for (int i = 0; i < source.DescribeSignListStatusSet.length; i++) {
+                this.DescribeSignListStatusSet[i] = new DescribeSignListStatus(source.DescribeSignListStatusSet[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

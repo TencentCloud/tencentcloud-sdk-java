@@ -91,6 +91,26 @@ public class ModifyResourceRenewFlagRequest extends AbstractModel{
         this.RenewFlag = RenewFlag;
     }
 
+    public ModifyResourceRenewFlagRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyResourceRenewFlagRequest(ModifyResourceRenewFlagRequest source) {
+        if (source.Business != null) {
+            this.Business = new String(source.Business);
+        }
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
+        if (source.RenewFlag != null) {
+            this.RenewFlag = new Long(source.RenewFlag);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

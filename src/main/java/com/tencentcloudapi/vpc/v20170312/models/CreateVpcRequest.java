@@ -160,6 +160,41 @@ public class CreateVpcRequest extends AbstractModel{
         this.Tags = Tags;
     }
 
+    public CreateVpcRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateVpcRequest(CreateVpcRequest source) {
+        if (source.VpcName != null) {
+            this.VpcName = new String(source.VpcName);
+        }
+        if (source.CidrBlock != null) {
+            this.CidrBlock = new String(source.CidrBlock);
+        }
+        if (source.EnableMulticast != null) {
+            this.EnableMulticast = new String(source.EnableMulticast);
+        }
+        if (source.DnsServers != null) {
+            this.DnsServers = new String[source.DnsServers.length];
+            for (int i = 0; i < source.DnsServers.length; i++) {
+                this.DnsServers[i] = new String(source.DnsServers[i]);
+            }
+        }
+        if (source.DomainName != null) {
+            this.DomainName = new String(source.DomainName);
+        }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

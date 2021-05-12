@@ -91,6 +91,26 @@ public class DescribeImageRequest extends AbstractModel{
         this.CameraId = CameraId;
     }
 
+    public DescribeImageRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeImageRequest(DescribeImageRequest source) {
+        if (source.GroupCode != null) {
+            this.GroupCode = new String(source.GroupCode);
+        }
+        if (source.MallId != null) {
+            this.MallId = new Long(source.MallId);
+        }
+        if (source.CameraId != null) {
+            this.CameraId = new Long(source.CameraId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

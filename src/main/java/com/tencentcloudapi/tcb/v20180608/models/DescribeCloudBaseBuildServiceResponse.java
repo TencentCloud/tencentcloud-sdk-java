@@ -221,6 +221,47 @@ public class DescribeCloudBaseBuildServiceResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeCloudBaseBuildServiceResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeCloudBaseBuildServiceResponse(DescribeCloudBaseBuildServiceResponse source) {
+        if (source.UploadUrl != null) {
+            this.UploadUrl = new String(source.UploadUrl);
+        }
+        if (source.UploadHeaders != null) {
+            this.UploadHeaders = new KVPair[source.UploadHeaders.length];
+            for (int i = 0; i < source.UploadHeaders.length; i++) {
+                this.UploadHeaders[i] = new KVPair(source.UploadHeaders[i]);
+            }
+        }
+        if (source.PackageName != null) {
+            this.PackageName = new String(source.PackageName);
+        }
+        if (source.PackageVersion != null) {
+            this.PackageVersion = new String(source.PackageVersion);
+        }
+        if (source.DownloadUrl != null) {
+            this.DownloadUrl = new String(source.DownloadUrl);
+        }
+        if (source.DownloadHeaders != null) {
+            this.DownloadHeaders = new KVPair[source.DownloadHeaders.length];
+            for (int i = 0; i < source.DownloadHeaders.length; i++) {
+                this.DownloadHeaders[i] = new KVPair(source.DownloadHeaders[i]);
+            }
+        }
+        if (source.OutDate != null) {
+            this.OutDate = new Boolean(source.OutDate);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

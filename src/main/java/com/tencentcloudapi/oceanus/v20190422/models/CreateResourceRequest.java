@@ -137,6 +137,32 @@ public class CreateResourceRequest extends AbstractModel{
         this.ResourceConfigRemark = ResourceConfigRemark;
     }
 
+    public CreateResourceRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateResourceRequest(CreateResourceRequest source) {
+        if (source.ResourceLoc != null) {
+            this.ResourceLoc = new ResourceLoc(source.ResourceLoc);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.ResourceType != null) {
+            this.ResourceType = new Long(source.ResourceType);
+        }
+        if (source.Remark != null) {
+            this.Remark = new String(source.Remark);
+        }
+        if (source.ResourceConfigRemark != null) {
+            this.ResourceConfigRemark = new String(source.ResourceConfigRemark);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

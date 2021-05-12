@@ -297,6 +297,47 @@ public class DescribeSubProjectResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeSubProjectResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeSubProjectResponse(DescribeSubProjectResponse source) {
+        if (source.ProductInfo != null) {
+            this.ProductInfo = new ProductInfo(source.ProductInfo);
+        }
+        if (source.ActivityInfo != null) {
+            this.ActivityInfo = new ActivityInfo(source.ActivityInfo);
+        }
+        if (source.ShareTitle != null) {
+            this.ShareTitle = new String(source.ShareTitle);
+        }
+        if (source.ShareDesc != null) {
+            this.ShareDesc = new String(source.ShareDesc);
+        }
+        if (source.ShareImg != null) {
+            this.ShareImg = new String(source.ShareImg);
+        }
+        if (source.HasStrategy != null) {
+            this.HasStrategy = new Long(source.HasStrategy);
+        }
+        if (source.SubProjectStatus != null) {
+            this.SubProjectStatus = new String(source.SubProjectStatus);
+        }
+        if (source.ShareAppId != null) {
+            this.ShareAppId = new String(source.ShareAppId);
+        }
+        if (source.ShareWsId != null) {
+            this.ShareWsId = new String(source.ShareWsId);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

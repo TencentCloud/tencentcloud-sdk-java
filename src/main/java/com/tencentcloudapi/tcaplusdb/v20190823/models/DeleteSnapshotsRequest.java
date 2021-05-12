@@ -68,6 +68,26 @@ public class DeleteSnapshotsRequest extends AbstractModel{
         this.SelectedTables = SelectedTables;
     }
 
+    public DeleteSnapshotsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteSnapshotsRequest(DeleteSnapshotsRequest source) {
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
+        if (source.SelectedTables != null) {
+            this.SelectedTables = new SnapshotInfoNew[source.SelectedTables.length];
+            for (int i = 0; i < source.SelectedTables.length; i++) {
+                this.SelectedTables[i] = new SnapshotInfoNew(source.SelectedTables[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

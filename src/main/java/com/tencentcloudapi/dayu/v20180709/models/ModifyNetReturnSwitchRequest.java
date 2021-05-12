@@ -114,6 +114,29 @@ public class ModifyNetReturnSwitchRequest extends AbstractModel{
         this.Hour = Hour;
     }
 
+    public ModifyNetReturnSwitchRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyNetReturnSwitchRequest(ModifyNetReturnSwitchRequest source) {
+        if (source.Business != null) {
+            this.Business = new String(source.Business);
+        }
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.Hour != null) {
+            this.Hour = new Long(source.Hour);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

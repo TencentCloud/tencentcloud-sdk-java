@@ -91,6 +91,29 @@ public class DescribeScanResultListRequest extends AbstractModel{
         this.Limit = Limit;
     }
 
+    public DescribeScanResultListRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeScanResultListRequest(DescribeScanResultListRequest source) {
+        if (source.BizId != null) {
+            this.BizId = new Long(source.BizId);
+        }
+        if (source.TaskIdList != null) {
+            this.TaskIdList = new String[source.TaskIdList.length];
+            for (int i = 0; i < source.TaskIdList.length; i++) {
+                this.TaskIdList[i] = new String(source.TaskIdList[i]);
+            }
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -101,6 +101,29 @@ public class DescribePlayerSessionsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribePlayerSessionsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribePlayerSessionsResponse(DescribePlayerSessionsResponse source) {
+        if (source.PlayerSessions != null) {
+            this.PlayerSessions = new PlayerSession[source.PlayerSessions.length];
+            for (int i = 0; i < source.PlayerSessions.length; i++) {
+                this.PlayerSessions[i] = new PlayerSession(source.PlayerSessions[i]);
+            }
+        }
+        if (source.NextToken != null) {
+            this.NextToken = new String(source.NextToken);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

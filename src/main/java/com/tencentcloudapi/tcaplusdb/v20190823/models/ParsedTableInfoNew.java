@@ -526,6 +526,71 @@ public class ParsedTableInfoNew extends AbstractModel{
         this.SortRule = SortRule;
     }
 
+    public ParsedTableInfoNew() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ParsedTableInfoNew(ParsedTableInfoNew source) {
+        if (source.TableIdlType != null) {
+            this.TableIdlType = new String(source.TableIdlType);
+        }
+        if (source.TableInstanceId != null) {
+            this.TableInstanceId = new String(source.TableInstanceId);
+        }
+        if (source.TableName != null) {
+            this.TableName = new String(source.TableName);
+        }
+        if (source.TableType != null) {
+            this.TableType = new String(source.TableType);
+        }
+        if (source.KeyFields != null) {
+            this.KeyFields = new String(source.KeyFields);
+        }
+        if (source.OldKeyFields != null) {
+            this.OldKeyFields = new String(source.OldKeyFields);
+        }
+        if (source.ValueFields != null) {
+            this.ValueFields = new String(source.ValueFields);
+        }
+        if (source.OldValueFields != null) {
+            this.OldValueFields = new String(source.OldValueFields);
+        }
+        if (source.TableGroupId != null) {
+            this.TableGroupId = new String(source.TableGroupId);
+        }
+        if (source.SumKeyFieldSize != null) {
+            this.SumKeyFieldSize = new Long(source.SumKeyFieldSize);
+        }
+        if (source.SumValueFieldSize != null) {
+            this.SumValueFieldSize = new Long(source.SumValueFieldSize);
+        }
+        if (source.IndexKeySet != null) {
+            this.IndexKeySet = new String(source.IndexKeySet);
+        }
+        if (source.ShardingKeySet != null) {
+            this.ShardingKeySet = new String(source.ShardingKeySet);
+        }
+        if (source.TdrVersion != null) {
+            this.TdrVersion = new Long(source.TdrVersion);
+        }
+        if (source.Error != null) {
+            this.Error = new ErrorInfo(source.Error);
+        }
+        if (source.ListElementNum != null) {
+            this.ListElementNum = new Long(source.ListElementNum);
+        }
+        if (source.SortFieldNum != null) {
+            this.SortFieldNum = new Long(source.SortFieldNum);
+        }
+        if (source.SortRule != null) {
+            this.SortRule = new Long(source.SortRule);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

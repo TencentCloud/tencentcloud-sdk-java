@@ -275,6 +275,50 @@ public class DescribeDeviceInventoryRequest extends AbstractModel{
         this.DataDiskCount = DataDiskCount;
     }
 
+    public DescribeDeviceInventoryRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeDeviceInventoryRequest(DescribeDeviceInventoryRequest source) {
+        if (source.Zone != null) {
+            this.Zone = new String(source.Zone);
+        }
+        if (source.DeviceClassCode != null) {
+            this.DeviceClassCode = new String(source.DeviceClassCode);
+        }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.SubnetId != null) {
+            this.SubnetId = new String(source.SubnetId);
+        }
+        if (source.CpuId != null) {
+            this.CpuId = new Long(source.CpuId);
+        }
+        if (source.MemSize != null) {
+            this.MemSize = new Long(source.MemSize);
+        }
+        if (source.ContainRaidCard != null) {
+            this.ContainRaidCard = new Long(source.ContainRaidCard);
+        }
+        if (source.SystemDiskTypeId != null) {
+            this.SystemDiskTypeId = new Long(source.SystemDiskTypeId);
+        }
+        if (source.SystemDiskCount != null) {
+            this.SystemDiskCount = new Long(source.SystemDiskCount);
+        }
+        if (source.DataDiskTypeId != null) {
+            this.DataDiskTypeId = new Long(source.DataDiskTypeId);
+        }
+        if (source.DataDiskCount != null) {
+            this.DataDiskCount = new Long(source.DataDiskCount);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

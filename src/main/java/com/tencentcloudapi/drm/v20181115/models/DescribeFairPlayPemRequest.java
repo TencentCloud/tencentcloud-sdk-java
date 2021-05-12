@@ -73,6 +73,23 @@ public class DescribeFairPlayPemRequest extends AbstractModel{
         this.FairPlayPemId = FairPlayPemId;
     }
 
+    public DescribeFairPlayPemRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeFairPlayPemRequest(DescribeFairPlayPemRequest source) {
+        if (source.BailorId != null) {
+            this.BailorId = new Long(source.BailorId);
+        }
+        if (source.FairPlayPemId != null) {
+            this.FairPlayPemId = new Long(source.FairPlayPemId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

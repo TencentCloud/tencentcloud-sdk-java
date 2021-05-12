@@ -205,6 +205,38 @@ public class Candidate extends AbstractModel{
         this.PersonGroupInfos = PersonGroupInfos;
     }
 
+    public Candidate() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Candidate(Candidate source) {
+        if (source.PersonId != null) {
+            this.PersonId = new String(source.PersonId);
+        }
+        if (source.FaceId != null) {
+            this.FaceId = new String(source.FaceId);
+        }
+        if (source.Score != null) {
+            this.Score = new Float(source.Score);
+        }
+        if (source.PersonName != null) {
+            this.PersonName = new String(source.PersonName);
+        }
+        if (source.Gender != null) {
+            this.Gender = new Long(source.Gender);
+        }
+        if (source.PersonGroupInfos != null) {
+            this.PersonGroupInfos = new PersonGroupInfo[source.PersonGroupInfos.length];
+            for (int i = 0; i < source.PersonGroupInfos.length; i++) {
+                this.PersonGroupInfos[i] = new PersonGroupInfo(source.PersonGroupInfos[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

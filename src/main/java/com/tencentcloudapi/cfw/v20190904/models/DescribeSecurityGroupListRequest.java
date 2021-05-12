@@ -183,6 +183,38 @@ public class DescribeSecurityGroupListRequest extends AbstractModel{
         this.Filter = Filter;
     }
 
+    public DescribeSecurityGroupListRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeSecurityGroupListRequest(DescribeSecurityGroupListRequest source) {
+        if (source.Direction != null) {
+            this.Direction = new Long(source.Direction);
+        }
+        if (source.Area != null) {
+            this.Area = new String(source.Area);
+        }
+        if (source.SearchValue != null) {
+            this.SearchValue = new String(source.SearchValue);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.Filter != null) {
+            this.Filter = new Long(source.Filter);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

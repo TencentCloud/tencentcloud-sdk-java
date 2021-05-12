@@ -91,6 +91,29 @@ public class ShopDayTrafficInfo extends AbstractModel{
         this.GenderAgeTrafficDetailSet = GenderAgeTrafficDetailSet;
     }
 
+    public ShopDayTrafficInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ShopDayTrafficInfo(ShopDayTrafficInfo source) {
+        if (source.Date != null) {
+            this.Date = new String(source.Date);
+        }
+        if (source.DayTrafficTotalCount != null) {
+            this.DayTrafficTotalCount = new Long(source.DayTrafficTotalCount);
+        }
+        if (source.GenderAgeTrafficDetailSet != null) {
+            this.GenderAgeTrafficDetailSet = new GenderAgeTrafficDetail[source.GenderAgeTrafficDetailSet.length];
+            for (int i = 0; i < source.GenderAgeTrafficDetailSet.length; i++) {
+                this.GenderAgeTrafficDetailSet[i] = new GenderAgeTrafficDetail(source.GenderAgeTrafficDetailSet[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

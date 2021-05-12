@@ -68,6 +68,23 @@ public class DescribeDBInstanceGTIDResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeDBInstanceGTIDResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeDBInstanceGTIDResponse(DescribeDBInstanceGTIDResponse source) {
+        if (source.IsGTIDOpen != null) {
+            this.IsGTIDOpen = new Long(source.IsGTIDOpen);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

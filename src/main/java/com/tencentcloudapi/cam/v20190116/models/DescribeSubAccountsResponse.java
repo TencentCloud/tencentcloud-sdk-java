@@ -68,6 +68,26 @@ public class DescribeSubAccountsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeSubAccountsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeSubAccountsResponse(DescribeSubAccountsResponse source) {
+        if (source.SubAccounts != null) {
+            this.SubAccounts = new SubAccountUser[source.SubAccounts.length];
+            for (int i = 0; i < source.SubAccounts.length; i++) {
+                this.SubAccounts[i] = new SubAccountUser(source.SubAccounts[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

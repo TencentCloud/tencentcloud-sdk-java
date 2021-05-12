@@ -91,6 +91,29 @@ public class DescribeNatGatewaysResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeNatGatewaysResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeNatGatewaysResponse(DescribeNatGatewaysResponse source) {
+        if (source.NatGatewayInfoSet != null) {
+            this.NatGatewayInfoSet = new NatGatewayInfo[source.NatGatewayInfoSet.length];
+            for (int i = 0; i < source.NatGatewayInfoSet.length; i++) {
+                this.NatGatewayInfoSet[i] = new NatGatewayInfo(source.NatGatewayInfoSet[i]);
+            }
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

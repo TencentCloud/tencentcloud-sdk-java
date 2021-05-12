@@ -91,6 +91,29 @@ public class DescribeAIAnalysisTemplatesResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeAIAnalysisTemplatesResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeAIAnalysisTemplatesResponse(DescribeAIAnalysisTemplatesResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.AIAnalysisTemplateSet != null) {
+            this.AIAnalysisTemplateSet = new AIAnalysisTemplateItem[source.AIAnalysisTemplateSet.length];
+            for (int i = 0; i < source.AIAnalysisTemplateSet.length; i++) {
+                this.AIAnalysisTemplateSet[i] = new AIAnalysisTemplateItem(source.AIAnalysisTemplateSet[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

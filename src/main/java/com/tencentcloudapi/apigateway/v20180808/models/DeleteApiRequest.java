@@ -68,6 +68,23 @@ public class DeleteApiRequest extends AbstractModel{
         this.ApiId = ApiId;
     }
 
+    public DeleteApiRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteApiRequest(DeleteApiRequest source) {
+        if (source.ServiceId != null) {
+            this.ServiceId = new String(source.ServiceId);
+        }
+        if (source.ApiId != null) {
+            this.ApiId = new String(source.ApiId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

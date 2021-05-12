@@ -68,6 +68,23 @@ public class OtherMaterial extends AbstractModel{
         this.VodFileId = VodFileId;
     }
 
+    public OtherMaterial() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public OtherMaterial(OtherMaterial source) {
+        if (source.MaterialUrl != null) {
+            this.MaterialUrl = new String(source.MaterialUrl);
+        }
+        if (source.VodFileId != null) {
+            this.VodFileId = new String(source.VodFileId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

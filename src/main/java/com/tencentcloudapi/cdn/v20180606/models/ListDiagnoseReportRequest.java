@@ -68,6 +68,23 @@ public class ListDiagnoseReportRequest extends AbstractModel{
         this.DiagnoseLink = DiagnoseLink;
     }
 
+    public ListDiagnoseReportRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ListDiagnoseReportRequest(ListDiagnoseReportRequest source) {
+        if (source.KeyWords != null) {
+            this.KeyWords = new String(source.KeyWords);
+        }
+        if (source.DiagnoseLink != null) {
+            this.DiagnoseLink = new String(source.DiagnoseLink);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

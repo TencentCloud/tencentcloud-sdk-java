@@ -68,6 +68,23 @@ public class ModifyMusicOnShelvesRequest extends AbstractModel{
         this.AmeKey = AmeKey;
     }
 
+    public ModifyMusicOnShelvesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyMusicOnShelvesRequest(ModifyMusicOnShelvesRequest source) {
+        if (source.MusicDetailInfos != null) {
+            this.MusicDetailInfos = new MusicDetailInfo(source.MusicDetailInfos);
+        }
+        if (source.AmeKey != null) {
+            this.AmeKey = new String(source.AmeKey);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

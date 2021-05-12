@@ -91,6 +91,26 @@ public class MediaAudioStreamItem extends AbstractModel{
         this.Codec = Codec;
     }
 
+    public MediaAudioStreamItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MediaAudioStreamItem(MediaAudioStreamItem source) {
+        if (source.Bitrate != null) {
+            this.Bitrate = new Long(source.Bitrate);
+        }
+        if (source.SamplingRate != null) {
+            this.SamplingRate = new Long(source.SamplingRate);
+        }
+        if (source.Codec != null) {
+            this.Codec = new String(source.Codec);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

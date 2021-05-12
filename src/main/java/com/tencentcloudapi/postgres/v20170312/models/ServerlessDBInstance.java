@@ -442,6 +442,74 @@ public class ServerlessDBInstance extends AbstractModel{
         this.TagList = TagList;
     }
 
+    public ServerlessDBInstance() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ServerlessDBInstance(ServerlessDBInstance source) {
+        if (source.DBInstanceId != null) {
+            this.DBInstanceId = new String(source.DBInstanceId);
+        }
+        if (source.DBInstanceName != null) {
+            this.DBInstanceName = new String(source.DBInstanceName);
+        }
+        if (source.DBInstanceStatus != null) {
+            this.DBInstanceStatus = new String(source.DBInstanceStatus);
+        }
+        if (source.Region != null) {
+            this.Region = new String(source.Region);
+        }
+        if (source.Zone != null) {
+            this.Zone = new String(source.Zone);
+        }
+        if (source.ProjectId != null) {
+            this.ProjectId = new Long(source.ProjectId);
+        }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.SubnetId != null) {
+            this.SubnetId = new String(source.SubnetId);
+        }
+        if (source.DBCharset != null) {
+            this.DBCharset = new String(source.DBCharset);
+        }
+        if (source.DBVersion != null) {
+            this.DBVersion = new String(source.DBVersion);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.DBInstanceNetInfo != null) {
+            this.DBInstanceNetInfo = new ServerlessDBInstanceNetInfo[source.DBInstanceNetInfo.length];
+            for (int i = 0; i < source.DBInstanceNetInfo.length; i++) {
+                this.DBInstanceNetInfo[i] = new ServerlessDBInstanceNetInfo(source.DBInstanceNetInfo[i]);
+            }
+        }
+        if (source.DBAccountSet != null) {
+            this.DBAccountSet = new ServerlessDBAccount[source.DBAccountSet.length];
+            for (int i = 0; i < source.DBAccountSet.length; i++) {
+                this.DBAccountSet[i] = new ServerlessDBAccount(source.DBAccountSet[i]);
+            }
+        }
+        if (source.DBDatabaseList != null) {
+            this.DBDatabaseList = new String[source.DBDatabaseList.length];
+            for (int i = 0; i < source.DBDatabaseList.length; i++) {
+                this.DBDatabaseList[i] = new String(source.DBDatabaseList[i]);
+            }
+        }
+        if (source.TagList != null) {
+            this.TagList = new Tag[source.TagList.length];
+            for (int i = 0; i < source.TagList.length; i++) {
+                this.TagList[i] = new Tag(source.TagList[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

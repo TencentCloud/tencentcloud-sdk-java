@@ -183,6 +183,38 @@ public class DescribeDeviceActionHistoryRequest extends AbstractModel{
         this.Context = Context;
     }
 
+    public DescribeDeviceActionHistoryRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeDeviceActionHistoryRequest(DescribeDeviceActionHistoryRequest source) {
+        if (source.ProductId != null) {
+            this.ProductId = new String(source.ProductId);
+        }
+        if (source.DeviceName != null) {
+            this.DeviceName = new String(source.DeviceName);
+        }
+        if (source.MinTime != null) {
+            this.MinTime = new Long(source.MinTime);
+        }
+        if (source.MaxTime != null) {
+            this.MaxTime = new Long(source.MaxTime);
+        }
+        if (source.ActionId != null) {
+            this.ActionId = new String(source.ActionId);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.Context != null) {
+            this.Context = new String(source.Context);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

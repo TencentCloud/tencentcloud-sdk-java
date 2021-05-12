@@ -298,6 +298,56 @@ public class DistrictIspInfo extends AbstractModel{
         this.IspName = IspName;
     }
 
+    public DistrictIspInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DistrictIspInfo(DistrictIspInfo source) {
+        if (source.Domain != null) {
+            this.Domain = new String(source.Domain);
+        }
+        if (source.Protocol != null) {
+            this.Protocol = new String(source.Protocol);
+        }
+        if (source.IpProtocol != null) {
+            this.IpProtocol = new String(source.IpProtocol);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+        if (source.Interval != null) {
+            this.Interval = new Long(source.Interval);
+        }
+        if (source.Metric != null) {
+            this.Metric = new String(source.Metric);
+        }
+        if (source.District != null) {
+            this.District = new Long(source.District);
+        }
+        if (source.Isp != null) {
+            this.Isp = new Long(source.Isp);
+        }
+        if (source.DataPoints != null) {
+            this.DataPoints = new Long[source.DataPoints.length];
+            for (int i = 0; i < source.DataPoints.length; i++) {
+                this.DataPoints[i] = new Long(source.DataPoints[i]);
+            }
+        }
+        if (source.DistrictName != null) {
+            this.DistrictName = new String(source.DistrictName);
+        }
+        if (source.IspName != null) {
+            this.IspName = new String(source.IspName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

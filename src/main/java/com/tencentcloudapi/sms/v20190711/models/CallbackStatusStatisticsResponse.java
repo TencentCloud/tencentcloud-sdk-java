@@ -68,6 +68,23 @@ public class CallbackStatusStatisticsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public CallbackStatusStatisticsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CallbackStatusStatisticsResponse(CallbackStatusStatisticsResponse source) {
+        if (source.CallbackStatusStatistics != null) {
+            this.CallbackStatusStatistics = new CallbackStatusStatistics(source.CallbackStatusStatistics);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -91,6 +91,29 @@ public class TableOCRResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public TableOCRResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TableOCRResponse(TableOCRResponse source) {
+        if (source.TextDetections != null) {
+            this.TextDetections = new TextTable[source.TextDetections.length];
+            for (int i = 0; i < source.TextDetections.length; i++) {
+                this.TextDetections[i] = new TextTable(source.TextDetections[i]);
+            }
+        }
+        if (source.Data != null) {
+            this.Data = new String(source.Data);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

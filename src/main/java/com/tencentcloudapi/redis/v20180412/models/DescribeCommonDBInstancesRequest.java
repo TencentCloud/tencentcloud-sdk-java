@@ -321,6 +321,80 @@ public class DescribeCommonDBInstancesRequest extends AbstractModel{
         this.Offset = Offset;
     }
 
+    public DescribeCommonDBInstancesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeCommonDBInstancesRequest(DescribeCommonDBInstancesRequest source) {
+        if (source.VpcIds != null) {
+            this.VpcIds = new Long[source.VpcIds.length];
+            for (int i = 0; i < source.VpcIds.length; i++) {
+                this.VpcIds[i] = new Long(source.VpcIds[i]);
+            }
+        }
+        if (source.SubnetIds != null) {
+            this.SubnetIds = new Long[source.SubnetIds.length];
+            for (int i = 0; i < source.SubnetIds.length; i++) {
+                this.SubnetIds[i] = new Long(source.SubnetIds[i]);
+            }
+        }
+        if (source.PayMode != null) {
+            this.PayMode = new Long(source.PayMode);
+        }
+        if (source.InstanceIds != null) {
+            this.InstanceIds = new String[source.InstanceIds.length];
+            for (int i = 0; i < source.InstanceIds.length; i++) {
+                this.InstanceIds[i] = new String(source.InstanceIds[i]);
+            }
+        }
+        if (source.InstanceNames != null) {
+            this.InstanceNames = new String[source.InstanceNames.length];
+            for (int i = 0; i < source.InstanceNames.length; i++) {
+                this.InstanceNames[i] = new String(source.InstanceNames[i]);
+            }
+        }
+        if (source.Status != null) {
+            this.Status = new String[source.Status.length];
+            for (int i = 0; i < source.Status.length; i++) {
+                this.Status[i] = new String(source.Status[i]);
+            }
+        }
+        if (source.OrderBy != null) {
+            this.OrderBy = new String(source.OrderBy);
+        }
+        if (source.OrderByType != null) {
+            this.OrderByType = new String(source.OrderByType);
+        }
+        if (source.Vips != null) {
+            this.Vips = new String[source.Vips.length];
+            for (int i = 0; i < source.Vips.length; i++) {
+                this.Vips[i] = new String(source.Vips[i]);
+            }
+        }
+        if (source.UniqVpcIds != null) {
+            this.UniqVpcIds = new String[source.UniqVpcIds.length];
+            for (int i = 0; i < source.UniqVpcIds.length; i++) {
+                this.UniqVpcIds[i] = new String(source.UniqVpcIds[i]);
+            }
+        }
+        if (source.UniqSubnetIds != null) {
+            this.UniqSubnetIds = new String[source.UniqSubnetIds.length];
+            for (int i = 0; i < source.UniqSubnetIds.length; i++) {
+                this.UniqSubnetIds[i] = new String(source.UniqSubnetIds[i]);
+            }
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

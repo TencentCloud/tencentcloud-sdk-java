@@ -91,6 +91,26 @@ public class CreateApiRateLimitRuleRequest extends AbstractModel{
         this.UsableStatus = UsableStatus;
     }
 
+    public CreateApiRateLimitRuleRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateApiRateLimitRuleRequest(CreateApiRateLimitRuleRequest source) {
+        if (source.ApiId != null) {
+            this.ApiId = new String(source.ApiId);
+        }
+        if (source.MaxQps != null) {
+            this.MaxQps = new Long(source.MaxQps);
+        }
+        if (source.UsableStatus != null) {
+            this.UsableStatus = new String(source.UsableStatus);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

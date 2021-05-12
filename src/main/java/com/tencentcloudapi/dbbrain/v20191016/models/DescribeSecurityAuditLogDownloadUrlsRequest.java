@@ -91,6 +91,26 @@ public class DescribeSecurityAuditLogDownloadUrlsRequest extends AbstractModel{
         this.Product = Product;
     }
 
+    public DescribeSecurityAuditLogDownloadUrlsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeSecurityAuditLogDownloadUrlsRequest(DescribeSecurityAuditLogDownloadUrlsRequest source) {
+        if (source.SecAuditGroupId != null) {
+            this.SecAuditGroupId = new String(source.SecAuditGroupId);
+        }
+        if (source.AsyncRequestId != null) {
+            this.AsyncRequestId = new Long(source.AsyncRequestId);
+        }
+        if (source.Product != null) {
+            this.Product = new String(source.Product);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -91,6 +91,26 @@ public class DescribeSharedSpaceRequest extends AbstractModel{
         this.Operator = Operator;
     }
 
+    public DescribeSharedSpaceRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeSharedSpaceRequest(DescribeSharedSpaceRequest source) {
+        if (source.Platform != null) {
+            this.Platform = new String(source.Platform);
+        }
+        if (source.Authorizee != null) {
+            this.Authorizee = new Entity(source.Authorizee);
+        }
+        if (source.Operator != null) {
+            this.Operator = new String(source.Operator);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

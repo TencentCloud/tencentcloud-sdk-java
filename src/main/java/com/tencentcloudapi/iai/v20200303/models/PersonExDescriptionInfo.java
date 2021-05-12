@@ -73,6 +73,23 @@ public class PersonExDescriptionInfo extends AbstractModel{
         this.PersonExDescription = PersonExDescription;
     }
 
+    public PersonExDescriptionInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PersonExDescriptionInfo(PersonExDescriptionInfo source) {
+        if (source.PersonExDescriptionIndex != null) {
+            this.PersonExDescriptionIndex = new Long(source.PersonExDescriptionIndex);
+        }
+        if (source.PersonExDescription != null) {
+            this.PersonExDescription = new String(source.PersonExDescription);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

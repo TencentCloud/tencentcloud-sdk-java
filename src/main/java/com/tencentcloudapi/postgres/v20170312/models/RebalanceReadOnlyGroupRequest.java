@@ -45,6 +45,20 @@ public class RebalanceReadOnlyGroupRequest extends AbstractModel{
         this.ReadOnlyGroupId = ReadOnlyGroupId;
     }
 
+    public RebalanceReadOnlyGroupRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RebalanceReadOnlyGroupRequest(RebalanceReadOnlyGroupRequest source) {
+        if (source.ReadOnlyGroupId != null) {
+            this.ReadOnlyGroupId = new String(source.ReadOnlyGroupId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

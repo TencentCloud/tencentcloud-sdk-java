@@ -367,6 +367,65 @@ public class DescribeMigrationDetailResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeMigrationDetailResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeMigrationDetailResponse(DescribeMigrationDetailResponse source) {
+        if (source.MigrateId != null) {
+            this.MigrateId = new Long(source.MigrateId);
+        }
+        if (source.MigrateName != null) {
+            this.MigrateName = new String(source.MigrateName);
+        }
+        if (source.AppId != null) {
+            this.AppId = new Long(source.AppId);
+        }
+        if (source.Region != null) {
+            this.Region = new String(source.Region);
+        }
+        if (source.SourceType != null) {
+            this.SourceType = new Long(source.SourceType);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.Progress != null) {
+            this.Progress = new Long(source.Progress);
+        }
+        if (source.MigrateType != null) {
+            this.MigrateType = new Long(source.MigrateType);
+        }
+        if (source.Source != null) {
+            this.Source = new MigrateSource(source.Source);
+        }
+        if (source.Target != null) {
+            this.Target = new MigrateTarget(source.Target);
+        }
+        if (source.MigrateDBSet != null) {
+            this.MigrateDBSet = new MigrateDB[source.MigrateDBSet.length];
+            for (int i = 0; i < source.MigrateDBSet.length; i++) {
+                this.MigrateDBSet[i] = new MigrateDB(source.MigrateDBSet[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

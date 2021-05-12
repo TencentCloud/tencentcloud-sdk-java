@@ -321,6 +321,56 @@ public class QualityControlInfo extends AbstractModel{
         this.Voice = Voice;
     }
 
+    public QualityControlInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public QualityControlInfo(QualityControlInfo source) {
+        if (source.Interval != null) {
+            this.Interval = new Long(source.Interval);
+        }
+        if (source.VideoShot != null) {
+            this.VideoShot = new Boolean(source.VideoShot);
+        }
+        if (source.Jitter != null) {
+            this.Jitter = new Boolean(source.Jitter);
+        }
+        if (source.Blur != null) {
+            this.Blur = new Boolean(source.Blur);
+        }
+        if (source.AbnormalLighting != null) {
+            this.AbnormalLighting = new Boolean(source.AbnormalLighting);
+        }
+        if (source.CrashScreen != null) {
+            this.CrashScreen = new Boolean(source.CrashScreen);
+        }
+        if (source.BlackWhiteEdge != null) {
+            this.BlackWhiteEdge = new Boolean(source.BlackWhiteEdge);
+        }
+        if (source.Noise != null) {
+            this.Noise = new Boolean(source.Noise);
+        }
+        if (source.Mosaic != null) {
+            this.Mosaic = new Boolean(source.Mosaic);
+        }
+        if (source.QRCode != null) {
+            this.QRCode = new Boolean(source.QRCode);
+        }
+        if (source.QualityEvaluation != null) {
+            this.QualityEvaluation = new Boolean(source.QualityEvaluation);
+        }
+        if (source.QualityEvalScore != null) {
+            this.QualityEvalScore = new Long(source.QualityEvalScore);
+        }
+        if (source.Voice != null) {
+            this.Voice = new Boolean(source.Voice);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

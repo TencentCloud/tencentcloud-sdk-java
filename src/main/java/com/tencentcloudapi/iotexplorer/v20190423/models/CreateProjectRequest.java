@@ -91,6 +91,26 @@ public class CreateProjectRequest extends AbstractModel{
         this.InstanceId = InstanceId;
     }
 
+    public CreateProjectRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateProjectRequest(CreateProjectRequest source) {
+        if (source.ProjectName != null) {
+            this.ProjectName = new String(source.ProjectName);
+        }
+        if (source.ProjectDesc != null) {
+            this.ProjectDesc = new String(source.ProjectDesc);
+        }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

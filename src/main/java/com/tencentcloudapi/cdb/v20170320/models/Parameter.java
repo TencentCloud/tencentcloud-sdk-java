@@ -68,6 +68,23 @@ public class Parameter extends AbstractModel{
         this.CurrentValue = CurrentValue;
     }
 
+    public Parameter() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Parameter(Parameter source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.CurrentValue != null) {
+            this.CurrentValue = new String(source.CurrentValue);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

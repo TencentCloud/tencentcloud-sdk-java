@@ -68,6 +68,23 @@ public class DescribeCCAlarmThresholdResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeCCAlarmThresholdResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeCCAlarmThresholdResponse(DescribeCCAlarmThresholdResponse source) {
+        if (source.CCAlarmThreshold != null) {
+            this.CCAlarmThreshold = new CCAlarmThreshold(source.CCAlarmThreshold);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

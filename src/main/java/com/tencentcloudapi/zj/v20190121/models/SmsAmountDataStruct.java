@@ -206,6 +206,41 @@ public class SmsAmountDataStruct extends AbstractModel{
         this.MmsSendConsume = MmsSendConsume;
     }
 
+    public SmsAmountDataStruct() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SmsAmountDataStruct(SmsAmountDataStruct source) {
+        if (source.SmsCampaignAmount != null) {
+            this.SmsCampaignAmount = new Long(source.SmsCampaignAmount);
+        }
+        if (source.SmsCampaignConsume != null) {
+            this.SmsCampaignConsume = new Long(source.SmsCampaignConsume);
+        }
+        if (source.SmsSendAmount != null) {
+            this.SmsSendAmount = new Long(source.SmsSendAmount);
+        }
+        if (source.SmsSendConsume != null) {
+            this.SmsSendConsume = new Long(source.SmsSendConsume);
+        }
+        if (source.MmsCampaignAmount != null) {
+            this.MmsCampaignAmount = new Long(source.MmsCampaignAmount);
+        }
+        if (source.MmsCampaignConsume != null) {
+            this.MmsCampaignConsume = new Long(source.MmsCampaignConsume);
+        }
+        if (source.MmsSendAmount != null) {
+            this.MmsSendAmount = new Long(source.MmsSendAmount);
+        }
+        if (source.MmsSendConsume != null) {
+            this.MmsSendConsume = new Long(source.MmsSendConsume);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -45,6 +45,20 @@ public class DescribeDiagnoseReportRequest extends AbstractModel{
         this.ReportId = ReportId;
     }
 
+    public DescribeDiagnoseReportRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeDiagnoseReportRequest(DescribeDiagnoseReportRequest source) {
+        if (source.ReportId != null) {
+            this.ReportId = new String(source.ReportId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

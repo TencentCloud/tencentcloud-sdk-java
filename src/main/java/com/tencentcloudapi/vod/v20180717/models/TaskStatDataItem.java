@@ -91,6 +91,26 @@ public class TaskStatDataItem extends AbstractModel{
         this.Usage = Usage;
     }
 
+    public TaskStatDataItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TaskStatDataItem(TaskStatDataItem source) {
+        if (source.Time != null) {
+            this.Time = new String(source.Time);
+        }
+        if (source.Count != null) {
+            this.Count = new Long(source.Count);
+        }
+        if (source.Usage != null) {
+            this.Usage = new Long(source.Usage);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -73,6 +73,23 @@ public class RenewCardsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public RenewCardsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RenewCardsResponse(RenewCardsResponse source) {
+        if (source.Data != null) {
+            this.Data = new ResRenew(source.Data);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

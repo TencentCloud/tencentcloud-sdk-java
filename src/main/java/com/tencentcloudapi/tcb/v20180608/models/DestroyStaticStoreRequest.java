@@ -68,6 +68,23 @@ public class DestroyStaticStoreRequest extends AbstractModel{
         this.CdnDomain = CdnDomain;
     }
 
+    public DestroyStaticStoreRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DestroyStaticStoreRequest(DestroyStaticStoreRequest source) {
+        if (source.EnvId != null) {
+            this.EnvId = new String(source.EnvId);
+        }
+        if (source.CdnDomain != null) {
+            this.CdnDomain = new String(source.CdnDomain);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

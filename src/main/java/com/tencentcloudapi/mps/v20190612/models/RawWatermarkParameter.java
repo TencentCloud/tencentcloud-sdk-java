@@ -182,6 +182,32 @@ public class RawWatermarkParameter extends AbstractModel{
         this.ImageTemplate = ImageTemplate;
     }
 
+    public RawWatermarkParameter() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RawWatermarkParameter(RawWatermarkParameter source) {
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.CoordinateOrigin != null) {
+            this.CoordinateOrigin = new String(source.CoordinateOrigin);
+        }
+        if (source.XPos != null) {
+            this.XPos = new String(source.XPos);
+        }
+        if (source.YPos != null) {
+            this.YPos = new String(source.YPos);
+        }
+        if (source.ImageTemplate != null) {
+            this.ImageTemplate = new RawImageWatermarkInput(source.ImageTemplate);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

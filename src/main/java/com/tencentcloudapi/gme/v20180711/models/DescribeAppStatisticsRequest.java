@@ -114,6 +114,32 @@ public class DescribeAppStatisticsRequest extends AbstractModel{
         this.Services = Services;
     }
 
+    public DescribeAppStatisticsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeAppStatisticsRequest(DescribeAppStatisticsRequest source) {
+        if (source.BizId != null) {
+            this.BizId = new Long(source.BizId);
+        }
+        if (source.StartDate != null) {
+            this.StartDate = new String(source.StartDate);
+        }
+        if (source.EndDate != null) {
+            this.EndDate = new String(source.EndDate);
+        }
+        if (source.Services != null) {
+            this.Services = new String[source.Services.length];
+            for (int i = 0; i < source.Services.length; i++) {
+                this.Services[i] = new String(source.Services[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

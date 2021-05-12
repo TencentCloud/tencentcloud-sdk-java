@@ -68,6 +68,23 @@ public class SearchClsLogResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public SearchClsLogResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SearchClsLogResponse(SearchClsLogResponse source) {
+        if (source.Logs != null) {
+            this.Logs = new ClsSearchLogs(source.Logs);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

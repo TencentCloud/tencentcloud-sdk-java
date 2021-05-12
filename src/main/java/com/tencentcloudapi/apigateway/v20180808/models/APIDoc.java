@@ -91,6 +91,26 @@ public class APIDoc extends AbstractModel{
         this.ApiDocStatus = ApiDocStatus;
     }
 
+    public APIDoc() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public APIDoc(APIDoc source) {
+        if (source.ApiDocId != null) {
+            this.ApiDocId = new String(source.ApiDocId);
+        }
+        if (source.ApiDocName != null) {
+            this.ApiDocName = new String(source.ApiDocName);
+        }
+        if (source.ApiDocStatus != null) {
+            this.ApiDocStatus = new String(source.ApiDocStatus);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

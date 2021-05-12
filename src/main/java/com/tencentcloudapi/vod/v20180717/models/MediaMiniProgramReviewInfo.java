@@ -45,6 +45,23 @@ public class MediaMiniProgramReviewInfo extends AbstractModel{
         this.MiniProgramReviewList = MiniProgramReviewList;
     }
 
+    public MediaMiniProgramReviewInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MediaMiniProgramReviewInfo(MediaMiniProgramReviewInfo source) {
+        if (source.MiniProgramReviewList != null) {
+            this.MiniProgramReviewList = new MediaMiniProgramReviewInfoItem[source.MiniProgramReviewList.length];
+            for (int i = 0; i < source.MiniProgramReviewList.length; i++) {
+                this.MiniProgramReviewList[i] = new MediaMiniProgramReviewInfoItem(source.MiniProgramReviewList[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

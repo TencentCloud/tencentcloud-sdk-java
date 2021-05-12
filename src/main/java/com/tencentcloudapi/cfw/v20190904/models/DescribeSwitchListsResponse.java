@@ -170,6 +170,41 @@ public class DescribeSwitchListsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeSwitchListsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeSwitchListsResponse(DescribeSwitchListsResponse source) {
+        if (source.Total != null) {
+            this.Total = new Long(source.Total);
+        }
+        if (source.Data != null) {
+            this.Data = new SwitchListsData[source.Data.length];
+            for (int i = 0; i < source.Data.length; i++) {
+                this.Data[i] = new SwitchListsData(source.Data[i]);
+            }
+        }
+        if (source.AreaLists != null) {
+            this.AreaLists = new String[source.AreaLists.length];
+            for (int i = 0; i < source.AreaLists.length; i++) {
+                this.AreaLists[i] = new String(source.AreaLists[i]);
+            }
+        }
+        if (source.OnNum != null) {
+            this.OnNum = new Long(source.OnNum);
+        }
+        if (source.OffNum != null) {
+            this.OffNum = new Long(source.OffNum);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -262,6 +262,32 @@ public class DescribeCaptchaResultResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeCaptchaResultResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeCaptchaResultResponse(DescribeCaptchaResultResponse source) {
+        if (source.CaptchaCode != null) {
+            this.CaptchaCode = new Long(source.CaptchaCode);
+        }
+        if (source.CaptchaMsg != null) {
+            this.CaptchaMsg = new String(source.CaptchaMsg);
+        }
+        if (source.EvilLevel != null) {
+            this.EvilLevel = new Long(source.EvilLevel);
+        }
+        if (source.GetCaptchaTime != null) {
+            this.GetCaptchaTime = new Long(source.GetCaptchaTime);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

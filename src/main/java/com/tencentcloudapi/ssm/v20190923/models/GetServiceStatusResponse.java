@@ -91,6 +91,26 @@ public class GetServiceStatusResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public GetServiceStatusResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GetServiceStatusResponse(GetServiceStatusResponse source) {
+        if (source.ServiceEnabled != null) {
+            this.ServiceEnabled = new Boolean(source.ServiceEnabled);
+        }
+        if (source.InvalidType != null) {
+            this.InvalidType = new Long(source.InvalidType);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

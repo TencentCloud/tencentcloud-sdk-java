@@ -91,6 +91,26 @@ public class DescribeDasbImageIdsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeDasbImageIdsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeDasbImageIdsResponse(DescribeDasbImageIdsResponse source) {
+        if (source.BaseImageId != null) {
+            this.BaseImageId = new String(source.BaseImageId);
+        }
+        if (source.AiImageId != null) {
+            this.AiImageId = new String(source.AiImageId);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

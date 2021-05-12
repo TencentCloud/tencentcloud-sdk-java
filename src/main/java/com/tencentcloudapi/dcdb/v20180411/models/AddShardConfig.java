@@ -91,6 +91,26 @@ public class AddShardConfig extends AbstractModel{
         this.ShardStorage = ShardStorage;
     }
 
+    public AddShardConfig() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AddShardConfig(AddShardConfig source) {
+        if (source.ShardCount != null) {
+            this.ShardCount = new Long(source.ShardCount);
+        }
+        if (source.ShardMemory != null) {
+            this.ShardMemory = new Long(source.ShardMemory);
+        }
+        if (source.ShardStorage != null) {
+            this.ShardStorage = new Long(source.ShardStorage);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

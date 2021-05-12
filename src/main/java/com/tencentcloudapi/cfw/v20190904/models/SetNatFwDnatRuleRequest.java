@@ -160,6 +160,38 @@ public class SetNatFwDnatRuleRequest extends AbstractModel{
         this.NewDnat = NewDnat;
     }
 
+    public SetNatFwDnatRuleRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SetNatFwDnatRuleRequest(SetNatFwDnatRuleRequest source) {
+        if (source.Mode != null) {
+            this.Mode = new Long(source.Mode);
+        }
+        if (source.OperationType != null) {
+            this.OperationType = new String(source.OperationType);
+        }
+        if (source.CfwInstance != null) {
+            this.CfwInstance = new String(source.CfwInstance);
+        }
+        if (source.AddOrDelDnatRules != null) {
+            this.AddOrDelDnatRules = new CfwNatDnatRule[source.AddOrDelDnatRules.length];
+            for (int i = 0; i < source.AddOrDelDnatRules.length; i++) {
+                this.AddOrDelDnatRules[i] = new CfwNatDnatRule(source.AddOrDelDnatRules[i]);
+            }
+        }
+        if (source.OriginDnat != null) {
+            this.OriginDnat = new CfwNatDnatRule(source.OriginDnat);
+        }
+        if (source.NewDnat != null) {
+            this.NewDnat = new CfwNatDnatRule(source.NewDnat);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

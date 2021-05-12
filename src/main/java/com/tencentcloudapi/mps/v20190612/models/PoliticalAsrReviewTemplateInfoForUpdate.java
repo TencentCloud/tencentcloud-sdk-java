@@ -101,6 +101,26 @@ public class PoliticalAsrReviewTemplateInfoForUpdate extends AbstractModel{
         this.ReviewConfidence = ReviewConfidence;
     }
 
+    public PoliticalAsrReviewTemplateInfoForUpdate() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PoliticalAsrReviewTemplateInfoForUpdate(PoliticalAsrReviewTemplateInfoForUpdate source) {
+        if (source.Switch != null) {
+            this.Switch = new String(source.Switch);
+        }
+        if (source.BlockConfidence != null) {
+            this.BlockConfidence = new Long(source.BlockConfidence);
+        }
+        if (source.ReviewConfidence != null) {
+            this.ReviewConfidence = new Long(source.ReviewConfidence);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

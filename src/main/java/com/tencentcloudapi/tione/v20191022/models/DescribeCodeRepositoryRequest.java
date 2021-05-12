@@ -45,6 +45,20 @@ public class DescribeCodeRepositoryRequest extends AbstractModel{
         this.CodeRepositoryName = CodeRepositoryName;
     }
 
+    public DescribeCodeRepositoryRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeCodeRepositoryRequest(DescribeCodeRepositoryRequest source) {
+        if (source.CodeRepositoryName != null) {
+            this.CodeRepositoryName = new String(source.CodeRepositoryName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

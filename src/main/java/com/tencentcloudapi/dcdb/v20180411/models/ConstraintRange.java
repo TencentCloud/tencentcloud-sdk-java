@@ -68,6 +68,23 @@ public class ConstraintRange extends AbstractModel{
         this.Max = Max;
     }
 
+    public ConstraintRange() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ConstraintRange(ConstraintRange source) {
+        if (source.Min != null) {
+            this.Min = new String(source.Min);
+        }
+        if (source.Max != null) {
+            this.Max = new String(source.Max);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

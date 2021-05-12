@@ -137,6 +137,35 @@ public class CreateSecurityAuditLogExportTaskRequest extends AbstractModel{
         this.DangerLevels = DangerLevels;
     }
 
+    public CreateSecurityAuditLogExportTaskRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateSecurityAuditLogExportTaskRequest(CreateSecurityAuditLogExportTaskRequest source) {
+        if (source.SecAuditGroupId != null) {
+            this.SecAuditGroupId = new String(source.SecAuditGroupId);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+        if (source.Product != null) {
+            this.Product = new String(source.Product);
+        }
+        if (source.DangerLevels != null) {
+            this.DangerLevels = new Long[source.DangerLevels.length];
+            for (int i = 0; i < source.DangerLevels.length; i++) {
+                this.DangerLevels[i] = new Long(source.DangerLevels[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

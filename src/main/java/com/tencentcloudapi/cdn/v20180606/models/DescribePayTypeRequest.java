@@ -60,6 +60,20 @@ overseas：境外计费方式查询
         this.Area = Area;
     }
 
+    public DescribePayTypeRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribePayTypeRequest(DescribePayTypeRequest source) {
+        if (source.Area != null) {
+            this.Area = new String(source.Area);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

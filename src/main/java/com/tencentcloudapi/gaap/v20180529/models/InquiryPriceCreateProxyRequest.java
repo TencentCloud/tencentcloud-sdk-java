@@ -183,6 +183,38 @@ public class InquiryPriceCreateProxyRequest extends AbstractModel{
         this.BillingType = BillingType;
     }
 
+    public InquiryPriceCreateProxyRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public InquiryPriceCreateProxyRequest(InquiryPriceCreateProxyRequest source) {
+        if (source.AccessRegion != null) {
+            this.AccessRegion = new String(source.AccessRegion);
+        }
+        if (source.Bandwidth != null) {
+            this.Bandwidth = new Long(source.Bandwidth);
+        }
+        if (source.DestRegion != null) {
+            this.DestRegion = new String(source.DestRegion);
+        }
+        if (source.Concurrency != null) {
+            this.Concurrency = new Long(source.Concurrency);
+        }
+        if (source.RealServerRegion != null) {
+            this.RealServerRegion = new String(source.RealServerRegion);
+        }
+        if (source.Concurrent != null) {
+            this.Concurrent = new Long(source.Concurrent);
+        }
+        if (source.BillingType != null) {
+            this.BillingType = new Long(source.BillingType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

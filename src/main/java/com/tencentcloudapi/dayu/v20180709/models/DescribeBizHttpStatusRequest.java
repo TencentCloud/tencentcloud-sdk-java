@@ -206,6 +206,44 @@ public class DescribeBizHttpStatusRequest extends AbstractModel{
         this.Domain = Domain;
     }
 
+    public DescribeBizHttpStatusRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeBizHttpStatusRequest(DescribeBizHttpStatusRequest source) {
+        if (source.Business != null) {
+            this.Business = new String(source.Business);
+        }
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
+        if (source.Period != null) {
+            this.Period = new Long(source.Period);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+        if (source.Statistics != null) {
+            this.Statistics = new String(source.Statistics);
+        }
+        if (source.ProtoInfo != null) {
+            this.ProtoInfo = new ProtocolPort[source.ProtoInfo.length];
+            for (int i = 0; i < source.ProtoInfo.length; i++) {
+                this.ProtoInfo[i] = new ProtocolPort(source.ProtoInfo[i]);
+            }
+        }
+        if (source.Domain != null) {
+            this.Domain = new String(source.Domain);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

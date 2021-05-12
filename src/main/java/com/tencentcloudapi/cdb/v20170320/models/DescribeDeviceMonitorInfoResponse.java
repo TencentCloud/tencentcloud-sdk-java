@@ -137,6 +137,32 @@ public class DescribeDeviceMonitorInfoResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeDeviceMonitorInfoResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeDeviceMonitorInfoResponse(DescribeDeviceMonitorInfoResponse source) {
+        if (source.Cpu != null) {
+            this.Cpu = new DeviceCpuInfo(source.Cpu);
+        }
+        if (source.Mem != null) {
+            this.Mem = new DeviceMemInfo(source.Mem);
+        }
+        if (source.Net != null) {
+            this.Net = new DeviceNetInfo(source.Net);
+        }
+        if (source.Disk != null) {
+            this.Disk = new DeviceDiskInfo(source.Disk);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

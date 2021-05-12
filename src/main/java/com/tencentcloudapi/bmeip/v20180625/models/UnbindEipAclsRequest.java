@@ -45,6 +45,23 @@ public class UnbindEipAclsRequest extends AbstractModel{
         this.EipIdAclIdList = EipIdAclIdList;
     }
 
+    public UnbindEipAclsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UnbindEipAclsRequest(UnbindEipAclsRequest source) {
+        if (source.EipIdAclIdList != null) {
+            this.EipIdAclIdList = new EipAclMap[source.EipIdAclIdList.length];
+            for (int i = 0; i < source.EipIdAclIdList.length; i++) {
+                this.EipIdAclIdList[i] = new EipAclMap(source.EipIdAclIdList[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

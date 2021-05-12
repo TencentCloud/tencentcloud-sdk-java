@@ -68,6 +68,23 @@ public class ZoneInstanceInfo extends AbstractModel{
         this.InstanceNum = InstanceNum;
     }
 
+    public ZoneInstanceInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ZoneInstanceInfo(ZoneInstanceInfo source) {
+        if (source.ZoneName != null) {
+            this.ZoneName = new String(source.ZoneName);
+        }
+        if (source.InstanceNum != null) {
+            this.InstanceNum = new Long(source.InstanceNum);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

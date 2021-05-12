@@ -91,6 +91,29 @@ public class OneSdkAppIdUsagesInfo extends AbstractModel{
         this.SdkAppId = SdkAppId;
     }
 
+    public OneSdkAppIdUsagesInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public OneSdkAppIdUsagesInfo(OneSdkAppIdUsagesInfo source) {
+        if (source.TotalNum != null) {
+            this.TotalNum = new Long(source.TotalNum);
+        }
+        if (source.SdkAppIdTrtcTimeUsages != null) {
+            this.SdkAppIdTrtcTimeUsages = new SdkAppIdTrtcUsage[source.SdkAppIdTrtcTimeUsages.length];
+            for (int i = 0; i < source.SdkAppIdTrtcTimeUsages.length; i++) {
+                this.SdkAppIdTrtcTimeUsages[i] = new SdkAppIdTrtcUsage(source.SdkAppIdTrtcTimeUsages[i]);
+            }
+        }
+        if (source.SdkAppId != null) {
+            this.SdkAppId = new String(source.SdkAppId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -137,6 +137,35 @@ public class CreateL7CCRuleRequest extends AbstractModel{
         this.RuleConfig = RuleConfig;
     }
 
+    public CreateL7CCRuleRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateL7CCRuleRequest(CreateL7CCRuleRequest source) {
+        if (source.Business != null) {
+            this.Business = new String(source.Business);
+        }
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
+        if (source.Method != null) {
+            this.Method = new String(source.Method);
+        }
+        if (source.RuleId != null) {
+            this.RuleId = new String(source.RuleId);
+        }
+        if (source.RuleConfig != null) {
+            this.RuleConfig = new CCRuleConfig[source.RuleConfig.length];
+            for (int i = 0; i < source.RuleConfig.length; i++) {
+                this.RuleConfig[i] = new CCRuleConfig(source.RuleConfig[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

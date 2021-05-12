@@ -551,6 +551,98 @@ public class Job extends AbstractModel{
         this.Id = Id;
     }
 
+    public Job() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Job(Job source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+        if (source.State != null) {
+            this.State = new String(source.State);
+        }
+        if (source.Message != null) {
+            this.Message = new String(source.Message);
+        }
+        if (source.ScaleTier != null) {
+            this.ScaleTier = new String(source.ScaleTier);
+        }
+        if (source.MasterType != null) {
+            this.MasterType = new String(source.MasterType);
+        }
+        if (source.WorkerType != null) {
+            this.WorkerType = new String(source.WorkerType);
+        }
+        if (source.ParameterServerType != null) {
+            this.ParameterServerType = new String(source.ParameterServerType);
+        }
+        if (source.WorkerCount != null) {
+            this.WorkerCount = new Long(source.WorkerCount);
+        }
+        if (source.ParameterServerCount != null) {
+            this.ParameterServerCount = new Long(source.ParameterServerCount);
+        }
+        if (source.PackageDir != null) {
+            this.PackageDir = new String[source.PackageDir.length];
+            for (int i = 0; i < source.PackageDir.length; i++) {
+                this.PackageDir[i] = new String(source.PackageDir[i]);
+            }
+        }
+        if (source.Command != null) {
+            this.Command = new String[source.Command.length];
+            for (int i = 0; i < source.Command.length; i++) {
+                this.Command[i] = new String(source.Command[i]);
+            }
+        }
+        if (source.Args != null) {
+            this.Args = new String[source.Args.length];
+            for (int i = 0; i < source.Args.length; i++) {
+                this.Args[i] = new String(source.Args[i]);
+            }
+        }
+        if (source.Cluster != null) {
+            this.Cluster = new String(source.Cluster);
+        }
+        if (source.RuntimeVersion != null) {
+            this.RuntimeVersion = new String(source.RuntimeVersion);
+        }
+        if (source.DelTime != null) {
+            this.DelTime = new String(source.DelTime);
+        }
+        if (source.AppId != null) {
+            this.AppId = new Long(source.AppId);
+        }
+        if (source.Uin != null) {
+            this.Uin = new String(source.Uin);
+        }
+        if (source.Debug != null) {
+            this.Debug = new Boolean(source.Debug);
+        }
+        if (source.RuntimeConf != null) {
+            this.RuntimeConf = new String[source.RuntimeConf.length];
+            for (int i = 0; i < source.RuntimeConf.length; i++) {
+                this.RuntimeConf[i] = new String(source.RuntimeConf[i]);
+            }
+        }
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -68,6 +68,23 @@ public class InstanceChargePrepaid extends AbstractModel{
         this.RenewFlag = RenewFlag;
     }
 
+    public InstanceChargePrepaid() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public InstanceChargePrepaid(InstanceChargePrepaid source) {
+        if (source.Period != null) {
+            this.Period = new Long(source.Period);
+        }
+        if (source.RenewFlag != null) {
+            this.RenewFlag = new String(source.RenewFlag);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

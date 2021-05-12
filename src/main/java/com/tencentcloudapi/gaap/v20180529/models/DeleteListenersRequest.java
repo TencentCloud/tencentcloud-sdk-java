@@ -114,6 +114,32 @@ public class DeleteListenersRequest extends AbstractModel{
         this.ProxyId = ProxyId;
     }
 
+    public DeleteListenersRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteListenersRequest(DeleteListenersRequest source) {
+        if (source.ListenerIds != null) {
+            this.ListenerIds = new String[source.ListenerIds.length];
+            for (int i = 0; i < source.ListenerIds.length; i++) {
+                this.ListenerIds[i] = new String(source.ListenerIds[i]);
+            }
+        }
+        if (source.Force != null) {
+            this.Force = new Long(source.Force);
+        }
+        if (source.GroupId != null) {
+            this.GroupId = new String(source.GroupId);
+        }
+        if (source.ProxyId != null) {
+            this.ProxyId = new String(source.ProxyId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

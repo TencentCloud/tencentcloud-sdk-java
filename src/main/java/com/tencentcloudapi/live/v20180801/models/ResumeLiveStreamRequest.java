@@ -91,6 +91,26 @@ public class ResumeLiveStreamRequest extends AbstractModel{
         this.StreamName = StreamName;
     }
 
+    public ResumeLiveStreamRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ResumeLiveStreamRequest(ResumeLiveStreamRequest source) {
+        if (source.AppName != null) {
+            this.AppName = new String(source.AppName);
+        }
+        if (source.DomainName != null) {
+            this.DomainName = new String(source.DomainName);
+        }
+        if (source.StreamName != null) {
+            this.StreamName = new String(source.StreamName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

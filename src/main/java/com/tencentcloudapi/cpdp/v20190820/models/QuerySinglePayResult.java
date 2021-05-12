@@ -124,6 +124,32 @@ public class QuerySinglePayResult extends AbstractModel{
         this.Items = Items;
     }
 
+    public QuerySinglePayResult() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public QuerySinglePayResult(QuerySinglePayResult source) {
+        if (source.HandleStatus != null) {
+            this.HandleStatus = new String(source.HandleStatus);
+        }
+        if (source.HandleMsg != null) {
+            this.HandleMsg = new String(source.HandleMsg);
+        }
+        if (source.SerialNo != null) {
+            this.SerialNo = new String(source.SerialNo);
+        }
+        if (source.Items != null) {
+            this.Items = new QuerySinglePayItem[source.Items.length];
+            for (int i = 0; i < source.Items.length; i++) {
+                this.Items[i] = new QuerySinglePayItem(source.Items[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -734,6 +734,116 @@ public class InstanceAttributesResponse extends AbstractModel{
         this.RetentionTimeConfig = RetentionTimeConfig;
     }
 
+    public InstanceAttributesResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public InstanceAttributesResponse(InstanceAttributesResponse source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.InstanceName != null) {
+            this.InstanceName = new String(source.InstanceName);
+        }
+        if (source.VipList != null) {
+            this.VipList = new VipEntity[source.VipList.length];
+            for (int i = 0; i < source.VipList.length; i++) {
+                this.VipList[i] = new VipEntity(source.VipList[i]);
+            }
+        }
+        if (source.Vip != null) {
+            this.Vip = new String(source.Vip);
+        }
+        if (source.Vport != null) {
+            this.Vport = new String(source.Vport);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.Bandwidth != null) {
+            this.Bandwidth = new Long(source.Bandwidth);
+        }
+        if (source.DiskSize != null) {
+            this.DiskSize = new Long(source.DiskSize);
+        }
+        if (source.ZoneId != null) {
+            this.ZoneId = new Long(source.ZoneId);
+        }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.SubnetId != null) {
+            this.SubnetId = new String(source.SubnetId);
+        }
+        if (source.Healthy != null) {
+            this.Healthy = new Long(source.Healthy);
+        }
+        if (source.HealthyMessage != null) {
+            this.HealthyMessage = new String(source.HealthyMessage);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new Long(source.CreateTime);
+        }
+        if (source.MsgRetentionTime != null) {
+            this.MsgRetentionTime = new Long(source.MsgRetentionTime);
+        }
+        if (source.Config != null) {
+            this.Config = new InstanceConfigDO(source.Config);
+        }
+        if (source.RemainderPartitions != null) {
+            this.RemainderPartitions = new Long(source.RemainderPartitions);
+        }
+        if (source.RemainderTopics != null) {
+            this.RemainderTopics = new Long(source.RemainderTopics);
+        }
+        if (source.CreatedPartitions != null) {
+            this.CreatedPartitions = new Long(source.CreatedPartitions);
+        }
+        if (source.CreatedTopics != null) {
+            this.CreatedTopics = new Long(source.CreatedTopics);
+        }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
+        if (source.ExpireTime != null) {
+            this.ExpireTime = new Long(source.ExpireTime);
+        }
+        if (source.ZoneIds != null) {
+            this.ZoneIds = new Long[source.ZoneIds.length];
+            for (int i = 0; i < source.ZoneIds.length; i++) {
+                this.ZoneIds[i] = new Long(source.ZoneIds[i]);
+            }
+        }
+        if (source.Version != null) {
+            this.Version = new String(source.Version);
+        }
+        if (source.MaxGroupNum != null) {
+            this.MaxGroupNum = new Long(source.MaxGroupNum);
+        }
+        if (source.Cvm != null) {
+            this.Cvm = new Long(source.Cvm);
+        }
+        if (source.InstanceType != null) {
+            this.InstanceType = new String(source.InstanceType);
+        }
+        if (source.Features != null) {
+            this.Features = new String[source.Features.length];
+            for (int i = 0; i < source.Features.length; i++) {
+                this.Features[i] = new String(source.Features[i]);
+            }
+        }
+        if (source.RetentionTimeConfig != null) {
+            this.RetentionTimeConfig = new DynamicRetentionTime(source.RetentionTimeConfig);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -91,6 +91,29 @@ public class UnbindIpsFromNatGatewayRequest extends AbstractModel{
         this.IpInfoSet = IpInfoSet;
     }
 
+    public UnbindIpsFromNatGatewayRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UnbindIpsFromNatGatewayRequest(UnbindIpsFromNatGatewayRequest source) {
+        if (source.NatId != null) {
+            this.NatId = new String(source.NatId);
+        }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.IpInfoSet != null) {
+            this.IpInfoSet = new IpInfo[source.IpInfoSet.length];
+            for (int i = 0; i < source.IpInfoSet.length; i++) {
+                this.IpInfoSet[i] = new IpInfo(source.IpInfoSet[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

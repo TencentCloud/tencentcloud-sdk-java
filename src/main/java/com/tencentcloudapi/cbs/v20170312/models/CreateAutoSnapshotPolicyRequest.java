@@ -160,6 +160,38 @@ public class CreateAutoSnapshotPolicyRequest extends AbstractModel{
         this.DryRun = DryRun;
     }
 
+    public CreateAutoSnapshotPolicyRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateAutoSnapshotPolicyRequest(CreateAutoSnapshotPolicyRequest source) {
+        if (source.Policy != null) {
+            this.Policy = new Policy[source.Policy.length];
+            for (int i = 0; i < source.Policy.length; i++) {
+                this.Policy[i] = new Policy(source.Policy[i]);
+            }
+        }
+        if (source.AutoSnapshotPolicyName != null) {
+            this.AutoSnapshotPolicyName = new String(source.AutoSnapshotPolicyName);
+        }
+        if (source.IsActivated != null) {
+            this.IsActivated = new Boolean(source.IsActivated);
+        }
+        if (source.IsPermanent != null) {
+            this.IsPermanent = new Boolean(source.IsPermanent);
+        }
+        if (source.RetentionDays != null) {
+            this.RetentionDays = new Long(source.RetentionDays);
+        }
+        if (source.DryRun != null) {
+            this.DryRun = new Boolean(source.DryRun);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

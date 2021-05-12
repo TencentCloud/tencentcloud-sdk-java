@@ -274,6 +274,44 @@ public class GroupDeviceItem extends AbstractModel{
         this.Recordable = Recordable;
     }
 
+    public GroupDeviceItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GroupDeviceItem(GroupDeviceItem source) {
+        if (source.DeviceId != null) {
+            this.DeviceId = new String(source.DeviceId);
+        }
+        if (source.NickName != null) {
+            this.NickName = new String(source.NickName);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.ExtraInformation != null) {
+            this.ExtraInformation = new String(source.ExtraInformation);
+        }
+        if (source.DeviceType != null) {
+            this.DeviceType = new Long(source.DeviceType);
+        }
+        if (source.RTSPUrl != null) {
+            this.RTSPUrl = new String(source.RTSPUrl);
+        }
+        if (source.DeviceCode != null) {
+            this.DeviceCode = new String(source.DeviceCode);
+        }
+        if (source.IsRecord != null) {
+            this.IsRecord = new Long(source.IsRecord);
+        }
+        if (source.Recordable != null) {
+            this.Recordable = new Long(source.Recordable);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

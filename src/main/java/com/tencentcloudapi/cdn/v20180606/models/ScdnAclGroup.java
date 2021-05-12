@@ -114,6 +114,32 @@ public class ScdnAclGroup extends AbstractModel{
         this.Status = Status;
     }
 
+    public ScdnAclGroup() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ScdnAclGroup(ScdnAclGroup source) {
+        if (source.RuleName != null) {
+            this.RuleName = new String(source.RuleName);
+        }
+        if (source.Configure != null) {
+            this.Configure = new ScdnAclRule[source.Configure.length];
+            for (int i = 0; i < source.Configure.length; i++) {
+                this.Configure[i] = new ScdnAclRule(source.Configure[i]);
+            }
+        }
+        if (source.Result != null) {
+            this.Result = new String(source.Result);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -45,6 +45,20 @@ public class ListCosEnableRegionRequest extends AbstractModel{
         this.WebsiteType = WebsiteType;
     }
 
+    public ListCosEnableRegionRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ListCosEnableRegionRequest(ListCosEnableRegionRequest source) {
+        if (source.WebsiteType != null) {
+            this.WebsiteType = new String(source.WebsiteType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

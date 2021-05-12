@@ -229,6 +229,47 @@ public class ParameterDetail extends AbstractModel{
         this.EnumValue = EnumValue;
     }
 
+    public ParameterDetail() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ParameterDetail(ParameterDetail source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.ParamType != null) {
+            this.ParamType = new String(source.ParamType);
+        }
+        if (source.Default != null) {
+            this.Default = new String(source.Default);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.CurrentValue != null) {
+            this.CurrentValue = new String(source.CurrentValue);
+        }
+        if (source.NeedReboot != null) {
+            this.NeedReboot = new Long(source.NeedReboot);
+        }
+        if (source.Max != null) {
+            this.Max = new Long(source.Max);
+        }
+        if (source.Min != null) {
+            this.Min = new Long(source.Min);
+        }
+        if (source.EnumValue != null) {
+            this.EnumValue = new String[source.EnumValue.length];
+            for (int i = 0; i < source.EnumValue.length; i++) {
+                this.EnumValue[i] = new String(source.EnumValue[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

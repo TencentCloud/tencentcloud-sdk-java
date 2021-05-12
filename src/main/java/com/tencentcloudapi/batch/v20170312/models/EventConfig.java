@@ -68,6 +68,26 @@ public class EventConfig extends AbstractModel{
         this.EventVars = EventVars;
     }
 
+    public EventConfig() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public EventConfig(EventConfig source) {
+        if (source.EventName != null) {
+            this.EventName = new String(source.EventName);
+        }
+        if (source.EventVars != null) {
+            this.EventVars = new EventVar[source.EventVars.length];
+            for (int i = 0; i < source.EventVars.length; i++) {
+                this.EventVars[i] = new EventVar(source.EventVars[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

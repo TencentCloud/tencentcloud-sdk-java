@@ -68,6 +68,26 @@ public class SyncPrometheusTemplateRequest extends AbstractModel{
         this.Targets = Targets;
     }
 
+    public SyncPrometheusTemplateRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SyncPrometheusTemplateRequest(SyncPrometheusTemplateRequest source) {
+        if (source.TemplateId != null) {
+            this.TemplateId = new String(source.TemplateId);
+        }
+        if (source.Targets != null) {
+            this.Targets = new PrometheusTemplateSyncTarget[source.Targets.length];
+            for (int i = 0; i < source.Targets.length; i++) {
+                this.Targets[i] = new PrometheusTemplateSyncTarget(source.Targets[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

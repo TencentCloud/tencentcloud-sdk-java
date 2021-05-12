@@ -78,6 +78,23 @@ public class ValueFrom extends AbstractModel{
         this.ResourceFieldRef = ResourceFieldRef;
     }
 
+    public ValueFrom() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ValueFrom(ValueFrom source) {
+        if (source.FieldRef != null) {
+            this.FieldRef = new FieldRef(source.FieldRef);
+        }
+        if (source.ResourceFieldRef != null) {
+            this.ResourceFieldRef = new ResourceFieldRef(source.ResourceFieldRef);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

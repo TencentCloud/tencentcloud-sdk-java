@@ -180,6 +180,35 @@ public class DescribeSmsSignListDataStruct extends AbstractModel{
         this.CreateTime = CreateTime;
     }
 
+    public DescribeSmsSignListDataStruct() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeSmsSignListDataStruct(DescribeSmsSignListDataStruct source) {
+        if (source.SignId != null) {
+            this.SignId = new Long(source.SignId);
+        }
+        if (source.International != null) {
+            this.International = new Long(source.International);
+        }
+        if (source.StatusCode != null) {
+            this.StatusCode = new Long(source.StatusCode);
+        }
+        if (source.ReviewReply != null) {
+            this.ReviewReply = new String(source.ReviewReply);
+        }
+        if (source.SignName != null) {
+            this.SignName = new String(source.SignName);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new Long(source.CreateTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

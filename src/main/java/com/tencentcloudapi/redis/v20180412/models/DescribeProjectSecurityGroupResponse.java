@@ -68,6 +68,26 @@ public class DescribeProjectSecurityGroupResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeProjectSecurityGroupResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeProjectSecurityGroupResponse(DescribeProjectSecurityGroupResponse source) {
+        if (source.SecurityGroupDetails != null) {
+            this.SecurityGroupDetails = new SecurityGroupDetail[source.SecurityGroupDetails.length];
+            for (int i = 0; i < source.SecurityGroupDetails.length; i++) {
+                this.SecurityGroupDetails[i] = new SecurityGroupDetail(source.SecurityGroupDetails[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

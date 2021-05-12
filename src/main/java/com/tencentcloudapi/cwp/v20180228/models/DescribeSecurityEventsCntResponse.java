@@ -321,6 +321,56 @@ public class DescribeSecurityEventsCntResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeSecurityEventsCntResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeSecurityEventsCntResponse(DescribeSecurityEventsCntResponse source) {
+        if (source.Malware != null) {
+            this.Malware = new SecurityEventInfo(source.Malware);
+        }
+        if (source.HostLogin != null) {
+            this.HostLogin = new SecurityEventInfo(source.HostLogin);
+        }
+        if (source.BruteAttack != null) {
+            this.BruteAttack = new SecurityEventInfo(source.BruteAttack);
+        }
+        if (source.RiskDns != null) {
+            this.RiskDns = new SecurityEventInfo(source.RiskDns);
+        }
+        if (source.Bash != null) {
+            this.Bash = new SecurityEventInfo(source.Bash);
+        }
+        if (source.PrivilegeRules != null) {
+            this.PrivilegeRules = new SecurityEventInfo(source.PrivilegeRules);
+        }
+        if (source.ReverseShell != null) {
+            this.ReverseShell = new SecurityEventInfo(source.ReverseShell);
+        }
+        if (source.SysVul != null) {
+            this.SysVul = new SecurityEventInfo(source.SysVul);
+        }
+        if (source.WebVul != null) {
+            this.WebVul = new SecurityEventInfo(source.WebVul);
+        }
+        if (source.EmergencyVul != null) {
+            this.EmergencyVul = new SecurityEventInfo(source.EmergencyVul);
+        }
+        if (source.BaseLine != null) {
+            this.BaseLine = new SecurityEventInfo(source.BaseLine);
+        }
+        if (source.AttackLogs != null) {
+            this.AttackLogs = new SecurityEventInfo(source.AttackLogs);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -275,6 +275,50 @@ public class SecurityGroupPolicy extends AbstractModel{
         this.ModifyTime = ModifyTime;
     }
 
+    public SecurityGroupPolicy() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SecurityGroupPolicy(SecurityGroupPolicy source) {
+        if (source.PolicyIndex != null) {
+            this.PolicyIndex = new Long(source.PolicyIndex);
+        }
+        if (source.Protocol != null) {
+            this.Protocol = new String(source.Protocol);
+        }
+        if (source.Port != null) {
+            this.Port = new String(source.Port);
+        }
+        if (source.ServiceTemplate != null) {
+            this.ServiceTemplate = new ServiceTemplateSpecification(source.ServiceTemplate);
+        }
+        if (source.CidrBlock != null) {
+            this.CidrBlock = new String(source.CidrBlock);
+        }
+        if (source.Ipv6CidrBlock != null) {
+            this.Ipv6CidrBlock = new String(source.Ipv6CidrBlock);
+        }
+        if (source.SecurityGroupId != null) {
+            this.SecurityGroupId = new String(source.SecurityGroupId);
+        }
+        if (source.AddressTemplate != null) {
+            this.AddressTemplate = new AddressTemplateSpecification(source.AddressTemplate);
+        }
+        if (source.Action != null) {
+            this.Action = new String(source.Action);
+        }
+        if (source.PolicyDescription != null) {
+            this.PolicyDescription = new String(source.PolicyDescription);
+        }
+        if (source.ModifyTime != null) {
+            this.ModifyTime = new String(source.ModifyTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

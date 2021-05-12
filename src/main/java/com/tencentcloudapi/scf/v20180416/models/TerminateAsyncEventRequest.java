@@ -91,6 +91,26 @@ public class TerminateAsyncEventRequest extends AbstractModel{
         this.Namespace = Namespace;
     }
 
+    public TerminateAsyncEventRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TerminateAsyncEventRequest(TerminateAsyncEventRequest source) {
+        if (source.FunctionName != null) {
+            this.FunctionName = new String(source.FunctionName);
+        }
+        if (source.InvokeRequestId != null) {
+            this.InvokeRequestId = new String(source.InvokeRequestId);
+        }
+        if (source.Namespace != null) {
+            this.Namespace = new String(source.Namespace);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -144,6 +144,29 @@ public class LinkMaterial extends AbstractModel{
         this.LinkClassInfo = LinkClassInfo;
     }
 
+    public LinkMaterial() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public LinkMaterial(LinkMaterial source) {
+        if (source.LinkType != null) {
+            this.LinkType = new String(source.LinkType);
+        }
+        if (source.LinkStatus != null) {
+            this.LinkStatus = new String(source.LinkStatus);
+        }
+        if (source.LinkMaterialInfo != null) {
+            this.LinkMaterialInfo = new LinkMaterialInfo(source.LinkMaterialInfo);
+        }
+        if (source.LinkClassInfo != null) {
+            this.LinkClassInfo = new ClassInfo(source.LinkClassInfo);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

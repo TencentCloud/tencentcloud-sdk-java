@@ -45,6 +45,23 @@ public class DeleteOrganizationMembersRequest extends AbstractModel{
         this.Uins = Uins;
     }
 
+    public DeleteOrganizationMembersRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteOrganizationMembersRequest(DeleteOrganizationMembersRequest source) {
+        if (source.Uins != null) {
+            this.Uins = new Long[source.Uins.length];
+            for (int i = 0; i < source.Uins.length; i++) {
+                this.Uins[i] = new Long(source.Uins[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

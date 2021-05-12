@@ -91,6 +91,26 @@ public class QueryExchangeRateRequest extends AbstractModel{
         this.Profile = Profile;
     }
 
+    public QueryExchangeRateRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public QueryExchangeRateRequest(QueryExchangeRateRequest source) {
+        if (source.SourceCurrency != null) {
+            this.SourceCurrency = new String(source.SourceCurrency);
+        }
+        if (source.TargetCurrency != null) {
+            this.TargetCurrency = new String(source.TargetCurrency);
+        }
+        if (source.Profile != null) {
+            this.Profile = new String(source.Profile);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

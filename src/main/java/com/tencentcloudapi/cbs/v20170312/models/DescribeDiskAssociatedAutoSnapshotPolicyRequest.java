@@ -45,6 +45,20 @@ public class DescribeDiskAssociatedAutoSnapshotPolicyRequest extends AbstractMod
         this.DiskId = DiskId;
     }
 
+    public DescribeDiskAssociatedAutoSnapshotPolicyRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeDiskAssociatedAutoSnapshotPolicyRequest(DescribeDiskAssociatedAutoSnapshotPolicyRequest source) {
+        if (source.DiskId != null) {
+            this.DiskId = new String(source.DiskId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -45,6 +45,23 @@ public class SoInfo extends AbstractModel{
         this.SoFileNames = SoFileNames;
     }
 
+    public SoInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SoInfo(SoInfo source) {
+        if (source.SoFileNames != null) {
+            this.SoFileNames = new String[source.SoFileNames.length];
+            for (int i = 0; i < source.SoFileNames.length; i++) {
+                this.SoFileNames[i] = new String(source.SoFileNames[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

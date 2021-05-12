@@ -106,6 +106,26 @@ public class OutputManageMarketingRisk extends AbstractModel{
         this.Value = Value;
     }
 
+    public OutputManageMarketingRisk() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public OutputManageMarketingRisk(OutputManageMarketingRisk source) {
+        if (source.Code != null) {
+            this.Code = new Long(source.Code);
+        }
+        if (source.Message != null) {
+            this.Message = new String(source.Message);
+        }
+        if (source.Value != null) {
+            this.Value = new OutputManageMarketingRiskValue(source.Value);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

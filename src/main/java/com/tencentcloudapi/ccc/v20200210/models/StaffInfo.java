@@ -213,6 +213,41 @@ public class StaffInfo extends AbstractModel{
         this.LastModifyTimestamp = LastModifyTimestamp;
     }
 
+    public StaffInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public StaffInfo(StaffInfo source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Mail != null) {
+            this.Mail = new String(source.Mail);
+        }
+        if (source.Phone != null) {
+            this.Phone = new String(source.Phone);
+        }
+        if (source.Nick != null) {
+            this.Nick = new String(source.Nick);
+        }
+        if (source.StaffNumber != null) {
+            this.StaffNumber = new String(source.StaffNumber);
+        }
+        if (source.SkillGroupList != null) {
+            this.SkillGroupList = new SkillGroupItem[source.SkillGroupList.length];
+            for (int i = 0; i < source.SkillGroupList.length; i++) {
+                this.SkillGroupList[i] = new SkillGroupItem(source.SkillGroupList[i]);
+            }
+        }
+        if (source.LastModifyTimestamp != null) {
+            this.LastModifyTimestamp = new Long(source.LastModifyTimestamp);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

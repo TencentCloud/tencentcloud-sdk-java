@@ -96,6 +96,29 @@ public class DescribeDomainsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeDomainsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeDomainsResponse(DescribeDomainsResponse source) {
+        if (source.Domains != null) {
+            this.Domains = new BriefDomain[source.Domains.length];
+            for (int i = 0; i < source.Domains.length; i++) {
+                this.Domains[i] = new BriefDomain(source.Domains[i]);
+            }
+        }
+        if (source.TotalNumber != null) {
+            this.TotalNumber = new Long(source.TotalNumber);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -91,6 +91,26 @@ public class CallDetailItem extends AbstractModel{
         this.Date = Date;
     }
 
+    public CallDetailItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CallDetailItem(CallDetailItem source) {
+        if (source.DataType != null) {
+            this.DataType = new Long(source.DataType);
+        }
+        if (source.ValidAmount != null) {
+            this.ValidAmount = new Long(source.ValidAmount);
+        }
+        if (source.Date != null) {
+            this.Date = new String(source.Date);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

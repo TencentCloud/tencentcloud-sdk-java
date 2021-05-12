@@ -68,6 +68,26 @@ public class DomainAreaConfig extends AbstractModel{
         this.Area = Area;
     }
 
+    public DomainAreaConfig() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DomainAreaConfig(DomainAreaConfig source) {
+        if (source.Domain != null) {
+            this.Domain = new String(source.Domain);
+        }
+        if (source.Area != null) {
+            this.Area = new String[source.Area.length];
+            for (int i = 0; i < source.Area.length; i++) {
+                this.Area[i] = new String(source.Area[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

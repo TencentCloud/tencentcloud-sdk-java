@@ -367,6 +367,65 @@ public class CynosdbInstanceGrp extends AbstractModel{
         this.InstanceSet = InstanceSet;
     }
 
+    public CynosdbInstanceGrp() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CynosdbInstanceGrp(CynosdbInstanceGrp source) {
+        if (source.AppId != null) {
+            this.AppId = new Long(source.AppId);
+        }
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
+        if (source.CreatedTime != null) {
+            this.CreatedTime = new String(source.CreatedTime);
+        }
+        if (source.DeletedTime != null) {
+            this.DeletedTime = new String(source.DeletedTime);
+        }
+        if (source.InstanceGrpId != null) {
+            this.InstanceGrpId = new String(source.InstanceGrpId);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.UpdatedTime != null) {
+            this.UpdatedTime = new String(source.UpdatedTime);
+        }
+        if (source.Vip != null) {
+            this.Vip = new String(source.Vip);
+        }
+        if (source.Vport != null) {
+            this.Vport = new Long(source.Vport);
+        }
+        if (source.WanDomain != null) {
+            this.WanDomain = new String(source.WanDomain);
+        }
+        if (source.WanIP != null) {
+            this.WanIP = new String(source.WanIP);
+        }
+        if (source.WanPort != null) {
+            this.WanPort = new Long(source.WanPort);
+        }
+        if (source.WanStatus != null) {
+            this.WanStatus = new String(source.WanStatus);
+        }
+        if (source.InstanceSet != null) {
+            this.InstanceSet = new CynosdbInstance[source.InstanceSet.length];
+            for (int i = 0; i < source.InstanceSet.length; i++) {
+                this.InstanceSet[i] = new CynosdbInstance(source.InstanceSet[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

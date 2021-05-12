@@ -129,6 +129,29 @@ public class DescribeImageConfigResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeImageConfigResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeImageConfigResponse(DescribeImageConfigResponse source) {
+        if (source.WebpAdapter != null) {
+            this.WebpAdapter = new WebpAdapter(source.WebpAdapter);
+        }
+        if (source.TpgAdapter != null) {
+            this.TpgAdapter = new TpgAdapter(source.TpgAdapter);
+        }
+        if (source.GuetzliAdapter != null) {
+            this.GuetzliAdapter = new GuetzliAdapter(source.GuetzliAdapter);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

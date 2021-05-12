@@ -45,6 +45,20 @@ public class BindCluster extends AbstractModel{
         this.ClusterName = ClusterName;
     }
 
+    public BindCluster() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public BindCluster(BindCluster source) {
+        if (source.ClusterName != null) {
+            this.ClusterName = new String(source.ClusterName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

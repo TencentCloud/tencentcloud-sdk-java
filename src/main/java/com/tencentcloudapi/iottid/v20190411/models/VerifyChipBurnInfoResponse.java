@@ -114,6 +114,29 @@ public class VerifyChipBurnInfoResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public VerifyChipBurnInfoResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public VerifyChipBurnInfoResponse(VerifyChipBurnInfoResponse source) {
+        if (source.Pass != null) {
+            this.Pass = new Boolean(source.Pass);
+        }
+        if (source.VerifiedTimes != null) {
+            this.VerifiedTimes = new Long(source.VerifiedTimes);
+        }
+        if (source.LeftTimes != null) {
+            this.LeftTimes = new Long(source.LeftTimes);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

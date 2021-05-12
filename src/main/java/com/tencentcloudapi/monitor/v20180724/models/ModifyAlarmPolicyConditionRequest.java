@@ -137,6 +137,32 @@ public class ModifyAlarmPolicyConditionRequest extends AbstractModel{
         this.EventCondition = EventCondition;
     }
 
+    public ModifyAlarmPolicyConditionRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyAlarmPolicyConditionRequest(ModifyAlarmPolicyConditionRequest source) {
+        if (source.Module != null) {
+            this.Module = new String(source.Module);
+        }
+        if (source.PolicyId != null) {
+            this.PolicyId = new String(source.PolicyId);
+        }
+        if (source.ConditionTemplateId != null) {
+            this.ConditionTemplateId = new Long(source.ConditionTemplateId);
+        }
+        if (source.Condition != null) {
+            this.Condition = new AlarmPolicyCondition(source.Condition);
+        }
+        if (source.EventCondition != null) {
+            this.EventCondition = new AlarmPolicyEventCondition(source.EventCondition);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

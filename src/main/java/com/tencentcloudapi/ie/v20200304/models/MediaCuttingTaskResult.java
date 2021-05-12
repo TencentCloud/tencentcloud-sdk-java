@@ -134,6 +134,29 @@ public class MediaCuttingTaskResult extends AbstractModel{
         this.LastFile = LastFile;
     }
 
+    public MediaCuttingTaskResult() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MediaCuttingTaskResult(MediaCuttingTaskResult source) {
+        if (source.ListFile != null) {
+            this.ListFile = new TaskResultFile(source.ListFile);
+        }
+        if (source.ResultCount != null) {
+            this.ResultCount = new Long(source.ResultCount);
+        }
+        if (source.FirstFile != null) {
+            this.FirstFile = new TaskResultFile(source.FirstFile);
+        }
+        if (source.LastFile != null) {
+            this.LastFile = new TaskResultFile(source.LastFile);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

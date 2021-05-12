@@ -45,6 +45,23 @@ public class IngressRuleValue extends AbstractModel{
         this.Paths = Paths;
     }
 
+    public IngressRuleValue() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public IngressRuleValue(IngressRuleValue source) {
+        if (source.Paths != null) {
+            this.Paths = new IngressRulePath[source.Paths.length];
+            for (int i = 0; i < source.Paths.length; i++) {
+                this.Paths[i] = new IngressRulePath(source.Paths[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

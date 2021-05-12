@@ -234,6 +234,44 @@ public class ModifyLiveCallbackTemplateRequest extends AbstractModel{
         this.CallbackKey = CallbackKey;
     }
 
+    public ModifyLiveCallbackTemplateRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyLiveCallbackTemplateRequest(ModifyLiveCallbackTemplateRequest source) {
+        if (source.TemplateId != null) {
+            this.TemplateId = new Long(source.TemplateId);
+        }
+        if (source.TemplateName != null) {
+            this.TemplateName = new String(source.TemplateName);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.StreamBeginNotifyUrl != null) {
+            this.StreamBeginNotifyUrl = new String(source.StreamBeginNotifyUrl);
+        }
+        if (source.StreamEndNotifyUrl != null) {
+            this.StreamEndNotifyUrl = new String(source.StreamEndNotifyUrl);
+        }
+        if (source.RecordNotifyUrl != null) {
+            this.RecordNotifyUrl = new String(source.RecordNotifyUrl);
+        }
+        if (source.SnapshotNotifyUrl != null) {
+            this.SnapshotNotifyUrl = new String(source.SnapshotNotifyUrl);
+        }
+        if (source.PornCensorshipNotifyUrl != null) {
+            this.PornCensorshipNotifyUrl = new String(source.PornCensorshipNotifyUrl);
+        }
+        if (source.CallbackKey != null) {
+            this.CallbackKey = new String(source.CallbackKey);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

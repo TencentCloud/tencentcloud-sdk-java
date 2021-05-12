@@ -91,6 +91,26 @@ public class ExecuteScalingPolicyRequest extends AbstractModel{
         this.TriggerSource = TriggerSource;
     }
 
+    public ExecuteScalingPolicyRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ExecuteScalingPolicyRequest(ExecuteScalingPolicyRequest source) {
+        if (source.AutoScalingPolicyId != null) {
+            this.AutoScalingPolicyId = new String(source.AutoScalingPolicyId);
+        }
+        if (source.HonorCooldown != null) {
+            this.HonorCooldown = new Boolean(source.HonorCooldown);
+        }
+        if (source.TriggerSource != null) {
+            this.TriggerSource = new String(source.TriggerSource);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

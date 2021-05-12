@@ -182,6 +182,38 @@ public class FaceConfigureInfoForUpdate extends AbstractModel{
         this.FaceLibrary = FaceLibrary;
     }
 
+    public FaceConfigureInfoForUpdate() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public FaceConfigureInfoForUpdate(FaceConfigureInfoForUpdate source) {
+        if (source.Switch != null) {
+            this.Switch = new String(source.Switch);
+        }
+        if (source.Score != null) {
+            this.Score = new Float(source.Score);
+        }
+        if (source.DefaultLibraryLabelSet != null) {
+            this.DefaultLibraryLabelSet = new String[source.DefaultLibraryLabelSet.length];
+            for (int i = 0; i < source.DefaultLibraryLabelSet.length; i++) {
+                this.DefaultLibraryLabelSet[i] = new String(source.DefaultLibraryLabelSet[i]);
+            }
+        }
+        if (source.UserDefineLibraryLabelSet != null) {
+            this.UserDefineLibraryLabelSet = new String[source.UserDefineLibraryLabelSet.length];
+            for (int i = 0; i < source.UserDefineLibraryLabelSet.length; i++) {
+                this.UserDefineLibraryLabelSet[i] = new String(source.UserDefineLibraryLabelSet[i]);
+            }
+        }
+        if (source.FaceLibrary != null) {
+            this.FaceLibrary = new String(source.FaceLibrary);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

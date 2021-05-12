@@ -45,6 +45,23 @@ public class ExportPrivilegeEventsRequest extends AbstractModel{
         this.Filters = Filters;
     }
 
+    public ExportPrivilegeEventsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ExportPrivilegeEventsRequest(ExportPrivilegeEventsRequest source) {
+        if (source.Filters != null) {
+            this.Filters = new Filters[source.Filters.length];
+            for (int i = 0; i < source.Filters.length; i++) {
+                this.Filters[i] = new Filters(source.Filters[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

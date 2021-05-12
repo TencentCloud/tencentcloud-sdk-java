@@ -137,6 +137,32 @@ public class ModifyClusterPasswordRequest extends AbstractModel{
         this.Mode = Mode;
     }
 
+    public ModifyClusterPasswordRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyClusterPasswordRequest(ModifyClusterPasswordRequest source) {
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
+        if (source.OldPassword != null) {
+            this.OldPassword = new String(source.OldPassword);
+        }
+        if (source.OldPasswordExpireTime != null) {
+            this.OldPasswordExpireTime = new String(source.OldPasswordExpireTime);
+        }
+        if (source.NewPassword != null) {
+            this.NewPassword = new String(source.NewPassword);
+        }
+        if (source.Mode != null) {
+            this.Mode = new String(source.Mode);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

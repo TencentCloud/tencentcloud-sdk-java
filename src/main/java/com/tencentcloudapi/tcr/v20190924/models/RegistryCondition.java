@@ -96,6 +96,26 @@ public class RegistryCondition extends AbstractModel{
         this.Reason = Reason;
     }
 
+    public RegistryCondition() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RegistryCondition(RegistryCondition source) {
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.Reason != null) {
+            this.Reason = new String(source.Reason);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

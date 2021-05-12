@@ -68,6 +68,23 @@ public class PurchaseReservedInstancesOfferingResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public PurchaseReservedInstancesOfferingResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PurchaseReservedInstancesOfferingResponse(PurchaseReservedInstancesOfferingResponse source) {
+        if (source.ReservedInstanceId != null) {
+            this.ReservedInstanceId = new String(source.ReservedInstanceId);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

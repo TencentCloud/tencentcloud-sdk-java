@@ -68,6 +68,26 @@ public class ModifyPullStreamStatusRequest extends AbstractModel{
         this.Status = Status;
     }
 
+    public ModifyPullStreamStatusRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyPullStreamStatusRequest(ModifyPullStreamStatusRequest source) {
+        if (source.ConfigIds != null) {
+            this.ConfigIds = new String[source.ConfigIds.length];
+            for (int i = 0; i < source.ConfigIds.length; i++) {
+                this.ConfigIds[i] = new String(source.ConfigIds[i]);
+            }
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

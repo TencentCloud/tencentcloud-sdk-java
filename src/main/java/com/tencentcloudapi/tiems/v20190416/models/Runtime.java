@@ -203,6 +203,38 @@ public class Runtime extends AbstractModel{
         this.CreateTime = CreateTime;
     }
 
+    public Runtime() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Runtime(Runtime source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Framework != null) {
+            this.Framework = new String(source.Framework);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.Public != null) {
+            this.Public = new Boolean(source.Public);
+        }
+        if (source.HealthCheckOn != null) {
+            this.HealthCheckOn = new Boolean(source.HealthCheckOn);
+        }
+        if (source.Image != null) {
+            this.Image = new String(source.Image);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

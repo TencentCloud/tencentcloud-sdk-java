@@ -116,6 +116,26 @@ public class Candidate extends AbstractModel{
         this.Score = Score;
     }
 
+    public Candidate() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Candidate(Candidate source) {
+        if (source.PersonId != null) {
+            this.PersonId = new String(source.PersonId);
+        }
+        if (source.TraceId != null) {
+            this.TraceId = new String(source.TraceId);
+        }
+        if (source.Score != null) {
+            this.Score = new Float(source.Score);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

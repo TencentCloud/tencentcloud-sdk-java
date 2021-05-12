@@ -45,6 +45,20 @@ public class TerminateSegmentationTaskRequest extends AbstractModel{
         this.TaskID = TaskID;
     }
 
+    public TerminateSegmentationTaskRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TerminateSegmentationTaskRequest(TerminateSegmentationTaskRequest source) {
+        if (source.TaskID != null) {
+            this.TaskID = new String(source.TaskID);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -68,6 +68,23 @@ public class LowerBodyClothLength extends AbstractModel{
         this.Probability = Probability;
     }
 
+    public LowerBodyClothLength() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public LowerBodyClothLength(LowerBodyClothLength source) {
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.Probability != null) {
+            this.Probability = new Float(source.Probability);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -157,6 +157,32 @@ public class ResourceTemplateHeader extends AbstractModel{
         this.Title = Title;
     }
 
+    public ResourceTemplateHeader() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ResourceTemplateHeader(ResourceTemplateHeader source) {
+        if (source.Content != null) {
+            this.Content = new String(source.Content);
+        }
+        if (source.Example != null) {
+            this.Example = new String(source.Example);
+        }
+        if (source.KeyArray != null) {
+            this.KeyArray = new String(source.KeyArray);
+        }
+        if (source.TemplateId != null) {
+            this.TemplateId = new String(source.TemplateId);
+        }
+        if (source.Title != null) {
+            this.Title = new String(source.Title);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

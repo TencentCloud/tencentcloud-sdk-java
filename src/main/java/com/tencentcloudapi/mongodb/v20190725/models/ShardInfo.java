@@ -206,6 +206,41 @@ public class ShardInfo extends AbstractModel{
         this.RealReplicaSetId = RealReplicaSetId;
     }
 
+    public ShardInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ShardInfo(ShardInfo source) {
+        if (source.UsedVolume != null) {
+            this.UsedVolume = new Float(source.UsedVolume);
+        }
+        if (source.ReplicaSetId != null) {
+            this.ReplicaSetId = new String(source.ReplicaSetId);
+        }
+        if (source.ReplicaSetName != null) {
+            this.ReplicaSetName = new String(source.ReplicaSetName);
+        }
+        if (source.Memory != null) {
+            this.Memory = new Long(source.Memory);
+        }
+        if (source.Volume != null) {
+            this.Volume = new Long(source.Volume);
+        }
+        if (source.OplogSize != null) {
+            this.OplogSize = new Long(source.OplogSize);
+        }
+        if (source.SecondaryNum != null) {
+            this.SecondaryNum = new Long(source.SecondaryNum);
+        }
+        if (source.RealReplicaSetId != null) {
+            this.RealReplicaSetId = new String(source.RealReplicaSetId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -137,6 +137,32 @@ public class TextProcessRequest extends AbstractModel{
         this.SessionAttributes = SessionAttributes;
     }
 
+    public TextProcessRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TextProcessRequest(TextProcessRequest source) {
+        if (source.BotId != null) {
+            this.BotId = new String(source.BotId);
+        }
+        if (source.TerminalId != null) {
+            this.TerminalId = new String(source.TerminalId);
+        }
+        if (source.InputText != null) {
+            this.InputText = new String(source.InputText);
+        }
+        if (source.BotEnv != null) {
+            this.BotEnv = new String(source.BotEnv);
+        }
+        if (source.SessionAttributes != null) {
+            this.SessionAttributes = new String(source.SessionAttributes);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

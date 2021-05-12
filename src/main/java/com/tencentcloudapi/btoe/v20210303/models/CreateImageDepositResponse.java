@@ -96,6 +96,26 @@ public class CreateImageDepositResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public CreateImageDepositResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateImageDepositResponse(CreateImageDepositResponse source) {
+        if (source.BusinessId != null) {
+            this.BusinessId = new String(source.BusinessId);
+        }
+        if (source.EvidenceId != null) {
+            this.EvidenceId = new String(source.EvidenceId);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

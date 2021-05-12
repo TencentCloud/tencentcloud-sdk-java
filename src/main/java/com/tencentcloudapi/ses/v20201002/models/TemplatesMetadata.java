@@ -137,6 +137,32 @@ public class TemplatesMetadata extends AbstractModel{
         this.ReviewReason = ReviewReason;
     }
 
+    public TemplatesMetadata() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TemplatesMetadata(TemplatesMetadata source) {
+        if (source.CreatedTimestamp != null) {
+            this.CreatedTimestamp = new Long(source.CreatedTimestamp);
+        }
+        if (source.TemplateName != null) {
+            this.TemplateName = new String(source.TemplateName);
+        }
+        if (source.TemplateStatus != null) {
+            this.TemplateStatus = new Long(source.TemplateStatus);
+        }
+        if (source.TemplateID != null) {
+            this.TemplateID = new Long(source.TemplateID);
+        }
+        if (source.ReviewReason != null) {
+            this.ReviewReason = new String(source.ReviewReason);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

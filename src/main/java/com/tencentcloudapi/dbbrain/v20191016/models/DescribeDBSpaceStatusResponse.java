@@ -137,6 +137,32 @@ public class DescribeDBSpaceStatusResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeDBSpaceStatusResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeDBSpaceStatusResponse(DescribeDBSpaceStatusResponse source) {
+        if (source.Growth != null) {
+            this.Growth = new Long(source.Growth);
+        }
+        if (source.Remain != null) {
+            this.Remain = new Long(source.Remain);
+        }
+        if (source.Total != null) {
+            this.Total = new Long(source.Total);
+        }
+        if (source.AvailableDays != null) {
+            this.AvailableDays = new Long(source.AvailableDays);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

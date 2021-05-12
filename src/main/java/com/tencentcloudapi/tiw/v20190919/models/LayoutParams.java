@@ -142,6 +142,32 @@ z轴确定了重叠画面的遮盖顺序，z轴值大的画面处于顶层
         this.ZOrder = ZOrder;
     }
 
+    public LayoutParams() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public LayoutParams(LayoutParams source) {
+        if (source.Width != null) {
+            this.Width = new Long(source.Width);
+        }
+        if (source.Height != null) {
+            this.Height = new Long(source.Height);
+        }
+        if (source.X != null) {
+            this.X = new Long(source.X);
+        }
+        if (source.Y != null) {
+            this.Y = new Long(source.Y);
+        }
+        if (source.ZOrder != null) {
+            this.ZOrder = new Long(source.ZOrder);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

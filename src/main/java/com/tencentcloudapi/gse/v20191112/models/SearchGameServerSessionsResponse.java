@@ -101,6 +101,29 @@ public class SearchGameServerSessionsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public SearchGameServerSessionsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SearchGameServerSessionsResponse(SearchGameServerSessionsResponse source) {
+        if (source.GameServerSessions != null) {
+            this.GameServerSessions = new GameServerSession[source.GameServerSessions.length];
+            for (int i = 0; i < source.GameServerSessions.length; i++) {
+                this.GameServerSessions[i] = new GameServerSession(source.GameServerSessions[i]);
+            }
+        }
+        if (source.NextToken != null) {
+            this.NextToken = new String(source.NextToken);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

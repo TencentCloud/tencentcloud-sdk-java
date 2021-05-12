@@ -302,6 +302,47 @@ public class TransactionItem extends AbstractModel{
         this.Remark = Remark;
     }
 
+    public TransactionItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TransactionItem(TransactionItem source) {
+        if (source.BookingFlag != null) {
+            this.BookingFlag = new String(source.BookingFlag);
+        }
+        if (source.TranStatus != null) {
+            this.TranStatus = new String(source.TranStatus);
+        }
+        if (source.TranAmt != null) {
+            this.TranAmt = new String(source.TranAmt);
+        }
+        if (source.TranDate != null) {
+            this.TranDate = new String(source.TranDate);
+        }
+        if (source.TranTime != null) {
+            this.TranTime = new String(source.TranTime);
+        }
+        if (source.FrontSeqNo != null) {
+            this.FrontSeqNo = new String(source.FrontSeqNo);
+        }
+        if (source.BookingType != null) {
+            this.BookingType = new String(source.BookingType);
+        }
+        if (source.InSubAcctNo != null) {
+            this.InSubAcctNo = new String(source.InSubAcctNo);
+        }
+        if (source.OutSubAcctNo != null) {
+            this.OutSubAcctNo = new String(source.OutSubAcctNo);
+        }
+        if (source.Remark != null) {
+            this.Remark = new String(source.Remark);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

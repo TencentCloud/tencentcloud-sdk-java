@@ -229,6 +229,44 @@ public class BrandReportArticle extends AbstractModel{
         this.ArticleId = ArticleId;
     }
 
+    public BrandReportArticle() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public BrandReportArticle(BrandReportArticle source) {
+        if (source.Title != null) {
+            this.Title = new String(source.Title);
+        }
+        if (source.Url != null) {
+            this.Url = new String(source.Url);
+        }
+        if (source.FromSite != null) {
+            this.FromSite = new String(source.FromSite);
+        }
+        if (source.PubTime != null) {
+            this.PubTime = new String(source.PubTime);
+        }
+        if (source.Flag != null) {
+            this.Flag = new Long(source.Flag);
+        }
+        if (source.Hot != null) {
+            this.Hot = new Long(source.Hot);
+        }
+        if (source.Level != null) {
+            this.Level = new Long(source.Level);
+        }
+        if (source.Abstract != null) {
+            this.Abstract = new String(source.Abstract);
+        }
+        if (source.ArticleId != null) {
+            this.ArticleId = new String(source.ArticleId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

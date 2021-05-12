@@ -114,6 +114,32 @@ public class RuleBriefInfo extends AbstractModel{
         this.RuleCode = RuleCode;
     }
 
+    public RuleBriefInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RuleBriefInfo(RuleBriefInfo source) {
+        if (source.RuleName != null) {
+            this.RuleName = new String(source.RuleName);
+        }
+        if (source.MatchCodeList != null) {
+            this.MatchCodeList = new StringKV[source.MatchCodeList.length];
+            for (int i = 0; i < source.MatchCodeList.length; i++) {
+                this.MatchCodeList[i] = new StringKV(source.MatchCodeList[i]);
+            }
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.RuleCode != null) {
+            this.RuleCode = new String(source.RuleCode);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

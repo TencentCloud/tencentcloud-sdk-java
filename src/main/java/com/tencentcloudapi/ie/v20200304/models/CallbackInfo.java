@@ -45,6 +45,20 @@ public class CallbackInfo extends AbstractModel{
         this.Url = Url;
     }
 
+    public CallbackInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CallbackInfo(CallbackInfo source) {
+        if (source.Url != null) {
+            this.Url = new String(source.Url);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

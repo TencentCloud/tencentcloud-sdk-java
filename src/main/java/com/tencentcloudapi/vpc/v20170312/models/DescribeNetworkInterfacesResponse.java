@@ -91,6 +91,29 @@ public class DescribeNetworkInterfacesResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeNetworkInterfacesResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeNetworkInterfacesResponse(DescribeNetworkInterfacesResponse source) {
+        if (source.NetworkInterfaceSet != null) {
+            this.NetworkInterfaceSet = new NetworkInterface[source.NetworkInterfaceSet.length];
+            for (int i = 0; i < source.NetworkInterfaceSet.length; i++) {
+                this.NetworkInterfaceSet[i] = new NetworkInterface(source.NetworkInterfaceSet[i]);
+            }
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -91,6 +91,29 @@ public class EnterpriseLicenseOCRResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public EnterpriseLicenseOCRResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public EnterpriseLicenseOCRResponse(EnterpriseLicenseOCRResponse source) {
+        if (source.EnterpriseLicenseInfos != null) {
+            this.EnterpriseLicenseInfos = new EnterpriseLicenseInfo[source.EnterpriseLicenseInfos.length];
+            for (int i = 0; i < source.EnterpriseLicenseInfos.length; i++) {
+                this.EnterpriseLicenseInfos[i] = new EnterpriseLicenseInfo(source.EnterpriseLicenseInfos[i]);
+            }
+        }
+        if (source.Angle != null) {
+            this.Angle = new Float(source.Angle);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

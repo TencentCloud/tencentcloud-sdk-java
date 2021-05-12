@@ -68,6 +68,23 @@ public class DescribeSmpnMhmRequest extends AbstractModel{
         this.ResourceId = ResourceId;
     }
 
+    public DescribeSmpnMhmRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeSmpnMhmRequest(DescribeSmpnMhmRequest source) {
+        if (source.RequestData != null) {
+            this.RequestData = new MHMRequest(source.RequestData);
+        }
+        if (source.ResourceId != null) {
+            this.ResourceId = new String(source.ResourceId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

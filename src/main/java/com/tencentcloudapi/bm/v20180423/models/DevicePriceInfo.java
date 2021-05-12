@@ -413,6 +413,68 @@ public class DevicePriceInfo extends AbstractModel{
         this.GoodsCount = GoodsCount;
     }
 
+    public DevicePriceInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DevicePriceInfo(DevicePriceInfo source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.DeviceClassCode != null) {
+            this.DeviceClassCode = new String(source.DeviceClassCode);
+        }
+        if (source.IsElastic != null) {
+            this.IsElastic = new Long(source.IsElastic);
+        }
+        if (source.CpmPayMode != null) {
+            this.CpmPayMode = new Long(source.CpmPayMode);
+        }
+        if (source.CpuDescription != null) {
+            this.CpuDescription = new String(source.CpuDescription);
+        }
+        if (source.MemDescription != null) {
+            this.MemDescription = new String(source.MemDescription);
+        }
+        if (source.DiskDescription != null) {
+            this.DiskDescription = new String(source.DiskDescription);
+        }
+        if (source.NicDescription != null) {
+            this.NicDescription = new String(source.NicDescription);
+        }
+        if (source.GpuDescription != null) {
+            this.GpuDescription = new String(source.GpuDescription);
+        }
+        if (source.RaidDescription != null) {
+            this.RaidDescription = new String(source.RaidDescription);
+        }
+        if (source.Price != null) {
+            this.Price = new Long(source.Price);
+        }
+        if (source.NormalPrice != null) {
+            this.NormalPrice = new Long(source.NormalPrice);
+        }
+        if (source.TotalCost != null) {
+            this.TotalCost = new Long(source.TotalCost);
+        }
+        if (source.RealTotalCost != null) {
+            this.RealTotalCost = new Long(source.RealTotalCost);
+        }
+        if (source.TimeSpan != null) {
+            this.TimeSpan = new Long(source.TimeSpan);
+        }
+        if (source.TimeUnit != null) {
+            this.TimeUnit = new String(source.TimeUnit);
+        }
+        if (source.GoodsCount != null) {
+            this.GoodsCount = new Long(source.GoodsCount);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

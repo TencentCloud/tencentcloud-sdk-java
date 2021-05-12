@@ -68,6 +68,26 @@ public class BillAreaInfo extends AbstractModel{
         this.Countrys = Countrys;
     }
 
+    public BillAreaInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public BillAreaInfo(BillAreaInfo source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Countrys != null) {
+            this.Countrys = new BillCountryInfo[source.Countrys.length];
+            for (int i = 0; i < source.Countrys.length; i++) {
+                this.Countrys[i] = new BillCountryInfo(source.Countrys[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

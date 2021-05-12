@@ -183,6 +183,44 @@ public class SecurityGroup extends AbstractModel{
         this.Outbound = Outbound;
     }
 
+    public SecurityGroup() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SecurityGroup(SecurityGroup source) {
+        if (source.ProjectId != null) {
+            this.ProjectId = new Long(source.ProjectId);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.SecurityGroupId != null) {
+            this.SecurityGroupId = new String(source.SecurityGroupId);
+        }
+        if (source.SecurityGroupName != null) {
+            this.SecurityGroupName = new String(source.SecurityGroupName);
+        }
+        if (source.SecurityGroupRemark != null) {
+            this.SecurityGroupRemark = new String(source.SecurityGroupRemark);
+        }
+        if (source.Inbound != null) {
+            this.Inbound = new SecurityGroupBound[source.Inbound.length];
+            for (int i = 0; i < source.Inbound.length; i++) {
+                this.Inbound[i] = new SecurityGroupBound(source.Inbound[i]);
+            }
+        }
+        if (source.Outbound != null) {
+            this.Outbound = new SecurityGroupBound[source.Outbound.length];
+            for (int i = 0; i < source.Outbound.length; i++) {
+                this.Outbound[i] = new SecurityGroupBound(source.Outbound[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

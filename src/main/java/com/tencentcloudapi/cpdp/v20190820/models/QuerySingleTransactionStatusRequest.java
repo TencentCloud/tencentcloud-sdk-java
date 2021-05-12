@@ -183,6 +183,38 @@ public class QuerySingleTransactionStatusRequest extends AbstractModel{
         this.Profile = Profile;
     }
 
+    public QuerySingleTransactionStatusRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public QuerySingleTransactionStatusRequest(QuerySingleTransactionStatusRequest source) {
+        if (source.MrchCode != null) {
+            this.MrchCode = new String(source.MrchCode);
+        }
+        if (source.FunctionFlag != null) {
+            this.FunctionFlag = new String(source.FunctionFlag);
+        }
+        if (source.TranNetSeqNo != null) {
+            this.TranNetSeqNo = new String(source.TranNetSeqNo);
+        }
+        if (source.SubAcctNo != null) {
+            this.SubAcctNo = new String(source.SubAcctNo);
+        }
+        if (source.TranDate != null) {
+            this.TranDate = new String(source.TranDate);
+        }
+        if (source.ReservedMsg != null) {
+            this.ReservedMsg = new String(source.ReservedMsg);
+        }
+        if (source.Profile != null) {
+            this.Profile = new String(source.Profile);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

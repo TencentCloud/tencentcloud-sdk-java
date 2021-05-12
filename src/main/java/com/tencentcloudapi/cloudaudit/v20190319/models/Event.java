@@ -400,6 +400,65 @@ public class Event extends AbstractModel{
         this.EventRegion = EventRegion;
     }
 
+    public Event() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Event(Event source) {
+        if (source.EventId != null) {
+            this.EventId = new String(source.EventId);
+        }
+        if (source.Username != null) {
+            this.Username = new String(source.Username);
+        }
+        if (source.EventTime != null) {
+            this.EventTime = new String(source.EventTime);
+        }
+        if (source.CloudAuditEvent != null) {
+            this.CloudAuditEvent = new String(source.CloudAuditEvent);
+        }
+        if (source.ResourceTypeCn != null) {
+            this.ResourceTypeCn = new String(source.ResourceTypeCn);
+        }
+        if (source.ErrorCode != null) {
+            this.ErrorCode = new Long(source.ErrorCode);
+        }
+        if (source.EventName != null) {
+            this.EventName = new String(source.EventName);
+        }
+        if (source.SecretId != null) {
+            this.SecretId = new String(source.SecretId);
+        }
+        if (source.EventSource != null) {
+            this.EventSource = new String(source.EventSource);
+        }
+        if (source.RequestID != null) {
+            this.RequestID = new String(source.RequestID);
+        }
+        if (source.ResourceRegion != null) {
+            this.ResourceRegion = new String(source.ResourceRegion);
+        }
+        if (source.AccountID != null) {
+            this.AccountID = new Long(source.AccountID);
+        }
+        if (source.SourceIPAddress != null) {
+            this.SourceIPAddress = new String(source.SourceIPAddress);
+        }
+        if (source.EventNameCn != null) {
+            this.EventNameCn = new String(source.EventNameCn);
+        }
+        if (source.Resources != null) {
+            this.Resources = new Resource(source.Resources);
+        }
+        if (source.EventRegion != null) {
+            this.EventRegion = new String(source.EventRegion);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -101,6 +101,26 @@ public class AwsPrivateAccess extends AbstractModel{
         this.SecretKey = SecretKey;
     }
 
+    public AwsPrivateAccess() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AwsPrivateAccess(AwsPrivateAccess source) {
+        if (source.Switch != null) {
+            this.Switch = new String(source.Switch);
+        }
+        if (source.AccessKey != null) {
+            this.AccessKey = new String(source.AccessKey);
+        }
+        if (source.SecretKey != null) {
+            this.SecretKey = new String(source.SecretKey);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

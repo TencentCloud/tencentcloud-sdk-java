@@ -68,6 +68,23 @@ public class Ports extends AbstractModel{
         this.Protocol = Protocol;
     }
 
+    public Ports() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Ports(Ports source) {
+        if (source.TargetPort != null) {
+            this.TargetPort = new Long(source.TargetPort);
+        }
+        if (source.Protocol != null) {
+            this.Protocol = new String(source.Protocol);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

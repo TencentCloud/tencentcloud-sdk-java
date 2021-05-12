@@ -68,6 +68,23 @@ public class DeleteImageTag extends AbstractModel{
         this.TagName = TagName;
     }
 
+    public DeleteImageTag() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteImageTag(DeleteImageTag source) {
+        if (source.RepoName != null) {
+            this.RepoName = new String(source.RepoName);
+        }
+        if (source.TagName != null) {
+            this.TagName = new String(source.TagName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

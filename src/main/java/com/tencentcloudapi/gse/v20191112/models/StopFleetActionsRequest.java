@@ -68,6 +68,26 @@ public class StopFleetActionsRequest extends AbstractModel{
         this.Actions = Actions;
     }
 
+    public StopFleetActionsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public StopFleetActionsRequest(StopFleetActionsRequest source) {
+        if (source.FleetId != null) {
+            this.FleetId = new String(source.FleetId);
+        }
+        if (source.Actions != null) {
+            this.Actions = new String[source.Actions.length];
+            for (int i = 0; i < source.Actions.length; i++) {
+                this.Actions[i] = new String(source.Actions[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

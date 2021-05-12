@@ -183,6 +183,41 @@ public class MediaImageSpriteItem extends AbstractModel{
         this.Storage = Storage;
     }
 
+    public MediaImageSpriteItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MediaImageSpriteItem(MediaImageSpriteItem source) {
+        if (source.Definition != null) {
+            this.Definition = new Long(source.Definition);
+        }
+        if (source.Height != null) {
+            this.Height = new Long(source.Height);
+        }
+        if (source.Width != null) {
+            this.Width = new Long(source.Width);
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.ImagePathSet != null) {
+            this.ImagePathSet = new String[source.ImagePathSet.length];
+            for (int i = 0; i < source.ImagePathSet.length; i++) {
+                this.ImagePathSet[i] = new String(source.ImagePathSet[i]);
+            }
+        }
+        if (source.WebVttPath != null) {
+            this.WebVttPath = new String(source.WebVttPath);
+        }
+        if (source.Storage != null) {
+            this.Storage = new TaskOutputStorage(source.Storage);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -78,6 +78,26 @@ public class ServiceReleaseVersion extends AbstractModel{
         this.VersionList = VersionList;
     }
 
+    public ServiceReleaseVersion() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ServiceReleaseVersion(ServiceReleaseVersion source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.VersionList != null) {
+            this.VersionList = new ServiceReleaseHistoryInfo[source.VersionList.length];
+            for (int i = 0; i < source.VersionList.length; i++) {
+                this.VersionList[i] = new ServiceReleaseHistoryInfo(source.VersionList[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

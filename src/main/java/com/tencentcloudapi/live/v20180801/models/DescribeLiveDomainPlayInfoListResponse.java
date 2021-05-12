@@ -183,6 +183,41 @@ public class DescribeLiveDomainPlayInfoListResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeLiveDomainPlayInfoListResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeLiveDomainPlayInfoListResponse(DescribeLiveDomainPlayInfoListResponse source) {
+        if (source.Time != null) {
+            this.Time = new String(source.Time);
+        }
+        if (source.TotalBandwidth != null) {
+            this.TotalBandwidth = new Float(source.TotalBandwidth);
+        }
+        if (source.TotalFlux != null) {
+            this.TotalFlux = new Float(source.TotalFlux);
+        }
+        if (source.TotalRequest != null) {
+            this.TotalRequest = new Long(source.TotalRequest);
+        }
+        if (source.TotalOnline != null) {
+            this.TotalOnline = new Long(source.TotalOnline);
+        }
+        if (source.DomainInfoList != null) {
+            this.DomainInfoList = new DomainInfoList[source.DomainInfoList.length];
+            for (int i = 0; i < source.DomainInfoList.length; i++) {
+                this.DomainInfoList[i] = new DomainInfoList(source.DomainInfoList[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

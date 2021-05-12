@@ -195,6 +195,35 @@ FINISHED 处理完成
         this.RequestId = RequestId;
     }
 
+    public DescribeSegmentationTaskResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeSegmentationTaskResponse(DescribeSegmentationTaskResponse source) {
+        if (source.TaskStatus != null) {
+            this.TaskStatus = new String(source.TaskStatus);
+        }
+        if (source.ResultVideoUrl != null) {
+            this.ResultVideoUrl = new String(source.ResultVideoUrl);
+        }
+        if (source.ResultVideoMD5 != null) {
+            this.ResultVideoMD5 = new String(source.ResultVideoMD5);
+        }
+        if (source.VideoBasicInformation != null) {
+            this.VideoBasicInformation = new VideoBasicInformation(source.VideoBasicInformation);
+        }
+        if (source.ErrorMsg != null) {
+            this.ErrorMsg = new String(source.ErrorMsg);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

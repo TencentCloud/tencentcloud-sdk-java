@@ -68,6 +68,26 @@ public class CheckStaffChUserRequest extends AbstractModel{
         this.OperateType = OperateType;
     }
 
+    public CheckStaffChUserRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CheckStaffChUserRequest(CheckStaffChUserRequest source) {
+        if (source.UserId != null) {
+            this.UserId = new String[source.UserId.length];
+            for (int i = 0; i < source.UserId.length; i++) {
+                this.UserId[i] = new String(source.UserId[i]);
+            }
+        }
+        if (source.OperateType != null) {
+            this.OperateType = new String(source.OperateType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

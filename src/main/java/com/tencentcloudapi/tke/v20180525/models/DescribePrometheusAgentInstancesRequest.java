@@ -50,6 +50,20 @@ public class DescribePrometheusAgentInstancesRequest extends AbstractModel{
         this.ClusterId = ClusterId;
     }
 
+    public DescribePrometheusAgentInstancesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribePrometheusAgentInstancesRequest(DescribePrometheusAgentInstancesRequest source) {
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

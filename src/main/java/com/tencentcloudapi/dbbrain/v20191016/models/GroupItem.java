@@ -91,6 +91,26 @@ public class GroupItem extends AbstractModel{
         this.MemberCount = MemberCount;
     }
 
+    public GroupItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GroupItem(GroupItem source) {
+        if (source.Id != null) {
+            this.Id = new Long(source.Id);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.MemberCount != null) {
+            this.MemberCount = new Long(source.MemberCount);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

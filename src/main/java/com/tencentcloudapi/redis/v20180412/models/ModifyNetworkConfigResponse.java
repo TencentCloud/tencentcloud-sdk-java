@@ -137,6 +137,32 @@ public class ModifyNetworkConfigResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public ModifyNetworkConfigResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyNetworkConfigResponse(ModifyNetworkConfigResponse source) {
+        if (source.Status != null) {
+            this.Status = new Boolean(source.Status);
+        }
+        if (source.SubnetId != null) {
+            this.SubnetId = new String(source.SubnetId);
+        }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.Vip != null) {
+            this.Vip = new String(source.Vip);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

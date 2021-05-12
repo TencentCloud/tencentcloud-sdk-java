@@ -333,6 +333,53 @@ public class FaceAttributesInfo extends AbstractModel{
         this.EyeOpen = EyeOpen;
     }
 
+    public FaceAttributesInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public FaceAttributesInfo(FaceAttributesInfo source) {
+        if (source.Gender != null) {
+            this.Gender = new Long(source.Gender);
+        }
+        if (source.Age != null) {
+            this.Age = new Long(source.Age);
+        }
+        if (source.Expression != null) {
+            this.Expression = new Long(source.Expression);
+        }
+        if (source.Glass != null) {
+            this.Glass = new Boolean(source.Glass);
+        }
+        if (source.Pitch != null) {
+            this.Pitch = new Long(source.Pitch);
+        }
+        if (source.Yaw != null) {
+            this.Yaw = new Long(source.Yaw);
+        }
+        if (source.Roll != null) {
+            this.Roll = new Long(source.Roll);
+        }
+        if (source.Beauty != null) {
+            this.Beauty = new Long(source.Beauty);
+        }
+        if (source.Hat != null) {
+            this.Hat = new Boolean(source.Hat);
+        }
+        if (source.Mask != null) {
+            this.Mask = new Boolean(source.Mask);
+        }
+        if (source.Hair != null) {
+            this.Hair = new FaceHairAttributesInfo(source.Hair);
+        }
+        if (source.EyeOpen != null) {
+            this.EyeOpen = new Boolean(source.EyeOpen);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

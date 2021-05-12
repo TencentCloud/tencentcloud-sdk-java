@@ -91,6 +91,29 @@ public class DescribeDBXlogsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeDBXlogsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeDBXlogsResponse(DescribeDBXlogsResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.XlogList != null) {
+            this.XlogList = new Xlog[source.XlogList.length];
+            for (int i = 0; i < source.XlogList.length; i++) {
+                this.XlogList[i] = new Xlog(source.XlogList[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

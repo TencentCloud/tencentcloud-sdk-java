@@ -160,6 +160,35 @@ public class ModifyL4BackendProbePortRequest extends AbstractModel{
         this.BindType = BindType;
     }
 
+    public ModifyL4BackendProbePortRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyL4BackendProbePortRequest(ModifyL4BackendProbePortRequest source) {
+        if (source.LoadBalancerId != null) {
+            this.LoadBalancerId = new String(source.LoadBalancerId);
+        }
+        if (source.ListenerId != null) {
+            this.ListenerId = new String(source.ListenerId);
+        }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.Port != null) {
+            this.Port = new Long(source.Port);
+        }
+        if (source.ProbePort != null) {
+            this.ProbePort = new Long(source.ProbePort);
+        }
+        if (source.BindType != null) {
+            this.BindType = new Long(source.BindType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

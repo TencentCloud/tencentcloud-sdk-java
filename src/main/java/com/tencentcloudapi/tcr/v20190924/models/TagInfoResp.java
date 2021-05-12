@@ -114,6 +114,32 @@ public class TagInfoResp extends AbstractModel{
         this.RepoName = RepoName;
     }
 
+    public TagInfoResp() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TagInfoResp(TagInfoResp source) {
+        if (source.TagCount != null) {
+            this.TagCount = new Long(source.TagCount);
+        }
+        if (source.TagInfo != null) {
+            this.TagInfo = new TagInfo[source.TagInfo.length];
+            for (int i = 0; i < source.TagInfo.length; i++) {
+                this.TagInfo[i] = new TagInfo(source.TagInfo[i]);
+            }
+        }
+        if (source.Server != null) {
+            this.Server = new String(source.Server);
+        }
+        if (source.RepoName != null) {
+            this.RepoName = new String(source.RepoName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

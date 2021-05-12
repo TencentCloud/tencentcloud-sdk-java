@@ -91,6 +91,29 @@ public class DescribeSitesVerificationResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeSitesVerificationResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeSitesVerificationResponse(DescribeSitesVerificationResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.SitesVerification != null) {
+            this.SitesVerification = new SitesVerification[source.SitesVerification.length];
+            for (int i = 0; i < source.SitesVerification.length; i++) {
+                this.SitesVerification[i] = new SitesVerification(source.SitesVerification[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

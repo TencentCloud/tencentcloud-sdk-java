@@ -114,6 +114,29 @@ public class AuditSummary extends AbstractModel{
         this.LogFilePrefix = LogFilePrefix;
     }
 
+    public AuditSummary() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AuditSummary(AuditSummary source) {
+        if (source.AuditStatus != null) {
+            this.AuditStatus = new Long(source.AuditStatus);
+        }
+        if (source.CosBucketName != null) {
+            this.CosBucketName = new String(source.CosBucketName);
+        }
+        if (source.AuditName != null) {
+            this.AuditName = new String(source.AuditName);
+        }
+        if (source.LogFilePrefix != null) {
+            this.LogFilePrefix = new String(source.LogFilePrefix);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

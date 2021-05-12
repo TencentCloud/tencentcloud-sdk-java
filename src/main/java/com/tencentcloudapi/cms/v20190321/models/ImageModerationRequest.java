@@ -91,6 +91,26 @@ public class ImageModerationRequest extends AbstractModel{
         this.FileUrl = FileUrl;
     }
 
+    public ImageModerationRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ImageModerationRequest(ImageModerationRequest source) {
+        if (source.FileContent != null) {
+            this.FileContent = new String(source.FileContent);
+        }
+        if (source.FileMD5 != null) {
+            this.FileMD5 = new String(source.FileMD5);
+        }
+        if (source.FileUrl != null) {
+            this.FileUrl = new String(source.FileUrl);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

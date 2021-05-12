@@ -134,6 +134,29 @@ public class QuantileEntity extends AbstractModel{
         this.NinthPositionValue = NinthPositionValue;
     }
 
+    public QuantileEntity() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public QuantileEntity(QuantileEntity source) {
+        if (source.MaxValue != null) {
+            this.MaxValue = new String(source.MaxValue);
+        }
+        if (source.MinValue != null) {
+            this.MinValue = new String(source.MinValue);
+        }
+        if (source.FifthPositionValue != null) {
+            this.FifthPositionValue = new String(source.FifthPositionValue);
+        }
+        if (source.NinthPositionValue != null) {
+            this.NinthPositionValue = new String(source.NinthPositionValue);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

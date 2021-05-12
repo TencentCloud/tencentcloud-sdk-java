@@ -137,6 +137,35 @@ public class DescribeDatabaseTableResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeDatabaseTableResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeDatabaseTableResponse(DescribeDatabaseTableResponse source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.DbName != null) {
+            this.DbName = new String(source.DbName);
+        }
+        if (source.Table != null) {
+            this.Table = new String(source.Table);
+        }
+        if (source.Cols != null) {
+            this.Cols = new TableColumn[source.Cols.length];
+            for (int i = 0; i < source.Cols.length; i++) {
+                this.Cols[i] = new TableColumn(source.Cols[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

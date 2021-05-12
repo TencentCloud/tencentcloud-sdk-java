@@ -229,6 +229,50 @@ public class GroupUnitApiDailyUseStatistics extends AbstractModel{
         this.Quantile = Quantile;
     }
 
+    public GroupUnitApiDailyUseStatistics() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GroupUnitApiDailyUseStatistics(GroupUnitApiDailyUseStatistics source) {
+        if (source.NamespaceId != null) {
+            this.NamespaceId = new String(source.NamespaceId);
+        }
+        if (source.NamespaceName != null) {
+            this.NamespaceName = new String(source.NamespaceName);
+        }
+        if (source.SumReqAmount != null) {
+            this.SumReqAmount = new String(source.SumReqAmount);
+        }
+        if (source.AvgFailureRate != null) {
+            this.AvgFailureRate = new String(source.AvgFailureRate);
+        }
+        if (source.AvgTimeCost != null) {
+            this.AvgTimeCost = new String(source.AvgTimeCost);
+        }
+        if (source.MetricDataPointMap != null) {
+            this.MetricDataPointMap = new MetricDataPointMap(source.MetricDataPointMap);
+        }
+        if (source.TopStatusCode != null) {
+            this.TopStatusCode = new ApiUseStatisticsEntity[source.TopStatusCode.length];
+            for (int i = 0; i < source.TopStatusCode.length; i++) {
+                this.TopStatusCode[i] = new ApiUseStatisticsEntity(source.TopStatusCode[i]);
+            }
+        }
+        if (source.TopTimeCost != null) {
+            this.TopTimeCost = new ApiUseStatisticsEntity[source.TopTimeCost.length];
+            for (int i = 0; i < source.TopTimeCost.length; i++) {
+                this.TopTimeCost[i] = new ApiUseStatisticsEntity(source.TopTimeCost[i]);
+            }
+        }
+        if (source.Quantile != null) {
+            this.Quantile = new QuantileEntity(source.Quantile);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

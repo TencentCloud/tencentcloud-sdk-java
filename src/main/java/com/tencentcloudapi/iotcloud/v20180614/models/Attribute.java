@@ -45,6 +45,23 @@ public class Attribute extends AbstractModel{
         this.Tags = Tags;
     }
 
+    public Attribute() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Attribute(Attribute source) {
+        if (source.Tags != null) {
+            this.Tags = new DeviceTag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new DeviceTag(source.Tags[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

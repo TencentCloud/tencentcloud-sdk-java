@@ -137,6 +137,35 @@ public class DescribeSimpleClustersRequest extends AbstractModel{
         this.SearchWord = SearchWord;
     }
 
+    public DescribeSimpleClustersRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeSimpleClustersRequest(DescribeSimpleClustersRequest source) {
+        if (source.ClusterIdList != null) {
+            this.ClusterIdList = new String[source.ClusterIdList.length];
+            for (int i = 0; i < source.ClusterIdList.length; i++) {
+                this.ClusterIdList[i] = new String(source.ClusterIdList[i]);
+            }
+        }
+        if (source.ClusterType != null) {
+            this.ClusterType = new String(source.ClusterType);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.SearchWord != null) {
+            this.SearchWord = new String(source.SearchWord);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

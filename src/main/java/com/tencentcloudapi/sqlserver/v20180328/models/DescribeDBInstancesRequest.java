@@ -404,6 +404,74 @@ public class DescribeDBInstancesRequest extends AbstractModel{
         this.SearchKey = SearchKey;
     }
 
+    public DescribeDBInstancesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeDBInstancesRequest(DescribeDBInstancesRequest source) {
+        if (source.ProjectId != null) {
+            this.ProjectId = new Long(source.ProjectId);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.InstanceIdSet != null) {
+            this.InstanceIdSet = new String[source.InstanceIdSet.length];
+            for (int i = 0; i < source.InstanceIdSet.length; i++) {
+                this.InstanceIdSet[i] = new String(source.InstanceIdSet[i]);
+            }
+        }
+        if (source.PayMode != null) {
+            this.PayMode = new Long(source.PayMode);
+        }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.SubnetId != null) {
+            this.SubnetId = new String(source.SubnetId);
+        }
+        if (source.VipSet != null) {
+            this.VipSet = new String[source.VipSet.length];
+            for (int i = 0; i < source.VipSet.length; i++) {
+                this.VipSet[i] = new String(source.VipSet[i]);
+            }
+        }
+        if (source.InstanceNameSet != null) {
+            this.InstanceNameSet = new String[source.InstanceNameSet.length];
+            for (int i = 0; i < source.InstanceNameSet.length; i++) {
+                this.InstanceNameSet[i] = new String(source.InstanceNameSet[i]);
+            }
+        }
+        if (source.VersionSet != null) {
+            this.VersionSet = new String[source.VersionSet.length];
+            for (int i = 0; i < source.VersionSet.length; i++) {
+                this.VersionSet[i] = new String(source.VersionSet[i]);
+            }
+        }
+        if (source.Zone != null) {
+            this.Zone = new String(source.Zone);
+        }
+        if (source.TagKeys != null) {
+            this.TagKeys = new String[source.TagKeys.length];
+            for (int i = 0; i < source.TagKeys.length; i++) {
+                this.TagKeys[i] = new String(source.TagKeys[i]);
+            }
+        }
+        if (source.SearchKey != null) {
+            this.SearchKey = new String(source.SearchKey);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

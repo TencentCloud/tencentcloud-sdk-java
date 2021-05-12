@@ -229,6 +229,44 @@ public class ApplyUserCertRequest extends AbstractModel{
         this.Notes = Notes;
     }
 
+    public ApplyUserCertRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ApplyUserCertRequest(ApplyUserCertRequest source) {
+        if (source.Module != null) {
+            this.Module = new String(source.Module);
+        }
+        if (source.Operation != null) {
+            this.Operation = new String(source.Operation);
+        }
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
+        if (source.GroupName != null) {
+            this.GroupName = new String(source.GroupName);
+        }
+        if (source.UserIdentity != null) {
+            this.UserIdentity = new String(source.UserIdentity);
+        }
+        if (source.Applicant != null) {
+            this.Applicant = new String(source.Applicant);
+        }
+        if (source.IdentityNum != null) {
+            this.IdentityNum = new String(source.IdentityNum);
+        }
+        if (source.CsrData != null) {
+            this.CsrData = new String(source.CsrData);
+        }
+        if (source.Notes != null) {
+            this.Notes = new String(source.Notes);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

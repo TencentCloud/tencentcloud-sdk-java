@@ -114,6 +114,29 @@ public class SkillGroupItem extends AbstractModel{
         this.Type = Type;
     }
 
+    public SkillGroupItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SkillGroupItem(SkillGroupItem source) {
+        if (source.SkillGroupId != null) {
+            this.SkillGroupId = new Long(source.SkillGroupId);
+        }
+        if (source.SkillGroupName != null) {
+            this.SkillGroupName = new String(source.SkillGroupName);
+        }
+        if (source.Priority != null) {
+            this.Priority = new Long(source.Priority);
+        }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

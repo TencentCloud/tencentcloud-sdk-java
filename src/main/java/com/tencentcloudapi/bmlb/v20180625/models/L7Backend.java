@@ -229,6 +229,47 @@ public class L7Backend extends AbstractModel{
         this.Operates = Operates;
     }
 
+    public L7Backend() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public L7Backend(L7Backend source) {
+        if (source.BindType != null) {
+            this.BindType = new Long(source.BindType);
+        }
+        if (source.Port != null) {
+            this.Port = new Long(source.Port);
+        }
+        if (source.Weight != null) {
+            this.Weight = new Long(source.Weight);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.Alias != null) {
+            this.Alias = new String(source.Alias);
+        }
+        if (source.LanIp != null) {
+            this.LanIp = new String(source.LanIp);
+        }
+        if (source.MgtIp != null) {
+            this.MgtIp = new String(source.MgtIp);
+        }
+        if (source.Operates != null) {
+            this.Operates = new String[source.Operates.length];
+            for (int i = 0; i < source.Operates.length; i++) {
+                this.Operates[i] = new String(source.Operates[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

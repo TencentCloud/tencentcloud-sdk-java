@@ -91,6 +91,26 @@ public class DeleteClusterRouteRequest extends AbstractModel{
         this.DestinationCidrBlock = DestinationCidrBlock;
     }
 
+    public DeleteClusterRouteRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteClusterRouteRequest(DeleteClusterRouteRequest source) {
+        if (source.RouteTableName != null) {
+            this.RouteTableName = new String(source.RouteTableName);
+        }
+        if (source.GatewayIp != null) {
+            this.GatewayIp = new String(source.GatewayIp);
+        }
+        if (source.DestinationCidrBlock != null) {
+            this.DestinationCidrBlock = new String(source.DestinationCidrBlock);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

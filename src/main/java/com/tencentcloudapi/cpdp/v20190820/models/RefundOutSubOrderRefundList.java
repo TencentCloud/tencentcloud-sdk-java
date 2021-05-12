@@ -137,6 +137,32 @@ public class RefundOutSubOrderRefundList extends AbstractModel{
         this.SubRefundId = SubRefundId;
     }
 
+    public RefundOutSubOrderRefundList() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RefundOutSubOrderRefundList(RefundOutSubOrderRefundList source) {
+        if (source.PlatformRefundAmt != null) {
+            this.PlatformRefundAmt = new Long(source.PlatformRefundAmt);
+        }
+        if (source.RefundAmt != null) {
+            this.RefundAmt = new Long(source.RefundAmt);
+        }
+        if (source.SubMchRefundAmt != null) {
+            this.SubMchRefundAmt = new Long(source.SubMchRefundAmt);
+        }
+        if (source.SubOutTradeNo != null) {
+            this.SubOutTradeNo = new String(source.SubOutTradeNo);
+        }
+        if (source.SubRefundId != null) {
+            this.SubRefundId = new String(source.SubRefundId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -188,6 +188,38 @@ public class UpgradeInstanceRequest extends AbstractModel{
         this.DbType = DbType;
     }
 
+    public UpgradeInstanceRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UpgradeInstanceRequest(UpgradeInstanceRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.Cpu != null) {
+            this.Cpu = new Long(source.Cpu);
+        }
+        if (source.Memory != null) {
+            this.Memory = new Long(source.Memory);
+        }
+        if (source.UpgradeType != null) {
+            this.UpgradeType = new String(source.UpgradeType);
+        }
+        if (source.StorageLimit != null) {
+            this.StorageLimit = new Long(source.StorageLimit);
+        }
+        if (source.AutoVoucher != null) {
+            this.AutoVoucher = new Long(source.AutoVoucher);
+        }
+        if (source.DbType != null) {
+            this.DbType = new String(source.DbType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

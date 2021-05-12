@@ -68,6 +68,26 @@ public class CreateRuleResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public CreateRuleResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateRuleResponse(CreateRuleResponse source) {
+        if (source.LocationIds != null) {
+            this.LocationIds = new String[source.LocationIds.length];
+            for (int i = 0; i < source.LocationIds.length; i++) {
+                this.LocationIds[i] = new String(source.LocationIds[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

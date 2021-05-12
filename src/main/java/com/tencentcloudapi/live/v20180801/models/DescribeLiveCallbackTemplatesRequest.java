@@ -22,6 +22,17 @@ import java.util.HashMap;
 
 public class DescribeLiveCallbackTemplatesRequest extends AbstractModel{
 
+    public DescribeLiveCallbackTemplatesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeLiveCallbackTemplatesRequest(DescribeLiveCallbackTemplatesRequest source) {
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

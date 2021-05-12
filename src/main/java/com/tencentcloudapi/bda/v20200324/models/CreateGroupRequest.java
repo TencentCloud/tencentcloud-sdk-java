@@ -124,6 +124,29 @@ public class CreateGroupRequest extends AbstractModel{
         this.BodyModelVersion = BodyModelVersion;
     }
 
+    public CreateGroupRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateGroupRequest(CreateGroupRequest source) {
+        if (source.GroupName != null) {
+            this.GroupName = new String(source.GroupName);
+        }
+        if (source.GroupId != null) {
+            this.GroupId = new String(source.GroupId);
+        }
+        if (source.Tag != null) {
+            this.Tag = new String(source.Tag);
+        }
+        if (source.BodyModelVersion != null) {
+            this.BodyModelVersion = new String(source.BodyModelVersion);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

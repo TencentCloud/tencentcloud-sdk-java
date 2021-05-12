@@ -244,6 +244,47 @@ public class CreateHTTPSListenerRequest extends AbstractModel{
         this.GroupId = GroupId;
     }
 
+    public CreateHTTPSListenerRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateHTTPSListenerRequest(CreateHTTPSListenerRequest source) {
+        if (source.ListenerName != null) {
+            this.ListenerName = new String(source.ListenerName);
+        }
+        if (source.Port != null) {
+            this.Port = new Long(source.Port);
+        }
+        if (source.CertificateId != null) {
+            this.CertificateId = new String(source.CertificateId);
+        }
+        if (source.ForwardProtocol != null) {
+            this.ForwardProtocol = new String(source.ForwardProtocol);
+        }
+        if (source.ProxyId != null) {
+            this.ProxyId = new String(source.ProxyId);
+        }
+        if (source.AuthType != null) {
+            this.AuthType = new Long(source.AuthType);
+        }
+        if (source.ClientCertificateId != null) {
+            this.ClientCertificateId = new String(source.ClientCertificateId);
+        }
+        if (source.PolyClientCertificateIds != null) {
+            this.PolyClientCertificateIds = new String[source.PolyClientCertificateIds.length];
+            for (int i = 0; i < source.PolyClientCertificateIds.length; i++) {
+                this.PolyClientCertificateIds[i] = new String(source.PolyClientCertificateIds[i]);
+            }
+        }
+        if (source.GroupId != null) {
+            this.GroupId = new String(source.GroupId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -160,6 +160,35 @@ public class RoomState extends AbstractModel{
         this.UserId = UserId;
     }
 
+    public RoomState() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RoomState(RoomState source) {
+        if (source.CommId != null) {
+            this.CommId = new String(source.CommId);
+        }
+        if (source.RoomString != null) {
+            this.RoomString = new String(source.RoomString);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new Long(source.CreateTime);
+        }
+        if (source.DestroyTime != null) {
+            this.DestroyTime = new Long(source.DestroyTime);
+        }
+        if (source.IsFinished != null) {
+            this.IsFinished = new Boolean(source.IsFinished);
+        }
+        if (source.UserId != null) {
+            this.UserId = new String(source.UserId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

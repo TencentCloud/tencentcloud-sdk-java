@@ -68,6 +68,23 @@ public class ModifyDbauditInstancesRenewFlagRequest extends AbstractModel{
         this.AutoRenewFlag = AutoRenewFlag;
     }
 
+    public ModifyDbauditInstancesRenewFlagRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyDbauditInstancesRenewFlagRequest(ModifyDbauditInstancesRenewFlagRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.AutoRenewFlag != null) {
+            this.AutoRenewFlag = new Long(source.AutoRenewFlag);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -243,6 +243,41 @@ OV：中国境外
         this.RequestHeaders = RequestHeaders;
     }
 
+    public PathRule() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PathRule(PathRule source) {
+        if (source.Regex != null) {
+            this.Regex = new Boolean(source.Regex);
+        }
+        if (source.Path != null) {
+            this.Path = new String(source.Path);
+        }
+        if (source.Origin != null) {
+            this.Origin = new String(source.Origin);
+        }
+        if (source.ServerName != null) {
+            this.ServerName = new String(source.ServerName);
+        }
+        if (source.OriginArea != null) {
+            this.OriginArea = new String(source.OriginArea);
+        }
+        if (source.ForwardUri != null) {
+            this.ForwardUri = new String(source.ForwardUri);
+        }
+        if (source.RequestHeaders != null) {
+            this.RequestHeaders = new HttpHeaderRule[source.RequestHeaders.length];
+            for (int i = 0; i < source.RequestHeaders.length; i++) {
+                this.RequestHeaders[i] = new HttpHeaderRule(source.RequestHeaders[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

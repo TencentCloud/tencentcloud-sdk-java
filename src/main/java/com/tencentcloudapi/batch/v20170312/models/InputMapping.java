@@ -91,6 +91,26 @@ public class InputMapping extends AbstractModel{
         this.MountOptionParameter = MountOptionParameter;
     }
 
+    public InputMapping() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public InputMapping(InputMapping source) {
+        if (source.SourcePath != null) {
+            this.SourcePath = new String(source.SourcePath);
+        }
+        if (source.DestinationPath != null) {
+            this.DestinationPath = new String(source.DestinationPath);
+        }
+        if (source.MountOptionParameter != null) {
+            this.MountOptionParameter = new String(source.MountOptionParameter);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

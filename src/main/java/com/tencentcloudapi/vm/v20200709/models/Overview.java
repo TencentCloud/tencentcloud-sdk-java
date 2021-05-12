@@ -206,6 +206,41 @@ public class Overview extends AbstractModel{
         this.SuspectHour = SuspectHour;
     }
 
+    public Overview() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Overview(Overview source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.TotalHour != null) {
+            this.TotalHour = new Long(source.TotalHour);
+        }
+        if (source.PassCount != null) {
+            this.PassCount = new Long(source.PassCount);
+        }
+        if (source.PassHour != null) {
+            this.PassHour = new Long(source.PassHour);
+        }
+        if (source.EvilCount != null) {
+            this.EvilCount = new Long(source.EvilCount);
+        }
+        if (source.EvilHour != null) {
+            this.EvilHour = new Long(source.EvilHour);
+        }
+        if (source.SuspectCount != null) {
+            this.SuspectCount = new Long(source.SuspectCount);
+        }
+        if (source.SuspectHour != null) {
+            this.SuspectHour = new Long(source.SuspectHour);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

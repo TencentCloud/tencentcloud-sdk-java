@@ -433,6 +433,68 @@ public class QueryTradeData extends AbstractModel{
         this.ServiceTime = ServiceTime;
     }
 
+    public QueryTradeData() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public QueryTradeData(QueryTradeData source) {
+        if (source.MerchantId != null) {
+            this.MerchantId = new String(source.MerchantId);
+        }
+        if (source.TradeFileId != null) {
+            this.TradeFileId = new String(source.TradeFileId);
+        }
+        if (source.TradeOrderId != null) {
+            this.TradeOrderId = new String(source.TradeOrderId);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.FailReason != null) {
+            this.FailReason = new String(source.FailReason);
+        }
+        if (source.PayerId != null) {
+            this.PayerId = new String(source.PayerId);
+        }
+        if (source.PayeeName != null) {
+            this.PayeeName = new String(source.PayeeName);
+        }
+        if (source.PayeeCountryCode != null) {
+            this.PayeeCountryCode = new String(source.PayeeCountryCode);
+        }
+        if (source.TradeType != null) {
+            this.TradeType = new String(source.TradeType);
+        }
+        if (source.TradeTime != null) {
+            this.TradeTime = new String(source.TradeTime);
+        }
+        if (source.TradeCurrency != null) {
+            this.TradeCurrency = new String(source.TradeCurrency);
+        }
+        if (source.TradeAmount != null) {
+            this.TradeAmount = new String(source.TradeAmount);
+        }
+        if (source.TradeName != null) {
+            this.TradeName = new String(source.TradeName);
+        }
+        if (source.TradeCount != null) {
+            this.TradeCount = new Long(source.TradeCount);
+        }
+        if (source.GoodsCarrier != null) {
+            this.GoodsCarrier = new String(source.GoodsCarrier);
+        }
+        if (source.ServiceDetail != null) {
+            this.ServiceDetail = new String(source.ServiceDetail);
+        }
+        if (source.ServiceTime != null) {
+            this.ServiceTime = new String(source.ServiceTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

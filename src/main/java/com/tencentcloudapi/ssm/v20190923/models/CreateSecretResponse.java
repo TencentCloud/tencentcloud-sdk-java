@@ -147,6 +147,32 @@ public class CreateSecretResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public CreateSecretResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateSecretResponse(CreateSecretResponse source) {
+        if (source.SecretName != null) {
+            this.SecretName = new String(source.SecretName);
+        }
+        if (source.VersionId != null) {
+            this.VersionId = new String(source.VersionId);
+        }
+        if (source.TagCode != null) {
+            this.TagCode = new Long(source.TagCode);
+        }
+        if (source.TagMsg != null) {
+            this.TagMsg = new String(source.TagMsg);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

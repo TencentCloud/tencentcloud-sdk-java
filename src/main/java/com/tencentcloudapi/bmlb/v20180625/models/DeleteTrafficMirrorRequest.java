@@ -45,6 +45,23 @@ public class DeleteTrafficMirrorRequest extends AbstractModel{
         this.TrafficMirrorIds = TrafficMirrorIds;
     }
 
+    public DeleteTrafficMirrorRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteTrafficMirrorRequest(DeleteTrafficMirrorRequest source) {
+        if (source.TrafficMirrorIds != null) {
+            this.TrafficMirrorIds = new String[source.TrafficMirrorIds.length];
+            for (int i = 0; i < source.TrafficMirrorIds.length; i++) {
+                this.TrafficMirrorIds[i] = new String(source.TrafficMirrorIds[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

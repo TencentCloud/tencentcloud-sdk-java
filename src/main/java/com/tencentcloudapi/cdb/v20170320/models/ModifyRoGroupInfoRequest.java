@@ -114,6 +114,32 @@ public class ModifyRoGroupInfoRequest extends AbstractModel{
         this.IsBalanceRoLoad = IsBalanceRoLoad;
     }
 
+    public ModifyRoGroupInfoRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyRoGroupInfoRequest(ModifyRoGroupInfoRequest source) {
+        if (source.RoGroupId != null) {
+            this.RoGroupId = new String(source.RoGroupId);
+        }
+        if (source.RoGroupInfo != null) {
+            this.RoGroupInfo = new RoGroupAttr(source.RoGroupInfo);
+        }
+        if (source.RoWeightValues != null) {
+            this.RoWeightValues = new RoWeightValue[source.RoWeightValues.length];
+            for (int i = 0; i < source.RoWeightValues.length; i++) {
+                this.RoWeightValues[i] = new RoWeightValue(source.RoWeightValues[i]);
+            }
+        }
+        if (source.IsBalanceRoLoad != null) {
+            this.IsBalanceRoLoad = new Long(source.IsBalanceRoLoad);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

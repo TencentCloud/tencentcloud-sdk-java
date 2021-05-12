@@ -73,6 +73,26 @@ public class DescribeFairPlayPemResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeFairPlayPemResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeFairPlayPemResponse(DescribeFairPlayPemResponse source) {
+        if (source.FairPlayPems != null) {
+            this.FairPlayPems = new FairPlayPemDigestInfo[source.FairPlayPems.length];
+            for (int i = 0; i < source.FairPlayPems.length; i++) {
+                this.FairPlayPems[i] = new FairPlayPemDigestInfo(source.FairPlayPems[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

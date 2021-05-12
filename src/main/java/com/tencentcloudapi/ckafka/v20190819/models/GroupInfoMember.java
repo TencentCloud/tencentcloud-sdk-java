@@ -114,6 +114,29 @@ public class GroupInfoMember extends AbstractModel{
         this.Assignment = Assignment;
     }
 
+    public GroupInfoMember() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GroupInfoMember(GroupInfoMember source) {
+        if (source.MemberId != null) {
+            this.MemberId = new String(source.MemberId);
+        }
+        if (source.ClientId != null) {
+            this.ClientId = new String(source.ClientId);
+        }
+        if (source.ClientHost != null) {
+            this.ClientHost = new String(source.ClientHost);
+        }
+        if (source.Assignment != null) {
+            this.Assignment = new Assignment(source.Assignment);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

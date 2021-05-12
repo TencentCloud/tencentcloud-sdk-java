@@ -137,6 +137,35 @@ public class MediaAiAnalysisHighlightItem extends AbstractModel{
         this.SegmentSet = SegmentSet;
     }
 
+    public MediaAiAnalysisHighlightItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MediaAiAnalysisHighlightItem(MediaAiAnalysisHighlightItem source) {
+        if (source.HighlightUrl != null) {
+            this.HighlightUrl = new String(source.HighlightUrl);
+        }
+        if (source.CovImgUrl != null) {
+            this.CovImgUrl = new String(source.CovImgUrl);
+        }
+        if (source.Confidence != null) {
+            this.Confidence = new Float(source.Confidence);
+        }
+        if (source.Duration != null) {
+            this.Duration = new Float(source.Duration);
+        }
+        if (source.SegmentSet != null) {
+            this.SegmentSet = new HighlightSegmentItem[source.SegmentSet.length];
+            for (int i = 0; i < source.SegmentSet.length; i++) {
+                this.SegmentSet[i] = new HighlightSegmentItem(source.SegmentSet[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

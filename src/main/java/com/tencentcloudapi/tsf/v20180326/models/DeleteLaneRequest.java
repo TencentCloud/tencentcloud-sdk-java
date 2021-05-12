@@ -45,6 +45,20 @@ public class DeleteLaneRequest extends AbstractModel{
         this.LaneId = LaneId;
     }
 
+    public DeleteLaneRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteLaneRequest(DeleteLaneRequest source) {
+        if (source.LaneId != null) {
+            this.LaneId = new String(source.LaneId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

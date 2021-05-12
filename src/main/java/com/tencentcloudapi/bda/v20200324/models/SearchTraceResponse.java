@@ -152,6 +152,38 @@ public class SearchTraceResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public SearchTraceResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SearchTraceResponse(SearchTraceResponse source) {
+        if (source.Candidates != null) {
+            this.Candidates = new Candidate[source.Candidates.length];
+            for (int i = 0; i < source.Candidates.length; i++) {
+                this.Candidates[i] = new Candidate(source.Candidates[i]);
+            }
+        }
+        if (source.InputRetCode != null) {
+            this.InputRetCode = new Long(source.InputRetCode);
+        }
+        if (source.InputRetCodeDetails != null) {
+            this.InputRetCodeDetails = new Long[source.InputRetCodeDetails.length];
+            for (int i = 0; i < source.InputRetCodeDetails.length; i++) {
+                this.InputRetCodeDetails[i] = new Long(source.InputRetCodeDetails[i]);
+            }
+        }
+        if (source.BodyModelVersion != null) {
+            this.BodyModelVersion = new String(source.BodyModelVersion);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

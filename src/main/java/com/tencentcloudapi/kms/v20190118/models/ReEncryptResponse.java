@@ -137,6 +137,32 @@ public class ReEncryptResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public ReEncryptResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ReEncryptResponse(ReEncryptResponse source) {
+        if (source.CiphertextBlob != null) {
+            this.CiphertextBlob = new String(source.CiphertextBlob);
+        }
+        if (source.KeyId != null) {
+            this.KeyId = new String(source.KeyId);
+        }
+        if (source.SourceKeyId != null) {
+            this.SourceKeyId = new String(source.SourceKeyId);
+        }
+        if (source.ReEncrypted != null) {
+            this.ReEncrypted = new Boolean(source.ReEncrypted);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

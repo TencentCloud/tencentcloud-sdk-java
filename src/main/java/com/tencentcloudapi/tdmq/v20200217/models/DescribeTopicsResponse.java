@@ -91,6 +91,29 @@ public class DescribeTopicsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeTopicsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeTopicsResponse(DescribeTopicsResponse source) {
+        if (source.TopicSets != null) {
+            this.TopicSets = new Topic[source.TopicSets.length];
+            for (int i = 0; i < source.TopicSets.length; i++) {
+                this.TopicSets[i] = new Topic(source.TopicSets[i]);
+            }
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

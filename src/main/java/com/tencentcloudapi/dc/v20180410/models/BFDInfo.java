@@ -68,6 +68,23 @@ public class BFDInfo extends AbstractModel{
         this.Interval = Interval;
     }
 
+    public BFDInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public BFDInfo(BFDInfo source) {
+        if (source.ProbeFailedTimes != null) {
+            this.ProbeFailedTimes = new Long(source.ProbeFailedTimes);
+        }
+        if (source.Interval != null) {
+            this.Interval = new Long(source.Interval);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

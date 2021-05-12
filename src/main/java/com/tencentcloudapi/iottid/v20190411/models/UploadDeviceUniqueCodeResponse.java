@@ -147,6 +147,38 @@ public class UploadDeviceUniqueCodeResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public UploadDeviceUniqueCodeResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UploadDeviceUniqueCodeResponse(UploadDeviceUniqueCodeResponse source) {
+        if (source.Count != null) {
+            this.Count = new Long(source.Count);
+        }
+        if (source.ExistedCodeSet != null) {
+            this.ExistedCodeSet = new String[source.ExistedCodeSet.length];
+            for (int i = 0; i < source.ExistedCodeSet.length; i++) {
+                this.ExistedCodeSet[i] = new String(source.ExistedCodeSet[i]);
+            }
+        }
+        if (source.LeftQuantity != null) {
+            this.LeftQuantity = new Long(source.LeftQuantity);
+        }
+        if (source.IllegalCodeSet != null) {
+            this.IllegalCodeSet = new String[source.IllegalCodeSet.length];
+            for (int i = 0; i < source.IllegalCodeSet.length; i++) {
+                this.IllegalCodeSet[i] = new String(source.IllegalCodeSet[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

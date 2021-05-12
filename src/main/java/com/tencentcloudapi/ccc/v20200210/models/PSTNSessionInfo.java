@@ -275,6 +275,50 @@ public class PSTNSessionInfo extends AbstractModel{
         this.RingTimestamp = RingTimestamp;
     }
 
+    public PSTNSessionInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PSTNSessionInfo(PSTNSessionInfo source) {
+        if (source.SessionID != null) {
+            this.SessionID = new String(source.SessionID);
+        }
+        if (source.RoomID != null) {
+            this.RoomID = new String(source.RoomID);
+        }
+        if (source.Caller != null) {
+            this.Caller = new String(source.Caller);
+        }
+        if (source.Callee != null) {
+            this.Callee = new String(source.Callee);
+        }
+        if (source.StartTimestamp != null) {
+            this.StartTimestamp = new String(source.StartTimestamp);
+        }
+        if (source.AcceptTimestamp != null) {
+            this.AcceptTimestamp = new String(source.AcceptTimestamp);
+        }
+        if (source.StaffEmail != null) {
+            this.StaffEmail = new String(source.StaffEmail);
+        }
+        if (source.StaffNumber != null) {
+            this.StaffNumber = new String(source.StaffNumber);
+        }
+        if (source.SessionStatus != null) {
+            this.SessionStatus = new String(source.SessionStatus);
+        }
+        if (source.Direction != null) {
+            this.Direction = new Long(source.Direction);
+        }
+        if (source.RingTimestamp != null) {
+            this.RingTimestamp = new Long(source.RingTimestamp);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

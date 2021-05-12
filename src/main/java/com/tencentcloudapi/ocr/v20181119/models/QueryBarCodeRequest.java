@@ -45,6 +45,20 @@ public class QueryBarCodeRequest extends AbstractModel{
         this.BarCode = BarCode;
     }
 
+    public QueryBarCodeRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public QueryBarCodeRequest(QueryBarCodeRequest source) {
+        if (source.BarCode != null) {
+            this.BarCode = new String(source.BarCode);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -68,6 +68,23 @@ public class ZoneAgeGroupAvrStayTime extends AbstractModel{
         this.FemaleAvrStayTime = FemaleAvrStayTime;
     }
 
+    public ZoneAgeGroupAvrStayTime() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ZoneAgeGroupAvrStayTime(ZoneAgeGroupAvrStayTime source) {
+        if (source.MaleAvrStayTime != null) {
+            this.MaleAvrStayTime = new Float(source.MaleAvrStayTime);
+        }
+        if (source.FemaleAvrStayTime != null) {
+            this.FemaleAvrStayTime = new Float(source.FemaleAvrStayTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -137,6 +137,32 @@ public class RrectF extends AbstractModel{
         this.Width = Width;
     }
 
+    public RrectF() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RrectF(RrectF source) {
+        if (source.Cx != null) {
+            this.Cx = new Float(source.Cx);
+        }
+        if (source.Cy != null) {
+            this.Cy = new Float(source.Cy);
+        }
+        if (source.Height != null) {
+            this.Height = new Float(source.Height);
+        }
+        if (source.Rotate != null) {
+            this.Rotate = new Float(source.Rotate);
+        }
+        if (source.Width != null) {
+            this.Width = new Float(source.Width);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

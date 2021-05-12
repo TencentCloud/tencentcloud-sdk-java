@@ -218,6 +218,44 @@ public class InstanceAdvancedSettings extends AbstractModel{
         this.ExtraArgs = ExtraArgs;
     }
 
+    public InstanceAdvancedSettings() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public InstanceAdvancedSettings(InstanceAdvancedSettings source) {
+        if (source.MountTarget != null) {
+            this.MountTarget = new String(source.MountTarget);
+        }
+        if (source.DockerGraphPath != null) {
+            this.DockerGraphPath = new String(source.DockerGraphPath);
+        }
+        if (source.UserScript != null) {
+            this.UserScript = new String(source.UserScript);
+        }
+        if (source.Unschedulable != null) {
+            this.Unschedulable = new Long(source.Unschedulable);
+        }
+        if (source.Labels != null) {
+            this.Labels = new Label[source.Labels.length];
+            for (int i = 0; i < source.Labels.length; i++) {
+                this.Labels[i] = new Label(source.Labels[i]);
+            }
+        }
+        if (source.DataDisks != null) {
+            this.DataDisks = new DataDisk[source.DataDisks.length];
+            for (int i = 0; i < source.DataDisks.length; i++) {
+                this.DataDisks[i] = new DataDisk(source.DataDisks[i]);
+            }
+        }
+        if (source.ExtraArgs != null) {
+            this.ExtraArgs = new InstanceExtraArgs(source.ExtraArgs);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

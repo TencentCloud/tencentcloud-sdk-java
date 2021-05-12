@@ -633,6 +633,83 @@ public class DescribeVulDetailResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeVulDetailResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeVulDetailResponse(DescribeVulDetailResponse source) {
+        if (source.VulType != null) {
+            this.VulType = new Long(source.VulType);
+        }
+        if (source.SubVulType != null) {
+            this.SubVulType = new String(source.SubVulType);
+        }
+        if (source.CvssScore != null) {
+            this.CvssScore = new String(source.CvssScore);
+        }
+        if (source.Cvss != null) {
+            this.Cvss = new String(source.Cvss);
+        }
+        if (source.Cve != null) {
+            this.Cve = new String(source.Cve);
+        }
+        if (source.Cnvd != null) {
+            this.Cnvd = new String(source.Cnvd);
+        }
+        if (source.Cnnvd != null) {
+            this.Cnnvd = new String(source.Cnnvd);
+        }
+        if (source.Desc != null) {
+            this.Desc = new String(source.Desc);
+        }
+        if (source.Reference != null) {
+            this.Reference = new String(source.Reference);
+        }
+        if (source.Repair != null) {
+            this.Repair = new String(source.Repair);
+        }
+        if (source.ReleaseTime != null) {
+            this.ReleaseTime = new String(source.ReleaseTime);
+        }
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new String(source.UpdateTime);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Level != null) {
+            this.Level = new Long(source.Level);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.ImpactAsset != null) {
+            this.ImpactAsset = new String(source.ImpactAsset);
+        }
+        if (source.ImpactAssetName != null) {
+            this.ImpactAssetName = new String(source.ImpactAssetName);
+        }
+        if (source.IsAssetDeleted != null) {
+            this.IsAssetDeleted = new Boolean(source.IsAssetDeleted);
+        }
+        if (source.Source != null) {
+            this.Source = new String(source.Source);
+        }
+        if (source.VulUrl != null) {
+            this.VulUrl = new String(source.VulUrl);
+        }
+        if (source.SsaAssetCategory != null) {
+            this.SsaAssetCategory = new Long(source.SsaAssetCategory);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

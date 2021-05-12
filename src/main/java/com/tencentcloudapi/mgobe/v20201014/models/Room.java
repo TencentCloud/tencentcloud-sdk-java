@@ -413,6 +413,74 @@ public class Room extends AbstractModel{
         this.Owner = Owner;
     }
 
+    public Room() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Room(Room source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.MaxPlayers != null) {
+            this.MaxPlayers = new Long(source.MaxPlayers);
+        }
+        if (source.OwnerOpenId != null) {
+            this.OwnerOpenId = new String(source.OwnerOpenId);
+        }
+        if (source.IsPrivate != null) {
+            this.IsPrivate = new Boolean(source.IsPrivate);
+        }
+        if (source.Players != null) {
+            this.Players = new Player[source.Players.length];
+            for (int i = 0; i < source.Players.length; i++) {
+                this.Players[i] = new Player(source.Players[i]);
+            }
+        }
+        if (source.Teams != null) {
+            this.Teams = new Team[source.Teams.length];
+            for (int i = 0; i < source.Teams.length; i++) {
+                this.Teams[i] = new Team(source.Teams[i]);
+            }
+        }
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.CreateType != null) {
+            this.CreateType = new Long(source.CreateType);
+        }
+        if (source.CustomProperties != null) {
+            this.CustomProperties = new String(source.CustomProperties);
+        }
+        if (source.FrameSyncState != null) {
+            this.FrameSyncState = new Long(source.FrameSyncState);
+        }
+        if (source.FrameRate != null) {
+            this.FrameRate = new Long(source.FrameRate);
+        }
+        if (source.RouteId != null) {
+            this.RouteId = new String(source.RouteId);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new Long(source.CreateTime);
+        }
+        if (source.StartGameTime != null) {
+            this.StartGameTime = new Long(source.StartGameTime);
+        }
+        if (source.IsForbidJoin != null) {
+            this.IsForbidJoin = new Boolean(source.IsForbidJoin);
+        }
+        if (source.Owner != null) {
+            this.Owner = new String(source.Owner);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

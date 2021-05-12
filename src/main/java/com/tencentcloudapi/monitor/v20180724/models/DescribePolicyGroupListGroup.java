@@ -512,6 +512,86 @@ public class DescribePolicyGroupListGroup extends AbstractModel{
         this.IsUnionRule = IsUnionRule;
     }
 
+    public DescribePolicyGroupListGroup() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribePolicyGroupListGroup(DescribePolicyGroupListGroup source) {
+        if (source.GroupId != null) {
+            this.GroupId = new Long(source.GroupId);
+        }
+        if (source.GroupName != null) {
+            this.GroupName = new String(source.GroupName);
+        }
+        if (source.IsOpen != null) {
+            this.IsOpen = new Boolean(source.IsOpen);
+        }
+        if (source.ViewName != null) {
+            this.ViewName = new String(source.ViewName);
+        }
+        if (source.LastEditUin != null) {
+            this.LastEditUin = new String(source.LastEditUin);
+        }
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new Long(source.UpdateTime);
+        }
+        if (source.InsertTime != null) {
+            this.InsertTime = new Long(source.InsertTime);
+        }
+        if (source.UseSum != null) {
+            this.UseSum = new Long(source.UseSum);
+        }
+        if (source.NoShieldedSum != null) {
+            this.NoShieldedSum = new Long(source.NoShieldedSum);
+        }
+        if (source.IsDefault != null) {
+            this.IsDefault = new Long(source.IsDefault);
+        }
+        if (source.CanSetDefault != null) {
+            this.CanSetDefault = new Boolean(source.CanSetDefault);
+        }
+        if (source.ParentGroupId != null) {
+            this.ParentGroupId = new Long(source.ParentGroupId);
+        }
+        if (source.Remark != null) {
+            this.Remark = new String(source.Remark);
+        }
+        if (source.ProjectId != null) {
+            this.ProjectId = new Long(source.ProjectId);
+        }
+        if (source.Conditions != null) {
+            this.Conditions = new DescribePolicyGroupInfoCondition[source.Conditions.length];
+            for (int i = 0; i < source.Conditions.length; i++) {
+                this.Conditions[i] = new DescribePolicyGroupInfoCondition(source.Conditions[i]);
+            }
+        }
+        if (source.EventConditions != null) {
+            this.EventConditions = new DescribePolicyGroupInfoEventCondition[source.EventConditions.length];
+            for (int i = 0; i < source.EventConditions.length; i++) {
+                this.EventConditions[i] = new DescribePolicyGroupInfoEventCondition(source.EventConditions[i]);
+            }
+        }
+        if (source.ReceiverInfos != null) {
+            this.ReceiverInfos = new DescribePolicyGroupInfoReceiverInfo[source.ReceiverInfos.length];
+            for (int i = 0; i < source.ReceiverInfos.length; i++) {
+                this.ReceiverInfos[i] = new DescribePolicyGroupInfoReceiverInfo(source.ReceiverInfos[i]);
+            }
+        }
+        if (source.ConditionsTemp != null) {
+            this.ConditionsTemp = new DescribePolicyGroupInfoConditionTpl(source.ConditionsTemp);
+        }
+        if (source.InstanceGroup != null) {
+            this.InstanceGroup = new DescribePolicyGroupListGroupInstanceGroup(source.InstanceGroup);
+        }
+        if (source.IsUnionRule != null) {
+            this.IsUnionRule = new Long(source.IsUnionRule);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

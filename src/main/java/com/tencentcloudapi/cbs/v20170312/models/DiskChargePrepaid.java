@@ -91,6 +91,26 @@ public class DiskChargePrepaid extends AbstractModel{
         this.CurInstanceDeadline = CurInstanceDeadline;
     }
 
+    public DiskChargePrepaid() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DiskChargePrepaid(DiskChargePrepaid source) {
+        if (source.Period != null) {
+            this.Period = new Long(source.Period);
+        }
+        if (source.RenewFlag != null) {
+            this.RenewFlag = new String(source.RenewFlag);
+        }
+        if (source.CurInstanceDeadline != null) {
+            this.CurInstanceDeadline = new String(source.CurInstanceDeadline);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -68,6 +68,23 @@ public class MLIDPassportOCRRequest extends AbstractModel{
         this.RetImage = RetImage;
     }
 
+    public MLIDPassportOCRRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MLIDPassportOCRRequest(MLIDPassportOCRRequest source) {
+        if (source.ImageBase64 != null) {
+            this.ImageBase64 = new String(source.ImageBase64);
+        }
+        if (source.RetImage != null) {
+            this.RetImage = new Boolean(source.RetImage);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

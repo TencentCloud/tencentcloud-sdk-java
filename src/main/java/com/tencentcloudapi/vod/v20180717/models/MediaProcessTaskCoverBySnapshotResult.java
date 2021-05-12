@@ -160,6 +160,35 @@ public class MediaProcessTaskCoverBySnapshotResult extends AbstractModel{
         this.Output = Output;
     }
 
+    public MediaProcessTaskCoverBySnapshotResult() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MediaProcessTaskCoverBySnapshotResult(MediaProcessTaskCoverBySnapshotResult source) {
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.ErrCodeExt != null) {
+            this.ErrCodeExt = new String(source.ErrCodeExt);
+        }
+        if (source.ErrCode != null) {
+            this.ErrCode = new Long(source.ErrCode);
+        }
+        if (source.Message != null) {
+            this.Message = new String(source.Message);
+        }
+        if (source.Input != null) {
+            this.Input = new CoverBySnapshotTaskInput(source.Input);
+        }
+        if (source.Output != null) {
+            this.Output = new CoverBySnapshotTaskOutput(source.Output);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

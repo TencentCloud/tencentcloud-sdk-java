@@ -137,6 +137,32 @@ public class VideoBasicInformation extends AbstractModel{
         this.TotalFrames = TotalFrames;
     }
 
+    public VideoBasicInformation() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public VideoBasicInformation(VideoBasicInformation source) {
+        if (source.FrameWidth != null) {
+            this.FrameWidth = new Long(source.FrameWidth);
+        }
+        if (source.FrameHeight != null) {
+            this.FrameHeight = new Long(source.FrameHeight);
+        }
+        if (source.FramesPerSecond != null) {
+            this.FramesPerSecond = new Long(source.FramesPerSecond);
+        }
+        if (source.Duration != null) {
+            this.Duration = new Float(source.Duration);
+        }
+        if (source.TotalFrames != null) {
+            this.TotalFrames = new Long(source.TotalFrames);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

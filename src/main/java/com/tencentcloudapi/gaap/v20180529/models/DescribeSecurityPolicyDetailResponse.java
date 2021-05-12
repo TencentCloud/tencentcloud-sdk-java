@@ -185,6 +185,38 @@ UNBINDING，安全策略关闭中。
         this.RequestId = RequestId;
     }
 
+    public DescribeSecurityPolicyDetailResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeSecurityPolicyDetailResponse(DescribeSecurityPolicyDetailResponse source) {
+        if (source.ProxyId != null) {
+            this.ProxyId = new String(source.ProxyId);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.DefaultAction != null) {
+            this.DefaultAction = new String(source.DefaultAction);
+        }
+        if (source.PolicyId != null) {
+            this.PolicyId = new String(source.PolicyId);
+        }
+        if (source.RuleList != null) {
+            this.RuleList = new SecurityPolicyRuleOut[source.RuleList.length];
+            for (int i = 0; i < source.RuleList.length; i++) {
+                this.RuleList[i] = new SecurityPolicyRuleOut(source.RuleList[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

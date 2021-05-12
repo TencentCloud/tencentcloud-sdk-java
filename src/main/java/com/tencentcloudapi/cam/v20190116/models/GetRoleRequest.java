@@ -68,6 +68,23 @@ public class GetRoleRequest extends AbstractModel{
         this.RoleName = RoleName;
     }
 
+    public GetRoleRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GetRoleRequest(GetRoleRequest source) {
+        if (source.RoleId != null) {
+            this.RoleId = new String(source.RoleId);
+        }
+        if (source.RoleName != null) {
+            this.RoleName = new String(source.RoleName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

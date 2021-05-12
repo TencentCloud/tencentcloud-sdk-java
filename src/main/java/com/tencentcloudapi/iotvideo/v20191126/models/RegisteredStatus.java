@@ -68,6 +68,23 @@ public class RegisteredStatus extends AbstractModel{
         this.IsRegisted = IsRegisted;
     }
 
+    public RegisteredStatus() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RegisteredStatus(RegisteredStatus source) {
+        if (source.CunionId != null) {
+            this.CunionId = new String(source.CunionId);
+        }
+        if (source.IsRegisted != null) {
+            this.IsRegisted = new Boolean(source.IsRegisted);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

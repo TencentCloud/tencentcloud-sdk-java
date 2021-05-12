@@ -114,6 +114,29 @@ public class DescribePathRewritesRequest extends AbstractModel{
         this.Offset = Offset;
     }
 
+    public DescribePathRewritesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribePathRewritesRequest(DescribePathRewritesRequest source) {
+        if (source.GatewayGroupId != null) {
+            this.GatewayGroupId = new String(source.GatewayGroupId);
+        }
+        if (source.SearchWord != null) {
+            this.SearchWord = new String(source.SearchWord);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

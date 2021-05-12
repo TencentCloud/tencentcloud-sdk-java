@@ -68,6 +68,23 @@ public class DismissRoomByStrRoomIdRequest extends AbstractModel{
         this.RoomId = RoomId;
     }
 
+    public DismissRoomByStrRoomIdRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DismissRoomByStrRoomIdRequest(DismissRoomByStrRoomIdRequest source) {
+        if (source.SdkAppId != null) {
+            this.SdkAppId = new Long(source.SdkAppId);
+        }
+        if (source.RoomId != null) {
+            this.RoomId = new String(source.RoomId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

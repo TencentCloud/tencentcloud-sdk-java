@@ -183,6 +183,38 @@ public class ApplyUploadResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public ApplyUploadResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ApplyUploadResponse(ApplyUploadResponse source) {
+        if (source.StorageBucket != null) {
+            this.StorageBucket = new String(source.StorageBucket);
+        }
+        if (source.StorageRegion != null) {
+            this.StorageRegion = new String(source.StorageRegion);
+        }
+        if (source.VodSessionKey != null) {
+            this.VodSessionKey = new String(source.VodSessionKey);
+        }
+        if (source.MediaStoragePath != null) {
+            this.MediaStoragePath = new String(source.MediaStoragePath);
+        }
+        if (source.CoverStoragePath != null) {
+            this.CoverStoragePath = new String(source.CoverStoragePath);
+        }
+        if (source.TempCertificate != null) {
+            this.TempCertificate = new TempCertificate(source.TempCertificate);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

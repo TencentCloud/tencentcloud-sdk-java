@@ -160,6 +160,35 @@ public class ReplicationRegistry extends AbstractModel{
         this.CreatedAt = CreatedAt;
     }
 
+    public ReplicationRegistry() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ReplicationRegistry(ReplicationRegistry source) {
+        if (source.RegistryId != null) {
+            this.RegistryId = new String(source.RegistryId);
+        }
+        if (source.ReplicationRegistryId != null) {
+            this.ReplicationRegistryId = new String(source.ReplicationRegistryId);
+        }
+        if (source.ReplicationRegionId != null) {
+            this.ReplicationRegionId = new Long(source.ReplicationRegionId);
+        }
+        if (source.ReplicationRegionName != null) {
+            this.ReplicationRegionName = new String(source.ReplicationRegionName);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.CreatedAt != null) {
+            this.CreatedAt = new String(source.CreatedAt);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

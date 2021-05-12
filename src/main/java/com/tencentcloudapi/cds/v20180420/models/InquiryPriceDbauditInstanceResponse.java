@@ -91,6 +91,26 @@ public class InquiryPriceDbauditInstanceResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public InquiryPriceDbauditInstanceResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public InquiryPriceDbauditInstanceResponse(InquiryPriceDbauditInstanceResponse source) {
+        if (source.TotalPrice != null) {
+            this.TotalPrice = new Float(source.TotalPrice);
+        }
+        if (source.RealTotalCost != null) {
+            this.RealTotalCost = new Float(source.RealTotalCost);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

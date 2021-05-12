@@ -106,6 +106,26 @@ public class ErrorPageRule extends AbstractModel{
         this.RedirectUrl = RedirectUrl;
     }
 
+    public ErrorPageRule() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ErrorPageRule(ErrorPageRule source) {
+        if (source.StatusCode != null) {
+            this.StatusCode = new Long(source.StatusCode);
+        }
+        if (source.RedirectCode != null) {
+            this.RedirectCode = new Long(source.RedirectCode);
+        }
+        if (source.RedirectUrl != null) {
+            this.RedirectUrl = new String(source.RedirectUrl);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

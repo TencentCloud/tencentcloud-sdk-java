@@ -137,6 +137,32 @@ public class RealServerBindSetReq extends AbstractModel{
         this.RealServerFailoverRole = RealServerFailoverRole;
     }
 
+    public RealServerBindSetReq() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RealServerBindSetReq(RealServerBindSetReq source) {
+        if (source.RealServerId != null) {
+            this.RealServerId = new String(source.RealServerId);
+        }
+        if (source.RealServerPort != null) {
+            this.RealServerPort = new Long(source.RealServerPort);
+        }
+        if (source.RealServerIP != null) {
+            this.RealServerIP = new String(source.RealServerIP);
+        }
+        if (source.RealServerWeight != null) {
+            this.RealServerWeight = new Long(source.RealServerWeight);
+        }
+        if (source.RealServerFailoverRole != null) {
+            this.RealServerFailoverRole = new String(source.RealServerFailoverRole);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

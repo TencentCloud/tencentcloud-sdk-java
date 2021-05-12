@@ -91,6 +91,26 @@ public class PolicyDetail extends AbstractModel{
         this.FinalDiscount = FinalDiscount;
     }
 
+    public PolicyDetail() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PolicyDetail(PolicyDetail source) {
+        if (source.UserDiscount != null) {
+            this.UserDiscount = new Long(source.UserDiscount);
+        }
+        if (source.CommonDiscount != null) {
+            this.CommonDiscount = new Long(source.CommonDiscount);
+        }
+        if (source.FinalDiscount != null) {
+            this.FinalDiscount = new Long(source.FinalDiscount);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

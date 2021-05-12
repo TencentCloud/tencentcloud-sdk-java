@@ -91,6 +91,32 @@ public class UpdateFleetPortSettingsRequest extends AbstractModel{
         this.InboundPermissionRevocations = InboundPermissionRevocations;
     }
 
+    public UpdateFleetPortSettingsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UpdateFleetPortSettingsRequest(UpdateFleetPortSettingsRequest source) {
+        if (source.FleetId != null) {
+            this.FleetId = new String(source.FleetId);
+        }
+        if (source.InboundPermissionAuthorizations != null) {
+            this.InboundPermissionAuthorizations = new InboundPermissionAuthorization[source.InboundPermissionAuthorizations.length];
+            for (int i = 0; i < source.InboundPermissionAuthorizations.length; i++) {
+                this.InboundPermissionAuthorizations[i] = new InboundPermissionAuthorization(source.InboundPermissionAuthorizations[i]);
+            }
+        }
+        if (source.InboundPermissionRevocations != null) {
+            this.InboundPermissionRevocations = new InboundPermissionRevocations[source.InboundPermissionRevocations.length];
+            for (int i = 0; i < source.InboundPermissionRevocations.length; i++) {
+                this.InboundPermissionRevocations[i] = new InboundPermissionRevocations(source.InboundPermissionRevocations[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

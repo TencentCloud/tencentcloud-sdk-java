@@ -91,6 +91,29 @@ public class CreateLaneRequest extends AbstractModel{
         this.LaneGroupList = LaneGroupList;
     }
 
+    public CreateLaneRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateLaneRequest(CreateLaneRequest source) {
+        if (source.LaneName != null) {
+            this.LaneName = new String(source.LaneName);
+        }
+        if (source.Remark != null) {
+            this.Remark = new String(source.Remark);
+        }
+        if (source.LaneGroupList != null) {
+            this.LaneGroupList = new LaneGroup[source.LaneGroupList.length];
+            for (int i = 0; i < source.LaneGroupList.length; i++) {
+                this.LaneGroupList[i] = new LaneGroup(source.LaneGroupList[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

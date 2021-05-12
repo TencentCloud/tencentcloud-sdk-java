@@ -586,6 +586,86 @@ public class ComplianceCheckDetail extends AbstractModel{
         this.Title = Title;
     }
 
+    public ComplianceCheckDetail() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ComplianceCheckDetail(ComplianceCheckDetail source) {
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
+        if (source.Category != null) {
+            this.Category = new String(source.Category);
+        }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.ErrorCount != null) {
+            this.ErrorCount = new Long(source.ErrorCount);
+        }
+        if (source.NameEn != null) {
+            this.NameEn = new String(source.NameEn);
+        }
+        if (source.CheckName != null) {
+            this.CheckName = new String(source.CheckName);
+        }
+        if (source.Method != null) {
+            this.Method = new String(source.Method);
+        }
+        if (source.Doc != null) {
+            this.Doc = new String(source.Doc);
+        }
+        if (source.SafeCount != null) {
+            this.SafeCount = new Long(source.SafeCount);
+        }
+        if (source.Content != null) {
+            this.Content = new String(source.Content);
+        }
+        if (source.IsPass != null) {
+            this.IsPass = new Long(source.IsPass);
+        }
+        if (source.IgnoreCount != null) {
+            this.IgnoreCount = new Long(source.IgnoreCount);
+        }
+        if (source.RiskCount != null) {
+            this.RiskCount = new Long(source.RiskCount);
+        }
+        if (source.LastCheckTime != null) {
+            this.LastCheckTime = new String(source.LastCheckTime);
+        }
+        if (source.AssetType != null) {
+            this.AssetType = new String(source.AssetType);
+        }
+        if (source.ResCount != null) {
+            this.ResCount = new Long(source.ResCount);
+        }
+        if (source.UUID != null) {
+            this.UUID = new String(source.UUID);
+        }
+        if (source.StandardItem != null) {
+            this.StandardItem = new String(source.StandardItem);
+        }
+        if (source.Chapter != null) {
+            this.Chapter = new String(source.Chapter);
+        }
+        if (source.AssetTypeDesc != null) {
+            this.AssetTypeDesc = new String(source.AssetTypeDesc);
+        }
+        if (source.IsIgnore != null) {
+            this.IsIgnore = new Long(source.IsIgnore);
+        }
+        if (source.RiskItem != null) {
+            this.RiskItem = new String(source.RiskItem);
+        }
+        if (source.Title != null) {
+            this.Title = new String(source.Title);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

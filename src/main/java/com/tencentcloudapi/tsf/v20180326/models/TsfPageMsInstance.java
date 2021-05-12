@@ -78,6 +78,26 @@ public class TsfPageMsInstance extends AbstractModel{
         this.Content = Content;
     }
 
+    public TsfPageMsInstance() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TsfPageMsInstance(TsfPageMsInstance source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.Content != null) {
+            this.Content = new MsInstance[source.Content.length];
+            for (int i = 0; i < source.Content.length; i++) {
+                this.Content[i] = new MsInstance(source.Content[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

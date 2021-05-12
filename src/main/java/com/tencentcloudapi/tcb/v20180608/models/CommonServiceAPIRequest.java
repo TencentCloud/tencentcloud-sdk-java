@@ -68,6 +68,23 @@ public class CommonServiceAPIRequest extends AbstractModel{
         this.JSONData = JSONData;
     }
 
+    public CommonServiceAPIRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CommonServiceAPIRequest(CommonServiceAPIRequest source) {
+        if (source.Service != null) {
+            this.Service = new String(source.Service);
+        }
+        if (source.JSONData != null) {
+            this.JSONData = new String(source.JSONData);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

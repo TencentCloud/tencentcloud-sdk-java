@@ -68,6 +68,26 @@ public class ListUsersResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public ListUsersResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ListUsersResponse(ListUsersResponse source) {
+        if (source.Data != null) {
+            this.Data = new SubAccountInfo[source.Data.length];
+            for (int i = 0; i < source.Data.length; i++) {
+                this.Data[i] = new SubAccountInfo(source.Data[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

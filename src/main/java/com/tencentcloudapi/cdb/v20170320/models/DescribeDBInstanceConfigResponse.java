@@ -193,6 +193,38 @@ public class DescribeDBInstanceConfigResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeDBInstanceConfigResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeDBInstanceConfigResponse(DescribeDBInstanceConfigResponse source) {
+        if (source.ProtectMode != null) {
+            this.ProtectMode = new Long(source.ProtectMode);
+        }
+        if (source.DeployMode != null) {
+            this.DeployMode = new Long(source.DeployMode);
+        }
+        if (source.Zone != null) {
+            this.Zone = new String(source.Zone);
+        }
+        if (source.SlaveConfig != null) {
+            this.SlaveConfig = new SlaveConfig(source.SlaveConfig);
+        }
+        if (source.BackupConfig != null) {
+            this.BackupConfig = new BackupConfig(source.BackupConfig);
+        }
+        if (source.Switched != null) {
+            this.Switched = new Boolean(source.Switched);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

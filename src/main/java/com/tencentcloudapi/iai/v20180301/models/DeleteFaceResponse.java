@@ -91,6 +91,29 @@ public class DeleteFaceResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DeleteFaceResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteFaceResponse(DeleteFaceResponse source) {
+        if (source.SucDeletedNum != null) {
+            this.SucDeletedNum = new Long(source.SucDeletedNum);
+        }
+        if (source.SucFaceIds != null) {
+            this.SucFaceIds = new String[source.SucFaceIds.length];
+            for (int i = 0; i < source.SucFaceIds.length; i++) {
+                this.SucFaceIds[i] = new String(source.SucFaceIds[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

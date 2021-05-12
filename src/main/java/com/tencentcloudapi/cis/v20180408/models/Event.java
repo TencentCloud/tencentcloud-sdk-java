@@ -160,6 +160,35 @@ public class Event extends AbstractModel{
         this.Message = Message;
     }
 
+    public Event() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Event(Event source) {
+        if (source.FirstSeen != null) {
+            this.FirstSeen = new String(source.FirstSeen);
+        }
+        if (source.LastSeen != null) {
+            this.LastSeen = new String(source.LastSeen);
+        }
+        if (source.Level != null) {
+            this.Level = new String(source.Level);
+        }
+        if (source.Count != null) {
+            this.Count = new String(source.Count);
+        }
+        if (source.Reason != null) {
+            this.Reason = new String(source.Reason);
+        }
+        if (source.Message != null) {
+            this.Message = new String(source.Message);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

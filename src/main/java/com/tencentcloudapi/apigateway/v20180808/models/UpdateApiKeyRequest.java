@@ -68,6 +68,23 @@ public class UpdateApiKeyRequest extends AbstractModel{
         this.AccessKeySecret = AccessKeySecret;
     }
 
+    public UpdateApiKeyRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UpdateApiKeyRequest(UpdateApiKeyRequest source) {
+        if (source.AccessKeyId != null) {
+            this.AccessKeyId = new String(source.AccessKeyId);
+        }
+        if (source.AccessKeySecret != null) {
+            this.AccessKeySecret = new String(source.AccessKeySecret);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

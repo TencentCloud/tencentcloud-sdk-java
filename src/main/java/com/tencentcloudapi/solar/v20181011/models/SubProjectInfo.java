@@ -91,6 +91,26 @@ public class SubProjectInfo extends AbstractModel{
         this.SubProjectStatus = SubProjectStatus;
     }
 
+    public SubProjectInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SubProjectInfo(SubProjectInfo source) {
+        if (source.SubProjectId != null) {
+            this.SubProjectId = new String(source.SubProjectId);
+        }
+        if (source.SubProjectName != null) {
+            this.SubProjectName = new String(source.SubProjectName);
+        }
+        if (source.SubProjectStatus != null) {
+            this.SubProjectStatus = new String(source.SubProjectStatus);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

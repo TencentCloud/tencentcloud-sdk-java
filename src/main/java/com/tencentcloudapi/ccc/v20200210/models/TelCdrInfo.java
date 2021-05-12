@@ -859,6 +859,98 @@ notInService       不在服务区
         this.SessionId = SessionId;
     }
 
+    public TelCdrInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TelCdrInfo(TelCdrInfo source) {
+        if (source.Caller != null) {
+            this.Caller = new String(source.Caller);
+        }
+        if (source.Callee != null) {
+            this.Callee = new String(source.Callee);
+        }
+        if (source.Time != null) {
+            this.Time = new Long(source.Time);
+        }
+        if (source.Direction != null) {
+            this.Direction = new Long(source.Direction);
+        }
+        if (source.Duration != null) {
+            this.Duration = new Long(source.Duration);
+        }
+        if (source.RecordURL != null) {
+            this.RecordURL = new String(source.RecordURL);
+        }
+        if (source.SeatUser != null) {
+            this.SeatUser = new SeatUserInfo(source.SeatUser);
+        }
+        if (source.EndStatus != null) {
+            this.EndStatus = new Long(source.EndStatus);
+        }
+        if (source.SkillGroup != null) {
+            this.SkillGroup = new String(source.SkillGroup);
+        }
+        if (source.CallerLocation != null) {
+            this.CallerLocation = new String(source.CallerLocation);
+        }
+        if (source.IVRDuration != null) {
+            this.IVRDuration = new Long(source.IVRDuration);
+        }
+        if (source.RingTimestamp != null) {
+            this.RingTimestamp = new Long(source.RingTimestamp);
+        }
+        if (source.AcceptTimestamp != null) {
+            this.AcceptTimestamp = new Long(source.AcceptTimestamp);
+        }
+        if (source.EndedTimestamp != null) {
+            this.EndedTimestamp = new Long(source.EndedTimestamp);
+        }
+        if (source.IVRKeyPressed != null) {
+            this.IVRKeyPressed = new String[source.IVRKeyPressed.length];
+            for (int i = 0; i < source.IVRKeyPressed.length; i++) {
+                this.IVRKeyPressed[i] = new String(source.IVRKeyPressed[i]);
+            }
+        }
+        if (source.HungUpSide != null) {
+            this.HungUpSide = new String(source.HungUpSide);
+        }
+        if (source.ServeParticipants != null) {
+            this.ServeParticipants = new ServeParticipant[source.ServeParticipants.length];
+            for (int i = 0; i < source.ServeParticipants.length; i++) {
+                this.ServeParticipants[i] = new ServeParticipant(source.ServeParticipants[i]);
+            }
+        }
+        if (source.SkillGroupId != null) {
+            this.SkillGroupId = new Long(source.SkillGroupId);
+        }
+        if (source.EndStatusString != null) {
+            this.EndStatusString = new String(source.EndStatusString);
+        }
+        if (source.StartTimestamp != null) {
+            this.StartTimestamp = new Long(source.StartTimestamp);
+        }
+        if (source.QueuedTimestamp != null) {
+            this.QueuedTimestamp = new Long(source.QueuedTimestamp);
+        }
+        if (source.PostIVRKeyPressed != null) {
+            this.PostIVRKeyPressed = new IVRKeyPressedElement[source.PostIVRKeyPressed.length];
+            for (int i = 0; i < source.PostIVRKeyPressed.length; i++) {
+                this.PostIVRKeyPressed[i] = new IVRKeyPressedElement(source.PostIVRKeyPressed[i]);
+            }
+        }
+        if (source.QueuedSkillGroupId != null) {
+            this.QueuedSkillGroupId = new Long(source.QueuedSkillGroupId);
+        }
+        if (source.SessionId != null) {
+            this.SessionId = new String(source.SessionId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

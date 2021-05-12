@@ -114,6 +114,29 @@ public class RunJobDescription extends AbstractModel{
         this.JobConfigVersion = JobConfigVersion;
     }
 
+    public RunJobDescription() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RunJobDescription(RunJobDescription source) {
+        if (source.JobId != null) {
+            this.JobId = new String(source.JobId);
+        }
+        if (source.RunType != null) {
+            this.RunType = new Long(source.RunType);
+        }
+        if (source.StartMode != null) {
+            this.StartMode = new String(source.StartMode);
+        }
+        if (source.JobConfigVersion != null) {
+            this.JobConfigVersion = new Long(source.JobConfigVersion);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -124,6 +124,32 @@ public class InstanceNetworkInfo extends AbstractModel{
         this.Primary = Primary;
     }
 
+    public InstanceNetworkInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public InstanceNetworkInfo(InstanceNetworkInfo source) {
+        if (source.AddressInfoSet != null) {
+            this.AddressInfoSet = new AddressInfo[source.AddressInfoSet.length];
+            for (int i = 0; i < source.AddressInfoSet.length; i++) {
+                this.AddressInfoSet[i] = new AddressInfo(source.AddressInfoSet[i]);
+            }
+        }
+        if (source.NetworkInterfaceId != null) {
+            this.NetworkInterfaceId = new String(source.NetworkInterfaceId);
+        }
+        if (source.NetworkInterfaceName != null) {
+            this.NetworkInterfaceName = new String(source.NetworkInterfaceName);
+        }
+        if (source.Primary != null) {
+            this.Primary = new Boolean(source.Primary);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

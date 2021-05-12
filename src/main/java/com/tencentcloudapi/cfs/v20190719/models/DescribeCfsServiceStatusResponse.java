@@ -68,6 +68,23 @@ public class DescribeCfsServiceStatusResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeCfsServiceStatusResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeCfsServiceStatusResponse(DescribeCfsServiceStatusResponse source) {
+        if (source.CfsServiceStatus != null) {
+            this.CfsServiceStatus = new String(source.CfsServiceStatus);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

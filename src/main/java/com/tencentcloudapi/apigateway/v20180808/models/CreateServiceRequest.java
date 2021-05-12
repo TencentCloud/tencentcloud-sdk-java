@@ -252,6 +252,53 @@ public class CreateServiceRequest extends AbstractModel{
         this.InstanceId = InstanceId;
     }
 
+    public CreateServiceRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateServiceRequest(CreateServiceRequest source) {
+        if (source.ServiceName != null) {
+            this.ServiceName = new String(source.ServiceName);
+        }
+        if (source.Protocol != null) {
+            this.Protocol = new String(source.Protocol);
+        }
+        if (source.ServiceDesc != null) {
+            this.ServiceDesc = new String(source.ServiceDesc);
+        }
+        if (source.ExclusiveSetName != null) {
+            this.ExclusiveSetName = new String(source.ExclusiveSetName);
+        }
+        if (source.NetTypes != null) {
+            this.NetTypes = new String[source.NetTypes.length];
+            for (int i = 0; i < source.NetTypes.length; i++) {
+                this.NetTypes[i] = new String(source.NetTypes[i]);
+            }
+        }
+        if (source.IpVersion != null) {
+            this.IpVersion = new String(source.IpVersion);
+        }
+        if (source.SetServerName != null) {
+            this.SetServerName = new String(source.SetServerName);
+        }
+        if (source.AppIdType != null) {
+            this.AppIdType = new String(source.AppIdType);
+        }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

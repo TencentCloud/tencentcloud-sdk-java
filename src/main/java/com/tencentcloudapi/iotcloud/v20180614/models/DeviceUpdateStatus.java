@@ -244,6 +244,44 @@ public class DeviceUpdateStatus extends AbstractModel{
         this.TaskId = TaskId;
     }
 
+    public DeviceUpdateStatus() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeviceUpdateStatus(DeviceUpdateStatus source) {
+        if (source.DeviceName != null) {
+            this.DeviceName = new String(source.DeviceName);
+        }
+        if (source.LastProcessTime != null) {
+            this.LastProcessTime = new Long(source.LastProcessTime);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.ErrMsg != null) {
+            this.ErrMsg = new String(source.ErrMsg);
+        }
+        if (source.Retcode != null) {
+            this.Retcode = new Long(source.Retcode);
+        }
+        if (source.DstVersion != null) {
+            this.DstVersion = new String(source.DstVersion);
+        }
+        if (source.Percent != null) {
+            this.Percent = new Long(source.Percent);
+        }
+        if (source.OriVersion != null) {
+            this.OriVersion = new String(source.OriVersion);
+        }
+        if (source.TaskId != null) {
+            this.TaskId = new Long(source.TaskId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -114,6 +114,32 @@ public class DescribeBlockIPListResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeBlockIPListResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeBlockIPListResponse(DescribeBlockIPListResponse source) {
+        if (source.BlockedIPCount != null) {
+            this.BlockedIPCount = new Long(source.BlockedIPCount);
+        }
+        if (source.ClientIPField != null) {
+            this.ClientIPField = new String(source.ClientIPField);
+        }
+        if (source.BlockedIPList != null) {
+            this.BlockedIPList = new BlockedIP[source.BlockedIPList.length];
+            for (int i = 0; i < source.BlockedIPList.length; i++) {
+                this.BlockedIPList[i] = new BlockedIP(source.BlockedIPList[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

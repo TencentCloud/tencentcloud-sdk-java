@@ -137,6 +137,32 @@ public class GetSnapOverviewResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public GetSnapOverviewResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GetSnapOverviewResponse(GetSnapOverviewResponse source) {
+        if (source.TotalSize != null) {
+            this.TotalSize = new Float(source.TotalSize);
+        }
+        if (source.RealTradeSize != null) {
+            this.RealTradeSize = new Float(source.RealTradeSize);
+        }
+        if (source.FreeQuota != null) {
+            this.FreeQuota = new Float(source.FreeQuota);
+        }
+        if (source.TotalNums != null) {
+            this.TotalNums = new Long(source.TotalNums);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

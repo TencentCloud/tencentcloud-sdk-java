@@ -91,6 +91,29 @@ public class DescribeLocalGatewayResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeLocalGatewayResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeLocalGatewayResponse(DescribeLocalGatewayResponse source) {
+        if (source.LocalGatewaySet != null) {
+            this.LocalGatewaySet = new LocalGateway[source.LocalGatewaySet.length];
+            for (int i = 0; i < source.LocalGatewaySet.length; i++) {
+                this.LocalGatewaySet[i] = new LocalGateway(source.LocalGatewaySet[i]);
+            }
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

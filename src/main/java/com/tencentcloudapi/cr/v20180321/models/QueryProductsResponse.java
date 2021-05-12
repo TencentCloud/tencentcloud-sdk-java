@@ -68,6 +68,26 @@ public class QueryProductsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public QueryProductsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public QueryProductsResponse(QueryProductsResponse source) {
+        if (source.ProductList != null) {
+            this.ProductList = new ProductQueryInfo[source.ProductList.length];
+            for (int i = 0; i < source.ProductList.length; i++) {
+                this.ProductList[i] = new ProductQueryInfo(source.ProductList[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

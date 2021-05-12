@@ -141,6 +141,26 @@ public class JobResult extends AbstractModel{
         this.JobState = JobState;
     }
 
+    public JobResult() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public JobResult(JobResult source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.ActionOnFailure != null) {
+            this.ActionOnFailure = new String(source.ActionOnFailure);
+        }
+        if (source.JobState != null) {
+            this.JobState = new String(source.JobState);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

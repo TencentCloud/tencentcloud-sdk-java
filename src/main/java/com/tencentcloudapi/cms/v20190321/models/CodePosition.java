@@ -68,6 +68,23 @@ public class CodePosition extends AbstractModel{
         this.FloatY = FloatY;
     }
 
+    public CodePosition() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CodePosition(CodePosition source) {
+        if (source.FloatX != null) {
+            this.FloatX = new Float(source.FloatX);
+        }
+        if (source.FloatY != null) {
+            this.FloatY = new Float(source.FloatY);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -68,6 +68,23 @@ public class QueryGeneralStatResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public QueryGeneralStatResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public QueryGeneralStatResponse(QueryGeneralStatResponse source) {
+        if (source.GeneralStat != null) {
+            this.GeneralStat = new GeneralStat(source.GeneralStat);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

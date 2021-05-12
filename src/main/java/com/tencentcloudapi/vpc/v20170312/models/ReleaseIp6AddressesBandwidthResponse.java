@@ -68,6 +68,23 @@ public class ReleaseIp6AddressesBandwidthResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public ReleaseIp6AddressesBandwidthResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ReleaseIp6AddressesBandwidthResponse(ReleaseIp6AddressesBandwidthResponse source) {
+        if (source.TaskId != null) {
+            this.TaskId = new String(source.TaskId);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

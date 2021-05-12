@@ -91,6 +91,29 @@ public class ModifyVpcEndPointAttributeRequest extends AbstractModel{
         this.SecurityGroupIds = SecurityGroupIds;
     }
 
+    public ModifyVpcEndPointAttributeRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyVpcEndPointAttributeRequest(ModifyVpcEndPointAttributeRequest source) {
+        if (source.EndPointId != null) {
+            this.EndPointId = new String(source.EndPointId);
+        }
+        if (source.EndPointName != null) {
+            this.EndPointName = new String(source.EndPointName);
+        }
+        if (source.SecurityGroupIds != null) {
+            this.SecurityGroupIds = new String[source.SecurityGroupIds.length];
+            for (int i = 0; i < source.SecurityGroupIds.length; i++) {
+                this.SecurityGroupIds[i] = new String(source.SecurityGroupIds[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

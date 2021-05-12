@@ -68,6 +68,26 @@ public class RegisterTargetsWithClassicalLBRequest extends AbstractModel{
         this.Targets = Targets;
     }
 
+    public RegisterTargetsWithClassicalLBRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RegisterTargetsWithClassicalLBRequest(RegisterTargetsWithClassicalLBRequest source) {
+        if (source.LoadBalancerId != null) {
+            this.LoadBalancerId = new String(source.LoadBalancerId);
+        }
+        if (source.Targets != null) {
+            this.Targets = new ClassicalTargetInfo[source.Targets.length];
+            for (int i = 0; i < source.Targets.length; i++) {
+                this.Targets[i] = new ClassicalTargetInfo(source.Targets[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

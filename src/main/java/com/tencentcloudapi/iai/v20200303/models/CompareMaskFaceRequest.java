@@ -285,6 +285,35 @@ B 图片的 Url、Image必须提供一个，如果都提供，只使用 Url。
         this.QualityControl = QualityControl;
     }
 
+    public CompareMaskFaceRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CompareMaskFaceRequest(CompareMaskFaceRequest source) {
+        if (source.ImageA != null) {
+            this.ImageA = new String(source.ImageA);
+        }
+        if (source.ImageB != null) {
+            this.ImageB = new String(source.ImageB);
+        }
+        if (source.UrlA != null) {
+            this.UrlA = new String(source.UrlA);
+        }
+        if (source.UrlB != null) {
+            this.UrlB = new String(source.UrlB);
+        }
+        if (source.FaceModelVersion != null) {
+            this.FaceModelVersion = new String(source.FaceModelVersion);
+        }
+        if (source.QualityControl != null) {
+            this.QualityControl = new Long(source.QualityControl);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

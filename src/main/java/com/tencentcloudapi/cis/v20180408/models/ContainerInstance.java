@@ -367,6 +367,65 @@ public class ContainerInstance extends AbstractModel{
         this.LanIp = LanIp;
     }
 
+    public ContainerInstance() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ContainerInstance(ContainerInstance source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.InstanceName != null) {
+            this.InstanceName = new String(source.InstanceName);
+        }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.SubnetId != null) {
+            this.SubnetId = new String(source.SubnetId);
+        }
+        if (source.State != null) {
+            this.State = new String(source.State);
+        }
+        if (source.Containers != null) {
+            this.Containers = new Container[source.Containers.length];
+            for (int i = 0; i < source.Containers.length; i++) {
+                this.Containers[i] = new Container(source.Containers[i]);
+            }
+        }
+        if (source.RestartPolicy != null) {
+            this.RestartPolicy = new String(source.RestartPolicy);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.Zone != null) {
+            this.Zone = new String(source.Zone);
+        }
+        if (source.VpcName != null) {
+            this.VpcName = new String(source.VpcName);
+        }
+        if (source.VpcCidr != null) {
+            this.VpcCidr = new String(source.VpcCidr);
+        }
+        if (source.SubnetName != null) {
+            this.SubnetName = new String(source.SubnetName);
+        }
+        if (source.SubnetCidr != null) {
+            this.SubnetCidr = new String(source.SubnetCidr);
+        }
+        if (source.LanIp != null) {
+            this.LanIp = new String(source.LanIp);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -91,6 +91,26 @@ public class GetTokenResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public GetTokenResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GetTokenResponse(GetTokenResponse source) {
+        if (source.Token != null) {
+            this.Token = new String(source.Token);
+        }
+        if (source.ExpireTime != null) {
+            this.ExpireTime = new Long(source.ExpireTime);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

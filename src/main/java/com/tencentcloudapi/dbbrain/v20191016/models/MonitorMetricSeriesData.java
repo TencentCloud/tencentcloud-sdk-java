@@ -68,6 +68,29 @@ public class MonitorMetricSeriesData extends AbstractModel{
         this.Timestamp = Timestamp;
     }
 
+    public MonitorMetricSeriesData() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MonitorMetricSeriesData(MonitorMetricSeriesData source) {
+        if (source.Series != null) {
+            this.Series = new MonitorMetric[source.Series.length];
+            for (int i = 0; i < source.Series.length; i++) {
+                this.Series[i] = new MonitorMetric(source.Series[i]);
+            }
+        }
+        if (source.Timestamp != null) {
+            this.Timestamp = new Long[source.Timestamp.length];
+            for (int i = 0; i < source.Timestamp.length; i++) {
+                this.Timestamp[i] = new Long(source.Timestamp[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

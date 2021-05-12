@@ -206,6 +206,41 @@ public class VulList extends AbstractModel{
         this.RiskLevel = RiskLevel;
     }
 
+    public VulList() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public VulList(VulList source) {
+        if (source.VulId != null) {
+            this.VulId = new String(source.VulId);
+        }
+        if (source.VulName != null) {
+            this.VulName = new String(source.VulName);
+        }
+        if (source.VulCode != null) {
+            this.VulCode = new String(source.VulCode);
+        }
+        if (source.VulDesc != null) {
+            this.VulDesc = new String(source.VulDesc);
+        }
+        if (source.VulSolution != null) {
+            this.VulSolution = new String(source.VulSolution);
+        }
+        if (source.VulSrcType != null) {
+            this.VulSrcType = new Long(source.VulSrcType);
+        }
+        if (source.VulFilepath != null) {
+            this.VulFilepath = new String(source.VulFilepath);
+        }
+        if (source.RiskLevel != null) {
+            this.RiskLevel = new Long(source.RiskLevel);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

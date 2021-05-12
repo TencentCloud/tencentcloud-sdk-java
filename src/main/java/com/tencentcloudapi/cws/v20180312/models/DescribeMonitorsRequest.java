@@ -114,6 +114,35 @@ public class DescribeMonitorsRequest extends AbstractModel{
         this.Limit = Limit;
     }
 
+    public DescribeMonitorsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeMonitorsRequest(DescribeMonitorsRequest source) {
+        if (source.MonitorIds != null) {
+            this.MonitorIds = new Long[source.MonitorIds.length];
+            for (int i = 0; i < source.MonitorIds.length; i++) {
+                this.MonitorIds[i] = new Long(source.MonitorIds[i]);
+            }
+        }
+        if (source.Filters != null) {
+            this.Filters = new Filter[source.Filters.length];
+            for (int i = 0; i < source.Filters.length; i++) {
+                this.Filters[i] = new Filter(source.Filters[i]);
+            }
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

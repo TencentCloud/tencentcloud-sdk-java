@@ -321,6 +321,56 @@ public class MonthNetwork extends AbstractModel{
         this.BandwidthPkgType = BandwidthPkgType;
     }
 
+    public MonthNetwork() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MonthNetwork(MonthNetwork source) {
+        if (source.ZoneInfo != null) {
+            this.ZoneInfo = new ZoneInfo(source.ZoneInfo);
+        }
+        if (source.Month != null) {
+            this.Month = new String(source.Month);
+        }
+        if (source.BandwidthPkgId != null) {
+            this.BandwidthPkgId = new String(source.BandwidthPkgId);
+        }
+        if (source.Isp != null) {
+            this.Isp = new String(source.Isp);
+        }
+        if (source.TrafficMaxIn != null) {
+            this.TrafficMaxIn = new Float(source.TrafficMaxIn);
+        }
+        if (source.TrafficMaxOut != null) {
+            this.TrafficMaxOut = new Float(source.TrafficMaxOut);
+        }
+        if (source.FeeTraffic != null) {
+            this.FeeTraffic = new Float(source.FeeTraffic);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+        if (source.EffectiveDays != null) {
+            this.EffectiveDays = new Long(source.EffectiveDays);
+        }
+        if (source.MonthDays != null) {
+            this.MonthDays = new Long(source.MonthDays);
+        }
+        if (source.EffectiveDaysRate != null) {
+            this.EffectiveDaysRate = new Float(source.EffectiveDaysRate);
+        }
+        if (source.BandwidthPkgType != null) {
+            this.BandwidthPkgType = new String(source.BandwidthPkgType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

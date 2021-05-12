@@ -96,6 +96,26 @@ public class RegionDetected extends AbstractModel{
         this.Location = Location;
     }
 
+    public RegionDetected() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RegionDetected(RegionDetected source) {
+        if (source.Category != null) {
+            this.Category = new String(source.Category);
+        }
+        if (source.CategoryScore != null) {
+            this.CategoryScore = new Float(source.CategoryScore);
+        }
+        if (source.Location != null) {
+            this.Location = new Location(source.Location);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

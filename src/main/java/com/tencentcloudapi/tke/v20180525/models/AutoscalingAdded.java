@@ -114,6 +114,29 @@ public class AutoscalingAdded extends AbstractModel{
         this.Total = Total;
     }
 
+    public AutoscalingAdded() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AutoscalingAdded(AutoscalingAdded source) {
+        if (source.Joining != null) {
+            this.Joining = new Long(source.Joining);
+        }
+        if (source.Initializing != null) {
+            this.Initializing = new Long(source.Initializing);
+        }
+        if (source.Normal != null) {
+            this.Normal = new Long(source.Normal);
+        }
+        if (source.Total != null) {
+            this.Total = new Long(source.Total);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

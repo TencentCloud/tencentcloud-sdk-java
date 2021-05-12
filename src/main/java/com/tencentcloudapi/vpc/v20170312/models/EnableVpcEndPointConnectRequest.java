@@ -91,6 +91,29 @@ public class EnableVpcEndPointConnectRequest extends AbstractModel{
         this.AcceptFlag = AcceptFlag;
     }
 
+    public EnableVpcEndPointConnectRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public EnableVpcEndPointConnectRequest(EnableVpcEndPointConnectRequest source) {
+        if (source.EndPointServiceId != null) {
+            this.EndPointServiceId = new String(source.EndPointServiceId);
+        }
+        if (source.EndPointId != null) {
+            this.EndPointId = new String[source.EndPointId.length];
+            for (int i = 0; i < source.EndPointId.length; i++) {
+                this.EndPointId[i] = new String(source.EndPointId[i]);
+            }
+        }
+        if (source.AcceptFlag != null) {
+            this.AcceptFlag = new Boolean(source.AcceptFlag);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

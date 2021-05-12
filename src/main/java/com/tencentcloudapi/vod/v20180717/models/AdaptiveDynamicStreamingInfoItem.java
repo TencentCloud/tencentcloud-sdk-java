@@ -114,6 +114,29 @@ public class AdaptiveDynamicStreamingInfoItem extends AbstractModel{
         this.Url = Url;
     }
 
+    public AdaptiveDynamicStreamingInfoItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AdaptiveDynamicStreamingInfoItem(AdaptiveDynamicStreamingInfoItem source) {
+        if (source.Definition != null) {
+            this.Definition = new Long(source.Definition);
+        }
+        if (source.Package != null) {
+            this.Package = new String(source.Package);
+        }
+        if (source.DrmType != null) {
+            this.DrmType = new String(source.DrmType);
+        }
+        if (source.Url != null) {
+            this.Url = new String(source.Url);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

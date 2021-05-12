@@ -137,6 +137,38 @@ public class RegionInfo extends AbstractModel{
         this.AvailableChoice = AvailableChoice;
     }
 
+    public RegionInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RegionInfo(RegionInfo source) {
+        if (source.Region != null) {
+            this.Region = new String(source.Region);
+        }
+        if (source.RegionId != null) {
+            this.RegionId = new Long(source.RegionId);
+        }
+        if (source.RegionName != null) {
+            this.RegionName = new String(source.RegionName);
+        }
+        if (source.ZoneList != null) {
+            this.ZoneList = new ZonesInfo[source.ZoneList.length];
+            for (int i = 0; i < source.ZoneList.length; i++) {
+                this.ZoneList[i] = new ZonesInfo(source.ZoneList[i]);
+            }
+        }
+        if (source.AvailableChoice != null) {
+            this.AvailableChoice = new ShardZoneChooseInfo[source.AvailableChoice.length];
+            for (int i = 0; i < source.AvailableChoice.length; i++) {
+                this.AvailableChoice[i] = new ShardZoneChooseInfo(source.AvailableChoice[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

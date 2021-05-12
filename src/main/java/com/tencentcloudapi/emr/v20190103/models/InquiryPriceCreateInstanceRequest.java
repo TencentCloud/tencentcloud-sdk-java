@@ -421,6 +421,59 @@ public class InquiryPriceCreateInstanceRequest extends AbstractModel{
         this.ProductId = ProductId;
     }
 
+    public InquiryPriceCreateInstanceRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public InquiryPriceCreateInstanceRequest(InquiryPriceCreateInstanceRequest source) {
+        if (source.TimeUnit != null) {
+            this.TimeUnit = new String(source.TimeUnit);
+        }
+        if (source.TimeSpan != null) {
+            this.TimeSpan = new Long(source.TimeSpan);
+        }
+        if (source.ResourceSpec != null) {
+            this.ResourceSpec = new NewResourceSpec(source.ResourceSpec);
+        }
+        if (source.Currency != null) {
+            this.Currency = new String(source.Currency);
+        }
+        if (source.PayMode != null) {
+            this.PayMode = new Long(source.PayMode);
+        }
+        if (source.SupportHA != null) {
+            this.SupportHA = new Long(source.SupportHA);
+        }
+        if (source.Software != null) {
+            this.Software = new String[source.Software.length];
+            for (int i = 0; i < source.Software.length; i++) {
+                this.Software[i] = new String(source.Software[i]);
+            }
+        }
+        if (source.Placement != null) {
+            this.Placement = new Placement(source.Placement);
+        }
+        if (source.VPCSettings != null) {
+            this.VPCSettings = new VPCSettings(source.VPCSettings);
+        }
+        if (source.MetaType != null) {
+            this.MetaType = new String(source.MetaType);
+        }
+        if (source.UnifyMetaInstanceId != null) {
+            this.UnifyMetaInstanceId = new String(source.UnifyMetaInstanceId);
+        }
+        if (source.MetaDBInfo != null) {
+            this.MetaDBInfo = new CustomMetaInfo(source.MetaDBInfo);
+        }
+        if (source.ProductId != null) {
+            this.ProductId = new Long(source.ProductId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

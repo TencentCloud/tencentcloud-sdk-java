@@ -420,6 +420,50 @@ re=正则匹配
         this.RuleType = RuleType;
     }
 
+    public AlarmPolicyRule() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AlarmPolicyRule(AlarmPolicyRule source) {
+        if (source.MetricName != null) {
+            this.MetricName = new String(source.MetricName);
+        }
+        if (source.Period != null) {
+            this.Period = new Long(source.Period);
+        }
+        if (source.Operator != null) {
+            this.Operator = new String(source.Operator);
+        }
+        if (source.Value != null) {
+            this.Value = new String(source.Value);
+        }
+        if (source.ContinuePeriod != null) {
+            this.ContinuePeriod = new Long(source.ContinuePeriod);
+        }
+        if (source.NoticeFrequency != null) {
+            this.NoticeFrequency = new Long(source.NoticeFrequency);
+        }
+        if (source.IsPowerNotice != null) {
+            this.IsPowerNotice = new Long(source.IsPowerNotice);
+        }
+        if (source.Filter != null) {
+            this.Filter = new AlarmPolicyFilter(source.Filter);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.Unit != null) {
+            this.Unit = new String(source.Unit);
+        }
+        if (source.RuleType != null) {
+            this.RuleType = new String(source.RuleType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

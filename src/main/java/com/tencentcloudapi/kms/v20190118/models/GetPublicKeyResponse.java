@@ -114,6 +114,29 @@ public class GetPublicKeyResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public GetPublicKeyResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GetPublicKeyResponse(GetPublicKeyResponse source) {
+        if (source.KeyId != null) {
+            this.KeyId = new String(source.KeyId);
+        }
+        if (source.PublicKey != null) {
+            this.PublicKey = new String(source.PublicKey);
+        }
+        if (source.PublicKeyPem != null) {
+            this.PublicKeyPem = new String(source.PublicKeyPem);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -106,6 +106,26 @@ public class PhysicalPosition extends AbstractModel{
         this.SwitchId = SwitchId;
     }
 
+    public PhysicalPosition() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PhysicalPosition(PhysicalPosition source) {
+        if (source.PosId != null) {
+            this.PosId = new String(source.PosId);
+        }
+        if (source.RackId != null) {
+            this.RackId = new String(source.RackId);
+        }
+        if (source.SwitchId != null) {
+            this.SwitchId = new String(source.SwitchId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

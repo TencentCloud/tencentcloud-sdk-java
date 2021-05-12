@@ -183,6 +183,38 @@ public class VpcInfo extends AbstractModel{
         this.IntVpcId = IntVpcId;
     }
 
+    public VpcInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public VpcInfo(VpcInfo source) {
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.VpcName != null) {
+            this.VpcName = new String(source.VpcName);
+        }
+        if (source.CidrBlock != null) {
+            this.CidrBlock = new String(source.CidrBlock);
+        }
+        if (source.Zone != null) {
+            this.Zone = new String(source.Zone);
+        }
+        if (source.State != null) {
+            this.State = new String(source.State);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.IntVpcId != null) {
+            this.IntVpcId = new Long(source.IntVpcId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

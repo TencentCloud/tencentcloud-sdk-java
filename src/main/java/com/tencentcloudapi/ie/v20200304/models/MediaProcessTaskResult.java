@@ -314,6 +314,44 @@ MediaRecognition：媒体识别；
         this.MediaRecognitionTaskResult = MediaRecognitionTaskResult;
     }
 
+    public MediaProcessTaskResult() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MediaProcessTaskResult(MediaProcessTaskResult source) {
+        if (source.TaskId != null) {
+            this.TaskId = new String(source.TaskId);
+        }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.Progress != null) {
+            this.Progress = new Long(source.Progress);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.ErrCode != null) {
+            this.ErrCode = new Long(source.ErrCode);
+        }
+        if (source.ErrMsg != null) {
+            this.ErrMsg = new String(source.ErrMsg);
+        }
+        if (source.MediaCuttingTaskResult != null) {
+            this.MediaCuttingTaskResult = new MediaCuttingTaskResult(source.MediaCuttingTaskResult);
+        }
+        if (source.MediaJoiningTaskResult != null) {
+            this.MediaJoiningTaskResult = new MediaJoiningTaskResult(source.MediaJoiningTaskResult);
+        }
+        if (source.MediaRecognitionTaskResult != null) {
+            this.MediaRecognitionTaskResult = new MediaRecognitionTaskResult(source.MediaRecognitionTaskResult);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

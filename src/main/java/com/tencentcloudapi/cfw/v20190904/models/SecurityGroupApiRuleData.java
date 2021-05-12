@@ -229,6 +229,44 @@ public class SecurityGroupApiRuleData extends AbstractModel{
         this.VpcId = VpcId;
     }
 
+    public SecurityGroupApiRuleData() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SecurityGroupApiRuleData(SecurityGroupApiRuleData source) {
+        if (source.SourceId != null) {
+            this.SourceId = new String(source.SourceId);
+        }
+        if (source.TargetId != null) {
+            this.TargetId = new String(source.TargetId);
+        }
+        if (source.Protocol != null) {
+            this.Protocol = new String(source.Protocol);
+        }
+        if (source.Port != null) {
+            this.Port = new String(source.Port);
+        }
+        if (source.Strategy != null) {
+            this.Strategy = new String(source.Strategy);
+        }
+        if (source.Detail != null) {
+            this.Detail = new String(source.Detail);
+        }
+        if (source.RuleType != null) {
+            this.RuleType = new Long(source.RuleType);
+        }
+        if (source.OrderIndex != null) {
+            this.OrderIndex = new Long(source.OrderIndex);
+        }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

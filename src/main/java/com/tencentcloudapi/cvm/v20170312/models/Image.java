@@ -417,6 +417,65 @@ IMPORTFAILED-导入失败
         this.SnapshotSet = SnapshotSet;
     }
 
+    public Image() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Image(Image source) {
+        if (source.ImageId != null) {
+            this.ImageId = new String(source.ImageId);
+        }
+        if (source.OsName != null) {
+            this.OsName = new String(source.OsName);
+        }
+        if (source.ImageType != null) {
+            this.ImageType = new String(source.ImageType);
+        }
+        if (source.CreatedTime != null) {
+            this.CreatedTime = new String(source.CreatedTime);
+        }
+        if (source.ImageName != null) {
+            this.ImageName = new String(source.ImageName);
+        }
+        if (source.ImageDescription != null) {
+            this.ImageDescription = new String(source.ImageDescription);
+        }
+        if (source.ImageSize != null) {
+            this.ImageSize = new Long(source.ImageSize);
+        }
+        if (source.Architecture != null) {
+            this.Architecture = new String(source.Architecture);
+        }
+        if (source.ImageState != null) {
+            this.ImageState = new String(source.ImageState);
+        }
+        if (source.Platform != null) {
+            this.Platform = new String(source.Platform);
+        }
+        if (source.ImageCreator != null) {
+            this.ImageCreator = new String(source.ImageCreator);
+        }
+        if (source.ImageSource != null) {
+            this.ImageSource = new String(source.ImageSource);
+        }
+        if (source.SyncPercent != null) {
+            this.SyncPercent = new Long(source.SyncPercent);
+        }
+        if (source.IsSupportCloudinit != null) {
+            this.IsSupportCloudinit = new Boolean(source.IsSupportCloudinit);
+        }
+        if (source.SnapshotSet != null) {
+            this.SnapshotSet = new Snapshot[source.SnapshotSet.length];
+            for (int i = 0; i < source.SnapshotSet.length; i++) {
+                this.SnapshotSet[i] = new Snapshot(source.SnapshotSet[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

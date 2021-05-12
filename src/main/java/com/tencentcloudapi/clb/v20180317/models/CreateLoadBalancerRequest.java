@@ -548,6 +548,89 @@ OPEN：公网属性， INTERNAL：内网属性。
         this.EipAddressId = EipAddressId;
     }
 
+    public CreateLoadBalancerRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateLoadBalancerRequest(CreateLoadBalancerRequest source) {
+        if (source.LoadBalancerType != null) {
+            this.LoadBalancerType = new String(source.LoadBalancerType);
+        }
+        if (source.Forward != null) {
+            this.Forward = new Long(source.Forward);
+        }
+        if (source.LoadBalancerName != null) {
+            this.LoadBalancerName = new String(source.LoadBalancerName);
+        }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.SubnetId != null) {
+            this.SubnetId = new String(source.SubnetId);
+        }
+        if (source.ProjectId != null) {
+            this.ProjectId = new Long(source.ProjectId);
+        }
+        if (source.AddressIPVersion != null) {
+            this.AddressIPVersion = new String(source.AddressIPVersion);
+        }
+        if (source.Number != null) {
+            this.Number = new Long(source.Number);
+        }
+        if (source.MasterZoneId != null) {
+            this.MasterZoneId = new String(source.MasterZoneId);
+        }
+        if (source.ZoneId != null) {
+            this.ZoneId = new String(source.ZoneId);
+        }
+        if (source.InternetAccessible != null) {
+            this.InternetAccessible = new InternetAccessible(source.InternetAccessible);
+        }
+        if (source.VipIsp != null) {
+            this.VipIsp = new String(source.VipIsp);
+        }
+        if (source.Tags != null) {
+            this.Tags = new TagInfo[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new TagInfo(source.Tags[i]);
+            }
+        }
+        if (source.Vip != null) {
+            this.Vip = new String(source.Vip);
+        }
+        if (source.BandwidthPackageId != null) {
+            this.BandwidthPackageId = new String(source.BandwidthPackageId);
+        }
+        if (source.ExclusiveCluster != null) {
+            this.ExclusiveCluster = new ExclusiveCluster(source.ExclusiveCluster);
+        }
+        if (source.ClientToken != null) {
+            this.ClientToken = new String(source.ClientToken);
+        }
+        if (source.SnatPro != null) {
+            this.SnatPro = new Boolean(source.SnatPro);
+        }
+        if (source.SnatIps != null) {
+            this.SnatIps = new SnatIp[source.SnatIps.length];
+            for (int i = 0; i < source.SnatIps.length; i++) {
+                this.SnatIps[i] = new SnatIp(source.SnatIps[i]);
+            }
+        }
+        if (source.ClusterTag != null) {
+            this.ClusterTag = new String(source.ClusterTag);
+        }
+        if (source.SlaveZoneId != null) {
+            this.SlaveZoneId = new String(source.SlaveZoneId);
+        }
+        if (source.EipAddressId != null) {
+            this.EipAddressId = new String(source.EipAddressId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

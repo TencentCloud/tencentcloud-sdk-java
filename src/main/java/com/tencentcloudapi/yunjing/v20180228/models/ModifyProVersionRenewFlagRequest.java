@@ -83,6 +83,23 @@ public class ModifyProVersionRenewFlagRequest extends AbstractModel{
         this.Quuid = Quuid;
     }
 
+    public ModifyProVersionRenewFlagRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyProVersionRenewFlagRequest(ModifyProVersionRenewFlagRequest source) {
+        if (source.RenewFlag != null) {
+            this.RenewFlag = new String(source.RenewFlag);
+        }
+        if (source.Quuid != null) {
+            this.Quuid = new String(source.Quuid);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

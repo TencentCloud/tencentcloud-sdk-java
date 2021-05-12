@@ -45,6 +45,20 @@ public class ListClsLogTopicsRequest extends AbstractModel{
         this.Channel = Channel;
     }
 
+    public ListClsLogTopicsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ListClsLogTopicsRequest(ListClsLogTopicsRequest source) {
+        if (source.Channel != null) {
+            this.Channel = new String(source.Channel);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

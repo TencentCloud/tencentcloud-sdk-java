@@ -45,6 +45,23 @@ public class DescribeRulesByRuleIdsRequest extends AbstractModel{
         this.RuleIds = RuleIds;
     }
 
+    public DescribeRulesByRuleIdsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeRulesByRuleIdsRequest(DescribeRulesByRuleIdsRequest source) {
+        if (source.RuleIds != null) {
+            this.RuleIds = new String[source.RuleIds.length];
+            for (int i = 0; i < source.RuleIds.length; i++) {
+                this.RuleIds[i] = new String(source.RuleIds[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

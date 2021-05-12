@@ -114,6 +114,29 @@ public class CreateDevicesRequest extends AbstractModel{
         this.Operator = Operator;
     }
 
+    public CreateDevicesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateDevicesRequest(CreateDevicesRequest source) {
+        if (source.ProductId != null) {
+            this.ProductId = new String(source.ProductId);
+        }
+        if (source.Number != null) {
+            this.Number = new Long(source.Number);
+        }
+        if (source.NamePrefix != null) {
+            this.NamePrefix = new String(source.NamePrefix);
+        }
+        if (source.Operator != null) {
+            this.Operator = new String(source.Operator);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

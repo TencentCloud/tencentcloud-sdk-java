@@ -114,6 +114,29 @@ public class OrgNode extends AbstractModel{
         this.MemberCount = MemberCount;
     }
 
+    public OrgNode() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public OrgNode(OrgNode source) {
+        if (source.NodeId != null) {
+            this.NodeId = new Long(source.NodeId);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.ParentNodeId != null) {
+            this.ParentNodeId = new Long(source.ParentNodeId);
+        }
+        if (source.MemberCount != null) {
+            this.MemberCount = new Long(source.MemberCount);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

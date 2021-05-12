@@ -96,6 +96,26 @@ public class DeleteDomainRequest extends AbstractModel{
         this.Force = Force;
     }
 
+    public DeleteDomainRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteDomainRequest(DeleteDomainRequest source) {
+        if (source.ListenerId != null) {
+            this.ListenerId = new String(source.ListenerId);
+        }
+        if (source.Domain != null) {
+            this.Domain = new String(source.Domain);
+        }
+        if (source.Force != null) {
+            this.Force = new Long(source.Force);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

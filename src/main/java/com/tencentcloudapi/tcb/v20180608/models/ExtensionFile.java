@@ -83,6 +83,23 @@ public class ExtensionFile extends AbstractModel{
         this.FileName = FileName;
     }
 
+    public ExtensionFile() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ExtensionFile(ExtensionFile source) {
+        if (source.FileType != null) {
+            this.FileType = new String(source.FileType);
+        }
+        if (source.FileName != null) {
+            this.FileName = new String(source.FileName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

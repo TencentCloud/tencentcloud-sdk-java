@@ -68,6 +68,23 @@ public class ZoneDayFlow extends AbstractModel{
         this.FlowCount = FlowCount;
     }
 
+    public ZoneDayFlow() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ZoneDayFlow(ZoneDayFlow source) {
+        if (source.Day != null) {
+            this.Day = new String(source.Day);
+        }
+        if (source.FlowCount != null) {
+            this.FlowCount = new Long(source.FlowCount);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

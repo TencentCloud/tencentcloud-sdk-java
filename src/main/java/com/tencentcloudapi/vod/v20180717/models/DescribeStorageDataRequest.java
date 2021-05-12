@@ -45,6 +45,20 @@ public class DescribeStorageDataRequest extends AbstractModel{
         this.SubAppId = SubAppId;
     }
 
+    public DescribeStorageDataRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeStorageDataRequest(DescribeStorageDataRequest source) {
+        if (source.SubAppId != null) {
+            this.SubAppId = new Long(source.SubAppId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

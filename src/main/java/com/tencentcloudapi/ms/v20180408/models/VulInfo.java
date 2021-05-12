@@ -68,6 +68,26 @@ public class VulInfo extends AbstractModel{
         this.VulFileScore = VulFileScore;
     }
 
+    public VulInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public VulInfo(VulInfo source) {
+        if (source.VulList != null) {
+            this.VulList = new VulList[source.VulList.length];
+            for (int i = 0; i < source.VulList.length; i++) {
+                this.VulList[i] = new VulList(source.VulList[i]);
+            }
+        }
+        if (source.VulFileScore != null) {
+            this.VulFileScore = new Long(source.VulFileScore);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

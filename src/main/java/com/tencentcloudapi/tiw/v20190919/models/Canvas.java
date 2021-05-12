@@ -68,6 +68,23 @@ public class Canvas extends AbstractModel{
         this.BackgroundColor = BackgroundColor;
     }
 
+    public Canvas() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Canvas(Canvas source) {
+        if (source.LayoutParams != null) {
+            this.LayoutParams = new LayoutParams(source.LayoutParams);
+        }
+        if (source.BackgroundColor != null) {
+            this.BackgroundColor = new String(source.BackgroundColor);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

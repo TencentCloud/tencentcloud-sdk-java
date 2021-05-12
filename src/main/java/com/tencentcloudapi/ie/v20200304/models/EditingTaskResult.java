@@ -241,6 +241,41 @@ public class EditingTaskResult extends AbstractModel{
         this.OpeningEndingTaskResult = OpeningEndingTaskResult;
     }
 
+    public EditingTaskResult() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public EditingTaskResult(EditingTaskResult source) {
+        if (source.TaskId != null) {
+            this.TaskId = new String(source.TaskId);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.TagTaskResult != null) {
+            this.TagTaskResult = new TagTaskResult(source.TagTaskResult);
+        }
+        if (source.ClassificationTaskResult != null) {
+            this.ClassificationTaskResult = new ClassificationTaskResult(source.ClassificationTaskResult);
+        }
+        if (source.StripTaskResult != null) {
+            this.StripTaskResult = new StripTaskResult(source.StripTaskResult);
+        }
+        if (source.HighlightsTaskResult != null) {
+            this.HighlightsTaskResult = new HighlightsTaskResult(source.HighlightsTaskResult);
+        }
+        if (source.CoverTaskResult != null) {
+            this.CoverTaskResult = new CoverTaskResult(source.CoverTaskResult);
+        }
+        if (source.OpeningEndingTaskResult != null) {
+            this.OpeningEndingTaskResult = new OpeningEndingTaskResult(source.OpeningEndingTaskResult);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -119,6 +119,32 @@ public class DescribeAuthUsersResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeAuthUsersResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeAuthUsersResponse(DescribeAuthUsersResponse source) {
+        if (source.Users != null) {
+            this.Users = new AuthInfo[source.Users.length];
+            for (int i = 0; i < source.Users.length; i++) {
+                this.Users[i] = new AuthInfo(source.Users[i]);
+            }
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.OldUser != null) {
+            this.OldUser = new Boolean(source.OldUser);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

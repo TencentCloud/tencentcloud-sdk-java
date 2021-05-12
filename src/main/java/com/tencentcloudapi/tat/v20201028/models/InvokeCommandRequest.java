@@ -111,6 +111,29 @@ key为自定义参数名称，value为该参数的默认取值。kv均为字符�
         this.Parameters = Parameters;
     }
 
+    public InvokeCommandRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public InvokeCommandRequest(InvokeCommandRequest source) {
+        if (source.CommandId != null) {
+            this.CommandId = new String(source.CommandId);
+        }
+        if (source.InstanceIds != null) {
+            this.InstanceIds = new String[source.InstanceIds.length];
+            for (int i = 0; i < source.InstanceIds.length; i++) {
+                this.InstanceIds[i] = new String(source.InstanceIds[i]);
+            }
+        }
+        if (source.Parameters != null) {
+            this.Parameters = new String(source.Parameters);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

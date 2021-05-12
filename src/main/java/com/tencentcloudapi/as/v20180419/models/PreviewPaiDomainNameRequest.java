@@ -45,6 +45,20 @@ public class PreviewPaiDomainNameRequest extends AbstractModel{
         this.DomainNameType = DomainNameType;
     }
 
+    public PreviewPaiDomainNameRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PreviewPaiDomainNameRequest(PreviewPaiDomainNameRequest source) {
+        if (source.DomainNameType != null) {
+            this.DomainNameType = new String(source.DomainNameType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

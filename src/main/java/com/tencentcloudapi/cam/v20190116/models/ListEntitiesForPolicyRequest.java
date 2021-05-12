@@ -114,6 +114,29 @@ public class ListEntitiesForPolicyRequest extends AbstractModel{
         this.EntityFilter = EntityFilter;
     }
 
+    public ListEntitiesForPolicyRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ListEntitiesForPolicyRequest(ListEntitiesForPolicyRequest source) {
+        if (source.PolicyId != null) {
+            this.PolicyId = new Long(source.PolicyId);
+        }
+        if (source.Page != null) {
+            this.Page = new Long(source.Page);
+        }
+        if (source.Rp != null) {
+            this.Rp = new Long(source.Rp);
+        }
+        if (source.EntityFilter != null) {
+            this.EntityFilter = new String(source.EntityFilter);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

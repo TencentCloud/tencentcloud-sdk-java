@@ -143,6 +143,23 @@ ap-tokyo          亚太地区(东京)
         this.Latency = Latency;
     }
 
+    public RegionLatency() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RegionLatency(RegionLatency source) {
+        if (source.Region != null) {
+            this.Region = new String(source.Region);
+        }
+        if (source.Latency != null) {
+            this.Latency = new Long(source.Latency);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

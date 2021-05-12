@@ -73,6 +73,26 @@ public class DescribeApplicationTriggerLogPersonalResp extends AbstractModel{
         this.LogInfo = LogInfo;
     }
 
+    public DescribeApplicationTriggerLogPersonalResp() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeApplicationTriggerLogPersonalResp(DescribeApplicationTriggerLogPersonalResp source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.LogInfo != null) {
+            this.LogInfo = new TriggerLogResp[source.LogInfo.length];
+            for (int i = 0; i < source.LogInfo.length; i++) {
+                this.LogInfo[i] = new TriggerLogResp(source.LogInfo[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

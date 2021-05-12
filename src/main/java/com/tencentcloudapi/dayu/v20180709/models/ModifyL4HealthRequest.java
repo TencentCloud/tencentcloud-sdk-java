@@ -91,6 +91,29 @@ public class ModifyL4HealthRequest extends AbstractModel{
         this.Healths = Healths;
     }
 
+    public ModifyL4HealthRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyL4HealthRequest(ModifyL4HealthRequest source) {
+        if (source.Business != null) {
+            this.Business = new String(source.Business);
+        }
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
+        if (source.Healths != null) {
+            this.Healths = new L4RuleHealth[source.Healths.length];
+            for (int i = 0; i < source.Healths.length; i++) {
+                this.Healths[i] = new L4RuleHealth(source.Healths[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

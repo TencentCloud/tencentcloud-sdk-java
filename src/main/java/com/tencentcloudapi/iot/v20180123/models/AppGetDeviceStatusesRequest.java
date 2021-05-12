@@ -68,6 +68,26 @@ public class AppGetDeviceStatusesRequest extends AbstractModel{
         this.DeviceIds = DeviceIds;
     }
 
+    public AppGetDeviceStatusesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AppGetDeviceStatusesRequest(AppGetDeviceStatusesRequest source) {
+        if (source.AccessToken != null) {
+            this.AccessToken = new String(source.AccessToken);
+        }
+        if (source.DeviceIds != null) {
+            this.DeviceIds = new String[source.DeviceIds.length];
+            for (int i = 0; i < source.DeviceIds.length; i++) {
+                this.DeviceIds[i] = new String(source.DeviceIds[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

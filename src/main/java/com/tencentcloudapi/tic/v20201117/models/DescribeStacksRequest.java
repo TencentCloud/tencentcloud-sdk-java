@@ -91,6 +91,29 @@ public class DescribeStacksRequest extends AbstractModel{
         this.Limit = Limit;
     }
 
+    public DescribeStacksRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeStacksRequest(DescribeStacksRequest source) {
+        if (source.StackIds != null) {
+            this.StackIds = new String[source.StackIds.length];
+            for (int i = 0; i < source.StackIds.length; i++) {
+                this.StackIds[i] = new String(source.StackIds[i]);
+            }
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

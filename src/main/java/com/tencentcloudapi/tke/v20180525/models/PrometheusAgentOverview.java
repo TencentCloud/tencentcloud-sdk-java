@@ -124,6 +124,29 @@ abnormal = 异常
         this.ClusterName = ClusterName;
     }
 
+    public PrometheusAgentOverview() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PrometheusAgentOverview(PrometheusAgentOverview source) {
+        if (source.ClusterType != null) {
+            this.ClusterType = new String(source.ClusterType);
+        }
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.ClusterName != null) {
+            this.ClusterName = new String(source.ClusterName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

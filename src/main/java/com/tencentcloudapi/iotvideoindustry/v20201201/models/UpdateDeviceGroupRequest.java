@@ -114,6 +114,29 @@ public class UpdateDeviceGroupRequest extends AbstractModel{
         this.NewParentId = NewParentId;
     }
 
+    public UpdateDeviceGroupRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UpdateDeviceGroupRequest(UpdateDeviceGroupRequest source) {
+        if (source.GroupName != null) {
+            this.GroupName = new String(source.GroupName);
+        }
+        if (source.GroupId != null) {
+            this.GroupId = new String(source.GroupId);
+        }
+        if (source.GroupDescribe != null) {
+            this.GroupDescribe = new String(source.GroupDescribe);
+        }
+        if (source.NewParentId != null) {
+            this.NewParentId = new String(source.NewParentId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

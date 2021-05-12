@@ -211,6 +211,44 @@ public class Metric extends AbstractModel{
         this.MetricConfig = MetricConfig;
     }
 
+    public Metric() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Metric(Metric source) {
+        if (source.Namespace != null) {
+            this.Namespace = new String(source.Namespace);
+        }
+        if (source.MetricName != null) {
+            this.MetricName = new String(source.MetricName);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.Min != null) {
+            this.Min = new Float(source.Min);
+        }
+        if (source.Max != null) {
+            this.Max = new Float(source.Max);
+        }
+        if (source.Dimensions != null) {
+            this.Dimensions = new String[source.Dimensions.length];
+            for (int i = 0; i < source.Dimensions.length; i++) {
+                this.Dimensions[i] = new String(source.Dimensions[i]);
+            }
+        }
+        if (source.Unit != null) {
+            this.Unit = new String(source.Unit);
+        }
+        if (source.MetricConfig != null) {
+            this.MetricConfig = new MetricConfig(source.MetricConfig);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

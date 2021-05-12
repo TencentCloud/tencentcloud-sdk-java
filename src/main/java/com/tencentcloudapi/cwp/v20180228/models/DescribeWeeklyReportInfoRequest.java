@@ -45,6 +45,20 @@ public class DescribeWeeklyReportInfoRequest extends AbstractModel{
         this.BeginDate = BeginDate;
     }
 
+    public DescribeWeeklyReportInfoRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeWeeklyReportInfoRequest(DescribeWeeklyReportInfoRequest source) {
+        if (source.BeginDate != null) {
+            this.BeginDate = new String(source.BeginDate);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -137,6 +137,32 @@ public class DescribeTablesRequest extends AbstractModel{
         this.TableRegexp = TableRegexp;
     }
 
+    public DescribeTablesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeTablesRequest(DescribeTablesRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.Database != null) {
+            this.Database = new String(source.Database);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.TableRegexp != null) {
+            this.TableRegexp = new String(source.TableRegexp);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

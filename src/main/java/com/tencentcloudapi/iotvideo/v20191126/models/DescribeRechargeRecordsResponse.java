@@ -101,6 +101,29 @@ public class DescribeRechargeRecordsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeRechargeRecordsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeRechargeRecordsResponse(DescribeRechargeRecordsResponse source) {
+        if (source.AccountType != null) {
+            this.AccountType = new Long(source.AccountType);
+        }
+        if (source.Records != null) {
+            this.Records = new RechargeRecord[source.Records.length];
+            for (int i = 0; i < source.Records.length; i++) {
+                this.Records[i] = new RechargeRecord(source.Records[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

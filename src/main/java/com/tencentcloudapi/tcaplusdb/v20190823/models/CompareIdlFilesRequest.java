@@ -114,6 +114,38 @@ public class CompareIdlFilesRequest extends AbstractModel{
         this.NewIdlFiles = NewIdlFiles;
     }
 
+    public CompareIdlFilesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CompareIdlFilesRequest(CompareIdlFilesRequest source) {
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
+        if (source.SelectedTables != null) {
+            this.SelectedTables = new SelectedTableInfoNew[source.SelectedTables.length];
+            for (int i = 0; i < source.SelectedTables.length; i++) {
+                this.SelectedTables[i] = new SelectedTableInfoNew(source.SelectedTables[i]);
+            }
+        }
+        if (source.ExistingIdlFiles != null) {
+            this.ExistingIdlFiles = new IdlFileInfo[source.ExistingIdlFiles.length];
+            for (int i = 0; i < source.ExistingIdlFiles.length; i++) {
+                this.ExistingIdlFiles[i] = new IdlFileInfo(source.ExistingIdlFiles[i]);
+            }
+        }
+        if (source.NewIdlFiles != null) {
+            this.NewIdlFiles = new IdlFileInfo[source.NewIdlFiles.length];
+            for (int i = 0; i < source.NewIdlFiles.length; i++) {
+                this.NewIdlFiles[i] = new IdlFileInfo(source.NewIdlFiles[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

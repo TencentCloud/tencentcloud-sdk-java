@@ -274,6 +274,44 @@ public class Price extends AbstractModel{
         this.UnitPriceDiscountHigh = UnitPriceDiscountHigh;
     }
 
+    public Price() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Price(Price source) {
+        if (source.OriginalPrice != null) {
+            this.OriginalPrice = new Float(source.OriginalPrice);
+        }
+        if (source.DiscountPrice != null) {
+            this.DiscountPrice = new Float(source.DiscountPrice);
+        }
+        if (source.UnitPrice != null) {
+            this.UnitPrice = new Float(source.UnitPrice);
+        }
+        if (source.ChargeUnit != null) {
+            this.ChargeUnit = new String(source.ChargeUnit);
+        }
+        if (source.UnitPriceDiscount != null) {
+            this.UnitPriceDiscount = new Float(source.UnitPriceDiscount);
+        }
+        if (source.OriginalPriceHigh != null) {
+            this.OriginalPriceHigh = new String(source.OriginalPriceHigh);
+        }
+        if (source.DiscountPriceHigh != null) {
+            this.DiscountPriceHigh = new String(source.DiscountPriceHigh);
+        }
+        if (source.UnitPriceHigh != null) {
+            this.UnitPriceHigh = new String(source.UnitPriceHigh);
+        }
+        if (source.UnitPriceDiscountHigh != null) {
+            this.UnitPriceDiscountHigh = new String(source.UnitPriceDiscountHigh);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

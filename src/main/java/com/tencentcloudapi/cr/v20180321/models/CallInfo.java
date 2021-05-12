@@ -165,6 +165,35 @@ public class CallInfo extends AbstractModel{
         this.CallId = CallId;
     }
 
+    public CallInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CallInfo(CallInfo source) {
+        if (source.BizDate != null) {
+            this.BizDate = new String(source.BizDate);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.FileName != null) {
+            this.FileName = new String(source.FileName);
+        }
+        if (source.FileType != null) {
+            this.FileType = new String(source.FileType);
+        }
+        if (source.CallId != null) {
+            this.CallId = new String(source.CallId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -354,6 +354,65 @@ POSTPAID_BY_HOUR 按量计费，默认方式。
         this.RemoteTcpDefaultPort = RemoteTcpDefaultPort;
     }
 
+    public ClusterSetting() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ClusterSetting(ClusterSetting source) {
+        if (source.InstanceChargeType != null) {
+            this.InstanceChargeType = new String(source.InstanceChargeType);
+        }
+        if (source.SupportHA != null) {
+            this.SupportHA = new Boolean(source.SupportHA);
+        }
+        if (source.SecurityGroupIds != null) {
+            this.SecurityGroupIds = new String[source.SecurityGroupIds.length];
+            for (int i = 0; i < source.SecurityGroupIds.length; i++) {
+                this.SecurityGroupIds[i] = new String(source.SecurityGroupIds[i]);
+            }
+        }
+        if (source.Placement != null) {
+            this.Placement = new Placement(source.Placement);
+        }
+        if (source.VPCSettings != null) {
+            this.VPCSettings = new VPCSettings(source.VPCSettings);
+        }
+        if (source.LoginSettings != null) {
+            this.LoginSettings = new LoginSettings(source.LoginSettings);
+        }
+        if (source.TagSpecification != null) {
+            this.TagSpecification = new String[source.TagSpecification.length];
+            for (int i = 0; i < source.TagSpecification.length; i++) {
+                this.TagSpecification[i] = new String(source.TagSpecification[i]);
+            }
+        }
+        if (source.MetaDB != null) {
+            this.MetaDB = new MetaDbInfo(source.MetaDB);
+        }
+        if (source.ResourceSpec != null) {
+            this.ResourceSpec = new JobFlowResourceSpec(source.ResourceSpec);
+        }
+        if (source.PublicIpAssigned != null) {
+            this.PublicIpAssigned = new Boolean(source.PublicIpAssigned);
+        }
+        if (source.InstanceChargePrepaid != null) {
+            this.InstanceChargePrepaid = new InstanceChargePrepaid(source.InstanceChargePrepaid);
+        }
+        if (source.DisasterRecoverGroupIds != null) {
+            this.DisasterRecoverGroupIds = new String(source.DisasterRecoverGroupIds);
+        }
+        if (source.CbsEncryptFlag != null) {
+            this.CbsEncryptFlag = new Boolean(source.CbsEncryptFlag);
+        }
+        if (source.RemoteTcpDefaultPort != null) {
+            this.RemoteTcpDefaultPort = new Boolean(source.RemoteTcpDefaultPort);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

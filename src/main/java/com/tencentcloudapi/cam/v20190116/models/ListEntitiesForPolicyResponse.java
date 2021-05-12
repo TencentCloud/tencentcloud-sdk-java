@@ -101,6 +101,29 @@ public class ListEntitiesForPolicyResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public ListEntitiesForPolicyResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ListEntitiesForPolicyResponse(ListEntitiesForPolicyResponse source) {
+        if (source.TotalNum != null) {
+            this.TotalNum = new Long(source.TotalNum);
+        }
+        if (source.List != null) {
+            this.List = new AttachEntityOfPolicy[source.List.length];
+            for (int i = 0; i < source.List.length; i++) {
+                this.List[i] = new AttachEntityOfPolicy(source.List[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -91,6 +91,26 @@ public class DescribeAsyncRequestInfoResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeAsyncRequestInfoResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeAsyncRequestInfoResponse(DescribeAsyncRequestInfoResponse source) {
+        if (source.Info != null) {
+            this.Info = new String(source.Info);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

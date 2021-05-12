@@ -68,6 +68,23 @@ public class TagEditingInfo extends AbstractModel{
         this.CustomInfo = CustomInfo;
     }
 
+    public TagEditingInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TagEditingInfo(TagEditingInfo source) {
+        if (source.Switch != null) {
+            this.Switch = new Long(source.Switch);
+        }
+        if (source.CustomInfo != null) {
+            this.CustomInfo = new String(source.CustomInfo);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

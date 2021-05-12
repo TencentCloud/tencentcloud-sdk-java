@@ -182,6 +182,32 @@ public class AiAnalysisResult extends AbstractModel{
         this.FrameTagTask = FrameTagTask;
     }
 
+    public AiAnalysisResult() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AiAnalysisResult(AiAnalysisResult source) {
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.ClassificationTask != null) {
+            this.ClassificationTask = new AiAnalysisTaskClassificationResult(source.ClassificationTask);
+        }
+        if (source.CoverTask != null) {
+            this.CoverTask = new AiAnalysisTaskCoverResult(source.CoverTask);
+        }
+        if (source.TagTask != null) {
+            this.TagTask = new AiAnalysisTaskTagResult(source.TagTask);
+        }
+        if (source.FrameTagTask != null) {
+            this.FrameTagTask = new AiAnalysisTaskFrameTagResult(source.FrameTagTask);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

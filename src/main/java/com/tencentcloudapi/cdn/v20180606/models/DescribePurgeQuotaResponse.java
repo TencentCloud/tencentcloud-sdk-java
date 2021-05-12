@@ -91,6 +91,32 @@ public class DescribePurgeQuotaResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribePurgeQuotaResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribePurgeQuotaResponse(DescribePurgeQuotaResponse source) {
+        if (source.UrlPurge != null) {
+            this.UrlPurge = new Quota[source.UrlPurge.length];
+            for (int i = 0; i < source.UrlPurge.length; i++) {
+                this.UrlPurge[i] = new Quota(source.UrlPurge[i]);
+            }
+        }
+        if (source.PathPurge != null) {
+            this.PathPurge = new Quota[source.PathPurge.length];
+            for (int i = 0; i < source.PathPurge.length; i++) {
+                this.PathPurge[i] = new Quota(source.PathPurge[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -604,6 +604,95 @@ public class UpdateInstanceRequest extends AbstractModel{
         this.KibanaConfig = KibanaConfig;
     }
 
+    public UpdateInstanceRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UpdateInstanceRequest(UpdateInstanceRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.InstanceName != null) {
+            this.InstanceName = new String(source.InstanceName);
+        }
+        if (source.NodeNum != null) {
+            this.NodeNum = new Long(source.NodeNum);
+        }
+        if (source.EsConfig != null) {
+            this.EsConfig = new String(source.EsConfig);
+        }
+        if (source.Password != null) {
+            this.Password = new String(source.Password);
+        }
+        if (source.EsAcl != null) {
+            this.EsAcl = new EsAcl(source.EsAcl);
+        }
+        if (source.DiskSize != null) {
+            this.DiskSize = new Long(source.DiskSize);
+        }
+        if (source.NodeType != null) {
+            this.NodeType = new String(source.NodeType);
+        }
+        if (source.MasterNodeNum != null) {
+            this.MasterNodeNum = new Long(source.MasterNodeNum);
+        }
+        if (source.MasterNodeType != null) {
+            this.MasterNodeType = new String(source.MasterNodeType);
+        }
+        if (source.MasterNodeDiskSize != null) {
+            this.MasterNodeDiskSize = new Long(source.MasterNodeDiskSize);
+        }
+        if (source.ForceRestart != null) {
+            this.ForceRestart = new Boolean(source.ForceRestart);
+        }
+        if (source.CosBackup != null) {
+            this.CosBackup = new CosBackup(source.CosBackup);
+        }
+        if (source.NodeInfoList != null) {
+            this.NodeInfoList = new NodeInfo[source.NodeInfoList.length];
+            for (int i = 0; i < source.NodeInfoList.length; i++) {
+                this.NodeInfoList[i] = new NodeInfo(source.NodeInfoList[i]);
+            }
+        }
+        if (source.PublicAccess != null) {
+            this.PublicAccess = new String(source.PublicAccess);
+        }
+        if (source.EsPublicAcl != null) {
+            this.EsPublicAcl = new EsPublicAcl(source.EsPublicAcl);
+        }
+        if (source.KibanaPublicAccess != null) {
+            this.KibanaPublicAccess = new String(source.KibanaPublicAccess);
+        }
+        if (source.KibanaPrivateAccess != null) {
+            this.KibanaPrivateAccess = new String(source.KibanaPrivateAccess);
+        }
+        if (source.BasicSecurityType != null) {
+            this.BasicSecurityType = new Long(source.BasicSecurityType);
+        }
+        if (source.KibanaPrivatePort != null) {
+            this.KibanaPrivatePort = new Long(source.KibanaPrivatePort);
+        }
+        if (source.ScaleType != null) {
+            this.ScaleType = new Long(source.ScaleType);
+        }
+        if (source.MultiZoneInfo != null) {
+            this.MultiZoneInfo = new ZoneDetail[source.MultiZoneInfo.length];
+            for (int i = 0; i < source.MultiZoneInfo.length; i++) {
+                this.MultiZoneInfo[i] = new ZoneDetail(source.MultiZoneInfo[i]);
+            }
+        }
+        if (source.SceneType != null) {
+            this.SceneType = new Long(source.SceneType);
+        }
+        if (source.KibanaConfig != null) {
+            this.KibanaConfig = new String(source.KibanaConfig);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

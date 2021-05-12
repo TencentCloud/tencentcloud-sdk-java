@@ -91,6 +91,32 @@ public class InstanceUpgradePreCheckResult extends AbstractModel{
         this.SinglePods = SinglePods;
     }
 
+    public InstanceUpgradePreCheckResult() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public InstanceUpgradePreCheckResult(InstanceUpgradePreCheckResult source) {
+        if (source.CheckPass != null) {
+            this.CheckPass = new Boolean(source.CheckPass);
+        }
+        if (source.Items != null) {
+            this.Items = new InstanceUpgradePreCheckResultItem[source.Items.length];
+            for (int i = 0; i < source.Items.length; i++) {
+                this.Items[i] = new InstanceUpgradePreCheckResultItem(source.Items[i]);
+            }
+        }
+        if (source.SinglePods != null) {
+            this.SinglePods = new String[source.SinglePods.length];
+            for (int i = 0; i < source.SinglePods.length; i++) {
+                this.SinglePods[i] = new String(source.SinglePods[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

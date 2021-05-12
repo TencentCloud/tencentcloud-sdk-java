@@ -96,6 +96,29 @@ public class ServiceConfig extends AbstractModel{
         this.HealthCheck = HealthCheck;
     }
 
+    public ServiceConfig() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ServiceConfig(ServiceConfig source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Ports != null) {
+            this.Ports = new Ports[source.Ports.length];
+            for (int i = 0; i < source.Ports.length; i++) {
+                this.Ports[i] = new Ports(source.Ports[i]);
+            }
+        }
+        if (source.HealthCheck != null) {
+            this.HealthCheck = new HealthCheckConfig(source.HealthCheck);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -91,6 +91,26 @@ public class CaptchaOperDataLoadTimeUnit extends AbstractModel{
         this.AppIdLoadTime = AppIdLoadTime;
     }
 
+    public CaptchaOperDataLoadTimeUnit() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CaptchaOperDataLoadTimeUnit(CaptchaOperDataLoadTimeUnit source) {
+        if (source.DateKey != null) {
+            this.DateKey = new String(source.DateKey);
+        }
+        if (source.MarketLoadTime != null) {
+            this.MarketLoadTime = new Float(source.MarketLoadTime);
+        }
+        if (source.AppIdLoadTime != null) {
+            this.AppIdLoadTime = new Float(source.AppIdLoadTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

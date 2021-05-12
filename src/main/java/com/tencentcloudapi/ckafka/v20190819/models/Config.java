@@ -223,6 +223,38 @@ delete：日志按保存时间删除；compact：日志按 key 压缩；compact,
         this.MaxMessageBytes = MaxMessageBytes;
     }
 
+    public Config() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Config(Config source) {
+        if (source.Retention != null) {
+            this.Retention = new Long(source.Retention);
+        }
+        if (source.MinInsyncReplicas != null) {
+            this.MinInsyncReplicas = new Long(source.MinInsyncReplicas);
+        }
+        if (source.CleanUpPolicy != null) {
+            this.CleanUpPolicy = new String(source.CleanUpPolicy);
+        }
+        if (source.SegmentMs != null) {
+            this.SegmentMs = new Long(source.SegmentMs);
+        }
+        if (source.UncleanLeaderElectionEnable != null) {
+            this.UncleanLeaderElectionEnable = new Long(source.UncleanLeaderElectionEnable);
+        }
+        if (source.SegmentBytes != null) {
+            this.SegmentBytes = new Long(source.SegmentBytes);
+        }
+        if (source.MaxMessageBytes != null) {
+            this.MaxMessageBytes = new Long(source.MaxMessageBytes);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -229,6 +229,44 @@ public class CosToken extends AbstractModel{
         this.FullPath = FullPath;
     }
 
+    public CosToken() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CosToken(CosToken source) {
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+        if (source.Bucket != null) {
+            this.Bucket = new String(source.Bucket);
+        }
+        if (source.Region != null) {
+            this.Region = new String(source.Region);
+        }
+        if (source.TmpSecretId != null) {
+            this.TmpSecretId = new String(source.TmpSecretId);
+        }
+        if (source.TmpSecretKey != null) {
+            this.TmpSecretKey = new String(source.TmpSecretKey);
+        }
+        if (source.SessionToken != null) {
+            this.SessionToken = new String(source.SessionToken);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.ExpiredTime != null) {
+            this.ExpiredTime = new String(source.ExpiredTime);
+        }
+        if (source.FullPath != null) {
+            this.FullPath = new String(source.FullPath);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

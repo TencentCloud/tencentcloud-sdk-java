@@ -229,6 +229,47 @@ public class AddCustomRuleRequest extends AbstractModel{
         this.Bypass = Bypass;
     }
 
+    public AddCustomRuleRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AddCustomRuleRequest(AddCustomRuleRequest source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.SortId != null) {
+            this.SortId = new String(source.SortId);
+        }
+        if (source.ExpireTime != null) {
+            this.ExpireTime = new String(source.ExpireTime);
+        }
+        if (source.Strategies != null) {
+            this.Strategies = new Strategy[source.Strategies.length];
+            for (int i = 0; i < source.Strategies.length; i++) {
+                this.Strategies[i] = new Strategy(source.Strategies[i]);
+            }
+        }
+        if (source.Domain != null) {
+            this.Domain = new String(source.Domain);
+        }
+        if (source.ActionType != null) {
+            this.ActionType = new String(source.ActionType);
+        }
+        if (source.Redirect != null) {
+            this.Redirect = new String(source.Redirect);
+        }
+        if (source.Edition != null) {
+            this.Edition = new String(source.Edition);
+        }
+        if (source.Bypass != null) {
+            this.Bypass = new String(source.Bypass);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

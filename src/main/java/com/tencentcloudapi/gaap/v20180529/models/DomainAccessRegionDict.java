@@ -160,6 +160,41 @@ public class DomainAccessRegionDict extends AbstractModel{
         this.RegionName = RegionName;
     }
 
+    public DomainAccessRegionDict() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DomainAccessRegionDict(DomainAccessRegionDict source) {
+        if (source.NationCountryInnerList != null) {
+            this.NationCountryInnerList = new NationCountryInnerInfo[source.NationCountryInnerList.length];
+            for (int i = 0; i < source.NationCountryInnerList.length; i++) {
+                this.NationCountryInnerList[i] = new NationCountryInnerInfo(source.NationCountryInnerList[i]);
+            }
+        }
+        if (source.ProxyList != null) {
+            this.ProxyList = new ProxyIdDict[source.ProxyList.length];
+            for (int i = 0; i < source.ProxyList.length; i++) {
+                this.ProxyList[i] = new ProxyIdDict(source.ProxyList[i]);
+            }
+        }
+        if (source.RegionId != null) {
+            this.RegionId = new String(source.RegionId);
+        }
+        if (source.GeographicalZoneInnerCode != null) {
+            this.GeographicalZoneInnerCode = new String(source.GeographicalZoneInnerCode);
+        }
+        if (source.ContinentInnerCode != null) {
+            this.ContinentInnerCode = new String(source.ContinentInnerCode);
+        }
+        if (source.RegionName != null) {
+            this.RegionName = new String(source.RegionName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

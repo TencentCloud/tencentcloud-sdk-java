@@ -91,6 +91,29 @@ public class UnbindEipsFromNatGatewayRequest extends AbstractModel{
         this.AssignedEips = AssignedEips;
     }
 
+    public UnbindEipsFromNatGatewayRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UnbindEipsFromNatGatewayRequest(UnbindEipsFromNatGatewayRequest source) {
+        if (source.NatId != null) {
+            this.NatId = new String(source.NatId);
+        }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.AssignedEips != null) {
+            this.AssignedEips = new String[source.AssignedEips.length];
+            for (int i = 0; i < source.AssignedEips.length; i++) {
+                this.AssignedEips[i] = new String(source.AssignedEips[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

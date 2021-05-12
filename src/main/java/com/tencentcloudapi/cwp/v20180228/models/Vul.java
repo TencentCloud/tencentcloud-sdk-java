@@ -190,6 +190,35 @@ NOTICE：提示
         this.VulStatus = VulStatus;
     }
 
+    public Vul() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Vul(Vul source) {
+        if (source.VulId != null) {
+            this.VulId = new Long(source.VulId);
+        }
+        if (source.VulName != null) {
+            this.VulName = new String(source.VulName);
+        }
+        if (source.VulLevel != null) {
+            this.VulLevel = new String(source.VulLevel);
+        }
+        if (source.LastScanTime != null) {
+            this.LastScanTime = new String(source.LastScanTime);
+        }
+        if (source.ImpactedHostNum != null) {
+            this.ImpactedHostNum = new Long(source.ImpactedHostNum);
+        }
+        if (source.VulStatus != null) {
+            this.VulStatus = new String(source.VulStatus);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

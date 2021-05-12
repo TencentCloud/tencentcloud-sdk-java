@@ -252,6 +252,47 @@ public class DescribeOrderStatusResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeOrderStatusResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeOrderStatusResponse(DescribeOrderStatusResponse source) {
+        if (source.OrderStatus != null) {
+            this.OrderStatus = new String(source.OrderStatus);
+        }
+        if (source.OrderAmount != null) {
+            this.OrderAmount = new String(source.OrderAmount);
+        }
+        if (source.OrderDate != null) {
+            this.OrderDate = new String(source.OrderDate);
+        }
+        if (source.OrderTime != null) {
+            this.OrderTime = new String(source.OrderTime);
+        }
+        if (source.OutSubAccountNumber != null) {
+            this.OutSubAccountNumber = new String(source.OutSubAccountNumber);
+        }
+        if (source.InSubAccountNumber != null) {
+            this.InSubAccountNumber = new String(source.InSubAccountNumber);
+        }
+        if (source.BookingFlag != null) {
+            this.BookingFlag = new String(source.BookingFlag);
+        }
+        if (source.FailMessage != null) {
+            this.FailMessage = new String(source.FailMessage);
+        }
+        if (source.RequestType != null) {
+            this.RequestType = new String(source.RequestType);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

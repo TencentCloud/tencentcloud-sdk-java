@@ -229,6 +229,44 @@ public class AgentTaxPaymentBatch extends AbstractModel{
         this.Type = Type;
     }
 
+    public AgentTaxPaymentBatch() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AgentTaxPaymentBatch(AgentTaxPaymentBatch source) {
+        if (source.StatusMsg != null) {
+            this.StatusMsg = new String(source.StatusMsg);
+        }
+        if (source.BatchNum != null) {
+            this.BatchNum = new Long(source.BatchNum);
+        }
+        if (source.InfoNum != null) {
+            this.InfoNum = new Long(source.InfoNum);
+        }
+        if (source.RawElectronicCertUrl != null) {
+            this.RawElectronicCertUrl = new String(source.RawElectronicCertUrl);
+        }
+        if (source.AgentId != null) {
+            this.AgentId = new String(source.AgentId);
+        }
+        if (source.FileName != null) {
+            this.FileName = new String(source.FileName);
+        }
+        if (source.StatusCode != null) {
+            this.StatusCode = new Long(source.StatusCode);
+        }
+        if (source.Channel != null) {
+            this.Channel = new Long(source.Channel);
+        }
+        if (source.Type != null) {
+            this.Type = new Long(source.Type);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

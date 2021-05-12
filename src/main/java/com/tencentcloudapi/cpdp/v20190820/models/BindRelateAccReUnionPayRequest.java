@@ -160,6 +160,35 @@ public class BindRelateAccReUnionPayRequest extends AbstractModel{
         this.Profile = Profile;
     }
 
+    public BindRelateAccReUnionPayRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public BindRelateAccReUnionPayRequest(BindRelateAccReUnionPayRequest source) {
+        if (source.MrchCode != null) {
+            this.MrchCode = new String(source.MrchCode);
+        }
+        if (source.TranNetMemberCode != null) {
+            this.TranNetMemberCode = new String(source.TranNetMemberCode);
+        }
+        if (source.MemberAcctNo != null) {
+            this.MemberAcctNo = new String(source.MemberAcctNo);
+        }
+        if (source.MessageCheckCode != null) {
+            this.MessageCheckCode = new String(source.MessageCheckCode);
+        }
+        if (source.ReservedMsg != null) {
+            this.ReservedMsg = new String(source.ReservedMsg);
+        }
+        if (source.Profile != null) {
+            this.Profile = new String(source.Profile);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

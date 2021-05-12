@@ -68,6 +68,26 @@ public class PullSmsSendStatusResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public PullSmsSendStatusResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PullSmsSendStatusResponse(PullSmsSendStatusResponse source) {
+        if (source.PullSmsSendStatusSet != null) {
+            this.PullSmsSendStatusSet = new PullSmsSendStatus[source.PullSmsSendStatusSet.length];
+            for (int i = 0; i < source.PullSmsSendStatusSet.length; i++) {
+                this.PullSmsSendStatusSet[i] = new PullSmsSendStatus(source.PullSmsSendStatusSet[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

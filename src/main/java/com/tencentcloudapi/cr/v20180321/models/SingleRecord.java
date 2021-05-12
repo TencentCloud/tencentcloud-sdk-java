@@ -216,6 +216,41 @@ public class SingleRecord extends AbstractModel{
         this.RecordCosUrl = RecordCosUrl;
     }
 
+    public SingleRecord() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SingleRecord(SingleRecord source) {
+        if (source.AccountNum != null) {
+            this.AccountNum = new String(source.AccountNum);
+        }
+        if (source.BizDate != null) {
+            this.BizDate = new String(source.BizDate);
+        }
+        if (source.CallStartTime != null) {
+            this.CallStartTime = new String(source.CallStartTime);
+        }
+        if (source.CallerPhone != null) {
+            this.CallerPhone = new String(source.CallerPhone);
+        }
+        if (source.Direction != null) {
+            this.Direction = new String(source.Direction);
+        }
+        if (source.Duration != null) {
+            this.Duration = new Long(source.Duration);
+        }
+        if (source.ProductId != null) {
+            this.ProductId = new String(source.ProductId);
+        }
+        if (source.RecordCosUrl != null) {
+            this.RecordCosUrl = new String(source.RecordCosUrl);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

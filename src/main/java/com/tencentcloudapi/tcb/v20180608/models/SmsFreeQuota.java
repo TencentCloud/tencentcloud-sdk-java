@@ -162,6 +162,32 @@ public class SmsFreeQuota extends AbstractModel{
         this.TodayUsedQuota = TodayUsedQuota;
     }
 
+    public SmsFreeQuota() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SmsFreeQuota(SmsFreeQuota source) {
+        if (source.FreeQuota != null) {
+            this.FreeQuota = new Long(source.FreeQuota);
+        }
+        if (source.TotalUsedQuota != null) {
+            this.TotalUsedQuota = new Long(source.TotalUsedQuota);
+        }
+        if (source.CycleStart != null) {
+            this.CycleStart = new String(source.CycleStart);
+        }
+        if (source.CycleEnd != null) {
+            this.CycleEnd = new String(source.CycleEnd);
+        }
+        if (source.TodayUsedQuota != null) {
+            this.TodayUsedQuota = new Long(source.TodayUsedQuota);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

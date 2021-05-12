@@ -141,6 +141,26 @@ public class MediaMiniProgramReviewElem extends AbstractModel{
         this.Confidence = Confidence;
     }
 
+    public MediaMiniProgramReviewElem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MediaMiniProgramReviewElem(MediaMiniProgramReviewElem source) {
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.Suggestion != null) {
+            this.Suggestion = new String(source.Suggestion);
+        }
+        if (source.Confidence != null) {
+            this.Confidence = new Float(source.Confidence);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

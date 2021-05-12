@@ -68,6 +68,26 @@ public class DescribeReadOnlyGroupListResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeReadOnlyGroupListResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeReadOnlyGroupListResponse(DescribeReadOnlyGroupListResponse source) {
+        if (source.ReadOnlyGroupSet != null) {
+            this.ReadOnlyGroupSet = new ReadOnlyGroup[source.ReadOnlyGroupSet.length];
+            for (int i = 0; i < source.ReadOnlyGroupSet.length; i++) {
+                this.ReadOnlyGroupSet[i] = new ReadOnlyGroup(source.ReadOnlyGroupSet[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

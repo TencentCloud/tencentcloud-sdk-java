@@ -91,6 +91,26 @@ public class RegionInstanceCount extends AbstractModel{
         this.Count = Count;
     }
 
+    public RegionInstanceCount() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RegionInstanceCount(RegionInstanceCount source) {
+        if (source.Region != null) {
+            this.Region = new String(source.Region);
+        }
+        if (source.RegionV3 != null) {
+            this.RegionV3 = new String(source.RegionV3);
+        }
+        if (source.Count != null) {
+            this.Count = new Long(source.Count);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

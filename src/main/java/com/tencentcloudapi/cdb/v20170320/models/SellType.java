@@ -91,6 +91,32 @@ public class SellType extends AbstractModel{
         this.Configs = Configs;
     }
 
+    public SellType() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SellType(SellType source) {
+        if (source.TypeName != null) {
+            this.TypeName = new String(source.TypeName);
+        }
+        if (source.EngineVersion != null) {
+            this.EngineVersion = new String[source.EngineVersion.length];
+            for (int i = 0; i < source.EngineVersion.length; i++) {
+                this.EngineVersion[i] = new String(source.EngineVersion[i]);
+            }
+        }
+        if (source.Configs != null) {
+            this.Configs = new SellConfig[source.Configs.length];
+            for (int i = 0; i < source.Configs.length; i++) {
+                this.Configs[i] = new SellConfig(source.Configs[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

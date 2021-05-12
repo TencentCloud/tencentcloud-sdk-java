@@ -101,6 +101,26 @@ public class NatFwEipsInfo extends AbstractModel{
         this.NatGatewayName = NatGatewayName;
     }
 
+    public NatFwEipsInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public NatFwEipsInfo(NatFwEipsInfo source) {
+        if (source.Eip != null) {
+            this.Eip = new String(source.Eip);
+        }
+        if (source.NatGatewayId != null) {
+            this.NatGatewayId = new String(source.NatGatewayId);
+        }
+        if (source.NatGatewayName != null) {
+            this.NatGatewayName = new String(source.NatGatewayName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

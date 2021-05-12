@@ -45,6 +45,20 @@ public class DescribeHighlightResultRequest extends AbstractModel{
         this.JobId = JobId;
     }
 
+    public DescribeHighlightResultRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeHighlightResultRequest(DescribeHighlightResultRequest source) {
+        if (source.JobId != null) {
+            this.JobId = new Long(source.JobId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

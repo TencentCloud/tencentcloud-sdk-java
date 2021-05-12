@@ -129,6 +129,35 @@ SectionSet：时间片段集合。
         this.SectionSet = SectionSet;
     }
 
+    public MediaCuttingTimeInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MediaCuttingTimeInfo(MediaCuttingTimeInfo source) {
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.PointSet != null) {
+            this.PointSet = new Long[source.PointSet.length];
+            for (int i = 0; i < source.PointSet.length; i++) {
+                this.PointSet[i] = new Long(source.PointSet[i]);
+            }
+        }
+        if (source.IntervalPoint != null) {
+            this.IntervalPoint = new IntervalTime(source.IntervalPoint);
+        }
+        if (source.SectionSet != null) {
+            this.SectionSet = new SectionTime[source.SectionSet.length];
+            for (int i = 0; i < source.SectionSet.length; i++) {
+                this.SectionSet[i] = new SectionTime(source.SectionSet[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

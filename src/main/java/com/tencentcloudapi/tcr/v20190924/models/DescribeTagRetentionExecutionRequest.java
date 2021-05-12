@@ -114,6 +114,29 @@ public class DescribeTagRetentionExecutionRequest extends AbstractModel{
         this.Offset = Offset;
     }
 
+    public DescribeTagRetentionExecutionRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeTagRetentionExecutionRequest(DescribeTagRetentionExecutionRequest source) {
+        if (source.RegistryId != null) {
+            this.RegistryId = new String(source.RegistryId);
+        }
+        if (source.RetentionId != null) {
+            this.RetentionId = new Long(source.RetentionId);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

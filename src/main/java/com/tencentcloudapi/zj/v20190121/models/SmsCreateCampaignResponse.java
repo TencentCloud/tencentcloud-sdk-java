@@ -45,6 +45,20 @@ public class SmsCreateCampaignResponse extends AbstractModel{
         this.CampaignId = CampaignId;
     }
 
+    public SmsCreateCampaignResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SmsCreateCampaignResponse(SmsCreateCampaignResponse source) {
+        if (source.CampaignId != null) {
+            this.CampaignId = new Long(source.CampaignId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -91,6 +91,26 @@ public class HttpHeaderRule extends AbstractModel{
         this.HeaderValue = HeaderValue;
     }
 
+    public HttpHeaderRule() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public HttpHeaderRule(HttpHeaderRule source) {
+        if (source.HeaderMode != null) {
+            this.HeaderMode = new String(source.HeaderMode);
+        }
+        if (source.HeaderName != null) {
+            this.HeaderName = new String(source.HeaderName);
+        }
+        if (source.HeaderValue != null) {
+            this.HeaderValue = new String(source.HeaderValue);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

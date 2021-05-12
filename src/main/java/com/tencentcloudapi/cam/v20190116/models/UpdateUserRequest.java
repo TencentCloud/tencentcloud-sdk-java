@@ -206,6 +206,41 @@ public class UpdateUserRequest extends AbstractModel{
         this.Email = Email;
     }
 
+    public UpdateUserRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UpdateUserRequest(UpdateUserRequest source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Remark != null) {
+            this.Remark = new String(source.Remark);
+        }
+        if (source.ConsoleLogin != null) {
+            this.ConsoleLogin = new Long(source.ConsoleLogin);
+        }
+        if (source.Password != null) {
+            this.Password = new String(source.Password);
+        }
+        if (source.NeedResetPassword != null) {
+            this.NeedResetPassword = new Long(source.NeedResetPassword);
+        }
+        if (source.PhoneNum != null) {
+            this.PhoneNum = new String(source.PhoneNum);
+        }
+        if (source.CountryCode != null) {
+            this.CountryCode = new String(source.CountryCode);
+        }
+        if (source.Email != null) {
+            this.Email = new String(source.Email);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

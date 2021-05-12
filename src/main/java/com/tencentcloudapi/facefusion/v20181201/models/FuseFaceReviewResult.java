@@ -160,6 +160,38 @@ public class FuseFaceReviewResult extends AbstractModel{
         this.DetailSet = DetailSet;
     }
 
+    public FuseFaceReviewResult() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public FuseFaceReviewResult(FuseFaceReviewResult source) {
+        if (source.Category != null) {
+            this.Category = new String(source.Category);
+        }
+        if (source.Code != null) {
+            this.Code = new String(source.Code);
+        }
+        if (source.CodeDescription != null) {
+            this.CodeDescription = new String(source.CodeDescription);
+        }
+        if (source.Confidence != null) {
+            this.Confidence = new Float(source.Confidence);
+        }
+        if (source.Suggestion != null) {
+            this.Suggestion = new String(source.Suggestion);
+        }
+        if (source.DetailSet != null) {
+            this.DetailSet = new FuseFaceReviewDetail[source.DetailSet.length];
+            for (int i = 0; i < source.DetailSet.length; i++) {
+                this.DetailSet[i] = new FuseFaceReviewDetail(source.DetailSet[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

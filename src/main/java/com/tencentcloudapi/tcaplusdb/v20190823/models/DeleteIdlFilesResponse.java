@@ -91,6 +91,29 @@ public class DeleteIdlFilesResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DeleteIdlFilesResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteIdlFilesResponse(DeleteIdlFilesResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.IdlFileInfos != null) {
+            this.IdlFileInfos = new IdlFileInfoWithoutContent[source.IdlFileInfos.length];
+            for (int i = 0; i < source.IdlFileInfos.length; i++) {
+                this.IdlFileInfos[i] = new IdlFileInfoWithoutContent(source.IdlFileInfos[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

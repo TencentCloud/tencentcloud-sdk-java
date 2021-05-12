@@ -68,6 +68,23 @@ public class SignByAsymmetricKeyResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public SignByAsymmetricKeyResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SignByAsymmetricKeyResponse(SignByAsymmetricKeyResponse source) {
+        if (source.Signature != null) {
+            this.Signature = new String(source.Signature);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

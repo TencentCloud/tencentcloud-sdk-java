@@ -68,6 +68,23 @@ public class CheckProxyCreateResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public CheckProxyCreateResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CheckProxyCreateResponse(CheckProxyCreateResponse source) {
+        if (source.CheckFlag != null) {
+            this.CheckFlag = new Long(source.CheckFlag);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

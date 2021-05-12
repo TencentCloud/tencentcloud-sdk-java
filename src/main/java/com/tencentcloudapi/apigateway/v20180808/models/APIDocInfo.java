@@ -344,6 +344,65 @@ public class APIDocInfo extends AbstractModel{
         this.ApiNames = ApiNames;
     }
 
+    public APIDocInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public APIDocInfo(APIDocInfo source) {
+        if (source.ApiDocId != null) {
+            this.ApiDocId = new String(source.ApiDocId);
+        }
+        if (source.ApiDocName != null) {
+            this.ApiDocName = new String(source.ApiDocName);
+        }
+        if (source.ApiDocStatus != null) {
+            this.ApiDocStatus = new String(source.ApiDocStatus);
+        }
+        if (source.ApiCount != null) {
+            this.ApiCount = new Long(source.ApiCount);
+        }
+        if (source.ViewCount != null) {
+            this.ViewCount = new Long(source.ViewCount);
+        }
+        if (source.ReleaseCount != null) {
+            this.ReleaseCount = new Long(source.ReleaseCount);
+        }
+        if (source.ApiDocUri != null) {
+            this.ApiDocUri = new String(source.ApiDocUri);
+        }
+        if (source.SharePassword != null) {
+            this.SharePassword = new String(source.SharePassword);
+        }
+        if (source.UpdatedTime != null) {
+            this.UpdatedTime = new String(source.UpdatedTime);
+        }
+        if (source.ServiceId != null) {
+            this.ServiceId = new String(source.ServiceId);
+        }
+        if (source.Environment != null) {
+            this.Environment = new String(source.Environment);
+        }
+        if (source.ApiIds != null) {
+            this.ApiIds = new String[source.ApiIds.length];
+            for (int i = 0; i < source.ApiIds.length; i++) {
+                this.ApiIds[i] = new String(source.ApiIds[i]);
+            }
+        }
+        if (source.ServiceName != null) {
+            this.ServiceName = new String(source.ServiceName);
+        }
+        if (source.ApiNames != null) {
+            this.ApiNames = new String[source.ApiNames.length];
+            for (int i = 0; i < source.ApiNames.length; i++) {
+                this.ApiNames[i] = new String(source.ApiNames[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

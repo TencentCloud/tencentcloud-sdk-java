@@ -68,6 +68,23 @@ public class IotModelData extends AbstractModel{
         this.ReleaseTime = ReleaseTime;
     }
 
+    public IotModelData() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public IotModelData(IotModelData source) {
+        if (source.Revision != null) {
+            this.Revision = new Long(source.Revision);
+        }
+        if (source.ReleaseTime != null) {
+            this.ReleaseTime = new Long(source.ReleaseTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

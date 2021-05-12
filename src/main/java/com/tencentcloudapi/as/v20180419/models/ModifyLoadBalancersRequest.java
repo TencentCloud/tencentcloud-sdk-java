@@ -124,6 +124,35 @@ public class ModifyLoadBalancersRequest extends AbstractModel{
         this.LoadBalancersCheckPolicy = LoadBalancersCheckPolicy;
     }
 
+    public ModifyLoadBalancersRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyLoadBalancersRequest(ModifyLoadBalancersRequest source) {
+        if (source.AutoScalingGroupId != null) {
+            this.AutoScalingGroupId = new String(source.AutoScalingGroupId);
+        }
+        if (source.LoadBalancerIds != null) {
+            this.LoadBalancerIds = new String[source.LoadBalancerIds.length];
+            for (int i = 0; i < source.LoadBalancerIds.length; i++) {
+                this.LoadBalancerIds[i] = new String(source.LoadBalancerIds[i]);
+            }
+        }
+        if (source.ForwardLoadBalancers != null) {
+            this.ForwardLoadBalancers = new ForwardLoadBalancer[source.ForwardLoadBalancers.length];
+            for (int i = 0; i < source.ForwardLoadBalancers.length; i++) {
+                this.ForwardLoadBalancers[i] = new ForwardLoadBalancer(source.ForwardLoadBalancers[i]);
+            }
+        }
+        if (source.LoadBalancersCheckPolicy != null) {
+            this.LoadBalancersCheckPolicy = new String(source.LoadBalancersCheckPolicy);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

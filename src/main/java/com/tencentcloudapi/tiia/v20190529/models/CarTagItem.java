@@ -183,6 +183,41 @@ public class CarTagItem extends AbstractModel{
         this.CarLocation = CarLocation;
     }
 
+    public CarTagItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CarTagItem(CarTagItem source) {
+        if (source.Serial != null) {
+            this.Serial = new String(source.Serial);
+        }
+        if (source.Brand != null) {
+            this.Brand = new String(source.Brand);
+        }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.Color != null) {
+            this.Color = new String(source.Color);
+        }
+        if (source.Confidence != null) {
+            this.Confidence = new Long(source.Confidence);
+        }
+        if (source.Year != null) {
+            this.Year = new Long(source.Year);
+        }
+        if (source.CarLocation != null) {
+            this.CarLocation = new Coord[source.CarLocation.length];
+            for (int i = 0; i < source.CarLocation.length; i++) {
+                this.CarLocation[i] = new Coord(source.CarLocation[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -137,6 +137,32 @@ public class ScdnTopData extends AbstractModel{
         this.District = District;
     }
 
+    public ScdnTopData() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ScdnTopData(ScdnTopData source) {
+        if (source.Time != null) {
+            this.Time = new String(source.Time);
+        }
+        if (source.Value != null) {
+            this.Value = new Long(source.Value);
+        }
+        if (source.Isp != null) {
+            this.Isp = new String(source.Isp);
+        }
+        if (source.Ip != null) {
+            this.Ip = new String(source.Ip);
+        }
+        if (source.District != null) {
+            this.District = new String(source.District);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

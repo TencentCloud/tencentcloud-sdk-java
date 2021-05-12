@@ -137,6 +137,35 @@ public class RegionConf extends AbstractModel{
         this.ZoneSet = ZoneSet;
     }
 
+    public RegionConf() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RegionConf(RegionConf source) {
+        if (source.RegionId != null) {
+            this.RegionId = new String(source.RegionId);
+        }
+        if (source.RegionName != null) {
+            this.RegionName = new String(source.RegionName);
+        }
+        if (source.RegionShortName != null) {
+            this.RegionShortName = new String(source.RegionShortName);
+        }
+        if (source.Area != null) {
+            this.Area = new String(source.Area);
+        }
+        if (source.ZoneSet != null) {
+            this.ZoneSet = new ZoneCapacityConf[source.ZoneSet.length];
+            for (int i = 0; i < source.ZoneSet.length; i++) {
+                this.ZoneSet[i] = new ZoneCapacityConf(source.ZoneSet[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

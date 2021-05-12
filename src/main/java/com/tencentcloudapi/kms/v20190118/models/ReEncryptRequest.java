@@ -114,6 +114,29 @@ public class ReEncryptRequest extends AbstractModel{
         this.DestinationEncryptionContext = DestinationEncryptionContext;
     }
 
+    public ReEncryptRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ReEncryptRequest(ReEncryptRequest source) {
+        if (source.CiphertextBlob != null) {
+            this.CiphertextBlob = new String(source.CiphertextBlob);
+        }
+        if (source.DestinationKeyId != null) {
+            this.DestinationKeyId = new String(source.DestinationKeyId);
+        }
+        if (source.SourceEncryptionContext != null) {
+            this.SourceEncryptionContext = new String(source.SourceEncryptionContext);
+        }
+        if (source.DestinationEncryptionContext != null) {
+            this.DestinationEncryptionContext = new String(source.DestinationEncryptionContext);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

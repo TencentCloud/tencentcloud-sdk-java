@@ -114,6 +114,29 @@ public class InstanceReturnable extends AbstractModel{
         this.ReturnFailMessage = ReturnFailMessage;
     }
 
+    public InstanceReturnable() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public InstanceReturnable(InstanceReturnable source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.IsReturnable != null) {
+            this.IsReturnable = new Boolean(source.IsReturnable);
+        }
+        if (source.ReturnFailCode != null) {
+            this.ReturnFailCode = new Long(source.ReturnFailCode);
+        }
+        if (source.ReturnFailMessage != null) {
+            this.ReturnFailMessage = new String(source.ReturnFailMessage);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

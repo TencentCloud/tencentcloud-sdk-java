@@ -91,6 +91,26 @@ public class InstanceConfigDO extends AbstractModel{
         this.DefaultReplicationFactor = DefaultReplicationFactor;
     }
 
+    public InstanceConfigDO() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public InstanceConfigDO(InstanceConfigDO source) {
+        if (source.AutoCreateTopicsEnable != null) {
+            this.AutoCreateTopicsEnable = new Boolean(source.AutoCreateTopicsEnable);
+        }
+        if (source.DefaultNumPartitions != null) {
+            this.DefaultNumPartitions = new Long(source.DefaultNumPartitions);
+        }
+        if (source.DefaultReplicationFactor != null) {
+            this.DefaultReplicationFactor = new Long(source.DefaultReplicationFactor);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

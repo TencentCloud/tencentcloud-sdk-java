@@ -111,6 +111,29 @@ public class DescribeStructureTaskResultResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeStructureTaskResultResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeStructureTaskResultResponse(DescribeStructureTaskResultResponse source) {
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.Results != null) {
+            this.Results = new ResultObject[source.Results.length];
+            for (int i = 0; i < source.Results.length; i++) {
+                this.Results[i] = new ResultObject(source.Results[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

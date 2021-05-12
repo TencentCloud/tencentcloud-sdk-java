@@ -68,6 +68,23 @@ public class CommitUploadRequest extends AbstractModel{
         this.SubAppId = SubAppId;
     }
 
+    public CommitUploadRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CommitUploadRequest(CommitUploadRequest source) {
+        if (source.VodSessionKey != null) {
+            this.VodSessionKey = new String(source.VodSessionKey);
+        }
+        if (source.SubAppId != null) {
+            this.SubAppId = new Long(source.SubAppId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

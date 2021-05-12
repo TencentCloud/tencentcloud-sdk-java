@@ -371,6 +371,68 @@ public class ImageModerationResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public ImageModerationResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ImageModerationResponse(ImageModerationResponse source) {
+        if (source.Suggestion != null) {
+            this.Suggestion = new String(source.Suggestion);
+        }
+        if (source.Label != null) {
+            this.Label = new String(source.Label);
+        }
+        if (source.SubLabel != null) {
+            this.SubLabel = new String(source.SubLabel);
+        }
+        if (source.Score != null) {
+            this.Score = new Long(source.Score);
+        }
+        if (source.LabelResults != null) {
+            this.LabelResults = new LabelResult[source.LabelResults.length];
+            for (int i = 0; i < source.LabelResults.length; i++) {
+                this.LabelResults[i] = new LabelResult(source.LabelResults[i]);
+            }
+        }
+        if (source.ObjectResults != null) {
+            this.ObjectResults = new ObjectResult[source.ObjectResults.length];
+            for (int i = 0; i < source.ObjectResults.length; i++) {
+                this.ObjectResults[i] = new ObjectResult(source.ObjectResults[i]);
+            }
+        }
+        if (source.OcrResults != null) {
+            this.OcrResults = new OcrResult[source.OcrResults.length];
+            for (int i = 0; i < source.OcrResults.length; i++) {
+                this.OcrResults[i] = new OcrResult(source.OcrResults[i]);
+            }
+        }
+        if (source.LibResults != null) {
+            this.LibResults = new LibResult[source.LibResults.length];
+            for (int i = 0; i < source.LibResults.length; i++) {
+                this.LibResults[i] = new LibResult(source.LibResults[i]);
+            }
+        }
+        if (source.DataId != null) {
+            this.DataId = new String(source.DataId);
+        }
+        if (source.BizType != null) {
+            this.BizType = new String(source.BizType);
+        }
+        if (source.Extra != null) {
+            this.Extra = new String(source.Extra);
+        }
+        if (source.FileMD5 != null) {
+            this.FileMD5 = new String(source.FileMD5);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

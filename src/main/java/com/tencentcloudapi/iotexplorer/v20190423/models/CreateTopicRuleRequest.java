@@ -68,6 +68,23 @@ public class CreateTopicRuleRequest extends AbstractModel{
         this.TopicRulePayload = TopicRulePayload;
     }
 
+    public CreateTopicRuleRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateTopicRuleRequest(CreateTopicRuleRequest source) {
+        if (source.RuleName != null) {
+            this.RuleName = new String(source.RuleName);
+        }
+        if (source.TopicRulePayload != null) {
+            this.TopicRulePayload = new TopicRulePayload(source.TopicRulePayload);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

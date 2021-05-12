@@ -160,6 +160,35 @@ public class RestoreTask extends AbstractModel{
         this.CreateTime = CreateTime;
     }
 
+    public RestoreTask() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RestoreTask(RestoreTask source) {
+        if (source.RestoreTaskId != null) {
+            this.RestoreTaskId = new Long(source.RestoreTaskId);
+        }
+        if (source.FilePath != null) {
+            this.FilePath = new String(source.FilePath);
+        }
+        if (source.Type != null) {
+            this.Type = new Long(source.Type);
+        }
+        if (source.Days != null) {
+            this.Days = new Long(source.Days);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

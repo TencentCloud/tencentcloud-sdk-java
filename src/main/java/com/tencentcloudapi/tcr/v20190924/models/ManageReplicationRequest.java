@@ -137,6 +137,32 @@ public class ManageReplicationRequest extends AbstractModel{
         this.DestinationRegionId = DestinationRegionId;
     }
 
+    public ManageReplicationRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ManageReplicationRequest(ManageReplicationRequest source) {
+        if (source.SourceRegistryId != null) {
+            this.SourceRegistryId = new String(source.SourceRegistryId);
+        }
+        if (source.DestinationRegistryId != null) {
+            this.DestinationRegistryId = new String(source.DestinationRegistryId);
+        }
+        if (source.Rule != null) {
+            this.Rule = new ReplicationRule(source.Rule);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.DestinationRegionId != null) {
+            this.DestinationRegionId = new Long(source.DestinationRegionId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

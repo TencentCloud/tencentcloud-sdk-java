@@ -195,6 +195,35 @@ public class InquiryPriceUpdateInstanceRequest extends AbstractModel{
         this.Currency = Currency;
     }
 
+    public InquiryPriceUpdateInstanceRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public InquiryPriceUpdateInstanceRequest(InquiryPriceUpdateInstanceRequest source) {
+        if (source.TimeUnit != null) {
+            this.TimeUnit = new String(source.TimeUnit);
+        }
+        if (source.TimeSpan != null) {
+            this.TimeSpan = new Long(source.TimeSpan);
+        }
+        if (source.UpdateSpec != null) {
+            this.UpdateSpec = new UpdateInstanceSettings(source.UpdateSpec);
+        }
+        if (source.PayMode != null) {
+            this.PayMode = new Long(source.PayMode);
+        }
+        if (source.Placement != null) {
+            this.Placement = new Placement(source.Placement);
+        }
+        if (source.Currency != null) {
+            this.Currency = new String(source.Currency);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

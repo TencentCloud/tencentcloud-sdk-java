@@ -68,6 +68,26 @@ public class DescribeProxiesStatusResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeProxiesStatusResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeProxiesStatusResponse(DescribeProxiesStatusResponse source) {
+        if (source.InstanceStatusSet != null) {
+            this.InstanceStatusSet = new ProxyStatus[source.InstanceStatusSet.length];
+            for (int i = 0; i < source.InstanceStatusSet.length; i++) {
+                this.InstanceStatusSet[i] = new ProxyStatus(source.InstanceStatusSet[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

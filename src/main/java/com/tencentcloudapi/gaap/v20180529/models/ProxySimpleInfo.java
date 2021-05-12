@@ -91,6 +91,29 @@ public class ProxySimpleInfo extends AbstractModel{
         this.ListenerList = ListenerList;
     }
 
+    public ProxySimpleInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ProxySimpleInfo(ProxySimpleInfo source) {
+        if (source.ProxyId != null) {
+            this.ProxyId = new String(source.ProxyId);
+        }
+        if (source.ProxyName != null) {
+            this.ProxyName = new String(source.ProxyName);
+        }
+        if (source.ListenerList != null) {
+            this.ListenerList = new ListenerInfo[source.ListenerList.length];
+            for (int i = 0; i < source.ListenerList.length; i++) {
+                this.ListenerList[i] = new ListenerInfo(source.ListenerList[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

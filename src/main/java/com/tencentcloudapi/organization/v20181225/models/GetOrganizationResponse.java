@@ -183,6 +183,38 @@ public class GetOrganizationResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public GetOrganizationResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GetOrganizationResponse(GetOrganizationResponse source) {
+        if (source.OrgId != null) {
+            this.OrgId = new Long(source.OrgId);
+        }
+        if (source.HostUin != null) {
+            this.HostUin = new Long(source.HostUin);
+        }
+        if (source.Nickname != null) {
+            this.Nickname = new String(source.Nickname);
+        }
+        if (source.Mail != null) {
+            this.Mail = new String(source.Mail);
+        }
+        if (source.OrgType != null) {
+            this.OrgType = new Long(source.OrgType);
+        }
+        if (source.IsEmpty != null) {
+            this.IsEmpty = new Long(source.IsEmpty);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

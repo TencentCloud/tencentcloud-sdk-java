@@ -183,6 +183,38 @@ public class ImportSnapshotsRequest extends AbstractModel{
         this.NewTableName = NewTableName;
     }
 
+    public ImportSnapshotsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ImportSnapshotsRequest(ImportSnapshotsRequest source) {
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
+        if (source.Snapshots != null) {
+            this.Snapshots = new SnapshotInfo(source.Snapshots);
+        }
+        if (source.ImportSpecialKey != null) {
+            this.ImportSpecialKey = new String(source.ImportSpecialKey);
+        }
+        if (source.ImportOriginTable != null) {
+            this.ImportOriginTable = new String(source.ImportOriginTable);
+        }
+        if (source.KeyFile != null) {
+            this.KeyFile = new KeyFile(source.KeyFile);
+        }
+        if (source.NewTableGroupId != null) {
+            this.NewTableGroupId = new String(source.NewTableGroupId);
+        }
+        if (source.NewTableName != null) {
+            this.NewTableName = new String(source.NewTableName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

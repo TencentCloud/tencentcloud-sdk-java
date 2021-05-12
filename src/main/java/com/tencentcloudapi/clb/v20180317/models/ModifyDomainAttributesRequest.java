@@ -206,6 +206,41 @@ public class ModifyDomainAttributesRequest extends AbstractModel{
         this.NewDefaultServerDomain = NewDefaultServerDomain;
     }
 
+    public ModifyDomainAttributesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyDomainAttributesRequest(ModifyDomainAttributesRequest source) {
+        if (source.LoadBalancerId != null) {
+            this.LoadBalancerId = new String(source.LoadBalancerId);
+        }
+        if (source.ListenerId != null) {
+            this.ListenerId = new String(source.ListenerId);
+        }
+        if (source.Domain != null) {
+            this.Domain = new String(source.Domain);
+        }
+        if (source.NewDomain != null) {
+            this.NewDomain = new String(source.NewDomain);
+        }
+        if (source.Certificate != null) {
+            this.Certificate = new CertificateInput(source.Certificate);
+        }
+        if (source.Http2 != null) {
+            this.Http2 = new Boolean(source.Http2);
+        }
+        if (source.DefaultServer != null) {
+            this.DefaultServer = new Boolean(source.DefaultServer);
+        }
+        if (source.NewDefaultServerDomain != null) {
+            this.NewDefaultServerDomain = new String(source.NewDefaultServerDomain);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -778,6 +778,98 @@ public class JobV1 extends AbstractModel{
         this.ClusterStatus = ClusterStatus;
     }
 
+    public JobV1() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public JobV1(JobV1 source) {
+        if (source.JobId != null) {
+            this.JobId = new String(source.JobId);
+        }
+        if (source.Region != null) {
+            this.Region = new String(source.Region);
+        }
+        if (source.Zone != null) {
+            this.Zone = new String(source.Zone);
+        }
+        if (source.AppId != null) {
+            this.AppId = new Long(source.AppId);
+        }
+        if (source.OwnerUin != null) {
+            this.OwnerUin = new String(source.OwnerUin);
+        }
+        if (source.CreatorUin != null) {
+            this.CreatorUin = new String(source.CreatorUin);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.JobType != null) {
+            this.JobType = new Long(source.JobType);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.StopTime != null) {
+            this.StopTime = new String(source.StopTime);
+        }
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new String(source.UpdateTime);
+        }
+        if (source.TotalRunMillis != null) {
+            this.TotalRunMillis = new Long(source.TotalRunMillis);
+        }
+        if (source.Remark != null) {
+            this.Remark = new String(source.Remark);
+        }
+        if (source.LastOpResult != null) {
+            this.LastOpResult = new String(source.LastOpResult);
+        }
+        if (source.ClusterName != null) {
+            this.ClusterName = new String(source.ClusterName);
+        }
+        if (source.LatestJobConfigVersion != null) {
+            this.LatestJobConfigVersion = new Long(source.LatestJobConfigVersion);
+        }
+        if (source.PublishedJobConfigVersion != null) {
+            this.PublishedJobConfigVersion = new Long(source.PublishedJobConfigVersion);
+        }
+        if (source.RunningCuNum != null) {
+            this.RunningCuNum = new Long(source.RunningCuNum);
+        }
+        if (source.CuMem != null) {
+            this.CuMem = new Long(source.CuMem);
+        }
+        if (source.StatusDesc != null) {
+            this.StatusDesc = new String(source.StatusDesc);
+        }
+        if (source.CurrentRunMillis != null) {
+            this.CurrentRunMillis = new Long(source.CurrentRunMillis);
+        }
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
+        if (source.WebUIUrl != null) {
+            this.WebUIUrl = new String(source.WebUIUrl);
+        }
+        if (source.SchedulerType != null) {
+            this.SchedulerType = new Long(source.SchedulerType);
+        }
+        if (source.ClusterStatus != null) {
+            this.ClusterStatus = new Long(source.ClusterStatus);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

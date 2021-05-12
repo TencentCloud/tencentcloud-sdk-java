@@ -45,6 +45,20 @@ public class GetRecordPlanByIdRequest extends AbstractModel{
         this.PlanId = PlanId;
     }
 
+    public GetRecordPlanByIdRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GetRecordPlanByIdRequest(GetRecordPlanByIdRequest source) {
+        if (source.PlanId != null) {
+            this.PlanId = new String(source.PlanId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

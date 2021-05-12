@@ -206,6 +206,47 @@ public class CreateSubscribeRequest extends AbstractModel{
         this.NotifyContentFormat = NotifyContentFormat;
     }
 
+    public CreateSubscribeRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateSubscribeRequest(CreateSubscribeRequest source) {
+        if (source.TopicName != null) {
+            this.TopicName = new String(source.TopicName);
+        }
+        if (source.SubscriptionName != null) {
+            this.SubscriptionName = new String(source.SubscriptionName);
+        }
+        if (source.Protocol != null) {
+            this.Protocol = new String(source.Protocol);
+        }
+        if (source.Endpoint != null) {
+            this.Endpoint = new String(source.Endpoint);
+        }
+        if (source.NotifyStrategy != null) {
+            this.NotifyStrategy = new String(source.NotifyStrategy);
+        }
+        if (source.FilterTag != null) {
+            this.FilterTag = new String[source.FilterTag.length];
+            for (int i = 0; i < source.FilterTag.length; i++) {
+                this.FilterTag[i] = new String(source.FilterTag[i]);
+            }
+        }
+        if (source.BindingKey != null) {
+            this.BindingKey = new String[source.BindingKey.length];
+            for (int i = 0; i < source.BindingKey.length; i++) {
+                this.BindingKey[i] = new String(source.BindingKey[i]);
+            }
+        }
+        if (source.NotifyContentFormat != null) {
+            this.NotifyContentFormat = new String(source.NotifyContentFormat);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

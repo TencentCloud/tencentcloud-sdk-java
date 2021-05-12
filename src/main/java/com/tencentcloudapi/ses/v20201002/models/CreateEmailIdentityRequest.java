@@ -45,6 +45,20 @@ public class CreateEmailIdentityRequest extends AbstractModel{
         this.EmailIdentity = EmailIdentity;
     }
 
+    public CreateEmailIdentityRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateEmailIdentityRequest(CreateEmailIdentityRequest source) {
+        if (source.EmailIdentity != null) {
+            this.EmailIdentity = new String(source.EmailIdentity);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

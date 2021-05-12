@@ -68,6 +68,23 @@ public class SwitcherProjectInput extends AbstractModel{
         this.PgmOutputConfig = PgmOutputConfig;
     }
 
+    public SwitcherProjectInput() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SwitcherProjectInput(SwitcherProjectInput source) {
+        if (source.StopTime != null) {
+            this.StopTime = new String(source.StopTime);
+        }
+        if (source.PgmOutputConfig != null) {
+            this.PgmOutputConfig = new SwitcherPgmOutputConfig(source.PgmOutputConfig);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -395,6 +395,68 @@ public class SpecInfo extends AbstractModel{
         this.MultiZonesStatus = MultiZonesStatus;
     }
 
+    public SpecInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SpecInfo(SpecInfo source) {
+        if (source.SpecId != null) {
+            this.SpecId = new Long(source.SpecId);
+        }
+        if (source.MachineType != null) {
+            this.MachineType = new String(source.MachineType);
+        }
+        if (source.MachineTypeName != null) {
+            this.MachineTypeName = new String(source.MachineTypeName);
+        }
+        if (source.Version != null) {
+            this.Version = new String(source.Version);
+        }
+        if (source.VersionName != null) {
+            this.VersionName = new String(source.VersionName);
+        }
+        if (source.Memory != null) {
+            this.Memory = new Long(source.Memory);
+        }
+        if (source.CPU != null) {
+            this.CPU = new Long(source.CPU);
+        }
+        if (source.MinStorage != null) {
+            this.MinStorage = new Long(source.MinStorage);
+        }
+        if (source.MaxStorage != null) {
+            this.MaxStorage = new Long(source.MaxStorage);
+        }
+        if (source.QPS != null) {
+            this.QPS = new Long(source.QPS);
+        }
+        if (source.SuitInfo != null) {
+            this.SuitInfo = new String(source.SuitInfo);
+        }
+        if (source.Pid != null) {
+            this.Pid = new Long(source.Pid);
+        }
+        if (source.PostPid != null) {
+            this.PostPid = new Long[source.PostPid.length];
+            for (int i = 0; i < source.PostPid.length; i++) {
+                this.PostPid[i] = new Long(source.PostPid[i]);
+            }
+        }
+        if (source.PayModeStatus != null) {
+            this.PayModeStatus = new String(source.PayModeStatus);
+        }
+        if (source.InstanceType != null) {
+            this.InstanceType = new String(source.InstanceType);
+        }
+        if (source.MultiZonesStatus != null) {
+            this.MultiZonesStatus = new String(source.MultiZonesStatus);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

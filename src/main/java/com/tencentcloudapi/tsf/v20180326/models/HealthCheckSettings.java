@@ -78,6 +78,23 @@ public class HealthCheckSettings extends AbstractModel{
         this.ReadinessProbe = ReadinessProbe;
     }
 
+    public HealthCheckSettings() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public HealthCheckSettings(HealthCheckSettings source) {
+        if (source.LivenessProbe != null) {
+            this.LivenessProbe = new HealthCheckSetting(source.LivenessProbe);
+        }
+        if (source.ReadinessProbe != null) {
+            this.ReadinessProbe = new HealthCheckSetting(source.ReadinessProbe);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -252,6 +252,53 @@ public class UpdateEKSClusterRequest extends AbstractModel{
         this.NeedDeleteCbs = NeedDeleteCbs;
     }
 
+    public UpdateEKSClusterRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UpdateEKSClusterRequest(UpdateEKSClusterRequest source) {
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
+        if (source.ClusterName != null) {
+            this.ClusterName = new String(source.ClusterName);
+        }
+        if (source.ClusterDesc != null) {
+            this.ClusterDesc = new String(source.ClusterDesc);
+        }
+        if (source.SubnetIds != null) {
+            this.SubnetIds = new String[source.SubnetIds.length];
+            for (int i = 0; i < source.SubnetIds.length; i++) {
+                this.SubnetIds[i] = new String(source.SubnetIds[i]);
+            }
+        }
+        if (source.PublicLB != null) {
+            this.PublicLB = new ClusterPublicLB(source.PublicLB);
+        }
+        if (source.InternalLB != null) {
+            this.InternalLB = new ClusterInternalLB(source.InternalLB);
+        }
+        if (source.ServiceSubnetId != null) {
+            this.ServiceSubnetId = new String(source.ServiceSubnetId);
+        }
+        if (source.DnsServers != null) {
+            this.DnsServers = new DnsServerConf[source.DnsServers.length];
+            for (int i = 0; i < source.DnsServers.length; i++) {
+                this.DnsServers[i] = new DnsServerConf(source.DnsServers[i]);
+            }
+        }
+        if (source.ClearDnsServer != null) {
+            this.ClearDnsServer = new String(source.ClearDnsServer);
+        }
+        if (source.NeedDeleteCbs != null) {
+            this.NeedDeleteCbs = new Boolean(source.NeedDeleteCbs);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

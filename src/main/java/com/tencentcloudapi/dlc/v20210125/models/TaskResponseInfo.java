@@ -372,6 +372,62 @@ public class TaskResponseInfo extends AbstractModel{
         this.OutputMessage = OutputMessage;
     }
 
+    public TaskResponseInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TaskResponseInfo(TaskResponseInfo source) {
+        if (source.DatabaseName != null) {
+            this.DatabaseName = new String(source.DatabaseName);
+        }
+        if (source.DataAmount != null) {
+            this.DataAmount = new Long(source.DataAmount);
+        }
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
+        if (source.UsedTime != null) {
+            this.UsedTime = new Long(source.UsedTime);
+        }
+        if (source.OutputPath != null) {
+            this.OutputPath = new String(source.OutputPath);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.State != null) {
+            this.State = new Long(source.State);
+        }
+        if (source.SQLType != null) {
+            this.SQLType = new String(source.SQLType);
+        }
+        if (source.SQL != null) {
+            this.SQL = new String(source.SQL);
+        }
+        if (source.ResultExpired != null) {
+            this.ResultExpired = new Boolean(source.ResultExpired);
+        }
+        if (source.RowAffectInfo != null) {
+            this.RowAffectInfo = new String(source.RowAffectInfo);
+        }
+        if (source.DataSet != null) {
+            this.DataSet = new String(source.DataSet);
+        }
+        if (source.Error != null) {
+            this.Error = new String(source.Error);
+        }
+        if (source.Percentage != null) {
+            this.Percentage = new Long(source.Percentage);
+        }
+        if (source.OutputMessage != null) {
+            this.OutputMessage = new String(source.OutputMessage);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

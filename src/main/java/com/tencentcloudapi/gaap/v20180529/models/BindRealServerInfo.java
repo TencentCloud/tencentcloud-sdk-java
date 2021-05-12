@@ -142,6 +142,35 @@ public class BindRealServerInfo extends AbstractModel{
         this.TagSet = TagSet;
     }
 
+    public BindRealServerInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public BindRealServerInfo(BindRealServerInfo source) {
+        if (source.RealServerIP != null) {
+            this.RealServerIP = new String(source.RealServerIP);
+        }
+        if (source.RealServerId != null) {
+            this.RealServerId = new String(source.RealServerId);
+        }
+        if (source.RealServerName != null) {
+            this.RealServerName = new String(source.RealServerName);
+        }
+        if (source.ProjectId != null) {
+            this.ProjectId = new Long(source.ProjectId);
+        }
+        if (source.TagSet != null) {
+            this.TagSet = new TagPair[source.TagSet.length];
+            for (int i = 0; i < source.TagSet.length; i++) {
+                this.TagSet[i] = new TagPair(source.TagSet[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

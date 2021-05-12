@@ -91,6 +91,26 @@ public class AccessConfiguration extends AbstractModel{
         this.Concurrent = Concurrent;
     }
 
+    public AccessConfiguration() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AccessConfiguration(AccessConfiguration source) {
+        if (source.AccessRegion != null) {
+            this.AccessRegion = new String(source.AccessRegion);
+        }
+        if (source.Bandwidth != null) {
+            this.Bandwidth = new Long(source.Bandwidth);
+        }
+        if (source.Concurrent != null) {
+            this.Concurrent = new Long(source.Concurrent);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

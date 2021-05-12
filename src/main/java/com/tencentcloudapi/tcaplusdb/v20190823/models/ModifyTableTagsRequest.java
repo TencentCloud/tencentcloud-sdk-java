@@ -114,6 +114,38 @@ public class ModifyTableTagsRequest extends AbstractModel{
         this.DeleteTags = DeleteTags;
     }
 
+    public ModifyTableTagsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyTableTagsRequest(ModifyTableTagsRequest source) {
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
+        if (source.SelectedTables != null) {
+            this.SelectedTables = new SelectedTableInfoNew[source.SelectedTables.length];
+            for (int i = 0; i < source.SelectedTables.length; i++) {
+                this.SelectedTables[i] = new SelectedTableInfoNew(source.SelectedTables[i]);
+            }
+        }
+        if (source.ReplaceTags != null) {
+            this.ReplaceTags = new TagInfoUnit[source.ReplaceTags.length];
+            for (int i = 0; i < source.ReplaceTags.length; i++) {
+                this.ReplaceTags[i] = new TagInfoUnit(source.ReplaceTags[i]);
+            }
+        }
+        if (source.DeleteTags != null) {
+            this.DeleteTags = new TagInfoUnit[source.DeleteTags.length];
+            for (int i = 0; i < source.DeleteTags.length; i++) {
+                this.DeleteTags[i] = new TagInfoUnit(source.DeleteTags[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

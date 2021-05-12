@@ -183,6 +183,38 @@ public class ComputeNodeMetrics extends AbstractModel{
         this.AbnormalCount = AbnormalCount;
     }
 
+    public ComputeNodeMetrics() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ComputeNodeMetrics(ComputeNodeMetrics source) {
+        if (source.SubmittedCount != null) {
+            this.SubmittedCount = new Long(source.SubmittedCount);
+        }
+        if (source.CreatingCount != null) {
+            this.CreatingCount = new Long(source.CreatingCount);
+        }
+        if (source.CreationFailedCount != null) {
+            this.CreationFailedCount = new Long(source.CreationFailedCount);
+        }
+        if (source.CreatedCount != null) {
+            this.CreatedCount = new Long(source.CreatedCount);
+        }
+        if (source.RunningCount != null) {
+            this.RunningCount = new Long(source.RunningCount);
+        }
+        if (source.DeletingCount != null) {
+            this.DeletingCount = new Long(source.DeletingCount);
+        }
+        if (source.AbnormalCount != null) {
+            this.AbnormalCount = new Long(source.AbnormalCount);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

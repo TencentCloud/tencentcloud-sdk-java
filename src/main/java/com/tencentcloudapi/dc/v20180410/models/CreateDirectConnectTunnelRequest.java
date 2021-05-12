@@ -435,6 +435,68 @@ STATIC：静态
         this.CloudAttachId = CloudAttachId;
     }
 
+    public CreateDirectConnectTunnelRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateDirectConnectTunnelRequest(CreateDirectConnectTunnelRequest source) {
+        if (source.DirectConnectId != null) {
+            this.DirectConnectId = new String(source.DirectConnectId);
+        }
+        if (source.DirectConnectTunnelName != null) {
+            this.DirectConnectTunnelName = new String(source.DirectConnectTunnelName);
+        }
+        if (source.DirectConnectOwnerAccount != null) {
+            this.DirectConnectOwnerAccount = new String(source.DirectConnectOwnerAccount);
+        }
+        if (source.NetworkType != null) {
+            this.NetworkType = new String(source.NetworkType);
+        }
+        if (source.NetworkRegion != null) {
+            this.NetworkRegion = new String(source.NetworkRegion);
+        }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.DirectConnectGatewayId != null) {
+            this.DirectConnectGatewayId = new String(source.DirectConnectGatewayId);
+        }
+        if (source.Bandwidth != null) {
+            this.Bandwidth = new Long(source.Bandwidth);
+        }
+        if (source.RouteType != null) {
+            this.RouteType = new String(source.RouteType);
+        }
+        if (source.BgpPeer != null) {
+            this.BgpPeer = new BgpPeer(source.BgpPeer);
+        }
+        if (source.RouteFilterPrefixes != null) {
+            this.RouteFilterPrefixes = new RouteFilterPrefix[source.RouteFilterPrefixes.length];
+            for (int i = 0; i < source.RouteFilterPrefixes.length; i++) {
+                this.RouteFilterPrefixes[i] = new RouteFilterPrefix(source.RouteFilterPrefixes[i]);
+            }
+        }
+        if (source.Vlan != null) {
+            this.Vlan = new Long(source.Vlan);
+        }
+        if (source.TencentAddress != null) {
+            this.TencentAddress = new String(source.TencentAddress);
+        }
+        if (source.CustomerAddress != null) {
+            this.CustomerAddress = new String(source.CustomerAddress);
+        }
+        if (source.TencentBackupAddress != null) {
+            this.TencentBackupAddress = new String(source.TencentBackupAddress);
+        }
+        if (source.CloudAttachId != null) {
+            this.CloudAttachId = new String(source.CloudAttachId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

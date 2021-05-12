@@ -229,6 +229,47 @@ public class ModifyReadOnlyGroupDetailsRequest extends AbstractModel{
         this.BalanceWeight = BalanceWeight;
     }
 
+    public ModifyReadOnlyGroupDetailsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyReadOnlyGroupDetailsRequest(ModifyReadOnlyGroupDetailsRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.ReadOnlyGroupId != null) {
+            this.ReadOnlyGroupId = new String(source.ReadOnlyGroupId);
+        }
+        if (source.ReadOnlyGroupName != null) {
+            this.ReadOnlyGroupName = new String(source.ReadOnlyGroupName);
+        }
+        if (source.IsOfflineDelay != null) {
+            this.IsOfflineDelay = new Long(source.IsOfflineDelay);
+        }
+        if (source.ReadOnlyMaxDelayTime != null) {
+            this.ReadOnlyMaxDelayTime = new Long(source.ReadOnlyMaxDelayTime);
+        }
+        if (source.MinReadOnlyInGroup != null) {
+            this.MinReadOnlyInGroup = new Long(source.MinReadOnlyInGroup);
+        }
+        if (source.WeightPairs != null) {
+            this.WeightPairs = new ReadOnlyInstanceWeightPair[source.WeightPairs.length];
+            for (int i = 0; i < source.WeightPairs.length; i++) {
+                this.WeightPairs[i] = new ReadOnlyInstanceWeightPair(source.WeightPairs[i]);
+            }
+        }
+        if (source.AutoWeight != null) {
+            this.AutoWeight = new Long(source.AutoWeight);
+        }
+        if (source.BalanceWeight != null) {
+            this.BalanceWeight = new Long(source.BalanceWeight);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

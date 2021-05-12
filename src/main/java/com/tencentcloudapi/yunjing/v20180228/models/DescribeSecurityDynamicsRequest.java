@@ -68,6 +68,23 @@ public class DescribeSecurityDynamicsRequest extends AbstractModel{
         this.Offset = Offset;
     }
 
+    public DescribeSecurityDynamicsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeSecurityDynamicsRequest(DescribeSecurityDynamicsRequest source) {
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

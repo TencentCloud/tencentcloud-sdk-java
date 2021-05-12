@@ -154,6 +154,29 @@ public class GeneralHandwritingOCRRequest extends AbstractModel{
         this.EnableWordPolygon = EnableWordPolygon;
     }
 
+    public GeneralHandwritingOCRRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GeneralHandwritingOCRRequest(GeneralHandwritingOCRRequest source) {
+        if (source.ImageBase64 != null) {
+            this.ImageBase64 = new String(source.ImageBase64);
+        }
+        if (source.ImageUrl != null) {
+            this.ImageUrl = new String(source.ImageUrl);
+        }
+        if (source.Scene != null) {
+            this.Scene = new String(source.Scene);
+        }
+        if (source.EnableWordPolygon != null) {
+            this.EnableWordPolygon = new Boolean(source.EnableWordPolygon);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -73,6 +73,23 @@ public class WhiteboardPushBackupParam extends AbstractModel{
         this.PushUserSig = PushUserSig;
     }
 
+    public WhiteboardPushBackupParam() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public WhiteboardPushBackupParam(WhiteboardPushBackupParam source) {
+        if (source.PushUserId != null) {
+            this.PushUserId = new String(source.PushUserId);
+        }
+        if (source.PushUserSig != null) {
+            this.PushUserSig = new String(source.PushUserSig);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

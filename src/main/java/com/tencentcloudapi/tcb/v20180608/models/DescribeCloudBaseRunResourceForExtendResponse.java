@@ -185,6 +185,38 @@ public class DescribeCloudBaseRunResourceForExtendResponse extends AbstractModel
         this.RequestId = RequestId;
     }
 
+    public DescribeCloudBaseRunResourceForExtendResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeCloudBaseRunResourceForExtendResponse(DescribeCloudBaseRunResourceForExtendResponse source) {
+        if (source.ClusterStatus != null) {
+            this.ClusterStatus = new String(source.ClusterStatus);
+        }
+        if (source.VirtualClusterId != null) {
+            this.VirtualClusterId = new String(source.VirtualClusterId);
+        }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.Region != null) {
+            this.Region = new String(source.Region);
+        }
+        if (source.SubnetIds != null) {
+            this.SubnetIds = new CloudBaseRunVpcSubnet[source.SubnetIds.length];
+            for (int i = 0; i < source.SubnetIds.length; i++) {
+                this.SubnetIds[i] = new CloudBaseRunVpcSubnet(source.SubnetIds[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

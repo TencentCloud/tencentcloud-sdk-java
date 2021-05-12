@@ -114,6 +114,29 @@ public class DescribeDBSyncModeResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeDBSyncModeResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeDBSyncModeResponse(DescribeDBSyncModeResponse source) {
+        if (source.SyncMode != null) {
+            this.SyncMode = new Long(source.SyncMode);
+        }
+        if (source.IsModifying != null) {
+            this.IsModifying = new Long(source.IsModifying);
+        }
+        if (source.CurrentSyncMode != null) {
+            this.CurrentSyncMode = new Long(source.CurrentSyncMode);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

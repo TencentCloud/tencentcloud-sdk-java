@@ -183,6 +183,44 @@ public class DescribleNewL7RulesRequest extends AbstractModel{
         this.Ip = Ip;
     }
 
+    public DescribleNewL7RulesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribleNewL7RulesRequest(DescribleNewL7RulesRequest source) {
+        if (source.Business != null) {
+            this.Business = new String(source.Business);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Domain != null) {
+            this.Domain = new String(source.Domain);
+        }
+        if (source.ProtocolList != null) {
+            this.ProtocolList = new String[source.ProtocolList.length];
+            for (int i = 0; i < source.ProtocolList.length; i++) {
+                this.ProtocolList[i] = new String(source.ProtocolList[i]);
+            }
+        }
+        if (source.StatusList != null) {
+            this.StatusList = new Long[source.StatusList.length];
+            for (int i = 0; i < source.StatusList.length; i++) {
+                this.StatusList[i] = new Long(source.StatusList[i]);
+            }
+        }
+        if (source.Ip != null) {
+            this.Ip = new String(source.Ip);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

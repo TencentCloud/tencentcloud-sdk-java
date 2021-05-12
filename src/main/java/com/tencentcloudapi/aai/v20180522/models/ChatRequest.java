@@ -91,6 +91,26 @@ public class ChatRequest extends AbstractModel{
         this.User = User;
     }
 
+    public ChatRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ChatRequest(ChatRequest source) {
+        if (source.Text != null) {
+            this.Text = new String(source.Text);
+        }
+        if (source.ProjectId != null) {
+            this.ProjectId = new Long(source.ProjectId);
+        }
+        if (source.User != null) {
+            this.User = new String(source.User);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

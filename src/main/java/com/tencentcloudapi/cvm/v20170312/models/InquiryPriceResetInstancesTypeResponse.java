@@ -68,6 +68,23 @@ public class InquiryPriceResetInstancesTypeResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public InquiryPriceResetInstancesTypeResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public InquiryPriceResetInstancesTypeResponse(InquiryPriceResetInstancesTypeResponse source) {
+        if (source.Price != null) {
+            this.Price = new Price(source.Price);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -91,6 +91,29 @@ public class DescribeSubAppIdsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeSubAppIdsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeSubAppIdsResponse(DescribeSubAppIdsResponse source) {
+        if (source.SubAppIdInfoSet != null) {
+            this.SubAppIdInfoSet = new SubAppIdInfo[source.SubAppIdInfoSet.length];
+            for (int i = 0; i < source.SubAppIdInfoSet.length; i++) {
+                this.SubAppIdInfoSet[i] = new SubAppIdInfo(source.SubAppIdInfoSet[i]);
+            }
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

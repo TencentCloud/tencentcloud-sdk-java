@@ -91,6 +91,26 @@ public class Quota extends AbstractModel{
         this.QuotaLimit = QuotaLimit;
     }
 
+    public Quota() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Quota(Quota source) {
+        if (source.QuotaId != null) {
+            this.QuotaId = new String(source.QuotaId);
+        }
+        if (source.QuotaCurrent != null) {
+            this.QuotaCurrent = new Long(source.QuotaCurrent);
+        }
+        if (source.QuotaLimit != null) {
+            this.QuotaLimit = new Long(source.QuotaLimit);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

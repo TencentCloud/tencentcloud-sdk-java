@@ -68,6 +68,23 @@ public class CreateCameraAlertsMoveAlert extends AbstractModel{
         this.MoveConfidence = MoveConfidence;
     }
 
+    public CreateCameraAlertsMoveAlert() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateCameraAlertsMoveAlert(CreateCameraAlertsMoveAlert source) {
+        if (source.Move != null) {
+            this.Move = new Boolean(source.Move);
+        }
+        if (source.MoveConfidence != null) {
+            this.MoveConfidence = new Float(source.MoveConfidence);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

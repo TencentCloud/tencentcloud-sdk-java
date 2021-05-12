@@ -206,6 +206,41 @@ public class UserInformation extends AbstractModel{
         this.Finished = Finished;
     }
 
+    public UserInformation() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UserInformation(UserInformation source) {
+        if (source.RoomStr != null) {
+            this.RoomStr = new String(source.RoomStr);
+        }
+        if (source.UserId != null) {
+            this.UserId = new String(source.UserId);
+        }
+        if (source.JoinTs != null) {
+            this.JoinTs = new Long(source.JoinTs);
+        }
+        if (source.LeaveTs != null) {
+            this.LeaveTs = new Long(source.LeaveTs);
+        }
+        if (source.DeviceType != null) {
+            this.DeviceType = new String(source.DeviceType);
+        }
+        if (source.SdkVersion != null) {
+            this.SdkVersion = new String(source.SdkVersion);
+        }
+        if (source.ClientIp != null) {
+            this.ClientIp = new String(source.ClientIp);
+        }
+        if (source.Finished != null) {
+            this.Finished = new Boolean(source.Finished);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

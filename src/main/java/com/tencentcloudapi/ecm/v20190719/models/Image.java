@@ -390,6 +390,65 @@ public class Image extends AbstractModel{
         this.TaskId = TaskId;
     }
 
+    public Image() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Image(Image source) {
+        if (source.ImageId != null) {
+            this.ImageId = new String(source.ImageId);
+        }
+        if (source.ImageName != null) {
+            this.ImageName = new String(source.ImageName);
+        }
+        if (source.ImageState != null) {
+            this.ImageState = new String(source.ImageState);
+        }
+        if (source.ImageType != null) {
+            this.ImageType = new String(source.ImageType);
+        }
+        if (source.ImageOsName != null) {
+            this.ImageOsName = new String(source.ImageOsName);
+        }
+        if (source.ImageDescription != null) {
+            this.ImageDescription = new String(source.ImageDescription);
+        }
+        if (source.ImageCreateTime != null) {
+            this.ImageCreateTime = new String(source.ImageCreateTime);
+        }
+        if (source.Architecture != null) {
+            this.Architecture = new String(source.Architecture);
+        }
+        if (source.OsType != null) {
+            this.OsType = new String(source.OsType);
+        }
+        if (source.OsVersion != null) {
+            this.OsVersion = new String(source.OsVersion);
+        }
+        if (source.Platform != null) {
+            this.Platform = new String(source.Platform);
+        }
+        if (source.ImageOwner != null) {
+            this.ImageOwner = new Long(source.ImageOwner);
+        }
+        if (source.ImageSize != null) {
+            this.ImageSize = new Long(source.ImageSize);
+        }
+        if (source.SrcImage != null) {
+            this.SrcImage = new SrcImage(source.SrcImage);
+        }
+        if (source.ImageSource != null) {
+            this.ImageSource = new String(source.ImageSource);
+        }
+        if (source.TaskId != null) {
+            this.TaskId = new String(source.TaskId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

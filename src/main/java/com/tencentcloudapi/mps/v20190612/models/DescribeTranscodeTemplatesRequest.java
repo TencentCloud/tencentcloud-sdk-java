@@ -190,6 +190,38 @@ public class DescribeTranscodeTemplatesRequest extends AbstractModel{
         this.Limit = Limit;
     }
 
+    public DescribeTranscodeTemplatesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeTranscodeTemplatesRequest(DescribeTranscodeTemplatesRequest source) {
+        if (source.Definitions != null) {
+            this.Definitions = new Long[source.Definitions.length];
+            for (int i = 0; i < source.Definitions.length; i++) {
+                this.Definitions[i] = new Long(source.Definitions[i]);
+            }
+        }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.ContainerType != null) {
+            this.ContainerType = new String(source.ContainerType);
+        }
+        if (source.TEHDType != null) {
+            this.TEHDType = new String(source.TEHDType);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

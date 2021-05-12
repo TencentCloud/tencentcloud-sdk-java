@@ -183,6 +183,38 @@ public class DescribeLoraDeviceResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeLoraDeviceResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeLoraDeviceResponse(DescribeLoraDeviceResponse source) {
+        if (source.DeviceName != null) {
+            this.DeviceName = new String(source.DeviceName);
+        }
+        if (source.AppEui != null) {
+            this.AppEui = new String(source.AppEui);
+        }
+        if (source.DeviceEui != null) {
+            this.DeviceEui = new String(source.DeviceEui);
+        }
+        if (source.AppKey != null) {
+            this.AppKey = new String(source.AppKey);
+        }
+        if (source.ClassType != null) {
+            this.ClassType = new String(source.ClassType);
+        }
+        if (source.ProductId != null) {
+            this.ProductId = new String(source.ProductId);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

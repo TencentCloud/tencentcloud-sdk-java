@@ -96,6 +96,29 @@ public class DescribeWordItemsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeWordItemsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeWordItemsResponse(DescribeWordItemsResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.WordItems != null) {
+            this.WordItems = new WordItem[source.WordItems.length];
+            for (int i = 0; i < source.WordItems.length; i++) {
+                this.WordItems[i] = new WordItem(source.WordItems[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

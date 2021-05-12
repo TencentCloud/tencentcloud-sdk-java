@@ -83,6 +83,23 @@ overloadCount（超峰值次数）
         this.Order = Order;
     }
 
+    public OrderBy() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public OrderBy(OrderBy source) {
+        if (source.Field != null) {
+            this.Field = new String(source.Field);
+        }
+        if (source.Order != null) {
+            this.Order = new String(source.Order);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

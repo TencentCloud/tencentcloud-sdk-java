@@ -68,6 +68,23 @@ public class UploadTaxListResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public UploadTaxListResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UploadTaxListResponse(UploadTaxListResponse source) {
+        if (source.TaxId != null) {
+            this.TaxId = new String(source.TaxId);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

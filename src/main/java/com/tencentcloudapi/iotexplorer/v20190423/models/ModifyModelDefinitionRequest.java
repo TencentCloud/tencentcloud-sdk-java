@@ -68,6 +68,23 @@ public class ModifyModelDefinitionRequest extends AbstractModel{
         this.ModelSchema = ModelSchema;
     }
 
+    public ModifyModelDefinitionRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyModelDefinitionRequest(ModifyModelDefinitionRequest source) {
+        if (source.ProductId != null) {
+            this.ProductId = new String(source.ProductId);
+        }
+        if (source.ModelSchema != null) {
+            this.ModelSchema = new String(source.ModelSchema);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

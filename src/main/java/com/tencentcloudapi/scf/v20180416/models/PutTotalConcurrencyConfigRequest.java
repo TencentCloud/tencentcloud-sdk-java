@@ -68,6 +68,23 @@ public class PutTotalConcurrencyConfigRequest extends AbstractModel{
         this.Namespace = Namespace;
     }
 
+    public PutTotalConcurrencyConfigRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PutTotalConcurrencyConfigRequest(PutTotalConcurrencyConfigRequest source) {
+        if (source.TotalConcurrencyMem != null) {
+            this.TotalConcurrencyMem = new Long(source.TotalConcurrencyMem);
+        }
+        if (source.Namespace != null) {
+            this.Namespace = new String(source.Namespace);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

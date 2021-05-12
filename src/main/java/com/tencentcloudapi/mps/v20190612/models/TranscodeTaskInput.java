@@ -345,6 +345,56 @@ public class TranscodeTaskInput extends AbstractModel{
         this.ObjectNumberFormat = ObjectNumberFormat;
     }
 
+    public TranscodeTaskInput() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TranscodeTaskInput(TranscodeTaskInput source) {
+        if (source.Definition != null) {
+            this.Definition = new Long(source.Definition);
+        }
+        if (source.RawParameter != null) {
+            this.RawParameter = new RawTranscodeParameter(source.RawParameter);
+        }
+        if (source.OverrideParameter != null) {
+            this.OverrideParameter = new OverrideTranscodeParameter(source.OverrideParameter);
+        }
+        if (source.WatermarkSet != null) {
+            this.WatermarkSet = new WatermarkInput[source.WatermarkSet.length];
+            for (int i = 0; i < source.WatermarkSet.length; i++) {
+                this.WatermarkSet[i] = new WatermarkInput(source.WatermarkSet[i]);
+            }
+        }
+        if (source.MosaicSet != null) {
+            this.MosaicSet = new MosaicInput[source.MosaicSet.length];
+            for (int i = 0; i < source.MosaicSet.length; i++) {
+                this.MosaicSet[i] = new MosaicInput(source.MosaicSet[i]);
+            }
+        }
+        if (source.StartTimeOffset != null) {
+            this.StartTimeOffset = new Float(source.StartTimeOffset);
+        }
+        if (source.EndTimeOffset != null) {
+            this.EndTimeOffset = new Float(source.EndTimeOffset);
+        }
+        if (source.OutputStorage != null) {
+            this.OutputStorage = new TaskOutputStorage(source.OutputStorage);
+        }
+        if (source.OutputObjectPath != null) {
+            this.OutputObjectPath = new String(source.OutputObjectPath);
+        }
+        if (source.SegmentObjectName != null) {
+            this.SegmentObjectName = new String(source.SegmentObjectName);
+        }
+        if (source.ObjectNumberFormat != null) {
+            this.ObjectNumberFormat = new NumberFormat(source.ObjectNumberFormat);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

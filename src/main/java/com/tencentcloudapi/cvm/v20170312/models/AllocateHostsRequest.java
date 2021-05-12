@@ -183,6 +183,41 @@ public class AllocateHostsRequest extends AbstractModel{
         this.TagSpecification = TagSpecification;
     }
 
+    public AllocateHostsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AllocateHostsRequest(AllocateHostsRequest source) {
+        if (source.Placement != null) {
+            this.Placement = new Placement(source.Placement);
+        }
+        if (source.ClientToken != null) {
+            this.ClientToken = new String(source.ClientToken);
+        }
+        if (source.HostChargePrepaid != null) {
+            this.HostChargePrepaid = new ChargePrepaid(source.HostChargePrepaid);
+        }
+        if (source.HostChargeType != null) {
+            this.HostChargeType = new String(source.HostChargeType);
+        }
+        if (source.HostType != null) {
+            this.HostType = new String(source.HostType);
+        }
+        if (source.HostCount != null) {
+            this.HostCount = new Long(source.HostCount);
+        }
+        if (source.TagSpecification != null) {
+            this.TagSpecification = new TagSpecification[source.TagSpecification.length];
+            for (int i = 0; i < source.TagSpecification.length; i++) {
+                this.TagSpecification[i] = new TagSpecification(source.TagSpecification[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

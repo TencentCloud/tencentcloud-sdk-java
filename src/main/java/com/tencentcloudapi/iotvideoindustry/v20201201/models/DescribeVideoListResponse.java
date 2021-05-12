@@ -114,6 +114,32 @@ public class DescribeVideoListResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeVideoListResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeVideoListResponse(DescribeVideoListResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.VideoList != null) {
+            this.VideoList = new RecordTaskItem(source.VideoList);
+        }
+        if (source.RecordList != null) {
+            this.RecordList = new RecordTaskItem[source.RecordList.length];
+            for (int i = 0; i < source.RecordList.length; i++) {
+                this.RecordList[i] = new RecordTaskItem(source.RecordList[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

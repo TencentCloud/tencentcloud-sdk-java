@@ -183,6 +183,38 @@ public class User extends AbstractModel{
         this.UserId = UserId;
     }
 
+    public User() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public User(User source) {
+        if (source.AccountType != null) {
+            this.AccountType = new Long(source.AccountType);
+        }
+        if (source.Age != null) {
+            this.Age = new Long(source.Age);
+        }
+        if (source.Gender != null) {
+            this.Gender = new Long(source.Gender);
+        }
+        if (source.Level != null) {
+            this.Level = new Long(source.Level);
+        }
+        if (source.Nickname != null) {
+            this.Nickname = new String(source.Nickname);
+        }
+        if (source.Phone != null) {
+            this.Phone = new String(source.Phone);
+        }
+        if (source.UserId != null) {
+            this.UserId = new String(source.UserId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

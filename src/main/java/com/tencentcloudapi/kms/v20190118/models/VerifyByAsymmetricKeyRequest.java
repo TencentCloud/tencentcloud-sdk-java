@@ -137,6 +137,32 @@ public class VerifyByAsymmetricKeyRequest extends AbstractModel{
         this.MessageType = MessageType;
     }
 
+    public VerifyByAsymmetricKeyRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public VerifyByAsymmetricKeyRequest(VerifyByAsymmetricKeyRequest source) {
+        if (source.KeyId != null) {
+            this.KeyId = new String(source.KeyId);
+        }
+        if (source.SignatureValue != null) {
+            this.SignatureValue = new String(source.SignatureValue);
+        }
+        if (source.Message != null) {
+            this.Message = new String(source.Message);
+        }
+        if (source.Algorithm != null) {
+            this.Algorithm = new String(source.Algorithm);
+        }
+        if (source.MessageType != null) {
+            this.MessageType = new String(source.MessageType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

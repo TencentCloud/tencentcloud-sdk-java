@@ -114,6 +114,29 @@ public class DatabaseTupleStatus extends AbstractModel{
         this.Status = Status;
     }
 
+    public DatabaseTupleStatus() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DatabaseTupleStatus(DatabaseTupleStatus source) {
+        if (source.PublishDatabase != null) {
+            this.PublishDatabase = new String(source.PublishDatabase);
+        }
+        if (source.SubscribeDatabase != null) {
+            this.SubscribeDatabase = new String(source.SubscribeDatabase);
+        }
+        if (source.LastSyncTime != null) {
+            this.LastSyncTime = new String(source.LastSyncTime);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

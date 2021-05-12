@@ -129,6 +129,29 @@ public class CompostionContext extends AbstractModel{
         this.SessionId = SessionId;
     }
 
+    public CompostionContext() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CompostionContext(CompostionContext source) {
+        if (source.Content != null) {
+            this.Content = new String(source.Content);
+        }
+        if (source.CorrectData != null) {
+            this.CorrectData = new CorrectData(source.CorrectData);
+        }
+        if (source.TaskId != null) {
+            this.TaskId = new String(source.TaskId);
+        }
+        if (source.SessionId != null) {
+            this.SessionId = new String(source.SessionId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

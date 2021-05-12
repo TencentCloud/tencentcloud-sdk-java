@@ -344,6 +344,71 @@ public class CreateJobRequest extends AbstractModel{
         this.RuntimeConf = RuntimeConf;
     }
 
+    public CreateJobRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateJobRequest(CreateJobRequest source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Cluster != null) {
+            this.Cluster = new String(source.Cluster);
+        }
+        if (source.RuntimeVersion != null) {
+            this.RuntimeVersion = new String(source.RuntimeVersion);
+        }
+        if (source.PackageDir != null) {
+            this.PackageDir = new String[source.PackageDir.length];
+            for (int i = 0; i < source.PackageDir.length; i++) {
+                this.PackageDir[i] = new String(source.PackageDir[i]);
+            }
+        }
+        if (source.Command != null) {
+            this.Command = new String[source.Command.length];
+            for (int i = 0; i < source.Command.length; i++) {
+                this.Command[i] = new String(source.Command[i]);
+            }
+        }
+        if (source.Args != null) {
+            this.Args = new String[source.Args.length];
+            for (int i = 0; i < source.Args.length; i++) {
+                this.Args[i] = new String(source.Args[i]);
+            }
+        }
+        if (source.ScaleTier != null) {
+            this.ScaleTier = new String(source.ScaleTier);
+        }
+        if (source.MasterType != null) {
+            this.MasterType = new String(source.MasterType);
+        }
+        if (source.WorkerType != null) {
+            this.WorkerType = new String(source.WorkerType);
+        }
+        if (source.ParameterServerType != null) {
+            this.ParameterServerType = new String(source.ParameterServerType);
+        }
+        if (source.WorkerCount != null) {
+            this.WorkerCount = new Long(source.WorkerCount);
+        }
+        if (source.ParameterServerCount != null) {
+            this.ParameterServerCount = new Long(source.ParameterServerCount);
+        }
+        if (source.Debug != null) {
+            this.Debug = new Boolean(source.Debug);
+        }
+        if (source.RuntimeConf != null) {
+            this.RuntimeConf = new String[source.RuntimeConf.length];
+            for (int i = 0; i < source.RuntimeConf.length; i++) {
+                this.RuntimeConf[i] = new String(source.RuntimeConf[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

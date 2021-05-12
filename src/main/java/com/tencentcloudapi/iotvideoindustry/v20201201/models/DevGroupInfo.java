@@ -137,6 +137,32 @@ public class DevGroupInfo extends AbstractModel{
         this.Error = Error;
     }
 
+    public DevGroupInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DevGroupInfo(DevGroupInfo source) {
+        if (source.DeviceId != null) {
+            this.DeviceId = new String(source.DeviceId);
+        }
+        if (source.GroupId != null) {
+            this.GroupId = new String(source.GroupId);
+        }
+        if (source.GroupPath != null) {
+            this.GroupPath = new String(source.GroupPath);
+        }
+        if (source.ParentId != null) {
+            this.ParentId = new String(source.ParentId);
+        }
+        if (source.Error != null) {
+            this.Error = new String(source.Error);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

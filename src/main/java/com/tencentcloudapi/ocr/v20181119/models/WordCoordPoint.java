@@ -45,6 +45,23 @@ public class WordCoordPoint extends AbstractModel{
         this.WordCoordinate = WordCoordinate;
     }
 
+    public WordCoordPoint() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public WordCoordPoint(WordCoordPoint source) {
+        if (source.WordCoordinate != null) {
+            this.WordCoordinate = new Coord[source.WordCoordinate.length];
+            for (int i = 0; i < source.WordCoordinate.length; i++) {
+                this.WordCoordinate[i] = new Coord(source.WordCoordinate[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

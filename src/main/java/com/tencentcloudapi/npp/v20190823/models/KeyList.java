@@ -68,6 +68,23 @@ public class KeyList extends AbstractModel{
         this.Operate = Operate;
     }
 
+    public KeyList() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public KeyList(KeyList source) {
+        if (source.Key != null) {
+            this.Key = new String(source.Key);
+        }
+        if (source.Operate != null) {
+            this.Operate = new String(source.Operate);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

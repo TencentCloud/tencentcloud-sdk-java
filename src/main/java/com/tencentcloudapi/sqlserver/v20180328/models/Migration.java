@@ -400,6 +400,68 @@ public class Migration extends AbstractModel{
         this.IsRecovery = IsRecovery;
     }
 
+    public Migration() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Migration(Migration source) {
+        if (source.MigrationId != null) {
+            this.MigrationId = new String(source.MigrationId);
+        }
+        if (source.MigrationName != null) {
+            this.MigrationName = new String(source.MigrationName);
+        }
+        if (source.AppId != null) {
+            this.AppId = new Long(source.AppId);
+        }
+        if (source.Region != null) {
+            this.Region = new String(source.Region);
+        }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.RecoveryType != null) {
+            this.RecoveryType = new String(source.RecoveryType);
+        }
+        if (source.UploadType != null) {
+            this.UploadType = new String(source.UploadType);
+        }
+        if (source.BackupFiles != null) {
+            this.BackupFiles = new String[source.BackupFiles.length];
+            for (int i = 0; i < source.BackupFiles.length; i++) {
+                this.BackupFiles[i] = new String(source.BackupFiles[i]);
+            }
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+        if (source.Message != null) {
+            this.Message = new String(source.Message);
+        }
+        if (source.Detail != null) {
+            this.Detail = new MigrationDetail(source.Detail);
+        }
+        if (source.Action != null) {
+            this.Action = new MigrationAction(source.Action);
+        }
+        if (source.IsRecovery != null) {
+            this.IsRecovery = new String(source.IsRecovery);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

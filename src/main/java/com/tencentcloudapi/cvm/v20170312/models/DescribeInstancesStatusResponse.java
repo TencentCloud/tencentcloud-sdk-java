@@ -91,6 +91,29 @@ public class DescribeInstancesStatusResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeInstancesStatusResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeInstancesStatusResponse(DescribeInstancesStatusResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.InstanceStatusSet != null) {
+            this.InstanceStatusSet = new InstanceStatus[source.InstanceStatusSet.length];
+            for (int i = 0; i < source.InstanceStatusSet.length; i++) {
+                this.InstanceStatusSet[i] = new InstanceStatus(source.InstanceStatusSet[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

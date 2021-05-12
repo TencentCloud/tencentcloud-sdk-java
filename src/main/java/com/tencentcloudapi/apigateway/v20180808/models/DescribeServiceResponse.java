@@ -647,6 +647,107 @@ public class DescribeServiceResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeServiceResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeServiceResponse(DescribeServiceResponse source) {
+        if (source.ServiceId != null) {
+            this.ServiceId = new String(source.ServiceId);
+        }
+        if (source.AvailableEnvironments != null) {
+            this.AvailableEnvironments = new String[source.AvailableEnvironments.length];
+            for (int i = 0; i < source.AvailableEnvironments.length; i++) {
+                this.AvailableEnvironments[i] = new String(source.AvailableEnvironments[i]);
+            }
+        }
+        if (source.ServiceName != null) {
+            this.ServiceName = new String(source.ServiceName);
+        }
+        if (source.ServiceDesc != null) {
+            this.ServiceDesc = new String(source.ServiceDesc);
+        }
+        if (source.Protocol != null) {
+            this.Protocol = new String(source.Protocol);
+        }
+        if (source.CreatedTime != null) {
+            this.CreatedTime = new String(source.CreatedTime);
+        }
+        if (source.ModifiedTime != null) {
+            this.ModifiedTime = new String(source.ModifiedTime);
+        }
+        if (source.ExclusiveSetName != null) {
+            this.ExclusiveSetName = new String(source.ExclusiveSetName);
+        }
+        if (source.NetTypes != null) {
+            this.NetTypes = new String[source.NetTypes.length];
+            for (int i = 0; i < source.NetTypes.length; i++) {
+                this.NetTypes[i] = new String(source.NetTypes[i]);
+            }
+        }
+        if (source.InternalSubDomain != null) {
+            this.InternalSubDomain = new String(source.InternalSubDomain);
+        }
+        if (source.OuterSubDomain != null) {
+            this.OuterSubDomain = new String(source.OuterSubDomain);
+        }
+        if (source.InnerHttpPort != null) {
+            this.InnerHttpPort = new Long(source.InnerHttpPort);
+        }
+        if (source.InnerHttpsPort != null) {
+            this.InnerHttpsPort = new Long(source.InnerHttpsPort);
+        }
+        if (source.ApiTotalCount != null) {
+            this.ApiTotalCount = new Long(source.ApiTotalCount);
+        }
+        if (source.ApiIdStatusSet != null) {
+            this.ApiIdStatusSet = new ApiIdStatus[source.ApiIdStatusSet.length];
+            for (int i = 0; i < source.ApiIdStatusSet.length; i++) {
+                this.ApiIdStatusSet[i] = new ApiIdStatus(source.ApiIdStatusSet[i]);
+            }
+        }
+        if (source.UsagePlanTotalCount != null) {
+            this.UsagePlanTotalCount = new Long(source.UsagePlanTotalCount);
+        }
+        if (source.UsagePlanList != null) {
+            this.UsagePlanList = new UsagePlan[source.UsagePlanList.length];
+            for (int i = 0; i < source.UsagePlanList.length; i++) {
+                this.UsagePlanList[i] = new UsagePlan(source.UsagePlanList[i]);
+            }
+        }
+        if (source.IpVersion != null) {
+            this.IpVersion = new String(source.IpVersion);
+        }
+        if (source.UserType != null) {
+            this.UserType = new String(source.UserType);
+        }
+        if (source.SetId != null) {
+            this.SetId = new Long(source.SetId);
+        }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.InstanceName != null) {
+            this.InstanceName = new String(source.InstanceName);
+        }
+        if (source.SetType != null) {
+            this.SetType = new String(source.SetType);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

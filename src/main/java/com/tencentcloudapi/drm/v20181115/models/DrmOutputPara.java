@@ -68,6 +68,23 @@ public class DrmOutputPara extends AbstractModel{
         this.Language = Language;
     }
 
+    public DrmOutputPara() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DrmOutputPara(DrmOutputPara source) {
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.Language != null) {
+            this.Language = new String(source.Language);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

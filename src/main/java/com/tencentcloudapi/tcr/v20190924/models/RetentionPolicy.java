@@ -160,6 +160,38 @@ public class RetentionPolicy extends AbstractModel{
         this.NextExecutionTime = NextExecutionTime;
     }
 
+    public RetentionPolicy() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RetentionPolicy(RetentionPolicy source) {
+        if (source.RetentionId != null) {
+            this.RetentionId = new Long(source.RetentionId);
+        }
+        if (source.NamespaceName != null) {
+            this.NamespaceName = new String(source.NamespaceName);
+        }
+        if (source.RetentionRuleList != null) {
+            this.RetentionRuleList = new RetentionRule[source.RetentionRuleList.length];
+            for (int i = 0; i < source.RetentionRuleList.length; i++) {
+                this.RetentionRuleList[i] = new RetentionRule(source.RetentionRuleList[i]);
+            }
+        }
+        if (source.CronSetting != null) {
+            this.CronSetting = new String(source.CronSetting);
+        }
+        if (source.Disabled != null) {
+            this.Disabled = new Boolean(source.Disabled);
+        }
+        if (source.NextExecutionTime != null) {
+            this.NextExecutionTime = new String(source.NextExecutionTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

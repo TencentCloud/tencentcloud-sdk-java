@@ -304,6 +304,32 @@ hi：印地语
         this.SourceTextList = SourceTextList;
     }
 
+    public TextTranslateBatchRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TextTranslateBatchRequest(TextTranslateBatchRequest source) {
+        if (source.Source != null) {
+            this.Source = new String(source.Source);
+        }
+        if (source.Target != null) {
+            this.Target = new String(source.Target);
+        }
+        if (source.ProjectId != null) {
+            this.ProjectId = new Long(source.ProjectId);
+        }
+        if (source.SourceTextList != null) {
+            this.SourceTextList = new String[source.SourceTextList.length];
+            for (int i = 0; i < source.SourceTextList.length; i++) {
+                this.SourceTextList[i] = new String(source.SourceTextList[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

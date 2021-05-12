@@ -193,6 +193,38 @@ public class QueryInvoiceRequest extends AbstractModel{
         this.SellerTaxpayerNum = SellerTaxpayerNum;
     }
 
+    public QueryInvoiceRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public QueryInvoiceRequest(QueryInvoiceRequest source) {
+        if (source.InvoicePlatformId != null) {
+            this.InvoicePlatformId = new Long(source.InvoicePlatformId);
+        }
+        if (source.OrderId != null) {
+            this.OrderId = new String(source.OrderId);
+        }
+        if (source.OrderSn != null) {
+            this.OrderSn = new String(source.OrderSn);
+        }
+        if (source.IsRed != null) {
+            this.IsRed = new Long(source.IsRed);
+        }
+        if (source.Profile != null) {
+            this.Profile = new String(source.Profile);
+        }
+        if (source.InvoiceChannel != null) {
+            this.InvoiceChannel = new Long(source.InvoiceChannel);
+        }
+        if (source.SellerTaxpayerNum != null) {
+            this.SellerTaxpayerNum = new String(source.SellerTaxpayerNum);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -141,6 +141,29 @@ public class DomainFilter extends AbstractModel{
         this.Fuzzy = Fuzzy;
     }
 
+    public DomainFilter() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DomainFilter(DomainFilter source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Value != null) {
+            this.Value = new String[source.Value.length];
+            for (int i = 0; i < source.Value.length; i++) {
+                this.Value[i] = new String(source.Value[i]);
+            }
+        }
+        if (source.Fuzzy != null) {
+            this.Fuzzy = new Boolean(source.Fuzzy);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

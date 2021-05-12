@@ -482,6 +482,77 @@ public class PushQualityData extends AbstractModel{
         this.StreamParam = StreamParam;
     }
 
+    public PushQualityData() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PushQualityData(PushQualityData source) {
+        if (source.Time != null) {
+            this.Time = new String(source.Time);
+        }
+        if (source.PushDomain != null) {
+            this.PushDomain = new String(source.PushDomain);
+        }
+        if (source.AppName != null) {
+            this.AppName = new String(source.AppName);
+        }
+        if (source.ClientIp != null) {
+            this.ClientIp = new String(source.ClientIp);
+        }
+        if (source.BeginPushTime != null) {
+            this.BeginPushTime = new String(source.BeginPushTime);
+        }
+        if (source.Resolution != null) {
+            this.Resolution = new String(source.Resolution);
+        }
+        if (source.VCodec != null) {
+            this.VCodec = new String(source.VCodec);
+        }
+        if (source.ACodec != null) {
+            this.ACodec = new String(source.ACodec);
+        }
+        if (source.Sequence != null) {
+            this.Sequence = new String(source.Sequence);
+        }
+        if (source.VideoFps != null) {
+            this.VideoFps = new Long(source.VideoFps);
+        }
+        if (source.VideoRate != null) {
+            this.VideoRate = new Long(source.VideoRate);
+        }
+        if (source.AudioFps != null) {
+            this.AudioFps = new Long(source.AudioFps);
+        }
+        if (source.AudioRate != null) {
+            this.AudioRate = new Long(source.AudioRate);
+        }
+        if (source.LocalTs != null) {
+            this.LocalTs = new Long(source.LocalTs);
+        }
+        if (source.VideoTs != null) {
+            this.VideoTs = new Long(source.VideoTs);
+        }
+        if (source.AudioTs != null) {
+            this.AudioTs = new Long(source.AudioTs);
+        }
+        if (source.MetaVideoRate != null) {
+            this.MetaVideoRate = new Long(source.MetaVideoRate);
+        }
+        if (source.MetaAudioRate != null) {
+            this.MetaAudioRate = new Long(source.MetaAudioRate);
+        }
+        if (source.MateFps != null) {
+            this.MateFps = new Long(source.MateFps);
+        }
+        if (source.StreamParam != null) {
+            this.StreamParam = new String(source.StreamParam);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

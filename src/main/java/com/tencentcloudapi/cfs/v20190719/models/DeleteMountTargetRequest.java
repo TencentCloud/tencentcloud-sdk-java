@@ -68,6 +68,23 @@ public class DeleteMountTargetRequest extends AbstractModel{
         this.MountTargetId = MountTargetId;
     }
 
+    public DeleteMountTargetRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteMountTargetRequest(DeleteMountTargetRequest source) {
+        if (source.FileSystemId != null) {
+            this.FileSystemId = new String(source.FileSystemId);
+        }
+        if (source.MountTargetId != null) {
+            this.MountTargetId = new String(source.MountTargetId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

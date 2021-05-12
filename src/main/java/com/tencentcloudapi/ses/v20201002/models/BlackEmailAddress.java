@@ -68,6 +68,23 @@ public class BlackEmailAddress extends AbstractModel{
         this.EmailAddress = EmailAddress;
     }
 
+    public BlackEmailAddress() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public BlackEmailAddress(BlackEmailAddress source) {
+        if (source.BounceTime != null) {
+            this.BounceTime = new String(source.BounceTime);
+        }
+        if (source.EmailAddress != null) {
+            this.EmailAddress = new String(source.EmailAddress);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

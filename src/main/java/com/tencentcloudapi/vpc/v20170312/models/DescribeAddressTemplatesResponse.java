@@ -91,6 +91,29 @@ public class DescribeAddressTemplatesResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeAddressTemplatesResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeAddressTemplatesResponse(DescribeAddressTemplatesResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.AddressTemplateSet != null) {
+            this.AddressTemplateSet = new AddressTemplate[source.AddressTemplateSet.length];
+            for (int i = 0; i < source.AddressTemplateSet.length; i++) {
+                this.AddressTemplateSet[i] = new AddressTemplate(source.AddressTemplateSet[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

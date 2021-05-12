@@ -160,6 +160,35 @@ public class PictureInfo extends AbstractModel{
         this.PictureId = PictureId;
     }
 
+    public PictureInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PictureInfo(PictureInfo source) {
+        if (source.Height != null) {
+            this.Height = new Long(source.Height);
+        }
+        if (source.Width != null) {
+            this.Width = new Long(source.Width);
+        }
+        if (source.XPosition != null) {
+            this.XPosition = new Long(source.XPosition);
+        }
+        if (source.YPosition != null) {
+            this.YPosition = new Long(source.YPosition);
+        }
+        if (source.SdkAppId != null) {
+            this.SdkAppId = new Long(source.SdkAppId);
+        }
+        if (source.PictureId != null) {
+            this.PictureId = new Long(source.PictureId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

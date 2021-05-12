@@ -827,6 +827,122 @@ public class VerifyBizLicenseResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public VerifyBizLicenseResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public VerifyBizLicenseResponse(VerifyBizLicenseResponse source) {
+        if (source.ErrorCode != null) {
+            this.ErrorCode = new Long(source.ErrorCode);
+        }
+        if (source.CreditCode != null) {
+            this.CreditCode = new String(source.CreditCode);
+        }
+        if (source.OrgCode != null) {
+            this.OrgCode = new String(source.OrgCode);
+        }
+        if (source.OpenFrom != null) {
+            this.OpenFrom = new String(source.OpenFrom);
+        }
+        if (source.OpenTo != null) {
+            this.OpenTo = new String(source.OpenTo);
+        }
+        if (source.FrName != null) {
+            this.FrName = new String(source.FrName);
+        }
+        if (source.EnterpriseStatus != null) {
+            this.EnterpriseStatus = new String(source.EnterpriseStatus);
+        }
+        if (source.OperateScopeAndForm != null) {
+            this.OperateScopeAndForm = new String(source.OperateScopeAndForm);
+        }
+        if (source.RegCap != null) {
+            this.RegCap = new String(source.RegCap);
+        }
+        if (source.RegCapCur != null) {
+            this.RegCapCur = new String(source.RegCapCur);
+        }
+        if (source.RegOrg != null) {
+            this.RegOrg = new String(source.RegOrg);
+        }
+        if (source.EsDate != null) {
+            this.EsDate = new String(source.EsDate);
+        }
+        if (source.EnterpriseType != null) {
+            this.EnterpriseType = new String(source.EnterpriseType);
+        }
+        if (source.CancelDate != null) {
+            this.CancelDate = new String(source.CancelDate);
+        }
+        if (source.RevokeDate != null) {
+            this.RevokeDate = new String(source.RevokeDate);
+        }
+        if (source.AbuItem != null) {
+            this.AbuItem = new String(source.AbuItem);
+        }
+        if (source.CbuItem != null) {
+            this.CbuItem = new String(source.CbuItem);
+        }
+        if (source.ApprDate != null) {
+            this.ApprDate = new String(source.ApprDate);
+        }
+        if (source.Province != null) {
+            this.Province = new String(source.Province);
+        }
+        if (source.City != null) {
+            this.City = new String(source.City);
+        }
+        if (source.County != null) {
+            this.County = new String(source.County);
+        }
+        if (source.AreaCode != null) {
+            this.AreaCode = new String(source.AreaCode);
+        }
+        if (source.IndustryPhyCode != null) {
+            this.IndustryPhyCode = new String(source.IndustryPhyCode);
+        }
+        if (source.IndustryPhyName != null) {
+            this.IndustryPhyName = new String(source.IndustryPhyName);
+        }
+        if (source.IndustryCode != null) {
+            this.IndustryCode = new String(source.IndustryCode);
+        }
+        if (source.IndustryName != null) {
+            this.IndustryName = new String(source.IndustryName);
+        }
+        if (source.OperateScope != null) {
+            this.OperateScope = new String(source.OperateScope);
+        }
+        if (source.VerifyRegNo != null) {
+            this.VerifyRegNo = new String(source.VerifyRegNo);
+        }
+        if (source.RegNo != null) {
+            this.RegNo = new String(source.RegNo);
+        }
+        if (source.VerifyEnterpriseName != null) {
+            this.VerifyEnterpriseName = new String(source.VerifyEnterpriseName);
+        }
+        if (source.EnterpriseName != null) {
+            this.EnterpriseName = new String(source.EnterpriseName);
+        }
+        if (source.VerifyAddress != null) {
+            this.VerifyAddress = new String(source.VerifyAddress);
+        }
+        if (source.Address != null) {
+            this.Address = new String(source.Address);
+        }
+        if (source.RegNumResult != null) {
+            this.RegNumResult = new BizLicenseVerifyResult(source.RegNumResult);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

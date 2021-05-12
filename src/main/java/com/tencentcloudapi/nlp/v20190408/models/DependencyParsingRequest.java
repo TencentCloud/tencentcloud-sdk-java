@@ -45,6 +45,20 @@ public class DependencyParsingRequest extends AbstractModel{
         this.Text = Text;
     }
 
+    public DependencyParsingRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DependencyParsingRequest(DependencyParsingRequest source) {
+        if (source.Text != null) {
+            this.Text = new String(source.Text);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

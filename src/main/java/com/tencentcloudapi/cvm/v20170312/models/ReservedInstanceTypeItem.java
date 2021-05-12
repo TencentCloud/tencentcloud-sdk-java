@@ -344,6 +344,62 @@ public class ReservedInstanceTypeItem extends AbstractModel{
         this.Prices = Prices;
     }
 
+    public ReservedInstanceTypeItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ReservedInstanceTypeItem(ReservedInstanceTypeItem source) {
+        if (source.InstanceType != null) {
+            this.InstanceType = new String(source.InstanceType);
+        }
+        if (source.Cpu != null) {
+            this.Cpu = new Long(source.Cpu);
+        }
+        if (source.Memory != null) {
+            this.Memory = new Long(source.Memory);
+        }
+        if (source.Gpu != null) {
+            this.Gpu = new Long(source.Gpu);
+        }
+        if (source.Fpga != null) {
+            this.Fpga = new Long(source.Fpga);
+        }
+        if (source.StorageBlock != null) {
+            this.StorageBlock = new Long(source.StorageBlock);
+        }
+        if (source.NetworkCard != null) {
+            this.NetworkCard = new Long(source.NetworkCard);
+        }
+        if (source.MaxBandwidth != null) {
+            this.MaxBandwidth = new Float(source.MaxBandwidth);
+        }
+        if (source.Frequency != null) {
+            this.Frequency = new String(source.Frequency);
+        }
+        if (source.CpuModelName != null) {
+            this.CpuModelName = new String(source.CpuModelName);
+        }
+        if (source.Pps != null) {
+            this.Pps = new Long(source.Pps);
+        }
+        if (source.Externals != null) {
+            this.Externals = new Externals(source.Externals);
+        }
+        if (source.Remark != null) {
+            this.Remark = new String(source.Remark);
+        }
+        if (source.Prices != null) {
+            this.Prices = new ReservedInstancePriceItem[source.Prices.length];
+            for (int i = 0; i < source.Prices.length; i++) {
+                this.Prices[i] = new ReservedInstancePriceItem(source.Prices[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

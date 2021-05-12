@@ -152,6 +152,35 @@ public class DescribeProxyGroupStatisticsRequest extends AbstractModel{
         this.Granularity = Granularity;
     }
 
+    public DescribeProxyGroupStatisticsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeProxyGroupStatisticsRequest(DescribeProxyGroupStatisticsRequest source) {
+        if (source.GroupId != null) {
+            this.GroupId = new String(source.GroupId);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+        if (source.MetricNames != null) {
+            this.MetricNames = new String[source.MetricNames.length];
+            for (int i = 0; i < source.MetricNames.length; i++) {
+                this.MetricNames[i] = new String(source.MetricNames[i]);
+            }
+        }
+        if (source.Granularity != null) {
+            this.Granularity = new Long(source.Granularity);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

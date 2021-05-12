@@ -114,6 +114,29 @@ public class VideoModerationRequest extends AbstractModel{
         this.Extra = Extra;
     }
 
+    public VideoModerationRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public VideoModerationRequest(VideoModerationRequest source) {
+        if (source.VideoUrl != null) {
+            this.VideoUrl = new String(source.VideoUrl);
+        }
+        if (source.DeveloperId != null) {
+            this.DeveloperId = new String(source.DeveloperId);
+        }
+        if (source.CBUrl != null) {
+            this.CBUrl = new String(source.CBUrl);
+        }
+        if (source.Extra != null) {
+            this.Extra = new String(source.Extra);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

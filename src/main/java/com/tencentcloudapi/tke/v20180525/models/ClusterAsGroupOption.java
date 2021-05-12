@@ -386,6 +386,56 @@ public class ClusterAsGroupOption extends AbstractModel{
         this.UnregisteredNodeRemovalTime = UnregisteredNodeRemovalTime;
     }
 
+    public ClusterAsGroupOption() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ClusterAsGroupOption(ClusterAsGroupOption source) {
+        if (source.IsScaleDownEnabled != null) {
+            this.IsScaleDownEnabled = new Boolean(source.IsScaleDownEnabled);
+        }
+        if (source.Expander != null) {
+            this.Expander = new String(source.Expander);
+        }
+        if (source.MaxEmptyBulkDelete != null) {
+            this.MaxEmptyBulkDelete = new Long(source.MaxEmptyBulkDelete);
+        }
+        if (source.ScaleDownDelay != null) {
+            this.ScaleDownDelay = new Long(source.ScaleDownDelay);
+        }
+        if (source.ScaleDownUnneededTime != null) {
+            this.ScaleDownUnneededTime = new Long(source.ScaleDownUnneededTime);
+        }
+        if (source.ScaleDownUtilizationThreshold != null) {
+            this.ScaleDownUtilizationThreshold = new Long(source.ScaleDownUtilizationThreshold);
+        }
+        if (source.SkipNodesWithLocalStorage != null) {
+            this.SkipNodesWithLocalStorage = new Boolean(source.SkipNodesWithLocalStorage);
+        }
+        if (source.SkipNodesWithSystemPods != null) {
+            this.SkipNodesWithSystemPods = new Boolean(source.SkipNodesWithSystemPods);
+        }
+        if (source.IgnoreDaemonSetsUtilization != null) {
+            this.IgnoreDaemonSetsUtilization = new Boolean(source.IgnoreDaemonSetsUtilization);
+        }
+        if (source.OkTotalUnreadyCount != null) {
+            this.OkTotalUnreadyCount = new Long(source.OkTotalUnreadyCount);
+        }
+        if (source.MaxTotalUnreadyPercentage != null) {
+            this.MaxTotalUnreadyPercentage = new Long(source.MaxTotalUnreadyPercentage);
+        }
+        if (source.ScaleDownUnreadyTime != null) {
+            this.ScaleDownUnreadyTime = new Long(source.ScaleDownUnreadyTime);
+        }
+        if (source.UnregisteredNodeRemovalTime != null) {
+            this.UnregisteredNodeRemovalTime = new Long(source.UnregisteredNodeRemovalTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

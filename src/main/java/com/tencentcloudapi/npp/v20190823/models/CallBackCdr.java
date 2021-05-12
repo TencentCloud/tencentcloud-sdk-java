@@ -405,6 +405,65 @@ public class CallBackCdr extends AbstractModel{
         this.OrderId = OrderId;
     }
 
+    public CallBackCdr() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CallBackCdr(CallBackCdr source) {
+        if (source.CallId != null) {
+            this.CallId = new String(source.CallId);
+        }
+        if (source.Src != null) {
+            this.Src = new String(source.Src);
+        }
+        if (source.Dst != null) {
+            this.Dst = new String(source.Dst);
+        }
+        if (source.StartSrcCallTime != null) {
+            this.StartSrcCallTime = new String(source.StartSrcCallTime);
+        }
+        if (source.StartSrcRingTime != null) {
+            this.StartSrcRingTime = new String(source.StartSrcRingTime);
+        }
+        if (source.SrcAcceptTime != null) {
+            this.SrcAcceptTime = new String(source.SrcAcceptTime);
+        }
+        if (source.StartDstCallTime != null) {
+            this.StartDstCallTime = new String(source.StartDstCallTime);
+        }
+        if (source.StartDstRingTime != null) {
+            this.StartDstRingTime = new String(source.StartDstRingTime);
+        }
+        if (source.DstAcceptTime != null) {
+            this.DstAcceptTime = new String(source.DstAcceptTime);
+        }
+        if (source.EndCallTime != null) {
+            this.EndCallTime = new String(source.EndCallTime);
+        }
+        if (source.CallEndStatus != null) {
+            this.CallEndStatus = new String(source.CallEndStatus);
+        }
+        if (source.Duration != null) {
+            this.Duration = new String(source.Duration);
+        }
+        if (source.RecordUrl != null) {
+            this.RecordUrl = new String(source.RecordUrl);
+        }
+        if (source.CallType != null) {
+            this.CallType = new String(source.CallType);
+        }
+        if (source.BizId != null) {
+            this.BizId = new String(source.BizId);
+        }
+        if (source.OrderId != null) {
+            this.OrderId = new String(source.OrderId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

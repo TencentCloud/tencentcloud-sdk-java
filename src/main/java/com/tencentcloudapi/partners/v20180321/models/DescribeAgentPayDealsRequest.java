@@ -206,6 +206,47 @@ public class DescribeAgentPayDealsRequest extends AbstractModel{
         this.DealNames = DealNames;
     }
 
+    public DescribeAgentPayDealsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeAgentPayDealsRequest(DescribeAgentPayDealsRequest source) {
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.CreatTimeRangeStart != null) {
+            this.CreatTimeRangeStart = new String(source.CreatTimeRangeStart);
+        }
+        if (source.CreatTimeRangeEnd != null) {
+            this.CreatTimeRangeEnd = new String(source.CreatTimeRangeEnd);
+        }
+        if (source.Order != null) {
+            this.Order = new Long(source.Order);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.OwnerUins != null) {
+            this.OwnerUins = new String[source.OwnerUins.length];
+            for (int i = 0; i < source.OwnerUins.length; i++) {
+                this.OwnerUins[i] = new String(source.OwnerUins[i]);
+            }
+        }
+        if (source.DealNames != null) {
+            this.DealNames = new String[source.DealNames.length];
+            for (int i = 0; i < source.DealNames.length; i++) {
+                this.DealNames[i] = new String(source.DealNames[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

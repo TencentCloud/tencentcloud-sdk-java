@@ -91,6 +91,26 @@ public class QrcodeResultsInfo extends AbstractModel{
         this.Position = Position;
     }
 
+    public QrcodeResultsInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public QrcodeResultsInfo(QrcodeResultsInfo source) {
+        if (source.TypeName != null) {
+            this.TypeName = new String(source.TypeName);
+        }
+        if (source.Url != null) {
+            this.Url = new String(source.Url);
+        }
+        if (source.Position != null) {
+            this.Position = new QrcodePositionObj(source.Position);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

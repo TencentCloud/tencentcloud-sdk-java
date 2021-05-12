@@ -106,6 +106,26 @@ public class MultiDiskMC extends AbstractModel{
         this.Volume = Volume;
     }
 
+    public MultiDiskMC() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MultiDiskMC(MultiDiskMC source) {
+        if (source.Count != null) {
+            this.Count = new Long(source.Count);
+        }
+        if (source.Type != null) {
+            this.Type = new Long(source.Type);
+        }
+        if (source.Volume != null) {
+            this.Volume = new Long(source.Volume);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

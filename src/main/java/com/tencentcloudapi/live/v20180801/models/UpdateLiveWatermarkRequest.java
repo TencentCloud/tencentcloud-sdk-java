@@ -203,6 +203,38 @@ URL中禁止包含的字符：
         this.Height = Height;
     }
 
+    public UpdateLiveWatermarkRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UpdateLiveWatermarkRequest(UpdateLiveWatermarkRequest source) {
+        if (source.WatermarkId != null) {
+            this.WatermarkId = new Long(source.WatermarkId);
+        }
+        if (source.PictureUrl != null) {
+            this.PictureUrl = new String(source.PictureUrl);
+        }
+        if (source.XPosition != null) {
+            this.XPosition = new Long(source.XPosition);
+        }
+        if (source.YPosition != null) {
+            this.YPosition = new Long(source.YPosition);
+        }
+        if (source.WatermarkName != null) {
+            this.WatermarkName = new String(source.WatermarkName);
+        }
+        if (source.Width != null) {
+            this.Width = new Long(source.Width);
+        }
+        if (source.Height != null) {
+            this.Height = new Long(source.Height);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

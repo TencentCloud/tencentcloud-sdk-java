@@ -91,6 +91,29 @@ public class GetClusterListForUserResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public GetClusterListForUserResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GetClusterListForUserResponse(GetClusterListForUserResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.ClusterList != null) {
+            this.ClusterList = new ClusterDetailForUser[source.ClusterList.length];
+            for (int i = 0; i < source.ClusterList.length; i++) {
+                this.ClusterList[i] = new ClusterDetailForUser(source.ClusterList[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

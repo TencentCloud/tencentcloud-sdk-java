@@ -91,6 +91,29 @@ public class DescribeTopSpaceTablesResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeTopSpaceTablesResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeTopSpaceTablesResponse(DescribeTopSpaceTablesResponse source) {
+        if (source.TopSpaceTables != null) {
+            this.TopSpaceTables = new TableSpaceData[source.TopSpaceTables.length];
+            for (int i = 0; i < source.TopSpaceTables.length; i++) {
+                this.TopSpaceTables[i] = new TableSpaceData(source.TopSpaceTables[i]);
+            }
+        }
+        if (source.Timestamp != null) {
+            this.Timestamp = new Long(source.Timestamp);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

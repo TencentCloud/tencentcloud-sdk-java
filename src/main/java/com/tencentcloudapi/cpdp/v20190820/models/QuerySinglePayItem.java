@@ -134,6 +134,29 @@ public class QuerySinglePayItem extends AbstractModel{
         this.BankRetMsg = BankRetMsg;
     }
 
+    public QuerySinglePayItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public QuerySinglePayItem(QuerySinglePayItem source) {
+        if (source.PayStatus != null) {
+            this.PayStatus = new String(source.PayStatus);
+        }
+        if (source.PlatformMsg != null) {
+            this.PlatformMsg = new String(source.PlatformMsg);
+        }
+        if (source.BankRetCode != null) {
+            this.BankRetCode = new String(source.BankRetCode);
+        }
+        if (source.BankRetMsg != null) {
+            this.BankRetMsg = new String(source.BankRetMsg);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

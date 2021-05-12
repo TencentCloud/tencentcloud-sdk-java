@@ -206,6 +206,41 @@ public class TransactionItem extends AbstractModel{
         this.TransactionStatus = TransactionStatus;
     }
 
+    public TransactionItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TransactionItem(TransactionItem source) {
+        if (source.TransactionId != null) {
+            this.TransactionId = new String(source.TransactionId);
+        }
+        if (source.TransactionHash != null) {
+            this.TransactionHash = new String(source.TransactionHash);
+        }
+        if (source.CreateOrgName != null) {
+            this.CreateOrgName = new String(source.CreateOrgName);
+        }
+        if (source.BlockId != null) {
+            this.BlockId = new Long(source.BlockId);
+        }
+        if (source.TransactionType != null) {
+            this.TransactionType = new String(source.TransactionType);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.BlockHeight != null) {
+            this.BlockHeight = new Long(source.BlockHeight);
+        }
+        if (source.TransactionStatus != null) {
+            this.TransactionStatus = new String(source.TransactionStatus);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

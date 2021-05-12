@@ -778,6 +778,110 @@ public class CreateInstanceRequest extends AbstractModel{
         this.ApplicationRole = ApplicationRole;
     }
 
+    public CreateInstanceRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateInstanceRequest(CreateInstanceRequest source) {
+        if (source.ProductId != null) {
+            this.ProductId = new Long(source.ProductId);
+        }
+        if (source.VPCSettings != null) {
+            this.VPCSettings = new VPCSettings(source.VPCSettings);
+        }
+        if (source.Software != null) {
+            this.Software = new String[source.Software.length];
+            for (int i = 0; i < source.Software.length; i++) {
+                this.Software[i] = new String(source.Software[i]);
+            }
+        }
+        if (source.ResourceSpec != null) {
+            this.ResourceSpec = new NewResourceSpec(source.ResourceSpec);
+        }
+        if (source.SupportHA != null) {
+            this.SupportHA = new Long(source.SupportHA);
+        }
+        if (source.InstanceName != null) {
+            this.InstanceName = new String(source.InstanceName);
+        }
+        if (source.PayMode != null) {
+            this.PayMode = new Long(source.PayMode);
+        }
+        if (source.Placement != null) {
+            this.Placement = new Placement(source.Placement);
+        }
+        if (source.TimeSpan != null) {
+            this.TimeSpan = new Long(source.TimeSpan);
+        }
+        if (source.TimeUnit != null) {
+            this.TimeUnit = new String(source.TimeUnit);
+        }
+        if (source.LoginSettings != null) {
+            this.LoginSettings = new LoginSettings(source.LoginSettings);
+        }
+        if (source.COSSettings != null) {
+            this.COSSettings = new COSSettings(source.COSSettings);
+        }
+        if (source.SgId != null) {
+            this.SgId = new String(source.SgId);
+        }
+        if (source.PreExecutedFileSettings != null) {
+            this.PreExecutedFileSettings = new PreExecuteFileSettings[source.PreExecutedFileSettings.length];
+            for (int i = 0; i < source.PreExecutedFileSettings.length; i++) {
+                this.PreExecutedFileSettings[i] = new PreExecuteFileSettings(source.PreExecutedFileSettings[i]);
+            }
+        }
+        if (source.AutoRenew != null) {
+            this.AutoRenew = new Long(source.AutoRenew);
+        }
+        if (source.ClientToken != null) {
+            this.ClientToken = new String(source.ClientToken);
+        }
+        if (source.NeedMasterWan != null) {
+            this.NeedMasterWan = new String(source.NeedMasterWan);
+        }
+        if (source.RemoteLoginAtCreate != null) {
+            this.RemoteLoginAtCreate = new Long(source.RemoteLoginAtCreate);
+        }
+        if (source.CheckSecurity != null) {
+            this.CheckSecurity = new Long(source.CheckSecurity);
+        }
+        if (source.ExtendFsField != null) {
+            this.ExtendFsField = new String(source.ExtendFsField);
+        }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
+        if (source.DisasterRecoverGroupIds != null) {
+            this.DisasterRecoverGroupIds = new String[source.DisasterRecoverGroupIds.length];
+            for (int i = 0; i < source.DisasterRecoverGroupIds.length; i++) {
+                this.DisasterRecoverGroupIds[i] = new String(source.DisasterRecoverGroupIds[i]);
+            }
+        }
+        if (source.CbsEncrypt != null) {
+            this.CbsEncrypt = new Long(source.CbsEncrypt);
+        }
+        if (source.MetaType != null) {
+            this.MetaType = new String(source.MetaType);
+        }
+        if (source.UnifyMetaInstanceId != null) {
+            this.UnifyMetaInstanceId = new String(source.UnifyMetaInstanceId);
+        }
+        if (source.MetaDBInfo != null) {
+            this.MetaDBInfo = new CustomMetaInfo(source.MetaDBInfo);
+        }
+        if (source.ApplicationRole != null) {
+            this.ApplicationRole = new String(source.ApplicationRole);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

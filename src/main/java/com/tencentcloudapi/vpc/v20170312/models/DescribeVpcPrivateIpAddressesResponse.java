@@ -68,6 +68,26 @@ public class DescribeVpcPrivateIpAddressesResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeVpcPrivateIpAddressesResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeVpcPrivateIpAddressesResponse(DescribeVpcPrivateIpAddressesResponse source) {
+        if (source.VpcPrivateIpAddressSet != null) {
+            this.VpcPrivateIpAddressSet = new VpcPrivateIpAddress[source.VpcPrivateIpAddressSet.length];
+            for (int i = 0; i < source.VpcPrivateIpAddressSet.length; i++) {
+                this.VpcPrivateIpAddressSet[i] = new VpcPrivateIpAddress(source.VpcPrivateIpAddressSet[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

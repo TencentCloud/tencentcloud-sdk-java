@@ -137,6 +137,32 @@ public class LoadBalancerTraffic extends AbstractModel{
         this.OutBandwidth = OutBandwidth;
     }
 
+    public LoadBalancerTraffic() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public LoadBalancerTraffic(LoadBalancerTraffic source) {
+        if (source.LoadBalancerId != null) {
+            this.LoadBalancerId = new String(source.LoadBalancerId);
+        }
+        if (source.LoadBalancerName != null) {
+            this.LoadBalancerName = new String(source.LoadBalancerName);
+        }
+        if (source.Region != null) {
+            this.Region = new String(source.Region);
+        }
+        if (source.Vip != null) {
+            this.Vip = new String(source.Vip);
+        }
+        if (source.OutBandwidth != null) {
+            this.OutBandwidth = new Float(source.OutBandwidth);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

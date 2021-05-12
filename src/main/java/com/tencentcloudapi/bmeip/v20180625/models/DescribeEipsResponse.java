@@ -91,6 +91,29 @@ public class DescribeEipsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeEipsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeEipsResponse(DescribeEipsResponse source) {
+        if (source.EipSet != null) {
+            this.EipSet = new EipInfo[source.EipSet.length];
+            for (int i = 0; i < source.EipSet.length; i++) {
+                this.EipSet[i] = new EipInfo(source.EipSet[i]);
+            }
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

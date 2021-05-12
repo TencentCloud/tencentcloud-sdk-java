@@ -175,6 +175,38 @@ public class ImageProcessingTemplate extends AbstractModel{
         this.CreateTime = CreateTime;
     }
 
+    public ImageProcessingTemplate() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ImageProcessingTemplate(ImageProcessingTemplate source) {
+        if (source.Definition != null) {
+            this.Definition = new Long(source.Definition);
+        }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Comment != null) {
+            this.Comment = new String(source.Comment);
+        }
+        if (source.Operations != null) {
+            this.Operations = new ImageOperation[source.Operations.length];
+            for (int i = 0; i < source.Operations.length; i++) {
+                this.Operations[i] = new ImageOperation(source.Operations[i]);
+            }
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

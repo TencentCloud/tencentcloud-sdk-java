@@ -68,6 +68,26 @@ public class DescribeVpcQuotaResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeVpcQuotaResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeVpcQuotaResponse(DescribeVpcQuotaResponse source) {
+        if (source.VpcQuotaSet != null) {
+            this.VpcQuotaSet = new VpcQuota[source.VpcQuotaSet.length];
+            for (int i = 0; i < source.VpcQuotaSet.length; i++) {
+                this.VpcQuotaSet[i] = new VpcQuota(source.VpcQuotaSet[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

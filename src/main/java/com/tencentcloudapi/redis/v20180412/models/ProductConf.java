@@ -321,6 +321,68 @@ public class ProductConf extends AbstractModel{
         this.EnableRepicaReadOnly = EnableRepicaReadOnly;
     }
 
+    public ProductConf() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ProductConf(ProductConf source) {
+        if (source.Type != null) {
+            this.Type = new Long(source.Type);
+        }
+        if (source.TypeName != null) {
+            this.TypeName = new String(source.TypeName);
+        }
+        if (source.MinBuyNum != null) {
+            this.MinBuyNum = new Long(source.MinBuyNum);
+        }
+        if (source.MaxBuyNum != null) {
+            this.MaxBuyNum = new Long(source.MaxBuyNum);
+        }
+        if (source.Saleout != null) {
+            this.Saleout = new Boolean(source.Saleout);
+        }
+        if (source.Engine != null) {
+            this.Engine = new String(source.Engine);
+        }
+        if (source.Version != null) {
+            this.Version = new String(source.Version);
+        }
+        if (source.TotalSize != null) {
+            this.TotalSize = new String[source.TotalSize.length];
+            for (int i = 0; i < source.TotalSize.length; i++) {
+                this.TotalSize[i] = new String(source.TotalSize[i]);
+            }
+        }
+        if (source.ShardSize != null) {
+            this.ShardSize = new String[source.ShardSize.length];
+            for (int i = 0; i < source.ShardSize.length; i++) {
+                this.ShardSize[i] = new String(source.ShardSize[i]);
+            }
+        }
+        if (source.ReplicaNum != null) {
+            this.ReplicaNum = new String[source.ReplicaNum.length];
+            for (int i = 0; i < source.ReplicaNum.length; i++) {
+                this.ReplicaNum[i] = new String(source.ReplicaNum[i]);
+            }
+        }
+        if (source.ShardNum != null) {
+            this.ShardNum = new String[source.ShardNum.length];
+            for (int i = 0; i < source.ShardNum.length; i++) {
+                this.ShardNum[i] = new String(source.ShardNum[i]);
+            }
+        }
+        if (source.PayMode != null) {
+            this.PayMode = new String(source.PayMode);
+        }
+        if (source.EnableRepicaReadOnly != null) {
+            this.EnableRepicaReadOnly = new Boolean(source.EnableRepicaReadOnly);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

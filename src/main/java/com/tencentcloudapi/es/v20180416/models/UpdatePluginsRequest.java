@@ -137,6 +137,38 @@ public class UpdatePluginsRequest extends AbstractModel{
         this.ForceUpdate = ForceUpdate;
     }
 
+    public UpdatePluginsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UpdatePluginsRequest(UpdatePluginsRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.InstallPluginList != null) {
+            this.InstallPluginList = new String[source.InstallPluginList.length];
+            for (int i = 0; i < source.InstallPluginList.length; i++) {
+                this.InstallPluginList[i] = new String(source.InstallPluginList[i]);
+            }
+        }
+        if (source.RemovePluginList != null) {
+            this.RemovePluginList = new String[source.RemovePluginList.length];
+            for (int i = 0; i < source.RemovePluginList.length; i++) {
+                this.RemovePluginList[i] = new String(source.RemovePluginList[i]);
+            }
+        }
+        if (source.ForceRestart != null) {
+            this.ForceRestart = new Boolean(source.ForceRestart);
+        }
+        if (source.ForceUpdate != null) {
+            this.ForceUpdate = new Boolean(source.ForceUpdate);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -78,6 +78,26 @@ public class DetectInfoBestFrame extends AbstractModel{
         this.BestFrames = BestFrames;
     }
 
+    public DetectInfoBestFrame() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DetectInfoBestFrame(DetectInfoBestFrame source) {
+        if (source.BestFrame != null) {
+            this.BestFrame = new String(source.BestFrame);
+        }
+        if (source.BestFrames != null) {
+            this.BestFrames = new String[source.BestFrames.length];
+            for (int i = 0; i < source.BestFrames.length; i++) {
+                this.BestFrames[i] = new String(source.BestFrames[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

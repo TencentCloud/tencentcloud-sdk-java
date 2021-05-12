@@ -181,6 +181,29 @@ public class MixedInvoiceOCRRequest extends AbstractModel{
         this.Types = Types;
     }
 
+    public MixedInvoiceOCRRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MixedInvoiceOCRRequest(MixedInvoiceOCRRequest source) {
+        if (source.ImageBase64 != null) {
+            this.ImageBase64 = new String(source.ImageBase64);
+        }
+        if (source.ImageUrl != null) {
+            this.ImageUrl = new String(source.ImageUrl);
+        }
+        if (source.Types != null) {
+            this.Types = new Long[source.Types.length];
+            for (int i = 0; i < source.Types.length; i++) {
+                this.Types[i] = new Long(source.Types[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

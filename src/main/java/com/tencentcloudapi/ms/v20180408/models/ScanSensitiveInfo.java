@@ -91,6 +91,29 @@ public class ScanSensitiveInfo extends AbstractModel{
         this.FileSha = FileSha;
     }
 
+    public ScanSensitiveInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ScanSensitiveInfo(ScanSensitiveInfo source) {
+        if (source.WordList != null) {
+            this.WordList = new String[source.WordList.length];
+            for (int i = 0; i < source.WordList.length; i++) {
+                this.WordList[i] = new String(source.WordList[i]);
+            }
+        }
+        if (source.FilePath != null) {
+            this.FilePath = new String(source.FilePath);
+        }
+        if (source.FileSha != null) {
+            this.FileSha = new String(source.FileSha);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

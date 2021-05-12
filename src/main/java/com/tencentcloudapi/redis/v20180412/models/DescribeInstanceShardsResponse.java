@@ -91,6 +91,29 @@ public class DescribeInstanceShardsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeInstanceShardsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeInstanceShardsResponse(DescribeInstanceShardsResponse source) {
+        if (source.InstanceShards != null) {
+            this.InstanceShards = new InstanceClusterShard[source.InstanceShards.length];
+            for (int i = 0; i < source.InstanceShards.length; i++) {
+                this.InstanceShards[i] = new InstanceClusterShard(source.InstanceShards[i]);
+            }
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

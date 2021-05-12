@@ -545,6 +545,98 @@ public class ScaleOutInstanceRequest extends AbstractModel{
         this.MasterCount = MasterCount;
     }
 
+    public ScaleOutInstanceRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ScaleOutInstanceRequest(ScaleOutInstanceRequest source) {
+        if (source.TimeUnit != null) {
+            this.TimeUnit = new String(source.TimeUnit);
+        }
+        if (source.TimeSpan != null) {
+            this.TimeSpan = new Long(source.TimeSpan);
+        }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.PayMode != null) {
+            this.PayMode = new Long(source.PayMode);
+        }
+        if (source.ClientToken != null) {
+            this.ClientToken = new String(source.ClientToken);
+        }
+        if (source.PreExecutedFileSettings != null) {
+            this.PreExecutedFileSettings = new PreExecuteFileSettings[source.PreExecutedFileSettings.length];
+            for (int i = 0; i < source.PreExecutedFileSettings.length; i++) {
+                this.PreExecutedFileSettings[i] = new PreExecuteFileSettings(source.PreExecutedFileSettings[i]);
+            }
+        }
+        if (source.TaskCount != null) {
+            this.TaskCount = new Long(source.TaskCount);
+        }
+        if (source.CoreCount != null) {
+            this.CoreCount = new Long(source.CoreCount);
+        }
+        if (source.UnNecessaryNodeList != null) {
+            this.UnNecessaryNodeList = new Long[source.UnNecessaryNodeList.length];
+            for (int i = 0; i < source.UnNecessaryNodeList.length; i++) {
+                this.UnNecessaryNodeList[i] = new Long(source.UnNecessaryNodeList[i]);
+            }
+        }
+        if (source.RouterCount != null) {
+            this.RouterCount = new Long(source.RouterCount);
+        }
+        if (source.SoftDeployInfo != null) {
+            this.SoftDeployInfo = new Long[source.SoftDeployInfo.length];
+            for (int i = 0; i < source.SoftDeployInfo.length; i++) {
+                this.SoftDeployInfo[i] = new Long(source.SoftDeployInfo[i]);
+            }
+        }
+        if (source.ServiceNodeInfo != null) {
+            this.ServiceNodeInfo = new Long[source.ServiceNodeInfo.length];
+            for (int i = 0; i < source.ServiceNodeInfo.length; i++) {
+                this.ServiceNodeInfo[i] = new Long(source.ServiceNodeInfo[i]);
+            }
+        }
+        if (source.DisasterRecoverGroupIds != null) {
+            this.DisasterRecoverGroupIds = new String[source.DisasterRecoverGroupIds.length];
+            for (int i = 0; i < source.DisasterRecoverGroupIds.length; i++) {
+                this.DisasterRecoverGroupIds[i] = new String(source.DisasterRecoverGroupIds[i]);
+            }
+        }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
+        if (source.HardwareResourceType != null) {
+            this.HardwareResourceType = new String(source.HardwareResourceType);
+        }
+        if (source.PodSpec != null) {
+            this.PodSpec = new PodSpec(source.PodSpec);
+        }
+        if (source.ClickHouseClusterName != null) {
+            this.ClickHouseClusterName = new String(source.ClickHouseClusterName);
+        }
+        if (source.ClickHouseClusterType != null) {
+            this.ClickHouseClusterType = new String(source.ClickHouseClusterType);
+        }
+        if (source.YarnNodeLabel != null) {
+            this.YarnNodeLabel = new String(source.YarnNodeLabel);
+        }
+        if (source.PodParameter != null) {
+            this.PodParameter = new PodParameter(source.PodParameter);
+        }
+        if (source.MasterCount != null) {
+            this.MasterCount = new Long(source.MasterCount);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

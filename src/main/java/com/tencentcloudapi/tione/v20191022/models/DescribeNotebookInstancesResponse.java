@@ -91,6 +91,29 @@ public class DescribeNotebookInstancesResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeNotebookInstancesResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeNotebookInstancesResponse(DescribeNotebookInstancesResponse source) {
+        if (source.NotebookInstanceSet != null) {
+            this.NotebookInstanceSet = new NotebookInstanceSummary[source.NotebookInstanceSet.length];
+            for (int i = 0; i < source.NotebookInstanceSet.length; i++) {
+                this.NotebookInstanceSet[i] = new NotebookInstanceSummary(source.NotebookInstanceSet[i]);
+            }
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

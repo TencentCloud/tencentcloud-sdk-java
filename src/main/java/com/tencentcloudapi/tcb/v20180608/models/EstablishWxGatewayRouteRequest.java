@@ -137,6 +137,32 @@ public class EstablishWxGatewayRouteRequest extends AbstractModel{
         this.GatewayRouteDesc = GatewayRouteDesc;
     }
 
+    public EstablishWxGatewayRouteRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public EstablishWxGatewayRouteRequest(EstablishWxGatewayRouteRequest source) {
+        if (source.GatewayId != null) {
+            this.GatewayId = new String(source.GatewayId);
+        }
+        if (source.GatewayRouteName != null) {
+            this.GatewayRouteName = new String(source.GatewayRouteName);
+        }
+        if (source.GatewayRouteAddr != null) {
+            this.GatewayRouteAddr = new String(source.GatewayRouteAddr);
+        }
+        if (source.GatewayRouteProtocol != null) {
+            this.GatewayRouteProtocol = new String(source.GatewayRouteProtocol);
+        }
+        if (source.GatewayRouteDesc != null) {
+            this.GatewayRouteDesc = new String(source.GatewayRouteDesc);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

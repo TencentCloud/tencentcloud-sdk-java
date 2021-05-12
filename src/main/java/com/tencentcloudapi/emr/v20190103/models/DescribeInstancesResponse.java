@@ -124,6 +124,35 @@ public class DescribeInstancesResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeInstancesResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeInstancesResponse(DescribeInstancesResponse source) {
+        if (source.TotalCnt != null) {
+            this.TotalCnt = new Long(source.TotalCnt);
+        }
+        if (source.ClusterList != null) {
+            this.ClusterList = new ClusterInstancesInfo[source.ClusterList.length];
+            for (int i = 0; i < source.ClusterList.length; i++) {
+                this.ClusterList[i] = new ClusterInstancesInfo(source.ClusterList[i]);
+            }
+        }
+        if (source.TagKeys != null) {
+            this.TagKeys = new String[source.TagKeys.length];
+            for (int i = 0; i < source.TagKeys.length; i++) {
+                this.TagKeys[i] = new String(source.TagKeys[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

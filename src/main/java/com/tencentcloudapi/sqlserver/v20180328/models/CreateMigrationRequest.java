@@ -183,6 +183,44 @@ public class CreateMigrationRequest extends AbstractModel{
         this.RenameRestore = RenameRestore;
     }
 
+    public CreateMigrationRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateMigrationRequest(CreateMigrationRequest source) {
+        if (source.MigrateName != null) {
+            this.MigrateName = new String(source.MigrateName);
+        }
+        if (source.MigrateType != null) {
+            this.MigrateType = new Long(source.MigrateType);
+        }
+        if (source.SourceType != null) {
+            this.SourceType = new Long(source.SourceType);
+        }
+        if (source.Source != null) {
+            this.Source = new MigrateSource(source.Source);
+        }
+        if (source.Target != null) {
+            this.Target = new MigrateTarget(source.Target);
+        }
+        if (source.MigrateDBSet != null) {
+            this.MigrateDBSet = new MigrateDB[source.MigrateDBSet.length];
+            for (int i = 0; i < source.MigrateDBSet.length; i++) {
+                this.MigrateDBSet[i] = new MigrateDB(source.MigrateDBSet[i]);
+            }
+        }
+        if (source.RenameRestore != null) {
+            this.RenameRestore = new RenameRestoreDatabase[source.RenameRestore.length];
+            for (int i = 0; i < source.RenameRestore.length; i++) {
+                this.RenameRestore[i] = new RenameRestoreDatabase(source.RenameRestore[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

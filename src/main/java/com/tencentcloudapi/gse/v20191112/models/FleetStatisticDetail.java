@@ -218,6 +218,38 @@ public class FleetStatisticDetail extends AbstractModel{
         this.TotalUsedFlowMegaBytes = TotalUsedFlowMegaBytes;
     }
 
+    public FleetStatisticDetail() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public FleetStatisticDetail(FleetStatisticDetail source) {
+        if (source.FleetId != null) {
+            this.FleetId = new String(source.FleetId);
+        }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.InstanceIP != null) {
+            this.InstanceIP = new String(source.InstanceIP);
+        }
+        if (source.BeginTime != null) {
+            this.BeginTime = new String(source.BeginTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+        if (source.TotalUsedTimeSeconds != null) {
+            this.TotalUsedTimeSeconds = new String(source.TotalUsedTimeSeconds);
+        }
+        if (source.TotalUsedFlowMegaBytes != null) {
+            this.TotalUsedFlowMegaBytes = new Float(source.TotalUsedFlowMegaBytes);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -114,6 +114,29 @@ public class GeneralStat extends AbstractModel{
         this.TotalAmount = TotalAmount;
     }
 
+    public GeneralStat() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GeneralStat(GeneralStat source) {
+        if (source.TodayAmount != null) {
+            this.TodayAmount = new Long(source.TodayAmount);
+        }
+        if (source.WeekAmount != null) {
+            this.WeekAmount = new Long(source.WeekAmount);
+        }
+        if (source.MonthAmount != null) {
+            this.MonthAmount = new Long(source.MonthAmount);
+        }
+        if (source.TotalAmount != null) {
+            this.TotalAmount = new Long(source.TotalAmount);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

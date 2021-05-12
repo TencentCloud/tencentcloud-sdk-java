@@ -91,6 +91,29 @@ public class DescribeShieldInstancesResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeShieldInstancesResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeShieldInstancesResponse(DescribeShieldInstancesResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.AppSet != null) {
+            this.AppSet = new AppSetInfo[source.AppSet.length];
+            for (int i = 0; i < source.AppSet.length; i++) {
+                this.AppSet[i] = new AppSetInfo(source.AppSet[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

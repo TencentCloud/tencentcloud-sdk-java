@@ -91,6 +91,32 @@ public class ClusterPublicLB extends AbstractModel{
         this.SecurityPolicies = SecurityPolicies;
     }
 
+    public ClusterPublicLB() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ClusterPublicLB(ClusterPublicLB source) {
+        if (source.Enabled != null) {
+            this.Enabled = new Boolean(source.Enabled);
+        }
+        if (source.AllowFromCidrs != null) {
+            this.AllowFromCidrs = new String[source.AllowFromCidrs.length];
+            for (int i = 0; i < source.AllowFromCidrs.length; i++) {
+                this.AllowFromCidrs[i] = new String(source.AllowFromCidrs[i]);
+            }
+        }
+        if (source.SecurityPolicies != null) {
+            this.SecurityPolicies = new String[source.SecurityPolicies.length];
+            for (int i = 0; i < source.SecurityPolicies.length; i++) {
+                this.SecurityPolicies[i] = new String(source.SecurityPolicies[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

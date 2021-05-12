@@ -275,6 +275,50 @@ public class DescribeDBPerformanceResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeDBPerformanceResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeDBPerformanceResponse(DescribeDBPerformanceResponse source) {
+        if (source.LongQuery != null) {
+            this.LongQuery = new MonitorData(source.LongQuery);
+        }
+        if (source.SelectTotal != null) {
+            this.SelectTotal = new MonitorData(source.SelectTotal);
+        }
+        if (source.UpdateTotal != null) {
+            this.UpdateTotal = new MonitorData(source.UpdateTotal);
+        }
+        if (source.InsertTotal != null) {
+            this.InsertTotal = new MonitorData(source.InsertTotal);
+        }
+        if (source.DeleteTotal != null) {
+            this.DeleteTotal = new MonitorData(source.DeleteTotal);
+        }
+        if (source.MemHitRate != null) {
+            this.MemHitRate = new MonitorData(source.MemHitRate);
+        }
+        if (source.DiskIops != null) {
+            this.DiskIops = new MonitorData(source.DiskIops);
+        }
+        if (source.ConnActive != null) {
+            this.ConnActive = new MonitorData(source.ConnActive);
+        }
+        if (source.IsMasterSwitched != null) {
+            this.IsMasterSwitched = new MonitorData(source.IsMasterSwitched);
+        }
+        if (source.SlaveDelay != null) {
+            this.SlaveDelay = new MonitorData(source.SlaveDelay);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

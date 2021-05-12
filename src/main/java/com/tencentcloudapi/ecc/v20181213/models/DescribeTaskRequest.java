@@ -68,6 +68,23 @@ public class DescribeTaskRequest extends AbstractModel{
         this.EccAppid = EccAppid;
     }
 
+    public DescribeTaskRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeTaskRequest(DescribeTaskRequest source) {
+        if (source.TaskId != null) {
+            this.TaskId = new String(source.TaskId);
+        }
+        if (source.EccAppid != null) {
+            this.EccAppid = new String(source.EccAppid);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

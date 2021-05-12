@@ -96,6 +96,29 @@ public class DescribeAllUserContactResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeAllUserContactResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeAllUserContactResponse(DescribeAllUserContactResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.Contacts != null) {
+            this.Contacts = new ContactItem[source.Contacts.length];
+            for (int i = 0; i < source.Contacts.length; i++) {
+                this.Contacts[i] = new ContactItem(source.Contacts[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

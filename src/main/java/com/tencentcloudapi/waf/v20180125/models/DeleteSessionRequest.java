@@ -68,6 +68,23 @@ public class DeleteSessionRequest extends AbstractModel{
         this.Edition = Edition;
     }
 
+    public DeleteSessionRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteSessionRequest(DeleteSessionRequest source) {
+        if (source.Domain != null) {
+            this.Domain = new String(source.Domain);
+        }
+        if (source.Edition != null) {
+            this.Edition = new String(source.Edition);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

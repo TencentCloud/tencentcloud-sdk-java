@@ -114,6 +114,29 @@ public class AiRecognitionTaskHeadTailResultOutput extends AbstractModel{
         this.TailTimeOffset = TailTimeOffset;
     }
 
+    public AiRecognitionTaskHeadTailResultOutput() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AiRecognitionTaskHeadTailResultOutput(AiRecognitionTaskHeadTailResultOutput source) {
+        if (source.HeadConfidence != null) {
+            this.HeadConfidence = new Float(source.HeadConfidence);
+        }
+        if (source.HeadTimeOffset != null) {
+            this.HeadTimeOffset = new Float(source.HeadTimeOffset);
+        }
+        if (source.TailConfidence != null) {
+            this.TailConfidence = new Float(source.TailConfidence);
+        }
+        if (source.TailTimeOffset != null) {
+            this.TailTimeOffset = new Float(source.TailTimeOffset);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

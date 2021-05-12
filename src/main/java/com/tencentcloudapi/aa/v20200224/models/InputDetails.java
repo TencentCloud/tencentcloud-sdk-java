@@ -68,6 +68,23 @@ public class InputDetails extends AbstractModel{
         this.FieldValue = FieldValue;
     }
 
+    public InputDetails() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public InputDetails(InputDetails source) {
+        if (source.FieldName != null) {
+            this.FieldName = new String(source.FieldName);
+        }
+        if (source.FieldValue != null) {
+            this.FieldValue = new String(source.FieldValue);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -106,6 +106,26 @@ public class OperationInfo extends AbstractModel{
         this.Destroy = Destroy;
     }
 
+    public OperationInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public OperationInfo(OperationInfo source) {
+        if (source.Init != null) {
+            this.Init = new OperationInfoDetail(source.Init);
+        }
+        if (source.AddInstance != null) {
+            this.AddInstance = new OperationInfoDetail(source.AddInstance);
+        }
+        if (source.Destroy != null) {
+            this.Destroy = new OperationInfoDetail(source.Destroy);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

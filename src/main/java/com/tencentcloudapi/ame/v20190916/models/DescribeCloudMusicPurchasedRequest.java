@@ -45,6 +45,20 @@ public class DescribeCloudMusicPurchasedRequest extends AbstractModel{
         this.AuthInfoId = AuthInfoId;
     }
 
+    public DescribeCloudMusicPurchasedRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeCloudMusicPurchasedRequest(DescribeCloudMusicPurchasedRequest source) {
+        if (source.AuthInfoId != null) {
+            this.AuthInfoId = new String(source.AuthInfoId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

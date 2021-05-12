@@ -68,6 +68,26 @@ public class QueryAnchorContractInfoResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public QueryAnchorContractInfoResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public QueryAnchorContractInfoResponse(QueryAnchorContractInfoResponse source) {
+        if (source.AnchorContractInfoList != null) {
+            this.AnchorContractInfoList = new AnchorContractInfo[source.AnchorContractInfoList.length];
+            for (int i = 0; i < source.AnchorContractInfoList.length; i++) {
+                this.AnchorContractInfoList[i] = new AnchorContractInfo(source.AnchorContractInfoList[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

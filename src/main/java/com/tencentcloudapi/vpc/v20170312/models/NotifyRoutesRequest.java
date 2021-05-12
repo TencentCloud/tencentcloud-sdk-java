@@ -68,6 +68,26 @@ public class NotifyRoutesRequest extends AbstractModel{
         this.RouteItemIds = RouteItemIds;
     }
 
+    public NotifyRoutesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public NotifyRoutesRequest(NotifyRoutesRequest source) {
+        if (source.RouteTableId != null) {
+            this.RouteTableId = new String(source.RouteTableId);
+        }
+        if (source.RouteItemIds != null) {
+            this.RouteItemIds = new String[source.RouteItemIds.length];
+            for (int i = 0; i < source.RouteItemIds.length; i++) {
+                this.RouteItemIds[i] = new String(source.RouteItemIds[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

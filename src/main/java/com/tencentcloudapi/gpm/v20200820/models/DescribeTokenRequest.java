@@ -45,6 +45,20 @@ public class DescribeTokenRequest extends AbstractModel{
         this.MatchCode = MatchCode;
     }
 
+    public DescribeTokenRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeTokenRequest(DescribeTokenRequest source) {
+        if (source.MatchCode != null) {
+            this.MatchCode = new String(source.MatchCode);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

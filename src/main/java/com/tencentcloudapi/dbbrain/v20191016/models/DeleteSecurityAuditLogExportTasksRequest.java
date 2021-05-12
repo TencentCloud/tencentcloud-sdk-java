@@ -91,6 +91,29 @@ public class DeleteSecurityAuditLogExportTasksRequest extends AbstractModel{
         this.Product = Product;
     }
 
+    public DeleteSecurityAuditLogExportTasksRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteSecurityAuditLogExportTasksRequest(DeleteSecurityAuditLogExportTasksRequest source) {
+        if (source.SecAuditGroupId != null) {
+            this.SecAuditGroupId = new String(source.SecAuditGroupId);
+        }
+        if (source.AsyncRequestIds != null) {
+            this.AsyncRequestIds = new Long[source.AsyncRequestIds.length];
+            for (int i = 0; i < source.AsyncRequestIds.length; i++) {
+                this.AsyncRequestIds[i] = new Long(source.AsyncRequestIds[i]);
+            }
+        }
+        if (source.Product != null) {
+            this.Product = new String(source.Product);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

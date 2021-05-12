@@ -206,6 +206,41 @@ public class PersonTracePoint extends AbstractModel{
         this.ShoppingBagCount = ShoppingBagCount;
     }
 
+    public PersonTracePoint() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PersonTracePoint(PersonTracePoint source) {
+        if (source.MallAreaId != null) {
+            this.MallAreaId = new Long(source.MallAreaId);
+        }
+        if (source.ShopId != null) {
+            this.ShopId = new Long(source.ShopId);
+        }
+        if (source.MallAreaType != null) {
+            this.MallAreaType = new Long(source.MallAreaType);
+        }
+        if (source.TraceEventType != null) {
+            this.TraceEventType = new Long(source.TraceEventType);
+        }
+        if (source.TraceEventTime != null) {
+            this.TraceEventTime = new String(source.TraceEventTime);
+        }
+        if (source.CapPic != null) {
+            this.CapPic = new String(source.CapPic);
+        }
+        if (source.ShoppingBagType != null) {
+            this.ShoppingBagType = new Long(source.ShoppingBagType);
+        }
+        if (source.ShoppingBagCount != null) {
+            this.ShoppingBagCount = new Long(source.ShoppingBagCount);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

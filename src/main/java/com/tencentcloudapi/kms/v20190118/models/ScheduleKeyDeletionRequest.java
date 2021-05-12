@@ -68,6 +68,23 @@ public class ScheduleKeyDeletionRequest extends AbstractModel{
         this.PendingWindowInDays = PendingWindowInDays;
     }
 
+    public ScheduleKeyDeletionRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ScheduleKeyDeletionRequest(ScheduleKeyDeletionRequest source) {
+        if (source.KeyId != null) {
+            this.KeyId = new String(source.KeyId);
+        }
+        if (source.PendingWindowInDays != null) {
+            this.PendingWindowInDays = new Long(source.PendingWindowInDays);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

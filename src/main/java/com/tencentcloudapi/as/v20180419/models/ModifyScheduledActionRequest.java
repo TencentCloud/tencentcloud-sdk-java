@@ -206,6 +206,41 @@ public class ModifyScheduledActionRequest extends AbstractModel{
         this.Recurrence = Recurrence;
     }
 
+    public ModifyScheduledActionRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyScheduledActionRequest(ModifyScheduledActionRequest source) {
+        if (source.ScheduledActionId != null) {
+            this.ScheduledActionId = new String(source.ScheduledActionId);
+        }
+        if (source.ScheduledActionName != null) {
+            this.ScheduledActionName = new String(source.ScheduledActionName);
+        }
+        if (source.MaxSize != null) {
+            this.MaxSize = new Long(source.MaxSize);
+        }
+        if (source.MinSize != null) {
+            this.MinSize = new Long(source.MinSize);
+        }
+        if (source.DesiredCapacity != null) {
+            this.DesiredCapacity = new Long(source.DesiredCapacity);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+        if (source.Recurrence != null) {
+            this.Recurrence = new String(source.Recurrence);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

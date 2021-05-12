@@ -91,6 +91,26 @@ public class NQAInfo extends AbstractModel{
         this.DestinationIp = DestinationIp;
     }
 
+    public NQAInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public NQAInfo(NQAInfo source) {
+        if (source.ProbeFailedTimes != null) {
+            this.ProbeFailedTimes = new Long(source.ProbeFailedTimes);
+        }
+        if (source.Interval != null) {
+            this.Interval = new Long(source.Interval);
+        }
+        if (source.DestinationIp != null) {
+            this.DestinationIp = new String(source.DestinationIp);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

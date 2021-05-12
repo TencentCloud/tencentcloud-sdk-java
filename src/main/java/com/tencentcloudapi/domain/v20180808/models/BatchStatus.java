@@ -91,6 +91,26 @@ public class BatchStatus extends AbstractModel{
         this.BatchAction = BatchAction;
     }
 
+    public BatchStatus() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public BatchStatus(BatchStatus source) {
+        if (source.LogId != null) {
+            this.LogId = new Long(source.LogId);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.BatchAction != null) {
+            this.BatchAction = new String(source.BatchAction);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

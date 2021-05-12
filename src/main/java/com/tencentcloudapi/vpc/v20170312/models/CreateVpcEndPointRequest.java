@@ -160,6 +160,35 @@ public class CreateVpcEndPointRequest extends AbstractModel{
         this.SecurityGroupId = SecurityGroupId;
     }
 
+    public CreateVpcEndPointRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateVpcEndPointRequest(CreateVpcEndPointRequest source) {
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.SubnetId != null) {
+            this.SubnetId = new String(source.SubnetId);
+        }
+        if (source.EndPointName != null) {
+            this.EndPointName = new String(source.EndPointName);
+        }
+        if (source.EndPointServiceId != null) {
+            this.EndPointServiceId = new String(source.EndPointServiceId);
+        }
+        if (source.EndPointVip != null) {
+            this.EndPointVip = new String(source.EndPointVip);
+        }
+        if (source.SecurityGroupId != null) {
+            this.SecurityGroupId = new String(source.SecurityGroupId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

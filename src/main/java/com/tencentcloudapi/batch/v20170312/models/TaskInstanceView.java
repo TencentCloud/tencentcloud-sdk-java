@@ -300,6 +300,50 @@ public class TaskInstanceView extends AbstractModel{
         this.StateDetailedReason = StateDetailedReason;
     }
 
+    public TaskInstanceView() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TaskInstanceView(TaskInstanceView source) {
+        if (source.TaskInstanceIndex != null) {
+            this.TaskInstanceIndex = new Long(source.TaskInstanceIndex);
+        }
+        if (source.TaskInstanceState != null) {
+            this.TaskInstanceState = new String(source.TaskInstanceState);
+        }
+        if (source.ExitCode != null) {
+            this.ExitCode = new Long(source.ExitCode);
+        }
+        if (source.StateReason != null) {
+            this.StateReason = new String(source.StateReason);
+        }
+        if (source.ComputeNodeInstanceId != null) {
+            this.ComputeNodeInstanceId = new String(source.ComputeNodeInstanceId);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.LaunchTime != null) {
+            this.LaunchTime = new String(source.LaunchTime);
+        }
+        if (source.RunningTime != null) {
+            this.RunningTime = new String(source.RunningTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+        if (source.RedirectInfo != null) {
+            this.RedirectInfo = new RedirectInfo(source.RedirectInfo);
+        }
+        if (source.StateDetailedReason != null) {
+            this.StateDetailedReason = new String(source.StateDetailedReason);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

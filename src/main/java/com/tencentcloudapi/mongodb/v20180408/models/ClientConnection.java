@@ -68,6 +68,23 @@ public class ClientConnection extends AbstractModel{
         this.Count = Count;
     }
 
+    public ClientConnection() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ClientConnection(ClientConnection source) {
+        if (source.IP != null) {
+            this.IP = new String(source.IP);
+        }
+        if (source.Count != null) {
+            this.Count = new Long(source.Count);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

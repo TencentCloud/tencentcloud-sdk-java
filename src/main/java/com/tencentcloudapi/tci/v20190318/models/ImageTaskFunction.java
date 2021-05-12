@@ -252,6 +252,47 @@ public class ImageTaskFunction extends AbstractModel{
         this.EnableTeacherOutScreen = EnableTeacherOutScreen;
     }
 
+    public ImageTaskFunction() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ImageTaskFunction(ImageTaskFunction source) {
+        if (source.EnableActionClass != null) {
+            this.EnableActionClass = new Boolean(source.EnableActionClass);
+        }
+        if (source.EnableFaceDetect != null) {
+            this.EnableFaceDetect = new Boolean(source.EnableFaceDetect);
+        }
+        if (source.EnableFaceExpression != null) {
+            this.EnableFaceExpression = new Boolean(source.EnableFaceExpression);
+        }
+        if (source.EnableFaceIdentify != null) {
+            this.EnableFaceIdentify = new Boolean(source.EnableFaceIdentify);
+        }
+        if (source.EnableGesture != null) {
+            this.EnableGesture = new Boolean(source.EnableGesture);
+        }
+        if (source.EnableHandTracking != null) {
+            this.EnableHandTracking = new Boolean(source.EnableHandTracking);
+        }
+        if (source.EnableLightJudge != null) {
+            this.EnableLightJudge = new Boolean(source.EnableLightJudge);
+        }
+        if (source.EnableStudentBodyMovements != null) {
+            this.EnableStudentBodyMovements = new Boolean(source.EnableStudentBodyMovements);
+        }
+        if (source.EnableTeacherBodyMovements != null) {
+            this.EnableTeacherBodyMovements = new Boolean(source.EnableTeacherBodyMovements);
+        }
+        if (source.EnableTeacherOutScreen != null) {
+            this.EnableTeacherOutScreen = new Boolean(source.EnableTeacherOutScreen);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

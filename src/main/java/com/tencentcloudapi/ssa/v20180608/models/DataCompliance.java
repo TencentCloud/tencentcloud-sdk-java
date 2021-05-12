@@ -458,6 +458,68 @@ public class DataCompliance extends AbstractModel{
         this.Remarks = Remarks;
     }
 
+    public DataCompliance() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DataCompliance(DataCompliance source) {
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
+        if (source.CheckItemId != null) {
+            this.CheckItemId = new String(source.CheckItemId);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.AssetType != null) {
+            this.AssetType = new String(source.AssetType);
+        }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.Category != null) {
+            this.Category = new String(source.Category);
+        }
+        if (source.StandardItem != null) {
+            this.StandardItem = new String(source.StandardItem);
+        }
+        if (source.Chapter != null) {
+            this.Chapter = new String(source.Chapter);
+        }
+        if (source.LastCheckTime != null) {
+            this.LastCheckTime = new String(source.LastCheckTime);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.RiskCount != null) {
+            this.RiskCount = new Long(source.RiskCount);
+        }
+        if (source.IsChecked != null) {
+            this.IsChecked = new Long(source.IsChecked);
+        }
+        if (source.RiskItem != null) {
+            this.RiskItem = new String(source.RiskItem);
+        }
+        if (source.IsIgnored != null) {
+            this.IsIgnored = new Long(source.IsIgnored);
+        }
+        if (source.Title != null) {
+            this.Title = new String(source.Title);
+        }
+        if (source.AssetTotal != null) {
+            this.AssetTotal = new Long(source.AssetTotal);
+        }
+        if (source.Remarks != null) {
+            this.Remarks = new String(source.Remarks);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

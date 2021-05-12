@@ -137,6 +137,35 @@ public class AddRuleRequest extends AbstractModel{
         this.DataType = DataType;
     }
 
+    public AddRuleRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AddRuleRequest(AddRuleRequest source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.Query != null) {
+            this.Query = new RuleQuery(source.Query);
+        }
+        if (source.Actions != null) {
+            this.Actions = new Action[source.Actions.length];
+            for (int i = 0; i < source.Actions.length; i++) {
+                this.Actions[i] = new Action(source.Actions[i]);
+            }
+        }
+        if (source.DataType != null) {
+            this.DataType = new Long(source.DataType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -78,6 +78,29 @@ public class ClustersZone extends AbstractModel{
         this.SlaveZone = SlaveZone;
     }
 
+    public ClustersZone() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ClustersZone(ClustersZone source) {
+        if (source.MasterZone != null) {
+            this.MasterZone = new String[source.MasterZone.length];
+            for (int i = 0; i < source.MasterZone.length; i++) {
+                this.MasterZone[i] = new String(source.MasterZone[i]);
+            }
+        }
+        if (source.SlaveZone != null) {
+            this.SlaveZone = new String[source.SlaveZone.length];
+            for (int i = 0; i < source.SlaveZone.length; i++) {
+                this.SlaveZone[i] = new String(source.SlaveZone[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

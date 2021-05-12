@@ -91,6 +91,26 @@ public class ModifyBackupTimeRequest extends AbstractModel{
         this.EndBackupTime = EndBackupTime;
     }
 
+    public ModifyBackupTimeRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyBackupTimeRequest(ModifyBackupTimeRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.StartBackupTime != null) {
+            this.StartBackupTime = new String(source.StartBackupTime);
+        }
+        if (source.EndBackupTime != null) {
+            this.EndBackupTime = new String(source.EndBackupTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

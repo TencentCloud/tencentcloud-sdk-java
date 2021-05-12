@@ -96,6 +96,29 @@ public class DescribeVsmsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeVsmsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeVsmsResponse(DescribeVsmsResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.VsmList != null) {
+            this.VsmList = new ResourceInfo[source.VsmList.length];
+            for (int i = 0; i < source.VsmList.length; i++) {
+                this.VsmList[i] = new ResourceInfo(source.VsmList[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

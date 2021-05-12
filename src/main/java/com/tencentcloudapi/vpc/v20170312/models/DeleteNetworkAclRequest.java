@@ -45,6 +45,20 @@ public class DeleteNetworkAclRequest extends AbstractModel{
         this.NetworkAclId = NetworkAclId;
     }
 
+    public DeleteNetworkAclRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteNetworkAclRequest(DeleteNetworkAclRequest source) {
+        if (source.NetworkAclId != null) {
+            this.NetworkAclId = new String(source.NetworkAclId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

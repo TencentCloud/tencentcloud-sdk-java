@@ -183,6 +183,41 @@ public class DBDetail extends AbstractModel{
         this.InternalStatus = InternalStatus;
     }
 
+    public DBDetail() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DBDetail(DBDetail source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Charset != null) {
+            this.Charset = new String(source.Charset);
+        }
+        if (source.Remark != null) {
+            this.Remark = new String(source.Remark);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.Accounts != null) {
+            this.Accounts = new AccountPrivilege[source.Accounts.length];
+            for (int i = 0; i < source.Accounts.length; i++) {
+                this.Accounts[i] = new AccountPrivilege(source.Accounts[i]);
+            }
+        }
+        if (source.InternalStatus != null) {
+            this.InternalStatus = new String(source.InternalStatus);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

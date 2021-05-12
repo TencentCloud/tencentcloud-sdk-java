@@ -73,6 +73,23 @@ MP3-320K-FTD 为获取320kbps已核验歌曲完整资源。
         this.MusicType = MusicType;
     }
 
+    public DescribeCloudMusicRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeCloudMusicRequest(DescribeCloudMusicRequest source) {
+        if (source.MusicId != null) {
+            this.MusicId = new String(source.MusicId);
+        }
+        if (source.MusicType != null) {
+            this.MusicType = new String(source.MusicType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

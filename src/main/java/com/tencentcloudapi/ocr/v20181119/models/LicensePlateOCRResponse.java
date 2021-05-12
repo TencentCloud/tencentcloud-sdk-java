@@ -114,6 +114,29 @@ public class LicensePlateOCRResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public LicensePlateOCRResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public LicensePlateOCRResponse(LicensePlateOCRResponse source) {
+        if (source.Number != null) {
+            this.Number = new String(source.Number);
+        }
+        if (source.Confidence != null) {
+            this.Confidence = new Long(source.Confidence);
+        }
+        if (source.Rect != null) {
+            this.Rect = new Rect(source.Rect);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

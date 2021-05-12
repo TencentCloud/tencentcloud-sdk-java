@@ -257,6 +257,53 @@ public class PodSpec extends AbstractModel{
         this.DynamicPodSpec = DynamicPodSpec;
     }
 
+    public PodSpec() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PodSpec(PodSpec source) {
+        if (source.ResourceProviderIdentifier != null) {
+            this.ResourceProviderIdentifier = new String(source.ResourceProviderIdentifier);
+        }
+        if (source.ResourceProviderType != null) {
+            this.ResourceProviderType = new String(source.ResourceProviderType);
+        }
+        if (source.NodeType != null) {
+            this.NodeType = new String(source.NodeType);
+        }
+        if (source.Cpu != null) {
+            this.Cpu = new Long(source.Cpu);
+        }
+        if (source.Memory != null) {
+            this.Memory = new Long(source.Memory);
+        }
+        if (source.DataVolumes != null) {
+            this.DataVolumes = new String[source.DataVolumes.length];
+            for (int i = 0; i < source.DataVolumes.length; i++) {
+                this.DataVolumes[i] = new String(source.DataVolumes[i]);
+            }
+        }
+        if (source.CpuType != null) {
+            this.CpuType = new String(source.CpuType);
+        }
+        if (source.PodVolumes != null) {
+            this.PodVolumes = new PodVolume[source.PodVolumes.length];
+            for (int i = 0; i < source.PodVolumes.length; i++) {
+                this.PodVolumes[i] = new PodVolume(source.PodVolumes[i]);
+            }
+        }
+        if (source.IsDynamicSpec != null) {
+            this.IsDynamicSpec = new Long(source.IsDynamicSpec);
+        }
+        if (source.DynamicPodSpec != null) {
+            this.DynamicPodSpec = new DynamicPodSpec(source.DynamicPodSpec);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

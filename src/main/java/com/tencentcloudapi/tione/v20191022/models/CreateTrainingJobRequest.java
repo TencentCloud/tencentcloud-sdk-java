@@ -280,6 +280,56 @@ public class CreateTrainingJobRequest extends AbstractModel{
         this.RetryWhenResourceInsufficient = RetryWhenResourceInsufficient;
     }
 
+    public CreateTrainingJobRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateTrainingJobRequest(CreateTrainingJobRequest source) {
+        if (source.AlgorithmSpecification != null) {
+            this.AlgorithmSpecification = new AlgorithmSpecification(source.AlgorithmSpecification);
+        }
+        if (source.OutputDataConfig != null) {
+            this.OutputDataConfig = new OutputDataConfig(source.OutputDataConfig);
+        }
+        if (source.ResourceConfig != null) {
+            this.ResourceConfig = new ResourceConfig(source.ResourceConfig);
+        }
+        if (source.TrainingJobName != null) {
+            this.TrainingJobName = new String(source.TrainingJobName);
+        }
+        if (source.InputDataConfig != null) {
+            this.InputDataConfig = new InputDataConfig[source.InputDataConfig.length];
+            for (int i = 0; i < source.InputDataConfig.length; i++) {
+                this.InputDataConfig[i] = new InputDataConfig(source.InputDataConfig[i]);
+            }
+        }
+        if (source.StoppingCondition != null) {
+            this.StoppingCondition = new StoppingCondition(source.StoppingCondition);
+        }
+        if (source.VpcConfig != null) {
+            this.VpcConfig = new VpcConfig(source.VpcConfig);
+        }
+        if (source.HyperParameters != null) {
+            this.HyperParameters = new String(source.HyperParameters);
+        }
+        if (source.EnvConfig != null) {
+            this.EnvConfig = new EnvConfig[source.EnvConfig.length];
+            for (int i = 0; i < source.EnvConfig.length; i++) {
+                this.EnvConfig[i] = new EnvConfig(source.EnvConfig[i]);
+            }
+        }
+        if (source.RoleName != null) {
+            this.RoleName = new String(source.RoleName);
+        }
+        if (source.RetryWhenResourceInsufficient != null) {
+            this.RetryWhenResourceInsufficient = new String(source.RetryWhenResourceInsufficient);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -195,6 +195,35 @@ public class DescribeManagersRequest extends AbstractModel{
         this.Status = Status;
     }
 
+    public DescribeManagersRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeManagersRequest(DescribeManagersRequest source) {
+        if (source.CompanyId != null) {
+            this.CompanyId = new Long(source.CompanyId);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.ManagerName != null) {
+            this.ManagerName = new String(source.ManagerName);
+        }
+        if (source.ManagerMail != null) {
+            this.ManagerMail = new String(source.ManagerMail);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

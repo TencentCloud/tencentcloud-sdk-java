@@ -91,6 +91,29 @@ public class GetStatisticsReportResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public GetStatisticsReportResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GetStatisticsReportResponse(GetStatisticsReportResponse source) {
+        if (source.DailyVolumes != null) {
+            this.DailyVolumes = new Volume[source.DailyVolumes.length];
+            for (int i = 0; i < source.DailyVolumes.length; i++) {
+                this.DailyVolumes[i] = new Volume(source.DailyVolumes[i]);
+            }
+        }
+        if (source.OverallVolume != null) {
+            this.OverallVolume = new Volume(source.OverallVolume);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

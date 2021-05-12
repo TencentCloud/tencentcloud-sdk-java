@@ -206,6 +206,44 @@ public class SecurityGroupAssociationStatistics extends AbstractModel{
         this.TotalCount = TotalCount;
     }
 
+    public SecurityGroupAssociationStatistics() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SecurityGroupAssociationStatistics(SecurityGroupAssociationStatistics source) {
+        if (source.SecurityGroupId != null) {
+            this.SecurityGroupId = new String(source.SecurityGroupId);
+        }
+        if (source.ECM != null) {
+            this.ECM = new Long(source.ECM);
+        }
+        if (source.Module != null) {
+            this.Module = new Long(source.Module);
+        }
+        if (source.ENI != null) {
+            this.ENI = new Long(source.ENI);
+        }
+        if (source.SG != null) {
+            this.SG = new Long(source.SG);
+        }
+        if (source.CLB != null) {
+            this.CLB = new Long(source.CLB);
+        }
+        if (source.InstanceStatistics != null) {
+            this.InstanceStatistics = new InstanceStatistic[source.InstanceStatistics.length];
+            for (int i = 0; i < source.InstanceStatistics.length; i++) {
+                this.InstanceStatistics[i] = new InstanceStatistic(source.InstanceStatistics[i]);
+            }
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

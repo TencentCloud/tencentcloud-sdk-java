@@ -91,6 +91,29 @@ public class CreateTopicIpWhiteListRequest extends AbstractModel{
         this.IpWhiteList = IpWhiteList;
     }
 
+    public CreateTopicIpWhiteListRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateTopicIpWhiteListRequest(CreateTopicIpWhiteListRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.TopicName != null) {
+            this.TopicName = new String(source.TopicName);
+        }
+        if (source.IpWhiteList != null) {
+            this.IpWhiteList = new String[source.IpWhiteList.length];
+            for (int i = 0; i < source.IpWhiteList.length; i++) {
+                this.IpWhiteList[i] = new String(source.IpWhiteList[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

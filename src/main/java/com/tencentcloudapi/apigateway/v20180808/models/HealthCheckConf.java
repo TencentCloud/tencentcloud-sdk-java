@@ -114,6 +114,29 @@ public class HealthCheckConf extends AbstractModel{
         this.ErrorThresholdPercentage = ErrorThresholdPercentage;
     }
 
+    public HealthCheckConf() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public HealthCheckConf(HealthCheckConf source) {
+        if (source.IsHealthCheck != null) {
+            this.IsHealthCheck = new Boolean(source.IsHealthCheck);
+        }
+        if (source.RequestVolumeThreshold != null) {
+            this.RequestVolumeThreshold = new Long(source.RequestVolumeThreshold);
+        }
+        if (source.SleepWindowInMilliseconds != null) {
+            this.SleepWindowInMilliseconds = new Long(source.SleepWindowInMilliseconds);
+        }
+        if (source.ErrorThresholdPercentage != null) {
+            this.ErrorThresholdPercentage = new Long(source.ErrorThresholdPercentage);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

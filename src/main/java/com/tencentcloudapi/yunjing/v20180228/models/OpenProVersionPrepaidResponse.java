@@ -68,6 +68,26 @@ public class OpenProVersionPrepaidResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public OpenProVersionPrepaidResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public OpenProVersionPrepaidResponse(OpenProVersionPrepaidResponse source) {
+        if (source.DealIds != null) {
+            this.DealIds = new String[source.DealIds.length];
+            for (int i = 0; i < source.DealIds.length; i++) {
+                this.DealIds[i] = new String(source.DealIds[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -203,6 +203,47 @@ public class SnapshotByTimeOffsetTaskInput extends AbstractModel{
         this.ObjectNumberFormat = ObjectNumberFormat;
     }
 
+    public SnapshotByTimeOffsetTaskInput() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SnapshotByTimeOffsetTaskInput(SnapshotByTimeOffsetTaskInput source) {
+        if (source.Definition != null) {
+            this.Definition = new Long(source.Definition);
+        }
+        if (source.ExtTimeOffsetSet != null) {
+            this.ExtTimeOffsetSet = new String[source.ExtTimeOffsetSet.length];
+            for (int i = 0; i < source.ExtTimeOffsetSet.length; i++) {
+                this.ExtTimeOffsetSet[i] = new String(source.ExtTimeOffsetSet[i]);
+            }
+        }
+        if (source.TimeOffsetSet != null) {
+            this.TimeOffsetSet = new Float[source.TimeOffsetSet.length];
+            for (int i = 0; i < source.TimeOffsetSet.length; i++) {
+                this.TimeOffsetSet[i] = new Float(source.TimeOffsetSet[i]);
+            }
+        }
+        if (source.WatermarkSet != null) {
+            this.WatermarkSet = new WatermarkInput[source.WatermarkSet.length];
+            for (int i = 0; i < source.WatermarkSet.length; i++) {
+                this.WatermarkSet[i] = new WatermarkInput(source.WatermarkSet[i]);
+            }
+        }
+        if (source.OutputStorage != null) {
+            this.OutputStorage = new TaskOutputStorage(source.OutputStorage);
+        }
+        if (source.OutputObjectPath != null) {
+            this.OutputObjectPath = new String(source.OutputObjectPath);
+        }
+        if (source.ObjectNumberFormat != null) {
+            this.ObjectNumberFormat = new NumberFormat(source.ObjectNumberFormat);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -160,6 +160,35 @@ public class AccountInfo extends AbstractModel{
         this.CreateTime = CreateTime;
     }
 
+    public AccountInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AccountInfo(AccountInfo source) {
+        if (source.Notes != null) {
+            this.Notes = new String(source.Notes);
+        }
+        if (source.Host != null) {
+            this.Host = new String(source.Host);
+        }
+        if (source.User != null) {
+            this.User = new String(source.User);
+        }
+        if (source.ModifyTime != null) {
+            this.ModifyTime = new String(source.ModifyTime);
+        }
+        if (source.ModifyPasswordTime != null) {
+            this.ModifyPasswordTime = new String(source.ModifyPasswordTime);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

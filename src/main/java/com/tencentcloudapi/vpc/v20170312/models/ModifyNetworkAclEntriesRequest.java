@@ -68,6 +68,23 @@ public class ModifyNetworkAclEntriesRequest extends AbstractModel{
         this.NetworkAclEntrySet = NetworkAclEntrySet;
     }
 
+    public ModifyNetworkAclEntriesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyNetworkAclEntriesRequest(ModifyNetworkAclEntriesRequest source) {
+        if (source.NetworkAclId != null) {
+            this.NetworkAclId = new String(source.NetworkAclId);
+        }
+        if (source.NetworkAclEntrySet != null) {
+            this.NetworkAclEntrySet = new NetworkAclEntrySet(source.NetworkAclEntrySet);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

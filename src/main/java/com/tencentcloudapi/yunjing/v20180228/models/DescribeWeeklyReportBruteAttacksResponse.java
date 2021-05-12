@@ -91,6 +91,29 @@ public class DescribeWeeklyReportBruteAttacksResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeWeeklyReportBruteAttacksResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeWeeklyReportBruteAttacksResponse(DescribeWeeklyReportBruteAttacksResponse source) {
+        if (source.WeeklyReportBruteAttacks != null) {
+            this.WeeklyReportBruteAttacks = new WeeklyReportBruteAttack[source.WeeklyReportBruteAttacks.length];
+            for (int i = 0; i < source.WeeklyReportBruteAttacks.length; i++) {
+                this.WeeklyReportBruteAttacks[i] = new WeeklyReportBruteAttack(source.WeeklyReportBruteAttacks[i]);
+            }
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

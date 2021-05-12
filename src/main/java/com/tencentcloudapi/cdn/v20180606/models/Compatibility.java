@@ -50,6 +50,20 @@ public class Compatibility extends AbstractModel{
         this.Code = Code;
     }
 
+    public Compatibility() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Compatibility(Compatibility source) {
+        if (source.Code != null) {
+            this.Code = new Long(source.Code);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

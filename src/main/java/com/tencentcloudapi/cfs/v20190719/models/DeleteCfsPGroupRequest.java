@@ -45,6 +45,20 @@ public class DeleteCfsPGroupRequest extends AbstractModel{
         this.PGroupId = PGroupId;
     }
 
+    public DeleteCfsPGroupRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteCfsPGroupRequest(DeleteCfsPGroupRequest source) {
+        if (source.PGroupId != null) {
+            this.PGroupId = new String(source.PGroupId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -68,6 +68,23 @@ public class ModifyDBInstanceNameRequest extends AbstractModel{
         this.InstanceName = InstanceName;
     }
 
+    public ModifyDBInstanceNameRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyDBInstanceNameRequest(ModifyDBInstanceNameRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.InstanceName != null) {
+            this.InstanceName = new String(source.InstanceName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

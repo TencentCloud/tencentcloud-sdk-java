@@ -183,6 +183,38 @@ public class DescribeConfigResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeConfigResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeConfigResponse(DescribeConfigResponse source) {
+        if (source.NoticeLevel != null) {
+            this.NoticeLevel = new String(source.NoticeLevel);
+        }
+        if (source.Id != null) {
+            this.Id = new Long(source.Id);
+        }
+        if (source.CreatedAt != null) {
+            this.CreatedAt = new String(source.CreatedAt);
+        }
+        if (source.UpdatedAt != null) {
+            this.UpdatedAt = new String(source.UpdatedAt);
+        }
+        if (source.Appid != null) {
+            this.Appid = new Long(source.Appid);
+        }
+        if (source.ContentLevel != null) {
+            this.ContentLevel = new Long(source.ContentLevel);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

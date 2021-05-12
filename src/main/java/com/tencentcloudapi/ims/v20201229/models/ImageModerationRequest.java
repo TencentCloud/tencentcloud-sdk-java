@@ -206,6 +206,41 @@ public class ImageModerationRequest extends AbstractModel{
         this.Device = Device;
     }
 
+    public ImageModerationRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ImageModerationRequest(ImageModerationRequest source) {
+        if (source.BizType != null) {
+            this.BizType = new String(source.BizType);
+        }
+        if (source.DataId != null) {
+            this.DataId = new String(source.DataId);
+        }
+        if (source.FileContent != null) {
+            this.FileContent = new String(source.FileContent);
+        }
+        if (source.FileUrl != null) {
+            this.FileUrl = new String(source.FileUrl);
+        }
+        if (source.Interval != null) {
+            this.Interval = new Long(source.Interval);
+        }
+        if (source.MaxFrames != null) {
+            this.MaxFrames = new Long(source.MaxFrames);
+        }
+        if (source.User != null) {
+            this.User = new User(source.User);
+        }
+        if (source.Device != null) {
+            this.Device = new Device(source.Device);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

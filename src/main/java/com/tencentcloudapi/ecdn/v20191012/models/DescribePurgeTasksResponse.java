@@ -91,6 +91,29 @@ public class DescribePurgeTasksResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribePurgeTasksResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribePurgeTasksResponse(DescribePurgeTasksResponse source) {
+        if (source.PurgeLogs != null) {
+            this.PurgeLogs = new PurgeTask[source.PurgeLogs.length];
+            for (int i = 0; i < source.PurgeLogs.length; i++) {
+                this.PurgeLogs[i] = new PurgeTask(source.PurgeLogs[i]);
+            }
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -68,6 +68,26 @@ public class ListJobsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public ListJobsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ListJobsResponse(ListJobsResponse source) {
+        if (source.Jobs != null) {
+            this.Jobs = new Job[source.Jobs.length];
+            for (int i = 0; i < source.Jobs.length; i++) {
+                this.Jobs[i] = new Job(source.Jobs[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

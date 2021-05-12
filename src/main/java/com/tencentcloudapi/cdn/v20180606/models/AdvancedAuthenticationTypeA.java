@@ -275,6 +275,53 @@ public class AdvancedAuthenticationTypeA extends AbstractModel{
         this.Transformation = Transformation;
     }
 
+    public AdvancedAuthenticationTypeA() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AdvancedAuthenticationTypeA(AdvancedAuthenticationTypeA source) {
+        if (source.SecretKey != null) {
+            this.SecretKey = new String(source.SecretKey);
+        }
+        if (source.SignParam != null) {
+            this.SignParam = new String(source.SignParam);
+        }
+        if (source.TimeParam != null) {
+            this.TimeParam = new String(source.TimeParam);
+        }
+        if (source.ExpireTime != null) {
+            this.ExpireTime = new Long(source.ExpireTime);
+        }
+        if (source.ExpireTimeRequired != null) {
+            this.ExpireTimeRequired = new Boolean(source.ExpireTimeRequired);
+        }
+        if (source.Format != null) {
+            this.Format = new String(source.Format);
+        }
+        if (source.TimeFormat != null) {
+            this.TimeFormat = new String(source.TimeFormat);
+        }
+        if (source.FailCode != null) {
+            this.FailCode = new Long(source.FailCode);
+        }
+        if (source.ExpireCode != null) {
+            this.ExpireCode = new Long(source.ExpireCode);
+        }
+        if (source.RulePaths != null) {
+            this.RulePaths = new String[source.RulePaths.length];
+            for (int i = 0; i < source.RulePaths.length; i++) {
+                this.RulePaths[i] = new String(source.RulePaths[i]);
+            }
+        }
+        if (source.Transformation != null) {
+            this.Transformation = new Long(source.Transformation);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

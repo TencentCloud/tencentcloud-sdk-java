@@ -211,6 +211,47 @@ public class SendSmsRequest extends AbstractModel{
         this.SenderId = SenderId;
     }
 
+    public SendSmsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SendSmsRequest(SendSmsRequest source) {
+        if (source.PhoneNumberSet != null) {
+            this.PhoneNumberSet = new String[source.PhoneNumberSet.length];
+            for (int i = 0; i < source.PhoneNumberSet.length; i++) {
+                this.PhoneNumberSet[i] = new String(source.PhoneNumberSet[i]);
+            }
+        }
+        if (source.TemplateID != null) {
+            this.TemplateID = new String(source.TemplateID);
+        }
+        if (source.SmsSdkAppid != null) {
+            this.SmsSdkAppid = new String(source.SmsSdkAppid);
+        }
+        if (source.Sign != null) {
+            this.Sign = new String(source.Sign);
+        }
+        if (source.TemplateParamSet != null) {
+            this.TemplateParamSet = new String[source.TemplateParamSet.length];
+            for (int i = 0; i < source.TemplateParamSet.length; i++) {
+                this.TemplateParamSet[i] = new String(source.TemplateParamSet[i]);
+            }
+        }
+        if (source.ExtendCode != null) {
+            this.ExtendCode = new String(source.ExtendCode);
+        }
+        if (source.SessionContext != null) {
+            this.SessionContext = new String(source.SessionContext);
+        }
+        if (source.SenderId != null) {
+            this.SenderId = new String(source.SenderId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -91,6 +91,29 @@ public class DeregisterIpsRequest extends AbstractModel{
         this.SubnetId = SubnetId;
     }
 
+    public DeregisterIpsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeregisterIpsRequest(DeregisterIpsRequest source) {
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.IpSet != null) {
+            this.IpSet = new String[source.IpSet.length];
+            for (int i = 0; i < source.IpSet.length; i++) {
+                this.IpSet[i] = new String(source.IpSet[i]);
+            }
+        }
+        if (source.SubnetId != null) {
+            this.SubnetId = new String(source.SubnetId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

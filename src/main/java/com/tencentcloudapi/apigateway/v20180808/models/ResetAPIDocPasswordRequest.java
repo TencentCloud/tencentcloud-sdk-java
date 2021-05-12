@@ -45,6 +45,20 @@ public class ResetAPIDocPasswordRequest extends AbstractModel{
         this.ApiDocId = ApiDocId;
     }
 
+    public ResetAPIDocPasswordRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ResetAPIDocPasswordRequest(ResetAPIDocPasswordRequest source) {
+        if (source.ApiDocId != null) {
+            this.ApiDocId = new String(source.ApiDocId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

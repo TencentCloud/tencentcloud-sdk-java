@@ -206,6 +206,44 @@ public class GetAsrVocabResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public GetAsrVocabResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GetAsrVocabResponse(GetAsrVocabResponse source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.VocabId != null) {
+            this.VocabId = new String(source.VocabId);
+        }
+        if (source.WordWeights != null) {
+            this.WordWeights = new HotWord[source.WordWeights.length];
+            for (int i = 0; i < source.WordWeights.length; i++) {
+                this.WordWeights[i] = new HotWord(source.WordWeights[i]);
+            }
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new String(source.UpdateTime);
+        }
+        if (source.State != null) {
+            this.State = new Long(source.State);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

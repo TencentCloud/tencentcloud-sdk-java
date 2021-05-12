@@ -68,6 +68,23 @@ public class CreateClusterNodePoolFromExistingAsgRequest extends AbstractModel{
         this.AutoscalingGroupId = AutoscalingGroupId;
     }
 
+    public CreateClusterNodePoolFromExistingAsgRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateClusterNodePoolFromExistingAsgRequest(CreateClusterNodePoolFromExistingAsgRequest source) {
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
+        if (source.AutoscalingGroupId != null) {
+            this.AutoscalingGroupId = new String(source.AutoscalingGroupId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

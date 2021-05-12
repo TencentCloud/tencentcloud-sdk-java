@@ -91,6 +91,29 @@ public class RepoInfoResp extends AbstractModel{
         this.Server = Server;
     }
 
+    public RepoInfoResp() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RepoInfoResp(RepoInfoResp source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.RepoInfo != null) {
+            this.RepoInfo = new RepoInfo[source.RepoInfo.length];
+            for (int i = 0; i < source.RepoInfo.length; i++) {
+                this.RepoInfo[i] = new RepoInfo(source.RepoInfo[i]);
+            }
+        }
+        if (source.Server != null) {
+            this.Server = new String(source.Server);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

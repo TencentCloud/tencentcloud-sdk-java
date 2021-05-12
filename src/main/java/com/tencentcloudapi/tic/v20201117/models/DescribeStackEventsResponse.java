@@ -91,6 +91,29 @@ public class DescribeStackEventsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeStackEventsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeStackEventsResponse(DescribeStackEventsResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.Events != null) {
+            this.Events = new EventInfo[source.Events.length];
+            for (int i = 0; i < source.Events.length; i++) {
+                this.Events[i] = new EventInfo(source.Events[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

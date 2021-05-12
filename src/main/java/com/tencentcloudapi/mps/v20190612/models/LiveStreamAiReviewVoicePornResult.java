@@ -157,6 +157,32 @@ public class LiveStreamAiReviewVoicePornResult extends AbstractModel{
         this.Label = Label;
     }
 
+    public LiveStreamAiReviewVoicePornResult() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public LiveStreamAiReviewVoicePornResult(LiveStreamAiReviewVoicePornResult source) {
+        if (source.StartPtsTime != null) {
+            this.StartPtsTime = new Float(source.StartPtsTime);
+        }
+        if (source.EndPtsTime != null) {
+            this.EndPtsTime = new Float(source.EndPtsTime);
+        }
+        if (source.Confidence != null) {
+            this.Confidence = new Float(source.Confidence);
+        }
+        if (source.Suggestion != null) {
+            this.Suggestion = new String(source.Suggestion);
+        }
+        if (source.Label != null) {
+            this.Label = new String(source.Label);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

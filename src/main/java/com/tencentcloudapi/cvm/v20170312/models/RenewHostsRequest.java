@@ -68,6 +68,26 @@ public class RenewHostsRequest extends AbstractModel{
         this.HostChargePrepaid = HostChargePrepaid;
     }
 
+    public RenewHostsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RenewHostsRequest(RenewHostsRequest source) {
+        if (source.HostIds != null) {
+            this.HostIds = new String[source.HostIds.length];
+            for (int i = 0; i < source.HostIds.length; i++) {
+                this.HostIds[i] = new String(source.HostIds[i]);
+            }
+        }
+        if (source.HostChargePrepaid != null) {
+            this.HostChargePrepaid = new ChargePrepaid(source.HostChargePrepaid);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

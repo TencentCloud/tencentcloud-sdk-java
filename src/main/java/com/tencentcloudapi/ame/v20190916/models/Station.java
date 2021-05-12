@@ -157,6 +157,35 @@ public class Station extends AbstractModel{
         this.ImagePathMap = ImagePathMap;
     }
 
+    public Station() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Station(Station source) {
+        if (source.CategoryID != null) {
+            this.CategoryID = new String(source.CategoryID);
+        }
+        if (source.CategoryCode != null) {
+            this.CategoryCode = new String(source.CategoryCode);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Rank != null) {
+            this.Rank = new Long(source.Rank);
+        }
+        if (source.ImagePathMap != null) {
+            this.ImagePathMap = new ImagePath[source.ImagePathMap.length];
+            for (int i = 0; i < source.ImagePathMap.length; i++) {
+                this.ImagePathMap[i] = new ImagePath(source.ImagePathMap[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

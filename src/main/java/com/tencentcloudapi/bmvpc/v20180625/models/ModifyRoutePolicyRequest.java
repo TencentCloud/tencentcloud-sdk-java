@@ -68,6 +68,23 @@ public class ModifyRoutePolicyRequest extends AbstractModel{
         this.RoutePolicy = RoutePolicy;
     }
 
+    public ModifyRoutePolicyRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyRoutePolicyRequest(ModifyRoutePolicyRequest source) {
+        if (source.RouteTableId != null) {
+            this.RouteTableId = new String(source.RouteTableId);
+        }
+        if (source.RoutePolicy != null) {
+            this.RoutePolicy = new RoutePolicy(source.RoutePolicy);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

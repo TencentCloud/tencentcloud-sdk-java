@@ -68,6 +68,23 @@ public class SetTrafficMirrorAliasRequest extends AbstractModel{
         this.Alias = Alias;
     }
 
+    public SetTrafficMirrorAliasRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SetTrafficMirrorAliasRequest(SetTrafficMirrorAliasRequest source) {
+        if (source.TrafficMirrorId != null) {
+            this.TrafficMirrorId = new String(source.TrafficMirrorId);
+        }
+        if (source.Alias != null) {
+            this.Alias = new String(source.Alias);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

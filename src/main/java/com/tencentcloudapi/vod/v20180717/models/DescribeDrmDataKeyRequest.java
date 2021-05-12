@@ -45,6 +45,23 @@ public class DescribeDrmDataKeyRequest extends AbstractModel{
         this.EdkList = EdkList;
     }
 
+    public DescribeDrmDataKeyRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeDrmDataKeyRequest(DescribeDrmDataKeyRequest source) {
+        if (source.EdkList != null) {
+            this.EdkList = new String[source.EdkList.length];
+            for (int i = 0; i < source.EdkList.length; i++) {
+                this.EdkList[i] = new String(source.EdkList[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

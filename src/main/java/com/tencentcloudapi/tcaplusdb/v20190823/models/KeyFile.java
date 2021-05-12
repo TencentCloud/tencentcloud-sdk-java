@@ -114,6 +114,29 @@ public class KeyFile extends AbstractModel{
         this.FileSize = FileSize;
     }
 
+    public KeyFile() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public KeyFile(KeyFile source) {
+        if (source.FileName != null) {
+            this.FileName = new String(source.FileName);
+        }
+        if (source.FileExtType != null) {
+            this.FileExtType = new String(source.FileExtType);
+        }
+        if (source.FileContent != null) {
+            this.FileContent = new String(source.FileContent);
+        }
+        if (source.FileSize != null) {
+            this.FileSize = new Long(source.FileSize);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

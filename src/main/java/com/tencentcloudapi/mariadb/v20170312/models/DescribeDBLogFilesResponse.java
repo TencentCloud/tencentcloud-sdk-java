@@ -183,6 +183,41 @@ public class DescribeDBLogFilesResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeDBLogFilesResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeDBLogFilesResponse(DescribeDBLogFilesResponse source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.Type != null) {
+            this.Type = new Long(source.Type);
+        }
+        if (source.Total != null) {
+            this.Total = new Long(source.Total);
+        }
+        if (source.Files != null) {
+            this.Files = new LogFileInfo[source.Files.length];
+            for (int i = 0; i < source.Files.length; i++) {
+                this.Files[i] = new LogFileInfo(source.Files[i]);
+            }
+        }
+        if (source.VpcPrefix != null) {
+            this.VpcPrefix = new String(source.VpcPrefix);
+        }
+        if (source.NormalPrefix != null) {
+            this.NormalPrefix = new String(source.NormalPrefix);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

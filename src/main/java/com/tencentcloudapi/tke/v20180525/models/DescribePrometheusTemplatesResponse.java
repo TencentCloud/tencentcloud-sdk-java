@@ -91,6 +91,29 @@ public class DescribePrometheusTemplatesResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribePrometheusTemplatesResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribePrometheusTemplatesResponse(DescribePrometheusTemplatesResponse source) {
+        if (source.Templates != null) {
+            this.Templates = new PrometheusTemplate[source.Templates.length];
+            for (int i = 0; i < source.Templates.length; i++) {
+                this.Templates[i] = new PrometheusTemplate(source.Templates[i]);
+            }
+        }
+        if (source.Total != null) {
+            this.Total = new Long(source.Total);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

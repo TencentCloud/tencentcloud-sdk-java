@@ -68,6 +68,23 @@ public class TendisNodes extends AbstractModel{
         this.NodeRole = NodeRole;
     }
 
+    public TendisNodes() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TendisNodes(TendisNodes source) {
+        if (source.NodeId != null) {
+            this.NodeId = new String(source.NodeId);
+        }
+        if (source.NodeRole != null) {
+            this.NodeRole = new String(source.NodeRole);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -170,6 +170,41 @@ public class ModifySubscriptionAttributeRequest extends AbstractModel{
         this.BindingKey = BindingKey;
     }
 
+    public ModifySubscriptionAttributeRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifySubscriptionAttributeRequest(ModifySubscriptionAttributeRequest source) {
+        if (source.TopicName != null) {
+            this.TopicName = new String(source.TopicName);
+        }
+        if (source.SubscriptionName != null) {
+            this.SubscriptionName = new String(source.SubscriptionName);
+        }
+        if (source.NotifyStrategy != null) {
+            this.NotifyStrategy = new String(source.NotifyStrategy);
+        }
+        if (source.NotifyContentFormat != null) {
+            this.NotifyContentFormat = new String(source.NotifyContentFormat);
+        }
+        if (source.FilterTags != null) {
+            this.FilterTags = new String[source.FilterTags.length];
+            for (int i = 0; i < source.FilterTags.length; i++) {
+                this.FilterTags[i] = new String(source.FilterTags[i]);
+            }
+        }
+        if (source.BindingKey != null) {
+            this.BindingKey = new String[source.BindingKey.length];
+            for (int i = 0; i < source.BindingKey.length; i++) {
+                this.BindingKey[i] = new String(source.BindingKey[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

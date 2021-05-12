@@ -326,6 +326,56 @@ public class RuleInput extends AbstractModel{
         this.Quic = Quic;
     }
 
+    public RuleInput() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RuleInput(RuleInput source) {
+        if (source.Domain != null) {
+            this.Domain = new String(source.Domain);
+        }
+        if (source.Url != null) {
+            this.Url = new String(source.Url);
+        }
+        if (source.SessionExpireTime != null) {
+            this.SessionExpireTime = new Long(source.SessionExpireTime);
+        }
+        if (source.HealthCheck != null) {
+            this.HealthCheck = new HealthCheck(source.HealthCheck);
+        }
+        if (source.Certificate != null) {
+            this.Certificate = new CertificateInput(source.Certificate);
+        }
+        if (source.Scheduler != null) {
+            this.Scheduler = new String(source.Scheduler);
+        }
+        if (source.ForwardType != null) {
+            this.ForwardType = new String(source.ForwardType);
+        }
+        if (source.DefaultServer != null) {
+            this.DefaultServer = new Boolean(source.DefaultServer);
+        }
+        if (source.Http2 != null) {
+            this.Http2 = new Boolean(source.Http2);
+        }
+        if (source.TargetType != null) {
+            this.TargetType = new String(source.TargetType);
+        }
+        if (source.TrpcCallee != null) {
+            this.TrpcCallee = new String(source.TrpcCallee);
+        }
+        if (source.TrpcFunc != null) {
+            this.TrpcFunc = new String(source.TrpcFunc);
+        }
+        if (source.Quic != null) {
+            this.Quic = new Boolean(source.Quic);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

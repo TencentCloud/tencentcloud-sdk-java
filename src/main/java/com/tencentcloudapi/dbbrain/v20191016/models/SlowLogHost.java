@@ -91,6 +91,26 @@ public class SlowLogHost extends AbstractModel{
         this.Count = Count;
     }
 
+    public SlowLogHost() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SlowLogHost(SlowLogHost source) {
+        if (source.UserHost != null) {
+            this.UserHost = new String(source.UserHost);
+        }
+        if (source.Ratio != null) {
+            this.Ratio = new Float(source.Ratio);
+        }
+        if (source.Count != null) {
+            this.Count = new Long(source.Count);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

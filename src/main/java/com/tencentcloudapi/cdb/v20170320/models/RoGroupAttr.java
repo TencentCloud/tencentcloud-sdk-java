@@ -137,6 +137,32 @@ public class RoGroupAttr extends AbstractModel{
         this.WeightMode = WeightMode;
     }
 
+    public RoGroupAttr() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RoGroupAttr(RoGroupAttr source) {
+        if (source.RoGroupName != null) {
+            this.RoGroupName = new String(source.RoGroupName);
+        }
+        if (source.RoMaxDelayTime != null) {
+            this.RoMaxDelayTime = new Long(source.RoMaxDelayTime);
+        }
+        if (source.RoOfflineDelay != null) {
+            this.RoOfflineDelay = new Long(source.RoOfflineDelay);
+        }
+        if (source.MinRoInGroup != null) {
+            this.MinRoInGroup = new Long(source.MinRoInGroup);
+        }
+        if (source.WeightMode != null) {
+            this.WeightMode = new String(source.WeightMode);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

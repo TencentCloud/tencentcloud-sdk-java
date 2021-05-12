@@ -287,6 +287,47 @@ public class InquiryPriceScaleOutInstanceRequest extends AbstractModel{
         this.MasterCount = MasterCount;
     }
 
+    public InquiryPriceScaleOutInstanceRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public InquiryPriceScaleOutInstanceRequest(InquiryPriceScaleOutInstanceRequest source) {
+        if (source.TimeUnit != null) {
+            this.TimeUnit = new String(source.TimeUnit);
+        }
+        if (source.TimeSpan != null) {
+            this.TimeSpan = new Long(source.TimeSpan);
+        }
+        if (source.ZoneId != null) {
+            this.ZoneId = new Long(source.ZoneId);
+        }
+        if (source.PayMode != null) {
+            this.PayMode = new Long(source.PayMode);
+        }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.CoreCount != null) {
+            this.CoreCount = new Long(source.CoreCount);
+        }
+        if (source.TaskCount != null) {
+            this.TaskCount = new Long(source.TaskCount);
+        }
+        if (source.Currency != null) {
+            this.Currency = new String(source.Currency);
+        }
+        if (source.RouterCount != null) {
+            this.RouterCount = new Long(source.RouterCount);
+        }
+        if (source.MasterCount != null) {
+            this.MasterCount = new Long(source.MasterCount);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

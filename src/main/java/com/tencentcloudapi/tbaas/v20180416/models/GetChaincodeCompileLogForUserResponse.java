@@ -91,6 +91,29 @@ public class GetChaincodeCompileLogForUserResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public GetChaincodeCompileLogForUserResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GetChaincodeCompileLogForUserResponse(GetChaincodeCompileLogForUserResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.CompileLogList != null) {
+            this.CompileLogList = new LogDetailForUser[source.CompileLogList.length];
+            for (int i = 0; i < source.CompileLogList.length; i++) {
+                this.CompileLogList[i] = new LogDetailForUser(source.CompileLogList[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

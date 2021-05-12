@@ -390,6 +390,65 @@ public class PassportOCRResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public PassportOCRResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PassportOCRResponse(PassportOCRResponse source) {
+        if (source.Country != null) {
+            this.Country = new String(source.Country);
+        }
+        if (source.PassportNo != null) {
+            this.PassportNo = new String(source.PassportNo);
+        }
+        if (source.Sex != null) {
+            this.Sex = new String(source.Sex);
+        }
+        if (source.Nationality != null) {
+            this.Nationality = new String(source.Nationality);
+        }
+        if (source.BirthDate != null) {
+            this.BirthDate = new String(source.BirthDate);
+        }
+        if (source.BirthPlace != null) {
+            this.BirthPlace = new String(source.BirthPlace);
+        }
+        if (source.IssueDate != null) {
+            this.IssueDate = new String(source.IssueDate);
+        }
+        if (source.IssuePlace != null) {
+            this.IssuePlace = new String(source.IssuePlace);
+        }
+        if (source.ExpiryDate != null) {
+            this.ExpiryDate = new String(source.ExpiryDate);
+        }
+        if (source.Signature != null) {
+            this.Signature = new String(source.Signature);
+        }
+        if (source.CodeSet != null) {
+            this.CodeSet = new String(source.CodeSet);
+        }
+        if (source.CodeCrc != null) {
+            this.CodeCrc = new String(source.CodeCrc);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.FamilyName != null) {
+            this.FamilyName = new String(source.FamilyName);
+        }
+        if (source.FirstName != null) {
+            this.FirstName = new String(source.FirstName);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

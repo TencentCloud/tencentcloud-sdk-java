@@ -68,6 +68,23 @@ public class DescribeDeviceMonitorInfoRequest extends AbstractModel{
         this.Count = Count;
     }
 
+    public DescribeDeviceMonitorInfoRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeDeviceMonitorInfoRequest(DescribeDeviceMonitorInfoRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.Count != null) {
+            this.Count = new Long(source.Count);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

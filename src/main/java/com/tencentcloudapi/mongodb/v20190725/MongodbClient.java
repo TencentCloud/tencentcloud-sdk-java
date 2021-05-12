@@ -302,6 +302,26 @@ public class MongodbClient extends AbstractClient{
     }
 
     /**
+     *查询实例绑定的安全组
+     * @param req DescribeSecurityGroupRequest
+     * @return DescribeSecurityGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSecurityGroupResponse DescribeSecurityGroup(DescribeSecurityGroupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeSecurityGroupResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeSecurityGroupResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeSecurityGroup");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（DescribeSlowLogPatterns）用于获取数据库实例慢日志的统计信息。
      * @param req DescribeSlowLogPatternsRequest
      * @return DescribeSlowLogPatternsResponse

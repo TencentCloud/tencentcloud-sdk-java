@@ -114,6 +114,29 @@ public class CreateAppUsrResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public CreateAppUsrResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateAppUsrResponse(CreateAppUsrResponse source) {
+        if (source.CunionId != null) {
+            this.CunionId = new String(source.CunionId);
+        }
+        if (source.AccessId != null) {
+            this.AccessId = new String(source.AccessId);
+        }
+        if (source.NewRegist != null) {
+            this.NewRegist = new Boolean(source.NewRegist);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -91,6 +91,26 @@ public class CreateBasicDDoSAlarmThresholdResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public CreateBasicDDoSAlarmThresholdResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateBasicDDoSAlarmThresholdResponse(CreateBasicDDoSAlarmThresholdResponse source) {
+        if (source.AlarmThreshold != null) {
+            this.AlarmThreshold = new Long(source.AlarmThreshold);
+        }
+        if (source.AlarmType != null) {
+            this.AlarmType = new Long(source.AlarmType);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

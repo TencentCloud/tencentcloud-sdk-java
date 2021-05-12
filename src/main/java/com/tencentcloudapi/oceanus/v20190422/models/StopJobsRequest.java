@@ -45,6 +45,23 @@ public class StopJobsRequest extends AbstractModel{
         this.StopJobDescriptions = StopJobDescriptions;
     }
 
+    public StopJobsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public StopJobsRequest(StopJobsRequest source) {
+        if (source.StopJobDescriptions != null) {
+            this.StopJobDescriptions = new StopJobDescription[source.StopJobDescriptions.length];
+            for (int i = 0; i < source.StopJobDescriptions.length; i++) {
+                this.StopJobDescriptions[i] = new StopJobDescription(source.StopJobDescriptions[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

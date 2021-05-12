@@ -238,6 +238,38 @@ overseas：中国境外
         this.Project = Project;
     }
 
+    public DescribeReportDataRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeReportDataRequest(DescribeReportDataRequest source) {
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+        if (source.ReportType != null) {
+            this.ReportType = new String(source.ReportType);
+        }
+        if (source.Area != null) {
+            this.Area = new String(source.Area);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.Project != null) {
+            this.Project = new Long(source.Project);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

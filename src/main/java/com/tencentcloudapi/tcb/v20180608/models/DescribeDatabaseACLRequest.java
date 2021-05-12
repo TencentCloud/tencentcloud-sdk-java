@@ -68,6 +68,23 @@ public class DescribeDatabaseACLRequest extends AbstractModel{
         this.CollectionName = CollectionName;
     }
 
+    public DescribeDatabaseACLRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeDatabaseACLRequest(DescribeDatabaseACLRequest source) {
+        if (source.EnvId != null) {
+            this.EnvId = new String(source.EnvId);
+        }
+        if (source.CollectionName != null) {
+            this.CollectionName = new String(source.CollectionName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

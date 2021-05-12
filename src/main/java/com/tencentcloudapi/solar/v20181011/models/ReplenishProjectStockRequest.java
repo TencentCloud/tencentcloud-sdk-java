@@ -137,6 +137,32 @@ public class ReplenishProjectStockRequest extends AbstractModel{
         this.PoolName = PoolName;
     }
 
+    public ReplenishProjectStockRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ReplenishProjectStockRequest(ReplenishProjectStockRequest source) {
+        if (source.SubProjectId != null) {
+            this.SubProjectId = new String(source.SubProjectId);
+        }
+        if (source.PrizeId != null) {
+            this.PrizeId = new String(source.PrizeId);
+        }
+        if (source.PrizeNum != null) {
+            this.PrizeNum = new Long(source.PrizeNum);
+        }
+        if (source.PoolIndex != null) {
+            this.PoolIndex = new Long(source.PoolIndex);
+        }
+        if (source.PoolName != null) {
+            this.PoolName = new String(source.PoolName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

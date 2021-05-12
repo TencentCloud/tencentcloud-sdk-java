@@ -160,6 +160,35 @@ public class ServerDetailInfo extends AbstractModel{
         this.WriteNum = WriteNum;
     }
 
+    public ServerDetailInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ServerDetailInfo(ServerDetailInfo source) {
+        if (source.ServerUid != null) {
+            this.ServerUid = new String(source.ServerUid);
+        }
+        if (source.MachineType != null) {
+            this.MachineType = new String(source.MachineType);
+        }
+        if (source.MemoryRate != null) {
+            this.MemoryRate = new Long(source.MemoryRate);
+        }
+        if (source.DiskRate != null) {
+            this.DiskRate = new Long(source.DiskRate);
+        }
+        if (source.ReadNum != null) {
+            this.ReadNum = new Long(source.ReadNum);
+        }
+        if (source.WriteNum != null) {
+            this.WriteNum = new Long(source.WriteNum);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

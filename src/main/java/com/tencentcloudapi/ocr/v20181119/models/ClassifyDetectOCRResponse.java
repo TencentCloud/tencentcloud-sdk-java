@@ -68,6 +68,26 @@ public class ClassifyDetectOCRResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public ClassifyDetectOCRResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ClassifyDetectOCRResponse(ClassifyDetectOCRResponse source) {
+        if (source.ClassifyDetectInfos != null) {
+            this.ClassifyDetectInfos = new ClassifyDetectInfo[source.ClassifyDetectInfos.length];
+            for (int i = 0; i < source.ClassifyDetectInfos.length; i++) {
+                this.ClassifyDetectInfos[i] = new ClassifyDetectInfo(source.ClassifyDetectInfos[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

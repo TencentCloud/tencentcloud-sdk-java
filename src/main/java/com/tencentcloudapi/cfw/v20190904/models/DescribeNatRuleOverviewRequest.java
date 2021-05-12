@@ -143,6 +143,23 @@ public class DescribeNatRuleOverviewRequest extends AbstractModel{
         this.Area = Area;
     }
 
+    public DescribeNatRuleOverviewRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeNatRuleOverviewRequest(DescribeNatRuleOverviewRequest source) {
+        if (source.Direction != null) {
+            this.Direction = new Long(source.Direction);
+        }
+        if (source.Area != null) {
+            this.Area = new String(source.Area);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

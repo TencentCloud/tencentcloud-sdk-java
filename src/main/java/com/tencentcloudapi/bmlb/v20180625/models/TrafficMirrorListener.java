@@ -436,6 +436,77 @@ public class TrafficMirrorListener extends AbstractModel{
         this.IpProtocolType = IpProtocolType;
     }
 
+    public TrafficMirrorListener() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TrafficMirrorListener(TrafficMirrorListener source) {
+        if (source.ListenerId != null) {
+            this.ListenerId = new String(source.ListenerId);
+        }
+        if (source.ListenerName != null) {
+            this.ListenerName = new String(source.ListenerName);
+        }
+        if (source.Protocol != null) {
+            this.Protocol = new String(source.Protocol);
+        }
+        if (source.LoadBalancerPort != null) {
+            this.LoadBalancerPort = new Long(source.LoadBalancerPort);
+        }
+        if (source.Bandwidth != null) {
+            this.Bandwidth = new Long(source.Bandwidth);
+        }
+        if (source.MaxBandwidth != null) {
+            this.MaxBandwidth = new Long(source.MaxBandwidth);
+        }
+        if (source.ListenerType != null) {
+            this.ListenerType = new String(source.ListenerType);
+        }
+        if (source.SslMode != null) {
+            this.SslMode = new Long(source.SslMode);
+        }
+        if (source.CertId != null) {
+            this.CertId = new String(source.CertId);
+        }
+        if (source.CertCaId != null) {
+            this.CertCaId = new String(source.CertCaId);
+        }
+        if (source.AddTimestamp != null) {
+            this.AddTimestamp = new String(source.AddTimestamp);
+        }
+        if (source.LoadBalancerId != null) {
+            this.LoadBalancerId = new String(source.LoadBalancerId);
+        }
+        if (source.VpcName != null) {
+            this.VpcName = new String(source.VpcName);
+        }
+        if (source.VpcCidrBlock != null) {
+            this.VpcCidrBlock = new String(source.VpcCidrBlock);
+        }
+        if (source.LoadBalancerVips != null) {
+            this.LoadBalancerVips = new String[source.LoadBalancerVips.length];
+            for (int i = 0; i < source.LoadBalancerVips.length; i++) {
+                this.LoadBalancerVips[i] = new String(source.LoadBalancerVips[i]);
+            }
+        }
+        if (source.LoadBalancerName != null) {
+            this.LoadBalancerName = new String(source.LoadBalancerName);
+        }
+        if (source.LoadBalancerVipv6s != null) {
+            this.LoadBalancerVipv6s = new String[source.LoadBalancerVipv6s.length];
+            for (int i = 0; i < source.LoadBalancerVipv6s.length; i++) {
+                this.LoadBalancerVipv6s[i] = new String(source.LoadBalancerVipv6s[i]);
+            }
+        }
+        if (source.IpProtocolType != null) {
+            this.IpProtocolType = new String(source.IpProtocolType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

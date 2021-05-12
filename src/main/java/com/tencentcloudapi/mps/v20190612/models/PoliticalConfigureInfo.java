@@ -91,6 +91,26 @@ public class PoliticalConfigureInfo extends AbstractModel{
         this.OcrReviewInfo = OcrReviewInfo;
     }
 
+    public PoliticalConfigureInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PoliticalConfigureInfo(PoliticalConfigureInfo source) {
+        if (source.ImgReviewInfo != null) {
+            this.ImgReviewInfo = new PoliticalImgReviewTemplateInfo(source.ImgReviewInfo);
+        }
+        if (source.AsrReviewInfo != null) {
+            this.AsrReviewInfo = new PoliticalAsrReviewTemplateInfo(source.AsrReviewInfo);
+        }
+        if (source.OcrReviewInfo != null) {
+            this.OcrReviewInfo = new PoliticalOcrReviewTemplateInfo(source.OcrReviewInfo);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

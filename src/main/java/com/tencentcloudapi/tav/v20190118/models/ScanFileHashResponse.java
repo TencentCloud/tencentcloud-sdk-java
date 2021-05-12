@@ -124,6 +124,29 @@ virus_state文状件态：0文件不存在、1白、2黑、3未知、4感染性�
         this.RequestId = RequestId;
     }
 
+    public ScanFileHashResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ScanFileHashResponse(ScanFileHashResponse source) {
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.Info != null) {
+            this.Info = new String(source.Info);
+        }
+        if (source.Data != null) {
+            this.Data = new String(source.Data);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

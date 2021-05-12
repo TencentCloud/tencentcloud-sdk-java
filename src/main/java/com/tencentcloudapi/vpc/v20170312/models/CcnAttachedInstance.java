@@ -358,6 +358,56 @@ public class CcnAttachedInstance extends AbstractModel{
         this.Description = Description;
     }
 
+    public CcnAttachedInstance() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CcnAttachedInstance(CcnAttachedInstance source) {
+        if (source.CcnId != null) {
+            this.CcnId = new String(source.CcnId);
+        }
+        if (source.InstanceType != null) {
+            this.InstanceType = new String(source.InstanceType);
+        }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.InstanceName != null) {
+            this.InstanceName = new String(source.InstanceName);
+        }
+        if (source.InstanceRegion != null) {
+            this.InstanceRegion = new String(source.InstanceRegion);
+        }
+        if (source.InstanceUin != null) {
+            this.InstanceUin = new String(source.InstanceUin);
+        }
+        if (source.CidrBlock != null) {
+            this.CidrBlock = new String[source.CidrBlock.length];
+            for (int i = 0; i < source.CidrBlock.length; i++) {
+                this.CidrBlock[i] = new String(source.CidrBlock[i]);
+            }
+        }
+        if (source.State != null) {
+            this.State = new String(source.State);
+        }
+        if (source.AttachedTime != null) {
+            this.AttachedTime = new String(source.AttachedTime);
+        }
+        if (source.CcnUin != null) {
+            this.CcnUin = new String(source.CcnUin);
+        }
+        if (source.InstanceArea != null) {
+            this.InstanceArea = new String(source.InstanceArea);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

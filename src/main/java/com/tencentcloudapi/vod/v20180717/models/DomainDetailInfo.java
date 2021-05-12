@@ -223,6 +223,41 @@ public class DomainDetailInfo extends AbstractModel{
         this.CreateTime = CreateTime;
     }
 
+    public DomainDetailInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DomainDetailInfo(DomainDetailInfo source) {
+        if (source.Domain != null) {
+            this.Domain = new String(source.Domain);
+        }
+        if (source.AccelerateAreaInfos != null) {
+            this.AccelerateAreaInfos = new AccelerateAreaInfo[source.AccelerateAreaInfos.length];
+            for (int i = 0; i < source.AccelerateAreaInfos.length; i++) {
+                this.AccelerateAreaInfos[i] = new AccelerateAreaInfo(source.AccelerateAreaInfos[i]);
+            }
+        }
+        if (source.DeployStatus != null) {
+            this.DeployStatus = new String(source.DeployStatus);
+        }
+        if (source.HTTPSConfig != null) {
+            this.HTTPSConfig = new DomainHTTPSConfig(source.HTTPSConfig);
+        }
+        if (source.UrlSignatureAuthPolicy != null) {
+            this.UrlSignatureAuthPolicy = new UrlSignatureAuthPolicy(source.UrlSignatureAuthPolicy);
+        }
+        if (source.RefererAuthPolicy != null) {
+            this.RefererAuthPolicy = new RefererAuthPolicy(source.RefererAuthPolicy);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -184,6 +184,29 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
         this.AttributesOptions = AttributesOptions;
     }
 
+    public DetectBodyRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DetectBodyRequest(DetectBodyRequest source) {
+        if (source.Image != null) {
+            this.Image = new String(source.Image);
+        }
+        if (source.MaxBodyNum != null) {
+            this.MaxBodyNum = new Long(source.MaxBodyNum);
+        }
+        if (source.Url != null) {
+            this.Url = new String(source.Url);
+        }
+        if (source.AttributesOptions != null) {
+            this.AttributesOptions = new AttributesOptions(source.AttributesOptions);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

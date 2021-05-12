@@ -91,6 +91,29 @@ public class ModifySubscribeObjectsRequest extends AbstractModel{
         this.Objects = Objects;
     }
 
+    public ModifySubscribeObjectsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifySubscribeObjectsRequest(ModifySubscribeObjectsRequest source) {
+        if (source.SubscribeId != null) {
+            this.SubscribeId = new String(source.SubscribeId);
+        }
+        if (source.SubscribeObjectType != null) {
+            this.SubscribeObjectType = new Long(source.SubscribeObjectType);
+        }
+        if (source.Objects != null) {
+            this.Objects = new SubscribeObject[source.Objects.length];
+            for (int i = 0; i < source.Objects.length; i++) {
+                this.Objects[i] = new SubscribeObject(source.Objects[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

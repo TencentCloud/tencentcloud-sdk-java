@@ -68,6 +68,23 @@ public class Credentials extends AbstractModel{
         this.UserName = UserName;
     }
 
+    public Credentials() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Credentials(Credentials source) {
+        if (source.Secret != null) {
+            this.Secret = new String(source.Secret);
+        }
+        if (source.UserName != null) {
+            this.UserName = new String(source.UserName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

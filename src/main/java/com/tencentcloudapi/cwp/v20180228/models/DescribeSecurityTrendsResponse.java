@@ -275,6 +275,80 @@ public class DescribeSecurityTrendsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeSecurityTrendsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeSecurityTrendsResponse(DescribeSecurityTrendsResponse source) {
+        if (source.Malwares != null) {
+            this.Malwares = new SecurityTrend[source.Malwares.length];
+            for (int i = 0; i < source.Malwares.length; i++) {
+                this.Malwares[i] = new SecurityTrend(source.Malwares[i]);
+            }
+        }
+        if (source.NonLocalLoginPlaces != null) {
+            this.NonLocalLoginPlaces = new SecurityTrend[source.NonLocalLoginPlaces.length];
+            for (int i = 0; i < source.NonLocalLoginPlaces.length; i++) {
+                this.NonLocalLoginPlaces[i] = new SecurityTrend(source.NonLocalLoginPlaces[i]);
+            }
+        }
+        if (source.BruteAttacks != null) {
+            this.BruteAttacks = new SecurityTrend[source.BruteAttacks.length];
+            for (int i = 0; i < source.BruteAttacks.length; i++) {
+                this.BruteAttacks[i] = new SecurityTrend(source.BruteAttacks[i]);
+            }
+        }
+        if (source.Vuls != null) {
+            this.Vuls = new SecurityTrend[source.Vuls.length];
+            for (int i = 0; i < source.Vuls.length; i++) {
+                this.Vuls[i] = new SecurityTrend(source.Vuls[i]);
+            }
+        }
+        if (source.BaseLines != null) {
+            this.BaseLines = new SecurityTrend[source.BaseLines.length];
+            for (int i = 0; i < source.BaseLines.length; i++) {
+                this.BaseLines[i] = new SecurityTrend(source.BaseLines[i]);
+            }
+        }
+        if (source.MaliciousRequests != null) {
+            this.MaliciousRequests = new SecurityTrend[source.MaliciousRequests.length];
+            for (int i = 0; i < source.MaliciousRequests.length; i++) {
+                this.MaliciousRequests[i] = new SecurityTrend(source.MaliciousRequests[i]);
+            }
+        }
+        if (source.HighRiskBashs != null) {
+            this.HighRiskBashs = new SecurityTrend[source.HighRiskBashs.length];
+            for (int i = 0; i < source.HighRiskBashs.length; i++) {
+                this.HighRiskBashs[i] = new SecurityTrend(source.HighRiskBashs[i]);
+            }
+        }
+        if (source.ReverseShells != null) {
+            this.ReverseShells = new SecurityTrend[source.ReverseShells.length];
+            for (int i = 0; i < source.ReverseShells.length; i++) {
+                this.ReverseShells[i] = new SecurityTrend(source.ReverseShells[i]);
+            }
+        }
+        if (source.PrivilegeEscalations != null) {
+            this.PrivilegeEscalations = new SecurityTrend[source.PrivilegeEscalations.length];
+            for (int i = 0; i < source.PrivilegeEscalations.length; i++) {
+                this.PrivilegeEscalations[i] = new SecurityTrend(source.PrivilegeEscalations[i]);
+            }
+        }
+        if (source.CyberAttacks != null) {
+            this.CyberAttacks = new SecurityTrend[source.CyberAttacks.length];
+            for (int i = 0; i < source.CyberAttacks.length; i++) {
+                this.CyberAttacks[i] = new SecurityTrend(source.CyberAttacks[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

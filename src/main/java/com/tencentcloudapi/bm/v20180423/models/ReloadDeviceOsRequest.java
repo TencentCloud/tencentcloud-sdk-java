@@ -482,6 +482,77 @@ public class ReloadDeviceOsRequest extends AbstractModel{
         this.SysDataSpace = SysDataSpace;
     }
 
+    public ReloadDeviceOsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ReloadDeviceOsRequest(ReloadDeviceOsRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.Password != null) {
+            this.Password = new String(source.Password);
+        }
+        if (source.OsTypeId != null) {
+            this.OsTypeId = new Long(source.OsTypeId);
+        }
+        if (source.RaidId != null) {
+            this.RaidId = new Long(source.RaidId);
+        }
+        if (source.IsZoning != null) {
+            this.IsZoning = new Long(source.IsZoning);
+        }
+        if (source.SysRootSpace != null) {
+            this.SysRootSpace = new Long(source.SysRootSpace);
+        }
+        if (source.SysSwaporuefiSpace != null) {
+            this.SysSwaporuefiSpace = new Long(source.SysSwaporuefiSpace);
+        }
+        if (source.SysUsrlocalSpace != null) {
+            this.SysUsrlocalSpace = new Long(source.SysUsrlocalSpace);
+        }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.SubnetId != null) {
+            this.SubnetId = new String(source.SubnetId);
+        }
+        if (source.LanIp != null) {
+            this.LanIp = new String(source.LanIp);
+        }
+        if (source.HyperThreading != null) {
+            this.HyperThreading = new Long(source.HyperThreading);
+        }
+        if (source.ImageId != null) {
+            this.ImageId = new String(source.ImageId);
+        }
+        if (source.FileSystem != null) {
+            this.FileSystem = new String(source.FileSystem);
+        }
+        if (source.NeedSecurityAgent != null) {
+            this.NeedSecurityAgent = new Long(source.NeedSecurityAgent);
+        }
+        if (source.NeedMonitorAgent != null) {
+            this.NeedMonitorAgent = new Long(source.NeedMonitorAgent);
+        }
+        if (source.NeedEMRAgent != null) {
+            this.NeedEMRAgent = new Long(source.NeedEMRAgent);
+        }
+        if (source.NeedEMRSoftware != null) {
+            this.NeedEMRSoftware = new Long(source.NeedEMRSoftware);
+        }
+        if (source.ReserveSgConfig != null) {
+            this.ReserveSgConfig = new Long(source.ReserveSgConfig);
+        }
+        if (source.SysDataSpace != null) {
+            this.SysDataSpace = new Long(source.SysDataSpace);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

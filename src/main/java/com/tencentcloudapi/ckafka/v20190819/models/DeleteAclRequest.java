@@ -183,6 +183,38 @@ public class DeleteAclRequest extends AbstractModel{
         this.Principal = Principal;
     }
 
+    public DeleteAclRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteAclRequest(DeleteAclRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.ResourceType != null) {
+            this.ResourceType = new Long(source.ResourceType);
+        }
+        if (source.ResourceName != null) {
+            this.ResourceName = new String(source.ResourceName);
+        }
+        if (source.Operation != null) {
+            this.Operation = new Long(source.Operation);
+        }
+        if (source.PermissionType != null) {
+            this.PermissionType = new Long(source.PermissionType);
+        }
+        if (source.Host != null) {
+            this.Host = new String(source.Host);
+        }
+        if (source.Principal != null) {
+            this.Principal = new String(source.Principal);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

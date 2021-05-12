@@ -73,6 +73,26 @@ public class ListAuditsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public ListAuditsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ListAuditsResponse(ListAuditsResponse source) {
+        if (source.AuditSummarys != null) {
+            this.AuditSummarys = new AuditSummary[source.AuditSummarys.length];
+            for (int i = 0; i < source.AuditSummarys.length; i++) {
+                this.AuditSummarys[i] = new AuditSummary(source.AuditSummarys[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -170,6 +170,35 @@ public class ProductModelDefinition extends AbstractModel{
         this.NetTypeModel = NetTypeModel;
     }
 
+    public ProductModelDefinition() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ProductModelDefinition(ProductModelDefinition source) {
+        if (source.ProductId != null) {
+            this.ProductId = new String(source.ProductId);
+        }
+        if (source.ModelDefine != null) {
+            this.ModelDefine = new String(source.ModelDefine);
+        }
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new Long(source.UpdateTime);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new Long(source.CreateTime);
+        }
+        if (source.CategoryModel != null) {
+            this.CategoryModel = new String(source.CategoryModel);
+        }
+        if (source.NetTypeModel != null) {
+            this.NetTypeModel = new String(source.NetTypeModel);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

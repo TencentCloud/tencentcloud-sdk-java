@@ -252,6 +252,47 @@ public class TaskAlarm extends AbstractModel{
         this.UpdateTime = UpdateTime;
     }
 
+    public TaskAlarm() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TaskAlarm(TaskAlarm source) {
+        if (source.TaskId != null) {
+            this.TaskId = new Long(source.TaskId);
+        }
+        if (source.TaskName != null) {
+            this.TaskName = new String(source.TaskName);
+        }
+        if (source.Period != null) {
+            this.Period = new Long(source.Period);
+        }
+        if (source.CatTypeName != null) {
+            this.CatTypeName = new String(source.CatTypeName);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.CgiUrl != null) {
+            this.CgiUrl = new String(source.CgiUrl);
+        }
+        if (source.AddTime != null) {
+            this.AddTime = new String(source.AddTime);
+        }
+        if (source.AlarmStatus != null) {
+            this.AlarmStatus = new Long(source.AlarmStatus);
+        }
+        if (source.StatusInfo != null) {
+            this.StatusInfo = new String(source.StatusInfo);
+        }
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new String(source.UpdateTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

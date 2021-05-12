@@ -68,6 +68,26 @@ public class DescribeCfsRulesResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeCfsRulesResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeCfsRulesResponse(DescribeCfsRulesResponse source) {
+        if (source.RuleList != null) {
+            this.RuleList = new PGroupRuleInfo[source.RuleList.length];
+            for (int i = 0; i < source.RuleList.length; i++) {
+                this.RuleList[i] = new PGroupRuleInfo(source.RuleList[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

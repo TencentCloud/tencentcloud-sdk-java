@@ -45,6 +45,20 @@ public class ManualReviewRequest extends AbstractModel{
         this.ReviewContent = ReviewContent;
     }
 
+    public ManualReviewRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ManualReviewRequest(ManualReviewRequest source) {
+        if (source.ReviewContent != null) {
+            this.ReviewContent = new ManualReviewContent(source.ReviewContent);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

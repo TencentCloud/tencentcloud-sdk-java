@@ -91,6 +91,26 @@ public class DescribeTasksRequest extends AbstractModel{
         this.ScrollToken = ScrollToken;
     }
 
+    public DescribeTasksRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeTasksRequest(DescribeTasksRequest source) {
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.ScrollToken != null) {
+            this.ScrollToken = new String(source.ScrollToken);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -106,6 +106,26 @@ public class ConditionsTemp extends AbstractModel{
         this.EventCondition = EventCondition;
     }
 
+    public ConditionsTemp() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ConditionsTemp(ConditionsTemp source) {
+        if (source.TemplateName != null) {
+            this.TemplateName = new String(source.TemplateName);
+        }
+        if (source.Condition != null) {
+            this.Condition = new AlarmPolicyCondition(source.Condition);
+        }
+        if (source.EventCondition != null) {
+            this.EventCondition = new AlarmPolicyEventCondition(source.EventCondition);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -160,6 +160,35 @@ public class DescribeIndustryNewsRequest extends AbstractModel{
         this.Limit = Limit;
     }
 
+    public DescribeIndustryNewsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeIndustryNewsRequest(DescribeIndustryNewsRequest source) {
+        if (source.IndustryId != null) {
+            this.IndustryId = new String(source.IndustryId);
+        }
+        if (source.StartDate != null) {
+            this.StartDate = new String(source.StartDate);
+        }
+        if (source.EndDate != null) {
+            this.EndDate = new String(source.EndDate);
+        }
+        if (source.ShowList != null) {
+            this.ShowList = new Boolean(source.ShowList);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

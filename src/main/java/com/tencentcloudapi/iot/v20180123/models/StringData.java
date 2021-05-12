@@ -114,6 +114,32 @@ public class StringData extends AbstractModel{
         this.Range = Range;
     }
 
+    public StringData() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public StringData(StringData source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Desc != null) {
+            this.Desc = new String(source.Desc);
+        }
+        if (source.Mode != null) {
+            this.Mode = new String(source.Mode);
+        }
+        if (source.Range != null) {
+            this.Range = new Long[source.Range.length];
+            for (int i = 0; i < source.Range.length; i++) {
+                this.Range[i] = new Long(source.Range[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

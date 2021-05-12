@@ -91,6 +91,29 @@ public class ListScdnLogTasksResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public ListScdnLogTasksResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ListScdnLogTasksResponse(ListScdnLogTasksResponse source) {
+        if (source.TaskList != null) {
+            this.TaskList = new ScdnLogTaskDetail[source.TaskList.length];
+            for (int i = 0; i < source.TaskList.length; i++) {
+                this.TaskList[i] = new ScdnLogTaskDetail(source.TaskList[i]);
+            }
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

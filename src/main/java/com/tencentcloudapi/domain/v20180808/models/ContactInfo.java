@@ -390,6 +390,65 @@ public class ContactInfo extends AbstractModel{
         this.Country = Country;
     }
 
+    public ContactInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ContactInfo(ContactInfo source) {
+        if (source.OrganizationNameCN != null) {
+            this.OrganizationNameCN = new String(source.OrganizationNameCN);
+        }
+        if (source.OrganizationName != null) {
+            this.OrganizationName = new String(source.OrganizationName);
+        }
+        if (source.RegistrantNameCN != null) {
+            this.RegistrantNameCN = new String(source.RegistrantNameCN);
+        }
+        if (source.RegistrantName != null) {
+            this.RegistrantName = new String(source.RegistrantName);
+        }
+        if (source.ProvinceCN != null) {
+            this.ProvinceCN = new String(source.ProvinceCN);
+        }
+        if (source.CityCN != null) {
+            this.CityCN = new String(source.CityCN);
+        }
+        if (source.StreetCN != null) {
+            this.StreetCN = new String(source.StreetCN);
+        }
+        if (source.Street != null) {
+            this.Street = new String(source.Street);
+        }
+        if (source.CountryCN != null) {
+            this.CountryCN = new String(source.CountryCN);
+        }
+        if (source.Telephone != null) {
+            this.Telephone = new String(source.Telephone);
+        }
+        if (source.Email != null) {
+            this.Email = new String(source.Email);
+        }
+        if (source.ZipCode != null) {
+            this.ZipCode = new String(source.ZipCode);
+        }
+        if (source.RegistrantType != null) {
+            this.RegistrantType = new String(source.RegistrantType);
+        }
+        if (source.Province != null) {
+            this.Province = new String(source.Province);
+        }
+        if (source.City != null) {
+            this.City = new String(source.City);
+        }
+        if (source.Country != null) {
+            this.Country = new String(source.Country);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

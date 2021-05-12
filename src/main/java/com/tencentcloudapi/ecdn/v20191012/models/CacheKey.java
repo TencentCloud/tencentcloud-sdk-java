@@ -45,6 +45,20 @@ public class CacheKey extends AbstractModel{
         this.FullUrlCache = FullUrlCache;
     }
 
+    public CacheKey() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CacheKey(CacheKey source) {
+        if (source.FullUrlCache != null) {
+            this.FullUrlCache = new String(source.FullUrlCache);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

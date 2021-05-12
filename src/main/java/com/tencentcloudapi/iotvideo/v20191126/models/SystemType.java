@@ -106,6 +106,35 @@ public class SystemType extends AbstractModel{
         this.LiteOs = LiteOs;
     }
 
+    public SystemType() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SystemType(SystemType source) {
+        if (source.Android != null) {
+            this.Android = new OsData[source.Android.length];
+            for (int i = 0; i < source.Android.length; i++) {
+                this.Android[i] = new OsData(source.Android[i]);
+            }
+        }
+        if (source.Linux != null) {
+            this.Linux = new OsData[source.Linux.length];
+            for (int i = 0; i < source.Linux.length; i++) {
+                this.Linux[i] = new OsData(source.Linux[i]);
+            }
+        }
+        if (source.LiteOs != null) {
+            this.LiteOs = new OsData[source.LiteOs.length];
+            for (int i = 0; i < source.LiteOs.length; i++) {
+                this.LiteOs[i] = new OsData(source.LiteOs[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

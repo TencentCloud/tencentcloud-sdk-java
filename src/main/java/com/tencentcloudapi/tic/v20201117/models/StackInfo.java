@@ -160,6 +160,35 @@ public class StackInfo extends AbstractModel{
         this.CreateTime = CreateTime;
     }
 
+    public StackInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public StackInfo(StackInfo source) {
+        if (source.StackId != null) {
+            this.StackId = new String(source.StackId);
+        }
+        if (source.StackName != null) {
+            this.StackName = new String(source.StackName);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.Region != null) {
+            this.Region = new String(source.Region);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

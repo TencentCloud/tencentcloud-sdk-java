@@ -68,6 +68,23 @@ public class IngressRuleBackend extends AbstractModel{
         this.ServicePort = ServicePort;
     }
 
+    public IngressRuleBackend() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public IngressRuleBackend(IngressRuleBackend source) {
+        if (source.ServiceName != null) {
+            this.ServiceName = new String(source.ServiceName);
+        }
+        if (source.ServicePort != null) {
+            this.ServicePort = new Long(source.ServicePort);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

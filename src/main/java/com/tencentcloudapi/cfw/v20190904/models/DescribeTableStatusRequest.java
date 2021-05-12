@@ -114,6 +114,29 @@ public class DescribeTableStatusRequest extends AbstractModel{
         this.Direction = Direction;
     }
 
+    public DescribeTableStatusRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeTableStatusRequest(DescribeTableStatusRequest source) {
+        if (source.EdgeId != null) {
+            this.EdgeId = new String(source.EdgeId);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.Area != null) {
+            this.Area = new String(source.Area);
+        }
+        if (source.Direction != null) {
+            this.Direction = new Long(source.Direction);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

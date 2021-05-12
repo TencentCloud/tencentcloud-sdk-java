@@ -73,6 +73,26 @@ public class InstanceDeniedActions extends AbstractModel{
         this.DeniedActions = DeniedActions;
     }
 
+    public InstanceDeniedActions() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public InstanceDeniedActions(InstanceDeniedActions source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.DeniedActions != null) {
+            this.DeniedActions = new DeniedAction[source.DeniedActions.length];
+            for (int i = 0; i < source.DeniedActions.length; i++) {
+                this.DeniedActions[i] = new DeniedAction(source.DeniedActions[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

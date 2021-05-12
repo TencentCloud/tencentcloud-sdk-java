@@ -344,6 +344,59 @@ public class DescribeChargeDetailResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeChargeDetailResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeChargeDetailResponse(DescribeChargeDetailResponse source) {
+        if (source.OrderStatus != null) {
+            this.OrderStatus = new String(source.OrderStatus);
+        }
+        if (source.OrderAmount != null) {
+            this.OrderAmount = new String(source.OrderAmount);
+        }
+        if (source.CommissionAmount != null) {
+            this.CommissionAmount = new String(source.CommissionAmount);
+        }
+        if (source.PayMode != null) {
+            this.PayMode = new String(source.PayMode);
+        }
+        if (source.OrderDate != null) {
+            this.OrderDate = new String(source.OrderDate);
+        }
+        if (source.OrderTime != null) {
+            this.OrderTime = new String(source.OrderTime);
+        }
+        if (source.OrderActualInSubAccountName != null) {
+            this.OrderActualInSubAccountName = new String(source.OrderActualInSubAccountName);
+        }
+        if (source.OrderActualInSubAccountNumber != null) {
+            this.OrderActualInSubAccountNumber = new String(source.OrderActualInSubAccountNumber);
+        }
+        if (source.OrderInSubAccountName != null) {
+            this.OrderInSubAccountName = new String(source.OrderInSubAccountName);
+        }
+        if (source.OrderInSubAccountNumber != null) {
+            this.OrderInSubAccountNumber = new String(source.OrderInSubAccountNumber);
+        }
+        if (source.FrontSequenceNumber != null) {
+            this.FrontSequenceNumber = new String(source.FrontSequenceNumber);
+        }
+        if (source.FailMessage != null) {
+            this.FailMessage = new String(source.FailMessage);
+        }
+        if (source.RequestType != null) {
+            this.RequestType = new String(source.RequestType);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

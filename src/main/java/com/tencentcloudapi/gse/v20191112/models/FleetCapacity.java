@@ -134,6 +134,29 @@ public class FleetCapacity extends AbstractModel{
         this.ScalingInterval = ScalingInterval;
     }
 
+    public FleetCapacity() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public FleetCapacity(FleetCapacity source) {
+        if (source.FleetId != null) {
+            this.FleetId = new String(source.FleetId);
+        }
+        if (source.InstanceType != null) {
+            this.InstanceType = new String(source.InstanceType);
+        }
+        if (source.InstanceCounts != null) {
+            this.InstanceCounts = new InstanceCounts(source.InstanceCounts);
+        }
+        if (source.ScalingInterval != null) {
+            this.ScalingInterval = new Long(source.ScalingInterval);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

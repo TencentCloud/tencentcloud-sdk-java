@@ -275,6 +275,53 @@ public class CreateServiceV2Request extends AbstractModel{
         this.DeployMode = DeployMode;
     }
 
+    public CreateServiceV2Request() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateServiceV2Request(CreateServiceV2Request source) {
+        if (source.ServiceName != null) {
+            this.ServiceName = new String(source.ServiceName);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.UseDefaultImageService != null) {
+            this.UseDefaultImageService = new Long(source.UseDefaultImageService);
+        }
+        if (source.RepoType != null) {
+            this.RepoType = new Long(source.RepoType);
+        }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.RepoServer != null) {
+            this.RepoServer = new String(source.RepoServer);
+        }
+        if (source.RepoName != null) {
+            this.RepoName = new String(source.RepoName);
+        }
+        if (source.SourceChannel != null) {
+            this.SourceChannel = new Long(source.SourceChannel);
+        }
+        if (source.SubnetList != null) {
+            this.SubnetList = new String[source.SubnetList.length];
+            for (int i = 0; i < source.SubnetList.length; i++) {
+                this.SubnetList[i] = new String(source.SubnetList[i]);
+            }
+        }
+        if (source.CodingLanguage != null) {
+            this.CodingLanguage = new String(source.CodingLanguage);
+        }
+        if (source.DeployMode != null) {
+            this.DeployMode = new String(source.DeployMode);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

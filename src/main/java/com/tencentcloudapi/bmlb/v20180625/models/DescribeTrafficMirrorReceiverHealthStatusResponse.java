@@ -68,6 +68,26 @@ public class DescribeTrafficMirrorReceiverHealthStatusResponse extends AbstractM
         this.RequestId = RequestId;
     }
 
+    public DescribeTrafficMirrorReceiverHealthStatusResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeTrafficMirrorReceiverHealthStatusResponse(DescribeTrafficMirrorReceiverHealthStatusResponse source) {
+        if (source.ReceiversStatusSet != null) {
+            this.ReceiversStatusSet = new TrafficMirrorReciversStatus[source.ReceiversStatusSet.length];
+            for (int i = 0; i < source.ReceiversStatusSet.length; i++) {
+                this.ReceiversStatusSet[i] = new TrafficMirrorReciversStatus(source.ReceiversStatusSet[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -252,6 +252,47 @@ public class ModifyCCFrequencyRulesRequest extends AbstractModel{
         this.Cookie = Cookie;
     }
 
+    public ModifyCCFrequencyRulesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyCCFrequencyRulesRequest(ModifyCCFrequencyRulesRequest source) {
+        if (source.Business != null) {
+            this.Business = new String(source.Business);
+        }
+        if (source.CCFrequencyRuleId != null) {
+            this.CCFrequencyRuleId = new String(source.CCFrequencyRuleId);
+        }
+        if (source.Mode != null) {
+            this.Mode = new String(source.Mode);
+        }
+        if (source.Period != null) {
+            this.Period = new Long(source.Period);
+        }
+        if (source.ReqNumber != null) {
+            this.ReqNumber = new Long(source.ReqNumber);
+        }
+        if (source.Act != null) {
+            this.Act = new String(source.Act);
+        }
+        if (source.ExeDuration != null) {
+            this.ExeDuration = new Long(source.ExeDuration);
+        }
+        if (source.Uri != null) {
+            this.Uri = new String(source.Uri);
+        }
+        if (source.UserAgent != null) {
+            this.UserAgent = new String(source.UserAgent);
+        }
+        if (source.Cookie != null) {
+            this.Cookie = new String(source.Cookie);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

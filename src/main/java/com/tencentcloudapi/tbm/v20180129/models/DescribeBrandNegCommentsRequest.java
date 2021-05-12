@@ -137,6 +137,32 @@ public class DescribeBrandNegCommentsRequest extends AbstractModel{
         this.Offset = Offset;
     }
 
+    public DescribeBrandNegCommentsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeBrandNegCommentsRequest(DescribeBrandNegCommentsRequest source) {
+        if (source.BrandId != null) {
+            this.BrandId = new String(source.BrandId);
+        }
+        if (source.StartDate != null) {
+            this.StartDate = new String(source.StartDate);
+        }
+        if (source.EndDate != null) {
+            this.EndDate = new String(source.EndDate);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

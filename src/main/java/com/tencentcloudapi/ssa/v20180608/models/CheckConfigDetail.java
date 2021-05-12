@@ -344,6 +344,59 @@ public class CheckConfigDetail extends AbstractModel{
         this.IsIgnore = IsIgnore;
     }
 
+    public CheckConfigDetail() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CheckConfigDetail(CheckConfigDetail source) {
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
+        if (source.CheckName != null) {
+            this.CheckName = new String(source.CheckName);
+        }
+        if (source.Content != null) {
+            this.Content = new String(source.Content);
+        }
+        if (source.Method != null) {
+            this.Method = new String(source.Method);
+        }
+        if (source.Doc != null) {
+            this.Doc = new String(source.Doc);
+        }
+        if (source.ErrorCount != null) {
+            this.ErrorCount = new Long(source.ErrorCount);
+        }
+        if (source.IsPass != null) {
+            this.IsPass = new Long(source.IsPass);
+        }
+        if (source.SafeCount != null) {
+            this.SafeCount = new Long(source.SafeCount);
+        }
+        if (source.IgnoreCount != null) {
+            this.IgnoreCount = new Long(source.IgnoreCount);
+        }
+        if (source.RiskCount != null) {
+            this.RiskCount = new Long(source.RiskCount);
+        }
+        if (source.NameEn != null) {
+            this.NameEn = new String(source.NameEn);
+        }
+        if (source.AssetType != null) {
+            this.AssetType = new String(source.AssetType);
+        }
+        if (source.ResCount != null) {
+            this.ResCount = new Long(source.ResCount);
+        }
+        if (source.IsIgnore != null) {
+            this.IsIgnore = new Long(source.IsIgnore);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

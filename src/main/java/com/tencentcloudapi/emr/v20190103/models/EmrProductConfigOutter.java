@@ -470,6 +470,68 @@ public class EmrProductConfigOutter extends AbstractModel{
         this.CbsEncrypt = CbsEncrypt;
     }
 
+    public EmrProductConfigOutter() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public EmrProductConfigOutter(EmrProductConfigOutter source) {
+        if (source.SoftInfo != null) {
+            this.SoftInfo = new String[source.SoftInfo.length];
+            for (int i = 0; i < source.SoftInfo.length; i++) {
+                this.SoftInfo[i] = new String(source.SoftInfo[i]);
+            }
+        }
+        if (source.MasterNodeSize != null) {
+            this.MasterNodeSize = new Long(source.MasterNodeSize);
+        }
+        if (source.CoreNodeSize != null) {
+            this.CoreNodeSize = new Long(source.CoreNodeSize);
+        }
+        if (source.TaskNodeSize != null) {
+            this.TaskNodeSize = new Long(source.TaskNodeSize);
+        }
+        if (source.ComNodeSize != null) {
+            this.ComNodeSize = new Long(source.ComNodeSize);
+        }
+        if (source.MasterResource != null) {
+            this.MasterResource = new OutterResource(source.MasterResource);
+        }
+        if (source.CoreResource != null) {
+            this.CoreResource = new OutterResource(source.CoreResource);
+        }
+        if (source.TaskResource != null) {
+            this.TaskResource = new OutterResource(source.TaskResource);
+        }
+        if (source.ComResource != null) {
+            this.ComResource = new OutterResource(source.ComResource);
+        }
+        if (source.OnCos != null) {
+            this.OnCos = new Boolean(source.OnCos);
+        }
+        if (source.ChargeType != null) {
+            this.ChargeType = new Long(source.ChargeType);
+        }
+        if (source.RouterNodeSize != null) {
+            this.RouterNodeSize = new Long(source.RouterNodeSize);
+        }
+        if (source.SupportHA != null) {
+            this.SupportHA = new Boolean(source.SupportHA);
+        }
+        if (source.SecurityOn != null) {
+            this.SecurityOn = new Boolean(source.SecurityOn);
+        }
+        if (source.SecurityGroup != null) {
+            this.SecurityGroup = new String(source.SecurityGroup);
+        }
+        if (source.CbsEncrypt != null) {
+            this.CbsEncrypt = new Long(source.CbsEncrypt);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

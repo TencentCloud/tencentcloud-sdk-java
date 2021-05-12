@@ -246,6 +246,41 @@ public class UsgPolicy extends AbstractModel{
         this.Action = Action;
     }
 
+    public UsgPolicy() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UsgPolicy(UsgPolicy source) {
+        if (source.Ip != null) {
+            this.Ip = new String(source.Ip);
+        }
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
+        if (source.AddressModule != null) {
+            this.AddressModule = new String(source.AddressModule);
+        }
+        if (source.Proto != null) {
+            this.Proto = new String(source.Proto);
+        }
+        if (source.Port != null) {
+            this.Port = new String(source.Port);
+        }
+        if (source.ServiceModule != null) {
+            this.ServiceModule = new String(source.ServiceModule);
+        }
+        if (source.Desc != null) {
+            this.Desc = new String(source.Desc);
+        }
+        if (source.Action != null) {
+            this.Action = new String(source.Action);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

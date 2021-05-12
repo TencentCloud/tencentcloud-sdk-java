@@ -231,6 +231,44 @@ public class ExportVideoByTemplateRequest extends AbstractModel{
         this.Operator = Operator;
     }
 
+    public ExportVideoByTemplateRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ExportVideoByTemplateRequest(ExportVideoByTemplateRequest source) {
+        if (source.Platform != null) {
+            this.Platform = new String(source.Platform);
+        }
+        if (source.TemplateId != null) {
+            this.TemplateId = new String(source.TemplateId);
+        }
+        if (source.Definition != null) {
+            this.Definition = new Long(source.Definition);
+        }
+        if (source.ExportDestination != null) {
+            this.ExportDestination = new String(source.ExportDestination);
+        }
+        if (source.SlotReplacements != null) {
+            this.SlotReplacements = new SlotReplacementInfo[source.SlotReplacements.length];
+            for (int i = 0; i < source.SlotReplacements.length; i++) {
+                this.SlotReplacements[i] = new SlotReplacementInfo(source.SlotReplacements[i]);
+            }
+        }
+        if (source.CMEExportInfo != null) {
+            this.CMEExportInfo = new CMEExportInfo(source.CMEExportInfo);
+        }
+        if (source.VODExportInfo != null) {
+            this.VODExportInfo = new VODExportInfo(source.VODExportInfo);
+        }
+        if (source.Operator != null) {
+            this.Operator = new String(source.Operator);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

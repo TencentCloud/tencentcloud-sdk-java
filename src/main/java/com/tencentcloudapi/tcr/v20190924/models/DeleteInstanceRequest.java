@@ -68,6 +68,23 @@ public class DeleteInstanceRequest extends AbstractModel{
         this.DeleteBucket = DeleteBucket;
     }
 
+    public DeleteInstanceRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteInstanceRequest(DeleteInstanceRequest source) {
+        if (source.RegistryId != null) {
+            this.RegistryId = new String(source.RegistryId);
+        }
+        if (source.DeleteBucket != null) {
+            this.DeleteBucket = new Boolean(source.DeleteBucket);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

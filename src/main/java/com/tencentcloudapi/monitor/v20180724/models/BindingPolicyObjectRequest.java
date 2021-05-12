@@ -137,6 +137,35 @@ public class BindingPolicyObjectRequest extends AbstractModel{
         this.PolicyId = PolicyId;
     }
 
+    public BindingPolicyObjectRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public BindingPolicyObjectRequest(BindingPolicyObjectRequest source) {
+        if (source.GroupId != null) {
+            this.GroupId = new Long(source.GroupId);
+        }
+        if (source.Module != null) {
+            this.Module = new String(source.Module);
+        }
+        if (source.InstanceGroupId != null) {
+            this.InstanceGroupId = new Long(source.InstanceGroupId);
+        }
+        if (source.Dimensions != null) {
+            this.Dimensions = new BindingPolicyObjectDimension[source.Dimensions.length];
+            for (int i = 0; i < source.Dimensions.length; i++) {
+                this.Dimensions[i] = new BindingPolicyObjectDimension(source.Dimensions[i]);
+            }
+        }
+        if (source.PolicyId != null) {
+            this.PolicyId = new String(source.PolicyId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

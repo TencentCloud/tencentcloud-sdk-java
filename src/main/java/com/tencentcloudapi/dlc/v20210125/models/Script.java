@@ -190,6 +190,35 @@ public class Script extends AbstractModel{
         this.UpdateTime = UpdateTime;
     }
 
+    public Script() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Script(Script source) {
+        if (source.ScriptId != null) {
+            this.ScriptId = new String(source.ScriptId);
+        }
+        if (source.ScriptName != null) {
+            this.ScriptName = new String(source.ScriptName);
+        }
+        if (source.ScriptDesc != null) {
+            this.ScriptDesc = new String(source.ScriptDesc);
+        }
+        if (source.DatabaseName != null) {
+            this.DatabaseName = new String(source.DatabaseName);
+        }
+        if (source.SQLStatement != null) {
+            this.SQLStatement = new String(source.SQLStatement);
+        }
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new Long(source.UpdateTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

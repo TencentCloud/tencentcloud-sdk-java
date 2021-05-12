@@ -68,6 +68,26 @@ public class AiRecognitionTaskAsrWordsResultItem extends AbstractModel{
         this.SegmentSet = SegmentSet;
     }
 
+    public AiRecognitionTaskAsrWordsResultItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AiRecognitionTaskAsrWordsResultItem(AiRecognitionTaskAsrWordsResultItem source) {
+        if (source.Word != null) {
+            this.Word = new String(source.Word);
+        }
+        if (source.SegmentSet != null) {
+            this.SegmentSet = new AiRecognitionTaskAsrWordsSegmentItem[source.SegmentSet.length];
+            for (int i = 0; i < source.SegmentSet.length; i++) {
+                this.SegmentSet[i] = new AiRecognitionTaskAsrWordsSegmentItem(source.SegmentSet[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

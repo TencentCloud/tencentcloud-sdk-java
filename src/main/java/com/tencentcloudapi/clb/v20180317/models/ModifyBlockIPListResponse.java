@@ -68,6 +68,23 @@ public class ModifyBlockIPListResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public ModifyBlockIPListResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyBlockIPListResponse(ModifyBlockIPListResponse source) {
+        if (source.JodId != null) {
+            this.JodId = new String(source.JodId);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

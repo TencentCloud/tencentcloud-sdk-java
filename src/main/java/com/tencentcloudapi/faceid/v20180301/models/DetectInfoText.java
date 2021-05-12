@@ -658,6 +658,86 @@ public class DetectInfoText extends AbstractModel{
         this.CompareLibType = CompareLibType;
     }
 
+    public DetectInfoText() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DetectInfoText(DetectInfoText source) {
+        if (source.ErrCode != null) {
+            this.ErrCode = new Long(source.ErrCode);
+        }
+        if (source.ErrMsg != null) {
+            this.ErrMsg = new String(source.ErrMsg);
+        }
+        if (source.IdCard != null) {
+            this.IdCard = new String(source.IdCard);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.OcrNation != null) {
+            this.OcrNation = new String(source.OcrNation);
+        }
+        if (source.OcrAddress != null) {
+            this.OcrAddress = new String(source.OcrAddress);
+        }
+        if (source.OcrBirth != null) {
+            this.OcrBirth = new String(source.OcrBirth);
+        }
+        if (source.OcrAuthority != null) {
+            this.OcrAuthority = new String(source.OcrAuthority);
+        }
+        if (source.OcrValidDate != null) {
+            this.OcrValidDate = new String(source.OcrValidDate);
+        }
+        if (source.OcrName != null) {
+            this.OcrName = new String(source.OcrName);
+        }
+        if (source.OcrIdCard != null) {
+            this.OcrIdCard = new String(source.OcrIdCard);
+        }
+        if (source.OcrGender != null) {
+            this.OcrGender = new String(source.OcrGender);
+        }
+        if (source.LiveStatus != null) {
+            this.LiveStatus = new Long(source.LiveStatus);
+        }
+        if (source.LiveMsg != null) {
+            this.LiveMsg = new String(source.LiveMsg);
+        }
+        if (source.Comparestatus != null) {
+            this.Comparestatus = new Long(source.Comparestatus);
+        }
+        if (source.Comparemsg != null) {
+            this.Comparemsg = new String(source.Comparemsg);
+        }
+        if (source.Sim != null) {
+            this.Sim = new String(source.Sim);
+        }
+        if (source.Location != null) {
+            this.Location = new String(source.Location);
+        }
+        if (source.Extra != null) {
+            this.Extra = new String(source.Extra);
+        }
+        if (source.LivenessDetail != null) {
+            this.LivenessDetail = new DetectDetail[source.LivenessDetail.length];
+            for (int i = 0; i < source.LivenessDetail.length; i++) {
+                this.LivenessDetail[i] = new DetectDetail(source.LivenessDetail[i]);
+            }
+        }
+        if (source.Mobile != null) {
+            this.Mobile = new String(source.Mobile);
+        }
+        if (source.CompareLibType != null) {
+            this.CompareLibType = new String(source.CompareLibType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

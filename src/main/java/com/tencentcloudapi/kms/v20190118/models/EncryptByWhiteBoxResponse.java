@@ -91,6 +91,26 @@ public class EncryptByWhiteBoxResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public EncryptByWhiteBoxResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public EncryptByWhiteBoxResponse(EncryptByWhiteBoxResponse source) {
+        if (source.InitializationVector != null) {
+            this.InitializationVector = new String(source.InitializationVector);
+        }
+        if (source.CipherText != null) {
+            this.CipherText = new String(source.CipherText);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

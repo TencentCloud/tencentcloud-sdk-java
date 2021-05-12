@@ -88,6 +88,26 @@ all：账号维度明细数据
         this.CdnData = CdnData;
     }
 
+    public ResourceData() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ResourceData(ResourceData source) {
+        if (source.Resource != null) {
+            this.Resource = new String(source.Resource);
+        }
+        if (source.CdnData != null) {
+            this.CdnData = new CdnData[source.CdnData.length];
+            for (int i = 0; i < source.CdnData.length; i++) {
+                this.CdnData[i] = new CdnData(source.CdnData[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

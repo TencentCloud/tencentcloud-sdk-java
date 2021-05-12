@@ -363,6 +363,53 @@ public class WatermarkTemplate extends AbstractModel{
         this.CoordinateOrigin = CoordinateOrigin;
     }
 
+    public WatermarkTemplate() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public WatermarkTemplate(WatermarkTemplate source) {
+        if (source.Definition != null) {
+            this.Definition = new Long(source.Definition);
+        }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Comment != null) {
+            this.Comment = new String(source.Comment);
+        }
+        if (source.XPos != null) {
+            this.XPos = new String(source.XPos);
+        }
+        if (source.YPos != null) {
+            this.YPos = new String(source.YPos);
+        }
+        if (source.ImageTemplate != null) {
+            this.ImageTemplate = new ImageWatermarkTemplate(source.ImageTemplate);
+        }
+        if (source.TextTemplate != null) {
+            this.TextTemplate = new TextWatermarkTemplateInput(source.TextTemplate);
+        }
+        if (source.SvgTemplate != null) {
+            this.SvgTemplate = new SvgWatermarkInput(source.SvgTemplate);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new String(source.UpdateTime);
+        }
+        if (source.CoordinateOrigin != null) {
+            this.CoordinateOrigin = new String(source.CoordinateOrigin);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

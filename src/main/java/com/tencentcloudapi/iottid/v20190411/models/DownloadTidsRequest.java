@@ -68,6 +68,23 @@ public class DownloadTidsRequest extends AbstractModel{
         this.Quantity = Quantity;
     }
 
+    public DownloadTidsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DownloadTidsRequest(DownloadTidsRequest source) {
+        if (source.OrderId != null) {
+            this.OrderId = new String(source.OrderId);
+        }
+        if (source.Quantity != null) {
+            this.Quantity = new Long(source.Quantity);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

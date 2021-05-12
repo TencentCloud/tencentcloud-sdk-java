@@ -68,6 +68,23 @@ public class DescribeInstanceDetailResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeInstanceDetailResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeInstanceDetailResponse(DescribeInstanceDetailResponse source) {
+        if (source.Detail != null) {
+            this.Detail = new CynosdbInstanceDetail(source.Detail);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

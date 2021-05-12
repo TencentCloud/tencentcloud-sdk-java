@@ -73,6 +73,26 @@ public class PeakNetworkRegionInfo extends AbstractModel{
         this.PeakNetworkSet = PeakNetworkSet;
     }
 
+    public PeakNetworkRegionInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PeakNetworkRegionInfo(PeakNetworkRegionInfo source) {
+        if (source.Region != null) {
+            this.Region = new String(source.Region);
+        }
+        if (source.PeakNetworkSet != null) {
+            this.PeakNetworkSet = new PeakNetwork[source.PeakNetworkSet.length];
+            for (int i = 0; i < source.PeakNetworkSet.length; i++) {
+                this.PeakNetworkSet[i] = new PeakNetwork(source.PeakNetworkSet[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

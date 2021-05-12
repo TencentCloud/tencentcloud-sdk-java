@@ -160,6 +160,41 @@ public class CreateStructureTaskInfo extends AbstractModel{
         this.Year = Year;
     }
 
+    public CreateStructureTaskInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateStructureTaskInfo(CreateStructureTaskInfo source) {
+        if (source.TaskType != null) {
+            this.TaskType = new String(source.TaskType);
+        }
+        if (source.FileList != null) {
+            this.FileList = new String[source.FileList.length];
+            for (int i = 0; i < source.FileList.length; i++) {
+                this.FileList[i] = new String(source.FileList[i]);
+            }
+        }
+        if (source.CustomerId != null) {
+            this.CustomerId = new String(source.CustomerId);
+        }
+        if (source.CustomerName != null) {
+            this.CustomerName = new String(source.CustomerName);
+        }
+        if (source.ImageList != null) {
+            this.ImageList = new String[source.ImageList.length];
+            for (int i = 0; i < source.ImageList.length; i++) {
+                this.ImageList[i] = new String(source.ImageList[i]);
+            }
+        }
+        if (source.Year != null) {
+            this.Year = new String(source.Year);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

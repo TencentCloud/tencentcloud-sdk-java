@@ -137,6 +137,32 @@ public class ImageRect extends AbstractModel{
         this.Label = Label;
     }
 
+    public ImageRect() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ImageRect(ImageRect source) {
+        if (source.X != null) {
+            this.X = new Long(source.X);
+        }
+        if (source.Y != null) {
+            this.Y = new Long(source.Y);
+        }
+        if (source.Width != null) {
+            this.Width = new Long(source.Width);
+        }
+        if (source.Height != null) {
+            this.Height = new Long(source.Height);
+        }
+        if (source.Label != null) {
+            this.Label = new String(source.Label);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -91,6 +91,32 @@ public class ModifyResourceTagsRequest extends AbstractModel{
         this.DeleteTags = DeleteTags;
     }
 
+    public ModifyResourceTagsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyResourceTagsRequest(ModifyResourceTagsRequest source) {
+        if (source.Resource != null) {
+            this.Resource = new String(source.Resource);
+        }
+        if (source.ReplaceTags != null) {
+            this.ReplaceTags = new Tag[source.ReplaceTags.length];
+            for (int i = 0; i < source.ReplaceTags.length; i++) {
+                this.ReplaceTags[i] = new Tag(source.ReplaceTags[i]);
+            }
+        }
+        if (source.DeleteTags != null) {
+            this.DeleteTags = new TagKeyObject[source.DeleteTags.length];
+            for (int i = 0; i < source.DeleteTags.length; i++) {
+                this.DeleteTags[i] = new TagKeyObject(source.DeleteTags[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

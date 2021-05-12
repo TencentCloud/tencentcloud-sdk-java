@@ -45,6 +45,23 @@ public class DeleteTaskTemplatesRequest extends AbstractModel{
         this.TaskTemplateIds = TaskTemplateIds;
     }
 
+    public DeleteTaskTemplatesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteTaskTemplatesRequest(DeleteTaskTemplatesRequest source) {
+        if (source.TaskTemplateIds != null) {
+            this.TaskTemplateIds = new String[source.TaskTemplateIds.length];
+            for (int i = 0; i < source.TaskTemplateIds.length; i++) {
+                this.TaskTemplateIds[i] = new String(source.TaskTemplateIds[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

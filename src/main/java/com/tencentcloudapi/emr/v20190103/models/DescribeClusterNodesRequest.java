@@ -210,6 +210,38 @@ public class DescribeClusterNodesRequest extends AbstractModel{
         this.SearchFields = SearchFields;
     }
 
+    public DescribeClusterNodesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeClusterNodesRequest(DescribeClusterNodesRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.NodeFlag != null) {
+            this.NodeFlag = new String(source.NodeFlag);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.HardwareResourceType != null) {
+            this.HardwareResourceType = new String(source.HardwareResourceType);
+        }
+        if (source.SearchFields != null) {
+            this.SearchFields = new SearchItem[source.SearchFields.length];
+            for (int i = 0; i < source.SearchFields.length; i++) {
+                this.SearchFields[i] = new SearchItem(source.SearchFields[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

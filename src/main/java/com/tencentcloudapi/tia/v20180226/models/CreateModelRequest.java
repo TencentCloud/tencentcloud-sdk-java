@@ -229,6 +229,47 @@ public class CreateModelRequest extends AbstractModel{
         this.RuntimeConf = RuntimeConf;
     }
 
+    public CreateModelRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateModelRequest(CreateModelRequest source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Model != null) {
+            this.Model = new String(source.Model);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.Cluster != null) {
+            this.Cluster = new String(source.Cluster);
+        }
+        if (source.RuntimeVersion != null) {
+            this.RuntimeVersion = new String(source.RuntimeVersion);
+        }
+        if (source.Replicas != null) {
+            this.Replicas = new Long(source.Replicas);
+        }
+        if (source.Expose != null) {
+            this.Expose = new String(source.Expose);
+        }
+        if (source.ServType != null) {
+            this.ServType = new String(source.ServType);
+        }
+        if (source.RuntimeConf != null) {
+            this.RuntimeConf = new String[source.RuntimeConf.length];
+            for (int i = 0; i < source.RuntimeConf.length; i++) {
+                this.RuntimeConf[i] = new String(source.RuntimeConf[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

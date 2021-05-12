@@ -68,6 +68,23 @@ public class DescribeReplicationInstanceCreateTasksRequest extends AbstractModel
         this.ReplicationRegionId = ReplicationRegionId;
     }
 
+    public DescribeReplicationInstanceCreateTasksRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeReplicationInstanceCreateTasksRequest(DescribeReplicationInstanceCreateTasksRequest source) {
+        if (source.ReplicationRegistryId != null) {
+            this.ReplicationRegistryId = new String(source.ReplicationRegistryId);
+        }
+        if (source.ReplicationRegionId != null) {
+            this.ReplicationRegionId = new Long(source.ReplicationRegionId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -106,6 +106,32 @@ public class GroupApiUseStatistics extends AbstractModel{
         this.Quantile = Quantile;
     }
 
+    public GroupApiUseStatistics() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GroupApiUseStatistics(GroupApiUseStatistics source) {
+        if (source.TopStatusCode != null) {
+            this.TopStatusCode = new ApiUseStatisticsEntity[source.TopStatusCode.length];
+            for (int i = 0; i < source.TopStatusCode.length; i++) {
+                this.TopStatusCode[i] = new ApiUseStatisticsEntity(source.TopStatusCode[i]);
+            }
+        }
+        if (source.TopTimeCost != null) {
+            this.TopTimeCost = new ApiUseStatisticsEntity[source.TopTimeCost.length];
+            for (int i = 0; i < source.TopTimeCost.length; i++) {
+                this.TopTimeCost[i] = new ApiUseStatisticsEntity(source.TopTimeCost[i]);
+            }
+        }
+        if (source.Quantile != null) {
+            this.Quantile = new QuantileEntity(source.Quantile);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

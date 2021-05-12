@@ -91,6 +91,29 @@ public class DescribeInstanceOperationsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeInstanceOperationsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeInstanceOperationsResponse(DescribeInstanceOperationsResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.Operations != null) {
+            this.Operations = new Operation[source.Operations.length];
+            for (int i = 0; i < source.Operations.length; i++) {
+                this.Operations[i] = new Operation(source.Operations[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

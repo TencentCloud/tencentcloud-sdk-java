@@ -91,6 +91,29 @@ public class SlowlogDetail extends AbstractModel{
         this.NormalQueries = NormalQueries;
     }
 
+    public SlowlogDetail() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SlowlogDetail(SlowlogDetail source) {
+        if (source.TotalTime != null) {
+            this.TotalTime = new Float(source.TotalTime);
+        }
+        if (source.TotalCalls != null) {
+            this.TotalCalls = new Long(source.TotalCalls);
+        }
+        if (source.NormalQueries != null) {
+            this.NormalQueries = new NormalQueryItem[source.NormalQueries.length];
+            for (int i = 0; i < source.NormalQueries.length; i++) {
+                this.NormalQueries[i] = new NormalQueryItem(source.NormalQueries[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

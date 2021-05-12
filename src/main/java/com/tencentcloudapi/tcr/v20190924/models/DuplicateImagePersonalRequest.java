@@ -68,6 +68,23 @@ public class DuplicateImagePersonalRequest extends AbstractModel{
         this.DestImage = DestImage;
     }
 
+    public DuplicateImagePersonalRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DuplicateImagePersonalRequest(DuplicateImagePersonalRequest source) {
+        if (source.SrcImage != null) {
+            this.SrcImage = new String(source.SrcImage);
+        }
+        if (source.DestImage != null) {
+            this.DestImage = new String(source.DestImage);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -114,6 +114,32 @@ public class CreateBackupRequest extends AbstractModel{
         this.BackupName = BackupName;
     }
 
+    public CreateBackupRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateBackupRequest(CreateBackupRequest source) {
+        if (source.Strategy != null) {
+            this.Strategy = new Long(source.Strategy);
+        }
+        if (source.DBNames != null) {
+            this.DBNames = new String[source.DBNames.length];
+            for (int i = 0; i < source.DBNames.length; i++) {
+                this.DBNames[i] = new String(source.DBNames[i]);
+            }
+        }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.BackupName != null) {
+            this.BackupName = new String(source.BackupName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

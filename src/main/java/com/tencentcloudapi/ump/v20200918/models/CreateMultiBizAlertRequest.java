@@ -221,6 +221,44 @@ public class CreateMultiBizAlertRequest extends AbstractModel{
         this.Warnings = Warnings;
     }
 
+    public CreateMultiBizAlertRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateMultiBizAlertRequest(CreateMultiBizAlertRequest source) {
+        if (source.GroupCode != null) {
+            this.GroupCode = new String(source.GroupCode);
+        }
+        if (source.MallId != null) {
+            this.MallId = new Long(source.MallId);
+        }
+        if (source.ZoneId != null) {
+            this.ZoneId = new Long(source.ZoneId);
+        }
+        if (source.CameraId != null) {
+            this.CameraId = new Long(source.CameraId);
+        }
+        if (source.CaptureTime != null) {
+            this.CaptureTime = new Long(source.CaptureTime);
+        }
+        if (source.State != null) {
+            this.State = new Long(source.State);
+        }
+        if (source.Image != null) {
+            this.Image = new String(source.Image);
+        }
+        if (source.Warnings != null) {
+            this.Warnings = new MultiBizWarning[source.Warnings.length];
+            for (int i = 0; i < source.Warnings.length; i++) {
+                this.Warnings[i] = new MultiBizWarning(source.Warnings[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

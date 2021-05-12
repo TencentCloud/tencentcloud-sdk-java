@@ -91,6 +91,29 @@ public class BotFlow extends AbstractModel{
         this.PhonePoolList = PhonePoolList;
     }
 
+    public BotFlow() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public BotFlow(BotFlow source) {
+        if (source.BotFlowId != null) {
+            this.BotFlowId = new String(source.BotFlowId);
+        }
+        if (source.BotFlowName != null) {
+            this.BotFlowName = new String(source.BotFlowName);
+        }
+        if (source.PhonePoolList != null) {
+            this.PhonePoolList = new PhonePool[source.PhonePoolList.length];
+            for (int i = 0; i < source.PhonePoolList.length; i++) {
+                this.PhonePoolList[i] = new PhonePool(source.PhonePoolList[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

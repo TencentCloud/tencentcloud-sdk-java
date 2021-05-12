@@ -68,6 +68,23 @@ public class CreateDefaultVpcRequest extends AbstractModel{
         this.Force = Force;
     }
 
+    public CreateDefaultVpcRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateDefaultVpcRequest(CreateDefaultVpcRequest source) {
+        if (source.Zone != null) {
+            this.Zone = new String(source.Zone);
+        }
+        if (source.Force != null) {
+            this.Force = new Boolean(source.Force);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

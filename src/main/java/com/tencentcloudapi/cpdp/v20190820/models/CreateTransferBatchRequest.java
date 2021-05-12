@@ -319,6 +319,47 @@ development: 开发环境
         this.Profile = Profile;
     }
 
+    public CreateTransferBatchRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateTransferBatchRequest(CreateTransferBatchRequest source) {
+        if (source.MerchantId != null) {
+            this.MerchantId = new String(source.MerchantId);
+        }
+        if (source.TransferDetails != null) {
+            this.TransferDetails = new TransferDetailRequest[source.TransferDetails.length];
+            for (int i = 0; i < source.TransferDetails.length; i++) {
+                this.TransferDetails[i] = new TransferDetailRequest(source.TransferDetails[i]);
+            }
+        }
+        if (source.MerchantAppId != null) {
+            this.MerchantAppId = new String(source.MerchantAppId);
+        }
+        if (source.MerchantBatchNo != null) {
+            this.MerchantBatchNo = new String(source.MerchantBatchNo);
+        }
+        if (source.BatchName != null) {
+            this.BatchName = new String(source.BatchName);
+        }
+        if (source.BatchRemark != null) {
+            this.BatchRemark = new String(source.BatchRemark);
+        }
+        if (source.TotalAmount != null) {
+            this.TotalAmount = new Long(source.TotalAmount);
+        }
+        if (source.TotalNum != null) {
+            this.TotalNum = new Long(source.TotalNum);
+        }
+        if (source.Profile != null) {
+            this.Profile = new String(source.Profile);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

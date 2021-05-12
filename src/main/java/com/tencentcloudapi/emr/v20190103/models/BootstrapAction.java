@@ -106,6 +106,29 @@ clusterAfter 表示在集群初始化后执行。
         this.Args = Args;
     }
 
+    public BootstrapAction() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public BootstrapAction(BootstrapAction source) {
+        if (source.Path != null) {
+            this.Path = new String(source.Path);
+        }
+        if (source.WhenRun != null) {
+            this.WhenRun = new String(source.WhenRun);
+        }
+        if (source.Args != null) {
+            this.Args = new String[source.Args.length];
+            for (int i = 0; i < source.Args.length; i++) {
+                this.Args[i] = new String(source.Args[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

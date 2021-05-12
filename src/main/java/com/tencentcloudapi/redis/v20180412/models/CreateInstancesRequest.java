@@ -497,6 +497,86 @@ TypeId为标准架构时，MemSize是实例总内存容量；TypeId为集群架�
         this.ResourceTags = ResourceTags;
     }
 
+    public CreateInstancesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateInstancesRequest(CreateInstancesRequest source) {
+        if (source.ZoneId != null) {
+            this.ZoneId = new Long(source.ZoneId);
+        }
+        if (source.TypeId != null) {
+            this.TypeId = new Long(source.TypeId);
+        }
+        if (source.MemSize != null) {
+            this.MemSize = new Long(source.MemSize);
+        }
+        if (source.GoodsNum != null) {
+            this.GoodsNum = new Long(source.GoodsNum);
+        }
+        if (source.Period != null) {
+            this.Period = new Long(source.Period);
+        }
+        if (source.BillingMode != null) {
+            this.BillingMode = new Long(source.BillingMode);
+        }
+        if (source.Password != null) {
+            this.Password = new String(source.Password);
+        }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.SubnetId != null) {
+            this.SubnetId = new String(source.SubnetId);
+        }
+        if (source.ProjectId != null) {
+            this.ProjectId = new Long(source.ProjectId);
+        }
+        if (source.AutoRenew != null) {
+            this.AutoRenew = new Long(source.AutoRenew);
+        }
+        if (source.SecurityGroupIdList != null) {
+            this.SecurityGroupIdList = new String[source.SecurityGroupIdList.length];
+            for (int i = 0; i < source.SecurityGroupIdList.length; i++) {
+                this.SecurityGroupIdList[i] = new String(source.SecurityGroupIdList[i]);
+            }
+        }
+        if (source.VPort != null) {
+            this.VPort = new Long(source.VPort);
+        }
+        if (source.RedisShardNum != null) {
+            this.RedisShardNum = new Long(source.RedisShardNum);
+        }
+        if (source.RedisReplicasNum != null) {
+            this.RedisReplicasNum = new Long(source.RedisReplicasNum);
+        }
+        if (source.ReplicasReadonly != null) {
+            this.ReplicasReadonly = new Boolean(source.ReplicasReadonly);
+        }
+        if (source.InstanceName != null) {
+            this.InstanceName = new String(source.InstanceName);
+        }
+        if (source.NoAuth != null) {
+            this.NoAuth = new Boolean(source.NoAuth);
+        }
+        if (source.NodeSet != null) {
+            this.NodeSet = new RedisNodeInfo[source.NodeSet.length];
+            for (int i = 0; i < source.NodeSet.length; i++) {
+                this.NodeSet[i] = new RedisNodeInfo(source.NodeSet[i]);
+            }
+        }
+        if (source.ResourceTags != null) {
+            this.ResourceTags = new ResourceTag[source.ResourceTags.length];
+            for (int i = 0; i < source.ResourceTags.length; i++) {
+                this.ResourceTags[i] = new ResourceTag(source.ResourceTags[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

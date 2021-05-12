@@ -152,6 +152,35 @@ Fairplay方案无该值。
         this.RequestId = RequestId;
     }
 
+    public DescribeKeysResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeKeysResponse(DescribeKeysResponse source) {
+        if (source.Keys != null) {
+            this.Keys = new Key[source.Keys.length];
+            for (int i = 0; i < source.Keys.length; i++) {
+                this.Keys[i] = new Key(source.Keys[i]);
+            }
+        }
+        if (source.SessionKey != null) {
+            this.SessionKey = new String(source.SessionKey);
+        }
+        if (source.ContentId != null) {
+            this.ContentId = new String(source.ContentId);
+        }
+        if (source.Pssh != null) {
+            this.Pssh = new String(source.Pssh);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

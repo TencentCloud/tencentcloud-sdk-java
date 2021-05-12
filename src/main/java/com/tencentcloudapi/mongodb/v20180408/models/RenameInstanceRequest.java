@@ -68,6 +68,23 @@ public class RenameInstanceRequest extends AbstractModel{
         this.NewName = NewName;
     }
 
+    public RenameInstanceRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RenameInstanceRequest(RenameInstanceRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.NewName != null) {
+            this.NewName = new String(source.NewName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

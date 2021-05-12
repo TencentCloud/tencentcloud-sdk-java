@@ -231,6 +231,41 @@ public class ExportVideoEditProjectRequest extends AbstractModel{
         this.Operator = Operator;
     }
 
+    public ExportVideoEditProjectRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ExportVideoEditProjectRequest(ExportVideoEditProjectRequest source) {
+        if (source.Platform != null) {
+            this.Platform = new String(source.Platform);
+        }
+        if (source.ProjectId != null) {
+            this.ProjectId = new String(source.ProjectId);
+        }
+        if (source.Definition != null) {
+            this.Definition = new Long(source.Definition);
+        }
+        if (source.ExportDestination != null) {
+            this.ExportDestination = new String(source.ExportDestination);
+        }
+        if (source.CoverData != null) {
+            this.CoverData = new String(source.CoverData);
+        }
+        if (source.CMEExportInfo != null) {
+            this.CMEExportInfo = new CMEExportInfo(source.CMEExportInfo);
+        }
+        if (source.VODExportInfo != null) {
+            this.VODExportInfo = new VODExportInfo(source.VODExportInfo);
+        }
+        if (source.Operator != null) {
+            this.Operator = new String(source.Operator);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

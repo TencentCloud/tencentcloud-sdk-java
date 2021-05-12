@@ -162,6 +162,32 @@ public class StaticStorageInfo extends AbstractModel{
         this.Bucket = Bucket;
     }
 
+    public StaticStorageInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public StaticStorageInfo(StaticStorageInfo source) {
+        if (source.StaticDomain != null) {
+            this.StaticDomain = new String(source.StaticDomain);
+        }
+        if (source.DefaultDirName != null) {
+            this.DefaultDirName = new String(source.DefaultDirName);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.Region != null) {
+            this.Region = new String(source.Region);
+        }
+        if (source.Bucket != null) {
+            this.Bucket = new String(source.Bucket);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

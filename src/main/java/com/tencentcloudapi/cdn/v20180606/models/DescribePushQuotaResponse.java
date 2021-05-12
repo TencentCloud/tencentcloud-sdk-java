@@ -68,6 +68,26 @@ public class DescribePushQuotaResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribePushQuotaResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribePushQuotaResponse(DescribePushQuotaResponse source) {
+        if (source.UrlPush != null) {
+            this.UrlPush = new Quota[source.UrlPush.length];
+            for (int i = 0; i < source.UrlPush.length; i++) {
+                this.UrlPush[i] = new Quota(source.UrlPush[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

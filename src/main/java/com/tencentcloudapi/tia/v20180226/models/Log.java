@@ -160,6 +160,35 @@ public class Log extends AbstractModel{
         this.Time = Time;
     }
 
+    public Log() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Log(Log source) {
+        if (source.ContainerName != null) {
+            this.ContainerName = new String(source.ContainerName);
+        }
+        if (source.Log != null) {
+            this.Log = new String(source.Log);
+        }
+        if (source.Namespace != null) {
+            this.Namespace = new String(source.Namespace);
+        }
+        if (source.PodId != null) {
+            this.PodId = new String(source.PodId);
+        }
+        if (source.PodName != null) {
+            this.PodName = new String(source.PodName);
+        }
+        if (source.Time != null) {
+            this.Time = new String(source.Time);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

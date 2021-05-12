@@ -45,6 +45,23 @@ public class GenderPortraitInfo extends AbstractModel{
         this.PortraitSet = PortraitSet;
     }
 
+    public GenderPortraitInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GenderPortraitInfo(GenderPortraitInfo source) {
+        if (source.PortraitSet != null) {
+            this.PortraitSet = new GenderPortrait[source.PortraitSet.length];
+            for (int i = 0; i < source.PortraitSet.length; i++) {
+                this.PortraitSet[i] = new GenderPortrait(source.PortraitSet[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -91,6 +91,29 @@ public class UpdateApiTimeoutsRequest extends AbstractModel{
         this.Timeout = Timeout;
     }
 
+    public UpdateApiTimeoutsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UpdateApiTimeoutsRequest(UpdateApiTimeoutsRequest source) {
+        if (source.ApiIds != null) {
+            this.ApiIds = new String[source.ApiIds.length];
+            for (int i = 0; i < source.ApiIds.length; i++) {
+                this.ApiIds[i] = new String(source.ApiIds[i]);
+            }
+        }
+        if (source.UsableStatus != null) {
+            this.UsableStatus = new String(source.UsableStatus);
+        }
+        if (source.Timeout != null) {
+            this.Timeout = new Long(source.Timeout);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

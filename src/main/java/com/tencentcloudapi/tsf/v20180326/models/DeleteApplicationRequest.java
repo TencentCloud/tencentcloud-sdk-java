@@ -45,6 +45,20 @@ public class DeleteApplicationRequest extends AbstractModel{
         this.ApplicationId = ApplicationId;
     }
 
+    public DeleteApplicationRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteApplicationRequest(DeleteApplicationRequest source) {
+        if (source.ApplicationId != null) {
+            this.ApplicationId = new String(source.ApplicationId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -114,6 +114,32 @@ public class CreateCustomizationRequest extends AbstractModel{
         this.TagInfos = TagInfos;
     }
 
+    public CreateCustomizationRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateCustomizationRequest(CreateCustomizationRequest source) {
+        if (source.ModelName != null) {
+            this.ModelName = new String(source.ModelName);
+        }
+        if (source.TextUrl != null) {
+            this.TextUrl = new String(source.TextUrl);
+        }
+        if (source.ModelType != null) {
+            this.ModelType = new String(source.ModelType);
+        }
+        if (source.TagInfos != null) {
+            this.TagInfos = new String[source.TagInfos.length];
+            for (int i = 0; i < source.TagInfos.length; i++) {
+                this.TagInfos[i] = new String(source.TagInfos[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

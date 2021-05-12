@@ -185,6 +185,35 @@ public class DescribeInternetAddressQuotaResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeInternetAddressQuotaResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeInternetAddressQuotaResponse(DescribeInternetAddressQuotaResponse source) {
+        if (source.Ipv6PrefixLen != null) {
+            this.Ipv6PrefixLen = new Long(source.Ipv6PrefixLen);
+        }
+        if (source.Ipv4BgpQuota != null) {
+            this.Ipv4BgpQuota = new Long(source.Ipv4BgpQuota);
+        }
+        if (source.Ipv4OtherQuota != null) {
+            this.Ipv4OtherQuota = new Long(source.Ipv4OtherQuota);
+        }
+        if (source.Ipv4BgpNum != null) {
+            this.Ipv4BgpNum = new Long(source.Ipv4BgpNum);
+        }
+        if (source.Ipv4OtherNum != null) {
+            this.Ipv4OtherNum = new Long(source.Ipv4OtherNum);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

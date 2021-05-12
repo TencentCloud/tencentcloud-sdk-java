@@ -68,6 +68,23 @@ public class CreateCcnResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public CreateCcnResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateCcnResponse(CreateCcnResponse source) {
+        if (source.Ccn != null) {
+            this.Ccn = new CCN(source.Ccn);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

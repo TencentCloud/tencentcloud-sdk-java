@@ -68,6 +68,26 @@ public class MetricStatisticsInfo extends AbstractModel{
         this.MetricData = MetricData;
     }
 
+    public MetricStatisticsInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MetricStatisticsInfo(MetricStatisticsInfo source) {
+        if (source.MetricName != null) {
+            this.MetricName = new String(source.MetricName);
+        }
+        if (source.MetricData != null) {
+            this.MetricData = new StatisticsDataInfo[source.MetricData.length];
+            for (int i = 0; i < source.MetricData.length; i++) {
+                this.MetricData[i] = new StatisticsDataInfo(source.MetricData[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

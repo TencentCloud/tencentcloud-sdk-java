@@ -183,6 +183,38 @@ public class SignInfo extends AbstractModel{
         this.SignLocation = SignLocation;
     }
 
+    public SignInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SignInfo(SignInfo source) {
+        if (source.AccountResId != null) {
+            this.AccountResId = new String(source.AccountResId);
+        }
+        if (source.AuthorizationTime != null) {
+            this.AuthorizationTime = new String(source.AuthorizationTime);
+        }
+        if (source.Location != null) {
+            this.Location = new String(source.Location);
+        }
+        if (source.SealId != null) {
+            this.SealId = new String(source.SealId);
+        }
+        if (source.ImageData != null) {
+            this.ImageData = new String(source.ImageData);
+        }
+        if (source.CertType != null) {
+            this.CertType = new Long(source.CertType);
+        }
+        if (source.SignLocation != null) {
+            this.SignLocation = new String(source.SignLocation);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

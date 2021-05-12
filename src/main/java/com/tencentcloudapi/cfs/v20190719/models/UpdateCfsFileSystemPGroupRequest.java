@@ -68,6 +68,23 @@ public class UpdateCfsFileSystemPGroupRequest extends AbstractModel{
         this.FileSystemId = FileSystemId;
     }
 
+    public UpdateCfsFileSystemPGroupRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UpdateCfsFileSystemPGroupRequest(UpdateCfsFileSystemPGroupRequest source) {
+        if (source.PGroupId != null) {
+            this.PGroupId = new String(source.PGroupId);
+        }
+        if (source.FileSystemId != null) {
+            this.FileSystemId = new String(source.FileSystemId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -91,6 +91,26 @@ public class DescribeMatchCodesRequest extends AbstractModel{
         this.MatchCode = MatchCode;
     }
 
+    public DescribeMatchCodesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeMatchCodesRequest(DescribeMatchCodesRequest source) {
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.MatchCode != null) {
+            this.MatchCode = new String(source.MatchCode);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

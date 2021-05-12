@@ -124,6 +124,29 @@ public class CosInfo extends AbstractModel{
         this.CosAuthMode = CosAuthMode;
     }
 
+    public CosInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CosInfo(CosInfo source) {
+        if (source.Region != null) {
+            this.Region = new String(source.Region);
+        }
+        if (source.Bucket != null) {
+            this.Bucket = new String(source.Bucket);
+        }
+        if (source.Path != null) {
+            this.Path = new String(source.Path);
+        }
+        if (source.CosAuthMode != null) {
+            this.CosAuthMode = new CosAuthMode(source.CosAuthMode);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

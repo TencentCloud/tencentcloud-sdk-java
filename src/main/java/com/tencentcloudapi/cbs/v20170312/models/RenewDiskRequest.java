@@ -68,6 +68,23 @@ public class RenewDiskRequest extends AbstractModel{
         this.DiskId = DiskId;
     }
 
+    public RenewDiskRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RenewDiskRequest(RenewDiskRequest source) {
+        if (source.DiskChargePrepaid != null) {
+            this.DiskChargePrepaid = new DiskChargePrepaid(source.DiskChargePrepaid);
+        }
+        if (source.DiskId != null) {
+            this.DiskId = new String(source.DiskId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

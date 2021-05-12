@@ -68,6 +68,26 @@ public class SpecConfig extends AbstractModel{
         this.SpecConfigInfos = SpecConfigInfos;
     }
 
+    public SpecConfig() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SpecConfig(SpecConfig source) {
+        if (source.Machine != null) {
+            this.Machine = new String(source.Machine);
+        }
+        if (source.SpecConfigInfos != null) {
+            this.SpecConfigInfos = new SpecConfigInfo[source.SpecConfigInfos.length];
+            for (int i = 0; i < source.SpecConfigInfos.length; i++) {
+                this.SpecConfigInfos[i] = new SpecConfigInfo(source.SpecConfigInfos[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -91,6 +91,26 @@ public class ClusterAsGroupAttribute extends AbstractModel{
         this.AutoScalingGroupRange = AutoScalingGroupRange;
     }
 
+    public ClusterAsGroupAttribute() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ClusterAsGroupAttribute(ClusterAsGroupAttribute source) {
+        if (source.AutoScalingGroupId != null) {
+            this.AutoScalingGroupId = new String(source.AutoScalingGroupId);
+        }
+        if (source.AutoScalingGroupEnabled != null) {
+            this.AutoScalingGroupEnabled = new Boolean(source.AutoScalingGroupEnabled);
+        }
+        if (source.AutoScalingGroupRange != null) {
+            this.AutoScalingGroupRange = new AutoScalingGroupRange(source.AutoScalingGroupRange);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -165,6 +165,35 @@ public class GroupOffsetPartition extends AbstractModel{
         this.Lag = Lag;
     }
 
+    public GroupOffsetPartition() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GroupOffsetPartition(GroupOffsetPartition source) {
+        if (source.Partition != null) {
+            this.Partition = new Long(source.Partition);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Metadata != null) {
+            this.Metadata = new String(source.Metadata);
+        }
+        if (source.ErrorCode != null) {
+            this.ErrorCode = new Long(source.ErrorCode);
+        }
+        if (source.LogEndOffset != null) {
+            this.LogEndOffset = new Long(source.LogEndOffset);
+        }
+        if (source.Lag != null) {
+            this.Lag = new Long(source.Lag);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

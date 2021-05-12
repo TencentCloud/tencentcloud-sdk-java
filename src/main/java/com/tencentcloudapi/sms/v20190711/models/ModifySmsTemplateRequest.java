@@ -170,6 +170,35 @@ public class ModifySmsTemplateRequest extends AbstractModel{
         this.Remark = Remark;
     }
 
+    public ModifySmsTemplateRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifySmsTemplateRequest(ModifySmsTemplateRequest source) {
+        if (source.TemplateId != null) {
+            this.TemplateId = new Long(source.TemplateId);
+        }
+        if (source.TemplateName != null) {
+            this.TemplateName = new String(source.TemplateName);
+        }
+        if (source.TemplateContent != null) {
+            this.TemplateContent = new String(source.TemplateContent);
+        }
+        if (source.SmsType != null) {
+            this.SmsType = new Long(source.SmsType);
+        }
+        if (source.International != null) {
+            this.International = new Long(source.International);
+        }
+        if (source.Remark != null) {
+            this.Remark = new String(source.Remark);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

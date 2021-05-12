@@ -91,6 +91,26 @@ public class ChangeRoomPlayerStatusRequest extends AbstractModel{
         this.PlayerId = PlayerId;
     }
 
+    public ChangeRoomPlayerStatusRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ChangeRoomPlayerStatusRequest(ChangeRoomPlayerStatusRequest source) {
+        if (source.GameId != null) {
+            this.GameId = new String(source.GameId);
+        }
+        if (source.CustomStatus != null) {
+            this.CustomStatus = new Long(source.CustomStatus);
+        }
+        if (source.PlayerId != null) {
+            this.PlayerId = new String(source.PlayerId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

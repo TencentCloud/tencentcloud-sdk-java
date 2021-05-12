@@ -91,6 +91,26 @@ public class DescribePersonInfoByFacePictureRequest extends AbstractModel{
         this.Picture = Picture;
     }
 
+    public DescribePersonInfoByFacePictureRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribePersonInfoByFacePictureRequest(DescribePersonInfoByFacePictureRequest source) {
+        if (source.CompanyId != null) {
+            this.CompanyId = new String(source.CompanyId);
+        }
+        if (source.ShopId != null) {
+            this.ShopId = new Long(source.ShopId);
+        }
+        if (source.Picture != null) {
+            this.Picture = new String(source.Picture);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

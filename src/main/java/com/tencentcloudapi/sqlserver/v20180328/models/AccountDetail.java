@@ -229,6 +229,47 @@ public class AccountDetail extends AbstractModel{
         this.IsAdmin = IsAdmin;
     }
 
+    public AccountDetail() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AccountDetail(AccountDetail source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Remark != null) {
+            this.Remark = new String(source.Remark);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new String(source.UpdateTime);
+        }
+        if (source.PassTime != null) {
+            this.PassTime = new String(source.PassTime);
+        }
+        if (source.InternalStatus != null) {
+            this.InternalStatus = new String(source.InternalStatus);
+        }
+        if (source.Dbs != null) {
+            this.Dbs = new DBPrivilege[source.Dbs.length];
+            for (int i = 0; i < source.Dbs.length; i++) {
+                this.Dbs[i] = new DBPrivilege(source.Dbs[i]);
+            }
+        }
+        if (source.IsAdmin != null) {
+            this.IsAdmin = new Boolean(source.IsAdmin);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

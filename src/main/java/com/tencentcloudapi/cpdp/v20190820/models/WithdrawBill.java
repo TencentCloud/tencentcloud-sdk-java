@@ -206,6 +206,41 @@ public class WithdrawBill extends AbstractModel{
         this.ExtendFieldData = ExtendFieldData;
     }
 
+    public WithdrawBill() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public WithdrawBill(WithdrawBill source) {
+        if (source.WithdrawOrderId != null) {
+            this.WithdrawOrderId = new String(source.WithdrawOrderId);
+        }
+        if (source.Date != null) {
+            this.Date = new String(source.Date);
+        }
+        if (source.PayAmt != null) {
+            this.PayAmt = new String(source.PayAmt);
+        }
+        if (source.InSubAppId != null) {
+            this.InSubAppId = new String(source.InSubAppId);
+        }
+        if (source.OutSubAppId != null) {
+            this.OutSubAppId = new String(source.OutSubAppId);
+        }
+        if (source.CurrencyType != null) {
+            this.CurrencyType = new String(source.CurrencyType);
+        }
+        if (source.MetaData != null) {
+            this.MetaData = new String(source.MetaData);
+        }
+        if (source.ExtendFieldData != null) {
+            this.ExtendFieldData = new String(source.ExtendFieldData);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

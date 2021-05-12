@@ -68,6 +68,23 @@ public class DescribeVpcViewResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeVpcViewResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeVpcViewResponse(DescribeVpcViewResponse source) {
+        if (source.VpcView != null) {
+            this.VpcView = new VpcViewInfo(source.VpcView);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -274,6 +274,47 @@ public class ProductInstance extends AbstractModel{
         this.RefundStatus = RefundStatus;
     }
 
+    public ProductInstance() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ProductInstance(ProductInstance source) {
+        if (source.ProductType != null) {
+            this.ProductType = new String(source.ProductType);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.ExpireTime != null) {
+            this.ExpireTime = new String(source.ExpireTime);
+        }
+        if (source.ProductInstanceId != null) {
+            this.ProductInstanceId = new String(source.ProductInstanceId);
+        }
+        if (source.LastConsumeDate != null) {
+            this.LastConsumeDate = new String(source.LastConsumeDate);
+        }
+        if (source.BindStatus != null) {
+            this.BindStatus = new Long(source.BindStatus);
+        }
+        if (source.ProductInstanceResourceSet != null) {
+            this.ProductInstanceResourceSet = new ProductInstanceRecource[source.ProductInstanceResourceSet.length];
+            for (int i = 0; i < source.ProductInstanceResourceSet.length; i++) {
+                this.ProductInstanceResourceSet[i] = new ProductInstanceRecource(source.ProductInstanceResourceSet[i]);
+            }
+        }
+        if (source.ProductInstanceStatus != null) {
+            this.ProductInstanceStatus = new String(source.ProductInstanceStatus);
+        }
+        if (source.RefundStatus != null) {
+            this.RefundStatus = new String(source.RefundStatus);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -68,6 +68,23 @@ public class GetKeyRotationStatusResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public GetKeyRotationStatusResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GetKeyRotationStatusResponse(GetKeyRotationStatusResponse source) {
+        if (source.KeyRotationEnabled != null) {
+            this.KeyRotationEnabled = new Boolean(source.KeyRotationEnabled);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -101,6 +101,29 @@ public class ScdnAclConfig extends AbstractModel{
         this.ErrorPage = ErrorPage;
     }
 
+    public ScdnAclConfig() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ScdnAclConfig(ScdnAclConfig source) {
+        if (source.Switch != null) {
+            this.Switch = new String(source.Switch);
+        }
+        if (source.ScriptData != null) {
+            this.ScriptData = new ScdnAclGroup[source.ScriptData.length];
+            for (int i = 0; i < source.ScriptData.length; i++) {
+                this.ScriptData[i] = new ScdnAclGroup(source.ScriptData[i]);
+            }
+        }
+        if (source.ErrorPage != null) {
+            this.ErrorPage = new ScdnErrorPage(source.ErrorPage);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

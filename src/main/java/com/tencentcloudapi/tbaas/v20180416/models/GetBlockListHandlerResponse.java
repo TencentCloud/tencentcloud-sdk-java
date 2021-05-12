@@ -114,6 +114,32 @@ public class GetBlockListHandlerResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public GetBlockListHandlerResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GetBlockListHandlerResponse(GetBlockListHandlerResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.GroupPk != null) {
+            this.GroupPk = new String(source.GroupPk);
+        }
+        if (source.List != null) {
+            this.List = new BcosBlockObj[source.List.length];
+            for (int i = 0; i < source.List.length; i++) {
+                this.List[i] = new BcosBlockObj(source.List[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

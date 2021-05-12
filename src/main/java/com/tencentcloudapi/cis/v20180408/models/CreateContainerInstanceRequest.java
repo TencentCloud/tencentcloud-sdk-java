@@ -160,6 +160,38 @@ public class CreateContainerInstanceRequest extends AbstractModel{
         this.Containers = Containers;
     }
 
+    public CreateContainerInstanceRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateContainerInstanceRequest(CreateContainerInstanceRequest source) {
+        if (source.Zone != null) {
+            this.Zone = new String(source.Zone);
+        }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.SubnetId != null) {
+            this.SubnetId = new String(source.SubnetId);
+        }
+        if (source.InstanceName != null) {
+            this.InstanceName = new String(source.InstanceName);
+        }
+        if (source.RestartPolicy != null) {
+            this.RestartPolicy = new String(source.RestartPolicy);
+        }
+        if (source.Containers != null) {
+            this.Containers = new Container[source.Containers.length];
+            for (int i = 0; i < source.Containers.length; i++) {
+                this.Containers[i] = new Container(source.Containers[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

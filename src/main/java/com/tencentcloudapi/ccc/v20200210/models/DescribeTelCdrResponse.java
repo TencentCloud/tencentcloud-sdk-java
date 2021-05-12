@@ -91,6 +91,29 @@ public class DescribeTelCdrResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeTelCdrResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeTelCdrResponse(DescribeTelCdrResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.TelCdrs != null) {
+            this.TelCdrs = new TelCdrInfo[source.TelCdrs.length];
+            for (int i = 0; i < source.TelCdrs.length; i++) {
+                this.TelCdrs[i] = new TelCdrInfo(source.TelCdrs[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

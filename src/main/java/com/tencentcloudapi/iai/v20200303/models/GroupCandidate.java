@@ -68,6 +68,26 @@ public class GroupCandidate extends AbstractModel{
         this.Candidates = Candidates;
     }
 
+    public GroupCandidate() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GroupCandidate(GroupCandidate source) {
+        if (source.GroupId != null) {
+            this.GroupId = new String(source.GroupId);
+        }
+        if (source.Candidates != null) {
+            this.Candidates = new Candidate[source.Candidates.length];
+            for (int i = 0; i < source.Candidates.length; i++) {
+                this.Candidates[i] = new Candidate(source.Candidates[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

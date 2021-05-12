@@ -160,6 +160,35 @@ public class DescribePlayerSessionsRequest extends AbstractModel{
         this.PlayerSessionStatusFilter = PlayerSessionStatusFilter;
     }
 
+    public DescribePlayerSessionsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribePlayerSessionsRequest(DescribePlayerSessionsRequest source) {
+        if (source.GameServerSessionId != null) {
+            this.GameServerSessionId = new String(source.GameServerSessionId);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.NextToken != null) {
+            this.NextToken = new String(source.NextToken);
+        }
+        if (source.PlayerId != null) {
+            this.PlayerId = new String(source.PlayerId);
+        }
+        if (source.PlayerSessionId != null) {
+            this.PlayerSessionId = new String(source.PlayerSessionId);
+        }
+        if (source.PlayerSessionStatusFilter != null) {
+            this.PlayerSessionStatusFilter = new String(source.PlayerSessionStatusFilter);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

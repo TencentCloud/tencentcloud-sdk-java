@@ -114,6 +114,32 @@ public class PrometheusJobTargets extends AbstractModel{
         this.Up = Up;
     }
 
+    public PrometheusJobTargets() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PrometheusJobTargets(PrometheusJobTargets source) {
+        if (source.Targets != null) {
+            this.Targets = new PrometheusTarget[source.Targets.length];
+            for (int i = 0; i < source.Targets.length; i++) {
+                this.Targets[i] = new PrometheusTarget(source.Targets[i]);
+            }
+        }
+        if (source.JobName != null) {
+            this.JobName = new String(source.JobName);
+        }
+        if (source.Total != null) {
+            this.Total = new Long(source.Total);
+        }
+        if (source.Up != null) {
+            this.Up = new Long(source.Up);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -370,6 +370,35 @@ playerSessionCount 当前玩家会话数 Number
         this.SortExpression = SortExpression;
     }
 
+    public SearchGameServerSessionsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SearchGameServerSessionsRequest(SearchGameServerSessionsRequest source) {
+        if (source.AliasId != null) {
+            this.AliasId = new String(source.AliasId);
+        }
+        if (source.FleetId != null) {
+            this.FleetId = new String(source.FleetId);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.NextToken != null) {
+            this.NextToken = new String(source.NextToken);
+        }
+        if (source.FilterExpression != null) {
+            this.FilterExpression = new String(source.FilterExpression);
+        }
+        if (source.SortExpression != null) {
+            this.SortExpression = new String(source.SortExpression);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -91,6 +91,26 @@ public class DescribeDatabasesRequest extends AbstractModel{
         this.KeyWord = KeyWord;
     }
 
+    public DescribeDatabasesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeDatabasesRequest(DescribeDatabasesRequest source) {
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.KeyWord != null) {
+            this.KeyWord = new String(source.KeyWord);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

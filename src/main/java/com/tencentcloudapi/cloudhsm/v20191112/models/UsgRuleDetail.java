@@ -218,6 +218,44 @@ public class UsgRuleDetail extends AbstractModel{
         this.Version = Version;
     }
 
+    public UsgRuleDetail() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UsgRuleDetail(UsgRuleDetail source) {
+        if (source.InBound != null) {
+            this.InBound = new UsgPolicy[source.InBound.length];
+            for (int i = 0; i < source.InBound.length; i++) {
+                this.InBound[i] = new UsgPolicy(source.InBound[i]);
+            }
+        }
+        if (source.OutBound != null) {
+            this.OutBound = new UsgPolicy[source.OutBound.length];
+            for (int i = 0; i < source.OutBound.length; i++) {
+                this.OutBound[i] = new UsgPolicy(source.OutBound[i]);
+            }
+        }
+        if (source.SgId != null) {
+            this.SgId = new String(source.SgId);
+        }
+        if (source.SgName != null) {
+            this.SgName = new String(source.SgName);
+        }
+        if (source.SgRemark != null) {
+            this.SgRemark = new String(source.SgRemark);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.Version != null) {
+            this.Version = new Long(source.Version);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

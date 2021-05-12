@@ -137,6 +137,32 @@ public class CreateSealRequest extends AbstractModel{
         this.ImgData = ImgData;
     }
 
+    public CreateSealRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateSealRequest(CreateSealRequest source) {
+        if (source.Module != null) {
+            this.Module = new String(source.Module);
+        }
+        if (source.Operation != null) {
+            this.Operation = new String(source.Operation);
+        }
+        if (source.AccountResId != null) {
+            this.AccountResId = new String(source.AccountResId);
+        }
+        if (source.ImgUrl != null) {
+            this.ImgUrl = new String(source.ImgUrl);
+        }
+        if (source.ImgData != null) {
+            this.ImgData = new String(source.ImgData);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

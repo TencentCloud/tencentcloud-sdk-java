@@ -165,6 +165,38 @@ public class DescribeDomains extends AbstractModel{
         this.AllowMaxAddDomain = AllowMaxAddDomain;
     }
 
+    public DescribeDomains() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeDomains(DescribeDomains source) {
+        if (source.Result != null) {
+            this.Result = new DomainSiteInfo[source.Result.length];
+            for (int i = 0; i < source.Result.length; i++) {
+                this.Result[i] = new DomainSiteInfo(source.Result[i]);
+            }
+        }
+        if (source.SearchTotal != null) {
+            this.SearchTotal = new Long(source.SearchTotal);
+        }
+        if (source.Total != null) {
+            this.Total = new Long(source.Total);
+        }
+        if (source.AllowMonitoringCount != null) {
+            this.AllowMonitoringCount = new Long(source.AllowMonitoringCount);
+        }
+        if (source.CurrentMonitoringCount != null) {
+            this.CurrentMonitoringCount = new Long(source.CurrentMonitoringCount);
+        }
+        if (source.AllowMaxAddDomain != null) {
+            this.AllowMaxAddDomain = new Long(source.AllowMaxAddDomain);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -183,6 +183,38 @@ public class DescribeAccountPrivilegesRequest extends AbstractModel{
         this.ColName = ColName;
     }
 
+    public DescribeAccountPrivilegesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeAccountPrivilegesRequest(DescribeAccountPrivilegesRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.UserName != null) {
+            this.UserName = new String(source.UserName);
+        }
+        if (source.Host != null) {
+            this.Host = new String(source.Host);
+        }
+        if (source.DbName != null) {
+            this.DbName = new String(source.DbName);
+        }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.Object != null) {
+            this.Object = new String(source.Object);
+        }
+        if (source.ColName != null) {
+            this.ColName = new String(source.ColName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

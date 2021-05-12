@@ -45,6 +45,20 @@ public class DeleteVpcEndPointServiceRequest extends AbstractModel{
         this.EndPointServiceId = EndPointServiceId;
     }
 
+    public DeleteVpcEndPointServiceRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteVpcEndPointServiceRequest(DeleteVpcEndPointServiceRequest source) {
+        if (source.EndPointServiceId != null) {
+            this.EndPointServiceId = new String(source.EndPointServiceId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

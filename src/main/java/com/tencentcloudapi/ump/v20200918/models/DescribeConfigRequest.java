@@ -183,6 +183,38 @@ public class DescribeConfigRequest extends AbstractModel{
         this.MallId = MallId;
     }
 
+    public DescribeConfigRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeConfigRequest(DescribeConfigRequest source) {
+        if (source.SessionId != null) {
+            this.SessionId = new String(source.SessionId);
+        }
+        if (source.CameraSign != null) {
+            this.CameraSign = new String(source.CameraSign);
+        }
+        if (source.CameraAppId != null) {
+            this.CameraAppId = new String(source.CameraAppId);
+        }
+        if (source.CameraTimestamp != null) {
+            this.CameraTimestamp = new Long(source.CameraTimestamp);
+        }
+        if (source.ServerMac != null) {
+            this.ServerMac = new String(source.ServerMac);
+        }
+        if (source.GroupCode != null) {
+            this.GroupCode = new String(source.GroupCode);
+        }
+        if (source.MallId != null) {
+            this.MallId = new Long(source.MallId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

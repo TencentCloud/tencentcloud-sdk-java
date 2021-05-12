@@ -114,6 +114,32 @@ public class SearchPersonsReturnsByGroupResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public SearchPersonsReturnsByGroupResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SearchPersonsReturnsByGroupResponse(SearchPersonsReturnsByGroupResponse source) {
+        if (source.PersonNum != null) {
+            this.PersonNum = new Long(source.PersonNum);
+        }
+        if (source.ResultsReturnsByGroup != null) {
+            this.ResultsReturnsByGroup = new ResultsReturnsByGroup[source.ResultsReturnsByGroup.length];
+            for (int i = 0; i < source.ResultsReturnsByGroup.length; i++) {
+                this.ResultsReturnsByGroup[i] = new ResultsReturnsByGroup(source.ResultsReturnsByGroup[i]);
+            }
+        }
+        if (source.FaceModelVersion != null) {
+            this.FaceModelVersion = new String(source.FaceModelVersion);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

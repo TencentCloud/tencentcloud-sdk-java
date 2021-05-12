@@ -45,6 +45,20 @@ public class UrlInputInfo extends AbstractModel{
         this.Url = Url;
     }
 
+    public UrlInputInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UrlInputInfo(UrlInputInfo source) {
+        if (source.Url != null) {
+            this.Url = new String(source.Url);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

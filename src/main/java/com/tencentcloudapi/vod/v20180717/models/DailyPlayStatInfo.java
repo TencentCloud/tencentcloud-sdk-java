@@ -114,6 +114,29 @@ public class DailyPlayStatInfo extends AbstractModel{
         this.Traffic = Traffic;
     }
 
+    public DailyPlayStatInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DailyPlayStatInfo(DailyPlayStatInfo source) {
+        if (source.Date != null) {
+            this.Date = new String(source.Date);
+        }
+        if (source.FileId != null) {
+            this.FileId = new String(source.FileId);
+        }
+        if (source.PlayTimes != null) {
+            this.PlayTimes = new Long(source.PlayTimes);
+        }
+        if (source.Traffic != null) {
+            this.Traffic = new Long(source.Traffic);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

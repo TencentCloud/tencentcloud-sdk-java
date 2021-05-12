@@ -91,6 +91,29 @@ public class DescribeSeatUserListResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeSeatUserListResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeSeatUserListResponse(DescribeSeatUserListResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.SeatUsers != null) {
+            this.SeatUsers = new SeatUserInfo[source.SeatUsers.length];
+            for (int i = 0; i < source.SeatUsers.length; i++) {
+                this.SeatUsers[i] = new SeatUserInfo(source.SeatUsers[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

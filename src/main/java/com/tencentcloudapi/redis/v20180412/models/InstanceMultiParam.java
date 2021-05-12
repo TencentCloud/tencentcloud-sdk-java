@@ -206,6 +206,44 @@ public class InstanceMultiParam extends AbstractModel{
         this.Status = Status;
     }
 
+    public InstanceMultiParam() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public InstanceMultiParam(InstanceMultiParam source) {
+        if (source.ParamName != null) {
+            this.ParamName = new String(source.ParamName);
+        }
+        if (source.ValueType != null) {
+            this.ValueType = new String(source.ValueType);
+        }
+        if (source.NeedRestart != null) {
+            this.NeedRestart = new String(source.NeedRestart);
+        }
+        if (source.DefaultValue != null) {
+            this.DefaultValue = new String(source.DefaultValue);
+        }
+        if (source.CurrentValue != null) {
+            this.CurrentValue = new String(source.CurrentValue);
+        }
+        if (source.Tips != null) {
+            this.Tips = new String(source.Tips);
+        }
+        if (source.EnumValue != null) {
+            this.EnumValue = new String[source.EnumValue.length];
+            for (int i = 0; i < source.EnumValue.length; i++) {
+                this.EnumValue[i] = new String(source.EnumValue[i]);
+            }
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

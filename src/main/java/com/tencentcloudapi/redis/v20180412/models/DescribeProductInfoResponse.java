@@ -68,6 +68,26 @@ public class DescribeProductInfoResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeProductInfoResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeProductInfoResponse(DescribeProductInfoResponse source) {
+        if (source.RegionSet != null) {
+            this.RegionSet = new RegionConf[source.RegionSet.length];
+            for (int i = 0; i < source.RegionSet.length; i++) {
+                this.RegionSet[i] = new RegionConf(source.RegionSet[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

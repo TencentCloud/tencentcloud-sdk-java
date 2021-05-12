@@ -378,6 +378,53 @@ CCN：云联网路由，系统默认下发，不可编辑与删除。
         this.CreatedTime = CreatedTime;
     }
 
+    public Route() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Route(Route source) {
+        if (source.DestinationCidrBlock != null) {
+            this.DestinationCidrBlock = new String(source.DestinationCidrBlock);
+        }
+        if (source.GatewayType != null) {
+            this.GatewayType = new String(source.GatewayType);
+        }
+        if (source.GatewayId != null) {
+            this.GatewayId = new String(source.GatewayId);
+        }
+        if (source.RouteId != null) {
+            this.RouteId = new Long(source.RouteId);
+        }
+        if (source.RouteDescription != null) {
+            this.RouteDescription = new String(source.RouteDescription);
+        }
+        if (source.Enabled != null) {
+            this.Enabled = new Boolean(source.Enabled);
+        }
+        if (source.RouteType != null) {
+            this.RouteType = new String(source.RouteType);
+        }
+        if (source.RouteTableId != null) {
+            this.RouteTableId = new String(source.RouteTableId);
+        }
+        if (source.DestinationIpv6CidrBlock != null) {
+            this.DestinationIpv6CidrBlock = new String(source.DestinationIpv6CidrBlock);
+        }
+        if (source.RouteItemId != null) {
+            this.RouteItemId = new String(source.RouteItemId);
+        }
+        if (source.PublishedToVbc != null) {
+            this.PublishedToVbc = new Boolean(source.PublishedToVbc);
+        }
+        if (source.CreatedTime != null) {
+            this.CreatedTime = new String(source.CreatedTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

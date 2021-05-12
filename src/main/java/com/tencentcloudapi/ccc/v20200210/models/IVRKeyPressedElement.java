@@ -78,6 +78,23 @@ public class IVRKeyPressedElement extends AbstractModel{
         this.Label = Label;
     }
 
+    public IVRKeyPressedElement() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public IVRKeyPressedElement(IVRKeyPressedElement source) {
+        if (source.Key != null) {
+            this.Key = new String(source.Key);
+        }
+        if (source.Label != null) {
+            this.Label = new String(source.Label);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

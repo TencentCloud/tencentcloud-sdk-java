@@ -45,6 +45,20 @@ public class DescribeExecutionRequest extends AbstractModel{
         this.ExecutionResourceName = ExecutionResourceName;
     }
 
+    public DescribeExecutionRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeExecutionRequest(DescribeExecutionRequest source) {
+        if (source.ExecutionResourceName != null) {
+            this.ExecutionResourceName = new String(source.ExecutionResourceName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

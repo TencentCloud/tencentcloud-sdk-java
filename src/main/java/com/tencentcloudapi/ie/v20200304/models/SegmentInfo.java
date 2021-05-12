@@ -101,6 +101,26 @@ public class SegmentInfo extends AbstractModel{
         this.FragmentName = FragmentName;
     }
 
+    public SegmentInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SegmentInfo(SegmentInfo source) {
+        if (source.FragmentTime != null) {
+            this.FragmentTime = new Long(source.FragmentTime);
+        }
+        if (source.SegmentType != null) {
+            this.SegmentType = new String(source.SegmentType);
+        }
+        if (source.FragmentName != null) {
+            this.FragmentName = new String(source.FragmentName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

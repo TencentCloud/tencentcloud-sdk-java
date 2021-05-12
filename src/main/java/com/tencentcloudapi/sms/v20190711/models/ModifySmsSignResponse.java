@@ -68,6 +68,23 @@ public class ModifySmsSignResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public ModifySmsSignResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifySmsSignResponse(ModifySmsSignResponse source) {
+        if (source.ModifySignStatus != null) {
+            this.ModifySignStatus = new ModifySignStatus(source.ModifySignStatus);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

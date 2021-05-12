@@ -91,6 +91,26 @@ public class RedisNodeInfo extends AbstractModel{
         this.NodeId = NodeId;
     }
 
+    public RedisNodeInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RedisNodeInfo(RedisNodeInfo source) {
+        if (source.NodeType != null) {
+            this.NodeType = new Long(source.NodeType);
+        }
+        if (source.ZoneId != null) {
+            this.ZoneId = new Long(source.ZoneId);
+        }
+        if (source.NodeId != null) {
+            this.NodeId = new Long(source.NodeId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

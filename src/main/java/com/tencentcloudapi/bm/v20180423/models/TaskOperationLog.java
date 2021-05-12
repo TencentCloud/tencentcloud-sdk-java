@@ -114,6 +114,29 @@ public class TaskOperationLog extends AbstractModel{
         this.OperationTime = OperationTime;
     }
 
+    public TaskOperationLog() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TaskOperationLog(TaskOperationLog source) {
+        if (source.TaskStep != null) {
+            this.TaskStep = new String(source.TaskStep);
+        }
+        if (source.Operator != null) {
+            this.Operator = new String(source.Operator);
+        }
+        if (source.OperationDetail != null) {
+            this.OperationDetail = new String(source.OperationDetail);
+        }
+        if (source.OperationTime != null) {
+            this.OperationTime = new String(source.OperationTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

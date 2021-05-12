@@ -436,6 +436,71 @@ public class VerifyBasicBizLicenseResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public VerifyBasicBizLicenseResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public VerifyBasicBizLicenseResponse(VerifyBasicBizLicenseResponse source) {
+        if (source.ErrorCode != null) {
+            this.ErrorCode = new Long(source.ErrorCode);
+        }
+        if (source.CreditCode != null) {
+            this.CreditCode = new String(source.CreditCode);
+        }
+        if (source.Opfrom != null) {
+            this.Opfrom = new String(source.Opfrom);
+        }
+        if (source.Opto != null) {
+            this.Opto = new String(source.Opto);
+        }
+        if (source.Frname != null) {
+            this.Frname = new String(source.Frname);
+        }
+        if (source.Entstatus != null) {
+            this.Entstatus = new String(source.Entstatus);
+        }
+        if (source.Zsopscope != null) {
+            this.Zsopscope = new String(source.Zsopscope);
+        }
+        if (source.Reason != null) {
+            this.Reason = new String(source.Reason);
+        }
+        if (source.Oriregno != null) {
+            this.Oriregno = new String(source.Oriregno);
+        }
+        if (source.VerifyRegno != null) {
+            this.VerifyRegno = new String(source.VerifyRegno);
+        }
+        if (source.Regno != null) {
+            this.Regno = new String(source.Regno);
+        }
+        if (source.VerifyEntname != null) {
+            this.VerifyEntname = new String(source.VerifyEntname);
+        }
+        if (source.Entname != null) {
+            this.Entname = new String(source.Entname);
+        }
+        if (source.VerifyDom != null) {
+            this.VerifyDom = new String(source.VerifyDom);
+        }
+        if (source.Dom != null) {
+            this.Dom = new String(source.Dom);
+        }
+        if (source.RegNumResult != null) {
+            this.RegNumResult = new BizLicenseVerifyResult(source.RegNumResult);
+        }
+        if (source.RegCapital != null) {
+            this.RegCapital = new String(source.RegCapital);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -114,6 +114,32 @@ public class ModifyAutoBackupConfigRequest extends AbstractModel{
         this.AutoBackupType = AutoBackupType;
     }
 
+    public ModifyAutoBackupConfigRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyAutoBackupConfigRequest(ModifyAutoBackupConfigRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.WeekDays != null) {
+            this.WeekDays = new String[source.WeekDays.length];
+            for (int i = 0; i < source.WeekDays.length; i++) {
+                this.WeekDays[i] = new String(source.WeekDays[i]);
+            }
+        }
+        if (source.TimePeriod != null) {
+            this.TimePeriod = new String(source.TimePeriod);
+        }
+        if (source.AutoBackupType != null) {
+            this.AutoBackupType = new Long(source.AutoBackupType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

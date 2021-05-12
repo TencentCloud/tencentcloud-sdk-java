@@ -206,6 +206,41 @@ public class HealthReportTask extends AbstractModel{
         this.HealthStatus = HealthStatus;
     }
 
+    public HealthReportTask() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public HealthReportTask(HealthReportTask source) {
+        if (source.AsyncRequestId != null) {
+            this.AsyncRequestId = new Long(source.AsyncRequestId);
+        }
+        if (source.Source != null) {
+            this.Source = new String(source.Source);
+        }
+        if (source.Progress != null) {
+            this.Progress = new Long(source.Progress);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+        if (source.InstanceInfo != null) {
+            this.InstanceInfo = new InstanceBasicInfo(source.InstanceInfo);
+        }
+        if (source.HealthStatus != null) {
+            this.HealthStatus = new HealthStatus(source.HealthStatus);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

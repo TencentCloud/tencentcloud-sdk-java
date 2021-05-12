@@ -91,6 +91,26 @@ public class AppResetPasswordRequest extends AbstractModel{
         this.NewPassword = NewPassword;
     }
 
+    public AppResetPasswordRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AppResetPasswordRequest(AppResetPasswordRequest source) {
+        if (source.AccessToken != null) {
+            this.AccessToken = new String(source.AccessToken);
+        }
+        if (source.OldPassword != null) {
+            this.OldPassword = new String(source.OldPassword);
+        }
+        if (source.NewPassword != null) {
+            this.NewPassword = new String(source.NewPassword);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

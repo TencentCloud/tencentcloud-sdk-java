@@ -45,6 +45,20 @@ public class RefreshDomainRequest extends AbstractModel{
         this.DomainId = DomainId;
     }
 
+    public RefreshDomainRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RefreshDomainRequest(RefreshDomainRequest source) {
+        if (source.DomainId != null) {
+            this.DomainId = new Long(source.DomainId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

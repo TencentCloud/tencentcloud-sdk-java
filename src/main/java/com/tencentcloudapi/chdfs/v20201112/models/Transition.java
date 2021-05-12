@@ -68,6 +68,23 @@ public class Transition extends AbstractModel{
         this.Type = Type;
     }
 
+    public Transition() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Transition(Transition source) {
+        if (source.Days != null) {
+            this.Days = new Long(source.Days);
+        }
+        if (source.Type != null) {
+            this.Type = new Long(source.Type);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

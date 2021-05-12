@@ -114,6 +114,29 @@ public class ModifySnapshotAttributeRequest extends AbstractModel{
         this.Deadline = Deadline;
     }
 
+    public ModifySnapshotAttributeRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifySnapshotAttributeRequest(ModifySnapshotAttributeRequest source) {
+        if (source.SnapshotId != null) {
+            this.SnapshotId = new String(source.SnapshotId);
+        }
+        if (source.SnapshotName != null) {
+            this.SnapshotName = new String(source.SnapshotName);
+        }
+        if (source.IsPermanent != null) {
+            this.IsPermanent = new Boolean(source.IsPermanent);
+        }
+        if (source.Deadline != null) {
+            this.Deadline = new String(source.Deadline);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

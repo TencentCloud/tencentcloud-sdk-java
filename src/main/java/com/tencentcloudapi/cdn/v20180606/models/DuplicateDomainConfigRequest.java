@@ -68,6 +68,23 @@ public class DuplicateDomainConfigRequest extends AbstractModel{
         this.ReferenceDomain = ReferenceDomain;
     }
 
+    public DuplicateDomainConfigRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DuplicateDomainConfigRequest(DuplicateDomainConfigRequest source) {
+        if (source.Domain != null) {
+            this.Domain = new String(source.Domain);
+        }
+        if (source.ReferenceDomain != null) {
+            this.ReferenceDomain = new String(source.ReferenceDomain);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

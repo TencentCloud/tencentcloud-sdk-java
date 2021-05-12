@@ -91,6 +91,29 @@ public class DescribeAgentBillsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeAgentBillsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeAgentBillsResponse(DescribeAgentBillsResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.AgentBillSet != null) {
+            this.AgentBillSet = new AgentBillElem[source.AgentBillSet.length];
+            for (int i = 0; i < source.AgentBillSet.length; i++) {
+                this.AgentBillSet[i] = new AgentBillElem(source.AgentBillSet[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

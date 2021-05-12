@@ -68,6 +68,23 @@ public class DescribePostpayPackageFreeQuotasRequest extends AbstractModel{
         this.FreeQuotaType = FreeQuotaType;
     }
 
+    public DescribePostpayPackageFreeQuotasRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribePostpayPackageFreeQuotasRequest(DescribePostpayPackageFreeQuotasRequest source) {
+        if (source.EnvId != null) {
+            this.EnvId = new String(source.EnvId);
+        }
+        if (source.FreeQuotaType != null) {
+            this.FreeQuotaType = new String(source.FreeQuotaType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

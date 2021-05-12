@@ -68,6 +68,23 @@ public class DBParamValue extends AbstractModel{
         this.Value = Value;
     }
 
+    public DBParamValue() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DBParamValue(DBParamValue source) {
+        if (source.Param != null) {
+            this.Param = new String(source.Param);
+        }
+        if (source.Value != null) {
+            this.Value = new String(source.Value);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

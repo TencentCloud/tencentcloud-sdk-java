@@ -45,6 +45,20 @@ public class GetPublicKeyRequest extends AbstractModel{
         this.KeyId = KeyId;
     }
 
+    public GetPublicKeyRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GetPublicKeyRequest(GetPublicKeyRequest source) {
+        if (source.KeyId != null) {
+            this.KeyId = new String(source.KeyId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

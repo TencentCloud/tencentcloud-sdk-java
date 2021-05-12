@@ -91,6 +91,29 @@ public class CreateServiceLinkedRoleRequest extends AbstractModel{
         this.Description = Description;
     }
 
+    public CreateServiceLinkedRoleRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateServiceLinkedRoleRequest(CreateServiceLinkedRoleRequest source) {
+        if (source.QCSServiceName != null) {
+            this.QCSServiceName = new String[source.QCSServiceName.length];
+            for (int i = 0; i < source.QCSServiceName.length; i++) {
+                this.QCSServiceName[i] = new String(source.QCSServiceName[i]);
+            }
+        }
+        if (source.CustomSuffix != null) {
+            this.CustomSuffix = new String(source.CustomSuffix);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

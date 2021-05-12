@@ -68,6 +68,23 @@ public class ModifyModuleDisableWanIpRequest extends AbstractModel{
         this.DisableWanIp = DisableWanIp;
     }
 
+    public ModifyModuleDisableWanIpRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyModuleDisableWanIpRequest(ModifyModuleDisableWanIpRequest source) {
+        if (source.ModuleId != null) {
+            this.ModuleId = new String(source.ModuleId);
+        }
+        if (source.DisableWanIp != null) {
+            this.DisableWanIp = new Boolean(source.DisableWanIp);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

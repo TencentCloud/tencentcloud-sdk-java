@@ -160,6 +160,35 @@ public class CreateTaskRequest extends AbstractModel{
         this.MaxExecutionTimeInSeconds = MaxExecutionTimeInSeconds;
     }
 
+    public CreateTaskRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateTaskRequest(CreateTaskRequest source) {
+        if (source.TaskType != null) {
+            this.TaskType = new String(source.TaskType);
+        }
+        if (source.ProductId != null) {
+            this.ProductId = new String(source.ProductId);
+        }
+        if (source.DeviceNameFilter != null) {
+            this.DeviceNameFilter = new String(source.DeviceNameFilter);
+        }
+        if (source.ScheduleTimeInSeconds != null) {
+            this.ScheduleTimeInSeconds = new Long(source.ScheduleTimeInSeconds);
+        }
+        if (source.Tasks != null) {
+            this.Tasks = new Task(source.Tasks);
+        }
+        if (source.MaxExecutionTimeInSeconds != null) {
+            this.MaxExecutionTimeInSeconds = new Long(source.MaxExecutionTimeInSeconds);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

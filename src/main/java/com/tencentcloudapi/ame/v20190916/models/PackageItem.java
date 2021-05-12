@@ -183,6 +183,38 @@ public class PackageItem extends AbstractModel{
         this.AuthorizedArea = AuthorizedArea;
     }
 
+    public PackageItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PackageItem(PackageItem source) {
+        if (source.OrderId != null) {
+            this.OrderId = new String(source.OrderId);
+        }
+        if (source.TrackName != null) {
+            this.TrackName = new String(source.TrackName);
+        }
+        if (source.ItemID != null) {
+            this.ItemID = new String(source.ItemID);
+        }
+        if (source.Img != null) {
+            this.Img = new String(source.Img);
+        }
+        if (source.ArtistName != null) {
+            this.ArtistName = new String(source.ArtistName);
+        }
+        if (source.Duration != null) {
+            this.Duration = new String(source.Duration);
+        }
+        if (source.AuthorizedArea != null) {
+            this.AuthorizedArea = new String(source.AuthorizedArea);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

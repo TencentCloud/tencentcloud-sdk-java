@@ -183,6 +183,41 @@ public class CreateAgentTaxPaymentInfosRequest extends AbstractModel{
         this.Profile = Profile;
     }
 
+    public CreateAgentTaxPaymentInfosRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateAgentTaxPaymentInfosRequest(CreateAgentTaxPaymentInfosRequest source) {
+        if (source.AgentId != null) {
+            this.AgentId = new String(source.AgentId);
+        }
+        if (source.Channel != null) {
+            this.Channel = new Long(source.Channel);
+        }
+        if (source.Type != null) {
+            this.Type = new Long(source.Type);
+        }
+        if (source.RawElectronicCertUrl != null) {
+            this.RawElectronicCertUrl = new String(source.RawElectronicCertUrl);
+        }
+        if (source.FileName != null) {
+            this.FileName = new String(source.FileName);
+        }
+        if (source.AgentTaxPaymentInfos != null) {
+            this.AgentTaxPaymentInfos = new AgentTaxPayment[source.AgentTaxPaymentInfos.length];
+            for (int i = 0; i < source.AgentTaxPaymentInfos.length; i++) {
+                this.AgentTaxPaymentInfos[i] = new AgentTaxPayment(source.AgentTaxPaymentInfos[i]);
+            }
+        }
+        if (source.Profile != null) {
+            this.Profile = new String(source.Profile);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

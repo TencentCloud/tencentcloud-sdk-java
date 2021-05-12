@@ -114,6 +114,29 @@ public class SwitchDBInstanceMasterSlaveRequest extends AbstractModel{
         this.WaitSwitch = WaitSwitch;
     }
 
+    public SwitchDBInstanceMasterSlaveRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SwitchDBInstanceMasterSlaveRequest(SwitchDBInstanceMasterSlaveRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.DstSlave != null) {
+            this.DstSlave = new String(source.DstSlave);
+        }
+        if (source.ForceSwitch != null) {
+            this.ForceSwitch = new Boolean(source.ForceSwitch);
+        }
+        if (source.WaitSwitch != null) {
+            this.WaitSwitch = new Boolean(source.WaitSwitch);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

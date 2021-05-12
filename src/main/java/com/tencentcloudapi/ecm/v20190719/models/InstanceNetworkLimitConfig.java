@@ -114,6 +114,29 @@ public class InstanceNetworkLimitConfig extends AbstractModel{
         this.PublicIpPerInstance = PublicIpPerInstance;
     }
 
+    public InstanceNetworkLimitConfig() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public InstanceNetworkLimitConfig(InstanceNetworkLimitConfig source) {
+        if (source.CpuNum != null) {
+            this.CpuNum = new Long(source.CpuNum);
+        }
+        if (source.NetworkInterfaceLimit != null) {
+            this.NetworkInterfaceLimit = new Long(source.NetworkInterfaceLimit);
+        }
+        if (source.InnerIpPerNetworkInterface != null) {
+            this.InnerIpPerNetworkInterface = new Long(source.InnerIpPerNetworkInterface);
+        }
+        if (source.PublicIpPerInstance != null) {
+            this.PublicIpPerInstance = new Long(source.PublicIpPerInstance);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

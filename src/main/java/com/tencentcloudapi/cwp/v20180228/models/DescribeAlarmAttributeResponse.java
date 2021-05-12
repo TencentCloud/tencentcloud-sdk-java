@@ -177,6 +177,32 @@ public class DescribeAlarmAttributeResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeAlarmAttributeResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeAlarmAttributeResponse(DescribeAlarmAttributeResponse source) {
+        if (source.Offline != null) {
+            this.Offline = new String(source.Offline);
+        }
+        if (source.Malware != null) {
+            this.Malware = new String(source.Malware);
+        }
+        if (source.NonlocalLogin != null) {
+            this.NonlocalLogin = new String(source.NonlocalLogin);
+        }
+        if (source.CrackSuccess != null) {
+            this.CrackSuccess = new String(source.CrackSuccess);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

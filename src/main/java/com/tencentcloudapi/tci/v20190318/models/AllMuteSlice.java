@@ -91,6 +91,29 @@ public class AllMuteSlice extends AbstractModel{
         this.TotalMuteDuration = TotalMuteDuration;
     }
 
+    public AllMuteSlice() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AllMuteSlice(AllMuteSlice source) {
+        if (source.MuteSlice != null) {
+            this.MuteSlice = new MuteSlice[source.MuteSlice.length];
+            for (int i = 0; i < source.MuteSlice.length; i++) {
+                this.MuteSlice[i] = new MuteSlice(source.MuteSlice[i]);
+            }
+        }
+        if (source.MuteRatio != null) {
+            this.MuteRatio = new Float(source.MuteRatio);
+        }
+        if (source.TotalMuteDuration != null) {
+            this.TotalMuteDuration = new Long(source.TotalMuteDuration);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

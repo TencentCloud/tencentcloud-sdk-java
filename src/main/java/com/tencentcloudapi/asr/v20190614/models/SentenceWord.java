@@ -91,6 +91,26 @@ public class SentenceWord extends AbstractModel{
         this.EndTime = EndTime;
     }
 
+    public SentenceWord() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SentenceWord(SentenceWord source) {
+        if (source.Word != null) {
+            this.Word = new String(source.Word);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new Long(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new Long(source.EndTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

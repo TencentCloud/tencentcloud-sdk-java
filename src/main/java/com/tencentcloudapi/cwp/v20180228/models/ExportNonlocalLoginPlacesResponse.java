@@ -91,6 +91,26 @@ public class ExportNonlocalLoginPlacesResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public ExportNonlocalLoginPlacesResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ExportNonlocalLoginPlacesResponse(ExportNonlocalLoginPlacesResponse source) {
+        if (source.DownloadUrl != null) {
+            this.DownloadUrl = new String(source.DownloadUrl);
+        }
+        if (source.TaskId != null) {
+            this.TaskId = new String(source.TaskId);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

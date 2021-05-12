@@ -119,6 +119,32 @@ public class SegmentCustomizedPortraitPicResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public SegmentCustomizedPortraitPicResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SegmentCustomizedPortraitPicResponse(SegmentCustomizedPortraitPicResponse source) {
+        if (source.PortraitImage != null) {
+            this.PortraitImage = new String(source.PortraitImage);
+        }
+        if (source.MaskImage != null) {
+            this.MaskImage = new String(source.MaskImage);
+        }
+        if (source.ImageRects != null) {
+            this.ImageRects = new ImageRect[source.ImageRects.length];
+            for (int i = 0; i < source.ImageRects.length; i++) {
+                this.ImageRects[i] = new ImageRect(source.ImageRects[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

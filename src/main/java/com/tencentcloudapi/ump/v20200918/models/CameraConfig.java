@@ -414,6 +414,59 @@ public class CameraConfig extends AbstractModel{
         this.Height = Height;
     }
 
+    public CameraConfig() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CameraConfig(CameraConfig source) {
+        if (source.GroupCode != null) {
+            this.GroupCode = new String(source.GroupCode);
+        }
+        if (source.MallId != null) {
+            this.MallId = new Long(source.MallId);
+        }
+        if (source.FloorId != null) {
+            this.FloorId = new Long(source.FloorId);
+        }
+        if (source.CameraId != null) {
+            this.CameraId = new Long(source.CameraId);
+        }
+        if (source.CameraIp != null) {
+            this.CameraIp = new String(source.CameraIp);
+        }
+        if (source.CameraMac != null) {
+            this.CameraMac = new String(source.CameraMac);
+        }
+        if (source.CameraType != null) {
+            this.CameraType = new Long(source.CameraType);
+        }
+        if (source.CameraFeature != null) {
+            this.CameraFeature = new Long(source.CameraFeature);
+        }
+        if (source.CameraState != null) {
+            this.CameraState = new Long(source.CameraState);
+        }
+        if (source.ZoneId != null) {
+            this.ZoneId = new Long(source.ZoneId);
+        }
+        if (source.ZoneType != null) {
+            this.ZoneType = new Long(source.ZoneType);
+        }
+        if (source.Config != null) {
+            this.Config = new Config(source.Config);
+        }
+        if (source.Width != null) {
+            this.Width = new Long(source.Width);
+        }
+        if (source.Height != null) {
+            this.Height = new Long(source.Height);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

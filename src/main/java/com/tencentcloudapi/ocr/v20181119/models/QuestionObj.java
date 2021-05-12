@@ -175,6 +175,38 @@ public class QuestionObj extends AbstractModel{
         this.QuestionImageCoords = QuestionImageCoords;
     }
 
+    public QuestionObj() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public QuestionObj(QuestionObj source) {
+        if (source.QuestionTextNo != null) {
+            this.QuestionTextNo = new String(source.QuestionTextNo);
+        }
+        if (source.QuestionTextType != null) {
+            this.QuestionTextType = new Long(source.QuestionTextType);
+        }
+        if (source.QuestionText != null) {
+            this.QuestionText = new String(source.QuestionText);
+        }
+        if (source.QuestionOptions != null) {
+            this.QuestionOptions = new String(source.QuestionOptions);
+        }
+        if (source.QuestionSubquestion != null) {
+            this.QuestionSubquestion = new String(source.QuestionSubquestion);
+        }
+        if (source.QuestionImageCoords != null) {
+            this.QuestionImageCoords = new Rect[source.QuestionImageCoords.length];
+            for (int i = 0; i < source.QuestionImageCoords.length; i++) {
+                this.QuestionImageCoords[i] = new Rect(source.QuestionImageCoords[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

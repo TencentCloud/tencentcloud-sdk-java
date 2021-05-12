@@ -436,6 +436,86 @@ public class Task extends AbstractModel{
         this.ResourceMaxRetryCount = ResourceMaxRetryCount;
     }
 
+    public Task() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Task(Task source) {
+        if (source.Application != null) {
+            this.Application = new Application(source.Application);
+        }
+        if (source.TaskName != null) {
+            this.TaskName = new String(source.TaskName);
+        }
+        if (source.TaskInstanceNum != null) {
+            this.TaskInstanceNum = new Long(source.TaskInstanceNum);
+        }
+        if (source.ComputeEnv != null) {
+            this.ComputeEnv = new AnonymousComputeEnv(source.ComputeEnv);
+        }
+        if (source.EnvId != null) {
+            this.EnvId = new String(source.EnvId);
+        }
+        if (source.RedirectInfo != null) {
+            this.RedirectInfo = new RedirectInfo(source.RedirectInfo);
+        }
+        if (source.RedirectLocalInfo != null) {
+            this.RedirectLocalInfo = new RedirectLocalInfo(source.RedirectLocalInfo);
+        }
+        if (source.InputMappings != null) {
+            this.InputMappings = new InputMapping[source.InputMappings.length];
+            for (int i = 0; i < source.InputMappings.length; i++) {
+                this.InputMappings[i] = new InputMapping(source.InputMappings[i]);
+            }
+        }
+        if (source.OutputMappings != null) {
+            this.OutputMappings = new OutputMapping[source.OutputMappings.length];
+            for (int i = 0; i < source.OutputMappings.length; i++) {
+                this.OutputMappings[i] = new OutputMapping(source.OutputMappings[i]);
+            }
+        }
+        if (source.OutputMappingConfigs != null) {
+            this.OutputMappingConfigs = new OutputMappingConfig[source.OutputMappingConfigs.length];
+            for (int i = 0; i < source.OutputMappingConfigs.length; i++) {
+                this.OutputMappingConfigs[i] = new OutputMappingConfig(source.OutputMappingConfigs[i]);
+            }
+        }
+        if (source.EnvVars != null) {
+            this.EnvVars = new EnvVar[source.EnvVars.length];
+            for (int i = 0; i < source.EnvVars.length; i++) {
+                this.EnvVars[i] = new EnvVar(source.EnvVars[i]);
+            }
+        }
+        if (source.Authentications != null) {
+            this.Authentications = new Authentication[source.Authentications.length];
+            for (int i = 0; i < source.Authentications.length; i++) {
+                this.Authentications[i] = new Authentication(source.Authentications[i]);
+            }
+        }
+        if (source.FailedAction != null) {
+            this.FailedAction = new String(source.FailedAction);
+        }
+        if (source.MaxRetryCount != null) {
+            this.MaxRetryCount = new Long(source.MaxRetryCount);
+        }
+        if (source.Timeout != null) {
+            this.Timeout = new Long(source.Timeout);
+        }
+        if (source.MaxConcurrentNum != null) {
+            this.MaxConcurrentNum = new Long(source.MaxConcurrentNum);
+        }
+        if (source.RestartComputeNode != null) {
+            this.RestartComputeNode = new Boolean(source.RestartComputeNode);
+        }
+        if (source.ResourceMaxRetryCount != null) {
+            this.ResourceMaxRetryCount = new Long(source.ResourceMaxRetryCount);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

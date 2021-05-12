@@ -68,6 +68,23 @@ public class AlgorithmInfo extends AbstractModel{
         this.Algorithm = Algorithm;
     }
 
+    public AlgorithmInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AlgorithmInfo(AlgorithmInfo source) {
+        if (source.KeyUsage != null) {
+            this.KeyUsage = new String(source.KeyUsage);
+        }
+        if (source.Algorithm != null) {
+            this.Algorithm = new String(source.Algorithm);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

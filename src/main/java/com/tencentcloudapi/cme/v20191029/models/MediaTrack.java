@@ -88,6 +88,26 @@ public class MediaTrack extends AbstractModel{
         this.TrackItems = TrackItems;
     }
 
+    public MediaTrack() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MediaTrack(MediaTrack source) {
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.TrackItems != null) {
+            this.TrackItems = new MediaTrackItem[source.TrackItems.length];
+            for (int i = 0; i < source.TrackItems.length; i++) {
+                this.TrackItems[i] = new MediaTrackItem(source.TrackItems[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

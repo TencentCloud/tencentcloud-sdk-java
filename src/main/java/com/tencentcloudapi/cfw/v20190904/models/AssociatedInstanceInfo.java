@@ -246,6 +246,41 @@ public class AssociatedInstanceInfo extends AbstractModel{
         this.SecurityGroupCount = SecurityGroupCount;
     }
 
+    public AssociatedInstanceInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AssociatedInstanceInfo(AssociatedInstanceInfo source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.InstanceName != null) {
+            this.InstanceName = new String(source.InstanceName);
+        }
+        if (source.Type != null) {
+            this.Type = new Long(source.Type);
+        }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.VpcName != null) {
+            this.VpcName = new String(source.VpcName);
+        }
+        if (source.PublicIp != null) {
+            this.PublicIp = new String(source.PublicIp);
+        }
+        if (source.Ip != null) {
+            this.Ip = new String(source.Ip);
+        }
+        if (source.SecurityGroupCount != null) {
+            this.SecurityGroupCount = new Long(source.SecurityGroupCount);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

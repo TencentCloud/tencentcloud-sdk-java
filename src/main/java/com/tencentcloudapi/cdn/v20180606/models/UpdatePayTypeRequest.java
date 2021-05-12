@@ -68,6 +68,23 @@ public class UpdatePayTypeRequest extends AbstractModel{
         this.PayType = PayType;
     }
 
+    public UpdatePayTypeRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UpdatePayTypeRequest(UpdatePayTypeRequest source) {
+        if (source.Area != null) {
+            this.Area = new String(source.Area);
+        }
+        if (source.PayType != null) {
+            this.PayType = new String(source.PayType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

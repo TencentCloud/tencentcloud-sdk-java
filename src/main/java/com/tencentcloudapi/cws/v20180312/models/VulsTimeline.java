@@ -298,6 +298,53 @@ public class VulsTimeline extends AbstractModel{
         this.UpdatedAt = UpdatedAt;
     }
 
+    public VulsTimeline() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public VulsTimeline(VulsTimeline source) {
+        if (source.Id != null) {
+            this.Id = new Long(source.Id);
+        }
+        if (source.Appid != null) {
+            this.Appid = new Long(source.Appid);
+        }
+        if (source.Date != null) {
+            this.Date = new String(source.Date);
+        }
+        if (source.PageCount != null) {
+            this.PageCount = new Long(source.PageCount);
+        }
+        if (source.SiteNum != null) {
+            this.SiteNum = new Long(source.SiteNum);
+        }
+        if (source.ImpactSiteNum != null) {
+            this.ImpactSiteNum = new Long(source.ImpactSiteNum);
+        }
+        if (source.VulsHighNum != null) {
+            this.VulsHighNum = new Long(source.VulsHighNum);
+        }
+        if (source.VulsMiddleNum != null) {
+            this.VulsMiddleNum = new Long(source.VulsMiddleNum);
+        }
+        if (source.VulsLowNum != null) {
+            this.VulsLowNum = new Long(source.VulsLowNum);
+        }
+        if (source.VulsNoticeNum != null) {
+            this.VulsNoticeNum = new Long(source.VulsNoticeNum);
+        }
+        if (source.CreatedAt != null) {
+            this.CreatedAt = new String(source.CreatedAt);
+        }
+        if (source.UpdatedAt != null) {
+            this.UpdatedAt = new String(source.UpdatedAt);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

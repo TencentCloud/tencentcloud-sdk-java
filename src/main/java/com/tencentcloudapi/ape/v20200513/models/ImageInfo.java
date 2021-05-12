@@ -180,6 +180,35 @@ public class ImageInfo extends AbstractModel{
         this.DownloadType = DownloadType;
     }
 
+    public ImageInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ImageInfo(ImageInfo source) {
+        if (source.ImageId != null) {
+            this.ImageId = new Long(source.ImageId);
+        }
+        if (source.LicenseScopeId != null) {
+            this.LicenseScopeId = new Long(source.LicenseScopeId);
+        }
+        if (source.DimensionsNameId != null) {
+            this.DimensionsNameId = new Long(source.DimensionsNameId);
+        }
+        if (source.UserId != null) {
+            this.UserId = new String(source.UserId);
+        }
+        if (source.DownloadPrice != null) {
+            this.DownloadPrice = new Long(source.DownloadPrice);
+        }
+        if (source.DownloadType != null) {
+            this.DownloadType = new String(source.DownloadType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

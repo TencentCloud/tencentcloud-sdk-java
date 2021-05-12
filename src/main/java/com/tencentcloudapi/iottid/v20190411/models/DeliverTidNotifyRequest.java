@@ -68,6 +68,23 @@ public class DeliverTidNotifyRequest extends AbstractModel{
         this.Tid = Tid;
     }
 
+    public DeliverTidNotifyRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeliverTidNotifyRequest(DeliverTidNotifyRequest source) {
+        if (source.OrderId != null) {
+            this.OrderId = new String(source.OrderId);
+        }
+        if (source.Tid != null) {
+            this.Tid = new String(source.Tid);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

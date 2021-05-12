@@ -157,6 +157,32 @@ public class MixStream extends AbstractModel{
         this.Custom = Custom;
     }
 
+    public MixStream() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MixStream(MixStream source) {
+        if (source.Enabled != null) {
+            this.Enabled = new Boolean(source.Enabled);
+        }
+        if (source.DisableAudio != null) {
+            this.DisableAudio = new Boolean(source.DisableAudio);
+        }
+        if (source.ModelId != null) {
+            this.ModelId = new Long(source.ModelId);
+        }
+        if (source.TeacherId != null) {
+            this.TeacherId = new String(source.TeacherId);
+        }
+        if (source.Custom != null) {
+            this.Custom = new CustomLayout(source.Custom);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

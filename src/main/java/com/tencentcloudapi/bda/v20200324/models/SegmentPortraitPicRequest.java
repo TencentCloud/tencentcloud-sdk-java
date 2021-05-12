@@ -103,6 +103,23 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
         this.Url = Url;
     }
 
+    public SegmentPortraitPicRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SegmentPortraitPicRequest(SegmentPortraitPicRequest source) {
+        if (source.Image != null) {
+            this.Image = new String(source.Image);
+        }
+        if (source.Url != null) {
+            this.Url = new String(source.Url);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

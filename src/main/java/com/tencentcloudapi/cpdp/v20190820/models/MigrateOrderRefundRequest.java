@@ -229,6 +229,44 @@ public class MigrateOrderRefundRequest extends AbstractModel{
         this.RefundReason = RefundReason;
     }
 
+    public MigrateOrderRefundRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MigrateOrderRefundRequest(MigrateOrderRefundRequest source) {
+        if (source.MerchantId != null) {
+            this.MerchantId = new String(source.MerchantId);
+        }
+        if (source.PayChannel != null) {
+            this.PayChannel = new String(source.PayChannel);
+        }
+        if (source.PayOrderId != null) {
+            this.PayOrderId = new String(source.PayOrderId);
+        }
+        if (source.RefundOrderId != null) {
+            this.RefundOrderId = new String(source.RefundOrderId);
+        }
+        if (source.RefundAmt != null) {
+            this.RefundAmt = new Long(source.RefundAmt);
+        }
+        if (source.ThirdChannelOrderId != null) {
+            this.ThirdChannelOrderId = new String(source.ThirdChannelOrderId);
+        }
+        if (source.PayAmt != null) {
+            this.PayAmt = new Long(source.PayAmt);
+        }
+        if (source.Profile != null) {
+            this.Profile = new String(source.Profile);
+        }
+        if (source.RefundReason != null) {
+            this.RefundReason = new String(source.RefundReason);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -183,6 +183,41 @@ public class ModifyPersonFeatureInfoResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public ModifyPersonFeatureInfoResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyPersonFeatureInfoResponse(ModifyPersonFeatureInfoResponse source) {
+        if (source.CompanyId != null) {
+            this.CompanyId = new String(source.CompanyId);
+        }
+        if (source.ShopId != null) {
+            this.ShopId = new Long(source.ShopId);
+        }
+        if (source.PersonId != null) {
+            this.PersonId = new Long(source.PersonId);
+        }
+        if (source.PersonIdBind != null) {
+            this.PersonIdBind = new Long(source.PersonIdBind);
+        }
+        if (source.PersonType != null) {
+            this.PersonType = new Long(source.PersonType);
+        }
+        if (source.SimilarPersonIds != null) {
+            this.SimilarPersonIds = new Long[source.SimilarPersonIds.length];
+            for (int i = 0; i < source.SimilarPersonIds.length; i++) {
+                this.SimilarPersonIds[i] = new Long(source.SimilarPersonIds[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

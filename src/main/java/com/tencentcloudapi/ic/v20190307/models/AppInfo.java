@@ -211,6 +211,41 @@ public class AppInfo extends AbstractModel{
         this.Uin = Uin;
     }
 
+    public AppInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AppInfo(AppInfo source) {
+        if (source.Sdkappid != null) {
+            this.Sdkappid = new String(source.Sdkappid);
+        }
+        if (source.Appkey != null) {
+            this.Appkey = new String(source.Appkey);
+        }
+        if (source.CloudAppid != null) {
+            this.CloudAppid = new String(source.CloudAppid);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.CreatedTime != null) {
+            this.CreatedTime = new String(source.CreatedTime);
+        }
+        if (source.BizType != null) {
+            this.BizType = new Long(source.BizType);
+        }
+        if (source.Uin != null) {
+            this.Uin = new String(source.Uin);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -68,6 +68,23 @@ public class ModifyMicroserviceRequest extends AbstractModel{
         this.MicroserviceDesc = MicroserviceDesc;
     }
 
+    public ModifyMicroserviceRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyMicroserviceRequest(ModifyMicroserviceRequest source) {
+        if (source.MicroserviceId != null) {
+            this.MicroserviceId = new String(source.MicroserviceId);
+        }
+        if (source.MicroserviceDesc != null) {
+            this.MicroserviceDesc = new String(source.MicroserviceDesc);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

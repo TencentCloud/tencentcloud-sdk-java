@@ -91,6 +91,26 @@ public class DeviceCertificate extends AbstractModel{
         this.WhiteBoxSoUrl = WhiteBoxSoUrl;
     }
 
+    public DeviceCertificate() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeviceCertificate(DeviceCertificate source) {
+        if (source.Tid != null) {
+            this.Tid = new String(source.Tid);
+        }
+        if (source.Certificate != null) {
+            this.Certificate = new String(source.Certificate);
+        }
+        if (source.WhiteBoxSoUrl != null) {
+            this.WhiteBoxSoUrl = new String(source.WhiteBoxSoUrl);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

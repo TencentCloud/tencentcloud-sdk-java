@@ -45,6 +45,20 @@ public class GetServiceLinkedRoleDeletionStatusRequest extends AbstractModel{
         this.DeletionTaskId = DeletionTaskId;
     }
 
+    public GetServiceLinkedRoleDeletionStatusRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GetServiceLinkedRoleDeletionStatusRequest(GetServiceLinkedRoleDeletionStatusRequest source) {
+        if (source.DeletionTaskId != null) {
+            this.DeletionTaskId = new String(source.DeletionTaskId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

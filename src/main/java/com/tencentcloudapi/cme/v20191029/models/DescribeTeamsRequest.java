@@ -114,6 +114,32 @@ public class DescribeTeamsRequest extends AbstractModel{
         this.Limit = Limit;
     }
 
+    public DescribeTeamsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeTeamsRequest(DescribeTeamsRequest source) {
+        if (source.Platform != null) {
+            this.Platform = new String(source.Platform);
+        }
+        if (source.TeamIds != null) {
+            this.TeamIds = new String[source.TeamIds.length];
+            for (int i = 0; i < source.TeamIds.length; i++) {
+                this.TeamIds[i] = new String(source.TeamIds[i]);
+            }
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

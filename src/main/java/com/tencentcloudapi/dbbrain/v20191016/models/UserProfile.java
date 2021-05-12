@@ -157,6 +157,32 @@ public class UserProfile extends AbstractModel{
         this.ProfileInfo = ProfileInfo;
     }
 
+    public UserProfile() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UserProfile(UserProfile source) {
+        if (source.ProfileId != null) {
+            this.ProfileId = new String(source.ProfileId);
+        }
+        if (source.ProfileType != null) {
+            this.ProfileType = new String(source.ProfileType);
+        }
+        if (source.ProfileLevel != null) {
+            this.ProfileLevel = new String(source.ProfileLevel);
+        }
+        if (source.ProfileName != null) {
+            this.ProfileName = new String(source.ProfileName);
+        }
+        if (source.ProfileInfo != null) {
+            this.ProfileInfo = new ProfileInfo(source.ProfileInfo);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

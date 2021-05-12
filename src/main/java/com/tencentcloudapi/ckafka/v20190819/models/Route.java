@@ -190,6 +190,38 @@ public class Route extends AbstractModel{
         this.DomainPort = DomainPort;
     }
 
+    public Route() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Route(Route source) {
+        if (source.AccessType != null) {
+            this.AccessType = new Long(source.AccessType);
+        }
+        if (source.RouteId != null) {
+            this.RouteId = new Long(source.RouteId);
+        }
+        if (source.VipType != null) {
+            this.VipType = new Long(source.VipType);
+        }
+        if (source.VipList != null) {
+            this.VipList = new VipEntity[source.VipList.length];
+            for (int i = 0; i < source.VipList.length; i++) {
+                this.VipList[i] = new VipEntity(source.VipList[i]);
+            }
+        }
+        if (source.Domain != null) {
+            this.Domain = new String(source.Domain);
+        }
+        if (source.DomainPort != null) {
+            this.DomainPort = new Long(source.DomainPort);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

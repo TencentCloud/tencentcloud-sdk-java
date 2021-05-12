@@ -160,6 +160,35 @@ public class InstitutionOCRResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public InstitutionOCRResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public InstitutionOCRResponse(InstitutionOCRResponse source) {
+        if (source.RegId != null) {
+            this.RegId = new String(source.RegId);
+        }
+        if (source.ValidDate != null) {
+            this.ValidDate = new String(source.ValidDate);
+        }
+        if (source.Location != null) {
+            this.Location = new String(source.Location);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.LegalPerson != null) {
+            this.LegalPerson = new String(source.LegalPerson);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

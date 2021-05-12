@@ -114,6 +114,32 @@ public class CreateMediaQualityRestorationTaskRequest extends AbstractModel{
         this.CallbackInfo = CallbackInfo;
     }
 
+    public CreateMediaQualityRestorationTaskRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateMediaQualityRestorationTaskRequest(CreateMediaQualityRestorationTaskRequest source) {
+        if (source.DownInfo != null) {
+            this.DownInfo = new DownInfo(source.DownInfo);
+        }
+        if (source.TransInfo != null) {
+            this.TransInfo = new SubTaskTranscodeInfo[source.TransInfo.length];
+            for (int i = 0; i < source.TransInfo.length; i++) {
+                this.TransInfo[i] = new SubTaskTranscodeInfo(source.TransInfo[i]);
+            }
+        }
+        if (source.SaveInfo != null) {
+            this.SaveInfo = new SaveInfo(source.SaveInfo);
+        }
+        if (source.CallbackInfo != null) {
+            this.CallbackInfo = new CallbackInfo(source.CallbackInfo);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

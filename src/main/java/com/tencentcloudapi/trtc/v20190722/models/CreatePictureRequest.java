@@ -183,6 +183,38 @@ public class CreatePictureRequest extends AbstractModel{
         this.YPosition = YPosition;
     }
 
+    public CreatePictureRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreatePictureRequest(CreatePictureRequest source) {
+        if (source.SdkAppId != null) {
+            this.SdkAppId = new Long(source.SdkAppId);
+        }
+        if (source.Content != null) {
+            this.Content = new String(source.Content);
+        }
+        if (source.Suffix != null) {
+            this.Suffix = new String(source.Suffix);
+        }
+        if (source.Height != null) {
+            this.Height = new Long(source.Height);
+        }
+        if (source.Width != null) {
+            this.Width = new Long(source.Width);
+        }
+        if (source.XPosition != null) {
+            this.XPosition = new Long(source.XPosition);
+        }
+        if (source.YPosition != null) {
+            this.YPosition = new Long(source.YPosition);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

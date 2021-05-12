@@ -91,6 +91,26 @@ public class ModifyHTTPListenerAttributeRequest extends AbstractModel{
         this.ProxyId = ProxyId;
     }
 
+    public ModifyHTTPListenerAttributeRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyHTTPListenerAttributeRequest(ModifyHTTPListenerAttributeRequest source) {
+        if (source.ListenerId != null) {
+            this.ListenerId = new String(source.ListenerId);
+        }
+        if (source.ListenerName != null) {
+            this.ListenerName = new String(source.ListenerName);
+        }
+        if (source.ProxyId != null) {
+            this.ProxyId = new String(source.ProxyId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

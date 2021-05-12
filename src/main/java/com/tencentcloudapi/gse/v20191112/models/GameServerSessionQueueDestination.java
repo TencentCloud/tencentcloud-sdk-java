@@ -78,6 +78,23 @@ public class GameServerSessionQueueDestination extends AbstractModel{
         this.FleetStatus = FleetStatus;
     }
 
+    public GameServerSessionQueueDestination() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GameServerSessionQueueDestination(GameServerSessionQueueDestination source) {
+        if (source.DestinationArn != null) {
+            this.DestinationArn = new String(source.DestinationArn);
+        }
+        if (source.FleetStatus != null) {
+            this.FleetStatus = new String(source.FleetStatus);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

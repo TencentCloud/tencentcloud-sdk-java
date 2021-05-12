@@ -114,6 +114,35 @@ public class DescribeCommandsRequest extends AbstractModel{
         this.Offset = Offset;
     }
 
+    public DescribeCommandsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeCommandsRequest(DescribeCommandsRequest source) {
+        if (source.CommandIds != null) {
+            this.CommandIds = new String[source.CommandIds.length];
+            for (int i = 0; i < source.CommandIds.length; i++) {
+                this.CommandIds[i] = new String(source.CommandIds[i]);
+            }
+        }
+        if (source.Filters != null) {
+            this.Filters = new Filter[source.Filters.length];
+            for (int i = 0; i < source.Filters.length; i++) {
+                this.Filters[i] = new Filter(source.Filters[i]);
+            }
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

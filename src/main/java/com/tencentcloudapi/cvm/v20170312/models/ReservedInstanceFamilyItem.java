@@ -91,6 +91,29 @@ public class ReservedInstanceFamilyItem extends AbstractModel{
         this.InstanceTypes = InstanceTypes;
     }
 
+    public ReservedInstanceFamilyItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ReservedInstanceFamilyItem(ReservedInstanceFamilyItem source) {
+        if (source.InstanceFamily != null) {
+            this.InstanceFamily = new String(source.InstanceFamily);
+        }
+        if (source.Order != null) {
+            this.Order = new Long(source.Order);
+        }
+        if (source.InstanceTypes != null) {
+            this.InstanceTypes = new ReservedInstanceTypeItem[source.InstanceTypes.length];
+            for (int i = 0; i < source.InstanceTypes.length; i++) {
+                this.InstanceTypes[i] = new ReservedInstanceTypeItem(source.InstanceTypes[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

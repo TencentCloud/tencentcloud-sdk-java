@@ -45,6 +45,20 @@ public class DatabaseTable extends AbstractModel{
         this.Table = Table;
     }
 
+    public DatabaseTable() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DatabaseTable(DatabaseTable source) {
+        if (source.Table != null) {
+            this.Table = new String(source.Table);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

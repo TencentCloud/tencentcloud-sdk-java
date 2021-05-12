@@ -101,6 +101,29 @@ public class DescribeRoomInfoResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeRoomInfoResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeRoomInfoResponse(DescribeRoomInfoResponse source) {
+        if (source.Result != null) {
+            this.Result = new Long(source.Result);
+        }
+        if (source.RoomUsers != null) {
+            this.RoomUsers = new RoomUser[source.RoomUsers.length];
+            for (int i = 0; i < source.RoomUsers.length; i++) {
+                this.RoomUsers[i] = new RoomUser(source.RoomUsers[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

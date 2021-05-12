@@ -60,6 +60,20 @@ VPN网关实例ID，形如，`vpn-ltjahce6`。
         this.GatewayId = GatewayId;
     }
 
+    public DisableGatewayFlowMonitorRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DisableGatewayFlowMonitorRequest(DisableGatewayFlowMonitorRequest source) {
+        if (source.GatewayId != null) {
+            this.GatewayId = new String(source.GatewayId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

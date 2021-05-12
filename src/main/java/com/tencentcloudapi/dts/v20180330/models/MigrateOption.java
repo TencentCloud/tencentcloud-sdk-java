@@ -281,6 +281,41 @@ MySQL暂不支持额外参数设置。
         this.ConsistencyParams = ConsistencyParams;
     }
 
+    public MigrateOption() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MigrateOption(MigrateOption source) {
+        if (source.RunMode != null) {
+            this.RunMode = new Long(source.RunMode);
+        }
+        if (source.ExpectTime != null) {
+            this.ExpectTime = new String(source.ExpectTime);
+        }
+        if (source.MigrateType != null) {
+            this.MigrateType = new Long(source.MigrateType);
+        }
+        if (source.MigrateObject != null) {
+            this.MigrateObject = new Long(source.MigrateObject);
+        }
+        if (source.ConsistencyType != null) {
+            this.ConsistencyType = new Long(source.ConsistencyType);
+        }
+        if (source.IsOverrideRoot != null) {
+            this.IsOverrideRoot = new Long(source.IsOverrideRoot);
+        }
+        if (source.ExternParams != null) {
+            this.ExternParams = new String(source.ExternParams);
+        }
+        if (source.ConsistencyParams != null) {
+            this.ConsistencyParams = new ConsistencyParams(source.ConsistencyParams);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

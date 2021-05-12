@@ -114,6 +114,29 @@ public class CreateInstanceRequest extends AbstractModel{
         this.RegistryChargeType = RegistryChargeType;
     }
 
+    public CreateInstanceRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateInstanceRequest(CreateInstanceRequest source) {
+        if (source.RegistryName != null) {
+            this.RegistryName = new String(source.RegistryName);
+        }
+        if (source.RegistryType != null) {
+            this.RegistryType = new String(source.RegistryType);
+        }
+        if (source.TagSpecification != null) {
+            this.TagSpecification = new TagSpecification(source.TagSpecification);
+        }
+        if (source.RegistryChargeType != null) {
+            this.RegistryChargeType = new Long(source.RegistryChargeType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

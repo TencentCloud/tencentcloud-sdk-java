@@ -505,6 +505,80 @@ public class SegmentationOptions extends AbstractModel{
         this.Belongings = Belongings;
     }
 
+    public SegmentationOptions() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SegmentationOptions(SegmentationOptions source) {
+        if (source.Background != null) {
+            this.Background = new Boolean(source.Background);
+        }
+        if (source.Hair != null) {
+            this.Hair = new Boolean(source.Hair);
+        }
+        if (source.LeftEyebrow != null) {
+            this.LeftEyebrow = new Boolean(source.LeftEyebrow);
+        }
+        if (source.RightEyebrow != null) {
+            this.RightEyebrow = new Boolean(source.RightEyebrow);
+        }
+        if (source.LeftEye != null) {
+            this.LeftEye = new Boolean(source.LeftEye);
+        }
+        if (source.RightEye != null) {
+            this.RightEye = new Boolean(source.RightEye);
+        }
+        if (source.Nose != null) {
+            this.Nose = new Boolean(source.Nose);
+        }
+        if (source.UpperLip != null) {
+            this.UpperLip = new Boolean(source.UpperLip);
+        }
+        if (source.LowerLip != null) {
+            this.LowerLip = new Boolean(source.LowerLip);
+        }
+        if (source.Tooth != null) {
+            this.Tooth = new Boolean(source.Tooth);
+        }
+        if (source.Mouth != null) {
+            this.Mouth = new Boolean(source.Mouth);
+        }
+        if (source.LeftEar != null) {
+            this.LeftEar = new Boolean(source.LeftEar);
+        }
+        if (source.RightEar != null) {
+            this.RightEar = new Boolean(source.RightEar);
+        }
+        if (source.Face != null) {
+            this.Face = new Boolean(source.Face);
+        }
+        if (source.Head != null) {
+            this.Head = new Boolean(source.Head);
+        }
+        if (source.Body != null) {
+            this.Body = new Boolean(source.Body);
+        }
+        if (source.Hat != null) {
+            this.Hat = new Boolean(source.Hat);
+        }
+        if (source.Headdress != null) {
+            this.Headdress = new Boolean(source.Headdress);
+        }
+        if (source.Earrings != null) {
+            this.Earrings = new Boolean(source.Earrings);
+        }
+        if (source.Necklace != null) {
+            this.Necklace = new Boolean(source.Necklace);
+        }
+        if (source.Belongings != null) {
+            this.Belongings = new Boolean(source.Belongings);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

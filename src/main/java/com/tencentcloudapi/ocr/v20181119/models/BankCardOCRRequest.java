@@ -193,6 +193,38 @@ public class BankCardOCRRequest extends AbstractModel{
         this.EnableBorderCheck = EnableBorderCheck;
     }
 
+    public BankCardOCRRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public BankCardOCRRequest(BankCardOCRRequest source) {
+        if (source.ImageBase64 != null) {
+            this.ImageBase64 = new String(source.ImageBase64);
+        }
+        if (source.ImageUrl != null) {
+            this.ImageUrl = new String(source.ImageUrl);
+        }
+        if (source.RetBorderCutImage != null) {
+            this.RetBorderCutImage = new Boolean(source.RetBorderCutImage);
+        }
+        if (source.RetCardNoImage != null) {
+            this.RetCardNoImage = new Boolean(source.RetCardNoImage);
+        }
+        if (source.EnableCopyCheck != null) {
+            this.EnableCopyCheck = new Boolean(source.EnableCopyCheck);
+        }
+        if (source.EnableReshootCheck != null) {
+            this.EnableReshootCheck = new Boolean(source.EnableReshootCheck);
+        }
+        if (source.EnableBorderCheck != null) {
+            this.EnableBorderCheck = new Boolean(source.EnableBorderCheck);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

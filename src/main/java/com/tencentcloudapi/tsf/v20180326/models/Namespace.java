@@ -414,6 +414,62 @@ public class Namespace extends AbstractModel{
         this.IsHaEnable = IsHaEnable;
     }
 
+    public Namespace() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Namespace(Namespace source) {
+        if (source.NamespaceId != null) {
+            this.NamespaceId = new String(source.NamespaceId);
+        }
+        if (source.NamespaceCode != null) {
+            this.NamespaceCode = new String(source.NamespaceCode);
+        }
+        if (source.NamespaceName != null) {
+            this.NamespaceName = new String(source.NamespaceName);
+        }
+        if (source.NamespaceDesc != null) {
+            this.NamespaceDesc = new String(source.NamespaceDesc);
+        }
+        if (source.IsDefault != null) {
+            this.IsDefault = new String(source.IsDefault);
+        }
+        if (source.NamespaceStatus != null) {
+            this.NamespaceStatus = new String(source.NamespaceStatus);
+        }
+        if (source.DeleteFlag != null) {
+            this.DeleteFlag = new Boolean(source.DeleteFlag);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new String(source.UpdateTime);
+        }
+        if (source.ClusterList != null) {
+            this.ClusterList = new Cluster[source.ClusterList.length];
+            for (int i = 0; i < source.ClusterList.length; i++) {
+                this.ClusterList[i] = new Cluster(source.ClusterList[i]);
+            }
+        }
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
+        if (source.NamespaceResourceType != null) {
+            this.NamespaceResourceType = new String(source.NamespaceResourceType);
+        }
+        if (source.NamespaceType != null) {
+            this.NamespaceType = new String(source.NamespaceType);
+        }
+        if (source.IsHaEnable != null) {
+            this.IsHaEnable = new String(source.IsHaEnable);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

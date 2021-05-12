@@ -137,6 +137,32 @@ public class UpdateTopicPolicyRequest extends AbstractModel{
         this.BrokerSubscribe = BrokerSubscribe;
     }
 
+    public UpdateTopicPolicyRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UpdateTopicPolicyRequest(UpdateTopicPolicyRequest source) {
+        if (source.ProductID != null) {
+            this.ProductID = new String(source.ProductID);
+        }
+        if (source.TopicName != null) {
+            this.TopicName = new String(source.TopicName);
+        }
+        if (source.NewTopicName != null) {
+            this.NewTopicName = new String(source.NewTopicName);
+        }
+        if (source.Privilege != null) {
+            this.Privilege = new Long(source.Privilege);
+        }
+        if (source.BrokerSubscribe != null) {
+            this.BrokerSubscribe = new BrokerSubscribe(source.BrokerSubscribe);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

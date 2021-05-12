@@ -45,6 +45,20 @@ public class DeleteLifecycleHookRequest extends AbstractModel{
         this.LifecycleHookId = LifecycleHookId;
     }
 
+    public DeleteLifecycleHookRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteLifecycleHookRequest(DeleteLifecycleHookRequest source) {
+        if (source.LifecycleHookId != null) {
+            this.LifecycleHookId = new String(source.LifecycleHookId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

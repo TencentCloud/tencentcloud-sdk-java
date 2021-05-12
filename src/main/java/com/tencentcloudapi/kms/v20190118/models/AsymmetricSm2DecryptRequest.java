@@ -68,6 +68,23 @@ public class AsymmetricSm2DecryptRequest extends AbstractModel{
         this.Ciphertext = Ciphertext;
     }
 
+    public AsymmetricSm2DecryptRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AsymmetricSm2DecryptRequest(AsymmetricSm2DecryptRequest source) {
+        if (source.KeyId != null) {
+            this.KeyId = new String(source.KeyId);
+        }
+        if (source.Ciphertext != null) {
+            this.Ciphertext = new String(source.Ciphertext);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

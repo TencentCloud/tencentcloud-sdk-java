@@ -91,6 +91,26 @@ public class CreateAssetResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public CreateAssetResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateAssetResponse(CreateAssetResponse source) {
+        if (source.AssetId != null) {
+            this.AssetId = new String(source.AssetId);
+        }
+        if (source.AssetArn != null) {
+            this.AssetArn = new String(source.AssetArn);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -190,6 +190,35 @@ public class MonitorOverview extends AbstractModel{
         this.SuccessRatio = SuccessRatio;
     }
 
+    public MonitorOverview() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MonitorOverview(MonitorOverview source) {
+        if (source.InvocationCountOfDay != null) {
+            this.InvocationCountOfDay = new String(source.InvocationCountOfDay);
+        }
+        if (source.InvocationCount != null) {
+            this.InvocationCount = new String(source.InvocationCount);
+        }
+        if (source.ErrorCountOfDay != null) {
+            this.ErrorCountOfDay = new String(source.ErrorCountOfDay);
+        }
+        if (source.ErrorCount != null) {
+            this.ErrorCount = new String(source.ErrorCount);
+        }
+        if (source.SuccessRatioOfDay != null) {
+            this.SuccessRatioOfDay = new String(source.SuccessRatioOfDay);
+        }
+        if (source.SuccessRatio != null) {
+            this.SuccessRatio = new String(source.SuccessRatio);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

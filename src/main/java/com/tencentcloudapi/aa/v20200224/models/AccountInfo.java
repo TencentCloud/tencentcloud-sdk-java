@@ -144,6 +144,29 @@ public class AccountInfo extends AbstractModel{
         this.OtherAccount = OtherAccount;
     }
 
+    public AccountInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AccountInfo(AccountInfo source) {
+        if (source.AccountType != null) {
+            this.AccountType = new Long(source.AccountType);
+        }
+        if (source.QQAccount != null) {
+            this.QQAccount = new QQAccountInfo(source.QQAccount);
+        }
+        if (source.WeChatAccount != null) {
+            this.WeChatAccount = new WeChatAccountInfo(source.WeChatAccount);
+        }
+        if (source.OtherAccount != null) {
+            this.OtherAccount = new OtherAccountInfo(source.OtherAccount);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

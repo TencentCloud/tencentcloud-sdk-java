@@ -304,6 +304,44 @@ public class OrderInfo extends AbstractModel{
         this.ResourceReady = ResourceReady;
     }
 
+    public OrderInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public OrderInfo(OrderInfo source) {
+        if (source.TranId != null) {
+            this.TranId = new String(source.TranId);
+        }
+        if (source.PackageId != null) {
+            this.PackageId = new String(source.PackageId);
+        }
+        if (source.TranType != null) {
+            this.TranType = new String(source.TranType);
+        }
+        if (source.TranStatus != null) {
+            this.TranStatus = new String(source.TranStatus);
+        }
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new String(source.UpdateTime);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.PayMode != null) {
+            this.PayMode = new String(source.PayMode);
+        }
+        if (source.ExtensionId != null) {
+            this.ExtensionId = new String(source.ExtensionId);
+        }
+        if (source.ResourceReady != null) {
+            this.ResourceReady = new String(source.ResourceReady);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

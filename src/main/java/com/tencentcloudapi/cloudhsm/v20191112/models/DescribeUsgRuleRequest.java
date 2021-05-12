@@ -45,6 +45,23 @@ public class DescribeUsgRuleRequest extends AbstractModel{
         this.SgIds = SgIds;
     }
 
+    public DescribeUsgRuleRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeUsgRuleRequest(DescribeUsgRuleRequest source) {
+        if (source.SgIds != null) {
+            this.SgIds = new String[source.SgIds.length];
+            for (int i = 0; i < source.SgIds.length; i++) {
+                this.SgIds[i] = new String(source.SgIds[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

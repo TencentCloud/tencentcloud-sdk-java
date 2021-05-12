@@ -91,6 +91,26 @@ public class FileOutput extends AbstractModel{
         this.ObjectPrefix = ObjectPrefix;
     }
 
+    public FileOutput() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public FileOutput(FileOutput source) {
+        if (source.Bucket != null) {
+            this.Bucket = new String(source.Bucket);
+        }
+        if (source.Region != null) {
+            this.Region = new String(source.Region);
+        }
+        if (source.ObjectPrefix != null) {
+            this.ObjectPrefix = new String(source.ObjectPrefix);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

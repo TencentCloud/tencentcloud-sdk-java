@@ -68,6 +68,23 @@ public class ExternalMediaInfo extends AbstractModel{
         this.MediaKey = MediaKey;
     }
 
+    public ExternalMediaInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ExternalMediaInfo(ExternalMediaInfo source) {
+        if (source.Definition != null) {
+            this.Definition = new Long(source.Definition);
+        }
+        if (source.MediaKey != null) {
+            this.MediaKey = new String(source.MediaKey);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

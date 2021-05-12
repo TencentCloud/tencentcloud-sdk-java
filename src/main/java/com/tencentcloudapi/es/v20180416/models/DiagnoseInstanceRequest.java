@@ -91,6 +91,29 @@ public class DiagnoseInstanceRequest extends AbstractModel{
         this.DiagnoseIndices = DiagnoseIndices;
     }
 
+    public DiagnoseInstanceRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DiagnoseInstanceRequest(DiagnoseInstanceRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.DiagnoseJobs != null) {
+            this.DiagnoseJobs = new String[source.DiagnoseJobs.length];
+            for (int i = 0; i < source.DiagnoseJobs.length; i++) {
+                this.DiagnoseJobs[i] = new String(source.DiagnoseJobs[i]);
+            }
+        }
+        if (source.DiagnoseIndices != null) {
+            this.DiagnoseIndices = new String(source.DiagnoseIndices);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

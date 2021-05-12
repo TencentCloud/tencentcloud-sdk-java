@@ -298,6 +298,59 @@ public class CreateAlarmPolicyRequest extends AbstractModel{
         this.TriggerTasks = TriggerTasks;
     }
 
+    public CreateAlarmPolicyRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateAlarmPolicyRequest(CreateAlarmPolicyRequest source) {
+        if (source.Module != null) {
+            this.Module = new String(source.Module);
+        }
+        if (source.PolicyName != null) {
+            this.PolicyName = new String(source.PolicyName);
+        }
+        if (source.MonitorType != null) {
+            this.MonitorType = new String(source.MonitorType);
+        }
+        if (source.Namespace != null) {
+            this.Namespace = new String(source.Namespace);
+        }
+        if (source.Remark != null) {
+            this.Remark = new String(source.Remark);
+        }
+        if (source.Enable != null) {
+            this.Enable = new Long(source.Enable);
+        }
+        if (source.ProjectId != null) {
+            this.ProjectId = new Long(source.ProjectId);
+        }
+        if (source.ConditionTemplateId != null) {
+            this.ConditionTemplateId = new Long(source.ConditionTemplateId);
+        }
+        if (source.Condition != null) {
+            this.Condition = new AlarmPolicyCondition(source.Condition);
+        }
+        if (source.EventCondition != null) {
+            this.EventCondition = new AlarmPolicyEventCondition(source.EventCondition);
+        }
+        if (source.NoticeIds != null) {
+            this.NoticeIds = new String[source.NoticeIds.length];
+            for (int i = 0; i < source.NoticeIds.length; i++) {
+                this.NoticeIds[i] = new String(source.NoticeIds[i]);
+            }
+        }
+        if (source.TriggerTasks != null) {
+            this.TriggerTasks = new AlarmPolicyTriggerTask[source.TriggerTasks.length];
+            for (int i = 0; i < source.TriggerTasks.length; i++) {
+                this.TriggerTasks[i] = new AlarmPolicyTriggerTask(source.TriggerTasks[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

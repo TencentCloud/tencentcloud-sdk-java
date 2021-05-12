@@ -142,6 +142,32 @@ public class AudioResultDetailMoanResult extends AbstractModel{
         this.SubLabelCode = SubLabelCode;
     }
 
+    public AudioResultDetailMoanResult() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AudioResultDetailMoanResult(AudioResultDetailMoanResult source) {
+        if (source.Label != null) {
+            this.Label = new String(source.Label);
+        }
+        if (source.Score != null) {
+            this.Score = new Long(source.Score);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new Float(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new Float(source.EndTime);
+        }
+        if (source.SubLabelCode != null) {
+            this.SubLabelCode = new String(source.SubLabelCode);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

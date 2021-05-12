@@ -114,6 +114,29 @@ public class NumberFormat extends AbstractModel{
         this.PlaceHolder = PlaceHolder;
     }
 
+    public NumberFormat() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public NumberFormat(NumberFormat source) {
+        if (source.InitialValue != null) {
+            this.InitialValue = new Long(source.InitialValue);
+        }
+        if (source.Increment != null) {
+            this.Increment = new Long(source.Increment);
+        }
+        if (source.MinLength != null) {
+            this.MinLength = new Long(source.MinLength);
+        }
+        if (source.PlaceHolder != null) {
+            this.PlaceHolder = new String(source.PlaceHolder);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

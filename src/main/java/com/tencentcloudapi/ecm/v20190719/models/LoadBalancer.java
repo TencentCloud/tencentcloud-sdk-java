@@ -447,6 +447,71 @@ public class LoadBalancer extends AbstractModel{
         this.LoadBalancerPassToTarget = LoadBalancerPassToTarget;
     }
 
+    public LoadBalancer() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public LoadBalancer(LoadBalancer source) {
+        if (source.Region != null) {
+            this.Region = new String(source.Region);
+        }
+        if (source.Position != null) {
+            this.Position = new Position(source.Position);
+        }
+        if (source.LoadBalancerId != null) {
+            this.LoadBalancerId = new String(source.LoadBalancerId);
+        }
+        if (source.LoadBalancerName != null) {
+            this.LoadBalancerName = new String(source.LoadBalancerName);
+        }
+        if (source.LoadBalancerType != null) {
+            this.LoadBalancerType = new String(source.LoadBalancerType);
+        }
+        if (source.LoadBalancerVips != null) {
+            this.LoadBalancerVips = new String[source.LoadBalancerVips.length];
+            for (int i = 0; i < source.LoadBalancerVips.length; i++) {
+                this.LoadBalancerVips[i] = new String(source.LoadBalancerVips[i]);
+            }
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.StatusTime != null) {
+            this.StatusTime = new String(source.StatusTime);
+        }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.Tags != null) {
+            this.Tags = new TagInfo[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new TagInfo(source.Tags[i]);
+            }
+        }
+        if (source.VipIsp != null) {
+            this.VipIsp = new String(source.VipIsp);
+        }
+        if (source.NetworkAttributes != null) {
+            this.NetworkAttributes = new LoadBalancerInternetAccessible(source.NetworkAttributes);
+        }
+        if (source.SecureGroups != null) {
+            this.SecureGroups = new String[source.SecureGroups.length];
+            for (int i = 0; i < source.SecureGroups.length; i++) {
+                this.SecureGroups[i] = new String(source.SecureGroups[i]);
+            }
+        }
+        if (source.LoadBalancerPassToTarget != null) {
+            this.LoadBalancerPassToTarget = new Boolean(source.LoadBalancerPassToTarget);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -246,6 +246,41 @@ public class AgentShell extends AbstractModel{
         this.JaegerPort = JaegerPort;
     }
 
+    public AgentShell() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AgentShell(AgentShell source) {
+        if (source.Token != null) {
+            this.Token = new String(source.Token);
+        }
+        if (source.EtlIp != null) {
+            this.EtlIp = new String(source.EtlIp);
+        }
+        if (source.EtlPort != null) {
+            this.EtlPort = new String(source.EtlPort);
+        }
+        if (source.ByHandAccess != null) {
+            this.ByHandAccess = new String(source.ByHandAccess);
+        }
+        if (source.ByShellAccess != null) {
+            this.ByShellAccess = new String(source.ByShellAccess);
+        }
+        if (source.SkyWalkingPort != null) {
+            this.SkyWalkingPort = new String(source.SkyWalkingPort);
+        }
+        if (source.ZipkinPort != null) {
+            this.ZipkinPort = new String(source.ZipkinPort);
+        }
+        if (source.JaegerPort != null) {
+            this.JaegerPort = new String(source.JaegerPort);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

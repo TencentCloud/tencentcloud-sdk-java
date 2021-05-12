@@ -114,6 +114,29 @@ public class DescribePermissionResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribePermissionResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribePermissionResponse(DescribePermissionResponse source) {
+        if (source.EnterpriseUser != null) {
+            this.EnterpriseUser = new Boolean(source.EnterpriseUser);
+        }
+        if (source.DownloadPermission != null) {
+            this.DownloadPermission = new String(source.DownloadPermission);
+        }
+        if (source.UsePermission != null) {
+            this.UsePermission = new String(source.UsePermission);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

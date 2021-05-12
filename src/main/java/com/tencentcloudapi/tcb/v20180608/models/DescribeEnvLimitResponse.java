@@ -229,6 +229,44 @@ public class DescribeEnvLimitResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeEnvLimitResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeEnvLimitResponse(DescribeEnvLimitResponse source) {
+        if (source.MaxEnvNum != null) {
+            this.MaxEnvNum = new Long(source.MaxEnvNum);
+        }
+        if (source.CurrentEnvNum != null) {
+            this.CurrentEnvNum = new Long(source.CurrentEnvNum);
+        }
+        if (source.MaxFreeEnvNum != null) {
+            this.MaxFreeEnvNum = new Long(source.MaxFreeEnvNum);
+        }
+        if (source.CurrentFreeEnvNum != null) {
+            this.CurrentFreeEnvNum = new Long(source.CurrentFreeEnvNum);
+        }
+        if (source.MaxDeleteTotal != null) {
+            this.MaxDeleteTotal = new Long(source.MaxDeleteTotal);
+        }
+        if (source.CurrentDeleteTotal != null) {
+            this.CurrentDeleteTotal = new Long(source.CurrentDeleteTotal);
+        }
+        if (source.MaxDeleteMonthly != null) {
+            this.MaxDeleteMonthly = new Long(source.MaxDeleteMonthly);
+        }
+        if (source.CurrentDeleteMonthly != null) {
+            this.CurrentDeleteMonthly = new Long(source.CurrentDeleteMonthly);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

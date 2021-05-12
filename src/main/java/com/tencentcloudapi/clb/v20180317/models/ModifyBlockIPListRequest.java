@@ -190,6 +190,41 @@ public class ModifyBlockIPListRequest extends AbstractModel{
         this.AddStrategy = AddStrategy;
     }
 
+    public ModifyBlockIPListRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyBlockIPListRequest(ModifyBlockIPListRequest source) {
+        if (source.LoadBalancerIds != null) {
+            this.LoadBalancerIds = new String[source.LoadBalancerIds.length];
+            for (int i = 0; i < source.LoadBalancerIds.length; i++) {
+                this.LoadBalancerIds[i] = new String(source.LoadBalancerIds[i]);
+            }
+        }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.ClientIPField != null) {
+            this.ClientIPField = new String(source.ClientIPField);
+        }
+        if (source.BlockIPList != null) {
+            this.BlockIPList = new String[source.BlockIPList.length];
+            for (int i = 0; i < source.BlockIPList.length; i++) {
+                this.BlockIPList[i] = new String(source.BlockIPList[i]);
+            }
+        }
+        if (source.ExpireTime != null) {
+            this.ExpireTime = new Long(source.ExpireTime);
+        }
+        if (source.AddStrategy != null) {
+            this.AddStrategy = new String(source.AddStrategy);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

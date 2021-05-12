@@ -114,6 +114,29 @@ public class TcrNamespaceInfo extends AbstractModel{
         this.NamespaceId = NamespaceId;
     }
 
+    public TcrNamespaceInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TcrNamespaceInfo(TcrNamespaceInfo source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.CreationTime != null) {
+            this.CreationTime = new String(source.CreationTime);
+        }
+        if (source.Public != null) {
+            this.Public = new Boolean(source.Public);
+        }
+        if (source.NamespaceId != null) {
+            this.NamespaceId = new Long(source.NamespaceId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

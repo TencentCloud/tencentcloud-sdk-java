@@ -119,6 +119,32 @@ public class CreateAsrVocabRequest extends AbstractModel{
         this.WordWeightStr = WordWeightStr;
     }
 
+    public CreateAsrVocabRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateAsrVocabRequest(CreateAsrVocabRequest source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.WordWeights != null) {
+            this.WordWeights = new HotWord[source.WordWeights.length];
+            for (int i = 0; i < source.WordWeights.length; i++) {
+                this.WordWeights[i] = new HotWord(source.WordWeights[i]);
+            }
+        }
+        if (source.WordWeightStr != null) {
+            this.WordWeightStr = new String(source.WordWeightStr);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

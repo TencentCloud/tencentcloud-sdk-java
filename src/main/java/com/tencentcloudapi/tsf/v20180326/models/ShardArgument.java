@@ -73,6 +73,23 @@ public class ShardArgument extends AbstractModel{
         this.ShardValue = ShardValue;
     }
 
+    public ShardArgument() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ShardArgument(ShardArgument source) {
+        if (source.ShardKey != null) {
+            this.ShardKey = new Long(source.ShardKey);
+        }
+        if (source.ShardValue != null) {
+            this.ShardValue = new String(source.ShardValue);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -114,6 +114,32 @@ public class SubmitOpenClassTaskRequest extends AbstractModel{
         this.MaxVideoDuration = MaxVideoDuration;
     }
 
+    public SubmitOpenClassTaskRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SubmitOpenClassTaskRequest(SubmitOpenClassTaskRequest source) {
+        if (source.FileContent != null) {
+            this.FileContent = new String(source.FileContent);
+        }
+        if (source.FileType != null) {
+            this.FileType = new String(source.FileType);
+        }
+        if (source.LibrarySet != null) {
+            this.LibrarySet = new String[source.LibrarySet.length];
+            for (int i = 0; i < source.LibrarySet.length; i++) {
+                this.LibrarySet[i] = new String(source.LibrarySet[i]);
+            }
+        }
+        if (source.MaxVideoDuration != null) {
+            this.MaxVideoDuration = new Long(source.MaxVideoDuration);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

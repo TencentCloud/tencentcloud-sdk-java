@@ -68,6 +68,23 @@ public class AdvancedAuthenticationTypeC extends AbstractModel{
         this.SecretKey = SecretKey;
     }
 
+    public AdvancedAuthenticationTypeC() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AdvancedAuthenticationTypeC(AdvancedAuthenticationTypeC source) {
+        if (source.AccessKey != null) {
+            this.AccessKey = new String(source.AccessKey);
+        }
+        if (source.SecretKey != null) {
+            this.SecretKey = new String(source.SecretKey);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

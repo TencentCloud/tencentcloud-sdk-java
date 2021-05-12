@@ -116,6 +116,32 @@ public class LexicalAnalysisResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public LexicalAnalysisResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public LexicalAnalysisResponse(LexicalAnalysisResponse source) {
+        if (source.NerTokens != null) {
+            this.NerTokens = new NerToken[source.NerTokens.length];
+            for (int i = 0; i < source.NerTokens.length; i++) {
+                this.NerTokens[i] = new NerToken(source.NerTokens[i]);
+            }
+        }
+        if (source.PosTokens != null) {
+            this.PosTokens = new PosToken[source.PosTokens.length];
+            for (int i = 0; i < source.PosTokens.length; i++) {
+                this.PosTokens[i] = new PosToken(source.PosTokens[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

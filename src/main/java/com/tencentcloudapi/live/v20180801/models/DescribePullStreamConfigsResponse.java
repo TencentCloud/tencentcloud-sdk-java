@@ -68,6 +68,26 @@ public class DescribePullStreamConfigsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribePullStreamConfigsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribePullStreamConfigsResponse(DescribePullStreamConfigsResponse source) {
+        if (source.PullStreamConfigs != null) {
+            this.PullStreamConfigs = new PullStreamConfig[source.PullStreamConfigs.length];
+            for (int i = 0; i < source.PullStreamConfigs.length; i++) {
+                this.PullStreamConfigs[i] = new PullStreamConfig(source.PullStreamConfigs[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

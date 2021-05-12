@@ -68,6 +68,26 @@ public class QueryCallStatResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public QueryCallStatResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public QueryCallStatResponse(QueryCallStatResponse source) {
+        if (source.CallSet != null) {
+            this.CallSet = new CallStatItem[source.CallSet.length];
+            for (int i = 0; i < source.CallSet.length; i++) {
+                this.CallSet[i] = new CallStatItem(source.CallSet[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

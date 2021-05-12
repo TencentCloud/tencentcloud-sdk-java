@@ -68,6 +68,26 @@ public class DescribeLiveTranscodeRulesResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeLiveTranscodeRulesResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeLiveTranscodeRulesResponse(DescribeLiveTranscodeRulesResponse source) {
+        if (source.Rules != null) {
+            this.Rules = new RuleInfo[source.Rules.length];
+            for (int i = 0; i < source.Rules.length; i++) {
+                this.Rules[i] = new RuleInfo(source.Rules[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

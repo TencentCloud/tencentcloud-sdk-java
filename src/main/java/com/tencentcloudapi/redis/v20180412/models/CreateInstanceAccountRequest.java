@@ -160,6 +160,38 @@ public class CreateInstanceAccountRequest extends AbstractModel{
         this.Remark = Remark;
     }
 
+    public CreateInstanceAccountRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateInstanceAccountRequest(CreateInstanceAccountRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.AccountName != null) {
+            this.AccountName = new String(source.AccountName);
+        }
+        if (source.AccountPassword != null) {
+            this.AccountPassword = new String(source.AccountPassword);
+        }
+        if (source.ReadonlyPolicy != null) {
+            this.ReadonlyPolicy = new String[source.ReadonlyPolicy.length];
+            for (int i = 0; i < source.ReadonlyPolicy.length; i++) {
+                this.ReadonlyPolicy[i] = new String(source.ReadonlyPolicy[i]);
+            }
+        }
+        if (source.Privilege != null) {
+            this.Privilege = new String(source.Privilege);
+        }
+        if (source.Remark != null) {
+            this.Remark = new String(source.Remark);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */
