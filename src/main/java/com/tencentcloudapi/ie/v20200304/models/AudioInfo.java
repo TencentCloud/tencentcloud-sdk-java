@@ -72,6 +72,27 @@ public class AudioInfo extends AbstractModel{
     private Long EnableMuteAudio;
 
     /**
+    * 音频响度信息
+    */
+    @SerializedName("LoudnessInfo")
+    @Expose
+    private LoudnessInfo LoudnessInfo;
+
+    /**
+    * 音频音效增强
+    */
+    @SerializedName("AudioEnhance")
+    @Expose
+    private AudioEnhance AudioEnhance;
+
+    /**
+    * 去除混音
+    */
+    @SerializedName("RemoveReverb")
+    @Expose
+    private RemoveReverb RemoveReverb;
+
+    /**
      * Get 音频码率，取值范围：0 和 [26, 256]，单位：kbps。
 注意：当取值为 0，表示音频码率和原始音频保持一致。 
      * @return Bitrate 音频码率，取值范围：0 和 [26, 256]，单位：kbps。
@@ -195,6 +216,54 @@ public class AudioInfo extends AbstractModel{
         this.EnableMuteAudio = EnableMuteAudio;
     }
 
+    /**
+     * Get 音频响度信息 
+     * @return LoudnessInfo 音频响度信息
+     */
+    public LoudnessInfo getLoudnessInfo() {
+        return this.LoudnessInfo;
+    }
+
+    /**
+     * Set 音频响度信息
+     * @param LoudnessInfo 音频响度信息
+     */
+    public void setLoudnessInfo(LoudnessInfo LoudnessInfo) {
+        this.LoudnessInfo = LoudnessInfo;
+    }
+
+    /**
+     * Get 音频音效增强 
+     * @return AudioEnhance 音频音效增强
+     */
+    public AudioEnhance getAudioEnhance() {
+        return this.AudioEnhance;
+    }
+
+    /**
+     * Set 音频音效增强
+     * @param AudioEnhance 音频音效增强
+     */
+    public void setAudioEnhance(AudioEnhance AudioEnhance) {
+        this.AudioEnhance = AudioEnhance;
+    }
+
+    /**
+     * Get 去除混音 
+     * @return RemoveReverb 去除混音
+     */
+    public RemoveReverb getRemoveReverb() {
+        return this.RemoveReverb;
+    }
+
+    /**
+     * Set 去除混音
+     * @param RemoveReverb 去除混音
+     */
+    public void setRemoveReverb(RemoveReverb RemoveReverb) {
+        this.RemoveReverb = RemoveReverb;
+    }
+
     public AudioInfo() {
     }
 
@@ -221,6 +290,15 @@ public class AudioInfo extends AbstractModel{
         if (source.EnableMuteAudio != null) {
             this.EnableMuteAudio = new Long(source.EnableMuteAudio);
         }
+        if (source.LoudnessInfo != null) {
+            this.LoudnessInfo = new LoudnessInfo(source.LoudnessInfo);
+        }
+        if (source.AudioEnhance != null) {
+            this.AudioEnhance = new AudioEnhance(source.AudioEnhance);
+        }
+        if (source.RemoveReverb != null) {
+            this.RemoveReverb = new RemoveReverb(source.RemoveReverb);
+        }
     }
 
 
@@ -234,6 +312,9 @@ public class AudioInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "SampleRate", this.SampleRate);
         this.setParamObj(map, prefix + "Denoise.", this.Denoise);
         this.setParamSimple(map, prefix + "EnableMuteAudio", this.EnableMuteAudio);
+        this.setParamObj(map, prefix + "LoudnessInfo.", this.LoudnessInfo);
+        this.setParamObj(map, prefix + "AudioEnhance.", this.AudioEnhance);
+        this.setParamObj(map, prefix + "RemoveReverb.", this.RemoveReverb);
 
     }
 }

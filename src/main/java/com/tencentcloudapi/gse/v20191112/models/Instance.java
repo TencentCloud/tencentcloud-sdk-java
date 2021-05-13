@@ -103,6 +103,14 @@ public class Instance extends AbstractModel{
     private Long ReserveValue;
 
     /**
+    * 实例的私有IP地址
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PrivateIpAddress")
+    @Expose
+    private String PrivateIpAddress;
+
+    /**
      * Get 服务部署ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return FleetId 服务部署ID
@@ -302,6 +310,26 @@ public class Instance extends AbstractModel{
         this.ReserveValue = ReserveValue;
     }
 
+    /**
+     * Get 实例的私有IP地址
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PrivateIpAddress 实例的私有IP地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPrivateIpAddress() {
+        return this.PrivateIpAddress;
+    }
+
+    /**
+     * Set 实例的私有IP地址
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PrivateIpAddress 实例的私有IP地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPrivateIpAddress(String PrivateIpAddress) {
+        this.PrivateIpAddress = PrivateIpAddress;
+    }
+
     public Instance() {
     }
 
@@ -340,6 +368,9 @@ public class Instance extends AbstractModel{
         if (source.ReserveValue != null) {
             this.ReserveValue = new Long(source.ReserveValue);
         }
+        if (source.PrivateIpAddress != null) {
+            this.PrivateIpAddress = new String(source.PrivateIpAddress);
+        }
     }
 
 
@@ -357,6 +388,7 @@ public class Instance extends AbstractModel{
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "Weight", this.Weight);
         this.setParamSimple(map, prefix + "ReserveValue", this.ReserveValue);
+        this.setParamSimple(map, prefix + "PrivateIpAddress", this.PrivateIpAddress);
 
     }
 }

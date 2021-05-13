@@ -639,6 +639,26 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *获取指定子账户在RBAC授权模式中对应kube-apiserver客户端证书的CommonName字段，如果没有客户端证书，将会签发一个，此接口有最大传入子账户数量上限，当前为50
+     * @param req DescribeClusterCommonNamesRequest
+     * @return DescribeClusterCommonNamesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeClusterCommonNamesResponse DescribeClusterCommonNames(DescribeClusterCommonNamesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeClusterCommonNamesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeClusterCommonNamesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeClusterCommonNames");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询集群访问端口状态(独立集群开启内网/外网访问，托管集群支持开启内网访问)
      * @param req DescribeClusterEndpointStatusRequest
      * @return DescribeClusterEndpointStatusResponse
