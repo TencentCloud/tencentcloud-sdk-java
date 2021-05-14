@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class QrcodeOCRRequest extends AbstractModel{
 
     /**
-    * 图片的 Base64 值。要求图片经Base64编码后不超过 3M，支持PNG、JPG、JPEG格式。
+    * 图片的 Base64 值。要求图片经Base64编码后不超过 7M，支持PNG、JPG、JPEG格式。
 图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
     */
     @SerializedName("ImageBase64")
@@ -31,7 +31,7 @@ public class QrcodeOCRRequest extends AbstractModel{
     private String ImageBase64;
 
     /**
-    * 图片的 Url 地址。要求图片经Base64编码后不超过 3M，支持PNG、JPG、JPEG格式。
+    * 图片的 Url 地址。要求图片经Base64编码后不超过 7M，支持PNG、JPG、JPEG格式。
 建议图片存储于腾讯云，可保障更高的下载速度和稳定性。
     */
     @SerializedName("ImageUrl")
@@ -39,9 +39,9 @@ public class QrcodeOCRRequest extends AbstractModel{
     private String ImageUrl;
 
     /**
-     * Get 图片的 Base64 值。要求图片经Base64编码后不超过 3M，支持PNG、JPG、JPEG格式。
+     * Get 图片的 Base64 值。要求图片经Base64编码后不超过 7M，支持PNG、JPG、JPEG格式。
 图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。 
-     * @return ImageBase64 图片的 Base64 值。要求图片经Base64编码后不超过 3M，支持PNG、JPG、JPEG格式。
+     * @return ImageBase64 图片的 Base64 值。要求图片经Base64编码后不超过 7M，支持PNG、JPG、JPEG格式。
 图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
      */
     public String getImageBase64() {
@@ -49,9 +49,9 @@ public class QrcodeOCRRequest extends AbstractModel{
     }
 
     /**
-     * Set 图片的 Base64 值。要求图片经Base64编码后不超过 3M，支持PNG、JPG、JPEG格式。
+     * Set 图片的 Base64 值。要求图片经Base64编码后不超过 7M，支持PNG、JPG、JPEG格式。
 图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
-     * @param ImageBase64 图片的 Base64 值。要求图片经Base64编码后不超过 3M，支持PNG、JPG、JPEG格式。
+     * @param ImageBase64 图片的 Base64 值。要求图片经Base64编码后不超过 7M，支持PNG、JPG、JPEG格式。
 图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
      */
     public void setImageBase64(String ImageBase64) {
@@ -59,9 +59,9 @@ public class QrcodeOCRRequest extends AbstractModel{
     }
 
     /**
-     * Get 图片的 Url 地址。要求图片经Base64编码后不超过 3M，支持PNG、JPG、JPEG格式。
+     * Get 图片的 Url 地址。要求图片经Base64编码后不超过 7M，支持PNG、JPG、JPEG格式。
 建议图片存储于腾讯云，可保障更高的下载速度和稳定性。 
-     * @return ImageUrl 图片的 Url 地址。要求图片经Base64编码后不超过 3M，支持PNG、JPG、JPEG格式。
+     * @return ImageUrl 图片的 Url 地址。要求图片经Base64编码后不超过 7M，支持PNG、JPG、JPEG格式。
 建议图片存储于腾讯云，可保障更高的下载速度和稳定性。
      */
     public String getImageUrl() {
@@ -69,9 +69,9 @@ public class QrcodeOCRRequest extends AbstractModel{
     }
 
     /**
-     * Set 图片的 Url 地址。要求图片经Base64编码后不超过 3M，支持PNG、JPG、JPEG格式。
+     * Set 图片的 Url 地址。要求图片经Base64编码后不超过 7M，支持PNG、JPG、JPEG格式。
 建议图片存储于腾讯云，可保障更高的下载速度和稳定性。
-     * @param ImageUrl 图片的 Url 地址。要求图片经Base64编码后不超过 3M，支持PNG、JPG、JPEG格式。
+     * @param ImageUrl 图片的 Url 地址。要求图片经Base64编码后不超过 7M，支持PNG、JPG、JPEG格式。
 建议图片存储于腾讯云，可保障更高的下载速度和稳定性。
      */
     public void setImageUrl(String ImageUrl) {

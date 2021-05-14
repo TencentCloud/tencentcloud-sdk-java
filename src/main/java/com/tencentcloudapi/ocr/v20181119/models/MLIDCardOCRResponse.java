@@ -88,8 +88,9 @@ MyKad  身份证
 MyPR    永居证
 MyTentera   军官证
 MyKAS    临时身份证
-POLIS  警察
+POLIS  警察证
 IKAD   劳工证
+MyKid 儿童卡
     */
     @SerializedName("Type")
     @Expose
@@ -271,15 +272,17 @@ MyKad  身份证
 MyPR    永居证
 MyTentera   军官证
 MyKAS    临时身份证
-POLIS  警察
-IKAD   劳工证 
+POLIS  警察证
+IKAD   劳工证
+MyKid 儿童卡 
      * @return Type 证件类型
 MyKad  身份证
 MyPR    永居证
 MyTentera   军官证
 MyKAS    临时身份证
-POLIS  警察
+POLIS  警察证
 IKAD   劳工证
+MyKid 儿童卡
      */
     public String getType() {
         return this.Type;
@@ -291,15 +294,17 @@ MyKad  身份证
 MyPR    永居证
 MyTentera   军官证
 MyKAS    临时身份证
-POLIS  警察
+POLIS  警察证
 IKAD   劳工证
+MyKid 儿童卡
      * @param Type 证件类型
 MyKad  身份证
 MyPR    永居证
 MyTentera   军官证
 MyKAS    临时身份证
-POLIS  警察
+POLIS  警察证
 IKAD   劳工证
+MyKid 儿童卡
      */
     public void setType(String Type) {
         this.Type = Type;

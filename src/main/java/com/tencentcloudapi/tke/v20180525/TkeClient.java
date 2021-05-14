@@ -899,6 +899,26 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *本接口用于查询开启vpc-cni模式的任务进度
+     * @param req DescribeEnableVpcCniProgressRequest
+     * @return DescribeEnableVpcCniProgressResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeEnableVpcCniProgressResponse DescribeEnableVpcCniProgress(DescribeEnableVpcCniProgressRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeEnableVpcCniProgressResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeEnableVpcCniProgressResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeEnableVpcCniProgress");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询已经存在的节点，判断是否可以加入集群
      * @param req DescribeExistedInstancesRequest
      * @return DescribeExistedInstancesResponse
@@ -1131,6 +1151,26 @@ public class TkeClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeRouteTableConflictsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeRouteTableConflicts");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *GR集群可以通过本接口附加vpc-cni容器网络插件，开启vpc-cni容器网络能力
+     * @param req EnableVpcCniNetworkTypeRequest
+     * @return EnableVpcCniNetworkTypeResponse
+     * @throws TencentCloudSDKException
+     */
+    public EnableVpcCniNetworkTypeResponse EnableVpcCniNetworkType(EnableVpcCniNetworkTypeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<EnableVpcCniNetworkTypeResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<EnableVpcCniNetworkTypeResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "EnableVpcCniNetworkType");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

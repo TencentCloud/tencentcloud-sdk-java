@@ -65,7 +65,7 @@ public class VerifyBizLicenseResponse extends AbstractModel{
     private String FrName;
 
     /**
-    * 经营状态（在营、注销、吊销、其他）
+    * 经营状态，包括：成立、筹建、存续、在营、开业、在册、正常经营、开业登记中、登记成立、撤销、撤销登记、非正常户、告解、个体暂时吊销、个体转企业、吊销（未注销）、拟注销、已注销、（待）迁入、（待）迁出、停业、歇业、清算等。
     */
     @SerializedName("EnterpriseStatus")
     @Expose
@@ -364,16 +364,16 @@ public class VerifyBizLicenseResponse extends AbstractModel{
     }
 
     /**
-     * Get 经营状态（在营、注销、吊销、其他） 
-     * @return EnterpriseStatus 经营状态（在营、注销、吊销、其他）
+     * Get 经营状态，包括：成立、筹建、存续、在营、开业、在册、正常经营、开业登记中、登记成立、撤销、撤销登记、非正常户、告解、个体暂时吊销、个体转企业、吊销（未注销）、拟注销、已注销、（待）迁入、（待）迁出、停业、歇业、清算等。 
+     * @return EnterpriseStatus 经营状态，包括：成立、筹建、存续、在营、开业、在册、正常经营、开业登记中、登记成立、撤销、撤销登记、非正常户、告解、个体暂时吊销、个体转企业、吊销（未注销）、拟注销、已注销、（待）迁入、（待）迁出、停业、歇业、清算等。
      */
     public String getEnterpriseStatus() {
         return this.EnterpriseStatus;
     }
 
     /**
-     * Set 经营状态（在营、注销、吊销、其他）
-     * @param EnterpriseStatus 经营状态（在营、注销、吊销、其他）
+     * Set 经营状态，包括：成立、筹建、存续、在营、开业、在册、正常经营、开业登记中、登记成立、撤销、撤销登记、非正常户、告解、个体暂时吊销、个体转企业、吊销（未注销）、拟注销、已注销、（待）迁入、（待）迁出、停业、歇业、清算等。
+     * @param EnterpriseStatus 经营状态，包括：成立、筹建、存续、在营、开业、在册、正常经营、开业登记中、登记成立、撤销、撤销登记、非正常户、告解、个体暂时吊销、个体转企业、吊销（未注销）、拟注销、已注销、（待）迁入、（待）迁出、停业、歇业、清算等。
      */
     public void setEnterpriseStatus(String EnterpriseStatus) {
         this.EnterpriseStatus = EnterpriseStatus;

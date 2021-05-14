@@ -219,6 +219,26 @@ public class CfwClient extends AbstractClient{
     }
 
     /**
+     *DescribeGuideScanInfo新手引导扫描接口信息
+     * @param req DescribeGuideScanInfoRequest
+     * @return DescribeGuideScanInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeGuideScanInfoResponse DescribeGuideScanInfo(DescribeGuideScanInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeGuideScanInfoResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeGuideScanInfoResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeGuideScanInfo");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *nat规则列表概况
      * @param req DescribeNatRuleOverviewRequest
      * @return DescribeNatRuleOverviewResponse

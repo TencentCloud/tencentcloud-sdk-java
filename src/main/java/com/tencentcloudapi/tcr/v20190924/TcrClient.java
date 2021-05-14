@@ -739,6 +739,26 @@ public class TcrClient extends AbstractClient{
     }
 
     /**
+     *用于在企业版中返回Chart的下载信息
+     * @param req DescribeChartDownloadInfoRequest
+     * @return DescribeChartDownloadInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeChartDownloadInfoResponse DescribeChartDownloadInfo(DescribeChartDownloadInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeChartDownloadInfoResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeChartDownloadInfoResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeChartDownloadInfo");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询实例公网访问入口状态
      * @param req DescribeExternalEndpointStatusRequest
      * @return DescribeExternalEndpointStatusResponse
