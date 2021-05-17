@@ -13,21 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tem.v20201221.models;
+package com.tencentcloudapi.mna.v20210119.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeIngressResponse extends AbstractModel{
+public class DeleteQosResponse extends AbstractModel{
 
     /**
-    * Ingress 规则配置
+    * 单次加速唯一 Id
     */
-    @SerializedName("Result")
+    @SerializedName("SessionId")
     @Expose
-    private IngressInfo Result;
+    private String SessionId;
+
+    /**
+    * 本次加速会话持续时间（单位秒）
+    */
+    @SerializedName("Duration")
+    @Expose
+    private Long Duration;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,19 +44,35 @@ public class DescribeIngressResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Ingress 规则配置 
-     * @return Result Ingress 规则配置
+     * Get 单次加速唯一 Id 
+     * @return SessionId 单次加速唯一 Id
      */
-    public IngressInfo getResult() {
-        return this.Result;
+    public String getSessionId() {
+        return this.SessionId;
     }
 
     /**
-     * Set Ingress 规则配置
-     * @param Result Ingress 规则配置
+     * Set 单次加速唯一 Id
+     * @param SessionId 单次加速唯一 Id
      */
-    public void setResult(IngressInfo Result) {
-        this.Result = Result;
+    public void setSessionId(String SessionId) {
+        this.SessionId = SessionId;
+    }
+
+    /**
+     * Get 本次加速会话持续时间（单位秒） 
+     * @return Duration 本次加速会话持续时间（单位秒）
+     */
+    public Long getDuration() {
+        return this.Duration;
+    }
+
+    /**
+     * Set 本次加速会话持续时间（单位秒）
+     * @param Duration 本次加速会话持续时间（单位秒）
+     */
+    public void setDuration(Long Duration) {
+        this.Duration = Duration;
     }
 
     /**
@@ -68,16 +91,19 @@ public class DescribeIngressResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeIngressResponse() {
+    public DeleteQosResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeIngressResponse(DescribeIngressResponse source) {
-        if (source.Result != null) {
-            this.Result = new IngressInfo(source.Result);
+    public DeleteQosResponse(DeleteQosResponse source) {
+        if (source.SessionId != null) {
+            this.SessionId = new String(source.SessionId);
+        }
+        if (source.Duration != null) {
+            this.Duration = new Long(source.Duration);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -89,7 +115,8 @@ public class DescribeIngressResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "Result.", this.Result);
+        this.setParamSimple(map, prefix + "SessionId", this.SessionId);
+        this.setParamSimple(map, prefix + "Duration", this.Duration);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

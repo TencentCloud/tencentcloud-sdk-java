@@ -37,7 +37,7 @@ public class CreateServiceV2Request extends AbstractModel{
     private String Description;
 
     /**
-    * 是否使用默认镜像服务
+    * 是否使用默认镜像服务 1-是，0-否
     */
     @SerializedName("UseDefaultImageService")
     @Expose
@@ -86,14 +86,19 @@ public class CreateServiceV2Request extends AbstractModel{
     private String [] SubnetList;
 
     /**
-    * 编程语言
+    * 编程语言 
+- JAVA
+- OTHER
     */
     @SerializedName("CodingLanguage")
     @Expose
     private String CodingLanguage;
 
     /**
-    * 部署方式
+    * 部署方式 
+- IMAGE
+- JAR
+- WAR
     */
     @SerializedName("DeployMode")
     @Expose
@@ -132,16 +137,16 @@ public class CreateServiceV2Request extends AbstractModel{
     }
 
     /**
-     * Get 是否使用默认镜像服务 
-     * @return UseDefaultImageService 是否使用默认镜像服务
+     * Get 是否使用默认镜像服务 1-是，0-否 
+     * @return UseDefaultImageService 是否使用默认镜像服务 1-是，0-否
      */
     public Long getUseDefaultImageService() {
         return this.UseDefaultImageService;
     }
 
     /**
-     * Set 是否使用默认镜像服务
-     * @param UseDefaultImageService 是否使用默认镜像服务
+     * Set 是否使用默认镜像服务 1-是，0-否
+     * @param UseDefaultImageService 是否使用默认镜像服务 1-是，0-否
      */
     public void setUseDefaultImageService(Long UseDefaultImageService) {
         this.UseDefaultImageService = UseDefaultImageService;
@@ -245,15 +250,23 @@ public class CreateServiceV2Request extends AbstractModel{
 
     /**
      * Get 编程语言 
-     * @return CodingLanguage 编程语言
+- JAVA
+- OTHER 
+     * @return CodingLanguage 编程语言 
+- JAVA
+- OTHER
      */
     public String getCodingLanguage() {
         return this.CodingLanguage;
     }
 
     /**
-     * Set 编程语言
-     * @param CodingLanguage 编程语言
+     * Set 编程语言 
+- JAVA
+- OTHER
+     * @param CodingLanguage 编程语言 
+- JAVA
+- OTHER
      */
     public void setCodingLanguage(String CodingLanguage) {
         this.CodingLanguage = CodingLanguage;
@@ -261,15 +274,27 @@ public class CreateServiceV2Request extends AbstractModel{
 
     /**
      * Get 部署方式 
-     * @return DeployMode 部署方式
+- IMAGE
+- JAR
+- WAR 
+     * @return DeployMode 部署方式 
+- IMAGE
+- JAR
+- WAR
      */
     public String getDeployMode() {
         return this.DeployMode;
     }
 
     /**
-     * Set 部署方式
-     * @param DeployMode 部署方式
+     * Set 部署方式 
+- IMAGE
+- JAR
+- WAR
+     * @param DeployMode 部署方式 
+- IMAGE
+- JAR
+- WAR
      */
     public void setDeployMode(String DeployMode) {
         this.DeployMode = DeployMode;

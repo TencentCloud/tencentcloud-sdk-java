@@ -37,7 +37,7 @@ public class DescribeIngressesRequest extends AbstractModel{
     private String EksNamespace;
 
     /**
-    * 来源
+    * 来源渠道
     */
     @SerializedName("SourceChannel")
     @Expose
@@ -76,16 +76,16 @@ public class DescribeIngressesRequest extends AbstractModel{
     }
 
     /**
-     * Get 来源 
-     * @return SourceChannel 来源
+     * Get 来源渠道 
+     * @return SourceChannel 来源渠道
      */
     public Long getSourceChannel() {
         return this.SourceChannel;
     }
 
     /**
-     * Set 来源
-     * @param SourceChannel 来源
+     * Set 来源渠道
+     * @param SourceChannel 来源渠道
      */
     public void setSourceChannel(Long SourceChannel) {
         this.SourceChannel = SourceChannel;

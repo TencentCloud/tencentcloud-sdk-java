@@ -13,30 +13,29 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tke.v20180525.models;
+package com.tencentcloudapi.ocr.v20181119.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SetNodePoolNodeProtectionResponse extends AbstractModel{
+public class VerifyEnterpriseFourFactorsResponse extends AbstractModel{
 
     /**
-    * 成功设置的节点id
-注意：此字段可能返回 null，表示取不到有效值。
+    * 核验一致性（1:一致，2:不一致）
     */
-    @SerializedName("SucceedInstanceIds")
+    @SerializedName("State")
     @Expose
-    private String [] SucceedInstanceIds;
+    private Long State;
 
     /**
-    * 没有成功设置的节点id
+    * 返回不一致时，返回明细，-22：姓名不一致，-23：证件号码不一致，-24：企业名称不一致，-25：企业标识不一致
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("FailedInstanceIds")
+    @SerializedName("Detail")
     @Expose
-    private String [] FailedInstanceIds;
+    private Detail Detail;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,43 +45,39 @@ public class SetNodePoolNodeProtectionResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 成功设置的节点id
+     * Get 核验一致性（1:一致，2:不一致） 
+     * @return State 核验一致性（1:一致，2:不一致）
+     */
+    public Long getState() {
+        return this.State;
+    }
+
+    /**
+     * Set 核验一致性（1:一致，2:不一致）
+     * @param State 核验一致性（1:一致，2:不一致）
+     */
+    public void setState(Long State) {
+        this.State = State;
+    }
+
+    /**
+     * Get 返回不一致时，返回明细，-22：姓名不一致，-23：证件号码不一致，-24：企业名称不一致，-25：企业标识不一致
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SucceedInstanceIds 成功设置的节点id
+     * @return Detail 返回不一致时，返回明细，-22：姓名不一致，-23：证件号码不一致，-24：企业名称不一致，-25：企业标识不一致
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String [] getSucceedInstanceIds() {
-        return this.SucceedInstanceIds;
+    public Detail getDetail() {
+        return this.Detail;
     }
 
     /**
-     * Set 成功设置的节点id
+     * Set 返回不一致时，返回明细，-22：姓名不一致，-23：证件号码不一致，-24：企业名称不一致，-25：企业标识不一致
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SucceedInstanceIds 成功设置的节点id
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setSucceedInstanceIds(String [] SucceedInstanceIds) {
-        this.SucceedInstanceIds = SucceedInstanceIds;
-    }
-
-    /**
-     * Get 没有成功设置的节点id
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FailedInstanceIds 没有成功设置的节点id
+     * @param Detail 返回不一致时，返回明细，-22：姓名不一致，-23：证件号码不一致，-24：企业名称不一致，-25：企业标识不一致
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String [] getFailedInstanceIds() {
-        return this.FailedInstanceIds;
-    }
-
-    /**
-     * Set 没有成功设置的节点id
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param FailedInstanceIds 没有成功设置的节点id
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setFailedInstanceIds(String [] FailedInstanceIds) {
-        this.FailedInstanceIds = FailedInstanceIds;
+    public void setDetail(Detail Detail) {
+        this.Detail = Detail;
     }
 
     /**
@@ -101,25 +96,19 @@ public class SetNodePoolNodeProtectionResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public SetNodePoolNodeProtectionResponse() {
+    public VerifyEnterpriseFourFactorsResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public SetNodePoolNodeProtectionResponse(SetNodePoolNodeProtectionResponse source) {
-        if (source.SucceedInstanceIds != null) {
-            this.SucceedInstanceIds = new String[source.SucceedInstanceIds.length];
-            for (int i = 0; i < source.SucceedInstanceIds.length; i++) {
-                this.SucceedInstanceIds[i] = new String(source.SucceedInstanceIds[i]);
-            }
+    public VerifyEnterpriseFourFactorsResponse(VerifyEnterpriseFourFactorsResponse source) {
+        if (source.State != null) {
+            this.State = new Long(source.State);
         }
-        if (source.FailedInstanceIds != null) {
-            this.FailedInstanceIds = new String[source.FailedInstanceIds.length];
-            for (int i = 0; i < source.FailedInstanceIds.length; i++) {
-                this.FailedInstanceIds[i] = new String(source.FailedInstanceIds[i]);
-            }
+        if (source.Detail != null) {
+            this.Detail = new Detail(source.Detail);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -131,8 +120,8 @@ public class SetNodePoolNodeProtectionResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArraySimple(map, prefix + "SucceedInstanceIds.", this.SucceedInstanceIds);
-        this.setParamArraySimple(map, prefix + "FailedInstanceIds.", this.FailedInstanceIds);
+        this.setParamSimple(map, prefix + "State", this.State);
+        this.setParamObj(map, prefix + "Detail.", this.Detail);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

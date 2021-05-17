@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class IKEOptionsSpecification extends AbstractModel{
 
     /**
-    * 加密算法，可选值：'3DES-CBC', 'AES-CBC-128', 'AES-CBS-192', 'AES-CBC-256', 'DES-CBC'，默认为3DES-CBC
+    * 加密算法，可选值：'3DES-CBC', 'AES-CBC-128', 'AES-CBS-192', 'AES-CBC-256', 'DES-CBC'，'SM4', 默认为3DES-CBC
     */
     @SerializedName("PropoEncryAlgorithm")
     @Expose
     private String PropoEncryAlgorithm;
 
     /**
-    * 认证算法：可选值：'MD5', 'SHA1'，默认为MD5
+    * 认证算法：可选值：'MD5', 'SHA1'，'SHA-256' 默认为MD5
     */
     @SerializedName("PropoAuthenAlgorithm")
     @Expose
@@ -107,32 +107,32 @@ public class IKEOptionsSpecification extends AbstractModel{
     private String IKEVersion;
 
     /**
-     * Get 加密算法，可选值：'3DES-CBC', 'AES-CBC-128', 'AES-CBS-192', 'AES-CBC-256', 'DES-CBC'，默认为3DES-CBC 
-     * @return PropoEncryAlgorithm 加密算法，可选值：'3DES-CBC', 'AES-CBC-128', 'AES-CBS-192', 'AES-CBC-256', 'DES-CBC'，默认为3DES-CBC
+     * Get 加密算法，可选值：'3DES-CBC', 'AES-CBC-128', 'AES-CBS-192', 'AES-CBC-256', 'DES-CBC'，'SM4', 默认为3DES-CBC 
+     * @return PropoEncryAlgorithm 加密算法，可选值：'3DES-CBC', 'AES-CBC-128', 'AES-CBS-192', 'AES-CBC-256', 'DES-CBC'，'SM4', 默认为3DES-CBC
      */
     public String getPropoEncryAlgorithm() {
         return this.PropoEncryAlgorithm;
     }
 
     /**
-     * Set 加密算法，可选值：'3DES-CBC', 'AES-CBC-128', 'AES-CBS-192', 'AES-CBC-256', 'DES-CBC'，默认为3DES-CBC
-     * @param PropoEncryAlgorithm 加密算法，可选值：'3DES-CBC', 'AES-CBC-128', 'AES-CBS-192', 'AES-CBC-256', 'DES-CBC'，默认为3DES-CBC
+     * Set 加密算法，可选值：'3DES-CBC', 'AES-CBC-128', 'AES-CBS-192', 'AES-CBC-256', 'DES-CBC'，'SM4', 默认为3DES-CBC
+     * @param PropoEncryAlgorithm 加密算法，可选值：'3DES-CBC', 'AES-CBC-128', 'AES-CBS-192', 'AES-CBC-256', 'DES-CBC'，'SM4', 默认为3DES-CBC
      */
     public void setPropoEncryAlgorithm(String PropoEncryAlgorithm) {
         this.PropoEncryAlgorithm = PropoEncryAlgorithm;
     }
 
     /**
-     * Get 认证算法：可选值：'MD5', 'SHA1'，默认为MD5 
-     * @return PropoAuthenAlgorithm 认证算法：可选值：'MD5', 'SHA1'，默认为MD5
+     * Get 认证算法：可选值：'MD5', 'SHA1'，'SHA-256' 默认为MD5 
+     * @return PropoAuthenAlgorithm 认证算法：可选值：'MD5', 'SHA1'，'SHA-256' 默认为MD5
      */
     public String getPropoAuthenAlgorithm() {
         return this.PropoAuthenAlgorithm;
     }
 
     /**
-     * Set 认证算法：可选值：'MD5', 'SHA1'，默认为MD5
-     * @param PropoAuthenAlgorithm 认证算法：可选值：'MD5', 'SHA1'，默认为MD5
+     * Set 认证算法：可选值：'MD5', 'SHA1'，'SHA-256' 默认为MD5
+     * @param PropoAuthenAlgorithm 认证算法：可选值：'MD5', 'SHA1'，'SHA-256' 默认为MD5
      */
     public void setPropoAuthenAlgorithm(String PropoAuthenAlgorithm) {
         this.PropoAuthenAlgorithm = PropoAuthenAlgorithm;

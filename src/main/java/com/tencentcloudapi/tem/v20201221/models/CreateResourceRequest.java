@@ -30,7 +30,7 @@ public class CreateResourceRequest extends AbstractModel{
     private String NamespaceId;
 
     /**
-    * 资源类型
+    * 资源类型，目前支持文件系统：CFS；日志服务：CLS；注册中心：TSE_SRE
     */
     @SerializedName("ResourceType")
     @Expose
@@ -44,7 +44,7 @@ public class CreateResourceRequest extends AbstractModel{
     private String ResourceId;
 
     /**
-    * 来源
+    * 来源渠道
     */
     @SerializedName("SourceChannel")
     @Expose
@@ -67,16 +67,16 @@ public class CreateResourceRequest extends AbstractModel{
     }
 
     /**
-     * Get 资源类型 
-     * @return ResourceType 资源类型
+     * Get 资源类型，目前支持文件系统：CFS；日志服务：CLS；注册中心：TSE_SRE 
+     * @return ResourceType 资源类型，目前支持文件系统：CFS；日志服务：CLS；注册中心：TSE_SRE
      */
     public String getResourceType() {
         return this.ResourceType;
     }
 
     /**
-     * Set 资源类型
-     * @param ResourceType 资源类型
+     * Set 资源类型，目前支持文件系统：CFS；日志服务：CLS；注册中心：TSE_SRE
+     * @param ResourceType 资源类型，目前支持文件系统：CFS；日志服务：CLS；注册中心：TSE_SRE
      */
     public void setResourceType(String ResourceType) {
         this.ResourceType = ResourceType;
@@ -99,16 +99,16 @@ public class CreateResourceRequest extends AbstractModel{
     }
 
     /**
-     * Get 来源 
-     * @return SourceChannel 来源
+     * Get 来源渠道 
+     * @return SourceChannel 来源渠道
      */
     public Long getSourceChannel() {
         return this.SourceChannel;
     }
 
     /**
-     * Set 来源
-     * @param SourceChannel 来源
+     * Set 来源渠道
+     * @param SourceChannel 来源渠道
      */
     public void setSourceChannel(Long SourceChannel) {
         this.SourceChannel = SourceChannel;

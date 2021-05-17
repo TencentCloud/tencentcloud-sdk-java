@@ -37,28 +37,31 @@ public class DescribeServiceRunPodListV2Request extends AbstractModel{
     private String ServiceId;
 
     /**
-    * 单页条数
+    * 单页条数，默认值20
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 分页下标
+    * 分页下标，默认值0
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * pod状态
+    * 实例状态 
+- Running 
+- Pending 
+- Error
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 名字
+    * 实例名字
     */
     @SerializedName("PodName")
     @Expose
@@ -104,64 +107,76 @@ public class DescribeServiceRunPodListV2Request extends AbstractModel{
     }
 
     /**
-     * Get 单页条数 
-     * @return Limit 单页条数
+     * Get 单页条数，默认值20 
+     * @return Limit 单页条数，默认值20
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 单页条数
-     * @param Limit 单页条数
+     * Set 单页条数，默认值20
+     * @param Limit 单页条数，默认值20
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 分页下标 
-     * @return Offset 分页下标
+     * Get 分页下标，默认值0 
+     * @return Offset 分页下标，默认值0
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 分页下标
-     * @param Offset 分页下标
+     * Set 分页下标，默认值0
+     * @param Offset 分页下标，默认值0
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get pod状态 
-     * @return Status pod状态
+     * Get 实例状态 
+- Running 
+- Pending 
+- Error 
+     * @return Status 实例状态 
+- Running 
+- Pending 
+- Error
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set pod状态
-     * @param Status pod状态
+     * Set 实例状态 
+- Running 
+- Pending 
+- Error
+     * @param Status 实例状态 
+- Running 
+- Pending 
+- Error
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 名字 
-     * @return PodName 名字
+     * Get 实例名字 
+     * @return PodName 实例名字
      */
     public String getPodName() {
         return this.PodName;
     }
 
     /**
-     * Set 名字
-     * @param PodName 名字
+     * Set 实例名字
+     * @param PodName 实例名字
      */
     public void setPodName(String PodName) {
         this.PodName = PodName;
