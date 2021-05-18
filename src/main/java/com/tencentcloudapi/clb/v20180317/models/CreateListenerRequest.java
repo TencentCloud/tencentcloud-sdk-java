@@ -115,6 +115,13 @@ public class CreateListenerRequest extends AbstractModel{
     private Long EndPort;
 
     /**
+    * 解绑后端目标时，是否发RST给客户端，此参数仅适用于TCP监听器。
+    */
+    @SerializedName("DeregisterTargetRst")
+    @Expose
+    private Boolean DeregisterTargetRst;
+
+    /**
      * Get 负载均衡实例 ID。 
      * @return LoadBalancerId 负载均衡实例 ID。
      */
@@ -326,6 +333,22 @@ public class CreateListenerRequest extends AbstractModel{
         this.EndPort = EndPort;
     }
 
+    /**
+     * Get 解绑后端目标时，是否发RST给客户端，此参数仅适用于TCP监听器。 
+     * @return DeregisterTargetRst 解绑后端目标时，是否发RST给客户端，此参数仅适用于TCP监听器。
+     */
+    public Boolean getDeregisterTargetRst() {
+        return this.DeregisterTargetRst;
+    }
+
+    /**
+     * Set 解绑后端目标时，是否发RST给客户端，此参数仅适用于TCP监听器。
+     * @param DeregisterTargetRst 解绑后端目标时，是否发RST给客户端，此参数仅适用于TCP监听器。
+     */
+    public void setDeregisterTargetRst(Boolean DeregisterTargetRst) {
+        this.DeregisterTargetRst = DeregisterTargetRst;
+    }
+
     public CreateListenerRequest() {
     }
 
@@ -379,6 +402,9 @@ public class CreateListenerRequest extends AbstractModel{
         if (source.EndPort != null) {
             this.EndPort = new Long(source.EndPort);
         }
+        if (source.DeregisterTargetRst != null) {
+            this.DeregisterTargetRst = new Boolean(source.DeregisterTargetRst);
+        }
     }
 
 
@@ -399,6 +425,7 @@ public class CreateListenerRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "SessionType", this.SessionType);
         this.setParamSimple(map, prefix + "KeepaliveEnable", this.KeepaliveEnable);
         this.setParamSimple(map, prefix + "EndPort", this.EndPort);
+        this.setParamSimple(map, prefix + "DeregisterTargetRst", this.DeregisterTargetRst);
 
     }
 }

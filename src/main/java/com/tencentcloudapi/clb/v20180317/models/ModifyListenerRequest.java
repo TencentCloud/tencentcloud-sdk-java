@@ -87,6 +87,13 @@ public class ModifyListenerRequest extends AbstractModel{
     private Long KeepaliveEnable;
 
     /**
+    * 解绑后端目标时，是否发RST给客户端，此参数仅适用于TCP监听器。
+    */
+    @SerializedName("DeregisterTargetRst")
+    @Expose
+    private Boolean DeregisterTargetRst;
+
+    /**
      * Get 负载均衡实例ID。 
      * @return LoadBalancerId 负载均衡实例ID。
      */
@@ -234,6 +241,22 @@ public class ModifyListenerRequest extends AbstractModel{
         this.KeepaliveEnable = KeepaliveEnable;
     }
 
+    /**
+     * Get 解绑后端目标时，是否发RST给客户端，此参数仅适用于TCP监听器。 
+     * @return DeregisterTargetRst 解绑后端目标时，是否发RST给客户端，此参数仅适用于TCP监听器。
+     */
+    public Boolean getDeregisterTargetRst() {
+        return this.DeregisterTargetRst;
+    }
+
+    /**
+     * Set 解绑后端目标时，是否发RST给客户端，此参数仅适用于TCP监听器。
+     * @param DeregisterTargetRst 解绑后端目标时，是否发RST给客户端，此参数仅适用于TCP监听器。
+     */
+    public void setDeregisterTargetRst(Boolean DeregisterTargetRst) {
+        this.DeregisterTargetRst = DeregisterTargetRst;
+    }
+
     public ModifyListenerRequest() {
     }
 
@@ -269,6 +292,9 @@ public class ModifyListenerRequest extends AbstractModel{
         if (source.KeepaliveEnable != null) {
             this.KeepaliveEnable = new Long(source.KeepaliveEnable);
         }
+        if (source.DeregisterTargetRst != null) {
+            this.DeregisterTargetRst = new Boolean(source.DeregisterTargetRst);
+        }
     }
 
 
@@ -285,6 +311,7 @@ public class ModifyListenerRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Scheduler", this.Scheduler);
         this.setParamSimple(map, prefix + "SniSwitch", this.SniSwitch);
         this.setParamSimple(map, prefix + "KeepaliveEnable", this.KeepaliveEnable);
+        this.setParamSimple(map, prefix + "DeregisterTargetRst", this.DeregisterTargetRst);
 
     }
 }

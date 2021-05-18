@@ -39,6 +39,46 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
+     *清空cmq消息队列中的消息
+     * @param req ClearCmqQueueRequest
+     * @return ClearCmqQueueResponse
+     * @throws TencentCloudSDKException
+     */
+    public ClearCmqQueueResponse ClearCmqQueue(ClearCmqQueueRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ClearCmqQueueResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ClearCmqQueueResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ClearCmqQueue");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *清空订阅者消息标签
+     * @param req ClearCmqSubscriptionFilterTagsRequest
+     * @return ClearCmqSubscriptionFilterTagsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ClearCmqSubscriptionFilterTagsResponse ClearCmqSubscriptionFilterTags(ClearCmqSubscriptionFilterTagsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ClearCmqSubscriptionFilterTagsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ClearCmqSubscriptionFilterTagsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ClearCmqSubscriptionFilterTags");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建用户的集群
      * @param req CreateClusterRequest
      * @return CreateClusterResponse
@@ -51,6 +91,66 @@ public class TdmqClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreateClusterResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "CreateCluster");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *创建cmq队列接口
+     * @param req CreateCmqQueueRequest
+     * @return CreateCmqQueueResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCmqQueueResponse CreateCmqQueue(CreateCmqQueueRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateCmqQueueResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateCmqQueueResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateCmqQueue");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *创建cmq订阅接口
+     * @param req CreateCmqSubscribeRequest
+     * @return CreateCmqSubscribeResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCmqSubscribeResponse CreateCmqSubscribe(CreateCmqSubscribeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateCmqSubscribeResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateCmqSubscribeResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateCmqSubscribe");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *创建cmq主题
+     * @param req CreateCmqTopicRequest
+     * @return CreateCmqTopicResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCmqTopicResponse CreateCmqTopic(CreateCmqTopicRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateCmqTopicResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateCmqTopicResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateCmqTopic");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -131,6 +231,66 @@ public class TdmqClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteClusterResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteCluster");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除cmq队列
+     * @param req DeleteCmqQueueRequest
+     * @return DeleteCmqQueueResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteCmqQueueResponse DeleteCmqQueue(DeleteCmqQueueRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteCmqQueueResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteCmqQueueResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteCmqQueue");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除cmq订阅
+     * @param req DeleteCmqSubscribeRequest
+     * @return DeleteCmqSubscribeResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteCmqSubscribeResponse DeleteCmqSubscribe(DeleteCmqSubscribeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteCmqSubscribeResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteCmqSubscribeResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteCmqSubscribe");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除cmq主题
+     * @param req DeleteCmqTopicRequest
+     * @return DeleteCmqTopicResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteCmqTopicResponse DeleteCmqTopic(DeleteCmqTopicRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteCmqTopicResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteCmqTopicResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteCmqTopic");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -279,6 +439,126 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
+     *枚举cmq死信队列源队列
+     * @param req DescribeCmqDeadLetterSourceQueuesRequest
+     * @return DescribeCmqDeadLetterSourceQueuesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCmqDeadLetterSourceQueuesResponse DescribeCmqDeadLetterSourceQueues(DescribeCmqDeadLetterSourceQueuesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCmqDeadLetterSourceQueuesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCmqDeadLetterSourceQueuesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeCmqDeadLetterSourceQueues");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询cmq队列详情
+     * @param req DescribeCmqQueueDetailRequest
+     * @return DescribeCmqQueueDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCmqQueueDetailResponse DescribeCmqQueueDetail(DescribeCmqQueueDetailRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCmqQueueDetailResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCmqQueueDetailResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeCmqQueueDetail");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询cmq全量队列
+     * @param req DescribeCmqQueuesRequest
+     * @return DescribeCmqQueuesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCmqQueuesResponse DescribeCmqQueues(DescribeCmqQueuesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCmqQueuesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCmqQueuesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeCmqQueues");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询cmq订阅详情
+     * @param req DescribeCmqSubscriptionDetailRequest
+     * @return DescribeCmqSubscriptionDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCmqSubscriptionDetailResponse DescribeCmqSubscriptionDetail(DescribeCmqSubscriptionDetailRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCmqSubscriptionDetailResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCmqSubscriptionDetailResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeCmqSubscriptionDetail");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询cmq主题详情
+     * @param req DescribeCmqTopicDetailRequest
+     * @return DescribeCmqTopicDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCmqTopicDetailResponse DescribeCmqTopicDetail(DescribeCmqTopicDetailRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCmqTopicDetailResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCmqTopicDetailResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeCmqTopicDetail");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *枚举cmq全量主题
+     * @param req DescribeCmqTopicsRequest
+     * @return DescribeCmqTopicsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCmqTopicsResponse DescribeCmqTopics(DescribeCmqTopicsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCmqTopicsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCmqTopicsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeCmqTopics");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取指定命名空间的属性
      * @param req DescribeEnvironmentAttributesRequest
      * @return DescribeEnvironmentAttributesResponse
@@ -419,6 +699,66 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
+     *修改cmq队列属性
+     * @param req ModifyCmqQueueAttributeRequest
+     * @return ModifyCmqQueueAttributeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyCmqQueueAttributeResponse ModifyCmqQueueAttribute(ModifyCmqQueueAttributeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyCmqQueueAttributeResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyCmqQueueAttributeResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyCmqQueueAttribute");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改cmq订阅属性
+     * @param req ModifyCmqSubscriptionAttributeRequest
+     * @return ModifyCmqSubscriptionAttributeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyCmqSubscriptionAttributeResponse ModifyCmqSubscriptionAttribute(ModifyCmqSubscriptionAttributeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyCmqSubscriptionAttributeResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyCmqSubscriptionAttributeResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyCmqSubscriptionAttribute");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改cmq主题属性
+     * @param req ModifyCmqTopicAttributeRequest
+     * @return ModifyCmqTopicAttributeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyCmqTopicAttributeResponse ModifyCmqTopicAttribute(ModifyCmqTopicAttributeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyCmqTopicAttributeResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyCmqTopicAttributeResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyCmqTopicAttribute");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *修改指定命名空间的属性值
      * @param req ModifyEnvironmentAttributesRequest
      * @return ModifyEnvironmentAttributesResponse
@@ -459,6 +799,26 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
+     *发送cmq主题消息
+     * @param req PublishCmqMsgRequest
+     * @return PublishCmqMsgResponse
+     * @throws TencentCloudSDKException
+     */
+    public PublishCmqMsgResponse PublishCmqMsg(PublishCmqMsgRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<PublishCmqMsgResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<PublishCmqMsgResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "PublishCmqMsg");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *根据时间戳进行消息回溯，精确到毫秒
      * @param req ResetMsgSubOffsetByTimestampRequest
      * @return ResetMsgSubOffsetByTimestampResponse
@@ -471,6 +831,26 @@ public class TdmqClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ResetMsgSubOffsetByTimestampResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ResetMsgSubOffsetByTimestamp");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *回溯cmq队列
+     * @param req RewindCmqQueueRequest
+     * @return RewindCmqQueueResponse
+     * @throws TencentCloudSDKException
+     */
+    public RewindCmqQueueResponse RewindCmqQueue(RewindCmqQueueRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RewindCmqQueueResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<RewindCmqQueueResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "RewindCmqQueue");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -499,6 +879,26 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
+     *发送cmq消息
+     * @param req SendCmqMsgRequest
+     * @return SendCmqMsgResponse
+     * @throws TencentCloudSDKException
+     */
+    public SendCmqMsgResponse SendCmqMsg(SendCmqMsgRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SendCmqMsgResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<SendCmqMsgResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "SendCmqMsg");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *发送单条消息
      * @param req SendMessagesRequest
      * @return SendMessagesResponse
@@ -511,6 +911,26 @@ public class TdmqClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<SendMessagesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "SendMessages");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *解绑cmq死信队列
+     * @param req UnbindCmqDeadLetterRequest
+     * @return UnbindCmqDeadLetterResponse
+     * @throws TencentCloudSDKException
+     */
+    public UnbindCmqDeadLetterResponse UnbindCmqDeadLetter(UnbindCmqDeadLetterRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UnbindCmqDeadLetterResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UnbindCmqDeadLetterResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UnbindCmqDeadLetter");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

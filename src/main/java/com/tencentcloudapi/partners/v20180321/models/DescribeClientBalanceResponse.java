@@ -23,11 +23,18 @@ import java.util.HashMap;
 public class DescribeClientBalanceResponse extends AbstractModel{
 
     /**
-    * 账户余额，单位分
+    * 账户可用余额，单位分 （可用余额 = 现金余额 - 冻结金额）
     */
     @SerializedName("Balance")
     @Expose
     private Long Balance;
+
+    /**
+    * 账户现金余额，单位分
+    */
+    @SerializedName("Cash")
+    @Expose
+    private Long Cash;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,19 +44,35 @@ public class DescribeClientBalanceResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 账户余额，单位分 
-     * @return Balance 账户余额，单位分
+     * Get 账户可用余额，单位分 （可用余额 = 现金余额 - 冻结金额） 
+     * @return Balance 账户可用余额，单位分 （可用余额 = 现金余额 - 冻结金额）
      */
     public Long getBalance() {
         return this.Balance;
     }
 
     /**
-     * Set 账户余额，单位分
-     * @param Balance 账户余额，单位分
+     * Set 账户可用余额，单位分 （可用余额 = 现金余额 - 冻结金额）
+     * @param Balance 账户可用余额，单位分 （可用余额 = 现金余额 - 冻结金额）
      */
     public void setBalance(Long Balance) {
         this.Balance = Balance;
+    }
+
+    /**
+     * Get 账户现金余额，单位分 
+     * @return Cash 账户现金余额，单位分
+     */
+    public Long getCash() {
+        return this.Cash;
+    }
+
+    /**
+     * Set 账户现金余额，单位分
+     * @param Cash 账户现金余额，单位分
+     */
+    public void setCash(Long Cash) {
+        this.Cash = Cash;
     }
 
     /**
@@ -79,6 +102,9 @@ public class DescribeClientBalanceResponse extends AbstractModel{
         if (source.Balance != null) {
             this.Balance = new Long(source.Balance);
         }
+        if (source.Cash != null) {
+            this.Cash = new Long(source.Cash);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -90,6 +116,7 @@ public class DescribeClientBalanceResponse extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Balance", this.Balance);
+        this.setParamSimple(map, prefix + "Cash", this.Cash);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

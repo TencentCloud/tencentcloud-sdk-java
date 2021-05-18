@@ -51,6 +51,13 @@ public class EnableVpcCniNetworkTypeRequest extends AbstractModel{
     private String [] Subnets;
 
     /**
+    * 在固定IP模式下，Pod销毁后退还IP的时间，传参必须大于300；不传默认IP永不销毁。
+    */
+    @SerializedName("ExpiredSeconds")
+    @Expose
+    private Long ExpiredSeconds;
+
+    /**
      * Get 集群ID 
      * @return ClusterId 集群ID
      */
@@ -114,6 +121,22 @@ public class EnableVpcCniNetworkTypeRequest extends AbstractModel{
         this.Subnets = Subnets;
     }
 
+    /**
+     * Get 在固定IP模式下，Pod销毁后退还IP的时间，传参必须大于300；不传默认IP永不销毁。 
+     * @return ExpiredSeconds 在固定IP模式下，Pod销毁后退还IP的时间，传参必须大于300；不传默认IP永不销毁。
+     */
+    public Long getExpiredSeconds() {
+        return this.ExpiredSeconds;
+    }
+
+    /**
+     * Set 在固定IP模式下，Pod销毁后退还IP的时间，传参必须大于300；不传默认IP永不销毁。
+     * @param ExpiredSeconds 在固定IP模式下，Pod销毁后退还IP的时间，传参必须大于300；不传默认IP永不销毁。
+     */
+    public void setExpiredSeconds(Long ExpiredSeconds) {
+        this.ExpiredSeconds = ExpiredSeconds;
+    }
+
     public EnableVpcCniNetworkTypeRequest() {
     }
 
@@ -137,6 +160,9 @@ public class EnableVpcCniNetworkTypeRequest extends AbstractModel{
                 this.Subnets[i] = new String(source.Subnets[i]);
             }
         }
+        if (source.ExpiredSeconds != null) {
+            this.ExpiredSeconds = new Long(source.ExpiredSeconds);
+        }
     }
 
 
@@ -148,6 +174,7 @@ public class EnableVpcCniNetworkTypeRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "VpcCniType", this.VpcCniType);
         this.setParamSimple(map, prefix + "EnableStaticIp", this.EnableStaticIp);
         this.setParamArraySimple(map, prefix + "Subnets.", this.Subnets);
+        this.setParamSimple(map, prefix + "ExpiredSeconds", this.ExpiredSeconds);
 
     }
 }

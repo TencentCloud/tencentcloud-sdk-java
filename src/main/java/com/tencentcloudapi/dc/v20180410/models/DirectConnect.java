@@ -251,7 +251,7 @@ public class DirectConnect extends AbstractModel{
     private Boolean LocalZone;
 
     /**
-    * 该物理专线下vlan 0的专线通道数量
+    * 该物理专线下vlan 0的专用通道数量
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VlanZeroDirectConnectTunnelCount")
@@ -259,7 +259,7 @@ public class DirectConnect extends AbstractModel{
     private Long VlanZeroDirectConnectTunnelCount;
 
     /**
-    * 该物理专线下非vlan 0的专线通道数量
+    * 该物理专线下非vlan 0的专用通道数量
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OtherVlanDirectConnectTunnelCount")
@@ -839,9 +839,9 @@ public class DirectConnect extends AbstractModel{
     }
 
     /**
-     * Get 该物理专线下vlan 0的专线通道数量
+     * Get 该物理专线下vlan 0的专用通道数量
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return VlanZeroDirectConnectTunnelCount 该物理专线下vlan 0的专线通道数量
+     * @return VlanZeroDirectConnectTunnelCount 该物理专线下vlan 0的专用通道数量
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getVlanZeroDirectConnectTunnelCount() {
@@ -849,9 +849,9 @@ public class DirectConnect extends AbstractModel{
     }
 
     /**
-     * Set 该物理专线下vlan 0的专线通道数量
+     * Set 该物理专线下vlan 0的专用通道数量
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param VlanZeroDirectConnectTunnelCount 该物理专线下vlan 0的专线通道数量
+     * @param VlanZeroDirectConnectTunnelCount 该物理专线下vlan 0的专用通道数量
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVlanZeroDirectConnectTunnelCount(Long VlanZeroDirectConnectTunnelCount) {
@@ -859,9 +859,9 @@ public class DirectConnect extends AbstractModel{
     }
 
     /**
-     * Get 该物理专线下非vlan 0的专线通道数量
+     * Get 该物理专线下非vlan 0的专用通道数量
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OtherVlanDirectConnectTunnelCount 该物理专线下非vlan 0的专线通道数量
+     * @return OtherVlanDirectConnectTunnelCount 该物理专线下非vlan 0的专用通道数量
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getOtherVlanDirectConnectTunnelCount() {
@@ -869,9 +869,9 @@ public class DirectConnect extends AbstractModel{
     }
 
     /**
-     * Set 该物理专线下非vlan 0的专线通道数量
+     * Set 该物理专线下非vlan 0的专用通道数量
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OtherVlanDirectConnectTunnelCount 该物理专线下非vlan 0的专线通道数量
+     * @param OtherVlanDirectConnectTunnelCount 该物理专线下非vlan 0的专用通道数量
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOtherVlanDirectConnectTunnelCount(Long OtherVlanDirectConnectTunnelCount) {

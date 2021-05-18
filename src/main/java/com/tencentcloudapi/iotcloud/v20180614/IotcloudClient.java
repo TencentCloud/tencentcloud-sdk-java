@@ -39,6 +39,26 @@ public class IotcloudClient extends AbstractClient{
     }
 
     /**
+     *本接口（BatchUpdateFirmware）用于批量更新设备固件 
+     * @param req BatchUpdateFirmwareRequest
+     * @return BatchUpdateFirmwareResponse
+     * @throws TencentCloudSDKException
+     */
+    public BatchUpdateFirmwareResponse BatchUpdateFirmware(BatchUpdateFirmwareRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<BatchUpdateFirmwareResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<BatchUpdateFirmwareResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "BatchUpdateFirmware");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（BindDevices）用于网关设备批量绑定子设备 
      * @param req BindDevicesRequest
      * @return BindDevicesResponse
@@ -911,6 +931,26 @@ public class IotcloudClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<EnableTopicRuleResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "EnableTopicRule");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（GetCOSURL）用于获取固件存储在COS的URL 
+     * @param req GetCOSURLRequest
+     * @return GetCOSURLResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetCOSURLResponse GetCOSURL(GetCOSURLRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetCOSURLResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetCOSURLResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "GetCOSURL");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

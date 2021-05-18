@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class MigratePrivateIpAddressRequest extends AbstractModel{
 
     /**
-    * ECM 地域
+    * ECM 地域，形如ap-xian-ecm。
     */
     @SerializedName("EcmRegion")
     @Expose
     private String EcmRegion;
 
     /**
-    * 当内网IP绑定的弹性网卡实例ID，例如：eni-11112222。
+    * 当前内网IP绑定的弹性网卡实例ID，例如：eni-11112222。
     */
     @SerializedName("SourceNetworkInterfaceId")
     @Expose
@@ -51,32 +51,32 @@ public class MigratePrivateIpAddressRequest extends AbstractModel{
     private String PrivateIpAddress;
 
     /**
-     * Get ECM 地域 
-     * @return EcmRegion ECM 地域
+     * Get ECM 地域，形如ap-xian-ecm。 
+     * @return EcmRegion ECM 地域，形如ap-xian-ecm。
      */
     public String getEcmRegion() {
         return this.EcmRegion;
     }
 
     /**
-     * Set ECM 地域
-     * @param EcmRegion ECM 地域
+     * Set ECM 地域，形如ap-xian-ecm。
+     * @param EcmRegion ECM 地域，形如ap-xian-ecm。
      */
     public void setEcmRegion(String EcmRegion) {
         this.EcmRegion = EcmRegion;
     }
 
     /**
-     * Get 当内网IP绑定的弹性网卡实例ID，例如：eni-11112222。 
-     * @return SourceNetworkInterfaceId 当内网IP绑定的弹性网卡实例ID，例如：eni-11112222。
+     * Get 当前内网IP绑定的弹性网卡实例ID，例如：eni-11112222。 
+     * @return SourceNetworkInterfaceId 当前内网IP绑定的弹性网卡实例ID，例如：eni-11112222。
      */
     public String getSourceNetworkInterfaceId() {
         return this.SourceNetworkInterfaceId;
     }
 
     /**
-     * Set 当内网IP绑定的弹性网卡实例ID，例如：eni-11112222。
-     * @param SourceNetworkInterfaceId 当内网IP绑定的弹性网卡实例ID，例如：eni-11112222。
+     * Set 当前内网IP绑定的弹性网卡实例ID，例如：eni-11112222。
+     * @param SourceNetworkInterfaceId 当前内网IP绑定的弹性网卡实例ID，例如：eni-11112222。
      */
     public void setSourceNetworkInterfaceId(String SourceNetworkInterfaceId) {
         this.SourceNetworkInterfaceId = SourceNetworkInterfaceId;

@@ -156,6 +156,14 @@ public class Listener extends AbstractModel{
     private Boolean Toa;
 
     /**
+    * 解绑后端目标时，是否发RST给客户端，（此参数仅对于TCP监听器有意义）。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DeregisterTargetRst")
+    @Expose
+    private Boolean DeregisterTargetRst;
+
+    /**
      * Get 负载均衡监听器 ID 
      * @return ListenerId 负载均衡监听器 ID
      */
@@ -483,6 +491,26 @@ public class Listener extends AbstractModel{
         this.Toa = Toa;
     }
 
+    /**
+     * Get 解绑后端目标时，是否发RST给客户端，（此参数仅对于TCP监听器有意义）。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DeregisterTargetRst 解绑后端目标时，是否发RST给客户端，（此参数仅对于TCP监听器有意义）。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getDeregisterTargetRst() {
+        return this.DeregisterTargetRst;
+    }
+
+    /**
+     * Set 解绑后端目标时，是否发RST给客户端，（此参数仅对于TCP监听器有意义）。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DeregisterTargetRst 解绑后端目标时，是否发RST给客户端，（此参数仅对于TCP监听器有意义）。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDeregisterTargetRst(Boolean DeregisterTargetRst) {
+        this.DeregisterTargetRst = DeregisterTargetRst;
+    }
+
     public Listener() {
     }
 
@@ -545,6 +573,9 @@ public class Listener extends AbstractModel{
         if (source.Toa != null) {
             this.Toa = new Boolean(source.Toa);
         }
+        if (source.DeregisterTargetRst != null) {
+            this.DeregisterTargetRst = new Boolean(source.DeregisterTargetRst);
+        }
     }
 
 
@@ -569,6 +600,7 @@ public class Listener extends AbstractModel{
         this.setParamSimple(map, prefix + "SessionType", this.SessionType);
         this.setParamSimple(map, prefix + "KeepaliveEnable", this.KeepaliveEnable);
         this.setParamSimple(map, prefix + "Toa", this.Toa);
+        this.setParamSimple(map, prefix + "DeregisterTargetRst", this.DeregisterTargetRst);
 
     }
 }

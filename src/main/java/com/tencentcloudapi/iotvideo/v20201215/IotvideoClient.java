@@ -279,6 +279,46 @@ public class IotvideoClient extends AbstractClient{
     }
 
     /**
+     *查询账户余额
+     * @param req DescribeBalanceRequest
+     * @return DescribeBalanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBalanceResponse DescribeBalance(DescribeBalanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBalanceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBalanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeBalance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *拉取账户流水
+     * @param req DescribeBalanceTransactionsRequest
+     * @return DescribeBalanceTransactionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBalanceTransactionsResponse DescribeBalanceTransactions(DescribeBalanceTransactionsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBalanceTransactionsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBalanceTransactionsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeBalanceTransactions");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取批次详情
      * @param req DescribeBatchRequest
      * @return DescribeBatchResponse
