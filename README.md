@@ -236,8 +236,17 @@ logger.info("hello world");
 
 在 SDK 没有升级到 okhttp3 前的解决办法：
 
-1. 在 pom.xml 中明确指定依赖 okio 1.12.0 版本（**注意：可能有其他包需要用到更高的版本，需要变通下取最高的可兼容版本**，例如当其他包使用 okhttp4 时对应的可能是 okio 2.2.2）；
-2. 将 SDK 放在依赖的最后（注意如果此前已经编译过，需要先删除掉 maven 缓存的 okhttp 包），以同时使用依赖 okhttp3 的 CMQ SDK 为例，形如（注意变通版本号）：
+1）在 pom.xml 中明确指定依赖 okio 1.12.0 版本（**注意：可能有其他包需要用到更高的版本，需要变通下取最高的可兼容版本**，例如当其他包使用 okhttp4 时对应的可能是 okio 2.2.2）；
+
+```
+    <dependency>
+      <groupId>com.squareup.okio</groupId>
+      <artifactId>okio</artifactId>
+      <version>1.12.0</version>
+    </dependency>
+```
+
+2）将 SDK 放在依赖的最后（注意如果此前已经编译过，需要先删除掉 maven 缓存的 okhttp 包），以同时使用依赖 okhttp3 的 CMQ SDK 为例，形如（注意变通版本号）：
 
 ```
     <dependency>
