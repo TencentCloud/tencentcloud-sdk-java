@@ -20,15 +20,15 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeSmsTemplateListRequest extends AbstractModel{
+public class DescribeSmsSignListRequest extends AbstractModel{
 
     /**
-    * 模板 ID 数组。
-注：默认数组长度最大100。
+    * 签名 ID 数组。
+注：默认数组最大长度100。
     */
-    @SerializedName("TemplateIdSet")
+    @SerializedName("SignIdSet")
     @Expose
-    private Long [] TemplateIdSet;
+    private Long [] SignIdSet;
 
     /**
     * 是否国际/港澳台短信：
@@ -40,23 +40,23 @@ public class DescribeSmsTemplateListRequest extends AbstractModel{
     private Long International;
 
     /**
-     * Get 模板 ID 数组。
-注：默认数组长度最大100。 
-     * @return TemplateIdSet 模板 ID 数组。
-注：默认数组长度最大100。
+     * Get 签名 ID 数组。
+注：默认数组最大长度100。 
+     * @return SignIdSet 签名 ID 数组。
+注：默认数组最大长度100。
      */
-    public Long [] getTemplateIdSet() {
-        return this.TemplateIdSet;
+    public Long [] getSignIdSet() {
+        return this.SignIdSet;
     }
 
     /**
-     * Set 模板 ID 数组。
-注：默认数组长度最大100。
-     * @param TemplateIdSet 模板 ID 数组。
-注：默认数组长度最大100。
+     * Set 签名 ID 数组。
+注：默认数组最大长度100。
+     * @param SignIdSet 签名 ID 数组。
+注：默认数组最大长度100。
      */
-    public void setTemplateIdSet(Long [] TemplateIdSet) {
-        this.TemplateIdSet = TemplateIdSet;
+    public void setSignIdSet(Long [] SignIdSet) {
+        this.SignIdSet = SignIdSet;
     }
 
     /**
@@ -83,18 +83,18 @@ public class DescribeSmsTemplateListRequest extends AbstractModel{
         this.International = International;
     }
 
-    public DescribeSmsTemplateListRequest() {
+    public DescribeSmsSignListRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeSmsTemplateListRequest(DescribeSmsTemplateListRequest source) {
-        if (source.TemplateIdSet != null) {
-            this.TemplateIdSet = new Long[source.TemplateIdSet.length];
-            for (int i = 0; i < source.TemplateIdSet.length; i++) {
-                this.TemplateIdSet[i] = new Long(source.TemplateIdSet[i]);
+    public DescribeSmsSignListRequest(DescribeSmsSignListRequest source) {
+        if (source.SignIdSet != null) {
+            this.SignIdSet = new Long[source.SignIdSet.length];
+            for (int i = 0; i < source.SignIdSet.length; i++) {
+                this.SignIdSet[i] = new Long(source.SignIdSet[i]);
             }
         }
         if (source.International != null) {
@@ -107,7 +107,7 @@ public class DescribeSmsTemplateListRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArraySimple(map, prefix + "TemplateIdSet.", this.TemplateIdSet);
+        this.setParamArraySimple(map, prefix + "SignIdSet.", this.SignIdSet);
         this.setParamSimple(map, prefix + "International", this.International);
 
     }

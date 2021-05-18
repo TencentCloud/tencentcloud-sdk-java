@@ -20,14 +20,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTemplateListStatus extends AbstractModel{
+public class DescribeSignListStatus extends AbstractModel{
 
     /**
-    * 模板ID。
+    * 签名ID。
     */
-    @SerializedName("TemplateId")
+    @SerializedName("SignId")
     @Expose
-    private Long TemplateId;
+    private Long SignId;
 
     /**
     * 是否国际/港澳台短信，其中0表示国内短信，1表示国际/港澳台短信。
@@ -37,7 +37,8 @@ public class DescribeTemplateListStatus extends AbstractModel{
     private Long International;
 
     /**
-    * 申请模板状态，其中0表示审核通过，1表示审核中，-1表示审核未通过或审核失败。
+    * 申请签名状态，其中0表示审核通过，1表示审核中。
+-1：表示审核未通过或审核失败。
     */
     @SerializedName("StatusCode")
     @Expose
@@ -51,11 +52,11 @@ public class DescribeTemplateListStatus extends AbstractModel{
     private String ReviewReply;
 
     /**
-    * 模板名称。
+    * 签名名称。
     */
-    @SerializedName("TemplateName")
+    @SerializedName("SignName")
     @Expose
-    private String TemplateName;
+    private String SignName;
 
     /**
     * 提交审核时间，UNIX 时间戳（单位：秒）。
@@ -65,26 +66,19 @@ public class DescribeTemplateListStatus extends AbstractModel{
     private Long CreateTime;
 
     /**
-    * 模板内容。
-    */
-    @SerializedName("TemplateContent")
-    @Expose
-    private String TemplateContent;
-
-    /**
-     * Get 模板ID。 
-     * @return TemplateId 模板ID。
+     * Get 签名ID。 
+     * @return SignId 签名ID。
      */
-    public Long getTemplateId() {
-        return this.TemplateId;
+    public Long getSignId() {
+        return this.SignId;
     }
 
     /**
-     * Set 模板ID。
-     * @param TemplateId 模板ID。
+     * Set 签名ID。
+     * @param SignId 签名ID。
      */
-    public void setTemplateId(Long TemplateId) {
-        this.TemplateId = TemplateId;
+    public void setSignId(Long SignId) {
+        this.SignId = SignId;
     }
 
     /**
@@ -104,16 +98,20 @@ public class DescribeTemplateListStatus extends AbstractModel{
     }
 
     /**
-     * Get 申请模板状态，其中0表示审核通过，1表示审核中，-1表示审核未通过或审核失败。 
-     * @return StatusCode 申请模板状态，其中0表示审核通过，1表示审核中，-1表示审核未通过或审核失败。
+     * Get 申请签名状态，其中0表示审核通过，1表示审核中。
+-1：表示审核未通过或审核失败。 
+     * @return StatusCode 申请签名状态，其中0表示审核通过，1表示审核中。
+-1：表示审核未通过或审核失败。
      */
     public Long getStatusCode() {
         return this.StatusCode;
     }
 
     /**
-     * Set 申请模板状态，其中0表示审核通过，1表示审核中，-1表示审核未通过或审核失败。
-     * @param StatusCode 申请模板状态，其中0表示审核通过，1表示审核中，-1表示审核未通过或审核失败。
+     * Set 申请签名状态，其中0表示审核通过，1表示审核中。
+-1：表示审核未通过或审核失败。
+     * @param StatusCode 申请签名状态，其中0表示审核通过，1表示审核中。
+-1：表示审核未通过或审核失败。
      */
     public void setStatusCode(Long StatusCode) {
         this.StatusCode = StatusCode;
@@ -136,19 +134,19 @@ public class DescribeTemplateListStatus extends AbstractModel{
     }
 
     /**
-     * Get 模板名称。 
-     * @return TemplateName 模板名称。
+     * Get 签名名称。 
+     * @return SignName 签名名称。
      */
-    public String getTemplateName() {
-        return this.TemplateName;
+    public String getSignName() {
+        return this.SignName;
     }
 
     /**
-     * Set 模板名称。
-     * @param TemplateName 模板名称。
+     * Set 签名名称。
+     * @param SignName 签名名称。
      */
-    public void setTemplateName(String TemplateName) {
-        this.TemplateName = TemplateName;
+    public void setSignName(String SignName) {
+        this.SignName = SignName;
     }
 
     /**
@@ -167,32 +165,16 @@ public class DescribeTemplateListStatus extends AbstractModel{
         this.CreateTime = CreateTime;
     }
 
-    /**
-     * Get 模板内容。 
-     * @return TemplateContent 模板内容。
-     */
-    public String getTemplateContent() {
-        return this.TemplateContent;
-    }
-
-    /**
-     * Set 模板内容。
-     * @param TemplateContent 模板内容。
-     */
-    public void setTemplateContent(String TemplateContent) {
-        this.TemplateContent = TemplateContent;
-    }
-
-    public DescribeTemplateListStatus() {
+    public DescribeSignListStatus() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeTemplateListStatus(DescribeTemplateListStatus source) {
-        if (source.TemplateId != null) {
-            this.TemplateId = new Long(source.TemplateId);
+    public DescribeSignListStatus(DescribeSignListStatus source) {
+        if (source.SignId != null) {
+            this.SignId = new Long(source.SignId);
         }
         if (source.International != null) {
             this.International = new Long(source.International);
@@ -203,14 +185,11 @@ public class DescribeTemplateListStatus extends AbstractModel{
         if (source.ReviewReply != null) {
             this.ReviewReply = new String(source.ReviewReply);
         }
-        if (source.TemplateName != null) {
-            this.TemplateName = new String(source.TemplateName);
+        if (source.SignName != null) {
+            this.SignName = new String(source.SignName);
         }
         if (source.CreateTime != null) {
             this.CreateTime = new Long(source.CreateTime);
-        }
-        if (source.TemplateContent != null) {
-            this.TemplateContent = new String(source.TemplateContent);
         }
     }
 
@@ -219,13 +198,12 @@ public class DescribeTemplateListStatus extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TemplateId", this.TemplateId);
+        this.setParamSimple(map, prefix + "SignId", this.SignId);
         this.setParamSimple(map, prefix + "International", this.International);
         this.setParamSimple(map, prefix + "StatusCode", this.StatusCode);
         this.setParamSimple(map, prefix + "ReviewReply", this.ReviewReply);
-        this.setParamSimple(map, prefix + "TemplateName", this.TemplateName);
+        this.setParamSimple(map, prefix + "SignName", this.SignName);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
-        this.setParamSimple(map, prefix + "TemplateContent", this.TemplateContent);
 
     }
 }
