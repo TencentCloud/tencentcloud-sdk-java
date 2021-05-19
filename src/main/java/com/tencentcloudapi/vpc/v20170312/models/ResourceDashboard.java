@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ResourceDashboard extends AbstractModel{
 
     /**
-    * Vpc实例ID，例如：vpc-f1xjkw1b。
+    * Vpc实例ID，例如：vpc-bq4bzxpj。
     */
     @SerializedName("VpcId")
     @Expose
@@ -58,7 +58,7 @@ public class ResourceDashboard extends AbstractModel{
     private Long Pcx;
 
     /**
-    * 当前已使用的IP总数。
+    * 统计当前除云服务器 IP、弹性网卡IP和网络探测IP以外的所有已使用的IP总数。云服务器 IP、弹性网卡IP和网络探测IP单独计数。
     */
     @SerializedName("Ip")
     @Expose
@@ -317,16 +317,16 @@ public class ResourceDashboard extends AbstractModel{
     private Long RouteTable;
 
     /**
-     * Get Vpc实例ID，例如：vpc-f1xjkw1b。 
-     * @return VpcId Vpc实例ID，例如：vpc-f1xjkw1b。
+     * Get Vpc实例ID，例如：vpc-bq4bzxpj。 
+     * @return VpcId Vpc实例ID，例如：vpc-bq4bzxpj。
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set Vpc实例ID，例如：vpc-f1xjkw1b。
-     * @param VpcId Vpc实例ID，例如：vpc-f1xjkw1b。
+     * Set Vpc实例ID，例如：vpc-bq4bzxpj。
+     * @param VpcId Vpc实例ID，例如：vpc-bq4bzxpj。
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
@@ -397,16 +397,16 @@ public class ResourceDashboard extends AbstractModel{
     }
 
     /**
-     * Get 当前已使用的IP总数。 
-     * @return Ip 当前已使用的IP总数。
+     * Get 统计当前除云服务器 IP、弹性网卡IP和网络探测IP以外的所有已使用的IP总数。云服务器 IP、弹性网卡IP和网络探测IP单独计数。 
+     * @return Ip 统计当前除云服务器 IP、弹性网卡IP和网络探测IP以外的所有已使用的IP总数。云服务器 IP、弹性网卡IP和网络探测IP单独计数。
      */
     public Long getIp() {
         return this.Ip;
     }
 
     /**
-     * Set 当前已使用的IP总数。
-     * @param Ip 当前已使用的IP总数。
+     * Set 统计当前除云服务器 IP、弹性网卡IP和网络探测IP以外的所有已使用的IP总数。云服务器 IP、弹性网卡IP和网络探测IP单独计数。
+     * @param Ip 统计当前除云服务器 IP、弹性网卡IP和网络探测IP以外的所有已使用的IP总数。云服务器 IP、弹性网卡IP和网络探测IP单独计数。
      */
     public void setIp(Long Ip) {
         this.Ip = Ip;
