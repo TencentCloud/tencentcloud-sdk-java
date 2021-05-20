@@ -99,7 +99,7 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
-     *本接口 (CreateDBInstances) 用于创建一个或者多个PostgreSQL实例。
+     *本接口 (CreateDBInstances) 用于创建一个或者多个PostgreSQL实例,仅发货实例不会进行初始化。
      * @param req CreateDBInstancesRequest
      * @return CreateDBInstancesResponse
      * @throws TencentCloudSDKException
@@ -111,6 +111,26 @@ public class PostgresClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreateDBInstancesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "CreateDBInstances");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口 (CreateInstances) 用于创建一个或者多个PostgreSQL实例，通过此接口创建的实例无需进行初始化，可直接使用。
+     * @param req CreateInstancesRequest
+     * @return CreateInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateInstancesResponse CreateInstances(CreateInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateInstancesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateInstancesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateInstances");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

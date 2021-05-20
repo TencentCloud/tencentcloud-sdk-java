@@ -13,28 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cwp.v20180228.models;
+package com.tencentcloudapi.tcaplusdb.v20190823.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeLogStorageStatisticResponse extends AbstractModel{
+public class MergeTablesDataResponse extends AbstractModel{
 
     /**
-    * 总容量（单位：GB）
+    * 合服结果集
     */
-    @SerializedName("TotalSize")
+    @SerializedName("Results")
     @Expose
-    private Long TotalSize;
-
-    /**
-    * 已使用容量（单位：GB）
-    */
-    @SerializedName("UsedSize")
-    @Expose
-    private Long UsedSize;
+    private MergeTableResult [] Results;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -44,35 +37,19 @@ public class DescribeLogStorageStatisticResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 总容量（单位：GB） 
-     * @return TotalSize 总容量（单位：GB）
+     * Get 合服结果集 
+     * @return Results 合服结果集
      */
-    public Long getTotalSize() {
-        return this.TotalSize;
+    public MergeTableResult [] getResults() {
+        return this.Results;
     }
 
     /**
-     * Set 总容量（单位：GB）
-     * @param TotalSize 总容量（单位：GB）
+     * Set 合服结果集
+     * @param Results 合服结果集
      */
-    public void setTotalSize(Long TotalSize) {
-        this.TotalSize = TotalSize;
-    }
-
-    /**
-     * Get 已使用容量（单位：GB） 
-     * @return UsedSize 已使用容量（单位：GB）
-     */
-    public Long getUsedSize() {
-        return this.UsedSize;
-    }
-
-    /**
-     * Set 已使用容量（单位：GB）
-     * @param UsedSize 已使用容量（单位：GB）
-     */
-    public void setUsedSize(Long UsedSize) {
-        this.UsedSize = UsedSize;
+    public void setResults(MergeTableResult [] Results) {
+        this.Results = Results;
     }
 
     /**
@@ -91,19 +68,19 @@ public class DescribeLogStorageStatisticResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeLogStorageStatisticResponse() {
+    public MergeTablesDataResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeLogStorageStatisticResponse(DescribeLogStorageStatisticResponse source) {
-        if (source.TotalSize != null) {
-            this.TotalSize = new Long(source.TotalSize);
-        }
-        if (source.UsedSize != null) {
-            this.UsedSize = new Long(source.UsedSize);
+    public MergeTablesDataResponse(MergeTablesDataResponse source) {
+        if (source.Results != null) {
+            this.Results = new MergeTableResult[source.Results.length];
+            for (int i = 0; i < source.Results.length; i++) {
+                this.Results[i] = new MergeTableResult(source.Results[i]);
+            }
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -115,8 +92,7 @@ public class DescribeLogStorageStatisticResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TotalSize", this.TotalSize);
-        this.setParamSimple(map, prefix + "UsedSize", this.UsedSize);
+        this.setParamArrayObj(map, prefix + "Results.", this.Results);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

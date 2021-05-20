@@ -186,6 +186,21 @@ public class ClusterInfo extends AbstractModel{
     private ProxyDetailInfo [] ProxyList;
 
     /**
+    * 是否开启审核 0-不开启 1-开启
+    */
+    @SerializedName("Censorship")
+    @Expose
+    private Long Censorship;
+
+    /**
+    * 审批人uin列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DbaUins")
+    @Expose
+    private String [] DbaUins;
+
+    /**
      * Get 集群名称 
      * @return ClusterName 集群名称
      */
@@ -573,6 +588,42 @@ public class ClusterInfo extends AbstractModel{
         this.ProxyList = ProxyList;
     }
 
+    /**
+     * Get 是否开启审核 0-不开启 1-开启 
+     * @return Censorship 是否开启审核 0-不开启 1-开启
+     */
+    public Long getCensorship() {
+        return this.Censorship;
+    }
+
+    /**
+     * Set 是否开启审核 0-不开启 1-开启
+     * @param Censorship 是否开启审核 0-不开启 1-开启
+     */
+    public void setCensorship(Long Censorship) {
+        this.Censorship = Censorship;
+    }
+
+    /**
+     * Get 审批人uin列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DbaUins 审批人uin列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getDbaUins() {
+        return this.DbaUins;
+    }
+
+    /**
+     * Set 审批人uin列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DbaUins 审批人uin列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDbaUins(String [] DbaUins) {
+        this.DbaUins = DbaUins;
+    }
+
     public ClusterInfo() {
     }
 
@@ -653,6 +704,15 @@ public class ClusterInfo extends AbstractModel{
                 this.ProxyList[i] = new ProxyDetailInfo(source.ProxyList[i]);
             }
         }
+        if (source.Censorship != null) {
+            this.Censorship = new Long(source.Censorship);
+        }
+        if (source.DbaUins != null) {
+            this.DbaUins = new String[source.DbaUins.length];
+            for (int i = 0; i < source.DbaUins.length; i++) {
+                this.DbaUins[i] = new String(source.DbaUins[i]);
+            }
+        }
     }
 
 
@@ -682,6 +742,8 @@ public class ClusterInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "DiskVolume", this.DiskVolume);
         this.setParamArrayObj(map, prefix + "ServerList.", this.ServerList);
         this.setParamArrayObj(map, prefix + "ProxyList.", this.ProxyList);
+        this.setParamSimple(map, prefix + "Censorship", this.Censorship);
+        this.setParamArraySimple(map, prefix + "DbaUins.", this.DbaUins);
 
     }
 }

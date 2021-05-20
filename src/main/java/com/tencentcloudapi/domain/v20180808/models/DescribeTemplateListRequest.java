@@ -51,6 +51,13 @@ public class DescribeTemplateListRequest extends AbstractModel{
     private String Status;
 
     /**
+    * 域名所有者筛选
+    */
+    @SerializedName("Keyword")
+    @Expose
+    private String Keyword;
+
+    /**
      * Get 偏移量，默认为0。 
      * @return Offset 偏移量，默认为0。
      */
@@ -114,6 +121,22 @@ public class DescribeTemplateListRequest extends AbstractModel{
         this.Status = Status;
     }
 
+    /**
+     * Get 域名所有者筛选 
+     * @return Keyword 域名所有者筛选
+     */
+    public String getKeyword() {
+        return this.Keyword;
+    }
+
+    /**
+     * Set 域名所有者筛选
+     * @param Keyword 域名所有者筛选
+     */
+    public void setKeyword(String Keyword) {
+        this.Keyword = Keyword;
+    }
+
     public DescribeTemplateListRequest() {
     }
 
@@ -134,6 +157,9 @@ public class DescribeTemplateListRequest extends AbstractModel{
         if (source.Status != null) {
             this.Status = new String(source.Status);
         }
+        if (source.Keyword != null) {
+            this.Keyword = new String(source.Keyword);
+        }
     }
 
 
@@ -145,6 +171,7 @@ public class DescribeTemplateListRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "Keyword", this.Keyword);
 
     }
 }

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateDBInstancesRequest extends AbstractModel{
+public class CreateInstancesRequest extends AbstractModel{
 
     /**
     * 售卖规格ID。该参数可以通过调用DescribeProductConfig的返回值中的SpecCode字段来获取。
@@ -30,7 +30,7 @@ public class CreateDBInstancesRequest extends AbstractModel{
     private String SpecCode;
 
     /**
-    * PostgreSQL内核版本，目前支持以下版本：9.3.5、9.5.4、10.4、11.8、12.4 。
+    * PostgreSQL内核版本，目前支持：9.3.5、9.5.4、10.4、11.8、12.4五种版本。
     */
     @SerializedName("DBVersion")
     @Expose
@@ -44,7 +44,7 @@ public class CreateDBInstancesRequest extends AbstractModel{
     private Long Storage;
 
     /**
-    * 一次性购买的实例数量。取值1-100
+    * 一次性购买的实例数量。取值1-10。
     */
     @SerializedName("InstanceCount")
     @Expose
@@ -63,6 +63,27 @@ public class CreateDBInstancesRequest extends AbstractModel{
     @SerializedName("Zone")
     @Expose
     private String Zone;
+
+    /**
+    * 实例字符集，目前只支持：UTF8、LATIN1。
+    */
+    @SerializedName("Charset")
+    @Expose
+    private String Charset;
+
+    /**
+    * 实例根账号用户名。
+    */
+    @SerializedName("AdminName")
+    @Expose
+    private String AdminName;
+
+    /**
+    * 实例根账号用户名对应的密码。
+    */
+    @SerializedName("AdminPassword")
+    @Expose
+    private String AdminPassword;
 
     /**
     * 项目ID。
@@ -100,49 +121,49 @@ public class CreateDBInstancesRequest extends AbstractModel{
     private String VpcId;
 
     /**
-    * 私有网络子网ID。
+    * 已配置的私有网络中的子网ID。
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-    * 续费标记：0-正常续费（默认）；1-自动续费；
+    * 续费标记：0-正常续费（默认）；1-自动续费。
     */
     @SerializedName("AutoRenewFlag")
     @Expose
     private Long AutoRenewFlag;
 
     /**
-    * 活动ID
+    * 活动ID。
     */
     @SerializedName("ActivityId")
     @Expose
     private Long ActivityId;
 
     /**
-    * 实例名(后续支持)
+    * 实例名。
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 是否需要支持Ipv6，1：是，0：否
+    * 是否需要支持Ipv6，1：是，0：否。
     */
     @SerializedName("NeedSupportIpv6")
     @Expose
     private Long NeedSupportIpv6;
 
     /**
-    * 实例需要绑定的Tag信息，默认为空
+    * 实例需要绑定的Tag信息，默认为空。
     */
     @SerializedName("TagList")
     @Expose
     private Tag [] TagList;
 
     /**
-    * 安全组id
+    * 安全组ID。
     */
     @SerializedName("SecurityGroupIds")
     @Expose
@@ -165,16 +186,16 @@ public class CreateDBInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get PostgreSQL内核版本，目前支持以下版本：9.3.5、9.5.4、10.4、11.8、12.4 。 
-     * @return DBVersion PostgreSQL内核版本，目前支持以下版本：9.3.5、9.5.4、10.4、11.8、12.4 。
+     * Get PostgreSQL内核版本，目前支持：9.3.5、9.5.4、10.4、11.8、12.4五种版本。 
+     * @return DBVersion PostgreSQL内核版本，目前支持：9.3.5、9.5.4、10.4、11.8、12.4五种版本。
      */
     public String getDBVersion() {
         return this.DBVersion;
     }
 
     /**
-     * Set PostgreSQL内核版本，目前支持以下版本：9.3.5、9.5.4、10.4、11.8、12.4 。
-     * @param DBVersion PostgreSQL内核版本，目前支持以下版本：9.3.5、9.5.4、10.4、11.8、12.4 。
+     * Set PostgreSQL内核版本，目前支持：9.3.5、9.5.4、10.4、11.8、12.4五种版本。
+     * @param DBVersion PostgreSQL内核版本，目前支持：9.3.5、9.5.4、10.4、11.8、12.4五种版本。
      */
     public void setDBVersion(String DBVersion) {
         this.DBVersion = DBVersion;
@@ -197,16 +218,16 @@ public class CreateDBInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get 一次性购买的实例数量。取值1-100 
-     * @return InstanceCount 一次性购买的实例数量。取值1-100
+     * Get 一次性购买的实例数量。取值1-10。 
+     * @return InstanceCount 一次性购买的实例数量。取值1-10。
      */
     public Long getInstanceCount() {
         return this.InstanceCount;
     }
 
     /**
-     * Set 一次性购买的实例数量。取值1-100
-     * @param InstanceCount 一次性购买的实例数量。取值1-100
+     * Set 一次性购买的实例数量。取值1-10。
+     * @param InstanceCount 一次性购买的实例数量。取值1-10。
      */
     public void setInstanceCount(Long InstanceCount) {
         this.InstanceCount = InstanceCount;
@@ -242,6 +263,54 @@ public class CreateDBInstancesRequest extends AbstractModel{
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
+    }
+
+    /**
+     * Get 实例字符集，目前只支持：UTF8、LATIN1。 
+     * @return Charset 实例字符集，目前只支持：UTF8、LATIN1。
+     */
+    public String getCharset() {
+        return this.Charset;
+    }
+
+    /**
+     * Set 实例字符集，目前只支持：UTF8、LATIN1。
+     * @param Charset 实例字符集，目前只支持：UTF8、LATIN1。
+     */
+    public void setCharset(String Charset) {
+        this.Charset = Charset;
+    }
+
+    /**
+     * Get 实例根账号用户名。 
+     * @return AdminName 实例根账号用户名。
+     */
+    public String getAdminName() {
+        return this.AdminName;
+    }
+
+    /**
+     * Set 实例根账号用户名。
+     * @param AdminName 实例根账号用户名。
+     */
+    public void setAdminName(String AdminName) {
+        this.AdminName = AdminName;
+    }
+
+    /**
+     * Get 实例根账号用户名对应的密码。 
+     * @return AdminPassword 实例根账号用户名对应的密码。
+     */
+    public String getAdminPassword() {
+        return this.AdminPassword;
+    }
+
+    /**
+     * Set 实例根账号用户名对应的密码。
+     * @param AdminPassword 实例根账号用户名对应的密码。
+     */
+    public void setAdminPassword(String AdminPassword) {
+        this.AdminPassword = AdminPassword;
     }
 
     /**
@@ -325,125 +394,125 @@ public class CreateDBInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get 私有网络子网ID。 
-     * @return SubnetId 私有网络子网ID。
+     * Get 已配置的私有网络中的子网ID。 
+     * @return SubnetId 已配置的私有网络中的子网ID。
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set 私有网络子网ID。
-     * @param SubnetId 私有网络子网ID。
+     * Set 已配置的私有网络中的子网ID。
+     * @param SubnetId 已配置的私有网络中的子网ID。
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get 续费标记：0-正常续费（默认）；1-自动续费； 
-     * @return AutoRenewFlag 续费标记：0-正常续费（默认）；1-自动续费；
+     * Get 续费标记：0-正常续费（默认）；1-自动续费。 
+     * @return AutoRenewFlag 续费标记：0-正常续费（默认）；1-自动续费。
      */
     public Long getAutoRenewFlag() {
         return this.AutoRenewFlag;
     }
 
     /**
-     * Set 续费标记：0-正常续费（默认）；1-自动续费；
-     * @param AutoRenewFlag 续费标记：0-正常续费（默认）；1-自动续费；
+     * Set 续费标记：0-正常续费（默认）；1-自动续费。
+     * @param AutoRenewFlag 续费标记：0-正常续费（默认）；1-自动续费。
      */
     public void setAutoRenewFlag(Long AutoRenewFlag) {
         this.AutoRenewFlag = AutoRenewFlag;
     }
 
     /**
-     * Get 活动ID 
-     * @return ActivityId 活动ID
+     * Get 活动ID。 
+     * @return ActivityId 活动ID。
      */
     public Long getActivityId() {
         return this.ActivityId;
     }
 
     /**
-     * Set 活动ID
-     * @param ActivityId 活动ID
+     * Set 活动ID。
+     * @param ActivityId 活动ID。
      */
     public void setActivityId(Long ActivityId) {
         this.ActivityId = ActivityId;
     }
 
     /**
-     * Get 实例名(后续支持) 
-     * @return Name 实例名(后续支持)
+     * Get 实例名。 
+     * @return Name 实例名。
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 实例名(后续支持)
-     * @param Name 实例名(后续支持)
+     * Set 实例名。
+     * @param Name 实例名。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 是否需要支持Ipv6，1：是，0：否 
-     * @return NeedSupportIpv6 是否需要支持Ipv6，1：是，0：否
+     * Get 是否需要支持Ipv6，1：是，0：否。 
+     * @return NeedSupportIpv6 是否需要支持Ipv6，1：是，0：否。
      */
     public Long getNeedSupportIpv6() {
         return this.NeedSupportIpv6;
     }
 
     /**
-     * Set 是否需要支持Ipv6，1：是，0：否
-     * @param NeedSupportIpv6 是否需要支持Ipv6，1：是，0：否
+     * Set 是否需要支持Ipv6，1：是，0：否。
+     * @param NeedSupportIpv6 是否需要支持Ipv6，1：是，0：否。
      */
     public void setNeedSupportIpv6(Long NeedSupportIpv6) {
         this.NeedSupportIpv6 = NeedSupportIpv6;
     }
 
     /**
-     * Get 实例需要绑定的Tag信息，默认为空 
-     * @return TagList 实例需要绑定的Tag信息，默认为空
+     * Get 实例需要绑定的Tag信息，默认为空。 
+     * @return TagList 实例需要绑定的Tag信息，默认为空。
      */
     public Tag [] getTagList() {
         return this.TagList;
     }
 
     /**
-     * Set 实例需要绑定的Tag信息，默认为空
-     * @param TagList 实例需要绑定的Tag信息，默认为空
+     * Set 实例需要绑定的Tag信息，默认为空。
+     * @param TagList 实例需要绑定的Tag信息，默认为空。
      */
     public void setTagList(Tag [] TagList) {
         this.TagList = TagList;
     }
 
     /**
-     * Get 安全组id 
-     * @return SecurityGroupIds 安全组id
+     * Get 安全组ID。 
+     * @return SecurityGroupIds 安全组ID。
      */
     public String [] getSecurityGroupIds() {
         return this.SecurityGroupIds;
     }
 
     /**
-     * Set 安全组id
-     * @param SecurityGroupIds 安全组id
+     * Set 安全组ID。
+     * @param SecurityGroupIds 安全组ID。
      */
     public void setSecurityGroupIds(String [] SecurityGroupIds) {
         this.SecurityGroupIds = SecurityGroupIds;
     }
 
-    public CreateDBInstancesRequest() {
+    public CreateInstancesRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateDBInstancesRequest(CreateDBInstancesRequest source) {
+    public CreateInstancesRequest(CreateInstancesRequest source) {
         if (source.SpecCode != null) {
             this.SpecCode = new String(source.SpecCode);
         }
@@ -461,6 +530,15 @@ public class CreateDBInstancesRequest extends AbstractModel{
         }
         if (source.Zone != null) {
             this.Zone = new String(source.Zone);
+        }
+        if (source.Charset != null) {
+            this.Charset = new String(source.Charset);
+        }
+        if (source.AdminName != null) {
+            this.AdminName = new String(source.AdminName);
+        }
+        if (source.AdminPassword != null) {
+            this.AdminPassword = new String(source.AdminPassword);
         }
         if (source.ProjectId != null) {
             this.ProjectId = new Long(source.ProjectId);
@@ -520,6 +598,9 @@ public class CreateDBInstancesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "InstanceCount", this.InstanceCount);
         this.setParamSimple(map, prefix + "Period", this.Period);
         this.setParamSimple(map, prefix + "Zone", this.Zone);
+        this.setParamSimple(map, prefix + "Charset", this.Charset);
+        this.setParamSimple(map, prefix + "AdminName", this.AdminName);
+        this.setParamSimple(map, prefix + "AdminPassword", this.AdminPassword);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamSimple(map, prefix + "InstanceChargeType", this.InstanceChargeType);
         this.setParamSimple(map, prefix + "AutoVoucher", this.AutoVoucher);

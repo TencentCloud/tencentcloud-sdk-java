@@ -37,7 +37,7 @@ public class VatInvoiceOCRResponse extends AbstractModel{
     private VatInvoiceItem [] Items;
 
     /**
-    * 图片为PDF时，返回PDF的总页数，默认为0
+    * 默认值为0。如果图片为PDF时，返回PDF的总页数。
     */
     @SerializedName("PdfPageSize")
     @Expose
@@ -90,16 +90,16 @@ public class VatInvoiceOCRResponse extends AbstractModel{
     }
 
     /**
-     * Get 图片为PDF时，返回PDF的总页数，默认为0 
-     * @return PdfPageSize 图片为PDF时，返回PDF的总页数，默认为0
+     * Get 默认值为0。如果图片为PDF时，返回PDF的总页数。 
+     * @return PdfPageSize 默认值为0。如果图片为PDF时，返回PDF的总页数。
      */
     public Long getPdfPageSize() {
         return this.PdfPageSize;
     }
 
     /**
-     * Set 图片为PDF时，返回PDF的总页数，默认为0
-     * @param PdfPageSize 图片为PDF时，返回PDF的总页数，默认为0
+     * Set 默认值为0。如果图片为PDF时，返回PDF的总页数。
+     * @param PdfPageSize 默认值为0。如果图片为PDF时，返回PDF的总页数。
      */
     public void setPdfPageSize(Long PdfPageSize) {
         this.PdfPageSize = PdfPageSize;

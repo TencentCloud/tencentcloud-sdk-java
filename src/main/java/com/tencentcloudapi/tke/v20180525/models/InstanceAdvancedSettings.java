@@ -79,6 +79,14 @@ public class InstanceAdvancedSettings extends AbstractModel{
     private InstanceExtraArgs ExtraArgs;
 
     /**
+    * 该节点属于podCIDR大小自定义模式时，可指定节点上运行的pod数量上限
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DesiredPodNumber")
+    @Expose
+    private Long DesiredPodNumber;
+
+    /**
      * Get 数据盘挂载点, 默认不挂载数据盘. 已格式化的 ext3，ext4，xfs 文件系统的数据盘将直接挂载，其他文件系统或未格式化的数据盘将自动格式化为ext4 (tlinux系统格式化成xfs)并挂载，请注意备份数据! 无数据盘或有多块数据盘的云主机此设置不生效。
 注意，注意，多盘场景请使用下方的DataDisks数据结构，设置对应的云盘类型、云盘大小、挂载路径、是否格式化等信息。
 注意：此字段可能返回 null，表示取不到有效值。 
@@ -218,6 +226,26 @@ public class InstanceAdvancedSettings extends AbstractModel{
         this.ExtraArgs = ExtraArgs;
     }
 
+    /**
+     * Get 该节点属于podCIDR大小自定义模式时，可指定节点上运行的pod数量上限
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DesiredPodNumber 该节点属于podCIDR大小自定义模式时，可指定节点上运行的pod数量上限
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getDesiredPodNumber() {
+        return this.DesiredPodNumber;
+    }
+
+    /**
+     * Set 该节点属于podCIDR大小自定义模式时，可指定节点上运行的pod数量上限
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DesiredPodNumber 该节点属于podCIDR大小自定义模式时，可指定节点上运行的pod数量上限
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDesiredPodNumber(Long DesiredPodNumber) {
+        this.DesiredPodNumber = DesiredPodNumber;
+    }
+
     public InstanceAdvancedSettings() {
     }
 
@@ -253,6 +281,9 @@ public class InstanceAdvancedSettings extends AbstractModel{
         if (source.ExtraArgs != null) {
             this.ExtraArgs = new InstanceExtraArgs(source.ExtraArgs);
         }
+        if (source.DesiredPodNumber != null) {
+            this.DesiredPodNumber = new Long(source.DesiredPodNumber);
+        }
     }
 
 
@@ -267,6 +298,7 @@ public class InstanceAdvancedSettings extends AbstractModel{
         this.setParamArrayObj(map, prefix + "Labels.", this.Labels);
         this.setParamArrayObj(map, prefix + "DataDisks.", this.DataDisks);
         this.setParamObj(map, prefix + "ExtraArgs.", this.ExtraArgs);
+        this.setParamSimple(map, prefix + "DesiredPodNumber", this.DesiredPodNumber);
 
     }
 }

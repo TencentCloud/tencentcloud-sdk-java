@@ -44,6 +44,13 @@ public class DeleteNonlocalLoginPlacesRequest extends AbstractModel{
     private String [] Ip;
 
     /**
+    * 主机Uuid
+    */
+    @SerializedName("Uuid")
+    @Expose
+    private String Uuid;
+
+    /**
      * Get 删除异地登录事件的方式，可选值："Ids"、"Ip"、"All"，默认为Ids 
      * @return DelType 删除异地登录事件的方式，可选值："Ids"、"Ip"、"All"，默认为Ids
      */
@@ -91,6 +98,22 @@ public class DeleteNonlocalLoginPlacesRequest extends AbstractModel{
         this.Ip = Ip;
     }
 
+    /**
+     * Get 主机Uuid 
+     * @return Uuid 主机Uuid
+     */
+    public String getUuid() {
+        return this.Uuid;
+    }
+
+    /**
+     * Set 主机Uuid
+     * @param Uuid 主机Uuid
+     */
+    public void setUuid(String Uuid) {
+        this.Uuid = Uuid;
+    }
+
     public DeleteNonlocalLoginPlacesRequest() {
     }
 
@@ -114,6 +137,9 @@ public class DeleteNonlocalLoginPlacesRequest extends AbstractModel{
                 this.Ip[i] = new String(source.Ip[i]);
             }
         }
+        if (source.Uuid != null) {
+            this.Uuid = new String(source.Uuid);
+        }
     }
 
 
@@ -124,6 +150,7 @@ public class DeleteNonlocalLoginPlacesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "DelType", this.DelType);
         this.setParamArraySimple(map, prefix + "Ids.", this.Ids);
         this.setParamArraySimple(map, prefix + "Ip.", this.Ip);
+        this.setParamSimple(map, prefix + "Uuid", this.Uuid);
 
     }
 }

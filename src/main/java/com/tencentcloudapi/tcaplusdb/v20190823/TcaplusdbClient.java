@@ -299,6 +299,26 @@ public class TcaplusdbClient extends AbstractClient{
     }
 
     /**
+     *获取审批管理的申请单
+     * @param req DescribeApplicationsRequest
+     * @return DescribeApplicationsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeApplicationsResponse DescribeApplications(DescribeApplicationsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeApplicationsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeApplicationsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeApplications");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取集群关联的标签列表
      * @param req DescribeClusterTagsRequest
      * @return DescribeClusterTagsResponse
@@ -619,6 +639,46 @@ public class TcaplusdbClient extends AbstractClient{
     }
 
     /**
+     *合并指定表格
+     * @param req MergeTablesDataRequest
+     * @return MergeTablesDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public MergeTablesDataResponse MergeTablesData(MergeTablesDataRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<MergeTablesDataResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<MergeTablesDataResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "MergeTablesData");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改集群审批状态
+     * @param req ModifyCensorshipRequest
+     * @return ModifyCensorshipResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyCensorshipResponse ModifyCensorship(ModifyCensorshipRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyCensorshipResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyCensorshipResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyCensorship");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *修改独占集群机器
      * @param req ModifyClusterMachineRequest
      * @return ModifyClusterMachineResponse
@@ -891,6 +951,26 @@ public class TcaplusdbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<SetTableIndexResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "SetTableIndex");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *更新申请单状态
+     * @param req UpdateApplyRequest
+     * @return UpdateApplyResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateApplyResponse UpdateApply(UpdateApplyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpdateApplyResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpdateApplyResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UpdateApply");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

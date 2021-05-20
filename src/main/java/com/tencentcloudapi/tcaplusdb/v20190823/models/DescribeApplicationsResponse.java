@@ -20,23 +20,21 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateBackupResponse extends AbstractModel{
+public class DescribeApplicationsResponse extends AbstractModel{
 
     /**
-    * 创建的备份任务ID列表
-注意：此字段可能返回 null，表示取不到有效值。
+    * 申请单列表
     */
-    @SerializedName("TaskIds")
+    @SerializedName("Applications")
     @Expose
-    private String [] TaskIds;
+    private Application [] Applications;
 
     /**
-    * 创建的备份申请ID列表
-注意：此字段可能返回 null，表示取不到有效值。
+    * 申请单个数
     */
-    @SerializedName("ApplicationIds")
+    @SerializedName("TotalCount")
     @Expose
-    private String [] ApplicationIds;
+    private Long TotalCount;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,43 +44,35 @@ public class CreateBackupResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 创建的备份任务ID列表
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskIds 创建的备份任务ID列表
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 申请单列表 
+     * @return Applications 申请单列表
      */
-    public String [] getTaskIds() {
-        return this.TaskIds;
+    public Application [] getApplications() {
+        return this.Applications;
     }
 
     /**
-     * Set 创建的备份任务ID列表
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskIds 创建的备份任务ID列表
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 申请单列表
+     * @param Applications 申请单列表
      */
-    public void setTaskIds(String [] TaskIds) {
-        this.TaskIds = TaskIds;
+    public void setApplications(Application [] Applications) {
+        this.Applications = Applications;
     }
 
     /**
-     * Get 创建的备份申请ID列表
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ApplicationIds 创建的备份申请ID列表
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 申请单个数 
+     * @return TotalCount 申请单个数
      */
-    public String [] getApplicationIds() {
-        return this.ApplicationIds;
+    public Long getTotalCount() {
+        return this.TotalCount;
     }
 
     /**
-     * Set 创建的备份申请ID列表
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param ApplicationIds 创建的备份申请ID列表
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 申请单个数
+     * @param TotalCount 申请单个数
      */
-    public void setApplicationIds(String [] ApplicationIds) {
-        this.ApplicationIds = ApplicationIds;
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
     }
 
     /**
@@ -101,25 +91,22 @@ public class CreateBackupResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public CreateBackupResponse() {
+    public DescribeApplicationsResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateBackupResponse(CreateBackupResponse source) {
-        if (source.TaskIds != null) {
-            this.TaskIds = new String[source.TaskIds.length];
-            for (int i = 0; i < source.TaskIds.length; i++) {
-                this.TaskIds[i] = new String(source.TaskIds[i]);
+    public DescribeApplicationsResponse(DescribeApplicationsResponse source) {
+        if (source.Applications != null) {
+            this.Applications = new Application[source.Applications.length];
+            for (int i = 0; i < source.Applications.length; i++) {
+                this.Applications[i] = new Application(source.Applications[i]);
             }
         }
-        if (source.ApplicationIds != null) {
-            this.ApplicationIds = new String[source.ApplicationIds.length];
-            for (int i = 0; i < source.ApplicationIds.length; i++) {
-                this.ApplicationIds[i] = new String(source.ApplicationIds[i]);
-            }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -131,8 +118,8 @@ public class CreateBackupResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArraySimple(map, prefix + "TaskIds.", this.TaskIds);
-        this.setParamArraySimple(map, prefix + "ApplicationIds.", this.ApplicationIds);
+        this.setParamArrayObj(map, prefix + "Applications.", this.Applications);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

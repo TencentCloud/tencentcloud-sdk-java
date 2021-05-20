@@ -13,28 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cwp.v20180228.models;
+package com.tencentcloudapi.live.v20180801.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeLogStorageStatisticResponse extends AbstractModel{
-
-    /**
-    * 总容量（单位：GB）
-    */
-    @SerializedName("TotalSize")
-    @Expose
-    private Long TotalSize;
-
-    /**
-    * 已使用容量（单位：GB）
-    */
-    @SerializedName("UsedSize")
-    @Expose
-    private Long UsedSize;
+public class ModifyLiveDomainRefererResponse extends AbstractModel{
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -42,38 +28,6 @@ public class DescribeLogStorageStatisticResponse extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get 总容量（单位：GB） 
-     * @return TotalSize 总容量（单位：GB）
-     */
-    public Long getTotalSize() {
-        return this.TotalSize;
-    }
-
-    /**
-     * Set 总容量（单位：GB）
-     * @param TotalSize 总容量（单位：GB）
-     */
-    public void setTotalSize(Long TotalSize) {
-        this.TotalSize = TotalSize;
-    }
-
-    /**
-     * Get 已使用容量（单位：GB） 
-     * @return UsedSize 已使用容量（单位：GB）
-     */
-    public Long getUsedSize() {
-        return this.UsedSize;
-    }
-
-    /**
-     * Set 已使用容量（单位：GB）
-     * @param UsedSize 已使用容量（单位：GB）
-     */
-    public void setUsedSize(Long UsedSize) {
-        this.UsedSize = UsedSize;
-    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -91,20 +45,14 @@ public class DescribeLogStorageStatisticResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeLogStorageStatisticResponse() {
+    public ModifyLiveDomainRefererResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeLogStorageStatisticResponse(DescribeLogStorageStatisticResponse source) {
-        if (source.TotalSize != null) {
-            this.TotalSize = new Long(source.TotalSize);
-        }
-        if (source.UsedSize != null) {
-            this.UsedSize = new Long(source.UsedSize);
-        }
+    public ModifyLiveDomainRefererResponse(ModifyLiveDomainRefererResponse source) {
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -115,8 +63,6 @@ public class DescribeLogStorageStatisticResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TotalSize", this.TotalSize);
-        this.setParamSimple(map, prefix + "UsedSize", this.UsedSize);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

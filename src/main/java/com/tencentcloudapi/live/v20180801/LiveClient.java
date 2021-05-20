@@ -1107,6 +1107,27 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     }
 
     /**
+     *查询直播域名 Referer 黑白名单配置。
+由于 Referer 信息包含在 http 协议中，在开启配置后，播放协议为 rtmp 或 webrtc 不会校验 Referer 配置，仍可正常播放。如需配置 Referer 鉴权建议使用 http-flv 或 http-hls 协议播放。
+     * @param req DescribeLiveDomainRefererRequest
+     * @return DescribeLiveDomainRefererResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLiveDomainRefererResponse DescribeLiveDomainReferer(DescribeLiveDomainRefererRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeLiveDomainRefererResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeLiveDomainRefererResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeLiveDomainReferer");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *根据域名状态、类型等信息查询用户的域名信息。
      * @param req DescribeLiveDomainsRequest
      * @return DescribeLiveDomainsResponse
@@ -1966,6 +1987,27 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
                 Type type = new TypeToken<JsonResponseModel<ModifyLiveDomainCertResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyLiveDomainCert");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *设置直播域名 Referer 黑白名单。
+由于 Referer 信息包含在 http 协议中，在开启配置后，播放协议为 rtmp 或 webrtc 不会校验 Referer 配置，仍可正常播放。如需配置 Referer 鉴权建议使用 http-flv 或 http-hls 协议播放。
+     * @param req ModifyLiveDomainRefererRequest
+     * @return ModifyLiveDomainRefererResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyLiveDomainRefererResponse ModifyLiveDomainReferer(ModifyLiveDomainRefererRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyLiveDomainRefererResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyLiveDomainRefererResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyLiveDomainReferer");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

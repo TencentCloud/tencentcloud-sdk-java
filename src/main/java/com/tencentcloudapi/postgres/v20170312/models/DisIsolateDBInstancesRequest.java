@@ -37,7 +37,7 @@ public class DisIsolateDBInstancesRequest extends AbstractModel{
     private Long Period;
 
     /**
-    * 是否使用代金券
+    * 是否使用代金券：true-使用,false-不使用，默认不使用
     */
     @SerializedName("AutoVoucher")
     @Expose
@@ -83,16 +83,16 @@ public class DisIsolateDBInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get 是否使用代金券 
-     * @return AutoVoucher 是否使用代金券
+     * Get 是否使用代金券：true-使用,false-不使用，默认不使用 
+     * @return AutoVoucher 是否使用代金券：true-使用,false-不使用，默认不使用
      */
     public Boolean getAutoVoucher() {
         return this.AutoVoucher;
     }
 
     /**
-     * Set 是否使用代金券
-     * @param AutoVoucher 是否使用代金券
+     * Set 是否使用代金券：true-使用,false-不使用，默认不使用
+     * @param AutoVoucher 是否使用代金券：true-使用,false-不使用，默认不使用
      */
     public void setAutoVoucher(Boolean AutoVoucher) {
         this.AutoVoucher = AutoVoucher;

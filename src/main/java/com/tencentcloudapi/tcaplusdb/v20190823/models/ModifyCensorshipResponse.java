@@ -20,23 +20,29 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateBackupResponse extends AbstractModel{
+public class ModifyCensorshipResponse extends AbstractModel{
 
     /**
-    * 创建的备份任务ID列表
-注意：此字段可能返回 null，表示取不到有效值。
+    * 集群id
     */
-    @SerializedName("TaskIds")
+    @SerializedName("ClusterId")
     @Expose
-    private String [] TaskIds;
+    private String ClusterId;
 
     /**
-    * 创建的备份申请ID列表
+    * 已加入审批人的uin
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("ApplicationIds")
+    @SerializedName("Uins")
     @Expose
-    private String [] ApplicationIds;
+    private String [] Uins;
+
+    /**
+    * 集群是否开启审核 0-关闭 1-开启
+    */
+    @SerializedName("Censorship")
+    @Expose
+    private Long Censorship;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,43 +52,55 @@ public class CreateBackupResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 创建的备份任务ID列表
+     * Get 集群id 
+     * @return ClusterId 集群id
+     */
+    public String getClusterId() {
+        return this.ClusterId;
+    }
+
+    /**
+     * Set 集群id
+     * @param ClusterId 集群id
+     */
+    public void setClusterId(String ClusterId) {
+        this.ClusterId = ClusterId;
+    }
+
+    /**
+     * Get 已加入审批人的uin
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskIds 创建的备份任务ID列表
+     * @return Uins 已加入审批人的uin
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String [] getTaskIds() {
-        return this.TaskIds;
+    public String [] getUins() {
+        return this.Uins;
     }
 
     /**
-     * Set 创建的备份任务ID列表
+     * Set 已加入审批人的uin
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskIds 创建的备份任务ID列表
+     * @param Uins 已加入审批人的uin
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setTaskIds(String [] TaskIds) {
-        this.TaskIds = TaskIds;
+    public void setUins(String [] Uins) {
+        this.Uins = Uins;
     }
 
     /**
-     * Get 创建的备份申请ID列表
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ApplicationIds 创建的备份申请ID列表
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 集群是否开启审核 0-关闭 1-开启 
+     * @return Censorship 集群是否开启审核 0-关闭 1-开启
      */
-    public String [] getApplicationIds() {
-        return this.ApplicationIds;
+    public Long getCensorship() {
+        return this.Censorship;
     }
 
     /**
-     * Set 创建的备份申请ID列表
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param ApplicationIds 创建的备份申请ID列表
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 集群是否开启审核 0-关闭 1-开启
+     * @param Censorship 集群是否开启审核 0-关闭 1-开启
      */
-    public void setApplicationIds(String [] ApplicationIds) {
-        this.ApplicationIds = ApplicationIds;
+    public void setCensorship(Long Censorship) {
+        this.Censorship = Censorship;
     }
 
     /**
@@ -101,25 +119,25 @@ public class CreateBackupResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public CreateBackupResponse() {
+    public ModifyCensorshipResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateBackupResponse(CreateBackupResponse source) {
-        if (source.TaskIds != null) {
-            this.TaskIds = new String[source.TaskIds.length];
-            for (int i = 0; i < source.TaskIds.length; i++) {
-                this.TaskIds[i] = new String(source.TaskIds[i]);
+    public ModifyCensorshipResponse(ModifyCensorshipResponse source) {
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
+        if (source.Uins != null) {
+            this.Uins = new String[source.Uins.length];
+            for (int i = 0; i < source.Uins.length; i++) {
+                this.Uins[i] = new String(source.Uins[i]);
             }
         }
-        if (source.ApplicationIds != null) {
-            this.ApplicationIds = new String[source.ApplicationIds.length];
-            for (int i = 0; i < source.ApplicationIds.length; i++) {
-                this.ApplicationIds[i] = new String(source.ApplicationIds[i]);
-            }
+        if (source.Censorship != null) {
+            this.Censorship = new Long(source.Censorship);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -131,8 +149,9 @@ public class CreateBackupResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArraySimple(map, prefix + "TaskIds.", this.TaskIds);
-        this.setParamArraySimple(map, prefix + "ApplicationIds.", this.ApplicationIds);
+        this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
+        this.setParamArraySimple(map, prefix + "Uins.", this.Uins);
+        this.setParamSimple(map, prefix + "Censorship", this.Censorship);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

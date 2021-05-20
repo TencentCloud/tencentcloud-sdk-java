@@ -87,6 +87,14 @@ public class TableResultNew extends AbstractModel{
     private String [] TaskIds;
 
     /**
+    * 腾讯云申请审核单Id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ApplicationId")
+    @Expose
+    private String ApplicationId;
+
+    /**
      * Get 表格实例ID，形如：tcaplus-3be64cbb
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return TableInstanceId 表格实例ID，形如：tcaplus-3be64cbb
@@ -246,6 +254,26 @@ public class TableResultNew extends AbstractModel{
         this.TaskIds = TaskIds;
     }
 
+    /**
+     * Get 腾讯云申请审核单Id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ApplicationId 腾讯云申请审核单Id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getApplicationId() {
+        return this.ApplicationId;
+    }
+
+    /**
+     * Set 腾讯云申请审核单Id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ApplicationId 腾讯云申请审核单Id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setApplicationId(String ApplicationId) {
+        this.ApplicationId = ApplicationId;
+    }
+
     public TableResultNew() {
     }
 
@@ -281,6 +309,9 @@ public class TableResultNew extends AbstractModel{
                 this.TaskIds[i] = new String(source.TaskIds[i]);
             }
         }
+        if (source.ApplicationId != null) {
+            this.ApplicationId = new String(source.ApplicationId);
+        }
     }
 
 
@@ -296,6 +327,7 @@ public class TableResultNew extends AbstractModel{
         this.setParamSimple(map, prefix + "TableGroupId", this.TableGroupId);
         this.setParamObj(map, prefix + "Error.", this.Error);
         this.setParamArraySimple(map, prefix + "TaskIds.", this.TaskIds);
+        this.setParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
 
     }
 }
