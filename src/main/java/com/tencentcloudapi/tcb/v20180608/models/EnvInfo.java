@@ -164,6 +164,14 @@ public class EnvInfo extends AbstractModel{
     private String Region;
 
     /**
+    * 环境标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get 账户下该环境唯一标识 
      * @return EnvId 账户下该环境唯一标识
      */
@@ -511,6 +519,26 @@ public class EnvInfo extends AbstractModel{
         this.Region = Region;
     }
 
+    /**
+     * Get 环境标签列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Tags 环境标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 环境标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Tags 环境标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public EnvInfo() {
     }
 
@@ -588,6 +616,12 @@ public class EnvInfo extends AbstractModel{
         if (source.Region != null) {
             this.Region = new String(source.Region);
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -613,6 +647,7 @@ public class EnvInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "PayMode", this.PayMode);
         this.setParamSimple(map, prefix + "IsDefault", this.IsDefault);
         this.setParamSimple(map, prefix + "Region", this.Region);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

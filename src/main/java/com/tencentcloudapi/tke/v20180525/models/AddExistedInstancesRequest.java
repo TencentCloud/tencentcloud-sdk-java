@@ -86,6 +86,15 @@ public class AddExistedInstancesRequest extends AbstractModel{
     private String [] SkipValidateOptions;
 
     /**
+    * 参数InstanceAdvancedSettingsOverride数组用于定制化地配置各台instance，与InstanceIds顺序对应。当传入InstanceAdvancedSettingsOverrides数组时，将覆盖默认参数InstanceAdvancedSettings；当没有传入参数InstanceAdvancedSettingsOverrides时，InstanceAdvancedSettings参数对每台instance生效。
+
+参数InstanceAdvancedSettingsOverride数组的长度应与InstanceIds数组一致；当长度大于InstanceIds数组长度时将报错；当长度小于InstanceIds数组时，没有对应配置的instace将使用默认配置。
+    */
+    @SerializedName("InstanceAdvancedSettingsOverrides")
+    @Expose
+    private InstanceAdvancedSettings [] InstanceAdvancedSettingsOverrides;
+
+    /**
      * Get 集群ID 
      * @return ClusterId 集群ID
      */
@@ -229,6 +238,30 @@ public class AddExistedInstancesRequest extends AbstractModel{
         this.SkipValidateOptions = SkipValidateOptions;
     }
 
+    /**
+     * Get 参数InstanceAdvancedSettingsOverride数组用于定制化地配置各台instance，与InstanceIds顺序对应。当传入InstanceAdvancedSettingsOverrides数组时，将覆盖默认参数InstanceAdvancedSettings；当没有传入参数InstanceAdvancedSettingsOverrides时，InstanceAdvancedSettings参数对每台instance生效。
+
+参数InstanceAdvancedSettingsOverride数组的长度应与InstanceIds数组一致；当长度大于InstanceIds数组长度时将报错；当长度小于InstanceIds数组时，没有对应配置的instace将使用默认配置。 
+     * @return InstanceAdvancedSettingsOverrides 参数InstanceAdvancedSettingsOverride数组用于定制化地配置各台instance，与InstanceIds顺序对应。当传入InstanceAdvancedSettingsOverrides数组时，将覆盖默认参数InstanceAdvancedSettings；当没有传入参数InstanceAdvancedSettingsOverrides时，InstanceAdvancedSettings参数对每台instance生效。
+
+参数InstanceAdvancedSettingsOverride数组的长度应与InstanceIds数组一致；当长度大于InstanceIds数组长度时将报错；当长度小于InstanceIds数组时，没有对应配置的instace将使用默认配置。
+     */
+    public InstanceAdvancedSettings [] getInstanceAdvancedSettingsOverrides() {
+        return this.InstanceAdvancedSettingsOverrides;
+    }
+
+    /**
+     * Set 参数InstanceAdvancedSettingsOverride数组用于定制化地配置各台instance，与InstanceIds顺序对应。当传入InstanceAdvancedSettingsOverrides数组时，将覆盖默认参数InstanceAdvancedSettings；当没有传入参数InstanceAdvancedSettingsOverrides时，InstanceAdvancedSettings参数对每台instance生效。
+
+参数InstanceAdvancedSettingsOverride数组的长度应与InstanceIds数组一致；当长度大于InstanceIds数组长度时将报错；当长度小于InstanceIds数组时，没有对应配置的instace将使用默认配置。
+     * @param InstanceAdvancedSettingsOverrides 参数InstanceAdvancedSettingsOverride数组用于定制化地配置各台instance，与InstanceIds顺序对应。当传入InstanceAdvancedSettingsOverrides数组时，将覆盖默认参数InstanceAdvancedSettings；当没有传入参数InstanceAdvancedSettingsOverrides时，InstanceAdvancedSettings参数对每台instance生效。
+
+参数InstanceAdvancedSettingsOverride数组的长度应与InstanceIds数组一致；当长度大于InstanceIds数组长度时将报错；当长度小于InstanceIds数组时，没有对应配置的instace将使用默认配置。
+     */
+    public void setInstanceAdvancedSettingsOverrides(InstanceAdvancedSettings [] InstanceAdvancedSettingsOverrides) {
+        this.InstanceAdvancedSettingsOverrides = InstanceAdvancedSettingsOverrides;
+    }
+
     public AddExistedInstancesRequest() {
     }
 
@@ -273,6 +306,12 @@ public class AddExistedInstancesRequest extends AbstractModel{
                 this.SkipValidateOptions[i] = new String(source.SkipValidateOptions[i]);
             }
         }
+        if (source.InstanceAdvancedSettingsOverrides != null) {
+            this.InstanceAdvancedSettingsOverrides = new InstanceAdvancedSettings[source.InstanceAdvancedSettingsOverrides.length];
+            for (int i = 0; i < source.InstanceAdvancedSettingsOverrides.length; i++) {
+                this.InstanceAdvancedSettingsOverrides[i] = new InstanceAdvancedSettings(source.InstanceAdvancedSettingsOverrides[i]);
+            }
+        }
     }
 
 
@@ -289,6 +328,7 @@ public class AddExistedInstancesRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
         this.setParamObj(map, prefix + "NodePool.", this.NodePool);
         this.setParamArraySimple(map, prefix + "SkipValidateOptions.", this.SkipValidateOptions);
+        this.setParamArrayObj(map, prefix + "InstanceAdvancedSettingsOverrides.", this.InstanceAdvancedSettingsOverrides);
 
     }
 }

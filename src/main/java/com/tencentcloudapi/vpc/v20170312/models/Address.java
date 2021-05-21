@@ -151,6 +151,14 @@ public class Address extends AbstractModel{
     private String InternetChargeType;
 
     /**
+    * 弹性公网IP关联的标签列表。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TagSet")
+    @Expose
+    private Tag [] TagSet;
+
+    /**
      * Get `EIP`的`ID`，是`EIP`的唯一标识。 
      * @return AddressId `EIP`的`ID`，是`EIP`的唯一标识。
      */
@@ -446,6 +454,26 @@ public class Address extends AbstractModel{
         this.InternetChargeType = InternetChargeType;
     }
 
+    /**
+     * Get 弹性公网IP关联的标签列表。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TagSet 弹性公网IP关联的标签列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Tag [] getTagSet() {
+        return this.TagSet;
+    }
+
+    /**
+     * Set 弹性公网IP关联的标签列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TagSet 弹性公网IP关联的标签列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTagSet(Tag [] TagSet) {
+        this.TagSet = TagSet;
+    }
+
     public Address() {
     }
 
@@ -508,6 +536,12 @@ public class Address extends AbstractModel{
         if (source.InternetChargeType != null) {
             this.InternetChargeType = new String(source.InternetChargeType);
         }
+        if (source.TagSet != null) {
+            this.TagSet = new Tag[source.TagSet.length];
+            for (int i = 0; i < source.TagSet.length; i++) {
+                this.TagSet[i] = new Tag(source.TagSet[i]);
+            }
+        }
     }
 
 
@@ -533,6 +567,7 @@ public class Address extends AbstractModel{
         this.setParamSimple(map, prefix + "LocalBgp", this.LocalBgp);
         this.setParamSimple(map, prefix + "Bandwidth", this.Bandwidth);
         this.setParamSimple(map, prefix + "InternetChargeType", this.InternetChargeType);
+        this.setParamArrayObj(map, prefix + "TagSet.", this.TagSet);
 
     }
 }

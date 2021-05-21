@@ -2161,6 +2161,26 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     }
 
     /**
+     *翻页查询任务列表
+     * @param req DescribeTaskRecordsRequest
+     * @return DescribeTaskRecordsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTaskRecordsResponse DescribeTaskRecords(DescribeTaskRecordsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTaskRecordsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTaskRecordsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeTaskRecords");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询网关API监控明细数据（仅单元化网关），非单元化网关使用DescribeApiUseDetail
      * @param req DescribeUnitApiUseDetailRequest
      * @return DescribeUnitApiUseDetailResponse

@@ -44,6 +44,13 @@ public class ExistedInstancesForNode extends AbstractModel{
     private InstanceAdvancedSettings InstanceAdvancedSettingsOverride;
 
     /**
+    * 自定义模式集群，可指定每个节点的pod数量
+    */
+    @SerializedName("DesiredPodNumbers")
+    @Expose
+    private Long [] DesiredPodNumbers;
+
+    /**
      * Get 节点角色，取值:MASTER_ETCD, WORKER。MASTER_ETCD只有在创建 INDEPENDENT_CLUSTER 独立集群时需要指定。MASTER_ETCD节点数量为3～7，建议为奇数。MASTER_ETCD最小配置为4C8G。 
      * @return NodeRole 节点角色，取值:MASTER_ETCD, WORKER。MASTER_ETCD只有在创建 INDEPENDENT_CLUSTER 独立集群时需要指定。MASTER_ETCD节点数量为3～7，建议为奇数。MASTER_ETCD最小配置为4C8G。
      */
@@ -91,6 +98,22 @@ public class ExistedInstancesForNode extends AbstractModel{
         this.InstanceAdvancedSettingsOverride = InstanceAdvancedSettingsOverride;
     }
 
+    /**
+     * Get 自定义模式集群，可指定每个节点的pod数量 
+     * @return DesiredPodNumbers 自定义模式集群，可指定每个节点的pod数量
+     */
+    public Long [] getDesiredPodNumbers() {
+        return this.DesiredPodNumbers;
+    }
+
+    /**
+     * Set 自定义模式集群，可指定每个节点的pod数量
+     * @param DesiredPodNumbers 自定义模式集群，可指定每个节点的pod数量
+     */
+    public void setDesiredPodNumbers(Long [] DesiredPodNumbers) {
+        this.DesiredPodNumbers = DesiredPodNumbers;
+    }
+
     public ExistedInstancesForNode() {
     }
 
@@ -108,6 +131,12 @@ public class ExistedInstancesForNode extends AbstractModel{
         if (source.InstanceAdvancedSettingsOverride != null) {
             this.InstanceAdvancedSettingsOverride = new InstanceAdvancedSettings(source.InstanceAdvancedSettingsOverride);
         }
+        if (source.DesiredPodNumbers != null) {
+            this.DesiredPodNumbers = new Long[source.DesiredPodNumbers.length];
+            for (int i = 0; i < source.DesiredPodNumbers.length; i++) {
+                this.DesiredPodNumbers[i] = new Long(source.DesiredPodNumbers[i]);
+            }
+        }
     }
 
 
@@ -118,6 +147,7 @@ public class ExistedInstancesForNode extends AbstractModel{
         this.setParamSimple(map, prefix + "NodeRole", this.NodeRole);
         this.setParamObj(map, prefix + "ExistedInstancesPara.", this.ExistedInstancesPara);
         this.setParamObj(map, prefix + "InstanceAdvancedSettingsOverride.", this.InstanceAdvancedSettingsOverride);
+        this.setParamArraySimple(map, prefix + "DesiredPodNumbers.", this.DesiredPodNumbers);
 
     }
 }

@@ -86,6 +86,13 @@ public class CreateAndAttachNetworkInterfaceRequest extends AbstractModel{
     private Tag [] Tags;
 
     /**
+    * 绑定类型：0 标准型 1 扩展型。
+    */
+    @SerializedName("AttachType")
+    @Expose
+    private Long AttachType;
+
+    /**
      * Get VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。 
      * @return VpcId VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
      */
@@ -229,6 +236,22 @@ public class CreateAndAttachNetworkInterfaceRequest extends AbstractModel{
         this.Tags = Tags;
     }
 
+    /**
+     * Get 绑定类型：0 标准型 1 扩展型。 
+     * @return AttachType 绑定类型：0 标准型 1 扩展型。
+     */
+    public Long getAttachType() {
+        return this.AttachType;
+    }
+
+    /**
+     * Set 绑定类型：0 标准型 1 扩展型。
+     * @param AttachType 绑定类型：0 标准型 1 扩展型。
+     */
+    public void setAttachType(Long AttachType) {
+        this.AttachType = AttachType;
+    }
+
     public CreateAndAttachNetworkInterfaceRequest() {
     }
 
@@ -273,6 +296,9 @@ public class CreateAndAttachNetworkInterfaceRequest extends AbstractModel{
                 this.Tags[i] = new Tag(source.Tags[i]);
             }
         }
+        if (source.AttachType != null) {
+            this.AttachType = new Long(source.AttachType);
+        }
     }
 
 
@@ -289,6 +315,7 @@ public class CreateAndAttachNetworkInterfaceRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
         this.setParamSimple(map, prefix + "NetworkInterfaceDescription", this.NetworkInterfaceDescription);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "AttachType", this.AttachType);
 
     }
 }

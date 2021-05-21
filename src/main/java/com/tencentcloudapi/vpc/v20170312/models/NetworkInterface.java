@@ -157,6 +157,14 @@ public class NetworkInterface extends AbstractModel{
     private String CdcId;
 
     /**
+    * 弹性网卡类型：0:标准型/1:扩展型。默认值为0。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AttachType")
+    @Expose
+    private Long AttachType;
+
+    /**
      * Get 弹性网卡实例ID，例如：eni-f1xjkw1b。 
      * @return NetworkInterfaceId 弹性网卡实例ID，例如：eni-f1xjkw1b。
      */
@@ -476,6 +484,26 @@ public class NetworkInterface extends AbstractModel{
         this.CdcId = CdcId;
     }
 
+    /**
+     * Get 弹性网卡类型：0:标准型/1:扩展型。默认值为0。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AttachType 弹性网卡类型：0:标准型/1:扩展型。默认值为0。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getAttachType() {
+        return this.AttachType;
+    }
+
+    /**
+     * Set 弹性网卡类型：0:标准型/1:扩展型。默认值为0。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AttachType 弹性网卡类型：0:标准型/1:扩展型。默认值为0。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAttachType(Long AttachType) {
+        this.AttachType = AttachType;
+    }
+
     public NetworkInterface() {
     }
 
@@ -550,6 +578,9 @@ public class NetworkInterface extends AbstractModel{
         if (source.CdcId != null) {
             this.CdcId = new String(source.CdcId);
         }
+        if (source.AttachType != null) {
+            this.AttachType = new Long(source.AttachType);
+        }
     }
 
 
@@ -575,6 +606,7 @@ public class NetworkInterface extends AbstractModel{
         this.setParamSimple(map, prefix + "EniType", this.EniType);
         this.setParamSimple(map, prefix + "Business", this.Business);
         this.setParamSimple(map, prefix + "CdcId", this.CdcId);
+        this.setParamSimple(map, prefix + "AttachType", this.AttachType);
 
     }
 }

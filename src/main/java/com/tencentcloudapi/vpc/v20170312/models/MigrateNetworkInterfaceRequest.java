@@ -44,6 +44,13 @@ public class MigrateNetworkInterfaceRequest extends AbstractModel{
     private String DestinationInstanceId;
 
     /**
+    * 网卡绑定类型：0 标准型 1 扩展型。
+    */
+    @SerializedName("AttachType")
+    @Expose
+    private Long AttachType;
+
+    /**
      * Get 弹性网卡实例ID，例如：eni-m6dyj72l。 
      * @return NetworkInterfaceId 弹性网卡实例ID，例如：eni-m6dyj72l。
      */
@@ -91,6 +98,22 @@ public class MigrateNetworkInterfaceRequest extends AbstractModel{
         this.DestinationInstanceId = DestinationInstanceId;
     }
 
+    /**
+     * Get 网卡绑定类型：0 标准型 1 扩展型。 
+     * @return AttachType 网卡绑定类型：0 标准型 1 扩展型。
+     */
+    public Long getAttachType() {
+        return this.AttachType;
+    }
+
+    /**
+     * Set 网卡绑定类型：0 标准型 1 扩展型。
+     * @param AttachType 网卡绑定类型：0 标准型 1 扩展型。
+     */
+    public void setAttachType(Long AttachType) {
+        this.AttachType = AttachType;
+    }
+
     public MigrateNetworkInterfaceRequest() {
     }
 
@@ -108,6 +131,9 @@ public class MigrateNetworkInterfaceRequest extends AbstractModel{
         if (source.DestinationInstanceId != null) {
             this.DestinationInstanceId = new String(source.DestinationInstanceId);
         }
+        if (source.AttachType != null) {
+            this.AttachType = new Long(source.AttachType);
+        }
     }
 
 
@@ -118,6 +144,7 @@ public class MigrateNetworkInterfaceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "NetworkInterfaceId", this.NetworkInterfaceId);
         this.setParamSimple(map, prefix + "SourceInstanceId", this.SourceInstanceId);
         this.setParamSimple(map, prefix + "DestinationInstanceId", this.DestinationInstanceId);
+        this.setParamSimple(map, prefix + "AttachType", this.AttachType);
 
     }
 }

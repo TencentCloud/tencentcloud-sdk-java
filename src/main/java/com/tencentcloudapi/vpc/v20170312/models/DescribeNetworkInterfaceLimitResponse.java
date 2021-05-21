@@ -23,18 +23,34 @@ import java.util.HashMap;
 public class DescribeNetworkInterfaceLimitResponse extends AbstractModel{
 
     /**
-    * 弹性网卡配额
+    * 标准型弹性网卡配额
     */
     @SerializedName("EniQuantity")
     @Expose
     private Long EniQuantity;
 
     /**
-    * 每个弹性网卡可以分配的IP配额
+    * 每个标准型弹性网卡可以分配的IP配额
     */
     @SerializedName("EniPrivateIpAddressQuantity")
     @Expose
     private Long EniPrivateIpAddressQuantity;
+
+    /**
+    * 扩展型网卡配额
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ExtendEniQuantity")
+    @Expose
+    private Long ExtendEniQuantity;
+
+    /**
+    * 每个扩展型弹性网卡可以分配的IP配额
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ExtendEniPrivateIpAddressQuantity")
+    @Expose
+    private Long ExtendEniPrivateIpAddressQuantity;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -44,35 +60,75 @@ public class DescribeNetworkInterfaceLimitResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 弹性网卡配额 
-     * @return EniQuantity 弹性网卡配额
+     * Get 标准型弹性网卡配额 
+     * @return EniQuantity 标准型弹性网卡配额
      */
     public Long getEniQuantity() {
         return this.EniQuantity;
     }
 
     /**
-     * Set 弹性网卡配额
-     * @param EniQuantity 弹性网卡配额
+     * Set 标准型弹性网卡配额
+     * @param EniQuantity 标准型弹性网卡配额
      */
     public void setEniQuantity(Long EniQuantity) {
         this.EniQuantity = EniQuantity;
     }
 
     /**
-     * Get 每个弹性网卡可以分配的IP配额 
-     * @return EniPrivateIpAddressQuantity 每个弹性网卡可以分配的IP配额
+     * Get 每个标准型弹性网卡可以分配的IP配额 
+     * @return EniPrivateIpAddressQuantity 每个标准型弹性网卡可以分配的IP配额
      */
     public Long getEniPrivateIpAddressQuantity() {
         return this.EniPrivateIpAddressQuantity;
     }
 
     /**
-     * Set 每个弹性网卡可以分配的IP配额
-     * @param EniPrivateIpAddressQuantity 每个弹性网卡可以分配的IP配额
+     * Set 每个标准型弹性网卡可以分配的IP配额
+     * @param EniPrivateIpAddressQuantity 每个标准型弹性网卡可以分配的IP配额
      */
     public void setEniPrivateIpAddressQuantity(Long EniPrivateIpAddressQuantity) {
         this.EniPrivateIpAddressQuantity = EniPrivateIpAddressQuantity;
+    }
+
+    /**
+     * Get 扩展型网卡配额
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ExtendEniQuantity 扩展型网卡配额
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getExtendEniQuantity() {
+        return this.ExtendEniQuantity;
+    }
+
+    /**
+     * Set 扩展型网卡配额
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ExtendEniQuantity 扩展型网卡配额
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setExtendEniQuantity(Long ExtendEniQuantity) {
+        this.ExtendEniQuantity = ExtendEniQuantity;
+    }
+
+    /**
+     * Get 每个扩展型弹性网卡可以分配的IP配额
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ExtendEniPrivateIpAddressQuantity 每个扩展型弹性网卡可以分配的IP配额
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getExtendEniPrivateIpAddressQuantity() {
+        return this.ExtendEniPrivateIpAddressQuantity;
+    }
+
+    /**
+     * Set 每个扩展型弹性网卡可以分配的IP配额
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ExtendEniPrivateIpAddressQuantity 每个扩展型弹性网卡可以分配的IP配额
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setExtendEniPrivateIpAddressQuantity(Long ExtendEniPrivateIpAddressQuantity) {
+        this.ExtendEniPrivateIpAddressQuantity = ExtendEniPrivateIpAddressQuantity;
     }
 
     /**
@@ -105,6 +161,12 @@ public class DescribeNetworkInterfaceLimitResponse extends AbstractModel{
         if (source.EniPrivateIpAddressQuantity != null) {
             this.EniPrivateIpAddressQuantity = new Long(source.EniPrivateIpAddressQuantity);
         }
+        if (source.ExtendEniQuantity != null) {
+            this.ExtendEniQuantity = new Long(source.ExtendEniQuantity);
+        }
+        if (source.ExtendEniPrivateIpAddressQuantity != null) {
+            this.ExtendEniPrivateIpAddressQuantity = new Long(source.ExtendEniPrivateIpAddressQuantity);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -117,6 +179,8 @@ public class DescribeNetworkInterfaceLimitResponse extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "EniQuantity", this.EniQuantity);
         this.setParamSimple(map, prefix + "EniPrivateIpAddressQuantity", this.EniPrivateIpAddressQuantity);
+        this.setParamSimple(map, prefix + "ExtendEniQuantity", this.ExtendEniQuantity);
+        this.setParamSimple(map, prefix + "ExtendEniPrivateIpAddressQuantity", this.ExtendEniPrivateIpAddressQuantity);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

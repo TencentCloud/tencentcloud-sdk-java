@@ -37,7 +37,11 @@ public class ZoneInstanceCountISP extends AbstractModel{
     private Long InstanceCount;
 
     /**
-    * 运营商，CTCC电信，CUCC联通，CMCC移动，多个运营商用英文分号连接";"。多运营商需要开通白名单，请直接联系腾讯云客服。
+    * 运营商如下：
+CTCC：中国电信
+CUCC：中国联通
+CMCC：中国移动
+多个运营商用英文分号连接";"，例如："CMCC;CUCC;CTCC"。多运营商需要开通白名单，请直接联系腾讯云客服。
     */
     @SerializedName("ISP")
     @Expose
@@ -104,16 +108,32 @@ public class ZoneInstanceCountISP extends AbstractModel{
     }
 
     /**
-     * Get 运营商，CTCC电信，CUCC联通，CMCC移动，多个运营商用英文分号连接";"。多运营商需要开通白名单，请直接联系腾讯云客服。 
-     * @return ISP 运营商，CTCC电信，CUCC联通，CMCC移动，多个运营商用英文分号连接";"。多运营商需要开通白名单，请直接联系腾讯云客服。
+     * Get 运营商如下：
+CTCC：中国电信
+CUCC：中国联通
+CMCC：中国移动
+多个运营商用英文分号连接";"，例如："CMCC;CUCC;CTCC"。多运营商需要开通白名单，请直接联系腾讯云客服。 
+     * @return ISP 运营商如下：
+CTCC：中国电信
+CUCC：中国联通
+CMCC：中国移动
+多个运营商用英文分号连接";"，例如："CMCC;CUCC;CTCC"。多运营商需要开通白名单，请直接联系腾讯云客服。
      */
     public String getISP() {
         return this.ISP;
     }
 
     /**
-     * Set 运营商，CTCC电信，CUCC联通，CMCC移动，多个运营商用英文分号连接";"。多运营商需要开通白名单，请直接联系腾讯云客服。
-     * @param ISP 运营商，CTCC电信，CUCC联通，CMCC移动，多个运营商用英文分号连接";"。多运营商需要开通白名单，请直接联系腾讯云客服。
+     * Set 运营商如下：
+CTCC：中国电信
+CUCC：中国联通
+CMCC：中国移动
+多个运营商用英文分号连接";"，例如："CMCC;CUCC;CTCC"。多运营商需要开通白名单，请直接联系腾讯云客服。
+     * @param ISP 运营商如下：
+CTCC：中国电信
+CUCC：中国联通
+CMCC：中国移动
+多个运营商用英文分号连接";"，例如："CMCC;CUCC;CTCC"。多运营商需要开通白名单，请直接联系腾讯云客服。
      */
     public void setISP(String ISP) {
         this.ISP = ISP;

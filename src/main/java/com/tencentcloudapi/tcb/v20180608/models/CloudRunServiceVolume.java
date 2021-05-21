@@ -47,12 +47,20 @@ public class CloudRunServiceVolume extends AbstractModel{
     private String SecretName;
 
     /**
-    * 是否开启临时目录
+    * 是否开启临时目录逐步废弃，请使用 EmptyDir
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EnableEmptyDirVolume")
     @Expose
     private Boolean EnableEmptyDirVolume;
+
+    /**
+    * emptydir数据卷详细信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EmptyDir")
+    @Expose
+    private CloudBaseRunEmptyDirVolumeSource EmptyDir;
 
     /**
      * Get 名称
@@ -115,9 +123,9 @@ public class CloudRunServiceVolume extends AbstractModel{
     }
 
     /**
-     * Get 是否开启临时目录
+     * Get 是否开启临时目录逐步废弃，请使用 EmptyDir
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EnableEmptyDirVolume 是否开启临时目录
+     * @return EnableEmptyDirVolume 是否开启临时目录逐步废弃，请使用 EmptyDir
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getEnableEmptyDirVolume() {
@@ -125,13 +133,33 @@ public class CloudRunServiceVolume extends AbstractModel{
     }
 
     /**
-     * Set 是否开启临时目录
+     * Set 是否开启临时目录逐步废弃，请使用 EmptyDir
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EnableEmptyDirVolume 是否开启临时目录
+     * @param EnableEmptyDirVolume 是否开启临时目录逐步废弃，请使用 EmptyDir
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnableEmptyDirVolume(Boolean EnableEmptyDirVolume) {
         this.EnableEmptyDirVolume = EnableEmptyDirVolume;
+    }
+
+    /**
+     * Get emptydir数据卷详细信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EmptyDir emptydir数据卷详细信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public CloudBaseRunEmptyDirVolumeSource getEmptyDir() {
+        return this.EmptyDir;
+    }
+
+    /**
+     * Set emptydir数据卷详细信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EmptyDir emptydir数据卷详细信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEmptyDir(CloudBaseRunEmptyDirVolumeSource EmptyDir) {
+        this.EmptyDir = EmptyDir;
     }
 
     public CloudRunServiceVolume() {
@@ -154,6 +182,9 @@ public class CloudRunServiceVolume extends AbstractModel{
         if (source.EnableEmptyDirVolume != null) {
             this.EnableEmptyDirVolume = new Boolean(source.EnableEmptyDirVolume);
         }
+        if (source.EmptyDir != null) {
+            this.EmptyDir = new CloudBaseRunEmptyDirVolumeSource(source.EmptyDir);
+        }
     }
 
 
@@ -165,6 +196,7 @@ public class CloudRunServiceVolume extends AbstractModel{
         this.setParamObj(map, prefix + "NFS.", this.NFS);
         this.setParamSimple(map, prefix + "SecretName", this.SecretName);
         this.setParamSimple(map, prefix + "EnableEmptyDirVolume", this.EnableEmptyDirVolume);
+        this.setParamObj(map, prefix + "EmptyDir.", this.EmptyDir);
 
     }
 }

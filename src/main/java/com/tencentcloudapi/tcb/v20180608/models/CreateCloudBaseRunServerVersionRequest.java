@@ -282,6 +282,13 @@ public class CreateCloudBaseRunServerVersionRequest extends AbstractModel{
     private Long IsCreateJnsGw;
 
     /**
+    * 数据卷挂载参数
+    */
+    @SerializedName("ServiceVolumeMounts")
+    @Expose
+    private CloudBaseRunServiceVolumeMount [] ServiceVolumeMounts;
+
+    /**
      * Get 环境ID 
      * @return EnvId 环境ID
      */
@@ -873,6 +880,22 @@ public class CreateCloudBaseRunServerVersionRequest extends AbstractModel{
         this.IsCreateJnsGw = IsCreateJnsGw;
     }
 
+    /**
+     * Get 数据卷挂载参数 
+     * @return ServiceVolumeMounts 数据卷挂载参数
+     */
+    public CloudBaseRunServiceVolumeMount [] getServiceVolumeMounts() {
+        return this.ServiceVolumeMounts;
+    }
+
+    /**
+     * Set 数据卷挂载参数
+     * @param ServiceVolumeMounts 数据卷挂载参数
+     */
+    public void setServiceVolumeMounts(CloudBaseRunServiceVolumeMount [] ServiceVolumeMounts) {
+        this.ServiceVolumeMounts = ServiceVolumeMounts;
+    }
+
     public CreateCloudBaseRunServerVersionRequest() {
     }
 
@@ -1001,6 +1024,12 @@ public class CreateCloudBaseRunServerVersionRequest extends AbstractModel{
         if (source.IsCreateJnsGw != null) {
             this.IsCreateJnsGw = new Long(source.IsCreateJnsGw);
         }
+        if (source.ServiceVolumeMounts != null) {
+            this.ServiceVolumeMounts = new CloudBaseRunServiceVolumeMount[source.ServiceVolumeMounts.length];
+            for (int i = 0; i < source.ServiceVolumeMounts.length; i++) {
+                this.ServiceVolumeMounts[i] = new CloudBaseRunServiceVolumeMount(source.ServiceVolumeMounts[i]);
+            }
+        }
     }
 
 
@@ -1045,6 +1074,7 @@ public class CreateCloudBaseRunServerVersionRequest extends AbstractModel{
         this.setParamObj(map, prefix + "Security.", this.Security);
         this.setParamArrayObj(map, prefix + "ServiceVolumes.", this.ServiceVolumes);
         this.setParamSimple(map, prefix + "IsCreateJnsGw", this.IsCreateJnsGw);
+        this.setParamArrayObj(map, prefix + "ServiceVolumeMounts.", this.ServiceVolumeMounts);
 
     }
 }
