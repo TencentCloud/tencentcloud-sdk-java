@@ -60,8 +60,6 @@ public class DomainClient extends AbstractClient{
 
     /**
      *本接口 ( CheckBatchStatus ) 用于查询批量操作日志状态 。
-
-默认接口请求频率限制：20次/秒。
      * @param req CheckBatchStatusRequest
      * @return CheckBatchStatusResponse
      * @throws TencentCloudSDKException
@@ -101,9 +99,7 @@ public class DomainClient extends AbstractClient{
     }
 
     /**
-     *本接口 ( CreateDomainBatch ) 用于批量注册域名 。
-
-默认接口请求频率限制：20次/秒。
+     *本接口 ( CreateDomainBatch ) 用于批量域名注册 。
      * @param req CreateDomainBatchRequest
      * @return CreateDomainBatchResponse
      * @throws TencentCloudSDKException
@@ -143,7 +139,7 @@ public class DomainClient extends AbstractClient{
     }
 
     /**
-     *本接口 ( DeleteTemplate ) 用于删除域名信息模板。
+     *本接口 ( DeleteTemplate ) 用于删除信息模板。
      * @param req DeleteTemplateRequest
      * @return DeleteTemplateResponse
      * @throws TencentCloudSDKException
@@ -203,7 +199,7 @@ public class DomainClient extends AbstractClient{
     }
 
     /**
-     *本接口 (  DescribeDomainBaseInfo) 获取域名基础信息。
+     *本接口 (  DescribeDomainBaseInfo) 获取域名基本信息。
 
      * @param req DescribeDomainBaseInfoRequest
      * @return DescribeDomainBaseInfoResponse
@@ -224,7 +220,7 @@ public class DomainClient extends AbstractClient{
     }
 
     /**
-     *本接口 (  DescribeDomainNameList ) 获取域名列表。
+     *本接口 (  DescribeDomainNameList ) 我的域名列表。
 
      * @param req DescribeDomainNameListRequest
      * @return DescribeDomainNameListResponse
@@ -285,7 +281,7 @@ public class DomainClient extends AbstractClient{
     }
 
     /**
-     *本接口 (DescribeTemplateList) 用于获取模板列表。
+     *本接口 (DescribeTemplateList) 用于获取信息模板列表。
 
      * @param req DescribeTemplateListRequest
      * @return DescribeTemplateListResponse
@@ -306,9 +302,7 @@ public class DomainClient extends AbstractClient{
     }
 
     /**
-     *本接口 ( ModifyDomainDNSBatch) 用于批量修改域名DNS信息 。
-
-默认接口请求频率限制：20次/秒。
+     *本接口 ( ModifyDomainDNSBatch) 用于批量域名 DNS 修改 。
      * @param req ModifyDomainDNSBatchRequest
      * @return ModifyDomainDNSBatchResponse
      * @throws TencentCloudSDKException
@@ -350,8 +344,6 @@ public class DomainClient extends AbstractClient{
     /**
      *本接口 ( RenewDomainBatch ) 用于批量续费域名 。
 
-默认接口请求频率限制：20次/秒。
-
      * @param req RenewDomainBatchRequest
      * @return RenewDomainBatchResponse
      * @throws TencentCloudSDKException
@@ -372,8 +364,6 @@ public class DomainClient extends AbstractClient{
 
     /**
      *本接口 ( SetDomainAutoRenew ) 用于设置域名自动续费。
-
-默认接口请求频率限制：20次/秒。
      * @param req SetDomainAutoRenewRequest
      * @return SetDomainAutoRenewResponse
      * @throws TencentCloudSDKException
@@ -394,8 +384,6 @@ public class DomainClient extends AbstractClient{
 
     /**
      *本接口 ( TransferInDomainBatch ) 用于批量转入域名 。
-
-默认接口请求频率限制：20次/秒。
      * @param req TransferInDomainBatchRequest
      * @return TransferInDomainBatchResponse
      * @throws TencentCloudSDKException
@@ -415,9 +403,7 @@ public class DomainClient extends AbstractClient{
     }
 
     /**
-     *本接口 ( TransferInDomainBatch ) 用于批量禁止域名转移 。
-
-默认接口请求频率限制：20次/秒。
+     *本接口 ( TransferProhibitionBatch ) 用于批量禁止域名转移 。
      * @param req TransferProhibitionBatchRequest
      * @return TransferProhibitionBatchResponse
      * @throws TencentCloudSDKException
@@ -437,7 +423,7 @@ public class DomainClient extends AbstractClient{
     }
 
     /**
-     *本接口 ( UpdateProhibitionBatch ) 用于批量设置禁止域名更新 。
+     *本接口 ( UpdateProhibitionBatch ) 用于批量禁止更新锁。
      * @param req UpdateProhibitionBatchRequest
      * @return UpdateProhibitionBatchResponse
      * @throws TencentCloudSDKException
@@ -457,7 +443,7 @@ public class DomainClient extends AbstractClient{
     }
 
     /**
-     *本接口 ( UploadImage ) 用于上传资质照片 。
+     *本接口 ( UploadImage ) 用于证件图片上传 。
      * @param req UploadImageRequest
      * @return UploadImageResponse
      * @throws TencentCloudSDKException

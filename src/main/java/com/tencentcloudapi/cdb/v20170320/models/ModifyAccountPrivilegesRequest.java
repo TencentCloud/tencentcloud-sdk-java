@@ -69,6 +69,13 @@ public class ModifyAccountPrivilegesRequest extends AbstractModel{
     private ColumnPrivilege [] ColumnPrivileges;
 
     /**
+    * 该参数不为空时，为批量修改权限。可选值为：grant，revoke。
+    */
+    @SerializedName("ModifyAction")
+    @Expose
+    private String ModifyAction;
+
+    /**
      * Get 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。 
      * @return InstanceId 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
      */
@@ -180,6 +187,22 @@ public class ModifyAccountPrivilegesRequest extends AbstractModel{
         this.ColumnPrivileges = ColumnPrivileges;
     }
 
+    /**
+     * Get 该参数不为空时，为批量修改权限。可选值为：grant，revoke。 
+     * @return ModifyAction 该参数不为空时，为批量修改权限。可选值为：grant，revoke。
+     */
+    public String getModifyAction() {
+        return this.ModifyAction;
+    }
+
+    /**
+     * Set 该参数不为空时，为批量修改权限。可选值为：grant，revoke。
+     * @param ModifyAction 该参数不为空时，为批量修改权限。可选值为：grant，revoke。
+     */
+    public void setModifyAction(String ModifyAction) {
+        this.ModifyAction = ModifyAction;
+    }
+
     public ModifyAccountPrivilegesRequest() {
     }
 
@@ -221,6 +244,9 @@ public class ModifyAccountPrivilegesRequest extends AbstractModel{
                 this.ColumnPrivileges[i] = new ColumnPrivilege(source.ColumnPrivileges[i]);
             }
         }
+        if (source.ModifyAction != null) {
+            this.ModifyAction = new String(source.ModifyAction);
+        }
     }
 
 
@@ -234,6 +260,7 @@ public class ModifyAccountPrivilegesRequest extends AbstractModel{
         this.setParamArrayObj(map, prefix + "DatabasePrivileges.", this.DatabasePrivileges);
         this.setParamArrayObj(map, prefix + "TablePrivileges.", this.TablePrivileges);
         this.setParamArrayObj(map, prefix + "ColumnPrivileges.", this.ColumnPrivileges);
+        this.setParamSimple(map, prefix + "ModifyAction", this.ModifyAction);
 
     }
 }

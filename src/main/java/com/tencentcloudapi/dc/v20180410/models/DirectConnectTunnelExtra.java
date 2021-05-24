@@ -304,6 +304,14 @@ REJECTED:拒绝
     private String CustomerIPv6Address;
 
     /**
+    * 专线通道是否支持巨帧。1 支持，0 不支持
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("JumboEnable")
+    @Expose
+    private Long JumboEnable;
+
+    /**
      * Get 专用通道ID 
      * @return DirectConnectTunnelId 专用通道ID
      */
@@ -971,6 +979,26 @@ REJECTED:拒绝
         this.CustomerIPv6Address = CustomerIPv6Address;
     }
 
+    /**
+     * Get 专线通道是否支持巨帧。1 支持，0 不支持
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return JumboEnable 专线通道是否支持巨帧。1 支持，0 不支持
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getJumboEnable() {
+        return this.JumboEnable;
+    }
+
+    /**
+     * Set 专线通道是否支持巨帧。1 支持，0 不支持
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param JumboEnable 专线通道是否支持巨帧。1 支持，0 不支持
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setJumboEnable(Long JumboEnable) {
+        this.JumboEnable = JumboEnable;
+    }
+
     public DirectConnectTunnelExtra() {
     }
 
@@ -1099,6 +1127,9 @@ REJECTED:拒绝
         if (source.CustomerIPv6Address != null) {
             this.CustomerIPv6Address = new String(source.CustomerIPv6Address);
         }
+        if (source.JumboEnable != null) {
+            this.JumboEnable = new Long(source.JumboEnable);
+        }
     }
 
 
@@ -1144,6 +1175,7 @@ REJECTED:拒绝
         this.setParamSimple(map, prefix + "TencentBackupIPv6Address", this.TencentBackupIPv6Address);
         this.setParamObj(map, prefix + "BgpIPv6Status.", this.BgpIPv6Status);
         this.setParamSimple(map, prefix + "CustomerIPv6Address", this.CustomerIPv6Address);
+        this.setParamSimple(map, prefix + "JumboEnable", this.JumboEnable);
 
     }
 }

@@ -119,7 +119,7 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
-     *本接口(CreateAccounts)用于创建云数据库的账户，需要指定新的账户名和域名，以及所对应的密码，同时可以设置账号的备注信息。
+     *本接口(CreateAccounts)用于创建云数据库的账户，需要指定新的账户名和域名，以及所对应的密码，同时可以设置账号的备注信息以及最大可用连接数。
      * @param req CreateAccountsRequest
      * @return CreateAccountsResponse
      * @throws TencentCloudSDKException
@@ -1635,6 +1635,26 @@ public class CdbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyAccountDescriptionResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyAccountDescription");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口(ModifyAccountMaxUserConnections)用于修改云数据库账户最大可用连接数。
+     * @param req ModifyAccountMaxUserConnectionsRequest
+     * @return ModifyAccountMaxUserConnectionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAccountMaxUserConnectionsResponse ModifyAccountMaxUserConnections(ModifyAccountMaxUserConnectionsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyAccountMaxUserConnectionsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyAccountMaxUserConnectionsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyAccountMaxUserConnections");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

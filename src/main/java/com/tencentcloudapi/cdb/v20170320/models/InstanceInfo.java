@@ -325,6 +325,14 @@ public class InstanceInfo extends AbstractModel{
     private Long InstanceNodes;
 
     /**
+    * 标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TagList")
+    @Expose
+    private TagInfoItem [] TagList;
+
+    /**
      * Get 外网状态，可能的返回值为：0-未开通外网；1-已开通外网；2-已关闭外网 
      * @return WanStatus 外网状态，可能的返回值为：0-未开通外网；1-已开通外网；2-已关闭外网
      */
@@ -1028,6 +1036,26 @@ public class InstanceInfo extends AbstractModel{
         this.InstanceNodes = InstanceNodes;
     }
 
+    /**
+     * Get 标签列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TagList 标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public TagInfoItem [] getTagList() {
+        return this.TagList;
+    }
+
+    /**
+     * Set 标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TagList 标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTagList(TagInfoItem [] TagList) {
+        this.TagList = TagList;
+    }
+
     public InstanceInfo() {
     }
 
@@ -1168,6 +1196,12 @@ public class InstanceInfo extends AbstractModel{
         if (source.InstanceNodes != null) {
             this.InstanceNodes = new Long(source.InstanceNodes);
         }
+        if (source.TagList != null) {
+            this.TagList = new TagInfoItem[source.TagList.length];
+            for (int i = 0; i < source.TagList.length; i++) {
+                this.TagList[i] = new TagInfoItem(source.TagList[i]);
+            }
+        }
     }
 
 
@@ -1217,6 +1251,7 @@ public class InstanceInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "DeployGroupId", this.DeployGroupId);
         this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
         this.setParamSimple(map, prefix + "InstanceNodes", this.InstanceNodes);
+        this.setParamArrayObj(map, prefix + "TagList.", this.TagList);
 
     }
 }

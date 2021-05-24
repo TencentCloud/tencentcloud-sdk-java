@@ -20,14 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateAccountsRequest extends AbstractModel{
-
-    /**
-    * 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
-    */
-    @SerializedName("InstanceId")
-    @Expose
-    private String InstanceId;
+public class ModifyAccountMaxUserConnectionsRequest extends AbstractModel{
 
     /**
     * 云数据库账号。
@@ -37,41 +30,18 @@ public class CreateAccountsRequest extends AbstractModel{
     private Account [] Accounts;
 
     /**
-    * 新账户的密码。
+    * 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
     */
-    @SerializedName("Password")
+    @SerializedName("InstanceId")
     @Expose
-    private String Password;
+    private String InstanceId;
 
     /**
-    * 备注信息。
-    */
-    @SerializedName("Description")
-    @Expose
-    private String Description;
-
-    /**
-    * 新账户最大可用连接数。
+    * 设置账户最大可用连接数。
     */
     @SerializedName("MaxUserConnections")
     @Expose
     private Long MaxUserConnections;
-
-    /**
-     * Get 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。 
-     * @return InstanceId 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
-     */
-    public String getInstanceId() {
-        return this.InstanceId;
-    }
-
-    /**
-     * Set 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
-     * @param InstanceId 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
-     */
-    public void setInstanceId(String InstanceId) {
-        this.InstanceId = InstanceId;
-    }
 
     /**
      * Get 云数据库账号。 
@@ -90,75 +60,53 @@ public class CreateAccountsRequest extends AbstractModel{
     }
 
     /**
-     * Get 新账户的密码。 
-     * @return Password 新账户的密码。
+     * Get 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。 
+     * @return InstanceId 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
      */
-    public String getPassword() {
-        return this.Password;
+    public String getInstanceId() {
+        return this.InstanceId;
     }
 
     /**
-     * Set 新账户的密码。
-     * @param Password 新账户的密码。
+     * Set 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
+     * @param InstanceId 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
      */
-    public void setPassword(String Password) {
-        this.Password = Password;
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 备注信息。 
-     * @return Description 备注信息。
-     */
-    public String getDescription() {
-        return this.Description;
-    }
-
-    /**
-     * Set 备注信息。
-     * @param Description 备注信息。
-     */
-    public void setDescription(String Description) {
-        this.Description = Description;
-    }
-
-    /**
-     * Get 新账户最大可用连接数。 
-     * @return MaxUserConnections 新账户最大可用连接数。
+     * Get 设置账户最大可用连接数。 
+     * @return MaxUserConnections 设置账户最大可用连接数。
      */
     public Long getMaxUserConnections() {
         return this.MaxUserConnections;
     }
 
     /**
-     * Set 新账户最大可用连接数。
-     * @param MaxUserConnections 新账户最大可用连接数。
+     * Set 设置账户最大可用连接数。
+     * @param MaxUserConnections 设置账户最大可用连接数。
      */
     public void setMaxUserConnections(Long MaxUserConnections) {
         this.MaxUserConnections = MaxUserConnections;
     }
 
-    public CreateAccountsRequest() {
+    public ModifyAccountMaxUserConnectionsRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateAccountsRequest(CreateAccountsRequest source) {
-        if (source.InstanceId != null) {
-            this.InstanceId = new String(source.InstanceId);
-        }
+    public ModifyAccountMaxUserConnectionsRequest(ModifyAccountMaxUserConnectionsRequest source) {
         if (source.Accounts != null) {
             this.Accounts = new Account[source.Accounts.length];
             for (int i = 0; i < source.Accounts.length; i++) {
                 this.Accounts[i] = new Account(source.Accounts[i]);
             }
         }
-        if (source.Password != null) {
-            this.Password = new String(source.Password);
-        }
-        if (source.Description != null) {
-            this.Description = new String(source.Description);
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
         }
         if (source.MaxUserConnections != null) {
             this.MaxUserConnections = new Long(source.MaxUserConnections);
@@ -170,10 +118,8 @@ public class CreateAccountsRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamArrayObj(map, prefix + "Accounts.", this.Accounts);
-        this.setParamSimple(map, prefix + "Password", this.Password);
-        this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "MaxUserConnections", this.MaxUserConnections);
 
     }

@@ -899,6 +899,26 @@ public class CmeClient extends AbstractClient{
     }
 
     /**
+     *该接口接受制作云回调给客户的事件内容，将其转化为对应的 EventContent 结构，请不要实际调用该接口，只需要将接收到的事件内容直接使用 JSON 解析到 EventContent  即可使用。
+     * @param req ParseEventRequest
+     * @return ParseEventResponse
+     * @throws TencentCloudSDKException
+     */
+    public ParseEventResponse ParseEvent(ParseEventRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ParseEventResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ParseEventResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ParseEvent");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      * 资源所属实体对目标实体回收目标资源的相应权限，若原本没有相应权限则不产生变更。
      * @param req RevokeResourceAuthorizationRequest
      * @return RevokeResourceAuthorizationResponse

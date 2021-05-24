@@ -37,6 +37,13 @@ public class DescribeAccountsResponse extends AbstractModel{
     private AccountInfo [] Items;
 
     /**
+    * 用户可设置实例最大连接数。
+    */
+    @SerializedName("MaxUserConnections")
+    @Expose
+    private Long MaxUserConnections;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -76,6 +83,22 @@ public class DescribeAccountsResponse extends AbstractModel{
     }
 
     /**
+     * Get 用户可设置实例最大连接数。 
+     * @return MaxUserConnections 用户可设置实例最大连接数。
+     */
+    public Long getMaxUserConnections() {
+        return this.MaxUserConnections;
+    }
+
+    /**
+     * Set 用户可设置实例最大连接数。
+     * @param MaxUserConnections 用户可设置实例最大连接数。
+     */
+    public void setMaxUserConnections(Long MaxUserConnections) {
+        this.MaxUserConnections = MaxUserConnections;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -108,6 +131,9 @@ public class DescribeAccountsResponse extends AbstractModel{
                 this.Items[i] = new AccountInfo(source.Items[i]);
             }
         }
+        if (source.MaxUserConnections != null) {
+            this.MaxUserConnections = new Long(source.MaxUserConnections);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -120,6 +146,7 @@ public class DescribeAccountsResponse extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamArrayObj(map, prefix + "Items.", this.Items);
+        this.setParamSimple(map, prefix + "MaxUserConnections", this.MaxUserConnections);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

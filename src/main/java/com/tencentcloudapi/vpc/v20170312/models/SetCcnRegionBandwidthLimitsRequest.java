@@ -37,6 +37,13 @@ public class SetCcnRegionBandwidthLimitsRequest extends AbstractModel{
     private CcnRegionBandwidthLimit [] CcnRegionBandwidthLimits;
 
     /**
+    * 是否设置带宽为默认值。
+    */
+    @SerializedName("SetDefaultLimitFlag")
+    @Expose
+    private Boolean SetDefaultLimitFlag;
+
+    /**
      * Get CCN实例ID。形如：ccn-f49l6u0z。 
      * @return CcnId CCN实例ID。形如：ccn-f49l6u0z。
      */
@@ -68,6 +75,22 @@ public class SetCcnRegionBandwidthLimitsRequest extends AbstractModel{
         this.CcnRegionBandwidthLimits = CcnRegionBandwidthLimits;
     }
 
+    /**
+     * Get 是否设置带宽为默认值。 
+     * @return SetDefaultLimitFlag 是否设置带宽为默认值。
+     */
+    public Boolean getSetDefaultLimitFlag() {
+        return this.SetDefaultLimitFlag;
+    }
+
+    /**
+     * Set 是否设置带宽为默认值。
+     * @param SetDefaultLimitFlag 是否设置带宽为默认值。
+     */
+    public void setSetDefaultLimitFlag(Boolean SetDefaultLimitFlag) {
+        this.SetDefaultLimitFlag = SetDefaultLimitFlag;
+    }
+
     public SetCcnRegionBandwidthLimitsRequest() {
     }
 
@@ -85,6 +108,9 @@ public class SetCcnRegionBandwidthLimitsRequest extends AbstractModel{
                 this.CcnRegionBandwidthLimits[i] = new CcnRegionBandwidthLimit(source.CcnRegionBandwidthLimits[i]);
             }
         }
+        if (source.SetDefaultLimitFlag != null) {
+            this.SetDefaultLimitFlag = new Boolean(source.SetDefaultLimitFlag);
+        }
     }
 
 
@@ -94,6 +120,7 @@ public class SetCcnRegionBandwidthLimitsRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CcnId", this.CcnId);
         this.setParamArrayObj(map, prefix + "CcnRegionBandwidthLimits.", this.CcnRegionBandwidthLimits);
+        this.setParamSimple(map, prefix + "SetDefaultLimitFlag", this.SetDefaultLimitFlag);
 
     }
 }
