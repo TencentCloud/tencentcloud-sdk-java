@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tse.v20201207;
+package com.tencentcloudapi.mrs.v20200910;
 
 import java.lang.reflect.Type;
 import com.google.gson.JsonSyntaxException;
@@ -23,34 +23,34 @@ import com.tencentcloudapi.common.AbstractClient;
 import com.tencentcloudapi.common.profile.ClientProfile;
 import com.tencentcloudapi.common.JsonResponseModel;
 import com.tencentcloudapi.common.Credential;
-import com.tencentcloudapi.tse.v20201207.models.*;
+import com.tencentcloudapi.mrs.v20200910.models.*;
 
-public class TseClient extends AbstractClient{
-    private static String endpoint = "tse.tencentcloudapi.com";
-    private static String service = "tse";
-    private static String version = "2020-12-07";
+public class MrsClient extends AbstractClient{
+    private static String endpoint = "mrs.tencentcloudapi.com";
+    private static String service = "mrs";
+    private static String version = "2020-09-10";
 
-    public TseClient(Credential credential, String region) {
+    public MrsClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
 
-    public TseClient(Credential credential, String region, ClientProfile profile) {
-        super(TseClient.endpoint, TseClient.version, credential, region, profile);
+    public MrsClient(Credential credential, String region, ClientProfile profile) {
+        super(MrsClient.endpoint, MrsClient.version, credential, region, profile);
     }
 
     /**
-     *查看配置项
-     * @param req DescribeConfigRequest
-     * @return DescribeConfigResponse
+     *图片分类
+     * @param req ImageToClassRequest
+     * @return ImageToClassResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeConfigResponse DescribeConfig(DescribeConfigRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeConfigResponse> rsp = null;
+    public ImageToClassResponse ImageToClass(ImageToClassRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ImageToClassResponse> rsp = null;
         String rspStr = "";
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeConfigResponse>>() {
+                Type type = new TypeToken<JsonResponseModel<ImageToClassResponse>>() {
                 }.getType();
-                rspStr = this.internalRequest(req, "DescribeConfig");
+                rspStr = this.internalRequest(req, "ImageToClass");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -59,18 +59,18 @@ public class TseClient extends AbstractClient{
     }
 
     /**
-     *查询微服务注册引擎实例访问地址
-     * @param req DescribeSREInstanceAccessAddressRequest
-     * @return DescribeSREInstanceAccessAddressResponse
+     *图片转结构化对象
+     * @param req ImageToObjectRequest
+     * @return ImageToObjectResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeSREInstanceAccessAddressResponse DescribeSREInstanceAccessAddress(DescribeSREInstanceAccessAddressRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeSREInstanceAccessAddressResponse> rsp = null;
+    public ImageToObjectResponse ImageToObject(ImageToObjectRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ImageToObjectResponse> rsp = null;
         String rspStr = "";
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeSREInstanceAccessAddressResponse>>() {
+                Type type = new TypeToken<JsonResponseModel<ImageToObjectResponse>>() {
                 }.getType();
-                rspStr = this.internalRequest(req, "DescribeSREInstanceAccessAddress");
+                rspStr = this.internalRequest(req, "ImageToObject");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -79,18 +79,18 @@ public class TseClient extends AbstractClient{
     }
 
     /**
-     *用于查询微服务注册中心实例列表
-     * @param req DescribeSREInstancesRequest
-     * @return DescribeSREInstancesResponse
+     *文本分类
+     * @param req TextToClassRequest
+     * @return TextToClassResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeSREInstancesResponse DescribeSREInstances(DescribeSREInstancesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeSREInstancesResponse> rsp = null;
+    public TextToClassResponse TextToClass(TextToClassRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<TextToClassResponse> rsp = null;
         String rspStr = "";
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeSREInstancesResponse>>() {
+                Type type = new TypeToken<JsonResponseModel<TextToClassResponse>>() {
                 }.getType();
-                rspStr = this.internalRequest(req, "DescribeSREInstances");
+                rspStr = this.internalRequest(req, "TextToClass");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -99,18 +99,18 @@ public class TseClient extends AbstractClient{
     }
 
     /**
-     *管理配置
-     * @param req ManageConfigRequest
-     * @return ManageConfigResponse
+     *文本转结构化对象
+     * @param req TextToObjectRequest
+     * @return TextToObjectResponse
      * @throws TencentCloudSDKException
      */
-    public ManageConfigResponse ManageConfig(ManageConfigRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ManageConfigResponse> rsp = null;
+    public TextToObjectResponse TextToObject(TextToObjectRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<TextToObjectResponse> rsp = null;
         String rspStr = "";
         try {
-                Type type = new TypeToken<JsonResponseModel<ManageConfigResponse>>() {
+                Type type = new TypeToken<JsonResponseModel<TextToObjectResponse>>() {
                 }.getType();
-                rspStr = this.internalRequest(req, "ManageConfig");
+                rspStr = this.internalRequest(req, "TextToObject");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

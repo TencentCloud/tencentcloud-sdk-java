@@ -1,0 +1,331 @@
+/*
+ * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+package com.tencentcloudapi.mrs.v20200910.models;
+
+import com.tencentcloudapi.common.AbstractModel;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
+import java.util.HashMap;
+
+public class Template extends AbstractModel{
+
+    /**
+    * 患者信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PatientInfo")
+    @Expose
+    private PatientInfo PatientInfo;
+
+    /**
+    * 报告信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ReportInfo")
+    @Expose
+    private ReportInfo ReportInfo;
+
+    /**
+    * 检查报告
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Check")
+    @Expose
+    private Check Check;
+
+    /**
+    * 病理报告
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Pathology")
+    @Expose
+    private PathologyReport Pathology;
+
+    /**
+    * 出院报告，入院报告，门诊病历
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MedDoc")
+    @Expose
+    private MedDoc MedDoc;
+
+    /**
+    * 诊断证明
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DiagCert")
+    @Expose
+    private DiagCert DiagCert;
+
+    /**
+    * 病案首页
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FirstPage")
+    @Expose
+    private FirstPage FirstPage;
+
+    /**
+    * 检验报告
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Indicator")
+    @Expose
+    private Indicator Indicator;
+
+    /**
+    * 报告类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ReportType")
+    @Expose
+    private String ReportType;
+
+    /**
+     * Get 患者信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PatientInfo 患者信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public PatientInfo getPatientInfo() {
+        return this.PatientInfo;
+    }
+
+    /**
+     * Set 患者信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PatientInfo 患者信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPatientInfo(PatientInfo PatientInfo) {
+        this.PatientInfo = PatientInfo;
+    }
+
+    /**
+     * Get 报告信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ReportInfo 报告信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ReportInfo getReportInfo() {
+        return this.ReportInfo;
+    }
+
+    /**
+     * Set 报告信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ReportInfo 报告信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setReportInfo(ReportInfo ReportInfo) {
+        this.ReportInfo = ReportInfo;
+    }
+
+    /**
+     * Get 检查报告
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Check 检查报告
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Check getCheck() {
+        return this.Check;
+    }
+
+    /**
+     * Set 检查报告
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Check 检查报告
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCheck(Check Check) {
+        this.Check = Check;
+    }
+
+    /**
+     * Get 病理报告
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Pathology 病理报告
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public PathologyReport getPathology() {
+        return this.Pathology;
+    }
+
+    /**
+     * Set 病理报告
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Pathology 病理报告
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPathology(PathologyReport Pathology) {
+        this.Pathology = Pathology;
+    }
+
+    /**
+     * Get 出院报告，入院报告，门诊病历
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MedDoc 出院报告，入院报告，门诊病历
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public MedDoc getMedDoc() {
+        return this.MedDoc;
+    }
+
+    /**
+     * Set 出院报告，入院报告，门诊病历
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MedDoc 出院报告，入院报告，门诊病历
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMedDoc(MedDoc MedDoc) {
+        this.MedDoc = MedDoc;
+    }
+
+    /**
+     * Get 诊断证明
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DiagCert 诊断证明
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public DiagCert getDiagCert() {
+        return this.DiagCert;
+    }
+
+    /**
+     * Set 诊断证明
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DiagCert 诊断证明
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDiagCert(DiagCert DiagCert) {
+        this.DiagCert = DiagCert;
+    }
+
+    /**
+     * Get 病案首页
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FirstPage 病案首页
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public FirstPage getFirstPage() {
+        return this.FirstPage;
+    }
+
+    /**
+     * Set 病案首页
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FirstPage 病案首页
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFirstPage(FirstPage FirstPage) {
+        this.FirstPage = FirstPage;
+    }
+
+    /**
+     * Get 检验报告
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Indicator 检验报告
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Indicator getIndicator() {
+        return this.Indicator;
+    }
+
+    /**
+     * Set 检验报告
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Indicator 检验报告
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIndicator(Indicator Indicator) {
+        this.Indicator = Indicator;
+    }
+
+    /**
+     * Get 报告类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ReportType 报告类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getReportType() {
+        return this.ReportType;
+    }
+
+    /**
+     * Set 报告类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ReportType 报告类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setReportType(String ReportType) {
+        this.ReportType = ReportType;
+    }
+
+    public Template() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Template(Template source) {
+        if (source.PatientInfo != null) {
+            this.PatientInfo = new PatientInfo(source.PatientInfo);
+        }
+        if (source.ReportInfo != null) {
+            this.ReportInfo = new ReportInfo(source.ReportInfo);
+        }
+        if (source.Check != null) {
+            this.Check = new Check(source.Check);
+        }
+        if (source.Pathology != null) {
+            this.Pathology = new PathologyReport(source.Pathology);
+        }
+        if (source.MedDoc != null) {
+            this.MedDoc = new MedDoc(source.MedDoc);
+        }
+        if (source.DiagCert != null) {
+            this.DiagCert = new DiagCert(source.DiagCert);
+        }
+        if (source.FirstPage != null) {
+            this.FirstPage = new FirstPage(source.FirstPage);
+        }
+        if (source.Indicator != null) {
+            this.Indicator = new Indicator(source.Indicator);
+        }
+        if (source.ReportType != null) {
+            this.ReportType = new String(source.ReportType);
+        }
+    }
+
+
+    /**
+     * Internal implementation, normal users should not use it.
+     */
+    public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamObj(map, prefix + "PatientInfo.", this.PatientInfo);
+        this.setParamObj(map, prefix + "ReportInfo.", this.ReportInfo);
+        this.setParamObj(map, prefix + "Check.", this.Check);
+        this.setParamObj(map, prefix + "Pathology.", this.Pathology);
+        this.setParamObj(map, prefix + "MedDoc.", this.MedDoc);
+        this.setParamObj(map, prefix + "DiagCert.", this.DiagCert);
+        this.setParamObj(map, prefix + "FirstPage.", this.FirstPage);
+        this.setParamObj(map, prefix + "Indicator.", this.Indicator);
+        this.setParamSimple(map, prefix + "ReportType", this.ReportType);
+
+    }
+}
+

@@ -13,30 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tse.v20201207.models;
+package com.tencentcloudapi.mrs.v20200910.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ManageConfigResponse extends AbstractModel{
+public class TextToObjectResponse extends AbstractModel{
 
     /**
-    * 对配置中心操作配置之后的返回值
-注意：此字段可能返回 null，表示取不到有效值。
+    * 报告结构化结果
     */
-    @SerializedName("Result")
+    @SerializedName("Template")
     @Expose
-    private String Result;
-
-    /**
-    * 操作是否成功
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("OpResult")
-    @Expose
-    private Boolean OpResult;
+    private Template Template;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,43 +37,19 @@ public class ManageConfigResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 对配置中心操作配置之后的返回值
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Result 对配置中心操作配置之后的返回值
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 报告结构化结果 
+     * @return Template 报告结构化结果
      */
-    public String getResult() {
-        return this.Result;
+    public Template getTemplate() {
+        return this.Template;
     }
 
     /**
-     * Set 对配置中心操作配置之后的返回值
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Result 对配置中心操作配置之后的返回值
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 报告结构化结果
+     * @param Template 报告结构化结果
      */
-    public void setResult(String Result) {
-        this.Result = Result;
-    }
-
-    /**
-     * Get 操作是否成功
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OpResult 操作是否成功
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public Boolean getOpResult() {
-        return this.OpResult;
-    }
-
-    /**
-     * Set 操作是否成功
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param OpResult 操作是否成功
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setOpResult(Boolean OpResult) {
-        this.OpResult = OpResult;
+    public void setTemplate(Template Template) {
+        this.Template = Template;
     }
 
     /**
@@ -101,19 +68,16 @@ public class ManageConfigResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public ManageConfigResponse() {
+    public TextToObjectResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ManageConfigResponse(ManageConfigResponse source) {
-        if (source.Result != null) {
-            this.Result = new String(source.Result);
-        }
-        if (source.OpResult != null) {
-            this.OpResult = new Boolean(source.OpResult);
+    public TextToObjectResponse(TextToObjectResponse source) {
+        if (source.Template != null) {
+            this.Template = new Template(source.Template);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -125,8 +89,7 @@ public class ManageConfigResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Result", this.Result);
-        this.setParamSimple(map, prefix + "OpResult", this.OpResult);
+        this.setParamObj(map, prefix + "Template.", this.Template);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

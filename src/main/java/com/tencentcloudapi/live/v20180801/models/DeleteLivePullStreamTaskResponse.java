@@ -13,30 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tse.v20201207.models;
+package com.tencentcloudapi.live.v20180801.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ManageConfigResponse extends AbstractModel{
-
-    /**
-    * 对配置中心操作配置之后的返回值
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("Result")
-    @Expose
-    private String Result;
-
-    /**
-    * 操作是否成功
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("OpResult")
-    @Expose
-    private Boolean OpResult;
+public class DeleteLivePullStreamTaskResponse extends AbstractModel{
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -44,46 +28,6 @@ public class ManageConfigResponse extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get 对配置中心操作配置之后的返回值
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Result 对配置中心操作配置之后的返回值
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public String getResult() {
-        return this.Result;
-    }
-
-    /**
-     * Set 对配置中心操作配置之后的返回值
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Result 对配置中心操作配置之后的返回值
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setResult(String Result) {
-        this.Result = Result;
-    }
-
-    /**
-     * Get 操作是否成功
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OpResult 操作是否成功
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public Boolean getOpResult() {
-        return this.OpResult;
-    }
-
-    /**
-     * Set 操作是否成功
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param OpResult 操作是否成功
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setOpResult(Boolean OpResult) {
-        this.OpResult = OpResult;
-    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -101,20 +45,14 @@ public class ManageConfigResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public ManageConfigResponse() {
+    public DeleteLivePullStreamTaskResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ManageConfigResponse(ManageConfigResponse source) {
-        if (source.Result != null) {
-            this.Result = new String(source.Result);
-        }
-        if (source.OpResult != null) {
-            this.OpResult = new Boolean(source.OpResult);
-        }
+    public DeleteLivePullStreamTaskResponse(DeleteLivePullStreamTaskResponse source) {
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -125,8 +63,6 @@ public class ManageConfigResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Result", this.Result);
-        this.setParamSimple(map, prefix + "OpResult", this.OpResult);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

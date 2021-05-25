@@ -86,6 +86,13 @@ public class LayoutParams extends AbstractModel{
     private Long PureAudioHoldPlaceMode;
 
     /**
+    * 水印参数。
+    */
+    @SerializedName("WaterMarkParams")
+    @Expose
+    private WaterMarkParams WaterMarkParams;
+
+    /**
      * Get 混流布局模板ID，0为悬浮模板(默认);1为九宫格模板;2为屏幕分享模板;3为画中画模板;4为自定义模板。 
      * @return Template 混流布局模板ID，0为悬浮模板(默认);1为九宫格模板;2为屏幕分享模板;3为画中画模板;4为自定义模板。
      */
@@ -229,6 +236,22 @@ public class LayoutParams extends AbstractModel{
         this.PureAudioHoldPlaceMode = PureAudioHoldPlaceMode;
     }
 
+    /**
+     * Get 水印参数。 
+     * @return WaterMarkParams 水印参数。
+     */
+    public WaterMarkParams getWaterMarkParams() {
+        return this.WaterMarkParams;
+    }
+
+    /**
+     * Set 水印参数。
+     * @param WaterMarkParams 水印参数。
+     */
+    public void setWaterMarkParams(WaterMarkParams WaterMarkParams) {
+        this.WaterMarkParams = WaterMarkParams;
+    }
+
     public LayoutParams() {
     }
 
@@ -270,6 +293,9 @@ public class LayoutParams extends AbstractModel{
         if (source.PureAudioHoldPlaceMode != null) {
             this.PureAudioHoldPlaceMode = new Long(source.PureAudioHoldPlaceMode);
         }
+        if (source.WaterMarkParams != null) {
+            this.WaterMarkParams = new WaterMarkParams(source.WaterMarkParams);
+        }
     }
 
 
@@ -286,6 +312,7 @@ public class LayoutParams extends AbstractModel{
         this.setParamArrayObj(map, prefix + "PresetLayoutConfig.", this.PresetLayoutConfig);
         this.setParamSimple(map, prefix + "PlaceHolderMode", this.PlaceHolderMode);
         this.setParamSimple(map, prefix + "PureAudioHoldPlaceMode", this.PureAudioHoldPlaceMode);
+        this.setParamObj(map, prefix + "WaterMarkParams.", this.WaterMarkParams);
 
     }
 }
