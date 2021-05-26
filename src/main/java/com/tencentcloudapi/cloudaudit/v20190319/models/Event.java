@@ -137,6 +137,13 @@ public class Event extends AbstractModel{
     private String EventRegion;
 
     /**
+    * IP 归属地
+    */
+    @SerializedName("Location")
+    @Expose
+    private String Location;
+
+    /**
      * Get 日志ID 
      * @return EventId 日志ID
      */
@@ -400,6 +407,22 @@ public class Event extends AbstractModel{
         this.EventRegion = EventRegion;
     }
 
+    /**
+     * Get IP 归属地 
+     * @return Location IP 归属地
+     */
+    public String getLocation() {
+        return this.Location;
+    }
+
+    /**
+     * Set IP 归属地
+     * @param Location IP 归属地
+     */
+    public void setLocation(String Location) {
+        this.Location = Location;
+    }
+
     public Event() {
     }
 
@@ -456,6 +479,9 @@ public class Event extends AbstractModel{
         if (source.EventRegion != null) {
             this.EventRegion = new String(source.EventRegion);
         }
+        if (source.Location != null) {
+            this.Location = new String(source.Location);
+        }
     }
 
 
@@ -479,6 +505,7 @@ public class Event extends AbstractModel{
         this.setParamSimple(map, prefix + "EventNameCn", this.EventNameCn);
         this.setParamObj(map, prefix + "Resources.", this.Resources);
         this.setParamSimple(map, prefix + "EventRegion", this.EventRegion);
+        this.setParamSimple(map, prefix + "Location", this.Location);
 
     }
 }

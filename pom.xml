@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.tencentcloudapi</groupId>
   <artifactId>tencentcloud-sdk-java</artifactId>
-  <version>3.1.273</version>
+  <version>3.1.274</version>
   <packaging>jar</packaging>
   <name>tencentcloud-sdk-java</name>
   <url>https://cloud.tencent.com/</url>
@@ -50,7 +50,7 @@
       <plugin>
         <groupId>org.sonatype.plugins</groupId>
         <artifactId>nexus-staging-maven-plugin</artifactId>
-        <version>1.6.7</version>
+        <version>1.6.8</version>
         <extensions>true</extensions>
         <configuration>
           <serverId>Releases</serverId>
@@ -62,6 +62,16 @@
             <groupId>com.thoughtworks.xstream</groupId>
             <artifactId>xstream</artifactId>
             <version>1.4.17</version>
+          </dependency>
+          <dependency>
+            <groupId>org.sonatype.nexus</groupId>
+            <artifactId>nexus-client-core</artifactId>
+            <version>2.14.20-02</version>
+          </dependency>
+          <dependency>
+            <groupId>xpp3</groupId>
+            <artifactId>xpp3_min</artifactId>
+            <version>1.1.4c</version>
           </dependency>
         </dependencies>
       </plugin>

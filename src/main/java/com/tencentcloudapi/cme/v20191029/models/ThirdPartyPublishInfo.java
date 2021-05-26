@@ -51,6 +51,13 @@ public class ThirdPartyPublishInfo extends AbstractModel{
     private KuaishouPublishInfo KuaishouPublishInfo;
 
     /**
+    * 腾讯云对象存储发布信息， 如果使用的发布通道为腾讯云对象存储时必填。
+    */
+    @SerializedName("CosPublishInfo")
+    @Expose
+    private CosPublishInputInfo CosPublishInfo;
+
+    /**
      * Get 发布通道  ID。 
      * @return ChannelMaterialId 发布通道  ID。
      */
@@ -114,6 +121,22 @@ public class ThirdPartyPublishInfo extends AbstractModel{
         this.KuaishouPublishInfo = KuaishouPublishInfo;
     }
 
+    /**
+     * Get 腾讯云对象存储发布信息， 如果使用的发布通道为腾讯云对象存储时必填。 
+     * @return CosPublishInfo 腾讯云对象存储发布信息， 如果使用的发布通道为腾讯云对象存储时必填。
+     */
+    public CosPublishInputInfo getCosPublishInfo() {
+        return this.CosPublishInfo;
+    }
+
+    /**
+     * Set 腾讯云对象存储发布信息， 如果使用的发布通道为腾讯云对象存储时必填。
+     * @param CosPublishInfo 腾讯云对象存储发布信息， 如果使用的发布通道为腾讯云对象存储时必填。
+     */
+    public void setCosPublishInfo(CosPublishInputInfo CosPublishInfo) {
+        this.CosPublishInfo = CosPublishInfo;
+    }
+
     public ThirdPartyPublishInfo() {
     }
 
@@ -134,6 +157,9 @@ public class ThirdPartyPublishInfo extends AbstractModel{
         if (source.KuaishouPublishInfo != null) {
             this.KuaishouPublishInfo = new KuaishouPublishInfo(source.KuaishouPublishInfo);
         }
+        if (source.CosPublishInfo != null) {
+            this.CosPublishInfo = new CosPublishInputInfo(source.CosPublishInfo);
+        }
     }
 
 
@@ -145,6 +171,7 @@ public class ThirdPartyPublishInfo extends AbstractModel{
         this.setParamObj(map, prefix + "PenguinMediaPlatformPublishInfo.", this.PenguinMediaPlatformPublishInfo);
         this.setParamObj(map, prefix + "WeiboPublishInfo.", this.WeiboPublishInfo);
         this.setParamObj(map, prefix + "KuaishouPublishInfo.", this.KuaishouPublishInfo);
+        this.setParamObj(map, prefix + "CosPublishInfo.", this.CosPublishInfo);
 
     }
 }

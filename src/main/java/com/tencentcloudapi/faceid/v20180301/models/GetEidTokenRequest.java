@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class GetEidTokenRequest extends AbstractModel{
 
     /**
-    * EID商户id
+    * EID商户id，字段长度最长50位。
     */
     @SerializedName("MerchantId")
     @Expose
@@ -45,7 +45,7 @@ public class GetEidTokenRequest extends AbstractModel{
     private String Name;
 
     /**
-    * 透传字段，在获取验证结果时返回。
+    * 透传字段，在获取验证结果时返回。最长长度1024位。
     */
     @SerializedName("Extra")
     @Expose
@@ -59,16 +59,16 @@ public class GetEidTokenRequest extends AbstractModel{
     private GetEidTokenConfig Config;
 
     /**
-     * Get EID商户id 
-     * @return MerchantId EID商户id
+     * Get EID商户id，字段长度最长50位。 
+     * @return MerchantId EID商户id，字段长度最长50位。
      */
     public String getMerchantId() {
         return this.MerchantId;
     }
 
     /**
-     * Set EID商户id
-     * @param MerchantId EID商户id
+     * Set EID商户id，字段长度最长50位。
+     * @param MerchantId EID商户id，字段长度最长50位。
      */
     public void setMerchantId(String MerchantId) {
         this.MerchantId = MerchantId;
@@ -111,16 +111,16 @@ public class GetEidTokenRequest extends AbstractModel{
     }
 
     /**
-     * Get 透传字段，在获取验证结果时返回。 
-     * @return Extra 透传字段，在获取验证结果时返回。
+     * Get 透传字段，在获取验证结果时返回。最长长度1024位。 
+     * @return Extra 透传字段，在获取验证结果时返回。最长长度1024位。
      */
     public String getExtra() {
         return this.Extra;
     }
 
     /**
-     * Set 透传字段，在获取验证结果时返回。
-     * @param Extra 透传字段，在获取验证结果时返回。
+     * Set 透传字段，在获取验证结果时返回。最长长度1024位。
+     * @param Extra 透传字段，在获取验证结果时返回。最长长度1024位。
      */
     public void setExtra(String Extra) {
         this.Extra = Extra;
