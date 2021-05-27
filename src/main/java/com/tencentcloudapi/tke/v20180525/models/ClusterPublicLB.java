@@ -44,6 +44,13 @@ public class ClusterPublicLB extends AbstractModel{
     private String [] SecurityPolicies;
 
     /**
+    * 外网访问相关的扩展参数，格式为json
+    */
+    @SerializedName("ExtraParam")
+    @Expose
+    private String ExtraParam;
+
+    /**
      * Get 是否开启公网访问LB 
      * @return Enabled 是否开启公网访问LB
      */
@@ -91,6 +98,22 @@ public class ClusterPublicLB extends AbstractModel{
         this.SecurityPolicies = SecurityPolicies;
     }
 
+    /**
+     * Get 外网访问相关的扩展参数，格式为json 
+     * @return ExtraParam 外网访问相关的扩展参数，格式为json
+     */
+    public String getExtraParam() {
+        return this.ExtraParam;
+    }
+
+    /**
+     * Set 外网访问相关的扩展参数，格式为json
+     * @param ExtraParam 外网访问相关的扩展参数，格式为json
+     */
+    public void setExtraParam(String ExtraParam) {
+        this.ExtraParam = ExtraParam;
+    }
+
     public ClusterPublicLB() {
     }
 
@@ -114,6 +137,9 @@ public class ClusterPublicLB extends AbstractModel{
                 this.SecurityPolicies[i] = new String(source.SecurityPolicies[i]);
             }
         }
+        if (source.ExtraParam != null) {
+            this.ExtraParam = new String(source.ExtraParam);
+        }
     }
 
 
@@ -124,6 +150,7 @@ public class ClusterPublicLB extends AbstractModel{
         this.setParamSimple(map, prefix + "Enabled", this.Enabled);
         this.setParamArraySimple(map, prefix + "AllowFromCidrs.", this.AllowFromCidrs);
         this.setParamArraySimple(map, prefix + "SecurityPolicies.", this.SecurityPolicies);
+        this.setParamSimple(map, prefix + "ExtraParam", this.ExtraParam);
 
     }
 }

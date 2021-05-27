@@ -39,7 +39,7 @@ public class TrtcClient extends AbstractClient{
     }
 
     /**
-     *上传图片
+     *此接口已废弃，调用将报错。如需使用相关功能请参见 [控制台指南 > 应用管理 > 素材管理](https://cloud.tencent.com/document/product/647/50769)  。
      * @param req CreatePictureRequest
      * @return CreatePictureResponse
      * @throws TencentCloudSDKException
@@ -79,7 +79,7 @@ public class TrtcClient extends AbstractClient{
     }
 
     /**
-     *删除图片
+     *此接口已废弃，调用将报错。如需使用相关功能请参见 [控制台指南 > 应用管理 > 素材管理](https://cloud.tencent.com/document/product/647/50769)  。
      * @param req DeletePictureRequest
      * @return DeletePictureResponse
      * @throws TencentCloudSDKException
@@ -180,7 +180,7 @@ public class TrtcClient extends AbstractClient{
     }
 
     /**
-     *查询某图片相关参数。
+     *此接口已废弃，调用将报错。如需使用相关功能请参见 [控制台指南 > 应用管理 > 素材管理](https://cloud.tencent.com/document/product/647/50769)  。
      * @param req DescribePictureRequest
      * @return DescribePictureResponse
      * @throws TencentCloudSDKException
@@ -415,7 +415,7 @@ public class TrtcClient extends AbstractClient{
     }
 
     /**
-     *修改图片相关参数。
+     *此接口已废弃，调用将报错。如需使用相关功能请参见 [控制台指南 > 应用管理 > 素材管理](https://cloud.tencent.com/document/product/647/50769)  。
      * @param req ModifyPictureRequest
      * @return ModifyPictureResponse
      * @throws TencentCloudSDKException

@@ -142,6 +142,13 @@ public class VerifyBasicBizLicenseResponse extends AbstractModel{
     private String RegCapital;
 
     /**
+    * 成立/注册日期，只有输入参数EstablishTime为true时展示，默认为空
+    */
+    @SerializedName("EstablishTime")
+    @Expose
+    private String EstablishTime;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -421,6 +428,22 @@ public class VerifyBasicBizLicenseResponse extends AbstractModel{
     }
 
     /**
+     * Get 成立/注册日期，只有输入参数EstablishTime为true时展示，默认为空 
+     * @return EstablishTime 成立/注册日期，只有输入参数EstablishTime为true时展示，默认为空
+     */
+    public String getEstablishTime() {
+        return this.EstablishTime;
+    }
+
+    /**
+     * Set 成立/注册日期，只有输入参数EstablishTime为true时展示，默认为空
+     * @param EstablishTime 成立/注册日期，只有输入参数EstablishTime为true时展示，默认为空
+     */
+    public void setEstablishTime(String EstablishTime) {
+        this.EstablishTime = EstablishTime;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -495,6 +518,9 @@ public class VerifyBasicBizLicenseResponse extends AbstractModel{
         if (source.RegCapital != null) {
             this.RegCapital = new String(source.RegCapital);
         }
+        if (source.EstablishTime != null) {
+            this.EstablishTime = new String(source.EstablishTime);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -522,6 +548,7 @@ public class VerifyBasicBizLicenseResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "Dom", this.Dom);
         this.setParamObj(map, prefix + "RegNumResult.", this.RegNumResult);
         this.setParamSimple(map, prefix + "RegCapital", this.RegCapital);
+        this.setParamSimple(map, prefix + "EstablishTime", this.EstablishTime);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

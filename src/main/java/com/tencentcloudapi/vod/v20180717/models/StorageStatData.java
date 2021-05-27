@@ -53,6 +53,20 @@ public class StorageStatData extends AbstractModel{
     private Long StandardStorage;
 
     /**
+    * 当前归档存储量，单位是字节。
+    */
+    @SerializedName("ArchiveStorage")
+    @Expose
+    private Long ArchiveStorage;
+
+    /**
+    * 当前深度归档存储量，单位是字节。
+    */
+    @SerializedName("DeepArchiveStorage")
+    @Expose
+    private Long DeepArchiveStorage;
+
+    /**
      * Get 点播存储的计费区域，可能值：
 <li>Chinese Mainland：中国境内（不包含港澳台）。</li>
 <li>Outside Chinese Mainland：中国境外。</li> 
@@ -124,6 +138,38 @@ public class StorageStatData extends AbstractModel{
         this.StandardStorage = StandardStorage;
     }
 
+    /**
+     * Get 当前归档存储量，单位是字节。 
+     * @return ArchiveStorage 当前归档存储量，单位是字节。
+     */
+    public Long getArchiveStorage() {
+        return this.ArchiveStorage;
+    }
+
+    /**
+     * Set 当前归档存储量，单位是字节。
+     * @param ArchiveStorage 当前归档存储量，单位是字节。
+     */
+    public void setArchiveStorage(Long ArchiveStorage) {
+        this.ArchiveStorage = ArchiveStorage;
+    }
+
+    /**
+     * Get 当前深度归档存储量，单位是字节。 
+     * @return DeepArchiveStorage 当前深度归档存储量，单位是字节。
+     */
+    public Long getDeepArchiveStorage() {
+        return this.DeepArchiveStorage;
+    }
+
+    /**
+     * Set 当前深度归档存储量，单位是字节。
+     * @param DeepArchiveStorage 当前深度归档存储量，单位是字节。
+     */
+    public void setDeepArchiveStorage(Long DeepArchiveStorage) {
+        this.DeepArchiveStorage = DeepArchiveStorage;
+    }
+
     public StorageStatData() {
     }
 
@@ -144,6 +190,12 @@ public class StorageStatData extends AbstractModel{
         if (source.StandardStorage != null) {
             this.StandardStorage = new Long(source.StandardStorage);
         }
+        if (source.ArchiveStorage != null) {
+            this.ArchiveStorage = new Long(source.ArchiveStorage);
+        }
+        if (source.DeepArchiveStorage != null) {
+            this.DeepArchiveStorage = new Long(source.DeepArchiveStorage);
+        }
     }
 
 
@@ -155,6 +207,8 @@ public class StorageStatData extends AbstractModel{
         this.setParamSimple(map, prefix + "TotalStorage", this.TotalStorage);
         this.setParamSimple(map, prefix + "InfrequentStorage", this.InfrequentStorage);
         this.setParamSimple(map, prefix + "StandardStorage", this.StandardStorage);
+        this.setParamSimple(map, prefix + "ArchiveStorage", this.ArchiveStorage);
+        this.setParamSimple(map, prefix + "DeepArchiveStorage", this.DeepArchiveStorage);
 
     }
 }

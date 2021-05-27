@@ -100,7 +100,7 @@ public class AddClusterInstancesRequest extends AbstractModel{
     private InstanceAdvancedSettings InstanceAdvancedSettings;
 
     /**
-    * 部署组ID
+    * 安全组 ID 列表
     */
     @SerializedName("SecurityGroupIds")
     @Expose
@@ -283,16 +283,16 @@ public class AddClusterInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get 部署组ID 
-     * @return SecurityGroupIds 部署组ID
+     * Get 安全组 ID 列表 
+     * @return SecurityGroupIds 安全组 ID 列表
      */
     public String [] getSecurityGroupIds() {
         return this.SecurityGroupIds;
     }
 
     /**
-     * Set 部署组ID
-     * @param SecurityGroupIds 部署组ID
+     * Set 安全组 ID 列表
+     * @param SecurityGroupIds 安全组 ID 列表
      */
     public void setSecurityGroupIds(String [] SecurityGroupIds) {
         this.SecurityGroupIds = SecurityGroupIds;

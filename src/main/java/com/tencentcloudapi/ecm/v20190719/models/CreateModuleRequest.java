@@ -66,8 +66,8 @@ public class CreateModuleRequest extends AbstractModel{
 
     /**
     * 是否关闭IP直通。取值范围：
-1：表示关闭IP直通
-0：表示开通IP直通
+true：表示关闭IP直通
+false：表示开通IP直通
     */
     @SerializedName("CloseIpDirect")
     @Expose
@@ -199,11 +199,11 @@ public class CreateModuleRequest extends AbstractModel{
 
     /**
      * Get 是否关闭IP直通。取值范围：
-1：表示关闭IP直通
-0：表示开通IP直通 
+true：表示关闭IP直通
+false：表示开通IP直通 
      * @return CloseIpDirect 是否关闭IP直通。取值范围：
-1：表示关闭IP直通
-0：表示开通IP直通
+true：表示关闭IP直通
+false：表示开通IP直通
      */
     public Boolean getCloseIpDirect() {
         return this.CloseIpDirect;
@@ -211,11 +211,11 @@ public class CreateModuleRequest extends AbstractModel{
 
     /**
      * Set 是否关闭IP直通。取值范围：
-1：表示关闭IP直通
-0：表示开通IP直通
+true：表示关闭IP直通
+false：表示开通IP直通
      * @param CloseIpDirect 是否关闭IP直通。取值范围：
-1：表示关闭IP直通
-0：表示开通IP直通
+true：表示关闭IP直通
+false：表示开通IP直通
      */
     public void setCloseIpDirect(Boolean CloseIpDirect) {
         this.CloseIpDirect = CloseIpDirect;

@@ -51,6 +51,34 @@ public class SecurityGroupBound extends AbstractModel{
     private String IpProtocol;
 
     /**
+    * 安全组id代表的地址集合
+    */
+    @SerializedName("Id")
+    @Expose
+    private String Id;
+
+    /**
+    * 地址组id代表的地址集合
+    */
+    @SerializedName("AddressModule")
+    @Expose
+    private String AddressModule;
+
+    /**
+    * 服务组id代表的协议和端口集合
+    */
+    @SerializedName("ServiceModule")
+    @Expose
+    private String ServiceModule;
+
+    /**
+    * 描述
+    */
+    @SerializedName("Desc")
+    @Expose
+    private String Desc;
+
+    /**
      * Get 执行规则。ACCEPT或DROP 
      * @return Action 执行规则。ACCEPT或DROP
      */
@@ -114,6 +142,70 @@ public class SecurityGroupBound extends AbstractModel{
         this.IpProtocol = IpProtocol;
     }
 
+    /**
+     * Get 安全组id代表的地址集合 
+     * @return Id 安全组id代表的地址集合
+     */
+    public String getId() {
+        return this.Id;
+    }
+
+    /**
+     * Set 安全组id代表的地址集合
+     * @param Id 安全组id代表的地址集合
+     */
+    public void setId(String Id) {
+        this.Id = Id;
+    }
+
+    /**
+     * Get 地址组id代表的地址集合 
+     * @return AddressModule 地址组id代表的地址集合
+     */
+    public String getAddressModule() {
+        return this.AddressModule;
+    }
+
+    /**
+     * Set 地址组id代表的地址集合
+     * @param AddressModule 地址组id代表的地址集合
+     */
+    public void setAddressModule(String AddressModule) {
+        this.AddressModule = AddressModule;
+    }
+
+    /**
+     * Get 服务组id代表的协议和端口集合 
+     * @return ServiceModule 服务组id代表的协议和端口集合
+     */
+    public String getServiceModule() {
+        return this.ServiceModule;
+    }
+
+    /**
+     * Set 服务组id代表的协议和端口集合
+     * @param ServiceModule 服务组id代表的协议和端口集合
+     */
+    public void setServiceModule(String ServiceModule) {
+        this.ServiceModule = ServiceModule;
+    }
+
+    /**
+     * Get 描述 
+     * @return Desc 描述
+     */
+    public String getDesc() {
+        return this.Desc;
+    }
+
+    /**
+     * Set 描述
+     * @param Desc 描述
+     */
+    public void setDesc(String Desc) {
+        this.Desc = Desc;
+    }
+
     public SecurityGroupBound() {
     }
 
@@ -134,6 +226,18 @@ public class SecurityGroupBound extends AbstractModel{
         if (source.IpProtocol != null) {
             this.IpProtocol = new String(source.IpProtocol);
         }
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
+        if (source.AddressModule != null) {
+            this.AddressModule = new String(source.AddressModule);
+        }
+        if (source.ServiceModule != null) {
+            this.ServiceModule = new String(source.ServiceModule);
+        }
+        if (source.Desc != null) {
+            this.Desc = new String(source.Desc);
+        }
     }
 
 
@@ -145,6 +249,10 @@ public class SecurityGroupBound extends AbstractModel{
         this.setParamSimple(map, prefix + "CidrIp", this.CidrIp);
         this.setParamSimple(map, prefix + "PortRange", this.PortRange);
         this.setParamSimple(map, prefix + "IpProtocol", this.IpProtocol);
+        this.setParamSimple(map, prefix + "Id", this.Id);
+        this.setParamSimple(map, prefix + "AddressModule", this.AddressModule);
+        this.setParamSimple(map, prefix + "ServiceModule", this.ServiceModule);
+        this.setParamSimple(map, prefix + "Desc", this.Desc);
 
     }
 }

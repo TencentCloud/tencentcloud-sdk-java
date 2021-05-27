@@ -28,6 +28,7 @@ image-id - String - 是否必填： 否 - （过滤条件）按照镜像ID进行
 image-type - String - 是否必填： 否 - （过滤条件）按照镜像类型进行过滤。取值范围：
 PRIVATE_IMAGE: 私有镜像 (本帐户创建的镜像) 
 PUBLIC_IMAGE: 公共镜像 (腾讯云官方镜像)
+instance-type -String - 是否必填: 否 - (过滤条件) 按机型过滤支持的镜像
     */
     @SerializedName("Filters")
     @Expose
@@ -52,12 +53,14 @@ PUBLIC_IMAGE: 公共镜像 (腾讯云官方镜像)
 image-id - String - 是否必填： 否 - （过滤条件）按照镜像ID进行过滤
 image-type - String - 是否必填： 否 - （过滤条件）按照镜像类型进行过滤。取值范围：
 PRIVATE_IMAGE: 私有镜像 (本帐户创建的镜像) 
-PUBLIC_IMAGE: 公共镜像 (腾讯云官方镜像) 
+PUBLIC_IMAGE: 公共镜像 (腾讯云官方镜像)
+instance-type -String - 是否必填: 否 - (过滤条件) 按机型过滤支持的镜像 
      * @return Filters 过滤条件，每次请求的Filters的上限为10，详细的过滤条件如下：
 image-id - String - 是否必填： 否 - （过滤条件）按照镜像ID进行过滤
 image-type - String - 是否必填： 否 - （过滤条件）按照镜像类型进行过滤。取值范围：
 PRIVATE_IMAGE: 私有镜像 (本帐户创建的镜像) 
 PUBLIC_IMAGE: 公共镜像 (腾讯云官方镜像)
+instance-type -String - 是否必填: 否 - (过滤条件) 按机型过滤支持的镜像
      */
     public Filter [] getFilters() {
         return this.Filters;
@@ -69,11 +72,13 @@ image-id - String - 是否必填： 否 - （过滤条件）按照镜像ID进行
 image-type - String - 是否必填： 否 - （过滤条件）按照镜像类型进行过滤。取值范围：
 PRIVATE_IMAGE: 私有镜像 (本帐户创建的镜像) 
 PUBLIC_IMAGE: 公共镜像 (腾讯云官方镜像)
+instance-type -String - 是否必填: 否 - (过滤条件) 按机型过滤支持的镜像
      * @param Filters 过滤条件，每次请求的Filters的上限为10，详细的过滤条件如下：
 image-id - String - 是否必填： 否 - （过滤条件）按照镜像ID进行过滤
 image-type - String - 是否必填： 否 - （过滤条件）按照镜像类型进行过滤。取值范围：
 PRIVATE_IMAGE: 私有镜像 (本帐户创建的镜像) 
 PUBLIC_IMAGE: 公共镜像 (腾讯云官方镜像)
+instance-type -String - 是否必填: 否 - (过滤条件) 按机型过滤支持的镜像
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

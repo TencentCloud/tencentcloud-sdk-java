@@ -82,6 +82,13 @@ Config = {"Name":true,"Address":true}
     private Long RegCapital;
 
     /**
+    * true表示展示成立/注册日期
+    */
+    @SerializedName("EstablishTime")
+    @Expose
+    private Boolean EstablishTime;
+
+    /**
      * Get 用于入参是营业执照图片的场景，ImageBase64和ImageUrl必须提供一个，如果都提供，只使用 ImageUrl。
 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
 支持的图片大小：所下载图片经Base64编码后不超过 7M。图片下载时间不超过 3 秒。 
@@ -233,6 +240,22 @@ Config = {"Name":true,"Address":true}
         this.RegCapital = RegCapital;
     }
 
+    /**
+     * Get true表示展示成立/注册日期 
+     * @return EstablishTime true表示展示成立/注册日期
+     */
+    public Boolean getEstablishTime() {
+        return this.EstablishTime;
+    }
+
+    /**
+     * Set true表示展示成立/注册日期
+     * @param EstablishTime true表示展示成立/注册日期
+     */
+    public void setEstablishTime(Boolean EstablishTime) {
+        this.EstablishTime = EstablishTime;
+    }
+
     public VerifyBasicBizLicenseRequest() {
     }
 
@@ -262,6 +285,9 @@ Config = {"Name":true,"Address":true}
         if (source.RegCapital != null) {
             this.RegCapital = new Long(source.RegCapital);
         }
+        if (source.EstablishTime != null) {
+            this.EstablishTime = new Boolean(source.EstablishTime);
+        }
     }
 
 
@@ -276,6 +302,7 @@ Config = {"Name":true,"Address":true}
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Address", this.Address);
         this.setParamSimple(map, prefix + "RegCapital", this.RegCapital);
+        this.setParamSimple(map, prefix + "EstablishTime", this.EstablishTime);
 
     }
 }

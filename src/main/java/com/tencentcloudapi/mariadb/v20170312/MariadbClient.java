@@ -482,6 +482,26 @@ public class MariadbClient extends AbstractClient{
     }
 
     /**
+     *获取实例灾备详情
+     * @param req DescribeDcnDetailRequest
+     * @return DescribeDcnDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDcnDetailResponse DescribeDcnDetail(DescribeDcnDetailRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDcnDetailResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDcnDetailResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDcnDetail");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（DescribeFlow）用于查询流程状态。
      * @param req DescribeFlowRequest
      * @return DescribeFlowResponse
