@@ -306,6 +306,26 @@ public class CpdpClient extends AbstractClient{
     }
 
     /**
+     *应用需要先带上签约信息调用本接口生成支付订单号，并将应答的PayInfo透传给聚鑫SDK，拉起客户端（包括微信公众号/微信小程序/客户端App）支付。
+     * @param req ContractOrderRequest
+     * @return ContractOrderResponse
+     * @throws TencentCloudSDKException
+     */
+    public ContractOrderResponse ContractOrder(ContractOrderRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ContractOrderResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ContractOrderResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ContractOrder");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *子商户入驻聚鑫平台
      * @param req CreateAcctRequest
      * @return CreateAcctResponse
@@ -967,6 +987,26 @@ public class CpdpClient extends AbstractClient{
     }
 
     /**
+     *通过此接口查询签约数据
+     * @param req QueryContractRequest
+     * @return QueryContractResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryContractResponse QueryContract(QueryContractRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<QueryContractResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<QueryContractResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "QueryContract");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询银行子账户余额。查询会员子账户以及平台的功能子账户的余额。
      * @param req QueryCustAcctIdBalanceRequest
      * @return QueryCustAcctIdBalanceResponse
@@ -1560,6 +1600,46 @@ public class CpdpClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<RevokeRechargeByThirdPayResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "RevokeRechargeByThirdPay");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *对于存量的签约关系导入或者部分场景下米大师无法收到签约通知的场景，需要由调用方主动将签约状态同步至米大师
+     * @param req SyncContractDataRequest
+     * @return SyncContractDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public SyncContractDataResponse SyncContractData(SyncContractDataRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SyncContractDataResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<SyncContractDataResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "SyncContractData");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *通过此接口进行解约
+     * @param req TerminateContractRequest
+     * @return TerminateContractResponse
+     * @throws TencentCloudSDKException
+     */
+    public TerminateContractResponse TerminateContract(TerminateContractRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<TerminateContractResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<TerminateContractResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "TerminateContract");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
