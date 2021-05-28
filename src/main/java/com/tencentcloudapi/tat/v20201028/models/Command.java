@@ -114,6 +114,13 @@ public class Command extends AbstractModel{
     private String CreatedBy;
 
     /**
+    * 命令关联的标签列表。
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get 命令ID。 
      * @return CommandId 命令ID。
      */
@@ -321,6 +328,22 @@ public class Command extends AbstractModel{
         this.CreatedBy = CreatedBy;
     }
 
+    /**
+     * Get 命令关联的标签列表。 
+     * @return Tags 命令关联的标签列表。
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 命令关联的标签列表。
+     * @param Tags 命令关联的标签列表。
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public Command() {
     }
 
@@ -368,6 +391,12 @@ public class Command extends AbstractModel{
         if (source.CreatedBy != null) {
             this.CreatedBy = new String(source.CreatedBy);
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -388,6 +417,7 @@ public class Command extends AbstractModel{
         this.setParamSimple(map, prefix + "DefaultParameters", this.DefaultParameters);
         this.setParamSimple(map, prefix + "FormattedDescription", this.FormattedDescription);
         this.setParamSimple(map, prefix + "CreatedBy", this.CreatedBy);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

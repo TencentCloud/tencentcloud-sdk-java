@@ -65,6 +65,48 @@ public class MusicDetailInfo extends AbstractModel{
     private Float Score;
 
     /**
+    * 场景信息
+    */
+    @SerializedName("Scene")
+    @Expose
+    private String [] Scene;
+
+    /**
+    * 应用地域
+    */
+    @SerializedName("Region")
+    @Expose
+    private String [] Region;
+
+    /**
+    * 授权期限
+    */
+    @SerializedName("AuthPeriod")
+    @Expose
+    private String AuthPeriod;
+
+    /**
+    * 商业化权益
+    */
+    @SerializedName("Commercialization")
+    @Expose
+    private String Commercialization;
+
+    /**
+    * 跨平台传播权益
+    */
+    @SerializedName("Platform")
+    @Expose
+    private String Platform;
+
+    /**
+    * 传播渠道
+    */
+    @SerializedName("Channel")
+    @Expose
+    private String Channel;
+
+    /**
      * Get 资源方音乐Id 
      * @return MusicId 资源方音乐Id
      */
@@ -160,6 +202,102 @@ public class MusicDetailInfo extends AbstractModel{
         this.Score = Score;
     }
 
+    /**
+     * Get 场景信息 
+     * @return Scene 场景信息
+     */
+    public String [] getScene() {
+        return this.Scene;
+    }
+
+    /**
+     * Set 场景信息
+     * @param Scene 场景信息
+     */
+    public void setScene(String [] Scene) {
+        this.Scene = Scene;
+    }
+
+    /**
+     * Get 应用地域 
+     * @return Region 应用地域
+     */
+    public String [] getRegion() {
+        return this.Region;
+    }
+
+    /**
+     * Set 应用地域
+     * @param Region 应用地域
+     */
+    public void setRegion(String [] Region) {
+        this.Region = Region;
+    }
+
+    /**
+     * Get 授权期限 
+     * @return AuthPeriod 授权期限
+     */
+    public String getAuthPeriod() {
+        return this.AuthPeriod;
+    }
+
+    /**
+     * Set 授权期限
+     * @param AuthPeriod 授权期限
+     */
+    public void setAuthPeriod(String AuthPeriod) {
+        this.AuthPeriod = AuthPeriod;
+    }
+
+    /**
+     * Get 商业化权益 
+     * @return Commercialization 商业化权益
+     */
+    public String getCommercialization() {
+        return this.Commercialization;
+    }
+
+    /**
+     * Set 商业化权益
+     * @param Commercialization 商业化权益
+     */
+    public void setCommercialization(String Commercialization) {
+        this.Commercialization = Commercialization;
+    }
+
+    /**
+     * Get 跨平台传播权益 
+     * @return Platform 跨平台传播权益
+     */
+    public String getPlatform() {
+        return this.Platform;
+    }
+
+    /**
+     * Set 跨平台传播权益
+     * @param Platform 跨平台传播权益
+     */
+    public void setPlatform(String Platform) {
+        this.Platform = Platform;
+    }
+
+    /**
+     * Get 传播渠道 
+     * @return Channel 传播渠道
+     */
+    public String getChannel() {
+        return this.Channel;
+    }
+
+    /**
+     * Set 传播渠道
+     * @param Channel 传播渠道
+     */
+    public void setChannel(String Channel) {
+        this.Channel = Channel;
+    }
+
     public MusicDetailInfo() {
     }
 
@@ -192,6 +330,30 @@ public class MusicDetailInfo extends AbstractModel{
         if (source.Score != null) {
             this.Score = new Float(source.Score);
         }
+        if (source.Scene != null) {
+            this.Scene = new String[source.Scene.length];
+            for (int i = 0; i < source.Scene.length; i++) {
+                this.Scene[i] = new String(source.Scene[i]);
+            }
+        }
+        if (source.Region != null) {
+            this.Region = new String[source.Region.length];
+            for (int i = 0; i < source.Region.length; i++) {
+                this.Region[i] = new String(source.Region[i]);
+            }
+        }
+        if (source.AuthPeriod != null) {
+            this.AuthPeriod = new String(source.AuthPeriod);
+        }
+        if (source.Commercialization != null) {
+            this.Commercialization = new String(source.Commercialization);
+        }
+        if (source.Platform != null) {
+            this.Platform = new String(source.Platform);
+        }
+        if (source.Channel != null) {
+            this.Channel = new String(source.Channel);
+        }
     }
 
 
@@ -205,6 +367,12 @@ public class MusicDetailInfo extends AbstractModel{
         this.setParamArraySimple(map, prefix + "HitWords.", this.HitWords);
         this.setParamSimple(map, prefix + "Bpm", this.Bpm);
         this.setParamSimple(map, prefix + "Score", this.Score);
+        this.setParamArraySimple(map, prefix + "Scene.", this.Scene);
+        this.setParamArraySimple(map, prefix + "Region.", this.Region);
+        this.setParamSimple(map, prefix + "AuthPeriod", this.AuthPeriod);
+        this.setParamSimple(map, prefix + "Commercialization", this.Commercialization);
+        this.setParamSimple(map, prefix + "Platform", this.Platform);
+        this.setParamSimple(map, prefix + "Channel", this.Channel);
 
     }
 }

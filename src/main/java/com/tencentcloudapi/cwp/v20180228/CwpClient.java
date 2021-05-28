@@ -739,6 +739,26 @@ public class CwpClient extends AbstractClient{
     }
 
     /**
+     *获取密码破解列表
+     * @param req DescribeBruteAttackListRequest
+     * @return DescribeBruteAttackListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBruteAttackListResponse DescribeBruteAttackList(DescribeBruteAttackListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBruteAttackListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBruteAttackListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeBruteAttackList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口{DescribeBruteAttacks}用于获取暴力破解事件列表。
      * @param req DescribeBruteAttacksRequest
      * @return DescribeBruteAttacksResponse

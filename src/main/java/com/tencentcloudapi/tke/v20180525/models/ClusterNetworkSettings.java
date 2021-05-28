@@ -72,6 +72,30 @@ public class ClusterNetworkSettings extends AbstractModel{
     private Boolean Cni;
 
     /**
+    * service的网络模式，当前参数只适用于ipvs+bpf模式
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("KubeProxyMode")
+    @Expose
+    private String KubeProxyMode;
+
+    /**
+    * 用于分配service的IP range，不得与 VPC CIDR 冲突，也不得与同 VPC 内其他集群 CIDR 冲突
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ServiceCIDR")
+    @Expose
+    private String ServiceCIDR;
+
+    /**
+    * 集群关联的容器子网
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Subnets")
+    @Expose
+    private String [] Subnets;
+
+    /**
      * Get 用于分配集群容器和服务 IP 的 CIDR，不得与 VPC CIDR 冲突，也不得与同 VPC 内其他集群 CIDR 冲突 
      * @return ClusterCIDR 用于分配集群容器和服务 IP 的 CIDR，不得与 VPC CIDR 冲突，也不得与同 VPC 内其他集群 CIDR 冲突
      */
@@ -183,6 +207,66 @@ public class ClusterNetworkSettings extends AbstractModel{
         this.Cni = Cni;
     }
 
+    /**
+     * Get service的网络模式，当前参数只适用于ipvs+bpf模式
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return KubeProxyMode service的网络模式，当前参数只适用于ipvs+bpf模式
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getKubeProxyMode() {
+        return this.KubeProxyMode;
+    }
+
+    /**
+     * Set service的网络模式，当前参数只适用于ipvs+bpf模式
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param KubeProxyMode service的网络模式，当前参数只适用于ipvs+bpf模式
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setKubeProxyMode(String KubeProxyMode) {
+        this.KubeProxyMode = KubeProxyMode;
+    }
+
+    /**
+     * Get 用于分配service的IP range，不得与 VPC CIDR 冲突，也不得与同 VPC 内其他集群 CIDR 冲突
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ServiceCIDR 用于分配service的IP range，不得与 VPC CIDR 冲突，也不得与同 VPC 内其他集群 CIDR 冲突
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getServiceCIDR() {
+        return this.ServiceCIDR;
+    }
+
+    /**
+     * Set 用于分配service的IP range，不得与 VPC CIDR 冲突，也不得与同 VPC 内其他集群 CIDR 冲突
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ServiceCIDR 用于分配service的IP range，不得与 VPC CIDR 冲突，也不得与同 VPC 内其他集群 CIDR 冲突
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setServiceCIDR(String ServiceCIDR) {
+        this.ServiceCIDR = ServiceCIDR;
+    }
+
+    /**
+     * Get 集群关联的容器子网
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Subnets 集群关联的容器子网
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getSubnets() {
+        return this.Subnets;
+    }
+
+    /**
+     * Set 集群关联的容器子网
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Subnets 集群关联的容器子网
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSubnets(String [] Subnets) {
+        this.Subnets = Subnets;
+    }
+
     public ClusterNetworkSettings() {
     }
 
@@ -212,6 +296,18 @@ public class ClusterNetworkSettings extends AbstractModel{
         if (source.Cni != null) {
             this.Cni = new Boolean(source.Cni);
         }
+        if (source.KubeProxyMode != null) {
+            this.KubeProxyMode = new String(source.KubeProxyMode);
+        }
+        if (source.ServiceCIDR != null) {
+            this.ServiceCIDR = new String(source.ServiceCIDR);
+        }
+        if (source.Subnets != null) {
+            this.Subnets = new String[source.Subnets.length];
+            for (int i = 0; i < source.Subnets.length; i++) {
+                this.Subnets[i] = new String(source.Subnets[i]);
+            }
+        }
     }
 
 
@@ -226,6 +322,9 @@ public class ClusterNetworkSettings extends AbstractModel{
         this.setParamSimple(map, prefix + "Ipvs", this.Ipvs);
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
         this.setParamSimple(map, prefix + "Cni", this.Cni);
+        this.setParamSimple(map, prefix + "KubeProxyMode", this.KubeProxyMode);
+        this.setParamSimple(map, prefix + "ServiceCIDR", this.ServiceCIDR);
+        this.setParamArraySimple(map, prefix + "Subnets.", this.Subnets);
 
     }
 }

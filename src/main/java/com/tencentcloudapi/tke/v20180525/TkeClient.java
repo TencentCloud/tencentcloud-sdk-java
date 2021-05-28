@@ -99,6 +99,26 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *针对VPC-CNI模式的集群，增加集群容器网络可使用的子网
+     * @param req AddVpcCniSubnetsRequest
+     * @return AddVpcCniSubnetsResponse
+     * @throws TencentCloudSDKException
+     */
+    public AddVpcCniSubnetsResponse AddVpcCniSubnets(AddVpcCniSubnetsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AddVpcCniSubnetsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<AddVpcCniSubnetsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "AddVpcCniSubnets");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *检查给定节点列表中哪些是可升级的 
      * @param req CheckInstancesUpgradeAbleRequest
      * @return CheckInstancesUpgradeAbleResponse

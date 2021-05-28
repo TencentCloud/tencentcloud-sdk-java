@@ -51,6 +51,13 @@ public class DescribeVsmsRequest extends AbstractModel{
     private TagFilter [] TagFilters;
 
     /**
+    * 设备所属的厂商名称，根据厂商来进行筛选
+    */
+    @SerializedName("Manufacturer")
+    @Expose
+    private String Manufacturer;
+
+    /**
      * Get 偏移 
      * @return Offset 偏移
      */
@@ -114,6 +121,22 @@ public class DescribeVsmsRequest extends AbstractModel{
         this.TagFilters = TagFilters;
     }
 
+    /**
+     * Get 设备所属的厂商名称，根据厂商来进行筛选 
+     * @return Manufacturer 设备所属的厂商名称，根据厂商来进行筛选
+     */
+    public String getManufacturer() {
+        return this.Manufacturer;
+    }
+
+    /**
+     * Set 设备所属的厂商名称，根据厂商来进行筛选
+     * @param Manufacturer 设备所属的厂商名称，根据厂商来进行筛选
+     */
+    public void setManufacturer(String Manufacturer) {
+        this.Manufacturer = Manufacturer;
+    }
+
     public DescribeVsmsRequest() {
     }
 
@@ -137,6 +160,9 @@ public class DescribeVsmsRequest extends AbstractModel{
                 this.TagFilters[i] = new TagFilter(source.TagFilters[i]);
             }
         }
+        if (source.Manufacturer != null) {
+            this.Manufacturer = new String(source.Manufacturer);
+        }
     }
 
 
@@ -148,6 +174,7 @@ public class DescribeVsmsRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "SearchWord", this.SearchWord);
         this.setParamArrayObj(map, prefix + "TagFilters.", this.TagFilters);
+        this.setParamSimple(map, prefix + "Manufacturer", this.Manufacturer);
 
     }
 }

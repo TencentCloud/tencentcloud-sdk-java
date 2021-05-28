@@ -191,6 +191,14 @@ public class ResourceInfo extends AbstractModel{
     private Tag [] Tags;
 
     /**
+    * 厂商
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Manufacturer")
+    @Expose
+    private String Manufacturer;
+
+    /**
      * Get 资源Id
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ResourceId 资源Id
@@ -610,6 +618,26 @@ public class ResourceInfo extends AbstractModel{
         this.Tags = Tags;
     }
 
+    /**
+     * Get 厂商
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Manufacturer 厂商
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getManufacturer() {
+        return this.Manufacturer;
+    }
+
+    /**
+     * Set 厂商
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Manufacturer 厂商
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setManufacturer(String Manufacturer) {
+        this.Manufacturer = Manufacturer;
+    }
+
     public ResourceInfo() {
     }
 
@@ -687,6 +715,9 @@ public class ResourceInfo extends AbstractModel{
                 this.Tags[i] = new Tag(source.Tags[i]);
             }
         }
+        if (source.Manufacturer != null) {
+            this.Manufacturer = new String(source.Manufacturer);
+        }
     }
 
 
@@ -715,6 +746,7 @@ public class ResourceInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "CreateUin", this.CreateUin);
         this.setParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "Manufacturer", this.Manufacturer);
 
     }
 }

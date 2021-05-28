@@ -99,6 +99,26 @@ public class CloudhsmClient extends AbstractClient{
     }
 
     /**
+     *获取当前地域所支持的设备列表
+     * @param req DescribeSupportedHsmRequest
+     * @return DescribeSupportedHsmResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSupportedHsmResponse DescribeSupportedHsm(DescribeSupportedHsmRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeSupportedHsmResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeSupportedHsmResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeSupportedHsm");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *根据用户的AppId获取用户安全组列表
      * @param req DescribeUsgRequest
      * @return DescribeUsgResponse

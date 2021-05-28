@@ -59,6 +59,26 @@ public class EcdnClient extends AbstractClient{
     }
 
     /**
+     *生成一条子域名解析，提示客户添加到域名解析上，用于泛域名及域名取回校验归属权
+     * @param req CreateVerifyRecordRequest
+     * @return CreateVerifyRecordResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateVerifyRecordResponse CreateVerifyRecord(CreateVerifyRecordRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateVerifyRecordResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateVerifyRecordResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateVerifyRecord");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（DeleteEcdnDomain）用于删除指定加速域名。待删除域名必须处于已停用状态。
      * @param req DeleteEcdnDomainRequest
      * @return DeleteEcdnDomainResponse

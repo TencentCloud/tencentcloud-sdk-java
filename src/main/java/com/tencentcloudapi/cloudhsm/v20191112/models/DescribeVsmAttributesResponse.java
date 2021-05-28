@@ -188,6 +188,14 @@ public class DescribeVsmAttributesResponse extends AbstractModel{
     private Long RenewFlag;
 
     /**
+    * 厂商
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Manufacturer")
+    @Expose
+    private String Manufacturer;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -591,6 +599,26 @@ public class DescribeVsmAttributesResponse extends AbstractModel{
     }
 
     /**
+     * Get 厂商
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Manufacturer 厂商
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getManufacturer() {
+        return this.Manufacturer;
+    }
+
+    /**
+     * Set 厂商
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Manufacturer 厂商
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setManufacturer(String Manufacturer) {
+        this.Manufacturer = Manufacturer;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -686,6 +714,9 @@ public class DescribeVsmAttributesResponse extends AbstractModel{
         if (source.RenewFlag != null) {
             this.RenewFlag = new Long(source.RenewFlag);
         }
+        if (source.Manufacturer != null) {
+            this.Manufacturer = new String(source.Manufacturer);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -718,6 +749,7 @@ public class DescribeVsmAttributesResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "SubnetCidrBlock", this.SubnetCidrBlock);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
+        this.setParamSimple(map, prefix + "Manufacturer", this.Manufacturer);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

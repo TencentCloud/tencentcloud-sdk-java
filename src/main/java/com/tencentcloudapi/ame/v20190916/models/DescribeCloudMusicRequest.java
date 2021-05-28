@@ -30,8 +30,11 @@ public class DescribeCloudMusicRequest extends AbstractModel{
     private String MusicId;
 
     /**
-    * MP3-320K-FTD-P  为获取320kbps歌曲热门片段。
-MP3-320K-FTD 为获取320kbps已核验歌曲完整资源。
+    * 歌曲类型，可选值有：
+<li>MP3-128K-FTW：含有水印的试听资源；</li>
+<li>MP3-320K-FTD-P：320kbps歌曲热门片段；</li>
+<li>MP3-320K-FTD：320kbps已核验歌曲完整资源。</li>
+默认为：MP3-128K-FTW
     */
     @SerializedName("MusicType")
     @Expose
@@ -54,20 +57,32 @@ MP3-320K-FTD 为获取320kbps已核验歌曲完整资源。
     }
 
     /**
-     * Get MP3-320K-FTD-P  为获取320kbps歌曲热门片段。
-MP3-320K-FTD 为获取320kbps已核验歌曲完整资源。 
-     * @return MusicType MP3-320K-FTD-P  为获取320kbps歌曲热门片段。
-MP3-320K-FTD 为获取320kbps已核验歌曲完整资源。
+     * Get 歌曲类型，可选值有：
+<li>MP3-128K-FTW：含有水印的试听资源；</li>
+<li>MP3-320K-FTD-P：320kbps歌曲热门片段；</li>
+<li>MP3-320K-FTD：320kbps已核验歌曲完整资源。</li>
+默认为：MP3-128K-FTW 
+     * @return MusicType 歌曲类型，可选值有：
+<li>MP3-128K-FTW：含有水印的试听资源；</li>
+<li>MP3-320K-FTD-P：320kbps歌曲热门片段；</li>
+<li>MP3-320K-FTD：320kbps已核验歌曲完整资源。</li>
+默认为：MP3-128K-FTW
      */
     public String getMusicType() {
         return this.MusicType;
     }
 
     /**
-     * Set MP3-320K-FTD-P  为获取320kbps歌曲热门片段。
-MP3-320K-FTD 为获取320kbps已核验歌曲完整资源。
-     * @param MusicType MP3-320K-FTD-P  为获取320kbps歌曲热门片段。
-MP3-320K-FTD 为获取320kbps已核验歌曲完整资源。
+     * Set 歌曲类型，可选值有：
+<li>MP3-128K-FTW：含有水印的试听资源；</li>
+<li>MP3-320K-FTD-P：320kbps歌曲热门片段；</li>
+<li>MP3-320K-FTD：320kbps已核验歌曲完整资源。</li>
+默认为：MP3-128K-FTW
+     * @param MusicType 歌曲类型，可选值有：
+<li>MP3-128K-FTW：含有水印的试听资源；</li>
+<li>MP3-320K-FTD-P：320kbps歌曲热门片段；</li>
+<li>MP3-320K-FTD：320kbps已核验歌曲完整资源。</li>
+默认为：MP3-128K-FTW
      */
     public void setMusicType(String MusicType) {
         this.MusicType = MusicType;
