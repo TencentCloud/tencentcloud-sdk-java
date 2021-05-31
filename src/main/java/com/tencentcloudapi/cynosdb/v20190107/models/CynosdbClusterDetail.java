@@ -184,6 +184,17 @@ public class CynosdbClusterDetail extends AbstractModel{
     private Tag [] ResourceTags;
 
     /**
+    * 当Db类型为SERVERLESS时，serverless集群状态，可选值:
+resume
+resuming
+pause
+pausing
+    */
+    @SerializedName("ServerlessStatus")
+    @Expose
+    private String ServerlessStatus;
+
+    /**
      * Get 集群ID 
      * @return ClusterId 集群ID
      */
@@ -551,6 +562,38 @@ public class CynosdbClusterDetail extends AbstractModel{
         this.ResourceTags = ResourceTags;
     }
 
+    /**
+     * Get 当Db类型为SERVERLESS时，serverless集群状态，可选值:
+resume
+resuming
+pause
+pausing 
+     * @return ServerlessStatus 当Db类型为SERVERLESS时，serverless集群状态，可选值:
+resume
+resuming
+pause
+pausing
+     */
+    public String getServerlessStatus() {
+        return this.ServerlessStatus;
+    }
+
+    /**
+     * Set 当Db类型为SERVERLESS时，serverless集群状态，可选值:
+resume
+resuming
+pause
+pausing
+     * @param ServerlessStatus 当Db类型为SERVERLESS时，serverless集群状态，可选值:
+resume
+resuming
+pause
+pausing
+     */
+    public void setServerlessStatus(String ServerlessStatus) {
+        this.ServerlessStatus = ServerlessStatus;
+    }
+
     public CynosdbClusterDetail() {
     }
 
@@ -637,6 +680,9 @@ public class CynosdbClusterDetail extends AbstractModel{
                 this.ResourceTags[i] = new Tag(source.ResourceTags[i]);
             }
         }
+        if (source.ServerlessStatus != null) {
+            this.ServerlessStatus = new String(source.ServerlessStatus);
+        }
     }
 
 
@@ -667,6 +713,7 @@ public class CynosdbClusterDetail extends AbstractModel{
         this.setParamSimple(map, prefix + "ProjectID", this.ProjectID);
         this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
+        this.setParamSimple(map, prefix + "ServerlessStatus", this.ServerlessStatus);
 
     }
 }

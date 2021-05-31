@@ -37,7 +37,7 @@ public class CreateDomainAliasRequest extends AbstractModel{
     private String Domain;
 
     /**
-    * 域名ID,域名ID，参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain
+    * 域名ID，参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain
     */
     @SerializedName("DomainId")
     @Expose
@@ -76,16 +76,16 @@ public class CreateDomainAliasRequest extends AbstractModel{
     }
 
     /**
-     * Get 域名ID,域名ID，参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 
-     * @return DomainId 域名ID,域名ID，参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain
+     * Get 域名ID，参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 
+     * @return DomainId 域名ID，参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain
      */
     public Long getDomainId() {
         return this.DomainId;
     }
 
     /**
-     * Set 域名ID,域名ID，参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain
-     * @param DomainId 域名ID,域名ID，参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain
+     * Set 域名ID，参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain
+     * @param DomainId 域名ID，参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain
      */
     public void setDomainId(Long DomainId) {
         this.DomainId = DomainId;

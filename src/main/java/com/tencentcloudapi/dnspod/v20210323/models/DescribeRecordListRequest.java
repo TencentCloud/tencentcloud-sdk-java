@@ -79,28 +79,28 @@ public class DescribeRecordListRequest extends AbstractModel{
     private String Keyword;
 
     /**
-    * 排序字段，支持 name,line,type,value,weight,mx,ttl,updated_on 几个字段
+    * 排序字段，支持 name,line,type,value,weight,mx,ttl,updated_on 几个字段。默认值为updated_on。
     */
     @SerializedName("SortField")
     @Expose
     private String SortField;
 
     /**
-    * 排序方式，正序：ASC，逆序：DESC
+    * 排序方式，正序：ASC，逆序：DESC。默认值为ASC。
     */
     @SerializedName("SortType")
     @Expose
     private String SortType;
 
     /**
-    * 偏移量
+    * 偏移量，默认值为0。
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 限制数量，当前Limit最大支持3000
+    * 限制数量，当前Limit最大支持3000。默认值为3000。
     */
     @SerializedName("Limit")
     @Expose
@@ -235,64 +235,64 @@ public class DescribeRecordListRequest extends AbstractModel{
     }
 
     /**
-     * Get 排序字段，支持 name,line,type,value,weight,mx,ttl,updated_on 几个字段 
-     * @return SortField 排序字段，支持 name,line,type,value,weight,mx,ttl,updated_on 几个字段
+     * Get 排序字段，支持 name,line,type,value,weight,mx,ttl,updated_on 几个字段。默认值为updated_on。 
+     * @return SortField 排序字段，支持 name,line,type,value,weight,mx,ttl,updated_on 几个字段。默认值为updated_on。
      */
     public String getSortField() {
         return this.SortField;
     }
 
     /**
-     * Set 排序字段，支持 name,line,type,value,weight,mx,ttl,updated_on 几个字段
-     * @param SortField 排序字段，支持 name,line,type,value,weight,mx,ttl,updated_on 几个字段
+     * Set 排序字段，支持 name,line,type,value,weight,mx,ttl,updated_on 几个字段。默认值为updated_on。
+     * @param SortField 排序字段，支持 name,line,type,value,weight,mx,ttl,updated_on 几个字段。默认值为updated_on。
      */
     public void setSortField(String SortField) {
         this.SortField = SortField;
     }
 
     /**
-     * Get 排序方式，正序：ASC，逆序：DESC 
-     * @return SortType 排序方式，正序：ASC，逆序：DESC
+     * Get 排序方式，正序：ASC，逆序：DESC。默认值为ASC。 
+     * @return SortType 排序方式，正序：ASC，逆序：DESC。默认值为ASC。
      */
     public String getSortType() {
         return this.SortType;
     }
 
     /**
-     * Set 排序方式，正序：ASC，逆序：DESC
-     * @param SortType 排序方式，正序：ASC，逆序：DESC
+     * Set 排序方式，正序：ASC，逆序：DESC。默认值为ASC。
+     * @param SortType 排序方式，正序：ASC，逆序：DESC。默认值为ASC。
      */
     public void setSortType(String SortType) {
         this.SortType = SortType;
     }
 
     /**
-     * Get 偏移量 
-     * @return Offset 偏移量
+     * Get 偏移量，默认值为0。 
+     * @return Offset 偏移量，默认值为0。
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量
-     * @param Offset 偏移量
+     * Set 偏移量，默认值为0。
+     * @param Offset 偏移量，默认值为0。
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 限制数量，当前Limit最大支持3000 
-     * @return Limit 限制数量，当前Limit最大支持3000
+     * Get 限制数量，当前Limit最大支持3000。默认值为3000。 
+     * @return Limit 限制数量，当前Limit最大支持3000。默认值为3000。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 限制数量，当前Limit最大支持3000
-     * @param Limit 限制数量，当前Limit最大支持3000
+     * Set 限制数量，当前Limit最大支持3000。默认值为3000。
+     * @param Limit 限制数量，当前Limit最大支持3000。默认值为3000。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

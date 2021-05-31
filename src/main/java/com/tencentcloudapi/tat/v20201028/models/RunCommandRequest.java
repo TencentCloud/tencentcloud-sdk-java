@@ -115,6 +115,13 @@ key为自定义参数名称，value为该参数的默认取值。kv均为字符�
     private String Parameters;
 
     /**
+    * 如果保存命令，可为命令设置标签。列表长度不超过10。
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get Base64编码后的命令内容，长度不可超过64KB。 
      * @return Content Base64编码后的命令内容，长度不可超过64KB。
      */
@@ -350,6 +357,22 @@ key为自定义参数名称，value为该参数的默认取值。kv均为字符�
         this.Parameters = Parameters;
     }
 
+    /**
+     * Get 如果保存命令，可为命令设置标签。列表长度不超过10。 
+     * @return Tags 如果保存命令，可为命令设置标签。列表长度不超过10。
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 如果保存命令，可为命令设置标签。列表长度不超过10。
+     * @param Tags 如果保存命令，可为命令设置标签。列表长度不超过10。
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public RunCommandRequest() {
     }
 
@@ -394,6 +417,12 @@ key为自定义参数名称，value为该参数的默认取值。kv均为字符�
         if (source.Parameters != null) {
             this.Parameters = new String(source.Parameters);
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -412,6 +441,7 @@ key为自定义参数名称，value为该参数的默认取值。kv均为字符�
         this.setParamSimple(map, prefix + "EnableParameter", this.EnableParameter);
         this.setParamSimple(map, prefix + "DefaultParameters", this.DefaultParameters);
         this.setParamSimple(map, prefix + "Parameters", this.Parameters);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

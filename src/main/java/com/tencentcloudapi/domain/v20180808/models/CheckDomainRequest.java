@@ -30,7 +30,7 @@ public class CheckDomainRequest extends AbstractModel{
     private String DomainName;
 
     /**
-    * 年限
+    * 年限。该参数为空时无法查询溢价词域名
     */
     @SerializedName("Period")
     @Expose
@@ -53,16 +53,16 @@ public class CheckDomainRequest extends AbstractModel{
     }
 
     /**
-     * Get 年限 
-     * @return Period 年限
+     * Get 年限。该参数为空时无法查询溢价词域名 
+     * @return Period 年限。该参数为空时无法查询溢价词域名
      */
     public String getPeriod() {
         return this.Period;
     }
 
     /**
-     * Set 年限
-     * @param Period 年限
+     * Set 年限。该参数为空时无法查询溢价词域名
+     * @param Period 年限。该参数为空时无法查询溢价词域名
      */
     public void setPeriod(String Period) {
         this.Period = Period;

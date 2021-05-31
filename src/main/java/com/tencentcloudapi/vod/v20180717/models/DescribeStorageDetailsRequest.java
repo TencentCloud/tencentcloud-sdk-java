@@ -48,9 +48,18 @@ public class DescribeStorageDetailsRequest extends AbstractModel{
 
     /**
     * 查询的存储类型，有效值：
-<li>TotalStorage：存储总量。</li>
+<li>TotalStorage：存储总量，标准、低频、归档和深度归档存储量之和，不含提前删除量。</li>
 <li>StandardStorage：标准存储。</li>
 <li>InfrequentStorage：低频存储。</li>
+<li>ArchiveStorage：归档存储。</li>
+<li>DeepArchiveStorage：深度归档存储。</li>
+<li>DeletedArchiveStorage：归档提前删除量。</li>
+<li>DeletedDeepArchiveStorage：深度归档提前删除量。
+<li>ArchiveStandardRetrieval：归档标准取回量。</li>
+<li>ArchiveExpeditedRetrieval：归档快速取回量。</li>
+<li>ArchiveBulkRetrieval：归档批量取回量。</li>
+<li>DeepArchiveStandardRetrieval：深度归档标准取回量。</li>
+<li>DeepArchiveBulkRetrieval：深度归档批量取回量。</li>
 默认值为 TotalStorage。
     */
     @SerializedName("StorageType")
@@ -137,14 +146,32 @@ public class DescribeStorageDetailsRequest extends AbstractModel{
 
     /**
      * Get 查询的存储类型，有效值：
-<li>TotalStorage：存储总量。</li>
+<li>TotalStorage：存储总量，标准、低频、归档和深度归档存储量之和，不含提前删除量。</li>
 <li>StandardStorage：标准存储。</li>
 <li>InfrequentStorage：低频存储。</li>
+<li>ArchiveStorage：归档存储。</li>
+<li>DeepArchiveStorage：深度归档存储。</li>
+<li>DeletedArchiveStorage：归档提前删除量。</li>
+<li>DeletedDeepArchiveStorage：深度归档提前删除量。
+<li>ArchiveStandardRetrieval：归档标准取回量。</li>
+<li>ArchiveExpeditedRetrieval：归档快速取回量。</li>
+<li>ArchiveBulkRetrieval：归档批量取回量。</li>
+<li>DeepArchiveStandardRetrieval：深度归档标准取回量。</li>
+<li>DeepArchiveBulkRetrieval：深度归档批量取回量。</li>
 默认值为 TotalStorage。 
      * @return StorageType 查询的存储类型，有效值：
-<li>TotalStorage：存储总量。</li>
+<li>TotalStorage：存储总量，标准、低频、归档和深度归档存储量之和，不含提前删除量。</li>
 <li>StandardStorage：标准存储。</li>
 <li>InfrequentStorage：低频存储。</li>
+<li>ArchiveStorage：归档存储。</li>
+<li>DeepArchiveStorage：深度归档存储。</li>
+<li>DeletedArchiveStorage：归档提前删除量。</li>
+<li>DeletedDeepArchiveStorage：深度归档提前删除量。
+<li>ArchiveStandardRetrieval：归档标准取回量。</li>
+<li>ArchiveExpeditedRetrieval：归档快速取回量。</li>
+<li>ArchiveBulkRetrieval：归档批量取回量。</li>
+<li>DeepArchiveStandardRetrieval：深度归档标准取回量。</li>
+<li>DeepArchiveBulkRetrieval：深度归档批量取回量。</li>
 默认值为 TotalStorage。
      */
     public String getStorageType() {
@@ -153,14 +180,32 @@ public class DescribeStorageDetailsRequest extends AbstractModel{
 
     /**
      * Set 查询的存储类型，有效值：
-<li>TotalStorage：存储总量。</li>
+<li>TotalStorage：存储总量，标准、低频、归档和深度归档存储量之和，不含提前删除量。</li>
 <li>StandardStorage：标准存储。</li>
 <li>InfrequentStorage：低频存储。</li>
+<li>ArchiveStorage：归档存储。</li>
+<li>DeepArchiveStorage：深度归档存储。</li>
+<li>DeletedArchiveStorage：归档提前删除量。</li>
+<li>DeletedDeepArchiveStorage：深度归档提前删除量。
+<li>ArchiveStandardRetrieval：归档标准取回量。</li>
+<li>ArchiveExpeditedRetrieval：归档快速取回量。</li>
+<li>ArchiveBulkRetrieval：归档批量取回量。</li>
+<li>DeepArchiveStandardRetrieval：深度归档标准取回量。</li>
+<li>DeepArchiveBulkRetrieval：深度归档批量取回量。</li>
 默认值为 TotalStorage。
      * @param StorageType 查询的存储类型，有效值：
-<li>TotalStorage：存储总量。</li>
+<li>TotalStorage：存储总量，标准、低频、归档和深度归档存储量之和，不含提前删除量。</li>
 <li>StandardStorage：标准存储。</li>
 <li>InfrequentStorage：低频存储。</li>
+<li>ArchiveStorage：归档存储。</li>
+<li>DeepArchiveStorage：深度归档存储。</li>
+<li>DeletedArchiveStorage：归档提前删除量。</li>
+<li>DeletedDeepArchiveStorage：深度归档提前删除量。
+<li>ArchiveStandardRetrieval：归档标准取回量。</li>
+<li>ArchiveExpeditedRetrieval：归档快速取回量。</li>
+<li>ArchiveBulkRetrieval：归档批量取回量。</li>
+<li>DeepArchiveStandardRetrieval：深度归档标准取回量。</li>
+<li>DeepArchiveBulkRetrieval：深度归档批量取回量。</li>
 默认值为 TotalStorage。
      */
     public void setStorageType(String StorageType) {

@@ -100,6 +100,13 @@ public class EstablishCloudBaseRunServerRequest extends AbstractModel{
     private Long PublicAccess;
 
     /**
+    * OA PUBLIC MINIAPP VPC
+    */
+    @SerializedName("OpenAccessTypes")
+    @Expose
+    private String [] OpenAccessTypes;
+
+    /**
      * Get 环境id 
      * @return EnvId 环境id
      */
@@ -275,6 +282,22 @@ public class EstablishCloudBaseRunServerRequest extends AbstractModel{
         this.PublicAccess = PublicAccess;
     }
 
+    /**
+     * Get OA PUBLIC MINIAPP VPC 
+     * @return OpenAccessTypes OA PUBLIC MINIAPP VPC
+     */
+    public String [] getOpenAccessTypes() {
+        return this.OpenAccessTypes;
+    }
+
+    /**
+     * Set OA PUBLIC MINIAPP VPC
+     * @param OpenAccessTypes OA PUBLIC MINIAPP VPC
+     */
+    public void setOpenAccessTypes(String [] OpenAccessTypes) {
+        this.OpenAccessTypes = OpenAccessTypes;
+    }
+
     public EstablishCloudBaseRunServerRequest() {
     }
 
@@ -316,6 +339,12 @@ public class EstablishCloudBaseRunServerRequest extends AbstractModel{
         if (source.PublicAccess != null) {
             this.PublicAccess = new Long(source.PublicAccess);
         }
+        if (source.OpenAccessTypes != null) {
+            this.OpenAccessTypes = new String[source.OpenAccessTypes.length];
+            for (int i = 0; i < source.OpenAccessTypes.length; i++) {
+                this.OpenAccessTypes[i] = new String(source.OpenAccessTypes[i]);
+            }
+        }
     }
 
 
@@ -334,6 +363,7 @@ public class EstablishCloudBaseRunServerRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Source", this.Source);
         this.setParamObj(map, prefix + "VpcInfo.", this.VpcInfo);
         this.setParamSimple(map, prefix + "PublicAccess", this.PublicAccess);
+        this.setParamArraySimple(map, prefix + "OpenAccessTypes.", this.OpenAccessTypes);
 
     }
 }

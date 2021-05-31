@@ -65,6 +65,13 @@ public class UploadFirmwareRequest extends AbstractModel{
     private String FirmwareDescription;
 
     /**
+    * 固件升级模块；可选值 mcu|moudule
+    */
+    @SerializedName("FwType")
+    @Expose
+    private String FwType;
+
+    /**
      * Get 产品ID 
      * @return ProductID 产品ID
      */
@@ -160,6 +167,22 @@ public class UploadFirmwareRequest extends AbstractModel{
         this.FirmwareDescription = FirmwareDescription;
     }
 
+    /**
+     * Get 固件升级模块；可选值 mcu|moudule 
+     * @return FwType 固件升级模块；可选值 mcu|moudule
+     */
+    public String getFwType() {
+        return this.FwType;
+    }
+
+    /**
+     * Set 固件升级模块；可选值 mcu|moudule
+     * @param FwType 固件升级模块；可选值 mcu|moudule
+     */
+    public void setFwType(String FwType) {
+        this.FwType = FwType;
+    }
+
     public UploadFirmwareRequest() {
     }
 
@@ -186,6 +209,9 @@ public class UploadFirmwareRequest extends AbstractModel{
         if (source.FirmwareDescription != null) {
             this.FirmwareDescription = new String(source.FirmwareDescription);
         }
+        if (source.FwType != null) {
+            this.FwType = new String(source.FwType);
+        }
     }
 
 
@@ -199,6 +225,7 @@ public class UploadFirmwareRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "FileSize", this.FileSize);
         this.setParamSimple(map, prefix + "FirmwareName", this.FirmwareName);
         this.setParamSimple(map, prefix + "FirmwareDescription", this.FirmwareDescription);
+        this.setParamSimple(map, prefix + "FwType", this.FwType);
 
     }
 }

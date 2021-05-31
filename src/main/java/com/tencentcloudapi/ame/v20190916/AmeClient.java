@@ -139,6 +139,26 @@ public class AmeClient extends AbstractClient{
     }
 
     /**
+     *根据 Id 查询歌曲的详细信息，包含基础信息及播放信息。
+     * @param req DescribeKTVMusicDetailRequest
+     * @return DescribeKTVMusicDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeKTVMusicDetailResponse DescribeKTVMusicDetail(DescribeKTVMusicDetailRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeKTVMusicDetailResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeKTVMusicDetailResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeKTVMusicDetail");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *根据接口的模式及歌曲ID来取得歌词信息。
      * @param req DescribeLyricRequest
      * @return DescribeLyricResponse
@@ -291,6 +311,26 @@ public class AmeClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ReportDataResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ReportData");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *根据搜索条件，返回匹配的歌曲列表。
+     * @param req SearchKTVMusicsRequest
+     * @return SearchKTVMusicsResponse
+     * @throws TencentCloudSDKException
+     */
+    public SearchKTVMusicsResponse SearchKTVMusics(SearchKTVMusicsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SearchKTVMusicsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<SearchKTVMusicsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "SearchKTVMusics");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

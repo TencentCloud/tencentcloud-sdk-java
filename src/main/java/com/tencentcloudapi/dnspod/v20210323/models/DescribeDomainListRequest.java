@@ -23,21 +23,21 @@ import java.util.HashMap;
 public class DescribeDomainListRequest extends AbstractModel{
 
     /**
-    * 域名分组类型，默认为ALL
+    * 域名分组类型，默认为ALL。可取值为ALL，MINE，SHARE，ISMARK，PAUSE，VIP，RECENT，SHARE_OUT。
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 记录开始的偏移, 第一条记录为 0, 依次类推
+    * 记录开始的偏移, 第一条记录为 0, 依次类推。默认值为0。
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 要获取的域名数量, 比如获取20个, 则为20
+    * 要获取的域名数量, 比如获取20个, 则为20。默认值为3000。
     */
     @SerializedName("Limit")
     @Expose
@@ -58,48 +58,48 @@ public class DescribeDomainListRequest extends AbstractModel{
     private String Keyword;
 
     /**
-     * Get 域名分组类型，默认为ALL 
-     * @return Type 域名分组类型，默认为ALL
+     * Get 域名分组类型，默认为ALL。可取值为ALL，MINE，SHARE，ISMARK，PAUSE，VIP，RECENT，SHARE_OUT。 
+     * @return Type 域名分组类型，默认为ALL。可取值为ALL，MINE，SHARE，ISMARK，PAUSE，VIP，RECENT，SHARE_OUT。
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 域名分组类型，默认为ALL
-     * @param Type 域名分组类型，默认为ALL
+     * Set 域名分组类型，默认为ALL。可取值为ALL，MINE，SHARE，ISMARK，PAUSE，VIP，RECENT，SHARE_OUT。
+     * @param Type 域名分组类型，默认为ALL。可取值为ALL，MINE，SHARE，ISMARK，PAUSE，VIP，RECENT，SHARE_OUT。
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 记录开始的偏移, 第一条记录为 0, 依次类推 
-     * @return Offset 记录开始的偏移, 第一条记录为 0, 依次类推
+     * Get 记录开始的偏移, 第一条记录为 0, 依次类推。默认值为0。 
+     * @return Offset 记录开始的偏移, 第一条记录为 0, 依次类推。默认值为0。
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 记录开始的偏移, 第一条记录为 0, 依次类推
-     * @param Offset 记录开始的偏移, 第一条记录为 0, 依次类推
+     * Set 记录开始的偏移, 第一条记录为 0, 依次类推。默认值为0。
+     * @param Offset 记录开始的偏移, 第一条记录为 0, 依次类推。默认值为0。
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 要获取的域名数量, 比如获取20个, 则为20 
-     * @return Limit 要获取的域名数量, 比如获取20个, 则为20
+     * Get 要获取的域名数量, 比如获取20个, 则为20。默认值为3000。 
+     * @return Limit 要获取的域名数量, 比如获取20个, 则为20。默认值为3000。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 要获取的域名数量, 比如获取20个, 则为20
-     * @param Limit 要获取的域名数量, 比如获取20个, 则为20
+     * Set 要获取的域名数量, 比如获取20个, 则为20。默认值为3000。
+     * @param Limit 要获取的域名数量, 比如获取20个, 则为20。默认值为3000。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
