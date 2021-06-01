@@ -544,7 +544,11 @@ public abstract class AbstractClient {
       }
       queryString.append("&").append(entry.getKey()).append("=").append(v);
     }
-    return queryString.toString().substring(1);
+    if (queryString.length() == 0) {
+      return "";
+    } else {
+      return queryString.toString().substring(1);
+    }
   }
 
   private String formatRequestData(String action, Map<String, String> param)
