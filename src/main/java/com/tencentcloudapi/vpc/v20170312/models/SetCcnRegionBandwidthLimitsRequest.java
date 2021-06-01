@@ -37,7 +37,7 @@ public class SetCcnRegionBandwidthLimitsRequest extends AbstractModel{
     private CcnRegionBandwidthLimit [] CcnRegionBandwidthLimits;
 
     /**
-    * 是否设置带宽为默认值。
+    * 是否恢复云联网地域出口/地域间带宽限速为默认值（1Gbps）。false表示不恢复；true表示恢复。恢复默认值后，限速实例将不在控制台展示。该参数默认为 false，不恢复。
     */
     @SerializedName("SetDefaultLimitFlag")
     @Expose
@@ -76,16 +76,16 @@ public class SetCcnRegionBandwidthLimitsRequest extends AbstractModel{
     }
 
     /**
-     * Get 是否设置带宽为默认值。 
-     * @return SetDefaultLimitFlag 是否设置带宽为默认值。
+     * Get 是否恢复云联网地域出口/地域间带宽限速为默认值（1Gbps）。false表示不恢复；true表示恢复。恢复默认值后，限速实例将不在控制台展示。该参数默认为 false，不恢复。 
+     * @return SetDefaultLimitFlag 是否恢复云联网地域出口/地域间带宽限速为默认值（1Gbps）。false表示不恢复；true表示恢复。恢复默认值后，限速实例将不在控制台展示。该参数默认为 false，不恢复。
      */
     public Boolean getSetDefaultLimitFlag() {
         return this.SetDefaultLimitFlag;
     }
 
     /**
-     * Set 是否设置带宽为默认值。
-     * @param SetDefaultLimitFlag 是否设置带宽为默认值。
+     * Set 是否恢复云联网地域出口/地域间带宽限速为默认值（1Gbps）。false表示不恢复；true表示恢复。恢复默认值后，限速实例将不在控制台展示。该参数默认为 false，不恢复。
+     * @param SetDefaultLimitFlag 是否恢复云联网地域出口/地域间带宽限速为默认值（1Gbps）。false表示不恢复；true表示恢复。恢复默认值后，限速实例将不在控制台展示。该参数默认为 false，不恢复。
      */
     public void setSetDefaultLimitFlag(Boolean SetDefaultLimitFlag) {
         this.SetDefaultLimitFlag = SetDefaultLimitFlag;

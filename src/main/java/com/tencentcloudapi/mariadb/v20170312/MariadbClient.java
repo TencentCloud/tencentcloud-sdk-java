@@ -702,6 +702,26 @@ public class MariadbClient extends AbstractClient{
     }
 
     /**
+     *本接口（DestroyHourDBInstance）用于销毁按量计费实例。
+     * @param req DestroyHourDBInstanceRequest
+     * @return DestroyHourDBInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DestroyHourDBInstanceResponse DestroyHourDBInstance(DestroyHourDBInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DestroyHourDBInstanceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DestroyHourDBInstanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DestroyHourDBInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口(DisassociateSecurityGroups)用于安全组批量解绑实例。
      * @param req DisassociateSecurityGroupsRequest
      * @return DisassociateSecurityGroupsResponse
@@ -816,6 +836,31 @@ public class MariadbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyAccountDescriptionResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyAccountDescription");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口(ModifyAccountPrivileges)用于修改云数据库的账户的权限信息。
+
+**注意**
+- 系统保留库："mysql"，只开放["SELECT"]权限
+- 只读账号授予读写权限会报错
+- 不传该参数表示保留现有权限，如需清除，请在复杂类型Privileges字段传空数组
+     * @param req ModifyAccountPrivilegesRequest
+     * @return ModifyAccountPrivilegesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAccountPrivilegesResponse ModifyAccountPrivileges(ModifyAccountPrivilegesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyAccountPrivilegesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyAccountPrivilegesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyAccountPrivileges");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

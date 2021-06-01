@@ -1962,6 +1962,26 @@ public class CwpClient extends AbstractClient{
     }
 
     /**
+     *导出资产管理内核模块列表
+     * @param req ExportAssetCoreModuleListRequest
+     * @return ExportAssetCoreModuleListResponse
+     * @throws TencentCloudSDKException
+     */
+    public ExportAssetCoreModuleListResponse ExportAssetCoreModuleList(ExportAssetCoreModuleListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ExportAssetCoreModuleListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ExportAssetCoreModuleListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ExportAssetCoreModuleList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *导出网络攻击日志
      * @param req ExportAttackLogsRequest
      * @return ExportAttackLogsResponse

@@ -142,6 +142,20 @@ public class DescribeDBInstancesRequest extends AbstractModel{
     private String FilterInstanceType;
 
     /**
+    * 按照实例状态进行筛选
+    */
+    @SerializedName("Status")
+    @Expose
+    private Long [] Status;
+
+    /**
+    * 排除实例状态
+    */
+    @SerializedName("ExcludeStatus")
+    @Expose
+    private Long [] ExcludeStatus;
+
+    /**
      * Get 按照一个或者多个实例 ID 查询。实例 ID 形如：tdsql-ow728lmc。每次请求的实例的上限为100。 
      * @return InstanceIds 按照一个或者多个实例 ID 查询。实例 ID 形如：tdsql-ow728lmc。每次请求的实例的上限为100。
      */
@@ -413,6 +427,38 @@ public class DescribeDBInstancesRequest extends AbstractModel{
         this.FilterInstanceType = FilterInstanceType;
     }
 
+    /**
+     * Get 按照实例状态进行筛选 
+     * @return Status 按照实例状态进行筛选
+     */
+    public Long [] getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set 按照实例状态进行筛选
+     * @param Status 按照实例状态进行筛选
+     */
+    public void setStatus(Long [] Status) {
+        this.Status = Status;
+    }
+
+    /**
+     * Get 排除实例状态 
+     * @return ExcludeStatus 排除实例状态
+     */
+    public Long [] getExcludeStatus() {
+        return this.ExcludeStatus;
+    }
+
+    /**
+     * Set 排除实例状态
+     * @param ExcludeStatus 排除实例状态
+     */
+    public void setExcludeStatus(Long [] ExcludeStatus) {
+        this.ExcludeStatus = ExcludeStatus;
+    }
+
     public DescribeDBInstancesRequest() {
     }
 
@@ -487,6 +533,18 @@ public class DescribeDBInstancesRequest extends AbstractModel{
         if (source.FilterInstanceType != null) {
             this.FilterInstanceType = new String(source.FilterInstanceType);
         }
+        if (source.Status != null) {
+            this.Status = new Long[source.Status.length];
+            for (int i = 0; i < source.Status.length; i++) {
+                this.Status[i] = new Long(source.Status[i]);
+            }
+        }
+        if (source.ExcludeStatus != null) {
+            this.ExcludeStatus = new Long[source.ExcludeStatus.length];
+            for (int i = 0; i < source.ExcludeStatus.length; i++) {
+                this.ExcludeStatus[i] = new Long(source.ExcludeStatus[i]);
+            }
+        }
     }
 
 
@@ -511,6 +569,8 @@ public class DescribeDBInstancesRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "ExclusterIds.", this.ExclusterIds);
         this.setParamArraySimple(map, prefix + "TagKeys.", this.TagKeys);
         this.setParamSimple(map, prefix + "FilterInstanceType", this.FilterInstanceType);
+        this.setParamArraySimple(map, prefix + "Status.", this.Status);
+        this.setParamArraySimple(map, prefix + "ExcludeStatus.", this.ExcludeStatus);
 
     }
 }

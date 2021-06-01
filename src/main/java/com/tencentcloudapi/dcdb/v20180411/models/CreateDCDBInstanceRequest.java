@@ -150,6 +150,13 @@ public class CreateDCDBInstanceRequest extends AbstractModel{
     private ResourceTag [] ResourceTags;
 
     /**
+    * 参数列表。本接口的可选值为：character_set_server（字符集，必传），lower_case_table_names（表名大小写敏感，必传，0 - 敏感；1-不敏感），innodb_page_size（innodb数据页，默认16K），sync_mode（同步模式：0 - 异步； 1 - 强同步；2 - 强同步可退化。默认为强同步可退化）。
+    */
+    @SerializedName("InitParams")
+    @Expose
+    private DBParamValue [] InitParams;
+
+    /**
      * Get 分片节点可用区分布，最多可填两个可用区。当分片规格为一主两从时，其中两个节点在第一个可用区。
 注意当前可售卖的可用区需要通过DescribeDCDBSaleInfo接口拉取。 
      * @return Zones 分片节点可用区分布，最多可填两个可用区。当分片规格为一主两从时，其中两个节点在第一个可用区。
@@ -453,6 +460,22 @@ public class CreateDCDBInstanceRequest extends AbstractModel{
         this.ResourceTags = ResourceTags;
     }
 
+    /**
+     * Get 参数列表。本接口的可选值为：character_set_server（字符集，必传），lower_case_table_names（表名大小写敏感，必传，0 - 敏感；1-不敏感），innodb_page_size（innodb数据页，默认16K），sync_mode（同步模式：0 - 异步； 1 - 强同步；2 - 强同步可退化。默认为强同步可退化）。 
+     * @return InitParams 参数列表。本接口的可选值为：character_set_server（字符集，必传），lower_case_table_names（表名大小写敏感，必传，0 - 敏感；1-不敏感），innodb_page_size（innodb数据页，默认16K），sync_mode（同步模式：0 - 异步； 1 - 强同步；2 - 强同步可退化。默认为强同步可退化）。
+     */
+    public DBParamValue [] getInitParams() {
+        return this.InitParams;
+    }
+
+    /**
+     * Set 参数列表。本接口的可选值为：character_set_server（字符集，必传），lower_case_table_names（表名大小写敏感，必传，0 - 敏感；1-不敏感），innodb_page_size（innodb数据页，默认16K），sync_mode（同步模式：0 - 异步； 1 - 强同步；2 - 强同步可退化。默认为强同步可退化）。
+     * @param InitParams 参数列表。本接口的可选值为：character_set_server（字符集，必传），lower_case_table_names（表名大小写敏感，必传，0 - 敏感；1-不敏感），innodb_page_size（innodb数据页，默认16K），sync_mode（同步模式：0 - 异步； 1 - 强同步；2 - 强同步可退化。默认为强同步可退化）。
+     */
+    public void setInitParams(DBParamValue [] InitParams) {
+        this.InitParams = InitParams;
+    }
+
     public CreateDCDBInstanceRequest() {
     }
 
@@ -521,6 +544,12 @@ public class CreateDCDBInstanceRequest extends AbstractModel{
                 this.ResourceTags[i] = new ResourceTag(source.ResourceTags[i]);
             }
         }
+        if (source.InitParams != null) {
+            this.InitParams = new DBParamValue[source.InitParams.length];
+            for (int i = 0; i < source.InitParams.length; i++) {
+                this.InitParams[i] = new DBParamValue(source.InitParams[i]);
+            }
+        }
     }
 
 
@@ -545,6 +574,7 @@ public class CreateDCDBInstanceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "InstanceName", this.InstanceName);
         this.setParamSimple(map, prefix + "Ipv6Flag", this.Ipv6Flag);
         this.setParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
+        this.setParamArrayObj(map, prefix + "InitParams.", this.InitParams);
 
     }
 }

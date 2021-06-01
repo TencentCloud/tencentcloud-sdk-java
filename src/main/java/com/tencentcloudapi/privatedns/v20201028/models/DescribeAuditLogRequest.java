@@ -30,7 +30,7 @@ public class DescribeAuditLogRequest extends AbstractModel{
     private String TimeRangeBegin;
 
     /**
-    * 筛选参数：
+    * 筛选参数：ZoneId：私有域ID；Domain：私有域；OperatorUin：操作者账号ID
     */
     @SerializedName("Filters")
     @Expose
@@ -74,16 +74,16 @@ public class DescribeAuditLogRequest extends AbstractModel{
     }
 
     /**
-     * Get 筛选参数： 
-     * @return Filters 筛选参数：
+     * Get 筛选参数：ZoneId：私有域ID；Domain：私有域；OperatorUin：操作者账号ID 
+     * @return Filters 筛选参数：ZoneId：私有域ID；Domain：私有域；OperatorUin：操作者账号ID
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 筛选参数：
-     * @param Filters 筛选参数：
+     * Set 筛选参数：ZoneId：私有域ID；Domain：私有域；OperatorUin：操作者账号ID
+     * @param Filters 筛选参数：ZoneId：私有域ID；Domain：私有域；OperatorUin：操作者账号ID
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

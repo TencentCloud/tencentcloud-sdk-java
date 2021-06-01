@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeRequestDataRequest extends AbstractModel{
 
     /**
-    * 请求量统计起始时间
+    * 请求量统计起始时间，格式：2020-11-22 00:00:00
     */
     @SerializedName("TimeRangeBegin")
     @Expose
@@ -37,23 +37,23 @@ public class DescribeRequestDataRequest extends AbstractModel{
     private Filter [] Filters;
 
     /**
-    * 请求量统计结束时间
+    * 请求量统计结束时间，格式：2020-11-22 23:59:59
     */
     @SerializedName("TimeRangeEnd")
     @Expose
     private String TimeRangeEnd;
 
     /**
-     * Get 请求量统计起始时间 
-     * @return TimeRangeBegin 请求量统计起始时间
+     * Get 请求量统计起始时间，格式：2020-11-22 00:00:00 
+     * @return TimeRangeBegin 请求量统计起始时间，格式：2020-11-22 00:00:00
      */
     public String getTimeRangeBegin() {
         return this.TimeRangeBegin;
     }
 
     /**
-     * Set 请求量统计起始时间
-     * @param TimeRangeBegin 请求量统计起始时间
+     * Set 请求量统计起始时间，格式：2020-11-22 00:00:00
+     * @param TimeRangeBegin 请求量统计起始时间，格式：2020-11-22 00:00:00
      */
     public void setTimeRangeBegin(String TimeRangeBegin) {
         this.TimeRangeBegin = TimeRangeBegin;
@@ -76,16 +76,16 @@ public class DescribeRequestDataRequest extends AbstractModel{
     }
 
     /**
-     * Get 请求量统计结束时间 
-     * @return TimeRangeEnd 请求量统计结束时间
+     * Get 请求量统计结束时间，格式：2020-11-22 23:59:59 
+     * @return TimeRangeEnd 请求量统计结束时间，格式：2020-11-22 23:59:59
      */
     public String getTimeRangeEnd() {
         return this.TimeRangeEnd;
     }
 
     /**
-     * Set 请求量统计结束时间
-     * @param TimeRangeEnd 请求量统计结束时间
+     * Set 请求量统计结束时间，格式：2020-11-22 23:59:59
+     * @param TimeRangeEnd 请求量统计结束时间，格式：2020-11-22 23:59:59
      */
     public void setTimeRangeEnd(String TimeRangeEnd) {
         this.TimeRangeEnd = TimeRangeEnd;

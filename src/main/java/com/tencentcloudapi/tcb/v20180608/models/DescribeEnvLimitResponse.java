@@ -79,6 +79,20 @@ public class DescribeEnvLimitResponse extends AbstractModel{
     private Long CurrentDeleteMonthly;
 
     /**
+    * 微信网关体验版可购买月份数
+    */
+    @SerializedName("MaxFreeTrialNum")
+    @Expose
+    private Long MaxFreeTrialNum;
+
+    /**
+    * 微信网关体验版已购买月份数
+    */
+    @SerializedName("CurrentFreeTrialNum")
+    @Expose
+    private Long CurrentFreeTrialNum;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -214,6 +228,38 @@ public class DescribeEnvLimitResponse extends AbstractModel{
     }
 
     /**
+     * Get 微信网关体验版可购买月份数 
+     * @return MaxFreeTrialNum 微信网关体验版可购买月份数
+     */
+    public Long getMaxFreeTrialNum() {
+        return this.MaxFreeTrialNum;
+    }
+
+    /**
+     * Set 微信网关体验版可购买月份数
+     * @param MaxFreeTrialNum 微信网关体验版可购买月份数
+     */
+    public void setMaxFreeTrialNum(Long MaxFreeTrialNum) {
+        this.MaxFreeTrialNum = MaxFreeTrialNum;
+    }
+
+    /**
+     * Get 微信网关体验版已购买月份数 
+     * @return CurrentFreeTrialNum 微信网关体验版已购买月份数
+     */
+    public Long getCurrentFreeTrialNum() {
+        return this.CurrentFreeTrialNum;
+    }
+
+    /**
+     * Set 微信网关体验版已购买月份数
+     * @param CurrentFreeTrialNum 微信网关体验版已购买月份数
+     */
+    public void setCurrentFreeTrialNum(Long CurrentFreeTrialNum) {
+        this.CurrentFreeTrialNum = CurrentFreeTrialNum;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -261,6 +307,12 @@ public class DescribeEnvLimitResponse extends AbstractModel{
         if (source.CurrentDeleteMonthly != null) {
             this.CurrentDeleteMonthly = new Long(source.CurrentDeleteMonthly);
         }
+        if (source.MaxFreeTrialNum != null) {
+            this.MaxFreeTrialNum = new Long(source.MaxFreeTrialNum);
+        }
+        if (source.CurrentFreeTrialNum != null) {
+            this.CurrentFreeTrialNum = new Long(source.CurrentFreeTrialNum);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -279,6 +331,8 @@ public class DescribeEnvLimitResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "CurrentDeleteTotal", this.CurrentDeleteTotal);
         this.setParamSimple(map, prefix + "MaxDeleteMonthly", this.MaxDeleteMonthly);
         this.setParamSimple(map, prefix + "CurrentDeleteMonthly", this.CurrentDeleteMonthly);
+        this.setParamSimple(map, prefix + "MaxFreeTrialNum", this.MaxFreeTrialNum);
+        this.setParamSimple(map, prefix + "CurrentFreeTrialNum", this.CurrentFreeTrialNum);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

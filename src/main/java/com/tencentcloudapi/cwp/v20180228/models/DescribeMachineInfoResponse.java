@@ -157,6 +157,13 @@ public class DescribeMachineInfoResponse extends AbstractModel{
     private String ProVersionDeadline;
 
     /**
+    * 是否有资产扫描记录，0无，1有
+    */
+    @SerializedName("HasAssetScan")
+    @Expose
+    private Long HasAssetScan;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -484,6 +491,22 @@ public class DescribeMachineInfoResponse extends AbstractModel{
     }
 
     /**
+     * Get 是否有资产扫描记录，0无，1有 
+     * @return HasAssetScan 是否有资产扫描记录，0无，1有
+     */
+    public Long getHasAssetScan() {
+        return this.HasAssetScan;
+    }
+
+    /**
+     * Set 是否有资产扫描记录，0无，1有
+     * @param HasAssetScan 是否有资产扫描记录，0无，1有
+     */
+    public void setHasAssetScan(Long HasAssetScan) {
+        this.HasAssetScan = HasAssetScan;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -561,6 +584,9 @@ public class DescribeMachineInfoResponse extends AbstractModel{
         if (source.ProVersionDeadline != null) {
             this.ProVersionDeadline = new String(source.ProVersionDeadline);
         }
+        if (source.HasAssetScan != null) {
+            this.HasAssetScan = new Long(source.HasAssetScan);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -589,6 +615,7 @@ public class DescribeMachineInfoResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "FreeVulsLeft", this.FreeVulsLeft);
         this.setParamSimple(map, prefix + "AgentVersion", this.AgentVersion);
         this.setParamSimple(map, prefix + "ProVersionDeadline", this.ProVersionDeadline);
+        this.setParamSimple(map, prefix + "HasAssetScan", this.HasAssetScan);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

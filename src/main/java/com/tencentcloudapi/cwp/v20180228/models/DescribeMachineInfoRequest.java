@@ -30,6 +30,13 @@ public class DescribeMachineInfoRequest extends AbstractModel{
     private String Uuid;
 
     /**
+    * cvm id， quuid、uuid必填一个
+    */
+    @SerializedName("Quuid")
+    @Expose
+    private String Quuid;
+
+    /**
      * Get 云镜客户端唯一Uuid。 
      * @return Uuid 云镜客户端唯一Uuid。
      */
@@ -45,6 +52,22 @@ public class DescribeMachineInfoRequest extends AbstractModel{
         this.Uuid = Uuid;
     }
 
+    /**
+     * Get cvm id， quuid、uuid必填一个 
+     * @return Quuid cvm id， quuid、uuid必填一个
+     */
+    public String getQuuid() {
+        return this.Quuid;
+    }
+
+    /**
+     * Set cvm id， quuid、uuid必填一个
+     * @param Quuid cvm id， quuid、uuid必填一个
+     */
+    public void setQuuid(String Quuid) {
+        this.Quuid = Quuid;
+    }
+
     public DescribeMachineInfoRequest() {
     }
 
@@ -56,6 +79,9 @@ public class DescribeMachineInfoRequest extends AbstractModel{
         if (source.Uuid != null) {
             this.Uuid = new String(source.Uuid);
         }
+        if (source.Quuid != null) {
+            this.Quuid = new String(source.Quuid);
+        }
     }
 
 
@@ -64,6 +90,7 @@ public class DescribeMachineInfoRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Uuid", this.Uuid);
+        this.setParamSimple(map, prefix + "Quuid", this.Quuid);
 
     }
 }

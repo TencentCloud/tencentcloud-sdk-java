@@ -58,6 +58,13 @@ ye1w7d : 事件7天存储周套餐。
     private String PackageId;
 
     /**
+    * 如果当前设备已开启云存套餐，Override=1会使用新套餐覆盖原有套餐。不传此参数则默认为0。
+    */
+    @SerializedName("Override")
+    @Expose
+    private Long Override;
+
+    /**
      * Get 产品ID 
      * @return ProductId 产品ID
      */
@@ -161,6 +168,22 @@ ye1w7d : 事件7天存储周套餐。
         this.PackageId = PackageId;
     }
 
+    /**
+     * Get 如果当前设备已开启云存套餐，Override=1会使用新套餐覆盖原有套餐。不传此参数则默认为0。 
+     * @return Override 如果当前设备已开启云存套餐，Override=1会使用新套餐覆盖原有套餐。不传此参数则默认为0。
+     */
+    public Long getOverride() {
+        return this.Override;
+    }
+
+    /**
+     * Set 如果当前设备已开启云存套餐，Override=1会使用新套餐覆盖原有套餐。不传此参数则默认为0。
+     * @param Override 如果当前设备已开启云存套餐，Override=1会使用新套餐覆盖原有套餐。不传此参数则默认为0。
+     */
+    public void setOverride(Long Override) {
+        this.Override = Override;
+    }
+
     public CreateCloudStorageRequest() {
     }
 
@@ -178,6 +201,9 @@ ye1w7d : 事件7天存储周套餐。
         if (source.PackageId != null) {
             this.PackageId = new String(source.PackageId);
         }
+        if (source.Override != null) {
+            this.Override = new Long(source.Override);
+        }
     }
 
 
@@ -188,6 +214,7 @@ ye1w7d : 事件7天存储周套餐。
         this.setParamSimple(map, prefix + "ProductId", this.ProductId);
         this.setParamSimple(map, prefix + "DeviceName", this.DeviceName);
         this.setParamSimple(map, prefix + "PackageId", this.PackageId);
+        this.setParamSimple(map, prefix + "Override", this.Override);
 
     }
 }

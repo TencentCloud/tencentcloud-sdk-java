@@ -51,7 +51,7 @@ public class CreatePrivateZoneRequest extends AbstractModel{
     private String Remark;
 
     /**
-    * 是否开启子域名递归, ENABLED， DISABLED
+    * 是否开启子域名递归, ENABLED， DISABLED。默认值为DISABLED
     */
     @SerializedName("DnsForwardStatus")
     @Expose
@@ -129,16 +129,16 @@ public class CreatePrivateZoneRequest extends AbstractModel{
     }
 
     /**
-     * Get 是否开启子域名递归, ENABLED， DISABLED 
-     * @return DnsForwardStatus 是否开启子域名递归, ENABLED， DISABLED
+     * Get 是否开启子域名递归, ENABLED， DISABLED。默认值为DISABLED 
+     * @return DnsForwardStatus 是否开启子域名递归, ENABLED， DISABLED。默认值为DISABLED
      */
     public String getDnsForwardStatus() {
         return this.DnsForwardStatus;
     }
 
     /**
-     * Set 是否开启子域名递归, ENABLED， DISABLED
-     * @param DnsForwardStatus 是否开启子域名递归, ENABLED， DISABLED
+     * Set 是否开启子域名递归, ENABLED， DISABLED。默认值为DISABLED
+     * @param DnsForwardStatus 是否开启子域名递归, ENABLED， DISABLED。默认值为DISABLED
      */
     public void setDnsForwardStatus(String DnsForwardStatus) {
         this.DnsForwardStatus = DnsForwardStatus;

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribePrivateZoneServiceResponse extends AbstractModel{
 
     /**
-    * 私有域解析服务开通状态
+    * 私有域解析服务开通状态。ENABLED已开通，DISABLED未开通
     */
     @SerializedName("ServiceStatus")
     @Expose
@@ -37,16 +37,16 @@ public class DescribePrivateZoneServiceResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 私有域解析服务开通状态 
-     * @return ServiceStatus 私有域解析服务开通状态
+     * Get 私有域解析服务开通状态。ENABLED已开通，DISABLED未开通 
+     * @return ServiceStatus 私有域解析服务开通状态。ENABLED已开通，DISABLED未开通
      */
     public String getServiceStatus() {
         return this.ServiceStatus;
     }
 
     /**
-     * Set 私有域解析服务开通状态
-     * @param ServiceStatus 私有域解析服务开通状态
+     * Set 私有域解析服务开通状态。ENABLED已开通，DISABLED未开通
+     * @param ServiceStatus 私有域解析服务开通状态。ENABLED已开通，DISABLED未开通
      */
     public void setServiceStatus(String ServiceStatus) {
         this.ServiceStatus = ServiceStatus;

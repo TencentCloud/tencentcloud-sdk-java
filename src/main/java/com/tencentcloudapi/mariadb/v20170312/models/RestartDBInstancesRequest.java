@@ -30,6 +30,13 @@ public class RestartDBInstancesRequest extends AbstractModel{
     private String [] InstanceIds;
 
     /**
+    * 重启时间
+    */
+    @SerializedName("RestartTime")
+    @Expose
+    private String RestartTime;
+
+    /**
      * Get 实例ID的数组 
      * @return InstanceIds 实例ID的数组
      */
@@ -43,6 +50,22 @@ public class RestartDBInstancesRequest extends AbstractModel{
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;
+    }
+
+    /**
+     * Get 重启时间 
+     * @return RestartTime 重启时间
+     */
+    public String getRestartTime() {
+        return this.RestartTime;
+    }
+
+    /**
+     * Set 重启时间
+     * @param RestartTime 重启时间
+     */
+    public void setRestartTime(String RestartTime) {
+        this.RestartTime = RestartTime;
     }
 
     public RestartDBInstancesRequest() {
@@ -59,6 +82,9 @@ public class RestartDBInstancesRequest extends AbstractModel{
                 this.InstanceIds[i] = new String(source.InstanceIds[i]);
             }
         }
+        if (source.RestartTime != null) {
+            this.RestartTime = new String(source.RestartTime);
+        }
     }
 
 
@@ -67,6 +93,7 @@ public class RestartDBInstancesRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
+        this.setParamSimple(map, prefix + "RestartTime", this.RestartTime);
 
     }
 }

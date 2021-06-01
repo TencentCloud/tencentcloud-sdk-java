@@ -1,0 +1,127 @@
+/*
+ * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+package com.tencentcloudapi.cls.v20201016.models;
+
+import com.tencentcloudapi.common.AbstractModel;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
+import java.util.HashMap;
+
+public class DescribeAlarmsResponse extends AbstractModel{
+
+    /**
+    * 告警策略列表。
+    */
+    @SerializedName("Alarms")
+    @Expose
+    private AlarmInfo [] Alarms;
+
+    /**
+    * 符合查询条件的告警策略数目。
+    */
+    @SerializedName("TotalCount")
+    @Expose
+    private Long TotalCount;
+
+    /**
+    * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+    */
+    @SerializedName("RequestId")
+    @Expose
+    private String RequestId;
+
+    /**
+     * Get 告警策略列表。 
+     * @return Alarms 告警策略列表。
+     */
+    public AlarmInfo [] getAlarms() {
+        return this.Alarms;
+    }
+
+    /**
+     * Set 告警策略列表。
+     * @param Alarms 告警策略列表。
+     */
+    public void setAlarms(AlarmInfo [] Alarms) {
+        this.Alarms = Alarms;
+    }
+
+    /**
+     * Get 符合查询条件的告警策略数目。 
+     * @return TotalCount 符合查询条件的告警策略数目。
+     */
+    public Long getTotalCount() {
+        return this.TotalCount;
+    }
+
+    /**
+     * Set 符合查询条件的告警策略数目。
+     * @param TotalCount 符合查询条件的告警策略数目。
+     */
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
+    }
+
+    /**
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
+     * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     */
+    public String getRequestId() {
+        return this.RequestId;
+    }
+
+    /**
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     */
+    public void setRequestId(String RequestId) {
+        this.RequestId = RequestId;
+    }
+
+    public DescribeAlarmsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeAlarmsResponse(DescribeAlarmsResponse source) {
+        if (source.Alarms != null) {
+            this.Alarms = new AlarmInfo[source.Alarms.length];
+            for (int i = 0; i < source.Alarms.length; i++) {
+                this.Alarms[i] = new AlarmInfo(source.Alarms[i]);
+            }
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
+    /**
+     * Internal implementation, normal users should not use it.
+     */
+    public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArrayObj(map, prefix + "Alarms.", this.Alarms);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
+
+    }
+}
+
