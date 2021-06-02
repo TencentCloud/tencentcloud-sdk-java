@@ -37,7 +37,7 @@ public class ModifyBlockIgnoreListRequest extends AbstractModel{
     private IocListData [] IOC;
 
     /**
-    * 默认值:delete（删除）、edit（编辑）、add（添加）  其他值无效
+    * 可选值：delete（删除）、edit（编辑）、add（添加）  其他值无效
     */
     @SerializedName("IocAction")
     @Expose
@@ -90,16 +90,16 @@ public class ModifyBlockIgnoreListRequest extends AbstractModel{
     }
 
     /**
-     * Get 默认值:delete（删除）、edit（编辑）、add（添加）  其他值无效 
-     * @return IocAction 默认值:delete（删除）、edit（编辑）、add（添加）  其他值无效
+     * Get 可选值：delete（删除）、edit（编辑）、add（添加）  其他值无效 
+     * @return IocAction 可选值：delete（删除）、edit（编辑）、add（添加）  其他值无效
      */
     public String getIocAction() {
         return this.IocAction;
     }
 
     /**
-     * Set 默认值:delete（删除）、edit（编辑）、add（添加）  其他值无效
-     * @param IocAction 默认值:delete（删除）、edit（编辑）、add（添加）  其他值无效
+     * Set 可选值：delete（删除）、edit（编辑）、add（添加）  其他值无效
+     * @param IocAction 可选值：delete（删除）、edit（编辑）、add（添加）  其他值无效
      */
     public void setIocAction(String IocAction) {
         this.IocAction = IocAction;

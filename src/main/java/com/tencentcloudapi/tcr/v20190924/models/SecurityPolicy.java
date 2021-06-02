@@ -37,7 +37,7 @@ public class SecurityPolicy extends AbstractModel{
     private String Description;
 
     /**
-    * 192.168.1.0/24
+    * 运行访问的公网IP地址端
     */
     @SerializedName("CidrBlock")
     @Expose
@@ -83,16 +83,16 @@ public class SecurityPolicy extends AbstractModel{
     }
 
     /**
-     * Get 192.168.1.0/24 
-     * @return CidrBlock 192.168.1.0/24
+     * Get 运行访问的公网IP地址端 
+     * @return CidrBlock 运行访问的公网IP地址端
      */
     public String getCidrBlock() {
         return this.CidrBlock;
     }
 
     /**
-     * Set 192.168.1.0/24
-     * @param CidrBlock 192.168.1.0/24
+     * Set 运行访问的公网IP地址端
+     * @param CidrBlock 运行访问的公网IP地址端
      */
     public void setCidrBlock(String CidrBlock) {
         this.CidrBlock = CidrBlock;

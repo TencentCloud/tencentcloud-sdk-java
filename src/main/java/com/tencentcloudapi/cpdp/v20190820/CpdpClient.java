@@ -1488,6 +1488,26 @@ public class CpdpClient extends AbstractClient{
     }
 
     /**
+     *商户查询是否签约和签约行为上报
+     * @param req RegisterBehaviorRequest
+     * @return RegisterBehaviorResponse
+     * @throws TencentCloudSDKException
+     */
+    public RegisterBehaviorResponse RegisterBehavior(RegisterBehaviorRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RegisterBehaviorResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<RegisterBehaviorResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "RegisterBehavior");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *登记挂账(支持撤销)
      * @param req RegisterBillRequest
      * @return RegisterBillResponse

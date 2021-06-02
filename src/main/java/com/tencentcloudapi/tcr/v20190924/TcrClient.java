@@ -199,6 +199,26 @@ public class TcrClient extends AbstractClient{
     }
 
     /**
+     *用于在TCR实例中，创建多个白名单策略
+     * @param req CreateMultipleSecurityPolicyRequest
+     * @return CreateMultipleSecurityPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateMultipleSecurityPolicyResponse CreateMultipleSecurityPolicy(CreateMultipleSecurityPolicyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateMultipleSecurityPolicyResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateMultipleSecurityPolicyResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateMultipleSecurityPolicy");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *用于在企业版中创建命名空间
      * @param req CreateNamespaceRequest
      * @return CreateNamespaceResponse
@@ -551,6 +571,26 @@ public class TcrClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteInternalEndpointDnsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteInternalEndpointDns");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *用于删除实例多个公网访问白名单策略
+     * @param req DeleteMultipleSecurityPolicyRequest
+     * @return DeleteMultipleSecurityPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteMultipleSecurityPolicyResponse DeleteMultipleSecurityPolicy(DeleteMultipleSecurityPolicyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteMultipleSecurityPolicyResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteMultipleSecurityPolicyResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteMultipleSecurityPolicy");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

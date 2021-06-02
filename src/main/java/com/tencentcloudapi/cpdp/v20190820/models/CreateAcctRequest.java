@@ -92,6 +92,7 @@ public class CreateAcctRequest extends AbstractModel{
     * 子商户类型：
 个人: personal
 企业: enterprise
+个体工商户: individual
 缺省: enterprise
     */
     @SerializedName("SubMchType")
@@ -158,6 +159,21 @@ development: 开发环境
     @SerializedName("MidasEnvironment")
     @Expose
     private String MidasEnvironment;
+
+    /**
+    * 店铺名称
+企业、个体工商户必输
+    */
+    @SerializedName("SubMerchantStoreName")
+    @Expose
+    private String SubMerchantStoreName;
+
+    /**
+    * 公司信息
+    */
+    @SerializedName("OrganizationInfo")
+    @Expose
+    private OrganizationInfo OrganizationInfo;
 
     /**
      * Get 聚鑫平台分配的支付MidasAppId 
@@ -319,10 +335,12 @@ development: 开发环境
      * Get 子商户类型：
 个人: personal
 企业: enterprise
+个体工商户: individual
 缺省: enterprise 
      * @return SubMchType 子商户类型：
 个人: personal
 企业: enterprise
+个体工商户: individual
 缺省: enterprise
      */
     public String getSubMchType() {
@@ -333,10 +351,12 @@ development: 开发环境
      * Set 子商户类型：
 个人: personal
 企业: enterprise
+个体工商户: individual
 缺省: enterprise
      * @param SubMchType 子商户类型：
 个人: personal
 企业: enterprise
+个体工商户: individual
 缺省: enterprise
      */
     public void setSubMchType(String SubMchType) {
@@ -503,6 +523,42 @@ development: 开发环境
         this.MidasEnvironment = MidasEnvironment;
     }
 
+    /**
+     * Get 店铺名称
+企业、个体工商户必输 
+     * @return SubMerchantStoreName 店铺名称
+企业、个体工商户必输
+     */
+    public String getSubMerchantStoreName() {
+        return this.SubMerchantStoreName;
+    }
+
+    /**
+     * Set 店铺名称
+企业、个体工商户必输
+     * @param SubMerchantStoreName 店铺名称
+企业、个体工商户必输
+     */
+    public void setSubMerchantStoreName(String SubMerchantStoreName) {
+        this.SubMerchantStoreName = SubMerchantStoreName;
+    }
+
+    /**
+     * Get 公司信息 
+     * @return OrganizationInfo 公司信息
+     */
+    public OrganizationInfo getOrganizationInfo() {
+        return this.OrganizationInfo;
+    }
+
+    /**
+     * Set 公司信息
+     * @param OrganizationInfo 公司信息
+     */
+    public void setOrganizationInfo(OrganizationInfo OrganizationInfo) {
+        this.OrganizationInfo = OrganizationInfo;
+    }
+
     public CreateAcctRequest() {
     }
 
@@ -562,6 +618,12 @@ development: 开发环境
         if (source.MidasEnvironment != null) {
             this.MidasEnvironment = new String(source.MidasEnvironment);
         }
+        if (source.SubMerchantStoreName != null) {
+            this.SubMerchantStoreName = new String(source.SubMerchantStoreName);
+        }
+        if (source.OrganizationInfo != null) {
+            this.OrganizationInfo = new OrganizationInfo(source.OrganizationInfo);
+        }
     }
 
 
@@ -586,6 +648,8 @@ development: 开发环境
         this.setParamSimple(map, prefix + "EncryptType", this.EncryptType);
         this.setParamSimple(map, prefix + "SubAcctNo", this.SubAcctNo);
         this.setParamSimple(map, prefix + "MidasEnvironment", this.MidasEnvironment);
+        this.setParamSimple(map, prefix + "SubMerchantStoreName", this.SubMerchantStoreName);
+        this.setParamObj(map, prefix + "OrganizationInfo.", this.OrganizationInfo);
 
     }
 }

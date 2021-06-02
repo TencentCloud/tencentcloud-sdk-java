@@ -154,6 +154,13 @@ development: 开发环境
     private String MidasEnvironment;
 
     /**
+    * 经办人信息
+    */
+    @SerializedName("AgencyClientInfo")
+    @Expose
+    private AgencyClientInfo AgencyClientInfo;
+
+    /**
      * Get 聚鑫分配的支付主MidasAppId 
      * @return MidasAppId 聚鑫分配的支付主MidasAppId
      */
@@ -485,6 +492,22 @@ development: 开发环境
         this.MidasEnvironment = MidasEnvironment;
     }
 
+    /**
+     * Get 经办人信息 
+     * @return AgencyClientInfo 经办人信息
+     */
+    public AgencyClientInfo getAgencyClientInfo() {
+        return this.AgencyClientInfo;
+    }
+
+    /**
+     * Set 经办人信息
+     * @param AgencyClientInfo 经办人信息
+     */
+    public void setAgencyClientInfo(AgencyClientInfo AgencyClientInfo) {
+        this.AgencyClientInfo = AgencyClientInfo;
+    }
+
     public BindAcctRequest() {
     }
 
@@ -541,6 +564,9 @@ development: 开发环境
         if (source.MidasEnvironment != null) {
             this.MidasEnvironment = new String(source.MidasEnvironment);
         }
+        if (source.AgencyClientInfo != null) {
+            this.AgencyClientInfo = new AgencyClientInfo(source.AgencyClientInfo);
+        }
     }
 
 
@@ -564,6 +590,7 @@ development: 开发环境
         this.setParamSimple(map, prefix + "EiconBankBranchId", this.EiconBankBranchId);
         this.setParamSimple(map, prefix + "EncryptType", this.EncryptType);
         this.setParamSimple(map, prefix + "MidasEnvironment", this.MidasEnvironment);
+        this.setParamObj(map, prefix + "AgencyClientInfo.", this.AgencyClientInfo);
 
     }
 }
