@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class HistologyType extends AbstractModel{
 
     /**
-    * “”
+    * 浸润
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Infiltration")
@@ -55,9 +55,9 @@ public class HistologyType extends AbstractModel{
     private String Type;
 
     /**
-     * Get “”
+     * Get 浸润
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Infiltration “”
+     * @return Infiltration 浸润
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInfiltration() {
@@ -65,9 +65,9 @@ public class HistologyType extends AbstractModel{
     }
 
     /**
-     * Set “”
+     * Set 浸润
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Infiltration “”
+     * @param Infiltration 浸润
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInfiltration(String Infiltration) {

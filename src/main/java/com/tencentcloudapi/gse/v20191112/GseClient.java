@@ -916,6 +916,26 @@ public class GseClient extends AbstractClient{
     }
 
     /**
+     *本接口（EndGameServerSessionAndProcess）用于终止游戏服务器会话和对应的进程。
+     * @param req EndGameServerSessionAndProcessRequest
+     * @return EndGameServerSessionAndProcessResponse
+     * @throws TencentCloudSDKException
+     */
+    public EndGameServerSessionAndProcessResponse EndGameServerSessionAndProcess(EndGameServerSessionAndProcessRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<EndGameServerSessionAndProcessResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<EndGameServerSessionAndProcessResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "EndGameServerSessionAndProcess");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口用于获取游戏服务器实例的日志URL。
      * @param req GetGameServerInstanceLogUrlRequest
      * @return GetGameServerInstanceLogUrlResponse

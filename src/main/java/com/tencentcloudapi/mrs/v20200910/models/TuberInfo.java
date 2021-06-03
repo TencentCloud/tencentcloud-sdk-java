@@ -47,7 +47,7 @@ public class TuberInfo extends AbstractModel{
     private Size [] Size;
 
     /**
-    * 数量
+    * 多发
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Multiple")
@@ -87,7 +87,7 @@ public class TuberInfo extends AbstractModel{
     private BlockInfo RearEcho;
 
     /**
-    * 质地
+    * 质地弹性
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Elastic")
@@ -95,7 +95,7 @@ public class TuberInfo extends AbstractModel{
     private Elastic Elastic;
 
     /**
-    * 形态
+    * 形状
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Shape")
@@ -103,7 +103,7 @@ public class TuberInfo extends AbstractModel{
     private BlockInfo Shape;
 
     /**
-    * 形态属性
+    * 形态
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ShapeAttr")
@@ -111,7 +111,7 @@ public class TuberInfo extends AbstractModel{
     private BlockInfo ShapeAttr;
 
     /**
-    * “”
+    * 皮髓质信息
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SkinMedulla")
@@ -119,7 +119,7 @@ public class TuberInfo extends AbstractModel{
     private BlockInfo SkinMedulla;
 
     /**
-    * “”
+    * 变化趋势
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Trend")
@@ -175,7 +175,7 @@ public class TuberInfo extends AbstractModel{
     private BlockInfo Activity;
 
     /**
-    * “”
+    * 手术情况
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Operation")
@@ -183,7 +183,7 @@ public class TuberInfo extends AbstractModel{
     private BlockInfo Operation;
 
     /**
-    * “”
+    * 血液cdfi
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CDFI")
@@ -199,7 +199,7 @@ public class TuberInfo extends AbstractModel{
     private Long [] Index;
 
     /**
-    * “”
+    * 大小状态
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SizeStatus")
@@ -207,7 +207,7 @@ public class TuberInfo extends AbstractModel{
     private BlockInfo SizeStatus;
 
     /**
-    * “”
+    * 内部回声分布
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InnerEchoDistribution")
@@ -215,7 +215,7 @@ public class TuberInfo extends AbstractModel{
     private BlockInfo InnerEchoDistribution;
 
     /**
-    * “”
+    * 内部回声类型
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InnerEchoType")
@@ -223,7 +223,7 @@ public class TuberInfo extends AbstractModel{
     private BlockInfo [] InnerEchoType;
 
     /**
-    * “”
+    * 轮廓
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Outline")
@@ -231,7 +231,7 @@ public class TuberInfo extends AbstractModel{
     private BlockInfo Outline;
 
     /**
-    * “”
+    * 结构
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Structure")
@@ -239,7 +239,7 @@ public class TuberInfo extends AbstractModel{
     private BlockInfo Structure;
 
     /**
-    * “”
+    * 密度
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Density")
@@ -247,7 +247,7 @@ public class TuberInfo extends AbstractModel{
     private BlockInfo Density;
 
     /**
-    * “”
+    * 血管
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Vas")
@@ -255,7 +255,7 @@ public class TuberInfo extends AbstractModel{
     private BlockInfo Vas;
 
     /**
-    * “”
+    * 囊壁
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Cysticwall")
@@ -263,7 +263,7 @@ public class TuberInfo extends AbstractModel{
     private BlockInfo Cysticwall;
 
     /**
-    * “”
+    * 被膜
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Capsule")
@@ -271,7 +271,7 @@ public class TuberInfo extends AbstractModel{
     private BlockInfo Capsule;
 
     /**
-    * “”
+    * 峡部厚度
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsthmusThicknese")
@@ -279,7 +279,7 @@ public class TuberInfo extends AbstractModel{
     private Size IsthmusThicknese;
 
     /**
-    * “”
+    * 原文
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Src")
@@ -347,9 +347,9 @@ public class TuberInfo extends AbstractModel{
     }
 
     /**
-     * Get 数量
+     * Get 多发
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Multiple 数量
+     * @return Multiple 多发
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Multiple getMultiple() {
@@ -357,9 +357,9 @@ public class TuberInfo extends AbstractModel{
     }
 
     /**
-     * Set 数量
+     * Set 多发
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Multiple 数量
+     * @param Multiple 多发
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMultiple(Multiple Multiple) {
@@ -447,9 +447,9 @@ public class TuberInfo extends AbstractModel{
     }
 
     /**
-     * Get 质地
+     * Get 质地弹性
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Elastic 质地
+     * @return Elastic 质地弹性
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Elastic getElastic() {
@@ -457,9 +457,9 @@ public class TuberInfo extends AbstractModel{
     }
 
     /**
-     * Set 质地
+     * Set 质地弹性
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Elastic 质地
+     * @param Elastic 质地弹性
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setElastic(Elastic Elastic) {
@@ -467,9 +467,9 @@ public class TuberInfo extends AbstractModel{
     }
 
     /**
-     * Get 形态
+     * Get 形状
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Shape 形态
+     * @return Shape 形状
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public BlockInfo getShape() {
@@ -477,9 +477,9 @@ public class TuberInfo extends AbstractModel{
     }
 
     /**
-     * Set 形态
+     * Set 形状
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Shape 形态
+     * @param Shape 形状
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setShape(BlockInfo Shape) {
@@ -487,9 +487,9 @@ public class TuberInfo extends AbstractModel{
     }
 
     /**
-     * Get 形态属性
+     * Get 形态
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ShapeAttr 形态属性
+     * @return ShapeAttr 形态
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public BlockInfo getShapeAttr() {
@@ -497,9 +497,9 @@ public class TuberInfo extends AbstractModel{
     }
 
     /**
-     * Set 形态属性
+     * Set 形态
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ShapeAttr 形态属性
+     * @param ShapeAttr 形态
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setShapeAttr(BlockInfo ShapeAttr) {
@@ -507,9 +507,9 @@ public class TuberInfo extends AbstractModel{
     }
 
     /**
-     * Get “”
+     * Get 皮髓质信息
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SkinMedulla “”
+     * @return SkinMedulla 皮髓质信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public BlockInfo getSkinMedulla() {
@@ -517,9 +517,9 @@ public class TuberInfo extends AbstractModel{
     }
 
     /**
-     * Set “”
+     * Set 皮髓质信息
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SkinMedulla “”
+     * @param SkinMedulla 皮髓质信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSkinMedulla(BlockInfo SkinMedulla) {
@@ -527,9 +527,9 @@ public class TuberInfo extends AbstractModel{
     }
 
     /**
-     * Get “”
+     * Get 变化趋势
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Trend “”
+     * @return Trend 变化趋势
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public BlockInfo getTrend() {
@@ -537,9 +537,9 @@ public class TuberInfo extends AbstractModel{
     }
 
     /**
-     * Set “”
+     * Set 变化趋势
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Trend “”
+     * @param Trend 变化趋势
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTrend(BlockInfo Trend) {
@@ -667,9 +667,9 @@ public class TuberInfo extends AbstractModel{
     }
 
     /**
-     * Get “”
+     * Get 手术情况
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Operation “”
+     * @return Operation 手术情况
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public BlockInfo getOperation() {
@@ -677,9 +677,9 @@ public class TuberInfo extends AbstractModel{
     }
 
     /**
-     * Set “”
+     * Set 手术情况
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Operation “”
+     * @param Operation 手术情况
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOperation(BlockInfo Operation) {
@@ -687,9 +687,9 @@ public class TuberInfo extends AbstractModel{
     }
 
     /**
-     * Get “”
+     * Get 血液cdfi
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CDFI “”
+     * @return CDFI 血液cdfi
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public BlockInfo getCDFI() {
@@ -697,9 +697,9 @@ public class TuberInfo extends AbstractModel{
     }
 
     /**
-     * Set “”
+     * Set 血液cdfi
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CDFI “”
+     * @param CDFI 血液cdfi
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCDFI(BlockInfo CDFI) {
@@ -727,9 +727,9 @@ public class TuberInfo extends AbstractModel{
     }
 
     /**
-     * Get “”
+     * Get 大小状态
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SizeStatus “”
+     * @return SizeStatus 大小状态
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public BlockInfo getSizeStatus() {
@@ -737,9 +737,9 @@ public class TuberInfo extends AbstractModel{
     }
 
     /**
-     * Set “”
+     * Set 大小状态
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SizeStatus “”
+     * @param SizeStatus 大小状态
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSizeStatus(BlockInfo SizeStatus) {
@@ -747,9 +747,9 @@ public class TuberInfo extends AbstractModel{
     }
 
     /**
-     * Get “”
+     * Get 内部回声分布
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InnerEchoDistribution “”
+     * @return InnerEchoDistribution 内部回声分布
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public BlockInfo getInnerEchoDistribution() {
@@ -757,9 +757,9 @@ public class TuberInfo extends AbstractModel{
     }
 
     /**
-     * Set “”
+     * Set 内部回声分布
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InnerEchoDistribution “”
+     * @param InnerEchoDistribution 内部回声分布
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInnerEchoDistribution(BlockInfo InnerEchoDistribution) {
@@ -767,9 +767,9 @@ public class TuberInfo extends AbstractModel{
     }
 
     /**
-     * Get “”
+     * Get 内部回声类型
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InnerEchoType “”
+     * @return InnerEchoType 内部回声类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public BlockInfo [] getInnerEchoType() {
@@ -777,9 +777,9 @@ public class TuberInfo extends AbstractModel{
     }
 
     /**
-     * Set “”
+     * Set 内部回声类型
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InnerEchoType “”
+     * @param InnerEchoType 内部回声类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInnerEchoType(BlockInfo [] InnerEchoType) {
@@ -787,9 +787,9 @@ public class TuberInfo extends AbstractModel{
     }
 
     /**
-     * Get “”
+     * Get 轮廓
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Outline “”
+     * @return Outline 轮廓
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public BlockInfo getOutline() {
@@ -797,9 +797,9 @@ public class TuberInfo extends AbstractModel{
     }
 
     /**
-     * Set “”
+     * Set 轮廓
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Outline “”
+     * @param Outline 轮廓
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOutline(BlockInfo Outline) {
@@ -807,9 +807,9 @@ public class TuberInfo extends AbstractModel{
     }
 
     /**
-     * Get “”
+     * Get 结构
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Structure “”
+     * @return Structure 结构
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public BlockInfo getStructure() {
@@ -817,9 +817,9 @@ public class TuberInfo extends AbstractModel{
     }
 
     /**
-     * Set “”
+     * Set 结构
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Structure “”
+     * @param Structure 结构
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStructure(BlockInfo Structure) {
@@ -827,9 +827,9 @@ public class TuberInfo extends AbstractModel{
     }
 
     /**
-     * Get “”
+     * Get 密度
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Density “”
+     * @return Density 密度
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public BlockInfo getDensity() {
@@ -837,9 +837,9 @@ public class TuberInfo extends AbstractModel{
     }
 
     /**
-     * Set “”
+     * Set 密度
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Density “”
+     * @param Density 密度
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDensity(BlockInfo Density) {
@@ -847,9 +847,9 @@ public class TuberInfo extends AbstractModel{
     }
 
     /**
-     * Get “”
+     * Get 血管
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Vas “”
+     * @return Vas 血管
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public BlockInfo getVas() {
@@ -857,9 +857,9 @@ public class TuberInfo extends AbstractModel{
     }
 
     /**
-     * Set “”
+     * Set 血管
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Vas “”
+     * @param Vas 血管
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVas(BlockInfo Vas) {
@@ -867,9 +867,9 @@ public class TuberInfo extends AbstractModel{
     }
 
     /**
-     * Get “”
+     * Get 囊壁
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Cysticwall “”
+     * @return Cysticwall 囊壁
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public BlockInfo getCysticwall() {
@@ -877,9 +877,9 @@ public class TuberInfo extends AbstractModel{
     }
 
     /**
-     * Set “”
+     * Set 囊壁
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Cysticwall “”
+     * @param Cysticwall 囊壁
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCysticwall(BlockInfo Cysticwall) {
@@ -887,9 +887,9 @@ public class TuberInfo extends AbstractModel{
     }
 
     /**
-     * Get “”
+     * Get 被膜
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Capsule “”
+     * @return Capsule 被膜
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public BlockInfo getCapsule() {
@@ -897,9 +897,9 @@ public class TuberInfo extends AbstractModel{
     }
 
     /**
-     * Set “”
+     * Set 被膜
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Capsule “”
+     * @param Capsule 被膜
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCapsule(BlockInfo Capsule) {
@@ -907,9 +907,9 @@ public class TuberInfo extends AbstractModel{
     }
 
     /**
-     * Get “”
+     * Get 峡部厚度
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IsthmusThicknese “”
+     * @return IsthmusThicknese 峡部厚度
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Size getIsthmusThicknese() {
@@ -917,9 +917,9 @@ public class TuberInfo extends AbstractModel{
     }
 
     /**
-     * Set “”
+     * Set 峡部厚度
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IsthmusThicknese “”
+     * @param IsthmusThicknese 峡部厚度
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsthmusThicknese(Size IsthmusThicknese) {
@@ -927,9 +927,9 @@ public class TuberInfo extends AbstractModel{
     }
 
     /**
-     * Get “”
+     * Get 原文
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Src “”
+     * @return Src 原文
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSrc() {
@@ -937,9 +937,9 @@ public class TuberInfo extends AbstractModel{
     }
 
     /**
-     * Set “”
+     * Set 原文
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Src “”
+     * @param Src 原文
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSrc(String Src) {

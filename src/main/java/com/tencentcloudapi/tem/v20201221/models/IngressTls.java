@@ -23,49 +23,72 @@ import java.util.HashMap;
 public class IngressTls extends AbstractModel{
 
     /**
-    * host 数组
+    * host 数组, 空数组表示全部域名的默认证书
     */
     @SerializedName("Hosts")
     @Expose
     private String [] Hosts;
 
     /**
-    * secret name
+    * secret name，如使用证书，则填空字符串
     */
     @SerializedName("SecretName")
     @Expose
     private String SecretName;
 
     /**
-     * Get host 数组 
-     * @return Hosts host 数组
+    * SSL Certificate Id
+    */
+    @SerializedName("CertificateId")
+    @Expose
+    private String CertificateId;
+
+    /**
+     * Get host 数组, 空数组表示全部域名的默认证书 
+     * @return Hosts host 数组, 空数组表示全部域名的默认证书
      */
     public String [] getHosts() {
         return this.Hosts;
     }
 
     /**
-     * Set host 数组
-     * @param Hosts host 数组
+     * Set host 数组, 空数组表示全部域名的默认证书
+     * @param Hosts host 数组, 空数组表示全部域名的默认证书
      */
     public void setHosts(String [] Hosts) {
         this.Hosts = Hosts;
     }
 
     /**
-     * Get secret name 
-     * @return SecretName secret name
+     * Get secret name，如使用证书，则填空字符串 
+     * @return SecretName secret name，如使用证书，则填空字符串
      */
     public String getSecretName() {
         return this.SecretName;
     }
 
     /**
-     * Set secret name
-     * @param SecretName secret name
+     * Set secret name，如使用证书，则填空字符串
+     * @param SecretName secret name，如使用证书，则填空字符串
      */
     public void setSecretName(String SecretName) {
         this.SecretName = SecretName;
+    }
+
+    /**
+     * Get SSL Certificate Id 
+     * @return CertificateId SSL Certificate Id
+     */
+    public String getCertificateId() {
+        return this.CertificateId;
+    }
+
+    /**
+     * Set SSL Certificate Id
+     * @param CertificateId SSL Certificate Id
+     */
+    public void setCertificateId(String CertificateId) {
+        this.CertificateId = CertificateId;
     }
 
     public IngressTls() {
@@ -85,6 +108,9 @@ public class IngressTls extends AbstractModel{
         if (source.SecretName != null) {
             this.SecretName = new String(source.SecretName);
         }
+        if (source.CertificateId != null) {
+            this.CertificateId = new String(source.CertificateId);
+        }
     }
 
 
@@ -94,6 +120,7 @@ public class IngressTls extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "Hosts.", this.Hosts);
         this.setParamSimple(map, prefix + "SecretName", this.SecretName);
+        this.setParamSimple(map, prefix + "CertificateId", this.CertificateId);
 
     }
 }

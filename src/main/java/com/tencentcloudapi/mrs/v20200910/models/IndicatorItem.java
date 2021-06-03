@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class IndicatorItem extends AbstractModel{
 
     /**
-    * “”
+    * 英文缩写
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Code")
@@ -31,7 +31,7 @@ public class IndicatorItem extends AbstractModel{
     private String Code;
 
     /**
-    * “”
+    * 标准缩写
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Scode")
@@ -39,7 +39,7 @@ public class IndicatorItem extends AbstractModel{
     private String Scode;
 
     /**
-    * “”
+    * 项目名称
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
@@ -47,7 +47,7 @@ public class IndicatorItem extends AbstractModel{
     private String Name;
 
     /**
-    * “”
+    * 标准名
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Sname")
@@ -55,7 +55,7 @@ public class IndicatorItem extends AbstractModel{
     private String Sname;
 
     /**
-    * “”
+    * 结果
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Result")
@@ -63,7 +63,7 @@ public class IndicatorItem extends AbstractModel{
     private String Result;
 
     /**
-    * “”
+    * 单位
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Unit")
@@ -71,7 +71,7 @@ public class IndicatorItem extends AbstractModel{
     private String Unit;
 
     /**
-    * “”
+    * 参考范围
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Range")
@@ -79,7 +79,7 @@ public class IndicatorItem extends AbstractModel{
     private String Range;
 
     /**
-    * “”
+    * 上下箭头
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Arrow")
@@ -95,9 +95,9 @@ public class IndicatorItem extends AbstractModel{
     private Boolean Normal;
 
     /**
-     * Get “”
+     * Get 英文缩写
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Code “”
+     * @return Code 英文缩写
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCode() {
@@ -105,9 +105,9 @@ public class IndicatorItem extends AbstractModel{
     }
 
     /**
-     * Set “”
+     * Set 英文缩写
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Code “”
+     * @param Code 英文缩写
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCode(String Code) {
@@ -115,9 +115,9 @@ public class IndicatorItem extends AbstractModel{
     }
 
     /**
-     * Get “”
+     * Get 标准缩写
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Scode “”
+     * @return Scode 标准缩写
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getScode() {
@@ -125,9 +125,9 @@ public class IndicatorItem extends AbstractModel{
     }
 
     /**
-     * Set “”
+     * Set 标准缩写
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Scode “”
+     * @param Scode 标准缩写
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScode(String Scode) {
@@ -135,9 +135,9 @@ public class IndicatorItem extends AbstractModel{
     }
 
     /**
-     * Get “”
+     * Get 项目名称
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Name “”
+     * @return Name 项目名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
@@ -145,9 +145,9 @@ public class IndicatorItem extends AbstractModel{
     }
 
     /**
-     * Set “”
+     * Set 项目名称
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Name “”
+     * @param Name 项目名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
@@ -155,9 +155,9 @@ public class IndicatorItem extends AbstractModel{
     }
 
     /**
-     * Get “”
+     * Get 标准名
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Sname “”
+     * @return Sname 标准名
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSname() {
@@ -165,9 +165,9 @@ public class IndicatorItem extends AbstractModel{
     }
 
     /**
-     * Set “”
+     * Set 标准名
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Sname “”
+     * @param Sname 标准名
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSname(String Sname) {
@@ -175,9 +175,9 @@ public class IndicatorItem extends AbstractModel{
     }
 
     /**
-     * Get “”
+     * Get 结果
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Result “”
+     * @return Result 结果
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResult() {
@@ -185,9 +185,9 @@ public class IndicatorItem extends AbstractModel{
     }
 
     /**
-     * Set “”
+     * Set 结果
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Result “”
+     * @param Result 结果
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResult(String Result) {
@@ -195,9 +195,9 @@ public class IndicatorItem extends AbstractModel{
     }
 
     /**
-     * Get “”
+     * Get 单位
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Unit “”
+     * @return Unit 单位
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUnit() {
@@ -205,9 +205,9 @@ public class IndicatorItem extends AbstractModel{
     }
 
     /**
-     * Set “”
+     * Set 单位
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Unit “”
+     * @param Unit 单位
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUnit(String Unit) {
@@ -215,9 +215,9 @@ public class IndicatorItem extends AbstractModel{
     }
 
     /**
-     * Get “”
+     * Get 参考范围
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Range “”
+     * @return Range 参考范围
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRange() {
@@ -225,9 +225,9 @@ public class IndicatorItem extends AbstractModel{
     }
 
     /**
-     * Set “”
+     * Set 参考范围
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Range “”
+     * @param Range 参考范围
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRange(String Range) {
@@ -235,9 +235,9 @@ public class IndicatorItem extends AbstractModel{
     }
 
     /**
-     * Get “”
+     * Get 上下箭头
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Arrow “”
+     * @return Arrow 上下箭头
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getArrow() {
@@ -245,9 +245,9 @@ public class IndicatorItem extends AbstractModel{
     }
 
     /**
-     * Set “”
+     * Set 上下箭头
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Arrow “”
+     * @param Arrow 上下箭头
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setArrow(String Arrow) {

@@ -159,6 +159,26 @@ public class WafClient extends AbstractClient{
     }
 
     /**
+     *获取waf流量访问趋势
+     * @param req DescribeFlowTrendRequest
+     * @return DescribeFlowTrendResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeFlowTrendResponse DescribeFlowTrend(DescribeFlowTrendRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeFlowTrendResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeFlowTrendResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeFlowTrend");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *在负载均衡型WAF的添加、编辑域名配置的时候，需要展示负载均衡型WAF（clb-waf)支持的地域列表，通过DescribeUserClbWafRegions既可以获得当前对客户已经开放的地域列表
      * @param req DescribeUserClbWafRegionsRequest
      * @return DescribeUserClbWafRegionsResponse

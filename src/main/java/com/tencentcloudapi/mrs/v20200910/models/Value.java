@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class Value extends AbstractModel{
 
     /**
-    * “”
+    * 等级
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Grade")
@@ -31,7 +31,7 @@ public class Value extends AbstractModel{
     private String Grade;
 
     /**
-    * “”
+    * 百分比
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Percent")
@@ -47,9 +47,9 @@ public class Value extends AbstractModel{
     private String Positive;
 
     /**
-     * Get “”
+     * Get 等级
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Grade “”
+     * @return Grade 等级
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGrade() {
@@ -57,9 +57,9 @@ public class Value extends AbstractModel{
     }
 
     /**
-     * Set “”
+     * Set 等级
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Grade “”
+     * @param Grade 等级
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGrade(String Grade) {
@@ -67,9 +67,9 @@ public class Value extends AbstractModel{
     }
 
     /**
-     * Get “”
+     * Get 百分比
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Percent “”
+     * @return Percent 百分比
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float [] getPercent() {
@@ -77,9 +77,9 @@ public class Value extends AbstractModel{
     }
 
     /**
-     * Set “”
+     * Set 百分比
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Percent “”
+     * @param Percent 百分比
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPercent(Float [] Percent) {

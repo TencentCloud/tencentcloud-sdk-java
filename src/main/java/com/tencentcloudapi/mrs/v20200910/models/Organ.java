@@ -39,7 +39,7 @@ public class Organ extends AbstractModel{
     private Size [] Size;
 
     /**
-    * ""
+    * 包膜
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Envelope")
@@ -47,7 +47,7 @@ public class Organ extends AbstractModel{
     private BlockInfo Envelope;
 
     /**
-    * ""
+    * 边缘
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Edge")
@@ -55,7 +55,7 @@ public class Organ extends AbstractModel{
     private BlockInfo Edge;
 
     /**
-    * ""
+    * 内部回声
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InnerEcho")
@@ -63,7 +63,7 @@ public class Organ extends AbstractModel{
     private BlockInfo InnerEcho;
 
     /**
-    * ""
+    * 腺体
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Gland")
@@ -71,7 +71,7 @@ public class Organ extends AbstractModel{
     private BlockInfo Gland;
 
     /**
-    * ""
+    * 形状
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Shape")
@@ -79,7 +79,7 @@ public class Organ extends AbstractModel{
     private BlockInfo Shape;
 
     /**
-    * ""
+    * 厚度
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Thickness")
@@ -87,7 +87,7 @@ public class Organ extends AbstractModel{
     private BlockInfo Thickness;
 
     /**
-    * ""
+    * 形态
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ShapeAttr")
@@ -95,7 +95,7 @@ public class Organ extends AbstractModel{
     private BlockInfo ShapeAttr;
 
     /**
-    * ""
+    * 血液cdfi
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CDFI")
@@ -103,7 +103,7 @@ public class Organ extends AbstractModel{
     private BlockInfo CDFI;
 
     /**
-    * ""
+    * 描述信息
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SymDesc")
@@ -111,7 +111,7 @@ public class Organ extends AbstractModel{
     private BlockInfo SymDesc;
 
     /**
-    * ""
+    * 大小状态
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SizeStatus")
@@ -119,7 +119,7 @@ public class Organ extends AbstractModel{
     private BlockInfo SizeStatus;
 
     /**
-    * ""
+    * 轮廓
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Outline")
@@ -127,7 +127,7 @@ public class Organ extends AbstractModel{
     private BlockInfo Outline;
 
     /**
-    * ""
+    * 结构
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Structure")
@@ -135,7 +135,7 @@ public class Organ extends AbstractModel{
     private BlockInfo Structure;
 
     /**
-    * ""
+    * 密度
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Density")
@@ -143,7 +143,7 @@ public class Organ extends AbstractModel{
     private BlockInfo Density;
 
     /**
-    * ""
+    * 血管
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Vas")
@@ -151,7 +151,7 @@ public class Organ extends AbstractModel{
     private BlockInfo Vas;
 
     /**
-    * ""
+    * 囊壁
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Cysticwall")
@@ -159,7 +159,7 @@ public class Organ extends AbstractModel{
     private BlockInfo Cysticwall;
 
     /**
-    * ""
+    * 被膜
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Capsule")
@@ -167,7 +167,7 @@ public class Organ extends AbstractModel{
     private BlockInfo Capsule;
 
     /**
-    * ""
+    * 峡部厚度
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsthmusThicknese")
@@ -175,7 +175,7 @@ public class Organ extends AbstractModel{
     private Size IsthmusThicknese;
 
     /**
-    * ""
+    * 内部回声分布
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InnerEchoDistribution")
@@ -239,9 +239,9 @@ public class Organ extends AbstractModel{
     }
 
     /**
-     * Get ""
+     * Get 包膜
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Envelope ""
+     * @return Envelope 包膜
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public BlockInfo getEnvelope() {
@@ -249,9 +249,9 @@ public class Organ extends AbstractModel{
     }
 
     /**
-     * Set ""
+     * Set 包膜
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Envelope ""
+     * @param Envelope 包膜
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnvelope(BlockInfo Envelope) {
@@ -259,9 +259,9 @@ public class Organ extends AbstractModel{
     }
 
     /**
-     * Get ""
+     * Get 边缘
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Edge ""
+     * @return Edge 边缘
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public BlockInfo getEdge() {
@@ -269,9 +269,9 @@ public class Organ extends AbstractModel{
     }
 
     /**
-     * Set ""
+     * Set 边缘
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Edge ""
+     * @param Edge 边缘
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEdge(BlockInfo Edge) {
@@ -279,9 +279,9 @@ public class Organ extends AbstractModel{
     }
 
     /**
-     * Get ""
+     * Get 内部回声
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InnerEcho ""
+     * @return InnerEcho 内部回声
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public BlockInfo getInnerEcho() {
@@ -289,9 +289,9 @@ public class Organ extends AbstractModel{
     }
 
     /**
-     * Set ""
+     * Set 内部回声
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InnerEcho ""
+     * @param InnerEcho 内部回声
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInnerEcho(BlockInfo InnerEcho) {
@@ -299,9 +299,9 @@ public class Organ extends AbstractModel{
     }
 
     /**
-     * Get ""
+     * Get 腺体
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Gland ""
+     * @return Gland 腺体
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public BlockInfo getGland() {
@@ -309,9 +309,9 @@ public class Organ extends AbstractModel{
     }
 
     /**
-     * Set ""
+     * Set 腺体
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Gland ""
+     * @param Gland 腺体
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGland(BlockInfo Gland) {
@@ -319,9 +319,9 @@ public class Organ extends AbstractModel{
     }
 
     /**
-     * Get ""
+     * Get 形状
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Shape ""
+     * @return Shape 形状
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public BlockInfo getShape() {
@@ -329,9 +329,9 @@ public class Organ extends AbstractModel{
     }
 
     /**
-     * Set ""
+     * Set 形状
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Shape ""
+     * @param Shape 形状
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setShape(BlockInfo Shape) {
@@ -339,9 +339,9 @@ public class Organ extends AbstractModel{
     }
 
     /**
-     * Get ""
+     * Get 厚度
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Thickness ""
+     * @return Thickness 厚度
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public BlockInfo getThickness() {
@@ -349,9 +349,9 @@ public class Organ extends AbstractModel{
     }
 
     /**
-     * Set ""
+     * Set 厚度
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Thickness ""
+     * @param Thickness 厚度
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setThickness(BlockInfo Thickness) {
@@ -359,9 +359,9 @@ public class Organ extends AbstractModel{
     }
 
     /**
-     * Get ""
+     * Get 形态
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ShapeAttr ""
+     * @return ShapeAttr 形态
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public BlockInfo getShapeAttr() {
@@ -369,9 +369,9 @@ public class Organ extends AbstractModel{
     }
 
     /**
-     * Set ""
+     * Set 形态
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ShapeAttr ""
+     * @param ShapeAttr 形态
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setShapeAttr(BlockInfo ShapeAttr) {
@@ -379,9 +379,9 @@ public class Organ extends AbstractModel{
     }
 
     /**
-     * Get ""
+     * Get 血液cdfi
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CDFI ""
+     * @return CDFI 血液cdfi
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public BlockInfo getCDFI() {
@@ -389,9 +389,9 @@ public class Organ extends AbstractModel{
     }
 
     /**
-     * Set ""
+     * Set 血液cdfi
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CDFI ""
+     * @param CDFI 血液cdfi
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCDFI(BlockInfo CDFI) {
@@ -399,9 +399,9 @@ public class Organ extends AbstractModel{
     }
 
     /**
-     * Get ""
+     * Get 描述信息
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SymDesc ""
+     * @return SymDesc 描述信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public BlockInfo getSymDesc() {
@@ -409,9 +409,9 @@ public class Organ extends AbstractModel{
     }
 
     /**
-     * Set ""
+     * Set 描述信息
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SymDesc ""
+     * @param SymDesc 描述信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSymDesc(BlockInfo SymDesc) {
@@ -419,9 +419,9 @@ public class Organ extends AbstractModel{
     }
 
     /**
-     * Get ""
+     * Get 大小状态
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SizeStatus ""
+     * @return SizeStatus 大小状态
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public BlockInfo getSizeStatus() {
@@ -429,9 +429,9 @@ public class Organ extends AbstractModel{
     }
 
     /**
-     * Set ""
+     * Set 大小状态
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SizeStatus ""
+     * @param SizeStatus 大小状态
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSizeStatus(BlockInfo SizeStatus) {
@@ -439,9 +439,9 @@ public class Organ extends AbstractModel{
     }
 
     /**
-     * Get ""
+     * Get 轮廓
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Outline ""
+     * @return Outline 轮廓
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public BlockInfo getOutline() {
@@ -449,9 +449,9 @@ public class Organ extends AbstractModel{
     }
 
     /**
-     * Set ""
+     * Set 轮廓
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Outline ""
+     * @param Outline 轮廓
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOutline(BlockInfo Outline) {
@@ -459,9 +459,9 @@ public class Organ extends AbstractModel{
     }
 
     /**
-     * Get ""
+     * Get 结构
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Structure ""
+     * @return Structure 结构
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public BlockInfo getStructure() {
@@ -469,9 +469,9 @@ public class Organ extends AbstractModel{
     }
 
     /**
-     * Set ""
+     * Set 结构
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Structure ""
+     * @param Structure 结构
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStructure(BlockInfo Structure) {
@@ -479,9 +479,9 @@ public class Organ extends AbstractModel{
     }
 
     /**
-     * Get ""
+     * Get 密度
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Density ""
+     * @return Density 密度
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public BlockInfo getDensity() {
@@ -489,9 +489,9 @@ public class Organ extends AbstractModel{
     }
 
     /**
-     * Set ""
+     * Set 密度
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Density ""
+     * @param Density 密度
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDensity(BlockInfo Density) {
@@ -499,9 +499,9 @@ public class Organ extends AbstractModel{
     }
 
     /**
-     * Get ""
+     * Get 血管
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Vas ""
+     * @return Vas 血管
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public BlockInfo getVas() {
@@ -509,9 +509,9 @@ public class Organ extends AbstractModel{
     }
 
     /**
-     * Set ""
+     * Set 血管
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Vas ""
+     * @param Vas 血管
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVas(BlockInfo Vas) {
@@ -519,9 +519,9 @@ public class Organ extends AbstractModel{
     }
 
     /**
-     * Get ""
+     * Get 囊壁
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Cysticwall ""
+     * @return Cysticwall 囊壁
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public BlockInfo getCysticwall() {
@@ -529,9 +529,9 @@ public class Organ extends AbstractModel{
     }
 
     /**
-     * Set ""
+     * Set 囊壁
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Cysticwall ""
+     * @param Cysticwall 囊壁
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCysticwall(BlockInfo Cysticwall) {
@@ -539,9 +539,9 @@ public class Organ extends AbstractModel{
     }
 
     /**
-     * Get ""
+     * Get 被膜
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Capsule ""
+     * @return Capsule 被膜
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public BlockInfo getCapsule() {
@@ -549,9 +549,9 @@ public class Organ extends AbstractModel{
     }
 
     /**
-     * Set ""
+     * Set 被膜
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Capsule ""
+     * @param Capsule 被膜
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCapsule(BlockInfo Capsule) {
@@ -559,9 +559,9 @@ public class Organ extends AbstractModel{
     }
 
     /**
-     * Get ""
+     * Get 峡部厚度
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IsthmusThicknese ""
+     * @return IsthmusThicknese 峡部厚度
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Size getIsthmusThicknese() {
@@ -569,9 +569,9 @@ public class Organ extends AbstractModel{
     }
 
     /**
-     * Set ""
+     * Set 峡部厚度
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IsthmusThicknese ""
+     * @param IsthmusThicknese 峡部厚度
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsthmusThicknese(Size IsthmusThicknese) {
@@ -579,9 +579,9 @@ public class Organ extends AbstractModel{
     }
 
     /**
-     * Get ""
+     * Get 内部回声分布
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InnerEchoDistribution ""
+     * @return InnerEchoDistribution 内部回声分布
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public BlockInfo getInnerEchoDistribution() {
@@ -589,9 +589,9 @@ public class Organ extends AbstractModel{
     }
 
     /**
-     * Set ""
+     * Set 内部回声分布
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InnerEchoDistribution ""
+     * @param InnerEchoDistribution 内部回声分布
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInnerEchoDistribution(BlockInfo InnerEchoDistribution) {

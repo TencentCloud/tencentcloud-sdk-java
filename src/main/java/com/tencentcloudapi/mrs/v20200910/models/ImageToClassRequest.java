@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ImageToClassRequest extends AbstractModel{
 
     /**
-    * 图片列表
+    * 图片列表，允许传入多张图片，支持传入图片的url或base64编码
     */
     @SerializedName("ImageInfoList")
     @Expose
@@ -44,16 +44,16 @@ public class ImageToClassRequest extends AbstractModel{
     private Long Type;
 
     /**
-     * Get 图片列表 
-     * @return ImageInfoList 图片列表
+     * Get 图片列表，允许传入多张图片，支持传入图片的url或base64编码 
+     * @return ImageInfoList 图片列表，允许传入多张图片，支持传入图片的url或base64编码
      */
     public ImageInfo [] getImageInfoList() {
         return this.ImageInfoList;
     }
 
     /**
-     * Set 图片列表
-     * @param ImageInfoList 图片列表
+     * Set 图片列表，允许传入多张图片，支持传入图片的url或base64编码
+     * @param ImageInfoList 图片列表，允许传入多张图片，支持传入图片的url或base64编码
      */
     public void setImageInfoList(ImageInfo [] ImageInfoList) {
         this.ImageInfoList = ImageInfoList;

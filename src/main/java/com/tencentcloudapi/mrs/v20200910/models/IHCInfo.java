@@ -31,7 +31,7 @@ public class IHCInfo extends AbstractModel{
     private Long [] Index;
 
     /**
-    * “”
+    * 原文
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Src")
@@ -39,7 +39,7 @@ public class IHCInfo extends AbstractModel{
     private String Src;
 
     /**
-    * “”
+    * 名称
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
@@ -47,7 +47,7 @@ public class IHCInfo extends AbstractModel{
     private String Name;
 
     /**
-    * “”
+    * 值
     */
     @SerializedName("Value")
     @Expose
@@ -74,9 +74,9 @@ public class IHCInfo extends AbstractModel{
     }
 
     /**
-     * Get “”
+     * Get 原文
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Src “”
+     * @return Src 原文
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSrc() {
@@ -84,9 +84,9 @@ public class IHCInfo extends AbstractModel{
     }
 
     /**
-     * Set “”
+     * Set 原文
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Src “”
+     * @param Src 原文
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSrc(String Src) {
@@ -94,9 +94,9 @@ public class IHCInfo extends AbstractModel{
     }
 
     /**
-     * Get “”
+     * Get 名称
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Name “”
+     * @return Name 名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
@@ -104,9 +104,9 @@ public class IHCInfo extends AbstractModel{
     }
 
     /**
-     * Set “”
+     * Set 名称
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Name “”
+     * @param Name 名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
@@ -114,16 +114,16 @@ public class IHCInfo extends AbstractModel{
     }
 
     /**
-     * Get “” 
-     * @return Value “”
+     * Get 值 
+     * @return Value 值
      */
     public Value getValue() {
         return this.Value;
     }
 
     /**
-     * Set “”
-     * @param Value “”
+     * Set 值
+     * @param Value 值
      */
     public void setValue(Value Value) {
         this.Value = Value;

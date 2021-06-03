@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class TreatmentRecord extends AbstractModel{
 
     /**
-    * ""
+    * 入院
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DmissionCondition")
@@ -31,7 +31,7 @@ public class TreatmentRecord extends AbstractModel{
     private String DmissionCondition;
 
     /**
-    * ""
+    * 主诉
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ChiefComplaint")
@@ -39,7 +39,7 @@ public class TreatmentRecord extends AbstractModel{
     private String ChiefComplaint;
 
     /**
-    * ""
+    * 现病史
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DiseasePresent")
@@ -47,7 +47,7 @@ public class TreatmentRecord extends AbstractModel{
     private String DiseasePresent;
 
     /**
-    * ""
+    * 主要症状体征
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SymptomsAndSigns")
@@ -55,7 +55,7 @@ public class TreatmentRecord extends AbstractModel{
     private String SymptomsAndSigns;
 
     /**
-    * “”
+    * 辅助检查
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AuxiliaryExamination")
@@ -63,7 +63,7 @@ public class TreatmentRecord extends AbstractModel{
     private String AuxiliaryExamination;
 
     /**
-    * “”
+    * 体格检查
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BodyExamination")
@@ -71,7 +71,7 @@ public class TreatmentRecord extends AbstractModel{
     private String BodyExamination;
 
     /**
-    * “”
+    * 专科检查
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SpecialistExamination")
@@ -79,7 +79,7 @@ public class TreatmentRecord extends AbstractModel{
     private String SpecialistExamination;
 
     /**
-    * “”
+    * 精神检查
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MentalExamination")
@@ -87,7 +87,7 @@ public class TreatmentRecord extends AbstractModel{
     private String MentalExamination;
 
     /**
-    * “”
+    * 检查记录
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CheckRecord")
@@ -95,7 +95,7 @@ public class TreatmentRecord extends AbstractModel{
     private String CheckRecord;
 
     /**
-    * “”
+    * 化验结果
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InspectResult")
@@ -103,7 +103,7 @@ public class TreatmentRecord extends AbstractModel{
     private String InspectResult;
 
     /**
-    * “”
+    * 切口愈合情况
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IncisionHealing")
@@ -111,7 +111,7 @@ public class TreatmentRecord extends AbstractModel{
     private String IncisionHealing;
 
     /**
-    * “”
+    * 处理意见
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TreatmentSuggestion")
@@ -119,7 +119,7 @@ public class TreatmentRecord extends AbstractModel{
     private String TreatmentSuggestion;
 
     /**
-    * “”
+    * 门诊随访要求
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FollowUpRequirements")
@@ -127,7 +127,7 @@ public class TreatmentRecord extends AbstractModel{
     private String FollowUpRequirements;
 
     /**
-    * “”
+    * 诊疗经过
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CheckAndTreatmentProcess")
@@ -135,7 +135,7 @@ public class TreatmentRecord extends AbstractModel{
     private String CheckAndTreatmentProcess;
 
     /**
-    * “”
+    * 手术经过
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SurgeryCondition")
@@ -143,7 +143,7 @@ public class TreatmentRecord extends AbstractModel{
     private String SurgeryCondition;
 
     /**
-    * “”
+    * 入院情况
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ConditionChanges")
@@ -151,7 +151,7 @@ public class TreatmentRecord extends AbstractModel{
     private String ConditionChanges;
 
     /**
-    * “”
+    * 出院情况
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DischargeCondition")
@@ -159,7 +159,7 @@ public class TreatmentRecord extends AbstractModel{
     private String DischargeCondition;
 
     /**
-    * “”
+    * pTNM信息
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PTNM")
@@ -167,7 +167,7 @@ public class TreatmentRecord extends AbstractModel{
     private String PTNM;
 
     /**
-    * “”
+    * pTNMM信息
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PTNMM")
@@ -175,7 +175,7 @@ public class TreatmentRecord extends AbstractModel{
     private String PTNMM;
 
     /**
-    * “”
+    * pTNMN信息
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PTNMN")
@@ -183,7 +183,7 @@ public class TreatmentRecord extends AbstractModel{
     private String PTNMN;
 
     /**
-    * “”
+    * pTNMT信息
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PTNMT")
@@ -191,7 +191,7 @@ public class TreatmentRecord extends AbstractModel{
     private String PTNMT;
 
     /**
-    * “”
+    * ECOG信息
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ECOG")
@@ -199,7 +199,7 @@ public class TreatmentRecord extends AbstractModel{
     private String ECOG;
 
     /**
-    * “”
+    * NRS信息
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NRS")
@@ -207,7 +207,7 @@ public class TreatmentRecord extends AbstractModel{
     private String NRS;
 
     /**
-    * “”
+    * KPS信息
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("KPS")
@@ -215,7 +215,7 @@ public class TreatmentRecord extends AbstractModel{
     private String KPS;
 
     /**
-    * “”
+    * 死亡日期
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeathDate")
@@ -223,7 +223,7 @@ public class TreatmentRecord extends AbstractModel{
     private String DeathDate;
 
     /**
-    * “”
+    * 复发日期
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RelapseDate")
@@ -231,7 +231,7 @@ public class TreatmentRecord extends AbstractModel{
     private String RelapseDate;
 
     /**
-    * “”
+    * 观测天数
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ObservationDays")
@@ -239,9 +239,9 @@ public class TreatmentRecord extends AbstractModel{
     private String ObservationDays;
 
     /**
-     * Get ""
+     * Get 入院
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DmissionCondition ""
+     * @return DmissionCondition 入院
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDmissionCondition() {
@@ -249,9 +249,9 @@ public class TreatmentRecord extends AbstractModel{
     }
 
     /**
-     * Set ""
+     * Set 入院
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DmissionCondition ""
+     * @param DmissionCondition 入院
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDmissionCondition(String DmissionCondition) {
@@ -259,9 +259,9 @@ public class TreatmentRecord extends AbstractModel{
     }
 
     /**
-     * Get ""
+     * Get 主诉
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ChiefComplaint ""
+     * @return ChiefComplaint 主诉
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getChiefComplaint() {
@@ -269,9 +269,9 @@ public class TreatmentRecord extends AbstractModel{
     }
 
     /**
-     * Set ""
+     * Set 主诉
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ChiefComplaint ""
+     * @param ChiefComplaint 主诉
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setChiefComplaint(String ChiefComplaint) {
@@ -279,9 +279,9 @@ public class TreatmentRecord extends AbstractModel{
     }
 
     /**
-     * Get ""
+     * Get 现病史
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DiseasePresent ""
+     * @return DiseasePresent 现病史
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDiseasePresent() {
@@ -289,9 +289,9 @@ public class TreatmentRecord extends AbstractModel{
     }
 
     /**
-     * Set ""
+     * Set 现病史
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DiseasePresent ""
+     * @param DiseasePresent 现病史
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDiseasePresent(String DiseasePresent) {
@@ -299,9 +299,9 @@ public class TreatmentRecord extends AbstractModel{
     }
 
     /**
-     * Get ""
+     * Get 主要症状体征
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SymptomsAndSigns ""
+     * @return SymptomsAndSigns 主要症状体征
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSymptomsAndSigns() {
@@ -309,9 +309,9 @@ public class TreatmentRecord extends AbstractModel{
     }
 
     /**
-     * Set ""
+     * Set 主要症状体征
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SymptomsAndSigns ""
+     * @param SymptomsAndSigns 主要症状体征
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSymptomsAndSigns(String SymptomsAndSigns) {
@@ -319,9 +319,9 @@ public class TreatmentRecord extends AbstractModel{
     }
 
     /**
-     * Get “”
+     * Get 辅助检查
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AuxiliaryExamination “”
+     * @return AuxiliaryExamination 辅助检查
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAuxiliaryExamination() {
@@ -329,9 +329,9 @@ public class TreatmentRecord extends AbstractModel{
     }
 
     /**
-     * Set “”
+     * Set 辅助检查
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AuxiliaryExamination “”
+     * @param AuxiliaryExamination 辅助检查
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAuxiliaryExamination(String AuxiliaryExamination) {
@@ -339,9 +339,9 @@ public class TreatmentRecord extends AbstractModel{
     }
 
     /**
-     * Get “”
+     * Get 体格检查
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BodyExamination “”
+     * @return BodyExamination 体格检查
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBodyExamination() {
@@ -349,9 +349,9 @@ public class TreatmentRecord extends AbstractModel{
     }
 
     /**
-     * Set “”
+     * Set 体格检查
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BodyExamination “”
+     * @param BodyExamination 体格检查
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBodyExamination(String BodyExamination) {
@@ -359,9 +359,9 @@ public class TreatmentRecord extends AbstractModel{
     }
 
     /**
-     * Get “”
+     * Get 专科检查
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SpecialistExamination “”
+     * @return SpecialistExamination 专科检查
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSpecialistExamination() {
@@ -369,9 +369,9 @@ public class TreatmentRecord extends AbstractModel{
     }
 
     /**
-     * Set “”
+     * Set 专科检查
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SpecialistExamination “”
+     * @param SpecialistExamination 专科检查
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSpecialistExamination(String SpecialistExamination) {
@@ -379,9 +379,9 @@ public class TreatmentRecord extends AbstractModel{
     }
 
     /**
-     * Get “”
+     * Get 精神检查
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MentalExamination “”
+     * @return MentalExamination 精神检查
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMentalExamination() {
@@ -389,9 +389,9 @@ public class TreatmentRecord extends AbstractModel{
     }
 
     /**
-     * Set “”
+     * Set 精神检查
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MentalExamination “”
+     * @param MentalExamination 精神检查
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMentalExamination(String MentalExamination) {
@@ -399,9 +399,9 @@ public class TreatmentRecord extends AbstractModel{
     }
 
     /**
-     * Get “”
+     * Get 检查记录
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CheckRecord “”
+     * @return CheckRecord 检查记录
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCheckRecord() {
@@ -409,9 +409,9 @@ public class TreatmentRecord extends AbstractModel{
     }
 
     /**
-     * Set “”
+     * Set 检查记录
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CheckRecord “”
+     * @param CheckRecord 检查记录
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCheckRecord(String CheckRecord) {
@@ -419,9 +419,9 @@ public class TreatmentRecord extends AbstractModel{
     }
 
     /**
-     * Get “”
+     * Get 化验结果
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InspectResult “”
+     * @return InspectResult 化验结果
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInspectResult() {
@@ -429,9 +429,9 @@ public class TreatmentRecord extends AbstractModel{
     }
 
     /**
-     * Set “”
+     * Set 化验结果
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InspectResult “”
+     * @param InspectResult 化验结果
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInspectResult(String InspectResult) {
@@ -439,9 +439,9 @@ public class TreatmentRecord extends AbstractModel{
     }
 
     /**
-     * Get “”
+     * Get 切口愈合情况
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IncisionHealing “”
+     * @return IncisionHealing 切口愈合情况
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIncisionHealing() {
@@ -449,9 +449,9 @@ public class TreatmentRecord extends AbstractModel{
     }
 
     /**
-     * Set “”
+     * Set 切口愈合情况
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IncisionHealing “”
+     * @param IncisionHealing 切口愈合情况
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIncisionHealing(String IncisionHealing) {
@@ -459,9 +459,9 @@ public class TreatmentRecord extends AbstractModel{
     }
 
     /**
-     * Get “”
+     * Get 处理意见
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TreatmentSuggestion “”
+     * @return TreatmentSuggestion 处理意见
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTreatmentSuggestion() {
@@ -469,9 +469,9 @@ public class TreatmentRecord extends AbstractModel{
     }
 
     /**
-     * Set “”
+     * Set 处理意见
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TreatmentSuggestion “”
+     * @param TreatmentSuggestion 处理意见
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTreatmentSuggestion(String TreatmentSuggestion) {
@@ -479,9 +479,9 @@ public class TreatmentRecord extends AbstractModel{
     }
 
     /**
-     * Get “”
+     * Get 门诊随访要求
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FollowUpRequirements “”
+     * @return FollowUpRequirements 门诊随访要求
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFollowUpRequirements() {
@@ -489,9 +489,9 @@ public class TreatmentRecord extends AbstractModel{
     }
 
     /**
-     * Set “”
+     * Set 门诊随访要求
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FollowUpRequirements “”
+     * @param FollowUpRequirements 门诊随访要求
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFollowUpRequirements(String FollowUpRequirements) {
@@ -499,9 +499,9 @@ public class TreatmentRecord extends AbstractModel{
     }
 
     /**
-     * Get “”
+     * Get 诊疗经过
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CheckAndTreatmentProcess “”
+     * @return CheckAndTreatmentProcess 诊疗经过
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCheckAndTreatmentProcess() {
@@ -509,9 +509,9 @@ public class TreatmentRecord extends AbstractModel{
     }
 
     /**
-     * Set “”
+     * Set 诊疗经过
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CheckAndTreatmentProcess “”
+     * @param CheckAndTreatmentProcess 诊疗经过
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCheckAndTreatmentProcess(String CheckAndTreatmentProcess) {
@@ -519,9 +519,9 @@ public class TreatmentRecord extends AbstractModel{
     }
 
     /**
-     * Get “”
+     * Get 手术经过
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SurgeryCondition “”
+     * @return SurgeryCondition 手术经过
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSurgeryCondition() {
@@ -529,9 +529,9 @@ public class TreatmentRecord extends AbstractModel{
     }
 
     /**
-     * Set “”
+     * Set 手术经过
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SurgeryCondition “”
+     * @param SurgeryCondition 手术经过
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSurgeryCondition(String SurgeryCondition) {
@@ -539,9 +539,9 @@ public class TreatmentRecord extends AbstractModel{
     }
 
     /**
-     * Get “”
+     * Get 入院情况
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ConditionChanges “”
+     * @return ConditionChanges 入院情况
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getConditionChanges() {
@@ -549,9 +549,9 @@ public class TreatmentRecord extends AbstractModel{
     }
 
     /**
-     * Set “”
+     * Set 入院情况
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ConditionChanges “”
+     * @param ConditionChanges 入院情况
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConditionChanges(String ConditionChanges) {
@@ -559,9 +559,9 @@ public class TreatmentRecord extends AbstractModel{
     }
 
     /**
-     * Get “”
+     * Get 出院情况
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DischargeCondition “”
+     * @return DischargeCondition 出院情况
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDischargeCondition() {
@@ -569,9 +569,9 @@ public class TreatmentRecord extends AbstractModel{
     }
 
     /**
-     * Set “”
+     * Set 出院情况
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DischargeCondition “”
+     * @param DischargeCondition 出院情况
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDischargeCondition(String DischargeCondition) {
@@ -579,9 +579,9 @@ public class TreatmentRecord extends AbstractModel{
     }
 
     /**
-     * Get “”
+     * Get pTNM信息
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PTNM “”
+     * @return PTNM pTNM信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPTNM() {
@@ -589,9 +589,9 @@ public class TreatmentRecord extends AbstractModel{
     }
 
     /**
-     * Set “”
+     * Set pTNM信息
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PTNM “”
+     * @param PTNM pTNM信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPTNM(String PTNM) {
@@ -599,9 +599,9 @@ public class TreatmentRecord extends AbstractModel{
     }
 
     /**
-     * Get “”
+     * Get pTNMM信息
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PTNMM “”
+     * @return PTNMM pTNMM信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPTNMM() {
@@ -609,9 +609,9 @@ public class TreatmentRecord extends AbstractModel{
     }
 
     /**
-     * Set “”
+     * Set pTNMM信息
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PTNMM “”
+     * @param PTNMM pTNMM信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPTNMM(String PTNMM) {
@@ -619,9 +619,9 @@ public class TreatmentRecord extends AbstractModel{
     }
 
     /**
-     * Get “”
+     * Get pTNMN信息
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PTNMN “”
+     * @return PTNMN pTNMN信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPTNMN() {
@@ -629,9 +629,9 @@ public class TreatmentRecord extends AbstractModel{
     }
 
     /**
-     * Set “”
+     * Set pTNMN信息
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PTNMN “”
+     * @param PTNMN pTNMN信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPTNMN(String PTNMN) {
@@ -639,9 +639,9 @@ public class TreatmentRecord extends AbstractModel{
     }
 
     /**
-     * Get “”
+     * Get pTNMT信息
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PTNMT “”
+     * @return PTNMT pTNMT信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPTNMT() {
@@ -649,9 +649,9 @@ public class TreatmentRecord extends AbstractModel{
     }
 
     /**
-     * Set “”
+     * Set pTNMT信息
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PTNMT “”
+     * @param PTNMT pTNMT信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPTNMT(String PTNMT) {
@@ -659,9 +659,9 @@ public class TreatmentRecord extends AbstractModel{
     }
 
     /**
-     * Get “”
+     * Get ECOG信息
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ECOG “”
+     * @return ECOG ECOG信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getECOG() {
@@ -669,9 +669,9 @@ public class TreatmentRecord extends AbstractModel{
     }
 
     /**
-     * Set “”
+     * Set ECOG信息
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ECOG “”
+     * @param ECOG ECOG信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setECOG(String ECOG) {
@@ -679,9 +679,9 @@ public class TreatmentRecord extends AbstractModel{
     }
 
     /**
-     * Get “”
+     * Get NRS信息
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return NRS “”
+     * @return NRS NRS信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNRS() {
@@ -689,9 +689,9 @@ public class TreatmentRecord extends AbstractModel{
     }
 
     /**
-     * Set “”
+     * Set NRS信息
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param NRS “”
+     * @param NRS NRS信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNRS(String NRS) {
@@ -699,9 +699,9 @@ public class TreatmentRecord extends AbstractModel{
     }
 
     /**
-     * Get “”
+     * Get KPS信息
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return KPS “”
+     * @return KPS KPS信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getKPS() {
@@ -709,9 +709,9 @@ public class TreatmentRecord extends AbstractModel{
     }
 
     /**
-     * Set “”
+     * Set KPS信息
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param KPS “”
+     * @param KPS KPS信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKPS(String KPS) {
@@ -719,9 +719,9 @@ public class TreatmentRecord extends AbstractModel{
     }
 
     /**
-     * Get “”
+     * Get 死亡日期
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DeathDate “”
+     * @return DeathDate 死亡日期
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDeathDate() {
@@ -729,9 +729,9 @@ public class TreatmentRecord extends AbstractModel{
     }
 
     /**
-     * Set “”
+     * Set 死亡日期
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DeathDate “”
+     * @param DeathDate 死亡日期
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeathDate(String DeathDate) {
@@ -739,9 +739,9 @@ public class TreatmentRecord extends AbstractModel{
     }
 
     /**
-     * Get “”
+     * Get 复发日期
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RelapseDate “”
+     * @return RelapseDate 复发日期
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRelapseDate() {
@@ -749,9 +749,9 @@ public class TreatmentRecord extends AbstractModel{
     }
 
     /**
-     * Set “”
+     * Set 复发日期
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RelapseDate “”
+     * @param RelapseDate 复发日期
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRelapseDate(String RelapseDate) {
@@ -759,9 +759,9 @@ public class TreatmentRecord extends AbstractModel{
     }
 
     /**
-     * Get “”
+     * Get 观测天数
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ObservationDays “”
+     * @return ObservationDays 观测天数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getObservationDays() {
@@ -769,9 +769,9 @@ public class TreatmentRecord extends AbstractModel{
     }
 
     /**
-     * Set “”
+     * Set 观测天数
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ObservationDays “”
+     * @param ObservationDays 观测天数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setObservationDays(String ObservationDays) {

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class HistologyLevel extends AbstractModel{
 
     /**
-    * “”
+    * 等级
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Grade")
@@ -47,9 +47,9 @@ public class HistologyLevel extends AbstractModel{
     private String Src;
 
     /**
-     * Get “”
+     * Get 等级
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Grade “”
+     * @return Grade 等级
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGrade() {
@@ -57,9 +57,9 @@ public class HistologyLevel extends AbstractModel{
     }
 
     /**
-     * Set “”
+     * Set 等级
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Grade “”
+     * @param Grade 等级
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGrade(String Grade) {

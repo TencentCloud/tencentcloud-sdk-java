@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class FamilyMedicalHistory extends AbstractModel{
 
     /**
-    * ""
+    * 家族成员史
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RelativeHistory")
@@ -31,7 +31,7 @@ public class FamilyMedicalHistory extends AbstractModel{
     private String RelativeHistory;
 
     /**
-    * ""
+    * 家族肿瘤史
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RelativeCancerHistory")
@@ -39,7 +39,7 @@ public class FamilyMedicalHistory extends AbstractModel{
     private String RelativeCancerHistory;
 
     /**
-    * ""
+    * 家族遗传史
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GeneticHistory")
@@ -47,9 +47,9 @@ public class FamilyMedicalHistory extends AbstractModel{
     private String GeneticHistory;
 
     /**
-     * Get ""
+     * Get 家族成员史
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RelativeHistory ""
+     * @return RelativeHistory 家族成员史
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRelativeHistory() {
@@ -57,9 +57,9 @@ public class FamilyMedicalHistory extends AbstractModel{
     }
 
     /**
-     * Set ""
+     * Set 家族成员史
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RelativeHistory ""
+     * @param RelativeHistory 家族成员史
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRelativeHistory(String RelativeHistory) {
@@ -67,9 +67,9 @@ public class FamilyMedicalHistory extends AbstractModel{
     }
 
     /**
-     * Get ""
+     * Get 家族肿瘤史
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RelativeCancerHistory ""
+     * @return RelativeCancerHistory 家族肿瘤史
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRelativeCancerHistory() {
@@ -77,9 +77,9 @@ public class FamilyMedicalHistory extends AbstractModel{
     }
 
     /**
-     * Set ""
+     * Set 家族肿瘤史
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RelativeCancerHistory ""
+     * @param RelativeCancerHistory 家族肿瘤史
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRelativeCancerHistory(String RelativeCancerHistory) {
@@ -87,9 +87,9 @@ public class FamilyMedicalHistory extends AbstractModel{
     }
 
     /**
-     * Get ""
+     * Get 家族遗传史
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return GeneticHistory ""
+     * @return GeneticHistory 家族遗传史
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGeneticHistory() {
@@ -97,9 +97,9 @@ public class FamilyMedicalHistory extends AbstractModel{
     }
 
     /**
-     * Set ""
+     * Set 家族遗传史
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param GeneticHistory ""
+     * @param GeneticHistory 家族遗传史
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGeneticHistory(String GeneticHistory) {

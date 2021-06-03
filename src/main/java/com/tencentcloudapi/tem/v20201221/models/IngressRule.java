@@ -38,6 +38,13 @@ public class IngressRule extends AbstractModel{
     private String Host;
 
     /**
+    * 协议，选项为 http， https，默认为 http
+    */
+    @SerializedName("Protocol")
+    @Expose
+    private String Protocol;
+
+    /**
      * Get ingress rule value 
      * @return Http ingress rule value
      */
@@ -73,6 +80,22 @@ public class IngressRule extends AbstractModel{
         this.Host = Host;
     }
 
+    /**
+     * Get 协议，选项为 http， https，默认为 http 
+     * @return Protocol 协议，选项为 http， https，默认为 http
+     */
+    public String getProtocol() {
+        return this.Protocol;
+    }
+
+    /**
+     * Set 协议，选项为 http， https，默认为 http
+     * @param Protocol 协议，选项为 http， https，默认为 http
+     */
+    public void setProtocol(String Protocol) {
+        this.Protocol = Protocol;
+    }
+
     public IngressRule() {
     }
 
@@ -87,6 +110,9 @@ public class IngressRule extends AbstractModel{
         if (source.Host != null) {
             this.Host = new String(source.Host);
         }
+        if (source.Protocol != null) {
+            this.Protocol = new String(source.Protocol);
+        }
     }
 
 
@@ -96,6 +122,7 @@ public class IngressRule extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "Http.", this.Http);
         this.setParamSimple(map, prefix + "Host", this.Host);
+        this.setParamSimple(map, prefix + "Protocol", this.Protocol);
 
     }
 }

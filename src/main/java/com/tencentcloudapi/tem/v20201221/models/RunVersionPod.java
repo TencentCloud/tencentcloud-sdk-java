@@ -51,11 +51,27 @@ public class RunVersionPod extends AbstractModel{
     private String CreateTime;
 
     /**
-    * pod的ip
+    * 实例的ip
     */
     @SerializedName("PodIp")
     @Expose
     private String PodIp;
+
+    /**
+    * 可用区
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Zone")
+    @Expose
+    private String Zone;
+
+    /**
+    * 部署版本
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DeployVersion")
+    @Expose
+    private String DeployVersion;
 
     /**
      * Get shell地址 
@@ -122,19 +138,59 @@ public class RunVersionPod extends AbstractModel{
     }
 
     /**
-     * Get pod的ip 
-     * @return PodIp pod的ip
+     * Get 实例的ip 
+     * @return PodIp 实例的ip
      */
     public String getPodIp() {
         return this.PodIp;
     }
 
     /**
-     * Set pod的ip
-     * @param PodIp pod的ip
+     * Set 实例的ip
+     * @param PodIp 实例的ip
      */
     public void setPodIp(String PodIp) {
         this.PodIp = PodIp;
+    }
+
+    /**
+     * Get 可用区
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Zone 可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getZone() {
+        return this.Zone;
+    }
+
+    /**
+     * Set 可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Zone 可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setZone(String Zone) {
+        this.Zone = Zone;
+    }
+
+    /**
+     * Get 部署版本
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DeployVersion 部署版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDeployVersion() {
+        return this.DeployVersion;
+    }
+
+    /**
+     * Set 部署版本
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DeployVersion 部署版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDeployVersion(String DeployVersion) {
+        this.DeployVersion = DeployVersion;
     }
 
     public RunVersionPod() {
@@ -160,6 +216,12 @@ public class RunVersionPod extends AbstractModel{
         if (source.PodIp != null) {
             this.PodIp = new String(source.PodIp);
         }
+        if (source.Zone != null) {
+            this.Zone = new String(source.Zone);
+        }
+        if (source.DeployVersion != null) {
+            this.DeployVersion = new String(source.DeployVersion);
+        }
     }
 
 
@@ -172,6 +234,8 @@ public class RunVersionPod extends AbstractModel{
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "PodIp", this.PodIp);
+        this.setParamSimple(map, prefix + "Zone", this.Zone);
+        this.setParamSimple(map, prefix + "DeployVersion", this.DeployVersion);
 
     }
 }

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class MedDoc extends AbstractModel{
 
     /**
-    * “”
+    * 建议
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Advice")
@@ -31,7 +31,7 @@ public class MedDoc extends AbstractModel{
     private Advice Advice;
 
     /**
-    * “”
+    * 诊断结果
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Diagnosis")
@@ -39,7 +39,7 @@ public class MedDoc extends AbstractModel{
     private DiagCertItem [] Diagnosis;
 
     /**
-    * “”
+    * 疾病史
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DiseaseMedicalHistory")
@@ -47,44 +47,44 @@ public class MedDoc extends AbstractModel{
     private DiseaseMedicalHistory DiseaseMedicalHistory;
 
     /**
-    * “”
+    * 个人史
     */
     @SerializedName("PersonalMedicalHistory")
     @Expose
     private PersonalMedicalHistory PersonalMedicalHistory;
 
     /**
-    * “”
+    * 婚孕史
     */
     @SerializedName("ObstericalMedicalHistory")
     @Expose
     private ObstericalMedicalHistory ObstericalMedicalHistory;
 
     /**
-    * “”
+    * 家族史
     */
     @SerializedName("FamilyMedicalHistory")
     @Expose
     private FamilyMedicalHistory FamilyMedicalHistory;
 
     /**
-    * “”
+    * 月经史
     */
     @SerializedName("MenstrualMedicalHistory")
     @Expose
     private MenstrualMedicalHistory MenstrualMedicalHistory;
 
     /**
-    * “”
+    * 诊疗记录
     */
     @SerializedName("TreatmentRecord")
     @Expose
     private TreatmentRecord TreatmentRecord;
 
     /**
-     * Get “”
+     * Get 建议
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Advice “”
+     * @return Advice 建议
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Advice getAdvice() {
@@ -92,9 +92,9 @@ public class MedDoc extends AbstractModel{
     }
 
     /**
-     * Set “”
+     * Set 建议
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Advice “”
+     * @param Advice 建议
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAdvice(Advice Advice) {
@@ -102,9 +102,9 @@ public class MedDoc extends AbstractModel{
     }
 
     /**
-     * Get “”
+     * Get 诊断结果
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Diagnosis “”
+     * @return Diagnosis 诊断结果
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public DiagCertItem [] getDiagnosis() {
@@ -112,9 +112,9 @@ public class MedDoc extends AbstractModel{
     }
 
     /**
-     * Set “”
+     * Set 诊断结果
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Diagnosis “”
+     * @param Diagnosis 诊断结果
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDiagnosis(DiagCertItem [] Diagnosis) {
@@ -122,9 +122,9 @@ public class MedDoc extends AbstractModel{
     }
 
     /**
-     * Get “”
+     * Get 疾病史
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DiseaseMedicalHistory “”
+     * @return DiseaseMedicalHistory 疾病史
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public DiseaseMedicalHistory getDiseaseMedicalHistory() {
@@ -132,9 +132,9 @@ public class MedDoc extends AbstractModel{
     }
 
     /**
-     * Set “”
+     * Set 疾病史
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DiseaseMedicalHistory “”
+     * @param DiseaseMedicalHistory 疾病史
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDiseaseMedicalHistory(DiseaseMedicalHistory DiseaseMedicalHistory) {
@@ -142,80 +142,80 @@ public class MedDoc extends AbstractModel{
     }
 
     /**
-     * Get “” 
-     * @return PersonalMedicalHistory “”
+     * Get 个人史 
+     * @return PersonalMedicalHistory 个人史
      */
     public PersonalMedicalHistory getPersonalMedicalHistory() {
         return this.PersonalMedicalHistory;
     }
 
     /**
-     * Set “”
-     * @param PersonalMedicalHistory “”
+     * Set 个人史
+     * @param PersonalMedicalHistory 个人史
      */
     public void setPersonalMedicalHistory(PersonalMedicalHistory PersonalMedicalHistory) {
         this.PersonalMedicalHistory = PersonalMedicalHistory;
     }
 
     /**
-     * Get “” 
-     * @return ObstericalMedicalHistory “”
+     * Get 婚孕史 
+     * @return ObstericalMedicalHistory 婚孕史
      */
     public ObstericalMedicalHistory getObstericalMedicalHistory() {
         return this.ObstericalMedicalHistory;
     }
 
     /**
-     * Set “”
-     * @param ObstericalMedicalHistory “”
+     * Set 婚孕史
+     * @param ObstericalMedicalHistory 婚孕史
      */
     public void setObstericalMedicalHistory(ObstericalMedicalHistory ObstericalMedicalHistory) {
         this.ObstericalMedicalHistory = ObstericalMedicalHistory;
     }
 
     /**
-     * Get “” 
-     * @return FamilyMedicalHistory “”
+     * Get 家族史 
+     * @return FamilyMedicalHistory 家族史
      */
     public FamilyMedicalHistory getFamilyMedicalHistory() {
         return this.FamilyMedicalHistory;
     }
 
     /**
-     * Set “”
-     * @param FamilyMedicalHistory “”
+     * Set 家族史
+     * @param FamilyMedicalHistory 家族史
      */
     public void setFamilyMedicalHistory(FamilyMedicalHistory FamilyMedicalHistory) {
         this.FamilyMedicalHistory = FamilyMedicalHistory;
     }
 
     /**
-     * Get “” 
-     * @return MenstrualMedicalHistory “”
+     * Get 月经史 
+     * @return MenstrualMedicalHistory 月经史
      */
     public MenstrualMedicalHistory getMenstrualMedicalHistory() {
         return this.MenstrualMedicalHistory;
     }
 
     /**
-     * Set “”
-     * @param MenstrualMedicalHistory “”
+     * Set 月经史
+     * @param MenstrualMedicalHistory 月经史
      */
     public void setMenstrualMedicalHistory(MenstrualMedicalHistory MenstrualMedicalHistory) {
         this.MenstrualMedicalHistory = MenstrualMedicalHistory;
     }
 
     /**
-     * Get “” 
-     * @return TreatmentRecord “”
+     * Get 诊疗记录 
+     * @return TreatmentRecord 诊疗记录
      */
     public TreatmentRecord getTreatmentRecord() {
         return this.TreatmentRecord;
     }
 
     /**
-     * Set “”
-     * @param TreatmentRecord “”
+     * Set 诊疗记录
+     * @param TreatmentRecord 诊疗记录
      */
     public void setTreatmentRecord(TreatmentRecord TreatmentRecord) {
         this.TreatmentRecord = TreatmentRecord;

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class MenstrualMedicalHistory extends AbstractModel{
 
     /**
-    * “”
+    * 末次月经时间
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LastMenstrualPeriod")
@@ -31,7 +31,7 @@ public class MenstrualMedicalHistory extends AbstractModel{
     private String LastMenstrualPeriod;
 
     /**
-    * “”
+    * 经量
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MenstrualFlow")
@@ -39,7 +39,7 @@ public class MenstrualMedicalHistory extends AbstractModel{
     private String MenstrualFlow;
 
     /**
-    * “”
+    * 月经初潮年龄
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MenarcheAge")
@@ -47,7 +47,7 @@ public class MenstrualMedicalHistory extends AbstractModel{
     private String MenarcheAge;
 
     /**
-    * “”
+    * 是否来月经
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MenstruationOrNot")
@@ -55,7 +55,7 @@ public class MenstrualMedicalHistory extends AbstractModel{
     private String MenstruationOrNot;
 
     /**
-    * “”
+    * 月经周期
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MenstrualCycles")
@@ -63,7 +63,7 @@ public class MenstrualMedicalHistory extends AbstractModel{
     private String MenstrualCycles;
 
     /**
-    * “”
+    * 月经持续天数
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MenstrualPeriod")
@@ -71,9 +71,9 @@ public class MenstrualMedicalHistory extends AbstractModel{
     private String MenstrualPeriod;
 
     /**
-     * Get “”
+     * Get 末次月经时间
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LastMenstrualPeriod “”
+     * @return LastMenstrualPeriod 末次月经时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLastMenstrualPeriod() {
@@ -81,9 +81,9 @@ public class MenstrualMedicalHistory extends AbstractModel{
     }
 
     /**
-     * Set “”
+     * Set 末次月经时间
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LastMenstrualPeriod “”
+     * @param LastMenstrualPeriod 末次月经时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLastMenstrualPeriod(String LastMenstrualPeriod) {
@@ -91,9 +91,9 @@ public class MenstrualMedicalHistory extends AbstractModel{
     }
 
     /**
-     * Get “”
+     * Get 经量
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MenstrualFlow “”
+     * @return MenstrualFlow 经量
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMenstrualFlow() {
@@ -101,9 +101,9 @@ public class MenstrualMedicalHistory extends AbstractModel{
     }
 
     /**
-     * Set “”
+     * Set 经量
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MenstrualFlow “”
+     * @param MenstrualFlow 经量
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMenstrualFlow(String MenstrualFlow) {
@@ -111,9 +111,9 @@ public class MenstrualMedicalHistory extends AbstractModel{
     }
 
     /**
-     * Get “”
+     * Get 月经初潮年龄
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MenarcheAge “”
+     * @return MenarcheAge 月经初潮年龄
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMenarcheAge() {
@@ -121,9 +121,9 @@ public class MenstrualMedicalHistory extends AbstractModel{
     }
 
     /**
-     * Set “”
+     * Set 月经初潮年龄
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MenarcheAge “”
+     * @param MenarcheAge 月经初潮年龄
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMenarcheAge(String MenarcheAge) {
@@ -131,9 +131,9 @@ public class MenstrualMedicalHistory extends AbstractModel{
     }
 
     /**
-     * Get “”
+     * Get 是否来月经
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MenstruationOrNot “”
+     * @return MenstruationOrNot 是否来月经
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMenstruationOrNot() {
@@ -141,9 +141,9 @@ public class MenstrualMedicalHistory extends AbstractModel{
     }
 
     /**
-     * Set “”
+     * Set 是否来月经
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MenstruationOrNot “”
+     * @param MenstruationOrNot 是否来月经
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMenstruationOrNot(String MenstruationOrNot) {
@@ -151,9 +151,9 @@ public class MenstrualMedicalHistory extends AbstractModel{
     }
 
     /**
-     * Get “”
+     * Get 月经周期
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MenstrualCycles “”
+     * @return MenstrualCycles 月经周期
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMenstrualCycles() {
@@ -161,9 +161,9 @@ public class MenstrualMedicalHistory extends AbstractModel{
     }
 
     /**
-     * Set “”
+     * Set 月经周期
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MenstrualCycles “”
+     * @param MenstrualCycles 月经周期
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMenstrualCycles(String MenstrualCycles) {
@@ -171,9 +171,9 @@ public class MenstrualMedicalHistory extends AbstractModel{
     }
 
     /**
-     * Get “”
+     * Get 月经持续天数
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MenstrualPeriod “”
+     * @return MenstrualPeriod 月经持续天数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMenstrualPeriod() {
@@ -181,9 +181,9 @@ public class MenstrualMedicalHistory extends AbstractModel{
     }
 
     /**
-     * Set “”
+     * Set 月经持续天数
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MenstrualPeriod “”
+     * @param MenstrualPeriod 月经持续天数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMenstrualPeriod(String MenstrualPeriod) {

@@ -23,6 +23,13 @@ import java.util.HashMap;
 public class BindingPolicyObjectRequest extends AbstractModel{
 
     /**
+    * 必填。固定值"monitor"
+    */
+    @SerializedName("Module")
+    @Expose
+    private String Module;
+
+    /**
     * 策略组id，如传入 PolicyId 则该字段会被忽略可传入任意值如 0
     */
     @SerializedName("GroupId")
@@ -30,11 +37,11 @@ public class BindingPolicyObjectRequest extends AbstractModel{
     private Long GroupId;
 
     /**
-    * 必填。固定值"monitor"
+    * 告警策略ID，使用此字段时 GroupId 会被忽略
     */
-    @SerializedName("Module")
+    @SerializedName("PolicyId")
     @Expose
-    private String Module;
+    private String PolicyId;
 
     /**
     * 实例分组ID
@@ -51,11 +58,20 @@ public class BindingPolicyObjectRequest extends AbstractModel{
     private BindingPolicyObjectDimension [] Dimensions;
 
     /**
-    * 告警策略ID，使用此字段时 GroupId 会被忽略
-    */
-    @SerializedName("PolicyId")
-    @Expose
-    private String PolicyId;
+     * Get 必填。固定值"monitor" 
+     * @return Module 必填。固定值"monitor"
+     */
+    public String getModule() {
+        return this.Module;
+    }
+
+    /**
+     * Set 必填。固定值"monitor"
+     * @param Module 必填。固定值"monitor"
+     */
+    public void setModule(String Module) {
+        this.Module = Module;
+    }
 
     /**
      * Get 策略组id，如传入 PolicyId 则该字段会被忽略可传入任意值如 0 
@@ -74,19 +90,19 @@ public class BindingPolicyObjectRequest extends AbstractModel{
     }
 
     /**
-     * Get 必填。固定值"monitor" 
-     * @return Module 必填。固定值"monitor"
+     * Get 告警策略ID，使用此字段时 GroupId 会被忽略 
+     * @return PolicyId 告警策略ID，使用此字段时 GroupId 会被忽略
      */
-    public String getModule() {
-        return this.Module;
+    public String getPolicyId() {
+        return this.PolicyId;
     }
 
     /**
-     * Set 必填。固定值"monitor"
-     * @param Module 必填。固定值"monitor"
+     * Set 告警策略ID，使用此字段时 GroupId 会被忽略
+     * @param PolicyId 告警策略ID，使用此字段时 GroupId 会被忽略
      */
-    public void setModule(String Module) {
-        this.Module = Module;
+    public void setPolicyId(String PolicyId) {
+        this.PolicyId = PolicyId;
     }
 
     /**
@@ -121,22 +137,6 @@ public class BindingPolicyObjectRequest extends AbstractModel{
         this.Dimensions = Dimensions;
     }
 
-    /**
-     * Get 告警策略ID，使用此字段时 GroupId 会被忽略 
-     * @return PolicyId 告警策略ID，使用此字段时 GroupId 会被忽略
-     */
-    public String getPolicyId() {
-        return this.PolicyId;
-    }
-
-    /**
-     * Set 告警策略ID，使用此字段时 GroupId 会被忽略
-     * @param PolicyId 告警策略ID，使用此字段时 GroupId 会被忽略
-     */
-    public void setPolicyId(String PolicyId) {
-        this.PolicyId = PolicyId;
-    }
-
     public BindingPolicyObjectRequest() {
     }
 
@@ -145,11 +145,14 @@ public class BindingPolicyObjectRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public BindingPolicyObjectRequest(BindingPolicyObjectRequest source) {
+        if (source.Module != null) {
+            this.Module = new String(source.Module);
+        }
         if (source.GroupId != null) {
             this.GroupId = new Long(source.GroupId);
         }
-        if (source.Module != null) {
-            this.Module = new String(source.Module);
+        if (source.PolicyId != null) {
+            this.PolicyId = new String(source.PolicyId);
         }
         if (source.InstanceGroupId != null) {
             this.InstanceGroupId = new Long(source.InstanceGroupId);
@@ -160,9 +163,6 @@ public class BindingPolicyObjectRequest extends AbstractModel{
                 this.Dimensions[i] = new BindingPolicyObjectDimension(source.Dimensions[i]);
             }
         }
-        if (source.PolicyId != null) {
-            this.PolicyId = new String(source.PolicyId);
-        }
     }
 
 
@@ -170,11 +170,11 @@ public class BindingPolicyObjectRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "GroupId", this.GroupId);
         this.setParamSimple(map, prefix + "Module", this.Module);
+        this.setParamSimple(map, prefix + "GroupId", this.GroupId);
+        this.setParamSimple(map, prefix + "PolicyId", this.PolicyId);
         this.setParamSimple(map, prefix + "InstanceGroupId", this.InstanceGroupId);
         this.setParamArrayObj(map, prefix + "Dimensions.", this.Dimensions);
-        this.setParamSimple(map, prefix + "PolicyId", this.PolicyId);
 
     }
 }

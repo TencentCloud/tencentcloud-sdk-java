@@ -91,6 +91,21 @@ public class IngressInfo extends AbstractModel{
     private String Vip;
 
     /**
+    * 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CreateTime")
+    @Expose
+    private String CreateTime;
+
+    /**
+    * 是否混合 https，默认 false，可选值 true 代表有 https 协议监听
+    */
+    @SerializedName("Mixed")
+    @Expose
+    private Boolean Mixed;
+
+    /**
      * Get tem namespaceId
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return NamespaceId tem namespaceId
@@ -254,6 +269,42 @@ public class IngressInfo extends AbstractModel{
         this.Vip = Vip;
     }
 
+    /**
+     * Get 创建时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CreateTime 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCreateTime() {
+        return this.CreateTime;
+    }
+
+    /**
+     * Set 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CreateTime 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCreateTime(String CreateTime) {
+        this.CreateTime = CreateTime;
+    }
+
+    /**
+     * Get 是否混合 https，默认 false，可选值 true 代表有 https 协议监听 
+     * @return Mixed 是否混合 https，默认 false，可选值 true 代表有 https 协议监听
+     */
+    public Boolean getMixed() {
+        return this.Mixed;
+    }
+
+    /**
+     * Set 是否混合 https，默认 false，可选值 true 代表有 https 协议监听
+     * @param Mixed 是否混合 https，默认 false，可选值 true 代表有 https 协议监听
+     */
+    public void setMixed(Boolean Mixed) {
+        this.Mixed = Mixed;
+    }
+
     public IngressInfo() {
     }
 
@@ -295,6 +346,12 @@ public class IngressInfo extends AbstractModel{
         if (source.Vip != null) {
             this.Vip = new String(source.Vip);
         }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.Mixed != null) {
+            this.Mixed = new Boolean(source.Mixed);
+        }
     }
 
 
@@ -311,6 +368,8 @@ public class IngressInfo extends AbstractModel{
         this.setParamArrayObj(map, prefix + "Tls.", this.Tls);
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamSimple(map, prefix + "Vip", this.Vip);
+        this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "Mixed", this.Mixed);
 
     }
 }

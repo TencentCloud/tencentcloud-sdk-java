@@ -31,7 +31,7 @@ public class DischargeDiagnosis extends AbstractModel{
     private Long TableIndex;
 
     /**
-    * ""
+    * 出院诊断
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OutDiagnosis")
@@ -39,7 +39,7 @@ public class DischargeDiagnosis extends AbstractModel{
     private BlockInfo OutDiagnosis;
 
     /**
-    * ""
+    * 疾病编码
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DiseaseCode")
@@ -47,7 +47,7 @@ public class DischargeDiagnosis extends AbstractModel{
     private BlockInfo DiseaseCode;
 
     /**
-    * ""
+    * 入院情况
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InStatus")
@@ -55,7 +55,7 @@ public class DischargeDiagnosis extends AbstractModel{
     private BlockInfo InStatus;
 
     /**
-    * ""
+    * 出院情况
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OutStatus")
@@ -83,9 +83,9 @@ public class DischargeDiagnosis extends AbstractModel{
     }
 
     /**
-     * Get ""
+     * Get 出院诊断
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OutDiagnosis ""
+     * @return OutDiagnosis 出院诊断
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public BlockInfo getOutDiagnosis() {
@@ -93,9 +93,9 @@ public class DischargeDiagnosis extends AbstractModel{
     }
 
     /**
-     * Set ""
+     * Set 出院诊断
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OutDiagnosis ""
+     * @param OutDiagnosis 出院诊断
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOutDiagnosis(BlockInfo OutDiagnosis) {
@@ -103,9 +103,9 @@ public class DischargeDiagnosis extends AbstractModel{
     }
 
     /**
-     * Get ""
+     * Get 疾病编码
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DiseaseCode ""
+     * @return DiseaseCode 疾病编码
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public BlockInfo getDiseaseCode() {
@@ -113,9 +113,9 @@ public class DischargeDiagnosis extends AbstractModel{
     }
 
     /**
-     * Set ""
+     * Set 疾病编码
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DiseaseCode ""
+     * @param DiseaseCode 疾病编码
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDiseaseCode(BlockInfo DiseaseCode) {
@@ -123,9 +123,9 @@ public class DischargeDiagnosis extends AbstractModel{
     }
 
     /**
-     * Get ""
+     * Get 入院情况
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InStatus ""
+     * @return InStatus 入院情况
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public BlockInfo getInStatus() {
@@ -133,9 +133,9 @@ public class DischargeDiagnosis extends AbstractModel{
     }
 
     /**
-     * Set ""
+     * Set 入院情况
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InStatus ""
+     * @param InStatus 入院情况
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInStatus(BlockInfo InStatus) {
@@ -143,9 +143,9 @@ public class DischargeDiagnosis extends AbstractModel{
     }
 
     /**
-     * Get ""
+     * Get 出院情况
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OutStatus ""
+     * @return OutStatus 出院情况
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public BlockInfo getOutStatus() {
@@ -153,9 +153,9 @@ public class DischargeDiagnosis extends AbstractModel{
     }
 
     /**
-     * Set ""
+     * Set 出院情况
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OutStatus ""
+     * @param OutStatus 出院情况
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOutStatus(BlockInfo OutStatus) {
