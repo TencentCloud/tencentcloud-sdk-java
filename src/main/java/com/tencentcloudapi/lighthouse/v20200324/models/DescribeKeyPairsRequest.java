@@ -44,6 +44,13 @@ public class DescribeKeyPairsRequest extends AbstractModel{
     private Long Limit;
 
     /**
+    * 过滤条件，每次请求的 Filters 的上限为10， Filters.Values 的上限为5。参数不可以同时指定 KeyIds 和 Filters 。详细的过滤条件如下： key-id - String - 是否必填： 否 - （过滤条件）按照KeyID进行过滤; key-name - String - 是否必填： 否 - （过滤条件）按照KeyName进行过滤。
+    */
+    @SerializedName("Filters")
+    @Expose
+    private Filter [] Filters;
+
+    /**
      * Get 密钥对 ID 列表。 
      * @return KeyIds 密钥对 ID 列表。
      */
@@ -91,6 +98,22 @@ public class DescribeKeyPairsRequest extends AbstractModel{
         this.Limit = Limit;
     }
 
+    /**
+     * Get 过滤条件，每次请求的 Filters 的上限为10， Filters.Values 的上限为5。参数不可以同时指定 KeyIds 和 Filters 。详细的过滤条件如下： key-id - String - 是否必填： 否 - （过滤条件）按照KeyID进行过滤; key-name - String - 是否必填： 否 - （过滤条件）按照KeyName进行过滤。 
+     * @return Filters 过滤条件，每次请求的 Filters 的上限为10， Filters.Values 的上限为5。参数不可以同时指定 KeyIds 和 Filters 。详细的过滤条件如下： key-id - String - 是否必填： 否 - （过滤条件）按照KeyID进行过滤; key-name - String - 是否必填： 否 - （过滤条件）按照KeyName进行过滤。
+     */
+    public Filter [] getFilters() {
+        return this.Filters;
+    }
+
+    /**
+     * Set 过滤条件，每次请求的 Filters 的上限为10， Filters.Values 的上限为5。参数不可以同时指定 KeyIds 和 Filters 。详细的过滤条件如下： key-id - String - 是否必填： 否 - （过滤条件）按照KeyID进行过滤; key-name - String - 是否必填： 否 - （过滤条件）按照KeyName进行过滤。
+     * @param Filters 过滤条件，每次请求的 Filters 的上限为10， Filters.Values 的上限为5。参数不可以同时指定 KeyIds 和 Filters 。详细的过滤条件如下： key-id - String - 是否必填： 否 - （过滤条件）按照KeyID进行过滤; key-name - String - 是否必填： 否 - （过滤条件）按照KeyName进行过滤。
+     */
+    public void setFilters(Filter [] Filters) {
+        this.Filters = Filters;
+    }
+
     public DescribeKeyPairsRequest() {
     }
 
@@ -111,6 +134,12 @@ public class DescribeKeyPairsRequest extends AbstractModel{
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
         }
+        if (source.Filters != null) {
+            this.Filters = new Filter[source.Filters.length];
+            for (int i = 0; i < source.Filters.length; i++) {
+                this.Filters[i] = new Filter(source.Filters[i]);
+            }
+        }
     }
 
 
@@ -121,6 +150,7 @@ public class DescribeKeyPairsRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "KeyIds.", this.KeyIds);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
 
     }
 }

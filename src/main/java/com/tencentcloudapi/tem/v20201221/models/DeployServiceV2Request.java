@@ -197,6 +197,20 @@ public class DeployServiceV2Request extends AbstractModel{
     private String [] ImageArgs;
 
     /**
+    * 服务端口映射
+    */
+    @SerializedName("PortMappings")
+    @Expose
+    private PortMapping [] PortMappings;
+
+    /**
+    * 是否添加默认注册中心配置
+    */
+    @SerializedName("UseRegistryDefaultConfig")
+    @Expose
+    private Boolean UseRegistryDefaultConfig;
+
+    /**
      * Get 服务ID 
      * @return ServiceId 服务ID
      */
@@ -604,6 +618,38 @@ public class DeployServiceV2Request extends AbstractModel{
         this.ImageArgs = ImageArgs;
     }
 
+    /**
+     * Get 服务端口映射 
+     * @return PortMappings 服务端口映射
+     */
+    public PortMapping [] getPortMappings() {
+        return this.PortMappings;
+    }
+
+    /**
+     * Set 服务端口映射
+     * @param PortMappings 服务端口映射
+     */
+    public void setPortMappings(PortMapping [] PortMappings) {
+        this.PortMappings = PortMappings;
+    }
+
+    /**
+     * Get 是否添加默认注册中心配置 
+     * @return UseRegistryDefaultConfig 是否添加默认注册中心配置
+     */
+    public Boolean getUseRegistryDefaultConfig() {
+        return this.UseRegistryDefaultConfig;
+    }
+
+    /**
+     * Set 是否添加默认注册中心配置
+     * @param UseRegistryDefaultConfig 是否添加默认注册中心配置
+     */
+    public void setUseRegistryDefaultConfig(Boolean UseRegistryDefaultConfig) {
+        this.UseRegistryDefaultConfig = UseRegistryDefaultConfig;
+    }
+
     public DeployServiceV2Request() {
     }
 
@@ -702,6 +748,15 @@ public class DeployServiceV2Request extends AbstractModel{
                 this.ImageArgs[i] = new String(source.ImageArgs[i]);
             }
         }
+        if (source.PortMappings != null) {
+            this.PortMappings = new PortMapping[source.PortMappings.length];
+            for (int i = 0; i < source.PortMappings.length; i++) {
+                this.PortMappings[i] = new PortMapping(source.PortMappings[i]);
+            }
+        }
+        if (source.UseRegistryDefaultConfig != null) {
+            this.UseRegistryDefaultConfig = new Boolean(source.UseRegistryDefaultConfig);
+        }
     }
 
 
@@ -733,6 +788,8 @@ public class DeployServiceV2Request extends AbstractModel{
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "ImageCommand", this.ImageCommand);
         this.setParamArraySimple(map, prefix + "ImageArgs.", this.ImageArgs);
+        this.setParamArrayObj(map, prefix + "PortMappings.", this.PortMappings);
+        this.setParamSimple(map, prefix + "UseRegistryDefaultConfig", this.UseRegistryDefaultConfig);
 
     }
 }

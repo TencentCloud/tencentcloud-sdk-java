@@ -37,6 +37,13 @@ public class DescribeImportMachineInfoRequest extends AbstractModel{
     private String ImportType;
 
     /**
+    * 是否仅支持专业版机器的查询（true：仅专业版   false：专业版+基础版）
+    */
+    @SerializedName("IsQueryProMachine")
+    @Expose
+    private Boolean IsQueryProMachine;
+
+    /**
      * Get 服务器内网IP（默认）/ 服务器名称 / 服务器ID 数组 
      * @return MachineList 服务器内网IP（默认）/ 服务器名称 / 服务器ID 数组
      */
@@ -68,6 +75,22 @@ public class DescribeImportMachineInfoRequest extends AbstractModel{
         this.ImportType = ImportType;
     }
 
+    /**
+     * Get 是否仅支持专业版机器的查询（true：仅专业版   false：专业版+基础版） 
+     * @return IsQueryProMachine 是否仅支持专业版机器的查询（true：仅专业版   false：专业版+基础版）
+     */
+    public Boolean getIsQueryProMachine() {
+        return this.IsQueryProMachine;
+    }
+
+    /**
+     * Set 是否仅支持专业版机器的查询（true：仅专业版   false：专业版+基础版）
+     * @param IsQueryProMachine 是否仅支持专业版机器的查询（true：仅专业版   false：专业版+基础版）
+     */
+    public void setIsQueryProMachine(Boolean IsQueryProMachine) {
+        this.IsQueryProMachine = IsQueryProMachine;
+    }
+
     public DescribeImportMachineInfoRequest() {
     }
 
@@ -85,6 +108,9 @@ public class DescribeImportMachineInfoRequest extends AbstractModel{
         if (source.ImportType != null) {
             this.ImportType = new String(source.ImportType);
         }
+        if (source.IsQueryProMachine != null) {
+            this.IsQueryProMachine = new Boolean(source.IsQueryProMachine);
+        }
     }
 
 
@@ -94,6 +120,7 @@ public class DescribeImportMachineInfoRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "MachineList.", this.MachineList);
         this.setParamSimple(map, prefix + "ImportType", this.ImportType);
+        this.setParamSimple(map, prefix + "IsQueryProMachine", this.IsQueryProMachine);
 
     }
 }

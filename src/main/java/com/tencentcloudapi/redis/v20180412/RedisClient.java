@@ -59,6 +59,26 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
+     *该接口仅支持多AZ实例副本组提主
+     * @param req ChangeReplicaToMasterRequest
+     * @return ChangeReplicaToMasterResponse
+     * @throws TencentCloudSDKException
+     */
+    public ChangeReplicaToMasterResponse ChangeReplicaToMaster(ChangeReplicaToMasterRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ChangeReplicaToMasterResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ChangeReplicaToMasterResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ChangeReplicaToMaster");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *回收站实例立即下线
      * @param req CleanUpInstanceRequest
      * @return CleanUpInstanceResponse

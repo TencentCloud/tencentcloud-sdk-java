@@ -20,17 +20,17 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeIngressesRequest extends AbstractModel{
+public class DescribeRelatedIngressesRequest extends AbstractModel{
 
     /**
-    * namespace id
+    * 环境 id
     */
     @SerializedName("NamespaceId")
     @Expose
     private String NamespaceId;
 
     /**
-    * namespace
+    * EKS namespace
     */
     @SerializedName("EksNamespace")
     @Expose
@@ -44,39 +44,39 @@ public class DescribeIngressesRequest extends AbstractModel{
     private Long SourceChannel;
 
     /**
-    * ingress 规则名列表
+    * 服务 ID
     */
-    @SerializedName("Names")
+    @SerializedName("ServiceId")
     @Expose
-    private String [] Names;
+    private String ServiceId;
 
     /**
-     * Get namespace id 
-     * @return NamespaceId namespace id
+     * Get 环境 id 
+     * @return NamespaceId 环境 id
      */
     public String getNamespaceId() {
         return this.NamespaceId;
     }
 
     /**
-     * Set namespace id
-     * @param NamespaceId namespace id
+     * Set 环境 id
+     * @param NamespaceId 环境 id
      */
     public void setNamespaceId(String NamespaceId) {
         this.NamespaceId = NamespaceId;
     }
 
     /**
-     * Get namespace 
-     * @return EksNamespace namespace
+     * Get EKS namespace 
+     * @return EksNamespace EKS namespace
      */
     public String getEksNamespace() {
         return this.EksNamespace;
     }
 
     /**
-     * Set namespace
-     * @param EksNamespace namespace
+     * Set EKS namespace
+     * @param EksNamespace EKS namespace
      */
     public void setEksNamespace(String EksNamespace) {
         this.EksNamespace = EksNamespace;
@@ -99,29 +99,29 @@ public class DescribeIngressesRequest extends AbstractModel{
     }
 
     /**
-     * Get ingress 规则名列表 
-     * @return Names ingress 规则名列表
+     * Get 服务 ID 
+     * @return ServiceId 服务 ID
      */
-    public String [] getNames() {
-        return this.Names;
+    public String getServiceId() {
+        return this.ServiceId;
     }
 
     /**
-     * Set ingress 规则名列表
-     * @param Names ingress 规则名列表
+     * Set 服务 ID
+     * @param ServiceId 服务 ID
      */
-    public void setNames(String [] Names) {
-        this.Names = Names;
+    public void setServiceId(String ServiceId) {
+        this.ServiceId = ServiceId;
     }
 
-    public DescribeIngressesRequest() {
+    public DescribeRelatedIngressesRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeIngressesRequest(DescribeIngressesRequest source) {
+    public DescribeRelatedIngressesRequest(DescribeRelatedIngressesRequest source) {
         if (source.NamespaceId != null) {
             this.NamespaceId = new String(source.NamespaceId);
         }
@@ -131,11 +131,8 @@ public class DescribeIngressesRequest extends AbstractModel{
         if (source.SourceChannel != null) {
             this.SourceChannel = new Long(source.SourceChannel);
         }
-        if (source.Names != null) {
-            this.Names = new String[source.Names.length];
-            for (int i = 0; i < source.Names.length; i++) {
-                this.Names[i] = new String(source.Names[i]);
-            }
+        if (source.ServiceId != null) {
+            this.ServiceId = new String(source.ServiceId);
         }
     }
 
@@ -147,7 +144,7 @@ public class DescribeIngressesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "NamespaceId", this.NamespaceId);
         this.setParamSimple(map, prefix + "EksNamespace", this.EksNamespace);
         this.setParamSimple(map, prefix + "SourceChannel", this.SourceChannel);
-        this.setParamArraySimple(map, prefix + "Names.", this.Names);
+        this.setParamSimple(map, prefix + "ServiceId", this.ServiceId);
 
     }
 }

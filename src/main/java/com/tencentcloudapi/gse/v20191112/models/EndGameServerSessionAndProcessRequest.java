@@ -23,69 +23,69 @@ import java.util.HashMap;
 public class EndGameServerSessionAndProcessRequest extends AbstractModel{
 
     /**
-    * 游戏服务器会话ID
+    * 游戏服务器会话ID，如果传入游戏服务器会话ID，结束对应进程以及游戏服务器会话和玩家会话。
     */
     @SerializedName("GameServerSessionId")
     @Expose
     private String GameServerSessionId;
 
     /**
-    * CVM的公网IP地址
+    * CVM的公网IP地址，需同时传入IpAddress和Port，结束IpAddress和Port对应的进程以及游戏服务器会话（如果存在）和玩家会话（如果存在），单独传入IpAddress不生效。
     */
     @SerializedName("IpAddress")
     @Expose
     private String IpAddress;
 
     /**
-    * 端口号，最小值不小于1，最大值不超过60000
+    * 端口号，取值范围1025-60000，需同时传入IpAddress和Port，结束IpAddress和Port对应的进程以及游戏服务器会话（如果存在）和玩家会话（如果存在），单独传入Port不生效。
     */
     @SerializedName("Port")
     @Expose
     private Long Port;
 
     /**
-     * Get 游戏服务器会话ID 
-     * @return GameServerSessionId 游戏服务器会话ID
+     * Get 游戏服务器会话ID，如果传入游戏服务器会话ID，结束对应进程以及游戏服务器会话和玩家会话。 
+     * @return GameServerSessionId 游戏服务器会话ID，如果传入游戏服务器会话ID，结束对应进程以及游戏服务器会话和玩家会话。
      */
     public String getGameServerSessionId() {
         return this.GameServerSessionId;
     }
 
     /**
-     * Set 游戏服务器会话ID
-     * @param GameServerSessionId 游戏服务器会话ID
+     * Set 游戏服务器会话ID，如果传入游戏服务器会话ID，结束对应进程以及游戏服务器会话和玩家会话。
+     * @param GameServerSessionId 游戏服务器会话ID，如果传入游戏服务器会话ID，结束对应进程以及游戏服务器会话和玩家会话。
      */
     public void setGameServerSessionId(String GameServerSessionId) {
         this.GameServerSessionId = GameServerSessionId;
     }
 
     /**
-     * Get CVM的公网IP地址 
-     * @return IpAddress CVM的公网IP地址
+     * Get CVM的公网IP地址，需同时传入IpAddress和Port，结束IpAddress和Port对应的进程以及游戏服务器会话（如果存在）和玩家会话（如果存在），单独传入IpAddress不生效。 
+     * @return IpAddress CVM的公网IP地址，需同时传入IpAddress和Port，结束IpAddress和Port对应的进程以及游戏服务器会话（如果存在）和玩家会话（如果存在），单独传入IpAddress不生效。
      */
     public String getIpAddress() {
         return this.IpAddress;
     }
 
     /**
-     * Set CVM的公网IP地址
-     * @param IpAddress CVM的公网IP地址
+     * Set CVM的公网IP地址，需同时传入IpAddress和Port，结束IpAddress和Port对应的进程以及游戏服务器会话（如果存在）和玩家会话（如果存在），单独传入IpAddress不生效。
+     * @param IpAddress CVM的公网IP地址，需同时传入IpAddress和Port，结束IpAddress和Port对应的进程以及游戏服务器会话（如果存在）和玩家会话（如果存在），单独传入IpAddress不生效。
      */
     public void setIpAddress(String IpAddress) {
         this.IpAddress = IpAddress;
     }
 
     /**
-     * Get 端口号，最小值不小于1，最大值不超过60000 
-     * @return Port 端口号，最小值不小于1，最大值不超过60000
+     * Get 端口号，取值范围1025-60000，需同时传入IpAddress和Port，结束IpAddress和Port对应的进程以及游戏服务器会话（如果存在）和玩家会话（如果存在），单独传入Port不生效。 
+     * @return Port 端口号，取值范围1025-60000，需同时传入IpAddress和Port，结束IpAddress和Port对应的进程以及游戏服务器会话（如果存在）和玩家会话（如果存在），单独传入Port不生效。
      */
     public Long getPort() {
         return this.Port;
     }
 
     /**
-     * Set 端口号，最小值不小于1，最大值不超过60000
-     * @param Port 端口号，最小值不小于1，最大值不超过60000
+     * Set 端口号，取值范围1025-60000，需同时传入IpAddress和Port，结束IpAddress和Port对应的进程以及游戏服务器会话（如果存在）和玩家会话（如果存在），单独传入Port不生效。
+     * @param Port 端口号，取值范围1025-60000，需同时传入IpAddress和Port，结束IpAddress和Port对应的进程以及游戏服务器会话（如果存在）和玩家会话（如果存在），单独传入Port不生效。
      */
     public void setPort(Long Port) {
         this.Port = Port;

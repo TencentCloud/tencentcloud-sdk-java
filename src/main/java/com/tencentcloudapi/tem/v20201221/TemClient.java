@@ -239,6 +239,26 @@ public class TemClient extends AbstractClient{
     }
 
     /**
+     *查询服务关联的 Ingress 规则列表
+     * @param req DescribeRelatedIngressesRequest
+     * @return DescribeRelatedIngressesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRelatedIngressesResponse DescribeRelatedIngresses(DescribeRelatedIngressesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRelatedIngressesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeRelatedIngressesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeRelatedIngresses");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取服务下面运行pod列表
      * @param req DescribeServiceRunPodListV2Request
      * @return DescribeServiceRunPodListV2Response
@@ -291,6 +311,46 @@ public class TemClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyNamespaceResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyNamespace");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改服务基本信息
+     * @param req ModifyServiceInfoRequest
+     * @return ModifyServiceInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyServiceInfoResponse ModifyServiceInfo(ModifyServiceInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyServiceInfoResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyServiceInfoResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyServiceInfo");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *重启实例
+     * @param req RestartServiceRunPodRequest
+     * @return RestartServiceRunPodResponse
+     * @throws TencentCloudSDKException
+     */
+    public RestartServiceRunPodResponse RestartServiceRunPod(RestartServiceRunPodRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RestartServiceRunPodResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<RestartServiceRunPodResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "RestartServiceRunPod");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

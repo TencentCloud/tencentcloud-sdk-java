@@ -44,7 +44,7 @@ public class InquirePriceCreateInstancesRequest extends AbstractModel{
     private InstanceChargePrepaid InstanceChargePrepaid;
 
     /**
-    * 应用镜像 ID，使用收费应用镜像时必填。
+    * 应用镜像 ID，使用收费应用镜像时必填。可通过[DescribeBlueprints](https://cloud.tencent.com/document/product/1207/47689)接口返回值中的BlueprintId获取。
     */
     @SerializedName("BlueprintId")
     @Expose
@@ -99,16 +99,16 @@ public class InquirePriceCreateInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get 应用镜像 ID，使用收费应用镜像时必填。 
-     * @return BlueprintId 应用镜像 ID，使用收费应用镜像时必填。
+     * Get 应用镜像 ID，使用收费应用镜像时必填。可通过[DescribeBlueprints](https://cloud.tencent.com/document/product/1207/47689)接口返回值中的BlueprintId获取。 
+     * @return BlueprintId 应用镜像 ID，使用收费应用镜像时必填。可通过[DescribeBlueprints](https://cloud.tencent.com/document/product/1207/47689)接口返回值中的BlueprintId获取。
      */
     public String getBlueprintId() {
         return this.BlueprintId;
     }
 
     /**
-     * Set 应用镜像 ID，使用收费应用镜像时必填。
-     * @param BlueprintId 应用镜像 ID，使用收费应用镜像时必填。
+     * Set 应用镜像 ID，使用收费应用镜像时必填。可通过[DescribeBlueprints](https://cloud.tencent.com/document/product/1207/47689)接口返回值中的BlueprintId获取。
+     * @param BlueprintId 应用镜像 ID，使用收费应用镜像时必填。可通过[DescribeBlueprints](https://cloud.tencent.com/document/product/1207/47689)接口返回值中的BlueprintId获取。
      */
     public void setBlueprintId(String BlueprintId) {
         this.BlueprintId = BlueprintId;

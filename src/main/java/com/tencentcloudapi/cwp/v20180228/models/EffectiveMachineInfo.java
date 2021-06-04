@@ -63,6 +63,14 @@ public class EffectiveMachineInfo extends AbstractModel{
     private String Quuid;
 
     /**
+    * 云镜Uuid
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Uuid")
+    @Expose
+    private String Uuid;
+
+    /**
      * Get 机器名称
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return MachineName 机器名称
@@ -162,6 +170,26 @@ public class EffectiveMachineInfo extends AbstractModel{
         this.Quuid = Quuid;
     }
 
+    /**
+     * Get 云镜Uuid
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Uuid 云镜Uuid
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getUuid() {
+        return this.Uuid;
+    }
+
+    /**
+     * Set 云镜Uuid
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Uuid 云镜Uuid
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUuid(String Uuid) {
+        this.Uuid = Uuid;
+    }
+
     public EffectiveMachineInfo() {
     }
 
@@ -188,6 +216,9 @@ public class EffectiveMachineInfo extends AbstractModel{
         if (source.Quuid != null) {
             this.Quuid = new String(source.Quuid);
         }
+        if (source.Uuid != null) {
+            this.Uuid = new String(source.Uuid);
+        }
     }
 
 
@@ -200,6 +231,7 @@ public class EffectiveMachineInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "MachinePrivateIp", this.MachinePrivateIp);
         this.setParamArrayObj(map, prefix + "MachineTag.", this.MachineTag);
         this.setParamSimple(map, prefix + "Quuid", this.Quuid);
+        this.setParamSimple(map, prefix + "Uuid", this.Uuid);
 
     }
 }

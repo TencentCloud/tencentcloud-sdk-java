@@ -44,6 +44,13 @@ public class PublishBroadcastMessageRequest extends AbstractModel{
     private Long Qos;
 
     /**
+    * Payload内容的编码格式，取值为base64或空。base64表示云端将收到的请求数据进行base64解码后下发到设备，空则直接将原始内容下发到设备
+    */
+    @SerializedName("PayloadEncoding")
+    @Expose
+    private String PayloadEncoding;
+
+    /**
      * Get 产品ID 
      * @return ProductId 产品ID
      */
@@ -91,6 +98,22 @@ public class PublishBroadcastMessageRequest extends AbstractModel{
         this.Qos = Qos;
     }
 
+    /**
+     * Get Payload内容的编码格式，取值为base64或空。base64表示云端将收到的请求数据进行base64解码后下发到设备，空则直接将原始内容下发到设备 
+     * @return PayloadEncoding Payload内容的编码格式，取值为base64或空。base64表示云端将收到的请求数据进行base64解码后下发到设备，空则直接将原始内容下发到设备
+     */
+    public String getPayloadEncoding() {
+        return this.PayloadEncoding;
+    }
+
+    /**
+     * Set Payload内容的编码格式，取值为base64或空。base64表示云端将收到的请求数据进行base64解码后下发到设备，空则直接将原始内容下发到设备
+     * @param PayloadEncoding Payload内容的编码格式，取值为base64或空。base64表示云端将收到的请求数据进行base64解码后下发到设备，空则直接将原始内容下发到设备
+     */
+    public void setPayloadEncoding(String PayloadEncoding) {
+        this.PayloadEncoding = PayloadEncoding;
+    }
+
     public PublishBroadcastMessageRequest() {
     }
 
@@ -108,6 +131,9 @@ public class PublishBroadcastMessageRequest extends AbstractModel{
         if (source.Qos != null) {
             this.Qos = new Long(source.Qos);
         }
+        if (source.PayloadEncoding != null) {
+            this.PayloadEncoding = new String(source.PayloadEncoding);
+        }
     }
 
 
@@ -118,6 +144,7 @@ public class PublishBroadcastMessageRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ProductId", this.ProductId);
         this.setParamSimple(map, prefix + "Payload", this.Payload);
         this.setParamSimple(map, prefix + "Qos", this.Qos);
+        this.setParamSimple(map, prefix + "PayloadEncoding", this.PayloadEncoding);
 
     }
 }

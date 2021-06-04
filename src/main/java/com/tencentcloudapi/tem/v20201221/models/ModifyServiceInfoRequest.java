@@ -20,21 +20,21 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeIngressesRequest extends AbstractModel{
+public class ModifyServiceInfoRequest extends AbstractModel{
 
     /**
-    * namespace id
+    * 服务ID
     */
-    @SerializedName("NamespaceId")
+    @SerializedName("ServiceId")
     @Expose
-    private String NamespaceId;
+    private String ServiceId;
 
     /**
-    * namespace
+    * 描述
     */
-    @SerializedName("EksNamespace")
+    @SerializedName("Description")
     @Expose
-    private String EksNamespace;
+    private String Description;
 
     /**
     * 来源渠道
@@ -44,42 +44,35 @@ public class DescribeIngressesRequest extends AbstractModel{
     private Long SourceChannel;
 
     /**
-    * ingress 规则名列表
-    */
-    @SerializedName("Names")
-    @Expose
-    private String [] Names;
-
-    /**
-     * Get namespace id 
-     * @return NamespaceId namespace id
+     * Get 服务ID 
+     * @return ServiceId 服务ID
      */
-    public String getNamespaceId() {
-        return this.NamespaceId;
+    public String getServiceId() {
+        return this.ServiceId;
     }
 
     /**
-     * Set namespace id
-     * @param NamespaceId namespace id
+     * Set 服务ID
+     * @param ServiceId 服务ID
      */
-    public void setNamespaceId(String NamespaceId) {
-        this.NamespaceId = NamespaceId;
+    public void setServiceId(String ServiceId) {
+        this.ServiceId = ServiceId;
     }
 
     /**
-     * Get namespace 
-     * @return EksNamespace namespace
+     * Get 描述 
+     * @return Description 描述
      */
-    public String getEksNamespace() {
-        return this.EksNamespace;
+    public String getDescription() {
+        return this.Description;
     }
 
     /**
-     * Set namespace
-     * @param EksNamespace namespace
+     * Set 描述
+     * @param Description 描述
      */
-    public void setEksNamespace(String EksNamespace) {
-        this.EksNamespace = EksNamespace;
+    public void setDescription(String Description) {
+        this.Description = Description;
     }
 
     /**
@@ -98,44 +91,22 @@ public class DescribeIngressesRequest extends AbstractModel{
         this.SourceChannel = SourceChannel;
     }
 
-    /**
-     * Get ingress 规则名列表 
-     * @return Names ingress 规则名列表
-     */
-    public String [] getNames() {
-        return this.Names;
-    }
-
-    /**
-     * Set ingress 规则名列表
-     * @param Names ingress 规则名列表
-     */
-    public void setNames(String [] Names) {
-        this.Names = Names;
-    }
-
-    public DescribeIngressesRequest() {
+    public ModifyServiceInfoRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeIngressesRequest(DescribeIngressesRequest source) {
-        if (source.NamespaceId != null) {
-            this.NamespaceId = new String(source.NamespaceId);
+    public ModifyServiceInfoRequest(ModifyServiceInfoRequest source) {
+        if (source.ServiceId != null) {
+            this.ServiceId = new String(source.ServiceId);
         }
-        if (source.EksNamespace != null) {
-            this.EksNamespace = new String(source.EksNamespace);
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
         }
         if (source.SourceChannel != null) {
             this.SourceChannel = new Long(source.SourceChannel);
-        }
-        if (source.Names != null) {
-            this.Names = new String[source.Names.length];
-            for (int i = 0; i < source.Names.length; i++) {
-                this.Names[i] = new String(source.Names[i]);
-            }
         }
     }
 
@@ -144,10 +115,9 @@ public class DescribeIngressesRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "NamespaceId", this.NamespaceId);
-        this.setParamSimple(map, prefix + "EksNamespace", this.EksNamespace);
+        this.setParamSimple(map, prefix + "ServiceId", this.ServiceId);
+        this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "SourceChannel", this.SourceChannel);
-        this.setParamArraySimple(map, prefix + "Names.", this.Names);
 
     }
 }
