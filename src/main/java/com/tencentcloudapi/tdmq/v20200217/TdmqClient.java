@@ -919,6 +919,26 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
+     *此接口仅用于测试发生消息，不能作为现网正式生产使用
+     * @param req SendMsgRequest
+     * @return SendMsgResponse
+     * @throws TencentCloudSDKException
+     */
+    public SendMsgResponse SendMsg(SendMsgRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SendMsgResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<SendMsgResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "SendMsg");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *解绑cmq死信队列
      * @param req UnbindCmqDeadLetterRequest
      * @return UnbindCmqDeadLetterResponse

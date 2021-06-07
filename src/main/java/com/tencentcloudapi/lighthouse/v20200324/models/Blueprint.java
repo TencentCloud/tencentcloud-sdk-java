@@ -86,7 +86,7 @@ public class Blueprint extends AbstractModel{
     private String ImageUrl;
 
     /**
-    * 镜像所需系统盘大小。
+    * 镜像所需系统盘大小，单位 GB。
     */
     @SerializedName("RequiredSystemDiskSize")
     @Expose
@@ -274,16 +274,16 @@ public class Blueprint extends AbstractModel{
     }
 
     /**
-     * Get 镜像所需系统盘大小。 
-     * @return RequiredSystemDiskSize 镜像所需系统盘大小。
+     * Get 镜像所需系统盘大小，单位 GB。 
+     * @return RequiredSystemDiskSize 镜像所需系统盘大小，单位 GB。
      */
     public Long getRequiredSystemDiskSize() {
         return this.RequiredSystemDiskSize;
     }
 
     /**
-     * Set 镜像所需系统盘大小。
-     * @param RequiredSystemDiskSize 镜像所需系统盘大小。
+     * Set 镜像所需系统盘大小，单位 GB。
+     * @param RequiredSystemDiskSize 镜像所需系统盘大小，单位 GB。
      */
     public void setRequiredSystemDiskSize(Long RequiredSystemDiskSize) {
         this.RequiredSystemDiskSize = RequiredSystemDiskSize;

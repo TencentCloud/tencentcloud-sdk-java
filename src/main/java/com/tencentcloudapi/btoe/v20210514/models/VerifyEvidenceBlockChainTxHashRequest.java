@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class VerifyEvidenceBlockChainTxHashRequest extends AbstractModel{
 
     /**
-    * ‘区块链交易hash，在"存证基本信息查询”中可以获取
+    * 区块链交易 hash，在“存证基本信息查询（GetDepositInfo）”接口中可以获取。
     */
     @SerializedName("EvidenceTxHash")
     @Expose
     private String EvidenceTxHash;
 
     /**
-     * Get ‘区块链交易hash，在"存证基本信息查询”中可以获取 
-     * @return EvidenceTxHash ‘区块链交易hash，在"存证基本信息查询”中可以获取
+     * Get 区块链交易 hash，在“存证基本信息查询（GetDepositInfo）”接口中可以获取。 
+     * @return EvidenceTxHash 区块链交易 hash，在“存证基本信息查询（GetDepositInfo）”接口中可以获取。
      */
     public String getEvidenceTxHash() {
         return this.EvidenceTxHash;
     }
 
     /**
-     * Set ‘区块链交易hash，在"存证基本信息查询”中可以获取
-     * @param EvidenceTxHash ‘区块链交易hash，在"存证基本信息查询”中可以获取
+     * Set 区块链交易 hash，在“存证基本信息查询（GetDepositInfo）”接口中可以获取。
+     * @param EvidenceTxHash 区块链交易 hash，在“存证基本信息查询（GetDepositInfo）”接口中可以获取。
      */
     public void setEvidenceTxHash(String EvidenceTxHash) {
         this.EvidenceTxHash = EvidenceTxHash;
