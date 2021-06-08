@@ -304,7 +304,7 @@ REJECTED:拒绝
     private String CustomerIPv6Address;
 
     /**
-    * 专线通道是否支持巨帧。1 支持，0 不支持
+    * 专用通道是否支持巨帧。1 支持，0 不支持
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("JumboEnable")
@@ -980,9 +980,9 @@ REJECTED:拒绝
     }
 
     /**
-     * Get 专线通道是否支持巨帧。1 支持，0 不支持
+     * Get 专用通道是否支持巨帧。1 支持，0 不支持
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return JumboEnable 专线通道是否支持巨帧。1 支持，0 不支持
+     * @return JumboEnable 专用通道是否支持巨帧。1 支持，0 不支持
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getJumboEnable() {
@@ -990,9 +990,9 @@ REJECTED:拒绝
     }
 
     /**
-     * Set 专线通道是否支持巨帧。1 支持，0 不支持
+     * Set 专用通道是否支持巨帧。1 支持，0 不支持
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param JumboEnable 专线通道是否支持巨帧。1 支持，0 不支持
+     * @param JumboEnable 专用通道是否支持巨帧。1 支持，0 不支持
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setJumboEnable(Long JumboEnable) {
