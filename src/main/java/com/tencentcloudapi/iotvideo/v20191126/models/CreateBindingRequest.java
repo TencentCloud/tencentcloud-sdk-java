@@ -58,6 +58,13 @@ public class CreateBindingRequest extends AbstractModel{
     private String Nick;
 
     /**
+    * 绑定过程中的会话token，由设备通过SDK接口确认是否允许绑定的token，用于增加设备被绑定的安全性
+    */
+    @SerializedName("BindToken")
+    @Expose
+    private String BindToken;
+
+    /**
      * Get 终端用户在IoT Video上的唯一标识ID 
      * @return AccessId 终端用户在IoT Video上的唯一标识ID
      */
@@ -137,6 +144,22 @@ public class CreateBindingRequest extends AbstractModel{
         this.Nick = Nick;
     }
 
+    /**
+     * Get 绑定过程中的会话token，由设备通过SDK接口确认是否允许绑定的token，用于增加设备被绑定的安全性 
+     * @return BindToken 绑定过程中的会话token，由设备通过SDK接口确认是否允许绑定的token，用于增加设备被绑定的安全性
+     */
+    public String getBindToken() {
+        return this.BindToken;
+    }
+
+    /**
+     * Set 绑定过程中的会话token，由设备通过SDK接口确认是否允许绑定的token，用于增加设备被绑定的安全性
+     * @param BindToken 绑定过程中的会话token，由设备通过SDK接口确认是否允许绑定的token，用于增加设备被绑定的安全性
+     */
+    public void setBindToken(String BindToken) {
+        this.BindToken = BindToken;
+    }
+
     public CreateBindingRequest() {
     }
 
@@ -160,6 +183,9 @@ public class CreateBindingRequest extends AbstractModel{
         if (source.Nick != null) {
             this.Nick = new String(source.Nick);
         }
+        if (source.BindToken != null) {
+            this.BindToken = new String(source.BindToken);
+        }
     }
 
 
@@ -172,6 +198,7 @@ public class CreateBindingRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Role", this.Role);
         this.setParamSimple(map, prefix + "ForceBind", this.ForceBind);
         this.setParamSimple(map, prefix + "Nick", this.Nick);
+        this.setParamSimple(map, prefix + "BindToken", this.BindToken);
 
     }
 }

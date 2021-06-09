@@ -52,6 +52,7 @@ public class VideoEnhance extends AbstractModel{
 
     /**
     * 超分参数，可选项：2，目前仅支持2倍超分。
+注意：此参数已经弃用，超分可以使用VideoSuperResolution参数
     */
     @SerializedName("WdSuperResolution")
     @Expose
@@ -85,6 +86,20 @@ public class VideoEnhance extends AbstractModel{
     @SerializedName("LowLightEnhance")
     @Expose
     private LowLightEnhance LowLightEnhance;
+
+    /**
+    * 视频超分参数
+    */
+    @SerializedName("VideoSuperResolution")
+    @Expose
+    private VideoSuperResolution VideoSuperResolution;
+
+    /**
+    * 视频画质修复参数
+    */
+    @SerializedName("VideoRepair")
+    @Expose
+    private VideoRepair VideoRepair;
 
     /**
      * Get 去编码毛刺、伪影参数。 
@@ -151,8 +166,10 @@ public class VideoEnhance extends AbstractModel{
     }
 
     /**
-     * Get 超分参数，可选项：2，目前仅支持2倍超分。 
+     * Get 超分参数，可选项：2，目前仅支持2倍超分。
+注意：此参数已经弃用，超分可以使用VideoSuperResolution参数 
      * @return WdSuperResolution 超分参数，可选项：2，目前仅支持2倍超分。
+注意：此参数已经弃用，超分可以使用VideoSuperResolution参数
      */
     public Long getWdSuperResolution() {
         return this.WdSuperResolution;
@@ -160,7 +177,9 @@ public class VideoEnhance extends AbstractModel{
 
     /**
      * Set 超分参数，可选项：2，目前仅支持2倍超分。
+注意：此参数已经弃用，超分可以使用VideoSuperResolution参数
      * @param WdSuperResolution 超分参数，可选项：2，目前仅支持2倍超分。
+注意：此参数已经弃用，超分可以使用VideoSuperResolution参数
      */
     public void setWdSuperResolution(Long WdSuperResolution) {
         this.WdSuperResolution = WdSuperResolution;
@@ -234,6 +253,38 @@ public class VideoEnhance extends AbstractModel{
         this.LowLightEnhance = LowLightEnhance;
     }
 
+    /**
+     * Get 视频超分参数 
+     * @return VideoSuperResolution 视频超分参数
+     */
+    public VideoSuperResolution getVideoSuperResolution() {
+        return this.VideoSuperResolution;
+    }
+
+    /**
+     * Set 视频超分参数
+     * @param VideoSuperResolution 视频超分参数
+     */
+    public void setVideoSuperResolution(VideoSuperResolution VideoSuperResolution) {
+        this.VideoSuperResolution = VideoSuperResolution;
+    }
+
+    /**
+     * Get 视频画质修复参数 
+     * @return VideoRepair 视频画质修复参数
+     */
+    public VideoRepair getVideoRepair() {
+        return this.VideoRepair;
+    }
+
+    /**
+     * Set 视频画质修复参数
+     * @param VideoRepair 视频画质修复参数
+     */
+    public void setVideoRepair(VideoRepair VideoRepair) {
+        this.VideoRepair = VideoRepair;
+    }
+
     public VideoEnhance() {
     }
 
@@ -269,6 +320,12 @@ public class VideoEnhance extends AbstractModel{
         if (source.LowLightEnhance != null) {
             this.LowLightEnhance = new LowLightEnhance(source.LowLightEnhance);
         }
+        if (source.VideoSuperResolution != null) {
+            this.VideoSuperResolution = new VideoSuperResolution(source.VideoSuperResolution);
+        }
+        if (source.VideoRepair != null) {
+            this.VideoRepair = new VideoRepair(source.VideoRepair);
+        }
     }
 
 
@@ -285,6 +342,8 @@ public class VideoEnhance extends AbstractModel{
         this.setParamSimple(map, prefix + "WdFps", this.WdFps);
         this.setParamObj(map, prefix + "ScratchRepair.", this.ScratchRepair);
         this.setParamObj(map, prefix + "LowLightEnhance.", this.LowLightEnhance);
+        this.setParamObj(map, prefix + "VideoSuperResolution.", this.VideoSuperResolution);
+        this.setParamObj(map, prefix + "VideoRepair.", this.VideoRepair);
 
     }
 }

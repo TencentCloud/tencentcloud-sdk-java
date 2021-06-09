@@ -1037,6 +1037,26 @@ public class CdnClient extends AbstractClient{
     }
 
     /**
+     *ModifyPurgeFetchTaskStatus 用于上报定时刷新预热任务执行状态
+     * @param req ModifyPurgeFetchTaskStatusRequest
+     * @return ModifyPurgeFetchTaskStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyPurgeFetchTaskStatusResponse ModifyPurgeFetchTaskStatus(ModifyPurgeFetchTaskStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyPurgeFetchTaskStatusResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyPurgeFetchTaskStatusResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyPurgeFetchTaskStatus");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *PurgePathCache 用于批量提交目录刷新，根据域名的加速区域进行对应区域的刷新。
 默认情况下境内、境外加速区域每日目录刷新额度为各 100 条，每次最多可提交 20 条。
      * @param req PurgePathCacheRequest

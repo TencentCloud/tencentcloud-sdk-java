@@ -51,6 +51,13 @@ public class RedisNode extends AbstractModel{
     private String Status;
 
     /**
+    * 节点角色
+    */
+    @SerializedName("Role")
+    @Expose
+    private String Role;
+
+    /**
      * Get 节点key的个数 
      * @return Keys 节点key的个数
      */
@@ -114,6 +121,22 @@ public class RedisNode extends AbstractModel{
         this.Status = Status;
     }
 
+    /**
+     * Get 节点角色 
+     * @return Role 节点角色
+     */
+    public String getRole() {
+        return this.Role;
+    }
+
+    /**
+     * Set 节点角色
+     * @param Role 节点角色
+     */
+    public void setRole(String Role) {
+        this.Role = Role;
+    }
+
     public RedisNode() {
     }
 
@@ -134,6 +157,9 @@ public class RedisNode extends AbstractModel{
         if (source.Status != null) {
             this.Status = new String(source.Status);
         }
+        if (source.Role != null) {
+            this.Role = new String(source.Role);
+        }
     }
 
 
@@ -145,6 +171,7 @@ public class RedisNode extends AbstractModel{
         this.setParamSimple(map, prefix + "Slot", this.Slot);
         this.setParamSimple(map, prefix + "NodeId", this.NodeId);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "Role", this.Role);
 
     }
 }

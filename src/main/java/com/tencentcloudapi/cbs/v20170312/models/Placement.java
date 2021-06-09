@@ -30,11 +30,27 @@ public class Placement extends AbstractModel{
     private String Zone;
 
     /**
+    * 围笼Id。作为入参时，表示对指定的CageId的资源进行操作，可为空。 作为出参时，表示资源所属围笼ID，可为空。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CageId")
+    @Expose
+    private String CageId;
+
+    /**
     * 实例所属项目ID。该参数可以通过调用 [DescribeProject](/document/api/378/4400) 的返回值中的 projectId 字段来获取。不填为默认项目。
     */
     @SerializedName("ProjectId")
     @Expose
     private Long ProjectId;
+
+    /**
+    * 独享集群名字。作为入参时，忽略。作为出参时，表示云硬盘所属的独享集群名，可为空。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CdcName")
+    @Expose
+    private String CdcName;
 
     /**
     * 实例所属的独享集群ID。作为入参时，表示对指定的CdcId独享集群的资源进行操作，可为空。 作为出参时，表示资源所属的独享集群的ID，可为空。
@@ -45,20 +61,11 @@ public class Placement extends AbstractModel{
     private String CdcId;
 
     /**
-    * 围笼Id。作为入参时，表示对指定的CageId的资源进行操作，可为空。 作为出参时，表示资源所属围笼ID，可为空。
-注意：此字段可能返回 null，表示取不到有效值。
+    * 独享集群id。
     */
-    @SerializedName("CageId")
+    @SerializedName("DedicatedClusterId")
     @Expose
-    private String CageId;
-
-    /**
-    * 独享集群名字。作为入参时，忽略。作为出参时，表示云硬盘所属的独享集群名，可为空。
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("CdcName")
-    @Expose
-    private String CdcName;
+    private String DedicatedClusterId;
 
     /**
      * Get 云硬盘所属的[可用区](/document/product/213/15753#ZoneInfo)。该参数也可以通过调用  [DescribeZones](/document/product/213/15707) 的返回值中的Zone字段来获取。 
@@ -74,42 +81,6 @@ public class Placement extends AbstractModel{
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
-    }
-
-    /**
-     * Get 实例所属项目ID。该参数可以通过调用 [DescribeProject](/document/api/378/4400) 的返回值中的 projectId 字段来获取。不填为默认项目。 
-     * @return ProjectId 实例所属项目ID。该参数可以通过调用 [DescribeProject](/document/api/378/4400) 的返回值中的 projectId 字段来获取。不填为默认项目。
-     */
-    public Long getProjectId() {
-        return this.ProjectId;
-    }
-
-    /**
-     * Set 实例所属项目ID。该参数可以通过调用 [DescribeProject](/document/api/378/4400) 的返回值中的 projectId 字段来获取。不填为默认项目。
-     * @param ProjectId 实例所属项目ID。该参数可以通过调用 [DescribeProject](/document/api/378/4400) 的返回值中的 projectId 字段来获取。不填为默认项目。
-     */
-    public void setProjectId(Long ProjectId) {
-        this.ProjectId = ProjectId;
-    }
-
-    /**
-     * Get 实例所属的独享集群ID。作为入参时，表示对指定的CdcId独享集群的资源进行操作，可为空。 作为出参时，表示资源所属的独享集群的ID，可为空。
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CdcId 实例所属的独享集群ID。作为入参时，表示对指定的CdcId独享集群的资源进行操作，可为空。 作为出参时，表示资源所属的独享集群的ID，可为空。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public String getCdcId() {
-        return this.CdcId;
-    }
-
-    /**
-     * Set 实例所属的独享集群ID。作为入参时，表示对指定的CdcId独享集群的资源进行操作，可为空。 作为出参时，表示资源所属的独享集群的ID，可为空。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param CdcId 实例所属的独享集群ID。作为入参时，表示对指定的CdcId独享集群的资源进行操作，可为空。 作为出参时，表示资源所属的独享集群的ID，可为空。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setCdcId(String CdcId) {
-        this.CdcId = CdcId;
     }
 
     /**
@@ -133,6 +104,22 @@ public class Placement extends AbstractModel{
     }
 
     /**
+     * Get 实例所属项目ID。该参数可以通过调用 [DescribeProject](/document/api/378/4400) 的返回值中的 projectId 字段来获取。不填为默认项目。 
+     * @return ProjectId 实例所属项目ID。该参数可以通过调用 [DescribeProject](/document/api/378/4400) 的返回值中的 projectId 字段来获取。不填为默认项目。
+     */
+    public Long getProjectId() {
+        return this.ProjectId;
+    }
+
+    /**
+     * Set 实例所属项目ID。该参数可以通过调用 [DescribeProject](/document/api/378/4400) 的返回值中的 projectId 字段来获取。不填为默认项目。
+     * @param ProjectId 实例所属项目ID。该参数可以通过调用 [DescribeProject](/document/api/378/4400) 的返回值中的 projectId 字段来获取。不填为默认项目。
+     */
+    public void setProjectId(Long ProjectId) {
+        this.ProjectId = ProjectId;
+    }
+
+    /**
      * Get 独享集群名字。作为入参时，忽略。作为出参时，表示云硬盘所属的独享集群名，可为空。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return CdcName 独享集群名字。作为入参时，忽略。作为出参时，表示云硬盘所属的独享集群名，可为空。
@@ -152,6 +139,42 @@ public class Placement extends AbstractModel{
         this.CdcName = CdcName;
     }
 
+    /**
+     * Get 实例所属的独享集群ID。作为入参时，表示对指定的CdcId独享集群的资源进行操作，可为空。 作为出参时，表示资源所属的独享集群的ID，可为空。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CdcId 实例所属的独享集群ID。作为入参时，表示对指定的CdcId独享集群的资源进行操作，可为空。 作为出参时，表示资源所属的独享集群的ID，可为空。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCdcId() {
+        return this.CdcId;
+    }
+
+    /**
+     * Set 实例所属的独享集群ID。作为入参时，表示对指定的CdcId独享集群的资源进行操作，可为空。 作为出参时，表示资源所属的独享集群的ID，可为空。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CdcId 实例所属的独享集群ID。作为入参时，表示对指定的CdcId独享集群的资源进行操作，可为空。 作为出参时，表示资源所属的独享集群的ID，可为空。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCdcId(String CdcId) {
+        this.CdcId = CdcId;
+    }
+
+    /**
+     * Get 独享集群id。 
+     * @return DedicatedClusterId 独享集群id。
+     */
+    public String getDedicatedClusterId() {
+        return this.DedicatedClusterId;
+    }
+
+    /**
+     * Set 独享集群id。
+     * @param DedicatedClusterId 独享集群id。
+     */
+    public void setDedicatedClusterId(String DedicatedClusterId) {
+        this.DedicatedClusterId = DedicatedClusterId;
+    }
+
     public Placement() {
     }
 
@@ -163,17 +186,20 @@ public class Placement extends AbstractModel{
         if (source.Zone != null) {
             this.Zone = new String(source.Zone);
         }
+        if (source.CageId != null) {
+            this.CageId = new String(source.CageId);
+        }
         if (source.ProjectId != null) {
             this.ProjectId = new Long(source.ProjectId);
+        }
+        if (source.CdcName != null) {
+            this.CdcName = new String(source.CdcName);
         }
         if (source.CdcId != null) {
             this.CdcId = new String(source.CdcId);
         }
-        if (source.CageId != null) {
-            this.CageId = new String(source.CageId);
-        }
-        if (source.CdcName != null) {
-            this.CdcName = new String(source.CdcName);
+        if (source.DedicatedClusterId != null) {
+            this.DedicatedClusterId = new String(source.DedicatedClusterId);
         }
     }
 
@@ -183,10 +209,11 @@ public class Placement extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Zone", this.Zone);
-        this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
-        this.setParamSimple(map, prefix + "CdcId", this.CdcId);
         this.setParamSimple(map, prefix + "CageId", this.CageId);
+        this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamSimple(map, prefix + "CdcName", this.CdcName);
+        this.setParamSimple(map, prefix + "CdcId", this.CdcId);
+        this.setParamSimple(map, prefix + "DedicatedClusterId", this.DedicatedClusterId);
 
     }
 }

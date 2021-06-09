@@ -20,87 +20,46 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ArtifactReduction extends AbstractModel{
+public class VideoRepair extends AbstractModel{
 
     /**
-    * 去毛刺方式：weak,,strong
+    * 画质修复类型，可选值：weak，normal，strong;
+默认值: weak
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 去毛刺算法，可选项：
-edaf,
-wdaf，
-默认edaf。
-注意：此参数已经弃用
-    */
-    @SerializedName("Algorithm")
-    @Expose
-    private String Algorithm;
-
-    /**
-     * Get 去毛刺方式：weak,,strong 
-     * @return Type 去毛刺方式：weak,,strong
+     * Get 画质修复类型，可选值：weak，normal，strong;
+默认值: weak 
+     * @return Type 画质修复类型，可选值：weak，normal，strong;
+默认值: weak
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 去毛刺方式：weak,,strong
-     * @param Type 去毛刺方式：weak,,strong
+     * Set 画质修复类型，可选值：weak，normal，strong;
+默认值: weak
+     * @param Type 画质修复类型，可选值：weak，normal，strong;
+默认值: weak
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
-    /**
-     * Get 去毛刺算法，可选项：
-edaf,
-wdaf，
-默认edaf。
-注意：此参数已经弃用 
-     * @return Algorithm 去毛刺算法，可选项：
-edaf,
-wdaf，
-默认edaf。
-注意：此参数已经弃用
-     */
-    public String getAlgorithm() {
-        return this.Algorithm;
-    }
-
-    /**
-     * Set 去毛刺算法，可选项：
-edaf,
-wdaf，
-默认edaf。
-注意：此参数已经弃用
-     * @param Algorithm 去毛刺算法，可选项：
-edaf,
-wdaf，
-默认edaf。
-注意：此参数已经弃用
-     */
-    public void setAlgorithm(String Algorithm) {
-        this.Algorithm = Algorithm;
-    }
-
-    public ArtifactReduction() {
+    public VideoRepair() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ArtifactReduction(ArtifactReduction source) {
+    public VideoRepair(VideoRepair source) {
         if (source.Type != null) {
             this.Type = new String(source.Type);
-        }
-        if (source.Algorithm != null) {
-            this.Algorithm = new String(source.Algorithm);
         }
     }
 
@@ -110,7 +69,6 @@ wdaf，
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Type", this.Type);
-        this.setParamSimple(map, prefix + "Algorithm", this.Algorithm);
 
     }
 }
