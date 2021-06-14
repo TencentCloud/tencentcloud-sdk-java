@@ -639,6 +639,46 @@ public class CwpClient extends AbstractClient{
     }
 
     /**
+     *获取资产数量： 主机数、账号数、端口数、进程数、软件数、数据库数、Web应用数、Web框架数、Web服务数、Web站点数
+     * @param req DescribeAssetInfoRequest
+     * @return DescribeAssetInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAssetInfoResponse DescribeAssetInfo(DescribeAssetInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAssetInfoResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAssetInfoResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAssetInfo");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取主机最近趋势情况
+     * @param req DescribeAssetRecentMachineInfoRequest
+     * @return DescribeAssetRecentMachineInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAssetRecentMachineInfoResponse DescribeAssetRecentMachineInfo(DescribeAssetRecentMachineInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAssetRecentMachineInfoResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAssetRecentMachineInfoResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAssetRecentMachineInfo");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *网络攻击日志详情
      * @param req DescribeAttackLogInfoRequest
      * @return DescribeAttackLogInfoResponse
@@ -2514,6 +2554,26 @@ public class CwpClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<SwitchBashRulesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "SwitchBashRules");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *同步资产扫描信息
+     * @param req SyncAssetScanRequest
+     * @return SyncAssetScanResponse
+     * @throws TencentCloudSDKException
+     */
+    public SyncAssetScanResponse SyncAssetScan(SyncAssetScanRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SyncAssetScanResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<SyncAssetScanResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "SyncAssetScan");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

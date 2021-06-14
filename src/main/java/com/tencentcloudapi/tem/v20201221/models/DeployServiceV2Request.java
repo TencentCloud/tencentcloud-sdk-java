@@ -211,6 +211,20 @@ public class DeployServiceV2Request extends AbstractModel{
     private Boolean UseRegistryDefaultConfig;
 
     /**
+    * 挂载配置信息
+    */
+    @SerializedName("SettingConfs")
+    @Expose
+    private MountedSettingConf [] SettingConfs;
+
+    /**
+    * eks 访问设置
+    */
+    @SerializedName("EksService")
+    @Expose
+    private EksService EksService;
+
+    /**
      * Get 服务ID 
      * @return ServiceId 服务ID
      */
@@ -650,6 +664,38 @@ public class DeployServiceV2Request extends AbstractModel{
         this.UseRegistryDefaultConfig = UseRegistryDefaultConfig;
     }
 
+    /**
+     * Get 挂载配置信息 
+     * @return SettingConfs 挂载配置信息
+     */
+    public MountedSettingConf [] getSettingConfs() {
+        return this.SettingConfs;
+    }
+
+    /**
+     * Set 挂载配置信息
+     * @param SettingConfs 挂载配置信息
+     */
+    public void setSettingConfs(MountedSettingConf [] SettingConfs) {
+        this.SettingConfs = SettingConfs;
+    }
+
+    /**
+     * Get eks 访问设置 
+     * @return EksService eks 访问设置
+     */
+    public EksService getEksService() {
+        return this.EksService;
+    }
+
+    /**
+     * Set eks 访问设置
+     * @param EksService eks 访问设置
+     */
+    public void setEksService(EksService EksService) {
+        this.EksService = EksService;
+    }
+
     public DeployServiceV2Request() {
     }
 
@@ -757,6 +803,15 @@ public class DeployServiceV2Request extends AbstractModel{
         if (source.UseRegistryDefaultConfig != null) {
             this.UseRegistryDefaultConfig = new Boolean(source.UseRegistryDefaultConfig);
         }
+        if (source.SettingConfs != null) {
+            this.SettingConfs = new MountedSettingConf[source.SettingConfs.length];
+            for (int i = 0; i < source.SettingConfs.length; i++) {
+                this.SettingConfs[i] = new MountedSettingConf(source.SettingConfs[i]);
+            }
+        }
+        if (source.EksService != null) {
+            this.EksService = new EksService(source.EksService);
+        }
     }
 
 
@@ -790,6 +845,8 @@ public class DeployServiceV2Request extends AbstractModel{
         this.setParamArraySimple(map, prefix + "ImageArgs.", this.ImageArgs);
         this.setParamArrayObj(map, prefix + "PortMappings.", this.PortMappings);
         this.setParamSimple(map, prefix + "UseRegistryDefaultConfig", this.UseRegistryDefaultConfig);
+        this.setParamArrayObj(map, prefix + "SettingConfs.", this.SettingConfs);
+        this.setParamObj(map, prefix + "EksService.", this.EksService);
 
     }
 }
