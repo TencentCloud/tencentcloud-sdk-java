@@ -39,6 +39,86 @@ public class WavClient extends AbstractClient{
     }
 
     /**
+     *新增渠道活码接口
+     * @param req CreateChannelCodeRequest
+     * @return CreateChannelCodeResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateChannelCodeResponse CreateChannelCode(CreateChannelCodeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateChannelCodeResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateChannelCodeResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateChannelCode");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *该接口用户设置标签库, 每个企业最多可配置3000个企业标签。
+     * @param req CreateCorpTagRequest
+     * @return CreateCorpTagResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCorpTagResponse CreateCorpTag(CreateCorpTagRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateCorpTagResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateCorpTagResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateCorpTag");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *根据游标拉取活动参与列表信息
+     * @param req QueryActivityJoinListRequest
+     * @return QueryActivityJoinListResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryActivityJoinListResponse QueryActivityJoinList(QueryActivityJoinListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<QueryActivityJoinListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<QueryActivityJoinListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "QueryActivityJoinList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *根据游标拉取活动列表信息
+     * @param req QueryActivityListRequest
+     * @return QueryActivityListResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryActivityListResponse QueryActivityList(QueryActivityListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<QueryActivityListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<QueryActivityListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "QueryActivityList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *根据游标拉取活动活码列表信息
      * @param req QueryActivityLiveCodeListRequest
      * @return QueryActivityLiveCodeListResponse
@@ -51,6 +131,106 @@ public class WavClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<QueryActivityLiveCodeListResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "QueryActivityLiveCodeList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *根据游标拉取渠道活码列表信息
+     * @param req QueryChannelCodeListRequest
+     * @return QueryChannelCodeListResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryChannelCodeListResponse QueryChannelCodeList(QueryChannelCodeListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<QueryChannelCodeListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<QueryChannelCodeListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "QueryChannelCodeList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *根据游标拉取会话存档列表信息
+     * @param req QueryChatArchivingListRequest
+     * @return QueryChatArchivingListResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryChatArchivingListResponse QueryChatArchivingList(QueryChatArchivingListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<QueryChatArchivingListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<QueryChatArchivingListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "QueryChatArchivingList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *企业可通过此接口，根据外部联系人的userid，拉取客户详情
+     * @param req QueryExternalContactDetailRequest
+     * @return QueryExternalContactDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryExternalContactDetailResponse QueryExternalContactDetail(QueryExternalContactDetailRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<QueryExternalContactDetailResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<QueryExternalContactDetailResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "QueryExternalContactDetail");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *企业可通过此接口获取指定成员添加的客户列表。客户是指配置了客户联系功能的成员所添加的外部联系人。没有配置客户联系功能的成员，所添加的外部联系人将不会作为客户返回。
+     * @param req QueryExternalContactListRequest
+     * @return QueryExternalContactListResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryExternalContactListResponse QueryExternalContactList(QueryExternalContactListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<QueryExternalContactListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<QueryExternalContactListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "QueryExternalContactList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询小程序码列表接口
+     * @param req QueryMiniAppCodeListRequest
+     * @return QueryMiniAppCodeListResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryMiniAppCodeListResponse QueryMiniAppCodeList(QueryMiniAppCodeListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<QueryMiniAppCodeListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<QueryMiniAppCodeListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "QueryMiniAppCodeList");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
