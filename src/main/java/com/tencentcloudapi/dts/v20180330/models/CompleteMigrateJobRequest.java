@@ -30,6 +30,13 @@ public class CompleteMigrateJobRequest extends AbstractModel{
     private String JobId;
 
     /**
+    * 完成任务的方式,仅支持旧版MySQL迁移任务。waitForSync-等待主从差距为0才停止,immediately-立即完成，不会等待主从差距一致。默认为waitForSync
+    */
+    @SerializedName("CompleteMode")
+    @Expose
+    private String CompleteMode;
+
+    /**
      * Get 数据迁移任务ID 
      * @return JobId 数据迁移任务ID
      */
@@ -45,6 +52,22 @@ public class CompleteMigrateJobRequest extends AbstractModel{
         this.JobId = JobId;
     }
 
+    /**
+     * Get 完成任务的方式,仅支持旧版MySQL迁移任务。waitForSync-等待主从差距为0才停止,immediately-立即完成，不会等待主从差距一致。默认为waitForSync 
+     * @return CompleteMode 完成任务的方式,仅支持旧版MySQL迁移任务。waitForSync-等待主从差距为0才停止,immediately-立即完成，不会等待主从差距一致。默认为waitForSync
+     */
+    public String getCompleteMode() {
+        return this.CompleteMode;
+    }
+
+    /**
+     * Set 完成任务的方式,仅支持旧版MySQL迁移任务。waitForSync-等待主从差距为0才停止,immediately-立即完成，不会等待主从差距一致。默认为waitForSync
+     * @param CompleteMode 完成任务的方式,仅支持旧版MySQL迁移任务。waitForSync-等待主从差距为0才停止,immediately-立即完成，不会等待主从差距一致。默认为waitForSync
+     */
+    public void setCompleteMode(String CompleteMode) {
+        this.CompleteMode = CompleteMode;
+    }
+
     public CompleteMigrateJobRequest() {
     }
 
@@ -56,6 +79,9 @@ public class CompleteMigrateJobRequest extends AbstractModel{
         if (source.JobId != null) {
             this.JobId = new String(source.JobId);
         }
+        if (source.CompleteMode != null) {
+            this.CompleteMode = new String(source.CompleteMode);
+        }
     }
 
 
@@ -64,6 +90,7 @@ public class CompleteMigrateJobRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "JobId", this.JobId);
+        this.setParamSimple(map, prefix + "CompleteMode", this.CompleteMode);
 
     }
 }

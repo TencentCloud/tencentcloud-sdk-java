@@ -37,6 +37,13 @@ public class CreateTaskRequest extends AbstractModel{
     private String DatabaseName;
 
     /**
+    * 默认数据源名称。
+    */
+    @SerializedName("DatasourceConnectionName")
+    @Expose
+    private String DatasourceConnectionName;
+
+    /**
      * Get 计算任务，该参数中包含任务类型及其相关配置信息 
      * @return Task 计算任务，该参数中包含任务类型及其相关配置信息
      */
@@ -68,6 +75,22 @@ public class CreateTaskRequest extends AbstractModel{
         this.DatabaseName = DatabaseName;
     }
 
+    /**
+     * Get 默认数据源名称。 
+     * @return DatasourceConnectionName 默认数据源名称。
+     */
+    public String getDatasourceConnectionName() {
+        return this.DatasourceConnectionName;
+    }
+
+    /**
+     * Set 默认数据源名称。
+     * @param DatasourceConnectionName 默认数据源名称。
+     */
+    public void setDatasourceConnectionName(String DatasourceConnectionName) {
+        this.DatasourceConnectionName = DatasourceConnectionName;
+    }
+
     public CreateTaskRequest() {
     }
 
@@ -82,6 +105,9 @@ public class CreateTaskRequest extends AbstractModel{
         if (source.DatabaseName != null) {
             this.DatabaseName = new String(source.DatabaseName);
         }
+        if (source.DatasourceConnectionName != null) {
+            this.DatasourceConnectionName = new String(source.DatasourceConnectionName);
+        }
     }
 
 
@@ -91,6 +117,7 @@ public class CreateTaskRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "Task.", this.Task);
         this.setParamSimple(map, prefix + "DatabaseName", this.DatabaseName);
+        this.setParamSimple(map, prefix + "DatasourceConnectionName", this.DatasourceConnectionName);
 
     }
 }

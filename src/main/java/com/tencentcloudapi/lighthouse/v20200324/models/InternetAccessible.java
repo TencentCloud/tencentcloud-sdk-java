@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class InternetAccessible extends AbstractModel{
 
     /**
-    * 网络计费类型,，取值范围：
+    * 网络计费类型，取值范围：
 <li>按流量包付费：TRAFFIC_POSTPAID_BY_HOUR</li>
 <li>按带宽付费： BANDWIDTH_POSTPAID_BY_HOUR</li>
     */
@@ -46,10 +46,10 @@ public class InternetAccessible extends AbstractModel{
     private Boolean PublicIpAssigned;
 
     /**
-     * Get 网络计费类型,，取值范围：
+     * Get 网络计费类型，取值范围：
 <li>按流量包付费：TRAFFIC_POSTPAID_BY_HOUR</li>
 <li>按带宽付费： BANDWIDTH_POSTPAID_BY_HOUR</li> 
-     * @return InternetChargeType 网络计费类型,，取值范围：
+     * @return InternetChargeType 网络计费类型，取值范围：
 <li>按流量包付费：TRAFFIC_POSTPAID_BY_HOUR</li>
 <li>按带宽付费： BANDWIDTH_POSTPAID_BY_HOUR</li>
      */
@@ -58,10 +58,10 @@ public class InternetAccessible extends AbstractModel{
     }
 
     /**
-     * Set 网络计费类型,，取值范围：
+     * Set 网络计费类型，取值范围：
 <li>按流量包付费：TRAFFIC_POSTPAID_BY_HOUR</li>
 <li>按带宽付费： BANDWIDTH_POSTPAID_BY_HOUR</li>
-     * @param InternetChargeType 网络计费类型,，取值范围：
+     * @param InternetChargeType 网络计费类型，取值范围：
 <li>按流量包付费：TRAFFIC_POSTPAID_BY_HOUR</li>
 <li>按带宽付费： BANDWIDTH_POSTPAID_BY_HOUR</li>
      */

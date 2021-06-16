@@ -129,6 +129,13 @@ public class TaskResponseInfo extends AbstractModel{
     private String OutputMessage;
 
     /**
+    * 执行SQL的引擎类型
+    */
+    @SerializedName("TaskType")
+    @Expose
+    private String TaskType;
+
+    /**
      * Get 任务所属Database的名称。 
      * @return DatabaseName 任务所属Database的名称。
      */
@@ -372,6 +379,22 @@ public class TaskResponseInfo extends AbstractModel{
         this.OutputMessage = OutputMessage;
     }
 
+    /**
+     * Get 执行SQL的引擎类型 
+     * @return TaskType 执行SQL的引擎类型
+     */
+    public String getTaskType() {
+        return this.TaskType;
+    }
+
+    /**
+     * Set 执行SQL的引擎类型
+     * @param TaskType 执行SQL的引擎类型
+     */
+    public void setTaskType(String TaskType) {
+        this.TaskType = TaskType;
+    }
+
     public TaskResponseInfo() {
     }
 
@@ -425,6 +448,9 @@ public class TaskResponseInfo extends AbstractModel{
         if (source.OutputMessage != null) {
             this.OutputMessage = new String(source.OutputMessage);
         }
+        if (source.TaskType != null) {
+            this.TaskType = new String(source.TaskType);
+        }
     }
 
 
@@ -447,6 +473,7 @@ public class TaskResponseInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Error", this.Error);
         this.setParamSimple(map, prefix + "Percentage", this.Percentage);
         this.setParamSimple(map, prefix + "OutputMessage", this.OutputMessage);
+        this.setParamSimple(map, prefix + "TaskType", this.TaskType);
 
     }
 }

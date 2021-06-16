@@ -2923,6 +2923,46 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     }
 
     /**
+     *业务日志搜索
+     * @param req SearchBusinessLogRequest
+     * @return SearchBusinessLogResponse
+     * @throws TencentCloudSDKException
+     */
+    public SearchBusinessLogResponse SearchBusinessLog(SearchBusinessLogRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SearchBusinessLogResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<SearchBusinessLogResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "SearchBusinessLog");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *标准输出日志搜索
+     * @param req SearchStdoutLogRequest
+     * @return SearchStdoutLogResponse
+     * @throws TencentCloudSDKException
+     */
+    public SearchStdoutLogResponse SearchStdoutLog(SearchStdoutLogRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SearchStdoutLogResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<SearchStdoutLogResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "SearchStdoutLog");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *下线部署组所有机器实例
      * @param req ShrinkGroupRequest
      * @return ShrinkGroupResponse

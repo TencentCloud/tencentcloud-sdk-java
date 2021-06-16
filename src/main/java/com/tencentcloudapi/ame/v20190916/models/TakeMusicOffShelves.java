@@ -31,6 +31,7 @@ public class TakeMusicOffShelves extends AbstractModel{
 
     /**
     * 当曲目临时下架时：已订购客户无影响，无需消息通知。当曲目封杀下架后，推送消息至已订购老客户，枚举值，判断是否上/下架
+在售状态，0在售，1临时下架，2永久下架
     */
     @SerializedName("SaleStatus")
     @Expose
@@ -53,8 +54,10 @@ public class TakeMusicOffShelves extends AbstractModel{
     }
 
     /**
-     * Get 当曲目临时下架时：已订购客户无影响，无需消息通知。当曲目封杀下架后，推送消息至已订购老客户，枚举值，判断是否上/下架 
+     * Get 当曲目临时下架时：已订购客户无影响，无需消息通知。当曲目封杀下架后，推送消息至已订购老客户，枚举值，判断是否上/下架
+在售状态，0在售，1临时下架，2永久下架 
      * @return SaleStatus 当曲目临时下架时：已订购客户无影响，无需消息通知。当曲目封杀下架后，推送消息至已订购老客户，枚举值，判断是否上/下架
+在售状态，0在售，1临时下架，2永久下架
      */
     public String getSaleStatus() {
         return this.SaleStatus;
@@ -62,7 +65,9 @@ public class TakeMusicOffShelves extends AbstractModel{
 
     /**
      * Set 当曲目临时下架时：已订购客户无影响，无需消息通知。当曲目封杀下架后，推送消息至已订购老客户，枚举值，判断是否上/下架
+在售状态，0在售，1临时下架，2永久下架
      * @param SaleStatus 当曲目临时下架时：已订购客户无影响，无需消息通知。当曲目封杀下架后，推送消息至已订购老客户，枚举值，判断是否上/下架
+在售状态，0在售，1临时下架，2永久下架
      */
     public void setSaleStatus(String SaleStatus) {
         this.SaleStatus = SaleStatus;

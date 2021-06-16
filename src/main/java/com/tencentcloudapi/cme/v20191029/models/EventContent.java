@@ -24,7 +24,8 @@ public class EventContent extends AbstractModel{
 
     /**
     * 事件类型，可取值为：
-<li>Storage.NewFileCreated：新文件产生。</li>
+<li>Storage.NewFileCreated：新文件产生；</li>
+<li>Project.StreamConnect.StatusChanged：云转推项目状态变更。</li>
     */
     @SerializedName("EventType")
     @Expose
@@ -38,10 +39,19 @@ public class EventContent extends AbstractModel{
     private StorageNewFileCreatedEvent StorageNewFileCreatedEvent;
 
     /**
+    * 云转推项目状态变更事件信息。仅当 EventType 为 Project.StreamConnect.StatusChanged 时有效。
+    */
+    @SerializedName("ProjectStreamConnectStatusChangedEvent")
+    @Expose
+    private ProjectStreamConnectStatusChangedEvent ProjectStreamConnectStatusChangedEvent;
+
+    /**
      * Get 事件类型，可取值为：
-<li>Storage.NewFileCreated：新文件产生。</li> 
+<li>Storage.NewFileCreated：新文件产生；</li>
+<li>Project.StreamConnect.StatusChanged：云转推项目状态变更。</li> 
      * @return EventType 事件类型，可取值为：
-<li>Storage.NewFileCreated：新文件产生。</li>
+<li>Storage.NewFileCreated：新文件产生；</li>
+<li>Project.StreamConnect.StatusChanged：云转推项目状态变更。</li>
      */
     public String getEventType() {
         return this.EventType;
@@ -49,9 +59,11 @@ public class EventContent extends AbstractModel{
 
     /**
      * Set 事件类型，可取值为：
-<li>Storage.NewFileCreated：新文件产生。</li>
+<li>Storage.NewFileCreated：新文件产生；</li>
+<li>Project.StreamConnect.StatusChanged：云转推项目状态变更。</li>
      * @param EventType 事件类型，可取值为：
-<li>Storage.NewFileCreated：新文件产生。</li>
+<li>Storage.NewFileCreated：新文件产生；</li>
+<li>Project.StreamConnect.StatusChanged：云转推项目状态变更。</li>
      */
     public void setEventType(String EventType) {
         this.EventType = EventType;
@@ -73,6 +85,22 @@ public class EventContent extends AbstractModel{
         this.StorageNewFileCreatedEvent = StorageNewFileCreatedEvent;
     }
 
+    /**
+     * Get 云转推项目状态变更事件信息。仅当 EventType 为 Project.StreamConnect.StatusChanged 时有效。 
+     * @return ProjectStreamConnectStatusChangedEvent 云转推项目状态变更事件信息。仅当 EventType 为 Project.StreamConnect.StatusChanged 时有效。
+     */
+    public ProjectStreamConnectStatusChangedEvent getProjectStreamConnectStatusChangedEvent() {
+        return this.ProjectStreamConnectStatusChangedEvent;
+    }
+
+    /**
+     * Set 云转推项目状态变更事件信息。仅当 EventType 为 Project.StreamConnect.StatusChanged 时有效。
+     * @param ProjectStreamConnectStatusChangedEvent 云转推项目状态变更事件信息。仅当 EventType 为 Project.StreamConnect.StatusChanged 时有效。
+     */
+    public void setProjectStreamConnectStatusChangedEvent(ProjectStreamConnectStatusChangedEvent ProjectStreamConnectStatusChangedEvent) {
+        this.ProjectStreamConnectStatusChangedEvent = ProjectStreamConnectStatusChangedEvent;
+    }
+
     public EventContent() {
     }
 
@@ -87,6 +115,9 @@ public class EventContent extends AbstractModel{
         if (source.StorageNewFileCreatedEvent != null) {
             this.StorageNewFileCreatedEvent = new StorageNewFileCreatedEvent(source.StorageNewFileCreatedEvent);
         }
+        if (source.ProjectStreamConnectStatusChangedEvent != null) {
+            this.ProjectStreamConnectStatusChangedEvent = new ProjectStreamConnectStatusChangedEvent(source.ProjectStreamConnectStatusChangedEvent);
+        }
     }
 
 
@@ -96,6 +127,7 @@ public class EventContent extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "EventType", this.EventType);
         this.setParamObj(map, prefix + "StorageNewFileCreatedEvent.", this.StorageNewFileCreatedEvent);
+        this.setParamObj(map, prefix + "ProjectStreamConnectStatusChangedEvent.", this.ProjectStreamConnectStatusChangedEvent);
 
     }
 }

@@ -99,6 +99,26 @@ public class IotvideoClient extends AbstractClient{
     }
 
     /**
+     *根据设备产品ID、设备名称，设置控制设备的属性数据。
+     * @param req ControlDeviceDataRequest
+     * @return ControlDeviceDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public ControlDeviceDataResponse ControlDeviceData(ControlDeviceDataRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ControlDeviceDataResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ControlDeviceDataResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ControlDeviceData");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建批次
      * @param req CreateBatchRequest
      * @return CreateBatchResponse
@@ -1011,6 +1031,26 @@ public class IotvideoClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyProductResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyProduct");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（PublishMessage）用于使用自定义透传协议进行设备远控
+     * @param req PublishMessageRequest
+     * @return PublishMessageResponse
+     * @throws TencentCloudSDKException
+     */
+    public PublishMessageResponse PublishMessage(PublishMessageRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<PublishMessageResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<PublishMessageResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "PublishMessage");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

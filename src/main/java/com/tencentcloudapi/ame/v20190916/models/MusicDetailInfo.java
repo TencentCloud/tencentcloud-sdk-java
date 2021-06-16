@@ -65,35 +65,35 @@ public class MusicDetailInfo extends AbstractModel{
     private Float Score;
 
     /**
-    * 场景信息
+    * 应用歌曲信息,1.图文/短视频,2.网络直播,3.网络电台FM,4.免费游戏,5.商业游戏,6.网店网站设计,7.广告营销,8.网络长视频
     */
     @SerializedName("Scene")
     @Expose
     private String [] Scene;
 
     /**
-    * 应用地域
+    * 应用地域,1. 中国大陆,2. 中国含港澳台,3. 全球
     */
     @SerializedName("Region")
     @Expose
     private String [] Region;
 
     /**
-    * 授权期限
+    * 授权时间,1. 1年, 5. 随片永久
     */
     @SerializedName("AuthPeriod")
     @Expose
     private String AuthPeriod;
 
     /**
-    * 商业化权益
+    * 商业化授权，1. 支持商业化 ,2. 不支持商业化
     */
     @SerializedName("Commercialization")
     @Expose
     private String Commercialization;
 
     /**
-    * 跨平台传播权益
+    * 跨平台传播，1. 支持跨平台传播 ,2. 不支持跨平台传播
     */
     @SerializedName("Platform")
     @Expose
@@ -203,80 +203,80 @@ public class MusicDetailInfo extends AbstractModel{
     }
 
     /**
-     * Get 场景信息 
-     * @return Scene 场景信息
+     * Get 应用歌曲信息,1.图文/短视频,2.网络直播,3.网络电台FM,4.免费游戏,5.商业游戏,6.网店网站设计,7.广告营销,8.网络长视频 
+     * @return Scene 应用歌曲信息,1.图文/短视频,2.网络直播,3.网络电台FM,4.免费游戏,5.商业游戏,6.网店网站设计,7.广告营销,8.网络长视频
      */
     public String [] getScene() {
         return this.Scene;
     }
 
     /**
-     * Set 场景信息
-     * @param Scene 场景信息
+     * Set 应用歌曲信息,1.图文/短视频,2.网络直播,3.网络电台FM,4.免费游戏,5.商业游戏,6.网店网站设计,7.广告营销,8.网络长视频
+     * @param Scene 应用歌曲信息,1.图文/短视频,2.网络直播,3.网络电台FM,4.免费游戏,5.商业游戏,6.网店网站设计,7.广告营销,8.网络长视频
      */
     public void setScene(String [] Scene) {
         this.Scene = Scene;
     }
 
     /**
-     * Get 应用地域 
-     * @return Region 应用地域
+     * Get 应用地域,1. 中国大陆,2. 中国含港澳台,3. 全球 
+     * @return Region 应用地域,1. 中国大陆,2. 中国含港澳台,3. 全球
      */
     public String [] getRegion() {
         return this.Region;
     }
 
     /**
-     * Set 应用地域
-     * @param Region 应用地域
+     * Set 应用地域,1. 中国大陆,2. 中国含港澳台,3. 全球
+     * @param Region 应用地域,1. 中国大陆,2. 中国含港澳台,3. 全球
      */
     public void setRegion(String [] Region) {
         this.Region = Region;
     }
 
     /**
-     * Get 授权期限 
-     * @return AuthPeriod 授权期限
+     * Get 授权时间,1. 1年, 5. 随片永久 
+     * @return AuthPeriod 授权时间,1. 1年, 5. 随片永久
      */
     public String getAuthPeriod() {
         return this.AuthPeriod;
     }
 
     /**
-     * Set 授权期限
-     * @param AuthPeriod 授权期限
+     * Set 授权时间,1. 1年, 5. 随片永久
+     * @param AuthPeriod 授权时间,1. 1年, 5. 随片永久
      */
     public void setAuthPeriod(String AuthPeriod) {
         this.AuthPeriod = AuthPeriod;
     }
 
     /**
-     * Get 商业化权益 
-     * @return Commercialization 商业化权益
+     * Get 商业化授权，1. 支持商业化 ,2. 不支持商业化 
+     * @return Commercialization 商业化授权，1. 支持商业化 ,2. 不支持商业化
      */
     public String getCommercialization() {
         return this.Commercialization;
     }
 
     /**
-     * Set 商业化权益
-     * @param Commercialization 商业化权益
+     * Set 商业化授权，1. 支持商业化 ,2. 不支持商业化
+     * @param Commercialization 商业化授权，1. 支持商业化 ,2. 不支持商业化
      */
     public void setCommercialization(String Commercialization) {
         this.Commercialization = Commercialization;
     }
 
     /**
-     * Get 跨平台传播权益 
-     * @return Platform 跨平台传播权益
+     * Get 跨平台传播，1. 支持跨平台传播 ,2. 不支持跨平台传播 
+     * @return Platform 跨平台传播，1. 支持跨平台传播 ,2. 不支持跨平台传播
      */
     public String getPlatform() {
         return this.Platform;
     }
 
     /**
-     * Set 跨平台传播权益
-     * @param Platform 跨平台传播权益
+     * Set 跨平台传播，1. 支持跨平台传播 ,2. 不支持跨平台传播
+     * @param Platform 跨平台传播，1. 支持跨平台传播 ,2. 不支持跨平台传播
      */
     public void setPlatform(String Platform) {
         this.Platform = Platform;

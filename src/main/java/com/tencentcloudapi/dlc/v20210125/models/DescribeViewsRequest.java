@@ -53,6 +53,13 @@ view-id - String - （过滤条件）view id形如：12342。
     private Filter [] Filters;
 
     /**
+    * 数据库所属的数据源名称
+    */
+    @SerializedName("DatasourceConnectionName")
+    @Expose
+    private String DatasourceConnectionName;
+
+    /**
      * Get 列出该数据库下所属数据表。 
      * @return DatabaseName 列出该数据库下所属数据表。
      */
@@ -124,6 +131,22 @@ view-id - String - （过滤条件）view id形如：12342。
         this.Filters = Filters;
     }
 
+    /**
+     * Get 数据库所属的数据源名称 
+     * @return DatasourceConnectionName 数据库所属的数据源名称
+     */
+    public String getDatasourceConnectionName() {
+        return this.DatasourceConnectionName;
+    }
+
+    /**
+     * Set 数据库所属的数据源名称
+     * @param DatasourceConnectionName 数据库所属的数据源名称
+     */
+    public void setDatasourceConnectionName(String DatasourceConnectionName) {
+        this.DatasourceConnectionName = DatasourceConnectionName;
+    }
+
     public DescribeViewsRequest() {
     }
 
@@ -147,6 +170,9 @@ view-id - String - （过滤条件）view id形如：12342。
                 this.Filters[i] = new Filter(source.Filters[i]);
             }
         }
+        if (source.DatasourceConnectionName != null) {
+            this.DatasourceConnectionName = new String(source.DatasourceConnectionName);
+        }
     }
 
 
@@ -158,6 +184,7 @@ view-id - String - （过滤条件）view id形如：12342。
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
+        this.setParamSimple(map, prefix + "DatasourceConnectionName", this.DatasourceConnectionName);
 
     }
 }

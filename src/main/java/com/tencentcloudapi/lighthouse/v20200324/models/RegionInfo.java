@@ -37,7 +37,7 @@ public class RegionInfo extends AbstractModel{
     private String RegionName;
 
     /**
-    * 地域是否可用状态，取值为AVAILABLE。
+    * 地域是否可用状态，取值仅为AVAILABLE。
     */
     @SerializedName("RegionState")
     @Expose
@@ -83,16 +83,16 @@ public class RegionInfo extends AbstractModel{
     }
 
     /**
-     * Get 地域是否可用状态，取值为AVAILABLE。 
-     * @return RegionState 地域是否可用状态，取值为AVAILABLE。
+     * Get 地域是否可用状态，取值仅为AVAILABLE。 
+     * @return RegionState 地域是否可用状态，取值仅为AVAILABLE。
      */
     public String getRegionState() {
         return this.RegionState;
     }
 
     /**
-     * Set 地域是否可用状态，取值为AVAILABLE。
-     * @param RegionState 地域是否可用状态，取值为AVAILABLE。
+     * Set 地域是否可用状态，取值仅为AVAILABLE。
+     * @param RegionState 地域是否可用状态，取值仅为AVAILABLE。
      */
     public void setRegionState(String RegionState) {
         this.RegionState = RegionState;

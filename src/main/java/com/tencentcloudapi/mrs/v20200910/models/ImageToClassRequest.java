@@ -37,7 +37,7 @@ public class ImageToClassRequest extends AbstractModel{
     private HandleParam HandleParam;
 
     /**
-    * 图片类型
+    * 图片类型，目前支持11（检验报告），12（检查报告），15（病理报告），218（诊断证明）。
     */
     @SerializedName("Type")
     @Expose
@@ -76,16 +76,16 @@ public class ImageToClassRequest extends AbstractModel{
     }
 
     /**
-     * Get 图片类型 
-     * @return Type 图片类型
+     * Get 图片类型，目前支持11（检验报告），12（检查报告），15（病理报告），218（诊断证明）。 
+     * @return Type 图片类型，目前支持11（检验报告），12（检查报告），15（病理报告），218（诊断证明）。
      */
     public Long getType() {
         return this.Type;
     }
 
     /**
-     * Set 图片类型
-     * @param Type 图片类型
+     * Set 图片类型，目前支持11（检验报告），12（检查报告），15（病理报告），218（诊断证明）。
+     * @param Type 图片类型，目前支持11（检验报告），12（检查报告），15（病理报告），218（诊断证明）。
      */
     public void setType(Long Type) {
         this.Type = Type;

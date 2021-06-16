@@ -53,6 +53,13 @@ table-id - String - （过滤条件）table id形如：12342。
     private Filter [] Filters;
 
     /**
+    * 指定查询的数据源名称，默认为CosDataCatalog
+    */
+    @SerializedName("DatasourceConnectionName")
+    @Expose
+    private String DatasourceConnectionName;
+
+    /**
      * Get 列出该数据库下所属数据表。 
      * @return DatabaseName 列出该数据库下所属数据表。
      */
@@ -124,6 +131,22 @@ table-id - String - （过滤条件）table id形如：12342。
         this.Filters = Filters;
     }
 
+    /**
+     * Get 指定查询的数据源名称，默认为CosDataCatalog 
+     * @return DatasourceConnectionName 指定查询的数据源名称，默认为CosDataCatalog
+     */
+    public String getDatasourceConnectionName() {
+        return this.DatasourceConnectionName;
+    }
+
+    /**
+     * Set 指定查询的数据源名称，默认为CosDataCatalog
+     * @param DatasourceConnectionName 指定查询的数据源名称，默认为CosDataCatalog
+     */
+    public void setDatasourceConnectionName(String DatasourceConnectionName) {
+        this.DatasourceConnectionName = DatasourceConnectionName;
+    }
+
     public DescribeTablesRequest() {
     }
 
@@ -147,6 +170,9 @@ table-id - String - （过滤条件）table id形如：12342。
                 this.Filters[i] = new Filter(source.Filters[i]);
             }
         }
+        if (source.DatasourceConnectionName != null) {
+            this.DatasourceConnectionName = new String(source.DatasourceConnectionName);
+        }
     }
 
 
@@ -158,6 +184,7 @@ table-id - String - （过滤条件）table id形如：12342。
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
+        this.setParamSimple(map, prefix + "DatasourceConnectionName", this.DatasourceConnectionName);
 
     }
 }

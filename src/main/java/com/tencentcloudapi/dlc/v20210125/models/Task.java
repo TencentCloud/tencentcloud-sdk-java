@@ -30,6 +30,13 @@ public class Task extends AbstractModel{
     private SQLTask SQLTask;
 
     /**
+    * Spark SQL查询任务
+    */
+    @SerializedName("SparkSQLTask")
+    @Expose
+    private SQLTask SparkSQLTask;
+
+    /**
      * Get SQL查询任务 
      * @return SQLTask SQL查询任务
      */
@@ -45,6 +52,22 @@ public class Task extends AbstractModel{
         this.SQLTask = SQLTask;
     }
 
+    /**
+     * Get Spark SQL查询任务 
+     * @return SparkSQLTask Spark SQL查询任务
+     */
+    public SQLTask getSparkSQLTask() {
+        return this.SparkSQLTask;
+    }
+
+    /**
+     * Set Spark SQL查询任务
+     * @param SparkSQLTask Spark SQL查询任务
+     */
+    public void setSparkSQLTask(SQLTask SparkSQLTask) {
+        this.SparkSQLTask = SparkSQLTask;
+    }
+
     public Task() {
     }
 
@@ -56,6 +79,9 @@ public class Task extends AbstractModel{
         if (source.SQLTask != null) {
             this.SQLTask = new SQLTask(source.SQLTask);
         }
+        if (source.SparkSQLTask != null) {
+            this.SparkSQLTask = new SQLTask(source.SparkSQLTask);
+        }
     }
 
 
@@ -64,6 +90,7 @@ public class Task extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "SQLTask.", this.SQLTask);
+        this.setParamObj(map, prefix + "SparkSQLTask.", this.SparkSQLTask);
 
     }
 }

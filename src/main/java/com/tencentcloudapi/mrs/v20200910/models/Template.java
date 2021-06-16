@@ -95,6 +95,30 @@ public class Template extends AbstractModel{
     private String ReportType;
 
     /**
+    * 门诊病历信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MedicalRecordInfo")
+    @Expose
+    private MedicalRecordInfo MedicalRecordInfo;
+
+    /**
+    * 出入院信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Hospitalization")
+    @Expose
+    private Hospitalization Hospitalization;
+
+    /**
+    * 手术记录
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Surgery")
+    @Expose
+    private Surgery Surgery;
+
+    /**
      * Get 患者信息
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return PatientInfo 患者信息
@@ -274,6 +298,66 @@ public class Template extends AbstractModel{
         this.ReportType = ReportType;
     }
 
+    /**
+     * Get 门诊病历信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MedicalRecordInfo 门诊病历信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public MedicalRecordInfo getMedicalRecordInfo() {
+        return this.MedicalRecordInfo;
+    }
+
+    /**
+     * Set 门诊病历信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MedicalRecordInfo 门诊病历信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMedicalRecordInfo(MedicalRecordInfo MedicalRecordInfo) {
+        this.MedicalRecordInfo = MedicalRecordInfo;
+    }
+
+    /**
+     * Get 出入院信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Hospitalization 出入院信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Hospitalization getHospitalization() {
+        return this.Hospitalization;
+    }
+
+    /**
+     * Set 出入院信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Hospitalization 出入院信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setHospitalization(Hospitalization Hospitalization) {
+        this.Hospitalization = Hospitalization;
+    }
+
+    /**
+     * Get 手术记录
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Surgery 手术记录
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Surgery getSurgery() {
+        return this.Surgery;
+    }
+
+    /**
+     * Set 手术记录
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Surgery 手术记录
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSurgery(Surgery Surgery) {
+        this.Surgery = Surgery;
+    }
+
     public Template() {
     }
 
@@ -309,6 +393,15 @@ public class Template extends AbstractModel{
         if (source.ReportType != null) {
             this.ReportType = new String(source.ReportType);
         }
+        if (source.MedicalRecordInfo != null) {
+            this.MedicalRecordInfo = new MedicalRecordInfo(source.MedicalRecordInfo);
+        }
+        if (source.Hospitalization != null) {
+            this.Hospitalization = new Hospitalization(source.Hospitalization);
+        }
+        if (source.Surgery != null) {
+            this.Surgery = new Surgery(source.Surgery);
+        }
     }
 
 
@@ -325,6 +418,9 @@ public class Template extends AbstractModel{
         this.setParamObj(map, prefix + "FirstPage.", this.FirstPage);
         this.setParamObj(map, prefix + "Indicator.", this.Indicator);
         this.setParamSimple(map, prefix + "ReportType", this.ReportType);
+        this.setParamObj(map, prefix + "MedicalRecordInfo.", this.MedicalRecordInfo);
+        this.setParamObj(map, prefix + "Hospitalization.", this.Hospitalization);
+        this.setParamObj(map, prefix + "Surgery.", this.Surgery);
 
     }
 }

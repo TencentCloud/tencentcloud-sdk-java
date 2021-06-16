@@ -30,6 +30,13 @@ public class SQLTask extends AbstractModel{
     private String SQL;
 
     /**
+    * 任务的配置信息
+    */
+    @SerializedName("Config")
+    @Expose
+    private KVPair [] Config;
+
+    /**
      * Get base64加密后的SQL语句 
      * @return SQL base64加密后的SQL语句
      */
@@ -45,6 +52,22 @@ public class SQLTask extends AbstractModel{
         this.SQL = SQL;
     }
 
+    /**
+     * Get 任务的配置信息 
+     * @return Config 任务的配置信息
+     */
+    public KVPair [] getConfig() {
+        return this.Config;
+    }
+
+    /**
+     * Set 任务的配置信息
+     * @param Config 任务的配置信息
+     */
+    public void setConfig(KVPair [] Config) {
+        this.Config = Config;
+    }
+
     public SQLTask() {
     }
 
@@ -56,6 +79,12 @@ public class SQLTask extends AbstractModel{
         if (source.SQL != null) {
             this.SQL = new String(source.SQL);
         }
+        if (source.Config != null) {
+            this.Config = new KVPair[source.Config.length];
+            for (int i = 0; i < source.Config.length; i++) {
+                this.Config[i] = new KVPair(source.Config[i]);
+            }
+        }
     }
 
 
@@ -64,6 +93,7 @@ public class SQLTask extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SQL", this.SQL);
+        this.setParamArrayObj(map, prefix + "Config.", this.Config);
 
     }
 }

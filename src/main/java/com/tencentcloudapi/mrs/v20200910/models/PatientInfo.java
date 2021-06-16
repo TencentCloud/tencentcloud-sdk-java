@@ -71,6 +71,86 @@ public class PatientInfo extends AbstractModel{
     private String IdCard;
 
     /**
+    * 健康卡号
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("HealthCardNo")
+    @Expose
+    private String HealthCardNo;
+
+    /**
+    * 社保卡号
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SocialSecurityCardNo")
+    @Expose
+    private String SocialSecurityCardNo;
+
+    /**
+    * 出生日期
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Birthday")
+    @Expose
+    private String Birthday;
+
+    /**
+    * 民族
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Ethnicity")
+    @Expose
+    private String Ethnicity;
+
+    /**
+    * 婚姻状况
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Married")
+    @Expose
+    private String Married;
+
+    /**
+    * 职业
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Profession")
+    @Expose
+    private String Profession;
+
+    /**
+    * 教育程度
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EducationBackground")
+    @Expose
+    private String EducationBackground;
+
+    /**
+    * 国籍
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Nationality")
+    @Expose
+    private String Nationality;
+
+    /**
+    * 籍贯
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BirthPlace")
+    @Expose
+    private String BirthPlace;
+
+    /**
+    * 医保类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MedicalInsuranceType")
+    @Expose
+    private String MedicalInsuranceType;
+
+    /**
      * Get 患者姓名
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Name 患者姓名
@@ -190,6 +270,206 @@ public class PatientInfo extends AbstractModel{
         this.IdCard = IdCard;
     }
 
+    /**
+     * Get 健康卡号
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return HealthCardNo 健康卡号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getHealthCardNo() {
+        return this.HealthCardNo;
+    }
+
+    /**
+     * Set 健康卡号
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param HealthCardNo 健康卡号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setHealthCardNo(String HealthCardNo) {
+        this.HealthCardNo = HealthCardNo;
+    }
+
+    /**
+     * Get 社保卡号
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SocialSecurityCardNo 社保卡号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSocialSecurityCardNo() {
+        return this.SocialSecurityCardNo;
+    }
+
+    /**
+     * Set 社保卡号
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SocialSecurityCardNo 社保卡号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSocialSecurityCardNo(String SocialSecurityCardNo) {
+        this.SocialSecurityCardNo = SocialSecurityCardNo;
+    }
+
+    /**
+     * Get 出生日期
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Birthday 出生日期
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getBirthday() {
+        return this.Birthday;
+    }
+
+    /**
+     * Set 出生日期
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Birthday 出生日期
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBirthday(String Birthday) {
+        this.Birthday = Birthday;
+    }
+
+    /**
+     * Get 民族
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Ethnicity 民族
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getEthnicity() {
+        return this.Ethnicity;
+    }
+
+    /**
+     * Set 民族
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Ethnicity 民族
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEthnicity(String Ethnicity) {
+        this.Ethnicity = Ethnicity;
+    }
+
+    /**
+     * Get 婚姻状况
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Married 婚姻状况
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getMarried() {
+        return this.Married;
+    }
+
+    /**
+     * Set 婚姻状况
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Married 婚姻状况
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMarried(String Married) {
+        this.Married = Married;
+    }
+
+    /**
+     * Get 职业
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Profession 职业
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getProfession() {
+        return this.Profession;
+    }
+
+    /**
+     * Set 职业
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Profession 职业
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProfession(String Profession) {
+        this.Profession = Profession;
+    }
+
+    /**
+     * Get 教育程度
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EducationBackground 教育程度
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getEducationBackground() {
+        return this.EducationBackground;
+    }
+
+    /**
+     * Set 教育程度
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EducationBackground 教育程度
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEducationBackground(String EducationBackground) {
+        this.EducationBackground = EducationBackground;
+    }
+
+    /**
+     * Get 国籍
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Nationality 国籍
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getNationality() {
+        return this.Nationality;
+    }
+
+    /**
+     * Set 国籍
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Nationality 国籍
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNationality(String Nationality) {
+        this.Nationality = Nationality;
+    }
+
+    /**
+     * Get 籍贯
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BirthPlace 籍贯
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getBirthPlace() {
+        return this.BirthPlace;
+    }
+
+    /**
+     * Set 籍贯
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BirthPlace 籍贯
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBirthPlace(String BirthPlace) {
+        this.BirthPlace = BirthPlace;
+    }
+
+    /**
+     * Get 医保类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MedicalInsuranceType 医保类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getMedicalInsuranceType() {
+        return this.MedicalInsuranceType;
+    }
+
+    /**
+     * Set 医保类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MedicalInsuranceType 医保类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMedicalInsuranceType(String MedicalInsuranceType) {
+        this.MedicalInsuranceType = MedicalInsuranceType;
+    }
+
     public PatientInfo() {
     }
 
@@ -216,6 +496,36 @@ public class PatientInfo extends AbstractModel{
         if (source.IdCard != null) {
             this.IdCard = new String(source.IdCard);
         }
+        if (source.HealthCardNo != null) {
+            this.HealthCardNo = new String(source.HealthCardNo);
+        }
+        if (source.SocialSecurityCardNo != null) {
+            this.SocialSecurityCardNo = new String(source.SocialSecurityCardNo);
+        }
+        if (source.Birthday != null) {
+            this.Birthday = new String(source.Birthday);
+        }
+        if (source.Ethnicity != null) {
+            this.Ethnicity = new String(source.Ethnicity);
+        }
+        if (source.Married != null) {
+            this.Married = new String(source.Married);
+        }
+        if (source.Profession != null) {
+            this.Profession = new String(source.Profession);
+        }
+        if (source.EducationBackground != null) {
+            this.EducationBackground = new String(source.EducationBackground);
+        }
+        if (source.Nationality != null) {
+            this.Nationality = new String(source.Nationality);
+        }
+        if (source.BirthPlace != null) {
+            this.BirthPlace = new String(source.BirthPlace);
+        }
+        if (source.MedicalInsuranceType != null) {
+            this.MedicalInsuranceType = new String(source.MedicalInsuranceType);
+        }
     }
 
 
@@ -229,6 +539,16 @@ public class PatientInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Phone", this.Phone);
         this.setParamSimple(map, prefix + "Address", this.Address);
         this.setParamSimple(map, prefix + "IdCard", this.IdCard);
+        this.setParamSimple(map, prefix + "HealthCardNo", this.HealthCardNo);
+        this.setParamSimple(map, prefix + "SocialSecurityCardNo", this.SocialSecurityCardNo);
+        this.setParamSimple(map, prefix + "Birthday", this.Birthday);
+        this.setParamSimple(map, prefix + "Ethnicity", this.Ethnicity);
+        this.setParamSimple(map, prefix + "Married", this.Married);
+        this.setParamSimple(map, prefix + "Profession", this.Profession);
+        this.setParamSimple(map, prefix + "EducationBackground", this.EducationBackground);
+        this.setParamSimple(map, prefix + "Nationality", this.Nationality);
+        this.setParamSimple(map, prefix + "BirthPlace", this.BirthPlace);
+        this.setParamSimple(map, prefix + "MedicalInsuranceType", this.MedicalInsuranceType);
 
     }
 }

@@ -87,7 +87,7 @@ public class TuberInfo extends AbstractModel{
     private BlockInfo RearEcho;
 
     /**
-    * 质地弹性
+    * 弹性质地
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Elastic")
@@ -447,9 +447,9 @@ public class TuberInfo extends AbstractModel{
     }
 
     /**
-     * Get 质地弹性
+     * Get 弹性质地
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Elastic 质地弹性
+     * @return Elastic 弹性质地
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Elastic getElastic() {
@@ -457,9 +457,9 @@ public class TuberInfo extends AbstractModel{
     }
 
     /**
-     * Set 质地弹性
+     * Set 弹性质地
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Elastic 质地弹性
+     * @param Elastic 弹性质地
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setElastic(Elastic Elastic) {

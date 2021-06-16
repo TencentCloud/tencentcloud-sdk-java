@@ -79,21 +79,21 @@ public class CreateSessionRequest extends AbstractModel{
     private Long SetNo;
 
     /**
-    * 单位Mbps，固定码率，有一定浮动范围，后端不动态调整(MaxBitrate和MinBitrate将无效)
+    * 单位Mbps，固定码率建议值，有一定浮动范围，后端不动态调整(MaxBitrate和MinBitrate将无效)
     */
     @SerializedName("Bitrate")
     @Expose
     private Long Bitrate;
 
     /**
-    * 单位Mbps，动态调整最大码率，有一定浮动范围
+    * 单位Mbps，动态调整最大码率建议值，会按实际情况调整
     */
     @SerializedName("MaxBitrate")
     @Expose
     private Long MaxBitrate;
 
     /**
-    * 单位Mbps，动态调整最小码率，有一定浮动范围
+    * 单位Mbps，动态调整最小码率建议值，会按实际情况调整
     */
     @SerializedName("MinBitrate")
     @Expose
@@ -270,48 +270,48 @@ public class CreateSessionRequest extends AbstractModel{
     }
 
     /**
-     * Get 单位Mbps，固定码率，有一定浮动范围，后端不动态调整(MaxBitrate和MinBitrate将无效) 
-     * @return Bitrate 单位Mbps，固定码率，有一定浮动范围，后端不动态调整(MaxBitrate和MinBitrate将无效)
+     * Get 单位Mbps，固定码率建议值，有一定浮动范围，后端不动态调整(MaxBitrate和MinBitrate将无效) 
+     * @return Bitrate 单位Mbps，固定码率建议值，有一定浮动范围，后端不动态调整(MaxBitrate和MinBitrate将无效)
      */
     public Long getBitrate() {
         return this.Bitrate;
     }
 
     /**
-     * Set 单位Mbps，固定码率，有一定浮动范围，后端不动态调整(MaxBitrate和MinBitrate将无效)
-     * @param Bitrate 单位Mbps，固定码率，有一定浮动范围，后端不动态调整(MaxBitrate和MinBitrate将无效)
+     * Set 单位Mbps，固定码率建议值，有一定浮动范围，后端不动态调整(MaxBitrate和MinBitrate将无效)
+     * @param Bitrate 单位Mbps，固定码率建议值，有一定浮动范围，后端不动态调整(MaxBitrate和MinBitrate将无效)
      */
     public void setBitrate(Long Bitrate) {
         this.Bitrate = Bitrate;
     }
 
     /**
-     * Get 单位Mbps，动态调整最大码率，有一定浮动范围 
-     * @return MaxBitrate 单位Mbps，动态调整最大码率，有一定浮动范围
+     * Get 单位Mbps，动态调整最大码率建议值，会按实际情况调整 
+     * @return MaxBitrate 单位Mbps，动态调整最大码率建议值，会按实际情况调整
      */
     public Long getMaxBitrate() {
         return this.MaxBitrate;
     }
 
     /**
-     * Set 单位Mbps，动态调整最大码率，有一定浮动范围
-     * @param MaxBitrate 单位Mbps，动态调整最大码率，有一定浮动范围
+     * Set 单位Mbps，动态调整最大码率建议值，会按实际情况调整
+     * @param MaxBitrate 单位Mbps，动态调整最大码率建议值，会按实际情况调整
      */
     public void setMaxBitrate(Long MaxBitrate) {
         this.MaxBitrate = MaxBitrate;
     }
 
     /**
-     * Get 单位Mbps，动态调整最小码率，有一定浮动范围 
-     * @return MinBitrate 单位Mbps，动态调整最小码率，有一定浮动范围
+     * Get 单位Mbps，动态调整最小码率建议值，会按实际情况调整 
+     * @return MinBitrate 单位Mbps，动态调整最小码率建议值，会按实际情况调整
      */
     public Long getMinBitrate() {
         return this.MinBitrate;
     }
 
     /**
-     * Set 单位Mbps，动态调整最小码率，有一定浮动范围
-     * @param MinBitrate 单位Mbps，动态调整最小码率，有一定浮动范围
+     * Set 单位Mbps，动态调整最小码率建议值，会按实际情况调整
+     * @param MinBitrate 单位Mbps，动态调整最小码率建议值，会按实际情况调整
      */
     public void setMinBitrate(Long MinBitrate) {
         this.MinBitrate = MinBitrate;

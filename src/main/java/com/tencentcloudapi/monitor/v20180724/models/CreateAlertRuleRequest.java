@@ -74,7 +74,9 @@ public class CreateAlertRuleRequest extends AbstractModel{
     private PrometheusRuleKV [] Labels;
 
     /**
-    * 注释列表
+    * 注释列表。
+
+告警对象和告警消息是 Prometheus Rule Annotations 的特殊字段，需要通过 annotations 来传递，对应的 Key 分别为summary/description。
     */
     @SerializedName("Annotations")
     @Expose
@@ -208,16 +210,24 @@ public class CreateAlertRuleRequest extends AbstractModel{
     }
 
     /**
-     * Get 注释列表 
-     * @return Annotations 注释列表
+     * Get 注释列表。
+
+告警对象和告警消息是 Prometheus Rule Annotations 的特殊字段，需要通过 annotations 来传递，对应的 Key 分别为summary/description。 
+     * @return Annotations 注释列表。
+
+告警对象和告警消息是 Prometheus Rule Annotations 的特殊字段，需要通过 annotations 来传递，对应的 Key 分别为summary/description。
      */
     public PrometheusRuleKV [] getAnnotations() {
         return this.Annotations;
     }
 
     /**
-     * Set 注释列表
-     * @param Annotations 注释列表
+     * Set 注释列表。
+
+告警对象和告警消息是 Prometheus Rule Annotations 的特殊字段，需要通过 annotations 来传递，对应的 Key 分别为summary/description。
+     * @param Annotations 注释列表。
+
+告警对象和告警消息是 Prometheus Rule Annotations 的特殊字段，需要通过 annotations 来传递，对应的 Key 分别为summary/description。
      */
     public void setAnnotations(PrometheusRuleKV [] Annotations) {
         this.Annotations = Annotations;

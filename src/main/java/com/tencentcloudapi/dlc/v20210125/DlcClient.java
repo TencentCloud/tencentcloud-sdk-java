@@ -79,6 +79,26 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *该接口（CreateStoreLocation）新增或覆盖计算结果存储位置。
+     * @param req CreateStoreLocationRequest
+     * @return CreateStoreLocationResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateStoreLocationResponse CreateStoreLocation(CreateStoreLocationRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateStoreLocationResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateStoreLocationResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateStoreLocation");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（CreateTable）用于生成建表SQL。
      * @param req CreateTableRequest
      * @return CreateTableResponse

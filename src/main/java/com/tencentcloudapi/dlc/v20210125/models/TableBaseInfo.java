@@ -37,6 +37,14 @@ public class TableBaseInfo extends AbstractModel{
     private String TableName;
 
     /**
+    * 该数据表所属数据源名字
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DatasourceConnectionName")
+    @Expose
+    private String DatasourceConnectionName;
+
+    /**
      * Get 该数据表所属数据库名字 
      * @return DatabaseName 该数据表所属数据库名字
      */
@@ -68,6 +76,26 @@ public class TableBaseInfo extends AbstractModel{
         this.TableName = TableName;
     }
 
+    /**
+     * Get 该数据表所属数据源名字
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DatasourceConnectionName 该数据表所属数据源名字
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDatasourceConnectionName() {
+        return this.DatasourceConnectionName;
+    }
+
+    /**
+     * Set 该数据表所属数据源名字
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DatasourceConnectionName 该数据表所属数据源名字
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDatasourceConnectionName(String DatasourceConnectionName) {
+        this.DatasourceConnectionName = DatasourceConnectionName;
+    }
+
     public TableBaseInfo() {
     }
 
@@ -82,6 +110,9 @@ public class TableBaseInfo extends AbstractModel{
         if (source.TableName != null) {
             this.TableName = new String(source.TableName);
         }
+        if (source.DatasourceConnectionName != null) {
+            this.DatasourceConnectionName = new String(source.DatasourceConnectionName);
+        }
     }
 
 
@@ -91,6 +122,7 @@ public class TableBaseInfo extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DatabaseName", this.DatabaseName);
         this.setParamSimple(map, prefix + "TableName", this.TableName);
+        this.setParamSimple(map, prefix + "DatasourceConnectionName", this.DatasourceConnectionName);
 
     }
 }

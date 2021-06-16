@@ -37,6 +37,13 @@ public class DescribeTableRequest extends AbstractModel{
     private String DatabaseName;
 
     /**
+    * 查询表所在的数据源名称
+    */
+    @SerializedName("DatasourceConnectionName")
+    @Expose
+    private String DatasourceConnectionName;
+
+    /**
      * Get 查询对象表名称 
      * @return TableName 查询对象表名称
      */
@@ -68,6 +75,22 @@ public class DescribeTableRequest extends AbstractModel{
         this.DatabaseName = DatabaseName;
     }
 
+    /**
+     * Get 查询表所在的数据源名称 
+     * @return DatasourceConnectionName 查询表所在的数据源名称
+     */
+    public String getDatasourceConnectionName() {
+        return this.DatasourceConnectionName;
+    }
+
+    /**
+     * Set 查询表所在的数据源名称
+     * @param DatasourceConnectionName 查询表所在的数据源名称
+     */
+    public void setDatasourceConnectionName(String DatasourceConnectionName) {
+        this.DatasourceConnectionName = DatasourceConnectionName;
+    }
+
     public DescribeTableRequest() {
     }
 
@@ -82,6 +105,9 @@ public class DescribeTableRequest extends AbstractModel{
         if (source.DatabaseName != null) {
             this.DatabaseName = new String(source.DatabaseName);
         }
+        if (source.DatasourceConnectionName != null) {
+            this.DatasourceConnectionName = new String(source.DatasourceConnectionName);
+        }
     }
 
 
@@ -91,6 +117,7 @@ public class DescribeTableRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TableName", this.TableName);
         this.setParamSimple(map, prefix + "DatabaseName", this.DatabaseName);
+        this.setParamSimple(map, prefix + "DatasourceConnectionName", this.DatasourceConnectionName);
 
     }
 }

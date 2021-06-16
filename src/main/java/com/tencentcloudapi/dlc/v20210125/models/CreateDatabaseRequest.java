@@ -30,6 +30,13 @@ public class CreateDatabaseRequest extends AbstractModel{
     private DatabaseInfo DatabaseInfo;
 
     /**
+    * 数据源名称，默认为CosDataCatalog
+    */
+    @SerializedName("DatasourceConnectionName")
+    @Expose
+    private String DatasourceConnectionName;
+
+    /**
      * Get 数据库基础信息 
      * @return DatabaseInfo 数据库基础信息
      */
@@ -45,6 +52,22 @@ public class CreateDatabaseRequest extends AbstractModel{
         this.DatabaseInfo = DatabaseInfo;
     }
 
+    /**
+     * Get 数据源名称，默认为CosDataCatalog 
+     * @return DatasourceConnectionName 数据源名称，默认为CosDataCatalog
+     */
+    public String getDatasourceConnectionName() {
+        return this.DatasourceConnectionName;
+    }
+
+    /**
+     * Set 数据源名称，默认为CosDataCatalog
+     * @param DatasourceConnectionName 数据源名称，默认为CosDataCatalog
+     */
+    public void setDatasourceConnectionName(String DatasourceConnectionName) {
+        this.DatasourceConnectionName = DatasourceConnectionName;
+    }
+
     public CreateDatabaseRequest() {
     }
 
@@ -56,6 +79,9 @@ public class CreateDatabaseRequest extends AbstractModel{
         if (source.DatabaseInfo != null) {
             this.DatabaseInfo = new DatabaseInfo(source.DatabaseInfo);
         }
+        if (source.DatasourceConnectionName != null) {
+            this.DatasourceConnectionName = new String(source.DatasourceConnectionName);
+        }
     }
 
 
@@ -64,6 +90,7 @@ public class CreateDatabaseRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "DatabaseInfo.", this.DatabaseInfo);
+        this.setParamSimple(map, prefix + "DatasourceConnectionName", this.DatasourceConnectionName);
 
     }
 }

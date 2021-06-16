@@ -159,6 +159,14 @@ public class ReportInfo extends AbstractModel{
     private String UltraNum;
 
     /**
+    * 临床诊断
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Diagnose")
+    @Expose
+    private String Diagnose;
+
+    /**
      * Get 医院名称
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Hospital 医院名称
@@ -498,6 +506,26 @@ public class ReportInfo extends AbstractModel{
         this.UltraNum = UltraNum;
     }
 
+    /**
+     * Get 临床诊断
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Diagnose 临床诊断
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDiagnose() {
+        return this.Diagnose;
+    }
+
+    /**
+     * Set 临床诊断
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Diagnose 临床诊断
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDiagnose(String Diagnose) {
+        this.Diagnose = Diagnose;
+    }
+
     public ReportInfo() {
     }
 
@@ -557,6 +585,9 @@ public class ReportInfo extends AbstractModel{
         if (source.UltraNum != null) {
             this.UltraNum = new String(source.UltraNum);
         }
+        if (source.Diagnose != null) {
+            this.Diagnose = new String(source.Diagnose);
+        }
     }
 
 
@@ -581,6 +612,7 @@ public class ReportInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "MedicalRecordNum", this.MedicalRecordNum);
         this.setParamSimple(map, prefix + "ReportName", this.ReportName);
         this.setParamSimple(map, prefix + "UltraNum", this.UltraNum);
+        this.setParamSimple(map, prefix + "Diagnose", this.Diagnose);
 
     }
 }
