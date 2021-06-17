@@ -78,12 +78,20 @@ https://open.work.weixin.qq.com/api/doc/90000/90135/91774
     private Long MsgTime;
 
     /**
-    * MsgType=video时的消息体
+    * MsgType=video时的消息体，忽略此字段，见BodyJson字段
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Video")
     @Expose
     private ChatArchivingMsgTypeVideo Video;
+
+    /**
+    * 根据MsgType的不同取值，解析内容不同，参考：https://open.work.weixin.qq.com/api/doc/90000/90135/91774
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BodyJson")
+    @Expose
+    private String BodyJson;
 
     /**
      * Get 消息id 
@@ -222,9 +230,9 @@ https://open.work.weixin.qq.com/api/doc/90000/90135/91774
     }
 
     /**
-     * Get MsgType=video时的消息体
+     * Get MsgType=video时的消息体，忽略此字段，见BodyJson字段
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Video MsgType=video时的消息体
+     * @return Video MsgType=video时的消息体，忽略此字段，见BodyJson字段
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ChatArchivingMsgTypeVideo getVideo() {
@@ -232,13 +240,33 @@ https://open.work.weixin.qq.com/api/doc/90000/90135/91774
     }
 
     /**
-     * Set MsgType=video时的消息体
+     * Set MsgType=video时的消息体，忽略此字段，见BodyJson字段
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Video MsgType=video时的消息体
+     * @param Video MsgType=video时的消息体，忽略此字段，见BodyJson字段
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVideo(ChatArchivingMsgTypeVideo Video) {
         this.Video = Video;
+    }
+
+    /**
+     * Get 根据MsgType的不同取值，解析内容不同，参考：https://open.work.weixin.qq.com/api/doc/90000/90135/91774
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BodyJson 根据MsgType的不同取值，解析内容不同，参考：https://open.work.weixin.qq.com/api/doc/90000/90135/91774
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getBodyJson() {
+        return this.BodyJson;
+    }
+
+    /**
+     * Set 根据MsgType的不同取值，解析内容不同，参考：https://open.work.weixin.qq.com/api/doc/90000/90135/91774
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BodyJson 根据MsgType的不同取值，解析内容不同，参考：https://open.work.weixin.qq.com/api/doc/90000/90135/91774
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBodyJson(String BodyJson) {
+        this.BodyJson = BodyJson;
     }
 
     public ChatArchivingDetail() {
@@ -276,6 +304,9 @@ https://open.work.weixin.qq.com/api/doc/90000/90135/91774
         if (source.Video != null) {
             this.Video = new ChatArchivingMsgTypeVideo(source.Video);
         }
+        if (source.BodyJson != null) {
+            this.BodyJson = new String(source.BodyJson);
+        }
     }
 
 
@@ -291,6 +322,7 @@ https://open.work.weixin.qq.com/api/doc/90000/90135/91774
         this.setParamSimple(map, prefix + "RoomId", this.RoomId);
         this.setParamSimple(map, prefix + "MsgTime", this.MsgTime);
         this.setParamObj(map, prefix + "Video.", this.Video);
+        this.setParamSimple(map, prefix + "BodyJson", this.BodyJson);
 
     }
 }

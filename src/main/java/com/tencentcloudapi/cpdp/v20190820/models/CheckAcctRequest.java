@@ -68,8 +68,8 @@ public class CheckAcctRequest extends AbstractModel{
     private String MidasSignature;
 
     /**
-    * 短信验证码
-BindType==2必填
+    * 短信验证码或指令号
+BindType==2必填，平安渠道必填
     */
     @SerializedName("CheckCode")
     @Expose
@@ -230,20 +230,20 @@ development: 开发环境
     }
 
     /**
-     * Get 短信验证码
-BindType==2必填 
-     * @return CheckCode 短信验证码
-BindType==2必填
+     * Get 短信验证码或指令号
+BindType==2必填，平安渠道必填 
+     * @return CheckCode 短信验证码或指令号
+BindType==2必填，平安渠道必填
      */
     public String getCheckCode() {
         return this.CheckCode;
     }
 
     /**
-     * Set 短信验证码
-BindType==2必填
-     * @param CheckCode 短信验证码
-BindType==2必填
+     * Set 短信验证码或指令号
+BindType==2必填，平安渠道必填
+     * @param CheckCode 短信验证码或指令号
+BindType==2必填，平安渠道必填
      */
     public void setCheckCode(String CheckCode) {
         this.CheckCode = CheckCode;

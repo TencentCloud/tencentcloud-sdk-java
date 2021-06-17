@@ -37,6 +37,13 @@ public class VideoEditTemplateMaterial extends AbstractModel{
     private SlotInfo [] SlotSet;
 
     /**
+    * 模板预览视频 URL 地址 。
+    */
+    @SerializedName("PreviewVideoUrl")
+    @Expose
+    private String PreviewVideoUrl;
+
+    /**
      * Get 视频编辑模板宽高比。 
      * @return AspectRatio 视频编辑模板宽高比。
      */
@@ -68,6 +75,22 @@ public class VideoEditTemplateMaterial extends AbstractModel{
         this.SlotSet = SlotSet;
     }
 
+    /**
+     * Get 模板预览视频 URL 地址 。 
+     * @return PreviewVideoUrl 模板预览视频 URL 地址 。
+     */
+    public String getPreviewVideoUrl() {
+        return this.PreviewVideoUrl;
+    }
+
+    /**
+     * Set 模板预览视频 URL 地址 。
+     * @param PreviewVideoUrl 模板预览视频 URL 地址 。
+     */
+    public void setPreviewVideoUrl(String PreviewVideoUrl) {
+        this.PreviewVideoUrl = PreviewVideoUrl;
+    }
+
     public VideoEditTemplateMaterial() {
     }
 
@@ -85,6 +108,9 @@ public class VideoEditTemplateMaterial extends AbstractModel{
                 this.SlotSet[i] = new SlotInfo(source.SlotSet[i]);
             }
         }
+        if (source.PreviewVideoUrl != null) {
+            this.PreviewVideoUrl = new String(source.PreviewVideoUrl);
+        }
     }
 
 
@@ -94,6 +120,7 @@ public class VideoEditTemplateMaterial extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AspectRatio", this.AspectRatio);
         this.setParamArrayObj(map, prefix + "SlotSet.", this.SlotSet);
+        this.setParamSimple(map, prefix + "PreviewVideoUrl", this.PreviewVideoUrl);
 
     }
 }

@@ -135,6 +135,20 @@ public class DescribeCrossBorderComplianceRequest extends AbstractModel{
     private String State;
 
     /**
+    * 偏移量
+    */
+    @SerializedName("Offset")
+    @Expose
+    private Long Offset;
+
+    /**
+    * 返回数量
+    */
+    @SerializedName("Limit")
+    @Expose
+    private Long Limit;
+
+    /**
      * Get （精确匹配）服务商，可选值：`UNICOM`。 
      * @return ServiceProvider （精确匹配）服务商，可选值：`UNICOM`。
      */
@@ -390,6 +404,38 @@ public class DescribeCrossBorderComplianceRequest extends AbstractModel{
         this.State = State;
     }
 
+    /**
+     * Get 偏移量 
+     * @return Offset 偏移量
+     */
+    public Long getOffset() {
+        return this.Offset;
+    }
+
+    /**
+     * Set 偏移量
+     * @param Offset 偏移量
+     */
+    public void setOffset(Long Offset) {
+        this.Offset = Offset;
+    }
+
+    /**
+     * Get 返回数量 
+     * @return Limit 返回数量
+     */
+    public Long getLimit() {
+        return this.Limit;
+    }
+
+    /**
+     * Set 返回数量
+     * @param Limit 返回数量
+     */
+    public void setLimit(Long Limit) {
+        this.Limit = Limit;
+    }
+
     public DescribeCrossBorderComplianceRequest() {
     }
 
@@ -446,6 +492,12 @@ public class DescribeCrossBorderComplianceRequest extends AbstractModel{
         if (source.State != null) {
             this.State = new String(source.State);
         }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
     }
 
 
@@ -469,6 +521,8 @@ public class DescribeCrossBorderComplianceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ServiceStartDate", this.ServiceStartDate);
         this.setParamSimple(map, prefix + "ServiceEndDate", this.ServiceEndDate);
         this.setParamSimple(map, prefix + "State", this.State);
+        this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamSimple(map, prefix + "Limit", this.Limit);
 
     }
 }

@@ -30,14 +30,14 @@ public class QueryExternalContactDetailRequest extends AbstractModel{
     private String ExternalUserId;
 
     /**
-    * 用于分页查询的游标，字符串类型，由上一次调用返回，首次调用可不填
+    * 用于分页查询的游标，字符串类型，由上一次调用返回，首次调用可不填。当客户在企业内的跟进人超过500人时需要使用cursor参数进行分页获取
     */
     @SerializedName("Cursor")
     @Expose
     private String Cursor;
 
     /**
-    * 返回的最大记录数，整型，最大值100，默认值50，超过最大值时取最大值
+    * 当前接口Limit不需要传参， 保留Limit只是为了保持向后兼容性， Limit默认值为500，当返回结果超过500时， NextCursor才有返回值
     */
     @SerializedName("Limit")
     @Expose
@@ -60,32 +60,32 @@ public class QueryExternalContactDetailRequest extends AbstractModel{
     }
 
     /**
-     * Get 用于分页查询的游标，字符串类型，由上一次调用返回，首次调用可不填 
-     * @return Cursor 用于分页查询的游标，字符串类型，由上一次调用返回，首次调用可不填
+     * Get 用于分页查询的游标，字符串类型，由上一次调用返回，首次调用可不填。当客户在企业内的跟进人超过500人时需要使用cursor参数进行分页获取 
+     * @return Cursor 用于分页查询的游标，字符串类型，由上一次调用返回，首次调用可不填。当客户在企业内的跟进人超过500人时需要使用cursor参数进行分页获取
      */
     public String getCursor() {
         return this.Cursor;
     }
 
     /**
-     * Set 用于分页查询的游标，字符串类型，由上一次调用返回，首次调用可不填
-     * @param Cursor 用于分页查询的游标，字符串类型，由上一次调用返回，首次调用可不填
+     * Set 用于分页查询的游标，字符串类型，由上一次调用返回，首次调用可不填。当客户在企业内的跟进人超过500人时需要使用cursor参数进行分页获取
+     * @param Cursor 用于分页查询的游标，字符串类型，由上一次调用返回，首次调用可不填。当客户在企业内的跟进人超过500人时需要使用cursor参数进行分页获取
      */
     public void setCursor(String Cursor) {
         this.Cursor = Cursor;
     }
 
     /**
-     * Get 返回的最大记录数，整型，最大值100，默认值50，超过最大值时取最大值 
-     * @return Limit 返回的最大记录数，整型，最大值100，默认值50，超过最大值时取最大值
+     * Get 当前接口Limit不需要传参， 保留Limit只是为了保持向后兼容性， Limit默认值为500，当返回结果超过500时， NextCursor才有返回值 
+     * @return Limit 当前接口Limit不需要传参， 保留Limit只是为了保持向后兼容性， Limit默认值为500，当返回结果超过500时， NextCursor才有返回值
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 返回的最大记录数，整型，最大值100，默认值50，超过最大值时取最大值
-     * @param Limit 返回的最大记录数，整型，最大值100，默认值50，超过最大值时取最大值
+     * Set 当前接口Limit不需要传参， 保留Limit只是为了保持向后兼容性， Limit默认值为500，当返回结果超过500时， NextCursor才有返回值
+     * @param Limit 当前接口Limit不需要传参， 保留Limit只是为了保持向后兼容性， Limit默认值为500，当返回结果超过500时， NextCursor才有返回值
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

@@ -40,6 +40,13 @@ WAKE_UP_STOPPED_SCALING：扩容优先开机。扩容时优先对已关机的实
     private String ScalingMode;
 
     /**
+    * 开启负载均衡不健康替换服务。若开启则对于负载均衡健康检查判断不健康的实例，弹性伸缩服务会进行替换。若不指定该参数，则默认为 False。
+    */
+    @SerializedName("ReplaceLoadBalancerUnhealthy")
+    @Expose
+    private Boolean ReplaceLoadBalancerUnhealthy;
+
+    /**
      * Get 开启监控不健康替换服务。若开启则对于云监控标记为不健康的实例，弹性伸缩服务会进行替换。若不指定该参数，则默认为 False。 
      * @return ReplaceMonitorUnhealthy 开启监控不健康替换服务。若开启则对于云监控标记为不健康的实例，弹性伸缩服务会进行替换。若不指定该参数，则默认为 False。
      */
@@ -83,6 +90,22 @@ WAKE_UP_STOPPED_SCALING：扩容优先开机。扩容时优先对已关机的实
         this.ScalingMode = ScalingMode;
     }
 
+    /**
+     * Get 开启负载均衡不健康替换服务。若开启则对于负载均衡健康检查判断不健康的实例，弹性伸缩服务会进行替换。若不指定该参数，则默认为 False。 
+     * @return ReplaceLoadBalancerUnhealthy 开启负载均衡不健康替换服务。若开启则对于负载均衡健康检查判断不健康的实例，弹性伸缩服务会进行替换。若不指定该参数，则默认为 False。
+     */
+    public Boolean getReplaceLoadBalancerUnhealthy() {
+        return this.ReplaceLoadBalancerUnhealthy;
+    }
+
+    /**
+     * Set 开启负载均衡不健康替换服务。若开启则对于负载均衡健康检查判断不健康的实例，弹性伸缩服务会进行替换。若不指定该参数，则默认为 False。
+     * @param ReplaceLoadBalancerUnhealthy 开启负载均衡不健康替换服务。若开启则对于负载均衡健康检查判断不健康的实例，弹性伸缩服务会进行替换。若不指定该参数，则默认为 False。
+     */
+    public void setReplaceLoadBalancerUnhealthy(Boolean ReplaceLoadBalancerUnhealthy) {
+        this.ReplaceLoadBalancerUnhealthy = ReplaceLoadBalancerUnhealthy;
+    }
+
     public ServiceSettings() {
     }
 
@@ -97,6 +120,9 @@ WAKE_UP_STOPPED_SCALING：扩容优先开机。扩容时优先对已关机的实
         if (source.ScalingMode != null) {
             this.ScalingMode = new String(source.ScalingMode);
         }
+        if (source.ReplaceLoadBalancerUnhealthy != null) {
+            this.ReplaceLoadBalancerUnhealthy = new Boolean(source.ReplaceLoadBalancerUnhealthy);
+        }
     }
 
 
@@ -106,6 +132,7 @@ WAKE_UP_STOPPED_SCALING：扩容优先开机。扩容时优先对已关机的实
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ReplaceMonitorUnhealthy", this.ReplaceMonitorUnhealthy);
         this.setParamSimple(map, prefix + "ScalingMode", this.ScalingMode);
+        this.setParamSimple(map, prefix + "ReplaceLoadBalancerUnhealthy", this.ReplaceLoadBalancerUnhealthy);
 
     }
 }

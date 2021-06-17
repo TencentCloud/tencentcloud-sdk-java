@@ -39,6 +39,26 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
+     *根据提供的 MessageID 确认指定 topic 中的消息
+     * @param req AcknowledgeMessageRequest
+     * @return AcknowledgeMessageResponse
+     * @throws TencentCloudSDKException
+     */
+    public AcknowledgeMessageResponse AcknowledgeMessage(AcknowledgeMessageRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AcknowledgeMessageResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<AcknowledgeMessageResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "AcknowledgeMessage");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *清空cmq消息队列中的消息
      * @param req ClearCmqQueueRequest
      * @return ClearCmqQueueResponse
@@ -811,6 +831,26 @@ public class TdmqClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<PublishCmqMsgResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "PublishCmqMsg");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *接收发送到指定 topic 中的消息
+     * @param req ReceiveMessageRequest
+     * @return ReceiveMessageResponse
+     * @throws TencentCloudSDKException
+     */
+    public ReceiveMessageResponse ReceiveMessage(ReceiveMessageRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ReceiveMessageResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ReceiveMessageResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ReceiveMessage");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

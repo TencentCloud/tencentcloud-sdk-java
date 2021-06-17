@@ -58,6 +58,13 @@ public class SearchStudioProductRequest extends AbstractModel{
     private String DevStatus;
 
     /**
+    * 产品ID
+    */
+    @SerializedName("ProductId")
+    @Expose
+    private String ProductId;
+
+    /**
      * Get 项目ID 
      * @return ProjectId 项目ID
      */
@@ -137,6 +144,22 @@ public class SearchStudioProductRequest extends AbstractModel{
         this.DevStatus = DevStatus;
     }
 
+    /**
+     * Get 产品ID 
+     * @return ProductId 产品ID
+     */
+    public String getProductId() {
+        return this.ProductId;
+    }
+
+    /**
+     * Set 产品ID
+     * @param ProductId 产品ID
+     */
+    public void setProductId(String ProductId) {
+        this.ProductId = ProductId;
+    }
+
     public SearchStudioProductRequest() {
     }
 
@@ -160,6 +183,9 @@ public class SearchStudioProductRequest extends AbstractModel{
         if (source.DevStatus != null) {
             this.DevStatus = new String(source.DevStatus);
         }
+        if (source.ProductId != null) {
+            this.ProductId = new String(source.ProductId);
+        }
     }
 
 
@@ -172,6 +198,7 @@ public class SearchStudioProductRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "DevStatus", this.DevStatus);
+        this.setParamSimple(map, prefix + "ProductId", this.ProductId);
 
     }
 }

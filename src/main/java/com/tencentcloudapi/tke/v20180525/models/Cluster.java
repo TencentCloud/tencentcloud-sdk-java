@@ -156,6 +156,14 @@ public class Cluster extends AbstractModel{
     private Boolean DeletionProtection;
 
     /**
+    * 集群是否开启第三方节点支持
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EnableExternalNode")
+    @Expose
+    private Boolean EnableExternalNode;
+
+    /**
      * Get 集群ID 
      * @return ClusterId 集群ID
      */
@@ -471,6 +479,26 @@ public class Cluster extends AbstractModel{
         this.DeletionProtection = DeletionProtection;
     }
 
+    /**
+     * Get 集群是否开启第三方节点支持
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EnableExternalNode 集群是否开启第三方节点支持
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getEnableExternalNode() {
+        return this.EnableExternalNode;
+    }
+
+    /**
+     * Set 集群是否开启第三方节点支持
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EnableExternalNode 集群是否开启第三方节点支持
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEnableExternalNode(Boolean EnableExternalNode) {
+        this.EnableExternalNode = EnableExternalNode;
+    }
+
     public Cluster() {
     }
 
@@ -536,6 +564,9 @@ public class Cluster extends AbstractModel{
         if (source.DeletionProtection != null) {
             this.DeletionProtection = new Boolean(source.DeletionProtection);
         }
+        if (source.EnableExternalNode != null) {
+            this.EnableExternalNode = new Boolean(source.EnableExternalNode);
+        }
     }
 
 
@@ -561,6 +592,7 @@ public class Cluster extends AbstractModel{
         this.setParamSimple(map, prefix + "ContainerRuntime", this.ContainerRuntime);
         this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
         this.setParamSimple(map, prefix + "DeletionProtection", this.DeletionProtection);
+        this.setParamSimple(map, prefix + "EnableExternalNode", this.EnableExternalNode);
 
     }
 }

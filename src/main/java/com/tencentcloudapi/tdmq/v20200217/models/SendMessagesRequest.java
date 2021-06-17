@@ -23,14 +23,7 @@ import java.util.HashMap;
 public class SendMessagesRequest extends AbstractModel{
 
     /**
-    * Token 是用来做鉴权使用的
-    */
-    @SerializedName("StringToken")
-    @Expose
-    private String StringToken;
-
-    /**
-    * 消息要发送的topic的名字
+    * 消息要发送的topic的名字, 这里尽量需要使用topic的全路径，如果不指定，默认使用的是：public/default
     */
     @SerializedName("Topic")
     @Expose
@@ -42,6 +35,13 @@ public class SendMessagesRequest extends AbstractModel{
     @SerializedName("Payload")
     @Expose
     private String Payload;
+
+    /**
+    * Token 是用来做鉴权使用的，可以不填，系统会自动获取
+    */
+    @SerializedName("StringToken")
+    @Expose
+    private String StringToken;
 
     /**
     * 设置 producer 的名字，要求全局唯一，用户不配置，系统会随机生成
@@ -65,32 +65,16 @@ public class SendMessagesRequest extends AbstractModel{
     private Long MaxPendingMessages;
 
     /**
-     * Get Token 是用来做鉴权使用的 
-     * @return StringToken Token 是用来做鉴权使用的
-     */
-    public String getStringToken() {
-        return this.StringToken;
-    }
-
-    /**
-     * Set Token 是用来做鉴权使用的
-     * @param StringToken Token 是用来做鉴权使用的
-     */
-    public void setStringToken(String StringToken) {
-        this.StringToken = StringToken;
-    }
-
-    /**
-     * Get 消息要发送的topic的名字 
-     * @return Topic 消息要发送的topic的名字
+     * Get 消息要发送的topic的名字, 这里尽量需要使用topic的全路径，如果不指定，默认使用的是：public/default 
+     * @return Topic 消息要发送的topic的名字, 这里尽量需要使用topic的全路径，如果不指定，默认使用的是：public/default
      */
     public String getTopic() {
         return this.Topic;
     }
 
     /**
-     * Set 消息要发送的topic的名字
-     * @param Topic 消息要发送的topic的名字
+     * Set 消息要发送的topic的名字, 这里尽量需要使用topic的全路径，如果不指定，默认使用的是：public/default
+     * @param Topic 消息要发送的topic的名字, 这里尽量需要使用topic的全路径，如果不指定，默认使用的是：public/default
      */
     public void setTopic(String Topic) {
         this.Topic = Topic;
@@ -110,6 +94,22 @@ public class SendMessagesRequest extends AbstractModel{
      */
     public void setPayload(String Payload) {
         this.Payload = Payload;
+    }
+
+    /**
+     * Get Token 是用来做鉴权使用的，可以不填，系统会自动获取 
+     * @return StringToken Token 是用来做鉴权使用的，可以不填，系统会自动获取
+     */
+    public String getStringToken() {
+        return this.StringToken;
+    }
+
+    /**
+     * Set Token 是用来做鉴权使用的，可以不填，系统会自动获取
+     * @param StringToken Token 是用来做鉴权使用的，可以不填，系统会自动获取
+     */
+    public void setStringToken(String StringToken) {
+        this.StringToken = StringToken;
     }
 
     /**
@@ -168,14 +168,14 @@ public class SendMessagesRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public SendMessagesRequest(SendMessagesRequest source) {
-        if (source.StringToken != null) {
-            this.StringToken = new String(source.StringToken);
-        }
         if (source.Topic != null) {
             this.Topic = new String(source.Topic);
         }
         if (source.Payload != null) {
             this.Payload = new String(source.Payload);
+        }
+        if (source.StringToken != null) {
+            this.StringToken = new String(source.StringToken);
         }
         if (source.ProducerName != null) {
             this.ProducerName = new String(source.ProducerName);
@@ -193,9 +193,9 @@ public class SendMessagesRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "StringToken", this.StringToken);
         this.setParamSimple(map, prefix + "Topic", this.Topic);
         this.setParamSimple(map, prefix + "Payload", this.Payload);
+        this.setParamSimple(map, prefix + "StringToken", this.StringToken);
         this.setParamSimple(map, prefix + "ProducerName", this.ProducerName);
         this.setParamSimple(map, prefix + "SendTimeout", this.SendTimeout);
         this.setParamSimple(map, prefix + "MaxPendingMessages", this.MaxPendingMessages);

@@ -77,7 +77,7 @@ Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00
     private String GroupId;
 
     /**
-    * 无法升级的人脸Id信息，文件格式
+    * 无法升级的人脸Id信息，文件格式为json。半小时有效
     */
     @SerializedName("FailedFacesUrl")
     @Expose
@@ -223,16 +223,16 @@ Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00
     }
 
     /**
-     * Get 无法升级的人脸Id信息，文件格式 
-     * @return FailedFacesUrl 无法升级的人脸Id信息，文件格式
+     * Get 无法升级的人脸Id信息，文件格式为json。半小时有效 
+     * @return FailedFacesUrl 无法升级的人脸Id信息，文件格式为json。半小时有效
      */
     public String getFailedFacesUrl() {
         return this.FailedFacesUrl;
     }
 
     /**
-     * Set 无法升级的人脸Id信息，文件格式
-     * @param FailedFacesUrl 无法升级的人脸Id信息，文件格式
+     * Set 无法升级的人脸Id信息，文件格式为json。半小时有效
+     * @param FailedFacesUrl 无法升级的人脸Id信息，文件格式为json。半小时有效
      */
     public void setFailedFacesUrl(String FailedFacesUrl) {
         this.FailedFacesUrl = FailedFacesUrl;

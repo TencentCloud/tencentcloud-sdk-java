@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class SendBatchMessagesRequest extends AbstractModel{
 
     /**
-    * Topic name
+    * 消息要发送的topic的名字, 这里尽量需要使用topic的全路径，如果不指定，默认使用的是：public/default
     */
     @SerializedName("Topic")
     @Expose
@@ -37,7 +37,7 @@ public class SendBatchMessagesRequest extends AbstractModel{
     private String Payload;
 
     /**
-    * String 类型的 token，用来校验客户端和服务端之间的连接
+    * String 类型的 token，可以不填，系统会自动获取
     */
     @SerializedName("StringToken")
     @Expose
@@ -86,16 +86,16 @@ public class SendBatchMessagesRequest extends AbstractModel{
     private Long BatchingMaxBytes;
 
     /**
-     * Get Topic name 
-     * @return Topic Topic name
+     * Get 消息要发送的topic的名字, 这里尽量需要使用topic的全路径，如果不指定，默认使用的是：public/default 
+     * @return Topic 消息要发送的topic的名字, 这里尽量需要使用topic的全路径，如果不指定，默认使用的是：public/default
      */
     public String getTopic() {
         return this.Topic;
     }
 
     /**
-     * Set Topic name
-     * @param Topic Topic name
+     * Set 消息要发送的topic的名字, 这里尽量需要使用topic的全路径，如果不指定，默认使用的是：public/default
+     * @param Topic 消息要发送的topic的名字, 这里尽量需要使用topic的全路径，如果不指定，默认使用的是：public/default
      */
     public void setTopic(String Topic) {
         this.Topic = Topic;
@@ -118,16 +118,16 @@ public class SendBatchMessagesRequest extends AbstractModel{
     }
 
     /**
-     * Get String 类型的 token，用来校验客户端和服务端之间的连接 
-     * @return StringToken String 类型的 token，用来校验客户端和服务端之间的连接
+     * Get String 类型的 token，可以不填，系统会自动获取 
+     * @return StringToken String 类型的 token，可以不填，系统会自动获取
      */
     public String getStringToken() {
         return this.StringToken;
     }
 
     /**
-     * Set String 类型的 token，用来校验客户端和服务端之间的连接
-     * @param StringToken String 类型的 token，用来校验客户端和服务端之间的连接
+     * Set String 类型的 token，可以不填，系统会自动获取
+     * @param StringToken String 类型的 token，可以不填，系统会自动获取
      */
     public void setStringToken(String StringToken) {
         this.StringToken = StringToken;

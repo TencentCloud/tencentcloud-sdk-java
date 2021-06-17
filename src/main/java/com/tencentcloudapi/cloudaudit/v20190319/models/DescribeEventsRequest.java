@@ -58,6 +58,13 @@ public class DescribeEventsRequest extends AbstractModel{
     private LookupAttribute [] LookupAttributes;
 
     /**
+    * 是否返回 IP 归属地（1 返回，0 不返回）
+    */
+    @SerializedName("IsReturnLocation")
+    @Expose
+    private Long IsReturnLocation;
+
+    /**
      * Get 起始时间戳（单位秒，不超过当前时间 90 天） 
      * @return StartTime 起始时间戳（单位秒，不超过当前时间 90 天）
      */
@@ -137,6 +144,22 @@ public class DescribeEventsRequest extends AbstractModel{
         this.LookupAttributes = LookupAttributes;
     }
 
+    /**
+     * Get 是否返回 IP 归属地（1 返回，0 不返回） 
+     * @return IsReturnLocation 是否返回 IP 归属地（1 返回，0 不返回）
+     */
+    public Long getIsReturnLocation() {
+        return this.IsReturnLocation;
+    }
+
+    /**
+     * Set 是否返回 IP 归属地（1 返回，0 不返回）
+     * @param IsReturnLocation 是否返回 IP 归属地（1 返回，0 不返回）
+     */
+    public void setIsReturnLocation(Long IsReturnLocation) {
+        this.IsReturnLocation = IsReturnLocation;
+    }
+
     public DescribeEventsRequest() {
     }
 
@@ -163,6 +186,9 @@ public class DescribeEventsRequest extends AbstractModel{
                 this.LookupAttributes[i] = new LookupAttribute(source.LookupAttributes[i]);
             }
         }
+        if (source.IsReturnLocation != null) {
+            this.IsReturnLocation = new Long(source.IsReturnLocation);
+        }
     }
 
 
@@ -175,6 +201,7 @@ public class DescribeEventsRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "NextToken", this.NextToken);
         this.setParamSimple(map, prefix + "MaxResults", this.MaxResults);
         this.setParamArrayObj(map, prefix + "LookupAttributes.", this.LookupAttributes);
+        this.setParamSimple(map, prefix + "IsReturnLocation", this.IsReturnLocation);
 
     }
 }

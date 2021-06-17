@@ -30,7 +30,7 @@ public class UpgradeGroupFaceModelVersionRequest extends AbstractModel{
     private String GroupId;
 
     /**
-    * 需要升级至的算法模型版本。默认为最新版本。
+    * 需要升级至的算法模型版本。默认为最新版本。不可逆向升级
     */
     @SerializedName("FaceModelVersion")
     @Expose
@@ -53,16 +53,16 @@ public class UpgradeGroupFaceModelVersionRequest extends AbstractModel{
     }
 
     /**
-     * Get 需要升级至的算法模型版本。默认为最新版本。 
-     * @return FaceModelVersion 需要升级至的算法模型版本。默认为最新版本。
+     * Get 需要升级至的算法模型版本。默认为最新版本。不可逆向升级 
+     * @return FaceModelVersion 需要升级至的算法模型版本。默认为最新版本。不可逆向升级
      */
     public String getFaceModelVersion() {
         return this.FaceModelVersion;
     }
 
     /**
-     * Set 需要升级至的算法模型版本。默认为最新版本。
-     * @param FaceModelVersion 需要升级至的算法模型版本。默认为最新版本。
+     * Set 需要升级至的算法模型版本。默认为最新版本。不可逆向升级
+     * @param FaceModelVersion 需要升级至的算法模型版本。默认为最新版本。不可逆向升级
      */
     public void setFaceModelVersion(String FaceModelVersion) {
         this.FaceModelVersion = FaceModelVersion;

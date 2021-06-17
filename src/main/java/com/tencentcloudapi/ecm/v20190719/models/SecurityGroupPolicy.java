@@ -94,6 +94,14 @@ public class SecurityGroupPolicy extends AbstractModel{
     private String ModifyTime;
 
     /**
+    * 网段或IPv6(互斥)。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Ipv6CidrBlock")
+    @Expose
+    private String Ipv6CidrBlock;
+
+    /**
      * Get 安全组规则索引号 
      * @return PolicyIndex 安全组规则索引号
      */
@@ -257,6 +265,26 @@ public class SecurityGroupPolicy extends AbstractModel{
         this.ModifyTime = ModifyTime;
     }
 
+    /**
+     * Get 网段或IPv6(互斥)。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Ipv6CidrBlock 网段或IPv6(互斥)。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getIpv6CidrBlock() {
+        return this.Ipv6CidrBlock;
+    }
+
+    /**
+     * Set 网段或IPv6(互斥)。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Ipv6CidrBlock 网段或IPv6(互斥)。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIpv6CidrBlock(String Ipv6CidrBlock) {
+        this.Ipv6CidrBlock = Ipv6CidrBlock;
+    }
+
     public SecurityGroupPolicy() {
     }
 
@@ -295,6 +323,9 @@ public class SecurityGroupPolicy extends AbstractModel{
         if (source.ModifyTime != null) {
             this.ModifyTime = new String(source.ModifyTime);
         }
+        if (source.Ipv6CidrBlock != null) {
+            this.Ipv6CidrBlock = new String(source.Ipv6CidrBlock);
+        }
     }
 
 
@@ -312,6 +343,7 @@ public class SecurityGroupPolicy extends AbstractModel{
         this.setParamSimple(map, prefix + "Action", this.Action);
         this.setParamSimple(map, prefix + "PolicyDescription", this.PolicyDescription);
         this.setParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
+        this.setParamSimple(map, prefix + "Ipv6CidrBlock", this.Ipv6CidrBlock);
 
     }
 }
