@@ -51,7 +51,7 @@ public class PhoneInfo extends AbstractModel{
     private Boolean DetectedStress;
 
     /**
-    * 当前音节
+    * 当前音节，当前评测识别的音素
     */
     @SerializedName("Phone")
     @Expose
@@ -77,6 +77,13 @@ public class PhoneInfo extends AbstractModel{
     @SerializedName("MatchTag")
     @Expose
     private Long MatchTag;
+
+    /**
+    * 参考字符，在单词诊断模式下，代表音素对应的原始文本
+    */
+    @SerializedName("ReferenceLetter")
+    @Expose
+    private String ReferenceLetter;
 
     /**
      * Get 当前音节语音起始时间点，单位为ms 
@@ -143,16 +150,16 @@ public class PhoneInfo extends AbstractModel{
     }
 
     /**
-     * Get 当前音节 
-     * @return Phone 当前音节
+     * Get 当前音节，当前评测识别的音素 
+     * @return Phone 当前音节，当前评测识别的音素
      */
     public String getPhone() {
         return this.Phone;
     }
 
     /**
-     * Set 当前音节
-     * @param Phone 当前音节
+     * Set 当前音节，当前评测识别的音素
+     * @param Phone 当前音节，当前评测识别的音素
      */
     public void setPhone(String Phone) {
         this.Phone = Phone;
@@ -206,6 +213,22 @@ public class PhoneInfo extends AbstractModel{
         this.MatchTag = MatchTag;
     }
 
+    /**
+     * Get 参考字符，在单词诊断模式下，代表音素对应的原始文本 
+     * @return ReferenceLetter 参考字符，在单词诊断模式下，代表音素对应的原始文本
+     */
+    public String getReferenceLetter() {
+        return this.ReferenceLetter;
+    }
+
+    /**
+     * Set 参考字符，在单词诊断模式下，代表音素对应的原始文本
+     * @param ReferenceLetter 参考字符，在单词诊断模式下，代表音素对应的原始文本
+     */
+    public void setReferenceLetter(String ReferenceLetter) {
+        this.ReferenceLetter = ReferenceLetter;
+    }
+
     public PhoneInfo() {
     }
 
@@ -238,6 +261,9 @@ public class PhoneInfo extends AbstractModel{
         if (source.MatchTag != null) {
             this.MatchTag = new Long(source.MatchTag);
         }
+        if (source.ReferenceLetter != null) {
+            this.ReferenceLetter = new String(source.ReferenceLetter);
+        }
     }
 
 
@@ -253,6 +279,7 @@ public class PhoneInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Stress", this.Stress);
         this.setParamSimple(map, prefix + "ReferencePhone", this.ReferencePhone);
         this.setParamSimple(map, prefix + "MatchTag", this.MatchTag);
+        this.setParamSimple(map, prefix + "ReferenceLetter", this.ReferenceLetter);
 
     }
 }

@@ -141,6 +141,13 @@ ipvs-bpf模式: 设置KubeProxyMode为kube-proxy-bpf
     private Long BasePodNumber;
 
     /**
+    * 启用 CiliumMode 的模式，空值表示不启用，“clusterIP” 表示启用 Cilium 支持 ClusterIP
+    */
+    @SerializedName("CiliumMode")
+    @Expose
+    private String CiliumMode;
+
+    /**
      * Get 是否启用IPVS 
      * @return IPVS 是否启用IPVS
      */
@@ -420,6 +427,22 @@ ipvs-bpf模式: 设置KubeProxyMode为kube-proxy-bpf
         this.BasePodNumber = BasePodNumber;
     }
 
+    /**
+     * Get 启用 CiliumMode 的模式，空值表示不启用，“clusterIP” 表示启用 Cilium 支持 ClusterIP 
+     * @return CiliumMode 启用 CiliumMode 的模式，空值表示不启用，“clusterIP” 表示启用 Cilium 支持 ClusterIP
+     */
+    public String getCiliumMode() {
+        return this.CiliumMode;
+    }
+
+    /**
+     * Set 启用 CiliumMode 的模式，空值表示不启用，“clusterIP” 表示启用 Cilium 支持 ClusterIP
+     * @param CiliumMode 启用 CiliumMode 的模式，空值表示不启用，“clusterIP” 表示启用 Cilium 支持 ClusterIP
+     */
+    public void setCiliumMode(String CiliumMode) {
+        this.CiliumMode = CiliumMode;
+    }
+
     public ClusterAdvancedSettings() {
     }
 
@@ -476,6 +499,9 @@ ipvs-bpf模式: 设置KubeProxyMode为kube-proxy-bpf
         if (source.BasePodNumber != null) {
             this.BasePodNumber = new Long(source.BasePodNumber);
         }
+        if (source.CiliumMode != null) {
+            this.CiliumMode = new String(source.CiliumMode);
+        }
     }
 
 
@@ -499,6 +525,7 @@ ipvs-bpf模式: 设置KubeProxyMode为kube-proxy-bpf
         this.setParamSimple(map, prefix + "RuntimeVersion", this.RuntimeVersion);
         this.setParamSimple(map, prefix + "EnableCustomizedPodCIDR", this.EnableCustomizedPodCIDR);
         this.setParamSimple(map, prefix + "BasePodNumber", this.BasePodNumber);
+        this.setParamSimple(map, prefix + "CiliumMode", this.CiliumMode);
 
     }
 }

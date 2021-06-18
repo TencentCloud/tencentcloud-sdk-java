@@ -699,6 +699,26 @@ public class TcbClient extends AbstractClient{
     }
 
     /**
+     *查询静态托管域名任务状态
+     * @param req DescribeHostingDomainTaskRequest
+     * @return DescribeHostingDomainTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeHostingDomainTaskResponse DescribeHostingDomainTask(DescribeHostingDomainTaskRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeHostingDomainTaskResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeHostingDomainTaskResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeHostingDomainTask");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询后付费资源免费量
      * @param req DescribePostpayFreeQuotasRequest
      * @return DescribePostpayFreeQuotasResponse

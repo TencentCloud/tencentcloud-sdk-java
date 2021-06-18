@@ -39,6 +39,26 @@ public class MarketClient extends AbstractClient{
     }
 
     /**
+     *计量商品用量提醒，用于服务商调用云服务，云服务向客户发送提醒信息
+     * @param req FlowProductRemindRequest
+     * @return FlowProductRemindResponse
+     * @throws TencentCloudSDKException
+     */
+    public FlowProductRemindResponse FlowProductRemind(FlowProductRemindRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<FlowProductRemindResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<FlowProductRemindResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "FlowProductRemind");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取分类名称
      * @param req GetCateTreeRequest
      * @return GetCateTreeResponse
@@ -61,7 +81,6 @@ public class MarketClient extends AbstractClient{
     /**
      *该接口可以根据InstanceId查询实例的api的使用情况。
 
-默认接口请求频率限制：20次/秒。
      * @param req GetUsagePlanUsageAmountRequest
      * @return GetUsagePlanUsageAmountResponse
      * @throws TencentCloudSDKException

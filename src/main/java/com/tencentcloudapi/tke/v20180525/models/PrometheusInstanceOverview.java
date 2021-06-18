@@ -68,6 +68,30 @@ running = 运行中
     private String COSBucket;
 
     /**
+    * grafana默认地址，如果开启外网访问得为域名，否则为内网地址
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("GrafanaURL")
+    @Expose
+    private String GrafanaURL;
+
+    /**
+    * 关联集群总数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BoundTotal")
+    @Expose
+    private Long BoundTotal;
+
+    /**
+    * 运行正常的集群数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BoundNormal")
+    @Expose
+    private Long BoundNormal;
+
+    /**
      * Get 实例id 
      * @return InstanceId 实例id
      */
@@ -175,6 +199,66 @@ running = 运行中
         this.COSBucket = COSBucket;
     }
 
+    /**
+     * Get grafana默认地址，如果开启外网访问得为域名，否则为内网地址
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return GrafanaURL grafana默认地址，如果开启外网访问得为域名，否则为内网地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getGrafanaURL() {
+        return this.GrafanaURL;
+    }
+
+    /**
+     * Set grafana默认地址，如果开启外网访问得为域名，否则为内网地址
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param GrafanaURL grafana默认地址，如果开启外网访问得为域名，否则为内网地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setGrafanaURL(String GrafanaURL) {
+        this.GrafanaURL = GrafanaURL;
+    }
+
+    /**
+     * Get 关联集群总数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BoundTotal 关联集群总数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getBoundTotal() {
+        return this.BoundTotal;
+    }
+
+    /**
+     * Set 关联集群总数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BoundTotal 关联集群总数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBoundTotal(Long BoundTotal) {
+        this.BoundTotal = BoundTotal;
+    }
+
+    /**
+     * Get 运行正常的集群数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BoundNormal 运行正常的集群数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getBoundNormal() {
+        return this.BoundNormal;
+    }
+
+    /**
+     * Set 运行正常的集群数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BoundNormal 运行正常的集群数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBoundNormal(Long BoundNormal) {
+        this.BoundNormal = BoundNormal;
+    }
+
     public PrometheusInstanceOverview() {
     }
 
@@ -201,6 +285,15 @@ running = 运行中
         if (source.COSBucket != null) {
             this.COSBucket = new String(source.COSBucket);
         }
+        if (source.GrafanaURL != null) {
+            this.GrafanaURL = new String(source.GrafanaURL);
+        }
+        if (source.BoundTotal != null) {
+            this.BoundTotal = new Long(source.BoundTotal);
+        }
+        if (source.BoundNormal != null) {
+            this.BoundNormal = new Long(source.BoundNormal);
+        }
     }
 
 
@@ -214,6 +307,9 @@ running = 运行中
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "COSBucket", this.COSBucket);
+        this.setParamSimple(map, prefix + "GrafanaURL", this.GrafanaURL);
+        this.setParamSimple(map, prefix + "BoundTotal", this.BoundTotal);
+        this.setParamSimple(map, prefix + "BoundNormal", this.BoundNormal);
 
     }
 }

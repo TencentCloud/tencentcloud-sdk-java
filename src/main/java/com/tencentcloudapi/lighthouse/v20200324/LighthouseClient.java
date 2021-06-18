@@ -658,6 +658,26 @@ public class LighthouseClient extends AbstractClient{
     }
 
     /**
+     *查询地域下可用区
+     * @param req DescribeZonesRequest
+     * @return DescribeZonesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeZonesResponse DescribeZones(DescribeZonesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeZonesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeZonesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeZones");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（DisassociateInstancesKeyPairs）用于解除实例与指定密钥对的绑定关系。
 
 * 只支持 [RUNNING, STOPPED] 状态的 LINUX_UNIX 操作系统的实例。处于 RUNNING 状态的实例会强制关机，然后解绑。
