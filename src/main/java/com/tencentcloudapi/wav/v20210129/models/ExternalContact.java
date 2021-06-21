@@ -59,6 +59,14 @@ public class ExternalContact extends AbstractModel{
     private String UnionId;
 
     /**
+    * 外部联系人联系电话
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Phone")
+    @Expose
+    private String Phone;
+
+    /**
      * Get 外部联系人的userId 
      * @return ExternalUserId 外部联系人的userId
      */
@@ -142,6 +150,26 @@ public class ExternalContact extends AbstractModel{
         this.UnionId = UnionId;
     }
 
+    /**
+     * Get 外部联系人联系电话
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Phone 外部联系人联系电话
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPhone() {
+        return this.Phone;
+    }
+
+    /**
+     * Set 外部联系人联系电话
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Phone 外部联系人联系电话
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPhone(String Phone) {
+        this.Phone = Phone;
+    }
+
     public ExternalContact() {
     }
 
@@ -165,6 +193,9 @@ public class ExternalContact extends AbstractModel{
         if (source.UnionId != null) {
             this.UnionId = new String(source.UnionId);
         }
+        if (source.Phone != null) {
+            this.Phone = new String(source.Phone);
+        }
     }
 
 
@@ -177,6 +208,7 @@ public class ExternalContact extends AbstractModel{
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "UnionId", this.UnionId);
+        this.setParamSimple(map, prefix + "Phone", this.Phone);
 
     }
 }

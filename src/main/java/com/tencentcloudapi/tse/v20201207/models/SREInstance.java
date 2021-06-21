@@ -119,6 +119,22 @@ public class SREInstance extends AbstractModel{
     private String Paymode;
 
     /**
+    * EKS集群的ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EKSClusterID")
+    @Expose
+    private String EKSClusterID;
+
+    /**
+    * 集群创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CreateTime")
+    @Expose
+    private String CreateTime;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -346,6 +362,46 @@ public class SREInstance extends AbstractModel{
         this.Paymode = Paymode;
     }
 
+    /**
+     * Get EKS集群的ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EKSClusterID EKS集群的ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getEKSClusterID() {
+        return this.EKSClusterID;
+    }
+
+    /**
+     * Set EKS集群的ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EKSClusterID EKS集群的ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEKSClusterID(String EKSClusterID) {
+        this.EKSClusterID = EKSClusterID;
+    }
+
+    /**
+     * Get 集群创建时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CreateTime 集群创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCreateTime() {
+        return this.CreateTime;
+    }
+
+    /**
+     * Set 集群创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CreateTime 集群创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCreateTime(String CreateTime) {
+        this.CreateTime = CreateTime;
+    }
+
     public SREInstance() {
     }
 
@@ -396,6 +452,12 @@ public class SREInstance extends AbstractModel{
         if (source.Paymode != null) {
             this.Paymode = new String(source.Paymode);
         }
+        if (source.EKSClusterID != null) {
+            this.EKSClusterID = new String(source.EKSClusterID);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
     }
 
 
@@ -416,6 +478,8 @@ public class SREInstance extends AbstractModel{
         this.setParamSimple(map, prefix + "StorageType", this.StorageType);
         this.setParamSimple(map, prefix + "StorageCapacity", this.StorageCapacity);
         this.setParamSimple(map, prefix + "Paymode", this.Paymode);
+        this.setParamSimple(map, prefix + "EKSClusterID", this.EKSClusterID);
+        this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
 
     }
 }

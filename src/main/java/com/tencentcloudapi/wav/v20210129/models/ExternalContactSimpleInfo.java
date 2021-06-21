@@ -37,6 +37,14 @@ public class ExternalContactSimpleInfo extends AbstractModel{
     private String UserId;
 
     /**
+    * 添加了此外部联系人的企业成员的姓名
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SalesName")
+    @Expose
+    private String SalesName;
+
+    /**
      * Get 外部联系人的userId 
      * @return ExternalUserId 外部联系人的userId
      */
@@ -68,6 +76,26 @@ public class ExternalContactSimpleInfo extends AbstractModel{
         this.UserId = UserId;
     }
 
+    /**
+     * Get 添加了此外部联系人的企业成员的姓名
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SalesName 添加了此外部联系人的企业成员的姓名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSalesName() {
+        return this.SalesName;
+    }
+
+    /**
+     * Set 添加了此外部联系人的企业成员的姓名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SalesName 添加了此外部联系人的企业成员的姓名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSalesName(String SalesName) {
+        this.SalesName = SalesName;
+    }
+
     public ExternalContactSimpleInfo() {
     }
 
@@ -82,6 +110,9 @@ public class ExternalContactSimpleInfo extends AbstractModel{
         if (source.UserId != null) {
             this.UserId = new String(source.UserId);
         }
+        if (source.SalesName != null) {
+            this.SalesName = new String(source.SalesName);
+        }
     }
 
 
@@ -91,6 +122,7 @@ public class ExternalContactSimpleInfo extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ExternalUserId", this.ExternalUserId);
         this.setParamSimple(map, prefix + "UserId", this.UserId);
+        this.setParamSimple(map, prefix + "SalesName", this.SalesName);
 
     }
 }

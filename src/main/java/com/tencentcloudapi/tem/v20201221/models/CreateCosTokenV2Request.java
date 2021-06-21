@@ -51,6 +51,13 @@ public class CreateCosTokenV2Request extends AbstractModel{
     private Long SourceChannel;
 
     /**
+    * 充当deployVersion入参
+    */
+    @SerializedName("TimeVersion")
+    @Expose
+    private String TimeVersion;
+
+    /**
      * Get 服务ID 
      * @return ServiceId 服务ID
      */
@@ -114,6 +121,22 @@ public class CreateCosTokenV2Request extends AbstractModel{
         this.SourceChannel = SourceChannel;
     }
 
+    /**
+     * Get 充当deployVersion入参 
+     * @return TimeVersion 充当deployVersion入参
+     */
+    public String getTimeVersion() {
+        return this.TimeVersion;
+    }
+
+    /**
+     * Set 充当deployVersion入参
+     * @param TimeVersion 充当deployVersion入参
+     */
+    public void setTimeVersion(String TimeVersion) {
+        this.TimeVersion = TimeVersion;
+    }
+
     public CreateCosTokenV2Request() {
     }
 
@@ -134,6 +157,9 @@ public class CreateCosTokenV2Request extends AbstractModel{
         if (source.SourceChannel != null) {
             this.SourceChannel = new Long(source.SourceChannel);
         }
+        if (source.TimeVersion != null) {
+            this.TimeVersion = new String(source.TimeVersion);
+        }
     }
 
 
@@ -145,6 +171,7 @@ public class CreateCosTokenV2Request extends AbstractModel{
         this.setParamSimple(map, prefix + "PkgName", this.PkgName);
         this.setParamSimple(map, prefix + "OptType", this.OptType);
         this.setParamSimple(map, prefix + "SourceChannel", this.SourceChannel);
+        this.setParamSimple(map, prefix + "TimeVersion", this.TimeVersion);
 
     }
 }

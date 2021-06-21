@@ -279,6 +279,26 @@ public class TemClient extends AbstractClient{
     }
 
     /**
+     *生成包预签名下载链接
+     * @param req GenerateDownloadUrlRequest
+     * @return GenerateDownloadUrlResponse
+     * @throws TencentCloudSDKException
+     */
+    public GenerateDownloadUrlResponse GenerateDownloadUrl(GenerateDownloadUrlRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GenerateDownloadUrlResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<GenerateDownloadUrlResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "GenerateDownloadUrl");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建或者更新 Ingress 规则
      * @param req ModifyIngressRequest
      * @return ModifyIngressResponse

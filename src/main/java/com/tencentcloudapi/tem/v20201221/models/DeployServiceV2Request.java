@@ -225,6 +225,13 @@ public class DeployServiceV2Request extends AbstractModel{
     private EksService EksService;
 
     /**
+    * 要回滚到的历史版本id
+    */
+    @SerializedName("VersionId")
+    @Expose
+    private String VersionId;
+
+    /**
      * Get 服务ID 
      * @return ServiceId 服务ID
      */
@@ -696,6 +703,22 @@ public class DeployServiceV2Request extends AbstractModel{
         this.EksService = EksService;
     }
 
+    /**
+     * Get 要回滚到的历史版本id 
+     * @return VersionId 要回滚到的历史版本id
+     */
+    public String getVersionId() {
+        return this.VersionId;
+    }
+
+    /**
+     * Set 要回滚到的历史版本id
+     * @param VersionId 要回滚到的历史版本id
+     */
+    public void setVersionId(String VersionId) {
+        this.VersionId = VersionId;
+    }
+
     public DeployServiceV2Request() {
     }
 
@@ -812,6 +835,9 @@ public class DeployServiceV2Request extends AbstractModel{
         if (source.EksService != null) {
             this.EksService = new EksService(source.EksService);
         }
+        if (source.VersionId != null) {
+            this.VersionId = new String(source.VersionId);
+        }
     }
 
 
@@ -847,6 +873,7 @@ public class DeployServiceV2Request extends AbstractModel{
         this.setParamSimple(map, prefix + "UseRegistryDefaultConfig", this.UseRegistryDefaultConfig);
         this.setParamArrayObj(map, prefix + "SettingConfs.", this.SettingConfs);
         this.setParamObj(map, prefix + "EksService.", this.EksService);
+        this.setParamSimple(map, prefix + "VersionId", this.VersionId);
 
     }
 }
