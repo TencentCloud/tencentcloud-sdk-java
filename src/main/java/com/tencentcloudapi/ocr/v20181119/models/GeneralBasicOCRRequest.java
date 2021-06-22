@@ -83,6 +83,13 @@ nor\hun\tha\lat\ara
     private Long PdfPageNumber;
 
     /**
+    * 是否返回单字信息，默认关
+    */
+    @SerializedName("IsWords")
+    @Expose
+    private Boolean IsWords;
+
+    /**
      * Get 图片/PDF的 Base64 值。
 要求图片/PDF经Base64编码后不超过 7M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP、PDF格式。
 图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。 
@@ -250,6 +257,22 @@ nor\hun\tha\lat\ara
         this.PdfPageNumber = PdfPageNumber;
     }
 
+    /**
+     * Get 是否返回单字信息，默认关 
+     * @return IsWords 是否返回单字信息，默认关
+     */
+    public Boolean getIsWords() {
+        return this.IsWords;
+    }
+
+    /**
+     * Set 是否返回单字信息，默认关
+     * @param IsWords 是否返回单字信息，默认关
+     */
+    public void setIsWords(Boolean IsWords) {
+        this.IsWords = IsWords;
+    }
+
     public GeneralBasicOCRRequest() {
     }
 
@@ -276,6 +299,9 @@ nor\hun\tha\lat\ara
         if (source.PdfPageNumber != null) {
             this.PdfPageNumber = new Long(source.PdfPageNumber);
         }
+        if (source.IsWords != null) {
+            this.IsWords = new Boolean(source.IsWords);
+        }
     }
 
 
@@ -289,6 +315,7 @@ nor\hun\tha\lat\ara
         this.setParamSimple(map, prefix + "LanguageType", this.LanguageType);
         this.setParamSimple(map, prefix + "IsPdf", this.IsPdf);
         this.setParamSimple(map, prefix + "PdfPageNumber", this.PdfPageNumber);
+        this.setParamSimple(map, prefix + "IsWords", this.IsWords);
 
     }
 }

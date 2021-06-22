@@ -24,6 +24,7 @@ public class AddSmsSignRequest extends AbstractModel{
 
     /**
     * 签名名称。
+注：不能重复申请已通过或待审核的签名。
     */
     @SerializedName("SignName")
     @Expose
@@ -100,8 +101,10 @@ public class AddSmsSignRequest extends AbstractModel{
     private String Remark;
 
     /**
-     * Get 签名名称。 
+     * Get 签名名称。
+注：不能重复申请已通过或待审核的签名。 
      * @return SignName 签名名称。
+注：不能重复申请已通过或待审核的签名。
      */
     public String getSignName() {
         return this.SignName;
@@ -109,7 +112,9 @@ public class AddSmsSignRequest extends AbstractModel{
 
     /**
      * Set 签名名称。
+注：不能重复申请已通过或待审核的签名。
      * @param SignName 签名名称。
+注：不能重复申请已通过或待审核的签名。
      */
     public void setSignName(String SignName) {
         this.SignName = SignName;

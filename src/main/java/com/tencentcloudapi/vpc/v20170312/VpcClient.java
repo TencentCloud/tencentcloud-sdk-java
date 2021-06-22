@@ -1347,6 +1347,26 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
+     *创建路由型VPN网关的目的路由
+     * @param req CreateVpnGatewayRoutesRequest
+     * @return CreateVpnGatewayRoutesResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateVpnGatewayRoutesResponse CreateVpnGatewayRoutes(CreateVpnGatewayRoutesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateVpnGatewayRoutesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateVpnGatewayRoutesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateVpnGatewayRoutes");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（DeleteAddressTemplate）用于删除IP地址模板
      * @param req DeleteAddressTemplateRequest
      * @return DeleteAddressTemplateResponse
@@ -1999,6 +2019,26 @@ public class VpcClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteVpnGatewayResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteVpnGateway");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DeleteVpnGatewayCcnRoutes）用于删除VPN网关路由
+     * @param req DeleteVpnGatewayRoutesRequest
+     * @return DeleteVpnGatewayRoutesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteVpnGatewayRoutesResponse DeleteVpnGatewayRoutes(DeleteVpnGatewayRoutesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteVpnGatewayRoutesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteVpnGatewayRoutesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteVpnGatewayRoutes");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -3316,6 +3356,26 @@ LimitTypes取值范围：
                 Type type = new TypeToken<JsonResponseModel<DescribeVpnGatewayCcnRoutesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeVpnGatewayCcnRoutes");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询路由型VPN网关的目的路由
+     * @param req DescribeVpnGatewayRoutesRequest
+     * @return DescribeVpnGatewayRoutesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVpnGatewayRoutesResponse DescribeVpnGatewayRoutes(DescribeVpnGatewayRoutesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeVpnGatewayRoutesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeVpnGatewayRoutesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeVpnGatewayRoutes");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -4770,6 +4830,26 @@ LimitTypes取值范围：
                 Type type = new TypeToken<JsonResponseModel<ModifyVpnGatewayCcnRoutesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyVpnGatewayCcnRoutes");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改VPN路由是否启用
+     * @param req ModifyVpnGatewayRoutesRequest
+     * @return ModifyVpnGatewayRoutesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyVpnGatewayRoutesResponse ModifyVpnGatewayRoutes(ModifyVpnGatewayRoutesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyVpnGatewayRoutesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyVpnGatewayRoutesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyVpnGatewayRoutes");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

@@ -112,6 +112,20 @@ public class BGPInstance extends AbstractModel{
     private String BoundStatus;
 
     /**
+    * 四层防护严格级别
+    */
+    @SerializedName("DDoSLevel")
+    @Expose
+    private String DDoSLevel;
+
+    /**
+    * CC防护开关
+    */
+    @SerializedName("CCEnable")
+    @Expose
+    private Long CCEnable;
+
+    /**
      * Get 资产实例的详细信息 
      * @return InstanceDetail 资产实例的详细信息
      */
@@ -335,6 +349,38 @@ public class BGPInstance extends AbstractModel{
         this.BoundStatus = BoundStatus;
     }
 
+    /**
+     * Get 四层防护严格级别 
+     * @return DDoSLevel 四层防护严格级别
+     */
+    public String getDDoSLevel() {
+        return this.DDoSLevel;
+    }
+
+    /**
+     * Set 四层防护严格级别
+     * @param DDoSLevel 四层防护严格级别
+     */
+    public void setDDoSLevel(String DDoSLevel) {
+        this.DDoSLevel = DDoSLevel;
+    }
+
+    /**
+     * Get CC防护开关 
+     * @return CCEnable CC防护开关
+     */
+    public Long getCCEnable() {
+        return this.CCEnable;
+    }
+
+    /**
+     * Set CC防护开关
+     * @param CCEnable CC防护开关
+     */
+    public void setCCEnable(Long CCEnable) {
+        this.CCEnable = CCEnable;
+    }
+
     public BGPInstance() {
     }
 
@@ -379,6 +425,12 @@ public class BGPInstance extends AbstractModel{
         if (source.BoundStatus != null) {
             this.BoundStatus = new String(source.BoundStatus);
         }
+        if (source.DDoSLevel != null) {
+            this.DDoSLevel = new String(source.DDoSLevel);
+        }
+        if (source.CCEnable != null) {
+            this.CCEnable = new Long(source.CCEnable);
+        }
     }
 
 
@@ -397,6 +449,8 @@ public class BGPInstance extends AbstractModel{
         this.setParamObj(map, prefix + "PackInfo.", this.PackInfo);
         this.setParamArrayObj(map, prefix + "EipProductInfos.", this.EipProductInfos);
         this.setParamSimple(map, prefix + "BoundStatus", this.BoundStatus);
+        this.setParamSimple(map, prefix + "DDoSLevel", this.DDoSLevel);
+        this.setParamSimple(map, prefix + "CCEnable", this.CCEnable);
 
     }
 }

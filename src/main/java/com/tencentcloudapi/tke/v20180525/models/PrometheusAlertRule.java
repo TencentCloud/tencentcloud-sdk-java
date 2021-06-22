@@ -66,6 +66,14 @@ public class PrometheusAlertRule extends AbstractModel{
     private String Describe;
 
     /**
+    * 参考prometheus rule中的annotations
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Annotations")
+    @Expose
+    private Label [] Annotations;
+
+    /**
      * Get 规则名称 
      * @return Name 规则名称
      */
@@ -165,6 +173,26 @@ public class PrometheusAlertRule extends AbstractModel{
         this.Describe = Describe;
     }
 
+    /**
+     * Get 参考prometheus rule中的annotations
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Annotations 参考prometheus rule中的annotations
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Label [] getAnnotations() {
+        return this.Annotations;
+    }
+
+    /**
+     * Set 参考prometheus rule中的annotations
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Annotations 参考prometheus rule中的annotations
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAnnotations(Label [] Annotations) {
+        this.Annotations = Annotations;
+    }
+
     public PrometheusAlertRule() {
     }
 
@@ -194,6 +222,12 @@ public class PrometheusAlertRule extends AbstractModel{
         if (source.Describe != null) {
             this.Describe = new String(source.Describe);
         }
+        if (source.Annotations != null) {
+            this.Annotations = new Label[source.Annotations.length];
+            for (int i = 0; i < source.Annotations.length; i++) {
+                this.Annotations[i] = new Label(source.Annotations[i]);
+            }
+        }
     }
 
 
@@ -207,6 +241,7 @@ public class PrometheusAlertRule extends AbstractModel{
         this.setParamSimple(map, prefix + "Template", this.Template);
         this.setParamSimple(map, prefix + "For", this.For);
         this.setParamSimple(map, prefix + "Describe", this.Describe);
+        this.setParamArrayObj(map, prefix + "Annotations.", this.Annotations);
 
     }
 }

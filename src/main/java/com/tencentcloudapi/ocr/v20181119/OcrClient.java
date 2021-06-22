@@ -101,6 +101,27 @@ public class OcrClient extends AbstractClient{
     }
 
     /**
+     *本接口支持银行回单全字段的识别，包括付款开户行、收款开户行、付款账号、收款账号、回单类型、回单编号、币种、流水号、凭证号码、交易机构、交易金额、手续费、日期等字段信息。
+           
+     * @param req BankSlipOCRRequest
+     * @return BankSlipOCRResponse
+     * @throws TencentCloudSDKException
+     */
+    public BankSlipOCRResponse BankSlipOCR(BankSlipOCRRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<BankSlipOCRResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<BankSlipOCRResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "BankSlipOCR");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口支持快速精准识别营业执照上的字段，包括统一社会信用代码、公司名称、经营场所、主体类型、法定代表人、注册资金、组成形式、成立日期、营业期限和经营范围等字段。
      * @param req BizLicenseOCRRequest
      * @return BizLicenseOCRResponse

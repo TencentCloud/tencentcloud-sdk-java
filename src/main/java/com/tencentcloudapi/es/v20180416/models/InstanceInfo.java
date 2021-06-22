@@ -419,6 +419,14 @@ public class InstanceInfo extends AbstractModel{
     private String KibanaConfig;
 
     /**
+    * Kibana节点信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("KibanaNodeInfo")
+    @Expose
+    private KibanaNodeInfo KibanaNodeInfo;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -1354,6 +1362,26 @@ public class InstanceInfo extends AbstractModel{
         this.KibanaConfig = KibanaConfig;
     }
 
+    /**
+     * Get Kibana节点信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return KibanaNodeInfo Kibana节点信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public KibanaNodeInfo getKibanaNodeInfo() {
+        return this.KibanaNodeInfo;
+    }
+
+    /**
+     * Set Kibana节点信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param KibanaNodeInfo Kibana节点信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setKibanaNodeInfo(KibanaNodeInfo KibanaNodeInfo) {
+        this.KibanaNodeInfo = KibanaNodeInfo;
+    }
+
     public InstanceInfo() {
     }
 
@@ -1533,6 +1561,9 @@ public class InstanceInfo extends AbstractModel{
         if (source.KibanaConfig != null) {
             this.KibanaConfig = new String(source.KibanaConfig);
         }
+        if (source.KibanaNodeInfo != null) {
+            this.KibanaNodeInfo = new KibanaNodeInfo(source.KibanaNodeInfo);
+        }
     }
 
 
@@ -1594,6 +1625,7 @@ public class InstanceInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "SecurityType", this.SecurityType);
         this.setParamSimple(map, prefix + "SceneType", this.SceneType);
         this.setParamSimple(map, prefix + "KibanaConfig", this.KibanaConfig);
+        this.setParamObj(map, prefix + "KibanaNodeInfo.", this.KibanaNodeInfo);
 
     }
 }

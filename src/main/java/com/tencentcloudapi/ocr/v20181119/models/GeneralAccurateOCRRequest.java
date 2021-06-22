@@ -41,6 +41,13 @@ public class GeneralAccurateOCRRequest extends AbstractModel{
     private String ImageUrl;
 
     /**
+    * 是否返回单字信息，默认关
+    */
+    @SerializedName("IsWords")
+    @Expose
+    private Boolean IsWords;
+
+    /**
      * Get 图片的 Base64 值。
 要求图片经Base64编码后不超过 7M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP格式。
 图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。 
@@ -88,6 +95,22 @@ public class GeneralAccurateOCRRequest extends AbstractModel{
         this.ImageUrl = ImageUrl;
     }
 
+    /**
+     * Get 是否返回单字信息，默认关 
+     * @return IsWords 是否返回单字信息，默认关
+     */
+    public Boolean getIsWords() {
+        return this.IsWords;
+    }
+
+    /**
+     * Set 是否返回单字信息，默认关
+     * @param IsWords 是否返回单字信息，默认关
+     */
+    public void setIsWords(Boolean IsWords) {
+        this.IsWords = IsWords;
+    }
+
     public GeneralAccurateOCRRequest() {
     }
 
@@ -102,6 +125,9 @@ public class GeneralAccurateOCRRequest extends AbstractModel{
         if (source.ImageUrl != null) {
             this.ImageUrl = new String(source.ImageUrl);
         }
+        if (source.IsWords != null) {
+            this.IsWords = new Boolean(source.IsWords);
+        }
     }
 
 
@@ -111,6 +137,7 @@ public class GeneralAccurateOCRRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ImageBase64", this.ImageBase64);
         this.setParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
+        this.setParamSimple(map, prefix + "IsWords", this.IsWords);
 
     }
 }

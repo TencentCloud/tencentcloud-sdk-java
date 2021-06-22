@@ -9,6 +9,9 @@ public enum WavErrorCode {
     // 令牌无效。
      AUTHFAILURE_MISSINGACCESSTOKEN("AuthFailure.MissingAccessToken"),
      
+    // 开放平台访问错误。
+     FAILEDOPERATION_OPENPLATFORMERROR("FailedOperation.OpenPlatformError"),
+     
     // 内部错误。
      INTERNALERROR("InternalError"),
      

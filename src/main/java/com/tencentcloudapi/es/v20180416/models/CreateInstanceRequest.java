@@ -30,7 +30,7 @@ public class CreateInstanceRequest extends AbstractModel{
     private String Zone;
 
     /**
-    * 实例版本（支持"5.6.4"、"6.4.3"、"6.8.2"、"7.5.1"）
+    * 实例版本（支持"5.6.4"、"6.4.3"、"6.8.2"、"7.5.1"、"7.10.1"）
     */
     @SerializedName("EsVersion")
     @Expose
@@ -227,6 +227,13 @@ public class CreateInstanceRequest extends AbstractModel{
     private Long SceneType;
 
     /**
+    * 可视化节点配置
+    */
+    @SerializedName("WebNodeTypeInfo")
+    @Expose
+    private WebNodeTypeInfo WebNodeTypeInfo;
+
+    /**
      * Get 可用区 
      * @return Zone 可用区
      */
@@ -243,16 +250,16 @@ public class CreateInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get 实例版本（支持"5.6.4"、"6.4.3"、"6.8.2"、"7.5.1"） 
-     * @return EsVersion 实例版本（支持"5.6.4"、"6.4.3"、"6.8.2"、"7.5.1"）
+     * Get 实例版本（支持"5.6.4"、"6.4.3"、"6.8.2"、"7.5.1"、"7.10.1"） 
+     * @return EsVersion 实例版本（支持"5.6.4"、"6.4.3"、"6.8.2"、"7.5.1"、"7.10.1"）
      */
     public String getEsVersion() {
         return this.EsVersion;
     }
 
     /**
-     * Set 实例版本（支持"5.6.4"、"6.4.3"、"6.8.2"、"7.5.1"）
-     * @param EsVersion 实例版本（支持"5.6.4"、"6.4.3"、"6.8.2"、"7.5.1"）
+     * Set 实例版本（支持"5.6.4"、"6.4.3"、"6.8.2"、"7.5.1"、"7.10.1"）
+     * @param EsVersion 实例版本（支持"5.6.4"、"6.4.3"、"6.8.2"、"7.5.1"、"7.10.1"）
      */
     public void setEsVersion(String EsVersion) {
         this.EsVersion = EsVersion;
@@ -706,6 +713,22 @@ public class CreateInstanceRequest extends AbstractModel{
         this.SceneType = SceneType;
     }
 
+    /**
+     * Get 可视化节点配置 
+     * @return WebNodeTypeInfo 可视化节点配置
+     */
+    public WebNodeTypeInfo getWebNodeTypeInfo() {
+        return this.WebNodeTypeInfo;
+    }
+
+    /**
+     * Set 可视化节点配置
+     * @param WebNodeTypeInfo 可视化节点配置
+     */
+    public void setWebNodeTypeInfo(WebNodeTypeInfo WebNodeTypeInfo) {
+        this.WebNodeTypeInfo = WebNodeTypeInfo;
+    }
+
     public CreateInstanceRequest() {
     }
 
@@ -810,6 +833,9 @@ public class CreateInstanceRequest extends AbstractModel{
         if (source.SceneType != null) {
             this.SceneType = new Long(source.SceneType);
         }
+        if (source.WebNodeTypeInfo != null) {
+            this.WebNodeTypeInfo = new WebNodeTypeInfo(source.WebNodeTypeInfo);
+        }
     }
 
 
@@ -845,6 +871,7 @@ public class CreateInstanceRequest extends AbstractModel{
         this.setParamArrayObj(map, prefix + "TagList.", this.TagList);
         this.setParamSimple(map, prefix + "BasicSecurityType", this.BasicSecurityType);
         this.setParamSimple(map, prefix + "SceneType", this.SceneType);
+        this.setParamObj(map, prefix + "WebNodeTypeInfo.", this.WebNodeTypeInfo);
 
     }
 }

@@ -45,6 +45,7 @@ public class OrganizationInfo extends AbstractModel{
 
     /**
     * 法人名称，如果SubMchName不是法人，需要另外送入法人信息（企业必输）
+<敏感信息>加密详见<a href="https://cloud.tencent.com/document/product/1122/48979" target="_blank">《商户端接口敏感信息加密说明》</a>
     */
     @SerializedName("LegalPersonName")
     @Expose
@@ -59,6 +60,7 @@ public class OrganizationInfo extends AbstractModel{
 
     /**
     * 法人证件号码，如果SubMchName不是法人，需要另外送入法人信息（企业必输）
+<敏感信息>加密详见<a href="https://cloud.tencent.com/document/product/1122/48979" target="_blank">《商户端接口敏感信息加密说明》</a>
     */
     @SerializedName("LegalPersonIdCode")
     @Expose
@@ -113,8 +115,10 @@ public class OrganizationInfo extends AbstractModel{
     }
 
     /**
-     * Get 法人名称，如果SubMchName不是法人，需要另外送入法人信息（企业必输） 
+     * Get 法人名称，如果SubMchName不是法人，需要另外送入法人信息（企业必输）
+<敏感信息>加密详见<a href="https://cloud.tencent.com/document/product/1122/48979" target="_blank">《商户端接口敏感信息加密说明》</a> 
      * @return LegalPersonName 法人名称，如果SubMchName不是法人，需要另外送入法人信息（企业必输）
+<敏感信息>加密详见<a href="https://cloud.tencent.com/document/product/1122/48979" target="_blank">《商户端接口敏感信息加密说明》</a>
      */
     public String getLegalPersonName() {
         return this.LegalPersonName;
@@ -122,7 +126,9 @@ public class OrganizationInfo extends AbstractModel{
 
     /**
      * Set 法人名称，如果SubMchName不是法人，需要另外送入法人信息（企业必输）
+<敏感信息>加密详见<a href="https://cloud.tencent.com/document/product/1122/48979" target="_blank">《商户端接口敏感信息加密说明》</a>
      * @param LegalPersonName 法人名称，如果SubMchName不是法人，需要另外送入法人信息（企业必输）
+<敏感信息>加密详见<a href="https://cloud.tencent.com/document/product/1122/48979" target="_blank">《商户端接口敏感信息加密说明》</a>
      */
     public void setLegalPersonName(String LegalPersonName) {
         this.LegalPersonName = LegalPersonName;
@@ -145,8 +151,10 @@ public class OrganizationInfo extends AbstractModel{
     }
 
     /**
-     * Get 法人证件号码，如果SubMchName不是法人，需要另外送入法人信息（企业必输） 
+     * Get 法人证件号码，如果SubMchName不是法人，需要另外送入法人信息（企业必输）
+<敏感信息>加密详见<a href="https://cloud.tencent.com/document/product/1122/48979" target="_blank">《商户端接口敏感信息加密说明》</a> 
      * @return LegalPersonIdCode 法人证件号码，如果SubMchName不是法人，需要另外送入法人信息（企业必输）
+<敏感信息>加密详见<a href="https://cloud.tencent.com/document/product/1122/48979" target="_blank">《商户端接口敏感信息加密说明》</a>
      */
     public String getLegalPersonIdCode() {
         return this.LegalPersonIdCode;
@@ -154,7 +162,9 @@ public class OrganizationInfo extends AbstractModel{
 
     /**
      * Set 法人证件号码，如果SubMchName不是法人，需要另外送入法人信息（企业必输）
+<敏感信息>加密详见<a href="https://cloud.tencent.com/document/product/1122/48979" target="_blank">《商户端接口敏感信息加密说明》</a>
      * @param LegalPersonIdCode 法人证件号码，如果SubMchName不是法人，需要另外送入法人信息（企业必输）
+<敏感信息>加密详见<a href="https://cloud.tencent.com/document/product/1122/48979" target="_blank">《商户端接口敏感信息加密说明》</a>
      */
     public void setLegalPersonIdCode(String LegalPersonIdCode) {
         this.LegalPersonIdCode = LegalPersonIdCode;

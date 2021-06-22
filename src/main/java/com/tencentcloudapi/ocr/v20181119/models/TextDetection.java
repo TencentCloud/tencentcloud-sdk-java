@@ -60,6 +60,20 @@ GeneralBasicOcr接口返回段落信息Parag，包含ParagNo。
     private ItemCoord ItemPolygon;
 
     /**
+    * 识别出来的单字信息包括单字（包括单字Character和单字置信度confidence）， 支持识别的接口：GeneralBasicOCR、GeneralAccurateOCR
+    */
+    @SerializedName("Words")
+    @Expose
+    private DetectedWords [] Words;
+
+    /**
+    * 单字在原图中的四点坐标， 支持识别的接口：GeneralBasicOCR、GeneralAccurateOCR
+    */
+    @SerializedName("WordCoordPoint")
+    @Expose
+    private DetectedWordCoordPoint [] WordCoordPoint;
+
+    /**
      * Get 识别出的文本行内容 
      * @return DetectedText 识别出的文本行内容
      */
@@ -147,6 +161,38 @@ GeneralBasicOcr接口返回段落信息Parag，包含ParagNo。
         this.ItemPolygon = ItemPolygon;
     }
 
+    /**
+     * Get 识别出来的单字信息包括单字（包括单字Character和单字置信度confidence）， 支持识别的接口：GeneralBasicOCR、GeneralAccurateOCR 
+     * @return Words 识别出来的单字信息包括单字（包括单字Character和单字置信度confidence）， 支持识别的接口：GeneralBasicOCR、GeneralAccurateOCR
+     */
+    public DetectedWords [] getWords() {
+        return this.Words;
+    }
+
+    /**
+     * Set 识别出来的单字信息包括单字（包括单字Character和单字置信度confidence）， 支持识别的接口：GeneralBasicOCR、GeneralAccurateOCR
+     * @param Words 识别出来的单字信息包括单字（包括单字Character和单字置信度confidence）， 支持识别的接口：GeneralBasicOCR、GeneralAccurateOCR
+     */
+    public void setWords(DetectedWords [] Words) {
+        this.Words = Words;
+    }
+
+    /**
+     * Get 单字在原图中的四点坐标， 支持识别的接口：GeneralBasicOCR、GeneralAccurateOCR 
+     * @return WordCoordPoint 单字在原图中的四点坐标， 支持识别的接口：GeneralBasicOCR、GeneralAccurateOCR
+     */
+    public DetectedWordCoordPoint [] getWordCoordPoint() {
+        return this.WordCoordPoint;
+    }
+
+    /**
+     * Set 单字在原图中的四点坐标， 支持识别的接口：GeneralBasicOCR、GeneralAccurateOCR
+     * @param WordCoordPoint 单字在原图中的四点坐标， 支持识别的接口：GeneralBasicOCR、GeneralAccurateOCR
+     */
+    public void setWordCoordPoint(DetectedWordCoordPoint [] WordCoordPoint) {
+        this.WordCoordPoint = WordCoordPoint;
+    }
+
     public TextDetection() {
     }
 
@@ -173,6 +219,18 @@ GeneralBasicOcr接口返回段落信息Parag，包含ParagNo。
         if (source.ItemPolygon != null) {
             this.ItemPolygon = new ItemCoord(source.ItemPolygon);
         }
+        if (source.Words != null) {
+            this.Words = new DetectedWords[source.Words.length];
+            for (int i = 0; i < source.Words.length; i++) {
+                this.Words[i] = new DetectedWords(source.Words[i]);
+            }
+        }
+        if (source.WordCoordPoint != null) {
+            this.WordCoordPoint = new DetectedWordCoordPoint[source.WordCoordPoint.length];
+            for (int i = 0; i < source.WordCoordPoint.length; i++) {
+                this.WordCoordPoint[i] = new DetectedWordCoordPoint(source.WordCoordPoint[i]);
+            }
+        }
     }
 
 
@@ -185,6 +243,8 @@ GeneralBasicOcr接口返回段落信息Parag，包含ParagNo。
         this.setParamArrayObj(map, prefix + "Polygon.", this.Polygon);
         this.setParamSimple(map, prefix + "AdvancedInfo", this.AdvancedInfo);
         this.setParamObj(map, prefix + "ItemPolygon.", this.ItemPolygon);
+        this.setParamArrayObj(map, prefix + "Words.", this.Words);
+        this.setParamArrayObj(map, prefix + "WordCoordPoint.", this.WordCoordPoint);
 
     }
 }

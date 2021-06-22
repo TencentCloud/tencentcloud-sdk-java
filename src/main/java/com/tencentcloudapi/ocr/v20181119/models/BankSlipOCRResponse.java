@@ -13,35 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.ame.v20190916.models;
+package com.tencentcloudapi.ocr.v20181119.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeKTVMusicDetailResponse extends AbstractModel{
+public class BankSlipOCRResponse extends AbstractModel{
 
     /**
-    * 歌曲基础信息
+    * 银行回单识别结果，具体内容请点击左侧链接。
     */
-    @SerializedName("KTVMusicBaseInfo")
+    @SerializedName("BankSlipInfos")
     @Expose
-    private KTVMusicBaseInfo KTVMusicBaseInfo;
+    private BankSlipInfo [] BankSlipInfos;
 
     /**
-    * 播放凭证
+    * 图片旋转角度（角度制），文本的水平方向为0°，顺时针为正，逆时针为负。
     */
-    @SerializedName("PlayToken")
+    @SerializedName("Angle")
     @Expose
-    private String PlayToken;
-
-    /**
-    * 歌词下载地址
-    */
-    @SerializedName("LyricsUrl")
-    @Expose
-    private String LyricsUrl;
+    private Float Angle;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -51,51 +44,35 @@ public class DescribeKTVMusicDetailResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 歌曲基础信息 
-     * @return KTVMusicBaseInfo 歌曲基础信息
+     * Get 银行回单识别结果，具体内容请点击左侧链接。 
+     * @return BankSlipInfos 银行回单识别结果，具体内容请点击左侧链接。
      */
-    public KTVMusicBaseInfo getKTVMusicBaseInfo() {
-        return this.KTVMusicBaseInfo;
+    public BankSlipInfo [] getBankSlipInfos() {
+        return this.BankSlipInfos;
     }
 
     /**
-     * Set 歌曲基础信息
-     * @param KTVMusicBaseInfo 歌曲基础信息
+     * Set 银行回单识别结果，具体内容请点击左侧链接。
+     * @param BankSlipInfos 银行回单识别结果，具体内容请点击左侧链接。
      */
-    public void setKTVMusicBaseInfo(KTVMusicBaseInfo KTVMusicBaseInfo) {
-        this.KTVMusicBaseInfo = KTVMusicBaseInfo;
+    public void setBankSlipInfos(BankSlipInfo [] BankSlipInfos) {
+        this.BankSlipInfos = BankSlipInfos;
     }
 
     /**
-     * Get 播放凭证 
-     * @return PlayToken 播放凭证
+     * Get 图片旋转角度（角度制），文本的水平方向为0°，顺时针为正，逆时针为负。 
+     * @return Angle 图片旋转角度（角度制），文本的水平方向为0°，顺时针为正，逆时针为负。
      */
-    public String getPlayToken() {
-        return this.PlayToken;
+    public Float getAngle() {
+        return this.Angle;
     }
 
     /**
-     * Set 播放凭证
-     * @param PlayToken 播放凭证
+     * Set 图片旋转角度（角度制），文本的水平方向为0°，顺时针为正，逆时针为负。
+     * @param Angle 图片旋转角度（角度制），文本的水平方向为0°，顺时针为正，逆时针为负。
      */
-    public void setPlayToken(String PlayToken) {
-        this.PlayToken = PlayToken;
-    }
-
-    /**
-     * Get 歌词下载地址 
-     * @return LyricsUrl 歌词下载地址
-     */
-    public String getLyricsUrl() {
-        return this.LyricsUrl;
-    }
-
-    /**
-     * Set 歌词下载地址
-     * @param LyricsUrl 歌词下载地址
-     */
-    public void setLyricsUrl(String LyricsUrl) {
-        this.LyricsUrl = LyricsUrl;
+    public void setAngle(Float Angle) {
+        this.Angle = Angle;
     }
 
     /**
@@ -114,22 +91,22 @@ public class DescribeKTVMusicDetailResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeKTVMusicDetailResponse() {
+    public BankSlipOCRResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeKTVMusicDetailResponse(DescribeKTVMusicDetailResponse source) {
-        if (source.KTVMusicBaseInfo != null) {
-            this.KTVMusicBaseInfo = new KTVMusicBaseInfo(source.KTVMusicBaseInfo);
+    public BankSlipOCRResponse(BankSlipOCRResponse source) {
+        if (source.BankSlipInfos != null) {
+            this.BankSlipInfos = new BankSlipInfo[source.BankSlipInfos.length];
+            for (int i = 0; i < source.BankSlipInfos.length; i++) {
+                this.BankSlipInfos[i] = new BankSlipInfo(source.BankSlipInfos[i]);
+            }
         }
-        if (source.PlayToken != null) {
-            this.PlayToken = new String(source.PlayToken);
-        }
-        if (source.LyricsUrl != null) {
-            this.LyricsUrl = new String(source.LyricsUrl);
+        if (source.Angle != null) {
+            this.Angle = new Float(source.Angle);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -141,9 +118,8 @@ public class DescribeKTVMusicDetailResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "KTVMusicBaseInfo.", this.KTVMusicBaseInfo);
-        this.setParamSimple(map, prefix + "PlayToken", this.PlayToken);
-        this.setParamSimple(map, prefix + "LyricsUrl", this.LyricsUrl);
+        this.setParamArrayObj(map, prefix + "BankSlipInfos.", this.BankSlipInfos);
+        this.setParamSimple(map, prefix + "Angle", this.Angle);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -333,6 +333,9 @@ public enum LiveErrorCode {
     // 外部地址无权限。
      INVALIDPARAMETER_TOURLNOPERMISSION("InvalidParameter.ToUrlNoPermission"),
      
+    // 域名解析不正确。
+     INVALIDPARAMETER_URLNOTSAFE("InvalidParameter.UrlNotSafe"),
+     
     // 参数取值错误。
      INVALIDPARAMETERVALUE("InvalidParameterValue"),
      

@@ -63,6 +63,9 @@ public enum MariadbErrorCode {
     // CAM鉴权请求失败。
      INTERNALERROR_CAMAUTHFAILED("InternalError.CamAuthFailed"),
      
+    // 检测vip状态失败。
+     INTERNALERROR_CHECKVIPSTATUSFAILED("InternalError.CheckVipStatusFailed"),
+     
     // COS地址配置错误。
      INTERNALERROR_COSCONFIGURATION("InternalError.CosConfiguration"),
      

@@ -27,6 +27,9 @@ public enum TatErrorCode {
     // Command 名称无效。
      INVALIDPARAMETERVALUE_INVALIDCOMMANDNAME("InvalidParameterValue.InvalidCommandName"),
      
+    // 命令内容无效。
+     INVALIDPARAMETERVALUE_INVALIDCONTENT("InvalidParameterValue.InvalidContent"),
+     
     // Filter 无效。
      INVALIDPARAMETERVALUE_INVALIDFILTER("InvalidParameterValue.InvalidFilter"),
      
@@ -74,6 +77,9 @@ public enum TatErrorCode {
      
     // 未启用自定义参数功能。
      INVALIDPARAMETERVALUE_SUPPORTPARAMETERSONLYIFENABLEPARAMETER("InvalidParameterValue.SupportParametersOnlyIfEnableParameter"),
+     
+    // 长度超过限制。
+     INVALIDPARAMETERVALUE_TOOLONG("InvalidParameterValue.TooLong"),
      
     // 缺少参数错误。
      MISSINGPARAMETER("MissingParameter"),

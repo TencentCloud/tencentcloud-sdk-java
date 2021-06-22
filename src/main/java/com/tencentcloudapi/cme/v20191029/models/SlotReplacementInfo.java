@@ -31,10 +31,11 @@ public class SlotReplacementInfo extends AbstractModel{
 
     /**
     * 替换类型，可取值有：
-<li> AUDIO :音频;</li>
-<li> VIDEO :视频;</li>
-<li> IMAGE :图片。</li>
-注意：这里必须保证替换的素材类型与模板轨道数据的素材类型一致。
+<li> AUDIO ：音频；</li>
+<li> VIDEO ：视频；</li>
+<li> IMAGE ：图片；</li>
+<li> TEXT ：文本。</li>
+注意：这里必须保证替换的素材类型与模板轨道数据的素材类型一致。如果替换的类型为Text,，则必须保证模板轨道数据中相应卡槽的位置标记的是文本。
     */
     @SerializedName("ReplacementType")
     @Expose
@@ -46,6 +47,13 @@ public class SlotReplacementInfo extends AbstractModel{
     @SerializedName("MediaReplacementInfo")
     @Expose
     private MediaReplacementInfo MediaReplacementInfo;
+
+    /**
+    * 文本替换信息，仅当要替换的卡槽类型为文本时有效。
+    */
+    @SerializedName("TextReplacementInfo")
+    @Expose
+    private TextReplacementInfo TextReplacementInfo;
 
     /**
      * Get 卡槽 Id。 
@@ -65,15 +73,17 @@ public class SlotReplacementInfo extends AbstractModel{
 
     /**
      * Get 替换类型，可取值有：
-<li> AUDIO :音频;</li>
-<li> VIDEO :视频;</li>
-<li> IMAGE :图片。</li>
-注意：这里必须保证替换的素材类型与模板轨道数据的素材类型一致。 
+<li> AUDIO ：音频；</li>
+<li> VIDEO ：视频；</li>
+<li> IMAGE ：图片；</li>
+<li> TEXT ：文本。</li>
+注意：这里必须保证替换的素材类型与模板轨道数据的素材类型一致。如果替换的类型为Text,，则必须保证模板轨道数据中相应卡槽的位置标记的是文本。 
      * @return ReplacementType 替换类型，可取值有：
-<li> AUDIO :音频;</li>
-<li> VIDEO :视频;</li>
-<li> IMAGE :图片。</li>
-注意：这里必须保证替换的素材类型与模板轨道数据的素材类型一致。
+<li> AUDIO ：音频；</li>
+<li> VIDEO ：视频；</li>
+<li> IMAGE ：图片；</li>
+<li> TEXT ：文本。</li>
+注意：这里必须保证替换的素材类型与模板轨道数据的素材类型一致。如果替换的类型为Text,，则必须保证模板轨道数据中相应卡槽的位置标记的是文本。
      */
     public String getReplacementType() {
         return this.ReplacementType;
@@ -81,15 +91,17 @@ public class SlotReplacementInfo extends AbstractModel{
 
     /**
      * Set 替换类型，可取值有：
-<li> AUDIO :音频;</li>
-<li> VIDEO :视频;</li>
-<li> IMAGE :图片。</li>
-注意：这里必须保证替换的素材类型与模板轨道数据的素材类型一致。
+<li> AUDIO ：音频；</li>
+<li> VIDEO ：视频；</li>
+<li> IMAGE ：图片；</li>
+<li> TEXT ：文本。</li>
+注意：这里必须保证替换的素材类型与模板轨道数据的素材类型一致。如果替换的类型为Text,，则必须保证模板轨道数据中相应卡槽的位置标记的是文本。
      * @param ReplacementType 替换类型，可取值有：
-<li> AUDIO :音频;</li>
-<li> VIDEO :视频;</li>
-<li> IMAGE :图片。</li>
-注意：这里必须保证替换的素材类型与模板轨道数据的素材类型一致。
+<li> AUDIO ：音频；</li>
+<li> VIDEO ：视频；</li>
+<li> IMAGE ：图片；</li>
+<li> TEXT ：文本。</li>
+注意：这里必须保证替换的素材类型与模板轨道数据的素材类型一致。如果替换的类型为Text,，则必须保证模板轨道数据中相应卡槽的位置标记的是文本。
      */
     public void setReplacementType(String ReplacementType) {
         this.ReplacementType = ReplacementType;
@@ -111,6 +123,22 @@ public class SlotReplacementInfo extends AbstractModel{
         this.MediaReplacementInfo = MediaReplacementInfo;
     }
 
+    /**
+     * Get 文本替换信息，仅当要替换的卡槽类型为文本时有效。 
+     * @return TextReplacementInfo 文本替换信息，仅当要替换的卡槽类型为文本时有效。
+     */
+    public TextReplacementInfo getTextReplacementInfo() {
+        return this.TextReplacementInfo;
+    }
+
+    /**
+     * Set 文本替换信息，仅当要替换的卡槽类型为文本时有效。
+     * @param TextReplacementInfo 文本替换信息，仅当要替换的卡槽类型为文本时有效。
+     */
+    public void setTextReplacementInfo(TextReplacementInfo TextReplacementInfo) {
+        this.TextReplacementInfo = TextReplacementInfo;
+    }
+
     public SlotReplacementInfo() {
     }
 
@@ -128,6 +156,9 @@ public class SlotReplacementInfo extends AbstractModel{
         if (source.MediaReplacementInfo != null) {
             this.MediaReplacementInfo = new MediaReplacementInfo(source.MediaReplacementInfo);
         }
+        if (source.TextReplacementInfo != null) {
+            this.TextReplacementInfo = new TextReplacementInfo(source.TextReplacementInfo);
+        }
     }
 
 
@@ -138,6 +169,7 @@ public class SlotReplacementInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Id", this.Id);
         this.setParamSimple(map, prefix + "ReplacementType", this.ReplacementType);
         this.setParamObj(map, prefix + "MediaReplacementInfo.", this.MediaReplacementInfo);
+        this.setParamObj(map, prefix + "TextReplacementInfo.", this.TextReplacementInfo);
 
     }
 }
