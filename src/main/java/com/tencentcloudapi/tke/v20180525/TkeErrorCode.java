@@ -96,6 +96,9 @@ public enum TkeErrorCode {
     // 连接用户Kubernetes集群失败。
      INTERNALERROR_KUBECLIENTCONNECTION("InternalError.KubeClientConnection"),
      
+    // 创建集群Client出错。
+     INTERNALERROR_KUBECLIENTCREATE("InternalError.KubeClientCreate"),
+     
     // KubernetesAPI错误。
      INTERNALERROR_KUBECOMMON("InternalError.KubeCommon"),
      

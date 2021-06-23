@@ -13,77 +13,74 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cdn.v20180606.models;
+package com.tencentcloudapi.tke.v20180525.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class EnableCachesRequest extends AbstractModel{
+public class ControllerStatus extends AbstractModel{
 
     /**
-    * 解封 URL 列表
+    * 控制器的名字
     */
-    @SerializedName("Urls")
+    @SerializedName("Name")
     @Expose
-    private String [] Urls;
+    private String Name;
 
     /**
-    * URL封禁日期
+    * 控制器是否开启
     */
-    @SerializedName("Date")
+    @SerializedName("Enabled")
     @Expose
-    private String Date;
+    private Boolean Enabled;
 
     /**
-     * Get 解封 URL 列表 
-     * @return Urls 解封 URL 列表
+     * Get 控制器的名字 
+     * @return Name 控制器的名字
      */
-    public String [] getUrls() {
-        return this.Urls;
+    public String getName() {
+        return this.Name;
     }
 
     /**
-     * Set 解封 URL 列表
-     * @param Urls 解封 URL 列表
+     * Set 控制器的名字
+     * @param Name 控制器的名字
      */
-    public void setUrls(String [] Urls) {
-        this.Urls = Urls;
+    public void setName(String Name) {
+        this.Name = Name;
     }
 
     /**
-     * Get URL封禁日期 
-     * @return Date URL封禁日期
+     * Get 控制器是否开启 
+     * @return Enabled 控制器是否开启
      */
-    public String getDate() {
-        return this.Date;
+    public Boolean getEnabled() {
+        return this.Enabled;
     }
 
     /**
-     * Set URL封禁日期
-     * @param Date URL封禁日期
+     * Set 控制器是否开启
+     * @param Enabled 控制器是否开启
      */
-    public void setDate(String Date) {
-        this.Date = Date;
+    public void setEnabled(Boolean Enabled) {
+        this.Enabled = Enabled;
     }
 
-    public EnableCachesRequest() {
+    public ControllerStatus() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public EnableCachesRequest(EnableCachesRequest source) {
-        if (source.Urls != null) {
-            this.Urls = new String[source.Urls.length];
-            for (int i = 0; i < source.Urls.length; i++) {
-                this.Urls[i] = new String(source.Urls[i]);
-            }
+    public ControllerStatus(ControllerStatus source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
         }
-        if (source.Date != null) {
-            this.Date = new String(source.Date);
+        if (source.Enabled != null) {
+            this.Enabled = new Boolean(source.Enabled);
         }
     }
 
@@ -92,8 +89,8 @@ public class EnableCachesRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArraySimple(map, prefix + "Urls.", this.Urls);
-        this.setParamSimple(map, prefix + "Date", this.Date);
+        this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "Enabled", this.Enabled);
 
     }
 }

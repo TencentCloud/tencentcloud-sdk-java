@@ -50,6 +50,13 @@ global: 全球节点
     private String Area;
 
     /**
+    * 是否以IP段的格式返回。
+    */
+    @SerializedName("Segment")
+    @Expose
+    private Boolean Segment;
+
+    /**
      * Get 加速域名 
      * @return Domain 加速域名
      */
@@ -121,6 +128,22 @@ global: 全球节点
         this.Area = Area;
     }
 
+    /**
+     * Get 是否以IP段的格式返回。 
+     * @return Segment 是否以IP段的格式返回。
+     */
+    public Boolean getSegment() {
+        return this.Segment;
+    }
+
+    /**
+     * Set 是否以IP段的格式返回。
+     * @param Segment 是否以IP段的格式返回。
+     */
+    public void setSegment(Boolean Segment) {
+        this.Segment = Segment;
+    }
+
     public DescribeIpStatusRequest() {
     }
 
@@ -138,6 +161,9 @@ global: 全球节点
         if (source.Area != null) {
             this.Area = new String(source.Area);
         }
+        if (source.Segment != null) {
+            this.Segment = new Boolean(source.Segment);
+        }
     }
 
 
@@ -148,6 +174,7 @@ global: 全球节点
         this.setParamSimple(map, prefix + "Domain", this.Domain);
         this.setParamSimple(map, prefix + "Layer", this.Layer);
         this.setParamSimple(map, prefix + "Area", this.Area);
+        this.setParamSimple(map, prefix + "Segment", this.Segment);
 
     }
 }

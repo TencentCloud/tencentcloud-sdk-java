@@ -30,7 +30,7 @@ public class DeleteLoadBalancerListenersRequest extends AbstractModel{
     private String LoadBalancerId;
 
     /**
-    * 指定删除的监听器ID数组，若不填则删除负载均衡的所有监听器。
+    * 指定删除的监听器ID数组，最大为20个。若不填则删除负载均衡的所有监听器。
     */
     @SerializedName("ListenerIds")
     @Expose
@@ -53,16 +53,16 @@ public class DeleteLoadBalancerListenersRequest extends AbstractModel{
     }
 
     /**
-     * Get 指定删除的监听器ID数组，若不填则删除负载均衡的所有监听器。 
-     * @return ListenerIds 指定删除的监听器ID数组，若不填则删除负载均衡的所有监听器。
+     * Get 指定删除的监听器ID数组，最大为20个。若不填则删除负载均衡的所有监听器。 
+     * @return ListenerIds 指定删除的监听器ID数组，最大为20个。若不填则删除负载均衡的所有监听器。
      */
     public String [] getListenerIds() {
         return this.ListenerIds;
     }
 
     /**
-     * Set 指定删除的监听器ID数组，若不填则删除负载均衡的所有监听器。
-     * @param ListenerIds 指定删除的监听器ID数组，若不填则删除负载均衡的所有监听器。
+     * Set 指定删除的监听器ID数组，最大为20个。若不填则删除负载均衡的所有监听器。
+     * @param ListenerIds 指定删除的监听器ID数组，最大为20个。若不填则删除负载均衡的所有监听器。
      */
     public void setListenerIds(String [] ListenerIds) {
         this.ListenerIds = ListenerIds;

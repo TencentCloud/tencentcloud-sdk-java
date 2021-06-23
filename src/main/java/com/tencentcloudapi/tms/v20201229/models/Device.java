@@ -23,161 +23,171 @@ import java.util.HashMap;
 public class Device extends AbstractModel{
 
     /**
-    * 用户IP
+    * 该字段表示业务用户对应设备的IP地址。<br>
+备注:目前仅支持IPv4地址记录，不支持IPv6地址记录。
     */
     @SerializedName("IP")
     @Expose
     private String IP;
 
     /**
-    * Mac地址
+    * 该字段表示业务用户对应的MAC地址，以方便设备识别与管理；其格式与取值与标准MAC地址一致。
     */
     @SerializedName("Mac")
     @Expose
     private String Mac;
 
     /**
-    * 设备指纹Token
+    * *内测中，敬请期待。*
     */
     @SerializedName("TokenId")
     @Expose
     private String TokenId;
 
     /**
-    * 设备指纹ID
+    * *内测中，敬请期待。*
     */
     @SerializedName("DeviceId")
     @Expose
     private String DeviceId;
 
     /**
-    * 设备序列号
+    * 该字段表示业务用户对应设备的**IMEI码**（国际移动设备识别码），该识别码可用于识别每一部独立的手机等移动通信设备，方便设备识别与管理。<br>备注：格式为**15-17位纯数字**。
     */
     @SerializedName("IMEI")
     @Expose
     private String IMEI;
 
     /**
-    * IOS设备，Identifier For Advertising（广告标识符）
+    * **iOS设备专用**，该字段表示业务用户对应的**IDFA**(广告标识符),这是由苹果公司提供的用于追踪用户的广告标识符，由一串16进制的32位数字和字母组成。<br>
+备注：苹果公司自2021年iOS14更新后允许用户手动关闭或者开启IDFA，故此字符串标记有效性可能有所降低。
     */
     @SerializedName("IDFA")
     @Expose
     private String IDFA;
 
     /**
-    * IOS设备，IDFV - Identifier For Vendor（应用开发商标识符）
+    * **iOS设备专用**，该字段表示业务用户对应的**IDFV**(应用开发商标识符),这是由苹果公司提供的用于标注应用开发商的标识符，由一串16进制的32位数字和字母组成，可被用于唯一标识设备。
     */
     @SerializedName("IDFV")
     @Expose
     private String IDFV;
 
     /**
-     * Get 用户IP 
-     * @return IP 用户IP
+     * Get 该字段表示业务用户对应设备的IP地址。<br>
+备注:目前仅支持IPv4地址记录，不支持IPv6地址记录。 
+     * @return IP 该字段表示业务用户对应设备的IP地址。<br>
+备注:目前仅支持IPv4地址记录，不支持IPv6地址记录。
      */
     public String getIP() {
         return this.IP;
     }
 
     /**
-     * Set 用户IP
-     * @param IP 用户IP
+     * Set 该字段表示业务用户对应设备的IP地址。<br>
+备注:目前仅支持IPv4地址记录，不支持IPv6地址记录。
+     * @param IP 该字段表示业务用户对应设备的IP地址。<br>
+备注:目前仅支持IPv4地址记录，不支持IPv6地址记录。
      */
     public void setIP(String IP) {
         this.IP = IP;
     }
 
     /**
-     * Get Mac地址 
-     * @return Mac Mac地址
+     * Get 该字段表示业务用户对应的MAC地址，以方便设备识别与管理；其格式与取值与标准MAC地址一致。 
+     * @return Mac 该字段表示业务用户对应的MAC地址，以方便设备识别与管理；其格式与取值与标准MAC地址一致。
      */
     public String getMac() {
         return this.Mac;
     }
 
     /**
-     * Set Mac地址
-     * @param Mac Mac地址
+     * Set 该字段表示业务用户对应的MAC地址，以方便设备识别与管理；其格式与取值与标准MAC地址一致。
+     * @param Mac 该字段表示业务用户对应的MAC地址，以方便设备识别与管理；其格式与取值与标准MAC地址一致。
      */
     public void setMac(String Mac) {
         this.Mac = Mac;
     }
 
     /**
-     * Get 设备指纹Token 
-     * @return TokenId 设备指纹Token
+     * Get *内测中，敬请期待。* 
+     * @return TokenId *内测中，敬请期待。*
      */
     public String getTokenId() {
         return this.TokenId;
     }
 
     /**
-     * Set 设备指纹Token
-     * @param TokenId 设备指纹Token
+     * Set *内测中，敬请期待。*
+     * @param TokenId *内测中，敬请期待。*
      */
     public void setTokenId(String TokenId) {
         this.TokenId = TokenId;
     }
 
     /**
-     * Get 设备指纹ID 
-     * @return DeviceId 设备指纹ID
+     * Get *内测中，敬请期待。* 
+     * @return DeviceId *内测中，敬请期待。*
      */
     public String getDeviceId() {
         return this.DeviceId;
     }
 
     /**
-     * Set 设备指纹ID
-     * @param DeviceId 设备指纹ID
+     * Set *内测中，敬请期待。*
+     * @param DeviceId *内测中，敬请期待。*
      */
     public void setDeviceId(String DeviceId) {
         this.DeviceId = DeviceId;
     }
 
     /**
-     * Get 设备序列号 
-     * @return IMEI 设备序列号
+     * Get 该字段表示业务用户对应设备的**IMEI码**（国际移动设备识别码），该识别码可用于识别每一部独立的手机等移动通信设备，方便设备识别与管理。<br>备注：格式为**15-17位纯数字**。 
+     * @return IMEI 该字段表示业务用户对应设备的**IMEI码**（国际移动设备识别码），该识别码可用于识别每一部独立的手机等移动通信设备，方便设备识别与管理。<br>备注：格式为**15-17位纯数字**。
      */
     public String getIMEI() {
         return this.IMEI;
     }
 
     /**
-     * Set 设备序列号
-     * @param IMEI 设备序列号
+     * Set 该字段表示业务用户对应设备的**IMEI码**（国际移动设备识别码），该识别码可用于识别每一部独立的手机等移动通信设备，方便设备识别与管理。<br>备注：格式为**15-17位纯数字**。
+     * @param IMEI 该字段表示业务用户对应设备的**IMEI码**（国际移动设备识别码），该识别码可用于识别每一部独立的手机等移动通信设备，方便设备识别与管理。<br>备注：格式为**15-17位纯数字**。
      */
     public void setIMEI(String IMEI) {
         this.IMEI = IMEI;
     }
 
     /**
-     * Get IOS设备，Identifier For Advertising（广告标识符） 
-     * @return IDFA IOS设备，Identifier For Advertising（广告标识符）
+     * Get **iOS设备专用**，该字段表示业务用户对应的**IDFA**(广告标识符),这是由苹果公司提供的用于追踪用户的广告标识符，由一串16进制的32位数字和字母组成。<br>
+备注：苹果公司自2021年iOS14更新后允许用户手动关闭或者开启IDFA，故此字符串标记有效性可能有所降低。 
+     * @return IDFA **iOS设备专用**，该字段表示业务用户对应的**IDFA**(广告标识符),这是由苹果公司提供的用于追踪用户的广告标识符，由一串16进制的32位数字和字母组成。<br>
+备注：苹果公司自2021年iOS14更新后允许用户手动关闭或者开启IDFA，故此字符串标记有效性可能有所降低。
      */
     public String getIDFA() {
         return this.IDFA;
     }
 
     /**
-     * Set IOS设备，Identifier For Advertising（广告标识符）
-     * @param IDFA IOS设备，Identifier For Advertising（广告标识符）
+     * Set **iOS设备专用**，该字段表示业务用户对应的**IDFA**(广告标识符),这是由苹果公司提供的用于追踪用户的广告标识符，由一串16进制的32位数字和字母组成。<br>
+备注：苹果公司自2021年iOS14更新后允许用户手动关闭或者开启IDFA，故此字符串标记有效性可能有所降低。
+     * @param IDFA **iOS设备专用**，该字段表示业务用户对应的**IDFA**(广告标识符),这是由苹果公司提供的用于追踪用户的广告标识符，由一串16进制的32位数字和字母组成。<br>
+备注：苹果公司自2021年iOS14更新后允许用户手动关闭或者开启IDFA，故此字符串标记有效性可能有所降低。
      */
     public void setIDFA(String IDFA) {
         this.IDFA = IDFA;
     }
 
     /**
-     * Get IOS设备，IDFV - Identifier For Vendor（应用开发商标识符） 
-     * @return IDFV IOS设备，IDFV - Identifier For Vendor（应用开发商标识符）
+     * Get **iOS设备专用**，该字段表示业务用户对应的**IDFV**(应用开发商标识符),这是由苹果公司提供的用于标注应用开发商的标识符，由一串16进制的32位数字和字母组成，可被用于唯一标识设备。 
+     * @return IDFV **iOS设备专用**，该字段表示业务用户对应的**IDFV**(应用开发商标识符),这是由苹果公司提供的用于标注应用开发商的标识符，由一串16进制的32位数字和字母组成，可被用于唯一标识设备。
      */
     public String getIDFV() {
         return this.IDFV;
     }
 
     /**
-     * Set IOS设备，IDFV - Identifier For Vendor（应用开发商标识符）
-     * @param IDFV IOS设备，IDFV - Identifier For Vendor（应用开发商标识符）
+     * Set **iOS设备专用**，该字段表示业务用户对应的**IDFV**(应用开发商标识符),这是由苹果公司提供的用于标注应用开发商的标识符，由一串16进制的32位数字和字母组成，可被用于唯一标识设备。
+     * @param IDFV **iOS设备专用**，该字段表示业务用户对应的**IDFV**(应用开发商标识符),这是由苹果公司提供的用于标注应用开发商的标识符，由一串16进制的32位数字和字母组成，可被用于唯一标识设备。
      */
     public void setIDFV(String IDFV) {
         this.IDFV = IDFV;

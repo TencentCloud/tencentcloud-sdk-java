@@ -23,120 +23,115 @@ import java.util.HashMap;
 public class ObjectDetail extends AbstractModel{
 
     /**
-    * 序号
+    * 该参数用于返回识别对象的ID以方便识别和区分。
     */
     @SerializedName("Id")
     @Expose
     private Long Id;
 
     /**
-    * 标签名称
+    * 该参数用于返回命中的实体标签。
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 标签值，
-当标签为二维码时，表示URL地址，如Name为QrCode时，Value为"http//abc.com/aaa"
+    * 该参数用于返回对应实体标签所对应的值或内容。如：当标签为*二维码(QrCode)*时，该字段为识别出的二维码对应的URL地址。
     */
     @SerializedName("Value")
     @Expose
     private String Value;
 
     /**
-    * 分数
+    * 该参数用于返回对应实体标签命中的分值，取值为**0-100**，如：*QrCode 99* 则代表相应识别内容命中二维码场景标签的概率非常高。
     */
     @SerializedName("Score")
     @Expose
     private Long Score;
 
     /**
-    * 检测框坐标
+    * 该字段用于返回实体检测框的坐标位置（左上角xy坐标、长宽、旋转角度）以方便快速定位实体的相关信息。
     */
     @SerializedName("Location")
     @Expose
     private Location Location;
 
     /**
-     * Get 序号 
-     * @return Id 序号
+     * Get 该参数用于返回识别对象的ID以方便识别和区分。 
+     * @return Id 该参数用于返回识别对象的ID以方便识别和区分。
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set 序号
-     * @param Id 序号
+     * Set 该参数用于返回识别对象的ID以方便识别和区分。
+     * @param Id 该参数用于返回识别对象的ID以方便识别和区分。
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 标签名称 
-     * @return Name 标签名称
+     * Get 该参数用于返回命中的实体标签。 
+     * @return Name 该参数用于返回命中的实体标签。
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 标签名称
-     * @param Name 标签名称
+     * Set 该参数用于返回命中的实体标签。
+     * @param Name 该参数用于返回命中的实体标签。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 标签值，
-当标签为二维码时，表示URL地址，如Name为QrCode时，Value为"http//abc.com/aaa" 
-     * @return Value 标签值，
-当标签为二维码时，表示URL地址，如Name为QrCode时，Value为"http//abc.com/aaa"
+     * Get 该参数用于返回对应实体标签所对应的值或内容。如：当标签为*二维码(QrCode)*时，该字段为识别出的二维码对应的URL地址。 
+     * @return Value 该参数用于返回对应实体标签所对应的值或内容。如：当标签为*二维码(QrCode)*时，该字段为识别出的二维码对应的URL地址。
      */
     public String getValue() {
         return this.Value;
     }
 
     /**
-     * Set 标签值，
-当标签为二维码时，表示URL地址，如Name为QrCode时，Value为"http//abc.com/aaa"
-     * @param Value 标签值，
-当标签为二维码时，表示URL地址，如Name为QrCode时，Value为"http//abc.com/aaa"
+     * Set 该参数用于返回对应实体标签所对应的值或内容。如：当标签为*二维码(QrCode)*时，该字段为识别出的二维码对应的URL地址。
+     * @param Value 该参数用于返回对应实体标签所对应的值或内容。如：当标签为*二维码(QrCode)*时，该字段为识别出的二维码对应的URL地址。
      */
     public void setValue(String Value) {
         this.Value = Value;
     }
 
     /**
-     * Get 分数 
-     * @return Score 分数
+     * Get 该参数用于返回对应实体标签命中的分值，取值为**0-100**，如：*QrCode 99* 则代表相应识别内容命中二维码场景标签的概率非常高。 
+     * @return Score 该参数用于返回对应实体标签命中的分值，取值为**0-100**，如：*QrCode 99* 则代表相应识别内容命中二维码场景标签的概率非常高。
      */
     public Long getScore() {
         return this.Score;
     }
 
     /**
-     * Set 分数
-     * @param Score 分数
+     * Set 该参数用于返回对应实体标签命中的分值，取值为**0-100**，如：*QrCode 99* 则代表相应识别内容命中二维码场景标签的概率非常高。
+     * @param Score 该参数用于返回对应实体标签命中的分值，取值为**0-100**，如：*QrCode 99* 则代表相应识别内容命中二维码场景标签的概率非常高。
      */
     public void setScore(Long Score) {
         this.Score = Score;
     }
 
     /**
-     * Get 检测框坐标 
-     * @return Location 检测框坐标
+     * Get 该字段用于返回实体检测框的坐标位置（左上角xy坐标、长宽、旋转角度）以方便快速定位实体的相关信息。 
+     * @return Location 该字段用于返回实体检测框的坐标位置（左上角xy坐标、长宽、旋转角度）以方便快速定位实体的相关信息。
      */
     public Location getLocation() {
         return this.Location;
     }
 
     /**
-     * Set 检测框坐标
-     * @param Location 检测框坐标
+     * Set 该字段用于返回实体检测框的坐标位置（左上角xy坐标、长宽、旋转角度）以方便快速定位实体的相关信息。
+     * @param Location 该字段用于返回实体检测框的坐标位置（左上角xy坐标、长宽、旋转角度）以方便快速定位实体的相关信息。
      */
     public void setLocation(Location Location) {
         this.Location = Location;

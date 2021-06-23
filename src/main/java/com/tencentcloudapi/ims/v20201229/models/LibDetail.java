@@ -23,21 +23,21 @@ import java.util.HashMap;
 public class LibDetail extends AbstractModel{
 
     /**
-    * 序号
+    * 该字段用于返回识别对象的ID以方便识别和区分。
     */
     @SerializedName("Id")
     @Expose
     private Long Id;
 
     /**
-    * 仅当Label为Custom自定义关键词时有效，表示自定义库id
+    * 该字段**仅当Label为Custom：自定义关键词时该参数有效**,用于返回自定义库的ID，以方便自定义库管理和配置。
     */
     @SerializedName("LibId")
     @Expose
     private String LibId;
 
     /**
-    * 仅当Label为Custom自定义关键词时有效，表示自定义库名称
+    * 该字段**仅当Label为Custom：自定义关键词时该参数有效**,用于返回自定义库的名称,以方便自定义库管理和配置。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LibName")
@@ -45,22 +45,21 @@ public class LibDetail extends AbstractModel{
     private String LibName;
 
     /**
-    * 图片ID
+    * 该字段用于返回识别图像对象的ID以方便文件管理。
     */
     @SerializedName("ImageId")
     @Expose
     private String ImageId;
 
     /**
-    * 恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义词库。
-以及其他其他令人反感、不安全或不适宜的内容类型。
+    * 该字段用于返回检测结果所对应的恶意标签。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告，**Custom**：自定义违规；以及其他令人反感、不安全或不适宜的内容类型。
     */
     @SerializedName("Label")
     @Expose
     private String Label;
 
     /**
-    * 自定义标签
+    * 该字段用于返回其他自定义标签以满足您的定制化场景需求，若无需求则可略过。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tag")
@@ -68,48 +67,48 @@ public class LibDetail extends AbstractModel{
     private String Tag;
 
     /**
-    * 命中的模型分值
+    * 该字段用于返回对应模型命中的分值，取值为**0-100**，如：*Porn 99* 则代表相应识别内容命中色情标签的分值为99。
     */
     @SerializedName("Score")
     @Expose
     private Long Score;
 
     /**
-     * Get 序号 
-     * @return Id 序号
+     * Get 该字段用于返回识别对象的ID以方便识别和区分。 
+     * @return Id 该字段用于返回识别对象的ID以方便识别和区分。
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set 序号
-     * @param Id 序号
+     * Set 该字段用于返回识别对象的ID以方便识别和区分。
+     * @param Id 该字段用于返回识别对象的ID以方便识别和区分。
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 仅当Label为Custom自定义关键词时有效，表示自定义库id 
-     * @return LibId 仅当Label为Custom自定义关键词时有效，表示自定义库id
+     * Get 该字段**仅当Label为Custom：自定义关键词时该参数有效**,用于返回自定义库的ID，以方便自定义库管理和配置。 
+     * @return LibId 该字段**仅当Label为Custom：自定义关键词时该参数有效**,用于返回自定义库的ID，以方便自定义库管理和配置。
      */
     public String getLibId() {
         return this.LibId;
     }
 
     /**
-     * Set 仅当Label为Custom自定义关键词时有效，表示自定义库id
-     * @param LibId 仅当Label为Custom自定义关键词时有效，表示自定义库id
+     * Set 该字段**仅当Label为Custom：自定义关键词时该参数有效**,用于返回自定义库的ID，以方便自定义库管理和配置。
+     * @param LibId 该字段**仅当Label为Custom：自定义关键词时该参数有效**,用于返回自定义库的ID，以方便自定义库管理和配置。
      */
     public void setLibId(String LibId) {
         this.LibId = LibId;
     }
 
     /**
-     * Get 仅当Label为Custom自定义关键词时有效，表示自定义库名称
+     * Get 该字段**仅当Label为Custom：自定义关键词时该参数有效**,用于返回自定义库的名称,以方便自定义库管理和配置。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LibName 仅当Label为Custom自定义关键词时有效，表示自定义库名称
+     * @return LibName 该字段**仅当Label为Custom：自定义关键词时该参数有效**,用于返回自定义库的名称,以方便自定义库管理和配置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLibName() {
@@ -117,9 +116,9 @@ public class LibDetail extends AbstractModel{
     }
 
     /**
-     * Set 仅当Label为Custom自定义关键词时有效，表示自定义库名称
+     * Set 该字段**仅当Label为Custom：自定义关键词时该参数有效**,用于返回自定义库的名称,以方便自定义库管理和配置。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LibName 仅当Label为Custom自定义关键词时有效，表示自定义库名称
+     * @param LibName 该字段**仅当Label为Custom：自定义关键词时该参数有效**,用于返回自定义库的名称,以方便自定义库管理和配置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLibName(String LibName) {
@@ -127,45 +126,41 @@ public class LibDetail extends AbstractModel{
     }
 
     /**
-     * Get 图片ID 
-     * @return ImageId 图片ID
+     * Get 该字段用于返回识别图像对象的ID以方便文件管理。 
+     * @return ImageId 该字段用于返回识别图像对象的ID以方便文件管理。
      */
     public String getImageId() {
         return this.ImageId;
     }
 
     /**
-     * Set 图片ID
-     * @param ImageId 图片ID
+     * Set 该字段用于返回识别图像对象的ID以方便文件管理。
+     * @param ImageId 该字段用于返回识别图像对象的ID以方便文件管理。
      */
     public void setImageId(String ImageId) {
         this.ImageId = ImageId;
     }
 
     /**
-     * Get 恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义词库。
-以及其他其他令人反感、不安全或不适宜的内容类型。 
-     * @return Label 恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义词库。
-以及其他其他令人反感、不安全或不适宜的内容类型。
+     * Get 该字段用于返回检测结果所对应的恶意标签。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告，**Custom**：自定义违规；以及其他令人反感、不安全或不适宜的内容类型。 
+     * @return Label 该字段用于返回检测结果所对应的恶意标签。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告，**Custom**：自定义违规；以及其他令人反感、不安全或不适宜的内容类型。
      */
     public String getLabel() {
         return this.Label;
     }
 
     /**
-     * Set 恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义词库。
-以及其他其他令人反感、不安全或不适宜的内容类型。
-     * @param Label 恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义词库。
-以及其他其他令人反感、不安全或不适宜的内容类型。
+     * Set 该字段用于返回检测结果所对应的恶意标签。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告，**Custom**：自定义违规；以及其他令人反感、不安全或不适宜的内容类型。
+     * @param Label 该字段用于返回检测结果所对应的恶意标签。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告，**Custom**：自定义违规；以及其他令人反感、不安全或不适宜的内容类型。
      */
     public void setLabel(String Label) {
         this.Label = Label;
     }
 
     /**
-     * Get 自定义标签
+     * Get 该字段用于返回其他自定义标签以满足您的定制化场景需求，若无需求则可略过。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Tag 自定义标签
+     * @return Tag 该字段用于返回其他自定义标签以满足您的定制化场景需求，若无需求则可略过。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTag() {
@@ -173,9 +168,9 @@ public class LibDetail extends AbstractModel{
     }
 
     /**
-     * Set 自定义标签
+     * Set 该字段用于返回其他自定义标签以满足您的定制化场景需求，若无需求则可略过。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Tag 自定义标签
+     * @param Tag 该字段用于返回其他自定义标签以满足您的定制化场景需求，若无需求则可略过。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTag(String Tag) {
@@ -183,16 +178,16 @@ public class LibDetail extends AbstractModel{
     }
 
     /**
-     * Get 命中的模型分值 
-     * @return Score 命中的模型分值
+     * Get 该字段用于返回对应模型命中的分值，取值为**0-100**，如：*Porn 99* 则代表相应识别内容命中色情标签的分值为99。 
+     * @return Score 该字段用于返回对应模型命中的分值，取值为**0-100**，如：*Porn 99* 则代表相应识别内容命中色情标签的分值为99。
      */
     public Long getScore() {
         return this.Score;
     }
 
     /**
-     * Set 命中的模型分值
-     * @param Score 命中的模型分值
+     * Set 该字段用于返回对应模型命中的分值，取值为**0-100**，如：*Porn 99* 则代表相应识别内容命中色情标签的分值为99。
+     * @param Score 该字段用于返回对应模型命中的分值，取值为**0-100**，如：*Porn 99* 则代表相应识别内容命中色情标签的分值为99。
      */
     public void setScore(Long Score) {
         this.Score = Score;

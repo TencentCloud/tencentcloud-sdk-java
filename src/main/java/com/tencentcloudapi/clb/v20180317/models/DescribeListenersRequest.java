@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class DescribeListenersRequest extends AbstractModel{
 
     /**
-    * 负载均衡实例ID。
+    * 负载均衡实例 ID。
     */
     @SerializedName("LoadBalancerId")
     @Expose
     private String LoadBalancerId;
 
     /**
-    * 要查询的负载均衡监听器ID数组。
+    * 要查询的负载均衡监听器 ID 数组，最大为100个。
     */
     @SerializedName("ListenerIds")
     @Expose
@@ -51,32 +51,32 @@ public class DescribeListenersRequest extends AbstractModel{
     private Long Port;
 
     /**
-     * Get 负载均衡实例ID。 
-     * @return LoadBalancerId 负载均衡实例ID。
+     * Get 负载均衡实例 ID。 
+     * @return LoadBalancerId 负载均衡实例 ID。
      */
     public String getLoadBalancerId() {
         return this.LoadBalancerId;
     }
 
     /**
-     * Set 负载均衡实例ID。
-     * @param LoadBalancerId 负载均衡实例ID。
+     * Set 负载均衡实例 ID。
+     * @param LoadBalancerId 负载均衡实例 ID。
      */
     public void setLoadBalancerId(String LoadBalancerId) {
         this.LoadBalancerId = LoadBalancerId;
     }
 
     /**
-     * Get 要查询的负载均衡监听器ID数组。 
-     * @return ListenerIds 要查询的负载均衡监听器ID数组。
+     * Get 要查询的负载均衡监听器 ID 数组，最大为100个。 
+     * @return ListenerIds 要查询的负载均衡监听器 ID 数组，最大为100个。
      */
     public String [] getListenerIds() {
         return this.ListenerIds;
     }
 
     /**
-     * Set 要查询的负载均衡监听器ID数组。
-     * @param ListenerIds 要查询的负载均衡监听器ID数组。
+     * Set 要查询的负载均衡监听器 ID 数组，最大为100个。
+     * @param ListenerIds 要查询的负载均衡监听器 ID 数组，最大为100个。
      */
     public void setListenerIds(String [] ListenerIds) {
         this.ListenerIds = ListenerIds;

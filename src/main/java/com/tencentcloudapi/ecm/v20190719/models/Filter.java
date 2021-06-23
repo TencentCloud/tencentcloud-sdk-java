@@ -23,49 +23,49 @@ import java.util.HashMap;
 public class Filter extends AbstractModel{
 
     /**
-    * 过滤字段名称
-    */
-    @SerializedName("Name")
-    @Expose
-    private String Name;
-
-    /**
-    * 过滤字段内容数组
+    * 一个或者多个过滤值。
     */
     @SerializedName("Values")
     @Expose
     private String [] Values;
 
     /**
-     * Get 过滤字段名称 
-     * @return Name 过滤字段名称
-     */
-    public String getName() {
-        return this.Name;
-    }
+    * 过滤键的名称。
+    */
+    @SerializedName("Name")
+    @Expose
+    private String Name;
 
     /**
-     * Set 过滤字段名称
-     * @param Name 过滤字段名称
-     */
-    public void setName(String Name) {
-        this.Name = Name;
-    }
-
-    /**
-     * Get 过滤字段内容数组 
-     * @return Values 过滤字段内容数组
+     * Get 一个或者多个过滤值。 
+     * @return Values 一个或者多个过滤值。
      */
     public String [] getValues() {
         return this.Values;
     }
 
     /**
-     * Set 过滤字段内容数组
-     * @param Values 过滤字段内容数组
+     * Set 一个或者多个过滤值。
+     * @param Values 一个或者多个过滤值。
      */
     public void setValues(String [] Values) {
         this.Values = Values;
+    }
+
+    /**
+     * Get 过滤键的名称。 
+     * @return Name 过滤键的名称。
+     */
+    public String getName() {
+        return this.Name;
+    }
+
+    /**
+     * Set 过滤键的名称。
+     * @param Name 过滤键的名称。
+     */
+    public void setName(String Name) {
+        this.Name = Name;
     }
 
     public Filter() {
@@ -76,14 +76,14 @@ public class Filter extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public Filter(Filter source) {
-        if (source.Name != null) {
-            this.Name = new String(source.Name);
-        }
         if (source.Values != null) {
             this.Values = new String[source.Values.length];
             for (int i = 0; i < source.Values.length; i++) {
                 this.Values[i] = new String(source.Values[i]);
             }
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
         }
     }
 
@@ -92,8 +92,8 @@ public class Filter extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamArraySimple(map, prefix + "Values.", this.Values);
+        this.setParamSimple(map, prefix + "Name", this.Name);
 
     }
 }

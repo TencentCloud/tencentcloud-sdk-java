@@ -679,6 +679,26 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *用于查询Kubernetes的各个原生控制器是否开启
+     * @param req DescribeClusterControllersRequest
+     * @return DescribeClusterControllersResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeClusterControllersResponse DescribeClusterControllers(DescribeClusterControllersRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeClusterControllersResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeClusterControllersResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeClusterControllers");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询集群访问端口状态(独立集群开启内网/外网访问，托管集群支持开启内网访问)
      * @param req DescribeClusterEndpointStatusRequest
      * @return DescribeClusterEndpointStatusResponse

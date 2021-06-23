@@ -139,7 +139,9 @@ public class CccClient extends AbstractClient{
     }
 
     /**
-     *获取坐席用户列表（废弃）
+     *废弃接口下架
+
+获取坐席用户列表（废弃）
      * @param req DescribeSeatUserListRequest
      * @return DescribeSeatUserListResponse
      * @throws TencentCloudSDKException

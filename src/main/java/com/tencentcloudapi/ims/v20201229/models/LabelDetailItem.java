@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class LabelDetailItem extends AbstractModel{
 
     /**
-    * 序号
+    * 该字段用于返回识别对象的ID以方便识别和区分。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Id")
@@ -31,7 +31,7 @@ public class LabelDetailItem extends AbstractModel{
     private Long Id;
 
     /**
-    * 子标签名称
+    * 该字段用于返回识命中的子标签名称。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
@@ -39,7 +39,7 @@ public class LabelDetailItem extends AbstractModel{
     private String Name;
 
     /**
-    * 子标签分数
+    * 该字段用于返回对应子标签命中的分值，取值为**0-100**，如：*Porn-SexBehavior 99* 则代表相应识别内容命中色情-性行为标签的分值为99。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Score")
@@ -47,9 +47,9 @@ public class LabelDetailItem extends AbstractModel{
     private Long Score;
 
     /**
-     * Get 序号
+     * Get 该字段用于返回识别对象的ID以方便识别和区分。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Id 序号
+     * @return Id 该字段用于返回识别对象的ID以方便识别和区分。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getId() {
@@ -57,9 +57,9 @@ public class LabelDetailItem extends AbstractModel{
     }
 
     /**
-     * Set 序号
+     * Set 该字段用于返回识别对象的ID以方便识别和区分。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Id 序号
+     * @param Id 该字段用于返回识别对象的ID以方便识别和区分。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setId(Long Id) {
@@ -67,9 +67,9 @@ public class LabelDetailItem extends AbstractModel{
     }
 
     /**
-     * Get 子标签名称
+     * Get 该字段用于返回识命中的子标签名称。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Name 子标签名称
+     * @return Name 该字段用于返回识命中的子标签名称。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
@@ -77,9 +77,9 @@ public class LabelDetailItem extends AbstractModel{
     }
 
     /**
-     * Set 子标签名称
+     * Set 该字段用于返回识命中的子标签名称。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Name 子标签名称
+     * @param Name 该字段用于返回识命中的子标签名称。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
@@ -87,9 +87,9 @@ public class LabelDetailItem extends AbstractModel{
     }
 
     /**
-     * Get 子标签分数
+     * Get 该字段用于返回对应子标签命中的分值，取值为**0-100**，如：*Porn-SexBehavior 99* 则代表相应识别内容命中色情-性行为标签的分值为99。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Score 子标签分数
+     * @return Score 该字段用于返回对应子标签命中的分值，取值为**0-100**，如：*Porn-SexBehavior 99* 则代表相应识别内容命中色情-性行为标签的分值为99。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getScore() {
@@ -97,9 +97,9 @@ public class LabelDetailItem extends AbstractModel{
     }
 
     /**
-     * Set 子标签分数
+     * Set 该字段用于返回对应子标签命中的分值，取值为**0-100**，如：*Porn-SexBehavior 99* 则代表相应识别内容命中色情-性行为标签的分值为99。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Score 子标签分数
+     * @param Score 该字段用于返回对应子标签命中的分值，取值为**0-100**，如：*Porn-SexBehavior 99* 则代表相应识别内容命中色情-性行为标签的分值为99。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScore(Long Score) {

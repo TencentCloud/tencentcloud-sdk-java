@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class DescribeTargetsRequest extends AbstractModel{
 
     /**
-    * 负载均衡实例ID。
+    * 负载均衡实例 ID。
     */
     @SerializedName("LoadBalancerId")
     @Expose
     private String LoadBalancerId;
 
     /**
-    * 监听器ID列表。
+    * 监听器 ID 列表。ID 数量上限为20个。
     */
     @SerializedName("ListenerIds")
     @Expose
@@ -51,32 +51,32 @@ public class DescribeTargetsRequest extends AbstractModel{
     private Long Port;
 
     /**
-     * Get 负载均衡实例ID。 
-     * @return LoadBalancerId 负载均衡实例ID。
+     * Get 负载均衡实例 ID。 
+     * @return LoadBalancerId 负载均衡实例 ID。
      */
     public String getLoadBalancerId() {
         return this.LoadBalancerId;
     }
 
     /**
-     * Set 负载均衡实例ID。
-     * @param LoadBalancerId 负载均衡实例ID。
+     * Set 负载均衡实例 ID。
+     * @param LoadBalancerId 负载均衡实例 ID。
      */
     public void setLoadBalancerId(String LoadBalancerId) {
         this.LoadBalancerId = LoadBalancerId;
     }
 
     /**
-     * Get 监听器ID列表。 
-     * @return ListenerIds 监听器ID列表。
+     * Get 监听器 ID 列表。ID 数量上限为20个。 
+     * @return ListenerIds 监听器 ID 列表。ID 数量上限为20个。
      */
     public String [] getListenerIds() {
         return this.ListenerIds;
     }
 
     /**
-     * Set 监听器ID列表。
-     * @param ListenerIds 监听器ID列表。
+     * Set 监听器 ID 列表。ID 数量上限为20个。
+     * @param ListenerIds 监听器 ID 列表。ID 数量上限为20个。
      */
     public void setListenerIds(String [] ListenerIds) {
         this.ListenerIds = ListenerIds;

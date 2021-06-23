@@ -23,44 +23,42 @@ import java.util.HashMap;
 public class LabelResult extends AbstractModel{
 
     /**
-    * 场景识别结果
+    * 该字段用于返回模型识别出的场景结果，如广告、色情、有害内容等场景。
     */
     @SerializedName("Scene")
     @Expose
     private String Scene;
 
     /**
-    * 建议您拿到判断结果后的执行操作。
-建议值，Block：建议屏蔽，Review：建议复审，Pass：建议通过
+    * 该字段用于返回针对当前恶意标签的后续操作建议。当您获取到判定结果后，返回值表示系统推荐的后续操作；建议您按照业务所需，对不同违规类型与建议值进行处理。<br>返回值：**Block**：建议屏蔽，**Review** ：建议人工复审，**Pass**：建议通过
     */
     @SerializedName("Suggestion")
     @Expose
     private String Suggestion;
 
     /**
-    * 恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义图片。
-以及其他令人反感、不安全或不适宜的内容类型。
+    * 该字段用于返回检测结果所对应的恶意标签。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告，**Custom**：自定义违规；以及其他令人反感、不安全或不适宜的内容类型。
     */
     @SerializedName("Label")
     @Expose
     private String Label;
 
     /**
-    * 子标签检测结果
+    * 该字段用于返回对应恶意标签下的子标签的检测结果，如：*Porn-SexBehavior*等子标签。
     */
     @SerializedName("SubLabel")
     @Expose
     private String SubLabel;
 
     /**
-    * 该标签模型命中的分值
+    * 该字段用于返回当前标签（Label）下的置信度，取值范围：0（**置信度最低**）-100（**置信度最高** ），越高代表文本越有可能属于当前返回的标签；如：*色情 99*，则表明该文本非常有可能属于色情内容；*色情 0*，则表明该文本不属于色情内容。
     */
     @SerializedName("Score")
     @Expose
     private Long Score;
 
     /**
-    * 分类模型命中子标签结果
+    * 该字段用于返回分类模型命中子标签的详细信息，如：序号、命中标签名称、分数等信息。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Details")
@@ -68,97 +66,89 @@ public class LabelResult extends AbstractModel{
     private LabelDetailItem [] Details;
 
     /**
-     * Get 场景识别结果 
-     * @return Scene 场景识别结果
+     * Get 该字段用于返回模型识别出的场景结果，如广告、色情、有害内容等场景。 
+     * @return Scene 该字段用于返回模型识别出的场景结果，如广告、色情、有害内容等场景。
      */
     public String getScene() {
         return this.Scene;
     }
 
     /**
-     * Set 场景识别结果
-     * @param Scene 场景识别结果
+     * Set 该字段用于返回模型识别出的场景结果，如广告、色情、有害内容等场景。
+     * @param Scene 该字段用于返回模型识别出的场景结果，如广告、色情、有害内容等场景。
      */
     public void setScene(String Scene) {
         this.Scene = Scene;
     }
 
     /**
-     * Get 建议您拿到判断结果后的执行操作。
-建议值，Block：建议屏蔽，Review：建议复审，Pass：建议通过 
-     * @return Suggestion 建议您拿到判断结果后的执行操作。
-建议值，Block：建议屏蔽，Review：建议复审，Pass：建议通过
+     * Get 该字段用于返回针对当前恶意标签的后续操作建议。当您获取到判定结果后，返回值表示系统推荐的后续操作；建议您按照业务所需，对不同违规类型与建议值进行处理。<br>返回值：**Block**：建议屏蔽，**Review** ：建议人工复审，**Pass**：建议通过 
+     * @return Suggestion 该字段用于返回针对当前恶意标签的后续操作建议。当您获取到判定结果后，返回值表示系统推荐的后续操作；建议您按照业务所需，对不同违规类型与建议值进行处理。<br>返回值：**Block**：建议屏蔽，**Review** ：建议人工复审，**Pass**：建议通过
      */
     public String getSuggestion() {
         return this.Suggestion;
     }
 
     /**
-     * Set 建议您拿到判断结果后的执行操作。
-建议值，Block：建议屏蔽，Review：建议复审，Pass：建议通过
-     * @param Suggestion 建议您拿到判断结果后的执行操作。
-建议值，Block：建议屏蔽，Review：建议复审，Pass：建议通过
+     * Set 该字段用于返回针对当前恶意标签的后续操作建议。当您获取到判定结果后，返回值表示系统推荐的后续操作；建议您按照业务所需，对不同违规类型与建议值进行处理。<br>返回值：**Block**：建议屏蔽，**Review** ：建议人工复审，**Pass**：建议通过
+     * @param Suggestion 该字段用于返回针对当前恶意标签的后续操作建议。当您获取到判定结果后，返回值表示系统推荐的后续操作；建议您按照业务所需，对不同违规类型与建议值进行处理。<br>返回值：**Block**：建议屏蔽，**Review** ：建议人工复审，**Pass**：建议通过
      */
     public void setSuggestion(String Suggestion) {
         this.Suggestion = Suggestion;
     }
 
     /**
-     * Get 恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义图片。
-以及其他令人反感、不安全或不适宜的内容类型。 
-     * @return Label 恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义图片。
-以及其他令人反感、不安全或不适宜的内容类型。
+     * Get 该字段用于返回检测结果所对应的恶意标签。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告，**Custom**：自定义违规；以及其他令人反感、不安全或不适宜的内容类型。 
+     * @return Label 该字段用于返回检测结果所对应的恶意标签。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告，**Custom**：自定义违规；以及其他令人反感、不安全或不适宜的内容类型。
      */
     public String getLabel() {
         return this.Label;
     }
 
     /**
-     * Set 恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义图片。
-以及其他令人反感、不安全或不适宜的内容类型。
-     * @param Label 恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义图片。
-以及其他令人反感、不安全或不适宜的内容类型。
+     * Set 该字段用于返回检测结果所对应的恶意标签。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告，**Custom**：自定义违规；以及其他令人反感、不安全或不适宜的内容类型。
+     * @param Label 该字段用于返回检测结果所对应的恶意标签。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告，**Custom**：自定义违规；以及其他令人反感、不安全或不适宜的内容类型。
      */
     public void setLabel(String Label) {
         this.Label = Label;
     }
 
     /**
-     * Get 子标签检测结果 
-     * @return SubLabel 子标签检测结果
+     * Get 该字段用于返回对应恶意标签下的子标签的检测结果，如：*Porn-SexBehavior*等子标签。 
+     * @return SubLabel 该字段用于返回对应恶意标签下的子标签的检测结果，如：*Porn-SexBehavior*等子标签。
      */
     public String getSubLabel() {
         return this.SubLabel;
     }
 
     /**
-     * Set 子标签检测结果
-     * @param SubLabel 子标签检测结果
+     * Set 该字段用于返回对应恶意标签下的子标签的检测结果，如：*Porn-SexBehavior*等子标签。
+     * @param SubLabel 该字段用于返回对应恶意标签下的子标签的检测结果，如：*Porn-SexBehavior*等子标签。
      */
     public void setSubLabel(String SubLabel) {
         this.SubLabel = SubLabel;
     }
 
     /**
-     * Get 该标签模型命中的分值 
-     * @return Score 该标签模型命中的分值
+     * Get 该字段用于返回当前标签（Label）下的置信度，取值范围：0（**置信度最低**）-100（**置信度最高** ），越高代表文本越有可能属于当前返回的标签；如：*色情 99*，则表明该文本非常有可能属于色情内容；*色情 0*，则表明该文本不属于色情内容。 
+     * @return Score 该字段用于返回当前标签（Label）下的置信度，取值范围：0（**置信度最低**）-100（**置信度最高** ），越高代表文本越有可能属于当前返回的标签；如：*色情 99*，则表明该文本非常有可能属于色情内容；*色情 0*，则表明该文本不属于色情内容。
      */
     public Long getScore() {
         return this.Score;
     }
 
     /**
-     * Set 该标签模型命中的分值
-     * @param Score 该标签模型命中的分值
+     * Set 该字段用于返回当前标签（Label）下的置信度，取值范围：0（**置信度最低**）-100（**置信度最高** ），越高代表文本越有可能属于当前返回的标签；如：*色情 99*，则表明该文本非常有可能属于色情内容；*色情 0*，则表明该文本不属于色情内容。
+     * @param Score 该字段用于返回当前标签（Label）下的置信度，取值范围：0（**置信度最低**）-100（**置信度最高** ），越高代表文本越有可能属于当前返回的标签；如：*色情 99*，则表明该文本非常有可能属于色情内容；*色情 0*，则表明该文本不属于色情内容。
      */
     public void setScore(Long Score) {
         this.Score = Score;
     }
 
     /**
-     * Get 分类模型命中子标签结果
+     * Get 该字段用于返回分类模型命中子标签的详细信息，如：序号、命中标签名称、分数等信息。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Details 分类模型命中子标签结果
+     * @return Details 该字段用于返回分类模型命中子标签的详细信息，如：序号、命中标签名称、分数等信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public LabelDetailItem [] getDetails() {
@@ -166,9 +156,9 @@ public class LabelResult extends AbstractModel{
     }
 
     /**
-     * Set 分类模型命中子标签结果
+     * Set 该字段用于返回分类模型命中子标签的详细信息，如：序号、命中标签名称、分数等信息。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Details 分类模型命中子标签结果
+     * @param Details 该字段用于返回分类模型命中子标签的详细信息，如：序号、命中标签名称、分数等信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDetails(LabelDetailItem [] Details) {

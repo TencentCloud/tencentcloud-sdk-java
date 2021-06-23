@@ -23,189 +23,184 @@ import java.util.HashMap;
 public class OcrTextDetail extends AbstractModel{
 
     /**
-    * OCR文本内容
+    * 该字段用于返回OCR识别出的文本内容。<br>备注：OCR文本识别上限在**5000字节内**。
     */
     @SerializedName("Text")
     @Expose
     private String Text;
 
     /**
-    * 恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义词库。
-以及其他令人反感、不安全或不适宜的内容类型。
+    * 该字段用于返回检测结果所对应的恶意标签。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告，**Custom**：自定义违规；以及其他令人反感、不安全或不适宜的内容类型。
     */
     @SerializedName("Label")
     @Expose
     private String Label;
 
     /**
-    * 仅当Label为Custom自定义关键词时有效，表示自定义库id
+    * 该字段**仅当Label为Custom自定义关键词时有效**，用于返回自定义库的ID，以方便自定义库管理和配置。
     */
     @SerializedName("LibId")
     @Expose
     private String LibId;
 
     /**
-    * 仅当Label为Custom自定义关键词时有效，表示自定义库名称
+    * 该字段**仅当Label为Custom自定义关键词时有效**，用于返回自定义库的名称，以方便自定义库管理和配置。
     */
     @SerializedName("LibName")
     @Expose
     private String LibName;
 
     /**
-    * 该标签下命中的关键词
+    * 该参数用于返回在当前label下命中的关键词。
     */
     @SerializedName("Keywords")
     @Expose
     private String [] Keywords;
 
     /**
-    * 该标签模型命中的分值
+    * 该参数用于返回在当前恶意标签下模型命中的分值，取值为**0-100**；分数越高，代表当前场景越符合该恶意标签所对应的场景。
     */
     @SerializedName("Score")
     @Expose
     private Long Score;
 
     /**
-    * OCR位置
+    * 该参数用于返回OCR检测框在图片中的位置（左上角xy坐标、长宽、旋转角度），以方便快速定位识别文字的相关信息。
     */
     @SerializedName("Location")
     @Expose
     private Location Location;
 
     /**
-    * OCR文本识别置信度
+    * 该参数用于返回OCR文本识别结果的置信度，取值在**0**（**置信度最低**）-**100**（**置信度最高**），越高代表对应图像越有可能是识别出的文字；如：*你好 99*，则表明OCR识别框内的文字大概率是”你好“。
     */
     @SerializedName("Rate")
     @Expose
     private Long Rate;
 
     /**
-     * Get OCR文本内容 
-     * @return Text OCR文本内容
+     * Get 该字段用于返回OCR识别出的文本内容。<br>备注：OCR文本识别上限在**5000字节内**。 
+     * @return Text 该字段用于返回OCR识别出的文本内容。<br>备注：OCR文本识别上限在**5000字节内**。
      */
     public String getText() {
         return this.Text;
     }
 
     /**
-     * Set OCR文本内容
-     * @param Text OCR文本内容
+     * Set 该字段用于返回OCR识别出的文本内容。<br>备注：OCR文本识别上限在**5000字节内**。
+     * @param Text 该字段用于返回OCR识别出的文本内容。<br>备注：OCR文本识别上限在**5000字节内**。
      */
     public void setText(String Text) {
         this.Text = Text;
     }
 
     /**
-     * Get 恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义词库。
-以及其他令人反感、不安全或不适宜的内容类型。 
-     * @return Label 恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义词库。
-以及其他令人反感、不安全或不适宜的内容类型。
+     * Get 该字段用于返回检测结果所对应的恶意标签。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告，**Custom**：自定义违规；以及其他令人反感、不安全或不适宜的内容类型。 
+     * @return Label 该字段用于返回检测结果所对应的恶意标签。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告，**Custom**：自定义违规；以及其他令人反感、不安全或不适宜的内容类型。
      */
     public String getLabel() {
         return this.Label;
     }
 
     /**
-     * Set 恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义词库。
-以及其他令人反感、不安全或不适宜的内容类型。
-     * @param Label 恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义词库。
-以及其他令人反感、不安全或不适宜的内容类型。
+     * Set 该字段用于返回检测结果所对应的恶意标签。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告，**Custom**：自定义违规；以及其他令人反感、不安全或不适宜的内容类型。
+     * @param Label 该字段用于返回检测结果所对应的恶意标签。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告，**Custom**：自定义违规；以及其他令人反感、不安全或不适宜的内容类型。
      */
     public void setLabel(String Label) {
         this.Label = Label;
     }
 
     /**
-     * Get 仅当Label为Custom自定义关键词时有效，表示自定义库id 
-     * @return LibId 仅当Label为Custom自定义关键词时有效，表示自定义库id
+     * Get 该字段**仅当Label为Custom自定义关键词时有效**，用于返回自定义库的ID，以方便自定义库管理和配置。 
+     * @return LibId 该字段**仅当Label为Custom自定义关键词时有效**，用于返回自定义库的ID，以方便自定义库管理和配置。
      */
     public String getLibId() {
         return this.LibId;
     }
 
     /**
-     * Set 仅当Label为Custom自定义关键词时有效，表示自定义库id
-     * @param LibId 仅当Label为Custom自定义关键词时有效，表示自定义库id
+     * Set 该字段**仅当Label为Custom自定义关键词时有效**，用于返回自定义库的ID，以方便自定义库管理和配置。
+     * @param LibId 该字段**仅当Label为Custom自定义关键词时有效**，用于返回自定义库的ID，以方便自定义库管理和配置。
      */
     public void setLibId(String LibId) {
         this.LibId = LibId;
     }
 
     /**
-     * Get 仅当Label为Custom自定义关键词时有效，表示自定义库名称 
-     * @return LibName 仅当Label为Custom自定义关键词时有效，表示自定义库名称
+     * Get 该字段**仅当Label为Custom自定义关键词时有效**，用于返回自定义库的名称，以方便自定义库管理和配置。 
+     * @return LibName 该字段**仅当Label为Custom自定义关键词时有效**，用于返回自定义库的名称，以方便自定义库管理和配置。
      */
     public String getLibName() {
         return this.LibName;
     }
 
     /**
-     * Set 仅当Label为Custom自定义关键词时有效，表示自定义库名称
-     * @param LibName 仅当Label为Custom自定义关键词时有效，表示自定义库名称
+     * Set 该字段**仅当Label为Custom自定义关键词时有效**，用于返回自定义库的名称，以方便自定义库管理和配置。
+     * @param LibName 该字段**仅当Label为Custom自定义关键词时有效**，用于返回自定义库的名称，以方便自定义库管理和配置。
      */
     public void setLibName(String LibName) {
         this.LibName = LibName;
     }
 
     /**
-     * Get 该标签下命中的关键词 
-     * @return Keywords 该标签下命中的关键词
+     * Get 该参数用于返回在当前label下命中的关键词。 
+     * @return Keywords 该参数用于返回在当前label下命中的关键词。
      */
     public String [] getKeywords() {
         return this.Keywords;
     }
 
     /**
-     * Set 该标签下命中的关键词
-     * @param Keywords 该标签下命中的关键词
+     * Set 该参数用于返回在当前label下命中的关键词。
+     * @param Keywords 该参数用于返回在当前label下命中的关键词。
      */
     public void setKeywords(String [] Keywords) {
         this.Keywords = Keywords;
     }
 
     /**
-     * Get 该标签模型命中的分值 
-     * @return Score 该标签模型命中的分值
+     * Get 该参数用于返回在当前恶意标签下模型命中的分值，取值为**0-100**；分数越高，代表当前场景越符合该恶意标签所对应的场景。 
+     * @return Score 该参数用于返回在当前恶意标签下模型命中的分值，取值为**0-100**；分数越高，代表当前场景越符合该恶意标签所对应的场景。
      */
     public Long getScore() {
         return this.Score;
     }
 
     /**
-     * Set 该标签模型命中的分值
-     * @param Score 该标签模型命中的分值
+     * Set 该参数用于返回在当前恶意标签下模型命中的分值，取值为**0-100**；分数越高，代表当前场景越符合该恶意标签所对应的场景。
+     * @param Score 该参数用于返回在当前恶意标签下模型命中的分值，取值为**0-100**；分数越高，代表当前场景越符合该恶意标签所对应的场景。
      */
     public void setScore(Long Score) {
         this.Score = Score;
     }
 
     /**
-     * Get OCR位置 
-     * @return Location OCR位置
+     * Get 该参数用于返回OCR检测框在图片中的位置（左上角xy坐标、长宽、旋转角度），以方便快速定位识别文字的相关信息。 
+     * @return Location 该参数用于返回OCR检测框在图片中的位置（左上角xy坐标、长宽、旋转角度），以方便快速定位识别文字的相关信息。
      */
     public Location getLocation() {
         return this.Location;
     }
 
     /**
-     * Set OCR位置
-     * @param Location OCR位置
+     * Set 该参数用于返回OCR检测框在图片中的位置（左上角xy坐标、长宽、旋转角度），以方便快速定位识别文字的相关信息。
+     * @param Location 该参数用于返回OCR检测框在图片中的位置（左上角xy坐标、长宽、旋转角度），以方便快速定位识别文字的相关信息。
      */
     public void setLocation(Location Location) {
         this.Location = Location;
     }
 
     /**
-     * Get OCR文本识别置信度 
-     * @return Rate OCR文本识别置信度
+     * Get 该参数用于返回OCR文本识别结果的置信度，取值在**0**（**置信度最低**）-**100**（**置信度最高**），越高代表对应图像越有可能是识别出的文字；如：*你好 99*，则表明OCR识别框内的文字大概率是”你好“。 
+     * @return Rate 该参数用于返回OCR文本识别结果的置信度，取值在**0**（**置信度最低**）-**100**（**置信度最高**），越高代表对应图像越有可能是识别出的文字；如：*你好 99*，则表明OCR识别框内的文字大概率是”你好“。
      */
     public Long getRate() {
         return this.Rate;
     }
 
     /**
-     * Set OCR文本识别置信度
-     * @param Rate OCR文本识别置信度
+     * Set 该参数用于返回OCR文本识别结果的置信度，取值在**0**（**置信度最低**）-**100**（**置信度最高**），越高代表对应图像越有可能是识别出的文字；如：*你好 99*，则表明OCR识别框内的文字大概率是”你好“。
+     * @param Rate 该参数用于返回OCR文本识别结果的置信度，取值在**0**（**置信度最低**）-**100**（**置信度最高**），越高代表对应图像越有可能是识别出的文字；如：*你好 99*，则表明OCR识别框内的文字大概率是”你好“。
      */
     public void setRate(Long Rate) {
         this.Rate = Rate;

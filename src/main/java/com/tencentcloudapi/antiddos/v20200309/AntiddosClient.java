@@ -179,6 +179,26 @@ public class AntiddosClient extends AbstractClient{
     }
 
     /**
+     *批量配置L7转发规则的证书供SSL测调用
+     * @param req CreateL7RuleCertsRequest
+     * @return CreateL7RuleCertsResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateL7RuleCertsResponse CreateL7RuleCerts(CreateL7RuleCertsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateL7RuleCertsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateL7RuleCertsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateL7RuleCerts");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *添加DDoS防护的特征过滤规则
      * @param req CreatePacketFilterConfigRequest
      * @return CreatePacketFilterConfigResponse
@@ -431,6 +451,26 @@ public class AntiddosClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeDefaultAlarmThresholdResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeDefaultAlarmThreshold");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询与证书ID对于域名匹配的七层规则
+     * @param req DescribeL7RulesBySSLCertIdRequest
+     * @return DescribeL7RulesBySSLCertIdResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeL7RulesBySSLCertIdResponse DescribeL7RulesBySSLCertId(DescribeL7RulesBySSLCertIdRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeL7RulesBySSLCertIdResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeL7RulesBySSLCertIdResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeL7RulesBySSLCertId");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

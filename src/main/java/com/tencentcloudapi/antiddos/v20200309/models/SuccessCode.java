@@ -13,77 +13,74 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cdn.v20180606.models;
+package com.tencentcloudapi.antiddos.v20200309.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class EnableCachesRequest extends AbstractModel{
+public class SuccessCode extends AbstractModel{
 
     /**
-    * 解封 URL 列表
+    * 描述
     */
-    @SerializedName("Urls")
+    @SerializedName("Message")
     @Expose
-    private String [] Urls;
+    private String Message;
 
     /**
-    * URL封禁日期
+    * 成功/错误码
     */
-    @SerializedName("Date")
+    @SerializedName("Code")
     @Expose
-    private String Date;
+    private String Code;
 
     /**
-     * Get 解封 URL 列表 
-     * @return Urls 解封 URL 列表
+     * Get 描述 
+     * @return Message 描述
      */
-    public String [] getUrls() {
-        return this.Urls;
+    public String getMessage() {
+        return this.Message;
     }
 
     /**
-     * Set 解封 URL 列表
-     * @param Urls 解封 URL 列表
+     * Set 描述
+     * @param Message 描述
      */
-    public void setUrls(String [] Urls) {
-        this.Urls = Urls;
+    public void setMessage(String Message) {
+        this.Message = Message;
     }
 
     /**
-     * Get URL封禁日期 
-     * @return Date URL封禁日期
+     * Get 成功/错误码 
+     * @return Code 成功/错误码
      */
-    public String getDate() {
-        return this.Date;
+    public String getCode() {
+        return this.Code;
     }
 
     /**
-     * Set URL封禁日期
-     * @param Date URL封禁日期
+     * Set 成功/错误码
+     * @param Code 成功/错误码
      */
-    public void setDate(String Date) {
-        this.Date = Date;
+    public void setCode(String Code) {
+        this.Code = Code;
     }
 
-    public EnableCachesRequest() {
+    public SuccessCode() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public EnableCachesRequest(EnableCachesRequest source) {
-        if (source.Urls != null) {
-            this.Urls = new String[source.Urls.length];
-            for (int i = 0; i < source.Urls.length; i++) {
-                this.Urls[i] = new String(source.Urls[i]);
-            }
+    public SuccessCode(SuccessCode source) {
+        if (source.Message != null) {
+            this.Message = new String(source.Message);
         }
-        if (source.Date != null) {
-            this.Date = new String(source.Date);
+        if (source.Code != null) {
+            this.Code = new String(source.Code);
         }
     }
 
@@ -92,8 +89,8 @@ public class EnableCachesRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArraySimple(map, prefix + "Urls.", this.Urls);
-        this.setParamSimple(map, prefix + "Date", this.Date);
+        this.setParamSimple(map, prefix + "Message", this.Message);
+        this.setParamSimple(map, prefix + "Code", this.Code);
 
     }
 }

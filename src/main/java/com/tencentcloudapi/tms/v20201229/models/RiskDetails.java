@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class RiskDetails extends AbstractModel{
 
     /**
-    * 风险类别，RiskAccount，RiskIP, RiskIMEI
+    * 该字段用于返回账号信息检测对应的风险类别，取值为：**RiskAccount**（账号存在风险）、**RiskIP**（IP地址存在风险）、**RiskIMEI**（移动设备识别码存在风险）。
     */
     @SerializedName("Label")
     @Expose
     private String Label;
 
     /**
-    * 风险等级，1:疑似，2：恶意
+    * 该字段用于返回账号信息检测对应的风险等级，取值为：**1**（疑似存在风险）和**2**（存在恶意风险）。
     */
     @SerializedName("Level")
     @Expose
     private Long Level;
 
     /**
-     * Get 风险类别，RiskAccount，RiskIP, RiskIMEI 
-     * @return Label 风险类别，RiskAccount，RiskIP, RiskIMEI
+     * Get 该字段用于返回账号信息检测对应的风险类别，取值为：**RiskAccount**（账号存在风险）、**RiskIP**（IP地址存在风险）、**RiskIMEI**（移动设备识别码存在风险）。 
+     * @return Label 该字段用于返回账号信息检测对应的风险类别，取值为：**RiskAccount**（账号存在风险）、**RiskIP**（IP地址存在风险）、**RiskIMEI**（移动设备识别码存在风险）。
      */
     public String getLabel() {
         return this.Label;
     }
 
     /**
-     * Set 风险类别，RiskAccount，RiskIP, RiskIMEI
-     * @param Label 风险类别，RiskAccount，RiskIP, RiskIMEI
+     * Set 该字段用于返回账号信息检测对应的风险类别，取值为：**RiskAccount**（账号存在风险）、**RiskIP**（IP地址存在风险）、**RiskIMEI**（移动设备识别码存在风险）。
+     * @param Label 该字段用于返回账号信息检测对应的风险类别，取值为：**RiskAccount**（账号存在风险）、**RiskIP**（IP地址存在风险）、**RiskIMEI**（移动设备识别码存在风险）。
      */
     public void setLabel(String Label) {
         this.Label = Label;
     }
 
     /**
-     * Get 风险等级，1:疑似，2：恶意 
-     * @return Level 风险等级，1:疑似，2：恶意
+     * Get 该字段用于返回账号信息检测对应的风险等级，取值为：**1**（疑似存在风险）和**2**（存在恶意风险）。 
+     * @return Level 该字段用于返回账号信息检测对应的风险等级，取值为：**1**（疑似存在风险）和**2**（存在恶意风险）。
      */
     public Long getLevel() {
         return this.Level;
     }
 
     /**
-     * Set 风险等级，1:疑似，2：恶意
-     * @param Level 风险等级，1:疑似，2：恶意
+     * Set 该字段用于返回账号信息检测对应的风险等级，取值为：**1**（疑似存在风险）和**2**（存在恶意风险）。
+     * @param Level 该字段用于返回账号信息检测对应的风险等级，取值为：**1**（疑似存在风险）和**2**（存在恶意风险）。
      */
     public void setLevel(Long Level) {
         this.Level = Level;
