@@ -79,7 +79,7 @@ public class JobV1 extends AbstractModel{
     private String Name;
 
     /**
-    * 作业类型
+    * 作业类型，1：sql作业，2：Jar作业
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("JobType")
@@ -239,6 +239,14 @@ public class JobV1 extends AbstractModel{
     private Long ClusterStatus;
 
     /**
+    * 细粒度下的运行的CU数量
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RunningCu")
+    @Expose
+    private Float RunningCu;
+
+    /**
      * Get 作业ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return JobId 作业ID
@@ -379,9 +387,9 @@ public class JobV1 extends AbstractModel{
     }
 
     /**
-     * Get 作业类型
+     * Get 作业类型，1：sql作业，2：Jar作业
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return JobType 作业类型
+     * @return JobType 作业类型，1：sql作业，2：Jar作业
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getJobType() {
@@ -389,9 +397,9 @@ public class JobV1 extends AbstractModel{
     }
 
     /**
-     * Set 作业类型
+     * Set 作业类型，1：sql作业，2：Jar作业
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param JobType 作业类型
+     * @param JobType 作业类型，1：sql作业，2：Jar作业
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setJobType(Long JobType) {
@@ -778,6 +786,26 @@ public class JobV1 extends AbstractModel{
         this.ClusterStatus = ClusterStatus;
     }
 
+    /**
+     * Get 细粒度下的运行的CU数量
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RunningCu 细粒度下的运行的CU数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Float getRunningCu() {
+        return this.RunningCu;
+    }
+
+    /**
+     * Set 细粒度下的运行的CU数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RunningCu 细粒度下的运行的CU数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRunningCu(Float RunningCu) {
+        this.RunningCu = RunningCu;
+    }
+
     public JobV1() {
     }
 
@@ -867,6 +895,9 @@ public class JobV1 extends AbstractModel{
         if (source.ClusterStatus != null) {
             this.ClusterStatus = new Long(source.ClusterStatus);
         }
+        if (source.RunningCu != null) {
+            this.RunningCu = new Float(source.RunningCu);
+        }
     }
 
 
@@ -901,6 +932,7 @@ public class JobV1 extends AbstractModel{
         this.setParamSimple(map, prefix + "WebUIUrl", this.WebUIUrl);
         this.setParamSimple(map, prefix + "SchedulerType", this.SchedulerType);
         this.setParamSimple(map, prefix + "ClusterStatus", this.ClusterStatus);
+        this.setParamSimple(map, prefix + "RunningCu", this.RunningCu);
 
     }
 }

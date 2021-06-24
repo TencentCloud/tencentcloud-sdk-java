@@ -79,6 +79,26 @@ public class AntiddosClient extends AbstractClient{
     }
 
     /**
+     *绑定IP到高防包实例，支持独享包、共享包；需要注意的是此接口绑定或解绑IP是异步接口，当处于绑定或解绑中时，则不允许再进行绑定或解绑，需要等待当前绑定或解绑完成。
+     * @param req CreateBoundIPRequest
+     * @return CreateBoundIPResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateBoundIPResponse CreateBoundIP(CreateBoundIPRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateBoundIPResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateBoundIPResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateBoundIP");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *设置DDoS防护的AI防护开关
      * @param req CreateDDoSAIRequest
      * @return CreateDDoSAIResponse

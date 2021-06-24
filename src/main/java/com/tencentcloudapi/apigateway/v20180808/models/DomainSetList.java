@@ -65,6 +65,20 @@ public class DomainSetList extends AbstractModel{
     private String NetType;
 
     /**
+    * 是否将HTTP请求强制跳转 HTTPS，默认为false。参数为 true时，API网关会将所有使用该自定义域名的 HTTP 协议的请求重定向至 HTTPS 协议进行转发。
+    */
+    @SerializedName("IsForcedHttps")
+    @Expose
+    private Boolean IsForcedHttps;
+
+    /**
+    * 域名备案注册状态
+    */
+    @SerializedName("RegistrationStatus")
+    @Expose
+    private Boolean RegistrationStatus;
+
+    /**
      * Get 域名名称。 
      * @return DomainName 域名名称。
      */
@@ -160,6 +174,38 @@ public class DomainSetList extends AbstractModel{
         this.NetType = NetType;
     }
 
+    /**
+     * Get 是否将HTTP请求强制跳转 HTTPS，默认为false。参数为 true时，API网关会将所有使用该自定义域名的 HTTP 协议的请求重定向至 HTTPS 协议进行转发。 
+     * @return IsForcedHttps 是否将HTTP请求强制跳转 HTTPS，默认为false。参数为 true时，API网关会将所有使用该自定义域名的 HTTP 协议的请求重定向至 HTTPS 协议进行转发。
+     */
+    public Boolean getIsForcedHttps() {
+        return this.IsForcedHttps;
+    }
+
+    /**
+     * Set 是否将HTTP请求强制跳转 HTTPS，默认为false。参数为 true时，API网关会将所有使用该自定义域名的 HTTP 协议的请求重定向至 HTTPS 协议进行转发。
+     * @param IsForcedHttps 是否将HTTP请求强制跳转 HTTPS，默认为false。参数为 true时，API网关会将所有使用该自定义域名的 HTTP 协议的请求重定向至 HTTPS 协议进行转发。
+     */
+    public void setIsForcedHttps(Boolean IsForcedHttps) {
+        this.IsForcedHttps = IsForcedHttps;
+    }
+
+    /**
+     * Get 域名备案注册状态 
+     * @return RegistrationStatus 域名备案注册状态
+     */
+    public Boolean getRegistrationStatus() {
+        return this.RegistrationStatus;
+    }
+
+    /**
+     * Set 域名备案注册状态
+     * @param RegistrationStatus 域名备案注册状态
+     */
+    public void setRegistrationStatus(Boolean RegistrationStatus) {
+        this.RegistrationStatus = RegistrationStatus;
+    }
+
     public DomainSetList() {
     }
 
@@ -186,6 +232,12 @@ public class DomainSetList extends AbstractModel{
         if (source.NetType != null) {
             this.NetType = new String(source.NetType);
         }
+        if (source.IsForcedHttps != null) {
+            this.IsForcedHttps = new Boolean(source.IsForcedHttps);
+        }
+        if (source.RegistrationStatus != null) {
+            this.RegistrationStatus = new Boolean(source.RegistrationStatus);
+        }
     }
 
 
@@ -199,6 +251,8 @@ public class DomainSetList extends AbstractModel{
         this.setParamSimple(map, prefix + "IsDefaultMapping", this.IsDefaultMapping);
         this.setParamSimple(map, prefix + "Protocol", this.Protocol);
         this.setParamSimple(map, prefix + "NetType", this.NetType);
+        this.setParamSimple(map, prefix + "IsForcedHttps", this.IsForcedHttps);
+        this.setParamSimple(map, prefix + "RegistrationStatus", this.RegistrationStatus);
 
     }
 }

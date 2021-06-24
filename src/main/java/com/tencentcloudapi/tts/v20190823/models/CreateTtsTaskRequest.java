@@ -80,7 +80,7 @@ public class CreateTtsTaskRequest extends AbstractModel{
     private Long SampleRate;
 
     /**
-    * 返回音频格式，可取值：mp3（默认），mp3，pcm
+    * 返回音频格式，可取值：mp3（默认），wav，pcm
     */
     @SerializedName("Codec")
     @Expose
@@ -226,16 +226,16 @@ public class CreateTtsTaskRequest extends AbstractModel{
     }
 
     /**
-     * Get 返回音频格式，可取值：mp3（默认），mp3，pcm 
-     * @return Codec 返回音频格式，可取值：mp3（默认），mp3，pcm
+     * Get 返回音频格式，可取值：mp3（默认），wav，pcm 
+     * @return Codec 返回音频格式，可取值：mp3（默认），wav，pcm
      */
     public String getCodec() {
         return this.Codec;
     }
 
     /**
-     * Set 返回音频格式，可取值：mp3（默认），mp3，pcm
-     * @param Codec 返回音频格式，可取值：mp3（默认），mp3，pcm
+     * Set 返回音频格式，可取值：mp3（默认），wav，pcm
+     * @param Codec 返回音频格式，可取值：mp3（默认），wav，pcm
      */
     public void setCodec(String Codec) {
         this.Codec = Codec;

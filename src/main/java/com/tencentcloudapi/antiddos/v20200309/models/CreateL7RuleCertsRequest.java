@@ -22,6 +22,52 @@ import java.util.HashMap;
 
 public class CreateL7RuleCertsRequest extends AbstractModel{
 
+    /**
+    * SSL证书ID
+    */
+    @SerializedName("CertId")
+    @Expose
+    private String CertId;
+
+    /**
+    * L7域名转发规则列表
+    */
+    @SerializedName("L7Rules")
+    @Expose
+    private InsL7Rules [] L7Rules;
+
+    /**
+     * Get SSL证书ID 
+     * @return CertId SSL证书ID
+     */
+    public String getCertId() {
+        return this.CertId;
+    }
+
+    /**
+     * Set SSL证书ID
+     * @param CertId SSL证书ID
+     */
+    public void setCertId(String CertId) {
+        this.CertId = CertId;
+    }
+
+    /**
+     * Get L7域名转发规则列表 
+     * @return L7Rules L7域名转发规则列表
+     */
+    public InsL7Rules [] getL7Rules() {
+        return this.L7Rules;
+    }
+
+    /**
+     * Set L7域名转发规则列表
+     * @param L7Rules L7域名转发规则列表
+     */
+    public void setL7Rules(InsL7Rules [] L7Rules) {
+        this.L7Rules = L7Rules;
+    }
+
     public CreateL7RuleCertsRequest() {
     }
 
@@ -30,6 +76,15 @@ public class CreateL7RuleCertsRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public CreateL7RuleCertsRequest(CreateL7RuleCertsRequest source) {
+        if (source.CertId != null) {
+            this.CertId = new String(source.CertId);
+        }
+        if (source.L7Rules != null) {
+            this.L7Rules = new InsL7Rules[source.L7Rules.length];
+            for (int i = 0; i < source.L7Rules.length; i++) {
+                this.L7Rules[i] = new InsL7Rules(source.L7Rules[i]);
+            }
+        }
     }
 
 
@@ -37,6 +92,8 @@ public class CreateL7RuleCertsRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "CertId", this.CertId);
+        this.setParamArrayObj(map, prefix + "L7Rules.", this.L7Rules);
 
     }
 }

@@ -93,6 +93,20 @@ public class CreateJobConfigRequest extends AbstractModel{
     private Boolean LogCollect;
 
     /**
+    * JobManager规格
+    */
+    @SerializedName("JobManagerSpec")
+    @Expose
+    private Float JobManagerSpec;
+
+    /**
+    * TaskManager规格
+    */
+    @SerializedName("TaskManagerSpec")
+    @Expose
+    private Float TaskManagerSpec;
+
+    /**
      * Get 作业Id 
      * @return JobId 作业Id
      */
@@ -252,6 +266,38 @@ public class CreateJobConfigRequest extends AbstractModel{
         this.LogCollect = LogCollect;
     }
 
+    /**
+     * Get JobManager规格 
+     * @return JobManagerSpec JobManager规格
+     */
+    public Float getJobManagerSpec() {
+        return this.JobManagerSpec;
+    }
+
+    /**
+     * Set JobManager规格
+     * @param JobManagerSpec JobManager规格
+     */
+    public void setJobManagerSpec(Float JobManagerSpec) {
+        this.JobManagerSpec = JobManagerSpec;
+    }
+
+    /**
+     * Get TaskManager规格 
+     * @return TaskManagerSpec TaskManager规格
+     */
+    public Float getTaskManagerSpec() {
+        return this.TaskManagerSpec;
+    }
+
+    /**
+     * Set TaskManager规格
+     * @param TaskManagerSpec TaskManager规格
+     */
+    public void setTaskManagerSpec(Float TaskManagerSpec) {
+        this.TaskManagerSpec = TaskManagerSpec;
+    }
+
     public CreateJobConfigRequest() {
     }
 
@@ -296,6 +342,12 @@ public class CreateJobConfigRequest extends AbstractModel{
         if (source.LogCollect != null) {
             this.LogCollect = new Boolean(source.LogCollect);
         }
+        if (source.JobManagerSpec != null) {
+            this.JobManagerSpec = new Float(source.JobManagerSpec);
+        }
+        if (source.TaskManagerSpec != null) {
+            this.TaskManagerSpec = new Float(source.TaskManagerSpec);
+        }
     }
 
 
@@ -313,6 +365,8 @@ public class CreateJobConfigRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "AutoDelete", this.AutoDelete);
         this.setParamSimple(map, prefix + "COSBucket", this.COSBucket);
         this.setParamSimple(map, prefix + "LogCollect", this.LogCollect);
+        this.setParamSimple(map, prefix + "JobManagerSpec", this.JobManagerSpec);
+        this.setParamSimple(map, prefix + "TaskManagerSpec", this.TaskManagerSpec);
 
     }
 }

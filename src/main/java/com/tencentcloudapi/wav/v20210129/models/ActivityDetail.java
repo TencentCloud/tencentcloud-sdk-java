@@ -55,7 +55,7 @@ public class ActivityDetail extends AbstractModel{
     private Long ActivityType;
 
     /**
-    * 活动开始时间，单位：秒
+    * 活动开始时间戳，单位：秒
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StartTime")
@@ -63,7 +63,7 @@ public class ActivityDetail extends AbstractModel{
     private Long StartTime;
 
     /**
-    * 活动结束时间，单位：秒
+    * 活动结束时间戳，单位：秒
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EndTime")
@@ -87,7 +87,7 @@ public class ActivityDetail extends AbstractModel{
     private String PrivacyAgreementId;
 
     /**
-    * 活动更新时间，单位：秒
+    * 活动更新时间戳，单位：秒
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdateTime")
@@ -183,9 +183,9 @@ public class ActivityDetail extends AbstractModel{
     }
 
     /**
-     * Get 活动开始时间，单位：秒
+     * Get 活动开始时间戳，单位：秒
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return StartTime 活动开始时间，单位：秒
+     * @return StartTime 活动开始时间戳，单位：秒
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStartTime() {
@@ -193,9 +193,9 @@ public class ActivityDetail extends AbstractModel{
     }
 
     /**
-     * Set 活动开始时间，单位：秒
+     * Set 活动开始时间戳，单位：秒
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param StartTime 活动开始时间，单位：秒
+     * @param StartTime 活动开始时间戳，单位：秒
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStartTime(Long StartTime) {
@@ -203,9 +203,9 @@ public class ActivityDetail extends AbstractModel{
     }
 
     /**
-     * Get 活动结束时间，单位：秒
+     * Get 活动结束时间戳，单位：秒
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EndTime 活动结束时间，单位：秒
+     * @return EndTime 活动结束时间戳，单位：秒
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getEndTime() {
@@ -213,9 +213,9 @@ public class ActivityDetail extends AbstractModel{
     }
 
     /**
-     * Set 活动结束时间，单位：秒
+     * Set 活动结束时间戳，单位：秒
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EndTime 活动结束时间，单位：秒
+     * @param EndTime 活动结束时间戳，单位：秒
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEndTime(Long EndTime) {
@@ -263,9 +263,9 @@ public class ActivityDetail extends AbstractModel{
     }
 
     /**
-     * Get 活动更新时间，单位：秒
+     * Get 活动更新时间戳，单位：秒
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UpdateTime 活动更新时间，单位：秒
+     * @return UpdateTime 活动更新时间戳，单位：秒
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getUpdateTime() {
@@ -273,9 +273,9 @@ public class ActivityDetail extends AbstractModel{
     }
 
     /**
-     * Set 活动更新时间，单位：秒
+     * Set 活动更新时间戳，单位：秒
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UpdateTime 活动更新时间，单位：秒
+     * @param UpdateTime 活动更新时间戳，单位：秒
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdateTime(Long UpdateTime) {

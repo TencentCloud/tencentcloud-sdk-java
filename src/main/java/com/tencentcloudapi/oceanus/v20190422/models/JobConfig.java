@@ -132,6 +132,22 @@ public class JobConfig extends AbstractModel{
     private Long MaxParallelism;
 
     /**
+    * JobManager规格
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("JobManagerSpec")
+    @Expose
+    private Float JobManagerSpec;
+
+    /**
+    * TaskManager规格
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TaskManagerSpec")
+    @Expose
+    private Float TaskManagerSpec;
+
+    /**
      * Get 作业Id 
      * @return JobId 作业Id
      */
@@ -399,6 +415,46 @@ public class JobConfig extends AbstractModel{
         this.MaxParallelism = MaxParallelism;
     }
 
+    /**
+     * Get JobManager规格
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return JobManagerSpec JobManager规格
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Float getJobManagerSpec() {
+        return this.JobManagerSpec;
+    }
+
+    /**
+     * Set JobManager规格
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param JobManagerSpec JobManager规格
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setJobManagerSpec(Float JobManagerSpec) {
+        this.JobManagerSpec = JobManagerSpec;
+    }
+
+    /**
+     * Get TaskManager规格
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TaskManagerSpec TaskManager规格
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Float getTaskManagerSpec() {
+        return this.TaskManagerSpec;
+    }
+
+    /**
+     * Set TaskManager规格
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TaskManagerSpec TaskManager规格
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTaskManagerSpec(Float TaskManagerSpec) {
+        this.TaskManagerSpec = TaskManagerSpec;
+    }
+
     public JobConfig() {
     }
 
@@ -455,6 +511,12 @@ public class JobConfig extends AbstractModel{
         if (source.MaxParallelism != null) {
             this.MaxParallelism = new Long(source.MaxParallelism);
         }
+        if (source.JobManagerSpec != null) {
+            this.JobManagerSpec = new Float(source.JobManagerSpec);
+        }
+        if (source.TaskManagerSpec != null) {
+            this.TaskManagerSpec = new Float(source.TaskManagerSpec);
+        }
     }
 
 
@@ -476,6 +538,8 @@ public class JobConfig extends AbstractModel{
         this.setParamSimple(map, prefix + "COSBucket", this.COSBucket);
         this.setParamSimple(map, prefix + "LogCollect", this.LogCollect);
         this.setParamSimple(map, prefix + "MaxParallelism", this.MaxParallelism);
+        this.setParamSimple(map, prefix + "JobManagerSpec", this.JobManagerSpec);
+        this.setParamSimple(map, prefix + "TaskManagerSpec", this.TaskManagerSpec);
 
     }
 }

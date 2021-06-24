@@ -30,6 +30,9 @@ public enum OceanusErrorCode {
     // 失败的目标资源。
      INTERNALERROR_FAILEDTOBESCRIBERESOURCES("InternalError.FailedToBescribeResources"),
      
+    // 无法更新作业错误。
+     INTERNALERROR_FAILEDTOUPDATEJOB("InternalError.FailedToUpdateJob"),
+     
     // 内部错误。
      INTERNALERROR_LOGICERROR("InternalError.LogicError"),
      
@@ -56,6 +59,9 @@ public enum OceanusErrorCode {
      
     // appid错误。
      INVALIDPARAMETER_INVALIDAPPID("InvalidParameter.InvalidAppId"),
+     
+    // 无效集群id。
+     INVALIDPARAMETER_INVALIDCLUSTERID("InvalidParameter.InvalidClusterId"),
      
     // 无效Region。
      INVALIDPARAMETER_INVALIDREGION("InvalidParameter.InvalidRegion"),
@@ -84,6 +90,9 @@ public enum OceanusErrorCode {
     // CU内存规格不匹配。
      INVALIDPARAMETERVALUE_CUMEM("InvalidParameterValue.CuMem"),
      
+    // 无效启动模式。
+     INVALIDPARAMETERVALUE_INVALIDSTARTMODE("InvalidParameterValue.InvalidStartMode"),
+     
     // 作业id的参数无效。
      INVALIDPARAMETERVALUE_JOBIDVALUEERROR("InvalidParameterValue.JobIdValueError"),
      
@@ -99,6 +108,12 @@ public enum OceanusErrorCode {
     // 未找到资源ID。
      INVALIDPARAMETERVALUE_RESOURCEIDSNOTFOUND("InvalidParameterValue.ResourceIdsNotFound"),
      
+    // 批量运行作业个数超过上限。
+     INVALIDPARAMETERVALUE_RUNJOBDESCRIPTIONSCOUNT("InvalidParameterValue.RunJobDescriptionsCount"),
+     
+    // RunType错误。
+     INVALIDPARAMETERVALUE_RUNTYPE("InvalidParameterValue.RunType"),
+     
     // 超过配额限制。
      LIMITEXCEEDED("LimitExceeded"),
      
@@ -108,11 +123,17 @@ public enum OceanusErrorCode {
     // 资源被占用。
      RESOURCEINUSE("ResourceInUse"),
      
+    // 集群有其他操作。
+     RESOURCEINUSE_INSTANCEINPROCESS("ResourceInUse.InstanceInProcess"),
+     
     // 资源名称已存在。
      RESOURCEINUSE_RESOURCENAMEALREADYEXISTS("ResourceInUse.ResourceNameAlreadyExists"),
      
     // 资源不足。
      RESOURCEINSUFFICIENT("ResourceInsufficient"),
+     
+    // CU资源不足。
+     RESOURCEINSUFFICIENT_CU("ResourceInsufficient.CU"),
      
     // 资源不存在。
      RESOURCENOTFOUND("ResourceNotFound"),
@@ -126,14 +147,23 @@ public enum OceanusErrorCode {
     // 作业不存在。
      RESOURCENOTFOUND_JOB("ResourceNotFound.Job"),
      
+    // 作业配置版本不存在。
+     RESOURCENOTFOUND_JOBCONFIG("ResourceNotFound.JobConfig"),
+     
     // 找不到作业。
      RESOURCENOTFOUND_JOBID("ResourceNotFound.JobId"),
+     
+    // 程序包不存在。
+     RESOURCENOTFOUND_RESOURCE("ResourceNotFound.Resource"),
      
     // 程序包版本不存在。
      RESOURCENOTFOUND_RESOURCECONFIG("ResourceNotFound.ResourceConfig"),
      
     // 资源不存在。
      RESOURCENOTFOUND_RESOURCENOTEXIST("ResourceNotFound.ResourceNotExist"),
+     
+    // 资源不可用。
+     RESOURCEUNAVAILABLE("ResourceUnavailable"),
      
     // 被某个作业配置使用。
      RESOURCEUNAVAILABLE_BEUSEBYSOMEJOBCONFIG("ResourceUnavailable.BeUseBySomeJobConfig"),
@@ -150,6 +180,12 @@ public enum OceanusErrorCode {
     // 获取发布的作业作业配置错误。
      RESOURCEUNAVAILABLE_GETJOBPUBLISHEDJOBCONFIG("ResourceUnavailable.GetJobPublishedJobConfig"),
      
+    // 作业资源配置未就绪。
+     RESOURCEUNAVAILABLE_JOBRESOURCECONFIGNOTREADY("ResourceUnavailable.JobResourceConfigNotReady"),
+     
+    // 找不到JobId的正在运行的作业实例。
+     RESOURCEUNAVAILABLE_NORUNNINGJOBINSTANCESFOUNDFORJOBID("ResourceUnavailable.NoRunningJobInstancesFoundForJobId"),
+     
     // 不允许停止或暂停错误。
      RESOURCEUNAVAILABLE_NOTALLOWEDTOBESTOPORPAUSE("ResourceUnavailable.NotAllowedToBeStopOrPause"),
      
@@ -160,7 +196,10 @@ public enum OceanusErrorCode {
      UNSUPPORTEDOPERATION("UnsupportedOperation"),
      
     // Checkpoint 时间间隔，错误。
-     UNSUPPORTEDOPERATION_INVALIDCHECKPOINTINTERVALERROR("UnsupportedOperation.InvalidCheckpointIntervalError");
+     UNSUPPORTEDOPERATION_INVALIDCHECKPOINTINTERVALERROR("UnsupportedOperation.InvalidCheckpointIntervalError"),
+     
+    // 不支持的启动模式。
+     UNSUPPORTEDOPERATION_UNSUPPORTEDSTARTMODE("UnsupportedOperation.UnsupportedStartMode");
      
     private String value;
     private OceanusErrorCode (String value){

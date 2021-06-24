@@ -23,46 +23,66 @@ import java.util.HashMap;
 public class ExternalMediaInfo extends AbstractModel{
 
     /**
-    * 媒资绑定模板 ID。
+    * 媒资绑定模板 ID，可取值为：
+<li>1000000：媒体文件为 URL，且 URL Scheme 为 https；</li>
+<li>1000001：媒体文件为 URL，且 URL Scheme 为 http。</li>
+
+注：如果要支持其它存储平台或者类型的媒体绑定，请联系 [客服](https://cloud.tencent.com/online-service?from=doc_1156)。
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * 媒资绑定媒体路径或文件 ID。
+    * 媒资绑定媒体路径或文件 ID，如果要绑定 URL 类型的媒体，请将 URL 的 'https://' 或者 'http://' 去掉。
     */
     @SerializedName("MediaKey")
     @Expose
     private String MediaKey;
 
     /**
-     * Get 媒资绑定模板 ID。 
-     * @return Definition 媒资绑定模板 ID。
+     * Get 媒资绑定模板 ID，可取值为：
+<li>1000000：媒体文件为 URL，且 URL Scheme 为 https；</li>
+<li>1000001：媒体文件为 URL，且 URL Scheme 为 http。</li>
+
+注：如果要支持其它存储平台或者类型的媒体绑定，请联系 [客服](https://cloud.tencent.com/online-service?from=doc_1156)。 
+     * @return Definition 媒资绑定模板 ID，可取值为：
+<li>1000000：媒体文件为 URL，且 URL Scheme 为 https；</li>
+<li>1000001：媒体文件为 URL，且 URL Scheme 为 http。</li>
+
+注：如果要支持其它存储平台或者类型的媒体绑定，请联系 [客服](https://cloud.tencent.com/online-service?from=doc_1156)。
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set 媒资绑定模板 ID。
-     * @param Definition 媒资绑定模板 ID。
+     * Set 媒资绑定模板 ID，可取值为：
+<li>1000000：媒体文件为 URL，且 URL Scheme 为 https；</li>
+<li>1000001：媒体文件为 URL，且 URL Scheme 为 http。</li>
+
+注：如果要支持其它存储平台或者类型的媒体绑定，请联系 [客服](https://cloud.tencent.com/online-service?from=doc_1156)。
+     * @param Definition 媒资绑定模板 ID，可取值为：
+<li>1000000：媒体文件为 URL，且 URL Scheme 为 https；</li>
+<li>1000001：媒体文件为 URL，且 URL Scheme 为 http。</li>
+
+注：如果要支持其它存储平台或者类型的媒体绑定，请联系 [客服](https://cloud.tencent.com/online-service?from=doc_1156)。
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get 媒资绑定媒体路径或文件 ID。 
-     * @return MediaKey 媒资绑定媒体路径或文件 ID。
+     * Get 媒资绑定媒体路径或文件 ID，如果要绑定 URL 类型的媒体，请将 URL 的 'https://' 或者 'http://' 去掉。 
+     * @return MediaKey 媒资绑定媒体路径或文件 ID，如果要绑定 URL 类型的媒体，请将 URL 的 'https://' 或者 'http://' 去掉。
      */
     public String getMediaKey() {
         return this.MediaKey;
     }
 
     /**
-     * Set 媒资绑定媒体路径或文件 ID。
-     * @param MediaKey 媒资绑定媒体路径或文件 ID。
+     * Set 媒资绑定媒体路径或文件 ID，如果要绑定 URL 类型的媒体，请将 URL 的 'https://' 或者 'http://' 去掉。
+     * @param MediaKey 媒资绑定媒体路径或文件 ID，如果要绑定 URL 类型的媒体，请将 URL 的 'https://' 或者 'http://' 去掉。
      */
     public void setMediaKey(String MediaKey) {
         this.MediaKey = MediaKey;
