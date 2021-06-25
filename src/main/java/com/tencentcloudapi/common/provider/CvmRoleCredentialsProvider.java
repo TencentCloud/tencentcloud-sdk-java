@@ -43,7 +43,7 @@ public class CvmRoleCredentialsProvider implements CredentialsProvider {
             secretId = (String) maps.get("TmpSecretId");
             secretKey = (String) maps.get("TmpSecretKey");
             token = (String) maps.get("Token");
-            expiredTime = (Integer) maps.get("ExpiredTime");
+            expiredTime = ((Double)maps.get("ExpiredTime")).intValue();
         }
         if (secretId == null || secretKey ==null || token ==null) {
             return null;
