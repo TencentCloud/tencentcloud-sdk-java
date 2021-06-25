@@ -88,6 +88,14 @@ public class BankCardOCRResponse extends AbstractModel{
     private Long [] WarningCode;
 
     /**
+    * 图片质量分数，请求enable_quality_value时返回（取值范围：0-100，分数越低越模糊，建议阈值≥50）。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("QualityValue")
+    @Expose
+    private Long QualityValue;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -259,6 +267,26 @@ public class BankCardOCRResponse extends AbstractModel{
     }
 
     /**
+     * Get 图片质量分数，请求enable_quality_value时返回（取值范围：0-100，分数越低越模糊，建议阈值≥50）。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return QualityValue 图片质量分数，请求enable_quality_value时返回（取值范围：0-100，分数越低越模糊，建议阈值≥50）。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getQualityValue() {
+        return this.QualityValue;
+    }
+
+    /**
+     * Set 图片质量分数，请求enable_quality_value时返回（取值范围：0-100，分数越低越模糊，建议阈值≥50）。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param QualityValue 图片质量分数，请求enable_quality_value时返回（取值范围：0-100，分数越低越模糊，建议阈值≥50）。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setQualityValue(Long QualityValue) {
+        this.QualityValue = QualityValue;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -309,6 +337,9 @@ public class BankCardOCRResponse extends AbstractModel{
                 this.WarningCode[i] = new Long(source.WarningCode[i]);
             }
         }
+        if (source.QualityValue != null) {
+            this.QualityValue = new Long(source.QualityValue);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -327,6 +358,7 @@ public class BankCardOCRResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "BorderCutImage", this.BorderCutImage);
         this.setParamSimple(map, prefix + "CardNoImage", this.CardNoImage);
         this.setParamArraySimple(map, prefix + "WarningCode.", this.WarningCode);
+        this.setParamSimple(map, prefix + "QualityValue", this.QualityValue);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -320,7 +320,7 @@ public class PartnersClient extends AbstractClient{
     }
 
     /**
-     *为合作伙伴提供查询客户余额能力。调用者必须是合作伙伴，只能查询自己名下客户余额
+     *【该接口将逐步下线，请切换使用升级版本DescribeClientBalanceNew】为合作伙伴提供查询客户余额能力。调用者必须是合作伙伴，只能查询自己名下客户余额.
      * @param req DescribeClientBalanceRequest
      * @return DescribeClientBalanceResponse
      * @throws TencentCloudSDKException
@@ -332,6 +332,26 @@ public class PartnersClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeClientBalanceResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeClientBalance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *为合作伙伴提供查询客户余额能力。调用者必须是合作伙伴，只能查询自己名下客户余额
+     * @param req DescribeClientBalanceNewRequest
+     * @return DescribeClientBalanceNewResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeClientBalanceNewResponse DescribeClientBalanceNew(DescribeClientBalanceNewRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeClientBalanceNewResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeClientBalanceNewResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeClientBalanceNew");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

@@ -37,7 +37,7 @@ public class ChatArchivingDetail extends AbstractModel{
     private String Action;
 
     /**
-    * 消息类型，当Action != "switch"时存在，比如video, text, voice 等，和企微开放文档一一对应
+    * 消息类型，当Action != "switch"时存在，例如video, text, voice 等，和企微开放文档一一对应
 https://open.work.weixin.qq.com/api/doc/90000/90135/91774
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -126,10 +126,10 @@ https://open.work.weixin.qq.com/api/doc/90000/90135/91774
     }
 
     /**
-     * Get 消息类型，当Action != "switch"时存在，比如video, text, voice 等，和企微开放文档一一对应
+     * Get 消息类型，当Action != "switch"时存在，例如video, text, voice 等，和企微开放文档一一对应
 https://open.work.weixin.qq.com/api/doc/90000/90135/91774
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MsgType 消息类型，当Action != "switch"时存在，比如video, text, voice 等，和企微开放文档一一对应
+     * @return MsgType 消息类型，当Action != "switch"时存在，例如video, text, voice 等，和企微开放文档一一对应
 https://open.work.weixin.qq.com/api/doc/90000/90135/91774
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -138,10 +138,10 @@ https://open.work.weixin.qq.com/api/doc/90000/90135/91774
     }
 
     /**
-     * Set 消息类型，当Action != "switch"时存在，比如video, text, voice 等，和企微开放文档一一对应
+     * Set 消息类型，当Action != "switch"时存在，例如video, text, voice 等，和企微开放文档一一对应
 https://open.work.weixin.qq.com/api/doc/90000/90135/91774
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MsgType 消息类型，当Action != "switch"时存在，比如video, text, voice 等，和企微开放文档一一对应
+     * @param MsgType 消息类型，当Action != "switch"时存在，例如video, text, voice 等，和企微开放文档一一对应
 https://open.work.weixin.qq.com/api/doc/90000/90135/91774
 注意：此字段可能返回 null，表示取不到有效值。
      */

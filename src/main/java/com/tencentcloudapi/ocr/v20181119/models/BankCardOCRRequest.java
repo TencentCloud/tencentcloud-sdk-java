@@ -74,6 +74,13 @@ public class BankCardOCRRequest extends AbstractModel{
     private Boolean EnableBorderCheck;
 
     /**
+    * 是否返回图片质量分数（图片质量分数是评价一个图片的模糊程度的标准），默认false。
+    */
+    @SerializedName("EnableQualityValue")
+    @Expose
+    private Boolean EnableQualityValue;
+
+    /**
      * Get 图片的 Base64 值。要求图片经Base64编码后不超过 7M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。
 图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。 
      * @return ImageBase64 图片的 Base64 值。要求图片经Base64编码后不超过 7M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。
@@ -193,6 +200,22 @@ public class BankCardOCRRequest extends AbstractModel{
         this.EnableBorderCheck = EnableBorderCheck;
     }
 
+    /**
+     * Get 是否返回图片质量分数（图片质量分数是评价一个图片的模糊程度的标准），默认false。 
+     * @return EnableQualityValue 是否返回图片质量分数（图片质量分数是评价一个图片的模糊程度的标准），默认false。
+     */
+    public Boolean getEnableQualityValue() {
+        return this.EnableQualityValue;
+    }
+
+    /**
+     * Set 是否返回图片质量分数（图片质量分数是评价一个图片的模糊程度的标准），默认false。
+     * @param EnableQualityValue 是否返回图片质量分数（图片质量分数是评价一个图片的模糊程度的标准），默认false。
+     */
+    public void setEnableQualityValue(Boolean EnableQualityValue) {
+        this.EnableQualityValue = EnableQualityValue;
+    }
+
     public BankCardOCRRequest() {
     }
 
@@ -222,6 +245,9 @@ public class BankCardOCRRequest extends AbstractModel{
         if (source.EnableBorderCheck != null) {
             this.EnableBorderCheck = new Boolean(source.EnableBorderCheck);
         }
+        if (source.EnableQualityValue != null) {
+            this.EnableQualityValue = new Boolean(source.EnableQualityValue);
+        }
     }
 
 
@@ -236,6 +262,7 @@ public class BankCardOCRRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "EnableCopyCheck", this.EnableCopyCheck);
         this.setParamSimple(map, prefix + "EnableReshootCheck", this.EnableReshootCheck);
         this.setParamSimple(map, prefix + "EnableBorderCheck", this.EnableBorderCheck);
+        this.setParamSimple(map, prefix + "EnableQualityValue", this.EnableQualityValue);
 
     }
 }

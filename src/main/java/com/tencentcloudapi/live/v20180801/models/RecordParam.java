@@ -25,7 +25,7 @@ public class RecordParam extends AbstractModel{
     /**
     * 录制间隔。
 单位秒，默认：1800。
-取值范围：300-7200。
+取值范围：60-7200。
 此参数对 HLS 无效，当录制 HLS 时从推流到断流生成一个文件。
     */
     @SerializedName("RecordInterval")
@@ -34,7 +34,7 @@ public class RecordParam extends AbstractModel{
 
     /**
     * 录制存储时长。
-单位秒，取值范围： 0 - 93312000。
+单位秒，取值范围： 0 - 1500天。
 0：表示永久存储。
     */
     @SerializedName("StorageTime")
@@ -81,13 +81,39 @@ public class RecordParam extends AbstractModel{
     private String VodFileName;
 
     /**
+    * 任务流
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Procedure")
+    @Expose
+    private String Procedure;
+
+    /**
+    * 视频存储策略。
+normal：标准存储。
+cold：低频存储。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("StorageMode")
+    @Expose
+    private String StorageMode;
+
+    /**
+    * 点播应用分类
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ClassId")
+    @Expose
+    private Long ClassId;
+
+    /**
      * Get 录制间隔。
 单位秒，默认：1800。
-取值范围：300-7200。
+取值范围：60-7200。
 此参数对 HLS 无效，当录制 HLS 时从推流到断流生成一个文件。 
      * @return RecordInterval 录制间隔。
 单位秒，默认：1800。
-取值范围：300-7200。
+取值范围：60-7200。
 此参数对 HLS 无效，当录制 HLS 时从推流到断流生成一个文件。
      */
     public Long getRecordInterval() {
@@ -97,11 +123,11 @@ public class RecordParam extends AbstractModel{
     /**
      * Set 录制间隔。
 单位秒，默认：1800。
-取值范围：300-7200。
+取值范围：60-7200。
 此参数对 HLS 无效，当录制 HLS 时从推流到断流生成一个文件。
      * @param RecordInterval 录制间隔。
 单位秒，默认：1800。
-取值范围：300-7200。
+取值范围：60-7200。
 此参数对 HLS 无效，当录制 HLS 时从推流到断流生成一个文件。
      */
     public void setRecordInterval(Long RecordInterval) {
@@ -110,10 +136,10 @@ public class RecordParam extends AbstractModel{
 
     /**
      * Get 录制存储时长。
-单位秒，取值范围： 0 - 93312000。
+单位秒，取值范围： 0 - 1500天。
 0：表示永久存储。 
      * @return StorageTime 录制存储时长。
-单位秒，取值范围： 0 - 93312000。
+单位秒，取值范围： 0 - 1500天。
 0：表示永久存储。
      */
     public Long getStorageTime() {
@@ -122,10 +148,10 @@ public class RecordParam extends AbstractModel{
 
     /**
      * Set 录制存储时长。
-单位秒，取值范围： 0 - 93312000。
+单位秒，取值范围： 0 - 1500天。
 0：表示永久存储。
      * @param StorageTime 录制存储时长。
-单位秒，取值范围： 0 - 93312000。
+单位秒，取值范围： 0 - 1500天。
 0：表示永久存储。
      */
     public void setStorageTime(Long StorageTime) {
@@ -252,6 +278,74 @@ public class RecordParam extends AbstractModel{
         this.VodFileName = VodFileName;
     }
 
+    /**
+     * Get 任务流
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Procedure 任务流
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getProcedure() {
+        return this.Procedure;
+    }
+
+    /**
+     * Set 任务流
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Procedure 任务流
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProcedure(String Procedure) {
+        this.Procedure = Procedure;
+    }
+
+    /**
+     * Get 视频存储策略。
+normal：标准存储。
+cold：低频存储。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return StorageMode 视频存储策略。
+normal：标准存储。
+cold：低频存储。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getStorageMode() {
+        return this.StorageMode;
+    }
+
+    /**
+     * Set 视频存储策略。
+normal：标准存储。
+cold：低频存储。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param StorageMode 视频存储策略。
+normal：标准存储。
+cold：低频存储。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setStorageMode(String StorageMode) {
+        this.StorageMode = StorageMode;
+    }
+
+    /**
+     * Get 点播应用分类
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ClassId 点播应用分类
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getClassId() {
+        return this.ClassId;
+    }
+
+    /**
+     * Set 点播应用分类
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ClassId 点播应用分类
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setClassId(Long ClassId) {
+        this.ClassId = ClassId;
+    }
+
     public RecordParam() {
     }
 
@@ -275,6 +369,15 @@ public class RecordParam extends AbstractModel{
         if (source.VodFileName != null) {
             this.VodFileName = new String(source.VodFileName);
         }
+        if (source.Procedure != null) {
+            this.Procedure = new String(source.Procedure);
+        }
+        if (source.StorageMode != null) {
+            this.StorageMode = new String(source.StorageMode);
+        }
+        if (source.ClassId != null) {
+            this.ClassId = new Long(source.ClassId);
+        }
     }
 
 
@@ -287,6 +390,9 @@ public class RecordParam extends AbstractModel{
         this.setParamSimple(map, prefix + "Enable", this.Enable);
         this.setParamSimple(map, prefix + "VodSubAppId", this.VodSubAppId);
         this.setParamSimple(map, prefix + "VodFileName", this.VodFileName);
+        this.setParamSimple(map, prefix + "Procedure", this.Procedure);
+        this.setParamSimple(map, prefix + "StorageMode", this.StorageMode);
+        this.setParamSimple(map, prefix + "ClassId", this.ClassId);
 
     }
 }

@@ -13,51 +13,48 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cwp.v20180228.models;
+package com.tencentcloudapi.partners.v20180321.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RecoverMalwaresRequest extends AbstractModel{
+public class DescribeClientBalanceNewRequest extends AbstractModel{
 
     /**
-    * 木马Id数组（单次最大恢复不超过100条）
+    * 客户(代客)账号ID
     */
-    @SerializedName("Ids")
+    @SerializedName("ClientUin")
     @Expose
-    private Long [] Ids;
+    private String ClientUin;
 
     /**
-     * Get 木马Id数组（单次最大恢复不超过100条） 
-     * @return Ids 木马Id数组（单次最大恢复不超过100条）
+     * Get 客户(代客)账号ID 
+     * @return ClientUin 客户(代客)账号ID
      */
-    public Long [] getIds() {
-        return this.Ids;
+    public String getClientUin() {
+        return this.ClientUin;
     }
 
     /**
-     * Set 木马Id数组（单次最大恢复不超过100条）
-     * @param Ids 木马Id数组（单次最大恢复不超过100条）
+     * Set 客户(代客)账号ID
+     * @param ClientUin 客户(代客)账号ID
      */
-    public void setIds(Long [] Ids) {
-        this.Ids = Ids;
+    public void setClientUin(String ClientUin) {
+        this.ClientUin = ClientUin;
     }
 
-    public RecoverMalwaresRequest() {
+    public DescribeClientBalanceNewRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public RecoverMalwaresRequest(RecoverMalwaresRequest source) {
-        if (source.Ids != null) {
-            this.Ids = new Long[source.Ids.length];
-            for (int i = 0; i < source.Ids.length; i++) {
-                this.Ids[i] = new Long(source.Ids[i]);
-            }
+    public DescribeClientBalanceNewRequest(DescribeClientBalanceNewRequest source) {
+        if (source.ClientUin != null) {
+            this.ClientUin = new String(source.ClientUin);
         }
     }
 
@@ -66,7 +63,7 @@ public class RecoverMalwaresRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArraySimple(map, prefix + "Ids.", this.Ids);
+        this.setParamSimple(map, prefix + "ClientUin", this.ClientUin);
 
     }
 }

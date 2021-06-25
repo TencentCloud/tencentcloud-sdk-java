@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ReceiveMessageRequest extends AbstractModel{
 
     /**
-    * 接收消息的topic的名字, 这里尽量需要使用topic的全路径，如果不指定，默认使用的是：public/default
+    * 接收消息的topic的名字, 这里尽量需要使用topic的全路径，如果不指定，即：tenant/namespace/topic。默认使用的是：public/default
     */
     @SerializedName("Topic")
     @Expose
@@ -51,16 +51,16 @@ public class ReceiveMessageRequest extends AbstractModel{
     private String SubInitialPosition;
 
     /**
-     * Get 接收消息的topic的名字, 这里尽量需要使用topic的全路径，如果不指定，默认使用的是：public/default 
-     * @return Topic 接收消息的topic的名字, 这里尽量需要使用topic的全路径，如果不指定，默认使用的是：public/default
+     * Get 接收消息的topic的名字, 这里尽量需要使用topic的全路径，如果不指定，即：tenant/namespace/topic。默认使用的是：public/default 
+     * @return Topic 接收消息的topic的名字, 这里尽量需要使用topic的全路径，如果不指定，即：tenant/namespace/topic。默认使用的是：public/default
      */
     public String getTopic() {
         return this.Topic;
     }
 
     /**
-     * Set 接收消息的topic的名字, 这里尽量需要使用topic的全路径，如果不指定，默认使用的是：public/default
-     * @param Topic 接收消息的topic的名字, 这里尽量需要使用topic的全路径，如果不指定，默认使用的是：public/default
+     * Set 接收消息的topic的名字, 这里尽量需要使用topic的全路径，如果不指定，即：tenant/namespace/topic。默认使用的是：public/default
+     * @param Topic 接收消息的topic的名字, 这里尽量需要使用topic的全路径，如果不指定，即：tenant/namespace/topic。默认使用的是：public/default
      */
     public void setTopic(String Topic) {
         this.Topic = Topic;

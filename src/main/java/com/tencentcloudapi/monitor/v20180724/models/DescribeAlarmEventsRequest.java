@@ -37,6 +37,13 @@ public class DescribeAlarmEventsRequest extends AbstractModel{
     private String Namespace;
 
     /**
+    * 监控类型，如 MT_QCE。如果不填默认为 MT_QCE。
+    */
+    @SerializedName("MonitorType")
+    @Expose
+    private String MonitorType;
+
+    /**
      * Get 模块名，固定值 monitor 
      * @return Module 模块名，固定值 monitor
      */
@@ -68,6 +75,22 @@ public class DescribeAlarmEventsRequest extends AbstractModel{
         this.Namespace = Namespace;
     }
 
+    /**
+     * Get 监控类型，如 MT_QCE。如果不填默认为 MT_QCE。 
+     * @return MonitorType 监控类型，如 MT_QCE。如果不填默认为 MT_QCE。
+     */
+    public String getMonitorType() {
+        return this.MonitorType;
+    }
+
+    /**
+     * Set 监控类型，如 MT_QCE。如果不填默认为 MT_QCE。
+     * @param MonitorType 监控类型，如 MT_QCE。如果不填默认为 MT_QCE。
+     */
+    public void setMonitorType(String MonitorType) {
+        this.MonitorType = MonitorType;
+    }
+
     public DescribeAlarmEventsRequest() {
     }
 
@@ -82,6 +105,9 @@ public class DescribeAlarmEventsRequest extends AbstractModel{
         if (source.Namespace != null) {
             this.Namespace = new String(source.Namespace);
         }
+        if (source.MonitorType != null) {
+            this.MonitorType = new String(source.MonitorType);
+        }
     }
 
 
@@ -91,6 +117,7 @@ public class DescribeAlarmEventsRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Module", this.Module);
         this.setParamSimple(map, prefix + "Namespace", this.Namespace);
+        this.setParamSimple(map, prefix + "MonitorType", this.MonitorType);
 
     }
 }

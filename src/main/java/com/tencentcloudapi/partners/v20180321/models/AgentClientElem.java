@@ -72,7 +72,7 @@ public class AgentClientElem extends AbstractModel{
     private Long HasOverdueBill;
 
     /**
-    * 1:待代理商审核;2:待腾讯云审核
+    * 1:待代理商审核;2:待腾讯云审核4:待腾讯云渠道审批
     */
     @SerializedName("Status")
     @Expose
@@ -93,6 +93,14 @@ public class AgentClientElem extends AbstractModel{
     @SerializedName("SalesName")
     @Expose
     private String SalesName;
+
+    /**
+    * 客户名称，此字段和控制台返回一致。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ClientName")
+    @Expose
+    private String ClientName;
 
     /**
      * Get 代理商账号ID 
@@ -207,16 +215,16 @@ public class AgentClientElem extends AbstractModel{
     }
 
     /**
-     * Get 1:待代理商审核;2:待腾讯云审核 
-     * @return Status 1:待代理商审核;2:待腾讯云审核
+     * Get 1:待代理商审核;2:待腾讯云审核4:待腾讯云渠道审批 
+     * @return Status 1:待代理商审核;2:待腾讯云审核4:待腾讯云渠道审批
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 1:待代理商审核;2:待腾讯云审核
-     * @param Status 1:待代理商审核;2:待腾讯云审核
+     * Set 1:待代理商审核;2:待腾讯云审核4:待腾讯云渠道审批
+     * @param Status 1:待代理商审核;2:待腾讯云审核4:待腾讯云渠道审批
      */
     public void setStatus(Long Status) {
         this.Status = Status;
@@ -262,6 +270,26 @@ public class AgentClientElem extends AbstractModel{
         this.SalesName = SalesName;
     }
 
+    /**
+     * Get 客户名称，此字段和控制台返回一致。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ClientName 客户名称，此字段和控制台返回一致。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getClientName() {
+        return this.ClientName;
+    }
+
+    /**
+     * Set 客户名称，此字段和控制台返回一致。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ClientName 客户名称，此字段和控制台返回一致。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setClientName(String ClientName) {
+        this.ClientName = ClientName;
+    }
+
     public AgentClientElem() {
     }
 
@@ -300,6 +328,9 @@ public class AgentClientElem extends AbstractModel{
         if (source.SalesName != null) {
             this.SalesName = new String(source.SalesName);
         }
+        if (source.ClientName != null) {
+            this.ClientName = new String(source.ClientName);
+        }
     }
 
 
@@ -317,6 +348,7 @@ public class AgentClientElem extends AbstractModel{
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "SalesUin", this.SalesUin);
         this.setParamSimple(map, prefix + "SalesName", this.SalesName);
+        this.setParamSimple(map, prefix + "ClientName", this.ClientName);
 
     }
 }

@@ -227,6 +227,22 @@ public class AgentDealNewElem extends AbstractModel{
     private ProductInfoElem [] ProductInfo;
 
     /**
+    * 付款方式
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PaymentMethod")
+    @Expose
+    private String PaymentMethod;
+
+    /**
+    * 订单更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UpdateTime")
+    @Expose
+    private String UpdateTime;
+
+    /**
      * Get 订单自增 ID 
      * @return DealId 订单自增 ID
      */
@@ -730,6 +746,46 @@ public class AgentDealNewElem extends AbstractModel{
         this.ProductInfo = ProductInfo;
     }
 
+    /**
+     * Get 付款方式
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PaymentMethod 付款方式
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPaymentMethod() {
+        return this.PaymentMethod;
+    }
+
+    /**
+     * Set 付款方式
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PaymentMethod 付款方式
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPaymentMethod(String PaymentMethod) {
+        this.PaymentMethod = PaymentMethod;
+    }
+
+    /**
+     * Get 订单更新时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UpdateTime 订单更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getUpdateTime() {
+        return this.UpdateTime;
+    }
+
+    /**
+     * Set 订单更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UpdateTime 订单更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUpdateTime(String UpdateTime) {
+        this.UpdateTime = UpdateTime;
+    }
+
     public AgentDealNewElem() {
     }
 
@@ -819,6 +875,12 @@ public class AgentDealNewElem extends AbstractModel{
                 this.ProductInfo[i] = new ProductInfoElem(source.ProductInfo[i]);
             }
         }
+        if (source.PaymentMethod != null) {
+            this.PaymentMethod = new String(source.PaymentMethod);
+        }
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new String(source.UpdateTime);
+        }
     }
 
 
@@ -852,6 +914,8 @@ public class AgentDealNewElem extends AbstractModel{
         this.setParamSimple(map, prefix + "ActivityId", this.ActivityId);
         this.setParamSimple(map, prefix + "OverdueTime", this.OverdueTime);
         this.setParamArrayObj(map, prefix + "ProductInfo.", this.ProductInfo);
+        this.setParamSimple(map, prefix + "PaymentMethod", this.PaymentMethod);
+        this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
 
     }
 }

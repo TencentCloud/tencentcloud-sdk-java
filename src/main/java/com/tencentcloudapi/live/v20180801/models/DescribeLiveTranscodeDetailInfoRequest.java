@@ -39,7 +39,7 @@ public class DescribeLiveTranscodeDetailInfoRequest extends AbstractModel{
     /**
     * 查询时间，北京时间，
 格式：yyyymmdd。
-注意：支持查询近1个月内某天的详细数据。
+注意：支持查询近1个月内某天的详细数据，截止到昨天。
     */
     @SerializedName("DayTime")
     @Expose
@@ -73,7 +73,7 @@ public class DescribeLiveTranscodeDetailInfoRequest extends AbstractModel{
     /**
     * 结束天时间，北京时间，
 格式：yyyymmdd。
-注意：支持查询近1个月内的详细数据，注意DayTime 与（StartDayTime，EndDayTime）必须要传一个，如果都传，会以DayTime为准 。
+注意：支持查询近1个月内的详细数据，截止到昨天，注意DayTime 与（StartDayTime，EndDayTime）必须要传一个，如果都传，会以DayTime为准 。
     */
     @SerializedName("EndDayTime")
     @Expose
@@ -114,10 +114,10 @@ public class DescribeLiveTranscodeDetailInfoRequest extends AbstractModel{
     /**
      * Get 查询时间，北京时间，
 格式：yyyymmdd。
-注意：支持查询近1个月内某天的详细数据。 
+注意：支持查询近1个月内某天的详细数据，截止到昨天。 
      * @return DayTime 查询时间，北京时间，
 格式：yyyymmdd。
-注意：支持查询近1个月内某天的详细数据。
+注意：支持查询近1个月内某天的详细数据，截止到昨天。
      */
     public String getDayTime() {
         return this.DayTime;
@@ -126,10 +126,10 @@ public class DescribeLiveTranscodeDetailInfoRequest extends AbstractModel{
     /**
      * Set 查询时间，北京时间，
 格式：yyyymmdd。
-注意：支持查询近1个月内某天的详细数据。
+注意：支持查询近1个月内某天的详细数据，截止到昨天。
      * @param DayTime 查询时间，北京时间，
 格式：yyyymmdd。
-注意：支持查询近1个月内某天的详细数据。
+注意：支持查询近1个月内某天的详细数据，截止到昨天。
      */
     public void setDayTime(String DayTime) {
         this.DayTime = DayTime;
@@ -202,10 +202,10 @@ public class DescribeLiveTranscodeDetailInfoRequest extends AbstractModel{
     /**
      * Get 结束天时间，北京时间，
 格式：yyyymmdd。
-注意：支持查询近1个月内的详细数据，注意DayTime 与（StartDayTime，EndDayTime）必须要传一个，如果都传，会以DayTime为准 。 
+注意：支持查询近1个月内的详细数据，截止到昨天，注意DayTime 与（StartDayTime，EndDayTime）必须要传一个，如果都传，会以DayTime为准 。 
      * @return EndDayTime 结束天时间，北京时间，
 格式：yyyymmdd。
-注意：支持查询近1个月内的详细数据，注意DayTime 与（StartDayTime，EndDayTime）必须要传一个，如果都传，会以DayTime为准 。
+注意：支持查询近1个月内的详细数据，截止到昨天，注意DayTime 与（StartDayTime，EndDayTime）必须要传一个，如果都传，会以DayTime为准 。
      */
     public String getEndDayTime() {
         return this.EndDayTime;
@@ -214,10 +214,10 @@ public class DescribeLiveTranscodeDetailInfoRequest extends AbstractModel{
     /**
      * Set 结束天时间，北京时间，
 格式：yyyymmdd。
-注意：支持查询近1个月内的详细数据，注意DayTime 与（StartDayTime，EndDayTime）必须要传一个，如果都传，会以DayTime为准 。
+注意：支持查询近1个月内的详细数据，截止到昨天，注意DayTime 与（StartDayTime，EndDayTime）必须要传一个，如果都传，会以DayTime为准 。
      * @param EndDayTime 结束天时间，北京时间，
 格式：yyyymmdd。
-注意：支持查询近1个月内的详细数据，注意DayTime 与（StartDayTime，EndDayTime）必须要传一个，如果都传，会以DayTime为准 。
+注意：支持查询近1个月内的详细数据，截止到昨天，注意DayTime 与（StartDayTime，EndDayTime）必须要传一个，如果都传，会以DayTime为准 。
      */
     public void setEndDayTime(String EndDayTime) {
         this.EndDayTime = EndDayTime;

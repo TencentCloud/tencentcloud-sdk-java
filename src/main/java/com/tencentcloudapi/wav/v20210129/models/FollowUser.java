@@ -46,14 +46,14 @@ public class FollowUser extends AbstractModel{
     private String Description;
 
     /**
-    * 该成员添加此外部联系人的时间,单位为秒
+    * 该成员添加此外部联系人的时间戳，单位为秒
     */
     @SerializedName("CreateTime")
     @Expose
     private Long CreateTime;
 
     /**
-    * 该成员添加此客户的来源，具体含义详见来<a href="https://work.weixin.qq.com/api/doc/90000/90135/92114#%E6%9D%A5%E6%BA%90%E5%AE%9A%E4%B9%89">来源定义</a>
+    * 该成员添加此客户的来源，具体含义详见<a href="https://work.weixin.qq.com/api/doc/90000/90135/92114#%E6%9D%A5%E6%BA%90%E5%AE%9A%E4%B9%89">来源定义</a>
     */
     @SerializedName("AddWay")
     @Expose
@@ -131,32 +131,32 @@ public class FollowUser extends AbstractModel{
     }
 
     /**
-     * Get 该成员添加此外部联系人的时间,单位为秒 
-     * @return CreateTime 该成员添加此外部联系人的时间,单位为秒
+     * Get 该成员添加此外部联系人的时间戳，单位为秒 
+     * @return CreateTime 该成员添加此外部联系人的时间戳，单位为秒
      */
     public Long getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 该成员添加此外部联系人的时间,单位为秒
-     * @param CreateTime 该成员添加此外部联系人的时间,单位为秒
+     * Set 该成员添加此外部联系人的时间戳，单位为秒
+     * @param CreateTime 该成员添加此外部联系人的时间戳，单位为秒
      */
     public void setCreateTime(Long CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 该成员添加此客户的来源，具体含义详见来<a href="https://work.weixin.qq.com/api/doc/90000/90135/92114#%E6%9D%A5%E6%BA%90%E5%AE%9A%E4%B9%89">来源定义</a> 
-     * @return AddWay 该成员添加此客户的来源，具体含义详见来<a href="https://work.weixin.qq.com/api/doc/90000/90135/92114#%E6%9D%A5%E6%BA%90%E5%AE%9A%E4%B9%89">来源定义</a>
+     * Get 该成员添加此客户的来源，具体含义详见<a href="https://work.weixin.qq.com/api/doc/90000/90135/92114#%E6%9D%A5%E6%BA%90%E5%AE%9A%E4%B9%89">来源定义</a> 
+     * @return AddWay 该成员添加此客户的来源，具体含义详见<a href="https://work.weixin.qq.com/api/doc/90000/90135/92114#%E6%9D%A5%E6%BA%90%E5%AE%9A%E4%B9%89">来源定义</a>
      */
     public Long getAddWay() {
         return this.AddWay;
     }
 
     /**
-     * Set 该成员添加此客户的来源，具体含义详见来<a href="https://work.weixin.qq.com/api/doc/90000/90135/92114#%E6%9D%A5%E6%BA%90%E5%AE%9A%E4%B9%89">来源定义</a>
-     * @param AddWay 该成员添加此客户的来源，具体含义详见来<a href="https://work.weixin.qq.com/api/doc/90000/90135/92114#%E6%9D%A5%E6%BA%90%E5%AE%9A%E4%B9%89">来源定义</a>
+     * Set 该成员添加此客户的来源，具体含义详见<a href="https://work.weixin.qq.com/api/doc/90000/90135/92114#%E6%9D%A5%E6%BA%90%E5%AE%9A%E4%B9%89">来源定义</a>
+     * @param AddWay 该成员添加此客户的来源，具体含义详见<a href="https://work.weixin.qq.com/api/doc/90000/90135/92114#%E6%9D%A5%E6%BA%90%E5%AE%9A%E4%B9%89">来源定义</a>
      */
     public void setAddWay(Long AddWay) {
         this.AddWay = AddWay;

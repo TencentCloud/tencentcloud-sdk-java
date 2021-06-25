@@ -107,6 +107,20 @@ public class CreateAlarmPolicyRequest extends AbstractModel{
     private AlarmPolicyTriggerTask [] TriggerTasks;
 
     /**
+    * 全局过滤条件
+    */
+    @SerializedName("Filter")
+    @Expose
+    private AlarmPolicyFilter Filter;
+
+    /**
+    * 聚合维度列表，指定按哪些维度 key 来做 group by
+    */
+    @SerializedName("GroupBy")
+    @Expose
+    private String [] GroupBy;
+
+    /**
      * Get 固定值，为"monitor" 
      * @return Module 固定值，为"monitor"
      */
@@ -298,6 +312,38 @@ public class CreateAlarmPolicyRequest extends AbstractModel{
         this.TriggerTasks = TriggerTasks;
     }
 
+    /**
+     * Get 全局过滤条件 
+     * @return Filter 全局过滤条件
+     */
+    public AlarmPolicyFilter getFilter() {
+        return this.Filter;
+    }
+
+    /**
+     * Set 全局过滤条件
+     * @param Filter 全局过滤条件
+     */
+    public void setFilter(AlarmPolicyFilter Filter) {
+        this.Filter = Filter;
+    }
+
+    /**
+     * Get 聚合维度列表，指定按哪些维度 key 来做 group by 
+     * @return GroupBy 聚合维度列表，指定按哪些维度 key 来做 group by
+     */
+    public String [] getGroupBy() {
+        return this.GroupBy;
+    }
+
+    /**
+     * Set 聚合维度列表，指定按哪些维度 key 来做 group by
+     * @param GroupBy 聚合维度列表，指定按哪些维度 key 来做 group by
+     */
+    public void setGroupBy(String [] GroupBy) {
+        this.GroupBy = GroupBy;
+    }
+
     public CreateAlarmPolicyRequest() {
     }
 
@@ -348,6 +394,15 @@ public class CreateAlarmPolicyRequest extends AbstractModel{
                 this.TriggerTasks[i] = new AlarmPolicyTriggerTask(source.TriggerTasks[i]);
             }
         }
+        if (source.Filter != null) {
+            this.Filter = new AlarmPolicyFilter(source.Filter);
+        }
+        if (source.GroupBy != null) {
+            this.GroupBy = new String[source.GroupBy.length];
+            for (int i = 0; i < source.GroupBy.length; i++) {
+                this.GroupBy[i] = new String(source.GroupBy[i]);
+            }
+        }
     }
 
 
@@ -367,6 +422,8 @@ public class CreateAlarmPolicyRequest extends AbstractModel{
         this.setParamObj(map, prefix + "EventCondition.", this.EventCondition);
         this.setParamArraySimple(map, prefix + "NoticeIds.", this.NoticeIds);
         this.setParamArrayObj(map, prefix + "TriggerTasks.", this.TriggerTasks);
+        this.setParamObj(map, prefix + "Filter.", this.Filter);
+        this.setParamArraySimple(map, prefix + "GroupBy.", this.GroupBy);
 
     }
 }

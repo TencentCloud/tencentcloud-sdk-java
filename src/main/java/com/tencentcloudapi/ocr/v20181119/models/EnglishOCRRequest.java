@@ -60,6 +60,13 @@ public class EnglishOCRRequest extends AbstractModel{
     private Boolean EnableCandWord;
 
     /**
+    * 预处理开关，功能是检测图片倾斜的角度，将原本倾斜的图片矫正。该参数默认值为true。
+    */
+    @SerializedName("Preprocess")
+    @Expose
+    private Boolean Preprocess;
+
+    /**
      * Get 图片的 Base64 值。
 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
 支持的图片大小：所下载图片经Base64编码后不超过 7M。图片下载时间不超过 3 秒。
@@ -159,6 +166,22 @@ public class EnglishOCRRequest extends AbstractModel{
         this.EnableCandWord = EnableCandWord;
     }
 
+    /**
+     * Get 预处理开关，功能是检测图片倾斜的角度，将原本倾斜的图片矫正。该参数默认值为true。 
+     * @return Preprocess 预处理开关，功能是检测图片倾斜的角度，将原本倾斜的图片矫正。该参数默认值为true。
+     */
+    public Boolean getPreprocess() {
+        return this.Preprocess;
+    }
+
+    /**
+     * Set 预处理开关，功能是检测图片倾斜的角度，将原本倾斜的图片矫正。该参数默认值为true。
+     * @param Preprocess 预处理开关，功能是检测图片倾斜的角度，将原本倾斜的图片矫正。该参数默认值为true。
+     */
+    public void setPreprocess(Boolean Preprocess) {
+        this.Preprocess = Preprocess;
+    }
+
     public EnglishOCRRequest() {
     }
 
@@ -179,6 +202,9 @@ public class EnglishOCRRequest extends AbstractModel{
         if (source.EnableCandWord != null) {
             this.EnableCandWord = new Boolean(source.EnableCandWord);
         }
+        if (source.Preprocess != null) {
+            this.Preprocess = new Boolean(source.Preprocess);
+        }
     }
 
 
@@ -190,6 +216,7 @@ public class EnglishOCRRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
         this.setParamSimple(map, prefix + "EnableCoordPoint", this.EnableCoordPoint);
         this.setParamSimple(map, prefix + "EnableCandWord", this.EnableCandWord);
+        this.setParamSimple(map, prefix + "Preprocess", this.Preprocess);
 
     }
 }

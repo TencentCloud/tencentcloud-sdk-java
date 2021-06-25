@@ -13,28 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cwp.v20180228.models;
+package com.tencentcloudapi.dbbrain.v20210527.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeMalwaresResponse extends AbstractModel{
+public class DescribeMySqlProcessListResponse extends AbstractModel{
 
     /**
-    * 木马总数。
+    * 实时线程列表。
     */
-    @SerializedName("TotalCount")
+    @SerializedName("ProcessList")
     @Expose
-    private Long TotalCount;
-
-    /**
-    * 木马相关信息。
-    */
-    @SerializedName("Malwares")
-    @Expose
-    private Malware [] Malwares;
+    private MySqlProcess [] ProcessList;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -44,35 +37,19 @@ public class DescribeMalwaresResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 木马总数。 
-     * @return TotalCount 木马总数。
+     * Get 实时线程列表。 
+     * @return ProcessList 实时线程列表。
      */
-    public Long getTotalCount() {
-        return this.TotalCount;
+    public MySqlProcess [] getProcessList() {
+        return this.ProcessList;
     }
 
     /**
-     * Set 木马总数。
-     * @param TotalCount 木马总数。
+     * Set 实时线程列表。
+     * @param ProcessList 实时线程列表。
      */
-    public void setTotalCount(Long TotalCount) {
-        this.TotalCount = TotalCount;
-    }
-
-    /**
-     * Get 木马相关信息。 
-     * @return Malwares 木马相关信息。
-     */
-    public Malware [] getMalwares() {
-        return this.Malwares;
-    }
-
-    /**
-     * Set 木马相关信息。
-     * @param Malwares 木马相关信息。
-     */
-    public void setMalwares(Malware [] Malwares) {
-        this.Malwares = Malwares;
+    public void setProcessList(MySqlProcess [] ProcessList) {
+        this.ProcessList = ProcessList;
     }
 
     /**
@@ -91,21 +68,18 @@ public class DescribeMalwaresResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeMalwaresResponse() {
+    public DescribeMySqlProcessListResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeMalwaresResponse(DescribeMalwaresResponse source) {
-        if (source.TotalCount != null) {
-            this.TotalCount = new Long(source.TotalCount);
-        }
-        if (source.Malwares != null) {
-            this.Malwares = new Malware[source.Malwares.length];
-            for (int i = 0; i < source.Malwares.length; i++) {
-                this.Malwares[i] = new Malware(source.Malwares[i]);
+    public DescribeMySqlProcessListResponse(DescribeMySqlProcessListResponse source) {
+        if (source.ProcessList != null) {
+            this.ProcessList = new MySqlProcess[source.ProcessList.length];
+            for (int i = 0; i < source.ProcessList.length; i++) {
+                this.ProcessList[i] = new MySqlProcess(source.ProcessList[i]);
             }
         }
         if (source.RequestId != null) {
@@ -118,8 +92,7 @@ public class DescribeMalwaresResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
-        this.setParamArrayObj(map, prefix + "Malwares.", this.Malwares);
+        this.setParamArrayObj(map, prefix + "ProcessList.", this.ProcessList);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

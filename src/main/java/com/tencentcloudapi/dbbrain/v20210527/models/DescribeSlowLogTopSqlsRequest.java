@@ -44,14 +44,14 @@ public class DescribeSlowLogTopSqlsRequest extends AbstractModel{
     private String EndTime;
 
     /**
-    * 排序键，目前支持 QueryTime,ExecTimes,RowsSent,LockTime以及RowsExamined 等排序键。
+    * 排序键，目前支持 QueryTime,ExecTimes,RowsSent,LockTime以及RowsExamined 等排序键，默认为QueryTime。
     */
     @SerializedName("SortBy")
     @Expose
     private String SortBy;
 
     /**
-    * 排序方式，支持ASC（升序）以及DESC（降序）。
+    * 排序方式，支持ASC（升序）以及DESC（降序），默认为DESC。
     */
     @SerializedName("OrderBy")
     @Expose
@@ -134,32 +134,32 @@ public class DescribeSlowLogTopSqlsRequest extends AbstractModel{
     }
 
     /**
-     * Get 排序键，目前支持 QueryTime,ExecTimes,RowsSent,LockTime以及RowsExamined 等排序键。 
-     * @return SortBy 排序键，目前支持 QueryTime,ExecTimes,RowsSent,LockTime以及RowsExamined 等排序键。
+     * Get 排序键，目前支持 QueryTime,ExecTimes,RowsSent,LockTime以及RowsExamined 等排序键，默认为QueryTime。 
+     * @return SortBy 排序键，目前支持 QueryTime,ExecTimes,RowsSent,LockTime以及RowsExamined 等排序键，默认为QueryTime。
      */
     public String getSortBy() {
         return this.SortBy;
     }
 
     /**
-     * Set 排序键，目前支持 QueryTime,ExecTimes,RowsSent,LockTime以及RowsExamined 等排序键。
-     * @param SortBy 排序键，目前支持 QueryTime,ExecTimes,RowsSent,LockTime以及RowsExamined 等排序键。
+     * Set 排序键，目前支持 QueryTime,ExecTimes,RowsSent,LockTime以及RowsExamined 等排序键，默认为QueryTime。
+     * @param SortBy 排序键，目前支持 QueryTime,ExecTimes,RowsSent,LockTime以及RowsExamined 等排序键，默认为QueryTime。
      */
     public void setSortBy(String SortBy) {
         this.SortBy = SortBy;
     }
 
     /**
-     * Get 排序方式，支持ASC（升序）以及DESC（降序）。 
-     * @return OrderBy 排序方式，支持ASC（升序）以及DESC（降序）。
+     * Get 排序方式，支持ASC（升序）以及DESC（降序），默认为DESC。 
+     * @return OrderBy 排序方式，支持ASC（升序）以及DESC（降序），默认为DESC。
      */
     public String getOrderBy() {
         return this.OrderBy;
     }
 
     /**
-     * Set 排序方式，支持ASC（升序）以及DESC（降序）。
-     * @param OrderBy 排序方式，支持ASC（升序）以及DESC（降序）。
+     * Set 排序方式，支持ASC（升序）以及DESC（降序），默认为DESC。
+     * @param OrderBy 排序方式，支持ASC（升序）以及DESC（降序），默认为DESC。
      */
     public void setOrderBy(String OrderBy) {
         this.OrderBy = OrderBy;

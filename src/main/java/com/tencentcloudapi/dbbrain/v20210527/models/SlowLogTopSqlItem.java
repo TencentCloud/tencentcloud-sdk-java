@@ -23,21 +23,21 @@ import java.util.HashMap;
 public class SlowLogTopSqlItem extends AbstractModel{
 
     /**
-    * sql总锁等待时间
+    * sql总锁等待时间，单位秒
     */
     @SerializedName("LockTime")
     @Expose
     private Float LockTime;
 
     /**
-    * 最大锁等待时间
+    * 最大锁等待时间，单位秒
     */
     @SerializedName("LockTimeMax")
     @Expose
     private Float LockTimeMax;
 
     /**
-    * 最小锁等待时间
+    * 最小锁等待时间，单位秒
     */
     @SerializedName("LockTimeMin")
     @Expose
@@ -65,21 +65,21 @@ public class SlowLogTopSqlItem extends AbstractModel{
     private Long RowsExaminedMin;
 
     /**
-    * 总耗时
+    * 总耗时，单位秒
     */
     @SerializedName("QueryTime")
     @Expose
     private Float QueryTime;
 
     /**
-    * 最大执行时间
+    * 最大执行时间，单位秒
     */
     @SerializedName("QueryTimeMax")
     @Expose
     private Float QueryTimeMax;
 
     /**
-    * 最小执行时间
+    * 最小执行时间，单位秒
     */
     @SerializedName("QueryTimeMin")
     @Expose
@@ -135,35 +135,35 @@ public class SlowLogTopSqlItem extends AbstractModel{
     private String Schema;
 
     /**
-    * 总耗时占比
+    * 总耗时占比，单位%
     */
     @SerializedName("QueryTimeRatio")
     @Expose
     private Float QueryTimeRatio;
 
     /**
-    * sql总锁等待时间占比
+    * sql总锁等待时间占比，单位%
     */
     @SerializedName("LockTimeRatio")
     @Expose
     private Float LockTimeRatio;
 
     /**
-    * 总扫描行数占比
+    * 总扫描行数占比，单位%
     */
     @SerializedName("RowsExaminedRatio")
     @Expose
     private Float RowsExaminedRatio;
 
     /**
-    * 总返回行数占比
+    * 总返回行数占比，单位%
     */
     @SerializedName("RowsSentRatio")
     @Expose
     private Float RowsSentRatio;
 
     /**
-    * 平均执行时间
+    * 平均执行时间，单位秒
     */
     @SerializedName("QueryTimeAvg")
     @Expose
@@ -177,7 +177,7 @@ public class SlowLogTopSqlItem extends AbstractModel{
     private Float RowsSentAvg;
 
     /**
-    * 平均锁等待时间
+    * 平均锁等待时间，单位秒
     */
     @SerializedName("LockTimeAvg")
     @Expose
@@ -191,48 +191,48 @@ public class SlowLogTopSqlItem extends AbstractModel{
     private Float RowsExaminedAvg;
 
     /**
-     * Get sql总锁等待时间 
-     * @return LockTime sql总锁等待时间
+     * Get sql总锁等待时间，单位秒 
+     * @return LockTime sql总锁等待时间，单位秒
      */
     public Float getLockTime() {
         return this.LockTime;
     }
 
     /**
-     * Set sql总锁等待时间
-     * @param LockTime sql总锁等待时间
+     * Set sql总锁等待时间，单位秒
+     * @param LockTime sql总锁等待时间，单位秒
      */
     public void setLockTime(Float LockTime) {
         this.LockTime = LockTime;
     }
 
     /**
-     * Get 最大锁等待时间 
-     * @return LockTimeMax 最大锁等待时间
+     * Get 最大锁等待时间，单位秒 
+     * @return LockTimeMax 最大锁等待时间，单位秒
      */
     public Float getLockTimeMax() {
         return this.LockTimeMax;
     }
 
     /**
-     * Set 最大锁等待时间
-     * @param LockTimeMax 最大锁等待时间
+     * Set 最大锁等待时间，单位秒
+     * @param LockTimeMax 最大锁等待时间，单位秒
      */
     public void setLockTimeMax(Float LockTimeMax) {
         this.LockTimeMax = LockTimeMax;
     }
 
     /**
-     * Get 最小锁等待时间 
-     * @return LockTimeMin 最小锁等待时间
+     * Get 最小锁等待时间，单位秒 
+     * @return LockTimeMin 最小锁等待时间，单位秒
      */
     public Float getLockTimeMin() {
         return this.LockTimeMin;
     }
 
     /**
-     * Set 最小锁等待时间
-     * @param LockTimeMin 最小锁等待时间
+     * Set 最小锁等待时间，单位秒
+     * @param LockTimeMin 最小锁等待时间，单位秒
      */
     public void setLockTimeMin(Float LockTimeMin) {
         this.LockTimeMin = LockTimeMin;
@@ -287,48 +287,48 @@ public class SlowLogTopSqlItem extends AbstractModel{
     }
 
     /**
-     * Get 总耗时 
-     * @return QueryTime 总耗时
+     * Get 总耗时，单位秒 
+     * @return QueryTime 总耗时，单位秒
      */
     public Float getQueryTime() {
         return this.QueryTime;
     }
 
     /**
-     * Set 总耗时
-     * @param QueryTime 总耗时
+     * Set 总耗时，单位秒
+     * @param QueryTime 总耗时，单位秒
      */
     public void setQueryTime(Float QueryTime) {
         this.QueryTime = QueryTime;
     }
 
     /**
-     * Get 最大执行时间 
-     * @return QueryTimeMax 最大执行时间
+     * Get 最大执行时间，单位秒 
+     * @return QueryTimeMax 最大执行时间，单位秒
      */
     public Float getQueryTimeMax() {
         return this.QueryTimeMax;
     }
 
     /**
-     * Set 最大执行时间
-     * @param QueryTimeMax 最大执行时间
+     * Set 最大执行时间，单位秒
+     * @param QueryTimeMax 最大执行时间，单位秒
      */
     public void setQueryTimeMax(Float QueryTimeMax) {
         this.QueryTimeMax = QueryTimeMax;
     }
 
     /**
-     * Get 最小执行时间 
-     * @return QueryTimeMin 最小执行时间
+     * Get 最小执行时间，单位秒 
+     * @return QueryTimeMin 最小执行时间，单位秒
      */
     public Float getQueryTimeMin() {
         return this.QueryTimeMin;
     }
 
     /**
-     * Set 最小执行时间
-     * @param QueryTimeMin 最小执行时间
+     * Set 最小执行时间，单位秒
+     * @param QueryTimeMin 最小执行时间，单位秒
      */
     public void setQueryTimeMin(Float QueryTimeMin) {
         this.QueryTimeMin = QueryTimeMin;
@@ -447,80 +447,80 @@ public class SlowLogTopSqlItem extends AbstractModel{
     }
 
     /**
-     * Get 总耗时占比 
-     * @return QueryTimeRatio 总耗时占比
+     * Get 总耗时占比，单位% 
+     * @return QueryTimeRatio 总耗时占比，单位%
      */
     public Float getQueryTimeRatio() {
         return this.QueryTimeRatio;
     }
 
     /**
-     * Set 总耗时占比
-     * @param QueryTimeRatio 总耗时占比
+     * Set 总耗时占比，单位%
+     * @param QueryTimeRatio 总耗时占比，单位%
      */
     public void setQueryTimeRatio(Float QueryTimeRatio) {
         this.QueryTimeRatio = QueryTimeRatio;
     }
 
     /**
-     * Get sql总锁等待时间占比 
-     * @return LockTimeRatio sql总锁等待时间占比
+     * Get sql总锁等待时间占比，单位% 
+     * @return LockTimeRatio sql总锁等待时间占比，单位%
      */
     public Float getLockTimeRatio() {
         return this.LockTimeRatio;
     }
 
     /**
-     * Set sql总锁等待时间占比
-     * @param LockTimeRatio sql总锁等待时间占比
+     * Set sql总锁等待时间占比，单位%
+     * @param LockTimeRatio sql总锁等待时间占比，单位%
      */
     public void setLockTimeRatio(Float LockTimeRatio) {
         this.LockTimeRatio = LockTimeRatio;
     }
 
     /**
-     * Get 总扫描行数占比 
-     * @return RowsExaminedRatio 总扫描行数占比
+     * Get 总扫描行数占比，单位% 
+     * @return RowsExaminedRatio 总扫描行数占比，单位%
      */
     public Float getRowsExaminedRatio() {
         return this.RowsExaminedRatio;
     }
 
     /**
-     * Set 总扫描行数占比
-     * @param RowsExaminedRatio 总扫描行数占比
+     * Set 总扫描行数占比，单位%
+     * @param RowsExaminedRatio 总扫描行数占比，单位%
      */
     public void setRowsExaminedRatio(Float RowsExaminedRatio) {
         this.RowsExaminedRatio = RowsExaminedRatio;
     }
 
     /**
-     * Get 总返回行数占比 
-     * @return RowsSentRatio 总返回行数占比
+     * Get 总返回行数占比，单位% 
+     * @return RowsSentRatio 总返回行数占比，单位%
      */
     public Float getRowsSentRatio() {
         return this.RowsSentRatio;
     }
 
     /**
-     * Set 总返回行数占比
-     * @param RowsSentRatio 总返回行数占比
+     * Set 总返回行数占比，单位%
+     * @param RowsSentRatio 总返回行数占比，单位%
      */
     public void setRowsSentRatio(Float RowsSentRatio) {
         this.RowsSentRatio = RowsSentRatio;
     }
 
     /**
-     * Get 平均执行时间 
-     * @return QueryTimeAvg 平均执行时间
+     * Get 平均执行时间，单位秒 
+     * @return QueryTimeAvg 平均执行时间，单位秒
      */
     public Float getQueryTimeAvg() {
         return this.QueryTimeAvg;
     }
 
     /**
-     * Set 平均执行时间
-     * @param QueryTimeAvg 平均执行时间
+     * Set 平均执行时间，单位秒
+     * @param QueryTimeAvg 平均执行时间，单位秒
      */
     public void setQueryTimeAvg(Float QueryTimeAvg) {
         this.QueryTimeAvg = QueryTimeAvg;
@@ -543,16 +543,16 @@ public class SlowLogTopSqlItem extends AbstractModel{
     }
 
     /**
-     * Get 平均锁等待时间 
-     * @return LockTimeAvg 平均锁等待时间
+     * Get 平均锁等待时间，单位秒 
+     * @return LockTimeAvg 平均锁等待时间，单位秒
      */
     public Float getLockTimeAvg() {
         return this.LockTimeAvg;
     }
 
     /**
-     * Set 平均锁等待时间
-     * @param LockTimeAvg 平均锁等待时间
+     * Set 平均锁等待时间，单位秒
+     * @param LockTimeAvg 平均锁等待时间，单位秒
      */
     public void setLockTimeAvg(Float LockTimeAvg) {
         this.LockTimeAvg = LockTimeAvg;

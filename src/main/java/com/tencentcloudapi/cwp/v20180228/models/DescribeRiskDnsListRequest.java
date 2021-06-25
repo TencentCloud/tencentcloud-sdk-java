@@ -49,14 +49,14 @@ public class DescribeRiskDnsListRequest extends AbstractModel{
     private Filter [] Filters;
 
     /**
-    * 排序方式
+    * 排序方式：根据请求次数排序：asc-升序/desc-降序
     */
     @SerializedName("Order")
     @Expose
     private String Order;
 
     /**
-    * 排序字段
+    * 排序字段：AccessCount-请求次数
     */
     @SerializedName("By")
     @Expose
@@ -131,32 +131,32 @@ public class DescribeRiskDnsListRequest extends AbstractModel{
     }
 
     /**
-     * Get 排序方式 
-     * @return Order 排序方式
+     * Get 排序方式：根据请求次数排序：asc-升序/desc-降序 
+     * @return Order 排序方式：根据请求次数排序：asc-升序/desc-降序
      */
     public String getOrder() {
         return this.Order;
     }
 
     /**
-     * Set 排序方式
-     * @param Order 排序方式
+     * Set 排序方式：根据请求次数排序：asc-升序/desc-降序
+     * @param Order 排序方式：根据请求次数排序：asc-升序/desc-降序
      */
     public void setOrder(String Order) {
         this.Order = Order;
     }
 
     /**
-     * Get 排序字段 
-     * @return By 排序字段
+     * Get 排序字段：AccessCount-请求次数 
+     * @return By 排序字段：AccessCount-请求次数
      */
     public String getBy() {
         return this.By;
     }
 
     /**
-     * Set 排序字段
-     * @param By 排序字段
+     * Set 排序字段：AccessCount-请求次数
+     * @param By 排序字段：AccessCount-请求次数
      */
     public void setBy(String By) {
         this.By = By;

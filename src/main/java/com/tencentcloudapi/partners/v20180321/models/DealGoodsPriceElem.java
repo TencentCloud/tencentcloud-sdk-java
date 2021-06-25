@@ -23,26 +23,49 @@ import java.util.HashMap;
 public class DealGoodsPriceElem extends AbstractModel{
 
     /**
-    * 实付金额
+    * 实付金额（单位：分）
     */
     @SerializedName("RealTotalCost")
     @Expose
     private Long RealTotalCost;
 
     /**
-     * Get 实付金额 
-     * @return RealTotalCost 实付金额
+    * 订单实际金额（不含折扣，单位：分）
+    */
+    @SerializedName("OriginalTotalCost")
+    @Expose
+    private Long OriginalTotalCost;
+
+    /**
+     * Get 实付金额（单位：分） 
+     * @return RealTotalCost 实付金额（单位：分）
      */
     public Long getRealTotalCost() {
         return this.RealTotalCost;
     }
 
     /**
-     * Set 实付金额
-     * @param RealTotalCost 实付金额
+     * Set 实付金额（单位：分）
+     * @param RealTotalCost 实付金额（单位：分）
      */
     public void setRealTotalCost(Long RealTotalCost) {
         this.RealTotalCost = RealTotalCost;
+    }
+
+    /**
+     * Get 订单实际金额（不含折扣，单位：分） 
+     * @return OriginalTotalCost 订单实际金额（不含折扣，单位：分）
+     */
+    public Long getOriginalTotalCost() {
+        return this.OriginalTotalCost;
+    }
+
+    /**
+     * Set 订单实际金额（不含折扣，单位：分）
+     * @param OriginalTotalCost 订单实际金额（不含折扣，单位：分）
+     */
+    public void setOriginalTotalCost(Long OriginalTotalCost) {
+        this.OriginalTotalCost = OriginalTotalCost;
     }
 
     public DealGoodsPriceElem() {
@@ -56,6 +79,9 @@ public class DealGoodsPriceElem extends AbstractModel{
         if (source.RealTotalCost != null) {
             this.RealTotalCost = new Long(source.RealTotalCost);
         }
+        if (source.OriginalTotalCost != null) {
+            this.OriginalTotalCost = new Long(source.OriginalTotalCost);
+        }
     }
 
 
@@ -64,6 +90,7 @@ public class DealGoodsPriceElem extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RealTotalCost", this.RealTotalCost);
+        this.setParamSimple(map, prefix + "OriginalTotalCost", this.OriginalTotalCost);
 
     }
 }

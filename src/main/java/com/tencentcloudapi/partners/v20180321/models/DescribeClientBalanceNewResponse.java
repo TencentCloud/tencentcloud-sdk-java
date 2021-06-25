@@ -13,28 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cwp.v20180228.models;
+package com.tencentcloudapi.partners.v20180321.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeMalwaresResponse extends AbstractModel{
+public class DescribeClientBalanceNewResponse extends AbstractModel{
 
     /**
-    * 木马总数。
+    * 账户可用余额，单位分 （可用余额 = 现金余额 + 赠送金余额 - 欠费金额 - 冻结金额）
     */
-    @SerializedName("TotalCount")
+    @SerializedName("Balance")
     @Expose
-    private Long TotalCount;
+    private Long Balance;
 
     /**
-    * 木马相关信息。
+    * 账户现金余额，单位分
     */
-    @SerializedName("Malwares")
+    @SerializedName("Cash")
     @Expose
-    private Malware [] Malwares;
+    private Long Cash;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -44,35 +44,35 @@ public class DescribeMalwaresResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 木马总数。 
-     * @return TotalCount 木马总数。
+     * Get 账户可用余额，单位分 （可用余额 = 现金余额 + 赠送金余额 - 欠费金额 - 冻结金额） 
+     * @return Balance 账户可用余额，单位分 （可用余额 = 现金余额 + 赠送金余额 - 欠费金额 - 冻结金额）
      */
-    public Long getTotalCount() {
-        return this.TotalCount;
+    public Long getBalance() {
+        return this.Balance;
     }
 
     /**
-     * Set 木马总数。
-     * @param TotalCount 木马总数。
+     * Set 账户可用余额，单位分 （可用余额 = 现金余额 + 赠送金余额 - 欠费金额 - 冻结金额）
+     * @param Balance 账户可用余额，单位分 （可用余额 = 现金余额 + 赠送金余额 - 欠费金额 - 冻结金额）
      */
-    public void setTotalCount(Long TotalCount) {
-        this.TotalCount = TotalCount;
+    public void setBalance(Long Balance) {
+        this.Balance = Balance;
     }
 
     /**
-     * Get 木马相关信息。 
-     * @return Malwares 木马相关信息。
+     * Get 账户现金余额，单位分 
+     * @return Cash 账户现金余额，单位分
      */
-    public Malware [] getMalwares() {
-        return this.Malwares;
+    public Long getCash() {
+        return this.Cash;
     }
 
     /**
-     * Set 木马相关信息。
-     * @param Malwares 木马相关信息。
+     * Set 账户现金余额，单位分
+     * @param Cash 账户现金余额，单位分
      */
-    public void setMalwares(Malware [] Malwares) {
-        this.Malwares = Malwares;
+    public void setCash(Long Cash) {
+        this.Cash = Cash;
     }
 
     /**
@@ -91,22 +91,19 @@ public class DescribeMalwaresResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeMalwaresResponse() {
+    public DescribeClientBalanceNewResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeMalwaresResponse(DescribeMalwaresResponse source) {
-        if (source.TotalCount != null) {
-            this.TotalCount = new Long(source.TotalCount);
+    public DescribeClientBalanceNewResponse(DescribeClientBalanceNewResponse source) {
+        if (source.Balance != null) {
+            this.Balance = new Long(source.Balance);
         }
-        if (source.Malwares != null) {
-            this.Malwares = new Malware[source.Malwares.length];
-            for (int i = 0; i < source.Malwares.length; i++) {
-                this.Malwares[i] = new Malware(source.Malwares[i]);
-            }
+        if (source.Cash != null) {
+            this.Cash = new Long(source.Cash);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -118,8 +115,8 @@ public class DescribeMalwaresResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
-        this.setParamArrayObj(map, prefix + "Malwares.", this.Malwares);
+        this.setParamSimple(map, prefix + "Balance", this.Balance);
+        this.setParamSimple(map, prefix + "Cash", this.Cash);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

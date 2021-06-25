@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ModifyDiagDBInstanceConfRequest extends AbstractModel{
 
     /**
-    * 巡检开关。
+    * 实例配置，包括巡检、概览开关等。
     */
     @SerializedName("InstanceConfs")
     @Expose
@@ -51,16 +51,16 @@ public class ModifyDiagDBInstanceConfRequest extends AbstractModel{
     private String [] InstanceIds;
 
     /**
-     * Get 巡检开关。 
-     * @return InstanceConfs 巡检开关。
+     * Get 实例配置，包括巡检、概览开关等。 
+     * @return InstanceConfs 实例配置，包括巡检、概览开关等。
      */
     public InstanceConfs getInstanceConfs() {
         return this.InstanceConfs;
     }
 
     /**
-     * Set 巡检开关。
-     * @param InstanceConfs 巡检开关。
+     * Set 实例配置，包括巡检、概览开关等。
+     * @param InstanceConfs 实例配置，包括巡检、概览开关等。
      */
     public void setInstanceConfs(InstanceConfs InstanceConfs) {
         this.InstanceConfs = InstanceConfs;
