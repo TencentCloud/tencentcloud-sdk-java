@@ -66,6 +66,20 @@ public class DescribeBillResourceSummaryRequest extends AbstractModel{
     private String ActionType;
 
     /**
+    * 查询指定资源信息
+    */
+    @SerializedName("ResourceId")
+    @Expose
+    private String ResourceId;
+
+    /**
+    * 付费模式 prePay/postPay
+    */
+    @SerializedName("PayMode")
+    @Expose
+    private String PayMode;
+
+    /**
      * Get 偏移量 
      * @return Offset 偏移量
      */
@@ -165,6 +179,38 @@ public class DescribeBillResourceSummaryRequest extends AbstractModel{
         this.ActionType = ActionType;
     }
 
+    /**
+     * Get 查询指定资源信息 
+     * @return ResourceId 查询指定资源信息
+     */
+    public String getResourceId() {
+        return this.ResourceId;
+    }
+
+    /**
+     * Set 查询指定资源信息
+     * @param ResourceId 查询指定资源信息
+     */
+    public void setResourceId(String ResourceId) {
+        this.ResourceId = ResourceId;
+    }
+
+    /**
+     * Get 付费模式 prePay/postPay 
+     * @return PayMode 付费模式 prePay/postPay
+     */
+    public String getPayMode() {
+        return this.PayMode;
+    }
+
+    /**
+     * Set 付费模式 prePay/postPay
+     * @param PayMode 付费模式 prePay/postPay
+     */
+    public void setPayMode(String PayMode) {
+        this.PayMode = PayMode;
+    }
+
     public DescribeBillResourceSummaryRequest() {
     }
 
@@ -191,6 +237,12 @@ public class DescribeBillResourceSummaryRequest extends AbstractModel{
         if (source.ActionType != null) {
             this.ActionType = new String(source.ActionType);
         }
+        if (source.ResourceId != null) {
+            this.ResourceId = new String(source.ResourceId);
+        }
+        if (source.PayMode != null) {
+            this.PayMode = new String(source.PayMode);
+        }
     }
 
 
@@ -204,6 +256,8 @@ public class DescribeBillResourceSummaryRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Month", this.Month);
         this.setParamSimple(map, prefix + "NeedRecordNum", this.NeedRecordNum);
         this.setParamSimple(map, prefix + "ActionType", this.ActionType);
+        this.setParamSimple(map, prefix + "ResourceId", this.ResourceId);
+        this.setParamSimple(map, prefix + "PayMode", this.PayMode);
 
     }
 }

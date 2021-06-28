@@ -13,25 +13,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cwp.v20180228.models;
+package com.tencentcloudapi.eis.v20210601.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeRiskDnsListResponse extends AbstractModel{
+public class ListRuntimeDeployedInstancesMCResponse extends AbstractModel{
 
     /**
-    * 恶意请求列表数组
-注意：此字段可能返回 null，表示取不到有效值。
+    * 运行时所部属的应用实例列表
     */
-    @SerializedName("RiskDnsList")
+    @SerializedName("Instances")
     @Expose
-    private RiskDnsList [] RiskDnsList;
+    private RuntimeDeployedInstanceMC [] Instances;
 
     /**
-    * 总数量
+    * 满足条件的记录总数，用于分页器
     */
     @SerializedName("TotalCount")
     @Expose
@@ -45,36 +44,32 @@ public class DescribeRiskDnsListResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 恶意请求列表数组
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RiskDnsList 恶意请求列表数组
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 运行时所部属的应用实例列表 
+     * @return Instances 运行时所部属的应用实例列表
      */
-    public RiskDnsList [] getRiskDnsList() {
-        return this.RiskDnsList;
+    public RuntimeDeployedInstanceMC [] getInstances() {
+        return this.Instances;
     }
 
     /**
-     * Set 恶意请求列表数组
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param RiskDnsList 恶意请求列表数组
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 运行时所部属的应用实例列表
+     * @param Instances 运行时所部属的应用实例列表
      */
-    public void setRiskDnsList(RiskDnsList [] RiskDnsList) {
-        this.RiskDnsList = RiskDnsList;
+    public void setInstances(RuntimeDeployedInstanceMC [] Instances) {
+        this.Instances = Instances;
     }
 
     /**
-     * Get 总数量 
-     * @return TotalCount 总数量
+     * Get 满足条件的记录总数，用于分页器 
+     * @return TotalCount 满足条件的记录总数，用于分页器
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 总数量
-     * @param TotalCount 总数量
+     * Set 满足条件的记录总数，用于分页器
+     * @param TotalCount 满足条件的记录总数，用于分页器
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
@@ -96,18 +91,18 @@ public class DescribeRiskDnsListResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeRiskDnsListResponse() {
+    public ListRuntimeDeployedInstancesMCResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeRiskDnsListResponse(DescribeRiskDnsListResponse source) {
-        if (source.RiskDnsList != null) {
-            this.RiskDnsList = new RiskDnsList[source.RiskDnsList.length];
-            for (int i = 0; i < source.RiskDnsList.length; i++) {
-                this.RiskDnsList[i] = new RiskDnsList(source.RiskDnsList[i]);
+    public ListRuntimeDeployedInstancesMCResponse(ListRuntimeDeployedInstancesMCResponse source) {
+        if (source.Instances != null) {
+            this.Instances = new RuntimeDeployedInstanceMC[source.Instances.length];
+            for (int i = 0; i < source.Instances.length; i++) {
+                this.Instances[i] = new RuntimeDeployedInstanceMC(source.Instances[i]);
             }
         }
         if (source.TotalCount != null) {
@@ -123,7 +118,7 @@ public class DescribeRiskDnsListResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "RiskDnsList.", this.RiskDnsList);
+        this.setParamArrayObj(map, prefix + "Instances.", this.Instances);
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 

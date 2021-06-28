@@ -13,29 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cwp.v20180228.models;
+package com.tencentcloudapi.eis.v20210601.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeRiskDnsListResponse extends AbstractModel{
+public class GetRuntimeResourceMonitorMetricMCResponse extends AbstractModel{
 
     /**
-    * 恶意请求列表数组
-注意：此字段可能返回 null，表示取不到有效值。
+    * 指标名称，K8sWorkloadCpuCoreUsed，K8sWorkloadMemUsageBytes，K8sWorkloadNetworkReceiveBytesBw，K8sWorkloadNetworkTransmitBytesBw
     */
-    @SerializedName("RiskDnsList")
+    @SerializedName("MetricType")
     @Expose
-    private RiskDnsList [] RiskDnsList;
+    private String MetricType;
 
     /**
-    * 总数量
+    * metric数值列表
     */
-    @SerializedName("TotalCount")
+    @SerializedName("Values")
     @Expose
-    private Long TotalCount;
+    private MetricValueMC [] Values;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -45,39 +44,35 @@ public class DescribeRiskDnsListResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 恶意请求列表数组
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RiskDnsList 恶意请求列表数组
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 指标名称，K8sWorkloadCpuCoreUsed，K8sWorkloadMemUsageBytes，K8sWorkloadNetworkReceiveBytesBw，K8sWorkloadNetworkTransmitBytesBw 
+     * @return MetricType 指标名称，K8sWorkloadCpuCoreUsed，K8sWorkloadMemUsageBytes，K8sWorkloadNetworkReceiveBytesBw，K8sWorkloadNetworkTransmitBytesBw
      */
-    public RiskDnsList [] getRiskDnsList() {
-        return this.RiskDnsList;
+    public String getMetricType() {
+        return this.MetricType;
     }
 
     /**
-     * Set 恶意请求列表数组
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param RiskDnsList 恶意请求列表数组
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 指标名称，K8sWorkloadCpuCoreUsed，K8sWorkloadMemUsageBytes，K8sWorkloadNetworkReceiveBytesBw，K8sWorkloadNetworkTransmitBytesBw
+     * @param MetricType 指标名称，K8sWorkloadCpuCoreUsed，K8sWorkloadMemUsageBytes，K8sWorkloadNetworkReceiveBytesBw，K8sWorkloadNetworkTransmitBytesBw
      */
-    public void setRiskDnsList(RiskDnsList [] RiskDnsList) {
-        this.RiskDnsList = RiskDnsList;
+    public void setMetricType(String MetricType) {
+        this.MetricType = MetricType;
     }
 
     /**
-     * Get 总数量 
-     * @return TotalCount 总数量
+     * Get metric数值列表 
+     * @return Values metric数值列表
      */
-    public Long getTotalCount() {
-        return this.TotalCount;
+    public MetricValueMC [] getValues() {
+        return this.Values;
     }
 
     /**
-     * Set 总数量
-     * @param TotalCount 总数量
+     * Set metric数值列表
+     * @param Values metric数值列表
      */
-    public void setTotalCount(Long TotalCount) {
-        this.TotalCount = TotalCount;
+    public void setValues(MetricValueMC [] Values) {
+        this.Values = Values;
     }
 
     /**
@@ -96,22 +91,22 @@ public class DescribeRiskDnsListResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeRiskDnsListResponse() {
+    public GetRuntimeResourceMonitorMetricMCResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeRiskDnsListResponse(DescribeRiskDnsListResponse source) {
-        if (source.RiskDnsList != null) {
-            this.RiskDnsList = new RiskDnsList[source.RiskDnsList.length];
-            for (int i = 0; i < source.RiskDnsList.length; i++) {
-                this.RiskDnsList[i] = new RiskDnsList(source.RiskDnsList[i]);
-            }
+    public GetRuntimeResourceMonitorMetricMCResponse(GetRuntimeResourceMonitorMetricMCResponse source) {
+        if (source.MetricType != null) {
+            this.MetricType = new String(source.MetricType);
         }
-        if (source.TotalCount != null) {
-            this.TotalCount = new Long(source.TotalCount);
+        if (source.Values != null) {
+            this.Values = new MetricValueMC[source.Values.length];
+            for (int i = 0; i < source.Values.length; i++) {
+                this.Values[i] = new MetricValueMC(source.Values[i]);
+            }
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -123,8 +118,8 @@ public class DescribeRiskDnsListResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "RiskDnsList.", this.RiskDnsList);
-        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamSimple(map, prefix + "MetricType", this.MetricType);
+        this.setParamArrayObj(map, prefix + "Values.", this.Values);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

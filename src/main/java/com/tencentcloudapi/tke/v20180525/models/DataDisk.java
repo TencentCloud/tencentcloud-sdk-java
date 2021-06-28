@@ -63,6 +63,14 @@ public class DataDisk extends AbstractModel{
     private String MountTarget;
 
     /**
+    * 挂载设备名或分区名
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DiskPartition")
+    @Expose
+    private String DiskPartition;
+
+    /**
      * Get 云盘类型
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return DiskType 云盘类型
@@ -162,6 +170,26 @@ public class DataDisk extends AbstractModel{
         this.MountTarget = MountTarget;
     }
 
+    /**
+     * Get 挂载设备名或分区名
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DiskPartition 挂载设备名或分区名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDiskPartition() {
+        return this.DiskPartition;
+    }
+
+    /**
+     * Set 挂载设备名或分区名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DiskPartition 挂载设备名或分区名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDiskPartition(String DiskPartition) {
+        this.DiskPartition = DiskPartition;
+    }
+
     public DataDisk() {
     }
 
@@ -185,6 +213,9 @@ public class DataDisk extends AbstractModel{
         if (source.MountTarget != null) {
             this.MountTarget = new String(source.MountTarget);
         }
+        if (source.DiskPartition != null) {
+            this.DiskPartition = new String(source.DiskPartition);
+        }
     }
 
 
@@ -197,6 +228,7 @@ public class DataDisk extends AbstractModel{
         this.setParamSimple(map, prefix + "DiskSize", this.DiskSize);
         this.setParamSimple(map, prefix + "AutoFormatAndMount", this.AutoFormatAndMount);
         this.setParamSimple(map, prefix + "MountTarget", this.MountTarget);
+        this.setParamSimple(map, prefix + "DiskPartition", this.DiskPartition);
 
     }
 }

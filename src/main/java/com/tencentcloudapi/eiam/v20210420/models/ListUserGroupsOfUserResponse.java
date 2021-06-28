@@ -13,29 +13,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cwp.v20180228.models;
+package com.tencentcloudapi.eiam.v20210420.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeRiskDnsListResponse extends AbstractModel{
+public class ListUserGroupsOfUserResponse extends AbstractModel{
 
     /**
-    * 恶意请求列表数组
+    * 用户所属的用户组ID列表。
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("RiskDnsList")
+    @SerializedName("UserGroupIds")
     @Expose
-    private RiskDnsList [] RiskDnsList;
+    private String [] UserGroupIds;
 
     /**
-    * 总数量
+    * 用户ID，是用户的全局唯一标识。
+注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("TotalCount")
+    @SerializedName("UserId")
     @Expose
-    private Long TotalCount;
+    private String UserId;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -45,39 +46,43 @@ public class DescribeRiskDnsListResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 恶意请求列表数组
+     * Get 用户所属的用户组ID列表。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RiskDnsList 恶意请求列表数组
+     * @return UserGroupIds 用户所属的用户组ID列表。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public RiskDnsList [] getRiskDnsList() {
-        return this.RiskDnsList;
+    public String [] getUserGroupIds() {
+        return this.UserGroupIds;
     }
 
     /**
-     * Set 恶意请求列表数组
+     * Set 用户所属的用户组ID列表。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RiskDnsList 恶意请求列表数组
+     * @param UserGroupIds 用户所属的用户组ID列表。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setRiskDnsList(RiskDnsList [] RiskDnsList) {
-        this.RiskDnsList = RiskDnsList;
+    public void setUserGroupIds(String [] UserGroupIds) {
+        this.UserGroupIds = UserGroupIds;
     }
 
     /**
-     * Get 总数量 
-     * @return TotalCount 总数量
+     * Get 用户ID，是用户的全局唯一标识。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UserId 用户ID，是用户的全局唯一标识。
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getTotalCount() {
-        return this.TotalCount;
+    public String getUserId() {
+        return this.UserId;
     }
 
     /**
-     * Set 总数量
-     * @param TotalCount 总数量
+     * Set 用户ID，是用户的全局唯一标识。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UserId 用户ID，是用户的全局唯一标识。
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setTotalCount(Long TotalCount) {
-        this.TotalCount = TotalCount;
+    public void setUserId(String UserId) {
+        this.UserId = UserId;
     }
 
     /**
@@ -96,22 +101,22 @@ public class DescribeRiskDnsListResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeRiskDnsListResponse() {
+    public ListUserGroupsOfUserResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeRiskDnsListResponse(DescribeRiskDnsListResponse source) {
-        if (source.RiskDnsList != null) {
-            this.RiskDnsList = new RiskDnsList[source.RiskDnsList.length];
-            for (int i = 0; i < source.RiskDnsList.length; i++) {
-                this.RiskDnsList[i] = new RiskDnsList(source.RiskDnsList[i]);
+    public ListUserGroupsOfUserResponse(ListUserGroupsOfUserResponse source) {
+        if (source.UserGroupIds != null) {
+            this.UserGroupIds = new String[source.UserGroupIds.length];
+            for (int i = 0; i < source.UserGroupIds.length; i++) {
+                this.UserGroupIds[i] = new String(source.UserGroupIds[i]);
             }
         }
-        if (source.TotalCount != null) {
-            this.TotalCount = new Long(source.TotalCount);
+        if (source.UserId != null) {
+            this.UserId = new String(source.UserId);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -123,8 +128,8 @@ public class DescribeRiskDnsListResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "RiskDnsList.", this.RiskDnsList);
-        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamArraySimple(map, prefix + "UserGroupIds.", this.UserGroupIds);
+        this.setParamSimple(map, prefix + "UserId", this.UserId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

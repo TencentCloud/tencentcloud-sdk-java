@@ -282,6 +282,14 @@ public class ClusterInstancesInfo extends AbstractModel{
     private Long ProductId;
 
     /**
+    * 地区ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Zone")
+    @Expose
+    private String Zone;
+
+    /**
      * Get ID号
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Id ID号
@@ -969,6 +977,26 @@ public class ClusterInstancesInfo extends AbstractModel{
         this.ProductId = ProductId;
     }
 
+    /**
+     * Get 地区ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Zone 地区ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getZone() {
+        return this.Zone;
+    }
+
+    /**
+     * Set 地区ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Zone 地区ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setZone(String Zone) {
+        this.Zone = Zone;
+    }
+
     public ClusterInstancesInfo() {
     }
 
@@ -1067,6 +1095,9 @@ public class ClusterInstancesInfo extends AbstractModel{
         if (source.ProductId != null) {
             this.ProductId = new Long(source.ProductId);
         }
+        if (source.Zone != null) {
+            this.Zone = new String(source.Zone);
+        }
     }
 
 
@@ -1103,6 +1134,7 @@ public class ClusterInstancesInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "ServiceClass", this.ServiceClass);
         this.setParamSimple(map, prefix + "AliasInfo", this.AliasInfo);
         this.setParamSimple(map, prefix + "ProductId", this.ProductId);
+        this.setParamSimple(map, prefix + "Zone", this.Zone);
 
     }
 }
