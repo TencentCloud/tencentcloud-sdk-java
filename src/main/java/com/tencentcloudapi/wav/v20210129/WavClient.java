@@ -219,6 +219,26 @@ public class WavClient extends AbstractClient{
     }
 
     /**
+     *企业可通过此接口将企业主体对应的外部联系人id转换为乐销车应用主体对应的外部联系人。
+     * @param req QueryExternalUserMappingInfoRequest
+     * @return QueryExternalUserMappingInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryExternalUserMappingInfoResponse QueryExternalUserMappingInfo(QueryExternalUserMappingInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<QueryExternalUserMappingInfoResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<QueryExternalUserMappingInfoResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "QueryExternalUserMappingInfo");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询小程序码列表接口
      * @param req QueryMiniAppCodeListRequest
      * @return QueryMiniAppCodeListResponse

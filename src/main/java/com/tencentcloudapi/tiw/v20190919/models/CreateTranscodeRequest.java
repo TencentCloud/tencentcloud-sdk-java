@@ -78,6 +78,15 @@ tar.gz： 生成`.tar.gz`压缩包
     private String ExtraData;
 
     /**
+    * 文档转码优先级，支持填入以下值：<br/>
+- low: 低优先级转码，能支持500MB（下载超时时间10分钟）以及2000页文档，但资源有限可能会有比较长时间的排队，请酌情使用该功能。<br/>
+- 不填表示正常优先级转码，支持200MB文件（下载超时时间2分钟），500页以内的文档进行转码
+    */
+    @SerializedName("Priority")
+    @Expose
+    private String Priority;
+
+    /**
      * Get 客户的SdkAppId 
      * @return SdkAppId 客户的SdkAppId
      */
@@ -213,6 +222,30 @@ tar.gz： 生成`.tar.gz`压缩包
         this.ExtraData = ExtraData;
     }
 
+    /**
+     * Get 文档转码优先级，支持填入以下值：<br/>
+- low: 低优先级转码，能支持500MB（下载超时时间10分钟）以及2000页文档，但资源有限可能会有比较长时间的排队，请酌情使用该功能。<br/>
+- 不填表示正常优先级转码，支持200MB文件（下载超时时间2分钟），500页以内的文档进行转码 
+     * @return Priority 文档转码优先级，支持填入以下值：<br/>
+- low: 低优先级转码，能支持500MB（下载超时时间10分钟）以及2000页文档，但资源有限可能会有比较长时间的排队，请酌情使用该功能。<br/>
+- 不填表示正常优先级转码，支持200MB文件（下载超时时间2分钟），500页以内的文档进行转码
+     */
+    public String getPriority() {
+        return this.Priority;
+    }
+
+    /**
+     * Set 文档转码优先级，支持填入以下值：<br/>
+- low: 低优先级转码，能支持500MB（下载超时时间10分钟）以及2000页文档，但资源有限可能会有比较长时间的排队，请酌情使用该功能。<br/>
+- 不填表示正常优先级转码，支持200MB文件（下载超时时间2分钟），500页以内的文档进行转码
+     * @param Priority 文档转码优先级，支持填入以下值：<br/>
+- low: 低优先级转码，能支持500MB（下载超时时间10分钟）以及2000页文档，但资源有限可能会有比较长时间的排队，请酌情使用该功能。<br/>
+- 不填表示正常优先级转码，支持200MB文件（下载超时时间2分钟），500页以内的文档进行转码
+     */
+    public void setPriority(String Priority) {
+        this.Priority = Priority;
+    }
+
     public CreateTranscodeRequest() {
     }
 
@@ -242,6 +275,9 @@ tar.gz： 生成`.tar.gz`压缩包
         if (source.ExtraData != null) {
             this.ExtraData = new String(source.ExtraData);
         }
+        if (source.Priority != null) {
+            this.Priority = new String(source.Priority);
+        }
     }
 
 
@@ -256,6 +292,7 @@ tar.gz： 生成`.tar.gz`压缩包
         this.setParamSimple(map, prefix + "ThumbnailResolution", this.ThumbnailResolution);
         this.setParamSimple(map, prefix + "CompressFileType", this.CompressFileType);
         this.setParamSimple(map, prefix + "ExtraData", this.ExtraData);
+        this.setParamSimple(map, prefix + "Priority", this.Priority);
 
     }
 }
