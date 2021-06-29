@@ -17,6 +17,8 @@
 
 package com.tencentcloudapi.common;
 
+import com.tencentcloudapi.common.exception.TencentCloudSDKException;
+
 /**
  * Credential has many types in Tencent Cloud Access Management service.
  *
@@ -36,6 +38,9 @@ public class Credential {
   private String secretKey;
 
   private String token;
+
+  public Credential() {
+  }
 
   public Credential(String secretId, String secretKey) {
     this(secretId, secretKey, "");
@@ -59,15 +64,15 @@ public class Credential {
     this.token = token;
   }
 
-  public String getSecretId() {
+  public String getSecretId() throws TencentCloudSDKException {
     return this.secretId;
   }
 
-  public String getSecretKey() {
+  public String getSecretKey() throws TencentCloudSDKException {
     return this.secretKey;
   }
 
-  public String getToken() {
+  public String getToken() throws TencentCloudSDKException {
     return this.token;
   }
 }
