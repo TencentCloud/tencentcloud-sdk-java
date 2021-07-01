@@ -20,67 +20,41 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateStructureTaskResponse extends AbstractModel{
+public class DescribeStructureResultRequest extends AbstractModel{
 
     /**
-    * 创建的主任务号，用于查询结果
+    * 创建任务时返回的主任务ID
     */
     @SerializedName("MainTaskId")
     @Expose
     private String MainTaskId;
 
     /**
-    * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
-    */
-    @SerializedName("RequestId")
-    @Expose
-    private String RequestId;
-
-    /**
-     * Get 创建的主任务号，用于查询结果 
-     * @return MainTaskId 创建的主任务号，用于查询结果
+     * Get 创建任务时返回的主任务ID 
+     * @return MainTaskId 创建任务时返回的主任务ID
      */
     public String getMainTaskId() {
         return this.MainTaskId;
     }
 
     /**
-     * Set 创建的主任务号，用于查询结果
-     * @param MainTaskId 创建的主任务号，用于查询结果
+     * Set 创建任务时返回的主任务ID
+     * @param MainTaskId 创建任务时返回的主任务ID
      */
     public void setMainTaskId(String MainTaskId) {
         this.MainTaskId = MainTaskId;
     }
 
-    /**
-     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
-     * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
-     */
-    public String getRequestId() {
-        return this.RequestId;
-    }
-
-    /**
-     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
-     * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
-     */
-    public void setRequestId(String RequestId) {
-        this.RequestId = RequestId;
-    }
-
-    public CreateStructureTaskResponse() {
+    public DescribeStructureResultRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateStructureTaskResponse(CreateStructureTaskResponse source) {
+    public DescribeStructureResultRequest(DescribeStructureResultRequest source) {
         if (source.MainTaskId != null) {
             this.MainTaskId = new String(source.MainTaskId);
-        }
-        if (source.RequestId != null) {
-            this.RequestId = new String(source.RequestId);
         }
     }
 
@@ -90,7 +64,6 @@ public class CreateStructureTaskResponse extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "MainTaskId", this.MainTaskId);
-        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
 }

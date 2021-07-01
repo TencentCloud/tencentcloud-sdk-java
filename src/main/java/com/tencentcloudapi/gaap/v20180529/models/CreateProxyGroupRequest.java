@@ -58,6 +58,13 @@ public class CreateProxyGroupRequest extends AbstractModel{
     private AccessConfiguration [] AccessRegionSet;
 
     /**
+    * IP版本，可取值：IPv4、IPv6，默认值IPv4
+    */
+    @SerializedName("IPAddressVersion")
+    @Expose
+    private String IPAddressVersion;
+
+    /**
      * Get 通道组所属项目ID 
      * @return ProjectId 通道组所属项目ID
      */
@@ -137,6 +144,22 @@ public class CreateProxyGroupRequest extends AbstractModel{
         this.AccessRegionSet = AccessRegionSet;
     }
 
+    /**
+     * Get IP版本，可取值：IPv4、IPv6，默认值IPv4 
+     * @return IPAddressVersion IP版本，可取值：IPv4、IPv6，默认值IPv4
+     */
+    public String getIPAddressVersion() {
+        return this.IPAddressVersion;
+    }
+
+    /**
+     * Set IP版本，可取值：IPv4、IPv6，默认值IPv4
+     * @param IPAddressVersion IP版本，可取值：IPv4、IPv6，默认值IPv4
+     */
+    public void setIPAddressVersion(String IPAddressVersion) {
+        this.IPAddressVersion = IPAddressVersion;
+    }
+
     public CreateProxyGroupRequest() {
     }
 
@@ -166,6 +189,9 @@ public class CreateProxyGroupRequest extends AbstractModel{
                 this.AccessRegionSet[i] = new AccessConfiguration(source.AccessRegionSet[i]);
             }
         }
+        if (source.IPAddressVersion != null) {
+            this.IPAddressVersion = new String(source.IPAddressVersion);
+        }
     }
 
 
@@ -178,6 +204,7 @@ public class CreateProxyGroupRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "RealServerRegion", this.RealServerRegion);
         this.setParamArrayObj(map, prefix + "TagSet.", this.TagSet);
         this.setParamArrayObj(map, prefix + "AccessRegionSet.", this.AccessRegionSet);
+        this.setParamSimple(map, prefix + "IPAddressVersion", this.IPAddressVersion);
 
     }
 }

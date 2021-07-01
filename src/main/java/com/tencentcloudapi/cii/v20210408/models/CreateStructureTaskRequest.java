@@ -65,6 +65,13 @@ AccidentInsurance：意外险
     private String [] InsuranceTypes;
 
     /**
+    * 回调地址，接收Post请求传送结果
+    */
+    @SerializedName("CallbackUrl")
+    @Expose
+    private String CallbackUrl;
+
+    /**
      * Get 服务类型
 Structured 仅结构化
 Underwrite 结构化+核保 
@@ -172,6 +179,22 @@ AccidentInsurance：意外险
         this.InsuranceTypes = InsuranceTypes;
     }
 
+    /**
+     * Get 回调地址，接收Post请求传送结果 
+     * @return CallbackUrl 回调地址，接收Post请求传送结果
+     */
+    public String getCallbackUrl() {
+        return this.CallbackUrl;
+    }
+
+    /**
+     * Set 回调地址，接收Post请求传送结果
+     * @param CallbackUrl 回调地址，接收Post请求传送结果
+     */
+    public void setCallbackUrl(String CallbackUrl) {
+        this.CallbackUrl = CallbackUrl;
+    }
+
     public CreateStructureTaskRequest() {
     }
 
@@ -201,6 +224,9 @@ AccidentInsurance：意外险
                 this.InsuranceTypes[i] = new String(source.InsuranceTypes[i]);
             }
         }
+        if (source.CallbackUrl != null) {
+            this.CallbackUrl = new String(source.CallbackUrl);
+        }
     }
 
 
@@ -213,6 +239,7 @@ AccidentInsurance：意外险
         this.setParamSimple(map, prefix + "PolicyId", this.PolicyId);
         this.setParamSimple(map, prefix + "TriggerType", this.TriggerType);
         this.setParamArraySimple(map, prefix + "InsuranceTypes.", this.InsuranceTypes);
+        this.setParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
 
     }
 }

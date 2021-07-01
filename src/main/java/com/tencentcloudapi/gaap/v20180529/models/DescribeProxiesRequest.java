@@ -46,10 +46,11 @@ public class DescribeProxiesRequest extends AbstractModel{
     /**
     * 过滤条件。   
 每次请求的Filters的上限为10，Filter.Values的上限为5。参数不支持同时指定InstanceIds和Filters。 
-ProjectId - String - 是否必填：否 -（过滤条件）按照项目ID过滤。    
+ProjectId - String - 是否必填：否 -（过滤条件）按照项目ID过滤。   
 AccessRegion - String - 是否必填：否 - （过滤条件）按照接入地域过滤。    
 RealServerRegion - String - 是否必填：否 - （过滤条件）按照源站地域过滤。
 GroupId - String - 是否必填：否 - （过滤条件）按照通道组ID过滤。
+IPAddressVersion - String - 是否必填：否 - （过滤条件）按照IP版本过滤。
     */
     @SerializedName("Filters")
     @Expose
@@ -130,16 +131,18 @@ GroupId - String - 是否必填：否 - （过滤条件）按照通道组ID过�
     /**
      * Get 过滤条件。   
 每次请求的Filters的上限为10，Filter.Values的上限为5。参数不支持同时指定InstanceIds和Filters。 
-ProjectId - String - 是否必填：否 -（过滤条件）按照项目ID过滤。    
-AccessRegion - String - 是否必填：否 - （过滤条件）按照接入地域过滤。    
-RealServerRegion - String - 是否必填：否 - （过滤条件）按照源站地域过滤。
-GroupId - String - 是否必填：否 - （过滤条件）按照通道组ID过滤。 
-     * @return Filters 过滤条件。   
-每次请求的Filters的上限为10，Filter.Values的上限为5。参数不支持同时指定InstanceIds和Filters。 
-ProjectId - String - 是否必填：否 -（过滤条件）按照项目ID过滤。    
+ProjectId - String - 是否必填：否 -（过滤条件）按照项目ID过滤。   
 AccessRegion - String - 是否必填：否 - （过滤条件）按照接入地域过滤。    
 RealServerRegion - String - 是否必填：否 - （过滤条件）按照源站地域过滤。
 GroupId - String - 是否必填：否 - （过滤条件）按照通道组ID过滤。
+IPAddressVersion - String - 是否必填：否 - （过滤条件）按照IP版本过滤。 
+     * @return Filters 过滤条件。   
+每次请求的Filters的上限为10，Filter.Values的上限为5。参数不支持同时指定InstanceIds和Filters。 
+ProjectId - String - 是否必填：否 -（过滤条件）按照项目ID过滤。   
+AccessRegion - String - 是否必填：否 - （过滤条件）按照接入地域过滤。    
+RealServerRegion - String - 是否必填：否 - （过滤条件）按照源站地域过滤。
+GroupId - String - 是否必填：否 - （过滤条件）按照通道组ID过滤。
+IPAddressVersion - String - 是否必填：否 - （过滤条件）按照IP版本过滤。
      */
     public Filter [] getFilters() {
         return this.Filters;
@@ -148,16 +151,18 @@ GroupId - String - 是否必填：否 - （过滤条件）按照通道组ID过�
     /**
      * Set 过滤条件。   
 每次请求的Filters的上限为10，Filter.Values的上限为5。参数不支持同时指定InstanceIds和Filters。 
-ProjectId - String - 是否必填：否 -（过滤条件）按照项目ID过滤。    
+ProjectId - String - 是否必填：否 -（过滤条件）按照项目ID过滤。   
 AccessRegion - String - 是否必填：否 - （过滤条件）按照接入地域过滤。    
 RealServerRegion - String - 是否必填：否 - （过滤条件）按照源站地域过滤。
 GroupId - String - 是否必填：否 - （过滤条件）按照通道组ID过滤。
+IPAddressVersion - String - 是否必填：否 - （过滤条件）按照IP版本过滤。
      * @param Filters 过滤条件。   
 每次请求的Filters的上限为10，Filter.Values的上限为5。参数不支持同时指定InstanceIds和Filters。 
-ProjectId - String - 是否必填：否 -（过滤条件）按照项目ID过滤。    
+ProjectId - String - 是否必填：否 -（过滤条件）按照项目ID过滤。   
 AccessRegion - String - 是否必填：否 - （过滤条件）按照接入地域过滤。    
 RealServerRegion - String - 是否必填：否 - （过滤条件）按照源站地域过滤。
 GroupId - String - 是否必填：否 - （过滤条件）按照通道组ID过滤。
+IPAddressVersion - String - 是否必填：否 - （过滤条件）按照IP版本过滤。
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

@@ -39,7 +39,7 @@ public class CiiClient extends AbstractClient{
     }
 
     /**
-     *基于提供的客户及保单信息，启动结构化识别任务。
+     *本接口(CreateStructureTask)基于提供的客户及保单信息，创建并启动结构化识别任务。
      * @param req CreateStructureTaskRequest
      * @return CreateStructureTaskResponse
      * @throws TencentCloudSDKException
@@ -71,6 +71,26 @@ public class CiiClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeStructCompareDataResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeStructCompareData");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口(DescribeStructureResult)用于查询结构化结果接口
+     * @param req DescribeStructureResultRequest
+     * @return DescribeStructureResultResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeStructureResultResponse DescribeStructureResult(DescribeStructureResultRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeStructureResultResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeStructureResultResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeStructureResult");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

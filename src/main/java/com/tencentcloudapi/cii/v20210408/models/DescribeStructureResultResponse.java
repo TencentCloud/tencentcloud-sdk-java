@@ -20,14 +20,24 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateStructureTaskResponse extends AbstractModel{
+public class DescribeStructureResultResponse extends AbstractModel{
 
     /**
-    * 创建的主任务号，用于查询结果
+    * 结果状态：
+0：返回成功
+1：结果未生成
+2：结果生成失败
     */
-    @SerializedName("MainTaskId")
+    @SerializedName("Status")
     @Expose
-    private String MainTaskId;
+    private Long Status;
+
+    /**
+    * 结构化结果
+    */
+    @SerializedName("Results")
+    @Expose
+    private StructureResultObject [] Results;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,19 +47,47 @@ public class CreateStructureTaskResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 创建的主任务号，用于查询结果 
-     * @return MainTaskId 创建的主任务号，用于查询结果
+     * Get 结果状态：
+0：返回成功
+1：结果未生成
+2：结果生成失败 
+     * @return Status 结果状态：
+0：返回成功
+1：结果未生成
+2：结果生成失败
      */
-    public String getMainTaskId() {
-        return this.MainTaskId;
+    public Long getStatus() {
+        return this.Status;
     }
 
     /**
-     * Set 创建的主任务号，用于查询结果
-     * @param MainTaskId 创建的主任务号，用于查询结果
+     * Set 结果状态：
+0：返回成功
+1：结果未生成
+2：结果生成失败
+     * @param Status 结果状态：
+0：返回成功
+1：结果未生成
+2：结果生成失败
      */
-    public void setMainTaskId(String MainTaskId) {
-        this.MainTaskId = MainTaskId;
+    public void setStatus(Long Status) {
+        this.Status = Status;
+    }
+
+    /**
+     * Get 结构化结果 
+     * @return Results 结构化结果
+     */
+    public StructureResultObject [] getResults() {
+        return this.Results;
+    }
+
+    /**
+     * Set 结构化结果
+     * @param Results 结构化结果
+     */
+    public void setResults(StructureResultObject [] Results) {
+        this.Results = Results;
     }
 
     /**
@@ -68,16 +106,22 @@ public class CreateStructureTaskResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public CreateStructureTaskResponse() {
+    public DescribeStructureResultResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateStructureTaskResponse(CreateStructureTaskResponse source) {
-        if (source.MainTaskId != null) {
-            this.MainTaskId = new String(source.MainTaskId);
+    public DescribeStructureResultResponse(DescribeStructureResultResponse source) {
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.Results != null) {
+            this.Results = new StructureResultObject[source.Results.length];
+            for (int i = 0; i < source.Results.length; i++) {
+                this.Results[i] = new StructureResultObject(source.Results[i]);
+            }
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -89,7 +133,8 @@ public class CreateStructureTaskResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "MainTaskId", this.MainTaskId);
+        this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamArrayObj(map, prefix + "Results.", this.Results);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

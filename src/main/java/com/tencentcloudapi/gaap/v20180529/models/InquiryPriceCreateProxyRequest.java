@@ -72,6 +72,13 @@ public class InquiryPriceCreateProxyRequest extends AbstractModel{
     private Long BillingType;
 
     /**
+    * IP版本，可取值：IPv4、IPv6，默认值IPv4
+    */
+    @SerializedName("IPAddressVersion")
+    @Expose
+    private String IPAddressVersion;
+
+    /**
      * Get 加速区域名称。 
      * @return AccessRegion 加速区域名称。
      */
@@ -183,6 +190,22 @@ public class InquiryPriceCreateProxyRequest extends AbstractModel{
         this.BillingType = BillingType;
     }
 
+    /**
+     * Get IP版本，可取值：IPv4、IPv6，默认值IPv4 
+     * @return IPAddressVersion IP版本，可取值：IPv4、IPv6，默认值IPv4
+     */
+    public String getIPAddressVersion() {
+        return this.IPAddressVersion;
+    }
+
+    /**
+     * Set IP版本，可取值：IPv4、IPv6，默认值IPv4
+     * @param IPAddressVersion IP版本，可取值：IPv4、IPv6，默认值IPv4
+     */
+    public void setIPAddressVersion(String IPAddressVersion) {
+        this.IPAddressVersion = IPAddressVersion;
+    }
+
     public InquiryPriceCreateProxyRequest() {
     }
 
@@ -212,6 +235,9 @@ public class InquiryPriceCreateProxyRequest extends AbstractModel{
         if (source.BillingType != null) {
             this.BillingType = new Long(source.BillingType);
         }
+        if (source.IPAddressVersion != null) {
+            this.IPAddressVersion = new String(source.IPAddressVersion);
+        }
     }
 
 
@@ -226,6 +252,7 @@ public class InquiryPriceCreateProxyRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "RealServerRegion", this.RealServerRegion);
         this.setParamSimple(map, prefix + "Concurrent", this.Concurrent);
         this.setParamSimple(map, prefix + "BillingType", this.BillingType);
+        this.setParamSimple(map, prefix + "IPAddressVersion", this.IPAddressVersion);
 
     }
 }

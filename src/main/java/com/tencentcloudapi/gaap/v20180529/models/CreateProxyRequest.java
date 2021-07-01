@@ -102,6 +102,13 @@ public class CreateProxyRequest extends AbstractModel{
     private Long BillingType;
 
     /**
+    * IP版本，可取值：IPv4、IPv6，默认值IPv4
+    */
+    @SerializedName("IPAddressVersion")
+    @Expose
+    private String IPAddressVersion;
+
+    /**
      * Get 通道的项目ID。 
      * @return ProjectId 通道的项目ID。
      */
@@ -285,6 +292,22 @@ public class CreateProxyRequest extends AbstractModel{
         this.BillingType = BillingType;
     }
 
+    /**
+     * Get IP版本，可取值：IPv4、IPv6，默认值IPv4 
+     * @return IPAddressVersion IP版本，可取值：IPv4、IPv6，默认值IPv4
+     */
+    public String getIPAddressVersion() {
+        return this.IPAddressVersion;
+    }
+
+    /**
+     * Set IP版本，可取值：IPv4、IPv6，默认值IPv4
+     * @param IPAddressVersion IP版本，可取值：IPv4、IPv6，默认值IPv4
+     */
+    public void setIPAddressVersion(String IPAddressVersion) {
+        this.IPAddressVersion = IPAddressVersion;
+    }
+
     public CreateProxyRequest() {
     }
 
@@ -329,6 +352,9 @@ public class CreateProxyRequest extends AbstractModel{
         if (source.BillingType != null) {
             this.BillingType = new Long(source.BillingType);
         }
+        if (source.IPAddressVersion != null) {
+            this.IPAddressVersion = new String(source.IPAddressVersion);
+        }
     }
 
 
@@ -347,6 +373,7 @@ public class CreateProxyRequest extends AbstractModel{
         this.setParamArrayObj(map, prefix + "TagSet.", this.TagSet);
         this.setParamSimple(map, prefix + "ClonedProxyId", this.ClonedProxyId);
         this.setParamSimple(map, prefix + "BillingType", this.BillingType);
+        this.setParamSimple(map, prefix + "IPAddressVersion", this.IPAddressVersion);
 
     }
 }
