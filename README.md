@@ -8,7 +8,7 @@
 3.获取 SecretID、SecretKey 以及调用地址（endpoint），endpoint 一般形式为\*.tencentcloudapi.com，如CVM 的调用地址为 cvm.tencentcloudapi.com，具体参考各产品说明。
 
 # 获取安装
-安装 Java SDK 前,先获取安全凭证。在第一次使用云API之前，用户首先需要在腾讯云控制台上申请安全凭证，安全凭证包括 SecretID 和 SecretKey，SecretID 是用于标识 API 调用者的身份，SecretKey 是用于加密签名字符串和服务器端验证签名字符串的密钥 SecretKey 必须严格保管，避免泄露。
+安装 Java SDK 前,先获取安全凭证。在第一次使用云API之前，用户首先需要在腾讯云控制台上申请安全凭证，安全凭证包括 SecretID 和 SecretKey，SecretID 是用于标识 API 调用者的身份，SecretKey 是用于加密签名字符串和服务器端验证签名字符串的密钥 SecretKey 必须严格保管，避免泄露。您也可以前往[从零开始使用腾讯云 Java SDK ](https://cloud.tencent.com/developer/article/1839228)界面查看更为基础和详细的 Java SDK 的安装和使用说明。
 ## 通过 Maven 安装(推荐)
 通过 Maven 获取安装是使用 JAVA SDK 的推荐方法，Maven 是 JAVA 的依赖管理工具，支持您项目所需的依赖项，并将其安装到项目中。关于 Maven 详细可参考 Maven 官网。
 1. 请访问[Maven官网](https://maven.apache.org/)下载对应系统Maven安装包进行安装；
@@ -141,7 +141,103 @@ public class DescribeInstances {
     }
 }
 ```
+## 详细版示例代码分步骤介绍
 
+1. 导入待调用的类
+
+```java
+import com.tencentcloudapi.common.Credential;
+import com.tencentcloudapi.common.exception.TencentCloudSDKException;
+// 导入对应产品模块的client
+import com.tencentcloudapi.cvm.v20170312.CvmClient;
+// 导入要请求接口对应的request response类
+import com.tencentcloudapi.cvm.v20170312.models.DescribeInstancesRequest;
+import com.tencentcloudapi.cvm.v20170312.models.DescribeInstancesResponse;
+import com.tencentcloudapi.cvm.v20170312.models.Filter;
+//导入可选配置类
+import com.tencentcloudapi.common.profile.ClientProfile;
+import com.tencentcloudapi.common.profile.HttpProfile;
+import com.tencentcloudapi.common.profile.Language;
+```
+
+2. 实例化一个认证对象cred，入参需要传入腾讯云账户密钥 secretId，secretKey, 前往 [API 密钥管理](https://console.cloud.tencent.com/cam/capi) 页面，即可进行获取密钥。此处还需注意密钥对的保密。
+
+```java
+Credential cred = new Credential("secretId", "secretKey");
+```
+
+3. 实例化一个http选项，若没有特殊需求可参照简化版示例代码跳过设置。若有需求可以参照下方示例代码设置http选项中的参数。
+
+```java
+HttpProfile httpProfile = new HttpProfile();
+//  从3.1.16版本开始, 单独设置 HTTP 代理
+// httpProfile.setProxyHost("真实代理ip");
+// httpProfile.setProxyPort(真实代理端口);
+// get请求(默认为post请求)
+httpProfile.setReqMethod("GET"); // get请求(默认为post请求)
+httpProfile.setProtocol("https://");  // 在外网互通的网络环境下支持http协议(默认是https协议),请选择(https:// or http://)
+httpProfile.setConnTimeout(30); // 请求连接超时时间，单位为秒(默认60秒)
+httpProfile.setWriteTimeout(30);  // 设置写入超时时间，单位为秒(默认0秒)
+httpProfile.setReadTimeout(30);  // 设置读取超时时间，单位为秒(默认0秒)
+httpProfile.setEndpoint("cvm.ap-shanghai.tencentcloudapi.com"); // 指定接入地域域名(默认就近接入)
+```
+
+4. 实例化一个client选项，若没有特殊需求可参照简化版示例代码跳过设置。若有需求可以参照下方示例代码设置client选项中的参数。
+
+```java
+ClientProfile clientProfile = new ClientProfile();
+clientProfile.setSignMethod("HmacSHA256"); // 指定签名算法(默认为HmacSHA256)
+// 自3.1.80版本开始，SDK 支持打印日志。
+clientProfile.setHttpProfile(httpProfile);
+clientProfile.setDebug(true);
+// 从3.1.16版本开始，支持设置公共参数 Language, 默认不传，选择(ZH_CN or EN_US)
+clientProfile.setLanguage(Language.EN_US);
+```
+
+5. 实例化要请求产品的client对象，示例代码以cvm产品为例，实例化CvmClient对象。
+
+```java
+CvmClient client = new CvmClient(cred, "ap-shanghai", clientProfile);
+```
+
+6. 实例化一个cvm实例信息查询请求对象req，每个接口都会对应一个request对象，若有需要可以参照官网文档设置对象中的参数。
+
+```java
+DescribeInstancesRequest req = new DescribeInstancesRequest();
+// 填充请求参数,这里request对象的成员变量即对应接口的入参
+// 你可以通过官网接口文档或跳转到request对象的定义处查看请求参数的定义
+Filter respFilter = new Filter(); // 创建Filter对象, 以zone的维度来查询cvm实例
+respFilter.setName("zone");
+respFilter.setValues(new String[] { "ap-shanghai-1", "ap-shanghai-2" });
+req.setFilters(new Filter[] { respFilter }); // Filters 是成员为Filter对象的列表
+```
+
+7. 通过client对象调用您想调用的接口，返回对应的Response类的实例
+
+```java
+// 通过client对象调用DescribeInstances方法发起请求。注意请求方法名与请求对象是对应的
+// 返回的resp是一个DescribeInstancesResponse类的实例，与请求对象对应
+DescribeInstancesResponse resp = client.DescribeInstances(req);
+```
+
+8. 可以打印输出返回的数据值。
+
+```java
+// 输出json格式的字符串回包
+System.out.println(DescribeInstancesResponse.toJsonString(resp));
+// 也可以取出单个值。
+// 你可以通过官网接口文档或跳转到response对象的定义处查看返回字段的定义
+System.out.println(resp.getTotalCount());
+} 
+```
+
+9. 使用catch处理报错，错误码详细内容请参考官网产品文档对应的错误码章节。
+
+```java
+catch (TencentCloudSDKException e) {
+    System.out.println(e.toString());
+}
+```
 
 
 ## 更多示例
