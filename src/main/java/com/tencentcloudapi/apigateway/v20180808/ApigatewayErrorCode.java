@@ -165,6 +165,9 @@ public enum ApigatewayErrorCode {
     // 传入的Api业务类型必须为OAUTH。
      INVALIDPARAMETERVALUE_INVALIDAPIBUSINESSTYPE("InvalidParameterValue.InvalidApiBusinessType"),
      
+    // API Id错误。
+     INVALIDPARAMETERVALUE_INVALIDAPIIDS("InvalidParameterValue.InvalidApiIds"),
+     
     // 无效的API配置。
      INVALIDPARAMETERVALUE_INVALIDAPIREQUESTCONFIG("InvalidParameterValue.InvalidApiRequestConfig"),
      
@@ -224,6 +227,9 @@ public enum ApigatewayErrorCode {
      
     // 后端服务类型错误。WEBSOCKET类型的后端服务，前端协议需要配置为WEBSOCKET。
      INVALIDPARAMETERVALUE_INVALIDSERVICETYPE("InvalidParameterValue.InvalidServiceType"),
+     
+    // 标签参数错误。
+     INVALIDPARAMETERVALUE_INVALIDTAGVALUES("InvalidParameterValue.InvalidTagValues"),
      
     // TSF类型API配置错误。
      INVALIDPARAMETERVALUE_INVALIDTSFCONFIG("InvalidParameterValue.InvalidTsfConfig"),

@@ -28,7 +28,7 @@ public class IPLineInfo extends AbstractModel{
 "ctcc"：电信线路IP
 "cucc"：联通线路IP
 "cmcc"：移动线路IP
-"abroad"：海外线路IP
+"abroad"：境外线路IP
 ]
     */
     @SerializedName("Type")
@@ -48,14 +48,14 @@ public class IPLineInfo extends AbstractModel{
 "ctcc"：电信线路IP
 "cucc"：联通线路IP
 "cmcc"：移动线路IP
-"abroad"：海外线路IP
+"abroad"：境外线路IP
 ] 
      * @return Type IP线路类型，取值[
 "bgp"：BGP线路IP
 "ctcc"：电信线路IP
 "cucc"：联通线路IP
 "cmcc"：移动线路IP
-"abroad"：海外线路IP
+"abroad"：境外线路IP
 ]
      */
     public String getType() {
@@ -68,14 +68,14 @@ public class IPLineInfo extends AbstractModel{
 "ctcc"：电信线路IP
 "cucc"：联通线路IP
 "cmcc"：移动线路IP
-"abroad"：海外线路IP
+"abroad"：境外线路IP
 ]
      * @param Type IP线路类型，取值[
 "bgp"：BGP线路IP
 "ctcc"：电信线路IP
 "cucc"：联通线路IP
 "cmcc"：移动线路IP
-"abroad"：海外线路IP
+"abroad"：境外线路IP
 ]
      */
     public void setType(String Type) {

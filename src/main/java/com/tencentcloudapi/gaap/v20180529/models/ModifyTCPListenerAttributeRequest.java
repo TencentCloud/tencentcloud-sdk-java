@@ -86,6 +86,20 @@ public class ModifyTCPListenerAttributeRequest extends AbstractModel{
     private Long FailoverSwitch;
 
     /**
+    * 健康阈值，表示连续检查成功多少次数后认定源站健康。范围为1到10
+    */
+    @SerializedName("HealthyThreshold")
+    @Expose
+    private Long HealthyThreshold;
+
+    /**
+    * 不健康阈值，表示连续检查失败次数后认定源站不健康。范围为1到10
+    */
+    @SerializedName("UnhealthyThreshold")
+    @Expose
+    private Long UnhealthyThreshold;
+
+    /**
      * Get 监听器ID 
      * @return ListenerId 监听器ID
      */
@@ -229,6 +243,38 @@ public class ModifyTCPListenerAttributeRequest extends AbstractModel{
         this.FailoverSwitch = FailoverSwitch;
     }
 
+    /**
+     * Get 健康阈值，表示连续检查成功多少次数后认定源站健康。范围为1到10 
+     * @return HealthyThreshold 健康阈值，表示连续检查成功多少次数后认定源站健康。范围为1到10
+     */
+    public Long getHealthyThreshold() {
+        return this.HealthyThreshold;
+    }
+
+    /**
+     * Set 健康阈值，表示连续检查成功多少次数后认定源站健康。范围为1到10
+     * @param HealthyThreshold 健康阈值，表示连续检查成功多少次数后认定源站健康。范围为1到10
+     */
+    public void setHealthyThreshold(Long HealthyThreshold) {
+        this.HealthyThreshold = HealthyThreshold;
+    }
+
+    /**
+     * Get 不健康阈值，表示连续检查失败次数后认定源站不健康。范围为1到10 
+     * @return UnhealthyThreshold 不健康阈值，表示连续检查失败次数后认定源站不健康。范围为1到10
+     */
+    public Long getUnhealthyThreshold() {
+        return this.UnhealthyThreshold;
+    }
+
+    /**
+     * Set 不健康阈值，表示连续检查失败次数后认定源站不健康。范围为1到10
+     * @param UnhealthyThreshold 不健康阈值，表示连续检查失败次数后认定源站不健康。范围为1到10
+     */
+    public void setUnhealthyThreshold(Long UnhealthyThreshold) {
+        this.UnhealthyThreshold = UnhealthyThreshold;
+    }
+
     public ModifyTCPListenerAttributeRequest() {
     }
 
@@ -264,6 +310,12 @@ public class ModifyTCPListenerAttributeRequest extends AbstractModel{
         if (source.FailoverSwitch != null) {
             this.FailoverSwitch = new Long(source.FailoverSwitch);
         }
+        if (source.HealthyThreshold != null) {
+            this.HealthyThreshold = new Long(source.HealthyThreshold);
+        }
+        if (source.UnhealthyThreshold != null) {
+            this.UnhealthyThreshold = new Long(source.UnhealthyThreshold);
+        }
     }
 
 
@@ -280,6 +332,8 @@ public class ModifyTCPListenerAttributeRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ConnectTimeout", this.ConnectTimeout);
         this.setParamSimple(map, prefix + "HealthCheck", this.HealthCheck);
         this.setParamSimple(map, prefix + "FailoverSwitch", this.FailoverSwitch);
+        this.setParamSimple(map, prefix + "HealthyThreshold", this.HealthyThreshold);
+        this.setParamSimple(map, prefix + "UnhealthyThreshold", this.UnhealthyThreshold);
 
     }
 }

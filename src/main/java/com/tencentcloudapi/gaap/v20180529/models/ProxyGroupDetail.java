@@ -144,6 +144,14 @@ public class ProxyGroupDetail extends AbstractModel{
     private Long [] ClientIPMethod;
 
     /**
+    * IP版本，可取值：IPv4、IPv6，默认值IPv4
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IPAddressVersion")
+    @Expose
+    private String IPAddressVersion;
+
+    /**
      * Get 创建时间 
      * @return CreateTime 创建时间
      */
@@ -435,6 +443,26 @@ public class ProxyGroupDetail extends AbstractModel{
         this.ClientIPMethod = ClientIPMethod;
     }
 
+    /**
+     * Get IP版本，可取值：IPv4、IPv6，默认值IPv4
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IPAddressVersion IP版本，可取值：IPv4、IPv6，默认值IPv4
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getIPAddressVersion() {
+        return this.IPAddressVersion;
+    }
+
+    /**
+     * Set IP版本，可取值：IPv4、IPv6，默认值IPv4
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IPAddressVersion IP版本，可取值：IPv4、IPv6，默认值IPv4
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIPAddressVersion(String IPAddressVersion) {
+        this.IPAddressVersion = IPAddressVersion;
+    }
+
     public ProxyGroupDetail() {
     }
 
@@ -497,6 +525,9 @@ public class ProxyGroupDetail extends AbstractModel{
                 this.ClientIPMethod[i] = new Long(source.ClientIPMethod[i]);
             }
         }
+        if (source.IPAddressVersion != null) {
+            this.IPAddressVersion = new String(source.IPAddressVersion);
+        }
     }
 
 
@@ -520,6 +551,7 @@ public class ProxyGroupDetail extends AbstractModel{
         this.setParamSimple(map, prefix + "PolicyId", this.PolicyId);
         this.setParamSimple(map, prefix + "Version", this.Version);
         this.setParamArraySimple(map, prefix + "ClientIPMethod.", this.ClientIPMethod);
+        this.setParamSimple(map, prefix + "IPAddressVersion", this.IPAddressVersion);
 
     }
 }

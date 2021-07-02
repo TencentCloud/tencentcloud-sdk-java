@@ -13,7 +13,10 @@ public enum EisErrorCode {
      INTERNALERROR_RPCPILOTSERVERERROR("InternalError.RpcPilotServerError"),
      
     // 连接器不存在。
-     INVALIDPARAMETERVALUE_CONNECTORNOTEXIST("InvalidParameterValue.ConnectorNotExist");
+     INVALIDPARAMETERVALUE_CONNECTORNOTEXIST("InvalidParameterValue.ConnectorNotExist"),
+     
+    // 资源不存在。
+     RESOURCENOTFOUND("ResourceNotFound");
      
     private String value;
     private EisErrorCode (String value){

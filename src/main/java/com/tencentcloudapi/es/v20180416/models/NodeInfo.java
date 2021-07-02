@@ -40,6 +40,7 @@ public class NodeInfo extends AbstractModel{
     * 节点类型<li>hotData: 热数据节点</li>
 <li>warmData: 冷数据节点</li>
 <li>dedicatedMaster: 专用主节点</li>
+<li>kibana: Kibana节点</li>
 默认值为hotData
     */
     @SerializedName("Type")
@@ -118,10 +119,12 @@ public class NodeInfo extends AbstractModel{
      * Get 节点类型<li>hotData: 热数据节点</li>
 <li>warmData: 冷数据节点</li>
 <li>dedicatedMaster: 专用主节点</li>
+<li>kibana: Kibana节点</li>
 默认值为hotData 
      * @return Type 节点类型<li>hotData: 热数据节点</li>
 <li>warmData: 冷数据节点</li>
 <li>dedicatedMaster: 专用主节点</li>
+<li>kibana: Kibana节点</li>
 默认值为hotData
      */
     public String getType() {
@@ -132,10 +135,12 @@ public class NodeInfo extends AbstractModel{
      * Set 节点类型<li>hotData: 热数据节点</li>
 <li>warmData: 冷数据节点</li>
 <li>dedicatedMaster: 专用主节点</li>
+<li>kibana: Kibana节点</li>
 默认值为hotData
      * @param Type 节点类型<li>hotData: 热数据节点</li>
 <li>warmData: 冷数据节点</li>
 <li>dedicatedMaster: 专用主节点</li>
+<li>kibana: Kibana节点</li>
 默认值为hotData
      */
     public void setType(String Type) {

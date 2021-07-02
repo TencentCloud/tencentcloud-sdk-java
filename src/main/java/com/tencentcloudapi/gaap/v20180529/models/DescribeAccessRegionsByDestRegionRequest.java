@@ -30,6 +30,13 @@ public class DescribeAccessRegionsByDestRegionRequest extends AbstractModel{
     private String DestRegion;
 
     /**
+    * IP版本，可取值：IPv4、IPv6，默认值IPv4
+    */
+    @SerializedName("IPAddressVersion")
+    @Expose
+    private String IPAddressVersion;
+
+    /**
      * Get 源站区域：接口DescribeDestRegions返回DestRegionSet中的RegionId字段值 
      * @return DestRegion 源站区域：接口DescribeDestRegions返回DestRegionSet中的RegionId字段值
      */
@@ -45,6 +52,22 @@ public class DescribeAccessRegionsByDestRegionRequest extends AbstractModel{
         this.DestRegion = DestRegion;
     }
 
+    /**
+     * Get IP版本，可取值：IPv4、IPv6，默认值IPv4 
+     * @return IPAddressVersion IP版本，可取值：IPv4、IPv6，默认值IPv4
+     */
+    public String getIPAddressVersion() {
+        return this.IPAddressVersion;
+    }
+
+    /**
+     * Set IP版本，可取值：IPv4、IPv6，默认值IPv4
+     * @param IPAddressVersion IP版本，可取值：IPv4、IPv6，默认值IPv4
+     */
+    public void setIPAddressVersion(String IPAddressVersion) {
+        this.IPAddressVersion = IPAddressVersion;
+    }
+
     public DescribeAccessRegionsByDestRegionRequest() {
     }
 
@@ -56,6 +79,9 @@ public class DescribeAccessRegionsByDestRegionRequest extends AbstractModel{
         if (source.DestRegion != null) {
             this.DestRegion = new String(source.DestRegion);
         }
+        if (source.IPAddressVersion != null) {
+            this.IPAddressVersion = new String(source.IPAddressVersion);
+        }
     }
 
 
@@ -64,6 +90,7 @@ public class DescribeAccessRegionsByDestRegionRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DestRegion", this.DestRegion);
+        this.setParamSimple(map, prefix + "IPAddressVersion", this.IPAddressVersion);
 
     }
 }

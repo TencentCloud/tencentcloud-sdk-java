@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateStructureTaskResponse extends AbstractModel{
 
     /**
-    * 创建的主任务号
+    * 创建的主任务号，用于查询结果
     */
     @SerializedName("MainTaskId")
     @Expose
@@ -37,16 +37,16 @@ public class CreateStructureTaskResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 创建的主任务号 
-     * @return MainTaskId 创建的主任务号
+     * Get 创建的主任务号，用于查询结果 
+     * @return MainTaskId 创建的主任务号，用于查询结果
      */
     public String getMainTaskId() {
         return this.MainTaskId;
     }
 
     /**
-     * Set 创建的主任务号
-     * @param MainTaskId 创建的主任务号
+     * Set 创建的主任务号，用于查询结果
+     * @param MainTaskId 创建的主任务号，用于查询结果
      */
     public void setMainTaskId(String MainTaskId) {
         this.MainTaskId = MainTaskId;

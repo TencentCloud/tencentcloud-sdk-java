@@ -186,6 +186,9 @@ public enum TbaasErrorCode {
     // 后台服务请求超时。
      FAILEDOPERATION_TIMEOUTURL("FailedOperation.TimeOutUrl"),
      
+    // 交易执行超时，请稍后再试。
+     FAILEDOPERATION_TRANSACTIONTIMEOUT("FailedOperation.TransactionTimeout"),
+     
     // Bcos更新已部署合约。
      FAILEDOPERATION_UPDATEDEPLOYEDCONTRACT("FailedOperation.UpdateDeployedContract"),
      

@@ -399,6 +399,26 @@ public class EiamClient extends AbstractClient{
     }
 
     /**
+     *通过用户名或用户 id 冻结用户
+     * @param req ModifyUserInfoRequest
+     * @return ModifyUserInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyUserInfoResponse ModifyUserInfo(ModifyUserInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyUserInfoResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyUserInfoResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyUserInfo");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *从用户组中移除用户
      * @param req RemoveUserFromUserGroupRequest
      * @return RemoveUserFromUserGroupResponse
