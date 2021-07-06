@@ -267,6 +267,9 @@ public enum CvmErrorCode {
     // 竞价失败。
      INVALIDPARAMETERVALUE_INSUFFICIENTPRICE("InvalidParameterValue.InsufficientPrice"),
      
+    // 镜像ID不支持指定的实例机型。
+     INVALIDPARAMETERVALUE_INVALIDIMAGEFORGIVENINSTANCETYPE("InvalidParameterValue.InvalidImageForGivenInstanceType"),
+     
     // 镜像不允许执行该操作
      INVALIDPARAMETERVALUE_INVALIDIMAGEID("InvalidParameterValue.InvalidImageId"),
      

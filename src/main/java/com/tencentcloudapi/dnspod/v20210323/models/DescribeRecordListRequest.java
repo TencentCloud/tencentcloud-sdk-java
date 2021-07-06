@@ -100,7 +100,7 @@ public class DescribeRecordListRequest extends AbstractModel{
     private Long Offset;
 
     /**
-    * 限制数量，当前Limit最大支持3000。默认值为3000。
+    * 限制数量，当前Limit最大支持3000。默认值为100。
     */
     @SerializedName("Limit")
     @Expose
@@ -283,16 +283,16 @@ public class DescribeRecordListRequest extends AbstractModel{
     }
 
     /**
-     * Get 限制数量，当前Limit最大支持3000。默认值为3000。 
-     * @return Limit 限制数量，当前Limit最大支持3000。默认值为3000。
+     * Get 限制数量，当前Limit最大支持3000。默认值为100。 
+     * @return Limit 限制数量，当前Limit最大支持3000。默认值为100。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 限制数量，当前Limit最大支持3000。默认值为3000。
-     * @param Limit 限制数量，当前Limit最大支持3000。默认值为3000。
+     * Set 限制数量，当前Limit最大支持3000。默认值为100。
+     * @param Limit 限制数量，当前Limit最大支持3000。默认值为100。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

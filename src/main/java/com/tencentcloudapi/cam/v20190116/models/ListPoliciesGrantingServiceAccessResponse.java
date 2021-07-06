@@ -13,22 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.ccc.v20200210.models;
+package com.tencentcloudapi.cam.v20190116.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateStaffResponse extends AbstractModel{
+public class ListPoliciesGrantingServiceAccessResponse extends AbstractModel{
 
     /**
-    * 错误坐席列表及错误信息
-注意：此字段可能返回 null，表示取不到有效值。
+    * 列表
     */
-    @SerializedName("ErrorStaffList")
+    @SerializedName("List")
     @Expose
-    private ErrStaffItem [] ErrorStaffList;
+    private ListGrantServiceAccessNode [] List;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,23 +37,19 @@ public class CreateStaffResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 错误坐席列表及错误信息
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ErrorStaffList 错误坐席列表及错误信息
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 列表 
+     * @return List 列表
      */
-    public ErrStaffItem [] getErrorStaffList() {
-        return this.ErrorStaffList;
+    public ListGrantServiceAccessNode [] getList() {
+        return this.List;
     }
 
     /**
-     * Set 错误坐席列表及错误信息
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param ErrorStaffList 错误坐席列表及错误信息
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 列表
+     * @param List 列表
      */
-    public void setErrorStaffList(ErrStaffItem [] ErrorStaffList) {
-        this.ErrorStaffList = ErrorStaffList;
+    public void setList(ListGrantServiceAccessNode [] List) {
+        this.List = List;
     }
 
     /**
@@ -73,18 +68,18 @@ public class CreateStaffResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public CreateStaffResponse() {
+    public ListPoliciesGrantingServiceAccessResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateStaffResponse(CreateStaffResponse source) {
-        if (source.ErrorStaffList != null) {
-            this.ErrorStaffList = new ErrStaffItem[source.ErrorStaffList.length];
-            for (int i = 0; i < source.ErrorStaffList.length; i++) {
-                this.ErrorStaffList[i] = new ErrStaffItem(source.ErrorStaffList[i]);
+    public ListPoliciesGrantingServiceAccessResponse(ListPoliciesGrantingServiceAccessResponse source) {
+        if (source.List != null) {
+            this.List = new ListGrantServiceAccessNode[source.List.length];
+            for (int i = 0; i < source.List.length; i++) {
+                this.List[i] = new ListGrantServiceAccessNode(source.List[i]);
             }
         }
         if (source.RequestId != null) {
@@ -97,7 +92,7 @@ public class CreateStaffResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "ErrorStaffList.", this.ErrorStaffList);
+        this.setParamArrayObj(map, prefix + "List.", this.List);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

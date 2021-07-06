@@ -139,6 +139,26 @@ public class TcrClient extends AbstractClient{
     }
 
     /**
+     *创建镜像不可变规则
+     * @param req CreateImmutableTagRulesRequest
+     * @return CreateImmutableTagRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateImmutableTagRulesResponse CreateImmutableTagRules(CreateImmutableTagRulesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateImmutableTagRulesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateImmutableTagRulesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateImmutableTagRules");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建实例
      * @param req CreateInstanceRequest
      * @return CreateInstanceResponse
@@ -511,6 +531,26 @@ public class TcrClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteImagePersonalResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteImagePersonal");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     * 删除镜像不可变规则
+     * @param req DeleteImmutableTagRulesRequest
+     * @return DeleteImmutableTagRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteImmutableTagRulesResponse DeleteImmutableTagRules(DeleteImmutableTagRulesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteImmutableTagRulesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteImmutableTagRulesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteImmutableTagRules");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -951,6 +991,26 @@ public class TcrClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeImagesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeImages");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *列出镜像不可变规则
+     * @param req DescribeImmutableTagRulesRequest
+     * @return DescribeImmutableTagRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeImmutableTagRulesResponse DescribeImmutableTagRules(DescribeImmutableTagRulesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeImmutableTagRulesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeImmutableTagRulesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeImmutableTagRules");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1511,6 +1571,26 @@ public class TcrClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyApplicationTriggerPersonalResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyApplicationTriggerPersonal");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *更新镜像不可变规则
+     * @param req ModifyImmutableTagRulesRequest
+     * @return ModifyImmutableTagRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyImmutableTagRulesResponse ModifyImmutableTagRules(ModifyImmutableTagRulesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyImmutableTagRulesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyImmutableTagRulesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyImmutableTagRules");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

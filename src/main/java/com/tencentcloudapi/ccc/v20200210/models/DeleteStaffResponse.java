@@ -20,15 +20,15 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateStaffResponse extends AbstractModel{
+public class DeleteStaffResponse extends AbstractModel{
 
     /**
-    * 错误坐席列表及错误信息
+    * 无法删除的状态为在线的客服列表
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("ErrorStaffList")
+    @SerializedName("OnlineStaffList")
     @Expose
-    private ErrStaffItem [] ErrorStaffList;
+    private String [] OnlineStaffList;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,23 +38,23 @@ public class CreateStaffResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 错误坐席列表及错误信息
+     * Get 无法删除的状态为在线的客服列表
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ErrorStaffList 错误坐席列表及错误信息
+     * @return OnlineStaffList 无法删除的状态为在线的客服列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public ErrStaffItem [] getErrorStaffList() {
-        return this.ErrorStaffList;
+    public String [] getOnlineStaffList() {
+        return this.OnlineStaffList;
     }
 
     /**
-     * Set 错误坐席列表及错误信息
+     * Set 无法删除的状态为在线的客服列表
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ErrorStaffList 错误坐席列表及错误信息
+     * @param OnlineStaffList 无法删除的状态为在线的客服列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setErrorStaffList(ErrStaffItem [] ErrorStaffList) {
-        this.ErrorStaffList = ErrorStaffList;
+    public void setOnlineStaffList(String [] OnlineStaffList) {
+        this.OnlineStaffList = OnlineStaffList;
     }
 
     /**
@@ -73,18 +73,18 @@ public class CreateStaffResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public CreateStaffResponse() {
+    public DeleteStaffResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateStaffResponse(CreateStaffResponse source) {
-        if (source.ErrorStaffList != null) {
-            this.ErrorStaffList = new ErrStaffItem[source.ErrorStaffList.length];
-            for (int i = 0; i < source.ErrorStaffList.length; i++) {
-                this.ErrorStaffList[i] = new ErrStaffItem(source.ErrorStaffList[i]);
+    public DeleteStaffResponse(DeleteStaffResponse source) {
+        if (source.OnlineStaffList != null) {
+            this.OnlineStaffList = new String[source.OnlineStaffList.length];
+            for (int i = 0; i < source.OnlineStaffList.length; i++) {
+                this.OnlineStaffList[i] = new String(source.OnlineStaffList[i]);
             }
         }
         if (source.RequestId != null) {
@@ -97,7 +97,7 @@ public class CreateStaffResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "ErrorStaffList.", this.ErrorStaffList);
+        this.setParamArraySimple(map, prefix + "OnlineStaffList.", this.OnlineStaffList);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -1,5 +1,11 @@
 package com.tencentcloudapi.tcr.v20190924;
 public enum TcrErrorCode {
+    // CAM签名/鉴权错误。
+     AUTHFAILURE("AuthFailure"),
+     
+    // 操作失败。
+     FAILEDOPERATION("FailedOperation"),
+     
     // 内部错误。
      INTERNALERROR("InternalError"),
      
