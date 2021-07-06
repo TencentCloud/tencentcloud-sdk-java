@@ -59,6 +59,13 @@ public class DescribeBundlesRequest extends AbstractModel{
     private Filter [] Filters;
 
     /**
+    * 可用区列表。默认为全部可用区。
+    */
+    @SerializedName("Zones")
+    @Expose
+    private String [] Zones;
+
+    /**
      * Get 套餐 ID 列表。 
      * @return BundleIds 套餐 ID 列表。
      */
@@ -154,6 +161,22 @@ public class DescribeBundlesRequest extends AbstractModel{
         this.Filters = Filters;
     }
 
+    /**
+     * Get 可用区列表。默认为全部可用区。 
+     * @return Zones 可用区列表。默认为全部可用区。
+     */
+    public String [] getZones() {
+        return this.Zones;
+    }
+
+    /**
+     * Set 可用区列表。默认为全部可用区。
+     * @param Zones 可用区列表。默认为全部可用区。
+     */
+    public void setZones(String [] Zones) {
+        this.Zones = Zones;
+    }
+
     public DescribeBundlesRequest() {
     }
 
@@ -180,6 +203,12 @@ public class DescribeBundlesRequest extends AbstractModel{
                 this.Filters[i] = new Filter(source.Filters[i]);
             }
         }
+        if (source.Zones != null) {
+            this.Zones = new String[source.Zones.length];
+            for (int i = 0; i < source.Zones.length; i++) {
+                this.Zones[i] = new String(source.Zones[i]);
+            }
+        }
     }
 
 
@@ -191,6 +220,7 @@ public class DescribeBundlesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
+        this.setParamArraySimple(map, prefix + "Zones.", this.Zones);
 
     }
 }

@@ -39,6 +39,26 @@ public class CccClient extends AbstractClient{
     }
 
     /**
+     *绑定坐席所属技能组
+     * @param req BindStaffSkillGroupListRequest
+     * @return BindStaffSkillGroupListResponse
+     * @throws TencentCloudSDKException
+     */
+    public BindStaffSkillGroupListResponse BindStaffSkillGroupList(BindStaffSkillGroupListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<BindStaffSkillGroupListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<BindStaffSkillGroupListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "BindStaffSkillGroupList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建 SDK 登录 Token。
      * @param req CreateSDKLoginTokenRequest
      * @return CreateSDKLoginTokenResponse
@@ -71,6 +91,26 @@ public class CccClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreateStaffResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "CreateStaff");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除坐席信息
+     * @param req DeleteStaffRequest
+     * @return DeleteStaffResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteStaffResponse DeleteStaff(DeleteStaffRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteStaffResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteStaffResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteStaff");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -119,7 +159,7 @@ public class CccClient extends AbstractClient{
     }
 
     /**
-     *获取 PSTN 活动会话列表。
+     *获取当前正在通话的会话列表
      * @param req DescribePSTNActiveSessionListRequest
      * @return DescribePSTNActiveSessionListResponse
      * @throws TencentCloudSDKException
@@ -253,6 +293,26 @@ public class CccClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeTelSessionResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeTelSession");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *解绑坐席所属技能组
+     * @param req UnbindStaffSkillGroupListRequest
+     * @return UnbindStaffSkillGroupListResponse
+     * @throws TencentCloudSDKException
+     */
+    public UnbindStaffSkillGroupListResponse UnbindStaffSkillGroupList(UnbindStaffSkillGroupListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UnbindStaffSkillGroupListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UnbindStaffSkillGroupListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UnbindStaffSkillGroupList");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

@@ -107,6 +107,13 @@ public class EstablishCloudBaseRunServerRequest extends AbstractModel{
     private String [] OpenAccessTypes;
 
     /**
+    * 是否创建Path 0未传默认创建 1创建 2不创建
+    */
+    @SerializedName("IsCreatePath")
+    @Expose
+    private Long IsCreatePath;
+
+    /**
      * Get 环境id 
      * @return EnvId 环境id
      */
@@ -298,6 +305,22 @@ public class EstablishCloudBaseRunServerRequest extends AbstractModel{
         this.OpenAccessTypes = OpenAccessTypes;
     }
 
+    /**
+     * Get 是否创建Path 0未传默认创建 1创建 2不创建 
+     * @return IsCreatePath 是否创建Path 0未传默认创建 1创建 2不创建
+     */
+    public Long getIsCreatePath() {
+        return this.IsCreatePath;
+    }
+
+    /**
+     * Set 是否创建Path 0未传默认创建 1创建 2不创建
+     * @param IsCreatePath 是否创建Path 0未传默认创建 1创建 2不创建
+     */
+    public void setIsCreatePath(Long IsCreatePath) {
+        this.IsCreatePath = IsCreatePath;
+    }
+
     public EstablishCloudBaseRunServerRequest() {
     }
 
@@ -345,6 +368,9 @@ public class EstablishCloudBaseRunServerRequest extends AbstractModel{
                 this.OpenAccessTypes[i] = new String(source.OpenAccessTypes[i]);
             }
         }
+        if (source.IsCreatePath != null) {
+            this.IsCreatePath = new Long(source.IsCreatePath);
+        }
     }
 
 
@@ -364,6 +390,7 @@ public class EstablishCloudBaseRunServerRequest extends AbstractModel{
         this.setParamObj(map, prefix + "VpcInfo.", this.VpcInfo);
         this.setParamSimple(map, prefix + "PublicAccess", this.PublicAccess);
         this.setParamArraySimple(map, prefix + "OpenAccessTypes.", this.OpenAccessTypes);
+        this.setParamSimple(map, prefix + "IsCreatePath", this.IsCreatePath);
 
     }
 }

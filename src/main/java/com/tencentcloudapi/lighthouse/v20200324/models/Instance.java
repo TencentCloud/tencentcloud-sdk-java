@@ -208,6 +208,13 @@ FAILED：表示操作失败
     private String OsName;
 
     /**
+    * 可用区。
+    */
+    @SerializedName("Zone")
+    @Expose
+    private String Zone;
+
+    /**
      * Get 实例 ID。 
      * @return InstanceId 实例 ID。
      */
@@ -659,6 +666,22 @@ FAILED：表示操作失败
         this.OsName = OsName;
     }
 
+    /**
+     * Get 可用区。 
+     * @return Zone 可用区。
+     */
+    public String getZone() {
+        return this.Zone;
+    }
+
+    /**
+     * Set 可用区。
+     * @param Zone 可用区。
+     */
+    public void setZone(String Zone) {
+        this.Zone = Zone;
+    }
+
     public Instance() {
     }
 
@@ -745,6 +768,9 @@ FAILED：表示操作失败
         if (source.OsName != null) {
             this.OsName = new String(source.OsName);
         }
+        if (source.Zone != null) {
+            this.Zone = new String(source.Zone);
+        }
     }
 
 
@@ -776,6 +802,7 @@ FAILED：表示操作失败
         this.setParamSimple(map, prefix + "PlatformType", this.PlatformType);
         this.setParamSimple(map, prefix + "Platform", this.Platform);
         this.setParamSimple(map, prefix + "OsName", this.OsName);
+        this.setParamSimple(map, prefix + "Zone", this.Zone);
 
     }
 }

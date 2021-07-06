@@ -13,22 +13,37 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.ccc.v20200210.models;
+package com.tencentcloudapi.tcr.v20190924.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateStaffResponse extends AbstractModel{
+public class DescribeImmutableTagRulesResponse extends AbstractModel{
 
     /**
-    * 错误坐席列表及错误信息
+    * 规则列表
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("ErrorStaffList")
+    @SerializedName("Rules")
     @Expose
-    private ErrStaffItem [] ErrorStaffList;
+    private ImmutableTagRule [] Rules;
+
+    /**
+    * 未创建规则的命名空间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EmptyNs")
+    @Expose
+    private String [] EmptyNs;
+
+    /**
+    * 规则总量
+    */
+    @SerializedName("Total")
+    @Expose
+    private Long Total;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,23 +53,59 @@ public class CreateStaffResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 错误坐席列表及错误信息
+     * Get 规则列表
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ErrorStaffList 错误坐席列表及错误信息
+     * @return Rules 规则列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public ErrStaffItem [] getErrorStaffList() {
-        return this.ErrorStaffList;
+    public ImmutableTagRule [] getRules() {
+        return this.Rules;
     }
 
     /**
-     * Set 错误坐席列表及错误信息
+     * Set 规则列表
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ErrorStaffList 错误坐席列表及错误信息
+     * @param Rules 规则列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setErrorStaffList(ErrStaffItem [] ErrorStaffList) {
-        this.ErrorStaffList = ErrorStaffList;
+    public void setRules(ImmutableTagRule [] Rules) {
+        this.Rules = Rules;
+    }
+
+    /**
+     * Get 未创建规则的命名空间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EmptyNs 未创建规则的命名空间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getEmptyNs() {
+        return this.EmptyNs;
+    }
+
+    /**
+     * Set 未创建规则的命名空间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EmptyNs 未创建规则的命名空间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEmptyNs(String [] EmptyNs) {
+        this.EmptyNs = EmptyNs;
+    }
+
+    /**
+     * Get 规则总量 
+     * @return Total 规则总量
+     */
+    public Long getTotal() {
+        return this.Total;
+    }
+
+    /**
+     * Set 规则总量
+     * @param Total 规则总量
+     */
+    public void setTotal(Long Total) {
+        this.Total = Total;
     }
 
     /**
@@ -73,19 +124,28 @@ public class CreateStaffResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public CreateStaffResponse() {
+    public DescribeImmutableTagRulesResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateStaffResponse(CreateStaffResponse source) {
-        if (source.ErrorStaffList != null) {
-            this.ErrorStaffList = new ErrStaffItem[source.ErrorStaffList.length];
-            for (int i = 0; i < source.ErrorStaffList.length; i++) {
-                this.ErrorStaffList[i] = new ErrStaffItem(source.ErrorStaffList[i]);
+    public DescribeImmutableTagRulesResponse(DescribeImmutableTagRulesResponse source) {
+        if (source.Rules != null) {
+            this.Rules = new ImmutableTagRule[source.Rules.length];
+            for (int i = 0; i < source.Rules.length; i++) {
+                this.Rules[i] = new ImmutableTagRule(source.Rules[i]);
             }
+        }
+        if (source.EmptyNs != null) {
+            this.EmptyNs = new String[source.EmptyNs.length];
+            for (int i = 0; i < source.EmptyNs.length; i++) {
+                this.EmptyNs[i] = new String(source.EmptyNs[i]);
+            }
+        }
+        if (source.Total != null) {
+            this.Total = new Long(source.Total);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -97,7 +157,9 @@ public class CreateStaffResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "ErrorStaffList.", this.ErrorStaffList);
+        this.setParamArrayObj(map, prefix + "Rules.", this.Rules);
+        this.setParamArraySimple(map, prefix + "EmptyNs.", this.EmptyNs);
+        this.setParamSimple(map, prefix + "Total", this.Total);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -939,6 +939,26 @@ public class CamClient extends AbstractClient{
     }
 
     /**
+     *获取所有已授权服务
+     * @param req ListPoliciesGrantingServiceAccessRequest
+     * @return ListPoliciesGrantingServiceAccessResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListPoliciesGrantingServiceAccessResponse ListPoliciesGrantingServiceAccess(ListPoliciesGrantingServiceAccessRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ListPoliciesGrantingServiceAccessResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ListPoliciesGrantingServiceAccessResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ListPoliciesGrantingServiceAccess");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *该接口（ListPolicyVersions）用于获取策略版本列表
      * @param req ListPolicyVersionsRequest
      * @return ListPolicyVersionsResponse

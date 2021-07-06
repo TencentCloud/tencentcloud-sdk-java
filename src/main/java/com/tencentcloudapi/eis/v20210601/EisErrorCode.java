@@ -1,5 +1,8 @@
 package com.tencentcloudapi.eis.v20210601;
 public enum EisErrorCode {
+    // 鉴权失败。
+     FAILEDOPERATION_AUTHENTICATIONFAILED("FailedOperation.AuthenticationFailed"),
+     
     // 依赖服务错误。
      FAILEDOPERATION_METACOMPILERERROR("FailedOperation.MetaCompilerError"),
      

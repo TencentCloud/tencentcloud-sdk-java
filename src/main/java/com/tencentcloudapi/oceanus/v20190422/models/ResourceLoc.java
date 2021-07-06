@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ResourceLoc extends AbstractModel{
 
     /**
-    * 资源位置的存储类型，目前只支持COS
+    * 资源位置的存储类型，目前只支持1:COS
     */
     @SerializedName("StorageType")
     @Expose
@@ -37,16 +37,16 @@ public class ResourceLoc extends AbstractModel{
     private ResourceLocParam Param;
 
     /**
-     * Get 资源位置的存储类型，目前只支持COS 
-     * @return StorageType 资源位置的存储类型，目前只支持COS
+     * Get 资源位置的存储类型，目前只支持1:COS 
+     * @return StorageType 资源位置的存储类型，目前只支持1:COS
      */
     public Long getStorageType() {
         return this.StorageType;
     }
 
     /**
-     * Set 资源位置的存储类型，目前只支持COS
-     * @param StorageType 资源位置的存储类型，目前只支持COS
+     * Set 资源位置的存储类型，目前只支持1:COS
+     * @param StorageType 资源位置的存储类型，目前只支持1:COS
      */
     public void setStorageType(Long StorageType) {
         this.StorageType = StorageType;
