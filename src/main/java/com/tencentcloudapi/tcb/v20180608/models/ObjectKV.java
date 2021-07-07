@@ -13,48 +13,74 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.market.v20191010.models;
+package com.tencentcloudapi.tcb.v20180608.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetCateTreeRequest extends AbstractModel{
+public class ObjectKV extends AbstractModel{
 
     /**
-    * 分类ID
+    * object 的 key
     */
-    @SerializedName("CateId")
+    @SerializedName("Key")
     @Expose
-    private Long CateId;
+    private String Key;
 
     /**
-     * Get 分类ID 
-     * @return CateId 分类ID
+    * object key 对应的 value
+    */
+    @SerializedName("Value")
+    @Expose
+    private String Value;
+
+    /**
+     * Get object 的 key 
+     * @return Key object 的 key
      */
-    public Long getCateId() {
-        return this.CateId;
+    public String getKey() {
+        return this.Key;
     }
 
     /**
-     * Set 分类ID
-     * @param CateId 分类ID
+     * Set object 的 key
+     * @param Key object 的 key
      */
-    public void setCateId(Long CateId) {
-        this.CateId = CateId;
+    public void setKey(String Key) {
+        this.Key = Key;
     }
 
-    public GetCateTreeRequest() {
+    /**
+     * Get object key 对应的 value 
+     * @return Value object key 对应的 value
+     */
+    public String getValue() {
+        return this.Value;
+    }
+
+    /**
+     * Set object key 对应的 value
+     * @param Value object key 对应的 value
+     */
+    public void setValue(String Value) {
+        this.Value = Value;
+    }
+
+    public ObjectKV() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public GetCateTreeRequest(GetCateTreeRequest source) {
-        if (source.CateId != null) {
-            this.CateId = new Long(source.CateId);
+    public ObjectKV(ObjectKV source) {
+        if (source.Key != null) {
+            this.Key = new String(source.Key);
+        }
+        if (source.Value != null) {
+            this.Value = new String(source.Value);
         }
     }
 
@@ -63,7 +89,8 @@ public class GetCateTreeRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "CateId", this.CateId);
+        this.setParamSimple(map, prefix + "Key", this.Key);
+        this.setParamSimple(map, prefix + "Value", this.Value);
 
     }
 }

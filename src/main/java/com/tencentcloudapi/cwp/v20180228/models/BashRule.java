@@ -44,7 +44,7 @@ public class BashRule extends AbstractModel{
     private String Name;
 
     /**
-    * 危险等级(1: 高危 2:中危 3: 低危)
+    * 危险等级(0 ：无 1: 高危 2:中危 3: 低危)
     */
     @SerializedName("Level")
     @Expose
@@ -107,6 +107,30 @@ public class BashRule extends AbstractModel{
     private String Hostip;
 
     /**
+    * 生效服务器的uuid数组
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Uuids")
+    @Expose
+    private String [] Uuids;
+
+    /**
+    * 0=黑名单 1=白名单
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("White")
+    @Expose
+    private Long White;
+
+    /**
+    * 是否处理之前的事件 0: 不处理 1:处理
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DealOldEvents")
+    @Expose
+    private Long DealOldEvents;
+
+    /**
      * Get 规则ID 
      * @return Id 规则ID
      */
@@ -155,16 +179,16 @@ public class BashRule extends AbstractModel{
     }
 
     /**
-     * Get 危险等级(1: 高危 2:中危 3: 低危) 
-     * @return Level 危险等级(1: 高危 2:中危 3: 低危)
+     * Get 危险等级(0 ：无 1: 高危 2:中危 3: 低危) 
+     * @return Level 危险等级(0 ：无 1: 高危 2:中危 3: 低危)
      */
     public Long getLevel() {
         return this.Level;
     }
 
     /**
-     * Set 危险等级(1: 高危 2:中危 3: 低危)
-     * @param Level 危险等级(1: 高危 2:中危 3: 低危)
+     * Set 危险等级(0 ：无 1: 高危 2:中危 3: 低危)
+     * @param Level 危险等级(0 ：无 1: 高危 2:中危 3: 低危)
      */
     public void setLevel(Long Level) {
         this.Level = Level;
@@ -298,6 +322,66 @@ public class BashRule extends AbstractModel{
         this.Hostip = Hostip;
     }
 
+    /**
+     * Get 生效服务器的uuid数组
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Uuids 生效服务器的uuid数组
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getUuids() {
+        return this.Uuids;
+    }
+
+    /**
+     * Set 生效服务器的uuid数组
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Uuids 生效服务器的uuid数组
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUuids(String [] Uuids) {
+        this.Uuids = Uuids;
+    }
+
+    /**
+     * Get 0=黑名单 1=白名单
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return White 0=黑名单 1=白名单
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getWhite() {
+        return this.White;
+    }
+
+    /**
+     * Set 0=黑名单 1=白名单
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param White 0=黑名单 1=白名单
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setWhite(Long White) {
+        this.White = White;
+    }
+
+    /**
+     * Get 是否处理之前的事件 0: 不处理 1:处理
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DealOldEvents 是否处理之前的事件 0: 不处理 1:处理
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getDealOldEvents() {
+        return this.DealOldEvents;
+    }
+
+    /**
+     * Set 是否处理之前的事件 0: 不处理 1:处理
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DealOldEvents 是否处理之前的事件 0: 不处理 1:处理
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDealOldEvents(Long DealOldEvents) {
+        this.DealOldEvents = DealOldEvents;
+    }
+
     public BashRule() {
     }
 
@@ -342,6 +426,18 @@ public class BashRule extends AbstractModel{
         if (source.Hostip != null) {
             this.Hostip = new String(source.Hostip);
         }
+        if (source.Uuids != null) {
+            this.Uuids = new String[source.Uuids.length];
+            for (int i = 0; i < source.Uuids.length; i++) {
+                this.Uuids[i] = new String(source.Uuids[i]);
+            }
+        }
+        if (source.White != null) {
+            this.White = new Long(source.White);
+        }
+        if (source.DealOldEvents != null) {
+            this.DealOldEvents = new Long(source.DealOldEvents);
+        }
     }
 
 
@@ -361,6 +457,9 @@ public class BashRule extends AbstractModel{
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
         this.setParamSimple(map, prefix + "Hostip", this.Hostip);
+        this.setParamArraySimple(map, prefix + "Uuids.", this.Uuids);
+        this.setParamSimple(map, prefix + "White", this.White);
+        this.setParamSimple(map, prefix + "DealOldEvents", this.DealOldEvents);
 
     }
 }

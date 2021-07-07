@@ -119,6 +119,26 @@ public class FaceidClient extends AbstractClient{
     }
 
     /**
+     *用于轮询E证通H5场景EidToken验证状态。
+     * @param req CheckEidTokenStatusRequest
+     * @return CheckEidTokenStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public CheckEidTokenStatusResponse CheckEidTokenStatus(CheckEidTokenStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CheckEidTokenStatusResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CheckEidTokenStatusResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CheckEidTokenStatus");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *传入身份证人像面照片，识别身份证照片上的信息，并将姓名、身份证号、身份证人像照片与公安权威库的证件照进行比对，是否属于同一个人，从而验证身份证信息的真实性。
      * @param req CheckIdCardInformationRequest
      * @return CheckIdCardInformationResponse
@@ -280,7 +300,7 @@ public class FaceidClient extends AbstractClient{
     }
 
     /**
-     *每次调用E证通小程序服务前，需先调用本接口获取EidToken，用来串联核身流程，在验证完成后，用于获取验证结果信息。
+     *每次调用E证通服务前，需先调用本接口获取EidToken，用来串联E证通流程，在验证完成后，用于获取E证通结果信息。
      * @param req GetEidTokenRequest
      * @return GetEidTokenResponse
      * @throws TencentCloudSDKException

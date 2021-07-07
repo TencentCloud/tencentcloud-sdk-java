@@ -106,6 +106,13 @@ public class Invocation extends AbstractModel{
     private String DefaultParameters;
 
     /**
+    * 执行命令的实例类型，取值范围：CVM、LIGHTHOUSE。
+    */
+    @SerializedName("InstanceKind")
+    @Expose
+    private String InstanceKind;
+
+    /**
      * Get 执行活动ID。 
      * @return InvocationId 执行活动ID。
      */
@@ -305,6 +312,22 @@ public class Invocation extends AbstractModel{
         this.DefaultParameters = DefaultParameters;
     }
 
+    /**
+     * Get 执行命令的实例类型，取值范围：CVM、LIGHTHOUSE。 
+     * @return InstanceKind 执行命令的实例类型，取值范围：CVM、LIGHTHOUSE。
+     */
+    public String getInstanceKind() {
+        return this.InstanceKind;
+    }
+
+    /**
+     * Set 执行命令的实例类型，取值范围：CVM、LIGHTHOUSE。
+     * @param InstanceKind 执行命令的实例类型，取值范围：CVM、LIGHTHOUSE。
+     */
+    public void setInstanceKind(String InstanceKind) {
+        this.InstanceKind = InstanceKind;
+    }
+
     public Invocation() {
     }
 
@@ -349,6 +372,9 @@ public class Invocation extends AbstractModel{
         if (source.DefaultParameters != null) {
             this.DefaultParameters = new String(source.DefaultParameters);
         }
+        if (source.InstanceKind != null) {
+            this.InstanceKind = new String(source.InstanceKind);
+        }
     }
 
 
@@ -367,6 +393,7 @@ public class Invocation extends AbstractModel{
         this.setParamSimple(map, prefix + "UpdatedTime", this.UpdatedTime);
         this.setParamSimple(map, prefix + "Parameters", this.Parameters);
         this.setParamSimple(map, prefix + "DefaultParameters", this.DefaultParameters);
+        this.setParamSimple(map, prefix + "InstanceKind", this.InstanceKind);
 
     }
 }

@@ -30,6 +30,13 @@ public class DescribeSREInstanceAccessAddressResponse extends AbstractModel{
     private String IntranetAddress;
 
     /**
+    * 公网访问地址
+    */
+    @SerializedName("InternetAddress")
+    @Expose
+    private String InternetAddress;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -50,6 +57,22 @@ public class DescribeSREInstanceAccessAddressResponse extends AbstractModel{
      */
     public void setIntranetAddress(String IntranetAddress) {
         this.IntranetAddress = IntranetAddress;
+    }
+
+    /**
+     * Get 公网访问地址 
+     * @return InternetAddress 公网访问地址
+     */
+    public String getInternetAddress() {
+        return this.InternetAddress;
+    }
+
+    /**
+     * Set 公网访问地址
+     * @param InternetAddress 公网访问地址
+     */
+    public void setInternetAddress(String InternetAddress) {
+        this.InternetAddress = InternetAddress;
     }
 
     /**
@@ -79,6 +102,9 @@ public class DescribeSREInstanceAccessAddressResponse extends AbstractModel{
         if (source.IntranetAddress != null) {
             this.IntranetAddress = new String(source.IntranetAddress);
         }
+        if (source.InternetAddress != null) {
+            this.InternetAddress = new String(source.InternetAddress);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -90,6 +116,7 @@ public class DescribeSREInstanceAccessAddressResponse extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "IntranetAddress", this.IntranetAddress);
+        this.setParamSimple(map, prefix + "InternetAddress", this.InternetAddress);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

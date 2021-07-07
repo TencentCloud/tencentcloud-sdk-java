@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class GetEidResultRequest extends AbstractModel{
 
     /**
-    * 人脸核身流程的标识，调用GetEidToken接口时生成的。
+    * E证通流程的唯一标识，调用GetEidToken接口时生成。
     */
     @SerializedName("EidToken")
     @Expose
@@ -46,16 +46,16 @@ public class GetEidResultRequest extends AbstractModel{
     private Long BestFramesCount;
 
     /**
-     * Get 人脸核身流程的标识，调用GetEidToken接口时生成的。 
-     * @return EidToken 人脸核身流程的标识，调用GetEidToken接口时生成的。
+     * Get E证通流程的唯一标识，调用GetEidToken接口时生成。 
+     * @return EidToken E证通流程的唯一标识，调用GetEidToken接口时生成。
      */
     public String getEidToken() {
         return this.EidToken;
     }
 
     /**
-     * Set 人脸核身流程的标识，调用GetEidToken接口时生成的。
-     * @param EidToken 人脸核身流程的标识，调用GetEidToken接口时生成的。
+     * Set E证通流程的唯一标识，调用GetEidToken接口时生成。
+     * @param EidToken E证通流程的唯一标识，调用GetEidToken接口时生成。
      */
     public void setEidToken(String EidToken) {
         this.EidToken = EidToken;

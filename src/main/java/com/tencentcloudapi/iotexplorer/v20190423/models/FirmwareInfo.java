@@ -84,6 +84,22 @@ public class FirmwareInfo extends AbstractModel{
     private String FwType;
 
     /**
+    * 创建者子 uin
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CreateUserId")
+    @Expose
+    private Long CreateUserId;
+
+    /**
+    * 创建者昵称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CreatorNickName")
+    @Expose
+    private String CreatorNickName;
+
+    /**
      * Get 固件版本 
      * @return Version 固件版本
      */
@@ -231,6 +247,46 @@ public class FirmwareInfo extends AbstractModel{
         this.FwType = FwType;
     }
 
+    /**
+     * Get 创建者子 uin
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CreateUserId 创建者子 uin
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getCreateUserId() {
+        return this.CreateUserId;
+    }
+
+    /**
+     * Set 创建者子 uin
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CreateUserId 创建者子 uin
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCreateUserId(Long CreateUserId) {
+        this.CreateUserId = CreateUserId;
+    }
+
+    /**
+     * Get 创建者昵称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CreatorNickName 创建者昵称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCreatorNickName() {
+        return this.CreatorNickName;
+    }
+
+    /**
+     * Set 创建者昵称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CreatorNickName 创建者昵称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCreatorNickName(String CreatorNickName) {
+        this.CreatorNickName = CreatorNickName;
+    }
+
     public FirmwareInfo() {
     }
 
@@ -263,6 +319,12 @@ public class FirmwareInfo extends AbstractModel{
         if (source.FwType != null) {
             this.FwType = new String(source.FwType);
         }
+        if (source.CreateUserId != null) {
+            this.CreateUserId = new Long(source.CreateUserId);
+        }
+        if (source.CreatorNickName != null) {
+            this.CreatorNickName = new String(source.CreatorNickName);
+        }
     }
 
 
@@ -278,6 +340,8 @@ public class FirmwareInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "ProductId", this.ProductId);
         this.setParamSimple(map, prefix + "FwType", this.FwType);
+        this.setParamSimple(map, prefix + "CreateUserId", this.CreateUserId);
+        this.setParamSimple(map, prefix + "CreatorNickName", this.CreatorNickName);
 
     }
 }

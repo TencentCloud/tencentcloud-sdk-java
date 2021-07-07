@@ -37,7 +37,13 @@ public class CreateInstanceAccountRequest extends AbstractModel{
     private String AccountName;
 
     /**
-    * 子账号密码
+    * 1.长度8-30位,推荐使用12位以上的密码
+2.不能以"/"开头
+3.至少包含两项
+    a.小写字母a-z
+    b.大写字母A-Z
+    c.数字0-9
+    d.()`~!@#$%^&*-+=_|{}[]:;<>,.?/
     */
     @SerializedName("AccountPassword")
     @Expose
@@ -97,16 +103,40 @@ public class CreateInstanceAccountRequest extends AbstractModel{
     }
 
     /**
-     * Get 子账号密码 
-     * @return AccountPassword 子账号密码
+     * Get 1.长度8-30位,推荐使用12位以上的密码
+2.不能以"/"开头
+3.至少包含两项
+    a.小写字母a-z
+    b.大写字母A-Z
+    c.数字0-9
+    d.()`~!@#$%^&*-+=_|{}[]:;<>,.?/ 
+     * @return AccountPassword 1.长度8-30位,推荐使用12位以上的密码
+2.不能以"/"开头
+3.至少包含两项
+    a.小写字母a-z
+    b.大写字母A-Z
+    c.数字0-9
+    d.()`~!@#$%^&*-+=_|{}[]:;<>,.?/
      */
     public String getAccountPassword() {
         return this.AccountPassword;
     }
 
     /**
-     * Set 子账号密码
-     * @param AccountPassword 子账号密码
+     * Set 1.长度8-30位,推荐使用12位以上的密码
+2.不能以"/"开头
+3.至少包含两项
+    a.小写字母a-z
+    b.大写字母A-Z
+    c.数字0-9
+    d.()`~!@#$%^&*-+=_|{}[]:;<>,.?/
+     * @param AccountPassword 1.长度8-30位,推荐使用12位以上的密码
+2.不能以"/"开头
+3.至少包含两项
+    a.小写字母a-z
+    b.大写字母A-Z
+    c.数字0-9
+    d.()`~!@#$%^&*-+=_|{}[]:;<>,.?/
      */
     public void setAccountPassword(String AccountPassword) {
         this.AccountPassword = AccountPassword;

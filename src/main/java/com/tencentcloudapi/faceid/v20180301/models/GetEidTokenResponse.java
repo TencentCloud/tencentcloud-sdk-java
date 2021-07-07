@@ -23,12 +23,19 @@ import java.util.HashMap;
 public class GetEidTokenResponse extends AbstractModel{
 
     /**
-    * 一次核身流程的标识，有效时间为7,200秒；
+    * 一次核身流程的标识，有效时间为600秒；
 完成核身后，可用该标识获取验证结果信息。
     */
     @SerializedName("EidToken")
     @Expose
     private String EidToken;
+
+    /**
+    * 发起核身流程的URL，用于H5场景核身。
+    */
+    @SerializedName("Url")
+    @Expose
+    private String Url;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,9 +45,9 @@ public class GetEidTokenResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 一次核身流程的标识，有效时间为7,200秒；
+     * Get 一次核身流程的标识，有效时间为600秒；
 完成核身后，可用该标识获取验证结果信息。 
-     * @return EidToken 一次核身流程的标识，有效时间为7,200秒；
+     * @return EidToken 一次核身流程的标识，有效时间为600秒；
 完成核身后，可用该标识获取验证结果信息。
      */
     public String getEidToken() {
@@ -48,13 +55,29 @@ public class GetEidTokenResponse extends AbstractModel{
     }
 
     /**
-     * Set 一次核身流程的标识，有效时间为7,200秒；
+     * Set 一次核身流程的标识，有效时间为600秒；
 完成核身后，可用该标识获取验证结果信息。
-     * @param EidToken 一次核身流程的标识，有效时间为7,200秒；
+     * @param EidToken 一次核身流程的标识，有效时间为600秒；
 完成核身后，可用该标识获取验证结果信息。
      */
     public void setEidToken(String EidToken) {
         this.EidToken = EidToken;
+    }
+
+    /**
+     * Get 发起核身流程的URL，用于H5场景核身。 
+     * @return Url 发起核身流程的URL，用于H5场景核身。
+     */
+    public String getUrl() {
+        return this.Url;
+    }
+
+    /**
+     * Set 发起核身流程的URL，用于H5场景核身。
+     * @param Url 发起核身流程的URL，用于H5场景核身。
+     */
+    public void setUrl(String Url) {
+        this.Url = Url;
     }
 
     /**
@@ -84,6 +107,9 @@ public class GetEidTokenResponse extends AbstractModel{
         if (source.EidToken != null) {
             this.EidToken = new String(source.EidToken);
         }
+        if (source.Url != null) {
+            this.Url = new String(source.Url);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -95,6 +121,7 @@ public class GetEidTokenResponse extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "EidToken", this.EidToken);
+        this.setParamSimple(map, prefix + "Url", this.Url);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

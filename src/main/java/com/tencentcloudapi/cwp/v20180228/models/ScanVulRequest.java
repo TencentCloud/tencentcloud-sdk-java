@@ -58,6 +58,20 @@ public class ScanVulRequest extends AbstractModel{
     private Long VulEmergency;
 
     /**
+    * 超时时长 单位秒
+    */
+    @SerializedName("TimeoutPeriod")
+    @Expose
+    private Long TimeoutPeriod;
+
+    /**
+    * 需要扫描的漏洞id
+    */
+    @SerializedName("VulIds")
+    @Expose
+    private Long [] VulIds;
+
+    /**
      * Get 漏洞类型：1: web应用漏洞 2:系统组件漏洞 (多选英文;分隔) 
      * @return VulCategories 漏洞类型：1: web应用漏洞 2:系统组件漏洞 (多选英文;分隔)
      */
@@ -137,6 +151,38 @@ public class ScanVulRequest extends AbstractModel{
         this.VulEmergency = VulEmergency;
     }
 
+    /**
+     * Get 超时时长 单位秒 
+     * @return TimeoutPeriod 超时时长 单位秒
+     */
+    public Long getTimeoutPeriod() {
+        return this.TimeoutPeriod;
+    }
+
+    /**
+     * Set 超时时长 单位秒
+     * @param TimeoutPeriod 超时时长 单位秒
+     */
+    public void setTimeoutPeriod(Long TimeoutPeriod) {
+        this.TimeoutPeriod = TimeoutPeriod;
+    }
+
+    /**
+     * Get 需要扫描的漏洞id 
+     * @return VulIds 需要扫描的漏洞id
+     */
+    public Long [] getVulIds() {
+        return this.VulIds;
+    }
+
+    /**
+     * Set 需要扫描的漏洞id
+     * @param VulIds 需要扫描的漏洞id
+     */
+    public void setVulIds(Long [] VulIds) {
+        this.VulIds = VulIds;
+    }
+
     public ScanVulRequest() {
     }
 
@@ -163,6 +209,15 @@ public class ScanVulRequest extends AbstractModel{
         if (source.VulEmergency != null) {
             this.VulEmergency = new Long(source.VulEmergency);
         }
+        if (source.TimeoutPeriod != null) {
+            this.TimeoutPeriod = new Long(source.TimeoutPeriod);
+        }
+        if (source.VulIds != null) {
+            this.VulIds = new Long[source.VulIds.length];
+            for (int i = 0; i < source.VulIds.length; i++) {
+                this.VulIds[i] = new Long(source.VulIds[i]);
+            }
+        }
     }
 
 
@@ -175,6 +230,8 @@ public class ScanVulRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "HostType", this.HostType);
         this.setParamArraySimple(map, prefix + "QuuidList.", this.QuuidList);
         this.setParamSimple(map, prefix + "VulEmergency", this.VulEmergency);
+        this.setParamSimple(map, prefix + "TimeoutPeriod", this.TimeoutPeriod);
+        this.setParamArraySimple(map, prefix + "VulIds.", this.VulIds);
 
     }
 }

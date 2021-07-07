@@ -13,30 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.market.v20191010.models;
+package com.tencentcloudapi.iotvideo.v20201215.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetCateTreeResponse extends AbstractModel{
+public class DescribeAIModelsResponse extends AbstractModel{
 
     /**
-    * 分类ID
-注意：此字段可能返回 null，表示取不到有效值。
+    * AI模型数量
     */
-    @SerializedName("CateId")
+    @SerializedName("TotalCount")
     @Expose
-    private Long CateId;
+    private Long TotalCount;
 
     /**
-    * 分类名称
-注意：此字段可能返回 null，表示取不到有效值。
+    * AI模型信息数组
     */
-    @SerializedName("Name")
+    @SerializedName("Models")
     @Expose
-    private String Name;
+    private AIModelInfo [] Models;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,43 +44,35 @@ public class GetCateTreeResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 分类ID
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CateId 分类ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get AI模型数量 
+     * @return TotalCount AI模型数量
      */
-    public Long getCateId() {
-        return this.CateId;
+    public Long getTotalCount() {
+        return this.TotalCount;
     }
 
     /**
-     * Set 分类ID
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param CateId 分类ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set AI模型数量
+     * @param TotalCount AI模型数量
      */
-    public void setCateId(Long CateId) {
-        this.CateId = CateId;
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 分类名称
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Name 分类名称
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get AI模型信息数组 
+     * @return Models AI模型信息数组
      */
-    public String getName() {
-        return this.Name;
+    public AIModelInfo [] getModels() {
+        return this.Models;
     }
 
     /**
-     * Set 分类名称
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Name 分类名称
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set AI模型信息数组
+     * @param Models AI模型信息数组
      */
-    public void setName(String Name) {
-        this.Name = Name;
+    public void setModels(AIModelInfo [] Models) {
+        this.Models = Models;
     }
 
     /**
@@ -101,19 +91,22 @@ public class GetCateTreeResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public GetCateTreeResponse() {
+    public DescribeAIModelsResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public GetCateTreeResponse(GetCateTreeResponse source) {
-        if (source.CateId != null) {
-            this.CateId = new Long(source.CateId);
+    public DescribeAIModelsResponse(DescribeAIModelsResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
         }
-        if (source.Name != null) {
-            this.Name = new String(source.Name);
+        if (source.Models != null) {
+            this.Models = new AIModelInfo[source.Models.length];
+            for (int i = 0; i < source.Models.length; i++) {
+                this.Models[i] = new AIModelInfo(source.Models[i]);
+            }
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -125,8 +118,8 @@ public class GetCateTreeResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "CateId", this.CateId);
-        this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamArrayObj(map, prefix + "Models.", this.Models);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

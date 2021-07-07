@@ -399,6 +399,26 @@ public class TcbClient extends AbstractClient{
     }
 
     /**
+     *独立网关中拉取云托管服务对应的配置信息
+     * @param req DescribeCloudBaseRunConfForGateWayRequest
+     * @return DescribeCloudBaseRunConfForGateWayResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCloudBaseRunConfForGateWayResponse DescribeCloudBaseRunConfForGateWay(DescribeCloudBaseRunConfForGateWayRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCloudBaseRunConfForGateWayResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCloudBaseRunConfForGateWayResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeCloudBaseRunConfForGateWay");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查看容器托管的集群状态
      * @param req DescribeCloudBaseRunResourceRequest
      * @return DescribeCloudBaseRunResourceResponse
@@ -914,6 +934,26 @@ public class TcbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<EstablishWxGatewayRouteResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "EstablishWxGatewayRoute");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改容器内的版本流量配置
+     * @param req ModifyCloudBaseRunServerFlowConfRequest
+     * @return ModifyCloudBaseRunServerFlowConfResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyCloudBaseRunServerFlowConfResponse ModifyCloudBaseRunServerFlowConf(ModifyCloudBaseRunServerFlowConfRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyCloudBaseRunServerFlowConfResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyCloudBaseRunServerFlowConfResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyCloudBaseRunServerFlowConf");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

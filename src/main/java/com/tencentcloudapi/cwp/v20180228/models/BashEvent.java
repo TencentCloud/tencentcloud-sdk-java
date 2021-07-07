@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class BashEvent extends AbstractModel{
 
     /**
-    * ID
+    * 数据ID
     */
     @SerializedName("Id")
     @Expose
@@ -86,14 +86,14 @@ public class BashEvent extends AbstractModel{
     private String RuleName;
 
     /**
-    * 规则等级
+    * 规则等级：1-高 2-中 3-低
     */
     @SerializedName("RuleLevel")
     @Expose
     private Long RuleLevel;
 
     /**
-    * 处理状态
+    * 处理状态： 0 = 待处理 1= 已处理, 2 = 已加白
     */
     @SerializedName("Status")
     @Expose
@@ -114,16 +114,64 @@ public class BashEvent extends AbstractModel{
     private String MachineName;
 
     /**
-     * Get ID 
-     * @return Id ID
+    * 0: bash日志 1: 实时监控(雷霆版)
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DetectBy")
+    @Expose
+    private Long DetectBy;
+
+    /**
+    * 进程id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Pid")
+    @Expose
+    private String Pid;
+
+    /**
+    * 进程名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Exe")
+    @Expose
+    private String Exe;
+
+    /**
+    * 处理时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ModifyTime")
+    @Expose
+    private String ModifyTime;
+
+    /**
+    * 规则类别  0=系统规则，1=用户规则
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RuleCategory")
+    @Expose
+    private Long RuleCategory;
+
+    /**
+    * 自动生成的正则表达式
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RegexBashCmd")
+    @Expose
+    private String RegexBashCmd;
+
+    /**
+     * Get 数据ID 
+     * @return Id 数据ID
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set ID
-     * @param Id ID
+     * Set 数据ID
+     * @param Id 数据ID
      */
     public void setId(Long Id) {
         this.Id = Id;
@@ -258,32 +306,32 @@ public class BashEvent extends AbstractModel{
     }
 
     /**
-     * Get 规则等级 
-     * @return RuleLevel 规则等级
+     * Get 规则等级：1-高 2-中 3-低 
+     * @return RuleLevel 规则等级：1-高 2-中 3-低
      */
     public Long getRuleLevel() {
         return this.RuleLevel;
     }
 
     /**
-     * Set 规则等级
-     * @param RuleLevel 规则等级
+     * Set 规则等级：1-高 2-中 3-低
+     * @param RuleLevel 规则等级：1-高 2-中 3-低
      */
     public void setRuleLevel(Long RuleLevel) {
         this.RuleLevel = RuleLevel;
     }
 
     /**
-     * Get 处理状态 
-     * @return Status 处理状态
+     * Get 处理状态： 0 = 待处理 1= 已处理, 2 = 已加白 
+     * @return Status 处理状态： 0 = 待处理 1= 已处理, 2 = 已加白
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 处理状态
-     * @param Status 处理状态
+     * Set 处理状态： 0 = 待处理 1= 已处理, 2 = 已加白
+     * @param Status 处理状态： 0 = 待处理 1= 已处理, 2 = 已加白
      */
     public void setStatus(Long Status) {
         this.Status = Status;
@@ -319,6 +367,126 @@ public class BashEvent extends AbstractModel{
      */
     public void setMachineName(String MachineName) {
         this.MachineName = MachineName;
+    }
+
+    /**
+     * Get 0: bash日志 1: 实时监控(雷霆版)
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DetectBy 0: bash日志 1: 实时监控(雷霆版)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getDetectBy() {
+        return this.DetectBy;
+    }
+
+    /**
+     * Set 0: bash日志 1: 实时监控(雷霆版)
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DetectBy 0: bash日志 1: 实时监控(雷霆版)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDetectBy(Long DetectBy) {
+        this.DetectBy = DetectBy;
+    }
+
+    /**
+     * Get 进程id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Pid 进程id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPid() {
+        return this.Pid;
+    }
+
+    /**
+     * Set 进程id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Pid 进程id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPid(String Pid) {
+        this.Pid = Pid;
+    }
+
+    /**
+     * Get 进程名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Exe 进程名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getExe() {
+        return this.Exe;
+    }
+
+    /**
+     * Set 进程名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Exe 进程名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setExe(String Exe) {
+        this.Exe = Exe;
+    }
+
+    /**
+     * Get 处理时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ModifyTime 处理时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getModifyTime() {
+        return this.ModifyTime;
+    }
+
+    /**
+     * Set 处理时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ModifyTime 处理时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setModifyTime(String ModifyTime) {
+        this.ModifyTime = ModifyTime;
+    }
+
+    /**
+     * Get 规则类别  0=系统规则，1=用户规则
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RuleCategory 规则类别  0=系统规则，1=用户规则
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getRuleCategory() {
+        return this.RuleCategory;
+    }
+
+    /**
+     * Set 规则类别  0=系统规则，1=用户规则
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RuleCategory 规则类别  0=系统规则，1=用户规则
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRuleCategory(Long RuleCategory) {
+        this.RuleCategory = RuleCategory;
+    }
+
+    /**
+     * Get 自动生成的正则表达式
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RegexBashCmd 自动生成的正则表达式
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRegexBashCmd() {
+        return this.RegexBashCmd;
+    }
+
+    /**
+     * Set 自动生成的正则表达式
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RegexBashCmd 自动生成的正则表达式
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRegexBashCmd(String RegexBashCmd) {
+        this.RegexBashCmd = RegexBashCmd;
     }
 
     public BashEvent() {
@@ -368,6 +536,24 @@ public class BashEvent extends AbstractModel{
         if (source.MachineName != null) {
             this.MachineName = new String(source.MachineName);
         }
+        if (source.DetectBy != null) {
+            this.DetectBy = new Long(source.DetectBy);
+        }
+        if (source.Pid != null) {
+            this.Pid = new String(source.Pid);
+        }
+        if (source.Exe != null) {
+            this.Exe = new String(source.Exe);
+        }
+        if (source.ModifyTime != null) {
+            this.ModifyTime = new String(source.ModifyTime);
+        }
+        if (source.RuleCategory != null) {
+            this.RuleCategory = new Long(source.RuleCategory);
+        }
+        if (source.RegexBashCmd != null) {
+            this.RegexBashCmd = new String(source.RegexBashCmd);
+        }
     }
 
 
@@ -388,6 +574,12 @@ public class BashEvent extends AbstractModel{
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "MachineName", this.MachineName);
+        this.setParamSimple(map, prefix + "DetectBy", this.DetectBy);
+        this.setParamSimple(map, prefix + "Pid", this.Pid);
+        this.setParamSimple(map, prefix + "Exe", this.Exe);
+        this.setParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
+        this.setParamSimple(map, prefix + "RuleCategory", this.RuleCategory);
+        this.setParamSimple(map, prefix + "RegexBashCmd", this.RegexBashCmd);
 
     }
 }

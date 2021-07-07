@@ -133,6 +133,22 @@ public class DeviceInfo extends AbstractModel{
     private String NwkSKey;
 
     /**
+    * 创建人Id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CreateUserId")
+    @Expose
+    private Long CreateUserId;
+
+    /**
+    * 创建人昵称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CreatorNickName")
+    @Expose
+    private String CreatorNickName;
+
+    /**
      * Get 设备名 
      * @return DeviceName 设备名
      */
@@ -404,6 +420,46 @@ public class DeviceInfo extends AbstractModel{
         this.NwkSKey = NwkSKey;
     }
 
+    /**
+     * Get 创建人Id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CreateUserId 创建人Id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getCreateUserId() {
+        return this.CreateUserId;
+    }
+
+    /**
+     * Set 创建人Id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CreateUserId 创建人Id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCreateUserId(Long CreateUserId) {
+        this.CreateUserId = CreateUserId;
+    }
+
+    /**
+     * Get 创建人昵称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CreatorNickName 创建人昵称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCreatorNickName() {
+        return this.CreatorNickName;
+    }
+
+    /**
+     * Set 创建人昵称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CreatorNickName 创建人昵称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCreatorNickName(String CreatorNickName) {
+        this.CreatorNickName = CreatorNickName;
+    }
+
     public DeviceInfo() {
     }
 
@@ -454,6 +510,12 @@ public class DeviceInfo extends AbstractModel{
         if (source.NwkSKey != null) {
             this.NwkSKey = new String(source.NwkSKey);
         }
+        if (source.CreateUserId != null) {
+            this.CreateUserId = new Long(source.CreateUserId);
+        }
+        if (source.CreatorNickName != null) {
+            this.CreatorNickName = new String(source.CreatorNickName);
+        }
     }
 
 
@@ -475,6 +537,8 @@ public class DeviceInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "DevEUI", this.DevEUI);
         this.setParamSimple(map, prefix + "AppSKey", this.AppSKey);
         this.setParamSimple(map, prefix + "NwkSKey", this.NwkSKey);
+        this.setParamSimple(map, prefix + "CreateUserId", this.CreateUserId);
+        this.setParamSimple(map, prefix + "CreatorNickName", this.CreatorNickName);
 
     }
 }

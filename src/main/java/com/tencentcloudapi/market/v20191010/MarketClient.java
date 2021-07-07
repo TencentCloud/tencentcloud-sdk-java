@@ -59,26 +59,6 @@ public class MarketClient extends AbstractClient{
     }
 
     /**
-     *获取分类名称
-     * @param req GetCateTreeRequest
-     * @return GetCateTreeResponse
-     * @throws TencentCloudSDKException
-     */
-    public GetCateTreeResponse GetCateTree(GetCateTreeRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetCateTreeResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<GetCateTreeResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "GetCateTree");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *该接口可以根据InstanceId查询实例的api的使用情况。
 
      * @param req GetUsagePlanUsageAmountRequest

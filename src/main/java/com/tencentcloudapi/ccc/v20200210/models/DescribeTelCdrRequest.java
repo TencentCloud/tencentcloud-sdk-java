@@ -79,6 +79,13 @@ public class DescribeTelCdrRequest extends AbstractModel{
     private Long PageNumber;
 
     /**
+    * 按手机号筛选
+    */
+    @SerializedName("Phones")
+    @Expose
+    private String [] Phones;
+
+    /**
      * Get 起始时间戳，Unix 时间戳 
      * @return StartTimeStamp 起始时间戳，Unix 时间戳
      */
@@ -206,6 +213,22 @@ public class DescribeTelCdrRequest extends AbstractModel{
         this.PageNumber = PageNumber;
     }
 
+    /**
+     * Get 按手机号筛选 
+     * @return Phones 按手机号筛选
+     */
+    public String [] getPhones() {
+        return this.Phones;
+    }
+
+    /**
+     * Set 按手机号筛选
+     * @param Phones 按手机号筛选
+     */
+    public void setPhones(String [] Phones) {
+        this.Phones = Phones;
+    }
+
     public DescribeTelCdrRequest() {
     }
 
@@ -238,6 +261,12 @@ public class DescribeTelCdrRequest extends AbstractModel{
         if (source.PageNumber != null) {
             this.PageNumber = new Long(source.PageNumber);
         }
+        if (source.Phones != null) {
+            this.Phones = new String[source.Phones.length];
+            for (int i = 0; i < source.Phones.length; i++) {
+                this.Phones[i] = new String(source.Phones[i]);
+            }
+        }
     }
 
 
@@ -253,6 +282,7 @@ public class DescribeTelCdrRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
         this.setParamSimple(map, prefix + "PageSize", this.PageSize);
         this.setParamSimple(map, prefix + "PageNumber", this.PageNumber);
+        this.setParamArraySimple(map, prefix + "Phones.", this.Phones);
 
     }
 }

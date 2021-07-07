@@ -79,7 +79,7 @@ public class RedisCommonInstanceList extends AbstractModel{
     private String SubnetId;
 
     /**
-    * 实例状态信息，0-创建中，1-运行中
+    * 实例状态信息，1-流程中 ,2-运行中, -2-实例已隔离 ,-3-实例待回收, -4-实例已删除
     */
     @SerializedName("Status")
     @Expose
@@ -249,16 +249,16 @@ public class RedisCommonInstanceList extends AbstractModel{
     }
 
     /**
-     * Get 实例状态信息，0-创建中，1-运行中 
-     * @return Status 实例状态信息，0-创建中，1-运行中
+     * Get 实例状态信息，1-流程中 ,2-运行中, -2-实例已隔离 ,-3-实例待回收, -4-实例已删除 
+     * @return Status 实例状态信息，1-流程中 ,2-运行中, -2-实例已隔离 ,-3-实例待回收, -4-实例已删除
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 实例状态信息，0-创建中，1-运行中
-     * @param Status 实例状态信息，0-创建中，1-运行中
+     * Set 实例状态信息，1-流程中 ,2-运行中, -2-实例已隔离 ,-3-实例待回收, -4-实例已删除
+     * @param Status 实例状态信息，1-流程中 ,2-运行中, -2-实例已隔离 ,-3-实例待回收, -4-实例已删除
      */
     public void setStatus(String Status) {
         this.Status = Status;

@@ -179,6 +179,26 @@ public class CwpClient extends AbstractClient{
     }
 
     /**
+     *该接口可以对入侵检测-文件查杀扫描检测
+     * @param req CreateScanMalwareSettingRequest
+     * @return CreateScanMalwareSettingResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateScanMalwareSettingResponse CreateScanMalwareSetting(CreateScanMalwareSettingRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateScanMalwareSettingResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateScanMalwareSettingResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateScanMalwareSetting");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *添加历史搜索记录
      * @param req CreateSearchLogRequest
      * @return CreateSearchLogResponse
@@ -1279,6 +1299,26 @@ public class CwpClient extends AbstractClient{
     }
 
     /**
+     *查询定时扫描配置
+     * @param req DescribeMalwareTimingScanSettingRequest
+     * @return DescribeMalwareTimingScanSettingResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMalwareTimingScanSettingResponse DescribeMalwareTimingScanSetting(DescribeMalwareTimingScanSettingRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeMalwareTimingScanSettingResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeMalwareTimingScanSettingResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeMalwareTimingScanSetting");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（DescribeMalwares）用于获取木马事件列表。
      * @param req DescribeMalwaresRequest
      * @return DescribeMalwaresResponse
@@ -1592,6 +1632,46 @@ public class CwpClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeScanMalwareScheduleResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeScanMalwareSchedule");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *DescribeScanTaskDetails 查询扫描任务详情 , 可以查询扫描进度信息/异常;
+     * @param req DescribeScanTaskDetailsRequest
+     * @return DescribeScanTaskDetailsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeScanTaskDetailsResponse DescribeScanTaskDetails(DescribeScanTaskDetailsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeScanTaskDetailsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeScanTaskDetailsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeScanTaskDetails");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询定期检测的配置
+     * @param req DescribeScanVulSettingRequest
+     * @return DescribeScanVulSettingResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeScanVulSettingResponse DescribeScanVulSetting(DescribeScanVulSettingRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeScanVulSettingResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeScanVulSettingResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeScanVulSetting");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1994,6 +2074,26 @@ public class CwpClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<EditBashRuleResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "EditBashRule");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *新增或修改高危命令规则
+     * @param req EditBashRulesRequest
+     * @return EditBashRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public EditBashRulesResponse EditBashRules(EditBashRulesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<EditBashRulesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<EditBashRulesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "EditBashRules");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -2582,7 +2682,7 @@ public class CwpClient extends AbstractClient{
     }
 
     /**
-     *漏洞管理 - 一键检测
+     * 一键检测
      * @param req ScanVulRequest
      * @return ScanVulResponse
      * @throws TencentCloudSDKException
@@ -2594,6 +2694,46 @@ public class CwpClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ScanVulResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ScanVul");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *漏洞管理-重新检测接口
+     * @param req ScanVulAgainRequest
+     * @return ScanVulAgainResponse
+     * @throws TencentCloudSDKException
+     */
+    public ScanVulAgainResponse ScanVulAgain(ScanVulAgainRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ScanVulAgainResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ScanVulAgainResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ScanVulAgain");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *定期扫描漏洞设置
+     * @param req ScanVulSettingRequest
+     * @return ScanVulSettingResponse
+     * @throws TencentCloudSDKException
+     */
+    public ScanVulSettingResponse ScanVulSetting(ScanVulSettingRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ScanVulSettingResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ScanVulSettingResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ScanVulSetting");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

@@ -114,6 +114,13 @@ public class EstablishCloudBaseRunServerRequest extends AbstractModel{
     private Long IsCreatePath;
 
     /**
+    * 指定创建路径（如不存在，则创建。存在，则忽略）
+    */
+    @SerializedName("ServerPath")
+    @Expose
+    private String ServerPath;
+
+    /**
      * Get 环境id 
      * @return EnvId 环境id
      */
@@ -321,6 +328,22 @@ public class EstablishCloudBaseRunServerRequest extends AbstractModel{
         this.IsCreatePath = IsCreatePath;
     }
 
+    /**
+     * Get 指定创建路径（如不存在，则创建。存在，则忽略） 
+     * @return ServerPath 指定创建路径（如不存在，则创建。存在，则忽略）
+     */
+    public String getServerPath() {
+        return this.ServerPath;
+    }
+
+    /**
+     * Set 指定创建路径（如不存在，则创建。存在，则忽略）
+     * @param ServerPath 指定创建路径（如不存在，则创建。存在，则忽略）
+     */
+    public void setServerPath(String ServerPath) {
+        this.ServerPath = ServerPath;
+    }
+
     public EstablishCloudBaseRunServerRequest() {
     }
 
@@ -371,6 +394,9 @@ public class EstablishCloudBaseRunServerRequest extends AbstractModel{
         if (source.IsCreatePath != null) {
             this.IsCreatePath = new Long(source.IsCreatePath);
         }
+        if (source.ServerPath != null) {
+            this.ServerPath = new String(source.ServerPath);
+        }
     }
 
 
@@ -391,6 +417,7 @@ public class EstablishCloudBaseRunServerRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "PublicAccess", this.PublicAccess);
         this.setParamArraySimple(map, prefix + "OpenAccessTypes.", this.OpenAccessTypes);
         this.setParamSimple(map, prefix + "IsCreatePath", this.IsCreatePath);
+        this.setParamSimple(map, prefix + "ServerPath", this.ServerPath);
 
     }
 }

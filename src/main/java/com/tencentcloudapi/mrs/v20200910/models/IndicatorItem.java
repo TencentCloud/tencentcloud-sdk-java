@@ -95,6 +95,14 @@ public class IndicatorItem extends AbstractModel{
     private Boolean Normal;
 
     /**
+    * 项目原文
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ItemString")
+    @Expose
+    private String ItemString;
+
+    /**
      * Get 英文缩写
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Code 英文缩写
@@ -274,6 +282,26 @@ public class IndicatorItem extends AbstractModel{
         this.Normal = Normal;
     }
 
+    /**
+     * Get 项目原文
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ItemString 项目原文
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getItemString() {
+        return this.ItemString;
+    }
+
+    /**
+     * Set 项目原文
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ItemString 项目原文
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setItemString(String ItemString) {
+        this.ItemString = ItemString;
+    }
+
     public IndicatorItem() {
     }
 
@@ -309,6 +337,9 @@ public class IndicatorItem extends AbstractModel{
         if (source.Normal != null) {
             this.Normal = new Boolean(source.Normal);
         }
+        if (source.ItemString != null) {
+            this.ItemString = new String(source.ItemString);
+        }
     }
 
 
@@ -325,6 +356,7 @@ public class IndicatorItem extends AbstractModel{
         this.setParamSimple(map, prefix + "Range", this.Range);
         this.setParamSimple(map, prefix + "Arrow", this.Arrow);
         this.setParamSimple(map, prefix + "Normal", this.Normal);
+        this.setParamSimple(map, prefix + "ItemString", this.ItemString);
 
     }
 }

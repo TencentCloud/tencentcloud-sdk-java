@@ -719,6 +719,26 @@ public class CamClient extends AbstractClient{
     }
 
     /**
+     *获取密钥最近使用情况
+     * @param req GetSecurityLastUsedRequest
+     * @return GetSecurityLastUsedResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetSecurityLastUsedResponse GetSecurityLastUsed(GetSecurityLastUsedRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetSecurityLastUsedResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetSecurityLastUsedResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "GetSecurityLastUsed");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *根据删除TaskId获取服务相关角色删除状态
      * @param req GetServiceLinkedRoleDeletionStatusRequest
      * @return GetServiceLinkedRoleDeletionStatusResponse

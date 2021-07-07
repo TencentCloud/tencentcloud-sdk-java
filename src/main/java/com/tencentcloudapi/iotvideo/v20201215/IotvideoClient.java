@@ -39,6 +39,26 @@ public class IotvideoClient extends AbstractClient{
     }
 
     /**
+     *申请AI模型
+     * @param req ApplyAIModelRequest
+     * @return ApplyAIModelResponse
+     * @throws TencentCloudSDKException
+     */
+    public ApplyAIModelResponse ApplyAIModel(ApplyAIModelRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ApplyAIModelResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ApplyAIModelResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ApplyAIModel");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（BatchUpdateFirmware）用于批量更新设备固件 
      * @param req BatchUpdateFirmwareRequest
      * @return BatchUpdateFirmwareResponse
@@ -51,6 +71,26 @@ public class IotvideoClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<BatchUpdateFirmwareResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "BatchUpdateFirmware");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *取消AI模型申请
+     * @param req CancelAIModelApplicationRequest
+     * @return CancelAIModelApplicationResponse
+     * @throws TencentCloudSDKException
+     */
+    public CancelAIModelApplicationResponse CancelAIModelApplication(CancelAIModelApplicationRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CancelAIModelApplicationResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CancelAIModelApplicationResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CancelAIModelApplication");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -119,6 +159,26 @@ public class IotvideoClient extends AbstractClient{
     }
 
     /**
+     *发起AI推理请求
+     * @param req CreateAIDetectionRequest
+     * @return CreateAIDetectionResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAIDetectionResponse CreateAIDetection(CreateAIDetectionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateAIDetectionResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateAIDetectionResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateAIDetection");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建批次
      * @param req CreateBatchRequest
      * @return CreateBatchResponse
@@ -131,6 +191,26 @@ public class IotvideoClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreateBatchResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "CreateBatch");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *创建COS上传密钥
+     * @param req CreateCOSCredentialsRequest
+     * @return CreateCOSCredentialsResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCOSCredentialsResponse CreateCOSCredentials(CreateCOSCredentialsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateCOSCredentialsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateCOSCredentialsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateCOSCredentials");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -291,6 +371,86 @@ public class IotvideoClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteProductResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteProduct");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *用户AI模型申请记录
+     * @param req DescribeAIModelApplicationsRequest
+     * @return DescribeAIModelApplicationsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAIModelApplicationsResponse DescribeAIModelApplications(DescribeAIModelApplicationsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAIModelApplicationsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAIModelApplicationsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAIModelApplications");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查看AI推理结果推送配置
+     * @param req DescribeAIModelChannelRequest
+     * @return DescribeAIModelChannelResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAIModelChannelResponse DescribeAIModelChannel(DescribeAIModelChannelRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAIModelChannelResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAIModelChannelResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAIModelChannel");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查看AI模型资源包
+     * @param req DescribeAIModelUsageRequest
+     * @return DescribeAIModelUsageResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAIModelUsageResponse DescribeAIModelUsage(DescribeAIModelUsageRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAIModelUsageResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAIModelUsageResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAIModelUsage");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *拉取AI模型列表
+     * @param req DescribeAIModelsRequest
+     * @return DescribeAIModelsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAIModelsResponse DescribeAIModels(DescribeAIModelsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAIModelsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAIModelsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAIModels");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1059,6 +1219,26 @@ public class IotvideoClient extends AbstractClient{
     }
 
     /**
+     *上报活跃设备
+     * @param req ReportAliveDeviceRequest
+     * @return ReportAliveDeviceResponse
+     * @throws TencentCloudSDKException
+     */
+    public ReportAliveDeviceResponse ReportAliveDevice(ReportAliveDeviceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ReportAliveDeviceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ReportAliveDeviceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ReportAliveDevice");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *重置云存服务
      * @param req ResetCloudStorageRequest
      * @return ResetCloudStorageResponse
@@ -1131,6 +1311,26 @@ public class IotvideoClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<TransferCloudStorageResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "TransferCloudStorage");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *更新AI推理结果推送配置
+     * @param req UpdateAIModelChannelRequest
+     * @return UpdateAIModelChannelResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateAIModelChannelResponse UpdateAIModelChannel(UpdateAIModelChannelRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpdateAIModelChannelResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpdateAIModelChannelResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UpdateAIModelChannel");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

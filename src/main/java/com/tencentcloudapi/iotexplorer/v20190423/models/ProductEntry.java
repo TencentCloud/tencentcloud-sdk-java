@@ -129,6 +129,22 @@ public class ProductEntry extends AbstractModel{
     private String EnableProductScript;
 
     /**
+    * 创建人 UinId
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CreateUserId")
+    @Expose
+    private Long CreateUserId;
+
+    /**
+    * 创建者昵称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CreatorNickName")
+    @Expose
+    private String CreatorNickName;
+
+    /**
      * Get 产品ID 
      * @return ProductId 产品ID
      */
@@ -372,6 +388,46 @@ public class ProductEntry extends AbstractModel{
         this.EnableProductScript = EnableProductScript;
     }
 
+    /**
+     * Get 创建人 UinId
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CreateUserId 创建人 UinId
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getCreateUserId() {
+        return this.CreateUserId;
+    }
+
+    /**
+     * Set 创建人 UinId
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CreateUserId 创建人 UinId
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCreateUserId(Long CreateUserId) {
+        this.CreateUserId = CreateUserId;
+    }
+
+    /**
+     * Get 创建者昵称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CreatorNickName 创建者昵称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCreatorNickName() {
+        return this.CreatorNickName;
+    }
+
+    /**
+     * Set 创建者昵称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CreatorNickName 创建者昵称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCreatorNickName(String CreatorNickName) {
+        this.CreatorNickName = CreatorNickName;
+    }
+
     public ProductEntry() {
     }
 
@@ -425,6 +481,12 @@ public class ProductEntry extends AbstractModel{
         if (source.EnableProductScript != null) {
             this.EnableProductScript = new String(source.EnableProductScript);
         }
+        if (source.CreateUserId != null) {
+            this.CreateUserId = new Long(source.CreateUserId);
+        }
+        if (source.CreatorNickName != null) {
+            this.CreatorNickName = new String(source.CreatorNickName);
+        }
     }
 
 
@@ -447,6 +509,8 @@ public class ProductEntry extends AbstractModel{
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamSimple(map, prefix + "ModuleId", this.ModuleId);
         this.setParamSimple(map, prefix + "EnableProductScript", this.EnableProductScript);
+        this.setParamSimple(map, prefix + "CreateUserId", this.CreateUserId);
+        this.setParamSimple(map, prefix + "CreatorNickName", this.CreatorNickName);
 
     }
 }

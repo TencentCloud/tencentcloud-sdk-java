@@ -59,6 +59,13 @@ public class GetEidTokenRequest extends AbstractModel{
     private GetEidTokenConfig Config;
 
     /**
+    * 最长长度1024位。用户从Url中进入核身认证结束后重定向的回调链接地址。EidToken会在该链接的query参数中。
+    */
+    @SerializedName("RedirectUrl")
+    @Expose
+    private String RedirectUrl;
+
+    /**
      * Get EID商户id，字段长度最长50位。 
      * @return MerchantId EID商户id，字段长度最长50位。
      */
@@ -142,6 +149,22 @@ public class GetEidTokenRequest extends AbstractModel{
         this.Config = Config;
     }
 
+    /**
+     * Get 最长长度1024位。用户从Url中进入核身认证结束后重定向的回调链接地址。EidToken会在该链接的query参数中。 
+     * @return RedirectUrl 最长长度1024位。用户从Url中进入核身认证结束后重定向的回调链接地址。EidToken会在该链接的query参数中。
+     */
+    public String getRedirectUrl() {
+        return this.RedirectUrl;
+    }
+
+    /**
+     * Set 最长长度1024位。用户从Url中进入核身认证结束后重定向的回调链接地址。EidToken会在该链接的query参数中。
+     * @param RedirectUrl 最长长度1024位。用户从Url中进入核身认证结束后重定向的回调链接地址。EidToken会在该链接的query参数中。
+     */
+    public void setRedirectUrl(String RedirectUrl) {
+        this.RedirectUrl = RedirectUrl;
+    }
+
     public GetEidTokenRequest() {
     }
 
@@ -165,6 +188,9 @@ public class GetEidTokenRequest extends AbstractModel{
         if (source.Config != null) {
             this.Config = new GetEidTokenConfig(source.Config);
         }
+        if (source.RedirectUrl != null) {
+            this.RedirectUrl = new String(source.RedirectUrl);
+        }
     }
 
 
@@ -177,6 +203,7 @@ public class GetEidTokenRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Extra", this.Extra);
         this.setParamObj(map, prefix + "Config.", this.Config);
+        this.setParamSimple(map, prefix + "RedirectUrl", this.RedirectUrl);
 
     }
 }

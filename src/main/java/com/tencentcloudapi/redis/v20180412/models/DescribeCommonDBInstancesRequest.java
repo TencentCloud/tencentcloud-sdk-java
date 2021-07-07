@@ -86,14 +86,14 @@ public class DescribeCommonDBInstancesRequest extends AbstractModel{
     private String [] Vips;
 
     /**
-    * vpc网络统一Id列表
+    * vpc网络ID信息列表
     */
     @SerializedName("UniqVpcIds")
     @Expose
     private String [] UniqVpcIds;
 
     /**
-    * 子网统一id列表
+    * 子网统一ID列表
     */
     @SerializedName("UniqSubnetIds")
     @Expose
@@ -258,32 +258,32 @@ public class DescribeCommonDBInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get vpc网络统一Id列表 
-     * @return UniqVpcIds vpc网络统一Id列表
+     * Get vpc网络ID信息列表 
+     * @return UniqVpcIds vpc网络ID信息列表
      */
     public String [] getUniqVpcIds() {
         return this.UniqVpcIds;
     }
 
     /**
-     * Set vpc网络统一Id列表
-     * @param UniqVpcIds vpc网络统一Id列表
+     * Set vpc网络ID信息列表
+     * @param UniqVpcIds vpc网络ID信息列表
      */
     public void setUniqVpcIds(String [] UniqVpcIds) {
         this.UniqVpcIds = UniqVpcIds;
     }
 
     /**
-     * Get 子网统一id列表 
-     * @return UniqSubnetIds 子网统一id列表
+     * Get 子网统一ID列表 
+     * @return UniqSubnetIds 子网统一ID列表
      */
     public String [] getUniqSubnetIds() {
         return this.UniqSubnetIds;
     }
 
     /**
-     * Set 子网统一id列表
-     * @param UniqSubnetIds 子网统一id列表
+     * Set 子网统一ID列表
+     * @param UniqSubnetIds 子网统一ID列表
      */
     public void setUniqSubnetIds(String [] UniqSubnetIds) {
         this.UniqSubnetIds = UniqSubnetIds;
