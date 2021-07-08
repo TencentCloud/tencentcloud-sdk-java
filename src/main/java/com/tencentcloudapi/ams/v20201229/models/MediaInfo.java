@@ -23,120 +23,115 @@ import java.util.HashMap;
 public class MediaInfo extends AbstractModel{
 
     /**
-    * 编码格式
+    * 该字段用于返回传入的媒体文件的编码格式，如wav、mp3、aac、flac、amr、3gp、 m4a、wma、ogg、ape等。
     */
     @SerializedName("Codecs")
     @Expose
     private String Codecs;
 
     /**
-    * 流检测时分片时长
-注意：此字段可能返回 0，表示取不到有效值。
+    * 该字段用于返回对传入的流媒体文件进行分片的片段时长，单位为秒。**默认值为15秒**，支持用户自定义配置。
     */
     @SerializedName("Duration")
     @Expose
     private Long Duration;
 
     /**
-    * 宽，单位为像素
+    * *内测中，敬请期待*
     */
     @SerializedName("Width")
     @Expose
     private Long Width;
 
     /**
-    * 高，单位为像素
+    * *内测中，敬请期待*
     */
     @SerializedName("Height")
     @Expose
     private Long Height;
 
     /**
-    * 缩略图
+    * *内测中，敬请期待*
     */
     @SerializedName("Thumbnail")
     @Expose
     private String Thumbnail;
 
     /**
-     * Get 编码格式 
-     * @return Codecs 编码格式
+     * Get 该字段用于返回传入的媒体文件的编码格式，如wav、mp3、aac、flac、amr、3gp、 m4a、wma、ogg、ape等。 
+     * @return Codecs 该字段用于返回传入的媒体文件的编码格式，如wav、mp3、aac、flac、amr、3gp、 m4a、wma、ogg、ape等。
      */
     public String getCodecs() {
         return this.Codecs;
     }
 
     /**
-     * Set 编码格式
-     * @param Codecs 编码格式
+     * Set 该字段用于返回传入的媒体文件的编码格式，如wav、mp3、aac、flac、amr、3gp、 m4a、wma、ogg、ape等。
+     * @param Codecs 该字段用于返回传入的媒体文件的编码格式，如wav、mp3、aac、flac、amr、3gp、 m4a、wma、ogg、ape等。
      */
     public void setCodecs(String Codecs) {
         this.Codecs = Codecs;
     }
 
     /**
-     * Get 流检测时分片时长
-注意：此字段可能返回 0，表示取不到有效值。 
-     * @return Duration 流检测时分片时长
-注意：此字段可能返回 0，表示取不到有效值。
+     * Get 该字段用于返回对传入的流媒体文件进行分片的片段时长，单位为秒。**默认值为15秒**，支持用户自定义配置。 
+     * @return Duration 该字段用于返回对传入的流媒体文件进行分片的片段时长，单位为秒。**默认值为15秒**，支持用户自定义配置。
      */
     public Long getDuration() {
         return this.Duration;
     }
 
     /**
-     * Set 流检测时分片时长
-注意：此字段可能返回 0，表示取不到有效值。
-     * @param Duration 流检测时分片时长
-注意：此字段可能返回 0，表示取不到有效值。
+     * Set 该字段用于返回对传入的流媒体文件进行分片的片段时长，单位为秒。**默认值为15秒**，支持用户自定义配置。
+     * @param Duration 该字段用于返回对传入的流媒体文件进行分片的片段时长，单位为秒。**默认值为15秒**，支持用户自定义配置。
      */
     public void setDuration(Long Duration) {
         this.Duration = Duration;
     }
 
     /**
-     * Get 宽，单位为像素 
-     * @return Width 宽，单位为像素
+     * Get *内测中，敬请期待* 
+     * @return Width *内测中，敬请期待*
      */
     public Long getWidth() {
         return this.Width;
     }
 
     /**
-     * Set 宽，单位为像素
-     * @param Width 宽，单位为像素
+     * Set *内测中，敬请期待*
+     * @param Width *内测中，敬请期待*
      */
     public void setWidth(Long Width) {
         this.Width = Width;
     }
 
     /**
-     * Get 高，单位为像素 
-     * @return Height 高，单位为像素
+     * Get *内测中，敬请期待* 
+     * @return Height *内测中，敬请期待*
      */
     public Long getHeight() {
         return this.Height;
     }
 
     /**
-     * Set 高，单位为像素
-     * @param Height 高，单位为像素
+     * Set *内测中，敬请期待*
+     * @param Height *内测中，敬请期待*
      */
     public void setHeight(Long Height) {
         this.Height = Height;
     }
 
     /**
-     * Get 缩略图 
-     * @return Thumbnail 缩略图
+     * Get *内测中，敬请期待* 
+     * @return Thumbnail *内测中，敬请期待*
      */
     public String getThumbnail() {
         return this.Thumbnail;
     }
 
     /**
-     * Set 缩略图
-     * @param Thumbnail 缩略图
+     * Set *内测中，敬请期待*
+     * @param Thumbnail *内测中，敬请期待*
      */
     public void setThumbnail(String Thumbnail) {
         this.Thumbnail = Thumbnail;

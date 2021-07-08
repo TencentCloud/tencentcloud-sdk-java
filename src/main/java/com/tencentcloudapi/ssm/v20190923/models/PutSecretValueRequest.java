@@ -37,7 +37,8 @@ public class PutSecretValueRequest extends AbstractModel{
     private String VersionId;
 
     /**
-    * 二进制凭据信息，使用base64编码。SecretBinary 和 SecretString 必须且只能设置一个。
+    * 二进制凭据信息，使用base64编码。
+SecretBinary 和 SecretString 必须且只能设置一个。
     */
     @SerializedName("SecretBinary")
     @Expose
@@ -83,16 +84,20 @@ public class PutSecretValueRequest extends AbstractModel{
     }
 
     /**
-     * Get 二进制凭据信息，使用base64编码。SecretBinary 和 SecretString 必须且只能设置一个。 
-     * @return SecretBinary 二进制凭据信息，使用base64编码。SecretBinary 和 SecretString 必须且只能设置一个。
+     * Get 二进制凭据信息，使用base64编码。
+SecretBinary 和 SecretString 必须且只能设置一个。 
+     * @return SecretBinary 二进制凭据信息，使用base64编码。
+SecretBinary 和 SecretString 必须且只能设置一个。
      */
     public String getSecretBinary() {
         return this.SecretBinary;
     }
 
     /**
-     * Set 二进制凭据信息，使用base64编码。SecretBinary 和 SecretString 必须且只能设置一个。
-     * @param SecretBinary 二进制凭据信息，使用base64编码。SecretBinary 和 SecretString 必须且只能设置一个。
+     * Set 二进制凭据信息，使用base64编码。
+SecretBinary 和 SecretString 必须且只能设置一个。
+     * @param SecretBinary 二进制凭据信息，使用base64编码。
+SecretBinary 和 SecretString 必须且只能设置一个。
      */
     public void setSecretBinary(String SecretBinary) {
         this.SecretBinary = SecretBinary;

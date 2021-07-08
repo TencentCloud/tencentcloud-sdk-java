@@ -23,69 +23,69 @@ import java.util.HashMap;
 public class BucketInfo extends AbstractModel{
 
     /**
-    * 腾讯云对象存储，存储桶名称
+    * 该字段用于标识腾讯云对象存储的存储桶名称,关于文件桶的详细信息敬请参考 [腾讯云存储相关说明](https://cloud.tencent.com/document/product/436/44352)。
     */
     @SerializedName("Bucket")
     @Expose
     private String Bucket;
 
     /**
-    * 地域
+    * 该字段用于标识腾讯云对象存储的托管机房的分布地区，对象存储 COS 的数据存放在这些地域的存储桶中。
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-    * 对象Key
+    * 该字段用于标识腾讯云对象存储的对象Key,对象z作为基本单元被存放在存储桶中；用户可以通过腾讯云控制台、API、SDK 等多种方式管理对象。有关对象的详细描述敬请参阅相应 [产品文档](https://cloud.tencent.com/document/product/436/13324)。
     */
     @SerializedName("Object")
     @Expose
     private String Object;
 
     /**
-     * Get 腾讯云对象存储，存储桶名称 
-     * @return Bucket 腾讯云对象存储，存储桶名称
+     * Get 该字段用于标识腾讯云对象存储的存储桶名称,关于文件桶的详细信息敬请参考 [腾讯云存储相关说明](https://cloud.tencent.com/document/product/436/44352)。 
+     * @return Bucket 该字段用于标识腾讯云对象存储的存储桶名称,关于文件桶的详细信息敬请参考 [腾讯云存储相关说明](https://cloud.tencent.com/document/product/436/44352)。
      */
     public String getBucket() {
         return this.Bucket;
     }
 
     /**
-     * Set 腾讯云对象存储，存储桶名称
-     * @param Bucket 腾讯云对象存储，存储桶名称
+     * Set 该字段用于标识腾讯云对象存储的存储桶名称,关于文件桶的详细信息敬请参考 [腾讯云存储相关说明](https://cloud.tencent.com/document/product/436/44352)。
+     * @param Bucket 该字段用于标识腾讯云对象存储的存储桶名称,关于文件桶的详细信息敬请参考 [腾讯云存储相关说明](https://cloud.tencent.com/document/product/436/44352)。
      */
     public void setBucket(String Bucket) {
         this.Bucket = Bucket;
     }
 
     /**
-     * Get 地域 
-     * @return Region 地域
+     * Get 该字段用于标识腾讯云对象存储的托管机房的分布地区，对象存储 COS 的数据存放在这些地域的存储桶中。 
+     * @return Region 该字段用于标识腾讯云对象存储的托管机房的分布地区，对象存储 COS 的数据存放在这些地域的存储桶中。
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set 地域
-     * @param Region 地域
+     * Set 该字段用于标识腾讯云对象存储的托管机房的分布地区，对象存储 COS 的数据存放在这些地域的存储桶中。
+     * @param Region 该字段用于标识腾讯云对象存储的托管机房的分布地区，对象存储 COS 的数据存放在这些地域的存储桶中。
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get 对象Key 
-     * @return Object 对象Key
+     * Get 该字段用于标识腾讯云对象存储的对象Key,对象z作为基本单元被存放在存储桶中；用户可以通过腾讯云控制台、API、SDK 等多种方式管理对象。有关对象的详细描述敬请参阅相应 [产品文档](https://cloud.tencent.com/document/product/436/13324)。 
+     * @return Object 该字段用于标识腾讯云对象存储的对象Key,对象z作为基本单元被存放在存储桶中；用户可以通过腾讯云控制台、API、SDK 等多种方式管理对象。有关对象的详细描述敬请参阅相应 [产品文档](https://cloud.tencent.com/document/product/436/13324)。
      */
     public String getObject() {
         return this.Object;
     }
 
     /**
-     * Set 对象Key
-     * @param Object 对象Key
+     * Set 该字段用于标识腾讯云对象存储的对象Key,对象z作为基本单元被存放在存储桶中；用户可以通过腾讯云控制台、API、SDK 等多种方式管理对象。有关对象的详细描述敬请参阅相应 [产品文档](https://cloud.tencent.com/document/product/436/13324)。
+     * @param Object 该字段用于标识腾讯云对象存储的对象Key,对象z作为基本单元被存放在存储桶中；用户可以通过腾讯云控制台、API、SDK 等多种方式管理对象。有关对象的详细描述敬请参阅相应 [产品文档](https://cloud.tencent.com/document/product/436/13324)。
      */
     public void setObject(String Object) {
         this.Object = Object;

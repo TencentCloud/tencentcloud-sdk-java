@@ -23,9 +23,7 @@ import java.util.HashMap;
 public class AudioSegments extends AbstractModel{
 
     /**
-    * 截帧时间, 单位：秒
-点播文件：该值为相对于视频偏移时间，单位为秒，例如：0，5，10
-直播流：该值为时间戳，例如：1594650717
+    * 该字段用于返回音频片段的开始时间，单位为秒。对于点播文件，该参数代表对应音频相对于完整音轨的偏移时间，如0（代表不偏移），5（音轨开始后5秒），10（音轨开始后10秒）；对于直播文件，该参数则返回对应音频片段开始时的Unix时间戳，如：1594650717。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OffsetTime")
@@ -33,7 +31,7 @@ public class AudioSegments extends AbstractModel{
     private String OffsetTime;
 
     /**
-    * 结果集
+    * 该字段用于返回音频片段的具体审核结果，详细内容敬请参考AudioResult数据结构的描述。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Result")
@@ -41,13 +39,9 @@ public class AudioSegments extends AbstractModel{
     private AudioResult Result;
 
     /**
-     * Get 截帧时间, 单位：秒
-点播文件：该值为相对于视频偏移时间，单位为秒，例如：0，5，10
-直播流：该值为时间戳，例如：1594650717
+     * Get 该字段用于返回音频片段的开始时间，单位为秒。对于点播文件，该参数代表对应音频相对于完整音轨的偏移时间，如0（代表不偏移），5（音轨开始后5秒），10（音轨开始后10秒）；对于直播文件，该参数则返回对应音频片段开始时的Unix时间戳，如：1594650717。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OffsetTime 截帧时间, 单位：秒
-点播文件：该值为相对于视频偏移时间，单位为秒，例如：0，5，10
-直播流：该值为时间戳，例如：1594650717
+     * @return OffsetTime 该字段用于返回音频片段的开始时间，单位为秒。对于点播文件，该参数代表对应音频相对于完整音轨的偏移时间，如0（代表不偏移），5（音轨开始后5秒），10（音轨开始后10秒）；对于直播文件，该参数则返回对应音频片段开始时的Unix时间戳，如：1594650717。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOffsetTime() {
@@ -55,13 +49,9 @@ public class AudioSegments extends AbstractModel{
     }
 
     /**
-     * Set 截帧时间, 单位：秒
-点播文件：该值为相对于视频偏移时间，单位为秒，例如：0，5，10
-直播流：该值为时间戳，例如：1594650717
+     * Set 该字段用于返回音频片段的开始时间，单位为秒。对于点播文件，该参数代表对应音频相对于完整音轨的偏移时间，如0（代表不偏移），5（音轨开始后5秒），10（音轨开始后10秒）；对于直播文件，该参数则返回对应音频片段开始时的Unix时间戳，如：1594650717。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OffsetTime 截帧时间, 单位：秒
-点播文件：该值为相对于视频偏移时间，单位为秒，例如：0，5，10
-直播流：该值为时间戳，例如：1594650717
+     * @param OffsetTime 该字段用于返回音频片段的开始时间，单位为秒。对于点播文件，该参数代表对应音频相对于完整音轨的偏移时间，如0（代表不偏移），5（音轨开始后5秒），10（音轨开始后10秒）；对于直播文件，该参数则返回对应音频片段开始时的Unix时间戳，如：1594650717。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOffsetTime(String OffsetTime) {
@@ -69,9 +59,9 @@ public class AudioSegments extends AbstractModel{
     }
 
     /**
-     * Get 结果集
+     * Get 该字段用于返回音频片段的具体审核结果，详细内容敬请参考AudioResult数据结构的描述。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Result 结果集
+     * @return Result 该字段用于返回音频片段的具体审核结果，详细内容敬请参考AudioResult数据结构的描述。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public AudioResult getResult() {
@@ -79,9 +69,9 @@ public class AudioSegments extends AbstractModel{
     }
 
     /**
-     * Set 结果集
+     * Set 该字段用于返回音频片段的具体审核结果，详细内容敬请参考AudioResult数据结构的描述。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Result 结果集
+     * @param Result 该字段用于返回音频片段的具体审核结果，详细内容敬请参考AudioResult数据结构的描述。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResult(AudioResult Result) {

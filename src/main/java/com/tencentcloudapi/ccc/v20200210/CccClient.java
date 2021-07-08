@@ -99,6 +99,26 @@ public class CccClient extends AbstractClient{
     }
 
     /**
+     *创建用户数据签名
+     * @param req CreateUserSigRequest
+     * @return CreateUserSigResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateUserSigResponse CreateUserSig(CreateUserSigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateUserSigResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateUserSigResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateUserSig");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *删除坐席信息
      * @param req DeleteStaffRequest
      * @return DeleteStaffResponse

@@ -37,14 +37,15 @@ public class UpdateSecretRequest extends AbstractModel{
     private String VersionId;
 
     /**
-    * 新的凭据内容为二进制的场景使用该字段，并使用base64进行编码。SecretBinary 和 SecretString 只能一个不为空。
+    * 新的凭据内容为二进制的场景使用该字段，并使用base64进行编码。
+SecretBinary 和 SecretString 只能一个不为空。
     */
     @SerializedName("SecretBinary")
     @Expose
     private String SecretBinary;
 
     /**
-    * 新的凭据内容为文本的场景使用该字段，不需要base64编码。SecretBinary 和 SecretString 只能一个不为空。
+    * 新的凭据内容为文本的场景使用该字段，不需要base64编码SecretBinary 和 SecretString 只能一个不为空。
     */
     @SerializedName("SecretString")
     @Expose
@@ -83,32 +84,36 @@ public class UpdateSecretRequest extends AbstractModel{
     }
 
     /**
-     * Get 新的凭据内容为二进制的场景使用该字段，并使用base64进行编码。SecretBinary 和 SecretString 只能一个不为空。 
-     * @return SecretBinary 新的凭据内容为二进制的场景使用该字段，并使用base64进行编码。SecretBinary 和 SecretString 只能一个不为空。
+     * Get 新的凭据内容为二进制的场景使用该字段，并使用base64进行编码。
+SecretBinary 和 SecretString 只能一个不为空。 
+     * @return SecretBinary 新的凭据内容为二进制的场景使用该字段，并使用base64进行编码。
+SecretBinary 和 SecretString 只能一个不为空。
      */
     public String getSecretBinary() {
         return this.SecretBinary;
     }
 
     /**
-     * Set 新的凭据内容为二进制的场景使用该字段，并使用base64进行编码。SecretBinary 和 SecretString 只能一个不为空。
-     * @param SecretBinary 新的凭据内容为二进制的场景使用该字段，并使用base64进行编码。SecretBinary 和 SecretString 只能一个不为空。
+     * Set 新的凭据内容为二进制的场景使用该字段，并使用base64进行编码。
+SecretBinary 和 SecretString 只能一个不为空。
+     * @param SecretBinary 新的凭据内容为二进制的场景使用该字段，并使用base64进行编码。
+SecretBinary 和 SecretString 只能一个不为空。
      */
     public void setSecretBinary(String SecretBinary) {
         this.SecretBinary = SecretBinary;
     }
 
     /**
-     * Get 新的凭据内容为文本的场景使用该字段，不需要base64编码。SecretBinary 和 SecretString 只能一个不为空。 
-     * @return SecretString 新的凭据内容为文本的场景使用该字段，不需要base64编码。SecretBinary 和 SecretString 只能一个不为空。
+     * Get 新的凭据内容为文本的场景使用该字段，不需要base64编码SecretBinary 和 SecretString 只能一个不为空。 
+     * @return SecretString 新的凭据内容为文本的场景使用该字段，不需要base64编码SecretBinary 和 SecretString 只能一个不为空。
      */
     public String getSecretString() {
         return this.SecretString;
     }
 
     /**
-     * Set 新的凭据内容为文本的场景使用该字段，不需要base64编码。SecretBinary 和 SecretString 只能一个不为空。
-     * @param SecretString 新的凭据内容为文本的场景使用该字段，不需要base64编码。SecretBinary 和 SecretString 只能一个不为空。
+     * Set 新的凭据内容为文本的场景使用该字段，不需要base64编码SecretBinary 和 SecretString 只能一个不为空。
+     * @param SecretString 新的凭据内容为文本的场景使用该字段，不需要base64编码SecretBinary 和 SecretString 只能一个不为空。
      */
     public void setSecretString(String SecretString) {
         this.SecretString = SecretString;

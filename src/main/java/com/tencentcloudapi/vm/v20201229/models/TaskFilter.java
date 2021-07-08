@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class TaskFilter extends AbstractModel{
 
     /**
-    * 任务业务类型
+    * 该字段用于传入任务对应的业务类型供筛选器进行筛选。Biztype为策略的具体的编号，用于接口调度，在内容安全控制台中可配置。不同Biztype关联不同的业务场景与审核策略，调用前请确认正确的Biztype。Biztype仅为**数字、字母与下划线的组合**，长度为3-32个字符。<br>备注：在不传入该参数时筛选器默认不筛选业务类型。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BizType")
@@ -31,30 +31,30 @@ public class TaskFilter extends AbstractModel{
     private String [] BizType;
 
     /**
-    * 任务类型，可选：VIDEO，AUDIO， LIVE_VIDEO, LIVE_AUDIO
+    * 该字段用于传入视频审核对应的任务类型供筛选器进行筛选，取值为：**VIDEO**（点播视频审核），**AUDIO**（点播音频审核）， **LIVE_VIDEO**（直播视频审核）, **LIVE_AUDIO**（直播音频审核）。<br>备注：在不传入该参数时筛选器默认不筛选任务类型。
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 建议，可选：Pass, Review,Block
+    * 该字段用于传入视频审核对应的建议操作供筛选器进行筛选，取值为：**Block**：建议屏蔽，**Review**：建议人工复审，**Pass**：建议通过。<br>备注：在不传入该参数时筛选器默认不筛选建议操作。
     */
     @SerializedName("Suggestion")
     @Expose
     private String Suggestion;
 
     /**
-    * 状态，可选：PENDING，RUNNING，ERROR，FINISH，CANCELLED
+    * 该字段用于传入审核任务的任务状态供筛选器进行筛选，取值为：**FINISH**（任务已完成）、**PENDING** （任务等待中）、**RUNNING** （任务进行中）、**ERROR** （任务出错）、**CANCELLED** （任务已取消）。<br>备注：在不传入该参数时筛选器默认不筛选任务状态。
     */
     @SerializedName("TaskStatus")
     @Expose
     private String TaskStatus;
 
     /**
-     * Get 任务业务类型
+     * Get 该字段用于传入任务对应的业务类型供筛选器进行筛选。Biztype为策略的具体的编号，用于接口调度，在内容安全控制台中可配置。不同Biztype关联不同的业务场景与审核策略，调用前请确认正确的Biztype。Biztype仅为**数字、字母与下划线的组合**，长度为3-32个字符。<br>备注：在不传入该参数时筛选器默认不筛选业务类型。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BizType 任务业务类型
+     * @return BizType 该字段用于传入任务对应的业务类型供筛选器进行筛选。Biztype为策略的具体的编号，用于接口调度，在内容安全控制台中可配置。不同Biztype关联不同的业务场景与审核策略，调用前请确认正确的Biztype。Biztype仅为**数字、字母与下划线的组合**，长度为3-32个字符。<br>备注：在不传入该参数时筛选器默认不筛选业务类型。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getBizType() {
@@ -62,9 +62,9 @@ public class TaskFilter extends AbstractModel{
     }
 
     /**
-     * Set 任务业务类型
+     * Set 该字段用于传入任务对应的业务类型供筛选器进行筛选。Biztype为策略的具体的编号，用于接口调度，在内容安全控制台中可配置。不同Biztype关联不同的业务场景与审核策略，调用前请确认正确的Biztype。Biztype仅为**数字、字母与下划线的组合**，长度为3-32个字符。<br>备注：在不传入该参数时筛选器默认不筛选业务类型。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BizType 任务业务类型
+     * @param BizType 该字段用于传入任务对应的业务类型供筛选器进行筛选。Biztype为策略的具体的编号，用于接口调度，在内容安全控制台中可配置。不同Biztype关联不同的业务场景与审核策略，调用前请确认正确的Biztype。Biztype仅为**数字、字母与下划线的组合**，长度为3-32个字符。<br>备注：在不传入该参数时筛选器默认不筛选业务类型。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBizType(String [] BizType) {
@@ -72,48 +72,48 @@ public class TaskFilter extends AbstractModel{
     }
 
     /**
-     * Get 任务类型，可选：VIDEO，AUDIO， LIVE_VIDEO, LIVE_AUDIO 
-     * @return Type 任务类型，可选：VIDEO，AUDIO， LIVE_VIDEO, LIVE_AUDIO
+     * Get 该字段用于传入视频审核对应的任务类型供筛选器进行筛选，取值为：**VIDEO**（点播视频审核），**AUDIO**（点播音频审核）， **LIVE_VIDEO**（直播视频审核）, **LIVE_AUDIO**（直播音频审核）。<br>备注：在不传入该参数时筛选器默认不筛选任务类型。 
+     * @return Type 该字段用于传入视频审核对应的任务类型供筛选器进行筛选，取值为：**VIDEO**（点播视频审核），**AUDIO**（点播音频审核）， **LIVE_VIDEO**（直播视频审核）, **LIVE_AUDIO**（直播音频审核）。<br>备注：在不传入该参数时筛选器默认不筛选任务类型。
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 任务类型，可选：VIDEO，AUDIO， LIVE_VIDEO, LIVE_AUDIO
-     * @param Type 任务类型，可选：VIDEO，AUDIO， LIVE_VIDEO, LIVE_AUDIO
+     * Set 该字段用于传入视频审核对应的任务类型供筛选器进行筛选，取值为：**VIDEO**（点播视频审核），**AUDIO**（点播音频审核）， **LIVE_VIDEO**（直播视频审核）, **LIVE_AUDIO**（直播音频审核）。<br>备注：在不传入该参数时筛选器默认不筛选任务类型。
+     * @param Type 该字段用于传入视频审核对应的任务类型供筛选器进行筛选，取值为：**VIDEO**（点播视频审核），**AUDIO**（点播音频审核）， **LIVE_VIDEO**（直播视频审核）, **LIVE_AUDIO**（直播音频审核）。<br>备注：在不传入该参数时筛选器默认不筛选任务类型。
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 建议，可选：Pass, Review,Block 
-     * @return Suggestion 建议，可选：Pass, Review,Block
+     * Get 该字段用于传入视频审核对应的建议操作供筛选器进行筛选，取值为：**Block**：建议屏蔽，**Review**：建议人工复审，**Pass**：建议通过。<br>备注：在不传入该参数时筛选器默认不筛选建议操作。 
+     * @return Suggestion 该字段用于传入视频审核对应的建议操作供筛选器进行筛选，取值为：**Block**：建议屏蔽，**Review**：建议人工复审，**Pass**：建议通过。<br>备注：在不传入该参数时筛选器默认不筛选建议操作。
      */
     public String getSuggestion() {
         return this.Suggestion;
     }
 
     /**
-     * Set 建议，可选：Pass, Review,Block
-     * @param Suggestion 建议，可选：Pass, Review,Block
+     * Set 该字段用于传入视频审核对应的建议操作供筛选器进行筛选，取值为：**Block**：建议屏蔽，**Review**：建议人工复审，**Pass**：建议通过。<br>备注：在不传入该参数时筛选器默认不筛选建议操作。
+     * @param Suggestion 该字段用于传入视频审核对应的建议操作供筛选器进行筛选，取值为：**Block**：建议屏蔽，**Review**：建议人工复审，**Pass**：建议通过。<br>备注：在不传入该参数时筛选器默认不筛选建议操作。
      */
     public void setSuggestion(String Suggestion) {
         this.Suggestion = Suggestion;
     }
 
     /**
-     * Get 状态，可选：PENDING，RUNNING，ERROR，FINISH，CANCELLED 
-     * @return TaskStatus 状态，可选：PENDING，RUNNING，ERROR，FINISH，CANCELLED
+     * Get 该字段用于传入审核任务的任务状态供筛选器进行筛选，取值为：**FINISH**（任务已完成）、**PENDING** （任务等待中）、**RUNNING** （任务进行中）、**ERROR** （任务出错）、**CANCELLED** （任务已取消）。<br>备注：在不传入该参数时筛选器默认不筛选任务状态。 
+     * @return TaskStatus 该字段用于传入审核任务的任务状态供筛选器进行筛选，取值为：**FINISH**（任务已完成）、**PENDING** （任务等待中）、**RUNNING** （任务进行中）、**ERROR** （任务出错）、**CANCELLED** （任务已取消）。<br>备注：在不传入该参数时筛选器默认不筛选任务状态。
      */
     public String getTaskStatus() {
         return this.TaskStatus;
     }
 
     /**
-     * Set 状态，可选：PENDING，RUNNING，ERROR，FINISH，CANCELLED
-     * @param TaskStatus 状态，可选：PENDING，RUNNING，ERROR，FINISH，CANCELLED
+     * Set 该字段用于传入审核任务的任务状态供筛选器进行筛选，取值为：**FINISH**（任务已完成）、**PENDING** （任务等待中）、**RUNNING** （任务进行中）、**ERROR** （任务出错）、**CANCELLED** （任务已取消）。<br>备注：在不传入该参数时筛选器默认不筛选任务状态。
+     * @param TaskStatus 该字段用于传入审核任务的任务状态供筛选器进行筛选，取值为：**FINISH**（任务已完成）、**PENDING** （任务等待中）、**RUNNING** （任务进行中）、**ERROR** （任务出错）、**CANCELLED** （任务已取消）。<br>备注：在不传入该参数时筛选器默认不筛选任务状态。
      */
     public void setTaskStatus(String TaskStatus) {
         this.TaskStatus = TaskStatus;

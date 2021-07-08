@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class AudioResultDetailTextResult extends AbstractModel{
 
     /**
-    * 标签
+    * 该字段用于返回检测结果所对应的恶意标签。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告，**Custom**：自定义违规；以及其他令人反感、不安全或不适宜的内容类型。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Label")
@@ -31,7 +31,7 @@ public class AudioResultDetailTextResult extends AbstractModel{
     private String Label;
 
     /**
-    * 命中的关键词
+    * 该字段用于返回ASR识别出的文本内容命中的关键词信息，用于标注内容违规的具体原因（如：加我微信）。该参数可能会有多个返回值，代表命中的多个关键词；若返回值为空，Score不为空，则代表识别结果所对应的恶意标签（Label）来自于语义模型判断的返回值。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Keywords")
@@ -39,7 +39,7 @@ public class AudioResultDetailTextResult extends AbstractModel{
     private String [] Keywords;
 
     /**
-    * 命中的LibId
+    * 该字段**仅当Label为Custom：自定义关键词时该参数有效**,用于返回自定义库的ID，以方便自定义库管理和配置。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LibId")
@@ -47,7 +47,7 @@ public class AudioResultDetailTextResult extends AbstractModel{
     private String LibId;
 
     /**
-    * 命中的LibName
+    * 该字段**仅当Label为Custom：自定义关键词时该参数有效**,用于返回自定义库的名称,以方便自定义库管理和配置。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LibName")
@@ -55,7 +55,7 @@ public class AudioResultDetailTextResult extends AbstractModel{
     private String LibName;
 
     /**
-    * 得分
+    * 该字段用于返回当前标签下的置信度，取值范围：0（**置信度最低**）-100（**置信度最高**），越高代表文本越有可能属于当前返回的标签；如：*色情 99*，则表明该文本非常有可能属于色情内容。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Score")
@@ -63,7 +63,8 @@ public class AudioResultDetailTextResult extends AbstractModel{
     private Long Score;
 
     /**
-    * 审核建议
+    * 该字段用于返回后续操作建议。当您获取到判定结果后，返回值表示具体的后续建议操作。<br>
+返回值：**Block**：建议屏蔽，**Review** ：建议人工复审，**Pass**：建议通过
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Suggestion")
@@ -71,16 +72,16 @@ public class AudioResultDetailTextResult extends AbstractModel{
     private String Suggestion;
 
     /**
-    * 词库类型 1 黑白库 2 自定义库
+    * 该字段用于返回自定义关键词对应的词库类型，取值为**1**（黑白库）和**2**（自定义关键词库），若未配置自定义关键词库,则默认值为1（黑白库匹配）。
     */
     @SerializedName("LibType")
     @Expose
     private Long LibType;
 
     /**
-     * Get 标签
+     * Get 该字段用于返回检测结果所对应的恶意标签。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告，**Custom**：自定义违规；以及其他令人反感、不安全或不适宜的内容类型。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Label 标签
+     * @return Label 该字段用于返回检测结果所对应的恶意标签。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告，**Custom**：自定义违规；以及其他令人反感、不安全或不适宜的内容类型。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLabel() {
@@ -88,9 +89,9 @@ public class AudioResultDetailTextResult extends AbstractModel{
     }
 
     /**
-     * Set 标签
+     * Set 该字段用于返回检测结果所对应的恶意标签。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告，**Custom**：自定义违规；以及其他令人反感、不安全或不适宜的内容类型。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Label 标签
+     * @param Label 该字段用于返回检测结果所对应的恶意标签。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告，**Custom**：自定义违规；以及其他令人反感、不安全或不适宜的内容类型。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLabel(String Label) {
@@ -98,9 +99,9 @@ public class AudioResultDetailTextResult extends AbstractModel{
     }
 
     /**
-     * Get 命中的关键词
+     * Get 该字段用于返回ASR识别出的文本内容命中的关键词信息，用于标注内容违规的具体原因（如：加我微信）。该参数可能会有多个返回值，代表命中的多个关键词；若返回值为空，Score不为空，则代表识别结果所对应的恶意标签（Label）来自于语义模型判断的返回值。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Keywords 命中的关键词
+     * @return Keywords 该字段用于返回ASR识别出的文本内容命中的关键词信息，用于标注内容违规的具体原因（如：加我微信）。该参数可能会有多个返回值，代表命中的多个关键词；若返回值为空，Score不为空，则代表识别结果所对应的恶意标签（Label）来自于语义模型判断的返回值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getKeywords() {
@@ -108,9 +109,9 @@ public class AudioResultDetailTextResult extends AbstractModel{
     }
 
     /**
-     * Set 命中的关键词
+     * Set 该字段用于返回ASR识别出的文本内容命中的关键词信息，用于标注内容违规的具体原因（如：加我微信）。该参数可能会有多个返回值，代表命中的多个关键词；若返回值为空，Score不为空，则代表识别结果所对应的恶意标签（Label）来自于语义模型判断的返回值。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Keywords 命中的关键词
+     * @param Keywords 该字段用于返回ASR识别出的文本内容命中的关键词信息，用于标注内容违规的具体原因（如：加我微信）。该参数可能会有多个返回值，代表命中的多个关键词；若返回值为空，Score不为空，则代表识别结果所对应的恶意标签（Label）来自于语义模型判断的返回值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKeywords(String [] Keywords) {
@@ -118,9 +119,9 @@ public class AudioResultDetailTextResult extends AbstractModel{
     }
 
     /**
-     * Get 命中的LibId
+     * Get 该字段**仅当Label为Custom：自定义关键词时该参数有效**,用于返回自定义库的ID，以方便自定义库管理和配置。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LibId 命中的LibId
+     * @return LibId 该字段**仅当Label为Custom：自定义关键词时该参数有效**,用于返回自定义库的ID，以方便自定义库管理和配置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLibId() {
@@ -128,9 +129,9 @@ public class AudioResultDetailTextResult extends AbstractModel{
     }
 
     /**
-     * Set 命中的LibId
+     * Set 该字段**仅当Label为Custom：自定义关键词时该参数有效**,用于返回自定义库的ID，以方便自定义库管理和配置。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LibId 命中的LibId
+     * @param LibId 该字段**仅当Label为Custom：自定义关键词时该参数有效**,用于返回自定义库的ID，以方便自定义库管理和配置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLibId(String LibId) {
@@ -138,9 +139,9 @@ public class AudioResultDetailTextResult extends AbstractModel{
     }
 
     /**
-     * Get 命中的LibName
+     * Get 该字段**仅当Label为Custom：自定义关键词时该参数有效**,用于返回自定义库的名称,以方便自定义库管理和配置。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LibName 命中的LibName
+     * @return LibName 该字段**仅当Label为Custom：自定义关键词时该参数有效**,用于返回自定义库的名称,以方便自定义库管理和配置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLibName() {
@@ -148,9 +149,9 @@ public class AudioResultDetailTextResult extends AbstractModel{
     }
 
     /**
-     * Set 命中的LibName
+     * Set 该字段**仅当Label为Custom：自定义关键词时该参数有效**,用于返回自定义库的名称,以方便自定义库管理和配置。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LibName 命中的LibName
+     * @param LibName 该字段**仅当Label为Custom：自定义关键词时该参数有效**,用于返回自定义库的名称,以方便自定义库管理和配置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLibName(String LibName) {
@@ -158,9 +159,9 @@ public class AudioResultDetailTextResult extends AbstractModel{
     }
 
     /**
-     * Get 得分
+     * Get 该字段用于返回当前标签下的置信度，取值范围：0（**置信度最低**）-100（**置信度最高**），越高代表文本越有可能属于当前返回的标签；如：*色情 99*，则表明该文本非常有可能属于色情内容。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Score 得分
+     * @return Score 该字段用于返回当前标签下的置信度，取值范围：0（**置信度最低**）-100（**置信度最高**），越高代表文本越有可能属于当前返回的标签；如：*色情 99*，则表明该文本非常有可能属于色情内容。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getScore() {
@@ -168,9 +169,9 @@ public class AudioResultDetailTextResult extends AbstractModel{
     }
 
     /**
-     * Set 得分
+     * Set 该字段用于返回当前标签下的置信度，取值范围：0（**置信度最低**）-100（**置信度最高**），越高代表文本越有可能属于当前返回的标签；如：*色情 99*，则表明该文本非常有可能属于色情内容。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Score 得分
+     * @param Score 该字段用于返回当前标签下的置信度，取值范围：0（**置信度最低**）-100（**置信度最高**），越高代表文本越有可能属于当前返回的标签；如：*色情 99*，则表明该文本非常有可能属于色情内容。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScore(Long Score) {
@@ -178,9 +179,11 @@ public class AudioResultDetailTextResult extends AbstractModel{
     }
 
     /**
-     * Get 审核建议
+     * Get 该字段用于返回后续操作建议。当您获取到判定结果后，返回值表示具体的后续建议操作。<br>
+返回值：**Block**：建议屏蔽，**Review** ：建议人工复审，**Pass**：建议通过
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Suggestion 审核建议
+     * @return Suggestion 该字段用于返回后续操作建议。当您获取到判定结果后，返回值表示具体的后续建议操作。<br>
+返回值：**Block**：建议屏蔽，**Review** ：建议人工复审，**Pass**：建议通过
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSuggestion() {
@@ -188,9 +191,11 @@ public class AudioResultDetailTextResult extends AbstractModel{
     }
 
     /**
-     * Set 审核建议
+     * Set 该字段用于返回后续操作建议。当您获取到判定结果后，返回值表示具体的后续建议操作。<br>
+返回值：**Block**：建议屏蔽，**Review** ：建议人工复审，**Pass**：建议通过
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Suggestion 审核建议
+     * @param Suggestion 该字段用于返回后续操作建议。当您获取到判定结果后，返回值表示具体的后续建议操作。<br>
+返回值：**Block**：建议屏蔽，**Review** ：建议人工复审，**Pass**：建议通过
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSuggestion(String Suggestion) {
@@ -198,16 +203,16 @@ public class AudioResultDetailTextResult extends AbstractModel{
     }
 
     /**
-     * Get 词库类型 1 黑白库 2 自定义库 
-     * @return LibType 词库类型 1 黑白库 2 自定义库
+     * Get 该字段用于返回自定义关键词对应的词库类型，取值为**1**（黑白库）和**2**（自定义关键词库），若未配置自定义关键词库,则默认值为1（黑白库匹配）。 
+     * @return LibType 该字段用于返回自定义关键词对应的词库类型，取值为**1**（黑白库）和**2**（自定义关键词库），若未配置自定义关键词库,则默认值为1（黑白库匹配）。
      */
     public Long getLibType() {
         return this.LibType;
     }
 
     /**
-     * Set 词库类型 1 黑白库 2 自定义库
-     * @param LibType 词库类型 1 黑白库 2 自定义库
+     * Set 该字段用于返回自定义关键词对应的词库类型，取值为**1**（黑白库）和**2**（自定义关键词库），若未配置自定义关键词库,则默认值为1（黑白库匹配）。
+     * @param LibType 该字段用于返回自定义关键词对应的词库类型，取值为**1**（黑白库）和**2**（自定义关键词库），若未配置自定义关键词库,则默认值为1（黑白库匹配）。
      */
     public void setLibType(Long LibType) {
         this.LibType = LibType;

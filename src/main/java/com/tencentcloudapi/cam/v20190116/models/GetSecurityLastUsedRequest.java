@@ -22,6 +22,29 @@ import java.util.HashMap;
 
 public class GetSecurityLastUsedRequest extends AbstractModel{
 
+    /**
+    * 查询密钥ID列表
+    */
+    @SerializedName("SecretIdList")
+    @Expose
+    private String [] SecretIdList;
+
+    /**
+     * Get 查询密钥ID列表 
+     * @return SecretIdList 查询密钥ID列表
+     */
+    public String [] getSecretIdList() {
+        return this.SecretIdList;
+    }
+
+    /**
+     * Set 查询密钥ID列表
+     * @param SecretIdList 查询密钥ID列表
+     */
+    public void setSecretIdList(String [] SecretIdList) {
+        this.SecretIdList = SecretIdList;
+    }
+
     public GetSecurityLastUsedRequest() {
     }
 
@@ -30,6 +53,12 @@ public class GetSecurityLastUsedRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public GetSecurityLastUsedRequest(GetSecurityLastUsedRequest source) {
+        if (source.SecretIdList != null) {
+            this.SecretIdList = new String[source.SecretIdList.length];
+            for (int i = 0; i < source.SecretIdList.length; i++) {
+                this.SecretIdList[i] = new String(source.SecretIdList[i]);
+            }
+        }
     }
 
 
@@ -37,6 +66,7 @@ public class GetSecurityLastUsedRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArraySimple(map, prefix + "SecretIdList.", this.SecretIdList);
 
     }
 }

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class AudioResultDetailLanguageResult extends AbstractModel{
 
     /**
-    * 语言信息
+    * 该字段用于返回语种检测结果所对应的语种标签，目前支持：**Arabic**（阿拉伯语）、**English**（英语）、**Mandarin**（普通话）、**Tibetan**（藏语）、**Uyghur**（维语）、**Other**（其他上面5类之外）。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Label")
@@ -31,7 +31,7 @@ public class AudioResultDetailLanguageResult extends AbstractModel{
     private String Label;
 
     /**
-    * 得分
+    * 该参数用于返回当前标签下的置信度，取值范围：0（**置信度最低**）-100（**置信度最高**），越高代表音频越有可能属于当前返回的语种标签；如：*Uyghur 99*，则表明该音频非常有可能属于维语内容。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Score")
@@ -39,7 +39,7 @@ public class AudioResultDetailLanguageResult extends AbstractModel{
     private Long Score;
 
     /**
-    * 开始时间
+    * 该参数用于返回对应语种标签的片段在音频文件内的开始时间，单位为毫秒。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StartTime")
@@ -47,7 +47,7 @@ public class AudioResultDetailLanguageResult extends AbstractModel{
     private Float StartTime;
 
     /**
-    * 结束时间
+    * 该参数用于返回对应语种标签的片段在音频文件内的结束时间，单位为毫秒。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EndTime")
@@ -55,7 +55,7 @@ public class AudioResultDetailLanguageResult extends AbstractModel{
     private Float EndTime;
 
     /**
-    * 子标签码
+    * *内测中，敬请期待*
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubLabelCode")
@@ -63,9 +63,9 @@ public class AudioResultDetailLanguageResult extends AbstractModel{
     private String SubLabelCode;
 
     /**
-     * Get 语言信息
+     * Get 该字段用于返回语种检测结果所对应的语种标签，目前支持：**Arabic**（阿拉伯语）、**English**（英语）、**Mandarin**（普通话）、**Tibetan**（藏语）、**Uyghur**（维语）、**Other**（其他上面5类之外）。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Label 语言信息
+     * @return Label 该字段用于返回语种检测结果所对应的语种标签，目前支持：**Arabic**（阿拉伯语）、**English**（英语）、**Mandarin**（普通话）、**Tibetan**（藏语）、**Uyghur**（维语）、**Other**（其他上面5类之外）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLabel() {
@@ -73,9 +73,9 @@ public class AudioResultDetailLanguageResult extends AbstractModel{
     }
 
     /**
-     * Set 语言信息
+     * Set 该字段用于返回语种检测结果所对应的语种标签，目前支持：**Arabic**（阿拉伯语）、**English**（英语）、**Mandarin**（普通话）、**Tibetan**（藏语）、**Uyghur**（维语）、**Other**（其他上面5类之外）。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Label 语言信息
+     * @param Label 该字段用于返回语种检测结果所对应的语种标签，目前支持：**Arabic**（阿拉伯语）、**English**（英语）、**Mandarin**（普通话）、**Tibetan**（藏语）、**Uyghur**（维语）、**Other**（其他上面5类之外）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLabel(String Label) {
@@ -83,9 +83,9 @@ public class AudioResultDetailLanguageResult extends AbstractModel{
     }
 
     /**
-     * Get 得分
+     * Get 该参数用于返回当前标签下的置信度，取值范围：0（**置信度最低**）-100（**置信度最高**），越高代表音频越有可能属于当前返回的语种标签；如：*Uyghur 99*，则表明该音频非常有可能属于维语内容。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Score 得分
+     * @return Score 该参数用于返回当前标签下的置信度，取值范围：0（**置信度最低**）-100（**置信度最高**），越高代表音频越有可能属于当前返回的语种标签；如：*Uyghur 99*，则表明该音频非常有可能属于维语内容。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getScore() {
@@ -93,9 +93,9 @@ public class AudioResultDetailLanguageResult extends AbstractModel{
     }
 
     /**
-     * Set 得分
+     * Set 该参数用于返回当前标签下的置信度，取值范围：0（**置信度最低**）-100（**置信度最高**），越高代表音频越有可能属于当前返回的语种标签；如：*Uyghur 99*，则表明该音频非常有可能属于维语内容。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Score 得分
+     * @param Score 该参数用于返回当前标签下的置信度，取值范围：0（**置信度最低**）-100（**置信度最高**），越高代表音频越有可能属于当前返回的语种标签；如：*Uyghur 99*，则表明该音频非常有可能属于维语内容。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScore(Long Score) {
@@ -103,9 +103,9 @@ public class AudioResultDetailLanguageResult extends AbstractModel{
     }
 
     /**
-     * Get 开始时间
+     * Get 该参数用于返回对应语种标签的片段在音频文件内的开始时间，单位为毫秒。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return StartTime 开始时间
+     * @return StartTime 该参数用于返回对应语种标签的片段在音频文件内的开始时间，单位为毫秒。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getStartTime() {
@@ -113,9 +113,9 @@ public class AudioResultDetailLanguageResult extends AbstractModel{
     }
 
     /**
-     * Set 开始时间
+     * Set 该参数用于返回对应语种标签的片段在音频文件内的开始时间，单位为毫秒。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param StartTime 开始时间
+     * @param StartTime 该参数用于返回对应语种标签的片段在音频文件内的开始时间，单位为毫秒。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStartTime(Float StartTime) {
@@ -123,9 +123,9 @@ public class AudioResultDetailLanguageResult extends AbstractModel{
     }
 
     /**
-     * Get 结束时间
+     * Get 该参数用于返回对应语种标签的片段在音频文件内的结束时间，单位为毫秒。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EndTime 结束时间
+     * @return EndTime 该参数用于返回对应语种标签的片段在音频文件内的结束时间，单位为毫秒。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getEndTime() {
@@ -133,9 +133,9 @@ public class AudioResultDetailLanguageResult extends AbstractModel{
     }
 
     /**
-     * Set 结束时间
+     * Set 该参数用于返回对应语种标签的片段在音频文件内的结束时间，单位为毫秒。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EndTime 结束时间
+     * @param EndTime 该参数用于返回对应语种标签的片段在音频文件内的结束时间，单位为毫秒。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEndTime(Float EndTime) {
@@ -143,9 +143,9 @@ public class AudioResultDetailLanguageResult extends AbstractModel{
     }
 
     /**
-     * Get 子标签码
+     * Get *内测中，敬请期待*
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SubLabelCode 子标签码
+     * @return SubLabelCode *内测中，敬请期待*
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubLabelCode() {
@@ -153,9 +153,9 @@ public class AudioResultDetailLanguageResult extends AbstractModel{
     }
 
     /**
-     * Set 子标签码
+     * Set *内测中，敬请期待*
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SubLabelCode 子标签码
+     * @param SubLabelCode *内测中，敬请期待*
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubLabelCode(String SubLabelCode) {

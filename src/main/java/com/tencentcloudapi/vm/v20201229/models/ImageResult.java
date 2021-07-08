@@ -23,9 +23,7 @@ import java.util.HashMap;
 public class ImageResult extends AbstractModel{
 
     /**
-    * 违规标志
-0 未命中
-1 命中
+    * 该参数用于标识审核内容是否命中恶意标签，取值：0（**未命中**）和1（**命中**）。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HitFlag")
@@ -33,13 +31,7 @@ public class ImageResult extends AbstractModel{
     private Long HitFlag;
 
     /**
-    * 命中的标签
-Porn 色情
-Sexy 性感
-Illegal 违法
-Abuse 谩骂
-Ad 广告
-以及其他令人反感、不安全或不适宜的内容类型。
+    * 该字段用于返回检测结果所对应的恶意标签。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告，**Custom**：自定义违规；以及其他令人反感、不安全或不适宜的内容类型。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Label")
@@ -47,10 +39,8 @@ Ad 广告
     private String Label;
 
     /**
-    * 审核建议，可选值：
-Pass 通过，
-Review 建议人审，
-Block 确认违规
+    * 该字段用于返回后续操作建议。当您获取到判定结果后，返回值表示具体的后续建议操作。<br>
+返回值：**Block**：建议屏蔽，**Review** ：建议人工复审，**Pass**：建议通过
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Suggestion")
@@ -58,7 +48,7 @@ Block 确认违规
     private String Suggestion;
 
     /**
-    * 得分
+    * 该字段用于返回当前标签下的置信度，取值范围：0（**置信度最低**）-100（**置信度最高** ），越高代表文本越有可能属于当前返回的标签；如：*色情 -性行为 99*，则表明该文本非常有可能属于色情性行为内容。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Score")
@@ -66,7 +56,7 @@ Block 确认违规
     private Long Score;
 
     /**
-    * 画面截帧图片结果集
+    * 该字段用于返回图像审核结果的子结果，详细内容敬请参考ImageResultResult数据结构的描述。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Results")
@@ -74,7 +64,7 @@ Block 确认违规
     private ImageResultResult [] Results;
 
     /**
-    * 图片URL地址
+    * 该字段用于返回审核结果的访问链接（URL），图片支持PNG、JPG、JPEG、BMP、GIF、WEBP格式。<br>备注：数据**默认有效期为12小时**。如您需要更长时间的保存，请在数据储存的COS桶中配置对应的储存时长。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Url")
@@ -82,7 +72,7 @@ Block 确认违规
     private String Url;
 
     /**
-    * 附加字段
+    * 该字段用于返回输入参数中的额外附加信息（Extra），如未配置则默认返回值为空。<br>备注：不同客户或Biztype下返回信息不同，如需配置该字段请提交工单咨询或联系售后专员处理。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Extra")
@@ -90,13 +80,9 @@ Block 确认违规
     private String Extra;
 
     /**
-     * Get 违规标志
-0 未命中
-1 命中
+     * Get 该参数用于标识审核内容是否命中恶意标签，取值：0（**未命中**）和1（**命中**）。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return HitFlag 违规标志
-0 未命中
-1 命中
+     * @return HitFlag 该参数用于标识审核内容是否命中恶意标签，取值：0（**未命中**）和1（**命中**）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getHitFlag() {
@@ -104,13 +90,9 @@ Block 确认违规
     }
 
     /**
-     * Set 违规标志
-0 未命中
-1 命中
+     * Set 该参数用于标识审核内容是否命中恶意标签，取值：0（**未命中**）和1（**命中**）。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param HitFlag 违规标志
-0 未命中
-1 命中
+     * @param HitFlag 该参数用于标识审核内容是否命中恶意标签，取值：0（**未命中**）和1（**命中**）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHitFlag(Long HitFlag) {
@@ -118,21 +100,9 @@ Block 确认违规
     }
 
     /**
-     * Get 命中的标签
-Porn 色情
-Sexy 性感
-Illegal 违法
-Abuse 谩骂
-Ad 广告
-以及其他令人反感、不安全或不适宜的内容类型。
+     * Get 该字段用于返回检测结果所对应的恶意标签。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告，**Custom**：自定义违规；以及其他令人反感、不安全或不适宜的内容类型。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Label 命中的标签
-Porn 色情
-Sexy 性感
-Illegal 违法
-Abuse 谩骂
-Ad 广告
-以及其他令人反感、不安全或不适宜的内容类型。
+     * @return Label 该字段用于返回检测结果所对应的恶意标签。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告，**Custom**：自定义违规；以及其他令人反感、不安全或不适宜的内容类型。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLabel() {
@@ -140,21 +110,9 @@ Ad 广告
     }
 
     /**
-     * Set 命中的标签
-Porn 色情
-Sexy 性感
-Illegal 违法
-Abuse 谩骂
-Ad 广告
-以及其他令人反感、不安全或不适宜的内容类型。
+     * Set 该字段用于返回检测结果所对应的恶意标签。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告，**Custom**：自定义违规；以及其他令人反感、不安全或不适宜的内容类型。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Label 命中的标签
-Porn 色情
-Sexy 性感
-Illegal 违法
-Abuse 谩骂
-Ad 广告
-以及其他令人反感、不安全或不适宜的内容类型。
+     * @param Label 该字段用于返回检测结果所对应的恶意标签。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告，**Custom**：自定义违规；以及其他令人反感、不安全或不适宜的内容类型。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLabel(String Label) {
@@ -162,15 +120,11 @@ Ad 广告
     }
 
     /**
-     * Get 审核建议，可选值：
-Pass 通过，
-Review 建议人审，
-Block 确认违规
+     * Get 该字段用于返回后续操作建议。当您获取到判定结果后，返回值表示具体的后续建议操作。<br>
+返回值：**Block**：建议屏蔽，**Review** ：建议人工复审，**Pass**：建议通过
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Suggestion 审核建议，可选值：
-Pass 通过，
-Review 建议人审，
-Block 确认违规
+     * @return Suggestion 该字段用于返回后续操作建议。当您获取到判定结果后，返回值表示具体的后续建议操作。<br>
+返回值：**Block**：建议屏蔽，**Review** ：建议人工复审，**Pass**：建议通过
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSuggestion() {
@@ -178,15 +132,11 @@ Block 确认违规
     }
 
     /**
-     * Set 审核建议，可选值：
-Pass 通过，
-Review 建议人审，
-Block 确认违规
+     * Set 该字段用于返回后续操作建议。当您获取到判定结果后，返回值表示具体的后续建议操作。<br>
+返回值：**Block**：建议屏蔽，**Review** ：建议人工复审，**Pass**：建议通过
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Suggestion 审核建议，可选值：
-Pass 通过，
-Review 建议人审，
-Block 确认违规
+     * @param Suggestion 该字段用于返回后续操作建议。当您获取到判定结果后，返回值表示具体的后续建议操作。<br>
+返回值：**Block**：建议屏蔽，**Review** ：建议人工复审，**Pass**：建议通过
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSuggestion(String Suggestion) {
@@ -194,9 +144,9 @@ Block 确认违规
     }
 
     /**
-     * Get 得分
+     * Get 该字段用于返回当前标签下的置信度，取值范围：0（**置信度最低**）-100（**置信度最高** ），越高代表文本越有可能属于当前返回的标签；如：*色情 -性行为 99*，则表明该文本非常有可能属于色情性行为内容。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Score 得分
+     * @return Score 该字段用于返回当前标签下的置信度，取值范围：0（**置信度最低**）-100（**置信度最高** ），越高代表文本越有可能属于当前返回的标签；如：*色情 -性行为 99*，则表明该文本非常有可能属于色情性行为内容。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getScore() {
@@ -204,9 +154,9 @@ Block 确认违规
     }
 
     /**
-     * Set 得分
+     * Set 该字段用于返回当前标签下的置信度，取值范围：0（**置信度最低**）-100（**置信度最高** ），越高代表文本越有可能属于当前返回的标签；如：*色情 -性行为 99*，则表明该文本非常有可能属于色情性行为内容。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Score 得分
+     * @param Score 该字段用于返回当前标签下的置信度，取值范围：0（**置信度最低**）-100（**置信度最高** ），越高代表文本越有可能属于当前返回的标签；如：*色情 -性行为 99*，则表明该文本非常有可能属于色情性行为内容。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScore(Long Score) {
@@ -214,9 +164,9 @@ Block 确认违规
     }
 
     /**
-     * Get 画面截帧图片结果集
+     * Get 该字段用于返回图像审核结果的子结果，详细内容敬请参考ImageResultResult数据结构的描述。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Results 画面截帧图片结果集
+     * @return Results 该字段用于返回图像审核结果的子结果，详细内容敬请参考ImageResultResult数据结构的描述。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ImageResultResult [] getResults() {
@@ -224,9 +174,9 @@ Block 确认违规
     }
 
     /**
-     * Set 画面截帧图片结果集
+     * Set 该字段用于返回图像审核结果的子结果，详细内容敬请参考ImageResultResult数据结构的描述。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Results 画面截帧图片结果集
+     * @param Results 该字段用于返回图像审核结果的子结果，详细内容敬请参考ImageResultResult数据结构的描述。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResults(ImageResultResult [] Results) {
@@ -234,9 +184,9 @@ Block 确认违规
     }
 
     /**
-     * Get 图片URL地址
+     * Get 该字段用于返回审核结果的访问链接（URL），图片支持PNG、JPG、JPEG、BMP、GIF、WEBP格式。<br>备注：数据**默认有效期为12小时**。如您需要更长时间的保存，请在数据储存的COS桶中配置对应的储存时长。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Url 图片URL地址
+     * @return Url 该字段用于返回审核结果的访问链接（URL），图片支持PNG、JPG、JPEG、BMP、GIF、WEBP格式。<br>备注：数据**默认有效期为12小时**。如您需要更长时间的保存，请在数据储存的COS桶中配置对应的储存时长。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUrl() {
@@ -244,9 +194,9 @@ Block 确认违规
     }
 
     /**
-     * Set 图片URL地址
+     * Set 该字段用于返回审核结果的访问链接（URL），图片支持PNG、JPG、JPEG、BMP、GIF、WEBP格式。<br>备注：数据**默认有效期为12小时**。如您需要更长时间的保存，请在数据储存的COS桶中配置对应的储存时长。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Url 图片URL地址
+     * @param Url 该字段用于返回审核结果的访问链接（URL），图片支持PNG、JPG、JPEG、BMP、GIF、WEBP格式。<br>备注：数据**默认有效期为12小时**。如您需要更长时间的保存，请在数据储存的COS桶中配置对应的储存时长。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUrl(String Url) {
@@ -254,9 +204,9 @@ Block 确认违规
     }
 
     /**
-     * Get 附加字段
+     * Get 该字段用于返回输入参数中的额外附加信息（Extra），如未配置则默认返回值为空。<br>备注：不同客户或Biztype下返回信息不同，如需配置该字段请提交工单咨询或联系售后专员处理。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Extra 附加字段
+     * @return Extra 该字段用于返回输入参数中的额外附加信息（Extra），如未配置则默认返回值为空。<br>备注：不同客户或Biztype下返回信息不同，如需配置该字段请提交工单咨询或联系售后专员处理。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExtra() {
@@ -264,9 +214,9 @@ Block 确认违规
     }
 
     /**
-     * Set 附加字段
+     * Set 该字段用于返回输入参数中的额外附加信息（Extra），如未配置则默认返回值为空。<br>备注：不同客户或Biztype下返回信息不同，如需配置该字段请提交工单咨询或联系售后专员处理。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Extra 附加字段
+     * @param Extra 该字段用于返回输入参数中的额外附加信息（Extra），如未配置则默认返回值为空。<br>备注：不同客户或Biztype下返回信息不同，如需配置该字段请提交工单咨询或联系售后专员处理。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExtra(String Extra) {

@@ -23,9 +23,7 @@ import java.util.HashMap;
 public class AudioResult extends AbstractModel{
 
     /**
-    * 是否命中
-0 未命中
-1 命中
+    * 该字段用于返回审核内容是否命中审核模型；取值：0（**未命中**）、1（**命中**）。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HitFlag")
@@ -33,13 +31,7 @@ public class AudioResult extends AbstractModel{
     private Long HitFlag;
 
     /**
-    * 命中的标签
-Porn 色情
-Illegal 违法
-Abuse 谩骂
-Ad 广告
-Moan 呻吟
-以及其他令人反感、不安全或不适宜的内容类型。
+    * 该字段用于返回检测结果所对应的恶意标签。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告，**Custom**：自定义违规；以及其他令人反感、不安全或不适宜的内容类型。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Label")
@@ -47,10 +39,8 @@ Moan 呻吟
     private String Label;
 
     /**
-    * 审核建议，可选值：
-Pass 通过，
-Review 建议人审，
-Block 确认违规
+    * 该字段用于返回后续操作建议。当您获取到判定结果后，返回值表示具体的后续建议操作。<br>
+返回值：**Block**：建议屏蔽，**Review** ：建议人工复审，**Pass**：建议通过
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Suggestion")
@@ -58,7 +48,7 @@ Block 确认违规
     private String Suggestion;
 
     /**
-    * 得分，0-100
+    * 该字段用于返回当前标签下的置信度，取值范围：0（**置信度最低**）-100（**置信度最高** ），越高代表文本越有可能属于当前返回的标签；如：*色情 99*，则表明该文本非常有可能属于色情内容。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Score")
@@ -66,7 +56,7 @@ Block 确认违规
     private Long Score;
 
     /**
-    * 音频ASR文本
+    * 该字段用于返回音频文件经ASR识别后的文本信息。最长可识别**5小时**的音频文件，若超出时长限制，接口将会报错。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Text")
@@ -74,7 +64,7 @@ Block 确认违规
     private String Text;
 
     /**
-    * 音频片段存储URL，有效期为1天
+    * 该字段用于返回音频片段存储的链接地址，该地址有效期为1天。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Url")
@@ -82,7 +72,7 @@ Block 确认违规
     private String Url;
 
     /**
-    * 音频时长
+    * 该字段用于返回音频文件的时长，单位为秒。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Duration")
@@ -90,7 +80,7 @@ Block 确认违规
     private String Duration;
 
     /**
-    * 拓展字段
+    * 该字段用于返回输入参数中的额外附加信息（Extra），如未配置则默认返回值为空。<br>备注：不同客户或Biztype下返回信息不同，如需配置该字段请提交工单咨询或联系售后专员处理。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Extra")
@@ -98,7 +88,7 @@ Block 确认违规
     private String Extra;
 
     /**
-    * 文本审核结果
+    * 该字段用于返回音频文件经ASR识别后产生的文本的详细审核结果。具体结果内容请参见AudioResultDetailLanguageResult数据结构的细节描述。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TextResults")
@@ -106,7 +96,7 @@ Block 确认违规
     private AudioResultDetailTextResult [] TextResults;
 
     /**
-    * 音频呻吟审核结果
+    * 该字段用于返回音频文件呻吟检测的详细审核结果。具体结果内容请参见AudioResultDetailMoanResult数据结构的细节描述。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MoanResults")
@@ -114,7 +104,7 @@ Block 确认违规
     private AudioResultDetailMoanResult [] MoanResults;
 
     /**
-    * 音频语言类别检测结果
+    * 该字段用于返回音频小语种检测的详细审核结果。具体结果内容请参见AudioResultDetailLanguageResult数据结构的细节描述。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LanguageResults")
@@ -122,13 +112,9 @@ Block 确认违规
     private AudioResultDetailLanguageResult [] LanguageResults;
 
     /**
-     * Get 是否命中
-0 未命中
-1 命中
+     * Get 该字段用于返回审核内容是否命中审核模型；取值：0（**未命中**）、1（**命中**）。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return HitFlag 是否命中
-0 未命中
-1 命中
+     * @return HitFlag 该字段用于返回审核内容是否命中审核模型；取值：0（**未命中**）、1（**命中**）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getHitFlag() {
@@ -136,13 +122,9 @@ Block 确认违规
     }
 
     /**
-     * Set 是否命中
-0 未命中
-1 命中
+     * Set 该字段用于返回审核内容是否命中审核模型；取值：0（**未命中**）、1（**命中**）。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param HitFlag 是否命中
-0 未命中
-1 命中
+     * @param HitFlag 该字段用于返回审核内容是否命中审核模型；取值：0（**未命中**）、1（**命中**）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHitFlag(Long HitFlag) {
@@ -150,21 +132,9 @@ Block 确认违规
     }
 
     /**
-     * Get 命中的标签
-Porn 色情
-Illegal 违法
-Abuse 谩骂
-Ad 广告
-Moan 呻吟
-以及其他令人反感、不安全或不适宜的内容类型。
+     * Get 该字段用于返回检测结果所对应的恶意标签。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告，**Custom**：自定义违规；以及其他令人反感、不安全或不适宜的内容类型。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Label 命中的标签
-Porn 色情
-Illegal 违法
-Abuse 谩骂
-Ad 广告
-Moan 呻吟
-以及其他令人反感、不安全或不适宜的内容类型。
+     * @return Label 该字段用于返回检测结果所对应的恶意标签。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告，**Custom**：自定义违规；以及其他令人反感、不安全或不适宜的内容类型。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLabel() {
@@ -172,21 +142,9 @@ Moan 呻吟
     }
 
     /**
-     * Set 命中的标签
-Porn 色情
-Illegal 违法
-Abuse 谩骂
-Ad 广告
-Moan 呻吟
-以及其他令人反感、不安全或不适宜的内容类型。
+     * Set 该字段用于返回检测结果所对应的恶意标签。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告，**Custom**：自定义违规；以及其他令人反感、不安全或不适宜的内容类型。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Label 命中的标签
-Porn 色情
-Illegal 违法
-Abuse 谩骂
-Ad 广告
-Moan 呻吟
-以及其他令人反感、不安全或不适宜的内容类型。
+     * @param Label 该字段用于返回检测结果所对应的恶意标签。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告，**Custom**：自定义违规；以及其他令人反感、不安全或不适宜的内容类型。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLabel(String Label) {
@@ -194,15 +152,11 @@ Moan 呻吟
     }
 
     /**
-     * Get 审核建议，可选值：
-Pass 通过，
-Review 建议人审，
-Block 确认违规
+     * Get 该字段用于返回后续操作建议。当您获取到判定结果后，返回值表示具体的后续建议操作。<br>
+返回值：**Block**：建议屏蔽，**Review** ：建议人工复审，**Pass**：建议通过
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Suggestion 审核建议，可选值：
-Pass 通过，
-Review 建议人审，
-Block 确认违规
+     * @return Suggestion 该字段用于返回后续操作建议。当您获取到判定结果后，返回值表示具体的后续建议操作。<br>
+返回值：**Block**：建议屏蔽，**Review** ：建议人工复审，**Pass**：建议通过
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSuggestion() {
@@ -210,15 +164,11 @@ Block 确认违规
     }
 
     /**
-     * Set 审核建议，可选值：
-Pass 通过，
-Review 建议人审，
-Block 确认违规
+     * Set 该字段用于返回后续操作建议。当您获取到判定结果后，返回值表示具体的后续建议操作。<br>
+返回值：**Block**：建议屏蔽，**Review** ：建议人工复审，**Pass**：建议通过
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Suggestion 审核建议，可选值：
-Pass 通过，
-Review 建议人审，
-Block 确认违规
+     * @param Suggestion 该字段用于返回后续操作建议。当您获取到判定结果后，返回值表示具体的后续建议操作。<br>
+返回值：**Block**：建议屏蔽，**Review** ：建议人工复审，**Pass**：建议通过
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSuggestion(String Suggestion) {
@@ -226,9 +176,9 @@ Block 确认违规
     }
 
     /**
-     * Get 得分，0-100
+     * Get 该字段用于返回当前标签下的置信度，取值范围：0（**置信度最低**）-100（**置信度最高** ），越高代表文本越有可能属于当前返回的标签；如：*色情 99*，则表明该文本非常有可能属于色情内容。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Score 得分，0-100
+     * @return Score 该字段用于返回当前标签下的置信度，取值范围：0（**置信度最低**）-100（**置信度最高** ），越高代表文本越有可能属于当前返回的标签；如：*色情 99*，则表明该文本非常有可能属于色情内容。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getScore() {
@@ -236,9 +186,9 @@ Block 确认违规
     }
 
     /**
-     * Set 得分，0-100
+     * Set 该字段用于返回当前标签下的置信度，取值范围：0（**置信度最低**）-100（**置信度最高** ），越高代表文本越有可能属于当前返回的标签；如：*色情 99*，则表明该文本非常有可能属于色情内容。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Score 得分，0-100
+     * @param Score 该字段用于返回当前标签下的置信度，取值范围：0（**置信度最低**）-100（**置信度最高** ），越高代表文本越有可能属于当前返回的标签；如：*色情 99*，则表明该文本非常有可能属于色情内容。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScore(Long Score) {
@@ -246,9 +196,9 @@ Block 确认违规
     }
 
     /**
-     * Get 音频ASR文本
+     * Get 该字段用于返回音频文件经ASR识别后的文本信息。最长可识别**5小时**的音频文件，若超出时长限制，接口将会报错。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Text 音频ASR文本
+     * @return Text 该字段用于返回音频文件经ASR识别后的文本信息。最长可识别**5小时**的音频文件，若超出时长限制，接口将会报错。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getText() {
@@ -256,9 +206,9 @@ Block 确认违规
     }
 
     /**
-     * Set 音频ASR文本
+     * Set 该字段用于返回音频文件经ASR识别后的文本信息。最长可识别**5小时**的音频文件，若超出时长限制，接口将会报错。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Text 音频ASR文本
+     * @param Text 该字段用于返回音频文件经ASR识别后的文本信息。最长可识别**5小时**的音频文件，若超出时长限制，接口将会报错。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setText(String Text) {
@@ -266,9 +216,9 @@ Block 确认违规
     }
 
     /**
-     * Get 音频片段存储URL，有效期为1天
+     * Get 该字段用于返回音频片段存储的链接地址，该地址有效期为1天。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Url 音频片段存储URL，有效期为1天
+     * @return Url 该字段用于返回音频片段存储的链接地址，该地址有效期为1天。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUrl() {
@@ -276,9 +226,9 @@ Block 确认违规
     }
 
     /**
-     * Set 音频片段存储URL，有效期为1天
+     * Set 该字段用于返回音频片段存储的链接地址，该地址有效期为1天。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Url 音频片段存储URL，有效期为1天
+     * @param Url 该字段用于返回音频片段存储的链接地址，该地址有效期为1天。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUrl(String Url) {
@@ -286,9 +236,9 @@ Block 确认违规
     }
 
     /**
-     * Get 音频时长
+     * Get 该字段用于返回音频文件的时长，单位为秒。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Duration 音频时长
+     * @return Duration 该字段用于返回音频文件的时长，单位为秒。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDuration() {
@@ -296,9 +246,9 @@ Block 确认违规
     }
 
     /**
-     * Set 音频时长
+     * Set 该字段用于返回音频文件的时长，单位为秒。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Duration 音频时长
+     * @param Duration 该字段用于返回音频文件的时长，单位为秒。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDuration(String Duration) {
@@ -306,9 +256,9 @@ Block 确认违规
     }
 
     /**
-     * Get 拓展字段
+     * Get 该字段用于返回输入参数中的额外附加信息（Extra），如未配置则默认返回值为空。<br>备注：不同客户或Biztype下返回信息不同，如需配置该字段请提交工单咨询或联系售后专员处理。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Extra 拓展字段
+     * @return Extra 该字段用于返回输入参数中的额外附加信息（Extra），如未配置则默认返回值为空。<br>备注：不同客户或Biztype下返回信息不同，如需配置该字段请提交工单咨询或联系售后专员处理。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExtra() {
@@ -316,9 +266,9 @@ Block 确认违规
     }
 
     /**
-     * Set 拓展字段
+     * Set 该字段用于返回输入参数中的额外附加信息（Extra），如未配置则默认返回值为空。<br>备注：不同客户或Biztype下返回信息不同，如需配置该字段请提交工单咨询或联系售后专员处理。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Extra 拓展字段
+     * @param Extra 该字段用于返回输入参数中的额外附加信息（Extra），如未配置则默认返回值为空。<br>备注：不同客户或Biztype下返回信息不同，如需配置该字段请提交工单咨询或联系售后专员处理。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExtra(String Extra) {
@@ -326,9 +276,9 @@ Block 确认违规
     }
 
     /**
-     * Get 文本审核结果
+     * Get 该字段用于返回音频文件经ASR识别后产生的文本的详细审核结果。具体结果内容请参见AudioResultDetailLanguageResult数据结构的细节描述。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TextResults 文本审核结果
+     * @return TextResults 该字段用于返回音频文件经ASR识别后产生的文本的详细审核结果。具体结果内容请参见AudioResultDetailLanguageResult数据结构的细节描述。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public AudioResultDetailTextResult [] getTextResults() {
@@ -336,9 +286,9 @@ Block 确认违规
     }
 
     /**
-     * Set 文本审核结果
+     * Set 该字段用于返回音频文件经ASR识别后产生的文本的详细审核结果。具体结果内容请参见AudioResultDetailLanguageResult数据结构的细节描述。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TextResults 文本审核结果
+     * @param TextResults 该字段用于返回音频文件经ASR识别后产生的文本的详细审核结果。具体结果内容请参见AudioResultDetailLanguageResult数据结构的细节描述。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTextResults(AudioResultDetailTextResult [] TextResults) {
@@ -346,9 +296,9 @@ Block 确认违规
     }
 
     /**
-     * Get 音频呻吟审核结果
+     * Get 该字段用于返回音频文件呻吟检测的详细审核结果。具体结果内容请参见AudioResultDetailMoanResult数据结构的细节描述。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MoanResults 音频呻吟审核结果
+     * @return MoanResults 该字段用于返回音频文件呻吟检测的详细审核结果。具体结果内容请参见AudioResultDetailMoanResult数据结构的细节描述。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public AudioResultDetailMoanResult [] getMoanResults() {
@@ -356,9 +306,9 @@ Block 确认违规
     }
 
     /**
-     * Set 音频呻吟审核结果
+     * Set 该字段用于返回音频文件呻吟检测的详细审核结果。具体结果内容请参见AudioResultDetailMoanResult数据结构的细节描述。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MoanResults 音频呻吟审核结果
+     * @param MoanResults 该字段用于返回音频文件呻吟检测的详细审核结果。具体结果内容请参见AudioResultDetailMoanResult数据结构的细节描述。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMoanResults(AudioResultDetailMoanResult [] MoanResults) {
@@ -366,9 +316,9 @@ Block 确认违规
     }
 
     /**
-     * Get 音频语言类别检测结果
+     * Get 该字段用于返回音频小语种检测的详细审核结果。具体结果内容请参见AudioResultDetailLanguageResult数据结构的细节描述。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LanguageResults 音频语言类别检测结果
+     * @return LanguageResults 该字段用于返回音频小语种检测的详细审核结果。具体结果内容请参见AudioResultDetailLanguageResult数据结构的细节描述。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public AudioResultDetailLanguageResult [] getLanguageResults() {
@@ -376,9 +326,9 @@ Block 确认违规
     }
 
     /**
-     * Set 音频语言类别检测结果
+     * Set 该字段用于返回音频小语种检测的详细审核结果。具体结果内容请参见AudioResultDetailLanguageResult数据结构的细节描述。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LanguageResults 音频语言类别检测结果
+     * @param LanguageResults 该字段用于返回音频小语种检测的详细审核结果。具体结果内容请参见AudioResultDetailLanguageResult数据结构的细节描述。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLanguageResults(AudioResultDetailLanguageResult [] LanguageResults) {

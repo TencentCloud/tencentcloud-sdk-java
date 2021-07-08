@@ -149,7 +149,7 @@ public class CreateInstancesRequest extends AbstractModel{
     private String Name;
 
     /**
-    * 是否需要支持Ipv6，1：是，0：否。
+    * 是否需要支持Ipv6，1：是，0：否（默认）。
     */
     @SerializedName("NeedSupportIpv6")
     @Expose
@@ -458,16 +458,16 @@ public class CreateInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get 是否需要支持Ipv6，1：是，0：否。 
-     * @return NeedSupportIpv6 是否需要支持Ipv6，1：是，0：否。
+     * Get 是否需要支持Ipv6，1：是，0：否（默认）。 
+     * @return NeedSupportIpv6 是否需要支持Ipv6，1：是，0：否（默认）。
      */
     public Long getNeedSupportIpv6() {
         return this.NeedSupportIpv6;
     }
 
     /**
-     * Set 是否需要支持Ipv6，1：是，0：否。
-     * @param NeedSupportIpv6 是否需要支持Ipv6，1：是，0：否。
+     * Set 是否需要支持Ipv6，1：是，0：否（默认）。
+     * @param NeedSupportIpv6 是否需要支持Ipv6，1：是，0：否（默认）。
      */
     public void setNeedSupportIpv6(Long NeedSupportIpv6) {
         this.NeedSupportIpv6 = NeedSupportIpv6;

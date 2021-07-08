@@ -51,7 +51,7 @@ public class DescribeSecretResponse extends AbstractModel{
     private Long CreateUin;
 
     /**
-    * 凭据状态：Enabled、Disabled、PendingDelete
+    * 凭据状态：Enabled、Disabled、PendingDelete, Creating, Failed。
     */
     @SerializedName("Status")
     @Expose
@@ -70,6 +70,46 @@ public class DescribeSecretResponse extends AbstractModel{
     @SerializedName("CreateTime")
     @Expose
     private Long CreateTime;
+
+    /**
+    * 0 --  用户自定义凭据类型；1 -- 云产品凭据类型。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SecretType")
+    @Expose
+    private Long SecretType;
+
+    /**
+    * 云产品名称。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ProductName")
+    @Expose
+    private String ProductName;
+
+    /**
+    * 云产品实例ID。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ResourceID")
+    @Expose
+    private String ResourceID;
+
+    /**
+    * 是否开启轮转：True -- 开启轮转；False -- 禁止轮转。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RotationStatus")
+    @Expose
+    private Boolean RotationStatus;
+
+    /**
+    * 轮转周期，默认以天为单位。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RotationFrequency")
+    @Expose
+    private Long RotationFrequency;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -143,16 +183,16 @@ public class DescribeSecretResponse extends AbstractModel{
     }
 
     /**
-     * Get 凭据状态：Enabled、Disabled、PendingDelete 
-     * @return Status 凭据状态：Enabled、Disabled、PendingDelete
+     * Get 凭据状态：Enabled、Disabled、PendingDelete, Creating, Failed。 
+     * @return Status 凭据状态：Enabled、Disabled、PendingDelete, Creating, Failed。
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 凭据状态：Enabled、Disabled、PendingDelete
-     * @param Status 凭据状态：Enabled、Disabled、PendingDelete
+     * Set 凭据状态：Enabled、Disabled、PendingDelete, Creating, Failed。
+     * @param Status 凭据状态：Enabled、Disabled、PendingDelete, Creating, Failed。
      */
     public void setStatus(String Status) {
         this.Status = Status;
@@ -188,6 +228,106 @@ public class DescribeSecretResponse extends AbstractModel{
      */
     public void setCreateTime(Long CreateTime) {
         this.CreateTime = CreateTime;
+    }
+
+    /**
+     * Get 0 --  用户自定义凭据类型；1 -- 云产品凭据类型。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SecretType 0 --  用户自定义凭据类型；1 -- 云产品凭据类型。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getSecretType() {
+        return this.SecretType;
+    }
+
+    /**
+     * Set 0 --  用户自定义凭据类型；1 -- 云产品凭据类型。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SecretType 0 --  用户自定义凭据类型；1 -- 云产品凭据类型。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSecretType(Long SecretType) {
+        this.SecretType = SecretType;
+    }
+
+    /**
+     * Get 云产品名称。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ProductName 云产品名称。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getProductName() {
+        return this.ProductName;
+    }
+
+    /**
+     * Set 云产品名称。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ProductName 云产品名称。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProductName(String ProductName) {
+        this.ProductName = ProductName;
+    }
+
+    /**
+     * Get 云产品实例ID。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ResourceID 云产品实例ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getResourceID() {
+        return this.ResourceID;
+    }
+
+    /**
+     * Set 云产品实例ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ResourceID 云产品实例ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setResourceID(String ResourceID) {
+        this.ResourceID = ResourceID;
+    }
+
+    /**
+     * Get 是否开启轮转：True -- 开启轮转；False -- 禁止轮转。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RotationStatus 是否开启轮转：True -- 开启轮转；False -- 禁止轮转。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getRotationStatus() {
+        return this.RotationStatus;
+    }
+
+    /**
+     * Set 是否开启轮转：True -- 开启轮转；False -- 禁止轮转。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RotationStatus 是否开启轮转：True -- 开启轮转；False -- 禁止轮转。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRotationStatus(Boolean RotationStatus) {
+        this.RotationStatus = RotationStatus;
+    }
+
+    /**
+     * Get 轮转周期，默认以天为单位。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RotationFrequency 轮转周期，默认以天为单位。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getRotationFrequency() {
+        return this.RotationFrequency;
+    }
+
+    /**
+     * Set 轮转周期，默认以天为单位。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RotationFrequency 轮转周期，默认以天为单位。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRotationFrequency(Long RotationFrequency) {
+        this.RotationFrequency = RotationFrequency;
     }
 
     /**
@@ -235,6 +375,21 @@ public class DescribeSecretResponse extends AbstractModel{
         if (source.CreateTime != null) {
             this.CreateTime = new Long(source.CreateTime);
         }
+        if (source.SecretType != null) {
+            this.SecretType = new Long(source.SecretType);
+        }
+        if (source.ProductName != null) {
+            this.ProductName = new String(source.ProductName);
+        }
+        if (source.ResourceID != null) {
+            this.ResourceID = new String(source.ResourceID);
+        }
+        if (source.RotationStatus != null) {
+            this.RotationStatus = new Boolean(source.RotationStatus);
+        }
+        if (source.RotationFrequency != null) {
+            this.RotationFrequency = new Long(source.RotationFrequency);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -252,6 +407,11 @@ public class DescribeSecretResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "DeleteTime", this.DeleteTime);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "SecretType", this.SecretType);
+        this.setParamSimple(map, prefix + "ProductName", this.ProductName);
+        this.setParamSimple(map, prefix + "ResourceID", this.ResourceID);
+        this.setParamSimple(map, prefix + "RotationStatus", this.RotationStatus);
+        this.setParamSimple(map, prefix + "RotationFrequency", this.RotationFrequency);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

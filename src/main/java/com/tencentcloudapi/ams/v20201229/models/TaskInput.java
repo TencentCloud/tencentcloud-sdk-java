@@ -23,69 +23,69 @@ import java.util.HashMap;
 public class TaskInput extends AbstractModel{
 
     /**
-    * 数据ID
+    * 选填参数，该字段表示您为待检测对象分配的数据ID，传入后可方便您对文件进行标识和管理。<br>取值：由英文字母（大小写均可）、数字及四个特殊符号（_，-，@，#）组成，**长度不超过64个字符**。
     */
     @SerializedName("DataId")
     @Expose
     private String DataId;
 
     /**
-    * 任务名
+    * 选填参数，该字段表示音频审核任务所对应的任务名称，方便后续查询和管理审核任务。
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 任务输入
+    * 必填参数，该字段表示审核文件的访问参数，用于获取审核媒体文件，该参数内包括访问类型和访问地址。
     */
     @SerializedName("Input")
     @Expose
     private StorageInfo Input;
 
     /**
-     * Get 数据ID 
-     * @return DataId 数据ID
+     * Get 选填参数，该字段表示您为待检测对象分配的数据ID，传入后可方便您对文件进行标识和管理。<br>取值：由英文字母（大小写均可）、数字及四个特殊符号（_，-，@，#）组成，**长度不超过64个字符**。 
+     * @return DataId 选填参数，该字段表示您为待检测对象分配的数据ID，传入后可方便您对文件进行标识和管理。<br>取值：由英文字母（大小写均可）、数字及四个特殊符号（_，-，@，#）组成，**长度不超过64个字符**。
      */
     public String getDataId() {
         return this.DataId;
     }
 
     /**
-     * Set 数据ID
-     * @param DataId 数据ID
+     * Set 选填参数，该字段表示您为待检测对象分配的数据ID，传入后可方便您对文件进行标识和管理。<br>取值：由英文字母（大小写均可）、数字及四个特殊符号（_，-，@，#）组成，**长度不超过64个字符**。
+     * @param DataId 选填参数，该字段表示您为待检测对象分配的数据ID，传入后可方便您对文件进行标识和管理。<br>取值：由英文字母（大小写均可）、数字及四个特殊符号（_，-，@，#）组成，**长度不超过64个字符**。
      */
     public void setDataId(String DataId) {
         this.DataId = DataId;
     }
 
     /**
-     * Get 任务名 
-     * @return Name 任务名
+     * Get 选填参数，该字段表示音频审核任务所对应的任务名称，方便后续查询和管理审核任务。 
+     * @return Name 选填参数，该字段表示音频审核任务所对应的任务名称，方便后续查询和管理审核任务。
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 任务名
-     * @param Name 任务名
+     * Set 选填参数，该字段表示音频审核任务所对应的任务名称，方便后续查询和管理审核任务。
+     * @param Name 选填参数，该字段表示音频审核任务所对应的任务名称，方便后续查询和管理审核任务。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 任务输入 
-     * @return Input 任务输入
+     * Get 必填参数，该字段表示审核文件的访问参数，用于获取审核媒体文件，该参数内包括访问类型和访问地址。 
+     * @return Input 必填参数，该字段表示审核文件的访问参数，用于获取审核媒体文件，该参数内包括访问类型和访问地址。
      */
     public StorageInfo getInput() {
         return this.Input;
     }
 
     /**
-     * Set 任务输入
-     * @param Input 任务输入
+     * Set 必填参数，该字段表示审核文件的访问参数，用于获取审核媒体文件，该参数内包括访问类型和访问地址。
+     * @param Input 必填参数，该字段表示审核文件的访问参数，用于获取审核媒体文件，该参数内包括访问类型和访问地址。
      */
     public void setInput(StorageInfo Input) {
         this.Input = Input;

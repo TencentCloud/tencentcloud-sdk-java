@@ -23,11 +23,34 @@ import java.util.HashMap;
 public class GetSecurityLastUsedResponse extends AbstractModel{
 
     /**
+    * 密钥ID最近访问列表
+    */
+    @SerializedName("SecretIdLastUsedRows")
+    @Expose
+    private SecretIdLastUsed [] SecretIdLastUsedRows;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 密钥ID最近访问列表 
+     * @return SecretIdLastUsedRows 密钥ID最近访问列表
+     */
+    public SecretIdLastUsed [] getSecretIdLastUsedRows() {
+        return this.SecretIdLastUsedRows;
+    }
+
+    /**
+     * Set 密钥ID最近访问列表
+     * @param SecretIdLastUsedRows 密钥ID最近访问列表
+     */
+    public void setSecretIdLastUsedRows(SecretIdLastUsed [] SecretIdLastUsedRows) {
+        this.SecretIdLastUsedRows = SecretIdLastUsedRows;
+    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -53,6 +76,12 @@ public class GetSecurityLastUsedResponse extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public GetSecurityLastUsedResponse(GetSecurityLastUsedResponse source) {
+        if (source.SecretIdLastUsedRows != null) {
+            this.SecretIdLastUsedRows = new SecretIdLastUsed[source.SecretIdLastUsedRows.length];
+            for (int i = 0; i < source.SecretIdLastUsedRows.length; i++) {
+                this.SecretIdLastUsedRows[i] = new SecretIdLastUsed(source.SecretIdLastUsedRows[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -63,6 +92,7 @@ public class GetSecurityLastUsedResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArrayObj(map, prefix + "SecretIdLastUsedRows.", this.SecretIdLastUsedRows);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

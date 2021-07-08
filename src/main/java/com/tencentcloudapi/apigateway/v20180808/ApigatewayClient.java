@@ -39,6 +39,26 @@ public class ApigatewayClient extends AbstractClient{
     }
 
     /**
+     *绑定插件到API上。
+     * @param req AttachPluginRequest
+     * @return AttachPluginResponse
+     * @throws TencentCloudSDKException
+     */
+    public AttachPluginResponse AttachPlugin(AttachPluginRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AttachPluginResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<AttachPluginResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "AttachPlugin");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（BindEnvironment）用于绑定使用计划到服务或API。
 用户在发布服务到某个环境中后，如果 API 需要鉴权，还需要绑定使用计划才能进行调用，此接口用户将使用计划绑定到特定环境。
 目前支持绑定使用计划到API，但是同一个服务不能同时存在绑定到服务的使用计划和绑定到API的使用计划，所以对已经绑定过服务级别使用计划的环境，请先使用 服务级别使用计划降级 接口进行降级操作。
@@ -365,6 +385,26 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
     }
 
     /**
+     *删除API网关插件
+     * @param req DeletePluginRequest
+     * @return DeletePluginResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeletePluginResponse DeletePlugin(DeletePluginRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeletePluginResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeletePluginResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeletePlugin");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（DeleteService）用于删除 API 网关中某个服务。
      * @param req DeleteServiceRequest
      * @return DeleteServiceResponse
@@ -480,6 +520,26 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
                 Type type = new TypeToken<JsonResponseModel<DescribeAPIDocsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeAPIDocs");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *展示插件相关的API列表，包括已绑定的和未绑定的API信息。
+     * @param req DescribeAllPluginApisRequest
+     * @return DescribeAllPluginApisResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAllPluginApisResponse DescribeAllPluginApis(DescribeAllPluginApisRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAllPluginApisResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAllPluginApisResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAllPluginApis");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -683,6 +743,46 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
                 Type type = new TypeToken<JsonResponseModel<DescribeLogSearchResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeLogSearch");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *展示插件详情，支持按照插件ID进行。
+     * @param req DescribePluginRequest
+     * @return DescribePluginResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePluginResponse DescribePlugin(DescribePluginRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribePluginResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribePluginResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribePlugin");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询指定插件下绑定的API信息
+     * @param req DescribePluginApisRequest
+     * @return DescribePluginApisResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePluginApisResponse DescribePluginApis(DescribePluginApisRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribePluginApisResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribePluginApisResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribePluginApis");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -978,6 +1078,26 @@ API 网关可绑定自定义域名到服务，用于服务调用。此接口用�
     }
 
     /**
+     *解除插件与API绑定
+     * @param req DetachPluginRequest
+     * @return DetachPluginResponse
+     * @throws TencentCloudSDKException
+     */
+    public DetachPluginResponse DetachPlugin(DetachPluginRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DetachPluginResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DetachPluginResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DetachPlugin");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（DisableApiKey）用于禁用一对 API 密钥。
      * @param req DisableApiKeyRequest
      * @return DisableApiKeyResponse
@@ -1130,6 +1250,26 @@ API 网关可绑定自定义域名到服务，用于服务调用。此接口用�
                 Type type = new TypeToken<JsonResponseModel<ModifyIPStrategyResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyIPStrategy");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改API网关插件。
+     * @param req ModifyPluginRequest
+     * @return ModifyPluginResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyPluginResponse ModifyPlugin(ModifyPluginRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyPluginResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyPluginResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyPlugin");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

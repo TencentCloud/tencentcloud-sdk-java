@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class TaskData extends AbstractModel{
 
     /**
-    * 输入的数据ID
+    * 该字段用于返回音频审核任务数据所对应的数据ID，方便后续查询和管理审核任务。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DataId")
@@ -31,21 +31,22 @@ public class TaskData extends AbstractModel{
     private String DataId;
 
     /**
-    * 任务ID
+    * 该字段用于返回音频审核任务所生成的任务ID，用于标识具体审核任务，方便后续查询和管理。
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-    * 状态，可选：PENDING，RUNNING，ERROR，FINISH，CANCELLED
+    * 该字段用于返回所查询内容的任务状态。
+<br>取值：**FINISH**（任务已完成）、**PENDING** （任务等待中）、**RUNNING** （任务进行中）、**ERROR** （任务出错）、**CANCELLED** （任务已取消）。
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 任务名称
+    * 该字段用于返回音频审核任务所对应的任务名称，方便后续查询和管理审核任务。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
@@ -53,7 +54,7 @@ public class TaskData extends AbstractModel{
     private String Name;
 
     /**
-    * 业务类型
+    * 该字段用于返回调用音频审核接口时传入的BizType参数，方便数据的辨别和管理。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BizType")
@@ -61,7 +62,7 @@ public class TaskData extends AbstractModel{
     private String BizType;
 
     /**
-    * 任务类型
+    * 该字段用于返回调用音频审核接口时输入的音频审核类型，取值为：**AUDIO**（点播音频）和**LIVE_AUDIO**（直播音频），默认值为AUDIO。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
@@ -69,7 +70,7 @@ public class TaskData extends AbstractModel{
     private String Type;
 
     /**
-    * 建议。可选：Pass，Block，Review
+    * 该字段用于返回基于恶意标签的后续操作建议。当您获取到判定结果后，返回值表示系统推荐的后续操作；建议您按照业务所需，对不同违规类型与建议值进行处理。<br>返回值：**Block**：建议屏蔽，**Review** ：建议人工复审，**Pass**：建议通过
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Suggestion")
@@ -85,7 +86,7 @@ public class TaskData extends AbstractModel{
     private MediaInfo MediaInfo;
 
     /**
-    * 任务违规标签
+    * 该字段用于返回检测结果所对应的恶意标签。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告，**Custom**：自定义违规；以及其他令人反感、不安全或不适宜的内容类型。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Labels")
@@ -93,14 +94,14 @@ public class TaskData extends AbstractModel{
     private TaskLabel [] Labels;
 
     /**
-    * 创建时间（ iso 8601 格式）
+    * 该字段用于返回被查询任务创建的时间，格式采用 ISO 8601标准。
     */
     @SerializedName("CreatedAt")
     @Expose
     private String CreatedAt;
 
     /**
-    * 更新时间（ iso 8601 格式）
+    * 该字段用于返回被查询任务最后更新时间，格式采用 ISO 8601标准。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdatedAt")
@@ -108,9 +109,9 @@ public class TaskData extends AbstractModel{
     private String UpdatedAt;
 
     /**
-     * Get 输入的数据ID
+     * Get 该字段用于返回音频审核任务数据所对应的数据ID，方便后续查询和管理审核任务。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DataId 输入的数据ID
+     * @return DataId 该字段用于返回音频审核任务数据所对应的数据ID，方便后续查询和管理审核任务。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDataId() {
@@ -118,9 +119,9 @@ public class TaskData extends AbstractModel{
     }
 
     /**
-     * Set 输入的数据ID
+     * Set 该字段用于返回音频审核任务数据所对应的数据ID，方便后续查询和管理审核任务。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DataId 输入的数据ID
+     * @param DataId 该字段用于返回音频审核任务数据所对应的数据ID，方便后续查询和管理审核任务。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDataId(String DataId) {
@@ -128,41 +129,45 @@ public class TaskData extends AbstractModel{
     }
 
     /**
-     * Get 任务ID 
-     * @return TaskId 任务ID
+     * Get 该字段用于返回音频审核任务所生成的任务ID，用于标识具体审核任务，方便后续查询和管理。 
+     * @return TaskId 该字段用于返回音频审核任务所生成的任务ID，用于标识具体审核任务，方便后续查询和管理。
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 任务ID
-     * @param TaskId 任务ID
+     * Set 该字段用于返回音频审核任务所生成的任务ID，用于标识具体审核任务，方便后续查询和管理。
+     * @param TaskId 该字段用于返回音频审核任务所生成的任务ID，用于标识具体审核任务，方便后续查询和管理。
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get 状态，可选：PENDING，RUNNING，ERROR，FINISH，CANCELLED 
-     * @return Status 状态，可选：PENDING，RUNNING，ERROR，FINISH，CANCELLED
+     * Get 该字段用于返回所查询内容的任务状态。
+<br>取值：**FINISH**（任务已完成）、**PENDING** （任务等待中）、**RUNNING** （任务进行中）、**ERROR** （任务出错）、**CANCELLED** （任务已取消）。 
+     * @return Status 该字段用于返回所查询内容的任务状态。
+<br>取值：**FINISH**（任务已完成）、**PENDING** （任务等待中）、**RUNNING** （任务进行中）、**ERROR** （任务出错）、**CANCELLED** （任务已取消）。
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 状态，可选：PENDING，RUNNING，ERROR，FINISH，CANCELLED
-     * @param Status 状态，可选：PENDING，RUNNING，ERROR，FINISH，CANCELLED
+     * Set 该字段用于返回所查询内容的任务状态。
+<br>取值：**FINISH**（任务已完成）、**PENDING** （任务等待中）、**RUNNING** （任务进行中）、**ERROR** （任务出错）、**CANCELLED** （任务已取消）。
+     * @param Status 该字段用于返回所查询内容的任务状态。
+<br>取值：**FINISH**（任务已完成）、**PENDING** （任务等待中）、**RUNNING** （任务进行中）、**ERROR** （任务出错）、**CANCELLED** （任务已取消）。
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 任务名称
+     * Get 该字段用于返回音频审核任务所对应的任务名称，方便后续查询和管理审核任务。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Name 任务名称
+     * @return Name 该字段用于返回音频审核任务所对应的任务名称，方便后续查询和管理审核任务。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
@@ -170,9 +175,9 @@ public class TaskData extends AbstractModel{
     }
 
     /**
-     * Set 任务名称
+     * Set 该字段用于返回音频审核任务所对应的任务名称，方便后续查询和管理审核任务。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Name 任务名称
+     * @param Name 该字段用于返回音频审核任务所对应的任务名称，方便后续查询和管理审核任务。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
@@ -180,9 +185,9 @@ public class TaskData extends AbstractModel{
     }
 
     /**
-     * Get 业务类型
+     * Get 该字段用于返回调用音频审核接口时传入的BizType参数，方便数据的辨别和管理。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BizType 业务类型
+     * @return BizType 该字段用于返回调用音频审核接口时传入的BizType参数，方便数据的辨别和管理。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBizType() {
@@ -190,9 +195,9 @@ public class TaskData extends AbstractModel{
     }
 
     /**
-     * Set 业务类型
+     * Set 该字段用于返回调用音频审核接口时传入的BizType参数，方便数据的辨别和管理。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BizType 业务类型
+     * @param BizType 该字段用于返回调用音频审核接口时传入的BizType参数，方便数据的辨别和管理。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBizType(String BizType) {
@@ -200,9 +205,9 @@ public class TaskData extends AbstractModel{
     }
 
     /**
-     * Get 任务类型
+     * Get 该字段用于返回调用音频审核接口时输入的音频审核类型，取值为：**AUDIO**（点播音频）和**LIVE_AUDIO**（直播音频），默认值为AUDIO。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Type 任务类型
+     * @return Type 该字段用于返回调用音频审核接口时输入的音频审核类型，取值为：**AUDIO**（点播音频）和**LIVE_AUDIO**（直播音频），默认值为AUDIO。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
@@ -210,9 +215,9 @@ public class TaskData extends AbstractModel{
     }
 
     /**
-     * Set 任务类型
+     * Set 该字段用于返回调用音频审核接口时输入的音频审核类型，取值为：**AUDIO**（点播音频）和**LIVE_AUDIO**（直播音频），默认值为AUDIO。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Type 任务类型
+     * @param Type 该字段用于返回调用音频审核接口时输入的音频审核类型，取值为：**AUDIO**（点播音频）和**LIVE_AUDIO**（直播音频），默认值为AUDIO。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {
@@ -220,9 +225,9 @@ public class TaskData extends AbstractModel{
     }
 
     /**
-     * Get 建议。可选：Pass，Block，Review
+     * Get 该字段用于返回基于恶意标签的后续操作建议。当您获取到判定结果后，返回值表示系统推荐的后续操作；建议您按照业务所需，对不同违规类型与建议值进行处理。<br>返回值：**Block**：建议屏蔽，**Review** ：建议人工复审，**Pass**：建议通过
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Suggestion 建议。可选：Pass，Block，Review
+     * @return Suggestion 该字段用于返回基于恶意标签的后续操作建议。当您获取到判定结果后，返回值表示系统推荐的后续操作；建议您按照业务所需，对不同违规类型与建议值进行处理。<br>返回值：**Block**：建议屏蔽，**Review** ：建议人工复审，**Pass**：建议通过
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSuggestion() {
@@ -230,9 +235,9 @@ public class TaskData extends AbstractModel{
     }
 
     /**
-     * Set 建议。可选：Pass，Block，Review
+     * Set 该字段用于返回基于恶意标签的后续操作建议。当您获取到判定结果后，返回值表示系统推荐的后续操作；建议您按照业务所需，对不同违规类型与建议值进行处理。<br>返回值：**Block**：建议屏蔽，**Review** ：建议人工复审，**Pass**：建议通过
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Suggestion 建议。可选：Pass，Block，Review
+     * @param Suggestion 该字段用于返回基于恶意标签的后续操作建议。当您获取到判定结果后，返回值表示系统推荐的后续操作；建议您按照业务所需，对不同违规类型与建议值进行处理。<br>返回值：**Block**：建议屏蔽，**Review** ：建议人工复审，**Pass**：建议通过
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSuggestion(String Suggestion) {
@@ -260,9 +265,9 @@ public class TaskData extends AbstractModel{
     }
 
     /**
-     * Get 任务违规标签
+     * Get 该字段用于返回检测结果所对应的恶意标签。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告，**Custom**：自定义违规；以及其他令人反感、不安全或不适宜的内容类型。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Labels 任务违规标签
+     * @return Labels 该字段用于返回检测结果所对应的恶意标签。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告，**Custom**：自定义违规；以及其他令人反感、不安全或不适宜的内容类型。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public TaskLabel [] getLabels() {
@@ -270,9 +275,9 @@ public class TaskData extends AbstractModel{
     }
 
     /**
-     * Set 任务违规标签
+     * Set 该字段用于返回检测结果所对应的恶意标签。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告，**Custom**：自定义违规；以及其他令人反感、不安全或不适宜的内容类型。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Labels 任务违规标签
+     * @param Labels 该字段用于返回检测结果所对应的恶意标签。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告，**Custom**：自定义违规；以及其他令人反感、不安全或不适宜的内容类型。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLabels(TaskLabel [] Labels) {
@@ -280,25 +285,25 @@ public class TaskData extends AbstractModel{
     }
 
     /**
-     * Get 创建时间（ iso 8601 格式） 
-     * @return CreatedAt 创建时间（ iso 8601 格式）
+     * Get 该字段用于返回被查询任务创建的时间，格式采用 ISO 8601标准。 
+     * @return CreatedAt 该字段用于返回被查询任务创建的时间，格式采用 ISO 8601标准。
      */
     public String getCreatedAt() {
         return this.CreatedAt;
     }
 
     /**
-     * Set 创建时间（ iso 8601 格式）
-     * @param CreatedAt 创建时间（ iso 8601 格式）
+     * Set 该字段用于返回被查询任务创建的时间，格式采用 ISO 8601标准。
+     * @param CreatedAt 该字段用于返回被查询任务创建的时间，格式采用 ISO 8601标准。
      */
     public void setCreatedAt(String CreatedAt) {
         this.CreatedAt = CreatedAt;
     }
 
     /**
-     * Get 更新时间（ iso 8601 格式）
+     * Get 该字段用于返回被查询任务最后更新时间，格式采用 ISO 8601标准。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UpdatedAt 更新时间（ iso 8601 格式）
+     * @return UpdatedAt 该字段用于返回被查询任务最后更新时间，格式采用 ISO 8601标准。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdatedAt() {
@@ -306,9 +311,9 @@ public class TaskData extends AbstractModel{
     }
 
     /**
-     * Set 更新时间（ iso 8601 格式）
+     * Set 该字段用于返回被查询任务最后更新时间，格式采用 ISO 8601标准。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UpdatedAt 更新时间（ iso 8601 格式）
+     * @param UpdatedAt 该字段用于返回被查询任务最后更新时间，格式采用 ISO 8601标准。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdatedAt(String UpdatedAt) {

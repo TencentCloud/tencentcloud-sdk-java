@@ -59,6 +59,26 @@ public class CmeClient extends AbstractClient{
     }
 
     /**
+     *复制一个项目，包括项目素材及轨道数据。目前仅普通剪辑及模板制作项目可复制，其它类型的项目不支持复制。
+     * @param req CopyProjectRequest
+     * @return CopyProjectResponse
+     * @throws TencentCloudSDKException
+     */
+    public CopyProjectResponse CopyProject(CopyProjectRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CopyProjectResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CopyProjectResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CopyProject");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *新增分类，用于管理素材。分类层数不能超过20。
      * @param req CreateClassRequest
      * @return CreateClassResponse

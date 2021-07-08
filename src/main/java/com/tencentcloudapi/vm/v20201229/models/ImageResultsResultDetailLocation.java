@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ImageResultsResultDetailLocation extends AbstractModel{
 
     /**
-    * x坐标
+    * 该参数用于标识OCR检测框左上角位置的**横坐标**（x）所在的像素位置，结合剩余参数可唯一确定检测框的大小和位置。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("X")
@@ -31,7 +31,7 @@ public class ImageResultsResultDetailLocation extends AbstractModel{
     private Float X;
 
     /**
-    * y坐标
+    * 该参数用于标识OCR检测框左上角位置的**纵坐标**（y）所在的像素位置，结合剩余参数可唯一确定检测框的大小和位置。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Y")
@@ -39,7 +39,7 @@ public class ImageResultsResultDetailLocation extends AbstractModel{
     private Float Y;
 
     /**
-    * 宽度
+    * 该参数用于标识OCR检测框的宽度（**由左上角出发在x轴向右延伸的长度**）。结合剩余参数可唯一确定检测框的大小和位置。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Width")
@@ -47,7 +47,7 @@ public class ImageResultsResultDetailLocation extends AbstractModel{
     private Long Width;
 
     /**
-    * 高度
+    * 该参数用于标识OCR检测框的高度（**由左上角出发在y轴向下延伸的长度**）。结合剩余参数可唯一确定检测框的大小和位置。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Height")
@@ -55,7 +55,7 @@ public class ImageResultsResultDetailLocation extends AbstractModel{
     private Long Height;
 
     /**
-    * 旋转角度
+    * 该参数用于标识OCR检测框的旋转角度，该参数结合X和Y两个坐标参数可唯一确定检测框的具体位置；取值：0-360（**角度制**），方向为**逆时针旋**转。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Rotate")
@@ -63,9 +63,9 @@ public class ImageResultsResultDetailLocation extends AbstractModel{
     private Float Rotate;
 
     /**
-     * Get x坐标
+     * Get 该参数用于标识OCR检测框左上角位置的**横坐标**（x）所在的像素位置，结合剩余参数可唯一确定检测框的大小和位置。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return X x坐标
+     * @return X 该参数用于标识OCR检测框左上角位置的**横坐标**（x）所在的像素位置，结合剩余参数可唯一确定检测框的大小和位置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getX() {
@@ -73,9 +73,9 @@ public class ImageResultsResultDetailLocation extends AbstractModel{
     }
 
     /**
-     * Set x坐标
+     * Set 该参数用于标识OCR检测框左上角位置的**横坐标**（x）所在的像素位置，结合剩余参数可唯一确定检测框的大小和位置。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param X x坐标
+     * @param X 该参数用于标识OCR检测框左上角位置的**横坐标**（x）所在的像素位置，结合剩余参数可唯一确定检测框的大小和位置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setX(Float X) {
@@ -83,9 +83,9 @@ public class ImageResultsResultDetailLocation extends AbstractModel{
     }
 
     /**
-     * Get y坐标
+     * Get 该参数用于标识OCR检测框左上角位置的**纵坐标**（y）所在的像素位置，结合剩余参数可唯一确定检测框的大小和位置。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Y y坐标
+     * @return Y 该参数用于标识OCR检测框左上角位置的**纵坐标**（y）所在的像素位置，结合剩余参数可唯一确定检测框的大小和位置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getY() {
@@ -93,9 +93,9 @@ public class ImageResultsResultDetailLocation extends AbstractModel{
     }
 
     /**
-     * Set y坐标
+     * Set 该参数用于标识OCR检测框左上角位置的**纵坐标**（y）所在的像素位置，结合剩余参数可唯一确定检测框的大小和位置。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Y y坐标
+     * @param Y 该参数用于标识OCR检测框左上角位置的**纵坐标**（y）所在的像素位置，结合剩余参数可唯一确定检测框的大小和位置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setY(Float Y) {
@@ -103,9 +103,9 @@ public class ImageResultsResultDetailLocation extends AbstractModel{
     }
 
     /**
-     * Get 宽度
+     * Get 该参数用于标识OCR检测框的宽度（**由左上角出发在x轴向右延伸的长度**）。结合剩余参数可唯一确定检测框的大小和位置。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Width 宽度
+     * @return Width 该参数用于标识OCR检测框的宽度（**由左上角出发在x轴向右延伸的长度**）。结合剩余参数可唯一确定检测框的大小和位置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getWidth() {
@@ -113,9 +113,9 @@ public class ImageResultsResultDetailLocation extends AbstractModel{
     }
 
     /**
-     * Set 宽度
+     * Set 该参数用于标识OCR检测框的宽度（**由左上角出发在x轴向右延伸的长度**）。结合剩余参数可唯一确定检测框的大小和位置。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Width 宽度
+     * @param Width 该参数用于标识OCR检测框的宽度（**由左上角出发在x轴向右延伸的长度**）。结合剩余参数可唯一确定检测框的大小和位置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWidth(Long Width) {
@@ -123,9 +123,9 @@ public class ImageResultsResultDetailLocation extends AbstractModel{
     }
 
     /**
-     * Get 高度
+     * Get 该参数用于标识OCR检测框的高度（**由左上角出发在y轴向下延伸的长度**）。结合剩余参数可唯一确定检测框的大小和位置。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Height 高度
+     * @return Height 该参数用于标识OCR检测框的高度（**由左上角出发在y轴向下延伸的长度**）。结合剩余参数可唯一确定检测框的大小和位置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getHeight() {
@@ -133,9 +133,9 @@ public class ImageResultsResultDetailLocation extends AbstractModel{
     }
 
     /**
-     * Set 高度
+     * Set 该参数用于标识OCR检测框的高度（**由左上角出发在y轴向下延伸的长度**）。结合剩余参数可唯一确定检测框的大小和位置。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Height 高度
+     * @param Height 该参数用于标识OCR检测框的高度（**由左上角出发在y轴向下延伸的长度**）。结合剩余参数可唯一确定检测框的大小和位置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHeight(Long Height) {
@@ -143,9 +143,9 @@ public class ImageResultsResultDetailLocation extends AbstractModel{
     }
 
     /**
-     * Get 旋转角度
+     * Get 该参数用于标识OCR检测框的旋转角度，该参数结合X和Y两个坐标参数可唯一确定检测框的具体位置；取值：0-360（**角度制**），方向为**逆时针旋**转。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Rotate 旋转角度
+     * @return Rotate 该参数用于标识OCR检测框的旋转角度，该参数结合X和Y两个坐标参数可唯一确定检测框的具体位置；取值：0-360（**角度制**），方向为**逆时针旋**转。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getRotate() {
@@ -153,9 +153,9 @@ public class ImageResultsResultDetailLocation extends AbstractModel{
     }
 
     /**
-     * Set 旋转角度
+     * Set 该参数用于标识OCR检测框的旋转角度，该参数结合X和Y两个坐标参数可唯一确定检测框的具体位置；取值：0-360（**角度制**），方向为**逆时针旋**转。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Rotate 旋转角度
+     * @param Rotate 该参数用于标识OCR检测框的旋转角度，该参数结合X和Y两个坐标参数可唯一确定检测框的具体位置；取值：0-360（**角度制**），方向为**逆时针旋**转。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRotate(Float Rotate) {

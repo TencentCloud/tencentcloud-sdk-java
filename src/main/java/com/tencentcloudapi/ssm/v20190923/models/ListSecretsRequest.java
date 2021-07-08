@@ -44,7 +44,14 @@ public class ListSecretsRequest extends AbstractModel{
     private Long OrderType;
 
     /**
-    * 根据凭据状态进行过滤，默认为0表示查询全部，1 表示查询Enabed 凭据列表，2表示查询Disabled 凭据列表， 3 表示查询PendingDelete 凭据列表。
+    * 根据凭据状态进行过滤。
+默认为0表示查询全部。
+1 --  表示查询Enabled 凭据列表。
+2 --  表示查询Disabled 凭据列表。
+3 --  表示查询PendingDelete 凭据列表。
+4 --  表示PendingCreate。
+5 --  表示CreateFailed。
+其中状态PendingCreate和CreateFailed只有在SecretType为云产品凭据时生效
     */
     @SerializedName("State")
     @Expose
@@ -58,11 +65,20 @@ public class ListSecretsRequest extends AbstractModel{
     private String SearchSecretName;
 
     /**
-    * 标签过滤条件
+    * 标签过滤条件。
     */
     @SerializedName("TagFilters")
     @Expose
     private TagFilter [] TagFilters;
+
+    /**
+    * 0  -- 表示用户自定义凭据，默认为0。
+1  -- 表示用户云产品凭据。
+这个参数只能在云产品凭据(1)和用户自定义凭据(0)中二选一。
+    */
+    @SerializedName("SecretType")
+    @Expose
+    private Long SecretType;
 
     /**
      * Get 查询列表的起始位置，以0开始，不设置默认为0。 
@@ -113,16 +129,44 @@ public class ListSecretsRequest extends AbstractModel{
     }
 
     /**
-     * Get 根据凭据状态进行过滤，默认为0表示查询全部，1 表示查询Enabed 凭据列表，2表示查询Disabled 凭据列表， 3 表示查询PendingDelete 凭据列表。 
-     * @return State 根据凭据状态进行过滤，默认为0表示查询全部，1 表示查询Enabed 凭据列表，2表示查询Disabled 凭据列表， 3 表示查询PendingDelete 凭据列表。
+     * Get 根据凭据状态进行过滤。
+默认为0表示查询全部。
+1 --  表示查询Enabled 凭据列表。
+2 --  表示查询Disabled 凭据列表。
+3 --  表示查询PendingDelete 凭据列表。
+4 --  表示PendingCreate。
+5 --  表示CreateFailed。
+其中状态PendingCreate和CreateFailed只有在SecretType为云产品凭据时生效 
+     * @return State 根据凭据状态进行过滤。
+默认为0表示查询全部。
+1 --  表示查询Enabled 凭据列表。
+2 --  表示查询Disabled 凭据列表。
+3 --  表示查询PendingDelete 凭据列表。
+4 --  表示PendingCreate。
+5 --  表示CreateFailed。
+其中状态PendingCreate和CreateFailed只有在SecretType为云产品凭据时生效
      */
     public Long getState() {
         return this.State;
     }
 
     /**
-     * Set 根据凭据状态进行过滤，默认为0表示查询全部，1 表示查询Enabed 凭据列表，2表示查询Disabled 凭据列表， 3 表示查询PendingDelete 凭据列表。
-     * @param State 根据凭据状态进行过滤，默认为0表示查询全部，1 表示查询Enabed 凭据列表，2表示查询Disabled 凭据列表， 3 表示查询PendingDelete 凭据列表。
+     * Set 根据凭据状态进行过滤。
+默认为0表示查询全部。
+1 --  表示查询Enabled 凭据列表。
+2 --  表示查询Disabled 凭据列表。
+3 --  表示查询PendingDelete 凭据列表。
+4 --  表示PendingCreate。
+5 --  表示CreateFailed。
+其中状态PendingCreate和CreateFailed只有在SecretType为云产品凭据时生效
+     * @param State 根据凭据状态进行过滤。
+默认为0表示查询全部。
+1 --  表示查询Enabled 凭据列表。
+2 --  表示查询Disabled 凭据列表。
+3 --  表示查询PendingDelete 凭据列表。
+4 --  表示PendingCreate。
+5 --  表示CreateFailed。
+其中状态PendingCreate和CreateFailed只有在SecretType为云产品凭据时生效
      */
     public void setState(Long State) {
         this.State = State;
@@ -145,19 +189,43 @@ public class ListSecretsRequest extends AbstractModel{
     }
 
     /**
-     * Get 标签过滤条件 
-     * @return TagFilters 标签过滤条件
+     * Get 标签过滤条件。 
+     * @return TagFilters 标签过滤条件。
      */
     public TagFilter [] getTagFilters() {
         return this.TagFilters;
     }
 
     /**
-     * Set 标签过滤条件
-     * @param TagFilters 标签过滤条件
+     * Set 标签过滤条件。
+     * @param TagFilters 标签过滤条件。
      */
     public void setTagFilters(TagFilter [] TagFilters) {
         this.TagFilters = TagFilters;
+    }
+
+    /**
+     * Get 0  -- 表示用户自定义凭据，默认为0。
+1  -- 表示用户云产品凭据。
+这个参数只能在云产品凭据(1)和用户自定义凭据(0)中二选一。 
+     * @return SecretType 0  -- 表示用户自定义凭据，默认为0。
+1  -- 表示用户云产品凭据。
+这个参数只能在云产品凭据(1)和用户自定义凭据(0)中二选一。
+     */
+    public Long getSecretType() {
+        return this.SecretType;
+    }
+
+    /**
+     * Set 0  -- 表示用户自定义凭据，默认为0。
+1  -- 表示用户云产品凭据。
+这个参数只能在云产品凭据(1)和用户自定义凭据(0)中二选一。
+     * @param SecretType 0  -- 表示用户自定义凭据，默认为0。
+1  -- 表示用户云产品凭据。
+这个参数只能在云产品凭据(1)和用户自定义凭据(0)中二选一。
+     */
+    public void setSecretType(Long SecretType) {
+        this.SecretType = SecretType;
     }
 
     public ListSecretsRequest() {
@@ -189,6 +257,9 @@ public class ListSecretsRequest extends AbstractModel{
                 this.TagFilters[i] = new TagFilter(source.TagFilters[i]);
             }
         }
+        if (source.SecretType != null) {
+            this.SecretType = new Long(source.SecretType);
+        }
     }
 
 
@@ -202,6 +273,7 @@ public class ListSecretsRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "State", this.State);
         this.setParamSimple(map, prefix + "SearchSecretName", this.SearchSecretName);
         this.setParamArrayObj(map, prefix + "TagFilters.", this.TagFilters);
+        this.setParamSimple(map, prefix + "SecretType", this.SecretType);
 
     }
 }

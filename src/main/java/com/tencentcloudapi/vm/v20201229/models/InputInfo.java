@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class InputInfo extends AbstractModel{
 
     /**
-    * 传入的类型可选：URL，COS
+    * 该字段表示文件访问类型，取值为**URL**（资源链接）和**COS** (腾讯云对象存储)。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
@@ -31,7 +31,7 @@ public class InputInfo extends AbstractModel{
     private String Type;
 
     /**
-    * Url地址
+    * 该字段表示文件访问的链接地址，格式为标准URL格式。<br> 备注：当Type为URL时此字段不为空。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Url")
@@ -39,7 +39,7 @@ public class InputInfo extends AbstractModel{
     private String Url;
 
     /**
-    * 桶信息。当输入当时COS时，该字段不为空
+    * 该字段表示文件访问的腾讯云存储桶信息。<br> 备注：当Type为COS时此字段不为空。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BucketInfo")
@@ -47,9 +47,9 @@ public class InputInfo extends AbstractModel{
     private String BucketInfo;
 
     /**
-     * Get 传入的类型可选：URL，COS
+     * Get 该字段表示文件访问类型，取值为**URL**（资源链接）和**COS** (腾讯云对象存储)。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Type 传入的类型可选：URL，COS
+     * @return Type 该字段表示文件访问类型，取值为**URL**（资源链接）和**COS** (腾讯云对象存储)。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
@@ -57,9 +57,9 @@ public class InputInfo extends AbstractModel{
     }
 
     /**
-     * Set 传入的类型可选：URL，COS
+     * Set 该字段表示文件访问类型，取值为**URL**（资源链接）和**COS** (腾讯云对象存储)。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Type 传入的类型可选：URL，COS
+     * @param Type 该字段表示文件访问类型，取值为**URL**（资源链接）和**COS** (腾讯云对象存储)。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {
@@ -67,9 +67,9 @@ public class InputInfo extends AbstractModel{
     }
 
     /**
-     * Get Url地址
+     * Get 该字段表示文件访问的链接地址，格式为标准URL格式。<br> 备注：当Type为URL时此字段不为空。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Url Url地址
+     * @return Url 该字段表示文件访问的链接地址，格式为标准URL格式。<br> 备注：当Type为URL时此字段不为空。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUrl() {
@@ -77,9 +77,9 @@ public class InputInfo extends AbstractModel{
     }
 
     /**
-     * Set Url地址
+     * Set 该字段表示文件访问的链接地址，格式为标准URL格式。<br> 备注：当Type为URL时此字段不为空。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Url Url地址
+     * @param Url 该字段表示文件访问的链接地址，格式为标准URL格式。<br> 备注：当Type为URL时此字段不为空。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUrl(String Url) {
@@ -87,9 +87,9 @@ public class InputInfo extends AbstractModel{
     }
 
     /**
-     * Get 桶信息。当输入当时COS时，该字段不为空
+     * Get 该字段表示文件访问的腾讯云存储桶信息。<br> 备注：当Type为COS时此字段不为空。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BucketInfo 桶信息。当输入当时COS时，该字段不为空
+     * @return BucketInfo 该字段表示文件访问的腾讯云存储桶信息。<br> 备注：当Type为COS时此字段不为空。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBucketInfo() {
@@ -97,9 +97,9 @@ public class InputInfo extends AbstractModel{
     }
 
     /**
-     * Set 桶信息。当输入当时COS时，该字段不为空
+     * Set 该字段表示文件访问的腾讯云存储桶信息。<br> 备注：当Type为COS时此字段不为空。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BucketInfo 桶信息。当输入当时COS时，该字段不为空
+     * @param BucketInfo 该字段表示文件访问的腾讯云存储桶信息。<br> 备注：当Type为COS时此字段不为空。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBucketInfo(String BucketInfo) {

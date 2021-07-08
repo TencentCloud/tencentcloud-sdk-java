@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class TaskResult extends AbstractModel{
 
     /**
-    * 请求时传入的DataId
+    * 该字段用于返回创建视频审核任务时在TaskInput结构内传入的DataId，用于标识具体审核任务。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DataId")
@@ -31,7 +31,7 @@ public class TaskResult extends AbstractModel{
     private String DataId;
 
     /**
-    * TaskId，任务ID
+    * 该字段用于返回视频审核任务所生成的任务ID，用于标识具体审核任务，方便后续查询和管理。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskId")
@@ -39,7 +39,7 @@ public class TaskResult extends AbstractModel{
     private String TaskId;
 
     /**
-    * 错误码。如果code为OK，则表示创建成功，其他则参考公共错误码
+    * 该字段用于返回任务创建的状态，如返回OK则代表任务创建成功，其他返回值可参考公共错误码。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Code")
@@ -47,7 +47,7 @@ public class TaskResult extends AbstractModel{
     private String Code;
 
     /**
-    * 如果错误，该字段表示错误详情
+    * **仅在Code的返回值为错误码时生效**，用于返回错误的详情内容。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Message")
@@ -55,9 +55,9 @@ public class TaskResult extends AbstractModel{
     private String Message;
 
     /**
-     * Get 请求时传入的DataId
+     * Get 该字段用于返回创建视频审核任务时在TaskInput结构内传入的DataId，用于标识具体审核任务。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DataId 请求时传入的DataId
+     * @return DataId 该字段用于返回创建视频审核任务时在TaskInput结构内传入的DataId，用于标识具体审核任务。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDataId() {
@@ -65,9 +65,9 @@ public class TaskResult extends AbstractModel{
     }
 
     /**
-     * Set 请求时传入的DataId
+     * Set 该字段用于返回创建视频审核任务时在TaskInput结构内传入的DataId，用于标识具体审核任务。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DataId 请求时传入的DataId
+     * @param DataId 该字段用于返回创建视频审核任务时在TaskInput结构内传入的DataId，用于标识具体审核任务。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDataId(String DataId) {
@@ -75,9 +75,9 @@ public class TaskResult extends AbstractModel{
     }
 
     /**
-     * Get TaskId，任务ID
+     * Get 该字段用于返回视频审核任务所生成的任务ID，用于标识具体审核任务，方便后续查询和管理。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskId TaskId，任务ID
+     * @return TaskId 该字段用于返回视频审核任务所生成的任务ID，用于标识具体审核任务，方便后续查询和管理。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskId() {
@@ -85,9 +85,9 @@ public class TaskResult extends AbstractModel{
     }
 
     /**
-     * Set TaskId，任务ID
+     * Set 该字段用于返回视频审核任务所生成的任务ID，用于标识具体审核任务，方便后续查询和管理。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskId TaskId，任务ID
+     * @param TaskId 该字段用于返回视频审核任务所生成的任务ID，用于标识具体审核任务，方便后续查询和管理。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskId(String TaskId) {
@@ -95,9 +95,9 @@ public class TaskResult extends AbstractModel{
     }
 
     /**
-     * Get 错误码。如果code为OK，则表示创建成功，其他则参考公共错误码
+     * Get 该字段用于返回任务创建的状态，如返回OK则代表任务创建成功，其他返回值可参考公共错误码。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Code 错误码。如果code为OK，则表示创建成功，其他则参考公共错误码
+     * @return Code 该字段用于返回任务创建的状态，如返回OK则代表任务创建成功，其他返回值可参考公共错误码。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCode() {
@@ -105,9 +105,9 @@ public class TaskResult extends AbstractModel{
     }
 
     /**
-     * Set 错误码。如果code为OK，则表示创建成功，其他则参考公共错误码
+     * Set 该字段用于返回任务创建的状态，如返回OK则代表任务创建成功，其他返回值可参考公共错误码。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Code 错误码。如果code为OK，则表示创建成功，其他则参考公共错误码
+     * @param Code 该字段用于返回任务创建的状态，如返回OK则代表任务创建成功，其他返回值可参考公共错误码。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCode(String Code) {
@@ -115,9 +115,9 @@ public class TaskResult extends AbstractModel{
     }
 
     /**
-     * Get 如果错误，该字段表示错误详情
+     * Get **仅在Code的返回值为错误码时生效**，用于返回错误的详情内容。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Message 如果错误，该字段表示错误详情
+     * @return Message **仅在Code的返回值为错误码时生效**，用于返回错误的详情内容。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMessage() {
@@ -125,9 +125,9 @@ public class TaskResult extends AbstractModel{
     }
 
     /**
-     * Set 如果错误，该字段表示错误详情
+     * Set **仅在Code的返回值为错误码时生效**，用于返回错误的详情内容。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Message 如果错误，该字段表示错误详情
+     * @param Message **仅在Code的返回值为错误码时生效**，用于返回错误的详情内容。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMessage(String Message) {

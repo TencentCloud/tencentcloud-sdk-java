@@ -23,56 +23,46 @@ import java.util.HashMap;
 public class ImageSegments extends AbstractModel{
 
     /**
-    * 截帧时间。单位为秒。
-点播文件：该值为相对于视频偏移时间，单位为秒，例如：0，5，10
-直播流：该值为时间戳，例如：1594650717
+    * 该字段用于返回视频片段的截帧时间，单位为秒。对于点播文件，该参数代表对应截取图片相对于视频的偏移时间，如0（代表不偏移），5（视频开始后5秒），10（视频开始后10秒）；对于直播文件，该参数则返回对应图片的Unix时间戳，如：1594650717。
     */
     @SerializedName("OffsetTime")
     @Expose
     private String OffsetTime;
 
     /**
-    * 画面截帧结果详情
+    * 该字段用于返回视频片段的具体截帧审核结果，详细内容敬请参考ImageResult数据结构的描述。
     */
     @SerializedName("Result")
     @Expose
     private ImageResult Result;
 
     /**
-     * Get 截帧时间。单位为秒。
-点播文件：该值为相对于视频偏移时间，单位为秒，例如：0，5，10
-直播流：该值为时间戳，例如：1594650717 
-     * @return OffsetTime 截帧时间。单位为秒。
-点播文件：该值为相对于视频偏移时间，单位为秒，例如：0，5，10
-直播流：该值为时间戳，例如：1594650717
+     * Get 该字段用于返回视频片段的截帧时间，单位为秒。对于点播文件，该参数代表对应截取图片相对于视频的偏移时间，如0（代表不偏移），5（视频开始后5秒），10（视频开始后10秒）；对于直播文件，该参数则返回对应图片的Unix时间戳，如：1594650717。 
+     * @return OffsetTime 该字段用于返回视频片段的截帧时间，单位为秒。对于点播文件，该参数代表对应截取图片相对于视频的偏移时间，如0（代表不偏移），5（视频开始后5秒），10（视频开始后10秒）；对于直播文件，该参数则返回对应图片的Unix时间戳，如：1594650717。
      */
     public String getOffsetTime() {
         return this.OffsetTime;
     }
 
     /**
-     * Set 截帧时间。单位为秒。
-点播文件：该值为相对于视频偏移时间，单位为秒，例如：0，5，10
-直播流：该值为时间戳，例如：1594650717
-     * @param OffsetTime 截帧时间。单位为秒。
-点播文件：该值为相对于视频偏移时间，单位为秒，例如：0，5，10
-直播流：该值为时间戳，例如：1594650717
+     * Set 该字段用于返回视频片段的截帧时间，单位为秒。对于点播文件，该参数代表对应截取图片相对于视频的偏移时间，如0（代表不偏移），5（视频开始后5秒），10（视频开始后10秒）；对于直播文件，该参数则返回对应图片的Unix时间戳，如：1594650717。
+     * @param OffsetTime 该字段用于返回视频片段的截帧时间，单位为秒。对于点播文件，该参数代表对应截取图片相对于视频的偏移时间，如0（代表不偏移），5（视频开始后5秒），10（视频开始后10秒）；对于直播文件，该参数则返回对应图片的Unix时间戳，如：1594650717。
      */
     public void setOffsetTime(String OffsetTime) {
         this.OffsetTime = OffsetTime;
     }
 
     /**
-     * Get 画面截帧结果详情 
-     * @return Result 画面截帧结果详情
+     * Get 该字段用于返回视频片段的具体截帧审核结果，详细内容敬请参考ImageResult数据结构的描述。 
+     * @return Result 该字段用于返回视频片段的具体截帧审核结果，详细内容敬请参考ImageResult数据结构的描述。
      */
     public ImageResult getResult() {
         return this.Result;
     }
 
     /**
-     * Set 画面截帧结果详情
-     * @param Result 画面截帧结果详情
+     * Set 该字段用于返回视频片段的具体截帧审核结果，详细内容敬请参考ImageResult数据结构的描述。
+     * @param Result 该字段用于返回视频片段的具体截帧审核结果，详细内容敬请参考ImageResult数据结构的描述。
      */
     public void setResult(ImageResult Result) {
         this.Result = Result;
