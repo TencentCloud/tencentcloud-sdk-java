@@ -20,7 +20,7 @@ public class DefaultCredentialsProvider implements CredentialsProvider {
 
         }
         cred = new CvmRoleCredential();
-        if (cred.getSecretId() != null && cred.getSecretKey() != null && cred.getToken() !=null) {
+        if (cred.getSecretId() != null && cred.getSecretKey() != null && cred.getToken() != null) {
             return cred;
         }
         throw new TencentCloudSDKException("No valid credential");

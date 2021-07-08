@@ -31,19 +31,20 @@ public class CvmRoleCredential extends Credential {
         this.roleName = roleName;
     }
 
-    public void updateCredential() throws TencentCloudSDKException{
+    private void updateCredential() throws TencentCloudSDKException {
         if (roleName == null) {
             roleName = loadJson(ENDPOINT);
         }
-        String resp = loadJson(ENDPOINT+roleName);
-        Map<String,Object> maps = new Gson().fromJson(resp, new TypeToken<HashMap<String,Object>>(){}.getType());
+        String resp = loadJson(ENDPOINT + roleName);
+        Map<String, Object> maps = new Gson().fromJson(resp, new TypeToken<HashMap<String, Object>>() {
+        }.getType());
         if (!maps.get("Code").equals("Success")) {
             throw new TencentCloudSDKException("CVM role token data failed");
         }
         secretId = (String) maps.get("TmpSecretId");
         secretKey = (String) maps.get("TmpSecretKey");
         token = (String) maps.get("Token");
-        expiredTime = ((Double)maps.get("ExpiredTime")).intValue();
+        expiredTime = ((Double) maps.get("ExpiredTime")).intValue();
     }
 
     public String getSecretId() {
@@ -79,15 +80,15 @@ public class CvmRoleCredential extends Credential {
         return token;
     }
 
-    public boolean needRefresh() {
-        if (expiredTime-new Date().getTime()/1000 <= EXPIRED_TIME) {
+    private boolean needRefresh() {
+        if (expiredTime - new Date().getTime() / 1000 <= EXPIRED_TIME) {
             return true;
         } else {
             return false;
         }
     }
 
-    public static String loadJson(String url) throws TencentCloudSDKException {
+    private String loadJson(String url) throws TencentCloudSDKException {
         StringBuilder json = new StringBuilder();
         try {
             URL urlObject = new URL(url);
@@ -105,5 +106,4 @@ public class CvmRoleCredential extends Credential {
         }
         return json.toString();
     }
-
 }

@@ -62,26 +62,27 @@ public class STSCredential extends Credential {
         return token;
     }
 
-    public void updateCredential() throws TencentCloudSDKException {
+    private void updateCredential() throws TencentCloudSDKException {
         Credential cred = new Credential(secretId, secretKey);
         HttpProfile httpProfile = new HttpProfile();
         httpProfile.setEndpoint("sts.tencentcloudapi.com");
         ClientProfile clientProfile = new ClientProfile();
         clientProfile.setHttpProfile(httpProfile);
         CommonClient client = new CommonClient("sts", "2018-08-13", cred, "ap-guangzhou", clientProfile);
-        String resp = client.call("AssumeRole", "{\"RoleArn\":\"" + roleArn +"\","
-                + "\"RoleSessionName\":\"" + roleSessionName +"\"}");
-        Map<String,Object> map = new Gson().fromJson(resp, new TypeToken<HashMap<String,Object>>(){}.getType());
-        Map<String,Object> respmap = (Map<String, Object>) map.get("Response");
-        Map<String,String> credmap = (Map<String, String>) respmap.get("Credentials");
+        String resp = client.call("AssumeRole", "{\"RoleArn\":\"" + roleArn + "\","
+                + "\"RoleSessionName\":\"" + roleSessionName + "\"}");
+        Map<String, Object> map = new Gson().fromJson(resp, new TypeToken<HashMap<String, Object>>() {
+        }.getType());
+        Map<String, Object> respmap = (Map<String, Object>) map.get("Response");
+        Map<String, String> credmap = (Map<String, String>) respmap.get("Credentials");
         tmpSecretId = credmap.get("TmpSecretId");
         tmpSecretKey = credmap.get("TmpSecretKey");
         token = credmap.get("Token");
-        expiredTime =((Double)respmap.get("ExpiredTime")).intValue();
+        expiredTime = ((Double) respmap.get("ExpiredTime")).intValue();
     }
 
-    public boolean needRefresh() {
-        if (expiredTime-new Date().getTime()/1000 <= 300) {
+    private boolean needRefresh() {
+        if (expiredTime - new Date().getTime() / 1000 <= 300) {
             return true;
         } else {
             return false;
