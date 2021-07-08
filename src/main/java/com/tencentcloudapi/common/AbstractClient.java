@@ -647,20 +647,21 @@ public abstract class AbstractClient {
    */
   public Object retry(AbstractModel req, int retryTimes) throws TencentCloudSDKException {
     if (retryTimes < 0 || retryTimes > 10) {
-      throw new TencentCloudSDKException("The number of retryTimes supported is 0 to 10.");
+      throw new TencentCloudSDKException("The number of retryTimes supported is 0 to 10.", "", "ClientSideError");
     }
     Class cls = this.getClass();
+    String methodName = req.getClass().getSimpleName().replace("Request", "");
     Method method;
     try {
-      method = cls.getMethod(req.getApiActionName(), req.getClass());
+      method = cls.getMethod(methodName, req.getClass());
     } catch (NoSuchMethodException e) {
-      throw new TencentCloudSDKException(e.toString());
+      throw new TencentCloudSDKException(e.toString(), "", "ClientSideError");
     }
     do {
       try {
         return method.invoke(this, req);
       } catch (IllegalAccessException e) {
-        throw new TencentCloudSDKException(e.toString());
+        throw new TencentCloudSDKException(e.toString(), "", "ClientSideError");
       } catch (InvocationTargetException e) {
         if (retryTimes == 0) {
           throw (TencentCloudSDKException) e.getTargetException();
@@ -669,7 +670,7 @@ public abstract class AbstractClient {
       try {
         Thread.sleep(1000);
       } catch (InterruptedException e) {
-        throw new TencentCloudSDKException(e.toString());
+        throw new TencentCloudSDKException(e.toString(), "", "ClientSideError");
       }
     } while (--retryTimes >= 0);
     return null;
