@@ -152,4 +152,10 @@ public abstract class AbstractModel {
   public HashMap<String, Object> any() {
     return this.customizedParams;
   }
+
+  private String apiActionName = "";
+
+  public String getApiActionName() {
+    return this.apiActionName;
+  }
 }
