@@ -17,6 +17,8 @@
 
 package com.tencentcloudapi.common;
 
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
@@ -632,5 +634,45 @@ public abstract class AbstractClient {
       endpoint = this.service + "." + this.profile.getHttpProfile().getRootDomain();
     }
     return endpoint;
+  }
+
+  /**
+   * 请注意购买类接口谨慎调用，可能导致多次购买
+   * 仅幂等接口推荐使用
+   *
+   * @param req
+   * @param retryTimes
+   * @return
+   * @throws TencentCloudSDKException
+   */
+  public Object retry(AbstractModel req, int retryTimes) throws TencentCloudSDKException {
+    if (retryTimes < 0 || retryTimes > 10) {
+      throw new TencentCloudSDKException("The number of retryTimes supported is 0 to 10.", "", "ClientSideError");
+    }
+    Class cls = this.getClass();
+    String methodName = req.getClass().getSimpleName().replace("Request", "");
+    Method method;
+    try {
+      method = cls.getMethod(methodName, req.getClass());
+    } catch (NoSuchMethodException e) {
+      throw new TencentCloudSDKException(e.toString(), "", "ClientSideError");
+    }
+    do {
+      try {
+        return method.invoke(this, req);
+      } catch (IllegalAccessException e) {
+        throw new TencentCloudSDKException(e.toString(), "", "ClientSideError");
+      } catch (InvocationTargetException e) {
+        if (retryTimes == 0) {
+          throw (TencentCloudSDKException) e.getTargetException();
+        }
+      }
+      try {
+        Thread.sleep(1000);
+      } catch (InterruptedException e) {
+        throw new TencentCloudSDKException(e.toString(), "", "ClientSideError");
+      }
+    } while (--retryTimes >= 0);
+    return null;
   }
 }
