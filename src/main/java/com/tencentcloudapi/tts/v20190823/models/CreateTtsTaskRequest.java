@@ -94,6 +94,13 @@ public class CreateTtsTaskRequest extends AbstractModel{
     private String CallbackUrl;
 
     /**
+    * 旁白与对白文本解析，分别合成相应风格（仅适用于旁对白音色），默认 false
+    */
+    @SerializedName("VoiceoverDialogueSplit")
+    @Expose
+    private Boolean VoiceoverDialogueSplit;
+
+    /**
      * Get 合成语音的源文本，按UTF-8编码统一计算，最多支持10万字符 
      * @return Text 合成语音的源文本，按UTF-8编码统一计算，最多支持10万字符
      */
@@ -257,6 +264,22 @@ public class CreateTtsTaskRequest extends AbstractModel{
         this.CallbackUrl = CallbackUrl;
     }
 
+    /**
+     * Get 旁白与对白文本解析，分别合成相应风格（仅适用于旁对白音色），默认 false 
+     * @return VoiceoverDialogueSplit 旁白与对白文本解析，分别合成相应风格（仅适用于旁对白音色），默认 false
+     */
+    public Boolean getVoiceoverDialogueSplit() {
+        return this.VoiceoverDialogueSplit;
+    }
+
+    /**
+     * Set 旁白与对白文本解析，分别合成相应风格（仅适用于旁对白音色），默认 false
+     * @param VoiceoverDialogueSplit 旁白与对白文本解析，分别合成相应风格（仅适用于旁对白音色），默认 false
+     */
+    public void setVoiceoverDialogueSplit(Boolean VoiceoverDialogueSplit) {
+        this.VoiceoverDialogueSplit = VoiceoverDialogueSplit;
+    }
+
     public CreateTtsTaskRequest() {
     }
 
@@ -295,6 +318,9 @@ public class CreateTtsTaskRequest extends AbstractModel{
         if (source.CallbackUrl != null) {
             this.CallbackUrl = new String(source.CallbackUrl);
         }
+        if (source.VoiceoverDialogueSplit != null) {
+            this.VoiceoverDialogueSplit = new Boolean(source.VoiceoverDialogueSplit);
+        }
     }
 
 
@@ -312,6 +338,7 @@ public class CreateTtsTaskRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "SampleRate", this.SampleRate);
         this.setParamSimple(map, prefix + "Codec", this.Codec);
         this.setParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
+        this.setParamSimple(map, prefix + "VoiceoverDialogueSplit", this.VoiceoverDialogueSplit);
 
     }
 }

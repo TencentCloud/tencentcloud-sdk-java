@@ -79,7 +79,7 @@ public class TseClient extends AbstractClient{
     }
 
     /**
-     *用于查询微服务注册中心实例列表
+     *用于查询微服务引擎实例列表
      * @param req DescribeSREInstancesRequest
      * @return DescribeSREInstancesResponse
      * @throws TencentCloudSDKException

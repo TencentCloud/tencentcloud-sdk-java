@@ -135,6 +135,14 @@ public class SREInstance extends AbstractModel{
     private String CreateTime;
 
     /**
+    * 环境配置信息列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EnvInfos")
+    @Expose
+    private EnvInfo [] EnvInfos;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -402,6 +410,26 @@ public class SREInstance extends AbstractModel{
         this.CreateTime = CreateTime;
     }
 
+    /**
+     * Get 环境配置信息列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EnvInfos 环境配置信息列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public EnvInfo [] getEnvInfos() {
+        return this.EnvInfos;
+    }
+
+    /**
+     * Set 环境配置信息列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EnvInfos 环境配置信息列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEnvInfos(EnvInfo [] EnvInfos) {
+        this.EnvInfos = EnvInfos;
+    }
+
     public SREInstance() {
     }
 
@@ -458,6 +486,12 @@ public class SREInstance extends AbstractModel{
         if (source.CreateTime != null) {
             this.CreateTime = new String(source.CreateTime);
         }
+        if (source.EnvInfos != null) {
+            this.EnvInfos = new EnvInfo[source.EnvInfos.length];
+            for (int i = 0; i < source.EnvInfos.length; i++) {
+                this.EnvInfos[i] = new EnvInfo(source.EnvInfos[i]);
+            }
+        }
     }
 
 
@@ -480,6 +514,7 @@ public class SREInstance extends AbstractModel{
         this.setParamSimple(map, prefix + "Paymode", this.Paymode);
         this.setParamSimple(map, prefix + "EKSClusterID", this.EKSClusterID);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamArrayObj(map, prefix + "EnvInfos.", this.EnvInfos);
 
     }
 }

@@ -30,7 +30,7 @@ public class ModifyIndexRequest extends AbstractModel{
     private String TopicId;
 
     /**
-    * 是否生效
+    * 默认不生效
     */
     @SerializedName("Status")
     @Expose
@@ -60,16 +60,16 @@ public class ModifyIndexRequest extends AbstractModel{
     }
 
     /**
-     * Get 是否生效 
-     * @return Status 是否生效
+     * Get 默认不生效 
+     * @return Status 默认不生效
      */
     public Boolean getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 是否生效
-     * @param Status 是否生效
+     * Set 默认不生效
+     * @param Status 默认不生效
      */
     public void setStatus(Boolean Status) {
         this.Status = Status;

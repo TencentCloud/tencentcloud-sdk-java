@@ -44,6 +44,13 @@ public class DescribeSREInstancesRequest extends AbstractModel{
     private Long Offset;
 
     /**
+    * 查询类型
+    */
+    @SerializedName("QueryType")
+    @Expose
+    private String QueryType;
+
+    /**
      * Get 请求过滤参数 
      * @return Filters 请求过滤参数
      */
@@ -91,6 +98,22 @@ public class DescribeSREInstancesRequest extends AbstractModel{
         this.Offset = Offset;
     }
 
+    /**
+     * Get 查询类型 
+     * @return QueryType 查询类型
+     */
+    public String getQueryType() {
+        return this.QueryType;
+    }
+
+    /**
+     * Set 查询类型
+     * @param QueryType 查询类型
+     */
+    public void setQueryType(String QueryType) {
+        this.QueryType = QueryType;
+    }
+
     public DescribeSREInstancesRequest() {
     }
 
@@ -111,6 +134,9 @@ public class DescribeSREInstancesRequest extends AbstractModel{
         if (source.Offset != null) {
             this.Offset = new Long(source.Offset);
         }
+        if (source.QueryType != null) {
+            this.QueryType = new String(source.QueryType);
+        }
     }
 
 
@@ -121,6 +147,7 @@ public class DescribeSREInstancesRequest extends AbstractModel{
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamSimple(map, prefix + "QueryType", this.QueryType);
 
     }
 }

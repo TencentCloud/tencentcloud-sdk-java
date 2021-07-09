@@ -979,6 +979,26 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
+     *模拟故障
+     * @param req KillMasterGroupRequest
+     * @return KillMasterGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public KillMasterGroupResponse KillMasterGroup(KillMasterGroupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<KillMasterGroupResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<KillMasterGroupResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "KillMasterGroup");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *手动备份Redis实例
      * @param req ManualBackupInstanceRequest
      * @return ManualBackupInstanceResponse

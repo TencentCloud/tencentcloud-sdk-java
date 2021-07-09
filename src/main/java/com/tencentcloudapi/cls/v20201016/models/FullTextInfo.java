@@ -37,6 +37,14 @@ public class FullTextInfo extends AbstractModel{
     private String Tokenizer;
 
     /**
+    * 是否包含中文
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ContainZH")
+    @Expose
+    private Boolean ContainZH;
+
+    /**
      * Get 是否大小写敏感 
      * @return CaseSensitive 是否大小写敏感
      */
@@ -68,6 +76,26 @@ public class FullTextInfo extends AbstractModel{
         this.Tokenizer = Tokenizer;
     }
 
+    /**
+     * Get 是否包含中文
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ContainZH 是否包含中文
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getContainZH() {
+        return this.ContainZH;
+    }
+
+    /**
+     * Set 是否包含中文
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ContainZH 是否包含中文
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setContainZH(Boolean ContainZH) {
+        this.ContainZH = ContainZH;
+    }
+
     public FullTextInfo() {
     }
 
@@ -82,6 +110,9 @@ public class FullTextInfo extends AbstractModel{
         if (source.Tokenizer != null) {
             this.Tokenizer = new String(source.Tokenizer);
         }
+        if (source.ContainZH != null) {
+            this.ContainZH = new Boolean(source.ContainZH);
+        }
     }
 
 
@@ -91,6 +122,7 @@ public class FullTextInfo extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CaseSensitive", this.CaseSensitive);
         this.setParamSimple(map, prefix + "Tokenizer", this.Tokenizer);
+        this.setParamSimple(map, prefix + "ContainZH", this.ContainZH);
 
     }
 }

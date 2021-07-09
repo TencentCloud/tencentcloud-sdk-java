@@ -13,48 +13,74 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.eiam.v20210420.models;
+package com.tencentcloudapi.tse.v20201207.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DecribePublicKeyRequest extends AbstractModel{
+public class VpcInfo extends AbstractModel{
 
     /**
-    * 应用ID，是应用的全局唯一标识。
+    * Vpc Id
     */
-    @SerializedName("ApplicationId")
+    @SerializedName("VpcId")
     @Expose
-    private String ApplicationId;
+    private String VpcId;
 
     /**
-     * Get 应用ID，是应用的全局唯一标识。 
-     * @return ApplicationId 应用ID，是应用的全局唯一标识。
+    * 子网ID
+    */
+    @SerializedName("SubnetId")
+    @Expose
+    private String SubnetId;
+
+    /**
+     * Get Vpc Id 
+     * @return VpcId Vpc Id
      */
-    public String getApplicationId() {
-        return this.ApplicationId;
+    public String getVpcId() {
+        return this.VpcId;
     }
 
     /**
-     * Set 应用ID，是应用的全局唯一标识。
-     * @param ApplicationId 应用ID，是应用的全局唯一标识。
+     * Set Vpc Id
+     * @param VpcId Vpc Id
      */
-    public void setApplicationId(String ApplicationId) {
-        this.ApplicationId = ApplicationId;
+    public void setVpcId(String VpcId) {
+        this.VpcId = VpcId;
     }
 
-    public DecribePublicKeyRequest() {
+    /**
+     * Get 子网ID 
+     * @return SubnetId 子网ID
+     */
+    public String getSubnetId() {
+        return this.SubnetId;
+    }
+
+    /**
+     * Set 子网ID
+     * @param SubnetId 子网ID
+     */
+    public void setSubnetId(String SubnetId) {
+        this.SubnetId = SubnetId;
+    }
+
+    public VpcInfo() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DecribePublicKeyRequest(DecribePublicKeyRequest source) {
-        if (source.ApplicationId != null) {
-            this.ApplicationId = new String(source.ApplicationId);
+    public VpcInfo(VpcInfo source) {
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.SubnetId != null) {
+            this.SubnetId = new String(source.SubnetId);
         }
     }
 
@@ -63,7 +89,8 @@ public class DecribePublicKeyRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
+        this.setParamSimple(map, prefix + "VpcId", this.VpcId);
+        this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
 
     }
 }

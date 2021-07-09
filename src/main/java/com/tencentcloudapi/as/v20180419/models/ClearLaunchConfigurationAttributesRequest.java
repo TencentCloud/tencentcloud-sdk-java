@@ -38,6 +38,22 @@ public class ClearLaunchConfigurationAttributesRequest extends AbstractModel{
     private Boolean ClearDataDisks;
 
     /**
+    * 是否清空云服务器主机名相关设置信息，非必填，默认为 false。
+填 true 代表清空主机名设置信息，清空后基于此新创建的云主机将不设置主机名。
+    */
+    @SerializedName("ClearHostNameSettings")
+    @Expose
+    private Boolean ClearHostNameSettings;
+
+    /**
+    * 是否清空云服务器实例名相关设置信息，非必填，默认为 false。
+填 true 代表清空主机名设置信息，清空后基于此新创建的云主机将按照“as-{{ 伸缩组AutoScalingGroupName }}”进行设置。
+    */
+    @SerializedName("ClearInstanceNameSettings")
+    @Expose
+    private Boolean ClearInstanceNameSettings;
+
+    /**
      * Get 启动配置ID。 
      * @return LaunchConfigurationId 启动配置ID。
      */
@@ -73,6 +89,46 @@ public class ClearLaunchConfigurationAttributesRequest extends AbstractModel{
         this.ClearDataDisks = ClearDataDisks;
     }
 
+    /**
+     * Get 是否清空云服务器主机名相关设置信息，非必填，默认为 false。
+填 true 代表清空主机名设置信息，清空后基于此新创建的云主机将不设置主机名。 
+     * @return ClearHostNameSettings 是否清空云服务器主机名相关设置信息，非必填，默认为 false。
+填 true 代表清空主机名设置信息，清空后基于此新创建的云主机将不设置主机名。
+     */
+    public Boolean getClearHostNameSettings() {
+        return this.ClearHostNameSettings;
+    }
+
+    /**
+     * Set 是否清空云服务器主机名相关设置信息，非必填，默认为 false。
+填 true 代表清空主机名设置信息，清空后基于此新创建的云主机将不设置主机名。
+     * @param ClearHostNameSettings 是否清空云服务器主机名相关设置信息，非必填，默认为 false。
+填 true 代表清空主机名设置信息，清空后基于此新创建的云主机将不设置主机名。
+     */
+    public void setClearHostNameSettings(Boolean ClearHostNameSettings) {
+        this.ClearHostNameSettings = ClearHostNameSettings;
+    }
+
+    /**
+     * Get 是否清空云服务器实例名相关设置信息，非必填，默认为 false。
+填 true 代表清空主机名设置信息，清空后基于此新创建的云主机将按照“as-{{ 伸缩组AutoScalingGroupName }}”进行设置。 
+     * @return ClearInstanceNameSettings 是否清空云服务器实例名相关设置信息，非必填，默认为 false。
+填 true 代表清空主机名设置信息，清空后基于此新创建的云主机将按照“as-{{ 伸缩组AutoScalingGroupName }}”进行设置。
+     */
+    public Boolean getClearInstanceNameSettings() {
+        return this.ClearInstanceNameSettings;
+    }
+
+    /**
+     * Set 是否清空云服务器实例名相关设置信息，非必填，默认为 false。
+填 true 代表清空主机名设置信息，清空后基于此新创建的云主机将按照“as-{{ 伸缩组AutoScalingGroupName }}”进行设置。
+     * @param ClearInstanceNameSettings 是否清空云服务器实例名相关设置信息，非必填，默认为 false。
+填 true 代表清空主机名设置信息，清空后基于此新创建的云主机将按照“as-{{ 伸缩组AutoScalingGroupName }}”进行设置。
+     */
+    public void setClearInstanceNameSettings(Boolean ClearInstanceNameSettings) {
+        this.ClearInstanceNameSettings = ClearInstanceNameSettings;
+    }
+
     public ClearLaunchConfigurationAttributesRequest() {
     }
 
@@ -87,6 +143,12 @@ public class ClearLaunchConfigurationAttributesRequest extends AbstractModel{
         if (source.ClearDataDisks != null) {
             this.ClearDataDisks = new Boolean(source.ClearDataDisks);
         }
+        if (source.ClearHostNameSettings != null) {
+            this.ClearHostNameSettings = new Boolean(source.ClearHostNameSettings);
+        }
+        if (source.ClearInstanceNameSettings != null) {
+            this.ClearInstanceNameSettings = new Boolean(source.ClearInstanceNameSettings);
+        }
     }
 
 
@@ -96,6 +158,8 @@ public class ClearLaunchConfigurationAttributesRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "LaunchConfigurationId", this.LaunchConfigurationId);
         this.setParamSimple(map, prefix + "ClearDataDisks", this.ClearDataDisks);
+        this.setParamSimple(map, prefix + "ClearHostNameSettings", this.ClearHostNameSettings);
+        this.setParamSimple(map, prefix + "ClearInstanceNameSettings", this.ClearInstanceNameSettings);
 
     }
 }

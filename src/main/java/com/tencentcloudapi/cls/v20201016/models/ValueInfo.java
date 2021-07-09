@@ -44,6 +44,14 @@ public class ValueInfo extends AbstractModel{
     private Boolean SqlFlag;
 
     /**
+    * 是否包含中文
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ContainZH")
+    @Expose
+    private Boolean ContainZH;
+
+    /**
      * Get 字段类型，目前支持的类型有：long、text、double 
      * @return Type 字段类型，目前支持的类型有：long、text、double
      */
@@ -91,6 +99,26 @@ public class ValueInfo extends AbstractModel{
         this.SqlFlag = SqlFlag;
     }
 
+    /**
+     * Get 是否包含中文
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ContainZH 是否包含中文
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getContainZH() {
+        return this.ContainZH;
+    }
+
+    /**
+     * Set 是否包含中文
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ContainZH 是否包含中文
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setContainZH(Boolean ContainZH) {
+        this.ContainZH = ContainZH;
+    }
+
     public ValueInfo() {
     }
 
@@ -108,6 +136,9 @@ public class ValueInfo extends AbstractModel{
         if (source.SqlFlag != null) {
             this.SqlFlag = new Boolean(source.SqlFlag);
         }
+        if (source.ContainZH != null) {
+            this.ContainZH = new Boolean(source.ContainZH);
+        }
     }
 
 
@@ -118,6 +149,7 @@ public class ValueInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "Tokenizer", this.Tokenizer);
         this.setParamSimple(map, prefix + "SqlFlag", this.SqlFlag);
+        this.setParamSimple(map, prefix + "ContainZH", this.ContainZH);
 
     }
 }

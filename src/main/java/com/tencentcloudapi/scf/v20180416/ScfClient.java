@@ -486,6 +486,26 @@ public class ScfClient extends AbstractClient{
     }
 
     /**
+     * SCF同步调用函数接口
+     * @param req InvokeFunctionRequest
+     * @return InvokeFunctionResponse
+     * @throws TencentCloudSDKException
+     */
+    public InvokeFunctionResponse InvokeFunction(InvokeFunctionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<InvokeFunctionResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<InvokeFunctionResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "InvokeFunction");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *返回一个函数下的全部别名，可以根据特定函数版本过滤。
      * @param req ListAliasesRequest
      * @return ListAliasesResponse

@@ -59,7 +59,7 @@ public class SubAccountUser extends AbstractModel{
     private String CreateTime;
 
     /**
-    * 用户类型(1:主账号;2:子用户;3:企业微信子用户;4:协作者;5:消息接收人)
+    * 用户类型(2:子用户;3:企业微信子用户;4:协作者;5:消息接收人)
     */
     @SerializedName("UserType")
     @Expose
@@ -165,16 +165,16 @@ public class SubAccountUser extends AbstractModel{
     }
 
     /**
-     * Get 用户类型(1:主账号;2:子用户;3:企业微信子用户;4:协作者;5:消息接收人) 
-     * @return UserType 用户类型(1:主账号;2:子用户;3:企业微信子用户;4:协作者;5:消息接收人)
+     * Get 用户类型(2:子用户;3:企业微信子用户;4:协作者;5:消息接收人) 
+     * @return UserType 用户类型(2:子用户;3:企业微信子用户;4:协作者;5:消息接收人)
      */
     public Long getUserType() {
         return this.UserType;
     }
 
     /**
-     * Set 用户类型(1:主账号;2:子用户;3:企业微信子用户;4:协作者;5:消息接收人)
-     * @param UserType 用户类型(1:主账号;2:子用户;3:企业微信子用户;4:协作者;5:消息接收人)
+     * Set 用户类型(2:子用户;3:企业微信子用户;4:协作者;5:消息接收人)
+     * @param UserType 用户类型(2:子用户;3:企业微信子用户;4:协作者;5:消息接收人)
      */
     public void setUserType(Long UserType) {
         this.UserType = UserType;

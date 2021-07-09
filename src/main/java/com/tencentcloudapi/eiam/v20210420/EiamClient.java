@@ -119,26 +119,6 @@ public class EiamClient extends AbstractClient{
     }
 
     /**
-     *获取JWT公钥信息
-     * @param req DecribePublicKeyRequest
-     * @return DecribePublicKeyResponse
-     * @throws TencentCloudSDKException
-     */
-    public DecribePublicKeyResponse DecribePublicKey(DecribePublicKeyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DecribePublicKeyResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DecribePublicKeyResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DecribePublicKey");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *删除一个机构节点
      * @param req DeleteOrgNodeRequest
      * @return DeleteOrgNodeResponse
