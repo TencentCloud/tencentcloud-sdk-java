@@ -377,3 +377,68 @@ logger.info("hello world");
 从 3.1.310 版本开始腾讯云 Java SDK 支持重试请求。对于每一个请求，您可以设置重试次数，如果接口请求未成功，就进行重试，直到请求成功或者达到重试次数为止。待设置的重试次数最大为10，最小为0，每次重试失败需要睡眠1秒钟。
 
 详细使用请参阅示例：[使用 retry 进行重试请求](./examples/common/retry/Retry.java)
+
+# 凭证管理
+
+腾讯云 Java SDK 目前支持以下几种方式进行凭证管理：
+
+1. 环境变量
+
+默认读取环境变量 `TENCENTCLOUD_SECRET_ID` 和 `TENCENTCLOUD_SECRET_KEY` 获取 secretId 和 secretKey。相关代码如下：
+
+```java
+Credential cred = new EnvironmentVariableCredentialsProvider().getCredentials();
+```
+
+2. 配置文件
+
+配置文件路径要求为：
+
++ Windows: `c:\Users\NAME\.tencentcloud\credentials`
++ Linux: `~/.tencentcloud/credentials` 或 `/etc/tencentcloud/credentials`
+
+配置文件格式如下：
+
+```ini
+[default]
+secret_id = xxxxx
+secret_key = xxxxx
+```
+
+相关代码如下：
+
+```java
+Credential cred = new ProfileCredentialsProvider().getCredentials();
+```
+
+3. 角色扮演
+
+有关角色扮演的相关概念请参阅：[腾讯云角色概述](https://cloud.tencent.com/document/product/598/19420)
+
+要使用此种方式，您必须在腾讯云访问管理控制台上创建了一个角色，具体创建过程请参阅：[腾讯云角色创建](https://cloud.tencent.com/document/product/598/19381)
+
+在您拥有角色后，可以通过持久密钥和 roleArn 获取临时凭证，SDK 会自动刷新临时凭证，相关代码如下：
+
+```java
+Credential cred = new STSCredential("secretId", "secretKey", "roleArn", "roleSessionName");
+```
+
+4. 实例角色
+
+有关实例角色的相关概念请参阅：[腾讯云实例角色](https://cloud.tencent.com/document/product/213/47668)
+
+在您为实例绑定角色后，您可以在实例中访问相关元数据接口获取临时凭证，SDK 会自动刷新临时凭证。相关代码如下：
+
+```java
+Credential cred = new CvmRoleCredential();
+```
+
+5. 凭证提供链
+
+腾讯云 Java SDK 提供了凭证提供链，它会默认以环境变量->配置文件->实例角色的顺序尝试获取凭证，并返回第一个获取到的凭证。相关代码如下：
+
+```java
+Credential cred = new DefaultCredentialsProvider().getCredentials();
+```
+
+凭证管理详细使用请参阅示例：[使用凭证提供链](./examples/common/credential_manager/CredentialManager.java)
