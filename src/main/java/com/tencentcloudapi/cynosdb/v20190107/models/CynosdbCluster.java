@@ -221,6 +221,41 @@ pause
     private String ServerlessStatus;
 
     /**
+    * 集群预付费存储值大小
+    */
+    @SerializedName("Storage")
+    @Expose
+    private Long Storage;
+
+    /**
+    * 集群存储为预付费时的存储ID，用于预付费存储变配
+    */
+    @SerializedName("StorageId")
+    @Expose
+    private String StorageId;
+
+    /**
+    * 集群存储付费模式。0-按量计费，1-包年包月
+    */
+    @SerializedName("StoragePayMode")
+    @Expose
+    private Long StoragePayMode;
+
+    /**
+    * 集群计算规格对应的最小存储值
+    */
+    @SerializedName("MinStorageSize")
+    @Expose
+    private Long MinStorageSize;
+
+    /**
+    * 集群计算规格对应的最大存储值
+    */
+    @SerializedName("MaxStorageSize")
+    @Expose
+    private Long MaxStorageSize;
+
+    /**
      * Get 集群状态 
      * @return Status 集群状态
      */
@@ -676,6 +711,86 @@ pause
         this.ServerlessStatus = ServerlessStatus;
     }
 
+    /**
+     * Get 集群预付费存储值大小 
+     * @return Storage 集群预付费存储值大小
+     */
+    public Long getStorage() {
+        return this.Storage;
+    }
+
+    /**
+     * Set 集群预付费存储值大小
+     * @param Storage 集群预付费存储值大小
+     */
+    public void setStorage(Long Storage) {
+        this.Storage = Storage;
+    }
+
+    /**
+     * Get 集群存储为预付费时的存储ID，用于预付费存储变配 
+     * @return StorageId 集群存储为预付费时的存储ID，用于预付费存储变配
+     */
+    public String getStorageId() {
+        return this.StorageId;
+    }
+
+    /**
+     * Set 集群存储为预付费时的存储ID，用于预付费存储变配
+     * @param StorageId 集群存储为预付费时的存储ID，用于预付费存储变配
+     */
+    public void setStorageId(String StorageId) {
+        this.StorageId = StorageId;
+    }
+
+    /**
+     * Get 集群存储付费模式。0-按量计费，1-包年包月 
+     * @return StoragePayMode 集群存储付费模式。0-按量计费，1-包年包月
+     */
+    public Long getStoragePayMode() {
+        return this.StoragePayMode;
+    }
+
+    /**
+     * Set 集群存储付费模式。0-按量计费，1-包年包月
+     * @param StoragePayMode 集群存储付费模式。0-按量计费，1-包年包月
+     */
+    public void setStoragePayMode(Long StoragePayMode) {
+        this.StoragePayMode = StoragePayMode;
+    }
+
+    /**
+     * Get 集群计算规格对应的最小存储值 
+     * @return MinStorageSize 集群计算规格对应的最小存储值
+     */
+    public Long getMinStorageSize() {
+        return this.MinStorageSize;
+    }
+
+    /**
+     * Set 集群计算规格对应的最小存储值
+     * @param MinStorageSize 集群计算规格对应的最小存储值
+     */
+    public void setMinStorageSize(Long MinStorageSize) {
+        this.MinStorageSize = MinStorageSize;
+    }
+
+    /**
+     * Get 集群计算规格对应的最大存储值 
+     * @return MaxStorageSize 集群计算规格对应的最大存储值
+     */
+    public Long getMaxStorageSize() {
+        return this.MaxStorageSize;
+    }
+
+    /**
+     * Set 集群计算规格对应的最大存储值
+     * @param MaxStorageSize 集群计算规格对应的最大存储值
+     */
+    public void setMaxStorageSize(Long MaxStorageSize) {
+        this.MaxStorageSize = MaxStorageSize;
+    }
+
     public CynosdbCluster() {
     }
 
@@ -774,6 +889,21 @@ pause
         if (source.ServerlessStatus != null) {
             this.ServerlessStatus = new String(source.ServerlessStatus);
         }
+        if (source.Storage != null) {
+            this.Storage = new Long(source.Storage);
+        }
+        if (source.StorageId != null) {
+            this.StorageId = new String(source.StorageId);
+        }
+        if (source.StoragePayMode != null) {
+            this.StoragePayMode = new Long(source.StoragePayMode);
+        }
+        if (source.MinStorageSize != null) {
+            this.MinStorageSize = new Long(source.MinStorageSize);
+        }
+        if (source.MaxStorageSize != null) {
+            this.MaxStorageSize = new Long(source.MaxStorageSize);
+        }
     }
 
 
@@ -809,6 +939,11 @@ pause
         this.setParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
         this.setParamSimple(map, prefix + "DbMode", this.DbMode);
         this.setParamSimple(map, prefix + "ServerlessStatus", this.ServerlessStatus);
+        this.setParamSimple(map, prefix + "Storage", this.Storage);
+        this.setParamSimple(map, prefix + "StorageId", this.StorageId);
+        this.setParamSimple(map, prefix + "StoragePayMode", this.StoragePayMode);
+        this.setParamSimple(map, prefix + "MinStorageSize", this.MinStorageSize);
+        this.setParamSimple(map, prefix + "MaxStorageSize", this.MaxStorageSize);
 
     }
 }

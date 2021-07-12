@@ -9,6 +9,9 @@ public enum EiamErrorCode {
     // FailedOperation.AppIdNotExited
      FAILEDOPERATION_APPIDNOTEXITED("FailedOperation.AppIdNotExited"),
      
+    // 应用ID不存在。
+     FAILEDOPERATION_APPIDNOTFOUND("FailedOperation.AppIdNotFound"),
+     
     // 其子机构中存在用户的机构节点不能被删除。
      FAILEDOPERATION_CHILDORGNODEWITHUSERSCANNOTBEDELETED("FailedOperation.ChildOrgNodeWithUsersCannotBeDeleted"),
      
@@ -32,6 +35,12 @@ public enum EiamErrorCode {
      
     // 读取机构节点信息异常。
      FAILEDOPERATION_DESCRIBEORGNODEFAILURE("FailedOperation.DescribeOrgNodeFailure"),
+     
+    // EntityType取值不合法。
+     FAILEDOPERATION_ENTITYTYPENOTEXISTED("FailedOperation.EntityTypeNotExisted"),
+     
+    // 期望返回的用户属性类型不存在。
+     FAILEDOPERATION_EXPECTFIELDSNOTFOUND("FailedOperation.ExpectFieldsNotFound"),
      
     // 用户组ID未找到。
      FAILEDOPERATION_GROUPIDNOTFOUND("FailedOperation.GroupIdNotFound"),
@@ -72,6 +81,9 @@ public enum EiamErrorCode {
     // 从用户组中移除用户异常。
      FAILEDOPERATION_REMOVEUSERSFROMUSERGROUPFAILURE("FailedOperation.RemoveUsersFromUserGroupFailure"),
      
+    // 列表搜索条件不合法。
+     FAILEDOPERATION_SEARCHCRITERIAISILLEGAL("FailedOperation.SearchCriteriaIsIllegal"),
+     
     // 设定的时间格式不合法。
      FAILEDOPERATION_TIMEFORMATISILLEGAL("FailedOperation.TimeFormatIsIllegal"),
      
@@ -90,6 +102,9 @@ public enum EiamErrorCode {
     // 用户组不存在。
      FAILEDOPERATION_USERGROUPNOTEXISTED("FailedOperation.UserGroupNotExisted"),
      
+    // 用户信息分页展示的排列属性不合法。
+     FAILEDOPERATION_USERINFOSORTKEYISILLEGAL("FailedOperation.UserInfoSortKeyIsIllegal"),
+     
     // 用户名字已存在。
      FAILEDOPERATION_USERNAMEEXISTED("FailedOperation.UserNameExisted"),
      
@@ -98,6 +113,9 @@ public enum EiamErrorCode {
      
     // 用户手机已存在。
      FAILEDOPERATION_USERPHONEEXISTED("FailedOperation.UserPhoneExisted"),
+     
+    // 参数不合法。
+     INVALIDPARAMETER_PARAMETERILLEGAL("InvalidParameter.ParameterIllegal"),
      
     // 参数不合法。
      INVALIDPARAMETER_PARAMETERLLLEGAL("InvalidParameter.Parameterlllegal"),

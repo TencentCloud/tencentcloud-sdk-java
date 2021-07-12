@@ -124,6 +124,14 @@ public class DescribeOnlineRecordResponse extends AbstractModel{
     private String ReplayUrl;
 
     /**
+    * 视频流在录制过程中断流次数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Interrupts")
+    @Expose
+    private Interrupt [] Interrupts;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -379,6 +387,26 @@ public class DescribeOnlineRecordResponse extends AbstractModel{
     }
 
     /**
+     * Get 视频流在录制过程中断流次数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Interrupts 视频流在录制过程中断流次数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Interrupt [] getInterrupts() {
+        return this.Interrupts;
+    }
+
+    /**
+     * Set 视频流在录制过程中断流次数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Interrupts 视频流在录制过程中断流次数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInterrupts(Interrupt [] Interrupts) {
+        this.Interrupts = Interrupts;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -447,6 +475,12 @@ public class DescribeOnlineRecordResponse extends AbstractModel{
         if (source.ReplayUrl != null) {
             this.ReplayUrl = new String(source.ReplayUrl);
         }
+        if (source.Interrupts != null) {
+            this.Interrupts = new Interrupt[source.Interrupts.length];
+            for (int i = 0; i < source.Interrupts.length; i++) {
+                this.Interrupts[i] = new Interrupt(source.Interrupts[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -470,6 +504,7 @@ public class DescribeOnlineRecordResponse extends AbstractModel{
         this.setParamArrayObj(map, prefix + "OmittedDurations.", this.OmittedDurations);
         this.setParamArrayObj(map, prefix + "VideoInfos.", this.VideoInfos);
         this.setParamSimple(map, prefix + "ReplayUrl", this.ReplayUrl);
+        this.setParamArrayObj(map, prefix + "Interrupts.", this.Interrupts);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

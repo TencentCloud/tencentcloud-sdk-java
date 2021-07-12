@@ -44,6 +44,14 @@ public class DescribeBackupListRequest extends AbstractModel{
     private Long Offset;
 
     /**
+    * 数据库类型，取值范围: 
+<li> MYSQL </li>
+    */
+    @SerializedName("DbType")
+    @Expose
+    private String DbType;
+
+    /**
      * Get 集群ID 
      * @return ClusterId 集群ID
      */
@@ -91,6 +99,26 @@ public class DescribeBackupListRequest extends AbstractModel{
         this.Offset = Offset;
     }
 
+    /**
+     * Get 数据库类型，取值范围: 
+<li> MYSQL </li> 
+     * @return DbType 数据库类型，取值范围: 
+<li> MYSQL </li>
+     */
+    public String getDbType() {
+        return this.DbType;
+    }
+
+    /**
+     * Set 数据库类型，取值范围: 
+<li> MYSQL </li>
+     * @param DbType 数据库类型，取值范围: 
+<li> MYSQL </li>
+     */
+    public void setDbType(String DbType) {
+        this.DbType = DbType;
+    }
+
     public DescribeBackupListRequest() {
     }
 
@@ -108,6 +136,9 @@ public class DescribeBackupListRequest extends AbstractModel{
         if (source.Offset != null) {
             this.Offset = new Long(source.Offset);
         }
+        if (source.DbType != null) {
+            this.DbType = new String(source.DbType);
+        }
     }
 
 
@@ -118,6 +149,7 @@ public class DescribeBackupListRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamSimple(map, prefix + "DbType", this.DbType);
 
     }
 }

@@ -39,6 +39,106 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *添加用户到工作组
+     * @param req AddUsersToWorkGroupRequest
+     * @return AddUsersToWorkGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public AddUsersToWorkGroupResponse AddUsersToWorkGroup(AddUsersToWorkGroupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AddUsersToWorkGroupResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<AddUsersToWorkGroupResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "AddUsersToWorkGroup");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *绑定鉴权策略到用户
+     * @param req AttachUserPolicyRequest
+     * @return AttachUserPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public AttachUserPolicyResponse AttachUserPolicy(AttachUserPolicyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AttachUserPolicyResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<AttachUserPolicyResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "AttachUserPolicy");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *绑定鉴权策略到工作组
+     * @param req AttachWorkGroupPolicyRequest
+     * @return AttachWorkGroupPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public AttachWorkGroupPolicyResponse AttachWorkGroupPolicy(AttachWorkGroupPolicyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AttachWorkGroupPolicyResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<AttachWorkGroupPolicyResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "AttachWorkGroupPolicy");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *绑定工作组到用户
+     * @param req BindWorkGroupsToUserRequest
+     * @return BindWorkGroupsToUserResponse
+     * @throws TencentCloudSDKException
+     */
+    public BindWorkGroupsToUserResponse BindWorkGroupsToUser(BindWorkGroupsToUserRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<BindWorkGroupsToUserResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<BindWorkGroupsToUserResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "BindWorkGroupsToUser");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *取消任务执行
+     * @param req CancelTaskRequest
+     * @return CancelTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CancelTaskResponse CancelTask(CancelTaskRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CancelTaskResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CancelTaskResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CancelTask");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（CreateDatabase）用于生成建库SQL语句。
      * @param req CreateDatabaseRequest
      * @return CreateDatabaseResponse
@@ -139,6 +239,46 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *创建用户
+     * @param req CreateUserRequest
+     * @return CreateUserResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateUserResponse CreateUser(CreateUserRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateUserResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateUserResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateUser");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *创建工作组
+     * @param req CreateWorkGroupRequest
+     * @return CreateWorkGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateWorkGroupResponse CreateWorkGroup(CreateWorkGroupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateWorkGroupResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateWorkGroupResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateWorkGroup");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *该接口（DeleteScript）用于删除sql脚本。
      * @param req DeleteScriptRequest
      * @return DeleteScriptResponse
@@ -151,6 +291,66 @@ public class DlcClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteScriptResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteScript");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除用户
+     * @param req DeleteUserRequest
+     * @return DeleteUserResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteUserResponse DeleteUser(DeleteUserRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteUserResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteUserResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteUser");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *从工作组中删除用户
+     * @param req DeleteUsersFromWorkGroupRequest
+     * @return DeleteUsersFromWorkGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteUsersFromWorkGroupResponse DeleteUsersFromWorkGroup(DeleteUsersFromWorkGroupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteUsersFromWorkGroupResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteUsersFromWorkGroupResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteUsersFromWorkGroup");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除工作组
+     * @param req DeleteWorkGroupRequest
+     * @return DeleteWorkGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteWorkGroupResponse DeleteWorkGroup(DeleteWorkGroupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteWorkGroupResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteWorkGroupResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteWorkGroup");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -191,6 +391,26 @@ public class DlcClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeScriptsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeScripts");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询计算结果存储位置。
+     * @param req DescribeStoreLocationRequest
+     * @return DescribeStoreLocationResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeStoreLocationResponse DescribeStoreLocation(DescribeStoreLocationRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeStoreLocationResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeStoreLocationResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeStoreLocation");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -259,6 +479,26 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *获取用户列表信息
+     * @param req DescribeUsersRequest
+     * @return DescribeUsersResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeUsersResponse DescribeUsers(DescribeUsersRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeUsersResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeUsersResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeUsers");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（DescribeViews）用于查询数据视图列表。
      * @param req DescribeViewsRequest
      * @return DescribeViewsResponse
@@ -271,6 +511,126 @@ public class DlcClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeViewsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeViews");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取工作组列表
+     * @param req DescribeWorkGroupsRequest
+     * @return DescribeWorkGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeWorkGroupsResponse DescribeWorkGroups(DescribeWorkGroupsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeWorkGroupsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeWorkGroupsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeWorkGroups");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *解绑用户鉴权策略
+     * @param req DetachUserPolicyRequest
+     * @return DetachUserPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DetachUserPolicyResponse DetachUserPolicy(DetachUserPolicyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DetachUserPolicyResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DetachUserPolicyResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DetachUserPolicy");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *解绑工作组鉴权策略
+     * @param req DetachWorkGroupPolicyRequest
+     * @return DetachWorkGroupPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DetachWorkGroupPolicyResponse DetachWorkGroupPolicy(DetachWorkGroupPolicyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DetachWorkGroupPolicyResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DetachWorkGroupPolicyResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DetachWorkGroupPolicy");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改用户信息
+     * @param req ModifyUserRequest
+     * @return ModifyUserResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyUserResponse ModifyUser(ModifyUserRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyUserResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyUserResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyUser");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改工作组信息
+     * @param req ModifyWorkGroupRequest
+     * @return ModifyWorkGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyWorkGroupResponse ModifyWorkGroup(ModifyWorkGroupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyWorkGroupResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyWorkGroupResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyWorkGroup");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *解绑用户上的用户组
+     * @param req UnbindWorkGroupsFromUserRequest
+     * @return UnbindWorkGroupsFromUserResponse
+     * @throws TencentCloudSDKException
+     */
+    public UnbindWorkGroupsFromUserResponse UnbindWorkGroupsFromUser(UnbindWorkGroupsFromUserRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UnbindWorkGroupsFromUserResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UnbindWorkGroupsFromUserResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UnbindWorkGroupsFromUser");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

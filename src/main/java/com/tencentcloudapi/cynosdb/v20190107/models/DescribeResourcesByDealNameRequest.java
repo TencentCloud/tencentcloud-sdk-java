@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class DescribeResourcesByDealNameRequest extends AbstractModel{
 
     /**
-    * 计费订单id
+    * 计费订单id（如果计费还没回调业务发货，可能出现错误码InvalidParameterValue.DealNameNotFound，这种情况需要业务重试DescribeResourcesByDealName接口直到成功）
     */
     @SerializedName("DealName")
     @Expose
     private String DealName;
 
     /**
-     * Get 计费订单id 
-     * @return DealName 计费订单id
+     * Get 计费订单id（如果计费还没回调业务发货，可能出现错误码InvalidParameterValue.DealNameNotFound，这种情况需要业务重试DescribeResourcesByDealName接口直到成功） 
+     * @return DealName 计费订单id（如果计费还没回调业务发货，可能出现错误码InvalidParameterValue.DealNameNotFound，这种情况需要业务重试DescribeResourcesByDealName接口直到成功）
      */
     public String getDealName() {
         return this.DealName;
     }
 
     /**
-     * Set 计费订单id
-     * @param DealName 计费订单id
+     * Set 计费订单id（如果计费还没回调业务发货，可能出现错误码InvalidParameterValue.DealNameNotFound，这种情况需要业务重试DescribeResourcesByDealName接口直到成功）
+     * @param DealName 计费订单id（如果计费还没回调业务发货，可能出现错误码InvalidParameterValue.DealNameNotFound，这种情况需要业务重试DescribeResourcesByDealName接口直到成功）
      */
     public void setDealName(String DealName) {
         this.DealName = DealName;

@@ -240,6 +240,29 @@ public class CynosdbInstanceDetail extends AbstractModel{
     private Long RenewFlag;
 
     /**
+    * serverless实例cpu下限
+    */
+    @SerializedName("MinCpu")
+    @Expose
+    private Float MinCpu;
+
+    /**
+    * serverless实例cpu上限
+    */
+    @SerializedName("MaxCpu")
+    @Expose
+    private Float MaxCpu;
+
+    /**
+    * serverless实例状态, 可能值：
+resume
+pause
+    */
+    @SerializedName("ServerlessStatus")
+    @Expose
+    private String ServerlessStatus;
+
+    /**
      * Get 用户Uin 
      * @return Uin 用户Uin
      */
@@ -735,6 +758,62 @@ public class CynosdbInstanceDetail extends AbstractModel{
         this.RenewFlag = RenewFlag;
     }
 
+    /**
+     * Get serverless实例cpu下限 
+     * @return MinCpu serverless实例cpu下限
+     */
+    public Float getMinCpu() {
+        return this.MinCpu;
+    }
+
+    /**
+     * Set serverless实例cpu下限
+     * @param MinCpu serverless实例cpu下限
+     */
+    public void setMinCpu(Float MinCpu) {
+        this.MinCpu = MinCpu;
+    }
+
+    /**
+     * Get serverless实例cpu上限 
+     * @return MaxCpu serverless实例cpu上限
+     */
+    public Float getMaxCpu() {
+        return this.MaxCpu;
+    }
+
+    /**
+     * Set serverless实例cpu上限
+     * @param MaxCpu serverless实例cpu上限
+     */
+    public void setMaxCpu(Float MaxCpu) {
+        this.MaxCpu = MaxCpu;
+    }
+
+    /**
+     * Get serverless实例状态, 可能值：
+resume
+pause 
+     * @return ServerlessStatus serverless实例状态, 可能值：
+resume
+pause
+     */
+    public String getServerlessStatus() {
+        return this.ServerlessStatus;
+    }
+
+    /**
+     * Set serverless实例状态, 可能值：
+resume
+pause
+     * @param ServerlessStatus serverless实例状态, 可能值：
+resume
+pause
+     */
+    public void setServerlessStatus(String ServerlessStatus) {
+        this.ServerlessStatus = ServerlessStatus;
+    }
+
     public CynosdbInstanceDetail() {
     }
 
@@ -836,6 +915,15 @@ public class CynosdbInstanceDetail extends AbstractModel{
         if (source.RenewFlag != null) {
             this.RenewFlag = new Long(source.RenewFlag);
         }
+        if (source.MinCpu != null) {
+            this.MinCpu = new Float(source.MinCpu);
+        }
+        if (source.MaxCpu != null) {
+            this.MaxCpu = new Float(source.MaxCpu);
+        }
+        if (source.ServerlessStatus != null) {
+            this.ServerlessStatus = new String(source.ServerlessStatus);
+        }
     }
 
 
@@ -874,6 +962,9 @@ public class CynosdbInstanceDetail extends AbstractModel{
         this.setParamSimple(map, prefix + "Charset", this.Charset);
         this.setParamSimple(map, prefix + "CynosVersion", this.CynosVersion);
         this.setParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
+        this.setParamSimple(map, prefix + "MinCpu", this.MinCpu);
+        this.setParamSimple(map, prefix + "MaxCpu", this.MaxCpu);
+        this.setParamSimple(map, prefix + "ServerlessStatus", this.ServerlessStatus);
 
     }
 }

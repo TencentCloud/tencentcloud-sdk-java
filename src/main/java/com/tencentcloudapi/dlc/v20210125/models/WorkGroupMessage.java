@@ -1,0 +1,183 @@
+/*
+ * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+package com.tencentcloudapi.dlc.v20210125.models;
+
+import com.tencentcloudapi.common.AbstractModel;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
+import java.util.HashMap;
+
+public class WorkGroupMessage extends AbstractModel{
+
+    /**
+    * 工作组Id
+    */
+    @SerializedName("WorkGroupId")
+    @Expose
+    private Long WorkGroupId;
+
+    /**
+    * 工作组名称
+    */
+    @SerializedName("WorkGroupName")
+    @Expose
+    private String WorkGroupName;
+
+    /**
+    * 工作组描述
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("WorkGroupDescription")
+    @Expose
+    private String WorkGroupDescription;
+
+    /**
+    * 创建者
+    */
+    @SerializedName("Creator")
+    @Expose
+    private String Creator;
+
+    /**
+    * 创建时间
+    */
+    @SerializedName("CreateTime")
+    @Expose
+    private String CreateTime;
+
+    /**
+     * Get 工作组Id 
+     * @return WorkGroupId 工作组Id
+     */
+    public Long getWorkGroupId() {
+        return this.WorkGroupId;
+    }
+
+    /**
+     * Set 工作组Id
+     * @param WorkGroupId 工作组Id
+     */
+    public void setWorkGroupId(Long WorkGroupId) {
+        this.WorkGroupId = WorkGroupId;
+    }
+
+    /**
+     * Get 工作组名称 
+     * @return WorkGroupName 工作组名称
+     */
+    public String getWorkGroupName() {
+        return this.WorkGroupName;
+    }
+
+    /**
+     * Set 工作组名称
+     * @param WorkGroupName 工作组名称
+     */
+    public void setWorkGroupName(String WorkGroupName) {
+        this.WorkGroupName = WorkGroupName;
+    }
+
+    /**
+     * Get 工作组描述
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return WorkGroupDescription 工作组描述
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getWorkGroupDescription() {
+        return this.WorkGroupDescription;
+    }
+
+    /**
+     * Set 工作组描述
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param WorkGroupDescription 工作组描述
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setWorkGroupDescription(String WorkGroupDescription) {
+        this.WorkGroupDescription = WorkGroupDescription;
+    }
+
+    /**
+     * Get 创建者 
+     * @return Creator 创建者
+     */
+    public String getCreator() {
+        return this.Creator;
+    }
+
+    /**
+     * Set 创建者
+     * @param Creator 创建者
+     */
+    public void setCreator(String Creator) {
+        this.Creator = Creator;
+    }
+
+    /**
+     * Get 创建时间 
+     * @return CreateTime 创建时间
+     */
+    public String getCreateTime() {
+        return this.CreateTime;
+    }
+
+    /**
+     * Set 创建时间
+     * @param CreateTime 创建时间
+     */
+    public void setCreateTime(String CreateTime) {
+        this.CreateTime = CreateTime;
+    }
+
+    public WorkGroupMessage() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public WorkGroupMessage(WorkGroupMessage source) {
+        if (source.WorkGroupId != null) {
+            this.WorkGroupId = new Long(source.WorkGroupId);
+        }
+        if (source.WorkGroupName != null) {
+            this.WorkGroupName = new String(source.WorkGroupName);
+        }
+        if (source.WorkGroupDescription != null) {
+            this.WorkGroupDescription = new String(source.WorkGroupDescription);
+        }
+        if (source.Creator != null) {
+            this.Creator = new String(source.Creator);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+    }
+
+
+    /**
+     * Internal implementation, normal users should not use it.
+     */
+    public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "WorkGroupId", this.WorkGroupId);
+        this.setParamSimple(map, prefix + "WorkGroupName", this.WorkGroupName);
+        this.setParamSimple(map, prefix + "WorkGroupDescription", this.WorkGroupDescription);
+        this.setParamSimple(map, prefix + "Creator", this.Creator);
+        this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+
+    }
+}
+

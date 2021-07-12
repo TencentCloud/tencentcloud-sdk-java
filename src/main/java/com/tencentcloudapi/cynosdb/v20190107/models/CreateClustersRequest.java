@@ -74,14 +74,14 @@ public class CreateClustersRequest extends AbstractModel{
     private Long Cpu;
 
     /**
-    * 普通实例内存
+    * 普通实例内存,单位G
     */
     @SerializedName("Memory")
     @Expose
     private Long Memory;
 
     /**
-    * 存储
+    * 存储大小，单位G
     */
     @SerializedName("Storage")
     @Expose
@@ -95,7 +95,7 @@ public class CreateClustersRequest extends AbstractModel{
     private String ClusterName;
 
     /**
-    * 账号密码(8-64个字符，至少包含字母、数字、字符（支持的字符：_+-&=!@#$%^*()~）中的两种)
+    * 账号密码(8-64个字符，包含大小写英文字母、数字和符号~!@#$%^&*_-+=`|\(){}[]:;'<>,.?/中的任意三种)
     */
     @SerializedName("AdminPassword")
     @Expose
@@ -162,6 +162,7 @@ timeRollback，时间点回档
 
     /**
     * 普通实例存储上限，单位GB
+当DbType为MYSQL，且存储计费模式为预付费时，该参数需不大于cpu与memory对应存储规格上限
     */
     @SerializedName("StorageLimit")
     @Expose
@@ -266,6 +267,15 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
     @SerializedName("AutoPauseDelay")
     @Expose
     private Long AutoPauseDelay;
+
+    /**
+    * 集群存储计费模式，按量计费：0，包年包月：1。默认按量计费
+当DbType为MYSQL时，在集群计算计费模式为后付费（包括DbMode为SERVERLESS）时，存储计费模式仅可为按量计费
+回档与克隆均不支持包年包月存储
+    */
+    @SerializedName("StoragePayMode")
+    @Expose
+    private Long StoragePayMode;
 
     /**
      * Get 可用区 
@@ -388,32 +398,32 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
     }
 
     /**
-     * Get 普通实例内存 
-     * @return Memory 普通实例内存
+     * Get 普通实例内存,单位G 
+     * @return Memory 普通实例内存,单位G
      */
     public Long getMemory() {
         return this.Memory;
     }
 
     /**
-     * Set 普通实例内存
-     * @param Memory 普通实例内存
+     * Set 普通实例内存,单位G
+     * @param Memory 普通实例内存,单位G
      */
     public void setMemory(Long Memory) {
         this.Memory = Memory;
     }
 
     /**
-     * Get 存储 
-     * @return Storage 存储
+     * Get 存储大小，单位G 
+     * @return Storage 存储大小，单位G
      */
     public Long getStorage() {
         return this.Storage;
     }
 
     /**
-     * Set 存储
-     * @param Storage 存储
+     * Set 存储大小，单位G
+     * @param Storage 存储大小，单位G
      */
     public void setStorage(Long Storage) {
         this.Storage = Storage;
@@ -436,16 +446,16 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
     }
 
     /**
-     * Get 账号密码(8-64个字符，至少包含字母、数字、字符（支持的字符：_+-&=!@#$%^*()~）中的两种) 
-     * @return AdminPassword 账号密码(8-64个字符，至少包含字母、数字、字符（支持的字符：_+-&=!@#$%^*()~）中的两种)
+     * Get 账号密码(8-64个字符，包含大小写英文字母、数字和符号~!@#$%^&*_-+=`|\(){}[]:;'<>,.?/中的任意三种) 
+     * @return AdminPassword 账号密码(8-64个字符，包含大小写英文字母、数字和符号~!@#$%^&*_-+=`|\(){}[]:;'<>,.?/中的任意三种)
      */
     public String getAdminPassword() {
         return this.AdminPassword;
     }
 
     /**
-     * Set 账号密码(8-64个字符，至少包含字母、数字、字符（支持的字符：_+-&=!@#$%^*()~）中的两种)
-     * @param AdminPassword 账号密码(8-64个字符，至少包含字母、数字、字符（支持的字符：_+-&=!@#$%^*()~）中的两种)
+     * Set 账号密码(8-64个字符，包含大小写英文字母、数字和符号~!@#$%^&*_-+=`|\(){}[]:;'<>,.?/中的任意三种)
+     * @param AdminPassword 账号密码(8-64个字符，包含大小写英文字母、数字和符号~!@#$%^&*_-+=`|\(){}[]:;'<>,.?/中的任意三种)
      */
     public void setAdminPassword(String AdminPassword) {
         this.AdminPassword = AdminPassword;
@@ -592,8 +602,10 @@ timeRollback，时间点回档
     }
 
     /**
-     * Get 普通实例存储上限，单位GB 
+     * Get 普通实例存储上限，单位GB
+当DbType为MYSQL，且存储计费模式为预付费时，该参数需不大于cpu与memory对应存储规格上限 
      * @return StorageLimit 普通实例存储上限，单位GB
+当DbType为MYSQL，且存储计费模式为预付费时，该参数需不大于cpu与memory对应存储规格上限
      */
     public Long getStorageLimit() {
         return this.StorageLimit;
@@ -601,7 +613,9 @@ timeRollback，时间点回档
 
     /**
      * Set 普通实例存储上限，单位GB
+当DbType为MYSQL，且存储计费模式为预付费时，该参数需不大于cpu与memory对应存储规格上限
      * @param StorageLimit 普通实例存储上限，单位GB
+当DbType为MYSQL，且存储计费模式为预付费时，该参数需不大于cpu与memory对应存储规格上限
      */
     public void setStorageLimit(Long StorageLimit) {
         this.StorageLimit = StorageLimit;
@@ -851,6 +865,30 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
         this.AutoPauseDelay = AutoPauseDelay;
     }
 
+    /**
+     * Get 集群存储计费模式，按量计费：0，包年包月：1。默认按量计费
+当DbType为MYSQL时，在集群计算计费模式为后付费（包括DbMode为SERVERLESS）时，存储计费模式仅可为按量计费
+回档与克隆均不支持包年包月存储 
+     * @return StoragePayMode 集群存储计费模式，按量计费：0，包年包月：1。默认按量计费
+当DbType为MYSQL时，在集群计算计费模式为后付费（包括DbMode为SERVERLESS）时，存储计费模式仅可为按量计费
+回档与克隆均不支持包年包月存储
+     */
+    public Long getStoragePayMode() {
+        return this.StoragePayMode;
+    }
+
+    /**
+     * Set 集群存储计费模式，按量计费：0，包年包月：1。默认按量计费
+当DbType为MYSQL时，在集群计算计费模式为后付费（包括DbMode为SERVERLESS）时，存储计费模式仅可为按量计费
+回档与克隆均不支持包年包月存储
+     * @param StoragePayMode 集群存储计费模式，按量计费：0，包年包月：1。默认按量计费
+当DbType为MYSQL时，在集群计算计费模式为后付费（包括DbMode为SERVERLESS）时，存储计费模式仅可为按量计费
+回档与克隆均不支持包年包月存储
+     */
+    public void setStoragePayMode(Long StoragePayMode) {
+        this.StoragePayMode = StoragePayMode;
+    }
+
     public CreateClustersRequest() {
     }
 
@@ -961,6 +999,9 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
         if (source.AutoPauseDelay != null) {
             this.AutoPauseDelay = new Long(source.AutoPauseDelay);
         }
+        if (source.StoragePayMode != null) {
+            this.StoragePayMode = new Long(source.StoragePayMode);
+        }
     }
 
 
@@ -1001,6 +1042,7 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
         this.setParamSimple(map, prefix + "MaxCpu", this.MaxCpu);
         this.setParamSimple(map, prefix + "AutoPause", this.AutoPause);
         this.setParamSimple(map, prefix + "AutoPauseDelay", this.AutoPauseDelay);
+        this.setParamSimple(map, prefix + "StoragePayMode", this.StoragePayMode);
 
     }
 }
