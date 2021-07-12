@@ -13,7 +13,7 @@ public class InitOralProcess {
     public static void main(String[] args) {
         try {
             // 实例化一个认证对象，入参需要传入腾讯云账户secretId，secretKey
-            Credential cred = new Credential("...", "...");
+            Credential cred = new Credential("", "");
 
             // 实例化一个http选项，可选的，没有特殊需求可以跳过
             HttpProfile httpProfile = new HttpProfile();
@@ -27,11 +27,12 @@ public class InitOralProcess {
             // 实例化要请求产品的client对象,clientProfile是可选的
             SoeClient client = new SoeClient(cred, "",clientProfile);
             InitOralProcessRequest req = new InitOralProcessRequest();
-            req.setSessionId("1");
-            req.setRefText("since");
+            req.setSessionId("test_123456");
+            req.setRefText("bike");
             req.setWorkMode(1);
             req.setEvalMode(0);
-            req.setScoreCoeff(2.0f);
+            req.setScoreCoeff(1.0f);
+            req.setServerType(0);
 
             InitOralProcessResponse res = client.InitOralProcess(req);
 
