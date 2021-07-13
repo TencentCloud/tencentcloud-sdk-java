@@ -48,7 +48,7 @@ public class signature {
         String AUDIO_FOR_ONCE = "./bike.mp3";
 
         byte[] buf = Files.readAllBytes(Paths.get(AUDIO_FOR_ONCE));
-        String base64Str = Base64.getEncoder().encodeToString(buf);
+        String base64Str = new sun.misc.BASE64Encoder().encode(buf);
         String service = "soe";
         String host = "soe.tencentcloudapi.com";
         String region = "ap-guangzhou";
