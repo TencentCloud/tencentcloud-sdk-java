@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class DescribeUserSqlAdviceResponse extends AbstractModel{
 
     /**
-    * SQL优化建议，可解析为JSON数组。
+    * SQL优化建议，可解析为JSON数组，无需优化时输出为空。
     */
     @SerializedName("Advices")
     @Expose
     private String Advices;
 
     /**
-    * SQL优化建议备注，可解析为String数组。
+    * SQL优化建议备注，可解析为String数组，无需优化时输出为空。
     */
     @SerializedName("Comments")
     @Expose
@@ -58,14 +58,14 @@ public class DescribeUserSqlAdviceResponse extends AbstractModel{
     private String Tables;
 
     /**
-    * SQL执行计划，可解析为JSON。
+    * SQL执行计划，可解析为JSON，无需优化时输出为空。
     */
     @SerializedName("SqlPlan")
     @Expose
     private String SqlPlan;
 
     /**
-    * SQL优化后的成本节约详情，可解析为JSON。
+    * SQL优化后的成本节约详情，可解析为JSON，无需优化时输出为空。
     */
     @SerializedName("Cost")
     @Expose
@@ -79,32 +79,32 @@ public class DescribeUserSqlAdviceResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get SQL优化建议，可解析为JSON数组。 
-     * @return Advices SQL优化建议，可解析为JSON数组。
+     * Get SQL优化建议，可解析为JSON数组，无需优化时输出为空。 
+     * @return Advices SQL优化建议，可解析为JSON数组，无需优化时输出为空。
      */
     public String getAdvices() {
         return this.Advices;
     }
 
     /**
-     * Set SQL优化建议，可解析为JSON数组。
-     * @param Advices SQL优化建议，可解析为JSON数组。
+     * Set SQL优化建议，可解析为JSON数组，无需优化时输出为空。
+     * @param Advices SQL优化建议，可解析为JSON数组，无需优化时输出为空。
      */
     public void setAdvices(String Advices) {
         this.Advices = Advices;
     }
 
     /**
-     * Get SQL优化建议备注，可解析为String数组。 
-     * @return Comments SQL优化建议备注，可解析为String数组。
+     * Get SQL优化建议备注，可解析为String数组，无需优化时输出为空。 
+     * @return Comments SQL优化建议备注，可解析为String数组，无需优化时输出为空。
      */
     public String getComments() {
         return this.Comments;
     }
 
     /**
-     * Set SQL优化建议备注，可解析为String数组。
-     * @param Comments SQL优化建议备注，可解析为String数组。
+     * Set SQL优化建议备注，可解析为String数组，无需优化时输出为空。
+     * @param Comments SQL优化建议备注，可解析为String数组，无需优化时输出为空。
      */
     public void setComments(String Comments) {
         this.Comments = Comments;
@@ -159,32 +159,32 @@ public class DescribeUserSqlAdviceResponse extends AbstractModel{
     }
 
     /**
-     * Get SQL执行计划，可解析为JSON。 
-     * @return SqlPlan SQL执行计划，可解析为JSON。
+     * Get SQL执行计划，可解析为JSON，无需优化时输出为空。 
+     * @return SqlPlan SQL执行计划，可解析为JSON，无需优化时输出为空。
      */
     public String getSqlPlan() {
         return this.SqlPlan;
     }
 
     /**
-     * Set SQL执行计划，可解析为JSON。
-     * @param SqlPlan SQL执行计划，可解析为JSON。
+     * Set SQL执行计划，可解析为JSON，无需优化时输出为空。
+     * @param SqlPlan SQL执行计划，可解析为JSON，无需优化时输出为空。
      */
     public void setSqlPlan(String SqlPlan) {
         this.SqlPlan = SqlPlan;
     }
 
     /**
-     * Get SQL优化后的成本节约详情，可解析为JSON。 
-     * @return Cost SQL优化后的成本节约详情，可解析为JSON。
+     * Get SQL优化后的成本节约详情，可解析为JSON，无需优化时输出为空。 
+     * @return Cost SQL优化后的成本节约详情，可解析为JSON，无需优化时输出为空。
      */
     public String getCost() {
         return this.Cost;
     }
 
     /**
-     * Set SQL优化后的成本节约详情，可解析为JSON。
-     * @param Cost SQL优化后的成本节约详情，可解析为JSON。
+     * Set SQL优化后的成本节约详情，可解析为JSON，无需优化时输出为空。
+     * @param Cost SQL优化后的成本节约详情，可解析为JSON，无需优化时输出为空。
      */
     public void setCost(String Cost) {
         this.Cost = Cost;

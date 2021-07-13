@@ -116,6 +116,14 @@ public class CheckIdCardInformationResponse extends AbstractModel{
     private Float Quality;
 
     /**
+    * 敏感数据加密信息。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Encryption")
+    @Expose
+    private Encryption Encryption;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -351,6 +359,26 @@ public class CheckIdCardInformationResponse extends AbstractModel{
     }
 
     /**
+     * Get 敏感数据加密信息。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Encryption 敏感数据加密信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Encryption getEncryption() {
+        return this.Encryption;
+    }
+
+    /**
+     * Set 敏感数据加密信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Encryption 敏感数据加密信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEncryption(Encryption Encryption) {
+        this.Encryption = Encryption;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -410,6 +438,9 @@ public class CheckIdCardInformationResponse extends AbstractModel{
         if (source.Quality != null) {
             this.Quality = new Float(source.Quality);
         }
+        if (source.Encryption != null) {
+            this.Encryption = new Encryption(source.Encryption);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -432,6 +463,7 @@ public class CheckIdCardInformationResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "Portrait", this.Portrait);
         this.setParamSimple(map, prefix + "Warnings", this.Warnings);
         this.setParamSimple(map, prefix + "Quality", this.Quality);
+        this.setParamObj(map, prefix + "Encryption.", this.Encryption);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

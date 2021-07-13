@@ -37,7 +37,7 @@ public class CreateImageDepositRequest extends AbstractModel{
     private String FileContent;
 
     /**
-    * 对应数据Base64文件名称 test.png
+    * 带后缀的文件名称，如 test.png
     */
     @SerializedName("FileName")
     @Expose
@@ -104,16 +104,16 @@ public class CreateImageDepositRequest extends AbstractModel{
     }
 
     /**
-     * Get 对应数据Base64文件名称 test.png 
-     * @return FileName 对应数据Base64文件名称 test.png
+     * Get 带后缀的文件名称，如 test.png 
+     * @return FileName 带后缀的文件名称，如 test.png
      */
     public String getFileName() {
         return this.FileName;
     }
 
     /**
-     * Set 对应数据Base64文件名称 test.png
-     * @param FileName 对应数据Base64文件名称 test.png
+     * Set 带后缀的文件名称，如 test.png
+     * @param FileName 带后缀的文件名称，如 test.png
      */
     public void setFileName(String FileName) {
         this.FileName = FileName;

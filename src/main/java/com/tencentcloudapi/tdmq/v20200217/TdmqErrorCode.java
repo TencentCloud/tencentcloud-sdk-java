@@ -30,6 +30,9 @@ public enum TdmqErrorCode {
     // 主题删除失败。
      FAILEDOPERATION_DELETETOPICS("FailedOperation.DeleteTopics"),
      
+    // 查询订阅数据失败。
+     FAILEDOPERATION_DESCRIBESUBSCRIPTION("FailedOperation.DescribeSubscription"),
+     
     // 获取环境属性失败。
      FAILEDOPERATION_GETENVIRONMENTATTRIBUTESFAILED("FailedOperation.GetEnvironmentAttributesFailed"),
      

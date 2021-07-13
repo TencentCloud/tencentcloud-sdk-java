@@ -30,14 +30,14 @@ public class DeleteIncrementalMigrationRequest extends AbstractModel{
     private String InstanceId;
 
     /**
-    * 备份导入任务ID
+    * 备份导入任务ID，由CreateBackupMigration接口返回
     */
     @SerializedName("BackupMigrationId")
     @Expose
     private String BackupMigrationId;
 
     /**
-    * 增量备份导入任务ID
+    * 增量备份导入任务ID，由CreateIncrementalMigration接口返回
     */
     @SerializedName("IncrementalMigrationId")
     @Expose
@@ -60,32 +60,32 @@ public class DeleteIncrementalMigrationRequest extends AbstractModel{
     }
 
     /**
-     * Get 备份导入任务ID 
-     * @return BackupMigrationId 备份导入任务ID
+     * Get 备份导入任务ID，由CreateBackupMigration接口返回 
+     * @return BackupMigrationId 备份导入任务ID，由CreateBackupMigration接口返回
      */
     public String getBackupMigrationId() {
         return this.BackupMigrationId;
     }
 
     /**
-     * Set 备份导入任务ID
-     * @param BackupMigrationId 备份导入任务ID
+     * Set 备份导入任务ID，由CreateBackupMigration接口返回
+     * @param BackupMigrationId 备份导入任务ID，由CreateBackupMigration接口返回
      */
     public void setBackupMigrationId(String BackupMigrationId) {
         this.BackupMigrationId = BackupMigrationId;
     }
 
     /**
-     * Get 增量备份导入任务ID 
-     * @return IncrementalMigrationId 增量备份导入任务ID
+     * Get 增量备份导入任务ID，由CreateIncrementalMigration接口返回 
+     * @return IncrementalMigrationId 增量备份导入任务ID，由CreateIncrementalMigration接口返回
      */
     public String getIncrementalMigrationId() {
         return this.IncrementalMigrationId;
     }
 
     /**
-     * Set 增量备份导入任务ID
-     * @param IncrementalMigrationId 增量备份导入任务ID
+     * Set 增量备份导入任务ID，由CreateIncrementalMigration接口返回
+     * @param IncrementalMigrationId 增量备份导入任务ID，由CreateIncrementalMigration接口返回
      */
     public void setIncrementalMigrationId(String IncrementalMigrationId) {
         this.IncrementalMigrationId = IncrementalMigrationId;

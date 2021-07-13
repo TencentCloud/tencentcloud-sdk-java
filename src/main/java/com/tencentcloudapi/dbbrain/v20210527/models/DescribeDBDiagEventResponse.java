@@ -44,14 +44,14 @@ public class DescribeDBDiagEventResponse extends AbstractModel{
     private Long EventId;
 
     /**
-    * 事件详情。
+    * 诊断事件详情，若无附加解释信息则输出为空。
     */
     @SerializedName("Explanation")
     @Expose
     private String Explanation;
 
     /**
-    * 概要。
+    * 诊断概要。
     */
     @SerializedName("Outline")
     @Expose
@@ -79,7 +79,7 @@ public class DescribeDBDiagEventResponse extends AbstractModel{
     private String StartTime;
 
     /**
-    * 建议。
+    * 诊断建议，若无建议则输出为空。
     */
     @SerializedName("Suggestions")
     @Expose
@@ -156,32 +156,32 @@ public class DescribeDBDiagEventResponse extends AbstractModel{
     }
 
     /**
-     * Get 事件详情。 
-     * @return Explanation 事件详情。
+     * Get 诊断事件详情，若无附加解释信息则输出为空。 
+     * @return Explanation 诊断事件详情，若无附加解释信息则输出为空。
      */
     public String getExplanation() {
         return this.Explanation;
     }
 
     /**
-     * Set 事件详情。
-     * @param Explanation 事件详情。
+     * Set 诊断事件详情，若无附加解释信息则输出为空。
+     * @param Explanation 诊断事件详情，若无附加解释信息则输出为空。
      */
     public void setExplanation(String Explanation) {
         this.Explanation = Explanation;
     }
 
     /**
-     * Get 概要。 
-     * @return Outline 概要。
+     * Get 诊断概要。 
+     * @return Outline 诊断概要。
      */
     public String getOutline() {
         return this.Outline;
     }
 
     /**
-     * Set 概要。
-     * @param Outline 概要。
+     * Set 诊断概要。
+     * @param Outline 诊断概要。
      */
     public void setOutline(String Outline) {
         this.Outline = Outline;
@@ -236,16 +236,16 @@ public class DescribeDBDiagEventResponse extends AbstractModel{
     }
 
     /**
-     * Get 建议。 
-     * @return Suggestions 建议。
+     * Get 诊断建议，若无建议则输出为空。 
+     * @return Suggestions 诊断建议，若无建议则输出为空。
      */
     public String getSuggestions() {
         return this.Suggestions;
     }
 
     /**
-     * Set 建议。
-     * @param Suggestions 建议。
+     * Set 诊断建议，若无建议则输出为空。
+     * @param Suggestions 诊断建议，若无建议则输出为空。
      */
     public void setSuggestions(String Suggestions) {
         this.Suggestions = Suggestions;

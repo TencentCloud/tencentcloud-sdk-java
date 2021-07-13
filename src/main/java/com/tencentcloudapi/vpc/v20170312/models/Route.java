@@ -55,6 +55,7 @@ LOCAL_GATEWAY：本地网关。
 
     /**
     * 路由策略ID。IPv4路由策略ID是有意义的值，IPv6路由策略是无意义的值0。后续建议完全使用字符串唯一ID `RouteItemId`操作路由策略。
+该字段在删除时必填，其他字段无需填写。
     */
     @SerializedName("RouteId")
     @Expose
@@ -210,8 +211,10 @@ LOCAL_GATEWAY：本地网关。
     }
 
     /**
-     * Get 路由策略ID。IPv4路由策略ID是有意义的值，IPv6路由策略是无意义的值0。后续建议完全使用字符串唯一ID `RouteItemId`操作路由策略。 
+     * Get 路由策略ID。IPv4路由策略ID是有意义的值，IPv6路由策略是无意义的值0。后续建议完全使用字符串唯一ID `RouteItemId`操作路由策略。
+该字段在删除时必填，其他字段无需填写。 
      * @return RouteId 路由策略ID。IPv4路由策略ID是有意义的值，IPv6路由策略是无意义的值0。后续建议完全使用字符串唯一ID `RouteItemId`操作路由策略。
+该字段在删除时必填，其他字段无需填写。
      */
     public Long getRouteId() {
         return this.RouteId;
@@ -219,7 +222,9 @@ LOCAL_GATEWAY：本地网关。
 
     /**
      * Set 路由策略ID。IPv4路由策略ID是有意义的值，IPv6路由策略是无意义的值0。后续建议完全使用字符串唯一ID `RouteItemId`操作路由策略。
+该字段在删除时必填，其他字段无需填写。
      * @param RouteId 路由策略ID。IPv4路由策略ID是有意义的值，IPv6路由策略是无意义的值0。后续建议完全使用字符串唯一ID `RouteItemId`操作路由策略。
+该字段在删除时必填，其他字段无需填写。
      */
     public void setRouteId(Long RouteId) {
         this.RouteId = RouteId;

@@ -144,6 +144,9 @@ public enum EcdnErrorCode {
     // ECDN子账号加速域名未授权。
      UNAUTHORIZEDOPERATION_ECDNDOMAINUNAUTHORIZED("UnauthorizedOperation.EcdnDomainUnauthorized"),
      
+    // 该域名属于其他账号，您没有权限接入。
+     UNAUTHORIZEDOPERATION_ECDNHOSTISOWNEDBYOTHER("UnauthorizedOperation.EcdnHostIsOwnedByOther"),
+     
     // ECDN子账号加速域名未授权。
      UNAUTHORIZEDOPERATION_ECDNHOSTUNAUTHORIZED("UnauthorizedOperation.EcdnHostUnauthorized"),
      

@@ -37,7 +37,7 @@ public class CreateAudioDepositRequest extends AbstractModel{
     private String FileContent;
 
     /**
-    * 对应数据Base64文件名称
+    * 带后缀的文件名称，如music.mp3
     */
     @SerializedName("FileName")
     @Expose
@@ -104,16 +104,16 @@ public class CreateAudioDepositRequest extends AbstractModel{
     }
 
     /**
-     * Get 对应数据Base64文件名称 
-     * @return FileName 对应数据Base64文件名称
+     * Get 带后缀的文件名称，如music.mp3 
+     * @return FileName 带后缀的文件名称，如music.mp3
      */
     public String getFileName() {
         return this.FileName;
     }
 
     /**
-     * Set 对应数据Base64文件名称
-     * @param FileName 对应数据Base64文件名称
+     * Set 带后缀的文件名称，如music.mp3
+     * @param FileName 带后缀的文件名称，如music.mp3
      */
     public void setFileName(String FileName) {
         this.FileName = FileName;

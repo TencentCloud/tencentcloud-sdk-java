@@ -37,6 +37,13 @@ public class ZoneInfo extends AbstractModel{
     private String ZoneName;
 
     /**
+    * 实例购买页可用区展示标签
+    */
+    @SerializedName("InstanceDisplayLabel")
+    @Expose
+    private String InstanceDisplayLabel;
+
+    /**
      * Get 可用区 
      * @return Zone 可用区
      */
@@ -68,6 +75,22 @@ public class ZoneInfo extends AbstractModel{
         this.ZoneName = ZoneName;
     }
 
+    /**
+     * Get 实例购买页可用区展示标签 
+     * @return InstanceDisplayLabel 实例购买页可用区展示标签
+     */
+    public String getInstanceDisplayLabel() {
+        return this.InstanceDisplayLabel;
+    }
+
+    /**
+     * Set 实例购买页可用区展示标签
+     * @param InstanceDisplayLabel 实例购买页可用区展示标签
+     */
+    public void setInstanceDisplayLabel(String InstanceDisplayLabel) {
+        this.InstanceDisplayLabel = InstanceDisplayLabel;
+    }
+
     public ZoneInfo() {
     }
 
@@ -82,6 +105,9 @@ public class ZoneInfo extends AbstractModel{
         if (source.ZoneName != null) {
             this.ZoneName = new String(source.ZoneName);
         }
+        if (source.InstanceDisplayLabel != null) {
+            this.InstanceDisplayLabel = new String(source.InstanceDisplayLabel);
+        }
     }
 
 
@@ -91,6 +117,7 @@ public class ZoneInfo extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamSimple(map, prefix + "ZoneName", this.ZoneName);
+        this.setParamSimple(map, prefix + "InstanceDisplayLabel", this.InstanceDisplayLabel);
 
     }
 }

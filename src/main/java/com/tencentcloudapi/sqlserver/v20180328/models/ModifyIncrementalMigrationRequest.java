@@ -37,14 +37,14 @@ public class ModifyIncrementalMigrationRequest extends AbstractModel{
     private String BackupMigrationId;
 
     /**
-    * 增量导入任务ID
+    * 增量导入任务ID，由CreateIncrementalMigration接口返回
     */
     @SerializedName("IncrementalMigrationId")
     @Expose
     private String IncrementalMigrationId;
 
     /**
-    * 是否需要恢复，NO-不需要，YES-需要
+    * 是否需要恢复，NO-不需要，YES-需要，默认不修改增量备份导入任务是否需要恢复的属性。
     */
     @SerializedName("IsRecovery")
     @Expose
@@ -90,32 +90,32 @@ public class ModifyIncrementalMigrationRequest extends AbstractModel{
     }
 
     /**
-     * Get 增量导入任务ID 
-     * @return IncrementalMigrationId 增量导入任务ID
+     * Get 增量导入任务ID，由CreateIncrementalMigration接口返回 
+     * @return IncrementalMigrationId 增量导入任务ID，由CreateIncrementalMigration接口返回
      */
     public String getIncrementalMigrationId() {
         return this.IncrementalMigrationId;
     }
 
     /**
-     * Set 增量导入任务ID
-     * @param IncrementalMigrationId 增量导入任务ID
+     * Set 增量导入任务ID，由CreateIncrementalMigration接口返回
+     * @param IncrementalMigrationId 增量导入任务ID，由CreateIncrementalMigration接口返回
      */
     public void setIncrementalMigrationId(String IncrementalMigrationId) {
         this.IncrementalMigrationId = IncrementalMigrationId;
     }
 
     /**
-     * Get 是否需要恢复，NO-不需要，YES-需要 
-     * @return IsRecovery 是否需要恢复，NO-不需要，YES-需要
+     * Get 是否需要恢复，NO-不需要，YES-需要，默认不修改增量备份导入任务是否需要恢复的属性。 
+     * @return IsRecovery 是否需要恢复，NO-不需要，YES-需要，默认不修改增量备份导入任务是否需要恢复的属性。
      */
     public String getIsRecovery() {
         return this.IsRecovery;
     }
 
     /**
-     * Set 是否需要恢复，NO-不需要，YES-需要
-     * @param IsRecovery 是否需要恢复，NO-不需要，YES-需要
+     * Set 是否需要恢复，NO-不需要，YES-需要，默认不修改增量备份导入任务是否需要恢复的属性。
+     * @param IsRecovery 是否需要恢复，NO-不需要，YES-需要，默认不修改增量备份导入任务是否需要恢复的属性。
      */
     public void setIsRecovery(String IsRecovery) {
         this.IsRecovery = IsRecovery;

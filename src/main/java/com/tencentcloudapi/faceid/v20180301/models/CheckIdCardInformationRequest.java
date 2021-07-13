@@ -63,6 +63,14 @@ Config = {"CopyWarn":true,"ReshootWarn":true}
     private String Config;
 
     /**
+    * 是否需要对返回中的敏感信息进行加密。默认false。
+其中敏感信息包括：Response.IdNum、Response.Name
+    */
+    @SerializedName("IsEncrypt")
+    @Expose
+    private Boolean IsEncrypt;
+
+    /**
      * Get 身份证人像面的 Base64 值
 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
 支持的图片大小：所下载图片经Base64编码后不超过 7M。
@@ -186,6 +194,26 @@ Config = {"CopyWarn":true,"ReshootWarn":true}
         this.Config = Config;
     }
 
+    /**
+     * Get 是否需要对返回中的敏感信息进行加密。默认false。
+其中敏感信息包括：Response.IdNum、Response.Name 
+     * @return IsEncrypt 是否需要对返回中的敏感信息进行加密。默认false。
+其中敏感信息包括：Response.IdNum、Response.Name
+     */
+    public Boolean getIsEncrypt() {
+        return this.IsEncrypt;
+    }
+
+    /**
+     * Set 是否需要对返回中的敏感信息进行加密。默认false。
+其中敏感信息包括：Response.IdNum、Response.Name
+     * @param IsEncrypt 是否需要对返回中的敏感信息进行加密。默认false。
+其中敏感信息包括：Response.IdNum、Response.Name
+     */
+    public void setIsEncrypt(Boolean IsEncrypt) {
+        this.IsEncrypt = IsEncrypt;
+    }
+
     public CheckIdCardInformationRequest() {
     }
 
@@ -203,6 +231,9 @@ Config = {"CopyWarn":true,"ReshootWarn":true}
         if (source.Config != null) {
             this.Config = new String(source.Config);
         }
+        if (source.IsEncrypt != null) {
+            this.IsEncrypt = new Boolean(source.IsEncrypt);
+        }
     }
 
 
@@ -213,6 +244,7 @@ Config = {"CopyWarn":true,"ReshootWarn":true}
         this.setParamSimple(map, prefix + "ImageBase64", this.ImageBase64);
         this.setParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
         this.setParamSimple(map, prefix + "Config", this.Config);
+        this.setParamSimple(map, prefix + "IsEncrypt", this.IsEncrypt);
 
     }
 }

@@ -93,6 +93,9 @@ public enum TcbErrorCode {
     // 未知参数错误。
      UNKNOWNPARAMETER("UnknownParameter"),
      
+    // 操作不支持。
+     UNSUPPORTEDOPERATION("UnsupportedOperation"),
+     
     // 有正在进行中的任务。
      UNSUPPORTEDOPERATION_TASKEXISTED("UnsupportedOperation.TaskExisted");
      

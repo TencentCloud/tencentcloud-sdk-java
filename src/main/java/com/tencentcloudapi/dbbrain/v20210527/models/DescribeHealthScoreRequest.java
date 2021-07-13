@@ -30,7 +30,7 @@ public class DescribeHealthScoreRequest extends AbstractModel{
     private String InstanceId;
 
     /**
-    * 获取健康得分的时间。
+    * 获取健康得分的时间，时间格式如：2019-09-10 12:13:14。
     */
     @SerializedName("Time")
     @Expose
@@ -60,16 +60,16 @@ public class DescribeHealthScoreRequest extends AbstractModel{
     }
 
     /**
-     * Get 获取健康得分的时间。 
-     * @return Time 获取健康得分的时间。
+     * Get 获取健康得分的时间，时间格式如：2019-09-10 12:13:14。 
+     * @return Time 获取健康得分的时间，时间格式如：2019-09-10 12:13:14。
      */
     public String getTime() {
         return this.Time;
     }
 
     /**
-     * Set 获取健康得分的时间。
-     * @param Time 获取健康得分的时间。
+     * Set 获取健康得分的时间，时间格式如：2019-09-10 12:13:14。
+     * @param Time 获取健康得分的时间，时间格式如：2019-09-10 12:13:14。
      */
     public void setTime(String Time) {
         this.Time = Time;

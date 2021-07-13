@@ -93,6 +93,34 @@ public class DescribeEnvLimitResponse extends AbstractModel{
     private Long CurrentFreeTrialNum;
 
     /**
+    * 转支付限额总数
+    */
+    @SerializedName("ChangePayTotal")
+    @Expose
+    private Long ChangePayTotal;
+
+    /**
+    * 当前已用转支付次数
+    */
+    @SerializedName("CurrentChangePayTotal")
+    @Expose
+    private Long CurrentChangePayTotal;
+
+    /**
+    * 转支付每月限额
+    */
+    @SerializedName("ChangePayMonthly")
+    @Expose
+    private Long ChangePayMonthly;
+
+    /**
+    * 本月已用转支付额度
+    */
+    @SerializedName("CurrentChangePayMonthly")
+    @Expose
+    private Long CurrentChangePayMonthly;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -260,6 +288,70 @@ public class DescribeEnvLimitResponse extends AbstractModel{
     }
 
     /**
+     * Get 转支付限额总数 
+     * @return ChangePayTotal 转支付限额总数
+     */
+    public Long getChangePayTotal() {
+        return this.ChangePayTotal;
+    }
+
+    /**
+     * Set 转支付限额总数
+     * @param ChangePayTotal 转支付限额总数
+     */
+    public void setChangePayTotal(Long ChangePayTotal) {
+        this.ChangePayTotal = ChangePayTotal;
+    }
+
+    /**
+     * Get 当前已用转支付次数 
+     * @return CurrentChangePayTotal 当前已用转支付次数
+     */
+    public Long getCurrentChangePayTotal() {
+        return this.CurrentChangePayTotal;
+    }
+
+    /**
+     * Set 当前已用转支付次数
+     * @param CurrentChangePayTotal 当前已用转支付次数
+     */
+    public void setCurrentChangePayTotal(Long CurrentChangePayTotal) {
+        this.CurrentChangePayTotal = CurrentChangePayTotal;
+    }
+
+    /**
+     * Get 转支付每月限额 
+     * @return ChangePayMonthly 转支付每月限额
+     */
+    public Long getChangePayMonthly() {
+        return this.ChangePayMonthly;
+    }
+
+    /**
+     * Set 转支付每月限额
+     * @param ChangePayMonthly 转支付每月限额
+     */
+    public void setChangePayMonthly(Long ChangePayMonthly) {
+        this.ChangePayMonthly = ChangePayMonthly;
+    }
+
+    /**
+     * Get 本月已用转支付额度 
+     * @return CurrentChangePayMonthly 本月已用转支付额度
+     */
+    public Long getCurrentChangePayMonthly() {
+        return this.CurrentChangePayMonthly;
+    }
+
+    /**
+     * Set 本月已用转支付额度
+     * @param CurrentChangePayMonthly 本月已用转支付额度
+     */
+    public void setCurrentChangePayMonthly(Long CurrentChangePayMonthly) {
+        this.CurrentChangePayMonthly = CurrentChangePayMonthly;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -313,6 +405,18 @@ public class DescribeEnvLimitResponse extends AbstractModel{
         if (source.CurrentFreeTrialNum != null) {
             this.CurrentFreeTrialNum = new Long(source.CurrentFreeTrialNum);
         }
+        if (source.ChangePayTotal != null) {
+            this.ChangePayTotal = new Long(source.ChangePayTotal);
+        }
+        if (source.CurrentChangePayTotal != null) {
+            this.CurrentChangePayTotal = new Long(source.CurrentChangePayTotal);
+        }
+        if (source.ChangePayMonthly != null) {
+            this.ChangePayMonthly = new Long(source.ChangePayMonthly);
+        }
+        if (source.CurrentChangePayMonthly != null) {
+            this.CurrentChangePayMonthly = new Long(source.CurrentChangePayMonthly);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -333,6 +437,10 @@ public class DescribeEnvLimitResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "CurrentDeleteMonthly", this.CurrentDeleteMonthly);
         this.setParamSimple(map, prefix + "MaxFreeTrialNum", this.MaxFreeTrialNum);
         this.setParamSimple(map, prefix + "CurrentFreeTrialNum", this.CurrentFreeTrialNum);
+        this.setParamSimple(map, prefix + "ChangePayTotal", this.ChangePayTotal);
+        this.setParamSimple(map, prefix + "CurrentChangePayTotal", this.CurrentChangePayTotal);
+        this.setParamSimple(map, prefix + "ChangePayMonthly", this.ChangePayMonthly);
+        this.setParamSimple(map, prefix + "CurrentChangePayMonthly", this.CurrentChangePayMonthly);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

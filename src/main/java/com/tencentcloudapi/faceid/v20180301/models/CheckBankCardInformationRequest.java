@@ -30,6 +30,13 @@ public class CheckBankCardInformationRequest extends AbstractModel{
     private String BankCard;
 
     /**
+    * 敏感数据加密信息。对传入信息（银行卡号）有加密需求的用户可使用此参数，详情请点击左侧链接。
+    */
+    @SerializedName("Encryption")
+    @Expose
+    private Encryption Encryption;
+
+    /**
      * Get 银行卡号。 
      * @return BankCard 银行卡号。
      */
@@ -45,6 +52,22 @@ public class CheckBankCardInformationRequest extends AbstractModel{
         this.BankCard = BankCard;
     }
 
+    /**
+     * Get 敏感数据加密信息。对传入信息（银行卡号）有加密需求的用户可使用此参数，详情请点击左侧链接。 
+     * @return Encryption 敏感数据加密信息。对传入信息（银行卡号）有加密需求的用户可使用此参数，详情请点击左侧链接。
+     */
+    public Encryption getEncryption() {
+        return this.Encryption;
+    }
+
+    /**
+     * Set 敏感数据加密信息。对传入信息（银行卡号）有加密需求的用户可使用此参数，详情请点击左侧链接。
+     * @param Encryption 敏感数据加密信息。对传入信息（银行卡号）有加密需求的用户可使用此参数，详情请点击左侧链接。
+     */
+    public void setEncryption(Encryption Encryption) {
+        this.Encryption = Encryption;
+    }
+
     public CheckBankCardInformationRequest() {
     }
 
@@ -56,6 +79,9 @@ public class CheckBankCardInformationRequest extends AbstractModel{
         if (source.BankCard != null) {
             this.BankCard = new String(source.BankCard);
         }
+        if (source.Encryption != null) {
+            this.Encryption = new Encryption(source.Encryption);
+        }
     }
 
 
@@ -64,6 +90,7 @@ public class CheckBankCardInformationRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "BankCard", this.BankCard);
+        this.setParamObj(map, prefix + "Encryption.", this.Encryption);
 
     }
 }

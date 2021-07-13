@@ -37,7 +37,7 @@ public class CreateVideoDepositRequest extends AbstractModel{
     private String FileContent;
 
     /**
-    * 对应数据Base64文件名称
+    * 带后缀的文件名称，如music.mkv
     */
     @SerializedName("FileName")
     @Expose
@@ -104,16 +104,16 @@ public class CreateVideoDepositRequest extends AbstractModel{
     }
 
     /**
-     * Get 对应数据Base64文件名称 
-     * @return FileName 对应数据Base64文件名称
+     * Get 带后缀的文件名称，如music.mkv 
+     * @return FileName 带后缀的文件名称，如music.mkv
      */
     public String getFileName() {
         return this.FileName;
     }
 
     /**
-     * Set 对应数据Base64文件名称
-     * @param FileName 对应数据Base64文件名称
+     * Set 带后缀的文件名称，如music.mkv
+     * @param FileName 带后缀的文件名称，如music.mkv
      */
     public void setFileName(String FileName) {
         this.FileName = FileName;

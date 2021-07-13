@@ -519,6 +519,26 @@ public class CamClient extends AbstractClient{
     }
 
     /**
+     *查询安全设置(国际站)
+     * @param req DescribeSafeAuthFlagIntlRequest
+     * @return DescribeSafeAuthFlagIntlResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSafeAuthFlagIntlResponse DescribeSafeAuthFlagIntl(DescribeSafeAuthFlagIntlRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeSafeAuthFlagIntlResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeSafeAuthFlagIntlResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeSafeAuthFlagIntl");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *通过子用户UIN列表查询子用户
      * @param req DescribeSubAccountsRequest
      * @return DescribeSubAccountsResponse
@@ -591,6 +611,26 @@ public class CamClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DetachUserPolicyResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DetachUserPolicy");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询账户摘要 
+     * @param req GetAccountSummaryRequest
+     * @return GetAccountSummaryResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetAccountSummaryResponse GetAccountSummary(GetAccountSummaryRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetAccountSummaryResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetAccountSummaryResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "GetAccountSummary");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

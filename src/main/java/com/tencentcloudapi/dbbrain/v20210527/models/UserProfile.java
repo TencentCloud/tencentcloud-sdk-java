@@ -31,7 +31,7 @@ public class UserProfile extends AbstractModel{
     private String ProfileId;
 
     /**
-    * 配置类型。
+    * 配置类型，支持值包括："dbScan_mail_configuration" - 数据库巡检邮件配置，"scheduler_mail_configuration" - 定期生成邮件配置。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProfileType")
@@ -39,7 +39,7 @@ public class UserProfile extends AbstractModel{
     private String ProfileType;
 
     /**
-    * 配置级别，"User"或"Instance"。
+    * 配置级别，支持值包括："User" - 用户级别，"Instance" - 实例级别，其中数据库巡检邮件配置为用户级别，定期生成邮件配置为实例级别。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProfileLevel")
@@ -82,9 +82,9 @@ public class UserProfile extends AbstractModel{
     }
 
     /**
-     * Get 配置类型。
+     * Get 配置类型，支持值包括："dbScan_mail_configuration" - 数据库巡检邮件配置，"scheduler_mail_configuration" - 定期生成邮件配置。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ProfileType 配置类型。
+     * @return ProfileType 配置类型，支持值包括："dbScan_mail_configuration" - 数据库巡检邮件配置，"scheduler_mail_configuration" - 定期生成邮件配置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProfileType() {
@@ -92,9 +92,9 @@ public class UserProfile extends AbstractModel{
     }
 
     /**
-     * Set 配置类型。
+     * Set 配置类型，支持值包括："dbScan_mail_configuration" - 数据库巡检邮件配置，"scheduler_mail_configuration" - 定期生成邮件配置。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ProfileType 配置类型。
+     * @param ProfileType 配置类型，支持值包括："dbScan_mail_configuration" - 数据库巡检邮件配置，"scheduler_mail_configuration" - 定期生成邮件配置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProfileType(String ProfileType) {
@@ -102,9 +102,9 @@ public class UserProfile extends AbstractModel{
     }
 
     /**
-     * Get 配置级别，"User"或"Instance"。
+     * Get 配置级别，支持值包括："User" - 用户级别，"Instance" - 实例级别，其中数据库巡检邮件配置为用户级别，定期生成邮件配置为实例级别。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ProfileLevel 配置级别，"User"或"Instance"。
+     * @return ProfileLevel 配置级别，支持值包括："User" - 用户级别，"Instance" - 实例级别，其中数据库巡检邮件配置为用户级别，定期生成邮件配置为实例级别。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProfileLevel() {
@@ -112,9 +112,9 @@ public class UserProfile extends AbstractModel{
     }
 
     /**
-     * Set 配置级别，"User"或"Instance"。
+     * Set 配置级别，支持值包括："User" - 用户级别，"Instance" - 实例级别，其中数据库巡检邮件配置为用户级别，定期生成邮件配置为实例级别。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ProfileLevel 配置级别，"User"或"Instance"。
+     * @param ProfileLevel 配置级别，支持值包括："User" - 用户级别，"Instance" - 实例级别，其中数据库巡检邮件配置为用户级别，定期生成邮件配置为实例级别。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProfileLevel(String ProfileLevel) {

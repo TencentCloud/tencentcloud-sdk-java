@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class AddUserContactRequest extends AbstractModel{
 
     /**
-    * 联系人姓名，大小写字母+数字+下划线，最小 2 位最大 60 位的长度， 不能以"_"开头，且联系人名保持唯一。
+    * 联系人姓名，由中英文、数字、空格、!@#$%^&*()_+-=（）组成，不能以下划线开头，长度在20以内。
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 邮箱地址，大小写字母、数字及下划线组成， 不能以"_"开头。
+    * 邮箱地址，支持大小写字母、数字、下划线及@字符， 不能以下划线开头，邮箱地址不可重复。
     */
     @SerializedName("ContactInfo")
     @Expose
@@ -44,32 +44,32 @@ public class AddUserContactRequest extends AbstractModel{
     private String Product;
 
     /**
-     * Get 联系人姓名，大小写字母+数字+下划线，最小 2 位最大 60 位的长度， 不能以"_"开头，且联系人名保持唯一。 
-     * @return Name 联系人姓名，大小写字母+数字+下划线，最小 2 位最大 60 位的长度， 不能以"_"开头，且联系人名保持唯一。
+     * Get 联系人姓名，由中英文、数字、空格、!@#$%^&*()_+-=（）组成，不能以下划线开头，长度在20以内。 
+     * @return Name 联系人姓名，由中英文、数字、空格、!@#$%^&*()_+-=（）组成，不能以下划线开头，长度在20以内。
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 联系人姓名，大小写字母+数字+下划线，最小 2 位最大 60 位的长度， 不能以"_"开头，且联系人名保持唯一。
-     * @param Name 联系人姓名，大小写字母+数字+下划线，最小 2 位最大 60 位的长度， 不能以"_"开头，且联系人名保持唯一。
+     * Set 联系人姓名，由中英文、数字、空格、!@#$%^&*()_+-=（）组成，不能以下划线开头，长度在20以内。
+     * @param Name 联系人姓名，由中英文、数字、空格、!@#$%^&*()_+-=（）组成，不能以下划线开头，长度在20以内。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 邮箱地址，大小写字母、数字及下划线组成， 不能以"_"开头。 
-     * @return ContactInfo 邮箱地址，大小写字母、数字及下划线组成， 不能以"_"开头。
+     * Get 邮箱地址，支持大小写字母、数字、下划线及@字符， 不能以下划线开头，邮箱地址不可重复。 
+     * @return ContactInfo 邮箱地址，支持大小写字母、数字、下划线及@字符， 不能以下划线开头，邮箱地址不可重复。
      */
     public String getContactInfo() {
         return this.ContactInfo;
     }
 
     /**
-     * Set 邮箱地址，大小写字母、数字及下划线组成， 不能以"_"开头。
-     * @param ContactInfo 邮箱地址，大小写字母、数字及下划线组成， 不能以"_"开头。
+     * Set 邮箱地址，支持大小写字母、数字、下划线及@字符， 不能以下划线开头，邮箱地址不可重复。
+     * @param ContactInfo 邮箱地址，支持大小写字母、数字、下划线及@字符， 不能以下划线开头，邮箱地址不可重复。
      */
     public void setContactInfo(String ContactInfo) {
         this.ContactInfo = ContactInfo;

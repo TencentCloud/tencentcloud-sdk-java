@@ -44,7 +44,7 @@ public class DiagHistoryEventItem extends AbstractModel{
     private String StartTime;
 
     /**
-    * 事件 ID 。
+    * 事件唯一ID 。
     */
     @SerializedName("EventId")
     @Expose
@@ -58,14 +58,14 @@ public class DiagHistoryEventItem extends AbstractModel{
     private Long Severity;
 
     /**
-    * 概要。
+    * 诊断概要。
     */
     @SerializedName("Outline")
     @Expose
     private String Outline;
 
     /**
-    * 诊断项。
+    * 诊断项说明。
     */
     @SerializedName("DiagItem")
     @Expose
@@ -73,14 +73,13 @@ public class DiagHistoryEventItem extends AbstractModel{
 
     /**
     * 实例 ID 。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 保留字段
+    * 保留字段。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Metric")
@@ -88,8 +87,7 @@ public class DiagHistoryEventItem extends AbstractModel{
     private String Metric;
 
     /**
-    * 地域
-注意：此字段可能返回 null，表示取不到有效值。
+    * 地域。
     */
     @SerializedName("Region")
     @Expose
@@ -144,16 +142,16 @@ public class DiagHistoryEventItem extends AbstractModel{
     }
 
     /**
-     * Get 事件 ID 。 
-     * @return EventId 事件 ID 。
+     * Get 事件唯一ID 。 
+     * @return EventId 事件唯一ID 。
      */
     public Long getEventId() {
         return this.EventId;
     }
 
     /**
-     * Set 事件 ID 。
-     * @param EventId 事件 ID 。
+     * Set 事件唯一ID 。
+     * @param EventId 事件唯一ID 。
      */
     public void setEventId(Long EventId) {
         this.EventId = EventId;
@@ -176,42 +174,40 @@ public class DiagHistoryEventItem extends AbstractModel{
     }
 
     /**
-     * Get 概要。 
-     * @return Outline 概要。
+     * Get 诊断概要。 
+     * @return Outline 诊断概要。
      */
     public String getOutline() {
         return this.Outline;
     }
 
     /**
-     * Set 概要。
-     * @param Outline 概要。
+     * Set 诊断概要。
+     * @param Outline 诊断概要。
      */
     public void setOutline(String Outline) {
         this.Outline = Outline;
     }
 
     /**
-     * Get 诊断项。 
-     * @return DiagItem 诊断项。
+     * Get 诊断项说明。 
+     * @return DiagItem 诊断项说明。
      */
     public String getDiagItem() {
         return this.DiagItem;
     }
 
     /**
-     * Set 诊断项。
-     * @param DiagItem 诊断项。
+     * Set 诊断项说明。
+     * @param DiagItem 诊断项说明。
      */
     public void setDiagItem(String DiagItem) {
         this.DiagItem = DiagItem;
     }
 
     /**
-     * Get 实例 ID 。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例 ID 。 
      * @return InstanceId 实例 ID 。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceId() {
         return this.InstanceId;
@@ -219,18 +215,16 @@ public class DiagHistoryEventItem extends AbstractModel{
 
     /**
      * Set 实例 ID 。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceId 实例 ID 。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 保留字段
+     * Get 保留字段。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Metric 保留字段
+     * @return Metric 保留字段。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMetric() {
@@ -238,9 +232,9 @@ public class DiagHistoryEventItem extends AbstractModel{
     }
 
     /**
-     * Set 保留字段
+     * Set 保留字段。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Metric 保留字段
+     * @param Metric 保留字段。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMetric(String Metric) {
@@ -248,20 +242,16 @@ public class DiagHistoryEventItem extends AbstractModel{
     }
 
     /**
-     * Get 地域
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Region 地域
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 地域。 
+     * @return Region 地域。
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set 地域
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Region 地域
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 地域。
+     * @param Region 地域。
      */
     public void setRegion(String Region) {
         this.Region = Region;

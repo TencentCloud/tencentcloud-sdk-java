@@ -72,6 +72,14 @@ public class Environment extends AbstractModel{
     private String NamespaceName;
 
     /**
+    * Topic数量
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TopicNum")
+    @Expose
+    private Long TopicNum;
+
+    /**
      * Get 命名空间名称 
      * @return EnvironmentId 命名空间名称
      */
@@ -183,6 +191,26 @@ public class Environment extends AbstractModel{
         this.NamespaceName = NamespaceName;
     }
 
+    /**
+     * Get Topic数量
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TopicNum Topic数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getTopicNum() {
+        return this.TopicNum;
+    }
+
+    /**
+     * Set Topic数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TopicNum Topic数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTopicNum(Long TopicNum) {
+        this.TopicNum = TopicNum;
+    }
+
     public Environment() {
     }
 
@@ -212,6 +240,9 @@ public class Environment extends AbstractModel{
         if (source.NamespaceName != null) {
             this.NamespaceName = new String(source.NamespaceName);
         }
+        if (source.TopicNum != null) {
+            this.TopicNum = new Long(source.TopicNum);
+        }
     }
 
 
@@ -226,6 +257,7 @@ public class Environment extends AbstractModel{
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamSimple(map, prefix + "NamespaceId", this.NamespaceId);
         this.setParamSimple(map, prefix + "NamespaceName", this.NamespaceName);
+        this.setParamSimple(map, prefix + "TopicNum", this.TopicNum);
 
     }
 }

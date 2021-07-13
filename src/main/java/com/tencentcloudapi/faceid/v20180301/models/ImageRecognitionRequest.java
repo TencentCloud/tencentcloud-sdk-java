@@ -53,6 +53,13 @@ Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
     private String Optional;
 
     /**
+    * 敏感数据加密信息。对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。
+    */
+    @SerializedName("Encryption")
+    @Expose
+    private Encryption Encryption;
+
+    /**
      * Get 身份证号 
      * @return IdCard 身份证号
      */
@@ -124,6 +131,22 @@ Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
         this.Optional = Optional;
     }
 
+    /**
+     * Get 敏感数据加密信息。对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。 
+     * @return Encryption 敏感数据加密信息。对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。
+     */
+    public Encryption getEncryption() {
+        return this.Encryption;
+    }
+
+    /**
+     * Set 敏感数据加密信息。对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。
+     * @param Encryption 敏感数据加密信息。对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。
+     */
+    public void setEncryption(Encryption Encryption) {
+        this.Encryption = Encryption;
+    }
+
     public ImageRecognitionRequest() {
     }
 
@@ -144,6 +167,9 @@ Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
         if (source.Optional != null) {
             this.Optional = new String(source.Optional);
         }
+        if (source.Encryption != null) {
+            this.Encryption = new Encryption(source.Encryption);
+        }
     }
 
 
@@ -155,6 +181,7 @@ Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "ImageBase64", this.ImageBase64);
         this.setParamSimple(map, prefix + "Optional", this.Optional);
+        this.setParamObj(map, prefix + "Encryption.", this.Encryption);
 
     }
 }

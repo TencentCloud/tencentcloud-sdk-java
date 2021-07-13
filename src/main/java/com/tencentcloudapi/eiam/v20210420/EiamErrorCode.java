@@ -121,7 +121,10 @@ public enum EiamErrorCode {
      INVALIDPARAMETER_PARAMETERLLLEGAL("InvalidParameter.Parameterlllegal"),
      
     // 输入密码不合法。
-     INVALIDPARAMETER_PASSWORDISILLEGAL("InvalidParameter.PasswordIsIllegal");
+     INVALIDPARAMETER_PASSWORDISILLEGAL("InvalidParameter.PasswordIsIllegal"),
+     
+    // Uin不存在。
+     OPERATIONDENIED_UINNOTEXISTED("OperationDenied.UinNotExisted");
      
     private String value;
     private EiamErrorCode (String value){

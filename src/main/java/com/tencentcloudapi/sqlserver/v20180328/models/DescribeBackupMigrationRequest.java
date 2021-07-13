@@ -72,28 +72,28 @@ public class DescribeBackupMigrationRequest extends AbstractModel{
     private String UploadType;
 
     /**
-    * 分页，页大小
+    * 分页，页大小，默认值：100
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 分页，页数
+    * 分页，页数，默认值：0
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 排序字段，name,createTime,startTime,endTime
+    * 排序字段，name；createTime；startTime；endTime，默认按照createTime递增排序。
     */
     @SerializedName("OrderBy")
     @Expose
     private String OrderBy;
 
     /**
-    * 排序方式，desc,asc
+    * 排序方式，desc-递减排序，asc-递增排序。默认按照asc排序，且在OrderBy为有效值时，本参数有效
     */
     @SerializedName("OrderByType")
     @Expose
@@ -212,64 +212,64 @@ public class DescribeBackupMigrationRequest extends AbstractModel{
     }
 
     /**
-     * Get 分页，页大小 
-     * @return Limit 分页，页大小
+     * Get 分页，页大小，默认值：100 
+     * @return Limit 分页，页大小，默认值：100
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 分页，页大小
-     * @param Limit 分页，页大小
+     * Set 分页，页大小，默认值：100
+     * @param Limit 分页，页大小，默认值：100
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 分页，页数 
-     * @return Offset 分页，页数
+     * Get 分页，页数，默认值：0 
+     * @return Offset 分页，页数，默认值：0
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 分页，页数
-     * @param Offset 分页，页数
+     * Set 分页，页数，默认值：0
+     * @param Offset 分页，页数，默认值：0
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 排序字段，name,createTime,startTime,endTime 
-     * @return OrderBy 排序字段，name,createTime,startTime,endTime
+     * Get 排序字段，name；createTime；startTime；endTime，默认按照createTime递增排序。 
+     * @return OrderBy 排序字段，name；createTime；startTime；endTime，默认按照createTime递增排序。
      */
     public String getOrderBy() {
         return this.OrderBy;
     }
 
     /**
-     * Set 排序字段，name,createTime,startTime,endTime
-     * @param OrderBy 排序字段，name,createTime,startTime,endTime
+     * Set 排序字段，name；createTime；startTime；endTime，默认按照createTime递增排序。
+     * @param OrderBy 排序字段，name；createTime；startTime；endTime，默认按照createTime递增排序。
      */
     public void setOrderBy(String OrderBy) {
         this.OrderBy = OrderBy;
     }
 
     /**
-     * Get 排序方式，desc,asc 
-     * @return OrderByType 排序方式，desc,asc
+     * Get 排序方式，desc-递减排序，asc-递增排序。默认按照asc排序，且在OrderBy为有效值时，本参数有效 
+     * @return OrderByType 排序方式，desc-递减排序，asc-递增排序。默认按照asc排序，且在OrderBy为有效值时，本参数有效
      */
     public String getOrderByType() {
         return this.OrderByType;
     }
 
     /**
-     * Set 排序方式，desc,asc
-     * @param OrderByType 排序方式，desc,asc
+     * Set 排序方式，desc-递减排序，asc-递增排序。默认按照asc排序，且在OrderBy为有效值时，本参数有效
+     * @param OrderByType 排序方式，desc-递减排序，asc-递增排序。默认按照asc排序，且在OrderBy为有效值时，本参数有效
      */
     public void setOrderByType(String OrderByType) {
         this.OrderByType = OrderByType;

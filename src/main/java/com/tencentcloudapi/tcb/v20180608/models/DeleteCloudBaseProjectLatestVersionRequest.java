@@ -37,6 +37,13 @@ public class DeleteCloudBaseProjectLatestVersionRequest extends AbstractModel{
     private String ProjectName;
 
     /**
+    * 是否保留资源
+    */
+    @SerializedName("KeepResource")
+    @Expose
+    private Boolean KeepResource;
+
+    /**
      * Get 环境id 
      * @return EnvId 环境id
      */
@@ -68,6 +75,22 @@ public class DeleteCloudBaseProjectLatestVersionRequest extends AbstractModel{
         this.ProjectName = ProjectName;
     }
 
+    /**
+     * Get 是否保留资源 
+     * @return KeepResource 是否保留资源
+     */
+    public Boolean getKeepResource() {
+        return this.KeepResource;
+    }
+
+    /**
+     * Set 是否保留资源
+     * @param KeepResource 是否保留资源
+     */
+    public void setKeepResource(Boolean KeepResource) {
+        this.KeepResource = KeepResource;
+    }
+
     public DeleteCloudBaseProjectLatestVersionRequest() {
     }
 
@@ -82,6 +105,9 @@ public class DeleteCloudBaseProjectLatestVersionRequest extends AbstractModel{
         if (source.ProjectName != null) {
             this.ProjectName = new String(source.ProjectName);
         }
+        if (source.KeepResource != null) {
+            this.KeepResource = new Boolean(source.KeepResource);
+        }
     }
 
 
@@ -91,6 +117,7 @@ public class DeleteCloudBaseProjectLatestVersionRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "EnvId", this.EnvId);
         this.setParamSimple(map, prefix + "ProjectName", this.ProjectName);
+        this.setParamSimple(map, prefix + "KeepResource", this.KeepResource);
 
     }
 }
