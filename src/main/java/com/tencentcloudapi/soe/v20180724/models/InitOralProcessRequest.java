@@ -41,14 +41,14 @@ public class InitOralProcessRequest extends AbstractModel{
     */
     @SerializedName("WorkMode")
     @Expose
-    private Long WorkMode;
+    private Integer WorkMode;
 
     /**
     * 评估模式，0：词模式（中文评测模式下为文字模式），1：句子模式，2：段落模式，3：自由说模式，当为词模式评估时，能够提供每个音节的评估信息，当为句子模式时，能够提供完整度和流利度信息。4: 英文单词音素诊断评测模式，针对一个单词音素诊断评测。
     */
     @SerializedName("EvalMode")
     @Expose
-    private Long EvalMode;
+    private Integer EvalMode;
 
     /**
     * 评价苛刻指数，取值为[1.0 - 4.0]范围内的浮点数，用于平滑不同年龄段的分数，1.0为小年龄段，4.0为最高年龄段
@@ -69,42 +69,42 @@ public class InitOralProcessRequest extends AbstractModel{
     */
     @SerializedName("IsLongLifeSession")
     @Expose
-    private Long IsLongLifeSession;
+    private Integer IsLongLifeSession;
 
     /**
     * 音频存储模式，0：不存储，1：存储到公共对象存储，输出结果为该会话最后一个分片TransmitOralProcess 返回结果 AudioUrl 字段，2：永久存储音频，需要提工单申请，会产生一定存储费用，3：自定义存储，将音频存储到自定义的腾讯云[对象存储](https://cloud.tencent.com/product/cos)中，需要提工单登记存储信息。
     */
     @SerializedName("StorageMode")
     @Expose
-    private Long StorageMode;
+    private Integer StorageMode;
 
     /**
     * 输出断句中间结果标识，0：不输出，1：输出，通过设置该参数，可以在评估过程中的分片传输请求中，返回已经评估断句的中间结果，中间结果可用于客户端 UI 更新，输出结果为TransmitOralProcess请求返回结果 SentenceInfoSet 字段。
     */
     @SerializedName("SentenceInfoEnabled")
     @Expose
-    private Long SentenceInfoEnabled;
+    private Integer SentenceInfoEnabled;
 
     /**
     * 评估语言，0：英文，1：中文。
     */
     @SerializedName("ServerType")
     @Expose
-    private Long ServerType;
+    private Integer ServerType;
 
     /**
     * 异步模式标识，0：同步模式，1：异步模式，可选值参考[服务模式](https://cloud.tencent.com/document/product/884/33697)。
     */
     @SerializedName("IsAsync")
     @Expose
-    private Long IsAsync;
+    private Integer IsAsync;
 
     /**
     * 输入文本模式，0: 普通文本，1：[音素结构](https://cloud.tencent.com/document/product/884/33698)文本。2：音素注册模式（提工单注册需要使用音素的单词）。
     */
     @SerializedName("TextMode")
     @Expose
-    private Long TextMode;
+    private Integer TextMode;
 
     /**
      * Get 语音段唯一标识，一段语音一个SessionId 
@@ -142,7 +142,7 @@ public class InitOralProcessRequest extends AbstractModel{
      * Get 语音输入模式，0：流式分片，1：非流式一次性评估 
      * @return WorkMode 语音输入模式，0：流式分片，1：非流式一次性评估
      */
-    public Long getWorkMode() {
+    public Integer getWorkMode() {
         return this.WorkMode;
     }
 
@@ -150,7 +150,7 @@ public class InitOralProcessRequest extends AbstractModel{
      * Set 语音输入模式，0：流式分片，1：非流式一次性评估
      * @param WorkMode 语音输入模式，0：流式分片，1：非流式一次性评估
      */
-    public void setWorkMode(Long WorkMode) {
+    public void setWorkMode(Integer WorkMode) {
         this.WorkMode = WorkMode;
     }
 
@@ -158,7 +158,7 @@ public class InitOralProcessRequest extends AbstractModel{
      * Get 评估模式，0：词模式（中文评测模式下为文字模式），1：句子模式，2：段落模式，3：自由说模式，当为词模式评估时，能够提供每个音节的评估信息，当为句子模式时，能够提供完整度和流利度信息。4: 英文单词音素诊断评测模式，针对一个单词音素诊断评测。 
      * @return EvalMode 评估模式，0：词模式（中文评测模式下为文字模式），1：句子模式，2：段落模式，3：自由说模式，当为词模式评估时，能够提供每个音节的评估信息，当为句子模式时，能够提供完整度和流利度信息。4: 英文单词音素诊断评测模式，针对一个单词音素诊断评测。
      */
-    public Long getEvalMode() {
+    public Integer getEvalMode() {
         return this.EvalMode;
     }
 
@@ -166,7 +166,7 @@ public class InitOralProcessRequest extends AbstractModel{
      * Set 评估模式，0：词模式（中文评测模式下为文字模式），1：句子模式，2：段落模式，3：自由说模式，当为词模式评估时，能够提供每个音节的评估信息，当为句子模式时，能够提供完整度和流利度信息。4: 英文单词音素诊断评测模式，针对一个单词音素诊断评测。
      * @param EvalMode 评估模式，0：词模式（中文评测模式下为文字模式），1：句子模式，2：段落模式，3：自由说模式，当为词模式评估时，能够提供每个音节的评估信息，当为句子模式时，能够提供完整度和流利度信息。4: 英文单词音素诊断评测模式，针对一个单词音素诊断评测。
      */
-    public void setEvalMode(Long EvalMode) {
+    public void setEvalMode(Integer EvalMode) {
         this.EvalMode = EvalMode;
     }
 
@@ -206,7 +206,7 @@ public class InitOralProcessRequest extends AbstractModel{
      * Get 长效session标识，当该参数为1时，session的持续时间为300s，但会一定程度上影响第一个数据包的返回速度，且TransmitOralProcess必须同时为1才可生效。 
      * @return IsLongLifeSession 长效session标识，当该参数为1时，session的持续时间为300s，但会一定程度上影响第一个数据包的返回速度，且TransmitOralProcess必须同时为1才可生效。
      */
-    public Long getIsLongLifeSession() {
+    public Integer getIsLongLifeSession() {
         return this.IsLongLifeSession;
     }
 
@@ -214,7 +214,7 @@ public class InitOralProcessRequest extends AbstractModel{
      * Set 长效session标识，当该参数为1时，session的持续时间为300s，但会一定程度上影响第一个数据包的返回速度，且TransmitOralProcess必须同时为1才可生效。
      * @param IsLongLifeSession 长效session标识，当该参数为1时，session的持续时间为300s，但会一定程度上影响第一个数据包的返回速度，且TransmitOralProcess必须同时为1才可生效。
      */
-    public void setIsLongLifeSession(Long IsLongLifeSession) {
+    public void setIsLongLifeSession(Integer IsLongLifeSession) {
         this.IsLongLifeSession = IsLongLifeSession;
     }
 
@@ -222,7 +222,7 @@ public class InitOralProcessRequest extends AbstractModel{
      * Get 音频存储模式，0：不存储，1：存储到公共对象存储，输出结果为该会话最后一个分片TransmitOralProcess 返回结果 AudioUrl 字段，2：永久存储音频，需要提工单申请，会产生一定存储费用，3：自定义存储，将音频存储到自定义的腾讯云[对象存储](https://cloud.tencent.com/product/cos)中，需要提工单登记存储信息。 
      * @return StorageMode 音频存储模式，0：不存储，1：存储到公共对象存储，输出结果为该会话最后一个分片TransmitOralProcess 返回结果 AudioUrl 字段，2：永久存储音频，需要提工单申请，会产生一定存储费用，3：自定义存储，将音频存储到自定义的腾讯云[对象存储](https://cloud.tencent.com/product/cos)中，需要提工单登记存储信息。
      */
-    public Long getStorageMode() {
+    public Integer getStorageMode() {
         return this.StorageMode;
     }
 
@@ -230,7 +230,7 @@ public class InitOralProcessRequest extends AbstractModel{
      * Set 音频存储模式，0：不存储，1：存储到公共对象存储，输出结果为该会话最后一个分片TransmitOralProcess 返回结果 AudioUrl 字段，2：永久存储音频，需要提工单申请，会产生一定存储费用，3：自定义存储，将音频存储到自定义的腾讯云[对象存储](https://cloud.tencent.com/product/cos)中，需要提工单登记存储信息。
      * @param StorageMode 音频存储模式，0：不存储，1：存储到公共对象存储，输出结果为该会话最后一个分片TransmitOralProcess 返回结果 AudioUrl 字段，2：永久存储音频，需要提工单申请，会产生一定存储费用，3：自定义存储，将音频存储到自定义的腾讯云[对象存储](https://cloud.tencent.com/product/cos)中，需要提工单登记存储信息。
      */
-    public void setStorageMode(Long StorageMode) {
+    public void setStorageMode(Integer StorageMode) {
         this.StorageMode = StorageMode;
     }
 
@@ -238,7 +238,7 @@ public class InitOralProcessRequest extends AbstractModel{
      * Get 输出断句中间结果标识，0：不输出，1：输出，通过设置该参数，可以在评估过程中的分片传输请求中，返回已经评估断句的中间结果，中间结果可用于客户端 UI 更新，输出结果为TransmitOralProcess请求返回结果 SentenceInfoSet 字段。 
      * @return SentenceInfoEnabled 输出断句中间结果标识，0：不输出，1：输出，通过设置该参数，可以在评估过程中的分片传输请求中，返回已经评估断句的中间结果，中间结果可用于客户端 UI 更新，输出结果为TransmitOralProcess请求返回结果 SentenceInfoSet 字段。
      */
-    public Long getSentenceInfoEnabled() {
+    public Integer getSentenceInfoEnabled() {
         return this.SentenceInfoEnabled;
     }
 
@@ -246,7 +246,7 @@ public class InitOralProcessRequest extends AbstractModel{
      * Set 输出断句中间结果标识，0：不输出，1：输出，通过设置该参数，可以在评估过程中的分片传输请求中，返回已经评估断句的中间结果，中间结果可用于客户端 UI 更新，输出结果为TransmitOralProcess请求返回结果 SentenceInfoSet 字段。
      * @param SentenceInfoEnabled 输出断句中间结果标识，0：不输出，1：输出，通过设置该参数，可以在评估过程中的分片传输请求中，返回已经评估断句的中间结果，中间结果可用于客户端 UI 更新，输出结果为TransmitOralProcess请求返回结果 SentenceInfoSet 字段。
      */
-    public void setSentenceInfoEnabled(Long SentenceInfoEnabled) {
+    public void setSentenceInfoEnabled(Integer SentenceInfoEnabled) {
         this.SentenceInfoEnabled = SentenceInfoEnabled;
     }
 
@@ -254,7 +254,7 @@ public class InitOralProcessRequest extends AbstractModel{
      * Get 评估语言，0：英文，1：中文。 
      * @return ServerType 评估语言，0：英文，1：中文。
      */
-    public Long getServerType() {
+    public Integer getServerType() {
         return this.ServerType;
     }
 
@@ -262,7 +262,7 @@ public class InitOralProcessRequest extends AbstractModel{
      * Set 评估语言，0：英文，1：中文。
      * @param ServerType 评估语言，0：英文，1：中文。
      */
-    public void setServerType(Long ServerType) {
+    public void setServerType(Integer ServerType) {
         this.ServerType = ServerType;
     }
 
@@ -270,7 +270,7 @@ public class InitOralProcessRequest extends AbstractModel{
      * Get 异步模式标识，0：同步模式，1：异步模式，可选值参考[服务模式](https://cloud.tencent.com/document/product/884/33697)。 
      * @return IsAsync 异步模式标识，0：同步模式，1：异步模式，可选值参考[服务模式](https://cloud.tencent.com/document/product/884/33697)。
      */
-    public Long getIsAsync() {
+    public Integer getIsAsync() {
         return this.IsAsync;
     }
 
@@ -278,7 +278,7 @@ public class InitOralProcessRequest extends AbstractModel{
      * Set 异步模式标识，0：同步模式，1：异步模式，可选值参考[服务模式](https://cloud.tencent.com/document/product/884/33697)。
      * @param IsAsync 异步模式标识，0：同步模式，1：异步模式，可选值参考[服务模式](https://cloud.tencent.com/document/product/884/33697)。
      */
-    public void setIsAsync(Long IsAsync) {
+    public void setIsAsync(Integer IsAsync) {
         this.IsAsync = IsAsync;
     }
 
@@ -286,7 +286,7 @@ public class InitOralProcessRequest extends AbstractModel{
      * Get 输入文本模式，0: 普通文本，1：[音素结构](https://cloud.tencent.com/document/product/884/33698)文本。2：音素注册模式（提工单注册需要使用音素的单词）。 
      * @return TextMode 输入文本模式，0: 普通文本，1：[音素结构](https://cloud.tencent.com/document/product/884/33698)文本。2：音素注册模式（提工单注册需要使用音素的单词）。
      */
-    public Long getTextMode() {
+    public Integer getTextMode() {
         return this.TextMode;
     }
 
@@ -294,7 +294,7 @@ public class InitOralProcessRequest extends AbstractModel{
      * Set 输入文本模式，0: 普通文本，1：[音素结构](https://cloud.tencent.com/document/product/884/33698)文本。2：音素注册模式（提工单注册需要使用音素的单词）。
      * @param TextMode 输入文本模式，0: 普通文本，1：[音素结构](https://cloud.tencent.com/document/product/884/33698)文本。2：音素注册模式（提工单注册需要使用音素的单词）。
      */
-    public void setTextMode(Long TextMode) {
+    public void setTextMode(Integer TextMode) {
         this.TextMode = TextMode;
     }
 
@@ -313,10 +313,10 @@ public class InitOralProcessRequest extends AbstractModel{
             this.RefText = new String(source.RefText);
         }
         if (source.WorkMode != null) {
-            this.WorkMode = new Long(source.WorkMode);
+            this.WorkMode = new Integer(source.WorkMode);
         }
         if (source.EvalMode != null) {
-            this.EvalMode = new Long(source.EvalMode);
+            this.EvalMode = new Integer(source.EvalMode);
         }
         if (source.ScoreCoeff != null) {
             this.ScoreCoeff = new Float(source.ScoreCoeff);
@@ -325,22 +325,22 @@ public class InitOralProcessRequest extends AbstractModel{
             this.SoeAppId = new String(source.SoeAppId);
         }
         if (source.IsLongLifeSession != null) {
-            this.IsLongLifeSession = new Long(source.IsLongLifeSession);
+            this.IsLongLifeSession = new Integer(source.IsLongLifeSession);
         }
         if (source.StorageMode != null) {
-            this.StorageMode = new Long(source.StorageMode);
+            this.StorageMode = new Integer(source.StorageMode);
         }
         if (source.SentenceInfoEnabled != null) {
-            this.SentenceInfoEnabled = new Long(source.SentenceInfoEnabled);
+            this.SentenceInfoEnabled = new Integer(source.SentenceInfoEnabled);
         }
         if (source.ServerType != null) {
-            this.ServerType = new Long(source.ServerType);
+            this.ServerType = new Integer(source.ServerType);
         }
         if (source.IsAsync != null) {
-            this.IsAsync = new Long(source.IsAsync);
+            this.IsAsync = new Integer(source.IsAsync);
         }
         if (source.TextMode != null) {
-            this.TextMode = new Long(source.TextMode);
+            this.TextMode = new Integer(source.TextMode);
         }
     }
 

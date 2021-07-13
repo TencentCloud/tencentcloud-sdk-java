@@ -27,14 +27,14 @@ public class PhoneInfo extends AbstractModel{
     */
     @SerializedName("MemBeginTime")
     @Expose
-    private Long MemBeginTime;
+    private Integer MemBeginTime;
 
     /**
     * 当前音节语音终止时间点，单位为ms
     */
     @SerializedName("MemEndTime")
     @Expose
-    private Long MemEndTime;
+    private Integer MemEndTime;
 
     /**
     * 音节发音准确度，取值范围[-1, 100]，当取-1时指完全不匹配
@@ -76,7 +76,7 @@ public class PhoneInfo extends AbstractModel{
     */
     @SerializedName("MatchTag")
     @Expose
-    private Long MatchTag;
+    private Integer MatchTag;
 
     /**
     * 参考字符，在单词诊断模式下，代表音素对应的原始文本
@@ -89,7 +89,7 @@ public class PhoneInfo extends AbstractModel{
      * Get 当前音节语音起始时间点，单位为ms 
      * @return MemBeginTime 当前音节语音起始时间点，单位为ms
      */
-    public Long getMemBeginTime() {
+    public Integer getMemBeginTime() {
         return this.MemBeginTime;
     }
 
@@ -97,7 +97,7 @@ public class PhoneInfo extends AbstractModel{
      * Set 当前音节语音起始时间点，单位为ms
      * @param MemBeginTime 当前音节语音起始时间点，单位为ms
      */
-    public void setMemBeginTime(Long MemBeginTime) {
+    public void setMemBeginTime(Integer MemBeginTime) {
         this.MemBeginTime = MemBeginTime;
     }
 
@@ -105,7 +105,7 @@ public class PhoneInfo extends AbstractModel{
      * Get 当前音节语音终止时间点，单位为ms 
      * @return MemEndTime 当前音节语音终止时间点，单位为ms
      */
-    public Long getMemEndTime() {
+    public Integer getMemEndTime() {
         return this.MemEndTime;
     }
 
@@ -113,7 +113,7 @@ public class PhoneInfo extends AbstractModel{
      * Set 当前音节语音终止时间点，单位为ms
      * @param MemEndTime 当前音节语音终止时间点，单位为ms
      */
-    public void setMemEndTime(Long MemEndTime) {
+    public void setMemEndTime(Integer MemEndTime) {
         this.MemEndTime = MemEndTime;
     }
 
@@ -201,7 +201,7 @@ public class PhoneInfo extends AbstractModel{
      * Get 当前词与输入语句的匹配情况，0：匹配单词、1：新增单词、2：缺少单词、3：错读的词、4：未录入单词。 
      * @return MatchTag 当前词与输入语句的匹配情况，0：匹配单词、1：新增单词、2：缺少单词、3：错读的词、4：未录入单词。
      */
-    public Long getMatchTag() {
+    public Integer getMatchTag() {
         return this.MatchTag;
     }
 
@@ -209,7 +209,7 @@ public class PhoneInfo extends AbstractModel{
      * Set 当前词与输入语句的匹配情况，0：匹配单词、1：新增单词、2：缺少单词、3：错读的词、4：未录入单词。
      * @param MatchTag 当前词与输入语句的匹配情况，0：匹配单词、1：新增单词、2：缺少单词、3：错读的词、4：未录入单词。
      */
-    public void setMatchTag(Long MatchTag) {
+    public void setMatchTag(Integer MatchTag) {
         this.MatchTag = MatchTag;
     }
 
@@ -238,10 +238,10 @@ public class PhoneInfo extends AbstractModel{
      */
     public PhoneInfo(PhoneInfo source) {
         if (source.MemBeginTime != null) {
-            this.MemBeginTime = new Long(source.MemBeginTime);
+            this.MemBeginTime = new Integer(source.MemBeginTime);
         }
         if (source.MemEndTime != null) {
-            this.MemEndTime = new Long(source.MemEndTime);
+            this.MemEndTime = new Integer(source.MemEndTime);
         }
         if (source.PronAccuracy != null) {
             this.PronAccuracy = new Float(source.PronAccuracy);
@@ -259,7 +259,7 @@ public class PhoneInfo extends AbstractModel{
             this.ReferencePhone = new String(source.ReferencePhone);
         }
         if (source.MatchTag != null) {
-            this.MatchTag = new Long(source.MatchTag);
+            this.MatchTag = new Integer(source.MatchTag);
         }
         if (source.ReferenceLetter != null) {
             this.ReferenceLetter = new String(source.ReferenceLetter);
