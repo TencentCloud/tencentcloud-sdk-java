@@ -30,7 +30,7 @@ public class SplitShardConfig extends AbstractModel{
     private String [] ShardInstanceIds;
 
     /**
-    * 数据切分比例
+    * 数据切分比例，固定50%
     */
     @SerializedName("SplitRate")
     @Expose
@@ -67,16 +67,16 @@ public class SplitShardConfig extends AbstractModel{
     }
 
     /**
-     * Get 数据切分比例 
-     * @return SplitRate 数据切分比例
+     * Get 数据切分比例，固定50% 
+     * @return SplitRate 数据切分比例，固定50%
      */
     public Long getSplitRate() {
         return this.SplitRate;
     }
 
     /**
-     * Set 数据切分比例
-     * @param SplitRate 数据切分比例
+     * Set 数据切分比例，固定50%
+     * @param SplitRate 数据切分比例，固定50%
      */
     public void setSplitRate(Long SplitRate) {
         this.SplitRate = SplitRate;

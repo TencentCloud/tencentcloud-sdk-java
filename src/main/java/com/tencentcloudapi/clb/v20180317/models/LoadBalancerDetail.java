@@ -279,6 +279,14 @@ Public：公网属性， Private：内网属性。
     private Long LoadBalancerPassToTarget;
 
     /**
+    * 后端目标健康状态。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TargetHealth")
+    @Expose
+    private String TargetHealth;
+
+    /**
      * Get 负载均衡实例 ID。 
      * @return LoadBalancerId 负载均衡实例 ID。
      */
@@ -918,6 +926,26 @@ Public：公网属性， Private：内网属性。
         this.LoadBalancerPassToTarget = LoadBalancerPassToTarget;
     }
 
+    /**
+     * Get 后端目标健康状态。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TargetHealth 后端目标健康状态。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTargetHealth() {
+        return this.TargetHealth;
+    }
+
+    /**
+     * Set 后端目标健康状态。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TargetHealth 后端目标健康状态。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTargetHealth(String TargetHealth) {
+        this.TargetHealth = TargetHealth;
+    }
+
     public LoadBalancerDetail() {
     }
 
@@ -1028,6 +1056,9 @@ Public：公网属性， Private：内网属性。
         if (source.LoadBalancerPassToTarget != null) {
             this.LoadBalancerPassToTarget = new Long(source.LoadBalancerPassToTarget);
         }
+        if (source.TargetHealth != null) {
+            this.TargetHealth = new String(source.TargetHealth);
+        }
     }
 
 
@@ -1067,6 +1098,7 @@ Public：公网属性， Private：内网属性。
         this.setParamSimple(map, prefix + "Isolation", this.Isolation);
         this.setParamArraySimple(map, prefix + "SecurityGroup.", this.SecurityGroup);
         this.setParamSimple(map, prefix + "LoadBalancerPassToTarget", this.LoadBalancerPassToTarget);
+        this.setParamSimple(map, prefix + "TargetHealth", this.TargetHealth);
 
     }
 }

@@ -422,7 +422,7 @@ public class DcdbClient extends AbstractClient{
     }
 
     /**
-     *本接口（DescribeDCDBUpgradePrice）用于查询升级分布式数据库实例价格。
+     *本接口（DescribeDCDBUpgradePrice）用于查询变配分布式数据库实例价格。
      * @param req DescribeDCDBUpgradePriceRequest
      * @return DescribeDCDBUpgradePriceResponse
      * @throws TencentCloudSDKException

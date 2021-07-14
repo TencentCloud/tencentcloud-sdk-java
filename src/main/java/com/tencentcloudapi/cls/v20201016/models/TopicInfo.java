@@ -104,6 +104,14 @@ public class TopicInfo extends AbstractModel{
     private String StorageType;
 
     /**
+    * 生命周期，单位为天
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Period")
+    @Expose
+    private Long Period;
+
+    /**
      * Get 日志集ID 
      * @return LogsetId 日志集ID
      */
@@ -295,6 +303,26 @@ public class TopicInfo extends AbstractModel{
         this.StorageType = StorageType;
     }
 
+    /**
+     * Get 生命周期，单位为天
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Period 生命周期，单位为天
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getPeriod() {
+        return this.Period;
+    }
+
+    /**
+     * Set 生命周期，单位为天
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Period 生命周期，单位为天
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPeriod(Long Period) {
+        this.Period = Period;
+    }
+
     public TopicInfo() {
     }
 
@@ -339,6 +367,9 @@ public class TopicInfo extends AbstractModel{
         if (source.StorageType != null) {
             this.StorageType = new String(source.StorageType);
         }
+        if (source.Period != null) {
+            this.Period = new Long(source.Period);
+        }
     }
 
 
@@ -357,6 +388,7 @@ public class TopicInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "AutoSplit", this.AutoSplit);
         this.setParamSimple(map, prefix + "MaxSplitPartitions", this.MaxSplitPartitions);
         this.setParamSimple(map, prefix + "StorageType", this.StorageType);
+        this.setParamSimple(map, prefix + "Period", this.Period);
 
     }
 }

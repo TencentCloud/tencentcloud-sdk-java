@@ -48,6 +48,14 @@ key为自定义参数名称，value为该参数的默认取值。kv均为字符�
     private String Parameters;
 
     /**
+    * 在 CVM 或 Lighthouse 实例中执行命令的用户名称。
+使用最小权限执行命令是权限管理的最佳实践，建议您以普通用户身份执行云助手命令。若不填，默认以 Command 配置的 Username 执行。
+    */
+    @SerializedName("Username")
+    @Expose
+    private String Username;
+
+    /**
      * Get 待触发的命令ID。 
      * @return CommandId 待触发的命令ID。
      */
@@ -111,6 +119,26 @@ key为自定义参数名称，value为该参数的默认取值。kv均为字符�
         this.Parameters = Parameters;
     }
 
+    /**
+     * Get 在 CVM 或 Lighthouse 实例中执行命令的用户名称。
+使用最小权限执行命令是权限管理的最佳实践，建议您以普通用户身份执行云助手命令。若不填，默认以 Command 配置的 Username 执行。 
+     * @return Username 在 CVM 或 Lighthouse 实例中执行命令的用户名称。
+使用最小权限执行命令是权限管理的最佳实践，建议您以普通用户身份执行云助手命令。若不填，默认以 Command 配置的 Username 执行。
+     */
+    public String getUsername() {
+        return this.Username;
+    }
+
+    /**
+     * Set 在 CVM 或 Lighthouse 实例中执行命令的用户名称。
+使用最小权限执行命令是权限管理的最佳实践，建议您以普通用户身份执行云助手命令。若不填，默认以 Command 配置的 Username 执行。
+     * @param Username 在 CVM 或 Lighthouse 实例中执行命令的用户名称。
+使用最小权限执行命令是权限管理的最佳实践，建议您以普通用户身份执行云助手命令。若不填，默认以 Command 配置的 Username 执行。
+     */
+    public void setUsername(String Username) {
+        this.Username = Username;
+    }
+
     public InvokeCommandRequest() {
     }
 
@@ -131,6 +159,9 @@ key为自定义参数名称，value为该参数的默认取值。kv均为字符�
         if (source.Parameters != null) {
             this.Parameters = new String(source.Parameters);
         }
+        if (source.Username != null) {
+            this.Username = new String(source.Username);
+        }
     }
 
 
@@ -141,6 +172,7 @@ key为自定义参数名称，value为该参数的默认取值。kv均为字符�
         this.setParamSimple(map, prefix + "CommandId", this.CommandId);
         this.setParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
         this.setParamSimple(map, prefix + "Parameters", this.Parameters);
+        this.setParamSimple(map, prefix + "Username", this.Username);
 
     }
 }

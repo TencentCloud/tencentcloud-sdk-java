@@ -122,6 +122,14 @@ key为自定义参数名称，value为该参数的默认取值。kv均为字符�
     private Tag [] Tags;
 
     /**
+    * 在 CVM 或 Lighthouse 实例中执行命令的用户名称。
+使用最小权限执行命令是权限管理的最佳实践，建议您以普通用户身份执行云助手命令。默认情况下，在Linux实例中以root用户执行命令。
+    */
+    @SerializedName("Username")
+    @Expose
+    private String Username;
+
+    /**
      * Get Base64编码后的命令内容，长度不可超过64KB。 
      * @return Content Base64编码后的命令内容，长度不可超过64KB。
      */
@@ -373,6 +381,26 @@ key为自定义参数名称，value为该参数的默认取值。kv均为字符�
         this.Tags = Tags;
     }
 
+    /**
+     * Get 在 CVM 或 Lighthouse 实例中执行命令的用户名称。
+使用最小权限执行命令是权限管理的最佳实践，建议您以普通用户身份执行云助手命令。默认情况下，在Linux实例中以root用户执行命令。 
+     * @return Username 在 CVM 或 Lighthouse 实例中执行命令的用户名称。
+使用最小权限执行命令是权限管理的最佳实践，建议您以普通用户身份执行云助手命令。默认情况下，在Linux实例中以root用户执行命令。
+     */
+    public String getUsername() {
+        return this.Username;
+    }
+
+    /**
+     * Set 在 CVM 或 Lighthouse 实例中执行命令的用户名称。
+使用最小权限执行命令是权限管理的最佳实践，建议您以普通用户身份执行云助手命令。默认情况下，在Linux实例中以root用户执行命令。
+     * @param Username 在 CVM 或 Lighthouse 实例中执行命令的用户名称。
+使用最小权限执行命令是权限管理的最佳实践，建议您以普通用户身份执行云助手命令。默认情况下，在Linux实例中以root用户执行命令。
+     */
+    public void setUsername(String Username) {
+        this.Username = Username;
+    }
+
     public RunCommandRequest() {
     }
 
@@ -423,6 +451,9 @@ key为自定义参数名称，value为该参数的默认取值。kv均为字符�
                 this.Tags[i] = new Tag(source.Tags[i]);
             }
         }
+        if (source.Username != null) {
+            this.Username = new String(source.Username);
+        }
     }
 
 
@@ -442,6 +473,7 @@ key为自定义参数名称，value为该参数的默认取值。kv均为字符�
         this.setParamSimple(map, prefix + "DefaultParameters", this.DefaultParameters);
         this.setParamSimple(map, prefix + "Parameters", this.Parameters);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "Username", this.Username);
 
     }
 }

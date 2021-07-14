@@ -79,6 +79,26 @@ public class TcrClient extends AbstractClient{
     }
 
     /**
+     *用于校验企业版实例信息
+     * @param req CheckInstanceRequest
+     * @return CheckInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CheckInstanceResponse CheckInstance(CheckInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CheckInstanceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CheckInstanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CheckInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *检查待创建的实例名称是否符合规范
      * @param req CheckInstanceNameRequest
      * @return CheckInstanceNameResponse

@@ -133,6 +133,30 @@ public class NatGateway extends AbstractModel{
     private String [] SecurityGroupSet;
 
     /**
+    * NAT网关的SNAT转发规则。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SourceIpTranslationNatRuleSet")
+    @Expose
+    private SourceIpTranslationNatRule [] SourceIpTranslationNatRuleSet;
+
+    /**
+    * 是否独享型NAT。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsExclusive")
+    @Expose
+    private Boolean IsExclusive;
+
+    /**
+    * 独享型NAT所在的网关集群的带宽(单位:Mbps)，当IsExclusive为false时无此字段。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ExclusiveGatewayBandwidth")
+    @Expose
+    private Long ExclusiveGatewayBandwidth;
+
+    /**
      * Get NAT网关的ID。 
      * @return NatGatewayId NAT网关的ID。
      */
@@ -392,6 +416,66 @@ public class NatGateway extends AbstractModel{
         this.SecurityGroupSet = SecurityGroupSet;
     }
 
+    /**
+     * Get NAT网关的SNAT转发规则。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SourceIpTranslationNatRuleSet NAT网关的SNAT转发规则。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public SourceIpTranslationNatRule [] getSourceIpTranslationNatRuleSet() {
+        return this.SourceIpTranslationNatRuleSet;
+    }
+
+    /**
+     * Set NAT网关的SNAT转发规则。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SourceIpTranslationNatRuleSet NAT网关的SNAT转发规则。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSourceIpTranslationNatRuleSet(SourceIpTranslationNatRule [] SourceIpTranslationNatRuleSet) {
+        this.SourceIpTranslationNatRuleSet = SourceIpTranslationNatRuleSet;
+    }
+
+    /**
+     * Get 是否独享型NAT。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsExclusive 是否独享型NAT。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getIsExclusive() {
+        return this.IsExclusive;
+    }
+
+    /**
+     * Set 是否独享型NAT。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsExclusive 是否独享型NAT。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsExclusive(Boolean IsExclusive) {
+        this.IsExclusive = IsExclusive;
+    }
+
+    /**
+     * Get 独享型NAT所在的网关集群的带宽(单位:Mbps)，当IsExclusive为false时无此字段。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ExclusiveGatewayBandwidth 独享型NAT所在的网关集群的带宽(单位:Mbps)，当IsExclusive为false时无此字段。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getExclusiveGatewayBandwidth() {
+        return this.ExclusiveGatewayBandwidth;
+    }
+
+    /**
+     * Set 独享型NAT所在的网关集群的带宽(单位:Mbps)，当IsExclusive为false时无此字段。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ExclusiveGatewayBandwidth 独享型NAT所在的网关集群的带宽(单位:Mbps)，当IsExclusive为false时无此字段。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setExclusiveGatewayBandwidth(Long ExclusiveGatewayBandwidth) {
+        this.ExclusiveGatewayBandwidth = ExclusiveGatewayBandwidth;
+    }
+
     public NatGateway() {
     }
 
@@ -460,6 +544,18 @@ public class NatGateway extends AbstractModel{
                 this.SecurityGroupSet[i] = new String(source.SecurityGroupSet[i]);
             }
         }
+        if (source.SourceIpTranslationNatRuleSet != null) {
+            this.SourceIpTranslationNatRuleSet = new SourceIpTranslationNatRule[source.SourceIpTranslationNatRuleSet.length];
+            for (int i = 0; i < source.SourceIpTranslationNatRuleSet.length; i++) {
+                this.SourceIpTranslationNatRuleSet[i] = new SourceIpTranslationNatRule(source.SourceIpTranslationNatRuleSet[i]);
+            }
+        }
+        if (source.IsExclusive != null) {
+            this.IsExclusive = new Boolean(source.IsExclusive);
+        }
+        if (source.ExclusiveGatewayBandwidth != null) {
+            this.ExclusiveGatewayBandwidth = new Long(source.ExclusiveGatewayBandwidth);
+        }
     }
 
 
@@ -482,6 +578,9 @@ public class NatGateway extends AbstractModel{
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
         this.setParamArrayObj(map, prefix + "TagSet.", this.TagSet);
         this.setParamArraySimple(map, prefix + "SecurityGroupSet.", this.SecurityGroupSet);
+        this.setParamArrayObj(map, prefix + "SourceIpTranslationNatRuleSet.", this.SourceIpTranslationNatRuleSet);
+        this.setParamSimple(map, prefix + "IsExclusive", this.IsExclusive);
+        this.setParamSimple(map, prefix + "ExclusiveGatewayBandwidth", this.ExclusiveGatewayBandwidth);
 
     }
 }

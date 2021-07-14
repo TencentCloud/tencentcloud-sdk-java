@@ -100,6 +100,55 @@ public class DcnDetailItem extends AbstractModel{
     private Long DcnStatus;
 
     /**
+    * 实例CPU核数
+    */
+    @SerializedName("Cpu")
+    @Expose
+    private Long Cpu;
+
+    /**
+    * 实例内存大小，单位 GB
+    */
+    @SerializedName("Memory")
+    @Expose
+    private Long Memory;
+
+    /**
+    * 实例存储大小，单位 GB
+    */
+    @SerializedName("Storage")
+    @Expose
+    private Long Storage;
+
+    /**
+    * 付费模式
+    */
+    @SerializedName("PayMode")
+    @Expose
+    private Long PayMode;
+
+    /**
+    * 实例创建时间，格式为 2006-01-02 15:04:05
+    */
+    @SerializedName("CreateTime")
+    @Expose
+    private String CreateTime;
+
+    /**
+    * 实例到期时间，格式为 2006-01-02 15:04:05
+    */
+    @SerializedName("PeriodEndTime")
+    @Expose
+    private String PeriodEndTime;
+
+    /**
+    * 1： 主实例（独享型）, 2: 主实例, 3： 灾备实例, 4： 灾备实例（独享型）
+    */
+    @SerializedName("InstanceType")
+    @Expose
+    private Long InstanceType;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -275,6 +324,118 @@ public class DcnDetailItem extends AbstractModel{
         this.DcnStatus = DcnStatus;
     }
 
+    /**
+     * Get 实例CPU核数 
+     * @return Cpu 实例CPU核数
+     */
+    public Long getCpu() {
+        return this.Cpu;
+    }
+
+    /**
+     * Set 实例CPU核数
+     * @param Cpu 实例CPU核数
+     */
+    public void setCpu(Long Cpu) {
+        this.Cpu = Cpu;
+    }
+
+    /**
+     * Get 实例内存大小，单位 GB 
+     * @return Memory 实例内存大小，单位 GB
+     */
+    public Long getMemory() {
+        return this.Memory;
+    }
+
+    /**
+     * Set 实例内存大小，单位 GB
+     * @param Memory 实例内存大小，单位 GB
+     */
+    public void setMemory(Long Memory) {
+        this.Memory = Memory;
+    }
+
+    /**
+     * Get 实例存储大小，单位 GB 
+     * @return Storage 实例存储大小，单位 GB
+     */
+    public Long getStorage() {
+        return this.Storage;
+    }
+
+    /**
+     * Set 实例存储大小，单位 GB
+     * @param Storage 实例存储大小，单位 GB
+     */
+    public void setStorage(Long Storage) {
+        this.Storage = Storage;
+    }
+
+    /**
+     * Get 付费模式 
+     * @return PayMode 付费模式
+     */
+    public Long getPayMode() {
+        return this.PayMode;
+    }
+
+    /**
+     * Set 付费模式
+     * @param PayMode 付费模式
+     */
+    public void setPayMode(Long PayMode) {
+        this.PayMode = PayMode;
+    }
+
+    /**
+     * Get 实例创建时间，格式为 2006-01-02 15:04:05 
+     * @return CreateTime 实例创建时间，格式为 2006-01-02 15:04:05
+     */
+    public String getCreateTime() {
+        return this.CreateTime;
+    }
+
+    /**
+     * Set 实例创建时间，格式为 2006-01-02 15:04:05
+     * @param CreateTime 实例创建时间，格式为 2006-01-02 15:04:05
+     */
+    public void setCreateTime(String CreateTime) {
+        this.CreateTime = CreateTime;
+    }
+
+    /**
+     * Get 实例到期时间，格式为 2006-01-02 15:04:05 
+     * @return PeriodEndTime 实例到期时间，格式为 2006-01-02 15:04:05
+     */
+    public String getPeriodEndTime() {
+        return this.PeriodEndTime;
+    }
+
+    /**
+     * Set 实例到期时间，格式为 2006-01-02 15:04:05
+     * @param PeriodEndTime 实例到期时间，格式为 2006-01-02 15:04:05
+     */
+    public void setPeriodEndTime(String PeriodEndTime) {
+        this.PeriodEndTime = PeriodEndTime;
+    }
+
+    /**
+     * Get 1： 主实例（独享型）, 2: 主实例, 3： 灾备实例, 4： 灾备实例（独享型） 
+     * @return InstanceType 1： 主实例（独享型）, 2: 主实例, 3： 灾备实例, 4： 灾备实例（独享型）
+     */
+    public Long getInstanceType() {
+        return this.InstanceType;
+    }
+
+    /**
+     * Set 1： 主实例（独享型）, 2: 主实例, 3： 灾备实例, 4： 灾备实例（独享型）
+     * @param InstanceType 1： 主实例（独享型）, 2: 主实例, 3： 灾备实例, 4： 灾备实例（独享型）
+     */
+    public void setInstanceType(Long InstanceType) {
+        this.InstanceType = InstanceType;
+    }
+
     public DcnDetailItem() {
     }
 
@@ -316,6 +477,27 @@ public class DcnDetailItem extends AbstractModel{
         if (source.DcnStatus != null) {
             this.DcnStatus = new Long(source.DcnStatus);
         }
+        if (source.Cpu != null) {
+            this.Cpu = new Long(source.Cpu);
+        }
+        if (source.Memory != null) {
+            this.Memory = new Long(source.Memory);
+        }
+        if (source.Storage != null) {
+            this.Storage = new Long(source.Storage);
+        }
+        if (source.PayMode != null) {
+            this.PayMode = new Long(source.PayMode);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.PeriodEndTime != null) {
+            this.PeriodEndTime = new String(source.PeriodEndTime);
+        }
+        if (source.InstanceType != null) {
+            this.InstanceType = new Long(source.InstanceType);
+        }
     }
 
 
@@ -334,6 +516,13 @@ public class DcnDetailItem extends AbstractModel{
         this.setParamSimple(map, prefix + "StatusDesc", this.StatusDesc);
         this.setParamSimple(map, prefix + "DcnFlag", this.DcnFlag);
         this.setParamSimple(map, prefix + "DcnStatus", this.DcnStatus);
+        this.setParamSimple(map, prefix + "Cpu", this.Cpu);
+        this.setParamSimple(map, prefix + "Memory", this.Memory);
+        this.setParamSimple(map, prefix + "Storage", this.Storage);
+        this.setParamSimple(map, prefix + "PayMode", this.PayMode);
+        this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "PeriodEndTime", this.PeriodEndTime);
+        this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
 
     }
 }

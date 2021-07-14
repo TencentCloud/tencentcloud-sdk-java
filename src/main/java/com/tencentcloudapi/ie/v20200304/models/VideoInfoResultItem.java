@@ -32,7 +32,6 @@ public class VideoInfoResultItem extends AbstractModel{
     /**
     * 视频宽度。
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Width")
     @Expose
@@ -40,7 +39,6 @@ public class VideoInfoResultItem extends AbstractModel{
 
     /**
     * 视频高度。
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Height")
@@ -50,7 +48,6 @@ public class VideoInfoResultItem extends AbstractModel{
     /**
     * 视频码率，单位：bps。
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Bitrate")
     @Expose
@@ -58,7 +55,6 @@ public class VideoInfoResultItem extends AbstractModel{
 
     /**
     * 视频帧率，用分数格式表示，如：25/1, 99/32等等。
-注意：此字段可能返回 null，表示取不到有效值 。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Fps")
@@ -68,7 +64,6 @@ public class VideoInfoResultItem extends AbstractModel{
     /**
     * 编码格式，如h264,h265等等 。
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Codec")
     @Expose
@@ -76,7 +71,6 @@ public class VideoInfoResultItem extends AbstractModel{
 
     /**
     * 播放旋转角度，可选值0-360。
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Rotate")
@@ -86,7 +80,6 @@ public class VideoInfoResultItem extends AbstractModel{
     /**
     * 视频时长，单位：ms 。
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Duration")
     @Expose
@@ -94,7 +87,6 @@ public class VideoInfoResultItem extends AbstractModel{
 
     /**
     * 颜色空间，如yuv420p，yuv444p等等。
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PixFormat")
@@ -119,10 +111,8 @@ public class VideoInfoResultItem extends AbstractModel{
 
     /**
      * Get 视频宽度。
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Width 视频宽度。
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getWidth() {
@@ -132,9 +122,7 @@ public class VideoInfoResultItem extends AbstractModel{
     /**
      * Set 视频宽度。
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Width 视频宽度。
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWidth(Long Width) {
@@ -143,10 +131,8 @@ public class VideoInfoResultItem extends AbstractModel{
 
     /**
      * Get 视频高度。
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Height 视频高度。
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getHeight() {
@@ -156,9 +142,7 @@ public class VideoInfoResultItem extends AbstractModel{
     /**
      * Set 视频高度。
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Height 视频高度。
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHeight(Long Height) {
@@ -167,10 +151,8 @@ public class VideoInfoResultItem extends AbstractModel{
 
     /**
      * Get 视频码率，单位：bps。
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Bitrate 视频码率，单位：bps。
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getBitrate() {
@@ -180,9 +162,7 @@ public class VideoInfoResultItem extends AbstractModel{
     /**
      * Set 视频码率，单位：bps。
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Bitrate 视频码率，单位：bps。
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBitrate(Long Bitrate) {
@@ -191,10 +171,8 @@ public class VideoInfoResultItem extends AbstractModel{
 
     /**
      * Get 视频帧率，用分数格式表示，如：25/1, 99/32等等。
-注意：此字段可能返回 null，表示取不到有效值 。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Fps 视频帧率，用分数格式表示，如：25/1, 99/32等等。
-注意：此字段可能返回 null，表示取不到有效值 。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFps() {
@@ -203,10 +181,8 @@ public class VideoInfoResultItem extends AbstractModel{
 
     /**
      * Set 视频帧率，用分数格式表示，如：25/1, 99/32等等。
-注意：此字段可能返回 null，表示取不到有效值 。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Fps 视频帧率，用分数格式表示，如：25/1, 99/32等等。
-注意：此字段可能返回 null，表示取不到有效值 。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFps(String Fps) {
@@ -215,10 +191,8 @@ public class VideoInfoResultItem extends AbstractModel{
 
     /**
      * Get 编码格式，如h264,h265等等 。
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Codec 编码格式，如h264,h265等等 。
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCodec() {
@@ -228,9 +202,7 @@ public class VideoInfoResultItem extends AbstractModel{
     /**
      * Set 编码格式，如h264,h265等等 。
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Codec 编码格式，如h264,h265等等 。
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCodec(String Codec) {
@@ -239,10 +211,8 @@ public class VideoInfoResultItem extends AbstractModel{
 
     /**
      * Get 播放旋转角度，可选值0-360。
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Rotate 播放旋转角度，可选值0-360。
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRotate() {
@@ -252,9 +222,7 @@ public class VideoInfoResultItem extends AbstractModel{
     /**
      * Set 播放旋转角度，可选值0-360。
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Rotate 播放旋转角度，可选值0-360。
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRotate(Long Rotate) {
@@ -263,10 +231,8 @@ public class VideoInfoResultItem extends AbstractModel{
 
     /**
      * Get 视频时长，单位：ms 。
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Duration 视频时长，单位：ms 。
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDuration() {
@@ -276,9 +242,7 @@ public class VideoInfoResultItem extends AbstractModel{
     /**
      * Set 视频时长，单位：ms 。
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Duration 视频时长，单位：ms 。
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDuration(Long Duration) {
@@ -287,10 +251,8 @@ public class VideoInfoResultItem extends AbstractModel{
 
     /**
      * Get 颜色空间，如yuv420p，yuv444p等等。
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return PixFormat 颜色空间，如yuv420p，yuv444p等等。
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPixFormat() {
@@ -300,9 +262,7 @@ public class VideoInfoResultItem extends AbstractModel{
     /**
      * Set 颜色空间，如yuv420p，yuv444p等等。
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PixFormat 颜色空间，如yuv420p，yuv444p等等。
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPixFormat(String PixFormat) {

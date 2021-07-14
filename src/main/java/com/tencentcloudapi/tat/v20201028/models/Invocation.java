@@ -113,6 +113,13 @@ public class Invocation extends AbstractModel{
     private String InstanceKind;
 
     /**
+    * 在实例上执行命令时使用的用户名。
+    */
+    @SerializedName("Username")
+    @Expose
+    private String Username;
+
+    /**
      * Get 执行活动ID。 
      * @return InvocationId 执行活动ID。
      */
@@ -328,6 +335,22 @@ public class Invocation extends AbstractModel{
         this.InstanceKind = InstanceKind;
     }
 
+    /**
+     * Get 在实例上执行命令时使用的用户名。 
+     * @return Username 在实例上执行命令时使用的用户名。
+     */
+    public String getUsername() {
+        return this.Username;
+    }
+
+    /**
+     * Set 在实例上执行命令时使用的用户名。
+     * @param Username 在实例上执行命令时使用的用户名。
+     */
+    public void setUsername(String Username) {
+        this.Username = Username;
+    }
+
     public Invocation() {
     }
 
@@ -375,6 +398,9 @@ public class Invocation extends AbstractModel{
         if (source.InstanceKind != null) {
             this.InstanceKind = new String(source.InstanceKind);
         }
+        if (source.Username != null) {
+            this.Username = new String(source.Username);
+        }
     }
 
 
@@ -394,6 +420,7 @@ public class Invocation extends AbstractModel{
         this.setParamSimple(map, prefix + "Parameters", this.Parameters);
         this.setParamSimple(map, prefix + "DefaultParameters", this.DefaultParameters);
         this.setParamSimple(map, prefix + "InstanceKind", this.InstanceKind);
+        this.setParamSimple(map, prefix + "Username", this.Username);
 
     }
 }

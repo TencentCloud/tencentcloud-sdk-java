@@ -98,8 +98,7 @@ public class VideoInfo extends AbstractModel{
     * 编码器支持选项，可选值：
 h264,
 h265,
-av1
-。
+av1。
 不填默认h264。
     */
     @SerializedName("VideoCodec")
@@ -352,14 +351,12 @@ hlg。
      * Get 编码器支持选项，可选值：
 h264,
 h265,
-av1
-。
+av1。
 不填默认h264。 
      * @return VideoCodec 编码器支持选项，可选值：
 h264,
 h265,
-av1
-。
+av1。
 不填默认h264。
      */
     public String getVideoCodec() {
@@ -370,14 +367,12 @@ av1
      * Set 编码器支持选项，可选值：
 h264,
 h265,
-av1
-。
+av1。
 不填默认h264。
      * @param VideoCodec 编码器支持选项，可选值：
 h264,
 h265,
-av1
-。
+av1。
 不填默认h264。
      */
     public void setVideoCodec(String VideoCodec) {

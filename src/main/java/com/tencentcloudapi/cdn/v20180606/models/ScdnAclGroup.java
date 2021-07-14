@@ -37,7 +37,7 @@ public class ScdnAclGroup extends AbstractModel{
     private ScdnAclRule [] Configure;
 
     /**
-    * 规则行为，一般为refuse
+    * 规则行为，一般为refuse，重定向redirect
     */
     @SerializedName("Result")
     @Expose
@@ -49,6 +49,14 @@ public class ScdnAclGroup extends AbstractModel{
     @SerializedName("Status")
     @Expose
     private String Status;
+
+    /**
+    * 错误页面配置
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ErrorPage")
+    @Expose
+    private ScdnErrorPage ErrorPage;
 
     /**
      * Get 规则名称 
@@ -83,16 +91,16 @@ public class ScdnAclGroup extends AbstractModel{
     }
 
     /**
-     * Get 规则行为，一般为refuse 
-     * @return Result 规则行为，一般为refuse
+     * Get 规则行为，一般为refuse，重定向redirect 
+     * @return Result 规则行为，一般为refuse，重定向redirect
      */
     public String getResult() {
         return this.Result;
     }
 
     /**
-     * Set 规则行为，一般为refuse
-     * @param Result 规则行为，一般为refuse
+     * Set 规则行为，一般为refuse，重定向redirect
+     * @param Result 规则行为，一般为refuse，重定向redirect
      */
     public void setResult(String Result) {
         this.Result = Result;
@@ -112,6 +120,26 @@ public class ScdnAclGroup extends AbstractModel{
      */
     public void setStatus(String Status) {
         this.Status = Status;
+    }
+
+    /**
+     * Get 错误页面配置
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ErrorPage 错误页面配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ScdnErrorPage getErrorPage() {
+        return this.ErrorPage;
+    }
+
+    /**
+     * Set 错误页面配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ErrorPage 错误页面配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setErrorPage(ScdnErrorPage ErrorPage) {
+        this.ErrorPage = ErrorPage;
     }
 
     public ScdnAclGroup() {
@@ -137,6 +165,9 @@ public class ScdnAclGroup extends AbstractModel{
         if (source.Status != null) {
             this.Status = new String(source.Status);
         }
+        if (source.ErrorPage != null) {
+            this.ErrorPage = new ScdnErrorPage(source.ErrorPage);
+        }
     }
 
 
@@ -148,6 +179,7 @@ public class ScdnAclGroup extends AbstractModel{
         this.setParamArrayObj(map, prefix + "Configure.", this.Configure);
         this.setParamSimple(map, prefix + "Result", this.Result);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamObj(map, prefix + "ErrorPage.", this.ErrorPage);
 
     }
 }

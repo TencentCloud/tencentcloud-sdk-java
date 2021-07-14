@@ -30,7 +30,7 @@ public class ListAuthorizedApplicationsToUserRequest extends AbstractModel{
     private String UserId;
 
     /**
-    * 查询范围是否包括用户关联的用户组、组织机构的应用访问权限。默认为不查询 。传0表示不查询该范围，传1表示应用查询该范围。
+    * 查询范围是否包括用户关联的用户组、组织机构的应用访问权限。默认为不查询 。传false表示不查询该范围，传true表示应用查询该范围。
     */
     @SerializedName("IncludeInheritedAuthorizations")
     @Expose
@@ -53,16 +53,16 @@ public class ListAuthorizedApplicationsToUserRequest extends AbstractModel{
     }
 
     /**
-     * Get 查询范围是否包括用户关联的用户组、组织机构的应用访问权限。默认为不查询 。传0表示不查询该范围，传1表示应用查询该范围。 
-     * @return IncludeInheritedAuthorizations 查询范围是否包括用户关联的用户组、组织机构的应用访问权限。默认为不查询 。传0表示不查询该范围，传1表示应用查询该范围。
+     * Get 查询范围是否包括用户关联的用户组、组织机构的应用访问权限。默认为不查询 。传false表示不查询该范围，传true表示应用查询该范围。 
+     * @return IncludeInheritedAuthorizations 查询范围是否包括用户关联的用户组、组织机构的应用访问权限。默认为不查询 。传false表示不查询该范围，传true表示应用查询该范围。
      */
     public Boolean getIncludeInheritedAuthorizations() {
         return this.IncludeInheritedAuthorizations;
     }
 
     /**
-     * Set 查询范围是否包括用户关联的用户组、组织机构的应用访问权限。默认为不查询 。传0表示不查询该范围，传1表示应用查询该范围。
-     * @param IncludeInheritedAuthorizations 查询范围是否包括用户关联的用户组、组织机构的应用访问权限。默认为不查询 。传0表示不查询该范围，传1表示应用查询该范围。
+     * Set 查询范围是否包括用户关联的用户组、组织机构的应用访问权限。默认为不查询 。传false表示不查询该范围，传true表示应用查询该范围。
+     * @param IncludeInheritedAuthorizations 查询范围是否包括用户关联的用户组、组织机构的应用访问权限。默认为不查询 。传false表示不查询该范围，传true表示应用查询该范围。
      */
     public void setIncludeInheritedAuthorizations(Boolean IncludeInheritedAuthorizations) {
         this.IncludeInheritedAuthorizations = IncludeInheritedAuthorizations;

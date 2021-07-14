@@ -58,6 +58,13 @@ public class ManageReplicationRequest extends AbstractModel{
     private Long DestinationRegionId;
 
     /**
+    * 开启跨主账号实例同步配置项
+    */
+    @SerializedName("PeerReplicationOption")
+    @Expose
+    private PeerReplicationOption PeerReplicationOption;
+
+    /**
      * Get 复制源实例ID 
      * @return SourceRegistryId 复制源实例ID
      */
@@ -137,6 +144,22 @@ public class ManageReplicationRequest extends AbstractModel{
         this.DestinationRegionId = DestinationRegionId;
     }
 
+    /**
+     * Get 开启跨主账号实例同步配置项 
+     * @return PeerReplicationOption 开启跨主账号实例同步配置项
+     */
+    public PeerReplicationOption getPeerReplicationOption() {
+        return this.PeerReplicationOption;
+    }
+
+    /**
+     * Set 开启跨主账号实例同步配置项
+     * @param PeerReplicationOption 开启跨主账号实例同步配置项
+     */
+    public void setPeerReplicationOption(PeerReplicationOption PeerReplicationOption) {
+        this.PeerReplicationOption = PeerReplicationOption;
+    }
+
     public ManageReplicationRequest() {
     }
 
@@ -160,6 +183,9 @@ public class ManageReplicationRequest extends AbstractModel{
         if (source.DestinationRegionId != null) {
             this.DestinationRegionId = new Long(source.DestinationRegionId);
         }
+        if (source.PeerReplicationOption != null) {
+            this.PeerReplicationOption = new PeerReplicationOption(source.PeerReplicationOption);
+        }
     }
 
 
@@ -172,6 +198,7 @@ public class ManageReplicationRequest extends AbstractModel{
         this.setParamObj(map, prefix + "Rule.", this.Rule);
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "DestinationRegionId", this.DestinationRegionId);
+        this.setParamObj(map, prefix + "PeerReplicationOption.", this.PeerReplicationOption);
 
     }
 }

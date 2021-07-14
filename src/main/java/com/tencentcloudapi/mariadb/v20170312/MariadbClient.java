@@ -682,7 +682,7 @@ public class MariadbClient extends AbstractClient{
     }
 
     /**
-     *本接口（DescribeUpgradePrice）用于在扩容云数据库实例时，查询扩容的价格。
+     *本接口（DescribeUpgradePrice）用于在扩容云数据库实例时，查询变配的价格。
      * @param req DescribeUpgradePriceRequest
      * @return DescribeUpgradePriceResponse
      * @throws TencentCloudSDKException

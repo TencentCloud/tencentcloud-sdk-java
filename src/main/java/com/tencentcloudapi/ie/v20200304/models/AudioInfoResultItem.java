@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class AudioInfoResultItem extends AbstractModel{
 
     /**
-    * 音频流的流id
+    * 音频流的流id。
     */
     @SerializedName("Stream")
     @Expose
@@ -31,7 +31,6 @@ public class AudioInfoResultItem extends AbstractModel{
 
     /**
     * 音频采样率 。
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Sample")
@@ -41,7 +40,6 @@ public class AudioInfoResultItem extends AbstractModel{
     /**
     * 音频声道数。
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Channel")
     @Expose
@@ -49,7 +47,6 @@ public class AudioInfoResultItem extends AbstractModel{
 
     /**
     * 编码格式，如aac, mp3等。
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Codec")
@@ -59,7 +56,6 @@ public class AudioInfoResultItem extends AbstractModel{
     /**
     * 码率，单位：bps。
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Bitrate")
     @Expose
@@ -68,23 +64,22 @@ public class AudioInfoResultItem extends AbstractModel{
     /**
     * 音频时长，单位：ms。
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Duration")
     @Expose
     private Long Duration;
 
     /**
-     * Get 音频流的流id 
-     * @return Stream 音频流的流id
+     * Get 音频流的流id。 
+     * @return Stream 音频流的流id。
      */
     public Long getStream() {
         return this.Stream;
     }
 
     /**
-     * Set 音频流的流id
-     * @param Stream 音频流的流id
+     * Set 音频流的流id。
+     * @param Stream 音频流的流id。
      */
     public void setStream(Long Stream) {
         this.Stream = Stream;
@@ -92,10 +87,8 @@ public class AudioInfoResultItem extends AbstractModel{
 
     /**
      * Get 音频采样率 。
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Sample 音频采样率 。
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSample() {
@@ -105,9 +98,7 @@ public class AudioInfoResultItem extends AbstractModel{
     /**
      * Set 音频采样率 。
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Sample 音频采样率 。
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSample(Long Sample) {
@@ -116,10 +107,8 @@ public class AudioInfoResultItem extends AbstractModel{
 
     /**
      * Get 音频声道数。
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Channel 音频声道数。
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getChannel() {
@@ -129,9 +118,7 @@ public class AudioInfoResultItem extends AbstractModel{
     /**
      * Set 音频声道数。
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Channel 音频声道数。
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setChannel(Long Channel) {
@@ -140,10 +127,8 @@ public class AudioInfoResultItem extends AbstractModel{
 
     /**
      * Get 编码格式，如aac, mp3等。
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Codec 编码格式，如aac, mp3等。
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCodec() {
@@ -153,9 +138,7 @@ public class AudioInfoResultItem extends AbstractModel{
     /**
      * Set 编码格式，如aac, mp3等。
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Codec 编码格式，如aac, mp3等。
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCodec(String Codec) {
@@ -164,10 +147,8 @@ public class AudioInfoResultItem extends AbstractModel{
 
     /**
      * Get 码率，单位：bps。
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Bitrate 码率，单位：bps。
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getBitrate() {
@@ -177,9 +158,7 @@ public class AudioInfoResultItem extends AbstractModel{
     /**
      * Set 码率，单位：bps。
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Bitrate 码率，单位：bps。
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBitrate(Long Bitrate) {
@@ -188,10 +167,8 @@ public class AudioInfoResultItem extends AbstractModel{
 
     /**
      * Get 音频时长，单位：ms。
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Duration 音频时长，单位：ms。
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDuration() {
@@ -201,9 +178,7 @@ public class AudioInfoResultItem extends AbstractModel{
     /**
      * Set 音频时长，单位：ms。
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Duration 音频时长，单位：ms。
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDuration(Long Duration) {

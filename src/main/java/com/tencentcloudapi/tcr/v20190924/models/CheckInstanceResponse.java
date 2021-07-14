@@ -13,28 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.dcdb.v20180411.models;
+package com.tencentcloudapi.tcr.v20190924.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DestroyHourDCDBInstanceResponse extends AbstractModel{
+public class CheckInstanceResponse extends AbstractModel{
 
     /**
-    * 异步任务的请求 ID，可使用此 ID [查询异步任务的执行结果](https://cloud.tencent.com/document/product/557/56485)。
+    * 检查结果，true为合法，false为非法
     */
-    @SerializedName("FlowId")
+    @SerializedName("IsValidated")
     @Expose
-    private Long FlowId;
+    private Boolean IsValidated;
 
     /**
-    * 实例 ID，与入参InstanceId一致。
+    * 实例所在的RegionId
     */
-    @SerializedName("InstanceId")
+    @SerializedName("RegionId")
     @Expose
-    private String InstanceId;
+    private Long RegionId;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -44,35 +44,35 @@ public class DestroyHourDCDBInstanceResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 异步任务的请求 ID，可使用此 ID [查询异步任务的执行结果](https://cloud.tencent.com/document/product/557/56485)。 
-     * @return FlowId 异步任务的请求 ID，可使用此 ID [查询异步任务的执行结果](https://cloud.tencent.com/document/product/557/56485)。
+     * Get 检查结果，true为合法，false为非法 
+     * @return IsValidated 检查结果，true为合法，false为非法
      */
-    public Long getFlowId() {
-        return this.FlowId;
+    public Boolean getIsValidated() {
+        return this.IsValidated;
     }
 
     /**
-     * Set 异步任务的请求 ID，可使用此 ID [查询异步任务的执行结果](https://cloud.tencent.com/document/product/557/56485)。
-     * @param FlowId 异步任务的请求 ID，可使用此 ID [查询异步任务的执行结果](https://cloud.tencent.com/document/product/557/56485)。
+     * Set 检查结果，true为合法，false为非法
+     * @param IsValidated 检查结果，true为合法，false为非法
      */
-    public void setFlowId(Long FlowId) {
-        this.FlowId = FlowId;
+    public void setIsValidated(Boolean IsValidated) {
+        this.IsValidated = IsValidated;
     }
 
     /**
-     * Get 实例 ID，与入参InstanceId一致。 
-     * @return InstanceId 实例 ID，与入参InstanceId一致。
+     * Get 实例所在的RegionId 
+     * @return RegionId 实例所在的RegionId
      */
-    public String getInstanceId() {
-        return this.InstanceId;
+    public Long getRegionId() {
+        return this.RegionId;
     }
 
     /**
-     * Set 实例 ID，与入参InstanceId一致。
-     * @param InstanceId 实例 ID，与入参InstanceId一致。
+     * Set 实例所在的RegionId
+     * @param RegionId 实例所在的RegionId
      */
-    public void setInstanceId(String InstanceId) {
-        this.InstanceId = InstanceId;
+    public void setRegionId(Long RegionId) {
+        this.RegionId = RegionId;
     }
 
     /**
@@ -91,19 +91,19 @@ public class DestroyHourDCDBInstanceResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DestroyHourDCDBInstanceResponse() {
+    public CheckInstanceResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DestroyHourDCDBInstanceResponse(DestroyHourDCDBInstanceResponse source) {
-        if (source.FlowId != null) {
-            this.FlowId = new Long(source.FlowId);
+    public CheckInstanceResponse(CheckInstanceResponse source) {
+        if (source.IsValidated != null) {
+            this.IsValidated = new Boolean(source.IsValidated);
         }
-        if (source.InstanceId != null) {
-            this.InstanceId = new String(source.InstanceId);
+        if (source.RegionId != null) {
+            this.RegionId = new Long(source.RegionId);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -115,8 +115,8 @@ public class DestroyHourDCDBInstanceResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "FlowId", this.FlowId);
-        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "IsValidated", this.IsValidated);
+        this.setParamSimple(map, prefix + "RegionId", this.RegionId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

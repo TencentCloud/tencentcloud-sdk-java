@@ -13,28 +13,22 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.dcdb.v20180411.models;
+package com.tencentcloudapi.tsf.v20180326.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DestroyHourDCDBInstanceResponse extends AbstractModel{
+public class DescribeFileConfigsResponse extends AbstractModel{
 
     /**
-    * 异步任务的请求 ID，可使用此 ID [查询异步任务的执行结果](https://cloud.tencent.com/document/product/557/56485)。
+    * 文件配置项列表
+注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("FlowId")
+    @SerializedName("Result")
     @Expose
-    private Long FlowId;
-
-    /**
-    * 实例 ID，与入参InstanceId一致。
-    */
-    @SerializedName("InstanceId")
-    @Expose
-    private String InstanceId;
+    private TsfPageFileConfig Result;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -44,35 +38,23 @@ public class DestroyHourDCDBInstanceResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 异步任务的请求 ID，可使用此 ID [查询异步任务的执行结果](https://cloud.tencent.com/document/product/557/56485)。 
-     * @return FlowId 异步任务的请求 ID，可使用此 ID [查询异步任务的执行结果](https://cloud.tencent.com/document/product/557/56485)。
+     * Get 文件配置项列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Result 文件配置项列表
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getFlowId() {
-        return this.FlowId;
+    public TsfPageFileConfig getResult() {
+        return this.Result;
     }
 
     /**
-     * Set 异步任务的请求 ID，可使用此 ID [查询异步任务的执行结果](https://cloud.tencent.com/document/product/557/56485)。
-     * @param FlowId 异步任务的请求 ID，可使用此 ID [查询异步任务的执行结果](https://cloud.tencent.com/document/product/557/56485)。
+     * Set 文件配置项列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Result 文件配置项列表
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setFlowId(Long FlowId) {
-        this.FlowId = FlowId;
-    }
-
-    /**
-     * Get 实例 ID，与入参InstanceId一致。 
-     * @return InstanceId 实例 ID，与入参InstanceId一致。
-     */
-    public String getInstanceId() {
-        return this.InstanceId;
-    }
-
-    /**
-     * Set 实例 ID，与入参InstanceId一致。
-     * @param InstanceId 实例 ID，与入参InstanceId一致。
-     */
-    public void setInstanceId(String InstanceId) {
-        this.InstanceId = InstanceId;
+    public void setResult(TsfPageFileConfig Result) {
+        this.Result = Result;
     }
 
     /**
@@ -91,19 +73,16 @@ public class DestroyHourDCDBInstanceResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DestroyHourDCDBInstanceResponse() {
+    public DescribeFileConfigsResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DestroyHourDCDBInstanceResponse(DestroyHourDCDBInstanceResponse source) {
-        if (source.FlowId != null) {
-            this.FlowId = new Long(source.FlowId);
-        }
-        if (source.InstanceId != null) {
-            this.InstanceId = new String(source.InstanceId);
+    public DescribeFileConfigsResponse(DescribeFileConfigsResponse source) {
+        if (source.Result != null) {
+            this.Result = new TsfPageFileConfig(source.Result);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -115,8 +94,7 @@ public class DestroyHourDCDBInstanceResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "FlowId", this.FlowId);
-        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamObj(map, prefix + "Result.", this.Result);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

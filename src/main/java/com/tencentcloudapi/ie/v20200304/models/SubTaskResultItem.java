@@ -25,7 +25,6 @@ public class SubTaskResultItem extends AbstractModel{
     /**
     * 子任务名称。
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskName")
     @Expose
@@ -51,7 +50,6 @@ public class SubTaskResultItem extends AbstractModel{
     /**
     * 子任务进度。
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProgressRate")
     @Expose
@@ -59,7 +57,6 @@ public class SubTaskResultItem extends AbstractModel{
 
     /**
     * 画质重生处理后文件的下载地址。
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DownloadUrl")
@@ -69,7 +66,6 @@ public class SubTaskResultItem extends AbstractModel{
     /**
     * 画质重生处理后文件的MD5。
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Md5")
     @Expose
@@ -78,7 +74,6 @@ public class SubTaskResultItem extends AbstractModel{
     /**
     * 画质重生处理后文件的详细信息。
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileInfo")
     @Expose
@@ -86,10 +81,8 @@ public class SubTaskResultItem extends AbstractModel{
 
     /**
      * Get 子任务名称。
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return TaskName 子任务名称。
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskName() {
@@ -99,9 +92,7 @@ public class SubTaskResultItem extends AbstractModel{
     /**
      * Set 子任务名称。
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskName 子任务名称。
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskName(String TaskName) {
@@ -154,10 +145,8 @@ public class SubTaskResultItem extends AbstractModel{
 
     /**
      * Get 子任务进度。
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ProgressRate 子任务进度。
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getProgressRate() {
@@ -167,9 +156,7 @@ public class SubTaskResultItem extends AbstractModel{
     /**
      * Set 子任务进度。
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProgressRate 子任务进度。
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProgressRate(Long ProgressRate) {
@@ -178,10 +165,8 @@ public class SubTaskResultItem extends AbstractModel{
 
     /**
      * Get 画质重生处理后文件的下载地址。
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return DownloadUrl 画质重生处理后文件的下载地址。
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDownloadUrl() {
@@ -191,9 +176,7 @@ public class SubTaskResultItem extends AbstractModel{
     /**
      * Set 画质重生处理后文件的下载地址。
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DownloadUrl 画质重生处理后文件的下载地址。
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDownloadUrl(String DownloadUrl) {
@@ -202,10 +185,8 @@ public class SubTaskResultItem extends AbstractModel{
 
     /**
      * Get 画质重生处理后文件的MD5。
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Md5 画质重生处理后文件的MD5。
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMd5() {
@@ -215,9 +196,7 @@ public class SubTaskResultItem extends AbstractModel{
     /**
      * Set 画质重生处理后文件的MD5。
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Md5 画质重生处理后文件的MD5。
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMd5(String Md5) {
@@ -226,10 +205,8 @@ public class SubTaskResultItem extends AbstractModel{
 
     /**
      * Get 画质重生处理后文件的详细信息。
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return FileInfo 画质重生处理后文件的详细信息。
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public FileInfo getFileInfo() {
@@ -239,9 +216,7 @@ public class SubTaskResultItem extends AbstractModel{
     /**
      * Set 画质重生处理后文件的详细信息。
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FileInfo 画质重生处理后文件的详细信息。
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileInfo(FileInfo FileInfo) {

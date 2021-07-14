@@ -51,6 +51,13 @@ public class CommandDocument extends AbstractModel{
     private String WorkingDirectory;
 
     /**
+    * 执行用户。
+    */
+    @SerializedName("Username")
+    @Expose
+    private String Username;
+
+    /**
      * Get Base64 编码后的执行命令。 
      * @return Content Base64 编码后的执行命令。
      */
@@ -114,6 +121,22 @@ public class CommandDocument extends AbstractModel{
         this.WorkingDirectory = WorkingDirectory;
     }
 
+    /**
+     * Get 执行用户。 
+     * @return Username 执行用户。
+     */
+    public String getUsername() {
+        return this.Username;
+    }
+
+    /**
+     * Set 执行用户。
+     * @param Username 执行用户。
+     */
+    public void setUsername(String Username) {
+        this.Username = Username;
+    }
+
     public CommandDocument() {
     }
 
@@ -134,6 +157,9 @@ public class CommandDocument extends AbstractModel{
         if (source.WorkingDirectory != null) {
             this.WorkingDirectory = new String(source.WorkingDirectory);
         }
+        if (source.Username != null) {
+            this.Username = new String(source.Username);
+        }
     }
 
 
@@ -145,6 +171,7 @@ public class CommandDocument extends AbstractModel{
         this.setParamSimple(map, prefix + "CommandType", this.CommandType);
         this.setParamSimple(map, prefix + "Timeout", this.Timeout);
         this.setParamSimple(map, prefix + "WorkingDirectory", this.WorkingDirectory);
+        this.setParamSimple(map, prefix + "Username", this.Username);
 
     }
 }

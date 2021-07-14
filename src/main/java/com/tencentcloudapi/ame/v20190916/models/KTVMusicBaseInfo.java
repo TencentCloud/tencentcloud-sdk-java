@@ -65,6 +65,13 @@ public class KTVMusicBaseInfo extends AbstractModel{
     private String [] TagSet;
 
     /**
+    * 歌曲时长
+    */
+    @SerializedName("Duration")
+    @Expose
+    private Long Duration;
+
+    /**
      * Get 歌曲 Id 
      * @return MusicId 歌曲 Id
      */
@@ -160,6 +167,22 @@ public class KTVMusicBaseInfo extends AbstractModel{
         this.TagSet = TagSet;
     }
 
+    /**
+     * Get 歌曲时长 
+     * @return Duration 歌曲时长
+     */
+    public Long getDuration() {
+        return this.Duration;
+    }
+
+    /**
+     * Set 歌曲时长
+     * @param Duration 歌曲时长
+     */
+    public void setDuration(Long Duration) {
+        this.Duration = Duration;
+    }
+
     public KTVMusicBaseInfo() {
     }
 
@@ -198,6 +221,9 @@ public class KTVMusicBaseInfo extends AbstractModel{
                 this.TagSet[i] = new String(source.TagSet[i]);
             }
         }
+        if (source.Duration != null) {
+            this.Duration = new Long(source.Duration);
+        }
     }
 
 
@@ -211,6 +237,7 @@ public class KTVMusicBaseInfo extends AbstractModel{
         this.setParamArraySimple(map, prefix + "LyricistSet.", this.LyricistSet);
         this.setParamArraySimple(map, prefix + "ComposerSet.", this.ComposerSet);
         this.setParamArraySimple(map, prefix + "TagSet.", this.TagSet);
+        this.setParamSimple(map, prefix + "Duration", this.Duration);
 
     }
 }

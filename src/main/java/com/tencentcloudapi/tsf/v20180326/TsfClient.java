@@ -299,6 +299,26 @@ public class TsfClient extends AbstractClient{
     }
 
     /**
+     *创建文件配置项
+     * @param req CreateFileConfigRequest
+     * @return CreateFileConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateFileConfigResponse CreateFileConfig(CreateFileConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateFileConfigResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateFileConfigResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateFileConfig");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *批量导入API至api分组(也支持新建API到分组)
      * @param req CreateGatewayApiRequest
      * @return CreateGatewayApiResponse
@@ -1393,6 +1413,26 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
                 Type type = new TypeToken<JsonResponseModel<DescribeEnabledUnitRuleResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeEnabledUnitRule");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询文件配置项列表
+     * @param req DescribeFileConfigsRequest
+     * @return DescribeFileConfigsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeFileConfigsResponse DescribeFileConfigs(DescribeFileConfigsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeFileConfigsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeFileConfigsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeFileConfigs");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -2815,6 +2855,26 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
                 Type type = new TypeToken<JsonResponseModel<ReleaseConfigResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ReleaseConfig");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *发布文件配置
+     * @param req ReleaseFileConfigRequest
+     * @return ReleaseFileConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public ReleaseFileConfigResponse ReleaseFileConfig(ReleaseFileConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ReleaseFileConfigResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ReleaseFileConfigResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ReleaseFileConfig");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

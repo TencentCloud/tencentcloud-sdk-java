@@ -24,7 +24,6 @@ public class FileInfo extends AbstractModel{
 
     /**
     * 任务结束后生成的文件大小。
-注意：此字段可能返回 null，表示取不到有效值 。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileSize")
@@ -33,7 +32,6 @@ public class FileInfo extends AbstractModel{
 
     /**
     * 任务结束后生成的文件格式，例如：mp4,flv等等。
-注意：此字段可能返回 null，表示取不到有效值 。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileType")
@@ -43,7 +41,6 @@ public class FileInfo extends AbstractModel{
     /**
     * 任务结束后生成的文件整体码率，单位：bps。
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Bitrate")
     @Expose
@@ -51,7 +48,6 @@ public class FileInfo extends AbstractModel{
 
     /**
     * 任务结束后生成的文件时长，单位：ms。
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Duration")
@@ -61,7 +57,6 @@ public class FileInfo extends AbstractModel{
     /**
     * 任务结束后生成的文件视频信息。
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VideoInfoResult")
     @Expose
@@ -70,7 +65,6 @@ public class FileInfo extends AbstractModel{
     /**
     * 任务结束后生成的文件音频信息。
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AudioInfoResult")
     @Expose
@@ -78,10 +72,8 @@ public class FileInfo extends AbstractModel{
 
     /**
      * Get 任务结束后生成的文件大小。
-注意：此字段可能返回 null，表示取不到有效值 。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return FileSize 任务结束后生成的文件大小。
-注意：此字段可能返回 null，表示取不到有效值 。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFileSize() {
@@ -90,10 +82,8 @@ public class FileInfo extends AbstractModel{
 
     /**
      * Set 任务结束后生成的文件大小。
-注意：此字段可能返回 null，表示取不到有效值 。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param FileSize 任务结束后生成的文件大小。
-注意：此字段可能返回 null，表示取不到有效值 。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileSize(Long FileSize) {
@@ -102,10 +92,8 @@ public class FileInfo extends AbstractModel{
 
     /**
      * Get 任务结束后生成的文件格式，例如：mp4,flv等等。
-注意：此字段可能返回 null，表示取不到有效值 。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return FileType 任务结束后生成的文件格式，例如：mp4,flv等等。
-注意：此字段可能返回 null，表示取不到有效值 。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFileType() {
@@ -114,10 +102,8 @@ public class FileInfo extends AbstractModel{
 
     /**
      * Set 任务结束后生成的文件格式，例如：mp4,flv等等。
-注意：此字段可能返回 null，表示取不到有效值 。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param FileType 任务结束后生成的文件格式，例如：mp4,flv等等。
-注意：此字段可能返回 null，表示取不到有效值 。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileType(String FileType) {
@@ -126,10 +112,8 @@ public class FileInfo extends AbstractModel{
 
     /**
      * Get 任务结束后生成的文件整体码率，单位：bps。
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Bitrate 任务结束后生成的文件整体码率，单位：bps。
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getBitrate() {
@@ -139,9 +123,7 @@ public class FileInfo extends AbstractModel{
     /**
      * Set 任务结束后生成的文件整体码率，单位：bps。
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Bitrate 任务结束后生成的文件整体码率，单位：bps。
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBitrate(Long Bitrate) {
@@ -150,10 +132,8 @@ public class FileInfo extends AbstractModel{
 
     /**
      * Get 任务结束后生成的文件时长，单位：ms。
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Duration 任务结束后生成的文件时长，单位：ms。
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDuration() {
@@ -163,9 +143,7 @@ public class FileInfo extends AbstractModel{
     /**
      * Set 任务结束后生成的文件时长，单位：ms。
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Duration 任务结束后生成的文件时长，单位：ms。
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDuration(Long Duration) {
@@ -174,10 +152,8 @@ public class FileInfo extends AbstractModel{
 
     /**
      * Get 任务结束后生成的文件视频信息。
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return VideoInfoResult 任务结束后生成的文件视频信息。
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public VideoInfoResultItem [] getVideoInfoResult() {
@@ -187,9 +163,7 @@ public class FileInfo extends AbstractModel{
     /**
      * Set 任务结束后生成的文件视频信息。
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VideoInfoResult 任务结束后生成的文件视频信息。
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVideoInfoResult(VideoInfoResultItem [] VideoInfoResult) {
@@ -198,10 +172,8 @@ public class FileInfo extends AbstractModel{
 
     /**
      * Get 任务结束后生成的文件音频信息。
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return AudioInfoResult 任务结束后生成的文件音频信息。
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public AudioInfoResultItem [] getAudioInfoResult() {
@@ -211,9 +183,7 @@ public class FileInfo extends AbstractModel{
     /**
      * Set 任务结束后生成的文件音频信息。
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AudioInfoResult 任务结束后生成的文件音频信息。
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAudioInfoResult(AudioInfoResultItem [] AudioInfoResult) {

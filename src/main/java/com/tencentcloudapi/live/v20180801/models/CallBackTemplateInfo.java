@@ -51,18 +51,18 @@ public class CallBackTemplateInfo extends AbstractModel{
     private String StreamBeginNotifyUrl;
 
     /**
+    * 混流回调 URL。(参数已弃用)。
+    */
+    @SerializedName("StreamMixNotifyUrl")
+    @Expose
+    private String StreamMixNotifyUrl;
+
+    /**
     * 断流回调 URL。
     */
     @SerializedName("StreamEndNotifyUrl")
     @Expose
     private String StreamEndNotifyUrl;
-
-    /**
-    * 混流回调 URL。
-    */
-    @SerializedName("StreamMixNotifyUrl")
-    @Expose
-    private String StreamMixNotifyUrl;
 
     /**
     * 录制回调 URL。
@@ -157,6 +157,22 @@ public class CallBackTemplateInfo extends AbstractModel{
     }
 
     /**
+     * Get 混流回调 URL。(参数已弃用)。 
+     * @return StreamMixNotifyUrl 混流回调 URL。(参数已弃用)。
+     */
+    public String getStreamMixNotifyUrl() {
+        return this.StreamMixNotifyUrl;
+    }
+
+    /**
+     * Set 混流回调 URL。(参数已弃用)。
+     * @param StreamMixNotifyUrl 混流回调 URL。(参数已弃用)。
+     */
+    public void setStreamMixNotifyUrl(String StreamMixNotifyUrl) {
+        this.StreamMixNotifyUrl = StreamMixNotifyUrl;
+    }
+
+    /**
      * Get 断流回调 URL。 
      * @return StreamEndNotifyUrl 断流回调 URL。
      */
@@ -170,22 +186,6 @@ public class CallBackTemplateInfo extends AbstractModel{
      */
     public void setStreamEndNotifyUrl(String StreamEndNotifyUrl) {
         this.StreamEndNotifyUrl = StreamEndNotifyUrl;
-    }
-
-    /**
-     * Get 混流回调 URL。 
-     * @return StreamMixNotifyUrl 混流回调 URL。
-     */
-    public String getStreamMixNotifyUrl() {
-        return this.StreamMixNotifyUrl;
-    }
-
-    /**
-     * Set 混流回调 URL。
-     * @param StreamMixNotifyUrl 混流回调 URL。
-     */
-    public void setStreamMixNotifyUrl(String StreamMixNotifyUrl) {
-        this.StreamMixNotifyUrl = StreamMixNotifyUrl;
     }
 
     /**
@@ -272,11 +272,11 @@ public class CallBackTemplateInfo extends AbstractModel{
         if (source.StreamBeginNotifyUrl != null) {
             this.StreamBeginNotifyUrl = new String(source.StreamBeginNotifyUrl);
         }
-        if (source.StreamEndNotifyUrl != null) {
-            this.StreamEndNotifyUrl = new String(source.StreamEndNotifyUrl);
-        }
         if (source.StreamMixNotifyUrl != null) {
             this.StreamMixNotifyUrl = new String(source.StreamMixNotifyUrl);
+        }
+        if (source.StreamEndNotifyUrl != null) {
+            this.StreamEndNotifyUrl = new String(source.StreamEndNotifyUrl);
         }
         if (source.RecordNotifyUrl != null) {
             this.RecordNotifyUrl = new String(source.RecordNotifyUrl);
@@ -301,8 +301,8 @@ public class CallBackTemplateInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "TemplateName", this.TemplateName);
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "StreamBeginNotifyUrl", this.StreamBeginNotifyUrl);
-        this.setParamSimple(map, prefix + "StreamEndNotifyUrl", this.StreamEndNotifyUrl);
         this.setParamSimple(map, prefix + "StreamMixNotifyUrl", this.StreamMixNotifyUrl);
+        this.setParamSimple(map, prefix + "StreamEndNotifyUrl", this.StreamEndNotifyUrl);
         this.setParamSimple(map, prefix + "RecordNotifyUrl", this.RecordNotifyUrl);
         this.setParamSimple(map, prefix + "SnapshotNotifyUrl", this.SnapshotNotifyUrl);
         this.setParamSimple(map, prefix + "PornCensorshipNotifyUrl", this.PornCensorshipNotifyUrl);

@@ -121,6 +121,13 @@ public class Command extends AbstractModel{
     private Tag [] Tags;
 
     /**
+    * 在实例上执行命令的用户名。
+    */
+    @SerializedName("Username")
+    @Expose
+    private String Username;
+
+    /**
      * Get 命令ID。 
      * @return CommandId 命令ID。
      */
@@ -344,6 +351,22 @@ public class Command extends AbstractModel{
         this.Tags = Tags;
     }
 
+    /**
+     * Get 在实例上执行命令的用户名。 
+     * @return Username 在实例上执行命令的用户名。
+     */
+    public String getUsername() {
+        return this.Username;
+    }
+
+    /**
+     * Set 在实例上执行命令的用户名。
+     * @param Username 在实例上执行命令的用户名。
+     */
+    public void setUsername(String Username) {
+        this.Username = Username;
+    }
+
     public Command() {
     }
 
@@ -397,6 +420,9 @@ public class Command extends AbstractModel{
                 this.Tags[i] = new Tag(source.Tags[i]);
             }
         }
+        if (source.Username != null) {
+            this.Username = new String(source.Username);
+        }
     }
 
 
@@ -418,6 +444,7 @@ public class Command extends AbstractModel{
         this.setParamSimple(map, prefix + "FormattedDescription", this.FormattedDescription);
         this.setParamSimple(map, prefix + "CreatedBy", this.CreatedBy);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "Username", this.Username);
 
     }
 }

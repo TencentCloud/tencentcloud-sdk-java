@@ -30,6 +30,17 @@ public class UnBindLiveDomainCertRequest extends AbstractModel{
     private String DomainName;
 
     /**
+    * 枚举值：
+gray: 解绑灰度规则
+formal(默认): 解绑正式规则
+
+不传则为formal
+    */
+    @SerializedName("Type")
+    @Expose
+    private String Type;
+
+    /**
      * Get 播放域名。 
      * @return DomainName 播放域名。
      */
@@ -45,6 +56,38 @@ public class UnBindLiveDomainCertRequest extends AbstractModel{
         this.DomainName = DomainName;
     }
 
+    /**
+     * Get 枚举值：
+gray: 解绑灰度规则
+formal(默认): 解绑正式规则
+
+不传则为formal 
+     * @return Type 枚举值：
+gray: 解绑灰度规则
+formal(默认): 解绑正式规则
+
+不传则为formal
+     */
+    public String getType() {
+        return this.Type;
+    }
+
+    /**
+     * Set 枚举值：
+gray: 解绑灰度规则
+formal(默认): 解绑正式规则
+
+不传则为formal
+     * @param Type 枚举值：
+gray: 解绑灰度规则
+formal(默认): 解绑正式规则
+
+不传则为formal
+     */
+    public void setType(String Type) {
+        this.Type = Type;
+    }
+
     public UnBindLiveDomainCertRequest() {
     }
 
@@ -56,6 +99,9 @@ public class UnBindLiveDomainCertRequest extends AbstractModel{
         if (source.DomainName != null) {
             this.DomainName = new String(source.DomainName);
         }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
     }
 
 
@@ -64,6 +110,7 @@ public class UnBindLiveDomainCertRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DomainName", this.DomainName);
+        this.setParamSimple(map, prefix + "Type", this.Type);
 
     }
 }
