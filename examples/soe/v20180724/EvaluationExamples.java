@@ -61,10 +61,11 @@ public class EvaluationExamples {
      * Rex was a big dog.wav :                       https://soe-common-1255701415.cos.ap-guangzhou.myqcloud.com/Rex%20was%20a%20big%20dog.wav
      * I see sixteen eggs and eighteen apples.wav :  https://soe-common-1255701415.cos.ap-guangzhou.myqcloud.com/I%20see%20sixteen%20eggs%20and%20eighteen%20apples.wav
      *
+     * 文件需要放到类路径下
      */
     public static final String AUDIO_FOR_ONCE = "./bike.mp3";
     public static final String AUDIO_FOR_CN = "./cn.mp3";
-    public static final String AUDIO_FOR_SEQ = "Rex was a big dog.wav";
+    public static final String AUDIO_FOR_SEQ = "./Rex was a big dog.wav";
     public static final String AUDIO_FOR_ASYNC = "./I see sixteen eggs and eighteen apples.wav";
 
 
