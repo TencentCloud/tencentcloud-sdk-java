@@ -59,6 +59,26 @@ public class ApigatewayClient extends AbstractClient{
     }
 
     /**
+     *本接口（BindApiApp）用于绑定应用到API。
+     * @param req BindApiAppRequest
+     * @return BindApiAppResponse
+     * @throws TencentCloudSDKException
+     */
+    public BindApiAppResponse BindApiApp(BindApiAppRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<BindApiAppResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<BindApiAppResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "BindApiApp");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（BindEnvironment）用于绑定使用计划到服务或API。
 用户在发布服务到某个环境中后，如果 API 需要鉴权，还需要绑定使用计划才能进行调用，此接口用户将使用计划绑定到特定环境。
 目前支持绑定使用计划到API，但是同一个服务不能同时存在绑定到服务的使用计划和绑定到API的使用计划，所以对已经绑定过服务级别使用计划的环境，请先使用 服务级别使用计划降级 接口进行降级操作。
@@ -203,6 +223,26 @@ API 网关中每个服务都会提供一个默认的域名供用户调用，但�
     }
 
     /**
+     *本接口（CreateApiApp）用于创建应用。
+     * @param req CreateApiAppRequest
+     * @return CreateApiAppResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateApiAppResponse CreateApiApp(CreateApiAppRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateApiAppResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateApiAppResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateApiApp");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（CreateApiKey）用于创建一对新的 API 密钥。
      * @param req CreateApiKeyRequest
      * @return CreateApiKeyResponse
@@ -337,6 +377,26 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
                 Type type = new TypeToken<JsonResponseModel<DeleteApiResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteApi");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DeleteApiApp）用于删除已经创建的应用。
+     * @param req DeleteApiAppRequest
+     * @return DeleteApiAppResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteApiAppResponse DeleteApiApp(DeleteApiAppRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteApiAppResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteApiAppResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteApiApp");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -560,6 +620,86 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
                 Type type = new TypeToken<JsonResponseModel<DescribeApiResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeApi");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DescribeApiApp）用于根据应用ID搜索应用。
+     * @param req DescribeApiAppRequest
+     * @return DescribeApiAppResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeApiAppResponse DescribeApiApp(DescribeApiAppRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeApiAppResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeApiAppResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeApiApp");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DescribeApiAppBindApisStatus）查询应用绑定的Api列表。
+     * @param req DescribeApiAppBindApisStatusRequest
+     * @return DescribeApiAppBindApisStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeApiAppBindApisStatusResponse DescribeApiAppBindApisStatus(DescribeApiAppBindApisStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeApiAppBindApisStatusResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeApiAppBindApisStatusResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeApiAppBindApisStatus");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DescribeApiAppsStatus）查询应用列表。
+     * @param req DescribeApiAppsStatusRequest
+     * @return DescribeApiAppsStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeApiAppsStatusResponse DescribeApiAppsStatus(DescribeApiAppsStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeApiAppsStatusResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeApiAppsStatusResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeApiAppsStatus");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DescribeApiBindApiAppsStatus）查询Api绑定的应用列表。
+     * @param req DescribeApiBindApiAppsStatusRequest
+     * @return DescribeApiBindApiAppsStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeApiBindApiAppsStatusResponse DescribeApiBindApiAppsStatus(DescribeApiBindApiAppsStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeApiBindApiAppsStatusResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeApiBindApiAppsStatusResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeApiBindApiAppsStatus");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -892,6 +1032,26 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
     }
 
     /**
+     *本接口（DescribeServiceForApiApp）用于应用使用者查询一个服务的详细信息、包括服务的描述、域名、协议等信息。
+     * @param req DescribeServiceForApiAppRequest
+     * @return DescribeServiceForApiAppResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeServiceForApiAppResponse DescribeServiceForApiApp(DescribeServiceForApiAppRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeServiceForApiAppResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeServiceForApiAppResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeServiceForApiApp");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（DescribeServiceReleaseVersion）查询一个服务下面所有已经发布的版本列表。
 用户在发布服务时，常有多个版本发布，可使用本接口查询已发布的版本。
      * @param req DescribeServiceReleaseVersionRequest
@@ -1198,6 +1358,26 @@ API 网关可绑定自定义域名到服务，用于服务调用。此接口用�
     }
 
     /**
+     *本接口（ModifyApiApp）用于修改已经创建的应用。
+     * @param req ModifyApiAppRequest
+     * @return ModifyApiAppResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyApiAppResponse ModifyApiApp(ModifyApiAppRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyApiAppResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyApiAppResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyApiApp");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（ModifyApiEnvironmentStrategy）用于修改API限流策略
      * @param req ModifyApiEnvironmentStrategyRequest
      * @return ModifyApiEnvironmentStrategyResponse
@@ -1493,6 +1673,46 @@ API 网关的服务创建后，需要发布到某个环境方生效后，使用�
                 Type type = new TypeToken<JsonResponseModel<UnReleaseServiceResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "UnReleaseService");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（UnbindApiApp）用于解除应用和API绑定。
+     * @param req UnbindApiAppRequest
+     * @return UnbindApiAppResponse
+     * @throws TencentCloudSDKException
+     */
+    public UnbindApiAppResponse UnbindApiApp(UnbindApiAppRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UnbindApiAppResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UnbindApiAppResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UnbindApiApp");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（UpdateApiAppKey）用于更新应用秘钥。
+     * @param req UpdateApiAppKeyRequest
+     * @return UpdateApiAppKeyResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateApiAppKeyResponse UpdateApiAppKey(UpdateApiAppKeyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpdateApiAppKeyResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpdateApiAppKeyResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UpdateApiAppKey");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

@@ -486,6 +486,14 @@ off：不支持
     private Quic Quic;
 
     /**
+    * 回源OSS私有鉴权
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OssPrivateAccess")
+    @Expose
+    private OssPrivateAccess OssPrivateAccess;
+
+    /**
      * Get 域名 ID 
      * @return ResourceId 域名 ID
      */
@@ -1665,6 +1673,26 @@ off：不支持
         this.Quic = Quic;
     }
 
+    /**
+     * Get 回源OSS私有鉴权
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OssPrivateAccess 回源OSS私有鉴权
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public OssPrivateAccess getOssPrivateAccess() {
+        return this.OssPrivateAccess;
+    }
+
+    /**
+     * Set 回源OSS私有鉴权
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OssPrivateAccess 回源OSS私有鉴权
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOssPrivateAccess(OssPrivateAccess OssPrivateAccess) {
+        this.OssPrivateAccess = OssPrivateAccess;
+    }
+
     public DetailDomain() {
     }
 
@@ -1850,6 +1878,9 @@ off：不支持
         if (source.Quic != null) {
             this.Quic = new Quic(source.Quic);
         }
+        if (source.OssPrivateAccess != null) {
+            this.OssPrivateAccess = new OssPrivateAccess(source.OssPrivateAccess);
+        }
     }
 
 
@@ -1913,6 +1944,7 @@ off：不支持
         this.setParamObj(map, prefix + "OriginCombine.", this.OriginCombine);
         this.setParamObj(map, prefix + "PostMaxSize.", this.PostMaxSize);
         this.setParamObj(map, prefix + "Quic.", this.Quic);
+        this.setParamObj(map, prefix + "OssPrivateAccess.", this.OssPrivateAccess);
 
     }
 }

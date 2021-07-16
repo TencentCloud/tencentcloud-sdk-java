@@ -89,8 +89,7 @@ public class CreateLiveCallbackTemplateRequest extends AbstractModel{
     private String CallbackKey;
 
     /**
-    * 混流回调 URL，
-相关协议文档：[事件消息通知](/document/product/267/32744)。
+    * 参数已弃用。
     */
     @SerializedName("StreamMixNotifyUrl")
     @Expose
@@ -265,20 +264,16 @@ public class CreateLiveCallbackTemplateRequest extends AbstractModel{
     }
 
     /**
-     * Get 混流回调 URL，
-相关协议文档：[事件消息通知](/document/product/267/32744)。 
-     * @return StreamMixNotifyUrl 混流回调 URL，
-相关协议文档：[事件消息通知](/document/product/267/32744)。
+     * Get 参数已弃用。 
+     * @return StreamMixNotifyUrl 参数已弃用。
      */
     public String getStreamMixNotifyUrl() {
         return this.StreamMixNotifyUrl;
     }
 
     /**
-     * Set 混流回调 URL，
-相关协议文档：[事件消息通知](/document/product/267/32744)。
-     * @param StreamMixNotifyUrl 混流回调 URL，
-相关协议文档：[事件消息通知](/document/product/267/32744)。
+     * Set 参数已弃用。
+     * @param StreamMixNotifyUrl 参数已弃用。
      */
     public void setStreamMixNotifyUrl(String StreamMixNotifyUrl) {
         this.StreamMixNotifyUrl = StreamMixNotifyUrl;

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeDownloadFileResponse extends AbstractModel{
 
     /**
-    * 文件路径
+    * 文件路径，该字段已废弃
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FilePath")
@@ -31,7 +31,7 @@ public class DescribeDownloadFileResponse extends AbstractModel{
     private String FilePath;
 
     /**
-    * 加密key
+    * 加密key，用于计算下载加密文件的header。参考SSE-C https://cloud.tencent.com/document/product/436/7728#sse-c
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CustomKey")
@@ -54,9 +54,9 @@ public class DescribeDownloadFileResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 文件路径
+     * Get 文件路径，该字段已废弃
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FilePath 文件路径
+     * @return FilePath 文件路径，该字段已废弃
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFilePath() {
@@ -64,9 +64,9 @@ public class DescribeDownloadFileResponse extends AbstractModel{
     }
 
     /**
-     * Set 文件路径
+     * Set 文件路径，该字段已废弃
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FilePath 文件路径
+     * @param FilePath 文件路径，该字段已废弃
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFilePath(String FilePath) {
@@ -74,9 +74,9 @@ public class DescribeDownloadFileResponse extends AbstractModel{
     }
 
     /**
-     * Get 加密key
+     * Get 加密key，用于计算下载加密文件的header。参考SSE-C https://cloud.tencent.com/document/product/436/7728#sse-c
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CustomKey 加密key
+     * @return CustomKey 加密key，用于计算下载加密文件的header。参考SSE-C https://cloud.tencent.com/document/product/436/7728#sse-c
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCustomKey() {
@@ -84,9 +84,9 @@ public class DescribeDownloadFileResponse extends AbstractModel{
     }
 
     /**
-     * Set 加密key
+     * Set 加密key，用于计算下载加密文件的header。参考SSE-C https://cloud.tencent.com/document/product/436/7728#sse-c
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CustomKey 加密key
+     * @param CustomKey 加密key，用于计算下载加密文件的header。参考SSE-C https://cloud.tencent.com/document/product/436/7728#sse-c
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCustomKey(String CustomKey) {

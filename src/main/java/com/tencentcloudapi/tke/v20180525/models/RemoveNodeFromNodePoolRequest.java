@@ -37,7 +37,7 @@ public class RemoveNodeFromNodePoolRequest extends AbstractModel{
     private String NodePoolId;
 
     /**
-    * 节点id列表
+    * 节点id列表，一次最多支持100台
     */
     @SerializedName("InstanceIds")
     @Expose
@@ -76,16 +76,16 @@ public class RemoveNodeFromNodePoolRequest extends AbstractModel{
     }
 
     /**
-     * Get 节点id列表 
-     * @return InstanceIds 节点id列表
+     * Get 节点id列表，一次最多支持100台 
+     * @return InstanceIds 节点id列表，一次最多支持100台
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set 节点id列表
-     * @param InstanceIds 节点id列表
+     * Set 节点id列表，一次最多支持100台
+     * @param InstanceIds 节点id列表，一次最多支持100台
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;

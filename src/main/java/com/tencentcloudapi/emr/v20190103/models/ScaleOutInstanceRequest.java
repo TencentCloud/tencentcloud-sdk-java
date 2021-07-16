@@ -129,7 +129,7 @@ public class ScaleOutInstanceRequest extends AbstractModel{
     private Tag [] Tags;
 
     /**
-    * 扩容所选资源类型，可选范围为"host","pod"，host为普通的CVM资源，Pod为TKE集群提供的资源
+    * 扩容所选资源类型，可选范围为"host","pod"，host为普通的CVM资源，Pod为TKE集群或EKS集群提供的资源
     */
     @SerializedName("HardwareResourceType")
     @Expose
@@ -172,10 +172,20 @@ public class ScaleOutInstanceRequest extends AbstractModel{
 
     /**
     * 扩容的Master节点的数量。
+使用clickhouse集群扩容时，该参数不生效。
+使用kafka集群扩容时，该参数不生效。
+当HardwareResourceType=POD时，该参数不生效。
     */
     @SerializedName("MasterCount")
     @Expose
     private Long MasterCount;
+
+    /**
+    * 扩容后是否启动服务，true：启动，false：不启动
+    */
+    @SerializedName("StartServiceAfterScaleOut")
+    @Expose
+    private String StartServiceAfterScaleOut;
 
     /**
      * Get 扩容的时间单位。取值范围：
@@ -434,16 +444,16 @@ public class ScaleOutInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get 扩容所选资源类型，可选范围为"host","pod"，host为普通的CVM资源，Pod为TKE集群提供的资源 
-     * @return HardwareResourceType 扩容所选资源类型，可选范围为"host","pod"，host为普通的CVM资源，Pod为TKE集群提供的资源
+     * Get 扩容所选资源类型，可选范围为"host","pod"，host为普通的CVM资源，Pod为TKE集群或EKS集群提供的资源 
+     * @return HardwareResourceType 扩容所选资源类型，可选范围为"host","pod"，host为普通的CVM资源，Pod为TKE集群或EKS集群提供的资源
      */
     public String getHardwareResourceType() {
         return this.HardwareResourceType;
     }
 
     /**
-     * Set 扩容所选资源类型，可选范围为"host","pod"，host为普通的CVM资源，Pod为TKE集群提供的资源
-     * @param HardwareResourceType 扩容所选资源类型，可选范围为"host","pod"，host为普通的CVM资源，Pod为TKE集群提供的资源
+     * Set 扩容所选资源类型，可选范围为"host","pod"，host为普通的CVM资源，Pod为TKE集群或EKS集群提供的资源
+     * @param HardwareResourceType 扩容所选资源类型，可选范围为"host","pod"，host为普通的CVM资源，Pod为TKE集群或EKS集群提供的资源
      */
     public void setHardwareResourceType(String HardwareResourceType) {
         this.HardwareResourceType = HardwareResourceType;
@@ -530,8 +540,14 @@ public class ScaleOutInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get 扩容的Master节点的数量。 
+     * Get 扩容的Master节点的数量。
+使用clickhouse集群扩容时，该参数不生效。
+使用kafka集群扩容时，该参数不生效。
+当HardwareResourceType=POD时，该参数不生效。 
      * @return MasterCount 扩容的Master节点的数量。
+使用clickhouse集群扩容时，该参数不生效。
+使用kafka集群扩容时，该参数不生效。
+当HardwareResourceType=POD时，该参数不生效。
      */
     public Long getMasterCount() {
         return this.MasterCount;
@@ -539,10 +555,32 @@ public class ScaleOutInstanceRequest extends AbstractModel{
 
     /**
      * Set 扩容的Master节点的数量。
+使用clickhouse集群扩容时，该参数不生效。
+使用kafka集群扩容时，该参数不生效。
+当HardwareResourceType=POD时，该参数不生效。
      * @param MasterCount 扩容的Master节点的数量。
+使用clickhouse集群扩容时，该参数不生效。
+使用kafka集群扩容时，该参数不生效。
+当HardwareResourceType=POD时，该参数不生效。
      */
     public void setMasterCount(Long MasterCount) {
         this.MasterCount = MasterCount;
+    }
+
+    /**
+     * Get 扩容后是否启动服务，true：启动，false：不启动 
+     * @return StartServiceAfterScaleOut 扩容后是否启动服务，true：启动，false：不启动
+     */
+    public String getStartServiceAfterScaleOut() {
+        return this.StartServiceAfterScaleOut;
+    }
+
+    /**
+     * Set 扩容后是否启动服务，true：启动，false：不启动
+     * @param StartServiceAfterScaleOut 扩容后是否启动服务，true：启动，false：不启动
+     */
+    public void setStartServiceAfterScaleOut(String StartServiceAfterScaleOut) {
+        this.StartServiceAfterScaleOut = StartServiceAfterScaleOut;
     }
 
     public ScaleOutInstanceRequest() {
@@ -634,6 +672,9 @@ public class ScaleOutInstanceRequest extends AbstractModel{
         if (source.MasterCount != null) {
             this.MasterCount = new Long(source.MasterCount);
         }
+        if (source.StartServiceAfterScaleOut != null) {
+            this.StartServiceAfterScaleOut = new String(source.StartServiceAfterScaleOut);
+        }
     }
 
 
@@ -662,6 +703,7 @@ public class ScaleOutInstanceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "YarnNodeLabel", this.YarnNodeLabel);
         this.setParamObj(map, prefix + "PodParameter.", this.PodParameter);
         this.setParamSimple(map, prefix + "MasterCount", this.MasterCount);
+        this.setParamSimple(map, prefix + "StartServiceAfterScaleOut", this.StartServiceAfterScaleOut);
 
     }
 }

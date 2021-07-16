@@ -65,6 +65,13 @@ public class ModifyTopicRequest extends AbstractModel{
     private Long MaxSplitPartitions;
 
     /**
+    * 生命周期，单位天；可取值范围1~366
+    */
+    @SerializedName("Period")
+    @Expose
+    private Long Period;
+
+    /**
      * Get 日志主题ID 
      * @return TopicId 日志主题ID
      */
@@ -160,6 +167,22 @@ public class ModifyTopicRequest extends AbstractModel{
         this.MaxSplitPartitions = MaxSplitPartitions;
     }
 
+    /**
+     * Get 生命周期，单位天；可取值范围1~366 
+     * @return Period 生命周期，单位天；可取值范围1~366
+     */
+    public Long getPeriod() {
+        return this.Period;
+    }
+
+    /**
+     * Set 生命周期，单位天；可取值范围1~366
+     * @param Period 生命周期，单位天；可取值范围1~366
+     */
+    public void setPeriod(Long Period) {
+        this.Period = Period;
+    }
+
     public ModifyTopicRequest() {
     }
 
@@ -189,6 +212,9 @@ public class ModifyTopicRequest extends AbstractModel{
         if (source.MaxSplitPartitions != null) {
             this.MaxSplitPartitions = new Long(source.MaxSplitPartitions);
         }
+        if (source.Period != null) {
+            this.Period = new Long(source.Period);
+        }
     }
 
 
@@ -202,6 +228,7 @@ public class ModifyTopicRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "AutoSplit", this.AutoSplit);
         this.setParamSimple(map, prefix + "MaxSplitPartitions", this.MaxSplitPartitions);
+        this.setParamSimple(map, prefix + "Period", this.Period);
 
     }
 }

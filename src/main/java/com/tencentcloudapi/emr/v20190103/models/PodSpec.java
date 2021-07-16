@@ -94,6 +94,22 @@ public class PodSpec extends AbstractModel{
     private DynamicPodSpec DynamicPodSpec;
 
     /**
+    * 代表vpc网络唯一id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("VpcId")
+    @Expose
+    private String VpcId;
+
+    /**
+    * 代表vpc子网唯一id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SubnetId")
+    @Expose
+    private String SubnetId;
+
+    /**
      * Get 外部资源提供者的标识符，例如"cls-a1cd23fa"。 
      * @return ResourceProviderIdentifier 外部资源提供者的标识符，例如"cls-a1cd23fa"。
      */
@@ -257,6 +273,46 @@ public class PodSpec extends AbstractModel{
         this.DynamicPodSpec = DynamicPodSpec;
     }
 
+    /**
+     * Get 代表vpc网络唯一id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return VpcId 代表vpc网络唯一id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getVpcId() {
+        return this.VpcId;
+    }
+
+    /**
+     * Set 代表vpc网络唯一id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param VpcId 代表vpc网络唯一id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVpcId(String VpcId) {
+        this.VpcId = VpcId;
+    }
+
+    /**
+     * Get 代表vpc子网唯一id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SubnetId 代表vpc子网唯一id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSubnetId() {
+        return this.SubnetId;
+    }
+
+    /**
+     * Set 代表vpc子网唯一id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SubnetId 代表vpc子网唯一id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSubnetId(String SubnetId) {
+        this.SubnetId = SubnetId;
+    }
+
     public PodSpec() {
     }
 
@@ -301,6 +357,12 @@ public class PodSpec extends AbstractModel{
         if (source.DynamicPodSpec != null) {
             this.DynamicPodSpec = new DynamicPodSpec(source.DynamicPodSpec);
         }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.SubnetId != null) {
+            this.SubnetId = new String(source.SubnetId);
+        }
     }
 
 
@@ -318,6 +380,8 @@ public class PodSpec extends AbstractModel{
         this.setParamArrayObj(map, prefix + "PodVolumes.", this.PodVolumes);
         this.setParamSimple(map, prefix + "IsDynamicSpec", this.IsDynamicSpec);
         this.setParamObj(map, prefix + "DynamicPodSpec.", this.DynamicPodSpec);
+        this.setParamSimple(map, prefix + "VpcId", this.VpcId);
+        this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
 
     }
 }

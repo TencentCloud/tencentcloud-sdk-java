@@ -51,7 +51,7 @@ public class CreateTopicRequest extends AbstractModel{
     private Tag [] Tags;
 
     /**
-    * 是否开启自动分裂，默认值为false
+    * 是否开启自动分裂，默认值为true
     */
     @SerializedName("AutoSplit")
     @Expose
@@ -65,11 +65,18 @@ public class CreateTopicRequest extends AbstractModel{
     private Long MaxSplitPartitions;
 
     /**
-    * 日志主题的存储类型，可选值 hot（热存储），cold（冷存储）默认为hot
+    * 日志主题的存储类型，可选值 hot（实时存储），cold（离线存储）；默认为hot。若传入cold，请先联系客服进行开白。
     */
     @SerializedName("StorageType")
     @Expose
     private String StorageType;
+
+    /**
+    * 生命周期，单位天；可取值范围1~366。默认30天
+    */
+    @SerializedName("Period")
+    @Expose
+    private Long Period;
 
     /**
      * Get 日志集ID 
@@ -136,16 +143,16 @@ public class CreateTopicRequest extends AbstractModel{
     }
 
     /**
-     * Get 是否开启自动分裂，默认值为false 
-     * @return AutoSplit 是否开启自动分裂，默认值为false
+     * Get 是否开启自动分裂，默认值为true 
+     * @return AutoSplit 是否开启自动分裂，默认值为true
      */
     public Boolean getAutoSplit() {
         return this.AutoSplit;
     }
 
     /**
-     * Set 是否开启自动分裂，默认值为false
-     * @param AutoSplit 是否开启自动分裂，默认值为false
+     * Set 是否开启自动分裂，默认值为true
+     * @param AutoSplit 是否开启自动分裂，默认值为true
      */
     public void setAutoSplit(Boolean AutoSplit) {
         this.AutoSplit = AutoSplit;
@@ -168,19 +175,35 @@ public class CreateTopicRequest extends AbstractModel{
     }
 
     /**
-     * Get 日志主题的存储类型，可选值 hot（热存储），cold（冷存储）默认为hot 
-     * @return StorageType 日志主题的存储类型，可选值 hot（热存储），cold（冷存储）默认为hot
+     * Get 日志主题的存储类型，可选值 hot（实时存储），cold（离线存储）；默认为hot。若传入cold，请先联系客服进行开白。 
+     * @return StorageType 日志主题的存储类型，可选值 hot（实时存储），cold（离线存储）；默认为hot。若传入cold，请先联系客服进行开白。
      */
     public String getStorageType() {
         return this.StorageType;
     }
 
     /**
-     * Set 日志主题的存储类型，可选值 hot（热存储），cold（冷存储）默认为hot
-     * @param StorageType 日志主题的存储类型，可选值 hot（热存储），cold（冷存储）默认为hot
+     * Set 日志主题的存储类型，可选值 hot（实时存储），cold（离线存储）；默认为hot。若传入cold，请先联系客服进行开白。
+     * @param StorageType 日志主题的存储类型，可选值 hot（实时存储），cold（离线存储）；默认为hot。若传入cold，请先联系客服进行开白。
      */
     public void setStorageType(String StorageType) {
         this.StorageType = StorageType;
+    }
+
+    /**
+     * Get 生命周期，单位天；可取值范围1~366。默认30天 
+     * @return Period 生命周期，单位天；可取值范围1~366。默认30天
+     */
+    public Long getPeriod() {
+        return this.Period;
+    }
+
+    /**
+     * Set 生命周期，单位天；可取值范围1~366。默认30天
+     * @param Period 生命周期，单位天；可取值范围1~366。默认30天
+     */
+    public void setPeriod(Long Period) {
+        this.Period = Period;
     }
 
     public CreateTopicRequest() {
@@ -215,6 +238,9 @@ public class CreateTopicRequest extends AbstractModel{
         if (source.StorageType != null) {
             this.StorageType = new String(source.StorageType);
         }
+        if (source.Period != null) {
+            this.Period = new Long(source.Period);
+        }
     }
 
 
@@ -229,6 +255,7 @@ public class CreateTopicRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "AutoSplit", this.AutoSplit);
         this.setParamSimple(map, prefix + "MaxSplitPartitions", this.MaxSplitPartitions);
         this.setParamSimple(map, prefix + "StorageType", this.StorageType);
+        this.setParamSimple(map, prefix + "Period", this.Period);
 
     }
 }

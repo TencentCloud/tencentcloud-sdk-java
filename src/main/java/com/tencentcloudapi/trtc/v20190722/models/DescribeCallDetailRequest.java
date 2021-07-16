@@ -30,7 +30,7 @@ public class DescribeCallDetailRequest extends AbstractModel{
     private String CommId;
 
     /**
-    * 查询开始时间，14天内。本地unix时间戳（1588031999s）
+    * 查询开始时间，14天内。本地unix时间戳（1588031999s），查询实时数据时，查询起止时间不超过1个小时。
     */
     @SerializedName("StartTime")
     @Expose
@@ -108,16 +108,16 @@ bigvHeight：上/下行分辨率高
     }
 
     /**
-     * Get 查询开始时间，14天内。本地unix时间戳（1588031999s） 
-     * @return StartTime 查询开始时间，14天内。本地unix时间戳（1588031999s）
+     * Get 查询开始时间，14天内。本地unix时间戳（1588031999s），查询实时数据时，查询起止时间不超过1个小时。 
+     * @return StartTime 查询开始时间，14天内。本地unix时间戳（1588031999s），查询实时数据时，查询起止时间不超过1个小时。
      */
     public Long getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 查询开始时间，14天内。本地unix时间戳（1588031999s）
-     * @param StartTime 查询开始时间，14天内。本地unix时间戳（1588031999s）
+     * Set 查询开始时间，14天内。本地unix时间戳（1588031999s），查询实时数据时，查询起止时间不超过1个小时。
+     * @param StartTime 查询开始时间，14天内。本地unix时间戳（1588031999s），查询实时数据时，查询起止时间不超过1个小时。
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;

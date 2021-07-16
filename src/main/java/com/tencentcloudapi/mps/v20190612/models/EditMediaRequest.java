@@ -44,6 +44,13 @@ public class EditMediaRequest extends AbstractModel{
     private String OutputObjectPath;
 
     /**
+    * 编辑后生成的文件配置。
+    */
+    @SerializedName("OutputConfig")
+    @Expose
+    private EditMediaOutputConfig OutputConfig;
+
+    /**
     * 任务的事件通知信息，不填代表不获取事件通知。
     */
     @SerializedName("TaskNotifyConfig")
@@ -117,6 +124,22 @@ public class EditMediaRequest extends AbstractModel{
      */
     public void setOutputObjectPath(String OutputObjectPath) {
         this.OutputObjectPath = OutputObjectPath;
+    }
+
+    /**
+     * Get 编辑后生成的文件配置。 
+     * @return OutputConfig 编辑后生成的文件配置。
+     */
+    public EditMediaOutputConfig getOutputConfig() {
+        return this.OutputConfig;
+    }
+
+    /**
+     * Set 编辑后生成的文件配置。
+     * @param OutputConfig 编辑后生成的文件配置。
+     */
+    public void setOutputConfig(EditMediaOutputConfig OutputConfig) {
+        this.OutputConfig = OutputConfig;
     }
 
     /**
@@ -203,6 +226,9 @@ public class EditMediaRequest extends AbstractModel{
         if (source.OutputObjectPath != null) {
             this.OutputObjectPath = new String(source.OutputObjectPath);
         }
+        if (source.OutputConfig != null) {
+            this.OutputConfig = new EditMediaOutputConfig(source.OutputConfig);
+        }
         if (source.TaskNotifyConfig != null) {
             this.TaskNotifyConfig = new TaskNotifyConfig(source.TaskNotifyConfig);
         }
@@ -225,6 +251,7 @@ public class EditMediaRequest extends AbstractModel{
         this.setParamArrayObj(map, prefix + "FileInfos.", this.FileInfos);
         this.setParamObj(map, prefix + "OutputStorage.", this.OutputStorage);
         this.setParamSimple(map, prefix + "OutputObjectPath", this.OutputObjectPath);
+        this.setParamObj(map, prefix + "OutputConfig.", this.OutputConfig);
         this.setParamObj(map, prefix + "TaskNotifyConfig.", this.TaskNotifyConfig);
         this.setParamSimple(map, prefix + "TasksPriority", this.TasksPriority);
         this.setParamSimple(map, prefix + "SessionId", this.SessionId);

@@ -30,7 +30,7 @@ public class ListUsersInOrgNodeRequest extends AbstractModel{
     private String OrgNodeId;
 
     /**
-    * 限制读取子节点信息层数。当读取层数为空或0时，默认仅读取当前机构节点信息。当读取层数为1时，读取本机构节点以及其第一层子节点信息。
+    * 是否读取其子节点信息。当其为空或false时，默认仅读取当前机构节点信息。当其为true时，读取本机构节点以及其第一层子节点信息。
     */
     @SerializedName("IncludeOrgNodeChildInfo")
     @Expose
@@ -53,16 +53,16 @@ public class ListUsersInOrgNodeRequest extends AbstractModel{
     }
 
     /**
-     * Get 限制读取子节点信息层数。当读取层数为空或0时，默认仅读取当前机构节点信息。当读取层数为1时，读取本机构节点以及其第一层子节点信息。 
-     * @return IncludeOrgNodeChildInfo 限制读取子节点信息层数。当读取层数为空或0时，默认仅读取当前机构节点信息。当读取层数为1时，读取本机构节点以及其第一层子节点信息。
+     * Get 是否读取其子节点信息。当其为空或false时，默认仅读取当前机构节点信息。当其为true时，读取本机构节点以及其第一层子节点信息。 
+     * @return IncludeOrgNodeChildInfo 是否读取其子节点信息。当其为空或false时，默认仅读取当前机构节点信息。当其为true时，读取本机构节点以及其第一层子节点信息。
      */
     public Boolean getIncludeOrgNodeChildInfo() {
         return this.IncludeOrgNodeChildInfo;
     }
 
     /**
-     * Set 限制读取子节点信息层数。当读取层数为空或0时，默认仅读取当前机构节点信息。当读取层数为1时，读取本机构节点以及其第一层子节点信息。
-     * @param IncludeOrgNodeChildInfo 限制读取子节点信息层数。当读取层数为空或0时，默认仅读取当前机构节点信息。当读取层数为1时，读取本机构节点以及其第一层子节点信息。
+     * Set 是否读取其子节点信息。当其为空或false时，默认仅读取当前机构节点信息。当其为true时，读取本机构节点以及其第一层子节点信息。
+     * @param IncludeOrgNodeChildInfo 是否读取其子节点信息。当其为空或false时，默认仅读取当前机构节点信息。当其为true时，读取本机构节点以及其第一层子节点信息。
      */
     public void setIncludeOrgNodeChildInfo(Boolean IncludeOrgNodeChildInfo) {
         this.IncludeOrgNodeChildInfo = IncludeOrgNodeChildInfo;

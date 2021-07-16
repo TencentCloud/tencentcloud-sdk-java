@@ -61,8 +61,15 @@ public class DescribeTopicsRequest extends AbstractModel{
 
 必选：否
 
+<br><li> storageType
 
-每次请求的Filters的上限为10，Filter.Values的上限为5。
+按照【日志主题的存储类型】进行过滤。可选值 hot（实时存储），cold（离线存储）
+类型：String
+
+必选：否
+
+
+每次请求的Filters的上限为10，Filter.Values的上限为100。
     */
     @SerializedName("Filters")
     @Expose
@@ -121,8 +128,15 @@ public class DescribeTopicsRequest extends AbstractModel{
 
 必选：否
 
+<br><li> storageType
 
-每次请求的Filters的上限为10，Filter.Values的上限为5。 
+按照【日志主题的存储类型】进行过滤。可选值 hot（实时存储），cold（离线存储）
+类型：String
+
+必选：否
+
+
+每次请求的Filters的上限为10，Filter.Values的上限为100。 
      * @return Filters <br><li> topicName
 
 按照【日志主题名称】进行过滤。
@@ -161,8 +175,15 @@ public class DescribeTopicsRequest extends AbstractModel{
 
 必选：否
 
+<br><li> storageType
 
-每次请求的Filters的上限为10，Filter.Values的上限为5。
+按照【日志主题的存储类型】进行过滤。可选值 hot（实时存储），cold（离线存储）
+类型：String
+
+必选：否
+
+
+每次请求的Filters的上限为10，Filter.Values的上限为100。
      */
     public Filter [] getFilters() {
         return this.Filters;
@@ -207,8 +228,15 @@ public class DescribeTopicsRequest extends AbstractModel{
 
 必选：否
 
+<br><li> storageType
 
-每次请求的Filters的上限为10，Filter.Values的上限为5。
+按照【日志主题的存储类型】进行过滤。可选值 hot（实时存储），cold（离线存储）
+类型：String
+
+必选：否
+
+
+每次请求的Filters的上限为10，Filter.Values的上限为100。
      * @param Filters <br><li> topicName
 
 按照【日志主题名称】进行过滤。
@@ -247,8 +275,15 @@ public class DescribeTopicsRequest extends AbstractModel{
 
 必选：否
 
+<br><li> storageType
 
-每次请求的Filters的上限为10，Filter.Values的上限为5。
+按照【日志主题的存储类型】进行过滤。可选值 hot（实时存储），cold（离线存储）
+类型：String
+
+必选：否
+
+
+每次请求的Filters的上限为10，Filter.Values的上限为100。
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

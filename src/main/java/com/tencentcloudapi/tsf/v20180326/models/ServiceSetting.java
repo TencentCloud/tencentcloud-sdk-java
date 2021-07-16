@@ -47,6 +47,30 @@ public class ServiceSetting extends AbstractModel{
     private String SubnetId;
 
     /**
+    * 是否创建 k8s service，默认为 false
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DisableService")
+    @Expose
+    private Boolean DisableService;
+
+    /**
+    * service 是否为 headless 类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("HeadlessService")
+    @Expose
+    private Boolean HeadlessService;
+
+    /**
+    * 当为 true 且 DisableService 也为 true 时，会删除之前创建的 service，请小心使用
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AllowDeleteService")
+    @Expose
+    private Boolean AllowDeleteService;
+
+    /**
      * Get 0:公网, 1:集群内访问, 2：NodePort, 3: VPC 内网访问
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return AccessType 0:公网, 1:集群内访问, 2：NodePort, 3: VPC 内网访问
@@ -106,6 +130,66 @@ public class ServiceSetting extends AbstractModel{
         this.SubnetId = SubnetId;
     }
 
+    /**
+     * Get 是否创建 k8s service，默认为 false
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DisableService 是否创建 k8s service，默认为 false
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getDisableService() {
+        return this.DisableService;
+    }
+
+    /**
+     * Set 是否创建 k8s service，默认为 false
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DisableService 是否创建 k8s service，默认为 false
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDisableService(Boolean DisableService) {
+        this.DisableService = DisableService;
+    }
+
+    /**
+     * Get service 是否为 headless 类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return HeadlessService service 是否为 headless 类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getHeadlessService() {
+        return this.HeadlessService;
+    }
+
+    /**
+     * Set service 是否为 headless 类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param HeadlessService service 是否为 headless 类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setHeadlessService(Boolean HeadlessService) {
+        this.HeadlessService = HeadlessService;
+    }
+
+    /**
+     * Get 当为 true 且 DisableService 也为 true 时，会删除之前创建的 service，请小心使用
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AllowDeleteService 当为 true 且 DisableService 也为 true 时，会删除之前创建的 service，请小心使用
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getAllowDeleteService() {
+        return this.AllowDeleteService;
+    }
+
+    /**
+     * Set 当为 true 且 DisableService 也为 true 时，会删除之前创建的 service，请小心使用
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AllowDeleteService 当为 true 且 DisableService 也为 true 时，会删除之前创建的 service，请小心使用
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAllowDeleteService(Boolean AllowDeleteService) {
+        this.AllowDeleteService = AllowDeleteService;
+    }
+
     public ServiceSetting() {
     }
 
@@ -126,6 +210,15 @@ public class ServiceSetting extends AbstractModel{
         if (source.SubnetId != null) {
             this.SubnetId = new String(source.SubnetId);
         }
+        if (source.DisableService != null) {
+            this.DisableService = new Boolean(source.DisableService);
+        }
+        if (source.HeadlessService != null) {
+            this.HeadlessService = new Boolean(source.HeadlessService);
+        }
+        if (source.AllowDeleteService != null) {
+            this.AllowDeleteService = new Boolean(source.AllowDeleteService);
+        }
     }
 
 
@@ -136,6 +229,9 @@ public class ServiceSetting extends AbstractModel{
         this.setParamSimple(map, prefix + "AccessType", this.AccessType);
         this.setParamArrayObj(map, prefix + "ProtocolPorts.", this.ProtocolPorts);
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
+        this.setParamSimple(map, prefix + "DisableService", this.DisableService);
+        this.setParamSimple(map, prefix + "HeadlessService", this.HeadlessService);
+        this.setParamSimple(map, prefix + "AllowDeleteService", this.AllowDeleteService);
 
     }
 }

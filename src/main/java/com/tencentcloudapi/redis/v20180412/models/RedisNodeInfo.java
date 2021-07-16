@@ -30,6 +30,13 @@ public class RedisNodeInfo extends AbstractModel{
     private Long NodeType;
 
     /**
+    * 主节点或者副本节点的ID，创建时不需要传递此参数。
+    */
+    @SerializedName("NodeId")
+    @Expose
+    private Long NodeId;
+
+    /**
     * 主节点或者副本节点的可用区ID
     */
     @SerializedName("ZoneId")
@@ -37,11 +44,11 @@ public class RedisNodeInfo extends AbstractModel{
     private Long ZoneId;
 
     /**
-    * 主节点或者副本节点的ID，创建时不需要传递此参数。
+    * 主节点或者副本节点的可用区名称
     */
-    @SerializedName("NodeId")
+    @SerializedName("ZoneName")
     @Expose
-    private Long NodeId;
+    private String ZoneName;
 
     /**
      * Get 节点类型，0 为主节点，1 为副本节点 
@@ -57,6 +64,22 @@ public class RedisNodeInfo extends AbstractModel{
      */
     public void setNodeType(Long NodeType) {
         this.NodeType = NodeType;
+    }
+
+    /**
+     * Get 主节点或者副本节点的ID，创建时不需要传递此参数。 
+     * @return NodeId 主节点或者副本节点的ID，创建时不需要传递此参数。
+     */
+    public Long getNodeId() {
+        return this.NodeId;
+    }
+
+    /**
+     * Set 主节点或者副本节点的ID，创建时不需要传递此参数。
+     * @param NodeId 主节点或者副本节点的ID，创建时不需要传递此参数。
+     */
+    public void setNodeId(Long NodeId) {
+        this.NodeId = NodeId;
     }
 
     /**
@@ -76,19 +99,19 @@ public class RedisNodeInfo extends AbstractModel{
     }
 
     /**
-     * Get 主节点或者副本节点的ID，创建时不需要传递此参数。 
-     * @return NodeId 主节点或者副本节点的ID，创建时不需要传递此参数。
+     * Get 主节点或者副本节点的可用区名称 
+     * @return ZoneName 主节点或者副本节点的可用区名称
      */
-    public Long getNodeId() {
-        return this.NodeId;
+    public String getZoneName() {
+        return this.ZoneName;
     }
 
     /**
-     * Set 主节点或者副本节点的ID，创建时不需要传递此参数。
-     * @param NodeId 主节点或者副本节点的ID，创建时不需要传递此参数。
+     * Set 主节点或者副本节点的可用区名称
+     * @param ZoneName 主节点或者副本节点的可用区名称
      */
-    public void setNodeId(Long NodeId) {
-        this.NodeId = NodeId;
+    public void setZoneName(String ZoneName) {
+        this.ZoneName = ZoneName;
     }
 
     public RedisNodeInfo() {
@@ -102,11 +125,14 @@ public class RedisNodeInfo extends AbstractModel{
         if (source.NodeType != null) {
             this.NodeType = new Long(source.NodeType);
         }
+        if (source.NodeId != null) {
+            this.NodeId = new Long(source.NodeId);
+        }
         if (source.ZoneId != null) {
             this.ZoneId = new Long(source.ZoneId);
         }
-        if (source.NodeId != null) {
-            this.NodeId = new Long(source.NodeId);
+        if (source.ZoneName != null) {
+            this.ZoneName = new String(source.ZoneName);
         }
     }
 
@@ -116,8 +142,9 @@ public class RedisNodeInfo extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "NodeType", this.NodeType);
-        this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
         this.setParamSimple(map, prefix + "NodeId", this.NodeId);
+        this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
+        this.setParamSimple(map, prefix + "ZoneName", this.ZoneName);
 
     }
 }

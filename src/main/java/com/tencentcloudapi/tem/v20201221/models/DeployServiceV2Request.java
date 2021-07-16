@@ -232,6 +232,41 @@ public class DeployServiceV2Request extends AbstractModel{
     private String VersionId;
 
     /**
+    * 启动后执行的脚本
+    */
+    @SerializedName("PostStart")
+    @Expose
+    private String PostStart;
+
+    /**
+    * 停止前执行的脚本
+    */
+    @SerializedName("PreStop")
+    @Expose
+    private String PreStop;
+
+    /**
+    * 分批发布策略配置
+    */
+    @SerializedName("DeployStrategyConf")
+    @Expose
+    private DeployStrategyConf DeployStrategyConf;
+
+    /**
+    * 存活探针配置
+    */
+    @SerializedName("Liveness")
+    @Expose
+    private HealthCheckConfig Liveness;
+
+    /**
+    * 就绪探针配置
+    */
+    @SerializedName("Readiness")
+    @Expose
+    private HealthCheckConfig Readiness;
+
+    /**
      * Get 服务ID 
      * @return ServiceId 服务ID
      */
@@ -719,6 +754,86 @@ public class DeployServiceV2Request extends AbstractModel{
         this.VersionId = VersionId;
     }
 
+    /**
+     * Get 启动后执行的脚本 
+     * @return PostStart 启动后执行的脚本
+     */
+    public String getPostStart() {
+        return this.PostStart;
+    }
+
+    /**
+     * Set 启动后执行的脚本
+     * @param PostStart 启动后执行的脚本
+     */
+    public void setPostStart(String PostStart) {
+        this.PostStart = PostStart;
+    }
+
+    /**
+     * Get 停止前执行的脚本 
+     * @return PreStop 停止前执行的脚本
+     */
+    public String getPreStop() {
+        return this.PreStop;
+    }
+
+    /**
+     * Set 停止前执行的脚本
+     * @param PreStop 停止前执行的脚本
+     */
+    public void setPreStop(String PreStop) {
+        this.PreStop = PreStop;
+    }
+
+    /**
+     * Get 分批发布策略配置 
+     * @return DeployStrategyConf 分批发布策略配置
+     */
+    public DeployStrategyConf getDeployStrategyConf() {
+        return this.DeployStrategyConf;
+    }
+
+    /**
+     * Set 分批发布策略配置
+     * @param DeployStrategyConf 分批发布策略配置
+     */
+    public void setDeployStrategyConf(DeployStrategyConf DeployStrategyConf) {
+        this.DeployStrategyConf = DeployStrategyConf;
+    }
+
+    /**
+     * Get 存活探针配置 
+     * @return Liveness 存活探针配置
+     */
+    public HealthCheckConfig getLiveness() {
+        return this.Liveness;
+    }
+
+    /**
+     * Set 存活探针配置
+     * @param Liveness 存活探针配置
+     */
+    public void setLiveness(HealthCheckConfig Liveness) {
+        this.Liveness = Liveness;
+    }
+
+    /**
+     * Get 就绪探针配置 
+     * @return Readiness 就绪探针配置
+     */
+    public HealthCheckConfig getReadiness() {
+        return this.Readiness;
+    }
+
+    /**
+     * Set 就绪探针配置
+     * @param Readiness 就绪探针配置
+     */
+    public void setReadiness(HealthCheckConfig Readiness) {
+        this.Readiness = Readiness;
+    }
+
     public DeployServiceV2Request() {
     }
 
@@ -838,6 +953,21 @@ public class DeployServiceV2Request extends AbstractModel{
         if (source.VersionId != null) {
             this.VersionId = new String(source.VersionId);
         }
+        if (source.PostStart != null) {
+            this.PostStart = new String(source.PostStart);
+        }
+        if (source.PreStop != null) {
+            this.PreStop = new String(source.PreStop);
+        }
+        if (source.DeployStrategyConf != null) {
+            this.DeployStrategyConf = new DeployStrategyConf(source.DeployStrategyConf);
+        }
+        if (source.Liveness != null) {
+            this.Liveness = new HealthCheckConfig(source.Liveness);
+        }
+        if (source.Readiness != null) {
+            this.Readiness = new HealthCheckConfig(source.Readiness);
+        }
     }
 
 
@@ -874,6 +1004,11 @@ public class DeployServiceV2Request extends AbstractModel{
         this.setParamArrayObj(map, prefix + "SettingConfs.", this.SettingConfs);
         this.setParamObj(map, prefix + "EksService.", this.EksService);
         this.setParamSimple(map, prefix + "VersionId", this.VersionId);
+        this.setParamSimple(map, prefix + "PostStart", this.PostStart);
+        this.setParamSimple(map, prefix + "PreStop", this.PreStop);
+        this.setParamObj(map, prefix + "DeployStrategyConf.", this.DeployStrategyConf);
+        this.setParamObj(map, prefix + "Liveness.", this.Liveness);
+        this.setParamObj(map, prefix + "Readiness.", this.Readiness);
 
     }
 }

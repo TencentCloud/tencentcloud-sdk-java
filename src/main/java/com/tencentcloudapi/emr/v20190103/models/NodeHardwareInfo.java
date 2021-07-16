@@ -336,6 +336,14 @@ public class NodeHardwareInfo extends AbstractModel{
     private String DynamicPodSpec;
 
     /**
+    * 是否支持变更计费类型 1是，0否
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SupportModifyPayMode")
+    @Expose
+    private Long SupportModifyPayMode;
+
+    /**
      * Get 用户APPID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return AppId 用户APPID
@@ -1119,6 +1127,26 @@ public class NodeHardwareInfo extends AbstractModel{
         this.DynamicPodSpec = DynamicPodSpec;
     }
 
+    /**
+     * Get 是否支持变更计费类型 1是，0否
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SupportModifyPayMode 是否支持变更计费类型 1是，0否
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getSupportModifyPayMode() {
+        return this.SupportModifyPayMode;
+    }
+
+    /**
+     * Set 是否支持变更计费类型 1是，0否
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SupportModifyPayMode 是否支持变更计费类型 1是，0否
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSupportModifyPayMode(Long SupportModifyPayMode) {
+        this.SupportModifyPayMode = SupportModifyPayMode;
+    }
+
     public NodeHardwareInfo() {
     }
 
@@ -1250,6 +1278,9 @@ public class NodeHardwareInfo extends AbstractModel{
         if (source.DynamicPodSpec != null) {
             this.DynamicPodSpec = new String(source.DynamicPodSpec);
         }
+        if (source.SupportModifyPayMode != null) {
+            this.SupportModifyPayMode = new Long(source.SupportModifyPayMode);
+        }
     }
 
 
@@ -1296,6 +1327,7 @@ public class NodeHardwareInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "HardwareResourceType", this.HardwareResourceType);
         this.setParamSimple(map, prefix + "IsDynamicSpec", this.IsDynamicSpec);
         this.setParamSimple(map, prefix + "DynamicPodSpec", this.DynamicPodSpec);
+        this.setParamSimple(map, prefix + "SupportModifyPayMode", this.SupportModifyPayMode);
 
     }
 }

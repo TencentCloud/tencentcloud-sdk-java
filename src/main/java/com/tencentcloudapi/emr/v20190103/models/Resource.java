@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class Resource extends AbstractModel{
 
     /**
-    * 节点规格描述
+    * 节点规格描述，如CVM.SA2。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Spec")
@@ -32,6 +32,12 @@ public class Resource extends AbstractModel{
 
     /**
     * 存储类型
+取值范围：
+<li>4：表示云SSD。</li>
+<li>5：表示高效云盘。</li>
+<li>6：表示增强型SSD云硬盘。</li>
+<li>11：表示吞吐型云硬盘。</li>
+<li>12：表示极速型SSD云硬盘。</li>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StorageType")
@@ -40,6 +46,10 @@ public class Resource extends AbstractModel{
 
     /**
     * 磁盘类型
+取值范围：
+<li>CLOUD_SSD：表示云SSD。</li>
+<li>CLOUD_PREMIUM：表示高效云盘。</li>
+<li>CLOUD_BASIC：表示云硬盘。</li>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DiskType")
@@ -95,7 +105,7 @@ public class Resource extends AbstractModel{
     private Tag [] Tags;
 
     /**
-    * 规格类型
+    * 规格类型，如S2.MEDIUM8
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceType")
@@ -103,7 +113,7 @@ public class Resource extends AbstractModel{
     private String InstanceType;
 
     /**
-    * 本地盘数量
+    * 本地盘数量，该字段已废弃
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LocalDiskNum")
@@ -111,7 +121,7 @@ public class Resource extends AbstractModel{
     private Long LocalDiskNum;
 
     /**
-    * 盘数量
+    * 本地盘数量，如2
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DiskNum")
@@ -119,9 +129,9 @@ public class Resource extends AbstractModel{
     private Long DiskNum;
 
     /**
-     * Get 节点规格描述
+     * Get 节点规格描述，如CVM.SA2。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Spec 节点规格描述
+     * @return Spec 节点规格描述，如CVM.SA2。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSpec() {
@@ -129,9 +139,9 @@ public class Resource extends AbstractModel{
     }
 
     /**
-     * Set 节点规格描述
+     * Set 节点规格描述，如CVM.SA2。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Spec 节点规格描述
+     * @param Spec 节点规格描述，如CVM.SA2。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSpec(String Spec) {
@@ -140,8 +150,20 @@ public class Resource extends AbstractModel{
 
     /**
      * Get 存储类型
+取值范围：
+<li>4：表示云SSD。</li>
+<li>5：表示高效云盘。</li>
+<li>6：表示增强型SSD云硬盘。</li>
+<li>11：表示吞吐型云硬盘。</li>
+<li>12：表示极速型SSD云硬盘。</li>
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return StorageType 存储类型
+取值范围：
+<li>4：表示云SSD。</li>
+<li>5：表示高效云盘。</li>
+<li>6：表示增强型SSD云硬盘。</li>
+<li>11：表示吞吐型云硬盘。</li>
+<li>12：表示极速型SSD云硬盘。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStorageType() {
@@ -150,8 +172,20 @@ public class Resource extends AbstractModel{
 
     /**
      * Set 存储类型
+取值范围：
+<li>4：表示云SSD。</li>
+<li>5：表示高效云盘。</li>
+<li>6：表示增强型SSD云硬盘。</li>
+<li>11：表示吞吐型云硬盘。</li>
+<li>12：表示极速型SSD云硬盘。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param StorageType 存储类型
+取值范围：
+<li>4：表示云SSD。</li>
+<li>5：表示高效云盘。</li>
+<li>6：表示增强型SSD云硬盘。</li>
+<li>11：表示吞吐型云硬盘。</li>
+<li>12：表示极速型SSD云硬盘。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStorageType(Long StorageType) {
@@ -160,8 +194,16 @@ public class Resource extends AbstractModel{
 
     /**
      * Get 磁盘类型
+取值范围：
+<li>CLOUD_SSD：表示云SSD。</li>
+<li>CLOUD_PREMIUM：表示高效云盘。</li>
+<li>CLOUD_BASIC：表示云硬盘。</li>
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return DiskType 磁盘类型
+取值范围：
+<li>CLOUD_SSD：表示云SSD。</li>
+<li>CLOUD_PREMIUM：表示高效云盘。</li>
+<li>CLOUD_BASIC：表示云硬盘。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDiskType() {
@@ -170,8 +212,16 @@ public class Resource extends AbstractModel{
 
     /**
      * Set 磁盘类型
+取值范围：
+<li>CLOUD_SSD：表示云SSD。</li>
+<li>CLOUD_PREMIUM：表示高效云盘。</li>
+<li>CLOUD_BASIC：表示云硬盘。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param DiskType 磁盘类型
+取值范围：
+<li>CLOUD_SSD：表示云SSD。</li>
+<li>CLOUD_PREMIUM：表示高效云盘。</li>
+<li>CLOUD_BASIC：表示云硬盘。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDiskType(String DiskType) {
@@ -299,9 +349,9 @@ public class Resource extends AbstractModel{
     }
 
     /**
-     * Get 规格类型
+     * Get 规格类型，如S2.MEDIUM8
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InstanceType 规格类型
+     * @return InstanceType 规格类型，如S2.MEDIUM8
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceType() {
@@ -309,9 +359,9 @@ public class Resource extends AbstractModel{
     }
 
     /**
-     * Set 规格类型
+     * Set 规格类型，如S2.MEDIUM8
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InstanceType 规格类型
+     * @param InstanceType 规格类型，如S2.MEDIUM8
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceType(String InstanceType) {
@@ -319,9 +369,9 @@ public class Resource extends AbstractModel{
     }
 
     /**
-     * Get 本地盘数量
+     * Get 本地盘数量，该字段已废弃
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LocalDiskNum 本地盘数量
+     * @return LocalDiskNum 本地盘数量，该字段已废弃
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLocalDiskNum() {
@@ -329,9 +379,9 @@ public class Resource extends AbstractModel{
     }
 
     /**
-     * Set 本地盘数量
+     * Set 本地盘数量，该字段已废弃
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LocalDiskNum 本地盘数量
+     * @param LocalDiskNum 本地盘数量，该字段已废弃
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLocalDiskNum(Long LocalDiskNum) {
@@ -339,9 +389,9 @@ public class Resource extends AbstractModel{
     }
 
     /**
-     * Get 盘数量
+     * Get 本地盘数量，如2
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DiskNum 盘数量
+     * @return DiskNum 本地盘数量，如2
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDiskNum() {
@@ -349,9 +399,9 @@ public class Resource extends AbstractModel{
     }
 
     /**
-     * Set 盘数量
+     * Set 本地盘数量，如2
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DiskNum 盘数量
+     * @param DiskNum 本地盘数量，如2
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDiskNum(Long DiskNum) {

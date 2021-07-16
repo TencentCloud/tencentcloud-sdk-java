@@ -67,6 +67,13 @@ public class InquiryPriceRenewInstanceRequest extends AbstractModel{
     private String Currency;
 
     /**
+    * 是否按量转包年包月。0：否，1：是。
+    */
+    @SerializedName("ModifyPayMode")
+    @Expose
+    private Long ModifyPayMode;
+
+    /**
      * Get 实例续费的时长。需要结合TimeUnit一起使用。1表示续费1一个月 
      * @return TimeSpan 实例续费的时长。需要结合TimeUnit一起使用。1表示续费1一个月
      */
@@ -170,6 +177,22 @@ public class InquiryPriceRenewInstanceRequest extends AbstractModel{
         this.Currency = Currency;
     }
 
+    /**
+     * Get 是否按量转包年包月。0：否，1：是。 
+     * @return ModifyPayMode 是否按量转包年包月。0：否，1：是。
+     */
+    public Long getModifyPayMode() {
+        return this.ModifyPayMode;
+    }
+
+    /**
+     * Set 是否按量转包年包月。0：否，1：是。
+     * @param ModifyPayMode 是否按量转包年包月。0：否，1：是。
+     */
+    public void setModifyPayMode(Long ModifyPayMode) {
+        this.ModifyPayMode = ModifyPayMode;
+    }
+
     public InquiryPriceRenewInstanceRequest() {
     }
 
@@ -199,6 +222,9 @@ public class InquiryPriceRenewInstanceRequest extends AbstractModel{
         if (source.Currency != null) {
             this.Currency = new String(source.Currency);
         }
+        if (source.ModifyPayMode != null) {
+            this.ModifyPayMode = new Long(source.ModifyPayMode);
+        }
     }
 
 
@@ -212,6 +238,7 @@ public class InquiryPriceRenewInstanceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "PayMode", this.PayMode);
         this.setParamSimple(map, prefix + "TimeUnit", this.TimeUnit);
         this.setParamSimple(map, prefix + "Currency", this.Currency);
+        this.setParamSimple(map, prefix + "ModifyPayMode", this.ModifyPayMode);
 
     }
 }

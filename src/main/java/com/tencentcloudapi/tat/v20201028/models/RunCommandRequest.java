@@ -30,7 +30,7 @@ public class RunCommandRequest extends AbstractModel{
     private String Content;
 
     /**
-    * 待执行命令的实例ID列表。 支持实例类型：
+    * 待执行命令的实例ID列表，上限100。支持实例类型：
 <li> CVM
 <li> LIGHTHOUSE
     */
@@ -146,10 +146,10 @@ key为自定义参数名称，value为该参数的默认取值。kv均为字符�
     }
 
     /**
-     * Get 待执行命令的实例ID列表。 支持实例类型：
+     * Get 待执行命令的实例ID列表，上限100。支持实例类型：
 <li> CVM
 <li> LIGHTHOUSE 
-     * @return InstanceIds 待执行命令的实例ID列表。 支持实例类型：
+     * @return InstanceIds 待执行命令的实例ID列表，上限100。支持实例类型：
 <li> CVM
 <li> LIGHTHOUSE
      */
@@ -158,10 +158,10 @@ key为自定义参数名称，value为该参数的默认取值。kv均为字符�
     }
 
     /**
-     * Set 待执行命令的实例ID列表。 支持实例类型：
+     * Set 待执行命令的实例ID列表，上限100。支持实例类型：
 <li> CVM
 <li> LIGHTHOUSE
-     * @param InstanceIds 待执行命令的实例ID列表。 支持实例类型：
+     * @param InstanceIds 待执行命令的实例ID列表，上限100。支持实例类型：
 <li> CVM
 <li> LIGHTHOUSE
      */

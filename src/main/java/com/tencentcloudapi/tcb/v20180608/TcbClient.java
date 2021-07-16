@@ -679,6 +679,26 @@ public class TcbClient extends AbstractClient{
     }
 
     /**
+     *查询环境后付费计费详情
+     * @param req DescribeEnvPostpaidDeductRequest
+     * @return DescribeEnvPostpaidDeductResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeEnvPostpaidDeductResponse DescribeEnvPostpaidDeduct(DescribeEnvPostpaidDeductRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeEnvPostpaidDeductResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeEnvPostpaidDeductResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeEnvPostpaidDeduct");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取环境列表，含环境下的各个资源信息。尤其是各资源的唯一标识，是请求各资源的关键参数
      * @param req DescribeEnvsRequest
      * @return DescribeEnvsResponse
@@ -834,6 +854,26 @@ public class TcbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeSmsQuotasResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeSmsQuotas");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询环境1分钱抵扣信息
+     * @param req DescribeSpecialCostItemsRequest
+     * @return DescribeSpecialCostItemsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSpecialCostItemsResponse DescribeSpecialCostItems(DescribeSpecialCostItemsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeSpecialCostItemsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeSpecialCostItemsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeSpecialCostItems");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

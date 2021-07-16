@@ -199,7 +199,7 @@ public class CfwClient extends AbstractClient{
     }
 
     /**
-     *DescribeBlockByIpTimesList 告警中心阻断ip折线图
+     *DescribeBlockByIpTimesList 告警中心阻断IP折线图
 
      * @param req DescribeBlockByIpTimesListRequest
      * @return DescribeBlockByIpTimesListResponse
@@ -241,7 +241,7 @@ public class CfwClient extends AbstractClient{
     }
 
     /**
-     *查询防火墙弹性公网ip
+     *查询防火墙弹性公网IP
      * @param req DescribeCfwEipsRequest
      * @return DescribeCfwEipsResponse
      * @throws TencentCloudSDKException
@@ -402,7 +402,7 @@ public class CfwClient extends AbstractClient{
     }
 
     /**
-     *DescribeTLogIpList告警中心ip柱形图
+     *DescribeTLogIpList告警中心IP柱形图
 
      * @param req DescribeTLogIpListRequest
      * @return DescribeTLogIpListResponse

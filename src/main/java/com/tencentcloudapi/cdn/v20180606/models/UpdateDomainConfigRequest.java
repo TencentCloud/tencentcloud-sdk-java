@@ -310,6 +310,13 @@ global：全球加速
     private Quic Quic;
 
     /**
+    * 回源OSS私有鉴权
+    */
+    @SerializedName("OssPrivateAccess")
+    @Expose
+    private OssPrivateAccess OssPrivateAccess;
+
+    /**
      * Get 域名 
      * @return Domain 域名
      */
@@ -977,6 +984,22 @@ global：全球加速
         this.Quic = Quic;
     }
 
+    /**
+     * Get 回源OSS私有鉴权 
+     * @return OssPrivateAccess 回源OSS私有鉴权
+     */
+    public OssPrivateAccess getOssPrivateAccess() {
+        return this.OssPrivateAccess;
+    }
+
+    /**
+     * Set 回源OSS私有鉴权
+     * @param OssPrivateAccess 回源OSS私有鉴权
+     */
+    public void setOssPrivateAccess(OssPrivateAccess OssPrivateAccess) {
+        this.OssPrivateAccess = OssPrivateAccess;
+    }
+
     public UpdateDomainConfigRequest() {
     }
 
@@ -1108,6 +1131,9 @@ global：全球加速
         if (source.Quic != null) {
             this.Quic = new Quic(source.Quic);
         }
+        if (source.OssPrivateAccess != null) {
+            this.OssPrivateAccess = new OssPrivateAccess(source.OssPrivateAccess);
+        }
     }
 
 
@@ -1155,6 +1181,7 @@ global：全球加速
         this.setParamObj(map, prefix + "OfflineCache.", this.OfflineCache);
         this.setParamObj(map, prefix + "OriginCombine.", this.OriginCombine);
         this.setParamObj(map, prefix + "Quic.", this.Quic);
+        this.setParamObj(map, prefix + "OssPrivateAccess.", this.OssPrivateAccess);
 
     }
 }

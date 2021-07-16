@@ -23,13 +23,6 @@ import java.util.HashMap;
 public class CreateInstancesRequest extends AbstractModel{
 
     /**
-    * 实例所属的可用区ID，可参考[地域和可用区](https://cloud.tencent.com/document/product/239/4106)  。
-    */
-    @SerializedName("ZoneId")
-    @Expose
-    private Long ZoneId;
-
-    /**
     * 实例类型：2 – Redis2.8内存版(标准架构)，3 – CKV 3.2内存版(标准架构)，4 – CKV 3.2内存版(集群架构)，6 – Redis4.0内存版(标准架构)，7 – Redis4.0内存版(集群架构)，8 – Redis5.0内存版(标准架构)，9 – Redis5.0内存版(集群架构)。
     */
     @SerializedName("TypeId")
@@ -64,6 +57,13 @@ TypeId为标准架构时，MemSize是实例总内存容量；TypeId为集群架�
     @SerializedName("BillingMode")
     @Expose
     private Long BillingMode;
+
+    /**
+    * 实例所属的可用区ID，可参考[地域和可用区](https://cloud.tencent.com/document/product/239/4106)  。
+    */
+    @SerializedName("ZoneId")
+    @Expose
+    private Long ZoneId;
 
     /**
     * 实例密码，当输入参数NoAuth为true且使用私有网络VPC时，Password为非必填，否则Password为必填参数。
@@ -166,20 +166,18 @@ TypeId为标准架构时，MemSize是实例总内存容量；TypeId为集群架�
     private ResourceTag [] ResourceTags;
 
     /**
-     * Get 实例所属的可用区ID，可参考[地域和可用区](https://cloud.tencent.com/document/product/239/4106)  。 
-     * @return ZoneId 实例所属的可用区ID，可参考[地域和可用区](https://cloud.tencent.com/document/product/239/4106)  。
-     */
-    public Long getZoneId() {
-        return this.ZoneId;
-    }
+    * 实例所属的可用区名称，可参考[地域和可用区](https://cloud.tencent.com/document/product/239/4106)  。
+    */
+    @SerializedName("ZoneName")
+    @Expose
+    private String ZoneName;
 
     /**
-     * Set 实例所属的可用区ID，可参考[地域和可用区](https://cloud.tencent.com/document/product/239/4106)  。
-     * @param ZoneId 实例所属的可用区ID，可参考[地域和可用区](https://cloud.tencent.com/document/product/239/4106)  。
-     */
-    public void setZoneId(Long ZoneId) {
-        this.ZoneId = ZoneId;
-    }
+    * 创建实例需要应用的参数模板ID，不传则应用默认的参数模板
+    */
+    @SerializedName("TemplateId")
+    @Expose
+    private String TemplateId;
 
     /**
      * Get 实例类型：2 – Redis2.8内存版(标准架构)，3 – CKV 3.2内存版(标准架构)，4 – CKV 3.2内存版(集群架构)，6 – Redis4.0内存版(标准架构)，7 – Redis4.0内存版(集群架构)，8 – Redis5.0内存版(标准架构)，9 – Redis5.0内存版(集群架构)。 
@@ -263,6 +261,22 @@ TypeId为标准架构时，MemSize是实例总内存容量；TypeId为集群架�
      */
     public void setBillingMode(Long BillingMode) {
         this.BillingMode = BillingMode;
+    }
+
+    /**
+     * Get 实例所属的可用区ID，可参考[地域和可用区](https://cloud.tencent.com/document/product/239/4106)  。 
+     * @return ZoneId 实例所属的可用区ID，可参考[地域和可用区](https://cloud.tencent.com/document/product/239/4106)  。
+     */
+    public Long getZoneId() {
+        return this.ZoneId;
+    }
+
+    /**
+     * Set 实例所属的可用区ID，可参考[地域和可用区](https://cloud.tencent.com/document/product/239/4106)  。
+     * @param ZoneId 实例所属的可用区ID，可参考[地域和可用区](https://cloud.tencent.com/document/product/239/4106)  。
+     */
+    public void setZoneId(Long ZoneId) {
+        this.ZoneId = ZoneId;
     }
 
     /**
@@ -497,6 +511,38 @@ TypeId为标准架构时，MemSize是实例总内存容量；TypeId为集群架�
         this.ResourceTags = ResourceTags;
     }
 
+    /**
+     * Get 实例所属的可用区名称，可参考[地域和可用区](https://cloud.tencent.com/document/product/239/4106)  。 
+     * @return ZoneName 实例所属的可用区名称，可参考[地域和可用区](https://cloud.tencent.com/document/product/239/4106)  。
+     */
+    public String getZoneName() {
+        return this.ZoneName;
+    }
+
+    /**
+     * Set 实例所属的可用区名称，可参考[地域和可用区](https://cloud.tencent.com/document/product/239/4106)  。
+     * @param ZoneName 实例所属的可用区名称，可参考[地域和可用区](https://cloud.tencent.com/document/product/239/4106)  。
+     */
+    public void setZoneName(String ZoneName) {
+        this.ZoneName = ZoneName;
+    }
+
+    /**
+     * Get 创建实例需要应用的参数模板ID，不传则应用默认的参数模板 
+     * @return TemplateId 创建实例需要应用的参数模板ID，不传则应用默认的参数模板
+     */
+    public String getTemplateId() {
+        return this.TemplateId;
+    }
+
+    /**
+     * Set 创建实例需要应用的参数模板ID，不传则应用默认的参数模板
+     * @param TemplateId 创建实例需要应用的参数模板ID，不传则应用默认的参数模板
+     */
+    public void setTemplateId(String TemplateId) {
+        this.TemplateId = TemplateId;
+    }
+
     public CreateInstancesRequest() {
     }
 
@@ -505,9 +551,6 @@ TypeId为标准架构时，MemSize是实例总内存容量；TypeId为集群架�
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public CreateInstancesRequest(CreateInstancesRequest source) {
-        if (source.ZoneId != null) {
-            this.ZoneId = new Long(source.ZoneId);
-        }
         if (source.TypeId != null) {
             this.TypeId = new Long(source.TypeId);
         }
@@ -522,6 +565,9 @@ TypeId为标准架构时，MemSize是实例总内存容量；TypeId为集群架�
         }
         if (source.BillingMode != null) {
             this.BillingMode = new Long(source.BillingMode);
+        }
+        if (source.ZoneId != null) {
+            this.ZoneId = new Long(source.ZoneId);
         }
         if (source.Password != null) {
             this.Password = new String(source.Password);
@@ -574,6 +620,12 @@ TypeId为标准架构时，MemSize是实例总内存容量；TypeId为集群架�
                 this.ResourceTags[i] = new ResourceTag(source.ResourceTags[i]);
             }
         }
+        if (source.ZoneName != null) {
+            this.ZoneName = new String(source.ZoneName);
+        }
+        if (source.TemplateId != null) {
+            this.TemplateId = new String(source.TemplateId);
+        }
     }
 
 
@@ -581,12 +633,12 @@ TypeId为标准架构时，MemSize是实例总内存容量；TypeId为集群架�
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
         this.setParamSimple(map, prefix + "TypeId", this.TypeId);
         this.setParamSimple(map, prefix + "MemSize", this.MemSize);
         this.setParamSimple(map, prefix + "GoodsNum", this.GoodsNum);
         this.setParamSimple(map, prefix + "Period", this.Period);
         this.setParamSimple(map, prefix + "BillingMode", this.BillingMode);
+        this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
         this.setParamSimple(map, prefix + "Password", this.Password);
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
@@ -601,6 +653,8 @@ TypeId为标准架构时，MemSize是实例总内存容量；TypeId为集群架�
         this.setParamSimple(map, prefix + "NoAuth", this.NoAuth);
         this.setParamArrayObj(map, prefix + "NodeSet.", this.NodeSet);
         this.setParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
+        this.setParamSimple(map, prefix + "ZoneName", this.ZoneName);
+        this.setParamSimple(map, prefix + "TemplateId", this.TemplateId);
 
     }
 }

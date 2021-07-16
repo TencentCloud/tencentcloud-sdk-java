@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class DescribeDownloadFileRequest extends AbstractModel{
 
     /**
-    * 代码uri
+    * 代码uri，格式如：extension://abcdefhhxxx.zip，对应 DescribeExtensionUploadInfo 接口的返回值
     */
     @SerializedName("CodeUri")
     @Expose
     private String CodeUri;
 
     /**
-     * Get 代码uri 
-     * @return CodeUri 代码uri
+     * Get 代码uri，格式如：extension://abcdefhhxxx.zip，对应 DescribeExtensionUploadInfo 接口的返回值 
+     * @return CodeUri 代码uri，格式如：extension://abcdefhhxxx.zip，对应 DescribeExtensionUploadInfo 接口的返回值
      */
     public String getCodeUri() {
         return this.CodeUri;
     }
 
     /**
-     * Set 代码uri
-     * @param CodeUri 代码uri
+     * Set 代码uri，格式如：extension://abcdefhhxxx.zip，对应 DescribeExtensionUploadInfo 接口的返回值
+     * @param CodeUri 代码uri，格式如：extension://abcdefhhxxx.zip，对应 DescribeExtensionUploadInfo 接口的返回值
      */
     public void setCodeUri(String CodeUri) {
         this.CodeUri = CodeUri;

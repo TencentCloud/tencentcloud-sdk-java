@@ -74,6 +74,14 @@ public class RunVersionPod extends AbstractModel{
     private String DeployVersion;
 
     /**
+    * 重启次数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RestartCount")
+    @Expose
+    private Long RestartCount;
+
+    /**
      * Get shell地址 
      * @return Webshell shell地址
      */
@@ -193,6 +201,26 @@ public class RunVersionPod extends AbstractModel{
         this.DeployVersion = DeployVersion;
     }
 
+    /**
+     * Get 重启次数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RestartCount 重启次数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getRestartCount() {
+        return this.RestartCount;
+    }
+
+    /**
+     * Set 重启次数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RestartCount 重启次数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRestartCount(Long RestartCount) {
+        this.RestartCount = RestartCount;
+    }
+
     public RunVersionPod() {
     }
 
@@ -222,6 +250,9 @@ public class RunVersionPod extends AbstractModel{
         if (source.DeployVersion != null) {
             this.DeployVersion = new String(source.DeployVersion);
         }
+        if (source.RestartCount != null) {
+            this.RestartCount = new Long(source.RestartCount);
+        }
     }
 
 
@@ -236,6 +267,7 @@ public class RunVersionPod extends AbstractModel{
         this.setParamSimple(map, prefix + "PodIp", this.PodIp);
         this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamSimple(map, prefix + "DeployVersion", this.DeployVersion);
+        this.setParamSimple(map, prefix + "RestartCount", this.RestartCount);
 
     }
 }

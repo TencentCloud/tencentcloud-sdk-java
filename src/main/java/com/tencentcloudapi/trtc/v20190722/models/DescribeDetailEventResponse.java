@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeDetailEventResponse extends AbstractModel{
 
     /**
-    * 返回的事件列表
+    * 返回的事件列表，若没有数据，会返回空数组。
     */
     @SerializedName("Data")
     @Expose
@@ -37,16 +37,16 @@ public class DescribeDetailEventResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 返回的事件列表 
-     * @return Data 返回的事件列表
+     * Get 返回的事件列表，若没有数据，会返回空数组。 
+     * @return Data 返回的事件列表，若没有数据，会返回空数组。
      */
     public EventList [] getData() {
         return this.Data;
     }
 
     /**
-     * Set 返回的事件列表
-     * @param Data 返回的事件列表
+     * Set 返回的事件列表，若没有数据，会返回空数组。
+     * @param Data 返回的事件列表，若没有数据，会返回空数组。
      */
     public void setData(EventList [] Data) {
         this.Data = Data;
