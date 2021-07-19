@@ -88,6 +88,26 @@ public class LighthouseClient extends AbstractClient{
     }
 
     /**
+     *本接口 (AttachCcn) 用于建立与云联网的关联。
+     * @param req AttachCcnRequest
+     * @return AttachCcnResponse
+     * @throws TencentCloudSDKException
+     */
+    public AttachCcnResponse AttachCcn(AttachCcnRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AttachCcnResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<AttachCcnResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "AttachCcn");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口 (CreateBlueprint) 用于创建镜像。
      * @param req CreateBlueprintRequest
      * @return CreateBlueprintResponse
@@ -340,6 +360,26 @@ public class LighthouseClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeBundlesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeBundles");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口 (DescribeCcnAttachedInstances) 用于查询云联网关联的实例信息。
+     * @param req DescribeCcnAttachedInstancesRequest
+     * @return DescribeCcnAttachedInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCcnAttachedInstancesResponse DescribeCcnAttachedInstances(DescribeCcnAttachedInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCcnAttachedInstancesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCcnAttachedInstancesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeCcnAttachedInstances");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -678,6 +718,26 @@ public class LighthouseClient extends AbstractClient{
     }
 
     /**
+     *本接口 (AttachCcn) 用于解除与云联网的关联。
+     * @param req DetachCcnRequest
+     * @return DetachCcnResponse
+     * @throws TencentCloudSDKException
+     */
+    public DetachCcnResponse DetachCcn(DetachCcnRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DetachCcnResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DetachCcnResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DetachCcn");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（DisassociateInstancesKeyPairs）用于解除实例与指定密钥对的绑定关系。
 
 * 只支持 [RUNNING, STOPPED] 状态的 LINUX_UNIX 操作系统的实例。处于 RUNNING 状态的实例会强制关机，然后解绑。
@@ -971,6 +1031,26 @@ public class LighthouseClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<RebootInstancesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "RebootInstances");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口 (ResetAttachCcn) 用于关联云联网实例申请过期时，重新申请关联操作。
+     * @param req ResetAttachCcnRequest
+     * @return ResetAttachCcnResponse
+     * @throws TencentCloudSDKException
+     */
+    public ResetAttachCcnResponse ResetAttachCcn(ResetAttachCcnRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ResetAttachCcnResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ResetAttachCcnResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ResetAttachCcn");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

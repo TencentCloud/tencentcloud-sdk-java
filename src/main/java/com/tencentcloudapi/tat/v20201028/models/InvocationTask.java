@@ -109,6 +109,13 @@ public class InvocationTask extends AbstractModel{
     private CommandDocument CommandDocument;
 
     /**
+    * 执行任务失败时的错误信息。
+    */
+    @SerializedName("ErrorInfo")
+    @Expose
+    private String ErrorInfo;
+
+    /**
      * Get 执行活动ID。 
      * @return InvocationId 执行活动ID。
      */
@@ -320,6 +327,22 @@ public class InvocationTask extends AbstractModel{
         this.CommandDocument = CommandDocument;
     }
 
+    /**
+     * Get 执行任务失败时的错误信息。 
+     * @return ErrorInfo 执行任务失败时的错误信息。
+     */
+    public String getErrorInfo() {
+        return this.ErrorInfo;
+    }
+
+    /**
+     * Set 执行任务失败时的错误信息。
+     * @param ErrorInfo 执行任务失败时的错误信息。
+     */
+    public void setErrorInfo(String ErrorInfo) {
+        this.ErrorInfo = ErrorInfo;
+    }
+
     public InvocationTask() {
     }
 
@@ -361,6 +384,9 @@ public class InvocationTask extends AbstractModel{
         if (source.CommandDocument != null) {
             this.CommandDocument = new CommandDocument(source.CommandDocument);
         }
+        if (source.ErrorInfo != null) {
+            this.ErrorInfo = new String(source.ErrorInfo);
+        }
     }
 
 
@@ -379,6 +405,7 @@ public class InvocationTask extends AbstractModel{
         this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
         this.setParamSimple(map, prefix + "UpdatedTime", this.UpdatedTime);
         this.setParamObj(map, prefix + "CommandDocument.", this.CommandDocument);
+        this.setParamSimple(map, prefix + "ErrorInfo", this.ErrorInfo);
 
     }
 }
