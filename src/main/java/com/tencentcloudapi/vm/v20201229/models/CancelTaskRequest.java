@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class CancelTaskRequest extends AbstractModel{
 
     /**
-    * 任务ID
+    * 该字段表示创建视频审核任务后返回的任务ID（在Results参数中），用于标识需要取消的审核任务。
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-     * Get 任务ID 
-     * @return TaskId 任务ID
+     * Get 该字段表示创建视频审核任务后返回的任务ID（在Results参数中），用于标识需要取消的审核任务。 
+     * @return TaskId 该字段表示创建视频审核任务后返回的任务ID（在Results参数中），用于标识需要取消的审核任务。
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 任务ID
-     * @param TaskId 任务ID
+     * Set 该字段表示创建视频审核任务后返回的任务ID（在Results参数中），用于标识需要取消的审核任务。
+     * @param TaskId 该字段表示创建视频审核任务后返回的任务ID（在Results参数中），用于标识需要取消的审核任务。
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;

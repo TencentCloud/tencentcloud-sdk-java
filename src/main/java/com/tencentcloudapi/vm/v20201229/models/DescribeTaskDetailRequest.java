@@ -23,46 +23,51 @@ import java.util.HashMap;
 public class DescribeTaskDetailRequest extends AbstractModel{
 
     /**
-    * 任务ID，创建任务后返回的TaskId字段
+    * 该字段表示创建视频审核任务后返回的任务ID（在Results参数中），用于标识需要查询任务详情的审核任务。
+<br>备注：查询接口单次最大查询量为**20条每次**。
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-    * 是否展示所有分片，默认只展示命中规则的分片
+    * 该布尔字段表示是否展示全部的视频片段，取值：True(展示全部的视频分片)、False(只展示命中审核规则的视频分片)；默认值为False。
     */
     @SerializedName("ShowAllSegments")
     @Expose
     private Boolean ShowAllSegments;
 
     /**
-     * Get 任务ID，创建任务后返回的TaskId字段 
-     * @return TaskId 任务ID，创建任务后返回的TaskId字段
+     * Get 该字段表示创建视频审核任务后返回的任务ID（在Results参数中），用于标识需要查询任务详情的审核任务。
+<br>备注：查询接口单次最大查询量为**20条每次**。 
+     * @return TaskId 该字段表示创建视频审核任务后返回的任务ID（在Results参数中），用于标识需要查询任务详情的审核任务。
+<br>备注：查询接口单次最大查询量为**20条每次**。
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 任务ID，创建任务后返回的TaskId字段
-     * @param TaskId 任务ID，创建任务后返回的TaskId字段
+     * Set 该字段表示创建视频审核任务后返回的任务ID（在Results参数中），用于标识需要查询任务详情的审核任务。
+<br>备注：查询接口单次最大查询量为**20条每次**。
+     * @param TaskId 该字段表示创建视频审核任务后返回的任务ID（在Results参数中），用于标识需要查询任务详情的审核任务。
+<br>备注：查询接口单次最大查询量为**20条每次**。
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get 是否展示所有分片，默认只展示命中规则的分片 
-     * @return ShowAllSegments 是否展示所有分片，默认只展示命中规则的分片
+     * Get 该布尔字段表示是否展示全部的视频片段，取值：True(展示全部的视频分片)、False(只展示命中审核规则的视频分片)；默认值为False。 
+     * @return ShowAllSegments 该布尔字段表示是否展示全部的视频片段，取值：True(展示全部的视频分片)、False(只展示命中审核规则的视频分片)；默认值为False。
      */
     public Boolean getShowAllSegments() {
         return this.ShowAllSegments;
     }
 
     /**
-     * Set 是否展示所有分片，默认只展示命中规则的分片
-     * @param ShowAllSegments 是否展示所有分片，默认只展示命中规则的分片
+     * Set 该布尔字段表示是否展示全部的视频片段，取值：True(展示全部的视频分片)、False(只展示命中审核规则的视频分片)；默认值为False。
+     * @param ShowAllSegments 该布尔字段表示是否展示全部的视频片段，取值：True(展示全部的视频分片)、False(只展示命中审核规则的视频分片)；默认值为False。
      */
     public void setShowAllSegments(Boolean ShowAllSegments) {
         this.ShowAllSegments = ShowAllSegments;

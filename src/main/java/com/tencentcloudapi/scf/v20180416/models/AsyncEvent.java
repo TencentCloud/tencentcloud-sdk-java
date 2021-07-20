@@ -44,7 +44,7 @@ public class AsyncEvent extends AbstractModel{
     private String Qualifier;
 
     /**
-    * 事件状态
+    * 事件状态，RUNNING 表示运行中, FINISHED 表示调用成功, ABORTED 表示调用终止, FAILED 表示调用失败
     */
     @SerializedName("Status")
     @Expose
@@ -113,16 +113,16 @@ public class AsyncEvent extends AbstractModel{
     }
 
     /**
-     * Get 事件状态 
-     * @return Status 事件状态
+     * Get 事件状态，RUNNING 表示运行中, FINISHED 表示调用成功, ABORTED 表示调用终止, FAILED 表示调用失败 
+     * @return Status 事件状态，RUNNING 表示运行中, FINISHED 表示调用成功, ABORTED 表示调用终止, FAILED 表示调用失败
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 事件状态
-     * @param Status 事件状态
+     * Set 事件状态，RUNNING 表示运行中, FINISHED 表示调用成功, ABORTED 表示调用终止, FAILED 表示调用失败
+     * @param Status 事件状态，RUNNING 表示运行中, FINISHED 表示调用成功, ABORTED 表示调用终止, FAILED 表示调用失败
      */
     public void setStatus(String Status) {
         this.Status = Status;

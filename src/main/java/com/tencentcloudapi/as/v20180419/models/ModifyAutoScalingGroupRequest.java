@@ -174,6 +174,23 @@ public class ModifyAutoScalingGroupRequest extends AbstractModel{
     private Long LoadBalancerHealthCheckGracePeriod;
 
     /**
+    * 实例分配策略，取值包括 LAUNCH_CONFIGURATION 和 SPOT_MIXED。
+<br><li> LAUNCH_CONFIGURATION，代表传统的按照启动配置模式。
+<br><li> SPOT_MIXED，代表竞价混合模式。目前仅支持启动配置为按量计费模式时使用混合模式，混合模式下，伸缩组将根据设定扩容按量或竞价机型。使用混合模式时，关联的启动配置的计费类型不可被修改。
+    */
+    @SerializedName("InstanceAllocationPolicy")
+    @Expose
+    private String InstanceAllocationPolicy;
+
+    /**
+    * 竞价混合模式下，各计费类型实例的分配策略。
+仅当 InstanceAllocationPolicy 取 SPOT_MIXED 时可用。
+    */
+    @SerializedName("SpotMixedAllocationPolicy")
+    @Expose
+    private SpotMixedAllocationPolicy SpotMixedAllocationPolicy;
+
+    /**
      * Get 伸缩组ID 
      * @return AutoScalingGroupId 伸缩组ID
      */
@@ -549,6 +566,50 @@ public class ModifyAutoScalingGroupRequest extends AbstractModel{
         this.LoadBalancerHealthCheckGracePeriod = LoadBalancerHealthCheckGracePeriod;
     }
 
+    /**
+     * Get 实例分配策略，取值包括 LAUNCH_CONFIGURATION 和 SPOT_MIXED。
+<br><li> LAUNCH_CONFIGURATION，代表传统的按照启动配置模式。
+<br><li> SPOT_MIXED，代表竞价混合模式。目前仅支持启动配置为按量计费模式时使用混合模式，混合模式下，伸缩组将根据设定扩容按量或竞价机型。使用混合模式时，关联的启动配置的计费类型不可被修改。 
+     * @return InstanceAllocationPolicy 实例分配策略，取值包括 LAUNCH_CONFIGURATION 和 SPOT_MIXED。
+<br><li> LAUNCH_CONFIGURATION，代表传统的按照启动配置模式。
+<br><li> SPOT_MIXED，代表竞价混合模式。目前仅支持启动配置为按量计费模式时使用混合模式，混合模式下，伸缩组将根据设定扩容按量或竞价机型。使用混合模式时，关联的启动配置的计费类型不可被修改。
+     */
+    public String getInstanceAllocationPolicy() {
+        return this.InstanceAllocationPolicy;
+    }
+
+    /**
+     * Set 实例分配策略，取值包括 LAUNCH_CONFIGURATION 和 SPOT_MIXED。
+<br><li> LAUNCH_CONFIGURATION，代表传统的按照启动配置模式。
+<br><li> SPOT_MIXED，代表竞价混合模式。目前仅支持启动配置为按量计费模式时使用混合模式，混合模式下，伸缩组将根据设定扩容按量或竞价机型。使用混合模式时，关联的启动配置的计费类型不可被修改。
+     * @param InstanceAllocationPolicy 实例分配策略，取值包括 LAUNCH_CONFIGURATION 和 SPOT_MIXED。
+<br><li> LAUNCH_CONFIGURATION，代表传统的按照启动配置模式。
+<br><li> SPOT_MIXED，代表竞价混合模式。目前仅支持启动配置为按量计费模式时使用混合模式，混合模式下，伸缩组将根据设定扩容按量或竞价机型。使用混合模式时，关联的启动配置的计费类型不可被修改。
+     */
+    public void setInstanceAllocationPolicy(String InstanceAllocationPolicy) {
+        this.InstanceAllocationPolicy = InstanceAllocationPolicy;
+    }
+
+    /**
+     * Get 竞价混合模式下，各计费类型实例的分配策略。
+仅当 InstanceAllocationPolicy 取 SPOT_MIXED 时可用。 
+     * @return SpotMixedAllocationPolicy 竞价混合模式下，各计费类型实例的分配策略。
+仅当 InstanceAllocationPolicy 取 SPOT_MIXED 时可用。
+     */
+    public SpotMixedAllocationPolicy getSpotMixedAllocationPolicy() {
+        return this.SpotMixedAllocationPolicy;
+    }
+
+    /**
+     * Set 竞价混合模式下，各计费类型实例的分配策略。
+仅当 InstanceAllocationPolicy 取 SPOT_MIXED 时可用。
+     * @param SpotMixedAllocationPolicy 竞价混合模式下，各计费类型实例的分配策略。
+仅当 InstanceAllocationPolicy 取 SPOT_MIXED 时可用。
+     */
+    public void setSpotMixedAllocationPolicy(SpotMixedAllocationPolicy SpotMixedAllocationPolicy) {
+        this.SpotMixedAllocationPolicy = SpotMixedAllocationPolicy;
+    }
+
     public ModifyAutoScalingGroupRequest() {
     }
 
@@ -623,6 +684,12 @@ public class ModifyAutoScalingGroupRequest extends AbstractModel{
         if (source.LoadBalancerHealthCheckGracePeriod != null) {
             this.LoadBalancerHealthCheckGracePeriod = new Long(source.LoadBalancerHealthCheckGracePeriod);
         }
+        if (source.InstanceAllocationPolicy != null) {
+            this.InstanceAllocationPolicy = new String(source.InstanceAllocationPolicy);
+        }
+        if (source.SpotMixedAllocationPolicy != null) {
+            this.SpotMixedAllocationPolicy = new SpotMixedAllocationPolicy(source.SpotMixedAllocationPolicy);
+        }
     }
 
 
@@ -649,6 +716,8 @@ public class ModifyAutoScalingGroupRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "MultiZoneSubnetPolicy", this.MultiZoneSubnetPolicy);
         this.setParamSimple(map, prefix + "HealthCheckType", this.HealthCheckType);
         this.setParamSimple(map, prefix + "LoadBalancerHealthCheckGracePeriod", this.LoadBalancerHealthCheckGracePeriod);
+        this.setParamSimple(map, prefix + "InstanceAllocationPolicy", this.InstanceAllocationPolicy);
+        this.setParamObj(map, prefix + "SpotMixedAllocationPolicy.", this.SpotMixedAllocationPolicy);
 
     }
 }

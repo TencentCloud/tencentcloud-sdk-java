@@ -79,6 +79,20 @@ public class DescribeCertificatesRequest extends AbstractModel{
     private Long Deployable;
 
     /**
+    * 是否筛选上传托管的 1筛选，0不筛选
+    */
+    @SerializedName("Upload")
+    @Expose
+    private Long Upload;
+
+    /**
+    * 是否筛选可续期证书 1筛选 0不筛选
+    */
+    @SerializedName("Renew")
+    @Expose
+    private Long Renew;
+
+    /**
      * Get 分页偏移量，从0开始。 
      * @return Offset 分页偏移量，从0开始。
      */
@@ -206,6 +220,38 @@ public class DescribeCertificatesRequest extends AbstractModel{
         this.Deployable = Deployable;
     }
 
+    /**
+     * Get 是否筛选上传托管的 1筛选，0不筛选 
+     * @return Upload 是否筛选上传托管的 1筛选，0不筛选
+     */
+    public Long getUpload() {
+        return this.Upload;
+    }
+
+    /**
+     * Set 是否筛选上传托管的 1筛选，0不筛选
+     * @param Upload 是否筛选上传托管的 1筛选，0不筛选
+     */
+    public void setUpload(Long Upload) {
+        this.Upload = Upload;
+    }
+
+    /**
+     * Get 是否筛选可续期证书 1筛选 0不筛选 
+     * @return Renew 是否筛选可续期证书 1筛选 0不筛选
+     */
+    public Long getRenew() {
+        return this.Renew;
+    }
+
+    /**
+     * Set 是否筛选可续期证书 1筛选 0不筛选
+     * @param Renew 是否筛选可续期证书 1筛选 0不筛选
+     */
+    public void setRenew(Long Renew) {
+        this.Renew = Renew;
+    }
+
     public DescribeCertificatesRequest() {
     }
 
@@ -241,6 +287,12 @@ public class DescribeCertificatesRequest extends AbstractModel{
         if (source.Deployable != null) {
             this.Deployable = new Long(source.Deployable);
         }
+        if (source.Upload != null) {
+            this.Upload = new Long(source.Upload);
+        }
+        if (source.Renew != null) {
+            this.Renew = new Long(source.Renew);
+        }
     }
 
 
@@ -256,6 +308,8 @@ public class DescribeCertificatesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ExpirationSort", this.ExpirationSort);
         this.setParamArraySimple(map, prefix + "CertificateStatus.", this.CertificateStatus);
         this.setParamSimple(map, prefix + "Deployable", this.Deployable);
+        this.setParamSimple(map, prefix + "Upload", this.Upload);
+        this.setParamSimple(map, prefix + "Renew", this.Renew);
 
     }
 }

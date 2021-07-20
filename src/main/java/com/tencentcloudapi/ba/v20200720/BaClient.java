@@ -58,4 +58,25 @@ public class BaClient extends AbstractClient{
         return rsp.response;
     }
 
+    /**
+     *将备案ICP订单下的一个网站信息 同步给订单下其他网站，需要被同步的网站被检查通过(isCheck:true)；
+只有指定的网站信息字段能被同步
+     * @param req SyncIcpOrderWebInfoRequest
+     * @return SyncIcpOrderWebInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public SyncIcpOrderWebInfoResponse SyncIcpOrderWebInfo(SyncIcpOrderWebInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SyncIcpOrderWebInfoResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<SyncIcpOrderWebInfoResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "SyncIcpOrderWebInfo");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
 }

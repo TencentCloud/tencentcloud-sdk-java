@@ -13,48 +13,48 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.ams.v20201229.models;
+package com.tencentcloudapi.mariadb.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CancelTaskRequest extends AbstractModel{
+public class CancelDcnJobRequest extends AbstractModel{
 
     /**
-    * 该字段表示创建音频审核任务后返回的任务ID（在Results参数中），用于标识需要取消的审核任务。
+    * 灾备实例ID
     */
-    @SerializedName("TaskId")
+    @SerializedName("InstanceId")
     @Expose
-    private String TaskId;
+    private String InstanceId;
 
     /**
-     * Get 该字段表示创建音频审核任务后返回的任务ID（在Results参数中），用于标识需要取消的审核任务。 
-     * @return TaskId 该字段表示创建音频审核任务后返回的任务ID（在Results参数中），用于标识需要取消的审核任务。
+     * Get 灾备实例ID 
+     * @return InstanceId 灾备实例ID
      */
-    public String getTaskId() {
-        return this.TaskId;
+    public String getInstanceId() {
+        return this.InstanceId;
     }
 
     /**
-     * Set 该字段表示创建音频审核任务后返回的任务ID（在Results参数中），用于标识需要取消的审核任务。
-     * @param TaskId 该字段表示创建音频审核任务后返回的任务ID（在Results参数中），用于标识需要取消的审核任务。
+     * Set 灾备实例ID
+     * @param InstanceId 灾备实例ID
      */
-    public void setTaskId(String TaskId) {
-        this.TaskId = TaskId;
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
     }
 
-    public CancelTaskRequest() {
+    public CancelDcnJobRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CancelTaskRequest(CancelTaskRequest source) {
-        if (source.TaskId != null) {
-            this.TaskId = new String(source.TaskId);
+    public CancelDcnJobRequest(CancelDcnJobRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
         }
     }
 
@@ -63,7 +63,7 @@ public class CancelTaskRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
 
     }
 }

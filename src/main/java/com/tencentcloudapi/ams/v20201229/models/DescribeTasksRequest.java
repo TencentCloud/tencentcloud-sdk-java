@@ -23,115 +23,115 @@ import java.util.HashMap;
 public class DescribeTasksRequest extends AbstractModel{
 
     /**
-    * 每页展示多少条。（默认展示10条）
+    * 该参数表示任务列表每页展示的任务条数，**默认值为10**（每页展示10条任务）。
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 过滤参数
+    * 该参数表示任务筛选器的输入参数，可根据业务类型、审核文件类型、处理建议及任务状态筛选想要查看的审核任务，具体参数内容请参见TaskFilter数据结构的详细描述。
     */
     @SerializedName("Filter")
     @Expose
     private TaskFilter Filter;
 
     /**
-    * 翻页token，在向前或向后翻页时需要
+    * 该参数表示翻页时使用的Token信息，由系统自动生成，并在翻页时向下一个生成的页面传递此参数，以方便快速翻页功能的实现。当到最后一页时，该字段为空。
     */
     @SerializedName("PageToken")
     @Expose
     private String PageToken;
 
     /**
-    * 开始时间。默认是最近3天。
+    * 该参数表示任务列表的开始时间，格式为ISO8601标准的时间戳。**默认值为最近3天**，若传入该参数，则在这一时间到EndTime之间的任务将会被筛选出来。<br>备注：该参数与Filter共同起到任务筛选作用，二者作用无先后顺序。
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 结束时间。默认为空
+    * 该参数表示任务列表的结束时间，格式为ISO8601标准的时间戳。**默认值为空**，若传入该参数，则在这StartTime到这一时间之间的任务将会被筛选出来。<br>备注：该参数与Filter共同起到任务筛选作用，二者作用无先后顺序。
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-     * Get 每页展示多少条。（默认展示10条） 
-     * @return Limit 每页展示多少条。（默认展示10条）
+     * Get 该参数表示任务列表每页展示的任务条数，**默认值为10**（每页展示10条任务）。 
+     * @return Limit 该参数表示任务列表每页展示的任务条数，**默认值为10**（每页展示10条任务）。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 每页展示多少条。（默认展示10条）
-     * @param Limit 每页展示多少条。（默认展示10条）
+     * Set 该参数表示任务列表每页展示的任务条数，**默认值为10**（每页展示10条任务）。
+     * @param Limit 该参数表示任务列表每页展示的任务条数，**默认值为10**（每页展示10条任务）。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 过滤参数 
-     * @return Filter 过滤参数
+     * Get 该参数表示任务筛选器的输入参数，可根据业务类型、审核文件类型、处理建议及任务状态筛选想要查看的审核任务，具体参数内容请参见TaskFilter数据结构的详细描述。 
+     * @return Filter 该参数表示任务筛选器的输入参数，可根据业务类型、审核文件类型、处理建议及任务状态筛选想要查看的审核任务，具体参数内容请参见TaskFilter数据结构的详细描述。
      */
     public TaskFilter getFilter() {
         return this.Filter;
     }
 
     /**
-     * Set 过滤参数
-     * @param Filter 过滤参数
+     * Set 该参数表示任务筛选器的输入参数，可根据业务类型、审核文件类型、处理建议及任务状态筛选想要查看的审核任务，具体参数内容请参见TaskFilter数据结构的详细描述。
+     * @param Filter 该参数表示任务筛选器的输入参数，可根据业务类型、审核文件类型、处理建议及任务状态筛选想要查看的审核任务，具体参数内容请参见TaskFilter数据结构的详细描述。
      */
     public void setFilter(TaskFilter Filter) {
         this.Filter = Filter;
     }
 
     /**
-     * Get 翻页token，在向前或向后翻页时需要 
-     * @return PageToken 翻页token，在向前或向后翻页时需要
+     * Get 该参数表示翻页时使用的Token信息，由系统自动生成，并在翻页时向下一个生成的页面传递此参数，以方便快速翻页功能的实现。当到最后一页时，该字段为空。 
+     * @return PageToken 该参数表示翻页时使用的Token信息，由系统自动生成，并在翻页时向下一个生成的页面传递此参数，以方便快速翻页功能的实现。当到最后一页时，该字段为空。
      */
     public String getPageToken() {
         return this.PageToken;
     }
 
     /**
-     * Set 翻页token，在向前或向后翻页时需要
-     * @param PageToken 翻页token，在向前或向后翻页时需要
+     * Set 该参数表示翻页时使用的Token信息，由系统自动生成，并在翻页时向下一个生成的页面传递此参数，以方便快速翻页功能的实现。当到最后一页时，该字段为空。
+     * @param PageToken 该参数表示翻页时使用的Token信息，由系统自动生成，并在翻页时向下一个生成的页面传递此参数，以方便快速翻页功能的实现。当到最后一页时，该字段为空。
      */
     public void setPageToken(String PageToken) {
         this.PageToken = PageToken;
     }
 
     /**
-     * Get 开始时间。默认是最近3天。 
-     * @return StartTime 开始时间。默认是最近3天。
+     * Get 该参数表示任务列表的开始时间，格式为ISO8601标准的时间戳。**默认值为最近3天**，若传入该参数，则在这一时间到EndTime之间的任务将会被筛选出来。<br>备注：该参数与Filter共同起到任务筛选作用，二者作用无先后顺序。 
+     * @return StartTime 该参数表示任务列表的开始时间，格式为ISO8601标准的时间戳。**默认值为最近3天**，若传入该参数，则在这一时间到EndTime之间的任务将会被筛选出来。<br>备注：该参数与Filter共同起到任务筛选作用，二者作用无先后顺序。
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 开始时间。默认是最近3天。
-     * @param StartTime 开始时间。默认是最近3天。
+     * Set 该参数表示任务列表的开始时间，格式为ISO8601标准的时间戳。**默认值为最近3天**，若传入该参数，则在这一时间到EndTime之间的任务将会被筛选出来。<br>备注：该参数与Filter共同起到任务筛选作用，二者作用无先后顺序。
+     * @param StartTime 该参数表示任务列表的开始时间，格式为ISO8601标准的时间戳。**默认值为最近3天**，若传入该参数，则在这一时间到EndTime之间的任务将会被筛选出来。<br>备注：该参数与Filter共同起到任务筛选作用，二者作用无先后顺序。
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 结束时间。默认为空 
-     * @return EndTime 结束时间。默认为空
+     * Get 该参数表示任务列表的结束时间，格式为ISO8601标准的时间戳。**默认值为空**，若传入该参数，则在这StartTime到这一时间之间的任务将会被筛选出来。<br>备注：该参数与Filter共同起到任务筛选作用，二者作用无先后顺序。 
+     * @return EndTime 该参数表示任务列表的结束时间，格式为ISO8601标准的时间戳。**默认值为空**，若传入该参数，则在这StartTime到这一时间之间的任务将会被筛选出来。<br>备注：该参数与Filter共同起到任务筛选作用，二者作用无先后顺序。
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 结束时间。默认为空
-     * @param EndTime 结束时间。默认为空
+     * Set 该参数表示任务列表的结束时间，格式为ISO8601标准的时间戳。**默认值为空**，若传入该参数，则在这StartTime到这一时间之间的任务将会被筛选出来。<br>备注：该参数与Filter共同起到任务筛选作用，二者作用无先后顺序。
+     * @param EndTime 该参数表示任务列表的结束时间，格式为ISO8601标准的时间戳。**默认值为空**，若传入该参数，则在这StartTime到这一时间之间的任务将会被筛选出来。<br>备注：该参数与Filter共同起到任务筛选作用，二者作用无先后顺序。
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

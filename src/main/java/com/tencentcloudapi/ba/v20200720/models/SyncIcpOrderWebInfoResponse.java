@@ -13,48 +13,48 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.ams.v20201229.models;
+package com.tencentcloudapi.ba.v20200720.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CancelTaskRequest extends AbstractModel{
+public class SyncIcpOrderWebInfoResponse extends AbstractModel{
 
     /**
-    * 该字段表示创建音频审核任务后返回的任务ID（在Results参数中），用于标识需要取消的审核任务。
+    * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
-    @SerializedName("TaskId")
+    @SerializedName("RequestId")
     @Expose
-    private String TaskId;
+    private String RequestId;
 
     /**
-     * Get 该字段表示创建音频审核任务后返回的任务ID（在Results参数中），用于标识需要取消的审核任务。 
-     * @return TaskId 该字段表示创建音频审核任务后返回的任务ID（在Results参数中），用于标识需要取消的审核任务。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
+     * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public String getTaskId() {
-        return this.TaskId;
+    public String getRequestId() {
+        return this.RequestId;
     }
 
     /**
-     * Set 该字段表示创建音频审核任务后返回的任务ID（在Results参数中），用于标识需要取消的审核任务。
-     * @param TaskId 该字段表示创建音频审核任务后返回的任务ID（在Results参数中），用于标识需要取消的审核任务。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public void setTaskId(String TaskId) {
-        this.TaskId = TaskId;
+    public void setRequestId(String RequestId) {
+        this.RequestId = RequestId;
     }
 
-    public CancelTaskRequest() {
+    public SyncIcpOrderWebInfoResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CancelTaskRequest(CancelTaskRequest source) {
-        if (source.TaskId != null) {
-            this.TaskId = new String(source.TaskId);
+    public SyncIcpOrderWebInfoResponse(SyncIcpOrderWebInfoResponse source) {
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
         }
     }
 
@@ -63,7 +63,7 @@ public class CancelTaskRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
+        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
 }

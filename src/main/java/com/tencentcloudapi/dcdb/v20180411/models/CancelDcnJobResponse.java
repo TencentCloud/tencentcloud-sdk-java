@@ -13,22 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.vm.v20201229.models;
+package com.tencentcloudapi.dcdb.v20180411.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateVideoModerationTaskResponse extends AbstractModel{
+public class CancelDcnJobResponse extends AbstractModel{
 
     /**
-    * 该字段用于返回任务创建的结果，具体输出内容请参见TaskResult数据结构的详细描述。
-注意：此字段可能返回 null，表示取不到有效值。
+    * 流程ID
     */
-    @SerializedName("Results")
+    @SerializedName("FlowId")
     @Expose
-    private TaskResult [] Results;
+    private Long FlowId;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,23 +37,19 @@ public class CreateVideoModerationTaskResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 该字段用于返回任务创建的结果，具体输出内容请参见TaskResult数据结构的详细描述。
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Results 该字段用于返回任务创建的结果，具体输出内容请参见TaskResult数据结构的详细描述。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 流程ID 
+     * @return FlowId 流程ID
      */
-    public TaskResult [] getResults() {
-        return this.Results;
+    public Long getFlowId() {
+        return this.FlowId;
     }
 
     /**
-     * Set 该字段用于返回任务创建的结果，具体输出内容请参见TaskResult数据结构的详细描述。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Results 该字段用于返回任务创建的结果，具体输出内容请参见TaskResult数据结构的详细描述。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 流程ID
+     * @param FlowId 流程ID
      */
-    public void setResults(TaskResult [] Results) {
-        this.Results = Results;
+    public void setFlowId(Long FlowId) {
+        this.FlowId = FlowId;
     }
 
     /**
@@ -73,19 +68,16 @@ public class CreateVideoModerationTaskResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public CreateVideoModerationTaskResponse() {
+    public CancelDcnJobResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateVideoModerationTaskResponse(CreateVideoModerationTaskResponse source) {
-        if (source.Results != null) {
-            this.Results = new TaskResult[source.Results.length];
-            for (int i = 0; i < source.Results.length; i++) {
-                this.Results[i] = new TaskResult(source.Results[i]);
-            }
+    public CancelDcnJobResponse(CancelDcnJobResponse source) {
+        if (source.FlowId != null) {
+            this.FlowId = new Long(source.FlowId);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -97,7 +89,7 @@ public class CreateVideoModerationTaskResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "Results.", this.Results);
+        this.setParamSimple(map, prefix + "FlowId", this.FlowId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

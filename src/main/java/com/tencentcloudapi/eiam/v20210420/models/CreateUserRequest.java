@@ -58,7 +58,7 @@ public class CreateUserRequest extends AbstractModel{
     private String [] UserGroupIds;
 
     /**
-    * 用户手机号。
+    * 用户手机号。例如：+86-1xxxxxxxxxx。
     */
     @SerializedName("Phone")
     @Expose
@@ -173,16 +173,16 @@ public class CreateUserRequest extends AbstractModel{
     }
 
     /**
-     * Get 用户手机号。 
-     * @return Phone 用户手机号。
+     * Get 用户手机号。例如：+86-1xxxxxxxxxx。 
+     * @return Phone 用户手机号。例如：+86-1xxxxxxxxxx。
      */
     public String getPhone() {
         return this.Phone;
     }
 
     /**
-     * Set 用户手机号。
-     * @param Phone 用户手机号。
+     * Set 用户手机号。例如：+86-1xxxxxxxxxx。
+     * @param Phone 用户手机号。例如：+86-1xxxxxxxxxx。
      */
     public void setPhone(String Phone) {
         this.Phone = Phone;

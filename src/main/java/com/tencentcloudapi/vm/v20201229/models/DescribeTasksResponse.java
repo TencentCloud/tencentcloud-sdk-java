@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeTasksResponse extends AbstractModel{
 
     /**
-    * 任务总量，为 int 字符串
+    * 该字段用于返回当前查询的任务总量，格式为int字符串。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Total")
@@ -31,7 +31,7 @@ public class DescribeTasksResponse extends AbstractModel{
     private String Total;
 
     /**
-    * 当前页数据
+    * 该字段用于返回当前页的任务详细数据，具体输出内容请参见TaskData数据结构的详细描述。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Data")
@@ -39,7 +39,7 @@ public class DescribeTasksResponse extends AbstractModel{
     private TaskData [] Data;
 
     /**
-    * 翻页Token，当已经到最后一页时，该字段为空
+    * 该字段用于返回翻页时使用的Token信息，由系统自动生成，并在翻页时向下一个生成的页面传递此参数，以方便快速翻页功能的实现。当到最后一页时，该字段为空。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PageToken")
@@ -54,9 +54,9 @@ public class DescribeTasksResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 任务总量，为 int 字符串
+     * Get 该字段用于返回当前查询的任务总量，格式为int字符串。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Total 任务总量，为 int 字符串
+     * @return Total 该字段用于返回当前查询的任务总量，格式为int字符串。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTotal() {
@@ -64,9 +64,9 @@ public class DescribeTasksResponse extends AbstractModel{
     }
 
     /**
-     * Set 任务总量，为 int 字符串
+     * Set 该字段用于返回当前查询的任务总量，格式为int字符串。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Total 任务总量，为 int 字符串
+     * @param Total 该字段用于返回当前查询的任务总量，格式为int字符串。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotal(String Total) {
@@ -74,9 +74,9 @@ public class DescribeTasksResponse extends AbstractModel{
     }
 
     /**
-     * Get 当前页数据
+     * Get 该字段用于返回当前页的任务详细数据，具体输出内容请参见TaskData数据结构的详细描述。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Data 当前页数据
+     * @return Data 该字段用于返回当前页的任务详细数据，具体输出内容请参见TaskData数据结构的详细描述。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public TaskData [] getData() {
@@ -84,9 +84,9 @@ public class DescribeTasksResponse extends AbstractModel{
     }
 
     /**
-     * Set 当前页数据
+     * Set 该字段用于返回当前页的任务详细数据，具体输出内容请参见TaskData数据结构的详细描述。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Data 当前页数据
+     * @param Data 该字段用于返回当前页的任务详细数据，具体输出内容请参见TaskData数据结构的详细描述。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setData(TaskData [] Data) {
@@ -94,9 +94,9 @@ public class DescribeTasksResponse extends AbstractModel{
     }
 
     /**
-     * Get 翻页Token，当已经到最后一页时，该字段为空
+     * Get 该字段用于返回翻页时使用的Token信息，由系统自动生成，并在翻页时向下一个生成的页面传递此参数，以方便快速翻页功能的实现。当到最后一页时，该字段为空。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PageToken 翻页Token，当已经到最后一页时，该字段为空
+     * @return PageToken 该字段用于返回翻页时使用的Token信息，由系统自动生成，并在翻页时向下一个生成的页面传递此参数，以方便快速翻页功能的实现。当到最后一页时，该字段为空。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPageToken() {
@@ -104,9 +104,9 @@ public class DescribeTasksResponse extends AbstractModel{
     }
 
     /**
-     * Set 翻页Token，当已经到最后一页时，该字段为空
+     * Set 该字段用于返回翻页时使用的Token信息，由系统自动生成，并在翻页时向下一个生成的页面传递此参数，以方便快速翻页功能的实现。当到最后一页时，该字段为空。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PageToken 翻页Token，当已经到最后一页时，该字段为空
+     * @param PageToken 该字段用于返回翻页时使用的Token信息，由系统自动生成，并在翻页时向下一个生成的页面传递此参数，以方便快速翻页功能的实现。当到最后一页时，该字段为空。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPageToken(String PageToken) {

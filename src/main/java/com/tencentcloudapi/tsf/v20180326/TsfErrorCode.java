@@ -120,6 +120,9 @@ public enum TsfErrorCode {
     // TSF权限模块异常，请联系系统管理员。。
      FAILEDOPERATION_TSFPRIVILEGEERROR("FailedOperation.TsfPrivilegeError"),
      
+    // 应用操作请求MASTER FEIGN失败。
+     INTERNALERROR_APPLICATIONMASTERFEIGNERROR("InternalError.ApplicationMasterFeignError"),
+     
     // 应用操作请求MASTER 操作失败。
      INTERNALERROR_APPLICATIONMASTERNUKNOWNERROR("InternalError.ApplicationMasterNuknownError"),
      
@@ -137,6 +140,9 @@ public enum TsfErrorCode {
      
     // 集群通用错误。
      INTERNALERROR_CLUSTERCOMMONERROR("InternalError.ClusterCommonError"),
+     
+    // 虚拟机集群请求MASTER FEIGN失败。
+     INTERNALERROR_CLUSTERMASTERFEIGNERROR("InternalError.ClusterMasterFeignError"),
      
     // 无法找到部署组，或相应集群/命名空间/应用的权限不足。
      INTERNALERROR_CLUSTERNOTEXISTORPRIVILEGEERROR("InternalError.ClusterNotExistOrPrivilegeError"),

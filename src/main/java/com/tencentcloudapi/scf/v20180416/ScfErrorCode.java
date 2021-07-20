@@ -186,6 +186,9 @@ public enum ScfErrorCode {
     // Cls传入错误。
      INVALIDPARAMETERVALUE_CLS("InvalidParameterValue.Cls"),
      
+    // 修改Cls配置需要传入Role参数，请修正后重试。
+     INVALIDPARAMETERVALUE_CLSROLE("InvalidParameterValue.ClsRole"),
+     
     // Cmq传入错误。
      INVALIDPARAMETERVALUE_CMQ("InvalidParameterValue.Cmq"),
      
