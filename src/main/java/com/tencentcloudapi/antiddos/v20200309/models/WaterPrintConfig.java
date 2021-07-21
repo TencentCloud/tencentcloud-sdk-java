@@ -54,6 +54,16 @@ public class WaterPrintConfig extends AbstractModel{
     private WaterPrintKey [] Keys;
 
     /**
+    * 水印检查模式, 取值[
+checkall（普通模式）
+shortfpcheckall（精简模式）
+]
+    */
+    @SerializedName("Verify")
+    @Expose
+    private String Verify;
+
+    /**
      * Get 水印偏移量，取值范围[0, 100) 
      * @return Offset 水印偏移量，取值范围[0, 100)
      */
@@ -129,6 +139,34 @@ public class WaterPrintConfig extends AbstractModel{
         this.Keys = Keys;
     }
 
+    /**
+     * Get 水印检查模式, 取值[
+checkall（普通模式）
+shortfpcheckall（精简模式）
+] 
+     * @return Verify 水印检查模式, 取值[
+checkall（普通模式）
+shortfpcheckall（精简模式）
+]
+     */
+    public String getVerify() {
+        return this.Verify;
+    }
+
+    /**
+     * Set 水印检查模式, 取值[
+checkall（普通模式）
+shortfpcheckall（精简模式）
+]
+     * @param Verify 水印检查模式, 取值[
+checkall（普通模式）
+shortfpcheckall（精简模式）
+]
+     */
+    public void setVerify(String Verify) {
+        this.Verify = Verify;
+    }
+
     public WaterPrintConfig() {
     }
 
@@ -155,6 +193,9 @@ public class WaterPrintConfig extends AbstractModel{
                 this.Keys[i] = new WaterPrintKey(source.Keys[i]);
             }
         }
+        if (source.Verify != null) {
+            this.Verify = new String(source.Verify);
+        }
     }
 
 
@@ -166,6 +207,7 @@ public class WaterPrintConfig extends AbstractModel{
         this.setParamSimple(map, prefix + "OpenStatus", this.OpenStatus);
         this.setParamArrayObj(map, prefix + "Listeners.", this.Listeners);
         this.setParamArrayObj(map, prefix + "Keys.", this.Keys);
+        this.setParamSimple(map, prefix + "Verify", this.Verify);
 
     }
 }

@@ -1,7 +1,13 @@
 package com.tencentcloudapi.waf.v20180125;
 public enum WafErrorCode {
+    // CAM签名/鉴权错误。
+     AUTHFAILURE("AuthFailure"),
+     
     // 操作失败。
      FAILEDOPERATION("FailedOperation"),
+     
+    // CLS内部错误。
+     FAILEDOPERATION_CLSINTERNALERROR("FailedOperation.CLSInternalError"),
      
     // 内部错误。
      INTERNALERROR("InternalError"),
@@ -27,6 +33,9 @@ public enum WafErrorCode {
     // 操作被拒绝。
      OPERATIONDENIED("OperationDenied"),
      
+    // 请求的次数超过了频率限制。
+     REQUESTLIMITEXCEEDED("RequestLimitExceeded"),
+     
     // 资源被占用。
      RESOURCEINUSE("ResourceInUse"),
      
@@ -46,7 +55,10 @@ public enum WafErrorCode {
      UNAUTHORIZEDOPERATION("UnauthorizedOperation"),
      
     // 未知参数错误。
-     UNKNOWNPARAMETER("UnknownParameter");
+     UNKNOWNPARAMETER("UnknownParameter"),
+     
+    // 操作不支持。
+     UNSUPPORTEDOPERATION("UnsupportedOperation");
      
     private String value;
     private WafErrorCode (String value){

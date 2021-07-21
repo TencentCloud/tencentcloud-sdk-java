@@ -37,7 +37,7 @@ public class ModifyAccountMaxUserConnectionsRequest extends AbstractModel{
     private String InstanceId;
 
     /**
-    * 设置账户最大可用连接数。
+    * 设置账户最大可用连接数，最大可设置值为10240。
     */
     @SerializedName("MaxUserConnections")
     @Expose
@@ -76,16 +76,16 @@ public class ModifyAccountMaxUserConnectionsRequest extends AbstractModel{
     }
 
     /**
-     * Get 设置账户最大可用连接数。 
-     * @return MaxUserConnections 设置账户最大可用连接数。
+     * Get 设置账户最大可用连接数，最大可设置值为10240。 
+     * @return MaxUserConnections 设置账户最大可用连接数，最大可设置值为10240。
      */
     public Long getMaxUserConnections() {
         return this.MaxUserConnections;
     }
 
     /**
-     * Set 设置账户最大可用连接数。
-     * @param MaxUserConnections 设置账户最大可用连接数。
+     * Set 设置账户最大可用连接数，最大可设置值为10240。
+     * @param MaxUserConnections 设置账户最大可用连接数，最大可设置值为10240。
      */
     public void setMaxUserConnections(Long MaxUserConnections) {
         this.MaxUserConnections = MaxUserConnections;

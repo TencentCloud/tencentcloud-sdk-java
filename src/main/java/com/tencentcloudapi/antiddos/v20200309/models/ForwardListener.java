@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ForwardListener extends AbstractModel{
 
     /**
-    * 转发监听端口，取值1~65535
+    * 转发监听端口下限，取值1~65535
     */
     @SerializedName("FrontendPort")
     @Expose
@@ -40,16 +40,23 @@ UDP
     private String ForwardProtocol;
 
     /**
-     * Get 转发监听端口，取值1~65535 
-     * @return FrontendPort 转发监听端口，取值1~65535
+    * 转发监听端口上限，取值1~65535
+    */
+    @SerializedName("FrontendPortEnd")
+    @Expose
+    private Long FrontendPortEnd;
+
+    /**
+     * Get 转发监听端口下限，取值1~65535 
+     * @return FrontendPort 转发监听端口下限，取值1~65535
      */
     public Long getFrontendPort() {
         return this.FrontendPort;
     }
 
     /**
-     * Set 转发监听端口，取值1~65535
-     * @param FrontendPort 转发监听端口，取值1~65535
+     * Set 转发监听端口下限，取值1~65535
+     * @param FrontendPort 转发监听端口下限，取值1~65535
      */
     public void setFrontendPort(Long FrontendPort) {
         this.FrontendPort = FrontendPort;
@@ -83,6 +90,22 @@ UDP
         this.ForwardProtocol = ForwardProtocol;
     }
 
+    /**
+     * Get 转发监听端口上限，取值1~65535 
+     * @return FrontendPortEnd 转发监听端口上限，取值1~65535
+     */
+    public Long getFrontendPortEnd() {
+        return this.FrontendPortEnd;
+    }
+
+    /**
+     * Set 转发监听端口上限，取值1~65535
+     * @param FrontendPortEnd 转发监听端口上限，取值1~65535
+     */
+    public void setFrontendPortEnd(Long FrontendPortEnd) {
+        this.FrontendPortEnd = FrontendPortEnd;
+    }
+
     public ForwardListener() {
     }
 
@@ -97,6 +120,9 @@ UDP
         if (source.ForwardProtocol != null) {
             this.ForwardProtocol = new String(source.ForwardProtocol);
         }
+        if (source.FrontendPortEnd != null) {
+            this.FrontendPortEnd = new Long(source.FrontendPortEnd);
+        }
     }
 
 
@@ -106,6 +132,7 @@ UDP
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FrontendPort", this.FrontendPort);
         this.setParamSimple(map, prefix + "ForwardProtocol", this.ForwardProtocol);
+        this.setParamSimple(map, prefix + "FrontendPortEnd", this.FrontendPortEnd);
 
     }
 }

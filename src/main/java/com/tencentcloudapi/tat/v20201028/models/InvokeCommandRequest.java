@@ -56,6 +56,20 @@ key为自定义参数名称，value为该参数的默认取值。kv均为字符�
     private String Username;
 
     /**
+    * 命令执行路径, 默认以Command配置的WorkingDirectory执行。
+    */
+    @SerializedName("WorkingDirectory")
+    @Expose
+    private String WorkingDirectory;
+
+    /**
+    * 命令超时时间，取值范围[1, 86400]。默认以Command配置的Timeout执行。
+    */
+    @SerializedName("Timeout")
+    @Expose
+    private Long Timeout;
+
+    /**
      * Get 待触发的命令ID。 
      * @return CommandId 待触发的命令ID。
      */
@@ -139,6 +153,38 @@ key为自定义参数名称，value为该参数的默认取值。kv均为字符�
         this.Username = Username;
     }
 
+    /**
+     * Get 命令执行路径, 默认以Command配置的WorkingDirectory执行。 
+     * @return WorkingDirectory 命令执行路径, 默认以Command配置的WorkingDirectory执行。
+     */
+    public String getWorkingDirectory() {
+        return this.WorkingDirectory;
+    }
+
+    /**
+     * Set 命令执行路径, 默认以Command配置的WorkingDirectory执行。
+     * @param WorkingDirectory 命令执行路径, 默认以Command配置的WorkingDirectory执行。
+     */
+    public void setWorkingDirectory(String WorkingDirectory) {
+        this.WorkingDirectory = WorkingDirectory;
+    }
+
+    /**
+     * Get 命令超时时间，取值范围[1, 86400]。默认以Command配置的Timeout执行。 
+     * @return Timeout 命令超时时间，取值范围[1, 86400]。默认以Command配置的Timeout执行。
+     */
+    public Long getTimeout() {
+        return this.Timeout;
+    }
+
+    /**
+     * Set 命令超时时间，取值范围[1, 86400]。默认以Command配置的Timeout执行。
+     * @param Timeout 命令超时时间，取值范围[1, 86400]。默认以Command配置的Timeout执行。
+     */
+    public void setTimeout(Long Timeout) {
+        this.Timeout = Timeout;
+    }
+
     public InvokeCommandRequest() {
     }
 
@@ -162,6 +208,12 @@ key为自定义参数名称，value为该参数的默认取值。kv均为字符�
         if (source.Username != null) {
             this.Username = new String(source.Username);
         }
+        if (source.WorkingDirectory != null) {
+            this.WorkingDirectory = new String(source.WorkingDirectory);
+        }
+        if (source.Timeout != null) {
+            this.Timeout = new Long(source.Timeout);
+        }
     }
 
 
@@ -173,6 +225,8 @@ key为自定义参数名称，value为该参数的默认取值。kv均为字符�
         this.setParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
         this.setParamSimple(map, prefix + "Parameters", this.Parameters);
         this.setParamSimple(map, prefix + "Username", this.Username);
+        this.setParamSimple(map, prefix + "WorkingDirectory", this.WorkingDirectory);
+        this.setParamSimple(map, prefix + "Timeout", this.Timeout);
 
     }
 }

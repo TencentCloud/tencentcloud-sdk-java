@@ -24,7 +24,7 @@ public class DescribeSmsTemplateListRequest extends AbstractModel{
 
     /**
     * 模板 ID 数组。
-注：默认数组长度最大100。
+<dx-alert infotype="notice" title="注意">默认数组长度最大100</dx-alert>
     */
     @SerializedName("TemplateIdSet")
     @Expose
@@ -41,9 +41,9 @@ public class DescribeSmsTemplateListRequest extends AbstractModel{
 
     /**
      * Get 模板 ID 数组。
-注：默认数组长度最大100。 
+<dx-alert infotype="notice" title="注意">默认数组长度最大100</dx-alert> 
      * @return TemplateIdSet 模板 ID 数组。
-注：默认数组长度最大100。
+<dx-alert infotype="notice" title="注意">默认数组长度最大100</dx-alert>
      */
     public Long [] getTemplateIdSet() {
         return this.TemplateIdSet;
@@ -51,9 +51,9 @@ public class DescribeSmsTemplateListRequest extends AbstractModel{
 
     /**
      * Set 模板 ID 数组。
-注：默认数组长度最大100。
+<dx-alert infotype="notice" title="注意">默认数组长度最大100</dx-alert>
      * @param TemplateIdSet 模板 ID 数组。
-注：默认数组长度最大100。
+<dx-alert infotype="notice" title="注意">默认数组长度最大100</dx-alert>
      */
     public void setTemplateIdSet(Long [] TemplateIdSet) {
         this.TemplateIdSet = TemplateIdSet;

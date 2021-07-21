@@ -115,6 +115,38 @@ public class Cluster extends AbstractModel{
     private Long MaxStorageCapacity;
 
     /**
+    * 集群版本
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Version")
+    @Expose
+    private String Version;
+
+    /**
+    * 公网访问接入点
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PublicEndPoint")
+    @Expose
+    private String PublicEndPoint;
+
+    /**
+    * VPC访问接入点
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("VpcEndPoint")
+    @Expose
+    private String VpcEndPoint;
+
+    /**
+    * 命名空间数量
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("NamespaceNum")
+    @Expose
+    private Long NamespaceNum;
+
+    /**
      * Get 集群Id。 
      * @return ClusterId 集群Id。
      */
@@ -326,6 +358,86 @@ public class Cluster extends AbstractModel{
         this.MaxStorageCapacity = MaxStorageCapacity;
     }
 
+    /**
+     * Get 集群版本
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Version 集群版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getVersion() {
+        return this.Version;
+    }
+
+    /**
+     * Set 集群版本
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Version 集群版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVersion(String Version) {
+        this.Version = Version;
+    }
+
+    /**
+     * Get 公网访问接入点
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PublicEndPoint 公网访问接入点
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPublicEndPoint() {
+        return this.PublicEndPoint;
+    }
+
+    /**
+     * Set 公网访问接入点
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PublicEndPoint 公网访问接入点
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPublicEndPoint(String PublicEndPoint) {
+        this.PublicEndPoint = PublicEndPoint;
+    }
+
+    /**
+     * Get VPC访问接入点
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return VpcEndPoint VPC访问接入点
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getVpcEndPoint() {
+        return this.VpcEndPoint;
+    }
+
+    /**
+     * Set VPC访问接入点
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param VpcEndPoint VPC访问接入点
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVpcEndPoint(String VpcEndPoint) {
+        this.VpcEndPoint = VpcEndPoint;
+    }
+
+    /**
+     * Get 命名空间数量
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return NamespaceNum 命名空间数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getNamespaceNum() {
+        return this.NamespaceNum;
+    }
+
+    /**
+     * Set 命名空间数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param NamespaceNum 命名空间数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNamespaceNum(Long NamespaceNum) {
+        this.NamespaceNum = NamespaceNum;
+    }
+
     public Cluster() {
     }
 
@@ -373,6 +485,18 @@ public class Cluster extends AbstractModel{
         if (source.MaxStorageCapacity != null) {
             this.MaxStorageCapacity = new Long(source.MaxStorageCapacity);
         }
+        if (source.Version != null) {
+            this.Version = new String(source.Version);
+        }
+        if (source.PublicEndPoint != null) {
+            this.PublicEndPoint = new String(source.PublicEndPoint);
+        }
+        if (source.VpcEndPoint != null) {
+            this.VpcEndPoint = new String(source.VpcEndPoint);
+        }
+        if (source.NamespaceNum != null) {
+            this.NamespaceNum = new Long(source.NamespaceNum);
+        }
     }
 
 
@@ -393,6 +517,10 @@ public class Cluster extends AbstractModel{
         this.setParamSimple(map, prefix + "MaxQps", this.MaxQps);
         this.setParamSimple(map, prefix + "MessageRetentionTime", this.MessageRetentionTime);
         this.setParamSimple(map, prefix + "MaxStorageCapacity", this.MaxStorageCapacity);
+        this.setParamSimple(map, prefix + "Version", this.Version);
+        this.setParamSimple(map, prefix + "PublicEndPoint", this.PublicEndPoint);
+        this.setParamSimple(map, prefix + "VpcEndPoint", this.VpcEndPoint);
+        this.setParamSimple(map, prefix + "NamespaceNum", this.NamespaceNum);
 
     }
 }

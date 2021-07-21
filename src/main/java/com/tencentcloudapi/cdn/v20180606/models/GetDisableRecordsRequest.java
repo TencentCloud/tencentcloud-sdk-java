@@ -23,6 +23,13 @@ import java.util.HashMap;
 public class GetDisableRecordsRequest extends AbstractModel{
 
     /**
+    * 指定 URL 查询
+    */
+    @SerializedName("Url")
+    @Expose
+    private String Url;
+
+    /**
     * 开始时间，如：2018-12-12 10:24:00。
     */
     @SerializedName("StartTime")
@@ -35,13 +42,6 @@ public class GetDisableRecordsRequest extends AbstractModel{
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
-
-    /**
-    * 指定 URL 查询
-    */
-    @SerializedName("Url")
-    @Expose
-    private String Url;
 
     /**
     * URL 当前状态
@@ -65,6 +65,29 @@ enable：当前为可用状态，已解禁，可正常访问
     @SerializedName("Limit")
     @Expose
     private Long Limit;
+
+    /**
+    * 任务ID，任务ID和起始时间需要至少填写一项。
+    */
+    @SerializedName("TaskId")
+    @Expose
+    private String TaskId;
+
+    /**
+     * Get 指定 URL 查询 
+     * @return Url 指定 URL 查询
+     */
+    public String getUrl() {
+        return this.Url;
+    }
+
+    /**
+     * Set 指定 URL 查询
+     * @param Url 指定 URL 查询
+     */
+    public void setUrl(String Url) {
+        this.Url = Url;
+    }
 
     /**
      * Get 开始时间，如：2018-12-12 10:24:00。 
@@ -96,22 +119,6 @@ enable：当前为可用状态，已解禁，可正常访问
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
-    }
-
-    /**
-     * Get 指定 URL 查询 
-     * @return Url 指定 URL 查询
-     */
-    public String getUrl() {
-        return this.Url;
-    }
-
-    /**
-     * Set 指定 URL 查询
-     * @param Url 指定 URL 查询
-     */
-    public void setUrl(String Url) {
-        this.Url = Url;
     }
 
     /**
@@ -170,6 +177,22 @@ enable：当前为可用状态，已解禁，可正常访问
         this.Limit = Limit;
     }
 
+    /**
+     * Get 任务ID，任务ID和起始时间需要至少填写一项。 
+     * @return TaskId 任务ID，任务ID和起始时间需要至少填写一项。
+     */
+    public String getTaskId() {
+        return this.TaskId;
+    }
+
+    /**
+     * Set 任务ID，任务ID和起始时间需要至少填写一项。
+     * @param TaskId 任务ID，任务ID和起始时间需要至少填写一项。
+     */
+    public void setTaskId(String TaskId) {
+        this.TaskId = TaskId;
+    }
+
     public GetDisableRecordsRequest() {
     }
 
@@ -178,14 +201,14 @@ enable：当前为可用状态，已解禁，可正常访问
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public GetDisableRecordsRequest(GetDisableRecordsRequest source) {
+        if (source.Url != null) {
+            this.Url = new String(source.Url);
+        }
         if (source.StartTime != null) {
             this.StartTime = new String(source.StartTime);
         }
         if (source.EndTime != null) {
             this.EndTime = new String(source.EndTime);
-        }
-        if (source.Url != null) {
-            this.Url = new String(source.Url);
         }
         if (source.Status != null) {
             this.Status = new String(source.Status);
@@ -196,6 +219,9 @@ enable：当前为可用状态，已解禁，可正常访问
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
         }
+        if (source.TaskId != null) {
+            this.TaskId = new String(source.TaskId);
+        }
     }
 
 
@@ -203,12 +229,13 @@ enable：当前为可用状态，已解禁，可正常访问
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Url", this.Url);
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
-        this.setParamSimple(map, prefix + "Url", this.Url);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
 
     }
 }

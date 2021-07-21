@@ -860,4 +860,24 @@ public class AntiddosClient extends AbstractClient{
         return rsp.response;
     }
 
+    /**
+     *开启或关闭DDoS防护的水印防护配置
+     * @param req SwitchWaterPrintConfigRequest
+     * @return SwitchWaterPrintConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public SwitchWaterPrintConfigResponse SwitchWaterPrintConfig(SwitchWaterPrintConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SwitchWaterPrintConfigResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<SwitchWaterPrintConfigResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "SwitchWaterPrintConfig");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
 }

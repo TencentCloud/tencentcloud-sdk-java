@@ -39,6 +39,26 @@ public class TiwClient extends AbstractClient{
     }
 
     /**
+     *创建白板板书生成任务, 在任务结束后，如果提供了回调地址，将通过回调地址通知板书生成结果
+     * @param req CreateSnapshotTaskRequest
+     * @return CreateSnapshotTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateSnapshotTaskResponse CreateSnapshotTask(CreateSnapshotTaskRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateSnapshotTaskResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateSnapshotTaskResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateSnapshotTask");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建一个文档转码任务
      * @param req CreateTranscodeRequest
      * @return CreateTranscodeResponse
@@ -131,6 +151,26 @@ public class TiwClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeQualityMetricsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeQualityMetrics");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取指定白板板书生成任务信息
+     * @param req DescribeSnapshotTaskRequest
+     * @return DescribeSnapshotTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSnapshotTaskResponse DescribeSnapshotTask(DescribeSnapshotTaskRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeSnapshotTaskResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeSnapshotTaskResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeSnapshotTask");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

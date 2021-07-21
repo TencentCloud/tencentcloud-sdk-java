@@ -30,11 +30,18 @@ public class DescribeBindingPolicyObjectListRequest extends AbstractModel{
     private String Module;
 
     /**
-    * 策略组id
+    * 策略组id，如果有形如 policy-xxxx 的 id，请填到 PolicyId 字段中，本字段填 0
     */
     @SerializedName("GroupId")
     @Expose
     private Long GroupId;
+
+    /**
+    * 告警策略id，形如 policy-xxxx，如果填入，则GroupId可以填0
+    */
+    @SerializedName("PolicyId")
+    @Expose
+    private String PolicyId;
 
     /**
     * 分页参数，每页返回的数量，取值1~100，默认20
@@ -74,19 +81,35 @@ public class DescribeBindingPolicyObjectListRequest extends AbstractModel{
     }
 
     /**
-     * Get 策略组id 
-     * @return GroupId 策略组id
+     * Get 策略组id，如果有形如 policy-xxxx 的 id，请填到 PolicyId 字段中，本字段填 0 
+     * @return GroupId 策略组id，如果有形如 policy-xxxx 的 id，请填到 PolicyId 字段中，本字段填 0
      */
     public Long getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set 策略组id
-     * @param GroupId 策略组id
+     * Set 策略组id，如果有形如 policy-xxxx 的 id，请填到 PolicyId 字段中，本字段填 0
+     * @param GroupId 策略组id，如果有形如 policy-xxxx 的 id，请填到 PolicyId 字段中，本字段填 0
      */
     public void setGroupId(Long GroupId) {
         this.GroupId = GroupId;
+    }
+
+    /**
+     * Get 告警策略id，形如 policy-xxxx，如果填入，则GroupId可以填0 
+     * @return PolicyId 告警策略id，形如 policy-xxxx，如果填入，则GroupId可以填0
+     */
+    public String getPolicyId() {
+        return this.PolicyId;
+    }
+
+    /**
+     * Set 告警策略id，形如 policy-xxxx，如果填入，则GroupId可以填0
+     * @param PolicyId 告警策略id，形如 policy-xxxx，如果填入，则GroupId可以填0
+     */
+    public void setPolicyId(String PolicyId) {
+        this.PolicyId = PolicyId;
     }
 
     /**
@@ -151,6 +174,9 @@ public class DescribeBindingPolicyObjectListRequest extends AbstractModel{
         if (source.GroupId != null) {
             this.GroupId = new Long(source.GroupId);
         }
+        if (source.PolicyId != null) {
+            this.PolicyId = new String(source.PolicyId);
+        }
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
         }
@@ -172,6 +198,7 @@ public class DescribeBindingPolicyObjectListRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Module", this.Module);
         this.setParamSimple(map, prefix + "GroupId", this.GroupId);
+        this.setParamSimple(map, prefix + "PolicyId", this.PolicyId);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamArrayObj(map, prefix + "Dimensions.", this.Dimensions);

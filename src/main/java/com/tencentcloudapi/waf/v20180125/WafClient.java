@@ -199,6 +199,26 @@ public class WafClient extends AbstractClient{
     }
 
     /**
+     *本接口用于修改访问日志保存期限
+     * @param req ModifyAccessPeriodRequest
+     * @return ModifyAccessPeriodResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAccessPeriodResponse ModifyAccessPeriod(ModifyAccessPeriodRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyAccessPeriodResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyAccessPeriodResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyAccessPeriod");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *开启或禁用自定义策略
      * @param req ModifyCustomRuleStatusRequest
      * @return ModifyCustomRuleStatusResponse

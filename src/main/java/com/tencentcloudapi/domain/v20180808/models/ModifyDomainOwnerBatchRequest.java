@@ -37,6 +37,13 @@ public class ModifyDomainOwnerBatchRequest extends AbstractModel{
     private String NewOwnerUin;
 
     /**
+    * 是否同时转移对应的 DNS 解析域名，默认false
+    */
+    @SerializedName("TransferDns")
+    @Expose
+    private Boolean TransferDns;
+
+    /**
      * Get 要过户的域名。 
      * @return Domains 要过户的域名。
      */
@@ -68,6 +75,22 @@ public class ModifyDomainOwnerBatchRequest extends AbstractModel{
         this.NewOwnerUin = NewOwnerUin;
     }
 
+    /**
+     * Get 是否同时转移对应的 DNS 解析域名，默认false 
+     * @return TransferDns 是否同时转移对应的 DNS 解析域名，默认false
+     */
+    public Boolean getTransferDns() {
+        return this.TransferDns;
+    }
+
+    /**
+     * Set 是否同时转移对应的 DNS 解析域名，默认false
+     * @param TransferDns 是否同时转移对应的 DNS 解析域名，默认false
+     */
+    public void setTransferDns(Boolean TransferDns) {
+        this.TransferDns = TransferDns;
+    }
+
     public ModifyDomainOwnerBatchRequest() {
     }
 
@@ -85,6 +108,9 @@ public class ModifyDomainOwnerBatchRequest extends AbstractModel{
         if (source.NewOwnerUin != null) {
             this.NewOwnerUin = new String(source.NewOwnerUin);
         }
+        if (source.TransferDns != null) {
+            this.TransferDns = new Boolean(source.TransferDns);
+        }
     }
 
 
@@ -94,6 +120,7 @@ public class ModifyDomainOwnerBatchRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "Domains.", this.Domains);
         this.setParamSimple(map, prefix + "NewOwnerUin", this.NewOwnerUin);
+        this.setParamSimple(map, prefix + "TransferDns", this.TransferDns);
 
     }
 }

@@ -338,7 +338,7 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
-     *该接口（CreateParamTemplate）用于创建参数模板。
+     *该接口（CreateParamTemplate）用于创建参数模板，全地域公共参数Region均为ap-guangzhou。
      * @param req CreateParamTemplateRequest
      * @return CreateParamTemplateResponse
      * @throws TencentCloudSDKException
@@ -498,7 +498,7 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
-     *该接口（DeleteParamTemplate）用于删除参数模板。
+     *该接口（DeleteParamTemplate）用于删除参数模板，全地域公共参数Region均为ap-guangzhou。
      * @param req DeleteParamTemplateRequest
      * @return DeleteParamTemplateResponse
      * @throws TencentCloudSDKException
@@ -1244,7 +1244,7 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
-     *该接口（DescribeParamTemplateInfo）用于查询参数模板详情。
+     *该接口（DescribeParamTemplateInfo）用于查询参数模板详情，全地域公共参数Region均为ap-guangzhou。
      * @param req DescribeParamTemplateInfoRequest
      * @return DescribeParamTemplateInfoResponse
      * @throws TencentCloudSDKException
@@ -1927,7 +1927,7 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
-     *该接口（ModifyParamTemplate）用于修改参数模板。
+     *该接口（ModifyParamTemplate）用于修改参数模板，全地域公共参数Region均为ap-guangzhou。
      * @param req ModifyParamTemplateRequest
      * @return ModifyParamTemplateResponse
      * @throws TencentCloudSDKException
