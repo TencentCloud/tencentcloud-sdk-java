@@ -145,7 +145,7 @@ public class VpcClient extends AbstractClient{
 
     /**
      *本接口（AssignIpv6Addresses）用于弹性网卡申请`IPv6`地址。<br />
-本接口是异步完成，如需查询异步任务执行结果，请使用本接口返回的`RequestId`轮询`QueryTask`接口。
+本接口是异步完成，如需查询异步任务执行结果，请使用本接口返回的`RequestId`轮询`DescribeVpcTaskResult`接口。
 * 一个弹性网卡支持绑定的IP地址是有限制的，更多资源限制信息详见<a href="/document/product/576/18527">弹性网卡使用限制</a>。
 * 可以指定`IPv6`地址申请，地址类型不能为主`IP`，`IPv6`地址暂时只支持作为辅助`IP`。
 * 地址必须要在弹性网卡所在子网内，而且不能被占用。
@@ -1573,8 +1573,8 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
-     *本接口（DeleteHaVip）用于删除高可用虚拟IP（HAVIP）<br />
-本接口是异步完成，如需查询异步任务执行结果，请使用本接口返回的`RequestId`轮询`QueryTask`接口
+     *本接口（DeleteHaVip）用于删除高可用虚拟IP（HAVIP）。<br />
+本接口是异步完成，如需查询异步任务执行结果，请使用本接口返回的`RequestId`轮询`DescribeVpcTaskResult`接口。
      * @param req DeleteHaVipRequest
      * @return DeleteHaVipResponse
      * @throws TencentCloudSDKException
@@ -3304,6 +3304,26 @@ LimitTypes取值范围：
     }
 
     /**
+     *本接口（DescribeVpcTaskResult）用于查询VPC任务执行结果。
+     * @param req DescribeVpcTaskResultRequest
+     * @return DescribeVpcTaskResultResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVpcTaskResultResponse DescribeVpcTaskResult(DescribeVpcTaskResultRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeVpcTaskResultResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeVpcTaskResultResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeVpcTaskResult");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（DescribeVpcs）用于查询私有网络列表。
      * @param req DescribeVpcsRequest
      * @return DescribeVpcsResponse
@@ -3791,8 +3811,8 @@ LimitTypes取值范围：
     }
 
     /**
-     *本接口（HaVipAssociateAddressIp）用于高可用虚拟IP（HAVIP）绑定弹性公网IP（EIP）<br />
-本接口是异步完成，如需查询异步任务执行结果，请使用本接口返回的`RequestId`轮询`QueryTask`接口
+     *本接口（HaVipAssociateAddressIp）用于高可用虚拟IP（HAVIP）绑定弹性公网IP（EIP）。<br />
+本接口是异步完成，如需查询异步任务执行结果，请使用本接口返回的`RequestId`轮询`DescribeVpcTaskResult`接口。
      * @param req HaVipAssociateAddressIpRequest
      * @return HaVipAssociateAddressIpResponse
      * @throws TencentCloudSDKException
@@ -3812,8 +3832,8 @@ LimitTypes取值范围：
     }
 
     /**
-     *本接口（HaVipDisassociateAddressIp）用于将高可用虚拟IP（HAVIP）已绑定的弹性公网IP（EIP）解除绑定<br />
-本接口是异步完成，如需查询异步任务执行结果，请使用本接口返回的`RequestId`轮询`QueryTask`接口
+     *本接口（HaVipDisassociateAddressIp）用于将高可用虚拟IP（HAVIP）已绑定的弹性公网IP（EIP）解除绑定。<br />
+本接口是异步完成，如需查询异步任务执行结果，请使用本接口返回的`RequestId`轮询`DescribeVpcTaskResult`接口。
      * @param req HaVipDisassociateAddressIpRequest
      * @return HaVipDisassociateAddressIpResponse
      * @throws TencentCloudSDKException
@@ -5247,7 +5267,7 @@ LimitTypes取值范围：
 
     /**
      *本接口（UnassignIpv6Addresses）用于释放弹性网卡`IPv6`地址。<br />
-本接口是异步完成，如需查询异步任务执行结果，请使用本接口返回的`RequestId`轮询`QueryTask`接口。
+本接口是异步完成，如需查询异步任务执行结果，请使用本接口返回的`RequestId`轮询`DescribeVpcTaskResult`接口。
      * @param req UnassignIpv6AddressesRequest
      * @return UnassignIpv6AddressesResponse
      * @throws TencentCloudSDKException

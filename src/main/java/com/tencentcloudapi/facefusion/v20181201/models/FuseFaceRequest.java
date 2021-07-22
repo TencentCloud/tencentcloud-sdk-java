@@ -37,7 +37,7 @@ public class FuseFaceRequest extends AbstractModel{
     private String ModelId;
 
     /**
-    * 返回图像方式（url 或 base64) ，二选一。url有效期为30天。
+    * 返回图像方式（url 或 base64) ，二选一。url有效期为7天。
     */
     @SerializedName("RspImgType")
     @Expose
@@ -107,16 +107,16 @@ public class FuseFaceRequest extends AbstractModel{
     }
 
     /**
-     * Get 返回图像方式（url 或 base64) ，二选一。url有效期为30天。 
-     * @return RspImgType 返回图像方式（url 或 base64) ，二选一。url有效期为30天。
+     * Get 返回图像方式（url 或 base64) ，二选一。url有效期为7天。 
+     * @return RspImgType 返回图像方式（url 或 base64) ，二选一。url有效期为7天。
      */
     public String getRspImgType() {
         return this.RspImgType;
     }
 
     /**
-     * Set 返回图像方式（url 或 base64) ，二选一。url有效期为30天。
-     * @param RspImgType 返回图像方式（url 或 base64) ，二选一。url有效期为30天。
+     * Set 返回图像方式（url 或 base64) ，二选一。url有效期为7天。
+     * @param RspImgType 返回图像方式（url 或 base64) ，二选一。url有效期为7天。
      */
     public void setRspImgType(String RspImgType) {
         this.RspImgType = RspImgType;

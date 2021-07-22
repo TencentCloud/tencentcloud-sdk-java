@@ -192,6 +192,22 @@ public class DeviceInfo extends AbstractModel{
     private Long IsLuckyDevice;
 
     /**
+    * 标识机器维保状态。Maintain: 在保;  WillExpire: 即将过保; Expire: 已过保
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MaintainStatus")
+    @Expose
+    private String MaintainStatus;
+
+    /**
+    * 维保信息描述
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MaintainMessage")
+    @Expose
+    private String MaintainMessage;
+
+    /**
      * Get 设备唯一ID 
      * @return InstanceId 设备唯一ID
      */
@@ -579,6 +595,46 @@ public class DeviceInfo extends AbstractModel{
         this.IsLuckyDevice = IsLuckyDevice;
     }
 
+    /**
+     * Get 标识机器维保状态。Maintain: 在保;  WillExpire: 即将过保; Expire: 已过保
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MaintainStatus 标识机器维保状态。Maintain: 在保;  WillExpire: 即将过保; Expire: 已过保
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getMaintainStatus() {
+        return this.MaintainStatus;
+    }
+
+    /**
+     * Set 标识机器维保状态。Maintain: 在保;  WillExpire: 即将过保; Expire: 已过保
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MaintainStatus 标识机器维保状态。Maintain: 在保;  WillExpire: 即将过保; Expire: 已过保
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMaintainStatus(String MaintainStatus) {
+        this.MaintainStatus = MaintainStatus;
+    }
+
+    /**
+     * Get 维保信息描述
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MaintainMessage 维保信息描述
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getMaintainMessage() {
+        return this.MaintainMessage;
+    }
+
+    /**
+     * Set 维保信息描述
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MaintainMessage 维保信息描述
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMaintainMessage(String MaintainMessage) {
+        this.MaintainMessage = MaintainMessage;
+    }
+
     public DeviceInfo() {
     }
 
@@ -662,6 +718,12 @@ public class DeviceInfo extends AbstractModel{
         if (source.IsLuckyDevice != null) {
             this.IsLuckyDevice = new Long(source.IsLuckyDevice);
         }
+        if (source.MaintainStatus != null) {
+            this.MaintainStatus = new String(source.MaintainStatus);
+        }
+        if (source.MaintainMessage != null) {
+            this.MaintainMessage = new String(source.MaintainMessage);
+        }
     }
 
 
@@ -693,6 +755,8 @@ public class DeviceInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "VpcCidrBlock", this.VpcCidrBlock);
         this.setParamSimple(map, prefix + "SubnetCidrBlock", this.SubnetCidrBlock);
         this.setParamSimple(map, prefix + "IsLuckyDevice", this.IsLuckyDevice);
+        this.setParamSimple(map, prefix + "MaintainStatus", this.MaintainStatus);
+        this.setParamSimple(map, prefix + "MaintainMessage", this.MaintainMessage);
 
     }
 }

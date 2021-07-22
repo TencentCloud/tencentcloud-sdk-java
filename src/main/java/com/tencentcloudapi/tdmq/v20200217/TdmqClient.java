@@ -639,6 +639,46 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
+     *运营端获取命名空间bundle列表
+     * @param req DescribeNamespaceBundlesOptRequest
+     * @return DescribeNamespaceBundlesOptResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeNamespaceBundlesOptResponse DescribeNamespaceBundlesOpt(DescribeNamespaceBundlesOptRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeNamespaceBundlesOptResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeNamespaceBundlesOptResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeNamespaceBundlesOpt");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *运营端获节点健康状态
+     * @param req DescribeNodeHealthOptRequest
+     * @return DescribeNodeHealthOptResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeNodeHealthOptResponse DescribeNodeHealthOpt(DescribeNodeHealthOptRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeNodeHealthOptResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeNodeHealthOptResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeNodeHealthOpt");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取生产者列表，仅显示在线的生产者
      * @param req DescribeProducersRequest
      * @return DescribeProducersResponse

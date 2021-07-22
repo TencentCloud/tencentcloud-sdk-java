@@ -30,7 +30,7 @@ public class DescribeDevicesRequest extends AbstractModel{
     private Long Offset;
 
     /**
-    * 返回数量
+    * 返回数量，默认为20，最大值为100。
     */
     @SerializedName("Limit")
     @Expose
@@ -149,6 +149,13 @@ public class DescribeDevicesRequest extends AbstractModel{
     private Long Order;
 
     /**
+    * 按照维保方式过滤。可取值为 Maintain: 在保;  WillExpire: 即将过保; Expire: 已过保
+    */
+    @SerializedName("MaintainStatus")
+    @Expose
+    private String MaintainStatus;
+
+    /**
      * Get 偏移量 
      * @return Offset 偏移量
      */
@@ -165,16 +172,16 @@ public class DescribeDevicesRequest extends AbstractModel{
     }
 
     /**
-     * Get 返回数量 
-     * @return Limit 返回数量
+     * Get 返回数量，默认为20，最大值为100。 
+     * @return Limit 返回数量，默认为20，最大值为100。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 返回数量
-     * @param Limit 返回数量
+     * Set 返回数量，默认为20，最大值为100。
+     * @param Limit 返回数量，默认为20，最大值为100。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
@@ -436,6 +443,22 @@ public class DescribeDevicesRequest extends AbstractModel{
         this.Order = Order;
     }
 
+    /**
+     * Get 按照维保方式过滤。可取值为 Maintain: 在保;  WillExpire: 即将过保; Expire: 已过保 
+     * @return MaintainStatus 按照维保方式过滤。可取值为 Maintain: 在保;  WillExpire: 即将过保; Expire: 已过保
+     */
+    public String getMaintainStatus() {
+        return this.MaintainStatus;
+    }
+
+    /**
+     * Set 按照维保方式过滤。可取值为 Maintain: 在保;  WillExpire: 即将过保; Expire: 已过保
+     * @param MaintainStatus 按照维保方式过滤。可取值为 Maintain: 在保;  WillExpire: 即将过保; Expire: 已过保
+     */
+    public void setMaintainStatus(String MaintainStatus) {
+        this.MaintainStatus = MaintainStatus;
+    }
+
     public DescribeDevicesRequest() {
     }
 
@@ -510,6 +533,9 @@ public class DescribeDevicesRequest extends AbstractModel{
         if (source.Order != null) {
             this.Order = new Long(source.Order);
         }
+        if (source.MaintainStatus != null) {
+            this.MaintainStatus = new String(source.MaintainStatus);
+        }
     }
 
 
@@ -535,6 +561,7 @@ public class DescribeDevicesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "IsLuckyDevice", this.IsLuckyDevice);
         this.setParamSimple(map, prefix + "OrderField", this.OrderField);
         this.setParamSimple(map, prefix + "Order", this.Order);
+        this.setParamSimple(map, prefix + "MaintainStatus", this.MaintainStatus);
 
     }
 }

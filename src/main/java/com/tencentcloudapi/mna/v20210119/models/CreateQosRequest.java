@@ -74,6 +74,13 @@ BU4M：上行带宽保障4Mbps
     private Capacity Capacity;
 
     /**
+    * 应用模板ID
+    */
+    @SerializedName("TemplateId")
+    @Expose
+    private String TemplateId;
+
+    /**
      * Get 加速业务源地址信息，SrcIpv6和（SrcIpv4+SrcPublicIpv4）二选一，目前Ipv6不可用，全部填写以Ipv4参数为准。 
      * @return SrcAddressInfo 加速业务源地址信息，SrcIpv6和（SrcIpv4+SrcPublicIpv4）二选一，目前Ipv6不可用，全部填写以Ipv4参数为准。
      */
@@ -205,6 +212,22 @@ BU4M：上行带宽保障4Mbps
         this.Capacity = Capacity;
     }
 
+    /**
+     * Get 应用模板ID 
+     * @return TemplateId 应用模板ID
+     */
+    public String getTemplateId() {
+        return this.TemplateId;
+    }
+
+    /**
+     * Set 应用模板ID
+     * @param TemplateId 应用模板ID
+     */
+    public void setTemplateId(String TemplateId) {
+        this.TemplateId = TemplateId;
+    }
+
     public CreateQosRequest() {
     }
 
@@ -231,6 +254,9 @@ BU4M：上行带宽保障4Mbps
         if (source.Capacity != null) {
             this.Capacity = new Capacity(source.Capacity);
         }
+        if (source.TemplateId != null) {
+            this.TemplateId = new String(source.TemplateId);
+        }
     }
 
 
@@ -244,6 +270,7 @@ BU4M：上行带宽保障4Mbps
         this.setParamObj(map, prefix + "DeviceInfo.", this.DeviceInfo);
         this.setParamSimple(map, prefix + "Duration", this.Duration);
         this.setParamObj(map, prefix + "Capacity.", this.Capacity);
+        this.setParamSimple(map, prefix + "TemplateId", this.TemplateId);
 
     }
 }

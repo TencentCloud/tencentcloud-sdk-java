@@ -37,18 +37,18 @@ public class FaceFusionRequest extends AbstractModel{
     private String ModelId;
 
     /**
+    * 返回图像方式（url 或 base64) ，二选一。url有效期为7天。
+    */
+    @SerializedName("RspImgType")
+    @Expose
+    private String RspImgType;
+
+    /**
     * 图片 base64 数据。请确保人脸为正脸，无旋转。若某些手机拍摄后人脸被旋转，请使用图片的 EXIF 信息对图片进行旋转处理；请勿在 base64 数据中包含头部，如“data:image/jpeg;base64,”。
     */
     @SerializedName("Image")
     @Expose
     private String Image;
-
-    /**
-    * 返回图像方式（url 或 base64) ，二选一。url有效期为30天。
-    */
-    @SerializedName("RspImgType")
-    @Expose
-    private String RspImgType;
 
     /**
     * 历史遗留字段，无需填写。因为融合只需提取人脸特征，不需要鉴黄。
@@ -64,6 +64,13 @@ public class FaceFusionRequest extends AbstractModel{
     @SerializedName("CelebrityIdentify")
     @Expose
     private Long CelebrityIdentify;
+
+    /**
+    * 图片Url地址
+    */
+    @SerializedName("Url")
+    @Expose
+    private String Url;
 
     /**
      * Get 活动 ID，请在人脸融合控制台查看。 
@@ -98,6 +105,22 @@ public class FaceFusionRequest extends AbstractModel{
     }
 
     /**
+     * Get 返回图像方式（url 或 base64) ，二选一。url有效期为7天。 
+     * @return RspImgType 返回图像方式（url 或 base64) ，二选一。url有效期为7天。
+     */
+    public String getRspImgType() {
+        return this.RspImgType;
+    }
+
+    /**
+     * Set 返回图像方式（url 或 base64) ，二选一。url有效期为7天。
+     * @param RspImgType 返回图像方式（url 或 base64) ，二选一。url有效期为7天。
+     */
+    public void setRspImgType(String RspImgType) {
+        this.RspImgType = RspImgType;
+    }
+
+    /**
      * Get 图片 base64 数据。请确保人脸为正脸，无旋转。若某些手机拍摄后人脸被旋转，请使用图片的 EXIF 信息对图片进行旋转处理；请勿在 base64 数据中包含头部，如“data:image/jpeg;base64,”。 
      * @return Image 图片 base64 数据。请确保人脸为正脸，无旋转。若某些手机拍摄后人脸被旋转，请使用图片的 EXIF 信息对图片进行旋转处理；请勿在 base64 数据中包含头部，如“data:image/jpeg;base64,”。
      */
@@ -111,22 +134,6 @@ public class FaceFusionRequest extends AbstractModel{
      */
     public void setImage(String Image) {
         this.Image = Image;
-    }
-
-    /**
-     * Get 返回图像方式（url 或 base64) ，二选一。url有效期为30天。 
-     * @return RspImgType 返回图像方式（url 或 base64) ，二选一。url有效期为30天。
-     */
-    public String getRspImgType() {
-        return this.RspImgType;
-    }
-
-    /**
-     * Set 返回图像方式（url 或 base64) ，二选一。url有效期为30天。
-     * @param RspImgType 返回图像方式（url 或 base64) ，二选一。url有效期为30天。
-     */
-    public void setRspImgType(String RspImgType) {
-        this.RspImgType = RspImgType;
     }
 
     /**
@@ -165,6 +172,22 @@ public class FaceFusionRequest extends AbstractModel{
         this.CelebrityIdentify = CelebrityIdentify;
     }
 
+    /**
+     * Get 图片Url地址 
+     * @return Url 图片Url地址
+     */
+    public String getUrl() {
+        return this.Url;
+    }
+
+    /**
+     * Set 图片Url地址
+     * @param Url 图片Url地址
+     */
+    public void setUrl(String Url) {
+        this.Url = Url;
+    }
+
     public FaceFusionRequest() {
     }
 
@@ -179,17 +202,20 @@ public class FaceFusionRequest extends AbstractModel{
         if (source.ModelId != null) {
             this.ModelId = new String(source.ModelId);
         }
-        if (source.Image != null) {
-            this.Image = new String(source.Image);
-        }
         if (source.RspImgType != null) {
             this.RspImgType = new String(source.RspImgType);
+        }
+        if (source.Image != null) {
+            this.Image = new String(source.Image);
         }
         if (source.PornDetect != null) {
             this.PornDetect = new Long(source.PornDetect);
         }
         if (source.CelebrityIdentify != null) {
             this.CelebrityIdentify = new Long(source.CelebrityIdentify);
+        }
+        if (source.Url != null) {
+            this.Url = new String(source.Url);
         }
     }
 
@@ -200,10 +226,11 @@ public class FaceFusionRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamSimple(map, prefix + "ModelId", this.ModelId);
-        this.setParamSimple(map, prefix + "Image", this.Image);
         this.setParamSimple(map, prefix + "RspImgType", this.RspImgType);
+        this.setParamSimple(map, prefix + "Image", this.Image);
         this.setParamSimple(map, prefix + "PornDetect", this.PornDetect);
         this.setParamSimple(map, prefix + "CelebrityIdentify", this.CelebrityIdentify);
+        this.setParamSimple(map, prefix + "Url", this.Url);
 
     }
 }

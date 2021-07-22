@@ -59,6 +59,26 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *给GR集群增加可用的ClusterCIDR
+     * @param req AddClusterCIDRRequest
+     * @return AddClusterCIDRResponse
+     * @throws TencentCloudSDKException
+     */
+    public AddClusterCIDRResponse AddClusterCIDR(AddClusterCIDRRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AddClusterCIDRResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<AddClusterCIDRResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "AddClusterCIDR");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *添加已经存在的实例到集群
      * @param req AddExistedInstancesRequest
      * @return AddExistedInstancesResponse
@@ -1191,6 +1211,26 @@ public class TkeClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeRouteTableConflictsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeRouteTableConflicts");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *提供给附加了VPC-CNI能力的Global-Route集群关闭VPC-CNI
+     * @param req DisableVpcCniNetworkTypeRequest
+     * @return DisableVpcCniNetworkTypeResponse
+     * @throws TencentCloudSDKException
+     */
+    public DisableVpcCniNetworkTypeResponse DisableVpcCniNetworkType(DisableVpcCniNetworkTypeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DisableVpcCniNetworkTypeResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DisableVpcCniNetworkTypeResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DisableVpcCniNetworkType");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

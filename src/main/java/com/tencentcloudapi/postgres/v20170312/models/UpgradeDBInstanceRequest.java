@@ -65,6 +65,27 @@ public class UpgradeDBInstanceRequest extends AbstractModel{
     private Long ActivityId;
 
     /**
+    * 指定实例配置完成变更后的切换时间，默认为 立即切换，入参为 0 ：立即切换 。1：指定时间切换。
+    */
+    @SerializedName("SwitchTag")
+    @Expose
+    private Long SwitchTag;
+
+    /**
+    * 切换开始时间
+    */
+    @SerializedName("SwitchStartTime")
+    @Expose
+    private String SwitchStartTime;
+
+    /**
+    * 切换截止时间
+    */
+    @SerializedName("SwitchEndTime")
+    @Expose
+    private String SwitchEndTime;
+
+    /**
      * Get 升级后的实例内存大小，单位GB 
      * @return Memory 升级后的实例内存大小，单位GB
      */
@@ -160,6 +181,54 @@ public class UpgradeDBInstanceRequest extends AbstractModel{
         this.ActivityId = ActivityId;
     }
 
+    /**
+     * Get 指定实例配置完成变更后的切换时间，默认为 立即切换，入参为 0 ：立即切换 。1：指定时间切换。 
+     * @return SwitchTag 指定实例配置完成变更后的切换时间，默认为 立即切换，入参为 0 ：立即切换 。1：指定时间切换。
+     */
+    public Long getSwitchTag() {
+        return this.SwitchTag;
+    }
+
+    /**
+     * Set 指定实例配置完成变更后的切换时间，默认为 立即切换，入参为 0 ：立即切换 。1：指定时间切换。
+     * @param SwitchTag 指定实例配置完成变更后的切换时间，默认为 立即切换，入参为 0 ：立即切换 。1：指定时间切换。
+     */
+    public void setSwitchTag(Long SwitchTag) {
+        this.SwitchTag = SwitchTag;
+    }
+
+    /**
+     * Get 切换开始时间 
+     * @return SwitchStartTime 切换开始时间
+     */
+    public String getSwitchStartTime() {
+        return this.SwitchStartTime;
+    }
+
+    /**
+     * Set 切换开始时间
+     * @param SwitchStartTime 切换开始时间
+     */
+    public void setSwitchStartTime(String SwitchStartTime) {
+        this.SwitchStartTime = SwitchStartTime;
+    }
+
+    /**
+     * Get 切换截止时间 
+     * @return SwitchEndTime 切换截止时间
+     */
+    public String getSwitchEndTime() {
+        return this.SwitchEndTime;
+    }
+
+    /**
+     * Set 切换截止时间
+     * @param SwitchEndTime 切换截止时间
+     */
+    public void setSwitchEndTime(String SwitchEndTime) {
+        this.SwitchEndTime = SwitchEndTime;
+    }
+
     public UpgradeDBInstanceRequest() {
     }
 
@@ -189,6 +258,15 @@ public class UpgradeDBInstanceRequest extends AbstractModel{
         if (source.ActivityId != null) {
             this.ActivityId = new Long(source.ActivityId);
         }
+        if (source.SwitchTag != null) {
+            this.SwitchTag = new Long(source.SwitchTag);
+        }
+        if (source.SwitchStartTime != null) {
+            this.SwitchStartTime = new String(source.SwitchStartTime);
+        }
+        if (source.SwitchEndTime != null) {
+            this.SwitchEndTime = new String(source.SwitchEndTime);
+        }
     }
 
 
@@ -202,6 +280,9 @@ public class UpgradeDBInstanceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "AutoVoucher", this.AutoVoucher);
         this.setParamArraySimple(map, prefix + "VoucherIds.", this.VoucherIds);
         this.setParamSimple(map, prefix + "ActivityId", this.ActivityId);
+        this.setParamSimple(map, prefix + "SwitchTag", this.SwitchTag);
+        this.setParamSimple(map, prefix + "SwitchStartTime", this.SwitchStartTime);
+        this.setParamSimple(map, prefix + "SwitchEndTime", this.SwitchEndTime);
 
     }
 }

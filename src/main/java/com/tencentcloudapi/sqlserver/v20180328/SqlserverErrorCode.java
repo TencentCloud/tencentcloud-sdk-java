@@ -111,6 +111,9 @@ public enum SqlserverErrorCode {
     // 数据库名称不允许是保留字。
      INVALIDPARAMETERVALUE_DBNAMEISKEYWRODS("InvalidParameterValue.DBNameIsKeyWrods"),
      
+    // 数据库名称不能为空。
+     INVALIDPARAMETERVALUE_DBNAMENOTNULL("InvalidParameterValue.DBNameNotNull"),
+     
     // 数据库重命名名称一样。
      INVALIDPARAMETERVALUE_DBNAMESAME("InvalidParameterValue.DBNameSame"),
      
@@ -137,6 +140,9 @@ public enum SqlserverErrorCode {
      
     // 迁移名称包含非法字符。
      INVALIDPARAMETERVALUE_MIGRATIONNAMEISILLEGAL("InvalidParameterValue.MigrationNameIsIllegal"),
+     
+    // 可选参数[enable, disable]。
+     INVALIDPARAMETERVALUE_MODIFYTYPEVALUEINVALID("InvalidParameterValue.ModifyTypeValueInvalid"),
      
     // 参数类型错误。
      INVALIDPARAMETERVALUE_PARAMETERTYPEERROR("InvalidParameterValue.ParameterTypeError"),
@@ -213,6 +219,9 @@ public enum SqlserverErrorCode {
     // 实例状态无效。
      RESOURCEUNAVAILABLE_INSTANCESTATUSINVALID("ResourceUnavailable.InstanceStatusInvalid"),
      
+    // 不支持只读实例。
+     RESOURCEUNAVAILABLE_NOTSUPPORTROINSTANCE("ResourceUnavailable.NotSupportRoInstance"),
+     
     // VPC不存在。
      RESOURCEUNAVAILABLE_VPCNOTEXIST("ResourceUnavailable.VpcNotExist"),
      
@@ -224,6 +233,9 @@ public enum SqlserverErrorCode {
      
     // 未知参数错误。
      UNKNOWNPARAMETER("UnknownParameter"),
+     
+    // 不支持重复操作。
+     UNSUPPORTEDOPERATION_NOTSUPPORTREPEAT("UnsupportedOperation.NotSupportRepeat"),
      
     // 上传类型错误。
      UNSUPPORTEDOPERATION_UPLOADTYPEERROR("UnsupportedOperation.UploadTypeError");

@@ -759,6 +759,26 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
+     *当升级完成后，对处于等待切换状态下的实例，强制实例立即切换。
+     * @param req ModifySwitchTimePeriodRequest
+     * @return ModifySwitchTimePeriodResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifySwitchTimePeriodResponse ModifySwitchTimePeriod(ModifySwitchTimePeriodRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifySwitchTimePeriodResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifySwitchTimePeriodResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifySwitchTimePeriod");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（OpenDBExtranetAccess）用于开通外网。
      * @param req OpenDBExtranetAccessRequest
      * @return OpenDBExtranetAccessResponse
@@ -919,7 +939,7 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
-     *本接口（UpgradeDBInstance）用于升级实例。
+     *本接口（UpgradeDBInstance）用于升级实例配置。
      * @param req UpgradeDBInstanceRequest
      * @return UpgradeDBInstanceResponse
      * @throws TencentCloudSDKException

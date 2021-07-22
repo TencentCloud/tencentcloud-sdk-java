@@ -679,6 +679,26 @@ public class SqlserverClient extends AbstractClient{
     }
 
     /**
+     *本接口(DescribeDBsNormal)用于查询数据库配置信息，此接口不包含数据库的关联账号
+     * @param req DescribeDBsNormalRequest
+     * @return DescribeDBsNormalResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDBsNormalResponse DescribeDBsNormal(DescribeDBsNormalRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDBsNormalResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDBsNormalResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDBsNormal");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口(DescribeFlowStatus)用于查询流程状态。
      * @param req DescribeFlowStatusRequest
      * @return DescribeFlowStatusResponse
@@ -1371,6 +1391,66 @@ public class SqlserverClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyDBRemarkResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyDBRemark");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口(ModifyDatabaseCDC)用于开启、关闭数据库数据变更捕获(CDC)
+     * @param req ModifyDatabaseCDCRequest
+     * @return ModifyDatabaseCDCResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDatabaseCDCResponse ModifyDatabaseCDC(ModifyDatabaseCDCRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyDatabaseCDCResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyDatabaseCDCResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyDatabaseCDC");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口(ModifyDatabaseCT)用于启用、禁用数据库数据变更跟踪(CT)
+     * @param req ModifyDatabaseCTRequest
+     * @return ModifyDatabaseCTResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDatabaseCTResponse ModifyDatabaseCT(ModifyDatabaseCTRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyDatabaseCTResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyDatabaseCTResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyDatabaseCT");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口(ModifyDatabaseMdf)用于收缩数据库mdf(Shrink mdf)
+     * @param req ModifyDatabaseMdfRequest
+     * @return ModifyDatabaseMdfResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDatabaseMdfResponse ModifyDatabaseMdf(ModifyDatabaseMdfRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyDatabaseMdfResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyDatabaseMdfResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyDatabaseMdf");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
