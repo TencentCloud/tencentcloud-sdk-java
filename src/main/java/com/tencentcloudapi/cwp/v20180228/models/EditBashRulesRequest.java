@@ -65,7 +65,7 @@ public class EditBashRulesRequest extends AbstractModel{
     private Long Level;
 
     /**
-    * 是否全局规则(默认否)
+    * 是否全局规则(默认否)：1-全局，0-非全局
     */
     @SerializedName("IsGlobal")
     @Expose
@@ -189,16 +189,16 @@ public class EditBashRulesRequest extends AbstractModel{
     }
 
     /**
-     * Get 是否全局规则(默认否) 
-     * @return IsGlobal 是否全局规则(默认否)
+     * Get 是否全局规则(默认否)：1-全局，0-非全局 
+     * @return IsGlobal 是否全局规则(默认否)：1-全局，0-非全局
      */
     public Long getIsGlobal() {
         return this.IsGlobal;
     }
 
     /**
-     * Set 是否全局规则(默认否)
-     * @param IsGlobal 是否全局规则(默认否)
+     * Set 是否全局规则(默认否)：1-全局，0-非全局
+     * @param IsGlobal 是否全局规则(默认否)：1-全局，0-非全局
      */
     public void setIsGlobal(Long IsGlobal) {
         this.IsGlobal = IsGlobal;

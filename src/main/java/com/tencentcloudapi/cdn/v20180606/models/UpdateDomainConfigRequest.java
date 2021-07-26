@@ -317,6 +317,13 @@ global：全球加速
     private OssPrivateAccess OssPrivateAccess;
 
     /**
+    * WebSocket配置
+    */
+    @SerializedName("WebSocket")
+    @Expose
+    private WebSocket WebSocket;
+
+    /**
      * Get 域名 
      * @return Domain 域名
      */
@@ -1000,6 +1007,22 @@ global：全球加速
         this.OssPrivateAccess = OssPrivateAccess;
     }
 
+    /**
+     * Get WebSocket配置 
+     * @return WebSocket WebSocket配置
+     */
+    public WebSocket getWebSocket() {
+        return this.WebSocket;
+    }
+
+    /**
+     * Set WebSocket配置
+     * @param WebSocket WebSocket配置
+     */
+    public void setWebSocket(WebSocket WebSocket) {
+        this.WebSocket = WebSocket;
+    }
+
     public UpdateDomainConfigRequest() {
     }
 
@@ -1134,6 +1157,9 @@ global：全球加速
         if (source.OssPrivateAccess != null) {
             this.OssPrivateAccess = new OssPrivateAccess(source.OssPrivateAccess);
         }
+        if (source.WebSocket != null) {
+            this.WebSocket = new WebSocket(source.WebSocket);
+        }
     }
 
 
@@ -1182,6 +1208,7 @@ global：全球加速
         this.setParamObj(map, prefix + "OriginCombine.", this.OriginCombine);
         this.setParamObj(map, prefix + "Quic.", this.Quic);
         this.setParamObj(map, prefix + "OssPrivateAccess.", this.OssPrivateAccess);
+        this.setParamObj(map, prefix + "WebSocket.", this.WebSocket);
 
     }
 }

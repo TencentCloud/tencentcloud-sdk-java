@@ -44,14 +44,14 @@ public class DescribeBindingPolicyObjectListRequest extends AbstractModel{
     private String PolicyId;
 
     /**
-    * 分页参数，每页返回的数量，取值1~100，默认20
+    * 每次返回的数量，取值1~100，默认20
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 分页参数，页偏移量，从0开始计数，默认0
+    * 偏移量，从0开始计数，默认0。举例来说，参数 Offset=0&Limit=20 返回第 0 到 19 项，Offset=20&Limit=20 返回第 20 到 39 项，以此类推
     */
     @SerializedName("Offset")
     @Expose
@@ -113,32 +113,32 @@ public class DescribeBindingPolicyObjectListRequest extends AbstractModel{
     }
 
     /**
-     * Get 分页参数，每页返回的数量，取值1~100，默认20 
-     * @return Limit 分页参数，每页返回的数量，取值1~100，默认20
+     * Get 每次返回的数量，取值1~100，默认20 
+     * @return Limit 每次返回的数量，取值1~100，默认20
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 分页参数，每页返回的数量，取值1~100，默认20
-     * @param Limit 分页参数，每页返回的数量，取值1~100，默认20
+     * Set 每次返回的数量，取值1~100，默认20
+     * @param Limit 每次返回的数量，取值1~100，默认20
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 分页参数，页偏移量，从0开始计数，默认0 
-     * @return Offset 分页参数，页偏移量，从0开始计数，默认0
+     * Get 偏移量，从0开始计数，默认0。举例来说，参数 Offset=0&Limit=20 返回第 0 到 19 项，Offset=20&Limit=20 返回第 20 到 39 项，以此类推 
+     * @return Offset 偏移量，从0开始计数，默认0。举例来说，参数 Offset=0&Limit=20 返回第 0 到 19 项，Offset=20&Limit=20 返回第 20 到 39 项，以此类推
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 分页参数，页偏移量，从0开始计数，默认0
-     * @param Offset 分页参数，页偏移量，从0开始计数，默认0
+     * Set 偏移量，从0开始计数，默认0。举例来说，参数 Offset=0&Limit=20 返回第 0 到 19 项，Offset=20&Limit=20 返回第 20 到 39 项，以此类推
+     * @param Offset 偏移量，从0开始计数，默认0。举例来说，参数 Offset=0&Limit=20 返回第 0 到 19 项，Offset=20&Limit=20 返回第 20 到 39 项，以此类推
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

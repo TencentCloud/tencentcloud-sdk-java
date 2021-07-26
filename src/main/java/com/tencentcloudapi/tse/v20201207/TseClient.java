@@ -39,26 +39,6 @@ public class TseClient extends AbstractClient{
     }
 
     /**
-     *查看配置项
-     * @param req DescribeConfigRequest
-     * @return DescribeConfigResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeConfigResponse DescribeConfig(DescribeConfigRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeConfigResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeConfigResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeConfig");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *查询微服务注册引擎实例访问地址
      * @param req DescribeSREInstanceAccessAddressRequest
      * @return DescribeSREInstanceAccessAddressResponse
@@ -91,26 +71,6 @@ public class TseClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeSREInstancesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeSREInstances");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *管理配置
-     * @param req ManageConfigRequest
-     * @return ManageConfigResponse
-     * @throws TencentCloudSDKException
-     */
-    public ManageConfigResponse ManageConfig(ManageConfigRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ManageConfigResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<ManageConfigResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ManageConfig");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

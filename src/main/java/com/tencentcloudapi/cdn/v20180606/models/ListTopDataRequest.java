@@ -124,6 +124,13 @@ client：指定查询客户端地区（用户请求终端所在地区）数据�
     private String AreaType;
 
     /**
+    * 指定查询的产品数据，可选为cdn或者ecdn，默认为cdn
+    */
+    @SerializedName("Product")
+    @Expose
+    private String Product;
+
+    /**
      * Get 查询起始日期：yyyy-MM-dd HH:mm:ss
 仅支持按天粒度的数据查询，取入参中的天信息作为起始日期
 返回大于等于起始日期当天 00:00:00 点产生的数据
@@ -407,6 +414,22 @@ client：指定查询客户端地区（用户请求终端所在地区）数据�
         this.AreaType = AreaType;
     }
 
+    /**
+     * Get 指定查询的产品数据，可选为cdn或者ecdn，默认为cdn 
+     * @return Product 指定查询的产品数据，可选为cdn或者ecdn，默认为cdn
+     */
+    public String getProduct() {
+        return this.Product;
+    }
+
+    /**
+     * Set 指定查询的产品数据，可选为cdn或者ecdn，默认为cdn
+     * @param Product 指定查询的产品数据，可选为cdn或者ecdn，默认为cdn
+     */
+    public void setProduct(String Product) {
+        this.Product = Product;
+    }
+
     public ListTopDataRequest() {
     }
 
@@ -448,6 +471,9 @@ client：指定查询客户端地区（用户请求终端所在地区）数据�
         if (source.AreaType != null) {
             this.AreaType = new String(source.AreaType);
         }
+        if (source.Product != null) {
+            this.Product = new String(source.Product);
+        }
     }
 
 
@@ -465,6 +491,7 @@ client：指定查询客户端地区（用户请求终端所在地区）数据�
         this.setParamSimple(map, prefix + "Code", this.Code);
         this.setParamSimple(map, prefix + "Area", this.Area);
         this.setParamSimple(map, prefix + "AreaType", this.AreaType);
+        this.setParamSimple(map, prefix + "Product", this.Product);
 
     }
 }

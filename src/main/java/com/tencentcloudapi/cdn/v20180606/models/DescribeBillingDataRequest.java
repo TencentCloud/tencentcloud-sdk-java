@@ -98,6 +98,13 @@ bandwidth：计费带宽
     private String Metric;
 
     /**
+    * 指定查询的产品数据，可选为cdn或者ecdn，默认为cdn
+    */
+    @SerializedName("Product")
+    @Expose
+    private String Product;
+
+    /**
      * Get 查询起始时间，如：2018-09-04 10:40:00，返回结果大于等于指定时间
 根据指定时间粒度参数不同，会进行向前取整，如指定起始时间为 2018-09-04 10:40:00 按小时粒度查询，返回的第一个数据对应时间点为 2018-09-04 10:00:00
 起始时间与结束时间间隔小于等于 90 天 
@@ -301,6 +308,22 @@ bandwidth：计费带宽
         this.Metric = Metric;
     }
 
+    /**
+     * Get 指定查询的产品数据，可选为cdn或者ecdn，默认为cdn 
+     * @return Product 指定查询的产品数据，可选为cdn或者ecdn，默认为cdn
+     */
+    public String getProduct() {
+        return this.Product;
+    }
+
+    /**
+     * Set 指定查询的产品数据，可选为cdn或者ecdn，默认为cdn
+     * @param Product 指定查询的产品数据，可选为cdn或者ecdn，默认为cdn
+     */
+    public void setProduct(String Product) {
+        this.Product = Product;
+    }
+
     public DescribeBillingDataRequest() {
     }
 
@@ -333,6 +356,9 @@ bandwidth：计费带宽
         if (source.Metric != null) {
             this.Metric = new String(source.Metric);
         }
+        if (source.Product != null) {
+            this.Product = new String(source.Product);
+        }
     }
 
 
@@ -348,6 +374,7 @@ bandwidth：计费带宽
         this.setParamSimple(map, prefix + "Area", this.Area);
         this.setParamSimple(map, prefix + "District", this.District);
         this.setParamSimple(map, prefix + "Metric", this.Metric);
+        this.setParamSimple(map, prefix + "Product", this.Product);
 
     }
 }

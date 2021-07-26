@@ -44,7 +44,7 @@ public class ScanVulSettingRequest extends AbstractModel{
     private Long [] VulLevels;
 
     /**
-    * 定期检测时间
+    * 定期检测时间，如：02:10:50
     */
     @SerializedName("TimerTime")
     @Expose
@@ -58,14 +58,14 @@ public class ScanVulSettingRequest extends AbstractModel{
     private Long VulEmergency;
 
     /**
-    * 扫描开始时间
+    * 扫描开始时间，如：00:00
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 扫描结束时间
+    * 扫描结束时间，如：08:00
     */
     @SerializedName("EndTime")
     @Expose
@@ -127,16 +127,16 @@ public class ScanVulSettingRequest extends AbstractModel{
     }
 
     /**
-     * Get 定期检测时间 
-     * @return TimerTime 定期检测时间
+     * Get 定期检测时间，如：02:10:50 
+     * @return TimerTime 定期检测时间，如：02:10:50
      */
     public String getTimerTime() {
         return this.TimerTime;
     }
 
     /**
-     * Set 定期检测时间
-     * @param TimerTime 定期检测时间
+     * Set 定期检测时间，如：02:10:50
+     * @param TimerTime 定期检测时间，如：02:10:50
      */
     public void setTimerTime(String TimerTime) {
         this.TimerTime = TimerTime;
@@ -159,32 +159,32 @@ public class ScanVulSettingRequest extends AbstractModel{
     }
 
     /**
-     * Get 扫描开始时间 
-     * @return StartTime 扫描开始时间
+     * Get 扫描开始时间，如：00:00 
+     * @return StartTime 扫描开始时间，如：00:00
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 扫描开始时间
-     * @param StartTime 扫描开始时间
+     * Set 扫描开始时间，如：00:00
+     * @param StartTime 扫描开始时间，如：00:00
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 扫描结束时间 
-     * @return EndTime 扫描结束时间
+     * Get 扫描结束时间，如：08:00 
+     * @return EndTime 扫描结束时间，如：08:00
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 扫描结束时间
-     * @param EndTime 扫描结束时间
+     * Set 扫描结束时间，如：08:00
+     * @param EndTime 扫描结束时间，如：08:00
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

@@ -51,6 +51,13 @@ public class AssociateAddressRequest extends AbstractModel{
     private String PrivateIpAddress;
 
     /**
+    * 指定绑定时是否设置直通。弹性公网 IP 直通请参见 [EIP 直通](https://cloud.tencent.com/document/product/1199/41709)。取值：True、False，默认值为 False。当绑定 CVM 实例、EKS 弹性集群时，可设定此参数为 True。此参数目前处于内测中，如需使用，请提交 [工单申请](https://console.cloud.tencent.com/workorder/category?level1_id=6&level2_id=163&source=0&data_title=%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%20CLB&level3_id=1071&queue=96&scene_code=34639&step=2)。
+    */
+    @SerializedName("EipDirectConnection")
+    @Expose
+    private Boolean EipDirectConnection;
+
+    /**
      * Get 标识 EIP 的唯一 ID。EIP 唯一 ID 形如：`eip-11112222`。 
      * @return AddressId 标识 EIP 的唯一 ID。EIP 唯一 ID 形如：`eip-11112222`。
      */
@@ -114,6 +121,22 @@ public class AssociateAddressRequest extends AbstractModel{
         this.PrivateIpAddress = PrivateIpAddress;
     }
 
+    /**
+     * Get 指定绑定时是否设置直通。弹性公网 IP 直通请参见 [EIP 直通](https://cloud.tencent.com/document/product/1199/41709)。取值：True、False，默认值为 False。当绑定 CVM 实例、EKS 弹性集群时，可设定此参数为 True。此参数目前处于内测中，如需使用，请提交 [工单申请](https://console.cloud.tencent.com/workorder/category?level1_id=6&level2_id=163&source=0&data_title=%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%20CLB&level3_id=1071&queue=96&scene_code=34639&step=2)。 
+     * @return EipDirectConnection 指定绑定时是否设置直通。弹性公网 IP 直通请参见 [EIP 直通](https://cloud.tencent.com/document/product/1199/41709)。取值：True、False，默认值为 False。当绑定 CVM 实例、EKS 弹性集群时，可设定此参数为 True。此参数目前处于内测中，如需使用，请提交 [工单申请](https://console.cloud.tencent.com/workorder/category?level1_id=6&level2_id=163&source=0&data_title=%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%20CLB&level3_id=1071&queue=96&scene_code=34639&step=2)。
+     */
+    public Boolean getEipDirectConnection() {
+        return this.EipDirectConnection;
+    }
+
+    /**
+     * Set 指定绑定时是否设置直通。弹性公网 IP 直通请参见 [EIP 直通](https://cloud.tencent.com/document/product/1199/41709)。取值：True、False，默认值为 False。当绑定 CVM 实例、EKS 弹性集群时，可设定此参数为 True。此参数目前处于内测中，如需使用，请提交 [工单申请](https://console.cloud.tencent.com/workorder/category?level1_id=6&level2_id=163&source=0&data_title=%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%20CLB&level3_id=1071&queue=96&scene_code=34639&step=2)。
+     * @param EipDirectConnection 指定绑定时是否设置直通。弹性公网 IP 直通请参见 [EIP 直通](https://cloud.tencent.com/document/product/1199/41709)。取值：True、False，默认值为 False。当绑定 CVM 实例、EKS 弹性集群时，可设定此参数为 True。此参数目前处于内测中，如需使用，请提交 [工单申请](https://console.cloud.tencent.com/workorder/category?level1_id=6&level2_id=163&source=0&data_title=%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%20CLB&level3_id=1071&queue=96&scene_code=34639&step=2)。
+     */
+    public void setEipDirectConnection(Boolean EipDirectConnection) {
+        this.EipDirectConnection = EipDirectConnection;
+    }
+
     public AssociateAddressRequest() {
     }
 
@@ -134,6 +157,9 @@ public class AssociateAddressRequest extends AbstractModel{
         if (source.PrivateIpAddress != null) {
             this.PrivateIpAddress = new String(source.PrivateIpAddress);
         }
+        if (source.EipDirectConnection != null) {
+            this.EipDirectConnection = new Boolean(source.EipDirectConnection);
+        }
     }
 
 
@@ -145,6 +171,7 @@ public class AssociateAddressRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "NetworkInterfaceId", this.NetworkInterfaceId);
         this.setParamSimple(map, prefix + "PrivateIpAddress", this.PrivateIpAddress);
+        this.setParamSimple(map, prefix + "EipDirectConnection", this.EipDirectConnection);
 
     }
 }

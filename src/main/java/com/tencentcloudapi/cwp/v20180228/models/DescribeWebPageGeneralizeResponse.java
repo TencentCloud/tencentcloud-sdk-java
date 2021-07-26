@@ -58,7 +58,7 @@ public class DescribeWebPageGeneralizeResponse extends AbstractModel{
     private Long TamperNum;
 
     /**
-    * 今日防护
+    * 今日防护数
     */
     @SerializedName("ProtectToday")
     @Expose
@@ -159,16 +159,16 @@ public class DescribeWebPageGeneralizeResponse extends AbstractModel{
     }
 
     /**
-     * Get 今日防护 
-     * @return ProtectToday 今日防护
+     * Get 今日防护数 
+     * @return ProtectToday 今日防护数
      */
     public Long getProtectToday() {
         return this.ProtectToday;
     }
 
     /**
-     * Set 今日防护
-     * @param ProtectToday 今日防护
+     * Set 今日防护数
+     * @param ProtectToday 今日防护数
      */
     public void setProtectToday(Long ProtectToday) {
         this.ProtectToday = ProtectToday;

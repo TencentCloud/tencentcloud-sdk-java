@@ -86,6 +86,55 @@ public class CreateInstancePreRequest extends AbstractModel{
     private Long RenewFlag;
 
     /**
+    * 支持指定版本Kafka版本（0.10.2/1.1.1/2.4.2） 。指定专业版参数specificationsType=pro
+    */
+    @SerializedName("KafkaVersion")
+    @Expose
+    private String KafkaVersion;
+
+    /**
+    * 专业版必须填写 （专业版：profession、标准版：standard） 默认是standard。专业版填profession
+    */
+    @SerializedName("SpecificationsType")
+    @Expose
+    private String SpecificationsType;
+
+    /**
+    * 磁盘大小,专业版不填写默认最小磁盘,填写后根据磁盘带宽分区数弹性计算
+    */
+    @SerializedName("DiskSize")
+    @Expose
+    private Long DiskSize;
+
+    /**
+    * 带宽,专业版不填写默认最小带宽,填写后根据磁盘带宽分区数弹性计算
+    */
+    @SerializedName("BandWidth")
+    @Expose
+    private Long BandWidth;
+
+    /**
+    * 分区大小,专业版不填写默认最小分区数,填写后根据磁盘带宽分区数弹性计算
+    */
+    @SerializedName("Partition")
+    @Expose
+    private Long Partition;
+
+    /**
+    * 标签
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
+    * 磁盘类型（ssd填写CLOUD_SSD，sata填写CLOUD_BASIC）
+    */
+    @SerializedName("DiskType")
+    @Expose
+    private String DiskType;
+
+    /**
      * Get 实例名称，是一个不超过 64 个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-) 
      * @return InstanceName 实例名称，是一个不超过 64 个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)
      */
@@ -229,6 +278,118 @@ public class CreateInstancePreRequest extends AbstractModel{
         this.RenewFlag = RenewFlag;
     }
 
+    /**
+     * Get 支持指定版本Kafka版本（0.10.2/1.1.1/2.4.2） 。指定专业版参数specificationsType=pro 
+     * @return KafkaVersion 支持指定版本Kafka版本（0.10.2/1.1.1/2.4.2） 。指定专业版参数specificationsType=pro
+     */
+    public String getKafkaVersion() {
+        return this.KafkaVersion;
+    }
+
+    /**
+     * Set 支持指定版本Kafka版本（0.10.2/1.1.1/2.4.2） 。指定专业版参数specificationsType=pro
+     * @param KafkaVersion 支持指定版本Kafka版本（0.10.2/1.1.1/2.4.2） 。指定专业版参数specificationsType=pro
+     */
+    public void setKafkaVersion(String KafkaVersion) {
+        this.KafkaVersion = KafkaVersion;
+    }
+
+    /**
+     * Get 专业版必须填写 （专业版：profession、标准版：standard） 默认是standard。专业版填profession 
+     * @return SpecificationsType 专业版必须填写 （专业版：profession、标准版：standard） 默认是standard。专业版填profession
+     */
+    public String getSpecificationsType() {
+        return this.SpecificationsType;
+    }
+
+    /**
+     * Set 专业版必须填写 （专业版：profession、标准版：standard） 默认是standard。专业版填profession
+     * @param SpecificationsType 专业版必须填写 （专业版：profession、标准版：standard） 默认是standard。专业版填profession
+     */
+    public void setSpecificationsType(String SpecificationsType) {
+        this.SpecificationsType = SpecificationsType;
+    }
+
+    /**
+     * Get 磁盘大小,专业版不填写默认最小磁盘,填写后根据磁盘带宽分区数弹性计算 
+     * @return DiskSize 磁盘大小,专业版不填写默认最小磁盘,填写后根据磁盘带宽分区数弹性计算
+     */
+    public Long getDiskSize() {
+        return this.DiskSize;
+    }
+
+    /**
+     * Set 磁盘大小,专业版不填写默认最小磁盘,填写后根据磁盘带宽分区数弹性计算
+     * @param DiskSize 磁盘大小,专业版不填写默认最小磁盘,填写后根据磁盘带宽分区数弹性计算
+     */
+    public void setDiskSize(Long DiskSize) {
+        this.DiskSize = DiskSize;
+    }
+
+    /**
+     * Get 带宽,专业版不填写默认最小带宽,填写后根据磁盘带宽分区数弹性计算 
+     * @return BandWidth 带宽,专业版不填写默认最小带宽,填写后根据磁盘带宽分区数弹性计算
+     */
+    public Long getBandWidth() {
+        return this.BandWidth;
+    }
+
+    /**
+     * Set 带宽,专业版不填写默认最小带宽,填写后根据磁盘带宽分区数弹性计算
+     * @param BandWidth 带宽,专业版不填写默认最小带宽,填写后根据磁盘带宽分区数弹性计算
+     */
+    public void setBandWidth(Long BandWidth) {
+        this.BandWidth = BandWidth;
+    }
+
+    /**
+     * Get 分区大小,专业版不填写默认最小分区数,填写后根据磁盘带宽分区数弹性计算 
+     * @return Partition 分区大小,专业版不填写默认最小分区数,填写后根据磁盘带宽分区数弹性计算
+     */
+    public Long getPartition() {
+        return this.Partition;
+    }
+
+    /**
+     * Set 分区大小,专业版不填写默认最小分区数,填写后根据磁盘带宽分区数弹性计算
+     * @param Partition 分区大小,专业版不填写默认最小分区数,填写后根据磁盘带宽分区数弹性计算
+     */
+    public void setPartition(Long Partition) {
+        this.Partition = Partition;
+    }
+
+    /**
+     * Get 标签 
+     * @return Tags 标签
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 标签
+     * @param Tags 标签
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
+    /**
+     * Get 磁盘类型（ssd填写CLOUD_SSD，sata填写CLOUD_BASIC） 
+     * @return DiskType 磁盘类型（ssd填写CLOUD_SSD，sata填写CLOUD_BASIC）
+     */
+    public String getDiskType() {
+        return this.DiskType;
+    }
+
+    /**
+     * Set 磁盘类型（ssd填写CLOUD_SSD，sata填写CLOUD_BASIC）
+     * @param DiskType 磁盘类型（ssd填写CLOUD_SSD，sata填写CLOUD_BASIC）
+     */
+    public void setDiskType(String DiskType) {
+        this.DiskType = DiskType;
+    }
+
     public CreateInstancePreRequest() {
     }
 
@@ -264,6 +425,30 @@ public class CreateInstancePreRequest extends AbstractModel{
         if (source.RenewFlag != null) {
             this.RenewFlag = new Long(source.RenewFlag);
         }
+        if (source.KafkaVersion != null) {
+            this.KafkaVersion = new String(source.KafkaVersion);
+        }
+        if (source.SpecificationsType != null) {
+            this.SpecificationsType = new String(source.SpecificationsType);
+        }
+        if (source.DiskSize != null) {
+            this.DiskSize = new Long(source.DiskSize);
+        }
+        if (source.BandWidth != null) {
+            this.BandWidth = new Long(source.BandWidth);
+        }
+        if (source.Partition != null) {
+            this.Partition = new Long(source.Partition);
+        }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
+        if (source.DiskType != null) {
+            this.DiskType = new String(source.DiskType);
+        }
     }
 
 
@@ -280,6 +465,13 @@ public class CreateInstancePreRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "MsgRetentionTime", this.MsgRetentionTime);
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
+        this.setParamSimple(map, prefix + "KafkaVersion", this.KafkaVersion);
+        this.setParamSimple(map, prefix + "SpecificationsType", this.SpecificationsType);
+        this.setParamSimple(map, prefix + "DiskSize", this.DiskSize);
+        this.setParamSimple(map, prefix + "BandWidth", this.BandWidth);
+        this.setParamSimple(map, prefix + "Partition", this.Partition);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "DiskType", this.DiskType);
 
     }
 }

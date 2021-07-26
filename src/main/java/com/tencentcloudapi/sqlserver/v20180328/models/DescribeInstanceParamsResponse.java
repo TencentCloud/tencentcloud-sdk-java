@@ -20,21 +20,21 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDBsNormalResponse extends AbstractModel{
+public class DescribeInstanceParamsResponse extends AbstractModel{
 
     /**
-    * 表示当前实例下的数据库总个数
+    * 实例的参数总数
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 返回数据库的详细配置信息，例如：数据库是否开启CDC、CT等
+    * 参数详情
     */
-    @SerializedName("DBList")
+    @SerializedName("Items")
     @Expose
-    private DbNormalDetail [] DBList;
+    private ParameterDetail [] Items;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -44,35 +44,35 @@ public class DescribeDBsNormalResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 表示当前实例下的数据库总个数 
-     * @return TotalCount 表示当前实例下的数据库总个数
+     * Get 实例的参数总数 
+     * @return TotalCount 实例的参数总数
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 表示当前实例下的数据库总个数
-     * @param TotalCount 表示当前实例下的数据库总个数
+     * Set 实例的参数总数
+     * @param TotalCount 实例的参数总数
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 返回数据库的详细配置信息，例如：数据库是否开启CDC、CT等 
-     * @return DBList 返回数据库的详细配置信息，例如：数据库是否开启CDC、CT等
+     * Get 参数详情 
+     * @return Items 参数详情
      */
-    public DbNormalDetail [] getDBList() {
-        return this.DBList;
+    public ParameterDetail [] getItems() {
+        return this.Items;
     }
 
     /**
-     * Set 返回数据库的详细配置信息，例如：数据库是否开启CDC、CT等
-     * @param DBList 返回数据库的详细配置信息，例如：数据库是否开启CDC、CT等
+     * Set 参数详情
+     * @param Items 参数详情
      */
-    public void setDBList(DbNormalDetail [] DBList) {
-        this.DBList = DBList;
+    public void setItems(ParameterDetail [] Items) {
+        this.Items = Items;
     }
 
     /**
@@ -91,21 +91,21 @@ public class DescribeDBsNormalResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeDBsNormalResponse() {
+    public DescribeInstanceParamsResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeDBsNormalResponse(DescribeDBsNormalResponse source) {
+    public DescribeInstanceParamsResponse(DescribeInstanceParamsResponse source) {
         if (source.TotalCount != null) {
             this.TotalCount = new Long(source.TotalCount);
         }
-        if (source.DBList != null) {
-            this.DBList = new DbNormalDetail[source.DBList.length];
-            for (int i = 0; i < source.DBList.length; i++) {
-                this.DBList[i] = new DbNormalDetail(source.DBList[i]);
+        if (source.Items != null) {
+            this.Items = new ParameterDetail[source.Items.length];
+            for (int i = 0; i < source.Items.length; i++) {
+                this.Items[i] = new ParameterDetail(source.Items[i]);
             }
         }
         if (source.RequestId != null) {
@@ -119,7 +119,7 @@ public class DescribeDBsNormalResponse extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
-        this.setParamArrayObj(map, prefix + "DBList.", this.DBList);
+        this.setParamArrayObj(map, prefix + "Items.", this.Items);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

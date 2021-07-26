@@ -33,6 +33,13 @@ overseas：境外计费方式查询
     private String Area;
 
     /**
+    * 指定查询的产品数据，可选为cdn或者ecdn，默认为cdn
+    */
+    @SerializedName("Product")
+    @Expose
+    private String Product;
+
+    /**
      * Get 指定服务地域查询
 mainland：境内计费方式查询
 overseas：境外计费方式查询
@@ -60,6 +67,22 @@ overseas：境外计费方式查询
         this.Area = Area;
     }
 
+    /**
+     * Get 指定查询的产品数据，可选为cdn或者ecdn，默认为cdn 
+     * @return Product 指定查询的产品数据，可选为cdn或者ecdn，默认为cdn
+     */
+    public String getProduct() {
+        return this.Product;
+    }
+
+    /**
+     * Set 指定查询的产品数据，可选为cdn或者ecdn，默认为cdn
+     * @param Product 指定查询的产品数据，可选为cdn或者ecdn，默认为cdn
+     */
+    public void setProduct(String Product) {
+        this.Product = Product;
+    }
+
     public DescribePayTypeRequest() {
     }
 
@@ -71,6 +94,9 @@ overseas：境外计费方式查询
         if (source.Area != null) {
             this.Area = new String(source.Area);
         }
+        if (source.Product != null) {
+            this.Product = new String(source.Product);
+        }
     }
 
 
@@ -79,6 +105,7 @@ overseas：境外计费方式查询
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Area", this.Area);
+        this.setParamSimple(map, prefix + "Product", this.Product);
 
     }
 }

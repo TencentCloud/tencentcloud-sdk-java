@@ -136,6 +136,13 @@ global：全球锁定
     private String Readonly;
 
     /**
+    * 域名所属产品，cdn/ecdn
+    */
+    @SerializedName("Product")
+    @Expose
+    private String Product;
+
+    /**
      * Get 域名 ID 
      * @return ResourceId 域名 ID
      */
@@ -431,6 +438,22 @@ global：全球锁定
         this.Readonly = Readonly;
     }
 
+    /**
+     * Get 域名所属产品，cdn/ecdn 
+     * @return Product 域名所属产品，cdn/ecdn
+     */
+    public String getProduct() {
+        return this.Product;
+    }
+
+    /**
+     * Set 域名所属产品，cdn/ecdn
+     * @param Product 域名所属产品，cdn/ecdn
+     */
+    public void setProduct(String Product) {
+        this.Product = Product;
+    }
+
     public BriefDomain() {
     }
 
@@ -478,6 +501,9 @@ global：全球锁定
         if (source.Readonly != null) {
             this.Readonly = new String(source.Readonly);
         }
+        if (source.Product != null) {
+            this.Product = new String(source.Product);
+        }
     }
 
 
@@ -498,6 +524,7 @@ global：全球锁定
         this.setParamSimple(map, prefix + "Disable", this.Disable);
         this.setParamSimple(map, prefix + "Area", this.Area);
         this.setParamSimple(map, prefix + "Readonly", this.Readonly);
+        this.setParamSimple(map, prefix + "Product", this.Product);
 
     }
 }

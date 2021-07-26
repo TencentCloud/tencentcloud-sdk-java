@@ -144,6 +144,13 @@ hlg。
     private HiddenMarkInfo HiddenMarkInfo;
 
     /**
+    * 文本水印参数信息。
+    */
+    @SerializedName("TextMarkInfo")
+    @Expose
+    private TextMarkInfoItem [] TextMarkInfo;
+
+    /**
      * Get 视频帧率，取值范围：[0, 60]，单位：Hz。
 注意：当取值为 0，表示帧率和原始视频保持一致。 
      * @return Fps 视频帧率，取值范围：[0, 60]，单位：Hz。
@@ -471,6 +478,22 @@ hlg。
         this.HiddenMarkInfo = HiddenMarkInfo;
     }
 
+    /**
+     * Get 文本水印参数信息。 
+     * @return TextMarkInfo 文本水印参数信息。
+     */
+    public TextMarkInfoItem [] getTextMarkInfo() {
+        return this.TextMarkInfo;
+    }
+
+    /**
+     * Set 文本水印参数信息。
+     * @param TextMarkInfo 文本水印参数信息。
+     */
+    public void setTextMarkInfo(TextMarkInfoItem [] TextMarkInfo) {
+        this.TextMarkInfo = TextMarkInfo;
+    }
+
     public VideoInfo() {
     }
 
@@ -521,6 +544,12 @@ hlg。
         if (source.HiddenMarkInfo != null) {
             this.HiddenMarkInfo = new HiddenMarkInfo(source.HiddenMarkInfo);
         }
+        if (source.TextMarkInfo != null) {
+            this.TextMarkInfo = new TextMarkInfoItem[source.TextMarkInfo.length];
+            for (int i = 0; i < source.TextMarkInfo.length; i++) {
+                this.TextMarkInfo[i] = new TextMarkInfoItem(source.TextMarkInfo[i]);
+            }
+        }
     }
 
 
@@ -541,6 +570,7 @@ hlg。
         this.setParamSimple(map, prefix + "Hdr", this.Hdr);
         this.setParamObj(map, prefix + "VideoEnhance.", this.VideoEnhance);
         this.setParamObj(map, prefix + "HiddenMarkInfo.", this.HiddenMarkInfo);
+        this.setParamArrayObj(map, prefix + "TextMarkInfo.", this.TextMarkInfo);
 
     }
 }

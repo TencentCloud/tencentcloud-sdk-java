@@ -23,13 +23,6 @@ import java.util.HashMap;
 public class InquiryPriceCreateInstanceRequest extends AbstractModel{
 
     /**
-    * 实例所属的可用区ID，可参考[地域和可用区](https://cloud.tencent.com/document/product/239/4106)  。
-    */
-    @SerializedName("ZoneId")
-    @Expose
-    private Long ZoneId;
-
-    /**
     * 实例类型：2 – Redis2.8内存版(标准架构)，3 – CKV 3.2内存版(标准架构)，4 – CKV 3.2内存版(集群架构)，6 – Redis4.0内存版(标准架构)，7 – Redis4.0内存版(集群架构)，8 – Redis5.0内存版(标准架构)，9 – Redis5.0内存版(集群架构)。
     */
     @SerializedName("TypeId")
@@ -66,6 +59,13 @@ TypeId为标准架构时，MemSize是实例总内存容量；TypeId为集群架�
     private Long BillingMode;
 
     /**
+    * 实例所属的可用区ID，可参考[地域和可用区](https://cloud.tencent.com/document/product/239/4106)  。
+    */
+    @SerializedName("ZoneId")
+    @Expose
+    private Long ZoneId;
+
+    /**
     * 实例分片数量，Redis2.8主从版、CKV主从版和Redis2.8单机版、Redis4.0主从版不需要填写。
     */
     @SerializedName("RedisShardNum")
@@ -87,20 +87,11 @@ TypeId为标准架构时，MemSize是实例总内存容量；TypeId为集群架�
     private Boolean ReplicasReadonly;
 
     /**
-     * Get 实例所属的可用区ID，可参考[地域和可用区](https://cloud.tencent.com/document/product/239/4106)  。 
-     * @return ZoneId 实例所属的可用区ID，可参考[地域和可用区](https://cloud.tencent.com/document/product/239/4106)  。
-     */
-    public Long getZoneId() {
-        return this.ZoneId;
-    }
-
-    /**
-     * Set 实例所属的可用区ID，可参考[地域和可用区](https://cloud.tencent.com/document/product/239/4106)  。
-     * @param ZoneId 实例所属的可用区ID，可参考[地域和可用区](https://cloud.tencent.com/document/product/239/4106)  。
-     */
-    public void setZoneId(Long ZoneId) {
-        this.ZoneId = ZoneId;
-    }
+    * 实例所属的可用区名称，可参考[地域和可用区](https://cloud.tencent.com/document/product/239/4106)  。
+    */
+    @SerializedName("ZoneName")
+    @Expose
+    private String ZoneName;
 
     /**
      * Get 实例类型：2 – Redis2.8内存版(标准架构)，3 – CKV 3.2内存版(标准架构)，4 – CKV 3.2内存版(集群架构)，6 – Redis4.0内存版(标准架构)，7 – Redis4.0内存版(集群架构)，8 – Redis5.0内存版(标准架构)，9 – Redis5.0内存版(集群架构)。 
@@ -187,6 +178,22 @@ TypeId为标准架构时，MemSize是实例总内存容量；TypeId为集群架�
     }
 
     /**
+     * Get 实例所属的可用区ID，可参考[地域和可用区](https://cloud.tencent.com/document/product/239/4106)  。 
+     * @return ZoneId 实例所属的可用区ID，可参考[地域和可用区](https://cloud.tencent.com/document/product/239/4106)  。
+     */
+    public Long getZoneId() {
+        return this.ZoneId;
+    }
+
+    /**
+     * Set 实例所属的可用区ID，可参考[地域和可用区](https://cloud.tencent.com/document/product/239/4106)  。
+     * @param ZoneId 实例所属的可用区ID，可参考[地域和可用区](https://cloud.tencent.com/document/product/239/4106)  。
+     */
+    public void setZoneId(Long ZoneId) {
+        this.ZoneId = ZoneId;
+    }
+
+    /**
      * Get 实例分片数量，Redis2.8主从版、CKV主从版和Redis2.8单机版、Redis4.0主从版不需要填写。 
      * @return RedisShardNum 实例分片数量，Redis2.8主从版、CKV主从版和Redis2.8单机版、Redis4.0主从版不需要填写。
      */
@@ -234,6 +241,22 @@ TypeId为标准架构时，MemSize是实例总内存容量；TypeId为集群架�
         this.ReplicasReadonly = ReplicasReadonly;
     }
 
+    /**
+     * Get 实例所属的可用区名称，可参考[地域和可用区](https://cloud.tencent.com/document/product/239/4106)  。 
+     * @return ZoneName 实例所属的可用区名称，可参考[地域和可用区](https://cloud.tencent.com/document/product/239/4106)  。
+     */
+    public String getZoneName() {
+        return this.ZoneName;
+    }
+
+    /**
+     * Set 实例所属的可用区名称，可参考[地域和可用区](https://cloud.tencent.com/document/product/239/4106)  。
+     * @param ZoneName 实例所属的可用区名称，可参考[地域和可用区](https://cloud.tencent.com/document/product/239/4106)  。
+     */
+    public void setZoneName(String ZoneName) {
+        this.ZoneName = ZoneName;
+    }
+
     public InquiryPriceCreateInstanceRequest() {
     }
 
@@ -242,9 +265,6 @@ TypeId为标准架构时，MemSize是实例总内存容量；TypeId为集群架�
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public InquiryPriceCreateInstanceRequest(InquiryPriceCreateInstanceRequest source) {
-        if (source.ZoneId != null) {
-            this.ZoneId = new Long(source.ZoneId);
-        }
         if (source.TypeId != null) {
             this.TypeId = new Long(source.TypeId);
         }
@@ -260,6 +280,9 @@ TypeId为标准架构时，MemSize是实例总内存容量；TypeId为集群架�
         if (source.BillingMode != null) {
             this.BillingMode = new Long(source.BillingMode);
         }
+        if (source.ZoneId != null) {
+            this.ZoneId = new Long(source.ZoneId);
+        }
         if (source.RedisShardNum != null) {
             this.RedisShardNum = new Long(source.RedisShardNum);
         }
@@ -269,6 +292,9 @@ TypeId为标准架构时，MemSize是实例总内存容量；TypeId为集群架�
         if (source.ReplicasReadonly != null) {
             this.ReplicasReadonly = new Boolean(source.ReplicasReadonly);
         }
+        if (source.ZoneName != null) {
+            this.ZoneName = new String(source.ZoneName);
+        }
     }
 
 
@@ -276,15 +302,16 @@ TypeId为标准架构时，MemSize是实例总内存容量；TypeId为集群架�
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
         this.setParamSimple(map, prefix + "TypeId", this.TypeId);
         this.setParamSimple(map, prefix + "MemSize", this.MemSize);
         this.setParamSimple(map, prefix + "GoodsNum", this.GoodsNum);
         this.setParamSimple(map, prefix + "Period", this.Period);
         this.setParamSimple(map, prefix + "BillingMode", this.BillingMode);
+        this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
         this.setParamSimple(map, prefix + "RedisShardNum", this.RedisShardNum);
         this.setParamSimple(map, prefix + "RedisReplicasNum", this.RedisReplicasNum);
         this.setParamSimple(map, prefix + "ReplicasReadonly", this.ReplicasReadonly);
+        this.setParamSimple(map, prefix + "ZoneName", this.ZoneName);
 
     }
 }

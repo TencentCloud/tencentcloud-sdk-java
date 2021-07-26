@@ -37,6 +37,22 @@ public class DescribeBackupUrlResponse extends AbstractModel{
     private String [] InnerDownloadUrl;
 
     /**
+    * 文件名称（仅tendis实例有值）
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Filenames")
+    @Expose
+    private String [] Filenames;
+
+    /**
+    * 备份文件信息列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BackupInfos")
+    @Expose
+    private BackupDownloadInfo [] BackupInfos;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -76,6 +92,46 @@ public class DescribeBackupUrlResponse extends AbstractModel{
     }
 
     /**
+     * Get 文件名称（仅tendis实例有值）
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Filenames 文件名称（仅tendis实例有值）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getFilenames() {
+        return this.Filenames;
+    }
+
+    /**
+     * Set 文件名称（仅tendis实例有值）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Filenames 文件名称（仅tendis实例有值）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFilenames(String [] Filenames) {
+        this.Filenames = Filenames;
+    }
+
+    /**
+     * Get 备份文件信息列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BackupInfos 备份文件信息列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public BackupDownloadInfo [] getBackupInfos() {
+        return this.BackupInfos;
+    }
+
+    /**
+     * Set 备份文件信息列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BackupInfos 备份文件信息列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBackupInfos(BackupDownloadInfo [] BackupInfos) {
+        this.BackupInfos = BackupInfos;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -111,6 +167,18 @@ public class DescribeBackupUrlResponse extends AbstractModel{
                 this.InnerDownloadUrl[i] = new String(source.InnerDownloadUrl[i]);
             }
         }
+        if (source.Filenames != null) {
+            this.Filenames = new String[source.Filenames.length];
+            for (int i = 0; i < source.Filenames.length; i++) {
+                this.Filenames[i] = new String(source.Filenames[i]);
+            }
+        }
+        if (source.BackupInfos != null) {
+            this.BackupInfos = new BackupDownloadInfo[source.BackupInfos.length];
+            for (int i = 0; i < source.BackupInfos.length; i++) {
+                this.BackupInfos[i] = new BackupDownloadInfo(source.BackupInfos[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -123,6 +191,8 @@ public class DescribeBackupUrlResponse extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "DownloadUrl.", this.DownloadUrl);
         this.setParamArraySimple(map, prefix + "InnerDownloadUrl.", this.InnerDownloadUrl);
+        this.setParamArraySimple(map, prefix + "Filenames.", this.Filenames);
+        this.setParamArrayObj(map, prefix + "BackupInfos.", this.BackupInfos);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

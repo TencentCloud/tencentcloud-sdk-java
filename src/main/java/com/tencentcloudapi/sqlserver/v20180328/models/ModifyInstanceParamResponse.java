@@ -13,51 +13,48 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cwp.v20180228.models;
+package com.tencentcloudapi.sqlserver.v20180328.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteMalwaresRequest extends AbstractModel{
+public class ModifyInstanceParamResponse extends AbstractModel{
 
     /**
-    * 木马记录ID数组 (最大100条)
+    * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
-    @SerializedName("Ids")
+    @SerializedName("RequestId")
     @Expose
-    private Long [] Ids;
+    private String RequestId;
 
     /**
-     * Get 木马记录ID数组 (最大100条) 
-     * @return Ids 木马记录ID数组 (最大100条)
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
+     * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public Long [] getIds() {
-        return this.Ids;
+    public String getRequestId() {
+        return this.RequestId;
     }
 
     /**
-     * Set 木马记录ID数组 (最大100条)
-     * @param Ids 木马记录ID数组 (最大100条)
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public void setIds(Long [] Ids) {
-        this.Ids = Ids;
+    public void setRequestId(String RequestId) {
+        this.RequestId = RequestId;
     }
 
-    public DeleteMalwaresRequest() {
+    public ModifyInstanceParamResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DeleteMalwaresRequest(DeleteMalwaresRequest source) {
-        if (source.Ids != null) {
-            this.Ids = new Long[source.Ids.length];
-            for (int i = 0; i < source.Ids.length; i++) {
-                this.Ids[i] = new Long(source.Ids[i]);
-            }
+    public ModifyInstanceParamResponse(ModifyInstanceParamResponse source) {
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
         }
     }
 
@@ -66,7 +63,7 @@ public class DeleteMalwaresRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArraySimple(map, prefix + "Ids.", this.Ids);
+        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
 }

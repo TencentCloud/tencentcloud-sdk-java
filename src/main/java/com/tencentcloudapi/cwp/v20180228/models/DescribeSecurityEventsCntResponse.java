@@ -107,6 +107,20 @@ public class DescribeSecurityEventsCntResponse extends AbstractModel{
     private SecurityEventInfo AttackLogs;
 
     /**
+    * 受影响机器数
+    */
+    @SerializedName("EffectMachineCount")
+    @Expose
+    private Long EffectMachineCount;
+
+    /**
+    * 所有事件总数
+    */
+    @SerializedName("EventsCount")
+    @Expose
+    private Long EventsCount;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -306,6 +320,38 @@ public class DescribeSecurityEventsCntResponse extends AbstractModel{
     }
 
     /**
+     * Get 受影响机器数 
+     * @return EffectMachineCount 受影响机器数
+     */
+    public Long getEffectMachineCount() {
+        return this.EffectMachineCount;
+    }
+
+    /**
+     * Set 受影响机器数
+     * @param EffectMachineCount 受影响机器数
+     */
+    public void setEffectMachineCount(Long EffectMachineCount) {
+        this.EffectMachineCount = EffectMachineCount;
+    }
+
+    /**
+     * Get 所有事件总数 
+     * @return EventsCount 所有事件总数
+     */
+    public Long getEventsCount() {
+        return this.EventsCount;
+    }
+
+    /**
+     * Set 所有事件总数
+     * @param EventsCount 所有事件总数
+     */
+    public void setEventsCount(Long EventsCount) {
+        this.EventsCount = EventsCount;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -365,6 +411,12 @@ public class DescribeSecurityEventsCntResponse extends AbstractModel{
         if (source.AttackLogs != null) {
             this.AttackLogs = new SecurityEventInfo(source.AttackLogs);
         }
+        if (source.EffectMachineCount != null) {
+            this.EffectMachineCount = new Long(source.EffectMachineCount);
+        }
+        if (source.EventsCount != null) {
+            this.EventsCount = new Long(source.EventsCount);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -387,6 +439,8 @@ public class DescribeSecurityEventsCntResponse extends AbstractModel{
         this.setParamObj(map, prefix + "EmergencyVul.", this.EmergencyVul);
         this.setParamObj(map, prefix + "BaseLine.", this.BaseLine);
         this.setParamObj(map, prefix + "AttackLogs.", this.AttackLogs);
+        this.setParamSimple(map, prefix + "EffectMachineCount", this.EffectMachineCount);
+        this.setParamSimple(map, prefix + "EventsCount", this.EventsCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

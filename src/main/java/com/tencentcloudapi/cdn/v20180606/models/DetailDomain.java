@@ -494,6 +494,14 @@ off：不支持
     private OssPrivateAccess OssPrivateAccess;
 
     /**
+    * WebSocket配置
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("WebSocket")
+    @Expose
+    private WebSocket WebSocket;
+
+    /**
      * Get 域名 ID 
      * @return ResourceId 域名 ID
      */
@@ -1693,6 +1701,26 @@ off：不支持
         this.OssPrivateAccess = OssPrivateAccess;
     }
 
+    /**
+     * Get WebSocket配置
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return WebSocket WebSocket配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public WebSocket getWebSocket() {
+        return this.WebSocket;
+    }
+
+    /**
+     * Set WebSocket配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param WebSocket WebSocket配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setWebSocket(WebSocket WebSocket) {
+        this.WebSocket = WebSocket;
+    }
+
     public DetailDomain() {
     }
 
@@ -1881,6 +1909,9 @@ off：不支持
         if (source.OssPrivateAccess != null) {
             this.OssPrivateAccess = new OssPrivateAccess(source.OssPrivateAccess);
         }
+        if (source.WebSocket != null) {
+            this.WebSocket = new WebSocket(source.WebSocket);
+        }
     }
 
 
@@ -1945,6 +1976,7 @@ off：不支持
         this.setParamObj(map, prefix + "PostMaxSize.", this.PostMaxSize);
         this.setParamObj(map, prefix + "Quic.", this.Quic);
         this.setParamObj(map, prefix + "OssPrivateAccess.", this.OssPrivateAccess);
+        this.setParamObj(map, prefix + "WebSocket.", this.WebSocket);
 
     }
 }

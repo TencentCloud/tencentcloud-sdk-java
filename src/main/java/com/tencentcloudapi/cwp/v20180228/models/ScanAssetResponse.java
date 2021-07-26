@@ -13,28 +13,22 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.sqlserver.v20180328.models;
+package com.tencentcloudapi.cwp.v20180228.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDBsNormalResponse extends AbstractModel{
+public class ScanAssetResponse extends AbstractModel{
 
     /**
-    * 表示当前实例下的数据库总个数
+    * 任务id
+注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("TotalCount")
+    @SerializedName("TaskId")
     @Expose
-    private Long TotalCount;
-
-    /**
-    * 返回数据库的详细配置信息，例如：数据库是否开启CDC、CT等
-    */
-    @SerializedName("DBList")
-    @Expose
-    private DbNormalDetail [] DBList;
+    private Long TaskId;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -44,35 +38,23 @@ public class DescribeDBsNormalResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 表示当前实例下的数据库总个数 
-     * @return TotalCount 表示当前实例下的数据库总个数
+     * Get 任务id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TaskId 任务id
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getTotalCount() {
-        return this.TotalCount;
+    public Long getTaskId() {
+        return this.TaskId;
     }
 
     /**
-     * Set 表示当前实例下的数据库总个数
-     * @param TotalCount 表示当前实例下的数据库总个数
+     * Set 任务id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TaskId 任务id
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setTotalCount(Long TotalCount) {
-        this.TotalCount = TotalCount;
-    }
-
-    /**
-     * Get 返回数据库的详细配置信息，例如：数据库是否开启CDC、CT等 
-     * @return DBList 返回数据库的详细配置信息，例如：数据库是否开启CDC、CT等
-     */
-    public DbNormalDetail [] getDBList() {
-        return this.DBList;
-    }
-
-    /**
-     * Set 返回数据库的详细配置信息，例如：数据库是否开启CDC、CT等
-     * @param DBList 返回数据库的详细配置信息，例如：数据库是否开启CDC、CT等
-     */
-    public void setDBList(DbNormalDetail [] DBList) {
-        this.DBList = DBList;
+    public void setTaskId(Long TaskId) {
+        this.TaskId = TaskId;
     }
 
     /**
@@ -91,22 +73,16 @@ public class DescribeDBsNormalResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeDBsNormalResponse() {
+    public ScanAssetResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeDBsNormalResponse(DescribeDBsNormalResponse source) {
-        if (source.TotalCount != null) {
-            this.TotalCount = new Long(source.TotalCount);
-        }
-        if (source.DBList != null) {
-            this.DBList = new DbNormalDetail[source.DBList.length];
-            for (int i = 0; i < source.DBList.length; i++) {
-                this.DBList[i] = new DbNormalDetail(source.DBList[i]);
-            }
+    public ScanAssetResponse(ScanAssetResponse source) {
+        if (source.TaskId != null) {
+            this.TaskId = new Long(source.TaskId);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -118,8 +94,7 @@ public class DescribeDBsNormalResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
-        this.setParamArrayObj(map, prefix + "DBList.", this.DBList);
+        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

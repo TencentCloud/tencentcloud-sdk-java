@@ -26,6 +26,7 @@ public class DescribePayTypeResponse extends AbstractModel{
     * 计费类型：
 flux：流量计费
 bandwidth：带宽计费
+request：请求数计费
 日结计费方式切换时，若当日产生消耗，则此字段表示第二天即将生效的计费方式，若未产生消耗，则表示已经生效的计费方式。
     */
     @SerializedName("PayType")
@@ -42,12 +43,11 @@ month：月结计费
     private String BillingCycle;
 
     /**
-    * 计费方式：
-monthMax：日峰值月平均计费，月结模式
-day95：日 95 带宽计费，月结模式
-month95：月95带宽计费，月结模式
-sum：总流量计费，日结与月结均有流量计费模式
-max：峰值带宽计费，日结模式
+    * monthMax：日峰值月平均，月结模式
+day95：日 95 带宽，月结模式
+month95：月95带宽，月结模式
+sum：总流量/总请求数，日结或月结模式
+max：峰值带宽，日结模式
     */
     @SerializedName("StatType")
     @Expose
@@ -66,6 +66,7 @@ multiple：分地区计费
     * 当前生效计费类型：
 flux：流量计费
 bandwidth：带宽计费
+request：请求数计费
     */
     @SerializedName("CurrentPayType")
     @Expose
@@ -82,10 +83,12 @@ bandwidth：带宽计费
      * Get 计费类型：
 flux：流量计费
 bandwidth：带宽计费
+request：请求数计费
 日结计费方式切换时，若当日产生消耗，则此字段表示第二天即将生效的计费方式，若未产生消耗，则表示已经生效的计费方式。 
      * @return PayType 计费类型：
 flux：流量计费
 bandwidth：带宽计费
+request：请求数计费
 日结计费方式切换时，若当日产生消耗，则此字段表示第二天即将生效的计费方式，若未产生消耗，则表示已经生效的计费方式。
      */
     public String getPayType() {
@@ -96,10 +99,12 @@ bandwidth：带宽计费
      * Set 计费类型：
 flux：流量计费
 bandwidth：带宽计费
+request：请求数计费
 日结计费方式切换时，若当日产生消耗，则此字段表示第二天即将生效的计费方式，若未产生消耗，则表示已经生效的计费方式。
      * @param PayType 计费类型：
 flux：流量计费
 bandwidth：带宽计费
+request：请求数计费
 日结计费方式切换时，若当日产生消耗，则此字段表示第二天即将生效的计费方式，若未产生消耗，则表示已经生效的计费方式。
      */
     public void setPayType(String PayType) {
@@ -131,36 +136,32 @@ month：月结计费
     }
 
     /**
-     * Get 计费方式：
-monthMax：日峰值月平均计费，月结模式
-day95：日 95 带宽计费，月结模式
-month95：月95带宽计费，月结模式
-sum：总流量计费，日结与月结均有流量计费模式
-max：峰值带宽计费，日结模式 
-     * @return StatType 计费方式：
-monthMax：日峰值月平均计费，月结模式
-day95：日 95 带宽计费，月结模式
-month95：月95带宽计费，月结模式
-sum：总流量计费，日结与月结均有流量计费模式
-max：峰值带宽计费，日结模式
+     * Get monthMax：日峰值月平均，月结模式
+day95：日 95 带宽，月结模式
+month95：月95带宽，月结模式
+sum：总流量/总请求数，日结或月结模式
+max：峰值带宽，日结模式 
+     * @return StatType monthMax：日峰值月平均，月结模式
+day95：日 95 带宽，月结模式
+month95：月95带宽，月结模式
+sum：总流量/总请求数，日结或月结模式
+max：峰值带宽，日结模式
      */
     public String getStatType() {
         return this.StatType;
     }
 
     /**
-     * Set 计费方式：
-monthMax：日峰值月平均计费，月结模式
-day95：日 95 带宽计费，月结模式
-month95：月95带宽计费，月结模式
-sum：总流量计费，日结与月结均有流量计费模式
-max：峰值带宽计费，日结模式
-     * @param StatType 计费方式：
-monthMax：日峰值月平均计费，月结模式
-day95：日 95 带宽计费，月结模式
-month95：月95带宽计费，月结模式
-sum：总流量计费，日结与月结均有流量计费模式
-max：峰值带宽计费，日结模式
+     * Set monthMax：日峰值月平均，月结模式
+day95：日 95 带宽，月结模式
+month95：月95带宽，月结模式
+sum：总流量/总请求数，日结或月结模式
+max：峰值带宽，日结模式
+     * @param StatType monthMax：日峰值月平均，月结模式
+day95：日 95 带宽，月结模式
+month95：月95带宽，月结模式
+sum：总流量/总请求数，日结或月结模式
+max：峰值带宽，日结模式
      */
     public void setStatType(String StatType) {
         this.StatType = StatType;
@@ -193,10 +194,12 @@ multiple：分地区计费
     /**
      * Get 当前生效计费类型：
 flux：流量计费
-bandwidth：带宽计费 
+bandwidth：带宽计费
+request：请求数计费 
      * @return CurrentPayType 当前生效计费类型：
 flux：流量计费
 bandwidth：带宽计费
+request：请求数计费
      */
     public String getCurrentPayType() {
         return this.CurrentPayType;
@@ -206,9 +209,11 @@ bandwidth：带宽计费
      * Set 当前生效计费类型：
 flux：流量计费
 bandwidth：带宽计费
+request：请求数计费
      * @param CurrentPayType 当前生效计费类型：
 flux：流量计费
 bandwidth：带宽计费
+request：请求数计费
      */
     public void setCurrentPayType(String CurrentPayType) {
         this.CurrentPayType = CurrentPayType;

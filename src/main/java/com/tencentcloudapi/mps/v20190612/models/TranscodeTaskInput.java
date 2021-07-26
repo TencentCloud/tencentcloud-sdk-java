@@ -114,6 +114,14 @@ public class TranscodeTaskInput extends AbstractModel{
     private NumberFormat ObjectNumberFormat;
 
     /**
+    * 片头片尾参数。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("HeadTailParameter")
+    @Expose
+    private HeadTailParameter HeadTailParameter;
+
+    /**
      * Get 视频转码模板 ID。 
      * @return Definition 视频转码模板 ID。
      */
@@ -345,6 +353,26 @@ public class TranscodeTaskInput extends AbstractModel{
         this.ObjectNumberFormat = ObjectNumberFormat;
     }
 
+    /**
+     * Get 片头片尾参数。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return HeadTailParameter 片头片尾参数。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public HeadTailParameter getHeadTailParameter() {
+        return this.HeadTailParameter;
+    }
+
+    /**
+     * Set 片头片尾参数。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param HeadTailParameter 片头片尾参数。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setHeadTailParameter(HeadTailParameter HeadTailParameter) {
+        this.HeadTailParameter = HeadTailParameter;
+    }
+
     public TranscodeTaskInput() {
     }
 
@@ -392,6 +420,9 @@ public class TranscodeTaskInput extends AbstractModel{
         if (source.ObjectNumberFormat != null) {
             this.ObjectNumberFormat = new NumberFormat(source.ObjectNumberFormat);
         }
+        if (source.HeadTailParameter != null) {
+            this.HeadTailParameter = new HeadTailParameter(source.HeadTailParameter);
+        }
     }
 
 
@@ -410,6 +441,7 @@ public class TranscodeTaskInput extends AbstractModel{
         this.setParamSimple(map, prefix + "OutputObjectPath", this.OutputObjectPath);
         this.setParamSimple(map, prefix + "SegmentObjectName", this.SegmentObjectName);
         this.setParamObj(map, prefix + "ObjectNumberFormat.", this.ObjectNumberFormat);
+        this.setParamObj(map, prefix + "HeadTailParameter.", this.HeadTailParameter);
 
     }
 }

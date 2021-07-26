@@ -42,9 +42,6 @@ public enum VpcErrorCode {
     // 无效实例ID。指定的实例ID不存在。
      INVALIDINSTANCEID_NOTFOUND("InvalidInstanceId.NotFound"),
      
-    // 指定 NetworkInterfaceId 不存在或指定的PrivateIpAddress不在NetworkInterfaceId上。
-     INVALIDNETWORKINTERFACEID_NOTFOUND("InvalidNetworkInterfaceId.NotFound"),
-     
     // 参数错误。
      INVALIDPARAMETER("InvalidParameter"),
      
@@ -132,9 +129,6 @@ public enum VpcErrorCode {
     // 参数Zone的值与CDC所在Zone冲突。
      INVALIDPARAMETERVALUE_ZONECONFLICT("InvalidParameterValue.ZoneConflict"),
      
-    // 指定弹性网卡的指定内网IP已经绑定了EIP，不能重复绑定。
-     INVALIDPRIVATEIPADDRESS_ALREADYBINDEIP("InvalidPrivateIpAddress.AlreadyBindEip"),
-     
     // 无效的路由策略ID（RouteId）。
      INVALIDROUTEID_NOTFOUND("InvalidRouteId.NotFound"),
      
@@ -191,9 +185,6 @@ public enum VpcErrorCode {
      
     // 缺少参数错误。
      MISSINGPARAMETER("MissingParameter"),
-     
-    // 绑定的实体缺失。InstanceId或NetworkInterfaceId、PrivateIpAddress必须指定一个。
-     MISSINGRESOURCEID("MissingResourceId"),
      
     // 资源被占用。
      RESOURCEINUSE("ResourceInUse"),

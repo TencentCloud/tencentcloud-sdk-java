@@ -13,51 +13,74 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cwp.v20180228.models;
+package com.tencentcloudapi.sqlserver.v20180328.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteMalwaresRequest extends AbstractModel{
+public class Parameter extends AbstractModel{
 
     /**
-    * 木马记录ID数组 (最大100条)
+    * 参数名称
     */
-    @SerializedName("Ids")
+    @SerializedName("Name")
     @Expose
-    private Long [] Ids;
+    private String Name;
 
     /**
-     * Get 木马记录ID数组 (最大100条) 
-     * @return Ids 木马记录ID数组 (最大100条)
+    * 参数值
+    */
+    @SerializedName("CurrentValue")
+    @Expose
+    private String CurrentValue;
+
+    /**
+     * Get 参数名称 
+     * @return Name 参数名称
      */
-    public Long [] getIds() {
-        return this.Ids;
+    public String getName() {
+        return this.Name;
     }
 
     /**
-     * Set 木马记录ID数组 (最大100条)
-     * @param Ids 木马记录ID数组 (最大100条)
+     * Set 参数名称
+     * @param Name 参数名称
      */
-    public void setIds(Long [] Ids) {
-        this.Ids = Ids;
+    public void setName(String Name) {
+        this.Name = Name;
     }
 
-    public DeleteMalwaresRequest() {
+    /**
+     * Get 参数值 
+     * @return CurrentValue 参数值
+     */
+    public String getCurrentValue() {
+        return this.CurrentValue;
+    }
+
+    /**
+     * Set 参数值
+     * @param CurrentValue 参数值
+     */
+    public void setCurrentValue(String CurrentValue) {
+        this.CurrentValue = CurrentValue;
+    }
+
+    public Parameter() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DeleteMalwaresRequest(DeleteMalwaresRequest source) {
-        if (source.Ids != null) {
-            this.Ids = new Long[source.Ids.length];
-            for (int i = 0; i < source.Ids.length; i++) {
-                this.Ids[i] = new Long(source.Ids[i]);
-            }
+    public Parameter(Parameter source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.CurrentValue != null) {
+            this.CurrentValue = new String(source.CurrentValue);
         }
     }
 
@@ -66,7 +89,8 @@ public class DeleteMalwaresRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArraySimple(map, prefix + "Ids.", this.Ids);
+        this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "CurrentValue", this.CurrentValue);
 
     }
 }

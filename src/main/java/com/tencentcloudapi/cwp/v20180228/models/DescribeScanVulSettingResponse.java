@@ -44,14 +44,14 @@ public class DescribeScanVulSettingResponse extends AbstractModel{
     private Long TimerInterval;
 
     /**
-    * 定期检测时间
+    * 定期检测时间，如：00:00
     */
     @SerializedName("TimerTime")
     @Expose
     private String TimerTime;
 
     /**
-    * 是否紧急漏洞
+    * 是否紧急漏洞：0-否 1-是
     */
     @SerializedName("VulEmergency")
     @Expose
@@ -79,7 +79,7 @@ public class DescribeScanVulSettingResponse extends AbstractModel{
     private String EndTime;
 
     /**
-    * 一键扫描超时时长
+    * 一键扫描超时时长，如：1800秒（s）
     */
     @SerializedName("ClickTimeout")
     @Expose
@@ -141,32 +141,32 @@ public class DescribeScanVulSettingResponse extends AbstractModel{
     }
 
     /**
-     * Get 定期检测时间 
-     * @return TimerTime 定期检测时间
+     * Get 定期检测时间，如：00:00 
+     * @return TimerTime 定期检测时间，如：00:00
      */
     public String getTimerTime() {
         return this.TimerTime;
     }
 
     /**
-     * Set 定期检测时间
-     * @param TimerTime 定期检测时间
+     * Set 定期检测时间，如：00:00
+     * @param TimerTime 定期检测时间，如：00:00
      */
     public void setTimerTime(String TimerTime) {
         this.TimerTime = TimerTime;
     }
 
     /**
-     * Get 是否紧急漏洞 
-     * @return VulEmergency 是否紧急漏洞
+     * Get 是否紧急漏洞：0-否 1-是 
+     * @return VulEmergency 是否紧急漏洞：0-否 1-是
      */
     public Long getVulEmergency() {
         return this.VulEmergency;
     }
 
     /**
-     * Set 是否紧急漏洞
-     * @param VulEmergency 是否紧急漏洞
+     * Set 是否紧急漏洞：0-否 1-是
+     * @param VulEmergency 是否紧急漏洞：0-否 1-是
      */
     public void setVulEmergency(Long VulEmergency) {
         this.VulEmergency = VulEmergency;
@@ -221,16 +221,16 @@ public class DescribeScanVulSettingResponse extends AbstractModel{
     }
 
     /**
-     * Get 一键扫描超时时长 
-     * @return ClickTimeout 一键扫描超时时长
+     * Get 一键扫描超时时长，如：1800秒（s） 
+     * @return ClickTimeout 一键扫描超时时长，如：1800秒（s）
      */
     public Long getClickTimeout() {
         return this.ClickTimeout;
     }
 
     /**
-     * Set 一键扫描超时时长
-     * @param ClickTimeout 一键扫描超时时长
+     * Set 一键扫描超时时长，如：1800秒（s）
+     * @param ClickTimeout 一键扫描超时时长，如：1800秒（s）
      */
     public void setClickTimeout(Long ClickTimeout) {
         this.ClickTimeout = ClickTimeout;

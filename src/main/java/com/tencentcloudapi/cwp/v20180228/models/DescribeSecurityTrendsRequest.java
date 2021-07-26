@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class DescribeSecurityTrendsRequest extends AbstractModel{
 
     /**
-    * 开始时间。
+    * 开始时间，如：2021-07-10
     */
     @SerializedName("BeginDate")
     @Expose
     private String BeginDate;
 
     /**
-    * 结束时间。
+    * 结束时间，如：2021-07-10
     */
     @SerializedName("EndDate")
     @Expose
     private String EndDate;
 
     /**
-     * Get 开始时间。 
-     * @return BeginDate 开始时间。
+     * Get 开始时间，如：2021-07-10 
+     * @return BeginDate 开始时间，如：2021-07-10
      */
     public String getBeginDate() {
         return this.BeginDate;
     }
 
     /**
-     * Set 开始时间。
-     * @param BeginDate 开始时间。
+     * Set 开始时间，如：2021-07-10
+     * @param BeginDate 开始时间，如：2021-07-10
      */
     public void setBeginDate(String BeginDate) {
         this.BeginDate = BeginDate;
     }
 
     /**
-     * Get 结束时间。 
-     * @return EndDate 结束时间。
+     * Get 结束时间，如：2021-07-10 
+     * @return EndDate 结束时间，如：2021-07-10
      */
     public String getEndDate() {
         return this.EndDate;
     }
 
     /**
-     * Set 结束时间。
-     * @param EndDate 结束时间。
+     * Set 结束时间，如：2021-07-10
+     * @param EndDate 结束时间，如：2021-07-10
      */
     public void setEndDate(String EndDate) {
         this.EndDate = EndDate;

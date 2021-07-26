@@ -51,6 +51,13 @@ public class DescribeSlowLogUserHostStatsRequest extends AbstractModel{
     private String Product;
 
     /**
+    * SOL模板的MD5值
+    */
+    @SerializedName("Md5")
+    @Expose
+    private String Md5;
+
+    /**
      * Get 实例ID。 
      * @return InstanceId 实例ID。
      */
@@ -114,6 +121,22 @@ public class DescribeSlowLogUserHostStatsRequest extends AbstractModel{
         this.Product = Product;
     }
 
+    /**
+     * Get SOL模板的MD5值 
+     * @return Md5 SOL模板的MD5值
+     */
+    public String getMd5() {
+        return this.Md5;
+    }
+
+    /**
+     * Set SOL模板的MD5值
+     * @param Md5 SOL模板的MD5值
+     */
+    public void setMd5(String Md5) {
+        this.Md5 = Md5;
+    }
+
     public DescribeSlowLogUserHostStatsRequest() {
     }
 
@@ -134,6 +157,9 @@ public class DescribeSlowLogUserHostStatsRequest extends AbstractModel{
         if (source.Product != null) {
             this.Product = new String(source.Product);
         }
+        if (source.Md5 != null) {
+            this.Md5 = new String(source.Md5);
+        }
     }
 
 
@@ -145,6 +171,7 @@ public class DescribeSlowLogUserHostStatsRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamSimple(map, prefix + "Product", this.Product);
+        this.setParamSimple(map, prefix + "Md5", this.Md5);
 
     }
 }

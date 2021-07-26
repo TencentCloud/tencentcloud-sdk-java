@@ -30,7 +30,7 @@ public class SecurityDynamic extends AbstractModel{
     private String Uuid;
 
     /**
-    * 安全事件发生事件。
+    * 安全事件发生时间。
     */
     @SerializedName("EventTime")
     @Expose
@@ -83,16 +83,16 @@ public class SecurityDynamic extends AbstractModel{
     }
 
     /**
-     * Get 安全事件发生事件。 
-     * @return EventTime 安全事件发生事件。
+     * Get 安全事件发生时间。 
+     * @return EventTime 安全事件发生时间。
      */
     public String getEventTime() {
         return this.EventTime;
     }
 
     /**
-     * Set 安全事件发生事件。
-     * @param EventTime 安全事件发生事件。
+     * Set 安全事件发生时间。
+     * @param EventTime 安全事件发生时间。
      */
     public void setEventTime(String EventTime) {
         this.EventTime = EventTime;

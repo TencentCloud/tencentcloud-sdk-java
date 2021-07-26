@@ -39,6 +39,14 @@ public class CreateInstancePreData extends AbstractModel{
     private String [] DealNames;
 
     /**
+    * 实例Id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
+
+    /**
      * Get CreateInstancePre返回固定为0，不能作为CheckTaskStatus的查询条件。只是为了保证和后台数据结构对齐。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return FlowId CreateInstancePre返回固定为0，不能作为CheckTaskStatus的查询条件。只是为了保证和后台数据结构对齐。
@@ -78,6 +86,26 @@ public class CreateInstancePreData extends AbstractModel{
         this.DealNames = DealNames;
     }
 
+    /**
+     * Get 实例Id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InstanceId 实例Id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set 实例Id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InstanceId 实例Id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
+    }
+
     public CreateInstancePreData() {
     }
 
@@ -95,6 +123,9 @@ public class CreateInstancePreData extends AbstractModel{
                 this.DealNames[i] = new String(source.DealNames[i]);
             }
         }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
     }
 
 
@@ -104,6 +135,7 @@ public class CreateInstancePreData extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FlowId", this.FlowId);
         this.setParamArraySimple(map, prefix + "DealNames.", this.DealNames);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
 
     }
 }

@@ -15,12 +15,6 @@ public enum CwpErrorCode {
     // 关闭专业版失败。
      FAILEDOPERATION_CLOSEPROVERSION("FailedOperation.CloseProVersion"),
      
-    // 创建获取端口任务失败。
-     FAILEDOPERATION_CREATEOPENPORTTASK("FailedOperation.CreateOpenPortTask"),
-     
-    // 创建获取实时进程任务失败。
-     FAILEDOPERATION_CREATEPROCESSTASK("FailedOperation.CreateProcessTask"),
-     
     // 导出文件失败。
      FAILEDOPERATION_EXPORT("FailedOperation.Export"),
      
@@ -33,9 +27,6 @@ public enum CwpErrorCode {
     // 无专业版主机。
      FAILEDOPERATION_NOPROFESSIONHOST("FailedOperation.NoProfessionHost"),
      
-    // 拉取实时端口任务不存在。
-     FAILEDOPERATION_OPENPORTTASKNOTFOUND("FailedOperation.OpenPortTaskNotFound"),
-     
     // 开通专业版失败。
      FAILEDOPERATION_OPENPROVERSION("FailedOperation.OpenProVersion"),
      
@@ -44,9 +35,6 @@ public enum CwpErrorCode {
      
     // 不能关闭预付费模式专业版。
      FAILEDOPERATION_PREPAYMODE("FailedOperation.PrePayMode"),
-     
-    // 拉取实时进程任务不存在。
-     FAILEDOPERATION_PROCESSTASKNOTFOUND("FailedOperation.ProcessTaskNotFound"),
      
     // 回复木马失败。
      FAILEDOPERATION_RECOVER("FailedOperation.Recover"),
@@ -96,9 +84,6 @@ public enum CwpErrorCode {
     // 参数解析错误。
      INVALIDPARAMETER_PARSINGERROR("InvalidParameter.ParsingError"),
      
-    // 端口格式不合法。
-     INVALIDPARAMETER_PORTNOVALID("InvalidParameter.PortNoValid"),
-     
     // 正则参数格式错误。
      INVALIDPARAMETER_REGEXRULEERROR("InvalidParameter.RegexRuleError"),
      
@@ -124,7 +109,10 @@ public enum CwpErrorCode {
      OPERATIONDENIED("OperationDenied"),
      
     // 资源不存在。
-     RESOURCENOTFOUND("ResourceNotFound");
+     RESOURCENOTFOUND("ResourceNotFound"),
+     
+    // 未知参数错误。
+     UNKNOWNPARAMETER("UnknownParameter");
      
     private String value;
     private CwpErrorCode (String value){

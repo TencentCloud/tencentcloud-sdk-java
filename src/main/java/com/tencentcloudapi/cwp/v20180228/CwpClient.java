@@ -39,46 +39,6 @@ public class CwpClient extends AbstractClient{
     }
 
     /**
-     *本接口用于新增异地登录白名单规则。
-     * @param req AddLoginWhiteListRequest
-     * @return AddLoginWhiteListResponse
-     * @throws TencentCloudSDKException
-     */
-    public AddLoginWhiteListResponse AddLoginWhiteList(AddLoginWhiteListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<AddLoginWhiteListResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<AddLoginWhiteListResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "AddLoginWhiteList");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *增加机器关联标签
-     * @param req AddMachineTagRequest
-     * @return AddMachineTagResponse
-     * @throws TencentCloudSDKException
-     */
-    public AddMachineTagResponse AddMachineTag(AddMachineTagRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<AddMachineTagResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<AddMachineTagResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "AddMachineTag");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *本接口 (CloseProVersion) 用于关闭专业版。
      * @param req CloseProVersionRequest
      * @return CloseProVersionResponse
@@ -111,46 +71,6 @@ public class CwpClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreateBaselineStrategyResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "CreateBaselineStrategy");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *本接口 (CreateOpenPortTask) 用于创建实时获取端口任务。
-     * @param req CreateOpenPortTaskRequest
-     * @return CreateOpenPortTaskResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreateOpenPortTaskResponse CreateOpenPortTask(CreateOpenPortTaskRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateOpenPortTaskResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateOpenPortTaskResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateOpenPortTask");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *本接口 (CreateProcessTask) 用于创建实时拉取进程任务。
-     * @param req CreateProcessTaskRequest
-     * @return CreateProcessTaskResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreateProcessTaskResponse CreateProcessTask(CreateProcessTaskRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateProcessTaskResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateProcessTaskResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateProcessTask");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -231,26 +151,6 @@ public class CwpClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreateSearchTemplateResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "CreateSearchTemplate");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *此接口（CreateUsualLoginPlaces）用于添加常用登录地。
-     * @param req CreateUsualLoginPlacesRequest
-     * @return CreateUsualLoginPlacesResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreateUsualLoginPlacesResponse CreateUsualLoginPlaces(CreateUsualLoginPlacesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateUsualLoginPlacesResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateUsualLoginPlacesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateUsualLoginPlaces");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -579,26 +479,6 @@ public class CwpClient extends AbstractClient{
     }
 
     /**
-     *本接口（DeleteUsualLoginPlaces）用于删除常用登录地。
-     * @param req DeleteUsualLoginPlacesRequest
-     * @return DeleteUsualLoginPlacesResponse
-     * @throws TencentCloudSDKException
-     */
-    public DeleteUsualLoginPlacesResponse DeleteUsualLoginPlaces(DeleteUsualLoginPlacesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteUsualLoginPlacesResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DeleteUsualLoginPlacesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteUsualLoginPlaces");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *网站防篡改-删除事件记录
      * @param req DeleteWebPageEventLogRequest
      * @return DeleteWebPageEventLogResponse
@@ -639,7 +519,9 @@ public class CwpClient extends AbstractClient{
     }
 
     /**
-     *本接口 (DescribeAccounts) 用于获取帐号列表数据。
+     *该接口已废弃
+
+本接口 (DescribeAccounts) 用于获取帐号列表数据。
      * @param req DescribeAccountsRequest
      * @return DescribeAccountsResponse
      * @throws TencentCloudSDKException
@@ -651,46 +533,6 @@ public class CwpClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeAccountsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeAccounts");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *本接口 (DescribeAgentVuls) 用于获取单台主机的漏洞列表。
-     * @param req DescribeAgentVulsRequest
-     * @return DescribeAgentVulsResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeAgentVulsResponse DescribeAgentVuls(DescribeAgentVulsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeAgentVulsResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeAgentVulsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeAgentVuls");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *本接口 (DescribeAlarmAttribute) 用于获取告警设置。
-     * @param req DescribeAlarmAttributeRequest
-     * @return DescribeAlarmAttributeResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeAlarmAttributeResponse DescribeAlarmAttribute(DescribeAlarmAttributeRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeAlarmAttributeResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeAlarmAttributeResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeAlarmAttribute");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -859,46 +701,6 @@ public class CwpClient extends AbstractClient{
     }
 
     /**
-     *本接口{DescribeBruteAttacks}用于获取暴力破解事件列表。
-     * @param req DescribeBruteAttacksRequest
-     * @return DescribeBruteAttacksResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeBruteAttacksResponse DescribeBruteAttacks(DescribeBruteAttacksRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeBruteAttacksResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeBruteAttacksResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeBruteAttacks");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *本接口 (DescribeComponentInfo) 用于获取组件信息数据。
-     * @param req DescribeComponentInfoRequest
-     * @return DescribeComponentInfoResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeComponentInfoResponse DescribeComponentInfo(DescribeComponentInfoRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeComponentInfoResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeComponentInfoResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeComponentInfo");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *本接口 (DescribeComponentStatistics) 用于获取组件统计列表数据。
      * @param req DescribeComponentStatisticsRequest
      * @return DescribeComponentStatisticsResponse
@@ -911,26 +713,6 @@ public class CwpClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeComponentStatisticsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeComponentStatistics");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *本接口 (DescribeComponents) 用于获取组件列表数据。
-     * @param req DescribeComponentsRequest
-     * @return DescribeComponentsResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeComponentsResponse DescribeComponents(DescribeComponentsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeComponentsResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeComponentsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeComponents");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1051,26 +833,6 @@ public class CwpClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeHistoryServiceResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeHistoryService");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *本接口 (DescribeImpactedHosts) 用于获取漏洞受影响机器列表。
-     * @param req DescribeImpactedHostsRequest
-     * @return DescribeImpactedHostsResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeImpactedHostsResponse DescribeImpactedHosts(DescribeImpactedHostsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeImpactedHostsResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeImpactedHostsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeImpactedHosts");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1259,26 +1021,6 @@ public class CwpClient extends AbstractClient{
     }
 
     /**
-     *本接口 (DescribeMaliciousRequests) 用于获取恶意请求数据。
-     * @param req DescribeMaliciousRequestsRequest
-     * @return DescribeMaliciousRequestsResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeMaliciousRequestsResponse DescribeMaliciousRequests(DescribeMaliciousRequestsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeMaliciousRequestsResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeMaliciousRequestsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeMaliciousRequests");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *查看恶意文件详情
      * @param req DescribeMalwareInfoRequest
      * @return DescribeMalwareInfoResponse
@@ -1319,46 +1061,6 @@ public class CwpClient extends AbstractClient{
     }
 
     /**
-     *本接口（DescribeMalwares）用于获取木马事件列表。
-     * @param req DescribeMalwaresRequest
-     * @return DescribeMalwaresResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeMalwaresResponse DescribeMalwares(DescribeMalwaresRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeMalwaresResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeMalwaresResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeMalwares");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *本接口(DescribeNonlocalLoginPlaces)用于获取异地登录事件。
-     * @param req DescribeNonlocalLoginPlacesRequest
-     * @return DescribeNonlocalLoginPlacesResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeNonlocalLoginPlacesResponse DescribeNonlocalLoginPlaces(DescribeNonlocalLoginPlacesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeNonlocalLoginPlacesResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeNonlocalLoginPlacesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeNonlocalLoginPlaces");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *本接口 (DescribeOpenPortStatistics) 用于获取端口统计列表。
      * @param req DescribeOpenPortStatisticsRequest
      * @return DescribeOpenPortStatisticsResponse
@@ -1371,47 +1073,6 @@ public class CwpClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeOpenPortStatisticsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeOpenPortStatistics");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *本接口 (DescribeOpenPortTaskStatus) 用于获取实时拉取端口任务状态。
-     * @param req DescribeOpenPortTaskStatusRequest
-     * @return DescribeOpenPortTaskStatusResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeOpenPortTaskStatusResponse DescribeOpenPortTaskStatus(DescribeOpenPortTaskStatusRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeOpenPortTaskStatusResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeOpenPortTaskStatusResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeOpenPortTaskStatus");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *本接口 (DescribeOpenPorts) 用于获取端口列表数据。
-
-     * @param req DescribeOpenPortsRequest
-     * @return DescribeOpenPortsResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeOpenPortsResponse DescribeOpenPorts(DescribeOpenPortsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeOpenPortsResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeOpenPortsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeOpenPorts");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1512,46 +1173,6 @@ public class CwpClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeProcessStatisticsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeProcessStatistics");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *本接口 (DescribeProcessTaskStatus) 用于获取实时拉取进程任务状态。
-     * @param req DescribeProcessTaskStatusRequest
-     * @return DescribeProcessTaskStatusResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeProcessTaskStatusResponse DescribeProcessTaskStatus(DescribeProcessTaskStatusRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeProcessTaskStatusResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeProcessTaskStatusResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeProcessTaskStatus");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *本接口 (DescribeProcesses) 用于获取进程列表数据。
-     * @param req DescribeProcessesRequest
-     * @return DescribeProcessesResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeProcessesResponse DescribeProcesses(DescribeProcessesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeProcessesResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeProcessesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeProcesses");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1760,7 +1381,7 @@ public class CwpClient extends AbstractClient{
     }
 
     /**
-     *概览页抽屉侧边弹窗：安全概览“立即处理”页面中的相关事件数统计接口。
+     *获取安全概览相关事件统计数据接口
      * @param req DescribeSecurityEventsCntRequest
      * @return DescribeSecurityEventsCntResponse
      * @throws TencentCloudSDKException
@@ -1860,68 +1481,7 @@ public class CwpClient extends AbstractClient{
     }
 
     /**
-     *本接口 (DescribeVulInfo) 用于获取漏洞详情。
-     * @param req DescribeVulInfoRequest
-     * @return DescribeVulInfoResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeVulInfoResponse DescribeVulInfo(DescribeVulInfoRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeVulInfoResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeVulInfoResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeVulInfo");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *本接口 (DescribeVulScanResult) 用于获取漏洞检测结果。
-
-     * @param req DescribeVulScanResultRequest
-     * @return DescribeVulScanResultResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeVulScanResultResponse DescribeVulScanResult(DescribeVulScanResultRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeVulScanResultResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeVulScanResultResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeVulScanResult");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *本接口 (DescribeVuls) 用于获取漏洞列表数据。
-     * @param req DescribeVulsRequest
-     * @return DescribeVulsResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeVulsResponse DescribeVuls(DescribeVulsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeVulsResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeVulsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeVuls");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *查询网站防篡改 概览信息
+     *查询网站防篡改概览信息
      * @param req DescribeWebPageGeneralizeRequest
      * @return DescribeWebPageGeneralizeResponse
      * @throws TencentCloudSDKException
@@ -1933,147 +1493,6 @@ public class CwpClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeWebPageGeneralizeResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeWebPageGeneralize");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *本接口 (DescribeWeeklyReportBruteAttacks) 用于获取专业周报密码破解数据。
-     * @param req DescribeWeeklyReportBruteAttacksRequest
-     * @return DescribeWeeklyReportBruteAttacksResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeWeeklyReportBruteAttacksResponse DescribeWeeklyReportBruteAttacks(DescribeWeeklyReportBruteAttacksRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeWeeklyReportBruteAttacksResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeWeeklyReportBruteAttacksResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeWeeklyReportBruteAttacks");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *本接口 (DescribeWeeklyReportInfo) 用于获取专业周报详情数据。
-     * @param req DescribeWeeklyReportInfoRequest
-     * @return DescribeWeeklyReportInfoResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeWeeklyReportInfoResponse DescribeWeeklyReportInfo(DescribeWeeklyReportInfoRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeWeeklyReportInfoResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeWeeklyReportInfoResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeWeeklyReportInfo");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *本接口 (DescribeWeeklyReportMalwares) 用于获取专业周报木马数据。
-     * @param req DescribeWeeklyReportMalwaresRequest
-     * @return DescribeWeeklyReportMalwaresResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeWeeklyReportMalwaresResponse DescribeWeeklyReportMalwares(DescribeWeeklyReportMalwaresRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeWeeklyReportMalwaresResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeWeeklyReportMalwaresResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeWeeklyReportMalwares");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *本接口 (DescribeWeeklyReportNonlocalLoginPlaces) 用于获取专业周报异地登录数据。
-     * @param req DescribeWeeklyReportNonlocalLoginPlacesRequest
-     * @return DescribeWeeklyReportNonlocalLoginPlacesResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeWeeklyReportNonlocalLoginPlacesResponse DescribeWeeklyReportNonlocalLoginPlaces(DescribeWeeklyReportNonlocalLoginPlacesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeWeeklyReportNonlocalLoginPlacesResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeWeeklyReportNonlocalLoginPlacesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeWeeklyReportNonlocalLoginPlaces");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *本接口 (DescribeWeeklyReportVuls) 用于专业版周报漏洞数据。
-
-     * @param req DescribeWeeklyReportVulsRequest
-     * @return DescribeWeeklyReportVulsResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeWeeklyReportVulsResponse DescribeWeeklyReportVuls(DescribeWeeklyReportVulsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeWeeklyReportVulsResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeWeeklyReportVulsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeWeeklyReportVuls");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *本接口 (DescribeWeeklyReports) 用于获取周报列表数据。
-     * @param req DescribeWeeklyReportsRequest
-     * @return DescribeWeeklyReportsResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeWeeklyReportsResponse DescribeWeeklyReports(DescribeWeeklyReportsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeWeeklyReportsResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeWeeklyReportsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeWeeklyReports");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *新增或修改高危命令规则
-     * @param req EditBashRuleRequest
-     * @return EditBashRuleResponse
-     * @throws TencentCloudSDKException
-     */
-    public EditBashRuleResponse EditBashRule(EditBashRuleRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<EditBashRuleResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<EditBashRuleResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "EditBashRule");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -2094,46 +1513,6 @@ public class CwpClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<EditBashRulesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "EditBashRules");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *新增或修改本地提权规则
-     * @param req EditPrivilegeRuleRequest
-     * @return EditPrivilegeRuleResponse
-     * @throws TencentCloudSDKException
-     */
-    public EditPrivilegeRuleResponse EditPrivilegeRule(EditPrivilegeRuleRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<EditPrivilegeRuleResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<EditPrivilegeRuleResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "EditPrivilegeRule");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *编辑反弹Shell规则
-     * @param req EditReverseShellRuleRequest
-     * @return EditReverseShellRuleResponse
-     * @throws TencentCloudSDKException
-     */
-    public EditReverseShellRuleResponse EditReverseShellRule(EditReverseShellRuleRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<EditReverseShellRuleResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<EditReverseShellRuleResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "EditReverseShellRule");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -2442,46 +1821,6 @@ public class CwpClient extends AbstractClient{
     }
 
     /**
-     *本接口{MisAlarmNonlocalLoginPlaces}将设置当前地点为常用登录地。
-     * @param req MisAlarmNonlocalLoginPlacesRequest
-     * @return MisAlarmNonlocalLoginPlacesResponse
-     * @throws TencentCloudSDKException
-     */
-    public MisAlarmNonlocalLoginPlacesResponse MisAlarmNonlocalLoginPlaces(MisAlarmNonlocalLoginPlacesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<MisAlarmNonlocalLoginPlacesResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<MisAlarmNonlocalLoginPlacesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "MisAlarmNonlocalLoginPlaces");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *本接口（ModifyAlarmAttribute）用于修改告警设置。
-     * @param req ModifyAlarmAttributeRequest
-     * @return ModifyAlarmAttributeResponse
-     * @throws TencentCloudSDKException
-     */
-    public ModifyAlarmAttributeResponse ModifyAlarmAttribute(ModifyAlarmAttributeRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyAlarmAttributeResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<ModifyAlarmAttributeResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyAlarmAttribute");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *本接口 (ModifyAutoOpenProVersionConfig) 用于设置新增主机自动开通专业版配置。
      * @param req ModifyAutoOpenProVersionConfigRequest
      * @return ModifyAutoOpenProVersionConfigResponse
@@ -2494,26 +1833,6 @@ public class CwpClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyAutoOpenProVersionConfigResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyAutoOpenProVersionConfig");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *本接口用于编辑异地登录白名单规则。
-     * @param req ModifyLoginWhiteListRequest
-     * @return ModifyLoginWhiteListResponse
-     * @throws TencentCloudSDKException
-     */
-    public ModifyLoginWhiteListResponse ModifyLoginWhiteList(ModifyLoginWhiteListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyLoginWhiteListResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<ModifyLoginWhiteListResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyLoginWhiteList");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -2682,6 +2001,26 @@ public class CwpClient extends AbstractClient{
     }
 
     /**
+     *资产指纹启动扫描
+     * @param req ScanAssetRequest
+     * @return ScanAssetResponse
+     * @throws TencentCloudSDKException
+     */
+    public ScanAssetResponse ScanAsset(ScanAssetRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ScanAssetResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ScanAssetResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ScanAsset");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      * 一键检测
      * @param req ScanVulRequest
      * @return ScanVulResponse
@@ -2822,26 +2161,6 @@ public class CwpClient extends AbstractClient{
     }
 
     /**
-     *本接口 (TrustMaliciousRequest) 用于恶意请求添加信任。
-     * @param req TrustMaliciousRequestRequest
-     * @return TrustMaliciousRequestResponse
-     * @throws TencentCloudSDKException
-     */
-    public TrustMaliciousRequestResponse TrustMaliciousRequest(TrustMaliciousRequestRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<TrustMaliciousRequestResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<TrustMaliciousRequestResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "TrustMaliciousRequest");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *本接口(TrustMalwares)将被识别木马文件设为信任。
      * @param req TrustMalwaresRequest
      * @return TrustMalwaresResponse
@@ -2854,26 +2173,6 @@ public class CwpClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<TrustMalwaresResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "TrustMalwares");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *本接口 (UntrustMaliciousRequest) 用于取消信任恶意请求。
-     * @param req UntrustMaliciousRequestRequest
-     * @return UntrustMaliciousRequestResponse
-     * @throws TencentCloudSDKException
-     */
-    public UntrustMaliciousRequestResponse UntrustMaliciousRequest(UntrustMaliciousRequestRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<UntrustMaliciousRequestResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<UntrustMaliciousRequestResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "UntrustMaliciousRequest");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
