@@ -79,4 +79,24 @@ public class MarketClient extends AbstractClient{
         return rsp.response;
     }
 
+    /**
+     *同步企微的用户信息和订单信息到云市场
+     * @param req SyncUserAndOrderInfoRequest
+     * @return SyncUserAndOrderInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public SyncUserAndOrderInfoResponse SyncUserAndOrderInfo(SyncUserAndOrderInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SyncUserAndOrderInfoResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<SyncUserAndOrderInfoResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "SyncUserAndOrderInfo");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
 }

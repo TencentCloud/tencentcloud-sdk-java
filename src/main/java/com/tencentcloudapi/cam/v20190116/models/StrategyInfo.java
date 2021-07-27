@@ -114,6 +114,30 @@ public class StrategyInfo extends AbstractModel{
     private Long IsServiceLinkedPolicy;
 
     /**
+    * 关联策略实体数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AttachEntityCount")
+    @Expose
+    private Long AttachEntityCount;
+
+    /**
+    * 关联权限边界实体数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AttachEntityBoundaryCount")
+    @Expose
+    private Long AttachEntityBoundaryCount;
+
+    /**
+    * 最后编辑时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UpdateTime")
+    @Expose
+    private String UpdateTime;
+
+    /**
      * Get 策略ID。 
      * @return PolicyId 策略ID。
      */
@@ -333,6 +357,66 @@ public class StrategyInfo extends AbstractModel{
         this.IsServiceLinkedPolicy = IsServiceLinkedPolicy;
     }
 
+    /**
+     * Get 关联策略实体数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AttachEntityCount 关联策略实体数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getAttachEntityCount() {
+        return this.AttachEntityCount;
+    }
+
+    /**
+     * Set 关联策略实体数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AttachEntityCount 关联策略实体数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAttachEntityCount(Long AttachEntityCount) {
+        this.AttachEntityCount = AttachEntityCount;
+    }
+
+    /**
+     * Get 关联权限边界实体数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AttachEntityBoundaryCount 关联权限边界实体数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getAttachEntityBoundaryCount() {
+        return this.AttachEntityBoundaryCount;
+    }
+
+    /**
+     * Set 关联权限边界实体数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AttachEntityBoundaryCount 关联权限边界实体数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAttachEntityBoundaryCount(Long AttachEntityBoundaryCount) {
+        this.AttachEntityBoundaryCount = AttachEntityBoundaryCount;
+    }
+
+    /**
+     * Get 最后编辑时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UpdateTime 最后编辑时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getUpdateTime() {
+        return this.UpdateTime;
+    }
+
+    /**
+     * Set 最后编辑时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UpdateTime 最后编辑时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUpdateTime(String UpdateTime) {
+        this.UpdateTime = UpdateTime;
+    }
+
     public StrategyInfo() {
     }
 
@@ -380,6 +464,15 @@ public class StrategyInfo extends AbstractModel{
         if (source.IsServiceLinkedPolicy != null) {
             this.IsServiceLinkedPolicy = new Long(source.IsServiceLinkedPolicy);
         }
+        if (source.AttachEntityCount != null) {
+            this.AttachEntityCount = new Long(source.AttachEntityCount);
+        }
+        if (source.AttachEntityBoundaryCount != null) {
+            this.AttachEntityBoundaryCount = new Long(source.AttachEntityBoundaryCount);
+        }
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new String(source.UpdateTime);
+        }
     }
 
 
@@ -399,6 +492,9 @@ public class StrategyInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Deactived", this.Deactived);
         this.setParamArraySimple(map, prefix + "DeactivedDetail.", this.DeactivedDetail);
         this.setParamSimple(map, prefix + "IsServiceLinkedPolicy", this.IsServiceLinkedPolicy);
+        this.setParamSimple(map, prefix + "AttachEntityCount", this.AttachEntityCount);
+        this.setParamSimple(map, prefix + "AttachEntityBoundaryCount", this.AttachEntityBoundaryCount);
+        this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
 
     }
 }

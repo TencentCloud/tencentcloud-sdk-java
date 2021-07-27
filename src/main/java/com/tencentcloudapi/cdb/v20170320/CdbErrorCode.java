@@ -360,6 +360,9 @@ public enum CdbErrorCode {
     // 当前实例正在进行其他任务，不能执行延迟复制。
      OPERATIONDENIED_INSTANCETASKRUNNING("OperationDenied.InstanceTaskRunning"),
      
+    // 实例不支持该操作。
+     OPERATIONDENIED_INSTANCEUNSUPPORTEDOPERATEERROR("OperationDenied.InstanceUnsupportedOperateError"),
+     
     // 修改审计状态失败。
      OPERATIONDENIED_MODIFYAUDITSTATUSERROR("OperationDenied.ModifyAuditStatusError"),
      

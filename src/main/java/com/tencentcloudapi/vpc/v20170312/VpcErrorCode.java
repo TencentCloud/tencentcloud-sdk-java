@@ -129,6 +129,9 @@ public enum VpcErrorCode {
     // 参数Zone的值与CDC所在Zone冲突。
      INVALIDPARAMETERVALUE_ZONECONFLICT("InvalidParameterValue.ZoneConflict"),
      
+    // 指定弹性网卡的指定内网IP已经绑定了EIP，不能重复绑定。
+     INVALIDPRIVATEIPADDRESS_ALREADYBINDEIP("InvalidPrivateIpAddress.AlreadyBindEip"),
+     
     // 无效的路由策略ID（RouteId）。
      INVALIDROUTEID_NOTFOUND("InvalidRouteId.NotFound"),
      

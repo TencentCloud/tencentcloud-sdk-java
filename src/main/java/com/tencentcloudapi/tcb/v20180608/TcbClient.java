@@ -339,6 +339,26 @@ public class TcbClient extends AbstractClient{
     }
 
     /**
+     *查询活动记录信息
+     * @param req DescribeActivityRecordRequest
+     * @return DescribeActivityRecordResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeActivityRecordResponse DescribeActivityRecord(DescribeActivityRecordRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeActivityRecordResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeActivityRecordResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeActivityRecord");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取安全域名列表
      * @param req DescribeAuthDomainsRequest
      * @return DescribeAuthDomainsResponse
@@ -1094,6 +1114,26 @@ public class TcbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ReinstateEnvResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ReinstateEnv");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *更新活动详情
+     * @param req ReplaceActivityRecordRequest
+     * @return ReplaceActivityRecordResponse
+     * @throws TencentCloudSDKException
+     */
+    public ReplaceActivityRecordResponse ReplaceActivityRecord(ReplaceActivityRecordRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ReplaceActivityRecordResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ReplaceActivityRecordResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ReplaceActivityRecord");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

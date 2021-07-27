@@ -180,7 +180,7 @@ public enum CpdpErrorCode {
     // 调用后端同步服务失败。
      FAILEDOPERATION_SYNCMCHANNELERROR("FailedOperation.SyncMchannelError"),
      
-    // 微信系统错误。
+    // 系统内部错误。
      FAILEDOPERATION_SYSTEMERROR("FailedOperation.SystemError"),
      
     // 调用后端解约服务失败。
