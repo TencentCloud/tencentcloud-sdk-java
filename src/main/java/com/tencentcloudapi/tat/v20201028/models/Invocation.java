@@ -120,6 +120,13 @@ public class Invocation extends AbstractModel{
     private String Username;
 
     /**
+    * 调用来源。
+    */
+    @SerializedName("InvocationSource")
+    @Expose
+    private String InvocationSource;
+
+    /**
      * Get 执行活动ID。 
      * @return InvocationId 执行活动ID。
      */
@@ -351,6 +358,22 @@ public class Invocation extends AbstractModel{
         this.Username = Username;
     }
 
+    /**
+     * Get 调用来源。 
+     * @return InvocationSource 调用来源。
+     */
+    public String getInvocationSource() {
+        return this.InvocationSource;
+    }
+
+    /**
+     * Set 调用来源。
+     * @param InvocationSource 调用来源。
+     */
+    public void setInvocationSource(String InvocationSource) {
+        this.InvocationSource = InvocationSource;
+    }
+
     public Invocation() {
     }
 
@@ -401,6 +424,9 @@ public class Invocation extends AbstractModel{
         if (source.Username != null) {
             this.Username = new String(source.Username);
         }
+        if (source.InvocationSource != null) {
+            this.InvocationSource = new String(source.InvocationSource);
+        }
     }
 
 
@@ -421,6 +447,7 @@ public class Invocation extends AbstractModel{
         this.setParamSimple(map, prefix + "DefaultParameters", this.DefaultParameters);
         this.setParamSimple(map, prefix + "InstanceKind", this.InstanceKind);
         this.setParamSimple(map, prefix + "Username", this.Username);
+        this.setParamSimple(map, prefix + "InvocationSource", this.InvocationSource);
 
     }
 }

@@ -239,6 +239,26 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *按顺序创建任务
+     * @param req CreateTasksInOrderRequest
+     * @return CreateTasksInOrderResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateTasksInOrderResponse CreateTasksInOrder(CreateTasksInOrderRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateTasksInOrderResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateTasksInOrderResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateTasksInOrder");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建用户
      * @param req CreateUserRequest
      * @return CreateUserResponse

@@ -119,6 +119,26 @@ public class CdnClient extends AbstractClient{
     }
 
     /**
+     *CreateScdnDomain 用于创建 SCDN 加速域名
+     * @param req CreateScdnDomainRequest
+     * @return CreateScdnDomainResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateScdnDomainResponse CreateScdnDomain(CreateScdnDomainRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateScdnDomainResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateScdnDomainResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateScdnDomain");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *CreateScdnFailedLogTask 用于重试创建失败的事件日志任务
      * @param req CreateScdnFailedLogTaskRequest
      * @return CreateScdnFailedLogTaskResponse

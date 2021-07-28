@@ -439,6 +439,26 @@ public class AntiddosClient extends AbstractClient{
     }
 
     /**
+     *获取基础防护攻击状态
+     * @param req DescribeBasicDeviceStatusRequest
+     * @return DescribeBasicDeviceStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBasicDeviceStatusResponse DescribeBasicDeviceStatus(DescribeBasicDeviceStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBasicDeviceStatusResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBasicDeviceStatusResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeBasicDeviceStatus");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取DDoS防护的IP黑白名单
      * @param req DescribeBlackWhiteIpListRequest
      * @return DescribeBlackWhiteIpListResponse

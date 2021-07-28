@@ -200,6 +200,26 @@ public class GaapClient extends AbstractClient{
     }
 
     /**
+     *本接口（CreateCustomHeader）用于创建HTTP/HTTPS监听器的自定义header，客户端请求通过访问该监听器时，会将监听器中配置的header信息发送到源站。
+     * @param req CreateCustomHeaderRequest
+     * @return CreateCustomHeaderResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCustomHeaderResponse CreateCustomHeader(CreateCustomHeaderRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateCustomHeaderResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateCustomHeaderResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateCustomHeader");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（CreateDomain）用于创建HTTP/HTTPS监听器的访问域名，客户端请求通过访问该域名来请求后端业务。
 该接口仅支持version3.0的通道。
      * @param req CreateDomainRequest
@@ -641,6 +661,26 @@ public class GaapClient extends AbstractClient{
     }
 
     /**
+     *本接口（DescribeBlackHeader）用于查询禁用的自定义header 名称
+     * @param req DescribeBlackHeaderRequest
+     * @return DescribeBlackHeaderResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBlackHeaderResponse DescribeBlackHeader(DescribeBlackHeaderRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBlackHeaderResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBlackHeaderResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeBlackHeader");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（DescribeCertificateDetail）用于查询证书详情，包括证书ID，证书名字，证书类型，证书内容以及密钥等信息。
      * @param req DescribeCertificateDetailRequest
      * @return DescribeCertificateDetailResponse
@@ -693,6 +733,26 @@ public class GaapClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeCountryAreaMappingResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeCountryAreaMapping");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DescribeCustomHeader）用于自定义header列表
+     * @param req DescribeCustomHeaderRequest
+     * @return DescribeCustomHeaderResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCustomHeaderResponse DescribeCustomHeader(DescribeCustomHeaderRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCustomHeaderResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCustomHeaderResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeCustomHeader");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

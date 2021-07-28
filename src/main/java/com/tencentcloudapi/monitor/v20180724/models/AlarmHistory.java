@@ -185,6 +185,14 @@ public class AlarmHistory extends AbstractModel{
     private AlarmHistoryMetric [] MetricsInfo;
 
     /**
+    * 告警实例的维度信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Dimensions")
+    @Expose
+    private String Dimensions;
+
+    /**
      * Get 告警历史Id 
      * @return AlarmId 告警历史Id
      */
@@ -556,6 +564,26 @@ public class AlarmHistory extends AbstractModel{
         this.MetricsInfo = MetricsInfo;
     }
 
+    /**
+     * Get 告警实例的维度信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Dimensions 告警实例的维度信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDimensions() {
+        return this.Dimensions;
+    }
+
+    /**
+     * Set 告警实例的维度信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Dimensions 告警实例的维度信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDimensions(String Dimensions) {
+        this.Dimensions = Dimensions;
+    }
+
     public AlarmHistory() {
     }
 
@@ -648,6 +676,9 @@ public class AlarmHistory extends AbstractModel{
                 this.MetricsInfo[i] = new AlarmHistoryMetric(source.MetricsInfo[i]);
             }
         }
+        if (source.Dimensions != null) {
+            this.Dimensions = new String(source.Dimensions);
+        }
     }
 
 
@@ -678,6 +709,7 @@ public class AlarmHistory extends AbstractModel{
         this.setParamSimple(map, prefix + "Region", this.Region);
         this.setParamSimple(map, prefix + "PolicyExists", this.PolicyExists);
         this.setParamArrayObj(map, prefix + "MetricsInfo.", this.MetricsInfo);
+        this.setParamSimple(map, prefix + "Dimensions", this.Dimensions);
 
     }
 }

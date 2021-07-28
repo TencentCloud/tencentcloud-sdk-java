@@ -58,7 +58,30 @@ public class DescribeBillListRequest extends AbstractModel{
     private String [] PayType;
 
     /**
-    * 扣费模式，当所选的交易类型中包含扣费deduct时有意义： all所有扣费类型，trade预付费支付，hour_h按量小时结，hour_d按量日结，hour_m按量月结，decompensate调账扣费，other其他扣费
+    * 扣费模式，
+当所选的交易类型为扣费deduct时： 
+all所有扣费类型;trade预付费支付;hour_h按量小时结;hour_d按量日结;hour_m按量月结;decompensate调账扣费;other第三方扣费;panshi 线下项目扣费;offline 线下产品扣费;
+
+当所选的交易类型为扣费recharge时： 
+online 在线充值;bank-enterprice 银企直连;offline 线下充值;transfer 分成充值
+
+当所选的交易类型为扣费cash时： 
+online 线上提现;offline 线下提现;panshi 赠送金清零
+
+当所选的交易类型为扣费advanced时： 
+advanced 垫付充值
+
+当所选的交易类型为扣费repay时： 
+panshi 垫付回款
+
+当所选的交易类型为扣费block时： 
+other 第三方冻结;hour 按量冻结;month按月冻结
+
+当所选的交易类型为扣费return时： 
+compensate 调账补偿;trade 预付费退款
+
+当所选的交易类型为扣费unblock时：
+other 第三方解冻;hour 按量解冻;month 按月解冻
     */
     @SerializedName("SubPayType")
     @Expose
@@ -152,16 +175,108 @@ public class DescribeBillListRequest extends AbstractModel{
     }
 
     /**
-     * Get 扣费模式，当所选的交易类型中包含扣费deduct时有意义： all所有扣费类型，trade预付费支付，hour_h按量小时结，hour_d按量日结，hour_m按量月结，decompensate调账扣费，other其他扣费 
-     * @return SubPayType 扣费模式，当所选的交易类型中包含扣费deduct时有意义： all所有扣费类型，trade预付费支付，hour_h按量小时结，hour_d按量日结，hour_m按量月结，decompensate调账扣费，other其他扣费
+     * Get 扣费模式，
+当所选的交易类型为扣费deduct时： 
+all所有扣费类型;trade预付费支付;hour_h按量小时结;hour_d按量日结;hour_m按量月结;decompensate调账扣费;other第三方扣费;panshi 线下项目扣费;offline 线下产品扣费;
+
+当所选的交易类型为扣费recharge时： 
+online 在线充值;bank-enterprice 银企直连;offline 线下充值;transfer 分成充值
+
+当所选的交易类型为扣费cash时： 
+online 线上提现;offline 线下提现;panshi 赠送金清零
+
+当所选的交易类型为扣费advanced时： 
+advanced 垫付充值
+
+当所选的交易类型为扣费repay时： 
+panshi 垫付回款
+
+当所选的交易类型为扣费block时： 
+other 第三方冻结;hour 按量冻结;month按月冻结
+
+当所选的交易类型为扣费return时： 
+compensate 调账补偿;trade 预付费退款
+
+当所选的交易类型为扣费unblock时：
+other 第三方解冻;hour 按量解冻;month 按月解冻 
+     * @return SubPayType 扣费模式，
+当所选的交易类型为扣费deduct时： 
+all所有扣费类型;trade预付费支付;hour_h按量小时结;hour_d按量日结;hour_m按量月结;decompensate调账扣费;other第三方扣费;panshi 线下项目扣费;offline 线下产品扣费;
+
+当所选的交易类型为扣费recharge时： 
+online 在线充值;bank-enterprice 银企直连;offline 线下充值;transfer 分成充值
+
+当所选的交易类型为扣费cash时： 
+online 线上提现;offline 线下提现;panshi 赠送金清零
+
+当所选的交易类型为扣费advanced时： 
+advanced 垫付充值
+
+当所选的交易类型为扣费repay时： 
+panshi 垫付回款
+
+当所选的交易类型为扣费block时： 
+other 第三方冻结;hour 按量冻结;month按月冻结
+
+当所选的交易类型为扣费return时： 
+compensate 调账补偿;trade 预付费退款
+
+当所选的交易类型为扣费unblock时：
+other 第三方解冻;hour 按量解冻;month 按月解冻
      */
     public String [] getSubPayType() {
         return this.SubPayType;
     }
 
     /**
-     * Set 扣费模式，当所选的交易类型中包含扣费deduct时有意义： all所有扣费类型，trade预付费支付，hour_h按量小时结，hour_d按量日结，hour_m按量月结，decompensate调账扣费，other其他扣费
-     * @param SubPayType 扣费模式，当所选的交易类型中包含扣费deduct时有意义： all所有扣费类型，trade预付费支付，hour_h按量小时结，hour_d按量日结，hour_m按量月结，decompensate调账扣费，other其他扣费
+     * Set 扣费模式，
+当所选的交易类型为扣费deduct时： 
+all所有扣费类型;trade预付费支付;hour_h按量小时结;hour_d按量日结;hour_m按量月结;decompensate调账扣费;other第三方扣费;panshi 线下项目扣费;offline 线下产品扣费;
+
+当所选的交易类型为扣费recharge时： 
+online 在线充值;bank-enterprice 银企直连;offline 线下充值;transfer 分成充值
+
+当所选的交易类型为扣费cash时： 
+online 线上提现;offline 线下提现;panshi 赠送金清零
+
+当所选的交易类型为扣费advanced时： 
+advanced 垫付充值
+
+当所选的交易类型为扣费repay时： 
+panshi 垫付回款
+
+当所选的交易类型为扣费block时： 
+other 第三方冻结;hour 按量冻结;month按月冻结
+
+当所选的交易类型为扣费return时： 
+compensate 调账补偿;trade 预付费退款
+
+当所选的交易类型为扣费unblock时：
+other 第三方解冻;hour 按量解冻;month 按月解冻
+     * @param SubPayType 扣费模式，
+当所选的交易类型为扣费deduct时： 
+all所有扣费类型;trade预付费支付;hour_h按量小时结;hour_d按量日结;hour_m按量月结;decompensate调账扣费;other第三方扣费;panshi 线下项目扣费;offline 线下产品扣费;
+
+当所选的交易类型为扣费recharge时： 
+online 在线充值;bank-enterprice 银企直连;offline 线下充值;transfer 分成充值
+
+当所选的交易类型为扣费cash时： 
+online 线上提现;offline 线下提现;panshi 赠送金清零
+
+当所选的交易类型为扣费advanced时： 
+advanced 垫付充值
+
+当所选的交易类型为扣费repay时： 
+panshi 垫付回款
+
+当所选的交易类型为扣费block时： 
+other 第三方冻结;hour 按量冻结;month按月冻结
+
+当所选的交易类型为扣费return时： 
+compensate 调账补偿;trade 预付费退款
+
+当所选的交易类型为扣费unblock时：
+other 第三方解冻;hour 按量解冻;month 按月解冻
      */
     public void setSubPayType(String [] SubPayType) {
         this.SubPayType = SubPayType;

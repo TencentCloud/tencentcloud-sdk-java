@@ -116,6 +116,13 @@ public class InvocationTask extends AbstractModel{
     private String ErrorInfo;
 
     /**
+    * 调用来源。
+    */
+    @SerializedName("InvocationSource")
+    @Expose
+    private String InvocationSource;
+
+    /**
      * Get 执行活动ID。 
      * @return InvocationId 执行活动ID。
      */
@@ -343,6 +350,22 @@ public class InvocationTask extends AbstractModel{
         this.ErrorInfo = ErrorInfo;
     }
 
+    /**
+     * Get 调用来源。 
+     * @return InvocationSource 调用来源。
+     */
+    public String getInvocationSource() {
+        return this.InvocationSource;
+    }
+
+    /**
+     * Set 调用来源。
+     * @param InvocationSource 调用来源。
+     */
+    public void setInvocationSource(String InvocationSource) {
+        this.InvocationSource = InvocationSource;
+    }
+
     public InvocationTask() {
     }
 
@@ -387,6 +410,9 @@ public class InvocationTask extends AbstractModel{
         if (source.ErrorInfo != null) {
             this.ErrorInfo = new String(source.ErrorInfo);
         }
+        if (source.InvocationSource != null) {
+            this.InvocationSource = new String(source.InvocationSource);
+        }
     }
 
 
@@ -406,6 +432,7 @@ public class InvocationTask extends AbstractModel{
         this.setParamSimple(map, prefix + "UpdatedTime", this.UpdatedTime);
         this.setParamObj(map, prefix + "CommandDocument.", this.CommandDocument);
         this.setParamSimple(map, prefix + "ErrorInfo", this.ErrorInfo);
+        this.setParamSimple(map, prefix + "InvocationSource", this.InvocationSource);
 
     }
 }

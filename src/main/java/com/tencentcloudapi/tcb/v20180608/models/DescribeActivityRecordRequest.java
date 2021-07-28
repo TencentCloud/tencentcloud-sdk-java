@@ -44,11 +44,18 @@ public class DescribeActivityRecordRequest extends AbstractModel{
     private Long [] ActivityIdList;
 
     /**
-    * 过滤状态码
+    * 过滤状态码，已废弃
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
+
+    /**
+    * 状态码过滤数组，空数组时不过滤
+    */
+    @SerializedName("Statuses")
+    @Expose
+    private Long [] Statuses;
 
     /**
      * Get 渠道加密token 
@@ -99,19 +106,35 @@ public class DescribeActivityRecordRequest extends AbstractModel{
     }
 
     /**
-     * Get 过滤状态码 
-     * @return Status 过滤状态码
+     * Get 过滤状态码，已废弃 
+     * @return Status 过滤状态码，已废弃
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 过滤状态码
-     * @param Status 过滤状态码
+     * Set 过滤状态码，已废弃
+     * @param Status 过滤状态码，已废弃
      */
     public void setStatus(Long Status) {
         this.Status = Status;
+    }
+
+    /**
+     * Get 状态码过滤数组，空数组时不过滤 
+     * @return Statuses 状态码过滤数组，空数组时不过滤
+     */
+    public Long [] getStatuses() {
+        return this.Statuses;
+    }
+
+    /**
+     * Set 状态码过滤数组，空数组时不过滤
+     * @param Statuses 状态码过滤数组，空数组时不过滤
+     */
+    public void setStatuses(Long [] Statuses) {
+        this.Statuses = Statuses;
     }
 
     public DescribeActivityRecordRequest() {
@@ -137,6 +160,12 @@ public class DescribeActivityRecordRequest extends AbstractModel{
         if (source.Status != null) {
             this.Status = new Long(source.Status);
         }
+        if (source.Statuses != null) {
+            this.Statuses = new Long[source.Statuses.length];
+            for (int i = 0; i < source.Statuses.length; i++) {
+                this.Statuses[i] = new Long(source.Statuses[i]);
+            }
+        }
     }
 
 
@@ -148,6 +177,7 @@ public class DescribeActivityRecordRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Channel", this.Channel);
         this.setParamArraySimple(map, prefix + "ActivityIdList.", this.ActivityIdList);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamArraySimple(map, prefix + "Statuses.", this.Statuses);
 
     }
 }

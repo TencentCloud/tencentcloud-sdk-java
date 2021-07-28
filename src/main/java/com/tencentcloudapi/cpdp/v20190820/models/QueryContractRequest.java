@@ -123,6 +123,20 @@ ANONYMOUS: 匿名类型 USER_ID
     private String UserType;
 
     /**
+    * 签约代扣穿透查询存量数据迁移模式
+    */
+    @SerializedName("MigrateMode")
+    @Expose
+    private String MigrateMode;
+
+    /**
+    * 签约方式
+    */
+    @SerializedName("ContractMethod")
+    @Expose
+    private String ContractMethod;
+
+    /**
      * Get 聚鑫分配的支付主MidasAppId 
      * @return MidasAppId 聚鑫分配的支付主MidasAppId
      */
@@ -366,6 +380,38 @@ ANONYMOUS: 匿名类型 USER_ID
         this.UserType = UserType;
     }
 
+    /**
+     * Get 签约代扣穿透查询存量数据迁移模式 
+     * @return MigrateMode 签约代扣穿透查询存量数据迁移模式
+     */
+    public String getMigrateMode() {
+        return this.MigrateMode;
+    }
+
+    /**
+     * Set 签约代扣穿透查询存量数据迁移模式
+     * @param MigrateMode 签约代扣穿透查询存量数据迁移模式
+     */
+    public void setMigrateMode(String MigrateMode) {
+        this.MigrateMode = MigrateMode;
+    }
+
+    /**
+     * Get 签约方式 
+     * @return ContractMethod 签约方式
+     */
+    public String getContractMethod() {
+        return this.ContractMethod;
+    }
+
+    /**
+     * Set 签约方式
+     * @param ContractMethod 签约方式
+     */
+    public void setContractMethod(String ContractMethod) {
+        this.ContractMethod = ContractMethod;
+    }
+
     public QueryContractRequest() {
     }
 
@@ -413,6 +459,12 @@ ANONYMOUS: 匿名类型 USER_ID
         if (source.UserType != null) {
             this.UserType = new String(source.UserType);
         }
+        if (source.MigrateMode != null) {
+            this.MigrateMode = new String(source.MigrateMode);
+        }
+        if (source.ContractMethod != null) {
+            this.ContractMethod = new String(source.ContractMethod);
+        }
     }
 
 
@@ -433,6 +485,8 @@ ANONYMOUS: 匿名类型 USER_ID
         this.setParamSimple(map, prefix + "ExternalContractData", this.ExternalContractData);
         this.setParamSimple(map, prefix + "MidasEnvironment", this.MidasEnvironment);
         this.setParamSimple(map, prefix + "UserType", this.UserType);
+        this.setParamSimple(map, prefix + "MigrateMode", this.MigrateMode);
+        this.setParamSimple(map, prefix + "ContractMethod", this.ContractMethod);
 
     }
 }

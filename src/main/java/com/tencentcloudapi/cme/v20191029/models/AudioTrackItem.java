@@ -35,14 +35,7 @@ public class AudioTrackItem extends AbstractModel{
     private String SourceType;
 
     /**
-    * 音频片段的媒体来源，可以是：
-<ul>
-<li>当 SourceType 为 VOD 时，为云点播的媒体文件 FileId ，会默认将该 FileId 导入到项目中 ；</li>
-<li>当 SourceType 为 CME 时，为制作云的媒体 ID，项目归属者必须对该云媒资有访问权限；</li>
-<li>当 SourceType 为 EXTERNAL 时，为媒资绑定的 Definition 与 MediaKey 中间用冒号分隔合并后的字符串，格式为 Definition:MediaKey 。</li>
-</ul>
-
-注：当 SourceType 为 EXTERNAL 时，目前仅支持外部 URL 的媒体直接导入项目中。当外部 URL Scheme 为 https 时，Definiton 为 1000000，MediaKey 为 URL 去掉 'https://'；当外部 URL Scheme 为 http 时，Definiton 为 1000001，MediaKey 为 URL 去掉 'http://'。
+    * 注：当 SourceType 为 EXTERNAL 时，目前仅支持外部 URL 的媒体直接导入项目中。当外部 URL Scheme 为 https 时，Definiton 为 1000000，MediaKey 为 URL 去掉<code> 'https://' </code>；当外部 URL Scheme 为 http 时，Definiton 为 1000001，MediaKey 为 URL 去掉<code> 'http://'</code>。
     */
     @SerializedName("SourceMedia")
     @Expose
@@ -99,44 +92,16 @@ public class AudioTrackItem extends AbstractModel{
     }
 
     /**
-     * Get 音频片段的媒体来源，可以是：
-<ul>
-<li>当 SourceType 为 VOD 时，为云点播的媒体文件 FileId ，会默认将该 FileId 导入到项目中 ；</li>
-<li>当 SourceType 为 CME 时，为制作云的媒体 ID，项目归属者必须对该云媒资有访问权限；</li>
-<li>当 SourceType 为 EXTERNAL 时，为媒资绑定的 Definition 与 MediaKey 中间用冒号分隔合并后的字符串，格式为 Definition:MediaKey 。</li>
-</ul>
-
-注：当 SourceType 为 EXTERNAL 时，目前仅支持外部 URL 的媒体直接导入项目中。当外部 URL Scheme 为 https 时，Definiton 为 1000000，MediaKey 为 URL 去掉 'https://'；当外部 URL Scheme 为 http 时，Definiton 为 1000001，MediaKey 为 URL 去掉 'http://'。 
-     * @return SourceMedia 音频片段的媒体来源，可以是：
-<ul>
-<li>当 SourceType 为 VOD 时，为云点播的媒体文件 FileId ，会默认将该 FileId 导入到项目中 ；</li>
-<li>当 SourceType 为 CME 时，为制作云的媒体 ID，项目归属者必须对该云媒资有访问权限；</li>
-<li>当 SourceType 为 EXTERNAL 时，为媒资绑定的 Definition 与 MediaKey 中间用冒号分隔合并后的字符串，格式为 Definition:MediaKey 。</li>
-</ul>
-
-注：当 SourceType 为 EXTERNAL 时，目前仅支持外部 URL 的媒体直接导入项目中。当外部 URL Scheme 为 https 时，Definiton 为 1000000，MediaKey 为 URL 去掉 'https://'；当外部 URL Scheme 为 http 时，Definiton 为 1000001，MediaKey 为 URL 去掉 'http://'。
+     * Get 注：当 SourceType 为 EXTERNAL 时，目前仅支持外部 URL 的媒体直接导入项目中。当外部 URL Scheme 为 https 时，Definiton 为 1000000，MediaKey 为 URL 去掉<code> 'https://' </code>；当外部 URL Scheme 为 http 时，Definiton 为 1000001，MediaKey 为 URL 去掉<code> 'http://'</code>。 
+     * @return SourceMedia 注：当 SourceType 为 EXTERNAL 时，目前仅支持外部 URL 的媒体直接导入项目中。当外部 URL Scheme 为 https 时，Definiton 为 1000000，MediaKey 为 URL 去掉<code> 'https://' </code>；当外部 URL Scheme 为 http 时，Definiton 为 1000001，MediaKey 为 URL 去掉<code> 'http://'</code>。
      */
     public String getSourceMedia() {
         return this.SourceMedia;
     }
 
     /**
-     * Set 音频片段的媒体来源，可以是：
-<ul>
-<li>当 SourceType 为 VOD 时，为云点播的媒体文件 FileId ，会默认将该 FileId 导入到项目中 ；</li>
-<li>当 SourceType 为 CME 时，为制作云的媒体 ID，项目归属者必须对该云媒资有访问权限；</li>
-<li>当 SourceType 为 EXTERNAL 时，为媒资绑定的 Definition 与 MediaKey 中间用冒号分隔合并后的字符串，格式为 Definition:MediaKey 。</li>
-</ul>
-
-注：当 SourceType 为 EXTERNAL 时，目前仅支持外部 URL 的媒体直接导入项目中。当外部 URL Scheme 为 https 时，Definiton 为 1000000，MediaKey 为 URL 去掉 'https://'；当外部 URL Scheme 为 http 时，Definiton 为 1000001，MediaKey 为 URL 去掉 'http://'。
-     * @param SourceMedia 音频片段的媒体来源，可以是：
-<ul>
-<li>当 SourceType 为 VOD 时，为云点播的媒体文件 FileId ，会默认将该 FileId 导入到项目中 ；</li>
-<li>当 SourceType 为 CME 时，为制作云的媒体 ID，项目归属者必须对该云媒资有访问权限；</li>
-<li>当 SourceType 为 EXTERNAL 时，为媒资绑定的 Definition 与 MediaKey 中间用冒号分隔合并后的字符串，格式为 Definition:MediaKey 。</li>
-</ul>
-
-注：当 SourceType 为 EXTERNAL 时，目前仅支持外部 URL 的媒体直接导入项目中。当外部 URL Scheme 为 https 时，Definiton 为 1000000，MediaKey 为 URL 去掉 'https://'；当外部 URL Scheme 为 http 时，Definiton 为 1000001，MediaKey 为 URL 去掉 'http://'。
+     * Set 注：当 SourceType 为 EXTERNAL 时，目前仅支持外部 URL 的媒体直接导入项目中。当外部 URL Scheme 为 https 时，Definiton 为 1000000，MediaKey 为 URL 去掉<code> 'https://' </code>；当外部 URL Scheme 为 http 时，Definiton 为 1000001，MediaKey 为 URL 去掉<code> 'http://'</code>。
+     * @param SourceMedia 注：当 SourceType 为 EXTERNAL 时，目前仅支持外部 URL 的媒体直接导入项目中。当外部 URL Scheme 为 https 时，Definiton 为 1000000，MediaKey 为 URL 去掉<code> 'https://' </code>；当外部 URL Scheme 为 http 时，Definiton 为 1000001，MediaKey 为 URL 去掉<code> 'http://'</code>。
      */
     public void setSourceMedia(String SourceMedia) {
         this.SourceMedia = SourceMedia;
