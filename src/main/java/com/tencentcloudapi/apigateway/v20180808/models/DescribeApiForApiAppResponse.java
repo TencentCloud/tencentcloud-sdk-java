@@ -13,28 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.dlc.v20210125.models;
+package com.tencentcloudapi.apigateway.v20180808.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeUsersResponse extends AbstractModel{
+public class DescribeApiForApiAppResponse extends AbstractModel{
 
     /**
-    * 查询到的用户总数
+    * API 详情。
     */
-    @SerializedName("TotalCount")
+    @SerializedName("Result")
     @Expose
-    private Long TotalCount;
-
-    /**
-    * 查询到的授权用户信息集合
-    */
-    @SerializedName("UserSet")
-    @Expose
-    private UserInfo [] UserSet;
+    private ApiInfo Result;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -44,35 +37,19 @@ public class DescribeUsersResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 查询到的用户总数 
-     * @return TotalCount 查询到的用户总数
+     * Get API 详情。 
+     * @return Result API 详情。
      */
-    public Long getTotalCount() {
-        return this.TotalCount;
+    public ApiInfo getResult() {
+        return this.Result;
     }
 
     /**
-     * Set 查询到的用户总数
-     * @param TotalCount 查询到的用户总数
+     * Set API 详情。
+     * @param Result API 详情。
      */
-    public void setTotalCount(Long TotalCount) {
-        this.TotalCount = TotalCount;
-    }
-
-    /**
-     * Get 查询到的授权用户信息集合 
-     * @return UserSet 查询到的授权用户信息集合
-     */
-    public UserInfo [] getUserSet() {
-        return this.UserSet;
-    }
-
-    /**
-     * Set 查询到的授权用户信息集合
-     * @param UserSet 查询到的授权用户信息集合
-     */
-    public void setUserSet(UserInfo [] UserSet) {
-        this.UserSet = UserSet;
+    public void setResult(ApiInfo Result) {
+        this.Result = Result;
     }
 
     /**
@@ -91,22 +68,16 @@ public class DescribeUsersResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeUsersResponse() {
+    public DescribeApiForApiAppResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeUsersResponse(DescribeUsersResponse source) {
-        if (source.TotalCount != null) {
-            this.TotalCount = new Long(source.TotalCount);
-        }
-        if (source.UserSet != null) {
-            this.UserSet = new UserInfo[source.UserSet.length];
-            for (int i = 0; i < source.UserSet.length; i++) {
-                this.UserSet[i] = new UserInfo(source.UserSet[i]);
-            }
+    public DescribeApiForApiAppResponse(DescribeApiForApiAppResponse source) {
+        if (source.Result != null) {
+            this.Result = new ApiInfo(source.Result);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -118,8 +89,7 @@ public class DescribeUsersResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
-        this.setParamArrayObj(map, prefix + "UserSet.", this.UserSet);
+        this.setParamObj(map, prefix + "Result.", this.Result);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

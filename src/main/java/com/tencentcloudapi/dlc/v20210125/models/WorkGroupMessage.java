@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class WorkGroupMessage extends AbstractModel{
 
     /**
-    * 工作组Id
+    * 工作组唯一Id
     */
     @SerializedName("WorkGroupId")
     @Expose
@@ -52,23 +52,23 @@ public class WorkGroupMessage extends AbstractModel{
     private String Creator;
 
     /**
-    * 创建时间
+    * 工作组创建的时间，形如2021-07-28 16:19:32
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-     * Get 工作组Id 
-     * @return WorkGroupId 工作组Id
+     * Get 工作组唯一Id 
+     * @return WorkGroupId 工作组唯一Id
      */
     public Long getWorkGroupId() {
         return this.WorkGroupId;
     }
 
     /**
-     * Set 工作组Id
-     * @param WorkGroupId 工作组Id
+     * Set 工作组唯一Id
+     * @param WorkGroupId 工作组唯一Id
      */
     public void setWorkGroupId(Long WorkGroupId) {
         this.WorkGroupId = WorkGroupId;
@@ -127,16 +127,16 @@ public class WorkGroupMessage extends AbstractModel{
     }
 
     /**
-     * Get 创建时间 
-     * @return CreateTime 创建时间
+     * Get 工作组创建的时间，形如2021-07-28 16:19:32 
+     * @return CreateTime 工作组创建的时间，形如2021-07-28 16:19:32
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 创建时间
-     * @param CreateTime 创建时间
+     * Set 工作组创建的时间，形如2021-07-28 16:19:32
+     * @param CreateTime 工作组创建的时间，形如2021-07-28 16:19:32
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;

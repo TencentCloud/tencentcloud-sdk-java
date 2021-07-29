@@ -239,6 +239,26 @@ public class WavClient extends AbstractClient{
     }
 
     /**
+     *该接口获取license对应的详细信息
+     * @param req QueryLicenseInfoRequest
+     * @return QueryLicenseInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryLicenseInfoResponse QueryLicenseInfo(QueryLicenseInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<QueryLicenseInfoResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<QueryLicenseInfoResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "QueryLicenseInfo");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询小程序码列表接口
      * @param req QueryMiniAppCodeListRequest
      * @return QueryMiniAppCodeListResponse

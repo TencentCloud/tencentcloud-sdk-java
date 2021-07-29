@@ -219,7 +219,7 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
-     *本接口（CreateTask）用于创建sql查询任务。
+     *本接口（CreateTask）用于创建sql查询任务。（推荐使用CreateTasks接口）
      * @param req CreateTaskRequest
      * @return CreateTaskResponse
      * @throws TencentCloudSDKException
@@ -239,7 +239,27 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
-     *按顺序创建任务
+     *批量创建任务
+     * @param req CreateTasksRequest
+     * @return CreateTasksResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateTasksResponse CreateTasks(CreateTasksRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateTasksResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateTasksResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateTasks");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *按顺序创建任务（已经废弃，后期不再维护，请使用接口CreateTasks）
      * @param req CreateTasksInOrderRequest
      * @return CreateTasksInOrderResponse
      * @throws TencentCloudSDKException

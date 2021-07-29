@@ -143,6 +143,22 @@ public class SREInstance extends AbstractModel{
     private EnvInfo [] EnvInfos;
 
     /**
+    * 引擎所在的区域
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EngineRegion")
+    @Expose
+    private String EngineRegion;
+
+    /**
+    * 注册引擎是否开启公网
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EnableInternet")
+    @Expose
+    private Boolean EnableInternet;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -430,6 +446,46 @@ public class SREInstance extends AbstractModel{
         this.EnvInfos = EnvInfos;
     }
 
+    /**
+     * Get 引擎所在的区域
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EngineRegion 引擎所在的区域
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getEngineRegion() {
+        return this.EngineRegion;
+    }
+
+    /**
+     * Set 引擎所在的区域
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EngineRegion 引擎所在的区域
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEngineRegion(String EngineRegion) {
+        this.EngineRegion = EngineRegion;
+    }
+
+    /**
+     * Get 注册引擎是否开启公网
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EnableInternet 注册引擎是否开启公网
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getEnableInternet() {
+        return this.EnableInternet;
+    }
+
+    /**
+     * Set 注册引擎是否开启公网
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EnableInternet 注册引擎是否开启公网
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEnableInternet(Boolean EnableInternet) {
+        this.EnableInternet = EnableInternet;
+    }
+
     public SREInstance() {
     }
 
@@ -492,6 +548,12 @@ public class SREInstance extends AbstractModel{
                 this.EnvInfos[i] = new EnvInfo(source.EnvInfos[i]);
             }
         }
+        if (source.EngineRegion != null) {
+            this.EngineRegion = new String(source.EngineRegion);
+        }
+        if (source.EnableInternet != null) {
+            this.EnableInternet = new Boolean(source.EnableInternet);
+        }
     }
 
 
@@ -515,6 +577,8 @@ public class SREInstance extends AbstractModel{
         this.setParamSimple(map, prefix + "EKSClusterID", this.EKSClusterID);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamArrayObj(map, prefix + "EnvInfos.", this.EnvInfos);
+        this.setParamSimple(map, prefix + "EngineRegion", this.EngineRegion);
+        this.setParamSimple(map, prefix + "EnableInternet", this.EnableInternet);
 
     }
 }

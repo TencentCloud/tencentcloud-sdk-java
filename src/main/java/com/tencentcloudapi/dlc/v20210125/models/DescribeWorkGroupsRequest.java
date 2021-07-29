@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeWorkGroupsRequest extends AbstractModel{
 
     /**
-    * 查询的工作组Id
+    * 查询的工作组Id，不填或填0表示不过滤。
     */
     @SerializedName("WorkGroupId")
     @Expose
@@ -65,16 +65,16 @@ public class DescribeWorkGroupsRequest extends AbstractModel{
     private String Sorting;
 
     /**
-     * Get 查询的工作组Id 
-     * @return WorkGroupId 查询的工作组Id
+     * Get 查询的工作组Id，不填或填0表示不过滤。 
+     * @return WorkGroupId 查询的工作组Id，不填或填0表示不过滤。
      */
     public Long getWorkGroupId() {
         return this.WorkGroupId;
     }
 
     /**
-     * Set 查询的工作组Id
-     * @param WorkGroupId 查询的工作组Id
+     * Set 查询的工作组Id，不填或填0表示不过滤。
+     * @param WorkGroupId 查询的工作组Id，不填或填0表示不过滤。
      */
     public void setWorkGroupId(Long WorkGroupId) {
         this.WorkGroupId = WorkGroupId;

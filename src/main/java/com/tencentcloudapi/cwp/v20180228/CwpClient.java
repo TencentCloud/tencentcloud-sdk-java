@@ -1981,7 +1981,9 @@ public class CwpClient extends AbstractClient{
     }
 
     /**
-     *本接口 (RescanImpactedHost) 用于漏洞重新检测。
+     *该接口已废弃
+
+本接口 (RescanImpactedHost) 用于漏洞重新检测。
      * @param req RescanImpactedHostRequest
      * @return RescanImpactedHostResponse
      * @throws TencentCloudSDKException

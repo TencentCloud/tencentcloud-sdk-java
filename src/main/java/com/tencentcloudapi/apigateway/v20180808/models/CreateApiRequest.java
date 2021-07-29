@@ -345,6 +345,13 @@ public class CreateApiRequest extends AbstractModel{
     private Boolean IsBase64Encoded;
 
     /**
+    * scf函数类型。当后端类型是SCF时生效。支持事件触发(EVENT)，http直通云函数(HTTP)。
+    */
+    @SerializedName("ServiceScfFunctionType")
+    @Expose
+    private String ServiceScfFunctionType;
+
+    /**
      * Get API 所在的服务唯一 ID。 
      * @return ServiceId API 所在的服务唯一 ID。
      */
@@ -1080,6 +1087,22 @@ public class CreateApiRequest extends AbstractModel{
         this.IsBase64Encoded = IsBase64Encoded;
     }
 
+    /**
+     * Get scf函数类型。当后端类型是SCF时生效。支持事件触发(EVENT)，http直通云函数(HTTP)。 
+     * @return ServiceScfFunctionType scf函数类型。当后端类型是SCF时生效。支持事件触发(EVENT)，http直通云函数(HTTP)。
+     */
+    public String getServiceScfFunctionType() {
+        return this.ServiceScfFunctionType;
+    }
+
+    /**
+     * Set scf函数类型。当后端类型是SCF时生效。支持事件触发(EVENT)，http直通云函数(HTTP)。
+     * @param ServiceScfFunctionType scf函数类型。当后端类型是SCF时生效。支持事件触发(EVENT)，http直通云函数(HTTP)。
+     */
+    public void setServiceScfFunctionType(String ServiceScfFunctionType) {
+        this.ServiceScfFunctionType = ServiceScfFunctionType;
+    }
+
     public CreateApiRequest() {
     }
 
@@ -1244,6 +1267,9 @@ public class CreateApiRequest extends AbstractModel{
         if (source.IsBase64Encoded != null) {
             this.IsBase64Encoded = new Boolean(source.IsBase64Encoded);
         }
+        if (source.ServiceScfFunctionType != null) {
+            this.ServiceScfFunctionType = new String(source.ServiceScfFunctionType);
+        }
     }
 
 
@@ -1297,6 +1323,7 @@ public class CreateApiRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "TargetNamespaceId", this.TargetNamespaceId);
         this.setParamSimple(map, prefix + "UserType", this.UserType);
         this.setParamSimple(map, prefix + "IsBase64Encoded", this.IsBase64Encoded);
+        this.setParamSimple(map, prefix + "ServiceScfFunctionType", this.ServiceScfFunctionType);
 
     }
 }

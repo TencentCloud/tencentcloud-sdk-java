@@ -65,6 +65,20 @@ public class EnvInfo extends AbstractModel{
     private String ConfigServiceIp;
 
     /**
+    * 是否开启config-server公网
+    */
+    @SerializedName("EnableConfigInternet")
+    @Expose
+    private Boolean EnableConfigInternet;
+
+    /**
+    * config-server公网访问地址
+    */
+    @SerializedName("ConfigInternetServiceIp")
+    @Expose
+    private String ConfigInternetServiceIp;
+
+    /**
      * Get 环境名称 
      * @return EnvName 环境名称
      */
@@ -160,6 +174,38 @@ public class EnvInfo extends AbstractModel{
         this.ConfigServiceIp = ConfigServiceIp;
     }
 
+    /**
+     * Get 是否开启config-server公网 
+     * @return EnableConfigInternet 是否开启config-server公网
+     */
+    public Boolean getEnableConfigInternet() {
+        return this.EnableConfigInternet;
+    }
+
+    /**
+     * Set 是否开启config-server公网
+     * @param EnableConfigInternet 是否开启config-server公网
+     */
+    public void setEnableConfigInternet(Boolean EnableConfigInternet) {
+        this.EnableConfigInternet = EnableConfigInternet;
+    }
+
+    /**
+     * Get config-server公网访问地址 
+     * @return ConfigInternetServiceIp config-server公网访问地址
+     */
+    public String getConfigInternetServiceIp() {
+        return this.ConfigInternetServiceIp;
+    }
+
+    /**
+     * Set config-server公网访问地址
+     * @param ConfigInternetServiceIp config-server公网访问地址
+     */
+    public void setConfigInternetServiceIp(String ConfigInternetServiceIp) {
+        this.ConfigInternetServiceIp = ConfigInternetServiceIp;
+    }
+
     public EnvInfo() {
     }
 
@@ -189,6 +235,12 @@ public class EnvInfo extends AbstractModel{
         if (source.ConfigServiceIp != null) {
             this.ConfigServiceIp = new String(source.ConfigServiceIp);
         }
+        if (source.EnableConfigInternet != null) {
+            this.EnableConfigInternet = new Boolean(source.EnableConfigInternet);
+        }
+        if (source.ConfigInternetServiceIp != null) {
+            this.ConfigInternetServiceIp = new String(source.ConfigInternetServiceIp);
+        }
     }
 
 
@@ -202,6 +254,8 @@ public class EnvInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "AdminServiceIp", this.AdminServiceIp);
         this.setParamSimple(map, prefix + "ConfigServiceIp", this.ConfigServiceIp);
+        this.setParamSimple(map, prefix + "EnableConfigInternet", this.EnableConfigInternet);
+        this.setParamSimple(map, prefix + "ConfigInternetServiceIp", this.ConfigInternetServiceIp);
 
     }
 }

@@ -37,6 +37,13 @@ public class DescribeSREInstanceAccessAddressResponse extends AbstractModel{
     private String InternetAddress;
 
     /**
+    * apollo多环境公网ip
+    */
+    @SerializedName("EnvAddressInfos")
+    @Expose
+    private EnvAddressInfo [] EnvAddressInfos;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -76,6 +83,22 @@ public class DescribeSREInstanceAccessAddressResponse extends AbstractModel{
     }
 
     /**
+     * Get apollo多环境公网ip 
+     * @return EnvAddressInfos apollo多环境公网ip
+     */
+    public EnvAddressInfo [] getEnvAddressInfos() {
+        return this.EnvAddressInfos;
+    }
+
+    /**
+     * Set apollo多环境公网ip
+     * @param EnvAddressInfos apollo多环境公网ip
+     */
+    public void setEnvAddressInfos(EnvAddressInfo [] EnvAddressInfos) {
+        this.EnvAddressInfos = EnvAddressInfos;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -105,6 +128,12 @@ public class DescribeSREInstanceAccessAddressResponse extends AbstractModel{
         if (source.InternetAddress != null) {
             this.InternetAddress = new String(source.InternetAddress);
         }
+        if (source.EnvAddressInfos != null) {
+            this.EnvAddressInfos = new EnvAddressInfo[source.EnvAddressInfos.length];
+            for (int i = 0; i < source.EnvAddressInfos.length; i++) {
+                this.EnvAddressInfos[i] = new EnvAddressInfo(source.EnvAddressInfos[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -117,6 +146,7 @@ public class DescribeSREInstanceAccessAddressResponse extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "IntranetAddress", this.IntranetAddress);
         this.setParamSimple(map, prefix + "InternetAddress", this.InternetAddress);
+        this.setParamArrayObj(map, prefix + "EnvAddressInfos.", this.EnvAddressInfos);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

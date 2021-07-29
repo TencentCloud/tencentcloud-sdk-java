@@ -44,6 +44,13 @@ public class Place extends AbstractModel{
     private Long CountryId;
 
     /**
+    * 位置名称
+    */
+    @SerializedName("Location")
+    @Expose
+    private String Location;
+
+    /**
      * Get 城市 ID。 
      * @return CityId 城市 ID。
      */
@@ -91,6 +98,22 @@ public class Place extends AbstractModel{
         this.CountryId = CountryId;
     }
 
+    /**
+     * Get 位置名称 
+     * @return Location 位置名称
+     */
+    public String getLocation() {
+        return this.Location;
+    }
+
+    /**
+     * Set 位置名称
+     * @param Location 位置名称
+     */
+    public void setLocation(String Location) {
+        this.Location = Location;
+    }
+
     public Place() {
     }
 
@@ -108,6 +131,9 @@ public class Place extends AbstractModel{
         if (source.CountryId != null) {
             this.CountryId = new Long(source.CountryId);
         }
+        if (source.Location != null) {
+            this.Location = new String(source.Location);
+        }
     }
 
 
@@ -118,6 +144,7 @@ public class Place extends AbstractModel{
         this.setParamSimple(map, prefix + "CityId", this.CityId);
         this.setParamSimple(map, prefix + "ProvinceId", this.ProvinceId);
         this.setParamSimple(map, prefix + "CountryId", this.CountryId);
+        this.setParamSimple(map, prefix + "Location", this.Location);
 
     }
 }

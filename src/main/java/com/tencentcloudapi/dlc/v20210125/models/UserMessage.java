@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class UserMessage extends AbstractModel{
 
     /**
-    * 用户Id，和CAM侧Uin匹配
+    * 用户Id，和CAM侧子用户Uin匹配
     */
     @SerializedName("UserId")
     @Expose
@@ -38,30 +38,30 @@ public class UserMessage extends AbstractModel{
     private String UserDescription;
 
     /**
-    * 创建者
+    * 当前用户的创建者
     */
     @SerializedName("Creator")
     @Expose
     private String Creator;
 
     /**
-    * 创建时间
+    * 当前用户的创建时间，形如2021-07-28 16:19:32
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-     * Get 用户Id，和CAM侧Uin匹配 
-     * @return UserId 用户Id，和CAM侧Uin匹配
+     * Get 用户Id，和CAM侧子用户Uin匹配 
+     * @return UserId 用户Id，和CAM侧子用户Uin匹配
      */
     public String getUserId() {
         return this.UserId;
     }
 
     /**
-     * Set 用户Id，和CAM侧Uin匹配
-     * @param UserId 用户Id，和CAM侧Uin匹配
+     * Set 用户Id，和CAM侧子用户Uin匹配
+     * @param UserId 用户Id，和CAM侧子用户Uin匹配
      */
     public void setUserId(String UserId) {
         this.UserId = UserId;
@@ -88,32 +88,32 @@ public class UserMessage extends AbstractModel{
     }
 
     /**
-     * Get 创建者 
-     * @return Creator 创建者
+     * Get 当前用户的创建者 
+     * @return Creator 当前用户的创建者
      */
     public String getCreator() {
         return this.Creator;
     }
 
     /**
-     * Set 创建者
-     * @param Creator 创建者
+     * Set 当前用户的创建者
+     * @param Creator 当前用户的创建者
      */
     public void setCreator(String Creator) {
         this.Creator = Creator;
     }
 
     /**
-     * Get 创建时间 
-     * @return CreateTime 创建时间
+     * Get 当前用户的创建时间，形如2021-07-28 16:19:32 
+     * @return CreateTime 当前用户的创建时间，形如2021-07-28 16:19:32
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 创建时间
-     * @param CreateTime 创建时间
+     * Set 当前用户的创建时间，形如2021-07-28 16:19:32
+     * @param CreateTime 当前用户的创建时间，形如2021-07-28 16:19:32
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;

@@ -23,92 +23,92 @@ import java.util.HashMap;
 public class Policy extends AbstractModel{
 
     /**
-    * 需要授权的数据源名称，*代表拥有全部数据源权限
+    * 需要授权的数据源名称，当前仅支持COSDataCatalog或者*
     */
     @SerializedName("Catalog")
     @Expose
     private String Catalog;
 
     /**
-    * 需要授权的数据库名称，*代表拥有全部数据库名称
+    * 需要授权的数据库名，填*代表当前Catalog下所有数据库
     */
     @SerializedName("Database")
     @Expose
     private String Database;
 
     /**
-    * 需要授权的表名称，*代表拥有全部表权限
+    * 需要授权的表名，填*代表当前Database下所有表
     */
     @SerializedName("Table")
     @Expose
     private String Table;
 
     /**
-    * 授权的操作，当前只支持“ALL”
+    * 授权粒度，当前只支持ALL，即全部权限
     */
     @SerializedName("Operation")
     @Expose
     private String Operation;
 
     /**
-     * Get 需要授权的数据源名称，*代表拥有全部数据源权限 
-     * @return Catalog 需要授权的数据源名称，*代表拥有全部数据源权限
+     * Get 需要授权的数据源名称，当前仅支持COSDataCatalog或者* 
+     * @return Catalog 需要授权的数据源名称，当前仅支持COSDataCatalog或者*
      */
     public String getCatalog() {
         return this.Catalog;
     }
 
     /**
-     * Set 需要授权的数据源名称，*代表拥有全部数据源权限
-     * @param Catalog 需要授权的数据源名称，*代表拥有全部数据源权限
+     * Set 需要授权的数据源名称，当前仅支持COSDataCatalog或者*
+     * @param Catalog 需要授权的数据源名称，当前仅支持COSDataCatalog或者*
      */
     public void setCatalog(String Catalog) {
         this.Catalog = Catalog;
     }
 
     /**
-     * Get 需要授权的数据库名称，*代表拥有全部数据库名称 
-     * @return Database 需要授权的数据库名称，*代表拥有全部数据库名称
+     * Get 需要授权的数据库名，填*代表当前Catalog下所有数据库 
+     * @return Database 需要授权的数据库名，填*代表当前Catalog下所有数据库
      */
     public String getDatabase() {
         return this.Database;
     }
 
     /**
-     * Set 需要授权的数据库名称，*代表拥有全部数据库名称
-     * @param Database 需要授权的数据库名称，*代表拥有全部数据库名称
+     * Set 需要授权的数据库名，填*代表当前Catalog下所有数据库
+     * @param Database 需要授权的数据库名，填*代表当前Catalog下所有数据库
      */
     public void setDatabase(String Database) {
         this.Database = Database;
     }
 
     /**
-     * Get 需要授权的表名称，*代表拥有全部表权限 
-     * @return Table 需要授权的表名称，*代表拥有全部表权限
+     * Get 需要授权的表名，填*代表当前Database下所有表 
+     * @return Table 需要授权的表名，填*代表当前Database下所有表
      */
     public String getTable() {
         return this.Table;
     }
 
     /**
-     * Set 需要授权的表名称，*代表拥有全部表权限
-     * @param Table 需要授权的表名称，*代表拥有全部表权限
+     * Set 需要授权的表名，填*代表当前Database下所有表
+     * @param Table 需要授权的表名，填*代表当前Database下所有表
      */
     public void setTable(String Table) {
         this.Table = Table;
     }
 
     /**
-     * Get 授权的操作，当前只支持“ALL” 
-     * @return Operation 授权的操作，当前只支持“ALL”
+     * Get 授权粒度，当前只支持ALL，即全部权限 
+     * @return Operation 授权粒度，当前只支持ALL，即全部权限
      */
     public String getOperation() {
         return this.Operation;
     }
 
     /**
-     * Set 授权的操作，当前只支持“ALL”
-     * @param Operation 授权的操作，当前只支持“ALL”
+     * Set 授权粒度，当前只支持ALL，即全部权限
+     * @param Operation 授权粒度，当前只支持ALL，即全部权限
      */
     public void setOperation(String Operation) {
         this.Operation = Operation;

@@ -55,6 +55,14 @@ public class CcnInstance extends AbstractModel{
     private String Description;
 
     /**
+    * 实例关联的路由表ID。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RouteTableId")
+    @Expose
+    private String RouteTableId;
+
+    /**
      * Get 关联实例ID。 
      * @return InstanceId 关联实例ID。
      */
@@ -134,6 +142,26 @@ public class CcnInstance extends AbstractModel{
         this.Description = Description;
     }
 
+    /**
+     * Get 实例关联的路由表ID。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RouteTableId 实例关联的路由表ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRouteTableId() {
+        return this.RouteTableId;
+    }
+
+    /**
+     * Set 实例关联的路由表ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RouteTableId 实例关联的路由表ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRouteTableId(String RouteTableId) {
+        this.RouteTableId = RouteTableId;
+    }
+
     public CcnInstance() {
     }
 
@@ -154,6 +182,9 @@ public class CcnInstance extends AbstractModel{
         if (source.Description != null) {
             this.Description = new String(source.Description);
         }
+        if (source.RouteTableId != null) {
+            this.RouteTableId = new String(source.RouteTableId);
+        }
     }
 
 
@@ -165,6 +196,7 @@ public class CcnInstance extends AbstractModel{
         this.setParamSimple(map, prefix + "InstanceRegion", this.InstanceRegion);
         this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
         this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamSimple(map, prefix + "RouteTableId", this.RouteTableId);
 
     }
 }

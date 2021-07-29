@@ -51,7 +51,7 @@ public class DeviceInfo extends AbstractModel{
     private String DevicePsk;
 
     /**
-    * 设备启用状态
+    * 设备启用状态 0为停用 1为可用
     */
     @SerializedName("EnableState")
     @Expose
@@ -129,16 +129,16 @@ public class DeviceInfo extends AbstractModel{
     }
 
     /**
-     * Get 设备启用状态 
-     * @return EnableState 设备启用状态
+     * Get 设备启用状态 0为停用 1为可用 
+     * @return EnableState 设备启用状态 0为停用 1为可用
      */
     public Long getEnableState() {
         return this.EnableState;
     }
 
     /**
-     * Set 设备启用状态
-     * @param EnableState 设备启用状态
+     * Set 设备启用状态 0为停用 1为可用
+     * @param EnableState 设备启用状态 0为停用 1为可用
      */
     public void setEnableState(Long EnableState) {
         this.EnableState = EnableState;

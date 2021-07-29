@@ -13,28 +13,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.dlc.v20210125.models;
+package com.tencentcloudapi.tke.v20180525.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeUsersResponse extends AbstractModel{
+public class DescribeVpcCniPodLimitsResponse extends AbstractModel{
 
     /**
-    * 查询到的用户总数
+    * 机型数据数量
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 查询到的授权用户信息集合
+    * 机型信息及其可支持的最大VPC-CNI模式Pod数量信息
+注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("UserSet")
+    @SerializedName("PodLimitsInstanceSet")
     @Expose
-    private UserInfo [] UserSet;
+    private PodLimitsInstance [] PodLimitsInstanceSet;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -44,35 +46,43 @@ public class DescribeUsersResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 查询到的用户总数 
-     * @return TotalCount 查询到的用户总数
+     * Get 机型数据数量
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TotalCount 机型数据数量
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 查询到的用户总数
-     * @param TotalCount 查询到的用户总数
+     * Set 机型数据数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TotalCount 机型数据数量
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 查询到的授权用户信息集合 
-     * @return UserSet 查询到的授权用户信息集合
+     * Get 机型信息及其可支持的最大VPC-CNI模式Pod数量信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PodLimitsInstanceSet 机型信息及其可支持的最大VPC-CNI模式Pod数量信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public UserInfo [] getUserSet() {
-        return this.UserSet;
+    public PodLimitsInstance [] getPodLimitsInstanceSet() {
+        return this.PodLimitsInstanceSet;
     }
 
     /**
-     * Set 查询到的授权用户信息集合
-     * @param UserSet 查询到的授权用户信息集合
+     * Set 机型信息及其可支持的最大VPC-CNI模式Pod数量信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PodLimitsInstanceSet 机型信息及其可支持的最大VPC-CNI模式Pod数量信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setUserSet(UserInfo [] UserSet) {
-        this.UserSet = UserSet;
+    public void setPodLimitsInstanceSet(PodLimitsInstance [] PodLimitsInstanceSet) {
+        this.PodLimitsInstanceSet = PodLimitsInstanceSet;
     }
 
     /**
@@ -91,21 +101,21 @@ public class DescribeUsersResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeUsersResponse() {
+    public DescribeVpcCniPodLimitsResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeUsersResponse(DescribeUsersResponse source) {
+    public DescribeVpcCniPodLimitsResponse(DescribeVpcCniPodLimitsResponse source) {
         if (source.TotalCount != null) {
             this.TotalCount = new Long(source.TotalCount);
         }
-        if (source.UserSet != null) {
-            this.UserSet = new UserInfo[source.UserSet.length];
-            for (int i = 0; i < source.UserSet.length; i++) {
-                this.UserSet[i] = new UserInfo(source.UserSet[i]);
+        if (source.PodLimitsInstanceSet != null) {
+            this.PodLimitsInstanceSet = new PodLimitsInstance[source.PodLimitsInstanceSet.length];
+            for (int i = 0; i < source.PodLimitsInstanceSet.length; i++) {
+                this.PodLimitsInstanceSet[i] = new PodLimitsInstance(source.PodLimitsInstanceSet[i]);
             }
         }
         if (source.RequestId != null) {
@@ -119,7 +129,7 @@ public class DescribeUsersResponse extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
-        this.setParamArrayObj(map, prefix + "UserSet.", this.UserSet);
+        this.setParamArrayObj(map, prefix + "PodLimitsInstanceSet.", this.PodLimitsInstanceSet);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

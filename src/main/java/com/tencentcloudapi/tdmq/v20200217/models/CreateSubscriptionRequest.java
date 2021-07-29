@@ -72,6 +72,13 @@ public class CreateSubscriptionRequest extends AbstractModel{
     private Boolean AutoCreatePolicyTopic;
 
     /**
+    * 指定死信和重试主题名称规范，LEGACY表示历史命名规则，COMMUNITY表示Pulsar社区命名规范
+    */
+    @SerializedName("PostFixPattern")
+    @Expose
+    private String PostFixPattern;
+
+    /**
      * Get 环境（命名空间）名称。 
      * @return EnvironmentId 环境（命名空间）名称。
      */
@@ -183,6 +190,22 @@ public class CreateSubscriptionRequest extends AbstractModel{
         this.AutoCreatePolicyTopic = AutoCreatePolicyTopic;
     }
 
+    /**
+     * Get 指定死信和重试主题名称规范，LEGACY表示历史命名规则，COMMUNITY表示Pulsar社区命名规范 
+     * @return PostFixPattern 指定死信和重试主题名称规范，LEGACY表示历史命名规则，COMMUNITY表示Pulsar社区命名规范
+     */
+    public String getPostFixPattern() {
+        return this.PostFixPattern;
+    }
+
+    /**
+     * Set 指定死信和重试主题名称规范，LEGACY表示历史命名规则，COMMUNITY表示Pulsar社区命名规范
+     * @param PostFixPattern 指定死信和重试主题名称规范，LEGACY表示历史命名规则，COMMUNITY表示Pulsar社区命名规范
+     */
+    public void setPostFixPattern(String PostFixPattern) {
+        this.PostFixPattern = PostFixPattern;
+    }
+
     public CreateSubscriptionRequest() {
     }
 
@@ -212,6 +235,9 @@ public class CreateSubscriptionRequest extends AbstractModel{
         if (source.AutoCreatePolicyTopic != null) {
             this.AutoCreatePolicyTopic = new Boolean(source.AutoCreatePolicyTopic);
         }
+        if (source.PostFixPattern != null) {
+            this.PostFixPattern = new String(source.PostFixPattern);
+        }
     }
 
 
@@ -226,6 +252,7 @@ public class CreateSubscriptionRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamSimple(map, prefix + "AutoCreatePolicyTopic", this.AutoCreatePolicyTopic);
+        this.setParamSimple(map, prefix + "PostFixPattern", this.PostFixPattern);
 
     }
 }

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class WorkGroupInfo extends AbstractModel{
 
     /**
-    * 工作组Id
+    * 查询到的工作组唯一Id
     */
     @SerializedName("WorkGroupId")
     @Expose
@@ -68,30 +68,30 @@ public class WorkGroupInfo extends AbstractModel{
     private Policy [] PolicySet;
 
     /**
-    * 创建者
+    * 工作组的创建人
     */
     @SerializedName("Creator")
     @Expose
     private String Creator;
 
     /**
-    * 创建时间
+    * 工作组的创建时间，形如2021-07-28 16:19:32
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-     * Get 工作组Id 
-     * @return WorkGroupId 工作组Id
+     * Get 查询到的工作组唯一Id 
+     * @return WorkGroupId 查询到的工作组唯一Id
      */
     public Long getWorkGroupId() {
         return this.WorkGroupId;
     }
 
     /**
-     * Set 工作组Id
-     * @param WorkGroupId 工作组Id
+     * Set 查询到的工作组唯一Id
+     * @param WorkGroupId 查询到的工作组唯一Id
      */
     public void setWorkGroupId(Long WorkGroupId) {
         this.WorkGroupId = WorkGroupId;
@@ -190,32 +190,32 @@ public class WorkGroupInfo extends AbstractModel{
     }
 
     /**
-     * Get 创建者 
-     * @return Creator 创建者
+     * Get 工作组的创建人 
+     * @return Creator 工作组的创建人
      */
     public String getCreator() {
         return this.Creator;
     }
 
     /**
-     * Set 创建者
-     * @param Creator 创建者
+     * Set 工作组的创建人
+     * @param Creator 工作组的创建人
      */
     public void setCreator(String Creator) {
         this.Creator = Creator;
     }
 
     /**
-     * Get 创建时间 
-     * @return CreateTime 创建时间
+     * Get 工作组的创建时间，形如2021-07-28 16:19:32 
+     * @return CreateTime 工作组的创建时间，形如2021-07-28 16:19:32
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 创建时间
-     * @param CreateTime 创建时间
+     * Set 工作组的创建时间，形如2021-07-28 16:19:32
+     * @param CreateTime 工作组的创建时间，形如2021-07-28 16:19:32
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;

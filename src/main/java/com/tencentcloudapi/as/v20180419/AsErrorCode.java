@@ -54,12 +54,6 @@ public enum AsErrorCode {
     // 启动配置ID无效。
      INVALIDLAUNCHCONFIGURATIONID("InvalidLaunchConfigurationId"),
      
-    // 启动配置正在使用中。
-     INVALIDLAUNCHCONFIGURATIONID_INUSE("InvalidLaunchConfigurationId.InUse"),
-     
-    // 未找到该启动配置。
-     INVALIDLAUNCHCONFIGURATIONID_NOTFOUND("InvalidLaunchConfigurationId.NotFound"),
-     
     // 参数错误。
      INVALIDPARAMETER("InvalidParameter"),
      
@@ -159,6 +153,9 @@ public enum AsErrorCode {
     // 实例机型无效。
      INVALIDPARAMETERVALUE_INVALIDINSTANCETYPE("InvalidParameterValue.InvalidInstanceType"),
      
+    // 输入的启动配置无效。
+     INVALIDPARAMETERVALUE_INVALIDLAUNCHCONFIGURATION("InvalidParameterValue.InvalidLaunchConfiguration"),
+     
     // 启动配置ID无效。
      INVALIDPARAMETERVALUE_INVALIDLAUNCHCONFIGURATIONID("InvalidParameterValue.InvalidLaunchConfigurationId"),
      
@@ -252,9 +249,6 @@ public enum AsErrorCode {
     // 账户不支持该操作。
      INVALIDPERMISSION("InvalidPermission"),
      
-    // 启动配置配额超过限制。
-     LAUNCHCONFIGURATIONQUOTALIMITEXCEEDED("LaunchConfigurationQuotaLimitExceeded"),
-     
     // 超过配额限制。
      LIMITEXCEEDED("LimitExceeded"),
      
@@ -266,6 +260,9 @@ public enum AsErrorCode {
      
     // 特定过滤器的值过多。
      LIMITEXCEEDED_FILTERVALUESTOOLONG("LimitExceeded.FilterValuesTooLong"),
+     
+    // 启动配置配额不足。
+     LIMITEXCEEDED_LAUNCHCONFIGURATIONQUOTANOTENOUGH("LimitExceeded.LaunchConfigurationQuotaNotEnough"),
      
     // 最大实例数大于限制。
      LIMITEXCEEDED_MAXSIZELIMITEXCEEDED("LimitExceeded.MaxSizeLimitExceeded"),
@@ -296,9 +293,6 @@ public enum AsErrorCode {
      
     // 伸缩组内尚有正常实例。
      RESOURCEINUSE_INSTANCEINGROUP("ResourceInUse.InstanceInGroup"),
-     
-    // 指定的启动配置仍在伸缩组中使用。
-     RESOURCEINUSE_LAUNCHCONFIGURATIONIDINUSE("ResourceInUse.LaunchConfigurationIdInUse"),
      
     // 超过伸缩组最大实例数。
      RESOURCEINSUFFICIENT_AUTOSCALINGGROUPABOVEMAXSIZE("ResourceInsufficient.AutoScalingGroupAboveMaxSize"),

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class AttachUserPolicyRequest extends AbstractModel{
 
     /**
-    * 用户Id，和CAM侧Uin匹配
+    * 用户Id，和子用户uin相同，需要先使用CreateUser接口创建用户。可以使用DescribeUsers接口查看。
     */
     @SerializedName("UserId")
     @Expose
@@ -37,16 +37,16 @@ public class AttachUserPolicyRequest extends AbstractModel{
     private Policy [] PolicySet;
 
     /**
-     * Get 用户Id，和CAM侧Uin匹配 
-     * @return UserId 用户Id，和CAM侧Uin匹配
+     * Get 用户Id，和子用户uin相同，需要先使用CreateUser接口创建用户。可以使用DescribeUsers接口查看。 
+     * @return UserId 用户Id，和子用户uin相同，需要先使用CreateUser接口创建用户。可以使用DescribeUsers接口查看。
      */
     public String getUserId() {
         return this.UserId;
     }
 
     /**
-     * Set 用户Id，和CAM侧Uin匹配
-     * @param UserId 用户Id，和CAM侧Uin匹配
+     * Set 用户Id，和子用户uin相同，需要先使用CreateUser接口创建用户。可以使用DescribeUsers接口查看。
+     * @param UserId 用户Id，和子用户uin相同，需要先使用CreateUser接口创建用户。可以使用DescribeUsers接口查看。
      */
     public void setUserId(String UserId) {
         this.UserId = UserId;

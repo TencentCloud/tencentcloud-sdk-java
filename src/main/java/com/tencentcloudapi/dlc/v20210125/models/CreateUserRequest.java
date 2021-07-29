@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class CreateUserRequest extends AbstractModel{
 
     /**
-    * 用户Id，当前主账号的子账号Uin，和CAM侧匹配
+    * 需要授权的子用户uin，可以通过腾讯云控制台右上角 → “账号信息” → “账号ID进行查看”。
     */
     @SerializedName("UserId")
     @Expose
     private String UserId;
 
     /**
-    * 用户描述
+    * 用户描述信息，方便区分不同用户
     */
     @SerializedName("UserDescription")
     @Expose
@@ -44,32 +44,32 @@ public class CreateUserRequest extends AbstractModel{
     private Policy [] PolicySet;
 
     /**
-     * Get 用户Id，当前主账号的子账号Uin，和CAM侧匹配 
-     * @return UserId 用户Id，当前主账号的子账号Uin，和CAM侧匹配
+     * Get 需要授权的子用户uin，可以通过腾讯云控制台右上角 → “账号信息” → “账号ID进行查看”。 
+     * @return UserId 需要授权的子用户uin，可以通过腾讯云控制台右上角 → “账号信息” → “账号ID进行查看”。
      */
     public String getUserId() {
         return this.UserId;
     }
 
     /**
-     * Set 用户Id，当前主账号的子账号Uin，和CAM侧匹配
-     * @param UserId 用户Id，当前主账号的子账号Uin，和CAM侧匹配
+     * Set 需要授权的子用户uin，可以通过腾讯云控制台右上角 → “账号信息” → “账号ID进行查看”。
+     * @param UserId 需要授权的子用户uin，可以通过腾讯云控制台右上角 → “账号信息” → “账号ID进行查看”。
      */
     public void setUserId(String UserId) {
         this.UserId = UserId;
     }
 
     /**
-     * Get 用户描述 
-     * @return UserDescription 用户描述
+     * Get 用户描述信息，方便区分不同用户 
+     * @return UserDescription 用户描述信息，方便区分不同用户
      */
     public String getUserDescription() {
         return this.UserDescription;
     }
 
     /**
-     * Set 用户描述
-     * @param UserDescription 用户描述
+     * Set 用户描述信息，方便区分不同用户
+     * @param UserDescription 用户描述信息，方便区分不同用户
      */
     public void setUserDescription(String UserDescription) {
         this.UserDescription = UserDescription;

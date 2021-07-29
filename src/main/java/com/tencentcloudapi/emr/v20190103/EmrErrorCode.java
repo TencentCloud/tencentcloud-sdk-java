@@ -63,7 +63,7 @@ public enum EmrErrorCode {
     // 内部服务调用异常。
      INTERNALERROR_VPCERROR("InternalError.VpcError"),
      
-    // Woodpecker server调用出错。
+    // 内部服务调用异常。
      INTERNALERROR_WOODSERVERERROR("InternalError.WoodServerError"),
      
     // 参数错误。

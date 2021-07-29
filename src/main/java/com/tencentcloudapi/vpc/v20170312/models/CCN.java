@@ -102,6 +102,22 @@ public class CCN extends AbstractModel{
     private Boolean RoutePriorityFlag;
 
     /**
+    * 实例关联的路由表个数。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RouteTableCount")
+    @Expose
+    private Long RouteTableCount;
+
+    /**
+    * 是否开启云联网多路由表特性。False：未开启，True：开启。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RouteTableFlag")
+    @Expose
+    private Boolean RouteTableFlag;
+
+    /**
      * Get 云联网唯一ID 
      * @return CcnId 云联网唯一ID
      */
@@ -285,6 +301,46 @@ public class CCN extends AbstractModel{
         this.RoutePriorityFlag = RoutePriorityFlag;
     }
 
+    /**
+     * Get 实例关联的路由表个数。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RouteTableCount 实例关联的路由表个数。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getRouteTableCount() {
+        return this.RouteTableCount;
+    }
+
+    /**
+     * Set 实例关联的路由表个数。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RouteTableCount 实例关联的路由表个数。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRouteTableCount(Long RouteTableCount) {
+        this.RouteTableCount = RouteTableCount;
+    }
+
+    /**
+     * Get 是否开启云联网多路由表特性。False：未开启，True：开启。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RouteTableFlag 是否开启云联网多路由表特性。False：未开启，True：开启。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getRouteTableFlag() {
+        return this.RouteTableFlag;
+    }
+
+    /**
+     * Set 是否开启云联网多路由表特性。False：未开启，True：开启。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RouteTableFlag 是否开启云联网多路由表特性。False：未开启，True：开启。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRouteTableFlag(Boolean RouteTableFlag) {
+        this.RouteTableFlag = RouteTableFlag;
+    }
+
     public CCN() {
     }
 
@@ -329,6 +385,12 @@ public class CCN extends AbstractModel{
         if (source.RoutePriorityFlag != null) {
             this.RoutePriorityFlag = new Boolean(source.RoutePriorityFlag);
         }
+        if (source.RouteTableCount != null) {
+            this.RouteTableCount = new Long(source.RouteTableCount);
+        }
+        if (source.RouteTableFlag != null) {
+            this.RouteTableFlag = new Boolean(source.RouteTableFlag);
+        }
     }
 
 
@@ -347,6 +409,8 @@ public class CCN extends AbstractModel{
         this.setParamSimple(map, prefix + "BandwidthLimitType", this.BandwidthLimitType);
         this.setParamArrayObj(map, prefix + "TagSet.", this.TagSet);
         this.setParamSimple(map, prefix + "RoutePriorityFlag", this.RoutePriorityFlag);
+        this.setParamSimple(map, prefix + "RouteTableCount", this.RouteTableCount);
+        this.setParamSimple(map, prefix + "RouteTableFlag", this.RouteTableFlag);
 
     }
 }

@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class UserInfo extends AbstractModel{
 
     /**
-    * 用户Id，和CAM侧Uin匹配
+    * 用户Id，和子用户uin相同
     */
     @SerializedName("UserId")
     @Expose
     private String UserId;
 
     /**
-    * 用户描述
+    * 用户描述信息，方便区分不同用户
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserDescription")
@@ -46,14 +46,14 @@ public class UserInfo extends AbstractModel{
     private Policy [] PolicySet;
 
     /**
-    * 创建者
+    * 当前用户的创建者
     */
     @SerializedName("Creator")
     @Expose
     private String Creator;
 
     /**
-    * 创建时间
+    * 创建时间，格式如2021-07-28 16:19:32
     */
     @SerializedName("CreateTime")
     @Expose
@@ -76,25 +76,25 @@ public class UserInfo extends AbstractModel{
     private Boolean IsOwner;
 
     /**
-     * Get 用户Id，和CAM侧Uin匹配 
-     * @return UserId 用户Id，和CAM侧Uin匹配
+     * Get 用户Id，和子用户uin相同 
+     * @return UserId 用户Id，和子用户uin相同
      */
     public String getUserId() {
         return this.UserId;
     }
 
     /**
-     * Set 用户Id，和CAM侧Uin匹配
-     * @param UserId 用户Id，和CAM侧Uin匹配
+     * Set 用户Id，和子用户uin相同
+     * @param UserId 用户Id，和子用户uin相同
      */
     public void setUserId(String UserId) {
         this.UserId = UserId;
     }
 
     /**
-     * Get 用户描述
+     * Get 用户描述信息，方便区分不同用户
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UserDescription 用户描述
+     * @return UserDescription 用户描述信息，方便区分不同用户
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUserDescription() {
@@ -102,9 +102,9 @@ public class UserInfo extends AbstractModel{
     }
 
     /**
-     * Set 用户描述
+     * Set 用户描述信息，方便区分不同用户
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UserDescription 用户描述
+     * @param UserDescription 用户描述信息，方便区分不同用户
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserDescription(String UserDescription) {
@@ -132,32 +132,32 @@ public class UserInfo extends AbstractModel{
     }
 
     /**
-     * Get 创建者 
-     * @return Creator 创建者
+     * Get 当前用户的创建者 
+     * @return Creator 当前用户的创建者
      */
     public String getCreator() {
         return this.Creator;
     }
 
     /**
-     * Set 创建者
-     * @param Creator 创建者
+     * Set 当前用户的创建者
+     * @param Creator 当前用户的创建者
      */
     public void setCreator(String Creator) {
         this.Creator = Creator;
     }
 
     /**
-     * Get 创建时间 
-     * @return CreateTime 创建时间
+     * Get 创建时间，格式如2021-07-28 16:19:32 
+     * @return CreateTime 创建时间，格式如2021-07-28 16:19:32
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 创建时间
-     * @param CreateTime 创建时间
+     * Set 创建时间，格式如2021-07-28 16:19:32
+     * @param CreateTime 创建时间，格式如2021-07-28 16:19:32
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;

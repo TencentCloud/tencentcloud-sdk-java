@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeUsersRequest extends AbstractModel{
 
     /**
-    * 查询的用户Id，和CAM侧Uin匹配
+    * 指定查询的子用户uin，用户需要通过CreateUser接口创建。
     */
     @SerializedName("UserId")
     @Expose
@@ -58,16 +58,16 @@ public class DescribeUsersRequest extends AbstractModel{
     private String Sorting;
 
     /**
-     * Get 查询的用户Id，和CAM侧Uin匹配 
-     * @return UserId 查询的用户Id，和CAM侧Uin匹配
+     * Get 指定查询的子用户uin，用户需要通过CreateUser接口创建。 
+     * @return UserId 指定查询的子用户uin，用户需要通过CreateUser接口创建。
      */
     public String getUserId() {
         return this.UserId;
     }
 
     /**
-     * Set 查询的用户Id，和CAM侧Uin匹配
-     * @param UserId 查询的用户Id，和CAM侧Uin匹配
+     * Set 指定查询的子用户uin，用户需要通过CreateUser接口创建。
+     * @param UserId 指定查询的子用户uin，用户需要通过CreateUser接口创建。
      */
     public void setUserId(String UserId) {
         this.UserId = UserId;

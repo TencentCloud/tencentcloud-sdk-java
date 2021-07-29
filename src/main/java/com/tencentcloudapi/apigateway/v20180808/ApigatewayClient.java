@@ -728,6 +728,26 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
     }
 
     /**
+     *本接口（DescribeApiForApiApp）用于应用使用者查询部署于 API 网关的 API 接口的详细信息。​
+     * @param req DescribeApiForApiAppRequest
+     * @return DescribeApiForApiAppResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeApiForApiAppResponse DescribeApiForApiApp(DescribeApiForApiAppRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeApiForApiAppResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeApiForApiAppResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeApiForApiApp");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（DescribeApiKey）用于查询密钥详情。
 用户在创建密钥后，可用此接口查询一个 API 密钥的详情，该接口会显示密钥 Key。
      * @param req DescribeApiKeyRequest

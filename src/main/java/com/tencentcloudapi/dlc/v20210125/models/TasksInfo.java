@@ -44,7 +44,7 @@ public class TasksInfo extends AbstractModel{
     private String SQL;
 
     /**
-    * 任务的配置信息
+    * 任务的配置信息，当前仅支持SparkSQLTask任务。
     */
     @SerializedName("Config")
     @Expose
@@ -99,16 +99,16 @@ public class TasksInfo extends AbstractModel{
     }
 
     /**
-     * Get 任务的配置信息 
-     * @return Config 任务的配置信息
+     * Get 任务的配置信息，当前仅支持SparkSQLTask任务。 
+     * @return Config 任务的配置信息，当前仅支持SparkSQLTask任务。
      */
     public KVPair [] getConfig() {
         return this.Config;
     }
 
     /**
-     * Set 任务的配置信息
-     * @param Config 任务的配置信息
+     * Set 任务的配置信息，当前仅支持SparkSQLTask任务。
+     * @param Config 任务的配置信息，当前仅支持SparkSQLTask任务。
      */
     public void setConfig(KVPair [] Config) {
         this.Config = Config;

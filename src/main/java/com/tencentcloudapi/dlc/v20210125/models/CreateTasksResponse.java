@@ -20,21 +20,21 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeUsersResponse extends AbstractModel{
+public class CreateTasksResponse extends AbstractModel{
 
     /**
-    * 查询到的用户总数
+    * 本批次提交的任务的批次Id
     */
-    @SerializedName("TotalCount")
+    @SerializedName("BatchId")
     @Expose
-    private Long TotalCount;
+    private String BatchId;
 
     /**
-    * 查询到的授权用户信息集合
+    * 任务Id集合，按照执行顺序排列
     */
-    @SerializedName("UserSet")
+    @SerializedName("TaskIdSet")
     @Expose
-    private UserInfo [] UserSet;
+    private String [] TaskIdSet;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -44,35 +44,35 @@ public class DescribeUsersResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 查询到的用户总数 
-     * @return TotalCount 查询到的用户总数
+     * Get 本批次提交的任务的批次Id 
+     * @return BatchId 本批次提交的任务的批次Id
      */
-    public Long getTotalCount() {
-        return this.TotalCount;
+    public String getBatchId() {
+        return this.BatchId;
     }
 
     /**
-     * Set 查询到的用户总数
-     * @param TotalCount 查询到的用户总数
+     * Set 本批次提交的任务的批次Id
+     * @param BatchId 本批次提交的任务的批次Id
      */
-    public void setTotalCount(Long TotalCount) {
-        this.TotalCount = TotalCount;
+    public void setBatchId(String BatchId) {
+        this.BatchId = BatchId;
     }
 
     /**
-     * Get 查询到的授权用户信息集合 
-     * @return UserSet 查询到的授权用户信息集合
+     * Get 任务Id集合，按照执行顺序排列 
+     * @return TaskIdSet 任务Id集合，按照执行顺序排列
      */
-    public UserInfo [] getUserSet() {
-        return this.UserSet;
+    public String [] getTaskIdSet() {
+        return this.TaskIdSet;
     }
 
     /**
-     * Set 查询到的授权用户信息集合
-     * @param UserSet 查询到的授权用户信息集合
+     * Set 任务Id集合，按照执行顺序排列
+     * @param TaskIdSet 任务Id集合，按照执行顺序排列
      */
-    public void setUserSet(UserInfo [] UserSet) {
-        this.UserSet = UserSet;
+    public void setTaskIdSet(String [] TaskIdSet) {
+        this.TaskIdSet = TaskIdSet;
     }
 
     /**
@@ -91,21 +91,21 @@ public class DescribeUsersResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeUsersResponse() {
+    public CreateTasksResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeUsersResponse(DescribeUsersResponse source) {
-        if (source.TotalCount != null) {
-            this.TotalCount = new Long(source.TotalCount);
+    public CreateTasksResponse(CreateTasksResponse source) {
+        if (source.BatchId != null) {
+            this.BatchId = new String(source.BatchId);
         }
-        if (source.UserSet != null) {
-            this.UserSet = new UserInfo[source.UserSet.length];
-            for (int i = 0; i < source.UserSet.length; i++) {
-                this.UserSet[i] = new UserInfo(source.UserSet[i]);
+        if (source.TaskIdSet != null) {
+            this.TaskIdSet = new String[source.TaskIdSet.length];
+            for (int i = 0; i < source.TaskIdSet.length; i++) {
+                this.TaskIdSet[i] = new String(source.TaskIdSet[i]);
             }
         }
         if (source.RequestId != null) {
@@ -118,8 +118,8 @@ public class DescribeUsersResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
-        this.setParamArrayObj(map, prefix + "UserSet.", this.UserSet);
+        this.setParamSimple(map, prefix + "BatchId", this.BatchId);
+        this.setParamArraySimple(map, prefix + "TaskIdSet.", this.TaskIdSet);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

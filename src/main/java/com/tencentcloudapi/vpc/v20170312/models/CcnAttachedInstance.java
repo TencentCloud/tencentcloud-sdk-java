@@ -119,6 +119,22 @@ public class CcnAttachedInstance extends AbstractModel{
     private String Description;
 
     /**
+    * 路由表ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RouteTableId")
+    @Expose
+    private String RouteTableId;
+
+    /**
+    * 路由表名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RouteTableName")
+    @Expose
+    private String RouteTableName;
+
+    /**
      * Get 云联网实例ID。 
      * @return CcnId 云联网实例ID。
      */
@@ -358,6 +374,46 @@ public class CcnAttachedInstance extends AbstractModel{
         this.Description = Description;
     }
 
+    /**
+     * Get 路由表ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RouteTableId 路由表ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRouteTableId() {
+        return this.RouteTableId;
+    }
+
+    /**
+     * Set 路由表ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RouteTableId 路由表ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRouteTableId(String RouteTableId) {
+        this.RouteTableId = RouteTableId;
+    }
+
+    /**
+     * Get 路由表名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RouteTableName 路由表名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRouteTableName() {
+        return this.RouteTableName;
+    }
+
+    /**
+     * Set 路由表名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RouteTableName 路由表名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRouteTableName(String RouteTableName) {
+        this.RouteTableName = RouteTableName;
+    }
+
     public CcnAttachedInstance() {
     }
 
@@ -405,6 +461,12 @@ public class CcnAttachedInstance extends AbstractModel{
         if (source.Description != null) {
             this.Description = new String(source.Description);
         }
+        if (source.RouteTableId != null) {
+            this.RouteTableId = new String(source.RouteTableId);
+        }
+        if (source.RouteTableName != null) {
+            this.RouteTableName = new String(source.RouteTableName);
+        }
     }
 
 
@@ -424,6 +486,8 @@ public class CcnAttachedInstance extends AbstractModel{
         this.setParamSimple(map, prefix + "CcnUin", this.CcnUin);
         this.setParamSimple(map, prefix + "InstanceArea", this.InstanceArea);
         this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamSimple(map, prefix + "RouteTableId", this.RouteTableId);
+        this.setParamSimple(map, prefix + "RouteTableName", this.RouteTableName);
 
     }
 }

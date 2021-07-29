@@ -30,7 +30,7 @@ public class DescribeAssistantCidrRequest extends AbstractModel{
     private String [] VpcIds;
 
     /**
-    * 过滤条件，参数不支持同时指定NetworkInterfaceIds和Filters。
+    * 过滤条件，参数不支持同时指定VpcIds和Filters。
 <li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。</li>
     */
     @SerializedName("Filters")
@@ -68,9 +68,9 @@ public class DescribeAssistantCidrRequest extends AbstractModel{
     }
 
     /**
-     * Get 过滤条件，参数不支持同时指定NetworkInterfaceIds和Filters。
+     * Get 过滤条件，参数不支持同时指定VpcIds和Filters。
 <li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。</li> 
-     * @return Filters 过滤条件，参数不支持同时指定NetworkInterfaceIds和Filters。
+     * @return Filters 过滤条件，参数不支持同时指定VpcIds和Filters。
 <li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。</li>
      */
     public Filter [] getFilters() {
@@ -78,9 +78,9 @@ public class DescribeAssistantCidrRequest extends AbstractModel{
     }
 
     /**
-     * Set 过滤条件，参数不支持同时指定NetworkInterfaceIds和Filters。
+     * Set 过滤条件，参数不支持同时指定VpcIds和Filters。
 <li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。</li>
-     * @param Filters 过滤条件，参数不支持同时指定NetworkInterfaceIds和Filters。
+     * @param Filters 过滤条件，参数不支持同时指定VpcIds和Filters。
 <li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。</li>
      */
     public void setFilters(Filter [] Filters) {
