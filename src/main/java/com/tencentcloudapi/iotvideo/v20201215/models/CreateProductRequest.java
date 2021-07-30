@@ -30,7 +30,7 @@ public class CreateProductRequest extends AbstractModel{
     private String ProductName;
 
     /**
-    * 产品设备类型
+    * 产品设备类型 1.普通设备 2.NVR设备
     */
     @SerializedName("DeviceType")
     @Expose
@@ -44,14 +44,14 @@ public class CreateProductRequest extends AbstractModel{
     private Long ProductVaildYears;
 
     /**
-    * 设备功能码
+    * 设备功能码 ypsxth音频双向通话 spdxth视频单向通话
     */
     @SerializedName("Features")
     @Expose
     private String [] Features;
 
     /**
-    * 设备操作系统
+    * 设备操作系统 android linux liteos
     */
     @SerializedName("ChipOs")
     @Expose
@@ -79,7 +79,7 @@ public class CreateProductRequest extends AbstractModel{
     private String ProductDescription;
 
     /**
-    * 认证方式。2 PSK
+    * 认证方式 只支持取值为2 psk认证
     */
     @SerializedName("EncryptionType")
     @Expose
@@ -102,16 +102,16 @@ public class CreateProductRequest extends AbstractModel{
     }
 
     /**
-     * Get 产品设备类型 
-     * @return DeviceType 产品设备类型
+     * Get 产品设备类型 1.普通设备 2.NVR设备 
+     * @return DeviceType 产品设备类型 1.普通设备 2.NVR设备
      */
     public Long getDeviceType() {
         return this.DeviceType;
     }
 
     /**
-     * Set 产品设备类型
-     * @param DeviceType 产品设备类型
+     * Set 产品设备类型 1.普通设备 2.NVR设备
+     * @param DeviceType 产品设备类型 1.普通设备 2.NVR设备
      */
     public void setDeviceType(Long DeviceType) {
         this.DeviceType = DeviceType;
@@ -134,32 +134,32 @@ public class CreateProductRequest extends AbstractModel{
     }
 
     /**
-     * Get 设备功能码 
-     * @return Features 设备功能码
+     * Get 设备功能码 ypsxth音频双向通话 spdxth视频单向通话 
+     * @return Features 设备功能码 ypsxth音频双向通话 spdxth视频单向通话
      */
     public String [] getFeatures() {
         return this.Features;
     }
 
     /**
-     * Set 设备功能码
-     * @param Features 设备功能码
+     * Set 设备功能码 ypsxth音频双向通话 spdxth视频单向通话
+     * @param Features 设备功能码 ypsxth音频双向通话 spdxth视频单向通话
      */
     public void setFeatures(String [] Features) {
         this.Features = Features;
     }
 
     /**
-     * Get 设备操作系统 
-     * @return ChipOs 设备操作系统
+     * Get 设备操作系统 android linux liteos 
+     * @return ChipOs 设备操作系统 android linux liteos
      */
     public String getChipOs() {
         return this.ChipOs;
     }
 
     /**
-     * Set 设备操作系统
-     * @param ChipOs 设备操作系统
+     * Set 设备操作系统 android linux liteos
+     * @param ChipOs 设备操作系统 android linux liteos
      */
     public void setChipOs(String ChipOs) {
         this.ChipOs = ChipOs;
@@ -214,16 +214,16 @@ public class CreateProductRequest extends AbstractModel{
     }
 
     /**
-     * Get 认证方式。2 PSK 
-     * @return EncryptionType 认证方式。2 PSK
+     * Get 认证方式 只支持取值为2 psk认证 
+     * @return EncryptionType 认证方式 只支持取值为2 psk认证
      */
     public Long getEncryptionType() {
         return this.EncryptionType;
     }
 
     /**
-     * Set 认证方式。2 PSK
-     * @param EncryptionType 认证方式。2 PSK
+     * Set 认证方式 只支持取值为2 psk认证
+     * @param EncryptionType 认证方式 只支持取值为2 psk认证
      */
     public void setEncryptionType(Long EncryptionType) {
         this.EncryptionType = EncryptionType;

@@ -39,6 +39,26 @@ public class TcbClient extends AbstractClient{
     }
 
     /**
+     *绑定另外一个环境下的网关，callContainer请求可以访问到该网关
+     * @param req BindEnvGatewayRequest
+     * @return BindEnvGatewayResponse
+     * @throws TencentCloudSDKException
+     */
+    public BindEnvGatewayResponse BindEnvGateway(BindEnvGatewayRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<BindEnvGatewayResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<BindEnvGatewayResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "BindEnvGateway");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *检查是否开通Tcb服务
      * @param req CheckTcbServiceRequest
      * @return CheckTcbServiceResponse

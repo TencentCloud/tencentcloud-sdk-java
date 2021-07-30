@@ -59,6 +59,26 @@ public class BaClient extends AbstractClient{
     }
 
     /**
+     *获取实名认证信息
+     * @param req DescribeGetAuthInfoRequest
+     * @return DescribeGetAuthInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeGetAuthInfoResponse DescribeGetAuthInfo(DescribeGetAuthInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeGetAuthInfoResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeGetAuthInfoResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeGetAuthInfo");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *将备案ICP订单下的一个网站信息 同步给订单下其他网站，需要被同步的网站被检查通过(isCheck:true)；
 只有指定的网站信息字段能被同步
      * @param req SyncIcpOrderWebInfoRequest

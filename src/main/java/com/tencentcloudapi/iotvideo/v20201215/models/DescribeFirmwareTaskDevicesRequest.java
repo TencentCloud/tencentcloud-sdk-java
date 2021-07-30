@@ -44,14 +44,14 @@ public class DescribeFirmwareTaskDevicesRequest extends AbstractModel{
     private SearchKeyword [] Filters;
 
     /**
-    * 查询偏移量
+    * 查询偏移量 默认为0
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 查询的数量
+    * 查询的数量 默认为50
     */
     @SerializedName("Limit")
     @Expose
@@ -106,32 +106,32 @@ public class DescribeFirmwareTaskDevicesRequest extends AbstractModel{
     }
 
     /**
-     * Get 查询偏移量 
-     * @return Offset 查询偏移量
+     * Get 查询偏移量 默认为0 
+     * @return Offset 查询偏移量 默认为0
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 查询偏移量
-     * @param Offset 查询偏移量
+     * Set 查询偏移量 默认为0
+     * @param Offset 查询偏移量 默认为0
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 查询的数量 
-     * @return Limit 查询的数量
+     * Get 查询的数量 默认为50 
+     * @return Limit 查询的数量 默认为50
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 查询的数量
-     * @param Limit 查询的数量
+     * Set 查询的数量 默认为50
+     * @param Limit 查询的数量 默认为50
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

@@ -58,7 +58,7 @@ public class DescribeDeviceActionHistoryRequest extends AbstractModel{
     private String ActionId;
 
     /**
-    * 查询条数
+    * 查询条数 默认为0 最大不超过500
     */
     @SerializedName("Limit")
     @Expose
@@ -152,16 +152,16 @@ public class DescribeDeviceActionHistoryRequest extends AbstractModel{
     }
 
     /**
-     * Get 查询条数 
-     * @return Limit 查询条数
+     * Get 查询条数 默认为0 最大不超过500 
+     * @return Limit 查询条数 默认为0 最大不超过500
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 查询条数
-     * @param Limit 查询条数
+     * Set 查询条数 默认为0 最大不超过500
+     * @param Limit 查询条数 默认为0 最大不超过500
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

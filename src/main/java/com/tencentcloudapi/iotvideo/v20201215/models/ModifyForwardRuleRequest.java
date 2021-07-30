@@ -51,7 +51,7 @@ public class ModifyForwardRuleRequest extends AbstractModel{
     private String QueueRegion;
 
     /**
-    * 队列类型
+    * 队列类型 0.CMQ 1.CKafka
     */
     @SerializedName("QueueType")
     @Expose
@@ -157,16 +157,16 @@ public class ModifyForwardRuleRequest extends AbstractModel{
     }
 
     /**
-     * Get 队列类型 
-     * @return QueueType 队列类型
+     * Get 队列类型 0.CMQ 1.CKafka 
+     * @return QueueType 队列类型 0.CMQ 1.CKafka
      */
     public Long getQueueType() {
         return this.QueueType;
     }
 
     /**
-     * Set 队列类型
-     * @param QueueType 队列类型
+     * Set 队列类型 0.CMQ 1.CKafka
+     * @param QueueType 队列类型 0.CMQ 1.CKafka
      */
     public void setQueueType(Long QueueType) {
         this.QueueType = QueueType;

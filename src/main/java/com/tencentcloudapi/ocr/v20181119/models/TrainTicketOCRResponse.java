@@ -93,7 +93,7 @@ public class TrainTicketOCRResponse extends AbstractModel{
     private String ID;
 
     /**
-    * 发票消费类型
+    * 发票消费类型：交通
     */
     @SerializedName("InvoiceType")
     @Expose
@@ -105,6 +105,62 @@ public class TrainTicketOCRResponse extends AbstractModel{
     @SerializedName("SerialNumber")
     @Expose
     private String SerialNumber;
+
+    /**
+    * 加收票价
+    */
+    @SerializedName("AdditionalCost")
+    @Expose
+    private String AdditionalCost;
+
+    /**
+    * 手续费
+    */
+    @SerializedName("HandlingFee")
+    @Expose
+    private String HandlingFee;
+
+    /**
+    * 大写金额（票面有大写金额该字段才有值）
+    */
+    @SerializedName("LegalAmount")
+    @Expose
+    private String LegalAmount;
+
+    /**
+    * 售票站
+    */
+    @SerializedName("TicketStation")
+    @Expose
+    private String TicketStation;
+
+    /**
+    * 原票价（一般有手续费的才有原始票价字段）
+    */
+    @SerializedName("OriginalPrice")
+    @Expose
+    private String OriginalPrice;
+
+    /**
+    * 发票类型：火车票、火车票补票、火车票退票凭证
+    */
+    @SerializedName("InvoiceStyle")
+    @Expose
+    private String InvoiceStyle;
+
+    /**
+    * 收据号码
+    */
+    @SerializedName("ReceiptNumber")
+    @Expose
+    private String ReceiptNumber;
+
+    /**
+    * 仅供报销使用：1为是，0为否
+    */
+    @SerializedName("IsReceipt")
+    @Expose
+    private String IsReceipt;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -274,16 +330,16 @@ public class TrainTicketOCRResponse extends AbstractModel{
     }
 
     /**
-     * Get 发票消费类型 
-     * @return InvoiceType 发票消费类型
+     * Get 发票消费类型：交通 
+     * @return InvoiceType 发票消费类型：交通
      */
     public String getInvoiceType() {
         return this.InvoiceType;
     }
 
     /**
-     * Set 发票消费类型
-     * @param InvoiceType 发票消费类型
+     * Set 发票消费类型：交通
+     * @param InvoiceType 发票消费类型：交通
      */
     public void setInvoiceType(String InvoiceType) {
         this.InvoiceType = InvoiceType;
@@ -303,6 +359,134 @@ public class TrainTicketOCRResponse extends AbstractModel{
      */
     public void setSerialNumber(String SerialNumber) {
         this.SerialNumber = SerialNumber;
+    }
+
+    /**
+     * Get 加收票价 
+     * @return AdditionalCost 加收票价
+     */
+    public String getAdditionalCost() {
+        return this.AdditionalCost;
+    }
+
+    /**
+     * Set 加收票价
+     * @param AdditionalCost 加收票价
+     */
+    public void setAdditionalCost(String AdditionalCost) {
+        this.AdditionalCost = AdditionalCost;
+    }
+
+    /**
+     * Get 手续费 
+     * @return HandlingFee 手续费
+     */
+    public String getHandlingFee() {
+        return this.HandlingFee;
+    }
+
+    /**
+     * Set 手续费
+     * @param HandlingFee 手续费
+     */
+    public void setHandlingFee(String HandlingFee) {
+        this.HandlingFee = HandlingFee;
+    }
+
+    /**
+     * Get 大写金额（票面有大写金额该字段才有值） 
+     * @return LegalAmount 大写金额（票面有大写金额该字段才有值）
+     */
+    public String getLegalAmount() {
+        return this.LegalAmount;
+    }
+
+    /**
+     * Set 大写金额（票面有大写金额该字段才有值）
+     * @param LegalAmount 大写金额（票面有大写金额该字段才有值）
+     */
+    public void setLegalAmount(String LegalAmount) {
+        this.LegalAmount = LegalAmount;
+    }
+
+    /**
+     * Get 售票站 
+     * @return TicketStation 售票站
+     */
+    public String getTicketStation() {
+        return this.TicketStation;
+    }
+
+    /**
+     * Set 售票站
+     * @param TicketStation 售票站
+     */
+    public void setTicketStation(String TicketStation) {
+        this.TicketStation = TicketStation;
+    }
+
+    /**
+     * Get 原票价（一般有手续费的才有原始票价字段） 
+     * @return OriginalPrice 原票价（一般有手续费的才有原始票价字段）
+     */
+    public String getOriginalPrice() {
+        return this.OriginalPrice;
+    }
+
+    /**
+     * Set 原票价（一般有手续费的才有原始票价字段）
+     * @param OriginalPrice 原票价（一般有手续费的才有原始票价字段）
+     */
+    public void setOriginalPrice(String OriginalPrice) {
+        this.OriginalPrice = OriginalPrice;
+    }
+
+    /**
+     * Get 发票类型：火车票、火车票补票、火车票退票凭证 
+     * @return InvoiceStyle 发票类型：火车票、火车票补票、火车票退票凭证
+     */
+    public String getInvoiceStyle() {
+        return this.InvoiceStyle;
+    }
+
+    /**
+     * Set 发票类型：火车票、火车票补票、火车票退票凭证
+     * @param InvoiceStyle 发票类型：火车票、火车票补票、火车票退票凭证
+     */
+    public void setInvoiceStyle(String InvoiceStyle) {
+        this.InvoiceStyle = InvoiceStyle;
+    }
+
+    /**
+     * Get 收据号码 
+     * @return ReceiptNumber 收据号码
+     */
+    public String getReceiptNumber() {
+        return this.ReceiptNumber;
+    }
+
+    /**
+     * Set 收据号码
+     * @param ReceiptNumber 收据号码
+     */
+    public void setReceiptNumber(String ReceiptNumber) {
+        this.ReceiptNumber = ReceiptNumber;
+    }
+
+    /**
+     * Get 仅供报销使用：1为是，0为否 
+     * @return IsReceipt 仅供报销使用：1为是，0为否
+     */
+    public String getIsReceipt() {
+        return this.IsReceipt;
+    }
+
+    /**
+     * Set 仅供报销使用：1为是，0为否
+     * @param IsReceipt 仅供报销使用：1为是，0为否
+     */
+    public void setIsReceipt(String IsReceipt) {
+        this.IsReceipt = IsReceipt;
     }
 
     /**
@@ -365,6 +549,30 @@ public class TrainTicketOCRResponse extends AbstractModel{
         if (source.SerialNumber != null) {
             this.SerialNumber = new String(source.SerialNumber);
         }
+        if (source.AdditionalCost != null) {
+            this.AdditionalCost = new String(source.AdditionalCost);
+        }
+        if (source.HandlingFee != null) {
+            this.HandlingFee = new String(source.HandlingFee);
+        }
+        if (source.LegalAmount != null) {
+            this.LegalAmount = new String(source.LegalAmount);
+        }
+        if (source.TicketStation != null) {
+            this.TicketStation = new String(source.TicketStation);
+        }
+        if (source.OriginalPrice != null) {
+            this.OriginalPrice = new String(source.OriginalPrice);
+        }
+        if (source.InvoiceStyle != null) {
+            this.InvoiceStyle = new String(source.InvoiceStyle);
+        }
+        if (source.ReceiptNumber != null) {
+            this.ReceiptNumber = new String(source.ReceiptNumber);
+        }
+        if (source.IsReceipt != null) {
+            this.IsReceipt = new String(source.IsReceipt);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -387,6 +595,14 @@ public class TrainTicketOCRResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "ID", this.ID);
         this.setParamSimple(map, prefix + "InvoiceType", this.InvoiceType);
         this.setParamSimple(map, prefix + "SerialNumber", this.SerialNumber);
+        this.setParamSimple(map, prefix + "AdditionalCost", this.AdditionalCost);
+        this.setParamSimple(map, prefix + "HandlingFee", this.HandlingFee);
+        this.setParamSimple(map, prefix + "LegalAmount", this.LegalAmount);
+        this.setParamSimple(map, prefix + "TicketStation", this.TicketStation);
+        this.setParamSimple(map, prefix + "OriginalPrice", this.OriginalPrice);
+        this.setParamSimple(map, prefix + "InvoiceStyle", this.InvoiceStyle);
+        this.setParamSimple(map, prefix + "ReceiptNumber", this.ReceiptNumber);
+        this.setParamSimple(map, prefix + "IsReceipt", this.IsReceipt);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

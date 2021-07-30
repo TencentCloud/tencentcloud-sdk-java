@@ -51,6 +51,14 @@ public class DescribeCloudStorageResponse extends AbstractModel{
     private Long ShiftDuration;
 
     /**
+    * 云存用户ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UserId")
+    @Expose
+    private String UserId;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -122,6 +130,26 @@ public class DescribeCloudStorageResponse extends AbstractModel{
     }
 
     /**
+     * Get 云存用户ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UserId 云存用户ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getUserId() {
+        return this.UserId;
+    }
+
+    /**
+     * Set 云存用户ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UserId 云存用户ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUserId(String UserId) {
+        this.UserId = UserId;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -157,6 +185,9 @@ public class DescribeCloudStorageResponse extends AbstractModel{
         if (source.ShiftDuration != null) {
             this.ShiftDuration = new Long(source.ShiftDuration);
         }
+        if (source.UserId != null) {
+            this.UserId = new String(source.UserId);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -171,6 +202,7 @@ public class DescribeCloudStorageResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
         this.setParamSimple(map, prefix + "ShiftDuration", this.ShiftDuration);
+        this.setParamSimple(map, prefix + "UserId", this.UserId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

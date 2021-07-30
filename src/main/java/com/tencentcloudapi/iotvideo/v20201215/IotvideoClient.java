@@ -79,6 +79,26 @@ public class IotvideoClient extends AbstractClient{
     }
 
     /**
+     *绑定云存用户
+     * @param req BindCloudStorageUserRequest
+     * @return BindCloudStorageUserResponse
+     * @throws TencentCloudSDKException
+     */
+    public BindCloudStorageUserResponse BindCloudStorageUser(BindCloudStorageUserRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<BindCloudStorageUserResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<BindCloudStorageUserResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "BindCloudStorageUser");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *取消AI模型申请
      * @param req CancelAIModelApplicationRequest
      * @return CancelAIModelApplicationResponse
@@ -231,6 +251,26 @@ public class IotvideoClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreateCloudStorageResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "CreateCloudStorage");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *创建数据转发
+     * @param req CreateDataForwardRequest
+     * @return CreateDataForwardResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDataForwardResponse CreateDataForward(CreateDataForwardRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateDataForwardResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateDataForwardResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateDataForward");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -659,6 +699,46 @@ public class IotvideoClient extends AbstractClient{
     }
 
     /**
+     *拉取云存用户列表
+     * @param req DescribeCloudStorageUsersRequest
+     * @return DescribeCloudStorageUsersResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCloudStorageUsersResponse DescribeCloudStorageUsers(DescribeCloudStorageUsersRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCloudStorageUsersResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCloudStorageUsersResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeCloudStorageUsers");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取数据转发列表
+     * @param req DescribeDataForwardListRequest
+     * @return DescribeDataForwardListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDataForwardListResponse DescribeDataForwardList(DescribeDataForwardListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDataForwardListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDataForwardListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDataForwardList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查看设备详情
      * @param req DescribeDeviceRequest
      * @return DescribeDeviceResponse
@@ -771,6 +851,26 @@ public class IotvideoClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeDeviceEventHistoryResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeDeviceEventHistory");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取设备上下线日志
+     * @param req DescribeDeviceStatusLogRequest
+     * @return DescribeDeviceStatusLogResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDeviceStatusLogResponse DescribeDeviceStatusLog(DescribeDeviceStatusLogRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDeviceStatusLogResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDeviceStatusLogResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDeviceStatusLog");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -999,6 +1099,26 @@ public class IotvideoClient extends AbstractClient{
     }
 
     /**
+     *获取设备sdk日志
+     * @param req DescribeSDKLogRequest
+     * @return DescribeSDKLogResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSDKLogResponse DescribeSDKLog(DescribeSDKLogRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeSDKLogResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeSDKLogResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeSDKLog");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口用于编辑固件信息
      * @param req EditFirmwareRequest
      * @return EditFirmwareResponse
@@ -1099,6 +1219,26 @@ public class IotvideoClient extends AbstractClient{
     }
 
     /**
+     *继承云存用户
+     * @param req InheritCloudStorageUserRequest
+     * @return InheritCloudStorageUserResponse
+     * @throws TencentCloudSDKException
+     */
+    public InheritCloudStorageUserResponse InheritCloudStorageUser(InheritCloudStorageUserRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<InheritCloudStorageUserResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<InheritCloudStorageUserResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "InheritCloudStorageUser");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（ListFirmwares）用于获取固件列表 
      * @param req ListFirmwaresRequest
      * @return ListFirmwaresResponse
@@ -1119,6 +1259,46 @@ public class IotvideoClient extends AbstractClient{
     }
 
     /**
+     *修改数据转发
+     * @param req ModifyDataForwardRequest
+     * @return ModifyDataForwardResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDataForwardResponse ModifyDataForward(ModifyDataForwardRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyDataForwardResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyDataForwardResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyDataForward");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *设置数据转发状态
+     * @param req ModifyDataForwardStatusRequest
+     * @return ModifyDataForwardStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDataForwardStatusResponse ModifyDataForwardStatus(ModifyDataForwardStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyDataForwardStatusResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyDataForwardStatusResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyDataForwardStatus");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *修改设备信息
      * @param req ModifyDeviceRequest
      * @return ModifyDeviceResponse
@@ -1131,6 +1311,26 @@ public class IotvideoClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyDeviceResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyDevice");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *更新设备日志级别
+     * @param req ModifyDeviceLogLevelRequest
+     * @return ModifyDeviceLogLevelResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDeviceLogLevelResponse ModifyDeviceLogLevel(ModifyDeviceLogLevelRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyDeviceLogLevelResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyDeviceLogLevelResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyDeviceLogLevel");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1351,6 +1551,26 @@ public class IotvideoClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<UploadFirmwareResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "UploadFirmware");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *设备唤醒
+     * @param req WakeUpDeviceRequest
+     * @return WakeUpDeviceResponse
+     * @throws TencentCloudSDKException
+     */
+    public WakeUpDeviceResponse WakeUpDevice(WakeUpDeviceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<WakeUpDeviceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<WakeUpDeviceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "WakeUpDevice");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

@@ -44,14 +44,14 @@ public class DescribeForwardRuleResponse extends AbstractModel{
     private String ProductID;
 
     /**
-    * 消息类型
+    * 消息类型 1设备上报信息 2设备状态变化通知 3为全选
     */
     @SerializedName("MsgType")
     @Expose
     private Long MsgType;
 
     /**
-    * 结果
+    * 结果 2表示禁用 其他为成功
     */
     @SerializedName("Result")
     @Expose
@@ -162,32 +162,32 @@ public class DescribeForwardRuleResponse extends AbstractModel{
     }
 
     /**
-     * Get 消息类型 
-     * @return MsgType 消息类型
+     * Get 消息类型 1设备上报信息 2设备状态变化通知 3为全选 
+     * @return MsgType 消息类型 1设备上报信息 2设备状态变化通知 3为全选
      */
     public Long getMsgType() {
         return this.MsgType;
     }
 
     /**
-     * Set 消息类型
-     * @param MsgType 消息类型
+     * Set 消息类型 1设备上报信息 2设备状态变化通知 3为全选
+     * @param MsgType 消息类型 1设备上报信息 2设备状态变化通知 3为全选
      */
     public void setMsgType(Long MsgType) {
         this.MsgType = MsgType;
     }
 
     /**
-     * Get 结果 
-     * @return Result 结果
+     * Get 结果 2表示禁用 其他为成功 
+     * @return Result 结果 2表示禁用 其他为成功
      */
     public Long getResult() {
         return this.Result;
     }
 
     /**
-     * Set 结果
-     * @param Result 结果
+     * Set 结果 2表示禁用 其他为成功
+     * @param Result 结果 2表示禁用 其他为成功
      */
     public void setResult(Long Result) {
         this.Result = Result;

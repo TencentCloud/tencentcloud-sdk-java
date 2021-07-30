@@ -44,7 +44,7 @@ public class DescribeBalanceTransactionsRequest extends AbstractModel{
     private Long Limit;
 
     /**
-    * 流水类型：All-全部类型；Recharge-充值；CreateOrder-新购。
+    * 流水类型：All-全部类型；Recharge-充值；CreateOrder-新购。默认为All
     */
     @SerializedName("Operation")
     @Expose
@@ -99,16 +99,16 @@ public class DescribeBalanceTransactionsRequest extends AbstractModel{
     }
 
     /**
-     * Get 流水类型：All-全部类型；Recharge-充值；CreateOrder-新购。 
-     * @return Operation 流水类型：All-全部类型；Recharge-充值；CreateOrder-新购。
+     * Get 流水类型：All-全部类型；Recharge-充值；CreateOrder-新购。默认为All 
+     * @return Operation 流水类型：All-全部类型；Recharge-充值；CreateOrder-新购。默认为All
      */
     public String getOperation() {
         return this.Operation;
     }
 
     /**
-     * Set 流水类型：All-全部类型；Recharge-充值；CreateOrder-新购。
-     * @param Operation 流水类型：All-全部类型；Recharge-充值；CreateOrder-新购。
+     * Set 流水类型：All-全部类型；Recharge-充值；CreateOrder-新购。默认为All
+     * @param Operation 流水类型：All-全部类型；Recharge-充值；CreateOrder-新购。默认为All
      */
     public void setOperation(String Operation) {
         this.Operation = Operation;

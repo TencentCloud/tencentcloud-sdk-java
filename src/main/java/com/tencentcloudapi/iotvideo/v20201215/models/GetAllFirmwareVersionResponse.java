@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class GetAllFirmwareVersionResponse extends AbstractModel{
 
     /**
-    * 无
+    * 固件可用版本列表
     */
     @SerializedName("Version")
     @Expose
@@ -37,16 +37,16 @@ public class GetAllFirmwareVersionResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 无 
-     * @return Version 无
+     * Get 固件可用版本列表 
+     * @return Version 固件可用版本列表
      */
     public String [] getVersion() {
         return this.Version;
     }
 
     /**
-     * Set 无
-     * @param Version 无
+     * Set 固件可用版本列表
+     * @param Version 固件可用版本列表
      */
     public void setVersion(String [] Version) {
         this.Version = Version;

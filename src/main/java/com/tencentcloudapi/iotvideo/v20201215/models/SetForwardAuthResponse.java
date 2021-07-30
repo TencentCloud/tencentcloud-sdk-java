@@ -51,7 +51,7 @@ public class SetForwardAuthResponse extends AbstractModel{
     private Long RoleID;
 
     /**
-    * 消息队列类型
+    * 消息队列类型  0.CMQ 1.CKafka
     */
     @SerializedName("QueueType")
     @Expose
@@ -136,16 +136,16 @@ public class SetForwardAuthResponse extends AbstractModel{
     }
 
     /**
-     * Get 消息队列类型 
-     * @return QueueType 消息队列类型
+     * Get 消息队列类型  0.CMQ 1.CKafka 
+     * @return QueueType 消息队列类型  0.CMQ 1.CKafka
      */
     public Long getQueueType() {
         return this.QueueType;
     }
 
     /**
-     * Set 消息队列类型
-     * @param QueueType 消息队列类型
+     * Set 消息队列类型  0.CMQ 1.CKafka
+     * @param QueueType 消息队列类型  0.CMQ 1.CKafka
      */
     public void setQueueType(Long QueueType) {
         this.QueueType = QueueType;

@@ -44,6 +44,27 @@ public class DescribeCloudStorageTimeRequest extends AbstractModel{
     private String Date;
 
     /**
+    * 开始时间，unix时间
+    */
+    @SerializedName("StartTime")
+    @Expose
+    private Long StartTime;
+
+    /**
+    * 结束时间，unix时间
+    */
+    @SerializedName("EndTime")
+    @Expose
+    private Long EndTime;
+
+    /**
+    * 用户ID
+    */
+    @SerializedName("UserId")
+    @Expose
+    private String UserId;
+
+    /**
      * Get 产品ID 
      * @return ProductId 产品ID
      */
@@ -91,6 +112,54 @@ public class DescribeCloudStorageTimeRequest extends AbstractModel{
         this.Date = Date;
     }
 
+    /**
+     * Get 开始时间，unix时间 
+     * @return StartTime 开始时间，unix时间
+     */
+    public Long getStartTime() {
+        return this.StartTime;
+    }
+
+    /**
+     * Set 开始时间，unix时间
+     * @param StartTime 开始时间，unix时间
+     */
+    public void setStartTime(Long StartTime) {
+        this.StartTime = StartTime;
+    }
+
+    /**
+     * Get 结束时间，unix时间 
+     * @return EndTime 结束时间，unix时间
+     */
+    public Long getEndTime() {
+        return this.EndTime;
+    }
+
+    /**
+     * Set 结束时间，unix时间
+     * @param EndTime 结束时间，unix时间
+     */
+    public void setEndTime(Long EndTime) {
+        this.EndTime = EndTime;
+    }
+
+    /**
+     * Get 用户ID 
+     * @return UserId 用户ID
+     */
+    public String getUserId() {
+        return this.UserId;
+    }
+
+    /**
+     * Set 用户ID
+     * @param UserId 用户ID
+     */
+    public void setUserId(String UserId) {
+        this.UserId = UserId;
+    }
+
     public DescribeCloudStorageTimeRequest() {
     }
 
@@ -108,6 +177,15 @@ public class DescribeCloudStorageTimeRequest extends AbstractModel{
         if (source.Date != null) {
             this.Date = new String(source.Date);
         }
+        if (source.StartTime != null) {
+            this.StartTime = new Long(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new Long(source.EndTime);
+        }
+        if (source.UserId != null) {
+            this.UserId = new String(source.UserId);
+        }
     }
 
 
@@ -118,6 +196,9 @@ public class DescribeCloudStorageTimeRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ProductId", this.ProductId);
         this.setParamSimple(map, prefix + "DeviceName", this.DeviceName);
         this.setParamSimple(map, prefix + "Date", this.Date);
+        this.setParamSimple(map, prefix + "StartTime", this.StartTime);
+        this.setParamSimple(map, prefix + "EndTime", this.EndTime);
+        this.setParamSimple(map, prefix + "UserId", this.UserId);
 
     }
 }

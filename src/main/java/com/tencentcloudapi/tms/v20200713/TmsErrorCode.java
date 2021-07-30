@@ -1,5 +1,8 @@
 package com.tencentcloudapi.tms.v20200713;
 public enum TmsErrorCode {
+    // CAM签名/鉴权错误。
+     AUTHFAILURE("AuthFailure"),
+     
     // 内部错误。
      INTERNALERROR("InternalError"),
      
@@ -20,6 +23,9 @@ public enum TmsErrorCode {
      
     // 参数内容格式错误。
      INVALIDPARAMETER_INVALIDPARAMETERCONTENT("InvalidParameter.InvalidParameterContent"),
+     
+    // 参数取值错误。
+     INVALIDPARAMETERVALUE("InvalidParameterValue"),
      
     // 请求的文本格式错误（需要base64编码格式的文本）。
      INVALIDPARAMETERVALUE_ERRTEXTCONTENTTYPE("InvalidParameterValue.ErrTextContentType"),
@@ -50,6 +56,18 @@ public enum TmsErrorCode {
      
     // SenderIP参数错误。
      INVALIDPARAMETERVALUE_INVALIDSENDERIP("InvalidParameterValue.InvalidSenderIP"),
+     
+    // 超过配额限制。
+     LIMITEXCEEDED("LimitExceeded"),
+     
+    // 缺少参数错误。
+     MISSINGPARAMETER("MissingParameter"),
+     
+    // 资源被占用。
+     RESOURCEINUSE("ResourceInUse"),
+     
+    // 资源不存在。
+     RESOURCENOTFOUND("ResourceNotFound"),
      
     // 未获取到接口授权。
      UNAUTHORIZEDOPERATION_UNAUTHORIZED("UnauthorizedOperation.Unauthorized");

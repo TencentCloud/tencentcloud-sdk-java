@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class DescribeDeviceCommLogRequest extends AbstractModel{
 
     /**
-    * 开始时间
+    * 开始时间 13位时间戳 单位毫秒
     */
     @SerializedName("MinTime")
     @Expose
     private Long MinTime;
 
     /**
-    * 结束时间
+    * 结束时间 13位时间戳 单位毫秒
     */
     @SerializedName("MaxTime")
     @Expose
@@ -51,7 +51,7 @@ public class DescribeDeviceCommLogRequest extends AbstractModel{
     private String DeviceName;
 
     /**
-    * 返回条数
+    * 返回条数 默认为50
     */
     @SerializedName("Limit")
     @Expose
@@ -65,39 +65,39 @@ public class DescribeDeviceCommLogRequest extends AbstractModel{
     private String Context;
 
     /**
-    * 类型：shadow 下行，device 上行
+    * 类型：shadow 下行，device 上行 默认为空则全部查询
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-     * Get 开始时间 
-     * @return MinTime 开始时间
+     * Get 开始时间 13位时间戳 单位毫秒 
+     * @return MinTime 开始时间 13位时间戳 单位毫秒
      */
     public Long getMinTime() {
         return this.MinTime;
     }
 
     /**
-     * Set 开始时间
-     * @param MinTime 开始时间
+     * Set 开始时间 13位时间戳 单位毫秒
+     * @param MinTime 开始时间 13位时间戳 单位毫秒
      */
     public void setMinTime(Long MinTime) {
         this.MinTime = MinTime;
     }
 
     /**
-     * Get 结束时间 
-     * @return MaxTime 结束时间
+     * Get 结束时间 13位时间戳 单位毫秒 
+     * @return MaxTime 结束时间 13位时间戳 单位毫秒
      */
     public Long getMaxTime() {
         return this.MaxTime;
     }
 
     /**
-     * Set 结束时间
-     * @param MaxTime 结束时间
+     * Set 结束时间 13位时间戳 单位毫秒
+     * @param MaxTime 结束时间 13位时间戳 单位毫秒
      */
     public void setMaxTime(Long MaxTime) {
         this.MaxTime = MaxTime;
@@ -136,16 +136,16 @@ public class DescribeDeviceCommLogRequest extends AbstractModel{
     }
 
     /**
-     * Get 返回条数 
-     * @return Limit 返回条数
+     * Get 返回条数 默认为50 
+     * @return Limit 返回条数 默认为50
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 返回条数
-     * @param Limit 返回条数
+     * Set 返回条数 默认为50
+     * @param Limit 返回条数 默认为50
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
@@ -168,16 +168,16 @@ public class DescribeDeviceCommLogRequest extends AbstractModel{
     }
 
     /**
-     * Get 类型：shadow 下行，device 上行 
-     * @return Type 类型：shadow 下行，device 上行
+     * Get 类型：shadow 下行，device 上行 默认为空则全部查询 
+     * @return Type 类型：shadow 下行，device 上行 默认为空则全部查询
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 类型：shadow 下行，device 上行
-     * @param Type 类型：shadow 下行，device 上行
+     * Set 类型：shadow 下行，device 上行 默认为空则全部查询
+     * @param Type 类型：shadow 下行，device 上行 默认为空则全部查询
      */
     public void setType(String Type) {
         this.Type = Type;

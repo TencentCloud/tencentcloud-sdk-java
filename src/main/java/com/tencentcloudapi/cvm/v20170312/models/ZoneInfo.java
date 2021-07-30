@@ -30,7 +30,7 @@ public class ZoneInfo extends AbstractModel{
 <li> ap-seoul-2 </li>
 <li> ap-chengdu-1 </li>
 <li> ap-chengdu-2 </li>
-<li> ap-hongkong-1 </li>
+<li> ap-hongkong-1（售罄） </li>
 <li> ap-hongkong-2 </li>
 <li> ap-hongkong-3 </li>
 <li> ap-shenzhen-fsi-1 </li>
@@ -41,6 +41,7 @@ public class ZoneInfo extends AbstractModel{
 <li> ap-guangzhou-3 </li>
 <li> ap-guangzhou-4 </li>
 <li> ap-guangzhou-6 </li>
+<li> ap-guangzhou-7 </li>
 <li> ap-tokyo-1 </li>
 <li> ap-tokyo-2 </li>
 <li> ap-singapore-1 </li>
@@ -50,6 +51,7 @@ public class ZoneInfo extends AbstractModel{
 <li> ap-shanghai-fsi-2 </li>
 <li> ap-shanghai-fsi-3 </li>
 <li> ap-bangkok-1 </li>
+<li> ap-bangkok-2 </li>
 <li> ap-shanghai-1（售罄） </li>
 <li> ap-shanghai-2 </li>
 <li> ap-shanghai-3 </li>
@@ -74,7 +76,6 @@ public class ZoneInfo extends AbstractModel{
 <li> na-ashburn-2 </li>
 <li> ap-nanjing-1 </li>
 <li> ap-nanjing-2 </li>
-<li> ap-jakarta-1 </li>
     */
     @SerializedName("Zone")
     @Expose
@@ -109,7 +110,7 @@ public class ZoneInfo extends AbstractModel{
 <li> ap-seoul-2 </li>
 <li> ap-chengdu-1 </li>
 <li> ap-chengdu-2 </li>
-<li> ap-hongkong-1 </li>
+<li> ap-hongkong-1（售罄） </li>
 <li> ap-hongkong-2 </li>
 <li> ap-hongkong-3 </li>
 <li> ap-shenzhen-fsi-1 </li>
@@ -120,6 +121,7 @@ public class ZoneInfo extends AbstractModel{
 <li> ap-guangzhou-3 </li>
 <li> ap-guangzhou-4 </li>
 <li> ap-guangzhou-6 </li>
+<li> ap-guangzhou-7 </li>
 <li> ap-tokyo-1 </li>
 <li> ap-tokyo-2 </li>
 <li> ap-singapore-1 </li>
@@ -129,6 +131,7 @@ public class ZoneInfo extends AbstractModel{
 <li> ap-shanghai-fsi-2 </li>
 <li> ap-shanghai-fsi-3 </li>
 <li> ap-bangkok-1 </li>
+<li> ap-bangkok-2 </li>
 <li> ap-shanghai-1（售罄） </li>
 <li> ap-shanghai-2 </li>
 <li> ap-shanghai-3 </li>
@@ -152,8 +155,7 @@ public class ZoneInfo extends AbstractModel{
 <li> na-ashburn-1 </li>
 <li> na-ashburn-2 </li>
 <li> ap-nanjing-1 </li>
-<li> ap-nanjing-2 </li>
-<li> ap-jakarta-1 </li> 
+<li> ap-nanjing-2 </li> 
      * @return Zone 可用区名称，例如，ap-guangzhou-3
 全网可用区名称如下：
 <li> ap-chongqing-1 </li>
@@ -161,7 +163,7 @@ public class ZoneInfo extends AbstractModel{
 <li> ap-seoul-2 </li>
 <li> ap-chengdu-1 </li>
 <li> ap-chengdu-2 </li>
-<li> ap-hongkong-1 </li>
+<li> ap-hongkong-1（售罄） </li>
 <li> ap-hongkong-2 </li>
 <li> ap-hongkong-3 </li>
 <li> ap-shenzhen-fsi-1 </li>
@@ -172,6 +174,7 @@ public class ZoneInfo extends AbstractModel{
 <li> ap-guangzhou-3 </li>
 <li> ap-guangzhou-4 </li>
 <li> ap-guangzhou-6 </li>
+<li> ap-guangzhou-7 </li>
 <li> ap-tokyo-1 </li>
 <li> ap-tokyo-2 </li>
 <li> ap-singapore-1 </li>
@@ -181,6 +184,7 @@ public class ZoneInfo extends AbstractModel{
 <li> ap-shanghai-fsi-2 </li>
 <li> ap-shanghai-fsi-3 </li>
 <li> ap-bangkok-1 </li>
+<li> ap-bangkok-2 </li>
 <li> ap-shanghai-1（售罄） </li>
 <li> ap-shanghai-2 </li>
 <li> ap-shanghai-3 </li>
@@ -205,7 +209,6 @@ public class ZoneInfo extends AbstractModel{
 <li> na-ashburn-2 </li>
 <li> ap-nanjing-1 </li>
 <li> ap-nanjing-2 </li>
-<li> ap-jakarta-1 </li>
      */
     public String getZone() {
         return this.Zone;
@@ -219,7 +222,7 @@ public class ZoneInfo extends AbstractModel{
 <li> ap-seoul-2 </li>
 <li> ap-chengdu-1 </li>
 <li> ap-chengdu-2 </li>
-<li> ap-hongkong-1 </li>
+<li> ap-hongkong-1（售罄） </li>
 <li> ap-hongkong-2 </li>
 <li> ap-hongkong-3 </li>
 <li> ap-shenzhen-fsi-1 </li>
@@ -230,6 +233,7 @@ public class ZoneInfo extends AbstractModel{
 <li> ap-guangzhou-3 </li>
 <li> ap-guangzhou-4 </li>
 <li> ap-guangzhou-6 </li>
+<li> ap-guangzhou-7 </li>
 <li> ap-tokyo-1 </li>
 <li> ap-tokyo-2 </li>
 <li> ap-singapore-1 </li>
@@ -239,6 +243,7 @@ public class ZoneInfo extends AbstractModel{
 <li> ap-shanghai-fsi-2 </li>
 <li> ap-shanghai-fsi-3 </li>
 <li> ap-bangkok-1 </li>
+<li> ap-bangkok-2 </li>
 <li> ap-shanghai-1（售罄） </li>
 <li> ap-shanghai-2 </li>
 <li> ap-shanghai-3 </li>
@@ -263,7 +268,6 @@ public class ZoneInfo extends AbstractModel{
 <li> na-ashburn-2 </li>
 <li> ap-nanjing-1 </li>
 <li> ap-nanjing-2 </li>
-<li> ap-jakarta-1 </li>
      * @param Zone 可用区名称，例如，ap-guangzhou-3
 全网可用区名称如下：
 <li> ap-chongqing-1 </li>
@@ -271,7 +275,7 @@ public class ZoneInfo extends AbstractModel{
 <li> ap-seoul-2 </li>
 <li> ap-chengdu-1 </li>
 <li> ap-chengdu-2 </li>
-<li> ap-hongkong-1 </li>
+<li> ap-hongkong-1（售罄） </li>
 <li> ap-hongkong-2 </li>
 <li> ap-hongkong-3 </li>
 <li> ap-shenzhen-fsi-1 </li>
@@ -282,6 +286,7 @@ public class ZoneInfo extends AbstractModel{
 <li> ap-guangzhou-3 </li>
 <li> ap-guangzhou-4 </li>
 <li> ap-guangzhou-6 </li>
+<li> ap-guangzhou-7 </li>
 <li> ap-tokyo-1 </li>
 <li> ap-tokyo-2 </li>
 <li> ap-singapore-1 </li>
@@ -291,6 +296,7 @@ public class ZoneInfo extends AbstractModel{
 <li> ap-shanghai-fsi-2 </li>
 <li> ap-shanghai-fsi-3 </li>
 <li> ap-bangkok-1 </li>
+<li> ap-bangkok-2 </li>
 <li> ap-shanghai-1（售罄） </li>
 <li> ap-shanghai-2 </li>
 <li> ap-shanghai-3 </li>
@@ -315,7 +321,6 @@ public class ZoneInfo extends AbstractModel{
 <li> na-ashburn-2 </li>
 <li> ap-nanjing-1 </li>
 <li> ap-nanjing-2 </li>
-<li> ap-jakarta-1 </li>
      */
     public void setZone(String Zone) {
         this.Zone = Zone;

@@ -130,6 +130,14 @@ public class Blueprint extends AbstractModel{
     private Long RequiredMemorySize;
 
     /**
+    * CVM镜像共享到轻量应用服务器轻量应用服务器后的CVM镜像ID。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ImageId")
+    @Expose
+    private String ImageId;
+
+    /**
      * Get 镜像 ID  ，是 Blueprint 的唯一标识。 
      * @return BlueprintId 镜像 ID  ，是 Blueprint 的唯一标识。
      */
@@ -377,6 +385,26 @@ public class Blueprint extends AbstractModel{
         this.RequiredMemorySize = RequiredMemorySize;
     }
 
+    /**
+     * Get CVM镜像共享到轻量应用服务器轻量应用服务器后的CVM镜像ID。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ImageId CVM镜像共享到轻量应用服务器轻量应用服务器后的CVM镜像ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getImageId() {
+        return this.ImageId;
+    }
+
+    /**
+     * Set CVM镜像共享到轻量应用服务器轻量应用服务器后的CVM镜像ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ImageId CVM镜像共享到轻量应用服务器轻量应用服务器后的CVM镜像ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setImageId(String ImageId) {
+        this.ImageId = ImageId;
+    }
+
     public Blueprint() {
     }
 
@@ -430,6 +458,9 @@ public class Blueprint extends AbstractModel{
         if (source.RequiredMemorySize != null) {
             this.RequiredMemorySize = new Long(source.RequiredMemorySize);
         }
+        if (source.ImageId != null) {
+            this.ImageId = new String(source.ImageId);
+        }
     }
 
 
@@ -452,6 +483,7 @@ public class Blueprint extends AbstractModel{
         this.setParamSimple(map, prefix + "BlueprintName", this.BlueprintName);
         this.setParamSimple(map, prefix + "SupportAutomationTools", this.SupportAutomationTools);
         this.setParamSimple(map, prefix + "RequiredMemorySize", this.RequiredMemorySize);
+        this.setParamSimple(map, prefix + "ImageId", this.ImageId);
 
     }
 }

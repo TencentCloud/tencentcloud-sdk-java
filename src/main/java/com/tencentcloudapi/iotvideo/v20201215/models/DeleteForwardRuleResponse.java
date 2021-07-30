@@ -44,7 +44,7 @@ public class DeleteForwardRuleResponse extends AbstractModel{
     private String ProductID;
 
     /**
-    * 删除结果
+    * 删除结果 0成功 其他不成功
     */
     @SerializedName("Result")
     @Expose
@@ -113,16 +113,16 @@ public class DeleteForwardRuleResponse extends AbstractModel{
     }
 
     /**
-     * Get 删除结果 
-     * @return Result 删除结果
+     * Get 删除结果 0成功 其他不成功 
+     * @return Result 删除结果 0成功 其他不成功
      */
     public Long getResult() {
         return this.Result;
     }
 
     /**
-     * Set 删除结果
-     * @param Result 删除结果
+     * Set 删除结果 0成功 其他不成功
+     * @param Result 删除结果 0成功 其他不成功
      */
     public void setResult(Long Result) {
         this.Result = Result;

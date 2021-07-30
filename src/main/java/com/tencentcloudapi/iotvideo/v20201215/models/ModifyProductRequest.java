@@ -30,14 +30,14 @@ public class ModifyProductRequest extends AbstractModel{
     private String ProductId;
 
     /**
-    * 修改的产品名称
+    * 修改的产品名称 （支持中文、英文、数字、下划线组合，最多不超过20个字符）
     */
     @SerializedName("ProductName")
     @Expose
     private String ProductName;
 
     /**
-    * 修改的产品描述
+    * 修改的产品描述 （最多不超过128个字符）
     */
     @SerializedName("ProductDescription")
     @Expose
@@ -60,32 +60,32 @@ public class ModifyProductRequest extends AbstractModel{
     }
 
     /**
-     * Get 修改的产品名称 
-     * @return ProductName 修改的产品名称
+     * Get 修改的产品名称 （支持中文、英文、数字、下划线组合，最多不超过20个字符） 
+     * @return ProductName 修改的产品名称 （支持中文、英文、数字、下划线组合，最多不超过20个字符）
      */
     public String getProductName() {
         return this.ProductName;
     }
 
     /**
-     * Set 修改的产品名称
-     * @param ProductName 修改的产品名称
+     * Set 修改的产品名称 （支持中文、英文、数字、下划线组合，最多不超过20个字符）
+     * @param ProductName 修改的产品名称 （支持中文、英文、数字、下划线组合，最多不超过20个字符）
      */
     public void setProductName(String ProductName) {
         this.ProductName = ProductName;
     }
 
     /**
-     * Get 修改的产品描述 
-     * @return ProductDescription 修改的产品描述
+     * Get 修改的产品描述 （最多不超过128个字符） 
+     * @return ProductDescription 修改的产品描述 （最多不超过128个字符）
      */
     public String getProductDescription() {
         return this.ProductDescription;
     }
 
     /**
-     * Set 修改的产品描述
-     * @param ProductDescription 修改的产品描述
+     * Set 修改的产品描述 （最多不超过128个字符）
+     * @param ProductDescription 修改的产品描述 （最多不超过128个字符）
      */
     public void setProductDescription(String ProductDescription) {
         this.ProductDescription = ProductDescription;

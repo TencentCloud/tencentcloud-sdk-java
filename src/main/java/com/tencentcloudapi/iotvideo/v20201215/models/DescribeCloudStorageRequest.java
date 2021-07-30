@@ -37,6 +37,13 @@ public class DescribeCloudStorageRequest extends AbstractModel{
     private String DeviceName;
 
     /**
+    * 云存用户ID
+    */
+    @SerializedName("UserId")
+    @Expose
+    private String UserId;
+
+    /**
      * Get 产品ID 
      * @return ProductId 产品ID
      */
@@ -68,6 +75,22 @@ public class DescribeCloudStorageRequest extends AbstractModel{
         this.DeviceName = DeviceName;
     }
 
+    /**
+     * Get 云存用户ID 
+     * @return UserId 云存用户ID
+     */
+    public String getUserId() {
+        return this.UserId;
+    }
+
+    /**
+     * Set 云存用户ID
+     * @param UserId 云存用户ID
+     */
+    public void setUserId(String UserId) {
+        this.UserId = UserId;
+    }
+
     public DescribeCloudStorageRequest() {
     }
 
@@ -82,6 +105,9 @@ public class DescribeCloudStorageRequest extends AbstractModel{
         if (source.DeviceName != null) {
             this.DeviceName = new String(source.DeviceName);
         }
+        if (source.UserId != null) {
+            this.UserId = new String(source.UserId);
+        }
     }
 
 
@@ -91,6 +117,7 @@ public class DescribeCloudStorageRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ProductId", this.ProductId);
         this.setParamSimple(map, prefix + "DeviceName", this.DeviceName);
+        this.setParamSimple(map, prefix + "UserId", this.UserId);
 
     }
 }

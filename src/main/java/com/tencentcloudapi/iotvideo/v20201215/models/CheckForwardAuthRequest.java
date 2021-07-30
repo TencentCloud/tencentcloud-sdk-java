@@ -30,7 +30,7 @@ public class CheckForwardAuthRequest extends AbstractModel{
     private String Skey;
 
     /**
-    * 队列类型
+    * 队列类型 0.CMQ  1.Ckafka
     */
     @SerializedName("QueueType")
     @Expose
@@ -53,16 +53,16 @@ public class CheckForwardAuthRequest extends AbstractModel{
     }
 
     /**
-     * Get 队列类型 
-     * @return QueueType 队列类型
+     * Get 队列类型 0.CMQ  1.Ckafka 
+     * @return QueueType 队列类型 0.CMQ  1.Ckafka
      */
     public Long getQueueType() {
         return this.QueueType;
     }
 
     /**
-     * Set 队列类型
-     * @param QueueType 队列类型
+     * Set 队列类型 0.CMQ  1.Ckafka
+     * @param QueueType 队列类型 0.CMQ  1.Ckafka
      */
     public void setQueueType(Long QueueType) {
         this.QueueType = QueueType;

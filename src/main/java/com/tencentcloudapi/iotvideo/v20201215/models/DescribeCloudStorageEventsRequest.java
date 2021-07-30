@@ -72,6 +72,13 @@ public class DescribeCloudStorageEventsRequest extends AbstractModel{
     private String EventId;
 
     /**
+    * 用户ID
+    */
+    @SerializedName("UserId")
+    @Expose
+    private String UserId;
+
+    /**
      * Get 产品ID 
      * @return ProductId 产品ID
      */
@@ -183,6 +190,22 @@ public class DescribeCloudStorageEventsRequest extends AbstractModel{
         this.EventId = EventId;
     }
 
+    /**
+     * Get 用户ID 
+     * @return UserId 用户ID
+     */
+    public String getUserId() {
+        return this.UserId;
+    }
+
+    /**
+     * Set 用户ID
+     * @param UserId 用户ID
+     */
+    public void setUserId(String UserId) {
+        this.UserId = UserId;
+    }
+
     public DescribeCloudStorageEventsRequest() {
     }
 
@@ -212,6 +235,9 @@ public class DescribeCloudStorageEventsRequest extends AbstractModel{
         if (source.EventId != null) {
             this.EventId = new String(source.EventId);
         }
+        if (source.UserId != null) {
+            this.UserId = new String(source.UserId);
+        }
     }
 
 
@@ -226,6 +252,7 @@ public class DescribeCloudStorageEventsRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Context", this.Context);
         this.setParamSimple(map, prefix + "Size", this.Size);
         this.setParamSimple(map, prefix + "EventId", this.EventId);
+        this.setParamSimple(map, prefix + "UserId", this.UserId);
 
     }
 }

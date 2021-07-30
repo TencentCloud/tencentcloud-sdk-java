@@ -7,7 +7,10 @@ public enum BaErrorCode {
      INVALIDPARAMETER("InvalidParameter"),
      
     // 参数取值错误。
-     INVALIDPARAMETERVALUE("InvalidParameterValue");
+     INVALIDPARAMETERVALUE("InvalidParameterValue"),
+     
+    // 资源不可用。
+     RESOURCEUNAVAILABLE("ResourceUnavailable");
      
     private String value;
     private BaErrorCode (String value){
