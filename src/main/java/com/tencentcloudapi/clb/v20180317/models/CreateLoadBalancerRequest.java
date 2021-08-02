@@ -46,28 +46,28 @@ OPEN：公网属性， INTERNAL：内网属性。
     private String LoadBalancerName;
 
     /**
-    * 负载均衡后端目标设备所属的网络 ID，如vpc-12345678，可以通过 DescribeVpcEx 接口获取。 不传此参数则默认为基础网络（"0"）。
+    * 负载均衡后端目标设备所属的网络 ID，如vpc-12345678，可以通过 [DescribeVpcEx](https://cloud.tencent.com/document/product/215/1372) 接口获取。 不填此参数则默认为DefaultVPC。创建内网负载均衡实例时，此参数必填。
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * 在私有网络内购买内网负载均衡实例的情况下，必须指定子网 ID，内网负载均衡实例的 VIP 将从这个子网中产生。
+    * 在私有网络内购买内网负载均衡实例的情况下，必须指定子网 ID，内网负载均衡实例的 VIP 将从这个子网中产生。创建内网负载均衡实例时，此参数必填。
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-    * 负载均衡实例所属的项目 ID，可以通过 DescribeProject 接口获取。不传此参数则视为默认项目。
+    * 负载均衡实例所属的项目 ID，可以通过 [DescribeProject](https://cloud.tencent.com/document/product/378/4400) 接口获取。不填此参数则视为默认项目。
     */
     @SerializedName("ProjectId")
     @Expose
     private Long ProjectId;
 
     /**
-    * 仅适用于公网负载均衡。IP版本，可取值：IPV4、IPV6、IPv6FullChain，默认值 IPV4。
+    * 仅适用于公网负载均衡。IP版本，可取值：IPV4、IPV6、IPv6FullChain，默认值 IPV4。说明：取值为IPV6表示为IPV6 NAT64版本；取值为IPv6FullChain，表示为IPv6版本。
     */
     @SerializedName("AddressIPVersion")
     @Expose
@@ -110,14 +110,17 @@ OPEN：公网属性， INTERNAL：内网属性。
     private String VipIsp;
 
     /**
-    * 购买负载均衡同时，给负载均衡打上标签。
+    * 购买负载均衡的同时，给负载均衡打上标签。
     */
     @SerializedName("Tags")
     @Expose
     private TagInfo [] Tags;
 
     /**
-    * 指定Vip申请负载均衡。
+    * 指定VIP申请负载均衡。指定此参数后：
+<ul><li>若创建共享型集群的公网负载均衡实例，则上述的VpcId选填，若实例是IPv6类型的，则SubnetId必填；若是IPv4、IPv6 NAT64类型，则SubnetId不填。</li>
+<li>若创建独占型集群的公网负载均衡实例，则上述的VpcId选填，若实例是IPv6类型的，则SubnetId必填；若是IPv4、IPv6 NAT64类型，则SubnetId不填。
+</li></ul>
     */
     @SerializedName("Vip")
     @Expose
@@ -131,7 +134,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     private String BandwidthPackageId;
 
     /**
-    * 独占集群信息。
+    * 独占集群信息。若创建独占集群负载均衡实例，则此参数必填。
     */
     @SerializedName("ExclusiveCluster")
     @Expose
@@ -237,64 +240,64 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
-     * Get 负载均衡后端目标设备所属的网络 ID，如vpc-12345678，可以通过 DescribeVpcEx 接口获取。 不传此参数则默认为基础网络（"0"）。 
-     * @return VpcId 负载均衡后端目标设备所属的网络 ID，如vpc-12345678，可以通过 DescribeVpcEx 接口获取。 不传此参数则默认为基础网络（"0"）。
+     * Get 负载均衡后端目标设备所属的网络 ID，如vpc-12345678，可以通过 [DescribeVpcEx](https://cloud.tencent.com/document/product/215/1372) 接口获取。 不填此参数则默认为DefaultVPC。创建内网负载均衡实例时，此参数必填。 
+     * @return VpcId 负载均衡后端目标设备所属的网络 ID，如vpc-12345678，可以通过 [DescribeVpcEx](https://cloud.tencent.com/document/product/215/1372) 接口获取。 不填此参数则默认为DefaultVPC。创建内网负载均衡实例时，此参数必填。
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set 负载均衡后端目标设备所属的网络 ID，如vpc-12345678，可以通过 DescribeVpcEx 接口获取。 不传此参数则默认为基础网络（"0"）。
-     * @param VpcId 负载均衡后端目标设备所属的网络 ID，如vpc-12345678，可以通过 DescribeVpcEx 接口获取。 不传此参数则默认为基础网络（"0"）。
+     * Set 负载均衡后端目标设备所属的网络 ID，如vpc-12345678，可以通过 [DescribeVpcEx](https://cloud.tencent.com/document/product/215/1372) 接口获取。 不填此参数则默认为DefaultVPC。创建内网负载均衡实例时，此参数必填。
+     * @param VpcId 负载均衡后端目标设备所属的网络 ID，如vpc-12345678，可以通过 [DescribeVpcEx](https://cloud.tencent.com/document/product/215/1372) 接口获取。 不填此参数则默认为DefaultVPC。创建内网负载均衡实例时，此参数必填。
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 在私有网络内购买内网负载均衡实例的情况下，必须指定子网 ID，内网负载均衡实例的 VIP 将从这个子网中产生。 
-     * @return SubnetId 在私有网络内购买内网负载均衡实例的情况下，必须指定子网 ID，内网负载均衡实例的 VIP 将从这个子网中产生。
+     * Get 在私有网络内购买内网负载均衡实例的情况下，必须指定子网 ID，内网负载均衡实例的 VIP 将从这个子网中产生。创建内网负载均衡实例时，此参数必填。 
+     * @return SubnetId 在私有网络内购买内网负载均衡实例的情况下，必须指定子网 ID，内网负载均衡实例的 VIP 将从这个子网中产生。创建内网负载均衡实例时，此参数必填。
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set 在私有网络内购买内网负载均衡实例的情况下，必须指定子网 ID，内网负载均衡实例的 VIP 将从这个子网中产生。
-     * @param SubnetId 在私有网络内购买内网负载均衡实例的情况下，必须指定子网 ID，内网负载均衡实例的 VIP 将从这个子网中产生。
+     * Set 在私有网络内购买内网负载均衡实例的情况下，必须指定子网 ID，内网负载均衡实例的 VIP 将从这个子网中产生。创建内网负载均衡实例时，此参数必填。
+     * @param SubnetId 在私有网络内购买内网负载均衡实例的情况下，必须指定子网 ID，内网负载均衡实例的 VIP 将从这个子网中产生。创建内网负载均衡实例时，此参数必填。
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get 负载均衡实例所属的项目 ID，可以通过 DescribeProject 接口获取。不传此参数则视为默认项目。 
-     * @return ProjectId 负载均衡实例所属的项目 ID，可以通过 DescribeProject 接口获取。不传此参数则视为默认项目。
+     * Get 负载均衡实例所属的项目 ID，可以通过 [DescribeProject](https://cloud.tencent.com/document/product/378/4400) 接口获取。不填此参数则视为默认项目。 
+     * @return ProjectId 负载均衡实例所属的项目 ID，可以通过 [DescribeProject](https://cloud.tencent.com/document/product/378/4400) 接口获取。不填此参数则视为默认项目。
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 负载均衡实例所属的项目 ID，可以通过 DescribeProject 接口获取。不传此参数则视为默认项目。
-     * @param ProjectId 负载均衡实例所属的项目 ID，可以通过 DescribeProject 接口获取。不传此参数则视为默认项目。
+     * Set 负载均衡实例所属的项目 ID，可以通过 [DescribeProject](https://cloud.tencent.com/document/product/378/4400) 接口获取。不填此参数则视为默认项目。
+     * @param ProjectId 负载均衡实例所属的项目 ID，可以通过 [DescribeProject](https://cloud.tencent.com/document/product/378/4400) 接口获取。不填此参数则视为默认项目。
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get 仅适用于公网负载均衡。IP版本，可取值：IPV4、IPV6、IPv6FullChain，默认值 IPV4。 
-     * @return AddressIPVersion 仅适用于公网负载均衡。IP版本，可取值：IPV4、IPV6、IPv6FullChain，默认值 IPV4。
+     * Get 仅适用于公网负载均衡。IP版本，可取值：IPV4、IPV6、IPv6FullChain，默认值 IPV4。说明：取值为IPV6表示为IPV6 NAT64版本；取值为IPv6FullChain，表示为IPv6版本。 
+     * @return AddressIPVersion 仅适用于公网负载均衡。IP版本，可取值：IPV4、IPV6、IPv6FullChain，默认值 IPV4。说明：取值为IPV6表示为IPV6 NAT64版本；取值为IPv6FullChain，表示为IPv6版本。
      */
     public String getAddressIPVersion() {
         return this.AddressIPVersion;
     }
 
     /**
-     * Set 仅适用于公网负载均衡。IP版本，可取值：IPV4、IPV6、IPv6FullChain，默认值 IPV4。
-     * @param AddressIPVersion 仅适用于公网负载均衡。IP版本，可取值：IPV4、IPV6、IPv6FullChain，默认值 IPV4。
+     * Set 仅适用于公网负载均衡。IP版本，可取值：IPV4、IPV6、IPv6FullChain，默认值 IPV4。说明：取值为IPV6表示为IPV6 NAT64版本；取值为IPv6FullChain，表示为IPv6版本。
+     * @param AddressIPVersion 仅适用于公网负载均衡。IP版本，可取值：IPV4、IPV6、IPv6FullChain，默认值 IPV4。说明：取值为IPV6表示为IPV6 NAT64版本；取值为IPv6FullChain，表示为IPv6版本。
      */
     public void setAddressIPVersion(String AddressIPVersion) {
         this.AddressIPVersion = AddressIPVersion;
@@ -385,32 +388,44 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
-     * Get 购买负载均衡同时，给负载均衡打上标签。 
-     * @return Tags 购买负载均衡同时，给负载均衡打上标签。
+     * Get 购买负载均衡的同时，给负载均衡打上标签。 
+     * @return Tags 购买负载均衡的同时，给负载均衡打上标签。
      */
     public TagInfo [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 购买负载均衡同时，给负载均衡打上标签。
-     * @param Tags 购买负载均衡同时，给负载均衡打上标签。
+     * Set 购买负载均衡的同时，给负载均衡打上标签。
+     * @param Tags 购买负载均衡的同时，给负载均衡打上标签。
      */
     public void setTags(TagInfo [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 指定Vip申请负载均衡。 
-     * @return Vip 指定Vip申请负载均衡。
+     * Get 指定VIP申请负载均衡。指定此参数后：
+<ul><li>若创建共享型集群的公网负载均衡实例，则上述的VpcId选填，若实例是IPv6类型的，则SubnetId必填；若是IPv4、IPv6 NAT64类型，则SubnetId不填。</li>
+<li>若创建独占型集群的公网负载均衡实例，则上述的VpcId选填，若实例是IPv6类型的，则SubnetId必填；若是IPv4、IPv6 NAT64类型，则SubnetId不填。
+</li></ul> 
+     * @return Vip 指定VIP申请负载均衡。指定此参数后：
+<ul><li>若创建共享型集群的公网负载均衡实例，则上述的VpcId选填，若实例是IPv6类型的，则SubnetId必填；若是IPv4、IPv6 NAT64类型，则SubnetId不填。</li>
+<li>若创建独占型集群的公网负载均衡实例，则上述的VpcId选填，若实例是IPv6类型的，则SubnetId必填；若是IPv4、IPv6 NAT64类型，则SubnetId不填。
+</li></ul>
      */
     public String getVip() {
         return this.Vip;
     }
 
     /**
-     * Set 指定Vip申请负载均衡。
-     * @param Vip 指定Vip申请负载均衡。
+     * Set 指定VIP申请负载均衡。指定此参数后：
+<ul><li>若创建共享型集群的公网负载均衡实例，则上述的VpcId选填，若实例是IPv6类型的，则SubnetId必填；若是IPv4、IPv6 NAT64类型，则SubnetId不填。</li>
+<li>若创建独占型集群的公网负载均衡实例，则上述的VpcId选填，若实例是IPv6类型的，则SubnetId必填；若是IPv4、IPv6 NAT64类型，则SubnetId不填。
+</li></ul>
+     * @param Vip 指定VIP申请负载均衡。指定此参数后：
+<ul><li>若创建共享型集群的公网负载均衡实例，则上述的VpcId选填，若实例是IPv6类型的，则SubnetId必填；若是IPv4、IPv6 NAT64类型，则SubnetId不填。</li>
+<li>若创建独占型集群的公网负载均衡实例，则上述的VpcId选填，若实例是IPv6类型的，则SubnetId必填；若是IPv4、IPv6 NAT64类型，则SubnetId不填。
+</li></ul>
      */
     public void setVip(String Vip) {
         this.Vip = Vip;
@@ -433,16 +448,16 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
-     * Get 独占集群信息。 
-     * @return ExclusiveCluster 独占集群信息。
+     * Get 独占集群信息。若创建独占集群负载均衡实例，则此参数必填。 
+     * @return ExclusiveCluster 独占集群信息。若创建独占集群负载均衡实例，则此参数必填。
      */
     public ExclusiveCluster getExclusiveCluster() {
         return this.ExclusiveCluster;
     }
 
     /**
-     * Set 独占集群信息。
-     * @param ExclusiveCluster 独占集群信息。
+     * Set 独占集群信息。若创建独占集群负载均衡实例，则此参数必填。
+     * @param ExclusiveCluster 独占集群信息。若创建独占集群负载均衡实例，则此参数必填。
      */
     public void setExclusiveCluster(ExclusiveCluster ExclusiveCluster) {
         this.ExclusiveCluster = ExclusiveCluster;

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class Tag extends AbstractModel{
 
     /**
-    * 标签的键。
+    * 标签健。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Key")
@@ -31,7 +31,7 @@ public class Tag extends AbstractModel{
     private String Key;
 
     /**
-    * 标签的值。
+    * 标签值。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Value")
@@ -39,9 +39,9 @@ public class Tag extends AbstractModel{
     private String Value;
 
     /**
-     * Get 标签的键。
+     * Get 标签健。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Key 标签的键。
+     * @return Key 标签健。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getKey() {
@@ -49,9 +49,9 @@ public class Tag extends AbstractModel{
     }
 
     /**
-     * Set 标签的键。
+     * Set 标签健。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Key 标签的键。
+     * @param Key 标签健。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKey(String Key) {
@@ -59,9 +59,9 @@ public class Tag extends AbstractModel{
     }
 
     /**
-     * Get 标签的值。
+     * Get 标签值。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Value 标签的值。
+     * @return Value 标签值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getValue() {
@@ -69,9 +69,9 @@ public class Tag extends AbstractModel{
     }
 
     /**
-     * Set 标签的值。
+     * Set 标签值。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Value 标签的值。
+     * @param Value 标签值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValue(String Value) {

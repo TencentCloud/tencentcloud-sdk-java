@@ -45,17 +45,6 @@ public class CommonMixLayoutParams extends AbstractModel{
     private Long InputType;
 
     /**
-    * 输入画面在输出时的宽度。取值范围：
-像素：[0，2000]
-百分比：[0.01，0.99]
-不填默认为输入流的宽度。
-使用百分比时，期望输出为（百分比 * 背景宽）。
-    */
-    @SerializedName("ImageWidth")
-    @Expose
-    private Float ImageWidth;
-
-    /**
     * 输入画面在输出时的高度。取值范围：
 像素：[0，2000]
 百分比：[0.01，0.99]
@@ -65,6 +54,17 @@ public class CommonMixLayoutParams extends AbstractModel{
     @SerializedName("ImageHeight")
     @Expose
     private Float ImageHeight;
+
+    /**
+    * 输入画面在输出时的宽度。取值范围：
+像素：[0，2000]
+百分比：[0.01，0.99]
+不填默认为输入流的宽度。
+使用百分比时，期望输出为（百分比 * 背景宽）。
+    */
+    @SerializedName("ImageWidth")
+    @Expose
+    private Float ImageWidth;
 
     /**
     * 输入在输出画面的X偏移。取值范围：
@@ -177,38 +177,6 @@ public class CommonMixLayoutParams extends AbstractModel{
     }
 
     /**
-     * Get 输入画面在输出时的宽度。取值范围：
-像素：[0，2000]
-百分比：[0.01，0.99]
-不填默认为输入流的宽度。
-使用百分比时，期望输出为（百分比 * 背景宽）。 
-     * @return ImageWidth 输入画面在输出时的宽度。取值范围：
-像素：[0，2000]
-百分比：[0.01，0.99]
-不填默认为输入流的宽度。
-使用百分比时，期望输出为（百分比 * 背景宽）。
-     */
-    public Float getImageWidth() {
-        return this.ImageWidth;
-    }
-
-    /**
-     * Set 输入画面在输出时的宽度。取值范围：
-像素：[0，2000]
-百分比：[0.01，0.99]
-不填默认为输入流的宽度。
-使用百分比时，期望输出为（百分比 * 背景宽）。
-     * @param ImageWidth 输入画面在输出时的宽度。取值范围：
-像素：[0，2000]
-百分比：[0.01，0.99]
-不填默认为输入流的宽度。
-使用百分比时，期望输出为（百分比 * 背景宽）。
-     */
-    public void setImageWidth(Float ImageWidth) {
-        this.ImageWidth = ImageWidth;
-    }
-
-    /**
      * Get 输入画面在输出时的高度。取值范围：
 像素：[0，2000]
 百分比：[0.01，0.99]
@@ -238,6 +206,38 @@ public class CommonMixLayoutParams extends AbstractModel{
      */
     public void setImageHeight(Float ImageHeight) {
         this.ImageHeight = ImageHeight;
+    }
+
+    /**
+     * Get 输入画面在输出时的宽度。取值范围：
+像素：[0，2000]
+百分比：[0.01，0.99]
+不填默认为输入流的宽度。
+使用百分比时，期望输出为（百分比 * 背景宽）。 
+     * @return ImageWidth 输入画面在输出时的宽度。取值范围：
+像素：[0，2000]
+百分比：[0.01，0.99]
+不填默认为输入流的宽度。
+使用百分比时，期望输出为（百分比 * 背景宽）。
+     */
+    public Float getImageWidth() {
+        return this.ImageWidth;
+    }
+
+    /**
+     * Set 输入画面在输出时的宽度。取值范围：
+像素：[0，2000]
+百分比：[0.01，0.99]
+不填默认为输入流的宽度。
+使用百分比时，期望输出为（百分比 * 背景宽）。
+     * @param ImageWidth 输入画面在输出时的宽度。取值范围：
+像素：[0，2000]
+百分比：[0.01，0.99]
+不填默认为输入流的宽度。
+使用百分比时，期望输出为（百分比 * 背景宽）。
+     */
+    public void setImageWidth(Float ImageWidth) {
+        this.ImageWidth = ImageWidth;
     }
 
     /**
@@ -390,11 +390,11 @@ public class CommonMixLayoutParams extends AbstractModel{
         if (source.InputType != null) {
             this.InputType = new Long(source.InputType);
         }
-        if (source.ImageWidth != null) {
-            this.ImageWidth = new Float(source.ImageWidth);
-        }
         if (source.ImageHeight != null) {
             this.ImageHeight = new Float(source.ImageHeight);
+        }
+        if (source.ImageWidth != null) {
+            this.ImageWidth = new Float(source.ImageWidth);
         }
         if (source.LocationX != null) {
             this.LocationX = new Float(source.LocationX);
@@ -417,8 +417,8 @@ public class CommonMixLayoutParams extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ImageLayer", this.ImageLayer);
         this.setParamSimple(map, prefix + "InputType", this.InputType);
-        this.setParamSimple(map, prefix + "ImageWidth", this.ImageWidth);
         this.setParamSimple(map, prefix + "ImageHeight", this.ImageHeight);
+        this.setParamSimple(map, prefix + "ImageWidth", this.ImageWidth);
         this.setParamSimple(map, prefix + "LocationX", this.LocationX);
         this.setParamSimple(map, prefix + "LocationY", this.LocationY);
         this.setParamSimple(map, prefix + "Color", this.Color);

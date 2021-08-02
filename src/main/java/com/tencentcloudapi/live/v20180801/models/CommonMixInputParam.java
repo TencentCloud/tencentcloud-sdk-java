@@ -24,6 +24,8 @@ public class CommonMixInputParam extends AbstractModel{
 
     /**
     * 输入流名称。80字节以内，仅含字母、数字以及下划线的字符串。
+当LayoutParams.InputType=0(音视频)/4(纯音频)/5(纯视频)时，该值为需要混流的流名称。
+当LayoutParams.InputType=2(图片)/3(画布)时，该值仅用作标识输入，可用类似Canvas1、Pictrue1的名称。
     */
     @SerializedName("InputStreamName")
     @Expose
@@ -44,8 +46,12 @@ public class CommonMixInputParam extends AbstractModel{
     private CommonMixCropParams CropParams;
 
     /**
-     * Get 输入流名称。80字节以内，仅含字母、数字以及下划线的字符串。 
+     * Get 输入流名称。80字节以内，仅含字母、数字以及下划线的字符串。
+当LayoutParams.InputType=0(音视频)/4(纯音频)/5(纯视频)时，该值为需要混流的流名称。
+当LayoutParams.InputType=2(图片)/3(画布)时，该值仅用作标识输入，可用类似Canvas1、Pictrue1的名称。 
      * @return InputStreamName 输入流名称。80字节以内，仅含字母、数字以及下划线的字符串。
+当LayoutParams.InputType=0(音视频)/4(纯音频)/5(纯视频)时，该值为需要混流的流名称。
+当LayoutParams.InputType=2(图片)/3(画布)时，该值仅用作标识输入，可用类似Canvas1、Pictrue1的名称。
      */
     public String getInputStreamName() {
         return this.InputStreamName;
@@ -53,7 +59,11 @@ public class CommonMixInputParam extends AbstractModel{
 
     /**
      * Set 输入流名称。80字节以内，仅含字母、数字以及下划线的字符串。
+当LayoutParams.InputType=0(音视频)/4(纯音频)/5(纯视频)时，该值为需要混流的流名称。
+当LayoutParams.InputType=2(图片)/3(画布)时，该值仅用作标识输入，可用类似Canvas1、Pictrue1的名称。
      * @param InputStreamName 输入流名称。80字节以内，仅含字母、数字以及下划线的字符串。
+当LayoutParams.InputType=0(音视频)/4(纯音频)/5(纯视频)时，该值为需要混流的流名称。
+当LayoutParams.InputType=2(图片)/3(画布)时，该值仅用作标识输入，可用类似Canvas1、Pictrue1的名称。
      */
     public void setInputStreamName(String InputStreamName) {
         this.InputStreamName = InputStreamName;
