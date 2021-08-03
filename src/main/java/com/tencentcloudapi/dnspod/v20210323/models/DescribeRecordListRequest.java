@@ -79,7 +79,7 @@ public class DescribeRecordListRequest extends AbstractModel{
     private String Keyword;
 
     /**
-    * 排序字段，支持 name,line,type,value,weight,mx,ttl,updated_on 几个字段。默认值为updated_on。
+    * 排序字段，支持 name,line,type,value,weight,mx,ttl,updated_on 几个字段。
     */
     @SerializedName("SortField")
     @Expose
@@ -235,16 +235,16 @@ public class DescribeRecordListRequest extends AbstractModel{
     }
 
     /**
-     * Get 排序字段，支持 name,line,type,value,weight,mx,ttl,updated_on 几个字段。默认值为updated_on。 
-     * @return SortField 排序字段，支持 name,line,type,value,weight,mx,ttl,updated_on 几个字段。默认值为updated_on。
+     * Get 排序字段，支持 name,line,type,value,weight,mx,ttl,updated_on 几个字段。 
+     * @return SortField 排序字段，支持 name,line,type,value,weight,mx,ttl,updated_on 几个字段。
      */
     public String getSortField() {
         return this.SortField;
     }
 
     /**
-     * Set 排序字段，支持 name,line,type,value,weight,mx,ttl,updated_on 几个字段。默认值为updated_on。
-     * @param SortField 排序字段，支持 name,line,type,value,weight,mx,ttl,updated_on 几个字段。默认值为updated_on。
+     * Set 排序字段，支持 name,line,type,value,weight,mx,ttl,updated_on 几个字段。
+     * @param SortField 排序字段，支持 name,line,type,value,weight,mx,ttl,updated_on 几个字段。
      */
     public void setSortField(String SortField) {
         this.SortField = SortField;

@@ -44,7 +44,14 @@ public class DescribeKeyPairsRequest extends AbstractModel{
     private Long Limit;
 
     /**
-    * 过滤条件，每次请求的 Filters 的上限为10， Filters.Values 的上限为5。参数不可以同时指定 KeyIds 和 Filters 。详细的过滤条件如下： key-id - String - 是否必填： 否 - （过滤条件）按照KeyID进行过滤; key-name - String - 是否必填： 否 - （过滤条件）按照KeyName进行过滤。
+    * 过滤器列表。
+<li>key-id</li>按照【密钥对ID】进行过滤。
+类型：String
+必选：否
+<li>key-name</li>按照【密钥对名称】进行过滤。
+类型：String
+必选：否
+每次请求的 Filters 的上限为 10，Filter.Values 的上限为 5。参数不支持同时指定 KeyIds 和 Filters。
     */
     @SerializedName("Filters")
     @Expose
@@ -99,16 +106,44 @@ public class DescribeKeyPairsRequest extends AbstractModel{
     }
 
     /**
-     * Get 过滤条件，每次请求的 Filters 的上限为10， Filters.Values 的上限为5。参数不可以同时指定 KeyIds 和 Filters 。详细的过滤条件如下： key-id - String - 是否必填： 否 - （过滤条件）按照KeyID进行过滤; key-name - String - 是否必填： 否 - （过滤条件）按照KeyName进行过滤。 
-     * @return Filters 过滤条件，每次请求的 Filters 的上限为10， Filters.Values 的上限为5。参数不可以同时指定 KeyIds 和 Filters 。详细的过滤条件如下： key-id - String - 是否必填： 否 - （过滤条件）按照KeyID进行过滤; key-name - String - 是否必填： 否 - （过滤条件）按照KeyName进行过滤。
+     * Get 过滤器列表。
+<li>key-id</li>按照【密钥对ID】进行过滤。
+类型：String
+必选：否
+<li>key-name</li>按照【密钥对名称】进行过滤。
+类型：String
+必选：否
+每次请求的 Filters 的上限为 10，Filter.Values 的上限为 5。参数不支持同时指定 KeyIds 和 Filters。 
+     * @return Filters 过滤器列表。
+<li>key-id</li>按照【密钥对ID】进行过滤。
+类型：String
+必选：否
+<li>key-name</li>按照【密钥对名称】进行过滤。
+类型：String
+必选：否
+每次请求的 Filters 的上限为 10，Filter.Values 的上限为 5。参数不支持同时指定 KeyIds 和 Filters。
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 过滤条件，每次请求的 Filters 的上限为10， Filters.Values 的上限为5。参数不可以同时指定 KeyIds 和 Filters 。详细的过滤条件如下： key-id - String - 是否必填： 否 - （过滤条件）按照KeyID进行过滤; key-name - String - 是否必填： 否 - （过滤条件）按照KeyName进行过滤。
-     * @param Filters 过滤条件，每次请求的 Filters 的上限为10， Filters.Values 的上限为5。参数不可以同时指定 KeyIds 和 Filters 。详细的过滤条件如下： key-id - String - 是否必填： 否 - （过滤条件）按照KeyID进行过滤; key-name - String - 是否必填： 否 - （过滤条件）按照KeyName进行过滤。
+     * Set 过滤器列表。
+<li>key-id</li>按照【密钥对ID】进行过滤。
+类型：String
+必选：否
+<li>key-name</li>按照【密钥对名称】进行过滤。
+类型：String
+必选：否
+每次请求的 Filters 的上限为 10，Filter.Values 的上限为 5。参数不支持同时指定 KeyIds 和 Filters。
+     * @param Filters 过滤器列表。
+<li>key-id</li>按照【密钥对ID】进行过滤。
+类型：String
+必选：否
+<li>key-name</li>按照【密钥对名称】进行过滤。
+类型：String
+必选：否
+每次请求的 Filters 的上限为 10，Filter.Values 的上限为 5。参数不支持同时指定 KeyIds 和 Filters。
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

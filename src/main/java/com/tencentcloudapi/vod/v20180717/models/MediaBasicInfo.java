@@ -151,6 +151,8 @@ public class MediaBasicInfo extends AbstractModel{
     * 媒体文件的存储类别：
 <li> STANDARD：标准存储。</li>
 <li> STANDARD_IA：低频存储。</li>
+<li> ARCHIVE：归档存储。</li>
+<li> DEEP_ARCHIVE：深度归档存储。</li>
     */
     @SerializedName("StorageClass")
     @Expose
@@ -455,10 +457,14 @@ public class MediaBasicInfo extends AbstractModel{
     /**
      * Get 媒体文件的存储类别：
 <li> STANDARD：标准存储。</li>
-<li> STANDARD_IA：低频存储。</li> 
+<li> STANDARD_IA：低频存储。</li>
+<li> ARCHIVE：归档存储。</li>
+<li> DEEP_ARCHIVE：深度归档存储。</li> 
      * @return StorageClass 媒体文件的存储类别：
 <li> STANDARD：标准存储。</li>
 <li> STANDARD_IA：低频存储。</li>
+<li> ARCHIVE：归档存储。</li>
+<li> DEEP_ARCHIVE：深度归档存储。</li>
      */
     public String getStorageClass() {
         return this.StorageClass;
@@ -468,9 +474,13 @@ public class MediaBasicInfo extends AbstractModel{
      * Set 媒体文件的存储类别：
 <li> STANDARD：标准存储。</li>
 <li> STANDARD_IA：低频存储。</li>
+<li> ARCHIVE：归档存储。</li>
+<li> DEEP_ARCHIVE：深度归档存储。</li>
      * @param StorageClass 媒体文件的存储类别：
 <li> STANDARD：标准存储。</li>
 <li> STANDARD_IA：低频存储。</li>
+<li> ARCHIVE：归档存储。</li>
+<li> DEEP_ARCHIVE：深度归档存储。</li>
      */
     public void setStorageClass(String StorageClass) {
         this.StorageClass = StorageClass;

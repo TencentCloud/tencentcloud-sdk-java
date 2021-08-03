@@ -59,6 +59,26 @@ public class CiiClient extends AbstractClient{
     }
 
     /**
+     *本接口(CreateStructureTaskTest)基于提供的客户及保单信息，创建并启动结构化识别任务。用于路由到测试环境。
+     * @param req CreateStructureTaskTestRequest
+     * @return CreateStructureTaskTestResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateStructureTaskTestResponse CreateStructureTaskTest(CreateStructureTaskTestRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateStructureTaskTestResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateStructureTaskTestResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateStructureTaskTest");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *结构化对比查询接口，对比结构化复核前后数据差异，查询识别正确率，召回率。
      * @param req DescribeStructCompareDataRequest
      * @return DescribeStructCompareDataResponse
@@ -111,6 +131,26 @@ public class CiiClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeStructureTaskResultResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeStructureTaskResult");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *依据任务ID获取结构化结果接口，该接口用于路由到测试环境。
+     * @param req DescribeStructureTaskResultTestRequest
+     * @return DescribeStructureTaskResultTestResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeStructureTaskResultTestResponse DescribeStructureTaskResultTest(DescribeStructureTaskResultTestRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeStructureTaskResultTestResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeStructureTaskResultTestResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeStructureTaskResultTest");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

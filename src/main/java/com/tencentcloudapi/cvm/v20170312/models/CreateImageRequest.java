@@ -30,7 +30,7 @@ public class CreateImageRequest extends AbstractModel{
     private String ImageName;
 
     /**
-    * 需要制作镜像的实例ID。
+    * 需要制作镜像的实例ID。基于实例创建镜像时，为必填参数。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -96,16 +96,16 @@ public class CreateImageRequest extends AbstractModel{
     }
 
     /**
-     * Get 需要制作镜像的实例ID。 
-     * @return InstanceId 需要制作镜像的实例ID。
+     * Get 需要制作镜像的实例ID。基于实例创建镜像时，为必填参数。 
+     * @return InstanceId 需要制作镜像的实例ID。基于实例创建镜像时，为必填参数。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 需要制作镜像的实例ID。
-     * @param InstanceId 需要制作镜像的实例ID。
+     * Set 需要制作镜像的实例ID。基于实例创建镜像时，为必填参数。
+     * @param InstanceId 需要制作镜像的实例ID。基于实例创建镜像时，为必填参数。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

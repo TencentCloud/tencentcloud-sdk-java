@@ -309,6 +309,22 @@ public class GetFunctionResponse extends AbstractModel{
     private StatusReason [] StatusReasons;
 
     /**
+    * 是否开启异步属性
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AsyncRunEnable")
+    @Expose
+    private String AsyncRunEnable;
+
+    /**
+    * 是否开启事件追踪
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TraceEnable")
+    @Expose
+    private String TraceEnable;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -980,6 +996,46 @@ public class GetFunctionResponse extends AbstractModel{
     }
 
     /**
+     * Get 是否开启异步属性
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AsyncRunEnable 是否开启异步属性
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAsyncRunEnable() {
+        return this.AsyncRunEnable;
+    }
+
+    /**
+     * Set 是否开启异步属性
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AsyncRunEnable 是否开启异步属性
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAsyncRunEnable(String AsyncRunEnable) {
+        this.AsyncRunEnable = AsyncRunEnable;
+    }
+
+    /**
+     * Get 是否开启事件追踪
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TraceEnable 是否开启事件追踪
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTraceEnable() {
+        return this.TraceEnable;
+    }
+
+    /**
+     * Set 是否开启事件追踪
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TraceEnable 是否开启事件追踪
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTraceEnable(String TraceEnable) {
+        this.TraceEnable = TraceEnable;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -1135,6 +1191,12 @@ public class GetFunctionResponse extends AbstractModel{
                 this.StatusReasons[i] = new StatusReason(source.StatusReasons[i]);
             }
         }
+        if (source.AsyncRunEnable != null) {
+            this.AsyncRunEnable = new String(source.AsyncRunEnable);
+        }
+        if (source.TraceEnable != null) {
+            this.TraceEnable = new String(source.TraceEnable);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -1185,6 +1247,8 @@ public class GetFunctionResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "Qualifier", this.Qualifier);
         this.setParamSimple(map, prefix + "InitTimeout", this.InitTimeout);
         this.setParamArrayObj(map, prefix + "StatusReasons.", this.StatusReasons);
+        this.setParamSimple(map, prefix + "AsyncRunEnable", this.AsyncRunEnable);
+        this.setParamSimple(map, prefix + "TraceEnable", this.TraceEnable);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

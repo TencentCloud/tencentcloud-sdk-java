@@ -78,6 +78,21 @@ public class User extends AbstractModel{
     private String Phone;
 
     /**
+    * 该字段表示业务用户头像图片的访问链接(URL)，支持PNG、JPG、JPEG、BMP、GIF、WEBP格式。
+备注：头像图片大小不超过5MB，建议分辨率不低于256x256；图片下载时间限制为3秒，超过则会返回下载超时。
+    */
+    @SerializedName("HeadUrl")
+    @Expose
+    private String HeadUrl;
+
+    /**
+    * 该字段表示业务用户的简介信息，支持汉字、英文及特殊符号，长度不超过5000个汉字字符。
+    */
+    @SerializedName("Desc")
+    @Expose
+    private String Desc;
+
+    /**
      * Get 该字段表示业务用户ID,填写后，系统可根据账号过往违规历史优化审核结果判定，有利于存在可疑违规风险时的辅助判断。<br>
 备注：该字段可传入微信openid、QQopenid、字符串等账号信息，与账号类别参数（AccountType）配合使用可确定唯一账号。 
      * @return UserId 该字段表示业务用户ID,填写后，系统可根据账号过往违规历史优化审核结果判定，有利于存在可疑违规风险时的辅助判断。<br>
@@ -213,6 +228,42 @@ public class User extends AbstractModel{
         this.Phone = Phone;
     }
 
+    /**
+     * Get 该字段表示业务用户头像图片的访问链接(URL)，支持PNG、JPG、JPEG、BMP、GIF、WEBP格式。
+备注：头像图片大小不超过5MB，建议分辨率不低于256x256；图片下载时间限制为3秒，超过则会返回下载超时。 
+     * @return HeadUrl 该字段表示业务用户头像图片的访问链接(URL)，支持PNG、JPG、JPEG、BMP、GIF、WEBP格式。
+备注：头像图片大小不超过5MB，建议分辨率不低于256x256；图片下载时间限制为3秒，超过则会返回下载超时。
+     */
+    public String getHeadUrl() {
+        return this.HeadUrl;
+    }
+
+    /**
+     * Set 该字段表示业务用户头像图片的访问链接(URL)，支持PNG、JPG、JPEG、BMP、GIF、WEBP格式。
+备注：头像图片大小不超过5MB，建议分辨率不低于256x256；图片下载时间限制为3秒，超过则会返回下载超时。
+     * @param HeadUrl 该字段表示业务用户头像图片的访问链接(URL)，支持PNG、JPG、JPEG、BMP、GIF、WEBP格式。
+备注：头像图片大小不超过5MB，建议分辨率不低于256x256；图片下载时间限制为3秒，超过则会返回下载超时。
+     */
+    public void setHeadUrl(String HeadUrl) {
+        this.HeadUrl = HeadUrl;
+    }
+
+    /**
+     * Get 该字段表示业务用户的简介信息，支持汉字、英文及特殊符号，长度不超过5000个汉字字符。 
+     * @return Desc 该字段表示业务用户的简介信息，支持汉字、英文及特殊符号，长度不超过5000个汉字字符。
+     */
+    public String getDesc() {
+        return this.Desc;
+    }
+
+    /**
+     * Set 该字段表示业务用户的简介信息，支持汉字、英文及特殊符号，长度不超过5000个汉字字符。
+     * @param Desc 该字段表示业务用户的简介信息，支持汉字、英文及特殊符号，长度不超过5000个汉字字符。
+     */
+    public void setDesc(String Desc) {
+        this.Desc = Desc;
+    }
+
     public User() {
     }
 
@@ -242,6 +293,12 @@ public class User extends AbstractModel{
         if (source.Phone != null) {
             this.Phone = new String(source.Phone);
         }
+        if (source.HeadUrl != null) {
+            this.HeadUrl = new String(source.HeadUrl);
+        }
+        if (source.Desc != null) {
+            this.Desc = new String(source.Desc);
+        }
     }
 
 
@@ -256,6 +313,8 @@ public class User extends AbstractModel{
         this.setParamSimple(map, prefix + "Age", this.Age);
         this.setParamSimple(map, prefix + "Level", this.Level);
         this.setParamSimple(map, prefix + "Phone", this.Phone);
+        this.setParamSimple(map, prefix + "HeadUrl", this.HeadUrl);
+        this.setParamSimple(map, prefix + "Desc", this.Desc);
 
     }
 }

@@ -198,6 +198,9 @@ public enum IotexplorerErrorCode {
     // 消息数量超过限制。
      LIMITEXCEEDED_MESSAGESAVED("LimitExceeded.MessageSaved"),
      
+    // 超过产品数量限制。
+     LIMITEXCEEDED_PRODUCTEXCEEDLIMIT("LimitExceeded.ProductExceedLimit"),
+     
     // 项目数量超出限制。
      LIMITEXCEEDED_PROJECTEXCEEDLIMIT("LimitExceeded.ProjectExceedLimit"),
      

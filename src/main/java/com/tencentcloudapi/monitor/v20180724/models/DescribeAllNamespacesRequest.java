@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeAllNamespacesRequest extends AbstractModel{
 
     /**
-    * 根据使用场景过滤 "ST_DASHBOARD"=Dashboard类型 或 "ST_ALARM"=告警类型
+    * 根据使用场景过滤 目前仅有"ST_ALARM"=告警类型
     */
     @SerializedName("SceneType")
     @Expose
@@ -51,16 +51,16 @@ public class DescribeAllNamespacesRequest extends AbstractModel{
     private String [] Ids;
 
     /**
-     * Get 根据使用场景过滤 "ST_DASHBOARD"=Dashboard类型 或 "ST_ALARM"=告警类型 
-     * @return SceneType 根据使用场景过滤 "ST_DASHBOARD"=Dashboard类型 或 "ST_ALARM"=告警类型
+     * Get 根据使用场景过滤 目前仅有"ST_ALARM"=告警类型 
+     * @return SceneType 根据使用场景过滤 目前仅有"ST_ALARM"=告警类型
      */
     public String getSceneType() {
         return this.SceneType;
     }
 
     /**
-     * Set 根据使用场景过滤 "ST_DASHBOARD"=Dashboard类型 或 "ST_ALARM"=告警类型
-     * @param SceneType 根据使用场景过滤 "ST_DASHBOARD"=Dashboard类型 或 "ST_ALARM"=告警类型
+     * Set 根据使用场景过滤 目前仅有"ST_ALARM"=告警类型
+     * @param SceneType 根据使用场景过滤 目前仅有"ST_ALARM"=告警类型
      */
     public void setSceneType(String SceneType) {
         this.SceneType = SceneType;
