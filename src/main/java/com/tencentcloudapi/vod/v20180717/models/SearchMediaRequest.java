@@ -118,6 +118,14 @@ public class SearchMediaRequest extends AbstractModel{
     private TimeRange CreateTime;
 
     /**
+    * 匹配过期时间在此时间段内的文件，无法检索到已过期文件。
+<li>包含所指定的头尾时间点。</li>
+    */
+    @SerializedName("ExpireTime")
+    @Expose
+    private TimeRange ExpireTime;
+
+    /**
     * 排序方式。
 <li>Sort.Field 可选 CreateTime 。</li>
 <li>当 Text、 Names 或 Descriptions 不为空时，Sort.Field 字段无效， 搜索结果将以匹配度排序。</li>
@@ -174,6 +182,17 @@ public class SearchMediaRequest extends AbstractModel{
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
+
+    /**
+    * 存储类型数组。可选值有：
+<li> STANDARD：标准存储。</li>
+<li> STANDARD_IA：低频存储。</li>
+<li> ARCHIVE：归档存储。</li>
+<li> DEEP_ARCHIVE：深度归档存储。</li>
+    */
+    @SerializedName("StorageClasses")
+    @Expose
+    private String [] StorageClasses;
 
     /**
     * （不推荐：应使用 Names、NamePrefixes 或 Descriptions 替代）
@@ -478,6 +497,26 @@ public class SearchMediaRequest extends AbstractModel{
     }
 
     /**
+     * Get 匹配过期时间在此时间段内的文件，无法检索到已过期文件。
+<li>包含所指定的头尾时间点。</li> 
+     * @return ExpireTime 匹配过期时间在此时间段内的文件，无法检索到已过期文件。
+<li>包含所指定的头尾时间点。</li>
+     */
+    public TimeRange getExpireTime() {
+        return this.ExpireTime;
+    }
+
+    /**
+     * Set 匹配过期时间在此时间段内的文件，无法检索到已过期文件。
+<li>包含所指定的头尾时间点。</li>
+     * @param ExpireTime 匹配过期时间在此时间段内的文件，无法检索到已过期文件。
+<li>包含所指定的头尾时间点。</li>
+     */
+    public void setExpireTime(TimeRange ExpireTime) {
+        this.ExpireTime = ExpireTime;
+    }
+
+    /**
      * Get 排序方式。
 <li>Sort.Field 可选 CreateTime 。</li>
 <li>当 Text、 Names 或 Descriptions 不为空时，Sort.Field 字段无效， 搜索结果将以匹配度排序。</li> 
@@ -635,6 +674,38 @@ public class SearchMediaRequest extends AbstractModel{
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
+    }
+
+    /**
+     * Get 存储类型数组。可选值有：
+<li> STANDARD：标准存储。</li>
+<li> STANDARD_IA：低频存储。</li>
+<li> ARCHIVE：归档存储。</li>
+<li> DEEP_ARCHIVE：深度归档存储。</li> 
+     * @return StorageClasses 存储类型数组。可选值有：
+<li> STANDARD：标准存储。</li>
+<li> STANDARD_IA：低频存储。</li>
+<li> ARCHIVE：归档存储。</li>
+<li> DEEP_ARCHIVE：深度归档存储。</li>
+     */
+    public String [] getStorageClasses() {
+        return this.StorageClasses;
+    }
+
+    /**
+     * Set 存储类型数组。可选值有：
+<li> STANDARD：标准存储。</li>
+<li> STANDARD_IA：低频存储。</li>
+<li> ARCHIVE：归档存储。</li>
+<li> DEEP_ARCHIVE：深度归档存储。</li>
+     * @param StorageClasses 存储类型数组。可选值有：
+<li> STANDARD：标准存储。</li>
+<li> STANDARD_IA：低频存储。</li>
+<li> ARCHIVE：归档存储。</li>
+<li> DEEP_ARCHIVE：深度归档存储。</li>
+     */
+    public void setStorageClasses(String [] StorageClasses) {
+        this.StorageClasses = StorageClasses;
     }
 
     /**
@@ -852,6 +923,9 @@ public class SearchMediaRequest extends AbstractModel{
         if (source.CreateTime != null) {
             this.CreateTime = new TimeRange(source.CreateTime);
         }
+        if (source.ExpireTime != null) {
+            this.ExpireTime = new TimeRange(source.ExpireTime);
+        }
         if (source.Sort != null) {
             this.Sort = new SortBy(source.Sort);
         }
@@ -875,6 +949,12 @@ public class SearchMediaRequest extends AbstractModel{
         }
         if (source.SubAppId != null) {
             this.SubAppId = new Long(source.SubAppId);
+        }
+        if (source.StorageClasses != null) {
+            this.StorageClasses = new String[source.StorageClasses.length];
+            for (int i = 0; i < source.StorageClasses.length; i++) {
+                this.StorageClasses[i] = new String(source.StorageClasses[i]);
+            }
         }
         if (source.Text != null) {
             this.Text = new String(source.Text);
@@ -912,12 +992,14 @@ public class SearchMediaRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "StreamIds.", this.StreamIds);
         this.setParamArraySimple(map, prefix + "Vids.", this.Vids);
         this.setParamObj(map, prefix + "CreateTime.", this.CreateTime);
+        this.setParamObj(map, prefix + "ExpireTime.", this.ExpireTime);
         this.setParamObj(map, prefix + "Sort.", this.Sort);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamArraySimple(map, prefix + "Filters.", this.Filters);
         this.setParamArraySimple(map, prefix + "StorageRegions.", this.StorageRegions);
         this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
+        this.setParamArraySimple(map, prefix + "StorageClasses.", this.StorageClasses);
         this.setParamSimple(map, prefix + "Text", this.Text);
         this.setParamSimple(map, prefix + "SourceType", this.SourceType);
         this.setParamSimple(map, prefix + "StreamId", this.StreamId);

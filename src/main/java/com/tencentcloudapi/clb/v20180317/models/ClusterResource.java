@@ -60,6 +60,14 @@ public class ClusterResource extends AbstractModel{
     private String ClusterName;
 
     /**
+    * 互联网服务供应商
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Isp")
+    @Expose
+    private String Isp;
+
+    /**
      * Get 集群唯一ID，如tgw-12345678。 
      * @return ClusterId 集群唯一ID，如tgw-12345678。
      */
@@ -147,6 +155,26 @@ public class ClusterResource extends AbstractModel{
         this.ClusterName = ClusterName;
     }
 
+    /**
+     * Get 互联网服务供应商
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Isp 互联网服务供应商
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getIsp() {
+        return this.Isp;
+    }
+
+    /**
+     * Set 互联网服务供应商
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Isp 互联网服务供应商
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsp(String Isp) {
+        this.Isp = Isp;
+    }
+
     public ClusterResource() {
     }
 
@@ -170,6 +198,9 @@ public class ClusterResource extends AbstractModel{
         if (source.ClusterName != null) {
             this.ClusterName = new String(source.ClusterName);
         }
+        if (source.Isp != null) {
+            this.Isp = new String(source.Isp);
+        }
     }
 
 
@@ -182,6 +213,7 @@ public class ClusterResource extends AbstractModel{
         this.setParamSimple(map, prefix + "LoadBalancerId", this.LoadBalancerId);
         this.setParamSimple(map, prefix + "Idle", this.Idle);
         this.setParamSimple(map, prefix + "ClusterName", this.ClusterName);
+        this.setParamSimple(map, prefix + "Isp", this.Isp);
 
     }
 }

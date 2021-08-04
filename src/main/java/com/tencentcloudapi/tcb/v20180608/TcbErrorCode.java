@@ -9,6 +9,9 @@ public enum TcbErrorCode {
     // 操作失败。
      FAILEDOPERATION("FailedOperation"),
      
+    // 部分失败（有一部分操作失败）。
+     FAILEDOPERATION_PARTIALFAILURE("FailedOperation.PartialFailure"),
+     
     // 内部错误。
      INTERNALERROR("InternalError"),
      
@@ -56,6 +59,9 @@ public enum TcbErrorCode {
      
     // 缺少必要参数。
      MISSINGPARAMETER_PARAM("MissingParameter.Param"),
+     
+    // 操作被拒绝。
+     OPERATIONDENIED("OperationDenied"),
      
     // 资源被占用。
      RESOURCEINUSE("ResourceInUse"),

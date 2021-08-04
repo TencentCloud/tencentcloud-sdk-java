@@ -79,6 +79,26 @@ public class EmrClient extends AbstractClient{
     }
 
     /**
+     *获取账户的CVM配额
+     * @param req DescribeCvmQuotaRequest
+     * @return DescribeCvmQuotaResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCvmQuotaResponse DescribeCvmQuota(DescribeCvmQuotaRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCvmQuotaResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCvmQuotaResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeCvmQuota");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *预付费集群隔离后续费资源查询
      * @param req DescribeInstanceRenewNodesRequest
      * @return DescribeInstanceRenewNodesResponse
@@ -271,6 +291,26 @@ public class EmrClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ScaleOutInstanceResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ScaleOutInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *EMR同步TKE中POD状态
+     * @param req SyncPodStateRequest
+     * @return SyncPodStateResponse
+     * @throws TencentCloudSDKException
+     */
+    public SyncPodStateResponse SyncPodState(SyncPodStateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SyncPodStateResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<SyncPodStateResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "SyncPodState");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

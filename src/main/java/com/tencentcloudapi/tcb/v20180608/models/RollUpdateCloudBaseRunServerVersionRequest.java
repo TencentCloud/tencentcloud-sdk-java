@@ -247,6 +247,13 @@ public class RollUpdateCloudBaseRunServerVersionRequest extends AbstractModel{
     private String ServerPath;
 
     /**
+    * 是否更新Cls
+    */
+    @SerializedName("IsUpdateCls")
+    @Expose
+    private Boolean IsUpdateCls;
+
+    /**
      * Get 环境ID 
      * @return EnvId 环境ID
      */
@@ -758,6 +765,22 @@ public class RollUpdateCloudBaseRunServerVersionRequest extends AbstractModel{
         this.ServerPath = ServerPath;
     }
 
+    /**
+     * Get 是否更新Cls 
+     * @return IsUpdateCls 是否更新Cls
+     */
+    public Boolean getIsUpdateCls() {
+        return this.IsUpdateCls;
+    }
+
+    /**
+     * Set 是否更新Cls
+     * @param IsUpdateCls 是否更新Cls
+     */
+    public void setIsUpdateCls(Boolean IsUpdateCls) {
+        this.IsUpdateCls = IsUpdateCls;
+    }
+
     public RollUpdateCloudBaseRunServerVersionRequest() {
     }
 
@@ -865,6 +888,9 @@ public class RollUpdateCloudBaseRunServerVersionRequest extends AbstractModel{
         if (source.ServerPath != null) {
             this.ServerPath = new String(source.ServerPath);
         }
+        if (source.IsUpdateCls != null) {
+            this.IsUpdateCls = new Boolean(source.IsUpdateCls);
+        }
     }
 
 
@@ -904,6 +930,7 @@ public class RollUpdateCloudBaseRunServerVersionRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "EnableUnion", this.EnableUnion);
         this.setParamSimple(map, prefix + "OperatorRemark", this.OperatorRemark);
         this.setParamSimple(map, prefix + "ServerPath", this.ServerPath);
+        this.setParamSimple(map, prefix + "IsUpdateCls", this.IsUpdateCls);
 
     }
 }

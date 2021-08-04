@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class TextModerationRequest extends AbstractModel{
 
     /**
-    * 文本内容Base64编码。原文长度需小于15000字节，即5000个汉字以内。
+    * 文本内容Base64编码。限制原文长度不能超过10000个unicode字符
     */
     @SerializedName("Content")
     @Expose
     private String Content;
 
     /**
-    * 该字段用于标识业务场景。您可以在内容安全控制台创建对应的ID，配置不同的内容审核策略，通过接口调用，默认不填为0，后端使用默认策略。 -- 该字段暂未开放。
+    * 该字段用于标识业务场景。您可以在内容安全控制台创建对应的ID，配置不同的内容审核策略，通过接口调用，默认不填为0，后端使用默认策略
     */
     @SerializedName("BizType")
     @Expose
@@ -44,46 +44,46 @@ public class TextModerationRequest extends AbstractModel{
     private String DataId;
 
     /**
-    * 账号相关信息字段，填入后可识别违规风险账号。
+    * 账号相关信息字段，填入后可识别违规风险账号
     */
     @SerializedName("User")
     @Expose
     private User User;
 
     /**
-    * 设备相关信息字段，填入后可识别违规风险设备。
+    * 设备相关信息字段，填入后可识别违规风险设备
     */
     @SerializedName("Device")
     @Expose
     private Device Device;
 
     /**
-     * Get 文本内容Base64编码。原文长度需小于15000字节，即5000个汉字以内。 
-     * @return Content 文本内容Base64编码。原文长度需小于15000字节，即5000个汉字以内。
+     * Get 文本内容Base64编码。限制原文长度不能超过10000个unicode字符 
+     * @return Content 文本内容Base64编码。限制原文长度不能超过10000个unicode字符
      */
     public String getContent() {
         return this.Content;
     }
 
     /**
-     * Set 文本内容Base64编码。原文长度需小于15000字节，即5000个汉字以内。
-     * @param Content 文本内容Base64编码。原文长度需小于15000字节，即5000个汉字以内。
+     * Set 文本内容Base64编码。限制原文长度不能超过10000个unicode字符
+     * @param Content 文本内容Base64编码。限制原文长度不能超过10000个unicode字符
      */
     public void setContent(String Content) {
         this.Content = Content;
     }
 
     /**
-     * Get 该字段用于标识业务场景。您可以在内容安全控制台创建对应的ID，配置不同的内容审核策略，通过接口调用，默认不填为0，后端使用默认策略。 -- 该字段暂未开放。 
-     * @return BizType 该字段用于标识业务场景。您可以在内容安全控制台创建对应的ID，配置不同的内容审核策略，通过接口调用，默认不填为0，后端使用默认策略。 -- 该字段暂未开放。
+     * Get 该字段用于标识业务场景。您可以在内容安全控制台创建对应的ID，配置不同的内容审核策略，通过接口调用，默认不填为0，后端使用默认策略 
+     * @return BizType 该字段用于标识业务场景。您可以在内容安全控制台创建对应的ID，配置不同的内容审核策略，通过接口调用，默认不填为0，后端使用默认策略
      */
     public String getBizType() {
         return this.BizType;
     }
 
     /**
-     * Set 该字段用于标识业务场景。您可以在内容安全控制台创建对应的ID，配置不同的内容审核策略，通过接口调用，默认不填为0，后端使用默认策略。 -- 该字段暂未开放。
-     * @param BizType 该字段用于标识业务场景。您可以在内容安全控制台创建对应的ID，配置不同的内容审核策略，通过接口调用，默认不填为0，后端使用默认策略。 -- 该字段暂未开放。
+     * Set 该字段用于标识业务场景。您可以在内容安全控制台创建对应的ID，配置不同的内容审核策略，通过接口调用，默认不填为0，后端使用默认策略
+     * @param BizType 该字段用于标识业务场景。您可以在内容安全控制台创建对应的ID，配置不同的内容审核策略，通过接口调用，默认不填为0，后端使用默认策略
      */
     public void setBizType(String BizType) {
         this.BizType = BizType;
@@ -106,32 +106,32 @@ public class TextModerationRequest extends AbstractModel{
     }
 
     /**
-     * Get 账号相关信息字段，填入后可识别违规风险账号。 
-     * @return User 账号相关信息字段，填入后可识别违规风险账号。
+     * Get 账号相关信息字段，填入后可识别违规风险账号 
+     * @return User 账号相关信息字段，填入后可识别违规风险账号
      */
     public User getUser() {
         return this.User;
     }
 
     /**
-     * Set 账号相关信息字段，填入后可识别违规风险账号。
-     * @param User 账号相关信息字段，填入后可识别违规风险账号。
+     * Set 账号相关信息字段，填入后可识别违规风险账号
+     * @param User 账号相关信息字段，填入后可识别违规风险账号
      */
     public void setUser(User User) {
         this.User = User;
     }
 
     /**
-     * Get 设备相关信息字段，填入后可识别违规风险设备。 
-     * @return Device 设备相关信息字段，填入后可识别违规风险设备。
+     * Get 设备相关信息字段，填入后可识别违规风险设备 
+     * @return Device 设备相关信息字段，填入后可识别违规风险设备
      */
     public Device getDevice() {
         return this.Device;
     }
 
     /**
-     * Set 设备相关信息字段，填入后可识别违规风险设备。
-     * @param Device 设备相关信息字段，填入后可识别违规风险设备。
+     * Set 设备相关信息字段，填入后可识别违规风险设备
+     * @param Device 设备相关信息字段，填入后可识别违规风险设备
      */
     public void setDevice(Device Device) {
         this.Device = Device;

@@ -219,6 +219,26 @@ public class TcbClient extends AbstractClient{
     }
 
     /**
+     *本接口（CreateStandaloneGateway）用于创建独立网关。
+     * @param req CreateStandaloneGatewayRequest
+     * @return CreateStandaloneGatewayResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateStandaloneGatewayResponse CreateStandaloneGateway(CreateStandaloneGatewayRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateStandaloneGatewayResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateStandaloneGatewayResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateStandaloneGateway");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建静态托管资源，包括COS和CDN，异步任务创建，查看创建结果需要根据DescribeStaticStore接口来查看
      * @param req CreateStaticStoreRequest
      * @return CreateStaticStoreResponse
@@ -922,6 +942,46 @@ public class TcbClient extends AbstractClient{
     }
 
     /**
+     *本接口（DescribeStandaloneGateway）查询小租户网关套餐信息。
+     * @param req DescribeStandaloneGatewayRequest
+     * @return DescribeStandaloneGatewayResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeStandaloneGatewayResponse DescribeStandaloneGateway(DescribeStandaloneGatewayRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeStandaloneGatewayResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeStandaloneGatewayResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeStandaloneGateway");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DescribeStandaloneGatewayPackage）用于查询小租户网关套餐信息。
+     * @param req DescribeStandaloneGatewayPackageRequest
+     * @return DescribeStandaloneGatewayPackageResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeStandaloneGatewayPackageResponse DescribeStandaloneGatewayPackage(DescribeStandaloneGatewayPackageRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeStandaloneGatewayPackageResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeStandaloneGatewayPackageResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeStandaloneGatewayPackage");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询微信云托管环境信息
      * @param req DescribeWxCloudBaseRunEnvsRequest
      * @return DescribeWxCloudBaseRunEnvsResponse
@@ -974,6 +1034,26 @@ public class TcbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DestroyEnvResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DestroyEnv");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DestroyStandaloneGateway）用于销毁小租户网关。
+     * @param req DestroyStandaloneGatewayRequest
+     * @return DestroyStandaloneGatewayResponse
+     * @throws TencentCloudSDKException
+     */
+    public DestroyStandaloneGatewayResponse DestroyStandaloneGateway(DestroyStandaloneGatewayRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DestroyStandaloneGatewayResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DestroyStandaloneGatewayResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DestroyStandaloneGateway");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1174,6 +1254,46 @@ public class TcbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<RollUpdateCloudBaseRunServerVersionResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "RollUpdateCloudBaseRunServerVersion");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（TurnOffStandaloneGateway）用于关闭小租户网关。
+     * @param req TurnOffStandaloneGatewayRequest
+     * @return TurnOffStandaloneGatewayResponse
+     * @throws TencentCloudSDKException
+     */
+    public TurnOffStandaloneGatewayResponse TurnOffStandaloneGateway(TurnOffStandaloneGatewayRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<TurnOffStandaloneGatewayResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<TurnOffStandaloneGatewayResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "TurnOffStandaloneGateway");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（TurnOnStandaloneGateway）用于开启小租户网关。
+     * @param req TurnOnStandaloneGatewayRequest
+     * @return TurnOnStandaloneGatewayResponse
+     * @throws TencentCloudSDKException
+     */
+    public TurnOnStandaloneGatewayResponse TurnOnStandaloneGateway(TurnOnStandaloneGatewayRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<TurnOnStandaloneGatewayResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<TurnOnStandaloneGatewayResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "TurnOnStandaloneGateway");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
