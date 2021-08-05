@@ -172,6 +172,14 @@ public class EnvInfo extends AbstractModel{
     private Tag [] Tags;
 
     /**
+    * 自定义日志服务
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CustomLogServices")
+    @Expose
+    private ClsInfo [] CustomLogServices;
+
+    /**
      * Get 账户下该环境唯一标识 
      * @return EnvId 账户下该环境唯一标识
      */
@@ -539,6 +547,26 @@ public class EnvInfo extends AbstractModel{
         this.Tags = Tags;
     }
 
+    /**
+     * Get 自定义日志服务
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CustomLogServices 自定义日志服务
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ClsInfo [] getCustomLogServices() {
+        return this.CustomLogServices;
+    }
+
+    /**
+     * Set 自定义日志服务
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CustomLogServices 自定义日志服务
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCustomLogServices(ClsInfo [] CustomLogServices) {
+        this.CustomLogServices = CustomLogServices;
+    }
+
     public EnvInfo() {
     }
 
@@ -622,6 +650,12 @@ public class EnvInfo extends AbstractModel{
                 this.Tags[i] = new Tag(source.Tags[i]);
             }
         }
+        if (source.CustomLogServices != null) {
+            this.CustomLogServices = new ClsInfo[source.CustomLogServices.length];
+            for (int i = 0; i < source.CustomLogServices.length; i++) {
+                this.CustomLogServices[i] = new ClsInfo(source.CustomLogServices[i]);
+            }
+        }
     }
 
 
@@ -648,6 +682,7 @@ public class EnvInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "IsDefault", this.IsDefault);
         this.setParamSimple(map, prefix + "Region", this.Region);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamArrayObj(map, prefix + "CustomLogServices.", this.CustomLogServices);
 
     }
 }

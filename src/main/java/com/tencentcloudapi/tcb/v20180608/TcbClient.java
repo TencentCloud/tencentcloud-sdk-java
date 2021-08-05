@@ -599,6 +599,26 @@ public class TcbClient extends AbstractClient{
     }
 
     /**
+     *根据用户传入的指标, 拉取一段时间内的监控数据。
+     * @param req DescribeCurveDataRequest
+     * @return DescribeCurveDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCurveDataResponse DescribeCurveData(DescribeCurveDataRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCurveDataResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCurveDataResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeCurveData");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取数据库权限
      * @param req DescribeDatabaseACLRequest
      * @return DescribeDatabaseACLResponse

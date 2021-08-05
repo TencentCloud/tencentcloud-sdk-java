@@ -306,6 +306,26 @@ public class CpdpClient extends AbstractClient{
     }
 
     /**
+     *云鉴-消费订单确认接口
+     * @param req ConfirmOrderRequest
+     * @return ConfirmOrderResponse
+     * @throws TencentCloudSDKException
+     */
+    public ConfirmOrderResponse ConfirmOrder(ConfirmOrderRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ConfirmOrderResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ConfirmOrderResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ConfirmOrder");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *应用需要先带上签约信息调用本接口生成支付订单号，并将应答的PayInfo透传给聚鑫SDK，拉起客户端（包括微信公众号/微信小程序/客户端App）支付。
      * @param req ContractOrderRequest
      * @return ContractOrderResponse
@@ -439,6 +459,46 @@ public class CpdpClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreateMerchantResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "CreateMerchant");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *云鉴-消费订单发起的接口
+     * @param req CreateOrderRequest
+     * @return CreateOrderResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateOrderResponse CreateOrder(CreateOrderRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateOrderResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateOrderResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateOrder");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *商户新增的接口
+     * @param req CreatePayMerchantRequest
+     * @return CreatePayMerchantResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreatePayMerchantResponse CreatePayMerchant(CreatePayMerchantRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreatePayMerchantResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreatePayMerchantResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreatePayMerchant");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -699,6 +759,26 @@ public class CpdpClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyAgentTaxPaymentInfoResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyAgentTaxPaymentInfo");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *云鉴-商户信息修改的接口
+     * @param req ModifyMerchantRequest
+     * @return ModifyMerchantResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyMerchantResponse ModifyMerchant(ModifyMerchantRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyMerchantResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyMerchantResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyMerchant");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1128,6 +1208,26 @@ public class CpdpClient extends AbstractClient{
     }
 
     /**
+     *云鉴-商户信息查询接口
+     * @param req QueryMerchantRequest
+     * @return QueryMerchantResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryMerchantResponse QueryMerchant(QueryMerchantRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<QueryMerchantResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<QueryMerchantResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "QueryMerchant");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *跨境-对接方账户余额查询
      * @param req QueryMerchantBalanceRequest
      * @return QueryMerchantBalanceResponse
@@ -1160,6 +1260,26 @@ public class CpdpClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<QueryMerchantInfoForManagementResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "QueryMerchantInfoForManagement");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *云鉴-消费订单查询接口
+     * @param req QueryMerchantOrderRequest
+     * @return QueryMerchantOrderResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryMerchantOrderResponse QueryMerchantOrder(QueryMerchantOrderRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<QueryMerchantOrderResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<QueryMerchantOrderResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "QueryMerchantOrder");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1480,6 +1600,26 @@ public class CpdpClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<RefundMemberTransactionResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "RefundMemberTransaction");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *云鉴-消费订单退款的接口
+     * @param req RefundOrderRequest
+     * @return RefundOrderResponse
+     * @throws TencentCloudSDKException
+     */
+    public RefundOrderResponse RefundOrder(RefundOrderRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RefundOrderResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<RefundOrderResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "RefundOrder");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

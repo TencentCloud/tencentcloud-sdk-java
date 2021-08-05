@@ -1,5 +1,8 @@
 package com.tencentcloudapi.ckafka.v20190819;
 public enum CkafkaErrorCode {
+    // 操作失败。
+     FAILEDOPERATION("FailedOperation"),
+     
     // 内部错误。
      INTERNALERROR("InternalError"),
      

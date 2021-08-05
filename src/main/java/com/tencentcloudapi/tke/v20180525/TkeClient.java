@@ -1279,6 +1279,26 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *获取集群版本信息
+     * @param req DescribeVersionsRequest
+     * @return DescribeVersionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVersionsResponse DescribeVersions(DescribeVersionsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeVersionsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeVersionsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeVersions");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口查询当前用户和地域在指定可用区下的机型可支持的最大 TKE VPC-CNI 网络模式的 Pod 数量
      * @param req DescribeVpcCniPodLimitsRequest
      * @return DescribeVpcCniPodLimitsResponse

@@ -157,6 +157,20 @@ public class CreateDCDBInstanceRequest extends AbstractModel{
     private DBParamValue [] InitParams;
 
     /**
+    * DCN源地域
+    */
+    @SerializedName("DcnRegion")
+    @Expose
+    private String DcnRegion;
+
+    /**
+    * DCN源实例ID
+    */
+    @SerializedName("DcnInstanceId")
+    @Expose
+    private String DcnInstanceId;
+
+    /**
      * Get 分片节点可用区分布，最多可填两个可用区。当分片规格为一主两从时，其中两个节点在第一个可用区。
 注意当前可售卖的可用区需要通过DescribeDCDBSaleInfo接口拉取。 
      * @return Zones 分片节点可用区分布，最多可填两个可用区。当分片规格为一主两从时，其中两个节点在第一个可用区。
@@ -476,6 +490,38 @@ public class CreateDCDBInstanceRequest extends AbstractModel{
         this.InitParams = InitParams;
     }
 
+    /**
+     * Get DCN源地域 
+     * @return DcnRegion DCN源地域
+     */
+    public String getDcnRegion() {
+        return this.DcnRegion;
+    }
+
+    /**
+     * Set DCN源地域
+     * @param DcnRegion DCN源地域
+     */
+    public void setDcnRegion(String DcnRegion) {
+        this.DcnRegion = DcnRegion;
+    }
+
+    /**
+     * Get DCN源实例ID 
+     * @return DcnInstanceId DCN源实例ID
+     */
+    public String getDcnInstanceId() {
+        return this.DcnInstanceId;
+    }
+
+    /**
+     * Set DCN源实例ID
+     * @param DcnInstanceId DCN源实例ID
+     */
+    public void setDcnInstanceId(String DcnInstanceId) {
+        this.DcnInstanceId = DcnInstanceId;
+    }
+
     public CreateDCDBInstanceRequest() {
     }
 
@@ -550,6 +596,12 @@ public class CreateDCDBInstanceRequest extends AbstractModel{
                 this.InitParams[i] = new DBParamValue(source.InitParams[i]);
             }
         }
+        if (source.DcnRegion != null) {
+            this.DcnRegion = new String(source.DcnRegion);
+        }
+        if (source.DcnInstanceId != null) {
+            this.DcnInstanceId = new String(source.DcnInstanceId);
+        }
     }
 
 
@@ -575,6 +627,8 @@ public class CreateDCDBInstanceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Ipv6Flag", this.Ipv6Flag);
         this.setParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
         this.setParamArrayObj(map, prefix + "InitParams.", this.InitParams);
+        this.setParamSimple(map, prefix + "DcnRegion", this.DcnRegion);
+        this.setParamSimple(map, prefix + "DcnInstanceId", this.DcnInstanceId);
 
     }
 }

@@ -37,6 +37,13 @@ public class RepairTaskControlRequest extends AbstractModel{
     private String Operate;
 
     /**
+    * 打回操作的备注信息
+    */
+    @SerializedName("OperateRemark")
+    @Expose
+    private String OperateRemark;
+
+    /**
      * Get 维修任务ID 
      * @return TaskId 维修任务ID
      */
@@ -68,6 +75,22 @@ public class RepairTaskControlRequest extends AbstractModel{
         this.Operate = Operate;
     }
 
+    /**
+     * Get 打回操作的备注信息 
+     * @return OperateRemark 打回操作的备注信息
+     */
+    public String getOperateRemark() {
+        return this.OperateRemark;
+    }
+
+    /**
+     * Set 打回操作的备注信息
+     * @param OperateRemark 打回操作的备注信息
+     */
+    public void setOperateRemark(String OperateRemark) {
+        this.OperateRemark = OperateRemark;
+    }
+
     public RepairTaskControlRequest() {
     }
 
@@ -82,6 +105,9 @@ public class RepairTaskControlRequest extends AbstractModel{
         if (source.Operate != null) {
             this.Operate = new String(source.Operate);
         }
+        if (source.OperateRemark != null) {
+            this.OperateRemark = new String(source.OperateRemark);
+        }
     }
 
 
@@ -91,6 +117,7 @@ public class RepairTaskControlRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);
         this.setParamSimple(map, prefix + "Operate", this.Operate);
+        this.setParamSimple(map, prefix + "OperateRemark", this.OperateRemark);
 
     }
 }

@@ -60,7 +60,7 @@ public class ClusterResource extends AbstractModel{
     private String ClusterName;
 
     /**
-    * 互联网服务供应商
+    * 集群的Isp属性，如："BGP","CMCC","CUCC","CTCC","INTERNAL"。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Isp")
@@ -156,9 +156,9 @@ public class ClusterResource extends AbstractModel{
     }
 
     /**
-     * Get 互联网服务供应商
+     * Get 集群的Isp属性，如："BGP","CMCC","CUCC","CTCC","INTERNAL"。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Isp 互联网服务供应商
+     * @return Isp 集群的Isp属性，如："BGP","CMCC","CUCC","CTCC","INTERNAL"。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIsp() {
@@ -166,9 +166,9 @@ public class ClusterResource extends AbstractModel{
     }
 
     /**
-     * Set 互联网服务供应商
+     * Set 集群的Isp属性，如："BGP","CMCC","CUCC","CTCC","INTERNAL"。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Isp 互联网服务供应商
+     * @param Isp 集群的Isp属性，如："BGP","CMCC","CUCC","CTCC","INTERNAL"。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsp(String Isp) {

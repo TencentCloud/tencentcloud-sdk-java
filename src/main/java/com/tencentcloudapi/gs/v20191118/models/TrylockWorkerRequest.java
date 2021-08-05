@@ -51,7 +51,7 @@ public class TrylockWorkerRequest extends AbstractModel{
     private Long SetNo;
 
     /**
-    * 游戏用户IP，用于就近调度，例如125.127.178.228
+    * 【必选】用户IP，用于就近调度，不填将严重影响用户体验
     */
     @SerializedName("UserIp")
     @Expose
@@ -129,16 +129,16 @@ public class TrylockWorkerRequest extends AbstractModel{
     }
 
     /**
-     * Get 游戏用户IP，用于就近调度，例如125.127.178.228 
-     * @return UserIp 游戏用户IP，用于就近调度，例如125.127.178.228
+     * Get 【必选】用户IP，用于就近调度，不填将严重影响用户体验 
+     * @return UserIp 【必选】用户IP，用于就近调度，不填将严重影响用户体验
      */
     public String getUserIp() {
         return this.UserIp;
     }
 
     /**
-     * Set 游戏用户IP，用于就近调度，例如125.127.178.228
-     * @param UserIp 游戏用户IP，用于就近调度，例如125.127.178.228
+     * Set 【必选】用户IP，用于就近调度，不填将严重影响用户体验
+     * @param UserIp 【必选】用户IP，用于就近调度，不填将严重影响用户体验
      */
     public void setUserIp(String UserIp) {
         this.UserIp = UserIp;

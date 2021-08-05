@@ -41,6 +41,7 @@ public class PushTask extends AbstractModel{
 fail：预热失败
 done：预热成功
 process：预热中
+invalid：预热无效(源站返回4xx或5xx状态码)
     */
     @SerializedName("Status")
     @Expose
@@ -114,11 +115,13 @@ global：全球
      * Get 预热任务状态
 fail：预热失败
 done：预热成功
-process：预热中 
+process：预热中
+invalid：预热无效(源站返回4xx或5xx状态码) 
      * @return Status 预热任务状态
 fail：预热失败
 done：预热成功
 process：预热中
+invalid：预热无效(源站返回4xx或5xx状态码)
      */
     public String getStatus() {
         return this.Status;
@@ -129,10 +132,12 @@ process：预热中
 fail：预热失败
 done：预热成功
 process：预热中
+invalid：预热无效(源站返回4xx或5xx状态码)
      * @param Status 预热任务状态
 fail：预热失败
 done：预热成功
 process：预热中
+invalid：预热无效(源站返回4xx或5xx状态码)
      */
     public void setStatus(String Status) {
         this.Status = Status;
