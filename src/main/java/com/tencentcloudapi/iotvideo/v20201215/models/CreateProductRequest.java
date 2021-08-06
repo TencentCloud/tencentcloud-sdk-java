@@ -51,7 +51,7 @@ public class CreateProductRequest extends AbstractModel{
     private String [] Features;
 
     /**
-    * 设备操作系统 android linux liteos
+    * 设备操作系统 Linux
     */
     @SerializedName("ChipOs")
     @Expose
@@ -150,16 +150,16 @@ public class CreateProductRequest extends AbstractModel{
     }
 
     /**
-     * Get 设备操作系统 android linux liteos 
-     * @return ChipOs 设备操作系统 android linux liteos
+     * Get 设备操作系统 Linux 
+     * @return ChipOs 设备操作系统 Linux
      */
     public String getChipOs() {
         return this.ChipOs;
     }
 
     /**
-     * Set 设备操作系统 android linux liteos
-     * @param ChipOs 设备操作系统 android linux liteos
+     * Set 设备操作系统 Linux
+     * @param ChipOs 设备操作系统 Linux
      */
     public void setChipOs(String ChipOs) {
         this.ChipOs = ChipOs;

@@ -1605,6 +1605,29 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     }
 
     /**
+     *查询转码总量数据，可查询近30天内数据。
+注意：
+如果是查询某一天内，则返回5分钟粒度数据；
+如果是查询跨天或指定域名， 则返回1小时粒度数据。
+     * @param req DescribeLiveTranscodeTotalInfoRequest
+     * @return DescribeLiveTranscodeTotalInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLiveTranscodeTotalInfoResponse DescribeLiveTranscodeTotalInfo(DescribeLiveTranscodeTotalInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeLiveTranscodeTotalInfoResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeLiveTranscodeTotalInfoResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeLiveTranscodeTotalInfo");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取单个水印信息。
      * @param req DescribeLiveWatermarkRequest
      * @return DescribeLiveWatermarkResponse

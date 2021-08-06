@@ -87,6 +87,9 @@ public enum OcrErrorCode {
     // 发票不存在。
      RESOURCENOTFOUND_NOINVOICE("ResourceNotFound.NoInvoice"),
      
+    // 不支持当天发票查询。
+     RESOURCENOTFOUND_NOTSUPPORTCURRENTINVOICEQUERY("ResourceNotFound.NotSupportCurrentInvoiceQuery"),
+     
     // 计费状态异常。
      RESOURCESSOLDOUT_CHARGESTATUSEXCEPTION("ResourcesSoldOut.ChargeStatusException");
      

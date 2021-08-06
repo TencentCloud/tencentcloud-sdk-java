@@ -23,42 +23,60 @@ import java.util.HashMap;
 public class InitOralProcessRequest extends AbstractModel{
 
     /**
-    * 语音段唯一标识，一段语音一个SessionId
+    * 语音段唯一标识，一段完整语音使用一个SessionId，不同语音段的评测需要使用不同的SessionId。一般使用uuid(通用唯一识别码)来作为它的值，要尽量保证SessionId的唯一性。
     */
     @SerializedName("SessionId")
     @Expose
     private String SessionId;
 
     /**
-    * 被评估语音对应的文本，句子模式下不超过个 20 单词或者中文文字，段落模式不超过 120 单词或者中文文字，中文评估使用 utf-8 编码，自由说模式该值传空。如需要在单词模式和句子模式下使用自定义音素，可以通过设置 TextMode 使用[音素标注](https://cloud.tencent.com/document/product/884/33698)。
+    * 被评估语音对应的文本，仅支持中文和英文。
+句子模式下不超过个 30 单词或者中文文字，段落模式不超过 120 单词或者中文文字，中文评估使用 utf-8 编码，自由说模式该值无效。
+关于RefText的文本键入要求，请参考[评测模式介绍](https://cloud.tencent.com/document/product/884/56131)。
+如需要在评测模式下使用自定义注音（支持中英文），可以通过设置「TextMode」参数实现，设置方式请参考[音素标注](https://cloud.tencent.com/document/product/884/33698)。
     */
     @SerializedName("RefText")
     @Expose
     private String RefText;
 
     /**
-    * 语音输入模式，0：流式分片，1：非流式一次性评估
+    * 语音输入模式
+0：流式分片
+1：非流式一次性评估
+推荐使用流式分片传输。
     */
     @SerializedName("WorkMode")
     @Expose
     private Long WorkMode;
 
     /**
-    * 评估模式，0：词模式（中文评测模式下为文字模式），1：句子模式，2：段落模式，3：自由说模式，当为词模式评估时，能够提供每个音节的评估信息，当为句子模式时，能够提供完整度和流利度信息。4: 英文单词音素诊断评测模式，针对一个单词音素诊断评测。
+    * 评测模式
+0：单词/单字模式（中文评测模式下为单字模式）
+1：句子模式
+2：段落模式
+3：自由说模式
+4：单词音素纠错模式
+5：情景评测模式
+6：句子多分支评测模式
+7：单词实时评测模式
+8：拼音评测模式
+关于每种评测模式的详细介绍，以及适用场景，请参考[评测模式介绍](https://cloud.tencent.com/document/product/884/56131)。
     */
     @SerializedName("EvalMode")
     @Expose
     private Long EvalMode;
 
     /**
-    * 评价苛刻指数，取值为[1.0 - 4.0]范围内的浮点数，用于平滑不同年龄段的分数，1.0为小年龄段，4.0为最高年龄段
+    * 评价苛刻指数。取值为[1.0 - 4.0]范围内的浮点数，用于平滑不同年龄段的分数。
+1.0：适用于最小年龄段用户，一般对应儿童应用场景；
+4.0：适用于最高年龄段用户，一般对应成人严格打分场景。
     */
     @SerializedName("ScoreCoeff")
     @Expose
     private Float ScoreCoeff;
 
     /**
-    * 业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数，新的 SoeAppId 可以在[控制台](https://console.cloud.tencent.com/soe)【应用管理】下新建。
+    * 业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数，新的 SoeAppId 可以在[控制台](https://console.cloud.tencent.com/soe)【应用管理】下新建。如果没有新建SoeAppId，请勿填入该参数，否则会报欠费错误。
     */
     @SerializedName("SoeAppId")
     @Expose
@@ -72,131 +90,219 @@ public class InitOralProcessRequest extends AbstractModel{
     private Long IsLongLifeSession;
 
     /**
-    * 音频存储模式，0：不存储，1：存储到公共对象存储，输出结果为该会话最后一个分片TransmitOralProcess 返回结果 AudioUrl 字段，2：永久存储音频，需要提工单申请，会产生一定存储费用，3：自定义存储，将音频存储到自定义的腾讯云[对象存储](https://cloud.tencent.com/product/cos)中，需要提工单登记存储信息。
+    * 音频存储模式
+0：不存储
+1：存储到公共对象存储，不会产生费用，存储时间为一个月。输出结果为该会话最后一个分片TransmitOralProcess 返回结果 AudioUrl 字段；
+2：永久存储音频，需要提工单申请，会产生一定的存储费用；
+3：自定义存储，将音频存储到自定义的腾讯云[对象存储](https://cloud.tencent.com/product/cos)中。
+注：对可用性要求较高的用户建议自行存储至腾讯云COS。
     */
     @SerializedName("StorageMode")
     @Expose
     private Long StorageMode;
 
     /**
-    * 输出断句中间结果标识，0：不输出，1：输出，通过设置该参数，可以在评估过程中的分片传输请求中，返回已经评估断句的中间结果，中间结果可用于客户端 UI 更新，输出结果为TransmitOralProcess请求返回结果 SentenceInfoSet 字段。
+    * 输出断句中间结果标识
+0：不输出
+1：输出，通过设置该参数
+可以在评估过程中的分片传输请求中，返回已经评估断句的中间结果，中间结果可用于客户端 UI 更新，输出结果为TransmitOralProcess请求返回结果 SentenceInfoSet 字段。
     */
     @SerializedName("SentenceInfoEnabled")
     @Expose
     private Long SentenceInfoEnabled;
 
     /**
-    * 评估语言，0：英文，1：中文。
+    * 评估语言
+0：英文
+1：中文
     */
     @SerializedName("ServerType")
     @Expose
     private Long ServerType;
 
     /**
-    * 异步模式标识，0：同步模式，1：异步模式，可选值参考[服务模式](https://cloud.tencent.com/document/product/884/33697)。
+    * 异步模式标识
+0：同步模式
+1：异步模式（一般情况不建议使用异步模式）
+可选值参考[服务模式](https://cloud.tencent.com/document/product/884/33697)。
     */
     @SerializedName("IsAsync")
     @Expose
     private Long IsAsync;
 
     /**
-    * 输入文本模式，0: 普通文本，1：[音素结构](https://cloud.tencent.com/document/product/884/33698)文本。2：音素注册模式（提工单注册需要使用音素的单词）。
+    * 输入文本模式
+0: 普通文本
+1：[音素结构](https://cloud.tencent.com/document/product/884/33698)文本
+2：音素注册模式（提工单注册需要使用音素的单词）。
     */
     @SerializedName("TextMode")
     @Expose
     private Long TextMode;
 
     /**
-     * Get 语音段唯一标识，一段语音一个SessionId 
-     * @return SessionId 语音段唯一标识，一段语音一个SessionId
+     * Get 语音段唯一标识，一段完整语音使用一个SessionId，不同语音段的评测需要使用不同的SessionId。一般使用uuid(通用唯一识别码)来作为它的值，要尽量保证SessionId的唯一性。 
+     * @return SessionId 语音段唯一标识，一段完整语音使用一个SessionId，不同语音段的评测需要使用不同的SessionId。一般使用uuid(通用唯一识别码)来作为它的值，要尽量保证SessionId的唯一性。
      */
     public String getSessionId() {
         return this.SessionId;
     }
 
     /**
-     * Set 语音段唯一标识，一段语音一个SessionId
-     * @param SessionId 语音段唯一标识，一段语音一个SessionId
+     * Set 语音段唯一标识，一段完整语音使用一个SessionId，不同语音段的评测需要使用不同的SessionId。一般使用uuid(通用唯一识别码)来作为它的值，要尽量保证SessionId的唯一性。
+     * @param SessionId 语音段唯一标识，一段完整语音使用一个SessionId，不同语音段的评测需要使用不同的SessionId。一般使用uuid(通用唯一识别码)来作为它的值，要尽量保证SessionId的唯一性。
      */
     public void setSessionId(String SessionId) {
         this.SessionId = SessionId;
     }
 
     /**
-     * Get 被评估语音对应的文本，句子模式下不超过个 20 单词或者中文文字，段落模式不超过 120 单词或者中文文字，中文评估使用 utf-8 编码，自由说模式该值传空。如需要在单词模式和句子模式下使用自定义音素，可以通过设置 TextMode 使用[音素标注](https://cloud.tencent.com/document/product/884/33698)。 
-     * @return RefText 被评估语音对应的文本，句子模式下不超过个 20 单词或者中文文字，段落模式不超过 120 单词或者中文文字，中文评估使用 utf-8 编码，自由说模式该值传空。如需要在单词模式和句子模式下使用自定义音素，可以通过设置 TextMode 使用[音素标注](https://cloud.tencent.com/document/product/884/33698)。
+     * Get 被评估语音对应的文本，仅支持中文和英文。
+句子模式下不超过个 30 单词或者中文文字，段落模式不超过 120 单词或者中文文字，中文评估使用 utf-8 编码，自由说模式该值无效。
+关于RefText的文本键入要求，请参考[评测模式介绍](https://cloud.tencent.com/document/product/884/56131)。
+如需要在评测模式下使用自定义注音（支持中英文），可以通过设置「TextMode」参数实现，设置方式请参考[音素标注](https://cloud.tencent.com/document/product/884/33698)。 
+     * @return RefText 被评估语音对应的文本，仅支持中文和英文。
+句子模式下不超过个 30 单词或者中文文字，段落模式不超过 120 单词或者中文文字，中文评估使用 utf-8 编码，自由说模式该值无效。
+关于RefText的文本键入要求，请参考[评测模式介绍](https://cloud.tencent.com/document/product/884/56131)。
+如需要在评测模式下使用自定义注音（支持中英文），可以通过设置「TextMode」参数实现，设置方式请参考[音素标注](https://cloud.tencent.com/document/product/884/33698)。
      */
     public String getRefText() {
         return this.RefText;
     }
 
     /**
-     * Set 被评估语音对应的文本，句子模式下不超过个 20 单词或者中文文字，段落模式不超过 120 单词或者中文文字，中文评估使用 utf-8 编码，自由说模式该值传空。如需要在单词模式和句子模式下使用自定义音素，可以通过设置 TextMode 使用[音素标注](https://cloud.tencent.com/document/product/884/33698)。
-     * @param RefText 被评估语音对应的文本，句子模式下不超过个 20 单词或者中文文字，段落模式不超过 120 单词或者中文文字，中文评估使用 utf-8 编码，自由说模式该值传空。如需要在单词模式和句子模式下使用自定义音素，可以通过设置 TextMode 使用[音素标注](https://cloud.tencent.com/document/product/884/33698)。
+     * Set 被评估语音对应的文本，仅支持中文和英文。
+句子模式下不超过个 30 单词或者中文文字，段落模式不超过 120 单词或者中文文字，中文评估使用 utf-8 编码，自由说模式该值无效。
+关于RefText的文本键入要求，请参考[评测模式介绍](https://cloud.tencent.com/document/product/884/56131)。
+如需要在评测模式下使用自定义注音（支持中英文），可以通过设置「TextMode」参数实现，设置方式请参考[音素标注](https://cloud.tencent.com/document/product/884/33698)。
+     * @param RefText 被评估语音对应的文本，仅支持中文和英文。
+句子模式下不超过个 30 单词或者中文文字，段落模式不超过 120 单词或者中文文字，中文评估使用 utf-8 编码，自由说模式该值无效。
+关于RefText的文本键入要求，请参考[评测模式介绍](https://cloud.tencent.com/document/product/884/56131)。
+如需要在评测模式下使用自定义注音（支持中英文），可以通过设置「TextMode」参数实现，设置方式请参考[音素标注](https://cloud.tencent.com/document/product/884/33698)。
      */
     public void setRefText(String RefText) {
         this.RefText = RefText;
     }
 
     /**
-     * Get 语音输入模式，0：流式分片，1：非流式一次性评估 
-     * @return WorkMode 语音输入模式，0：流式分片，1：非流式一次性评估
+     * Get 语音输入模式
+0：流式分片
+1：非流式一次性评估
+推荐使用流式分片传输。 
+     * @return WorkMode 语音输入模式
+0：流式分片
+1：非流式一次性评估
+推荐使用流式分片传输。
      */
     public Long getWorkMode() {
         return this.WorkMode;
     }
 
     /**
-     * Set 语音输入模式，0：流式分片，1：非流式一次性评估
-     * @param WorkMode 语音输入模式，0：流式分片，1：非流式一次性评估
+     * Set 语音输入模式
+0：流式分片
+1：非流式一次性评估
+推荐使用流式分片传输。
+     * @param WorkMode 语音输入模式
+0：流式分片
+1：非流式一次性评估
+推荐使用流式分片传输。
      */
     public void setWorkMode(Long WorkMode) {
         this.WorkMode = WorkMode;
     }
 
     /**
-     * Get 评估模式，0：词模式（中文评测模式下为文字模式），1：句子模式，2：段落模式，3：自由说模式，当为词模式评估时，能够提供每个音节的评估信息，当为句子模式时，能够提供完整度和流利度信息。4: 英文单词音素诊断评测模式，针对一个单词音素诊断评测。 
-     * @return EvalMode 评估模式，0：词模式（中文评测模式下为文字模式），1：句子模式，2：段落模式，3：自由说模式，当为词模式评估时，能够提供每个音节的评估信息，当为句子模式时，能够提供完整度和流利度信息。4: 英文单词音素诊断评测模式，针对一个单词音素诊断评测。
+     * Get 评测模式
+0：单词/单字模式（中文评测模式下为单字模式）
+1：句子模式
+2：段落模式
+3：自由说模式
+4：单词音素纠错模式
+5：情景评测模式
+6：句子多分支评测模式
+7：单词实时评测模式
+8：拼音评测模式
+关于每种评测模式的详细介绍，以及适用场景，请参考[评测模式介绍](https://cloud.tencent.com/document/product/884/56131)。 
+     * @return EvalMode 评测模式
+0：单词/单字模式（中文评测模式下为单字模式）
+1：句子模式
+2：段落模式
+3：自由说模式
+4：单词音素纠错模式
+5：情景评测模式
+6：句子多分支评测模式
+7：单词实时评测模式
+8：拼音评测模式
+关于每种评测模式的详细介绍，以及适用场景，请参考[评测模式介绍](https://cloud.tencent.com/document/product/884/56131)。
      */
     public Long getEvalMode() {
         return this.EvalMode;
     }
 
     /**
-     * Set 评估模式，0：词模式（中文评测模式下为文字模式），1：句子模式，2：段落模式，3：自由说模式，当为词模式评估时，能够提供每个音节的评估信息，当为句子模式时，能够提供完整度和流利度信息。4: 英文单词音素诊断评测模式，针对一个单词音素诊断评测。
-     * @param EvalMode 评估模式，0：词模式（中文评测模式下为文字模式），1：句子模式，2：段落模式，3：自由说模式，当为词模式评估时，能够提供每个音节的评估信息，当为句子模式时，能够提供完整度和流利度信息。4: 英文单词音素诊断评测模式，针对一个单词音素诊断评测。
+     * Set 评测模式
+0：单词/单字模式（中文评测模式下为单字模式）
+1：句子模式
+2：段落模式
+3：自由说模式
+4：单词音素纠错模式
+5：情景评测模式
+6：句子多分支评测模式
+7：单词实时评测模式
+8：拼音评测模式
+关于每种评测模式的详细介绍，以及适用场景，请参考[评测模式介绍](https://cloud.tencent.com/document/product/884/56131)。
+     * @param EvalMode 评测模式
+0：单词/单字模式（中文评测模式下为单字模式）
+1：句子模式
+2：段落模式
+3：自由说模式
+4：单词音素纠错模式
+5：情景评测模式
+6：句子多分支评测模式
+7：单词实时评测模式
+8：拼音评测模式
+关于每种评测模式的详细介绍，以及适用场景，请参考[评测模式介绍](https://cloud.tencent.com/document/product/884/56131)。
      */
     public void setEvalMode(Long EvalMode) {
         this.EvalMode = EvalMode;
     }
 
     /**
-     * Get 评价苛刻指数，取值为[1.0 - 4.0]范围内的浮点数，用于平滑不同年龄段的分数，1.0为小年龄段，4.0为最高年龄段 
-     * @return ScoreCoeff 评价苛刻指数，取值为[1.0 - 4.0]范围内的浮点数，用于平滑不同年龄段的分数，1.0为小年龄段，4.0为最高年龄段
+     * Get 评价苛刻指数。取值为[1.0 - 4.0]范围内的浮点数，用于平滑不同年龄段的分数。
+1.0：适用于最小年龄段用户，一般对应儿童应用场景；
+4.0：适用于最高年龄段用户，一般对应成人严格打分场景。 
+     * @return ScoreCoeff 评价苛刻指数。取值为[1.0 - 4.0]范围内的浮点数，用于平滑不同年龄段的分数。
+1.0：适用于最小年龄段用户，一般对应儿童应用场景；
+4.0：适用于最高年龄段用户，一般对应成人严格打分场景。
      */
     public Float getScoreCoeff() {
         return this.ScoreCoeff;
     }
 
     /**
-     * Set 评价苛刻指数，取值为[1.0 - 4.0]范围内的浮点数，用于平滑不同年龄段的分数，1.0为小年龄段，4.0为最高年龄段
-     * @param ScoreCoeff 评价苛刻指数，取值为[1.0 - 4.0]范围内的浮点数，用于平滑不同年龄段的分数，1.0为小年龄段，4.0为最高年龄段
+     * Set 评价苛刻指数。取值为[1.0 - 4.0]范围内的浮点数，用于平滑不同年龄段的分数。
+1.0：适用于最小年龄段用户，一般对应儿童应用场景；
+4.0：适用于最高年龄段用户，一般对应成人严格打分场景。
+     * @param ScoreCoeff 评价苛刻指数。取值为[1.0 - 4.0]范围内的浮点数，用于平滑不同年龄段的分数。
+1.0：适用于最小年龄段用户，一般对应儿童应用场景；
+4.0：适用于最高年龄段用户，一般对应成人严格打分场景。
      */
     public void setScoreCoeff(Float ScoreCoeff) {
         this.ScoreCoeff = ScoreCoeff;
     }
 
     /**
-     * Get 业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数，新的 SoeAppId 可以在[控制台](https://console.cloud.tencent.com/soe)【应用管理】下新建。 
-     * @return SoeAppId 业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数，新的 SoeAppId 可以在[控制台](https://console.cloud.tencent.com/soe)【应用管理】下新建。
+     * Get 业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数，新的 SoeAppId 可以在[控制台](https://console.cloud.tencent.com/soe)【应用管理】下新建。如果没有新建SoeAppId，请勿填入该参数，否则会报欠费错误。 
+     * @return SoeAppId 业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数，新的 SoeAppId 可以在[控制台](https://console.cloud.tencent.com/soe)【应用管理】下新建。如果没有新建SoeAppId，请勿填入该参数，否则会报欠费错误。
      */
     public String getSoeAppId() {
         return this.SoeAppId;
     }
 
     /**
-     * Set 业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数，新的 SoeAppId 可以在[控制台](https://console.cloud.tencent.com/soe)【应用管理】下新建。
-     * @param SoeAppId 业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数，新的 SoeAppId 可以在[控制台](https://console.cloud.tencent.com/soe)【应用管理】下新建。
+     * Set 业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数，新的 SoeAppId 可以在[控制台](https://console.cloud.tencent.com/soe)【应用管理】下新建。如果没有新建SoeAppId，请勿填入该参数，否则会报欠费错误。
+     * @param SoeAppId 业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数，新的 SoeAppId 可以在[控制台](https://console.cloud.tencent.com/soe)【应用管理】下新建。如果没有新建SoeAppId，请勿填入该参数，否则会报欠费错误。
      */
     public void setSoeAppId(String SoeAppId) {
         this.SoeAppId = SoeAppId;
@@ -219,80 +325,144 @@ public class InitOralProcessRequest extends AbstractModel{
     }
 
     /**
-     * Get 音频存储模式，0：不存储，1：存储到公共对象存储，输出结果为该会话最后一个分片TransmitOralProcess 返回结果 AudioUrl 字段，2：永久存储音频，需要提工单申请，会产生一定存储费用，3：自定义存储，将音频存储到自定义的腾讯云[对象存储](https://cloud.tencent.com/product/cos)中，需要提工单登记存储信息。 
-     * @return StorageMode 音频存储模式，0：不存储，1：存储到公共对象存储，输出结果为该会话最后一个分片TransmitOralProcess 返回结果 AudioUrl 字段，2：永久存储音频，需要提工单申请，会产生一定存储费用，3：自定义存储，将音频存储到自定义的腾讯云[对象存储](https://cloud.tencent.com/product/cos)中，需要提工单登记存储信息。
+     * Get 音频存储模式
+0：不存储
+1：存储到公共对象存储，不会产生费用，存储时间为一个月。输出结果为该会话最后一个分片TransmitOralProcess 返回结果 AudioUrl 字段；
+2：永久存储音频，需要提工单申请，会产生一定的存储费用；
+3：自定义存储，将音频存储到自定义的腾讯云[对象存储](https://cloud.tencent.com/product/cos)中。
+注：对可用性要求较高的用户建议自行存储至腾讯云COS。 
+     * @return StorageMode 音频存储模式
+0：不存储
+1：存储到公共对象存储，不会产生费用，存储时间为一个月。输出结果为该会话最后一个分片TransmitOralProcess 返回结果 AudioUrl 字段；
+2：永久存储音频，需要提工单申请，会产生一定的存储费用；
+3：自定义存储，将音频存储到自定义的腾讯云[对象存储](https://cloud.tencent.com/product/cos)中。
+注：对可用性要求较高的用户建议自行存储至腾讯云COS。
      */
     public Long getStorageMode() {
         return this.StorageMode;
     }
 
     /**
-     * Set 音频存储模式，0：不存储，1：存储到公共对象存储，输出结果为该会话最后一个分片TransmitOralProcess 返回结果 AudioUrl 字段，2：永久存储音频，需要提工单申请，会产生一定存储费用，3：自定义存储，将音频存储到自定义的腾讯云[对象存储](https://cloud.tencent.com/product/cos)中，需要提工单登记存储信息。
-     * @param StorageMode 音频存储模式，0：不存储，1：存储到公共对象存储，输出结果为该会话最后一个分片TransmitOralProcess 返回结果 AudioUrl 字段，2：永久存储音频，需要提工单申请，会产生一定存储费用，3：自定义存储，将音频存储到自定义的腾讯云[对象存储](https://cloud.tencent.com/product/cos)中，需要提工单登记存储信息。
+     * Set 音频存储模式
+0：不存储
+1：存储到公共对象存储，不会产生费用，存储时间为一个月。输出结果为该会话最后一个分片TransmitOralProcess 返回结果 AudioUrl 字段；
+2：永久存储音频，需要提工单申请，会产生一定的存储费用；
+3：自定义存储，将音频存储到自定义的腾讯云[对象存储](https://cloud.tencent.com/product/cos)中。
+注：对可用性要求较高的用户建议自行存储至腾讯云COS。
+     * @param StorageMode 音频存储模式
+0：不存储
+1：存储到公共对象存储，不会产生费用，存储时间为一个月。输出结果为该会话最后一个分片TransmitOralProcess 返回结果 AudioUrl 字段；
+2：永久存储音频，需要提工单申请，会产生一定的存储费用；
+3：自定义存储，将音频存储到自定义的腾讯云[对象存储](https://cloud.tencent.com/product/cos)中。
+注：对可用性要求较高的用户建议自行存储至腾讯云COS。
      */
     public void setStorageMode(Long StorageMode) {
         this.StorageMode = StorageMode;
     }
 
     /**
-     * Get 输出断句中间结果标识，0：不输出，1：输出，通过设置该参数，可以在评估过程中的分片传输请求中，返回已经评估断句的中间结果，中间结果可用于客户端 UI 更新，输出结果为TransmitOralProcess请求返回结果 SentenceInfoSet 字段。 
-     * @return SentenceInfoEnabled 输出断句中间结果标识，0：不输出，1：输出，通过设置该参数，可以在评估过程中的分片传输请求中，返回已经评估断句的中间结果，中间结果可用于客户端 UI 更新，输出结果为TransmitOralProcess请求返回结果 SentenceInfoSet 字段。
+     * Get 输出断句中间结果标识
+0：不输出
+1：输出，通过设置该参数
+可以在评估过程中的分片传输请求中，返回已经评估断句的中间结果，中间结果可用于客户端 UI 更新，输出结果为TransmitOralProcess请求返回结果 SentenceInfoSet 字段。 
+     * @return SentenceInfoEnabled 输出断句中间结果标识
+0：不输出
+1：输出，通过设置该参数
+可以在评估过程中的分片传输请求中，返回已经评估断句的中间结果，中间结果可用于客户端 UI 更新，输出结果为TransmitOralProcess请求返回结果 SentenceInfoSet 字段。
      */
     public Long getSentenceInfoEnabled() {
         return this.SentenceInfoEnabled;
     }
 
     /**
-     * Set 输出断句中间结果标识，0：不输出，1：输出，通过设置该参数，可以在评估过程中的分片传输请求中，返回已经评估断句的中间结果，中间结果可用于客户端 UI 更新，输出结果为TransmitOralProcess请求返回结果 SentenceInfoSet 字段。
-     * @param SentenceInfoEnabled 输出断句中间结果标识，0：不输出，1：输出，通过设置该参数，可以在评估过程中的分片传输请求中，返回已经评估断句的中间结果，中间结果可用于客户端 UI 更新，输出结果为TransmitOralProcess请求返回结果 SentenceInfoSet 字段。
+     * Set 输出断句中间结果标识
+0：不输出
+1：输出，通过设置该参数
+可以在评估过程中的分片传输请求中，返回已经评估断句的中间结果，中间结果可用于客户端 UI 更新，输出结果为TransmitOralProcess请求返回结果 SentenceInfoSet 字段。
+     * @param SentenceInfoEnabled 输出断句中间结果标识
+0：不输出
+1：输出，通过设置该参数
+可以在评估过程中的分片传输请求中，返回已经评估断句的中间结果，中间结果可用于客户端 UI 更新，输出结果为TransmitOralProcess请求返回结果 SentenceInfoSet 字段。
      */
     public void setSentenceInfoEnabled(Long SentenceInfoEnabled) {
         this.SentenceInfoEnabled = SentenceInfoEnabled;
     }
 
     /**
-     * Get 评估语言，0：英文，1：中文。 
-     * @return ServerType 评估语言，0：英文，1：中文。
+     * Get 评估语言
+0：英文
+1：中文 
+     * @return ServerType 评估语言
+0：英文
+1：中文
      */
     public Long getServerType() {
         return this.ServerType;
     }
 
     /**
-     * Set 评估语言，0：英文，1：中文。
-     * @param ServerType 评估语言，0：英文，1：中文。
+     * Set 评估语言
+0：英文
+1：中文
+     * @param ServerType 评估语言
+0：英文
+1：中文
      */
     public void setServerType(Long ServerType) {
         this.ServerType = ServerType;
     }
 
     /**
-     * Get 异步模式标识，0：同步模式，1：异步模式，可选值参考[服务模式](https://cloud.tencent.com/document/product/884/33697)。 
-     * @return IsAsync 异步模式标识，0：同步模式，1：异步模式，可选值参考[服务模式](https://cloud.tencent.com/document/product/884/33697)。
+     * Get 异步模式标识
+0：同步模式
+1：异步模式（一般情况不建议使用异步模式）
+可选值参考[服务模式](https://cloud.tencent.com/document/product/884/33697)。 
+     * @return IsAsync 异步模式标识
+0：同步模式
+1：异步模式（一般情况不建议使用异步模式）
+可选值参考[服务模式](https://cloud.tencent.com/document/product/884/33697)。
      */
     public Long getIsAsync() {
         return this.IsAsync;
     }
 
     /**
-     * Set 异步模式标识，0：同步模式，1：异步模式，可选值参考[服务模式](https://cloud.tencent.com/document/product/884/33697)。
-     * @param IsAsync 异步模式标识，0：同步模式，1：异步模式，可选值参考[服务模式](https://cloud.tencent.com/document/product/884/33697)。
+     * Set 异步模式标识
+0：同步模式
+1：异步模式（一般情况不建议使用异步模式）
+可选值参考[服务模式](https://cloud.tencent.com/document/product/884/33697)。
+     * @param IsAsync 异步模式标识
+0：同步模式
+1：异步模式（一般情况不建议使用异步模式）
+可选值参考[服务模式](https://cloud.tencent.com/document/product/884/33697)。
      */
     public void setIsAsync(Long IsAsync) {
         this.IsAsync = IsAsync;
     }
 
     /**
-     * Get 输入文本模式，0: 普通文本，1：[音素结构](https://cloud.tencent.com/document/product/884/33698)文本。2：音素注册模式（提工单注册需要使用音素的单词）。 
-     * @return TextMode 输入文本模式，0: 普通文本，1：[音素结构](https://cloud.tencent.com/document/product/884/33698)文本。2：音素注册模式（提工单注册需要使用音素的单词）。
+     * Get 输入文本模式
+0: 普通文本
+1：[音素结构](https://cloud.tencent.com/document/product/884/33698)文本
+2：音素注册模式（提工单注册需要使用音素的单词）。 
+     * @return TextMode 输入文本模式
+0: 普通文本
+1：[音素结构](https://cloud.tencent.com/document/product/884/33698)文本
+2：音素注册模式（提工单注册需要使用音素的单词）。
      */
     public Long getTextMode() {
         return this.TextMode;
     }
 
     /**
-     * Set 输入文本模式，0: 普通文本，1：[音素结构](https://cloud.tencent.com/document/product/884/33698)文本。2：音素注册模式（提工单注册需要使用音素的单词）。
-     * @param TextMode 输入文本模式，0: 普通文本，1：[音素结构](https://cloud.tencent.com/document/product/884/33698)文本。2：音素注册模式（提工单注册需要使用音素的单词）。
+     * Set 输入文本模式
+0: 普通文本
+1：[音素结构](https://cloud.tencent.com/document/product/884/33698)文本
+2：音素注册模式（提工单注册需要使用音素的单词）。
+     * @param TextMode 输入文本模式
+0: 普通文本
+1：[音素结构](https://cloud.tencent.com/document/product/884/33698)文本
+2：音素注册模式（提工单注册需要使用音素的单词）。
      */
     public void setTextMode(Long TextMode) {
         this.TextMode = TextMode;

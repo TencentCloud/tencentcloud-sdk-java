@@ -59,6 +59,26 @@ public class AntiddosClient extends AbstractClient{
     }
 
     /**
+     *本接口 (AssociateDDoSEipLoadBalancer) 用于将高防弹性公网IP绑定到负载均衡指定内网 IP 上。
+     * @param req AssociateDDoSEipLoadBalancerRequest
+     * @return AssociateDDoSEipLoadBalancerResponse
+     * @throws TencentCloudSDKException
+     */
+    public AssociateDDoSEipLoadBalancerResponse AssociateDDoSEipLoadBalancer(AssociateDDoSEipLoadBalancerRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AssociateDDoSEipLoadBalancerResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<AssociateDDoSEipLoadBalancerResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "AssociateDDoSEipLoadBalancer");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *添加DDoS防护的IP黑白名单
      * @param req CreateBlackWhiteIpListRequest
      * @return CreateBlackWhiteIpListResponse

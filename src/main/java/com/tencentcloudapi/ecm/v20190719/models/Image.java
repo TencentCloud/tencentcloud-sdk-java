@@ -135,6 +135,13 @@ public class Image extends AbstractModel{
     private String TaskId;
 
     /**
+    * 是否支持CloudInit
+    */
+    @SerializedName("IsSupportCloudInit")
+    @Expose
+    private Boolean IsSupportCloudInit;
+
+    /**
      * Get 镜像ID 
      * @return ImageId 镜像ID
      */
@@ -390,6 +397,22 @@ public class Image extends AbstractModel{
         this.TaskId = TaskId;
     }
 
+    /**
+     * Get 是否支持CloudInit 
+     * @return IsSupportCloudInit 是否支持CloudInit
+     */
+    public Boolean getIsSupportCloudInit() {
+        return this.IsSupportCloudInit;
+    }
+
+    /**
+     * Set 是否支持CloudInit
+     * @param IsSupportCloudInit 是否支持CloudInit
+     */
+    public void setIsSupportCloudInit(Boolean IsSupportCloudInit) {
+        this.IsSupportCloudInit = IsSupportCloudInit;
+    }
+
     public Image() {
     }
 
@@ -446,6 +469,9 @@ public class Image extends AbstractModel{
         if (source.TaskId != null) {
             this.TaskId = new String(source.TaskId);
         }
+        if (source.IsSupportCloudInit != null) {
+            this.IsSupportCloudInit = new Boolean(source.IsSupportCloudInit);
+        }
     }
 
 
@@ -469,6 +495,7 @@ public class Image extends AbstractModel{
         this.setParamObj(map, prefix + "SrcImage.", this.SrcImage);
         this.setParamSimple(map, prefix + "ImageSource", this.ImageSource);
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);
+        this.setParamSimple(map, prefix + "IsSupportCloudInit", this.IsSupportCloudInit);
 
     }
 }

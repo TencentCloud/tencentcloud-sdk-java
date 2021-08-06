@@ -24,6 +24,7 @@ public class TransmitOralProcessWithInitRequest extends AbstractModel{
 
     /**
     * 流式数据包的序号，从1开始，当IsEnd字段为1后后续序号无意义，当IsLongLifeSession不为1且为非流式模式时无意义。
+注意：序号上限为3000，不能超过上限。
     */
     @SerializedName("SeqId")
     @Expose
@@ -182,8 +183,10 @@ public class TransmitOralProcessWithInitRequest extends AbstractModel{
     private Long TextMode;
 
     /**
-     * Get 流式数据包的序号，从1开始，当IsEnd字段为1后后续序号无意义，当IsLongLifeSession不为1且为非流式模式时无意义。 
+     * Get 流式数据包的序号，从1开始，当IsEnd字段为1后后续序号无意义，当IsLongLifeSession不为1且为非流式模式时无意义。
+注意：序号上限为3000，不能超过上限。 
      * @return SeqId 流式数据包的序号，从1开始，当IsEnd字段为1后后续序号无意义，当IsLongLifeSession不为1且为非流式模式时无意义。
+注意：序号上限为3000，不能超过上限。
      */
     public Long getSeqId() {
         return this.SeqId;
@@ -191,7 +194,9 @@ public class TransmitOralProcessWithInitRequest extends AbstractModel{
 
     /**
      * Set 流式数据包的序号，从1开始，当IsEnd字段为1后后续序号无意义，当IsLongLifeSession不为1且为非流式模式时无意义。
+注意：序号上限为3000，不能超过上限。
      * @param SeqId 流式数据包的序号，从1开始，当IsEnd字段为1后后续序号无意义，当IsLongLifeSession不为1且为非流式模式时无意义。
+注意：序号上限为3000，不能超过上限。
      */
     public void setSeqId(Long SeqId) {
         this.SeqId = SeqId;

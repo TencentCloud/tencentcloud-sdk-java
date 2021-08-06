@@ -30,6 +30,20 @@ public class VatInvoiceVerifyResponse extends AbstractModel{
     private VatInvoice Invoice;
 
     /**
+    * 机动车销售统一发票信息
+    */
+    @SerializedName("VehicleInvoiceInfo")
+    @Expose
+    private VehicleInvoiceInfo VehicleInvoiceInfo;
+
+    /**
+    * 二手车销售统一发票信息
+    */
+    @SerializedName("UsedVehicleInvoiceInfo")
+    @Expose
+    private UsedVehicleInvoiceInfo UsedVehicleInvoiceInfo;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -50,6 +64,38 @@ public class VatInvoiceVerifyResponse extends AbstractModel{
      */
     public void setInvoice(VatInvoice Invoice) {
         this.Invoice = Invoice;
+    }
+
+    /**
+     * Get 机动车销售统一发票信息 
+     * @return VehicleInvoiceInfo 机动车销售统一发票信息
+     */
+    public VehicleInvoiceInfo getVehicleInvoiceInfo() {
+        return this.VehicleInvoiceInfo;
+    }
+
+    /**
+     * Set 机动车销售统一发票信息
+     * @param VehicleInvoiceInfo 机动车销售统一发票信息
+     */
+    public void setVehicleInvoiceInfo(VehicleInvoiceInfo VehicleInvoiceInfo) {
+        this.VehicleInvoiceInfo = VehicleInvoiceInfo;
+    }
+
+    /**
+     * Get 二手车销售统一发票信息 
+     * @return UsedVehicleInvoiceInfo 二手车销售统一发票信息
+     */
+    public UsedVehicleInvoiceInfo getUsedVehicleInvoiceInfo() {
+        return this.UsedVehicleInvoiceInfo;
+    }
+
+    /**
+     * Set 二手车销售统一发票信息
+     * @param UsedVehicleInvoiceInfo 二手车销售统一发票信息
+     */
+    public void setUsedVehicleInvoiceInfo(UsedVehicleInvoiceInfo UsedVehicleInvoiceInfo) {
+        this.UsedVehicleInvoiceInfo = UsedVehicleInvoiceInfo;
     }
 
     /**
@@ -79,6 +125,12 @@ public class VatInvoiceVerifyResponse extends AbstractModel{
         if (source.Invoice != null) {
             this.Invoice = new VatInvoice(source.Invoice);
         }
+        if (source.VehicleInvoiceInfo != null) {
+            this.VehicleInvoiceInfo = new VehicleInvoiceInfo(source.VehicleInvoiceInfo);
+        }
+        if (source.UsedVehicleInvoiceInfo != null) {
+            this.UsedVehicleInvoiceInfo = new UsedVehicleInvoiceInfo(source.UsedVehicleInvoiceInfo);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -90,6 +142,8 @@ public class VatInvoiceVerifyResponse extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "Invoice.", this.Invoice);
+        this.setParamObj(map, prefix + "VehicleInvoiceInfo.", this.VehicleInvoiceInfo);
+        this.setParamObj(map, prefix + "UsedVehicleInvoiceInfo.", this.UsedVehicleInvoiceInfo);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
