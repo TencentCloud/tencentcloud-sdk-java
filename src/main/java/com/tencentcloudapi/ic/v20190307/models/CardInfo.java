@@ -230,6 +230,14 @@ public class CardInfo extends AbstractModel{
     private Long CertificationState;
 
     /**
+    * 其他流量信息,流量分离统计其他流量
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OtherData")
+    @Expose
+    private Float OtherData;
+
+    /**
      * Get 卡片ID 
      * @return Iccid 卡片ID
      */
@@ -733,6 +741,26 @@ public class CardInfo extends AbstractModel{
         this.CertificationState = CertificationState;
     }
 
+    /**
+     * Get 其他流量信息,流量分离统计其他流量
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OtherData 其他流量信息,流量分离统计其他流量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Float getOtherData() {
+        return this.OtherData;
+    }
+
+    /**
+     * Set 其他流量信息,流量分离统计其他流量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OtherData 其他流量信息,流量分离统计其他流量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOtherData(Float OtherData) {
+        this.OtherData = OtherData;
+    }
+
     public CardInfo() {
     }
 
@@ -822,6 +850,9 @@ public class CardInfo extends AbstractModel{
         if (source.CertificationState != null) {
             this.CertificationState = new Long(source.CertificationState);
         }
+        if (source.OtherData != null) {
+            this.OtherData = new Float(source.OtherData);
+        }
     }
 
 
@@ -856,6 +887,7 @@ public class CardInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "NeedSms", this.NeedSms);
         this.setParamSimple(map, prefix + "Provider", this.Provider);
         this.setParamSimple(map, prefix + "CertificationState", this.CertificationState);
+        this.setParamSimple(map, prefix + "OtherData", this.OtherData);
 
     }
 }
