@@ -58,6 +58,30 @@ public class MediaVideoStreamItem extends AbstractModel{
     private Long Fps;
 
     /**
+    * 色彩空间。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ColorPrimaries")
+    @Expose
+    private String ColorPrimaries;
+
+    /**
+    * 色彩空间。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ColorSpace")
+    @Expose
+    private String ColorSpace;
+
+    /**
+    * 色彩空间。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ColorTransfer")
+    @Expose
+    private String ColorTransfer;
+
+    /**
      * Get 视频流的码率，单位：bps。 
      * @return Bitrate 视频流的码率，单位：bps。
      */
@@ -137,6 +161,66 @@ public class MediaVideoStreamItem extends AbstractModel{
         this.Fps = Fps;
     }
 
+    /**
+     * Get 色彩空间。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ColorPrimaries 色彩空间。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getColorPrimaries() {
+        return this.ColorPrimaries;
+    }
+
+    /**
+     * Set 色彩空间。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ColorPrimaries 色彩空间。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setColorPrimaries(String ColorPrimaries) {
+        this.ColorPrimaries = ColorPrimaries;
+    }
+
+    /**
+     * Get 色彩空间。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ColorSpace 色彩空间。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getColorSpace() {
+        return this.ColorSpace;
+    }
+
+    /**
+     * Set 色彩空间。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ColorSpace 色彩空间。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setColorSpace(String ColorSpace) {
+        this.ColorSpace = ColorSpace;
+    }
+
+    /**
+     * Get 色彩空间。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ColorTransfer 色彩空间。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getColorTransfer() {
+        return this.ColorTransfer;
+    }
+
+    /**
+     * Set 色彩空间。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ColorTransfer 色彩空间。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setColorTransfer(String ColorTransfer) {
+        this.ColorTransfer = ColorTransfer;
+    }
+
     public MediaVideoStreamItem() {
     }
 
@@ -160,6 +244,15 @@ public class MediaVideoStreamItem extends AbstractModel{
         if (source.Fps != null) {
             this.Fps = new Long(source.Fps);
         }
+        if (source.ColorPrimaries != null) {
+            this.ColorPrimaries = new String(source.ColorPrimaries);
+        }
+        if (source.ColorSpace != null) {
+            this.ColorSpace = new String(source.ColorSpace);
+        }
+        if (source.ColorTransfer != null) {
+            this.ColorTransfer = new String(source.ColorTransfer);
+        }
     }
 
 
@@ -172,6 +265,9 @@ public class MediaVideoStreamItem extends AbstractModel{
         this.setParamSimple(map, prefix + "Width", this.Width);
         this.setParamSimple(map, prefix + "Codec", this.Codec);
         this.setParamSimple(map, prefix + "Fps", this.Fps);
+        this.setParamSimple(map, prefix + "ColorPrimaries", this.ColorPrimaries);
+        this.setParamSimple(map, prefix + "ColorSpace", this.ColorSpace);
+        this.setParamSimple(map, prefix + "ColorTransfer", this.ColorTransfer);
 
     }
 }

@@ -653,6 +653,46 @@ public class ClbClient extends AbstractClient{
     }
 
     /**
+     *拉取配置绑定的 server 或 location，如果 domain 存在，结果将根据 domain 过滤。或拉取配置绑定的 loadbalancer。
+     * @param req DescribeCustomizedConfigAssociateListRequest
+     * @return DescribeCustomizedConfigAssociateListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCustomizedConfigAssociateListResponse DescribeCustomizedConfigAssociateList(DescribeCustomizedConfigAssociateListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCustomizedConfigAssociateListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCustomizedConfigAssociateListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeCustomizedConfigAssociateList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *拉取个性化配置列表，返回用户 AppId 下指定类型的配置。
+     * @param req DescribeCustomizedConfigListRequest
+     * @return DescribeCustomizedConfigListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCustomizedConfigListResponse DescribeCustomizedConfigList(DescribeCustomizedConfigListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCustomizedConfigListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCustomizedConfigListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeCustomizedConfigList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询集群信息列表，支持以集群类型、集群唯一ID、集群名字、集群标签、集群内vip、集群内负载均衡唯一id、集群网络类型、可用区等条件进行检索
      * @param req DescribeExclusiveClustersRequest
      * @return DescribeExclusiveClustersResponse
@@ -1282,6 +1322,26 @@ public class ClbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ReplaceCertForLoadBalancersResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ReplaceCertForLoadBalancers");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *负载均衡维度的个性化配置相关操作：创建、删除、修改、绑定、解绑
+     * @param req SetCustomizedConfigForLoadBalancerRequest
+     * @return SetCustomizedConfigForLoadBalancerResponse
+     * @throws TencentCloudSDKException
+     */
+    public SetCustomizedConfigForLoadBalancerResponse SetCustomizedConfigForLoadBalancer(SetCustomizedConfigForLoadBalancerRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SetCustomizedConfigForLoadBalancerResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<SetCustomizedConfigForLoadBalancerResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "SetCustomizedConfigForLoadBalancer");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

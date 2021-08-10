@@ -139,6 +139,26 @@ public class CccClient extends AbstractClient{
     }
 
     /**
+     *获取呼入实时数据统计指标
+     * @param req DescribeCallInMetricsRequest
+     * @return DescribeCallInMetricsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCallInMetricsResponse DescribeCallInMetrics(DescribeCallInMetricsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCallInMetricsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCallInMetricsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeCallInMetrics");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *包括具体聊天内容
      * @param req DescribeChatMessagesRequest
      * @return DescribeChatMessagesResponse
@@ -253,6 +273,26 @@ public class CccClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeStaffInfoListResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeStaffInfoList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取坐席实时状态统计指标
+     * @param req DescribeStaffStatusMetricsRequest
+     * @return DescribeStaffStatusMetricsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeStaffStatusMetricsResponse DescribeStaffStatusMetrics(DescribeStaffStatusMetricsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeStaffStatusMetricsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeStaffStatusMetricsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeStaffStatusMetrics");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

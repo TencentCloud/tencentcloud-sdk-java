@@ -59,6 +59,26 @@ public class WafClient extends AbstractClient{
     }
 
     /**
+     *本接口用于创建访问日志导出
+     * @param req CreateAccessExportRequest
+     * @return CreateAccessExportResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAccessExportResponse CreateAccessExport(CreateAccessExportRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateAccessExportResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateAccessExportResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateAccessExport");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建攻击日志下载任务
      * @param req CreateAttackDownloadTaskRequest
      * @return CreateAttackDownloadTaskResponse
@@ -71,6 +91,26 @@ public class WafClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreateAttackDownloadTaskResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "CreateAttackDownloadTask");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口用于删除访问日志导出
+     * @param req DeleteAccessExportRequest
+     * @return DeleteAccessExportResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteAccessExportResponse DeleteAccessExport(DeleteAccessExportRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteAccessExportResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteAccessExportResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteAccessExport");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -131,6 +171,66 @@ public class WafClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteSessionResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteSession");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口用于获取访问日志导出列表
+     * @param req DescribeAccessExportsRequest
+     * @return DescribeAccessExportsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAccessExportsResponse DescribeAccessExports(DescribeAccessExportsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAccessExportsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAccessExportsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAccessExports");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口用于访问日志的快速分析
+     * @param req DescribeAccessFastAnalysisRequest
+     * @return DescribeAccessFastAnalysisResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAccessFastAnalysisResponse DescribeAccessFastAnalysis(DescribeAccessFastAnalysisRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAccessFastAnalysisResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAccessFastAnalysisResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAccessFastAnalysis");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口用于获取访问日志索引配置信息
+     * @param req DescribeAccessIndexRequest
+     * @return DescribeAccessIndexResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAccessIndexResponse DescribeAccessIndex(DescribeAccessIndexRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAccessIndexResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAccessIndexResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAccessIndex");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -231,6 +331,26 @@ public class WafClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyCustomRuleStatusResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyCustomRuleStatus");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口用于搜索WAF访问日志
+     * @param req SearchAccessLogRequest
+     * @return SearchAccessLogResponse
+     * @throws TencentCloudSDKException
+     */
+    public SearchAccessLogResponse SearchAccessLog(SearchAccessLogRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SearchAccessLogResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<SearchAccessLogResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "SearchAccessLog");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

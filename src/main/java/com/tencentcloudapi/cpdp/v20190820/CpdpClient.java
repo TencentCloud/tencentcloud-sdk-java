@@ -1107,6 +1107,26 @@ public class CpdpClient extends AbstractClient{
     }
 
     /**
+     *云鉴-查询对账单下载地址的接口
+     * @param req QueryDownloadBillURLRequest
+     * @return QueryDownloadBillURLResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryDownloadBillURLResponse QueryDownloadBillURL(QueryDownloadBillURLRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<QueryDownloadBillURLResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<QueryDownloadBillURLResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "QueryDownloadBillURL");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *跨境-查询汇率
      * @param req QueryExchangeRateRequest
      * @return QueryExchangeRateResponse

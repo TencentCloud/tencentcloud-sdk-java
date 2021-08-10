@@ -44,6 +44,14 @@ public class MediaAudioStreamItem extends AbstractModel{
     private String Codec;
 
     /**
+    * 音频声道数，例如 2。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Channel")
+    @Expose
+    private Long Channel;
+
+    /**
      * Get 音频流的码率，单位：bps。 
      * @return Bitrate 音频流的码率，单位：bps。
      */
@@ -91,6 +99,26 @@ public class MediaAudioStreamItem extends AbstractModel{
         this.Codec = Codec;
     }
 
+    /**
+     * Get 音频声道数，例如 2。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Channel 音频声道数，例如 2。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getChannel() {
+        return this.Channel;
+    }
+
+    /**
+     * Set 音频声道数，例如 2。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Channel 音频声道数，例如 2。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setChannel(Long Channel) {
+        this.Channel = Channel;
+    }
+
     public MediaAudioStreamItem() {
     }
 
@@ -108,6 +136,9 @@ public class MediaAudioStreamItem extends AbstractModel{
         if (source.Codec != null) {
             this.Codec = new String(source.Codec);
         }
+        if (source.Channel != null) {
+            this.Channel = new Long(source.Channel);
+        }
     }
 
 
@@ -118,6 +149,7 @@ public class MediaAudioStreamItem extends AbstractModel{
         this.setParamSimple(map, prefix + "Bitrate", this.Bitrate);
         this.setParamSimple(map, prefix + "SamplingRate", this.SamplingRate);
         this.setParamSimple(map, prefix + "Codec", this.Codec);
+        this.setParamSimple(map, prefix + "Channel", this.Channel);
 
     }
 }
