@@ -1009,6 +1009,31 @@ public class MariadbClient extends AbstractClient{
     }
 
     /**
+     *本接口(ModifyRealServerAccessStrategy)用于修改云数据库的VPCGW到RS的访问策略。
+
+**注意**
+- 修改策略后只对新建立的连接生效，老连接不受影响
+- 就近访问只针对实例是跨可用区部署有用，单可用区部署实例就近与否并无作用
+- DB每个Node对应一个proxy，如果开启就近访问，将会把连接集中到对应可用区的proxy上，可能造成热点问题，这种情况下如果是线上业务，请务必根据自己的业务请求量测试符合预期后再进行就近策略变更
+     * @param req ModifyRealServerAccessStrategyRequest
+     * @return ModifyRealServerAccessStrategyResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyRealServerAccessStrategyResponse ModifyRealServerAccessStrategy(ModifyRealServerAccessStrategyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyRealServerAccessStrategyResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyRealServerAccessStrategyResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyRealServerAccessStrategy");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（OpenDBExtranetAccess）用于开通云数据库实例的外网访问。开通外网访问后，您可通过外网域名和端口访问实例，可使用查询实例列表接口获取外网域名和端口信息。
      * @param req OpenDBExtranetAccessRequest
      * @return OpenDBExtranetAccessResponse

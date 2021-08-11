@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class BGPIPInstanceSpecification extends AbstractModel{
 
     /**
-    * 保底防护峰值，单位Gbps
+    * 保底防护峰值，单位Mbps
     */
     @SerializedName("ProtectBandwidth")
     @Expose
@@ -74,23 +74,23 @@ public class BGPIPInstanceSpecification extends AbstractModel{
     private Long Line;
 
     /**
-    * 弹性防护峰值，单位Gbps
+    * 弹性防护峰值，单位Mbps
     */
     @SerializedName("ElasticBandwidth")
     @Expose
     private Long ElasticBandwidth;
 
     /**
-     * Get 保底防护峰值，单位Gbps 
-     * @return ProtectBandwidth 保底防护峰值，单位Gbps
+     * Get 保底防护峰值，单位Mbps 
+     * @return ProtectBandwidth 保底防护峰值，单位Mbps
      */
     public Long getProtectBandwidth() {
         return this.ProtectBandwidth;
     }
 
     /**
-     * Set 保底防护峰值，单位Gbps
-     * @param ProtectBandwidth 保底防护峰值，单位Gbps
+     * Set 保底防护峰值，单位Mbps
+     * @param ProtectBandwidth 保底防护峰值，单位Mbps
      */
     public void setProtectBandwidth(Long ProtectBandwidth) {
         this.ProtectBandwidth = ProtectBandwidth;
@@ -213,16 +213,16 @@ public class BGPIPInstanceSpecification extends AbstractModel{
     }
 
     /**
-     * Get 弹性防护峰值，单位Gbps 
-     * @return ElasticBandwidth 弹性防护峰值，单位Gbps
+     * Get 弹性防护峰值，单位Mbps 
+     * @return ElasticBandwidth 弹性防护峰值，单位Mbps
      */
     public Long getElasticBandwidth() {
         return this.ElasticBandwidth;
     }
 
     /**
-     * Set 弹性防护峰值，单位Gbps
-     * @param ElasticBandwidth 弹性防护峰值，单位Gbps
+     * Set 弹性防护峰值，单位Mbps
+     * @param ElasticBandwidth 弹性防护峰值，单位Mbps
      */
     public void setElasticBandwidth(Long ElasticBandwidth) {
         this.ElasticBandwidth = ElasticBandwidth;

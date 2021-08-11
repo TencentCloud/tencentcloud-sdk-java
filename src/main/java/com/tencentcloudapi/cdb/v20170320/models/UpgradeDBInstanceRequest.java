@@ -107,6 +107,13 @@ public class UpgradeDBInstanceRequest extends AbstractModel{
     private Long Cpu;
 
     /**
+    * 是否急速变配。0-普通升级，1-急速变配。选择急速变配会根据资源状况校验是否可以进行急速变配，满足条件则进行急速变配，不满足条件会返回报错信息。
+    */
+    @SerializedName("FastUpgrade")
+    @Expose
+    private Long FastUpgrade;
+
+    /**
      * Get 实例 ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同，可使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口获取，其值为输出参数中字段 InstanceId 的值。 
      * @return InstanceId 实例 ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同，可使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口获取，其值为输出参数中字段 InstanceId 的值。
      */
@@ -298,6 +305,22 @@ public class UpgradeDBInstanceRequest extends AbstractModel{
         this.Cpu = Cpu;
     }
 
+    /**
+     * Get 是否急速变配。0-普通升级，1-急速变配。选择急速变配会根据资源状况校验是否可以进行急速变配，满足条件则进行急速变配，不满足条件会返回报错信息。 
+     * @return FastUpgrade 是否急速变配。0-普通升级，1-急速变配。选择急速变配会根据资源状况校验是否可以进行急速变配，满足条件则进行急速变配，不满足条件会返回报错信息。
+     */
+    public Long getFastUpgrade() {
+        return this.FastUpgrade;
+    }
+
+    /**
+     * Set 是否急速变配。0-普通升级，1-急速变配。选择急速变配会根据资源状况校验是否可以进行急速变配，满足条件则进行急速变配，不满足条件会返回报错信息。
+     * @param FastUpgrade 是否急速变配。0-普通升级，1-急速变配。选择急速变配会根据资源状况校验是否可以进行急速变配，满足条件则进行急速变配，不满足条件会返回报错信息。
+     */
+    public void setFastUpgrade(Long FastUpgrade) {
+        this.FastUpgrade = FastUpgrade;
+    }
+
     public UpgradeDBInstanceRequest() {
     }
 
@@ -342,6 +365,9 @@ public class UpgradeDBInstanceRequest extends AbstractModel{
         if (source.Cpu != null) {
             this.Cpu = new Long(source.Cpu);
         }
+        if (source.FastUpgrade != null) {
+            this.FastUpgrade = new Long(source.FastUpgrade);
+        }
     }
 
 
@@ -361,6 +387,7 @@ public class UpgradeDBInstanceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "InstanceRole", this.InstanceRole);
         this.setParamSimple(map, prefix + "DeviceType", this.DeviceType);
         this.setParamSimple(map, prefix + "Cpu", this.Cpu);
+        this.setParamSimple(map, prefix + "FastUpgrade", this.FastUpgrade);
 
     }
 }

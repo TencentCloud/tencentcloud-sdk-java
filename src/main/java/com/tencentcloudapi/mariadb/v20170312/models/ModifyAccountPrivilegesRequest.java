@@ -53,7 +53,7 @@ public class ModifyAccountPrivilegesRequest extends AbstractModel{
     private DatabasePrivilege [] DatabasePrivileges;
 
     /**
-    * 数据库中表的权限。Privileges 权限的可选值为：权限的可选值为："SELECT","INSERT","UPDATE","DELETE","CREATE", "DROP","REFERENCES","INDEX","ALTER","CREATE VIEW","SHOW VIEW", "TRIGGER"。
+    * 数据库中表的权限。Privileges 权限的可选值为："SELECT","INSERT","UPDATE","DELETE","CREATE", "DROP","REFERENCES","INDEX","ALTER","CREATE VIEW","SHOW VIEW", "TRIGGER"。
 注意，不传该参数表示保留现有权限，如需清除，请在复杂类型Privileges字段传空数组。
     */
     @SerializedName("TablePrivileges")
@@ -69,7 +69,7 @@ public class ModifyAccountPrivilegesRequest extends AbstractModel{
     private ColumnPrivilege [] ColumnPrivileges;
 
     /**
-    * 数据库视图的权限。Privileges 权限的可选值为：权限的可选值为："SELECT","INSERT","UPDATE","DELETE","CREATE", "DROP","REFERENCES","INDEX","ALTER","CREATE VIEW","SHOW VIEW", "TRIGGER"。
+    * 数据库视图的权限。Privileges 权限的可选值为："SELECT","INSERT","UPDATE","DELETE","CREATE", "DROP","REFERENCES","INDEX","ALTER","CREATE VIEW","SHOW VIEW", "TRIGGER"。
 注意，不传该参数表示保留现有权限，如需清除，请在复杂类型Privileges字段传空数组。
     */
     @SerializedName("ViewPrivileges")
@@ -77,7 +77,7 @@ public class ModifyAccountPrivilegesRequest extends AbstractModel{
     private ViewPrivileges [] ViewPrivileges;
 
     /**
-    * 数据库函数的权限。Privileges 权限的可选值为：权限的可选值为："ALTER ROUTINE"，"EXECUTE"。
+    * 数据库函数的权限。Privileges 权限的可选值为："ALTER ROUTINE"，"EXECUTE"。
 注意，不传该参数表示保留现有权限，如需清除，请在复杂类型Privileges字段传空数组。
     */
     @SerializedName("FunctionPrivileges")
@@ -85,7 +85,7 @@ public class ModifyAccountPrivilegesRequest extends AbstractModel{
     private FunctionPrivilege [] FunctionPrivileges;
 
     /**
-    * 数据库存储过程的权限。Privileges 权限的可选值为：权限的可选值为："ALTER ROUTINE"，"EXECUTE"。
+    * 数据库存储过程的权限。Privileges 权限的可选值为："ALTER ROUTINE"，"EXECUTE"。
 注意，不传该参数表示保留现有权限，如需清除，请在复杂类型Privileges字段传空数组。
     */
     @SerializedName("ProcedurePrivileges")
@@ -165,9 +165,9 @@ public class ModifyAccountPrivilegesRequest extends AbstractModel{
     }
 
     /**
-     * Get 数据库中表的权限。Privileges 权限的可选值为：权限的可选值为："SELECT","INSERT","UPDATE","DELETE","CREATE", "DROP","REFERENCES","INDEX","ALTER","CREATE VIEW","SHOW VIEW", "TRIGGER"。
+     * Get 数据库中表的权限。Privileges 权限的可选值为："SELECT","INSERT","UPDATE","DELETE","CREATE", "DROP","REFERENCES","INDEX","ALTER","CREATE VIEW","SHOW VIEW", "TRIGGER"。
 注意，不传该参数表示保留现有权限，如需清除，请在复杂类型Privileges字段传空数组。 
-     * @return TablePrivileges 数据库中表的权限。Privileges 权限的可选值为：权限的可选值为："SELECT","INSERT","UPDATE","DELETE","CREATE", "DROP","REFERENCES","INDEX","ALTER","CREATE VIEW","SHOW VIEW", "TRIGGER"。
+     * @return TablePrivileges 数据库中表的权限。Privileges 权限的可选值为："SELECT","INSERT","UPDATE","DELETE","CREATE", "DROP","REFERENCES","INDEX","ALTER","CREATE VIEW","SHOW VIEW", "TRIGGER"。
 注意，不传该参数表示保留现有权限，如需清除，请在复杂类型Privileges字段传空数组。
      */
     public TablePrivilege [] getTablePrivileges() {
@@ -175,9 +175,9 @@ public class ModifyAccountPrivilegesRequest extends AbstractModel{
     }
 
     /**
-     * Set 数据库中表的权限。Privileges 权限的可选值为：权限的可选值为："SELECT","INSERT","UPDATE","DELETE","CREATE", "DROP","REFERENCES","INDEX","ALTER","CREATE VIEW","SHOW VIEW", "TRIGGER"。
+     * Set 数据库中表的权限。Privileges 权限的可选值为："SELECT","INSERT","UPDATE","DELETE","CREATE", "DROP","REFERENCES","INDEX","ALTER","CREATE VIEW","SHOW VIEW", "TRIGGER"。
 注意，不传该参数表示保留现有权限，如需清除，请在复杂类型Privileges字段传空数组。
-     * @param TablePrivileges 数据库中表的权限。Privileges 权限的可选值为：权限的可选值为："SELECT","INSERT","UPDATE","DELETE","CREATE", "DROP","REFERENCES","INDEX","ALTER","CREATE VIEW","SHOW VIEW", "TRIGGER"。
+     * @param TablePrivileges 数据库中表的权限。Privileges 权限的可选值为："SELECT","INSERT","UPDATE","DELETE","CREATE", "DROP","REFERENCES","INDEX","ALTER","CREATE VIEW","SHOW VIEW", "TRIGGER"。
 注意，不传该参数表示保留现有权限，如需清除，请在复杂类型Privileges字段传空数组。
      */
     public void setTablePrivileges(TablePrivilege [] TablePrivileges) {
@@ -205,9 +205,9 @@ public class ModifyAccountPrivilegesRequest extends AbstractModel{
     }
 
     /**
-     * Get 数据库视图的权限。Privileges 权限的可选值为：权限的可选值为："SELECT","INSERT","UPDATE","DELETE","CREATE", "DROP","REFERENCES","INDEX","ALTER","CREATE VIEW","SHOW VIEW", "TRIGGER"。
+     * Get 数据库视图的权限。Privileges 权限的可选值为："SELECT","INSERT","UPDATE","DELETE","CREATE", "DROP","REFERENCES","INDEX","ALTER","CREATE VIEW","SHOW VIEW", "TRIGGER"。
 注意，不传该参数表示保留现有权限，如需清除，请在复杂类型Privileges字段传空数组。 
-     * @return ViewPrivileges 数据库视图的权限。Privileges 权限的可选值为：权限的可选值为："SELECT","INSERT","UPDATE","DELETE","CREATE", "DROP","REFERENCES","INDEX","ALTER","CREATE VIEW","SHOW VIEW", "TRIGGER"。
+     * @return ViewPrivileges 数据库视图的权限。Privileges 权限的可选值为："SELECT","INSERT","UPDATE","DELETE","CREATE", "DROP","REFERENCES","INDEX","ALTER","CREATE VIEW","SHOW VIEW", "TRIGGER"。
 注意，不传该参数表示保留现有权限，如需清除，请在复杂类型Privileges字段传空数组。
      */
     public ViewPrivileges [] getViewPrivileges() {
@@ -215,9 +215,9 @@ public class ModifyAccountPrivilegesRequest extends AbstractModel{
     }
 
     /**
-     * Set 数据库视图的权限。Privileges 权限的可选值为：权限的可选值为："SELECT","INSERT","UPDATE","DELETE","CREATE", "DROP","REFERENCES","INDEX","ALTER","CREATE VIEW","SHOW VIEW", "TRIGGER"。
+     * Set 数据库视图的权限。Privileges 权限的可选值为："SELECT","INSERT","UPDATE","DELETE","CREATE", "DROP","REFERENCES","INDEX","ALTER","CREATE VIEW","SHOW VIEW", "TRIGGER"。
 注意，不传该参数表示保留现有权限，如需清除，请在复杂类型Privileges字段传空数组。
-     * @param ViewPrivileges 数据库视图的权限。Privileges 权限的可选值为：权限的可选值为："SELECT","INSERT","UPDATE","DELETE","CREATE", "DROP","REFERENCES","INDEX","ALTER","CREATE VIEW","SHOW VIEW", "TRIGGER"。
+     * @param ViewPrivileges 数据库视图的权限。Privileges 权限的可选值为："SELECT","INSERT","UPDATE","DELETE","CREATE", "DROP","REFERENCES","INDEX","ALTER","CREATE VIEW","SHOW VIEW", "TRIGGER"。
 注意，不传该参数表示保留现有权限，如需清除，请在复杂类型Privileges字段传空数组。
      */
     public void setViewPrivileges(ViewPrivileges [] ViewPrivileges) {
@@ -225,9 +225,9 @@ public class ModifyAccountPrivilegesRequest extends AbstractModel{
     }
 
     /**
-     * Get 数据库函数的权限。Privileges 权限的可选值为：权限的可选值为："ALTER ROUTINE"，"EXECUTE"。
+     * Get 数据库函数的权限。Privileges 权限的可选值为："ALTER ROUTINE"，"EXECUTE"。
 注意，不传该参数表示保留现有权限，如需清除，请在复杂类型Privileges字段传空数组。 
-     * @return FunctionPrivileges 数据库函数的权限。Privileges 权限的可选值为：权限的可选值为："ALTER ROUTINE"，"EXECUTE"。
+     * @return FunctionPrivileges 数据库函数的权限。Privileges 权限的可选值为："ALTER ROUTINE"，"EXECUTE"。
 注意，不传该参数表示保留现有权限，如需清除，请在复杂类型Privileges字段传空数组。
      */
     public FunctionPrivilege [] getFunctionPrivileges() {
@@ -235,9 +235,9 @@ public class ModifyAccountPrivilegesRequest extends AbstractModel{
     }
 
     /**
-     * Set 数据库函数的权限。Privileges 权限的可选值为：权限的可选值为："ALTER ROUTINE"，"EXECUTE"。
+     * Set 数据库函数的权限。Privileges 权限的可选值为："ALTER ROUTINE"，"EXECUTE"。
 注意，不传该参数表示保留现有权限，如需清除，请在复杂类型Privileges字段传空数组。
-     * @param FunctionPrivileges 数据库函数的权限。Privileges 权限的可选值为：权限的可选值为："ALTER ROUTINE"，"EXECUTE"。
+     * @param FunctionPrivileges 数据库函数的权限。Privileges 权限的可选值为："ALTER ROUTINE"，"EXECUTE"。
 注意，不传该参数表示保留现有权限，如需清除，请在复杂类型Privileges字段传空数组。
      */
     public void setFunctionPrivileges(FunctionPrivilege [] FunctionPrivileges) {
@@ -245,9 +245,9 @@ public class ModifyAccountPrivilegesRequest extends AbstractModel{
     }
 
     /**
-     * Get 数据库存储过程的权限。Privileges 权限的可选值为：权限的可选值为："ALTER ROUTINE"，"EXECUTE"。
+     * Get 数据库存储过程的权限。Privileges 权限的可选值为："ALTER ROUTINE"，"EXECUTE"。
 注意，不传该参数表示保留现有权限，如需清除，请在复杂类型Privileges字段传空数组。 
-     * @return ProcedurePrivileges 数据库存储过程的权限。Privileges 权限的可选值为：权限的可选值为："ALTER ROUTINE"，"EXECUTE"。
+     * @return ProcedurePrivileges 数据库存储过程的权限。Privileges 权限的可选值为："ALTER ROUTINE"，"EXECUTE"。
 注意，不传该参数表示保留现有权限，如需清除，请在复杂类型Privileges字段传空数组。
      */
     public ProcedurePrivilege [] getProcedurePrivileges() {
@@ -255,9 +255,9 @@ public class ModifyAccountPrivilegesRequest extends AbstractModel{
     }
 
     /**
-     * Set 数据库存储过程的权限。Privileges 权限的可选值为：权限的可选值为："ALTER ROUTINE"，"EXECUTE"。
+     * Set 数据库存储过程的权限。Privileges 权限的可选值为："ALTER ROUTINE"，"EXECUTE"。
 注意，不传该参数表示保留现有权限，如需清除，请在复杂类型Privileges字段传空数组。
-     * @param ProcedurePrivileges 数据库存储过程的权限。Privileges 权限的可选值为：权限的可选值为："ALTER ROUTINE"，"EXECUTE"。
+     * @param ProcedurePrivileges 数据库存储过程的权限。Privileges 权限的可选值为："ALTER ROUTINE"，"EXECUTE"。
 注意，不传该参数表示保留现有权限，如需清除，请在复杂类型Privileges字段传空数组。
      */
     public void setProcedurePrivileges(ProcedurePrivilege [] ProcedurePrivileges) {

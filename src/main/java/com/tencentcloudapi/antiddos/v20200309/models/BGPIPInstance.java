@@ -103,7 +103,7 @@ public class BGPIPInstance extends AbstractModel{
     private StaticPackRelation StaticPackRelation;
 
     /**
-    * 区分高防IP海外线路
+    * 区分高防IP境外线路
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ZoneId")
@@ -151,6 +151,14 @@ public class BGPIPInstance extends AbstractModel{
     @SerializedName("EipAddressInfo")
     @Expose
     private EipAddressRelation EipAddressInfo;
+
+    /**
+    * 建议客户接入的域名，客户可使用域名接入。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Domain")
+    @Expose
+    private String Domain;
 
     /**
      * Get 资产实例的详细信息 
@@ -353,9 +361,9 @@ public class BGPIPInstance extends AbstractModel{
     }
 
     /**
-     * Get 区分高防IP海外线路
+     * Get 区分高防IP境外线路
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ZoneId 区分高防IP海外线路
+     * @return ZoneId 区分高防IP境外线路
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getZoneId() {
@@ -363,9 +371,9 @@ public class BGPIPInstance extends AbstractModel{
     }
 
     /**
-     * Set 区分高防IP海外线路
+     * Set 区分高防IP境外线路
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ZoneId 区分高防IP海外线路
+     * @param ZoneId 区分高防IP境外线路
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setZoneId(Long ZoneId) {
@@ -480,6 +488,26 @@ public class BGPIPInstance extends AbstractModel{
         this.EipAddressInfo = EipAddressInfo;
     }
 
+    /**
+     * Get 建议客户接入的域名，客户可使用域名接入。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Domain 建议客户接入的域名，客户可使用域名接入。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDomain() {
+        return this.Domain;
+    }
+
+    /**
+     * Set 建议客户接入的域名，客户可使用域名接入。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Domain 建议客户接入的域名，客户可使用域名接入。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDomain(String Domain) {
+        this.Domain = Domain;
+    }
+
     public BGPIPInstance() {
     }
 
@@ -536,6 +564,9 @@ public class BGPIPInstance extends AbstractModel{
         if (source.EipAddressInfo != null) {
             this.EipAddressInfo = new EipAddressRelation(source.EipAddressInfo);
         }
+        if (source.Domain != null) {
+            this.Domain = new String(source.Domain);
+        }
     }
 
 
@@ -559,6 +590,7 @@ public class BGPIPInstance extends AbstractModel{
         this.setParamSimple(map, prefix + "EipFlag", this.EipFlag);
         this.setParamObj(map, prefix + "EipAddressPackRelation.", this.EipAddressPackRelation);
         this.setParamObj(map, prefix + "EipAddressInfo.", this.EipAddressInfo);
+        this.setParamSimple(map, prefix + "Domain", this.Domain);
 
     }
 }
