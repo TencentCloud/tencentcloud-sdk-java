@@ -79,6 +79,13 @@ public class InquiryPriceCreateProxyRequest extends AbstractModel{
     private String IPAddressVersion;
 
     /**
+    * 网络类型，可取值：normal、cn2，默认值normal
+    */
+    @SerializedName("NetworkType")
+    @Expose
+    private String NetworkType;
+
+    /**
      * Get 加速区域名称。 
      * @return AccessRegion 加速区域名称。
      */
@@ -206,6 +213,22 @@ public class InquiryPriceCreateProxyRequest extends AbstractModel{
         this.IPAddressVersion = IPAddressVersion;
     }
 
+    /**
+     * Get 网络类型，可取值：normal、cn2，默认值normal 
+     * @return NetworkType 网络类型，可取值：normal、cn2，默认值normal
+     */
+    public String getNetworkType() {
+        return this.NetworkType;
+    }
+
+    /**
+     * Set 网络类型，可取值：normal、cn2，默认值normal
+     * @param NetworkType 网络类型，可取值：normal、cn2，默认值normal
+     */
+    public void setNetworkType(String NetworkType) {
+        this.NetworkType = NetworkType;
+    }
+
     public InquiryPriceCreateProxyRequest() {
     }
 
@@ -238,6 +261,9 @@ public class InquiryPriceCreateProxyRequest extends AbstractModel{
         if (source.IPAddressVersion != null) {
             this.IPAddressVersion = new String(source.IPAddressVersion);
         }
+        if (source.NetworkType != null) {
+            this.NetworkType = new String(source.NetworkType);
+        }
     }
 
 
@@ -253,6 +279,7 @@ public class InquiryPriceCreateProxyRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Concurrent", this.Concurrent);
         this.setParamSimple(map, prefix + "BillingType", this.BillingType);
         this.setParamSimple(map, prefix + "IPAddressVersion", this.IPAddressVersion);
+        this.setParamSimple(map, prefix + "NetworkType", this.NetworkType);
 
     }
 }

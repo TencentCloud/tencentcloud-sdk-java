@@ -63,6 +63,22 @@ public class DeployServiceBatchDetail extends AbstractModel{
     private Long BatchIndex;
 
     /**
+    * 旧实例列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OldPods")
+    @Expose
+    private DeployServicePodDetail [] OldPods;
+
+    /**
+    * 新实例列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("NewPods")
+    @Expose
+    private DeployServicePodDetail [] NewPods;
+
+    /**
      * Get 旧实例列表
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return OldPodList 旧实例列表
@@ -162,6 +178,46 @@ public class DeployServiceBatchDetail extends AbstractModel{
         this.BatchIndex = BatchIndex;
     }
 
+    /**
+     * Get 旧实例列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OldPods 旧实例列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public DeployServicePodDetail [] getOldPods() {
+        return this.OldPods;
+    }
+
+    /**
+     * Set 旧实例列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OldPods 旧实例列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOldPods(DeployServicePodDetail [] OldPods) {
+        this.OldPods = OldPods;
+    }
+
+    /**
+     * Get 新实例列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return NewPods 新实例列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public DeployServicePodDetail [] getNewPods() {
+        return this.NewPods;
+    }
+
+    /**
+     * Set 新实例列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param NewPods 新实例列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNewPods(DeployServicePodDetail [] NewPods) {
+        this.NewPods = NewPods;
+    }
+
     public DeployServiceBatchDetail() {
     }
 
@@ -185,6 +241,18 @@ public class DeployServiceBatchDetail extends AbstractModel{
         if (source.BatchIndex != null) {
             this.BatchIndex = new Long(source.BatchIndex);
         }
+        if (source.OldPods != null) {
+            this.OldPods = new DeployServicePodDetail[source.OldPods.length];
+            for (int i = 0; i < source.OldPods.length; i++) {
+                this.OldPods[i] = new DeployServicePodDetail(source.OldPods[i]);
+            }
+        }
+        if (source.NewPods != null) {
+            this.NewPods = new DeployServicePodDetail[source.NewPods.length];
+            for (int i = 0; i < source.NewPods.length; i++) {
+                this.NewPods[i] = new DeployServicePodDetail(source.NewPods[i]);
+            }
+        }
     }
 
 
@@ -197,6 +265,8 @@ public class DeployServiceBatchDetail extends AbstractModel{
         this.setParamSimple(map, prefix + "BatchStatus", this.BatchStatus);
         this.setParamSimple(map, prefix + "PodNum", this.PodNum);
         this.setParamSimple(map, prefix + "BatchIndex", this.BatchIndex);
+        this.setParamArrayObj(map, prefix + "OldPods.", this.OldPods);
+        this.setParamArrayObj(map, prefix + "NewPods.", this.NewPods);
 
     }
 }

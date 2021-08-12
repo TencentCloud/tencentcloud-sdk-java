@@ -65,6 +65,13 @@ public class CheckProxyCreateRequest extends AbstractModel{
     private String IPAddressVersion;
 
     /**
+    * 网络类型，可取值：normal、cn2，默认值normal
+    */
+    @SerializedName("NetworkType")
+    @Expose
+    private String NetworkType;
+
+    /**
      * Get 通道的接入(加速)区域。取值可通过接口DescribeAccessRegionsByDestRegion获取到 
      * @return AccessRegion 通道的接入(加速)区域。取值可通过接口DescribeAccessRegionsByDestRegion获取到
      */
@@ -160,6 +167,22 @@ public class CheckProxyCreateRequest extends AbstractModel{
         this.IPAddressVersion = IPAddressVersion;
     }
 
+    /**
+     * Get 网络类型，可取值：normal、cn2，默认值normal 
+     * @return NetworkType 网络类型，可取值：normal、cn2，默认值normal
+     */
+    public String getNetworkType() {
+        return this.NetworkType;
+    }
+
+    /**
+     * Set 网络类型，可取值：normal、cn2，默认值normal
+     * @param NetworkType 网络类型，可取值：normal、cn2，默认值normal
+     */
+    public void setNetworkType(String NetworkType) {
+        this.NetworkType = NetworkType;
+    }
+
     public CheckProxyCreateRequest() {
     }
 
@@ -186,6 +209,9 @@ public class CheckProxyCreateRequest extends AbstractModel{
         if (source.IPAddressVersion != null) {
             this.IPAddressVersion = new String(source.IPAddressVersion);
         }
+        if (source.NetworkType != null) {
+            this.NetworkType = new String(source.NetworkType);
+        }
     }
 
 
@@ -199,6 +225,7 @@ public class CheckProxyCreateRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Concurrent", this.Concurrent);
         this.setParamSimple(map, prefix + "GroupId", this.GroupId);
         this.setParamSimple(map, prefix + "IPAddressVersion", this.IPAddressVersion);
+        this.setParamSimple(map, prefix + "NetworkType", this.NetworkType);
 
     }
 }

@@ -65,6 +65,13 @@ public class CreateJobRequest extends AbstractModel{
     private String Remark;
 
     /**
+    * 作业名所属文件夹ID，根目录为"root"
+    */
+    @SerializedName("FolderId")
+    @Expose
+    private String FolderId;
+
+    /**
      * Get 作业名称，允许输入长度小于等于50个字符的中文、英文、数字、-（横线）、_（下划线）、.（点），且符号必须半角字符。注意作业名不能和现有作业同名 
      * @return Name 作业名称，允许输入长度小于等于50个字符的中文、英文、数字、-（横线）、_（下划线）、.（点），且符号必须半角字符。注意作业名不能和现有作业同名
      */
@@ -160,6 +167,22 @@ public class CreateJobRequest extends AbstractModel{
         this.Remark = Remark;
     }
 
+    /**
+     * Get 作业名所属文件夹ID，根目录为"root" 
+     * @return FolderId 作业名所属文件夹ID，根目录为"root"
+     */
+    public String getFolderId() {
+        return this.FolderId;
+    }
+
+    /**
+     * Set 作业名所属文件夹ID，根目录为"root"
+     * @param FolderId 作业名所属文件夹ID，根目录为"root"
+     */
+    public void setFolderId(String FolderId) {
+        this.FolderId = FolderId;
+    }
+
     public CreateJobRequest() {
     }
 
@@ -186,6 +209,9 @@ public class CreateJobRequest extends AbstractModel{
         if (source.Remark != null) {
             this.Remark = new String(source.Remark);
         }
+        if (source.FolderId != null) {
+            this.FolderId = new String(source.FolderId);
+        }
     }
 
 
@@ -199,6 +225,7 @@ public class CreateJobRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamSimple(map, prefix + "CuMem", this.CuMem);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
+        this.setParamSimple(map, prefix + "FolderId", this.FolderId);
 
     }
 }

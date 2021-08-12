@@ -82,6 +82,22 @@ public class RunVersionPod extends AbstractModel{
     private Long RestartCount;
 
     /**
+    * pod是否就绪
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Ready")
+    @Expose
+    private Boolean Ready;
+
+    /**
+    * 容器状态
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ContainerState")
+    @Expose
+    private String ContainerState;
+
+    /**
      * Get shell地址 
      * @return Webshell shell地址
      */
@@ -221,6 +237,46 @@ public class RunVersionPod extends AbstractModel{
         this.RestartCount = RestartCount;
     }
 
+    /**
+     * Get pod是否就绪
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Ready pod是否就绪
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getReady() {
+        return this.Ready;
+    }
+
+    /**
+     * Set pod是否就绪
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Ready pod是否就绪
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setReady(Boolean Ready) {
+        this.Ready = Ready;
+    }
+
+    /**
+     * Get 容器状态
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ContainerState 容器状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getContainerState() {
+        return this.ContainerState;
+    }
+
+    /**
+     * Set 容器状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ContainerState 容器状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setContainerState(String ContainerState) {
+        this.ContainerState = ContainerState;
+    }
+
     public RunVersionPod() {
     }
 
@@ -253,6 +309,12 @@ public class RunVersionPod extends AbstractModel{
         if (source.RestartCount != null) {
             this.RestartCount = new Long(source.RestartCount);
         }
+        if (source.Ready != null) {
+            this.Ready = new Boolean(source.Ready);
+        }
+        if (source.ContainerState != null) {
+            this.ContainerState = new String(source.ContainerState);
+        }
     }
 
 
@@ -268,6 +330,8 @@ public class RunVersionPod extends AbstractModel{
         this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamSimple(map, prefix + "DeployVersion", this.DeployVersion);
         this.setParamSimple(map, prefix + "RestartCount", this.RestartCount);
+        this.setParamSimple(map, prefix + "Ready", this.Ready);
+        this.setParamSimple(map, prefix + "ContainerState", this.ContainerState);
 
     }
 }

@@ -68,6 +68,22 @@ public class InquiryPriceCreateProxyResponse extends AbstractModel{
     private Float DiscountFlowUnitPrice;
 
     /**
+    * 精品BGP的带宽费用价格，单位: 元/Mbps/天
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Cn2BandwidthPrice")
+    @Expose
+    private Float Cn2BandwidthPrice;
+
+    /**
+    * 精品BGP的折后带宽费用价格，单位: 元/Mbps/天
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Cn2BandwidthPriceWithDiscount")
+    @Expose
+    private Float Cn2BandwidthPriceWithDiscount;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -183,6 +199,46 @@ public class InquiryPriceCreateProxyResponse extends AbstractModel{
     }
 
     /**
+     * Get 精品BGP的带宽费用价格，单位: 元/Mbps/天
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Cn2BandwidthPrice 精品BGP的带宽费用价格，单位: 元/Mbps/天
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Float getCn2BandwidthPrice() {
+        return this.Cn2BandwidthPrice;
+    }
+
+    /**
+     * Set 精品BGP的带宽费用价格，单位: 元/Mbps/天
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Cn2BandwidthPrice 精品BGP的带宽费用价格，单位: 元/Mbps/天
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCn2BandwidthPrice(Float Cn2BandwidthPrice) {
+        this.Cn2BandwidthPrice = Cn2BandwidthPrice;
+    }
+
+    /**
+     * Get 精品BGP的折后带宽费用价格，单位: 元/Mbps/天
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Cn2BandwidthPriceWithDiscount 精品BGP的折后带宽费用价格，单位: 元/Mbps/天
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Float getCn2BandwidthPriceWithDiscount() {
+        return this.Cn2BandwidthPriceWithDiscount;
+    }
+
+    /**
+     * Set 精品BGP的折后带宽费用价格，单位: 元/Mbps/天
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Cn2BandwidthPriceWithDiscount 精品BGP的折后带宽费用价格，单位: 元/Mbps/天
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCn2BandwidthPriceWithDiscount(Float Cn2BandwidthPriceWithDiscount) {
+        this.Cn2BandwidthPriceWithDiscount = Cn2BandwidthPriceWithDiscount;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -227,6 +283,12 @@ public class InquiryPriceCreateProxyResponse extends AbstractModel{
         if (source.DiscountFlowUnitPrice != null) {
             this.DiscountFlowUnitPrice = new Float(source.DiscountFlowUnitPrice);
         }
+        if (source.Cn2BandwidthPrice != null) {
+            this.Cn2BandwidthPrice = new Float(source.Cn2BandwidthPrice);
+        }
+        if (source.Cn2BandwidthPriceWithDiscount != null) {
+            this.Cn2BandwidthPriceWithDiscount = new Float(source.Cn2BandwidthPriceWithDiscount);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -243,6 +305,8 @@ public class InquiryPriceCreateProxyResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "Currency", this.Currency);
         this.setParamSimple(map, prefix + "FlowUnitPrice", this.FlowUnitPrice);
         this.setParamSimple(map, prefix + "DiscountFlowUnitPrice", this.DiscountFlowUnitPrice);
+        this.setParamSimple(map, prefix + "Cn2BandwidthPrice", this.Cn2BandwidthPrice);
+        this.setParamSimple(map, prefix + "Cn2BandwidthPriceWithDiscount", this.Cn2BandwidthPriceWithDiscount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

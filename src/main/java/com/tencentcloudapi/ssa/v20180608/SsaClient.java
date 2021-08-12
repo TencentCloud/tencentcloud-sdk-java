@@ -279,6 +279,26 @@ public class SsaClient extends AbstractClient{
     }
 
     /**
+     *合规详情项
+     * @param req DescribeSocCspmComplianceRequest
+     * @return DescribeSocCspmComplianceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSocCspmComplianceResponse DescribeSocCspmCompliance(DescribeSocCspmComplianceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeSocCspmComplianceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeSocCspmComplianceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeSocCspmCompliance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *漏洞列表页，获取漏洞详情信息
      * @param req DescribeVulDetailRequest
      * @return DescribeVulDetailResponse

@@ -109,6 +109,13 @@ public class CreateProxyRequest extends AbstractModel{
     private String IPAddressVersion;
 
     /**
+    * 网络类型，可取值：normal、cn2，默认值normal
+    */
+    @SerializedName("NetworkType")
+    @Expose
+    private String NetworkType;
+
+    /**
      * Get 通道的项目ID。 
      * @return ProjectId 通道的项目ID。
      */
@@ -308,6 +315,22 @@ public class CreateProxyRequest extends AbstractModel{
         this.IPAddressVersion = IPAddressVersion;
     }
 
+    /**
+     * Get 网络类型，可取值：normal、cn2，默认值normal 
+     * @return NetworkType 网络类型，可取值：normal、cn2，默认值normal
+     */
+    public String getNetworkType() {
+        return this.NetworkType;
+    }
+
+    /**
+     * Set 网络类型，可取值：normal、cn2，默认值normal
+     * @param NetworkType 网络类型，可取值：normal、cn2，默认值normal
+     */
+    public void setNetworkType(String NetworkType) {
+        this.NetworkType = NetworkType;
+    }
+
     public CreateProxyRequest() {
     }
 
@@ -355,6 +378,9 @@ public class CreateProxyRequest extends AbstractModel{
         if (source.IPAddressVersion != null) {
             this.IPAddressVersion = new String(source.IPAddressVersion);
         }
+        if (source.NetworkType != null) {
+            this.NetworkType = new String(source.NetworkType);
+        }
     }
 
 
@@ -374,6 +400,7 @@ public class CreateProxyRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ClonedProxyId", this.ClonedProxyId);
         this.setParamSimple(map, prefix + "BillingType", this.BillingType);
         this.setParamSimple(map, prefix + "IPAddressVersion", this.IPAddressVersion);
+        this.setParamSimple(map, prefix + "NetworkType", this.NetworkType);
 
     }
 }

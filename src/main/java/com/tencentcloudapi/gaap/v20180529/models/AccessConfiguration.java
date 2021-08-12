@@ -44,6 +44,13 @@ public class AccessConfiguration extends AbstractModel{
     private Long Concurrent;
 
     /**
+    * 网络类型，可取值：normal、cn2，默认值为normal
+    */
+    @SerializedName("NetworkType")
+    @Expose
+    private String NetworkType;
+
+    /**
      * Get 加速地域。 
      * @return AccessRegion 加速地域。
      */
@@ -91,6 +98,22 @@ public class AccessConfiguration extends AbstractModel{
         this.Concurrent = Concurrent;
     }
 
+    /**
+     * Get 网络类型，可取值：normal、cn2，默认值为normal 
+     * @return NetworkType 网络类型，可取值：normal、cn2，默认值为normal
+     */
+    public String getNetworkType() {
+        return this.NetworkType;
+    }
+
+    /**
+     * Set 网络类型，可取值：normal、cn2，默认值为normal
+     * @param NetworkType 网络类型，可取值：normal、cn2，默认值为normal
+     */
+    public void setNetworkType(String NetworkType) {
+        this.NetworkType = NetworkType;
+    }
+
     public AccessConfiguration() {
     }
 
@@ -108,6 +131,9 @@ public class AccessConfiguration extends AbstractModel{
         if (source.Concurrent != null) {
             this.Concurrent = new Long(source.Concurrent);
         }
+        if (source.NetworkType != null) {
+            this.NetworkType = new String(source.NetworkType);
+        }
     }
 
 
@@ -118,6 +144,7 @@ public class AccessConfiguration extends AbstractModel{
         this.setParamSimple(map, prefix + "AccessRegion", this.AccessRegion);
         this.setParamSimple(map, prefix + "Bandwidth", this.Bandwidth);
         this.setParamSimple(map, prefix + "Concurrent", this.Concurrent);
+        this.setParamSimple(map, prefix + "NetworkType", this.NetworkType);
 
     }
 }

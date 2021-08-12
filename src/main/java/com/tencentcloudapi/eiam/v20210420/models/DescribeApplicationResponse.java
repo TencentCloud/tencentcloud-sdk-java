@@ -111,6 +111,38 @@ public class DescribeApplicationResponse extends AbstractModel{
     private String AuthorizeUrl;
 
     /**
+    * 应用图标图片访问地址。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IconUrl")
+    @Expose
+    private String IconUrl;
+
+    /**
+    * 安全等级。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SecureLevel")
+    @Expose
+    private String SecureLevel;
+
+    /**
+    * 应用状态。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AppStatus")
+    @Expose
+    private Boolean AppStatus;
+
+    /**
+    * 描述。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Description")
+    @Expose
+    private String Description;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -338,6 +370,86 @@ public class DescribeApplicationResponse extends AbstractModel{
     }
 
     /**
+     * Get 应用图标图片访问地址。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IconUrl 应用图标图片访问地址。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getIconUrl() {
+        return this.IconUrl;
+    }
+
+    /**
+     * Set 应用图标图片访问地址。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IconUrl 应用图标图片访问地址。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIconUrl(String IconUrl) {
+        this.IconUrl = IconUrl;
+    }
+
+    /**
+     * Get 安全等级。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SecureLevel 安全等级。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSecureLevel() {
+        return this.SecureLevel;
+    }
+
+    /**
+     * Set 安全等级。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SecureLevel 安全等级。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSecureLevel(String SecureLevel) {
+        this.SecureLevel = SecureLevel;
+    }
+
+    /**
+     * Get 应用状态。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AppStatus 应用状态。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getAppStatus() {
+        return this.AppStatus;
+    }
+
+    /**
+     * Set 应用状态。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AppStatus 应用状态。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAppStatus(Boolean AppStatus) {
+        this.AppStatus = AppStatus;
+    }
+
+    /**
+     * Get 描述。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Description 描述。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDescription() {
+        return this.Description;
+    }
+
+    /**
+     * Set 描述。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Description 描述。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDescription(String Description) {
+        this.Description = Description;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -394,6 +506,18 @@ public class DescribeApplicationResponse extends AbstractModel{
         if (source.AuthorizeUrl != null) {
             this.AuthorizeUrl = new String(source.AuthorizeUrl);
         }
+        if (source.IconUrl != null) {
+            this.IconUrl = new String(source.IconUrl);
+        }
+        if (source.SecureLevel != null) {
+            this.SecureLevel = new String(source.SecureLevel);
+        }
+        if (source.AppStatus != null) {
+            this.AppStatus = new Boolean(source.AppStatus);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -415,6 +539,10 @@ public class DescribeApplicationResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "ClientSecret", this.ClientSecret);
         this.setParamSimple(map, prefix + "PublicKey", this.PublicKey);
         this.setParamSimple(map, prefix + "AuthorizeUrl", this.AuthorizeUrl);
+        this.setParamSimple(map, prefix + "IconUrl", this.IconUrl);
+        this.setParamSimple(map, prefix + "SecureLevel", this.SecureLevel);
+        this.setParamSimple(map, prefix + "AppStatus", this.AppStatus);
+        this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

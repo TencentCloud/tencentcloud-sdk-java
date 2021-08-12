@@ -30,7 +30,7 @@ public class InvokeFunctionRequest extends AbstractModel{
     private String FunctionName;
 
     /**
-    * 触发函数的版本号或别名
+    * 触发函数的版本号或别名，默认值为$DEFAULT
     */
     @SerializedName("Qualifier")
     @Expose
@@ -81,16 +81,16 @@ public class InvokeFunctionRequest extends AbstractModel{
     }
 
     /**
-     * Get 触发函数的版本号或别名 
-     * @return Qualifier 触发函数的版本号或别名
+     * Get 触发函数的版本号或别名，默认值为$DEFAULT 
+     * @return Qualifier 触发函数的版本号或别名，默认值为$DEFAULT
      */
     public String getQualifier() {
         return this.Qualifier;
     }
 
     /**
-     * Set 触发函数的版本号或别名
-     * @param Qualifier 触发函数的版本号或别名
+     * Set 触发函数的版本号或别名，默认值为$DEFAULT
+     * @param Qualifier 触发函数的版本号或别名，默认值为$DEFAULT
      */
     public void setQualifier(String Qualifier) {
         this.Qualifier = Qualifier;

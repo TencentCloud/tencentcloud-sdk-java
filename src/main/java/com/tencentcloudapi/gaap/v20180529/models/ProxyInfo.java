@@ -220,7 +220,7 @@ UNKNOWN表示未知状态。
     private Long ModifyConfigTime;
 
     /**
-    * 通道类型，104表示新的银牌质量通道类型
+    * 通道类型
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProxyType")
@@ -242,6 +242,14 @@ UNKNOWN表示未知状态。
     @SerializedName("IPAddressVersion")
     @Expose
     private String IPAddressVersion;
+
+    /**
+    * 网络类型：normal、cn2
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("NetworkType")
+    @Expose
+    private String NetworkType;
 
     /**
      * Get （旧参数，请使用ProxyId）通道实例ID。
@@ -732,9 +740,9 @@ UNKNOWN表示未知状态。
     }
 
     /**
-     * Get 通道类型，104表示新的银牌质量通道类型
+     * Get 通道类型
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ProxyType 通道类型，104表示新的银牌质量通道类型
+     * @return ProxyType 通道类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getProxyType() {
@@ -742,9 +750,9 @@ UNKNOWN表示未知状态。
     }
 
     /**
-     * Set 通道类型，104表示新的银牌质量通道类型
+     * Set 通道类型
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ProxyType 通道类型，104表示新的银牌质量通道类型
+     * @param ProxyType 通道类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProxyType(Long ProxyType) {
@@ -789,6 +797,26 @@ UNKNOWN表示未知状态。
      */
     public void setIPAddressVersion(String IPAddressVersion) {
         this.IPAddressVersion = IPAddressVersion;
+    }
+
+    /**
+     * Get 网络类型：normal、cn2
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return NetworkType 网络类型：normal、cn2
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getNetworkType() {
+        return this.NetworkType;
+    }
+
+    /**
+     * Set 网络类型：normal、cn2
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param NetworkType 网络类型：normal、cn2
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNetworkType(String NetworkType) {
+        this.NetworkType = NetworkType;
     }
 
     public ProxyInfo() {
@@ -895,6 +923,9 @@ UNKNOWN表示未知状态。
         if (source.IPAddressVersion != null) {
             this.IPAddressVersion = new String(source.IPAddressVersion);
         }
+        if (source.NetworkType != null) {
+            this.NetworkType = new String(source.NetworkType);
+        }
     }
 
 
@@ -930,6 +961,7 @@ UNKNOWN表示未知状态。
         this.setParamSimple(map, prefix + "ProxyType", this.ProxyType);
         this.setParamArraySimple(map, prefix + "ClientIPMethod.", this.ClientIPMethod);
         this.setParamSimple(map, prefix + "IPAddressVersion", this.IPAddressVersion);
+        this.setParamSimple(map, prefix + "NetworkType", this.NetworkType);
 
     }
 }

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class UrlRedirect extends AbstractModel{
 
     /**
-    * URL重定向配置开关
+    * 访问URL重写配置开关
 on：开启
 off：关闭
     */
@@ -32,7 +32,7 @@ off：关闭
     private String Switch;
 
     /**
-    * URL重定向规则，当Switch为on时必填，规则数量最大为10个。
+    * 访问URL重写规则，当Switch为on时必填，规则数量最大为10个。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PathRules")
@@ -40,10 +40,10 @@ off：关闭
     private UrlRedirectRule [] PathRules;
 
     /**
-     * Get URL重定向配置开关
+     * Get 访问URL重写配置开关
 on：开启
 off：关闭 
-     * @return Switch URL重定向配置开关
+     * @return Switch 访问URL重写配置开关
 on：开启
 off：关闭
      */
@@ -52,10 +52,10 @@ off：关闭
     }
 
     /**
-     * Set URL重定向配置开关
+     * Set 访问URL重写配置开关
 on：开启
 off：关闭
-     * @param Switch URL重定向配置开关
+     * @param Switch 访问URL重写配置开关
 on：开启
 off：关闭
      */
@@ -64,9 +64,9 @@ off：关闭
     }
 
     /**
-     * Get URL重定向规则，当Switch为on时必填，规则数量最大为10个。
+     * Get 访问URL重写规则，当Switch为on时必填，规则数量最大为10个。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PathRules URL重定向规则，当Switch为on时必填，规则数量最大为10个。
+     * @return PathRules 访问URL重写规则，当Switch为on时必填，规则数量最大为10个。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public UrlRedirectRule [] getPathRules() {
@@ -74,9 +74,9 @@ off：关闭
     }
 
     /**
-     * Set URL重定向规则，当Switch为on时必填，规则数量最大为10个。
+     * Set 访问URL重写规则，当Switch为on时必填，规则数量最大为10个。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PathRules URL重定向规则，当Switch为on时必填，规则数量最大为10个。
+     * @param PathRules 访问URL重写规则，当Switch为on时必填，规则数量最大为10个。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPathRules(UrlRedirectRule [] PathRules) {

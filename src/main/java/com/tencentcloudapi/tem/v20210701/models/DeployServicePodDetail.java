@@ -63,6 +63,14 @@ public class DeployServicePodDetail extends AbstractModel{
     private String Zone;
 
     /**
+    * webshell地址
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Webshell")
+    @Expose
+    private String Webshell;
+
+    /**
      * Get pod Id
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return PodId pod Id
@@ -162,6 +170,26 @@ public class DeployServicePodDetail extends AbstractModel{
         this.Zone = Zone;
     }
 
+    /**
+     * Get webshell地址
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Webshell webshell地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getWebshell() {
+        return this.Webshell;
+    }
+
+    /**
+     * Set webshell地址
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Webshell webshell地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setWebshell(String Webshell) {
+        this.Webshell = Webshell;
+    }
+
     public DeployServicePodDetail() {
     }
 
@@ -188,6 +216,9 @@ public class DeployServicePodDetail extends AbstractModel{
         if (source.Zone != null) {
             this.Zone = new String(source.Zone);
         }
+        if (source.Webshell != null) {
+            this.Webshell = new String(source.Webshell);
+        }
     }
 
 
@@ -200,6 +231,7 @@ public class DeployServicePodDetail extends AbstractModel{
         this.setParamSimple(map, prefix + "PodVersion", this.PodVersion);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "Zone", this.Zone);
+        this.setParamSimple(map, prefix + "Webshell", this.Webshell);
 
     }
 }
