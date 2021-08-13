@@ -86,7 +86,7 @@ public class Instance extends AbstractModel{
     private SystemDisk SystemDisk;
 
     /**
-    * 实例数据盘信息。只包含随实例购买的数据盘。
+    * 实例数据盘信息。
     */
     @SerializedName("DataDisks")
     @Expose
@@ -265,6 +265,14 @@ public class Instance extends AbstractModel{
     private String [] RdmaIpAddresses;
 
     /**
+    * 实例隔离类型。取值范围：<br><li>ARREAR：表示欠费隔离<br></li><li>EXPIRE：表示到期隔离<br></li><li>MANMADE：表示主动退还隔离<br></li><li>NOTISOLATED：表示未隔离<br></li>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsolatedSource")
+    @Expose
+    private String IsolatedSource;
+
+    /**
      * Get 实例所在的位置。 
      * @return Placement 实例所在的位置。
      */
@@ -409,16 +417,16 @@ public class Instance extends AbstractModel{
     }
 
     /**
-     * Get 实例数据盘信息。只包含随实例购买的数据盘。 
-     * @return DataDisks 实例数据盘信息。只包含随实例购买的数据盘。
+     * Get 实例数据盘信息。 
+     * @return DataDisks 实例数据盘信息。
      */
     public DataDisk [] getDataDisks() {
         return this.DataDisks;
     }
 
     /**
-     * Set 实例数据盘信息。只包含随实例购买的数据盘。
-     * @param DataDisks 实例数据盘信息。只包含随实例购买的数据盘。
+     * Set 实例数据盘信息。
+     * @param DataDisks 实例数据盘信息。
      */
     public void setDataDisks(DataDisk [] DataDisks) {
         this.DataDisks = DataDisks;
@@ -836,6 +844,26 @@ public class Instance extends AbstractModel{
         this.RdmaIpAddresses = RdmaIpAddresses;
     }
 
+    /**
+     * Get 实例隔离类型。取值范围：<br><li>ARREAR：表示欠费隔离<br></li><li>EXPIRE：表示到期隔离<br></li><li>MANMADE：表示主动退还隔离<br></li><li>NOTISOLATED：表示未隔离<br></li>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsolatedSource 实例隔离类型。取值范围：<br><li>ARREAR：表示欠费隔离<br></li><li>EXPIRE：表示到期隔离<br></li><li>MANMADE：表示主动退还隔离<br></li><li>NOTISOLATED：表示未隔离<br></li>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getIsolatedSource() {
+        return this.IsolatedSource;
+    }
+
+    /**
+     * Set 实例隔离类型。取值范围：<br><li>ARREAR：表示欠费隔离<br></li><li>EXPIRE：表示到期隔离<br></li><li>MANMADE：表示主动退还隔离<br></li><li>NOTISOLATED：表示未隔离<br></li>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsolatedSource 实例隔离类型。取值范围：<br><li>ARREAR：表示欠费隔离<br></li><li>EXPIRE：表示到期隔离<br></li><li>MANMADE：表示主动退还隔离<br></li><li>NOTISOLATED：表示未隔离<br></li>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsolatedSource(String IsolatedSource) {
+        this.IsolatedSource = IsolatedSource;
+    }
+
     public Instance() {
     }
 
@@ -964,6 +992,9 @@ public class Instance extends AbstractModel{
                 this.RdmaIpAddresses[i] = new String(source.RdmaIpAddresses[i]);
             }
         }
+        if (source.IsolatedSource != null) {
+            this.IsolatedSource = new String(source.IsolatedSource);
+        }
     }
 
 
@@ -1004,6 +1035,7 @@ public class Instance extends AbstractModel{
         this.setParamSimple(map, prefix + "CamRoleName", this.CamRoleName);
         this.setParamSimple(map, prefix + "HpcClusterId", this.HpcClusterId);
         this.setParamArraySimple(map, prefix + "RdmaIpAddresses.", this.RdmaIpAddresses);
+        this.setParamSimple(map, prefix + "IsolatedSource", this.IsolatedSource);
 
     }
 }

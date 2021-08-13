@@ -84,6 +84,16 @@ OV：中国境外
     private HttpHeaderRule [] RequestHeaders;
 
     /**
+    * 当Regex为false时，Path是否开启完全匹配。
+false：关闭
+true：开启
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FullMatch")
+    @Expose
+    private Boolean FullMatch;
+
+    /**
      * Get 是否开启通配符“*”匹配：
 false：关闭
 true：开启
@@ -243,6 +253,34 @@ OV：中国境外
         this.RequestHeaders = RequestHeaders;
     }
 
+    /**
+     * Get 当Regex为false时，Path是否开启完全匹配。
+false：关闭
+true：开启
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FullMatch 当Regex为false时，Path是否开启完全匹配。
+false：关闭
+true：开启
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getFullMatch() {
+        return this.FullMatch;
+    }
+
+    /**
+     * Set 当Regex为false时，Path是否开启完全匹配。
+false：关闭
+true：开启
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FullMatch 当Regex为false时，Path是否开启完全匹配。
+false：关闭
+true：开启
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFullMatch(Boolean FullMatch) {
+        this.FullMatch = FullMatch;
+    }
+
     public PathRule() {
     }
 
@@ -275,6 +313,9 @@ OV：中国境外
                 this.RequestHeaders[i] = new HttpHeaderRule(source.RequestHeaders[i]);
             }
         }
+        if (source.FullMatch != null) {
+            this.FullMatch = new Boolean(source.FullMatch);
+        }
     }
 
 
@@ -289,6 +330,7 @@ OV：中国境外
         this.setParamSimple(map, prefix + "OriginArea", this.OriginArea);
         this.setParamSimple(map, prefix + "ForwardUri", this.ForwardUri);
         this.setParamArrayObj(map, prefix + "RequestHeaders.", this.RequestHeaders);
+        this.setParamSimple(map, prefix + "FullMatch", this.FullMatch);
 
     }
 }

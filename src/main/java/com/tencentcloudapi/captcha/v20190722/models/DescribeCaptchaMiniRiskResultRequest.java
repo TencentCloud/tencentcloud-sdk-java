@@ -37,7 +37,7 @@ public class DescribeCaptchaMiniRiskResultRequest extends AbstractModel{
     private String Ticket;
 
     /**
-    * 用户操作来源的外网 IP
+    * 业务侧获取到的验证码使用者的外网IP
     */
     @SerializedName("UserIp")
     @Expose
@@ -132,16 +132,16 @@ public class DescribeCaptchaMiniRiskResultRequest extends AbstractModel{
     }
 
     /**
-     * Get 用户操作来源的外网 IP 
-     * @return UserIp 用户操作来源的外网 IP
+     * Get 业务侧获取到的验证码使用者的外网IP 
+     * @return UserIp 业务侧获取到的验证码使用者的外网IP
      */
     public String getUserIp() {
         return this.UserIp;
     }
 
     /**
-     * Set 用户操作来源的外网 IP
-     * @param UserIp 用户操作来源的外网 IP
+     * Set 业务侧获取到的验证码使用者的外网IP
+     * @param UserIp 业务侧获取到的验证码使用者的外网IP
      */
     public void setUserIp(String UserIp) {
         this.UserIp = UserIp;

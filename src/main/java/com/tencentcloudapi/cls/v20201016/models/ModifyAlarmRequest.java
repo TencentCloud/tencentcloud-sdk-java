@@ -86,6 +86,27 @@ public class ModifyAlarmRequest extends AbstractModel{
     private Boolean Status;
 
     /**
+    * 用户自定义告警内容
+    */
+    @SerializedName("MessageTemplate")
+    @Expose
+    private String MessageTemplate;
+
+    /**
+    * 用户自定义回调
+    */
+    @SerializedName("CallBack")
+    @Expose
+    private CallBackInfo CallBack;
+
+    /**
+    * 多维分析
+    */
+    @SerializedName("Analysis")
+    @Expose
+    private AnalysisDimensional [] Analysis;
+
+    /**
      * Get 告警策略ID。 
      * @return AlarmId 告警策略ID。
      */
@@ -229,6 +250,54 @@ public class ModifyAlarmRequest extends AbstractModel{
         this.Status = Status;
     }
 
+    /**
+     * Get 用户自定义告警内容 
+     * @return MessageTemplate 用户自定义告警内容
+     */
+    public String getMessageTemplate() {
+        return this.MessageTemplate;
+    }
+
+    /**
+     * Set 用户自定义告警内容
+     * @param MessageTemplate 用户自定义告警内容
+     */
+    public void setMessageTemplate(String MessageTemplate) {
+        this.MessageTemplate = MessageTemplate;
+    }
+
+    /**
+     * Get 用户自定义回调 
+     * @return CallBack 用户自定义回调
+     */
+    public CallBackInfo getCallBack() {
+        return this.CallBack;
+    }
+
+    /**
+     * Set 用户自定义回调
+     * @param CallBack 用户自定义回调
+     */
+    public void setCallBack(CallBackInfo CallBack) {
+        this.CallBack = CallBack;
+    }
+
+    /**
+     * Get 多维分析 
+     * @return Analysis 多维分析
+     */
+    public AnalysisDimensional [] getAnalysis() {
+        return this.Analysis;
+    }
+
+    /**
+     * Set 多维分析
+     * @param Analysis 多维分析
+     */
+    public void setAnalysis(AnalysisDimensional [] Analysis) {
+        this.Analysis = Analysis;
+    }
+
     public ModifyAlarmRequest() {
     }
 
@@ -270,6 +339,18 @@ public class ModifyAlarmRequest extends AbstractModel{
         if (source.Status != null) {
             this.Status = new Boolean(source.Status);
         }
+        if (source.MessageTemplate != null) {
+            this.MessageTemplate = new String(source.MessageTemplate);
+        }
+        if (source.CallBack != null) {
+            this.CallBack = new CallBackInfo(source.CallBack);
+        }
+        if (source.Analysis != null) {
+            this.Analysis = new AnalysisDimensional[source.Analysis.length];
+            for (int i = 0; i < source.Analysis.length; i++) {
+                this.Analysis[i] = new AnalysisDimensional(source.Analysis[i]);
+            }
+        }
     }
 
 
@@ -286,6 +367,9 @@ public class ModifyAlarmRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "AlarmNoticeIds.", this.AlarmNoticeIds);
         this.setParamArrayObj(map, prefix + "AlarmTargets.", this.AlarmTargets);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "MessageTemplate", this.MessageTemplate);
+        this.setParamObj(map, prefix + "CallBack.", this.CallBack);
+        this.setParamArrayObj(map, prefix + "Analysis.", this.Analysis);
 
     }
 }

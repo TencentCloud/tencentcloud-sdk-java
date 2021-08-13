@@ -197,6 +197,13 @@ public class UpdateInstanceRequest extends AbstractModel{
     private String KibanaConfig;
 
     /**
+    * 可视化节点配置
+    */
+    @SerializedName("WebNodeTypeInfo")
+    @Expose
+    private WebNodeTypeInfo WebNodeTypeInfo;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -604,6 +611,22 @@ public class UpdateInstanceRequest extends AbstractModel{
         this.KibanaConfig = KibanaConfig;
     }
 
+    /**
+     * Get 可视化节点配置 
+     * @return WebNodeTypeInfo 可视化节点配置
+     */
+    public WebNodeTypeInfo getWebNodeTypeInfo() {
+        return this.WebNodeTypeInfo;
+    }
+
+    /**
+     * Set 可视化节点配置
+     * @param WebNodeTypeInfo 可视化节点配置
+     */
+    public void setWebNodeTypeInfo(WebNodeTypeInfo WebNodeTypeInfo) {
+        this.WebNodeTypeInfo = WebNodeTypeInfo;
+    }
+
     public UpdateInstanceRequest() {
     }
 
@@ -690,6 +713,9 @@ public class UpdateInstanceRequest extends AbstractModel{
         if (source.KibanaConfig != null) {
             this.KibanaConfig = new String(source.KibanaConfig);
         }
+        if (source.WebNodeTypeInfo != null) {
+            this.WebNodeTypeInfo = new WebNodeTypeInfo(source.WebNodeTypeInfo);
+        }
     }
 
 
@@ -721,6 +747,7 @@ public class UpdateInstanceRequest extends AbstractModel{
         this.setParamArrayObj(map, prefix + "MultiZoneInfo.", this.MultiZoneInfo);
         this.setParamSimple(map, prefix + "SceneType", this.SceneType);
         this.setParamSimple(map, prefix + "KibanaConfig", this.KibanaConfig);
+        this.setParamObj(map, prefix + "WebNodeTypeInfo.", this.WebNodeTypeInfo);
 
     }
 }

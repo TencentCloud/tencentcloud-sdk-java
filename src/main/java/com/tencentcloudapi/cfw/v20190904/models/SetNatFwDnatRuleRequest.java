@@ -37,7 +37,7 @@ public class SetNatFwDnatRuleRequest extends AbstractModel{
     private String OperationType;
 
     /**
-    * 防火墙实例id。
+    * 防火墙实例id，该字段必须传递。
     */
     @SerializedName("CfwInstance")
     @Expose
@@ -97,16 +97,16 @@ public class SetNatFwDnatRuleRequest extends AbstractModel{
     }
 
     /**
-     * Get 防火墙实例id。 
-     * @return CfwInstance 防火墙实例id。
+     * Get 防火墙实例id，该字段必须传递。 
+     * @return CfwInstance 防火墙实例id，该字段必须传递。
      */
     public String getCfwInstance() {
         return this.CfwInstance;
     }
 
     /**
-     * Set 防火墙实例id。
-     * @param CfwInstance 防火墙实例id。
+     * Set 防火墙实例id，该字段必须传递。
+     * @param CfwInstance 防火墙实例id，该字段必须传递。
      */
     public void setCfwInstance(String CfwInstance) {
         this.CfwInstance = CfwInstance;

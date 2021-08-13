@@ -9,6 +9,9 @@ public enum CkafkaErrorCode {
     // 参数错误。
      INVALIDPARAMETER("InvalidParameter"),
      
+    // 参数取值错误。
+     INVALIDPARAMETERVALUE("InvalidParameterValue"),
+     
     // 实例不存在。
      INVALIDPARAMETERVALUE_INSTANCENOTEXIST("InvalidParameterValue.InstanceNotExist"),
      
@@ -33,11 +36,23 @@ public enum CkafkaErrorCode {
     // zone不支持。
      INVALIDPARAMETERVALUE_ZONENOTSUPPORT("InvalidParameterValue.ZoneNotSupport"),
      
+    // 操作被拒绝。
+     OPERATIONDENIED("OperationDenied"),
+     
+    // 请求的次数超过了频率限制。
+     REQUESTLIMITEXCEEDED("RequestLimitExceeded"),
+     
     // 资源不可用。
      RESOURCEUNAVAILABLE("ResourceUnavailable"),
      
     // 未授权操作。
      UNAUTHORIZEDOPERATION("UnauthorizedOperation"),
+     
+    // 未知参数错误。
+     UNKNOWNPARAMETER("UnknownParameter"),
+     
+    // 操作不支持。
+     UNSUPPORTEDOPERATION("UnsupportedOperation"),
      
     // 批量删除实例限制。
      UNSUPPORTEDOPERATION_BATCHDELINSTANCELIMIT("UnsupportedOperation.BatchDelInstanceLimit"),

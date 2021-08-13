@@ -23,13 +23,6 @@ import java.util.HashMap;
 public class SecurityGroupListData extends AbstractModel{
 
     /**
-    * 规则ID
-    */
-    @SerializedName("Id")
-    @Expose
-    private Long Id;
-
-    /**
     * 执行顺序
     */
     @SerializedName("OrderIndex")
@@ -44,7 +37,7 @@ public class SecurityGroupListData extends AbstractModel{
     private String SourceId;
 
     /**
-    * 访问源类型，默认为0，1: VPC, 2: SUBNET, 3: CVM, 4: CLB, 5: ENI, 6: CDB
+    * 访问源类型，默认为0，1: VPC, 2: SUBNET, 3: CVM, 4: CLB, 5: ENI, 6: CDB, 100:资源组
     */
     @SerializedName("SourceType")
     @Expose
@@ -58,7 +51,7 @@ public class SecurityGroupListData extends AbstractModel{
     private String TargetId;
 
     /**
-    * 访问目的类型，默认为0，1: VPC, 2: SUBNET, 3: CVM, 4: CLB, 5: ENI, 6: CDB
+    * 访问目的类型，默认为0，1: VPC, 2: SUBNET, 3: CVM, 4: CLB, 5: ENI, 6: CDB, 100:资源组
     */
     @SerializedName("TargetType")
     @Expose
@@ -93,6 +86,20 @@ public class SecurityGroupListData extends AbstractModel{
     private String Detail;
 
     /**
+    * 单/双向下发，0:单向下发，1：双向下发
+    */
+    @SerializedName("BothWay")
+    @Expose
+    private Long BothWay;
+
+    /**
+    * 规则ID
+    */
+    @SerializedName("Id")
+    @Expose
+    private Long Id;
+
+    /**
     * 是否开关开启，0：未开启，1：开启
     */
     @SerializedName("Status")
@@ -105,13 +112,6 @@ public class SecurityGroupListData extends AbstractModel{
     @SerializedName("IsNew")
     @Expose
     private Long IsNew;
-
-    /**
-    * 单/双向下发，0:单向下发，1：双向下发
-    */
-    @SerializedName("BothWay")
-    @Expose
-    private Long BothWay;
 
     /**
     * 私有网络ID
@@ -162,20 +162,27 @@ public class SecurityGroupListData extends AbstractModel{
     private String Cidr;
 
     /**
-     * Get 规则ID 
-     * @return Id 规则ID
-     */
-    public Long getId() {
-        return this.Id;
-    }
+    * 端口协议类型参数模板id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ServiceTemplateId")
+    @Expose
+    private String ServiceTemplateId;
 
     /**
-     * Set 规则ID
-     * @param Id 规则ID
-     */
-    public void setId(Long Id) {
-        this.Id = Id;
-    }
+    * 当BothWay为0的时候，填空，当BothWay为1的时候，为JSON字符串，数据来源于DescribeBothWayInstanceListByIp个接口，如果该接口返回数据为空，则不支持双向下发
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BothWayInfo")
+    @Expose
+    private SecurityGroupBothWayInfo [] BothWayInfo;
+
+    /**
+    * 方向，0：出站，1：入站，默认1
+    */
+    @SerializedName("Direction")
+    @Expose
+    private Long Direction;
 
     /**
      * Get 执行顺序 
@@ -210,16 +217,16 @@ public class SecurityGroupListData extends AbstractModel{
     }
 
     /**
-     * Get 访问源类型，默认为0，1: VPC, 2: SUBNET, 3: CVM, 4: CLB, 5: ENI, 6: CDB 
-     * @return SourceType 访问源类型，默认为0，1: VPC, 2: SUBNET, 3: CVM, 4: CLB, 5: ENI, 6: CDB
+     * Get 访问源类型，默认为0，1: VPC, 2: SUBNET, 3: CVM, 4: CLB, 5: ENI, 6: CDB, 100:资源组 
+     * @return SourceType 访问源类型，默认为0，1: VPC, 2: SUBNET, 3: CVM, 4: CLB, 5: ENI, 6: CDB, 100:资源组
      */
     public Long getSourceType() {
         return this.SourceType;
     }
 
     /**
-     * Set 访问源类型，默认为0，1: VPC, 2: SUBNET, 3: CVM, 4: CLB, 5: ENI, 6: CDB
-     * @param SourceType 访问源类型，默认为0，1: VPC, 2: SUBNET, 3: CVM, 4: CLB, 5: ENI, 6: CDB
+     * Set 访问源类型，默认为0，1: VPC, 2: SUBNET, 3: CVM, 4: CLB, 5: ENI, 6: CDB, 100:资源组
+     * @param SourceType 访问源类型，默认为0，1: VPC, 2: SUBNET, 3: CVM, 4: CLB, 5: ENI, 6: CDB, 100:资源组
      */
     public void setSourceType(Long SourceType) {
         this.SourceType = SourceType;
@@ -242,16 +249,16 @@ public class SecurityGroupListData extends AbstractModel{
     }
 
     /**
-     * Get 访问目的类型，默认为0，1: VPC, 2: SUBNET, 3: CVM, 4: CLB, 5: ENI, 6: CDB 
-     * @return TargetType 访问目的类型，默认为0，1: VPC, 2: SUBNET, 3: CVM, 4: CLB, 5: ENI, 6: CDB
+     * Get 访问目的类型，默认为0，1: VPC, 2: SUBNET, 3: CVM, 4: CLB, 5: ENI, 6: CDB, 100:资源组 
+     * @return TargetType 访问目的类型，默认为0，1: VPC, 2: SUBNET, 3: CVM, 4: CLB, 5: ENI, 6: CDB, 100:资源组
      */
     public Long getTargetType() {
         return this.TargetType;
     }
 
     /**
-     * Set 访问目的类型，默认为0，1: VPC, 2: SUBNET, 3: CVM, 4: CLB, 5: ENI, 6: CDB
-     * @param TargetType 访问目的类型，默认为0，1: VPC, 2: SUBNET, 3: CVM, 4: CLB, 5: ENI, 6: CDB
+     * Set 访问目的类型，默认为0，1: VPC, 2: SUBNET, 3: CVM, 4: CLB, 5: ENI, 6: CDB, 100:资源组
+     * @param TargetType 访问目的类型，默认为0，1: VPC, 2: SUBNET, 3: CVM, 4: CLB, 5: ENI, 6: CDB, 100:资源组
      */
     public void setTargetType(Long TargetType) {
         this.TargetType = TargetType;
@@ -322,6 +329,38 @@ public class SecurityGroupListData extends AbstractModel{
     }
 
     /**
+     * Get 单/双向下发，0:单向下发，1：双向下发 
+     * @return BothWay 单/双向下发，0:单向下发，1：双向下发
+     */
+    public Long getBothWay() {
+        return this.BothWay;
+    }
+
+    /**
+     * Set 单/双向下发，0:单向下发，1：双向下发
+     * @param BothWay 单/双向下发，0:单向下发，1：双向下发
+     */
+    public void setBothWay(Long BothWay) {
+        this.BothWay = BothWay;
+    }
+
+    /**
+     * Get 规则ID 
+     * @return Id 规则ID
+     */
+    public Long getId() {
+        return this.Id;
+    }
+
+    /**
+     * Set 规则ID
+     * @param Id 规则ID
+     */
+    public void setId(Long Id) {
+        this.Id = Id;
+    }
+
+    /**
      * Get 是否开关开启，0：未开启，1：开启 
      * @return Status 是否开关开启，0：未开启，1：开启
      */
@@ -351,22 +390,6 @@ public class SecurityGroupListData extends AbstractModel{
      */
     public void setIsNew(Long IsNew) {
         this.IsNew = IsNew;
-    }
-
-    /**
-     * Get 单/双向下发，0:单向下发，1：双向下发 
-     * @return BothWay 单/双向下发，0:单向下发，1：双向下发
-     */
-    public Long getBothWay() {
-        return this.BothWay;
-    }
-
-    /**
-     * Set 单/双向下发，0:单向下发，1：双向下发
-     * @param BothWay 单/双向下发，0:单向下发，1：双向下发
-     */
-    public void setBothWay(Long BothWay) {
-        this.BothWay = BothWay;
     }
 
     /**
@@ -489,6 +512,62 @@ public class SecurityGroupListData extends AbstractModel{
         this.Cidr = Cidr;
     }
 
+    /**
+     * Get 端口协议类型参数模板id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ServiceTemplateId 端口协议类型参数模板id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getServiceTemplateId() {
+        return this.ServiceTemplateId;
+    }
+
+    /**
+     * Set 端口协议类型参数模板id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ServiceTemplateId 端口协议类型参数模板id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setServiceTemplateId(String ServiceTemplateId) {
+        this.ServiceTemplateId = ServiceTemplateId;
+    }
+
+    /**
+     * Get 当BothWay为0的时候，填空，当BothWay为1的时候，为JSON字符串，数据来源于DescribeBothWayInstanceListByIp个接口，如果该接口返回数据为空，则不支持双向下发
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BothWayInfo 当BothWay为0的时候，填空，当BothWay为1的时候，为JSON字符串，数据来源于DescribeBothWayInstanceListByIp个接口，如果该接口返回数据为空，则不支持双向下发
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public SecurityGroupBothWayInfo [] getBothWayInfo() {
+        return this.BothWayInfo;
+    }
+
+    /**
+     * Set 当BothWay为0的时候，填空，当BothWay为1的时候，为JSON字符串，数据来源于DescribeBothWayInstanceListByIp个接口，如果该接口返回数据为空，则不支持双向下发
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BothWayInfo 当BothWay为0的时候，填空，当BothWay为1的时候，为JSON字符串，数据来源于DescribeBothWayInstanceListByIp个接口，如果该接口返回数据为空，则不支持双向下发
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBothWayInfo(SecurityGroupBothWayInfo [] BothWayInfo) {
+        this.BothWayInfo = BothWayInfo;
+    }
+
+    /**
+     * Get 方向，0：出站，1：入站，默认1 
+     * @return Direction 方向，0：出站，1：入站，默认1
+     */
+    public Long getDirection() {
+        return this.Direction;
+    }
+
+    /**
+     * Set 方向，0：出站，1：入站，默认1
+     * @param Direction 方向，0：出站，1：入站，默认1
+     */
+    public void setDirection(Long Direction) {
+        this.Direction = Direction;
+    }
+
     public SecurityGroupListData() {
     }
 
@@ -497,9 +576,6 @@ public class SecurityGroupListData extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public SecurityGroupListData(SecurityGroupListData source) {
-        if (source.Id != null) {
-            this.Id = new Long(source.Id);
-        }
         if (source.OrderIndex != null) {
             this.OrderIndex = new Long(source.OrderIndex);
         }
@@ -527,14 +603,17 @@ public class SecurityGroupListData extends AbstractModel{
         if (source.Detail != null) {
             this.Detail = new String(source.Detail);
         }
+        if (source.BothWay != null) {
+            this.BothWay = new Long(source.BothWay);
+        }
+        if (source.Id != null) {
+            this.Id = new Long(source.Id);
+        }
         if (source.Status != null) {
             this.Status = new Long(source.Status);
         }
         if (source.IsNew != null) {
             this.IsNew = new Long(source.IsNew);
-        }
-        if (source.BothWay != null) {
-            this.BothWay = new Long(source.BothWay);
         }
         if (source.VpcId != null) {
             this.VpcId = new String(source.VpcId);
@@ -554,6 +633,18 @@ public class SecurityGroupListData extends AbstractModel{
         if (source.Cidr != null) {
             this.Cidr = new String(source.Cidr);
         }
+        if (source.ServiceTemplateId != null) {
+            this.ServiceTemplateId = new String(source.ServiceTemplateId);
+        }
+        if (source.BothWayInfo != null) {
+            this.BothWayInfo = new SecurityGroupBothWayInfo[source.BothWayInfo.length];
+            for (int i = 0; i < source.BothWayInfo.length; i++) {
+                this.BothWayInfo[i] = new SecurityGroupBothWayInfo(source.BothWayInfo[i]);
+            }
+        }
+        if (source.Direction != null) {
+            this.Direction = new Long(source.Direction);
+        }
     }
 
 
@@ -561,7 +652,6 @@ public class SecurityGroupListData extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Id", this.Id);
         this.setParamSimple(map, prefix + "OrderIndex", this.OrderIndex);
         this.setParamSimple(map, prefix + "SourceId", this.SourceId);
         this.setParamSimple(map, prefix + "SourceType", this.SourceType);
@@ -571,15 +661,19 @@ public class SecurityGroupListData extends AbstractModel{
         this.setParamSimple(map, prefix + "Port", this.Port);
         this.setParamSimple(map, prefix + "Strategy", this.Strategy);
         this.setParamSimple(map, prefix + "Detail", this.Detail);
+        this.setParamSimple(map, prefix + "BothWay", this.BothWay);
+        this.setParamSimple(map, prefix + "Id", this.Id);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "IsNew", this.IsNew);
-        this.setParamSimple(map, prefix + "BothWay", this.BothWay);
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
         this.setParamSimple(map, prefix + "InstanceName", this.InstanceName);
         this.setParamSimple(map, prefix + "PublicIp", this.PublicIp);
         this.setParamSimple(map, prefix + "PrivateIp", this.PrivateIp);
         this.setParamSimple(map, prefix + "Cidr", this.Cidr);
+        this.setParamSimple(map, prefix + "ServiceTemplateId", this.ServiceTemplateId);
+        this.setParamArrayObj(map, prefix + "BothWayInfo.", this.BothWayInfo);
+        this.setParamSimple(map, prefix + "Direction", this.Direction);
 
     }
 }

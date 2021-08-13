@@ -561,6 +561,26 @@ public class CkafkaClient extends AbstractClient{
     }
 
     /**
+     *查询订阅某主题消息分组信息
+     * @param req DescribeTopicSubscribeGroupRequest
+     * @return DescribeTopicSubscribeGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTopicSubscribeGroupResponse DescribeTopicSubscribeGroup(DescribeTopicSubscribeGroupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTopicSubscribeGroupResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTopicSubscribeGroupResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeTopicSubscribeGroup");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询用户信息
      * @param req DescribeUserRequest
      * @return DescribeUserResponse

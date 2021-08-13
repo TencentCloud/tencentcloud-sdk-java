@@ -24,6 +24,9 @@ public enum ClsErrorCode {
     // 检索游标已失效或不存在。
      FAILEDOPERATION_INVALIDCONTEXT("FailedOperation.InvalidContext"),
      
+    // 离线存储保存时间不得少于7天。
+     FAILEDOPERATION_INVALIDPERIOD("FailedOperation.InvalidPeriod"),
+     
     // 相同的日志集已存在。
      FAILEDOPERATION_LOGSETCONFLICT("FailedOperation.LogsetConflict"),
      

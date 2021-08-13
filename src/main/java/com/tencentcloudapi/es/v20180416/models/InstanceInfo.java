@@ -427,6 +427,22 @@ public class InstanceInfo extends AbstractModel{
     private KibanaNodeInfo KibanaNodeInfo;
 
     /**
+    * 可视化节点配置
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("WebNodeTypeInfo")
+    @Expose
+    private WebNodeTypeInfo WebNodeTypeInfo;
+
+    /**
+    * JDK类型，oracle或kona
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Jdk")
+    @Expose
+    private String Jdk;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -1382,6 +1398,46 @@ public class InstanceInfo extends AbstractModel{
         this.KibanaNodeInfo = KibanaNodeInfo;
     }
 
+    /**
+     * Get 可视化节点配置
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return WebNodeTypeInfo 可视化节点配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public WebNodeTypeInfo getWebNodeTypeInfo() {
+        return this.WebNodeTypeInfo;
+    }
+
+    /**
+     * Set 可视化节点配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param WebNodeTypeInfo 可视化节点配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setWebNodeTypeInfo(WebNodeTypeInfo WebNodeTypeInfo) {
+        this.WebNodeTypeInfo = WebNodeTypeInfo;
+    }
+
+    /**
+     * Get JDK类型，oracle或kona
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Jdk JDK类型，oracle或kona
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getJdk() {
+        return this.Jdk;
+    }
+
+    /**
+     * Set JDK类型，oracle或kona
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Jdk JDK类型，oracle或kona
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setJdk(String Jdk) {
+        this.Jdk = Jdk;
+    }
+
     public InstanceInfo() {
     }
 
@@ -1564,6 +1620,12 @@ public class InstanceInfo extends AbstractModel{
         if (source.KibanaNodeInfo != null) {
             this.KibanaNodeInfo = new KibanaNodeInfo(source.KibanaNodeInfo);
         }
+        if (source.WebNodeTypeInfo != null) {
+            this.WebNodeTypeInfo = new WebNodeTypeInfo(source.WebNodeTypeInfo);
+        }
+        if (source.Jdk != null) {
+            this.Jdk = new String(source.Jdk);
+        }
     }
 
 
@@ -1626,6 +1688,8 @@ public class InstanceInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "SceneType", this.SceneType);
         this.setParamSimple(map, prefix + "KibanaConfig", this.KibanaConfig);
         this.setParamObj(map, prefix + "KibanaNodeInfo.", this.KibanaNodeInfo);
+        this.setParamObj(map, prefix + "WebNodeTypeInfo.", this.WebNodeTypeInfo);
+        this.setParamSimple(map, prefix + "Jdk", this.Jdk);
 
     }
 }

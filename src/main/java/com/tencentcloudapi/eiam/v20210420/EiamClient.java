@@ -219,6 +219,26 @@ public class EiamClient extends AbstractClient{
     }
 
     /**
+     *查询指定机构下的资源授权列表
+     * @param req DescribeOrgResourcesAuthorizationRequest
+     * @return DescribeOrgResourcesAuthorizationResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeOrgResourcesAuthorizationResponse DescribeOrgResourcesAuthorization(DescribeOrgResourcesAuthorizationRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeOrgResourcesAuthorizationResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeOrgResourcesAuthorizationResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeOrgResourcesAuthorization");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取JWT公钥信息。
      * @param req DescribePublicKeyRequest
      * @return DescribePublicKeyResponse
@@ -259,6 +279,26 @@ public class EiamClient extends AbstractClient{
     }
 
     /**
+     *查询指定用户组下的资源授权列表
+     * @param req DescribeUserGroupResourcesAuthorizationRequest
+     * @return DescribeUserGroupResourcesAuthorizationResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeUserGroupResourcesAuthorizationResponse DescribeUserGroupResourcesAuthorization(DescribeUserGroupResourcesAuthorizationRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeUserGroupResourcesAuthorizationResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeUserGroupResourcesAuthorizationResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeUserGroupResourcesAuthorization");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *通过用户名或用户 id 搜索用户
      * @param req DescribeUserInfoRequest
      * @return DescribeUserInfoResponse
@@ -271,6 +311,26 @@ public class EiamClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeUserInfoResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeUserInfo");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询指定用户下的资源授权列表
+     * @param req DescribeUserResourcesAuthorizationRequest
+     * @return DescribeUserResourcesAuthorizationResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeUserResourcesAuthorizationResponse DescribeUserResourcesAuthorization(DescribeUserResourcesAuthorizationRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeUserResourcesAuthorizationResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeUserResourcesAuthorizationResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeUserResourcesAuthorization");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

@@ -116,6 +116,14 @@ public class AlarmInfo extends AbstractModel{
     private CallBackInfo CallBack;
 
     /**
+    * 多维分析设置
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Analysis")
+    @Expose
+    private AnalysisDimensional [] Analysis;
+
+    /**
      * Get 告警策略名称。 
      * @return Name 告警策略名称。
      */
@@ -331,6 +339,26 @@ public class AlarmInfo extends AbstractModel{
         this.CallBack = CallBack;
     }
 
+    /**
+     * Get 多维分析设置
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Analysis 多维分析设置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public AnalysisDimensional [] getAnalysis() {
+        return this.Analysis;
+    }
+
+    /**
+     * Set 多维分析设置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Analysis 多维分析设置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAnalysis(AnalysisDimensional [] Analysis) {
+        this.Analysis = Analysis;
+    }
+
     public AlarmInfo() {
     }
 
@@ -384,6 +412,12 @@ public class AlarmInfo extends AbstractModel{
         if (source.CallBack != null) {
             this.CallBack = new CallBackInfo(source.CallBack);
         }
+        if (source.Analysis != null) {
+            this.Analysis = new AnalysisDimensional[source.Analysis.length];
+            for (int i = 0; i < source.Analysis.length; i++) {
+                this.Analysis[i] = new AnalysisDimensional(source.Analysis[i]);
+            }
+        }
     }
 
 
@@ -404,6 +438,7 @@ public class AlarmInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamSimple(map, prefix + "MessageTemplate", this.MessageTemplate);
         this.setParamObj(map, prefix + "CallBack.", this.CallBack);
+        this.setParamArrayObj(map, prefix + "Analysis.", this.Analysis);
 
     }
 }

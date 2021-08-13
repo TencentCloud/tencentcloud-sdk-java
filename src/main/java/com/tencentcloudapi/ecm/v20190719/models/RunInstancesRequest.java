@@ -160,6 +160,13 @@ Windows 实例：名字符长度为[2, 15]，允许字母（不限制大小写�
     private Long InstanceChargeType;
 
     /**
+    * 密钥对。
+    */
+    @SerializedName("KeyIds")
+    @Expose
+    private String [] KeyIds;
+
+    /**
      * Get 需要创建实例的可用区及创建数目及运营商的列表。在单次请求的过程中，单个region下的请求创建实例数上限为100 
      * @return ZoneInstanceCountISPSet 需要创建实例的可用区及创建数目及运营商的列表。在单次请求的过程中，单个region下的请求创建实例数上限为100
      */
@@ -503,6 +510,22 @@ Windows 实例：名字符长度为[2, 15]，允许字母（不限制大小写�
         this.InstanceChargeType = InstanceChargeType;
     }
 
+    /**
+     * Get 密钥对。 
+     * @return KeyIds 密钥对。
+     */
+    public String [] getKeyIds() {
+        return this.KeyIds;
+    }
+
+    /**
+     * Set 密钥对。
+     * @param KeyIds 密钥对。
+     */
+    public void setKeyIds(String [] KeyIds) {
+        this.KeyIds = KeyIds;
+    }
+
     public RunInstancesRequest() {
     }
 
@@ -571,6 +594,12 @@ Windows 实例：名字符长度为[2, 15]，允许字母（不限制大小写�
         if (source.InstanceChargeType != null) {
             this.InstanceChargeType = new Long(source.InstanceChargeType);
         }
+        if (source.KeyIds != null) {
+            this.KeyIds = new String[source.KeyIds.length];
+            for (int i = 0; i < source.KeyIds.length; i++) {
+                this.KeyIds[i] = new String(source.KeyIds[i]);
+            }
+        }
     }
 
 
@@ -595,6 +624,7 @@ Windows 实例：名字符长度为[2, 15]，允许字母（不限制大小写�
         this.setParamSimple(map, prefix + "SystemDiskSize", this.SystemDiskSize);
         this.setParamSimple(map, prefix + "InternetMaxBandwidthIn", this.InternetMaxBandwidthIn);
         this.setParamSimple(map, prefix + "InstanceChargeType", this.InstanceChargeType);
+        this.setParamArraySimple(map, prefix + "KeyIds.", this.KeyIds);
 
     }
 }
