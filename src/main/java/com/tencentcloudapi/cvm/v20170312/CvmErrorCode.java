@@ -60,6 +60,9 @@ public enum CvmErrorCode {
     // 请求中指定的标签键为系统预留标签，禁止创建
      FAILEDOPERATION_TAGKEYRESERVED("FailedOperation.TagKeyReserved"),
      
+    // 镜像是公共镜像并且启用了自动化助手服务，但它不符合 Linux&x86_64。
+     FAILEDOPERATION_TATAGENTNOTSUPPORT("FailedOperation.TatAgentNotSupport"),
+     
     // 实例无法退还。
      FAILEDOPERATION_UNRETURNABLE("FailedOperation.Unreturnable"),
      
@@ -252,6 +255,9 @@ public enum CvmErrorCode {
     // IP格式非法。
      INVALIDPARAMETERVALUE_IPADDRESSMALFORMED("InvalidParameterValue.IPAddressMalformed"),
      
+    // ipv6地址无效
+     INVALIDPARAMETERVALUE_IPV6ADDRESSMALFORMED("InvalidParameterValue.IPv6AddressMalformed"),
+     
     // HostName参数值不合法
      INVALIDPARAMETERVALUE_ILLEGALHOSTNAME("InvalidParameterValue.IllegalHostName"),
      
@@ -272,6 +278,9 @@ public enum CvmErrorCode {
      
     // 竞价失败。
      INVALIDPARAMETERVALUE_INSUFFICIENTPRICE("InvalidParameterValue.InsufficientPrice"),
+     
+    // 无效的appid。
+     INVALIDPARAMETERVALUE_INVALIDAPPIDFORMAT("InvalidParameterValue.InvalidAppIdFormat"),
      
     // 镜像ID不支持指定的实例机型。
      INVALIDPARAMETERVALUE_INVALIDIMAGEFORGIVENINSTANCETYPE("InvalidParameterValue.InvalidImageForGivenInstanceType"),
@@ -546,6 +555,9 @@ public enum CvmErrorCode {
     // 请求不支持正在退出救援模式的实例
      UNSUPPORTEDOPERATION_INSTANCESTATEEXITRESCUEMODE("UnsupportedOperation.InstanceStateExitRescueMode"),
      
+    // 不支持状态为 `EXIT_SERVICE_LIVE_MIGRATE`.的实例 `ins-xxxxxx` 。
+     UNSUPPORTEDOPERATION_INSTANCESTATEEXITSERVICELIVEMIGRATE("UnsupportedOperation.InstanceStateExitServiceLiveMigrate"),
+     
     // 请求不支持正在隔离状态的实例。
      UNSUPPORTEDOPERATION_INSTANCESTATEISOLATING("UnsupportedOperation.InstanceStateIsolating"),
      
@@ -566,6 +578,9 @@ public enum CvmErrorCode {
      
     // 请求不支持隔离状态的实例
      UNSUPPORTEDOPERATION_INSTANCESTATESHUTDOWN("UnsupportedOperation.InstanceStateShutdown"),
+     
+    // 实例开机中，不允许该操作。
+     UNSUPPORTEDOPERATION_INSTANCESTATESTARTING("UnsupportedOperation.InstanceStateStarting"),
      
     // 请求不支持已关机的实例
      UNSUPPORTEDOPERATION_INSTANCESTATESTOPPED("UnsupportedOperation.InstanceStateStopped"),

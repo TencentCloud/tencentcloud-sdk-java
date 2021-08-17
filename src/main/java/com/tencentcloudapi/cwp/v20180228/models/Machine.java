@@ -159,7 +159,7 @@ public class Machine extends AbstractModel{
     private String InstanceState;
 
     /**
-    * 授权状态 1 授权 0 未授权
+    * 防篡改 授权状态 1 授权 0 未授权
     */
     @SerializedName("LicenseStatus")
     @Expose
@@ -178,6 +178,13 @@ public class Machine extends AbstractModel{
     @SerializedName("HasAssetScan")
     @Expose
     private Long HasAssetScan;
+
+    /**
+    * 机器所属专区类型 CVM 云服务器, BM 黑石, ECM 边缘计算, LH 轻量应用服务器 ,Other 混合云专区
+    */
+    @SerializedName("MachineType")
+    @Expose
+    private String MachineType;
 
     /**
      * Get 主机名称。 
@@ -508,16 +515,16 @@ public class Machine extends AbstractModel{
     }
 
     /**
-     * Get 授权状态 1 授权 0 未授权 
-     * @return LicenseStatus 授权状态 1 授权 0 未授权
+     * Get 防篡改 授权状态 1 授权 0 未授权 
+     * @return LicenseStatus 防篡改 授权状态 1 授权 0 未授权
      */
     public Long getLicenseStatus() {
         return this.LicenseStatus;
     }
 
     /**
-     * Set 授权状态 1 授权 0 未授权
-     * @param LicenseStatus 授权状态 1 授权 0 未授权
+     * Set 防篡改 授权状态 1 授权 0 未授权
+     * @param LicenseStatus 防篡改 授权状态 1 授权 0 未授权
      */
     public void setLicenseStatus(Long LicenseStatus) {
         this.LicenseStatus = LicenseStatus;
@@ -553,6 +560,22 @@ public class Machine extends AbstractModel{
      */
     public void setHasAssetScan(Long HasAssetScan) {
         this.HasAssetScan = HasAssetScan;
+    }
+
+    /**
+     * Get 机器所属专区类型 CVM 云服务器, BM 黑石, ECM 边缘计算, LH 轻量应用服务器 ,Other 混合云专区 
+     * @return MachineType 机器所属专区类型 CVM 云服务器, BM 黑石, ECM 边缘计算, LH 轻量应用服务器 ,Other 混合云专区
+     */
+    public String getMachineType() {
+        return this.MachineType;
+    }
+
+    /**
+     * Set 机器所属专区类型 CVM 云服务器, BM 黑石, ECM 边缘计算, LH 轻量应用服务器 ,Other 混合云专区
+     * @param MachineType 机器所属专区类型 CVM 云服务器, BM 黑石, ECM 边缘计算, LH 轻量应用服务器 ,Other 混合云专区
+     */
+    public void setMachineType(String MachineType) {
+        this.MachineType = MachineType;
     }
 
     public Machine() {
@@ -629,6 +652,9 @@ public class Machine extends AbstractModel{
         if (source.HasAssetScan != null) {
             this.HasAssetScan = new Long(source.HasAssetScan);
         }
+        if (source.MachineType != null) {
+            this.MachineType = new String(source.MachineType);
+        }
     }
 
 
@@ -657,6 +683,7 @@ public class Machine extends AbstractModel{
         this.setParamSimple(map, prefix + "LicenseStatus", this.LicenseStatus);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamSimple(map, prefix + "HasAssetScan", this.HasAssetScan);
+        this.setParamSimple(map, prefix + "MachineType", this.MachineType);
 
     }
 }

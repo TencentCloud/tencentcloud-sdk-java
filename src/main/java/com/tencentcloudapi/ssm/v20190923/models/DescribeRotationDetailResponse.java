@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeRotationDetailResponse extends AbstractModel{
 
     /**
-    * 否允许轮转，True表示开启轮转，False表示禁止轮转。
+    * 否允许轮转，true表示开启轮转，false表示禁止轮转。
     */
     @SerializedName("EnableRotation")
     @Expose
@@ -61,16 +61,16 @@ public class DescribeRotationDetailResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 否允许轮转，True表示开启轮转，False表示禁止轮转。 
-     * @return EnableRotation 否允许轮转，True表示开启轮转，False表示禁止轮转。
+     * Get 否允许轮转，true表示开启轮转，false表示禁止轮转。 
+     * @return EnableRotation 否允许轮转，true表示开启轮转，false表示禁止轮转。
      */
     public Boolean getEnableRotation() {
         return this.EnableRotation;
     }
 
     /**
-     * Set 否允许轮转，True表示开启轮转，False表示禁止轮转。
-     * @param EnableRotation 否允许轮转，True表示开启轮转，False表示禁止轮转。
+     * Set 否允许轮转，true表示开启轮转，false表示禁止轮转。
+     * @param EnableRotation 否允许轮转，true表示开启轮转，false表示禁止轮转。
      */
     public void setEnableRotation(Boolean EnableRotation) {
         this.EnableRotation = EnableRotation;

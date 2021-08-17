@@ -51,7 +51,7 @@ public class CreateTagRetentionRuleRequest extends AbstractModel{
     private String CronSetting;
 
     /**
-    * 是否禁用规则
+    * 是否禁用规则，默认值为false
     */
     @SerializedName("Disabled")
     @Expose
@@ -122,16 +122,16 @@ public class CreateTagRetentionRuleRequest extends AbstractModel{
     }
 
     /**
-     * Get 是否禁用规则 
-     * @return Disabled 是否禁用规则
+     * Get 是否禁用规则，默认值为false 
+     * @return Disabled 是否禁用规则，默认值为false
      */
     public Boolean getDisabled() {
         return this.Disabled;
     }
 
     /**
-     * Set 是否禁用规则
-     * @param Disabled 是否禁用规则
+     * Set 是否禁用规则，默认值为false
+     * @param Disabled 是否禁用规则，默认值为false
      */
     public void setDisabled(Boolean Disabled) {
         this.Disabled = Disabled;

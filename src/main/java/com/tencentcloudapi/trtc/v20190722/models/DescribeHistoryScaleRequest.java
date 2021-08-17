@@ -23,69 +23,69 @@ import java.util.HashMap;
 public class DescribeHistoryScaleRequest extends AbstractModel{
 
     /**
-    * 用户sdkappid
+    * 用户sdkappid(1400188366)
     */
     @SerializedName("SdkAppId")
     @Expose
     private String SdkAppId;
 
     /**
-    * 查询开始时间，5天内。本地unix时间戳（1588031999s）
+    * 查询开始时间，5天内。本地unix时间戳（1587571000s）
     */
     @SerializedName("StartTime")
     @Expose
     private Long StartTime;
 
     /**
-    * 查询结束时间，本地unix时间戳（1588031999s）
+    * 查询结束时间，本地unix时间戳（1588034999s）
     */
     @SerializedName("EndTime")
     @Expose
     private Long EndTime;
 
     /**
-     * Get 用户sdkappid 
-     * @return SdkAppId 用户sdkappid
+     * Get 用户sdkappid(1400188366) 
+     * @return SdkAppId 用户sdkappid(1400188366)
      */
     public String getSdkAppId() {
         return this.SdkAppId;
     }
 
     /**
-     * Set 用户sdkappid
-     * @param SdkAppId 用户sdkappid
+     * Set 用户sdkappid(1400188366)
+     * @param SdkAppId 用户sdkappid(1400188366)
      */
     public void setSdkAppId(String SdkAppId) {
         this.SdkAppId = SdkAppId;
     }
 
     /**
-     * Get 查询开始时间，5天内。本地unix时间戳（1588031999s） 
-     * @return StartTime 查询开始时间，5天内。本地unix时间戳（1588031999s）
+     * Get 查询开始时间，5天内。本地unix时间戳（1587571000s） 
+     * @return StartTime 查询开始时间，5天内。本地unix时间戳（1587571000s）
      */
     public Long getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 查询开始时间，5天内。本地unix时间戳（1588031999s）
-     * @param StartTime 查询开始时间，5天内。本地unix时间戳（1588031999s）
+     * Set 查询开始时间，5天内。本地unix时间戳（1587571000s）
+     * @param StartTime 查询开始时间，5天内。本地unix时间戳（1587571000s）
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 查询结束时间，本地unix时间戳（1588031999s） 
-     * @return EndTime 查询结束时间，本地unix时间戳（1588031999s）
+     * Get 查询结束时间，本地unix时间戳（1588034999s） 
+     * @return EndTime 查询结束时间，本地unix时间戳（1588034999s）
      */
     public Long getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 查询结束时间，本地unix时间戳（1588031999s）
-     * @param EndTime 查询结束时间，本地unix时间戳（1588031999s）
+     * Set 查询结束时间，本地unix时间戳（1588034999s）
+     * @param EndTime 查询结束时间，本地unix时间戳（1588034999s）
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;

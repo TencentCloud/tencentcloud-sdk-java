@@ -79,50 +79,6 @@ public class MrsClient extends AbstractClient{
     }
 
     /**
-     *接口没有流量
-
-将输入的图片类型报告结构化
-     * @param req ReportImageStructuredRequest
-     * @return ReportImageStructuredResponse
-     * @throws TencentCloudSDKException
-     */
-    public ReportImageStructuredResponse ReportImageStructured(ReportImageStructuredRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ReportImageStructuredResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<ReportImageStructuredResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ReportImageStructured");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *接口还未上线
-
-将输入的医疗报告文本内容进行结构化输出
-     * @param req ReportTextStructuredRequest
-     * @return ReportTextStructuredResponse
-     * @throws TencentCloudSDKException
-     */
-    public ReportTextStructuredResponse ReportTextStructured(ReportTextStructuredRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ReportTextStructuredResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<ReportTextStructuredResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ReportTextStructured");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *文本分类
      * @param req TextToClassRequest
      * @return TextToClassResponse

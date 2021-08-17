@@ -23,6 +23,23 @@ import java.util.HashMap;
 public class DiskOperationLog extends AbstractModel{
 
     /**
+    * 操作的状态。取值范围：
+SUCCESS :表示操作成功 
+FAILED :表示操作失败 
+PROCESSING :表示操作中。
+    */
+    @SerializedName("OperationState")
+    @Expose
+    private String OperationState;
+
+    /**
+    * 开始时间。
+    */
+    @SerializedName("StartTime")
+    @Expose
+    private String StartTime;
+
+    /**
     * 操作者的UIN。
     */
     @SerializedName("Operator")
@@ -46,6 +63,13 @@ ASP_OPERATION_UNBIND：取消关联定期快照策略
     private String Operation;
 
     /**
+    * 结束时间。
+    */
+    @SerializedName("EndTime")
+    @Expose
+    private String EndTime;
+
+    /**
     * 操作的云盘ID。
     */
     @SerializedName("DiskId")
@@ -53,28 +77,48 @@ ASP_OPERATION_UNBIND：取消关联定期快照策略
     private String DiskId;
 
     /**
-    * 操作的状态。取值范围：
+     * Get 操作的状态。取值范围：
+SUCCESS :表示操作成功 
+FAILED :表示操作失败 
+PROCESSING :表示操作中。 
+     * @return OperationState 操作的状态。取值范围：
 SUCCESS :表示操作成功 
 FAILED :表示操作失败 
 PROCESSING :表示操作中。
-    */
-    @SerializedName("OperationState")
-    @Expose
-    private String OperationState;
+     */
+    public String getOperationState() {
+        return this.OperationState;
+    }
 
     /**
-    * 开始时间。
-    */
-    @SerializedName("StartTime")
-    @Expose
-    private String StartTime;
+     * Set 操作的状态。取值范围：
+SUCCESS :表示操作成功 
+FAILED :表示操作失败 
+PROCESSING :表示操作中。
+     * @param OperationState 操作的状态。取值范围：
+SUCCESS :表示操作成功 
+FAILED :表示操作失败 
+PROCESSING :表示操作中。
+     */
+    public void setOperationState(String OperationState) {
+        this.OperationState = OperationState;
+    }
 
     /**
-    * 结束时间。
-    */
-    @SerializedName("EndTime")
-    @Expose
-    private String EndTime;
+     * Get 开始时间。 
+     * @return StartTime 开始时间。
+     */
+    public String getStartTime() {
+        return this.StartTime;
+    }
+
+    /**
+     * Set 开始时间。
+     * @param StartTime 开始时间。
+     */
+    public void setStartTime(String StartTime) {
+        this.StartTime = StartTime;
+    }
 
     /**
      * Get 操作者的UIN。 
@@ -145,66 +189,6 @@ ASP_OPERATION_UNBIND：取消关联定期快照策略
     }
 
     /**
-     * Get 操作的云盘ID。 
-     * @return DiskId 操作的云盘ID。
-     */
-    public String getDiskId() {
-        return this.DiskId;
-    }
-
-    /**
-     * Set 操作的云盘ID。
-     * @param DiskId 操作的云盘ID。
-     */
-    public void setDiskId(String DiskId) {
-        this.DiskId = DiskId;
-    }
-
-    /**
-     * Get 操作的状态。取值范围：
-SUCCESS :表示操作成功 
-FAILED :表示操作失败 
-PROCESSING :表示操作中。 
-     * @return OperationState 操作的状态。取值范围：
-SUCCESS :表示操作成功 
-FAILED :表示操作失败 
-PROCESSING :表示操作中。
-     */
-    public String getOperationState() {
-        return this.OperationState;
-    }
-
-    /**
-     * Set 操作的状态。取值范围：
-SUCCESS :表示操作成功 
-FAILED :表示操作失败 
-PROCESSING :表示操作中。
-     * @param OperationState 操作的状态。取值范围：
-SUCCESS :表示操作成功 
-FAILED :表示操作失败 
-PROCESSING :表示操作中。
-     */
-    public void setOperationState(String OperationState) {
-        this.OperationState = OperationState;
-    }
-
-    /**
-     * Get 开始时间。 
-     * @return StartTime 开始时间。
-     */
-    public String getStartTime() {
-        return this.StartTime;
-    }
-
-    /**
-     * Set 开始时间。
-     * @param StartTime 开始时间。
-     */
-    public void setStartTime(String StartTime) {
-        this.StartTime = StartTime;
-    }
-
-    /**
      * Get 结束时间。 
      * @return EndTime 结束时间。
      */
@@ -220,6 +204,22 @@ PROCESSING :表示操作中。
         this.EndTime = EndTime;
     }
 
+    /**
+     * Get 操作的云盘ID。 
+     * @return DiskId 操作的云盘ID。
+     */
+    public String getDiskId() {
+        return this.DiskId;
+    }
+
+    /**
+     * Set 操作的云盘ID。
+     * @param DiskId 操作的云盘ID。
+     */
+    public void setDiskId(String DiskId) {
+        this.DiskId = DiskId;
+    }
+
     public DiskOperationLog() {
     }
 
@@ -228,23 +228,23 @@ PROCESSING :表示操作中。
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DiskOperationLog(DiskOperationLog source) {
-        if (source.Operator != null) {
-            this.Operator = new String(source.Operator);
-        }
-        if (source.Operation != null) {
-            this.Operation = new String(source.Operation);
-        }
-        if (source.DiskId != null) {
-            this.DiskId = new String(source.DiskId);
-        }
         if (source.OperationState != null) {
             this.OperationState = new String(source.OperationState);
         }
         if (source.StartTime != null) {
             this.StartTime = new String(source.StartTime);
         }
+        if (source.Operator != null) {
+            this.Operator = new String(source.Operator);
+        }
+        if (source.Operation != null) {
+            this.Operation = new String(source.Operation);
+        }
         if (source.EndTime != null) {
             this.EndTime = new String(source.EndTime);
+        }
+        if (source.DiskId != null) {
+            this.DiskId = new String(source.DiskId);
         }
     }
 
@@ -253,12 +253,12 @@ PROCESSING :表示操作中。
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Operator", this.Operator);
-        this.setParamSimple(map, prefix + "Operation", this.Operation);
-        this.setParamSimple(map, prefix + "DiskId", this.DiskId);
         this.setParamSimple(map, prefix + "OperationState", this.OperationState);
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
+        this.setParamSimple(map, prefix + "Operator", this.Operator);
+        this.setParamSimple(map, prefix + "Operation", this.Operation);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
+        this.setParamSimple(map, prefix + "DiskId", this.DiskId);
 
     }
 }

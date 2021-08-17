@@ -526,6 +526,26 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
     }
 
     /**
+     *本接口 (DescribeInstancesModification) 用于查询指定实例支持调整的机型配置。
+     * @param req DescribeInstancesModificationRequest
+     * @return DescribeInstancesModificationResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstancesModificationResponse DescribeInstancesModification(DescribeInstancesModificationRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeInstancesModificationResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeInstancesModificationResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeInstancesModification");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（DescribeInstancesOperationLimit）用于查询实例操作限制。
 
 * 目前支持调整配置操作限制次数查询。

@@ -30,7 +30,7 @@ public class TextSimilarityRequest extends AbstractModel{
     private String SrcText;
 
     /**
-    * 目标句子
+    * 目标句子（以句子数量为单位消耗资源包）
     */
     @SerializedName("TargetText")
     @Expose
@@ -53,16 +53,16 @@ public class TextSimilarityRequest extends AbstractModel{
     }
 
     /**
-     * Get 目标句子 
-     * @return TargetText 目标句子
+     * Get 目标句子（以句子数量为单位消耗资源包） 
+     * @return TargetText 目标句子（以句子数量为单位消耗资源包）
      */
     public String [] getTargetText() {
         return this.TargetText;
     }
 
     /**
-     * Set 目标句子
-     * @param TargetText 目标句子
+     * Set 目标句子（以句子数量为单位消耗资源包）
+     * @param TargetText 目标句子（以句子数量为单位消耗资源包）
      */
     public void setTargetText(String [] TargetText) {
         this.TargetText = TargetText;

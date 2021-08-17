@@ -44,8 +44,8 @@ public class DeleteInternalEndpointDnsRequest extends AbstractModel{
     private String EniLBIp;
 
     /**
-    * true：use instance name as subdomain
-false: use instancename+"-vpc" as subdomain
+    * true：使用默认域名
+false:  使用带有vpc的域名
     */
     @SerializedName("UsePublicDomain")
     @Expose
@@ -100,20 +100,20 @@ false: use instancename+"-vpc" as subdomain
     }
 
     /**
-     * Get true：use instance name as subdomain
-false: use instancename+"-vpc" as subdomain 
-     * @return UsePublicDomain true：use instance name as subdomain
-false: use instancename+"-vpc" as subdomain
+     * Get true：使用默认域名
+false:  使用带有vpc的域名 
+     * @return UsePublicDomain true：使用默认域名
+false:  使用带有vpc的域名
      */
     public Boolean getUsePublicDomain() {
         return this.UsePublicDomain;
     }
 
     /**
-     * Set true：use instance name as subdomain
-false: use instancename+"-vpc" as subdomain
-     * @param UsePublicDomain true：use instance name as subdomain
-false: use instancename+"-vpc" as subdomain
+     * Set true：使用默认域名
+false:  使用带有vpc的域名
+     * @param UsePublicDomain true：使用默认域名
+false:  使用带有vpc的域名
      */
     public void setUsePublicDomain(Boolean UsePublicDomain) {
         this.UsePublicDomain = UsePublicDomain;

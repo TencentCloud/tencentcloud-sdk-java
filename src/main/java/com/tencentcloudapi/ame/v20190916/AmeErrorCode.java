@@ -1,5 +1,11 @@
 package com.tencentcloudapi.ame.v20190916;
 public enum AmeErrorCode {
+    // CAM签名/鉴权错误。
+     AUTHFAILURE("AuthFailure"),
+     
+    // DryRun 操作，代表请求将会是成功的，只是多传了 DryRun 参数。
+     DRYRUNOPERATION("DryRunOperation"),
+     
     // 操作失败。
      FAILEDOPERATION("FailedOperation"),
      

@@ -30,21 +30,21 @@ public class DescribeUserInformationRequest extends AbstractModel{
     private String CommId;
 
     /**
-    * 查询开始时间，14天内。本地unix时间戳（1588031999s）
+    * 查询开始时间，14天内。本地unix时间戳（1590065777）
     */
     @SerializedName("StartTime")
     @Expose
     private Long StartTime;
 
     /**
-    * 查询结束时间，本地unix时间戳（1588031999s）
+    * 查询结束时间，本地unix时间戳（1590065877）
     */
     @SerializedName("EndTime")
     @Expose
     private Long EndTime;
 
     /**
-    * 用户SDKAppID（1400188366）
+    * 用户SDKAppID（1400353843）
     */
     @SerializedName("SdkAppId")
     @Expose
@@ -88,48 +88,48 @@ public class DescribeUserInformationRequest extends AbstractModel{
     }
 
     /**
-     * Get 查询开始时间，14天内。本地unix时间戳（1588031999s） 
-     * @return StartTime 查询开始时间，14天内。本地unix时间戳（1588031999s）
+     * Get 查询开始时间，14天内。本地unix时间戳（1590065777） 
+     * @return StartTime 查询开始时间，14天内。本地unix时间戳（1590065777）
      */
     public Long getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 查询开始时间，14天内。本地unix时间戳（1588031999s）
-     * @param StartTime 查询开始时间，14天内。本地unix时间戳（1588031999s）
+     * Set 查询开始时间，14天内。本地unix时间戳（1590065777）
+     * @param StartTime 查询开始时间，14天内。本地unix时间戳（1590065777）
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 查询结束时间，本地unix时间戳（1588031999s） 
-     * @return EndTime 查询结束时间，本地unix时间戳（1588031999s）
+     * Get 查询结束时间，本地unix时间戳（1590065877） 
+     * @return EndTime 查询结束时间，本地unix时间戳（1590065877）
      */
     public Long getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 查询结束时间，本地unix时间戳（1588031999s）
-     * @param EndTime 查询结束时间，本地unix时间戳（1588031999s）
+     * Set 查询结束时间，本地unix时间戳（1590065877）
+     * @param EndTime 查询结束时间，本地unix时间戳（1590065877）
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 用户SDKAppID（1400188366） 
-     * @return SdkAppId 用户SDKAppID（1400188366）
+     * Get 用户SDKAppID（1400353843） 
+     * @return SdkAppId 用户SDKAppID（1400353843）
      */
     public String getSdkAppId() {
         return this.SdkAppId;
     }
 
     /**
-     * Set 用户SDKAppID（1400188366）
-     * @param SdkAppId 用户SDKAppID（1400188366）
+     * Set 用户SDKAppID（1400353843）
+     * @param SdkAppId 用户SDKAppID（1400353843）
      */
     public void setSdkAppId(String SdkAppId) {
         this.SdkAppId = SdkAppId;

@@ -214,7 +214,10 @@ public enum ClsErrorCode {
      RESOURCENOTFOUND_SHIPPERTASKNOTEXIST("ResourceNotFound.ShipperTaskNotExist"),
      
     // 日志主题不存在。
-     RESOURCENOTFOUND_TOPICNOTEXIST("ResourceNotFound.TopicNotExist");
+     RESOURCENOTFOUND_TOPICNOTEXIST("ResourceNotFound.TopicNotExist"),
+     
+    // 操作不支持。
+     UNSUPPORTEDOPERATION("UnsupportedOperation");
      
     private String value;
     private ClsErrorCode (String value){

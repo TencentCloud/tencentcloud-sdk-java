@@ -51,7 +51,7 @@ public class ModifyInstanceTokenRequest extends AbstractModel{
     private String Desc;
 
     /**
-    * 1为修改描述 2为启动禁用，不填写默认为修改启动禁用
+    * 1为修改描述 2为操作启动禁用，默认值为2
     */
     @SerializedName("ModifyFlag")
     @Expose
@@ -122,16 +122,16 @@ public class ModifyInstanceTokenRequest extends AbstractModel{
     }
 
     /**
-     * Get 1为修改描述 2为启动禁用，不填写默认为修改启动禁用 
-     * @return ModifyFlag 1为修改描述 2为启动禁用，不填写默认为修改启动禁用
+     * Get 1为修改描述 2为操作启动禁用，默认值为2 
+     * @return ModifyFlag 1为修改描述 2为操作启动禁用，默认值为2
      */
     public Long getModifyFlag() {
         return this.ModifyFlag;
     }
 
     /**
-     * Set 1为修改描述 2为启动禁用，不填写默认为修改启动禁用
-     * @param ModifyFlag 1为修改描述 2为启动禁用，不填写默认为修改启动禁用
+     * Set 1为修改描述 2为操作启动禁用，默认值为2
+     * @param ModifyFlag 1为修改描述 2为操作启动禁用，默认值为2
      */
     public void setModifyFlag(Long ModifyFlag) {
         this.ModifyFlag = ModifyFlag;

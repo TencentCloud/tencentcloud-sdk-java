@@ -95,6 +95,14 @@ public class MusicOpenDetail extends AbstractModel{
     private String LyricUrl;
 
     /**
+    * 波形图url
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("WaveformUrl")
+    @Expose
+    private String WaveformUrl;
+
+    /**
      * Get 音乐Id
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return MusicId 音乐Id
@@ -274,6 +282,26 @@ public class MusicOpenDetail extends AbstractModel{
         this.LyricUrl = LyricUrl;
     }
 
+    /**
+     * Get 波形图url
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return WaveformUrl 波形图url
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getWaveformUrl() {
+        return this.WaveformUrl;
+    }
+
+    /**
+     * Set 波形图url
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param WaveformUrl 波形图url
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setWaveformUrl(String WaveformUrl) {
+        this.WaveformUrl = WaveformUrl;
+    }
+
     public MusicOpenDetail() {
     }
 
@@ -315,6 +343,9 @@ public class MusicOpenDetail extends AbstractModel{
         if (source.LyricUrl != null) {
             this.LyricUrl = new String(source.LyricUrl);
         }
+        if (source.WaveformUrl != null) {
+            this.WaveformUrl = new String(source.WaveformUrl);
+        }
     }
 
 
@@ -331,6 +362,7 @@ public class MusicOpenDetail extends AbstractModel{
         this.setParamSimple(map, prefix + "Duration", this.Duration);
         this.setParamArraySimple(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "LyricUrl", this.LyricUrl);
+        this.setParamSimple(map, prefix + "WaveformUrl", this.WaveformUrl);
 
     }
 }

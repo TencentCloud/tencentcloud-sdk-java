@@ -30,6 +30,9 @@ public enum CdbErrorCode {
     // 创建审计规则失败。
      FAILEDOPERATION_CREATEAUDITFAILERROR("FailedOperation.CreateAuditFailError"),
      
+    // 创建审计日志文件失败。
+     FAILEDOPERATION_CREATEAUDITLOGFILEERROR("FailedOperation.CreateAuditLogFileError"),
+     
     // 申请只读实例独立VIP失败。
      FAILEDOPERATION_CREATEROVIPERROR("FailedOperation.CreateRoVipError"),
      

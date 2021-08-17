@@ -79,6 +79,14 @@ public class DeployServiceBatchDetail extends AbstractModel{
     private DeployServicePodDetail [] NewPods;
 
     /**
+    * =0：手动确认批次；>0：下一批次开始时间戳
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("NextBatchStartTime")
+    @Expose
+    private Long NextBatchStartTime;
+
+    /**
      * Get 旧实例列表
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return OldPodList 旧实例列表
@@ -218,6 +226,26 @@ public class DeployServiceBatchDetail extends AbstractModel{
         this.NewPods = NewPods;
     }
 
+    /**
+     * Get =0：手动确认批次；>0：下一批次开始时间戳
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return NextBatchStartTime =0：手动确认批次；>0：下一批次开始时间戳
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getNextBatchStartTime() {
+        return this.NextBatchStartTime;
+    }
+
+    /**
+     * Set =0：手动确认批次；>0：下一批次开始时间戳
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param NextBatchStartTime =0：手动确认批次；>0：下一批次开始时间戳
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNextBatchStartTime(Long NextBatchStartTime) {
+        this.NextBatchStartTime = NextBatchStartTime;
+    }
+
     public DeployServiceBatchDetail() {
     }
 
@@ -253,6 +281,9 @@ public class DeployServiceBatchDetail extends AbstractModel{
                 this.NewPods[i] = new DeployServicePodDetail(source.NewPods[i]);
             }
         }
+        if (source.NextBatchStartTime != null) {
+            this.NextBatchStartTime = new Long(source.NextBatchStartTime);
+        }
     }
 
 
@@ -267,6 +298,7 @@ public class DeployServiceBatchDetail extends AbstractModel{
         this.setParamSimple(map, prefix + "BatchIndex", this.BatchIndex);
         this.setParamArrayObj(map, prefix + "OldPods.", this.OldPods);
         this.setParamArrayObj(map, prefix + "NewPods.", this.NewPods);
+        this.setParamSimple(map, prefix + "NextBatchStartTime", this.NextBatchStartTime);
 
     }
 }

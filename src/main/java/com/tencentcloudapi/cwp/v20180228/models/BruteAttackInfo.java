@@ -70,7 +70,7 @@ public class BruteAttackInfo extends AbstractModel{
     private String SrcIp;
 
     /**
-    * 失败：FAILED；成功：SUCCESS
+    * SUCCESS：破解成功；FAILED：破解失败
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
@@ -110,7 +110,7 @@ public class BruteAttackInfo extends AbstractModel{
     private String CreateTime;
 
     /**
-    * 阻断状态：0-未阻断；1-已阻断；2-阻断失败；3-内网攻击暂不支持阻断；4-安平暂不支持阻断
+    * 阻断状态：1-阻断成功；非1-阻断失败
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BanStatus")
@@ -172,6 +172,14 @@ public class BruteAttackInfo extends AbstractModel{
     @SerializedName("ModifyTime")
     @Expose
     private String ModifyTime;
+
+    /**
+    * 实例ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
 
     /**
      * Get 唯一Id 
@@ -290,9 +298,9 @@ public class BruteAttackInfo extends AbstractModel{
     }
 
     /**
-     * Get 失败：FAILED；成功：SUCCESS
+     * Get SUCCESS：破解成功；FAILED：破解失败
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Status 失败：FAILED；成功：SUCCESS
+     * @return Status SUCCESS：破解成功；FAILED：破解失败
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatus() {
@@ -300,9 +308,9 @@ public class BruteAttackInfo extends AbstractModel{
     }
 
     /**
-     * Set 失败：FAILED；成功：SUCCESS
+     * Set SUCCESS：破解成功；FAILED：破解失败
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Status 失败：FAILED；成功：SUCCESS
+     * @param Status SUCCESS：破解成功；FAILED：破解失败
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(String Status) {
@@ -390,9 +398,9 @@ public class BruteAttackInfo extends AbstractModel{
     }
 
     /**
-     * Get 阻断状态：0-未阻断；1-已阻断；2-阻断失败；3-内网攻击暂不支持阻断；4-安平暂不支持阻断
+     * Get 阻断状态：1-阻断成功；非1-阻断失败
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BanStatus 阻断状态：0-未阻断；1-已阻断；2-阻断失败；3-内网攻击暂不支持阻断；4-安平暂不支持阻断
+     * @return BanStatus 阻断状态：1-阻断成功；非1-阻断失败
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getBanStatus() {
@@ -400,9 +408,9 @@ public class BruteAttackInfo extends AbstractModel{
     }
 
     /**
-     * Set 阻断状态：0-未阻断；1-已阻断；2-阻断失败；3-内网攻击暂不支持阻断；4-安平暂不支持阻断
+     * Set 阻断状态：1-阻断成功；非1-阻断失败
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BanStatus 阻断状态：0-未阻断；1-已阻断；2-阻断失败；3-内网攻击暂不支持阻断；4-安平暂不支持阻断
+     * @param BanStatus 阻断状态：1-阻断成功；非1-阻断失败
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBanStatus(Long BanStatus) {
@@ -549,6 +557,26 @@ public class BruteAttackInfo extends AbstractModel{
         this.ModifyTime = ModifyTime;
     }
 
+    /**
+     * Get 实例ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InstanceId 实例ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set 实例ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InstanceId 实例ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
+    }
+
     public BruteAttackInfo() {
     }
 
@@ -614,6 +642,9 @@ public class BruteAttackInfo extends AbstractModel{
         if (source.ModifyTime != null) {
             this.ModifyTime = new String(source.ModifyTime);
         }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
     }
 
 
@@ -640,6 +671,7 @@ public class BruteAttackInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Protocol", this.Protocol);
         this.setParamSimple(map, prefix + "Port", this.Port);
         this.setParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
 
     }
 }

@@ -37,7 +37,7 @@ public class CreateTagRetentionExecutionRequest extends AbstractModel{
     private Long RetentionId;
 
     /**
-    * 是否模拟执行
+    * 是否模拟执行，默认值为false，即非模拟执行
     */
     @SerializedName("DryRun")
     @Expose
@@ -76,16 +76,16 @@ public class CreateTagRetentionExecutionRequest extends AbstractModel{
     }
 
     /**
-     * Get 是否模拟执行 
-     * @return DryRun 是否模拟执行
+     * Get 是否模拟执行，默认值为false，即非模拟执行 
+     * @return DryRun 是否模拟执行，默认值为false，即非模拟执行
      */
     public Boolean getDryRun() {
         return this.DryRun;
     }
 
     /**
-     * Set 是否模拟执行
-     * @param DryRun 是否模拟执行
+     * Set 是否模拟执行，默认值为false，即非模拟执行
+     * @param DryRun 是否模拟执行，默认值为false，即非模拟执行
      */
     public void setDryRun(Boolean DryRun) {
         this.DryRun = DryRun;

@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class CreateUserPersonalRequest extends AbstractModel{
 
     /**
-    * 用户密码
+    * 用户密码，密码必须为8到16位
     */
     @SerializedName("Password")
     @Expose
     private String Password;
 
     /**
-     * Get 用户密码 
-     * @return Password 用户密码
+     * Get 用户密码，密码必须为8到16位 
+     * @return Password 用户密码，密码必须为8到16位
      */
     public String getPassword() {
         return this.Password;
     }
 
     /**
-     * Set 用户密码
-     * @param Password 用户密码
+     * Set 用户密码，密码必须为8到16位
+     * @param Password 用户密码，密码必须为8到16位
      */
     public void setPassword(String Password) {
         this.Password = Password;

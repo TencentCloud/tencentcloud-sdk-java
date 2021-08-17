@@ -38,7 +38,7 @@ public class CreateInstanceTokenResponse extends AbstractModel{
     private String Token;
 
     /**
-    * 访问凭证过期时间戳
+    * 访问凭证过期时间戳，是一个时间戳数字，无单位
     */
     @SerializedName("ExpTime")
     @Expose
@@ -96,16 +96,16 @@ public class CreateInstanceTokenResponse extends AbstractModel{
     }
 
     /**
-     * Get 访问凭证过期时间戳 
-     * @return ExpTime 访问凭证过期时间戳
+     * Get 访问凭证过期时间戳，是一个时间戳数字，无单位 
+     * @return ExpTime 访问凭证过期时间戳，是一个时间戳数字，无单位
      */
     public Long getExpTime() {
         return this.ExpTime;
     }
 
     /**
-     * Set 访问凭证过期时间戳
-     * @param ExpTime 访问凭证过期时间戳
+     * Set 访问凭证过期时间戳，是一个时间戳数字，无单位
+     * @param ExpTime 访问凭证过期时间戳，是一个时间戳数字，无单位
      */
     public void setExpTime(Long ExpTime) {
         this.ExpTime = ExpTime;

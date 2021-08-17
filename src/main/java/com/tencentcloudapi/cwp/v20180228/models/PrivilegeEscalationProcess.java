@@ -128,7 +128,7 @@ public class PrivilegeEscalationProcess extends AbstractModel{
     private String ProcTree;
 
     /**
-    * 处理状态
+    * 处理状态：0-待处理 2-白名单
     */
     @SerializedName("Status")
     @Expose
@@ -389,16 +389,16 @@ public class PrivilegeEscalationProcess extends AbstractModel{
     }
 
     /**
-     * Get 处理状态 
-     * @return Status 处理状态
+     * Get 处理状态：0-待处理 2-白名单 
+     * @return Status 处理状态：0-待处理 2-白名单
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 处理状态
-     * @param Status 处理状态
+     * Set 处理状态：0-待处理 2-白名单
+     * @param Status 处理状态：0-待处理 2-白名单
      */
     public void setStatus(Long Status) {
         this.Status = Status;

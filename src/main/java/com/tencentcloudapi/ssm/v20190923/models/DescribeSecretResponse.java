@@ -72,7 +72,7 @@ public class DescribeSecretResponse extends AbstractModel{
     private Long CreateTime;
 
     /**
-    * 0 --  用户自定义凭据类型；1 -- 云产品凭据类型。
+    * 0 --  用户自定义凭据类型；1 -- 数据库凭据类型；2 -- SSH密钥对凭据类型。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SecretType")
@@ -110,6 +110,30 @@ public class DescribeSecretResponse extends AbstractModel{
     @SerializedName("RotationFrequency")
     @Expose
     private Long RotationFrequency;
+
+    /**
+    * 当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对凭据的名称。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ResourceName")
+    @Expose
+    private String ResourceName;
+
+    /**
+    * 当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对所属的项目ID。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ProjectID")
+    @Expose
+    private Long ProjectID;
+
+    /**
+    * 当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对所关联的CVM实例ID。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AssociatedInstanceIDs")
+    @Expose
+    private String [] AssociatedInstanceIDs;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -231,9 +255,9 @@ public class DescribeSecretResponse extends AbstractModel{
     }
 
     /**
-     * Get 0 --  用户自定义凭据类型；1 -- 云产品凭据类型。
+     * Get 0 --  用户自定义凭据类型；1 -- 数据库凭据类型；2 -- SSH密钥对凭据类型。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SecretType 0 --  用户自定义凭据类型；1 -- 云产品凭据类型。
+     * @return SecretType 0 --  用户自定义凭据类型；1 -- 数据库凭据类型；2 -- SSH密钥对凭据类型。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSecretType() {
@@ -241,9 +265,9 @@ public class DescribeSecretResponse extends AbstractModel{
     }
 
     /**
-     * Set 0 --  用户自定义凭据类型；1 -- 云产品凭据类型。
+     * Set 0 --  用户自定义凭据类型；1 -- 数据库凭据类型；2 -- SSH密钥对凭据类型。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SecretType 0 --  用户自定义凭据类型；1 -- 云产品凭据类型。
+     * @param SecretType 0 --  用户自定义凭据类型；1 -- 数据库凭据类型；2 -- SSH密钥对凭据类型。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSecretType(Long SecretType) {
@@ -331,6 +355,66 @@ public class DescribeSecretResponse extends AbstractModel{
     }
 
     /**
+     * Get 当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对凭据的名称。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ResourceName 当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对凭据的名称。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getResourceName() {
+        return this.ResourceName;
+    }
+
+    /**
+     * Set 当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对凭据的名称。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ResourceName 当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对凭据的名称。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setResourceName(String ResourceName) {
+        this.ResourceName = ResourceName;
+    }
+
+    /**
+     * Get 当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对所属的项目ID。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ProjectID 当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对所属的项目ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getProjectID() {
+        return this.ProjectID;
+    }
+
+    /**
+     * Set 当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对所属的项目ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ProjectID 当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对所属的项目ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProjectID(Long ProjectID) {
+        this.ProjectID = ProjectID;
+    }
+
+    /**
+     * Get 当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对所关联的CVM实例ID。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AssociatedInstanceIDs 当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对所关联的CVM实例ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getAssociatedInstanceIDs() {
+        return this.AssociatedInstanceIDs;
+    }
+
+    /**
+     * Set 当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对所关联的CVM实例ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AssociatedInstanceIDs 当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对所关联的CVM实例ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAssociatedInstanceIDs(String [] AssociatedInstanceIDs) {
+        this.AssociatedInstanceIDs = AssociatedInstanceIDs;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -390,6 +474,18 @@ public class DescribeSecretResponse extends AbstractModel{
         if (source.RotationFrequency != null) {
             this.RotationFrequency = new Long(source.RotationFrequency);
         }
+        if (source.ResourceName != null) {
+            this.ResourceName = new String(source.ResourceName);
+        }
+        if (source.ProjectID != null) {
+            this.ProjectID = new Long(source.ProjectID);
+        }
+        if (source.AssociatedInstanceIDs != null) {
+            this.AssociatedInstanceIDs = new String[source.AssociatedInstanceIDs.length];
+            for (int i = 0; i < source.AssociatedInstanceIDs.length; i++) {
+                this.AssociatedInstanceIDs[i] = new String(source.AssociatedInstanceIDs[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -412,6 +508,9 @@ public class DescribeSecretResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "ResourceID", this.ResourceID);
         this.setParamSimple(map, prefix + "RotationStatus", this.RotationStatus);
         this.setParamSimple(map, prefix + "RotationFrequency", this.RotationFrequency);
+        this.setParamSimple(map, prefix + "ResourceName", this.ResourceName);
+        this.setParamSimple(map, prefix + "ProjectID", this.ProjectID);
+        this.setParamArraySimple(map, prefix + "AssociatedInstanceIDs.", this.AssociatedInstanceIDs);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

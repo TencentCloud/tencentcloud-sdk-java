@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ReverseShell extends AbstractModel{
 
     /**
-    * ID
+    * ID 主键
     */
     @SerializedName("Id")
     @Expose
@@ -128,7 +128,7 @@ public class ReverseShell extends AbstractModel{
     private String ParentProcPath;
 
     /**
-    * 处理状态
+    * 处理状态：0-待处理 2-白名单
     */
     @SerializedName("Status")
     @Expose
@@ -156,16 +156,23 @@ public class ReverseShell extends AbstractModel{
     private String ProcTree;
 
     /**
-     * Get ID 
-     * @return Id ID
+    * 检测方法
+    */
+    @SerializedName("DetectBy")
+    @Expose
+    private Long DetectBy;
+
+    /**
+     * Get ID 主键 
+     * @return Id ID 主键
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set ID
-     * @param Id ID
+     * Set ID 主键
+     * @param Id ID 主键
      */
     public void setId(Long Id) {
         this.Id = Id;
@@ -396,16 +403,16 @@ public class ReverseShell extends AbstractModel{
     }
 
     /**
-     * Get 处理状态 
-     * @return Status 处理状态
+     * Get 处理状态：0-待处理 2-白名单 
+     * @return Status 处理状态：0-待处理 2-白名单
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 处理状态
-     * @param Status 处理状态
+     * Set 处理状态：0-待处理 2-白名单
+     * @param Status 处理状态：0-待处理 2-白名单
      */
     public void setStatus(Long Status) {
         this.Status = Status;
@@ -457,6 +464,22 @@ public class ReverseShell extends AbstractModel{
      */
     public void setProcTree(String ProcTree) {
         this.ProcTree = ProcTree;
+    }
+
+    /**
+     * Get 检测方法 
+     * @return DetectBy 检测方法
+     */
+    public Long getDetectBy() {
+        return this.DetectBy;
+    }
+
+    /**
+     * Set 检测方法
+     * @param DetectBy 检测方法
+     */
+    public void setDetectBy(Long DetectBy) {
+        this.DetectBy = DetectBy;
     }
 
     public ReverseShell() {
@@ -524,6 +547,9 @@ public class ReverseShell extends AbstractModel{
         if (source.ProcTree != null) {
             this.ProcTree = new String(source.ProcTree);
         }
+        if (source.DetectBy != null) {
+            this.DetectBy = new Long(source.DetectBy);
+        }
     }
 
 
@@ -550,6 +576,7 @@ public class ReverseShell extends AbstractModel{
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "MachineName", this.MachineName);
         this.setParamSimple(map, prefix + "ProcTree", this.ProcTree);
+        this.setParamSimple(map, prefix + "DetectBy", this.DetectBy);
 
     }
 }

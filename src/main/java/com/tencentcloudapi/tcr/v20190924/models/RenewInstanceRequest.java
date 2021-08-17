@@ -30,7 +30,7 @@ public class RenewInstanceRequest extends AbstractModel{
     private String RegistryId;
 
     /**
-    * 预付费自动续费标识和购买时长
+    * 预付费自动续费标识和购买时长,0：手动续费，1：自动续费，2：不续费并且不通知;单位为月
     */
     @SerializedName("RegistryChargePrepaid")
     @Expose
@@ -60,16 +60,16 @@ public class RenewInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get 预付费自动续费标识和购买时长 
-     * @return RegistryChargePrepaid 预付费自动续费标识和购买时长
+     * Get 预付费自动续费标识和购买时长,0：手动续费，1：自动续费，2：不续费并且不通知;单位为月 
+     * @return RegistryChargePrepaid 预付费自动续费标识和购买时长,0：手动续费，1：自动续费，2：不续费并且不通知;单位为月
      */
     public RegistryChargePrepaid getRegistryChargePrepaid() {
         return this.RegistryChargePrepaid;
     }
 
     /**
-     * Set 预付费自动续费标识和购买时长
-     * @param RegistryChargePrepaid 预付费自动续费标识和购买时长
+     * Set 预付费自动续费标识和购买时长,0：手动续费，1：自动续费，2：不续费并且不通知;单位为月
+     * @param RegistryChargePrepaid 预付费自动续费标识和购买时长,0：手动续费，1：自动续费，2：不续费并且不通知;单位为月
      */
     public void setRegistryChargePrepaid(RegistryChargePrepaid RegistryChargePrepaid) {
         this.RegistryChargePrepaid = RegistryChargePrepaid;

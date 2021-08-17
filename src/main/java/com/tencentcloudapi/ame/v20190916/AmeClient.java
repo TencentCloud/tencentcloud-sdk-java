@@ -159,7 +159,47 @@ public class AmeClient extends AbstractClient{
     }
 
     /**
-     *根据接口的模式及歌曲ID来取得歌词信息。
+     *根据歌单 Id 获取歌单详情，包括歌单的基础信息以及歌曲列表。
+     * @param req DescribeKTVPlaylistDetailRequest
+     * @return DescribeKTVPlaylistDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeKTVPlaylistDetailResponse DescribeKTVPlaylistDetail(DescribeKTVPlaylistDetailRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeKTVPlaylistDetailResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeKTVPlaylistDetailResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeKTVPlaylistDetail");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取即时广播曲库推荐歌单列表。
+     * @param req DescribeKTVPlaylistsRequest
+     * @return DescribeKTVPlaylistsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeKTVPlaylistsResponse DescribeKTVPlaylists(DescribeKTVPlaylistsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeKTVPlaylistsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeKTVPlaylistsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeKTVPlaylists");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *根据接口的模式及歌曲ID来取得歌词信息或者波形图信息。
      * @param req DescribeLyricRequest
      * @return DescribeLyricResponse
      * @throws TencentCloudSDKException

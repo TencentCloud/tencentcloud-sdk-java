@@ -31,8 +31,8 @@ public class UpdateRotationStatusRequest extends AbstractModel{
 
     /**
     * 是否开启轮转。
-True -- 开启轮转；
-False -- 禁止轮转。
+true -- 开启轮转；
+false -- 禁止轮转。
     */
     @SerializedName("EnableRotation")
     @Expose
@@ -47,7 +47,7 @@ False -- 禁止轮转。
 
     /**
     * 用户设置的期望开始轮转时间，格式为：2006-01-02 15:04:05。
-当EnableRotation为True时，如果不填RotationBeginTime，则默认填充为当前时间。
+当EnableRotation为true时，如果不填RotationBeginTime，则默认填充为当前时间。
     */
     @SerializedName("RotationBeginTime")
     @Expose
@@ -71,11 +71,11 @@ False -- 禁止轮转。
 
     /**
      * Get 是否开启轮转。
-True -- 开启轮转；
-False -- 禁止轮转。 
+true -- 开启轮转；
+false -- 禁止轮转。 
      * @return EnableRotation 是否开启轮转。
-True -- 开启轮转；
-False -- 禁止轮转。
+true -- 开启轮转；
+false -- 禁止轮转。
      */
     public Boolean getEnableRotation() {
         return this.EnableRotation;
@@ -83,11 +83,11 @@ False -- 禁止轮转。
 
     /**
      * Set 是否开启轮转。
-True -- 开启轮转；
-False -- 禁止轮转。
+true -- 开启轮转；
+false -- 禁止轮转。
      * @param EnableRotation 是否开启轮转。
-True -- 开启轮转；
-False -- 禁止轮转。
+true -- 开启轮转；
+false -- 禁止轮转。
      */
     public void setEnableRotation(Boolean EnableRotation) {
         this.EnableRotation = EnableRotation;
@@ -111,9 +111,9 @@ False -- 禁止轮转。
 
     /**
      * Get 用户设置的期望开始轮转时间，格式为：2006-01-02 15:04:05。
-当EnableRotation为True时，如果不填RotationBeginTime，则默认填充为当前时间。 
+当EnableRotation为true时，如果不填RotationBeginTime，则默认填充为当前时间。 
      * @return RotationBeginTime 用户设置的期望开始轮转时间，格式为：2006-01-02 15:04:05。
-当EnableRotation为True时，如果不填RotationBeginTime，则默认填充为当前时间。
+当EnableRotation为true时，如果不填RotationBeginTime，则默认填充为当前时间。
      */
     public String getRotationBeginTime() {
         return this.RotationBeginTime;
@@ -121,9 +121,9 @@ False -- 禁止轮转。
 
     /**
      * Set 用户设置的期望开始轮转时间，格式为：2006-01-02 15:04:05。
-当EnableRotation为True时，如果不填RotationBeginTime，则默认填充为当前时间。
+当EnableRotation为true时，如果不填RotationBeginTime，则默认填充为当前时间。
      * @param RotationBeginTime 用户设置的期望开始轮转时间，格式为：2006-01-02 15:04:05。
-当EnableRotation为True时，如果不填RotationBeginTime，则默认填充为当前时间。
+当EnableRotation为true时，如果不填RotationBeginTime，则默认填充为当前时间。
      */
     public void setRotationBeginTime(String RotationBeginTime) {
         this.RotationBeginTime = RotationBeginTime;

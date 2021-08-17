@@ -42,6 +42,9 @@ public enum CkafkaErrorCode {
     // 请求的次数超过了频率限制。
      REQUESTLIMITEXCEEDED("RequestLimitExceeded"),
      
+    // 资源被占用。
+     RESOURCEINUSE("ResourceInUse"),
+     
     // 资源不可用。
      RESOURCEUNAVAILABLE("ResourceUnavailable"),
      

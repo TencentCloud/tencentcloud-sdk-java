@@ -97,6 +97,14 @@ public class AccessPoint extends AbstractModel{
     private String Area;
 
     /**
+    * 接入点类型。VXLAN/QCPL/QCAR
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AccessPointType")
+    @Expose
+    private String AccessPointType;
+
+    /**
      * Get 接入点的名称。 
      * @return AccessPointName 接入点的名称。
      */
@@ -272,6 +280,26 @@ public class AccessPoint extends AbstractModel{
         this.Area = Area;
     }
 
+    /**
+     * Get 接入点类型。VXLAN/QCPL/QCAR
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AccessPointType 接入点类型。VXLAN/QCPL/QCAR
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAccessPointType() {
+        return this.AccessPointType;
+    }
+
+    /**
+     * Set 接入点类型。VXLAN/QCPL/QCAR
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AccessPointType 接入点类型。VXLAN/QCPL/QCAR
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAccessPointType(String AccessPointType) {
+        this.AccessPointType = AccessPointType;
+    }
+
     public AccessPoint() {
     }
 
@@ -316,6 +344,9 @@ public class AccessPoint extends AbstractModel{
         if (source.Area != null) {
             this.Area = new String(source.Area);
         }
+        if (source.AccessPointType != null) {
+            this.AccessPointType = new String(source.AccessPointType);
+        }
     }
 
 
@@ -333,6 +364,7 @@ public class AccessPoint extends AbstractModel{
         this.setParamObj(map, prefix + "Coordinate.", this.Coordinate);
         this.setParamSimple(map, prefix + "City", this.City);
         this.setParamSimple(map, prefix + "Area", this.Area);
+        this.setParamSimple(map, prefix + "AccessPointType", this.AccessPointType);
 
     }
 }

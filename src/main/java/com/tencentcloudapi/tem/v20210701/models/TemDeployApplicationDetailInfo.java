@@ -103,6 +103,38 @@ public class TemDeployApplicationDetailInfo extends AbstractModel{
     private String CurrentBatchStatus;
 
     /**
+    * 新版本version
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("NewDeployVersion")
+    @Expose
+    private String NewDeployVersion;
+
+    /**
+    * 旧版本version
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OldDeployVersion")
+    @Expose
+    private String OldDeployVersion;
+
+    /**
+    * 包名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("NewVersionPackageInfo")
+    @Expose
+    private String NewVersionPackageInfo;
+
+    /**
+    * 下一批次开始时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("NextBatchStartTime")
+    @Expose
+    private Long NextBatchStartTime;
+
+    /**
      * Get 分批发布策略
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return DeployStrategyConf 分批发布策略
@@ -302,6 +334,86 @@ public class TemDeployApplicationDetailInfo extends AbstractModel{
         this.CurrentBatchStatus = CurrentBatchStatus;
     }
 
+    /**
+     * Get 新版本version
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return NewDeployVersion 新版本version
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getNewDeployVersion() {
+        return this.NewDeployVersion;
+    }
+
+    /**
+     * Set 新版本version
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param NewDeployVersion 新版本version
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNewDeployVersion(String NewDeployVersion) {
+        this.NewDeployVersion = NewDeployVersion;
+    }
+
+    /**
+     * Get 旧版本version
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OldDeployVersion 旧版本version
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getOldDeployVersion() {
+        return this.OldDeployVersion;
+    }
+
+    /**
+     * Set 旧版本version
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OldDeployVersion 旧版本version
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOldDeployVersion(String OldDeployVersion) {
+        this.OldDeployVersion = OldDeployVersion;
+    }
+
+    /**
+     * Get 包名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return NewVersionPackageInfo 包名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getNewVersionPackageInfo() {
+        return this.NewVersionPackageInfo;
+    }
+
+    /**
+     * Set 包名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param NewVersionPackageInfo 包名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNewVersionPackageInfo(String NewVersionPackageInfo) {
+        this.NewVersionPackageInfo = NewVersionPackageInfo;
+    }
+
+    /**
+     * Get 下一批次开始时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return NextBatchStartTime 下一批次开始时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getNextBatchStartTime() {
+        return this.NextBatchStartTime;
+    }
+
+    /**
+     * Set 下一批次开始时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param NextBatchStartTime 下一批次开始时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNextBatchStartTime(Long NextBatchStartTime) {
+        this.NextBatchStartTime = NextBatchStartTime;
+    }
+
     public TemDeployApplicationDetailInfo() {
     }
 
@@ -343,6 +455,18 @@ public class TemDeployApplicationDetailInfo extends AbstractModel{
         if (source.CurrentBatchStatus != null) {
             this.CurrentBatchStatus = new String(source.CurrentBatchStatus);
         }
+        if (source.NewDeployVersion != null) {
+            this.NewDeployVersion = new String(source.NewDeployVersion);
+        }
+        if (source.OldDeployVersion != null) {
+            this.OldDeployVersion = new String(source.OldDeployVersion);
+        }
+        if (source.NewVersionPackageInfo != null) {
+            this.NewVersionPackageInfo = new String(source.NewVersionPackageInfo);
+        }
+        if (source.NextBatchStartTime != null) {
+            this.NextBatchStartTime = new Long(source.NextBatchStartTime);
+        }
     }
 
 
@@ -360,6 +484,10 @@ public class TemDeployApplicationDetailInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "CurrentBatchIndex", this.CurrentBatchIndex);
         this.setParamSimple(map, prefix + "ErrorMessage", this.ErrorMessage);
         this.setParamSimple(map, prefix + "CurrentBatchStatus", this.CurrentBatchStatus);
+        this.setParamSimple(map, prefix + "NewDeployVersion", this.NewDeployVersion);
+        this.setParamSimple(map, prefix + "OldDeployVersion", this.OldDeployVersion);
+        this.setParamSimple(map, prefix + "NewVersionPackageInfo", this.NewVersionPackageInfo);
+        this.setParamSimple(map, prefix + "NextBatchStartTime", this.NextBatchStartTime);
 
     }
 }

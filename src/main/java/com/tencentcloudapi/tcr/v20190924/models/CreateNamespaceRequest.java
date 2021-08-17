@@ -30,7 +30,7 @@ public class CreateNamespaceRequest extends AbstractModel{
     private String RegistryId;
 
     /**
-    * 命名空间的名称
+    * 命名空间的名称（长度2-30个字符，只能包含小写字母、数字及分隔符("."、"_"、"-")，且不能以分隔符开头、结尾或连续）
     */
     @SerializedName("NamespaceName")
     @Expose
@@ -60,16 +60,16 @@ public class CreateNamespaceRequest extends AbstractModel{
     }
 
     /**
-     * Get 命名空间的名称 
-     * @return NamespaceName 命名空间的名称
+     * Get 命名空间的名称（长度2-30个字符，只能包含小写字母、数字及分隔符("."、"_"、"-")，且不能以分隔符开头、结尾或连续） 
+     * @return NamespaceName 命名空间的名称（长度2-30个字符，只能包含小写字母、数字及分隔符("."、"_"、"-")，且不能以分隔符开头、结尾或连续）
      */
     public String getNamespaceName() {
         return this.NamespaceName;
     }
 
     /**
-     * Set 命名空间的名称
-     * @param NamespaceName 命名空间的名称
+     * Set 命名空间的名称（长度2-30个字符，只能包含小写字母、数字及分隔符("."、"_"、"-")，且不能以分隔符开头、结尾或连续）
+     * @param NamespaceName 命名空间的名称（长度2-30个字符，只能包含小写字母、数字及分隔符("."、"_"、"-")，且不能以分隔符开头、结尾或连续）
      */
     public void setNamespaceName(String NamespaceName) {
         this.NamespaceName = NamespaceName;

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ValidateRepositoryExistPersonalResponse extends AbstractModel{
 
     /**
-    * 仓库是否存在
+    * 验证个人版仓库是否存在返回信息
     */
     @SerializedName("Data")
     @Expose
@@ -37,16 +37,16 @@ public class ValidateRepositoryExistPersonalResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 仓库是否存在 
-     * @return Data 仓库是否存在
+     * Get 验证个人版仓库是否存在返回信息 
+     * @return Data 验证个人版仓库是否存在返回信息
      */
     public RepoIsExistResp getData() {
         return this.Data;
     }
 
     /**
-     * Set 仓库是否存在
-     * @param Data 仓库是否存在
+     * Set 验证个人版仓库是否存在返回信息
+     * @param Data 验证个人版仓库是否存在返回信息
      */
     public void setData(RepoIsExistResp Data) {
         this.Data = Data;

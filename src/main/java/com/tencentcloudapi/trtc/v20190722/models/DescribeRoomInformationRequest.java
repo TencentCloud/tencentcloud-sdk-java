@@ -30,14 +30,14 @@ public class DescribeRoomInformationRequest extends AbstractModel{
     private String SdkAppId;
 
     /**
-    * 查询开始时间，14天内。本地unix时间戳（1588031999s）
+    * 查询开始时间，14天内。本地unix时间戳（1588031999）
     */
     @SerializedName("StartTime")
     @Expose
     private Long StartTime;
 
     /**
-    * 查询结束时间，本地unix时间戳（1588031999s）
+    * 查询结束时间，本地unix时间戳（1588034999）
     */
     @SerializedName("EndTime")
     @Expose
@@ -81,32 +81,32 @@ public class DescribeRoomInformationRequest extends AbstractModel{
     }
 
     /**
-     * Get 查询开始时间，14天内。本地unix时间戳（1588031999s） 
-     * @return StartTime 查询开始时间，14天内。本地unix时间戳（1588031999s）
+     * Get 查询开始时间，14天内。本地unix时间戳（1588031999） 
+     * @return StartTime 查询开始时间，14天内。本地unix时间戳（1588031999）
      */
     public Long getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 查询开始时间，14天内。本地unix时间戳（1588031999s）
-     * @param StartTime 查询开始时间，14天内。本地unix时间戳（1588031999s）
+     * Set 查询开始时间，14天内。本地unix时间戳（1588031999）
+     * @param StartTime 查询开始时间，14天内。本地unix时间戳（1588031999）
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 查询结束时间，本地unix时间戳（1588031999s） 
-     * @return EndTime 查询结束时间，本地unix时间戳（1588031999s）
+     * Get 查询结束时间，本地unix时间戳（1588034999） 
+     * @return EndTime 查询结束时间，本地unix时间戳（1588034999）
      */
     public Long getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 查询结束时间，本地unix时间戳（1588031999s）
-     * @param EndTime 查询结束时间，本地unix时间戳（1588031999s）
+     * Set 查询结束时间，本地unix时间戳（1588034999）
+     * @param EndTime 查询结束时间，本地unix时间戳（1588034999）
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;

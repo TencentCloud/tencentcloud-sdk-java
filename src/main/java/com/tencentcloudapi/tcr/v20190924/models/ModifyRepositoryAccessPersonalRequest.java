@@ -30,7 +30,7 @@ public class ModifyRepositoryAccessPersonalRequest extends AbstractModel{
     private String RepoName;
 
     /**
-    * 默认值为0
+    * 默认值为0, 1公共，0私有
     */
     @SerializedName("Public")
     @Expose
@@ -53,16 +53,16 @@ public class ModifyRepositoryAccessPersonalRequest extends AbstractModel{
     }
 
     /**
-     * Get 默认值为0 
-     * @return Public 默认值为0
+     * Get 默认值为0, 1公共，0私有 
+     * @return Public 默认值为0, 1公共，0私有
      */
     public Long getPublic() {
         return this.Public;
     }
 
     /**
-     * Set 默认值为0
-     * @param Public 默认值为0
+     * Set 默认值为0, 1公共，0私有
+     * @param Public 默认值为0, 1公共，0私有
      */
     public void setPublic(Long Public) {
         this.Public = Public;

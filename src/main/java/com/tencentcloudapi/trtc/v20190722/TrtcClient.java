@@ -160,7 +160,7 @@ public class TrtcClient extends AbstractClient{
     }
 
     /**
-     *可查询sdkqppid 每天的房间数和用户数，每分钟1次，可查询最近14天的数据。当天未结束，无法查到当天的房间数与用户数。
+     *可查询sdkqppid 每天的房间数和用户数，每分钟1次，可查询最近14天的数据。当天未结束，无法查到当天的房间数与用户数。 
      * @param req DescribeHistoryScaleRequest
      * @return DescribeHistoryScaleResponse
      * @throws TencentCloudSDKException

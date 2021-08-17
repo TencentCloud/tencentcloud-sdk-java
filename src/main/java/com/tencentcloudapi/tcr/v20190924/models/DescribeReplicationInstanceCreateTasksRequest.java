@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class DescribeReplicationInstanceCreateTasksRequest extends AbstractModel{
 
     /**
-    * 同步实例Id
+    * 同步实例Id，见实例返回列表中的同步实例ID
     */
     @SerializedName("ReplicationRegistryId")
     @Expose
     private String ReplicationRegistryId;
 
     /**
-    * 同步实例的地域ID
+    * 同步实例的地域ID，见实例返回列表中地域ID
     */
     @SerializedName("ReplicationRegionId")
     @Expose
     private Long ReplicationRegionId;
 
     /**
-     * Get 同步实例Id 
-     * @return ReplicationRegistryId 同步实例Id
+     * Get 同步实例Id，见实例返回列表中的同步实例ID 
+     * @return ReplicationRegistryId 同步实例Id，见实例返回列表中的同步实例ID
      */
     public String getReplicationRegistryId() {
         return this.ReplicationRegistryId;
     }
 
     /**
-     * Set 同步实例Id
-     * @param ReplicationRegistryId 同步实例Id
+     * Set 同步实例Id，见实例返回列表中的同步实例ID
+     * @param ReplicationRegistryId 同步实例Id，见实例返回列表中的同步实例ID
      */
     public void setReplicationRegistryId(String ReplicationRegistryId) {
         this.ReplicationRegistryId = ReplicationRegistryId;
     }
 
     /**
-     * Get 同步实例的地域ID 
-     * @return ReplicationRegionId 同步实例的地域ID
+     * Get 同步实例的地域ID，见实例返回列表中地域ID 
+     * @return ReplicationRegionId 同步实例的地域ID，见实例返回列表中地域ID
      */
     public Long getReplicationRegionId() {
         return this.ReplicationRegionId;
     }
 
     /**
-     * Set 同步实例的地域ID
-     * @param ReplicationRegionId 同步实例的地域ID
+     * Set 同步实例的地域ID，见实例返回列表中地域ID
+     * @param ReplicationRegionId 同步实例的地域ID，见实例返回列表中地域ID
      */
     public void setReplicationRegionId(Long ReplicationRegionId) {
         this.ReplicationRegionId = ReplicationRegionId;

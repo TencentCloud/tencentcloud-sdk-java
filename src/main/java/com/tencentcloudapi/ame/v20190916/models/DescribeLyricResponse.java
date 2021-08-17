@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeLyricResponse extends AbstractModel{
 
     /**
-    * 歌词详情
+    * 歌词或者波形图详情
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Lyric")
@@ -38,9 +38,9 @@ public class DescribeLyricResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 歌词详情
+     * Get 歌词或者波形图详情
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Lyric 歌词详情
+     * @return Lyric 歌词或者波形图详情
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Lyric getLyric() {
@@ -48,9 +48,9 @@ public class DescribeLyricResponse extends AbstractModel{
     }
 
     /**
-     * Set 歌词详情
+     * Set 歌词或者波形图详情
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Lyric 歌词详情
+     * @param Lyric 歌词或者波形图详情
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLyric(Lyric Lyric) {

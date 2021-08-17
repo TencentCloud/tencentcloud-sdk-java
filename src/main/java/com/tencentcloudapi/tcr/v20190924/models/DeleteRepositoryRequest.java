@@ -37,7 +37,7 @@ public class DeleteRepositoryRequest extends AbstractModel{
     private String NamespaceName;
 
     /**
-    * 仓库名称的名称
+    * 镜像仓库的名称
     */
     @SerializedName("RepositoryName")
     @Expose
@@ -76,16 +76,16 @@ public class DeleteRepositoryRequest extends AbstractModel{
     }
 
     /**
-     * Get 仓库名称的名称 
-     * @return RepositoryName 仓库名称的名称
+     * Get 镜像仓库的名称 
+     * @return RepositoryName 镜像仓库的名称
      */
     public String getRepositoryName() {
         return this.RepositoryName;
     }
 
     /**
-     * Set 仓库名称的名称
-     * @param RepositoryName 仓库名称的名称
+     * Set 镜像仓库的名称
+     * @param RepositoryName 镜像仓库的名称
      */
     public void setRepositoryName(String RepositoryName) {
         this.RepositoryName = RepositoryName;

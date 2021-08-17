@@ -285,6 +285,22 @@ public class DataEvent extends AbstractModel{
     private String SsaEventId;
 
     /**
+    * 是否新接入的云防事件
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsNewCfwEvent")
+    @Expose
+    private Boolean IsNewCfwEvent;
+
+    /**
+    * 出入站方向
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Direction")
+    @Expose
+    private String Direction;
+
+    /**
      * Get Md5值
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return OldIdMd5 Md5值
@@ -936,6 +952,46 @@ public class DataEvent extends AbstractModel{
         this.SsaEventId = SsaEventId;
     }
 
+    /**
+     * Get 是否新接入的云防事件
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsNewCfwEvent 是否新接入的云防事件
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getIsNewCfwEvent() {
+        return this.IsNewCfwEvent;
+    }
+
+    /**
+     * Set 是否新接入的云防事件
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsNewCfwEvent 是否新接入的云防事件
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsNewCfwEvent(Boolean IsNewCfwEvent) {
+        this.IsNewCfwEvent = IsNewCfwEvent;
+    }
+
+    /**
+     * Get 出入站方向
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Direction 出入站方向
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDirection() {
+        return this.Direction;
+    }
+
+    /**
+     * Set 出入站方向
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Direction 出入站方向
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDirection(String Direction) {
+        this.Direction = Direction;
+    }
+
     public DataEvent() {
     }
 
@@ -1052,6 +1108,12 @@ public class DataEvent extends AbstractModel{
         if (source.SsaEventId != null) {
             this.SsaEventId = new String(source.SsaEventId);
         }
+        if (source.IsNewCfwEvent != null) {
+            this.IsNewCfwEvent = new Boolean(source.IsNewCfwEvent);
+        }
+        if (source.Direction != null) {
+            this.Direction = new String(source.Direction);
+        }
     }
 
 
@@ -1092,6 +1154,8 @@ public class DataEvent extends AbstractModel{
         this.setParamSimple(map, prefix + "SoarPlaybookType", this.SoarPlaybookType);
         this.setParamSimple(map, prefix + "SoarRunId", this.SoarRunId);
         this.setParamSimple(map, prefix + "SsaEventId", this.SsaEventId);
+        this.setParamSimple(map, prefix + "IsNewCfwEvent", this.IsNewCfwEvent);
+        this.setParamSimple(map, prefix + "Direction", this.Direction);
 
     }
 }

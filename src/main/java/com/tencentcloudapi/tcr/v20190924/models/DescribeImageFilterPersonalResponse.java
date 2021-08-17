@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeImageFilterPersonalResponse extends AbstractModel{
 
     /**
-    * payload
+    * 返回tag镜像内容相同的tag列表
     */
     @SerializedName("Data")
     @Expose
@@ -37,16 +37,16 @@ public class DescribeImageFilterPersonalResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get payload 
-     * @return Data payload
+     * Get 返回tag镜像内容相同的tag列表 
+     * @return Data 返回tag镜像内容相同的tag列表
      */
     public SameImagesResp getData() {
         return this.Data;
     }
 
     /**
-     * Set payload
-     * @param Data payload
+     * Set 返回tag镜像内容相同的tag列表
+     * @param Data 返回tag镜像内容相同的tag列表
      */
     public void setData(SameImagesResp Data) {
         this.Data = Data;

@@ -30,7 +30,7 @@ public class ModifyApplicationTriggerPersonalRequest extends AbstractModel{
     private String RepoName;
 
     /**
-    * 触发器名称
+    * 触发器名称，必填参数
     */
     @SerializedName("TriggerName")
     @Expose
@@ -116,16 +116,16 @@ public class ModifyApplicationTriggerPersonalRequest extends AbstractModel{
     }
 
     /**
-     * Get 触发器名称 
-     * @return TriggerName 触发器名称
+     * Get 触发器名称，必填参数 
+     * @return TriggerName 触发器名称，必填参数
      */
     public String getTriggerName() {
         return this.TriggerName;
     }
 
     /**
-     * Set 触发器名称
-     * @param TriggerName 触发器名称
+     * Set 触发器名称，必填参数
+     * @param TriggerName 触发器名称，必填参数
      */
     public void setTriggerName(String TriggerName) {
         this.TriggerName = TriggerName;

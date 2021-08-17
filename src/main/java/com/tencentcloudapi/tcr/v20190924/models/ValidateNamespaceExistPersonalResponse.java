@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ValidateNamespaceExistPersonalResponse extends AbstractModel{
 
     /**
-    * 命名空间是否存在
+    * 验证命名空间是否存在返回信息
     */
     @SerializedName("Data")
     @Expose
@@ -37,16 +37,16 @@ public class ValidateNamespaceExistPersonalResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 命名空间是否存在 
-     * @return Data 命名空间是否存在
+     * Get 验证命名空间是否存在返回信息 
+     * @return Data 验证命名空间是否存在返回信息
      */
     public NamespaceIsExistsResp getData() {
         return this.Data;
     }
 
     /**
-     * Set 命名空间是否存在
-     * @param Data 命名空间是否存在
+     * Set 验证命名空间是否存在返回信息
+     * @param Data 验证命名空间是否存在返回信息
      */
     public void setData(NamespaceIsExistsResp Data) {
         this.Data = Data;

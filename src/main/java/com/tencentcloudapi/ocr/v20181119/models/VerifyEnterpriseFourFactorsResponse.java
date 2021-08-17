@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class VerifyEnterpriseFourFactorsResponse extends AbstractModel{
 
     /**
-    * 核验一致性（1:一致，2:不一致）
+    * 核验一致性（1:一致，2:不一致，3:查询无记录）
     */
     @SerializedName("State")
     @Expose
@@ -45,16 +45,16 @@ public class VerifyEnterpriseFourFactorsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 核验一致性（1:一致，2:不一致） 
-     * @return State 核验一致性（1:一致，2:不一致）
+     * Get 核验一致性（1:一致，2:不一致，3:查询无记录） 
+     * @return State 核验一致性（1:一致，2:不一致，3:查询无记录）
      */
     public Long getState() {
         return this.State;
     }
 
     /**
-     * Set 核验一致性（1:一致，2:不一致）
-     * @param State 核验一致性（1:一致，2:不一致）
+     * Set 核验一致性（1:一致，2:不一致，3:查询无记录）
+     * @param State 核验一致性（1:一致，2:不一致，3:查询无记录）
      */
     public void setState(Long State) {
         this.State = State;
