@@ -131,12 +131,66 @@ public abstract class AbstractClient {
    * @throws TencentCloudSDKException
    */
   public String call(String action, String jsonPayload) throws TencentCloudSDKException {
+    HashMap<String, String> headers = this.getHeaders();
+    headers.put("X-TC-Action", action);
+    headers.put("Content-Type", "application/json; charset=utf-8");
+    byte[] requestPayload = jsonPayload.getBytes(StandardCharsets.UTF_8);
+    String authorization = this.getAuthorization(headers, requestPayload);
+    headers.put("Authorization", authorization);
+    String url = this.profile.getHttpProfile().getProtocol() + this.getEndpoint() + this.path;
+    return this.getResponseBody(url, headers, requestPayload);
+  }
+
+  /**
+   * Use post application/octet-stream with tc3-hmac-sha256 signature to call specific action.
+   * Ignore request method and signature method defined in profile.
+   *
+   * @param action Name of action to be called.
+   * @param jsonPayload Parameters of action serialized in json string format.
+   * @return Raw response from API if request succeeded, otherwise an exception will be raised
+   *     instead of raw response
+   * @throws TencentCloudSDKException
+   */
+  public String callOctetStream(String action, HashMap<String, String> headers, byte[] body)
+      throws TencentCloudSDKException {
+    headers.putAll(this.getHeaders());
+    headers.put("X-TC-Action", action);
+    headers.put("Content-Type", "application/octet-stream; charset=utf-8");
+    String authorization = this.getAuthorization(headers, body);
+    headers.put("Authorization", authorization);
+    String url = this.profile.getHttpProfile().getProtocol() + this.getEndpoint() + this.path;
+    return this.getResponseBody(url, headers, body);
+  }
+
+  private HashMap<String, String> getHeaders() {
+    HashMap<String, String> headers = new HashMap<String, String>();
+    String timestamp = String.valueOf(System.currentTimeMillis() / 1000);
+    headers.put("X-TC-Timestamp", timestamp);
+    headers.put("X-TC-Version", this.apiVersion);
+    headers.put("X-TC-Region", this.getRegion());
+    headers.put("X-TC-RequestClient", SDK_VERSION);
+    headers.put("Host", this.getEndpoint());
+    String token = this.credential.getToken();
+    if (token != null && !token.isEmpty()) {
+      headers.put("X-TC-Token", token);
+    }
+    if (this.profile.isUnsignedPayload()) {
+      headers.put("X-TC-Content-SHA256", "UNSIGNED-PAYLOAD");
+    }
+    if (null != this.profile.getLanguage()) {
+      headers.put("X-TC-Language", this.profile.getLanguage().getValue());
+    }
+    return headers;
+  }
+
+  private String getAuthorization(HashMap<String, String> headers, byte[] body)
+      throws TencentCloudSDKException {
     String endpoint = this.getEndpoint();
     // always use post tc3-hmac-sha256 signature process
     // okhttp always set charset even we don't specify it,
     // to ensure signature be correct, we have to set it here as well.
-    String contentType = "application/json; charset=utf-8";
-    byte[] requestPayload = jsonPayload.getBytes(StandardCharsets.UTF_8);
+    String contentType = headers.get("Content-Type");
+    byte[] requestPayload = body;
     String canonicalUri = "/";
     String canonicalQueryString = "";
     String canonicalHeaders = "content-type:" + contentType + "\nhost:" + endpoint + "\n";
@@ -161,7 +215,7 @@ public abstract class AbstractClient {
             + "\n"
             + hashedRequestPayload;
 
-    String timestamp = String.valueOf(System.currentTimeMillis() / 1000);
+    String timestamp = headers.get("X-TC-Timestamp");
     SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
     sdf.setTimeZone(TimeZone.getTimeZone("UTC"));
     String date = sdf.format(new Date(Long.valueOf(timestamp + "000")));
@@ -179,19 +233,21 @@ public abstract class AbstractClient {
     byte[] secretSigning = Sign.hmac256(secretService, "tc3_request");
     String signature =
         DatatypeConverter.printHexBinary(Sign.hmac256(secretSigning, stringToSign)).toLowerCase();
-    String authorization =
-        "TC3-HMAC-SHA256 "
-            + "Credential="
-            + secretId
-            + "/"
-            + credentialScope
-            + ", "
-            + "SignedHeaders="
-            + signedHeaders
-            + ", "
-            + "Signature="
-            + signature;
+    return "TC3-HMAC-SHA256 "
+        + "Credential="
+        + secretId
+        + "/"
+        + credentialScope
+        + ", "
+        + "SignedHeaders="
+        + signedHeaders
+        + ", "
+        + "Signature="
+        + signature;
+  }
 
+  private String getResponseBody(String url, HashMap<String, String> headers, byte[] body)
+      throws TencentCloudSDKException {
     HttpConnection conn =
         new HttpConnection(
             this.profile.getHttpProfile().getConnTimeout(),
@@ -199,29 +255,11 @@ public abstract class AbstractClient {
             this.profile.getHttpProfile().getWriteTimeout());
     conn.addInterceptors(log);
     this.trySetProxy(conn);
-    String url = this.profile.getHttpProfile().getProtocol() + endpoint + this.path;
     Builder hb = new Headers.Builder();
-    hb.add("Content-Type", contentType)
-        .add("Host", endpoint)
-        .add("Authorization", authorization)
-        .add("X-TC-Action", action)
-        .add("X-TC-Timestamp", timestamp)
-        .add("X-TC-Version", this.apiVersion)
-        .add("X-TC-Region", this.getRegion())
-        .add("X-TC-RequestClient", SDK_VERSION);
-    String token = this.credential.getToken();
-    if (token != null && !token.isEmpty()) {
-      hb.add("X-TC-Token", token);
+    for (String key : headers.keySet()) {
+      hb.add(key, headers.get(key));
     }
-    if (this.profile.isUnsignedPayload()) {
-      hb.add("X-TC-Content-SHA256", "UNSIGNED-PAYLOAD");
-    }
-    if (null != this.profile.getLanguage()) {
-      hb.add("X-TC-Language", this.profile.getLanguage().getValue());
-    }
-
-    Headers headers = hb.build();
-    Response resp = conn.postRequest(url, requestPayload, headers);
+    Response resp = conn.postRequest(url, body, hb.build());
     if (resp.code() != AbstractClient.HTTP_RSP_OK) {
       String msg = "response code is " + resp.code() + ", not 200";
       log.info(msg);
@@ -231,7 +269,8 @@ public abstract class AbstractClient {
     try {
       respbody = resp.body().string();
     } catch (IOException e) {
-      String msg = "Cannot transfer response body to string, because Content-Length is too large, or Content-Length and stream length disagree.";
+      String msg =
+          "Cannot transfer response body to string, because Content-Length is too large, or Content-Length and stream length disagree.";
       log.info(msg);
       throw new TencentCloudSDKException(msg, "", e.getClass().getName());
     }
@@ -246,9 +285,7 @@ public abstract class AbstractClient {
     }
     if (errResp.response.error != null) {
       throw new TencentCloudSDKException(
-          errResp.response.error.message,
-          errResp.response.requestId,
-          errResp.response.error.code);
+          errResp.response.error.message, errResp.response.requestId, errResp.response.error.code);
     }
     return respbody;
   }
