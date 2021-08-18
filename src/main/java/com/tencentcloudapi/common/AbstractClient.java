@@ -665,13 +665,13 @@ public abstract class AbstractClient {
 
   private String getEndpoint() {
     // in case user has reset endpoint after init this client
-	endpoint = this.profile.getHttpProfile().getEndpoint();
-    if (null == endpoint) {
+    if (null != this.profile.getHttpProfile().getEndpoint()) {
+      return this.profile.getHttpProfile().getEndpoint();
+    } else {
       // protected abstract String getService();
       // use this.getService() from overrided subclass will be better
-      endpoint = this.service + "." + this.profile.getHttpProfile().getRootDomain();
+      return this.service + "." + this.profile.getHttpProfile().getRootDomain();
     }
-    return endpoint;
   }
 
   /**
