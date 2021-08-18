@@ -251,8 +251,10 @@ catch (TencentCloudSDKException e) {
 
 ```
 HttpProfile httpProfile = new HttpProfile();
-httpProfile.setProxyHost("真实代理ip");
-httpProfile.setProxyPort(真实代理端口);
+httpProfile.setProxyHost("代理ip或者域名");
+httpProfile.setProxyPort(代理端口);
+httpProfile.setProxyUsername("代理用户名");
+httpProfile.setProxyPassword("代理密码");
 ```
 
 ## 语言
