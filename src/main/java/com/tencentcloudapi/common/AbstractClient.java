@@ -146,7 +146,8 @@ public abstract class AbstractClient {
    * Ignore request method and signature method defined in profile.
    *
    * @param action Name of action to be called.
-   * @param jsonPayload Parameters of action serialized in json string format.
+   * @param headers Parameters of the action, will be put in http header.
+   * @param body octet-stream binary body.
    * @return Raw response from API if request succeeded, otherwise an exception will be raised
    *     instead of raw response
    * @throws TencentCloudSDKException
@@ -679,7 +680,6 @@ public abstract class AbstractClient {
    *
    * @param req
    * @param retryTimes
-   * @return
    * @throws TencentCloudSDKException
    */
   public Object retry(AbstractModel req, int retryTimes) throws TencentCloudSDKException {
