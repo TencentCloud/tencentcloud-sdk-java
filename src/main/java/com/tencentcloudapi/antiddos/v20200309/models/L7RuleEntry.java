@@ -165,6 +165,13 @@ public class L7RuleEntry extends AbstractModel{
     private String SSLId;
 
     /**
+    * 同ruleId
+    */
+    @SerializedName("Id")
+    @Expose
+    private String Id;
+
+    /**
      * Get 会话保持时间，单位秒 
      * @return KeepTime 会话保持时间，单位秒
      */
@@ -492,6 +499,22 @@ public class L7RuleEntry extends AbstractModel{
         this.SSLId = SSLId;
     }
 
+    /**
+     * Get 同ruleId 
+     * @return Id 同ruleId
+     */
+    public String getId() {
+        return this.Id;
+    }
+
+    /**
+     * Set 同ruleId
+     * @param Id 同ruleId
+     */
+    public void setId(String Id) {
+        this.Id = Id;
+    }
+
     public L7RuleEntry() {
     }
 
@@ -563,6 +586,9 @@ public class L7RuleEntry extends AbstractModel{
         if (source.SSLId != null) {
             this.SSLId = new String(source.SSLId);
         }
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
     }
 
 
@@ -590,6 +616,7 @@ public class L7RuleEntry extends AbstractModel{
         this.setParamSimple(map, prefix + "CCStatus", this.CCStatus);
         this.setParamSimple(map, prefix + "VirtualPort", this.VirtualPort);
         this.setParamSimple(map, prefix + "SSLId", this.SSLId);
+        this.setParamSimple(map, prefix + "Id", this.Id);
 
     }
 }

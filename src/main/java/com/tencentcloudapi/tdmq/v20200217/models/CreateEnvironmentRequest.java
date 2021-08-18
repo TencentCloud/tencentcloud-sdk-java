@@ -51,6 +51,13 @@ public class CreateEnvironmentRequest extends AbstractModel{
     private String ClusterId;
 
     /**
+    * 消息保留策略
+    */
+    @SerializedName("RetentionPolicy")
+    @Expose
+    private RetentionPolicy RetentionPolicy;
+
+    /**
      * Get 环境（命名空间）名称，不支持中字以及除了短线和下划线外的特殊字符且不超过16个字符。 
      * @return EnvironmentId 环境（命名空间）名称，不支持中字以及除了短线和下划线外的特殊字符且不超过16个字符。
      */
@@ -114,6 +121,22 @@ public class CreateEnvironmentRequest extends AbstractModel{
         this.ClusterId = ClusterId;
     }
 
+    /**
+     * Get 消息保留策略 
+     * @return RetentionPolicy 消息保留策略
+     */
+    public RetentionPolicy getRetentionPolicy() {
+        return this.RetentionPolicy;
+    }
+
+    /**
+     * Set 消息保留策略
+     * @param RetentionPolicy 消息保留策略
+     */
+    public void setRetentionPolicy(RetentionPolicy RetentionPolicy) {
+        this.RetentionPolicy = RetentionPolicy;
+    }
+
     public CreateEnvironmentRequest() {
     }
 
@@ -134,6 +157,9 @@ public class CreateEnvironmentRequest extends AbstractModel{
         if (source.ClusterId != null) {
             this.ClusterId = new String(source.ClusterId);
         }
+        if (source.RetentionPolicy != null) {
+            this.RetentionPolicy = new RetentionPolicy(source.RetentionPolicy);
+        }
     }
 
 
@@ -145,6 +171,7 @@ public class CreateEnvironmentRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "MsgTTL", this.MsgTTL);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
+        this.setParamObj(map, prefix + "RetentionPolicy.", this.RetentionPolicy);
 
     }
 }

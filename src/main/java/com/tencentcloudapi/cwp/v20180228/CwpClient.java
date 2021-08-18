@@ -1881,6 +1881,26 @@ public class CwpClient extends AbstractClient{
     }
 
     /**
+     *修改告警设置
+     * @param req ModifyWarningSettingRequest
+     * @return ModifyWarningSettingResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyWarningSettingResponse ModifyWarningSetting(ModifyWarningSettingRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyWarningSettingResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyWarningSettingResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyWarningSetting");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *网站防篡改-修改网站防护设置
      * @param req ModifyWebPageProtectSettingRequest
      * @return ModifyWebPageProtectSettingResponse

@@ -21,7 +21,7 @@ public enum StsErrorCode {
     // pb打包失败。
      INTERNALERROR_PBSERIALIZEERROR("InternalError.PbSerializeError"),
      
-    // 内部错误。
+    // 系统内部错误，如网络错误。
      INTERNALERROR_SYSTEMERROR("InternalError.SystemError"),
      
     // 未知错误。
@@ -48,7 +48,7 @@ public enum StsErrorCode {
     // 策略过长。
      INVALIDPARAMETER_POLICYTOOLONG("InvalidParameter.PolicyTooLong"),
      
-    // 资源错误。
+    // 策略资源六段式错误。
      INVALIDPARAMETER_RESOUCEERROR("InvalidParameter.ResouceError"),
      
     // 策略语法错误。
@@ -57,7 +57,7 @@ public enum StsErrorCode {
     // 非法策略。
      INVALIDPARAMETER_STRATEGYINVALID("InvalidParameter.StrategyInvalid"),
      
-    // TCB temp code 无效。
+    // 临时Code无效。
      INVALIDPARAMETER_TEMPCODENOTAVALIABLE("InvalidParameter.TempCodeNotAvaliable"),
      
     // 账号对应的角色不存在。

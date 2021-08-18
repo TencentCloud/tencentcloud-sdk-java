@@ -87,6 +87,14 @@ public class CodeSource extends AbstractModel{
     private String Branch;
 
     /**
+    * coding项目ID，type为coding时需要填写
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ProjectId")
+    @Expose
+    private Long ProjectId;
+
+    /**
      * Get 类型, 可能的枚举: "coding","package","package_url","github","gitlab","gitee","rawcode"
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Type 类型, 可能的枚举: "coding","package","package_url","github","gitlab","gitee","rawcode"
@@ -246,6 +254,26 @@ public class CodeSource extends AbstractModel{
         this.Branch = Branch;
     }
 
+    /**
+     * Get coding项目ID，type为coding时需要填写
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ProjectId coding项目ID，type为coding时需要填写
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getProjectId() {
+        return this.ProjectId;
+    }
+
+    /**
+     * Set coding项目ID，type为coding时需要填写
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ProjectId coding项目ID，type为coding时需要填写
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProjectId(Long ProjectId) {
+        this.ProjectId = ProjectId;
+    }
+
     public CodeSource() {
     }
 
@@ -278,6 +306,9 @@ public class CodeSource extends AbstractModel{
         if (source.Branch != null) {
             this.Branch = new String(source.Branch);
         }
+        if (source.ProjectId != null) {
+            this.ProjectId = new Long(source.ProjectId);
+        }
     }
 
 
@@ -293,6 +324,7 @@ public class CodeSource extends AbstractModel{
         this.setParamSimple(map, prefix + "CodingPackageVersion", this.CodingPackageVersion);
         this.setParamSimple(map, prefix + "RawCode", this.RawCode);
         this.setParamSimple(map, prefix + "Branch", this.Branch);
+        this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
 
     }
 }

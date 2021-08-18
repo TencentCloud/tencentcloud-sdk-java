@@ -51,6 +51,13 @@ public class ModifyEnvironmentAttributesRequest extends AbstractModel{
     private String ClusterId;
 
     /**
+    * 消息保留策略
+    */
+    @SerializedName("RetentionPolicy")
+    @Expose
+    private RetentionPolicy RetentionPolicy;
+
+    /**
      * Get 命名空间名称。 
      * @return EnvironmentId 命名空间名称。
      */
@@ -114,6 +121,22 @@ public class ModifyEnvironmentAttributesRequest extends AbstractModel{
         this.ClusterId = ClusterId;
     }
 
+    /**
+     * Get 消息保留策略 
+     * @return RetentionPolicy 消息保留策略
+     */
+    public RetentionPolicy getRetentionPolicy() {
+        return this.RetentionPolicy;
+    }
+
+    /**
+     * Set 消息保留策略
+     * @param RetentionPolicy 消息保留策略
+     */
+    public void setRetentionPolicy(RetentionPolicy RetentionPolicy) {
+        this.RetentionPolicy = RetentionPolicy;
+    }
+
     public ModifyEnvironmentAttributesRequest() {
     }
 
@@ -134,6 +157,9 @@ public class ModifyEnvironmentAttributesRequest extends AbstractModel{
         if (source.ClusterId != null) {
             this.ClusterId = new String(source.ClusterId);
         }
+        if (source.RetentionPolicy != null) {
+            this.RetentionPolicy = new RetentionPolicy(source.RetentionPolicy);
+        }
     }
 
 
@@ -145,6 +171,7 @@ public class ModifyEnvironmentAttributesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "MsgTTL", this.MsgTTL);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
+        this.setParamObj(map, prefix + "RetentionPolicy.", this.RetentionPolicy);
 
     }
 }

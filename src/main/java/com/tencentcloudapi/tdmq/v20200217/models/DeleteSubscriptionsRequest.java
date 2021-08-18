@@ -44,6 +44,13 @@ public class DeleteSubscriptionsRequest extends AbstractModel{
     private String EnvironmentId;
 
     /**
+    * 是否强制删除，默认为false
+    */
+    @SerializedName("Force")
+    @Expose
+    private Boolean Force;
+
+    /**
      * Get 订阅关系集合，每次最多删除20个。 
      * @return SubscriptionTopicSets 订阅关系集合，每次最多删除20个。
      */
@@ -91,6 +98,22 @@ public class DeleteSubscriptionsRequest extends AbstractModel{
         this.EnvironmentId = EnvironmentId;
     }
 
+    /**
+     * Get 是否强制删除，默认为false 
+     * @return Force 是否强制删除，默认为false
+     */
+    public Boolean getForce() {
+        return this.Force;
+    }
+
+    /**
+     * Set 是否强制删除，默认为false
+     * @param Force 是否强制删除，默认为false
+     */
+    public void setForce(Boolean Force) {
+        this.Force = Force;
+    }
+
     public DeleteSubscriptionsRequest() {
     }
 
@@ -111,6 +134,9 @@ public class DeleteSubscriptionsRequest extends AbstractModel{
         if (source.EnvironmentId != null) {
             this.EnvironmentId = new String(source.EnvironmentId);
         }
+        if (source.Force != null) {
+            this.Force = new Boolean(source.Force);
+        }
     }
 
 
@@ -121,6 +147,7 @@ public class DeleteSubscriptionsRequest extends AbstractModel{
         this.setParamArrayObj(map, prefix + "SubscriptionTopicSets.", this.SubscriptionTopicSets);
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamSimple(map, prefix + "EnvironmentId", this.EnvironmentId);
+        this.setParamSimple(map, prefix + "Force", this.Force);
 
     }
 }

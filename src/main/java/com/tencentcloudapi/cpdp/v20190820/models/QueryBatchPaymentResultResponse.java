@@ -13,28 +13,35 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.vpc.v20170312.models;
+package com.tencentcloudapi.cpdp.v20190820.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateBandwidthPackageResponse extends AbstractModel{
+public class QueryBatchPaymentResultResponse extends AbstractModel{
 
     /**
-    * 带宽包唯一ID。
+    * 错误码。响应成功："SUCCESS"，其他为不成功。
     */
-    @SerializedName("BandwidthPackageId")
+    @SerializedName("ErrCode")
     @Expose
-    private String BandwidthPackageId;
+    private String ErrCode;
 
     /**
-    * 带宽包唯一ID列表(申请数量大于1时有效)。
+    * 响应消息。
     */
-    @SerializedName("BandwidthPackageIds")
+    @SerializedName("ErrMessage")
     @Expose
-    private String [] BandwidthPackageIds;
+    private String ErrMessage;
+
+    /**
+    * 返回响应
+    */
+    @SerializedName("Result")
+    @Expose
+    private QueryBatchPaymentResultData Result;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -44,35 +51,51 @@ public class CreateBandwidthPackageResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 带宽包唯一ID。 
-     * @return BandwidthPackageId 带宽包唯一ID。
+     * Get 错误码。响应成功："SUCCESS"，其他为不成功。 
+     * @return ErrCode 错误码。响应成功："SUCCESS"，其他为不成功。
      */
-    public String getBandwidthPackageId() {
-        return this.BandwidthPackageId;
+    public String getErrCode() {
+        return this.ErrCode;
     }
 
     /**
-     * Set 带宽包唯一ID。
-     * @param BandwidthPackageId 带宽包唯一ID。
+     * Set 错误码。响应成功："SUCCESS"，其他为不成功。
+     * @param ErrCode 错误码。响应成功："SUCCESS"，其他为不成功。
      */
-    public void setBandwidthPackageId(String BandwidthPackageId) {
-        this.BandwidthPackageId = BandwidthPackageId;
+    public void setErrCode(String ErrCode) {
+        this.ErrCode = ErrCode;
     }
 
     /**
-     * Get 带宽包唯一ID列表(申请数量大于1时有效)。 
-     * @return BandwidthPackageIds 带宽包唯一ID列表(申请数量大于1时有效)。
+     * Get 响应消息。 
+     * @return ErrMessage 响应消息。
      */
-    public String [] getBandwidthPackageIds() {
-        return this.BandwidthPackageIds;
+    public String getErrMessage() {
+        return this.ErrMessage;
     }
 
     /**
-     * Set 带宽包唯一ID列表(申请数量大于1时有效)。
-     * @param BandwidthPackageIds 带宽包唯一ID列表(申请数量大于1时有效)。
+     * Set 响应消息。
+     * @param ErrMessage 响应消息。
      */
-    public void setBandwidthPackageIds(String [] BandwidthPackageIds) {
-        this.BandwidthPackageIds = BandwidthPackageIds;
+    public void setErrMessage(String ErrMessage) {
+        this.ErrMessage = ErrMessage;
+    }
+
+    /**
+     * Get 返回响应 
+     * @return Result 返回响应
+     */
+    public QueryBatchPaymentResultData getResult() {
+        return this.Result;
+    }
+
+    /**
+     * Set 返回响应
+     * @param Result 返回响应
+     */
+    public void setResult(QueryBatchPaymentResultData Result) {
+        this.Result = Result;
     }
 
     /**
@@ -91,22 +114,22 @@ public class CreateBandwidthPackageResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public CreateBandwidthPackageResponse() {
+    public QueryBatchPaymentResultResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateBandwidthPackageResponse(CreateBandwidthPackageResponse source) {
-        if (source.BandwidthPackageId != null) {
-            this.BandwidthPackageId = new String(source.BandwidthPackageId);
+    public QueryBatchPaymentResultResponse(QueryBatchPaymentResultResponse source) {
+        if (source.ErrCode != null) {
+            this.ErrCode = new String(source.ErrCode);
         }
-        if (source.BandwidthPackageIds != null) {
-            this.BandwidthPackageIds = new String[source.BandwidthPackageIds.length];
-            for (int i = 0; i < source.BandwidthPackageIds.length; i++) {
-                this.BandwidthPackageIds[i] = new String(source.BandwidthPackageIds[i]);
-            }
+        if (source.ErrMessage != null) {
+            this.ErrMessage = new String(source.ErrMessage);
+        }
+        if (source.Result != null) {
+            this.Result = new QueryBatchPaymentResultData(source.Result);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -118,8 +141,9 @@ public class CreateBandwidthPackageResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "BandwidthPackageId", this.BandwidthPackageId);
-        this.setParamArraySimple(map, prefix + "BandwidthPackageIds.", this.BandwidthPackageIds);
+        this.setParamSimple(map, prefix + "ErrCode", this.ErrCode);
+        this.setParamSimple(map, prefix + "ErrMessage", this.ErrMessage);
+        this.setParamObj(map, prefix + "Result.", this.Result);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
