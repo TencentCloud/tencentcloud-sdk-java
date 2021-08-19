@@ -31,7 +31,8 @@ public class Demo {
     public static final String X_CLS_HASH_KEY = "X-CLS-HashKey";
     public static final String X_CLS_COMPRESS_TYPE = "X-CLS-CompressType";
     public static final String LZ_4 = "lz4";
-    public static final String TOPIC = "e621fdb8-16f4-41cf-bc73-5aead0b75a03";
+    //TODO 替换为自己业务的 topic
+    public static final String TOPIC = "";
     public static final String PRODUCT_NAME_CLS = "cls";
     public static final String UPLOAD_LOG_URL = "UploadLog";
     public static final String VERSION = "2020-10-16";
