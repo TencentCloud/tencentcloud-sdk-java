@@ -30,6 +30,13 @@ public class DeleteImageTagsRequest extends AbstractModel{
     private DeleteImageTag [] ImageTags;
 
     /**
+    * 企业: tcr ；个人: personal或者不填
+    */
+    @SerializedName("RepoType")
+    @Expose
+    private String RepoType;
+
+    /**
      * Get 镜像版本数组 
      * @return ImageTags 镜像版本数组
      */
@@ -43,6 +50,22 @@ public class DeleteImageTagsRequest extends AbstractModel{
      */
     public void setImageTags(DeleteImageTag [] ImageTags) {
         this.ImageTags = ImageTags;
+    }
+
+    /**
+     * Get 企业: tcr ；个人: personal或者不填 
+     * @return RepoType 企业: tcr ；个人: personal或者不填
+     */
+    public String getRepoType() {
+        return this.RepoType;
+    }
+
+    /**
+     * Set 企业: tcr ；个人: personal或者不填
+     * @param RepoType 企业: tcr ；个人: personal或者不填
+     */
+    public void setRepoType(String RepoType) {
+        this.RepoType = RepoType;
     }
 
     public DeleteImageTagsRequest() {
@@ -59,6 +82,9 @@ public class DeleteImageTagsRequest extends AbstractModel{
                 this.ImageTags[i] = new DeleteImageTag(source.ImageTags[i]);
             }
         }
+        if (source.RepoType != null) {
+            this.RepoType = new String(source.RepoType);
+        }
     }
 
 
@@ -67,6 +93,7 @@ public class DeleteImageTagsRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "ImageTags.", this.ImageTags);
+        this.setParamSimple(map, prefix + "RepoType", this.RepoType);
 
     }
 }

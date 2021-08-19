@@ -66,21 +66,21 @@ TypeId为标准架构时，MemSize是实例总内存容量；TypeId为集群架�
     private Long ZoneId;
 
     /**
-    * 实例分片数量，Redis2.8主从版、CKV主从版和Redis2.8单机版、Redis4.0主从版不需要填写。
+    * 实例分片数量，Redis2.8标准架构、CKV标准架构和Redis2.8单机版、Redis4.0标准架构不需要填写。
     */
     @SerializedName("RedisShardNum")
     @Expose
     private Long RedisShardNum;
 
     /**
-    * 实例副本数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写。
+    * 实例副本数量，Redis2.8标准架构、CKV标准架构和Redis2.8单机版不需要填写。
     */
     @SerializedName("RedisReplicasNum")
     @Expose
     private Long RedisReplicasNum;
 
     /**
-    * 是否支持副本只读，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写。
+    * 是否支持副本只读，Redis2.8标准架构、CKV标准架构和Redis2.8单机版不需要填写。
     */
     @SerializedName("ReplicasReadonly")
     @Expose
@@ -194,48 +194,48 @@ TypeId为标准架构时，MemSize是实例总内存容量；TypeId为集群架�
     }
 
     /**
-     * Get 实例分片数量，Redis2.8主从版、CKV主从版和Redis2.8单机版、Redis4.0主从版不需要填写。 
-     * @return RedisShardNum 实例分片数量，Redis2.8主从版、CKV主从版和Redis2.8单机版、Redis4.0主从版不需要填写。
+     * Get 实例分片数量，Redis2.8标准架构、CKV标准架构和Redis2.8单机版、Redis4.0标准架构不需要填写。 
+     * @return RedisShardNum 实例分片数量，Redis2.8标准架构、CKV标准架构和Redis2.8单机版、Redis4.0标准架构不需要填写。
      */
     public Long getRedisShardNum() {
         return this.RedisShardNum;
     }
 
     /**
-     * Set 实例分片数量，Redis2.8主从版、CKV主从版和Redis2.8单机版、Redis4.0主从版不需要填写。
-     * @param RedisShardNum 实例分片数量，Redis2.8主从版、CKV主从版和Redis2.8单机版、Redis4.0主从版不需要填写。
+     * Set 实例分片数量，Redis2.8标准架构、CKV标准架构和Redis2.8单机版、Redis4.0标准架构不需要填写。
+     * @param RedisShardNum 实例分片数量，Redis2.8标准架构、CKV标准架构和Redis2.8单机版、Redis4.0标准架构不需要填写。
      */
     public void setRedisShardNum(Long RedisShardNum) {
         this.RedisShardNum = RedisShardNum;
     }
 
     /**
-     * Get 实例副本数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写。 
-     * @return RedisReplicasNum 实例副本数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写。
+     * Get 实例副本数量，Redis2.8标准架构、CKV标准架构和Redis2.8单机版不需要填写。 
+     * @return RedisReplicasNum 实例副本数量，Redis2.8标准架构、CKV标准架构和Redis2.8单机版不需要填写。
      */
     public Long getRedisReplicasNum() {
         return this.RedisReplicasNum;
     }
 
     /**
-     * Set 实例副本数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写。
-     * @param RedisReplicasNum 实例副本数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写。
+     * Set 实例副本数量，Redis2.8标准架构、CKV标准架构和Redis2.8单机版不需要填写。
+     * @param RedisReplicasNum 实例副本数量，Redis2.8标准架构、CKV标准架构和Redis2.8单机版不需要填写。
      */
     public void setRedisReplicasNum(Long RedisReplicasNum) {
         this.RedisReplicasNum = RedisReplicasNum;
     }
 
     /**
-     * Get 是否支持副本只读，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写。 
-     * @return ReplicasReadonly 是否支持副本只读，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写。
+     * Get 是否支持副本只读，Redis2.8标准架构、CKV标准架构和Redis2.8单机版不需要填写。 
+     * @return ReplicasReadonly 是否支持副本只读，Redis2.8标准架构、CKV标准架构和Redis2.8单机版不需要填写。
      */
     public Boolean getReplicasReadonly() {
         return this.ReplicasReadonly;
     }
 
     /**
-     * Set 是否支持副本只读，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写。
-     * @param ReplicasReadonly 是否支持副本只读，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写。
+     * Set 是否支持副本只读，Redis2.8标准架构、CKV标准架构和Redis2.8单机版不需要填写。
+     * @param ReplicasReadonly 是否支持副本只读，Redis2.8标准架构、CKV标准架构和Redis2.8单机版不需要填写。
      */
     public void setReplicasReadonly(Boolean ReplicasReadonly) {
         this.ReplicasReadonly = ReplicasReadonly;

@@ -121,6 +121,13 @@ public class DeployGroupRequest extends AbstractModel{
     private String StopScript;
 
     /**
+    * 是否进行增量部署，默认为false，全量更新
+    */
+    @SerializedName("IncrementalDeployment")
+    @Expose
+    private Boolean IncrementalDeployment;
+
+    /**
      * Get 部署组ID 
      * @return GroupId 部署组ID
      */
@@ -344,6 +351,22 @@ public class DeployGroupRequest extends AbstractModel{
         this.StopScript = StopScript;
     }
 
+    /**
+     * Get 是否进行增量部署，默认为false，全量更新 
+     * @return IncrementalDeployment 是否进行增量部署，默认为false，全量更新
+     */
+    public Boolean getIncrementalDeployment() {
+        return this.IncrementalDeployment;
+    }
+
+    /**
+     * Set 是否进行增量部署，默认为false，全量更新
+     * @param IncrementalDeployment 是否进行增量部署，默认为false，全量更新
+     */
+    public void setIncrementalDeployment(Boolean IncrementalDeployment) {
+        this.IncrementalDeployment = IncrementalDeployment;
+    }
+
     public DeployGroupRequest() {
     }
 
@@ -397,6 +420,9 @@ public class DeployGroupRequest extends AbstractModel{
         if (source.StopScript != null) {
             this.StopScript = new String(source.StopScript);
         }
+        if (source.IncrementalDeployment != null) {
+            this.IncrementalDeployment = new Boolean(source.IncrementalDeployment);
+        }
     }
 
 
@@ -418,6 +444,7 @@ public class DeployGroupRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "DeployWaitTime", this.DeployWaitTime);
         this.setParamSimple(map, prefix + "StartScript", this.StartScript);
         this.setParamSimple(map, prefix + "StopScript", this.StopScript);
+        this.setParamSimple(map, prefix + "IncrementalDeployment", this.IncrementalDeployment);
 
     }
 }

@@ -58,6 +58,16 @@ public class DescribeEnvironmentRolesRequest extends AbstractModel{
     private String RoleName;
 
     /**
+    * * RoleName
+按照角色名进行过滤，精确查询。
+类型：String
+必选：否
+    */
+    @SerializedName("Filters")
+    @Expose
+    private Filter [] Filters;
+
+    /**
      * Get 环境（命名空间）名称。 
      * @return EnvironmentId 环境（命名空间）名称。
      */
@@ -137,6 +147,34 @@ public class DescribeEnvironmentRolesRequest extends AbstractModel{
         this.RoleName = RoleName;
     }
 
+    /**
+     * Get * RoleName
+按照角色名进行过滤，精确查询。
+类型：String
+必选：否 
+     * @return Filters * RoleName
+按照角色名进行过滤，精确查询。
+类型：String
+必选：否
+     */
+    public Filter [] getFilters() {
+        return this.Filters;
+    }
+
+    /**
+     * Set * RoleName
+按照角色名进行过滤，精确查询。
+类型：String
+必选：否
+     * @param Filters * RoleName
+按照角色名进行过滤，精确查询。
+类型：String
+必选：否
+     */
+    public void setFilters(Filter [] Filters) {
+        this.Filters = Filters;
+    }
+
     public DescribeEnvironmentRolesRequest() {
     }
 
@@ -160,6 +198,12 @@ public class DescribeEnvironmentRolesRequest extends AbstractModel{
         if (source.RoleName != null) {
             this.RoleName = new String(source.RoleName);
         }
+        if (source.Filters != null) {
+            this.Filters = new Filter[source.Filters.length];
+            for (int i = 0; i < source.Filters.length; i++) {
+                this.Filters[i] = new Filter(source.Filters[i]);
+            }
+        }
     }
 
 
@@ -172,6 +216,7 @@ public class DescribeEnvironmentRolesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamSimple(map, prefix + "RoleName", this.RoleName);
+        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
 
     }
 }

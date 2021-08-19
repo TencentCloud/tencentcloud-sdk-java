@@ -51,6 +51,13 @@ public class CreateRecordPlanRequest extends AbstractModel{
     private DeviceItem [] Devices;
 
     /**
+    * 存储周期
+    */
+    @SerializedName("RecordStorageTime")
+    @Expose
+    private Long RecordStorageTime;
+
+    /**
      * Get 计划名称 
      * @return Name 计划名称
      */
@@ -114,6 +121,22 @@ public class CreateRecordPlanRequest extends AbstractModel{
         this.Devices = Devices;
     }
 
+    /**
+     * Get 存储周期 
+     * @return RecordStorageTime 存储周期
+     */
+    public Long getRecordStorageTime() {
+        return this.RecordStorageTime;
+    }
+
+    /**
+     * Set 存储周期
+     * @param RecordStorageTime 存储周期
+     */
+    public void setRecordStorageTime(Long RecordStorageTime) {
+        this.RecordStorageTime = RecordStorageTime;
+    }
+
     public CreateRecordPlanRequest() {
     }
 
@@ -137,6 +160,9 @@ public class CreateRecordPlanRequest extends AbstractModel{
                 this.Devices[i] = new DeviceItem(source.Devices[i]);
             }
         }
+        if (source.RecordStorageTime != null) {
+            this.RecordStorageTime = new Long(source.RecordStorageTime);
+        }
     }
 
 
@@ -148,6 +174,7 @@ public class CreateRecordPlanRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "TimeTemplateId", this.TimeTemplateId);
         this.setParamSimple(map, prefix + "EventId", this.EventId);
         this.setParamArrayObj(map, prefix + "Devices.", this.Devices);
+        this.setParamSimple(map, prefix + "RecordStorageTime", this.RecordStorageTime);
 
     }
 }

@@ -37,6 +37,14 @@ public class VpcInfo extends AbstractModel{
     private String SubnetId;
 
     /**
+    * 内网访问地址
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IntranetAddress")
+    @Expose
+    private String IntranetAddress;
+
+    /**
      * Get Vpc Id 
      * @return VpcId Vpc Id
      */
@@ -68,6 +76,26 @@ public class VpcInfo extends AbstractModel{
         this.SubnetId = SubnetId;
     }
 
+    /**
+     * Get 内网访问地址
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IntranetAddress 内网访问地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getIntranetAddress() {
+        return this.IntranetAddress;
+    }
+
+    /**
+     * Set 内网访问地址
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IntranetAddress 内网访问地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIntranetAddress(String IntranetAddress) {
+        this.IntranetAddress = IntranetAddress;
+    }
+
     public VpcInfo() {
     }
 
@@ -82,6 +110,9 @@ public class VpcInfo extends AbstractModel{
         if (source.SubnetId != null) {
             this.SubnetId = new String(source.SubnetId);
         }
+        if (source.IntranetAddress != null) {
+            this.IntranetAddress = new String(source.IntranetAddress);
+        }
     }
 
 
@@ -91,6 +122,7 @@ public class VpcInfo extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
+        this.setParamSimple(map, prefix + "IntranetAddress", this.IntranetAddress);
 
     }
 }

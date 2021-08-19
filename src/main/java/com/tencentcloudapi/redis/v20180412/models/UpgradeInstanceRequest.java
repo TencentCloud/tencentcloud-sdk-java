@@ -30,21 +30,21 @@ public class UpgradeInstanceRequest extends AbstractModel{
     private String InstanceId;
 
     /**
-    * 分片大小 单位 MB
+    * 分片大小 单位 MB。该参数不支持与RedisShardNum或RedisReplicasNum同时输入。
     */
     @SerializedName("MemSize")
     @Expose
     private Long MemSize;
 
     /**
-    * 分片数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写
+    * 分片数量，标准架构不需要填写。该参数不支持与RedisReplicasNum或MemSize同时输入。
     */
     @SerializedName("RedisShardNum")
     @Expose
     private Long RedisShardNum;
 
     /**
-    * 副本数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写
+    * 副本数量，标准架构不需要填写，多AZ实例修改副本时必须要传入NodeSet。该参数不支持与RedisShardNum或MemSize同时输入。
     */
     @SerializedName("RedisReplicasNum")
     @Expose
@@ -74,48 +74,48 @@ public class UpgradeInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get 分片大小 单位 MB 
-     * @return MemSize 分片大小 单位 MB
+     * Get 分片大小 单位 MB。该参数不支持与RedisShardNum或RedisReplicasNum同时输入。 
+     * @return MemSize 分片大小 单位 MB。该参数不支持与RedisShardNum或RedisReplicasNum同时输入。
      */
     public Long getMemSize() {
         return this.MemSize;
     }
 
     /**
-     * Set 分片大小 单位 MB
-     * @param MemSize 分片大小 单位 MB
+     * Set 分片大小 单位 MB。该参数不支持与RedisShardNum或RedisReplicasNum同时输入。
+     * @param MemSize 分片大小 单位 MB。该参数不支持与RedisShardNum或RedisReplicasNum同时输入。
      */
     public void setMemSize(Long MemSize) {
         this.MemSize = MemSize;
     }
 
     /**
-     * Get 分片数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写 
-     * @return RedisShardNum 分片数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写
+     * Get 分片数量，标准架构不需要填写。该参数不支持与RedisReplicasNum或MemSize同时输入。 
+     * @return RedisShardNum 分片数量，标准架构不需要填写。该参数不支持与RedisReplicasNum或MemSize同时输入。
      */
     public Long getRedisShardNum() {
         return this.RedisShardNum;
     }
 
     /**
-     * Set 分片数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写
-     * @param RedisShardNum 分片数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写
+     * Set 分片数量，标准架构不需要填写。该参数不支持与RedisReplicasNum或MemSize同时输入。
+     * @param RedisShardNum 分片数量，标准架构不需要填写。该参数不支持与RedisReplicasNum或MemSize同时输入。
      */
     public void setRedisShardNum(Long RedisShardNum) {
         this.RedisShardNum = RedisShardNum;
     }
 
     /**
-     * Get 副本数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写 
-     * @return RedisReplicasNum 副本数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写
+     * Get 副本数量，标准架构不需要填写，多AZ实例修改副本时必须要传入NodeSet。该参数不支持与RedisShardNum或MemSize同时输入。 
+     * @return RedisReplicasNum 副本数量，标准架构不需要填写，多AZ实例修改副本时必须要传入NodeSet。该参数不支持与RedisShardNum或MemSize同时输入。
      */
     public Long getRedisReplicasNum() {
         return this.RedisReplicasNum;
     }
 
     /**
-     * Set 副本数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写
-     * @param RedisReplicasNum 副本数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写
+     * Set 副本数量，标准架构不需要填写，多AZ实例修改副本时必须要传入NodeSet。该参数不支持与RedisShardNum或MemSize同时输入。
+     * @param RedisReplicasNum 副本数量，标准架构不需要填写，多AZ实例修改副本时必须要传入NodeSet。该参数不支持与RedisShardNum或MemSize同时输入。
      */
     public void setRedisReplicasNum(Long RedisReplicasNum) {
         this.RedisReplicasNum = RedisReplicasNum;

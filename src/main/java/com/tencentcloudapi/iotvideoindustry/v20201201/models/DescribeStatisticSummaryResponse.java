@@ -55,6 +55,22 @@ public class DescribeStatisticSummaryResponse extends AbstractModel{
     private Float StorageUsage;
 
     /**
+    * X-P2P分享流量。单位 Byte
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("P2PFluxTotal")
+    @Expose
+    private Float P2PFluxTotal;
+
+    /**
+    * X-P2P峰值带宽。 单位bps
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("P2PPeakValue")
+    @Expose
+    private Float P2PPeakValue;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -142,6 +158,46 @@ public class DescribeStatisticSummaryResponse extends AbstractModel{
     }
 
     /**
+     * Get X-P2P分享流量。单位 Byte
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return P2PFluxTotal X-P2P分享流量。单位 Byte
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Float getP2PFluxTotal() {
+        return this.P2PFluxTotal;
+    }
+
+    /**
+     * Set X-P2P分享流量。单位 Byte
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param P2PFluxTotal X-P2P分享流量。单位 Byte
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setP2PFluxTotal(Float P2PFluxTotal) {
+        this.P2PFluxTotal = P2PFluxTotal;
+    }
+
+    /**
+     * Get X-P2P峰值带宽。 单位bps
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return P2PPeakValue X-P2P峰值带宽。 单位bps
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Float getP2PPeakValue() {
+        return this.P2PPeakValue;
+    }
+
+    /**
+     * Set X-P2P峰值带宽。 单位bps
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param P2PPeakValue X-P2P峰值带宽。 单位bps
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setP2PPeakValue(Float P2PPeakValue) {
+        this.P2PPeakValue = P2PPeakValue;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -177,6 +233,12 @@ public class DescribeStatisticSummaryResponse extends AbstractModel{
         if (source.StorageUsage != null) {
             this.StorageUsage = new Float(source.StorageUsage);
         }
+        if (source.P2PFluxTotal != null) {
+            this.P2PFluxTotal = new Float(source.P2PFluxTotal);
+        }
+        if (source.P2PPeakValue != null) {
+            this.P2PPeakValue = new Float(source.P2PPeakValue);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -191,6 +253,8 @@ public class DescribeStatisticSummaryResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "NonRecordingDevice", this.NonRecordingDevice);
         this.setParamSimple(map, prefix + "WatchFlux", this.WatchFlux);
         this.setParamSimple(map, prefix + "StorageUsage", this.StorageUsage);
+        this.setParamSimple(map, prefix + "P2PFluxTotal", this.P2PFluxTotal);
+        this.setParamSimple(map, prefix + "P2PPeakValue", this.P2PPeakValue);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

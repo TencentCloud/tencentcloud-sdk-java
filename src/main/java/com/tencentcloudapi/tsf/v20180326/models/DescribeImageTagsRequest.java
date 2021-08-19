@@ -58,6 +58,20 @@ public class DescribeImageTagsRequest extends AbstractModel{
     private String SearchWord;
 
     /**
+    * 企业: tcr ；个人: personal或者不填
+    */
+    @SerializedName("RepoType")
+    @Expose
+    private String RepoType;
+
+    /**
+    * TcrRepoInfo值
+    */
+    @SerializedName("TcrRepoInfo")
+    @Expose
+    private TcrRepoInfo TcrRepoInfo;
+
+    /**
      * Get 应用Id 
      * @return ApplicationId 应用Id
      */
@@ -137,6 +151,38 @@ public class DescribeImageTagsRequest extends AbstractModel{
         this.SearchWord = SearchWord;
     }
 
+    /**
+     * Get 企业: tcr ；个人: personal或者不填 
+     * @return RepoType 企业: tcr ；个人: personal或者不填
+     */
+    public String getRepoType() {
+        return this.RepoType;
+    }
+
+    /**
+     * Set 企业: tcr ；个人: personal或者不填
+     * @param RepoType 企业: tcr ；个人: personal或者不填
+     */
+    public void setRepoType(String RepoType) {
+        this.RepoType = RepoType;
+    }
+
+    /**
+     * Get TcrRepoInfo值 
+     * @return TcrRepoInfo TcrRepoInfo值
+     */
+    public TcrRepoInfo getTcrRepoInfo() {
+        return this.TcrRepoInfo;
+    }
+
+    /**
+     * Set TcrRepoInfo值
+     * @param TcrRepoInfo TcrRepoInfo值
+     */
+    public void setTcrRepoInfo(TcrRepoInfo TcrRepoInfo) {
+        this.TcrRepoInfo = TcrRepoInfo;
+    }
+
     public DescribeImageTagsRequest() {
     }
 
@@ -160,6 +206,12 @@ public class DescribeImageTagsRequest extends AbstractModel{
         if (source.SearchWord != null) {
             this.SearchWord = new String(source.SearchWord);
         }
+        if (source.RepoType != null) {
+            this.RepoType = new String(source.RepoType);
+        }
+        if (source.TcrRepoInfo != null) {
+            this.TcrRepoInfo = new TcrRepoInfo(source.TcrRepoInfo);
+        }
     }
 
 
@@ -172,6 +224,8 @@ public class DescribeImageTagsRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "QueryImageIdFlag", this.QueryImageIdFlag);
         this.setParamSimple(map, prefix + "SearchWord", this.SearchWord);
+        this.setParamSimple(map, prefix + "RepoType", this.RepoType);
+        this.setParamObj(map, prefix + "TcrRepoInfo.", this.TcrRepoInfo);
 
     }
 }

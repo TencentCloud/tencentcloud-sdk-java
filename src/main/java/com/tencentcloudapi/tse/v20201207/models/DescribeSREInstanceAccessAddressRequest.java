@@ -30,6 +30,20 @@ public class DescribeSREInstanceAccessAddressRequest extends AbstractModel{
     private String InstanceId;
 
     /**
+    * VPC ID
+    */
+    @SerializedName("VpcId")
+    @Expose
+    private String VpcId;
+
+    /**
+    * 子网ID
+    */
+    @SerializedName("SubnetId")
+    @Expose
+    private String SubnetId;
+
+    /**
      * Get 注册引擎实例Id 
      * @return InstanceId 注册引擎实例Id
      */
@@ -45,6 +59,38 @@ public class DescribeSREInstanceAccessAddressRequest extends AbstractModel{
         this.InstanceId = InstanceId;
     }
 
+    /**
+     * Get VPC ID 
+     * @return VpcId VPC ID
+     */
+    public String getVpcId() {
+        return this.VpcId;
+    }
+
+    /**
+     * Set VPC ID
+     * @param VpcId VPC ID
+     */
+    public void setVpcId(String VpcId) {
+        this.VpcId = VpcId;
+    }
+
+    /**
+     * Get 子网ID 
+     * @return SubnetId 子网ID
+     */
+    public String getSubnetId() {
+        return this.SubnetId;
+    }
+
+    /**
+     * Set 子网ID
+     * @param SubnetId 子网ID
+     */
+    public void setSubnetId(String SubnetId) {
+        this.SubnetId = SubnetId;
+    }
+
     public DescribeSREInstanceAccessAddressRequest() {
     }
 
@@ -56,6 +102,12 @@ public class DescribeSREInstanceAccessAddressRequest extends AbstractModel{
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
         }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.SubnetId != null) {
+            this.SubnetId = new String(source.SubnetId);
+        }
     }
 
 
@@ -64,6 +116,8 @@ public class DescribeSREInstanceAccessAddressRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "VpcId", this.VpcId);
+        this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
 
     }
 }

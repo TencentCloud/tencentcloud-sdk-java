@@ -51,6 +51,13 @@ public class DescribeAllDeviceListRequest extends AbstractModel{
     private String [] DeviceIds;
 
     /**
+    * 设备类型过滤
+    */
+    @SerializedName("DeviceTypes")
+    @Expose
+    private Long [] DeviceTypes;
+
+    /**
      * Get 偏移量，默认0 
      * @return Offset 偏移量，默认0
      */
@@ -114,6 +121,22 @@ public class DescribeAllDeviceListRequest extends AbstractModel{
         this.DeviceIds = DeviceIds;
     }
 
+    /**
+     * Get 设备类型过滤 
+     * @return DeviceTypes 设备类型过滤
+     */
+    public Long [] getDeviceTypes() {
+        return this.DeviceTypes;
+    }
+
+    /**
+     * Set 设备类型过滤
+     * @param DeviceTypes 设备类型过滤
+     */
+    public void setDeviceTypes(Long [] DeviceTypes) {
+        this.DeviceTypes = DeviceTypes;
+    }
+
     public DescribeAllDeviceListRequest() {
     }
 
@@ -137,6 +160,12 @@ public class DescribeAllDeviceListRequest extends AbstractModel{
                 this.DeviceIds[i] = new String(source.DeviceIds[i]);
             }
         }
+        if (source.DeviceTypes != null) {
+            this.DeviceTypes = new Long[source.DeviceTypes.length];
+            for (int i = 0; i < source.DeviceTypes.length; i++) {
+                this.DeviceTypes[i] = new Long(source.DeviceTypes[i]);
+            }
+        }
     }
 
 
@@ -148,6 +177,7 @@ public class DescribeAllDeviceListRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "NickName", this.NickName);
         this.setParamArraySimple(map, prefix + "DeviceIds.", this.DeviceIds);
+        this.setParamArraySimple(map, prefix + "DeviceTypes.", this.DeviceTypes);
 
     }
 }

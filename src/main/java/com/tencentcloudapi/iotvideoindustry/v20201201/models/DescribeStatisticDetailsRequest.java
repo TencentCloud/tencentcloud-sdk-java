@@ -42,6 +42,8 @@ public class DescribeStatisticDetailsRequest extends AbstractModel{
 2.非录制设备数：NonRecordingDevice
 3.观看流量总数：WatchFlux
 4.已用存储容量总数：StorageUsage
+5. X-P2P分享流量: P2PFluxTotal
+6. X-P2P峰值带宽: P2PPeakValue
     */
     @SerializedName("StatisticField")
     @Expose
@@ -84,12 +86,16 @@ public class DescribeStatisticDetailsRequest extends AbstractModel{
 1.录制设备数：RecordingDevice
 2.非录制设备数：NonRecordingDevice
 3.观看流量总数：WatchFlux
-4.已用存储容量总数：StorageUsage 
+4.已用存储容量总数：StorageUsage
+5. X-P2P分享流量: P2PFluxTotal
+6. X-P2P峰值带宽: P2PPeakValue 
      * @return StatisticField 统计项。取值范围：
 1.录制设备数：RecordingDevice
 2.非录制设备数：NonRecordingDevice
 3.观看流量总数：WatchFlux
 4.已用存储容量总数：StorageUsage
+5. X-P2P分享流量: P2PFluxTotal
+6. X-P2P峰值带宽: P2PPeakValue
      */
     public String getStatisticField() {
         return this.StatisticField;
@@ -101,11 +107,15 @@ public class DescribeStatisticDetailsRequest extends AbstractModel{
 2.非录制设备数：NonRecordingDevice
 3.观看流量总数：WatchFlux
 4.已用存储容量总数：StorageUsage
+5. X-P2P分享流量: P2PFluxTotal
+6. X-P2P峰值带宽: P2PPeakValue
      * @param StatisticField 统计项。取值范围：
 1.录制设备数：RecordingDevice
 2.非录制设备数：NonRecordingDevice
 3.观看流量总数：WatchFlux
 4.已用存储容量总数：StorageUsage
+5. X-P2P分享流量: P2PFluxTotal
+6. X-P2P峰值带宽: P2PPeakValue
      */
     public void setStatisticField(String StatisticField) {
         this.StatisticField = StatisticField;

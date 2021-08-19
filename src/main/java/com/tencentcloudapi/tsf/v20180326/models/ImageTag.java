@@ -115,6 +115,14 @@ public class ImageTag extends AbstractModel{
     private Long SizeByte;
 
     /**
+    * TcrRepoInfo值
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TcrRepoInfo")
+    @Expose
+    private TcrRepoInfo TcrRepoInfo;
+
+    /**
      * Get 仓库名 
      * @return RepoName 仓库名
      */
@@ -326,6 +334,26 @@ public class ImageTag extends AbstractModel{
         this.SizeByte = SizeByte;
     }
 
+    /**
+     * Get TcrRepoInfo值
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TcrRepoInfo TcrRepoInfo值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public TcrRepoInfo getTcrRepoInfo() {
+        return this.TcrRepoInfo;
+    }
+
+    /**
+     * Set TcrRepoInfo值
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TcrRepoInfo TcrRepoInfo值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTcrRepoInfo(TcrRepoInfo TcrRepoInfo) {
+        this.TcrRepoInfo = TcrRepoInfo;
+    }
+
     public ImageTag() {
     }
 
@@ -373,6 +401,9 @@ public class ImageTag extends AbstractModel{
         if (source.SizeByte != null) {
             this.SizeByte = new Long(source.SizeByte);
         }
+        if (source.TcrRepoInfo != null) {
+            this.TcrRepoInfo = new TcrRepoInfo(source.TcrRepoInfo);
+        }
     }
 
 
@@ -393,6 +424,7 @@ public class ImageTag extends AbstractModel{
         this.setParamSimple(map, prefix + "Os", this.Os);
         this.setParamSimple(map, prefix + "PushTime", this.PushTime);
         this.setParamSimple(map, prefix + "SizeByte", this.SizeByte);
+        this.setParamObj(map, prefix + "TcrRepoInfo.", this.TcrRepoInfo);
 
     }
 }

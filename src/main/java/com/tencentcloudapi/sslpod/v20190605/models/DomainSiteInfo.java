@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DomainSiteInfo extends AbstractModel{
 
     /**
-    * ID
+    * ID标识
     */
     @SerializedName("Id")
     @Expose
@@ -44,18 +44,27 @@ public class DomainSiteInfo extends AbstractModel{
     private String Ip;
 
     /**
-    * 是否自动获取IP
+    * 是否自动获取IP：true：是，false:否
     */
     @SerializedName("AutoIP")
     @Expose
     private Boolean AutoIP;
 
     /**
-    * 监控服务类型
+    * 评级
+"A+"，
+ "A"，
+"A-"，
+"B"，
+"C"，
+"D"，
+ "E"，
+ "F"，
+"T"，
     */
-    @SerializedName("ServerType")
+    @SerializedName("Grade")
     @Expose
-    private Long ServerType;
+    private String Grade;
 
     /**
     * 证书品牌
@@ -65,21 +74,35 @@ public class DomainSiteInfo extends AbstractModel{
     private String Brand;
 
     /**
-    * 评级
+    * 监控服务类型
+0 :Web
+1: SMTP
+2: IMAP
+3: POP3
     */
-    @SerializedName("Grade")
+    @SerializedName("ServerType")
     @Expose
-    private String Grade;
+    private Long ServerType;
 
     /**
     * 评级Code
+0："unknown"，
+1："A+"，
+2： "A"，
+3："A-"，
+4："B"，
+5："C"，
+6："D"，
+7： "E"，
+8： "F"，
+9："T"，
     */
     @SerializedName("GradeCode")
     @Expose
     private Long GradeCode;
 
     /**
-    * 是否监控告警
+    * 是否监控告警；true：是，false:否
     */
     @SerializedName("Notice")
     @Expose
@@ -101,7 +124,18 @@ public class DomainSiteInfo extends AbstractModel{
     private String [] Tags;
 
     /**
-    * 域名状态
+    * 域名状态:
+连接异常，
+证书已过期，
+证书已吊销，
+证书黑名单，
+证书域名不匹配，
+证书不可信，
+证书密钥弱，
+证书即将过期，少于7天，
+证书即将过期，少于30天，
+正常，
+部分异常
     */
     @SerializedName("Status")
     @Expose
@@ -115,16 +149,16 @@ public class DomainSiteInfo extends AbstractModel{
     private String Port;
 
     /**
-     * Get ID 
-     * @return Id ID
+     * Get ID标识 
+     * @return Id ID标识
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set ID
-     * @param Id ID
+     * Set ID标识
+     * @param Id ID标识
      */
     public void setId(Long Id) {
         this.Id = Id;
@@ -163,35 +197,71 @@ public class DomainSiteInfo extends AbstractModel{
     }
 
     /**
-     * Get 是否自动获取IP 
-     * @return AutoIP 是否自动获取IP
+     * Get 是否自动获取IP：true：是，false:否 
+     * @return AutoIP 是否自动获取IP：true：是，false:否
      */
     public Boolean getAutoIP() {
         return this.AutoIP;
     }
 
     /**
-     * Set 是否自动获取IP
-     * @param AutoIP 是否自动获取IP
+     * Set 是否自动获取IP：true：是，false:否
+     * @param AutoIP 是否自动获取IP：true：是，false:否
      */
     public void setAutoIP(Boolean AutoIP) {
         this.AutoIP = AutoIP;
     }
 
     /**
-     * Get 监控服务类型 
-     * @return ServerType 监控服务类型
+     * Get 评级
+"A+"，
+ "A"，
+"A-"，
+"B"，
+"C"，
+"D"，
+ "E"，
+ "F"，
+"T"， 
+     * @return Grade 评级
+"A+"，
+ "A"，
+"A-"，
+"B"，
+"C"，
+"D"，
+ "E"，
+ "F"，
+"T"，
      */
-    public Long getServerType() {
-        return this.ServerType;
+    public String getGrade() {
+        return this.Grade;
     }
 
     /**
-     * Set 监控服务类型
-     * @param ServerType 监控服务类型
+     * Set 评级
+"A+"，
+ "A"，
+"A-"，
+"B"，
+"C"，
+"D"，
+ "E"，
+ "F"，
+"T"，
+     * @param Grade 评级
+"A+"，
+ "A"，
+"A-"，
+"B"，
+"C"，
+"D"，
+ "E"，
+ "F"，
+"T"，
      */
-    public void setServerType(Long ServerType) {
-        this.ServerType = ServerType;
+    public void setGrade(String Grade) {
+        this.Grade = Grade;
     }
 
     /**
@@ -211,24 +281,60 @@ public class DomainSiteInfo extends AbstractModel{
     }
 
     /**
-     * Get 评级 
-     * @return Grade 评级
+     * Get 监控服务类型
+0 :Web
+1: SMTP
+2: IMAP
+3: POP3 
+     * @return ServerType 监控服务类型
+0 :Web
+1: SMTP
+2: IMAP
+3: POP3
      */
-    public String getGrade() {
-        return this.Grade;
+    public Long getServerType() {
+        return this.ServerType;
     }
 
     /**
-     * Set 评级
-     * @param Grade 评级
+     * Set 监控服务类型
+0 :Web
+1: SMTP
+2: IMAP
+3: POP3
+     * @param ServerType 监控服务类型
+0 :Web
+1: SMTP
+2: IMAP
+3: POP3
      */
-    public void setGrade(String Grade) {
-        this.Grade = Grade;
+    public void setServerType(Long ServerType) {
+        this.ServerType = ServerType;
     }
 
     /**
-     * Get 评级Code 
+     * Get 评级Code
+0："unknown"，
+1："A+"，
+2： "A"，
+3："A-"，
+4："B"，
+5："C"，
+6："D"，
+7： "E"，
+8： "F"，
+9："T"， 
      * @return GradeCode 评级Code
+0："unknown"，
+1："A+"，
+2： "A"，
+3："A-"，
+4："B"，
+5："C"，
+6："D"，
+7： "E"，
+8： "F"，
+9："T"，
      */
     public Long getGradeCode() {
         return this.GradeCode;
@@ -236,23 +342,43 @@ public class DomainSiteInfo extends AbstractModel{
 
     /**
      * Set 评级Code
+0："unknown"，
+1："A+"，
+2： "A"，
+3："A-"，
+4："B"，
+5："C"，
+6："D"，
+7： "E"，
+8： "F"，
+9："T"，
      * @param GradeCode 评级Code
+0："unknown"，
+1："A+"，
+2： "A"，
+3："A-"，
+4："B"，
+5："C"，
+6："D"，
+7： "E"，
+8： "F"，
+9："T"，
      */
     public void setGradeCode(Long GradeCode) {
         this.GradeCode = GradeCode;
     }
 
     /**
-     * Get 是否监控告警 
-     * @return Notice 是否监控告警
+     * Get 是否监控告警；true：是，false:否 
+     * @return Notice 是否监控告警；true：是，false:否
      */
     public Boolean getNotice() {
         return this.Notice;
     }
 
     /**
-     * Set 是否监控告警
-     * @param Notice 是否监控告警
+     * Set 是否监控告警；true：是，false:否
+     * @param Notice 是否监控告警；true：是，false:否
      */
     public void setNotice(Boolean Notice) {
         this.Notice = Notice;
@@ -295,16 +421,60 @@ public class DomainSiteInfo extends AbstractModel{
     }
 
     /**
-     * Get 域名状态 
-     * @return Status 域名状态
+     * Get 域名状态:
+连接异常，
+证书已过期，
+证书已吊销，
+证书黑名单，
+证书域名不匹配，
+证书不可信，
+证书密钥弱，
+证书即将过期，少于7天，
+证书即将过期，少于30天，
+正常，
+部分异常 
+     * @return Status 域名状态:
+连接异常，
+证书已过期，
+证书已吊销，
+证书黑名单，
+证书域名不匹配，
+证书不可信，
+证书密钥弱，
+证书即将过期，少于7天，
+证书即将过期，少于30天，
+正常，
+部分异常
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 域名状态
-     * @param Status 域名状态
+     * Set 域名状态:
+连接异常，
+证书已过期，
+证书已吊销，
+证书黑名单，
+证书域名不匹配，
+证书不可信，
+证书密钥弱，
+证书即将过期，少于7天，
+证书即将过期，少于30天，
+正常，
+部分异常
+     * @param Status 域名状态:
+连接异常，
+证书已过期，
+证书已吊销，
+证书黑名单，
+证书域名不匹配，
+证书不可信，
+证书密钥弱，
+证书即将过期，少于7天，
+证书即将过期，少于30天，
+正常，
+部分异常
      */
     public void setStatus(String Status) {
         this.Status = Status;
@@ -346,14 +516,14 @@ public class DomainSiteInfo extends AbstractModel{
         if (source.AutoIP != null) {
             this.AutoIP = new Boolean(source.AutoIP);
         }
-        if (source.ServerType != null) {
-            this.ServerType = new Long(source.ServerType);
+        if (source.Grade != null) {
+            this.Grade = new String(source.Grade);
         }
         if (source.Brand != null) {
             this.Brand = new String(source.Brand);
         }
-        if (source.Grade != null) {
-            this.Grade = new String(source.Grade);
+        if (source.ServerType != null) {
+            this.ServerType = new Long(source.ServerType);
         }
         if (source.GradeCode != null) {
             this.GradeCode = new Long(source.GradeCode);
@@ -387,9 +557,9 @@ public class DomainSiteInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Domain", this.Domain);
         this.setParamSimple(map, prefix + "Ip", this.Ip);
         this.setParamSimple(map, prefix + "AutoIP", this.AutoIP);
-        this.setParamSimple(map, prefix + "ServerType", this.ServerType);
-        this.setParamSimple(map, prefix + "Brand", this.Brand);
         this.setParamSimple(map, prefix + "Grade", this.Grade);
+        this.setParamSimple(map, prefix + "Brand", this.Brand);
+        this.setParamSimple(map, prefix + "ServerType", this.ServerType);
         this.setParamSimple(map, prefix + "GradeCode", this.GradeCode);
         this.setParamSimple(map, prefix + "Notice", this.Notice);
         this.setParamSimple(map, prefix + "AccountDomainId", this.AccountDomainId);

@@ -31,6 +31,14 @@ public class DeviceItem extends AbstractModel{
     private String DeviceId;
 
     /**
+    * 通道唯一标识
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ChannelId")
+    @Expose
+    private String ChannelId;
+
+    /**
      * Get 设备唯一标识
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return DeviceId 设备唯一标识
@@ -50,6 +58,26 @@ public class DeviceItem extends AbstractModel{
         this.DeviceId = DeviceId;
     }
 
+    /**
+     * Get 通道唯一标识
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ChannelId 通道唯一标识
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getChannelId() {
+        return this.ChannelId;
+    }
+
+    /**
+     * Set 通道唯一标识
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ChannelId 通道唯一标识
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setChannelId(String ChannelId) {
+        this.ChannelId = ChannelId;
+    }
+
     public DeviceItem() {
     }
 
@@ -61,6 +89,9 @@ public class DeviceItem extends AbstractModel{
         if (source.DeviceId != null) {
             this.DeviceId = new String(source.DeviceId);
         }
+        if (source.ChannelId != null) {
+            this.ChannelId = new String(source.ChannelId);
+        }
     }
 
 
@@ -69,6 +100,7 @@ public class DeviceItem extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DeviceId", this.DeviceId);
+        this.setParamSimple(map, prefix + "ChannelId", this.ChannelId);
 
     }
 }

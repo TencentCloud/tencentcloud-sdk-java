@@ -51,7 +51,7 @@ public class DescribeTendisSlowLogRequest extends AbstractModel{
     private Long MinQueryTime;
 
     /**
-    * 页面大小：20
+    * 页面大小：默认20
     */
     @SerializedName("Limit")
     @Expose
@@ -129,16 +129,16 @@ public class DescribeTendisSlowLogRequest extends AbstractModel{
     }
 
     /**
-     * Get 页面大小：20 
-     * @return Limit 页面大小：20
+     * Get 页面大小：默认20 
+     * @return Limit 页面大小：默认20
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 页面大小：20
-     * @param Limit 页面大小：20
+     * Set 页面大小：默认20
+     * @param Limit 页面大小：默认20
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

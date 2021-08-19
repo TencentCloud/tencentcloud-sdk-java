@@ -30,7 +30,7 @@ public class ModifyAutoBackupConfigRequest extends AbstractModel{
     private String InstanceId;
 
     /**
-    * 日期 Monday，Tuesday，Wednesday，Thursday，Friday，Saturday，Sunday
+    * 日期 Monday，Tuesday，Wednesday，Thursday，Friday，Saturday，Sunday，该参数暂不支持修改。
     */
     @SerializedName("WeekDays")
     @Expose
@@ -67,16 +67,16 @@ public class ModifyAutoBackupConfigRequest extends AbstractModel{
     }
 
     /**
-     * Get 日期 Monday，Tuesday，Wednesday，Thursday，Friday，Saturday，Sunday 
-     * @return WeekDays 日期 Monday，Tuesday，Wednesday，Thursday，Friday，Saturday，Sunday
+     * Get 日期 Monday，Tuesday，Wednesday，Thursday，Friday，Saturday，Sunday，该参数暂不支持修改。 
+     * @return WeekDays 日期 Monday，Tuesday，Wednesday，Thursday，Friday，Saturday，Sunday，该参数暂不支持修改。
      */
     public String [] getWeekDays() {
         return this.WeekDays;
     }
 
     /**
-     * Set 日期 Monday，Tuesday，Wednesday，Thursday，Friday，Saturday，Sunday
-     * @param WeekDays 日期 Monday，Tuesday，Wednesday，Thursday，Friday，Saturday，Sunday
+     * Set 日期 Monday，Tuesday，Wednesday，Thursday，Friday，Saturday，Sunday，该参数暂不支持修改。
+     * @param WeekDays 日期 Monday，Tuesday，Wednesday，Thursday，Friday，Saturday，Sunday，该参数暂不支持修改。
      */
     public void setWeekDays(String [] WeekDays) {
         this.WeekDays = WeekDays;

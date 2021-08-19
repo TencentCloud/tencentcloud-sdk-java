@@ -111,6 +111,38 @@ public class ImageRepository extends AbstractModel{
     private String UpdateTime;
 
     /**
+    * TcrRepoInfo值
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TcrRepoInfo")
+    @Expose
+    private TcrRepoInfo TcrRepoInfo;
+
+    /**
+    * TcrBindingId值
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TcrBindingId")
+    @Expose
+    private Long TcrBindingId;
+
+    /**
+    * applicationid值
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ApplicationId")
+    @Expose
+    private String ApplicationId;
+
+    /**
+    * ApplicationName值
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ApplicationName")
+    @Expose
+    private ScalableRule ApplicationName;
+
+    /**
      * Get 仓库名,含命名空间,如tsf/nginx
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Reponame 仓库名,含命名空间,如tsf/nginx
@@ -330,6 +362,86 @@ public class ImageRepository extends AbstractModel{
         this.UpdateTime = UpdateTime;
     }
 
+    /**
+     * Get TcrRepoInfo值
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TcrRepoInfo TcrRepoInfo值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public TcrRepoInfo getTcrRepoInfo() {
+        return this.TcrRepoInfo;
+    }
+
+    /**
+     * Set TcrRepoInfo值
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TcrRepoInfo TcrRepoInfo值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTcrRepoInfo(TcrRepoInfo TcrRepoInfo) {
+        this.TcrRepoInfo = TcrRepoInfo;
+    }
+
+    /**
+     * Get TcrBindingId值
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TcrBindingId TcrBindingId值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getTcrBindingId() {
+        return this.TcrBindingId;
+    }
+
+    /**
+     * Set TcrBindingId值
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TcrBindingId TcrBindingId值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTcrBindingId(Long TcrBindingId) {
+        this.TcrBindingId = TcrBindingId;
+    }
+
+    /**
+     * Get applicationid值
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ApplicationId applicationid值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getApplicationId() {
+        return this.ApplicationId;
+    }
+
+    /**
+     * Set applicationid值
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ApplicationId applicationid值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setApplicationId(String ApplicationId) {
+        this.ApplicationId = ApplicationId;
+    }
+
+    /**
+     * Get ApplicationName值
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ApplicationName ApplicationName值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ScalableRule getApplicationName() {
+        return this.ApplicationName;
+    }
+
+    /**
+     * Set ApplicationName值
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ApplicationName ApplicationName值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setApplicationName(ScalableRule ApplicationName) {
+        this.ApplicationName = ApplicationName;
+    }
+
     public ImageRepository() {
     }
 
@@ -371,6 +483,18 @@ public class ImageRepository extends AbstractModel{
         if (source.UpdateTime != null) {
             this.UpdateTime = new String(source.UpdateTime);
         }
+        if (source.TcrRepoInfo != null) {
+            this.TcrRepoInfo = new TcrRepoInfo(source.TcrRepoInfo);
+        }
+        if (source.TcrBindingId != null) {
+            this.TcrBindingId = new Long(source.TcrBindingId);
+        }
+        if (source.ApplicationId != null) {
+            this.ApplicationId = new String(source.ApplicationId);
+        }
+        if (source.ApplicationName != null) {
+            this.ApplicationName = new ScalableRule(source.ApplicationName);
+        }
     }
 
 
@@ -389,6 +513,10 @@ public class ImageRepository extends AbstractModel{
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "CreationTime", this.CreationTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+        this.setParamObj(map, prefix + "TcrRepoInfo.", this.TcrRepoInfo);
+        this.setParamSimple(map, prefix + "TcrBindingId", this.TcrBindingId);
+        this.setParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
+        this.setParamObj(map, prefix + "ApplicationName.", this.ApplicationName);
 
     }
 }

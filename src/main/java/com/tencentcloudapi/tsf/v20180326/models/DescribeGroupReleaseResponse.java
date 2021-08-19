@@ -13,22 +13,22 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.redis.v20180412.models;
+package com.tencentcloudapi.tsf.v20180326.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InquiryPriceCreateInstanceResponse extends AbstractModel{
+public class DescribeGroupReleaseResponse extends AbstractModel{
 
     /**
-    * 价格，单位：元
+    * 部署组发布的相关信息
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("Price")
+    @SerializedName("Result")
     @Expose
-    private Float Price;
+    private GroupRelease Result;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,23 +38,23 @@ public class InquiryPriceCreateInstanceResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 价格，单位：元
+     * Get 部署组发布的相关信息
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Price 价格，单位：元
+     * @return Result 部署组发布的相关信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Float getPrice() {
-        return this.Price;
+    public GroupRelease getResult() {
+        return this.Result;
     }
 
     /**
-     * Set 价格，单位：元
+     * Set 部署组发布的相关信息
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Price 价格，单位：元
+     * @param Result 部署组发布的相关信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setPrice(Float Price) {
-        this.Price = Price;
+    public void setResult(GroupRelease Result) {
+        this.Result = Result;
     }
 
     /**
@@ -73,16 +73,16 @@ public class InquiryPriceCreateInstanceResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public InquiryPriceCreateInstanceResponse() {
+    public DescribeGroupReleaseResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public InquiryPriceCreateInstanceResponse(InquiryPriceCreateInstanceResponse source) {
-        if (source.Price != null) {
-            this.Price = new Float(source.Price);
+    public DescribeGroupReleaseResponse(DescribeGroupReleaseResponse source) {
+        if (source.Result != null) {
+            this.Result = new GroupRelease(source.Result);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -94,7 +94,7 @@ public class InquiryPriceCreateInstanceResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Price", this.Price);
+        this.setParamObj(map, prefix + "Result.", this.Result);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

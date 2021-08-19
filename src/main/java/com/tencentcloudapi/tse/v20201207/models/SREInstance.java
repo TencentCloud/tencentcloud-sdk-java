@@ -159,6 +159,14 @@ public class SREInstance extends AbstractModel{
     private Boolean EnableInternet;
 
     /**
+    * 私有网络列表信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("VpcInfos")
+    @Expose
+    private VpcInfo [] VpcInfos;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -486,6 +494,26 @@ public class SREInstance extends AbstractModel{
         this.EnableInternet = EnableInternet;
     }
 
+    /**
+     * Get 私有网络列表信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return VpcInfos 私有网络列表信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public VpcInfo [] getVpcInfos() {
+        return this.VpcInfos;
+    }
+
+    /**
+     * Set 私有网络列表信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param VpcInfos 私有网络列表信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVpcInfos(VpcInfo [] VpcInfos) {
+        this.VpcInfos = VpcInfos;
+    }
+
     public SREInstance() {
     }
 
@@ -554,6 +582,12 @@ public class SREInstance extends AbstractModel{
         if (source.EnableInternet != null) {
             this.EnableInternet = new Boolean(source.EnableInternet);
         }
+        if (source.VpcInfos != null) {
+            this.VpcInfos = new VpcInfo[source.VpcInfos.length];
+            for (int i = 0; i < source.VpcInfos.length; i++) {
+                this.VpcInfos[i] = new VpcInfo(source.VpcInfos[i]);
+            }
+        }
     }
 
 
@@ -579,6 +613,7 @@ public class SREInstance extends AbstractModel{
         this.setParamArrayObj(map, prefix + "EnvInfos.", this.EnvInfos);
         this.setParamSimple(map, prefix + "EngineRegion", this.EngineRegion);
         this.setParamSimple(map, prefix + "EnableInternet", this.EnableInternet);
+        this.setParamArrayObj(map, prefix + "VpcInfos.", this.VpcInfos);
 
     }
 }

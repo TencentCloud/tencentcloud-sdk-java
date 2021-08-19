@@ -149,6 +149,13 @@ public class DescribeAlarmPoliciesRequest extends AbstractModel{
     private Long NotBindingNoticeRule;
 
     /**
+    * 实例分组id
+    */
+    @SerializedName("InstanceGroupId")
+    @Expose
+    private Long InstanceGroupId;
+
+    /**
      * Get 固定值，为"monitor" 
      * @return Module 固定值，为"monitor"
      */
@@ -448,6 +455,22 @@ public class DescribeAlarmPoliciesRequest extends AbstractModel{
         this.NotBindingNoticeRule = NotBindingNoticeRule;
     }
 
+    /**
+     * Get 实例分组id 
+     * @return InstanceGroupId 实例分组id
+     */
+    public Long getInstanceGroupId() {
+        return this.InstanceGroupId;
+    }
+
+    /**
+     * Set 实例分组id
+     * @param InstanceGroupId 实例分组id
+     */
+    public void setInstanceGroupId(Long InstanceGroupId) {
+        this.InstanceGroupId = InstanceGroupId;
+    }
+
     public DescribeAlarmPoliciesRequest() {
     }
 
@@ -534,6 +557,9 @@ public class DescribeAlarmPoliciesRequest extends AbstractModel{
         if (source.NotBindingNoticeRule != null) {
             this.NotBindingNoticeRule = new Long(source.NotBindingNoticeRule);
         }
+        if (source.InstanceGroupId != null) {
+            this.InstanceGroupId = new Long(source.InstanceGroupId);
+        }
     }
 
 
@@ -558,6 +584,7 @@ public class DescribeAlarmPoliciesRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "RuleTypes.", this.RuleTypes);
         this.setParamArraySimple(map, prefix + "Enable.", this.Enable);
         this.setParamSimple(map, prefix + "NotBindingNoticeRule", this.NotBindingNoticeRule);
+        this.setParamSimple(map, prefix + "InstanceGroupId", this.InstanceGroupId);
 
     }
 }

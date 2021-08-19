@@ -1581,6 +1581,26 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     }
 
     /**
+     *查询部署组相关的发布信息
+     * @param req DescribeGroupReleaseRequest
+     * @return DescribeGroupReleaseResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeGroupReleaseResponse DescribeGroupRelease(DescribeGroupReleaseRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeGroupReleaseResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeGroupReleaseResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeGroupRelease");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询网关分组监控明细数据
      * @param req DescribeGroupUseDetailRequest
      * @return DescribeGroupUseDetailResponse
@@ -2735,6 +2755,26 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
                 Type type = new TypeToken<JsonResponseModel<ModifyUploadInfoResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyUploadInfo");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *绑定解绑tcr仓库
+     * @param req OperateApplicationTcrBindingRequest
+     * @return OperateApplicationTcrBindingResponse
+     * @throws TencentCloudSDKException
+     */
+    public OperateApplicationTcrBindingResponse OperateApplicationTcrBinding(OperateApplicationTcrBindingRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<OperateApplicationTcrBindingResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<OperateApplicationTcrBindingResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "OperateApplicationTcrBinding");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

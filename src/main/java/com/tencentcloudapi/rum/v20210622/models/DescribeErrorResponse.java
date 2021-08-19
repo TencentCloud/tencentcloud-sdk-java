@@ -13,22 +13,35 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.redis.v20180412.models;
+package com.tencentcloudapi.rum.v20210622.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InquiryPriceCreateInstanceResponse extends AbstractModel{
+public class DescribeErrorResponse extends AbstractModel{
 
     /**
-    * 价格，单位：元
-注意：此字段可能返回 null，表示取不到有效值。
+    * 内容
     */
-    @SerializedName("Price")
+    @SerializedName("Content")
     @Expose
-    private Float Price;
+    private String Content;
+
+    /**
+    * 项目ID
+    */
+    @SerializedName("ID")
+    @Expose
+    private Long ID;
+
+    /**
+    * 时间
+    */
+    @SerializedName("CreateTime")
+    @Expose
+    private String CreateTime;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,23 +51,51 @@ public class InquiryPriceCreateInstanceResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 价格，单位：元
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Price 价格，单位：元
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 内容 
+     * @return Content 内容
      */
-    public Float getPrice() {
-        return this.Price;
+    public String getContent() {
+        return this.Content;
     }
 
     /**
-     * Set 价格，单位：元
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Price 价格，单位：元
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 内容
+     * @param Content 内容
      */
-    public void setPrice(Float Price) {
-        this.Price = Price;
+    public void setContent(String Content) {
+        this.Content = Content;
+    }
+
+    /**
+     * Get 项目ID 
+     * @return ID 项目ID
+     */
+    public Long getID() {
+        return this.ID;
+    }
+
+    /**
+     * Set 项目ID
+     * @param ID 项目ID
+     */
+    public void setID(Long ID) {
+        this.ID = ID;
+    }
+
+    /**
+     * Get 时间 
+     * @return CreateTime 时间
+     */
+    public String getCreateTime() {
+        return this.CreateTime;
+    }
+
+    /**
+     * Set 时间
+     * @param CreateTime 时间
+     */
+    public void setCreateTime(String CreateTime) {
+        this.CreateTime = CreateTime;
     }
 
     /**
@@ -73,16 +114,22 @@ public class InquiryPriceCreateInstanceResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public InquiryPriceCreateInstanceResponse() {
+    public DescribeErrorResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public InquiryPriceCreateInstanceResponse(InquiryPriceCreateInstanceResponse source) {
-        if (source.Price != null) {
-            this.Price = new Float(source.Price);
+    public DescribeErrorResponse(DescribeErrorResponse source) {
+        if (source.Content != null) {
+            this.Content = new String(source.Content);
+        }
+        if (source.ID != null) {
+            this.ID = new Long(source.ID);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -94,7 +141,9 @@ public class InquiryPriceCreateInstanceResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Price", this.Price);
+        this.setParamSimple(map, prefix + "Content", this.Content);
+        this.setParamSimple(map, prefix + "ID", this.ID);
+        this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

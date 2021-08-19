@@ -103,6 +103,30 @@ public class AllDeviceInfo extends AbstractModel{
     private Long Recordable;
 
     /**
+    * 设备接入协议
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Protocol")
+    @Expose
+    private String Protocol;
+
+    /**
+    * 组Id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("GroupId")
+    @Expose
+    private String GroupId;
+
+    /**
+    * 组名
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("GroupName")
+    @Expose
+    private String GroupName;
+
+    /**
      * Get 设备唯一标识
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return DeviceId 设备唯一标识
@@ -302,6 +326,66 @@ public class AllDeviceInfo extends AbstractModel{
         this.Recordable = Recordable;
     }
 
+    /**
+     * Get 设备接入协议
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Protocol 设备接入协议
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getProtocol() {
+        return this.Protocol;
+    }
+
+    /**
+     * Set 设备接入协议
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Protocol 设备接入协议
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProtocol(String Protocol) {
+        this.Protocol = Protocol;
+    }
+
+    /**
+     * Get 组Id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return GroupId 组Id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getGroupId() {
+        return this.GroupId;
+    }
+
+    /**
+     * Set 组Id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param GroupId 组Id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setGroupId(String GroupId) {
+        this.GroupId = GroupId;
+    }
+
+    /**
+     * Get 组名
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return GroupName 组名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getGroupName() {
+        return this.GroupName;
+    }
+
+    /**
+     * Set 组名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param GroupName 组名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setGroupName(String GroupName) {
+        this.GroupName = GroupName;
+    }
+
     public AllDeviceInfo() {
     }
 
@@ -340,6 +424,15 @@ public class AllDeviceInfo extends AbstractModel{
         if (source.Recordable != null) {
             this.Recordable = new Long(source.Recordable);
         }
+        if (source.Protocol != null) {
+            this.Protocol = new String(source.Protocol);
+        }
+        if (source.GroupId != null) {
+            this.GroupId = new String(source.GroupId);
+        }
+        if (source.GroupName != null) {
+            this.GroupName = new String(source.GroupName);
+        }
     }
 
 
@@ -357,6 +450,9 @@ public class AllDeviceInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "DeviceCode", this.DeviceCode);
         this.setParamSimple(map, prefix + "IsRecord", this.IsRecord);
         this.setParamSimple(map, prefix + "Recordable", this.Recordable);
+        this.setParamSimple(map, prefix + "Protocol", this.Protocol);
+        this.setParamSimple(map, prefix + "GroupId", this.GroupId);
+        this.setParamSimple(map, prefix + "GroupName", this.GroupName);
 
     }
 }

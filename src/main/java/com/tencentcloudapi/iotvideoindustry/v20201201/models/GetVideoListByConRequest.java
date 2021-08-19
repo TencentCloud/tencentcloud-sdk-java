@@ -59,6 +59,20 @@ public class GetVideoListByConRequest extends AbstractModel{
     private String Date;
 
     /**
+    * 通道唯一标识
+    */
+    @SerializedName("ChannelId")
+    @Expose
+    private String ChannelId;
+
+    /**
+    * 1: 云端录制 2: 本地录制
+    */
+    @SerializedName("Type")
+    @Expose
+    private Long Type;
+
+    /**
      * Get 设备唯一标识 
      * @return DeviceId 设备唯一标识
      */
@@ -142,6 +156,38 @@ public class GetVideoListByConRequest extends AbstractModel{
         this.Date = Date;
     }
 
+    /**
+     * Get 通道唯一标识 
+     * @return ChannelId 通道唯一标识
+     */
+    public String getChannelId() {
+        return this.ChannelId;
+    }
+
+    /**
+     * Set 通道唯一标识
+     * @param ChannelId 通道唯一标识
+     */
+    public void setChannelId(String ChannelId) {
+        this.ChannelId = ChannelId;
+    }
+
+    /**
+     * Get 1: 云端录制 2: 本地录制 
+     * @return Type 1: 云端录制 2: 本地录制
+     */
+    public Long getType() {
+        return this.Type;
+    }
+
+    /**
+     * Set 1: 云端录制 2: 本地录制
+     * @param Type 1: 云端录制 2: 本地录制
+     */
+    public void setType(Long Type) {
+        this.Type = Type;
+    }
+
     public GetVideoListByConRequest() {
     }
 
@@ -165,6 +211,12 @@ public class GetVideoListByConRequest extends AbstractModel{
         if (source.Date != null) {
             this.Date = new String(source.Date);
         }
+        if (source.ChannelId != null) {
+            this.ChannelId = new String(source.ChannelId);
+        }
+        if (source.Type != null) {
+            this.Type = new Long(source.Type);
+        }
     }
 
 
@@ -177,6 +229,8 @@ public class GetVideoListByConRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "LatestDay", this.LatestDay);
         this.setParamSimple(map, prefix + "Date", this.Date);
+        this.setParamSimple(map, prefix + "ChannelId", this.ChannelId);
+        this.setParamSimple(map, prefix + "Type", this.Type);
 
     }
 }

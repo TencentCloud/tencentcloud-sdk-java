@@ -23,21 +23,21 @@ import java.util.HashMap;
 public class DescribeBackupUrlResponse extends AbstractModel{
 
     /**
-    * 外网下载地址（6小时）
+    * 外网下载地址（6小时内链接有效），该字段正在逐步废弃中。
     */
     @SerializedName("DownloadUrl")
     @Expose
     private String [] DownloadUrl;
 
     /**
-    * 内网下载地址（6小时）
+    * 内网下载地址（6小时内链接有效），该字段正在逐步废弃中。
     */
     @SerializedName("InnerDownloadUrl")
     @Expose
     private String [] InnerDownloadUrl;
 
     /**
-    * 文件名称（仅tendis实例有值）
+    * 文件名称，该字段正在逐步废弃中。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Filenames")
@@ -60,41 +60,41 @@ public class DescribeBackupUrlResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 外网下载地址（6小时） 
-     * @return DownloadUrl 外网下载地址（6小时）
+     * Get 外网下载地址（6小时内链接有效），该字段正在逐步废弃中。 
+     * @return DownloadUrl 外网下载地址（6小时内链接有效），该字段正在逐步废弃中。
      */
     public String [] getDownloadUrl() {
         return this.DownloadUrl;
     }
 
     /**
-     * Set 外网下载地址（6小时）
-     * @param DownloadUrl 外网下载地址（6小时）
+     * Set 外网下载地址（6小时内链接有效），该字段正在逐步废弃中。
+     * @param DownloadUrl 外网下载地址（6小时内链接有效），该字段正在逐步废弃中。
      */
     public void setDownloadUrl(String [] DownloadUrl) {
         this.DownloadUrl = DownloadUrl;
     }
 
     /**
-     * Get 内网下载地址（6小时） 
-     * @return InnerDownloadUrl 内网下载地址（6小时）
+     * Get 内网下载地址（6小时内链接有效），该字段正在逐步废弃中。 
+     * @return InnerDownloadUrl 内网下载地址（6小时内链接有效），该字段正在逐步废弃中。
      */
     public String [] getInnerDownloadUrl() {
         return this.InnerDownloadUrl;
     }
 
     /**
-     * Set 内网下载地址（6小时）
-     * @param InnerDownloadUrl 内网下载地址（6小时）
+     * Set 内网下载地址（6小时内链接有效），该字段正在逐步废弃中。
+     * @param InnerDownloadUrl 内网下载地址（6小时内链接有效），该字段正在逐步废弃中。
      */
     public void setInnerDownloadUrl(String [] InnerDownloadUrl) {
         this.InnerDownloadUrl = InnerDownloadUrl;
     }
 
     /**
-     * Get 文件名称（仅tendis实例有值）
+     * Get 文件名称，该字段正在逐步废弃中。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Filenames 文件名称（仅tendis实例有值）
+     * @return Filenames 文件名称，该字段正在逐步废弃中。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getFilenames() {
@@ -102,9 +102,9 @@ public class DescribeBackupUrlResponse extends AbstractModel{
     }
 
     /**
-     * Set 文件名称（仅tendis实例有值）
+     * Set 文件名称，该字段正在逐步废弃中。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Filenames 文件名称（仅tendis实例有值）
+     * @param Filenames 文件名称，该字段正在逐步废弃中。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFilenames(String [] Filenames) {

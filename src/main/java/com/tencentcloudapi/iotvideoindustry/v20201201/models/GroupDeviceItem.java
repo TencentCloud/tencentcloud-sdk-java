@@ -95,6 +95,14 @@ public class GroupDeviceItem extends AbstractModel{
     private Long Recordable;
 
     /**
+    * 设备接入协议
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Protocol")
+    @Expose
+    private String Protocol;
+
+    /**
      * Get 设备唯一标识
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return DeviceId 设备唯一标识
@@ -274,6 +282,26 @@ public class GroupDeviceItem extends AbstractModel{
         this.Recordable = Recordable;
     }
 
+    /**
+     * Get 设备接入协议
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Protocol 设备接入协议
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getProtocol() {
+        return this.Protocol;
+    }
+
+    /**
+     * Set 设备接入协议
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Protocol 设备接入协议
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProtocol(String Protocol) {
+        this.Protocol = Protocol;
+    }
+
     public GroupDeviceItem() {
     }
 
@@ -309,6 +337,9 @@ public class GroupDeviceItem extends AbstractModel{
         if (source.Recordable != null) {
             this.Recordable = new Long(source.Recordable);
         }
+        if (source.Protocol != null) {
+            this.Protocol = new String(source.Protocol);
+        }
     }
 
 
@@ -325,6 +356,7 @@ public class GroupDeviceItem extends AbstractModel{
         this.setParamSimple(map, prefix + "DeviceCode", this.DeviceCode);
         this.setParamSimple(map, prefix + "IsRecord", this.IsRecord);
         this.setParamSimple(map, prefix + "Recordable", this.Recordable);
+        this.setParamSimple(map, prefix + "Protocol", this.Protocol);
 
     }
 }

@@ -44,6 +44,20 @@ public class GetRecordDatesByDevRequest extends AbstractModel{
     private Long Limit;
 
     /**
+    * 通道唯一标识
+    */
+    @SerializedName("ChannelId")
+    @Expose
+    private String ChannelId;
+
+    /**
+    * 1: 云端录制 2: 本地录制
+    */
+    @SerializedName("Type")
+    @Expose
+    private Long Type;
+
+    /**
      * Get 设备唯一标识 
      * @return DeviceId 设备唯一标识
      */
@@ -91,6 +105,38 @@ public class GetRecordDatesByDevRequest extends AbstractModel{
         this.Limit = Limit;
     }
 
+    /**
+     * Get 通道唯一标识 
+     * @return ChannelId 通道唯一标识
+     */
+    public String getChannelId() {
+        return this.ChannelId;
+    }
+
+    /**
+     * Set 通道唯一标识
+     * @param ChannelId 通道唯一标识
+     */
+    public void setChannelId(String ChannelId) {
+        this.ChannelId = ChannelId;
+    }
+
+    /**
+     * Get 1: 云端录制 2: 本地录制 
+     * @return Type 1: 云端录制 2: 本地录制
+     */
+    public Long getType() {
+        return this.Type;
+    }
+
+    /**
+     * Set 1: 云端录制 2: 本地录制
+     * @param Type 1: 云端录制 2: 本地录制
+     */
+    public void setType(Long Type) {
+        this.Type = Type;
+    }
+
     public GetRecordDatesByDevRequest() {
     }
 
@@ -108,6 +154,12 @@ public class GetRecordDatesByDevRequest extends AbstractModel{
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
         }
+        if (source.ChannelId != null) {
+            this.ChannelId = new String(source.ChannelId);
+        }
+        if (source.Type != null) {
+            this.Type = new Long(source.Type);
+        }
     }
 
 
@@ -118,6 +170,8 @@ public class GetRecordDatesByDevRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "DeviceId", this.DeviceId);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "ChannelId", this.ChannelId);
+        this.setParamSimple(map, prefix + "Type", this.Type);
 
     }
 }

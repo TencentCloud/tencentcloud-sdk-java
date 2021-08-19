@@ -44,6 +44,27 @@ public class DescribeImageRepositoryRequest extends AbstractModel{
     private Long Limit;
 
     /**
+    * 企业: tcr ；个人: personal或者不填
+    */
+    @SerializedName("RepoType")
+    @Expose
+    private String RepoType;
+
+    /**
+    * 应用id
+    */
+    @SerializedName("ApplicationId")
+    @Expose
+    private String ApplicationId;
+
+    /**
+    * TcrRepoInfo值
+    */
+    @SerializedName("TcrRepoInfo")
+    @Expose
+    private TcrRepoInfo TcrRepoInfo;
+
+    /**
      * Get 仓库名，搜索关键字,不带命名空间的 
      * @return SearchWord 仓库名，搜索关键字,不带命名空间的
      */
@@ -91,6 +112,54 @@ public class DescribeImageRepositoryRequest extends AbstractModel{
         this.Limit = Limit;
     }
 
+    /**
+     * Get 企业: tcr ；个人: personal或者不填 
+     * @return RepoType 企业: tcr ；个人: personal或者不填
+     */
+    public String getRepoType() {
+        return this.RepoType;
+    }
+
+    /**
+     * Set 企业: tcr ；个人: personal或者不填
+     * @param RepoType 企业: tcr ；个人: personal或者不填
+     */
+    public void setRepoType(String RepoType) {
+        this.RepoType = RepoType;
+    }
+
+    /**
+     * Get 应用id 
+     * @return ApplicationId 应用id
+     */
+    public String getApplicationId() {
+        return this.ApplicationId;
+    }
+
+    /**
+     * Set 应用id
+     * @param ApplicationId 应用id
+     */
+    public void setApplicationId(String ApplicationId) {
+        this.ApplicationId = ApplicationId;
+    }
+
+    /**
+     * Get TcrRepoInfo值 
+     * @return TcrRepoInfo TcrRepoInfo值
+     */
+    public TcrRepoInfo getTcrRepoInfo() {
+        return this.TcrRepoInfo;
+    }
+
+    /**
+     * Set TcrRepoInfo值
+     * @param TcrRepoInfo TcrRepoInfo值
+     */
+    public void setTcrRepoInfo(TcrRepoInfo TcrRepoInfo) {
+        this.TcrRepoInfo = TcrRepoInfo;
+    }
+
     public DescribeImageRepositoryRequest() {
     }
 
@@ -108,6 +177,15 @@ public class DescribeImageRepositoryRequest extends AbstractModel{
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
         }
+        if (source.RepoType != null) {
+            this.RepoType = new String(source.RepoType);
+        }
+        if (source.ApplicationId != null) {
+            this.ApplicationId = new String(source.ApplicationId);
+        }
+        if (source.TcrRepoInfo != null) {
+            this.TcrRepoInfo = new TcrRepoInfo(source.TcrRepoInfo);
+        }
     }
 
 
@@ -118,6 +196,9 @@ public class DescribeImageRepositoryRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "SearchWord", this.SearchWord);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "RepoType", this.RepoType);
+        this.setParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
+        this.setParamObj(map, prefix + "TcrRepoInfo.", this.TcrRepoInfo);
 
     }
 }

@@ -23,7 +23,10 @@ import java.util.HashMap;
 public class LimitInfo extends AbstractModel{
 
     /**
-    * 通知类型
+    * 通知类型：
+limit_emai：邮件
+limit_wechat：微信
+limit_phone：手机
     */
     @SerializedName("Type")
     @Expose
@@ -44,16 +47,28 @@ public class LimitInfo extends AbstractModel{
     private Long Sent;
 
     /**
-     * Get 通知类型 
-     * @return Type 通知类型
+     * Get 通知类型：
+limit_emai：邮件
+limit_wechat：微信
+limit_phone：手机 
+     * @return Type 通知类型：
+limit_emai：邮件
+limit_wechat：微信
+limit_phone：手机
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 通知类型
-     * @param Type 通知类型
+     * Set 通知类型：
+limit_emai：邮件
+limit_wechat：微信
+limit_phone：手机
+     * @param Type 通知类型：
+limit_emai：邮件
+limit_wechat：微信
+limit_phone：手机
      */
     public void setType(String Type) {
         this.Type = Type;

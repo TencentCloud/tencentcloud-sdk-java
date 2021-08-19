@@ -58,6 +58,13 @@ public class DescribeGroupDevicesRequest extends AbstractModel{
     private Long Recordable;
 
     /**
+    * 当Group是普通组的时候，支持根据deviceTypes筛选类型
+    */
+    @SerializedName("DeviceTypes")
+    @Expose
+    private Long [] DeviceTypes;
+
+    /**
      * Get 分组ID 
      * @return GroupId 分组ID
      */
@@ -137,6 +144,22 @@ public class DescribeGroupDevicesRequest extends AbstractModel{
         this.Recordable = Recordable;
     }
 
+    /**
+     * Get 当Group是普通组的时候，支持根据deviceTypes筛选类型 
+     * @return DeviceTypes 当Group是普通组的时候，支持根据deviceTypes筛选类型
+     */
+    public Long [] getDeviceTypes() {
+        return this.DeviceTypes;
+    }
+
+    /**
+     * Set 当Group是普通组的时候，支持根据deviceTypes筛选类型
+     * @param DeviceTypes 当Group是普通组的时候，支持根据deviceTypes筛选类型
+     */
+    public void setDeviceTypes(Long [] DeviceTypes) {
+        this.DeviceTypes = DeviceTypes;
+    }
+
     public DescribeGroupDevicesRequest() {
     }
 
@@ -160,6 +183,12 @@ public class DescribeGroupDevicesRequest extends AbstractModel{
         if (source.Recordable != null) {
             this.Recordable = new Long(source.Recordable);
         }
+        if (source.DeviceTypes != null) {
+            this.DeviceTypes = new Long[source.DeviceTypes.length];
+            for (int i = 0; i < source.DeviceTypes.length; i++) {
+                this.DeviceTypes[i] = new Long(source.DeviceTypes[i]);
+            }
+        }
     }
 
 
@@ -172,6 +201,7 @@ public class DescribeGroupDevicesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "NickName", this.NickName);
         this.setParamSimple(map, prefix + "Recordable", this.Recordable);
+        this.setParamArraySimple(map, prefix + "DeviceTypes.", this.DeviceTypes);
 
     }
 }

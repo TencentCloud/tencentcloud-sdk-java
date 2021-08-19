@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeInstanceShardsRequest extends AbstractModel{
 
     /**
-    * 实例id
+    * 实例ID
     */
     @SerializedName("InstanceId")
     @Expose
@@ -37,16 +37,16 @@ public class DescribeInstanceShardsRequest extends AbstractModel{
     private Boolean FilterSlave;
 
     /**
-     * Get 实例id 
-     * @return InstanceId 实例id
+     * Get 实例ID 
+     * @return InstanceId 实例ID
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例id
-     * @param InstanceId 实例id
+     * Set 实例ID
+     * @param InstanceId 实例ID
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

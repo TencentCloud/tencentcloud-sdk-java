@@ -37,6 +37,13 @@ public class DescribeDeviceStreamsRequest extends AbstractModel{
     private Long ExpireTime;
 
     /**
+    * 通道唯一标识
+    */
+    @SerializedName("ChannelId")
+    @Expose
+    private String ChannelId;
+
+    /**
      * Get 设备唯一标识 
      * @return DeviceId 设备唯一标识
      */
@@ -68,6 +75,22 @@ public class DescribeDeviceStreamsRequest extends AbstractModel{
         this.ExpireTime = ExpireTime;
     }
 
+    /**
+     * Get 通道唯一标识 
+     * @return ChannelId 通道唯一标识
+     */
+    public String getChannelId() {
+        return this.ChannelId;
+    }
+
+    /**
+     * Set 通道唯一标识
+     * @param ChannelId 通道唯一标识
+     */
+    public void setChannelId(String ChannelId) {
+        this.ChannelId = ChannelId;
+    }
+
     public DescribeDeviceStreamsRequest() {
     }
 
@@ -82,6 +105,9 @@ public class DescribeDeviceStreamsRequest extends AbstractModel{
         if (source.ExpireTime != null) {
             this.ExpireTime = new Long(source.ExpireTime);
         }
+        if (source.ChannelId != null) {
+            this.ChannelId = new String(source.ChannelId);
+        }
     }
 
 
@@ -91,6 +117,7 @@ public class DescribeDeviceStreamsRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DeviceId", this.DeviceId);
         this.setParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
+        this.setParamSimple(map, prefix + "ChannelId", this.ChannelId);
 
     }
 }

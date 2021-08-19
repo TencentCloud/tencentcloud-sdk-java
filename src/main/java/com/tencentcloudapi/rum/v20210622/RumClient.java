@@ -78,4 +78,24 @@ public class RumClient extends AbstractClient{
         return rsp.response;
     }
 
+    /**
+     *获取首页错误信息
+     * @param req DescribeErrorRequest
+     * @return DescribeErrorResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeErrorResponse DescribeError(DescribeErrorRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeErrorResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeErrorResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeError");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
 }

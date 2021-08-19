@@ -39,7 +39,7 @@ public class SecurityGroupBothWayInfo extends AbstractModel{
     private String SourceId;
 
     /**
-    * 访问源类型，默认为0，1: VPC, 2: SUBNET, 3: CVM, 4: CLB, 5: ENI, 6: CDB, 100:资源组
+    * 访问源类型，默认为0，0: IP, 1: VPC, 2: SUBNET, 3: CVM, 4: CLB, 5: ENI, 6: CDB, 7: 参数模板, 100: 资产分组
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SourceType")
@@ -55,7 +55,7 @@ public class SecurityGroupBothWayInfo extends AbstractModel{
     private String TargetId;
 
     /**
-    * 访问目的类型，默认为0，1: VPC, 2: SUBNET, 3: CVM, 4: CLB, 5: ENI, 6: CDB, 100:资源组
+    * 访问目的类型，默认为0，0: IP, 1: VPC, 2: SUBNET, 3: CVM, 4: CLB, 5: ENI, 6: CDB, 7: 参数模板, 100: 资产分组
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TargetType")
@@ -150,7 +150,7 @@ public class SecurityGroupBothWayInfo extends AbstractModel{
     private String SubnetId;
 
     /**
-    * 子网ID
+    * 实例名称
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceName")
@@ -230,9 +230,9 @@ public class SecurityGroupBothWayInfo extends AbstractModel{
     }
 
     /**
-     * Get 访问源类型，默认为0，1: VPC, 2: SUBNET, 3: CVM, 4: CLB, 5: ENI, 6: CDB, 100:资源组
+     * Get 访问源类型，默认为0，0: IP, 1: VPC, 2: SUBNET, 3: CVM, 4: CLB, 5: ENI, 6: CDB, 7: 参数模板, 100: 资产分组
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SourceType 访问源类型，默认为0，1: VPC, 2: SUBNET, 3: CVM, 4: CLB, 5: ENI, 6: CDB, 100:资源组
+     * @return SourceType 访问源类型，默认为0，0: IP, 1: VPC, 2: SUBNET, 3: CVM, 4: CLB, 5: ENI, 6: CDB, 7: 参数模板, 100: 资产分组
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSourceType() {
@@ -240,9 +240,9 @@ public class SecurityGroupBothWayInfo extends AbstractModel{
     }
 
     /**
-     * Set 访问源类型，默认为0，1: VPC, 2: SUBNET, 3: CVM, 4: CLB, 5: ENI, 6: CDB, 100:资源组
+     * Set 访问源类型，默认为0，0: IP, 1: VPC, 2: SUBNET, 3: CVM, 4: CLB, 5: ENI, 6: CDB, 7: 参数模板, 100: 资产分组
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SourceType 访问源类型，默认为0，1: VPC, 2: SUBNET, 3: CVM, 4: CLB, 5: ENI, 6: CDB, 100:资源组
+     * @param SourceType 访问源类型，默认为0，0: IP, 1: VPC, 2: SUBNET, 3: CVM, 4: CLB, 5: ENI, 6: CDB, 7: 参数模板, 100: 资产分组
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSourceType(Long SourceType) {
@@ -270,9 +270,9 @@ public class SecurityGroupBothWayInfo extends AbstractModel{
     }
 
     /**
-     * Get 访问目的类型，默认为0，1: VPC, 2: SUBNET, 3: CVM, 4: CLB, 5: ENI, 6: CDB, 100:资源组
+     * Get 访问目的类型，默认为0，0: IP, 1: VPC, 2: SUBNET, 3: CVM, 4: CLB, 5: ENI, 6: CDB, 7: 参数模板, 100: 资产分组
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TargetType 访问目的类型，默认为0，1: VPC, 2: SUBNET, 3: CVM, 4: CLB, 5: ENI, 6: CDB, 100:资源组
+     * @return TargetType 访问目的类型，默认为0，0: IP, 1: VPC, 2: SUBNET, 3: CVM, 4: CLB, 5: ENI, 6: CDB, 7: 参数模板, 100: 资产分组
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTargetType() {
@@ -280,9 +280,9 @@ public class SecurityGroupBothWayInfo extends AbstractModel{
     }
 
     /**
-     * Set 访问目的类型，默认为0，1: VPC, 2: SUBNET, 3: CVM, 4: CLB, 5: ENI, 6: CDB, 100:资源组
+     * Set 访问目的类型，默认为0，0: IP, 1: VPC, 2: SUBNET, 3: CVM, 4: CLB, 5: ENI, 6: CDB, 7: 参数模板, 100: 资产分组
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TargetType 访问目的类型，默认为0，1: VPC, 2: SUBNET, 3: CVM, 4: CLB, 5: ENI, 6: CDB, 100:资源组
+     * @param TargetType 访问目的类型，默认为0，0: IP, 1: VPC, 2: SUBNET, 3: CVM, 4: CLB, 5: ENI, 6: CDB, 7: 参数模板, 100: 资产分组
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTargetType(Long TargetType) {
@@ -506,9 +506,9 @@ public class SecurityGroupBothWayInfo extends AbstractModel{
     }
 
     /**
-     * Get 子网ID
+     * Get 实例名称
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InstanceName 子网ID
+     * @return InstanceName 实例名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceName() {
@@ -516,9 +516,9 @@ public class SecurityGroupBothWayInfo extends AbstractModel{
     }
 
     /**
-     * Set 子网ID
+     * Set 实例名称
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InstanceName 子网ID
+     * @param InstanceName 实例名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceName(String InstanceName) {

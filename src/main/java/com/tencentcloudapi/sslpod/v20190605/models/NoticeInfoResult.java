@@ -30,7 +30,7 @@ public class NoticeInfoResult extends AbstractModel{
     private Long Id;
 
     /**
-    * 通知开关信息
+    * 通知开关信息；0：关闭；15开启
     */
     @SerializedName("NoticeType")
     @Expose
@@ -60,16 +60,16 @@ public class NoticeInfoResult extends AbstractModel{
     }
 
     /**
-     * Get 通知开关信息 
-     * @return NoticeType 通知开关信息
+     * Get 通知开关信息；0：关闭；15开启 
+     * @return NoticeType 通知开关信息；0：关闭；15开启
      */
     public Long getNoticeType() {
         return this.NoticeType;
     }
 
     /**
-     * Set 通知开关信息
-     * @param NoticeType 通知开关信息
+     * Set 通知开关信息；0：关闭；15开启
+     * @param NoticeType 通知开关信息；0：关闭；15开启
      */
     public void setNoticeType(Long NoticeType) {
         this.NoticeType = NoticeType;

@@ -30,21 +30,21 @@ public class ModifyParamTemplateRequest extends AbstractModel{
     private String TemplateId;
 
     /**
-    * 参数模板名称。
+    * 参数模板修改后的新名称。
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 参数模板描述。
+    * 参数模板修改后的新描述。
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * 参数列表。
+    * 修改后的新参数列表。
     */
     @SerializedName("ParamList")
     @Expose
@@ -67,48 +67,48 @@ public class ModifyParamTemplateRequest extends AbstractModel{
     }
 
     /**
-     * Get 参数模板名称。 
-     * @return Name 参数模板名称。
+     * Get 参数模板修改后的新名称。 
+     * @return Name 参数模板修改后的新名称。
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 参数模板名称。
-     * @param Name 参数模板名称。
+     * Set 参数模板修改后的新名称。
+     * @param Name 参数模板修改后的新名称。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 参数模板描述。 
-     * @return Description 参数模板描述。
+     * Get 参数模板修改后的新描述。 
+     * @return Description 参数模板修改后的新描述。
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 参数模板描述。
-     * @param Description 参数模板描述。
+     * Set 参数模板修改后的新描述。
+     * @param Description 参数模板修改后的新描述。
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 参数列表。 
-     * @return ParamList 参数列表。
+     * Get 修改后的新参数列表。 
+     * @return ParamList 修改后的新参数列表。
      */
     public InstanceParam [] getParamList() {
         return this.ParamList;
     }
 
     /**
-     * Set 参数列表。
-     * @param ParamList 参数列表。
+     * Set 修改后的新参数列表。
+     * @param ParamList 修改后的新参数列表。
      */
     public void setParamList(InstanceParam [] ParamList) {
         this.ParamList = ParamList;

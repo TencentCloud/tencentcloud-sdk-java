@@ -58,6 +58,13 @@ public class DescribeRecordStreamRequest extends AbstractModel{
     private Long EndTime;
 
     /**
+    * 通道唯一标识
+    */
+    @SerializedName("ChannelId")
+    @Expose
+    private String ChannelId;
+
+    /**
      * Get 设备Id 
      * @return DeviceId 设备Id
      */
@@ -137,6 +144,22 @@ public class DescribeRecordStreamRequest extends AbstractModel{
         this.EndTime = EndTime;
     }
 
+    /**
+     * Get 通道唯一标识 
+     * @return ChannelId 通道唯一标识
+     */
+    public String getChannelId() {
+        return this.ChannelId;
+    }
+
+    /**
+     * Set 通道唯一标识
+     * @param ChannelId 通道唯一标识
+     */
+    public void setChannelId(String ChannelId) {
+        this.ChannelId = ChannelId;
+    }
+
     public DescribeRecordStreamRequest() {
     }
 
@@ -160,6 +183,9 @@ public class DescribeRecordStreamRequest extends AbstractModel{
         if (source.EndTime != null) {
             this.EndTime = new Long(source.EndTime);
         }
+        if (source.ChannelId != null) {
+            this.ChannelId = new String(source.ChannelId);
+        }
     }
 
 
@@ -172,6 +198,7 @@ public class DescribeRecordStreamRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "RecordId", this.RecordId);
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
+        this.setParamSimple(map, prefix + "ChannelId", this.ChannelId);
 
     }
 }

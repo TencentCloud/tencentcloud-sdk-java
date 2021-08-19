@@ -79,14 +79,14 @@ public class DeployContainerGroupRequest extends AbstractModel{
     private String JvmOpts;
 
     /**
-    * 业务容器分配的 CPU 核数，对应 K8S 的 request
+    * 业务容器分配的 CPU 核数，对应 K8S 的 request，默认0.25
     */
     @SerializedName("CpuRequest")
     @Expose
     private String CpuRequest;
 
     /**
-    * 业务容器分配的内存 MiB 数，对应 K8S 的 request
+    * 业务容器分配的内存 MiB 数，对应 K8S 的 request，默认640 MiB
     */
     @SerializedName("MemRequest")
     @Expose
@@ -226,6 +226,20 @@ public class DeployContainerGroupRequest extends AbstractModel{
     private SchedulingStrategy SchedulingStrategy;
 
     /**
+    * 是否进行增量部署，默认为false，全量更新
+    */
+    @SerializedName("IncrementalDeployment")
+    @Expose
+    private Boolean IncrementalDeployment;
+
+    /**
+    * tcr或者不填
+    */
+    @SerializedName("RepoType")
+    @Expose
+    private String RepoType;
+
+    /**
      * Get 部署组ID，分组唯一标识 
      * @return GroupId 部署组ID，分组唯一标识
      */
@@ -354,32 +368,32 @@ public class DeployContainerGroupRequest extends AbstractModel{
     }
 
     /**
-     * Get 业务容器分配的 CPU 核数，对应 K8S 的 request 
-     * @return CpuRequest 业务容器分配的 CPU 核数，对应 K8S 的 request
+     * Get 业务容器分配的 CPU 核数，对应 K8S 的 request，默认0.25 
+     * @return CpuRequest 业务容器分配的 CPU 核数，对应 K8S 的 request，默认0.25
      */
     public String getCpuRequest() {
         return this.CpuRequest;
     }
 
     /**
-     * Set 业务容器分配的 CPU 核数，对应 K8S 的 request
-     * @param CpuRequest 业务容器分配的 CPU 核数，对应 K8S 的 request
+     * Set 业务容器分配的 CPU 核数，对应 K8S 的 request，默认0.25
+     * @param CpuRequest 业务容器分配的 CPU 核数，对应 K8S 的 request，默认0.25
      */
     public void setCpuRequest(String CpuRequest) {
         this.CpuRequest = CpuRequest;
     }
 
     /**
-     * Get 业务容器分配的内存 MiB 数，对应 K8S 的 request 
-     * @return MemRequest 业务容器分配的内存 MiB 数，对应 K8S 的 request
+     * Get 业务容器分配的内存 MiB 数，对应 K8S 的 request，默认640 MiB 
+     * @return MemRequest 业务容器分配的内存 MiB 数，对应 K8S 的 request，默认640 MiB
      */
     public String getMemRequest() {
         return this.MemRequest;
     }
 
     /**
-     * Set 业务容器分配的内存 MiB 数，对应 K8S 的 request
-     * @param MemRequest 业务容器分配的内存 MiB 数，对应 K8S 的 request
+     * Set 业务容器分配的内存 MiB 数，对应 K8S 的 request，默认640 MiB
+     * @param MemRequest 业务容器分配的内存 MiB 数，对应 K8S 的 request，默认640 MiB
      */
     public void setMemRequest(String MemRequest) {
         this.MemRequest = MemRequest;
@@ -689,6 +703,38 @@ public class DeployContainerGroupRequest extends AbstractModel{
         this.SchedulingStrategy = SchedulingStrategy;
     }
 
+    /**
+     * Get 是否进行增量部署，默认为false，全量更新 
+     * @return IncrementalDeployment 是否进行增量部署，默认为false，全量更新
+     */
+    public Boolean getIncrementalDeployment() {
+        return this.IncrementalDeployment;
+    }
+
+    /**
+     * Set 是否进行增量部署，默认为false，全量更新
+     * @param IncrementalDeployment 是否进行增量部署，默认为false，全量更新
+     */
+    public void setIncrementalDeployment(Boolean IncrementalDeployment) {
+        this.IncrementalDeployment = IncrementalDeployment;
+    }
+
+    /**
+     * Get tcr或者不填 
+     * @return RepoType tcr或者不填
+     */
+    public String getRepoType() {
+        return this.RepoType;
+    }
+
+    /**
+     * Set tcr或者不填
+     * @param RepoType tcr或者不填
+     */
+    public void setRepoType(String RepoType) {
+        this.RepoType = RepoType;
+    }
+
     public DeployContainerGroupRequest() {
     }
 
@@ -787,6 +833,12 @@ public class DeployContainerGroupRequest extends AbstractModel{
         if (source.SchedulingStrategy != null) {
             this.SchedulingStrategy = new SchedulingStrategy(source.SchedulingStrategy);
         }
+        if (source.IncrementalDeployment != null) {
+            this.IncrementalDeployment = new Boolean(source.IncrementalDeployment);
+        }
+        if (source.RepoType != null) {
+            this.RepoType = new String(source.RepoType);
+        }
     }
 
 
@@ -823,6 +875,8 @@ public class DeployContainerGroupRequest extends AbstractModel{
         this.setParamObj(map, prefix + "ServiceSetting.", this.ServiceSetting);
         this.setParamSimple(map, prefix + "DeployAgent", this.DeployAgent);
         this.setParamObj(map, prefix + "SchedulingStrategy.", this.SchedulingStrategy);
+        this.setParamSimple(map, prefix + "IncrementalDeployment", this.IncrementalDeployment);
+        this.setParamSimple(map, prefix + "RepoType", this.RepoType);
 
     }
 }

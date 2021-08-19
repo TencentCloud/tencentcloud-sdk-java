@@ -79,6 +79,26 @@ public class IotvideoindustryClient extends AbstractClient{
     }
 
     /**
+     *对回放流进行控制，包括暂停、播放、拉动、结束等
+     * @param req ControlRecordStreamRequest
+     * @return ControlRecordStreamResponse
+     * @throws TencentCloudSDKException
+     */
+    public ControlRecordStreamResponse ControlRecordStream(ControlRecordStreamRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ControlRecordStreamResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ControlRecordStreamResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ControlRecordStream");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口(CreateDevice) 用于创建设备。
      * @param req CreateDeviceRequest
      * @return CreateDeviceResponse
