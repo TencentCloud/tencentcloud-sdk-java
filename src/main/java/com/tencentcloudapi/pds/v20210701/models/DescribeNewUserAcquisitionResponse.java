@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeNewUserAcquisitionResponse extends AbstractModel{
 
     /**
-    * 用户信誉值
+    * 用户信誉分，1-5从低到高
     */
     @SerializedName("ServiceRsp")
     @Expose
@@ -37,16 +37,16 @@ public class DescribeNewUserAcquisitionResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 用户信誉值 
-     * @return ServiceRsp 用户信誉值
+     * Get 用户信誉分，1-5从低到高 
+     * @return ServiceRsp 用户信誉分，1-5从低到高
      */
     public Score getServiceRsp() {
         return this.ServiceRsp;
     }
 
     /**
-     * Set 用户信誉值
-     * @param ServiceRsp 用户信誉值
+     * Set 用户信誉分，1-5从低到高
+     * @param ServiceRsp 用户信誉分，1-5从低到高
      */
     public void setServiceRsp(Score ServiceRsp) {
         this.ServiceRsp = ServiceRsp;

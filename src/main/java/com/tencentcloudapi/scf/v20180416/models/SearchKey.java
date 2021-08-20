@@ -13,48 +13,74 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.pds.v20210701.models;
+package com.tencentcloudapi.scf.v20180416.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Score extends AbstractModel{
+public class SearchKey extends AbstractModel{
 
     /**
-    * 信誉分，1-5从低到高
+    * 搜索关键字
     */
-    @SerializedName("Star")
+    @SerializedName("Key")
     @Expose
-    private Long Star;
+    private String Key;
 
     /**
-     * Get 信誉分，1-5从低到高 
-     * @return Star 信誉分，1-5从低到高
+    * 搜索内容
+    */
+    @SerializedName("Value")
+    @Expose
+    private String Value;
+
+    /**
+     * Get 搜索关键字 
+     * @return Key 搜索关键字
      */
-    public Long getStar() {
-        return this.Star;
+    public String getKey() {
+        return this.Key;
     }
 
     /**
-     * Set 信誉分，1-5从低到高
-     * @param Star 信誉分，1-5从低到高
+     * Set 搜索关键字
+     * @param Key 搜索关键字
      */
-    public void setStar(Long Star) {
-        this.Star = Star;
+    public void setKey(String Key) {
+        this.Key = Key;
     }
 
-    public Score() {
+    /**
+     * Get 搜索内容 
+     * @return Value 搜索内容
+     */
+    public String getValue() {
+        return this.Value;
+    }
+
+    /**
+     * Set 搜索内容
+     * @param Value 搜索内容
+     */
+    public void setValue(String Value) {
+        this.Value = Value;
+    }
+
+    public SearchKey() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public Score(Score source) {
-        if (source.Star != null) {
-            this.Star = new Long(source.Star);
+    public SearchKey(SearchKey source) {
+        if (source.Key != null) {
+            this.Key = new String(source.Key);
+        }
+        if (source.Value != null) {
+            this.Value = new String(source.Value);
         }
     }
 
@@ -63,7 +89,8 @@ public class Score extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Star", this.Star);
+        this.setParamSimple(map, prefix + "Key", this.Key);
+        this.setParamSimple(map, prefix + "Value", this.Value);
 
     }
 }

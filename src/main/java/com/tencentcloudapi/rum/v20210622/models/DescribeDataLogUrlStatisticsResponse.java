@@ -13,21 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.pds.v20210701.models;
+package com.tencentcloudapi.rum.v20210622.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeStockEstimationResponse extends AbstractModel{
+public class DescribeDataLogUrlStatisticsResponse extends AbstractModel{
 
     /**
-    * 用户信誉分，1-5从低到高
+    * 返回值
     */
-    @SerializedName("ServiceRsp")
+    @SerializedName("Result")
     @Expose
-    private Score ServiceRsp;
+    private String Result;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,19 +37,19 @@ public class DescribeStockEstimationResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 用户信誉分，1-5从低到高 
-     * @return ServiceRsp 用户信誉分，1-5从低到高
+     * Get 返回值 
+     * @return Result 返回值
      */
-    public Score getServiceRsp() {
-        return this.ServiceRsp;
+    public String getResult() {
+        return this.Result;
     }
 
     /**
-     * Set 用户信誉分，1-5从低到高
-     * @param ServiceRsp 用户信誉分，1-5从低到高
+     * Set 返回值
+     * @param Result 返回值
      */
-    public void setServiceRsp(Score ServiceRsp) {
-        this.ServiceRsp = ServiceRsp;
+    public void setResult(String Result) {
+        this.Result = Result;
     }
 
     /**
@@ -68,16 +68,16 @@ public class DescribeStockEstimationResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeStockEstimationResponse() {
+    public DescribeDataLogUrlStatisticsResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeStockEstimationResponse(DescribeStockEstimationResponse source) {
-        if (source.ServiceRsp != null) {
-            this.ServiceRsp = new Score(source.ServiceRsp);
+    public DescribeDataLogUrlStatisticsResponse(DescribeDataLogUrlStatisticsResponse source) {
+        if (source.Result != null) {
+            this.Result = new String(source.Result);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -89,7 +89,7 @@ public class DescribeStockEstimationResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "ServiceRsp.", this.ServiceRsp);
+        this.setParamSimple(map, prefix + "Result", this.Result);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

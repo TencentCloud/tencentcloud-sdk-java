@@ -23,7 +23,10 @@ import java.util.HashMap;
 public class DescribeBasicDeviceStatusResponse extends AbstractModel{
 
     /**
-    * 返回资源及状态
+    * 返回资源及状态，状态码：
+1 - 封堵状态
+2 - 正常状态
+3 - 攻击状态
     */
     @SerializedName("Data")
     @Expose
@@ -37,16 +40,28 @@ public class DescribeBasicDeviceStatusResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 返回资源及状态 
-     * @return Data 返回资源及状态
+     * Get 返回资源及状态，状态码：
+1 - 封堵状态
+2 - 正常状态
+3 - 攻击状态 
+     * @return Data 返回资源及状态，状态码：
+1 - 封堵状态
+2 - 正常状态
+3 - 攻击状态
      */
     public KeyValue [] getData() {
         return this.Data;
     }
 
     /**
-     * Set 返回资源及状态
-     * @param Data 返回资源及状态
+     * Set 返回资源及状态，状态码：
+1 - 封堵状态
+2 - 正常状态
+3 - 攻击状态
+     * @param Data 返回资源及状态，状态码：
+1 - 封堵状态
+2 - 正常状态
+3 - 攻击状态
      */
     public void setData(KeyValue [] Data) {
         this.Data = Data;

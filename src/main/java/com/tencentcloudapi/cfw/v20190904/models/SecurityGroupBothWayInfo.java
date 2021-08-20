@@ -190,6 +190,13 @@ public class SecurityGroupBothWayInfo extends AbstractModel{
     private String ServiceTemplateId;
 
     /**
+    * 是否使用端口协议模板，0：否，1：是
+    */
+    @SerializedName("ProtocolPortType")
+    @Expose
+    private Long ProtocolPortType;
+
+    /**
      * Get 执行顺序
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return OrderIndex 执行顺序
@@ -605,6 +612,22 @@ public class SecurityGroupBothWayInfo extends AbstractModel{
         this.ServiceTemplateId = ServiceTemplateId;
     }
 
+    /**
+     * Get 是否使用端口协议模板，0：否，1：是 
+     * @return ProtocolPortType 是否使用端口协议模板，0：否，1：是
+     */
+    public Long getProtocolPortType() {
+        return this.ProtocolPortType;
+    }
+
+    /**
+     * Set 是否使用端口协议模板，0：否，1：是
+     * @param ProtocolPortType 是否使用端口协议模板，0：否，1：是
+     */
+    public void setProtocolPortType(Long ProtocolPortType) {
+        this.ProtocolPortType = ProtocolPortType;
+    }
+
     public SecurityGroupBothWayInfo() {
     }
 
@@ -676,6 +699,9 @@ public class SecurityGroupBothWayInfo extends AbstractModel{
         if (source.ServiceTemplateId != null) {
             this.ServiceTemplateId = new String(source.ServiceTemplateId);
         }
+        if (source.ProtocolPortType != null) {
+            this.ProtocolPortType = new Long(source.ProtocolPortType);
+        }
     }
 
 
@@ -704,6 +730,7 @@ public class SecurityGroupBothWayInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "PrivateIp", this.PrivateIp);
         this.setParamSimple(map, prefix + "Cidr", this.Cidr);
         this.setParamSimple(map, prefix + "ServiceTemplateId", this.ServiceTemplateId);
+        this.setParamSimple(map, prefix + "ProtocolPortType", this.ProtocolPortType);
 
     }
 }

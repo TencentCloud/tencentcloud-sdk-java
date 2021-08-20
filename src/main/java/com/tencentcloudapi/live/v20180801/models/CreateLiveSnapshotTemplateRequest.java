@@ -72,6 +72,7 @@ public class CreateLiveSnapshotTemplateRequest extends AbstractModel{
 
     /**
     * 截图宽度。默认：0（原始宽）。
+范围：0-3000 。
     */
     @SerializedName("Width")
     @Expose
@@ -79,6 +80,7 @@ public class CreateLiveSnapshotTemplateRequest extends AbstractModel{
 
     /**
     * 截图高度。默认：0（原始高）。
+范围：0-2000 。
     */
     @SerializedName("Height")
     @Expose
@@ -232,8 +234,10 @@ public class CreateLiveSnapshotTemplateRequest extends AbstractModel{
     }
 
     /**
-     * Get 截图宽度。默认：0（原始宽）。 
+     * Get 截图宽度。默认：0（原始宽）。
+范围：0-3000 。 
      * @return Width 截图宽度。默认：0（原始宽）。
+范围：0-3000 。
      */
     public Long getWidth() {
         return this.Width;
@@ -241,15 +245,19 @@ public class CreateLiveSnapshotTemplateRequest extends AbstractModel{
 
     /**
      * Set 截图宽度。默认：0（原始宽）。
+范围：0-3000 。
      * @param Width 截图宽度。默认：0（原始宽）。
+范围：0-3000 。
      */
     public void setWidth(Long Width) {
         this.Width = Width;
     }
 
     /**
-     * Get 截图高度。默认：0（原始高）。 
+     * Get 截图高度。默认：0（原始高）。
+范围：0-2000 。 
      * @return Height 截图高度。默认：0（原始高）。
+范围：0-2000 。
      */
     public Long getHeight() {
         return this.Height;
@@ -257,7 +265,9 @@ public class CreateLiveSnapshotTemplateRequest extends AbstractModel{
 
     /**
      * Set 截图高度。默认：0（原始高）。
+范围：0-2000 。
      * @param Height 截图高度。默认：0（原始高）。
+范围：0-2000 。
      */
     public void setHeight(Long Height) {
         this.Height = Height;

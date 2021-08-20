@@ -78,6 +78,9 @@ public enum ApigatewayErrorCode {
     // 该域名已经绑定该服务。
      FAILEDOPERATION_DOMAINALREADYBINDSERVICE("FailedOperation.DomainAlreadyBindService"),
      
+    // 当前域名不满足合规要求，无法进行接入。
+     FAILEDOPERATION_DOMAININBLACKLIST("FailedOperation.DomainInBlackList"),
+     
     // 该域名还未在腾讯云备案，请备案之后再绑定域名。
      FAILEDOPERATION_DOMAINNEEDBEIAN("FailedOperation.DomainNeedBeian"),
      

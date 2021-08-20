@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeAuditConfigResponse extends AbstractModel{
 
     /**
-    * 审计日志保存时长。目前支持的值包括：[0，30，180，365，1095，1825]。
+    * 审计日志保存时长。目前支持的值包括：[0，7，30，180，365，1095，1825]。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LogExpireDay")
@@ -45,6 +45,14 @@ public class DescribeAuditConfigResponse extends AbstractModel{
     private String IsClosing;
 
     /**
+    * 审计服务开通时间。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CreateTime")
+    @Expose
+    private String CreateTime;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -52,9 +60,9 @@ public class DescribeAuditConfigResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 审计日志保存时长。目前支持的值包括：[0，30，180，365，1095，1825]。
+     * Get 审计日志保存时长。目前支持的值包括：[0，7，30，180，365，1095，1825]。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LogExpireDay 审计日志保存时长。目前支持的值包括：[0，30，180，365，1095，1825]。
+     * @return LogExpireDay 审计日志保存时长。目前支持的值包括：[0，7，30，180，365，1095，1825]。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLogExpireDay() {
@@ -62,9 +70,9 @@ public class DescribeAuditConfigResponse extends AbstractModel{
     }
 
     /**
-     * Set 审计日志保存时长。目前支持的值包括：[0，30，180，365，1095，1825]。
+     * Set 审计日志保存时长。目前支持的值包括：[0，7，30，180，365，1095，1825]。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LogExpireDay 审计日志保存时长。目前支持的值包括：[0，30，180，365，1095，1825]。
+     * @param LogExpireDay 审计日志保存时长。目前支持的值包括：[0，7，30，180，365，1095，1825]。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLogExpireDay(Long LogExpireDay) {
@@ -104,6 +112,26 @@ public class DescribeAuditConfigResponse extends AbstractModel{
     }
 
     /**
+     * Get 审计服务开通时间。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CreateTime 审计服务开通时间。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCreateTime() {
+        return this.CreateTime;
+    }
+
+    /**
+     * Set 审计服务开通时间。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CreateTime 审计服务开通时间。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCreateTime(String CreateTime) {
+        this.CreateTime = CreateTime;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -136,6 +164,9 @@ public class DescribeAuditConfigResponse extends AbstractModel{
         if (source.IsClosing != null) {
             this.IsClosing = new String(source.IsClosing);
         }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -149,6 +180,7 @@ public class DescribeAuditConfigResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "LogExpireDay", this.LogExpireDay);
         this.setParamSimple(map, prefix + "LogType", this.LogType);
         this.setParamSimple(map, prefix + "IsClosing", this.IsClosing);
+        this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

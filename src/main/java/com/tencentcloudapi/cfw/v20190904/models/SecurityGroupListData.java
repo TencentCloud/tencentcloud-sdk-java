@@ -185,6 +185,13 @@ public class SecurityGroupListData extends AbstractModel{
     private Long Direction;
 
     /**
+    * 是否使用端口协议模板，0：否，1：是
+    */
+    @SerializedName("ProtocolPortType")
+    @Expose
+    private Long ProtocolPortType;
+
+    /**
      * Get 执行顺序 
      * @return OrderIndex 执行顺序
      */
@@ -568,6 +575,22 @@ public class SecurityGroupListData extends AbstractModel{
         this.Direction = Direction;
     }
 
+    /**
+     * Get 是否使用端口协议模板，0：否，1：是 
+     * @return ProtocolPortType 是否使用端口协议模板，0：否，1：是
+     */
+    public Long getProtocolPortType() {
+        return this.ProtocolPortType;
+    }
+
+    /**
+     * Set 是否使用端口协议模板，0：否，1：是
+     * @param ProtocolPortType 是否使用端口协议模板，0：否，1：是
+     */
+    public void setProtocolPortType(Long ProtocolPortType) {
+        this.ProtocolPortType = ProtocolPortType;
+    }
+
     public SecurityGroupListData() {
     }
 
@@ -645,6 +668,9 @@ public class SecurityGroupListData extends AbstractModel{
         if (source.Direction != null) {
             this.Direction = new Long(source.Direction);
         }
+        if (source.ProtocolPortType != null) {
+            this.ProtocolPortType = new Long(source.ProtocolPortType);
+        }
     }
 
 
@@ -674,6 +700,7 @@ public class SecurityGroupListData extends AbstractModel{
         this.setParamSimple(map, prefix + "ServiceTemplateId", this.ServiceTemplateId);
         this.setParamArrayObj(map, prefix + "BothWayInfo.", this.BothWayInfo);
         this.setParamSimple(map, prefix + "Direction", this.Direction);
+        this.setParamSimple(map, prefix + "ProtocolPortType", this.ProtocolPortType);
 
     }
 }

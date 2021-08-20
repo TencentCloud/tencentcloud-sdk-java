@@ -45,6 +45,7 @@ public class CreateAuditPolicyRequest extends AbstractModel{
 
     /**
     * 审计日志保存时长。支持值包括：
+7 - 一周
 30 - 一个月；
 180 - 六个月；
 365 - 一年；
@@ -106,6 +107,7 @@ public class CreateAuditPolicyRequest extends AbstractModel{
 
     /**
      * Get 审计日志保存时长。支持值包括：
+7 - 一周
 30 - 一个月；
 180 - 六个月；
 365 - 一年；
@@ -113,6 +115,7 @@ public class CreateAuditPolicyRequest extends AbstractModel{
 1825 - 五年；
 实例首次开通审计策略时，可传该值，用于设置存储日志保存天数，默认为 30 天。若实例已存在审计策略，则此参数无效，可使用 更改审计服务配置 接口修改日志存储时长。 
      * @return LogExpireDay 审计日志保存时长。支持值包括：
+7 - 一周
 30 - 一个月；
 180 - 六个月；
 365 - 一年；
@@ -126,6 +129,7 @@ public class CreateAuditPolicyRequest extends AbstractModel{
 
     /**
      * Set 审计日志保存时长。支持值包括：
+7 - 一周
 30 - 一个月；
 180 - 六个月；
 365 - 一年；
@@ -133,6 +137,7 @@ public class CreateAuditPolicyRequest extends AbstractModel{
 1825 - 五年；
 实例首次开通审计策略时，可传该值，用于设置存储日志保存天数，默认为 30 天。若实例已存在审计策略，则此参数无效，可使用 更改审计服务配置 接口修改日志存储时长。
      * @param LogExpireDay 审计日志保存时长。支持值包括：
+7 - 一周
 30 - 一个月；
 180 - 六个月；
 365 - 一年；
