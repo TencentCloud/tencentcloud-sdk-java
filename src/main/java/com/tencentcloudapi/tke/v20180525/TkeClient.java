@@ -1499,6 +1499,26 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *修改节点池的机型配置
+     * @param req ModifyNodePoolInstanceTypesRequest
+     * @return ModifyNodePoolInstanceTypesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyNodePoolInstanceTypesResponse ModifyNodePoolInstanceTypes(ModifyNodePoolInstanceTypesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyNodePoolInstanceTypesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyNodePoolInstanceTypesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyNodePoolInstanceTypes");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *修改告警规则 
      * @param req ModifyPrometheusAlertRuleRequest
      * @return ModifyPrometheusAlertRuleResponse
