@@ -30,14 +30,14 @@ public class DescribeUserResourcesAuthorizationRequest extends AbstractModel{
     private String ApplicationId;
 
     /**
-    * 用户ID。
+    * 用户ID。UserName 和 UserId 需至少一个不为空；都不为空时优先使用 UserName。
     */
     @SerializedName("UserId")
     @Expose
     private String UserId;
 
     /**
-    * 用户名。
+    * 用户名。UserName 和 UserId 需至少一个不为空；都不为空时优先使用 UserName。
     */
     @SerializedName("UserName")
     @Expose
@@ -67,32 +67,32 @@ public class DescribeUserResourcesAuthorizationRequest extends AbstractModel{
     }
 
     /**
-     * Get 用户ID。 
-     * @return UserId 用户ID。
+     * Get 用户ID。UserName 和 UserId 需至少一个不为空；都不为空时优先使用 UserName。 
+     * @return UserId 用户ID。UserName 和 UserId 需至少一个不为空；都不为空时优先使用 UserName。
      */
     public String getUserId() {
         return this.UserId;
     }
 
     /**
-     * Set 用户ID。
-     * @param UserId 用户ID。
+     * Set 用户ID。UserName 和 UserId 需至少一个不为空；都不为空时优先使用 UserName。
+     * @param UserId 用户ID。UserName 和 UserId 需至少一个不为空；都不为空时优先使用 UserName。
      */
     public void setUserId(String UserId) {
         this.UserId = UserId;
     }
 
     /**
-     * Get 用户名。 
-     * @return UserName 用户名。
+     * Get 用户名。UserName 和 UserId 需至少一个不为空；都不为空时优先使用 UserName。 
+     * @return UserName 用户名。UserName 和 UserId 需至少一个不为空；都不为空时优先使用 UserName。
      */
     public String getUserName() {
         return this.UserName;
     }
 
     /**
-     * Set 用户名。
-     * @param UserName 用户名。
+     * Set 用户名。UserName 和 UserId 需至少一个不为空；都不为空时优先使用 UserName。
+     * @param UserName 用户名。UserName 和 UserId 需至少一个不为空；都不为空时优先使用 UserName。
      */
     public void setUserName(String UserName) {
         this.UserName = UserName;

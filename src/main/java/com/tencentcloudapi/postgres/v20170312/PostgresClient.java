@@ -499,6 +499,46 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
+     *慢查询统计分析接口，根据SQL语句抽象参数之后，进行聚合分析，并返回对应结果
+     * @param req DescribeSlowQueryAnalysisRequest
+     * @return DescribeSlowQueryAnalysisResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSlowQueryAnalysisResponse DescribeSlowQueryAnalysis(DescribeSlowQueryAnalysisRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeSlowQueryAnalysisResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeSlowQueryAnalysisResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeSlowQueryAnalysis");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取慢查询列表
+     * @param req DescribeSlowQueryListRequest
+     * @return DescribeSlowQueryListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSlowQueryListResponse DescribeSlowQueryList(DescribeSlowQueryListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeSlowQueryListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeSlowQueryListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeSlowQueryList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口 (DescribeZones) 用于查询支持的可用区信息。
      * @param req DescribeZonesRequest
      * @return DescribeZonesResponse

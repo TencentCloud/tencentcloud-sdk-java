@@ -37,21 +37,21 @@ public class InvokeFunctionRequest extends AbstractModel{
     private String Qualifier;
 
     /**
-    * 运行函数时的参数，以json格式传入，最大支持的参数长度是 1M
+    * 运行函数时的参数，以json格式传入，最大支持的参数长度是 6MB
     */
     @SerializedName("Event")
     @Expose
     private String Event;
 
     /**
-    * 同步调用时指定该字段，返回值会包含4K的日志，可选值为None和Tail，默认值为None。当该值为Tail时，返回参数中的Log字段会包含对应的函数执行日志
+    * 返回值会包含4KB的日志，可选值为None和Tail，默认值为None。当该值为Tail时，返回参数中的Log字段会包含对应的函数执行日志
     */
     @SerializedName("LogType")
     @Expose
     private String LogType;
 
     /**
-    * 命名空间
+    * 命名空间，不填默认为 default
     */
     @SerializedName("Namespace")
     @Expose
@@ -97,48 +97,48 @@ public class InvokeFunctionRequest extends AbstractModel{
     }
 
     /**
-     * Get 运行函数时的参数，以json格式传入，最大支持的参数长度是 1M 
-     * @return Event 运行函数时的参数，以json格式传入，最大支持的参数长度是 1M
+     * Get 运行函数时的参数，以json格式传入，最大支持的参数长度是 6MB 
+     * @return Event 运行函数时的参数，以json格式传入，最大支持的参数长度是 6MB
      */
     public String getEvent() {
         return this.Event;
     }
 
     /**
-     * Set 运行函数时的参数，以json格式传入，最大支持的参数长度是 1M
-     * @param Event 运行函数时的参数，以json格式传入，最大支持的参数长度是 1M
+     * Set 运行函数时的参数，以json格式传入，最大支持的参数长度是 6MB
+     * @param Event 运行函数时的参数，以json格式传入，最大支持的参数长度是 6MB
      */
     public void setEvent(String Event) {
         this.Event = Event;
     }
 
     /**
-     * Get 同步调用时指定该字段，返回值会包含4K的日志，可选值为None和Tail，默认值为None。当该值为Tail时，返回参数中的Log字段会包含对应的函数执行日志 
-     * @return LogType 同步调用时指定该字段，返回值会包含4K的日志，可选值为None和Tail，默认值为None。当该值为Tail时，返回参数中的Log字段会包含对应的函数执行日志
+     * Get 返回值会包含4KB的日志，可选值为None和Tail，默认值为None。当该值为Tail时，返回参数中的Log字段会包含对应的函数执行日志 
+     * @return LogType 返回值会包含4KB的日志，可选值为None和Tail，默认值为None。当该值为Tail时，返回参数中的Log字段会包含对应的函数执行日志
      */
     public String getLogType() {
         return this.LogType;
     }
 
     /**
-     * Set 同步调用时指定该字段，返回值会包含4K的日志，可选值为None和Tail，默认值为None。当该值为Tail时，返回参数中的Log字段会包含对应的函数执行日志
-     * @param LogType 同步调用时指定该字段，返回值会包含4K的日志，可选值为None和Tail，默认值为None。当该值为Tail时，返回参数中的Log字段会包含对应的函数执行日志
+     * Set 返回值会包含4KB的日志，可选值为None和Tail，默认值为None。当该值为Tail时，返回参数中的Log字段会包含对应的函数执行日志
+     * @param LogType 返回值会包含4KB的日志，可选值为None和Tail，默认值为None。当该值为Tail时，返回参数中的Log字段会包含对应的函数执行日志
      */
     public void setLogType(String LogType) {
         this.LogType = LogType;
     }
 
     /**
-     * Get 命名空间 
-     * @return Namespace 命名空间
+     * Get 命名空间，不填默认为 default 
+     * @return Namespace 命名空间，不填默认为 default
      */
     public String getNamespace() {
         return this.Namespace;
     }
 
     /**
-     * Set 命名空间
-     * @param Namespace 命名空间
+     * Set 命名空间，不填默认为 default
+     * @param Namespace 命名空间，不填默认为 default
      */
     public void setNamespace(String Namespace) {
         this.Namespace = Namespace;
