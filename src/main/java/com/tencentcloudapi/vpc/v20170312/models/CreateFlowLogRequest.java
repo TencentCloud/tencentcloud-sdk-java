@@ -23,13 +23,6 @@ import java.util.HashMap;
 public class CreateFlowLogRequest extends AbstractModel{
 
     /**
-    * 私用网络ID或者统一ID，建议使用统一ID
-    */
-    @SerializedName("VpcId")
-    @Expose
-    private String VpcId;
-
-    /**
     * 流日志实例名字
     */
     @SerializedName("FlowLogName")
@@ -37,7 +30,7 @@ public class CreateFlowLogRequest extends AbstractModel{
     private String FlowLogName;
 
     /**
-    * 流日志所属资源类型，VPC|SUBNET|NETWORKINTERFACE
+    * 流日志所属资源类型，VPC|SUBNET|NETWORKINTERFACE|CCN
     */
     @SerializedName("ResourceType")
     @Expose
@@ -65,6 +58,13 @@ public class CreateFlowLogRequest extends AbstractModel{
     private String CloudLogId;
 
     /**
+    * 私用网络ID或者统一ID，建议使用统一ID，当ResourceType为CCN时不填，其他类型必填。
+    */
+    @SerializedName("VpcId")
+    @Expose
+    private String VpcId;
+
+    /**
     * 流日志实例描述
     */
     @SerializedName("FlowLogDescription")
@@ -77,22 +77,6 @@ public class CreateFlowLogRequest extends AbstractModel{
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
-
-    /**
-     * Get 私用网络ID或者统一ID，建议使用统一ID 
-     * @return VpcId 私用网络ID或者统一ID，建议使用统一ID
-     */
-    public String getVpcId() {
-        return this.VpcId;
-    }
-
-    /**
-     * Set 私用网络ID或者统一ID，建议使用统一ID
-     * @param VpcId 私用网络ID或者统一ID，建议使用统一ID
-     */
-    public void setVpcId(String VpcId) {
-        this.VpcId = VpcId;
-    }
 
     /**
      * Get 流日志实例名字 
@@ -111,16 +95,16 @@ public class CreateFlowLogRequest extends AbstractModel{
     }
 
     /**
-     * Get 流日志所属资源类型，VPC|SUBNET|NETWORKINTERFACE 
-     * @return ResourceType 流日志所属资源类型，VPC|SUBNET|NETWORKINTERFACE
+     * Get 流日志所属资源类型，VPC|SUBNET|NETWORKINTERFACE|CCN 
+     * @return ResourceType 流日志所属资源类型，VPC|SUBNET|NETWORKINTERFACE|CCN
      */
     public String getResourceType() {
         return this.ResourceType;
     }
 
     /**
-     * Set 流日志所属资源类型，VPC|SUBNET|NETWORKINTERFACE
-     * @param ResourceType 流日志所属资源类型，VPC|SUBNET|NETWORKINTERFACE
+     * Set 流日志所属资源类型，VPC|SUBNET|NETWORKINTERFACE|CCN
+     * @param ResourceType 流日志所属资源类型，VPC|SUBNET|NETWORKINTERFACE|CCN
      */
     public void setResourceType(String ResourceType) {
         this.ResourceType = ResourceType;
@@ -175,6 +159,22 @@ public class CreateFlowLogRequest extends AbstractModel{
     }
 
     /**
+     * Get 私用网络ID或者统一ID，建议使用统一ID，当ResourceType为CCN时不填，其他类型必填。 
+     * @return VpcId 私用网络ID或者统一ID，建议使用统一ID，当ResourceType为CCN时不填，其他类型必填。
+     */
+    public String getVpcId() {
+        return this.VpcId;
+    }
+
+    /**
+     * Set 私用网络ID或者统一ID，建议使用统一ID，当ResourceType为CCN时不填，其他类型必填。
+     * @param VpcId 私用网络ID或者统一ID，建议使用统一ID，当ResourceType为CCN时不填，其他类型必填。
+     */
+    public void setVpcId(String VpcId) {
+        this.VpcId = VpcId;
+    }
+
+    /**
      * Get 流日志实例描述 
      * @return FlowLogDescription 流日志实例描述
      */
@@ -214,9 +214,6 @@ public class CreateFlowLogRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public CreateFlowLogRequest(CreateFlowLogRequest source) {
-        if (source.VpcId != null) {
-            this.VpcId = new String(source.VpcId);
-        }
         if (source.FlowLogName != null) {
             this.FlowLogName = new String(source.FlowLogName);
         }
@@ -231,6 +228,9 @@ public class CreateFlowLogRequest extends AbstractModel{
         }
         if (source.CloudLogId != null) {
             this.CloudLogId = new String(source.CloudLogId);
+        }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
         }
         if (source.FlowLogDescription != null) {
             this.FlowLogDescription = new String(source.FlowLogDescription);
@@ -248,12 +248,12 @@ public class CreateFlowLogRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "VpcId", this.VpcId);
         this.setParamSimple(map, prefix + "FlowLogName", this.FlowLogName);
         this.setParamSimple(map, prefix + "ResourceType", this.ResourceType);
         this.setParamSimple(map, prefix + "ResourceId", this.ResourceId);
         this.setParamSimple(map, prefix + "TrafficType", this.TrafficType);
         this.setParamSimple(map, prefix + "CloudLogId", this.CloudLogId);
+        this.setParamSimple(map, prefix + "VpcId", this.VpcId);
         this.setParamSimple(map, prefix + "FlowLogDescription", this.FlowLogDescription);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 

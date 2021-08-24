@@ -44,6 +44,13 @@ public class ListAttachedGroupPoliciesRequest extends AbstractModel{
     private Long Rp;
 
     /**
+    * 搜索关键字
+    */
+    @SerializedName("Keyword")
+    @Expose
+    private String Keyword;
+
+    /**
      * Get 用户组ID 
      * @return TargetGroupId 用户组ID
      */
@@ -91,6 +98,22 @@ public class ListAttachedGroupPoliciesRequest extends AbstractModel{
         this.Rp = Rp;
     }
 
+    /**
+     * Get 搜索关键字 
+     * @return Keyword 搜索关键字
+     */
+    public String getKeyword() {
+        return this.Keyword;
+    }
+
+    /**
+     * Set 搜索关键字
+     * @param Keyword 搜索关键字
+     */
+    public void setKeyword(String Keyword) {
+        this.Keyword = Keyword;
+    }
+
     public ListAttachedGroupPoliciesRequest() {
     }
 
@@ -108,6 +131,9 @@ public class ListAttachedGroupPoliciesRequest extends AbstractModel{
         if (source.Rp != null) {
             this.Rp = new Long(source.Rp);
         }
+        if (source.Keyword != null) {
+            this.Keyword = new String(source.Keyword);
+        }
     }
 
 
@@ -118,6 +144,7 @@ public class ListAttachedGroupPoliciesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "TargetGroupId", this.TargetGroupId);
         this.setParamSimple(map, prefix + "Page", this.Page);
         this.setParamSimple(map, prefix + "Rp", this.Rp);
+        this.setParamSimple(map, prefix + "Keyword", this.Keyword);
 
     }
 }

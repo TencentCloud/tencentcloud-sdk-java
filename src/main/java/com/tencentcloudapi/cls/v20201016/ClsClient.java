@@ -99,7 +99,7 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
-     *本接口用于创建异步上下文任务
+     *本接口用于创建离线上下文任务
      * @param req CreateAsyncContextTaskRequest
      * @return CreateAsyncContextTaskResponse
      * @throws TencentCloudSDKException
@@ -119,7 +119,7 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
-     *本接口用于创建异步检索任务
+     *本接口用于创建离线检索任务
      * @param req CreateAsyncSearchTaskRequest
      * @return CreateAsyncSearchTaskResponse
      * @throws TencentCloudSDKException
@@ -159,7 +159,7 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
-     *本接口用于创建日志导出
+     *本接口用于创建日志下载任务
      * @param req CreateExportRequest
      * @return CreateExportResponse
      * @throws TencentCloudSDKException
@@ -319,7 +319,7 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
-     *本接口用于删除异步上下文任务
+     *本接口用于删除离线上下文任务
      * @param req DeleteAsyncContextTaskRequest
      * @return DeleteAsyncContextTaskResponse
      * @throws TencentCloudSDKException
@@ -339,7 +339,7 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
-     *本接口用于删除异步检索任务
+     *本接口用于删除离线检索任务
      * @param req DeleteAsyncSearchTaskRequest
      * @return DeleteAsyncSearchTaskResponse
      * @throws TencentCloudSDKException
@@ -399,7 +399,7 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
-     *本接口用于删除日志导出
+     *本接口用于删除日志下载任务
      * @param req DeleteExportRequest
      * @return DeleteExportResponse
      * @throws TencentCloudSDKException
@@ -559,7 +559,7 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
-     *本接口用户获取异步上下文任务的结果
+     *本接口用户获取离线上下文任务的结果
      * @param req DescribeAsyncContextResultRequest
      * @return DescribeAsyncContextResultResponse
      * @throws TencentCloudSDKException
@@ -579,7 +579,7 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
-     *本接口用于获取异步上下文任务列表
+     *本接口用于获取离线上下文任务列表
      * @param req DescribeAsyncContextTasksRequest
      * @return DescribeAsyncContextTasksResponse
      * @throws TencentCloudSDKException
@@ -599,7 +599,7 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
-     *本接口用户获取异步检索任务的结果
+     *本接口用户获取离线检索任务的结果
      * @param req DescribeAsyncSearchResultRequest
      * @return DescribeAsyncSearchResultResponse
      * @throws TencentCloudSDKException
@@ -619,7 +619,7 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
-     *本接口用户获取异步检索任务列表
+     *本接口用户获取离线检索任务列表
      * @param req DescribeAsyncSearchTasksRequest
      * @return DescribeAsyncSearchTasksResponse
      * @throws TencentCloudSDKException
@@ -679,7 +679,7 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
-     *本接口用于获取日志导出列表
+     *本接口用于获取日志下载任务列表
      * @param req DescribeExportsRequest
      * @return DescribeExportsResponse
      * @throws TencentCloudSDKException

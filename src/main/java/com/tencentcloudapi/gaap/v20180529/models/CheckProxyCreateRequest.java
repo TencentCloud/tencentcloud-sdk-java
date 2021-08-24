@@ -72,6 +72,13 @@ public class CheckProxyCreateRequest extends AbstractModel{
     private String NetworkType;
 
     /**
+    * 通道组类型。Thunder表示标准通道组，Accelerator表示游戏加速器通道。
+    */
+    @SerializedName("PackageType")
+    @Expose
+    private String PackageType;
+
+    /**
      * Get 通道的接入(加速)区域。取值可通过接口DescribeAccessRegionsByDestRegion获取到 
      * @return AccessRegion 通道的接入(加速)区域。取值可通过接口DescribeAccessRegionsByDestRegion获取到
      */
@@ -183,6 +190,22 @@ public class CheckProxyCreateRequest extends AbstractModel{
         this.NetworkType = NetworkType;
     }
 
+    /**
+     * Get 通道组类型。Thunder表示标准通道组，Accelerator表示游戏加速器通道。 
+     * @return PackageType 通道组类型。Thunder表示标准通道组，Accelerator表示游戏加速器通道。
+     */
+    public String getPackageType() {
+        return this.PackageType;
+    }
+
+    /**
+     * Set 通道组类型。Thunder表示标准通道组，Accelerator表示游戏加速器通道。
+     * @param PackageType 通道组类型。Thunder表示标准通道组，Accelerator表示游戏加速器通道。
+     */
+    public void setPackageType(String PackageType) {
+        this.PackageType = PackageType;
+    }
+
     public CheckProxyCreateRequest() {
     }
 
@@ -212,6 +235,9 @@ public class CheckProxyCreateRequest extends AbstractModel{
         if (source.NetworkType != null) {
             this.NetworkType = new String(source.NetworkType);
         }
+        if (source.PackageType != null) {
+            this.PackageType = new String(source.PackageType);
+        }
     }
 
 
@@ -226,6 +252,7 @@ public class CheckProxyCreateRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "GroupId", this.GroupId);
         this.setParamSimple(map, prefix + "IPAddressVersion", this.IPAddressVersion);
         this.setParamSimple(map, prefix + "NetworkType", this.NetworkType);
+        this.setParamSimple(map, prefix + "PackageType", this.PackageType);
 
     }
 }

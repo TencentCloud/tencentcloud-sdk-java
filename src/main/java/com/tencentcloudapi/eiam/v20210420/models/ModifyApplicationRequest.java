@@ -44,7 +44,7 @@ public class ModifyApplicationRequest extends AbstractModel{
     private String DisplayName;
 
     /**
-    * 应用状态
+    * 应用状态，true表示启用，false表示禁用。
     */
     @SerializedName("AppStatus")
     @Expose
@@ -113,16 +113,16 @@ public class ModifyApplicationRequest extends AbstractModel{
     }
 
     /**
-     * Get 应用状态 
-     * @return AppStatus 应用状态
+     * Get 应用状态，true表示启用，false表示禁用。 
+     * @return AppStatus 应用状态，true表示启用，false表示禁用。
      */
     public Boolean getAppStatus() {
         return this.AppStatus;
     }
 
     /**
-     * Set 应用状态
-     * @param AppStatus 应用状态
+     * Set 应用状态，true表示启用，false表示禁用。
+     * @param AppStatus 应用状态，true表示启用，false表示禁用。
      */
     public void setAppStatus(Boolean AppStatus) {
         this.AppStatus = AppStatus;

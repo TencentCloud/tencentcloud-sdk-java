@@ -1644,6 +1644,26 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
+     *本接口(ModifyAccountHost)用于修改云数据库账户的主机。
+     * @param req ModifyAccountHostRequest
+     * @return ModifyAccountHostResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAccountHostResponse ModifyAccountHost(ModifyAccountHostRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyAccountHostResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyAccountHostResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyAccountHost");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口(ModifyAccountMaxUserConnections)用于修改云数据库账户最大可用连接数。
      * @param req ModifyAccountMaxUserConnectionsRequest
      * @return ModifyAccountMaxUserConnectionsResponse

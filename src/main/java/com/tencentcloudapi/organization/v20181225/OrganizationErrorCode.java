@@ -1,5 +1,8 @@
 package com.tencentcloudapi.organization.v20181225;
 public enum OrganizationErrorCode {
+    // 操作失败。
+     FAILEDOPERATION("FailedOperation"),
+     
     // 不能从Root单元删除成员。
      FAILEDOPERATION_DISABLEDELETEMEMBERFROMROOTNODE("FailedOperation.DisableDeleteMemberFromRootNode"),
      

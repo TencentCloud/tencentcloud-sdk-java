@@ -219,9 +219,6 @@ public enum AsErrorCode {
     // 定时任务设置的开始时间在当前时间之前。
      INVALIDPARAMETERVALUE_STARTTIMEBEFORECURRENTTIME("InvalidParameterValue.StartTimeBeforeCurrentTime"),
      
-    // 关机实例不允许添加到伸缩组。
-     INVALIDPARAMETERVALUE_STOPPEDINSTANCENOTALLOWATTACH("InvalidParameterValue.StoppedInstanceNotAllowAttach"),
-     
     // 子网信息不合法。
      INVALIDPARAMETERVALUE_SUBNETIDS("InvalidParameterValue.SubnetIds"),
      
@@ -389,6 +386,9 @@ public enum AsErrorCode {
      
     // 项目不一致。
      RESOURCEUNAVAILABLE_PROJECTINCONSISTENT("ResourceUnavailable.ProjectInconsistent"),
+     
+    // 关机实例不允许添加到伸缩组。
+     RESOURCEUNAVAILABLE_STOPPEDINSTANCENOTALLOWATTACH("ResourceUnavailable.StoppedInstanceNotAllowAttach"),
      
     // 指定的可用区不可用。
      RESOURCEUNAVAILABLE_ZONEUNAVAILABLE("ResourceUnavailable.ZoneUnavailable");

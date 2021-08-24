@@ -47,21 +47,22 @@ public class DescribeProxyGroupListRequest extends AbstractModel{
     private Long ProjectId;
 
     /**
+    * 过滤条件。   
+每次请求的Filter.Values的上限为5。
+RealServerRegion - String - 是否必填：否 -（过滤条件）按照源站地域过滤，可参考DescribeDestRegions接口返回结果中的RegionId。
+PackageType - String - 是否必填：否 - （过滤条件）通道组类型，Thunder表示标准通道组，Accelerator表示游戏加速器通道。
+    */
+    @SerializedName("Filters")
+    @Expose
+    private Filter [] Filters;
+
+    /**
     * 标签列表，当存在该字段时，拉取对应标签下的资源列表。
 最多支持5个标签，当存在两个或两个以上的标签时，满足其中任意一个标签时，该通道组会被拉取出来。
     */
     @SerializedName("TagSet")
     @Expose
     private TagPair [] TagSet;
-
-    /**
-    * 过滤条件。   
-每次请求的Filter.Values的上限为5。
-RealServerRegion - String - 是否必填：否 -（过滤条件）按照源站地域过滤，可参考DescribeDestRegions接口返回结果中的RegionId。
-    */
-    @SerializedName("Filters")
-    @Expose
-    private Filter [] Filters;
 
     /**
      * Get 偏移量，默认值为0。 
@@ -124,6 +125,34 @@ RealServerRegion - String - 是否必填：否 -（过滤条件）按照源站�
     }
 
     /**
+     * Get 过滤条件。   
+每次请求的Filter.Values的上限为5。
+RealServerRegion - String - 是否必填：否 -（过滤条件）按照源站地域过滤，可参考DescribeDestRegions接口返回结果中的RegionId。
+PackageType - String - 是否必填：否 - （过滤条件）通道组类型，Thunder表示标准通道组，Accelerator表示游戏加速器通道。 
+     * @return Filters 过滤条件。   
+每次请求的Filter.Values的上限为5。
+RealServerRegion - String - 是否必填：否 -（过滤条件）按照源站地域过滤，可参考DescribeDestRegions接口返回结果中的RegionId。
+PackageType - String - 是否必填：否 - （过滤条件）通道组类型，Thunder表示标准通道组，Accelerator表示游戏加速器通道。
+     */
+    public Filter [] getFilters() {
+        return this.Filters;
+    }
+
+    /**
+     * Set 过滤条件。   
+每次请求的Filter.Values的上限为5。
+RealServerRegion - String - 是否必填：否 -（过滤条件）按照源站地域过滤，可参考DescribeDestRegions接口返回结果中的RegionId。
+PackageType - String - 是否必填：否 - （过滤条件）通道组类型，Thunder表示标准通道组，Accelerator表示游戏加速器通道。
+     * @param Filters 过滤条件。   
+每次请求的Filter.Values的上限为5。
+RealServerRegion - String - 是否必填：否 -（过滤条件）按照源站地域过滤，可参考DescribeDestRegions接口返回结果中的RegionId。
+PackageType - String - 是否必填：否 - （过滤条件）通道组类型，Thunder表示标准通道组，Accelerator表示游戏加速器通道。
+     */
+    public void setFilters(Filter [] Filters) {
+        this.Filters = Filters;
+    }
+
+    /**
      * Get 标签列表，当存在该字段时，拉取对应标签下的资源列表。
 最多支持5个标签，当存在两个或两个以上的标签时，满足其中任意一个标签时，该通道组会被拉取出来。 
      * @return TagSet 标签列表，当存在该字段时，拉取对应标签下的资源列表。
@@ -143,30 +172,6 @@ RealServerRegion - String - 是否必填：否 -（过滤条件）按照源站�
         this.TagSet = TagSet;
     }
 
-    /**
-     * Get 过滤条件。   
-每次请求的Filter.Values的上限为5。
-RealServerRegion - String - 是否必填：否 -（过滤条件）按照源站地域过滤，可参考DescribeDestRegions接口返回结果中的RegionId。 
-     * @return Filters 过滤条件。   
-每次请求的Filter.Values的上限为5。
-RealServerRegion - String - 是否必填：否 -（过滤条件）按照源站地域过滤，可参考DescribeDestRegions接口返回结果中的RegionId。
-     */
-    public Filter [] getFilters() {
-        return this.Filters;
-    }
-
-    /**
-     * Set 过滤条件。   
-每次请求的Filter.Values的上限为5。
-RealServerRegion - String - 是否必填：否 -（过滤条件）按照源站地域过滤，可参考DescribeDestRegions接口返回结果中的RegionId。
-     * @param Filters 过滤条件。   
-每次请求的Filter.Values的上限为5。
-RealServerRegion - String - 是否必填：否 -（过滤条件）按照源站地域过滤，可参考DescribeDestRegions接口返回结果中的RegionId。
-     */
-    public void setFilters(Filter [] Filters) {
-        this.Filters = Filters;
-    }
-
     public DescribeProxyGroupListRequest() {
     }
 
@@ -184,16 +189,16 @@ RealServerRegion - String - 是否必填：否 -（过滤条件）按照源站�
         if (source.ProjectId != null) {
             this.ProjectId = new Long(source.ProjectId);
         }
-        if (source.TagSet != null) {
-            this.TagSet = new TagPair[source.TagSet.length];
-            for (int i = 0; i < source.TagSet.length; i++) {
-                this.TagSet[i] = new TagPair(source.TagSet[i]);
-            }
-        }
         if (source.Filters != null) {
             this.Filters = new Filter[source.Filters.length];
             for (int i = 0; i < source.Filters.length; i++) {
                 this.Filters[i] = new Filter(source.Filters[i]);
+            }
+        }
+        if (source.TagSet != null) {
+            this.TagSet = new TagPair[source.TagSet.length];
+            for (int i = 0; i < source.TagSet.length; i++) {
+                this.TagSet[i] = new TagPair(source.TagSet[i]);
             }
         }
     }
@@ -206,8 +211,8 @@ RealServerRegion - String - 是否必填：否 -（过滤条件）按照源站�
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
-        this.setParamArrayObj(map, prefix + "TagSet.", this.TagSet);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
+        this.setParamArrayObj(map, prefix + "TagSet.", this.TagSet);
 
     }
 }

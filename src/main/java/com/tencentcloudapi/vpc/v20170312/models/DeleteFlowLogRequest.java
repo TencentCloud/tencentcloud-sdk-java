@@ -23,13 +23,6 @@ import java.util.HashMap;
 public class DeleteFlowLogRequest extends AbstractModel{
 
     /**
-    * 私用网络ID或者统一ID，建议使用统一ID
-    */
-    @SerializedName("VpcId")
-    @Expose
-    private String VpcId;
-
-    /**
     * 流日志唯一ID
     */
     @SerializedName("FlowLogId")
@@ -37,20 +30,11 @@ public class DeleteFlowLogRequest extends AbstractModel{
     private String FlowLogId;
 
     /**
-     * Get 私用网络ID或者统一ID，建议使用统一ID 
-     * @return VpcId 私用网络ID或者统一ID，建议使用统一ID
-     */
-    public String getVpcId() {
-        return this.VpcId;
-    }
-
-    /**
-     * Set 私用网络ID或者统一ID，建议使用统一ID
-     * @param VpcId 私用网络ID或者统一ID，建议使用统一ID
-     */
-    public void setVpcId(String VpcId) {
-        this.VpcId = VpcId;
-    }
+    * 私用网络ID或者统一ID，建议使用统一ID，删除云联网流日志时，可不填，其他流日志类型必填。
+    */
+    @SerializedName("VpcId")
+    @Expose
+    private String VpcId;
 
     /**
      * Get 流日志唯一ID 
@@ -68,6 +52,22 @@ public class DeleteFlowLogRequest extends AbstractModel{
         this.FlowLogId = FlowLogId;
     }
 
+    /**
+     * Get 私用网络ID或者统一ID，建议使用统一ID，删除云联网流日志时，可不填，其他流日志类型必填。 
+     * @return VpcId 私用网络ID或者统一ID，建议使用统一ID，删除云联网流日志时，可不填，其他流日志类型必填。
+     */
+    public String getVpcId() {
+        return this.VpcId;
+    }
+
+    /**
+     * Set 私用网络ID或者统一ID，建议使用统一ID，删除云联网流日志时，可不填，其他流日志类型必填。
+     * @param VpcId 私用网络ID或者统一ID，建议使用统一ID，删除云联网流日志时，可不填，其他流日志类型必填。
+     */
+    public void setVpcId(String VpcId) {
+        this.VpcId = VpcId;
+    }
+
     public DeleteFlowLogRequest() {
     }
 
@@ -76,11 +76,11 @@ public class DeleteFlowLogRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DeleteFlowLogRequest(DeleteFlowLogRequest source) {
-        if (source.VpcId != null) {
-            this.VpcId = new String(source.VpcId);
-        }
         if (source.FlowLogId != null) {
             this.FlowLogId = new String(source.FlowLogId);
+        }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
         }
     }
 
@@ -89,8 +89,8 @@ public class DeleteFlowLogRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "VpcId", this.VpcId);
         this.setParamSimple(map, prefix + "FlowLogId", this.FlowLogId);
+        this.setParamSimple(map, prefix + "VpcId", this.VpcId);
 
     }
 }

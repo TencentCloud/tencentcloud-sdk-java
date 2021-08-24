@@ -152,6 +152,14 @@ public class ProxyGroupDetail extends AbstractModel{
     private String IPAddressVersion;
 
     /**
+    * 通道组类型，可取值：Thunder、Accelerator，默认值Thunder
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PackageType")
+    @Expose
+    private String PackageType;
+
+    /**
      * Get 创建时间 
      * @return CreateTime 创建时间
      */
@@ -463,6 +471,26 @@ public class ProxyGroupDetail extends AbstractModel{
         this.IPAddressVersion = IPAddressVersion;
     }
 
+    /**
+     * Get 通道组类型，可取值：Thunder、Accelerator，默认值Thunder
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PackageType 通道组类型，可取值：Thunder、Accelerator，默认值Thunder
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPackageType() {
+        return this.PackageType;
+    }
+
+    /**
+     * Set 通道组类型，可取值：Thunder、Accelerator，默认值Thunder
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PackageType 通道组类型，可取值：Thunder、Accelerator，默认值Thunder
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPackageType(String PackageType) {
+        this.PackageType = PackageType;
+    }
+
     public ProxyGroupDetail() {
     }
 
@@ -528,6 +556,9 @@ public class ProxyGroupDetail extends AbstractModel{
         if (source.IPAddressVersion != null) {
             this.IPAddressVersion = new String(source.IPAddressVersion);
         }
+        if (source.PackageType != null) {
+            this.PackageType = new String(source.PackageType);
+        }
     }
 
 
@@ -552,6 +583,7 @@ public class ProxyGroupDetail extends AbstractModel{
         this.setParamSimple(map, prefix + "Version", this.Version);
         this.setParamArraySimple(map, prefix + "ClientIPMethod.", this.ClientIPMethod);
         this.setParamSimple(map, prefix + "IPAddressVersion", this.IPAddressVersion);
+        this.setParamSimple(map, prefix + "PackageType", this.PackageType);
 
     }
 }

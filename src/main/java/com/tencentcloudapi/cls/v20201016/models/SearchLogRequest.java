@@ -72,6 +72,13 @@ public class SearchLogRequest extends AbstractModel{
     private String Sort;
 
     /**
+    * 为true代表使用新检索,响应参数AnalysisRecords和Columns有效， 为false时代表使用老检索方式, AnalysisResults和ColNames有效
+    */
+    @SerializedName("UseNewAnalysis")
+    @Expose
+    private Boolean UseNewAnalysis;
+
+    /**
      * Get 要查询的日志主题ID 
      * @return TopicId 要查询的日志主题ID
      */
@@ -183,6 +190,22 @@ public class SearchLogRequest extends AbstractModel{
         this.Sort = Sort;
     }
 
+    /**
+     * Get 为true代表使用新检索,响应参数AnalysisRecords和Columns有效， 为false时代表使用老检索方式, AnalysisResults和ColNames有效 
+     * @return UseNewAnalysis 为true代表使用新检索,响应参数AnalysisRecords和Columns有效， 为false时代表使用老检索方式, AnalysisResults和ColNames有效
+     */
+    public Boolean getUseNewAnalysis() {
+        return this.UseNewAnalysis;
+    }
+
+    /**
+     * Set 为true代表使用新检索,响应参数AnalysisRecords和Columns有效， 为false时代表使用老检索方式, AnalysisResults和ColNames有效
+     * @param UseNewAnalysis 为true代表使用新检索,响应参数AnalysisRecords和Columns有效， 为false时代表使用老检索方式, AnalysisResults和ColNames有效
+     */
+    public void setUseNewAnalysis(Boolean UseNewAnalysis) {
+        this.UseNewAnalysis = UseNewAnalysis;
+    }
+
     public SearchLogRequest() {
     }
 
@@ -212,6 +235,9 @@ public class SearchLogRequest extends AbstractModel{
         if (source.Sort != null) {
             this.Sort = new String(source.Sort);
         }
+        if (source.UseNewAnalysis != null) {
+            this.UseNewAnalysis = new Boolean(source.UseNewAnalysis);
+        }
     }
 
 
@@ -226,6 +252,7 @@ public class SearchLogRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Context", this.Context);
         this.setParamSimple(map, prefix + "Sort", this.Sort);
+        this.setParamSimple(map, prefix + "UseNewAnalysis", this.UseNewAnalysis);
 
     }
 }

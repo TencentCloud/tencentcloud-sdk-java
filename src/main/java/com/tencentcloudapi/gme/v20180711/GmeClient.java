@@ -39,6 +39,26 @@ public class GmeClient extends AbstractClient{
     }
 
     /**
+     *用于创建年龄语音识别任务的接口，请求频率10次/秒。该接口目前通过白名单开放试用，如有需求，请提交工单申请。
+     * @param req CreateAgeDetectTaskRequest
+     * @return CreateAgeDetectTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAgeDetectTaskResponse CreateAgeDetectTask(CreateAgeDetectTaskRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateAgeDetectTaskResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateAgeDetectTaskResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateAgeDetectTask");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口(CreateApp)用于创建一个GME应用。
      * @param req CreateAppRequest
      * @return CreateAppResponse
@@ -51,6 +71,26 @@ public class GmeClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreateAppResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "CreateApp");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询年龄语音识别任务结果，请求频率10次/秒。该接口目前通过白名单开放试用，如有需求，请提交工单申请。
+     * @param req DescribeAgeDetectTaskRequest
+     * @return DescribeAgeDetectTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAgeDetectTaskResponse DescribeAgeDetectTask(DescribeAgeDetectTaskRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAgeDetectTaskResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAgeDetectTaskResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAgeDetectTask");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

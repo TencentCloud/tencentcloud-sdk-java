@@ -44,7 +44,7 @@ public class FlowLog extends AbstractModel{
     private String FlowLogName;
 
     /**
-    * 流日志所属资源类型，VPC|SUBNET|NETWORKINTERFACE
+    * 流日志所属资源类型，VPC|SUBNET|NETWORKINTERFACE|CCN
     */
     @SerializedName("ResourceType")
     @Expose
@@ -148,16 +148,16 @@ public class FlowLog extends AbstractModel{
     }
 
     /**
-     * Get 流日志所属资源类型，VPC|SUBNET|NETWORKINTERFACE 
-     * @return ResourceType 流日志所属资源类型，VPC|SUBNET|NETWORKINTERFACE
+     * Get 流日志所属资源类型，VPC|SUBNET|NETWORKINTERFACE|CCN 
+     * @return ResourceType 流日志所属资源类型，VPC|SUBNET|NETWORKINTERFACE|CCN
      */
     public String getResourceType() {
         return this.ResourceType;
     }
 
     /**
-     * Set 流日志所属资源类型，VPC|SUBNET|NETWORKINTERFACE
-     * @param ResourceType 流日志所属资源类型，VPC|SUBNET|NETWORKINTERFACE
+     * Set 流日志所属资源类型，VPC|SUBNET|NETWORKINTERFACE|CCN
+     * @param ResourceType 流日志所属资源类型，VPC|SUBNET|NETWORKINTERFACE|CCN
      */
     public void setResourceType(String ResourceType) {
         this.ResourceType = ResourceType;

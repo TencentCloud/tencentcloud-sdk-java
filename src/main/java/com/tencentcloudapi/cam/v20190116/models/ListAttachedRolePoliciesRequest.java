@@ -58,6 +58,13 @@ public class ListAttachedRolePoliciesRequest extends AbstractModel{
     private String PolicyType;
 
     /**
+    * 搜索关键字
+    */
+    @SerializedName("Keyword")
+    @Expose
+    private String Keyword;
+
+    /**
      * Get 页码，从 1 开始 
      * @return Page 页码，从 1 开始
      */
@@ -137,6 +144,22 @@ public class ListAttachedRolePoliciesRequest extends AbstractModel{
         this.PolicyType = PolicyType;
     }
 
+    /**
+     * Get 搜索关键字 
+     * @return Keyword 搜索关键字
+     */
+    public String getKeyword() {
+        return this.Keyword;
+    }
+
+    /**
+     * Set 搜索关键字
+     * @param Keyword 搜索关键字
+     */
+    public void setKeyword(String Keyword) {
+        this.Keyword = Keyword;
+    }
+
     public ListAttachedRolePoliciesRequest() {
     }
 
@@ -160,6 +183,9 @@ public class ListAttachedRolePoliciesRequest extends AbstractModel{
         if (source.PolicyType != null) {
             this.PolicyType = new String(source.PolicyType);
         }
+        if (source.Keyword != null) {
+            this.Keyword = new String(source.Keyword);
+        }
     }
 
 
@@ -172,6 +198,7 @@ public class ListAttachedRolePoliciesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "RoleId", this.RoleId);
         this.setParamSimple(map, prefix + "RoleName", this.RoleName);
         this.setParamSimple(map, prefix + "PolicyType", this.PolicyType);
+        this.setParamSimple(map, prefix + "Keyword", this.Keyword);
 
     }
 }

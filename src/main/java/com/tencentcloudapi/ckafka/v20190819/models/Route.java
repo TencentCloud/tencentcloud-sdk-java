@@ -41,7 +41,7 @@ public class Route extends AbstractModel{
     private Long RouteId;
 
     /**
-    * vip网络类型（1:外网TGW  2:基础网络 3:VPC网络 4:腾讯云支持环境(一般用于内部实例) 5:SSL外网访问方式访问 6:黑石环境vpc）
+    * vip网络类型（1:外网TGW  2:基础网络 3:VPC网络 4:支撑网络(标准版) 5:SSL外网访问方式访问 6:黑石环境vpc 7:支撑网络(专业版)）
     */
     @SerializedName("VipType")
     @Expose
@@ -69,6 +69,14 @@ public class Route extends AbstractModel{
     @SerializedName("DomainPort")
     @Expose
     private Long DomainPort;
+
+    /**
+    * 时间戳
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DeleteTimestamp")
+    @Expose
+    private String DeleteTimestamp;
 
     /**
      * Get 实例接入方式
@@ -119,16 +127,16 @@ public class Route extends AbstractModel{
     }
 
     /**
-     * Get vip网络类型（1:外网TGW  2:基础网络 3:VPC网络 4:腾讯云支持环境(一般用于内部实例) 5:SSL外网访问方式访问 6:黑石环境vpc） 
-     * @return VipType vip网络类型（1:外网TGW  2:基础网络 3:VPC网络 4:腾讯云支持环境(一般用于内部实例) 5:SSL外网访问方式访问 6:黑石环境vpc）
+     * Get vip网络类型（1:外网TGW  2:基础网络 3:VPC网络 4:支撑网络(标准版) 5:SSL外网访问方式访问 6:黑石环境vpc 7:支撑网络(专业版)） 
+     * @return VipType vip网络类型（1:外网TGW  2:基础网络 3:VPC网络 4:支撑网络(标准版) 5:SSL外网访问方式访问 6:黑石环境vpc 7:支撑网络(专业版)）
      */
     public Long getVipType() {
         return this.VipType;
     }
 
     /**
-     * Set vip网络类型（1:外网TGW  2:基础网络 3:VPC网络 4:腾讯云支持环境(一般用于内部实例) 5:SSL外网访问方式访问 6:黑石环境vpc）
-     * @param VipType vip网络类型（1:外网TGW  2:基础网络 3:VPC网络 4:腾讯云支持环境(一般用于内部实例) 5:SSL外网访问方式访问 6:黑石环境vpc）
+     * Set vip网络类型（1:外网TGW  2:基础网络 3:VPC网络 4:支撑网络(标准版) 5:SSL外网访问方式访问 6:黑石环境vpc 7:支撑网络(专业版)）
+     * @param VipType vip网络类型（1:外网TGW  2:基础网络 3:VPC网络 4:支撑网络(标准版) 5:SSL外网访问方式访问 6:黑石环境vpc 7:支撑网络(专业版)）
      */
     public void setVipType(Long VipType) {
         this.VipType = VipType;
@@ -190,6 +198,26 @@ public class Route extends AbstractModel{
         this.DomainPort = DomainPort;
     }
 
+    /**
+     * Get 时间戳
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DeleteTimestamp 时间戳
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDeleteTimestamp() {
+        return this.DeleteTimestamp;
+    }
+
+    /**
+     * Set 时间戳
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DeleteTimestamp 时间戳
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDeleteTimestamp(String DeleteTimestamp) {
+        this.DeleteTimestamp = DeleteTimestamp;
+    }
+
     public Route() {
     }
 
@@ -219,6 +247,9 @@ public class Route extends AbstractModel{
         if (source.DomainPort != null) {
             this.DomainPort = new Long(source.DomainPort);
         }
+        if (source.DeleteTimestamp != null) {
+            this.DeleteTimestamp = new String(source.DeleteTimestamp);
+        }
     }
 
 
@@ -232,6 +263,7 @@ public class Route extends AbstractModel{
         this.setParamArrayObj(map, prefix + "VipList.", this.VipList);
         this.setParamSimple(map, prefix + "Domain", this.Domain);
         this.setParamSimple(map, prefix + "DomainPort", this.DomainPort);
+        this.setParamSimple(map, prefix + "DeleteTimestamp", this.DeleteTimestamp);
 
     }
 }

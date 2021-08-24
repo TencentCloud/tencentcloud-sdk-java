@@ -267,6 +267,13 @@ public class DeployApplicationRequest extends AbstractModel{
     private CronHorizontalAutoscaler [] CronHorizontalAutoscaler;
 
     /**
+    * 是否启用log，1为启用，0为不启用
+    */
+    @SerializedName("LogEnable")
+    @Expose
+    private Long LogEnable;
+
+    /**
      * Get 应用ID 
      * @return ApplicationId 应用ID
      */
@@ -834,6 +841,22 @@ public class DeployApplicationRequest extends AbstractModel{
         this.CronHorizontalAutoscaler = CronHorizontalAutoscaler;
     }
 
+    /**
+     * Get 是否启用log，1为启用，0为不启用 
+     * @return LogEnable 是否启用log，1为启用，0为不启用
+     */
+    public Long getLogEnable() {
+        return this.LogEnable;
+    }
+
+    /**
+     * Set 是否启用log，1为启用，0为不启用
+     * @param LogEnable 是否启用log，1为启用，0为不启用
+     */
+    public void setLogEnable(Long LogEnable) {
+        this.LogEnable = LogEnable;
+    }
+
     public DeployApplicationRequest() {
     }
 
@@ -971,6 +994,9 @@ public class DeployApplicationRequest extends AbstractModel{
                 this.CronHorizontalAutoscaler[i] = new CronHorizontalAutoscaler(source.CronHorizontalAutoscaler[i]);
             }
         }
+        if (source.LogEnable != null) {
+            this.LogEnable = new Long(source.LogEnable);
+        }
     }
 
 
@@ -1012,6 +1038,7 @@ public class DeployApplicationRequest extends AbstractModel{
         this.setParamObj(map, prefix + "DeployStrategyConf.", this.DeployStrategyConf);
         this.setParamArrayObj(map, prefix + "HorizontalAutoscaler.", this.HorizontalAutoscaler);
         this.setParamArrayObj(map, prefix + "CronHorizontalAutoscaler.", this.CronHorizontalAutoscaler);
+        this.setParamSimple(map, prefix + "LogEnable", this.LogEnable);
 
     }
 }

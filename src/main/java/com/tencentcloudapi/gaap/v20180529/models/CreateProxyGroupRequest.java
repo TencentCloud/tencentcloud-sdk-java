@@ -65,6 +65,13 @@ public class CreateProxyGroupRequest extends AbstractModel{
     private String IPAddressVersion;
 
     /**
+    * 通道组套餐类型，可取值：Thunder、Accelerator，默认值Thunder
+    */
+    @SerializedName("PackageType")
+    @Expose
+    private String PackageType;
+
+    /**
      * Get 通道组所属项目ID 
      * @return ProjectId 通道组所属项目ID
      */
@@ -160,6 +167,22 @@ public class CreateProxyGroupRequest extends AbstractModel{
         this.IPAddressVersion = IPAddressVersion;
     }
 
+    /**
+     * Get 通道组套餐类型，可取值：Thunder、Accelerator，默认值Thunder 
+     * @return PackageType 通道组套餐类型，可取值：Thunder、Accelerator，默认值Thunder
+     */
+    public String getPackageType() {
+        return this.PackageType;
+    }
+
+    /**
+     * Set 通道组套餐类型，可取值：Thunder、Accelerator，默认值Thunder
+     * @param PackageType 通道组套餐类型，可取值：Thunder、Accelerator，默认值Thunder
+     */
+    public void setPackageType(String PackageType) {
+        this.PackageType = PackageType;
+    }
+
     public CreateProxyGroupRequest() {
     }
 
@@ -192,6 +215,9 @@ public class CreateProxyGroupRequest extends AbstractModel{
         if (source.IPAddressVersion != null) {
             this.IPAddressVersion = new String(source.IPAddressVersion);
         }
+        if (source.PackageType != null) {
+            this.PackageType = new String(source.PackageType);
+        }
     }
 
 
@@ -205,6 +231,7 @@ public class CreateProxyGroupRequest extends AbstractModel{
         this.setParamArrayObj(map, prefix + "TagSet.", this.TagSet);
         this.setParamArrayObj(map, prefix + "AccessRegionSet.", this.AccessRegionSet);
         this.setParamSimple(map, prefix + "IPAddressVersion", this.IPAddressVersion);
+        this.setParamSimple(map, prefix + "PackageType", this.PackageType);
 
     }
 }

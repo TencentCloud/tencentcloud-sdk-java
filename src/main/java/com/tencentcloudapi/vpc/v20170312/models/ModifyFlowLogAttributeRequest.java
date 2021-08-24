@@ -23,18 +23,18 @@ import java.util.HashMap;
 public class ModifyFlowLogAttributeRequest extends AbstractModel{
 
     /**
-    * 私用网络ID或者统一ID，建议使用统一ID
-    */
-    @SerializedName("VpcId")
-    @Expose
-    private String VpcId;
-
-    /**
     * 流日志唯一ID
     */
     @SerializedName("FlowLogId")
     @Expose
     private String FlowLogId;
+
+    /**
+    * 私用网络ID或者统一ID，建议使用统一ID，修改云联网流日志属性时可不填，其他流日志类型必填。
+    */
+    @SerializedName("VpcId")
+    @Expose
+    private String VpcId;
 
     /**
     * 流日志实例名字
@@ -51,22 +51,6 @@ public class ModifyFlowLogAttributeRequest extends AbstractModel{
     private String FlowLogDescription;
 
     /**
-     * Get 私用网络ID或者统一ID，建议使用统一ID 
-     * @return VpcId 私用网络ID或者统一ID，建议使用统一ID
-     */
-    public String getVpcId() {
-        return this.VpcId;
-    }
-
-    /**
-     * Set 私用网络ID或者统一ID，建议使用统一ID
-     * @param VpcId 私用网络ID或者统一ID，建议使用统一ID
-     */
-    public void setVpcId(String VpcId) {
-        this.VpcId = VpcId;
-    }
-
-    /**
      * Get 流日志唯一ID 
      * @return FlowLogId 流日志唯一ID
      */
@@ -80,6 +64,22 @@ public class ModifyFlowLogAttributeRequest extends AbstractModel{
      */
     public void setFlowLogId(String FlowLogId) {
         this.FlowLogId = FlowLogId;
+    }
+
+    /**
+     * Get 私用网络ID或者统一ID，建议使用统一ID，修改云联网流日志属性时可不填，其他流日志类型必填。 
+     * @return VpcId 私用网络ID或者统一ID，建议使用统一ID，修改云联网流日志属性时可不填，其他流日志类型必填。
+     */
+    public String getVpcId() {
+        return this.VpcId;
+    }
+
+    /**
+     * Set 私用网络ID或者统一ID，建议使用统一ID，修改云联网流日志属性时可不填，其他流日志类型必填。
+     * @param VpcId 私用网络ID或者统一ID，建议使用统一ID，修改云联网流日志属性时可不填，其他流日志类型必填。
+     */
+    public void setVpcId(String VpcId) {
+        this.VpcId = VpcId;
     }
 
     /**
@@ -122,11 +122,11 @@ public class ModifyFlowLogAttributeRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public ModifyFlowLogAttributeRequest(ModifyFlowLogAttributeRequest source) {
-        if (source.VpcId != null) {
-            this.VpcId = new String(source.VpcId);
-        }
         if (source.FlowLogId != null) {
             this.FlowLogId = new String(source.FlowLogId);
+        }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
         }
         if (source.FlowLogName != null) {
             this.FlowLogName = new String(source.FlowLogName);
@@ -141,8 +141,8 @@ public class ModifyFlowLogAttributeRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "VpcId", this.VpcId);
         this.setParamSimple(map, prefix + "FlowLogId", this.FlowLogId);
+        this.setParamSimple(map, prefix + "VpcId", this.VpcId);
         this.setParamSimple(map, prefix + "FlowLogName", this.FlowLogName);
         this.setParamSimple(map, prefix + "FlowLogDescription", this.FlowLogDescription);
 

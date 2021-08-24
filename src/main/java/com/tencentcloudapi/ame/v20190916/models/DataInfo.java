@@ -58,6 +58,13 @@ public class DataInfo extends AbstractModel{
     private Long AuditionEnd;
 
     /**
+    * 标签名称
+    */
+    @SerializedName("TagNames")
+    @Expose
+    private String [] TagNames;
+
+    /**
      * Get Song Name 
      * @return Name Song Name
      */
@@ -137,6 +144,22 @@ public class DataInfo extends AbstractModel{
         this.AuditionEnd = AuditionEnd;
     }
 
+    /**
+     * Get 标签名称 
+     * @return TagNames 标签名称
+     */
+    public String [] getTagNames() {
+        return this.TagNames;
+    }
+
+    /**
+     * Set 标签名称
+     * @param TagNames 标签名称
+     */
+    public void setTagNames(String [] TagNames) {
+        this.TagNames = TagNames;
+    }
+
     public DataInfo() {
     }
 
@@ -160,6 +183,12 @@ public class DataInfo extends AbstractModel{
         if (source.AuditionEnd != null) {
             this.AuditionEnd = new Long(source.AuditionEnd);
         }
+        if (source.TagNames != null) {
+            this.TagNames = new String[source.TagNames.length];
+            for (int i = 0; i < source.TagNames.length; i++) {
+                this.TagNames[i] = new String(source.TagNames[i]);
+            }
+        }
     }
 
 
@@ -172,6 +201,7 @@ public class DataInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Duration", this.Duration);
         this.setParamSimple(map, prefix + "AuditionBegin", this.AuditionBegin);
         this.setParamSimple(map, prefix + "AuditionEnd", this.AuditionEnd);
+        this.setParamArraySimple(map, prefix + "TagNames.", this.TagNames);
 
     }
 }

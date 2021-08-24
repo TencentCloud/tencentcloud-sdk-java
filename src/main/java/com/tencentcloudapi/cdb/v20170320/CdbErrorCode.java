@@ -48,6 +48,9 @@ public enum CdbErrorCode {
     // 查询失败。
      FAILEDOPERATION_INSTANCEQUERYERROR("FailedOperation.InstanceQueryError"),
      
+    // json序列化失败。
+     FAILEDOPERATION_JSONMARSHALERROR("FailedOperation.JsonMarshalError"),
+     
     // json反序列化失败。
      FAILEDOPERATION_JSONUNMARSHALERROR("FailedOperation.JsonUnmarshalError"),
      

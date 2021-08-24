@@ -82,6 +82,29 @@ public class GetFaceIdResultResponse extends AbstractModel{
     private String Extra;
 
     /**
+    * 设备风险标签，仅错误码返回1007（设备疑似被劫持）时返回风险标签。标签说明：
+202、5001：设备疑似被Root
+203、5004：设备疑似被注入
+205：设备疑似被Hook
+206：设备疑似虚拟运行环境
+5007、1005：设备疑似摄像头被劫持
+8000：设备疑似存在异常篡改行为
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DeviceInfoTag")
+    @Expose
+    private String DeviceInfoTag;
+
+    /**
+    * 行为风险标签，仅错误码返回1007（设备疑似被劫持）时返回风险标签。标签说明：
+02：攻击风险
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RiskInfoTag")
+    @Expose
+    private String RiskInfoTag;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -229,6 +252,74 @@ public class GetFaceIdResultResponse extends AbstractModel{
     }
 
     /**
+     * Get 设备风险标签，仅错误码返回1007（设备疑似被劫持）时返回风险标签。标签说明：
+202、5001：设备疑似被Root
+203、5004：设备疑似被注入
+205：设备疑似被Hook
+206：设备疑似虚拟运行环境
+5007、1005：设备疑似摄像头被劫持
+8000：设备疑似存在异常篡改行为
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DeviceInfoTag 设备风险标签，仅错误码返回1007（设备疑似被劫持）时返回风险标签。标签说明：
+202、5001：设备疑似被Root
+203、5004：设备疑似被注入
+205：设备疑似被Hook
+206：设备疑似虚拟运行环境
+5007、1005：设备疑似摄像头被劫持
+8000：设备疑似存在异常篡改行为
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDeviceInfoTag() {
+        return this.DeviceInfoTag;
+    }
+
+    /**
+     * Set 设备风险标签，仅错误码返回1007（设备疑似被劫持）时返回风险标签。标签说明：
+202、5001：设备疑似被Root
+203、5004：设备疑似被注入
+205：设备疑似被Hook
+206：设备疑似虚拟运行环境
+5007、1005：设备疑似摄像头被劫持
+8000：设备疑似存在异常篡改行为
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DeviceInfoTag 设备风险标签，仅错误码返回1007（设备疑似被劫持）时返回风险标签。标签说明：
+202、5001：设备疑似被Root
+203、5004：设备疑似被注入
+205：设备疑似被Hook
+206：设备疑似虚拟运行环境
+5007、1005：设备疑似摄像头被劫持
+8000：设备疑似存在异常篡改行为
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDeviceInfoTag(String DeviceInfoTag) {
+        this.DeviceInfoTag = DeviceInfoTag;
+    }
+
+    /**
+     * Get 行为风险标签，仅错误码返回1007（设备疑似被劫持）时返回风险标签。标签说明：
+02：攻击风险
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RiskInfoTag 行为风险标签，仅错误码返回1007（设备疑似被劫持）时返回风险标签。标签说明：
+02：攻击风险
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRiskInfoTag() {
+        return this.RiskInfoTag;
+    }
+
+    /**
+     * Set 行为风险标签，仅错误码返回1007（设备疑似被劫持）时返回风险标签。标签说明：
+02：攻击风险
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RiskInfoTag 行为风险标签，仅错误码返回1007（设备疑似被劫持）时返回风险标签。标签说明：
+02：攻击风险
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRiskInfoTag(String RiskInfoTag) {
+        this.RiskInfoTag = RiskInfoTag;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -276,6 +367,12 @@ public class GetFaceIdResultResponse extends AbstractModel{
         if (source.Extra != null) {
             this.Extra = new String(source.Extra);
         }
+        if (source.DeviceInfoTag != null) {
+            this.DeviceInfoTag = new String(source.DeviceInfoTag);
+        }
+        if (source.RiskInfoTag != null) {
+            this.RiskInfoTag = new String(source.RiskInfoTag);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -294,6 +391,8 @@ public class GetFaceIdResultResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "VideoBase64", this.VideoBase64);
         this.setParamSimple(map, prefix + "BestFrameBase64", this.BestFrameBase64);
         this.setParamSimple(map, prefix + "Extra", this.Extra);
+        this.setParamSimple(map, prefix + "DeviceInfoTag", this.DeviceInfoTag);
+        this.setParamSimple(map, prefix + "RiskInfoTag", this.RiskInfoTag);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
