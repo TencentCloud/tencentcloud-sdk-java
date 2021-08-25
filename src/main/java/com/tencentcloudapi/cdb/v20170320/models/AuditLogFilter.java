@@ -86,6 +86,20 @@ public class AuditLogFilter extends AbstractModel{
     private Long AffectRows;
 
     /**
+    * SQL 类型。支持多个类型同时查询。目前支持："SELECT", "INSERT", "UPDATE", "DELETE", "CREATE", "DROP", "ALTER", "SET", "REPLACE", "EXECUTE"。
+    */
+    @SerializedName("SqlTypes")
+    @Expose
+    private String [] SqlTypes;
+
+    /**
+    * SQL 语句。支持传递多个sql语句。
+    */
+    @SerializedName("Sqls")
+    @Expose
+    private String [] Sqls;
+
+    /**
      * Get 客户端地址。 
      * @return Host 客户端地址。
      */
@@ -229,6 +243,38 @@ public class AuditLogFilter extends AbstractModel{
         this.AffectRows = AffectRows;
     }
 
+    /**
+     * Get SQL 类型。支持多个类型同时查询。目前支持："SELECT", "INSERT", "UPDATE", "DELETE", "CREATE", "DROP", "ALTER", "SET", "REPLACE", "EXECUTE"。 
+     * @return SqlTypes SQL 类型。支持多个类型同时查询。目前支持："SELECT", "INSERT", "UPDATE", "DELETE", "CREATE", "DROP", "ALTER", "SET", "REPLACE", "EXECUTE"。
+     */
+    public String [] getSqlTypes() {
+        return this.SqlTypes;
+    }
+
+    /**
+     * Set SQL 类型。支持多个类型同时查询。目前支持："SELECT", "INSERT", "UPDATE", "DELETE", "CREATE", "DROP", "ALTER", "SET", "REPLACE", "EXECUTE"。
+     * @param SqlTypes SQL 类型。支持多个类型同时查询。目前支持："SELECT", "INSERT", "UPDATE", "DELETE", "CREATE", "DROP", "ALTER", "SET", "REPLACE", "EXECUTE"。
+     */
+    public void setSqlTypes(String [] SqlTypes) {
+        this.SqlTypes = SqlTypes;
+    }
+
+    /**
+     * Get SQL 语句。支持传递多个sql语句。 
+     * @return Sqls SQL 语句。支持传递多个sql语句。
+     */
+    public String [] getSqls() {
+        return this.Sqls;
+    }
+
+    /**
+     * Set SQL 语句。支持传递多个sql语句。
+     * @param Sqls SQL 语句。支持传递多个sql语句。
+     */
+    public void setSqls(String [] Sqls) {
+        this.Sqls = Sqls;
+    }
+
     public AuditLogFilter() {
     }
 
@@ -279,6 +325,18 @@ public class AuditLogFilter extends AbstractModel{
         if (source.AffectRows != null) {
             this.AffectRows = new Long(source.AffectRows);
         }
+        if (source.SqlTypes != null) {
+            this.SqlTypes = new String[source.SqlTypes.length];
+            for (int i = 0; i < source.SqlTypes.length; i++) {
+                this.SqlTypes[i] = new String(source.SqlTypes[i]);
+            }
+        }
+        if (source.Sqls != null) {
+            this.Sqls = new String[source.Sqls.length];
+            for (int i = 0; i < source.Sqls.length; i++) {
+                this.Sqls[i] = new String(source.Sqls[i]);
+            }
+        }
     }
 
 
@@ -295,6 +353,8 @@ public class AuditLogFilter extends AbstractModel{
         this.setParamSimple(map, prefix + "SqlType", this.SqlType);
         this.setParamSimple(map, prefix + "ExecTime", this.ExecTime);
         this.setParamSimple(map, prefix + "AffectRows", this.AffectRows);
+        this.setParamArraySimple(map, prefix + "SqlTypes.", this.SqlTypes);
+        this.setParamArraySimple(map, prefix + "Sqls.", this.Sqls);
 
     }
 }

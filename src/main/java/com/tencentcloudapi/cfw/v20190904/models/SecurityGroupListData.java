@@ -37,7 +37,7 @@ public class SecurityGroupListData extends AbstractModel{
     private String SourceId;
 
     /**
-    * 访问源类型，默认为0，1: VPC, 2: SUBNET, 3: CVM, 4: CLB, 5: ENI, 6: CDB, 100:资源组
+    * 访问源类型，默认为0，1: VPC, 2: SUBNET, 3: CVM, 4: CLB, 5: ENI, 6: CDB, 7: 参数模板, 100: 资源组
     */
     @SerializedName("SourceType")
     @Expose
@@ -51,7 +51,7 @@ public class SecurityGroupListData extends AbstractModel{
     private String TargetId;
 
     /**
-    * 访问目的类型，默认为0，1: VPC, 2: SUBNET, 3: CVM, 4: CLB, 5: ENI, 6: CDB, 100:资源组
+    * 访问目的类型，默认为0，1: VPC, 2: SUBNET, 3: CVM, 4: CLB, 5: ENI, 6: CDB, 7: 参数模板, 100:资源组
     */
     @SerializedName("TargetType")
     @Expose
@@ -170,7 +170,7 @@ public class SecurityGroupListData extends AbstractModel{
     private String ServiceTemplateId;
 
     /**
-    * 当BothWay为0的时候，填空，当BothWay为1的时候，为JSON字符串，数据来源于DescribeBothWayInstanceListByIp个接口，如果该接口返回数据为空，则不支持双向下发
+    * 生成双向下发规则
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BothWayInfo")
@@ -224,16 +224,16 @@ public class SecurityGroupListData extends AbstractModel{
     }
 
     /**
-     * Get 访问源类型，默认为0，1: VPC, 2: SUBNET, 3: CVM, 4: CLB, 5: ENI, 6: CDB, 100:资源组 
-     * @return SourceType 访问源类型，默认为0，1: VPC, 2: SUBNET, 3: CVM, 4: CLB, 5: ENI, 6: CDB, 100:资源组
+     * Get 访问源类型，默认为0，1: VPC, 2: SUBNET, 3: CVM, 4: CLB, 5: ENI, 6: CDB, 7: 参数模板, 100: 资源组 
+     * @return SourceType 访问源类型，默认为0，1: VPC, 2: SUBNET, 3: CVM, 4: CLB, 5: ENI, 6: CDB, 7: 参数模板, 100: 资源组
      */
     public Long getSourceType() {
         return this.SourceType;
     }
 
     /**
-     * Set 访问源类型，默认为0，1: VPC, 2: SUBNET, 3: CVM, 4: CLB, 5: ENI, 6: CDB, 100:资源组
-     * @param SourceType 访问源类型，默认为0，1: VPC, 2: SUBNET, 3: CVM, 4: CLB, 5: ENI, 6: CDB, 100:资源组
+     * Set 访问源类型，默认为0，1: VPC, 2: SUBNET, 3: CVM, 4: CLB, 5: ENI, 6: CDB, 7: 参数模板, 100: 资源组
+     * @param SourceType 访问源类型，默认为0，1: VPC, 2: SUBNET, 3: CVM, 4: CLB, 5: ENI, 6: CDB, 7: 参数模板, 100: 资源组
      */
     public void setSourceType(Long SourceType) {
         this.SourceType = SourceType;
@@ -256,16 +256,16 @@ public class SecurityGroupListData extends AbstractModel{
     }
 
     /**
-     * Get 访问目的类型，默认为0，1: VPC, 2: SUBNET, 3: CVM, 4: CLB, 5: ENI, 6: CDB, 100:资源组 
-     * @return TargetType 访问目的类型，默认为0，1: VPC, 2: SUBNET, 3: CVM, 4: CLB, 5: ENI, 6: CDB, 100:资源组
+     * Get 访问目的类型，默认为0，1: VPC, 2: SUBNET, 3: CVM, 4: CLB, 5: ENI, 6: CDB, 7: 参数模板, 100:资源组 
+     * @return TargetType 访问目的类型，默认为0，1: VPC, 2: SUBNET, 3: CVM, 4: CLB, 5: ENI, 6: CDB, 7: 参数模板, 100:资源组
      */
     public Long getTargetType() {
         return this.TargetType;
     }
 
     /**
-     * Set 访问目的类型，默认为0，1: VPC, 2: SUBNET, 3: CVM, 4: CLB, 5: ENI, 6: CDB, 100:资源组
-     * @param TargetType 访问目的类型，默认为0，1: VPC, 2: SUBNET, 3: CVM, 4: CLB, 5: ENI, 6: CDB, 100:资源组
+     * Set 访问目的类型，默认为0，1: VPC, 2: SUBNET, 3: CVM, 4: CLB, 5: ENI, 6: CDB, 7: 参数模板, 100:资源组
+     * @param TargetType 访问目的类型，默认为0，1: VPC, 2: SUBNET, 3: CVM, 4: CLB, 5: ENI, 6: CDB, 7: 参数模板, 100:资源组
      */
     public void setTargetType(Long TargetType) {
         this.TargetType = TargetType;
@@ -540,9 +540,9 @@ public class SecurityGroupListData extends AbstractModel{
     }
 
     /**
-     * Get 当BothWay为0的时候，填空，当BothWay为1的时候，为JSON字符串，数据来源于DescribeBothWayInstanceListByIp个接口，如果该接口返回数据为空，则不支持双向下发
+     * Get 生成双向下发规则
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BothWayInfo 当BothWay为0的时候，填空，当BothWay为1的时候，为JSON字符串，数据来源于DescribeBothWayInstanceListByIp个接口，如果该接口返回数据为空，则不支持双向下发
+     * @return BothWayInfo 生成双向下发规则
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public SecurityGroupBothWayInfo [] getBothWayInfo() {
@@ -550,9 +550,9 @@ public class SecurityGroupListData extends AbstractModel{
     }
 
     /**
-     * Set 当BothWay为0的时候，填空，当BothWay为1的时候，为JSON字符串，数据来源于DescribeBothWayInstanceListByIp个接口，如果该接口返回数据为空，则不支持双向下发
+     * Set 生成双向下发规则
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BothWayInfo 当BothWay为0的时候，填空，当BothWay为1的时候，为JSON字符串，数据来源于DescribeBothWayInstanceListByIp个接口，如果该接口返回数据为空，则不支持双向下发
+     * @param BothWayInfo 生成双向下发规则
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBothWayInfo(SecurityGroupBothWayInfo [] BothWayInfo) {

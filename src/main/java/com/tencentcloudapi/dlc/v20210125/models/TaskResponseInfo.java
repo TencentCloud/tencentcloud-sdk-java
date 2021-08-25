@@ -136,6 +136,14 @@ public class TaskResponseInfo extends AbstractModel{
     private String TaskType;
 
     /**
+    * 任务进度明细
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ProgressDetail")
+    @Expose
+    private String ProgressDetail;
+
+    /**
      * Get 任务所属Database的名称。 
      * @return DatabaseName 任务所属Database的名称。
      */
@@ -395,6 +403,26 @@ public class TaskResponseInfo extends AbstractModel{
         this.TaskType = TaskType;
     }
 
+    /**
+     * Get 任务进度明细
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ProgressDetail 任务进度明细
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getProgressDetail() {
+        return this.ProgressDetail;
+    }
+
+    /**
+     * Set 任务进度明细
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ProgressDetail 任务进度明细
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProgressDetail(String ProgressDetail) {
+        this.ProgressDetail = ProgressDetail;
+    }
+
     public TaskResponseInfo() {
     }
 
@@ -451,6 +479,9 @@ public class TaskResponseInfo extends AbstractModel{
         if (source.TaskType != null) {
             this.TaskType = new String(source.TaskType);
         }
+        if (source.ProgressDetail != null) {
+            this.ProgressDetail = new String(source.ProgressDetail);
+        }
     }
 
 
@@ -474,6 +505,7 @@ public class TaskResponseInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Percentage", this.Percentage);
         this.setParamSimple(map, prefix + "OutputMessage", this.OutputMessage);
         this.setParamSimple(map, prefix + "TaskType", this.TaskType);
+        this.setParamSimple(map, prefix + "ProgressDetail", this.ProgressDetail);
 
     }
 }

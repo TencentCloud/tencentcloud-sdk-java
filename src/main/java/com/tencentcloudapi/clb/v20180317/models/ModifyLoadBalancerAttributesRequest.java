@@ -65,6 +65,13 @@ public class ModifyLoadBalancerAttributesRequest extends AbstractModel{
     private Boolean SnatPro;
 
     /**
+    * 是否开启删除保护
+    */
+    @SerializedName("DeleteProtect")
+    @Expose
+    private Boolean DeleteProtect;
+
+    /**
      * Get 负载均衡的唯一ID 
      * @return LoadBalancerId 负载均衡的唯一ID
      */
@@ -160,6 +167,22 @@ public class ModifyLoadBalancerAttributesRequest extends AbstractModel{
         this.SnatPro = SnatPro;
     }
 
+    /**
+     * Get 是否开启删除保护 
+     * @return DeleteProtect 是否开启删除保护
+     */
+    public Boolean getDeleteProtect() {
+        return this.DeleteProtect;
+    }
+
+    /**
+     * Set 是否开启删除保护
+     * @param DeleteProtect 是否开启删除保护
+     */
+    public void setDeleteProtect(Boolean DeleteProtect) {
+        this.DeleteProtect = DeleteProtect;
+    }
+
     public ModifyLoadBalancerAttributesRequest() {
     }
 
@@ -186,6 +209,9 @@ public class ModifyLoadBalancerAttributesRequest extends AbstractModel{
         if (source.SnatPro != null) {
             this.SnatPro = new Boolean(source.SnatPro);
         }
+        if (source.DeleteProtect != null) {
+            this.DeleteProtect = new Boolean(source.DeleteProtect);
+        }
     }
 
 
@@ -199,6 +225,7 @@ public class ModifyLoadBalancerAttributesRequest extends AbstractModel{
         this.setParamObj(map, prefix + "InternetChargeInfo.", this.InternetChargeInfo);
         this.setParamSimple(map, prefix + "LoadBalancerPassToTarget", this.LoadBalancerPassToTarget);
         this.setParamSimple(map, prefix + "SnatPro", this.SnatPro);
+        this.setParamSimple(map, prefix + "DeleteProtect", this.DeleteProtect);
 
     }
 }

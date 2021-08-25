@@ -767,6 +767,26 @@ public class CpdpClient extends AbstractClient{
     }
 
     /**
+     *获取对账中心账单下载地址的接口
+     * @param req DownloadReconciliationUrlRequest
+     * @return DownloadReconciliationUrlResponse
+     * @throws TencentCloudSDKException
+     */
+    public DownloadReconciliationUrlResponse DownloadReconciliationUrl(DownloadReconciliationUrlRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DownloadReconciliationUrlResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DownloadReconciliationUrlResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DownloadReconciliationUrl");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *会员间交易接口
      * @param req ExecuteMemberTransactionRequest
      * @return ExecuteMemberTransactionResponse

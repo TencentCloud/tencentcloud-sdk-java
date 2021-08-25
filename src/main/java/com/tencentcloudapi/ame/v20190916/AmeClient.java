@@ -239,6 +239,26 @@ public class AmeClient extends AbstractClient{
     }
 
     /**
+     *根据音乐信息查询音乐是否在售
+     * @param req DescribeMusicSaleStatusRequest
+     * @return DescribeMusicSaleStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMusicSaleStatusResponse DescribeMusicSaleStatus(DescribeMusicSaleStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeMusicSaleStatusResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeMusicSaleStatusResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeMusicSaleStatus");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取曲库包下已核销歌曲列表接口
      * @param req DescribePackageItemsRequest
      * @return DescribePackageItemsResponse

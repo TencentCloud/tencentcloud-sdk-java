@@ -22,6 +22,29 @@ import java.util.HashMap;
 
 public class RunAutomationServiceEnabled extends AbstractModel{
 
+    /**
+    * 是否开启云自动化助手。取值范围：<br><li>TRUE：表示开启云自动化助手服务<br><li>FALSE：表示不开启云自动化助手服务<br><br>默认取值：FALSE。
+    */
+    @SerializedName("Enabled")
+    @Expose
+    private Boolean Enabled;
+
+    /**
+     * Get 是否开启云自动化助手。取值范围：<br><li>TRUE：表示开启云自动化助手服务<br><li>FALSE：表示不开启云自动化助手服务<br><br>默认取值：FALSE。 
+     * @return Enabled 是否开启云自动化助手。取值范围：<br><li>TRUE：表示开启云自动化助手服务<br><li>FALSE：表示不开启云自动化助手服务<br><br>默认取值：FALSE。
+     */
+    public Boolean getEnabled() {
+        return this.Enabled;
+    }
+
+    /**
+     * Set 是否开启云自动化助手。取值范围：<br><li>TRUE：表示开启云自动化助手服务<br><li>FALSE：表示不开启云自动化助手服务<br><br>默认取值：FALSE。
+     * @param Enabled 是否开启云自动化助手。取值范围：<br><li>TRUE：表示开启云自动化助手服务<br><li>FALSE：表示不开启云自动化助手服务<br><br>默认取值：FALSE。
+     */
+    public void setEnabled(Boolean Enabled) {
+        this.Enabled = Enabled;
+    }
+
     public RunAutomationServiceEnabled() {
     }
 
@@ -30,6 +53,9 @@ public class RunAutomationServiceEnabled extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public RunAutomationServiceEnabled(RunAutomationServiceEnabled source) {
+        if (source.Enabled != null) {
+            this.Enabled = new Boolean(source.Enabled);
+        }
     }
 
 
@@ -37,6 +63,7 @@ public class RunAutomationServiceEnabled extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Enabled", this.Enabled);
 
     }
 }

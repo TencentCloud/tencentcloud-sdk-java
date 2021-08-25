@@ -1721,6 +1721,26 @@ public class CwpClient extends AbstractClient{
     }
 
     /**
+     *根据任务id导出指定扫描任务详情 
+     * @param req ExportScanTaskDetailsRequest
+     * @return ExportScanTaskDetailsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ExportScanTaskDetailsResponse ExportScanTaskDetails(ExportScanTaskDetailsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ExportScanTaskDetailsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ExportScanTaskDetailsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ExportScanTaskDetails");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *用于异步导出数据量大的日志文件
      * @param req ExportTasksRequest
      * @return ExportTasksResponse
