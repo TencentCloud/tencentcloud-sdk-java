@@ -252,6 +252,14 @@ UNKNOWN表示未知状态。
     private String NetworkType;
 
     /**
+    * 通道套餐类型：Thunder表示标准通道，Accelerator表示游戏加速器通道。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PackageType")
+    @Expose
+    private String PackageType;
+
+    /**
      * Get （旧参数，请使用ProxyId）通道实例ID。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return InstanceId （旧参数，请使用ProxyId）通道实例ID。
@@ -819,6 +827,26 @@ UNKNOWN表示未知状态。
         this.NetworkType = NetworkType;
     }
 
+    /**
+     * Get 通道套餐类型：Thunder表示标准通道，Accelerator表示游戏加速器通道。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PackageType 通道套餐类型：Thunder表示标准通道，Accelerator表示游戏加速器通道。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPackageType() {
+        return this.PackageType;
+    }
+
+    /**
+     * Set 通道套餐类型：Thunder表示标准通道，Accelerator表示游戏加速器通道。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PackageType 通道套餐类型：Thunder表示标准通道，Accelerator表示游戏加速器通道。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPackageType(String PackageType) {
+        this.PackageType = PackageType;
+    }
+
     public ProxyInfo() {
     }
 
@@ -926,6 +954,9 @@ UNKNOWN表示未知状态。
         if (source.NetworkType != null) {
             this.NetworkType = new String(source.NetworkType);
         }
+        if (source.PackageType != null) {
+            this.PackageType = new String(source.PackageType);
+        }
     }
 
 
@@ -962,6 +993,7 @@ UNKNOWN表示未知状态。
         this.setParamArraySimple(map, prefix + "ClientIPMethod.", this.ClientIPMethod);
         this.setParamSimple(map, prefix + "IPAddressVersion", this.IPAddressVersion);
         this.setParamSimple(map, prefix + "NetworkType", this.NetworkType);
+        this.setParamSimple(map, prefix + "PackageType", this.PackageType);
 
     }
 }

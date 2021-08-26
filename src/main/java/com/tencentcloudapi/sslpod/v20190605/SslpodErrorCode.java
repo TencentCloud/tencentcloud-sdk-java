@@ -3,9 +3,6 @@ public enum SslpodErrorCode {
     // CAM签名/鉴权错误。
      AUTHFAILURE("AuthFailure"),
      
-    // 重复添加。
-     FAILEDOPERATION_REPETITIONADD("FailedOperation.RepetitionAdd"),
-     
     // 解析域名失败。
      FAILEDOPERATION_RESOLVEDOMAINFAILED("FailedOperation.ResolveDomainFailed"),
      

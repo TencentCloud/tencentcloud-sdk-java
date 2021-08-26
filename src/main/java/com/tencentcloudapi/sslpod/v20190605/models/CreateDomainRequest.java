@@ -51,7 +51,7 @@ public class CreateDomainRequest extends AbstractModel{
     private String IP;
 
     /**
-    * 是否开启通知告警
+    * 是否开启通知告警；true：开启通知告警，false：关闭通知告警
     */
     @SerializedName("Notice")
     @Expose
@@ -129,16 +129,16 @@ public class CreateDomainRequest extends AbstractModel{
     }
 
     /**
-     * Get 是否开启通知告警 
-     * @return Notice 是否开启通知告警
+     * Get 是否开启通知告警；true：开启通知告警，false：关闭通知告警 
+     * @return Notice 是否开启通知告警；true：开启通知告警，false：关闭通知告警
      */
     public Boolean getNotice() {
         return this.Notice;
     }
 
     /**
-     * Set 是否开启通知告警
-     * @param Notice 是否开启通知告警
+     * Set 是否开启通知告警；true：开启通知告警，false：关闭通知告警
+     * @param Notice 是否开启通知告警；true：开启通知告警，false：关闭通知告警
      */
     public void setNotice(Boolean Notice) {
         this.Notice = Notice;

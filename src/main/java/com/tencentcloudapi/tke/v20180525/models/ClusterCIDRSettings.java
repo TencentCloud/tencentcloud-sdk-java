@@ -44,7 +44,7 @@ public class ClusterCIDRSettings extends AbstractModel{
     private Long MaxNodePodNum;
 
     /**
-    * 集群最大的service数量。取值范围32～32768，不为2的幂值时会向上取最接近的2的幂值。
+    * 集群最大的service数量。取值范围32～32768，不为2的幂值时会向上取最接近的2的幂值。默认值256
     */
     @SerializedName("MaxClusterServiceNum")
     @Expose
@@ -120,16 +120,16 @@ public class ClusterCIDRSettings extends AbstractModel{
     }
 
     /**
-     * Get 集群最大的service数量。取值范围32～32768，不为2的幂值时会向上取最接近的2的幂值。 
-     * @return MaxClusterServiceNum 集群最大的service数量。取值范围32～32768，不为2的幂值时会向上取最接近的2的幂值。
+     * Get 集群最大的service数量。取值范围32～32768，不为2的幂值时会向上取最接近的2的幂值。默认值256 
+     * @return MaxClusterServiceNum 集群最大的service数量。取值范围32～32768，不为2的幂值时会向上取最接近的2的幂值。默认值256
      */
     public Long getMaxClusterServiceNum() {
         return this.MaxClusterServiceNum;
     }
 
     /**
-     * Set 集群最大的service数量。取值范围32～32768，不为2的幂值时会向上取最接近的2的幂值。
-     * @param MaxClusterServiceNum 集群最大的service数量。取值范围32～32768，不为2的幂值时会向上取最接近的2的幂值。
+     * Set 集群最大的service数量。取值范围32～32768，不为2的幂值时会向上取最接近的2的幂值。默认值256
+     * @param MaxClusterServiceNum 集群最大的service数量。取值范围32～32768，不为2的幂值时会向上取最接近的2的幂值。默认值256
      */
     public void setMaxClusterServiceNum(Long MaxClusterServiceNum) {
         this.MaxClusterServiceNum = MaxClusterServiceNum;

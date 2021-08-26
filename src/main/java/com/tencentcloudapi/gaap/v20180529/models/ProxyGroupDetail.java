@@ -152,7 +152,7 @@ public class ProxyGroupDetail extends AbstractModel{
     private String IPAddressVersion;
 
     /**
-    * 通道组类型，可取值：Thunder、Accelerator，默认值Thunder
+    * 通道组套餐类型：Thunder表示标准通道组，Accelerator表示游戏加速器通道组。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PackageType")
@@ -472,9 +472,9 @@ public class ProxyGroupDetail extends AbstractModel{
     }
 
     /**
-     * Get 通道组类型，可取值：Thunder、Accelerator，默认值Thunder
+     * Get 通道组套餐类型：Thunder表示标准通道组，Accelerator表示游戏加速器通道组。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PackageType 通道组类型，可取值：Thunder、Accelerator，默认值Thunder
+     * @return PackageType 通道组套餐类型：Thunder表示标准通道组，Accelerator表示游戏加速器通道组。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPackageType() {
@@ -482,9 +482,9 @@ public class ProxyGroupDetail extends AbstractModel{
     }
 
     /**
-     * Set 通道组类型，可取值：Thunder、Accelerator，默认值Thunder
+     * Set 通道组套餐类型：Thunder表示标准通道组，Accelerator表示游戏加速器通道组。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PackageType 通道组类型，可取值：Thunder、Accelerator，默认值Thunder
+     * @param PackageType 通道组套餐类型：Thunder表示标准通道组，Accelerator表示游戏加速器通道组。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPackageType(String PackageType) {

@@ -30,7 +30,7 @@ public class CreateDataForwardRequest extends AbstractModel{
     private String ProductId;
 
     /**
-    * 转发地址。
+    * 转发地址。如果有鉴权Token，则需要自行传入，例如 [{\"forward\":{\"api\":\"http://123.207.117.108:1080/sub.php\",\"token\":\"testtoken\"}}]
     */
     @SerializedName("ForwardAddr")
     @Expose
@@ -60,16 +60,16 @@ public class CreateDataForwardRequest extends AbstractModel{
     }
 
     /**
-     * Get 转发地址。 
-     * @return ForwardAddr 转发地址。
+     * Get 转发地址。如果有鉴权Token，则需要自行传入，例如 [{\"forward\":{\"api\":\"http://123.207.117.108:1080/sub.php\",\"token\":\"testtoken\"}}] 
+     * @return ForwardAddr 转发地址。如果有鉴权Token，则需要自行传入，例如 [{\"forward\":{\"api\":\"http://123.207.117.108:1080/sub.php\",\"token\":\"testtoken\"}}]
      */
     public String getForwardAddr() {
         return this.ForwardAddr;
     }
 
     /**
-     * Set 转发地址。
-     * @param ForwardAddr 转发地址。
+     * Set 转发地址。如果有鉴权Token，则需要自行传入，例如 [{\"forward\":{\"api\":\"http://123.207.117.108:1080/sub.php\",\"token\":\"testtoken\"}}]
+     * @param ForwardAddr 转发地址。如果有鉴权Token，则需要自行传入，例如 [{\"forward\":{\"api\":\"http://123.207.117.108:1080/sub.php\",\"token\":\"testtoken\"}}]
      */
     public void setForwardAddr(String ForwardAddr) {
         this.ForwardAddr = ForwardAddr;

@@ -159,6 +159,22 @@ lc表示最小连接数。
     private Long UnhealthyThreshold;
 
     /**
+    * 源站是否开启主备模式：1开启，0关闭，DOMAIN类型源站不支持开启
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FailoverSwitch")
+    @Expose
+    private Long FailoverSwitch;
+
+    /**
+    * 是否开启会话保持选项：0关闭， 非0开启，非0值为会话保持时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SessionPersist")
+    @Expose
+    private Long SessionPersist;
+
+    /**
      * Get 监听器ID 
      * @return ListenerId 监听器ID
      */
@@ -498,6 +514,46 @@ lc表示最小连接数。
         this.UnhealthyThreshold = UnhealthyThreshold;
     }
 
+    /**
+     * Get 源站是否开启主备模式：1开启，0关闭，DOMAIN类型源站不支持开启
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FailoverSwitch 源站是否开启主备模式：1开启，0关闭，DOMAIN类型源站不支持开启
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getFailoverSwitch() {
+        return this.FailoverSwitch;
+    }
+
+    /**
+     * Set 源站是否开启主备模式：1开启，0关闭，DOMAIN类型源站不支持开启
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FailoverSwitch 源站是否开启主备模式：1开启，0关闭，DOMAIN类型源站不支持开启
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFailoverSwitch(Long FailoverSwitch) {
+        this.FailoverSwitch = FailoverSwitch;
+    }
+
+    /**
+     * Get 是否开启会话保持选项：0关闭， 非0开启，非0值为会话保持时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SessionPersist 是否开启会话保持选项：0关闭， 非0开启，非0值为会话保持时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getSessionPersist() {
+        return this.SessionPersist;
+    }
+
+    /**
+     * Set 是否开启会话保持选项：0关闭， 非0开启，非0值为会话保持时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SessionPersist 是否开启会话保持选项：0关闭， 非0开启，非0值为会话保持时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSessionPersist(Long SessionPersist) {
+        this.SessionPersist = SessionPersist;
+    }
+
     public TCPListener() {
     }
 
@@ -560,6 +616,12 @@ lc表示最小连接数。
         if (source.UnhealthyThreshold != null) {
             this.UnhealthyThreshold = new Long(source.UnhealthyThreshold);
         }
+        if (source.FailoverSwitch != null) {
+            this.FailoverSwitch = new Long(source.FailoverSwitch);
+        }
+        if (source.SessionPersist != null) {
+            this.SessionPersist = new Long(source.SessionPersist);
+        }
     }
 
 
@@ -584,6 +646,8 @@ lc表示最小连接数。
         this.setParamSimple(map, prefix + "ClientIPMethod", this.ClientIPMethod);
         this.setParamSimple(map, prefix + "HealthyThreshold", this.HealthyThreshold);
         this.setParamSimple(map, prefix + "UnhealthyThreshold", this.UnhealthyThreshold);
+        this.setParamSimple(map, prefix + "FailoverSwitch", this.FailoverSwitch);
+        this.setParamSimple(map, prefix + "SessionPersist", this.SessionPersist);
 
     }
 }

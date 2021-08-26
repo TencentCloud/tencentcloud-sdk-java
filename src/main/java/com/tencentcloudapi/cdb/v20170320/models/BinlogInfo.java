@@ -44,14 +44,14 @@ public class BinlogInfo extends AbstractModel{
     private String Date;
 
     /**
-    * 内网下载地址
+    * 下载地址
     */
     @SerializedName("IntranetUrl")
     @Expose
     private String IntranetUrl;
 
     /**
-    * 外网下载地址
+    * 下载地址
     */
     @SerializedName("InternetUrl")
     @Expose
@@ -127,32 +127,32 @@ public class BinlogInfo extends AbstractModel{
     }
 
     /**
-     * Get 内网下载地址 
-     * @return IntranetUrl 内网下载地址
+     * Get 下载地址 
+     * @return IntranetUrl 下载地址
      */
     public String getIntranetUrl() {
         return this.IntranetUrl;
     }
 
     /**
-     * Set 内网下载地址
-     * @param IntranetUrl 内网下载地址
+     * Set 下载地址
+     * @param IntranetUrl 下载地址
      */
     public void setIntranetUrl(String IntranetUrl) {
         this.IntranetUrl = IntranetUrl;
     }
 
     /**
-     * Get 外网下载地址 
-     * @return InternetUrl 外网下载地址
+     * Get 下载地址 
+     * @return InternetUrl 下载地址
      */
     public String getInternetUrl() {
         return this.InternetUrl;
     }
 
     /**
-     * Set 外网下载地址
-     * @param InternetUrl 外网下载地址
+     * Set 下载地址
+     * @param InternetUrl 下载地址
      */
     public void setInternetUrl(String InternetUrl) {
         this.InternetUrl = InternetUrl;

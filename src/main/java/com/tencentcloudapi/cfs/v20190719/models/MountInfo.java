@@ -93,6 +93,20 @@ public class MountInfo extends AbstractModel{
     private String SubnetName;
 
     /**
+    * CFS Turbo使用的云联网ID
+    */
+    @SerializedName("CcnID")
+    @Expose
+    private String CcnID;
+
+    /**
+    * 云联网中CFS Turbo使用的网段
+    */
+    @SerializedName("CidrBlock")
+    @Expose
+    private String CidrBlock;
+
+    /**
      * Get 文件系统 ID 
      * @return FileSystemId 文件系统 ID
      */
@@ -252,6 +266,38 @@ public class MountInfo extends AbstractModel{
         this.SubnetName = SubnetName;
     }
 
+    /**
+     * Get CFS Turbo使用的云联网ID 
+     * @return CcnID CFS Turbo使用的云联网ID
+     */
+    public String getCcnID() {
+        return this.CcnID;
+    }
+
+    /**
+     * Set CFS Turbo使用的云联网ID
+     * @param CcnID CFS Turbo使用的云联网ID
+     */
+    public void setCcnID(String CcnID) {
+        this.CcnID = CcnID;
+    }
+
+    /**
+     * Get 云联网中CFS Turbo使用的网段 
+     * @return CidrBlock 云联网中CFS Turbo使用的网段
+     */
+    public String getCidrBlock() {
+        return this.CidrBlock;
+    }
+
+    /**
+     * Set 云联网中CFS Turbo使用的网段
+     * @param CidrBlock 云联网中CFS Turbo使用的网段
+     */
+    public void setCidrBlock(String CidrBlock) {
+        this.CidrBlock = CidrBlock;
+    }
+
     public MountInfo() {
     }
 
@@ -290,6 +336,12 @@ public class MountInfo extends AbstractModel{
         if (source.SubnetName != null) {
             this.SubnetName = new String(source.SubnetName);
         }
+        if (source.CcnID != null) {
+            this.CcnID = new String(source.CcnID);
+        }
+        if (source.CidrBlock != null) {
+            this.CidrBlock = new String(source.CidrBlock);
+        }
     }
 
 
@@ -307,6 +359,8 @@ public class MountInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "VpcName", this.VpcName);
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
         this.setParamSimple(map, prefix + "SubnetName", this.SubnetName);
+        this.setParamSimple(map, prefix + "CcnID", this.CcnID);
+        this.setParamSimple(map, prefix + "CidrBlock", this.CidrBlock);
 
     }
 }

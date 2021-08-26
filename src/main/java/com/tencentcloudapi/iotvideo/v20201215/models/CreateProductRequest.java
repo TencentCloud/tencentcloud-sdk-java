@@ -51,21 +51,21 @@ public class CreateProductRequest extends AbstractModel{
     private String [] Features;
 
     /**
-    * 设备操作系统 Linux
+    * 设备操作系统，通用设备填default
     */
     @SerializedName("ChipOs")
     @Expose
     private String ChipOs;
 
     /**
-    * 芯片厂商id
+    * 芯片厂商id，通用设备填default
     */
     @SerializedName("ChipManufactureId")
     @Expose
     private String ChipManufactureId;
 
     /**
-    * 芯片id
+    * 芯片id，通用设备填default
     */
     @SerializedName("ChipId")
     @Expose
@@ -150,48 +150,48 @@ public class CreateProductRequest extends AbstractModel{
     }
 
     /**
-     * Get 设备操作系统 Linux 
-     * @return ChipOs 设备操作系统 Linux
+     * Get 设备操作系统，通用设备填default 
+     * @return ChipOs 设备操作系统，通用设备填default
      */
     public String getChipOs() {
         return this.ChipOs;
     }
 
     /**
-     * Set 设备操作系统 Linux
-     * @param ChipOs 设备操作系统 Linux
+     * Set 设备操作系统，通用设备填default
+     * @param ChipOs 设备操作系统，通用设备填default
      */
     public void setChipOs(String ChipOs) {
         this.ChipOs = ChipOs;
     }
 
     /**
-     * Get 芯片厂商id 
-     * @return ChipManufactureId 芯片厂商id
+     * Get 芯片厂商id，通用设备填default 
+     * @return ChipManufactureId 芯片厂商id，通用设备填default
      */
     public String getChipManufactureId() {
         return this.ChipManufactureId;
     }
 
     /**
-     * Set 芯片厂商id
-     * @param ChipManufactureId 芯片厂商id
+     * Set 芯片厂商id，通用设备填default
+     * @param ChipManufactureId 芯片厂商id，通用设备填default
      */
     public void setChipManufactureId(String ChipManufactureId) {
         this.ChipManufactureId = ChipManufactureId;
     }
 
     /**
-     * Get 芯片id 
-     * @return ChipId 芯片id
+     * Get 芯片id，通用设备填default 
+     * @return ChipId 芯片id，通用设备填default
      */
     public String getChipId() {
         return this.ChipId;
     }
 
     /**
-     * Set 芯片id
-     * @param ChipId 芯片id
+     * Set 芯片id，通用设备填default
+     * @param ChipId 芯片id，通用设备填default
      */
     public void setChipId(String ChipId) {
         this.ChipId = ChipId;

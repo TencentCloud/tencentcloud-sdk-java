@@ -37,7 +37,13 @@ public class DescribeDomainsRequest extends AbstractModel{
     private Long Limit;
 
     /**
-    * 搜索的类型 Enums(none,tags,grade,brand,code,hash,limit)
+    * 搜索的类型有：none，tags，grade，brand，code，hash，limit。
+选tags，入参请填Tag，
+选grade，入参请填Grade，
+选brand，入参请填Brand，
+选code，入参请填Code，
+选hash，入参请填Hash
+选limit，标识只返回数量信息
     */
     @SerializedName("SearchType")
     @Expose
@@ -125,16 +131,40 @@ public class DescribeDomainsRequest extends AbstractModel{
     }
 
     /**
-     * Get 搜索的类型 Enums(none,tags,grade,brand,code,hash,limit) 
-     * @return SearchType 搜索的类型 Enums(none,tags,grade,brand,code,hash,limit)
+     * Get 搜索的类型有：none，tags，grade，brand，code，hash，limit。
+选tags，入参请填Tag，
+选grade，入参请填Grade，
+选brand，入参请填Brand，
+选code，入参请填Code，
+选hash，入参请填Hash
+选limit，标识只返回数量信息 
+     * @return SearchType 搜索的类型有：none，tags，grade，brand，code，hash，limit。
+选tags，入参请填Tag，
+选grade，入参请填Grade，
+选brand，入参请填Brand，
+选code，入参请填Code，
+选hash，入参请填Hash
+选limit，标识只返回数量信息
      */
     public String getSearchType() {
         return this.SearchType;
     }
 
     /**
-     * Set 搜索的类型 Enums(none,tags,grade,brand,code,hash,limit)
-     * @param SearchType 搜索的类型 Enums(none,tags,grade,brand,code,hash,limit)
+     * Set 搜索的类型有：none，tags，grade，brand，code，hash，limit。
+选tags，入参请填Tag，
+选grade，入参请填Grade，
+选brand，入参请填Brand，
+选code，入参请填Code，
+选hash，入参请填Hash
+选limit，标识只返回数量信息
+     * @param SearchType 搜索的类型有：none，tags，grade，brand，code，hash，limit。
+选tags，入参请填Tag，
+选grade，入参请填Grade，
+选brand，入参请填Brand，
+选code，入参请填Code，
+选hash，入参请填Hash
+选limit，标识只返回数量信息
      */
     public void setSearchType(String SearchType) {
         this.SearchType = SearchType;

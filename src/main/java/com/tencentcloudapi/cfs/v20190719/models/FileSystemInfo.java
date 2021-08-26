@@ -149,6 +149,13 @@ public class FileSystemInfo extends AbstractModel{
     private Float BandwidthLimit;
 
     /**
+    * 文件系统总容量
+    */
+    @SerializedName("Capacity")
+    @Expose
+    private Long Capacity;
+
+    /**
      * Get 创建时间 
      * @return CreationTime 创建时间
      */
@@ -436,6 +443,22 @@ public class FileSystemInfo extends AbstractModel{
         this.BandwidthLimit = BandwidthLimit;
     }
 
+    /**
+     * Get 文件系统总容量 
+     * @return Capacity 文件系统总容量
+     */
+    public Long getCapacity() {
+        return this.Capacity;
+    }
+
+    /**
+     * Set 文件系统总容量
+     * @param Capacity 文件系统总容量
+     */
+    public void setCapacity(Long Capacity) {
+        this.Capacity = Capacity;
+    }
+
     public FileSystemInfo() {
     }
 
@@ -498,6 +521,9 @@ public class FileSystemInfo extends AbstractModel{
         if (source.BandwidthLimit != null) {
             this.BandwidthLimit = new Float(source.BandwidthLimit);
         }
+        if (source.Capacity != null) {
+            this.Capacity = new Long(source.Capacity);
+        }
     }
 
 
@@ -523,6 +549,7 @@ public class FileSystemInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "KmsKeyId", this.KmsKeyId);
         this.setParamSimple(map, prefix + "AppId", this.AppId);
         this.setParamSimple(map, prefix + "BandwidthLimit", this.BandwidthLimit);
+        this.setParamSimple(map, prefix + "Capacity", this.Capacity);
 
     }
 }

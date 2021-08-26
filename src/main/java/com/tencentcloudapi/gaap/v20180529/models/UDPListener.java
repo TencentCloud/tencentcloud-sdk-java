@@ -106,6 +106,14 @@ public class UDPListener extends AbstractModel{
     private Long CreateTime;
 
     /**
+    * 是否开启会话保持选项：0关闭， 非0开启，非0值为会话保持时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SessionPersist")
+    @Expose
+    private Long SessionPersist;
+
+    /**
      * Get 监听器ID 
      * @return ListenerId 监听器ID
      */
@@ -305,6 +313,26 @@ public class UDPListener extends AbstractModel{
         this.CreateTime = CreateTime;
     }
 
+    /**
+     * Get 是否开启会话保持选项：0关闭， 非0开启，非0值为会话保持时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SessionPersist 是否开启会话保持选项：0关闭， 非0开启，非0值为会话保持时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getSessionPersist() {
+        return this.SessionPersist;
+    }
+
+    /**
+     * Set 是否开启会话保持选项：0关闭， 非0开启，非0值为会话保持时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SessionPersist 是否开启会话保持选项：0关闭， 非0开启，非0值为会话保持时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSessionPersist(Long SessionPersist) {
+        this.SessionPersist = SessionPersist;
+    }
+
     public UDPListener() {
     }
 
@@ -349,6 +377,9 @@ public class UDPListener extends AbstractModel{
         if (source.CreateTime != null) {
             this.CreateTime = new Long(source.CreateTime);
         }
+        if (source.SessionPersist != null) {
+            this.SessionPersist = new Long(source.SessionPersist);
+        }
     }
 
 
@@ -367,6 +398,7 @@ public class UDPListener extends AbstractModel{
         this.setParamSimple(map, prefix + "BindStatus", this.BindStatus);
         this.setParamArrayObj(map, prefix + "RealServerSet.", this.RealServerSet);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "SessionPersist", this.SessionPersist);
 
     }
 }

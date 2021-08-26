@@ -58,6 +58,13 @@ public class CreateExternalAnchorRequest extends AbstractModel{
     private String IdCardReverse;
 
     /**
+    * 指定分配的代理商ID
+    */
+    @SerializedName("AgentId")
+    @Expose
+    private String AgentId;
+
+    /**
      * Get 平台业务系统唯一标示的主播id 
      * @return Uid 平台业务系统唯一标示的主播id
      */
@@ -137,6 +144,22 @@ public class CreateExternalAnchorRequest extends AbstractModel{
         this.IdCardReverse = IdCardReverse;
     }
 
+    /**
+     * Get 指定分配的代理商ID 
+     * @return AgentId 指定分配的代理商ID
+     */
+    public String getAgentId() {
+        return this.AgentId;
+    }
+
+    /**
+     * Set 指定分配的代理商ID
+     * @param AgentId 指定分配的代理商ID
+     */
+    public void setAgentId(String AgentId) {
+        this.AgentId = AgentId;
+    }
+
     public CreateExternalAnchorRequest() {
     }
 
@@ -160,6 +183,9 @@ public class CreateExternalAnchorRequest extends AbstractModel{
         if (source.IdCardReverse != null) {
             this.IdCardReverse = new String(source.IdCardReverse);
         }
+        if (source.AgentId != null) {
+            this.AgentId = new String(source.AgentId);
+        }
     }
 
 
@@ -172,6 +198,7 @@ public class CreateExternalAnchorRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "IdNo", this.IdNo);
         this.setParamSimple(map, prefix + "IdCardFront", this.IdCardFront);
         this.setParamSimple(map, prefix + "IdCardReverse", this.IdCardReverse);
+        this.setParamSimple(map, prefix + "AgentId", this.AgentId);
 
     }
 }
