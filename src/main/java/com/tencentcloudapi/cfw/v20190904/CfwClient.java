@@ -541,6 +541,26 @@ public class CfwClient extends AbstractClient{
     }
 
     /**
+     *DescribeResourceGroupNew资产中心资产树信息
+     * @param req DescribeResourceGroupNewRequest
+     * @return DescribeResourceGroupNewResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeResourceGroupNewResponse DescribeResourceGroupNew(DescribeResourceGroupNewRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeResourceGroupNewResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeResourceGroupNewResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeResourceGroupNew");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询规则列表概况
      * @param req DescribeRuleOverviewRequest
      * @return DescribeRuleOverviewResponse

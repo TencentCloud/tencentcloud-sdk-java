@@ -239,6 +239,26 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
+     *批量删除设备
+     * @param req DeleteDevicesRequest
+     * @return DeleteDevicesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteDevicesResponse DeleteDevices(DeleteDevicesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteDevicesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteDevicesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteDevices");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *提供删除LoRa自定义频点的能力
      * @param req DeleteLoRaFrequencyRequest
      * @return DeleteLoRaFrequencyResponse
@@ -911,6 +931,26 @@ public class IotexplorerClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<SearchTopicRuleResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "SearchTopicRule");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *批量禁用启用设备
+     * @param req UpdateDevicesEnableStateRequest
+     * @return UpdateDevicesEnableStateResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateDevicesEnableStateResponse UpdateDevicesEnableState(UpdateDevicesEnableStateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpdateDevicesEnableStateResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpdateDevicesEnableStateResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UpdateDevicesEnableState");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

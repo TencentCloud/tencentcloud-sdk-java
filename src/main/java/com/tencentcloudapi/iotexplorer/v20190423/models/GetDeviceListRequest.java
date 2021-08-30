@@ -58,6 +58,13 @@ public class GetDeviceListRequest extends AbstractModel{
     private String DeviceName;
 
     /**
+    * 项目ID。产品 ID 为 -1 时，该参数必填
+    */
+    @SerializedName("ProjectId")
+    @Expose
+    private String ProjectId;
+
+    /**
      * Get 需要查看设备列表的产品 ID 
      * @return ProductId 需要查看设备列表的产品 ID
      */
@@ -137,6 +144,22 @@ public class GetDeviceListRequest extends AbstractModel{
         this.DeviceName = DeviceName;
     }
 
+    /**
+     * Get 项目ID。产品 ID 为 -1 时，该参数必填 
+     * @return ProjectId 项目ID。产品 ID 为 -1 时，该参数必填
+     */
+    public String getProjectId() {
+        return this.ProjectId;
+    }
+
+    /**
+     * Set 项目ID。产品 ID 为 -1 时，该参数必填
+     * @param ProjectId 项目ID。产品 ID 为 -1 时，该参数必填
+     */
+    public void setProjectId(String ProjectId) {
+        this.ProjectId = ProjectId;
+    }
+
     public GetDeviceListRequest() {
     }
 
@@ -160,6 +183,9 @@ public class GetDeviceListRequest extends AbstractModel{
         if (source.DeviceName != null) {
             this.DeviceName = new String(source.DeviceName);
         }
+        if (source.ProjectId != null) {
+            this.ProjectId = new String(source.ProjectId);
+        }
     }
 
 
@@ -172,6 +198,7 @@ public class GetDeviceListRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "FirmwareVersion", this.FirmwareVersion);
         this.setParamSimple(map, prefix + "DeviceName", this.DeviceName);
+        this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
 
     }
 }
