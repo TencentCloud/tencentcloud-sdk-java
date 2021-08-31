@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class DeleteMaliciousRequestsRequest extends AbstractModel{
 
     /**
-    * 恶意请求记录ID数组，最大100条。
+    * 恶意请求记录ID数组，(最大100条)
     */
     @SerializedName("Ids")
     @Expose
     private Long [] Ids;
 
     /**
-     * Get 恶意请求记录ID数组，最大100条。 
-     * @return Ids 恶意请求记录ID数组，最大100条。
+     * Get 恶意请求记录ID数组，(最大100条) 
+     * @return Ids 恶意请求记录ID数组，(最大100条)
      */
     public Long [] getIds() {
         return this.Ids;
     }
 
     /**
-     * Set 恶意请求记录ID数组，最大100条。
-     * @param Ids 恶意请求记录ID数组，最大100条。
+     * Set 恶意请求记录ID数组，(最大100条)
+     * @param Ids 恶意请求记录ID数组，(最大100条)
      */
     public void setIds(Long [] Ids) {
         this.Ids = Ids;

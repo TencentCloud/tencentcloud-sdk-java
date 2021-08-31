@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeInstanceAttributesResponse extends AbstractModel{
 
     /**
-    * 实例属性返回结果对象
+    * 实例属性返回结果对象。
     */
     @SerializedName("Result")
     @Expose
@@ -37,16 +37,16 @@ public class DescribeInstanceAttributesResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 实例属性返回结果对象 
-     * @return Result 实例属性返回结果对象
+     * Get 实例属性返回结果对象。 
+     * @return Result 实例属性返回结果对象。
      */
     public InstanceAttributesResponse getResult() {
         return this.Result;
     }
 
     /**
-     * Set 实例属性返回结果对象
-     * @param Result 实例属性返回结果对象
+     * Set 实例属性返回结果对象。
+     * @param Result 实例属性返回结果对象。
      */
     public void setResult(InstanceAttributesResponse Result) {
         this.Result = Result;

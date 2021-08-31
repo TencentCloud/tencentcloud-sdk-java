@@ -24,8 +24,11 @@ public class DescribeGeneralStatRequest extends AbstractModel{
 
     /**
     * 云主机类型。
-<li>CVM：表示虚拟主机</li>
+<li>CVM：表示腾讯云服务器</li>
 <li>BM:  表示黑石物理机</li>
+<li>ECM:  表示边缘计算服务器</li>
+<li>LH:  表示轻量应用服务器</li>
+<li>Other:  表示混合云机器</li>
     */
     @SerializedName("MachineType")
     @Expose
@@ -40,11 +43,17 @@ public class DescribeGeneralStatRequest extends AbstractModel{
 
     /**
      * Get 云主机类型。
-<li>CVM：表示虚拟主机</li>
-<li>BM:  表示黑石物理机</li> 
-     * @return MachineType 云主机类型。
-<li>CVM：表示虚拟主机</li>
+<li>CVM：表示腾讯云服务器</li>
 <li>BM:  表示黑石物理机</li>
+<li>ECM:  表示边缘计算服务器</li>
+<li>LH:  表示轻量应用服务器</li>
+<li>Other:  表示混合云机器</li> 
+     * @return MachineType 云主机类型。
+<li>CVM：表示腾讯云服务器</li>
+<li>BM:  表示黑石物理机</li>
+<li>ECM:  表示边缘计算服务器</li>
+<li>LH:  表示轻量应用服务器</li>
+<li>Other:  表示混合云机器</li>
      */
     public String getMachineType() {
         return this.MachineType;
@@ -52,11 +61,17 @@ public class DescribeGeneralStatRequest extends AbstractModel{
 
     /**
      * Set 云主机类型。
-<li>CVM：表示虚拟主机</li>
+<li>CVM：表示腾讯云服务器</li>
 <li>BM:  表示黑石物理机</li>
+<li>ECM:  表示边缘计算服务器</li>
+<li>LH:  表示轻量应用服务器</li>
+<li>Other:  表示混合云机器</li>
      * @param MachineType 云主机类型。
-<li>CVM：表示虚拟主机</li>
+<li>CVM：表示腾讯云服务器</li>
 <li>BM:  表示黑石物理机</li>
+<li>ECM:  表示边缘计算服务器</li>
+<li>LH:  表示轻量应用服务器</li>
+<li>Other:  表示混合云机器</li>
      */
     public void setMachineType(String MachineType) {
         this.MachineType = MachineType;

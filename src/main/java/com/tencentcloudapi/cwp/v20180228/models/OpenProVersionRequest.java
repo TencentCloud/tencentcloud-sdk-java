@@ -23,17 +23,14 @@ import java.util.HashMap;
 public class OpenProVersionRequest extends AbstractModel{
 
     /**
-    * 云主机类型。
-<li>CVM：表示虚拟主机</li>
-<li>BM:  表示黑石物理机</li>
+    * 云主机类型。(当前参数已作废,可以留空值 )
     */
     @SerializedName("MachineType")
     @Expose
     private String MachineType;
 
     /**
-    * 机器所属地域。
-如：ap-guangzhou，ap-shanghai
+    * 机器所属地域。(当前参数已作废,可以留空值 )
     */
     @SerializedName("MachineRegion")
     @Expose
@@ -41,7 +38,7 @@ public class OpenProVersionRequest extends AbstractModel{
 
     /**
     * 主机唯一标识Uuid数组。
-黑石的InstanceId，CVM的Uuid
+黑石的InstanceId，CVM的Uuid ,边缘计算的Uuid , 轻量应用服务器的Uuid ,混合云机器的Quuid 。 当前参数最大长度限制20
     */
     @SerializedName("Quuids")
     @Expose
@@ -55,44 +52,32 @@ public class OpenProVersionRequest extends AbstractModel{
     private Long ActivityId;
 
     /**
-     * Get 云主机类型。
-<li>CVM：表示虚拟主机</li>
-<li>BM:  表示黑石物理机</li> 
-     * @return MachineType 云主机类型。
-<li>CVM：表示虚拟主机</li>
-<li>BM:  表示黑石物理机</li>
+     * Get 云主机类型。(当前参数已作废,可以留空值 ) 
+     * @return MachineType 云主机类型。(当前参数已作废,可以留空值 )
      */
     public String getMachineType() {
         return this.MachineType;
     }
 
     /**
-     * Set 云主机类型。
-<li>CVM：表示虚拟主机</li>
-<li>BM:  表示黑石物理机</li>
-     * @param MachineType 云主机类型。
-<li>CVM：表示虚拟主机</li>
-<li>BM:  表示黑石物理机</li>
+     * Set 云主机类型。(当前参数已作废,可以留空值 )
+     * @param MachineType 云主机类型。(当前参数已作废,可以留空值 )
      */
     public void setMachineType(String MachineType) {
         this.MachineType = MachineType;
     }
 
     /**
-     * Get 机器所属地域。
-如：ap-guangzhou，ap-shanghai 
-     * @return MachineRegion 机器所属地域。
-如：ap-guangzhou，ap-shanghai
+     * Get 机器所属地域。(当前参数已作废,可以留空值 ) 
+     * @return MachineRegion 机器所属地域。(当前参数已作废,可以留空值 )
      */
     public String getMachineRegion() {
         return this.MachineRegion;
     }
 
     /**
-     * Set 机器所属地域。
-如：ap-guangzhou，ap-shanghai
-     * @param MachineRegion 机器所属地域。
-如：ap-guangzhou，ap-shanghai
+     * Set 机器所属地域。(当前参数已作废,可以留空值 )
+     * @param MachineRegion 机器所属地域。(当前参数已作废,可以留空值 )
      */
     public void setMachineRegion(String MachineRegion) {
         this.MachineRegion = MachineRegion;
@@ -100,9 +85,9 @@ public class OpenProVersionRequest extends AbstractModel{
 
     /**
      * Get 主机唯一标识Uuid数组。
-黑石的InstanceId，CVM的Uuid 
+黑石的InstanceId，CVM的Uuid ,边缘计算的Uuid , 轻量应用服务器的Uuid ,混合云机器的Quuid 。 当前参数最大长度限制20 
      * @return Quuids 主机唯一标识Uuid数组。
-黑石的InstanceId，CVM的Uuid
+黑石的InstanceId，CVM的Uuid ,边缘计算的Uuid , 轻量应用服务器的Uuid ,混合云机器的Quuid 。 当前参数最大长度限制20
      */
     public String [] getQuuids() {
         return this.Quuids;
@@ -110,9 +95,9 @@ public class OpenProVersionRequest extends AbstractModel{
 
     /**
      * Set 主机唯一标识Uuid数组。
-黑石的InstanceId，CVM的Uuid
+黑石的InstanceId，CVM的Uuid ,边缘计算的Uuid , 轻量应用服务器的Uuid ,混合云机器的Quuid 。 当前参数最大长度限制20
      * @param Quuids 主机唯一标识Uuid数组。
-黑石的InstanceId，CVM的Uuid
+黑石的InstanceId，CVM的Uuid ,边缘计算的Uuid , 轻量应用服务器的Uuid ,混合云机器的Quuid 。 当前参数最大长度限制20
      */
     public void setQuuids(String [] Quuids) {
         this.Quuids = Quuids;

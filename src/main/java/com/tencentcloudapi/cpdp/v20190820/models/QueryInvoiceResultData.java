@@ -114,6 +114,14 @@ public class QueryInvoiceResultData extends AbstractModel{
     private String PdfUrl;
 
     /**
+    * png地址
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ImageUrl")
+    @Expose
+    private String ImageUrl;
+
+    /**
      * Get 订单号 
      * @return OrderId 订单号
      */
@@ -321,6 +329,26 @@ public class QueryInvoiceResultData extends AbstractModel{
         this.PdfUrl = PdfUrl;
     }
 
+    /**
+     * Get png地址
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ImageUrl png地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getImageUrl() {
+        return this.ImageUrl;
+    }
+
+    /**
+     * Set png地址
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ImageUrl png地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setImageUrl(String ImageUrl) {
+        this.ImageUrl = ImageUrl;
+    }
+
     public QueryInvoiceResultData() {
     }
 
@@ -368,6 +396,9 @@ public class QueryInvoiceResultData extends AbstractModel{
         if (source.PdfUrl != null) {
             this.PdfUrl = new String(source.PdfUrl);
         }
+        if (source.ImageUrl != null) {
+            this.ImageUrl = new String(source.ImageUrl);
+        }
     }
 
 
@@ -388,6 +419,7 @@ public class QueryInvoiceResultData extends AbstractModel{
         this.setParamSimple(map, prefix + "TaxAmount", this.TaxAmount);
         this.setParamSimple(map, prefix + "IsRedWashed", this.IsRedWashed);
         this.setParamSimple(map, prefix + "PdfUrl", this.PdfUrl);
+        this.setParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
 
     }
 }

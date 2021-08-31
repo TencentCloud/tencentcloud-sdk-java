@@ -51,7 +51,7 @@ public class DescribeGeneralStatResponse extends AbstractModel{
     private Long AgentsOnline;
 
     /**
-    * 主机安全客户端离线的总数
+    * 主机安全客户端 离线+关机 的总数
     */
     @SerializedName("AgentsOffline")
     @Expose
@@ -84,6 +84,20 @@ public class DescribeGeneralStatResponse extends AbstractModel{
     @SerializedName("RiskMachine")
     @Expose
     private Long RiskMachine;
+
+    /**
+    * 已关机总数
+    */
+    @SerializedName("Shutdown")
+    @Expose
+    private Long Shutdown;
+
+    /**
+    * 已离线总数
+    */
+    @SerializedName("Offline")
+    @Expose
+    private Long Offline;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -157,16 +171,16 @@ public class DescribeGeneralStatResponse extends AbstractModel{
     }
 
     /**
-     * Get 主机安全客户端离线的总数 
-     * @return AgentsOffline 主机安全客户端离线的总数
+     * Get 主机安全客户端 离线+关机 的总数 
+     * @return AgentsOffline 主机安全客户端 离线+关机 的总数
      */
     public Long getAgentsOffline() {
         return this.AgentsOffline;
     }
 
     /**
-     * Set 主机安全客户端离线的总数
-     * @param AgentsOffline 主机安全客户端离线的总数
+     * Set 主机安全客户端 离线+关机 的总数
+     * @param AgentsOffline 主机安全客户端 离线+关机 的总数
      */
     public void setAgentsOffline(Long AgentsOffline) {
         this.AgentsOffline = AgentsOffline;
@@ -237,6 +251,38 @@ public class DescribeGeneralStatResponse extends AbstractModel{
     }
 
     /**
+     * Get 已关机总数 
+     * @return Shutdown 已关机总数
+     */
+    public Long getShutdown() {
+        return this.Shutdown;
+    }
+
+    /**
+     * Set 已关机总数
+     * @param Shutdown 已关机总数
+     */
+    public void setShutdown(Long Shutdown) {
+        this.Shutdown = Shutdown;
+    }
+
+    /**
+     * Get 已离线总数 
+     * @return Offline 已离线总数
+     */
+    public Long getOffline() {
+        return this.Offline;
+    }
+
+    /**
+     * Set 已离线总数
+     * @param Offline 已离线总数
+     */
+    public void setOffline(Long Offline) {
+        this.Offline = Offline;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -287,6 +333,12 @@ public class DescribeGeneralStatResponse extends AbstractModel{
         if (source.RiskMachine != null) {
             this.RiskMachine = new Long(source.RiskMachine);
         }
+        if (source.Shutdown != null) {
+            this.Shutdown = new Long(source.Shutdown);
+        }
+        if (source.Offline != null) {
+            this.Offline = new Long(source.Offline);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -306,6 +358,8 @@ public class DescribeGeneralStatResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "AgentsBasic", this.AgentsBasic);
         this.setParamSimple(map, prefix + "AgentsProExpireWithInSevenDays", this.AgentsProExpireWithInSevenDays);
         this.setParamSimple(map, prefix + "RiskMachine", this.RiskMachine);
+        this.setParamSimple(map, prefix + "Shutdown", this.Shutdown);
+        this.setParamSimple(map, prefix + "Offline", this.Offline);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

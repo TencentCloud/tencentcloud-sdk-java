@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class ExportAttackLogsResponse extends AbstractModel{
 
     /**
-    * 导出文件下载链接地址。
+    * 已废弃
     */
     @SerializedName("DownloadUrl")
     @Expose
     private String DownloadUrl;
 
     /**
-    * 导出任务ID
+    * 导出任务ID 可通过ExportTasks接口下载
     */
     @SerializedName("TaskId")
     @Expose
@@ -44,32 +44,32 @@ public class ExportAttackLogsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 导出文件下载链接地址。 
-     * @return DownloadUrl 导出文件下载链接地址。
+     * Get 已废弃 
+     * @return DownloadUrl 已废弃
      */
     public String getDownloadUrl() {
         return this.DownloadUrl;
     }
 
     /**
-     * Set 导出文件下载链接地址。
-     * @param DownloadUrl 导出文件下载链接地址。
+     * Set 已废弃
+     * @param DownloadUrl 已废弃
      */
     public void setDownloadUrl(String DownloadUrl) {
         this.DownloadUrl = DownloadUrl;
     }
 
     /**
-     * Get 导出任务ID 
-     * @return TaskId 导出任务ID
+     * Get 导出任务ID 可通过ExportTasks接口下载 
+     * @return TaskId 导出任务ID 可通过ExportTasks接口下载
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 导出任务ID
-     * @param TaskId 导出任务ID
+     * Set 导出任务ID 可通过ExportTasks接口下载
+     * @param TaskId 导出任务ID 可通过ExportTasks接口下载
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;

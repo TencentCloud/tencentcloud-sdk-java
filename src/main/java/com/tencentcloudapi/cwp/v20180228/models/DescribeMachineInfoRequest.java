@@ -30,7 +30,7 @@ public class DescribeMachineInfoRequest extends AbstractModel{
     private String Uuid;
 
     /**
-    * cvm id， quuid、uuid必填一个
+    * Quuid , Uuid 必填一项
     */
     @SerializedName("Quuid")
     @Expose
@@ -53,16 +53,16 @@ public class DescribeMachineInfoRequest extends AbstractModel{
     }
 
     /**
-     * Get cvm id， quuid、uuid必填一个 
-     * @return Quuid cvm id， quuid、uuid必填一个
+     * Get Quuid , Uuid 必填一项 
+     * @return Quuid Quuid , Uuid 必填一项
      */
     public String getQuuid() {
         return this.Quuid;
     }
 
     /**
-     * Set cvm id， quuid、uuid必填一个
-     * @param Quuid cvm id， quuid、uuid必填一个
+     * Set Quuid , Uuid 必填一项
+     * @param Quuid Quuid , Uuid 必填一项
      */
     public void setQuuid(String Quuid) {
         this.Quuid = Quuid;

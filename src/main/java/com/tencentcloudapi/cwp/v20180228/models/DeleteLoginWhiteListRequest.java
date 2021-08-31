@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class DeleteLoginWhiteListRequest extends AbstractModel{
 
     /**
-    * 白名单ID
+    * 白名单ID (最大 100 条)
     */
     @SerializedName("Ids")
     @Expose
     private Long [] Ids;
 
     /**
-     * Get 白名单ID 
-     * @return Ids 白名单ID
+     * Get 白名单ID (最大 100 条) 
+     * @return Ids 白名单ID (最大 100 条)
      */
     public Long [] getIds() {
         return this.Ids;
     }
 
     /**
-     * Set 白名单ID
-     * @param Ids 白名单ID
+     * Set 白名单ID (最大 100 条)
+     * @param Ids 白名单ID (最大 100 条)
      */
     public void setIds(Long [] Ids) {
         this.Ids = Ids;

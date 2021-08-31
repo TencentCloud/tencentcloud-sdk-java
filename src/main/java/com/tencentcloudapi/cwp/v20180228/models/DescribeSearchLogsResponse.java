@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeSearchLogsResponse extends AbstractModel{
 
     /**
-    * 历史搜索记录
+    * 历史搜索记录 保留最新的10条
     */
     @SerializedName("Data")
     @Expose
@@ -37,16 +37,16 @@ public class DescribeSearchLogsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 历史搜索记录 
-     * @return Data 历史搜索记录
+     * Get 历史搜索记录 保留最新的10条 
+     * @return Data 历史搜索记录 保留最新的10条
      */
     public String [] getData() {
         return this.Data;
     }
 
     /**
-     * Set 历史搜索记录
-     * @param Data 历史搜索记录
+     * Set 历史搜索记录 保留最新的10条
+     * @param Data 历史搜索记录 保留最新的10条
      */
     public void setData(String [] Data) {
         this.Data = Data;

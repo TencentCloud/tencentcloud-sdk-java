@@ -58,14 +58,19 @@ public class CreateBaselineStrategyRequest extends AbstractModel{
     private Long IsGlobal;
 
     /**
-    * 云主机类型：“CVM”：虚拟主机，"BMS"：裸金属，"ECM"：边缘计算主机
+    * 云主机类型：
+CVM：虚拟主机
+BM：裸金属
+ECM：边缘计算主机
+LH：轻量应用服务器
+Other：混合云机器
     */
     @SerializedName("MachineType")
     @Expose
     private String MachineType;
 
     /**
-    * 主机地域. 示例: "ap-bj"
+    * 主机地域. 示例: "ap-guangzhou"
     */
     @SerializedName("RegionCode")
     @Expose
@@ -159,32 +164,52 @@ public class CreateBaselineStrategyRequest extends AbstractModel{
     }
 
     /**
-     * Get 云主机类型：“CVM”：虚拟主机，"BMS"：裸金属，"ECM"：边缘计算主机 
-     * @return MachineType 云主机类型：“CVM”：虚拟主机，"BMS"：裸金属，"ECM"：边缘计算主机
+     * Get 云主机类型：
+CVM：虚拟主机
+BM：裸金属
+ECM：边缘计算主机
+LH：轻量应用服务器
+Other：混合云机器 
+     * @return MachineType 云主机类型：
+CVM：虚拟主机
+BM：裸金属
+ECM：边缘计算主机
+LH：轻量应用服务器
+Other：混合云机器
      */
     public String getMachineType() {
         return this.MachineType;
     }
 
     /**
-     * Set 云主机类型：“CVM”：虚拟主机，"BMS"：裸金属，"ECM"：边缘计算主机
-     * @param MachineType 云主机类型：“CVM”：虚拟主机，"BMS"：裸金属，"ECM"：边缘计算主机
+     * Set 云主机类型：
+CVM：虚拟主机
+BM：裸金属
+ECM：边缘计算主机
+LH：轻量应用服务器
+Other：混合云机器
+     * @param MachineType 云主机类型：
+CVM：虚拟主机
+BM：裸金属
+ECM：边缘计算主机
+LH：轻量应用服务器
+Other：混合云机器
      */
     public void setMachineType(String MachineType) {
         this.MachineType = MachineType;
     }
 
     /**
-     * Get 主机地域. 示例: "ap-bj" 
-     * @return RegionCode 主机地域. 示例: "ap-bj"
+     * Get 主机地域. 示例: "ap-guangzhou" 
+     * @return RegionCode 主机地域. 示例: "ap-guangzhou"
      */
     public String getRegionCode() {
         return this.RegionCode;
     }
 
     /**
-     * Set 主机地域. 示例: "ap-bj"
-     * @param RegionCode 主机地域. 示例: "ap-bj"
+     * Set 主机地域. 示例: "ap-guangzhou"
+     * @param RegionCode 主机地域. 示例: "ap-guangzhou"
      */
     public void setRegionCode(String RegionCode) {
         this.RegionCode = RegionCode;

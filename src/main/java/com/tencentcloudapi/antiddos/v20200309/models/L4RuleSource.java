@@ -37,6 +37,14 @@ public class L4RuleSource extends AbstractModel{
     private Long Weight;
 
     /**
+    * 8000
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Port")
+    @Expose
+    private Long Port;
+
+    /**
      * Get 回源IP或域名 
      * @return Source 回源IP或域名
      */
@@ -68,6 +76,26 @@ public class L4RuleSource extends AbstractModel{
         this.Weight = Weight;
     }
 
+    /**
+     * Get 8000
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Port 8000
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getPort() {
+        return this.Port;
+    }
+
+    /**
+     * Set 8000
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Port 8000
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPort(Long Port) {
+        this.Port = Port;
+    }
+
     public L4RuleSource() {
     }
 
@@ -82,6 +110,9 @@ public class L4RuleSource extends AbstractModel{
         if (source.Weight != null) {
             this.Weight = new Long(source.Weight);
         }
+        if (source.Port != null) {
+            this.Port = new Long(source.Port);
+        }
     }
 
 
@@ -91,6 +122,7 @@ public class L4RuleSource extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Source", this.Source);
         this.setParamSimple(map, prefix + "Weight", this.Weight);
+        this.setParamSimple(map, prefix + "Port", this.Port);
 
     }
 }

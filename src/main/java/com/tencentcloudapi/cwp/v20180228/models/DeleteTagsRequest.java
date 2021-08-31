@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class DeleteTagsRequest extends AbstractModel{
 
     /**
-    * 标签ID
+    * 标签ID (最大100 条)
     */
     @SerializedName("Ids")
     @Expose
     private Long [] Ids;
 
     /**
-     * Get 标签ID 
-     * @return Ids 标签ID
+     * Get 标签ID (最大100 条) 
+     * @return Ids 标签ID (最大100 条)
      */
     public Long [] getIds() {
         return this.Ids;
     }
 
     /**
-     * Set 标签ID
-     * @param Ids 标签ID
+     * Set 标签ID (最大100 条)
+     * @param Ids 标签ID (最大100 条)
      */
     public void setIds(Long [] Ids) {
         this.Ids = Ids;

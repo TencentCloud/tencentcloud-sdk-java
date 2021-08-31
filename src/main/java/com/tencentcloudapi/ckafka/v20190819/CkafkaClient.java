@@ -199,6 +199,26 @@ public class CkafkaClient extends AbstractClient{
     }
 
     /**
+     *修改删除路由延迟触发时间
+     * @param req DeleteRouteTriggerTimeRequest
+     * @return DeleteRouteTriggerTimeResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteRouteTriggerTimeResponse DeleteRouteTriggerTime(DeleteRouteTriggerTimeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteRouteTriggerTimeResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteRouteTriggerTimeResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteRouteTriggerTime");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *删除ckafka主题
      * @param req DeleteTopicRequest
      * @return DeleteTopicResponse

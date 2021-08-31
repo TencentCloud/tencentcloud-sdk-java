@@ -58,6 +58,18 @@ public class ResetInstancesRequest extends AbstractModel{
     private String KeepData;
 
     /**
+    * 保持镜像的原始设置。该参数与Password或KeyIds.N不能同时指定。只有使用自定义镜像、共享镜像或外部导入镜像创建实例时才能指定该参数为TRUE。取值范围：
+TRUE：表示保持镜像的登录设置
+FALSE：表示不保持镜像的登录设置
+
+默认取值：FALSE。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("KeepImageLogin")
+    @Expose
+    private String KeepImageLogin;
+
+    /**
      * Get 待重装的实例ID列表。 
      * @return InstanceIdSet 待重装的实例ID列表。
      */
@@ -137,6 +149,42 @@ public class ResetInstancesRequest extends AbstractModel{
         this.KeepData = KeepData;
     }
 
+    /**
+     * Get 保持镜像的原始设置。该参数与Password或KeyIds.N不能同时指定。只有使用自定义镜像、共享镜像或外部导入镜像创建实例时才能指定该参数为TRUE。取值范围：
+TRUE：表示保持镜像的登录设置
+FALSE：表示不保持镜像的登录设置
+
+默认取值：FALSE。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return KeepImageLogin 保持镜像的原始设置。该参数与Password或KeyIds.N不能同时指定。只有使用自定义镜像、共享镜像或外部导入镜像创建实例时才能指定该参数为TRUE。取值范围：
+TRUE：表示保持镜像的登录设置
+FALSE：表示不保持镜像的登录设置
+
+默认取值：FALSE。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getKeepImageLogin() {
+        return this.KeepImageLogin;
+    }
+
+    /**
+     * Set 保持镜像的原始设置。该参数与Password或KeyIds.N不能同时指定。只有使用自定义镜像、共享镜像或外部导入镜像创建实例时才能指定该参数为TRUE。取值范围：
+TRUE：表示保持镜像的登录设置
+FALSE：表示不保持镜像的登录设置
+
+默认取值：FALSE。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param KeepImageLogin 保持镜像的原始设置。该参数与Password或KeyIds.N不能同时指定。只有使用自定义镜像、共享镜像或外部导入镜像创建实例时才能指定该参数为TRUE。取值范围：
+TRUE：表示保持镜像的登录设置
+FALSE：表示不保持镜像的登录设置
+
+默认取值：FALSE。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setKeepImageLogin(String KeepImageLogin) {
+        this.KeepImageLogin = KeepImageLogin;
+    }
+
     public ResetInstancesRequest() {
     }
 
@@ -163,6 +211,9 @@ public class ResetInstancesRequest extends AbstractModel{
         if (source.KeepData != null) {
             this.KeepData = new String(source.KeepData);
         }
+        if (source.KeepImageLogin != null) {
+            this.KeepImageLogin = new String(source.KeepImageLogin);
+        }
     }
 
 
@@ -175,6 +226,7 @@ public class ResetInstancesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Password", this.Password);
         this.setParamObj(map, prefix + "EnhancedService.", this.EnhancedService);
         this.setParamSimple(map, prefix + "KeepData", this.KeepData);
+        this.setParamSimple(map, prefix + "KeepImageLogin", this.KeepImageLogin);
 
     }
 }

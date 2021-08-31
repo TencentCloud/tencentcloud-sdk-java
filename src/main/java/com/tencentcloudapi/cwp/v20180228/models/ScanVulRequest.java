@@ -58,7 +58,7 @@ public class ScanVulRequest extends AbstractModel{
     private Long VulEmergency;
 
     /**
-    * 超时时长 单位秒
+    * 超时时长 单位秒 默认 3600 秒
     */
     @SerializedName("TimeoutPeriod")
     @Expose
@@ -152,16 +152,16 @@ public class ScanVulRequest extends AbstractModel{
     }
 
     /**
-     * Get 超时时长 单位秒 
-     * @return TimeoutPeriod 超时时长 单位秒
+     * Get 超时时长 单位秒 默认 3600 秒 
+     * @return TimeoutPeriod 超时时长 单位秒 默认 3600 秒
      */
     public Long getTimeoutPeriod() {
         return this.TimeoutPeriod;
     }
 
     /**
-     * Set 超时时长 单位秒
-     * @param TimeoutPeriod 超时时长 单位秒
+     * Set 超时时长 单位秒 默认 3600 秒
+     * @param TimeoutPeriod 超时时长 单位秒 默认 3600 秒
      */
     public void setTimeoutPeriod(Long TimeoutPeriod) {
         this.TimeoutPeriod = TimeoutPeriod;

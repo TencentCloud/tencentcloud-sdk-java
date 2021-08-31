@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeImportMachineInfoRequest extends AbstractModel{
 
     /**
-    * 服务器内网IP（默认）/ 服务器名称 / 服务器ID 数组
+    * 服务器内网IP（默认）/ 服务器名称 / 服务器ID 数组 (最大 1000条)
     */
     @SerializedName("MachineList")
     @Expose
@@ -44,16 +44,16 @@ public class DescribeImportMachineInfoRequest extends AbstractModel{
     private Boolean IsQueryProMachine;
 
     /**
-     * Get 服务器内网IP（默认）/ 服务器名称 / 服务器ID 数组 
-     * @return MachineList 服务器内网IP（默认）/ 服务器名称 / 服务器ID 数组
+     * Get 服务器内网IP（默认）/ 服务器名称 / 服务器ID 数组 (最大 1000条) 
+     * @return MachineList 服务器内网IP（默认）/ 服务器名称 / 服务器ID 数组 (最大 1000条)
      */
     public String [] getMachineList() {
         return this.MachineList;
     }
 
     /**
-     * Set 服务器内网IP（默认）/ 服务器名称 / 服务器ID 数组
-     * @param MachineList 服务器内网IP（默认）/ 服务器名称 / 服务器ID 数组
+     * Set 服务器内网IP（默认）/ 服务器名称 / 服务器ID 数组 (最大 1000条)
+     * @param MachineList 服务器内网IP（默认）/ 服务器名称 / 服务器ID 数组 (最大 1000条)
      */
     public void setMachineList(String [] MachineList) {
         this.MachineList = MachineList;

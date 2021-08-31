@@ -23,28 +23,28 @@ import java.util.HashMap;
 public class CloseProVersionRequest extends AbstractModel{
 
     /**
-    * 主机唯一标识Uuid。
-黑石的InstanceId，CVM的Uuid
+    * 主机唯一标识Uuid数组。
+黑石的InstanceId，CVM的Uuid ,边缘计算的Uuid , 轻量应用服务器的Uuid ,混合云机器的Quuid 。 当前参数最大长度限制20
     */
     @SerializedName("Quuid")
     @Expose
     private String Quuid;
 
     /**
-     * Get 主机唯一标识Uuid。
-黑石的InstanceId，CVM的Uuid 
-     * @return Quuid 主机唯一标识Uuid。
-黑石的InstanceId，CVM的Uuid
+     * Get 主机唯一标识Uuid数组。
+黑石的InstanceId，CVM的Uuid ,边缘计算的Uuid , 轻量应用服务器的Uuid ,混合云机器的Quuid 。 当前参数最大长度限制20 
+     * @return Quuid 主机唯一标识Uuid数组。
+黑石的InstanceId，CVM的Uuid ,边缘计算的Uuid , 轻量应用服务器的Uuid ,混合云机器的Quuid 。 当前参数最大长度限制20
      */
     public String getQuuid() {
         return this.Quuid;
     }
 
     /**
-     * Set 主机唯一标识Uuid。
-黑石的InstanceId，CVM的Uuid
-     * @param Quuid 主机唯一标识Uuid。
-黑石的InstanceId，CVM的Uuid
+     * Set 主机唯一标识Uuid数组。
+黑石的InstanceId，CVM的Uuid ,边缘计算的Uuid , 轻量应用服务器的Uuid ,混合云机器的Quuid 。 当前参数最大长度限制20
+     * @param Quuid 主机唯一标识Uuid数组。
+黑石的InstanceId，CVM的Uuid ,边缘计算的Uuid , 轻量应用服务器的Uuid ,混合云机器的Quuid 。 当前参数最大长度限制20
      */
     public void setQuuid(String Quuid) {
         this.Quuid = Quuid;

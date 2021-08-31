@@ -44,7 +44,7 @@ public class CMEExportInfo extends AbstractModel{
     private String Description;
 
     /**
-    * 导出的媒体分类路径，长度不能超过15字符。
+    * 导出的媒体分类路径，长度不能超过15字符。不存在默认创建。
     */
     @SerializedName("ClassPath")
     @Expose
@@ -113,16 +113,16 @@ public class CMEExportInfo extends AbstractModel{
     }
 
     /**
-     * Get 导出的媒体分类路径，长度不能超过15字符。 
-     * @return ClassPath 导出的媒体分类路径，长度不能超过15字符。
+     * Get 导出的媒体分类路径，长度不能超过15字符。不存在默认创建。 
+     * @return ClassPath 导出的媒体分类路径，长度不能超过15字符。不存在默认创建。
      */
     public String getClassPath() {
         return this.ClassPath;
     }
 
     /**
-     * Set 导出的媒体分类路径，长度不能超过15字符。
-     * @param ClassPath 导出的媒体分类路径，长度不能超过15字符。
+     * Set 导出的媒体分类路径，长度不能超过15字符。不存在默认创建。
+     * @param ClassPath 导出的媒体分类路径，长度不能超过15字符。不存在默认创建。
      */
     public void setClassPath(String ClassPath) {
         this.ClassPath = ClassPath;

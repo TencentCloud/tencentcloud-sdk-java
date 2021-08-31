@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeLoginWhiteListRequest extends AbstractModel{
 
     /**
-    * 返回数量，默认为10，最大值为100。
+    * 返回数量，最大值为100。
     */
     @SerializedName("Limit")
     @Expose
@@ -38,23 +38,26 @@ public class DescribeLoginWhiteListRequest extends AbstractModel{
 
     /**
     * 过滤条件。
-<li>Keywords - String - 是否必填：否 - 查询关键字 </li>
+<li>IpOrAlias - String - 是否必填：否 - 查询关键字 </li>
+<li>UserName - String - 是否必填：否 - 用户名筛选 </li>
+<li>ModifyBeginTime - String - 是否必填：否 - 按照修改时间段筛选，开始时间 </li>
+<li>ModifyEndTime - String - 是否必填：否 - 按照修改时间段筛选，结束时间 </li>
     */
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
 
     /**
-     * Get 返回数量，默认为10，最大值为100。 
-     * @return Limit 返回数量，默认为10，最大值为100。
+     * Get 返回数量，最大值为100。 
+     * @return Limit 返回数量，最大值为100。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 返回数量，默认为10，最大值为100。
-     * @param Limit 返回数量，默认为10，最大值为100。
+     * Set 返回数量，最大值为100。
+     * @param Limit 返回数量，最大值为100。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
@@ -78,9 +81,15 @@ public class DescribeLoginWhiteListRequest extends AbstractModel{
 
     /**
      * Get 过滤条件。
-<li>Keywords - String - 是否必填：否 - 查询关键字 </li> 
+<li>IpOrAlias - String - 是否必填：否 - 查询关键字 </li>
+<li>UserName - String - 是否必填：否 - 用户名筛选 </li>
+<li>ModifyBeginTime - String - 是否必填：否 - 按照修改时间段筛选，开始时间 </li>
+<li>ModifyEndTime - String - 是否必填：否 - 按照修改时间段筛选，结束时间 </li> 
      * @return Filters 过滤条件。
-<li>Keywords - String - 是否必填：否 - 查询关键字 </li>
+<li>IpOrAlias - String - 是否必填：否 - 查询关键字 </li>
+<li>UserName - String - 是否必填：否 - 用户名筛选 </li>
+<li>ModifyBeginTime - String - 是否必填：否 - 按照修改时间段筛选，开始时间 </li>
+<li>ModifyEndTime - String - 是否必填：否 - 按照修改时间段筛选，结束时间 </li>
      */
     public Filter [] getFilters() {
         return this.Filters;
@@ -88,9 +97,15 @@ public class DescribeLoginWhiteListRequest extends AbstractModel{
 
     /**
      * Set 过滤条件。
-<li>Keywords - String - 是否必填：否 - 查询关键字 </li>
+<li>IpOrAlias - String - 是否必填：否 - 查询关键字 </li>
+<li>UserName - String - 是否必填：否 - 用户名筛选 </li>
+<li>ModifyBeginTime - String - 是否必填：否 - 按照修改时间段筛选，开始时间 </li>
+<li>ModifyEndTime - String - 是否必填：否 - 按照修改时间段筛选，结束时间 </li>
      * @param Filters 过滤条件。
-<li>Keywords - String - 是否必填：否 - 查询关键字 </li>
+<li>IpOrAlias - String - 是否必填：否 - 查询关键字 </li>
+<li>UserName - String - 是否必填：否 - 用户名筛选 </li>
+<li>ModifyBeginTime - String - 是否必填：否 - 按照修改时间段筛选，开始时间 </li>
+<li>ModifyEndTime - String - 是否必填：否 - 按照修改时间段筛选，结束时间 </li>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

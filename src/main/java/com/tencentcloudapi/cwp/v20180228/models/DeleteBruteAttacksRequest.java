@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class DeleteBruteAttacksRequest extends AbstractModel{
 
     /**
-    * 暴力破解事件Id数组。
+    * 暴力破解事件Id数组。(最大 100条)
     */
     @SerializedName("Ids")
     @Expose
     private Long [] Ids;
 
     /**
-     * Get 暴力破解事件Id数组。 
-     * @return Ids 暴力破解事件Id数组。
+     * Get 暴力破解事件Id数组。(最大 100条) 
+     * @return Ids 暴力破解事件Id数组。(最大 100条)
      */
     public Long [] getIds() {
         return this.Ids;
     }
 
     /**
-     * Set 暴力破解事件Id数组。
-     * @param Ids 暴力破解事件Id数组。
+     * Set 暴力破解事件Id数组。(最大 100条)
+     * @param Ids 暴力破解事件Id数组。(最大 100条)
      */
     public void setIds(Long [] Ids) {
         this.Ids = Ids;

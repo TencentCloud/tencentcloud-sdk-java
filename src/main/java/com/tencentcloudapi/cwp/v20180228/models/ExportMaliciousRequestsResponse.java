@@ -30,6 +30,13 @@ public class ExportMaliciousRequestsResponse extends AbstractModel{
     private String DownloadUrl;
 
     /**
+    * 导出任务Id , 可通过ExportTasks 接口下载
+    */
+    @SerializedName("TaskId")
+    @Expose
+    private String TaskId;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -50,6 +57,22 @@ public class ExportMaliciousRequestsResponse extends AbstractModel{
      */
     public void setDownloadUrl(String DownloadUrl) {
         this.DownloadUrl = DownloadUrl;
+    }
+
+    /**
+     * Get 导出任务Id , 可通过ExportTasks 接口下载 
+     * @return TaskId 导出任务Id , 可通过ExportTasks 接口下载
+     */
+    public String getTaskId() {
+        return this.TaskId;
+    }
+
+    /**
+     * Set 导出任务Id , 可通过ExportTasks 接口下载
+     * @param TaskId 导出任务Id , 可通过ExportTasks 接口下载
+     */
+    public void setTaskId(String TaskId) {
+        this.TaskId = TaskId;
     }
 
     /**
@@ -79,6 +102,9 @@ public class ExportMaliciousRequestsResponse extends AbstractModel{
         if (source.DownloadUrl != null) {
             this.DownloadUrl = new String(source.DownloadUrl);
         }
+        if (source.TaskId != null) {
+            this.TaskId = new String(source.TaskId);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -90,6 +116,7 @@ public class ExportMaliciousRequestsResponse extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DownloadUrl", this.DownloadUrl);
+        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

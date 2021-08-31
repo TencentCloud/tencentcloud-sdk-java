@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class SyncAssetScanRequest extends AbstractModel{
 
     /**
-    * 是否同步
+    * 是否同步：true-是 false-否；默认false
     */
     @SerializedName("Sync")
     @Expose
     private Boolean Sync;
 
     /**
-     * Get 是否同步 
-     * @return Sync 是否同步
+     * Get 是否同步：true-是 false-否；默认false 
+     * @return Sync 是否同步：true-是 false-否；默认false
      */
     public Boolean getSync() {
         return this.Sync;
     }
 
     /**
-     * Set 是否同步
-     * @param Sync 是否同步
+     * Set 是否同步：true-是 false-否；默认false
+     * @param Sync 是否同步：true-是 false-否；默认false
      */
     public void setSync(Boolean Sync) {
         this.Sync = Sync;

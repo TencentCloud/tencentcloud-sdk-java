@@ -58,6 +58,13 @@ public class DescribeMachineRegionsResponse extends AbstractModel{
     private RegionInfo [] Other;
 
     /**
+    * 所有地域列表(包含以上所有地域)
+    */
+    @SerializedName("ALL")
+    @Expose
+    private RegionInfo [] ALL;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -145,6 +152,22 @@ public class DescribeMachineRegionsResponse extends AbstractModel{
     }
 
     /**
+     * Get 所有地域列表(包含以上所有地域) 
+     * @return ALL 所有地域列表(包含以上所有地域)
+     */
+    public RegionInfo [] getALL() {
+        return this.ALL;
+    }
+
+    /**
+     * Set 所有地域列表(包含以上所有地域)
+     * @param ALL 所有地域列表(包含以上所有地域)
+     */
+    public void setALL(RegionInfo [] ALL) {
+        this.ALL = ALL;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -198,6 +221,12 @@ public class DescribeMachineRegionsResponse extends AbstractModel{
                 this.Other[i] = new RegionInfo(source.Other[i]);
             }
         }
+        if (source.ALL != null) {
+            this.ALL = new RegionInfo[source.ALL.length];
+            for (int i = 0; i < source.ALL.length; i++) {
+                this.ALL[i] = new RegionInfo(source.ALL[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -213,6 +242,7 @@ public class DescribeMachineRegionsResponse extends AbstractModel{
         this.setParamArrayObj(map, prefix + "LH.", this.LH);
         this.setParamArrayObj(map, prefix + "ECM.", this.ECM);
         this.setParamArrayObj(map, prefix + "Other.", this.Other);
+        this.setParamArrayObj(map, prefix + "ALL.", this.ALL);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

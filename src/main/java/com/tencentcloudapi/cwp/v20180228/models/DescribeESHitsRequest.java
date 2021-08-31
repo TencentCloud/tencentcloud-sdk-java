@@ -37,7 +37,7 @@ public class DescribeESHitsRequest extends AbstractModel{
     private Long Offset;
 
     /**
-    * 返回数量，默认为10，最大值为100。
+    * 返回数量，最大值为100。
     */
     @SerializedName("Limit")
     @Expose
@@ -76,16 +76,16 @@ public class DescribeESHitsRequest extends AbstractModel{
     }
 
     /**
-     * Get 返回数量，默认为10，最大值为100。 
-     * @return Limit 返回数量，默认为10，最大值为100。
+     * Get 返回数量，最大值为100。 
+     * @return Limit 返回数量，最大值为100。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 返回数量，默认为10，最大值为100。
-     * @param Limit 返回数量，默认为10，最大值为100。
+     * Set 返回数量，最大值为100。
+     * @param Limit 返回数量，最大值为100。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

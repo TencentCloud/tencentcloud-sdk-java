@@ -235,6 +235,30 @@ public class InstanceAttributesResponse extends AbstractModel{
     private DynamicRetentionTime RetentionTimeConfig;
 
     /**
+    * 最大连接数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MaxConnection")
+    @Expose
+    private Long MaxConnection;
+
+    /**
+    * 公网带宽
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PublicNetwork")
+    @Expose
+    private Long PublicNetwork;
+
+    /**
+    * 时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DeleteRouteTimestamp")
+    @Expose
+    private String DeleteRouteTimestamp;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -734,6 +758,66 @@ public class InstanceAttributesResponse extends AbstractModel{
         this.RetentionTimeConfig = RetentionTimeConfig;
     }
 
+    /**
+     * Get 最大连接数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MaxConnection 最大连接数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getMaxConnection() {
+        return this.MaxConnection;
+    }
+
+    /**
+     * Set 最大连接数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MaxConnection 最大连接数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMaxConnection(Long MaxConnection) {
+        this.MaxConnection = MaxConnection;
+    }
+
+    /**
+     * Get 公网带宽
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PublicNetwork 公网带宽
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getPublicNetwork() {
+        return this.PublicNetwork;
+    }
+
+    /**
+     * Set 公网带宽
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PublicNetwork 公网带宽
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPublicNetwork(Long PublicNetwork) {
+        this.PublicNetwork = PublicNetwork;
+    }
+
+    /**
+     * Get 时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DeleteRouteTimestamp 时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDeleteRouteTimestamp() {
+        return this.DeleteRouteTimestamp;
+    }
+
+    /**
+     * Set 时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DeleteRouteTimestamp 时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDeleteRouteTimestamp(String DeleteRouteTimestamp) {
+        this.DeleteRouteTimestamp = DeleteRouteTimestamp;
+    }
+
     public InstanceAttributesResponse() {
     }
 
@@ -841,6 +925,15 @@ public class InstanceAttributesResponse extends AbstractModel{
         if (source.RetentionTimeConfig != null) {
             this.RetentionTimeConfig = new DynamicRetentionTime(source.RetentionTimeConfig);
         }
+        if (source.MaxConnection != null) {
+            this.MaxConnection = new Long(source.MaxConnection);
+        }
+        if (source.PublicNetwork != null) {
+            this.PublicNetwork = new Long(source.PublicNetwork);
+        }
+        if (source.DeleteRouteTimestamp != null) {
+            this.DeleteRouteTimestamp = new String(source.DeleteRouteTimestamp);
+        }
     }
 
 
@@ -877,6 +970,9 @@ public class InstanceAttributesResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
         this.setParamArraySimple(map, prefix + "Features.", this.Features);
         this.setParamObj(map, prefix + "RetentionTimeConfig.", this.RetentionTimeConfig);
+        this.setParamSimple(map, prefix + "MaxConnection", this.MaxConnection);
+        this.setParamSimple(map, prefix + "PublicNetwork", this.PublicNetwork);
+        this.setParamSimple(map, prefix + "DeleteRouteTimestamp", this.DeleteRouteTimestamp);
 
     }
 }

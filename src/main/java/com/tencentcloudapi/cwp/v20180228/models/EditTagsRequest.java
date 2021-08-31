@@ -37,7 +37,7 @@ public class EditTagsRequest extends AbstractModel{
     private Long Id;
 
     /**
-    * CVM主机ID
+    * Quuid
     */
     @SerializedName("Quuids")
     @Expose
@@ -76,16 +76,16 @@ public class EditTagsRequest extends AbstractModel{
     }
 
     /**
-     * Get CVM主机ID 
-     * @return Quuids CVM主机ID
+     * Get Quuid 
+     * @return Quuids Quuid
      */
     public String [] getQuuids() {
         return this.Quuids;
     }
 
     /**
-     * Set CVM主机ID
-     * @param Quuids CVM主机ID
+     * Set Quuid
+     * @param Quuids Quuid
      */
     public void setQuuids(String [] Quuids) {
         this.Quuids = Quuids;

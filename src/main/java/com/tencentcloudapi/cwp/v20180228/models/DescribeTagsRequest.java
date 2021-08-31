@@ -24,15 +24,18 @@ public class DescribeTagsRequest extends AbstractModel{
 
     /**
     * 云主机类型。
-<li>CVM：表示虚拟主机</li>
+<li>CVM：表示云服务器</li>
 <li>BM:  表示黑石物理机</li>
+<li>ECM:  表示边缘计算服务器</li>
+<li>LH:  表示轻量应用服务器</li>
+<li>Other:  表示混合云服务器</li>
     */
     @SerializedName("MachineType")
     @Expose
     private String MachineType;
 
     /**
-    * 机器所属地域。如：ap-guangzhou，ap-shanghai
+    * 机器所属地域。如：ap-guangzhou
     */
     @SerializedName("MachineRegion")
     @Expose
@@ -53,11 +56,17 @@ public class DescribeTagsRequest extends AbstractModel{
 
     /**
      * Get 云主机类型。
-<li>CVM：表示虚拟主机</li>
-<li>BM:  表示黑石物理机</li> 
-     * @return MachineType 云主机类型。
-<li>CVM：表示虚拟主机</li>
+<li>CVM：表示云服务器</li>
 <li>BM:  表示黑石物理机</li>
+<li>ECM:  表示边缘计算服务器</li>
+<li>LH:  表示轻量应用服务器</li>
+<li>Other:  表示混合云服务器</li> 
+     * @return MachineType 云主机类型。
+<li>CVM：表示云服务器</li>
+<li>BM:  表示黑石物理机</li>
+<li>ECM:  表示边缘计算服务器</li>
+<li>LH:  表示轻量应用服务器</li>
+<li>Other:  表示混合云服务器</li>
      */
     public String getMachineType() {
         return this.MachineType;
@@ -65,27 +74,33 @@ public class DescribeTagsRequest extends AbstractModel{
 
     /**
      * Set 云主机类型。
-<li>CVM：表示虚拟主机</li>
+<li>CVM：表示云服务器</li>
 <li>BM:  表示黑石物理机</li>
+<li>ECM:  表示边缘计算服务器</li>
+<li>LH:  表示轻量应用服务器</li>
+<li>Other:  表示混合云服务器</li>
      * @param MachineType 云主机类型。
-<li>CVM：表示虚拟主机</li>
+<li>CVM：表示云服务器</li>
 <li>BM:  表示黑石物理机</li>
+<li>ECM:  表示边缘计算服务器</li>
+<li>LH:  表示轻量应用服务器</li>
+<li>Other:  表示混合云服务器</li>
      */
     public void setMachineType(String MachineType) {
         this.MachineType = MachineType;
     }
 
     /**
-     * Get 机器所属地域。如：ap-guangzhou，ap-shanghai 
-     * @return MachineRegion 机器所属地域。如：ap-guangzhou，ap-shanghai
+     * Get 机器所属地域。如：ap-guangzhou 
+     * @return MachineRegion 机器所属地域。如：ap-guangzhou
      */
     public String getMachineRegion() {
         return this.MachineRegion;
     }
 
     /**
-     * Set 机器所属地域。如：ap-guangzhou，ap-shanghai
-     * @param MachineRegion 机器所属地域。如：ap-guangzhou，ap-shanghai
+     * Set 机器所属地域。如：ap-guangzhou
+     * @param MachineRegion 机器所属地域。如：ap-guangzhou
      */
     public void setMachineRegion(String MachineRegion) {
         this.MachineRegion = MachineRegion;

@@ -65,6 +65,13 @@ public class ModifyInstanceAttributesRequest extends AbstractModel{
     private Long RebalanceTime;
 
     /**
+    * 时间戳
+    */
+    @SerializedName("PublicNetwork")
+    @Expose
+    private Long PublicNetwork;
+
+    /**
      * Get 实例id 
      * @return InstanceId 实例id
      */
@@ -160,6 +167,22 @@ public class ModifyInstanceAttributesRequest extends AbstractModel{
         this.RebalanceTime = RebalanceTime;
     }
 
+    /**
+     * Get 时间戳 
+     * @return PublicNetwork 时间戳
+     */
+    public Long getPublicNetwork() {
+        return this.PublicNetwork;
+    }
+
+    /**
+     * Set 时间戳
+     * @param PublicNetwork 时间戳
+     */
+    public void setPublicNetwork(Long PublicNetwork) {
+        this.PublicNetwork = PublicNetwork;
+    }
+
     public ModifyInstanceAttributesRequest() {
     }
 
@@ -186,6 +209,9 @@ public class ModifyInstanceAttributesRequest extends AbstractModel{
         if (source.RebalanceTime != null) {
             this.RebalanceTime = new Long(source.RebalanceTime);
         }
+        if (source.PublicNetwork != null) {
+            this.PublicNetwork = new Long(source.PublicNetwork);
+        }
     }
 
 
@@ -199,6 +225,7 @@ public class ModifyInstanceAttributesRequest extends AbstractModel{
         this.setParamObj(map, prefix + "Config.", this.Config);
         this.setParamObj(map, prefix + "DynamicRetentionConfig.", this.DynamicRetentionConfig);
         this.setParamSimple(map, prefix + "RebalanceTime", this.RebalanceTime);
+        this.setParamSimple(map, prefix + "PublicNetwork", this.PublicNetwork);
 
     }
 }

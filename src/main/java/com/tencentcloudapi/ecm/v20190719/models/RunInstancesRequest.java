@@ -167,6 +167,18 @@ Windows 实例：名字符长度为[2, 15]，允许字母（不限制大小写�
     private String [] KeyIds;
 
     /**
+    * 保持镜像的原始设置。该参数与Password或KeyIds.N不能同时指定。只有使用自定义镜像、共享镜像或外部导入镜像创建实例时才能指定该参数为TRUE。取值范围：
+TRUE：表示保持镜像的登录设置
+FALSE：表示不保持镜像的登录设置
+
+默认取值：FALSE。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("KeepImageLogin")
+    @Expose
+    private String KeepImageLogin;
+
+    /**
      * Get 需要创建实例的可用区及创建数目及运营商的列表。在单次请求的过程中，单个region下的请求创建实例数上限为100 
      * @return ZoneInstanceCountISPSet 需要创建实例的可用区及创建数目及运营商的列表。在单次请求的过程中，单个region下的请求创建实例数上限为100
      */
@@ -526,6 +538,42 @@ Windows 实例：名字符长度为[2, 15]，允许字母（不限制大小写�
         this.KeyIds = KeyIds;
     }
 
+    /**
+     * Get 保持镜像的原始设置。该参数与Password或KeyIds.N不能同时指定。只有使用自定义镜像、共享镜像或外部导入镜像创建实例时才能指定该参数为TRUE。取值范围：
+TRUE：表示保持镜像的登录设置
+FALSE：表示不保持镜像的登录设置
+
+默认取值：FALSE。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return KeepImageLogin 保持镜像的原始设置。该参数与Password或KeyIds.N不能同时指定。只有使用自定义镜像、共享镜像或外部导入镜像创建实例时才能指定该参数为TRUE。取值范围：
+TRUE：表示保持镜像的登录设置
+FALSE：表示不保持镜像的登录设置
+
+默认取值：FALSE。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getKeepImageLogin() {
+        return this.KeepImageLogin;
+    }
+
+    /**
+     * Set 保持镜像的原始设置。该参数与Password或KeyIds.N不能同时指定。只有使用自定义镜像、共享镜像或外部导入镜像创建实例时才能指定该参数为TRUE。取值范围：
+TRUE：表示保持镜像的登录设置
+FALSE：表示不保持镜像的登录设置
+
+默认取值：FALSE。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param KeepImageLogin 保持镜像的原始设置。该参数与Password或KeyIds.N不能同时指定。只有使用自定义镜像、共享镜像或外部导入镜像创建实例时才能指定该参数为TRUE。取值范围：
+TRUE：表示保持镜像的登录设置
+FALSE：表示不保持镜像的登录设置
+
+默认取值：FALSE。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setKeepImageLogin(String KeepImageLogin) {
+        this.KeepImageLogin = KeepImageLogin;
+    }
+
     public RunInstancesRequest() {
     }
 
@@ -600,6 +648,9 @@ Windows 实例：名字符长度为[2, 15]，允许字母（不限制大小写�
                 this.KeyIds[i] = new String(source.KeyIds[i]);
             }
         }
+        if (source.KeepImageLogin != null) {
+            this.KeepImageLogin = new String(source.KeepImageLogin);
+        }
     }
 
 
@@ -625,6 +676,7 @@ Windows 实例：名字符长度为[2, 15]，允许字母（不限制大小写�
         this.setParamSimple(map, prefix + "InternetMaxBandwidthIn", this.InternetMaxBandwidthIn);
         this.setParamSimple(map, prefix + "InstanceChargeType", this.InstanceChargeType);
         this.setParamArraySimple(map, prefix + "KeyIds.", this.KeyIds);
+        this.setParamSimple(map, prefix + "KeepImageLogin", this.KeepImageLogin);
 
     }
 }

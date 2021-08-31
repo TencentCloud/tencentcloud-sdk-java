@@ -93,6 +93,9 @@ public enum IotexplorerErrorCode {
     // 固件已经存在。
      INVALIDPARAMETERVALUE_FIRMWAREALREADYEXIST("InvalidParameterValue.FirmwareAlreadyExist"),
      
+    // 转发重定向被拒绝。
+     INVALIDPARAMETERVALUE_FORWARDREDIRECTDENIED("InvalidParameterValue.ForwardRedirectDenied"),
+     
     // SQL语句含有非法字符。
      INVALIDPARAMETERVALUE_INVALIDSQL("InvalidParameterValue.InvalidSQL"),
      

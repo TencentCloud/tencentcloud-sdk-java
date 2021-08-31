@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class DeleteReverseShellEventsRequest extends AbstractModel{
 
     /**
-    * ID数组，最大100条。
+    * ID数组. (最大100条)
     */
     @SerializedName("Ids")
     @Expose
     private Long [] Ids;
 
     /**
-     * Get ID数组，最大100条。 
-     * @return Ids ID数组，最大100条。
+     * Get ID数组. (最大100条) 
+     * @return Ids ID数组. (最大100条)
      */
     public Long [] getIds() {
         return this.Ids;
     }
 
     /**
-     * Set ID数组，最大100条。
-     * @param Ids ID数组，最大100条。
+     * Set ID数组. (最大100条)
+     * @param Ids ID数组. (最大100条)
      */
     public void setIds(Long [] Ids) {
         this.Ids = Ids;
