@@ -719,6 +719,26 @@ public class TcbClient extends AbstractClient{
     }
 
     /**
+     *获取环境下单地域
+     * @param req DescribeEnvDealRegionRequest
+     * @return DescribeEnvDealRegionResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeEnvDealRegionResponse DescribeEnvDealRegion(DescribeEnvDealRegionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeEnvDealRegionResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeEnvDealRegionResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeEnvDealRegion");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询后付费免费配额信息
      * @param req DescribeEnvFreeQuotaRequest
      * @return DescribeEnvFreeQuotaResponse

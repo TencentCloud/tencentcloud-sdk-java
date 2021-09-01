@@ -13,21 +13,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.gme.v20180711.models;
+package com.tencentcloudapi.iotvideoindustry.v20201201.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeAppStatisticsResponse extends AbstractModel{
+public class DescribeIPCChannelsResponse extends AbstractModel{
 
     /**
-    * 应用用量统计数据
+    * 通道总数
+注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("Data")
+    @SerializedName("TotalCount")
     @Expose
-    private DescribeAppStatisticsResp Data;
+    private Long TotalCount;
+
+    /**
+    * 通道详情列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DeviceList")
+    @Expose
+    private GroupDeviceItem [] DeviceList;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,19 +46,43 @@ public class DescribeAppStatisticsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 应用用量统计数据 
-     * @return Data 应用用量统计数据
+     * Get 通道总数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TotalCount 通道总数
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public DescribeAppStatisticsResp getData() {
-        return this.Data;
+    public Long getTotalCount() {
+        return this.TotalCount;
     }
 
     /**
-     * Set 应用用量统计数据
-     * @param Data 应用用量统计数据
+     * Set 通道总数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TotalCount 通道总数
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setData(DescribeAppStatisticsResp Data) {
-        this.Data = Data;
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
+    }
+
+    /**
+     * Get 通道详情列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DeviceList 通道详情列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public GroupDeviceItem [] getDeviceList() {
+        return this.DeviceList;
+    }
+
+    /**
+     * Set 通道详情列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DeviceList 通道详情列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDeviceList(GroupDeviceItem [] DeviceList) {
+        this.DeviceList = DeviceList;
     }
 
     /**
@@ -68,16 +101,22 @@ public class DescribeAppStatisticsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeAppStatisticsResponse() {
+    public DescribeIPCChannelsResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeAppStatisticsResponse(DescribeAppStatisticsResponse source) {
-        if (source.Data != null) {
-            this.Data = new DescribeAppStatisticsResp(source.Data);
+    public DescribeIPCChannelsResponse(DescribeIPCChannelsResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.DeviceList != null) {
+            this.DeviceList = new GroupDeviceItem[source.DeviceList.length];
+            for (int i = 0; i < source.DeviceList.length; i++) {
+                this.DeviceList[i] = new GroupDeviceItem(source.DeviceList[i]);
+            }
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -89,7 +128,8 @@ public class DescribeAppStatisticsResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "Data.", this.Data);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamArrayObj(map, prefix + "DeviceList.", this.DeviceList);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

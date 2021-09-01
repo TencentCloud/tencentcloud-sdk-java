@@ -147,6 +147,14 @@ public class Cluster extends AbstractModel{
     private Long NamespaceNum;
 
     /**
+    * 已使用存储限制，MB为单位
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UsedStorageBudget")
+    @Expose
+    private Long UsedStorageBudget;
+
+    /**
      * Get 集群Id。 
      * @return ClusterId 集群Id。
      */
@@ -438,6 +446,26 @@ public class Cluster extends AbstractModel{
         this.NamespaceNum = NamespaceNum;
     }
 
+    /**
+     * Get 已使用存储限制，MB为单位
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UsedStorageBudget 已使用存储限制，MB为单位
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getUsedStorageBudget() {
+        return this.UsedStorageBudget;
+    }
+
+    /**
+     * Set 已使用存储限制，MB为单位
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UsedStorageBudget 已使用存储限制，MB为单位
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUsedStorageBudget(Long UsedStorageBudget) {
+        this.UsedStorageBudget = UsedStorageBudget;
+    }
+
     public Cluster() {
     }
 
@@ -497,6 +525,9 @@ public class Cluster extends AbstractModel{
         if (source.NamespaceNum != null) {
             this.NamespaceNum = new Long(source.NamespaceNum);
         }
+        if (source.UsedStorageBudget != null) {
+            this.UsedStorageBudget = new Long(source.UsedStorageBudget);
+        }
     }
 
 
@@ -521,6 +552,7 @@ public class Cluster extends AbstractModel{
         this.setParamSimple(map, prefix + "PublicEndPoint", this.PublicEndPoint);
         this.setParamSimple(map, prefix + "VpcEndPoint", this.VpcEndPoint);
         this.setParamSimple(map, prefix + "NamespaceNum", this.NamespaceNum);
+        this.setParamSimple(map, prefix + "UsedStorageBudget", this.UsedStorageBudget);
 
     }
 }

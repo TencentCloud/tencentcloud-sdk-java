@@ -420,6 +420,26 @@ public class IotvideoindustryClient extends AbstractClient{
     }
 
     /**
+     *获取设备下属通道
+     * @param req DescribeIPCChannelsRequest
+     * @return DescribeIPCChannelsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeIPCChannelsResponse DescribeIPCChannels(DescribeIPCChannelsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeIPCChannelsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeIPCChannelsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeIPCChannels");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取回放视频流(NVR录制用)
 RecordId和StartTime/EndTime互斥
 当存在RecordId时，StartTime和EndTime无效

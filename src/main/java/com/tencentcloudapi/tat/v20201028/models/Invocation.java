@@ -127,6 +127,34 @@ public class Invocation extends AbstractModel{
     private String InvocationSource;
 
     /**
+    * base64编码的命令内容
+    */
+    @SerializedName("CommandContent")
+    @Expose
+    private String CommandContent;
+
+    /**
+    * 命令类型
+    */
+    @SerializedName("CommandType")
+    @Expose
+    private String CommandType;
+
+    /**
+    * 执行命令过期时间， 单位秒
+    */
+    @SerializedName("Timeout")
+    @Expose
+    private Long Timeout;
+
+    /**
+    * 执行命令的工作路径
+    */
+    @SerializedName("WorkingDirectory")
+    @Expose
+    private String WorkingDirectory;
+
+    /**
      * Get 执行活动ID。 
      * @return InvocationId 执行活动ID。
      */
@@ -374,6 +402,70 @@ public class Invocation extends AbstractModel{
         this.InvocationSource = InvocationSource;
     }
 
+    /**
+     * Get base64编码的命令内容 
+     * @return CommandContent base64编码的命令内容
+     */
+    public String getCommandContent() {
+        return this.CommandContent;
+    }
+
+    /**
+     * Set base64编码的命令内容
+     * @param CommandContent base64编码的命令内容
+     */
+    public void setCommandContent(String CommandContent) {
+        this.CommandContent = CommandContent;
+    }
+
+    /**
+     * Get 命令类型 
+     * @return CommandType 命令类型
+     */
+    public String getCommandType() {
+        return this.CommandType;
+    }
+
+    /**
+     * Set 命令类型
+     * @param CommandType 命令类型
+     */
+    public void setCommandType(String CommandType) {
+        this.CommandType = CommandType;
+    }
+
+    /**
+     * Get 执行命令过期时间， 单位秒 
+     * @return Timeout 执行命令过期时间， 单位秒
+     */
+    public Long getTimeout() {
+        return this.Timeout;
+    }
+
+    /**
+     * Set 执行命令过期时间， 单位秒
+     * @param Timeout 执行命令过期时间， 单位秒
+     */
+    public void setTimeout(Long Timeout) {
+        this.Timeout = Timeout;
+    }
+
+    /**
+     * Get 执行命令的工作路径 
+     * @return WorkingDirectory 执行命令的工作路径
+     */
+    public String getWorkingDirectory() {
+        return this.WorkingDirectory;
+    }
+
+    /**
+     * Set 执行命令的工作路径
+     * @param WorkingDirectory 执行命令的工作路径
+     */
+    public void setWorkingDirectory(String WorkingDirectory) {
+        this.WorkingDirectory = WorkingDirectory;
+    }
+
     public Invocation() {
     }
 
@@ -427,6 +519,18 @@ public class Invocation extends AbstractModel{
         if (source.InvocationSource != null) {
             this.InvocationSource = new String(source.InvocationSource);
         }
+        if (source.CommandContent != null) {
+            this.CommandContent = new String(source.CommandContent);
+        }
+        if (source.CommandType != null) {
+            this.CommandType = new String(source.CommandType);
+        }
+        if (source.Timeout != null) {
+            this.Timeout = new Long(source.Timeout);
+        }
+        if (source.WorkingDirectory != null) {
+            this.WorkingDirectory = new String(source.WorkingDirectory);
+        }
     }
 
 
@@ -448,6 +552,10 @@ public class Invocation extends AbstractModel{
         this.setParamSimple(map, prefix + "InstanceKind", this.InstanceKind);
         this.setParamSimple(map, prefix + "Username", this.Username);
         this.setParamSimple(map, prefix + "InvocationSource", this.InvocationSource);
+        this.setParamSimple(map, prefix + "CommandContent", this.CommandContent);
+        this.setParamSimple(map, prefix + "CommandType", this.CommandType);
+        this.setParamSimple(map, prefix + "Timeout", this.Timeout);
+        this.setParamSimple(map, prefix + "WorkingDirectory", this.WorkingDirectory);
 
     }
 }

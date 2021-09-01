@@ -23,49 +23,49 @@ import java.util.HashMap;
 public class ModifyAppStatusResponse extends AbstractModel{
 
     /**
-    * GME应用ID
+    * 修改应用开关状态返回数据
     */
-    @SerializedName("BizId")
+    @SerializedName("Data")
     @Expose
-    private Long BizId;
+    private ModifyAppStatusResp Data;
 
     /**
-    * 应用状态，取值：open/close
+    * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
-    @SerializedName("Status")
+    @SerializedName("RequestId")
     @Expose
-    private String Status;
+    private String RequestId;
 
     /**
-     * Get GME应用ID 
-     * @return BizId GME应用ID
+     * Get 修改应用开关状态返回数据 
+     * @return Data 修改应用开关状态返回数据
      */
-    public Long getBizId() {
-        return this.BizId;
+    public ModifyAppStatusResp getData() {
+        return this.Data;
     }
 
     /**
-     * Set GME应用ID
-     * @param BizId GME应用ID
+     * Set 修改应用开关状态返回数据
+     * @param Data 修改应用开关状态返回数据
      */
-    public void setBizId(Long BizId) {
-        this.BizId = BizId;
+    public void setData(ModifyAppStatusResp Data) {
+        this.Data = Data;
     }
 
     /**
-     * Get 应用状态，取值：open/close 
-     * @return Status 应用状态，取值：open/close
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
+     * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public String getStatus() {
-        return this.Status;
+    public String getRequestId() {
+        return this.RequestId;
     }
 
     /**
-     * Set 应用状态，取值：open/close
-     * @param Status 应用状态，取值：open/close
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public void setStatus(String Status) {
-        this.Status = Status;
+    public void setRequestId(String RequestId) {
+        this.RequestId = RequestId;
     }
 
     public ModifyAppStatusResponse() {
@@ -76,11 +76,11 @@ public class ModifyAppStatusResponse extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public ModifyAppStatusResponse(ModifyAppStatusResponse source) {
-        if (source.BizId != null) {
-            this.BizId = new Long(source.BizId);
+        if (source.Data != null) {
+            this.Data = new ModifyAppStatusResp(source.Data);
         }
-        if (source.Status != null) {
-            this.Status = new String(source.Status);
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
         }
     }
 
@@ -89,8 +89,8 @@ public class ModifyAppStatusResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "BizId", this.BizId);
-        this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamObj(map, prefix + "Data.", this.Data);
+        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
 }
