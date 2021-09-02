@@ -78,7 +78,7 @@ public class ChainMakerTransactionResult extends AbstractModel{
     private String Message;
 
     /**
-    * 交易时间
+    * 交易时间，单位是秒
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Timestamp")
@@ -222,9 +222,9 @@ public class ChainMakerTransactionResult extends AbstractModel{
     }
 
     /**
-     * Get 交易时间
+     * Get 交易时间，单位是秒
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Timestamp 交易时间
+     * @return Timestamp 交易时间，单位是秒
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTimestamp() {
@@ -232,9 +232,9 @@ public class ChainMakerTransactionResult extends AbstractModel{
     }
 
     /**
-     * Set 交易时间
+     * Set 交易时间，单位是秒
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Timestamp 交易时间
+     * @param Timestamp 交易时间，单位是秒
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTimestamp(Long Timestamp) {

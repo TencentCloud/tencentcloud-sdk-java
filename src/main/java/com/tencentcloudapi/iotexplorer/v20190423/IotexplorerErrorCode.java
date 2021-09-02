@@ -255,6 +255,9 @@ public enum IotexplorerErrorCode {
     // 产品或设备不存在。
      RESOURCENOTFOUND_PRODUCTORDEVICENOTEXIST("ResourceNotFound.ProductOrDeviceNotExist"),
      
+    // 产品资源不存在。
+     RESOURCENOTFOUND_PRODUCTRESOURCENOTEXIST("ResourceNotFound.ProductResourceNotExist"),
+     
     // 项目不存在。
      RESOURCENOTFOUND_PROJECTNOTEXIST("ResourceNotFound.ProjectNotExist"),
      

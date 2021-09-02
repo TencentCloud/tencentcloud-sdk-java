@@ -135,6 +135,14 @@ public class MigrateJobInfo extends AbstractModel{
     private ErrorInfo [] ErrorInfo;
 
     /**
+    * 标签
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Tags")
+    @Expose
+    private TagItem [] Tags;
+
+    /**
      * Get 数据迁移任务ID 
      * @return JobId 数据迁移任务ID
      */
@@ -390,6 +398,26 @@ public class MigrateJobInfo extends AbstractModel{
         this.ErrorInfo = ErrorInfo;
     }
 
+    /**
+     * Get 标签
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Tags 标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public TagItem [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 标签
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Tags 标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTags(TagItem [] Tags) {
+        this.Tags = Tags;
+    }
+
     public MigrateJobInfo() {
     }
 
@@ -449,6 +477,12 @@ public class MigrateJobInfo extends AbstractModel{
                 this.ErrorInfo[i] = new ErrorInfo(source.ErrorInfo[i]);
             }
         }
+        if (source.Tags != null) {
+            this.Tags = new TagItem[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new TagItem(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -472,6 +506,7 @@ public class MigrateJobInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamObj(map, prefix + "Detail.", this.Detail);
         this.setParamArrayObj(map, prefix + "ErrorInfo.", this.ErrorInfo);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

@@ -539,6 +539,26 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
+     *直接绑定设备和家庭
+     * @param req DirectBindDeviceInFamilyRequest
+     * @return DirectBindDeviceInFamilyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DirectBindDeviceInFamilyResponse DirectBindDeviceInFamily(DirectBindDeviceInFamilyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DirectBindDeviceInFamilyResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DirectBindDeviceInFamilyResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DirectBindDeviceInFamily");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *禁用规则
      * @param req DisableTopicRuleRequest
      * @return DisableTopicRuleResponse

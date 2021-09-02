@@ -46,7 +46,7 @@ public class QueryChainMakerBlockTransactionResponse extends AbstractModel{
     private Long TxCount;
 
     /**
-    * 区块时间戳
+    * 区块时间戳，单位是秒
     */
     @SerializedName("BlockTimestamp")
     @Expose
@@ -116,16 +116,16 @@ public class QueryChainMakerBlockTransactionResponse extends AbstractModel{
     }
 
     /**
-     * Get 区块时间戳 
-     * @return BlockTimestamp 区块时间戳
+     * Get 区块时间戳，单位是秒 
+     * @return BlockTimestamp 区块时间戳，单位是秒
      */
     public Long getBlockTimestamp() {
         return this.BlockTimestamp;
     }
 
     /**
-     * Set 区块时间戳
-     * @param BlockTimestamp 区块时间戳
+     * Set 区块时间戳，单位是秒
+     * @param BlockTimestamp 区块时间戳，单位是秒
      */
     public void setBlockTimestamp(Long BlockTimestamp) {
         this.BlockTimestamp = BlockTimestamp;

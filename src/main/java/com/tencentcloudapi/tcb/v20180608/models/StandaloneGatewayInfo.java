@@ -93,6 +93,20 @@ public class StandaloneGatewayInfo extends AbstractModel{
     private BackendServiceInfo ServiceInfo;
 
     /**
+    * 公网CLBIP
+    */
+    @SerializedName("PublicClbIp")
+    @Expose
+    private String PublicClbIp;
+
+    /**
+    * 内网CLBIP
+    */
+    @SerializedName("InternalClbIp")
+    @Expose
+    private String InternalClbIp;
+
+    /**
      * Get 独立网关名称 
      * @return GatewayName 独立网关名称
      */
@@ -252,6 +266,38 @@ public class StandaloneGatewayInfo extends AbstractModel{
         this.ServiceInfo = ServiceInfo;
     }
 
+    /**
+     * Get 公网CLBIP 
+     * @return PublicClbIp 公网CLBIP
+     */
+    public String getPublicClbIp() {
+        return this.PublicClbIp;
+    }
+
+    /**
+     * Set 公网CLBIP
+     * @param PublicClbIp 公网CLBIP
+     */
+    public void setPublicClbIp(String PublicClbIp) {
+        this.PublicClbIp = PublicClbIp;
+    }
+
+    /**
+     * Get 内网CLBIP 
+     * @return InternalClbIp 内网CLBIP
+     */
+    public String getInternalClbIp() {
+        return this.InternalClbIp;
+    }
+
+    /**
+     * Set 内网CLBIP
+     * @param InternalClbIp 内网CLBIP
+     */
+    public void setInternalClbIp(String InternalClbIp) {
+        this.InternalClbIp = InternalClbIp;
+    }
+
     public StandaloneGatewayInfo() {
     }
 
@@ -293,6 +339,12 @@ public class StandaloneGatewayInfo extends AbstractModel{
         if (source.ServiceInfo != null) {
             this.ServiceInfo = new BackendServiceInfo(source.ServiceInfo);
         }
+        if (source.PublicClbIp != null) {
+            this.PublicClbIp = new String(source.PublicClbIp);
+        }
+        if (source.InternalClbIp != null) {
+            this.InternalClbIp = new String(source.InternalClbIp);
+        }
     }
 
 
@@ -310,6 +362,8 @@ public class StandaloneGatewayInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "GatewayDesc", this.GatewayDesc);
         this.setParamSimple(map, prefix + "GateWayStatus", this.GateWayStatus);
         this.setParamObj(map, prefix + "ServiceInfo.", this.ServiceInfo);
+        this.setParamSimple(map, prefix + "PublicClbIp", this.PublicClbIp);
+        this.setParamSimple(map, prefix + "InternalClbIp", this.InternalClbIp);
 
     }
 }

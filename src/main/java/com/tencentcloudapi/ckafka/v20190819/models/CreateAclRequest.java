@@ -72,6 +72,13 @@ public class CreateAclRequest extends AbstractModel{
     private String Principal;
 
     /**
+    * 资源名称列表,Json字符串格式。ResourceName和resourceNameList只能指定其中一个。
+    */
+    @SerializedName("ResourceNameList")
+    @Expose
+    private String ResourceNameList;
+
+    /**
      * Get 实例id信息 
      * @return InstanceId 实例id信息
      */
@@ -183,6 +190,22 @@ public class CreateAclRequest extends AbstractModel{
         this.Principal = Principal;
     }
 
+    /**
+     * Get 资源名称列表,Json字符串格式。ResourceName和resourceNameList只能指定其中一个。 
+     * @return ResourceNameList 资源名称列表,Json字符串格式。ResourceName和resourceNameList只能指定其中一个。
+     */
+    public String getResourceNameList() {
+        return this.ResourceNameList;
+    }
+
+    /**
+     * Set 资源名称列表,Json字符串格式。ResourceName和resourceNameList只能指定其中一个。
+     * @param ResourceNameList 资源名称列表,Json字符串格式。ResourceName和resourceNameList只能指定其中一个。
+     */
+    public void setResourceNameList(String ResourceNameList) {
+        this.ResourceNameList = ResourceNameList;
+    }
+
     public CreateAclRequest() {
     }
 
@@ -212,6 +235,9 @@ public class CreateAclRequest extends AbstractModel{
         if (source.Principal != null) {
             this.Principal = new String(source.Principal);
         }
+        if (source.ResourceNameList != null) {
+            this.ResourceNameList = new String(source.ResourceNameList);
+        }
     }
 
 
@@ -226,6 +252,7 @@ public class CreateAclRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ResourceName", this.ResourceName);
         this.setParamSimple(map, prefix + "Host", this.Host);
         this.setParamSimple(map, prefix + "Principal", this.Principal);
+        this.setParamSimple(map, prefix + "ResourceNameList", this.ResourceNameList);
 
     }
 }

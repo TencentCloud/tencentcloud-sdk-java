@@ -37,6 +37,13 @@ public class DescribeClustersRequest extends AbstractModel{
     private Long Limit;
 
     /**
+    * 集群ID列表过滤
+    */
+    @SerializedName("ClusterIdList")
+    @Expose
+    private String [] ClusterIdList;
+
+    /**
      * Get 起始下标，不填默认为0。 
      * @return Offset 起始下标，不填默认为0。
      */
@@ -68,6 +75,22 @@ public class DescribeClustersRequest extends AbstractModel{
         this.Limit = Limit;
     }
 
+    /**
+     * Get 集群ID列表过滤 
+     * @return ClusterIdList 集群ID列表过滤
+     */
+    public String [] getClusterIdList() {
+        return this.ClusterIdList;
+    }
+
+    /**
+     * Set 集群ID列表过滤
+     * @param ClusterIdList 集群ID列表过滤
+     */
+    public void setClusterIdList(String [] ClusterIdList) {
+        this.ClusterIdList = ClusterIdList;
+    }
+
     public DescribeClustersRequest() {
     }
 
@@ -82,6 +105,12 @@ public class DescribeClustersRequest extends AbstractModel{
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
         }
+        if (source.ClusterIdList != null) {
+            this.ClusterIdList = new String[source.ClusterIdList.length];
+            for (int i = 0; i < source.ClusterIdList.length; i++) {
+                this.ClusterIdList[i] = new String(source.ClusterIdList[i]);
+            }
+        }
     }
 
 
@@ -91,6 +120,7 @@ public class DescribeClustersRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamArraySimple(map, prefix + "ClusterIdList.", this.ClusterIdList);
 
     }
 }

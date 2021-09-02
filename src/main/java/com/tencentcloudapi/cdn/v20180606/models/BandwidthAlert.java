@@ -50,12 +50,38 @@ RETURN_404：全部请求返回 404
     private String CounterMeasure;
 
     /**
-    * 上次触发带宽封顶阈值的时间
+    * 境内区域上次触发带宽封顶阈值的时间
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LastTriggerTime")
     @Expose
     private String LastTriggerTime;
+
+    /**
+    * 带宽封顶提醒开关
+on：开启
+off：关闭
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AlertSwitch")
+    @Expose
+    private String AlertSwitch;
+
+    /**
+    * 带宽封顶阈值提醒百分比
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AlertPercentage")
+    @Expose
+    private Long AlertPercentage;
+
+    /**
+    * 海外区域上次触发带宽封顶阈值的时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LastTriggerTimeOverseas")
+    @Expose
+    private String LastTriggerTimeOverseas;
 
     /**
      * Get 带宽封顶配置开关
@@ -130,9 +156,9 @@ RETURN_404：全部请求返回 404
     }
 
     /**
-     * Get 上次触发带宽封顶阈值的时间
+     * Get 境内区域上次触发带宽封顶阈值的时间
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LastTriggerTime 上次触发带宽封顶阈值的时间
+     * @return LastTriggerTime 境内区域上次触发带宽封顶阈值的时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLastTriggerTime() {
@@ -140,13 +166,81 @@ RETURN_404：全部请求返回 404
     }
 
     /**
-     * Set 上次触发带宽封顶阈值的时间
+     * Set 境内区域上次触发带宽封顶阈值的时间
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LastTriggerTime 上次触发带宽封顶阈值的时间
+     * @param LastTriggerTime 境内区域上次触发带宽封顶阈值的时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLastTriggerTime(String LastTriggerTime) {
         this.LastTriggerTime = LastTriggerTime;
+    }
+
+    /**
+     * Get 带宽封顶提醒开关
+on：开启
+off：关闭
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AlertSwitch 带宽封顶提醒开关
+on：开启
+off：关闭
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAlertSwitch() {
+        return this.AlertSwitch;
+    }
+
+    /**
+     * Set 带宽封顶提醒开关
+on：开启
+off：关闭
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AlertSwitch 带宽封顶提醒开关
+on：开启
+off：关闭
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAlertSwitch(String AlertSwitch) {
+        this.AlertSwitch = AlertSwitch;
+    }
+
+    /**
+     * Get 带宽封顶阈值提醒百分比
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AlertPercentage 带宽封顶阈值提醒百分比
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getAlertPercentage() {
+        return this.AlertPercentage;
+    }
+
+    /**
+     * Set 带宽封顶阈值提醒百分比
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AlertPercentage 带宽封顶阈值提醒百分比
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAlertPercentage(Long AlertPercentage) {
+        this.AlertPercentage = AlertPercentage;
+    }
+
+    /**
+     * Get 海外区域上次触发带宽封顶阈值的时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LastTriggerTimeOverseas 海外区域上次触发带宽封顶阈值的时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getLastTriggerTimeOverseas() {
+        return this.LastTriggerTimeOverseas;
+    }
+
+    /**
+     * Set 海外区域上次触发带宽封顶阈值的时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LastTriggerTimeOverseas 海外区域上次触发带宽封顶阈值的时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLastTriggerTimeOverseas(String LastTriggerTimeOverseas) {
+        this.LastTriggerTimeOverseas = LastTriggerTimeOverseas;
     }
 
     public BandwidthAlert() {
@@ -169,6 +263,15 @@ RETURN_404：全部请求返回 404
         if (source.LastTriggerTime != null) {
             this.LastTriggerTime = new String(source.LastTriggerTime);
         }
+        if (source.AlertSwitch != null) {
+            this.AlertSwitch = new String(source.AlertSwitch);
+        }
+        if (source.AlertPercentage != null) {
+            this.AlertPercentage = new Long(source.AlertPercentage);
+        }
+        if (source.LastTriggerTimeOverseas != null) {
+            this.LastTriggerTimeOverseas = new String(source.LastTriggerTimeOverseas);
+        }
     }
 
 
@@ -180,6 +283,9 @@ RETURN_404：全部请求返回 404
         this.setParamSimple(map, prefix + "BpsThreshold", this.BpsThreshold);
         this.setParamSimple(map, prefix + "CounterMeasure", this.CounterMeasure);
         this.setParamSimple(map, prefix + "LastTriggerTime", this.LastTriggerTime);
+        this.setParamSimple(map, prefix + "AlertSwitch", this.AlertSwitch);
+        this.setParamSimple(map, prefix + "AlertPercentage", this.AlertPercentage);
+        this.setParamSimple(map, prefix + "LastTriggerTimeOverseas", this.LastTriggerTimeOverseas);
 
     }
 }

@@ -23,18 +23,18 @@ import java.util.HashMap;
 public class DstInfo extends AbstractModel{
 
     /**
-    * 目标实例ID，如cdb-jd92ijd8
-    */
-    @SerializedName("InstanceId")
-    @Expose
-    private String InstanceId;
-
-    /**
     * 目标实例地域，如ap-guangzhou
     */
     @SerializedName("Region")
     @Expose
     private String Region;
+
+    /**
+    * 目标实例ID，如cdb-jd92ijd8
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
 
     /**
     * 目标实例vip。已废弃，无需填写
@@ -72,22 +72,6 @@ public class DstInfo extends AbstractModel{
     private String Password;
 
     /**
-     * Get 目标实例ID，如cdb-jd92ijd8 
-     * @return InstanceId 目标实例ID，如cdb-jd92ijd8
-     */
-    public String getInstanceId() {
-        return this.InstanceId;
-    }
-
-    /**
-     * Set 目标实例ID，如cdb-jd92ijd8
-     * @param InstanceId 目标实例ID，如cdb-jd92ijd8
-     */
-    public void setInstanceId(String InstanceId) {
-        this.InstanceId = InstanceId;
-    }
-
-    /**
      * Get 目标实例地域，如ap-guangzhou 
      * @return Region 目标实例地域，如ap-guangzhou
      */
@@ -101,6 +85,22 @@ public class DstInfo extends AbstractModel{
      */
     public void setRegion(String Region) {
         this.Region = Region;
+    }
+
+    /**
+     * Get 目标实例ID，如cdb-jd92ijd8 
+     * @return InstanceId 目标实例ID，如cdb-jd92ijd8
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set 目标实例ID，如cdb-jd92ijd8
+     * @param InstanceId 目标实例ID，如cdb-jd92ijd8
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
     }
 
     /**
@@ -191,11 +191,11 @@ public class DstInfo extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DstInfo(DstInfo source) {
-        if (source.InstanceId != null) {
-            this.InstanceId = new String(source.InstanceId);
-        }
         if (source.Region != null) {
             this.Region = new String(source.Region);
+        }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
         }
         if (source.Ip != null) {
             this.Ip = new String(source.Ip);
@@ -219,8 +219,8 @@ public class DstInfo extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "Region", this.Region);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "Ip", this.Ip);
         this.setParamSimple(map, prefix + "Port", this.Port);
         this.setParamSimple(map, prefix + "ReadOnly", this.ReadOnly);

@@ -51,6 +51,13 @@ public class RenewDBInstanceRequest extends AbstractModel{
     private String [] VoucherIds;
 
     /**
+    * 续费标记 0:正常续费 1:自动续费：只用于按量计费转包年包月时有效。
+    */
+    @SerializedName("AutoRenewFlag")
+    @Expose
+    private Long AutoRenewFlag;
+
+    /**
      * Get 实例ID，形如mssql-j8kv137v 
      * @return InstanceId 实例ID，形如mssql-j8kv137v
      */
@@ -114,6 +121,22 @@ public class RenewDBInstanceRequest extends AbstractModel{
         this.VoucherIds = VoucherIds;
     }
 
+    /**
+     * Get 续费标记 0:正常续费 1:自动续费：只用于按量计费转包年包月时有效。 
+     * @return AutoRenewFlag 续费标记 0:正常续费 1:自动续费：只用于按量计费转包年包月时有效。
+     */
+    public Long getAutoRenewFlag() {
+        return this.AutoRenewFlag;
+    }
+
+    /**
+     * Set 续费标记 0:正常续费 1:自动续费：只用于按量计费转包年包月时有效。
+     * @param AutoRenewFlag 续费标记 0:正常续费 1:自动续费：只用于按量计费转包年包月时有效。
+     */
+    public void setAutoRenewFlag(Long AutoRenewFlag) {
+        this.AutoRenewFlag = AutoRenewFlag;
+    }
+
     public RenewDBInstanceRequest() {
     }
 
@@ -137,6 +160,9 @@ public class RenewDBInstanceRequest extends AbstractModel{
                 this.VoucherIds[i] = new String(source.VoucherIds[i]);
             }
         }
+        if (source.AutoRenewFlag != null) {
+            this.AutoRenewFlag = new Long(source.AutoRenewFlag);
+        }
     }
 
 
@@ -148,6 +174,7 @@ public class RenewDBInstanceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Period", this.Period);
         this.setParamSimple(map, prefix + "AutoVoucher", this.AutoVoucher);
         this.setParamArraySimple(map, prefix + "VoucherIds.", this.VoucherIds);
+        this.setParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
 
     }
 }
