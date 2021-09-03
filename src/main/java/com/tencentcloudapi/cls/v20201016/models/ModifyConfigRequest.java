@@ -72,6 +72,13 @@ public class ModifyConfigRequest extends AbstractModel{
     private String Output;
 
     /**
+    * 用户自定义解析字符串，Json格式序列化的字符串
+    */
+    @SerializedName("UserDefineRule")
+    @Expose
+    private String UserDefineRule;
+
+    /**
      * Get 采集规则配置ID 
      * @return ConfigId 采集规则配置ID
      */
@@ -183,6 +190,22 @@ public class ModifyConfigRequest extends AbstractModel{
         this.Output = Output;
     }
 
+    /**
+     * Get 用户自定义解析字符串，Json格式序列化的字符串 
+     * @return UserDefineRule 用户自定义解析字符串，Json格式序列化的字符串
+     */
+    public String getUserDefineRule() {
+        return this.UserDefineRule;
+    }
+
+    /**
+     * Set 用户自定义解析字符串，Json格式序列化的字符串
+     * @param UserDefineRule 用户自定义解析字符串，Json格式序列化的字符串
+     */
+    public void setUserDefineRule(String UserDefineRule) {
+        this.UserDefineRule = UserDefineRule;
+    }
+
     public ModifyConfigRequest() {
     }
 
@@ -215,6 +238,9 @@ public class ModifyConfigRequest extends AbstractModel{
         if (source.Output != null) {
             this.Output = new String(source.Output);
         }
+        if (source.UserDefineRule != null) {
+            this.UserDefineRule = new String(source.UserDefineRule);
+        }
     }
 
 
@@ -229,6 +255,7 @@ public class ModifyConfigRequest extends AbstractModel{
         this.setParamObj(map, prefix + "ExtractRule.", this.ExtractRule);
         this.setParamArrayObj(map, prefix + "ExcludePaths.", this.ExcludePaths);
         this.setParamSimple(map, prefix + "Output", this.Output);
+        this.setParamSimple(map, prefix + "UserDefineRule", this.UserDefineRule);
 
     }
 }

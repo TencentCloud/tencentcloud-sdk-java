@@ -92,6 +92,14 @@ public class ConfigInfo extends AbstractModel{
     private String CreateTime;
 
     /**
+    * 用户自定义解析字符串
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UserDefineRule")
+    @Expose
+    private String UserDefineRule;
+
+    /**
      * Get 采集规则配置ID 
      * @return ConfigId 采集规则配置ID
      */
@@ -259,6 +267,26 @@ public class ConfigInfo extends AbstractModel{
         this.CreateTime = CreateTime;
     }
 
+    /**
+     * Get 用户自定义解析字符串
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UserDefineRule 用户自定义解析字符串
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getUserDefineRule() {
+        return this.UserDefineRule;
+    }
+
+    /**
+     * Set 用户自定义解析字符串
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UserDefineRule 用户自定义解析字符串
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUserDefineRule(String UserDefineRule) {
+        this.UserDefineRule = UserDefineRule;
+    }
+
     public ConfigInfo() {
     }
 
@@ -297,6 +325,9 @@ public class ConfigInfo extends AbstractModel{
         if (source.CreateTime != null) {
             this.CreateTime = new String(source.CreateTime);
         }
+        if (source.UserDefineRule != null) {
+            this.UserDefineRule = new String(source.UserDefineRule);
+        }
     }
 
 
@@ -313,6 +344,7 @@ public class ConfigInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Output", this.Output);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "UserDefineRule", this.UserDefineRule);
 
     }
 }

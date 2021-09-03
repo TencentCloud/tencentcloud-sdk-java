@@ -54,6 +54,9 @@ public enum CynosdbErrorCode {
     // 系统内部错误。
      INTERNALERROR_SYSTEMERROR("InternalError.SystemError"),
      
+    // 未知的内部错误。
+     INTERNALERROR_UNKNOWNERROR("InternalError.UnknownError"),
+     
     // 参数错误。
      INVALIDPARAMETER("InvalidParameter"),
      

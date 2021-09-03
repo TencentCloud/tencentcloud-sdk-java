@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreatePluginRequest extends AbstractModel{
 
     /**
-    * 用户自定义的插件名称。最长50个字符，支持 a-z,A-Z,0-9,_, 必须字母开头，字母或者数字结尾。
+    * 用户自定义的插件名称。最长50个字符，最短2个字符，支持 a-z,A-Z,0-9,_, 必须字母开头，字母或者数字结尾。
     */
     @SerializedName("PluginName")
     @Expose
@@ -51,16 +51,16 @@ public class CreatePluginRequest extends AbstractModel{
     private String Description;
 
     /**
-     * Get 用户自定义的插件名称。最长50个字符，支持 a-z,A-Z,0-9,_, 必须字母开头，字母或者数字结尾。 
-     * @return PluginName 用户自定义的插件名称。最长50个字符，支持 a-z,A-Z,0-9,_, 必须字母开头，字母或者数字结尾。
+     * Get 用户自定义的插件名称。最长50个字符，最短2个字符，支持 a-z,A-Z,0-9,_, 必须字母开头，字母或者数字结尾。 
+     * @return PluginName 用户自定义的插件名称。最长50个字符，最短2个字符，支持 a-z,A-Z,0-9,_, 必须字母开头，字母或者数字结尾。
      */
     public String getPluginName() {
         return this.PluginName;
     }
 
     /**
-     * Set 用户自定义的插件名称。最长50个字符，支持 a-z,A-Z,0-9,_, 必须字母开头，字母或者数字结尾。
-     * @param PluginName 用户自定义的插件名称。最长50个字符，支持 a-z,A-Z,0-9,_, 必须字母开头，字母或者数字结尾。
+     * Set 用户自定义的插件名称。最长50个字符，最短2个字符，支持 a-z,A-Z,0-9,_, 必须字母开头，字母或者数字结尾。
+     * @param PluginName 用户自定义的插件名称。最长50个字符，最短2个字符，支持 a-z,A-Z,0-9,_, 必须字母开头，字母或者数字结尾。
      */
     public void setPluginName(String PluginName) {
         this.PluginName = PluginName;

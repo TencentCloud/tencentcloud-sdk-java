@@ -305,20 +305,19 @@ pause
     private String ServerlessStatus;
 
     /**
-    * 存储付费类型
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("StoragePayMode")
-    @Expose
-    private Long StoragePayMode;
-
-    /**
     * 预付费存储Id
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StorageId")
     @Expose
     private String StorageId;
+
+    /**
+    * 存储付费类型
+    */
+    @SerializedName("StoragePayMode")
+    @Expose
+    private Long StoragePayMode;
 
     /**
      * Get 用户Uin 
@@ -969,26 +968,6 @@ pause
     }
 
     /**
-     * Get 存储付费类型
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return StoragePayMode 存储付费类型
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public Long getStoragePayMode() {
-        return this.StoragePayMode;
-    }
-
-    /**
-     * Set 存储付费类型
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param StoragePayMode 存储付费类型
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setStoragePayMode(Long StoragePayMode) {
-        this.StoragePayMode = StoragePayMode;
-    }
-
-    /**
      * Get 预付费存储Id
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return StorageId 预付费存储Id
@@ -1006,6 +985,22 @@ pause
      */
     public void setStorageId(String StorageId) {
         this.StorageId = StorageId;
+    }
+
+    /**
+     * Get 存储付费类型 
+     * @return StoragePayMode 存储付费类型
+     */
+    public Long getStoragePayMode() {
+        return this.StoragePayMode;
+    }
+
+    /**
+     * Set 存储付费类型
+     * @param StoragePayMode 存储付费类型
+     */
+    public void setStoragePayMode(Long StoragePayMode) {
+        this.StoragePayMode = StoragePayMode;
     }
 
     public CynosdbInstance() {
@@ -1136,11 +1131,11 @@ pause
         if (source.ServerlessStatus != null) {
             this.ServerlessStatus = new String(source.ServerlessStatus);
         }
-        if (source.StoragePayMode != null) {
-            this.StoragePayMode = new Long(source.StoragePayMode);
-        }
         if (source.StorageId != null) {
             this.StorageId = new String(source.StorageId);
+        }
+        if (source.StoragePayMode != null) {
+            this.StoragePayMode = new Long(source.StoragePayMode);
         }
     }
 
@@ -1189,8 +1184,8 @@ pause
         this.setParamSimple(map, prefix + "MinCpu", this.MinCpu);
         this.setParamSimple(map, prefix + "MaxCpu", this.MaxCpu);
         this.setParamSimple(map, prefix + "ServerlessStatus", this.ServerlessStatus);
-        this.setParamSimple(map, prefix + "StoragePayMode", this.StoragePayMode);
         this.setParamSimple(map, prefix + "StorageId", this.StorageId);
+        this.setParamSimple(map, prefix + "StoragePayMode", this.StoragePayMode);
 
     }
 }

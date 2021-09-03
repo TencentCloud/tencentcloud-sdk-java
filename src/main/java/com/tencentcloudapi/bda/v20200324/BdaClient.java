@@ -281,6 +281,26 @@ public class BdaClient extends AbstractClient{
     }
 
     /**
+     *获取人体库汇总信息。
+     * @param req GetSummaryInfoRequest
+     * @return GetSummaryInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetSummaryInfoResponse GetSummaryInfo(GetSummaryInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetSummaryInfoResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetSummaryInfoResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "GetSummaryInfo");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *修改人体库名称、备注。
      * @param req ModifyGroupRequest
      * @return ModifyGroupResponse

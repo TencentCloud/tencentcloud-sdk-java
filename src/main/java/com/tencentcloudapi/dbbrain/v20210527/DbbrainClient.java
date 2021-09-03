@@ -579,6 +579,26 @@ public class DbbrainClient extends AbstractClient{
     }
 
     /**
+     *根据会话ID中断当前会话，该接口分为两次提交：第一次为预提交阶段，Stage为"Prepare"，得到的返回值包含SqlExecId；第二次为确认提交， Stage为"Commit"， 将SqlExecId的值作为参数传入，最终终止会话进程。
+     * @param req KillMySqlThreadsRequest
+     * @return KillMySqlThreadsResponse
+     * @throws TencentCloudSDKException
+     */
+    public KillMySqlThreadsResponse KillMySqlThreads(KillMySqlThreadsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<KillMySqlThreadsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<KillMySqlThreadsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "KillMySqlThreads");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *修改实例巡检开关。
      * @param req ModifyDiagDBInstanceConfRequest
      * @return ModifyDiagDBInstanceConfResponse

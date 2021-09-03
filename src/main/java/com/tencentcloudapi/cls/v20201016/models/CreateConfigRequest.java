@@ -65,6 +65,13 @@ public class CreateConfigRequest extends AbstractModel{
     private ExcludePathInfo [] ExcludePaths;
 
     /**
+    * 用户自定义采集规则，Json格式序列化的字符串
+    */
+    @SerializedName("UserDefineRule")
+    @Expose
+    private String UserDefineRule;
+
+    /**
      * Get 采集配置名称 
      * @return Name 采集配置名称
      */
@@ -160,6 +167,22 @@ public class CreateConfigRequest extends AbstractModel{
         this.ExcludePaths = ExcludePaths;
     }
 
+    /**
+     * Get 用户自定义采集规则，Json格式序列化的字符串 
+     * @return UserDefineRule 用户自定义采集规则，Json格式序列化的字符串
+     */
+    public String getUserDefineRule() {
+        return this.UserDefineRule;
+    }
+
+    /**
+     * Set 用户自定义采集规则，Json格式序列化的字符串
+     * @param UserDefineRule 用户自定义采集规则，Json格式序列化的字符串
+     */
+    public void setUserDefineRule(String UserDefineRule) {
+        this.UserDefineRule = UserDefineRule;
+    }
+
     public CreateConfigRequest() {
     }
 
@@ -189,6 +212,9 @@ public class CreateConfigRequest extends AbstractModel{
                 this.ExcludePaths[i] = new ExcludePathInfo(source.ExcludePaths[i]);
             }
         }
+        if (source.UserDefineRule != null) {
+            this.UserDefineRule = new String(source.UserDefineRule);
+        }
     }
 
 
@@ -202,6 +228,7 @@ public class CreateConfigRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "LogType", this.LogType);
         this.setParamObj(map, prefix + "ExtractRule.", this.ExtractRule);
         this.setParamArrayObj(map, prefix + "ExcludePaths.", this.ExcludePaths);
+        this.setParamSimple(map, prefix + "UserDefineRule", this.UserDefineRule);
 
     }
 }
