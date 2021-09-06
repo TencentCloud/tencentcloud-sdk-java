@@ -37,6 +37,13 @@ public class ModifyPrivateZoneVpcResponse extends AbstractModel{
     private VpcInfo [] VpcSet;
 
     /**
+    * 私有域账号关联的全部VPC列表
+    */
+    @SerializedName("AccountVpcSet")
+    @Expose
+    private AccountVpcInfoOutput [] AccountVpcSet;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -76,6 +83,22 @@ public class ModifyPrivateZoneVpcResponse extends AbstractModel{
     }
 
     /**
+     * Get 私有域账号关联的全部VPC列表 
+     * @return AccountVpcSet 私有域账号关联的全部VPC列表
+     */
+    public AccountVpcInfoOutput [] getAccountVpcSet() {
+        return this.AccountVpcSet;
+    }
+
+    /**
+     * Set 私有域账号关联的全部VPC列表
+     * @param AccountVpcSet 私有域账号关联的全部VPC列表
+     */
+    public void setAccountVpcSet(AccountVpcInfoOutput [] AccountVpcSet) {
+        this.AccountVpcSet = AccountVpcSet;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -108,6 +131,12 @@ public class ModifyPrivateZoneVpcResponse extends AbstractModel{
                 this.VpcSet[i] = new VpcInfo(source.VpcSet[i]);
             }
         }
+        if (source.AccountVpcSet != null) {
+            this.AccountVpcSet = new AccountVpcInfoOutput[source.AccountVpcSet.length];
+            for (int i = 0; i < source.AccountVpcSet.length; i++) {
+                this.AccountVpcSet[i] = new AccountVpcInfoOutput(source.AccountVpcSet[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -120,6 +149,7 @@ public class ModifyPrivateZoneVpcResponse extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
         this.setParamArrayObj(map, prefix + "VpcSet.", this.VpcSet);
+        this.setParamArrayObj(map, prefix + "AccountVpcSet.", this.AccountVpcSet);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

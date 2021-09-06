@@ -65,6 +65,13 @@ public class CreatePrivateZoneRequest extends AbstractModel{
     private VpcInfo [] Vpcs;
 
     /**
+    * 创建私有域同时绑定关联账号的VPC
+    */
+    @SerializedName("AccountVpcSet")
+    @Expose
+    private AccountVpcInfo [] AccountVpcSet;
+
+    /**
      * Get 域名，格式必须是标准的TLD 
      * @return Domain 域名，格式必须是标准的TLD
      */
@@ -160,6 +167,22 @@ public class CreatePrivateZoneRequest extends AbstractModel{
         this.Vpcs = Vpcs;
     }
 
+    /**
+     * Get 创建私有域同时绑定关联账号的VPC 
+     * @return AccountVpcSet 创建私有域同时绑定关联账号的VPC
+     */
+    public AccountVpcInfo [] getAccountVpcSet() {
+        return this.AccountVpcSet;
+    }
+
+    /**
+     * Set 创建私有域同时绑定关联账号的VPC
+     * @param AccountVpcSet 创建私有域同时绑定关联账号的VPC
+     */
+    public void setAccountVpcSet(AccountVpcInfo [] AccountVpcSet) {
+        this.AccountVpcSet = AccountVpcSet;
+    }
+
     public CreatePrivateZoneRequest() {
     }
 
@@ -195,6 +218,12 @@ public class CreatePrivateZoneRequest extends AbstractModel{
                 this.Vpcs[i] = new VpcInfo(source.Vpcs[i]);
             }
         }
+        if (source.AccountVpcSet != null) {
+            this.AccountVpcSet = new AccountVpcInfo[source.AccountVpcSet.length];
+            for (int i = 0; i < source.AccountVpcSet.length; i++) {
+                this.AccountVpcSet[i] = new AccountVpcInfo(source.AccountVpcSet[i]);
+            }
+        }
     }
 
 
@@ -208,6 +237,7 @@ public class CreatePrivateZoneRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamSimple(map, prefix + "DnsForwardStatus", this.DnsForwardStatus);
         this.setParamArrayObj(map, prefix + "Vpcs.", this.Vpcs);
+        this.setParamArrayObj(map, prefix + "AccountVpcSet.", this.AccountVpcSet);
 
     }
 }

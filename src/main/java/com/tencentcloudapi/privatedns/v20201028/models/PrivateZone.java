@@ -101,6 +101,14 @@ public class PrivateZone extends AbstractModel{
     private TagInfo [] Tags;
 
     /**
+    * 绑定的关联账号的vpc列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AccountVpcSet")
+    @Expose
+    private AccountVpcInfoOutput [] AccountVpcSet;
+
+    /**
      * Get 私有域id: zone-xxxxxxxx 
      * @return ZoneId 私有域id: zone-xxxxxxxx
      */
@@ -280,6 +288,26 @@ public class PrivateZone extends AbstractModel{
         this.Tags = Tags;
     }
 
+    /**
+     * Get 绑定的关联账号的vpc列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AccountVpcSet 绑定的关联账号的vpc列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public AccountVpcInfoOutput [] getAccountVpcSet() {
+        return this.AccountVpcSet;
+    }
+
+    /**
+     * Set 绑定的关联账号的vpc列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AccountVpcSet 绑定的关联账号的vpc列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAccountVpcSet(AccountVpcInfoOutput [] AccountVpcSet) {
+        this.AccountVpcSet = AccountVpcSet;
+    }
+
     public PrivateZone() {
     }
 
@@ -327,6 +355,12 @@ public class PrivateZone extends AbstractModel{
                 this.Tags[i] = new TagInfo(source.Tags[i]);
             }
         }
+        if (source.AccountVpcSet != null) {
+            this.AccountVpcSet = new AccountVpcInfoOutput[source.AccountVpcSet.length];
+            for (int i = 0; i < source.AccountVpcSet.length; i++) {
+                this.AccountVpcSet[i] = new AccountVpcInfoOutput(source.AccountVpcSet[i]);
+            }
+        }
     }
 
 
@@ -345,6 +379,7 @@ public class PrivateZone extends AbstractModel{
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "DnsForwardStatus", this.DnsForwardStatus);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamArrayObj(map, prefix + "AccountVpcSet.", this.AccountVpcSet);
 
     }
 }

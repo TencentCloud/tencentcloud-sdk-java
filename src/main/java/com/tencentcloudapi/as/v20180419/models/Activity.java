@@ -123,6 +123,13 @@ public class Activity extends AbstractModel{
     private LifecycleActionResultInfo [] LifecycleActionResultSet;
 
     /**
+    * 伸缩活动状态详细描述。
+    */
+    @SerializedName("DetailedStatusMessageSet")
+    @Expose
+    private DetailedStatusMessage [] DetailedStatusMessageSet;
+
+    /**
      * Get 伸缩组ID。 
      * @return AutoScalingGroupId 伸缩组ID。
      */
@@ -366,6 +373,22 @@ public class Activity extends AbstractModel{
         this.LifecycleActionResultSet = LifecycleActionResultSet;
     }
 
+    /**
+     * Get 伸缩活动状态详细描述。 
+     * @return DetailedStatusMessageSet 伸缩活动状态详细描述。
+     */
+    public DetailedStatusMessage [] getDetailedStatusMessageSet() {
+        return this.DetailedStatusMessageSet;
+    }
+
+    /**
+     * Set 伸缩活动状态详细描述。
+     * @param DetailedStatusMessageSet 伸缩活动状态详细描述。
+     */
+    public void setDetailedStatusMessageSet(DetailedStatusMessage [] DetailedStatusMessageSet) {
+        this.DetailedStatusMessageSet = DetailedStatusMessageSet;
+    }
+
     public Activity() {
     }
 
@@ -419,6 +442,12 @@ public class Activity extends AbstractModel{
                 this.LifecycleActionResultSet[i] = new LifecycleActionResultInfo(source.LifecycleActionResultSet[i]);
             }
         }
+        if (source.DetailedStatusMessageSet != null) {
+            this.DetailedStatusMessageSet = new DetailedStatusMessage[source.DetailedStatusMessageSet.length];
+            for (int i = 0; i < source.DetailedStatusMessageSet.length; i++) {
+                this.DetailedStatusMessageSet[i] = new DetailedStatusMessage(source.DetailedStatusMessageSet[i]);
+            }
+        }
     }
 
 
@@ -439,6 +468,7 @@ public class Activity extends AbstractModel{
         this.setParamArrayObj(map, prefix + "ActivityRelatedInstanceSet.", this.ActivityRelatedInstanceSet);
         this.setParamSimple(map, prefix + "StatusMessageSimplified", this.StatusMessageSimplified);
         this.setParamArrayObj(map, prefix + "LifecycleActionResultSet.", this.LifecycleActionResultSet);
+        this.setParamArrayObj(map, prefix + "DetailedStatusMessageSet.", this.DetailedStatusMessageSet);
 
     }
 }

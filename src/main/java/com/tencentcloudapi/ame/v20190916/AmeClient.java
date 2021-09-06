@@ -179,7 +179,7 @@ public class AmeClient extends AbstractClient{
     }
 
     /**
-     *获取即时广播曲库推荐歌单列表。
+     *获取直播互动曲库推荐歌单列表。
      * @param req DescribeKTVPlaylistsRequest
      * @return DescribeKTVPlaylistsResponse
      * @throws TencentCloudSDKException
@@ -291,6 +291,26 @@ public class AmeClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribePackagesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribePackages");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *根据购买曲库包用户可查询已回退的歌曲信息
+     * @param req DescribePkgOfflineMusicRequest
+     * @return DescribePkgOfflineMusicResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePkgOfflineMusicResponse DescribePkgOfflineMusic(DescribePkgOfflineMusicRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribePkgOfflineMusicResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribePkgOfflineMusicResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribePkgOfflineMusic");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

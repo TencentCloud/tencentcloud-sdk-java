@@ -58,6 +58,13 @@ public class DescribeActivityRecordRequest extends AbstractModel{
     private Long [] Statuses;
 
     /**
+    * 根据是否软删除进行过滤，[0]未删除, [1] 删除，不传不过滤
+    */
+    @SerializedName("IsDeletedList")
+    @Expose
+    private Long [] IsDeletedList;
+
+    /**
      * Get 渠道加密token 
      * @return ChannelToken 渠道加密token
      */
@@ -137,6 +144,22 @@ public class DescribeActivityRecordRequest extends AbstractModel{
         this.Statuses = Statuses;
     }
 
+    /**
+     * Get 根据是否软删除进行过滤，[0]未删除, [1] 删除，不传不过滤 
+     * @return IsDeletedList 根据是否软删除进行过滤，[0]未删除, [1] 删除，不传不过滤
+     */
+    public Long [] getIsDeletedList() {
+        return this.IsDeletedList;
+    }
+
+    /**
+     * Set 根据是否软删除进行过滤，[0]未删除, [1] 删除，不传不过滤
+     * @param IsDeletedList 根据是否软删除进行过滤，[0]未删除, [1] 删除，不传不过滤
+     */
+    public void setIsDeletedList(Long [] IsDeletedList) {
+        this.IsDeletedList = IsDeletedList;
+    }
+
     public DescribeActivityRecordRequest() {
     }
 
@@ -166,6 +189,12 @@ public class DescribeActivityRecordRequest extends AbstractModel{
                 this.Statuses[i] = new Long(source.Statuses[i]);
             }
         }
+        if (source.IsDeletedList != null) {
+            this.IsDeletedList = new Long[source.IsDeletedList.length];
+            for (int i = 0; i < source.IsDeletedList.length; i++) {
+                this.IsDeletedList[i] = new Long(source.IsDeletedList[i]);
+            }
+        }
     }
 
 
@@ -178,6 +207,7 @@ public class DescribeActivityRecordRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "ActivityIdList.", this.ActivityIdList);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamArraySimple(map, prefix + "Statuses.", this.Statuses);
+        this.setParamArraySimple(map, prefix + "IsDeletedList.", this.IsDeletedList);
 
     }
 }

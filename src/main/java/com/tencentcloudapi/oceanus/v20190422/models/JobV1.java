@@ -247,6 +247,14 @@ public class JobV1 extends AbstractModel{
     private Float RunningCu;
 
     /**
+    * 作业运行的 Flink 版本
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FlinkVersion")
+    @Expose
+    private String FlinkVersion;
+
+    /**
      * Get 作业ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return JobId 作业ID
@@ -806,6 +814,26 @@ public class JobV1 extends AbstractModel{
         this.RunningCu = RunningCu;
     }
 
+    /**
+     * Get 作业运行的 Flink 版本
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FlinkVersion 作业运行的 Flink 版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getFlinkVersion() {
+        return this.FlinkVersion;
+    }
+
+    /**
+     * Set 作业运行的 Flink 版本
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FlinkVersion 作业运行的 Flink 版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFlinkVersion(String FlinkVersion) {
+        this.FlinkVersion = FlinkVersion;
+    }
+
     public JobV1() {
     }
 
@@ -898,6 +926,9 @@ public class JobV1 extends AbstractModel{
         if (source.RunningCu != null) {
             this.RunningCu = new Float(source.RunningCu);
         }
+        if (source.FlinkVersion != null) {
+            this.FlinkVersion = new String(source.FlinkVersion);
+        }
     }
 
 
@@ -933,6 +964,7 @@ public class JobV1 extends AbstractModel{
         this.setParamSimple(map, prefix + "SchedulerType", this.SchedulerType);
         this.setParamSimple(map, prefix + "ClusterStatus", this.ClusterStatus);
         this.setParamSimple(map, prefix + "RunningCu", this.RunningCu);
+        this.setParamSimple(map, prefix + "FlinkVersion", this.FlinkVersion);
 
     }
 }

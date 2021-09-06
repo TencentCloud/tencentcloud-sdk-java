@@ -379,6 +379,26 @@ public class TcbClient extends AbstractClient{
     }
 
     /**
+     *查询活动信息
+     * @param req DescribeActivityInfoRequest
+     * @return DescribeActivityInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeActivityInfoResponse DescribeActivityInfo(DescribeActivityInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeActivityInfoResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeActivityInfoResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeActivityInfo");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询活动记录信息
      * @param req DescribeActivityRecordRequest
      * @return DescribeActivityRecordResponse
@@ -1014,6 +1034,26 @@ public class TcbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeStandaloneGatewayPackageResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeStandaloneGatewayPackage");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询用户活动信息
+     * @param req DescribeUserActivityInfoRequest
+     * @return DescribeUserActivityInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeUserActivityInfoResponse DescribeUserActivityInfo(DescribeUserActivityInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeUserActivityInfoResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeUserActivityInfoResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeUserActivityInfo");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

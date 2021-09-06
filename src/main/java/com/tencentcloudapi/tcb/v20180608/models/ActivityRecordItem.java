@@ -55,6 +55,22 @@ public class ActivityRecordItem extends AbstractModel{
     private String SubStatus;
 
     /**
+    * 整型子状态码
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SubStatusInt")
+    @Expose
+    private Long SubStatusInt;
+
+    /**
+    * 是否软删除
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsDeleted")
+    @Expose
+    private Boolean IsDeleted;
+
+    /**
      * Get 用户uin
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Uin 用户uin
@@ -134,6 +150,46 @@ public class ActivityRecordItem extends AbstractModel{
         this.SubStatus = SubStatus;
     }
 
+    /**
+     * Get 整型子状态码
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SubStatusInt 整型子状态码
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getSubStatusInt() {
+        return this.SubStatusInt;
+    }
+
+    /**
+     * Set 整型子状态码
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SubStatusInt 整型子状态码
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSubStatusInt(Long SubStatusInt) {
+        this.SubStatusInt = SubStatusInt;
+    }
+
+    /**
+     * Get 是否软删除
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsDeleted 是否软删除
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getIsDeleted() {
+        return this.IsDeleted;
+    }
+
+    /**
+     * Set 是否软删除
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsDeleted 是否软删除
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsDeleted(Boolean IsDeleted) {
+        this.IsDeleted = IsDeleted;
+    }
+
     public ActivityRecordItem() {
     }
 
@@ -154,6 +210,12 @@ public class ActivityRecordItem extends AbstractModel{
         if (source.SubStatus != null) {
             this.SubStatus = new String(source.SubStatus);
         }
+        if (source.SubStatusInt != null) {
+            this.SubStatusInt = new Long(source.SubStatusInt);
+        }
+        if (source.IsDeleted != null) {
+            this.IsDeleted = new Boolean(source.IsDeleted);
+        }
     }
 
 
@@ -165,6 +227,8 @@ public class ActivityRecordItem extends AbstractModel{
         this.setParamSimple(map, prefix + "ActivityId", this.ActivityId);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "SubStatus", this.SubStatus);
+        this.setParamSimple(map, prefix + "SubStatusInt", this.SubStatusInt);
+        this.setParamSimple(map, prefix + "IsDeleted", this.IsDeleted);
 
     }
 }
