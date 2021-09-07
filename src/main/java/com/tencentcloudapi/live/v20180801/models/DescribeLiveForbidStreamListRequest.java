@@ -39,7 +39,7 @@ public class DescribeLiveForbidStreamListRequest extends AbstractModel{
     private Long PageSize;
 
     /**
-    * 搜索的推流 id 名称。
+    * 按流名称查询。
     */
     @SerializedName("StreamName")
     @Expose
@@ -86,16 +86,16 @@ public class DescribeLiveForbidStreamListRequest extends AbstractModel{
     }
 
     /**
-     * Get 搜索的推流 id 名称。 
-     * @return StreamName 搜索的推流 id 名称。
+     * Get 按流名称查询。 
+     * @return StreamName 按流名称查询。
      */
     public String getStreamName() {
         return this.StreamName;
     }
 
     /**
-     * Set 搜索的推流 id 名称。
-     * @param StreamName 搜索的推流 id 名称。
+     * Set 按流名称查询。
+     * @param StreamName 按流名称查询。
      */
     public void setStreamName(String StreamName) {
         this.StreamName = StreamName;

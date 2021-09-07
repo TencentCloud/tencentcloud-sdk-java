@@ -23,13 +23,6 @@ import java.util.HashMap;
 public class CreateVpnConnectionRequest extends AbstractModel{
 
     /**
-    * VPC实例ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)接口返回值中的VpcId获取。
-    */
-    @SerializedName("VpcId")
-    @Expose
-    private String VpcId;
-
-    /**
     * VPN网关实例ID。
     */
     @SerializedName("VpnGatewayId")
@@ -56,6 +49,14 @@ public class CreateVpnConnectionRequest extends AbstractModel{
     @SerializedName("PreShareKey")
     @Expose
     private String PreShareKey;
+
+    /**
+    * VPC实例ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)接口返回值中的VpcId获取。
+CCN VPN 形的通道 可以不传VPCID
+    */
+    @SerializedName("VpcId")
+    @Expose
+    private String VpcId;
 
     /**
     * SPD策略组，例如：{"10.0.0.5/24":["172.123.10.5/16"]}，10.0.0.5/24是vpc内网段172.123.10.5/16是IDC网段。用户指定VPC内哪些网段可以和您IDC中哪些网段通信。
@@ -107,20 +108,11 @@ public class CreateVpnConnectionRequest extends AbstractModel{
     private String HealthCheckRemoteIp;
 
     /**
-     * Get VPC实例ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)接口返回值中的VpcId获取。 
-     * @return VpcId VPC实例ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)接口返回值中的VpcId获取。
-     */
-    public String getVpcId() {
-        return this.VpcId;
-    }
-
-    /**
-     * Set VPC实例ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)接口返回值中的VpcId获取。
-     * @param VpcId VPC实例ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)接口返回值中的VpcId获取。
-     */
-    public void setVpcId(String VpcId) {
-        this.VpcId = VpcId;
-    }
+    * 通道类型, 例如:["STATIC", "StaticRoute", "Policy"]
+    */
+    @SerializedName("RouteType")
+    @Expose
+    private String RouteType;
 
     /**
      * Get VPN网关实例ID。 
@@ -184,6 +176,26 @@ public class CreateVpnConnectionRequest extends AbstractModel{
      */
     public void setPreShareKey(String PreShareKey) {
         this.PreShareKey = PreShareKey;
+    }
+
+    /**
+     * Get VPC实例ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)接口返回值中的VpcId获取。
+CCN VPN 形的通道 可以不传VPCID 
+     * @return VpcId VPC实例ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)接口返回值中的VpcId获取。
+CCN VPN 形的通道 可以不传VPCID
+     */
+    public String getVpcId() {
+        return this.VpcId;
+    }
+
+    /**
+     * Set VPC实例ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)接口返回值中的VpcId获取。
+CCN VPN 形的通道 可以不传VPCID
+     * @param VpcId VPC实例ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)接口返回值中的VpcId获取。
+CCN VPN 形的通道 可以不传VPCID
+     */
+    public void setVpcId(String VpcId) {
+        this.VpcId = VpcId;
     }
 
     /**
@@ -298,6 +310,22 @@ public class CreateVpnConnectionRequest extends AbstractModel{
         this.HealthCheckRemoteIp = HealthCheckRemoteIp;
     }
 
+    /**
+     * Get 通道类型, 例如:["STATIC", "StaticRoute", "Policy"] 
+     * @return RouteType 通道类型, 例如:["STATIC", "StaticRoute", "Policy"]
+     */
+    public String getRouteType() {
+        return this.RouteType;
+    }
+
+    /**
+     * Set 通道类型, 例如:["STATIC", "StaticRoute", "Policy"]
+     * @param RouteType 通道类型, 例如:["STATIC", "StaticRoute", "Policy"]
+     */
+    public void setRouteType(String RouteType) {
+        this.RouteType = RouteType;
+    }
+
     public CreateVpnConnectionRequest() {
     }
 
@@ -306,9 +334,6 @@ public class CreateVpnConnectionRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public CreateVpnConnectionRequest(CreateVpnConnectionRequest source) {
-        if (source.VpcId != null) {
-            this.VpcId = new String(source.VpcId);
-        }
         if (source.VpnGatewayId != null) {
             this.VpnGatewayId = new String(source.VpnGatewayId);
         }
@@ -320,6 +345,9 @@ public class CreateVpnConnectionRequest extends AbstractModel{
         }
         if (source.PreShareKey != null) {
             this.PreShareKey = new String(source.PreShareKey);
+        }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
         }
         if (source.SecurityPolicyDatabases != null) {
             this.SecurityPolicyDatabases = new SecurityPolicyDatabase[source.SecurityPolicyDatabases.length];
@@ -348,6 +376,9 @@ public class CreateVpnConnectionRequest extends AbstractModel{
         if (source.HealthCheckRemoteIp != null) {
             this.HealthCheckRemoteIp = new String(source.HealthCheckRemoteIp);
         }
+        if (source.RouteType != null) {
+            this.RouteType = new String(source.RouteType);
+        }
     }
 
 
@@ -355,11 +386,11 @@ public class CreateVpnConnectionRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "VpcId", this.VpcId);
         this.setParamSimple(map, prefix + "VpnGatewayId", this.VpnGatewayId);
         this.setParamSimple(map, prefix + "CustomerGatewayId", this.CustomerGatewayId);
         this.setParamSimple(map, prefix + "VpnConnectionName", this.VpnConnectionName);
         this.setParamSimple(map, prefix + "PreShareKey", this.PreShareKey);
+        this.setParamSimple(map, prefix + "VpcId", this.VpcId);
         this.setParamArrayObj(map, prefix + "SecurityPolicyDatabases.", this.SecurityPolicyDatabases);
         this.setParamObj(map, prefix + "IKEOptionsSpecification.", this.IKEOptionsSpecification);
         this.setParamObj(map, prefix + "IPSECOptionsSpecification.", this.IPSECOptionsSpecification);
@@ -367,6 +398,7 @@ public class CreateVpnConnectionRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "EnableHealthCheck", this.EnableHealthCheck);
         this.setParamSimple(map, prefix + "HealthCheckLocalIp", this.HealthCheckLocalIp);
         this.setParamSimple(map, prefix + "HealthCheckRemoteIp", this.HealthCheckRemoteIp);
+        this.setParamSimple(map, prefix + "RouteType", this.RouteType);
 
     }
 }

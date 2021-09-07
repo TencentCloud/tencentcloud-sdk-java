@@ -167,6 +167,14 @@ public class SREInstance extends AbstractModel{
     private VpcInfo [] VpcInfos;
 
     /**
+    * 服务治理相关信息列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ServiceGovernanceInfos")
+    @Expose
+    private ServiceGovernanceInfo [] ServiceGovernanceInfos;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -514,6 +522,26 @@ public class SREInstance extends AbstractModel{
         this.VpcInfos = VpcInfos;
     }
 
+    /**
+     * Get 服务治理相关信息列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ServiceGovernanceInfos 服务治理相关信息列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ServiceGovernanceInfo [] getServiceGovernanceInfos() {
+        return this.ServiceGovernanceInfos;
+    }
+
+    /**
+     * Set 服务治理相关信息列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ServiceGovernanceInfos 服务治理相关信息列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setServiceGovernanceInfos(ServiceGovernanceInfo [] ServiceGovernanceInfos) {
+        this.ServiceGovernanceInfos = ServiceGovernanceInfos;
+    }
+
     public SREInstance() {
     }
 
@@ -588,6 +616,12 @@ public class SREInstance extends AbstractModel{
                 this.VpcInfos[i] = new VpcInfo(source.VpcInfos[i]);
             }
         }
+        if (source.ServiceGovernanceInfos != null) {
+            this.ServiceGovernanceInfos = new ServiceGovernanceInfo[source.ServiceGovernanceInfos.length];
+            for (int i = 0; i < source.ServiceGovernanceInfos.length; i++) {
+                this.ServiceGovernanceInfos[i] = new ServiceGovernanceInfo(source.ServiceGovernanceInfos[i]);
+            }
+        }
     }
 
 
@@ -614,6 +648,7 @@ public class SREInstance extends AbstractModel{
         this.setParamSimple(map, prefix + "EngineRegion", this.EngineRegion);
         this.setParamSimple(map, prefix + "EnableInternet", this.EnableInternet);
         this.setParamArrayObj(map, prefix + "VpcInfos.", this.VpcInfos);
+        this.setParamArrayObj(map, prefix + "ServiceGovernanceInfos.", this.ServiceGovernanceInfos);
 
     }
 }

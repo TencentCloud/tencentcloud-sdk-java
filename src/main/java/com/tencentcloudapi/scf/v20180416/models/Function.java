@@ -123,6 +123,20 @@ public class Function extends AbstractModel{
     private Long ReservedConcurrencyMem;
 
     /**
+    * 函数异步属性，取值 TRUE 或者 FALSE
+    */
+    @SerializedName("AsyncRunEnable")
+    @Expose
+    private String AsyncRunEnable;
+
+    /**
+    * 异步函数是否开启调用追踪，取值 TRUE 或者 FALSE
+    */
+    @SerializedName("TraceEnable")
+    @Expose
+    private String TraceEnable;
+
+    /**
      * Get 修改时间 
      * @return ModTime 修改时间
      */
@@ -354,6 +368,38 @@ public class Function extends AbstractModel{
         this.ReservedConcurrencyMem = ReservedConcurrencyMem;
     }
 
+    /**
+     * Get 函数异步属性，取值 TRUE 或者 FALSE 
+     * @return AsyncRunEnable 函数异步属性，取值 TRUE 或者 FALSE
+     */
+    public String getAsyncRunEnable() {
+        return this.AsyncRunEnable;
+    }
+
+    /**
+     * Set 函数异步属性，取值 TRUE 或者 FALSE
+     * @param AsyncRunEnable 函数异步属性，取值 TRUE 或者 FALSE
+     */
+    public void setAsyncRunEnable(String AsyncRunEnable) {
+        this.AsyncRunEnable = AsyncRunEnable;
+    }
+
+    /**
+     * Get 异步函数是否开启调用追踪，取值 TRUE 或者 FALSE 
+     * @return TraceEnable 异步函数是否开启调用追踪，取值 TRUE 或者 FALSE
+     */
+    public String getTraceEnable() {
+        return this.TraceEnable;
+    }
+
+    /**
+     * Set 异步函数是否开启调用追踪，取值 TRUE 或者 FALSE
+     * @param TraceEnable 异步函数是否开启调用追踪，取值 TRUE 或者 FALSE
+     */
+    public void setTraceEnable(String TraceEnable) {
+        this.TraceEnable = TraceEnable;
+    }
+
     public Function() {
     }
 
@@ -410,6 +456,12 @@ public class Function extends AbstractModel{
         if (source.ReservedConcurrencyMem != null) {
             this.ReservedConcurrencyMem = new Long(source.ReservedConcurrencyMem);
         }
+        if (source.AsyncRunEnable != null) {
+            this.AsyncRunEnable = new String(source.AsyncRunEnable);
+        }
+        if (source.TraceEnable != null) {
+            this.TraceEnable = new String(source.TraceEnable);
+        }
     }
 
 
@@ -431,6 +483,8 @@ public class Function extends AbstractModel{
         this.setParamArrayObj(map, prefix + "StatusReasons.", this.StatusReasons);
         this.setParamSimple(map, prefix + "TotalProvisionedConcurrencyMem", this.TotalProvisionedConcurrencyMem);
         this.setParamSimple(map, prefix + "ReservedConcurrencyMem", this.ReservedConcurrencyMem);
+        this.setParamSimple(map, prefix + "AsyncRunEnable", this.AsyncRunEnable);
+        this.setParamSimple(map, prefix + "TraceEnable", this.TraceEnable);
 
     }
 }

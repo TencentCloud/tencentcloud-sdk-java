@@ -45,7 +45,9 @@ public class CreateTranscodeRequest extends AbstractModel{
     private Boolean IsStaticPPT;
 
     /**
-    * 转码后文档的最小分辨率，不传、传空字符串或分辨率格式错误则使用文档原分辨率
+    * 注意: 该参数已废弃, 请使用 MinScaleResolution
+
+转码后文档的最小分辨率，不传、传空字符串或分辨率格式错误则使用文档原分辨率
 
 注意分辨率宽高中间为英文字母"xyz"的"x"
     */
@@ -87,6 +89,15 @@ tar.gz： 生成`.tar.gz`压缩包
     @SerializedName("Priority")
     @Expose
     private String Priority;
+
+    /**
+    * 转码后文档的最小分辨率，不传、传空字符串或分辨率格式错误则使用文档原分辨率
+
+注意分辨率宽高中间为英文字母"xyz"的"x"
+    */
+    @SerializedName("MinScaleResolution")
+    @Expose
+    private String MinScaleResolution;
 
     /**
      * Get 客户的SdkAppId 
@@ -141,10 +152,14 @@ tar.gz： 生成`.tar.gz`压缩包
     }
 
     /**
-     * Get 转码后文档的最小分辨率，不传、传空字符串或分辨率格式错误则使用文档原分辨率
+     * Get 注意: 该参数已废弃, 请使用 MinScaleResolution
+
+转码后文档的最小分辨率，不传、传空字符串或分辨率格式错误则使用文档原分辨率
 
 注意分辨率宽高中间为英文字母"xyz"的"x" 
-     * @return MinResolution 转码后文档的最小分辨率，不传、传空字符串或分辨率格式错误则使用文档原分辨率
+     * @return MinResolution 注意: 该参数已废弃, 请使用 MinScaleResolution
+
+转码后文档的最小分辨率，不传、传空字符串或分辨率格式错误则使用文档原分辨率
 
 注意分辨率宽高中间为英文字母"xyz"的"x"
      */
@@ -153,10 +168,14 @@ tar.gz： 生成`.tar.gz`压缩包
     }
 
     /**
-     * Set 转码后文档的最小分辨率，不传、传空字符串或分辨率格式错误则使用文档原分辨率
+     * Set 注意: 该参数已废弃, 请使用 MinScaleResolution
+
+转码后文档的最小分辨率，不传、传空字符串或分辨率格式错误则使用文档原分辨率
 
 注意分辨率宽高中间为英文字母"xyz"的"x"
-     * @param MinResolution 转码后文档的最小分辨率，不传、传空字符串或分辨率格式错误则使用文档原分辨率
+     * @param MinResolution 注意: 该参数已废弃, 请使用 MinScaleResolution
+
+转码后文档的最小分辨率，不传、传空字符串或分辨率格式错误则使用文档原分辨率
 
 注意分辨率宽高中间为英文字母"xyz"的"x"
      */
@@ -256,6 +275,30 @@ tar.gz： 生成`.tar.gz`压缩包
         this.Priority = Priority;
     }
 
+    /**
+     * Get 转码后文档的最小分辨率，不传、传空字符串或分辨率格式错误则使用文档原分辨率
+
+注意分辨率宽高中间为英文字母"xyz"的"x" 
+     * @return MinScaleResolution 转码后文档的最小分辨率，不传、传空字符串或分辨率格式错误则使用文档原分辨率
+
+注意分辨率宽高中间为英文字母"xyz"的"x"
+     */
+    public String getMinScaleResolution() {
+        return this.MinScaleResolution;
+    }
+
+    /**
+     * Set 转码后文档的最小分辨率，不传、传空字符串或分辨率格式错误则使用文档原分辨率
+
+注意分辨率宽高中间为英文字母"xyz"的"x"
+     * @param MinScaleResolution 转码后文档的最小分辨率，不传、传空字符串或分辨率格式错误则使用文档原分辨率
+
+注意分辨率宽高中间为英文字母"xyz"的"x"
+     */
+    public void setMinScaleResolution(String MinScaleResolution) {
+        this.MinScaleResolution = MinScaleResolution;
+    }
+
     public CreateTranscodeRequest() {
     }
 
@@ -288,6 +331,9 @@ tar.gz： 生成`.tar.gz`压缩包
         if (source.Priority != null) {
             this.Priority = new String(source.Priority);
         }
+        if (source.MinScaleResolution != null) {
+            this.MinScaleResolution = new String(source.MinScaleResolution);
+        }
     }
 
 
@@ -303,6 +349,7 @@ tar.gz： 生成`.tar.gz`压缩包
         this.setParamSimple(map, prefix + "CompressFileType", this.CompressFileType);
         this.setParamSimple(map, prefix + "ExtraData", this.ExtraData);
         this.setParamSimple(map, prefix + "Priority", this.Priority);
+        this.setParamSimple(map, prefix + "MinScaleResolution", this.MinScaleResolution);
 
     }
 }
