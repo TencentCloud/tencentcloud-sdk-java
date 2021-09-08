@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class GetReservedConcurrencyConfigRequest extends AbstractModel{
 
     /**
-    * 需要获取预置并发详情的函数名称。
+    * 需要获取最大独占配额详情的函数名称。
     */
     @SerializedName("FunctionName")
     @Expose
@@ -37,16 +37,16 @@ public class GetReservedConcurrencyConfigRequest extends AbstractModel{
     private String Namespace;
 
     /**
-     * Get 需要获取预置并发详情的函数名称。 
-     * @return FunctionName 需要获取预置并发详情的函数名称。
+     * Get 需要获取最大独占配额详情的函数名称。 
+     * @return FunctionName 需要获取最大独占配额详情的函数名称。
      */
     public String getFunctionName() {
         return this.FunctionName;
     }
 
     /**
-     * Set 需要获取预置并发详情的函数名称。
-     * @param FunctionName 需要获取预置并发详情的函数名称。
+     * Set 需要获取最大独占配额详情的函数名称。
+     * @param FunctionName 需要获取最大独占配额详情的函数名称。
      */
     public void setFunctionName(String FunctionName) {
         this.FunctionName = FunctionName;

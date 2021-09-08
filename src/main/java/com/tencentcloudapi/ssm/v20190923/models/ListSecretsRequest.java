@@ -81,6 +81,17 @@ public class ListSecretsRequest extends AbstractModel{
     private Long SecretType;
 
     /**
+    * 此参数仅在SecretType参数值为1时生效，
+当SecretType值为1时：
+如果ProductName值为空，则表示查询所有类型的云产品凭据
+如果ProductName值为Mysql，则表示查询Mysql数据库凭据
+如果ProductName值为Tdsql-mysql，则表示查询Tdsql（Mysql版本）的凭据
+    */
+    @SerializedName("ProductName")
+    @Expose
+    private String ProductName;
+
+    /**
      * Get 查询列表的起始位置，以0开始，不设置默认为0。 
      * @return Offset 查询列表的起始位置，以0开始，不设置默认为0。
      */
@@ -228,6 +239,38 @@ public class ListSecretsRequest extends AbstractModel{
         this.SecretType = SecretType;
     }
 
+    /**
+     * Get 此参数仅在SecretType参数值为1时生效，
+当SecretType值为1时：
+如果ProductName值为空，则表示查询所有类型的云产品凭据
+如果ProductName值为Mysql，则表示查询Mysql数据库凭据
+如果ProductName值为Tdsql-mysql，则表示查询Tdsql（Mysql版本）的凭据 
+     * @return ProductName 此参数仅在SecretType参数值为1时生效，
+当SecretType值为1时：
+如果ProductName值为空，则表示查询所有类型的云产品凭据
+如果ProductName值为Mysql，则表示查询Mysql数据库凭据
+如果ProductName值为Tdsql-mysql，则表示查询Tdsql（Mysql版本）的凭据
+     */
+    public String getProductName() {
+        return this.ProductName;
+    }
+
+    /**
+     * Set 此参数仅在SecretType参数值为1时生效，
+当SecretType值为1时：
+如果ProductName值为空，则表示查询所有类型的云产品凭据
+如果ProductName值为Mysql，则表示查询Mysql数据库凭据
+如果ProductName值为Tdsql-mysql，则表示查询Tdsql（Mysql版本）的凭据
+     * @param ProductName 此参数仅在SecretType参数值为1时生效，
+当SecretType值为1时：
+如果ProductName值为空，则表示查询所有类型的云产品凭据
+如果ProductName值为Mysql，则表示查询Mysql数据库凭据
+如果ProductName值为Tdsql-mysql，则表示查询Tdsql（Mysql版本）的凭据
+     */
+    public void setProductName(String ProductName) {
+        this.ProductName = ProductName;
+    }
+
     public ListSecretsRequest() {
     }
 
@@ -260,6 +303,9 @@ public class ListSecretsRequest extends AbstractModel{
         if (source.SecretType != null) {
             this.SecretType = new Long(source.SecretType);
         }
+        if (source.ProductName != null) {
+            this.ProductName = new String(source.ProductName);
+        }
     }
 
 
@@ -274,6 +320,7 @@ public class ListSecretsRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "SearchSecretName", this.SearchSecretName);
         this.setParamArrayObj(map, prefix + "TagFilters.", this.TagFilters);
         this.setParamSimple(map, prefix + "SecretType", this.SecretType);
+        this.setParamSimple(map, prefix + "ProductName", this.ProductName);
 
     }
 }

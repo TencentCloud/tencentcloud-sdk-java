@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DeleteReservedConcurrencyConfigRequest extends AbstractModel{
 
     /**
-    * 需要删除预置并发的函数的名称
+    * 需要删除最大独占配额的函数的名称
     */
     @SerializedName("FunctionName")
     @Expose
@@ -37,16 +37,16 @@ public class DeleteReservedConcurrencyConfigRequest extends AbstractModel{
     private String Namespace;
 
     /**
-     * Get 需要删除预置并发的函数的名称 
-     * @return FunctionName 需要删除预置并发的函数的名称
+     * Get 需要删除最大独占配额的函数的名称 
+     * @return FunctionName 需要删除最大独占配额的函数的名称
      */
     public String getFunctionName() {
         return this.FunctionName;
     }
 
     /**
-     * Set 需要删除预置并发的函数的名称
-     * @param FunctionName 需要删除预置并发的函数的名称
+     * Set 需要删除最大独占配额的函数的名称
+     * @param FunctionName 需要删除最大独占配额的函数的名称
      */
     public void setFunctionName(String FunctionName) {
         this.FunctionName = FunctionName;

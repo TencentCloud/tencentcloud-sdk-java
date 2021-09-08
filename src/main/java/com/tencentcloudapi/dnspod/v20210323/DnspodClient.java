@@ -662,4 +662,24 @@ public class DnspodClient extends AbstractClient{
         return rsp.response;
     }
 
+    /**
+     *暂停子域名的解析记录
+     * @param req ModifySubdomainStatusRequest
+     * @return ModifySubdomainStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifySubdomainStatusResponse ModifySubdomainStatus(ModifySubdomainStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifySubdomainStatusResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifySubdomainStatusResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifySubdomainStatus");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
 }

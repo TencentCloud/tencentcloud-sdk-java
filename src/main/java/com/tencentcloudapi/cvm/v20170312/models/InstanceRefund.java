@@ -13,118 +13,115 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cdn.v20180606.models;
+package com.tencentcloudapi.cvm.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Cache extends AbstractModel{
+public class InstanceRefund extends AbstractModel{
 
     /**
-    * 基础缓存过期时间配置
+    * 实例Id。
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("SimpleCache")
+    @SerializedName("InstanceId")
     @Expose
-    private SimpleCache SimpleCache;
+    private String InstanceId;
 
     /**
-    * 高级缓存过期时间配置（已弃用）
+    * 退款数额。
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("AdvancedCache")
+    @SerializedName("Refunds")
     @Expose
-    private AdvancedCache AdvancedCache;
+    private Float Refunds;
 
     /**
-    * 高级路径缓存配置
+    * 退款详情。
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("RuleCache")
+    @SerializedName("PriceDetail")
     @Expose
-    private RuleCache [] RuleCache;
+    private String PriceDetail;
 
     /**
-     * Get 基础缓存过期时间配置
+     * Get 实例Id。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SimpleCache 基础缓存过期时间配置
+     * @return InstanceId 实例Id。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public SimpleCache getSimpleCache() {
-        return this.SimpleCache;
+    public String getInstanceId() {
+        return this.InstanceId;
     }
 
     /**
-     * Set 基础缓存过期时间配置
+     * Set 实例Id。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SimpleCache 基础缓存过期时间配置
+     * @param InstanceId 实例Id。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setSimpleCache(SimpleCache SimpleCache) {
-        this.SimpleCache = SimpleCache;
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 高级缓存过期时间配置（已弃用）
+     * Get 退款数额。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AdvancedCache 高级缓存过期时间配置（已弃用）
+     * @return Refunds 退款数额。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public AdvancedCache getAdvancedCache() {
-        return this.AdvancedCache;
+    public Float getRefunds() {
+        return this.Refunds;
     }
 
     /**
-     * Set 高级缓存过期时间配置（已弃用）
+     * Set 退款数额。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AdvancedCache 高级缓存过期时间配置（已弃用）
+     * @param Refunds 退款数额。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setAdvancedCache(AdvancedCache AdvancedCache) {
-        this.AdvancedCache = AdvancedCache;
+    public void setRefunds(Float Refunds) {
+        this.Refunds = Refunds;
     }
 
     /**
-     * Get 高级路径缓存配置
+     * Get 退款详情。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RuleCache 高级路径缓存配置
+     * @return PriceDetail 退款详情。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public RuleCache [] getRuleCache() {
-        return this.RuleCache;
+    public String getPriceDetail() {
+        return this.PriceDetail;
     }
 
     /**
-     * Set 高级路径缓存配置
+     * Set 退款详情。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RuleCache 高级路径缓存配置
+     * @param PriceDetail 退款详情。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setRuleCache(RuleCache [] RuleCache) {
-        this.RuleCache = RuleCache;
+    public void setPriceDetail(String PriceDetail) {
+        this.PriceDetail = PriceDetail;
     }
 
-    public Cache() {
+    public InstanceRefund() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public Cache(Cache source) {
-        if (source.SimpleCache != null) {
-            this.SimpleCache = new SimpleCache(source.SimpleCache);
+    public InstanceRefund(InstanceRefund source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
         }
-        if (source.AdvancedCache != null) {
-            this.AdvancedCache = new AdvancedCache(source.AdvancedCache);
+        if (source.Refunds != null) {
+            this.Refunds = new Float(source.Refunds);
         }
-        if (source.RuleCache != null) {
-            this.RuleCache = new RuleCache[source.RuleCache.length];
-            for (int i = 0; i < source.RuleCache.length; i++) {
-                this.RuleCache[i] = new RuleCache(source.RuleCache[i]);
-            }
+        if (source.PriceDetail != null) {
+            this.PriceDetail = new String(source.PriceDetail);
         }
     }
 
@@ -133,9 +130,9 @@ public class Cache extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "SimpleCache.", this.SimpleCache);
-        this.setParamObj(map, prefix + "AdvancedCache.", this.AdvancedCache);
-        this.setParamArrayObj(map, prefix + "RuleCache.", this.RuleCache);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "Refunds", this.Refunds);
+        this.setParamSimple(map, prefix + "PriceDetail", this.PriceDetail);
 
     }
 }

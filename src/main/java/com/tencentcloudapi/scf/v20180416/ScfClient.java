@@ -246,7 +246,7 @@ public class ScfClient extends AbstractClient{
     }
 
     /**
-     *删除函数的保留并发配置。
+     *删除函数的最大独占配额配置。
      * @param req DeleteReservedConcurrencyConfigRequest
      * @return DeleteReservedConcurrencyConfigResponse
      * @throws TencentCloudSDKException
@@ -446,7 +446,7 @@ public class ScfClient extends AbstractClient{
     }
 
     /**
-     *获取函数的保留并发详情。
+     *获取函数的最大独占配额详情。
      * @param req GetReservedConcurrencyConfigRequest
      * @return GetReservedConcurrencyConfigResponse
      * @throws TencentCloudSDKException
@@ -726,7 +726,7 @@ public class ScfClient extends AbstractClient{
     }
 
     /**
-     *设置函数保留并发
+     *设置函数最大独占配额
      * @param req PutReservedConcurrencyConfigRequest
      * @return PutReservedConcurrencyConfigResponse
      * @throws TencentCloudSDKException

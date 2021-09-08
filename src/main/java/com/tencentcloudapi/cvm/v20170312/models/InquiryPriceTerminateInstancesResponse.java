@@ -23,11 +23,34 @@ import java.util.HashMap;
 public class InquiryPriceTerminateInstancesResponse extends AbstractModel{
 
     /**
+    * 退款详情。
+    */
+    @SerializedName("InstanceRefundsSet")
+    @Expose
+    private InstanceRefund [] InstanceRefundsSet;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 退款详情。 
+     * @return InstanceRefundsSet 退款详情。
+     */
+    public InstanceRefund [] getInstanceRefundsSet() {
+        return this.InstanceRefundsSet;
+    }
+
+    /**
+     * Set 退款详情。
+     * @param InstanceRefundsSet 退款详情。
+     */
+    public void setInstanceRefundsSet(InstanceRefund [] InstanceRefundsSet) {
+        this.InstanceRefundsSet = InstanceRefundsSet;
+    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -53,6 +76,12 @@ public class InquiryPriceTerminateInstancesResponse extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public InquiryPriceTerminateInstancesResponse(InquiryPriceTerminateInstancesResponse source) {
+        if (source.InstanceRefundsSet != null) {
+            this.InstanceRefundsSet = new InstanceRefund[source.InstanceRefundsSet.length];
+            for (int i = 0; i < source.InstanceRefundsSet.length; i++) {
+                this.InstanceRefundsSet[i] = new InstanceRefund(source.InstanceRefundsSet[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -63,6 +92,7 @@ public class InquiryPriceTerminateInstancesResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArrayObj(map, prefix + "InstanceRefundsSet.", this.InstanceRefundsSet);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

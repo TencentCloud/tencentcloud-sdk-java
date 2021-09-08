@@ -49,7 +49,8 @@ global：预热全球节点
     private String Area;
 
     /**
-    * 填写"middle"或不填充时预热至中间层节点
+    * 填写"middle"或不填充时预热至中间层节点。
+注意：中国境外区域预热，资源默认加载至中国境外边缘节点，所产生的边缘层流量会计入计费流量。
     */
     @SerializedName("Layer")
     @Expose
@@ -135,16 +136,20 @@ global：预热全球节点
     }
 
     /**
-     * Get 填写"middle"或不填充时预热至中间层节点 
-     * @return Layer 填写"middle"或不填充时预热至中间层节点
+     * Get 填写"middle"或不填充时预热至中间层节点。
+注意：中国境外区域预热，资源默认加载至中国境外边缘节点，所产生的边缘层流量会计入计费流量。 
+     * @return Layer 填写"middle"或不填充时预热至中间层节点。
+注意：中国境外区域预热，资源默认加载至中国境外边缘节点，所产生的边缘层流量会计入计费流量。
      */
     public String getLayer() {
         return this.Layer;
     }
 
     /**
-     * Set 填写"middle"或不填充时预热至中间层节点
-     * @param Layer 填写"middle"或不填充时预热至中间层节点
+     * Set 填写"middle"或不填充时预热至中间层节点。
+注意：中国境外区域预热，资源默认加载至中国境外边缘节点，所产生的边缘层流量会计入计费流量。
+     * @param Layer 填写"middle"或不填充时预热至中间层节点。
+注意：中国境外区域预热，资源默认加载至中国境外边缘节点，所产生的边缘层流量会计入计费流量。
      */
     public void setLayer(String Layer) {
         this.Layer = Layer;

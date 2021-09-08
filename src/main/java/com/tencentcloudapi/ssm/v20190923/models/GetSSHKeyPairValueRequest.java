@@ -30,6 +30,13 @@ public class GetSSHKeyPairValueRequest extends AbstractModel{
     private String SecretName;
 
     /**
+    * 密钥对ID，是云服务器中密钥对的唯一标识。
+    */
+    @SerializedName("SSHKeyId")
+    @Expose
+    private String SSHKeyId;
+
+    /**
      * Get 凭据名称，此凭据只能为SSH密钥对凭据类型。 
      * @return SecretName 凭据名称，此凭据只能为SSH密钥对凭据类型。
      */
@@ -45,6 +52,22 @@ public class GetSSHKeyPairValueRequest extends AbstractModel{
         this.SecretName = SecretName;
     }
 
+    /**
+     * Get 密钥对ID，是云服务器中密钥对的唯一标识。 
+     * @return SSHKeyId 密钥对ID，是云服务器中密钥对的唯一标识。
+     */
+    public String getSSHKeyId() {
+        return this.SSHKeyId;
+    }
+
+    /**
+     * Set 密钥对ID，是云服务器中密钥对的唯一标识。
+     * @param SSHKeyId 密钥对ID，是云服务器中密钥对的唯一标识。
+     */
+    public void setSSHKeyId(String SSHKeyId) {
+        this.SSHKeyId = SSHKeyId;
+    }
+
     public GetSSHKeyPairValueRequest() {
     }
 
@@ -56,6 +79,9 @@ public class GetSSHKeyPairValueRequest extends AbstractModel{
         if (source.SecretName != null) {
             this.SecretName = new String(source.SecretName);
         }
+        if (source.SSHKeyId != null) {
+            this.SSHKeyId = new String(source.SSHKeyId);
+        }
     }
 
 
@@ -64,6 +90,7 @@ public class GetSSHKeyPairValueRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SecretName", this.SecretName);
+        this.setParamSimple(map, prefix + "SSHKeyId", this.SSHKeyId);
 
     }
 }

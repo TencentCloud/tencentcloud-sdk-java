@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class PutReservedConcurrencyConfigRequest extends AbstractModel{
 
     /**
-    * 需要设置预置并发的函数的名称
+    * 需要设置最大独占配额的函数的名称
     */
     @SerializedName("FunctionName")
     @Expose
     private String FunctionName;
 
     /**
-    * 函数保留并发内存，注：函数的保留并发内存总和上限：用户总并发内存配额 - 12800
+    * 函数最大独占配额，注：函数的最大独占配额内存总和上限：用户总并发内存配额 - 12800
     */
     @SerializedName("ReservedConcurrencyMem")
     @Expose
@@ -44,32 +44,32 @@ public class PutReservedConcurrencyConfigRequest extends AbstractModel{
     private String Namespace;
 
     /**
-     * Get 需要设置预置并发的函数的名称 
-     * @return FunctionName 需要设置预置并发的函数的名称
+     * Get 需要设置最大独占配额的函数的名称 
+     * @return FunctionName 需要设置最大独占配额的函数的名称
      */
     public String getFunctionName() {
         return this.FunctionName;
     }
 
     /**
-     * Set 需要设置预置并发的函数的名称
-     * @param FunctionName 需要设置预置并发的函数的名称
+     * Set 需要设置最大独占配额的函数的名称
+     * @param FunctionName 需要设置最大独占配额的函数的名称
      */
     public void setFunctionName(String FunctionName) {
         this.FunctionName = FunctionName;
     }
 
     /**
-     * Get 函数保留并发内存，注：函数的保留并发内存总和上限：用户总并发内存配额 - 12800 
-     * @return ReservedConcurrencyMem 函数保留并发内存，注：函数的保留并发内存总和上限：用户总并发内存配额 - 12800
+     * Get 函数最大独占配额，注：函数的最大独占配额内存总和上限：用户总并发内存配额 - 12800 
+     * @return ReservedConcurrencyMem 函数最大独占配额，注：函数的最大独占配额内存总和上限：用户总并发内存配额 - 12800
      */
     public Long getReservedConcurrencyMem() {
         return this.ReservedConcurrencyMem;
     }
 
     /**
-     * Set 函数保留并发内存，注：函数的保留并发内存总和上限：用户总并发内存配额 - 12800
-     * @param ReservedConcurrencyMem 函数保留并发内存，注：函数的保留并发内存总和上限：用户总并发内存配额 - 12800
+     * Set 函数最大独占配额，注：函数的最大独占配额内存总和上限：用户总并发内存配额 - 12800
+     * @param ReservedConcurrencyMem 函数最大独占配额，注：函数的最大独占配额内存总和上限：用户总并发内存配额 - 12800
      */
     public void setReservedConcurrencyMem(Long ReservedConcurrencyMem) {
         this.ReservedConcurrencyMem = ReservedConcurrencyMem;
