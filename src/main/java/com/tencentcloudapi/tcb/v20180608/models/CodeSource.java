@@ -95,6 +95,14 @@ public class CodeSource extends AbstractModel{
     private Long ProjectId;
 
     /**
+    * coding项目
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ProjectName")
+    @Expose
+    private String ProjectName;
+
+    /**
      * Get 类型, 可能的枚举: "coding","package","package_url","github","gitlab","gitee","rawcode"
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Type 类型, 可能的枚举: "coding","package","package_url","github","gitlab","gitee","rawcode"
@@ -274,6 +282,26 @@ public class CodeSource extends AbstractModel{
         this.ProjectId = ProjectId;
     }
 
+    /**
+     * Get coding项目
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ProjectName coding项目
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getProjectName() {
+        return this.ProjectName;
+    }
+
+    /**
+     * Set coding项目
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ProjectName coding项目
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProjectName(String ProjectName) {
+        this.ProjectName = ProjectName;
+    }
+
     public CodeSource() {
     }
 
@@ -309,6 +337,9 @@ public class CodeSource extends AbstractModel{
         if (source.ProjectId != null) {
             this.ProjectId = new Long(source.ProjectId);
         }
+        if (source.ProjectName != null) {
+            this.ProjectName = new String(source.ProjectName);
+        }
     }
 
 
@@ -325,6 +356,7 @@ public class CodeSource extends AbstractModel{
         this.setParamSimple(map, prefix + "RawCode", this.RawCode);
         this.setParamSimple(map, prefix + "Branch", this.Branch);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
+        this.setParamSimple(map, prefix + "ProjectName", this.ProjectName);
 
     }
 }

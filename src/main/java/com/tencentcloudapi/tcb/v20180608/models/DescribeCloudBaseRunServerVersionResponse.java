@@ -270,6 +270,38 @@ public class DescribeCloudBaseRunServerVersionResponse extends AbstractModel{
     private Float MemSize;
 
     /**
+    * 是否有Dockerfile：0-default has, 1-has, 2-has not
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("HasDockerfile")
+    @Expose
+    private Long HasDockerfile;
+
+    /**
+    * 基础镜像
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BaseImage")
+    @Expose
+    private String BaseImage;
+
+    /**
+    * 容器启动入口命令
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EntryPoint")
+    @Expose
+    private String EntryPoint;
+
+    /**
+    * 仓库语言
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RepoLanguage")
+    @Expose
+    private String RepoLanguage;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -881,6 +913,86 @@ public class DescribeCloudBaseRunServerVersionResponse extends AbstractModel{
     }
 
     /**
+     * Get 是否有Dockerfile：0-default has, 1-has, 2-has not
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return HasDockerfile 是否有Dockerfile：0-default has, 1-has, 2-has not
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getHasDockerfile() {
+        return this.HasDockerfile;
+    }
+
+    /**
+     * Set 是否有Dockerfile：0-default has, 1-has, 2-has not
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param HasDockerfile 是否有Dockerfile：0-default has, 1-has, 2-has not
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setHasDockerfile(Long HasDockerfile) {
+        this.HasDockerfile = HasDockerfile;
+    }
+
+    /**
+     * Get 基础镜像
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BaseImage 基础镜像
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getBaseImage() {
+        return this.BaseImage;
+    }
+
+    /**
+     * Set 基础镜像
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BaseImage 基础镜像
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBaseImage(String BaseImage) {
+        this.BaseImage = BaseImage;
+    }
+
+    /**
+     * Get 容器启动入口命令
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EntryPoint 容器启动入口命令
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getEntryPoint() {
+        return this.EntryPoint;
+    }
+
+    /**
+     * Set 容器启动入口命令
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EntryPoint 容器启动入口命令
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEntryPoint(String EntryPoint) {
+        this.EntryPoint = EntryPoint;
+    }
+
+    /**
+     * Get 仓库语言
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RepoLanguage 仓库语言
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRepoLanguage() {
+        return this.RepoLanguage;
+    }
+
+    /**
+     * Set 仓库语言
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RepoLanguage 仓库语言
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRepoLanguage(String RepoLanguage) {
+        this.RepoLanguage = RepoLanguage;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -1003,6 +1115,18 @@ public class DescribeCloudBaseRunServerVersionResponse extends AbstractModel{
         if (source.MemSize != null) {
             this.MemSize = new Float(source.MemSize);
         }
+        if (source.HasDockerfile != null) {
+            this.HasDockerfile = new Long(source.HasDockerfile);
+        }
+        if (source.BaseImage != null) {
+            this.BaseImage = new String(source.BaseImage);
+        }
+        if (source.EntryPoint != null) {
+            this.EntryPoint = new String(source.EntryPoint);
+        }
+        if (source.RepoLanguage != null) {
+            this.RepoLanguage = new String(source.RepoLanguage);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -1045,6 +1169,10 @@ public class DescribeCloudBaseRunServerVersionResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
         this.setParamSimple(map, prefix + "CpuSize", this.CpuSize);
         this.setParamSimple(map, prefix + "MemSize", this.MemSize);
+        this.setParamSimple(map, prefix + "HasDockerfile", this.HasDockerfile);
+        this.setParamSimple(map, prefix + "BaseImage", this.BaseImage);
+        this.setParamSimple(map, prefix + "EntryPoint", this.EntryPoint);
+        this.setParamSimple(map, prefix + "RepoLanguage", this.RepoLanguage);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

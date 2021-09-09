@@ -37,7 +37,7 @@ public class DescribeSlowLogTopSqlsRequest extends AbstractModel{
     private String StartTime;
 
     /**
-    * 截止时间，如“2019-09-10 12:13:14”，截止时间与开始时间的间隔最大可为7天。
+    * 截止时间，如“2019-09-11 10:13:14”，截止时间与开始时间的间隔小于7天。
     */
     @SerializedName("EndTime")
     @Expose
@@ -118,16 +118,16 @@ public class DescribeSlowLogTopSqlsRequest extends AbstractModel{
     }
 
     /**
-     * Get 截止时间，如“2019-09-10 12:13:14”，截止时间与开始时间的间隔最大可为7天。 
-     * @return EndTime 截止时间，如“2019-09-10 12:13:14”，截止时间与开始时间的间隔最大可为7天。
+     * Get 截止时间，如“2019-09-11 10:13:14”，截止时间与开始时间的间隔小于7天。 
+     * @return EndTime 截止时间，如“2019-09-11 10:13:14”，截止时间与开始时间的间隔小于7天。
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 截止时间，如“2019-09-10 12:13:14”，截止时间与开始时间的间隔最大可为7天。
-     * @param EndTime 截止时间，如“2019-09-10 12:13:14”，截止时间与开始时间的间隔最大可为7天。
+     * Set 截止时间，如“2019-09-11 10:13:14”，截止时间与开始时间的间隔小于7天。
+     * @param EndTime 截止时间，如“2019-09-11 10:13:14”，截止时间与开始时间的间隔小于7天。
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

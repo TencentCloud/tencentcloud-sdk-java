@@ -39,6 +39,26 @@ public class CkafkaClient extends AbstractClient{
     }
 
     /**
+     *批量添加ACL策略
+     * @param req BatchCreateAclRequest
+     * @return BatchCreateAclResponse
+     * @throws TencentCloudSDKException
+     */
+    public BatchCreateAclResponse BatchCreateAcl(BatchCreateAclRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<BatchCreateAclResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<BatchCreateAclResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "BatchCreateAcl");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *添加 ACL 策略
      * @param req CreateAclRequest
      * @return CreateAclResponse

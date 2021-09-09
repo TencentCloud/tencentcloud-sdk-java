@@ -30,7 +30,7 @@ public class CreateCloudBaseRunServerVersionRequest extends AbstractModel{
     private String EnvId;
 
     /**
-    * 枚举（package/repository/image)
+    * 枚举（package/repository/image/jar/war)
     */
     @SerializedName("UploadType")
     @Expose
@@ -289,6 +289,41 @@ public class CreateCloudBaseRunServerVersionRequest extends AbstractModel{
     private CloudBaseRunServiceVolumeMount [] ServiceVolumeMounts;
 
     /**
+    * 是否有Dockerfile：0-default has, 1-has, 2-has not
+    */
+    @SerializedName("HasDockerfile")
+    @Expose
+    private Long HasDockerfile;
+
+    /**
+    * 基础镜像
+    */
+    @SerializedName("BaseImage")
+    @Expose
+    private String BaseImage;
+
+    /**
+    * 容器启动入口命令
+    */
+    @SerializedName("EntryPoint")
+    @Expose
+    private String EntryPoint;
+
+    /**
+    * 仓库语言
+    */
+    @SerializedName("RepoLanguage")
+    @Expose
+    private String RepoLanguage;
+
+    /**
+    * 用户实际上传文件名（仅UploadType为jar/war时必填）
+    */
+    @SerializedName("UploadFilename")
+    @Expose
+    private String UploadFilename;
+
+    /**
      * Get 环境ID 
      * @return EnvId 环境ID
      */
@@ -305,16 +340,16 @@ public class CreateCloudBaseRunServerVersionRequest extends AbstractModel{
     }
 
     /**
-     * Get 枚举（package/repository/image) 
-     * @return UploadType 枚举（package/repository/image)
+     * Get 枚举（package/repository/image/jar/war) 
+     * @return UploadType 枚举（package/repository/image/jar/war)
      */
     public String getUploadType() {
         return this.UploadType;
     }
 
     /**
-     * Set 枚举（package/repository/image)
-     * @param UploadType 枚举（package/repository/image)
+     * Set 枚举（package/repository/image/jar/war)
+     * @param UploadType 枚举（package/repository/image/jar/war)
      */
     public void setUploadType(String UploadType) {
         this.UploadType = UploadType;
@@ -896,6 +931,86 @@ public class CreateCloudBaseRunServerVersionRequest extends AbstractModel{
         this.ServiceVolumeMounts = ServiceVolumeMounts;
     }
 
+    /**
+     * Get 是否有Dockerfile：0-default has, 1-has, 2-has not 
+     * @return HasDockerfile 是否有Dockerfile：0-default has, 1-has, 2-has not
+     */
+    public Long getHasDockerfile() {
+        return this.HasDockerfile;
+    }
+
+    /**
+     * Set 是否有Dockerfile：0-default has, 1-has, 2-has not
+     * @param HasDockerfile 是否有Dockerfile：0-default has, 1-has, 2-has not
+     */
+    public void setHasDockerfile(Long HasDockerfile) {
+        this.HasDockerfile = HasDockerfile;
+    }
+
+    /**
+     * Get 基础镜像 
+     * @return BaseImage 基础镜像
+     */
+    public String getBaseImage() {
+        return this.BaseImage;
+    }
+
+    /**
+     * Set 基础镜像
+     * @param BaseImage 基础镜像
+     */
+    public void setBaseImage(String BaseImage) {
+        this.BaseImage = BaseImage;
+    }
+
+    /**
+     * Get 容器启动入口命令 
+     * @return EntryPoint 容器启动入口命令
+     */
+    public String getEntryPoint() {
+        return this.EntryPoint;
+    }
+
+    /**
+     * Set 容器启动入口命令
+     * @param EntryPoint 容器启动入口命令
+     */
+    public void setEntryPoint(String EntryPoint) {
+        this.EntryPoint = EntryPoint;
+    }
+
+    /**
+     * Get 仓库语言 
+     * @return RepoLanguage 仓库语言
+     */
+    public String getRepoLanguage() {
+        return this.RepoLanguage;
+    }
+
+    /**
+     * Set 仓库语言
+     * @param RepoLanguage 仓库语言
+     */
+    public void setRepoLanguage(String RepoLanguage) {
+        this.RepoLanguage = RepoLanguage;
+    }
+
+    /**
+     * Get 用户实际上传文件名（仅UploadType为jar/war时必填） 
+     * @return UploadFilename 用户实际上传文件名（仅UploadType为jar/war时必填）
+     */
+    public String getUploadFilename() {
+        return this.UploadFilename;
+    }
+
+    /**
+     * Set 用户实际上传文件名（仅UploadType为jar/war时必填）
+     * @param UploadFilename 用户实际上传文件名（仅UploadType为jar/war时必填）
+     */
+    public void setUploadFilename(String UploadFilename) {
+        this.UploadFilename = UploadFilename;
+    }
+
     public CreateCloudBaseRunServerVersionRequest() {
     }
 
@@ -1030,6 +1145,21 @@ public class CreateCloudBaseRunServerVersionRequest extends AbstractModel{
                 this.ServiceVolumeMounts[i] = new CloudBaseRunServiceVolumeMount(source.ServiceVolumeMounts[i]);
             }
         }
+        if (source.HasDockerfile != null) {
+            this.HasDockerfile = new Long(source.HasDockerfile);
+        }
+        if (source.BaseImage != null) {
+            this.BaseImage = new String(source.BaseImage);
+        }
+        if (source.EntryPoint != null) {
+            this.EntryPoint = new String(source.EntryPoint);
+        }
+        if (source.RepoLanguage != null) {
+            this.RepoLanguage = new String(source.RepoLanguage);
+        }
+        if (source.UploadFilename != null) {
+            this.UploadFilename = new String(source.UploadFilename);
+        }
     }
 
 
@@ -1075,6 +1205,11 @@ public class CreateCloudBaseRunServerVersionRequest extends AbstractModel{
         this.setParamArrayObj(map, prefix + "ServiceVolumes.", this.ServiceVolumes);
         this.setParamSimple(map, prefix + "IsCreateJnsGw", this.IsCreateJnsGw);
         this.setParamArrayObj(map, prefix + "ServiceVolumeMounts.", this.ServiceVolumeMounts);
+        this.setParamSimple(map, prefix + "HasDockerfile", this.HasDockerfile);
+        this.setParamSimple(map, prefix + "BaseImage", this.BaseImage);
+        this.setParamSimple(map, prefix + "EntryPoint", this.EntryPoint);
+        this.setParamSimple(map, prefix + "RepoLanguage", this.RepoLanguage);
+        this.setParamSimple(map, prefix + "UploadFilename", this.UploadFilename);
 
     }
 }
