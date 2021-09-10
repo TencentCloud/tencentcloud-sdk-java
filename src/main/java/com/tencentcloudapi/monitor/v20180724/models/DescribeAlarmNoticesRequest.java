@@ -86,6 +86,13 @@ public class DescribeAlarmNoticesRequest extends AbstractModel{
     private Long [] GroupIds;
 
     /**
+    * 根据通知模板 id 过滤，空数组/不传则不过滤
+    */
+    @SerializedName("NoticeIds")
+    @Expose
+    private String [] NoticeIds;
+
+    /**
      * Get 模块名，这里填“monitor” 
      * @return Module 模块名，这里填“monitor”
      */
@@ -229,6 +236,22 @@ public class DescribeAlarmNoticesRequest extends AbstractModel{
         this.GroupIds = GroupIds;
     }
 
+    /**
+     * Get 根据通知模板 id 过滤，空数组/不传则不过滤 
+     * @return NoticeIds 根据通知模板 id 过滤，空数组/不传则不过滤
+     */
+    public String [] getNoticeIds() {
+        return this.NoticeIds;
+    }
+
+    /**
+     * Set 根据通知模板 id 过滤，空数组/不传则不过滤
+     * @param NoticeIds 根据通知模板 id 过滤，空数组/不传则不过滤
+     */
+    public void setNoticeIds(String [] NoticeIds) {
+        this.NoticeIds = NoticeIds;
+    }
+
     public DescribeAlarmNoticesRequest() {
     }
 
@@ -270,6 +293,12 @@ public class DescribeAlarmNoticesRequest extends AbstractModel{
                 this.GroupIds[i] = new Long(source.GroupIds[i]);
             }
         }
+        if (source.NoticeIds != null) {
+            this.NoticeIds = new String[source.NoticeIds.length];
+            for (int i = 0; i < source.NoticeIds.length; i++) {
+                this.NoticeIds[i] = new String(source.NoticeIds[i]);
+            }
+        }
     }
 
 
@@ -286,6 +315,7 @@ public class DescribeAlarmNoticesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ReceiverType", this.ReceiverType);
         this.setParamArraySimple(map, prefix + "UserIds.", this.UserIds);
         this.setParamArraySimple(map, prefix + "GroupIds.", this.GroupIds);
+        this.setParamArraySimple(map, prefix + "NoticeIds.", this.NoticeIds);
 
     }
 }

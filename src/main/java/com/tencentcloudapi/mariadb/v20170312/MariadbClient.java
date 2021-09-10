@@ -180,6 +180,26 @@ public class MariadbClient extends AbstractClient{
     }
 
     /**
+     *创建独享集群Mariadb实例
+     * @param req CreateDedicatedClusterDBInstanceRequest
+     * @return CreateDedicatedClusterDBInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDedicatedClusterDBInstanceResponse CreateDedicatedClusterDBInstance(CreateDedicatedClusterDBInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateDedicatedClusterDBInstanceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateDedicatedClusterDBInstanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateDedicatedClusterDBInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（CreateTmpInstances）用于创建临时实例。
      * @param req CreateTmpInstancesRequest
      * @return CreateTmpInstancesResponse

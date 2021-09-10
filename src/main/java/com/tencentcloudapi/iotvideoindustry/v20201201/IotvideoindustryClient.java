@@ -420,7 +420,7 @@ public class IotvideoindustryClient extends AbstractClient{
     }
 
     /**
-     *获取设备下属通道
+     *获取IPC设备下属通道
      * @param req DescribeIPCChannelsRequest
      * @return DescribeIPCChannelsResponse
      * @throws TencentCloudSDKException

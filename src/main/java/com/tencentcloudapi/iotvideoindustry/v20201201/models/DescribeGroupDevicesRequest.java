@@ -59,6 +59,7 @@ public class DescribeGroupDevicesRequest extends AbstractModel{
 
     /**
     * 当Group是普通组的时候，支持根据deviceTypes筛选类型
+ 0: 普通摄像头1:  国标VMS设备 2: 国标IPC设备 3: 国标NVR设备  4: 国标NVR通道 5: 国标VMS通道 6: 国标IPC通道 9: 智能告警设备 10: 带有RTSP固定地址的设备
     */
     @SerializedName("DeviceTypes")
     @Expose
@@ -145,8 +146,10 @@ public class DescribeGroupDevicesRequest extends AbstractModel{
     }
 
     /**
-     * Get 当Group是普通组的时候，支持根据deviceTypes筛选类型 
+     * Get 当Group是普通组的时候，支持根据deviceTypes筛选类型
+ 0: 普通摄像头1:  国标VMS设备 2: 国标IPC设备 3: 国标NVR设备  4: 国标NVR通道 5: 国标VMS通道 6: 国标IPC通道 9: 智能告警设备 10: 带有RTSP固定地址的设备 
      * @return DeviceTypes 当Group是普通组的时候，支持根据deviceTypes筛选类型
+ 0: 普通摄像头1:  国标VMS设备 2: 国标IPC设备 3: 国标NVR设备  4: 国标NVR通道 5: 国标VMS通道 6: 国标IPC通道 9: 智能告警设备 10: 带有RTSP固定地址的设备
      */
     public Long [] getDeviceTypes() {
         return this.DeviceTypes;
@@ -154,7 +157,9 @@ public class DescribeGroupDevicesRequest extends AbstractModel{
 
     /**
      * Set 当Group是普通组的时候，支持根据deviceTypes筛选类型
+ 0: 普通摄像头1:  国标VMS设备 2: 国标IPC设备 3: 国标NVR设备  4: 国标NVR通道 5: 国标VMS通道 6: 国标IPC通道 9: 智能告警设备 10: 带有RTSP固定地址的设备
      * @param DeviceTypes 当Group是普通组的时候，支持根据deviceTypes筛选类型
+ 0: 普通摄像头1:  国标VMS设备 2: 国标IPC设备 3: 国标NVR设备  4: 国标NVR通道 5: 国标VMS通道 6: 国标IPC通道 9: 智能告警设备 10: 带有RTSP固定地址的设备
      */
     public void setDeviceTypes(Long [] DeviceTypes) {
         this.DeviceTypes = DeviceTypes;

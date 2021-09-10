@@ -51,7 +51,7 @@ public class RuleInfoData extends AbstractModel{
     private String Protocol;
 
     /**
-    * 策略
+    * 策略, 0：观察，1：阻断，2：放行
     */
     @SerializedName("Strategy")
     @Expose
@@ -213,16 +213,16 @@ public class RuleInfoData extends AbstractModel{
     }
 
     /**
-     * Get 策略 
-     * @return Strategy 策略
+     * Get 策略, 0：观察，1：阻断，2：放行 
+     * @return Strategy 策略, 0：观察，1：阻断，2：放行
      */
     public String getStrategy() {
         return this.Strategy;
     }
 
     /**
-     * Set 策略
-     * @param Strategy 策略
+     * Set 策略, 0：观察，1：阻断，2：放行
+     * @param Strategy 策略, 0：观察，1：阻断，2：放行
      */
     public void setStrategy(String Strategy) {
         this.Strategy = Strategy;

@@ -200,6 +200,14 @@ public class CloudBaseProjectVersion extends AbstractModel{
     private Boolean AutoDeployOnCodeChange;
 
     /**
+    * ci部署进度（%）
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BuildPercent")
+    @Expose
+    private Long BuildPercent;
+
+    /**
      * Get 项目名 
      * @return Name 项目名
      */
@@ -655,6 +663,26 @@ public class CloudBaseProjectVersion extends AbstractModel{
         this.AutoDeployOnCodeChange = AutoDeployOnCodeChange;
     }
 
+    /**
+     * Get ci部署进度（%）
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BuildPercent ci部署进度（%）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getBuildPercent() {
+        return this.BuildPercent;
+    }
+
+    /**
+     * Set ci部署进度（%）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BuildPercent ci部署进度（%）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBuildPercent(Long BuildPercent) {
+        this.BuildPercent = BuildPercent;
+    }
+
     public CloudBaseProjectVersion() {
     }
 
@@ -732,6 +760,9 @@ public class CloudBaseProjectVersion extends AbstractModel{
         if (source.AutoDeployOnCodeChange != null) {
             this.AutoDeployOnCodeChange = new Boolean(source.AutoDeployOnCodeChange);
         }
+        if (source.BuildPercent != null) {
+            this.BuildPercent = new Long(source.BuildPercent);
+        }
     }
 
 
@@ -760,6 +791,7 @@ public class CloudBaseProjectVersion extends AbstractModel{
         this.setParamSimple(map, prefix + "FailType", this.FailType);
         this.setParamSimple(map, prefix + "RepoUrl", this.RepoUrl);
         this.setParamSimple(map, prefix + "AutoDeployOnCodeChange", this.AutoDeployOnCodeChange);
+        this.setParamSimple(map, prefix + "BuildPercent", this.BuildPercent);
 
     }
 }

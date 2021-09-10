@@ -65,6 +65,13 @@ public class DescribeCloudBaseProjectLatestVersionListRequest extends AbstractMo
     private String [] Tags;
 
     /**
+    * ci的id
+    */
+    @SerializedName("CiId")
+    @Expose
+    private String CiId;
+
+    /**
      * Get 偏移量 
      * @return Offset 偏移量
      */
@@ -160,6 +167,22 @@ public class DescribeCloudBaseProjectLatestVersionListRequest extends AbstractMo
         this.Tags = Tags;
     }
 
+    /**
+     * Get ci的id 
+     * @return CiId ci的id
+     */
+    public String getCiId() {
+        return this.CiId;
+    }
+
+    /**
+     * Set ci的id
+     * @param CiId ci的id
+     */
+    public void setCiId(String CiId) {
+        this.CiId = CiId;
+    }
+
     public DescribeCloudBaseProjectLatestVersionListRequest() {
     }
 
@@ -189,6 +212,9 @@ public class DescribeCloudBaseProjectLatestVersionListRequest extends AbstractMo
                 this.Tags[i] = new String(source.Tags[i]);
             }
         }
+        if (source.CiId != null) {
+            this.CiId = new String(source.CiId);
+        }
     }
 
 
@@ -202,6 +228,7 @@ public class DescribeCloudBaseProjectLatestVersionListRequest extends AbstractMo
         this.setParamSimple(map, prefix + "ProjectName", this.ProjectName);
         this.setParamSimple(map, prefix + "ProjectType", this.ProjectType);
         this.setParamArraySimple(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "CiId", this.CiId);
 
     }
 }

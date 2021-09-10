@@ -51,7 +51,7 @@ public class SendStatus extends AbstractModel{
     private String SessionContext;
 
     /**
-    * 短信请求错误码，具体含义请参考 [错误码](https://cloud.tencent.com/document/product/382/49316)。
+    * 短信请求错误码，具体含义请参考 [错误码](https://cloud.tencent.com/document/api/382/55981#6.-.E9.94.99.E8.AF.AF.E7.A0.81)，发送成功返回 "Ok"。
     */
     @SerializedName("Code")
     @Expose
@@ -136,16 +136,16 @@ public class SendStatus extends AbstractModel{
     }
 
     /**
-     * Get 短信请求错误码，具体含义请参考 [错误码](https://cloud.tencent.com/document/product/382/49316)。 
-     * @return Code 短信请求错误码，具体含义请参考 [错误码](https://cloud.tencent.com/document/product/382/49316)。
+     * Get 短信请求错误码，具体含义请参考 [错误码](https://cloud.tencent.com/document/api/382/55981#6.-.E9.94.99.E8.AF.AF.E7.A0.81)，发送成功返回 "Ok"。 
+     * @return Code 短信请求错误码，具体含义请参考 [错误码](https://cloud.tencent.com/document/api/382/55981#6.-.E9.94.99.E8.AF.AF.E7.A0.81)，发送成功返回 "Ok"。
      */
     public String getCode() {
         return this.Code;
     }
 
     /**
-     * Set 短信请求错误码，具体含义请参考 [错误码](https://cloud.tencent.com/document/product/382/49316)。
-     * @param Code 短信请求错误码，具体含义请参考 [错误码](https://cloud.tencent.com/document/product/382/49316)。
+     * Set 短信请求错误码，具体含义请参考 [错误码](https://cloud.tencent.com/document/api/382/55981#6.-.E9.94.99.E8.AF.AF.E7.A0.81)，发送成功返回 "Ok"。
+     * @param Code 短信请求错误码，具体含义请参考 [错误码](https://cloud.tencent.com/document/api/382/55981#6.-.E9.94.99.E8.AF.AF.E7.A0.81)，发送成功返回 "Ok"。
      */
     public void setCode(String Code) {
         this.Code = Code;
