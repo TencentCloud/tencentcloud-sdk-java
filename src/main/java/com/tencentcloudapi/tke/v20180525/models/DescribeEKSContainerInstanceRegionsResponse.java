@@ -13,36 +13,29 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cwp.v20180228.models;
+package com.tencentcloudapi.tke.v20180525.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeMalwareRiskWarningResponse extends AbstractModel{
+public class DescribeEKSContainerInstanceRegionsResponse extends AbstractModel{
 
     /**
-    * 是否开启自动扫描：true-开启，false-未开启
-    */
-    @SerializedName("IsCheckRisk")
-    @Expose
-    private Boolean IsCheckRisk;
-
-    /**
-    * 风险文件列表信息
+    * EKS Container Instance支持的地域信息
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("List")
+    @SerializedName("Regions")
     @Expose
-    private MalwareRisk [] List;
+    private EksCiRegionInfo [] Regions;
 
     /**
-    * 是否弹出提示 true 弹出, false不弹
+    * 总数
     */
-    @SerializedName("IsPop")
+    @SerializedName("TotalCount")
     @Expose
-    private Boolean IsPop;
+    private Long TotalCount;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -52,55 +45,39 @@ public class DescribeMalwareRiskWarningResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 是否开启自动扫描：true-开启，false-未开启 
-     * @return IsCheckRisk 是否开启自动扫描：true-开启，false-未开启
-     */
-    public Boolean getIsCheckRisk() {
-        return this.IsCheckRisk;
-    }
-
-    /**
-     * Set 是否开启自动扫描：true-开启，false-未开启
-     * @param IsCheckRisk 是否开启自动扫描：true-开启，false-未开启
-     */
-    public void setIsCheckRisk(Boolean IsCheckRisk) {
-        this.IsCheckRisk = IsCheckRisk;
-    }
-
-    /**
-     * Get 风险文件列表信息
+     * Get EKS Container Instance支持的地域信息
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return List 风险文件列表信息
+     * @return Regions EKS Container Instance支持的地域信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public MalwareRisk [] getList() {
-        return this.List;
+    public EksCiRegionInfo [] getRegions() {
+        return this.Regions;
     }
 
     /**
-     * Set 风险文件列表信息
+     * Set EKS Container Instance支持的地域信息
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param List 风险文件列表信息
+     * @param Regions EKS Container Instance支持的地域信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setList(MalwareRisk [] List) {
-        this.List = List;
+    public void setRegions(EksCiRegionInfo [] Regions) {
+        this.Regions = Regions;
     }
 
     /**
-     * Get 是否弹出提示 true 弹出, false不弹 
-     * @return IsPop 是否弹出提示 true 弹出, false不弹
+     * Get 总数 
+     * @return TotalCount 总数
      */
-    public Boolean getIsPop() {
-        return this.IsPop;
+    public Long getTotalCount() {
+        return this.TotalCount;
     }
 
     /**
-     * Set 是否弹出提示 true 弹出, false不弹
-     * @param IsPop 是否弹出提示 true 弹出, false不弹
+     * Set 总数
+     * @param TotalCount 总数
      */
-    public void setIsPop(Boolean IsPop) {
-        this.IsPop = IsPop;
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
     }
 
     /**
@@ -119,25 +96,22 @@ public class DescribeMalwareRiskWarningResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeMalwareRiskWarningResponse() {
+    public DescribeEKSContainerInstanceRegionsResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeMalwareRiskWarningResponse(DescribeMalwareRiskWarningResponse source) {
-        if (source.IsCheckRisk != null) {
-            this.IsCheckRisk = new Boolean(source.IsCheckRisk);
-        }
-        if (source.List != null) {
-            this.List = new MalwareRisk[source.List.length];
-            for (int i = 0; i < source.List.length; i++) {
-                this.List[i] = new MalwareRisk(source.List[i]);
+    public DescribeEKSContainerInstanceRegionsResponse(DescribeEKSContainerInstanceRegionsResponse source) {
+        if (source.Regions != null) {
+            this.Regions = new EksCiRegionInfo[source.Regions.length];
+            for (int i = 0; i < source.Regions.length; i++) {
+                this.Regions[i] = new EksCiRegionInfo(source.Regions[i]);
             }
         }
-        if (source.IsPop != null) {
-            this.IsPop = new Boolean(source.IsPop);
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -149,9 +123,8 @@ public class DescribeMalwareRiskWarningResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "IsCheckRisk", this.IsCheckRisk);
-        this.setParamArrayObj(map, prefix + "List.", this.List);
-        this.setParamSimple(map, prefix + "IsPop", this.IsPop);
+        this.setParamArrayObj(map, prefix + "Regions.", this.Regions);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

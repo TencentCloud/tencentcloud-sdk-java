@@ -159,6 +159,26 @@ public class PrivatednsClient extends AbstractClient{
     }
 
     /**
+     *获取私有域解析账号列表
+     * @param req DescribePrivateDNSAccountListRequest
+     * @return DescribePrivateDNSAccountListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePrivateDNSAccountListResponse DescribePrivateDNSAccountList(DescribePrivateDNSAccountListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribePrivateDNSAccountListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribePrivateDNSAccountListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribePrivateDNSAccountList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取私有域信息
      * @param req DescribePrivateZoneRequest
      * @return DescribePrivateZoneResponse

@@ -20,31 +20,15 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TagSummaryOverviewItem extends AbstractModel{
+public class SummaryTotal extends AbstractModel{
 
     /**
-    * 标签值
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("TagValue")
-    @Expose
-    private String TagValue;
-
-    /**
-    * 实际花费
+    * 总数
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RealTotalCost")
     @Expose
     private String RealTotalCost;
-
-    /**
-    * 费用所占百分比，两位小数
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("RealTotalCostRatio")
-    @Expose
-    private String RealTotalCostRatio;
 
     /**
     * 原价，单位为元。TotalCost字段自账单3.0（即2021-05）之后开始生效，账单3.0之前返回"-"。合同价的情况下，TotalCost字段与官网价格存在差异，也返回“-”。
@@ -55,29 +39,9 @@ public class TagSummaryOverviewItem extends AbstractModel{
     private String TotalCost;
 
     /**
-     * Get 标签值
+     * Get 总数
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TagValue 标签值
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public String getTagValue() {
-        return this.TagValue;
-    }
-
-    /**
-     * Set 标签值
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param TagValue 标签值
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setTagValue(String TagValue) {
-        this.TagValue = TagValue;
-    }
-
-    /**
-     * Get 实际花费
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RealTotalCost 实际花费
+     * @return RealTotalCost 总数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRealTotalCost() {
@@ -85,33 +49,13 @@ public class TagSummaryOverviewItem extends AbstractModel{
     }
 
     /**
-     * Set 实际花费
+     * Set 总数
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RealTotalCost 实际花费
+     * @param RealTotalCost 总数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRealTotalCost(String RealTotalCost) {
         this.RealTotalCost = RealTotalCost;
-    }
-
-    /**
-     * Get 费用所占百分比，两位小数
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RealTotalCostRatio 费用所占百分比，两位小数
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public String getRealTotalCostRatio() {
-        return this.RealTotalCostRatio;
-    }
-
-    /**
-     * Set 费用所占百分比，两位小数
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param RealTotalCostRatio 费用所占百分比，两位小数
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setRealTotalCostRatio(String RealTotalCostRatio) {
-        this.RealTotalCostRatio = RealTotalCostRatio;
     }
 
     /**
@@ -134,22 +78,16 @@ public class TagSummaryOverviewItem extends AbstractModel{
         this.TotalCost = TotalCost;
     }
 
-    public TagSummaryOverviewItem() {
+    public SummaryTotal() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public TagSummaryOverviewItem(TagSummaryOverviewItem source) {
-        if (source.TagValue != null) {
-            this.TagValue = new String(source.TagValue);
-        }
+    public SummaryTotal(SummaryTotal source) {
         if (source.RealTotalCost != null) {
             this.RealTotalCost = new String(source.RealTotalCost);
-        }
-        if (source.RealTotalCostRatio != null) {
-            this.RealTotalCostRatio = new String(source.RealTotalCostRatio);
         }
         if (source.TotalCost != null) {
             this.TotalCost = new String(source.TotalCost);
@@ -161,9 +99,7 @@ public class TagSummaryOverviewItem extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TagValue", this.TagValue);
         this.setParamSimple(map, prefix + "RealTotalCost", this.RealTotalCost);
-        this.setParamSimple(map, prefix + "RealTotalCostRatio", this.RealTotalCostRatio);
         this.setParamSimple(map, prefix + "TotalCost", this.TotalCost);
 
     }

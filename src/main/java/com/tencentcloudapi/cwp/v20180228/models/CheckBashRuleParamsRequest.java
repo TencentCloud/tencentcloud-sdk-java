@@ -44,7 +44,7 @@ public class CheckBashRuleParamsRequest extends AbstractModel{
     private String Name;
 
     /**
-    * 用户填入的正则表达式
+    * 用户填入的正则表达式：“正则表达式“需与“提交EventId对应的命令内容”相匹配
     */
     @SerializedName("Rule")
     @Expose
@@ -106,16 +106,16 @@ public class CheckBashRuleParamsRequest extends AbstractModel{
     }
 
     /**
-     * Get 用户填入的正则表达式 
-     * @return Rule 用户填入的正则表达式
+     * Get 用户填入的正则表达式：“正则表达式“需与“提交EventId对应的命令内容”相匹配 
+     * @return Rule 用户填入的正则表达式：“正则表达式“需与“提交EventId对应的命令内容”相匹配
      */
     public String getRule() {
         return this.Rule;
     }
 
     /**
-     * Set 用户填入的正则表达式
-     * @param Rule 用户填入的正则表达式
+     * Set 用户填入的正则表达式：“正则表达式“需与“提交EventId对应的命令内容”相匹配
+     * @param Rule 用户填入的正则表达式：“正则表达式“需与“提交EventId对应的命令内容”相匹配
      */
     public void setRule(String Rule) {
         this.Rule = Rule;

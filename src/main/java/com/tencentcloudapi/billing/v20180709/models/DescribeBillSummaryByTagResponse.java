@@ -38,6 +38,14 @@ public class DescribeBillSummaryByTagResponse extends AbstractModel{
     private TagSummaryOverviewItem [] SummaryOverview;
 
     /**
+    * 总数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SummaryTotal")
+    @Expose
+    private SummaryTotal SummaryTotal;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -81,6 +89,26 @@ public class DescribeBillSummaryByTagResponse extends AbstractModel{
     }
 
     /**
+     * Get 总数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SummaryTotal 总数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public SummaryTotal getSummaryTotal() {
+        return this.SummaryTotal;
+    }
+
+    /**
+     * Set 总数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SummaryTotal 总数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSummaryTotal(SummaryTotal SummaryTotal) {
+        this.SummaryTotal = SummaryTotal;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -113,6 +141,9 @@ public class DescribeBillSummaryByTagResponse extends AbstractModel{
                 this.SummaryOverview[i] = new TagSummaryOverviewItem(source.SummaryOverview[i]);
             }
         }
+        if (source.SummaryTotal != null) {
+            this.SummaryTotal = new SummaryTotal(source.SummaryTotal);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -125,6 +156,7 @@ public class DescribeBillSummaryByTagResponse extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Ready", this.Ready);
         this.setParamArrayObj(map, prefix + "SummaryOverview.", this.SummaryOverview);
+        this.setParamObj(map, prefix + "SummaryTotal.", this.SummaryTotal);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

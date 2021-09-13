@@ -105,6 +105,9 @@ public enum BatchErrorCode {
     // 实例类型列表不能为空。
      INVALIDPARAMETERVALUE_INSTANCETYPESEMPTY("InvalidParameterValue.InstanceTypesEmpty"),
      
+    // DataTypeAny不合法。
+     INVALIDPARAMETERVALUE_INVALIDDATATYPEANY("InvalidParameterValue.InvalidDataTypeAny"),
+     
     // Filter参数值数量超过限制。
      INVALIDPARAMETERVALUE_LIMITEXCEEDED("InvalidParameterValue.LimitExceeded"),
      
@@ -116,6 +119,9 @@ public enum BatchErrorCode {
      
     // 非法的负值参数。
      INVALIDPARAMETERVALUE_NEGATIVE("InvalidParameterValue.Negative"),
+     
+    // 参数值不是浮点型。
+     INVALIDPARAMETERVALUE_NOTFLOAT("InvalidParameterValue.NotFloat"),
      
     // 指定的OsTypeId不合法。
      INVALIDPARAMETERVALUE_OSTYPEID("InvalidParameterValue.OsTypeId"),

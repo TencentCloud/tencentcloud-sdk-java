@@ -79,6 +79,13 @@ public class ActionSummaryOverviewItem extends AbstractModel{
     private String BillMonth;
 
     /**
+    * 原价，单位为元。TotalCost字段自账单3.0（即2021-05）之后开始生效，账单3.0之前返回"-"。合同价的情况下，TotalCost字段与官网价格存在差异，也返回“-”。
+    */
+    @SerializedName("TotalCost")
+    @Expose
+    private String TotalCost;
+
+    /**
      * Get 交易类型：包年包月新购/续费/升降配/退款、按量计费扣费、调账补偿/扣费等类型 
      * @return ActionType 交易类型：包年包月新购/续费/升降配/退款、按量计费扣费、调账补偿/扣费等类型
      */
@@ -206,6 +213,22 @@ public class ActionSummaryOverviewItem extends AbstractModel{
         this.BillMonth = BillMonth;
     }
 
+    /**
+     * Get 原价，单位为元。TotalCost字段自账单3.0（即2021-05）之后开始生效，账单3.0之前返回"-"。合同价的情况下，TotalCost字段与官网价格存在差异，也返回“-”。 
+     * @return TotalCost 原价，单位为元。TotalCost字段自账单3.0（即2021-05）之后开始生效，账单3.0之前返回"-"。合同价的情况下，TotalCost字段与官网价格存在差异，也返回“-”。
+     */
+    public String getTotalCost() {
+        return this.TotalCost;
+    }
+
+    /**
+     * Set 原价，单位为元。TotalCost字段自账单3.0（即2021-05）之后开始生效，账单3.0之前返回"-"。合同价的情况下，TotalCost字段与官网价格存在差异，也返回“-”。
+     * @param TotalCost 原价，单位为元。TotalCost字段自账单3.0（即2021-05）之后开始生效，账单3.0之前返回"-"。合同价的情况下，TotalCost字段与官网价格存在差异，也返回“-”。
+     */
+    public void setTotalCost(String TotalCost) {
+        this.TotalCost = TotalCost;
+    }
+
     public ActionSummaryOverviewItem() {
     }
 
@@ -238,6 +261,9 @@ public class ActionSummaryOverviewItem extends AbstractModel{
         if (source.BillMonth != null) {
             this.BillMonth = new String(source.BillMonth);
         }
+        if (source.TotalCost != null) {
+            this.TotalCost = new String(source.TotalCost);
+        }
     }
 
 
@@ -253,6 +279,7 @@ public class ActionSummaryOverviewItem extends AbstractModel{
         this.setParamSimple(map, prefix + "IncentivePayAmount", this.IncentivePayAmount);
         this.setParamSimple(map, prefix + "VoucherPayAmount", this.VoucherPayAmount);
         this.setParamSimple(map, prefix + "BillMonth", this.BillMonth);
+        this.setParamSimple(map, prefix + "TotalCost", this.TotalCost);
 
     }
 }

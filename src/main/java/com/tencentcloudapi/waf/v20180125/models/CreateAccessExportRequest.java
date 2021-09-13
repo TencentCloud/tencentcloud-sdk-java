@@ -51,7 +51,7 @@ public class CreateAccessExportRequest extends AbstractModel{
     private String Query;
 
     /**
-    * 日志导出数量
+    * 日志导出数量，最大值100w
     */
     @SerializedName("Count")
     @Expose
@@ -136,16 +136,16 @@ public class CreateAccessExportRequest extends AbstractModel{
     }
 
     /**
-     * Get 日志导出数量 
-     * @return Count 日志导出数量
+     * Get 日志导出数量，最大值100w 
+     * @return Count 日志导出数量，最大值100w
      */
     public Long getCount() {
         return this.Count;
     }
 
     /**
-     * Set 日志导出数量
-     * @param Count 日志导出数量
+     * Set 日志导出数量，最大值100w
+     * @param Count 日志导出数量，最大值100w
      */
     public void setCount(Long Count) {
         this.Count = Count;

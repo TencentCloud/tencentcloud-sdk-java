@@ -44,7 +44,7 @@ public class DescribeServersAndRiskAndFirstInfoResponse extends AbstractModel{
     private Long ServersCount;
 
     /**
-    * 是否试用
+    * 是否试用：true-是，false-否
     */
     @SerializedName("IsFirstCheck")
     @Expose
@@ -113,16 +113,16 @@ public class DescribeServersAndRiskAndFirstInfoResponse extends AbstractModel{
     }
 
     /**
-     * Get 是否试用 
-     * @return IsFirstCheck 是否试用
+     * Get 是否试用：true-是，false-否 
+     * @return IsFirstCheck 是否试用：true-是，false-否
      */
     public Boolean getIsFirstCheck() {
         return this.IsFirstCheck;
     }
 
     /**
-     * Set 是否试用
-     * @param IsFirstCheck 是否试用
+     * Set 是否试用：true-是，false-否
+     * @param IsFirstCheck 是否试用：true-是，false-否
      */
     public void setIsFirstCheck(Boolean IsFirstCheck) {
         this.IsFirstCheck = IsFirstCheck;

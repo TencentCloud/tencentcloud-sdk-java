@@ -37,18 +37,18 @@ public class DescribeBillResourceSummaryRequest extends AbstractModel{
     private Long Limit;
 
     /**
-    * 周期类型，byUsedTime按计费周期/byPayTime按扣费周期。需要与费用中心该月份账单的周期保持一致。您可前往[账单概览](https://console.cloud.tencent.com/expense/bill/overview)页面顶部查看确认您的账单统计周期类型。
-    */
-    @SerializedName("PeriodType")
-    @Expose
-    private String PeriodType;
-
-    /**
     * 月份，格式为yyyy-mm。不能早于开通账单2.0的月份，最多可拉取24个月内的数据。
     */
     @SerializedName("Month")
     @Expose
     private String Month;
+
+    /**
+    * 周期类型，byUsedTime按计费周期/byPayTime按扣费周期。需要与费用中心该月份账单的周期保持一致。您可前往[账单概览](https://console.cloud.tencent.com/expense/bill/overview)页面顶部查看确认您的账单统计周期类型。
+    */
+    @SerializedName("PeriodType")
+    @Expose
+    private String PeriodType;
 
     /**
     * 是否需要访问列表的总记录数，用于前端分页
@@ -112,22 +112,6 @@ public class DescribeBillResourceSummaryRequest extends AbstractModel{
     }
 
     /**
-     * Get 周期类型，byUsedTime按计费周期/byPayTime按扣费周期。需要与费用中心该月份账单的周期保持一致。您可前往[账单概览](https://console.cloud.tencent.com/expense/bill/overview)页面顶部查看确认您的账单统计周期类型。 
-     * @return PeriodType 周期类型，byUsedTime按计费周期/byPayTime按扣费周期。需要与费用中心该月份账单的周期保持一致。您可前往[账单概览](https://console.cloud.tencent.com/expense/bill/overview)页面顶部查看确认您的账单统计周期类型。
-     */
-    public String getPeriodType() {
-        return this.PeriodType;
-    }
-
-    /**
-     * Set 周期类型，byUsedTime按计费周期/byPayTime按扣费周期。需要与费用中心该月份账单的周期保持一致。您可前往[账单概览](https://console.cloud.tencent.com/expense/bill/overview)页面顶部查看确认您的账单统计周期类型。
-     * @param PeriodType 周期类型，byUsedTime按计费周期/byPayTime按扣费周期。需要与费用中心该月份账单的周期保持一致。您可前往[账单概览](https://console.cloud.tencent.com/expense/bill/overview)页面顶部查看确认您的账单统计周期类型。
-     */
-    public void setPeriodType(String PeriodType) {
-        this.PeriodType = PeriodType;
-    }
-
-    /**
      * Get 月份，格式为yyyy-mm。不能早于开通账单2.0的月份，最多可拉取24个月内的数据。 
      * @return Month 月份，格式为yyyy-mm。不能早于开通账单2.0的月份，最多可拉取24个月内的数据。
      */
@@ -141,6 +125,22 @@ public class DescribeBillResourceSummaryRequest extends AbstractModel{
      */
     public void setMonth(String Month) {
         this.Month = Month;
+    }
+
+    /**
+     * Get 周期类型，byUsedTime按计费周期/byPayTime按扣费周期。需要与费用中心该月份账单的周期保持一致。您可前往[账单概览](https://console.cloud.tencent.com/expense/bill/overview)页面顶部查看确认您的账单统计周期类型。 
+     * @return PeriodType 周期类型，byUsedTime按计费周期/byPayTime按扣费周期。需要与费用中心该月份账单的周期保持一致。您可前往[账单概览](https://console.cloud.tencent.com/expense/bill/overview)页面顶部查看确认您的账单统计周期类型。
+     */
+    public String getPeriodType() {
+        return this.PeriodType;
+    }
+
+    /**
+     * Set 周期类型，byUsedTime按计费周期/byPayTime按扣费周期。需要与费用中心该月份账单的周期保持一致。您可前往[账单概览](https://console.cloud.tencent.com/expense/bill/overview)页面顶部查看确认您的账单统计周期类型。
+     * @param PeriodType 周期类型，byUsedTime按计费周期/byPayTime按扣费周期。需要与费用中心该月份账单的周期保持一致。您可前往[账单概览](https://console.cloud.tencent.com/expense/bill/overview)页面顶部查看确认您的账单统计周期类型。
+     */
+    public void setPeriodType(String PeriodType) {
+        this.PeriodType = PeriodType;
     }
 
     /**
@@ -225,11 +225,11 @@ public class DescribeBillResourceSummaryRequest extends AbstractModel{
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
         }
-        if (source.PeriodType != null) {
-            this.PeriodType = new String(source.PeriodType);
-        }
         if (source.Month != null) {
             this.Month = new String(source.Month);
+        }
+        if (source.PeriodType != null) {
+            this.PeriodType = new String(source.PeriodType);
         }
         if (source.NeedRecordNum != null) {
             this.NeedRecordNum = new Long(source.NeedRecordNum);
@@ -252,8 +252,8 @@ public class DescribeBillResourceSummaryRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
-        this.setParamSimple(map, prefix + "PeriodType", this.PeriodType);
         this.setParamSimple(map, prefix + "Month", this.Month);
+        this.setParamSimple(map, prefix + "PeriodType", this.PeriodType);
         this.setParamSimple(map, prefix + "NeedRecordNum", this.NeedRecordNum);
         this.setParamSimple(map, prefix + "ActionType", this.ActionType);
         this.setParamSimple(map, prefix + "ResourceId", this.ResourceId);

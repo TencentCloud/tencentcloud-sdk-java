@@ -999,6 +999,26 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *查询容器实例支持的地域
+     * @param req DescribeEKSContainerInstanceRegionsRequest
+     * @return DescribeEKSContainerInstanceRegionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeEKSContainerInstanceRegionsResponse DescribeEKSContainerInstanceRegions(DescribeEKSContainerInstanceRegionsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeEKSContainerInstanceRegionsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeEKSContainerInstanceRegionsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeEKSContainerInstanceRegions");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口用于查询开启vpc-cni模式的任务进度
      * @param req DescribeEnableVpcCniProgressRequest
      * @return DescribeEnableVpcCniProgressResponse

@@ -51,6 +51,13 @@ public class DescribeBillSummaryByTagRequest extends AbstractModel{
     private String PayerUin;
 
     /**
+    * 分账标签值
+    */
+    @SerializedName("TagValue")
+    @Expose
+    private String TagValue;
+
+    /**
      * Get 目前必须和EndTime相同月份，不支持跨月查询，且查询结果是整月数据，例如 BeginTime为2018-09，EndTime 为 2018-09，查询结果是 2018 年 9 月数据。 
      * @return BeginTime 目前必须和EndTime相同月份，不支持跨月查询，且查询结果是整月数据，例如 BeginTime为2018-09，EndTime 为 2018-09，查询结果是 2018 年 9 月数据。
      */
@@ -114,6 +121,22 @@ public class DescribeBillSummaryByTagRequest extends AbstractModel{
         this.PayerUin = PayerUin;
     }
 
+    /**
+     * Get 分账标签值 
+     * @return TagValue 分账标签值
+     */
+    public String getTagValue() {
+        return this.TagValue;
+    }
+
+    /**
+     * Set 分账标签值
+     * @param TagValue 分账标签值
+     */
+    public void setTagValue(String TagValue) {
+        this.TagValue = TagValue;
+    }
+
     public DescribeBillSummaryByTagRequest() {
     }
 
@@ -134,6 +157,9 @@ public class DescribeBillSummaryByTagRequest extends AbstractModel{
         if (source.PayerUin != null) {
             this.PayerUin = new String(source.PayerUin);
         }
+        if (source.TagValue != null) {
+            this.TagValue = new String(source.TagValue);
+        }
     }
 
 
@@ -145,6 +171,7 @@ public class DescribeBillSummaryByTagRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamSimple(map, prefix + "TagKey", this.TagKey);
         this.setParamSimple(map, prefix + "PayerUin", this.PayerUin);
+        this.setParamSimple(map, prefix + "TagValue", this.TagValue);
 
     }
 }

@@ -38,7 +38,7 @@ public class DescribeBaselineRuleResponse extends AbstractModel{
     private BaselineRuleInfo [] BaselineRuleList;
 
     /**
-    * 是否显示说明列
+    * 是否显示说明列：true-是，false-否
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ShowRuleRemark")
@@ -89,9 +89,9 @@ public class DescribeBaselineRuleResponse extends AbstractModel{
     }
 
     /**
-     * Get 是否显示说明列
+     * Get 是否显示说明列：true-是，false-否
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ShowRuleRemark 是否显示说明列
+     * @return ShowRuleRemark 是否显示说明列：true-是，false-否
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getShowRuleRemark() {
@@ -99,9 +99,9 @@ public class DescribeBaselineRuleResponse extends AbstractModel{
     }
 
     /**
-     * Set 是否显示说明列
+     * Set 是否显示说明列：true-是，false-否
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ShowRuleRemark 是否显示说明列
+     * @param ShowRuleRemark 是否显示说明列：true-是，false-否
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setShowRuleRemark(Boolean ShowRuleRemark) {

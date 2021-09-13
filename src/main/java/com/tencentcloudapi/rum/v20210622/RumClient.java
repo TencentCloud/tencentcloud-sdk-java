@@ -118,4 +118,24 @@ public class RumClient extends AbstractClient{
         return rsp.response;
     }
 
+    /**
+     *获取项目下的日志列表（实例创建的项目下的日志列表）
+     * @param req DescribeLogListRequest
+     * @return DescribeLogListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLogListResponse DescribeLogList(DescribeLogListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeLogListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeLogListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeLogList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
 }

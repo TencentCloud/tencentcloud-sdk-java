@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeWebPageServiceInfoResponse extends AbstractModel{
 
     /**
-    * 是否已购服务
+    * 是否已购服务：true-是，false-否
     */
     @SerializedName("Status")
     @Expose
@@ -93,16 +93,16 @@ public class DescribeWebPageServiceInfoResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 是否已购服务 
-     * @return Status 是否已购服务
+     * Get 是否已购服务：true-是，false-否 
+     * @return Status 是否已购服务：true-是，false-否
      */
     public Boolean getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 是否已购服务
-     * @param Status 是否已购服务
+     * Set 是否已购服务：true-是，false-否
+     * @param Status 是否已购服务：true-是，false-否
      */
     public void setStatus(Boolean Status) {
         this.Status = Status;

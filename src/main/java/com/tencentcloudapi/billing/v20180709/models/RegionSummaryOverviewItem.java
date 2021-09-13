@@ -80,6 +80,13 @@ public class RegionSummaryOverviewItem extends AbstractModel{
     private String BillMonth;
 
     /**
+    * 原价，单位为元。TotalCost字段自账单3.0（即2021-05）之后开始生效，账单3.0之前返回"-"。合同价的情况下，TotalCost字段与官网价格存在差异，也返回“-”。
+    */
+    @SerializedName("TotalCost")
+    @Expose
+    private String TotalCost;
+
+    /**
      * Get 地域ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return RegionId 地域ID
@@ -211,6 +218,22 @@ public class RegionSummaryOverviewItem extends AbstractModel{
         this.BillMonth = BillMonth;
     }
 
+    /**
+     * Get 原价，单位为元。TotalCost字段自账单3.0（即2021-05）之后开始生效，账单3.0之前返回"-"。合同价的情况下，TotalCost字段与官网价格存在差异，也返回“-”。 
+     * @return TotalCost 原价，单位为元。TotalCost字段自账单3.0（即2021-05）之后开始生效，账单3.0之前返回"-"。合同价的情况下，TotalCost字段与官网价格存在差异，也返回“-”。
+     */
+    public String getTotalCost() {
+        return this.TotalCost;
+    }
+
+    /**
+     * Set 原价，单位为元。TotalCost字段自账单3.0（即2021-05）之后开始生效，账单3.0之前返回"-"。合同价的情况下，TotalCost字段与官网价格存在差异，也返回“-”。
+     * @param TotalCost 原价，单位为元。TotalCost字段自账单3.0（即2021-05）之后开始生效，账单3.0之前返回"-"。合同价的情况下，TotalCost字段与官网价格存在差异，也返回“-”。
+     */
+    public void setTotalCost(String TotalCost) {
+        this.TotalCost = TotalCost;
+    }
+
     public RegionSummaryOverviewItem() {
     }
 
@@ -243,6 +266,9 @@ public class RegionSummaryOverviewItem extends AbstractModel{
         if (source.BillMonth != null) {
             this.BillMonth = new String(source.BillMonth);
         }
+        if (source.TotalCost != null) {
+            this.TotalCost = new String(source.TotalCost);
+        }
     }
 
 
@@ -258,6 +284,7 @@ public class RegionSummaryOverviewItem extends AbstractModel{
         this.setParamSimple(map, prefix + "IncentivePayAmount", this.IncentivePayAmount);
         this.setParamSimple(map, prefix + "VoucherPayAmount", this.VoucherPayAmount);
         this.setParamSimple(map, prefix + "BillMonth", this.BillMonth);
+        this.setParamSimple(map, prefix + "TotalCost", this.TotalCost);
 
     }
 }
