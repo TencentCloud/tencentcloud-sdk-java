@@ -472,6 +472,27 @@ public class VodClient extends AbstractClient{
     }
 
     /**
+     *该接口用于将加速域名添加到点播，一个用户最多添加20个加速域名。
+1.域名添加成功后点播会进行域名的部署，域名由部署状态变为在线状态大概需要2分钟的时间。
+     * @param req CreateVodDomainRequest
+     * @return CreateVodDomainResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateVodDomainResponse CreateVodDomain(CreateVodDomainRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateVodDomainResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateVodDomainResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateVodDomain");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建用户自定义水印模板，数量上限：1000。
      * @param req CreateWatermarkTemplateRequest
      * @return CreateWatermarkTemplateResponse
@@ -829,6 +850,27 @@ public class VodClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteTranscodeTemplateResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteTranscodeTemplate");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *该接口用于删除点播加速域名。
+1、域名删除前需要先关闭所有区域的加速。
+     * @param req DeleteVodDomainRequest
+     * @return DeleteVodDomainResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteVodDomainResponse DeleteVodDomain(DeleteVodDomainRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteVodDomainResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteVodDomainResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteVodDomain");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -2128,6 +2170,48 @@ public class VodClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyTranscodeTemplateResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyTranscodeTemplate");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *该接口用于开启或者关闭点播域名的加速区域。
+1、域名部署状态为 Online 状态时才允许开启或者关闭域名加速区域。
+     * @param req ModifyVodDomainAccelerateConfigRequest
+     * @return ModifyVodDomainAccelerateConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyVodDomainAccelerateConfigResponse ModifyVodDomainAccelerateConfig(ModifyVodDomainAccelerateConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyVodDomainAccelerateConfigResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyVodDomainAccelerateConfigResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyVodDomainAccelerateConfig");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *该接口用于修改域名配置，可以修改域名的防盗链配置。
+1、域名部署状态为 Online 状态时才允许修改域名的配置。
+     * @param req ModifyVodDomainConfigRequest
+     * @return ModifyVodDomainConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyVodDomainConfigResponse ModifyVodDomainConfig(ModifyVodDomainConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyVodDomainConfigResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyVodDomainConfigResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyVodDomainConfig");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

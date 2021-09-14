@@ -24,7 +24,7 @@ public class UrlSignatureAuthPolicy extends AbstractModel{
 
     /**
     * [Key 防盗链](https://cloud.tencent.com/document/product/266/14047)设置状态，可选值：
-<li>Enabled: 启用；</li>
+<li>Enabled: 启用。</li>
 <li>Disabled: 禁用。</li>
     */
     @SerializedName("Status")
@@ -33,6 +33,7 @@ public class UrlSignatureAuthPolicy extends AbstractModel{
 
     /**
     * [Key 防盗链](https://cloud.tencent.com/document/product/266/14047)中用于生成签名的密钥。
+EncryptedKey 字符串的长度为8~40个字节，不能包含不可见字符。
     */
     @SerializedName("EncryptedKey")
     @Expose
@@ -40,10 +41,10 @@ public class UrlSignatureAuthPolicy extends AbstractModel{
 
     /**
      * Get [Key 防盗链](https://cloud.tencent.com/document/product/266/14047)设置状态，可选值：
-<li>Enabled: 启用；</li>
+<li>Enabled: 启用。</li>
 <li>Disabled: 禁用。</li> 
      * @return Status [Key 防盗链](https://cloud.tencent.com/document/product/266/14047)设置状态，可选值：
-<li>Enabled: 启用；</li>
+<li>Enabled: 启用。</li>
 <li>Disabled: 禁用。</li>
      */
     public String getStatus() {
@@ -52,10 +53,10 @@ public class UrlSignatureAuthPolicy extends AbstractModel{
 
     /**
      * Set [Key 防盗链](https://cloud.tencent.com/document/product/266/14047)设置状态，可选值：
-<li>Enabled: 启用；</li>
+<li>Enabled: 启用。</li>
 <li>Disabled: 禁用。</li>
      * @param Status [Key 防盗链](https://cloud.tencent.com/document/product/266/14047)设置状态，可选值：
-<li>Enabled: 启用；</li>
+<li>Enabled: 启用。</li>
 <li>Disabled: 禁用。</li>
      */
     public void setStatus(String Status) {
@@ -63,8 +64,10 @@ public class UrlSignatureAuthPolicy extends AbstractModel{
     }
 
     /**
-     * Get [Key 防盗链](https://cloud.tencent.com/document/product/266/14047)中用于生成签名的密钥。 
+     * Get [Key 防盗链](https://cloud.tencent.com/document/product/266/14047)中用于生成签名的密钥。
+EncryptedKey 字符串的长度为8~40个字节，不能包含不可见字符。 
      * @return EncryptedKey [Key 防盗链](https://cloud.tencent.com/document/product/266/14047)中用于生成签名的密钥。
+EncryptedKey 字符串的长度为8~40个字节，不能包含不可见字符。
      */
     public String getEncryptedKey() {
         return this.EncryptedKey;
@@ -72,7 +75,9 @@ public class UrlSignatureAuthPolicy extends AbstractModel{
 
     /**
      * Set [Key 防盗链](https://cloud.tencent.com/document/product/266/14047)中用于生成签名的密钥。
+EncryptedKey 字符串的长度为8~40个字节，不能包含不可见字符。
      * @param EncryptedKey [Key 防盗链](https://cloud.tencent.com/document/product/266/14047)中用于生成签名的密钥。
+EncryptedKey 字符串的长度为8~40个字节，不能包含不可见字符。
      */
     public void setEncryptedKey(String EncryptedKey) {
         this.EncryptedKey = EncryptedKey;

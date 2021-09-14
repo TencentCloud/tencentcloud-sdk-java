@@ -141,6 +141,13 @@ OPEN：公网属性， INTERNAL：内网属性。
     private ExclusiveCluster ExclusiveCluster;
 
     /**
+    * 创建性能独享型CLB，传SLA。
+    */
+    @SerializedName("SlaType")
+    @Expose
+    private String SlaType;
+
+    /**
     * 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
     */
     @SerializedName("ClientToken")
@@ -464,6 +471,22 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
+     * Get 创建性能独享型CLB，传SLA。 
+     * @return SlaType 创建性能独享型CLB，传SLA。
+     */
+    public String getSlaType() {
+        return this.SlaType;
+    }
+
+    /**
+     * Set 创建性能独享型CLB，传SLA。
+     * @param SlaType 创建性能独享型CLB，传SLA。
+     */
+    public void setSlaType(String SlaType) {
+        this.SlaType = SlaType;
+    }
+
+    /**
      * Get 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。 
      * @return ClientToken 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
      */
@@ -622,6 +645,9 @@ OPEN：公网属性， INTERNAL：内网属性。
         if (source.ExclusiveCluster != null) {
             this.ExclusiveCluster = new ExclusiveCluster(source.ExclusiveCluster);
         }
+        if (source.SlaType != null) {
+            this.SlaType = new String(source.SlaType);
+        }
         if (source.ClientToken != null) {
             this.ClientToken = new String(source.ClientToken);
         }
@@ -666,6 +692,7 @@ OPEN：公网属性， INTERNAL：内网属性。
         this.setParamSimple(map, prefix + "Vip", this.Vip);
         this.setParamSimple(map, prefix + "BandwidthPackageId", this.BandwidthPackageId);
         this.setParamObj(map, prefix + "ExclusiveCluster.", this.ExclusiveCluster);
+        this.setParamSimple(map, prefix + "SlaType", this.SlaType);
         this.setParamSimple(map, prefix + "ClientToken", this.ClientToken);
         this.setParamSimple(map, prefix + "SnatPro", this.SnatPro);
         this.setParamArrayObj(map, prefix + "SnatIps.", this.SnatIps);

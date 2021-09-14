@@ -713,6 +713,26 @@ public class ClbClient extends AbstractClient{
     }
 
     /**
+     *查询后端云主机或弹性网卡绑定的负载均衡，支持弹性网卡和cvm查询。
+     * @param req DescribeLBListenersRequest
+     * @return DescribeLBListenersResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLBListenersResponse DescribeLBListeners(DescribeLBListenersRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeLBListenersResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeLBListenersResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeLBListeners");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *DescribeListeners 接口可根据负载均衡器 ID、监听器的协议或端口作为过滤条件获取监听器列表。如果不指定任何过滤条件，则返回该负载均衡实例下的所有监听器。
      * @param req DescribeListenersRequest
      * @return DescribeListenersResponse

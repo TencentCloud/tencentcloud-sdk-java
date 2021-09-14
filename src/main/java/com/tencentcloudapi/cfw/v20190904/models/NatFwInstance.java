@@ -61,6 +61,14 @@ public class NatFwInstance extends AbstractModel{
     private Long Status;
 
     /**
+    * nat公网ip
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("NatIp")
+    @Expose
+    private String NatIp;
+
+    /**
      * Get nat实例id 
      * @return NatinsId nat实例id
      */
@@ -152,6 +160,26 @@ public class NatFwInstance extends AbstractModel{
         this.Status = Status;
     }
 
+    /**
+     * Get nat公网ip
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return NatIp nat公网ip
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getNatIp() {
+        return this.NatIp;
+    }
+
+    /**
+     * Set nat公网ip
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param NatIp nat公网ip
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNatIp(String NatIp) {
+        this.NatIp = NatIp;
+    }
+
     public NatFwInstance() {
     }
 
@@ -175,6 +203,9 @@ public class NatFwInstance extends AbstractModel{
         if (source.Status != null) {
             this.Status = new Long(source.Status);
         }
+        if (source.NatIp != null) {
+            this.NatIp = new String(source.NatIp);
+        }
     }
 
 
@@ -187,6 +218,7 @@ public class NatFwInstance extends AbstractModel{
         this.setParamSimple(map, prefix + "Region", this.Region);
         this.setParamSimple(map, prefix + "FwMode", this.FwMode);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "NatIp", this.NatIp);
 
     }
 }

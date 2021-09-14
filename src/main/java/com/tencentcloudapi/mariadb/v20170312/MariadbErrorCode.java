@@ -174,6 +174,9 @@ public enum MariadbErrorCode {
     // 数据库更新失败。
      INTERNALERROR_UPDATEDATABASEFAILED("InternalError.UpdateDatabaseFailed"),
      
+    // 外网操作失败。
+     INTERNALERROR_WANSERVICEFAILED("InternalError.WanServiceFailed"),
+     
     // 参数错误。
      INVALIDPARAMETER("InvalidParameter"),
      
@@ -204,11 +207,17 @@ public enum MariadbErrorCode {
     // 未找到请求的实例。
      INVALIDPARAMETER_INSTANCENOTFOUND("InvalidParameter.InstanceNotFound"),
      
+    // 不支持此计费类型调用当前接口。
+     INVALIDPARAMETER_NOTSUPPORTEDPAYMODE("InvalidParameter.NotSupportedPayMode"),
+     
     // 没有权限操作该接口或资源。
      INVALIDPARAMETER_PERMISSIONDENIED("InvalidParameter.PermissionDenied"),
      
     // 安全组合法性校验不通过。
      INVALIDPARAMETER_SGCHECKFAIL("InvalidParameter.SGCheckFail"),
+     
+    // 实例分片不存在。
+     INVALIDPARAMETER_SHARDRESOURCEIDNOTFOUND("InvalidParameter.ShardResourceIdNotFound"),
      
     // 找不到对应的售卖规格。
      INVALIDPARAMETER_SPECNOTFOUND("InvalidParameter.SpecNotFound"),
@@ -272,6 +281,9 @@ public enum MariadbErrorCode {
      
     // 指定的账号不存在。
      RESOURCENOTFOUND_ACCOUNTDOESNOTEXIST("ResourceNotFound.AccountDoesNotExist"),
+     
+    // 实例不存在。
+     RESOURCENOTFOUND_INSTANCENOTFOUND("ResourceNotFound.InstanceNotFound"),
      
     // 找不到指定的数据库实例。
      RESOURCENOTFOUND_NOINSTANCEFOUND("ResourceNotFound.NoInstanceFound"),

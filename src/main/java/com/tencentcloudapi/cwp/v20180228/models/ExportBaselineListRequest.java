@@ -23,12 +23,11 @@ import java.util.HashMap;
 public class ExportBaselineListRequest extends AbstractModel{
 
     /**
-    * 过滤条件。
+    * 过滤条件：
 <li>StrategyId- Uint64 - 基线策略id</li>
-<li>Status - Uint64 - 处理状态1已通过 0未通过</li>
-<li>Level - Uint64[] - 处理状态1已通过 0未通过</li>BaselineName 
+<li>Status - Uint64 - 事件状态：0-未通过，1-忽略，3-通过，5-检测中</li>
 <li>BaselineName  - String - 基线名称</li>
-<li>Quuid- String - 主机quuid</li>
+<li>AliasName- String - 服务器名称/服务器ip</li>
 <li>Uuid- String - 主机uuid</li>
     */
     @SerializedName("Filters")
@@ -43,19 +42,17 @@ public class ExportBaselineListRequest extends AbstractModel{
     private Long IfDetail;
 
     /**
-     * Get 过滤条件。
+     * Get 过滤条件：
 <li>StrategyId- Uint64 - 基线策略id</li>
-<li>Status - Uint64 - 处理状态1已通过 0未通过</li>
-<li>Level - Uint64[] - 处理状态1已通过 0未通过</li>BaselineName 
+<li>Status - Uint64 - 事件状态：0-未通过，1-忽略，3-通过，5-检测中</li>
 <li>BaselineName  - String - 基线名称</li>
-<li>Quuid- String - 主机quuid</li>
+<li>AliasName- String - 服务器名称/服务器ip</li>
 <li>Uuid- String - 主机uuid</li> 
-     * @return Filters 过滤条件。
+     * @return Filters 过滤条件：
 <li>StrategyId- Uint64 - 基线策略id</li>
-<li>Status - Uint64 - 处理状态1已通过 0未通过</li>
-<li>Level - Uint64[] - 处理状态1已通过 0未通过</li>BaselineName 
+<li>Status - Uint64 - 事件状态：0-未通过，1-忽略，3-通过，5-检测中</li>
 <li>BaselineName  - String - 基线名称</li>
-<li>Quuid- String - 主机quuid</li>
+<li>AliasName- String - 服务器名称/服务器ip</li>
 <li>Uuid- String - 主机uuid</li>
      */
     public Filters [] getFilters() {
@@ -63,19 +60,17 @@ public class ExportBaselineListRequest extends AbstractModel{
     }
 
     /**
-     * Set 过滤条件。
+     * Set 过滤条件：
 <li>StrategyId- Uint64 - 基线策略id</li>
-<li>Status - Uint64 - 处理状态1已通过 0未通过</li>
-<li>Level - Uint64[] - 处理状态1已通过 0未通过</li>BaselineName 
+<li>Status - Uint64 - 事件状态：0-未通过，1-忽略，3-通过，5-检测中</li>
 <li>BaselineName  - String - 基线名称</li>
-<li>Quuid- String - 主机quuid</li>
+<li>AliasName- String - 服务器名称/服务器ip</li>
 <li>Uuid- String - 主机uuid</li>
-     * @param Filters 过滤条件。
+     * @param Filters 过滤条件：
 <li>StrategyId- Uint64 - 基线策略id</li>
-<li>Status - Uint64 - 处理状态1已通过 0未通过</li>
-<li>Level - Uint64[] - 处理状态1已通过 0未通过</li>BaselineName 
+<li>Status - Uint64 - 事件状态：0-未通过，1-忽略，3-通过，5-检测中</li>
 <li>BaselineName  - String - 基线名称</li>
-<li>Quuid- String - 主机quuid</li>
+<li>AliasName- String - 服务器名称/服务器ip</li>
 <li>Uuid- String - 主机uuid</li>
      */
     public void setFilters(Filters [] Filters) {

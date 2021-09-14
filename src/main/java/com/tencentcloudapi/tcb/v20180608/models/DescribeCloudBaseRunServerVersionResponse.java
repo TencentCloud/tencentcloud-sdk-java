@@ -302,6 +302,14 @@ public class DescribeCloudBaseRunServerVersionResponse extends AbstractModel{
     private String RepoLanguage;
 
     /**
+    * 自动扩缩容策略组
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PolicyDetail")
+    @Expose
+    private HpaPolicy [] PolicyDetail;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -993,6 +1001,26 @@ public class DescribeCloudBaseRunServerVersionResponse extends AbstractModel{
     }
 
     /**
+     * Get 自动扩缩容策略组
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PolicyDetail 自动扩缩容策略组
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public HpaPolicy [] getPolicyDetail() {
+        return this.PolicyDetail;
+    }
+
+    /**
+     * Set 自动扩缩容策略组
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PolicyDetail 自动扩缩容策略组
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPolicyDetail(HpaPolicy [] PolicyDetail) {
+        this.PolicyDetail = PolicyDetail;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -1127,6 +1155,12 @@ public class DescribeCloudBaseRunServerVersionResponse extends AbstractModel{
         if (source.RepoLanguage != null) {
             this.RepoLanguage = new String(source.RepoLanguage);
         }
+        if (source.PolicyDetail != null) {
+            this.PolicyDetail = new HpaPolicy[source.PolicyDetail.length];
+            for (int i = 0; i < source.PolicyDetail.length; i++) {
+                this.PolicyDetail[i] = new HpaPolicy(source.PolicyDetail[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -1173,6 +1207,7 @@ public class DescribeCloudBaseRunServerVersionResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "BaseImage", this.BaseImage);
         this.setParamSimple(map, prefix + "EntryPoint", this.EntryPoint);
         this.setParamSimple(map, prefix + "RepoLanguage", this.RepoLanguage);
+        this.setParamArrayObj(map, prefix + "PolicyDetail.", this.PolicyDetail);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

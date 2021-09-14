@@ -33,15 +33,16 @@ public class RefererAuthPolicy extends AbstractModel{
 
     /**
     * Referer 校验类型，可选值：
-<li>Black: 黑名单方式校验；</li>
-<li>White:白名单方式校验。</li>
+<li>Black：黑名单方式校验。HTTP 请求携带了 Referers 列表中的某个 Referer 将被拒绝访问。</li>
+<li>White：白名单方式校验。HTTP 请求携带了 Referers 列表中的 Referer 时才允许访问。</li>
+当 Status 取值为 Enabled 时，AuthType 必须赋值。
     */
     @SerializedName("AuthType")
     @Expose
     private String AuthType;
 
     /**
-    * 用于校验的 Referer 名单。
+    * 用于校验的 Referer 列表，最大支持20个 Referer。当 Status 取值为 Enabled 时， Referers 不能为空数组。Referer 的格式参考域名的格式。
     */
     @SerializedName("Referers")
     @Expose
@@ -49,8 +50,9 @@ public class RefererAuthPolicy extends AbstractModel{
 
     /**
     * 是否允许空 Referer 访问本域名，可选值：
-<li>Yes: 是；</li>
-<li>No: 否。</li>
+<li>Yes： 是。</li>
+<li>No： 否。</li>
+当 Status 取值为 Enabled 时，BlankRefererAllowed 必须赋值。
     */
     @SerializedName("BlankRefererAllowed")
     @Expose
@@ -82,11 +84,13 @@ public class RefererAuthPolicy extends AbstractModel{
 
     /**
      * Get Referer 校验类型，可选值：
-<li>Black: 黑名单方式校验；</li>
-<li>White:白名单方式校验。</li> 
+<li>Black：黑名单方式校验。HTTP 请求携带了 Referers 列表中的某个 Referer 将被拒绝访问。</li>
+<li>White：白名单方式校验。HTTP 请求携带了 Referers 列表中的 Referer 时才允许访问。</li>
+当 Status 取值为 Enabled 时，AuthType 必须赋值。 
      * @return AuthType Referer 校验类型，可选值：
-<li>Black: 黑名单方式校验；</li>
-<li>White:白名单方式校验。</li>
+<li>Black：黑名单方式校验。HTTP 请求携带了 Referers 列表中的某个 Referer 将被拒绝访问。</li>
+<li>White：白名单方式校验。HTTP 请求携带了 Referers 列表中的 Referer 时才允许访问。</li>
+当 Status 取值为 Enabled 时，AuthType 必须赋值。
      */
     public String getAuthType() {
         return this.AuthType;
@@ -94,27 +98,29 @@ public class RefererAuthPolicy extends AbstractModel{
 
     /**
      * Set Referer 校验类型，可选值：
-<li>Black: 黑名单方式校验；</li>
-<li>White:白名单方式校验。</li>
+<li>Black：黑名单方式校验。HTTP 请求携带了 Referers 列表中的某个 Referer 将被拒绝访问。</li>
+<li>White：白名单方式校验。HTTP 请求携带了 Referers 列表中的 Referer 时才允许访问。</li>
+当 Status 取值为 Enabled 时，AuthType 必须赋值。
      * @param AuthType Referer 校验类型，可选值：
-<li>Black: 黑名单方式校验；</li>
-<li>White:白名单方式校验。</li>
+<li>Black：黑名单方式校验。HTTP 请求携带了 Referers 列表中的某个 Referer 将被拒绝访问。</li>
+<li>White：白名单方式校验。HTTP 请求携带了 Referers 列表中的 Referer 时才允许访问。</li>
+当 Status 取值为 Enabled 时，AuthType 必须赋值。
      */
     public void setAuthType(String AuthType) {
         this.AuthType = AuthType;
     }
 
     /**
-     * Get 用于校验的 Referer 名单。 
-     * @return Referers 用于校验的 Referer 名单。
+     * Get 用于校验的 Referer 列表，最大支持20个 Referer。当 Status 取值为 Enabled 时， Referers 不能为空数组。Referer 的格式参考域名的格式。 
+     * @return Referers 用于校验的 Referer 列表，最大支持20个 Referer。当 Status 取值为 Enabled 时， Referers 不能为空数组。Referer 的格式参考域名的格式。
      */
     public String [] getReferers() {
         return this.Referers;
     }
 
     /**
-     * Set 用于校验的 Referer 名单。
-     * @param Referers 用于校验的 Referer 名单。
+     * Set 用于校验的 Referer 列表，最大支持20个 Referer。当 Status 取值为 Enabled 时， Referers 不能为空数组。Referer 的格式参考域名的格式。
+     * @param Referers 用于校验的 Referer 列表，最大支持20个 Referer。当 Status 取值为 Enabled 时， Referers 不能为空数组。Referer 的格式参考域名的格式。
      */
     public void setReferers(String [] Referers) {
         this.Referers = Referers;
@@ -122,11 +128,13 @@ public class RefererAuthPolicy extends AbstractModel{
 
     /**
      * Get 是否允许空 Referer 访问本域名，可选值：
-<li>Yes: 是；</li>
-<li>No: 否。</li> 
+<li>Yes： 是。</li>
+<li>No： 否。</li>
+当 Status 取值为 Enabled 时，BlankRefererAllowed 必须赋值。 
      * @return BlankRefererAllowed 是否允许空 Referer 访问本域名，可选值：
-<li>Yes: 是；</li>
-<li>No: 否。</li>
+<li>Yes： 是。</li>
+<li>No： 否。</li>
+当 Status 取值为 Enabled 时，BlankRefererAllowed 必须赋值。
      */
     public String getBlankRefererAllowed() {
         return this.BlankRefererAllowed;
@@ -134,11 +142,13 @@ public class RefererAuthPolicy extends AbstractModel{
 
     /**
      * Set 是否允许空 Referer 访问本域名，可选值：
-<li>Yes: 是；</li>
-<li>No: 否。</li>
+<li>Yes： 是。</li>
+<li>No： 否。</li>
+当 Status 取值为 Enabled 时，BlankRefererAllowed 必须赋值。
      * @param BlankRefererAllowed 是否允许空 Referer 访问本域名，可选值：
-<li>Yes: 是；</li>
-<li>No: 否。</li>
+<li>Yes： 是。</li>
+<li>No： 否。</li>
+当 Status 取值为 Enabled 时，BlankRefererAllowed 必须赋值。
      */
     public void setBlankRefererAllowed(String BlankRefererAllowed) {
         this.BlankRefererAllowed = BlankRefererAllowed;

@@ -324,6 +324,13 @@ public class CreateCloudBaseRunServerVersionRequest extends AbstractModel{
     private String UploadFilename;
 
     /**
+    * 自动扩缩容策略组
+    */
+    @SerializedName("PolicyDetail")
+    @Expose
+    private HpaPolicy [] PolicyDetail;
+
+    /**
      * Get 环境ID 
      * @return EnvId 环境ID
      */
@@ -1011,6 +1018,22 @@ public class CreateCloudBaseRunServerVersionRequest extends AbstractModel{
         this.UploadFilename = UploadFilename;
     }
 
+    /**
+     * Get 自动扩缩容策略组 
+     * @return PolicyDetail 自动扩缩容策略组
+     */
+    public HpaPolicy [] getPolicyDetail() {
+        return this.PolicyDetail;
+    }
+
+    /**
+     * Set 自动扩缩容策略组
+     * @param PolicyDetail 自动扩缩容策略组
+     */
+    public void setPolicyDetail(HpaPolicy [] PolicyDetail) {
+        this.PolicyDetail = PolicyDetail;
+    }
+
     public CreateCloudBaseRunServerVersionRequest() {
     }
 
@@ -1160,6 +1183,12 @@ public class CreateCloudBaseRunServerVersionRequest extends AbstractModel{
         if (source.UploadFilename != null) {
             this.UploadFilename = new String(source.UploadFilename);
         }
+        if (source.PolicyDetail != null) {
+            this.PolicyDetail = new HpaPolicy[source.PolicyDetail.length];
+            for (int i = 0; i < source.PolicyDetail.length; i++) {
+                this.PolicyDetail[i] = new HpaPolicy(source.PolicyDetail[i]);
+            }
+        }
     }
 
 
@@ -1210,6 +1239,7 @@ public class CreateCloudBaseRunServerVersionRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "EntryPoint", this.EntryPoint);
         this.setParamSimple(map, prefix + "RepoLanguage", this.RepoLanguage);
         this.setParamSimple(map, prefix + "UploadFilename", this.UploadFilename);
+        this.setParamArrayObj(map, prefix + "PolicyDetail.", this.PolicyDetail);
 
     }
 }

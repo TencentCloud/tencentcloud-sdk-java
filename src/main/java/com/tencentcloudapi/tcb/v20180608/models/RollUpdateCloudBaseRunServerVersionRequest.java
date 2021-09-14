@@ -254,6 +254,13 @@ public class RollUpdateCloudBaseRunServerVersionRequest extends AbstractModel{
     private Boolean IsUpdateCls;
 
     /**
+    * 自动扩缩容策略组
+    */
+    @SerializedName("PolicyDetail")
+    @Expose
+    private HpaPolicy [] PolicyDetail;
+
+    /**
      * Get 环境ID 
      * @return EnvId 环境ID
      */
@@ -781,6 +788,22 @@ public class RollUpdateCloudBaseRunServerVersionRequest extends AbstractModel{
         this.IsUpdateCls = IsUpdateCls;
     }
 
+    /**
+     * Get 自动扩缩容策略组 
+     * @return PolicyDetail 自动扩缩容策略组
+     */
+    public HpaPolicy [] getPolicyDetail() {
+        return this.PolicyDetail;
+    }
+
+    /**
+     * Set 自动扩缩容策略组
+     * @param PolicyDetail 自动扩缩容策略组
+     */
+    public void setPolicyDetail(HpaPolicy [] PolicyDetail) {
+        this.PolicyDetail = PolicyDetail;
+    }
+
     public RollUpdateCloudBaseRunServerVersionRequest() {
     }
 
@@ -891,6 +914,12 @@ public class RollUpdateCloudBaseRunServerVersionRequest extends AbstractModel{
         if (source.IsUpdateCls != null) {
             this.IsUpdateCls = new Boolean(source.IsUpdateCls);
         }
+        if (source.PolicyDetail != null) {
+            this.PolicyDetail = new HpaPolicy[source.PolicyDetail.length];
+            for (int i = 0; i < source.PolicyDetail.length; i++) {
+                this.PolicyDetail[i] = new HpaPolicy(source.PolicyDetail[i]);
+            }
+        }
     }
 
 
@@ -931,6 +960,7 @@ public class RollUpdateCloudBaseRunServerVersionRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "OperatorRemark", this.OperatorRemark);
         this.setParamSimple(map, prefix + "ServerPath", this.ServerPath);
         this.setParamSimple(map, prefix + "IsUpdateCls", this.IsUpdateCls);
+        this.setParamArrayObj(map, prefix + "PolicyDetail.", this.PolicyDetail);
 
     }
 }

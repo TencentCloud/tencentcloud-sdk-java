@@ -66,6 +66,9 @@ public enum DcdbErrorCode {
     // CAM鉴权请求失败。
      INTERNALERROR_CAMAUTHFAILED("InternalError.CamAuthFailed"),
      
+    // 校验VIP状态失败。
+     INTERNALERROR_CHECKVIPSTATUSFAILED("InternalError.CheckVipStatusFailed"),
+     
     // COS地址配置错误。
      INTERNALERROR_COSCONFIGURATION("InternalError.CosConfiguration"),
      
@@ -162,11 +165,17 @@ public enum DcdbErrorCode {
     // 数据库更新失败。
      INTERNALERROR_UPDATEDATABASEFAILED("InternalError.UpdateDatabaseFailed"),
      
+    // 外网操作失败。
+     INTERNALERROR_WANSERVICEFAILED("InternalError.WanServiceFailed"),
+     
     // 参数错误。
      INVALIDPARAMETER("InvalidParameter"),
      
     // 密码包含了非法字符。
      INVALIDPARAMETER_CHARACTERERROR("InvalidParameter.CharacterError"),
+     
+    // 入参校验失败。
+     INVALIDPARAMETER_CHECKPARAMNOTPASS("InvalidParameter.CheckParamNotPass"),
      
     // 未指定需要查询的订单ID。
      INVALIDPARAMETER_DEALNAMENOTGIVEN("InvalidParameter.DealNameNotGiven"),
@@ -245,6 +254,9 @@ public enum DcdbErrorCode {
      
     // 指定的账号不存在。
      RESOURCENOTFOUND_ACCOUNTDOESNOTEXIST("ResourceNotFound.AccountDoesNotExist"),
+     
+    // 实例不存在。
+     RESOURCENOTFOUND_INSTANCENOTFOUND("ResourceNotFound.InstanceNotFound"),
      
     // 找不到指定的数据库实例。
      RESOURCENOTFOUND_NOINSTANCEFOUND("ResourceNotFound.NoInstanceFound"),

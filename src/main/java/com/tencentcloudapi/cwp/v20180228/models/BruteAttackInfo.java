@@ -118,7 +118,7 @@ public class BruteAttackInfo extends AbstractModel{
     private Long BanStatus;
 
     /**
-    * 事件类型
+    * 事件类型：200-暴力破解事件，300-暴力破解成功事件（页面展示），400-暴力破解不存在的帐号事件
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EventType")
@@ -418,9 +418,9 @@ public class BruteAttackInfo extends AbstractModel{
     }
 
     /**
-     * Get 事件类型
+     * Get 事件类型：200-暴力破解事件，300-暴力破解成功事件（页面展示），400-暴力破解不存在的帐号事件
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EventType 事件类型
+     * @return EventType 事件类型：200-暴力破解事件，300-暴力破解成功事件（页面展示），400-暴力破解不存在的帐号事件
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getEventType() {
@@ -428,9 +428,9 @@ public class BruteAttackInfo extends AbstractModel{
     }
 
     /**
-     * Set 事件类型
+     * Set 事件类型：200-暴力破解事件，300-暴力破解成功事件（页面展示），400-暴力破解不存在的帐号事件
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EventType 事件类型
+     * @param EventType 事件类型：200-暴力破解事件，300-暴力破解成功事件（页面展示），400-暴力破解不存在的帐号事件
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEventType(Long EventType) {

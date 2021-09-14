@@ -94,24 +94,4 @@ public class ImsClient extends AbstractClient{
         return rsp.response;
     }
 
-    /**
-     *图片内容审核服务能自动扫描图片，识别可能令人反感、不安全或不适宜的内容，同时支持用户配置图片黑名单，打击自定义识别类型的图片。
-     * @param req ImageRecognitionRequest
-     * @return ImageRecognitionResponse
-     * @throws TencentCloudSDKException
-     */
-    public ImageRecognitionResponse ImageRecognition(ImageRecognitionRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ImageRecognitionResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<ImageRecognitionResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ImageRecognition");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
 }

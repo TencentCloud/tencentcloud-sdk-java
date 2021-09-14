@@ -79,6 +79,26 @@ public class CfwClient extends AbstractClient{
     }
 
     /**
+     *创建暴露数据库白名单规则
+     * @param req CreateDatabaseWhiteListRulesRequest
+     * @return CreateDatabaseWhiteListRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDatabaseWhiteListRulesResponse CreateDatabaseWhiteListRules(CreateDatabaseWhiteListRulesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateDatabaseWhiteListRulesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateDatabaseWhiteListRulesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateDatabaseWhiteListRules");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建防火墙实例
      * @param req CreateNatFwInstanceRequest
      * @return CreateNatFwInstanceResponse
