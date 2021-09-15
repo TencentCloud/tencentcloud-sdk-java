@@ -55,6 +55,14 @@ public class FinanceAntiFraudRecord extends AbstractModel{
     private RiskDetailInfo [] RiskInfo;
 
     /**
+    * 多模型返回结果
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OtherModelScores")
+    @Expose
+    private FinanceOtherModelScores [] OtherModelScores;
+
+    /**
     * 业务侧错误码。成功时返回0，错误时返回非0值
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -152,6 +160,26 @@ public class FinanceAntiFraudRecord extends AbstractModel{
     }
 
     /**
+     * Get 多模型返回结果
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OtherModelScores 多模型返回结果
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public FinanceOtherModelScores [] getOtherModelScores() {
+        return this.OtherModelScores;
+    }
+
+    /**
+     * Set 多模型返回结果
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OtherModelScores 多模型返回结果
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOtherModelScores(FinanceOtherModelScores [] OtherModelScores) {
+        this.OtherModelScores = OtherModelScores;
+    }
+
+    /**
      * Get 业务侧错误码。成功时返回0，错误时返回非0值
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Code 业务侧错误码。成功时返回0，错误时返回非0值
@@ -218,6 +246,12 @@ public class FinanceAntiFraudRecord extends AbstractModel{
                 this.RiskInfo[i] = new RiskDetailInfo(source.RiskInfo[i]);
             }
         }
+        if (source.OtherModelScores != null) {
+            this.OtherModelScores = new FinanceOtherModelScores[source.OtherModelScores.length];
+            for (int i = 0; i < source.OtherModelScores.length; i++) {
+                this.OtherModelScores[i] = new FinanceOtherModelScores(source.OtherModelScores[i]);
+            }
+        }
         if (source.Code != null) {
             this.Code = new String(source.Code);
         }
@@ -235,6 +269,7 @@ public class FinanceAntiFraudRecord extends AbstractModel{
         this.setParamSimple(map, prefix + "IdFound", this.IdFound);
         this.setParamSimple(map, prefix + "RiskScore", this.RiskScore);
         this.setParamArrayObj(map, prefix + "RiskInfo.", this.RiskInfo);
+        this.setParamArrayObj(map, prefix + "OtherModelScores.", this.OtherModelScores);
         this.setParamSimple(map, prefix + "Code", this.Code);
         this.setParamSimple(map, prefix + "Message", this.Message);
 

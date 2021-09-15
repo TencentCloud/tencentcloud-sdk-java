@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class BandwidthAlert extends AbstractModel{
 
     /**
-    * 带宽封顶配置开关
+    * 用量封顶配置开关
 on：开启
 off：关闭
     */
@@ -32,7 +32,7 @@ off：关闭
     private String Switch;
 
     /**
-    * 带宽封顶阈值，单位为bps
+    * 用量封顶阈值，带宽单位为bps，流量单位byte
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BpsThreshold")
@@ -50,7 +50,7 @@ RETURN_404：全部请求返回 404
     private String CounterMeasure;
 
     /**
-    * 境内区域上次触发带宽封顶阈值的时间
+    * 境内区域上次触发用量封顶阈值的时间
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LastTriggerTime")
@@ -58,7 +58,7 @@ RETURN_404：全部请求返回 404
     private String LastTriggerTime;
 
     /**
-    * 带宽封顶提醒开关
+    * 用量封顶提醒开关
 on：开启
 off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
@@ -68,7 +68,7 @@ off：关闭
     private String AlertSwitch;
 
     /**
-    * 带宽封顶阈值提醒百分比
+    * 用量封顶阈值提醒百分比
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AlertPercentage")
@@ -76,7 +76,7 @@ off：关闭
     private Long AlertPercentage;
 
     /**
-    * 海外区域上次触发带宽封顶阈值的时间
+    * 海外区域上次触发用量封顶阈值的时间
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LastTriggerTimeOverseas")
@@ -84,10 +84,20 @@ off：关闭
     private String LastTriggerTimeOverseas;
 
     /**
-     * Get 带宽封顶配置开关
+    * 用量阈值触发的维度
+带宽：bandwidth
+流量：flux
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Metric")
+    @Expose
+    private String Metric;
+
+    /**
+     * Get 用量封顶配置开关
 on：开启
 off：关闭 
-     * @return Switch 带宽封顶配置开关
+     * @return Switch 用量封顶配置开关
 on：开启
 off：关闭
      */
@@ -96,10 +106,10 @@ off：关闭
     }
 
     /**
-     * Set 带宽封顶配置开关
+     * Set 用量封顶配置开关
 on：开启
 off：关闭
-     * @param Switch 带宽封顶配置开关
+     * @param Switch 用量封顶配置开关
 on：开启
 off：关闭
      */
@@ -108,9 +118,9 @@ off：关闭
     }
 
     /**
-     * Get 带宽封顶阈值，单位为bps
+     * Get 用量封顶阈值，带宽单位为bps，流量单位byte
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BpsThreshold 带宽封顶阈值，单位为bps
+     * @return BpsThreshold 用量封顶阈值，带宽单位为bps，流量单位byte
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getBpsThreshold() {
@@ -118,9 +128,9 @@ off：关闭
     }
 
     /**
-     * Set 带宽封顶阈值，单位为bps
+     * Set 用量封顶阈值，带宽单位为bps，流量单位byte
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BpsThreshold 带宽封顶阈值，单位为bps
+     * @param BpsThreshold 用量封顶阈值，带宽单位为bps，流量单位byte
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBpsThreshold(Long BpsThreshold) {
@@ -156,9 +166,9 @@ RETURN_404：全部请求返回 404
     }
 
     /**
-     * Get 境内区域上次触发带宽封顶阈值的时间
+     * Get 境内区域上次触发用量封顶阈值的时间
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LastTriggerTime 境内区域上次触发带宽封顶阈值的时间
+     * @return LastTriggerTime 境内区域上次触发用量封顶阈值的时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLastTriggerTime() {
@@ -166,9 +176,9 @@ RETURN_404：全部请求返回 404
     }
 
     /**
-     * Set 境内区域上次触发带宽封顶阈值的时间
+     * Set 境内区域上次触发用量封顶阈值的时间
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LastTriggerTime 境内区域上次触发带宽封顶阈值的时间
+     * @param LastTriggerTime 境内区域上次触发用量封顶阈值的时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLastTriggerTime(String LastTriggerTime) {
@@ -176,11 +186,11 @@ RETURN_404：全部请求返回 404
     }
 
     /**
-     * Get 带宽封顶提醒开关
+     * Get 用量封顶提醒开关
 on：开启
 off：关闭
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AlertSwitch 带宽封顶提醒开关
+     * @return AlertSwitch 用量封顶提醒开关
 on：开启
 off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
@@ -190,11 +200,11 @@ off：关闭
     }
 
     /**
-     * Set 带宽封顶提醒开关
+     * Set 用量封顶提醒开关
 on：开启
 off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AlertSwitch 带宽封顶提醒开关
+     * @param AlertSwitch 用量封顶提醒开关
 on：开启
 off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
@@ -204,9 +214,9 @@ off：关闭
     }
 
     /**
-     * Get 带宽封顶阈值提醒百分比
+     * Get 用量封顶阈值提醒百分比
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AlertPercentage 带宽封顶阈值提醒百分比
+     * @return AlertPercentage 用量封顶阈值提醒百分比
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAlertPercentage() {
@@ -214,9 +224,9 @@ off：关闭
     }
 
     /**
-     * Set 带宽封顶阈值提醒百分比
+     * Set 用量封顶阈值提醒百分比
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AlertPercentage 带宽封顶阈值提醒百分比
+     * @param AlertPercentage 用量封顶阈值提醒百分比
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAlertPercentage(Long AlertPercentage) {
@@ -224,9 +234,9 @@ off：关闭
     }
 
     /**
-     * Get 海外区域上次触发带宽封顶阈值的时间
+     * Get 海外区域上次触发用量封顶阈值的时间
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LastTriggerTimeOverseas 海外区域上次触发带宽封顶阈值的时间
+     * @return LastTriggerTimeOverseas 海外区域上次触发用量封顶阈值的时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLastTriggerTimeOverseas() {
@@ -234,13 +244,41 @@ off：关闭
     }
 
     /**
-     * Set 海外区域上次触发带宽封顶阈值的时间
+     * Set 海外区域上次触发用量封顶阈值的时间
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LastTriggerTimeOverseas 海外区域上次触发带宽封顶阈值的时间
+     * @param LastTriggerTimeOverseas 海外区域上次触发用量封顶阈值的时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLastTriggerTimeOverseas(String LastTriggerTimeOverseas) {
         this.LastTriggerTimeOverseas = LastTriggerTimeOverseas;
+    }
+
+    /**
+     * Get 用量阈值触发的维度
+带宽：bandwidth
+流量：flux
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Metric 用量阈值触发的维度
+带宽：bandwidth
+流量：flux
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getMetric() {
+        return this.Metric;
+    }
+
+    /**
+     * Set 用量阈值触发的维度
+带宽：bandwidth
+流量：flux
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Metric 用量阈值触发的维度
+带宽：bandwidth
+流量：flux
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMetric(String Metric) {
+        this.Metric = Metric;
     }
 
     public BandwidthAlert() {
@@ -272,6 +310,9 @@ off：关闭
         if (source.LastTriggerTimeOverseas != null) {
             this.LastTriggerTimeOverseas = new String(source.LastTriggerTimeOverseas);
         }
+        if (source.Metric != null) {
+            this.Metric = new String(source.Metric);
+        }
     }
 
 
@@ -286,6 +327,7 @@ off：关闭
         this.setParamSimple(map, prefix + "AlertSwitch", this.AlertSwitch);
         this.setParamSimple(map, prefix + "AlertPercentage", this.AlertPercentage);
         this.setParamSimple(map, prefix + "LastTriggerTimeOverseas", this.LastTriggerTimeOverseas);
+        this.setParamSimple(map, prefix + "Metric", this.Metric);
 
     }
 }

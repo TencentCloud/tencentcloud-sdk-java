@@ -51,6 +51,16 @@ public class PlatformInfo extends AbstractModel{
     private String LicenseId;
 
     /**
+    * 平台状态，可取值为：
+<li>Normal：正常，可使用。；</li>
+<li>Stopped：已停用，暂无法使用；</li>
+<li>Expired：已过期，需要重新购买会员包。</li>
+    */
+    @SerializedName("Status")
+    @Expose
+    private String Status;
+
+    /**
     * 创建时间，格式按照 ISO 8601 标准表示。
     */
     @SerializedName("CreateTime")
@@ -129,6 +139,34 @@ public class PlatformInfo extends AbstractModel{
     }
 
     /**
+     * Get 平台状态，可取值为：
+<li>Normal：正常，可使用。；</li>
+<li>Stopped：已停用，暂无法使用；</li>
+<li>Expired：已过期，需要重新购买会员包。</li> 
+     * @return Status 平台状态，可取值为：
+<li>Normal：正常，可使用。；</li>
+<li>Stopped：已停用，暂无法使用；</li>
+<li>Expired：已过期，需要重新购买会员包。</li>
+     */
+    public String getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set 平台状态，可取值为：
+<li>Normal：正常，可使用。；</li>
+<li>Stopped：已停用，暂无法使用；</li>
+<li>Expired：已过期，需要重新购买会员包。</li>
+     * @param Status 平台状态，可取值为：
+<li>Normal：正常，可使用。；</li>
+<li>Stopped：已停用，暂无法使用；</li>
+<li>Expired：已过期，需要重新购买会员包。</li>
+     */
+    public void setStatus(String Status) {
+        this.Status = Status;
+    }
+
+    /**
      * Get 创建时间，格式按照 ISO 8601 标准表示。 
      * @return CreateTime 创建时间，格式按照 ISO 8601 标准表示。
      */
@@ -180,6 +218,9 @@ public class PlatformInfo extends AbstractModel{
         if (source.LicenseId != null) {
             this.LicenseId = new String(source.LicenseId);
         }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
         if (source.CreateTime != null) {
             this.CreateTime = new String(source.CreateTime);
         }
@@ -197,6 +238,7 @@ public class PlatformInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "VodSubAppId", this.VodSubAppId);
         this.setParamSimple(map, prefix + "LicenseId", this.LicenseId);
+        this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
 

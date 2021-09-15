@@ -62,7 +62,7 @@ public class DescribeTasksRequest extends AbstractModel{
     private Long Offset;
 
     /**
-    * 分页返回的记录条数，默认值：10。
+    * 分页返回的记录条数，默认值：10。最大值：20。
     */
     @SerializedName("Limit")
     @Expose
@@ -172,16 +172,16 @@ public class DescribeTasksRequest extends AbstractModel{
     }
 
     /**
-     * Get 分页返回的记录条数，默认值：10。 
-     * @return Limit 分页返回的记录条数，默认值：10。
+     * Get 分页返回的记录条数，默认值：10。最大值：20。 
+     * @return Limit 分页返回的记录条数，默认值：10。最大值：20。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 分页返回的记录条数，默认值：10。
-     * @param Limit 分页返回的记录条数，默认值：10。
+     * Set 分页返回的记录条数，默认值：10。最大值：20。
+     * @param Limit 分页返回的记录条数，默认值：10。最大值：20。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
