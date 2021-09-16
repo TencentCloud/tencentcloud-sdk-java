@@ -133,6 +133,13 @@ public class DescribeDBInstancesRequest extends AbstractModel{
     private String SearchKey;
 
     /**
+    * 实例唯一Uid列表
+    */
+    @SerializedName("UidSet")
+    @Expose
+    private String [] UidSet;
+
+    /**
      * Get 项目ID 
      * @return ProjectId 项目ID
      */
@@ -404,6 +411,22 @@ public class DescribeDBInstancesRequest extends AbstractModel{
         this.SearchKey = SearchKey;
     }
 
+    /**
+     * Get 实例唯一Uid列表 
+     * @return UidSet 实例唯一Uid列表
+     */
+    public String [] getUidSet() {
+        return this.UidSet;
+    }
+
+    /**
+     * Set 实例唯一Uid列表
+     * @param UidSet 实例唯一Uid列表
+     */
+    public void setUidSet(String [] UidSet) {
+        this.UidSet = UidSet;
+    }
+
     public DescribeDBInstancesRequest() {
     }
 
@@ -469,6 +492,12 @@ public class DescribeDBInstancesRequest extends AbstractModel{
         if (source.SearchKey != null) {
             this.SearchKey = new String(source.SearchKey);
         }
+        if (source.UidSet != null) {
+            this.UidSet = new String[source.UidSet.length];
+            for (int i = 0; i < source.UidSet.length; i++) {
+                this.UidSet[i] = new String(source.UidSet[i]);
+            }
+        }
     }
 
 
@@ -490,6 +519,7 @@ public class DescribeDBInstancesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamArraySimple(map, prefix + "TagKeys.", this.TagKeys);
         this.setParamSimple(map, prefix + "SearchKey", this.SearchKey);
+        this.setParamArraySimple(map, prefix + "UidSet.", this.UidSet);
 
     }
 }

@@ -23,21 +23,21 @@ import java.util.HashMap;
 public class DescribeBackupByFlowIdResponse extends AbstractModel{
 
     /**
-    * 备份文件唯一标识，RestoreInstance接口会用到该字段
+    * 备份文件唯一标识，RestoreInstance接口会用到该字段，对于单库备份文件只返回第一条记录的备份文件唯一标识；单库备份文件需要通过DescribeBackupFiles接口获取全部记录的可回档的ID
     */
     @SerializedName("Id")
     @Expose
     private Long Id;
 
     /**
-    * 存储文件名
+    * 文件名，对于单库备份文件只返回第一条记录的文件名；单库备份文件需要通过DescribeBackupFiles接口获取全部记录的文件名
     */
     @SerializedName("FileName")
     @Expose
     private String FileName;
 
     /**
-    * 备份名称，可自定义
+    * 备份任务名称，可自定义
     */
     @SerializedName("BackupName")
     @Expose
@@ -58,7 +58,7 @@ public class DescribeBackupByFlowIdResponse extends AbstractModel{
     private String EndTime;
 
     /**
-    * 文件大小，单位 KB
+    * 文件大小，单位 KB，对于单库备份文件只返回第一条记录的文件大小；单库备份文件需要通过DescribeBackupFiles接口获取全部记录的文件大小
     */
     @SerializedName("Size")
     @Expose
@@ -72,13 +72,6 @@ public class DescribeBackupByFlowIdResponse extends AbstractModel{
     private Long Strategy;
 
     /**
-    * 备份方式，0-定时备份；1-手动临时备份；实例状态是0-创建中时，该字段为默认值0，无实际意义
-    */
-    @SerializedName("BackupWay")
-    @Expose
-    private Long BackupWay;
-
-    /**
     * 备份文件状态，0-创建中；1-成功；2-失败
     */
     @SerializedName("Status")
@@ -86,25 +79,39 @@ public class DescribeBackupByFlowIdResponse extends AbstractModel{
     private Long Status;
 
     /**
-    * 多库备份时的DB列表
+    * 备份方式，0-定时备份；1-手动临时备份；实例状态是0-创建中时，该字段为默认值0，无实际意义
+    */
+    @SerializedName("BackupWay")
+    @Expose
+    private Long BackupWay;
+
+    /**
+    * DB列表，对于单库备份文件只返回第一条记录包含的库名；单库备份文件需要通过DescribeBackupFiles接口获取全部记录的库名。
     */
     @SerializedName("DBs")
     @Expose
     private String [] DBs;
 
     /**
-    * 内网下载地址
+    * 内网下载地址，对于单库备份文件只返回第一条记录的内网下载地址；单库备份文件需要通过DescribeBackupFiles接口获取全部记录的下载地址
     */
     @SerializedName("InternalAddr")
     @Expose
     private String InternalAddr;
 
     /**
-    * 外网下载地址
+    * 外网下载地址，对于单库备份文件只返回第一条记录的外网下载地址；单库备份文件需要通过DescribeBackupFiles接口获取全部记录的下载地址
     */
     @SerializedName("ExternalAddr")
     @Expose
     private String ExternalAddr;
+
+    /**
+    * 聚合Id，对于打包备份文件不返回此值。通过此值调用DescribeBackupFiles接口，获取单库备份文件的详细信息
+    */
+    @SerializedName("GroupId")
+    @Expose
+    private String GroupId;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -114,48 +121,48 @@ public class DescribeBackupByFlowIdResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 备份文件唯一标识，RestoreInstance接口会用到该字段 
-     * @return Id 备份文件唯一标识，RestoreInstance接口会用到该字段
+     * Get 备份文件唯一标识，RestoreInstance接口会用到该字段，对于单库备份文件只返回第一条记录的备份文件唯一标识；单库备份文件需要通过DescribeBackupFiles接口获取全部记录的可回档的ID 
+     * @return Id 备份文件唯一标识，RestoreInstance接口会用到该字段，对于单库备份文件只返回第一条记录的备份文件唯一标识；单库备份文件需要通过DescribeBackupFiles接口获取全部记录的可回档的ID
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set 备份文件唯一标识，RestoreInstance接口会用到该字段
-     * @param Id 备份文件唯一标识，RestoreInstance接口会用到该字段
+     * Set 备份文件唯一标识，RestoreInstance接口会用到该字段，对于单库备份文件只返回第一条记录的备份文件唯一标识；单库备份文件需要通过DescribeBackupFiles接口获取全部记录的可回档的ID
+     * @param Id 备份文件唯一标识，RestoreInstance接口会用到该字段，对于单库备份文件只返回第一条记录的备份文件唯一标识；单库备份文件需要通过DescribeBackupFiles接口获取全部记录的可回档的ID
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 存储文件名 
-     * @return FileName 存储文件名
+     * Get 文件名，对于单库备份文件只返回第一条记录的文件名；单库备份文件需要通过DescribeBackupFiles接口获取全部记录的文件名 
+     * @return FileName 文件名，对于单库备份文件只返回第一条记录的文件名；单库备份文件需要通过DescribeBackupFiles接口获取全部记录的文件名
      */
     public String getFileName() {
         return this.FileName;
     }
 
     /**
-     * Set 存储文件名
-     * @param FileName 存储文件名
+     * Set 文件名，对于单库备份文件只返回第一条记录的文件名；单库备份文件需要通过DescribeBackupFiles接口获取全部记录的文件名
+     * @param FileName 文件名，对于单库备份文件只返回第一条记录的文件名；单库备份文件需要通过DescribeBackupFiles接口获取全部记录的文件名
      */
     public void setFileName(String FileName) {
         this.FileName = FileName;
     }
 
     /**
-     * Get 备份名称，可自定义 
-     * @return BackupName 备份名称，可自定义
+     * Get 备份任务名称，可自定义 
+     * @return BackupName 备份任务名称，可自定义
      */
     public String getBackupName() {
         return this.BackupName;
     }
 
     /**
-     * Set 备份名称，可自定义
-     * @param BackupName 备份名称，可自定义
+     * Set 备份任务名称，可自定义
+     * @param BackupName 备份任务名称，可自定义
      */
     public void setBackupName(String BackupName) {
         this.BackupName = BackupName;
@@ -194,16 +201,16 @@ public class DescribeBackupByFlowIdResponse extends AbstractModel{
     }
 
     /**
-     * Get 文件大小，单位 KB 
-     * @return Size 文件大小，单位 KB
+     * Get 文件大小，单位 KB，对于单库备份文件只返回第一条记录的文件大小；单库备份文件需要通过DescribeBackupFiles接口获取全部记录的文件大小 
+     * @return Size 文件大小，单位 KB，对于单库备份文件只返回第一条记录的文件大小；单库备份文件需要通过DescribeBackupFiles接口获取全部记录的文件大小
      */
     public Long getSize() {
         return this.Size;
     }
 
     /**
-     * Set 文件大小，单位 KB
-     * @param Size 文件大小，单位 KB
+     * Set 文件大小，单位 KB，对于单库备份文件只返回第一条记录的文件大小；单库备份文件需要通过DescribeBackupFiles接口获取全部记录的文件大小
+     * @param Size 文件大小，单位 KB，对于单库备份文件只返回第一条记录的文件大小；单库备份文件需要通过DescribeBackupFiles接口获取全部记录的文件大小
      */
     public void setSize(Long Size) {
         this.Size = Size;
@@ -226,22 +233,6 @@ public class DescribeBackupByFlowIdResponse extends AbstractModel{
     }
 
     /**
-     * Get 备份方式，0-定时备份；1-手动临时备份；实例状态是0-创建中时，该字段为默认值0，无实际意义 
-     * @return BackupWay 备份方式，0-定时备份；1-手动临时备份；实例状态是0-创建中时，该字段为默认值0，无实际意义
-     */
-    public Long getBackupWay() {
-        return this.BackupWay;
-    }
-
-    /**
-     * Set 备份方式，0-定时备份；1-手动临时备份；实例状态是0-创建中时，该字段为默认值0，无实际意义
-     * @param BackupWay 备份方式，0-定时备份；1-手动临时备份；实例状态是0-创建中时，该字段为默认值0，无实际意义
-     */
-    public void setBackupWay(Long BackupWay) {
-        this.BackupWay = BackupWay;
-    }
-
-    /**
      * Get 备份文件状态，0-创建中；1-成功；2-失败 
      * @return Status 备份文件状态，0-创建中；1-成功；2-失败
      */
@@ -258,51 +249,83 @@ public class DescribeBackupByFlowIdResponse extends AbstractModel{
     }
 
     /**
-     * Get 多库备份时的DB列表 
-     * @return DBs 多库备份时的DB列表
+     * Get 备份方式，0-定时备份；1-手动临时备份；实例状态是0-创建中时，该字段为默认值0，无实际意义 
+     * @return BackupWay 备份方式，0-定时备份；1-手动临时备份；实例状态是0-创建中时，该字段为默认值0，无实际意义
+     */
+    public Long getBackupWay() {
+        return this.BackupWay;
+    }
+
+    /**
+     * Set 备份方式，0-定时备份；1-手动临时备份；实例状态是0-创建中时，该字段为默认值0，无实际意义
+     * @param BackupWay 备份方式，0-定时备份；1-手动临时备份；实例状态是0-创建中时，该字段为默认值0，无实际意义
+     */
+    public void setBackupWay(Long BackupWay) {
+        this.BackupWay = BackupWay;
+    }
+
+    /**
+     * Get DB列表，对于单库备份文件只返回第一条记录包含的库名；单库备份文件需要通过DescribeBackupFiles接口获取全部记录的库名。 
+     * @return DBs DB列表，对于单库备份文件只返回第一条记录包含的库名；单库备份文件需要通过DescribeBackupFiles接口获取全部记录的库名。
      */
     public String [] getDBs() {
         return this.DBs;
     }
 
     /**
-     * Set 多库备份时的DB列表
-     * @param DBs 多库备份时的DB列表
+     * Set DB列表，对于单库备份文件只返回第一条记录包含的库名；单库备份文件需要通过DescribeBackupFiles接口获取全部记录的库名。
+     * @param DBs DB列表，对于单库备份文件只返回第一条记录包含的库名；单库备份文件需要通过DescribeBackupFiles接口获取全部记录的库名。
      */
     public void setDBs(String [] DBs) {
         this.DBs = DBs;
     }
 
     /**
-     * Get 内网下载地址 
-     * @return InternalAddr 内网下载地址
+     * Get 内网下载地址，对于单库备份文件只返回第一条记录的内网下载地址；单库备份文件需要通过DescribeBackupFiles接口获取全部记录的下载地址 
+     * @return InternalAddr 内网下载地址，对于单库备份文件只返回第一条记录的内网下载地址；单库备份文件需要通过DescribeBackupFiles接口获取全部记录的下载地址
      */
     public String getInternalAddr() {
         return this.InternalAddr;
     }
 
     /**
-     * Set 内网下载地址
-     * @param InternalAddr 内网下载地址
+     * Set 内网下载地址，对于单库备份文件只返回第一条记录的内网下载地址；单库备份文件需要通过DescribeBackupFiles接口获取全部记录的下载地址
+     * @param InternalAddr 内网下载地址，对于单库备份文件只返回第一条记录的内网下载地址；单库备份文件需要通过DescribeBackupFiles接口获取全部记录的下载地址
      */
     public void setInternalAddr(String InternalAddr) {
         this.InternalAddr = InternalAddr;
     }
 
     /**
-     * Get 外网下载地址 
-     * @return ExternalAddr 外网下载地址
+     * Get 外网下载地址，对于单库备份文件只返回第一条记录的外网下载地址；单库备份文件需要通过DescribeBackupFiles接口获取全部记录的下载地址 
+     * @return ExternalAddr 外网下载地址，对于单库备份文件只返回第一条记录的外网下载地址；单库备份文件需要通过DescribeBackupFiles接口获取全部记录的下载地址
      */
     public String getExternalAddr() {
         return this.ExternalAddr;
     }
 
     /**
-     * Set 外网下载地址
-     * @param ExternalAddr 外网下载地址
+     * Set 外网下载地址，对于单库备份文件只返回第一条记录的外网下载地址；单库备份文件需要通过DescribeBackupFiles接口获取全部记录的下载地址
+     * @param ExternalAddr 外网下载地址，对于单库备份文件只返回第一条记录的外网下载地址；单库备份文件需要通过DescribeBackupFiles接口获取全部记录的下载地址
      */
     public void setExternalAddr(String ExternalAddr) {
         this.ExternalAddr = ExternalAddr;
+    }
+
+    /**
+     * Get 聚合Id，对于打包备份文件不返回此值。通过此值调用DescribeBackupFiles接口，获取单库备份文件的详细信息 
+     * @return GroupId 聚合Id，对于打包备份文件不返回此值。通过此值调用DescribeBackupFiles接口，获取单库备份文件的详细信息
+     */
+    public String getGroupId() {
+        return this.GroupId;
+    }
+
+    /**
+     * Set 聚合Id，对于打包备份文件不返回此值。通过此值调用DescribeBackupFiles接口，获取单库备份文件的详细信息
+     * @param GroupId 聚合Id，对于打包备份文件不返回此值。通过此值调用DescribeBackupFiles接口，获取单库备份文件的详细信息
+     */
+    public void setGroupId(String GroupId) {
+        this.GroupId = GroupId;
     }
 
     /**
@@ -350,11 +373,11 @@ public class DescribeBackupByFlowIdResponse extends AbstractModel{
         if (source.Strategy != null) {
             this.Strategy = new Long(source.Strategy);
         }
-        if (source.BackupWay != null) {
-            this.BackupWay = new Long(source.BackupWay);
-        }
         if (source.Status != null) {
             this.Status = new Long(source.Status);
+        }
+        if (source.BackupWay != null) {
+            this.BackupWay = new Long(source.BackupWay);
         }
         if (source.DBs != null) {
             this.DBs = new String[source.DBs.length];
@@ -367,6 +390,9 @@ public class DescribeBackupByFlowIdResponse extends AbstractModel{
         }
         if (source.ExternalAddr != null) {
             this.ExternalAddr = new String(source.ExternalAddr);
+        }
+        if (source.GroupId != null) {
+            this.GroupId = new String(source.GroupId);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -385,11 +411,12 @@ public class DescribeBackupByFlowIdResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamSimple(map, prefix + "Size", this.Size);
         this.setParamSimple(map, prefix + "Strategy", this.Strategy);
-        this.setParamSimple(map, prefix + "BackupWay", this.BackupWay);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "BackupWay", this.BackupWay);
         this.setParamArraySimple(map, prefix + "DBs.", this.DBs);
         this.setParamSimple(map, prefix + "InternalAddr", this.InternalAddr);
         this.setParamSimple(map, prefix + "ExternalAddr", this.ExternalAddr);
+        this.setParamSimple(map, prefix + "GroupId", this.GroupId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

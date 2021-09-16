@@ -51,6 +51,13 @@ public class ModifyBackupStrategyRequest extends AbstractModel{
     private Long BackupDay;
 
     /**
+    * 备份模式，master_pkg-主节点上打包备份文件；master_no_pkg-主节点单库备份文件；slave_pkg-从节点上打包备份文件；slave_no_pkg-从节点上单库备份文件，从节点上备份只有在always on容灾模式下支持。
+    */
+    @SerializedName("BackupModel")
+    @Expose
+    private String BackupModel;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -114,6 +121,22 @@ public class ModifyBackupStrategyRequest extends AbstractModel{
         this.BackupDay = BackupDay;
     }
 
+    /**
+     * Get 备份模式，master_pkg-主节点上打包备份文件；master_no_pkg-主节点单库备份文件；slave_pkg-从节点上打包备份文件；slave_no_pkg-从节点上单库备份文件，从节点上备份只有在always on容灾模式下支持。 
+     * @return BackupModel 备份模式，master_pkg-主节点上打包备份文件；master_no_pkg-主节点单库备份文件；slave_pkg-从节点上打包备份文件；slave_no_pkg-从节点上单库备份文件，从节点上备份只有在always on容灾模式下支持。
+     */
+    public String getBackupModel() {
+        return this.BackupModel;
+    }
+
+    /**
+     * Set 备份模式，master_pkg-主节点上打包备份文件；master_no_pkg-主节点单库备份文件；slave_pkg-从节点上打包备份文件；slave_no_pkg-从节点上单库备份文件，从节点上备份只有在always on容灾模式下支持。
+     * @param BackupModel 备份模式，master_pkg-主节点上打包备份文件；master_no_pkg-主节点单库备份文件；slave_pkg-从节点上打包备份文件；slave_no_pkg-从节点上单库备份文件，从节点上备份只有在always on容灾模式下支持。
+     */
+    public void setBackupModel(String BackupModel) {
+        this.BackupModel = BackupModel;
+    }
+
     public ModifyBackupStrategyRequest() {
     }
 
@@ -134,6 +157,9 @@ public class ModifyBackupStrategyRequest extends AbstractModel{
         if (source.BackupDay != null) {
             this.BackupDay = new Long(source.BackupDay);
         }
+        if (source.BackupModel != null) {
+            this.BackupModel = new String(source.BackupModel);
+        }
     }
 
 
@@ -145,6 +171,7 @@ public class ModifyBackupStrategyRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "BackupType", this.BackupType);
         this.setParamSimple(map, prefix + "BackupTime", this.BackupTime);
         this.setParamSimple(map, prefix + "BackupDay", this.BackupDay);
+        this.setParamSimple(map, prefix + "BackupModel", this.BackupModel);
 
     }
 }

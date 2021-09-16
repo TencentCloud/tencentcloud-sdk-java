@@ -13,28 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.partners.v20180321.models;
+package com.tencentcloudapi.ecm.v20190719.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeClientBaseInfoResponse extends AbstractModel{
-
-    /**
-    * 代客基础信息数组
-    */
-    @SerializedName("ClientBaseSet")
-    @Expose
-    private ClientBaseElem [] ClientBaseSet;
-
-    /**
-    * 符合条件的代客数
-    */
-    @SerializedName("TotalCount")
-    @Expose
-    private Long TotalCount;
+public class AttachDisksResponse extends AbstractModel{
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -42,38 +28,6 @@ public class DescribeClientBaseInfoResponse extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get 代客基础信息数组 
-     * @return ClientBaseSet 代客基础信息数组
-     */
-    public ClientBaseElem [] getClientBaseSet() {
-        return this.ClientBaseSet;
-    }
-
-    /**
-     * Set 代客基础信息数组
-     * @param ClientBaseSet 代客基础信息数组
-     */
-    public void setClientBaseSet(ClientBaseElem [] ClientBaseSet) {
-        this.ClientBaseSet = ClientBaseSet;
-    }
-
-    /**
-     * Get 符合条件的代客数 
-     * @return TotalCount 符合条件的代客数
-     */
-    public Long getTotalCount() {
-        return this.TotalCount;
-    }
-
-    /**
-     * Set 符合条件的代客数
-     * @param TotalCount 符合条件的代客数
-     */
-    public void setTotalCount(Long TotalCount) {
-        this.TotalCount = TotalCount;
-    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -91,23 +45,14 @@ public class DescribeClientBaseInfoResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeClientBaseInfoResponse() {
+    public AttachDisksResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeClientBaseInfoResponse(DescribeClientBaseInfoResponse source) {
-        if (source.ClientBaseSet != null) {
-            this.ClientBaseSet = new ClientBaseElem[source.ClientBaseSet.length];
-            for (int i = 0; i < source.ClientBaseSet.length; i++) {
-                this.ClientBaseSet[i] = new ClientBaseElem(source.ClientBaseSet[i]);
-            }
-        }
-        if (source.TotalCount != null) {
-            this.TotalCount = new Long(source.TotalCount);
-        }
+    public AttachDisksResponse(AttachDisksResponse source) {
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -118,8 +63,6 @@ public class DescribeClientBaseInfoResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "ClientBaseSet.", this.ClientBaseSet);
-        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

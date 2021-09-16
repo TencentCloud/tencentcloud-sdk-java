@@ -112,6 +112,13 @@ public class DescribeScanResult extends AbstractModel{
     private String Status;
 
     /**
+    * 提交检测的应用 ID
+    */
+    @SerializedName("BizId")
+    @Expose
+    private Long BizId;
+
+    /**
      * Get 业务返回码 
      * @return Code 业务返回码
      */
@@ -323,6 +330,22 @@ public class DescribeScanResult extends AbstractModel{
         this.Status = Status;
     }
 
+    /**
+     * Get 提交检测的应用 ID 
+     * @return BizId 提交检测的应用 ID
+     */
+    public Long getBizId() {
+        return this.BizId;
+    }
+
+    /**
+     * Set 提交检测的应用 ID
+     * @param BizId 提交检测的应用 ID
+     */
+    public void setBizId(Long BizId) {
+        this.BizId = BizId;
+    }
+
     public DescribeScanResult() {
     }
 
@@ -373,6 +396,9 @@ public class DescribeScanResult extends AbstractModel{
         if (source.Status != null) {
             this.Status = new String(source.Status);
         }
+        if (source.BizId != null) {
+            this.BizId = new Long(source.BizId);
+        }
     }
 
 
@@ -392,6 +418,7 @@ public class DescribeScanResult extends AbstractModel{
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);
         this.setParamSimple(map, prefix + "Url", this.Url);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "BizId", this.BizId);
 
     }
 }

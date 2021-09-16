@@ -519,6 +519,26 @@ public class SqlserverClient extends AbstractClient{
     }
 
     /**
+     *本接口(DescribeBackupFiles)用于在非打包备份模式下单个库对应的备份文件
+     * @param req DescribeBackupFilesRequest
+     * @return DescribeBackupFilesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBackupFilesResponse DescribeBackupFiles(DescribeBackupFilesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBackupFilesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBackupFilesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeBackupFiles");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（DescribeBackupMigration）用于创建增量备份导入任务。
      * @param req DescribeBackupMigrationRequest
      * @return DescribeBackupMigrationResponse
@@ -1259,7 +1279,7 @@ public class SqlserverClient extends AbstractClient{
     }
 
     /**
-     *本接口(ModifyBackupName)用于修改备份名称。
+     *本接口(ModifyBackupName)用于修改备份任务名称。
      * @param req ModifyBackupNameRequest
      * @return ModifyBackupNameResponse
      * @throws TencentCloudSDKException

@@ -93,6 +93,13 @@ public class DescribeBackupsRequest extends AbstractModel{
     private String DatabaseName;
 
     /**
+    * 是否分组查询，默认是0，单库备份情况下 0-兼容老方式不分组，1-单库备份分组后展示
+    */
+    @SerializedName("Group")
+    @Expose
+    private Long Group;
+
+    /**
      * Get 开始时间(yyyy-MM-dd HH:mm:ss) 
      * @return StartTime 开始时间(yyyy-MM-dd HH:mm:ss)
      */
@@ -252,6 +259,22 @@ public class DescribeBackupsRequest extends AbstractModel{
         this.DatabaseName = DatabaseName;
     }
 
+    /**
+     * Get 是否分组查询，默认是0，单库备份情况下 0-兼容老方式不分组，1-单库备份分组后展示 
+     * @return Group 是否分组查询，默认是0，单库备份情况下 0-兼容老方式不分组，1-单库备份分组后展示
+     */
+    public Long getGroup() {
+        return this.Group;
+    }
+
+    /**
+     * Set 是否分组查询，默认是0，单库备份情况下 0-兼容老方式不分组，1-单库备份分组后展示
+     * @param Group 是否分组查询，默认是0，单库备份情况下 0-兼容老方式不分组，1-单库备份分组后展示
+     */
+    public void setGroup(Long Group) {
+        this.Group = Group;
+    }
+
     public DescribeBackupsRequest() {
     }
 
@@ -290,6 +313,9 @@ public class DescribeBackupsRequest extends AbstractModel{
         if (source.DatabaseName != null) {
             this.DatabaseName = new String(source.DatabaseName);
         }
+        if (source.Group != null) {
+            this.Group = new Long(source.Group);
+        }
     }
 
 
@@ -307,6 +333,7 @@ public class DescribeBackupsRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "BackupWay", this.BackupWay);
         this.setParamSimple(map, prefix + "BackupId", this.BackupId);
         this.setParamSimple(map, prefix + "DatabaseName", this.DatabaseName);
+        this.setParamSimple(map, prefix + "Group", this.Group);
 
     }
 }

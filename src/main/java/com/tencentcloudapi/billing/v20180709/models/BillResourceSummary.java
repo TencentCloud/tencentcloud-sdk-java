@@ -143,6 +143,7 @@ public class BillResourceSummary extends AbstractModel{
 
     /**
     * 折扣率
+当聚合之后折扣不唯一或者合同价的情况下，返回“-”
     */
     @SerializedName("Discount")
     @Expose
@@ -527,8 +528,10 @@ public class BillResourceSummary extends AbstractModel{
     }
 
     /**
-     * Get 折扣率 
+     * Get 折扣率
+当聚合之后折扣不唯一或者合同价的情况下，返回“-” 
      * @return Discount 折扣率
+当聚合之后折扣不唯一或者合同价的情况下，返回“-”
      */
     public String getDiscount() {
         return this.Discount;
@@ -536,7 +539,9 @@ public class BillResourceSummary extends AbstractModel{
 
     /**
      * Set 折扣率
+当聚合之后折扣不唯一或者合同价的情况下，返回“-”
      * @param Discount 折扣率
+当聚合之后折扣不唯一或者合同价的情况下，返回“-”
      */
     public void setDiscount(String Discount) {
         this.Discount = Discount;

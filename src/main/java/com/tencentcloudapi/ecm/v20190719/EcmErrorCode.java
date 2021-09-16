@@ -12,6 +12,9 @@ public enum EcmErrorCode {
     // 数据操作失败。
      FAILEDOPERATION_DATAOPERATIONFAILED("FailedOperation.DataOperationFailed"),
      
+    // FailedOperation.DiskAttached
+     FAILEDOPERATION_DISKATTACHED("FailedOperation.DiskAttached"),
+     
     // 镜像正在使用中。
      FAILEDOPERATION_IMAGEINUSE("FailedOperation.ImageInUse"),
      
@@ -45,11 +48,23 @@ public enum EcmErrorCode {
     // 内部错误。
      INTERNALERROR("InternalError"),
      
+    // InternalError.ComponentError
+     INTERNALERROR_COMPONENTERROR("InternalError.ComponentError"),
+     
+    // InternalError.FailQueryResource
+     INTERNALERROR_FAILQUERYRESOURCE("InternalError.FailQueryResource"),
+     
+    // InternalError.ResourceOpFailed
+     INTERNALERROR_RESOURCEOPFAILED("InternalError.ResourceOpFailed"),
+     
     // 参数错误。
      INVALIDPARAMETER("InvalidParameter"),
      
     // 参数不支持同时指定。
      INVALIDPARAMETER_COEXIST("InvalidParameter.Coexist"),
+     
+    // InvalidParameter.DiskConfigNotSupported
+     INVALIDPARAMETER_DISKCONFIGNOTSUPPORTED("InvalidParameter.DiskConfigNotSupported"),
      
     // 参数格式错误。
      INVALIDPARAMETER_FORMATERROR("InvalidParameter.FormatError"),
@@ -74,6 +89,9 @@ public enum EcmErrorCode {
      
     // 监听器端口检查失败，比如端口冲突。
      INVALIDPARAMETER_PORTCHECKFAILED("InvalidParameter.PortCheckFailed"),
+     
+    // InvalidParameter.ProjectIdNotExist
+     INVALIDPARAMETER_PROJECTIDNOTEXIST("InvalidParameter.ProjectIdNotExist"),
      
     // 监听器协议检查失败，比如相关协议不支持对应操作。
      INVALIDPARAMETER_PROTOCOLCHECKFAILED("InvalidParameter.ProtocolCheckFailed"),
@@ -116,6 +134,9 @@ public enum EcmErrorCode {
      
     // 实例机型和pid不匹配。
      INVALIDPARAMETERVALUE_INSTANCETYPENOTMATCHPID("InvalidParameterValue.InstanceTypeNotMatchPid"),
+     
+    // InvalidParameterValue.InsufficientRefundQuota
+     INVALIDPARAMETERVALUE_INSUFFICIENTREFUNDQUOTA("InvalidParameterValue.InsufficientRefundQuota"),
      
     // 无效的EIP。
      INVALIDPARAMETERVALUE_INVAILDADDRESSID("InvalidParameterValue.InvaildAddressId"),
@@ -164,6 +185,15 @@ public enum EcmErrorCode {
      
     // 数据盘类型不合法。
      INVALIDPARAMETERVALUE_INVALIDDATADISKTYPE("InvalidParameterValue.InvalidDataDiskType"),
+     
+    // InvalidParameterValue.InvalidDisk
+     INVALIDPARAMETERVALUE_INVALIDDISK("InvalidParameterValue.InvalidDisk"),
+     
+    // InvalidParameterValue.InvalidDiskId
+     INVALIDPARAMETERVALUE_INVALIDDISKID("InvalidParameterValue.InvalidDiskId"),
+     
+    // InvalidParameterValue.InvalidDiskType
+     INVALIDPARAMETERVALUE_INVALIDDISKTYPE("InvalidParameterValue.InvalidDiskType"),
      
     // windows镜像不支持IP直通。
      INVALIDPARAMETERVALUE_INVALIDEIPDIRECTSERVICE("InvalidParameterValue.InvalidEIPDirectService"),
@@ -227,6 +257,12 @@ public enum EcmErrorCode {
      
     // 全组ID不合法。
      INVALIDPARAMETERVALUE_INVALIDSECURITYGROUPID("InvalidParameterValue.InvalidSecurityGroupID"),
+     
+    // InvalidParameterValue.InvalidSnapshot
+     INVALIDPARAMETERVALUE_INVALIDSNAPSHOT("InvalidParameterValue.InvalidSnapshot"),
+     
+    // InvalidParameterValue.InvalidSnapshotId
+     INVALIDPARAMETERVALUE_INVALIDSNAPSHOTID("InvalidParameterValue.InvalidSnapshotId"),
      
     // 系统盘大小不合法。
      INVALIDPARAMETERVALUE_INVALIDSYSTEMDISKSIZE("InvalidParameterValue.InvalidSystemDiskSize"),
@@ -315,6 +351,9 @@ public enum EcmErrorCode {
     // 申购次数不足，每个腾讯云账户每个地域每天申购次数为配额数*2 次。
      LIMITEXCEEDED_ADDRESSQUOTALIMITEXCEEDEDDAILYALLOCATE("LimitExceeded.AddressQuotaLimitExceededDailyAllocate"),
      
+    // LimitExceeded.AttachedDiskLimitExceeded
+     LIMITEXCEEDED_ATTACHEDDISKLIMITEXCEEDED("LimitExceeded.AttachedDiskLimitExceeded"),
+     
     // 网卡配额不足。
      LIMITEXCEEDED_ENIQUOTALIMITEXCEEDED("LimitExceeded.EniQuotaLimitExceeded"),
      
@@ -399,14 +438,47 @@ public enum EcmErrorCode {
     // 实例不合法。
      RESOURCENOTFOUND_INSTANCENOTEXIST("ResourceNotFound.InstanceNotExist"),
      
+    // ResourceNotFound.NotFound
+     RESOURCENOTFOUND_NOTFOUND("ResourceNotFound.NotFound"),
+     
+    // ResourceUnavailable.Attached
+     RESOURCEUNAVAILABLE_ATTACHED("ResourceUnavailable.Attached"),
+     
+    // ResourceUnavailable.Expire
+     RESOURCEUNAVAILABLE_EXPIRE("ResourceUnavailable.Expire"),
+     
     // 实例未运行。
      RESOURCEUNAVAILABLE_INSTANCENOTRUNNING("ResourceUnavailable.InstanceNotRunning"),
+     
+    // ResourceUnavailable.NotPortable
+     RESOURCEUNAVAILABLE_NOTPORTABLE("ResourceUnavailable.NotPortable"),
+     
+    // ResourceUnavailable.NotSupported
+     RESOURCEUNAVAILABLE_NOTSUPPORTED("ResourceUnavailable.NotSupported"),
+     
+    // ResourceUnavailable.RepeatRefund
+     RESOURCEUNAVAILABLE_REPEATREFUND("ResourceUnavailable.RepeatRefund"),
+     
+    // ResourceUnavailable.TypeError
+     RESOURCEUNAVAILABLE_TYPEERROR("ResourceUnavailable.TypeError"),
      
     // 负载均衡资源已经售罄。
      RESOURCESSOLDOUT_LOADBALANCERSOLDOUT("ResourcesSoldOut.LoadBalancerSoldOut"),
      
+    // 未授权操作。
+     UNAUTHORIZEDOPERATION("UnauthorizedOperation"),
+     
     // 没有权限进行该操作。
      UNAUTHORIZEDOPERATION_FORBIDDENOPERATION("UnauthorizedOperation.ForbiddenOperation"),
+     
+    // UnauthorizedOperation.MFAExpired
+     UNAUTHORIZEDOPERATION_MFAEXPIRED("UnauthorizedOperation.MFAExpired"),
+     
+    // UnauthorizedOperation.NotCertification
+     UNAUTHORIZEDOPERATION_NOTCERTIFICATION("UnauthorizedOperation.NotCertification"),
+     
+    // UnauthorizedOperation.NotHavePaymentRight
+     UNAUTHORIZEDOPERATION_NOTHAVEPAYMENTRIGHT("UnauthorizedOperation.NotHavePaymentRight"),
      
     // 无windows镜像权限。
      UNAUTHORIZEDOPERATION_WINDOWSIMAGE("UnauthorizedOperation.WindowsImage"),
@@ -473,6 +545,12 @@ public enum EcmErrorCode {
      
     // 实例规格仅支持绑定三个EIP。
      UNSUPPORTEDOPERATION_QUOTALIMITEXCEEDED("UnsupportedOperation.QuotaLimitExceeded"),
+     
+    // UnsupportedOperation.SnapHasShared
+     UNSUPPORTEDOPERATION_SNAPHASSHARED("UnsupportedOperation.SnapHasShared"),
+     
+    // UnsupportedOperation.SnapshotHasBindedImage
+     UNSUPPORTEDOPERATION_SNAPSHOTHASBINDEDIMAGE("UnsupportedOperation.SnapshotHasBindedImage"),
      
     // 当前状态不能进行此操作。
      UNSUPPORTEDOPERATION_STATUSNOTPERMIT("UnsupportedOperation.StatusNotPermit"),

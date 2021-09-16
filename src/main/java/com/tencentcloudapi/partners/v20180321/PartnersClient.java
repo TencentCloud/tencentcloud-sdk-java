@@ -360,28 +360,6 @@ public class PartnersClient extends AbstractClient{
     }
 
     /**
-     *该接口即将下线，请切换调用DescribeClientBasicInfo。
-
-国际站根据UIN查询代客基础信息【本接口仅限主账号访问】
-     * @param req DescribeClientBaseInfoRequest
-     * @return DescribeClientBaseInfoResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeClientBaseInfoResponse DescribeClientBaseInfo(DescribeClientBaseInfoRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeClientBaseInfoResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeClientBaseInfoResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeClientBaseInfo");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *代理商可查询自己名下全部返佣信息
      * @param req DescribeRebateInfosRequest
      * @return DescribeRebateInfosResponse

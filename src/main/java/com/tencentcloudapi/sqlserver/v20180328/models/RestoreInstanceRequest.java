@@ -51,6 +51,13 @@ public class RestoreInstanceRequest extends AbstractModel{
     private RenameRestoreDatabase [] RenameRestore;
 
     /**
+    * 备份任务组ID，在单库备份文件模式下，可通过[DescribeBackups](https://cloud.tencent.com/document/product/238/19943) 接口获得。
+    */
+    @SerializedName("GroupId")
+    @Expose
+    private String GroupId;
+
+    /**
      * Get 实例ID，形如mssql-j8kv137v 
      * @return InstanceId 实例ID，形如mssql-j8kv137v
      */
@@ -114,6 +121,22 @@ public class RestoreInstanceRequest extends AbstractModel{
         this.RenameRestore = RenameRestore;
     }
 
+    /**
+     * Get 备份任务组ID，在单库备份文件模式下，可通过[DescribeBackups](https://cloud.tencent.com/document/product/238/19943) 接口获得。 
+     * @return GroupId 备份任务组ID，在单库备份文件模式下，可通过[DescribeBackups](https://cloud.tencent.com/document/product/238/19943) 接口获得。
+     */
+    public String getGroupId() {
+        return this.GroupId;
+    }
+
+    /**
+     * Set 备份任务组ID，在单库备份文件模式下，可通过[DescribeBackups](https://cloud.tencent.com/document/product/238/19943) 接口获得。
+     * @param GroupId 备份任务组ID，在单库备份文件模式下，可通过[DescribeBackups](https://cloud.tencent.com/document/product/238/19943) 接口获得。
+     */
+    public void setGroupId(String GroupId) {
+        this.GroupId = GroupId;
+    }
+
     public RestoreInstanceRequest() {
     }
 
@@ -137,6 +160,9 @@ public class RestoreInstanceRequest extends AbstractModel{
                 this.RenameRestore[i] = new RenameRestoreDatabase(source.RenameRestore[i]);
             }
         }
+        if (source.GroupId != null) {
+            this.GroupId = new String(source.GroupId);
+        }
     }
 
 
@@ -148,6 +174,7 @@ public class RestoreInstanceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "BackupId", this.BackupId);
         this.setParamSimple(map, prefix + "TargetInstanceId", this.TargetInstanceId);
         this.setParamArrayObj(map, prefix + "RenameRestore.", this.RenameRestore);
+        this.setParamSimple(map, prefix + "GroupId", this.GroupId);
 
     }
 }

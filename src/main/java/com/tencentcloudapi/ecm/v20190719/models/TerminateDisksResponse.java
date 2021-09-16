@@ -13,48 +13,48 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.partners.v20180321.models;
+package com.tencentcloudapi.ecm.v20190719.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeClientBaseInfoRequest extends AbstractModel{
+public class TerminateDisksResponse extends AbstractModel{
 
     /**
-    * 代客UIN
+    * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
-    @SerializedName("ClientUin")
+    @SerializedName("RequestId")
     @Expose
-    private String ClientUin;
+    private String RequestId;
 
     /**
-     * Get 代客UIN 
-     * @return ClientUin 代客UIN
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
+     * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public String getClientUin() {
-        return this.ClientUin;
+    public String getRequestId() {
+        return this.RequestId;
     }
 
     /**
-     * Set 代客UIN
-     * @param ClientUin 代客UIN
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public void setClientUin(String ClientUin) {
-        this.ClientUin = ClientUin;
+    public void setRequestId(String RequestId) {
+        this.RequestId = RequestId;
     }
 
-    public DescribeClientBaseInfoRequest() {
+    public TerminateDisksResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeClientBaseInfoRequest(DescribeClientBaseInfoRequest source) {
-        if (source.ClientUin != null) {
-            this.ClientUin = new String(source.ClientUin);
+    public TerminateDisksResponse(TerminateDisksResponse source) {
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
         }
     }
 
@@ -63,7 +63,7 @@ public class DescribeClientBaseInfoRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ClientUin", this.ClientUin);
+        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
 }

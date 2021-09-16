@@ -621,6 +621,9 @@ public enum CvmErrorCode {
     // 该实例类型不支持竞价计费
      UNSUPPORTEDOPERATION_NOINSTANCETYPESUPPORTSPOT("UnsupportedOperation.NoInstanceTypeSupportSpot"),
      
+    // 针对当前实例设置定时任务失败。
+     UNSUPPORTEDOPERATION_NOTSUPPORTIMPORTINSTANCESACTIONTIMER("UnsupportedOperation.NotSupportImportInstancesActionTimer"),
+     
     // 操作不支持当前实例
      UNSUPPORTEDOPERATION_NOTSUPPORTINSTANCEIMAGE("UnsupportedOperation.NotSupportInstanceImage"),
      
@@ -659,6 +662,9 @@ public enum CvmErrorCode {
      
     // 请求不支持国际版账号
      UNSUPPORTEDOPERATION_UNSUPPORTEDINTERNATIONALUSER("UnsupportedOperation.UnsupportedInternationalUser"),
+     
+    // 用户限额操作的配额不足。
+     UNSUPPORTEDOPERATION_USERLIMITOPERATIONEXCEEDQUOTA("UnsupportedOperation.UserLimitOperationExceedQuota"),
      
     // 私有网络ip不在子网内。
      VPCADDRNOTINSUBNET("VpcAddrNotInSubNet"),
