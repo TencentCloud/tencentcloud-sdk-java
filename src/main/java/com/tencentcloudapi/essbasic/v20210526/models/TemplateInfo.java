@@ -72,6 +72,20 @@ public class TemplateInfo extends AbstractModel{
     private Long CreatedOn;
 
     /**
+    * 模板类型：1-静默签；2-静默签授权；3-普通模版
+    */
+    @SerializedName("TemplateType")
+    @Expose
+    private Long TemplateType;
+
+    /**
+    * 模板中的流程参与人信息
+    */
+    @SerializedName("Recipients")
+    @Expose
+    private Recipient [] Recipients;
+
+    /**
      * Get 模板ID 
      * @return TemplateId 模板ID
      */
@@ -183,6 +197,38 @@ public class TemplateInfo extends AbstractModel{
         this.CreatedOn = CreatedOn;
     }
 
+    /**
+     * Get 模板类型：1-静默签；2-静默签授权；3-普通模版 
+     * @return TemplateType 模板类型：1-静默签；2-静默签授权；3-普通模版
+     */
+    public Long getTemplateType() {
+        return this.TemplateType;
+    }
+
+    /**
+     * Set 模板类型：1-静默签；2-静默签授权；3-普通模版
+     * @param TemplateType 模板类型：1-静默签；2-静默签授权；3-普通模版
+     */
+    public void setTemplateType(Long TemplateType) {
+        this.TemplateType = TemplateType;
+    }
+
+    /**
+     * Get 模板中的流程参与人信息 
+     * @return Recipients 模板中的流程参与人信息
+     */
+    public Recipient [] getRecipients() {
+        return this.Recipients;
+    }
+
+    /**
+     * Set 模板中的流程参与人信息
+     * @param Recipients 模板中的流程参与人信息
+     */
+    public void setRecipients(Recipient [] Recipients) {
+        this.Recipients = Recipients;
+    }
+
     public TemplateInfo() {
     }
 
@@ -218,6 +264,15 @@ public class TemplateInfo extends AbstractModel{
         if (source.CreatedOn != null) {
             this.CreatedOn = new Long(source.CreatedOn);
         }
+        if (source.TemplateType != null) {
+            this.TemplateType = new Long(source.TemplateType);
+        }
+        if (source.Recipients != null) {
+            this.Recipients = new Recipient[source.Recipients.length];
+            for (int i = 0; i < source.Recipients.length; i++) {
+                this.Recipients[i] = new Recipient(source.Recipients[i]);
+            }
+        }
     }
 
 
@@ -232,6 +287,8 @@ public class TemplateInfo extends AbstractModel{
         this.setParamArrayObj(map, prefix + "SignComponents.", this.SignComponents);
         this.setParamSimple(map, prefix + "Creator", this.Creator);
         this.setParamSimple(map, prefix + "CreatedOn", this.CreatedOn);
+        this.setParamSimple(map, prefix + "TemplateType", this.TemplateType);
+        this.setParamArrayObj(map, prefix + "Recipients.", this.Recipients);
 
     }
 }

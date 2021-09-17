@@ -121,6 +121,13 @@ public class Code extends AbstractModel{
     private String GitUserNameSecret;
 
     /**
+    * 镜像部署时配置TCR镜像信息
+    */
+    @SerializedName("ImageConfig")
+    @Expose
+    private ImageConfig ImageConfig;
+
+    /**
      * Get 对象存储桶名称（填写存储桶名称自定义部分，不包含-appid） 
      * @return CosBucketName 对象存储桶名称（填写存储桶名称自定义部分，不包含-appid）
      */
@@ -344,6 +351,22 @@ public class Code extends AbstractModel{
         this.GitUserNameSecret = GitUserNameSecret;
     }
 
+    /**
+     * Get 镜像部署时配置TCR镜像信息 
+     * @return ImageConfig 镜像部署时配置TCR镜像信息
+     */
+    public ImageConfig getImageConfig() {
+        return this.ImageConfig;
+    }
+
+    /**
+     * Set 镜像部署时配置TCR镜像信息
+     * @param ImageConfig 镜像部署时配置TCR镜像信息
+     */
+    public void setImageConfig(ImageConfig ImageConfig) {
+        this.ImageConfig = ImageConfig;
+    }
+
     public Code() {
     }
 
@@ -394,6 +417,9 @@ public class Code extends AbstractModel{
         if (source.GitUserNameSecret != null) {
             this.GitUserNameSecret = new String(source.GitUserNameSecret);
         }
+        if (source.ImageConfig != null) {
+            this.ImageConfig = new ImageConfig(source.ImageConfig);
+        }
     }
 
 
@@ -415,6 +441,7 @@ public class Code extends AbstractModel{
         this.setParamSimple(map, prefix + "GitDirectory", this.GitDirectory);
         this.setParamSimple(map, prefix + "GitCommitId", this.GitCommitId);
         this.setParamSimple(map, prefix + "GitUserNameSecret", this.GitUserNameSecret);
+        this.setParamObj(map, prefix + "ImageConfig.", this.ImageConfig);
 
     }
 }

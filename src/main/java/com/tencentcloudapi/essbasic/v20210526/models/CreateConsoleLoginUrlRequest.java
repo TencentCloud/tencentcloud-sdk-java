@@ -59,6 +59,20 @@ public class CreateConsoleLoginUrlRequest extends AbstractModel{
     private UserInfo Operator;
 
     /**
+    * 控制台指定模块，文件/合同管理:"DOCUMENT"，模版管理:"TEMPLATE"，印章管理:"SEAL"，组织架构/人员:"OPERATOR"，空字符串："账号信息"
+    */
+    @SerializedName("Module")
+    @Expose
+    private String Module;
+
+    /**
+    * 控制台指定模块Id
+    */
+    @SerializedName("ModuleId")
+    @Expose
+    private String ModuleId;
+
+    /**
      * Get 应用信息
 此接口Agent.ProxyOrganizationOpenId 和 Agent. ProxyOperator.OpenId 必填 
      * @return Agent 应用信息
@@ -142,6 +156,38 @@ public class CreateConsoleLoginUrlRequest extends AbstractModel{
         this.Operator = Operator;
     }
 
+    /**
+     * Get 控制台指定模块，文件/合同管理:"DOCUMENT"，模版管理:"TEMPLATE"，印章管理:"SEAL"，组织架构/人员:"OPERATOR"，空字符串："账号信息" 
+     * @return Module 控制台指定模块，文件/合同管理:"DOCUMENT"，模版管理:"TEMPLATE"，印章管理:"SEAL"，组织架构/人员:"OPERATOR"，空字符串："账号信息"
+     */
+    public String getModule() {
+        return this.Module;
+    }
+
+    /**
+     * Set 控制台指定模块，文件/合同管理:"DOCUMENT"，模版管理:"TEMPLATE"，印章管理:"SEAL"，组织架构/人员:"OPERATOR"，空字符串："账号信息"
+     * @param Module 控制台指定模块，文件/合同管理:"DOCUMENT"，模版管理:"TEMPLATE"，印章管理:"SEAL"，组织架构/人员:"OPERATOR"，空字符串："账号信息"
+     */
+    public void setModule(String Module) {
+        this.Module = Module;
+    }
+
+    /**
+     * Get 控制台指定模块Id 
+     * @return ModuleId 控制台指定模块Id
+     */
+    public String getModuleId() {
+        return this.ModuleId;
+    }
+
+    /**
+     * Set 控制台指定模块Id
+     * @param ModuleId 控制台指定模块Id
+     */
+    public void setModuleId(String ModuleId) {
+        this.ModuleId = ModuleId;
+    }
+
     public CreateConsoleLoginUrlRequest() {
     }
 
@@ -165,6 +211,12 @@ public class CreateConsoleLoginUrlRequest extends AbstractModel{
         if (source.Operator != null) {
             this.Operator = new UserInfo(source.Operator);
         }
+        if (source.Module != null) {
+            this.Module = new String(source.Module);
+        }
+        if (source.ModuleId != null) {
+            this.ModuleId = new String(source.ModuleId);
+        }
     }
 
 
@@ -177,6 +229,8 @@ public class CreateConsoleLoginUrlRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "UniformSocialCreditCode", this.UniformSocialCreditCode);
         this.setParamSimple(map, prefix + "ProxyOperatorName", this.ProxyOperatorName);
         this.setParamObj(map, prefix + "Operator.", this.Operator);
+        this.setParamSimple(map, prefix + "Module", this.Module);
+        this.setParamSimple(map, prefix + "ModuleId", this.ModuleId);
 
     }
 }

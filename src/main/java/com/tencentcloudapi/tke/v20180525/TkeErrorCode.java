@@ -3,6 +3,9 @@ public enum TkeErrorCode {
     // 操作失败。
      FAILEDOPERATION("FailedOperation"),
      
+    // 子账户RBAC权限不足。
+     FAILEDOPERATION_RBACFORBIDDEN("FailedOperation.RBACForbidden"),
+     
     // 内部错误。
      INTERNALERROR("InternalError"),
      
@@ -48,11 +51,17 @@ public enum TkeErrorCode {
     // 集群节点版本过低。
      INTERNALERROR_CLUSTERUPGRADENODEVERSION("InternalError.ClusterUpgradeNodeVersion"),
      
+    // 执行命令超时。
+     INTERNALERROR_CMDTIMEOUT("InternalError.CmdTimeout"),
+     
     // 内部HTTP客户端错误。
      INTERNALERROR_COMPONENTCLIENTHTTP("InternalError.ComponentClientHttp"),
      
     // 请求(http请求)其他云服务失败。
      INTERNALERROR_COMPONENTCLINETHTTP("InternalError.ComponentClinetHttp"),
+     
+    // 容器未找到。
+     INTERNALERROR_CONTAINERNOTFOUND("InternalError.ContainerNotFound"),
      
     // 创建集群失败。
      INTERNALERROR_CREATEMASTERFAILED("InternalError.CreateMasterFailed"),
@@ -249,6 +258,9 @@ public enum TkeErrorCode {
     // 资源被占用。
      RESOURCEINUSE("ResourceInUse"),
      
+    // 资源不足。
+     RESOURCEINSUFFICIENT("ResourceInsufficient"),
+     
     // 资源不存在。
      RESOURCENOTFOUND("ResourceNotFound"),
      
@@ -272,6 +284,12 @@ public enum TkeErrorCode {
      
     // 集群状态不支持该操作。
      RESOURCEUNAVAILABLE_CLUSTERSTATE("ResourceUnavailable.ClusterState"),
+     
+    // Eks Container Instance状态不支持改操作。
+     RESOURCEUNAVAILABLE_EKSCONTAINERSTATUS("ResourceUnavailable.EksContainerStatus"),
+     
+    // 资源售罄。
+     RESOURCESSOLDOUT("ResourcesSoldOut"),
      
     // 未授权操作。
      UNAUTHORIZEDOPERATION("UnauthorizedOperation"),

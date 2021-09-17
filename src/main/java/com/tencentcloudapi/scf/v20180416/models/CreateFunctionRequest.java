@@ -156,7 +156,7 @@ public class CreateFunctionRequest extends AbstractModel{
     private CfsConfig CfsConfig;
 
     /**
-    * 函数初始化超时时间
+    * 函数初始化超时时间，默认 65s，镜像部署函数默认 90s。
     */
     @SerializedName("InitTimeout")
     @Expose
@@ -488,16 +488,16 @@ public class CreateFunctionRequest extends AbstractModel{
     }
 
     /**
-     * Get 函数初始化超时时间 
-     * @return InitTimeout 函数初始化超时时间
+     * Get 函数初始化超时时间，默认 65s，镜像部署函数默认 90s。 
+     * @return InitTimeout 函数初始化超时时间，默认 65s，镜像部署函数默认 90s。
      */
     public Long getInitTimeout() {
         return this.InitTimeout;
     }
 
     /**
-     * Set 函数初始化超时时间
-     * @param InitTimeout 函数初始化超时时间
+     * Set 函数初始化超时时间，默认 65s，镜像部署函数默认 90s。
+     * @param InitTimeout 函数初始化超时时间，默认 65s，镜像部署函数默认 90s。
      */
     public void setInitTimeout(Long InitTimeout) {
         this.InitTimeout = InitTimeout;

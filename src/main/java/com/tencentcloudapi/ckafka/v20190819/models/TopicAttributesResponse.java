@@ -80,6 +80,22 @@ public class TopicAttributesResponse extends AbstractModel{
     private TopicPartitionDO [] Partitions;
 
     /**
+    * ACL预设策略开关，1：打开； 0：关闭
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EnableAclRule")
+    @Expose
+    private Long EnableAclRule;
+
+    /**
+    * 预设策略列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AclRuleList")
+    @Expose
+    private AclRule [] AclRuleList;
+
+    /**
      * Get 主题 ID 
      * @return TopicId 主题 ID
      */
@@ -211,6 +227,46 @@ public class TopicAttributesResponse extends AbstractModel{
         this.Partitions = Partitions;
     }
 
+    /**
+     * Get ACL预设策略开关，1：打开； 0：关闭
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EnableAclRule ACL预设策略开关，1：打开； 0：关闭
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getEnableAclRule() {
+        return this.EnableAclRule;
+    }
+
+    /**
+     * Set ACL预设策略开关，1：打开； 0：关闭
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EnableAclRule ACL预设策略开关，1：打开； 0：关闭
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEnableAclRule(Long EnableAclRule) {
+        this.EnableAclRule = EnableAclRule;
+    }
+
+    /**
+     * Get 预设策略列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AclRuleList 预设策略列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public AclRule [] getAclRuleList() {
+        return this.AclRuleList;
+    }
+
+    /**
+     * Set 预设策略列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AclRuleList 预设策略列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAclRuleList(AclRule [] AclRuleList) {
+        this.AclRuleList = AclRuleList;
+    }
+
     public TopicAttributesResponse() {
     }
 
@@ -249,6 +305,15 @@ public class TopicAttributesResponse extends AbstractModel{
                 this.Partitions[i] = new TopicPartitionDO(source.Partitions[i]);
             }
         }
+        if (source.EnableAclRule != null) {
+            this.EnableAclRule = new Long(source.EnableAclRule);
+        }
+        if (source.AclRuleList != null) {
+            this.AclRuleList = new AclRule[source.AclRuleList.length];
+            for (int i = 0; i < source.AclRuleList.length; i++) {
+                this.AclRuleList[i] = new AclRule(source.AclRuleList[i]);
+            }
+        }
     }
 
 
@@ -264,6 +329,8 @@ public class TopicAttributesResponse extends AbstractModel{
         this.setParamArraySimple(map, prefix + "IpWhiteList.", this.IpWhiteList);
         this.setParamObj(map, prefix + "Config.", this.Config);
         this.setParamArrayObj(map, prefix + "Partitions.", this.Partitions);
+        this.setParamSimple(map, prefix + "EnableAclRule", this.EnableAclRule);
+        this.setParamArrayObj(map, prefix + "AclRuleList.", this.AclRuleList);
 
     }
 }

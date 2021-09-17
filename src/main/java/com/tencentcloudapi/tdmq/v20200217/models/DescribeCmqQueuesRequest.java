@@ -44,6 +44,20 @@ public class DescribeCmqQueuesRequest extends AbstractModel{
     private String QueueName;
 
     /**
+    * CMQ 队列名称列表过滤
+    */
+    @SerializedName("QueueNameList")
+    @Expose
+    private String [] QueueNameList;
+
+    /**
+    * 标签过滤查找时，需要设置为 true
+    */
+    @SerializedName("IsTagFilter")
+    @Expose
+    private Boolean IsTagFilter;
+
+    /**
      * Get 分页时本页获取队列列表的起始位置。如果填写了该值，必须也要填写 limit 。该值缺省时，后台取默认值 0 
      * @return Offset 分页时本页获取队列列表的起始位置。如果填写了该值，必须也要填写 limit 。该值缺省时，后台取默认值 0
      */
@@ -91,6 +105,38 @@ public class DescribeCmqQueuesRequest extends AbstractModel{
         this.QueueName = QueueName;
     }
 
+    /**
+     * Get CMQ 队列名称列表过滤 
+     * @return QueueNameList CMQ 队列名称列表过滤
+     */
+    public String [] getQueueNameList() {
+        return this.QueueNameList;
+    }
+
+    /**
+     * Set CMQ 队列名称列表过滤
+     * @param QueueNameList CMQ 队列名称列表过滤
+     */
+    public void setQueueNameList(String [] QueueNameList) {
+        this.QueueNameList = QueueNameList;
+    }
+
+    /**
+     * Get 标签过滤查找时，需要设置为 true 
+     * @return IsTagFilter 标签过滤查找时，需要设置为 true
+     */
+    public Boolean getIsTagFilter() {
+        return this.IsTagFilter;
+    }
+
+    /**
+     * Set 标签过滤查找时，需要设置为 true
+     * @param IsTagFilter 标签过滤查找时，需要设置为 true
+     */
+    public void setIsTagFilter(Boolean IsTagFilter) {
+        this.IsTagFilter = IsTagFilter;
+    }
+
     public DescribeCmqQueuesRequest() {
     }
 
@@ -108,6 +154,15 @@ public class DescribeCmqQueuesRequest extends AbstractModel{
         if (source.QueueName != null) {
             this.QueueName = new String(source.QueueName);
         }
+        if (source.QueueNameList != null) {
+            this.QueueNameList = new String[source.QueueNameList.length];
+            for (int i = 0; i < source.QueueNameList.length; i++) {
+                this.QueueNameList[i] = new String(source.QueueNameList[i]);
+            }
+        }
+        if (source.IsTagFilter != null) {
+            this.IsTagFilter = new Boolean(source.IsTagFilter);
+        }
     }
 
 
@@ -118,6 +173,8 @@ public class DescribeCmqQueuesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "QueueName", this.QueueName);
+        this.setParamArraySimple(map, prefix + "QueueNameList.", this.QueueNameList);
+        this.setParamSimple(map, prefix + "IsTagFilter", this.IsTagFilter);
 
     }
 }

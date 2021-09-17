@@ -44,6 +44,20 @@ public class DescribeCmqTopicsRequest extends AbstractModel{
     private String TopicName;
 
     /**
+    * CMQ 主题名称列表过滤
+    */
+    @SerializedName("TopicNameList")
+    @Expose
+    private String [] TopicNameList;
+
+    /**
+    * 标签过滤查找时，需要设置为 true
+    */
+    @SerializedName("IsTagFilter")
+    @Expose
+    private Boolean IsTagFilter;
+
+    /**
      * Get 分页时本页获取队列列表的起始位置。如果填写了该值，必须也要填写 limit 。该值缺省时，后台取默认值 0 
      * @return Offset 分页时本页获取队列列表的起始位置。如果填写了该值，必须也要填写 limit 。该值缺省时，后台取默认值 0
      */
@@ -91,6 +105,38 @@ public class DescribeCmqTopicsRequest extends AbstractModel{
         this.TopicName = TopicName;
     }
 
+    /**
+     * Get CMQ 主题名称列表过滤 
+     * @return TopicNameList CMQ 主题名称列表过滤
+     */
+    public String [] getTopicNameList() {
+        return this.TopicNameList;
+    }
+
+    /**
+     * Set CMQ 主题名称列表过滤
+     * @param TopicNameList CMQ 主题名称列表过滤
+     */
+    public void setTopicNameList(String [] TopicNameList) {
+        this.TopicNameList = TopicNameList;
+    }
+
+    /**
+     * Get 标签过滤查找时，需要设置为 true 
+     * @return IsTagFilter 标签过滤查找时，需要设置为 true
+     */
+    public Boolean getIsTagFilter() {
+        return this.IsTagFilter;
+    }
+
+    /**
+     * Set 标签过滤查找时，需要设置为 true
+     * @param IsTagFilter 标签过滤查找时，需要设置为 true
+     */
+    public void setIsTagFilter(Boolean IsTagFilter) {
+        this.IsTagFilter = IsTagFilter;
+    }
+
     public DescribeCmqTopicsRequest() {
     }
 
@@ -108,6 +154,15 @@ public class DescribeCmqTopicsRequest extends AbstractModel{
         if (source.TopicName != null) {
             this.TopicName = new String(source.TopicName);
         }
+        if (source.TopicNameList != null) {
+            this.TopicNameList = new String[source.TopicNameList.length];
+            for (int i = 0; i < source.TopicNameList.length; i++) {
+                this.TopicNameList[i] = new String(source.TopicNameList[i]);
+            }
+        }
+        if (source.IsTagFilter != null) {
+            this.IsTagFilter = new Boolean(source.IsTagFilter);
+        }
     }
 
 
@@ -118,6 +173,8 @@ public class DescribeCmqTopicsRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "TopicName", this.TopicName);
+        this.setParamArraySimple(map, prefix + "TopicNameList.", this.TopicNameList);
+        this.setParamSimple(map, prefix + "IsTagFilter", this.IsTagFilter);
 
     }
 }

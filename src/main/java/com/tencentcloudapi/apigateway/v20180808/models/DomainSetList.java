@@ -30,7 +30,7 @@ public class DomainSetList extends AbstractModel{
     private String DomainName;
 
     /**
-    * 域名解析状态。True 表示正常解析，False 表示解析失败。
+    * 域名解析状态。1 表示正常解析，0 表示解析失败。
     */
     @SerializedName("Status")
     @Expose
@@ -95,16 +95,16 @@ public class DomainSetList extends AbstractModel{
     }
 
     /**
-     * Get 域名解析状态。True 表示正常解析，False 表示解析失败。 
-     * @return Status 域名解析状态。True 表示正常解析，False 表示解析失败。
+     * Get 域名解析状态。1 表示正常解析，0 表示解析失败。 
+     * @return Status 域名解析状态。1 表示正常解析，0 表示解析失败。
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 域名解析状态。True 表示正常解析，False 表示解析失败。
-     * @param Status 域名解析状态。True 表示正常解析，False 表示解析失败。
+     * Set 域名解析状态。1 表示正常解析，0 表示解析失败。
+     * @param Status 域名解析状态。1 表示正常解析，0 表示解析失败。
      */
     public void setStatus(Long Status) {
         this.Status = Status;

@@ -142,7 +142,7 @@ public class UpdateFunctionConfigurationRequest extends AbstractModel{
     private CfsConfig CfsConfig;
 
     /**
-    * 函数初始化执行超时时间，默认15秒
+    * 函数初始化执行超时时间
     */
     @SerializedName("InitTimeout")
     @Expose
@@ -421,16 +421,16 @@ public class UpdateFunctionConfigurationRequest extends AbstractModel{
     }
 
     /**
-     * Get 函数初始化执行超时时间，默认15秒 
-     * @return InitTimeout 函数初始化执行超时时间，默认15秒
+     * Get 函数初始化执行超时时间 
+     * @return InitTimeout 函数初始化执行超时时间
      */
     public Long getInitTimeout() {
         return this.InitTimeout;
     }
 
     /**
-     * Set 函数初始化执行超时时间，默认15秒
-     * @param InitTimeout 函数初始化执行超时时间，默认15秒
+     * Set 函数初始化执行超时时间
+     * @param InitTimeout 函数初始化执行超时时间
      */
     public void setInitTimeout(Long InitTimeout) {
         this.InitTimeout = InitTimeout;

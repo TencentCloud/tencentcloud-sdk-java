@@ -359,6 +359,26 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *创建容器实例
+     * @param req CreateEKSContainerInstancesRequest
+     * @return CreateEKSContainerInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateEKSContainerInstancesResponse CreateEKSContainerInstances(CreateEKSContainerInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateEKSContainerInstancesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateEKSContainerInstancesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateEKSContainerInstances");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建告警规则
      * @param req CreatePrometheusAlertRuleRequest
      * @return CreatePrometheusAlertRuleResponse
@@ -591,6 +611,26 @@ public class TkeClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteEKSClusterResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteEKSCluster");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除容器实例，可批量删除
+     * @param req DeleteEKSContainerInstancesRequest
+     * @return DeleteEKSContainerInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteEKSContainerInstancesResponse DeleteEKSContainerInstances(DeleteEKSContainerInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteEKSContainerInstancesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteEKSContainerInstancesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteEKSContainerInstances");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -999,6 +1039,26 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *查询容器实例的事件
+     * @param req DescribeEKSContainerInstanceEventRequest
+     * @return DescribeEKSContainerInstanceEventResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeEKSContainerInstanceEventResponse DescribeEKSContainerInstanceEvent(DescribeEKSContainerInstanceEventRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeEKSContainerInstanceEventResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeEKSContainerInstanceEventResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeEKSContainerInstanceEvent");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询容器实例支持的地域
      * @param req DescribeEKSContainerInstanceRegionsRequest
      * @return DescribeEKSContainerInstanceRegionsResponse
@@ -1011,6 +1071,46 @@ public class TkeClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeEKSContainerInstanceRegionsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeEKSContainerInstanceRegions");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询容器实例
+     * @param req DescribeEKSContainerInstancesRequest
+     * @return DescribeEKSContainerInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeEKSContainerInstancesResponse DescribeEKSContainerInstances(DescribeEKSContainerInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeEKSContainerInstancesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeEKSContainerInstancesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeEKSContainerInstances");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询容器实例中容器日志
+     * @param req DescribeEksContainerInstanceLogRequest
+     * @return DescribeEksContainerInstanceLogResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeEksContainerInstanceLogResponse DescribeEksContainerInstanceLog(DescribeEksContainerInstanceLogRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeEksContainerInstanceLogResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeEksContainerInstanceLogResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeEksContainerInstanceLog");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1599,6 +1699,26 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *重启弹性容器实例，支持批量操作
+     * @param req RestartEKSContainerInstancesRequest
+     * @return RestartEKSContainerInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public RestartEKSContainerInstancesResponse RestartEKSContainerInstances(RestartEKSContainerInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RestartEKSContainerInstancesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<RestartEKSContainerInstancesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "RestartEKSContainerInstances");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *仅能设置节点池中处于伸缩组的节点
      * @param req SetNodePoolNodeProtectionRequest
      * @return SetNodePoolNodeProtectionResponse
@@ -1671,6 +1791,26 @@ public class TkeClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<UpdateEKSClusterResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "UpdateEKSCluster");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *更新容器实例
+     * @param req UpdateEKSContainerInstanceRequest
+     * @return UpdateEKSContainerInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateEKSContainerInstanceResponse UpdateEKSContainerInstance(UpdateEKSContainerInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpdateEKSContainerInstanceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpdateEKSContainerInstanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UpdateEKSContainerInstance");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

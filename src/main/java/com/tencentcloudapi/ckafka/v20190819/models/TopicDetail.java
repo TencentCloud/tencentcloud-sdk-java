@@ -118,6 +118,14 @@ public class TopicDetail extends AbstractModel{
     private TopicRetentionTimeConfigRsp RetentionTimeConfig;
 
     /**
+    * 0:正常，1：已删除，2：删除中
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Status")
+    @Expose
+    private Long Status;
+
+    /**
      * Get 主题名称 
      * @return TopicName 主题名称
      */
@@ -341,6 +349,26 @@ public class TopicDetail extends AbstractModel{
         this.RetentionTimeConfig = RetentionTimeConfig;
     }
 
+    /**
+     * Get 0:正常，1：已删除，2：删除中
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Status 0:正常，1：已删除，2：删除中
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set 0:正常，1：已删除，2：删除中
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Status 0:正常，1：已删除，2：删除中
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setStatus(Long Status) {
+        this.Status = Status;
+    }
+
     public TopicDetail() {
     }
 
@@ -388,6 +416,9 @@ public class TopicDetail extends AbstractModel{
         if (source.RetentionTimeConfig != null) {
             this.RetentionTimeConfig = new TopicRetentionTimeConfigRsp(source.RetentionTimeConfig);
         }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
     }
 
 
@@ -408,6 +439,7 @@ public class TopicDetail extends AbstractModel{
         this.setParamSimple(map, prefix + "ForwardInterval", this.ForwardInterval);
         this.setParamObj(map, prefix + "Config.", this.Config);
         this.setParamObj(map, prefix + "RetentionTimeConfig.", this.RetentionTimeConfig);
+        this.setParamSimple(map, prefix + "Status", this.Status);
 
     }
 }

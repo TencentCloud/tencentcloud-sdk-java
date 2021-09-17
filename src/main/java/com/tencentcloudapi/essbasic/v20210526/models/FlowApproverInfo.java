@@ -65,6 +65,20 @@ public class FlowApproverInfo extends AbstractModel{
     private String CallbackUrl;
 
     /**
+    * 签署人类型，PERSON和ORGANIZATION
+    */
+    @SerializedName("ApproverType")
+    @Expose
+    private String ApproverType;
+
+    /**
+    * 用户侧第三方id
+    */
+    @SerializedName("OpenId")
+    @Expose
+    private String OpenId;
+
+    /**
      * Get 签署人姓名 
      * @return Name 签署人姓名
      */
@@ -160,6 +174,38 @@ public class FlowApproverInfo extends AbstractModel{
         this.CallbackUrl = CallbackUrl;
     }
 
+    /**
+     * Get 签署人类型，PERSON和ORGANIZATION 
+     * @return ApproverType 签署人类型，PERSON和ORGANIZATION
+     */
+    public String getApproverType() {
+        return this.ApproverType;
+    }
+
+    /**
+     * Set 签署人类型，PERSON和ORGANIZATION
+     * @param ApproverType 签署人类型，PERSON和ORGANIZATION
+     */
+    public void setApproverType(String ApproverType) {
+        this.ApproverType = ApproverType;
+    }
+
+    /**
+     * Get 用户侧第三方id 
+     * @return OpenId 用户侧第三方id
+     */
+    public String getOpenId() {
+        return this.OpenId;
+    }
+
+    /**
+     * Set 用户侧第三方id
+     * @param OpenId 用户侧第三方id
+     */
+    public void setOpenId(String OpenId) {
+        this.OpenId = OpenId;
+    }
+
     public FlowApproverInfo() {
     }
 
@@ -186,6 +232,12 @@ public class FlowApproverInfo extends AbstractModel{
         if (source.CallbackUrl != null) {
             this.CallbackUrl = new String(source.CallbackUrl);
         }
+        if (source.ApproverType != null) {
+            this.ApproverType = new String(source.ApproverType);
+        }
+        if (source.OpenId != null) {
+            this.OpenId = new String(source.OpenId);
+        }
     }
 
 
@@ -199,6 +251,8 @@ public class FlowApproverInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "JumpUrl", this.JumpUrl);
         this.setParamSimple(map, prefix + "Deadline", this.Deadline);
         this.setParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
+        this.setParamSimple(map, prefix + "ApproverType", this.ApproverType);
+        this.setParamSimple(map, prefix + "OpenId", this.OpenId);
 
     }
 }

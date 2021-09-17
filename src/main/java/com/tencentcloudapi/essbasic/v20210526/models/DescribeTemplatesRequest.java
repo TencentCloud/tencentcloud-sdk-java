@@ -37,6 +37,13 @@ public class DescribeTemplatesRequest extends AbstractModel{
     private UserInfo Operator;
 
     /**
+    * 模版唯一标识,可以通过模版列表处获取
+    */
+    @SerializedName("TemplateId")
+    @Expose
+    private String TemplateId;
+
+    /**
      * Get 渠道应用相关信息 
      * @return Agent 渠道应用相关信息
      */
@@ -68,6 +75,22 @@ public class DescribeTemplatesRequest extends AbstractModel{
         this.Operator = Operator;
     }
 
+    /**
+     * Get 模版唯一标识,可以通过模版列表处获取 
+     * @return TemplateId 模版唯一标识,可以通过模版列表处获取
+     */
+    public String getTemplateId() {
+        return this.TemplateId;
+    }
+
+    /**
+     * Set 模版唯一标识,可以通过模版列表处获取
+     * @param TemplateId 模版唯一标识,可以通过模版列表处获取
+     */
+    public void setTemplateId(String TemplateId) {
+        this.TemplateId = TemplateId;
+    }
+
     public DescribeTemplatesRequest() {
     }
 
@@ -82,6 +105,9 @@ public class DescribeTemplatesRequest extends AbstractModel{
         if (source.Operator != null) {
             this.Operator = new UserInfo(source.Operator);
         }
+        if (source.TemplateId != null) {
+            this.TemplateId = new String(source.TemplateId);
+        }
     }
 
 
@@ -91,6 +117,7 @@ public class DescribeTemplatesRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "Agent.", this.Agent);
         this.setParamObj(map, prefix + "Operator.", this.Operator);
+        this.setParamSimple(map, prefix + "TemplateId", this.TemplateId);
 
     }
 }

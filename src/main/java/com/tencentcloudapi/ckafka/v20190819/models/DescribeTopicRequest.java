@@ -51,6 +51,13 @@ public class DescribeTopicRequest extends AbstractModel{
     private Long Limit;
 
     /**
+    * Acl预设策略名称
+    */
+    @SerializedName("AclRuleName")
+    @Expose
+    private String AclRuleName;
+
+    /**
      * Get 实例 ID 
      * @return InstanceId 实例 ID
      */
@@ -114,6 +121,22 @@ public class DescribeTopicRequest extends AbstractModel{
         this.Limit = Limit;
     }
 
+    /**
+     * Get Acl预设策略名称 
+     * @return AclRuleName Acl预设策略名称
+     */
+    public String getAclRuleName() {
+        return this.AclRuleName;
+    }
+
+    /**
+     * Set Acl预设策略名称
+     * @param AclRuleName Acl预设策略名称
+     */
+    public void setAclRuleName(String AclRuleName) {
+        this.AclRuleName = AclRuleName;
+    }
+
     public DescribeTopicRequest() {
     }
 
@@ -134,6 +157,9 @@ public class DescribeTopicRequest extends AbstractModel{
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
         }
+        if (source.AclRuleName != null) {
+            this.AclRuleName = new String(source.AclRuleName);
+        }
     }
 
 
@@ -145,6 +171,7 @@ public class DescribeTopicRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "SearchWord", this.SearchWord);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "AclRuleName", this.AclRuleName);
 
     }
 }
