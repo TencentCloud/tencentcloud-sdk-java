@@ -81,6 +81,14 @@ public class QuerySinglePaymentResultData extends AbstractModel{
     private String AgentName;
 
     /**
+    * 交易状态描述。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TradeStatusDesc")
+    @Expose
+    private String TradeStatusDesc;
+
+    /**
      * Get 平台交易流水号，唯一
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return TradeSerialNo 平台交易流水号，唯一
@@ -240,6 +248,26 @@ public class QuerySinglePaymentResultData extends AbstractModel{
         this.AgentName = AgentName;
     }
 
+    /**
+     * Get 交易状态描述。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TradeStatusDesc 交易状态描述。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTradeStatusDesc() {
+        return this.TradeStatusDesc;
+    }
+
+    /**
+     * Set 交易状态描述。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TradeStatusDesc 交易状态描述。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTradeStatusDesc(String TradeStatusDesc) {
+        this.TradeStatusDesc = TradeStatusDesc;
+    }
+
     public QuerySinglePaymentResultData() {
     }
 
@@ -266,6 +294,9 @@ public class QuerySinglePaymentResultData extends AbstractModel{
         if (source.AgentName != null) {
             this.AgentName = new String(source.AgentName);
         }
+        if (source.TradeStatusDesc != null) {
+            this.TradeStatusDesc = new String(source.TradeStatusDesc);
+        }
     }
 
 
@@ -279,6 +310,7 @@ public class QuerySinglePaymentResultData extends AbstractModel{
         this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamSimple(map, prefix + "AgentId", this.AgentId);
         this.setParamSimple(map, prefix + "AgentName", this.AgentName);
+        this.setParamSimple(map, prefix + "TradeStatusDesc", this.TradeStatusDesc);
 
     }
 }

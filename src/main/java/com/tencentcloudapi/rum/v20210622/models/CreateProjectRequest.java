@@ -30,7 +30,7 @@ public class CreateProjectRequest extends AbstractModel{
     private String Name;
 
     /**
-    * 项目对应实例 id
+    * 业务系统 ID
     */
     @SerializedName("InstanceID")
     @Expose
@@ -95,16 +95,16 @@ public class CreateProjectRequest extends AbstractModel{
     }
 
     /**
-     * Get 项目对应实例 id 
-     * @return InstanceID 项目对应实例 id
+     * Get 业务系统 ID 
+     * @return InstanceID 业务系统 ID
      */
     public String getInstanceID() {
         return this.InstanceID;
     }
 
     /**
-     * Set 项目对应实例 id
-     * @param InstanceID 项目对应实例 id
+     * Set 业务系统 ID
+     * @param InstanceID 业务系统 ID
      */
     public void setInstanceID(String InstanceID) {
         this.InstanceID = InstanceID;

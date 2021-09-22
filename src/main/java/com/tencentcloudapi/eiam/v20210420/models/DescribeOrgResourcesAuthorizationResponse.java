@@ -62,6 +62,14 @@ public class DescribeOrgResourcesAuthorizationResponse extends AbstractModel{
     private AuthorizationResouceEntityInfo [] AuthorizationOrgResourceList;
 
     /**
+    * 资源数量
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TotalCount")
+    @Expose
+    private Long TotalCount;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -165,6 +173,26 @@ public class DescribeOrgResourcesAuthorizationResponse extends AbstractModel{
     }
 
     /**
+     * Get 资源数量
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TotalCount 资源数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getTotalCount() {
+        return this.TotalCount;
+    }
+
+    /**
+     * Set 资源数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TotalCount 资源数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -206,6 +234,9 @@ public class DescribeOrgResourcesAuthorizationResponse extends AbstractModel{
                 this.AuthorizationOrgResourceList[i] = new AuthorizationResouceEntityInfo(source.AuthorizationOrgResourceList[i]);
             }
         }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -221,6 +252,7 @@ public class DescribeOrgResourcesAuthorizationResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "OrgNodeName", this.OrgNodeName);
         this.setParamSimple(map, prefix + "OrgNodePath", this.OrgNodePath);
         this.setParamArrayObj(map, prefix + "AuthorizationOrgResourceList.", this.AuthorizationOrgResourceList);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

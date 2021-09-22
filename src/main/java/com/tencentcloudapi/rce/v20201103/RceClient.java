@@ -39,6 +39,26 @@ public class RceClient extends AbstractClient{
     }
 
     /**
+     *依托人工智能技术和腾讯丰富的风控实战经验，根据用户提供的数据和业务场景，给客户提供定制化模型服务
+     * @param req DescribeRiskModelRequest
+     * @return DescribeRiskModelResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRiskModelResponse DescribeRiskModel(DescribeRiskModelRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRiskModelResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeRiskModelResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeRiskModel");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *全栈式风控引擎（RiskControlEngine，RCE）是基于人工智能技术和腾讯20年风控实战沉淀，依托腾讯海量业务构建的风控引擎，以轻量级的 SaaS 服务方式接入，帮助您快速解决注册、登录、营销活动等关键场景遇到的欺诈问题，实时防御黑灰产作恶。
      * @param req ManageMarketingRiskRequest
      * @return ManageMarketingRiskResponse

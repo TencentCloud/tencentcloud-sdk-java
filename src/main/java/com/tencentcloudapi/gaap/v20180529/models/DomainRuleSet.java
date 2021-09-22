@@ -182,6 +182,14 @@ public class DomainRuleSet extends AbstractModel{
     private Long DomainStatus;
 
     /**
+    * 封禁解封状态：BANNED表示已封禁，RECOVER表示已解封或未封禁，BANNING表示封禁中，RECOVERING表示解封中，BAN_FAILED表示封禁失败，RECOVER_FAILED表示解封失败。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BanStatus")
+    @Expose
+    private String BanStatus;
+
+    /**
      * Get 转发规则域名。 
      * @return Domain 转发规则域名。
      */
@@ -589,6 +597,26 @@ public class DomainRuleSet extends AbstractModel{
         this.DomainStatus = DomainStatus;
     }
 
+    /**
+     * Get 封禁解封状态：BANNED表示已封禁，RECOVER表示已解封或未封禁，BANNING表示封禁中，RECOVERING表示解封中，BAN_FAILED表示封禁失败，RECOVER_FAILED表示解封失败。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BanStatus 封禁解封状态：BANNED表示已封禁，RECOVER表示已解封或未封禁，BANNING表示封禁中，RECOVERING表示解封中，BAN_FAILED表示封禁失败，RECOVER_FAILED表示解封失败。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getBanStatus() {
+        return this.BanStatus;
+    }
+
+    /**
+     * Set 封禁解封状态：BANNED表示已封禁，RECOVER表示已解封或未封禁，BANNING表示封禁中，RECOVERING表示解封中，BAN_FAILED表示封禁失败，RECOVER_FAILED表示解封失败。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BanStatus 封禁解封状态：BANNED表示已封禁，RECOVER表示已解封或未封禁，BANNING表示封禁中，RECOVERING表示解封中，BAN_FAILED表示封禁失败，RECOVER_FAILED表示解封失败。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBanStatus(String BanStatus) {
+        this.BanStatus = BanStatus;
+    }
+
     public DomainRuleSet() {
     }
 
@@ -663,6 +691,9 @@ public class DomainRuleSet extends AbstractModel{
         if (source.DomainStatus != null) {
             this.DomainStatus = new Long(source.DomainStatus);
         }
+        if (source.BanStatus != null) {
+            this.BanStatus = new String(source.BanStatus);
+        }
     }
 
 
@@ -689,6 +720,7 @@ public class DomainRuleSet extends AbstractModel{
         this.setParamArrayObj(map, prefix + "PolyClientCertificateAliasInfo.", this.PolyClientCertificateAliasInfo);
         this.setParamArrayObj(map, prefix + "PolyRealServerCertificateAliasInfo.", this.PolyRealServerCertificateAliasInfo);
         this.setParamSimple(map, prefix + "DomainStatus", this.DomainStatus);
+        this.setParamSimple(map, prefix + "BanStatus", this.BanStatus);
 
     }
 }

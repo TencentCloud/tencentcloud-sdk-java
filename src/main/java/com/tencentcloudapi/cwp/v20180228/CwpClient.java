@@ -781,6 +781,26 @@ public class CwpClient extends AbstractClient{
     }
 
     /**
+     *专家服务-可用订单详情
+     * @param req DescribeAvailableExpertServiceDetailRequest
+     * @return DescribeAvailableExpertServiceDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAvailableExpertServiceDetailResponse DescribeAvailableExpertServiceDetail(DescribeAvailableExpertServiceDetailRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAvailableExpertServiceDetailResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAvailableExpertServiceDetailResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAvailableExpertServiceDetail");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取爆破阻断模式
      * @param req DescribeBanModeRequest
      * @return DescribeBanModeResponse
@@ -841,6 +861,46 @@ public class CwpClient extends AbstractClient{
     }
 
     /**
+     *获取阻断白名单列表
+     * @param req DescribeBanWhiteListRequest
+     * @return DescribeBanWhiteListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBanWhiteListResponse DescribeBanWhiteList(DescribeBanWhiteListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBanWhiteListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBanWhiteListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeBanWhiteList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *根据基线策略id查询基线策略数据概览统计
+     * @param req DescribeBaselineAnalysisDataRequest
+     * @return DescribeBaselineAnalysisDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBaselineAnalysisDataResponse DescribeBaselineAnalysisData(DescribeBaselineAnalysisDataRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBaselineAnalysisDataResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBaselineAnalysisDataResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeBaselineAnalysisData");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询基线基础信息列表
      * @param req DescribeBaselineBasicInfoRequest
      * @return DescribeBaselineBasicInfoResponse
@@ -881,6 +941,66 @@ public class CwpClient extends AbstractClient{
     }
 
     /**
+     *根据基线id查询基线影响主机列表
+     * @param req DescribeBaselineEffectHostListRequest
+     * @return DescribeBaselineEffectHostListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBaselineEffectHostListResponse DescribeBaselineEffectHostList(DescribeBaselineEffectHostListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBaselineEffectHostListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBaselineEffectHostListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeBaselineEffectHostList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *接口返回TopN的风险服务器
+     * @param req DescribeBaselineHostTopRequest
+     * @return DescribeBaselineHostTopResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBaselineHostTopResponse DescribeBaselineHostTop(DescribeBaselineHostTopRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBaselineHostTopResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBaselineHostTopResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeBaselineHostTop");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询基线列表信息
+     * @param req DescribeBaselineListRequest
+     * @return DescribeBaselineListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBaselineListResponse DescribeBaselineList(DescribeBaselineListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBaselineListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBaselineListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeBaselineList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *根据基线id查询下属检测项信息
      * @param req DescribeBaselineRuleRequest
      * @return DescribeBaselineRuleResponse
@@ -913,6 +1033,66 @@ public class CwpClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeBaselineScanScheduleResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeBaselineScanSchedule");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *根据基线策略id查询策略详情
+     * @param req DescribeBaselineStrategyDetailRequest
+     * @return DescribeBaselineStrategyDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBaselineStrategyDetailResponse DescribeBaselineStrategyDetail(DescribeBaselineStrategyDetailRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBaselineStrategyDetailResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBaselineStrategyDetailResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeBaselineStrategyDetail");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询一个用户下的基线策略信息
+     * @param req DescribeBaselineStrategyListRequest
+     * @return DescribeBaselineStrategyListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBaselineStrategyListResponse DescribeBaselineStrategyList(DescribeBaselineStrategyListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBaselineStrategyListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBaselineStrategyListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeBaselineStrategyList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *根据策略id查询基线检测项TOP
+     * @param req DescribeBaselineTopRequest
+     * @return DescribeBaselineTopResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBaselineTopResponse DescribeBaselineTop(DescribeBaselineTopRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBaselineTopResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBaselineTopResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeBaselineTop");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -981,6 +1161,26 @@ public class CwpClient extends AbstractClient{
     }
 
     /**
+     *获取爆破破解规则
+     * @param req DescribeBruteAttackRulesRequest
+     * @return DescribeBruteAttackRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBruteAttackRulesResponse DescribeBruteAttackRules(DescribeBruteAttackRulesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBruteAttackRulesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBruteAttackRulesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeBruteAttackRules");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口 (DescribeComponentStatistics) 用于获取组件统计列表数据。
      * @param req DescribeComponentStatisticsRequest
      * @return DescribeComponentStatisticsResponse
@@ -1041,6 +1241,26 @@ public class CwpClient extends AbstractClient{
     }
 
     /**
+     *专家服务-应急响应列表
+     * @param req DescribeEmergencyResponseListRequest
+     * @return DescribeEmergencyResponseListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeEmergencyResponseListResponse DescribeEmergencyResponseList(DescribeEmergencyResponseListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeEmergencyResponseListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeEmergencyResponseListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeEmergencyResponseList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取应急漏洞列表
      * @param req DescribeEmergencyVulListRequest
      * @return DescribeEmergencyVulListResponse
@@ -1053,6 +1273,46 @@ public class CwpClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeEmergencyVulListResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeEmergencyVulList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *专家服务-安全管家列表
+     * @param req DescribeExpertServiceListRequest
+     * @return DescribeExpertServiceListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeExpertServiceListResponse DescribeExpertServiceList(DescribeExpertServiceListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeExpertServiceListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeExpertServiceListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeExpertServiceList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *专家服务-专家服务订单列表
+     * @param req DescribeExpertServiceOrderListRequest
+     * @return DescribeExpertServiceOrderListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeExpertServiceOrderListResponse DescribeExpertServiceOrderList(DescribeExpertServiceOrderListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeExpertServiceOrderListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeExpertServiceOrderListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeExpertServiceOrderList");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1173,6 +1433,26 @@ public class CwpClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeIgnoreBaselineRuleResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeIgnoreBaselineRule");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *根据检测项id与筛选条件查询忽略检测项影响主机列表信息
+     * @param req DescribeIgnoreRuleEffectHostListRequest
+     * @return DescribeIgnoreRuleEffectHostListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeIgnoreRuleEffectHostListResponse DescribeIgnoreRuleEffectHostList(DescribeIgnoreRuleEffectHostListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeIgnoreRuleEffectHostListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeIgnoreRuleEffectHostListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeIgnoreRuleEffectHostList");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1393,6 +1673,26 @@ public class CwpClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeMalWareListResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeMalWareList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询恶意请求白名单列表
+     * @param req DescribeMaliciousRequestWhiteListRequest
+     * @return DescribeMaliciousRequestWhiteListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMaliciousRequestWhiteListResponse DescribeMaliciousRequestWhiteList(DescribeMaliciousRequestWhiteListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeMaliciousRequestWhiteListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeMaliciousRequestWhiteListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeMaliciousRequestWhiteList");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1681,6 +1981,26 @@ public class CwpClient extends AbstractClient{
     }
 
     /**
+     *专家服务-旗舰护网列表
+     * @param req DescribeProtectNetListRequest
+     * @return DescribeProtectNetListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeProtectNetListResponse DescribeProtectNetList(DescribeProtectNetListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeProtectNetListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeProtectNetListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeProtectNetList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取反弹Shell列表
      * @param req DescribeReverseShellEventsRequest
      * @return DescribeReverseShellEventsResponse
@@ -1833,6 +2153,26 @@ public class CwpClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeScanTaskDetailsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeScanTaskDetails");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *DescribeScanTaskStatus 查询机器扫描状态列表用于过滤筛选
+     * @param req DescribeScanTaskStatusRequest
+     * @return DescribeScanTaskStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeScanTaskStatusResponse DescribeScanTaskStatus(DescribeScanTaskStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeScanTaskStatusResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeScanTaskStatusResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeScanTaskStatus");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -2173,6 +2513,26 @@ public class CwpClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeVulHostCountScanTimeResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeVulHostCountScanTime");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取服务器风险top列表
+     * @param req DescribeVulHostTopRequest
+     * @return DescribeVulHostTopResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVulHostTopResponse DescribeVulHostTop(DescribeVulHostTopRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeVulHostTopResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeVulHostTopResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeVulHostTop");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -2693,6 +3053,26 @@ public class CwpClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ExportScanTaskDetailsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ExportScanTaskDetails");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *导出风险趋势
+     * @param req ExportSecurityTrendsRequest
+     * @return ExportSecurityTrendsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ExportSecurityTrendsResponse ExportSecurityTrends(ExportSecurityTrendsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ExportSecurityTrendsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ExportSecurityTrendsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ExportSecurityTrends");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

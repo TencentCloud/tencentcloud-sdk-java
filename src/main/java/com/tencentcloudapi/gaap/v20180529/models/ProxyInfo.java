@@ -220,7 +220,7 @@ UNKNOWN表示未知状态。
     private Long ModifyConfigTime;
 
     /**
-    * 通道类型
+    * 通道类型，100表示THUNDER通道，103表示微软合作通道
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProxyType")
@@ -258,6 +258,14 @@ UNKNOWN表示未知状态。
     @SerializedName("PackageType")
     @Expose
     private String PackageType;
+
+    /**
+    * 封禁解封状态：BANNED表示已封禁，RECOVER表示已解封或未封禁，BANNING表示封禁中，RECOVERING表示解封中，BAN_FAILED表示封禁失败，RECOVER_FAILED表示解封失败。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BanStatus")
+    @Expose
+    private String BanStatus;
 
     /**
      * Get （旧参数，请使用ProxyId）通道实例ID。
@@ -748,9 +756,9 @@ UNKNOWN表示未知状态。
     }
 
     /**
-     * Get 通道类型
+     * Get 通道类型，100表示THUNDER通道，103表示微软合作通道
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ProxyType 通道类型
+     * @return ProxyType 通道类型，100表示THUNDER通道，103表示微软合作通道
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getProxyType() {
@@ -758,9 +766,9 @@ UNKNOWN表示未知状态。
     }
 
     /**
-     * Set 通道类型
+     * Set 通道类型，100表示THUNDER通道，103表示微软合作通道
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ProxyType 通道类型
+     * @param ProxyType 通道类型，100表示THUNDER通道，103表示微软合作通道
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProxyType(Long ProxyType) {
@@ -845,6 +853,26 @@ UNKNOWN表示未知状态。
      */
     public void setPackageType(String PackageType) {
         this.PackageType = PackageType;
+    }
+
+    /**
+     * Get 封禁解封状态：BANNED表示已封禁，RECOVER表示已解封或未封禁，BANNING表示封禁中，RECOVERING表示解封中，BAN_FAILED表示封禁失败，RECOVER_FAILED表示解封失败。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BanStatus 封禁解封状态：BANNED表示已封禁，RECOVER表示已解封或未封禁，BANNING表示封禁中，RECOVERING表示解封中，BAN_FAILED表示封禁失败，RECOVER_FAILED表示解封失败。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getBanStatus() {
+        return this.BanStatus;
+    }
+
+    /**
+     * Set 封禁解封状态：BANNED表示已封禁，RECOVER表示已解封或未封禁，BANNING表示封禁中，RECOVERING表示解封中，BAN_FAILED表示封禁失败，RECOVER_FAILED表示解封失败。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BanStatus 封禁解封状态：BANNED表示已封禁，RECOVER表示已解封或未封禁，BANNING表示封禁中，RECOVERING表示解封中，BAN_FAILED表示封禁失败，RECOVER_FAILED表示解封失败。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBanStatus(String BanStatus) {
+        this.BanStatus = BanStatus;
     }
 
     public ProxyInfo() {
@@ -957,6 +985,9 @@ UNKNOWN表示未知状态。
         if (source.PackageType != null) {
             this.PackageType = new String(source.PackageType);
         }
+        if (source.BanStatus != null) {
+            this.BanStatus = new String(source.BanStatus);
+        }
     }
 
 
@@ -994,6 +1025,7 @@ UNKNOWN表示未知状态。
         this.setParamSimple(map, prefix + "IPAddressVersion", this.IPAddressVersion);
         this.setParamSimple(map, prefix + "NetworkType", this.NetworkType);
         this.setParamSimple(map, prefix + "PackageType", this.PackageType);
+        this.setParamSimple(map, prefix + "BanStatus", this.BanStatus);
 
     }
 }

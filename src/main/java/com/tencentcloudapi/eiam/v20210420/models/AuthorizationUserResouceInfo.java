@@ -63,6 +63,14 @@ public class AuthorizationUserResouceInfo extends AbstractModel{
     private String [] ApplicationAccounts;
 
     /**
+    * 资源名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ResourceName")
+    @Expose
+    private String ResourceName;
+
+    /**
      * Get 资源ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ResourceId 资源ID
@@ -162,6 +170,26 @@ public class AuthorizationUserResouceInfo extends AbstractModel{
         this.ApplicationAccounts = ApplicationAccounts;
     }
 
+    /**
+     * Get 资源名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ResourceName 资源名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getResourceName() {
+        return this.ResourceName;
+    }
+
+    /**
+     * Set 资源名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ResourceName 资源名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setResourceName(String ResourceName) {
+        this.ResourceName = ResourceName;
+    }
+
     public AuthorizationUserResouceInfo() {
     }
 
@@ -188,6 +216,9 @@ public class AuthorizationUserResouceInfo extends AbstractModel{
                 this.ApplicationAccounts[i] = new String(source.ApplicationAccounts[i]);
             }
         }
+        if (source.ResourceName != null) {
+            this.ResourceName = new String(source.ResourceName);
+        }
     }
 
 
@@ -200,6 +231,7 @@ public class AuthorizationUserResouceInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Resource", this.Resource);
         this.setParamObj(map, prefix + "InheritedForm.", this.InheritedForm);
         this.setParamArraySimple(map, prefix + "ApplicationAccounts.", this.ApplicationAccounts);
+        this.setParamSimple(map, prefix + "ResourceName", this.ResourceName);
 
     }
 }

@@ -47,6 +47,14 @@ public class AuthorizationResouceEntityInfo extends AbstractModel{
     private String Resource;
 
     /**
+    * 资源名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ResourceName")
+    @Expose
+    private String ResourceName;
+
+    /**
      * Get 授权关系的唯一ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ResourceId 授权关系的唯一ID
@@ -106,6 +114,26 @@ public class AuthorizationResouceEntityInfo extends AbstractModel{
         this.Resource = Resource;
     }
 
+    /**
+     * Get 资源名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ResourceName 资源名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getResourceName() {
+        return this.ResourceName;
+    }
+
+    /**
+     * Set 资源名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ResourceName 资源名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setResourceName(String ResourceName) {
+        this.ResourceName = ResourceName;
+    }
+
     public AuthorizationResouceEntityInfo() {
     }
 
@@ -123,6 +151,9 @@ public class AuthorizationResouceEntityInfo extends AbstractModel{
         if (source.Resource != null) {
             this.Resource = new String(source.Resource);
         }
+        if (source.ResourceName != null) {
+            this.ResourceName = new String(source.ResourceName);
+        }
     }
 
 
@@ -133,6 +164,7 @@ public class AuthorizationResouceEntityInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "ResourceId", this.ResourceId);
         this.setParamSimple(map, prefix + "ResourceType", this.ResourceType);
         this.setParamSimple(map, prefix + "Resource", this.Resource);
+        this.setParamSimple(map, prefix + "ResourceName", this.ResourceName);
 
     }
 }

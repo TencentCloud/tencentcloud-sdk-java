@@ -30,7 +30,7 @@ public class SearchLogResponse extends AbstractModel{
     private String Context;
 
     /**
-    * 日志查询结果是否全部返回
+    * 原始日志查询结果是否全部返回。查询语句(Query)包含SQL时该参数无意义
     */
     @SerializedName("ListOver")
     @Expose
@@ -107,16 +107,16 @@ public class SearchLogResponse extends AbstractModel{
     }
 
     /**
-     * Get 日志查询结果是否全部返回 
-     * @return ListOver 日志查询结果是否全部返回
+     * Get 原始日志查询结果是否全部返回。查询语句(Query)包含SQL时该参数无意义 
+     * @return ListOver 原始日志查询结果是否全部返回。查询语句(Query)包含SQL时该参数无意义
      */
     public Boolean getListOver() {
         return this.ListOver;
     }
 
     /**
-     * Set 日志查询结果是否全部返回
-     * @param ListOver 日志查询结果是否全部返回
+     * Set 原始日志查询结果是否全部返回。查询语句(Query)包含SQL时该参数无意义
+     * @param ListOver 原始日志查询结果是否全部返回。查询语句(Query)包含SQL时该参数无意义
      */
     public void setListOver(Boolean ListOver) {
         this.ListOver = ListOver;

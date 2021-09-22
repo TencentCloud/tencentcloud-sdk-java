@@ -23,9 +23,9 @@ import java.util.HashMap;
 public class DescribeConfigsRequest extends AbstractModel{
 
     /**
-    * <br><li> name
+    * <br><li> configName
 
-按照【采集配置名称】进行过滤。
+按照【采集配置名称】进行模糊匹配过滤。
 类型：String
 
 必选：否
@@ -66,9 +66,9 @@ public class DescribeConfigsRequest extends AbstractModel{
     private Long Limit;
 
     /**
-     * Get <br><li> name
+     * Get <br><li> configName
 
-按照【采集配置名称】进行过滤。
+按照【采集配置名称】进行模糊匹配过滤。
 类型：String
 
 必选：否
@@ -89,9 +89,9 @@ public class DescribeConfigsRequest extends AbstractModel{
 必选：否
 
 每次请求的Filters的上限为10，Filter.Values的上限为5。 
-     * @return Filters <br><li> name
+     * @return Filters <br><li> configName
 
-按照【采集配置名称】进行过滤。
+按照【采集配置名称】进行模糊匹配过滤。
 类型：String
 
 必选：否
@@ -118,9 +118,9 @@ public class DescribeConfigsRequest extends AbstractModel{
     }
 
     /**
-     * Set <br><li> name
+     * Set <br><li> configName
 
-按照【采集配置名称】进行过滤。
+按照【采集配置名称】进行模糊匹配过滤。
 类型：String
 
 必选：否
@@ -141,9 +141,9 @@ public class DescribeConfigsRequest extends AbstractModel{
 必选：否
 
 每次请求的Filters的上限为10，Filter.Values的上限为5。
-     * @param Filters <br><li> name
+     * @param Filters <br><li> configName
 
-按照【采集配置名称】进行过滤。
+按照【采集配置名称】进行模糊匹配过滤。
 类型：String
 
 必选：否

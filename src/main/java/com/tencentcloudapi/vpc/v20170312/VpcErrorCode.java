@@ -93,6 +93,12 @@ public enum VpcErrorCode {
     // 传入的DedicatedClusterId有误。
      INVALIDPARAMETERVALUE_INVALIDDEDICATEDCLUSTERID("InvalidParameterValue.InvalidDedicatedClusterId"),
      
+    // 该过滤规则不合法。
+     INVALIDPARAMETERVALUE_INVALIDFILTER("InvalidParameterValue.InvalidFilter"),
+     
+    // 该Tag不合法。
+     INVALIDPARAMETERVALUE_INVALIDTAG("InvalidParameterValue.InvalidTag"),
+     
     // 参数值超出限制。
      INVALIDPARAMETERVALUE_LIMITEXCEEDED("InvalidParameterValue.LimitExceeded"),
      

@@ -51,7 +51,7 @@ public class SearchLogRequest extends AbstractModel{
     private String Query;
 
     /**
-    * 单次查询返回的日志条数，最大值为100
+    * 单次查询返回的原始日志条数，最大值为100。查询语句(Query)包含SQL时，针对SQL的结果条数需在Query中指定，参考https://cloud.tencent.com/document/product/614/58977
     */
     @SerializedName("Limit")
     @Expose
@@ -143,16 +143,16 @@ public class SearchLogRequest extends AbstractModel{
     }
 
     /**
-     * Get 单次查询返回的日志条数，最大值为100 
-     * @return Limit 单次查询返回的日志条数，最大值为100
+     * Get 单次查询返回的原始日志条数，最大值为100。查询语句(Query)包含SQL时，针对SQL的结果条数需在Query中指定，参考https://cloud.tencent.com/document/product/614/58977 
+     * @return Limit 单次查询返回的原始日志条数，最大值为100。查询语句(Query)包含SQL时，针对SQL的结果条数需在Query中指定，参考https://cloud.tencent.com/document/product/614/58977
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 单次查询返回的日志条数，最大值为100
-     * @param Limit 单次查询返回的日志条数，最大值为100
+     * Set 单次查询返回的原始日志条数，最大值为100。查询语句(Query)包含SQL时，针对SQL的结果条数需在Query中指定，参考https://cloud.tencent.com/document/product/614/58977
+     * @param Limit 单次查询返回的原始日志条数，最大值为100。查询语句(Query)包含SQL时，针对SQL的结果条数需在Query中指定，参考https://cloud.tencent.com/document/product/614/58977
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
