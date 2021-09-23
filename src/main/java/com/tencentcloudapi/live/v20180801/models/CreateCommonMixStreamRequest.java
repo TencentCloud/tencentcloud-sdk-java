@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateCommonMixStreamRequest extends AbstractModel{
 
     /**
-    * 混流会话（申请混流开始到取消混流结束）标识 ID。
+    * 混流会话（申请混流开始到取消混流结束）标识 ID。80字节以内，仅含字母、数字以及下划线的字符串。
     */
     @SerializedName("MixStreamSessionId")
     @Expose
@@ -64,16 +64,16 @@ public class CreateCommonMixStreamRequest extends AbstractModel{
     private CommonMixControlParams ControlParams;
 
     /**
-     * Get 混流会话（申请混流开始到取消混流结束）标识 ID。 
-     * @return MixStreamSessionId 混流会话（申请混流开始到取消混流结束）标识 ID。
+     * Get 混流会话（申请混流开始到取消混流结束）标识 ID。80字节以内，仅含字母、数字以及下划线的字符串。 
+     * @return MixStreamSessionId 混流会话（申请混流开始到取消混流结束）标识 ID。80字节以内，仅含字母、数字以及下划线的字符串。
      */
     public String getMixStreamSessionId() {
         return this.MixStreamSessionId;
     }
 
     /**
-     * Set 混流会话（申请混流开始到取消混流结束）标识 ID。
-     * @param MixStreamSessionId 混流会话（申请混流开始到取消混流结束）标识 ID。
+     * Set 混流会话（申请混流开始到取消混流结束）标识 ID。80字节以内，仅含字母、数字以及下划线的字符串。
+     * @param MixStreamSessionId 混流会话（申请混流开始到取消混流结束）标识 ID。80字节以内，仅含字母、数字以及下划线的字符串。
      */
     public void setMixStreamSessionId(String MixStreamSessionId) {
         this.MixStreamSessionId = MixStreamSessionId;

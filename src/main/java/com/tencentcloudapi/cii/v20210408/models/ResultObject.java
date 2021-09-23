@@ -37,6 +37,14 @@ public class ResultObject extends AbstractModel{
     private String StructureResult;
 
     /**
+    * 报告分类信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ReportType")
+    @Expose
+    private ClassifyInfo [] ReportType;
+
+    /**
      * Get 图片质量分 
      * @return Quality 图片质量分
      */
@@ -68,6 +76,26 @@ public class ResultObject extends AbstractModel{
         this.StructureResult = StructureResult;
     }
 
+    /**
+     * Get 报告分类信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ReportType 报告分类信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ClassifyInfo [] getReportType() {
+        return this.ReportType;
+    }
+
+    /**
+     * Set 报告分类信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ReportType 报告分类信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setReportType(ClassifyInfo [] ReportType) {
+        this.ReportType = ReportType;
+    }
+
     public ResultObject() {
     }
 
@@ -82,6 +110,12 @@ public class ResultObject extends AbstractModel{
         if (source.StructureResult != null) {
             this.StructureResult = new String(source.StructureResult);
         }
+        if (source.ReportType != null) {
+            this.ReportType = new ClassifyInfo[source.ReportType.length];
+            for (int i = 0; i < source.ReportType.length; i++) {
+                this.ReportType[i] = new ClassifyInfo(source.ReportType[i]);
+            }
+        }
     }
 
 
@@ -91,6 +125,7 @@ public class ResultObject extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Quality", this.Quality);
         this.setParamSimple(map, prefix + "StructureResult", this.StructureResult);
+        this.setParamArrayObj(map, prefix + "ReportType.", this.ReportType);
 
     }
 }

@@ -37,7 +37,7 @@ public class SetInstancesProtectionRequest extends AbstractModel{
     private String [] InstanceIds;
 
     /**
-    * 实例是否需要移出保护。
+    * 实例是否需要设置保护。
     */
     @SerializedName("ProtectedFromScaleIn")
     @Expose
@@ -76,16 +76,16 @@ public class SetInstancesProtectionRequest extends AbstractModel{
     }
 
     /**
-     * Get 实例是否需要移出保护。 
-     * @return ProtectedFromScaleIn 实例是否需要移出保护。
+     * Get 实例是否需要设置保护。 
+     * @return ProtectedFromScaleIn 实例是否需要设置保护。
      */
     public Boolean getProtectedFromScaleIn() {
         return this.ProtectedFromScaleIn;
     }
 
     /**
-     * Set 实例是否需要移出保护。
-     * @param ProtectedFromScaleIn 实例是否需要移出保护。
+     * Set 实例是否需要设置保护。
+     * @param ProtectedFromScaleIn 实例是否需要设置保护。
      */
     public void setProtectedFromScaleIn(Boolean ProtectedFromScaleIn) {
         this.ProtectedFromScaleIn = ProtectedFromScaleIn;

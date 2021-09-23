@@ -79,6 +79,22 @@ public class MetricSet extends AbstractModel{
     private DimensionsDesc [] Dimensions;
 
     /**
+    * 指标中文名
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MetricCName")
+    @Expose
+    private String MetricCName;
+
+    /**
+    * 指标英文名
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MetricEName")
+    @Expose
+    private String MetricEName;
+
+    /**
      * Get 命名空间，每个云产品会有一个命名空间 
      * @return Namespace 命名空间，每个云产品会有一个命名空间
      */
@@ -206,6 +222,46 @@ public class MetricSet extends AbstractModel{
         this.Dimensions = Dimensions;
     }
 
+    /**
+     * Get 指标中文名
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MetricCName 指标中文名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getMetricCName() {
+        return this.MetricCName;
+    }
+
+    /**
+     * Set 指标中文名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MetricCName 指标中文名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMetricCName(String MetricCName) {
+        this.MetricCName = MetricCName;
+    }
+
+    /**
+     * Get 指标英文名
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MetricEName 指标英文名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getMetricEName() {
+        return this.MetricEName;
+    }
+
+    /**
+     * Set 指标英文名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MetricEName 指标英文名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMetricEName(String MetricEName) {
+        this.MetricEName = MetricEName;
+    }
+
     public MetricSet() {
     }
 
@@ -247,6 +303,12 @@ public class MetricSet extends AbstractModel{
                 this.Dimensions[i] = new DimensionsDesc(source.Dimensions[i]);
             }
         }
+        if (source.MetricCName != null) {
+            this.MetricCName = new String(source.MetricCName);
+        }
+        if (source.MetricEName != null) {
+            this.MetricEName = new String(source.MetricEName);
+        }
     }
 
 
@@ -262,6 +324,8 @@ public class MetricSet extends AbstractModel{
         this.setParamArrayObj(map, prefix + "Periods.", this.Periods);
         this.setParamObj(map, prefix + "Meaning.", this.Meaning);
         this.setParamArrayObj(map, prefix + "Dimensions.", this.Dimensions);
+        this.setParamSimple(map, prefix + "MetricCName", this.MetricCName);
+        this.setParamSimple(map, prefix + "MetricEName", this.MetricEName);
 
     }
 }

@@ -151,6 +151,26 @@ public class SmsClient extends AbstractClient{
     }
 
     /**
+     *提供 E.164 格式号码国家或地区码识别，以及解析后规范的E.164号码。
+     * @param req DescribePhoneNumberInfoRequest
+     * @return DescribePhoneNumberInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePhoneNumberInfoResponse DescribePhoneNumberInfo(DescribePhoneNumberInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribePhoneNumberInfoResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribePhoneNumberInfoResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribePhoneNumberInfo");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *⚠️注意：个人认证用户不支持使用 API 查询短信签名，请参阅了解 [实名认证基本介绍](https://cloud.tencent.com/document/product/378/3629),如果为个人认证请登录 [控制台](https://console.cloud.tencent.com/smsv2) 查询短信签名。
 >- 注：由于云 **API3.0 安全性**有所提升，所以**接口鉴权**较为复杂，建议使用 SDK 来使用云短信服务。
 >- 您可以在 [API 3.0 Explorer](https://console.cloud.tencent.com/api/explorer?Product=sms&Version=2021-01-11&Action=SendSms) 中直接运行该接口，可以先免去签名计算步骤。运行成功后，API Explorer可以**自动生成**SDK代码示例。

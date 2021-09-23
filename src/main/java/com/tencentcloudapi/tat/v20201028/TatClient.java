@@ -59,7 +59,28 @@ public class TatClient extends AbstractClient{
     }
 
     /**
+     *此接口用于创建执行器。
+     * @param req CreateInvokerRequest
+     * @return CreateInvokerResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateInvokerResponse CreateInvoker(CreateInvokerRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateInvokerResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateInvokerResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateInvoker");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *此接口用于删除命令。
+如果命令与执行器关联，则无法被删除。
      * @param req DeleteCommandRequest
      * @return DeleteCommandResponse
      * @throws TencentCloudSDKException
@@ -71,6 +92,26 @@ public class TatClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteCommandResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteCommand");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *此接口用于删除执行器。
+     * @param req DeleteInvokerRequest
+     * @return DeleteInvokerResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteInvokerResponse DeleteInvoker(DeleteInvokerRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteInvokerResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteInvokerResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteInvoker");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -159,6 +200,46 @@ public class TatClient extends AbstractClient{
     }
 
     /**
+     *此接口用于查询执行器的执行记录。
+     * @param req DescribeInvokerRecordsRequest
+     * @return DescribeInvokerRecordsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInvokerRecordsResponse DescribeInvokerRecords(DescribeInvokerRecordsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeInvokerRecordsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeInvokerRecordsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeInvokerRecords");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *此接口用于查询执行器信息。
+     * @param req DescribeInvokersRequest
+     * @return DescribeInvokersResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInvokersResponse DescribeInvokers(DescribeInvokersRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeInvokersResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeInvokersResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeInvokers");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *此接口用于查询 TAT 产品后台地域列表。
 RegionState 为 AVAILABLE，代表该地域的 TAT 后台服务已经可用；未返回，代表该地域的 TAT 后台服务尚不可用。
      * @param req DescribeRegionsRequest
@@ -172,6 +253,46 @@ RegionState 为 AVAILABLE，代表该地域的 TAT 后台服务已经可用；�
                 Type type = new TypeToken<JsonResponseModel<DescribeRegionsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeRegions");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *此接口用于停止执行器。
+     * @param req DisableInvokerRequest
+     * @return DisableInvokerResponse
+     * @throws TencentCloudSDKException
+     */
+    public DisableInvokerResponse DisableInvoker(DisableInvokerRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DisableInvokerResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DisableInvokerResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DisableInvoker");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *此接口用于启用执行器。
+     * @param req EnableInvokerRequest
+     * @return EnableInvokerResponse
+     * @throws TencentCloudSDKException
+     */
+    public EnableInvokerResponse EnableInvoker(EnableInvokerRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<EnableInvokerResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<EnableInvokerResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "EnableInvoker");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -218,6 +339,26 @@ RegionState 为 AVAILABLE，代表该地域的 TAT 后台服务已经可用；�
                 Type type = new TypeToken<JsonResponseModel<ModifyCommandResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyCommand");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *此接口用于修改执行器。
+     * @param req ModifyInvokerRequest
+     * @return ModifyInvokerResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyInvokerResponse ModifyInvoker(ModifyInvokerRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyInvokerResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyInvokerResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyInvoker");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

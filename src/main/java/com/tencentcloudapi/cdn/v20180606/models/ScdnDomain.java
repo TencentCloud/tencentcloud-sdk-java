@@ -94,6 +94,14 @@ public class ScdnDomain extends AbstractModel{
     private String Area;
 
     /**
+    * waf规则等级，可取100|200|300
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("WafLevel")
+    @Expose
+    private Long WafLevel;
+
+    /**
      * Get 域名 
      * @return Domain 域名
      */
@@ -257,6 +265,26 @@ public class ScdnDomain extends AbstractModel{
         this.Area = Area;
     }
 
+    /**
+     * Get waf规则等级，可取100|200|300
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return WafLevel waf规则等级，可取100|200|300
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getWafLevel() {
+        return this.WafLevel;
+    }
+
+    /**
+     * Set waf规则等级，可取100|200|300
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param WafLevel waf规则等级，可取100|200|300
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setWafLevel(Long WafLevel) {
+        this.WafLevel = WafLevel;
+    }
+
     public ScdnDomain() {
     }
 
@@ -295,6 +323,9 @@ public class ScdnDomain extends AbstractModel{
         if (source.Area != null) {
             this.Area = new String(source.Area);
         }
+        if (source.WafLevel != null) {
+            this.WafLevel = new Long(source.WafLevel);
+        }
     }
 
 
@@ -312,6 +343,7 @@ public class ScdnDomain extends AbstractModel{
         this.setParamSimple(map, prefix + "AclRuleNumbers", this.AclRuleNumbers);
         this.setParamSimple(map, prefix + "Bot", this.Bot);
         this.setParamSimple(map, prefix + "Area", this.Area);
+        this.setParamSimple(map, prefix + "WafLevel", this.WafLevel);
 
     }
 }
