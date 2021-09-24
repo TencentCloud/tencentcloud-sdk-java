@@ -72,6 +72,13 @@ public class CreateJobRequest extends AbstractModel{
     private String FolderId;
 
     /**
+    * 作业运行的Flink版本
+    */
+    @SerializedName("FlinkVersion")
+    @Expose
+    private String FlinkVersion;
+
+    /**
      * Get 作业名称，允许输入长度小于等于50个字符的中文、英文、数字、-（横线）、_（下划线）、.（点），且符号必须半角字符。注意作业名不能和现有作业同名 
      * @return Name 作业名称，允许输入长度小于等于50个字符的中文、英文、数字、-（横线）、_（下划线）、.（点），且符号必须半角字符。注意作业名不能和现有作业同名
      */
@@ -183,6 +190,22 @@ public class CreateJobRequest extends AbstractModel{
         this.FolderId = FolderId;
     }
 
+    /**
+     * Get 作业运行的Flink版本 
+     * @return FlinkVersion 作业运行的Flink版本
+     */
+    public String getFlinkVersion() {
+        return this.FlinkVersion;
+    }
+
+    /**
+     * Set 作业运行的Flink版本
+     * @param FlinkVersion 作业运行的Flink版本
+     */
+    public void setFlinkVersion(String FlinkVersion) {
+        this.FlinkVersion = FlinkVersion;
+    }
+
     public CreateJobRequest() {
     }
 
@@ -212,6 +235,9 @@ public class CreateJobRequest extends AbstractModel{
         if (source.FolderId != null) {
             this.FolderId = new String(source.FolderId);
         }
+        if (source.FlinkVersion != null) {
+            this.FlinkVersion = new String(source.FlinkVersion);
+        }
     }
 
 
@@ -226,6 +252,7 @@ public class CreateJobRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "CuMem", this.CuMem);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamSimple(map, prefix + "FolderId", this.FolderId);
+        this.setParamSimple(map, prefix + "FlinkVersion", this.FlinkVersion);
 
     }
 }

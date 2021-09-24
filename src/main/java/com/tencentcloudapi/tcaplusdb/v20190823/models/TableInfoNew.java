@@ -231,7 +231,7 @@ public class TableInfoNew extends AbstractModel{
     private Long SortRule;
 
     /**
-    * 表格分布式索引信息
+    * 表格分布式索引/缓写、kafka数据订阅信息
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DbClusterInfoStruct")
@@ -759,9 +759,9 @@ public class TableInfoNew extends AbstractModel{
     }
 
     /**
-     * Get 表格分布式索引信息
+     * Get 表格分布式索引/缓写、kafka数据订阅信息
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DbClusterInfoStruct 表格分布式索引信息
+     * @return DbClusterInfoStruct 表格分布式索引/缓写、kafka数据订阅信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDbClusterInfoStruct() {
@@ -769,9 +769,9 @@ public class TableInfoNew extends AbstractModel{
     }
 
     /**
-     * Set 表格分布式索引信息
+     * Set 表格分布式索引/缓写、kafka数据订阅信息
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DbClusterInfoStruct 表格分布式索引信息
+     * @param DbClusterInfoStruct 表格分布式索引/缓写、kafka数据订阅信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDbClusterInfoStruct(String DbClusterInfoStruct) {

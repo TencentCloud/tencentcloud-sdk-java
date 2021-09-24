@@ -1,5 +1,8 @@
 package com.tencentcloudapi.facefusion.v20181201;
 public enum FacefusionErrorCode {
+    // 认证失败。
+     AUTHFAILURE_INVALIDAUTHORIZATION("AuthFailure.InvalidAuthorization"),
+     
     // 操作失败。
      FAILEDOPERATION("FailedOperation"),
      

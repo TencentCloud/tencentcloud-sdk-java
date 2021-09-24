@@ -58,7 +58,7 @@ public class SelectedTableWithField extends AbstractModel{
     private String TableType;
 
     /**
-    * 待创建索引的字段列表
+    * 待创建索引、缓写、数据订阅的字段列表
     */
     @SerializedName("SelectedFields")
     @Expose
@@ -70,6 +70,13 @@ public class SelectedTableWithField extends AbstractModel{
     @SerializedName("ShardNum")
     @Expose
     private Long ShardNum;
+
+    /**
+    * ckafka实例信息
+    */
+    @SerializedName("KafkaInfo")
+    @Expose
+    private KafkaInfo KafkaInfo;
 
     /**
      * Get 表所属表格组ID 
@@ -152,16 +159,16 @@ public class SelectedTableWithField extends AbstractModel{
     }
 
     /**
-     * Get 待创建索引的字段列表 
-     * @return SelectedFields 待创建索引的字段列表
+     * Get 待创建索引、缓写、数据订阅的字段列表 
+     * @return SelectedFields 待创建索引、缓写、数据订阅的字段列表
      */
     public FieldInfo [] getSelectedFields() {
         return this.SelectedFields;
     }
 
     /**
-     * Set 待创建索引的字段列表
-     * @param SelectedFields 待创建索引的字段列表
+     * Set 待创建索引、缓写、数据订阅的字段列表
+     * @param SelectedFields 待创建索引、缓写、数据订阅的字段列表
      */
     public void setSelectedFields(FieldInfo [] SelectedFields) {
         this.SelectedFields = SelectedFields;
@@ -181,6 +188,22 @@ public class SelectedTableWithField extends AbstractModel{
      */
     public void setShardNum(Long ShardNum) {
         this.ShardNum = ShardNum;
+    }
+
+    /**
+     * Get ckafka实例信息 
+     * @return KafkaInfo ckafka实例信息
+     */
+    public KafkaInfo getKafkaInfo() {
+        return this.KafkaInfo;
+    }
+
+    /**
+     * Set ckafka实例信息
+     * @param KafkaInfo ckafka实例信息
+     */
+    public void setKafkaInfo(KafkaInfo KafkaInfo) {
+        this.KafkaInfo = KafkaInfo;
     }
 
     public SelectedTableWithField() {
@@ -215,6 +238,9 @@ public class SelectedTableWithField extends AbstractModel{
         if (source.ShardNum != null) {
             this.ShardNum = new Long(source.ShardNum);
         }
+        if (source.KafkaInfo != null) {
+            this.KafkaInfo = new KafkaInfo(source.KafkaInfo);
+        }
     }
 
 
@@ -229,6 +255,7 @@ public class SelectedTableWithField extends AbstractModel{
         this.setParamSimple(map, prefix + "TableType", this.TableType);
         this.setParamArrayObj(map, prefix + "SelectedFields.", this.SelectedFields);
         this.setParamSimple(map, prefix + "ShardNum", this.ShardNum);
+        this.setParamObj(map, prefix + "KafkaInfo.", this.KafkaInfo);
 
     }
 }

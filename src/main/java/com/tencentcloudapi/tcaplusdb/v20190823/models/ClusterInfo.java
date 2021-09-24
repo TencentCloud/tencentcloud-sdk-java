@@ -201,6 +201,22 @@ public class ClusterInfo extends AbstractModel{
     private String [] DbaUins;
 
     /**
+    * 是否开启了数据订阅
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DataFlowStatus")
+    @Expose
+    private Long DataFlowStatus;
+
+    /**
+    * 数据订阅的kafka信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("KafkaInfo")
+    @Expose
+    private KafkaInfo KafkaInfo;
+
+    /**
      * Get 集群名称 
      * @return ClusterName 集群名称
      */
@@ -624,6 +640,46 @@ public class ClusterInfo extends AbstractModel{
         this.DbaUins = DbaUins;
     }
 
+    /**
+     * Get 是否开启了数据订阅
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DataFlowStatus 是否开启了数据订阅
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getDataFlowStatus() {
+        return this.DataFlowStatus;
+    }
+
+    /**
+     * Set 是否开启了数据订阅
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DataFlowStatus 是否开启了数据订阅
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDataFlowStatus(Long DataFlowStatus) {
+        this.DataFlowStatus = DataFlowStatus;
+    }
+
+    /**
+     * Get 数据订阅的kafka信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return KafkaInfo 数据订阅的kafka信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public KafkaInfo getKafkaInfo() {
+        return this.KafkaInfo;
+    }
+
+    /**
+     * Set 数据订阅的kafka信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param KafkaInfo 数据订阅的kafka信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setKafkaInfo(KafkaInfo KafkaInfo) {
+        this.KafkaInfo = KafkaInfo;
+    }
+
     public ClusterInfo() {
     }
 
@@ -713,6 +769,12 @@ public class ClusterInfo extends AbstractModel{
                 this.DbaUins[i] = new String(source.DbaUins[i]);
             }
         }
+        if (source.DataFlowStatus != null) {
+            this.DataFlowStatus = new Long(source.DataFlowStatus);
+        }
+        if (source.KafkaInfo != null) {
+            this.KafkaInfo = new KafkaInfo(source.KafkaInfo);
+        }
     }
 
 
@@ -744,6 +806,8 @@ public class ClusterInfo extends AbstractModel{
         this.setParamArrayObj(map, prefix + "ProxyList.", this.ProxyList);
         this.setParamSimple(map, prefix + "Censorship", this.Censorship);
         this.setParamArraySimple(map, prefix + "DbaUins.", this.DbaUins);
+        this.setParamSimple(map, prefix + "DataFlowStatus", this.DataFlowStatus);
+        this.setParamObj(map, prefix + "KafkaInfo.", this.KafkaInfo);
 
     }
 }

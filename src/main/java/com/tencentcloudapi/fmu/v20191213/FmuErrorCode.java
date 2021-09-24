@@ -42,6 +42,9 @@ public enum FmuErrorCode {
     // 图片数据太大。
      FAILEDOPERATION_IMAGESIZEEXCEED("FailedOperation.ImageSizeExceed"),
      
+    // 图片上传失败。
+     FAILEDOPERATION_IMAGEUPLOADFAILED("FailedOperation.ImageUploadFailed"),
+     
     // 服务内部错误，请重试。
      FAILEDOPERATION_INNERERROR("FailedOperation.InnerError"),
      

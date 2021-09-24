@@ -13,38 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cii.v20210408.models;
+package com.tencentcloudapi.tcaplusdb.v20190823.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeStructureResultResponse extends AbstractModel{
+public class SetTableDataFlowResponse extends AbstractModel{
 
     /**
-    * 结果状态：
-0：返回成功
-1：结果未生成
-2：结果生成失败
+    * 表格数据订阅创建结果数量
     */
-    @SerializedName("Status")
+    @SerializedName("TotalCount")
     @Expose
-    private Long Status;
+    private Long TotalCount;
 
     /**
-    * 结构化结果
+    * 表格数据订阅创建结果列表
     */
-    @SerializedName("Results")
+    @SerializedName("TableResults")
     @Expose
-    private StructureResultObject [] Results;
-
-    /**
-    * 主任务ID
-    */
-    @SerializedName("MainTaskId")
-    @Expose
-    private String MainTaskId;
+    private TableResultNew [] TableResults;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -54,63 +44,35 @@ public class DescribeStructureResultResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 结果状态：
-0：返回成功
-1：结果未生成
-2：结果生成失败 
-     * @return Status 结果状态：
-0：返回成功
-1：结果未生成
-2：结果生成失败
+     * Get 表格数据订阅创建结果数量 
+     * @return TotalCount 表格数据订阅创建结果数量
      */
-    public Long getStatus() {
-        return this.Status;
+    public Long getTotalCount() {
+        return this.TotalCount;
     }
 
     /**
-     * Set 结果状态：
-0：返回成功
-1：结果未生成
-2：结果生成失败
-     * @param Status 结果状态：
-0：返回成功
-1：结果未生成
-2：结果生成失败
+     * Set 表格数据订阅创建结果数量
+     * @param TotalCount 表格数据订阅创建结果数量
      */
-    public void setStatus(Long Status) {
-        this.Status = Status;
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 结构化结果 
-     * @return Results 结构化结果
+     * Get 表格数据订阅创建结果列表 
+     * @return TableResults 表格数据订阅创建结果列表
      */
-    public StructureResultObject [] getResults() {
-        return this.Results;
+    public TableResultNew [] getTableResults() {
+        return this.TableResults;
     }
 
     /**
-     * Set 结构化结果
-     * @param Results 结构化结果
+     * Set 表格数据订阅创建结果列表
+     * @param TableResults 表格数据订阅创建结果列表
      */
-    public void setResults(StructureResultObject [] Results) {
-        this.Results = Results;
-    }
-
-    /**
-     * Get 主任务ID 
-     * @return MainTaskId 主任务ID
-     */
-    public String getMainTaskId() {
-        return this.MainTaskId;
-    }
-
-    /**
-     * Set 主任务ID
-     * @param MainTaskId 主任务ID
-     */
-    public void setMainTaskId(String MainTaskId) {
-        this.MainTaskId = MainTaskId;
+    public void setTableResults(TableResultNew [] TableResults) {
+        this.TableResults = TableResults;
     }
 
     /**
@@ -129,25 +91,22 @@ public class DescribeStructureResultResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeStructureResultResponse() {
+    public SetTableDataFlowResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeStructureResultResponse(DescribeStructureResultResponse source) {
-        if (source.Status != null) {
-            this.Status = new Long(source.Status);
+    public SetTableDataFlowResponse(SetTableDataFlowResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
         }
-        if (source.Results != null) {
-            this.Results = new StructureResultObject[source.Results.length];
-            for (int i = 0; i < source.Results.length; i++) {
-                this.Results[i] = new StructureResultObject(source.Results[i]);
+        if (source.TableResults != null) {
+            this.TableResults = new TableResultNew[source.TableResults.length];
+            for (int i = 0; i < source.TableResults.length; i++) {
+                this.TableResults[i] = new TableResultNew(source.TableResults[i]);
             }
-        }
-        if (source.MainTaskId != null) {
-            this.MainTaskId = new String(source.MainTaskId);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -159,9 +118,8 @@ public class DescribeStructureResultResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Status", this.Status);
-        this.setParamArrayObj(map, prefix + "Results.", this.Results);
-        this.setParamSimple(map, prefix + "MainTaskId", this.MainTaskId);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamArrayObj(map, prefix + "TableResults.", this.TableResults);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

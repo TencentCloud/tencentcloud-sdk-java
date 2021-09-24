@@ -1,5 +1,8 @@
 package com.tencentcloudapi.iai.v20200303;
 public enum IaiErrorCode {
+    // 认证失败。
+     AUTHFAILURE_INVALIDAUTHORIZATION("AuthFailure.InvalidAuthorization"),
+     
     // 该操作不支持跨算法模型版本。
      FAILEDOPERATION_ACROSSVERSIONSERROR("FailedOperation.AcrossVersionsError"),
      

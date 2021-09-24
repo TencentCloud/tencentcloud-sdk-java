@@ -1159,6 +1159,26 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *获取导入第三方集群YAML定义
+     * @param req DescribeExternalClusterSpecRequest
+     * @return DescribeExternalClusterSpecResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeExternalClusterSpecResponse DescribeExternalClusterSpec(DescribeExternalClusterSpecRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeExternalClusterSpecResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeExternalClusterSpecResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeExternalClusterSpec");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取镜像信息
      * @param req DescribeImagesRequest
      * @return DescribeImagesResponse

@@ -53,7 +53,9 @@ public class AutomationAgentInfo extends AbstractModel{
     private String AgentStatus;
 
     /**
-    * Agent运行环境
+    * Agent运行环境，取值范围：
+<li> Linux：Linux实例
+<li> Windows：Windows实例
     */
     @SerializedName("Environment")
     @Expose
@@ -132,16 +134,24 @@ public class AutomationAgentInfo extends AbstractModel{
     }
 
     /**
-     * Get Agent运行环境 
-     * @return Environment Agent运行环境
+     * Get Agent运行环境，取值范围：
+<li> Linux：Linux实例
+<li> Windows：Windows实例 
+     * @return Environment Agent运行环境，取值范围：
+<li> Linux：Linux实例
+<li> Windows：Windows实例
      */
     public String getEnvironment() {
         return this.Environment;
     }
 
     /**
-     * Set Agent运行环境
-     * @param Environment Agent运行环境
+     * Set Agent运行环境，取值范围：
+<li> Linux：Linux实例
+<li> Windows：Windows实例
+     * @param Environment Agent运行环境，取值范围：
+<li> Linux：Linux实例
+<li> Windows：Windows实例
      */
     public void setEnvironment(String Environment) {
         this.Environment = Environment;

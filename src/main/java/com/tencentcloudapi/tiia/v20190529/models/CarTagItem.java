@@ -72,6 +72,14 @@ public class CarTagItem extends AbstractModel{
     private Coord [] CarLocation;
 
     /**
+    * 车牌信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PlateContent")
+    @Expose
+    private CarPlateContent PlateContent;
+
+    /**
      * Get 车系 
      * @return Serial 车系
      */
@@ -183,6 +191,26 @@ public class CarTagItem extends AbstractModel{
         this.CarLocation = CarLocation;
     }
 
+    /**
+     * Get 车牌信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PlateContent 车牌信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public CarPlateContent getPlateContent() {
+        return this.PlateContent;
+    }
+
+    /**
+     * Set 车牌信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PlateContent 车牌信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPlateContent(CarPlateContent PlateContent) {
+        this.PlateContent = PlateContent;
+    }
+
     public CarTagItem() {
     }
 
@@ -215,6 +243,9 @@ public class CarTagItem extends AbstractModel{
                 this.CarLocation[i] = new Coord(source.CarLocation[i]);
             }
         }
+        if (source.PlateContent != null) {
+            this.PlateContent = new CarPlateContent(source.PlateContent);
+        }
     }
 
 
@@ -229,6 +260,7 @@ public class CarTagItem extends AbstractModel{
         this.setParamSimple(map, prefix + "Confidence", this.Confidence);
         this.setParamSimple(map, prefix + "Year", this.Year);
         this.setParamArrayObj(map, prefix + "CarLocation.", this.CarLocation);
+        this.setParamObj(map, prefix + "PlateContent.", this.PlateContent);
 
     }
 }

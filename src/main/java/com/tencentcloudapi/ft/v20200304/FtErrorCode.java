@@ -109,7 +109,10 @@ public enum FtErrorCode {
      RESOURCEUNAVAILABLE_UNKNOWNSTATUS("ResourceUnavailable.UnknownStatus"),
      
     // 帐号已欠费。
-     RESOURCESSOLDOUT_CHARGESTATUSEXCEPTION("ResourcesSoldOut.ChargeStatusException");
+     RESOURCESSOLDOUT_CHARGESTATUSEXCEPTION("ResourcesSoldOut.ChargeStatusException"),
+     
+    // 未知方法名。
+     UNSUPPORTEDOPERATION_UNKNOWMETHOD("UnsupportedOperation.UnknowMethod");
      
     private String value;
     private FtErrorCode (String value){

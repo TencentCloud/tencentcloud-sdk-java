@@ -23,35 +23,35 @@ import java.util.HashMap;
 public class DescribeCallbackRecordsListResponse extends AbstractModel{
 
     /**
-    * 回调事件列表
+    * 回调事件列表。
     */
     @SerializedName("DataInfoList")
     @Expose
     private CallbackEventInfo [] DataInfoList;
 
     /**
-    * 页码
+    * 页码。
     */
     @SerializedName("PageNum")
     @Expose
     private Long PageNum;
 
     /**
-    * 每页条数
+    * 每页条数。
     */
     @SerializedName("PageSize")
     @Expose
     private Long PageSize;
 
     /**
-    * 总条数
+    * 总条数。
     */
     @SerializedName("TotalNum")
     @Expose
     private Long TotalNum;
 
     /**
-    * 总页数
+    * 总页数。
     */
     @SerializedName("TotalPage")
     @Expose
@@ -65,80 +65,80 @@ public class DescribeCallbackRecordsListResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 回调事件列表 
-     * @return DataInfoList 回调事件列表
+     * Get 回调事件列表。 
+     * @return DataInfoList 回调事件列表。
      */
     public CallbackEventInfo [] getDataInfoList() {
         return this.DataInfoList;
     }
 
     /**
-     * Set 回调事件列表
-     * @param DataInfoList 回调事件列表
+     * Set 回调事件列表。
+     * @param DataInfoList 回调事件列表。
      */
     public void setDataInfoList(CallbackEventInfo [] DataInfoList) {
         this.DataInfoList = DataInfoList;
     }
 
     /**
-     * Get 页码 
-     * @return PageNum 页码
+     * Get 页码。 
+     * @return PageNum 页码。
      */
     public Long getPageNum() {
         return this.PageNum;
     }
 
     /**
-     * Set 页码
-     * @param PageNum 页码
+     * Set 页码。
+     * @param PageNum 页码。
      */
     public void setPageNum(Long PageNum) {
         this.PageNum = PageNum;
     }
 
     /**
-     * Get 每页条数 
-     * @return PageSize 每页条数
+     * Get 每页条数。 
+     * @return PageSize 每页条数。
      */
     public Long getPageSize() {
         return this.PageSize;
     }
 
     /**
-     * Set 每页条数
-     * @param PageSize 每页条数
+     * Set 每页条数。
+     * @param PageSize 每页条数。
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;
     }
 
     /**
-     * Get 总条数 
-     * @return TotalNum 总条数
+     * Get 总条数。 
+     * @return TotalNum 总条数。
      */
     public Long getTotalNum() {
         return this.TotalNum;
     }
 
     /**
-     * Set 总条数
-     * @param TotalNum 总条数
+     * Set 总条数。
+     * @param TotalNum 总条数。
      */
     public void setTotalNum(Long TotalNum) {
         this.TotalNum = TotalNum;
     }
 
     /**
-     * Get 总页数 
-     * @return TotalPage 总页数
+     * Get 总页数。 
+     * @return TotalPage 总页数。
      */
     public Long getTotalPage() {
         return this.TotalPage;
     }
 
     /**
-     * Set 总页数
-     * @param TotalPage 总页数
+     * Set 总页数。
+     * @param TotalPage 总页数。
      */
     public void setTotalPage(Long TotalPage) {
         this.TotalPage = TotalPage;

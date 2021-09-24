@@ -44,14 +44,14 @@ public class DescribeCallbackRecordsListRequest extends AbstractModel{
     private String StreamName;
 
     /**
-    * 页码
+    * 页码。
     */
     @SerializedName("PageNum")
     @Expose
     private Long PageNum;
 
     /**
-    * 每页条数
+    * 每页条数。
     */
     @SerializedName("PageSize")
     @Expose
@@ -61,14 +61,15 @@ public class DescribeCallbackRecordsListRequest extends AbstractModel{
     * 事件类型。
 0: "断流",
 1: "推流",
-100: "录制"
+100: "录制"。
     */
     @SerializedName("EventType")
     @Expose
     private Long EventType;
 
     /**
-    * 回调结果。0为成功，其他为失败
+    * 回调结果。
+0为成功，其他为失败。
     */
     @SerializedName("ResultCode")
     @Expose
@@ -123,32 +124,32 @@ public class DescribeCallbackRecordsListRequest extends AbstractModel{
     }
 
     /**
-     * Get 页码 
-     * @return PageNum 页码
+     * Get 页码。 
+     * @return PageNum 页码。
      */
     public Long getPageNum() {
         return this.PageNum;
     }
 
     /**
-     * Set 页码
-     * @param PageNum 页码
+     * Set 页码。
+     * @param PageNum 页码。
      */
     public void setPageNum(Long PageNum) {
         this.PageNum = PageNum;
     }
 
     /**
-     * Get 每页条数 
-     * @return PageSize 每页条数
+     * Get 每页条数。 
+     * @return PageSize 每页条数。
      */
     public Long getPageSize() {
         return this.PageSize;
     }
 
     /**
-     * Set 每页条数
-     * @param PageSize 每页条数
+     * Set 每页条数。
+     * @param PageSize 每页条数。
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;
@@ -158,11 +159,11 @@ public class DescribeCallbackRecordsListRequest extends AbstractModel{
      * Get 事件类型。
 0: "断流",
 1: "推流",
-100: "录制" 
+100: "录制"。 
      * @return EventType 事件类型。
 0: "断流",
 1: "推流",
-100: "录制"
+100: "录制"。
      */
     public Long getEventType() {
         return this.EventType;
@@ -172,27 +173,31 @@ public class DescribeCallbackRecordsListRequest extends AbstractModel{
      * Set 事件类型。
 0: "断流",
 1: "推流",
-100: "录制"
+100: "录制"。
      * @param EventType 事件类型。
 0: "断流",
 1: "推流",
-100: "录制"
+100: "录制"。
      */
     public void setEventType(Long EventType) {
         this.EventType = EventType;
     }
 
     /**
-     * Get 回调结果。0为成功，其他为失败 
-     * @return ResultCode 回调结果。0为成功，其他为失败
+     * Get 回调结果。
+0为成功，其他为失败。 
+     * @return ResultCode 回调结果。
+0为成功，其他为失败。
      */
     public Long getResultCode() {
         return this.ResultCode;
     }
 
     /**
-     * Set 回调结果。0为成功，其他为失败
-     * @param ResultCode 回调结果。0为成功，其他为失败
+     * Set 回调结果。
+0为成功，其他为失败。
+     * @param ResultCode 回调结果。
+0为成功，其他为失败。
      */
     public void setResultCode(Long ResultCode) {
         this.ResultCode = ResultCode;

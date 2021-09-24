@@ -45,11 +45,46 @@ public class DescribeClustersRequest extends AbstractModel{
     private Long Limit;
 
     /**
-    * 过滤条件,当前只支持按照单个条件ClusterName进行过滤
+    * ·  ClusterName
+    按照【集群名】进行过滤。
+    类型：String
+    必选：否
+
+·  Tags
+    按照【标签键值对】进行过滤。
+    类型：String
+    必选：否
+
+·  vpc-id
+    按照【VPC】进行过滤。
+    类型：String
+    必选：否
+
+·  tag-key
+    按照【标签键】进行过滤。
+    类型：String
+    必选：否
+
+·  tag-value
+    按照【标签值】进行过滤。
+    类型：String
+    必选：否
+
+·  tag:tag-key
+    按照【标签键值对】进行过滤。
+    类型：String
+    必选：否
     */
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
+
+    /**
+    * 集群类型，例如：MANAGED_CLUSTER
+    */
+    @SerializedName("ClusterType")
+    @Expose
+    private String ClusterType;
 
     /**
      * Get 集群ID列表(为空时，
@@ -104,19 +139,147 @@ public class DescribeClustersRequest extends AbstractModel{
     }
 
     /**
-     * Get 过滤条件,当前只支持按照单个条件ClusterName进行过滤 
-     * @return Filters 过滤条件,当前只支持按照单个条件ClusterName进行过滤
+     * Get ·  ClusterName
+    按照【集群名】进行过滤。
+    类型：String
+    必选：否
+
+·  Tags
+    按照【标签键值对】进行过滤。
+    类型：String
+    必选：否
+
+·  vpc-id
+    按照【VPC】进行过滤。
+    类型：String
+    必选：否
+
+·  tag-key
+    按照【标签键】进行过滤。
+    类型：String
+    必选：否
+
+·  tag-value
+    按照【标签值】进行过滤。
+    类型：String
+    必选：否
+
+·  tag:tag-key
+    按照【标签键值对】进行过滤。
+    类型：String
+    必选：否 
+     * @return Filters ·  ClusterName
+    按照【集群名】进行过滤。
+    类型：String
+    必选：否
+
+·  Tags
+    按照【标签键值对】进行过滤。
+    类型：String
+    必选：否
+
+·  vpc-id
+    按照【VPC】进行过滤。
+    类型：String
+    必选：否
+
+·  tag-key
+    按照【标签键】进行过滤。
+    类型：String
+    必选：否
+
+·  tag-value
+    按照【标签值】进行过滤。
+    类型：String
+    必选：否
+
+·  tag:tag-key
+    按照【标签键值对】进行过滤。
+    类型：String
+    必选：否
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 过滤条件,当前只支持按照单个条件ClusterName进行过滤
-     * @param Filters 过滤条件,当前只支持按照单个条件ClusterName进行过滤
+     * Set ·  ClusterName
+    按照【集群名】进行过滤。
+    类型：String
+    必选：否
+
+·  Tags
+    按照【标签键值对】进行过滤。
+    类型：String
+    必选：否
+
+·  vpc-id
+    按照【VPC】进行过滤。
+    类型：String
+    必选：否
+
+·  tag-key
+    按照【标签键】进行过滤。
+    类型：String
+    必选：否
+
+·  tag-value
+    按照【标签值】进行过滤。
+    类型：String
+    必选：否
+
+·  tag:tag-key
+    按照【标签键值对】进行过滤。
+    类型：String
+    必选：否
+     * @param Filters ·  ClusterName
+    按照【集群名】进行过滤。
+    类型：String
+    必选：否
+
+·  Tags
+    按照【标签键值对】进行过滤。
+    类型：String
+    必选：否
+
+·  vpc-id
+    按照【VPC】进行过滤。
+    类型：String
+    必选：否
+
+·  tag-key
+    按照【标签键】进行过滤。
+    类型：String
+    必选：否
+
+·  tag-value
+    按照【标签值】进行过滤。
+    类型：String
+    必选：否
+
+·  tag:tag-key
+    按照【标签键值对】进行过滤。
+    类型：String
+    必选：否
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
+    }
+
+    /**
+     * Get 集群类型，例如：MANAGED_CLUSTER 
+     * @return ClusterType 集群类型，例如：MANAGED_CLUSTER
+     */
+    public String getClusterType() {
+        return this.ClusterType;
+    }
+
+    /**
+     * Set 集群类型，例如：MANAGED_CLUSTER
+     * @param ClusterType 集群类型，例如：MANAGED_CLUSTER
+     */
+    public void setClusterType(String ClusterType) {
+        this.ClusterType = ClusterType;
     }
 
     public DescribeClustersRequest() {
@@ -145,6 +308,9 @@ public class DescribeClustersRequest extends AbstractModel{
                 this.Filters[i] = new Filter(source.Filters[i]);
             }
         }
+        if (source.ClusterType != null) {
+            this.ClusterType = new String(source.ClusterType);
+        }
     }
 
 
@@ -156,6 +322,7 @@ public class DescribeClustersRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
+        this.setParamSimple(map, prefix + "ClusterType", this.ClusterType);
 
     }
 }

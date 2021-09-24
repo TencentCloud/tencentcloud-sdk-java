@@ -58,6 +58,13 @@ public class DescribeSystemResourcesRequest extends AbstractModel{
     private String ClusterId;
 
     /**
+    * 查询对应Flink版本的内置connector
+    */
+    @SerializedName("FlinkVersion")
+    @Expose
+    private String FlinkVersion;
+
+    /**
      * Get 需要查询的资源ID数组 
      * @return ResourceIds 需要查询的资源ID数组
      */
@@ -137,6 +144,22 @@ public class DescribeSystemResourcesRequest extends AbstractModel{
         this.ClusterId = ClusterId;
     }
 
+    /**
+     * Get 查询对应Flink版本的内置connector 
+     * @return FlinkVersion 查询对应Flink版本的内置connector
+     */
+    public String getFlinkVersion() {
+        return this.FlinkVersion;
+    }
+
+    /**
+     * Set 查询对应Flink版本的内置connector
+     * @param FlinkVersion 查询对应Flink版本的内置connector
+     */
+    public void setFlinkVersion(String FlinkVersion) {
+        this.FlinkVersion = FlinkVersion;
+    }
+
     public DescribeSystemResourcesRequest() {
     }
 
@@ -166,6 +189,9 @@ public class DescribeSystemResourcesRequest extends AbstractModel{
         if (source.ClusterId != null) {
             this.ClusterId = new String(source.ClusterId);
         }
+        if (source.FlinkVersion != null) {
+            this.FlinkVersion = new String(source.FlinkVersion);
+        }
     }
 
 
@@ -178,6 +204,7 @@ public class DescribeSystemResourcesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
+        this.setParamSimple(map, prefix + "FlinkVersion", this.FlinkVersion);
 
     }
 }

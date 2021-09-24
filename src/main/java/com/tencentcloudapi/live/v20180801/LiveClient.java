@@ -875,7 +875,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     }
 
     /**
-     *回调事件查询
+     *用于查询回调事件。
      * @param req DescribeCallbackRecordsListRequest
      * @return DescribeCallbackRecordsListResponse
      * @throws TencentCloudSDKException

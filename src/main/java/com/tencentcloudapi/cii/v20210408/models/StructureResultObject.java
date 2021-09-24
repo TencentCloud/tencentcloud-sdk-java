@@ -44,6 +44,13 @@ public class StructureResultObject extends AbstractModel{
     private String StructureResult;
 
     /**
+    * 子任务ID
+    */
+    @SerializedName("SubTaskId")
+    @Expose
+    private String SubTaskId;
+
+    /**
      * Get 0表示正常返回 
      * @return Code 0表示正常返回
      */
@@ -91,6 +98,22 @@ public class StructureResultObject extends AbstractModel{
         this.StructureResult = StructureResult;
     }
 
+    /**
+     * Get 子任务ID 
+     * @return SubTaskId 子任务ID
+     */
+    public String getSubTaskId() {
+        return this.SubTaskId;
+    }
+
+    /**
+     * Set 子任务ID
+     * @param SubTaskId 子任务ID
+     */
+    public void setSubTaskId(String SubTaskId) {
+        this.SubTaskId = SubTaskId;
+    }
+
     public StructureResultObject() {
     }
 
@@ -108,6 +131,9 @@ public class StructureResultObject extends AbstractModel{
         if (source.StructureResult != null) {
             this.StructureResult = new String(source.StructureResult);
         }
+        if (source.SubTaskId != null) {
+            this.SubTaskId = new String(source.SubTaskId);
+        }
     }
 
 
@@ -118,6 +144,7 @@ public class StructureResultObject extends AbstractModel{
         this.setParamSimple(map, prefix + "Code", this.Code);
         this.setParamSimple(map, prefix + "TaskType", this.TaskType);
         this.setParamSimple(map, prefix + "StructureResult", this.StructureResult);
+        this.setParamSimple(map, prefix + "SubTaskId", this.SubTaskId);
 
     }
 }
