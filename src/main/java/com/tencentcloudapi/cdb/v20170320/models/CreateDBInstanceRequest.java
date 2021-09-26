@@ -247,6 +247,13 @@ public class CreateDBInstanceRequest extends AbstractModel{
     private Long AutoSyncFlag;
 
     /**
+    * 金融围拢 ID。
+    */
+    @SerializedName("CageId")
+    @Expose
+    private String CageId;
+
+    /**
      * Get 实例内存大小，单位：MB，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229) 接口获取可创建的内存规格。 
      * @return Memory 实例内存大小，单位：MB，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229) 接口获取可创建的内存规格。
      */
@@ -758,6 +765,22 @@ public class CreateDBInstanceRequest extends AbstractModel{
         this.AutoSyncFlag = AutoSyncFlag;
     }
 
+    /**
+     * Get 金融围拢 ID。 
+     * @return CageId 金融围拢 ID。
+     */
+    public String getCageId() {
+        return this.CageId;
+    }
+
+    /**
+     * Set 金融围拢 ID。
+     * @param CageId 金融围拢 ID。
+     */
+    public void setCageId(String CageId) {
+        this.CageId = CageId;
+    }
+
     public CreateDBInstanceRequest() {
     }
 
@@ -874,6 +897,9 @@ public class CreateDBInstanceRequest extends AbstractModel{
         if (source.AutoSyncFlag != null) {
             this.AutoSyncFlag = new Long(source.AutoSyncFlag);
         }
+        if (source.CageId != null) {
+            this.CageId = new String(source.CageId);
+        }
     }
 
 
@@ -913,6 +939,7 @@ public class CreateDBInstanceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "InstanceNodes", this.InstanceNodes);
         this.setParamSimple(map, prefix + "Cpu", this.Cpu);
         this.setParamSimple(map, prefix + "AutoSyncFlag", this.AutoSyncFlag);
+        this.setParamSimple(map, prefix + "CageId", this.CageId);
 
     }
 }

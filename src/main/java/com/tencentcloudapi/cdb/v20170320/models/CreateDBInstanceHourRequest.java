@@ -240,6 +240,13 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
     private Long AutoSyncFlag;
 
     /**
+    * 金融围拢 ID 。
+    */
+    @SerializedName("CageId")
+    @Expose
+    private String CageId;
+
+    /**
      * Get 实例数量，默认值为 1，最小值 1，最大值为 100。 
      * @return GoodsNum 实例数量，默认值为 1，最小值 1，最大值为 100。
      */
@@ -735,6 +742,22 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
         this.AutoSyncFlag = AutoSyncFlag;
     }
 
+    /**
+     * Get 金融围拢 ID 。 
+     * @return CageId 金融围拢 ID 。
+     */
+    public String getCageId() {
+        return this.CageId;
+    }
+
+    /**
+     * Set 金融围拢 ID 。
+     * @param CageId 金融围拢 ID 。
+     */
+    public void setCageId(String CageId) {
+        this.CageId = CageId;
+    }
+
     public CreateDBInstanceHourRequest() {
     }
 
@@ -848,6 +871,9 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
         if (source.AutoSyncFlag != null) {
             this.AutoSyncFlag = new Long(source.AutoSyncFlag);
         }
+        if (source.CageId != null) {
+            this.CageId = new String(source.CageId);
+        }
     }
 
 
@@ -886,6 +912,7 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "InstanceNodes", this.InstanceNodes);
         this.setParamSimple(map, prefix + "Cpu", this.Cpu);
         this.setParamSimple(map, prefix + "AutoSyncFlag", this.AutoSyncFlag);
+        this.setParamSimple(map, prefix + "CageId", this.CageId);
 
     }
 }

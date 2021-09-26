@@ -212,6 +212,13 @@ public class DescribeDBInstancesRequest extends AbstractModel{
     private String [] TagKeysForSearch;
 
     /**
+    * 金融围拢 ID 。
+    */
+    @SerializedName("CageIds")
+    @Expose
+    private String [] CageIds;
+
+    /**
      * Get 项目 ID，可使用 [查询项目列表](https://cloud.tencent.com/document/product/378/4400) 接口查询项目 ID。 
      * @return ProjectId 项目 ID，可使用 [查询项目列表](https://cloud.tencent.com/document/product/378/4400) 接口查询项目 ID。
      */
@@ -643,6 +650,22 @@ public class DescribeDBInstancesRequest extends AbstractModel{
         this.TagKeysForSearch = TagKeysForSearch;
     }
 
+    /**
+     * Get 金融围拢 ID 。 
+     * @return CageIds 金融围拢 ID 。
+     */
+    public String [] getCageIds() {
+        return this.CageIds;
+    }
+
+    /**
+     * Set 金融围拢 ID 。
+     * @param CageIds 金融围拢 ID 。
+     */
+    public void setCageIds(String [] CageIds) {
+        this.CageIds = CageIds;
+    }
+
     public DescribeDBInstancesRequest() {
     }
 
@@ -774,6 +797,12 @@ public class DescribeDBInstancesRequest extends AbstractModel{
                 this.TagKeysForSearch[i] = new String(source.TagKeysForSearch[i]);
             }
         }
+        if (source.CageIds != null) {
+            this.CageIds = new String[source.CageIds.length];
+            for (int i = 0; i < source.CageIds.length; i++) {
+                this.CageIds[i] = new String(source.CageIds[i]);
+            }
+        }
     }
 
 
@@ -808,6 +837,7 @@ public class DescribeDBInstancesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "WithMaster", this.WithMaster);
         this.setParamArraySimple(map, prefix + "DeployGroupIds.", this.DeployGroupIds);
         this.setParamArraySimple(map, prefix + "TagKeysForSearch.", this.TagKeysForSearch);
+        this.setParamArraySimple(map, prefix + "CageIds.", this.CageIds);
 
     }
 }

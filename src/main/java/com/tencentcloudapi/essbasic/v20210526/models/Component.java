@@ -55,7 +55,7 @@ SIGN_PERSONAL_SEAL - 个人签署印章控件；
     private String ComponentType;
 
     /**
-    * 控件名称
+    * 控件简称
     */
     @SerializedName("ComponentName")
     @Expose
@@ -268,16 +268,16 @@ SIGN_PERSONAL_SEAL - 个人签署印章控件；
     }
 
     /**
-     * Get 控件名称 
-     * @return ComponentName 控件名称
+     * Get 控件简称 
+     * @return ComponentName 控件简称
      */
     public String getComponentName() {
         return this.ComponentName;
     }
 
     /**
-     * Set 控件名称
-     * @param ComponentName 控件名称
+     * Set 控件简称
+     * @param ComponentName 控件简称
      */
     public void setComponentName(String ComponentName) {
         this.ComponentName = ComponentName;
