@@ -681,6 +681,146 @@ public class CwpClient extends AbstractClient{
     }
 
     /**
+     *查询应用列表
+     * @param req DescribeAssetAppListRequest
+     * @return DescribeAssetAppListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAssetAppListResponse DescribeAssetAppList(DescribeAssetAppListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAssetAppListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAssetAppListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAssetAppList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取软件关联进程列表
+     * @param req DescribeAssetAppProcessListRequest
+     * @return DescribeAssetAppProcessListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAssetAppProcessListResponse DescribeAssetAppProcessList(DescribeAssetAppProcessListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAssetAppProcessListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAssetAppProcessListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAssetAppProcessList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取内核模块详情
+     * @param req DescribeAssetCoreModuleInfoRequest
+     * @return DescribeAssetCoreModuleInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAssetCoreModuleInfoResponse DescribeAssetCoreModuleInfo(DescribeAssetCoreModuleInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAssetCoreModuleInfoResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAssetCoreModuleInfoResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAssetCoreModuleInfo");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询资产管理内核模块列表
+     * @param req DescribeAssetCoreModuleListRequest
+     * @return DescribeAssetCoreModuleListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAssetCoreModuleListResponse DescribeAssetCoreModuleList(DescribeAssetCoreModuleListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAssetCoreModuleListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAssetCoreModuleListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAssetCoreModuleList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取资产管理数据库详情
+     * @param req DescribeAssetDatabaseInfoRequest
+     * @return DescribeAssetDatabaseInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAssetDatabaseInfoResponse DescribeAssetDatabaseInfo(DescribeAssetDatabaseInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAssetDatabaseInfoResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAssetDatabaseInfoResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAssetDatabaseInfo");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询资产管理数据库列表
+     * @param req DescribeAssetDatabaseListRequest
+     * @return DescribeAssetDatabaseListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAssetDatabaseListResponse DescribeAssetDatabaseList(DescribeAssetDatabaseListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAssetDatabaseListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAssetDatabaseListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAssetDatabaseList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询资产管理环境变量列表
+     * @param req DescribeAssetEnvListRequest
+     * @return DescribeAssetEnvListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAssetEnvListResponse DescribeAssetEnvList(DescribeAssetEnvListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAssetEnvListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAssetEnvListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAssetEnvList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取资产数量： 主机数、账号数、端口数、进程数、软件数、数据库数、Web应用数、Web框架数、Web服务数、Web站点数
      * @param req DescribeAssetInfoRequest
      * @return DescribeAssetInfoResponse
@@ -701,6 +841,166 @@ public class CwpClient extends AbstractClient{
     }
 
     /**
+     *查询资产管理启动服务列表
+     * @param req DescribeAssetInitServiceListRequest
+     * @return DescribeAssetInitServiceListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAssetInitServiceListResponse DescribeAssetInitServiceList(DescribeAssetInitServiceListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAssetInitServiceListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAssetInitServiceListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAssetInitServiceList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取Jar包详情
+     * @param req DescribeAssetJarInfoRequest
+     * @return DescribeAssetJarInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAssetJarInfoResponse DescribeAssetJarInfo(DescribeAssetJarInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAssetJarInfoResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAssetJarInfoResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAssetJarInfo");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询Jar包列表
+     * @param req DescribeAssetJarListRequest
+     * @return DescribeAssetJarListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAssetJarListResponse DescribeAssetJarList(DescribeAssetJarListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAssetJarListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAssetJarListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAssetJarList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取资产管理主机资源详细信息
+     * @param req DescribeAssetMachineDetailRequest
+     * @return DescribeAssetMachineDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAssetMachineDetailResponse DescribeAssetMachineDetail(DescribeAssetMachineDetailRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAssetMachineDetailResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAssetMachineDetailResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAssetMachineDetail");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取资产指纹页面的资源监控列表
+     * @param req DescribeAssetMachineListRequest
+     * @return DescribeAssetMachineListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAssetMachineListResponse DescribeAssetMachineList(DescribeAssetMachineListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAssetMachineListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAssetMachineListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAssetMachineList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询资产管理计划任务列表
+     * @param req DescribeAssetPlanTaskListRequest
+     * @return DescribeAssetPlanTaskListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAssetPlanTaskListResponse DescribeAssetPlanTaskList(DescribeAssetPlanTaskListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAssetPlanTaskListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAssetPlanTaskListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAssetPlanTaskList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取资产管理端口列表
+     * @param req DescribeAssetPortInfoListRequest
+     * @return DescribeAssetPortInfoListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAssetPortInfoListResponse DescribeAssetPortInfoList(DescribeAssetPortInfoListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAssetPortInfoListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAssetPortInfoListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAssetPortInfoList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取资产管理进程列表
+     * @param req DescribeAssetProcessInfoListRequest
+     * @return DescribeAssetProcessInfoListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAssetProcessInfoListResponse DescribeAssetProcessInfoList(DescribeAssetProcessInfoListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAssetProcessInfoListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAssetProcessInfoListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAssetProcessInfoList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取主机最近趋势情况
      * @param req DescribeAssetRecentMachineInfoRequest
      * @return DescribeAssetRecentMachineInfoResponse
@@ -713,6 +1013,206 @@ public class CwpClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeAssetRecentMachineInfoResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeAssetRecentMachineInfo");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取资产管理系统安装包列表
+     * @param req DescribeAssetSystemPackageListRequest
+     * @return DescribeAssetSystemPackageListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAssetSystemPackageListResponse DescribeAssetSystemPackageList(DescribeAssetSystemPackageListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAssetSystemPackageListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAssetSystemPackageListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAssetSystemPackageList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取主机账号详情
+     * @param req DescribeAssetUserInfoRequest
+     * @return DescribeAssetUserInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAssetUserInfoResponse DescribeAssetUserInfo(DescribeAssetUserInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAssetUserInfoResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAssetUserInfoResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAssetUserInfo");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取账号列表
+     * @param req DescribeAssetUserListRequest
+     * @return DescribeAssetUserListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAssetUserListResponse DescribeAssetUserList(DescribeAssetUserListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAssetUserListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAssetUserListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAssetUserList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取资产管理Web应用列表
+     * @param req DescribeAssetWebAppListRequest
+     * @return DescribeAssetWebAppListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAssetWebAppListResponse DescribeAssetWebAppList(DescribeAssetWebAppListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAssetWebAppListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAssetWebAppListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAssetWebAppList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取资产管理Web应用插件列表
+     * @param req DescribeAssetWebAppPluginListRequest
+     * @return DescribeAssetWebAppPluginListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAssetWebAppPluginListResponse DescribeAssetWebAppPluginList(DescribeAssetWebAppPluginListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAssetWebAppPluginListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAssetWebAppPluginListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAssetWebAppPluginList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取资产管理Web框架列表
+     * @param req DescribeAssetWebFrameListRequest
+     * @return DescribeAssetWebFrameListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAssetWebFrameListResponse DescribeAssetWebFrameList(DescribeAssetWebFrameListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAssetWebFrameListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAssetWebFrameListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAssetWebFrameList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取Web站点详情
+     * @param req DescribeAssetWebLocationInfoRequest
+     * @return DescribeAssetWebLocationInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAssetWebLocationInfoResponse DescribeAssetWebLocationInfo(DescribeAssetWebLocationInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAssetWebLocationInfoResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAssetWebLocationInfoResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAssetWebLocationInfo");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取Web站点列表
+     * @param req DescribeAssetWebLocationListRequest
+     * @return DescribeAssetWebLocationListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAssetWebLocationListResponse DescribeAssetWebLocationList(DescribeAssetWebLocationListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAssetWebLocationListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAssetWebLocationListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAssetWebLocationList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询资产管理Web服务列表
+     * @param req DescribeAssetWebServiceInfoListRequest
+     * @return DescribeAssetWebServiceInfoListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAssetWebServiceInfoListResponse DescribeAssetWebServiceInfoList(DescribeAssetWebServiceInfoListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAssetWebServiceInfoListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAssetWebServiceInfoListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAssetWebServiceInfoList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取Web服务关联进程列表
+     * @param req DescribeAssetWebServiceProcessListRequest
+     * @return DescribeAssetWebServiceProcessListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAssetWebServiceProcessListResponse DescribeAssetWebServiceProcessList(DescribeAssetWebServiceProcessListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAssetWebServiceProcessListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAssetWebServiceProcessListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAssetWebServiceProcessList");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

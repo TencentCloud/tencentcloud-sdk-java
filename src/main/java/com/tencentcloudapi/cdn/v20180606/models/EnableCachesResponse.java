@@ -31,6 +31,14 @@ public class EnableCachesResponse extends AbstractModel{
     private CacheOptResult CacheOptResult;
 
     /**
+    * 任务ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TaskId")
+    @Expose
+    private String TaskId;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -55,6 +63,26 @@ public class EnableCachesResponse extends AbstractModel{
      */
     public void setCacheOptResult(CacheOptResult CacheOptResult) {
         this.CacheOptResult = CacheOptResult;
+    }
+
+    /**
+     * Get 任务ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TaskId 任务ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTaskId() {
+        return this.TaskId;
+    }
+
+    /**
+     * Set 任务ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TaskId 任务ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTaskId(String TaskId) {
+        this.TaskId = TaskId;
     }
 
     /**
@@ -84,6 +112,9 @@ public class EnableCachesResponse extends AbstractModel{
         if (source.CacheOptResult != null) {
             this.CacheOptResult = new CacheOptResult(source.CacheOptResult);
         }
+        if (source.TaskId != null) {
+            this.TaskId = new String(source.TaskId);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -95,6 +126,7 @@ public class EnableCachesResponse extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "CacheOptResult.", this.CacheOptResult);
+        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

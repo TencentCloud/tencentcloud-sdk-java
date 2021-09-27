@@ -23,11 +23,57 @@ import java.util.HashMap;
 public class DescribeVersionStatisticsResponse extends AbstractModel{
 
     /**
+    * 基础版数量
+    */
+    @SerializedName("BasicVersionNum")
+    @Expose
+    private Long BasicVersionNum;
+
+    /**
+    * 专业版数量
+    */
+    @SerializedName("ProVersionNum")
+    @Expose
+    private Long ProVersionNum;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 基础版数量 
+     * @return BasicVersionNum 基础版数量
+     */
+    public Long getBasicVersionNum() {
+        return this.BasicVersionNum;
+    }
+
+    /**
+     * Set 基础版数量
+     * @param BasicVersionNum 基础版数量
+     */
+    public void setBasicVersionNum(Long BasicVersionNum) {
+        this.BasicVersionNum = BasicVersionNum;
+    }
+
+    /**
+     * Get 专业版数量 
+     * @return ProVersionNum 专业版数量
+     */
+    public Long getProVersionNum() {
+        return this.ProVersionNum;
+    }
+
+    /**
+     * Set 专业版数量
+     * @param ProVersionNum 专业版数量
+     */
+    public void setProVersionNum(Long ProVersionNum) {
+        this.ProVersionNum = ProVersionNum;
+    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -53,6 +99,12 @@ public class DescribeVersionStatisticsResponse extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeVersionStatisticsResponse(DescribeVersionStatisticsResponse source) {
+        if (source.BasicVersionNum != null) {
+            this.BasicVersionNum = new Long(source.BasicVersionNum);
+        }
+        if (source.ProVersionNum != null) {
+            this.ProVersionNum = new Long(source.ProVersionNum);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -63,6 +115,8 @@ public class DescribeVersionStatisticsResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "BasicVersionNum", this.BasicVersionNum);
+        this.setParamSimple(map, prefix + "ProVersionNum", this.ProVersionNum);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

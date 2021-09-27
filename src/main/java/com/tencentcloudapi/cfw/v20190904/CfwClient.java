@@ -39,6 +39,26 @@ public class CfwClient extends AbstractClient{
     }
 
     /**
+     *添加互联网边界规则
+     * @param req AddAcRuleRequest
+     * @return AddAcRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public AddAcRuleResponse AddAcRule(AddAcRuleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AddAcRuleResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<AddAcRuleResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "AddAcRule");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建规则
      * @param req CreateAcRulesRequest
      * @return CreateAcRulesResponse
@@ -111,6 +131,26 @@ public class CfwClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreateNatFwInstanceResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "CreateNatFwInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *创建防火墙实例和接入域名
+     * @param req CreateNatFwInstanceWithDomainRequest
+     * @return CreateNatFwInstanceWithDomainResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateNatFwInstanceWithDomainResponse CreateNatFwInstanceWithDomain(CreateNatFwInstanceWithDomainRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateNatFwInstanceWithDomainResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateNatFwInstanceWithDomainResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateNatFwInstanceWithDomain");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1222,6 +1262,26 @@ public class CfwClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyVPCSwitchStatusResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyVPCSwitchStatus");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除互联网边界规则
+     * @param req RemoveAcRuleRequest
+     * @return RemoveAcRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public RemoveAcRuleResponse RemoveAcRule(RemoveAcRuleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RemoveAcRuleResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<RemoveAcRuleResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "RemoveAcRule");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

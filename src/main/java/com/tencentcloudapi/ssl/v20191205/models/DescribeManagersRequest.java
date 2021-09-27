@@ -72,6 +72,13 @@ public class DescribeManagersRequest extends AbstractModel{
     private String Status;
 
     /**
+    * 管理人姓名/邮箱/部门精准匹配
+    */
+    @SerializedName("SearchKey")
+    @Expose
+    private String SearchKey;
+
+    /**
      * Get 公司ID 
      * @return CompanyId 公司ID
      */
@@ -195,6 +202,22 @@ public class DescribeManagersRequest extends AbstractModel{
         this.Status = Status;
     }
 
+    /**
+     * Get 管理人姓名/邮箱/部门精准匹配 
+     * @return SearchKey 管理人姓名/邮箱/部门精准匹配
+     */
+    public String getSearchKey() {
+        return this.SearchKey;
+    }
+
+    /**
+     * Set 管理人姓名/邮箱/部门精准匹配
+     * @param SearchKey 管理人姓名/邮箱/部门精准匹配
+     */
+    public void setSearchKey(String SearchKey) {
+        this.SearchKey = SearchKey;
+    }
+
     public DescribeManagersRequest() {
     }
 
@@ -221,6 +244,9 @@ public class DescribeManagersRequest extends AbstractModel{
         if (source.Status != null) {
             this.Status = new String(source.Status);
         }
+        if (source.SearchKey != null) {
+            this.SearchKey = new String(source.SearchKey);
+        }
     }
 
 
@@ -234,6 +260,7 @@ public class DescribeManagersRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ManagerName", this.ManagerName);
         this.setParamSimple(map, prefix + "ManagerMail", this.ManagerMail);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "SearchKey", this.SearchKey);
 
     }
 }

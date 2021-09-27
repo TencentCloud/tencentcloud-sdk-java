@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeAsyncRequestInfoResponse extends AbstractModel{
 
     /**
-    * 状态
+    * 状态。返回参数有：initial-初始化、running-运行中、paused-任务执行失败，已暂停、undoed-任务执行失败，已回滚、failed-任务执行失败, 已终止、success-成功
     */
     @SerializedName("Status")
     @Expose
@@ -37,16 +37,16 @@ public class DescribeAsyncRequestInfoResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 状态 
-     * @return Status 状态
+     * Get 状态。返回参数有：initial-初始化、running-运行中、paused-任务执行失败，已暂停、undoed-任务执行失败，已回滚、failed-任务执行失败, 已终止、success-成功 
+     * @return Status 状态。返回参数有：initial-初始化、running-运行中、paused-任务执行失败，已暂停、undoed-任务执行失败，已回滚、failed-任务执行失败, 已终止、success-成功
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 状态
-     * @param Status 状态
+     * Set 状态。返回参数有：initial-初始化、running-运行中、paused-任务执行失败，已暂停、undoed-任务执行失败，已回滚、failed-任务执行失败, 已终止、success-成功
+     * @param Status 状态。返回参数有：initial-初始化、running-运行中、paused-任务执行失败，已暂停、undoed-任务执行失败，已回滚、failed-任务执行失败, 已终止、success-成功
      */
     public void setStatus(String Status) {
         this.Status = Status;

@@ -45,6 +45,13 @@ public class ExternalContactSimpleInfo extends AbstractModel{
     private String SalesName;
 
     /**
+    * 添加了此外部联系人的企业成员的归属部门id列表
+    */
+    @SerializedName("DepartmentIdList")
+    @Expose
+    private Long [] DepartmentIdList;
+
+    /**
      * Get 外部联系人的userId 
      * @return ExternalUserId 外部联系人的userId
      */
@@ -96,6 +103,22 @@ public class ExternalContactSimpleInfo extends AbstractModel{
         this.SalesName = SalesName;
     }
 
+    /**
+     * Get 添加了此外部联系人的企业成员的归属部门id列表 
+     * @return DepartmentIdList 添加了此外部联系人的企业成员的归属部门id列表
+     */
+    public Long [] getDepartmentIdList() {
+        return this.DepartmentIdList;
+    }
+
+    /**
+     * Set 添加了此外部联系人的企业成员的归属部门id列表
+     * @param DepartmentIdList 添加了此外部联系人的企业成员的归属部门id列表
+     */
+    public void setDepartmentIdList(Long [] DepartmentIdList) {
+        this.DepartmentIdList = DepartmentIdList;
+    }
+
     public ExternalContactSimpleInfo() {
     }
 
@@ -113,6 +136,12 @@ public class ExternalContactSimpleInfo extends AbstractModel{
         if (source.SalesName != null) {
             this.SalesName = new String(source.SalesName);
         }
+        if (source.DepartmentIdList != null) {
+            this.DepartmentIdList = new Long[source.DepartmentIdList.length];
+            for (int i = 0; i < source.DepartmentIdList.length; i++) {
+                this.DepartmentIdList[i] = new Long(source.DepartmentIdList[i]);
+            }
+        }
     }
 
 
@@ -123,6 +152,7 @@ public class ExternalContactSimpleInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "ExternalUserId", this.ExternalUserId);
         this.setParamSimple(map, prefix + "UserId", this.UserId);
         this.setParamSimple(map, prefix + "SalesName", this.SalesName);
+        this.setParamArraySimple(map, prefix + "DepartmentIdList.", this.DepartmentIdList);
 
     }
 }

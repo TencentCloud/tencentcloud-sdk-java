@@ -38,6 +38,14 @@ public class ScdnConfig extends AbstractModel{
     private ScdnCCRules [] Rules;
 
     /**
+    * 增强自定义 cc 防护规则
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AdvancedRules")
+    @Expose
+    private AdvancedCCRules [] AdvancedRules;
+
+    /**
      * Get on | off 
      * @return Switch on | off
      */
@@ -73,6 +81,26 @@ public class ScdnConfig extends AbstractModel{
         this.Rules = Rules;
     }
 
+    /**
+     * Get 增强自定义 cc 防护规则
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AdvancedRules 增强自定义 cc 防护规则
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public AdvancedCCRules [] getAdvancedRules() {
+        return this.AdvancedRules;
+    }
+
+    /**
+     * Set 增强自定义 cc 防护规则
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AdvancedRules 增强自定义 cc 防护规则
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAdvancedRules(AdvancedCCRules [] AdvancedRules) {
+        this.AdvancedRules = AdvancedRules;
+    }
+
     public ScdnConfig() {
     }
 
@@ -90,6 +118,12 @@ public class ScdnConfig extends AbstractModel{
                 this.Rules[i] = new ScdnCCRules(source.Rules[i]);
             }
         }
+        if (source.AdvancedRules != null) {
+            this.AdvancedRules = new AdvancedCCRules[source.AdvancedRules.length];
+            for (int i = 0; i < source.AdvancedRules.length; i++) {
+                this.AdvancedRules[i] = new AdvancedCCRules(source.AdvancedRules[i]);
+            }
+        }
     }
 
 
@@ -99,6 +133,7 @@ public class ScdnConfig extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Switch", this.Switch);
         this.setParamArrayObj(map, prefix + "Rules.", this.Rules);
+        this.setParamArrayObj(map, prefix + "AdvancedRules.", this.AdvancedRules);
 
     }
 }

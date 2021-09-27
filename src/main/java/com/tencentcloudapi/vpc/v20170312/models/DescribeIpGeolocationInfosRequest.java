@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class DescribeIpGeolocationInfosRequest extends AbstractModel{
 
     /**
-    * 查询IP地址列表，支持IPv4和IPv6。
+    * 需查询的IP地址列表，支持IPv4和IPv6。批量查询的IP地址上限为100个。
     */
     @SerializedName("AddressIps")
     @Expose
     private String [] AddressIps;
 
     /**
-    * 查询IP地址的字段信息，包括"Country","Province","City","Region","Isp","AsName","AsId"
+    * 需查询的IP地址的字段信息。
     */
     @SerializedName("Fields")
     @Expose
     private IpField Fields;
 
     /**
-     * Get 查询IP地址列表，支持IPv4和IPv6。 
-     * @return AddressIps 查询IP地址列表，支持IPv4和IPv6。
+     * Get 需查询的IP地址列表，支持IPv4和IPv6。批量查询的IP地址上限为100个。 
+     * @return AddressIps 需查询的IP地址列表，支持IPv4和IPv6。批量查询的IP地址上限为100个。
      */
     public String [] getAddressIps() {
         return this.AddressIps;
     }
 
     /**
-     * Set 查询IP地址列表，支持IPv4和IPv6。
-     * @param AddressIps 查询IP地址列表，支持IPv4和IPv6。
+     * Set 需查询的IP地址列表，支持IPv4和IPv6。批量查询的IP地址上限为100个。
+     * @param AddressIps 需查询的IP地址列表，支持IPv4和IPv6。批量查询的IP地址上限为100个。
      */
     public void setAddressIps(String [] AddressIps) {
         this.AddressIps = AddressIps;
     }
 
     /**
-     * Get 查询IP地址的字段信息，包括"Country","Province","City","Region","Isp","AsName","AsId" 
-     * @return Fields 查询IP地址的字段信息，包括"Country","Province","City","Region","Isp","AsName","AsId"
+     * Get 需查询的IP地址的字段信息。 
+     * @return Fields 需查询的IP地址的字段信息。
      */
     public IpField getFields() {
         return this.Fields;
     }
 
     /**
-     * Set 查询IP地址的字段信息，包括"Country","Province","City","Region","Isp","AsName","AsId"
-     * @param Fields 查询IP地址的字段信息，包括"Country","Province","City","Region","Isp","AsName","AsId"
+     * Set 需查询的IP地址的字段信息。
+     * @param Fields 需查询的IP地址的字段信息。
      */
     public void setFields(IpField Fields) {
         this.Fields = Fields;

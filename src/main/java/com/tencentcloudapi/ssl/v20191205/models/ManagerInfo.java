@@ -125,6 +125,14 @@ public class ManagerInfo extends AbstractModel{
     private String VerifyTime;
 
     /**
+    * 具体审核状态信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("StatusInfo")
+    @Expose
+    private ManagerStatusInfo [] StatusInfo;
+
+    /**
      * Get 状态: audit: 审核中 ok: 审核通过 invalid: 失效 expiring: 即将过期 expired: 已过期 
      * @return Status 状态: audit: 审核中 ok: 审核通过 invalid: 失效 expiring: 即将过期 expired: 已过期
      */
@@ -364,6 +372,26 @@ public class ManagerInfo extends AbstractModel{
         this.VerifyTime = VerifyTime;
     }
 
+    /**
+     * Get 具体审核状态信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return StatusInfo 具体审核状态信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ManagerStatusInfo [] getStatusInfo() {
+        return this.StatusInfo;
+    }
+
+    /**
+     * Set 具体审核状态信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param StatusInfo 具体审核状态信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setStatusInfo(ManagerStatusInfo [] StatusInfo) {
+        this.StatusInfo = StatusInfo;
+    }
+
     public ManagerInfo() {
     }
 
@@ -414,6 +442,12 @@ public class ManagerInfo extends AbstractModel{
         if (source.VerifyTime != null) {
             this.VerifyTime = new String(source.VerifyTime);
         }
+        if (source.StatusInfo != null) {
+            this.StatusInfo = new ManagerStatusInfo[source.StatusInfo.length];
+            for (int i = 0; i < source.StatusInfo.length; i++) {
+                this.StatusInfo[i] = new ManagerStatusInfo(source.StatusInfo[i]);
+            }
+        }
     }
 
 
@@ -435,6 +469,7 @@ public class ManagerInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
         this.setParamSimple(map, prefix + "SubmitAuditTime", this.SubmitAuditTime);
         this.setParamSimple(map, prefix + "VerifyTime", this.VerifyTime);
+        this.setParamArrayObj(map, prefix + "StatusInfo.", this.StatusInfo);
 
     }
 }

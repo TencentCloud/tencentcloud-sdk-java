@@ -63,7 +63,7 @@ public class DescribeBaselineStrategyDetailResponse extends AbstractModel{
     private Long IsGlobal;
 
     /**
-    * 云主机类型：
+    * 云服务器类型：
 cvm：腾讯云服务器
 bm：裸金属
 ecm：边缘计算主机
@@ -215,14 +215,14 @@ ohter: 混合云机器
     }
 
     /**
-     * Get 云主机类型：
+     * Get 云服务器类型：
 cvm：腾讯云服务器
 bm：裸金属
 ecm：边缘计算主机
 lh: 轻量应用服务器
 ohter: 混合云机器
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MachineType 云主机类型：
+     * @return MachineType 云服务器类型：
 cvm：腾讯云服务器
 bm：裸金属
 ecm：边缘计算主机
@@ -235,14 +235,14 @@ ohter: 混合云机器
     }
 
     /**
-     * Set 云主机类型：
+     * Set 云服务器类型：
 cvm：腾讯云服务器
 bm：裸金属
 ecm：边缘计算主机
 lh: 轻量应用服务器
 ohter: 混合云机器
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MachineType 云主机类型：
+     * @param MachineType 云服务器类型：
 cvm：腾讯云服务器
 bm：裸金属
 ecm：边缘计算主机

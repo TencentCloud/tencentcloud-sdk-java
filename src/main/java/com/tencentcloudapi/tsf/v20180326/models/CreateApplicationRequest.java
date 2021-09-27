@@ -86,6 +86,13 @@ public class CreateApplicationRequest extends AbstractModel{
     private ServiceConfig [] ServiceConfigList;
 
     /**
+    * 忽略创建镜像仓库
+    */
+    @SerializedName("IgnoreCreateImageRepository")
+    @Expose
+    private Boolean IgnoreCreateImageRepository;
+
+    /**
      * Get 应用名称 
      * @return ApplicationName 应用名称
      */
@@ -229,6 +236,22 @@ public class CreateApplicationRequest extends AbstractModel{
         this.ServiceConfigList = ServiceConfigList;
     }
 
+    /**
+     * Get 忽略创建镜像仓库 
+     * @return IgnoreCreateImageRepository 忽略创建镜像仓库
+     */
+    public Boolean getIgnoreCreateImageRepository() {
+        return this.IgnoreCreateImageRepository;
+    }
+
+    /**
+     * Set 忽略创建镜像仓库
+     * @param IgnoreCreateImageRepository 忽略创建镜像仓库
+     */
+    public void setIgnoreCreateImageRepository(Boolean IgnoreCreateImageRepository) {
+        this.IgnoreCreateImageRepository = IgnoreCreateImageRepository;
+    }
+
     public CreateApplicationRequest() {
     }
 
@@ -267,6 +290,9 @@ public class CreateApplicationRequest extends AbstractModel{
                 this.ServiceConfigList[i] = new ServiceConfig(source.ServiceConfigList[i]);
             }
         }
+        if (source.IgnoreCreateImageRepository != null) {
+            this.IgnoreCreateImageRepository = new Boolean(source.IgnoreCreateImageRepository);
+        }
     }
 
 
@@ -283,6 +309,7 @@ public class CreateApplicationRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ApplicationRuntimeType", this.ApplicationRuntimeType);
         this.setParamSimple(map, prefix + "ProgramId", this.ProgramId);
         this.setParamArrayObj(map, prefix + "ServiceConfigList.", this.ServiceConfigList);
+        this.setParamSimple(map, prefix + "IgnoreCreateImageRepository", this.IgnoreCreateImageRepository);
 
     }
 }

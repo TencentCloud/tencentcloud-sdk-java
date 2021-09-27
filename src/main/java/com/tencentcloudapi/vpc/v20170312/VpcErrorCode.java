@@ -60,6 +60,9 @@ public enum VpcErrorCode {
     // 指定过滤选项值不是列表。
      INVALIDPARAMETER_FILTERVALUESNOTLIST("InvalidParameter.FilterValuesNotList"),
      
+    // 该过滤规则不合法。
+     INVALIDPARAMETER_INVALIDFILTER("InvalidParameter.InvalidFilter"),
+     
     // 下一跳类型与下一跳网关不匹配。
      INVALIDPARAMETER_NEXTHOPMISMATCH("InvalidParameter.NextHopMismatch"),
      
@@ -107,9 +110,6 @@ public enum VpcErrorCode {
      
     // 传入的DedicatedClusterId有误。
      INVALIDPARAMETERVALUE_INVALIDDEDICATEDCLUSTERID("InvalidParameterValue.InvalidDedicatedClusterId"),
-     
-    // 该过滤规则不合法。
-     INVALIDPARAMETERVALUE_INVALIDFILTER("InvalidParameterValue.InvalidFilter"),
      
     // 该IP只能绑定小时流量后付费和带宽包实例。
      INVALIDPARAMETERVALUE_INVALIDINSTANCEINTERNETCHARGETYPE("InvalidParameterValue.InvalidInstanceInternetChargeType"),
@@ -161,6 +161,9 @@ public enum VpcErrorCode {
      
     // 目的网段和当前VPN通道的CIDR冲突。
      INVALIDPARAMETERVALUE_VPNCONNCIDRCONFLICT("InvalidParameterValue.VpnConnCidrConflict"),
+     
+    // VPN通道探测ip冲突。
+     INVALIDPARAMETERVALUE_VPNCONNHEALTHCHECKIPCONFLICT("InvalidParameterValue.VpnConnHealthCheckIpConflict"),
      
     // 参数Zone的值与CDC所在Zone冲突。
      INVALIDPARAMETERVALUE_ZONECONFLICT("InvalidParameterValue.ZoneConflict"),
@@ -266,6 +269,9 @@ public enum VpcErrorCode {
      
     // 接口不存在。
      UNSUPPORTEDOPERATION_ACTIONNOTFOUND("UnsupportedOperation.ActionNotFound"),
+     
+    // 资源不在指定的AppId下。
+     UNSUPPORTEDOPERATION_APPIDMISMATCH("UnsupportedOperation.AppIdMismatch"),
      
     // 绑定关系已存在。
      UNSUPPORTEDOPERATION_ATTACHMENTALREADYEXISTS("UnsupportedOperation.AttachmentAlreadyExists"),
@@ -401,6 +407,9 @@ public enum VpcErrorCode {
      
     // 未绑定EIP。
      UNSUPPORTEDOPERATION_UNBINDEIP("UnsupportedOperation.UnbindEIP"),
+     
+    // 账户还有未支付订单，请先完成付款。
+     UNSUPPORTEDOPERATION_UNPAIDORDERALREADYEXISTS("UnsupportedOperation.UnpaidOrderAlreadyExists"),
      
     // 指定机型不支持弹性网卡。
      UNSUPPORTEDOPERATION_UNSUPPORTEDINSTANCEFAMILY("UnsupportedOperation.UnsupportedInstanceFamily"),

@@ -499,6 +499,26 @@ public class TcbClient extends AbstractClient{
     }
 
     /**
+     *查询环境下所有的vpc列表
+     * @param req DescribeCloudBaseRunAllVpcsRequest
+     * @return DescribeCloudBaseRunAllVpcsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCloudBaseRunAllVpcsResponse DescribeCloudBaseRunAllVpcs(DescribeCloudBaseRunAllVpcsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCloudBaseRunAllVpcsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCloudBaseRunAllVpcsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeCloudBaseRunAllVpcs");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *独立网关中拉取云托管服务对应的配置信息
      * @param req DescribeCloudBaseRunConfForGateWayRequest
      * @return DescribeCloudBaseRunConfForGateWayResponse
@@ -511,6 +531,26 @@ public class TcbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeCloudBaseRunConfForGateWayResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeCloudBaseRunConfForGateWay");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询服务、版本和操作类型
+     * @param req DescribeCloudBaseRunOperationTypesRequest
+     * @return DescribeCloudBaseRunOperationTypesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCloudBaseRunOperationTypesResponse DescribeCloudBaseRunOperationTypes(DescribeCloudBaseRunOperationTypesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCloudBaseRunOperationTypesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCloudBaseRunOperationTypesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeCloudBaseRunOperationTypes");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -591,6 +631,26 @@ public class TcbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeCloudBaseRunVersionResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeCloudBaseRunVersion");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *DescribeCloudBaseRunVersionRsByCondition 获取云托管详情
+     * @param req DescribeCloudBaseRunVersionRsByConditionRequest
+     * @return DescribeCloudBaseRunVersionRsByConditionResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCloudBaseRunVersionRsByConditionResponse DescribeCloudBaseRunVersionRsByCondition(DescribeCloudBaseRunVersionRsByConditionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCloudBaseRunVersionRsByConditionResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCloudBaseRunVersionRsByConditionResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeCloudBaseRunVersionRsByCondition");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

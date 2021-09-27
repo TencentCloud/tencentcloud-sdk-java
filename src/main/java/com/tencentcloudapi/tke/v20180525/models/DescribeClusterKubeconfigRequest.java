@@ -30,6 +30,13 @@ public class DescribeClusterKubeconfigRequest extends AbstractModel{
     private String ClusterId;
 
     /**
+    * 默认false 获取内网，是否获取外网访问的kubeconfig
+    */
+    @SerializedName("IsExtranet")
+    @Expose
+    private Boolean IsExtranet;
+
+    /**
      * Get 集群ID 
      * @return ClusterId 集群ID
      */
@@ -45,6 +52,22 @@ public class DescribeClusterKubeconfigRequest extends AbstractModel{
         this.ClusterId = ClusterId;
     }
 
+    /**
+     * Get 默认false 获取内网，是否获取外网访问的kubeconfig 
+     * @return IsExtranet 默认false 获取内网，是否获取外网访问的kubeconfig
+     */
+    public Boolean getIsExtranet() {
+        return this.IsExtranet;
+    }
+
+    /**
+     * Set 默认false 获取内网，是否获取外网访问的kubeconfig
+     * @param IsExtranet 默认false 获取内网，是否获取外网访问的kubeconfig
+     */
+    public void setIsExtranet(Boolean IsExtranet) {
+        this.IsExtranet = IsExtranet;
+    }
+
     public DescribeClusterKubeconfigRequest() {
     }
 
@@ -56,6 +79,9 @@ public class DescribeClusterKubeconfigRequest extends AbstractModel{
         if (source.ClusterId != null) {
             this.ClusterId = new String(source.ClusterId);
         }
+        if (source.IsExtranet != null) {
+            this.IsExtranet = new Boolean(source.IsExtranet);
+        }
     }
 
 
@@ -64,6 +90,7 @@ public class DescribeClusterKubeconfigRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
+        this.setParamSimple(map, prefix + "IsExtranet", this.IsExtranet);
 
     }
 }

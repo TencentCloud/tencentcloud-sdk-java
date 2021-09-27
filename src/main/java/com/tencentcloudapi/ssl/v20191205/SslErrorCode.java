@@ -99,6 +99,9 @@ public enum SslErrorCode {
     // 参数取值错误。
      INVALIDPARAMETERVALUE("InvalidParameterValue"),
      
+    // 单位时间内接口请求频率达到限制。
+     LIMITEXCEEDED_RATELIMITEXCEEDED("LimitExceeded.RateLimitExceeded"),
+     
     // 缺少参数错误。
      MISSINGPARAMETER("MissingParameter"),
      

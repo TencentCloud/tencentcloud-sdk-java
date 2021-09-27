@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class DescribeIpGeolocationInfosResponse extends AbstractModel{
 
     /**
-    * IP地址信息列表
+    * IP地址信息列表。
     */
     @SerializedName("AddressInfo")
     @Expose
     private IpGeolocationInfo [] AddressInfo;
 
     /**
-    * IP地址信息个数
+    * IP地址信息个数。
     */
     @SerializedName("Total")
     @Expose
@@ -44,32 +44,32 @@ public class DescribeIpGeolocationInfosResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get IP地址信息列表 
-     * @return AddressInfo IP地址信息列表
+     * Get IP地址信息列表。 
+     * @return AddressInfo IP地址信息列表。
      */
     public IpGeolocationInfo [] getAddressInfo() {
         return this.AddressInfo;
     }
 
     /**
-     * Set IP地址信息列表
-     * @param AddressInfo IP地址信息列表
+     * Set IP地址信息列表。
+     * @param AddressInfo IP地址信息列表。
      */
     public void setAddressInfo(IpGeolocationInfo [] AddressInfo) {
         this.AddressInfo = AddressInfo;
     }
 
     /**
-     * Get IP地址信息个数 
-     * @return Total IP地址信息个数
+     * Get IP地址信息个数。 
+     * @return Total IP地址信息个数。
      */
     public Long getTotal() {
         return this.Total;
     }
 
     /**
-     * Set IP地址信息个数
-     * @param Total IP地址信息个数
+     * Set IP地址信息个数。
+     * @param Total IP地址信息个数。
      */
     public void setTotal(Long Total) {
         this.Total = Total;

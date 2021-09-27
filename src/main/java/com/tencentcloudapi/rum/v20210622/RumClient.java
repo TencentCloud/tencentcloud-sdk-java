@@ -158,4 +158,24 @@ public class RumClient extends AbstractClient{
         return rsp.response;
     }
 
+    /**
+     *获取首页分数列表
+     * @param req DescribeScoresRequest
+     * @return DescribeScoresResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeScoresResponse DescribeScores(DescribeScoresRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeScoresResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeScoresResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeScores");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
 }
