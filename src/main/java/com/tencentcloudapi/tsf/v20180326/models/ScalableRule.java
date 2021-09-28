@@ -71,6 +71,14 @@ public class ScalableRule extends AbstractModel{
     private String Desc;
 
     /**
+    * 备注
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Description")
+    @Expose
+    private String Description;
+
+    /**
      * Get RuleId值
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return RuleId RuleId值
@@ -190,6 +198,26 @@ public class ScalableRule extends AbstractModel{
         this.Desc = Desc;
     }
 
+    /**
+     * Get 备注
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Description 备注
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDescription() {
+        return this.Description;
+    }
+
+    /**
+     * Set 备注
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Description 备注
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDescription(String Description) {
+        this.Description = Description;
+    }
+
     public ScalableRule() {
     }
 
@@ -216,6 +244,9 @@ public class ScalableRule extends AbstractModel{
         if (source.Desc != null) {
             this.Desc = new String(source.Desc);
         }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
     }
 
 
@@ -229,6 +260,7 @@ public class ScalableRule extends AbstractModel{
         this.setParamSimple(map, prefix + "ShrinkVmCountLimit", this.ShrinkVmCountLimit);
         this.setParamSimple(map, prefix + "GroupCount", this.GroupCount);
         this.setParamSimple(map, prefix + "Desc", this.Desc);
+        this.setParamSimple(map, prefix + "Description", this.Description);
 
     }
 }

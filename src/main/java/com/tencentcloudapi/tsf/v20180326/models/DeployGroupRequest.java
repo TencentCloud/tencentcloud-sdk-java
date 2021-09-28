@@ -128,6 +128,20 @@ public class DeployGroupRequest extends AbstractModel{
     private Boolean IncrementalDeployment;
 
     /**
+    * JDK名称: konaJDK或openJDK
+    */
+    @SerializedName("JdkName")
+    @Expose
+    private String JdkName;
+
+    /**
+    * JDK版本: 8或11 (openJDK只支持8)
+    */
+    @SerializedName("JdkVersion")
+    @Expose
+    private String JdkVersion;
+
+    /**
      * Get 部署组ID 
      * @return GroupId 部署组ID
      */
@@ -367,6 +381,38 @@ public class DeployGroupRequest extends AbstractModel{
         this.IncrementalDeployment = IncrementalDeployment;
     }
 
+    /**
+     * Get JDK名称: konaJDK或openJDK 
+     * @return JdkName JDK名称: konaJDK或openJDK
+     */
+    public String getJdkName() {
+        return this.JdkName;
+    }
+
+    /**
+     * Set JDK名称: konaJDK或openJDK
+     * @param JdkName JDK名称: konaJDK或openJDK
+     */
+    public void setJdkName(String JdkName) {
+        this.JdkName = JdkName;
+    }
+
+    /**
+     * Get JDK版本: 8或11 (openJDK只支持8) 
+     * @return JdkVersion JDK版本: 8或11 (openJDK只支持8)
+     */
+    public String getJdkVersion() {
+        return this.JdkVersion;
+    }
+
+    /**
+     * Set JDK版本: 8或11 (openJDK只支持8)
+     * @param JdkVersion JDK版本: 8或11 (openJDK只支持8)
+     */
+    public void setJdkVersion(String JdkVersion) {
+        this.JdkVersion = JdkVersion;
+    }
+
     public DeployGroupRequest() {
     }
 
@@ -423,6 +469,12 @@ public class DeployGroupRequest extends AbstractModel{
         if (source.IncrementalDeployment != null) {
             this.IncrementalDeployment = new Boolean(source.IncrementalDeployment);
         }
+        if (source.JdkName != null) {
+            this.JdkName = new String(source.JdkName);
+        }
+        if (source.JdkVersion != null) {
+            this.JdkVersion = new String(source.JdkVersion);
+        }
     }
 
 
@@ -445,6 +497,8 @@ public class DeployGroupRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "StartScript", this.StartScript);
         this.setParamSimple(map, prefix + "StopScript", this.StopScript);
         this.setParamSimple(map, prefix + "IncrementalDeployment", this.IncrementalDeployment);
+        this.setParamSimple(map, prefix + "JdkName", this.JdkName);
+        this.setParamSimple(map, prefix + "JdkVersion", this.JdkVersion);
 
     }
 }

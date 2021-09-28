@@ -799,7 +799,7 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
     }
 
     /**
-     *本接口(ImportImage)用于导入镜像，导入后的镜像可用于创建实例。 
+     *本接口(ImportImage)用于导入镜像，导入后的镜像可用于创建实例。目前支持 RAW、VHD、QCOW2、VMDK 镜像格式。
      * @param req ImportImageRequest
      * @return ImportImageResponse
      * @throws TencentCloudSDKException

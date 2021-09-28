@@ -48,6 +48,13 @@ public class GeneralAccurateOCRRequest extends AbstractModel{
     private Boolean IsWords;
 
     /**
+    * 是否开启原图切图检测功能，开启后可提升“整图面积大，但单字符占比面积小”（例如：试卷）场景下的识别效果，默认关
+    */
+    @SerializedName("EnableDetectSplit")
+    @Expose
+    private Boolean EnableDetectSplit;
+
+    /**
      * Get 图片的 Base64 值。
 要求图片经Base64编码后不超过 7M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP格式。
 图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。 
@@ -111,6 +118,22 @@ public class GeneralAccurateOCRRequest extends AbstractModel{
         this.IsWords = IsWords;
     }
 
+    /**
+     * Get 是否开启原图切图检测功能，开启后可提升“整图面积大，但单字符占比面积小”（例如：试卷）场景下的识别效果，默认关 
+     * @return EnableDetectSplit 是否开启原图切图检测功能，开启后可提升“整图面积大，但单字符占比面积小”（例如：试卷）场景下的识别效果，默认关
+     */
+    public Boolean getEnableDetectSplit() {
+        return this.EnableDetectSplit;
+    }
+
+    /**
+     * Set 是否开启原图切图检测功能，开启后可提升“整图面积大，但单字符占比面积小”（例如：试卷）场景下的识别效果，默认关
+     * @param EnableDetectSplit 是否开启原图切图检测功能，开启后可提升“整图面积大，但单字符占比面积小”（例如：试卷）场景下的识别效果，默认关
+     */
+    public void setEnableDetectSplit(Boolean EnableDetectSplit) {
+        this.EnableDetectSplit = EnableDetectSplit;
+    }
+
     public GeneralAccurateOCRRequest() {
     }
 
@@ -128,6 +151,9 @@ public class GeneralAccurateOCRRequest extends AbstractModel{
         if (source.IsWords != null) {
             this.IsWords = new Boolean(source.IsWords);
         }
+        if (source.EnableDetectSplit != null) {
+            this.EnableDetectSplit = new Boolean(source.EnableDetectSplit);
+        }
     }
 
 
@@ -138,6 +164,7 @@ public class GeneralAccurateOCRRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ImageBase64", this.ImageBase64);
         this.setParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
         this.setParamSimple(map, prefix + "IsWords", this.IsWords);
+        this.setParamSimple(map, prefix + "EnableDetectSplit", this.EnableDetectSplit);
 
     }
 }

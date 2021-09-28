@@ -46,6 +46,30 @@ string|tinyint|smallint|int|bigint|boolean|float|double|decimal|timestamp|date|b
     private String Comment;
 
     /**
+    * 表示整个 numeric 的长度
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Precision")
+    @Expose
+    private Long Precision;
+
+    /**
+    * 表示小数部分的长度
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Scale")
+    @Expose
+    private Long Scale;
+
+    /**
+    * 是否为null
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Nullable")
+    @Expose
+    private String Nullable;
+
+    /**
      * Get 列名称，不区分大小写，最大支持25个字符。 
      * @return Name 列名称，不区分大小写，最大支持25个字符。
      */
@@ -101,6 +125,66 @@ string|tinyint|smallint|int|bigint|boolean|float|double|decimal|timestamp|date|b
         this.Comment = Comment;
     }
 
+    /**
+     * Get 表示整个 numeric 的长度
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Precision 表示整个 numeric 的长度
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getPrecision() {
+        return this.Precision;
+    }
+
+    /**
+     * Set 表示整个 numeric 的长度
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Precision 表示整个 numeric 的长度
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPrecision(Long Precision) {
+        this.Precision = Precision;
+    }
+
+    /**
+     * Get 表示小数部分的长度
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Scale 表示小数部分的长度
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getScale() {
+        return this.Scale;
+    }
+
+    /**
+     * Set 表示小数部分的长度
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Scale 表示小数部分的长度
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setScale(Long Scale) {
+        this.Scale = Scale;
+    }
+
+    /**
+     * Get 是否为null
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Nullable 是否为null
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getNullable() {
+        return this.Nullable;
+    }
+
+    /**
+     * Set 是否为null
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Nullable 是否为null
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNullable(String Nullable) {
+        this.Nullable = Nullable;
+    }
+
     public Column() {
     }
 
@@ -118,6 +202,15 @@ string|tinyint|smallint|int|bigint|boolean|float|double|decimal|timestamp|date|b
         if (source.Comment != null) {
             this.Comment = new String(source.Comment);
         }
+        if (source.Precision != null) {
+            this.Precision = new Long(source.Precision);
+        }
+        if (source.Scale != null) {
+            this.Scale = new Long(source.Scale);
+        }
+        if (source.Nullable != null) {
+            this.Nullable = new String(source.Nullable);
+        }
     }
 
 
@@ -128,6 +221,9 @@ string|tinyint|smallint|int|bigint|boolean|float|double|decimal|timestamp|date|b
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "Comment", this.Comment);
+        this.setParamSimple(map, prefix + "Precision", this.Precision);
+        this.setParamSimple(map, prefix + "Scale", this.Scale);
+        this.setParamSimple(map, prefix + "Nullable", this.Nullable);
 
     }
 }

@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class ModifySnapshotsResponse extends AbstractModel{
 
     /**
-    * 批量创建的快照数量
+    * 批量修改的快照数量
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 批量创建的快照结果列表
+    * 批量修改的快照结果列表
     */
     @SerializedName("TableResults")
     @Expose
@@ -44,32 +44,32 @@ public class ModifySnapshotsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 批量创建的快照数量 
-     * @return TotalCount 批量创建的快照数量
+     * Get 批量修改的快照数量 
+     * @return TotalCount 批量修改的快照数量
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 批量创建的快照数量
-     * @param TotalCount 批量创建的快照数量
+     * Set 批量修改的快照数量
+     * @param TotalCount 批量修改的快照数量
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 批量创建的快照结果列表 
-     * @return TableResults 批量创建的快照结果列表
+     * Get 批量修改的快照结果列表 
+     * @return TableResults 批量修改的快照结果列表
      */
     public SnapshotResult [] getTableResults() {
         return this.TableResults;
     }
 
     /**
-     * Set 批量创建的快照结果列表
-     * @param TableResults 批量创建的快照结果列表
+     * Set 批量修改的快照结果列表
+     * @param TableResults 批量修改的快照结果列表
      */
     public void setTableResults(SnapshotResult [] TableResults) {
         this.TableResults = TableResults;

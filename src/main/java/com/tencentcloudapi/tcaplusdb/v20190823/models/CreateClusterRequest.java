@@ -93,6 +93,13 @@ public class CreateClusterRequest extends AbstractModel{
     private Long ClusterType;
 
     /**
+    * 密码认证类型，0 静态认证， 1 签名认证
+    */
+    @SerializedName("AuthType")
+    @Expose
+    private Long AuthType;
+
+    /**
      * Get 集群数据描述语言类型，如：`PROTO`，`TDR`或`MIX` 
      * @return IdlType 集群数据描述语言类型，如：`PROTO`，`TDR`或`MIX`
      */
@@ -252,6 +259,22 @@ public class CreateClusterRequest extends AbstractModel{
         this.ClusterType = ClusterType;
     }
 
+    /**
+     * Get 密码认证类型，0 静态认证， 1 签名认证 
+     * @return AuthType 密码认证类型，0 静态认证， 1 签名认证
+     */
+    public Long getAuthType() {
+        return this.AuthType;
+    }
+
+    /**
+     * Set 密码认证类型，0 静态认证， 1 签名认证
+     * @param AuthType 密码认证类型，0 静态认证， 1 签名认证
+     */
+    public void setAuthType(Long AuthType) {
+        this.AuthType = AuthType;
+    }
+
     public CreateClusterRequest() {
     }
 
@@ -299,6 +322,9 @@ public class CreateClusterRequest extends AbstractModel{
         if (source.ClusterType != null) {
             this.ClusterType = new Long(source.ClusterType);
         }
+        if (source.AuthType != null) {
+            this.AuthType = new Long(source.AuthType);
+        }
     }
 
 
@@ -316,6 +342,7 @@ public class CreateClusterRequest extends AbstractModel{
         this.setParamArrayObj(map, prefix + "ServerList.", this.ServerList);
         this.setParamArrayObj(map, prefix + "ProxyList.", this.ProxyList);
         this.setParamSimple(map, prefix + "ClusterType", this.ClusterType);
+        this.setParamSimple(map, prefix + "AuthType", this.AuthType);
 
     }
 }
