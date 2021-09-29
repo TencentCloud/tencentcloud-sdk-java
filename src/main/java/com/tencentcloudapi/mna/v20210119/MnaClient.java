@@ -78,4 +78,24 @@ public class MnaClient extends AbstractClient{
         return rsp.response;
     }
 
+    /**
+     *获取Qos加速状态
+     * @param req DescribeQosRequest
+     * @return DescribeQosResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeQosResponse DescribeQos(DescribeQosRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeQosResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeQosResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeQos");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
 }

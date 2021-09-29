@@ -51,6 +51,13 @@ public class DescribeCloudBaseBuildServiceRequest extends AbstractModel{
     private String ServiceVersion;
 
     /**
+    * 文件后缀
+    */
+    @SerializedName("Suffix")
+    @Expose
+    private String Suffix;
+
+    /**
      * Get 环境id 
      * @return EnvId 环境id
      */
@@ -114,6 +121,22 @@ public class DescribeCloudBaseBuildServiceRequest extends AbstractModel{
         this.ServiceVersion = ServiceVersion;
     }
 
+    /**
+     * Get 文件后缀 
+     * @return Suffix 文件后缀
+     */
+    public String getSuffix() {
+        return this.Suffix;
+    }
+
+    /**
+     * Set 文件后缀
+     * @param Suffix 文件后缀
+     */
+    public void setSuffix(String Suffix) {
+        this.Suffix = Suffix;
+    }
+
     public DescribeCloudBaseBuildServiceRequest() {
     }
 
@@ -134,6 +157,9 @@ public class DescribeCloudBaseBuildServiceRequest extends AbstractModel{
         if (source.ServiceVersion != null) {
             this.ServiceVersion = new String(source.ServiceVersion);
         }
+        if (source.Suffix != null) {
+            this.Suffix = new String(source.Suffix);
+        }
     }
 
 
@@ -145,6 +171,7 @@ public class DescribeCloudBaseBuildServiceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ServiceName", this.ServiceName);
         this.setParamSimple(map, prefix + "CIBusiness", this.CIBusiness);
         this.setParamSimple(map, prefix + "ServiceVersion", this.ServiceVersion);
+        this.setParamSimple(map, prefix + "Suffix", this.Suffix);
 
     }
 }

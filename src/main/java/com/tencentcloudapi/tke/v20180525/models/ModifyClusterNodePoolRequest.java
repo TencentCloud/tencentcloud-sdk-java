@@ -93,6 +93,13 @@ public class ModifyClusterNodePoolRequest extends AbstractModel{
     private String OsCustomizeType;
 
     /**
+    * 节点自定义参数
+    */
+    @SerializedName("ExtraArgs")
+    @Expose
+    private InstanceExtraArgs ExtraArgs;
+
+    /**
      * Get 集群ID 
      * @return ClusterId 集群ID
      */
@@ -252,6 +259,22 @@ public class ModifyClusterNodePoolRequest extends AbstractModel{
         this.OsCustomizeType = OsCustomizeType;
     }
 
+    /**
+     * Get 节点自定义参数 
+     * @return ExtraArgs 节点自定义参数
+     */
+    public InstanceExtraArgs getExtraArgs() {
+        return this.ExtraArgs;
+    }
+
+    /**
+     * Set 节点自定义参数
+     * @param ExtraArgs 节点自定义参数
+     */
+    public void setExtraArgs(InstanceExtraArgs ExtraArgs) {
+        this.ExtraArgs = ExtraArgs;
+    }
+
     public ModifyClusterNodePoolRequest() {
     }
 
@@ -296,6 +319,9 @@ public class ModifyClusterNodePoolRequest extends AbstractModel{
         if (source.OsCustomizeType != null) {
             this.OsCustomizeType = new String(source.OsCustomizeType);
         }
+        if (source.ExtraArgs != null) {
+            this.ExtraArgs = new InstanceExtraArgs(source.ExtraArgs);
+        }
     }
 
 
@@ -313,6 +339,7 @@ public class ModifyClusterNodePoolRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "EnableAutoscale", this.EnableAutoscale);
         this.setParamSimple(map, prefix + "OsName", this.OsName);
         this.setParamSimple(map, prefix + "OsCustomizeType", this.OsCustomizeType);
+        this.setParamObj(map, prefix + "ExtraArgs.", this.ExtraArgs);
 
     }
 }
