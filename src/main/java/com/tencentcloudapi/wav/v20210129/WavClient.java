@@ -179,6 +179,26 @@ public class WavClient extends AbstractClient{
     }
 
     /**
+     *企业可通过此接口获取线索列表。
+     * @param req QueryClueInfoListRequest
+     * @return QueryClueInfoListResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryClueInfoListResponse QueryClueInfoList(QueryClueInfoListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<QueryClueInfoListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<QueryClueInfoListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "QueryClueInfoList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *企业可通过此接口，根据外部联系人的userid，拉取客户详情
      * @param req QueryExternalContactDetailRequest
      * @return QueryExternalContactDetailResponse

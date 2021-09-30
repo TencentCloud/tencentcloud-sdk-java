@@ -113,6 +113,14 @@ PERSON 自然人
     private String FlowId;
 
     /**
+    * 企业经办人 用户在渠道的编号
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OpenId")
+    @Expose
+    private String OpenId;
+
+    /**
      * Get 签署链接
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return SignUrl 签署链接
@@ -340,6 +348,26 @@ PERSON 自然人
         this.FlowId = FlowId;
     }
 
+    /**
+     * Get 企业经办人 用户在渠道的编号
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OpenId 企业经办人 用户在渠道的编号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getOpenId() {
+        return this.OpenId;
+    }
+
+    /**
+     * Set 企业经办人 用户在渠道的编号
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OpenId 企业经办人 用户在渠道的编号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOpenId(String OpenId) {
+        this.OpenId = OpenId;
+    }
+
     public SignUrlInfo() {
     }
 
@@ -381,6 +409,9 @@ PERSON 自然人
         if (source.FlowId != null) {
             this.FlowId = new String(source.FlowId);
         }
+        if (source.OpenId != null) {
+            this.OpenId = new String(source.OpenId);
+        }
     }
 
 
@@ -399,6 +430,7 @@ PERSON 自然人
         this.setParamSimple(map, prefix + "ApproverType", this.ApproverType);
         this.setParamSimple(map, prefix + "IdCardNumber", this.IdCardNumber);
         this.setParamSimple(map, prefix + "FlowId", this.FlowId);
+        this.setParamSimple(map, prefix + "OpenId", this.OpenId);
 
     }
 }

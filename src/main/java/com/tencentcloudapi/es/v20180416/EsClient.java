@@ -286,6 +286,26 @@ public class EsClient extends AbstractClient{
     }
 
     /**
+     *更新实例Jdk配置
+     * @param req UpdateJdkRequest
+     * @return UpdateJdkResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateJdkResponse UpdateJdk(UpdateJdkRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpdateJdkResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpdateJdkResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UpdateJdk");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *变更插件列表
      * @param req UpdatePluginsRequest
      * @return UpdatePluginsResponse

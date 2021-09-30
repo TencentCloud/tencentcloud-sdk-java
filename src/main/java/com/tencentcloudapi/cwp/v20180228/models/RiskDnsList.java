@@ -163,6 +163,22 @@ public class RiskDnsList extends AbstractModel{
     private String [] Tags;
 
     /**
+    * 外网ip
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MachineWanIp")
+    @Expose
+    private String MachineWanIp;
+
+    /**
+    * 主机在线状态 OFFLINE  ONLINE
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MachineStatus")
+    @Expose
+    private String MachineStatus;
+
+    /**
      * Get 对外访问域名 
      * @return Url 对外访问域名
      */
@@ -482,6 +498,46 @@ public class RiskDnsList extends AbstractModel{
         this.Tags = Tags;
     }
 
+    /**
+     * Get 外网ip
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MachineWanIp 外网ip
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getMachineWanIp() {
+        return this.MachineWanIp;
+    }
+
+    /**
+     * Set 外网ip
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MachineWanIp 外网ip
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMachineWanIp(String MachineWanIp) {
+        this.MachineWanIp = MachineWanIp;
+    }
+
+    /**
+     * Get 主机在线状态 OFFLINE  ONLINE
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MachineStatus 主机在线状态 OFFLINE  ONLINE
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getMachineStatus() {
+        return this.MachineStatus;
+    }
+
+    /**
+     * Set 主机在线状态 OFFLINE  ONLINE
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MachineStatus 主机在线状态 OFFLINE  ONLINE
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMachineStatus(String MachineStatus) {
+        this.MachineStatus = MachineStatus;
+    }
+
     public RiskDnsList() {
     }
 
@@ -553,6 +609,12 @@ public class RiskDnsList extends AbstractModel{
                 this.Tags[i] = new String(source.Tags[i]);
             }
         }
+        if (source.MachineWanIp != null) {
+            this.MachineWanIp = new String(source.MachineWanIp);
+        }
+        if (source.MachineStatus != null) {
+            this.MachineStatus = new String(source.MachineStatus);
+        }
     }
 
 
@@ -580,6 +642,8 @@ public class RiskDnsList extends AbstractModel{
         this.setParamSimple(map, prefix + "Uuid", this.Uuid);
         this.setParamSimple(map, prefix + "SuggestScheme", this.SuggestScheme);
         this.setParamArraySimple(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "MachineWanIp", this.MachineWanIp);
+        this.setParamSimple(map, prefix + "MachineStatus", this.MachineStatus);
 
     }
 }

@@ -23,20 +23,6 @@ import java.util.HashMap;
 public class EditBashRulesRequest extends AbstractModel{
 
     /**
-    * 规则名称
-    */
-    @SerializedName("Name")
-    @Expose
-    private String Name;
-
-    /**
-    * 正则表达式
-    */
-    @SerializedName("Rule")
-    @Expose
-    private String Rule;
-
-    /**
     * 规则ID（新增时不填）
     */
     @SerializedName("Id")
@@ -58,11 +44,25 @@ public class EditBashRulesRequest extends AbstractModel{
     private String HostIp;
 
     /**
+    * 规则名称，编辑时不可修改规则名称
+    */
+    @SerializedName("Name")
+    @Expose
+    private String Name;
+
+    /**
     * 危险等级(0:无，1: 高危 2:中危 3: 低危)
     */
     @SerializedName("Level")
     @Expose
     private Long Level;
+
+    /**
+    * 正则表达式 ，编辑时不可修改正则表达式，需要对内容QueryEscape后再base64
+    */
+    @SerializedName("Rule")
+    @Expose
+    private String Rule;
 
     /**
     * 是否全局规则(默认否)：1-全局，0-非全局
@@ -91,38 +91,6 @@ public class EditBashRulesRequest extends AbstractModel{
     @SerializedName("DealOldEvents")
     @Expose
     private Long DealOldEvents;
-
-    /**
-     * Get 规则名称 
-     * @return Name 规则名称
-     */
-    public String getName() {
-        return this.Name;
-    }
-
-    /**
-     * Set 规则名称
-     * @param Name 规则名称
-     */
-    public void setName(String Name) {
-        this.Name = Name;
-    }
-
-    /**
-     * Get 正则表达式 
-     * @return Rule 正则表达式
-     */
-    public String getRule() {
-        return this.Rule;
-    }
-
-    /**
-     * Set 正则表达式
-     * @param Rule 正则表达式
-     */
-    public void setRule(String Rule) {
-        this.Rule = Rule;
-    }
 
     /**
      * Get 规则ID（新增时不填） 
@@ -173,6 +141,22 @@ public class EditBashRulesRequest extends AbstractModel{
     }
 
     /**
+     * Get 规则名称，编辑时不可修改规则名称 
+     * @return Name 规则名称，编辑时不可修改规则名称
+     */
+    public String getName() {
+        return this.Name;
+    }
+
+    /**
+     * Set 规则名称，编辑时不可修改规则名称
+     * @param Name 规则名称，编辑时不可修改规则名称
+     */
+    public void setName(String Name) {
+        this.Name = Name;
+    }
+
+    /**
      * Get 危险等级(0:无，1: 高危 2:中危 3: 低危) 
      * @return Level 危险等级(0:无，1: 高危 2:中危 3: 低危)
      */
@@ -186,6 +170,22 @@ public class EditBashRulesRequest extends AbstractModel{
      */
     public void setLevel(Long Level) {
         this.Level = Level;
+    }
+
+    /**
+     * Get 正则表达式 ，编辑时不可修改正则表达式，需要对内容QueryEscape后再base64 
+     * @return Rule 正则表达式 ，编辑时不可修改正则表达式，需要对内容QueryEscape后再base64
+     */
+    public String getRule() {
+        return this.Rule;
+    }
+
+    /**
+     * Set 正则表达式 ，编辑时不可修改正则表达式，需要对内容QueryEscape后再base64
+     * @param Rule 正则表达式 ，编辑时不可修改正则表达式，需要对内容QueryEscape后再base64
+     */
+    public void setRule(String Rule) {
+        this.Rule = Rule;
     }
 
     /**
@@ -260,12 +260,6 @@ public class EditBashRulesRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public EditBashRulesRequest(EditBashRulesRequest source) {
-        if (source.Name != null) {
-            this.Name = new String(source.Name);
-        }
-        if (source.Rule != null) {
-            this.Rule = new String(source.Rule);
-        }
         if (source.Id != null) {
             this.Id = new Long(source.Id);
         }
@@ -278,8 +272,14 @@ public class EditBashRulesRequest extends AbstractModel{
         if (source.HostIp != null) {
             this.HostIp = new String(source.HostIp);
         }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
         if (source.Level != null) {
             this.Level = new Long(source.Level);
+        }
+        if (source.Rule != null) {
+            this.Rule = new String(source.Rule);
         }
         if (source.IsGlobal != null) {
             this.IsGlobal = new Long(source.IsGlobal);
@@ -300,12 +300,12 @@ public class EditBashRulesRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Name", this.Name);
-        this.setParamSimple(map, prefix + "Rule", this.Rule);
         this.setParamSimple(map, prefix + "Id", this.Id);
         this.setParamArraySimple(map, prefix + "Uuids.", this.Uuids);
         this.setParamSimple(map, prefix + "HostIp", this.HostIp);
+        this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Level", this.Level);
+        this.setParamSimple(map, prefix + "Rule", this.Rule);
         this.setParamSimple(map, prefix + "IsGlobal", this.IsGlobal);
         this.setParamSimple(map, prefix + "White", this.White);
         this.setParamSimple(map, prefix + "EventId", this.EventId);

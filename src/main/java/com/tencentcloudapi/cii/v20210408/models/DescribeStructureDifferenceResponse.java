@@ -20,25 +20,32 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeStructureTaskResultTestResponse extends AbstractModel{
+public class DescribeStructureDifferenceResponse extends AbstractModel{
+
+    /**
+    * 主任务号
+    */
+    @SerializedName("MainTaskId")
+    @Expose
+    private String MainTaskId;
 
     /**
     * 结果状态：
 0：返回成功
 1：结果未生成
 2：结果生成失败
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 结构化识别结果数组，每个数组元素对应一个图片的结构化结果，顺序和输入参数的ImageList或FileList对应。
-注意：此字段可能返回 null，表示取不到有效值。
+    * 差异的结果数组
     */
     @SerializedName("Results")
     @Expose
-    private ResultObject [] Results;
+    private PerStructDifference [] Results;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -48,14 +55,32 @@ public class DescribeStructureTaskResultTestResponse extends AbstractModel{
     private String RequestId;
 
     /**
+     * Get 主任务号 
+     * @return MainTaskId 主任务号
+     */
+    public String getMainTaskId() {
+        return this.MainTaskId;
+    }
+
+    /**
+     * Set 主任务号
+     * @param MainTaskId 主任务号
+     */
+    public void setMainTaskId(String MainTaskId) {
+        this.MainTaskId = MainTaskId;
+    }
+
+    /**
      * Get 结果状态：
 0：返回成功
 1：结果未生成
-2：结果生成失败 
+2：结果生成失败
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Status 结果状态：
 0：返回成功
 1：结果未生成
 2：结果生成失败
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
         return this.Status;
@@ -66,32 +91,30 @@ public class DescribeStructureTaskResultTestResponse extends AbstractModel{
 0：返回成功
 1：结果未生成
 2：结果生成失败
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 结果状态：
 0：返回成功
 1：结果未生成
 2：结果生成失败
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 结构化识别结果数组，每个数组元素对应一个图片的结构化结果，顺序和输入参数的ImageList或FileList对应。
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Results 结构化识别结果数组，每个数组元素对应一个图片的结构化结果，顺序和输入参数的ImageList或FileList对应。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 差异的结果数组 
+     * @return Results 差异的结果数组
      */
-    public ResultObject [] getResults() {
+    public PerStructDifference [] getResults() {
         return this.Results;
     }
 
     /**
-     * Set 结构化识别结果数组，每个数组元素对应一个图片的结构化结果，顺序和输入参数的ImageList或FileList对应。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Results 结构化识别结果数组，每个数组元素对应一个图片的结构化结果，顺序和输入参数的ImageList或FileList对应。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 差异的结果数组
+     * @param Results 差异的结果数组
      */
-    public void setResults(ResultObject [] Results) {
+    public void setResults(PerStructDifference [] Results) {
         this.Results = Results;
     }
 
@@ -111,21 +134,24 @@ public class DescribeStructureTaskResultTestResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeStructureTaskResultTestResponse() {
+    public DescribeStructureDifferenceResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeStructureTaskResultTestResponse(DescribeStructureTaskResultTestResponse source) {
+    public DescribeStructureDifferenceResponse(DescribeStructureDifferenceResponse source) {
+        if (source.MainTaskId != null) {
+            this.MainTaskId = new String(source.MainTaskId);
+        }
         if (source.Status != null) {
             this.Status = new Long(source.Status);
         }
         if (source.Results != null) {
-            this.Results = new ResultObject[source.Results.length];
+            this.Results = new PerStructDifference[source.Results.length];
             for (int i = 0; i < source.Results.length; i++) {
-                this.Results[i] = new ResultObject(source.Results[i]);
+                this.Results[i] = new PerStructDifference(source.Results[i]);
             }
         }
         if (source.RequestId != null) {
@@ -138,6 +164,7 @@ public class DescribeStructureTaskResultTestResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "MainTaskId", this.MainTaskId);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamArrayObj(map, prefix + "Results.", this.Results);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);

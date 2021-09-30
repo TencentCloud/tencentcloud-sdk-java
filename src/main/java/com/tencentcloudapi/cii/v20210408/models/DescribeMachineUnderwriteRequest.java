@@ -20,41 +20,41 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeStructureTaskResultTestRequest extends AbstractModel{
+public class DescribeMachineUnderwriteRequest extends AbstractModel{
 
     /**
-    * 结构化任务ID
+    * 核保任务ID
     */
-    @SerializedName("MainTaskId")
+    @SerializedName("UnderwriteTaskId")
     @Expose
-    private String MainTaskId;
+    private String UnderwriteTaskId;
 
     /**
-     * Get 结构化任务ID 
-     * @return MainTaskId 结构化任务ID
+     * Get 核保任务ID 
+     * @return UnderwriteTaskId 核保任务ID
      */
-    public String getMainTaskId() {
-        return this.MainTaskId;
+    public String getUnderwriteTaskId() {
+        return this.UnderwriteTaskId;
     }
 
     /**
-     * Set 结构化任务ID
-     * @param MainTaskId 结构化任务ID
+     * Set 核保任务ID
+     * @param UnderwriteTaskId 核保任务ID
      */
-    public void setMainTaskId(String MainTaskId) {
-        this.MainTaskId = MainTaskId;
+    public void setUnderwriteTaskId(String UnderwriteTaskId) {
+        this.UnderwriteTaskId = UnderwriteTaskId;
     }
 
-    public DescribeStructureTaskResultTestRequest() {
+    public DescribeMachineUnderwriteRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeStructureTaskResultTestRequest(DescribeStructureTaskResultTestRequest source) {
-        if (source.MainTaskId != null) {
-            this.MainTaskId = new String(source.MainTaskId);
+    public DescribeMachineUnderwriteRequest(DescribeMachineUnderwriteRequest source) {
+        if (source.UnderwriteTaskId != null) {
+            this.UnderwriteTaskId = new String(source.UnderwriteTaskId);
         }
     }
 
@@ -63,7 +63,7 @@ public class DescribeStructureTaskResultTestRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "MainTaskId", this.MainTaskId);
+        this.setParamSimple(map, prefix + "UnderwriteTaskId", this.UnderwriteTaskId);
 
     }
 }

@@ -20,67 +20,67 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateStructureTaskTestResponse extends AbstractModel{
+public class DescribeStructureDifferenceRequest extends AbstractModel{
 
     /**
-    * 创建的主任务号，用于查询结果
+    * 主任务号
     */
     @SerializedName("MainTaskId")
     @Expose
     private String MainTaskId;
 
     /**
-    * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+    * 子任务号
     */
-    @SerializedName("RequestId")
+    @SerializedName("SubTaskId")
     @Expose
-    private String RequestId;
+    private String SubTaskId;
 
     /**
-     * Get 创建的主任务号，用于查询结果 
-     * @return MainTaskId 创建的主任务号，用于查询结果
+     * Get 主任务号 
+     * @return MainTaskId 主任务号
      */
     public String getMainTaskId() {
         return this.MainTaskId;
     }
 
     /**
-     * Set 创建的主任务号，用于查询结果
-     * @param MainTaskId 创建的主任务号，用于查询结果
+     * Set 主任务号
+     * @param MainTaskId 主任务号
      */
     public void setMainTaskId(String MainTaskId) {
         this.MainTaskId = MainTaskId;
     }
 
     /**
-     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
-     * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 子任务号 
+     * @return SubTaskId 子任务号
      */
-    public String getRequestId() {
-        return this.RequestId;
+    public String getSubTaskId() {
+        return this.SubTaskId;
     }
 
     /**
-     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
-     * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 子任务号
+     * @param SubTaskId 子任务号
      */
-    public void setRequestId(String RequestId) {
-        this.RequestId = RequestId;
+    public void setSubTaskId(String SubTaskId) {
+        this.SubTaskId = SubTaskId;
     }
 
-    public CreateStructureTaskTestResponse() {
+    public DescribeStructureDifferenceRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateStructureTaskTestResponse(CreateStructureTaskTestResponse source) {
+    public DescribeStructureDifferenceRequest(DescribeStructureDifferenceRequest source) {
         if (source.MainTaskId != null) {
             this.MainTaskId = new String(source.MainTaskId);
         }
-        if (source.RequestId != null) {
-            this.RequestId = new String(source.RequestId);
+        if (source.SubTaskId != null) {
+            this.SubTaskId = new String(source.SubTaskId);
         }
     }
 
@@ -90,7 +90,7 @@ public class CreateStructureTaskTestResponse extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "MainTaskId", this.MainTaskId);
-        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
+        this.setParamSimple(map, prefix + "SubTaskId", this.SubTaskId);
 
     }
 }
