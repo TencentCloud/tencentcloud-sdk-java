@@ -69,6 +69,9 @@ public enum DomainErrorCode {
     // 邮箱为空或者不合法。
      INVALIDPARAMETER_EMAILISINVALID("InvalidParameter.EmailIsInvalid"),
      
+    // 仅支持已验证的电子邮箱，请先在控制台创建后使用
+     INVALIDPARAMETER_EMAILISUNVERIFIED("InvalidParameter.EmailIsUnverified"),
+     
     // 不支持该格式文件，请上传 JPG、JPEG 格式图片（可使用第三方图片格式转换工具）。
      INVALIDPARAMETER_IMAGEEXTINVALID("InvalidParameter.ImageExtInvalid"),
      
@@ -110,6 +113,9 @@ public enum DomainErrorCode {
      
     // 电话为空或者不合法。
      INVALIDPARAMETER_TELEPHONEISINVALID("InvalidParameter.TelephoneIsInvalid"),
+     
+    // 仅支持已验证的手机号码，请先在控制台创建后使用。
+     INVALIDPARAMETER_TELEPHONEISUNVERIFIED("InvalidParameter.TelephoneIsUnverified"),
      
     // 域名数量不能超过4000个。
      INVALIDPARAMETER_UPTO4000("InvalidParameter.UpTo4000"),

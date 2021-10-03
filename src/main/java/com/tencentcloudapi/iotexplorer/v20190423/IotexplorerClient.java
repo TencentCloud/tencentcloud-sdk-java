@@ -199,6 +199,26 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
+     *本接口（CreateTopicPolicy）用于创建一个Topic 
+     * @param req CreateTopicPolicyRequest
+     * @return CreateTopicPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateTopicPolicyResponse CreateTopicPolicy(CreateTopicPolicyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateTopicPolicyResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateTopicPolicyResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateTopicPolicy");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建规则
      * @param req CreateTopicRuleRequest
      * @return CreateTopicRuleResponse

@@ -40,7 +40,7 @@ public class DescribeLivePackageInfoResponse extends AbstractModel{
 204: 日结流量
 205: 日结时长
 206: 月结时长
-304: 日结流量
+304: 日结流量。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PackageBillMode")
@@ -48,7 +48,7 @@ public class DescribeLivePackageInfoResponse extends AbstractModel{
     private Long PackageBillMode;
 
     /**
-    * 总页数
+    * 总页数。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalPage")
@@ -56,7 +56,7 @@ public class DescribeLivePackageInfoResponse extends AbstractModel{
     private Long TotalPage;
 
     /**
-    * 数据总条数
+    * 数据总条数。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalNum")
@@ -64,7 +64,7 @@ public class DescribeLivePackageInfoResponse extends AbstractModel{
     private Long TotalNum;
 
     /**
-    * 当前页数
+    * 当前页数。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PageNum")
@@ -72,7 +72,7 @@ public class DescribeLivePackageInfoResponse extends AbstractModel{
     private Long PageNum;
 
     /**
-    * 当前每页数量
+    * 当前每页数量。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PageSize")
@@ -116,7 +116,7 @@ public class DescribeLivePackageInfoResponse extends AbstractModel{
 204: 日结流量
 205: 日结时长
 206: 月结时长
-304: 日结流量
+304: 日结流量。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return PackageBillMode 套餐包当前计费方式:
 -1: 无计费方式或获取失败
@@ -127,7 +127,7 @@ public class DescribeLivePackageInfoResponse extends AbstractModel{
 204: 日结流量
 205: 日结时长
 206: 月结时长
-304: 日结流量
+304: 日结流量。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPackageBillMode() {
@@ -144,7 +144,7 @@ public class DescribeLivePackageInfoResponse extends AbstractModel{
 204: 日结流量
 205: 日结时长
 206: 月结时长
-304: 日结流量
+304: 日结流量。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param PackageBillMode 套餐包当前计费方式:
 -1: 无计费方式或获取失败
@@ -155,7 +155,7 @@ public class DescribeLivePackageInfoResponse extends AbstractModel{
 204: 日结流量
 205: 日结时长
 206: 月结时长
-304: 日结流量
+304: 日结流量。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPackageBillMode(Long PackageBillMode) {
@@ -163,9 +163,9 @@ public class DescribeLivePackageInfoResponse extends AbstractModel{
     }
 
     /**
-     * Get 总页数
+     * Get 总页数。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TotalPage 总页数
+     * @return TotalPage 总页数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalPage() {
@@ -173,9 +173,9 @@ public class DescribeLivePackageInfoResponse extends AbstractModel{
     }
 
     /**
-     * Set 总页数
+     * Set 总页数。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TotalPage 总页数
+     * @param TotalPage 总页数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalPage(Long TotalPage) {
@@ -183,9 +183,9 @@ public class DescribeLivePackageInfoResponse extends AbstractModel{
     }
 
     /**
-     * Get 数据总条数
+     * Get 数据总条数。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TotalNum 数据总条数
+     * @return TotalNum 数据总条数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalNum() {
@@ -193,9 +193,9 @@ public class DescribeLivePackageInfoResponse extends AbstractModel{
     }
 
     /**
-     * Set 数据总条数
+     * Set 数据总条数。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TotalNum 数据总条数
+     * @param TotalNum 数据总条数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalNum(Long TotalNum) {
@@ -203,9 +203,9 @@ public class DescribeLivePackageInfoResponse extends AbstractModel{
     }
 
     /**
-     * Get 当前页数
+     * Get 当前页数。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PageNum 当前页数
+     * @return PageNum 当前页数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPageNum() {
@@ -213,9 +213,9 @@ public class DescribeLivePackageInfoResponse extends AbstractModel{
     }
 
     /**
-     * Set 当前页数
+     * Set 当前页数。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PageNum 当前页数
+     * @param PageNum 当前页数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPageNum(Long PageNum) {
@@ -223,9 +223,9 @@ public class DescribeLivePackageInfoResponse extends AbstractModel{
     }
 
     /**
-     * Get 当前每页数量
+     * Get 当前每页数量。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PageSize 当前每页数量
+     * @return PageSize 当前每页数量。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPageSize() {
@@ -233,9 +233,9 @@ public class DescribeLivePackageInfoResponse extends AbstractModel{
     }
 
     /**
-     * Set 当前每页数量
+     * Set 当前每页数量。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PageSize 当前每页数量
+     * @param PageSize 当前每页数量。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPageSize(Long PageSize) {

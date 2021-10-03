@@ -24,8 +24,8 @@ public class DescribeLivePackageInfoRequest extends AbstractModel{
 
     /**
     * 包类型，可选值：
-0：流量包；
-1：转码包。
+0：流量包
+1：转码包
 2: 连麦包。
     */
     @SerializedName("PackageType")
@@ -37,10 +37,10 @@ public class DescribeLivePackageInfoRequest extends AbstractModel{
 1. BuyTimeDesc： 最新购买的排在最前面
 2. BuyTimeAsc： 最老购买的排在最前面
 3. ExpireTimeDesc： 最后过期的排在最前面
-4. ExpireTimeAsc：最先过期的排在最前面
+4. ExpireTimeAsc：最先过期的排在最前面。
 
 注意：
-1. PackageType 为 2（连麦包） 的时候，不支持 3、4 排序
+1. PackageType 为 2（连麦包） 的时候，不支持 3、4 排序。
     */
     @SerializedName("OrderBy")
     @Expose
@@ -55,7 +55,7 @@ public class DescribeLivePackageInfoRequest extends AbstractModel{
 
     /**
     * 分页大小，和 PageNum 同时传递才会生效。
-取值：10 ～ 100 之间的任意整数
+取值：10 ～ 100 之间的任意整数。
     */
     @SerializedName("PageSize")
     @Expose
@@ -63,12 +63,12 @@ public class DescribeLivePackageInfoRequest extends AbstractModel{
 
     /**
      * Get 包类型，可选值：
-0：流量包；
-1：转码包。
+0：流量包
+1：转码包
 2: 连麦包。 
      * @return PackageType 包类型，可选值：
-0：流量包；
-1：转码包。
+0：流量包
+1：转码包
 2: 连麦包。
      */
     public Long getPackageType() {
@@ -77,12 +77,12 @@ public class DescribeLivePackageInfoRequest extends AbstractModel{
 
     /**
      * Set 包类型，可选值：
-0：流量包；
-1：转码包。
+0：流量包
+1：转码包
 2: 连麦包。
      * @param PackageType 包类型，可选值：
-0：流量包；
-1：转码包。
+0：流量包
+1：转码包
 2: 连麦包。
      */
     public void setPackageType(Long PackageType) {
@@ -94,18 +94,18 @@ public class DescribeLivePackageInfoRequest extends AbstractModel{
 1. BuyTimeDesc： 最新购买的排在最前面
 2. BuyTimeAsc： 最老购买的排在最前面
 3. ExpireTimeDesc： 最后过期的排在最前面
-4. ExpireTimeAsc：最先过期的排在最前面
+4. ExpireTimeAsc：最先过期的排在最前面。
 
 注意：
-1. PackageType 为 2（连麦包） 的时候，不支持 3、4 排序 
+1. PackageType 为 2（连麦包） 的时候，不支持 3、4 排序。 
      * @return OrderBy 排序规则:
 1. BuyTimeDesc： 最新购买的排在最前面
 2. BuyTimeAsc： 最老购买的排在最前面
 3. ExpireTimeDesc： 最后过期的排在最前面
-4. ExpireTimeAsc：最先过期的排在最前面
+4. ExpireTimeAsc：最先过期的排在最前面。
 
 注意：
-1. PackageType 为 2（连麦包） 的时候，不支持 3、4 排序
+1. PackageType 为 2（连麦包） 的时候，不支持 3、4 排序。
      */
     public String getOrderBy() {
         return this.OrderBy;
@@ -116,18 +116,18 @@ public class DescribeLivePackageInfoRequest extends AbstractModel{
 1. BuyTimeDesc： 最新购买的排在最前面
 2. BuyTimeAsc： 最老购买的排在最前面
 3. ExpireTimeDesc： 最后过期的排在最前面
-4. ExpireTimeAsc：最先过期的排在最前面
+4. ExpireTimeAsc：最先过期的排在最前面。
 
 注意：
-1. PackageType 为 2（连麦包） 的时候，不支持 3、4 排序
+1. PackageType 为 2（连麦包） 的时候，不支持 3、4 排序。
      * @param OrderBy 排序规则:
 1. BuyTimeDesc： 最新购买的排在最前面
 2. BuyTimeAsc： 最老购买的排在最前面
 3. ExpireTimeDesc： 最后过期的排在最前面
-4. ExpireTimeAsc：最先过期的排在最前面
+4. ExpireTimeAsc：最先过期的排在最前面。
 
 注意：
-1. PackageType 为 2（连麦包） 的时候，不支持 3、4 排序
+1. PackageType 为 2（连麦包） 的时候，不支持 3、4 排序。
      */
     public void setOrderBy(String OrderBy) {
         this.OrderBy = OrderBy;
@@ -151,9 +151,9 @@ public class DescribeLivePackageInfoRequest extends AbstractModel{
 
     /**
      * Get 分页大小，和 PageNum 同时传递才会生效。
-取值：10 ～ 100 之间的任意整数 
+取值：10 ～ 100 之间的任意整数。 
      * @return PageSize 分页大小，和 PageNum 同时传递才会生效。
-取值：10 ～ 100 之间的任意整数
+取值：10 ～ 100 之间的任意整数。
      */
     public Long getPageSize() {
         return this.PageSize;
@@ -161,9 +161,9 @@ public class DescribeLivePackageInfoRequest extends AbstractModel{
 
     /**
      * Set 分页大小，和 PageNum 同时传递才会生效。
-取值：10 ～ 100 之间的任意整数
+取值：10 ～ 100 之间的任意整数。
      * @param PageSize 分页大小，和 PageNum 同时传递才会生效。
-取值：10 ～ 100 之间的任意整数
+取值：10 ～ 100 之间的任意整数。
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;

@@ -759,6 +759,26 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *查看集群认证配置
+     * @param req DescribeClusterAuthenticationOptionsRequest
+     * @return DescribeClusterAuthenticationOptionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeClusterAuthenticationOptionsResponse DescribeClusterAuthenticationOptions(DescribeClusterAuthenticationOptionsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeClusterAuthenticationOptionsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeClusterAuthenticationOptionsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeClusterAuthenticationOptions");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取指定子账户在RBAC授权模式中对应kube-apiserver客户端证书的CommonName字段，如果没有客户端证书，将会签发一个，此接口有最大传入子账户数量上限，当前为50
      * @param req DescribeClusterCommonNamesRequest
      * @return DescribeClusterCommonNamesResponse
@@ -1571,6 +1591,26 @@ public class TkeClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyClusterAttributeResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyClusterAttribute");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改集群认证配置
+     * @param req ModifyClusterAuthenticationOptionsRequest
+     * @return ModifyClusterAuthenticationOptionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyClusterAuthenticationOptionsResponse ModifyClusterAuthenticationOptions(ModifyClusterAuthenticationOptionsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyClusterAuthenticationOptionsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyClusterAuthenticationOptionsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyClusterAuthenticationOptions");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
