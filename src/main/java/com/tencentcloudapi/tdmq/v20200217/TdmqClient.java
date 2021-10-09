@@ -199,6 +199,46 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
+     *创建环境角色授权
+     * @param req CreateEnvironmentRoleRequest
+     * @return CreateEnvironmentRoleResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateEnvironmentRoleResponse CreateEnvironmentRole(CreateEnvironmentRoleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateEnvironmentRoleResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateEnvironmentRoleResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateEnvironmentRole");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *创建角色
+     * @param req CreateRoleRequest
+     * @return CreateRoleResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateRoleResponse CreateRole(CreateRoleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateRoleResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateRoleResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateRole");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建一个主题的订阅关系
      * @param req CreateSubscriptionRequest
      * @return CreateSubscriptionResponse
@@ -319,6 +359,26 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
+     *删除环境角色授权。
+     * @param req DeleteEnvironmentRolesRequest
+     * @return DeleteEnvironmentRolesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteEnvironmentRolesResponse DeleteEnvironmentRoles(DeleteEnvironmentRolesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteEnvironmentRolesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteEnvironmentRolesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteEnvironmentRoles");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *批量删除租户下的命名空间
      * @param req DeleteEnvironmentsRequest
      * @return DeleteEnvironmentsResponse
@@ -331,6 +391,26 @@ public class TdmqClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteEnvironmentsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteEnvironments");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除角色，支持批量。
+     * @param req DeleteRolesRequest
+     * @return DeleteRolesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteRolesResponse DeleteRoles(DeleteRolesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteRolesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteRolesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteRoles");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -699,6 +779,26 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
+     *获取角色列表
+     * @param req DescribeRolesRequest
+     * @return DescribeRolesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRolesResponse DescribeRoles(DescribeRolesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRolesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeRolesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeRoles");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询指定环境和主题下的订阅者列表
      * @param req DescribeSubscriptionsRequest
      * @return DescribeSubscriptionsResponse
@@ -831,6 +931,46 @@ public class TdmqClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyEnvironmentAttributesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyEnvironmentAttributes");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改环境角色授权。
+     * @param req ModifyEnvironmentRoleRequest
+     * @return ModifyEnvironmentRoleResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyEnvironmentRoleResponse ModifyEnvironmentRole(ModifyEnvironmentRoleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyEnvironmentRoleResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyEnvironmentRoleResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyEnvironmentRole");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *角色修改
+     * @param req ModifyRoleRequest
+     * @return ModifyRoleResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyRoleResponse ModifyRole(ModifyRoleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyRoleResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyRoleResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyRole");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

@@ -1448,6 +1448,26 @@ public class CpdpClient extends AbstractClient{
     }
 
     /**
+     *商户查询已开通的支付方式列表
+     * @param req QueryMerchantPayWayListRequest
+     * @return QueryMerchantPayWayListResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryMerchantPayWayListResponse QueryMerchantPayWayList(QueryMerchantPayWayListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<QueryMerchantPayWayListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<QueryMerchantPayWayListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "QueryMerchantPayWayList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *根据订单号，或者用户Id，查询支付订单状态 
      * @param req QueryOrderRequest
      * @return QueryOrderResponse

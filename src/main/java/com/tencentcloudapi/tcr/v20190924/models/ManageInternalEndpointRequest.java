@@ -51,11 +51,18 @@ public class ManageInternalEndpointRequest extends AbstractModel{
     private String SubnetId;
 
     /**
-    * 请求的地域ID
+    * 请求的地域ID，用于实例复制地域
     */
     @SerializedName("RegionId")
     @Expose
     private Long RegionId;
+
+    /**
+    * 请求的地域名称，用于实例复制地域
+    */
+    @SerializedName("RegionName")
+    @Expose
+    private String RegionName;
 
     /**
      * Get 实例Id 
@@ -122,19 +129,35 @@ public class ManageInternalEndpointRequest extends AbstractModel{
     }
 
     /**
-     * Get 请求的地域ID 
-     * @return RegionId 请求的地域ID
+     * Get 请求的地域ID，用于实例复制地域 
+     * @return RegionId 请求的地域ID，用于实例复制地域
      */
     public Long getRegionId() {
         return this.RegionId;
     }
 
     /**
-     * Set 请求的地域ID
-     * @param RegionId 请求的地域ID
+     * Set 请求的地域ID，用于实例复制地域
+     * @param RegionId 请求的地域ID，用于实例复制地域
      */
     public void setRegionId(Long RegionId) {
         this.RegionId = RegionId;
+    }
+
+    /**
+     * Get 请求的地域名称，用于实例复制地域 
+     * @return RegionName 请求的地域名称，用于实例复制地域
+     */
+    public String getRegionName() {
+        return this.RegionName;
+    }
+
+    /**
+     * Set 请求的地域名称，用于实例复制地域
+     * @param RegionName 请求的地域名称，用于实例复制地域
+     */
+    public void setRegionName(String RegionName) {
+        this.RegionName = RegionName;
     }
 
     public ManageInternalEndpointRequest() {
@@ -160,6 +183,9 @@ public class ManageInternalEndpointRequest extends AbstractModel{
         if (source.RegionId != null) {
             this.RegionId = new Long(source.RegionId);
         }
+        if (source.RegionName != null) {
+            this.RegionName = new String(source.RegionName);
+        }
     }
 
 
@@ -172,6 +198,7 @@ public class ManageInternalEndpointRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
         this.setParamSimple(map, prefix + "RegionId", this.RegionId);
+        this.setParamSimple(map, prefix + "RegionName", this.RegionName);
 
     }
 }

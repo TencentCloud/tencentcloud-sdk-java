@@ -37,6 +37,13 @@ public class CreateReplicationInstanceRequest extends AbstractModel{
     private Long ReplicationRegionId;
 
     /**
+    * 复制实例地域名称
+    */
+    @SerializedName("ReplicationRegionName")
+    @Expose
+    private String ReplicationRegionName;
+
+    /**
      * Get 主实例iD 
      * @return RegistryId 主实例iD
      */
@@ -68,6 +75,22 @@ public class CreateReplicationInstanceRequest extends AbstractModel{
         this.ReplicationRegionId = ReplicationRegionId;
     }
 
+    /**
+     * Get 复制实例地域名称 
+     * @return ReplicationRegionName 复制实例地域名称
+     */
+    public String getReplicationRegionName() {
+        return this.ReplicationRegionName;
+    }
+
+    /**
+     * Set 复制实例地域名称
+     * @param ReplicationRegionName 复制实例地域名称
+     */
+    public void setReplicationRegionName(String ReplicationRegionName) {
+        this.ReplicationRegionName = ReplicationRegionName;
+    }
+
     public CreateReplicationInstanceRequest() {
     }
 
@@ -82,6 +105,9 @@ public class CreateReplicationInstanceRequest extends AbstractModel{
         if (source.ReplicationRegionId != null) {
             this.ReplicationRegionId = new Long(source.ReplicationRegionId);
         }
+        if (source.ReplicationRegionName != null) {
+            this.ReplicationRegionName = new String(source.ReplicationRegionName);
+        }
     }
 
 
@@ -91,6 +117,7 @@ public class CreateReplicationInstanceRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RegistryId", this.RegistryId);
         this.setParamSimple(map, prefix + "ReplicationRegionId", this.ReplicationRegionId);
+        this.setParamSimple(map, prefix + "ReplicationRegionName", this.ReplicationRegionName);
 
     }
 }
