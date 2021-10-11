@@ -55,7 +55,7 @@ public class DescribeAssetProcessInfoListRequest extends AbstractModel{
 <li>RunTimeStart - String - 是否必填：否 - 运行开始时间</li>
 <li>RunTimeEnd - String - 是否必填：否 - 运行结束时间</li>
 <li>InstallByPackage - uint64 - 是否必填：否 - 是否包安装：0否，1是</li>
-<li>Os -String 是否必填: 否 - 操作系统( DescribeMachineOsList 接口 值 )
+<li>Os -String 是否必填: 否 - 操作系统( DescribeMachineOsList 接口 值 )</li>
     */
     @SerializedName("Filters")
     @Expose
@@ -133,7 +133,7 @@ public class DescribeAssetProcessInfoListRequest extends AbstractModel{
 <li>RunTimeStart - String - 是否必填：否 - 运行开始时间</li>
 <li>RunTimeEnd - String - 是否必填：否 - 运行结束时间</li>
 <li>InstallByPackage - uint64 - 是否必填：否 - 是否包安装：0否，1是</li>
-<li>Os -String 是否必填: 否 - 操作系统( DescribeMachineOsList 接口 值 ) 
+<li>Os -String 是否必填: 否 - 操作系统( DescribeMachineOsList 接口 值 )</li> 
      * @return Filters 过滤条件。
 <li>IpOrAlias - String - 是否必填：否 - 主机ip或别名筛选</li>
 <li>Name - String - 是否必填：否 - 进程名</li>
@@ -152,7 +152,7 @@ public class DescribeAssetProcessInfoListRequest extends AbstractModel{
 <li>RunTimeStart - String - 是否必填：否 - 运行开始时间</li>
 <li>RunTimeEnd - String - 是否必填：否 - 运行结束时间</li>
 <li>InstallByPackage - uint64 - 是否必填：否 - 是否包安装：0否，1是</li>
-<li>Os -String 是否必填: 否 - 操作系统( DescribeMachineOsList 接口 值 )
+<li>Os -String 是否必填: 否 - 操作系统( DescribeMachineOsList 接口 值 )</li>
      */
     public Filter [] getFilters() {
         return this.Filters;
@@ -177,7 +177,7 @@ public class DescribeAssetProcessInfoListRequest extends AbstractModel{
 <li>RunTimeStart - String - 是否必填：否 - 运行开始时间</li>
 <li>RunTimeEnd - String - 是否必填：否 - 运行结束时间</li>
 <li>InstallByPackage - uint64 - 是否必填：否 - 是否包安装：0否，1是</li>
-<li>Os -String 是否必填: 否 - 操作系统( DescribeMachineOsList 接口 值 )
+<li>Os -String 是否必填: 否 - 操作系统( DescribeMachineOsList 接口 值 )</li>
      * @param Filters 过滤条件。
 <li>IpOrAlias - String - 是否必填：否 - 主机ip或别名筛选</li>
 <li>Name - String - 是否必填：否 - 进程名</li>
@@ -196,7 +196,7 @@ public class DescribeAssetProcessInfoListRequest extends AbstractModel{
 <li>RunTimeStart - String - 是否必填：否 - 运行开始时间</li>
 <li>RunTimeEnd - String - 是否必填：否 - 运行结束时间</li>
 <li>InstallByPackage - uint64 - 是否必填：否 - 是否包安装：0否，1是</li>
-<li>Os -String 是否必填: 否 - 操作系统( DescribeMachineOsList 接口 值 )
+<li>Os -String 是否必填: 否 - 操作系统( DescribeMachineOsList 接口 值 )</li>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

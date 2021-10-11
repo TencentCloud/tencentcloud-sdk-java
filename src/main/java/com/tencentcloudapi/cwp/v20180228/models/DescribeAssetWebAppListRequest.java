@@ -53,7 +53,7 @@ public class DescribeAssetWebAppListRequest extends AbstractModel{
 8:IHS
 9:Tengine</li>
 <li>OsType - String - 是否必填：否 - windows/linux</li>
-<li>Os -String 是否必填: 否 - 操作系统( DescribeMachineOsList 接口 值 )
+<li>Os -String 是否必填: 否 - 操作系统( DescribeMachineOsList 接口 值 )</li>
     */
     @SerializedName("Filters")
     @Expose
@@ -129,7 +129,7 @@ public class DescribeAssetWebAppListRequest extends AbstractModel{
 8:IHS
 9:Tengine</li>
 <li>OsType - String - 是否必填：否 - windows/linux</li>
-<li>Os -String 是否必填: 否 - 操作系统( DescribeMachineOsList 接口 值 ) 
+<li>Os -String 是否必填: 否 - 操作系统( DescribeMachineOsList 接口 值 )</li> 
      * @return Filters 过滤条件。
 <li>IpOrAlias - String - 是否必填：否 - 主机ip或别名筛选</li>
 <li>Name - String - 是否必填：否 - 应用名</li>
@@ -146,7 +146,7 @@ public class DescribeAssetWebAppListRequest extends AbstractModel{
 8:IHS
 9:Tengine</li>
 <li>OsType - String - 是否必填：否 - windows/linux</li>
-<li>Os -String 是否必填: 否 - 操作系统( DescribeMachineOsList 接口 值 )
+<li>Os -String 是否必填: 否 - 操作系统( DescribeMachineOsList 接口 值 )</li>
      */
     public Filter [] getFilters() {
         return this.Filters;
@@ -169,7 +169,7 @@ public class DescribeAssetWebAppListRequest extends AbstractModel{
 8:IHS
 9:Tengine</li>
 <li>OsType - String - 是否必填：否 - windows/linux</li>
-<li>Os -String 是否必填: 否 - 操作系统( DescribeMachineOsList 接口 值 )
+<li>Os -String 是否必填: 否 - 操作系统( DescribeMachineOsList 接口 值 )</li>
      * @param Filters 过滤条件。
 <li>IpOrAlias - String - 是否必填：否 - 主机ip或别名筛选</li>
 <li>Name - String - 是否必填：否 - 应用名</li>
@@ -186,7 +186,7 @@ public class DescribeAssetWebAppListRequest extends AbstractModel{
 8:IHS
 9:Tengine</li>
 <li>OsType - String - 是否必填：否 - windows/linux</li>
-<li>Os -String 是否必填: 否 - 操作系统( DescribeMachineOsList 接口 值 )
+<li>Os -String 是否必填: 否 - 操作系统( DescribeMachineOsList 接口 值 )</li>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

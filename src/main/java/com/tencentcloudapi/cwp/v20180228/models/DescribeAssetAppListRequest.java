@@ -51,7 +51,7 @@ public class DescribeAssetAppListRequest extends AbstractModel{
 7 : WEB服务
 99:其他</li>
 <li>OsType - uint64 - 是否必填：否 - windows/linux</li>
-<li>Os -String 是否必填: 否 - 操作系统( DescribeMachineOsList 接口 值 )
+<li>Os -String 是否必填: 否 - 操作系统( DescribeMachineOsList 接口 值 )</li>
     */
     @SerializedName("Filters")
     @Expose
@@ -125,7 +125,7 @@ public class DescribeAssetAppListRequest extends AbstractModel{
 7 : WEB服务
 99:其他</li>
 <li>OsType - uint64 - 是否必填：否 - windows/linux</li>
-<li>Os -String 是否必填: 否 - 操作系统( DescribeMachineOsList 接口 值 ) 
+<li>Os -String 是否必填: 否 - 操作系统( DescribeMachineOsList 接口 值 )</li> 
      * @return Filters 过滤条件。
 <li>AppName- string - 是否必填：否 - 应用名搜索</li>
 <li>IpOrAlias - String - 是否必填：否 - 主机ip或别名筛选</li>
@@ -140,7 +140,7 @@ public class DescribeAssetAppListRequest extends AbstractModel{
 7 : WEB服务
 99:其他</li>
 <li>OsType - uint64 - 是否必填：否 - windows/linux</li>
-<li>Os -String 是否必填: 否 - 操作系统( DescribeMachineOsList 接口 值 )
+<li>Os -String 是否必填: 否 - 操作系统( DescribeMachineOsList 接口 值 )</li>
      */
     public AssetFilters [] getFilters() {
         return this.Filters;
@@ -161,7 +161,7 @@ public class DescribeAssetAppListRequest extends AbstractModel{
 7 : WEB服务
 99:其他</li>
 <li>OsType - uint64 - 是否必填：否 - windows/linux</li>
-<li>Os -String 是否必填: 否 - 操作系统( DescribeMachineOsList 接口 值 )
+<li>Os -String 是否必填: 否 - 操作系统( DescribeMachineOsList 接口 值 )</li>
      * @param Filters 过滤条件。
 <li>AppName- string - 是否必填：否 - 应用名搜索</li>
 <li>IpOrAlias - String - 是否必填：否 - 主机ip或别名筛选</li>
@@ -176,7 +176,7 @@ public class DescribeAssetAppListRequest extends AbstractModel{
 7 : WEB服务
 99:其他</li>
 <li>OsType - uint64 - 是否必填：否 - windows/linux</li>
-<li>Os -String 是否必填: 否 - 操作系统( DescribeMachineOsList 接口 值 )
+<li>Os -String 是否必填: 否 - 操作系统( DescribeMachineOsList 接口 值 )</li>
      */
     public void setFilters(AssetFilters [] Filters) {
         this.Filters = Filters;
