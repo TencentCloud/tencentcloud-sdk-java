@@ -44,6 +44,27 @@ public class DescribeReplicationInstanceSyncStatusRequest extends AbstractModel{
     private Long ReplicationRegionId;
 
     /**
+    * 是否显示同步日志
+    */
+    @SerializedName("ShowReplicationLog")
+    @Expose
+    private Boolean ShowReplicationLog;
+
+    /**
+    * 日志页号, 默认0
+    */
+    @SerializedName("Offset")
+    @Expose
+    private Long Offset;
+
+    /**
+    * 最大输出条数，默认5，最大为20
+    */
+    @SerializedName("Limit")
+    @Expose
+    private Long Limit;
+
+    /**
      * Get 主实例Id 
      * @return RegistryId 主实例Id
      */
@@ -91,6 +112,54 @@ public class DescribeReplicationInstanceSyncStatusRequest extends AbstractModel{
         this.ReplicationRegionId = ReplicationRegionId;
     }
 
+    /**
+     * Get 是否显示同步日志 
+     * @return ShowReplicationLog 是否显示同步日志
+     */
+    public Boolean getShowReplicationLog() {
+        return this.ShowReplicationLog;
+    }
+
+    /**
+     * Set 是否显示同步日志
+     * @param ShowReplicationLog 是否显示同步日志
+     */
+    public void setShowReplicationLog(Boolean ShowReplicationLog) {
+        this.ShowReplicationLog = ShowReplicationLog;
+    }
+
+    /**
+     * Get 日志页号, 默认0 
+     * @return Offset 日志页号, 默认0
+     */
+    public Long getOffset() {
+        return this.Offset;
+    }
+
+    /**
+     * Set 日志页号, 默认0
+     * @param Offset 日志页号, 默认0
+     */
+    public void setOffset(Long Offset) {
+        this.Offset = Offset;
+    }
+
+    /**
+     * Get 最大输出条数，默认5，最大为20 
+     * @return Limit 最大输出条数，默认5，最大为20
+     */
+    public Long getLimit() {
+        return this.Limit;
+    }
+
+    /**
+     * Set 最大输出条数，默认5，最大为20
+     * @param Limit 最大输出条数，默认5，最大为20
+     */
+    public void setLimit(Long Limit) {
+        this.Limit = Limit;
+    }
+
     public DescribeReplicationInstanceSyncStatusRequest() {
     }
 
@@ -108,6 +177,15 @@ public class DescribeReplicationInstanceSyncStatusRequest extends AbstractModel{
         if (source.ReplicationRegionId != null) {
             this.ReplicationRegionId = new Long(source.ReplicationRegionId);
         }
+        if (source.ShowReplicationLog != null) {
+            this.ShowReplicationLog = new Boolean(source.ShowReplicationLog);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
     }
 
 
@@ -118,6 +196,9 @@ public class DescribeReplicationInstanceSyncStatusRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "RegistryId", this.RegistryId);
         this.setParamSimple(map, prefix + "ReplicationRegistryId", this.ReplicationRegistryId);
         this.setParamSimple(map, prefix + "ReplicationRegionId", this.ReplicationRegionId);
+        this.setParamSimple(map, prefix + "ShowReplicationLog", this.ShowReplicationLog);
+        this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamSimple(map, prefix + "Limit", this.Limit);
 
     }
 }

@@ -30,7 +30,7 @@ public class ScdnAclConfig extends AbstractModel{
     private String Switch;
 
     /**
-    * Acl规则组，switch为on时必填
+    * 新版本请使用AdvancedScriptData
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ScriptData")
@@ -44,6 +44,14 @@ public class ScdnAclConfig extends AbstractModel{
     @SerializedName("ErrorPage")
     @Expose
     private ScdnErrorPage ErrorPage;
+
+    /**
+    * Acl规则组，switch为on时必填
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AdvancedScriptData")
+    @Expose
+    private AdvancedScdnAclGroup [] AdvancedScriptData;
 
     /**
      * Get 是否开启，on | off 
@@ -62,9 +70,9 @@ public class ScdnAclConfig extends AbstractModel{
     }
 
     /**
-     * Get Acl规则组，switch为on时必填
+     * Get 新版本请使用AdvancedScriptData
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ScriptData Acl规则组，switch为on时必填
+     * @return ScriptData 新版本请使用AdvancedScriptData
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ScdnAclGroup [] getScriptData() {
@@ -72,9 +80,9 @@ public class ScdnAclConfig extends AbstractModel{
     }
 
     /**
-     * Set Acl规则组，switch为on时必填
+     * Set 新版本请使用AdvancedScriptData
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ScriptData Acl规则组，switch为on时必填
+     * @param ScriptData 新版本请使用AdvancedScriptData
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScriptData(ScdnAclGroup [] ScriptData) {
@@ -101,6 +109,26 @@ public class ScdnAclConfig extends AbstractModel{
         this.ErrorPage = ErrorPage;
     }
 
+    /**
+     * Get Acl规则组，switch为on时必填
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AdvancedScriptData Acl规则组，switch为on时必填
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public AdvancedScdnAclGroup [] getAdvancedScriptData() {
+        return this.AdvancedScriptData;
+    }
+
+    /**
+     * Set Acl规则组，switch为on时必填
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AdvancedScriptData Acl规则组，switch为on时必填
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAdvancedScriptData(AdvancedScdnAclGroup [] AdvancedScriptData) {
+        this.AdvancedScriptData = AdvancedScriptData;
+    }
+
     public ScdnAclConfig() {
     }
 
@@ -121,6 +149,12 @@ public class ScdnAclConfig extends AbstractModel{
         if (source.ErrorPage != null) {
             this.ErrorPage = new ScdnErrorPage(source.ErrorPage);
         }
+        if (source.AdvancedScriptData != null) {
+            this.AdvancedScriptData = new AdvancedScdnAclGroup[source.AdvancedScriptData.length];
+            for (int i = 0; i < source.AdvancedScriptData.length; i++) {
+                this.AdvancedScriptData[i] = new AdvancedScdnAclGroup(source.AdvancedScriptData[i]);
+            }
+        }
     }
 
 
@@ -131,6 +165,7 @@ public class ScdnAclConfig extends AbstractModel{
         this.setParamSimple(map, prefix + "Switch", this.Switch);
         this.setParamArrayObj(map, prefix + "ScriptData.", this.ScriptData);
         this.setParamObj(map, prefix + "ErrorPage.", this.ErrorPage);
+        this.setParamArrayObj(map, prefix + "AdvancedScriptData.", this.AdvancedScriptData);
 
     }
 }

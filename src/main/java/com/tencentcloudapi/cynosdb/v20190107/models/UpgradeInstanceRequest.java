@@ -73,6 +73,13 @@ public class UpgradeInstanceRequest extends AbstractModel{
     private String DbType;
 
     /**
+    * 交易模式 0-下单并支付 1-下单
+    */
+    @SerializedName("DealMode")
+    @Expose
+    private Long DealMode;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -188,6 +195,22 @@ public class UpgradeInstanceRequest extends AbstractModel{
         this.DbType = DbType;
     }
 
+    /**
+     * Get 交易模式 0-下单并支付 1-下单 
+     * @return DealMode 交易模式 0-下单并支付 1-下单
+     */
+    public Long getDealMode() {
+        return this.DealMode;
+    }
+
+    /**
+     * Set 交易模式 0-下单并支付 1-下单
+     * @param DealMode 交易模式 0-下单并支付 1-下单
+     */
+    public void setDealMode(Long DealMode) {
+        this.DealMode = DealMode;
+    }
+
     public UpgradeInstanceRequest() {
     }
 
@@ -217,6 +240,9 @@ public class UpgradeInstanceRequest extends AbstractModel{
         if (source.DbType != null) {
             this.DbType = new String(source.DbType);
         }
+        if (source.DealMode != null) {
+            this.DealMode = new Long(source.DealMode);
+        }
     }
 
 
@@ -231,6 +257,7 @@ public class UpgradeInstanceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "StorageLimit", this.StorageLimit);
         this.setParamSimple(map, prefix + "AutoVoucher", this.AutoVoucher);
         this.setParamSimple(map, prefix + "DbType", this.DbType);
+        this.setParamSimple(map, prefix + "DealMode", this.DealMode);
 
     }
 }

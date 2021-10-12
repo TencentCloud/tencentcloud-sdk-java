@@ -51,6 +51,20 @@ public class LiveStreamTaskNotifyConfig extends AbstractModel{
     private String TopicName;
 
     /**
+    * 通知类型，默认CMQ，指定URL时HTTP回调推送到 NotifyUrl 指定的地址。
+    */
+    @SerializedName("NotifyType")
+    @Expose
+    private String NotifyType;
+
+    /**
+    * HTTP回调地址，NotifyType为URL时必填。
+    */
+    @SerializedName("NotifyUrl")
+    @Expose
+    private String NotifyUrl;
+
+    /**
      * Get CMQ 的模型，有 Queue 和 Topic 两种，目前仅支持 Queue。 
      * @return CmqModel CMQ 的模型，有 Queue 和 Topic 两种，目前仅支持 Queue。
      */
@@ -114,6 +128,38 @@ public class LiveStreamTaskNotifyConfig extends AbstractModel{
         this.TopicName = TopicName;
     }
 
+    /**
+     * Get 通知类型，默认CMQ，指定URL时HTTP回调推送到 NotifyUrl 指定的地址。 
+     * @return NotifyType 通知类型，默认CMQ，指定URL时HTTP回调推送到 NotifyUrl 指定的地址。
+     */
+    public String getNotifyType() {
+        return this.NotifyType;
+    }
+
+    /**
+     * Set 通知类型，默认CMQ，指定URL时HTTP回调推送到 NotifyUrl 指定的地址。
+     * @param NotifyType 通知类型，默认CMQ，指定URL时HTTP回调推送到 NotifyUrl 指定的地址。
+     */
+    public void setNotifyType(String NotifyType) {
+        this.NotifyType = NotifyType;
+    }
+
+    /**
+     * Get HTTP回调地址，NotifyType为URL时必填。 
+     * @return NotifyUrl HTTP回调地址，NotifyType为URL时必填。
+     */
+    public String getNotifyUrl() {
+        return this.NotifyUrl;
+    }
+
+    /**
+     * Set HTTP回调地址，NotifyType为URL时必填。
+     * @param NotifyUrl HTTP回调地址，NotifyType为URL时必填。
+     */
+    public void setNotifyUrl(String NotifyUrl) {
+        this.NotifyUrl = NotifyUrl;
+    }
+
     public LiveStreamTaskNotifyConfig() {
     }
 
@@ -134,6 +180,12 @@ public class LiveStreamTaskNotifyConfig extends AbstractModel{
         if (source.TopicName != null) {
             this.TopicName = new String(source.TopicName);
         }
+        if (source.NotifyType != null) {
+            this.NotifyType = new String(source.NotifyType);
+        }
+        if (source.NotifyUrl != null) {
+            this.NotifyUrl = new String(source.NotifyUrl);
+        }
     }
 
 
@@ -145,6 +197,8 @@ public class LiveStreamTaskNotifyConfig extends AbstractModel{
         this.setParamSimple(map, prefix + "CmqRegion", this.CmqRegion);
         this.setParamSimple(map, prefix + "QueueName", this.QueueName);
         this.setParamSimple(map, prefix + "TopicName", this.TopicName);
+        this.setParamSimple(map, prefix + "NotifyType", this.NotifyType);
+        this.setParamSimple(map, prefix + "NotifyUrl", this.NotifyUrl);
 
     }
 }

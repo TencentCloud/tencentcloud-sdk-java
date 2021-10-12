@@ -278,6 +278,41 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
     private Long StoragePayMode;
 
     /**
+    * 安全组id数组
+    */
+    @SerializedName("SecurityGroupIds")
+    @Expose
+    private String [] SecurityGroupIds;
+
+    /**
+    * 告警策略Id数组
+    */
+    @SerializedName("AlarmPolicyIds")
+    @Expose
+    private String [] AlarmPolicyIds;
+
+    /**
+    * 参数数组
+    */
+    @SerializedName("ClusterParams")
+    @Expose
+    private ParamItem [] ClusterParams;
+
+    /**
+    * 交易模式，0-下单且支付，1-下单
+    */
+    @SerializedName("DealMode")
+    @Expose
+    private Long DealMode;
+
+    /**
+    * 参数模版ID
+    */
+    @SerializedName("ParamTemplateId")
+    @Expose
+    private Long ParamTemplateId;
+
+    /**
      * Get 可用区 
      * @return Zone 可用区
      */
@@ -889,6 +924,86 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
         this.StoragePayMode = StoragePayMode;
     }
 
+    /**
+     * Get 安全组id数组 
+     * @return SecurityGroupIds 安全组id数组
+     */
+    public String [] getSecurityGroupIds() {
+        return this.SecurityGroupIds;
+    }
+
+    /**
+     * Set 安全组id数组
+     * @param SecurityGroupIds 安全组id数组
+     */
+    public void setSecurityGroupIds(String [] SecurityGroupIds) {
+        this.SecurityGroupIds = SecurityGroupIds;
+    }
+
+    /**
+     * Get 告警策略Id数组 
+     * @return AlarmPolicyIds 告警策略Id数组
+     */
+    public String [] getAlarmPolicyIds() {
+        return this.AlarmPolicyIds;
+    }
+
+    /**
+     * Set 告警策略Id数组
+     * @param AlarmPolicyIds 告警策略Id数组
+     */
+    public void setAlarmPolicyIds(String [] AlarmPolicyIds) {
+        this.AlarmPolicyIds = AlarmPolicyIds;
+    }
+
+    /**
+     * Get 参数数组 
+     * @return ClusterParams 参数数组
+     */
+    public ParamItem [] getClusterParams() {
+        return this.ClusterParams;
+    }
+
+    /**
+     * Set 参数数组
+     * @param ClusterParams 参数数组
+     */
+    public void setClusterParams(ParamItem [] ClusterParams) {
+        this.ClusterParams = ClusterParams;
+    }
+
+    /**
+     * Get 交易模式，0-下单且支付，1-下单 
+     * @return DealMode 交易模式，0-下单且支付，1-下单
+     */
+    public Long getDealMode() {
+        return this.DealMode;
+    }
+
+    /**
+     * Set 交易模式，0-下单且支付，1-下单
+     * @param DealMode 交易模式，0-下单且支付，1-下单
+     */
+    public void setDealMode(Long DealMode) {
+        this.DealMode = DealMode;
+    }
+
+    /**
+     * Get 参数模版ID 
+     * @return ParamTemplateId 参数模版ID
+     */
+    public Long getParamTemplateId() {
+        return this.ParamTemplateId;
+    }
+
+    /**
+     * Set 参数模版ID
+     * @param ParamTemplateId 参数模版ID
+     */
+    public void setParamTemplateId(Long ParamTemplateId) {
+        this.ParamTemplateId = ParamTemplateId;
+    }
+
     public CreateClustersRequest() {
     }
 
@@ -1002,6 +1117,30 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
         if (source.StoragePayMode != null) {
             this.StoragePayMode = new Long(source.StoragePayMode);
         }
+        if (source.SecurityGroupIds != null) {
+            this.SecurityGroupIds = new String[source.SecurityGroupIds.length];
+            for (int i = 0; i < source.SecurityGroupIds.length; i++) {
+                this.SecurityGroupIds[i] = new String(source.SecurityGroupIds[i]);
+            }
+        }
+        if (source.AlarmPolicyIds != null) {
+            this.AlarmPolicyIds = new String[source.AlarmPolicyIds.length];
+            for (int i = 0; i < source.AlarmPolicyIds.length; i++) {
+                this.AlarmPolicyIds[i] = new String(source.AlarmPolicyIds[i]);
+            }
+        }
+        if (source.ClusterParams != null) {
+            this.ClusterParams = new ParamItem[source.ClusterParams.length];
+            for (int i = 0; i < source.ClusterParams.length; i++) {
+                this.ClusterParams[i] = new ParamItem(source.ClusterParams[i]);
+            }
+        }
+        if (source.DealMode != null) {
+            this.DealMode = new Long(source.DealMode);
+        }
+        if (source.ParamTemplateId != null) {
+            this.ParamTemplateId = new Long(source.ParamTemplateId);
+        }
     }
 
 
@@ -1043,6 +1182,11 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
         this.setParamSimple(map, prefix + "AutoPause", this.AutoPause);
         this.setParamSimple(map, prefix + "AutoPauseDelay", this.AutoPauseDelay);
         this.setParamSimple(map, prefix + "StoragePayMode", this.StoragePayMode);
+        this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
+        this.setParamArraySimple(map, prefix + "AlarmPolicyIds.", this.AlarmPolicyIds);
+        this.setParamArrayObj(map, prefix + "ClusterParams.", this.ClusterParams);
+        this.setParamSimple(map, prefix + "DealMode", this.DealMode);
+        this.setParamSimple(map, prefix + "ParamTemplateId", this.ParamTemplateId);
 
     }
 }

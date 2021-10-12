@@ -108,6 +108,13 @@ public class AddInstancesRequest extends AbstractModel{
     private String OrderSource;
 
     /**
+    * 交易模式 0-下单并支付 1-下单
+    */
+    @SerializedName("DealMode")
+    @Expose
+    private Long DealMode;
+
+    /**
      * Get 集群ID 
      * @return ClusterId 集群ID
      */
@@ -303,6 +310,22 @@ public class AddInstancesRequest extends AbstractModel{
         this.OrderSource = OrderSource;
     }
 
+    /**
+     * Get 交易模式 0-下单并支付 1-下单 
+     * @return DealMode 交易模式 0-下单并支付 1-下单
+     */
+    public Long getDealMode() {
+        return this.DealMode;
+    }
+
+    /**
+     * Set 交易模式 0-下单并支付 1-下单
+     * @param DealMode 交易模式 0-下单并支付 1-下单
+     */
+    public void setDealMode(Long DealMode) {
+        this.DealMode = DealMode;
+    }
+
     public AddInstancesRequest() {
     }
 
@@ -347,6 +370,9 @@ public class AddInstancesRequest extends AbstractModel{
         if (source.OrderSource != null) {
             this.OrderSource = new String(source.OrderSource);
         }
+        if (source.DealMode != null) {
+            this.DealMode = new Long(source.DealMode);
+        }
     }
 
 
@@ -366,6 +392,7 @@ public class AddInstancesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "AutoVoucher", this.AutoVoucher);
         this.setParamSimple(map, prefix + "DbType", this.DbType);
         this.setParamSimple(map, prefix + "OrderSource", this.OrderSource);
+        this.setParamSimple(map, prefix + "DealMode", this.DealMode);
 
     }
 }

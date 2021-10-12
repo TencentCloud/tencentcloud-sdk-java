@@ -39,7 +39,7 @@ public class CreateClustersResponse extends AbstractModel{
     private String [] DealNames;
 
     /**
-    * 资源ID列表（异步发货可能无法返回该字段, 强烈建议使用dealNames字段查询接口DescribeResourcesByDealName获取异步发货的资源ID）
+    * 资源ID列表（该字段已不再维护，请使用dealNames字段查询接口DescribeResourcesByDealName获取资源ID）
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceIds")
@@ -47,7 +47,7 @@ public class CreateClustersResponse extends AbstractModel{
     private String [] ResourceIds;
 
     /**
-    * 集群ID列表（异步发货可能不返回该字段, 强烈建议使用dealNames查询接口DescribeResourcesByDealName获取异步发货的集群ID）
+    * 集群ID列表（该字段已不再维护，请使用dealNames字段查询接口DescribeResourcesByDealName获取集群ID）
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterIds")
@@ -110,9 +110,9 @@ public class CreateClustersResponse extends AbstractModel{
     }
 
     /**
-     * Get 资源ID列表（异步发货可能无法返回该字段, 强烈建议使用dealNames字段查询接口DescribeResourcesByDealName获取异步发货的资源ID）
+     * Get 资源ID列表（该字段已不再维护，请使用dealNames字段查询接口DescribeResourcesByDealName获取资源ID）
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ResourceIds 资源ID列表（异步发货可能无法返回该字段, 强烈建议使用dealNames字段查询接口DescribeResourcesByDealName获取异步发货的资源ID）
+     * @return ResourceIds 资源ID列表（该字段已不再维护，请使用dealNames字段查询接口DescribeResourcesByDealName获取资源ID）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getResourceIds() {
@@ -120,9 +120,9 @@ public class CreateClustersResponse extends AbstractModel{
     }
 
     /**
-     * Set 资源ID列表（异步发货可能无法返回该字段, 强烈建议使用dealNames字段查询接口DescribeResourcesByDealName获取异步发货的资源ID）
+     * Set 资源ID列表（该字段已不再维护，请使用dealNames字段查询接口DescribeResourcesByDealName获取资源ID）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ResourceIds 资源ID列表（异步发货可能无法返回该字段, 强烈建议使用dealNames字段查询接口DescribeResourcesByDealName获取异步发货的资源ID）
+     * @param ResourceIds 资源ID列表（该字段已不再维护，请使用dealNames字段查询接口DescribeResourcesByDealName获取资源ID）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceIds(String [] ResourceIds) {
@@ -130,9 +130,9 @@ public class CreateClustersResponse extends AbstractModel{
     }
 
     /**
-     * Get 集群ID列表（异步发货可能不返回该字段, 强烈建议使用dealNames查询接口DescribeResourcesByDealName获取异步发货的集群ID）
+     * Get 集群ID列表（该字段已不再维护，请使用dealNames字段查询接口DescribeResourcesByDealName获取集群ID）
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ClusterIds 集群ID列表（异步发货可能不返回该字段, 强烈建议使用dealNames查询接口DescribeResourcesByDealName获取异步发货的集群ID）
+     * @return ClusterIds 集群ID列表（该字段已不再维护，请使用dealNames字段查询接口DescribeResourcesByDealName获取集群ID）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getClusterIds() {
@@ -140,9 +140,9 @@ public class CreateClustersResponse extends AbstractModel{
     }
 
     /**
-     * Set 集群ID列表（异步发货可能不返回该字段, 强烈建议使用dealNames查询接口DescribeResourcesByDealName获取异步发货的集群ID）
+     * Set 集群ID列表（该字段已不再维护，请使用dealNames字段查询接口DescribeResourcesByDealName获取集群ID）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ClusterIds 集群ID列表（异步发货可能不返回该字段, 强烈建议使用dealNames查询接口DescribeResourcesByDealName获取异步发货的集群ID）
+     * @param ClusterIds 集群ID列表（该字段已不再维护，请使用dealNames字段查询接口DescribeResourcesByDealName获取集群ID）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterIds(String [] ClusterIds) {

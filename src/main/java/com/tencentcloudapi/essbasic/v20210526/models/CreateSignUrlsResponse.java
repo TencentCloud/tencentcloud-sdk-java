@@ -30,6 +30,13 @@ public class CreateSignUrlsResponse extends AbstractModel{
     private SignUrlInfo [] SignUrlInfos;
 
     /**
+    * 生成失败时的错误信息，成功返回”“，顺序和出参SignUrlInfos保持一致
+    */
+    @SerializedName("ErrorMessages")
+    @Expose
+    private String [] ErrorMessages;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -50,6 +57,22 @@ public class CreateSignUrlsResponse extends AbstractModel{
      */
     public void setSignUrlInfos(SignUrlInfo [] SignUrlInfos) {
         this.SignUrlInfos = SignUrlInfos;
+    }
+
+    /**
+     * Get 生成失败时的错误信息，成功返回”“，顺序和出参SignUrlInfos保持一致 
+     * @return ErrorMessages 生成失败时的错误信息，成功返回”“，顺序和出参SignUrlInfos保持一致
+     */
+    public String [] getErrorMessages() {
+        return this.ErrorMessages;
+    }
+
+    /**
+     * Set 生成失败时的错误信息，成功返回”“，顺序和出参SignUrlInfos保持一致
+     * @param ErrorMessages 生成失败时的错误信息，成功返回”“，顺序和出参SignUrlInfos保持一致
+     */
+    public void setErrorMessages(String [] ErrorMessages) {
+        this.ErrorMessages = ErrorMessages;
     }
 
     /**
@@ -82,6 +105,12 @@ public class CreateSignUrlsResponse extends AbstractModel{
                 this.SignUrlInfos[i] = new SignUrlInfo(source.SignUrlInfos[i]);
             }
         }
+        if (source.ErrorMessages != null) {
+            this.ErrorMessages = new String[source.ErrorMessages.length];
+            for (int i = 0; i < source.ErrorMessages.length; i++) {
+                this.ErrorMessages[i] = new String(source.ErrorMessages[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -93,6 +122,7 @@ public class CreateSignUrlsResponse extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "SignUrlInfos.", this.SignUrlInfos);
+        this.setParamArraySimple(map, prefix + "ErrorMessages.", this.ErrorMessages);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

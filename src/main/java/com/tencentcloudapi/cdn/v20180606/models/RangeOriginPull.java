@@ -32,6 +32,14 @@ off：关闭
     private String Switch;
 
     /**
+    * 分路径分片回源配置
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RangeRules")
+    @Expose
+    private RangeOriginPullRule [] RangeRules;
+
+    /**
      * Get 分片回源配置开关
 on：开启
 off：关闭 
@@ -55,6 +63,26 @@ off：关闭
         this.Switch = Switch;
     }
 
+    /**
+     * Get 分路径分片回源配置
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RangeRules 分路径分片回源配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public RangeOriginPullRule [] getRangeRules() {
+        return this.RangeRules;
+    }
+
+    /**
+     * Set 分路径分片回源配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RangeRules 分路径分片回源配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRangeRules(RangeOriginPullRule [] RangeRules) {
+        this.RangeRules = RangeRules;
+    }
+
     public RangeOriginPull() {
     }
 
@@ -66,6 +94,12 @@ off：关闭
         if (source.Switch != null) {
             this.Switch = new String(source.Switch);
         }
+        if (source.RangeRules != null) {
+            this.RangeRules = new RangeOriginPullRule[source.RangeRules.length];
+            for (int i = 0; i < source.RangeRules.length; i++) {
+                this.RangeRules[i] = new RangeOriginPullRule(source.RangeRules[i]);
+            }
+        }
     }
 
 
@@ -74,6 +108,7 @@ off：关闭
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Switch", this.Switch);
+        this.setParamArrayObj(map, prefix + "RangeRules.", this.RangeRules);
 
     }
 }

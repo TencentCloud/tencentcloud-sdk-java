@@ -23,69 +23,69 @@ import java.util.HashMap;
 public class ScdnAclRule extends AbstractModel{
 
     /**
-    * 匹配关键字, params | url | ip | referer | user-agent
+    * 匹配关键字
     */
     @SerializedName("MatchKey")
     @Expose
     private String MatchKey;
 
     /**
-    * 逻辑操作符，取值 exclude, include, notequal, equal, len-less, len-equal, len-more
+    * 逻辑操作符，取值如下
     */
     @SerializedName("LogiOperator")
     @Expose
     private String LogiOperator;
 
     /**
-    * 匹配值
+    * 匹配值。
     */
     @SerializedName("MatchValue")
     @Expose
     private String MatchValue;
 
     /**
-     * Get 匹配关键字, params | url | ip | referer | user-agent 
-     * @return MatchKey 匹配关键字, params | url | ip | referer | user-agent
+     * Get 匹配关键字 
+     * @return MatchKey 匹配关键字
      */
     public String getMatchKey() {
         return this.MatchKey;
     }
 
     /**
-     * Set 匹配关键字, params | url | ip | referer | user-agent
-     * @param MatchKey 匹配关键字, params | url | ip | referer | user-agent
+     * Set 匹配关键字
+     * @param MatchKey 匹配关键字
      */
     public void setMatchKey(String MatchKey) {
         this.MatchKey = MatchKey;
     }
 
     /**
-     * Get 逻辑操作符，取值 exclude, include, notequal, equal, len-less, len-equal, len-more 
-     * @return LogiOperator 逻辑操作符，取值 exclude, include, notequal, equal, len-less, len-equal, len-more
+     * Get 逻辑操作符，取值如下 
+     * @return LogiOperator 逻辑操作符，取值如下
      */
     public String getLogiOperator() {
         return this.LogiOperator;
     }
 
     /**
-     * Set 逻辑操作符，取值 exclude, include, notequal, equal, len-less, len-equal, len-more
-     * @param LogiOperator 逻辑操作符，取值 exclude, include, notequal, equal, len-less, len-equal, len-more
+     * Set 逻辑操作符，取值如下
+     * @param LogiOperator 逻辑操作符，取值如下
      */
     public void setLogiOperator(String LogiOperator) {
         this.LogiOperator = LogiOperator;
     }
 
     /**
-     * Get 匹配值 
-     * @return MatchValue 匹配值
+     * Get 匹配值。 
+     * @return MatchValue 匹配值。
      */
     public String getMatchValue() {
         return this.MatchValue;
     }
 
     /**
-     * Set 匹配值
-     * @param MatchValue 匹配值
+     * Set 匹配值。
+     * @param MatchValue 匹配值。
      */
     public void setMatchValue(String MatchValue) {
         this.MatchValue = MatchValue;

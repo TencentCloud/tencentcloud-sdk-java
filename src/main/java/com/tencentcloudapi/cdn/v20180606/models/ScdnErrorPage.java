@@ -24,6 +24,8 @@ public class ScdnErrorPage extends AbstractModel{
 
     /**
     * 状态码
+执行动作为：intercept 默认传值 403
+执行动作为：redirect 默认传值 301
     */
     @SerializedName("RedirectCode")
     @Expose
@@ -37,8 +39,12 @@ public class ScdnErrorPage extends AbstractModel{
     private String RedirectUrl;
 
     /**
-     * Get 状态码 
+     * Get 状态码
+执行动作为：intercept 默认传值 403
+执行动作为：redirect 默认传值 301 
      * @return RedirectCode 状态码
+执行动作为：intercept 默认传值 403
+执行动作为：redirect 默认传值 301
      */
     public Long getRedirectCode() {
         return this.RedirectCode;
@@ -46,7 +52,11 @@ public class ScdnErrorPage extends AbstractModel{
 
     /**
      * Set 状态码
+执行动作为：intercept 默认传值 403
+执行动作为：redirect 默认传值 301
      * @param RedirectCode 状态码
+执行动作为：intercept 默认传值 403
+执行动作为：redirect 默认传值 301
      */
     public void setRedirectCode(Long RedirectCode) {
         this.RedirectCode = RedirectCode;

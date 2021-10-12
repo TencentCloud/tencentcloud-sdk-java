@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ScdnAclGroup extends AbstractModel{
+public class AdvancedScdnAclGroup extends AbstractModel{
 
     /**
     * 规则名称
@@ -34,7 +34,7 @@ public class ScdnAclGroup extends AbstractModel{
     */
     @SerializedName("Configure")
     @Expose
-    private ScdnAclRule [] Configure;
+    private AdvancedScdnAclRule [] Configure;
 
     /**
     * 执行动作，intercept|redirect
@@ -52,7 +52,6 @@ public class ScdnAclGroup extends AbstractModel{
 
     /**
     * 错误页面配置
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ErrorPage")
     @Expose
@@ -78,7 +77,7 @@ public class ScdnAclGroup extends AbstractModel{
      * Get 具体配置 
      * @return Configure 具体配置
      */
-    public ScdnAclRule [] getConfigure() {
+    public AdvancedScdnAclRule [] getConfigure() {
         return this.Configure;
     }
 
@@ -86,7 +85,7 @@ public class ScdnAclGroup extends AbstractModel{
      * Set 具体配置
      * @param Configure 具体配置
      */
-    public void setConfigure(ScdnAclRule [] Configure) {
+    public void setConfigure(AdvancedScdnAclRule [] Configure) {
         this.Configure = Configure;
     }
 
@@ -123,10 +122,8 @@ public class ScdnAclGroup extends AbstractModel{
     }
 
     /**
-     * Get 错误页面配置
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 错误页面配置 
      * @return ErrorPage 错误页面配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ScdnErrorPage getErrorPage() {
         return this.ErrorPage;
@@ -134,29 +131,27 @@ public class ScdnAclGroup extends AbstractModel{
 
     /**
      * Set 错误页面配置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ErrorPage 错误页面配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setErrorPage(ScdnErrorPage ErrorPage) {
         this.ErrorPage = ErrorPage;
     }
 
-    public ScdnAclGroup() {
+    public AdvancedScdnAclGroup() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ScdnAclGroup(ScdnAclGroup source) {
+    public AdvancedScdnAclGroup(AdvancedScdnAclGroup source) {
         if (source.RuleName != null) {
             this.RuleName = new String(source.RuleName);
         }
         if (source.Configure != null) {
-            this.Configure = new ScdnAclRule[source.Configure.length];
+            this.Configure = new AdvancedScdnAclRule[source.Configure.length];
             for (int i = 0; i < source.Configure.length; i++) {
-                this.Configure[i] = new ScdnAclRule(source.Configure[i]);
+                this.Configure[i] = new AdvancedScdnAclRule(source.Configure[i]);
             }
         }
         if (source.Result != null) {

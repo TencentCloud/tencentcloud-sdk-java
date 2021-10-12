@@ -37,6 +37,14 @@ public class DescribeReplicationInstanceSyncStatusResponse extends AbstractModel
     private String ReplicationTime;
 
     /**
+    * 同步日志
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ReplicationLog")
+    @Expose
+    private ReplicationLog ReplicationLog;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -76,6 +84,26 @@ public class DescribeReplicationInstanceSyncStatusResponse extends AbstractModel
     }
 
     /**
+     * Get 同步日志
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ReplicationLog 同步日志
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ReplicationLog getReplicationLog() {
+        return this.ReplicationLog;
+    }
+
+    /**
+     * Set 同步日志
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ReplicationLog 同步日志
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setReplicationLog(ReplicationLog ReplicationLog) {
+        this.ReplicationLog = ReplicationLog;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -105,6 +133,9 @@ public class DescribeReplicationInstanceSyncStatusResponse extends AbstractModel
         if (source.ReplicationTime != null) {
             this.ReplicationTime = new String(source.ReplicationTime);
         }
+        if (source.ReplicationLog != null) {
+            this.ReplicationLog = new ReplicationLog(source.ReplicationLog);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -117,6 +148,7 @@ public class DescribeReplicationInstanceSyncStatusResponse extends AbstractModel
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ReplicationStatus", this.ReplicationStatus);
         this.setParamSimple(map, prefix + "ReplicationTime", this.ReplicationTime);
+        this.setParamObj(map, prefix + "ReplicationLog.", this.ReplicationLog);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

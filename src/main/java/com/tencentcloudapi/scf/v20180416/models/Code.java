@@ -30,7 +30,7 @@ public class Code extends AbstractModel{
     private String CosBucketName;
 
     /**
-    * 对象存储对象路径
+    * 对象存储中代码包文件路径，以/开头
     */
     @SerializedName("CosObjectName")
     @Expose
@@ -144,16 +144,16 @@ public class Code extends AbstractModel{
     }
 
     /**
-     * Get 对象存储对象路径 
-     * @return CosObjectName 对象存储对象路径
+     * Get 对象存储中代码包文件路径，以/开头 
+     * @return CosObjectName 对象存储中代码包文件路径，以/开头
      */
     public String getCosObjectName() {
         return this.CosObjectName;
     }
 
     /**
-     * Set 对象存储对象路径
-     * @param CosObjectName 对象存储对象路径
+     * Set 对象存储中代码包文件路径，以/开头
+     * @param CosObjectName 对象存储中代码包文件路径，以/开头
      */
     public void setCosObjectName(String CosObjectName) {
         this.CosObjectName = CosObjectName;

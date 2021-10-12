@@ -31,15 +31,6 @@ public class CompressionRule extends AbstractModel{
     private Boolean Compress;
 
     /**
-    * 根据文件后缀类型压缩
-例如 jpg、txt
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("FileExtensions")
-    @Expose
-    private String [] FileExtensions;
-
-    /**
     * 触发压缩的文件长度最小值，单位为字节数
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -67,6 +58,42 @@ brotli：指定Brotli压缩
     private String [] Algorithms;
 
     /**
+    * 根据文件后缀类型压缩
+例如 jpg、txt
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FileExtensions")
+    @Expose
+    private String [] FileExtensions;
+
+    /**
+    * 规则类型：
+all：所有文件生效
+file：指定文件后缀生效
+directory：指定路径生效
+path：指定绝对路径生效
+contentType：指定Content-Type头为特定值时生效
+当指定了此字段时，FileExtensions字段不生效
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RuleType")
+    @Expose
+    private String RuleType;
+
+    /**
+    * CacheType 对应类型下的匹配内容：
+all 时填充 *
+file 时填充后缀名，如 jpg、txt
+directory 时填充路径，如 /xxx/test
+path 时填充绝对路径，如 /xxx/test.html
+contentType 时填充 text/html
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RulePaths")
+    @Expose
+    private String [] RulePaths;
+
+    /**
      * Get true：需要设置为 ture，启用压缩
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Compress true：需要设置为 ture，启用压缩
@@ -84,30 +111,6 @@ brotli：指定Brotli压缩
      */
     public void setCompress(Boolean Compress) {
         this.Compress = Compress;
-    }
-
-    /**
-     * Get 根据文件后缀类型压缩
-例如 jpg、txt
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FileExtensions 根据文件后缀类型压缩
-例如 jpg、txt
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public String [] getFileExtensions() {
-        return this.FileExtensions;
-    }
-
-    /**
-     * Set 根据文件后缀类型压缩
-例如 jpg、txt
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param FileExtensions 根据文件后缀类型压缩
-例如 jpg、txt
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setFileExtensions(String [] FileExtensions) {
-        this.FileExtensions = FileExtensions;
     }
 
     /**
@@ -182,6 +185,114 @@ brotli：指定Brotli压缩
         this.Algorithms = Algorithms;
     }
 
+    /**
+     * Get 根据文件后缀类型压缩
+例如 jpg、txt
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FileExtensions 根据文件后缀类型压缩
+例如 jpg、txt
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getFileExtensions() {
+        return this.FileExtensions;
+    }
+
+    /**
+     * Set 根据文件后缀类型压缩
+例如 jpg、txt
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FileExtensions 根据文件后缀类型压缩
+例如 jpg、txt
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFileExtensions(String [] FileExtensions) {
+        this.FileExtensions = FileExtensions;
+    }
+
+    /**
+     * Get 规则类型：
+all：所有文件生效
+file：指定文件后缀生效
+directory：指定路径生效
+path：指定绝对路径生效
+contentType：指定Content-Type头为特定值时生效
+当指定了此字段时，FileExtensions字段不生效
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RuleType 规则类型：
+all：所有文件生效
+file：指定文件后缀生效
+directory：指定路径生效
+path：指定绝对路径生效
+contentType：指定Content-Type头为特定值时生效
+当指定了此字段时，FileExtensions字段不生效
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRuleType() {
+        return this.RuleType;
+    }
+
+    /**
+     * Set 规则类型：
+all：所有文件生效
+file：指定文件后缀生效
+directory：指定路径生效
+path：指定绝对路径生效
+contentType：指定Content-Type头为特定值时生效
+当指定了此字段时，FileExtensions字段不生效
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RuleType 规则类型：
+all：所有文件生效
+file：指定文件后缀生效
+directory：指定路径生效
+path：指定绝对路径生效
+contentType：指定Content-Type头为特定值时生效
+当指定了此字段时，FileExtensions字段不生效
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRuleType(String RuleType) {
+        this.RuleType = RuleType;
+    }
+
+    /**
+     * Get CacheType 对应类型下的匹配内容：
+all 时填充 *
+file 时填充后缀名，如 jpg、txt
+directory 时填充路径，如 /xxx/test
+path 时填充绝对路径，如 /xxx/test.html
+contentType 时填充 text/html
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RulePaths CacheType 对应类型下的匹配内容：
+all 时填充 *
+file 时填充后缀名，如 jpg、txt
+directory 时填充路径，如 /xxx/test
+path 时填充绝对路径，如 /xxx/test.html
+contentType 时填充 text/html
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getRulePaths() {
+        return this.RulePaths;
+    }
+
+    /**
+     * Set CacheType 对应类型下的匹配内容：
+all 时填充 *
+file 时填充后缀名，如 jpg、txt
+directory 时填充路径，如 /xxx/test
+path 时填充绝对路径，如 /xxx/test.html
+contentType 时填充 text/html
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RulePaths CacheType 对应类型下的匹配内容：
+all 时填充 *
+file 时填充后缀名，如 jpg、txt
+directory 时填充路径，如 /xxx/test
+path 时填充绝对路径，如 /xxx/test.html
+contentType 时填充 text/html
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRulePaths(String [] RulePaths) {
+        this.RulePaths = RulePaths;
+    }
+
     public CompressionRule() {
     }
 
@@ -192,12 +303,6 @@ brotli：指定Brotli压缩
     public CompressionRule(CompressionRule source) {
         if (source.Compress != null) {
             this.Compress = new Boolean(source.Compress);
-        }
-        if (source.FileExtensions != null) {
-            this.FileExtensions = new String[source.FileExtensions.length];
-            for (int i = 0; i < source.FileExtensions.length; i++) {
-                this.FileExtensions[i] = new String(source.FileExtensions[i]);
-            }
         }
         if (source.MinLength != null) {
             this.MinLength = new Long(source.MinLength);
@@ -211,6 +316,21 @@ brotli：指定Brotli压缩
                 this.Algorithms[i] = new String(source.Algorithms[i]);
             }
         }
+        if (source.FileExtensions != null) {
+            this.FileExtensions = new String[source.FileExtensions.length];
+            for (int i = 0; i < source.FileExtensions.length; i++) {
+                this.FileExtensions[i] = new String(source.FileExtensions[i]);
+            }
+        }
+        if (source.RuleType != null) {
+            this.RuleType = new String(source.RuleType);
+        }
+        if (source.RulePaths != null) {
+            this.RulePaths = new String[source.RulePaths.length];
+            for (int i = 0; i < source.RulePaths.length; i++) {
+                this.RulePaths[i] = new String(source.RulePaths[i]);
+            }
+        }
     }
 
 
@@ -219,10 +339,12 @@ brotli：指定Brotli压缩
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Compress", this.Compress);
-        this.setParamArraySimple(map, prefix + "FileExtensions.", this.FileExtensions);
         this.setParamSimple(map, prefix + "MinLength", this.MinLength);
         this.setParamSimple(map, prefix + "MaxLength", this.MaxLength);
         this.setParamArraySimple(map, prefix + "Algorithms.", this.Algorithms);
+        this.setParamArraySimple(map, prefix + "FileExtensions.", this.FileExtensions);
+        this.setParamSimple(map, prefix + "RuleType", this.RuleType);
+        this.setParamArraySimple(map, prefix + "RulePaths.", this.RulePaths);
 
     }
 }

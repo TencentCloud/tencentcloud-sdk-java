@@ -37,7 +37,7 @@ public class QueryMerchantPayWayListRequest extends AbstractModel{
     private String OpenKey;
 
     /**
-    * 支付类型，逗号分隔
+    * 支付类型，逗号分隔。1-现金，2-主扫，3-被扫，4-JSAPI。
     */
     @SerializedName("PayType")
     @Expose
@@ -83,16 +83,16 @@ public class QueryMerchantPayWayListRequest extends AbstractModel{
     }
 
     /**
-     * Get 支付类型，逗号分隔 
-     * @return PayType 支付类型，逗号分隔
+     * Get 支付类型，逗号分隔。1-现金，2-主扫，3-被扫，4-JSAPI。 
+     * @return PayType 支付类型，逗号分隔。1-现金，2-主扫，3-被扫，4-JSAPI。
      */
     public String getPayType() {
         return this.PayType;
     }
 
     /**
-     * Set 支付类型，逗号分隔
-     * @param PayType 支付类型，逗号分隔
+     * Set 支付类型，逗号分隔。1-现金，2-主扫，3-被扫，4-JSAPI。
+     * @param PayType 支付类型，逗号分隔。1-现金，2-主扫，3-被扫，4-JSAPI。
      */
     public void setPayType(String PayType) {
         this.PayType = PayType;
