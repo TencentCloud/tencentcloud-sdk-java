@@ -90,8 +90,7 @@ CLOSED表示已关闭；
 ADJUSTING表示配置变更中；
 ISOLATING表示隔离中；
 ISOLATED表示已隔离；
-CLONING表示复制中；
-UNKNOWN表示未知状态。
+CLONING表示复制中。
     */
     @SerializedName("Status")
     @Expose
@@ -244,7 +243,7 @@ UNKNOWN表示未知状态。
     private String IPAddressVersion;
 
     /**
-    * 网络类型：normal、cn2
+    * 网络类型：normal表示常规BGP，cn2表示精品BGP，triple表示三网
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NetworkType")
@@ -266,6 +265,14 @@ UNKNOWN表示未知状态。
     @SerializedName("BanStatus")
     @Expose
     private String BanStatus;
+
+    /**
+    * IP列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IPList")
+    @Expose
+    private IPDetail [] IPList;
 
     /**
      * Get （旧参数，请使用ProxyId）通道实例ID。
@@ -410,8 +417,7 @@ CLOSED表示已关闭；
 ADJUSTING表示配置变更中；
 ISOLATING表示隔离中；
 ISOLATED表示已隔离；
-CLONING表示复制中；
-UNKNOWN表示未知状态。 
+CLONING表示复制中。 
      * @return Status 通道状态。其中：
 RUNNING表示运行中；
 CREATING表示创建中；
@@ -422,8 +428,7 @@ CLOSED表示已关闭；
 ADJUSTING表示配置变更中；
 ISOLATING表示隔离中；
 ISOLATED表示已隔离；
-CLONING表示复制中；
-UNKNOWN表示未知状态。
+CLONING表示复制中。
      */
     public String getStatus() {
         return this.Status;
@@ -440,8 +445,7 @@ CLOSED表示已关闭；
 ADJUSTING表示配置变更中；
 ISOLATING表示隔离中；
 ISOLATED表示已隔离；
-CLONING表示复制中；
-UNKNOWN表示未知状态。
+CLONING表示复制中。
      * @param Status 通道状态。其中：
 RUNNING表示运行中；
 CREATING表示创建中；
@@ -452,8 +456,7 @@ CLOSED表示已关闭；
 ADJUSTING表示配置变更中；
 ISOLATING表示隔离中；
 ISOLATED表示已隔离；
-CLONING表示复制中；
-UNKNOWN表示未知状态。
+CLONING表示复制中。
      */
     public void setStatus(String Status) {
         this.Status = Status;
@@ -816,9 +819,9 @@ UNKNOWN表示未知状态。
     }
 
     /**
-     * Get 网络类型：normal、cn2
+     * Get 网络类型：normal表示常规BGP，cn2表示精品BGP，triple表示三网
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return NetworkType 网络类型：normal、cn2
+     * @return NetworkType 网络类型：normal表示常规BGP，cn2表示精品BGP，triple表示三网
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNetworkType() {
@@ -826,9 +829,9 @@ UNKNOWN表示未知状态。
     }
 
     /**
-     * Set 网络类型：normal、cn2
+     * Set 网络类型：normal表示常规BGP，cn2表示精品BGP，triple表示三网
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param NetworkType 网络类型：normal、cn2
+     * @param NetworkType 网络类型：normal表示常规BGP，cn2表示精品BGP，triple表示三网
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNetworkType(String NetworkType) {
@@ -873,6 +876,26 @@ UNKNOWN表示未知状态。
      */
     public void setBanStatus(String BanStatus) {
         this.BanStatus = BanStatus;
+    }
+
+    /**
+     * Get IP列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IPList IP列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public IPDetail [] getIPList() {
+        return this.IPList;
+    }
+
+    /**
+     * Set IP列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IPList IP列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIPList(IPDetail [] IPList) {
+        this.IPList = IPList;
     }
 
     public ProxyInfo() {
@@ -988,6 +1011,12 @@ UNKNOWN表示未知状态。
         if (source.BanStatus != null) {
             this.BanStatus = new String(source.BanStatus);
         }
+        if (source.IPList != null) {
+            this.IPList = new IPDetail[source.IPList.length];
+            for (int i = 0; i < source.IPList.length; i++) {
+                this.IPList[i] = new IPDetail(source.IPList[i]);
+            }
+        }
     }
 
 
@@ -1026,6 +1055,7 @@ UNKNOWN表示未知状态。
         this.setParamSimple(map, prefix + "NetworkType", this.NetworkType);
         this.setParamSimple(map, prefix + "PackageType", this.PackageType);
         this.setParamSimple(map, prefix + "BanStatus", this.BanStatus);
+        this.setParamArrayObj(map, prefix + "IPList.", this.IPList);
 
     }
 }

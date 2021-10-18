@@ -727,6 +727,26 @@ public class CdnClient extends AbstractClient{
     }
 
     /**
+     *查询在SCDN IP安全策略
+     * @param req DescribeScdnIpStrategyRequest
+     * @return DescribeScdnIpStrategyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeScdnIpStrategyResponse DescribeScdnIpStrategy(DescribeScdnIpStrategyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeScdnIpStrategyResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeScdnIpStrategyResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeScdnIpStrategy");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取SCDN的Top数据
      * @param req DescribeScdnTopDataRequest
      * @return DescribeScdnTopDataResponse

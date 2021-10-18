@@ -37,6 +37,13 @@ public class ListDiagnoseReportRequest extends AbstractModel{
     private String DiagnoseLink;
 
     /**
+    * 请求源带协议头，形如：https://console.cloud.tencent.com
+    */
+    @SerializedName("Origin")
+    @Expose
+    private String Origin;
+
+    /**
      * Get 用于搜索诊断URL的关键字，不填时返回用户所有的诊断任务。 
      * @return KeyWords 用于搜索诊断URL的关键字，不填时返回用户所有的诊断任务。
      */
@@ -68,6 +75,22 @@ public class ListDiagnoseReportRequest extends AbstractModel{
         this.DiagnoseLink = DiagnoseLink;
     }
 
+    /**
+     * Get 请求源带协议头，形如：https://console.cloud.tencent.com 
+     * @return Origin 请求源带协议头，形如：https://console.cloud.tencent.com
+     */
+    public String getOrigin() {
+        return this.Origin;
+    }
+
+    /**
+     * Set 请求源带协议头，形如：https://console.cloud.tencent.com
+     * @param Origin 请求源带协议头，形如：https://console.cloud.tencent.com
+     */
+    public void setOrigin(String Origin) {
+        this.Origin = Origin;
+    }
+
     public ListDiagnoseReportRequest() {
     }
 
@@ -82,6 +105,9 @@ public class ListDiagnoseReportRequest extends AbstractModel{
         if (source.DiagnoseLink != null) {
             this.DiagnoseLink = new String(source.DiagnoseLink);
         }
+        if (source.Origin != null) {
+            this.Origin = new String(source.Origin);
+        }
     }
 
 
@@ -91,6 +117,7 @@ public class ListDiagnoseReportRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "KeyWords", this.KeyWords);
         this.setParamSimple(map, prefix + "DiagnoseLink", this.DiagnoseLink);
+        this.setParamSimple(map, prefix + "Origin", this.Origin);
 
     }
 }

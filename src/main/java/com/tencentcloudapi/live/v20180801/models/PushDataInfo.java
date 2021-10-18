@@ -58,7 +58,7 @@ public class PushDataInfo extends AbstractModel{
     private Long VideoFps;
 
     /**
-    * 推流视频码率，单位: bps。
+    * 推流视频码率，单位: Kbps。
     */
     @SerializedName("VideoSpeed")
     @Expose
@@ -72,7 +72,7 @@ public class PushDataInfo extends AbstractModel{
     private Long AudioFps;
 
     /**
-    * 推流音频码率，单位: bps。
+    * 推流音频码率，单位: Kbps。
     */
     @SerializedName("AudioSpeed")
     @Expose
@@ -224,16 +224,16 @@ public class PushDataInfo extends AbstractModel{
     }
 
     /**
-     * Get 推流视频码率，单位: bps。 
-     * @return VideoSpeed 推流视频码率，单位: bps。
+     * Get 推流视频码率，单位: Kbps。 
+     * @return VideoSpeed 推流视频码率，单位: Kbps。
      */
     public Long getVideoSpeed() {
         return this.VideoSpeed;
     }
 
     /**
-     * Set 推流视频码率，单位: bps。
-     * @param VideoSpeed 推流视频码率，单位: bps。
+     * Set 推流视频码率，单位: Kbps。
+     * @param VideoSpeed 推流视频码率，单位: Kbps。
      */
     public void setVideoSpeed(Long VideoSpeed) {
         this.VideoSpeed = VideoSpeed;
@@ -256,16 +256,16 @@ public class PushDataInfo extends AbstractModel{
     }
 
     /**
-     * Get 推流音频码率，单位: bps。 
-     * @return AudioSpeed 推流音频码率，单位: bps。
+     * Get 推流音频码率，单位: Kbps。 
+     * @return AudioSpeed 推流音频码率，单位: Kbps。
      */
     public Long getAudioSpeed() {
         return this.AudioSpeed;
     }
 
     /**
-     * Set 推流音频码率，单位: bps。
-     * @param AudioSpeed 推流音频码率，单位: bps。
+     * Set 推流音频码率，单位: Kbps。
+     * @param AudioSpeed 推流音频码率，单位: Kbps。
      */
     public void setAudioSpeed(Long AudioSpeed) {
         this.AudioSpeed = AudioSpeed;

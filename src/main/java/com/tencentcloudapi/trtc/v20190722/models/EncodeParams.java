@@ -107,6 +107,13 @@ public class EncodeParams extends AbstractModel{
     private Long AudioCodec;
 
     /**
+    * 混流-输出流背景图片URL地址，支持png、jpg、jpeg、bmp格式，暂不支持透明通道。URL链接长度限制为512字节。BackgroundImageUrl和BackgroundImageId参数都填时，以BackgroundImageUrl为准。图片大小限制不超过10MB。
+    */
+    @SerializedName("BackgroundImageUrl")
+    @Expose
+    private String BackgroundImageUrl;
+
+    /**
      * Get 混流-输出流音频采样率。取值为[48000, 44100, 32000, 24000, 16000, 8000]，单位是Hz。 
      * @return AudioSampleRate 混流-输出流音频采样率。取值为[48000, 44100, 32000, 24000, 16000, 8000]，单位是Hz。
      */
@@ -310,6 +317,22 @@ public class EncodeParams extends AbstractModel{
         this.AudioCodec = AudioCodec;
     }
 
+    /**
+     * Get 混流-输出流背景图片URL地址，支持png、jpg、jpeg、bmp格式，暂不支持透明通道。URL链接长度限制为512字节。BackgroundImageUrl和BackgroundImageId参数都填时，以BackgroundImageUrl为准。图片大小限制不超过10MB。 
+     * @return BackgroundImageUrl 混流-输出流背景图片URL地址，支持png、jpg、jpeg、bmp格式，暂不支持透明通道。URL链接长度限制为512字节。BackgroundImageUrl和BackgroundImageId参数都填时，以BackgroundImageUrl为准。图片大小限制不超过10MB。
+     */
+    public String getBackgroundImageUrl() {
+        return this.BackgroundImageUrl;
+    }
+
+    /**
+     * Set 混流-输出流背景图片URL地址，支持png、jpg、jpeg、bmp格式，暂不支持透明通道。URL链接长度限制为512字节。BackgroundImageUrl和BackgroundImageId参数都填时，以BackgroundImageUrl为准。图片大小限制不超过10MB。
+     * @param BackgroundImageUrl 混流-输出流背景图片URL地址，支持png、jpg、jpeg、bmp格式，暂不支持透明通道。URL链接长度限制为512字节。BackgroundImageUrl和BackgroundImageId参数都填时，以BackgroundImageUrl为准。图片大小限制不超过10MB。
+     */
+    public void setBackgroundImageUrl(String BackgroundImageUrl) {
+        this.BackgroundImageUrl = BackgroundImageUrl;
+    }
+
     public EncodeParams() {
     }
 
@@ -351,6 +374,9 @@ public class EncodeParams extends AbstractModel{
         if (source.AudioCodec != null) {
             this.AudioCodec = new Long(source.AudioCodec);
         }
+        if (source.BackgroundImageUrl != null) {
+            this.BackgroundImageUrl = new String(source.BackgroundImageUrl);
+        }
     }
 
 
@@ -369,6 +395,7 @@ public class EncodeParams extends AbstractModel{
         this.setParamSimple(map, prefix + "BackgroundColor", this.BackgroundColor);
         this.setParamSimple(map, prefix + "BackgroundImageId", this.BackgroundImageId);
         this.setParamSimple(map, prefix + "AudioCodec", this.AudioCodec);
+        this.setParamSimple(map, prefix + "BackgroundImageUrl", this.BackgroundImageUrl);
 
     }
 }

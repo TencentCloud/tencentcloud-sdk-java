@@ -37,6 +37,27 @@ public class RegionDetail extends AbstractModel{
     private String RegionName;
 
     /**
+    * 机房所属大区
+    */
+    @SerializedName("RegionArea")
+    @Expose
+    private String RegionArea;
+
+    /**
+    * 机房所属大区名
+    */
+    @SerializedName("RegionAreaName")
+    @Expose
+    private String RegionAreaName;
+
+    /**
+    * 机房类型, dc表示DataCenter数据中心, ec表示EdgeComputing边缘节点
+    */
+    @SerializedName("IDCType")
+    @Expose
+    private String IDCType;
+
+    /**
      * Get 区域ID 
      * @return RegionId 区域ID
      */
@@ -68,6 +89,54 @@ public class RegionDetail extends AbstractModel{
         this.RegionName = RegionName;
     }
 
+    /**
+     * Get 机房所属大区 
+     * @return RegionArea 机房所属大区
+     */
+    public String getRegionArea() {
+        return this.RegionArea;
+    }
+
+    /**
+     * Set 机房所属大区
+     * @param RegionArea 机房所属大区
+     */
+    public void setRegionArea(String RegionArea) {
+        this.RegionArea = RegionArea;
+    }
+
+    /**
+     * Get 机房所属大区名 
+     * @return RegionAreaName 机房所属大区名
+     */
+    public String getRegionAreaName() {
+        return this.RegionAreaName;
+    }
+
+    /**
+     * Set 机房所属大区名
+     * @param RegionAreaName 机房所属大区名
+     */
+    public void setRegionAreaName(String RegionAreaName) {
+        this.RegionAreaName = RegionAreaName;
+    }
+
+    /**
+     * Get 机房类型, dc表示DataCenter数据中心, ec表示EdgeComputing边缘节点 
+     * @return IDCType 机房类型, dc表示DataCenter数据中心, ec表示EdgeComputing边缘节点
+     */
+    public String getIDCType() {
+        return this.IDCType;
+    }
+
+    /**
+     * Set 机房类型, dc表示DataCenter数据中心, ec表示EdgeComputing边缘节点
+     * @param IDCType 机房类型, dc表示DataCenter数据中心, ec表示EdgeComputing边缘节点
+     */
+    public void setIDCType(String IDCType) {
+        this.IDCType = IDCType;
+    }
+
     public RegionDetail() {
     }
 
@@ -82,6 +151,15 @@ public class RegionDetail extends AbstractModel{
         if (source.RegionName != null) {
             this.RegionName = new String(source.RegionName);
         }
+        if (source.RegionArea != null) {
+            this.RegionArea = new String(source.RegionArea);
+        }
+        if (source.RegionAreaName != null) {
+            this.RegionAreaName = new String(source.RegionAreaName);
+        }
+        if (source.IDCType != null) {
+            this.IDCType = new String(source.IDCType);
+        }
     }
 
 
@@ -91,6 +169,9 @@ public class RegionDetail extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RegionId", this.RegionId);
         this.setParamSimple(map, prefix + "RegionName", this.RegionName);
+        this.setParamSimple(map, prefix + "RegionArea", this.RegionArea);
+        this.setParamSimple(map, prefix + "RegionAreaName", this.RegionAreaName);
+        this.setParamSimple(map, prefix + "IDCType", this.IDCType);
 
     }
 }

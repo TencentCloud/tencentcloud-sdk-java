@@ -80,6 +80,14 @@ public class Environment extends AbstractModel{
     private Long TopicNum;
 
     /**
+    * 消息保留策略
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RetentionPolicy")
+    @Expose
+    private RetentionPolicy RetentionPolicy;
+
+    /**
      * Get 命名空间名称 
      * @return EnvironmentId 命名空间名称
      */
@@ -211,6 +219,26 @@ public class Environment extends AbstractModel{
         this.TopicNum = TopicNum;
     }
 
+    /**
+     * Get 消息保留策略
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RetentionPolicy 消息保留策略
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public RetentionPolicy getRetentionPolicy() {
+        return this.RetentionPolicy;
+    }
+
+    /**
+     * Set 消息保留策略
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RetentionPolicy 消息保留策略
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRetentionPolicy(RetentionPolicy RetentionPolicy) {
+        this.RetentionPolicy = RetentionPolicy;
+    }
+
     public Environment() {
     }
 
@@ -243,6 +271,9 @@ public class Environment extends AbstractModel{
         if (source.TopicNum != null) {
             this.TopicNum = new Long(source.TopicNum);
         }
+        if (source.RetentionPolicy != null) {
+            this.RetentionPolicy = new RetentionPolicy(source.RetentionPolicy);
+        }
     }
 
 
@@ -258,6 +289,7 @@ public class Environment extends AbstractModel{
         this.setParamSimple(map, prefix + "NamespaceId", this.NamespaceId);
         this.setParamSimple(map, prefix + "NamespaceName", this.NamespaceName);
         this.setParamSimple(map, prefix + "TopicNum", this.TopicNum);
+        this.setParamObj(map, prefix + "RetentionPolicy.", this.RetentionPolicy);
 
     }
 }

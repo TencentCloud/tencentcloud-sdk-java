@@ -30,6 +30,7 @@ public class EncryptedPhoneVerificationResponse extends AbstractModel{
 
 【不收费结果码】
 -7: 身份证号码有误
+-8: 参数错误
 -9: 没有记录
 -11: 验证中心服务繁忙
     */
@@ -59,6 +60,7 @@ public class EncryptedPhoneVerificationResponse extends AbstractModel{
 
 【不收费结果码】
 -7: 身份证号码有误
+-8: 参数错误
 -9: 没有记录
 -11: 验证中心服务繁忙 
      * @return Result 认证结果码:
@@ -68,6 +70,7 @@ public class EncryptedPhoneVerificationResponse extends AbstractModel{
 
 【不收费结果码】
 -7: 身份证号码有误
+-8: 参数错误
 -9: 没有记录
 -11: 验证中心服务繁忙
      */
@@ -83,6 +86,7 @@ public class EncryptedPhoneVerificationResponse extends AbstractModel{
 
 【不收费结果码】
 -7: 身份证号码有误
+-8: 参数错误
 -9: 没有记录
 -11: 验证中心服务繁忙
      * @param Result 认证结果码:
@@ -92,6 +96,7 @@ public class EncryptedPhoneVerificationResponse extends AbstractModel{
 
 【不收费结果码】
 -7: 身份证号码有误
+-8: 参数错误
 -9: 没有记录
 -11: 验证中心服务繁忙
      */

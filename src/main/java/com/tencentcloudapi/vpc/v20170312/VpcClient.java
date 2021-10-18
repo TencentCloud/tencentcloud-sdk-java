@@ -101,6 +101,26 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
+     *增加模版对象中的IP地址、协议端口、IP地址组、协议端口组。当前仅支持北京、泰国、北美地域请求。
+     * @param req AddTemplateMemberRequest
+     * @return AddTemplateMemberResponse
+     * @throws TencentCloudSDKException
+     */
+    public AddTemplateMemberResponse AddTemplateMember(AddTemplateMemberRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AddTemplateMemberResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<AddTemplateMemberResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "AddTemplateMember");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口 (AllocateAddresses) 用于申请一个或多个[弹性公网IP](https://cloud.tencent.com/document/product/213/1941)（简称 EIP）。
 * EIP 是专为动态云计算设计的静态 IP 地址。借助 EIP，您可以快速将 EIP 重新映射到您的另一个实例上，从而屏蔽实例故障。
 * 您的 EIP 与腾讯云账户相关联，而不是与某个实例相关联。在您选择显式释放该地址，或欠费超过24小时之前，它会一直与您的腾讯云账户保持关联。
@@ -1922,6 +1942,26 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
+     *删除模版对象中的IP地址、协议端口、IP地址组、协议端口组。当前仅支持北京、泰国、北美地域请求。
+     * @param req DeleteTemplateMemberRequest
+     * @return DeleteTemplateMemberResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteTemplateMemberResponse DeleteTemplateMember(DeleteTemplateMemberRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteTemplateMemberResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteTemplateMemberResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteTemplateMember");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（DeleteVpc）用于删除私有网络。
 * 删除前请确保 VPC 内已经没有相关资源，例如云服务器、云数据库、NoSQL、VPN网关、专线网关、负载均衡、对等连接、与之互通的基础网络设备等。
 * 删除私有网络是不可逆的操作，请谨慎处理。
@@ -2725,6 +2765,26 @@ public class VpcClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeNatGatewayDestinationIpPortTranslationNatRulesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeNatGatewayDestinationIpPortTranslationNatRules");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询专线绑定NAT的路由
+     * @param req DescribeNatGatewayDirectConnectGatewayRouteRequest
+     * @return DescribeNatGatewayDirectConnectGatewayRouteResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeNatGatewayDirectConnectGatewayRouteResponse DescribeNatGatewayDirectConnectGatewayRoute(DescribeNatGatewayDirectConnectGatewayRouteRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeNatGatewayDirectConnectGatewayRouteResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeNatGatewayDirectConnectGatewayRouteResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeNatGatewayDirectConnectGatewayRoute");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -4743,6 +4803,26 @@ LimitTypes取值范围：
     }
 
     /**
+     *修改模版对象中的IP地址、协议端口、IP地址组、协议端口组。当前仅支持北京、泰国、北美地域请求。
+     * @param req ModifyTemplateMemberRequest
+     * @return ModifyTemplateMemberResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyTemplateMemberResponse ModifyTemplateMember(ModifyTemplateMemberRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyTemplateMemberResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyTemplateMemberResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyTemplateMember");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（ModifyVpcAttribute）用于修改私有网络（VPC）的相关属性。
      * @param req ModifyVpcAttributeRequest
      * @return ModifyVpcAttributeResponse
@@ -4917,6 +4997,26 @@ LimitTypes取值范围：
                 Type type = new TypeToken<JsonResponseModel<NotifyRoutesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "NotifyRoutes");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *刷新专线直连nat路由，更新nat到专线的路由表
+     * @param req RefreshDirectConnectGatewayRouteToNatGatewayRequest
+     * @return RefreshDirectConnectGatewayRouteToNatGatewayResponse
+     * @throws TencentCloudSDKException
+     */
+    public RefreshDirectConnectGatewayRouteToNatGatewayResponse RefreshDirectConnectGatewayRouteToNatGateway(RefreshDirectConnectGatewayRouteToNatGatewayRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RefreshDirectConnectGatewayRouteToNatGatewayResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<RefreshDirectConnectGatewayRouteToNatGatewayResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "RefreshDirectConnectGatewayRouteToNatGateway");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

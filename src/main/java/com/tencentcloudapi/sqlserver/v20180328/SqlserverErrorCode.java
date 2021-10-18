@@ -87,6 +87,9 @@ public enum SqlserverErrorCode {
     // 账户备注内容不合法。
      INVALIDPARAMETERVALUE_ACCOUNTREMARKISILLEGAL("InvalidParameterValue.AccountRemarkIsIllegal"),
      
+    // 管理员账号只能申请一个。
+     INVALIDPARAMETERVALUE_ADMINACCOUNTNOTUNIQUE("InvalidParameterValue.AdminAccountNotUnique"),
+     
     // 备份名称存在非法字符。
      INVALIDPARAMETERVALUE_BACKUPNAMEISILLEGAL("InvalidParameterValue.BackupNameIsIllegal"),
      

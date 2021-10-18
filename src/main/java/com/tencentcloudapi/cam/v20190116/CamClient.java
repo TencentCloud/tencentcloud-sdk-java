@@ -279,6 +279,26 @@ public class CamClient extends AbstractClient{
     }
 
     /**
+     *创建用户SAML配置
+     * @param req CreateUserSAMLConfigRequest
+     * @return CreateUserSAMLConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateUserSAMLConfigResponse CreateUserSAMLConfig(CreateUserSAMLConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateUserSAMLConfigResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateUserSAMLConfigResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateUserSAMLConfig");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *删除用户组
      * @param req DeleteGroupRequest
      * @return DeleteGroupResponse
@@ -551,6 +571,26 @@ public class CamClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeSubAccountsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeSubAccounts");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询用户SAML配置
+     * @param req DescribeUserSAMLConfigRequest
+     * @return DescribeUserSAMLConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeUserSAMLConfigResponse DescribeUserSAMLConfig(DescribeUserSAMLConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeUserSAMLConfigResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeUserSAMLConfigResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeUserSAMLConfig");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1352,6 +1392,26 @@ public class CamClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<UpdateUserResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "UpdateUser");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改用户SAML配置
+     * @param req UpdateUserSAMLConfigRequest
+     * @return UpdateUserSAMLConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateUserSAMLConfigResponse UpdateUserSAMLConfig(UpdateUserSAMLConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpdateUserSAMLConfigResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpdateUserSAMLConfigResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UpdateUserSAMLConfig");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

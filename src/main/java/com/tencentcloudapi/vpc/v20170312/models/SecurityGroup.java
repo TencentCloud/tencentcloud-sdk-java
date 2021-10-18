@@ -72,6 +72,14 @@ public class SecurityGroup extends AbstractModel{
     private Tag [] TagSet;
 
     /**
+    * 安全组更新时间。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UpdateTime")
+    @Expose
+    private String UpdateTime;
+
+    /**
      * Get 安全组实例ID，例如：sg-ohuuioma。 
      * @return SecurityGroupId 安全组实例ID，例如：sg-ohuuioma。
      */
@@ -183,6 +191,26 @@ public class SecurityGroup extends AbstractModel{
         this.TagSet = TagSet;
     }
 
+    /**
+     * Get 安全组更新时间。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UpdateTime 安全组更新时间。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getUpdateTime() {
+        return this.UpdateTime;
+    }
+
+    /**
+     * Set 安全组更新时间。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UpdateTime 安全组更新时间。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUpdateTime(String UpdateTime) {
+        this.UpdateTime = UpdateTime;
+    }
+
     public SecurityGroup() {
     }
 
@@ -215,6 +243,9 @@ public class SecurityGroup extends AbstractModel{
                 this.TagSet[i] = new Tag(source.TagSet[i]);
             }
         }
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new String(source.UpdateTime);
+        }
     }
 
 
@@ -229,6 +260,7 @@ public class SecurityGroup extends AbstractModel{
         this.setParamSimple(map, prefix + "IsDefault", this.IsDefault);
         this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
         this.setParamArrayObj(map, prefix + "TagSet.", this.TagSet);
+        this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
 
     }
 }

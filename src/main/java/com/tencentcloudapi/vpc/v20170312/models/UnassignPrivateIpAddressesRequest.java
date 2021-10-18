@@ -37,6 +37,13 @@ public class UnassignPrivateIpAddressesRequest extends AbstractModel{
     private PrivateIpAddressSpecification [] PrivateIpAddresses;
 
     /**
+    * 网卡绑定的子机实例ID，该参数仅用于指定网卡退还IP并解绑子机的场景，如果不涉及解绑子机，请勿填写。
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
+
+    /**
      * Get 弹性网卡实例ID，例如：eni-m6dyj72l。 
      * @return NetworkInterfaceId 弹性网卡实例ID，例如：eni-m6dyj72l。
      */
@@ -68,6 +75,22 @@ public class UnassignPrivateIpAddressesRequest extends AbstractModel{
         this.PrivateIpAddresses = PrivateIpAddresses;
     }
 
+    /**
+     * Get 网卡绑定的子机实例ID，该参数仅用于指定网卡退还IP并解绑子机的场景，如果不涉及解绑子机，请勿填写。 
+     * @return InstanceId 网卡绑定的子机实例ID，该参数仅用于指定网卡退还IP并解绑子机的场景，如果不涉及解绑子机，请勿填写。
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set 网卡绑定的子机实例ID，该参数仅用于指定网卡退还IP并解绑子机的场景，如果不涉及解绑子机，请勿填写。
+     * @param InstanceId 网卡绑定的子机实例ID，该参数仅用于指定网卡退还IP并解绑子机的场景，如果不涉及解绑子机，请勿填写。
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
+    }
+
     public UnassignPrivateIpAddressesRequest() {
     }
 
@@ -85,6 +108,9 @@ public class UnassignPrivateIpAddressesRequest extends AbstractModel{
                 this.PrivateIpAddresses[i] = new PrivateIpAddressSpecification(source.PrivateIpAddresses[i]);
             }
         }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
     }
 
 
@@ -94,6 +120,7 @@ public class UnassignPrivateIpAddressesRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "NetworkInterfaceId", this.NetworkInterfaceId);
         this.setParamArrayObj(map, prefix + "PrivateIpAddresses.", this.PrivateIpAddresses);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
 
     }
 }

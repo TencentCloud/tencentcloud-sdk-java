@@ -30,14 +30,14 @@ public class ModifyCcnAttributeRequest extends AbstractModel{
     private String CcnId;
 
     /**
-    * CCN名称，最大长度不能超过60个字节。
+    * CCN名称，最大长度不能超过60个字节，限制：CcnName和CcnDescription必须至少选择一个参数输入，否则报错。
     */
     @SerializedName("CcnName")
     @Expose
     private String CcnName;
 
     /**
-    * CCN描述信息，最大长度不能超过100个字节。
+    * CCN描述信息，最大长度不能超过100个字节，限制：CcnName和CcnDescription必须至少选择一个参数输入，否则报错。
     */
     @SerializedName("CcnDescription")
     @Expose
@@ -60,32 +60,32 @@ public class ModifyCcnAttributeRequest extends AbstractModel{
     }
 
     /**
-     * Get CCN名称，最大长度不能超过60个字节。 
-     * @return CcnName CCN名称，最大长度不能超过60个字节。
+     * Get CCN名称，最大长度不能超过60个字节，限制：CcnName和CcnDescription必须至少选择一个参数输入，否则报错。 
+     * @return CcnName CCN名称，最大长度不能超过60个字节，限制：CcnName和CcnDescription必须至少选择一个参数输入，否则报错。
      */
     public String getCcnName() {
         return this.CcnName;
     }
 
     /**
-     * Set CCN名称，最大长度不能超过60个字节。
-     * @param CcnName CCN名称，最大长度不能超过60个字节。
+     * Set CCN名称，最大长度不能超过60个字节，限制：CcnName和CcnDescription必须至少选择一个参数输入，否则报错。
+     * @param CcnName CCN名称，最大长度不能超过60个字节，限制：CcnName和CcnDescription必须至少选择一个参数输入，否则报错。
      */
     public void setCcnName(String CcnName) {
         this.CcnName = CcnName;
     }
 
     /**
-     * Get CCN描述信息，最大长度不能超过100个字节。 
-     * @return CcnDescription CCN描述信息，最大长度不能超过100个字节。
+     * Get CCN描述信息，最大长度不能超过100个字节，限制：CcnName和CcnDescription必须至少选择一个参数输入，否则报错。 
+     * @return CcnDescription CCN描述信息，最大长度不能超过100个字节，限制：CcnName和CcnDescription必须至少选择一个参数输入，否则报错。
      */
     public String getCcnDescription() {
         return this.CcnDescription;
     }
 
     /**
-     * Set CCN描述信息，最大长度不能超过100个字节。
-     * @param CcnDescription CCN描述信息，最大长度不能超过100个字节。
+     * Set CCN描述信息，最大长度不能超过100个字节，限制：CcnName和CcnDescription必须至少选择一个参数输入，否则报错。
+     * @param CcnDescription CCN描述信息，最大长度不能超过100个字节，限制：CcnName和CcnDescription必须至少选择一个参数输入，否则报错。
      */
     public void setCcnDescription(String CcnDescription) {
         this.CcnDescription = CcnDescription;

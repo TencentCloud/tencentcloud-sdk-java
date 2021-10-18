@@ -479,6 +479,26 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
+     *本接口（DeleteTopicPolicy）用于删除Topic 
+     * @param req DeleteTopicPolicyRequest
+     * @return DeleteTopicPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteTopicPolicyResponse DeleteTopicPolicy(DeleteTopicPolicyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteTopicPolicyResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteTopicPolicyResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteTopicPolicy");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *删除规则
      * @param req DeleteTopicRuleRequest
      * @return DeleteTopicRuleResponse
@@ -751,6 +771,26 @@ public class IotexplorerClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeStudioProductResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeStudioProduct");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DescribeTopicPolicy）用于查看Topic详细信息 
+     * @param req DescribeTopicPolicyRequest
+     * @return DescribeTopicPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTopicPolicyResponse DescribeTopicPolicy(DescribeTopicPolicyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTopicPolicyResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTopicPolicyResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeTopicPolicy");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1039,6 +1079,26 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
+     *本接口（ListTopicPolicy）用于获取Topic列表
+     * @param req ListTopicPolicyRequest
+     * @return ListTopicPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListTopicPolicyResponse ListTopicPolicy(ListTopicPolicyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ListTopicPolicyResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ListTopicPolicyResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ListTopicPolicy");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *更新围栏绑定信息
      * @param req ModifyFenceBindRequest
      * @return ModifyFenceBindResponse
@@ -1211,6 +1271,26 @@ public class IotexplorerClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyStudioProductResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyStudioProduct");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（UpdateTopicPolicy）用于更新Topic信息 
+     * @param req ModifyTopicPolicyRequest
+     * @return ModifyTopicPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyTopicPolicyResponse ModifyTopicPolicy(ModifyTopicPolicyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyTopicPolicyResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyTopicPolicyResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyTopicPolicy");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

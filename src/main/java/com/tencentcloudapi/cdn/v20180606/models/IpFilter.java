@@ -60,6 +60,15 @@ blacklist：黑名单
     private IpFilterPathRule [] FilterRules;
 
     /**
+    * IP 黑白名单验证失败时返回的 HTTP Code
+合法值: 400~499
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ReturnCode")
+    @Expose
+    private Long ReturnCode;
+
+    /**
      * Get IP 黑白名单配置开关
 on：开启
 off：关闭 
@@ -159,6 +168,30 @@ blacklist：黑名单
         this.FilterRules = FilterRules;
     }
 
+    /**
+     * Get IP 黑白名单验证失败时返回的 HTTP Code
+合法值: 400~499
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ReturnCode IP 黑白名单验证失败时返回的 HTTP Code
+合法值: 400~499
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getReturnCode() {
+        return this.ReturnCode;
+    }
+
+    /**
+     * Set IP 黑白名单验证失败时返回的 HTTP Code
+合法值: 400~499
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ReturnCode IP 黑白名单验证失败时返回的 HTTP Code
+合法值: 400~499
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setReturnCode(Long ReturnCode) {
+        this.ReturnCode = ReturnCode;
+    }
+
     public IpFilter() {
     }
 
@@ -185,6 +218,9 @@ blacklist：黑名单
                 this.FilterRules[i] = new IpFilterPathRule(source.FilterRules[i]);
             }
         }
+        if (source.ReturnCode != null) {
+            this.ReturnCode = new Long(source.ReturnCode);
+        }
     }
 
 
@@ -196,6 +232,7 @@ blacklist：黑名单
         this.setParamSimple(map, prefix + "FilterType", this.FilterType);
         this.setParamArraySimple(map, prefix + "Filters.", this.Filters);
         this.setParamArrayObj(map, prefix + "FilterRules.", this.FilterRules);
+        this.setParamSimple(map, prefix + "ReturnCode", this.ReturnCode);
 
     }
 }

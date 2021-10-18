@@ -44,6 +44,18 @@ public class DescribeBillSummaryByProductRequest extends AbstractModel{
     private String PayerUin;
 
     /**
+    * 款项类别，与L0账单上的汇总类别对应。
+此参数自账单3.0（即2021-05）之后开始生效。
+枚举值：
+consume-消费
+refund-退款
+adjustment-调账
+    */
+    @SerializedName("PayType")
+    @Expose
+    private String PayType;
+
+    /**
      * Get 目前必须和EndTime相同月份，不支持跨月查询，且查询结果是整月数据，例如 BeginTime为2018-09，EndTime 为 2018-09，查询结果是 2018 年 9 月数据。 
      * @return BeginTime 目前必须和EndTime相同月份，不支持跨月查询，且查询结果是整月数据，例如 BeginTime为2018-09，EndTime 为 2018-09，查询结果是 2018 年 9 月数据。
      */
@@ -91,6 +103,42 @@ public class DescribeBillSummaryByProductRequest extends AbstractModel{
         this.PayerUin = PayerUin;
     }
 
+    /**
+     * Get 款项类别，与L0账单上的汇总类别对应。
+此参数自账单3.0（即2021-05）之后开始生效。
+枚举值：
+consume-消费
+refund-退款
+adjustment-调账 
+     * @return PayType 款项类别，与L0账单上的汇总类别对应。
+此参数自账单3.0（即2021-05）之后开始生效。
+枚举值：
+consume-消费
+refund-退款
+adjustment-调账
+     */
+    public String getPayType() {
+        return this.PayType;
+    }
+
+    /**
+     * Set 款项类别，与L0账单上的汇总类别对应。
+此参数自账单3.0（即2021-05）之后开始生效。
+枚举值：
+consume-消费
+refund-退款
+adjustment-调账
+     * @param PayType 款项类别，与L0账单上的汇总类别对应。
+此参数自账单3.0（即2021-05）之后开始生效。
+枚举值：
+consume-消费
+refund-退款
+adjustment-调账
+     */
+    public void setPayType(String PayType) {
+        this.PayType = PayType;
+    }
+
     public DescribeBillSummaryByProductRequest() {
     }
 
@@ -108,6 +156,9 @@ public class DescribeBillSummaryByProductRequest extends AbstractModel{
         if (source.PayerUin != null) {
             this.PayerUin = new String(source.PayerUin);
         }
+        if (source.PayType != null) {
+            this.PayType = new String(source.PayType);
+        }
     }
 
 
@@ -118,6 +169,7 @@ public class DescribeBillSummaryByProductRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "BeginTime", this.BeginTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamSimple(map, prefix + "PayerUin", this.PayerUin);
+        this.setParamSimple(map, prefix + "PayType", this.PayType);
 
     }
 }

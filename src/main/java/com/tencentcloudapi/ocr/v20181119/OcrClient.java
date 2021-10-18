@@ -1159,6 +1159,26 @@ public class OcrClient extends AbstractClient{
     }
 
     /**
+     *本接口支持网约车行程单关键字段的识别，包括行程起止日期、上车时间、起点、终点、里程、金额等字段。
+     * @param req RecognizeOnlineTaxiItineraryOCRRequest
+     * @return RecognizeOnlineTaxiItineraryOCRResponse
+     * @throws TencentCloudSDKException
+     */
+    public RecognizeOnlineTaxiItineraryOCRResponse RecognizeOnlineTaxiItineraryOCR(RecognizeOnlineTaxiItineraryOCRRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RecognizeOnlineTaxiItineraryOCRResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<RecognizeOnlineTaxiItineraryOCRResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "RecognizeOnlineTaxiItineraryOCR");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口支持中英文图片/ PDF内常规表格、无线表格、多表格的检测和识别，支持日文有线表格识别，返回每个单元格的文字内容，支持旋转的表格图片识别，且支持将识别结果保存为 Excel 格式。
      * @param req RecognizeTableOCRRequest
      * @return RecognizeTableOCRResponse

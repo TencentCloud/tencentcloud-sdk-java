@@ -30,6 +30,13 @@ public class CreateDiagnoseUrlRequest extends AbstractModel{
     private String Url;
 
     /**
+    * 请求源带协议头，形如：https://console.cloud.tencent.com
+    */
+    @SerializedName("Origin")
+    @Expose
+    private String Origin;
+
+    /**
      * Get 需诊断的url，形如：http://www.test.com/test.txt。 
      * @return Url 需诊断的url，形如：http://www.test.com/test.txt。
      */
@@ -45,6 +52,22 @@ public class CreateDiagnoseUrlRequest extends AbstractModel{
         this.Url = Url;
     }
 
+    /**
+     * Get 请求源带协议头，形如：https://console.cloud.tencent.com 
+     * @return Origin 请求源带协议头，形如：https://console.cloud.tencent.com
+     */
+    public String getOrigin() {
+        return this.Origin;
+    }
+
+    /**
+     * Set 请求源带协议头，形如：https://console.cloud.tencent.com
+     * @param Origin 请求源带协议头，形如：https://console.cloud.tencent.com
+     */
+    public void setOrigin(String Origin) {
+        this.Origin = Origin;
+    }
+
     public CreateDiagnoseUrlRequest() {
     }
 
@@ -56,6 +79,9 @@ public class CreateDiagnoseUrlRequest extends AbstractModel{
         if (source.Url != null) {
             this.Url = new String(source.Url);
         }
+        if (source.Origin != null) {
+            this.Origin = new String(source.Origin);
+        }
     }
 
 
@@ -64,6 +90,7 @@ public class CreateDiagnoseUrlRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Url", this.Url);
+        this.setParamSimple(map, prefix + "Origin", this.Origin);
 
     }
 }

@@ -79,6 +79,14 @@ public class ZoneInfo extends AbstractModel{
     private String SoldOut;
 
     /**
+    * 标准版售罄信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SalesInfo")
+    @Expose
+    private SaleInfo [] SalesInfo;
+
+    /**
      * Get zone的id 
      * @return ZoneId zone的id
      */
@@ -206,6 +214,26 @@ public class ZoneInfo extends AbstractModel{
         this.SoldOut = SoldOut;
     }
 
+    /**
+     * Get 标准版售罄信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SalesInfo 标准版售罄信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public SaleInfo [] getSalesInfo() {
+        return this.SalesInfo;
+    }
+
+    /**
+     * Set 标准版售罄信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SalesInfo 标准版售罄信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSalesInfo(SaleInfo [] SalesInfo) {
+        this.SalesInfo = SalesInfo;
+    }
+
     public ZoneInfo() {
     }
 
@@ -238,6 +266,12 @@ public class ZoneInfo extends AbstractModel{
         if (source.SoldOut != null) {
             this.SoldOut = new String(source.SoldOut);
         }
+        if (source.SalesInfo != null) {
+            this.SalesInfo = new SaleInfo[source.SalesInfo.length];
+            for (int i = 0; i < source.SalesInfo.length; i++) {
+                this.SalesInfo[i] = new SaleInfo(source.SalesInfo[i]);
+            }
+        }
     }
 
 
@@ -253,6 +287,7 @@ public class ZoneInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "ZoneStatus", this.ZoneStatus);
         this.setParamSimple(map, prefix + "Exflag", this.Exflag);
         this.setParamSimple(map, prefix + "SoldOut", this.SoldOut);
+        this.setParamArrayObj(map, prefix + "SalesInfo.", this.SalesInfo);
 
     }
 }

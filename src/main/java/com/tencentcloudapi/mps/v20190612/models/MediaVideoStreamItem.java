@@ -82,6 +82,14 @@ public class MediaVideoStreamItem extends AbstractModel{
     private String ColorTransfer;
 
     /**
+    * HDR类型。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("HdrType")
+    @Expose
+    private String HdrType;
+
+    /**
      * Get 视频流的码率，单位：bps。 
      * @return Bitrate 视频流的码率，单位：bps。
      */
@@ -221,6 +229,26 @@ public class MediaVideoStreamItem extends AbstractModel{
         this.ColorTransfer = ColorTransfer;
     }
 
+    /**
+     * Get HDR类型。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return HdrType HDR类型。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getHdrType() {
+        return this.HdrType;
+    }
+
+    /**
+     * Set HDR类型。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param HdrType HDR类型。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setHdrType(String HdrType) {
+        this.HdrType = HdrType;
+    }
+
     public MediaVideoStreamItem() {
     }
 
@@ -253,6 +281,9 @@ public class MediaVideoStreamItem extends AbstractModel{
         if (source.ColorTransfer != null) {
             this.ColorTransfer = new String(source.ColorTransfer);
         }
+        if (source.HdrType != null) {
+            this.HdrType = new String(source.HdrType);
+        }
     }
 
 
@@ -268,6 +299,7 @@ public class MediaVideoStreamItem extends AbstractModel{
         this.setParamSimple(map, prefix + "ColorPrimaries", this.ColorPrimaries);
         this.setParamSimple(map, prefix + "ColorSpace", this.ColorSpace);
         this.setParamSimple(map, prefix + "ColorTransfer", this.ColorTransfer);
+        this.setParamSimple(map, prefix + "HdrType", this.HdrType);
 
     }
 }

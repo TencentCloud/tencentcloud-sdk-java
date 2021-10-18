@@ -81,6 +81,28 @@ IPAddressVersion - String - 是否必填：否 - （过滤条件）按照IP版�
     private Long Independent;
 
     /**
+    * 输出通道列表的排列顺序。取值范围：
+asc：升序排列
+desc：降序排列。
+默认为降序。
+    */
+    @SerializedName("Order")
+    @Expose
+    private String Order;
+
+    /**
+    * 通道列表排序的依据字段。取值范围：
+create_time：依据通道的创建时间排序
+proxy_id：依据通道的ID排序
+bandwidth：依据通道带宽上限排序
+concurrent_connections：依据通道并发排序
+默认按通道创建时间排序。
+    */
+    @SerializedName("OrderField")
+    @Expose
+    private String OrderField;
+
+    /**
      * Get （旧参数，请切换到ProxyIds）按照一个或者多个实例ID查询。每次请求的实例的上限为100。参数不支持同时指定InstanceIds和Filters。 
      * @return InstanceIds （旧参数，请切换到ProxyIds）按照一个或者多个实例ID查询。每次请求的实例的上限为100。参数不支持同时指定InstanceIds和Filters。
      */
@@ -228,6 +250,70 @@ IPAddressVersion - String - 是否必填：否 - （过滤条件）按照IP版�
         this.Independent = Independent;
     }
 
+    /**
+     * Get 输出通道列表的排列顺序。取值范围：
+asc：升序排列
+desc：降序排列。
+默认为降序。 
+     * @return Order 输出通道列表的排列顺序。取值范围：
+asc：升序排列
+desc：降序排列。
+默认为降序。
+     */
+    public String getOrder() {
+        return this.Order;
+    }
+
+    /**
+     * Set 输出通道列表的排列顺序。取值范围：
+asc：升序排列
+desc：降序排列。
+默认为降序。
+     * @param Order 输出通道列表的排列顺序。取值范围：
+asc：升序排列
+desc：降序排列。
+默认为降序。
+     */
+    public void setOrder(String Order) {
+        this.Order = Order;
+    }
+
+    /**
+     * Get 通道列表排序的依据字段。取值范围：
+create_time：依据通道的创建时间排序
+proxy_id：依据通道的ID排序
+bandwidth：依据通道带宽上限排序
+concurrent_connections：依据通道并发排序
+默认按通道创建时间排序。 
+     * @return OrderField 通道列表排序的依据字段。取值范围：
+create_time：依据通道的创建时间排序
+proxy_id：依据通道的ID排序
+bandwidth：依据通道带宽上限排序
+concurrent_connections：依据通道并发排序
+默认按通道创建时间排序。
+     */
+    public String getOrderField() {
+        return this.OrderField;
+    }
+
+    /**
+     * Set 通道列表排序的依据字段。取值范围：
+create_time：依据通道的创建时间排序
+proxy_id：依据通道的ID排序
+bandwidth：依据通道带宽上限排序
+concurrent_connections：依据通道并发排序
+默认按通道创建时间排序。
+     * @param OrderField 通道列表排序的依据字段。取值范围：
+create_time：依据通道的创建时间排序
+proxy_id：依据通道的ID排序
+bandwidth：依据通道带宽上限排序
+concurrent_connections：依据通道并发排序
+默认按通道创建时间排序。
+     */
+    public void setOrderField(String OrderField) {
+        this.OrderField = OrderField;
+    }
+
     public DescribeProxiesRequest() {
     }
 
@@ -269,6 +355,12 @@ IPAddressVersion - String - 是否必填：否 - （过滤条件）按照IP版�
         if (source.Independent != null) {
             this.Independent = new Long(source.Independent);
         }
+        if (source.Order != null) {
+            this.Order = new String(source.Order);
+        }
+        if (source.OrderField != null) {
+            this.OrderField = new String(source.OrderField);
+        }
     }
 
 
@@ -283,6 +375,8 @@ IPAddressVersion - String - 是否必填：否 - （过滤条件）按照IP版�
         this.setParamArraySimple(map, prefix + "ProxyIds.", this.ProxyIds);
         this.setParamArrayObj(map, prefix + "TagSet.", this.TagSet);
         this.setParamSimple(map, prefix + "Independent", this.Independent);
+        this.setParamSimple(map, prefix + "Order", this.Order);
+        this.setParamSimple(map, prefix + "OrderField", this.OrderField);
 
     }
 }

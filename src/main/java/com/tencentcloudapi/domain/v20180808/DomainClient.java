@@ -119,6 +119,26 @@ public class DomainClient extends AbstractClient{
     }
 
     /**
+     *此接口用于创建有效的手机、邮箱
+     * @param req CreatePhoneEmailRequest
+     * @return CreatePhoneEmailResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreatePhoneEmailResponse CreatePhoneEmail(CreatePhoneEmailRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreatePhoneEmailResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreatePhoneEmailResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreatePhoneEmail");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口 ( CreateTemplate ) 用于添加域名信息模板 。
      * @param req CreateTemplateRequest
      * @return CreateTemplateResponse
@@ -131,6 +151,26 @@ public class DomainClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreateTemplateResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "CreateTemplate");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *此接口用于删除已验证的手机邮箱
+     * @param req DeletePhoneEmailRequest
+     * @return DeletePhoneEmailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeletePhoneEmailResponse DeletePhoneEmail(DeletePhoneEmailRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeletePhoneEmailResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeletePhoneEmailResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeletePhoneEmail");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -261,6 +301,26 @@ public class DomainClient extends AbstractClient{
     }
 
     /**
+     *本接口用于获取已验证的手机邮箱列表
+     * @param req DescribePhoneEmailListRequest
+     * @return DescribePhoneEmailListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePhoneEmailListResponse DescribePhoneEmailList(DescribePhoneEmailListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribePhoneEmailListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribePhoneEmailListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribePhoneEmailList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口 (DescribeTemplate) 用于获取模板信息。
      * @param req DescribeTemplateRequest
      * @return DescribeTemplateResponse
@@ -355,6 +415,26 @@ public class DomainClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<RenewDomainBatchResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "RenewDomainBatch");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *此接口用于发送手机邮箱验证码。
+     * @param req SendPhoneEmailCodeRequest
+     * @return SendPhoneEmailCodeResponse
+     * @throws TencentCloudSDKException
+     */
+    public SendPhoneEmailCodeResponse SendPhoneEmailCode(SendPhoneEmailCodeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SendPhoneEmailCodeResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<SendPhoneEmailCodeResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "SendPhoneEmailCode");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

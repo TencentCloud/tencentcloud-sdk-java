@@ -1488,6 +1488,26 @@ public class CpdpClient extends AbstractClient{
     }
 
     /**
+     *云支付-查询订单付款状态
+     * @param req QueryOrderStatusRequest
+     * @return QueryOrderStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryOrderStatusResponse QueryOrderStatus(QueryOrderStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<QueryOrderStatusResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<QueryOrderStatusResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "QueryOrderStatus");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *跨境-查询汇出结果
      * @param req QueryOutwardOrderRequest
      * @return QueryOutwardOrderResponse
@@ -1828,6 +1848,26 @@ public class CpdpClient extends AbstractClient{
     }
 
     /**
+     *云支付Tlinx退款接口
+     * @param req RefundTlinxOrderRequest
+     * @return RefundTlinxOrderResponse
+     * @throws TencentCloudSDKException
+     */
+    public RefundTlinxOrderResponse RefundTlinxOrder(RefundTlinxOrderRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RefundTlinxOrderResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<RefundTlinxOrderResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "RefundTlinxOrder");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *商户查询是否签约和签约行为上报
      * @param req RegisterBehaviorRequest
      * @return RegisterBehaviorResponse
@@ -2080,6 +2120,26 @@ public class CpdpClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<UnifiedOrderResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "UnifiedOrder");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *云支付Tlinx统一下单接口
+     * @param req UnifiedTlinxOrderRequest
+     * @return UnifiedTlinxOrderResponse
+     * @throws TencentCloudSDKException
+     */
+    public UnifiedTlinxOrderResponse UnifiedTlinxOrder(UnifiedTlinxOrderRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UnifiedTlinxOrderResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UnifiedTlinxOrderResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UnifiedTlinxOrder");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

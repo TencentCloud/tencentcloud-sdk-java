@@ -58,6 +58,13 @@ public class WaterMarkParams extends AbstractModel{
     private Long LocationY;
 
     /**
+    * 混流-水印图片URL地址，支持png、jpg、jpeg、bmp格式，暂不支持透明通道。URL链接长度限制为512字节。WaterMarkUrl和WaterMarkId参数都填时，以WaterMarkUrl为准。图片大小限制不超过10MB。
+    */
+    @SerializedName("WaterMarkUrl")
+    @Expose
+    private String WaterMarkUrl;
+
+    /**
      * Get 混流-水印图片ID。取值为实时音视频控制台上传的图片ID。 
      * @return WaterMarkId 混流-水印图片ID。取值为实时音视频控制台上传的图片ID。
      */
@@ -137,6 +144,22 @@ public class WaterMarkParams extends AbstractModel{
         this.LocationY = LocationY;
     }
 
+    /**
+     * Get 混流-水印图片URL地址，支持png、jpg、jpeg、bmp格式，暂不支持透明通道。URL链接长度限制为512字节。WaterMarkUrl和WaterMarkId参数都填时，以WaterMarkUrl为准。图片大小限制不超过10MB。 
+     * @return WaterMarkUrl 混流-水印图片URL地址，支持png、jpg、jpeg、bmp格式，暂不支持透明通道。URL链接长度限制为512字节。WaterMarkUrl和WaterMarkId参数都填时，以WaterMarkUrl为准。图片大小限制不超过10MB。
+     */
+    public String getWaterMarkUrl() {
+        return this.WaterMarkUrl;
+    }
+
+    /**
+     * Set 混流-水印图片URL地址，支持png、jpg、jpeg、bmp格式，暂不支持透明通道。URL链接长度限制为512字节。WaterMarkUrl和WaterMarkId参数都填时，以WaterMarkUrl为准。图片大小限制不超过10MB。
+     * @param WaterMarkUrl 混流-水印图片URL地址，支持png、jpg、jpeg、bmp格式，暂不支持透明通道。URL链接长度限制为512字节。WaterMarkUrl和WaterMarkId参数都填时，以WaterMarkUrl为准。图片大小限制不超过10MB。
+     */
+    public void setWaterMarkUrl(String WaterMarkUrl) {
+        this.WaterMarkUrl = WaterMarkUrl;
+    }
+
     public WaterMarkParams() {
     }
 
@@ -160,6 +183,9 @@ public class WaterMarkParams extends AbstractModel{
         if (source.LocationY != null) {
             this.LocationY = new Long(source.LocationY);
         }
+        if (source.WaterMarkUrl != null) {
+            this.WaterMarkUrl = new String(source.WaterMarkUrl);
+        }
     }
 
 
@@ -172,6 +198,7 @@ public class WaterMarkParams extends AbstractModel{
         this.setParamSimple(map, prefix + "WaterMarkHeight", this.WaterMarkHeight);
         this.setParamSimple(map, prefix + "LocationX", this.LocationX);
         this.setParamSimple(map, prefix + "LocationY", this.LocationY);
+        this.setParamSimple(map, prefix + "WaterMarkUrl", this.WaterMarkUrl);
 
     }
 }

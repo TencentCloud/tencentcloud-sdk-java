@@ -44,6 +44,13 @@ public class DescribeKTVMusicDetailResponse extends AbstractModel{
     private String LyricsUrl;
 
     /**
+    * 歌曲规格信息列表
+    */
+    @SerializedName("DefinitionInfoSet")
+    @Expose
+    private KTVMusicDefinitionInfo [] DefinitionInfoSet;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -99,6 +106,22 @@ public class DescribeKTVMusicDetailResponse extends AbstractModel{
     }
 
     /**
+     * Get 歌曲规格信息列表 
+     * @return DefinitionInfoSet 歌曲规格信息列表
+     */
+    public KTVMusicDefinitionInfo [] getDefinitionInfoSet() {
+        return this.DefinitionInfoSet;
+    }
+
+    /**
+     * Set 歌曲规格信息列表
+     * @param DefinitionInfoSet 歌曲规格信息列表
+     */
+    public void setDefinitionInfoSet(KTVMusicDefinitionInfo [] DefinitionInfoSet) {
+        this.DefinitionInfoSet = DefinitionInfoSet;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -131,6 +154,12 @@ public class DescribeKTVMusicDetailResponse extends AbstractModel{
         if (source.LyricsUrl != null) {
             this.LyricsUrl = new String(source.LyricsUrl);
         }
+        if (source.DefinitionInfoSet != null) {
+            this.DefinitionInfoSet = new KTVMusicDefinitionInfo[source.DefinitionInfoSet.length];
+            for (int i = 0; i < source.DefinitionInfoSet.length; i++) {
+                this.DefinitionInfoSet[i] = new KTVMusicDefinitionInfo(source.DefinitionInfoSet[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -144,6 +173,7 @@ public class DescribeKTVMusicDetailResponse extends AbstractModel{
         this.setParamObj(map, prefix + "KTVMusicBaseInfo.", this.KTVMusicBaseInfo);
         this.setParamSimple(map, prefix + "PlayToken", this.PlayToken);
         this.setParamSimple(map, prefix + "LyricsUrl", this.LyricsUrl);
+        this.setParamArrayObj(map, prefix + "DefinitionInfoSet.", this.DefinitionInfoSet);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

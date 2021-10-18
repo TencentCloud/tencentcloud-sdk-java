@@ -44,6 +44,14 @@ public class RealServerStatus extends AbstractModel{
     private String ProxyId;
 
     /**
+    * 绑定此源站的通道组ID，没有绑定时为空字符串。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("GroupId")
+    @Expose
+    private String GroupId;
+
+    /**
      * Get 源站ID。 
      * @return RealServerId 源站ID。
      */
@@ -91,6 +99,26 @@ public class RealServerStatus extends AbstractModel{
         this.ProxyId = ProxyId;
     }
 
+    /**
+     * Get 绑定此源站的通道组ID，没有绑定时为空字符串。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return GroupId 绑定此源站的通道组ID，没有绑定时为空字符串。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getGroupId() {
+        return this.GroupId;
+    }
+
+    /**
+     * Set 绑定此源站的通道组ID，没有绑定时为空字符串。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param GroupId 绑定此源站的通道组ID，没有绑定时为空字符串。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setGroupId(String GroupId) {
+        this.GroupId = GroupId;
+    }
+
     public RealServerStatus() {
     }
 
@@ -108,6 +136,9 @@ public class RealServerStatus extends AbstractModel{
         if (source.ProxyId != null) {
             this.ProxyId = new String(source.ProxyId);
         }
+        if (source.GroupId != null) {
+            this.GroupId = new String(source.GroupId);
+        }
     }
 
 
@@ -118,6 +149,7 @@ public class RealServerStatus extends AbstractModel{
         this.setParamSimple(map, prefix + "RealServerId", this.RealServerId);
         this.setParamSimple(map, prefix + "BindStatus", this.BindStatus);
         this.setParamSimple(map, prefix + "ProxyId", this.ProxyId);
+        this.setParamSimple(map, prefix + "GroupId", this.GroupId);
 
     }
 }
