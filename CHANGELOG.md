@@ -1,5 +1,31 @@
 # 本版本更新包含以下内容：
 
+## 物联网开发平台(iotexplorer) 版本：2019-04-23
+
+### 第 34 次发布
+
+发布时间：2021-10-19 08:09:21
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+修改接口：
+
+* [DescribeDevicePositionList](https://cloud.tencent.com/document/api/1081/62451)
+
+	* 新增入参：ProductIdList, CoordinateType, Offset, Limit
+
+	* 新增出参：Positions, Total
+
+
+新增数据结构：
+
+* [DevicePositionItem](https://cloud.tencent.com/document/api/1081/34988#DevicePositionItem)
+* [ProductDevicesPositionItem](https://cloud.tencent.com/document/api/1081/34988#ProductDevicesPositionItem)
+
+
+
 # 历次版本更新如下：
 
 ## 活动防刷(aa) 版本：2020-02-24
@@ -14046,7 +14072,7 @@
 
 	* 新增入参：UserDefineRule
 
-* [ModifyConfig](https://cloud.tencent.com/document/api/1451/50696)
+* [ModifyConfig](https://cloud.tencent.com/document/api/614/58614)
 
 	* 新增入参：UserDefineRule
 
@@ -14192,7 +14218,7 @@
 * [DescribeConfigs](https://cloud.tencent.com/document/api/1451/50689)
 * [DescribeLogsets](https://cloud.tencent.com/document/api/1451/48155)
 * [DescribeMachineGroupConfigs](https://cloud.tencent.com/document/api/1451/50710)
-* [ModifyConfig](https://cloud.tencent.com/document/api/1451/50696)
+* [ModifyConfig](https://cloud.tencent.com/document/api/614/58614)
 * [ModifyLogset](https://cloud.tencent.com/document/api/1451/64048)
 
 修改接口：
@@ -20741,7 +20767,7 @@
 * [DescribeTopSpaceSchemas](https://cloud.tencent.com/document/api/1133/57509)
 * [DescribeTopSpaceTableTimeSeries](https://cloud.tencent.com/document/api/1133/57510)
 * [DescribeTopSpaceTables](https://cloud.tencent.com/document/api/1133/57513)
-* [DescribeUserSqlAdvice](https://cloud.tencent.com/document/api/1133/57514)
+* [DescribeUserSqlAdvice](https://cloud.tencent.com/document/api/1130/57782)
 * [ModifyDiagDBInstanceConf](https://cloud.tencent.com/document/api/1133/57515)
 
 新增数据结构：
@@ -31064,6 +31090,28 @@
 
 
 ## 物联网开发平台(iotexplorer) 版本：2019-04-23
+
+### 第 34 次发布
+
+发布时间：2021-10-19 08:09:21
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+修改接口：
+
+* [DescribeDevicePositionList](https://cloud.tencent.com/document/api/1081/62451)
+
+	* 新增入参：ProductIdList, CoordinateType, Offset, Limit
+
+	* 新增出参：Positions, Total
+
+
+新增数据结构：
+
+* [[DevicePositionItem](https://cloud.tencent.com/document/api/1081/34988#DevicePositionItem)](https://cloud.tencent.com/document/api/1081/34988#[DevicePositionItem](https://cloud.tencent.com/document/api/1081/34988#DevicePositionItem))
+* [[ProductDevicesPositionItem](https://cloud.tencent.com/document/api/1081/34988#ProductDevicesPositionItem)](https://cloud.tencent.com/document/api/1081/34988#[ProductDevicesPositionItem](https://cloud.tencent.com/document/api/1081/34988#ProductDevicesPositionItem))
 
 ### 第 33 次发布
 
@@ -43448,7 +43496,7 @@
 * [PullSmsSendStatusByPhoneNumber](https://cloud.tencent.com/document/api/1103/51511)
 * [SendSms](https://cloud.tencent.com/document/api/1103/51355)
 * [SendStatusStatistics](https://cloud.tencent.com/document/api/1103/51514)
-* [SmsPackagesStatistics](https://cloud.tencent.com/document/api/1103/51509)
+* [SmsPackagesStatistics](https://cloud.tencent.com/document/api/382/55964)
 
 新增数据结构：
 

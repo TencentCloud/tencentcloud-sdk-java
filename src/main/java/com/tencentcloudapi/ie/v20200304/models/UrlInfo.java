@@ -41,7 +41,7 @@ public class UrlInfo extends AbstractModel{
     private Long Format;
 
     /**
-    * 指定请求资源时，HTTP头部host的值。
+    * 【不再支持】指定请求资源时，HTTP头部host的值。
     */
     @SerializedName("Host")
     @Expose
@@ -96,16 +96,16 @@ public class UrlInfo extends AbstractModel{
     }
 
     /**
-     * Get 指定请求资源时，HTTP头部host的值。 
-     * @return Host 指定请求资源时，HTTP头部host的值。
+     * Get 【不再支持】指定请求资源时，HTTP头部host的值。 
+     * @return Host 【不再支持】指定请求资源时，HTTP头部host的值。
      */
     public String getHost() {
         return this.Host;
     }
 
     /**
-     * Set 指定请求资源时，HTTP头部host的值。
-     * @param Host 指定请求资源时，HTTP头部host的值。
+     * Set 【不再支持】指定请求资源时，HTTP头部host的值。
+     * @param Host 【不再支持】指定请求资源时，HTTP头部host的值。
      */
     public void setHost(String Host) {
         this.Host = Host;

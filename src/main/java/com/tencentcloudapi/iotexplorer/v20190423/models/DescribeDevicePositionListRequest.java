@@ -22,6 +22,98 @@ import java.util.HashMap;
 
 public class DescribeDevicePositionListRequest extends AbstractModel{
 
+    /**
+    * 产品标识列表
+    */
+    @SerializedName("ProductIdList")
+    @Expose
+    private String [] ProductIdList;
+
+    /**
+    * 坐标类型
+    */
+    @SerializedName("CoordinateType")
+    @Expose
+    private Long CoordinateType;
+
+    /**
+    * 分页偏移
+    */
+    @SerializedName("Offset")
+    @Expose
+    private Long Offset;
+
+    /**
+    * 分页的大小
+    */
+    @SerializedName("Limit")
+    @Expose
+    private Long Limit;
+
+    /**
+     * Get 产品标识列表 
+     * @return ProductIdList 产品标识列表
+     */
+    public String [] getProductIdList() {
+        return this.ProductIdList;
+    }
+
+    /**
+     * Set 产品标识列表
+     * @param ProductIdList 产品标识列表
+     */
+    public void setProductIdList(String [] ProductIdList) {
+        this.ProductIdList = ProductIdList;
+    }
+
+    /**
+     * Get 坐标类型 
+     * @return CoordinateType 坐标类型
+     */
+    public Long getCoordinateType() {
+        return this.CoordinateType;
+    }
+
+    /**
+     * Set 坐标类型
+     * @param CoordinateType 坐标类型
+     */
+    public void setCoordinateType(Long CoordinateType) {
+        this.CoordinateType = CoordinateType;
+    }
+
+    /**
+     * Get 分页偏移 
+     * @return Offset 分页偏移
+     */
+    public Long getOffset() {
+        return this.Offset;
+    }
+
+    /**
+     * Set 分页偏移
+     * @param Offset 分页偏移
+     */
+    public void setOffset(Long Offset) {
+        this.Offset = Offset;
+    }
+
+    /**
+     * Get 分页的大小 
+     * @return Limit 分页的大小
+     */
+    public Long getLimit() {
+        return this.Limit;
+    }
+
+    /**
+     * Set 分页的大小
+     * @param Limit 分页的大小
+     */
+    public void setLimit(Long Limit) {
+        this.Limit = Limit;
+    }
+
     public DescribeDevicePositionListRequest() {
     }
 
@@ -30,6 +122,21 @@ public class DescribeDevicePositionListRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeDevicePositionListRequest(DescribeDevicePositionListRequest source) {
+        if (source.ProductIdList != null) {
+            this.ProductIdList = new String[source.ProductIdList.length];
+            for (int i = 0; i < source.ProductIdList.length; i++) {
+                this.ProductIdList[i] = new String(source.ProductIdList[i]);
+            }
+        }
+        if (source.CoordinateType != null) {
+            this.CoordinateType = new Long(source.CoordinateType);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
     }
 
 
@@ -37,6 +144,10 @@ public class DescribeDevicePositionListRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArraySimple(map, prefix + "ProductIdList.", this.ProductIdList);
+        this.setParamSimple(map, prefix + "CoordinateType", this.CoordinateType);
+        this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamSimple(map, prefix + "Limit", this.Limit);
 
     }
 }

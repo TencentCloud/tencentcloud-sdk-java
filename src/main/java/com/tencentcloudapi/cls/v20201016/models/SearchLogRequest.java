@@ -58,7 +58,7 @@ public class SearchLogRequest extends AbstractModel{
     private Long Limit;
 
     /**
-    * 加载更多日志时使用，透传上次返回的Context值，获取后续的日志内容
+    * 加载更多日志时使用，透传上次返回的Context值，获取后续的日志内容。过期时间1小时
     */
     @SerializedName("Context")
     @Expose
@@ -159,16 +159,16 @@ public class SearchLogRequest extends AbstractModel{
     }
 
     /**
-     * Get 加载更多日志时使用，透传上次返回的Context值，获取后续的日志内容 
-     * @return Context 加载更多日志时使用，透传上次返回的Context值，获取后续的日志内容
+     * Get 加载更多日志时使用，透传上次返回的Context值，获取后续的日志内容。过期时间1小时 
+     * @return Context 加载更多日志时使用，透传上次返回的Context值，获取后续的日志内容。过期时间1小时
      */
     public String getContext() {
         return this.Context;
     }
 
     /**
-     * Set 加载更多日志时使用，透传上次返回的Context值，获取后续的日志内容
-     * @param Context 加载更多日志时使用，透传上次返回的Context值，获取后续的日志内容
+     * Set 加载更多日志时使用，透传上次返回的Context值，获取后续的日志内容。过期时间1小时
+     * @param Context 加载更多日志时使用，透传上次返回的Context值，获取后续的日志内容。过期时间1小时
      */
     public void setContext(String Context) {
         this.Context = Context;

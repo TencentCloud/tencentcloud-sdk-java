@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class SearchLogResponse extends AbstractModel{
 
     /**
-    * 加载后续内容的Context
+    * 加载后续内容的Context，过期时间1小时
     */
     @SerializedName("Context")
     @Expose
@@ -91,16 +91,16 @@ public class SearchLogResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 加载后续内容的Context 
-     * @return Context 加载后续内容的Context
+     * Get 加载后续内容的Context，过期时间1小时 
+     * @return Context 加载后续内容的Context，过期时间1小时
      */
     public String getContext() {
         return this.Context;
     }
 
     /**
-     * Set 加载后续内容的Context
-     * @param Context 加载后续内容的Context
+     * Set 加载后续内容的Context，过期时间1小时
+     * @param Context 加载后续内容的Context，过期时间1小时
      */
     public void setContext(String Context) {
         this.Context = Context;

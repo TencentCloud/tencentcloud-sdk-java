@@ -82,7 +82,7 @@ IPAddressVersion - String - 是否必填：否 - （过滤条件）按照IP版�
 
     /**
     * 输出通道列表的排列顺序。取值范围：
-asc：升序排列
+asc：升序排列；
 desc：降序排列。
 默认为降序。
     */
@@ -92,10 +92,10 @@ desc：降序排列。
 
     /**
     * 通道列表排序的依据字段。取值范围：
-create_time：依据通道的创建时间排序
-proxy_id：依据通道的ID排序
-bandwidth：依据通道带宽上限排序
-concurrent_connections：依据通道并发排序
+create_time：依据通道的创建时间排序；
+proxy_id：依据通道的ID排序；
+bandwidth：依据通道带宽上限排序；
+concurrent_connections：依据通道并发排序；
 默认按通道创建时间排序。
     */
     @SerializedName("OrderField")
@@ -252,11 +252,11 @@ IPAddressVersion - String - 是否必填：否 - （过滤条件）按照IP版�
 
     /**
      * Get 输出通道列表的排列顺序。取值范围：
-asc：升序排列
+asc：升序排列；
 desc：降序排列。
 默认为降序。 
      * @return Order 输出通道列表的排列顺序。取值范围：
-asc：升序排列
+asc：升序排列；
 desc：降序排列。
 默认为降序。
      */
@@ -266,11 +266,11 @@ desc：降序排列。
 
     /**
      * Set 输出通道列表的排列顺序。取值范围：
-asc：升序排列
+asc：升序排列；
 desc：降序排列。
 默认为降序。
      * @param Order 输出通道列表的排列顺序。取值范围：
-asc：升序排列
+asc：升序排列；
 desc：降序排列。
 默认为降序。
      */
@@ -280,16 +280,16 @@ desc：降序排列。
 
     /**
      * Get 通道列表排序的依据字段。取值范围：
-create_time：依据通道的创建时间排序
-proxy_id：依据通道的ID排序
-bandwidth：依据通道带宽上限排序
-concurrent_connections：依据通道并发排序
+create_time：依据通道的创建时间排序；
+proxy_id：依据通道的ID排序；
+bandwidth：依据通道带宽上限排序；
+concurrent_connections：依据通道并发排序；
 默认按通道创建时间排序。 
      * @return OrderField 通道列表排序的依据字段。取值范围：
-create_time：依据通道的创建时间排序
-proxy_id：依据通道的ID排序
-bandwidth：依据通道带宽上限排序
-concurrent_connections：依据通道并发排序
+create_time：依据通道的创建时间排序；
+proxy_id：依据通道的ID排序；
+bandwidth：依据通道带宽上限排序；
+concurrent_connections：依据通道并发排序；
 默认按通道创建时间排序。
      */
     public String getOrderField() {
@@ -298,16 +298,16 @@ concurrent_connections：依据通道并发排序
 
     /**
      * Set 通道列表排序的依据字段。取值范围：
-create_time：依据通道的创建时间排序
-proxy_id：依据通道的ID排序
-bandwidth：依据通道带宽上限排序
-concurrent_connections：依据通道并发排序
+create_time：依据通道的创建时间排序；
+proxy_id：依据通道的ID排序；
+bandwidth：依据通道带宽上限排序；
+concurrent_connections：依据通道并发排序；
 默认按通道创建时间排序。
      * @param OrderField 通道列表排序的依据字段。取值范围：
-create_time：依据通道的创建时间排序
-proxy_id：依据通道的ID排序
-bandwidth：依据通道带宽上限排序
-concurrent_connections：依据通道并发排序
+create_time：依据通道的创建时间排序；
+proxy_id：依据通道的ID排序；
+bandwidth：依据通道带宽上限排序；
+concurrent_connections：依据通道并发排序；
 默认按通道创建时间排序。
      */
     public void setOrderField(String OrderField) {

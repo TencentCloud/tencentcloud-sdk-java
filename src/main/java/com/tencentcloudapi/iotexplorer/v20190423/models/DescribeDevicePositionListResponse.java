@@ -23,11 +23,57 @@ import java.util.HashMap;
 public class DescribeDevicePositionListResponse extends AbstractModel{
 
     /**
+    * 产品设备位置信息列表
+    */
+    @SerializedName("Positions")
+    @Expose
+    private ProductDevicesPositionItem [] Positions;
+
+    /**
+    * 产品设备位置信息的数目
+    */
+    @SerializedName("Total")
+    @Expose
+    private Long Total;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 产品设备位置信息列表 
+     * @return Positions 产品设备位置信息列表
+     */
+    public ProductDevicesPositionItem [] getPositions() {
+        return this.Positions;
+    }
+
+    /**
+     * Set 产品设备位置信息列表
+     * @param Positions 产品设备位置信息列表
+     */
+    public void setPositions(ProductDevicesPositionItem [] Positions) {
+        this.Positions = Positions;
+    }
+
+    /**
+     * Get 产品设备位置信息的数目 
+     * @return Total 产品设备位置信息的数目
+     */
+    public Long getTotal() {
+        return this.Total;
+    }
+
+    /**
+     * Set 产品设备位置信息的数目
+     * @param Total 产品设备位置信息的数目
+     */
+    public void setTotal(Long Total) {
+        this.Total = Total;
+    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -53,6 +99,15 @@ public class DescribeDevicePositionListResponse extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeDevicePositionListResponse(DescribeDevicePositionListResponse source) {
+        if (source.Positions != null) {
+            this.Positions = new ProductDevicesPositionItem[source.Positions.length];
+            for (int i = 0; i < source.Positions.length; i++) {
+                this.Positions[i] = new ProductDevicesPositionItem(source.Positions[i]);
+            }
+        }
+        if (source.Total != null) {
+            this.Total = new Long(source.Total);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -63,6 +118,8 @@ public class DescribeDevicePositionListResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArrayObj(map, prefix + "Positions.", this.Positions);
+        this.setParamSimple(map, prefix + "Total", this.Total);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
