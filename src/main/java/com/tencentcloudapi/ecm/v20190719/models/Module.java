@@ -125,6 +125,20 @@ DELETEFAILED：删除失败。
     private String UserData;
 
     /**
+    * 系统盘信息。
+    */
+    @SerializedName("SystemDisk")
+    @Expose
+    private SystemDisk SystemDisk;
+
+    /**
+    * 数据盘信息。
+    */
+    @SerializedName("DataDisks")
+    @Expose
+    private DataDisk [] DataDisks;
+
+    /**
      * Get 模块Id。 
      * @return ModuleId 模块Id。
      */
@@ -364,6 +378,38 @@ DELETEFAILED：删除失败。
         this.UserData = UserData;
     }
 
+    /**
+     * Get 系统盘信息。 
+     * @return SystemDisk 系统盘信息。
+     */
+    public SystemDisk getSystemDisk() {
+        return this.SystemDisk;
+    }
+
+    /**
+     * Set 系统盘信息。
+     * @param SystemDisk 系统盘信息。
+     */
+    public void setSystemDisk(SystemDisk SystemDisk) {
+        this.SystemDisk = SystemDisk;
+    }
+
+    /**
+     * Get 数据盘信息。 
+     * @return DataDisks 数据盘信息。
+     */
+    public DataDisk [] getDataDisks() {
+        return this.DataDisks;
+    }
+
+    /**
+     * Set 数据盘信息。
+     * @param DataDisks 数据盘信息。
+     */
+    public void setDataDisks(DataDisk [] DataDisks) {
+        this.DataDisks = DataDisks;
+    }
+
     public Module() {
     }
 
@@ -420,6 +466,15 @@ DELETEFAILED：删除失败。
         if (source.UserData != null) {
             this.UserData = new String(source.UserData);
         }
+        if (source.SystemDisk != null) {
+            this.SystemDisk = new SystemDisk(source.SystemDisk);
+        }
+        if (source.DataDisks != null) {
+            this.DataDisks = new DataDisk[source.DataDisks.length];
+            for (int i = 0; i < source.DataDisks.length; i++) {
+                this.DataDisks[i] = new DataDisk(source.DataDisks[i]);
+            }
+        }
     }
 
 
@@ -441,6 +496,8 @@ DELETEFAILED：删除失败。
         this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
         this.setParamSimple(map, prefix + "DefaultBandwidthIn", this.DefaultBandwidthIn);
         this.setParamSimple(map, prefix + "UserData", this.UserData);
+        this.setParamObj(map, prefix + "SystemDisk.", this.SystemDisk);
+        this.setParamArrayObj(map, prefix + "DataDisks.", this.DataDisks);
 
     }
 }

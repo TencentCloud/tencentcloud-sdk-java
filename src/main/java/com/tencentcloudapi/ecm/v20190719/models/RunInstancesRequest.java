@@ -179,6 +179,20 @@ FALSE：表示不保持镜像的登录设置
     private String KeepImageLogin;
 
     /**
+    * 系统盘信息。
+    */
+    @SerializedName("SystemDisk")
+    @Expose
+    private SystemDisk SystemDisk;
+
+    /**
+    * 数据盘信息。
+    */
+    @SerializedName("DataDisks")
+    @Expose
+    private DataDisk [] DataDisks;
+
+    /**
      * Get 需要创建实例的可用区及创建数目及运营商的列表。在单次请求的过程中，单个region下的请求创建实例数上限为100 
      * @return ZoneInstanceCountISPSet 需要创建实例的可用区及创建数目及运营商的列表。在单次请求的过程中，单个region下的请求创建实例数上限为100
      */
@@ -574,6 +588,38 @@ FALSE：表示不保持镜像的登录设置
         this.KeepImageLogin = KeepImageLogin;
     }
 
+    /**
+     * Get 系统盘信息。 
+     * @return SystemDisk 系统盘信息。
+     */
+    public SystemDisk getSystemDisk() {
+        return this.SystemDisk;
+    }
+
+    /**
+     * Set 系统盘信息。
+     * @param SystemDisk 系统盘信息。
+     */
+    public void setSystemDisk(SystemDisk SystemDisk) {
+        this.SystemDisk = SystemDisk;
+    }
+
+    /**
+     * Get 数据盘信息。 
+     * @return DataDisks 数据盘信息。
+     */
+    public DataDisk [] getDataDisks() {
+        return this.DataDisks;
+    }
+
+    /**
+     * Set 数据盘信息。
+     * @param DataDisks 数据盘信息。
+     */
+    public void setDataDisks(DataDisk [] DataDisks) {
+        this.DataDisks = DataDisks;
+    }
+
     public RunInstancesRequest() {
     }
 
@@ -651,6 +697,15 @@ FALSE：表示不保持镜像的登录设置
         if (source.KeepImageLogin != null) {
             this.KeepImageLogin = new String(source.KeepImageLogin);
         }
+        if (source.SystemDisk != null) {
+            this.SystemDisk = new SystemDisk(source.SystemDisk);
+        }
+        if (source.DataDisks != null) {
+            this.DataDisks = new DataDisk[source.DataDisks.length];
+            for (int i = 0; i < source.DataDisks.length; i++) {
+                this.DataDisks[i] = new DataDisk(source.DataDisks[i]);
+            }
+        }
     }
 
 
@@ -677,6 +732,8 @@ FALSE：表示不保持镜像的登录设置
         this.setParamSimple(map, prefix + "InstanceChargeType", this.InstanceChargeType);
         this.setParamArraySimple(map, prefix + "KeyIds.", this.KeyIds);
         this.setParamSimple(map, prefix + "KeepImageLogin", this.KeepImageLogin);
+        this.setParamObj(map, prefix + "SystemDisk.", this.SystemDisk);
+        this.setParamArrayObj(map, prefix + "DataDisks.", this.DataDisks);
 
     }
 }

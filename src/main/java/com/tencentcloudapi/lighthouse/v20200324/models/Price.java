@@ -30,6 +30,13 @@ public class Price extends AbstractModel{
     private InstancePrice InstancePrice;
 
     /**
+    * 数据盘价格。
+    */
+    @SerializedName("DataDiskPrices")
+    @Expose
+    private DataDiskPrice [] DataDiskPrices;
+
+    /**
      * Get 实例价格。 
      * @return InstancePrice 实例价格。
      */
@@ -45,6 +52,22 @@ public class Price extends AbstractModel{
         this.InstancePrice = InstancePrice;
     }
 
+    /**
+     * Get 数据盘价格。 
+     * @return DataDiskPrices 数据盘价格。
+     */
+    public DataDiskPrice [] getDataDiskPrices() {
+        return this.DataDiskPrices;
+    }
+
+    /**
+     * Set 数据盘价格。
+     * @param DataDiskPrices 数据盘价格。
+     */
+    public void setDataDiskPrices(DataDiskPrice [] DataDiskPrices) {
+        this.DataDiskPrices = DataDiskPrices;
+    }
+
     public Price() {
     }
 
@@ -56,6 +79,12 @@ public class Price extends AbstractModel{
         if (source.InstancePrice != null) {
             this.InstancePrice = new InstancePrice(source.InstancePrice);
         }
+        if (source.DataDiskPrices != null) {
+            this.DataDiskPrices = new DataDiskPrice[source.DataDiskPrices.length];
+            for (int i = 0; i < source.DataDiskPrices.length; i++) {
+                this.DataDiskPrices[i] = new DataDiskPrice(source.DataDiskPrices[i]);
+            }
+        }
     }
 
 
@@ -64,6 +93,7 @@ public class Price extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "InstancePrice.", this.InstancePrice);
+        this.setParamArrayObj(map, prefix + "DataDiskPrices.", this.DataDiskPrices);
 
     }
 }
