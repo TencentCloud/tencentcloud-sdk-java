@@ -51,6 +51,13 @@ public class CreateClusterRequest extends AbstractModel{
     private Tag [] Tags;
 
     /**
+    * 是否开启公网访问，不填时默认开启
+    */
+    @SerializedName("PublicAccessEnabled")
+    @Expose
+    private Boolean PublicAccessEnabled;
+
+    /**
      * Get 集群名称，不支持中字以及除了短线和下划线外的特殊字符且不超过16个字符。 
      * @return ClusterName 集群名称，不支持中字以及除了短线和下划线外的特殊字符且不超过16个字符。
      */
@@ -114,6 +121,22 @@ public class CreateClusterRequest extends AbstractModel{
         this.Tags = Tags;
     }
 
+    /**
+     * Get 是否开启公网访问，不填时默认开启 
+     * @return PublicAccessEnabled 是否开启公网访问，不填时默认开启
+     */
+    public Boolean getPublicAccessEnabled() {
+        return this.PublicAccessEnabled;
+    }
+
+    /**
+     * Set 是否开启公网访问，不填时默认开启
+     * @param PublicAccessEnabled 是否开启公网访问，不填时默认开启
+     */
+    public void setPublicAccessEnabled(Boolean PublicAccessEnabled) {
+        this.PublicAccessEnabled = PublicAccessEnabled;
+    }
+
     public CreateClusterRequest() {
     }
 
@@ -137,6 +160,9 @@ public class CreateClusterRequest extends AbstractModel{
                 this.Tags[i] = new Tag(source.Tags[i]);
             }
         }
+        if (source.PublicAccessEnabled != null) {
+            this.PublicAccessEnabled = new Boolean(source.PublicAccessEnabled);
+        }
     }
 
 
@@ -148,6 +174,7 @@ public class CreateClusterRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "BindClusterId", this.BindClusterId);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "PublicAccessEnabled", this.PublicAccessEnabled);
 
     }
 }

@@ -44,6 +44,13 @@ public class ModifyClusterRequest extends AbstractModel{
     private String Remark;
 
     /**
+    * 开启公网访问，只能为true
+    */
+    @SerializedName("PublicAccessEnabled")
+    @Expose
+    private Boolean PublicAccessEnabled;
+
+    /**
      * Get Pulsar 集群的ID，需要更新的集群Id。 
      * @return ClusterId Pulsar 集群的ID，需要更新的集群Id。
      */
@@ -91,6 +98,22 @@ public class ModifyClusterRequest extends AbstractModel{
         this.Remark = Remark;
     }
 
+    /**
+     * Get 开启公网访问，只能为true 
+     * @return PublicAccessEnabled 开启公网访问，只能为true
+     */
+    public Boolean getPublicAccessEnabled() {
+        return this.PublicAccessEnabled;
+    }
+
+    /**
+     * Set 开启公网访问，只能为true
+     * @param PublicAccessEnabled 开启公网访问，只能为true
+     */
+    public void setPublicAccessEnabled(Boolean PublicAccessEnabled) {
+        this.PublicAccessEnabled = PublicAccessEnabled;
+    }
+
     public ModifyClusterRequest() {
     }
 
@@ -108,6 +131,9 @@ public class ModifyClusterRequest extends AbstractModel{
         if (source.Remark != null) {
             this.Remark = new String(source.Remark);
         }
+        if (source.PublicAccessEnabled != null) {
+            this.PublicAccessEnabled = new Boolean(source.PublicAccessEnabled);
+        }
     }
 
 
@@ -118,6 +144,7 @@ public class ModifyClusterRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamSimple(map, prefix + "ClusterName", this.ClusterName);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
+        this.setParamSimple(map, prefix + "PublicAccessEnabled", this.PublicAccessEnabled);
 
     }
 }

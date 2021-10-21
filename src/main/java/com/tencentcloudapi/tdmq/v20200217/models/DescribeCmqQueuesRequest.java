@@ -58,6 +58,13 @@ public class DescribeCmqQueuesRequest extends AbstractModel{
     private Boolean IsTagFilter;
 
     /**
+    * 过滤器。目前支持按标签过滤。
+    */
+    @SerializedName("Filters")
+    @Expose
+    private Filter [] Filters;
+
+    /**
      * Get 分页时本页获取队列列表的起始位置。如果填写了该值，必须也要填写 limit 。该值缺省时，后台取默认值 0 
      * @return Offset 分页时本页获取队列列表的起始位置。如果填写了该值，必须也要填写 limit 。该值缺省时，后台取默认值 0
      */
@@ -137,6 +144,22 @@ public class DescribeCmqQueuesRequest extends AbstractModel{
         this.IsTagFilter = IsTagFilter;
     }
 
+    /**
+     * Get 过滤器。目前支持按标签过滤。 
+     * @return Filters 过滤器。目前支持按标签过滤。
+     */
+    public Filter [] getFilters() {
+        return this.Filters;
+    }
+
+    /**
+     * Set 过滤器。目前支持按标签过滤。
+     * @param Filters 过滤器。目前支持按标签过滤。
+     */
+    public void setFilters(Filter [] Filters) {
+        this.Filters = Filters;
+    }
+
     public DescribeCmqQueuesRequest() {
     }
 
@@ -163,6 +186,12 @@ public class DescribeCmqQueuesRequest extends AbstractModel{
         if (source.IsTagFilter != null) {
             this.IsTagFilter = new Boolean(source.IsTagFilter);
         }
+        if (source.Filters != null) {
+            this.Filters = new Filter[source.Filters.length];
+            for (int i = 0; i < source.Filters.length; i++) {
+                this.Filters[i] = new Filter(source.Filters[i]);
+            }
+        }
     }
 
 
@@ -175,6 +204,7 @@ public class DescribeCmqQueuesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "QueueName", this.QueueName);
         this.setParamArraySimple(map, prefix + "QueueNameList.", this.QueueNameList);
         this.setParamSimple(map, prefix + "IsTagFilter", this.IsTagFilter);
+        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
 
     }
 }

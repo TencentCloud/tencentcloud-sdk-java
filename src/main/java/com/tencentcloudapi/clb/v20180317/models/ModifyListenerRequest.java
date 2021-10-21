@@ -94,6 +94,13 @@ public class ModifyListenerRequest extends AbstractModel{
     private Boolean DeregisterTargetRst;
 
     /**
+    * 会话保持类型。NORMAL表示默认会话保持类型。QUIC_CID表示根据Quic Connection ID做会话保持。QUIC_CID只支持UDP协议。
+    */
+    @SerializedName("SessionType")
+    @Expose
+    private String SessionType;
+
+    /**
      * Get 负载均衡实例ID。 
      * @return LoadBalancerId 负载均衡实例ID。
      */
@@ -257,6 +264,22 @@ public class ModifyListenerRequest extends AbstractModel{
         this.DeregisterTargetRst = DeregisterTargetRst;
     }
 
+    /**
+     * Get 会话保持类型。NORMAL表示默认会话保持类型。QUIC_CID表示根据Quic Connection ID做会话保持。QUIC_CID只支持UDP协议。 
+     * @return SessionType 会话保持类型。NORMAL表示默认会话保持类型。QUIC_CID表示根据Quic Connection ID做会话保持。QUIC_CID只支持UDP协议。
+     */
+    public String getSessionType() {
+        return this.SessionType;
+    }
+
+    /**
+     * Set 会话保持类型。NORMAL表示默认会话保持类型。QUIC_CID表示根据Quic Connection ID做会话保持。QUIC_CID只支持UDP协议。
+     * @param SessionType 会话保持类型。NORMAL表示默认会话保持类型。QUIC_CID表示根据Quic Connection ID做会话保持。QUIC_CID只支持UDP协议。
+     */
+    public void setSessionType(String SessionType) {
+        this.SessionType = SessionType;
+    }
+
     public ModifyListenerRequest() {
     }
 
@@ -295,6 +318,9 @@ public class ModifyListenerRequest extends AbstractModel{
         if (source.DeregisterTargetRst != null) {
             this.DeregisterTargetRst = new Boolean(source.DeregisterTargetRst);
         }
+        if (source.SessionType != null) {
+            this.SessionType = new String(source.SessionType);
+        }
     }
 
 
@@ -312,6 +338,7 @@ public class ModifyListenerRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "SniSwitch", this.SniSwitch);
         this.setParamSimple(map, prefix + "KeepaliveEnable", this.KeepaliveEnable);
         this.setParamSimple(map, prefix + "DeregisterTargetRst", this.DeregisterTargetRst);
+        this.setParamSimple(map, prefix + "SessionType", this.SessionType);
 
     }
 }

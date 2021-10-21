@@ -101,7 +101,7 @@ public class Cluster extends AbstractModel{
     private Long MaxQps;
 
     /**
-    * 消息保留时间
+    * 最大消息保留时间，分钟为单位
     */
     @SerializedName("MessageRetentionTime")
     @Expose
@@ -153,6 +153,70 @@ public class Cluster extends AbstractModel{
     @SerializedName("UsedStorageBudget")
     @Expose
     private Long UsedStorageBudget;
+
+    /**
+    * 最大生产消息速率，以条数为单位
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MaxPublishRateInMessages")
+    @Expose
+    private Long MaxPublishRateInMessages;
+
+    /**
+    * 最大推送消息速率，以条数为单位
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MaxDispatchRateInMessages")
+    @Expose
+    private Long MaxDispatchRateInMessages;
+
+    /**
+    * 最大生产消息速率，以字节为单位
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MaxPublishRateInBytes")
+    @Expose
+    private Long MaxPublishRateInBytes;
+
+    /**
+    * 最大推送消息速率，以字节为单位
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MaxDispatchRateInBytes")
+    @Expose
+    private Long MaxDispatchRateInBytes;
+
+    /**
+    * 已创建主题数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TopicNum")
+    @Expose
+    private Long TopicNum;
+
+    /**
+    * 最长消息延时，以秒为单位
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MaxMessageDelayInSeconds")
+    @Expose
+    private Long MaxMessageDelayInSeconds;
+
+    /**
+    * 是否开启公网访问，不填时默认开启
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PublicAccessEnabled")
+    @Expose
+    private Boolean PublicAccessEnabled;
+
+    /**
+    * 标签
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
 
     /**
      * Get 集群Id。 
@@ -335,16 +399,16 @@ public class Cluster extends AbstractModel{
     }
 
     /**
-     * Get 消息保留时间 
-     * @return MessageRetentionTime 消息保留时间
+     * Get 最大消息保留时间，分钟为单位 
+     * @return MessageRetentionTime 最大消息保留时间，分钟为单位
      */
     public Long getMessageRetentionTime() {
         return this.MessageRetentionTime;
     }
 
     /**
-     * Set 消息保留时间
-     * @param MessageRetentionTime 消息保留时间
+     * Set 最大消息保留时间，分钟为单位
+     * @param MessageRetentionTime 最大消息保留时间，分钟为单位
      */
     public void setMessageRetentionTime(Long MessageRetentionTime) {
         this.MessageRetentionTime = MessageRetentionTime;
@@ -466,6 +530,166 @@ public class Cluster extends AbstractModel{
         this.UsedStorageBudget = UsedStorageBudget;
     }
 
+    /**
+     * Get 最大生产消息速率，以条数为单位
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MaxPublishRateInMessages 最大生产消息速率，以条数为单位
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getMaxPublishRateInMessages() {
+        return this.MaxPublishRateInMessages;
+    }
+
+    /**
+     * Set 最大生产消息速率，以条数为单位
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MaxPublishRateInMessages 最大生产消息速率，以条数为单位
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMaxPublishRateInMessages(Long MaxPublishRateInMessages) {
+        this.MaxPublishRateInMessages = MaxPublishRateInMessages;
+    }
+
+    /**
+     * Get 最大推送消息速率，以条数为单位
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MaxDispatchRateInMessages 最大推送消息速率，以条数为单位
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getMaxDispatchRateInMessages() {
+        return this.MaxDispatchRateInMessages;
+    }
+
+    /**
+     * Set 最大推送消息速率，以条数为单位
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MaxDispatchRateInMessages 最大推送消息速率，以条数为单位
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMaxDispatchRateInMessages(Long MaxDispatchRateInMessages) {
+        this.MaxDispatchRateInMessages = MaxDispatchRateInMessages;
+    }
+
+    /**
+     * Get 最大生产消息速率，以字节为单位
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MaxPublishRateInBytes 最大生产消息速率，以字节为单位
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getMaxPublishRateInBytes() {
+        return this.MaxPublishRateInBytes;
+    }
+
+    /**
+     * Set 最大生产消息速率，以字节为单位
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MaxPublishRateInBytes 最大生产消息速率，以字节为单位
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMaxPublishRateInBytes(Long MaxPublishRateInBytes) {
+        this.MaxPublishRateInBytes = MaxPublishRateInBytes;
+    }
+
+    /**
+     * Get 最大推送消息速率，以字节为单位
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MaxDispatchRateInBytes 最大推送消息速率，以字节为单位
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getMaxDispatchRateInBytes() {
+        return this.MaxDispatchRateInBytes;
+    }
+
+    /**
+     * Set 最大推送消息速率，以字节为单位
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MaxDispatchRateInBytes 最大推送消息速率，以字节为单位
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMaxDispatchRateInBytes(Long MaxDispatchRateInBytes) {
+        this.MaxDispatchRateInBytes = MaxDispatchRateInBytes;
+    }
+
+    /**
+     * Get 已创建主题数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TopicNum 已创建主题数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getTopicNum() {
+        return this.TopicNum;
+    }
+
+    /**
+     * Set 已创建主题数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TopicNum 已创建主题数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTopicNum(Long TopicNum) {
+        this.TopicNum = TopicNum;
+    }
+
+    /**
+     * Get 最长消息延时，以秒为单位
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MaxMessageDelayInSeconds 最长消息延时，以秒为单位
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getMaxMessageDelayInSeconds() {
+        return this.MaxMessageDelayInSeconds;
+    }
+
+    /**
+     * Set 最长消息延时，以秒为单位
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MaxMessageDelayInSeconds 最长消息延时，以秒为单位
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMaxMessageDelayInSeconds(Long MaxMessageDelayInSeconds) {
+        this.MaxMessageDelayInSeconds = MaxMessageDelayInSeconds;
+    }
+
+    /**
+     * Get 是否开启公网访问，不填时默认开启
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PublicAccessEnabled 是否开启公网访问，不填时默认开启
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getPublicAccessEnabled() {
+        return this.PublicAccessEnabled;
+    }
+
+    /**
+     * Set 是否开启公网访问，不填时默认开启
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PublicAccessEnabled 是否开启公网访问，不填时默认开启
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPublicAccessEnabled(Boolean PublicAccessEnabled) {
+        this.PublicAccessEnabled = PublicAccessEnabled;
+    }
+
+    /**
+     * Get 标签
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Tags 标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 标签
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Tags 标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public Cluster() {
     }
 
@@ -528,6 +752,33 @@ public class Cluster extends AbstractModel{
         if (source.UsedStorageBudget != null) {
             this.UsedStorageBudget = new Long(source.UsedStorageBudget);
         }
+        if (source.MaxPublishRateInMessages != null) {
+            this.MaxPublishRateInMessages = new Long(source.MaxPublishRateInMessages);
+        }
+        if (source.MaxDispatchRateInMessages != null) {
+            this.MaxDispatchRateInMessages = new Long(source.MaxDispatchRateInMessages);
+        }
+        if (source.MaxPublishRateInBytes != null) {
+            this.MaxPublishRateInBytes = new Long(source.MaxPublishRateInBytes);
+        }
+        if (source.MaxDispatchRateInBytes != null) {
+            this.MaxDispatchRateInBytes = new Long(source.MaxDispatchRateInBytes);
+        }
+        if (source.TopicNum != null) {
+            this.TopicNum = new Long(source.TopicNum);
+        }
+        if (source.MaxMessageDelayInSeconds != null) {
+            this.MaxMessageDelayInSeconds = new Long(source.MaxMessageDelayInSeconds);
+        }
+        if (source.PublicAccessEnabled != null) {
+            this.PublicAccessEnabled = new Boolean(source.PublicAccessEnabled);
+        }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -553,6 +804,14 @@ public class Cluster extends AbstractModel{
         this.setParamSimple(map, prefix + "VpcEndPoint", this.VpcEndPoint);
         this.setParamSimple(map, prefix + "NamespaceNum", this.NamespaceNum);
         this.setParamSimple(map, prefix + "UsedStorageBudget", this.UsedStorageBudget);
+        this.setParamSimple(map, prefix + "MaxPublishRateInMessages", this.MaxPublishRateInMessages);
+        this.setParamSimple(map, prefix + "MaxDispatchRateInMessages", this.MaxDispatchRateInMessages);
+        this.setParamSimple(map, prefix + "MaxPublishRateInBytes", this.MaxPublishRateInBytes);
+        this.setParamSimple(map, prefix + "MaxDispatchRateInBytes", this.MaxDispatchRateInBytes);
+        this.setParamSimple(map, prefix + "TopicNum", this.TopicNum);
+        this.setParamSimple(map, prefix + "MaxMessageDelayInSeconds", this.MaxMessageDelayInSeconds);
+        this.setParamSimple(map, prefix + "PublicAccessEnabled", this.PublicAccessEnabled);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

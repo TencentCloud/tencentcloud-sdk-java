@@ -50,6 +50,20 @@ public class ModifyNotificationConfigurationRequest extends AbstractModel{
     private String [] NotificationUserGroupIds;
 
     /**
+    * CMQ 队列名。
+    */
+    @SerializedName("QueueName")
+    @Expose
+    private String QueueName;
+
+    /**
+    * CMQ 主题名。
+    */
+    @SerializedName("TopicName")
+    @Expose
+    private String TopicName;
+
+    /**
      * Get 待修改的通知ID。 
      * @return AutoScalingNotificationId 待修改的通知ID。
      */
@@ -121,6 +135,38 @@ public class ModifyNotificationConfigurationRequest extends AbstractModel{
         this.NotificationUserGroupIds = NotificationUserGroupIds;
     }
 
+    /**
+     * Get CMQ 队列名。 
+     * @return QueueName CMQ 队列名。
+     */
+    public String getQueueName() {
+        return this.QueueName;
+    }
+
+    /**
+     * Set CMQ 队列名。
+     * @param QueueName CMQ 队列名。
+     */
+    public void setQueueName(String QueueName) {
+        this.QueueName = QueueName;
+    }
+
+    /**
+     * Get CMQ 主题名。 
+     * @return TopicName CMQ 主题名。
+     */
+    public String getTopicName() {
+        return this.TopicName;
+    }
+
+    /**
+     * Set CMQ 主题名。
+     * @param TopicName CMQ 主题名。
+     */
+    public void setTopicName(String TopicName) {
+        this.TopicName = TopicName;
+    }
+
     public ModifyNotificationConfigurationRequest() {
     }
 
@@ -144,6 +190,12 @@ public class ModifyNotificationConfigurationRequest extends AbstractModel{
                 this.NotificationUserGroupIds[i] = new String(source.NotificationUserGroupIds[i]);
             }
         }
+        if (source.QueueName != null) {
+            this.QueueName = new String(source.QueueName);
+        }
+        if (source.TopicName != null) {
+            this.TopicName = new String(source.TopicName);
+        }
     }
 
 
@@ -154,6 +206,8 @@ public class ModifyNotificationConfigurationRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "AutoScalingNotificationId", this.AutoScalingNotificationId);
         this.setParamArraySimple(map, prefix + "NotificationTypes.", this.NotificationTypes);
         this.setParamArraySimple(map, prefix + "NotificationUserGroupIds.", this.NotificationUserGroupIds);
+        this.setParamSimple(map, prefix + "QueueName", this.QueueName);
+        this.setParamSimple(map, prefix + "TopicName", this.TopicName);
 
     }
 }

@@ -23,11 +23,18 @@ import java.util.HashMap;
 public class ListTopDDoSDataResponse extends AbstractModel{
 
     /**
-    * DDoS Top数据
+    * DDoS 攻击类型的top数据，当Metric=AttackType的时候返回攻击类型的统计数据，IPData为空
     */
     @SerializedName("Data")
     @Expose
     private DDoSTopData [] Data;
+
+    /**
+    * ddos攻击ip的top数据，Metric=AttackIP的时候返回IPData，Data为空
+    */
+    @SerializedName("IPData")
+    @Expose
+    private DDoSAttackIPTopData [] IPData;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,19 +44,35 @@ public class ListTopDDoSDataResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get DDoS Top数据 
-     * @return Data DDoS Top数据
+     * Get DDoS 攻击类型的top数据，当Metric=AttackType的时候返回攻击类型的统计数据，IPData为空 
+     * @return Data DDoS 攻击类型的top数据，当Metric=AttackType的时候返回攻击类型的统计数据，IPData为空
      */
     public DDoSTopData [] getData() {
         return this.Data;
     }
 
     /**
-     * Set DDoS Top数据
-     * @param Data DDoS Top数据
+     * Set DDoS 攻击类型的top数据，当Metric=AttackType的时候返回攻击类型的统计数据，IPData为空
+     * @param Data DDoS 攻击类型的top数据，当Metric=AttackType的时候返回攻击类型的统计数据，IPData为空
      */
     public void setData(DDoSTopData [] Data) {
         this.Data = Data;
+    }
+
+    /**
+     * Get ddos攻击ip的top数据，Metric=AttackIP的时候返回IPData，Data为空 
+     * @return IPData ddos攻击ip的top数据，Metric=AttackIP的时候返回IPData，Data为空
+     */
+    public DDoSAttackIPTopData [] getIPData() {
+        return this.IPData;
+    }
+
+    /**
+     * Set ddos攻击ip的top数据，Metric=AttackIP的时候返回IPData，Data为空
+     * @param IPData ddos攻击ip的top数据，Metric=AttackIP的时候返回IPData，Data为空
+     */
+    public void setIPData(DDoSAttackIPTopData [] IPData) {
+        this.IPData = IPData;
     }
 
     /**
@@ -82,6 +105,12 @@ public class ListTopDDoSDataResponse extends AbstractModel{
                 this.Data[i] = new DDoSTopData(source.Data[i]);
             }
         }
+        if (source.IPData != null) {
+            this.IPData = new DDoSAttackIPTopData[source.IPData.length];
+            for (int i = 0; i < source.IPData.length; i++) {
+                this.IPData[i] = new DDoSAttackIPTopData(source.IPData[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -93,6 +122,7 @@ public class ListTopDDoSDataResponse extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Data.", this.Data);
+        this.setParamArrayObj(map, prefix + "IPData.", this.IPData);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

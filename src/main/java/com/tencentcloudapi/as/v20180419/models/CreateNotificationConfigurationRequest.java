@@ -50,6 +50,27 @@ public class CreateNotificationConfigurationRequest extends AbstractModel{
     private String [] NotificationUserGroupIds;
 
     /**
+    * 通知接收端类型，取值：`USER_GROUP`，`CMQ_QUEUE`，`CMQ_TOPIC`。默认值为：`USER_GROUP`。
+    */
+    @SerializedName("TargetType")
+    @Expose
+    private String TargetType;
+
+    /**
+    * CMQ 队列名称，如 TargetType 取值为 `CMQ_QUEUE`，该字段必填。
+    */
+    @SerializedName("QueueName")
+    @Expose
+    private String QueueName;
+
+    /**
+    * CMQ 主题名称，如 TargetType 取值为 `CMQ_TOPIC`，该字段必填。
+    */
+    @SerializedName("TopicName")
+    @Expose
+    private String TopicName;
+
+    /**
      * Get 伸缩组ID。 
      * @return AutoScalingGroupId 伸缩组ID。
      */
@@ -121,6 +142,54 @@ public class CreateNotificationConfigurationRequest extends AbstractModel{
         this.NotificationUserGroupIds = NotificationUserGroupIds;
     }
 
+    /**
+     * Get 通知接收端类型，取值：`USER_GROUP`，`CMQ_QUEUE`，`CMQ_TOPIC`。默认值为：`USER_GROUP`。 
+     * @return TargetType 通知接收端类型，取值：`USER_GROUP`，`CMQ_QUEUE`，`CMQ_TOPIC`。默认值为：`USER_GROUP`。
+     */
+    public String getTargetType() {
+        return this.TargetType;
+    }
+
+    /**
+     * Set 通知接收端类型，取值：`USER_GROUP`，`CMQ_QUEUE`，`CMQ_TOPIC`。默认值为：`USER_GROUP`。
+     * @param TargetType 通知接收端类型，取值：`USER_GROUP`，`CMQ_QUEUE`，`CMQ_TOPIC`。默认值为：`USER_GROUP`。
+     */
+    public void setTargetType(String TargetType) {
+        this.TargetType = TargetType;
+    }
+
+    /**
+     * Get CMQ 队列名称，如 TargetType 取值为 `CMQ_QUEUE`，该字段必填。 
+     * @return QueueName CMQ 队列名称，如 TargetType 取值为 `CMQ_QUEUE`，该字段必填。
+     */
+    public String getQueueName() {
+        return this.QueueName;
+    }
+
+    /**
+     * Set CMQ 队列名称，如 TargetType 取值为 `CMQ_QUEUE`，该字段必填。
+     * @param QueueName CMQ 队列名称，如 TargetType 取值为 `CMQ_QUEUE`，该字段必填。
+     */
+    public void setQueueName(String QueueName) {
+        this.QueueName = QueueName;
+    }
+
+    /**
+     * Get CMQ 主题名称，如 TargetType 取值为 `CMQ_TOPIC`，该字段必填。 
+     * @return TopicName CMQ 主题名称，如 TargetType 取值为 `CMQ_TOPIC`，该字段必填。
+     */
+    public String getTopicName() {
+        return this.TopicName;
+    }
+
+    /**
+     * Set CMQ 主题名称，如 TargetType 取值为 `CMQ_TOPIC`，该字段必填。
+     * @param TopicName CMQ 主题名称，如 TargetType 取值为 `CMQ_TOPIC`，该字段必填。
+     */
+    public void setTopicName(String TopicName) {
+        this.TopicName = TopicName;
+    }
+
     public CreateNotificationConfigurationRequest() {
     }
 
@@ -144,6 +213,15 @@ public class CreateNotificationConfigurationRequest extends AbstractModel{
                 this.NotificationUserGroupIds[i] = new String(source.NotificationUserGroupIds[i]);
             }
         }
+        if (source.TargetType != null) {
+            this.TargetType = new String(source.TargetType);
+        }
+        if (source.QueueName != null) {
+            this.QueueName = new String(source.QueueName);
+        }
+        if (source.TopicName != null) {
+            this.TopicName = new String(source.TopicName);
+        }
     }
 
 
@@ -154,6 +232,9 @@ public class CreateNotificationConfigurationRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "AutoScalingGroupId", this.AutoScalingGroupId);
         this.setParamArraySimple(map, prefix + "NotificationTypes.", this.NotificationTypes);
         this.setParamArraySimple(map, prefix + "NotificationUserGroupIds.", this.NotificationUserGroupIds);
+        this.setParamSimple(map, prefix + "TargetType", this.TargetType);
+        this.setParamSimple(map, prefix + "QueueName", this.QueueName);
+        this.setParamSimple(map, prefix + "TopicName", this.TopicName);
 
     }
 }

@@ -51,6 +51,27 @@ public class AutoScalingNotification extends AbstractModel{
     private String AutoScalingNotificationId;
 
     /**
+    * 通知接收端类型。
+    */
+    @SerializedName("TargetType")
+    @Expose
+    private String TargetType;
+
+    /**
+    * CMQ 队列名。
+    */
+    @SerializedName("QueueName")
+    @Expose
+    private String QueueName;
+
+    /**
+    * CMQ 主题名。
+    */
+    @SerializedName("TopicName")
+    @Expose
+    private String TopicName;
+
+    /**
      * Get 伸缩组ID。 
      * @return AutoScalingGroupId 伸缩组ID。
      */
@@ -114,6 +135,54 @@ public class AutoScalingNotification extends AbstractModel{
         this.AutoScalingNotificationId = AutoScalingNotificationId;
     }
 
+    /**
+     * Get 通知接收端类型。 
+     * @return TargetType 通知接收端类型。
+     */
+    public String getTargetType() {
+        return this.TargetType;
+    }
+
+    /**
+     * Set 通知接收端类型。
+     * @param TargetType 通知接收端类型。
+     */
+    public void setTargetType(String TargetType) {
+        this.TargetType = TargetType;
+    }
+
+    /**
+     * Get CMQ 队列名。 
+     * @return QueueName CMQ 队列名。
+     */
+    public String getQueueName() {
+        return this.QueueName;
+    }
+
+    /**
+     * Set CMQ 队列名。
+     * @param QueueName CMQ 队列名。
+     */
+    public void setQueueName(String QueueName) {
+        this.QueueName = QueueName;
+    }
+
+    /**
+     * Get CMQ 主题名。 
+     * @return TopicName CMQ 主题名。
+     */
+    public String getTopicName() {
+        return this.TopicName;
+    }
+
+    /**
+     * Set CMQ 主题名。
+     * @param TopicName CMQ 主题名。
+     */
+    public void setTopicName(String TopicName) {
+        this.TopicName = TopicName;
+    }
+
     public AutoScalingNotification() {
     }
 
@@ -140,6 +209,15 @@ public class AutoScalingNotification extends AbstractModel{
         if (source.AutoScalingNotificationId != null) {
             this.AutoScalingNotificationId = new String(source.AutoScalingNotificationId);
         }
+        if (source.TargetType != null) {
+            this.TargetType = new String(source.TargetType);
+        }
+        if (source.QueueName != null) {
+            this.QueueName = new String(source.QueueName);
+        }
+        if (source.TopicName != null) {
+            this.TopicName = new String(source.TopicName);
+        }
     }
 
 
@@ -151,6 +229,9 @@ public class AutoScalingNotification extends AbstractModel{
         this.setParamArraySimple(map, prefix + "NotificationUserGroupIds.", this.NotificationUserGroupIds);
         this.setParamArraySimple(map, prefix + "NotificationTypes.", this.NotificationTypes);
         this.setParamSimple(map, prefix + "AutoScalingNotificationId", this.AutoScalingNotificationId);
+        this.setParamSimple(map, prefix + "TargetType", this.TargetType);
+        this.setParamSimple(map, prefix + "QueueName", this.QueueName);
+        this.setParamSimple(map, prefix + "TopicName", this.TopicName);
 
     }
 }

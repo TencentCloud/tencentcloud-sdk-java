@@ -84,7 +84,7 @@ public enum LiveErrorCode {
     // 模版不存在。
      INTERNALERROR_CONFNOTFOUND("InternalError.ConfNotFound"),
      
-    // 模版数量超过显示。
+    // 模版数量超过限制。
      INTERNALERROR_CONFOUTLIMIT("InternalError.ConfOutLimit"),
      
     // 配置不存在。

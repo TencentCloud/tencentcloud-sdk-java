@@ -191,6 +191,13 @@ OPEN：公网属性， INTERNAL：内网属性。
     private String EipAddressId;
 
     /**
+    * Target是否放通来自CLB的流量。开启放通（true）：只验证CLB上的安全组；不开启放通（false）：需同时验证CLB和后端实例上的安全组。
+    */
+    @SerializedName("LoadBalancerPassToTarget")
+    @Expose
+    private Boolean LoadBalancerPassToTarget;
+
+    /**
      * Get 负载均衡实例的网络类型：
 OPEN：公网属性， INTERNAL：内网属性。 
      * @return LoadBalancerType 负载均衡实例的网络类型：
@@ -586,6 +593,22 @@ OPEN：公网属性， INTERNAL：内网属性。
         this.EipAddressId = EipAddressId;
     }
 
+    /**
+     * Get Target是否放通来自CLB的流量。开启放通（true）：只验证CLB上的安全组；不开启放通（false）：需同时验证CLB和后端实例上的安全组。 
+     * @return LoadBalancerPassToTarget Target是否放通来自CLB的流量。开启放通（true）：只验证CLB上的安全组；不开启放通（false）：需同时验证CLB和后端实例上的安全组。
+     */
+    public Boolean getLoadBalancerPassToTarget() {
+        return this.LoadBalancerPassToTarget;
+    }
+
+    /**
+     * Set Target是否放通来自CLB的流量。开启放通（true）：只验证CLB上的安全组；不开启放通（false）：需同时验证CLB和后端实例上的安全组。
+     * @param LoadBalancerPassToTarget Target是否放通来自CLB的流量。开启放通（true）：只验证CLB上的安全组；不开启放通（false）：需同时验证CLB和后端实例上的安全组。
+     */
+    public void setLoadBalancerPassToTarget(Boolean LoadBalancerPassToTarget) {
+        this.LoadBalancerPassToTarget = LoadBalancerPassToTarget;
+    }
+
     public CreateLoadBalancerRequest() {
     }
 
@@ -669,6 +692,9 @@ OPEN：公网属性， INTERNAL：内网属性。
         if (source.EipAddressId != null) {
             this.EipAddressId = new String(source.EipAddressId);
         }
+        if (source.LoadBalancerPassToTarget != null) {
+            this.LoadBalancerPassToTarget = new Boolean(source.LoadBalancerPassToTarget);
+        }
     }
 
 
@@ -699,6 +725,7 @@ OPEN：公网属性， INTERNAL：内网属性。
         this.setParamSimple(map, prefix + "ClusterTag", this.ClusterTag);
         this.setParamSimple(map, prefix + "SlaveZoneId", this.SlaveZoneId);
         this.setParamSimple(map, prefix + "EipAddressId", this.EipAddressId);
+        this.setParamSimple(map, prefix + "LoadBalancerPassToTarget", this.LoadBalancerPassToTarget);
 
     }
 }

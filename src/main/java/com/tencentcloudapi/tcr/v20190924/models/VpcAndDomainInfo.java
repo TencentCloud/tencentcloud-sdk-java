@@ -52,6 +52,13 @@ false: use instancename+"-vpc" as subdomain
     private Boolean UsePublicDomain;
 
     /**
+    * 解析地域，需要保证和vpc处于同一地域，如果不填则默认为主实例地域
+    */
+    @SerializedName("RegionName")
+    @Expose
+    private String RegionName;
+
+    /**
      * Get tcr实例id 
      * @return InstanceId tcr实例id
      */
@@ -119,6 +126,22 @@ false: use instancename+"-vpc" as subdomain
         this.UsePublicDomain = UsePublicDomain;
     }
 
+    /**
+     * Get 解析地域，需要保证和vpc处于同一地域，如果不填则默认为主实例地域 
+     * @return RegionName 解析地域，需要保证和vpc处于同一地域，如果不填则默认为主实例地域
+     */
+    public String getRegionName() {
+        return this.RegionName;
+    }
+
+    /**
+     * Set 解析地域，需要保证和vpc处于同一地域，如果不填则默认为主实例地域
+     * @param RegionName 解析地域，需要保证和vpc处于同一地域，如果不填则默认为主实例地域
+     */
+    public void setRegionName(String RegionName) {
+        this.RegionName = RegionName;
+    }
+
     public VpcAndDomainInfo() {
     }
 
@@ -139,6 +162,9 @@ false: use instancename+"-vpc" as subdomain
         if (source.UsePublicDomain != null) {
             this.UsePublicDomain = new Boolean(source.UsePublicDomain);
         }
+        if (source.RegionName != null) {
+            this.RegionName = new String(source.RegionName);
+        }
     }
 
 
@@ -150,6 +176,7 @@ false: use instancename+"-vpc" as subdomain
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
         this.setParamSimple(map, prefix + "EniLBIp", this.EniLBIp);
         this.setParamSimple(map, prefix + "UsePublicDomain", this.UsePublicDomain);
+        this.setParamSimple(map, prefix + "RegionName", this.RegionName);
 
     }
 }

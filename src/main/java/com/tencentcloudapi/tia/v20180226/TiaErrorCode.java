@@ -15,7 +15,7 @@ public enum TiaErrorCode {
     // 参数错误。
      INVALIDPARAMETER("InvalidParameter"),
      
-    // 参数取值错误
+    // 参数取值错误。
      INVALIDPARAMETERVALUE("InvalidParameterValue"),
      
     // Code传入错误。
@@ -57,16 +57,16 @@ public enum TiaErrorCode {
     // FunctionName已存在。
      RESOURCEINUSE_FUNCTIONNAME("ResourceInUse.FunctionName"),
      
-    // 资源不存在
+    // 资源不存在。
      RESOURCENOTFOUND("ResourceNotFound"),
      
     // 函数不存在。
      RESOURCENOTFOUND_FUNCTIONNAME("ResourceNotFound.FunctionName"),
      
-    // 资源不可用
+    // 资源不可用。
      RESOURCEUNAVAILABLE("ResourceUnavailable"),
      
-    // 未授权操作
+    // 未授权操作。
      UNAUTHORIZEDOPERATION("UnauthorizedOperation"),
      
     // CAM鉴权失败。

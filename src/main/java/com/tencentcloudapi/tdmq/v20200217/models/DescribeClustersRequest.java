@@ -44,6 +44,20 @@ public class DescribeClustersRequest extends AbstractModel{
     private String [] ClusterIdList;
 
     /**
+    * 是否标签过滤
+    */
+    @SerializedName("IsTagFilter")
+    @Expose
+    private Boolean IsTagFilter;
+
+    /**
+    * 过滤器。目前支持按标签过滤。
+    */
+    @SerializedName("Filters")
+    @Expose
+    private Filter [] Filters;
+
+    /**
      * Get 起始下标，不填默认为0。 
      * @return Offset 起始下标，不填默认为0。
      */
@@ -91,6 +105,38 @@ public class DescribeClustersRequest extends AbstractModel{
         this.ClusterIdList = ClusterIdList;
     }
 
+    /**
+     * Get 是否标签过滤 
+     * @return IsTagFilter 是否标签过滤
+     */
+    public Boolean getIsTagFilter() {
+        return this.IsTagFilter;
+    }
+
+    /**
+     * Set 是否标签过滤
+     * @param IsTagFilter 是否标签过滤
+     */
+    public void setIsTagFilter(Boolean IsTagFilter) {
+        this.IsTagFilter = IsTagFilter;
+    }
+
+    /**
+     * Get 过滤器。目前支持按标签过滤。 
+     * @return Filters 过滤器。目前支持按标签过滤。
+     */
+    public Filter [] getFilters() {
+        return this.Filters;
+    }
+
+    /**
+     * Set 过滤器。目前支持按标签过滤。
+     * @param Filters 过滤器。目前支持按标签过滤。
+     */
+    public void setFilters(Filter [] Filters) {
+        this.Filters = Filters;
+    }
+
     public DescribeClustersRequest() {
     }
 
@@ -111,6 +157,15 @@ public class DescribeClustersRequest extends AbstractModel{
                 this.ClusterIdList[i] = new String(source.ClusterIdList[i]);
             }
         }
+        if (source.IsTagFilter != null) {
+            this.IsTagFilter = new Boolean(source.IsTagFilter);
+        }
+        if (source.Filters != null) {
+            this.Filters = new Filter[source.Filters.length];
+            for (int i = 0; i < source.Filters.length; i++) {
+                this.Filters[i] = new Filter(source.Filters[i]);
+            }
+        }
     }
 
 
@@ -121,6 +176,8 @@ public class DescribeClustersRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamArraySimple(map, prefix + "ClusterIdList.", this.ClusterIdList);
+        this.setParamSimple(map, prefix + "IsTagFilter", this.IsTagFilter);
+        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
 
     }
 }

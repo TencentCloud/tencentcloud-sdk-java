@@ -13,28 +13,22 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cwp.v20180228.models;
+package com.tencentcloudapi.advisor.v20200721.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeAccountsResponse extends AbstractModel{
+public class DescribeStrategiesResponse extends AbstractModel{
 
     /**
-    * 帐号列表记录总数。
+    * 评估项列表
+注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("TotalCount")
+    @SerializedName("Strategies")
     @Expose
-    private Long TotalCount;
-
-    /**
-    * 帐号数据列表。
-    */
-    @SerializedName("Accounts")
-    @Expose
-    private Account [] Accounts;
+    private DescribeStrategie [] Strategies;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -44,35 +38,23 @@ public class DescribeAccountsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 帐号列表记录总数。 
-     * @return TotalCount 帐号列表记录总数。
+     * Get 评估项列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Strategies 评估项列表
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getTotalCount() {
-        return this.TotalCount;
+    public DescribeStrategie [] getStrategies() {
+        return this.Strategies;
     }
 
     /**
-     * Set 帐号列表记录总数。
-     * @param TotalCount 帐号列表记录总数。
+     * Set 评估项列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Strategies 评估项列表
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setTotalCount(Long TotalCount) {
-        this.TotalCount = TotalCount;
-    }
-
-    /**
-     * Get 帐号数据列表。 
-     * @return Accounts 帐号数据列表。
-     */
-    public Account [] getAccounts() {
-        return this.Accounts;
-    }
-
-    /**
-     * Set 帐号数据列表。
-     * @param Accounts 帐号数据列表。
-     */
-    public void setAccounts(Account [] Accounts) {
-        this.Accounts = Accounts;
+    public void setStrategies(DescribeStrategie [] Strategies) {
+        this.Strategies = Strategies;
     }
 
     /**
@@ -91,21 +73,18 @@ public class DescribeAccountsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeAccountsResponse() {
+    public DescribeStrategiesResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeAccountsResponse(DescribeAccountsResponse source) {
-        if (source.TotalCount != null) {
-            this.TotalCount = new Long(source.TotalCount);
-        }
-        if (source.Accounts != null) {
-            this.Accounts = new Account[source.Accounts.length];
-            for (int i = 0; i < source.Accounts.length; i++) {
-                this.Accounts[i] = new Account(source.Accounts[i]);
+    public DescribeStrategiesResponse(DescribeStrategiesResponse source) {
+        if (source.Strategies != null) {
+            this.Strategies = new DescribeStrategie[source.Strategies.length];
+            for (int i = 0; i < source.Strategies.length; i++) {
+                this.Strategies[i] = new DescribeStrategie(source.Strategies[i]);
             }
         }
         if (source.RequestId != null) {
@@ -118,8 +97,7 @@ public class DescribeAccountsResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
-        this.setParamArrayObj(map, prefix + "Accounts.", this.Accounts);
+        this.setParamArrayObj(map, prefix + "Strategies.", this.Strategies);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

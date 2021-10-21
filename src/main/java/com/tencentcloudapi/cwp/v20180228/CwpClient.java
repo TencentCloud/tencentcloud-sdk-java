@@ -659,28 +659,6 @@ public class CwpClient extends AbstractClient{
     }
 
     /**
-     *该接口已废弃
-
-本接口 (DescribeAccounts) 用于获取帐号列表数据。
-     * @param req DescribeAccountsRequest
-     * @return DescribeAccountsResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeAccountsResponse DescribeAccounts(DescribeAccountsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeAccountsResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeAccountsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeAccounts");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *查询应用列表
      * @param req DescribeAssetAppListRequest
      * @return DescribeAssetAppListResponse

@@ -142,6 +142,13 @@ public class CreateCloneInstanceRequest extends AbstractModel{
     private Long InstanceNodes;
 
     /**
+    * 置放群组 ID。
+    */
+    @SerializedName("DeployGroupId")
+    @Expose
+    private String DeployGroupId;
+
+    /**
      * Get 克隆源实例Id。 
      * @return InstanceId 克隆源实例Id。
      */
@@ -413,6 +420,22 @@ public class CreateCloneInstanceRequest extends AbstractModel{
         this.InstanceNodes = InstanceNodes;
     }
 
+    /**
+     * Get 置放群组 ID。 
+     * @return DeployGroupId 置放群组 ID。
+     */
+    public String getDeployGroupId() {
+        return this.DeployGroupId;
+    }
+
+    /**
+     * Set 置放群组 ID。
+     * @param DeployGroupId 置放群组 ID。
+     */
+    public void setDeployGroupId(String DeployGroupId) {
+        this.DeployGroupId = DeployGroupId;
+    }
+
     public CreateCloneInstanceRequest() {
     }
 
@@ -478,6 +501,9 @@ public class CreateCloneInstanceRequest extends AbstractModel{
         if (source.InstanceNodes != null) {
             this.InstanceNodes = new Long(source.InstanceNodes);
         }
+        if (source.DeployGroupId != null) {
+            this.DeployGroupId = new String(source.DeployGroupId);
+        }
     }
 
 
@@ -502,6 +528,7 @@ public class CreateCloneInstanceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "BackupZone", this.BackupZone);
         this.setParamSimple(map, prefix + "DeviceType", this.DeviceType);
         this.setParamSimple(map, prefix + "InstanceNodes", this.InstanceNodes);
+        this.setParamSimple(map, prefix + "DeployGroupId", this.DeployGroupId);
 
     }
 }

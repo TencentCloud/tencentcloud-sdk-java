@@ -22,6 +22,72 @@ import java.util.HashMap;
 
 public class DataDisk extends AbstractModel{
 
+    /**
+    * 数据盘大小。单位GB。
+    */
+    @SerializedName("DiskSize")
+    @Expose
+    private Long DiskSize;
+
+    /**
+    * 数据盘类型，取值范围：
+- LOCAL_BASIC：本地硬盘
+- CLOUD_PREMIUM：高性能云硬盘
+
+默认取值： LOCAL_BASIC。
+    */
+    @SerializedName("DiskType")
+    @Expose
+    private String DiskType;
+
+    /**
+     * Get 数据盘大小。单位GB。 
+     * @return DiskSize 数据盘大小。单位GB。
+     */
+    public Long getDiskSize() {
+        return this.DiskSize;
+    }
+
+    /**
+     * Set 数据盘大小。单位GB。
+     * @param DiskSize 数据盘大小。单位GB。
+     */
+    public void setDiskSize(Long DiskSize) {
+        this.DiskSize = DiskSize;
+    }
+
+    /**
+     * Get 数据盘类型，取值范围：
+- LOCAL_BASIC：本地硬盘
+- CLOUD_PREMIUM：高性能云硬盘
+
+默认取值： LOCAL_BASIC。 
+     * @return DiskType 数据盘类型，取值范围：
+- LOCAL_BASIC：本地硬盘
+- CLOUD_PREMIUM：高性能云硬盘
+
+默认取值： LOCAL_BASIC。
+     */
+    public String getDiskType() {
+        return this.DiskType;
+    }
+
+    /**
+     * Set 数据盘类型，取值范围：
+- LOCAL_BASIC：本地硬盘
+- CLOUD_PREMIUM：高性能云硬盘
+
+默认取值： LOCAL_BASIC。
+     * @param DiskType 数据盘类型，取值范围：
+- LOCAL_BASIC：本地硬盘
+- CLOUD_PREMIUM：高性能云硬盘
+
+默认取值： LOCAL_BASIC。
+     */
+    public void setDiskType(String DiskType) {
+        this.DiskType = DiskType;
+    }
+
     public DataDisk() {
     }
 
@@ -30,6 +96,12 @@ public class DataDisk extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DataDisk(DataDisk source) {
+        if (source.DiskSize != null) {
+            this.DiskSize = new Long(source.DiskSize);
+        }
+        if (source.DiskType != null) {
+            this.DiskType = new String(source.DiskType);
+        }
     }
 
 
@@ -37,6 +109,8 @@ public class DataDisk extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "DiskSize", this.DiskSize);
+        this.setParamSimple(map, prefix + "DiskType", this.DiskType);
 
     }
 }

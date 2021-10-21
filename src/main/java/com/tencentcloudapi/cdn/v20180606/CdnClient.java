@@ -279,6 +279,26 @@ public class CdnClient extends AbstractClient{
     }
 
     /**
+     *CC统计数据查询
+     * @param req DescribeCcDataRequest
+     * @return DescribeCcDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCcDataResponse DescribeCcData(DescribeCcDataRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCcDataResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCcDataResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeCcData");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *DescribeCdnData 用于查询 CDN 实时访问监控数据，支持以下指标查询：
 
 + 流量（单位为 byte）
@@ -392,6 +412,26 @@ public class CdnClient extends AbstractClient{
     }
 
     /**
+     *DDoS统计数据查询
+     * @param req DescribeDDoSDataRequest
+     * @return DescribeDDoSDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDDoSDataResponse DescribeDDoSData(DescribeDDoSDataRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDDoSDataResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDDoSDataResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDDoSData");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *DescribeDiagnoseReport 用于获取指定报告id的内容
      * @param req DescribeDiagnoseReportRequest
      * @return DescribeDiagnoseReportResponse
@@ -465,6 +505,26 @@ public class CdnClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeDomainsConfigResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeDomainsConfig");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *DescribeEventLogData 用于查询事件日志统计曲线
+     * @param req DescribeEventLogDataRequest
+     * @return DescribeEventLogDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeEventLogDataResponse DescribeEventLogData(DescribeEventLogDataRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeEventLogDataResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeEventLogDataResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeEventLogData");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -808,6 +868,26 @@ public class CdnClient extends AbstractClient{
     }
 
     /**
+     *Waf统计数据查询
+     * @param req DescribeWafDataRequest
+     * @return DescribeWafDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeWafDataResponse DescribeWafData(DescribeWafDataRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeWafDataResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeWafDataResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeWafData");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *DisableCaches 用于禁用 CDN 上指定 URL 的访问，禁用完成后，中国境内访问会直接返回 403。（注：接口尚在内测中，暂未全量开放；封禁URL并非无限期永久封禁）
      * @param req DisableCachesRequest
      * @return DisableCachesResponse
@@ -1061,6 +1141,26 @@ public class CdnClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ListTopCcDataResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ListTopCcData");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *通过CLS日志计算Top信息。支持近7天的日志数据。
+     * @param req ListTopClsLogDataRequest
+     * @return ListTopClsLogDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListTopClsLogDataResponse ListTopClsLogData(ListTopClsLogDataRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ListTopClsLogDataResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ListTopClsLogDataResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ListTopClsLogData");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

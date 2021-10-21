@@ -45,6 +45,13 @@ public class ListTopDDoSDataRequest extends AbstractModel{
     private Long TopCount;
 
     /**
+    * AttackIP表示查询攻击ip的top排行，AttackType表示攻击类型的top排行，为空默认为AttackType
+    */
+    @SerializedName("Metric")
+    @Expose
+    private String Metric;
+
+    /**
      * Get 查询Top数据的开始时间，格式为：2020-01-01 00:00:00 
      * @return StartTime 查询Top数据的开始时间，格式为：2020-01-01 00:00:00
      */
@@ -96,6 +103,22 @@ public class ListTopDDoSDataRequest extends AbstractModel{
         this.TopCount = TopCount;
     }
 
+    /**
+     * Get AttackIP表示查询攻击ip的top排行，AttackType表示攻击类型的top排行，为空默认为AttackType 
+     * @return Metric AttackIP表示查询攻击ip的top排行，AttackType表示攻击类型的top排行，为空默认为AttackType
+     */
+    public String getMetric() {
+        return this.Metric;
+    }
+
+    /**
+     * Set AttackIP表示查询攻击ip的top排行，AttackType表示攻击类型的top排行，为空默认为AttackType
+     * @param Metric AttackIP表示查询攻击ip的top排行，AttackType表示攻击类型的top排行，为空默认为AttackType
+     */
+    public void setMetric(String Metric) {
+        this.Metric = Metric;
+    }
+
     public ListTopDDoSDataRequest() {
     }
 
@@ -113,6 +136,9 @@ public class ListTopDDoSDataRequest extends AbstractModel{
         if (source.TopCount != null) {
             this.TopCount = new Long(source.TopCount);
         }
+        if (source.Metric != null) {
+            this.Metric = new String(source.Metric);
+        }
     }
 
 
@@ -123,6 +149,7 @@ public class ListTopDDoSDataRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamSimple(map, prefix + "TopCount", this.TopCount);
+        this.setParamSimple(map, prefix + "Metric", this.Metric);
 
     }
 }

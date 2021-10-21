@@ -151,6 +151,46 @@ public class PatientInfo extends AbstractModel{
     private String MedicalInsuranceType;
 
     /**
+    * 标准化年龄
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AgeNorm")
+    @Expose
+    private String AgeNorm;
+
+    /**
+    * 民族
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Nation")
+    @Expose
+    private String Nation;
+
+    /**
+    * 婚姻代码
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MarriedCode")
+    @Expose
+    private String MarriedCode;
+
+    /**
+    * 职业代码
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ProfessionCode")
+    @Expose
+    private String ProfessionCode;
+
+    /**
+    * 居民医保代码
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MedicalInsuranceTypeCode")
+    @Expose
+    private String MedicalInsuranceTypeCode;
+
+    /**
      * Get 患者姓名
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Name 患者姓名
@@ -470,6 +510,106 @@ public class PatientInfo extends AbstractModel{
         this.MedicalInsuranceType = MedicalInsuranceType;
     }
 
+    /**
+     * Get 标准化年龄
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AgeNorm 标准化年龄
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAgeNorm() {
+        return this.AgeNorm;
+    }
+
+    /**
+     * Set 标准化年龄
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AgeNorm 标准化年龄
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAgeNorm(String AgeNorm) {
+        this.AgeNorm = AgeNorm;
+    }
+
+    /**
+     * Get 民族
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Nation 民族
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getNation() {
+        return this.Nation;
+    }
+
+    /**
+     * Set 民族
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Nation 民族
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNation(String Nation) {
+        this.Nation = Nation;
+    }
+
+    /**
+     * Get 婚姻代码
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MarriedCode 婚姻代码
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getMarriedCode() {
+        return this.MarriedCode;
+    }
+
+    /**
+     * Set 婚姻代码
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MarriedCode 婚姻代码
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMarriedCode(String MarriedCode) {
+        this.MarriedCode = MarriedCode;
+    }
+
+    /**
+     * Get 职业代码
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ProfessionCode 职业代码
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getProfessionCode() {
+        return this.ProfessionCode;
+    }
+
+    /**
+     * Set 职业代码
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ProfessionCode 职业代码
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProfessionCode(String ProfessionCode) {
+        this.ProfessionCode = ProfessionCode;
+    }
+
+    /**
+     * Get 居民医保代码
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MedicalInsuranceTypeCode 居民医保代码
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getMedicalInsuranceTypeCode() {
+        return this.MedicalInsuranceTypeCode;
+    }
+
+    /**
+     * Set 居民医保代码
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MedicalInsuranceTypeCode 居民医保代码
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMedicalInsuranceTypeCode(String MedicalInsuranceTypeCode) {
+        this.MedicalInsuranceTypeCode = MedicalInsuranceTypeCode;
+    }
+
     public PatientInfo() {
     }
 
@@ -526,6 +666,21 @@ public class PatientInfo extends AbstractModel{
         if (source.MedicalInsuranceType != null) {
             this.MedicalInsuranceType = new String(source.MedicalInsuranceType);
         }
+        if (source.AgeNorm != null) {
+            this.AgeNorm = new String(source.AgeNorm);
+        }
+        if (source.Nation != null) {
+            this.Nation = new String(source.Nation);
+        }
+        if (source.MarriedCode != null) {
+            this.MarriedCode = new String(source.MarriedCode);
+        }
+        if (source.ProfessionCode != null) {
+            this.ProfessionCode = new String(source.ProfessionCode);
+        }
+        if (source.MedicalInsuranceTypeCode != null) {
+            this.MedicalInsuranceTypeCode = new String(source.MedicalInsuranceTypeCode);
+        }
     }
 
 
@@ -549,6 +704,11 @@ public class PatientInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Nationality", this.Nationality);
         this.setParamSimple(map, prefix + "BirthPlace", this.BirthPlace);
         this.setParamSimple(map, prefix + "MedicalInsuranceType", this.MedicalInsuranceType);
+        this.setParamSimple(map, prefix + "AgeNorm", this.AgeNorm);
+        this.setParamSimple(map, prefix + "Nation", this.Nation);
+        this.setParamSimple(map, prefix + "MarriedCode", this.MarriedCode);
+        this.setParamSimple(map, prefix + "ProfessionCode", this.ProfessionCode);
+        this.setParamSimple(map, prefix + "MedicalInsuranceTypeCode", this.MedicalInsuranceTypeCode);
 
     }
 }

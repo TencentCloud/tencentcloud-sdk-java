@@ -719,6 +719,26 @@ public class TsfClient extends AbstractClient{
     }
 
     /**
+     *删除泳道规则
+     * @param req DeleteLaneRuleRequest
+     * @return DeleteLaneRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteLaneRuleResponse DeleteLaneRule(DeleteLaneRuleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteLaneRuleResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteLaneRuleResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteLaneRule");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *删除微服务
      * @param req DeleteMicroserviceRequest
      * @return DeleteMicroserviceResponse
@@ -1473,6 +1493,26 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
                 Type type = new TypeToken<JsonResponseModel<DescribeGatewayAllGroupApisResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeGatewayAllGroupApis");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询API分组下的Api列表信息
+     * @param req DescribeGatewayApisRequest
+     * @return DescribeGatewayApisResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeGatewayApisResponse DescribeGatewayApis(DescribeGatewayApisRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeGatewayApisResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeGatewayApisResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeGatewayApis");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
