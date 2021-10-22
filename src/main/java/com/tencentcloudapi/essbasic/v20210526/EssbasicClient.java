@@ -100,6 +100,26 @@ public class EssbasicClient extends AbstractClient{
     }
 
     /**
+     *根据流程信息批量获取资源下载链接
+     * @param req DescribeResourceUrlsByFlowsRequest
+     * @return DescribeResourceUrlsByFlowsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeResourceUrlsByFlowsResponse DescribeResourceUrlsByFlows(DescribeResourceUrlsByFlowsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeResourceUrlsByFlowsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeResourceUrlsByFlowsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeResourceUrlsByFlows");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *通过此接口（DescribeTemplates）查询该企业在电子签渠道版中配置的有效模板列表
      * @param req DescribeTemplatesRequest
      * @return DescribeTemplatesResponse

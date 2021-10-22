@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeIpGeolocationInfosRequest extends AbstractModel{
 
     /**
-    * 需查询的IP地址列表，支持IPv4和IPv6。批量查询的IP地址上限为100个。
+    * 需查询的IP地址列表，目前仅支持IPv4地址。查询的IP地址数量上限为100个。
     */
     @SerializedName("AddressIps")
     @Expose
@@ -37,16 +37,16 @@ public class DescribeIpGeolocationInfosRequest extends AbstractModel{
     private IpField Fields;
 
     /**
-     * Get 需查询的IP地址列表，支持IPv4和IPv6。批量查询的IP地址上限为100个。 
-     * @return AddressIps 需查询的IP地址列表，支持IPv4和IPv6。批量查询的IP地址上限为100个。
+     * Get 需查询的IP地址列表，目前仅支持IPv4地址。查询的IP地址数量上限为100个。 
+     * @return AddressIps 需查询的IP地址列表，目前仅支持IPv4地址。查询的IP地址数量上限为100个。
      */
     public String [] getAddressIps() {
         return this.AddressIps;
     }
 
     /**
-     * Set 需查询的IP地址列表，支持IPv4和IPv6。批量查询的IP地址上限为100个。
-     * @param AddressIps 需查询的IP地址列表，支持IPv4和IPv6。批量查询的IP地址上限为100个。
+     * Set 需查询的IP地址列表，目前仅支持IPv4地址。查询的IP地址数量上限为100个。
+     * @param AddressIps 需查询的IP地址列表，目前仅支持IPv4地址。查询的IP地址数量上限为100个。
      */
     public void setAddressIps(String [] AddressIps) {
         this.AddressIps = AddressIps;
