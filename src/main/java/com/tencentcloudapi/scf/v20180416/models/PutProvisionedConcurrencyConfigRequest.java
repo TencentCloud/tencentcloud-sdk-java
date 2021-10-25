@@ -51,6 +51,13 @@ public class PutProvisionedConcurrencyConfigRequest extends AbstractModel{
     private String Namespace;
 
     /**
+    * 定时预置任务
+    */
+    @SerializedName("TriggerActions")
+    @Expose
+    private TriggerAction [] TriggerActions;
+
+    /**
      * Get 需要设置预置并发的函数的名称 
      * @return FunctionName 需要设置预置并发的函数的名称
      */
@@ -114,6 +121,22 @@ public class PutProvisionedConcurrencyConfigRequest extends AbstractModel{
         this.Namespace = Namespace;
     }
 
+    /**
+     * Get 定时预置任务 
+     * @return TriggerActions 定时预置任务
+     */
+    public TriggerAction [] getTriggerActions() {
+        return this.TriggerActions;
+    }
+
+    /**
+     * Set 定时预置任务
+     * @param TriggerActions 定时预置任务
+     */
+    public void setTriggerActions(TriggerAction [] TriggerActions) {
+        this.TriggerActions = TriggerActions;
+    }
+
     public PutProvisionedConcurrencyConfigRequest() {
     }
 
@@ -134,6 +157,12 @@ public class PutProvisionedConcurrencyConfigRequest extends AbstractModel{
         if (source.Namespace != null) {
             this.Namespace = new String(source.Namespace);
         }
+        if (source.TriggerActions != null) {
+            this.TriggerActions = new TriggerAction[source.TriggerActions.length];
+            for (int i = 0; i < source.TriggerActions.length; i++) {
+                this.TriggerActions[i] = new TriggerAction(source.TriggerActions[i]);
+            }
+        }
     }
 
 
@@ -145,6 +174,7 @@ public class PutProvisionedConcurrencyConfigRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Qualifier", this.Qualifier);
         this.setParamSimple(map, prefix + "VersionProvisionedConcurrencyNum", this.VersionProvisionedConcurrencyNum);
         this.setParamSimple(map, prefix + "Namespace", this.Namespace);
+        this.setParamArrayObj(map, prefix + "TriggerActions.", this.TriggerActions);
 
     }
 }

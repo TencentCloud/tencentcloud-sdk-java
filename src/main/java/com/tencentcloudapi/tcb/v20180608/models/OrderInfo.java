@@ -101,6 +101,23 @@ public class OrderInfo extends AbstractModel{
     private String ResourceReady;
 
     /**
+    * 安装标记。建议使用方统一转大小写之后再判断。
+<li>QuickStart：快速启动来源</li>
+<li>Activity：活动来源</li>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Flag")
+    @Expose
+    private String Flag;
+
+    /**
+    * 下单时的参数
+    */
+    @SerializedName("ReqBody")
+    @Expose
+    private String ReqBody;
+
+    /**
      * Get 订单号 
      * @return TranId 订单号
      */
@@ -304,6 +321,50 @@ public class OrderInfo extends AbstractModel{
         this.ResourceReady = ResourceReady;
     }
 
+    /**
+     * Get 安装标记。建议使用方统一转大小写之后再判断。
+<li>QuickStart：快速启动来源</li>
+<li>Activity：活动来源</li>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Flag 安装标记。建议使用方统一转大小写之后再判断。
+<li>QuickStart：快速启动来源</li>
+<li>Activity：活动来源</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getFlag() {
+        return this.Flag;
+    }
+
+    /**
+     * Set 安装标记。建议使用方统一转大小写之后再判断。
+<li>QuickStart：快速启动来源</li>
+<li>Activity：活动来源</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Flag 安装标记。建议使用方统一转大小写之后再判断。
+<li>QuickStart：快速启动来源</li>
+<li>Activity：活动来源</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFlag(String Flag) {
+        this.Flag = Flag;
+    }
+
+    /**
+     * Get 下单时的参数 
+     * @return ReqBody 下单时的参数
+     */
+    public String getReqBody() {
+        return this.ReqBody;
+    }
+
+    /**
+     * Set 下单时的参数
+     * @param ReqBody 下单时的参数
+     */
+    public void setReqBody(String ReqBody) {
+        this.ReqBody = ReqBody;
+    }
+
     public OrderInfo() {
     }
 
@@ -339,6 +400,12 @@ public class OrderInfo extends AbstractModel{
         if (source.ResourceReady != null) {
             this.ResourceReady = new String(source.ResourceReady);
         }
+        if (source.Flag != null) {
+            this.Flag = new String(source.Flag);
+        }
+        if (source.ReqBody != null) {
+            this.ReqBody = new String(source.ReqBody);
+        }
     }
 
 
@@ -355,6 +422,8 @@ public class OrderInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "PayMode", this.PayMode);
         this.setParamSimple(map, prefix + "ExtensionId", this.ExtensionId);
         this.setParamSimple(map, prefix + "ResourceReady", this.ResourceReady);
+        this.setParamSimple(map, prefix + "Flag", this.Flag);
+        this.setParamSimple(map, prefix + "ReqBody", this.ReqBody);
 
     }
 }

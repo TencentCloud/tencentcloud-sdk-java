@@ -84,6 +84,12 @@ public enum ScfErrorCode {
     // 操作冲突。
      FAILEDOPERATION_OPERATIONCONFLICT("FailedOperation.OperationConflict"),
      
+    // 创建定时预置任务失败。
+     FAILEDOPERATION_PROVISIONCREATETIMER("FailedOperation.ProvisionCreateTimer"),
+     
+    // 删除定时预置任务失败。
+     FAILEDOPERATION_PROVISIONDELETETIMER("FailedOperation.ProvisionDeleteTimer"),
+     
     // 当前函数版本已有预置任务处于进行中，请稍后重试。
      FAILEDOPERATION_PROVISIONEDINPROGRESS("FailedOperation.ProvisionedInProgress"),
      
@@ -330,6 +336,18 @@ public enum ScfErrorCode {
     // ProtocolType参数传入错误。
      INVALIDPARAMETERVALUE_PROTOCOLTYPE("InvalidParameterValue.ProtocolType"),
      
+    // 定时预置的cron配置重复。
+     INVALIDPARAMETERVALUE_PROVISIONTRIGGERCRONCONFIGDUPLICATE("InvalidParameterValue.ProvisionTriggerCronConfigDuplicate"),
+     
+    // TriggerName参数传入错误。
+     INVALIDPARAMETERVALUE_PROVISIONTRIGGERNAME("InvalidParameterValue.ProvisionTriggerName"),
+     
+    // TriggerName重复。
+     INVALIDPARAMETERVALUE_PROVISIONTRIGGERNAMEDUPLICATE("InvalidParameterValue.ProvisionTriggerNameDuplicate"),
+     
+    // ProvisionType 参数传入错误。
+     INVALIDPARAMETERVALUE_PROVISIONTYPE("InvalidParameterValue.ProvisionType"),
+     
     // PublicNetConfig参数错误。
      INVALIDPARAMETERVALUE_PUBLICNETCONFIG("InvalidParameterValue.PublicNetConfig"),
      
@@ -372,11 +390,20 @@ public enum ScfErrorCode {
     // TraceEnable取值与规范不符，请修正后再试。
      INVALIDPARAMETERVALUE_TRACEENABLE("InvalidParameterValue.TraceEnable"),
      
+    // TriggerCronConfig参数传入错误。
+     INVALIDPARAMETERVALUE_TRIGGERCRONCONFIG("InvalidParameterValue.TriggerCronConfig"),
+     
+    // TriggerCronConfig参数定时触发间隔小于指定值。
+     INVALIDPARAMETERVALUE_TRIGGERCRONCONFIGTIMEINTERVAL("InvalidParameterValue.TriggerCronConfigTimeInterval"),
+     
     // TriggerDesc传入参数错误。
      INVALIDPARAMETERVALUE_TRIGGERDESC("InvalidParameterValue.TriggerDesc"),
      
     // TriggerName传入错误。
      INVALIDPARAMETERVALUE_TRIGGERNAME("InvalidParameterValue.TriggerName"),
+     
+    // TriggerProvisionedConcurrencyNum参数传入错误。
+     INVALIDPARAMETERVALUE_TRIGGERPROVISIONEDCONCURRENCYNUM("InvalidParameterValue.TriggerProvisionedConcurrencyNum"),
      
     // Type传入错误。
      INVALIDPARAMETERVALUE_TYPE("InvalidParameterValue.Type"),
@@ -440,6 +467,12 @@ public enum ScfErrorCode {
      
     // Offset超出限制。
      LIMITEXCEEDED_OFFSET("LimitExceeded.Offset"),
+     
+    // 定时预置数量超过最大限制。
+     LIMITEXCEEDED_PROVISIONTRIGGERACTION("LimitExceeded.ProvisionTriggerAction"),
+     
+    // 定时触发间隔小于最大限制。
+     LIMITEXCEEDED_PROVISIONTRIGGERINTERVAL("LimitExceeded.ProvisionTriggerInterval"),
      
     // 函数异步重试配置异步重试次数超过限制。
      LIMITEXCEEDED_RETRYNUM("LimitExceeded.RetryNum"),

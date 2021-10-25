@@ -44,6 +44,27 @@ public class ModifyModuleConfigRequest extends AbstractModel{
     private Long DefaultDataDiskSize;
 
     /**
+    * 默认系统盘大小，单位：G。范围不得超过数据盘范围大小，详看DescribeConfig。
+    */
+    @SerializedName("DefaultSystemDiskSize")
+    @Expose
+    private Long DefaultSystemDiskSize;
+
+    /**
+    * 系统盘
+    */
+    @SerializedName("SystemDisk")
+    @Expose
+    private SystemDisk SystemDisk;
+
+    /**
+    * 数据盘
+    */
+    @SerializedName("DataDisks")
+    @Expose
+    private DataDisk [] DataDisks;
+
+    /**
      * Get 模块ID。 
      * @return ModuleId 模块ID。
      */
@@ -91,6 +112,54 @@ public class ModifyModuleConfigRequest extends AbstractModel{
         this.DefaultDataDiskSize = DefaultDataDiskSize;
     }
 
+    /**
+     * Get 默认系统盘大小，单位：G。范围不得超过数据盘范围大小，详看DescribeConfig。 
+     * @return DefaultSystemDiskSize 默认系统盘大小，单位：G。范围不得超过数据盘范围大小，详看DescribeConfig。
+     */
+    public Long getDefaultSystemDiskSize() {
+        return this.DefaultSystemDiskSize;
+    }
+
+    /**
+     * Set 默认系统盘大小，单位：G。范围不得超过数据盘范围大小，详看DescribeConfig。
+     * @param DefaultSystemDiskSize 默认系统盘大小，单位：G。范围不得超过数据盘范围大小，详看DescribeConfig。
+     */
+    public void setDefaultSystemDiskSize(Long DefaultSystemDiskSize) {
+        this.DefaultSystemDiskSize = DefaultSystemDiskSize;
+    }
+
+    /**
+     * Get 系统盘 
+     * @return SystemDisk 系统盘
+     */
+    public SystemDisk getSystemDisk() {
+        return this.SystemDisk;
+    }
+
+    /**
+     * Set 系统盘
+     * @param SystemDisk 系统盘
+     */
+    public void setSystemDisk(SystemDisk SystemDisk) {
+        this.SystemDisk = SystemDisk;
+    }
+
+    /**
+     * Get 数据盘 
+     * @return DataDisks 数据盘
+     */
+    public DataDisk [] getDataDisks() {
+        return this.DataDisks;
+    }
+
+    /**
+     * Set 数据盘
+     * @param DataDisks 数据盘
+     */
+    public void setDataDisks(DataDisk [] DataDisks) {
+        this.DataDisks = DataDisks;
+    }
+
     public ModifyModuleConfigRequest() {
     }
 
@@ -108,6 +177,18 @@ public class ModifyModuleConfigRequest extends AbstractModel{
         if (source.DefaultDataDiskSize != null) {
             this.DefaultDataDiskSize = new Long(source.DefaultDataDiskSize);
         }
+        if (source.DefaultSystemDiskSize != null) {
+            this.DefaultSystemDiskSize = new Long(source.DefaultSystemDiskSize);
+        }
+        if (source.SystemDisk != null) {
+            this.SystemDisk = new SystemDisk(source.SystemDisk);
+        }
+        if (source.DataDisks != null) {
+            this.DataDisks = new DataDisk[source.DataDisks.length];
+            for (int i = 0; i < source.DataDisks.length; i++) {
+                this.DataDisks[i] = new DataDisk(source.DataDisks[i]);
+            }
+        }
     }
 
 
@@ -118,6 +199,9 @@ public class ModifyModuleConfigRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ModuleId", this.ModuleId);
         this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
         this.setParamSimple(map, prefix + "DefaultDataDiskSize", this.DefaultDataDiskSize);
+        this.setParamSimple(map, prefix + "DefaultSystemDiskSize", this.DefaultSystemDiskSize);
+        this.setParamObj(map, prefix + "SystemDisk.", this.SystemDisk);
+        this.setParamArrayObj(map, prefix + "DataDisks.", this.DataDisks);
 
     }
 }

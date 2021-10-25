@@ -58,6 +58,14 @@ public class VersionProvisionedConcurrencyInfo extends AbstractModel{
     private String Qualifier;
 
     /**
+    * 预置并发定时任务。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TriggerActions")
+    @Expose
+    private TriggerAction [] TriggerActions;
+
+    /**
      * Get 设置的预置并发数。 
      * @return AllocatedProvisionedConcurrencyNum 设置的预置并发数。
      */
@@ -137,6 +145,26 @@ public class VersionProvisionedConcurrencyInfo extends AbstractModel{
         this.Qualifier = Qualifier;
     }
 
+    /**
+     * Get 预置并发定时任务。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TriggerActions 预置并发定时任务。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public TriggerAction [] getTriggerActions() {
+        return this.TriggerActions;
+    }
+
+    /**
+     * Set 预置并发定时任务。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TriggerActions 预置并发定时任务。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTriggerActions(TriggerAction [] TriggerActions) {
+        this.TriggerActions = TriggerActions;
+    }
+
     public VersionProvisionedConcurrencyInfo() {
     }
 
@@ -160,6 +188,12 @@ public class VersionProvisionedConcurrencyInfo extends AbstractModel{
         if (source.Qualifier != null) {
             this.Qualifier = new String(source.Qualifier);
         }
+        if (source.TriggerActions != null) {
+            this.TriggerActions = new TriggerAction[source.TriggerActions.length];
+            for (int i = 0; i < source.TriggerActions.length; i++) {
+                this.TriggerActions[i] = new TriggerAction(source.TriggerActions[i]);
+            }
+        }
     }
 
 
@@ -172,6 +206,7 @@ public class VersionProvisionedConcurrencyInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "StatusReason", this.StatusReason);
         this.setParamSimple(map, prefix + "Qualifier", this.Qualifier);
+        this.setParamArrayObj(map, prefix + "TriggerActions.", this.TriggerActions);
 
     }
 }

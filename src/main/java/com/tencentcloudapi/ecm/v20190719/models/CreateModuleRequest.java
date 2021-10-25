@@ -102,6 +102,20 @@ false：表示开通IP直通
     private Boolean DisableWanIp;
 
     /**
+    * 系统盘信息。
+    */
+    @SerializedName("SystemDisk")
+    @Expose
+    private SystemDisk SystemDisk;
+
+    /**
+    * 数据盘信息。
+    */
+    @SerializedName("DataDisks")
+    @Expose
+    private DataDisk [] DataDisks;
+
+    /**
      * Get 模块名称，如视频直播模块。限制：模块名称不得以空格开头，长度不得超过60个字符。 
      * @return ModuleName 模块名称，如视频直播模块。限制：模块名称不得以空格开头，长度不得超过60个字符。
      */
@@ -285,6 +299,38 @@ false：表示开通IP直通
         this.DisableWanIp = DisableWanIp;
     }
 
+    /**
+     * Get 系统盘信息。 
+     * @return SystemDisk 系统盘信息。
+     */
+    public SystemDisk getSystemDisk() {
+        return this.SystemDisk;
+    }
+
+    /**
+     * Set 系统盘信息。
+     * @param SystemDisk 系统盘信息。
+     */
+    public void setSystemDisk(SystemDisk SystemDisk) {
+        this.SystemDisk = SystemDisk;
+    }
+
+    /**
+     * Get 数据盘信息。 
+     * @return DataDisks 数据盘信息。
+     */
+    public DataDisk [] getDataDisks() {
+        return this.DataDisks;
+    }
+
+    /**
+     * Set 数据盘信息。
+     * @param DataDisks 数据盘信息。
+     */
+    public void setDataDisks(DataDisk [] DataDisks) {
+        this.DataDisks = DataDisks;
+    }
+
     public CreateModuleRequest() {
     }
 
@@ -332,6 +378,15 @@ false：表示开通IP直通
         if (source.DisableWanIp != null) {
             this.DisableWanIp = new Boolean(source.DisableWanIp);
         }
+        if (source.SystemDisk != null) {
+            this.SystemDisk = new SystemDisk(source.SystemDisk);
+        }
+        if (source.DataDisks != null) {
+            this.DataDisks = new DataDisk[source.DataDisks.length];
+            for (int i = 0; i < source.DataDisks.length; i++) {
+                this.DataDisks[i] = new DataDisk(source.DataDisks[i]);
+            }
+        }
     }
 
 
@@ -350,6 +405,8 @@ false：表示开通IP直通
         this.setParamArraySimple(map, prefix + "SecurityGroups.", this.SecurityGroups);
         this.setParamSimple(map, prefix + "DefaultBandWidthIn", this.DefaultBandWidthIn);
         this.setParamSimple(map, prefix + "DisableWanIp", this.DisableWanIp);
+        this.setParamObj(map, prefix + "SystemDisk.", this.SystemDisk);
+        this.setParamArrayObj(map, prefix + "DataDisks.", this.DataDisks);
 
     }
 }

@@ -1250,6 +1250,26 @@ public class EcmClient extends AbstractClient{
     }
 
     /**
+     *使用本接口获取某种机型在某些区域的装箱配额（当使用虚拟机型时，返回的是一组相互关联的装箱配额）。
+     * @param req DescribePackingQuotaGroupRequest
+     * @return DescribePackingQuotaGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePackingQuotaGroupResponse DescribePackingQuotaGroup(DescribePackingQuotaGroupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribePackingQuotaGroupResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribePackingQuotaGroupResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribePackingQuotaGroup");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *CPU 内存 硬盘等基础信息峰值数据
      * @param req DescribePeakBaseOverviewRequest
      * @return DescribePeakBaseOverviewResponse

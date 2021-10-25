@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ResourceUrlInfo extends AbstractModel{
 
     /**
-    * 资源链接地址
+    * 资源链接地址，过期时间5分钟
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Url")
@@ -47,9 +47,9 @@ public class ResourceUrlInfo extends AbstractModel{
     private String Type;
 
     /**
-     * Get 资源链接地址
+     * Get 资源链接地址，过期时间5分钟
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Url 资源链接地址
+     * @return Url 资源链接地址，过期时间5分钟
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUrl() {
@@ -57,9 +57,9 @@ public class ResourceUrlInfo extends AbstractModel{
     }
 
     /**
-     * Set 资源链接地址
+     * Set 资源链接地址，过期时间5分钟
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Url 资源链接地址
+     * @param Url 资源链接地址，过期时间5分钟
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUrl(String Url) {

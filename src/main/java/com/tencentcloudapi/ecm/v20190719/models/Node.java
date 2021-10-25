@@ -23,184 +23,184 @@ import java.util.HashMap;
 public class Node extends AbstractModel{
 
     /**
-    * zone信息
+    * zone信息。
     */
     @SerializedName("ZoneInfo")
     @Expose
     private ZoneInfo ZoneInfo;
 
     /**
-    * 国家信息
+    * 国家信息。
     */
     @SerializedName("Country")
     @Expose
     private Country Country;
 
     /**
-    * 区域信息
+    * 区域信息。
     */
     @SerializedName("Area")
     @Expose
     private Area Area;
 
     /**
-    * 省份信息
+    * 省份信息。
     */
     @SerializedName("Province")
     @Expose
     private Province Province;
 
     /**
-    * 城市信息
+    * 城市信息。
     */
     @SerializedName("City")
     @Expose
     private City City;
 
     /**
-    * Region信息
+    * Region信息。
     */
     @SerializedName("RegionInfo")
     @Expose
     private RegionInfo RegionInfo;
 
     /**
-    * 运营商列表
+    * 运营商列表。
     */
     @SerializedName("ISPSet")
     @Expose
     private ISP [] ISPSet;
 
     /**
-    * 运营商数量
+    * 运营商数量。
     */
     @SerializedName("ISPNum")
     @Expose
     private Long ISPNum;
 
     /**
-     * Get zone信息 
-     * @return ZoneInfo zone信息
+     * Get zone信息。 
+     * @return ZoneInfo zone信息。
      */
     public ZoneInfo getZoneInfo() {
         return this.ZoneInfo;
     }
 
     /**
-     * Set zone信息
-     * @param ZoneInfo zone信息
+     * Set zone信息。
+     * @param ZoneInfo zone信息。
      */
     public void setZoneInfo(ZoneInfo ZoneInfo) {
         this.ZoneInfo = ZoneInfo;
     }
 
     /**
-     * Get 国家信息 
-     * @return Country 国家信息
+     * Get 国家信息。 
+     * @return Country 国家信息。
      */
     public Country getCountry() {
         return this.Country;
     }
 
     /**
-     * Set 国家信息
-     * @param Country 国家信息
+     * Set 国家信息。
+     * @param Country 国家信息。
      */
     public void setCountry(Country Country) {
         this.Country = Country;
     }
 
     /**
-     * Get 区域信息 
-     * @return Area 区域信息
+     * Get 区域信息。 
+     * @return Area 区域信息。
      */
     public Area getArea() {
         return this.Area;
     }
 
     /**
-     * Set 区域信息
-     * @param Area 区域信息
+     * Set 区域信息。
+     * @param Area 区域信息。
      */
     public void setArea(Area Area) {
         this.Area = Area;
     }
 
     /**
-     * Get 省份信息 
-     * @return Province 省份信息
+     * Get 省份信息。 
+     * @return Province 省份信息。
      */
     public Province getProvince() {
         return this.Province;
     }
 
     /**
-     * Set 省份信息
-     * @param Province 省份信息
+     * Set 省份信息。
+     * @param Province 省份信息。
      */
     public void setProvince(Province Province) {
         this.Province = Province;
     }
 
     /**
-     * Get 城市信息 
-     * @return City 城市信息
+     * Get 城市信息。 
+     * @return City 城市信息。
      */
     public City getCity() {
         return this.City;
     }
 
     /**
-     * Set 城市信息
-     * @param City 城市信息
+     * Set 城市信息。
+     * @param City 城市信息。
      */
     public void setCity(City City) {
         this.City = City;
     }
 
     /**
-     * Get Region信息 
-     * @return RegionInfo Region信息
+     * Get Region信息。 
+     * @return RegionInfo Region信息。
      */
     public RegionInfo getRegionInfo() {
         return this.RegionInfo;
     }
 
     /**
-     * Set Region信息
-     * @param RegionInfo Region信息
+     * Set Region信息。
+     * @param RegionInfo Region信息。
      */
     public void setRegionInfo(RegionInfo RegionInfo) {
         this.RegionInfo = RegionInfo;
     }
 
     /**
-     * Get 运营商列表 
-     * @return ISPSet 运营商列表
+     * Get 运营商列表。 
+     * @return ISPSet 运营商列表。
      */
     public ISP [] getISPSet() {
         return this.ISPSet;
     }
 
     /**
-     * Set 运营商列表
-     * @param ISPSet 运营商列表
+     * Set 运营商列表。
+     * @param ISPSet 运营商列表。
      */
     public void setISPSet(ISP [] ISPSet) {
         this.ISPSet = ISPSet;
     }
 
     /**
-     * Get 运营商数量 
-     * @return ISPNum 运营商数量
+     * Get 运营商数量。 
+     * @return ISPNum 运营商数量。
      */
     public Long getISPNum() {
         return this.ISPNum;
     }
 
     /**
-     * Set 运营商数量
-     * @param ISPNum 运营商数量
+     * Set 运营商数量。
+     * @param ISPNum 运营商数量。
      */
     public void setISPNum(Long ISPNum) {
         this.ISPNum = ISPNum;

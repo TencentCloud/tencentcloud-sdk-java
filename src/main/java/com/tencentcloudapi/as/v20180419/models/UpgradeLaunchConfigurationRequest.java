@@ -108,7 +108,7 @@ public class UpgradeLaunchConfigurationRequest extends AbstractModel{
     private LoginSettings LoginSettings;
 
     /**
-    * 实例所属项目ID。该参数可以通过调用 [DescribeProject](https://cloud.tencent.com/document/api/378/4400) 的返回值中的`projectId`字段来获取。不填为默认项目。
+    * 实例所属项目ID。不填为默认项目。
     */
     @SerializedName("ProjectId")
     @Expose
@@ -388,16 +388,16 @@ public class UpgradeLaunchConfigurationRequest extends AbstractModel{
     }
 
     /**
-     * Get 实例所属项目ID。该参数可以通过调用 [DescribeProject](https://cloud.tencent.com/document/api/378/4400) 的返回值中的`projectId`字段来获取。不填为默认项目。 
-     * @return ProjectId 实例所属项目ID。该参数可以通过调用 [DescribeProject](https://cloud.tencent.com/document/api/378/4400) 的返回值中的`projectId`字段来获取。不填为默认项目。
+     * Get 实例所属项目ID。不填为默认项目。 
+     * @return ProjectId 实例所属项目ID。不填为默认项目。
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 实例所属项目ID。该参数可以通过调用 [DescribeProject](https://cloud.tencent.com/document/api/378/4400) 的返回值中的`projectId`字段来获取。不填为默认项目。
-     * @param ProjectId 实例所属项目ID。该参数可以通过调用 [DescribeProject](https://cloud.tencent.com/document/api/378/4400) 的返回值中的`projectId`字段来获取。不填为默认项目。
+     * Set 实例所属项目ID。不填为默认项目。
+     * @param ProjectId 实例所属项目ID。不填为默认项目。
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
