@@ -256,6 +256,13 @@ pause
     private Long MaxStorageSize;
 
     /**
+    * 集群网络信息
+    */
+    @SerializedName("NetAddrs")
+    @Expose
+    private NetAddr [] NetAddrs;
+
+    /**
      * Get 集群状态 
      * @return Status 集群状态
      */
@@ -791,6 +798,22 @@ pause
         this.MaxStorageSize = MaxStorageSize;
     }
 
+    /**
+     * Get 集群网络信息 
+     * @return NetAddrs 集群网络信息
+     */
+    public NetAddr [] getNetAddrs() {
+        return this.NetAddrs;
+    }
+
+    /**
+     * Set 集群网络信息
+     * @param NetAddrs 集群网络信息
+     */
+    public void setNetAddrs(NetAddr [] NetAddrs) {
+        this.NetAddrs = NetAddrs;
+    }
+
     public CynosdbCluster() {
     }
 
@@ -904,6 +927,12 @@ pause
         if (source.MaxStorageSize != null) {
             this.MaxStorageSize = new Long(source.MaxStorageSize);
         }
+        if (source.NetAddrs != null) {
+            this.NetAddrs = new NetAddr[source.NetAddrs.length];
+            for (int i = 0; i < source.NetAddrs.length; i++) {
+                this.NetAddrs[i] = new NetAddr(source.NetAddrs[i]);
+            }
+        }
     }
 
 
@@ -944,6 +973,7 @@ pause
         this.setParamSimple(map, prefix + "StoragePayMode", this.StoragePayMode);
         this.setParamSimple(map, prefix + "MinStorageSize", this.MinStorageSize);
         this.setParamSimple(map, prefix + "MaxStorageSize", this.MaxStorageSize);
+        this.setParamArrayObj(map, prefix + "NetAddrs.", this.NetAddrs);
 
     }
 }
