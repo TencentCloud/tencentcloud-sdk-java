@@ -46,8 +46,7 @@ public class WeChatAccountInfo extends AbstractModel{
     private String RandStr;
 
     /**
-    * 如果WeChatSubType是1，填入授权的access_token（注意：不是普通access_token，详情请参阅官方说明文档。获取网页版本的access_token时，scope字段必需填写snsapi_userinfo。
-如果WeChatSubType是2，填入以session_key为密钥签名随机数RandStr（hmac_sha256签名算法）得到的字符串。
+    * token
     */
     @SerializedName("WeChatAccessToken")
     @Expose
@@ -131,20 +130,16 @@ public class WeChatAccountInfo extends AbstractModel{
     }
 
     /**
-     * Get 如果WeChatSubType是1，填入授权的access_token（注意：不是普通access_token，详情请参阅官方说明文档。获取网页版本的access_token时，scope字段必需填写snsapi_userinfo。
-如果WeChatSubType是2，填入以session_key为密钥签名随机数RandStr（hmac_sha256签名算法）得到的字符串。 
-     * @return WeChatAccessToken 如果WeChatSubType是1，填入授权的access_token（注意：不是普通access_token，详情请参阅官方说明文档。获取网页版本的access_token时，scope字段必需填写snsapi_userinfo。
-如果WeChatSubType是2，填入以session_key为密钥签名随机数RandStr（hmac_sha256签名算法）得到的字符串。
+     * Get token 
+     * @return WeChatAccessToken token
      */
     public String getWeChatAccessToken() {
         return this.WeChatAccessToken;
     }
 
     /**
-     * Set 如果WeChatSubType是1，填入授权的access_token（注意：不是普通access_token，详情请参阅官方说明文档。获取网页版本的access_token时，scope字段必需填写snsapi_userinfo。
-如果WeChatSubType是2，填入以session_key为密钥签名随机数RandStr（hmac_sha256签名算法）得到的字符串。
-     * @param WeChatAccessToken 如果WeChatSubType是1，填入授权的access_token（注意：不是普通access_token，详情请参阅官方说明文档。获取网页版本的access_token时，scope字段必需填写snsapi_userinfo。
-如果WeChatSubType是2，填入以session_key为密钥签名随机数RandStr（hmac_sha256签名算法）得到的字符串。
+     * Set token
+     * @param WeChatAccessToken token
      */
     public void setWeChatAccessToken(String WeChatAccessToken) {
         this.WeChatAccessToken = WeChatAccessToken;

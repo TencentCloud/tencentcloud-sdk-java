@@ -24,8 +24,9 @@ public class DescribeAddressTemplatesRequest extends AbstractModel{
 
     /**
     * 过滤条件。
-<li>address-template-name - String - （过滤条件）IP地址模板名称。</li>
-<li>address-template-id - String - （过滤条件）IP地址模板实例ID，例如：ipm-mdunqeb6。</li>
+<li>address-template-name - IP地址模板名称。</li>
+<li>address-template-id - IP地址模板实例ID，例如：ipm-mdunqeb6。</li>
+<li>address-ip - IP地址。</li>
     */
     @SerializedName("Filters")
     @Expose
@@ -47,11 +48,13 @@ public class DescribeAddressTemplatesRequest extends AbstractModel{
 
     /**
      * Get 过滤条件。
-<li>address-template-name - String - （过滤条件）IP地址模板名称。</li>
-<li>address-template-id - String - （过滤条件）IP地址模板实例ID，例如：ipm-mdunqeb6。</li> 
+<li>address-template-name - IP地址模板名称。</li>
+<li>address-template-id - IP地址模板实例ID，例如：ipm-mdunqeb6。</li>
+<li>address-ip - IP地址。</li> 
      * @return Filters 过滤条件。
-<li>address-template-name - String - （过滤条件）IP地址模板名称。</li>
-<li>address-template-id - String - （过滤条件）IP地址模板实例ID，例如：ipm-mdunqeb6。</li>
+<li>address-template-name - IP地址模板名称。</li>
+<li>address-template-id - IP地址模板实例ID，例如：ipm-mdunqeb6。</li>
+<li>address-ip - IP地址。</li>
      */
     public Filter [] getFilters() {
         return this.Filters;
@@ -59,11 +62,13 @@ public class DescribeAddressTemplatesRequest extends AbstractModel{
 
     /**
      * Set 过滤条件。
-<li>address-template-name - String - （过滤条件）IP地址模板名称。</li>
-<li>address-template-id - String - （过滤条件）IP地址模板实例ID，例如：ipm-mdunqeb6。</li>
+<li>address-template-name - IP地址模板名称。</li>
+<li>address-template-id - IP地址模板实例ID，例如：ipm-mdunqeb6。</li>
+<li>address-ip - IP地址。</li>
      * @param Filters 过滤条件。
-<li>address-template-name - String - （过滤条件）IP地址模板名称。</li>
-<li>address-template-id - String - （过滤条件）IP地址模板实例ID，例如：ipm-mdunqeb6。</li>
+<li>address-template-name - IP地址模板名称。</li>
+<li>address-template-id - IP地址模板实例ID，例如：ipm-mdunqeb6。</li>
+<li>address-ip - IP地址。</li>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

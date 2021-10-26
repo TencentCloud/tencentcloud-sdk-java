@@ -2979,6 +2979,26 @@ public class CwpClient extends AbstractClient{
     }
 
     /**
+     *漏洞影响主机列表
+     * @param req DescribeVulEffectHostListRequest
+     * @return DescribeVulEffectHostListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVulEffectHostListResponse DescribeVulEffectHostList(DescribeVulEffectHostListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeVulEffectHostListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeVulEffectHostListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeVulEffectHostList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取待处理漏洞数+影响主机数
      * @param req DescribeVulHostCountScanTimeRequest
      * @return DescribeVulHostCountScanTimeResponse
@@ -3051,6 +3071,26 @@ public class CwpClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeVulLevelCountResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeVulLevelCount");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取漏洞列表数据
+     * @param req DescribeVulListRequest
+     * @return DescribeVulListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVulListResponse DescribeVulList(DescribeVulListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeVulListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeVulListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeVulList");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

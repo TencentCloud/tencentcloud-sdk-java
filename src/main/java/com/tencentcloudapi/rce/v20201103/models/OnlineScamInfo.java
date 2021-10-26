@@ -48,16 +48,14 @@ public class OnlineScamInfo extends AbstractModel{
     private Long ContentType;
 
     /**
-    * 诈骗账号类型：
-1：11位手机号。
-2：QQ账号。
+    * 类型
     */
     @SerializedName("FraudType")
     @Expose
     private Long FraudType;
 
     /**
-    * 诈骗账号，手机号或QQ账号。
+    * 账号
     */
     @SerializedName("FraudAccount")
     @Expose
@@ -128,40 +126,32 @@ public class OnlineScamInfo extends AbstractModel{
     }
 
     /**
-     * Get 诈骗账号类型：
-1：11位手机号。
-2：QQ账号。 
-     * @return FraudType 诈骗账号类型：
-1：11位手机号。
-2：QQ账号。
+     * Get 类型 
+     * @return FraudType 类型
      */
     public Long getFraudType() {
         return this.FraudType;
     }
 
     /**
-     * Set 诈骗账号类型：
-1：11位手机号。
-2：QQ账号。
-     * @param FraudType 诈骗账号类型：
-1：11位手机号。
-2：QQ账号。
+     * Set 类型
+     * @param FraudType 类型
      */
     public void setFraudType(Long FraudType) {
         this.FraudType = FraudType;
     }
 
     /**
-     * Get 诈骗账号，手机号或QQ账号。 
-     * @return FraudAccount 诈骗账号，手机号或QQ账号。
+     * Get 账号 
+     * @return FraudAccount 账号
      */
     public String getFraudAccount() {
         return this.FraudAccount;
     }
 
     /**
-     * Set 诈骗账号，手机号或QQ账号。
-     * @param FraudAccount 诈骗账号，手机号或QQ账号。
+     * Set 账号
+     * @param FraudAccount 账号
      */
     public void setFraudAccount(String FraudAccount) {
         this.FraudAccount = FraudAccount;

@@ -559,6 +559,26 @@ public class TcbClient extends AbstractClient{
     }
 
     /**
+     *查询云应用服务版本容器列表
+     * @param req DescribeCloudBaseRunPodListRequest
+     * @return DescribeCloudBaseRunPodListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCloudBaseRunPodListResponse DescribeCloudBaseRunPodList(DescribeCloudBaseRunPodListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCloudBaseRunPodListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCloudBaseRunPodListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeCloudBaseRunPodList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查看容器托管的集群状态
      * @param req DescribeCloudBaseRunResourceRequest
      * @return DescribeCloudBaseRunResourceResponse
@@ -591,6 +611,26 @@ public class TcbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeCloudBaseRunResourceForExtendResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeCloudBaseRunResourceForExtend");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询单个服务的详情，版本以及详情
+     * @param req DescribeCloudBaseRunServerRequest
+     * @return DescribeCloudBaseRunServerResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCloudBaseRunServerResponse DescribeCloudBaseRunServer(DescribeCloudBaseRunServerRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCloudBaseRunServerResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCloudBaseRunServerResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeCloudBaseRunServer");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

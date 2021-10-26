@@ -51,6 +51,13 @@ public class ServiceTemplate extends AbstractModel{
     private String CreatedTime;
 
     /**
+    * 带备注的协议端口信息。
+    */
+    @SerializedName("ServiceExtraSet")
+    @Expose
+    private ServicesInfo [] ServiceExtraSet;
+
+    /**
      * Get 协议端口实例ID，例如：ppm-f5n1f8da。 
      * @return ServiceTemplateId 协议端口实例ID，例如：ppm-f5n1f8da。
      */
@@ -114,6 +121,22 @@ public class ServiceTemplate extends AbstractModel{
         this.CreatedTime = CreatedTime;
     }
 
+    /**
+     * Get 带备注的协议端口信息。 
+     * @return ServiceExtraSet 带备注的协议端口信息。
+     */
+    public ServicesInfo [] getServiceExtraSet() {
+        return this.ServiceExtraSet;
+    }
+
+    /**
+     * Set 带备注的协议端口信息。
+     * @param ServiceExtraSet 带备注的协议端口信息。
+     */
+    public void setServiceExtraSet(ServicesInfo [] ServiceExtraSet) {
+        this.ServiceExtraSet = ServiceExtraSet;
+    }
+
     public ServiceTemplate() {
     }
 
@@ -137,6 +160,12 @@ public class ServiceTemplate extends AbstractModel{
         if (source.CreatedTime != null) {
             this.CreatedTime = new String(source.CreatedTime);
         }
+        if (source.ServiceExtraSet != null) {
+            this.ServiceExtraSet = new ServicesInfo[source.ServiceExtraSet.length];
+            for (int i = 0; i < source.ServiceExtraSet.length; i++) {
+                this.ServiceExtraSet[i] = new ServicesInfo(source.ServiceExtraSet[i]);
+            }
+        }
     }
 
 
@@ -148,6 +177,7 @@ public class ServiceTemplate extends AbstractModel{
         this.setParamSimple(map, prefix + "ServiceTemplateName", this.ServiceTemplateName);
         this.setParamArraySimple(map, prefix + "ServiceSet.", this.ServiceSet);
         this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
+        this.setParamArrayObj(map, prefix + "ServiceExtraSet.", this.ServiceExtraSet);
 
     }
 }

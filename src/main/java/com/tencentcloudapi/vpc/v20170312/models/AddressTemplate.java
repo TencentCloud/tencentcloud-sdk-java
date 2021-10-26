@@ -51,6 +51,13 @@ public class AddressTemplate extends AbstractModel{
     private String CreatedTime;
 
     /**
+    * 带备注的IP地址信息。
+    */
+    @SerializedName("AddressExtraSet")
+    @Expose
+    private AddressInfo [] AddressExtraSet;
+
+    /**
      * Get IP地址模板名称。 
      * @return AddressTemplateName IP地址模板名称。
      */
@@ -114,6 +121,22 @@ public class AddressTemplate extends AbstractModel{
         this.CreatedTime = CreatedTime;
     }
 
+    /**
+     * Get 带备注的IP地址信息。 
+     * @return AddressExtraSet 带备注的IP地址信息。
+     */
+    public AddressInfo [] getAddressExtraSet() {
+        return this.AddressExtraSet;
+    }
+
+    /**
+     * Set 带备注的IP地址信息。
+     * @param AddressExtraSet 带备注的IP地址信息。
+     */
+    public void setAddressExtraSet(AddressInfo [] AddressExtraSet) {
+        this.AddressExtraSet = AddressExtraSet;
+    }
+
     public AddressTemplate() {
     }
 
@@ -137,6 +160,12 @@ public class AddressTemplate extends AbstractModel{
         if (source.CreatedTime != null) {
             this.CreatedTime = new String(source.CreatedTime);
         }
+        if (source.AddressExtraSet != null) {
+            this.AddressExtraSet = new AddressInfo[source.AddressExtraSet.length];
+            for (int i = 0; i < source.AddressExtraSet.length; i++) {
+                this.AddressExtraSet[i] = new AddressInfo(source.AddressExtraSet[i]);
+            }
+        }
     }
 
 
@@ -148,6 +177,7 @@ public class AddressTemplate extends AbstractModel{
         this.setParamSimple(map, prefix + "AddressTemplateId", this.AddressTemplateId);
         this.setParamArraySimple(map, prefix + "AddressSet.", this.AddressSet);
         this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
+        this.setParamArrayObj(map, prefix + "AddressExtraSet.", this.AddressExtraSet);
 
     }
 }

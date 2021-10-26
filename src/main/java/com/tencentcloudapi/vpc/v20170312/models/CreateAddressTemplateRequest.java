@@ -30,11 +30,18 @@ public class CreateAddressTemplateRequest extends AbstractModel{
     private String AddressTemplateName;
 
     /**
-    * 地址信息，支持 IP、CIDR、IP 范围。
+    * 地址信息，支持 IP、CIDR、IP 范围。Addresses与AddressesExtra必填其一。
     */
     @SerializedName("Addresses")
     @Expose
     private String [] Addresses;
+
+    /**
+    * 地址信息，支持携带备注，支持 IP、CIDR、IP 范围。Addresses与AddressesExtra必填其一。
+    */
+    @SerializedName("AddressesExtra")
+    @Expose
+    private AddressInfo [] AddressesExtra;
 
     /**
      * Get IP地址模版名称 
@@ -53,19 +60,35 @@ public class CreateAddressTemplateRequest extends AbstractModel{
     }
 
     /**
-     * Get 地址信息，支持 IP、CIDR、IP 范围。 
-     * @return Addresses 地址信息，支持 IP、CIDR、IP 范围。
+     * Get 地址信息，支持 IP、CIDR、IP 范围。Addresses与AddressesExtra必填其一。 
+     * @return Addresses 地址信息，支持 IP、CIDR、IP 范围。Addresses与AddressesExtra必填其一。
      */
     public String [] getAddresses() {
         return this.Addresses;
     }
 
     /**
-     * Set 地址信息，支持 IP、CIDR、IP 范围。
-     * @param Addresses 地址信息，支持 IP、CIDR、IP 范围。
+     * Set 地址信息，支持 IP、CIDR、IP 范围。Addresses与AddressesExtra必填其一。
+     * @param Addresses 地址信息，支持 IP、CIDR、IP 范围。Addresses与AddressesExtra必填其一。
      */
     public void setAddresses(String [] Addresses) {
         this.Addresses = Addresses;
+    }
+
+    /**
+     * Get 地址信息，支持携带备注，支持 IP、CIDR、IP 范围。Addresses与AddressesExtra必填其一。 
+     * @return AddressesExtra 地址信息，支持携带备注，支持 IP、CIDR、IP 范围。Addresses与AddressesExtra必填其一。
+     */
+    public AddressInfo [] getAddressesExtra() {
+        return this.AddressesExtra;
+    }
+
+    /**
+     * Set 地址信息，支持携带备注，支持 IP、CIDR、IP 范围。Addresses与AddressesExtra必填其一。
+     * @param AddressesExtra 地址信息，支持携带备注，支持 IP、CIDR、IP 范围。Addresses与AddressesExtra必填其一。
+     */
+    public void setAddressesExtra(AddressInfo [] AddressesExtra) {
+        this.AddressesExtra = AddressesExtra;
     }
 
     public CreateAddressTemplateRequest() {
@@ -85,6 +108,12 @@ public class CreateAddressTemplateRequest extends AbstractModel{
                 this.Addresses[i] = new String(source.Addresses[i]);
             }
         }
+        if (source.AddressesExtra != null) {
+            this.AddressesExtra = new AddressInfo[source.AddressesExtra.length];
+            for (int i = 0; i < source.AddressesExtra.length; i++) {
+                this.AddressesExtra[i] = new AddressInfo(source.AddressesExtra[i]);
+            }
+        }
     }
 
 
@@ -94,6 +123,7 @@ public class CreateAddressTemplateRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AddressTemplateName", this.AddressTemplateName);
         this.setParamArraySimple(map, prefix + "Addresses.", this.Addresses);
+        this.setParamArrayObj(map, prefix + "AddressesExtra.", this.AddressesExtra);
 
     }
 }

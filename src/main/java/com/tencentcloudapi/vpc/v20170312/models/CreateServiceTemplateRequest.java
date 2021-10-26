@@ -30,11 +30,18 @@ public class CreateServiceTemplateRequest extends AbstractModel{
     private String ServiceTemplateName;
 
     /**
-    * 支持单个端口、多个端口、连续端口及所有端口，协议支持：TCP、UDP、ICMP、GRE 协议。
+    * 支持单个端口、多个端口、连续端口及所有端口，协议支持：TCP、UDP、ICMP、GRE 协议。Services与ServicesExtra必填其一。
     */
     @SerializedName("Services")
     @Expose
     private String [] Services;
+
+    /**
+    * 支持添加备注，单个端口、多个端口、连续端口及所有端口，协议支持：TCP、UDP、ICMP、GRE 协议。Services与ServicesExtra必填其一。
+    */
+    @SerializedName("ServicesExtra")
+    @Expose
+    private ServicesInfo [] ServicesExtra;
 
     /**
      * Get 协议端口模板名称 
@@ -53,19 +60,35 @@ public class CreateServiceTemplateRequest extends AbstractModel{
     }
 
     /**
-     * Get 支持单个端口、多个端口、连续端口及所有端口，协议支持：TCP、UDP、ICMP、GRE 协议。 
-     * @return Services 支持单个端口、多个端口、连续端口及所有端口，协议支持：TCP、UDP、ICMP、GRE 协议。
+     * Get 支持单个端口、多个端口、连续端口及所有端口，协议支持：TCP、UDP、ICMP、GRE 协议。Services与ServicesExtra必填其一。 
+     * @return Services 支持单个端口、多个端口、连续端口及所有端口，协议支持：TCP、UDP、ICMP、GRE 协议。Services与ServicesExtra必填其一。
      */
     public String [] getServices() {
         return this.Services;
     }
 
     /**
-     * Set 支持单个端口、多个端口、连续端口及所有端口，协议支持：TCP、UDP、ICMP、GRE 协议。
-     * @param Services 支持单个端口、多个端口、连续端口及所有端口，协议支持：TCP、UDP、ICMP、GRE 协议。
+     * Set 支持单个端口、多个端口、连续端口及所有端口，协议支持：TCP、UDP、ICMP、GRE 协议。Services与ServicesExtra必填其一。
+     * @param Services 支持单个端口、多个端口、连续端口及所有端口，协议支持：TCP、UDP、ICMP、GRE 协议。Services与ServicesExtra必填其一。
      */
     public void setServices(String [] Services) {
         this.Services = Services;
+    }
+
+    /**
+     * Get 支持添加备注，单个端口、多个端口、连续端口及所有端口，协议支持：TCP、UDP、ICMP、GRE 协议。Services与ServicesExtra必填其一。 
+     * @return ServicesExtra 支持添加备注，单个端口、多个端口、连续端口及所有端口，协议支持：TCP、UDP、ICMP、GRE 协议。Services与ServicesExtra必填其一。
+     */
+    public ServicesInfo [] getServicesExtra() {
+        return this.ServicesExtra;
+    }
+
+    /**
+     * Set 支持添加备注，单个端口、多个端口、连续端口及所有端口，协议支持：TCP、UDP、ICMP、GRE 协议。Services与ServicesExtra必填其一。
+     * @param ServicesExtra 支持添加备注，单个端口、多个端口、连续端口及所有端口，协议支持：TCP、UDP、ICMP、GRE 协议。Services与ServicesExtra必填其一。
+     */
+    public void setServicesExtra(ServicesInfo [] ServicesExtra) {
+        this.ServicesExtra = ServicesExtra;
     }
 
     public CreateServiceTemplateRequest() {
@@ -85,6 +108,12 @@ public class CreateServiceTemplateRequest extends AbstractModel{
                 this.Services[i] = new String(source.Services[i]);
             }
         }
+        if (source.ServicesExtra != null) {
+            this.ServicesExtra = new ServicesInfo[source.ServicesExtra.length];
+            for (int i = 0; i < source.ServicesExtra.length; i++) {
+                this.ServicesExtra[i] = new ServicesInfo(source.ServicesExtra[i]);
+            }
+        }
     }
 
 
@@ -94,6 +123,7 @@ public class CreateServiceTemplateRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ServiceTemplateName", this.ServiceTemplateName);
         this.setParamArraySimple(map, prefix + "Services.", this.Services);
+        this.setParamArrayObj(map, prefix + "ServicesExtra.", this.ServicesExtra);
 
     }
 }

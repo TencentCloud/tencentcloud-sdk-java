@@ -58,4 +58,24 @@ public class OrganizationClient extends AbstractClient{
         return rsp.response;
     }
 
+    /**
+     *创建组织成员
+     * @param req CreateOrganizationMemberRequest
+     * @return CreateOrganizationMemberResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateOrganizationMemberResponse CreateOrganizationMember(CreateOrganizationMemberRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateOrganizationMemberResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateOrganizationMemberResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateOrganizationMember");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
 }
